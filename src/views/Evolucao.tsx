@@ -1,2 +1,159 @@
-import React from 'react';
-export default function Evolucao() { return <div className="p-8">Em breve: Progresso e maestria</div>; }
+import React, { useMemo } from 'react';
+import {
+  BarChart,
+  Bar,
+  Cell,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  ResponsiveContainer,
+  RadarChart,
+  PolarGrid,
+  PolarAngleAxis,
+  PolarRadiusAxis,
+  Radar,
+} from 'recharts';
+import { mockMastery, mockTopics } from '../data/mockData';
+import { TrendingUp, Trophy, AlertCircle, Gauge } from 'lucide-react';
+
+const SUBJECT_HEX: Record<string, string> = {
+  Biologia: '#10b981',
+  Matemática: '#6366f1',
+  Física: '#f59e0b',
+};
+
+function ChartTooltip({ active, payload }: any) {
+  if (!active || !payload?.length) return null;
+  const item = payload[0].payload;
+  return (
+    <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-lg px-3 py-2 shadow-lg text-sm">
+      <p className="font-semibold">{item.name || item.subject}</p>
+      <p className="text-zinc-500">{Math.round(item.level ?? item.average)}% de domínio</p>
+    </div>
+  );
+}
+
+export default function Evolucao() {
+  const topicRows = useMemo(
+    () =>
+      mockTopics
+        .map((topic) => {
+          const mastery = mockMastery.find((m) => m.topicId === topic.id);
+          return { name: topic.name, subject: topic.subject, level: mastery?.level ?? 0 };
+        })
+        .sort((a, b) => b.level - a.level),
+    []
+  );
+
+  const subjectAverages = useMemo(() => {
+    const bySubject = new Map<string, number[]>();
+    topicRows.forEach((row) => {
+      const list = bySubject.get(row.subject) ?? [];
+      list.push(row.level);
+      bySubject.set(row.subject, list);
+    });
+    return Array.from(bySubject.entries()).map(([subject, levels]) => ({
+      subject,
+      average: levels.reduce((a, b) => a + b, 0) / levels.length,
+    }));
+  }, [topicRows]);
+
+  const overallAverage = Math.round(topicRows.reduce((sum, r) => sum + r.level, 0) / topicRows.length);
+  const strongest = topicRows[0];
+  const weakest = topicRows[topicRows.length - 1];
+
+  return (
+    <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
+      <header>
+        <h1 className="text-3xl font-bold tracking-tight mb-2 flex items-center">
+          <TrendingUp className="w-7 h-7 mr-3 text-indigo-500" />
+          Evolução & Domínio
+        </h1>
+        <p className="text-zinc-500 dark:text-zinc-400">Seu domínio atual por tópico e por matéria.</p>
+      </header>
+
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 shadow-sm">
+          <div className="flex items-center text-indigo-600 dark:text-indigo-400 mb-3">
+            <Gauge className="w-5 h-5 mr-2" />
+            <h3 className="font-medium text-sm">Domínio médio geral</h3>
+          </div>
+          <p className="text-3xl font-bold">{overallAverage}<span className="text-lg font-normal text-zinc-500 ml-1">/100</span></p>
+        </div>
+        <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 shadow-sm">
+          <div className="flex items-center text-emerald-600 dark:text-emerald-400 mb-3">
+            <Trophy className="w-5 h-5 mr-2" />
+            <h3 className="font-medium text-sm">Tópico mais forte</h3>
+          </div>
+          <p className="text-lg font-bold truncate">{strongest?.name}</p>
+          <p className="text-sm text-zinc-500">{strongest?.level}% de domínio</p>
+        </div>
+        <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 shadow-sm">
+          <div className="flex items-center text-rose-600 dark:text-rose-400 mb-3">
+            <AlertCircle className="w-5 h-5 mr-2" />
+            <h3 className="font-medium text-sm">Precisa de mais atenção</h3>
+          </div>
+          <p className="text-lg font-bold truncate">{weakest?.name}</p>
+          <p className="text-sm text-zinc-500">{weakest?.level}% de domínio</p>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
+        <div className="lg:col-span-3 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 shadow-sm">
+          <h3 className="font-semibold mb-4">Domínio por tópico</h3>
+          <div className="h-80">
+            <ResponsiveContainer width="100%" height="100%">
+              <BarChart data={topicRows} layout="vertical" margin={{ left: 8, right: 16 }}>
+                <CartesianGrid strokeDasharray="3 3" horizontal={false} className="stroke-zinc-100 dark:stroke-zinc-800" />
+                <XAxis type="number" domain={[0, 100]} tick={{ fontSize: 12, fill: 'currentColor' }} className="text-zinc-400" />
+                <YAxis type="category" dataKey="name" width={130} tick={{ fontSize: 12, fill: 'currentColor' }} className="text-zinc-500" />
+                <Tooltip content={<ChartTooltip />} cursor={{ fill: 'rgba(99,102,241,0.08)' }} />
+                <Bar dataKey="level" radius={[0, 6, 6, 0]} barSize={18}>
+                  {topicRows.map((row, i) => (
+                    <Cell key={i} fill={SUBJECT_HEX[row.subject] ?? '#a1a1aa'} />
+                  ))}
+                </Bar>
+              </BarChart>
+            </ResponsiveContainer>
+          </div>
+        </div>
+
+        <div className="lg:col-span-2 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 shadow-sm">
+          <h3 className="font-semibold mb-4">Média por matéria</h3>
+          <div className="h-80">
+            <ResponsiveContainer width="100%" height="100%">
+              <RadarChart data={subjectAverages}>
+                <PolarGrid className="stroke-zinc-200 dark:stroke-zinc-800" />
+                <PolarAngleAxis dataKey="subject" tick={{ fontSize: 12, fill: 'currentColor' }} className="text-zinc-500" />
+                <PolarRadiusAxis domain={[0, 100]} tick={false} axisLine={false} />
+                <Radar dataKey="average" stroke="#6366f1" fill="#6366f1" fillOpacity={0.35} />
+                <Tooltip content={<ChartTooltip />} />
+              </RadarChart>
+            </ResponsiveContainer>
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl divide-y divide-zinc-100 dark:divide-zinc-800 overflow-hidden">
+        {topicRows.map((row) => (
+          <div key={row.name} className="p-4 flex items-center justify-between">
+            <div className="flex items-center min-w-0">
+              <span className="w-2 h-2 rounded-full mr-3 shrink-0" style={{ backgroundColor: SUBJECT_HEX[row.subject] ?? '#a1a1aa' }} />
+              <div className="min-w-0">
+                <p className="font-medium truncate">{row.name}</p>
+                <p className="text-xs text-zinc-500">{row.subject}</p>
+              </div>
+            </div>
+            <div className="flex items-center shrink-0 ml-4 w-32">
+              <div className="w-full h-1.5 bg-zinc-100 dark:bg-zinc-800 rounded-full overflow-hidden mr-2">
+                <div className="h-full" style={{ width: `${row.level}%`, backgroundColor: SUBJECT_HEX[row.subject] ?? '#a1a1aa' }} />
+              </div>
+              <span className="text-xs text-zinc-500 w-8 text-right">{row.level}%</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}

@@ -7,7 +7,6 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 
-// View Placeholders
 import Dashboard from './views/Dashboard';
 import Plano from './views/Plano';
 import Sessao from './views/Sessao';
