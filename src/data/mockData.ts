@@ -1,4 +1,4 @@
-import { Topic, TopicMastery, UserProfile, ErrorLog } from './types';
+import { Topic, TopicMastery, UserProfile, ErrorLog } from '../types';
 
 export const mockTopics: Topic[] = [
   { id: 'bio_01', name: 'Citologia', subject: 'Biologia', prerequisites: [] },
