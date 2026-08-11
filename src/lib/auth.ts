@@ -1,6 +1,8 @@
 import { initializeApp } from 'firebase/app';
 import {
   getAuth,
+  setPersistence,
+  browserSessionPersistence,
   signInWithPopup,
   signInWithRedirect,
   getRedirectResult,
@@ -13,6 +15,16 @@ import firebaseConfig from '../../firebase-applet-config.json';
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
+
+// Firebase's default persistence reads/writes IndexedDB, which has a
+// long-standing WebKit/Safari bug that throws "Database is closing/hidden"
+// (common in Safari on iOS/iPadOS, especially in Private Browsing). This app
+// never relies on Firebase's persisted session anyway (the Google access
+// token is only ever cached in memory), so session-storage persistence
+// avoids IndexedDB entirely.
+const persistenceReady = setPersistence(auth, browserSessionPersistence).catch((error) => {
+  console.error('Failed to set auth persistence:', error);
+});
 
 const provider = new GoogleAuthProvider();
 provider.addScope('https://www.googleapis.com/auth/calendar.readonly');
@@ -51,42 +63,55 @@ export const initAuth = (
   onAuthSuccess?: (user: User, token: string) => void,
   onAuthFailure?: (error?: string) => void
 ) => {
-  // Picks up the token when we've just come back from a signInWithRedirect
-  // fallback (the popup path never navigates away, so this is a no-op then).
-  getRedirectResult(auth)
-    .then((result) => {
-      if (!result) return;
-      const credential = GoogleAuthProvider.credentialFromResult(result);
-      if (credential?.accessToken) {
-        cachedAccessToken = credential.accessToken;
-        if (onAuthSuccess) onAuthSuccess(result.user, cachedAccessToken);
-      }
-    })
-    .catch((error) => {
-      console.error('Redirect sign-in error:', error);
-      if (onAuthFailure) onAuthFailure(describeAuthError(error));
-    });
+  let unsubscribed = false;
+  let realUnsubscribe: (() => void) | null = null;
 
-  return onAuthStateChanged(auth, async (user: User | null) => {
-    if (user) {
-      if (cachedAccessToken) {
-        if (onAuthSuccess) onAuthSuccess(user, cachedAccessToken);
-      } else if (!isSigningIn) {
-        cachedAccessToken = null;
-        if (onAuthFailure) {
-          onAuthFailure('Sua sessão de acesso ao Google expirou. Clique em "Conectar com Google" novamente.');
+  persistenceReady.then(() => {
+    if (unsubscribed) return;
+
+    // Picks up the token when we've just come back from a signInWithRedirect
+    // fallback (the popup path never navigates away, so this is a no-op then).
+    getRedirectResult(auth)
+      .then((result) => {
+        if (!result) return;
+        const credential = GoogleAuthProvider.credentialFromResult(result);
+        if (credential?.accessToken) {
+          cachedAccessToken = credential.accessToken;
+          if (onAuthSuccess) onAuthSuccess(result.user, cachedAccessToken);
         }
+      })
+      .catch((error) => {
+        console.error('Redirect sign-in error:', error);
+        if (onAuthFailure) onAuthFailure(describeAuthError(error));
+      });
+
+    realUnsubscribe = onAuthStateChanged(auth, async (user: User | null) => {
+      if (user) {
+        if (cachedAccessToken) {
+          if (onAuthSuccess) onAuthSuccess(user, cachedAccessToken);
+        } else if (!isSigningIn) {
+          cachedAccessToken = null;
+          if (onAuthFailure) {
+            onAuthFailure('Sua sessão de acesso ao Google expirou. Clique em "Conectar com Google" novamente.');
+          }
+        }
+      } else {
+        cachedAccessToken = null;
+        if (onAuthFailure) onAuthFailure();
       }
-    } else {
-      cachedAccessToken = null;
-      if (onAuthFailure) onAuthFailure();
-    }
+    });
   });
+
+  return () => {
+    unsubscribed = true;
+    if (realUnsubscribe) realUnsubscribe();
+  };
 };
 
 export const googleSignIn = async (): Promise<{ user: User; accessToken: string } | null> => {
   try {
     isSigningIn = true;
+    await persistenceReady;
     const result = await signInWithPopup(auth, provider);
     const credential = GoogleAuthProvider.credentialFromResult(result);
     if (!credential?.accessToken) {
