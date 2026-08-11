@@ -1,0 +1,6 @@
+{
+  "name": "JUJU - Sistema Adaptativo de Decisão",
+  "description": "Sistema de inteligência de estudo para candidatos ao vestibular de Medicina.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
