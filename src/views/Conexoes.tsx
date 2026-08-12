@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { CalendarEvent, DriveFile } from '../types';
 import { Link2, Unlink, Calendar as CalendarIcon, Clock, AlertTriangle, FileText } from 'lucide-react';
-import { initAuth, googleSignIn, logout, getAccessToken } from '../lib/auth';
+import { initAuth, googleSignIn, logout, getAccessToken, getAuthDebugInfo } from '../lib/auth';
 
 export default function Conexoes() {
   const [isConnected, setIsConnected] = useState(false);
@@ -9,8 +9,17 @@ export default function Conexoes() {
   const [files, setFiles] = useState<DriveFile[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [debugInfo, setDebugInfo] = useState<{ label: string; info: ReturnType<typeof getAuthDebugInfo> }[]>([]);
 
   useEffect(() => {
+    setDebugInfo((prev) => [...prev, { label: 'no carregamento (imediato)', info: getAuthDebugInfo() }]);
+    const t1 = setTimeout(() => {
+      setDebugInfo((prev) => [...prev, { label: 'após 1.5s', info: getAuthDebugInfo() }]);
+    }, 1500);
+    const t2 = setTimeout(() => {
+      setDebugInfo((prev) => [...prev, { label: 'após 4s', info: getAuthDebugInfo() }]);
+    }, 4000);
+
     const unsubscribe = initAuth(
       (user, token) => {
         setError(null);
@@ -27,7 +36,11 @@ export default function Conexoes() {
       }
     );
 
-    return () => unsubscribe();
+    return () => {
+      unsubscribe();
+      clearTimeout(t1);
+      clearTimeout(t2);
+    };
   }, []);
 
   const fetchEvents = async (token: string) => {
@@ -226,6 +239,16 @@ export default function Conexoes() {
             </p>
           </div>
         )}
+      </div>
+
+      <div className="bg-zinc-950 text-zinc-300 rounded-2xl p-6 text-xs font-mono overflow-x-auto">
+        <p className="text-zinc-500 mb-3">Diagnóstico temporário (remover depois de resolver)</p>
+        {debugInfo.map(({ label, info }, i) => (
+          <div key={i} className="mb-4">
+            <p className="text-indigo-400 mb-1">— {label} —</p>
+            <pre className="whitespace-pre-wrap break-all">{JSON.stringify(info, null, 2)}</pre>
+          </div>
+        ))}
       </div>
     </div>
   );
