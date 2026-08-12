@@ -2,7 +2,7 @@ import { initializeApp } from 'firebase/app';
 import {
   getAuth,
   setPersistence,
-  browserSessionPersistence,
+  browserLocalPersistence,
   signInWithPopup,
   signInWithRedirect,
   getRedirectResult,
@@ -18,11 +18,13 @@ const auth = getAuth(app);
 
 // Firebase's default persistence reads/writes IndexedDB, which has a
 // long-standing WebKit/Safari bug that throws "Database is closing/hidden"
-// (common in Safari on iOS/iPadOS, especially in Private Browsing). This app
-// never relies on Firebase's persisted session anyway (the Google access
-// token is only ever cached in memory), so session-storage persistence
-// avoids IndexedDB entirely.
-const persistenceReady = setPersistence(auth, browserSessionPersistence).catch((error) => {
+// (common in Safari on iOS/iPadOS, especially in Private Browsing).
+// localStorage persistence avoids IndexedDB entirely while also being more
+// durable than sessionStorage (which didn't reliably survive a reload in
+// testing on iPadOS Safari, likely due to iOS's aggressive tab
+// suspension/eviction) — it's what lets Firestore-backed views keep
+// working across a reload without forcing a fresh Google sign-in.
+const persistenceReady = setPersistence(auth, browserLocalPersistence).catch((error) => {
   console.error('Failed to set auth persistence:', error);
 });
 
