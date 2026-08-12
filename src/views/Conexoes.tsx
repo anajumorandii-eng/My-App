@@ -1,31 +1,46 @@
 import React, { useEffect, useState } from 'react';
 import { CalendarEvent, DriveFile } from '../types';
-import { Link2, Unlink, Calendar as CalendarIcon, Clock, AlertTriangle, FileText, XCircle, RefreshCw } from 'lucide-react';
-import { initAuth, googleSignIn, logout, getAccessToken } from '../lib/auth';
+import { Link2, Unlink, Calendar as CalendarIcon, Clock, AlertTriangle, FileText } from 'lucide-react';
+import { initAuth, googleSignIn, logout, getAccessToken, getAuthDebugInfo } from '../lib/auth';
 
 export default function Conexoes() {
   const [isConnected, setIsConnected] = useState(false);
   const [events, setEvents] = useState<CalendarEvent[]>([]);
   const [files, setFiles] = useState<DriveFile[]>([]);
   const [loading, setLoading] = useState(true);
-  const [authError, setAuthError] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
+  const [debugInfo, setDebugInfo] = useState<{ label: string; info: ReturnType<typeof getAuthDebugInfo> }[]>([]);
 
   useEffect(() => {
+    setDebugInfo((prev) => [...prev, { label: 'no carregamento (imediato)', info: getAuthDebugInfo() }]);
+    const t1 = setTimeout(() => {
+      setDebugInfo((prev) => [...prev, { label: 'após 1.5s', info: getAuthDebugInfo() }]);
+    }, 1500);
+    const t2 = setTimeout(() => {
+      setDebugInfo((prev) => [...prev, { label: 'após 4s', info: getAuthDebugInfo() }]);
+    }, 4000);
+
     const unsubscribe = initAuth(
       (user, token) => {
+        setError(null);
         setIsConnected(true);
         fetchEvents(token);
         fetchFiles(token);
       },
-      () => {
+      (message) => {
         setIsConnected(false);
         setLoading(false);
         setEvents([]);
         setFiles([]);
+        if (message) setError(message);
       }
     );
 
-    return () => unsubscribe();
+    return () => {
+      unsubscribe();
+      clearTimeout(t1);
+      clearTimeout(t2);
+    };
   }, []);
 
   const fetchEvents = async (token: string) => {
@@ -55,8 +70,8 @@ export default function Conexoes() {
   };
 
   const handleConnect = async () => {
+    setError(null);
     try {
-      setAuthError(null);
       const result = await googleSignIn();
       if (result) {
         setIsConnected(true);
@@ -64,13 +79,12 @@ export default function Conexoes() {
         await fetchEvents(result.accessToken);
         await fetchFiles(result.accessToken);
       }
-    } catch (error: any) {
-      console.error('Failed to sign in', error);
-      let errorMessage = 'Não foi possível concluir a integração. Verifique sua conexão ou se o pop-up foi bloqueado pelo navegador.';
-      if (error.code === 'auth/popup-closed-by-user') {
-        errorMessage = 'A janela de autenticação foi fechada antes de ser concluída.';
-      }
-      setAuthError(errorMessage);
+      // result === null means we were redirected away to a full-page
+      // Google sign-in (popup fallback); the outcome arrives via initAuth
+      // when the app reloads after the redirect.
+    } catch (err: any) {
+      console.error('Failed to sign in', err);
+      setError(err?.message || 'Não foi possível conectar sua conta Google. Tente novamente.');
     }
   };
 
@@ -80,6 +94,7 @@ export default function Conexoes() {
       setIsConnected(false);
       setEvents([]);
       setFiles([]);
+      setError(null);
     } catch (e) {
       console.error(e);
     }
@@ -95,6 +110,13 @@ export default function Conexoes() {
       </header>
 
       <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-8 shadow-sm">
+        {error && (
+          <div className="flex items-start p-4 rounded-xl bg-red-50 dark:bg-red-900/20 text-red-800 dark:text-red-300 mb-8">
+            <AlertTriangle className="w-5 h-5 mr-3 shrink-0" />
+            <p className="text-sm">{error}</p>
+          </div>
+        )}
+
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-8 pb-8 border-b border-zinc-200 dark:border-zinc-800">
           <div className="flex flex-col space-y-4 sm:mb-0">
             <div className="flex items-center">
@@ -219,39 +241,15 @@ export default function Conexoes() {
         )}
       </div>
 
-      {/* Error Modal */}
-      {authError && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-in fade-in duration-300">
-          <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-3xl shadow-xl max-w-md w-full overflow-hidden animate-in zoom-in-95 duration-300">
-            <div className="p-8 text-center">
-              <div className="w-16 h-16 rounded-2xl bg-rose-100 text-rose-600 dark:bg-rose-900/30 dark:text-rose-400 flex items-center justify-center mx-auto mb-6">
-                <XCircle className="w-8 h-8" />
-              </div>
-              
-              <h3 className="text-2xl font-bold mb-3">Falha na Conexão</h3>
-              <p className="text-zinc-600 dark:text-zinc-400 mb-8 leading-relaxed">
-                {authError}
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-3">
-                <button 
-                  onClick={() => setAuthError(null)}
-                  className="flex-1 py-3 px-4 border border-zinc-200 dark:border-zinc-700 rounded-xl font-medium text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-colors"
-                >
-                  Cancelar
-                </button>
-                <button 
-                  onClick={handleConnect}
-                  className="flex-1 flex items-center justify-center py-3 px-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-medium transition-colors"
-                >
-                  <RefreshCw className="w-4 h-4 mr-2" />
-                  Tentar Novamente
-                </button>
-              </div>
-            </div>
+      <div className="bg-zinc-950 text-zinc-300 rounded-2xl p-6 text-xs font-mono overflow-x-auto">
+        <p className="text-zinc-500 mb-3">Diagnóstico temporário (remover depois de resolver)</p>
+        {debugInfo.map(({ label, info }, i) => (
+          <div key={i} className="mb-4">
+            <p className="text-indigo-400 mb-1">— {label} —</p>
+            <pre className="whitespace-pre-wrap break-all">{JSON.stringify(info, null, 2)}</pre>
           </div>
-        </div>
-      )}
+        ))}
+      </div>
     </div>
   );
 }

@@ -1,0 +1,51 @@
+import { doc, getDoc, setDoc, collection, getDocs, query, orderBy } from 'firebase/firestore';
+import { db } from './firestore';
+import { TopicMastery, ErrorLog } from '../types';
+import { mockMastery } from '../data/mockData';
+
+export interface QuestionAttempt {
+  id: string;
+  questionId: string;
+  topicId: string;
+  correct: boolean;
+  date: string;
+}
+
+export async function getUserMastery(uid: string): Promise<TopicMastery[]> {
+  const ref = doc(db, 'users', uid, 'data', 'mastery');
+  const snap = await getDoc(ref);
+  if (snap.exists()) {
+    return (snap.data().items as TopicMastery[]) ?? [];
+  }
+  // First time this user shows up: seed with the demo dataset so the
+  // app isn't empty, then every change from here on is their own.
+  await setDoc(ref, { items: mockMastery });
+  return mockMastery;
+}
+
+export async function saveUserMastery(uid: string, items: TopicMastery[]): Promise<void> {
+  const ref = doc(db, 'users', uid, 'data', 'mastery');
+  await setDoc(ref, { items });
+}
+
+export async function getUserErrorLogs(uid: string): Promise<ErrorLog[]> {
+  const ref = collection(db, 'users', uid, 'errorLogs');
+  const snap = await getDocs(query(ref, orderBy('date', 'desc')));
+  return snap.docs.map((d) => d.data() as ErrorLog);
+}
+
+export async function addUserErrorLog(uid: string, log: ErrorLog): Promise<void> {
+  const ref = doc(db, 'users', uid, 'errorLogs', log.id);
+  await setDoc(ref, log);
+}
+
+export async function getUserAttempts(uid: string): Promise<QuestionAttempt[]> {
+  const ref = collection(db, 'users', uid, 'attempts');
+  const snap = await getDocs(query(ref, orderBy('date', 'desc')));
+  return snap.docs.map((d) => d.data() as QuestionAttempt);
+}
+
+export async function addUserAttempt(uid: string, attempt: QuestionAttempt): Promise<void> {
+  const ref = doc(db, 'users', uid, 'attempts', attempt.id);
+  await setDoc(ref, attempt);
+}
