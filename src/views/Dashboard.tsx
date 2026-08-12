@@ -2,15 +2,16 @@ import React, { useMemo } from 'react';
 import { EfficiencyEngine } from '../lib/efficiencyEngine';
 import { mockTopics, mockProfile } from '../data/mockData';
 import { useUserMastery } from '../hooks/useUserMastery';
+import { useAvailableMinutes } from '../hooks/useAvailableMinutes';
 import { PlayCircle, Target, Brain, AlertCircle, CloudOff } from 'lucide-react';
 
 export default function Dashboard() {
   const { mastery, isPersisted } = useUserMastery();
+  const { minutes: availableMinutes, usingAuto } = useAvailableMinutes();
 
   const dailyPlan = useMemo(() => {
-    // Determine plan for 120 minutes of study today
-    return EfficiencyEngine.generateDailyPlan(mastery, mockTopics, mockProfile, 120);
-  }, [mastery]);
+    return EfficiencyEngine.generateDailyPlan(mastery, mockTopics, mockProfile, availableMinutes);
+  }, [mastery, availableMinutes]);
 
   return (
     <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
@@ -34,8 +35,10 @@ export default function Dashboard() {
             <Target className="w-5 h-5 mr-2" />
             <h3 className="font-medium">Tempo de Estudo</h3>
           </div>
-          <p className="text-3xl font-bold">120<span className="text-lg font-normal text-zinc-500 ml-1">min</span></p>
-          <p className="text-sm text-zinc-500 mt-1">Meta diária ajustada à energia (Média)</p>
+          <p className="text-3xl font-bold">{availableMinutes}<span className="text-lg font-normal text-zinc-500 ml-1">min</span></p>
+          <p className="text-sm text-zinc-500 mt-1">
+            {usingAuto ? 'Calculado a partir da sua agenda do Google' : 'Meta diária ajustada à energia (Média)'}
+          </p>
         </div>
         
         <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 shadow-sm">
