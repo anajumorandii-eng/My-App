@@ -1,21 +1,57 @@
 import { Topic, TopicMastery, UserProfile, ErrorLog, Question, PodcastEpisode, StudyMethod } from '../types';
 
 export const mockTopics: Topic[] = [
+  // Biologia
   { id: 'bio_01', name: 'Citologia', subject: 'Biologia', prerequisites: [] },
   { id: 'bio_02', name: 'Genética', subject: 'Biologia', prerequisites: ['bio_01'] },
+  { id: 'bio_03', name: 'Fisiologia Humana', subject: 'Biologia', prerequisites: [] },
+  { id: 'bio_04', name: 'Ecologia', subject: 'Biologia', prerequisites: [] },
+  { id: 'bio_05', name: 'Evolução', subject: 'Biologia', prerequisites: ['bio_02'] },
+  { id: 'bio_06', name: 'Microbiologia e Imunologia', subject: 'Biologia', prerequisites: ['bio_01'] },
+  // Matemática
   { id: 'mat_01', name: 'Funções de 1º Grau', subject: 'Matemática', prerequisites: [] },
   { id: 'mat_02', name: 'Análise Combinatória', subject: 'Matemática', prerequisites: [] },
+  { id: 'mat_03', name: 'Funções de 2º Grau', subject: 'Matemática', prerequisites: ['mat_01'] },
+  { id: 'mat_04', name: 'Geometria Plana', subject: 'Matemática', prerequisites: [] },
+  { id: 'mat_05', name: 'Probabilidade', subject: 'Matemática', prerequisites: ['mat_02'] },
+  { id: 'mat_06', name: 'Trigonometria', subject: 'Matemática', prerequisites: ['mat_04'] },
+  // Física
   { id: 'fis_01', name: 'Cinemática', subject: 'Física', prerequisites: ['mat_01'] },
-  { id: 'fis_02', name: 'Eletrodinâmica', subject: 'Física', prerequisites: [] }
+  { id: 'fis_02', name: 'Eletrodinâmica', subject: 'Física', prerequisites: [] },
+  { id: 'fis_03', name: 'Dinâmica', subject: 'Física', prerequisites: ['fis_01'] },
+  { id: 'fis_04', name: 'Termologia', subject: 'Física', prerequisites: [] },
+  { id: 'fis_05', name: 'Óptica', subject: 'Física', prerequisites: [] },
+  { id: 'fis_06', name: 'Ondulatória', subject: 'Física', prerequisites: [] },
+  // Química
+  { id: 'qui_01', name: 'Estequiometria', subject: 'Química', prerequisites: [] },
+  { id: 'qui_02', name: 'Ligações Químicas', subject: 'Química', prerequisites: [] },
+  { id: 'qui_03', name: 'Química Orgânica', subject: 'Química', prerequisites: ['qui_02'] },
+  { id: 'qui_04', name: 'Soluções e Concentração', subject: 'Química', prerequisites: ['qui_01'] }
 ];
 
 export const mockMastery: TopicMastery[] = [
   { topicId: 'bio_01', level: 85, uncertainty: 0.1, lastReviewed: new Date(Date.now() - 5 * 86400000).toISOString(), errorSignals: 0 },
   { topicId: 'bio_02', level: 30, uncertainty: 0.8, lastReviewed: new Date(Date.now() - 1 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'bio_03', level: 55, uncertainty: 0.5, lastReviewed: new Date(Date.now() - 4 * 86400000).toISOString(), errorSignals: 2 },
+  { topicId: 'bio_04', level: 40, uncertainty: 0.6, lastReviewed: new Date(Date.now() - 7 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'bio_05', level: 20, uncertainty: 0.85, lastReviewed: new Date(Date.now() - 12 * 86400000).toISOString(), errorSignals: 3 },
+  { topicId: 'bio_06', level: 65, uncertainty: 0.35, lastReviewed: new Date(Date.now() - 6 * 86400000).toISOString(), errorSignals: 0 },
   { topicId: 'mat_01', level: 95, uncertainty: 0.05, lastReviewed: new Date(Date.now() - 15 * 86400000).toISOString(), errorSignals: 0 },
   { topicId: 'mat_02', level: 60, uncertainty: 0.4, lastReviewed: new Date(Date.now() - 3 * 86400000).toISOString(), errorSignals: 4 },
+  { topicId: 'mat_03', level: 50, uncertainty: 0.5, lastReviewed: new Date(Date.now() - 5 * 86400000).toISOString(), errorSignals: 2 },
+  { topicId: 'mat_04', level: 70, uncertainty: 0.3, lastReviewed: new Date(Date.now() - 8 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'mat_05', level: 45, uncertainty: 0.55, lastReviewed: new Date(Date.now() - 2 * 86400000).toISOString(), errorSignals: 3 },
+  { topicId: 'mat_06', level: 25, uncertainty: 0.8, lastReviewed: new Date(Date.now() - 20 * 86400000).toISOString(), errorSignals: 2 },
   { topicId: 'fis_01', level: 75, uncertainty: 0.2, lastReviewed: new Date(Date.now() - 2 * 86400000).toISOString(), errorSignals: 1 },
-  { topicId: 'fis_02', level: 10, uncertainty: 0.9, lastReviewed: new Date(Date.now() - 10 * 86400000).toISOString(), errorSignals: 2 }
+  { topicId: 'fis_02', level: 10, uncertainty: 0.9, lastReviewed: new Date(Date.now() - 10 * 86400000).toISOString(), errorSignals: 2 },
+  { topicId: 'fis_03', level: 60, uncertainty: 0.4, lastReviewed: new Date(Date.now() - 3 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'fis_04', level: 35, uncertainty: 0.65, lastReviewed: new Date(Date.now() - 9 * 86400000).toISOString(), errorSignals: 2 },
+  { topicId: 'fis_05', level: 15, uncertainty: 0.9, lastReviewed: new Date(Date.now() - 14 * 86400000).toISOString(), errorSignals: 4 },
+  { topicId: 'fis_06', level: 80, uncertainty: 0.15, lastReviewed: new Date(Date.now() - 6 * 86400000).toISOString(), errorSignals: 0 },
+  { topicId: 'qui_01', level: 30, uncertainty: 0.75, lastReviewed: new Date(Date.now() - 1 * 86400000).toISOString(), errorSignals: 3 },
+  { topicId: 'qui_02', level: 55, uncertainty: 0.45, lastReviewed: new Date(Date.now() - 4 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'qui_03', level: 20, uncertainty: 0.85, lastReviewed: new Date(Date.now() - 11 * 86400000).toISOString(), errorSignals: 2 },
+  { topicId: 'qui_04', level: 45, uncertainty: 0.5, lastReviewed: new Date(Date.now() - 7 * 86400000).toISOString(), errorSignals: 1 }
 ];
 
 export const mockProfile: UserProfile = {
@@ -40,6 +76,7 @@ export const mockErrorLogs: ErrorLog[] = [
 ];
 
 export const mockQuestions: Question[] = [
+  // Biologia — Citologia
   {
     id: 'q_bio_01_1',
     topicId: 'bio_01',
@@ -56,6 +93,22 @@ export const mockQuestions: Question[] = [
     difficulty: 'easy'
   },
   {
+    id: 'q_bio_01_2',
+    topicId: 'bio_01',
+    subject: 'Biologia',
+    prompt: 'Qual estrutura é responsável pela síntese de proteínas na célula?',
+    options: [
+      { id: 'a', text: 'Ribossomo' },
+      { id: 'b', text: 'Complexo de Golgi' },
+      { id: 'c', text: 'Peroxissomo' },
+      { id: 'd', text: 'Vacúolo' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Os ribossomos traduzem o RNA mensageiro em cadeias polipeptídicas, sendo a estrutura responsável pela síntese proteica, livres no citoplasma ou aderidos ao retículo endoplasmático rugoso.',
+    difficulty: 'easy'
+  },
+  // Biologia — Genética
+  {
     id: 'q_bio_02_1',
     topicId: 'bio_02',
     subject: 'Biologia',
@@ -70,6 +123,146 @@ export const mockQuestions: Question[] = [
     explanation: 'Com dominância completa, o cruzamento Aa x Aa produz genótipos na proporção 1AA:2Aa:1aa, resultando em fenótipos 3 dominantes : 1 recessivo.',
     difficulty: 'medium'
   },
+  {
+    id: 'q_bio_02_2',
+    topicId: 'bio_02',
+    subject: 'Biologia',
+    prompt: 'Qual é a probabilidade de dois indivíduos heterozigotos Aa gerarem um filho homozigoto recessivo (aa)?',
+    options: [
+      { id: 'a', text: '0%' },
+      { id: 'b', text: '25%' },
+      { id: 'c', text: '50%' },
+      { id: 'd', text: '75%' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'No cruzamento Aa x Aa, a proporção genotípica esperada é 1AA:2Aa:1aa, portanto 1/4 (25%) de chance de gerar um filho aa.',
+    difficulty: 'medium'
+  },
+  // Biologia — Fisiologia Humana
+  {
+    id: 'q_bio_03_1',
+    topicId: 'bio_03',
+    subject: 'Biologia',
+    prompt: 'Qual câmara do coração bombeia sangue oxigenado para todo o corpo através da artéria aorta?',
+    options: [
+      { id: 'a', text: 'Átrio direito' },
+      { id: 'b', text: 'Ventrículo direito' },
+      { id: 'c', text: 'Átrio esquerdo' },
+      { id: 'd', text: 'Ventrículo esquerdo' }
+    ],
+    correctOptionId: 'd',
+    explanation: 'O ventrículo esquerdo recebe sangue oxigenado do átrio esquerdo (vindo dos pulmões) e o bombeia com alta pressão para a aorta, distribuindo-o para todo o corpo.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_bio_03_2',
+    topicId: 'bio_03',
+    subject: 'Biologia',
+    prompt: 'Qual é a principal função dos néfrons nos rins?',
+    options: [
+      { id: 'a', text: 'Produzir hemácias' },
+      { id: 'b', text: 'Filtrar o sangue e formar a urina' },
+      { id: 'c', text: 'Armazenar bile' },
+      { id: 'd', text: 'Regular a temperatura corporal' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Os néfrons são as unidades funcionais dos rins, responsáveis por filtrar o sangue, reabsorver substâncias úteis e formar a urina, eliminando excretas e regulando o equilíbrio hídrico.',
+    difficulty: 'easy'
+  },
+  // Biologia — Ecologia
+  {
+    id: 'q_bio_04_1',
+    topicId: 'bio_04',
+    subject: 'Biologia',
+    prompt: 'Em uma cadeia alimentar, qual nível trófico é ocupado pelos organismos que realizam fotossíntese?',
+    options: [
+      { id: 'a', text: 'Consumidores primários' },
+      { id: 'b', text: 'Consumidores secundários' },
+      { id: 'c', text: 'Produtores' },
+      { id: 'd', text: 'Decompositores' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'Os produtores (como plantas e algas) realizam fotossíntese, convertendo energia luminosa em energia química, e ocupam a base de toda cadeia alimentar.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_bio_04_2',
+    topicId: 'bio_04',
+    subject: 'Biologia',
+    prompt: 'O que caracteriza uma relação de mutualismo entre duas espécies?',
+    options: [
+      { id: 'a', text: 'Uma espécie se beneficia e a outra é prejudicada' },
+      { id: 'b', text: 'Ambas as espécies se beneficiam e frequentemente dependem uma da outra' },
+      { id: 'c', text: 'Uma espécie se beneficia e a outra não é afetada' },
+      { id: 'd', text: 'Ambas as espécies competem pelo mesmo recurso' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'No mutualismo, as duas espécies envolvidas se beneficiam da interação, muitas vezes de forma obrigatória, como no caso de líquens (fungos e algas/cianobactérias).',
+    difficulty: 'medium'
+  },
+  // Biologia — Evolução
+  {
+    id: 'q_bio_05_1',
+    topicId: 'bio_05',
+    subject: 'Biologia',
+    prompt: 'Segundo a teoria da seleção natural de Darwin, o que determina a sobrevivência e reprodução diferencial dos indivíduos em uma população?',
+    options: [
+      { id: 'a', text: 'O uso e desuso das características' },
+      { id: 'b', text: 'Características adquiridas durante a vida' },
+      { id: 'c', text: 'Variações hereditárias mais adaptadas ao ambiente' },
+      { id: 'd', text: 'A vontade do organismo em se adaptar' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'A seleção natural atua sobre variações hereditárias já existentes na população; indivíduos com características mais adaptadas ao ambiente tendem a sobreviver e deixar mais descendentes.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_05_2',
+    topicId: 'bio_05',
+    subject: 'Biologia',
+    prompt: 'O que é especiação por isolamento geográfico (alopátrica)?',
+    options: [
+      { id: 'a', text: 'Formação de novas espécies quando populações são separadas fisicamente e acumulam diferenças genéticas independentes' },
+      { id: 'b', text: 'Formação de espécies na mesma área geográfica sem qualquer barreira' },
+      { id: 'c', text: 'Extinção de uma espécie por competição' },
+      { id: 'd', text: 'Cruzamento entre espécies diferentes' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Na especiação alopátrica, uma barreira geográfica separa populações de uma mesma espécie; isoladas, elas acumulam mutações e adaptações distintas até não conseguirem mais se reproduzir entre si.',
+    difficulty: 'medium'
+  },
+  // Biologia — Microbiologia e Imunologia
+  {
+    id: 'q_bio_06_1',
+    topicId: 'bio_06',
+    subject: 'Biologia',
+    prompt: 'Qual estrutura é comum a todas as bactérias e ausente nas células eucarióticas?',
+    options: [
+      { id: 'a', text: 'Núcleo delimitado por membrana' },
+      { id: 'b', text: 'Parede celular de peptideoglicano' },
+      { id: 'c', text: 'Mitocôndrias' },
+      { id: 'd', text: 'Retículo endoplasmático' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'As bactérias possuem parede celular composta por peptideoglicano (característica exclusiva de procariontes) e não possuem núcleo delimitado por membrana nem organelas membranosas complexas.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_06_2',
+    topicId: 'bio_06',
+    subject: 'Biologia',
+    prompt: 'Qual é a principal diferença entre imunidade inata e imunidade adaptativa?',
+    options: [
+      { id: 'a', text: 'A inata é específica e tem memória; a adaptativa não' },
+      { id: 'b', text: 'A inata é rápida e inespecífica; a adaptativa é mais lenta, específica e gera memória' },
+      { id: 'c', text: 'Apenas a adaptativa existe em humanos' },
+      { id: 'd', text: 'A inata só atua contra vírus' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A imunidade inata é a primeira linha de defesa, rápida mas inespecífica (ex: barreiras físicas, fagócitos). A imunidade adaptativa é mais lenta para se desenvolver, porém específica e gera células de memória, base da vacinação.',
+    difficulty: 'hard'
+  },
+  // Matemática — Funções de 1º Grau
   {
     id: 'q_mat_01_1',
     topicId: 'mat_01',
@@ -86,6 +279,22 @@ export const mockQuestions: Question[] = [
     difficulty: 'easy'
   },
   {
+    id: 'q_mat_01_2',
+    topicId: 'mat_01',
+    subject: 'Matemática',
+    prompt: 'Qual é o coeficiente angular da reta representada pela função f(x) = -3x + 7?',
+    options: [
+      { id: 'a', text: '7' },
+      { id: 'b', text: '-3' },
+      { id: 'c', text: '3' },
+      { id: 'd', text: '-7' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Na forma f(x) = ax + b, o coeficiente angular é o valor de a, que determina a inclinação da reta. Aqui, a = -3, indicando uma função decrescente.',
+    difficulty: 'easy'
+  },
+  // Matemática — Análise Combinatória
+  {
     id: 'q_mat_02_1',
     topicId: 'mat_02',
     subject: 'Matemática',
@@ -100,6 +309,146 @@ export const mockQuestions: Question[] = [
     explanation: 'É uma permutação simples de 3 elementos: 3! = 3 × 2 × 1 = 6 formas distintas.',
     difficulty: 'medium'
   },
+  {
+    id: 'q_mat_02_2',
+    topicId: 'mat_02',
+    subject: 'Matemática',
+    prompt: 'Uma senha é formada por 4 dígitos distintos, escolhidos entre 0 e 9. Quantas senhas diferentes podem ser formadas?',
+    options: [
+      { id: 'a', text: '5040' },
+      { id: 'b', text: '10000' },
+      { id: 'c', text: '210' },
+      { id: 'd', text: '720' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'É um arranjo simples de 10 elementos tomados 4 a 4 (ordem importa, sem repetição): A(10,4) = 10×9×8×7 = 5040.',
+    difficulty: 'hard'
+  },
+  // Matemática — Funções de 2º Grau
+  {
+    id: 'q_mat_03_1',
+    topicId: 'mat_03',
+    subject: 'Matemática',
+    prompt: 'Qual é o valor do discriminante (Δ) da função f(x) = x² - 5x + 6?',
+    options: [
+      { id: 'a', text: '1' },
+      { id: 'b', text: '-1' },
+      { id: 'c', text: '49' },
+      { id: 'd', text: '25' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Δ = b² - 4ac = (-5)² - 4(1)(6) = 25 - 24 = 1. Como Δ > 0, a função possui duas raízes reais distintas.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_03_2',
+    topicId: 'mat_03',
+    subject: 'Matemática',
+    prompt: 'Qual é o vértice da parábola representada por f(x) = x² - 4x + 3?',
+    options: [
+      { id: 'a', text: '(2, -1)' },
+      { id: 'b', text: '(-2, 1)' },
+      { id: 'c', text: '(2, 1)' },
+      { id: 'd', text: '(4, 3)' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'xv = -b/2a = 4/2 = 2. yv = f(2) = 4 - 8 + 3 = -1. O vértice é (2, -1), ponto de mínimo da parábola (concavidade para cima).',
+    difficulty: 'medium'
+  },
+  // Matemática — Geometria Plana
+  {
+    id: 'q_mat_04_1',
+    topicId: 'mat_04',
+    subject: 'Matemática',
+    prompt: 'Qual é a área de um triângulo retângulo com catetos medindo 6 cm e 8 cm?',
+    options: [
+      { id: 'a', text: '14 cm²' },
+      { id: 'b', text: '24 cm²' },
+      { id: 'c', text: '48 cm²' },
+      { id: 'd', text: '28 cm²' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A área do triângulo é (base × altura) / 2. Usando os catetos como base e altura: (6 × 8) / 2 = 24 cm².',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_mat_04_2',
+    topicId: 'mat_04',
+    subject: 'Matemática',
+    prompt: 'Um círculo tem raio de 5 cm. Qual é aproximadamente sua área, considerando π ≈ 3,14?',
+    options: [
+      { id: 'a', text: '15,7 cm²' },
+      { id: 'b', text: '31,4 cm²' },
+      { id: 'c', text: '78,5 cm²' },
+      { id: 'd', text: '157 cm²' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'A área do círculo é π × r². Com r = 5: 3,14 × 25 = 78,5 cm².',
+    difficulty: 'easy'
+  },
+  // Matemática — Probabilidade
+  {
+    id: 'q_mat_05_1',
+    topicId: 'mat_05',
+    subject: 'Matemática',
+    prompt: 'Ao lançar um dado de 6 faces uma vez, qual a probabilidade de obter um número par?',
+    options: [
+      { id: 'a', text: '1/6' },
+      { id: 'b', text: '1/3' },
+      { id: 'c', text: '1/2' },
+      { id: 'd', text: '2/3' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'Há 3 números pares (2, 4, 6) em 6 possibilidades totais, logo a probabilidade é 3/6 = 1/2.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_mat_05_2',
+    topicId: 'mat_05',
+    subject: 'Matemática',
+    prompt: 'Em uma urna há 4 bolas vermelhas e 6 bolas azuis. Retirando uma bola ao acaso, qual a probabilidade de ela ser vermelha?',
+    options: [
+      { id: 'a', text: '0,2' },
+      { id: 'b', text: '0,4' },
+      { id: 'c', text: '0,5' },
+      { id: 'd', text: '0,6' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A probabilidade é o número de casos favoráveis sobre o total: 4 vermelhas / 10 bolas totais = 0,4 (40%).',
+    difficulty: 'easy'
+  },
+  // Matemática — Trigonometria
+  {
+    id: 'q_mat_06_1',
+    topicId: 'mat_06',
+    subject: 'Matemática',
+    prompt: 'Qual é o valor de sen(30°)?',
+    options: [
+      { id: 'a', text: '0' },
+      { id: 'b', text: '1/2' },
+      { id: 'c', text: '√2/2' },
+      { id: 'd', text: '√3/2' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'sen(30°) = 1/2 é um dos valores notáveis da trigonometria, obtido a partir do triângulo retângulo de ângulos 30-60-90.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_mat_06_2',
+    topicId: 'mat_06',
+    subject: 'Matemática',
+    prompt: 'Em um triângulo retângulo, o cateto oposto a um ângulo mede 3 e a hipotenusa mede 5. Qual é o valor do cosseno desse ângulo?',
+    options: [
+      { id: 'a', text: '3/5' },
+      { id: 'b', text: '4/5' },
+      { id: 'c', text: '3/4' },
+      { id: 'd', text: '5/4' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Pelo Teorema de Pitágoras, o cateto adjacente é √(5² - 3²) = √16 = 4. Como cosseno = cateto adjacente/hipotenusa, cos = 4/5.',
+    difficulty: 'medium'
+  },
+  // Física — Cinemática
   {
     id: 'q_fis_01_1',
     topicId: 'fis_01',
@@ -116,6 +465,22 @@ export const mockQuestions: Question[] = [
     difficulty: 'easy'
   },
   {
+    id: 'q_fis_01_2',
+    topicId: 'fis_01',
+    subject: 'Física',
+    prompt: 'Um objeto é lançado verticalmente para cima com velocidade inicial de 20 m/s. Desprezando a resistência do ar (g = 10 m/s²), quanto tempo leva para atingir a altura máxima?',
+    options: [
+      { id: 'a', text: '1 s' },
+      { id: 'b', text: '2 s' },
+      { id: 'c', text: '3 s' },
+      { id: 'd', text: '4 s' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Na altura máxima, v = 0. Usando v = v0 - g·t: 0 = 20 - 10t → t = 2 s.',
+    difficulty: 'medium'
+  },
+  // Física — Eletrodinâmica
+  {
     id: 'q_fis_02_1',
     topicId: 'fis_02',
     subject: 'Física',
@@ -129,6 +494,269 @@ export const mockQuestions: Question[] = [
     correctOptionId: 'b',
     explanation: 'Resistência equivalente em série: 10 + 10 = 20Ω. Pela Lei de Ohm, I = V/R = 20/20 = 1 A.',
     difficulty: 'hard'
+  },
+  {
+    id: 'q_fis_02_2',
+    topicId: 'fis_02',
+    subject: 'Física',
+    prompt: 'Dois resistores de 10Ω cada estão associados em paralelo. Qual é a resistência equivalente?',
+    options: [
+      { id: 'a', text: '20Ω' },
+      { id: 'b', text: '10Ω' },
+      { id: 'c', text: '5Ω' },
+      { id: 'd', text: '2Ω' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'Em paralelo, 1/Req = 1/10 + 1/10 = 2/10, logo Req = 10/2 = 5Ω.',
+    difficulty: 'medium'
+  },
+  // Física — Dinâmica
+  {
+    id: 'q_fis_03_1',
+    topicId: 'fis_03',
+    subject: 'Física',
+    prompt: 'Segundo a Segunda Lei de Newton, qual é a força resultante necessária para acelerar um corpo de 5 kg a 4 m/s²?',
+    options: [
+      { id: 'a', text: '1,25 N' },
+      { id: 'b', text: '9 N' },
+      { id: 'c', text: '20 N' },
+      { id: 'd', text: '0,8 N' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'F = m × a = 5 × 4 = 20 N, conforme a Segunda Lei de Newton (F = m.a).',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_fis_03_2',
+    topicId: 'fis_03',
+    subject: 'Física',
+    prompt: 'De acordo com a Terceira Lei de Newton (ação e reação), quando você empurra uma parede, o que acontece?',
+    options: [
+      { id: 'a', text: 'Nada acontece com a parede' },
+      { id: 'b', text: 'A parede exerce sobre você uma força de mesma intensidade e direção oposta' },
+      { id: 'c', text: 'A parede exerce uma força maior sobre você' },
+      { id: 'd', text: 'A força de reação ocorre apenas em objetos com massa maior' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A Terceira Lei de Newton afirma que para toda ação há uma reação de mesma intensidade, mesma direção e sentido oposto, atuando em corpos diferentes — por isso a parede "empurra de volta".',
+    difficulty: 'medium'
+  },
+  // Física — Termologia
+  {
+    id: 'q_fis_04_1',
+    topicId: 'fis_04',
+    subject: 'Física',
+    prompt: 'Um corpo recebe 500 cal de calor e sua temperatura varia de 20°C para 30°C. Sabendo que sua massa é 100g, qual é o calor específico do material (Q = m·c·ΔT)?',
+    options: [
+      { id: 'a', text: '0,5 cal/g°C' },
+      { id: 'b', text: '1 cal/g°C' },
+      { id: 'c', text: '5 cal/g°C' },
+      { id: 'd', text: '0,1 cal/g°C' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Q = m·c·ΔT → 500 = 100 × c × 10 → c = 500/1000 = 0,5 cal/g°C.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_04_2',
+    topicId: 'fis_04',
+    subject: 'Física',
+    prompt: 'O que ocorre com as moléculas de um gás quando sua temperatura aumenta, mantendo o volume constante?',
+    options: [
+      { id: 'a', text: 'Diminuem de velocidade e a pressão cai' },
+      { id: 'b', text: 'Aumentam de velocidade média, aumentando a pressão' },
+      { id: 'c', text: 'Param de se mover' },
+      { id: 'd', text: 'Reduzem de tamanho' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'O aumento de temperatura eleva a energia cinética média das moléculas, fazendo-as se mover mais rápido e colidir com mais frequência e intensidade nas paredes do recipiente, aumentando a pressão (Lei de Gay-Lussac).',
+    difficulty: 'medium'
+  },
+  // Física — Óptica
+  {
+    id: 'q_fis_05_1',
+    topicId: 'fis_05',
+    subject: 'Física',
+    prompt: 'O que causa a formação do arco-íris na atmosfera?',
+    options: [
+      { id: 'a', text: 'Reflexão da luz solar em nuvens' },
+      { id: 'b', text: 'Refração e dispersão da luz branca ao atravessar gotas de água' },
+      { id: 'c', text: 'Absorção seletiva de cores pelo ar' },
+      { id: 'd', text: 'Difração da luz em partículas de poeira' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A luz branca do sol, ao entrar nas gotas de água, sofre refração, reflexão interna e nova refração, sendo decomposta (dispersa) em suas cores componentes devido aos diferentes índices de refração de cada comprimento de onda.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_05_2',
+    topicId: 'fis_05',
+    subject: 'Física',
+    prompt: 'Uma pessoa míope enxerga mal objetos distantes porque a imagem se forma:',
+    options: [
+      { id: 'a', text: 'Atrás da retina' },
+      { id: 'b', text: 'Exatamente sobre a retina' },
+      { id: 'c', text: 'Na frente da retina' },
+      { id: 'd', text: 'Fora do olho' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'Na miopia, o olho é mais "alongado" ou o cristalino tem convergência excessiva, fazendo a imagem de objetos distantes se formar antes da retina. Corrige-se com lentes divergentes (côncavas).',
+    difficulty: 'easy'
+  },
+  // Física — Ondulatória
+  {
+    id: 'q_fis_06_1',
+    topicId: 'fis_06',
+    subject: 'Física',
+    prompt: 'Uma onda tem frequência de 50 Hz e comprimento de onda de 4 m. Qual é sua velocidade de propagação?',
+    options: [
+      { id: 'a', text: '12,5 m/s' },
+      { id: 'b', text: '54 m/s' },
+      { id: 'c', text: '200 m/s' },
+      { id: 'd', text: '46 m/s' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'A velocidade de propagação é v = λ × f = 4 × 50 = 200 m/s.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_fis_06_2',
+    topicId: 'fis_06',
+    subject: 'Física',
+    prompt: 'O que caracteriza o fenômeno da ressonância?',
+    options: [
+      { id: 'a', text: 'Duas ondas se anulando completamente' },
+      { id: 'b', text: 'Um sistema vibrando com amplitude máxima ao receber energia numa frequência igual à sua frequência natural' },
+      { id: 'c', text: 'A reflexão de uma onda numa superfície' },
+      { id: 'd', text: 'A mudança de meio de propagação de uma onda' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Ressonância ocorre quando um sistema é forçado a vibrar numa frequência igual à sua frequência natural de oscilação, resultando em amplitude de vibração muito maior — como um copo de cristal quebrando com um som na frequência certa.',
+    difficulty: 'hard'
+  },
+  // Química — Estequiometria
+  {
+    id: 'q_qui_01_1',
+    topicId: 'qui_01',
+    subject: 'Química',
+    prompt: 'Na reação 2H₂ + O₂ → 2H₂O, quantos mols de água são produzidos a partir de 4 mols de H₂ (com O₂ em excesso)?',
+    options: [
+      { id: 'a', text: '2 mols' },
+      { id: 'b', text: '4 mols' },
+      { id: 'c', text: '8 mols' },
+      { id: 'd', text: '1 mol' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Pela proporção estequiométrica da equação balanceada, 2 mols de H₂ produzem 2 mols de H₂O (proporção 1:1). Logo, 4 mols de H₂ produzem 4 mols de H₂O.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_qui_01_2',
+    topicId: 'qui_01',
+    subject: 'Química',
+    prompt: 'Qual é a massa molar aproximada do CO₂ (considerando C = 12 g/mol e O = 16 g/mol)?',
+    options: [
+      { id: 'a', text: '28 g/mol' },
+      { id: 'b', text: '32 g/mol' },
+      { id: 'c', text: '44 g/mol' },
+      { id: 'd', text: '16 g/mol' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'Massa molar do CO₂ = 12 (C) + 2×16 (O) = 12 + 32 = 44 g/mol.',
+    difficulty: 'easy'
+  },
+  // Química — Ligações Químicas
+  {
+    id: 'q_qui_02_1',
+    topicId: 'qui_02',
+    subject: 'Química',
+    prompt: 'Qual tipo de ligação química ocorre entre um metal e um ametal, com transferência de elétrons?',
+    options: [
+      { id: 'a', text: 'Ligação covalente' },
+      { id: 'b', text: 'Ligação metálica' },
+      { id: 'c', text: 'Ligação iônica' },
+      { id: 'd', text: 'Ligação de hidrogênio' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'A ligação iônica ocorre pela transferência de elétrons de um átomo (geralmente metal, que perde elétrons) para outro (geralmente ametal, que ganha elétrons), formando íons de cargas opostas que se atraem.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_qui_02_2',
+    topicId: 'qui_02',
+    subject: 'Química',
+    prompt: 'Por que a molécula de água (H₂O) é polar?',
+    options: [
+      { id: 'a', text: 'Porque possui apenas ligações covalentes apolares' },
+      { id: 'b', text: 'Porque tem geometria angular e diferença de eletronegatividade entre H e O, gerando um dipolo elétrico' },
+      { id: 'c', text: 'Porque é uma molécula iônica' },
+      { id: 'd', text: 'Porque não possui pares de elétrons não ligantes' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'O oxigênio é mais eletronegativo que o hidrogênio e a molécula tem geometria angular (não linear), fazendo com que os vetores de dipolo não se cancelem, resultando em uma molécula polar — essencial para as propriedades da água.',
+    difficulty: 'medium'
+  },
+  // Química — Química Orgânica
+  {
+    id: 'q_qui_03_1',
+    topicId: 'qui_03',
+    subject: 'Química',
+    prompt: 'Qual é o nome do composto orgânico mais simples da função álcool, com um único átomo de carbono?',
+    options: [
+      { id: 'a', text: 'Metanol' },
+      { id: 'b', text: 'Etanol' },
+      { id: 'c', text: 'Metano' },
+      { id: 'd', text: 'Ácido fórmico' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O metanol (CH₃OH) é o álcool mais simples, com um átomo de carbono ligado a uma hidroxila (-OH), grupo funcional característico dos álcoois.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_qui_03_2',
+    topicId: 'qui_03',
+    subject: 'Química',
+    prompt: 'Qual é a principal característica que define um hidrocarboneto?',
+    options: [
+      { id: 'a', text: 'Conter apenas átomos de carbono e hidrogênio' },
+      { id: 'b', text: 'Conter obrigatoriamente oxigênio' },
+      { id: 'c', text: 'Ser sempre um composto cíclico' },
+      { id: 'd', text: 'Conter nitrogênio na cadeia' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Hidrocarbonetos são compostos orgânicos formados exclusivamente por átomos de carbono e hidrogênio, como o metano (CH₄) e o etano (C₂H₆).',
+    difficulty: 'easy'
+  },
+  // Química — Soluções e Concentração
+  {
+    id: 'q_qui_04_1',
+    topicId: 'qui_04',
+    subject: 'Química',
+    prompt: 'Uma solução foi preparada dissolvendo 20 g de sal em 500 mL de água. Qual é a concentração em g/L?',
+    options: [
+      { id: 'a', text: '20 g/L' },
+      { id: 'b', text: '40 g/L' },
+      { id: 'c', text: '10 g/L' },
+      { id: 'd', text: '4 g/L' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Concentração (g/L) = massa do soluto (g) / volume da solução (L) = 20 / 0,5 = 40 g/L.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_qui_04_2',
+    topicId: 'qui_04',
+    subject: 'Química',
+    prompt: 'O que significa dizer que uma solução está "saturada"?',
+    options: [
+      { id: 'a', text: 'Ela contém mais soluto do que consegue dissolver, com corpo de fundo' },
+      { id: 'b', text: 'Ela atingiu a quantidade máxima de soluto dissolvido para aquela temperatura, sem sobra' },
+      { id: 'c', text: 'Ela contém apenas água pura' },
+      { id: 'd', text: 'Ela está sempre em ebulição' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Uma solução saturada é aquela que atingiu o limite de solubilidade do soluto naquela temperatura — dissolveu o máximo possível sem formar precipitado. Além desse ponto, o excesso forma corpo de fundo.',
+    difficulty: 'medium'
   }
 ];
 
@@ -150,6 +778,38 @@ export const mockPodcastEpisodes: PodcastEpisode[] = [
     script: 'Mendel descobriu que características são herdadas em unidades discretas, os genes, que existem em pares chamados alelos. Quando um alelo é dominante, ele se expressa mesmo na presença de um alelo recessivo. Um heterozigoto tem um alelo de cada tipo. Ao cruzar dois heterozigotos, a proporção fenotípica esperada é de três dominantes para um recessivo. Isso é a base do quadro de Punnett, sua principal ferramenta para prever cruzamentos.'
   },
   {
+    id: 'pod_bio_03',
+    topicId: 'bio_03',
+    title: 'Como o corpo humano se mantém em equilíbrio',
+    subject: 'Biologia',
+    durationMinutes: 6,
+    script: 'O corpo humano funciona como um sistema integrado de sistemas orgânicos. O sistema cardiovascular bombeia sangue através do coração, que possui quatro câmaras: dois átrios e dois ventrículos. O sangue oxigenado sai do ventrículo esquerdo pela aorta e é distribuído para todo o corpo. Já os rins filtram o sangue através dos néfrons, removendo excretas e regulando o volume e a composição dos líquidos corporais. Entender como esses sistemas trabalham juntos, mantendo a homeostase, é essencial não só para o vestibular, mas para toda a sua futura formação em Medicina.'
+  },
+  {
+    id: 'pod_bio_04',
+    topicId: 'bio_04',
+    title: 'Ecologia: cadeias, teias e relações entre espécies',
+    subject: 'Biologia',
+    durationMinutes: 5,
+    script: 'Toda cadeia alimentar começa nos produtores, organismos capazes de fotossíntese, que convertem energia luminosa em energia química. Os consumidores primários se alimentam dos produtores, os secundários predam os primários, e assim por diante, com perda de energia a cada nível trófico. As relações ecológicas podem ser harmônicas, como o mutualismo, onde ambas as espécies se beneficiam, ou desarmônicas, como o parasitismo, onde uma espécie prejudica a outra. Compreender ciclos biogeoquímicos, como o do carbono e do nitrogênio, também é fundamental para questões que conectam ecologia com sustentabilidade no vestibular.'
+  },
+  {
+    id: 'pod_bio_05',
+    topicId: 'bio_05',
+    title: 'Evolução: como Darwin explicou a diversidade da vida',
+    subject: 'Biologia',
+    durationMinutes: 6,
+    script: 'A teoria da evolução por seleção natural, proposta por Darwin, explica como as espécies mudam ao longo do tempo. Dentro de uma população, existe variação genética natural entre os indivíduos. Aqueles com características mais vantajosas para o ambiente tendem a sobreviver mais e deixar mais descendentes, transmitindo essas características para as próximas gerações. Com o tempo, isso pode levar à especiação, o surgimento de novas espécies, especialmente quando populações ficam isoladas geograficamente. É importante lembrar que a seleção natural não tem propósito ou direção — ela apenas favorece quem está mais adaptado ao ambiente naquele momento.'
+  },
+  {
+    id: 'pod_bio_06',
+    topicId: 'bio_06',
+    title: 'Bactérias, vírus e o sistema imunológico',
+    subject: 'Biologia',
+    durationMinutes: 7,
+    script: 'Bactérias são organismos procariontes, sem núcleo delimitado por membrana, e possuem parede celular de peptideoglicano. Já os vírus não são considerados seres vivos por muitos biólogos, pois dependem completamente de uma célula hospedeira para se replicar. Nosso sistema imunológico se defende desses invasores em duas frentes: a imunidade inata, rápida e inespecífica, com barreiras físicas e células fagocitárias; e a imunidade adaptativa, mais lenta, porém específica, que gera células de memória — o princípio por trás das vacinas. Esse tema conecta biologia celular com saúde pública, um assunto recorrente em provas de Medicina.'
+  },
+  {
     id: 'pod_mat_01',
     topicId: 'mat_01',
     title: 'Funções de primeiro grau na prática',
@@ -166,6 +826,38 @@ export const mockPodcastEpisodes: PodcastEpisode[] = [
     script: 'A maior pegadinha da análise combinatória é saber quando somar e quando multiplicar possibilidades. Use a multiplicação quando os eventos acontecem em sequência, um depois do outro. Use a soma quando são alternativas que se excluem. Permutação é usada quando todos os elementos são organizados em ordem. Combinação é usada quando a ordem não importa. Ler o enunciado com atenção às palavras chave, como pelo menos, no máximo e exatamente, evita a maioria dos erros de interpretação.'
   },
   {
+    id: 'pod_mat_03',
+    topicId: 'mat_03',
+    title: 'Funções de segundo grau e a parábola',
+    subject: 'Matemática',
+    durationMinutes: 6,
+    script: 'A função de segundo grau tem a forma f de x igual a a x ao quadrado mais b x mais c, e seu gráfico é sempre uma parábola. Se o coeficiente a for positivo, a parábola tem concavidade para cima, com um ponto de mínimo. Se for negativo, a concavidade é para baixo, com um ponto de máximo. O discriminante, delta igual a b ao quadrado menos quatro a c, indica quantas raízes reais a função possui: duas se for positivo, uma se for zero, e nenhuma raiz real se for negativo. Essas funções aparecem em problemas de otimização, física e economia no vestibular.'
+  },
+  {
+    id: 'pod_mat_04',
+    topicId: 'mat_04',
+    title: 'Geometria plana: as fórmulas que mais caem',
+    subject: 'Matemática',
+    durationMinutes: 5,
+    script: 'Geometria plana estuda figuras em duas dimensões: triângulos, quadriláteros, círculos e suas propriedades. As fórmulas de área mais cobradas no vestibular incluem o triângulo, base vezes altura dividido por dois, o retângulo, base vezes altura, e o círculo, pi vezes o raio ao quadrado. O Teorema de Pitágoras, que relaciona os catetos e a hipotenusa de um triângulo retângulo, é uma das ferramentas mais versáteis, aparecendo até em questões de física e trigonometria. Praticar a visualização de figuras compostas, decompondo-as em formas mais simples, é a chave para resolver a maioria dos problemas.'
+  },
+  {
+    id: 'pod_mat_05',
+    topicId: 'mat_05',
+    title: 'Probabilidade sem mistério',
+    subject: 'Matemática',
+    durationMinutes: 5,
+    script: 'Probabilidade mede a chance de um evento acontecer, calculada como o número de casos favoráveis dividido pelo número total de casos possíveis. Em eventos independentes, como lançar um dado duas vezes, multiplicamos as probabilidades individuais. Já em eventos mutuamente exclusivos, que não podem ocorrer ao mesmo tempo, somamos as probabilidades. Esse conteúdo conecta diretamente com análise combinatória: muitas vezes é preciso contar as possibilidades usando permutação ou combinação antes mesmo de calcular a probabilidade. Ler o enunciado com atenção para identificar se os eventos são independentes ou excludentes evita a maioria dos erros nesse tópico.'
+  },
+  {
+    id: 'pod_mat_06',
+    topicId: 'mat_06',
+    title: 'Trigonometria: seno, cosseno e tangente na prática',
+    subject: 'Matemática',
+    durationMinutes: 6,
+    script: 'A trigonometria relaciona os ângulos de um triângulo retângulo com as medidas de seus lados. Seno é o cateto oposto dividido pela hipotenusa, cosseno é o cateto adjacente dividido pela hipotenusa, e tangente é o cateto oposto dividido pelo cateto adjacente. Vale a pena memorizar os valores notáveis para os ângulos de 30, 45 e 60 graus, que aparecem constantemente nas provas. Além do triângulo retângulo, a trigonometria se estende ao círculo trigonométrico, essencial para entender funções periódicas como movimento circular e ondas, temas que conectam diretamente com física.'
+  },
+  {
     id: 'pod_fis_01',
     topicId: 'fis_01',
     title: 'Cinemática: as três equações que resolvem tudo',
@@ -180,6 +872,70 @@ export const mockPodcastEpisodes: PodcastEpisode[] = [
     subject: 'Física',
     durationMinutes: 6,
     script: 'Em circuitos em série, a corrente é a mesma em todos os componentes e as resistências se somam diretamente. Em circuitos em paralelo, a tensão é a mesma em todos os ramos e o inverso da resistência equivalente é a soma dos inversos de cada resistência. A Lei de Ohm, tensão igual a resistência vezes corrente, conecta essas três grandezas e é a ferramenta mais usada para resolver exercícios de eletrodinâmica no vestibular.'
+  },
+  {
+    id: 'pod_fis_03',
+    topicId: 'fis_03',
+    title: 'As três Leis de Newton em um episódio só',
+    subject: 'Física',
+    durationMinutes: 6,
+    script: 'As três Leis de Newton formam a base da mecânica clássica. A primeira, ou lei da inércia, diz que um corpo tende a manter seu estado de repouso ou movimento retilíneo uniforme, a menos que uma força atue sobre ele. A segunda lei estabelece que a força resultante é igual à massa vezes a aceleração, F igual a m vezes a. E a terceira lei, de ação e reação, afirma que toda força aplicada gera uma força de mesma intensidade e sentido oposto em outro corpo. Entender essas três leis juntas é o que permite resolver praticamente qualquer problema de dinâmica no vestibular.'
+  },
+  {
+    id: 'pod_fis_04',
+    topicId: 'fis_04',
+    title: 'Termologia: calor, temperatura e mudanças de estado',
+    subject: 'Física',
+    durationMinutes: 6,
+    script: 'Termologia estuda o calor e suas transformações. Calor específico é a quantidade de energia necessária para elevar em um grau a temperatura de uma unidade de massa de uma substância, calculado pela fórmula Q igual a m vezes c vezes delta T. As mudanças de estado físico, como fusão e vaporização, ocorrem a temperatura constante, com o calor sendo usado para quebrar as ligações entre as moléculas, não para aumentar a temperatura. Já as leis dos gases relacionam pressão, volume e temperatura, sendo fundamentais para entender desde motores até fenômenos atmosféricos, um assunto que aparece com frequência em questões interdisciplinares.'
+  },
+  {
+    id: 'pod_fis_05',
+    topicId: 'fis_05',
+    title: 'Óptica: luz, reflexão e a visão humana',
+    subject: 'Física',
+    durationMinutes: 5,
+    script: 'A óptica estuda o comportamento da luz. Quando a luz passa de um meio para outro, ela sofre refração, mudando de direção devido à diferença de velocidade entre os meios — é esse fenômeno que causa o arco-íris, ao decompor a luz branca em suas cores. Já a reflexão ocorre quando a luz retorna ao meio de origem ao encontrar uma superfície, como em espelhos. No estudo da visão, é importante saber que na miopia a imagem se forma antes da retina, corrigida com lentes divergentes, enquanto na hipermetropia a imagem se forma depois da retina, corrigida com lentes convergentes.'
+  },
+  {
+    id: 'pod_fis_06',
+    topicId: 'fis_06',
+    title: 'Ondulatória: velocidade, frequência e ressonância',
+    subject: 'Física',
+    durationMinutes: 6,
+    script: 'Uma onda transporta energia sem transportar matéria. A velocidade de propagação de uma onda é o produto entre sua frequência e seu comprimento de onda, v igual a lambda vezes f. Ondas mecânicas, como o som, precisam de um meio material para se propagar, enquanto ondas eletromagnéticas, como a luz, se propagam até no vácuo. Um fenômeno interessante é a ressonância, quando um sistema vibra com amplitude máxima ao receber energia numa frequência igual à sua frequência natural — o mesmo princípio usado para sintonizar rádios e explicado em diversas questões de vestibular sobre ondas sonoras e vibrações.'
+  },
+  {
+    id: 'pod_qui_01',
+    topicId: 'qui_01',
+    title: 'Estequiometria sem trava',
+    subject: 'Química',
+    durationMinutes: 6,
+    script: 'Estequiometria é a parte da química que calcula as quantidades de reagentes e produtos em uma reação química balanceada. Tudo começa com a lei de conservação das massas: a massa total dos reagentes é igual à massa total dos produtos. Usando os coeficientes da equação balanceada, conseguimos calcular proporções em mols, depois converter para massa usando a massa molar de cada substância. O segredo para não errar é sempre balancear a equação primeiro e trabalhar com a proporção de mols antes de qualquer outra conversão. É um dos tópicos mais cobrados no vestibular por unir cálculo e química num só problema.'
+  },
+  {
+    id: 'pod_qui_02',
+    topicId: 'qui_02',
+    title: 'Ligações químicas: iônica, covalente e polaridade',
+    subject: 'Química',
+    durationMinutes: 6,
+    script: 'As ligações químicas explicam como os átomos se unem para formar substâncias. Na ligação iônica, um átomo perde elétrons e outro ganha, formando íons de cargas opostas que se atraem eletricamente — típico de metais com ametais. Na ligação covalente, os átomos compartilham pares de elétrons, geralmente entre ametais. A geometria da molécula e a diferença de eletronegatividade entre os átomos determinam se a molécula será polar ou apolar, o que explica propriedades importantes, como a razão pela qual a água dissolve tantas substâncias, sendo um solvente essencial para todos os processos biológicos.'
+  },
+  {
+    id: 'pod_qui_03',
+    topicId: 'qui_03',
+    title: 'Química orgânica: carbono, cadeias e funções',
+    subject: 'Química',
+    durationMinutes: 6,
+    script: 'Química orgânica estuda os compostos de carbono, o elemento capaz de formar quatro ligações covalentes e se unir a outros átomos de carbono formando cadeias longas e variadas. Os hidrocarbonetos, formados só por carbono e hidrogênio, são a base dessa área. A partir deles, surgem as funções orgânicas, como álcoois, quando um grupo hidroxila substitui um hidrogênio, e ácidos carboxílicos, com o grupo carboxila. Reconhecer o grupo funcional de um composto é o primeiro passo para prever suas propriedades e reações, um raciocínio que aparece direto nas questões de química orgânica do vestibular.'
+  },
+  {
+    id: 'pod_qui_04',
+    topicId: 'qui_04',
+    title: 'Soluções e concentração no dia a dia',
+    subject: 'Química',
+    durationMinutes: 5,
+    script: 'Uma solução é uma mistura homogênea entre um soluto, presente em menor quantidade, e um solvente, presente em maior quantidade. A concentração mede a proporção entre eles, podendo ser expressa em gramas por litro, ou em quantidade de matéria, os mols por litro. Uma solução está saturada quando atingiu o limite máximo de soluto que consegue dissolver naquela temperatura; além desse ponto, o excesso forma um corpo de fundo. Esse conteúdo é a base para entender desde soro fisiológico até reações em laboratório, conectando química com aplicações do dia a dia e da medicina.'
   }
 ];
 

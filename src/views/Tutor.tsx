@@ -1,4 +1,5 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useMemo, useState, useRef, useEffect } from 'react';
+import { mockTopics } from '../data/mockData';
 import { Brain, Send, Bot, User, Sparkles } from 'lucide-react';
 
 interface Message {
@@ -8,13 +9,22 @@ interface Message {
 }
 
 export default function Tutor() {
-  const [topic, setTopic] = useState('Biologia Celular');
+  const topicsBySubject = useMemo(() => {
+    const groups: Record<string, string[]> = {};
+    mockTopics.forEach((t) => {
+      groups[t.subject] = groups[t.subject] ?? [];
+      groups[t.subject].push(t.name);
+    });
+    return groups;
+  }, []);
+
+  const [topic, setTopic] = useState(mockTopics[0].name);
   const [input, setInput] = useState('');
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
       sender: 'ai',
-      text: 'Olá. Qual conceito de Biologia Celular está bloqueando seu progresso hoje?'
+      text: `Olá. Qual conceito de ${mockTopics[0].name} está bloqueando seu progresso hoje?`
     }
   ]);
   const [isLoading, setIsLoading] = useState(false);
@@ -88,10 +98,13 @@ export default function Tutor() {
               onChange={(e) => setTopic(e.target.value)}
               className="bg-transparent border border-zinc-300 dark:border-zinc-700 rounded-lg px-3 py-1.5 text-sm outline-none focus:ring-2 focus:ring-indigo-500"
             >
-              <option value="Biologia Celular">Biologia Celular</option>
-              <option value="Análise Combinatória">Análise Combinatória</option>
-              <option value="Cinemática">Cinemática</option>
-              <option value="Química Orgânica">Química Orgânica</option>
+              {Object.entries(topicsBySubject).map(([subject, names]) => (
+                <optgroup key={subject} label={subject}>
+                  {names.map((name) => (
+                    <option key={name} value={name}>{name}</option>
+                  ))}
+                </optgroup>
+              ))}
             </select>
           </div>
         </div>

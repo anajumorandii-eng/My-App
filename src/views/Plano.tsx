@@ -9,6 +9,7 @@ const SUBJECT_COLORS: Record<string, string> = {
   Biologia: 'bg-emerald-500',
   Matemática: 'bg-indigo-500',
   Física: 'bg-amber-500',
+  Química: 'bg-rose-500',
 };
 
 export default function Plano() {

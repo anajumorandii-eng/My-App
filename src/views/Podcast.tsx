@@ -6,6 +6,7 @@ const SUBJECT_COLORS: Record<string, string> = {
   Biologia: 'bg-emerald-50 dark:bg-emerald-900/20 text-emerald-700 dark:text-emerald-300',
   Matemática: 'bg-indigo-50 dark:bg-indigo-900/20 text-indigo-700 dark:text-indigo-300',
   Física: 'bg-amber-50 dark:bg-amber-900/20 text-amber-700 dark:text-amber-300',
+  Química: 'bg-rose-50 dark:bg-rose-900/20 text-rose-700 dark:text-rose-300',
 };
 
 const speechSupported = typeof window !== 'undefined' && 'speechSynthesis' in window;
