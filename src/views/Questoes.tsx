@@ -4,7 +4,7 @@ import { useAuth } from '../context/AuthContext';
 import { useUserMastery } from '../hooks/useUserMastery';
 import { addUserAttempt } from '../lib/userData';
 import { TopicMastery } from '../types';
-import { HelpCircle, CheckCircle2, XCircle, RotateCcw, CloudOff } from 'lucide-react';
+import { HelpCircle, CheckCircle2, XCircle, RotateCcw, CloudOff, Sparkles } from 'lucide-react';
 
 export default function Questoes() {
   const { user } = useAuth();
@@ -14,6 +14,8 @@ export default function Questoes() {
   const [index, setIndex] = useState(0);
   const [selectedOptionId, setSelectedOptionId] = useState<string | null>(null);
   const [history, setHistory] = useState<{ questionId: string; correct: boolean }[]>([]);
+  const [deepExplanation, setDeepExplanation] = useState<string | null>(null);
+  const [loadingDeepExplanation, setLoadingDeepExplanation] = useState(false);
 
   const pool = useMemo(
     () => (subjectFilter === 'Todas' ? mockQuestions : mockQuestions.filter((q) => q.subject === subjectFilter)),
@@ -29,6 +31,7 @@ export default function Questoes() {
     setSubjectFilter(subject);
     setIndex(0);
     setSelectedOptionId(null);
+    setDeepExplanation(null);
   };
 
   const selectOption = (optionId: string) => {
@@ -65,12 +68,43 @@ export default function Questoes() {
   const nextQuestion = () => {
     setIndex((i) => i + 1);
     setSelectedOptionId(null);
+    setDeepExplanation(null);
   };
 
   const resetSession = () => {
     setIndex(0);
     setSelectedOptionId(null);
     setHistory([]);
+    setDeepExplanation(null);
+  };
+
+  const fetchDeepExplanation = async () => {
+    if (!selectedOptionId) return;
+    setLoadingDeepExplanation(true);
+    try {
+      const selectedOption = question.options.find((o) => o.id === selectedOptionId);
+      const correctOption = question.options.find((o) => o.id === question.correctOptionId);
+      const res = await fetch('/api/ai/question-explanation', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          prompt: question.prompt,
+          subject: question.subject,
+          selectedAnswer: selectedOption?.text ?? '',
+          correctAnswer: correctOption?.text ?? '',
+          isCorrect,
+          baseExplanation: question.explanation,
+        }),
+      });
+      if (res.ok) {
+        const data = await res.json();
+        setDeepExplanation(data.text);
+      }
+    } catch (error) {
+      console.error('Failed to fetch deep explanation:', error);
+    } finally {
+      setLoadingDeepExplanation(false);
+    }
   };
 
   return (
@@ -163,6 +197,24 @@ export default function Questoes() {
           >
             <p className="font-semibold mb-1">{isCorrect ? 'Correto!' : 'Não foi dessa vez.'}</p>
             <p>{question.explanation}</p>
+          </div>
+        )}
+
+        {answered && !deepExplanation && (
+          <button
+            onClick={fetchDeepExplanation}
+            disabled={loadingDeepExplanation}
+            className="w-full flex items-center justify-center py-2.5 mb-6 border border-indigo-200 dark:border-indigo-800 text-indigo-600 dark:text-indigo-400 rounded-xl font-medium text-sm hover:bg-indigo-50 dark:hover:bg-indigo-900/20 disabled:opacity-50 transition-colors"
+          >
+            <Sparkles className={`w-4 h-4 mr-2 ${loadingDeepExplanation ? 'animate-pulse' : ''}`} />
+            {loadingDeepExplanation ? 'Gerando explicação com IA...' : 'Aprofundar explicação com IA'}
+          </button>
+        )}
+
+        {deepExplanation && (
+          <div className="flex items-start p-4 rounded-xl mb-6 text-sm leading-relaxed bg-indigo-50 dark:bg-indigo-900/20 text-indigo-800 dark:text-indigo-300">
+            <Sparkles className="w-4 h-4 mr-2 mt-0.5 shrink-0" />
+            <p>{deepExplanation}</p>
           </div>
         )}
 

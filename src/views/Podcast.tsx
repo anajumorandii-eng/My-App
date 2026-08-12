@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { mockPodcastEpisodes } from '../data/mockData';
-import { Headphones, Play, Square, Volume2 } from 'lucide-react';
+import { mockPodcastEpisodes, mockTopics } from '../data/mockData';
+import { Headphones, Play, Square, Volume2, Sparkles } from 'lucide-react';
 
 const SUBJECT_COLORS: Record<string, string> = {
   Biologia: 'bg-emerald-50 dark:bg-emerald-900/20 text-emerald-700 dark:text-emerald-300',
@@ -12,6 +12,8 @@ const speechSupported = typeof window !== 'undefined' && 'speechSynthesis' in wi
 
 export default function Podcast() {
   const [playingId, setPlayingId] = useState<string | null>(null);
+  const [aiScripts, setAiScripts] = useState<Record<string, string>>({});
+  const [generatingId, setGeneratingId] = useState<string | null>(null);
 
   useEffect(() => {
     return () => {
@@ -40,6 +42,26 @@ export default function Podcast() {
     setPlayingId(null);
   };
 
+  const generateScript = async (episodeId: string, title: string, subject: string, topicId: string) => {
+    const topicName = mockTopics.find((t) => t.id === topicId)?.name ?? subject;
+    setGeneratingId(episodeId);
+    try {
+      const res = await fetch('/api/ai/podcast-script', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ title, subject, topic: topicName }),
+      });
+      if (res.ok) {
+        const data = await res.json();
+        setAiScripts((prev) => ({ ...prev, [episodeId]: data.text }));
+      }
+    } catch (error) {
+      console.error('Failed to generate podcast script:', error);
+    } finally {
+      setGeneratingId(null);
+    }
+  };
+
   return (
     <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
       <header>
@@ -61,36 +83,58 @@ export default function Podcast() {
       <div className="space-y-3">
         {mockPodcastEpisodes.map((episode) => {
           const isPlaying = playingId === episode.id;
+          const isGenerating = generatingId === episode.id;
+          const aiScript = aiScripts[episode.id];
+          const activeScript = aiScript ?? episode.script;
           return (
             <div
               key={episode.id}
-              className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-5 shadow-sm flex items-center justify-between"
+              className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-5 shadow-sm"
             >
-              <div className="flex items-center min-w-0">
-                <button
-                  onClick={() => (isPlaying ? stop() : play(episode.id, episode.script))}
-                  disabled={!speechSupported}
-                  className={`w-11 h-11 rounded-full flex items-center justify-center mr-4 shrink-0 transition-colors ${
-                    isPlaying
-                      ? 'bg-indigo-600 text-white'
-                      : 'bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 hover:bg-indigo-100 dark:hover:bg-indigo-900/50'
-                  } disabled:opacity-40`}
-                >
-                  {isPlaying ? <Square className="w-4 h-4" /> : <Play className="w-4 h-4 ml-0.5" />}
-                </button>
-                <div className="min-w-0">
-                  <h4 className="font-semibold truncate flex items-center">
-                    {episode.title}
-                    {isPlaying && <Volume2 className="w-4 h-4 ml-2 text-indigo-500 animate-pulse shrink-0" />}
-                  </h4>
-                  <div className="flex items-center text-sm text-zinc-500 mt-1 space-x-2">
-                    <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${SUBJECT_COLORS[episode.subject] ?? ''}`}>
-                      {episode.subject}
-                    </span>
-                    <span>•</span>
-                    <span>{episode.durationMinutes} min</span>
+              <div className="flex items-center justify-between">
+                <div className="flex items-center min-w-0">
+                  <button
+                    onClick={() => (isPlaying ? stop() : play(episode.id, activeScript))}
+                    disabled={!speechSupported}
+                    className={`w-11 h-11 rounded-full flex items-center justify-center mr-4 shrink-0 transition-colors ${
+                      isPlaying
+                        ? 'bg-indigo-600 text-white'
+                        : 'bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 hover:bg-indigo-100 dark:hover:bg-indigo-900/50'
+                    } disabled:opacity-40`}
+                  >
+                    {isPlaying ? <Square className="w-4 h-4" /> : <Play className="w-4 h-4 ml-0.5" />}
+                  </button>
+                  <div className="min-w-0">
+                    <h4 className="font-semibold truncate flex items-center">
+                      {episode.title}
+                      {isPlaying && <Volume2 className="w-4 h-4 ml-2 text-indigo-500 animate-pulse shrink-0" />}
+                    </h4>
+                    <div className="flex items-center text-sm text-zinc-500 mt-1 space-x-2">
+                      <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${SUBJECT_COLORS[episode.subject] ?? ''}`}>
+                        {episode.subject}
+                      </span>
+                      <span>•</span>
+                      <span>{episode.durationMinutes} min</span>
+                      {aiScript && (
+                        <>
+                          <span>•</span>
+                          <span className="flex items-center text-indigo-500">
+                            <Sparkles className="w-3 h-3 mr-1" />
+                            Roteiro gerado por IA
+                          </span>
+                        </>
+                      )}
+                    </div>
                   </div>
                 </div>
+                <button
+                  onClick={() => generateScript(episode.id, episode.title, episode.subject, episode.topicId)}
+                  disabled={isGenerating}
+                  className="shrink-0 ml-4 flex items-center px-3 py-2 text-xs font-medium text-indigo-600 dark:text-indigo-400 border border-indigo-200 dark:border-indigo-800 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-900/20 disabled:opacity-50 transition-colors"
+                >
+                  <Sparkles className={`w-3.5 h-3.5 mr-1.5 ${isGenerating ? 'animate-pulse' : ''}`} />
+                  {isGenerating ? 'Gerando...' : aiScript ? 'Gerar novo' : 'Gerar com IA'}
+                </button>
               </div>
             </div>
           );
