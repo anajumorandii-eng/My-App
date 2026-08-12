@@ -19,6 +19,7 @@ import {
   GraduationCap,
   UserCircle,
   PenLine,
+  ClipboardEdit,
   X,
   ArrowRight,
   Menu
@@ -65,6 +66,7 @@ export default function Layout() {
     { name: 'Evolução & Domínio', path: '/evolucao', icon: TrendingUp },
     { name: 'Prioridades por Vestibular', path: '/prioridades', icon: Target },
     { name: 'Estratégias de Resolução', path: '/estrategias', icon: Compass },
+    { name: 'Treino de 2ª Fase', path: '/treino-2a-fase', icon: ClipboardEdit },
     { name: 'Módulo de Redação', path: '/redacao', icon: PenLine },
     { name: 'Conexões Google', path: '/conexoes', icon: LinkIcon },
     { name: 'Perfil', path: '/perfil', icon: UserCircle },

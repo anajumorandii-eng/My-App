@@ -95,3 +95,30 @@ export interface StudyMethod {
   steps: string[];
   bestFor: string[];
 }
+
+export interface DiscursiveSubItem {
+  letter: string;
+  prompt: string;
+}
+
+export interface DiscursiveQuestion {
+  id: string;
+  board: string;
+  year: number;
+  subject: string;
+  topic: string;
+  prompt: string;
+  subItems?: DiscursiveSubItem[];
+  modelAnswer: string[];
+  suggestedMinutes: number;
+  sourceUrl?: string;
+  uncertain?: boolean;
+  note?: string;
+}
+
+export interface DiscursiveAttempt {
+  id: string;
+  questionId: string;
+  selfRating: 'fraco' | 'mediano' | 'forte';
+  date: string;
+}

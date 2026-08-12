@@ -23,6 +23,7 @@ import Estrategias from './views/Estrategias';
 import Conexoes from './views/Conexoes';
 import Perfil from './views/Perfil';
 import Redacao from './views/Redacao';
+import Treino2aFase from './views/Treino2aFase';
 
 export default function App() {
   return (
@@ -45,6 +46,7 @@ export default function App() {
             <Route path="conexoes" element={<Conexoes />} />
             <Route path="perfil" element={<Perfil />} />
             <Route path="redacao" element={<Redacao />} />
+            <Route path="treino-2a-fase" element={<Treino2aFase />} />
           </Route>
         </Routes>
       </BrowserRouter>

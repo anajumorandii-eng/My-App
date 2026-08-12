@@ -176,6 +176,36 @@ app.post('/api/ai/question-explanation', async (req, res) => {
   }
 });
 
+app.post('/api/ai/discursive-feedback', async (req, res) => {
+  if (!ai) {
+    return res.status(500).json({ error: 'Gemini API not configured.' });
+  }
+
+  try {
+    const { board, subject, prompt: questionPrompt, modelAnswer, studentAnswer } = req.body;
+
+    let prompt = `Você é o JUJU, um corretor especialista em questões discursivas de 2ª fase de vestibular de Medicina (banca: ${board}).\n`;
+    prompt += `Questão de ${subject}:\n"${questionPrompt}"\n\n`;
+    prompt += `Pontos-chave esperados na resposta:\n${(modelAnswer as string[]).map((m: string) => `- ${m}`).join('\n')}\n\n`;
+    prompt += `Resposta do aluno:\n"${studentAnswer}"\n\n`;
+    prompt += `Avalie a resposta do aluno comparando com os pontos-chave esperados. Aponte o que foi bem coberto, `;
+    prompt += `o que está faltando ou incompleto, e erros conceituais se houver — como um corretor de banca faria. `;
+    prompt += `Termine com uma avaliação qualitativa clara (Fraco, Mediano ou Forte). `;
+    prompt += `Responda em português do Brasil, de forma direta e específica, sem saudação.`;
+
+    const response = await ai.models.generateContent({
+      model: GEMINI_MODEL,
+      contents: prompt,
+      config: DEEP_THINKING_CONFIG,
+    });
+
+    res.json({ text: response.text });
+  } catch (error) {
+    console.error('AI Error:', error);
+    res.status(500).json({ error: 'Falha ao processar solicitação de IA' });
+  }
+});
+
 app.post('/api/ai/podcast-script', async (req, res) => {
   if (!ai) {
     return res.status(500).json({ error: 'Gemini API not configured.' });
