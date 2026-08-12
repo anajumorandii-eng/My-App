@@ -33,6 +33,29 @@ provider.addScope('https://www.googleapis.com/auth/drive.readonly');
 let isSigningIn = false;
 let cachedAccessToken: string | null = null;
 
+// Single source of truth for "who's connected", updated only at the exact
+// points where a sign-in/sign-out is actually confirmed (not derived from a
+// second, independent onAuthStateChanged subscription, which can miss the
+// event if it fires before cachedAccessToken is assigned). Anything in the
+// app that needs to know the signed-in user — beyond the Conexoes page
+// itself — should subscribe here instead of listening to Firebase directly.
+type ConnectedUserListener = (user: User | null) => void;
+const connectedUserListeners = new Set<ConnectedUserListener>();
+let connectedUser: User | null = null;
+
+const setConnectedUser = (user: User | null) => {
+  connectedUser = user;
+  connectedUserListeners.forEach((listener) => listener(user));
+};
+
+export const subscribeToConnectedUser = (listener: ConnectedUserListener) => {
+  connectedUserListeners.add(listener);
+  listener(connectedUser);
+  return () => {
+    connectedUserListeners.delete(listener);
+  };
+};
+
 // Error codes where the popup itself couldn't be used (blocked, unsupported
 // in an iframe, etc). For these we retry the sign-in via full-page redirect
 // instead of just failing.
@@ -77,6 +100,7 @@ export const initAuth = (
         const credential = GoogleAuthProvider.credentialFromResult(result);
         if (credential?.accessToken) {
           cachedAccessToken = credential.accessToken;
+          setConnectedUser(result.user);
           if (onAuthSuccess) onAuthSuccess(result.user, cachedAccessToken);
         }
       })
@@ -88,37 +112,21 @@ export const initAuth = (
     realUnsubscribe = onAuthStateChanged(auth, async (user: User | null) => {
       if (user) {
         if (cachedAccessToken) {
+          setConnectedUser(user);
           if (onAuthSuccess) onAuthSuccess(user, cachedAccessToken);
         } else if (!isSigningIn) {
           cachedAccessToken = null;
+          setConnectedUser(null);
           if (onAuthFailure) {
             onAuthFailure('Sua sessão de acesso ao Google expirou. Clique em "Conectar com Google" novamente.');
           }
         }
       } else {
         cachedAccessToken = null;
+        setConnectedUser(null);
         if (onAuthFailure) onAuthFailure();
       }
     });
-  });
-
-  return () => {
-    unsubscribed = true;
-    if (realUnsubscribe) realUnsubscribe();
-  };
-};
-
-// Identity-only auth listener, decoupled from the Calendar/Drive access
-// token lifecycle above. Use this anywhere you just need to know "is
-// someone signed in" (e.g. to key data in Firestore) — initAuth() is
-// specifically about the Google API token used by the Conexoes page.
-export const onUserChanged = (callback: (user: User | null) => void) => {
-  let unsubscribed = false;
-  let realUnsubscribe: (() => void) | null = null;
-
-  persistenceReady.then(() => {
-    if (unsubscribed) return;
-    realUnsubscribe = onAuthStateChanged(auth, callback);
   });
 
   return () => {
@@ -138,6 +146,7 @@ export const googleSignIn = async (): Promise<{ user: User; accessToken: string 
     }
 
     cachedAccessToken = credential.accessToken;
+    setConnectedUser(result.user);
     return { user: result.user, accessToken: cachedAccessToken };
   } catch (error: any) {
     const code = error?.code as string | undefined;
@@ -162,4 +171,5 @@ export const getAccessToken = async (): Promise<string | null> => {
 export const logout = async () => {
   await signOut(auth);
   cachedAccessToken = null;
+  setConnectedUser(null);
 };
