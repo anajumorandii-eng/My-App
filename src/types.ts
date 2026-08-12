@@ -56,3 +56,37 @@ export interface DriveFile {
   webViewLink: string;
   iconLink?: string;
 }
+
+export interface QuizOption {
+  id: string;
+  text: string;
+}
+
+export interface Question {
+  id: string;
+  topicId: string;
+  subject: string;
+  prompt: string;
+  options: QuizOption[];
+  correctOptionId: string;
+  explanation: string;
+  difficulty: 'easy' | 'medium' | 'hard';
+}
+
+export interface PodcastEpisode {
+  id: string;
+  topicId: string;
+  title: string;
+  subject: string;
+  durationMinutes: number;
+  script: string;
+}
+
+export interface StudyMethod {
+  id: string;
+  name: string;
+  category: 'aquisicao' | 'retencao' | 'aplicacao' | 'foco';
+  summary: string;
+  steps: string[];
+  bestFor: string[];
+}

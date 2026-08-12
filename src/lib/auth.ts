@@ -13,7 +13,7 @@ import {
 } from 'firebase/auth';
 import firebaseConfig from '../../firebase-applet-config.json';
 
-const app = initializeApp(firebaseConfig);
+export const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
 // Firebase's default persistence reads/writes IndexedDB, which has a
@@ -100,6 +100,25 @@ export const initAuth = (
         if (onAuthFailure) onAuthFailure();
       }
     });
+  });
+
+  return () => {
+    unsubscribed = true;
+    if (realUnsubscribe) realUnsubscribe();
+  };
+};
+
+// Identity-only auth listener, decoupled from the Calendar/Drive access
+// token lifecycle above. Use this anywhere you just need to know "is
+// someone signed in" (e.g. to key data in Firestore) — initAuth() is
+// specifically about the Google API token used by the Conexoes page.
+export const onUserChanged = (callback: (user: User | null) => void) => {
+  let unsubscribed = false;
+  let realUnsubscribe: (() => void) | null = null;
+
+  persistenceReady.then(() => {
+    if (unsubscribed) return;
+    realUnsubscribe = onAuthStateChanged(auth, callback);
   });
 
   return () => {
