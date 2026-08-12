@@ -193,31 +193,3 @@ export const logout = async () => {
   cachedAccessToken = null;
   setConnectedUser(null);
 };
-
-// Temporary on-screen diagnostics (no browser devtools available on the
-// device this was reported from) — safe to remove once the persistence
-// issue is confirmed fixed.
-export const getAuthDebugInfo = () => {
-  let localStorageWritable = false;
-  try {
-    localStorage.setItem('__juju_probe__', '1');
-    localStorageWritable = localStorage.getItem('__juju_probe__') === '1';
-    localStorage.removeItem('__juju_probe__');
-  } catch {
-    localStorageWritable = false;
-  }
-
-  const localStorageAuthKeys = Object.keys(localStorage).filter((k) => k.startsWith('firebase:'));
-  const sessionStorageAuthKeys = Object.keys(sessionStorage).filter((k) => k.startsWith('firebase:'));
-
-  return {
-    localStorageWritable,
-    localStorageAuthKeys,
-    sessionStorageAuthKeys,
-    currentUserUid: auth.currentUser?.uid ?? null,
-    connectedUserUid: connectedUser?.uid ?? null,
-    connectedUserListenerCount: connectedUserListeners.size,
-    cachedAccessTokenPresent: !!cachedAccessToken,
-    isSigningIn,
-  };
-};
