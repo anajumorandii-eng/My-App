@@ -1,7 +1,8 @@
 import React, { useMemo, useState } from 'react';
-import { mockStudyMethods } from '../data/mockData';
+import { mockStudyMethods, mockTopics } from '../data/mockData';
 import { StudyMethod } from '../types';
-import { FlaskConical, ChevronDown, Brain, Repeat as RepeatIcon, Target, Zap } from 'lucide-react';
+import { useUserMastery } from '../hooks/useUserMastery';
+import { FlaskConical, ChevronDown, Brain, Repeat as RepeatIcon, Target, Zap, Sparkles } from 'lucide-react';
 
 const CATEGORY_META: Record<StudyMethod['category'], { label: string; icon: React.ElementType; color: string }> = {
   aquisicao: { label: 'Aquisição', icon: Brain, color: 'text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-900/20' },
@@ -11,13 +12,46 @@ const CATEGORY_META: Record<StudyMethod['category'], { label: string; icon: Reac
 };
 
 export default function Laboratorio() {
+  const { mastery } = useUserMastery();
   const [categoryFilter, setCategoryFilter] = useState<StudyMethod['category'] | 'all'>('all');
   const [expandedId, setExpandedId] = useState<string | null>(mockStudyMethods[0]?.id ?? null);
+  const [examples, setExamples] = useState<Record<string, string>>({});
+  const [loadingExampleFor, setLoadingExampleFor] = useState<string | null>(null);
 
   const filtered = useMemo(
     () => (categoryFilter === 'all' ? mockStudyMethods : mockStudyMethods.filter((m) => m.category === categoryFilter)),
     [categoryFilter]
   );
+
+  const weakestTopic = useMemo(() => {
+    const sorted = [...mastery].sort((a, b) => a.level - b.level);
+    const topicId = sorted[0]?.topicId;
+    return mockTopics.find((t) => t.id === topicId) ?? mockTopics[0];
+  }, [mastery]);
+
+  const fetchExample = async (method: StudyMethod) => {
+    setLoadingExampleFor(method.id);
+    try {
+      const res = await fetch('/api/ai/method-example', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          methodName: method.name,
+          methodSummary: method.summary,
+          topic: weakestTopic.name,
+          subject: weakestTopic.subject,
+        }),
+      });
+      if (res.ok) {
+        const data = await res.json();
+        setExamples((prev) => ({ ...prev, [method.id]: data.text }));
+      }
+    } catch (error) {
+      console.error('Failed to fetch method example:', error);
+    } finally {
+      setLoadingExampleFor(null);
+    }
+  };
 
   return (
     <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
@@ -101,6 +135,27 @@ export default function Laboratorio() {
                         {tag}
                       </span>
                     ))}
+                  </div>
+
+                  <div className="mt-4">
+                    {!examples[method.id] && (
+                      <button
+                        onClick={() => fetchExample(method)}
+                        disabled={loadingExampleFor === method.id}
+                        className="flex items-center px-3 py-1.5 text-xs font-medium text-indigo-600 dark:text-indigo-400 border border-indigo-200 dark:border-indigo-800 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-900/20 disabled:opacity-50 transition-colors"
+                      >
+                        <Sparkles className={`w-3.5 h-3.5 mr-1.5 ${loadingExampleFor === method.id ? 'animate-pulse' : ''}`} />
+                        {loadingExampleFor === method.id
+                          ? 'Gerando exemplo...'
+                          : `Exemplo aplicado ao meu ponto fraco (${weakestTopic.name})`}
+                      </button>
+                    )}
+                    {examples[method.id] && (
+                      <div className="flex items-start p-3 rounded-lg bg-indigo-50 dark:bg-indigo-900/20 text-indigo-800 dark:text-indigo-300 text-sm">
+                        <Sparkles className="w-4 h-4 mr-2 mt-0.5 shrink-0" />
+                        <p>{examples[method.id]}</p>
+                      </div>
+                    )}
                   </div>
                 </div>
               )}

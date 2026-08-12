@@ -1,8 +1,8 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useState } from 'react';
 import { mockTopics } from '../data/mockData';
 import { TopicMastery } from '../types';
 import { useUserMastery } from '../hooks/useUserMastery';
-import { Repeat, CheckCircle2, AlertTriangle, CloudOff } from 'lucide-react';
+import { Repeat, CheckCircle2, AlertTriangle, CloudOff, Sparkles } from 'lucide-react';
 
 function urgencyOf(mastery: TopicMastery): number {
   const daysSinceReview = (Date.now() - new Date(mastery.lastReviewed).getTime()) / 86400000;
@@ -17,6 +17,8 @@ const SUBJECT_COLORS: Record<string, string> = {
 
 export default function Revisoes() {
   const { mastery: masteryState, updateMastery, isPersisted, syncError } = useUserMastery();
+  const [tips, setTips] = useState<Record<string, string>>({});
+  const [loadingTipFor, setLoadingTipFor] = useState<string | null>(null);
 
   const queue = useMemo(() => {
     return masteryState
@@ -38,6 +40,26 @@ export default function Revisoes() {
           : m
       )
     );
+  };
+
+  const fetchTip = async (mastery: TopicMastery, topicName: string, subject: string) => {
+    setLoadingTipFor(mastery.topicId);
+    try {
+      const daysSinceReview = Math.round((Date.now() - new Date(mastery.lastReviewed).getTime()) / 86400000);
+      const res = await fetch('/api/ai/review-tip', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ topic: topicName, subject, level: mastery.level, daysSinceReview }),
+      });
+      if (res.ok) {
+        const data = await res.json();
+        setTips((prev) => ({ ...prev, [mastery.topicId]: data.text }));
+      }
+    } catch (error) {
+      console.error('Failed to fetch review tip:', error);
+    } finally {
+      setLoadingTipFor(null);
+    }
   };
 
   return (
@@ -72,42 +94,66 @@ export default function Revisoes() {
       </div>
 
       <div className="space-y-3">
-        {queue.map(({ mastery, topic, urgency }) => (
-          <div
-            key={mastery.topicId}
-            className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-5 shadow-sm flex items-center justify-between"
-          >
-            <div className="flex items-center min-w-0">
-              <span className={`text-xs font-semibold px-2.5 py-1 rounded-full mr-4 shrink-0 ${SUBJECT_COLORS[topic!.subject] ?? 'bg-zinc-100 text-zinc-600'}`}>
-                {topic!.subject}
-              </span>
-              <div className="min-w-0">
-                <h4 className="font-semibold truncate">{topic!.name}</h4>
-                <p className="text-xs text-zinc-500 mt-0.5">
-                  Domínio: {mastery.level}% • Última revisão: {new Date(mastery.lastReviewed).toLocaleDateString('pt-BR')}
-                </p>
-              </div>
-            </div>
-            <div className="flex items-center shrink-0 ml-4 gap-4">
-              <div className="hidden sm:flex items-center w-24">
-                <div className="w-full h-1.5 bg-zinc-100 dark:bg-zinc-800 rounded-full overflow-hidden mr-2">
-                  <div
-                    className={`h-full ${urgency > 70 ? 'bg-rose-500' : urgency > 40 ? 'bg-amber-500' : 'bg-emerald-500'}`}
-                    style={{ width: `${urgency}%` }}
-                  />
+        {queue.map(({ mastery, topic, urgency }) => {
+          const tip = tips[mastery.topicId];
+          const isLoadingTip = loadingTipFor === mastery.topicId;
+          return (
+            <div
+              key={mastery.topicId}
+              className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-5 shadow-sm"
+            >
+              <div className="flex items-center justify-between">
+                <div className="flex items-center min-w-0">
+                  <span className={`text-xs font-semibold px-2.5 py-1 rounded-full mr-4 shrink-0 ${SUBJECT_COLORS[topic!.subject] ?? 'bg-zinc-100 text-zinc-600'}`}>
+                    {topic!.subject}
+                  </span>
+                  <div className="min-w-0">
+                    <h4 className="font-semibold truncate">{topic!.name}</h4>
+                    <p className="text-xs text-zinc-500 mt-0.5">
+                      Domínio: {mastery.level}% • Última revisão: {new Date(mastery.lastReviewed).toLocaleDateString('pt-BR')}
+                    </p>
+                  </div>
                 </div>
-                <span className="text-xs text-zinc-500 w-8 text-right">{Math.round(urgency)}%</span>
+                <div className="flex items-center shrink-0 ml-4 gap-4">
+                  <div className="hidden sm:flex items-center w-24">
+                    <div className="w-full h-1.5 bg-zinc-100 dark:bg-zinc-800 rounded-full overflow-hidden mr-2">
+                      <div
+                        className={`h-full ${urgency > 70 ? 'bg-rose-500' : urgency > 40 ? 'bg-amber-500' : 'bg-emerald-500'}`}
+                        style={{ width: `${urgency}%` }}
+                      />
+                    </div>
+                    <span className="text-xs text-zinc-500 w-8 text-right">{Math.round(urgency)}%</span>
+                  </div>
+                  <button
+                    onClick={() => markReviewed(mastery.topicId)}
+                    className="flex items-center px-3 py-2 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 rounded-lg text-sm font-medium hover:bg-indigo-100 dark:hover:bg-indigo-900/50 transition-colors"
+                  >
+                    <CheckCircle2 className="w-4 h-4 mr-1.5" />
+                    Revisado
+                  </button>
+                </div>
               </div>
-              <button
-                onClick={() => markReviewed(mastery.topicId)}
-                className="flex items-center px-3 py-2 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 rounded-lg text-sm font-medium hover:bg-indigo-100 dark:hover:bg-indigo-900/50 transition-colors"
-              >
-                <CheckCircle2 className="w-4 h-4 mr-1.5" />
-                Revisado
-              </button>
+
+              {!tip && (
+                <button
+                  onClick={() => fetchTip(mastery, topic!.name, topic!.subject)}
+                  disabled={isLoadingTip}
+                  className="mt-4 flex items-center px-3 py-1.5 text-xs font-medium text-indigo-600 dark:text-indigo-400 border border-indigo-200 dark:border-indigo-800 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-900/20 disabled:opacity-50 transition-colors"
+                >
+                  <Sparkles className={`w-3.5 h-3.5 mr-1.5 ${isLoadingTip ? 'animate-pulse' : ''}`} />
+                  {isLoadingTip ? 'Gerando dica...' : 'Dica rápida com IA'}
+                </button>
+              )}
+
+              {tip && (
+                <div className="flex items-start mt-4 p-3 rounded-lg bg-indigo-50 dark:bg-indigo-900/20 text-indigo-800 dark:text-indigo-300 text-sm">
+                  <Sparkles className="w-4 h-4 mr-2 mt-0.5 shrink-0" />
+                  <p>{tip}</p>
+                </div>
+              )}
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );

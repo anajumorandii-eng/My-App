@@ -196,6 +196,87 @@ app.post('/api/ai/podcast-script', async (req, res) => {
   }
 });
 
+app.post('/api/ai/progress-insight', async (req, res) => {
+  if (!ai) {
+    return res.status(500).json({ error: 'Gemini API not configured.' });
+  }
+
+  try {
+    const { topics, overallAverage, strongest, weakest } = req.body;
+
+    let prompt = `Você é o JUJU, um tutor especialista em vestibular de Medicina que analisa o progresso do aluno.\n`;
+    prompt += `Domínio médio geral: ${overallAverage}/100.\n`;
+    prompt += `Tópico mais forte: ${strongest} (o aluno já domina bem).\n`;
+    prompt += `Tópico que mais precisa de atenção: ${weakest}.\n`;
+    prompt += `Domínio por tópico: ${JSON.stringify(topics)}\n\n`;
+    prompt += `Escreva um diagnóstico curto (3-5 frases) em tom direto e motivador, explicando o que esses números revelam `;
+    prompt += `sobre o padrão de estudo do aluno e qual deve ser a prioridade dos próximos dias. `;
+    prompt += `Responda em português do Brasil, sem saudação, sem markdown.`;
+
+    const response = await ai.models.generateContent({
+      model: 'gemini-3.1-pro-preview',
+      contents: prompt,
+    });
+
+    res.json({ text: response.text });
+  } catch (error) {
+    console.error('AI Error:', error);
+    res.status(500).json({ error: 'Falha ao processar solicitação de IA' });
+  }
+});
+
+app.post('/api/ai/review-tip', async (req, res) => {
+  if (!ai) {
+    return res.status(500).json({ error: 'Gemini API not configured.' });
+  }
+
+  try {
+    const { topic, subject, level, daysSinceReview } = req.body;
+
+    let prompt = `Você é o JUJU, um tutor especialista em vestibular de Medicina.\n`;
+    prompt += `Um aluno vai revisar agora o tópico "${topic}" (${subject}).\n`;
+    prompt += `Domínio atual estimado: ${level}%. Dias desde a última revisão: ${daysSinceReview}.\n\n`;
+    prompt += `Gere uma dica rápida de revisão (3-4 frases) relembrando os 2-3 conceitos-chave mais importantes desse tópico, `;
+    prompt += `como um lembrete mental antes de praticar. Responda em português do Brasil, direto, sem saudação, sem markdown.`;
+
+    const response = await ai.models.generateContent({
+      model: 'gemini-3.1-pro-preview',
+      contents: prompt,
+    });
+
+    res.json({ text: response.text });
+  } catch (error) {
+    console.error('AI Error:', error);
+    res.status(500).json({ error: 'Falha ao processar solicitação de IA' });
+  }
+});
+
+app.post('/api/ai/method-example', async (req, res) => {
+  if (!ai) {
+    return res.status(500).json({ error: 'Gemini API not configured.' });
+  }
+
+  try {
+    const { methodName, methodSummary, topic, subject } = req.body;
+
+    let prompt = `Você é o JUJU, um tutor especialista em técnicas de estudo para vestibular de Medicina.\n`;
+    prompt += `Técnica de estudo: ${methodName} — ${methodSummary}\n`;
+    prompt += `Tópico do aluno para aplicar a técnica: ${topic} (${subject})\n\n`;
+    prompt += `Escreva um exemplo curto e concreto (3-4 frases) mostrando exatamente como aplicar essa técnica nesse tópico específico, `;
+    prompt += `como se fosse um passo a passo prático. Responda em português do Brasil, direto, sem saudação, sem markdown.`;
+
+    const response = await ai.models.generateContent({
+      model: 'gemini-3.1-pro-preview',
+      contents: prompt,
+    });
+
+    res.json({ text: response.text });
+  } catch (error) {
+    console.error('AI Error:', error);
+    res.status(500).json({ error: 'Falha ao processar solicitação de IA' });
+  }
+});
+
 // Vite & Static file serving
 async function startServer() {
   if (process.env.NODE_ENV !== 'production') {
