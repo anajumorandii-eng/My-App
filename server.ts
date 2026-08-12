@@ -2,7 +2,7 @@ import express from 'express';
 import path from 'path';
 import { createServer as createViteServer } from 'vite';
 import cookieParser from 'cookie-parser';
-import { GoogleGenAI, ThinkingLevel } from '@google/genai';
+import Anthropic from '@anthropic-ai/sdk';
 import { google } from 'googleapis';
 
 const app = express();
@@ -11,12 +11,27 @@ const PORT = Number(process.env.PORT) || 3000;
 app.use(express.json());
 app.use(cookieParser());
 
-// Initialize Gemini Client
-const ai = process.env.GEMINI_API_KEY ? new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY }) : null;
-const GEMINI_MODEL = 'gemini-3.1-pro-preview';
-// All AI features use the model's deepest reasoning level — these are tutoring
-// responses where answer quality matters more than shaving off latency.
-const DEEP_THINKING_CONFIG = { thinkingConfig: { thinkingLevel: ThinkingLevel.HIGH } };
+// Initialize Claude Client
+const anthropic = process.env.ANTHROPIC_API_KEY ? new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY }) : null;
+const CLAUDE_MODEL = 'claude-opus-5';
+
+// All AI features route through Claude with adaptive thinking on — these are
+// tutoring responses where answer quality matters more than shaving off latency.
+async function askClaude(prompt: string): Promise<string> {
+  const response = await anthropic!.messages.create({
+    model: CLAUDE_MODEL,
+    max_tokens: 4096,
+    thinking: { type: 'adaptive' },
+    messages: [{ role: 'user', content: prompt }],
+  });
+
+  if (response.stop_reason === 'refusal') {
+    throw new Error('Claude declined to respond to this request.');
+  }
+
+  const textBlock = response.content.find((block) => block.type === 'text');
+  return textBlock?.text ?? '';
+}
 
 // OAuth config
 const GOOGLE_CLIENT_ID = process.env.GOOGLE_CLIENT_ID;
@@ -89,8 +104,8 @@ app.get('/api/drive/files', async (req, res) => {
 
 // AI Routes
 app.post('/api/ai/socratic', async (req, res) => {
-  if (!ai) {
-    return res.status(500).json({ error: 'Gemini API not configured.' });
+  if (!anthropic) {
+    return res.status(500).json({ error: 'Claude API not configured.' });
   }
   
   try {
@@ -102,13 +117,9 @@ app.post('/api/ai/socratic', async (req, res) => {
     prompt += `Dúvida do aluno: ${question}\n\n`;
     prompt += `Responda de forma concisa, direta, orientada a prova, em português do Brasil.\n`;
     
-    const response = await ai.models.generateContent({
-      model: GEMINI_MODEL,
-      contents: prompt,
-      config: DEEP_THINKING_CONFIG,
-    });
-    
-    res.json({ text: response.text });
+    const text = await askClaude(prompt);
+
+    res.json({ text });
   } catch (error) {
     console.error('AI Error:', error);
     res.status(500).json({ error: 'Falha ao processar solicitação de IA' });
@@ -116,8 +127,8 @@ app.post('/api/ai/socratic', async (req, res) => {
 });
 
 app.post('/api/ai/error-hypothesis', async (req, res) => {
-  if (!ai) {
-    return res.status(500).json({ error: 'Gemini API not configured.' });
+  if (!anthropic) {
+    return res.status(500).json({ error: 'Claude API not configured.' });
   }
 
   try {
@@ -131,13 +142,9 @@ app.post('/api/ai/error-hypothesis', async (req, res) => {
     prompt += `Gere uma hipótese curta e objetiva (2-3 frases) sobre a causa raiz provável desse erro, `;
     prompt += `e uma sugestão prática de como evitá-lo da próxima vez. Responda em português do Brasil, sem saudação.`;
 
-    const response = await ai.models.generateContent({
-      model: GEMINI_MODEL,
-      contents: prompt,
-      config: DEEP_THINKING_CONFIG,
-    });
+    const text = await askClaude(prompt);
 
-    res.json({ text: response.text });
+    res.json({ text });
   } catch (error) {
     console.error('AI Error:', error);
     res.status(500).json({ error: 'Falha ao processar solicitação de IA' });
@@ -145,8 +152,8 @@ app.post('/api/ai/error-hypothesis', async (req, res) => {
 });
 
 app.post('/api/ai/question-explanation', async (req, res) => {
-  if (!ai) {
-    return res.status(500).json({ error: 'Gemini API not configured.' });
+  if (!anthropic) {
+    return res.status(500).json({ error: 'Claude API not configured.' });
   }
 
   try {
@@ -163,13 +170,9 @@ app.post('/api/ai/question-explanation', async (req, res) => {
     prompt += `explore o raciocínio conceitual, e se o aluno errou, aponte possivelmente onde o raciocínio dele desviou. `;
     prompt += `Responda em português do Brasil, direto ao ponto, sem saudação.`;
 
-    const response = await ai.models.generateContent({
-      model: GEMINI_MODEL,
-      contents: prompt,
-      config: DEEP_THINKING_CONFIG,
-    });
+    const text = await askClaude(prompt);
 
-    res.json({ text: response.text });
+    res.json({ text });
   } catch (error) {
     console.error('AI Error:', error);
     res.status(500).json({ error: 'Falha ao processar solicitação de IA' });
@@ -177,8 +180,8 @@ app.post('/api/ai/question-explanation', async (req, res) => {
 });
 
 app.post('/api/ai/podcast-script', async (req, res) => {
-  if (!ai) {
-    return res.status(500).json({ error: 'Gemini API not configured.' });
+  if (!anthropic) {
+    return res.status(500).json({ error: 'Claude API not configured.' });
   }
 
   try {
@@ -191,13 +194,9 @@ app.post('/api/ai/podcast-script', async (req, res) => {
     prompt += `como se estivesse explicando o assunto para o aluno durante um trajeto de carro. `;
     prompt += `Não use marcações, listas ou markdown — apenas o texto puro do roteiro, em português do Brasil.`;
 
-    const response = await ai.models.generateContent({
-      model: GEMINI_MODEL,
-      contents: prompt,
-      config: DEEP_THINKING_CONFIG,
-    });
+    const text = await askClaude(prompt);
 
-    res.json({ text: response.text });
+    res.json({ text });
   } catch (error) {
     console.error('AI Error:', error);
     res.status(500).json({ error: 'Falha ao processar solicitação de IA' });
@@ -205,8 +204,8 @@ app.post('/api/ai/podcast-script', async (req, res) => {
 });
 
 app.post('/api/ai/progress-insight', async (req, res) => {
-  if (!ai) {
-    return res.status(500).json({ error: 'Gemini API not configured.' });
+  if (!anthropic) {
+    return res.status(500).json({ error: 'Claude API not configured.' });
   }
 
   try {
@@ -221,13 +220,9 @@ app.post('/api/ai/progress-insight', async (req, res) => {
     prompt += `sobre o padrão de estudo do aluno e qual deve ser a prioridade dos próximos dias. `;
     prompt += `Responda em português do Brasil, sem saudação, sem markdown.`;
 
-    const response = await ai.models.generateContent({
-      model: GEMINI_MODEL,
-      contents: prompt,
-      config: DEEP_THINKING_CONFIG,
-    });
+    const text = await askClaude(prompt);
 
-    res.json({ text: response.text });
+    res.json({ text });
   } catch (error) {
     console.error('AI Error:', error);
     res.status(500).json({ error: 'Falha ao processar solicitação de IA' });
@@ -235,8 +230,8 @@ app.post('/api/ai/progress-insight', async (req, res) => {
 });
 
 app.post('/api/ai/review-tip', async (req, res) => {
-  if (!ai) {
-    return res.status(500).json({ error: 'Gemini API not configured.' });
+  if (!anthropic) {
+    return res.status(500).json({ error: 'Claude API not configured.' });
   }
 
   try {
@@ -248,13 +243,9 @@ app.post('/api/ai/review-tip', async (req, res) => {
     prompt += `Gere uma dica rápida de revisão (3-4 frases) relembrando os 2-3 conceitos-chave mais importantes desse tópico, `;
     prompt += `como um lembrete mental antes de praticar. Responda em português do Brasil, direto, sem saudação, sem markdown.`;
 
-    const response = await ai.models.generateContent({
-      model: GEMINI_MODEL,
-      contents: prompt,
-      config: DEEP_THINKING_CONFIG,
-    });
+    const text = await askClaude(prompt);
 
-    res.json({ text: response.text });
+    res.json({ text });
   } catch (error) {
     console.error('AI Error:', error);
     res.status(500).json({ error: 'Falha ao processar solicitação de IA' });
@@ -262,8 +253,8 @@ app.post('/api/ai/review-tip', async (req, res) => {
 });
 
 app.post('/api/ai/method-example', async (req, res) => {
-  if (!ai) {
-    return res.status(500).json({ error: 'Gemini API not configured.' });
+  if (!anthropic) {
+    return res.status(500).json({ error: 'Claude API not configured.' });
   }
 
   try {
@@ -275,13 +266,9 @@ app.post('/api/ai/method-example', async (req, res) => {
     prompt += `Escreva um exemplo curto e concreto (3-4 frases) mostrando exatamente como aplicar essa técnica nesse tópico específico, `;
     prompt += `como se fosse um passo a passo prático. Responda em português do Brasil, direto, sem saudação, sem markdown.`;
 
-    const response = await ai.models.generateContent({
-      model: GEMINI_MODEL,
-      contents: prompt,
-      config: DEEP_THINKING_CONFIG,
-    });
+    const text = await askClaude(prompt);
 
-    res.json({ text: response.text });
+    res.json({ text });
   } catch (error) {
     console.error('AI Error:', error);
     res.status(500).json({ error: 'Falha ao processar solicitação de IA' });
