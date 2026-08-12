@@ -116,7 +116,13 @@ export const initAuth = (
           if (onAuthSuccess) onAuthSuccess(user, cachedAccessToken);
         } else if (!isSigningIn) {
           cachedAccessToken = null;
-          setConnectedUser(null);
+          // Firebase itself still recognizes this user (their session
+          // survived the reload) even though the Google Calendar/Drive
+          // access token didn't — that token is never persisted by design.
+          // Keep Firestore-backed data (which only needs the uid) working;
+          // only the Calendar/Drive-specific UI needs to prompt a
+          // reconnect.
+          setConnectedUser(user);
           if (onAuthFailure) {
             onAuthFailure('Sua sessão de acesso ao Google expirou. Clique em "Conectar com Google" novamente.');
           }
