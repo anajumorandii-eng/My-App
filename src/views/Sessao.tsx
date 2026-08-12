@@ -1,8 +1,9 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { EfficiencyEngine } from '../lib/efficiencyEngine';
-import { mockMastery, mockTopics, mockProfile } from '../data/mockData';
+import { mockTopics, mockProfile } from '../data/mockData';
+import { useUserMastery } from '../hooks/useUserMastery';
 import { StudyAction } from '../types';
-import { PlayCircle, Pause, RotateCcw, CheckCircle2, PlayCircle as StartIcon } from 'lucide-react';
+import { PlayCircle, Pause, RotateCcw, CheckCircle2, PlayCircle as StartIcon, CloudOff } from 'lucide-react';
 
 function formatTime(totalSeconds: number) {
   const m = Math.floor(totalSeconds / 60).toString().padStart(2, '0');
@@ -11,9 +12,10 @@ function formatTime(totalSeconds: number) {
 }
 
 export default function Sessao() {
+  const { mastery, isPersisted } = useUserMastery();
   const dailyPlan = useMemo(
-    () => EfficiencyEngine.generateDailyPlan(mockMastery, mockTopics, mockProfile, 120),
-    []
+    () => EfficiencyEngine.generateDailyPlan(mastery, mockTopics, mockProfile, 120),
+    [mastery]
   );
 
   const [selectedAction, setSelectedAction] = useState<StudyAction | null>(dailyPlan[0] ?? null);
@@ -72,6 +74,12 @@ export default function Sessao() {
         <p className="text-zinc-500 dark:text-zinc-400">
           Escolha um bloco do seu plano e execute com foco cronometrado.
         </p>
+        {!isPersisted && (
+          <p className="flex items-center text-xs text-zinc-400 mt-2">
+            <CloudOff className="w-3.5 h-3.5 mr-1.5" />
+            Modo demonstração — conecte sua conta Google em "Conexões Google" para salvar seu progresso de verdade.
+          </p>
+        )}
       </header>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">

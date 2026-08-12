@@ -1,7 +1,8 @@
 import React, { useMemo, useState } from 'react';
 import { EfficiencyEngine } from '../lib/efficiencyEngine';
-import { mockMastery, mockTopics, mockProfile } from '../data/mockData';
-import { Map, Clock, Battery, BatteryLow, BatteryFull } from 'lucide-react';
+import { mockTopics, mockProfile } from '../data/mockData';
+import { useUserMastery } from '../hooks/useUserMastery';
+import { Map, Clock, Battery, BatteryLow, BatteryFull, CloudOff } from 'lucide-react';
 
 const SUBJECT_COLORS: Record<string, string> = {
   Biologia: 'bg-emerald-500',
@@ -10,19 +11,20 @@ const SUBJECT_COLORS: Record<string, string> = {
 };
 
 export default function Plano() {
+  const { mastery, isPersisted, syncError } = useUserMastery();
   const [minutesToday, setMinutesToday] = useState(120);
   const [energyLevel, setEnergyLevel] = useState<'low' | 'medium' | 'high'>(mockProfile.currentEnergyLevel);
 
   const profile = useMemo(() => ({ ...mockProfile, currentEnergyLevel: energyLevel }), [energyLevel]);
 
   const dailyPlan = useMemo(
-    () => EfficiencyEngine.generateDailyPlan(mockMastery, mockTopics, profile, minutesToday),
-    [profile, minutesToday]
+    () => EfficiencyEngine.generateDailyPlan(mastery, mockTopics, profile, minutesToday),
+    [mastery, profile, minutesToday]
   );
 
   const plannedTopicIds = new Set(dailyPlan.map((a) => a.topicId));
   const backlog = mockTopics
-    .map((topic) => ({ topic, mastery: mockMastery.find((m) => m.topicId === topic.id) }))
+    .map((topic) => ({ topic, mastery: mastery.find((m) => m.topicId === topic.id) }))
     .filter((entry) => entry.mastery && !plannedTopicIds.has(entry.topic.id))
     .sort((a, b) => (a.mastery?.level ?? 0) - (b.mastery?.level ?? 0));
 
@@ -44,6 +46,13 @@ export default function Plano() {
         <p className="text-zinc-500 dark:text-zinc-400">
           Ajuste seu tempo e energia disponíveis para ver o plano se recalcular na hora.
         </p>
+        {!isPersisted && (
+          <p className="flex items-center text-xs text-zinc-400 mt-2">
+            <CloudOff className="w-3.5 h-3.5 mr-1.5" />
+            Modo demonstração — conecte sua conta Google em "Conexões Google" para salvar seu progresso de verdade.
+          </p>
+        )}
+        {syncError && <p className="text-xs text-rose-500 mt-2">{syncError}</p>}
       </header>
 
       <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 shadow-sm space-y-6">

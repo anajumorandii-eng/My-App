@@ -1,8 +1,14 @@
 import React, { useMemo, useState } from 'react';
 import { mockQuestions } from '../data/mockData';
-import { HelpCircle, CheckCircle2, XCircle, RotateCcw } from 'lucide-react';
+import { useAuth } from '../context/AuthContext';
+import { useUserMastery } from '../hooks/useUserMastery';
+import { addUserAttempt } from '../lib/userData';
+import { TopicMastery } from '../types';
+import { HelpCircle, CheckCircle2, XCircle, RotateCcw, CloudOff } from 'lucide-react';
 
 export default function Questoes() {
+  const { user } = useAuth();
+  const { updateMastery, isPersisted, syncError } = useUserMastery();
   const subjects = useMemo(() => ['Todas', ...new Set(mockQuestions.map((q) => q.subject))], []);
   const [subjectFilter, setSubjectFilter] = useState('Todas');
   const [index, setIndex] = useState(0);
@@ -27,8 +33,33 @@ export default function Questoes() {
 
   const selectOption = (optionId: string) => {
     if (answered) return;
+    const correct = optionId === question.correctOptionId;
     setSelectedOptionId(optionId);
-    setHistory((h) => [...h, { questionId: question.id, correct: optionId === question.correctOptionId }]);
+    setHistory((h) => [...h, { questionId: question.id, correct }]);
+
+    // Practicing nudges the topic's mastery: small gain on a correct
+    // answer, a small dip plus an error signal on a wrong one.
+    updateMastery((prev: TopicMastery[]) =>
+      prev.map((m) =>
+        m.topicId === question.topicId
+          ? {
+              ...m,
+              level: Math.min(100, Math.max(0, m.level + (correct ? 3 : -2))),
+              errorSignals: correct ? Math.max(0, m.errorSignals - 1) : m.errorSignals + 1,
+            }
+          : m
+      )
+    );
+
+    if (user) {
+      addUserAttempt(user.uid, {
+        id: `attempt_${Date.now()}`,
+        questionId: question.id,
+        topicId: question.topicId,
+        correct,
+        date: new Date().toISOString(),
+      }).catch((error) => console.error('Failed to save attempt:', error));
+    }
   };
 
   const nextQuestion = () => {
@@ -50,6 +81,13 @@ export default function Questoes() {
           Questões & Tentativas
         </h1>
         <p className="text-zinc-500 dark:text-zinc-400">Pratique com feedback imediato e explicação de cada questão.</p>
+        {!isPersisted && (
+          <p className="flex items-center text-xs text-zinc-400 mt-2">
+            <CloudOff className="w-3.5 h-3.5 mr-1.5" />
+            Modo demonstração — conecte sua conta Google em "Conexões Google" para salvar seu progresso de verdade.
+          </p>
+        )}
+        {syncError && <p className="text-xs text-rose-500 mt-2">{syncError}</p>}
       </header>
 
       <div className="flex items-center justify-between flex-wrap gap-4">

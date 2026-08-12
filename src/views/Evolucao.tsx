@@ -14,8 +14,9 @@ import {
   PolarRadiusAxis,
   Radar,
 } from 'recharts';
-import { mockMastery, mockTopics } from '../data/mockData';
-import { TrendingUp, Trophy, AlertCircle, Gauge } from 'lucide-react';
+import { mockTopics } from '../data/mockData';
+import { useUserMastery } from '../hooks/useUserMastery';
+import { TrendingUp, Trophy, AlertCircle, Gauge, CloudOff } from 'lucide-react';
 
 const SUBJECT_HEX: Record<string, string> = {
   Biologia: '#10b981',
@@ -35,15 +36,17 @@ function ChartTooltip({ active, payload }: any) {
 }
 
 export default function Evolucao() {
+  const { mastery: masteryData, isPersisted } = useUserMastery();
+
   const topicRows = useMemo(
     () =>
       mockTopics
         .map((topic) => {
-          const mastery = mockMastery.find((m) => m.topicId === topic.id);
+          const mastery = masteryData.find((m) => m.topicId === topic.id);
           return { name: topic.name, subject: topic.subject, level: mastery?.level ?? 0 };
         })
         .sort((a, b) => b.level - a.level),
-    []
+    [masteryData]
   );
 
   const subjectAverages = useMemo(() => {
@@ -71,6 +74,12 @@ export default function Evolucao() {
           Evolução & Domínio
         </h1>
         <p className="text-zinc-500 dark:text-zinc-400">Seu domínio atual por tópico e por matéria.</p>
+        {!isPersisted && (
+          <p className="flex items-center text-xs text-zinc-400 mt-2">
+            <CloudOff className="w-3.5 h-3.5 mr-1.5" />
+            Modo demonstração — conecte sua conta Google em "Conexões Google" para salvar seu progresso de verdade.
+          </p>
+        )}
       </header>
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">

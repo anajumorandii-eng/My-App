@@ -1,7 +1,8 @@
-import React, { useMemo, useState } from 'react';
-import { mockMastery, mockTopics } from '../data/mockData';
+import React, { useMemo } from 'react';
+import { mockTopics } from '../data/mockData';
 import { TopicMastery } from '../types';
-import { Repeat, CheckCircle2, AlertTriangle } from 'lucide-react';
+import { useUserMastery } from '../hooks/useUserMastery';
+import { Repeat, CheckCircle2, AlertTriangle, CloudOff } from 'lucide-react';
 
 function urgencyOf(mastery: TopicMastery): number {
   const daysSinceReview = (Date.now() - new Date(mastery.lastReviewed).getTime()) / 86400000;
@@ -15,7 +16,7 @@ const SUBJECT_COLORS: Record<string, string> = {
 };
 
 export default function Revisoes() {
-  const [masteryState, setMasteryState] = useState<TopicMastery[]>(mockMastery);
+  const { mastery: masteryState, updateMastery, isPersisted, syncError } = useUserMastery();
 
   const queue = useMemo(() => {
     return masteryState
@@ -30,7 +31,7 @@ export default function Revisoes() {
   const pendingToday = queue.filter((entry) => entry.urgency > 50).length;
 
   const markReviewed = (topicId: string) => {
-    setMasteryState((prev) =>
+    updateMastery((prev: TopicMastery[]) =>
       prev.map((m) =>
         m.topicId === topicId
           ? { ...m, lastReviewed: new Date().toISOString(), uncertainty: Math.max(m.uncertainty - 0.2, 0.05) }
@@ -49,6 +50,13 @@ export default function Revisoes() {
         <p className="text-zinc-500 dark:text-zinc-400">
           Fila ordenada por urgência: tempo desde a última revisão, incerteza e sinais de erro recentes.
         </p>
+        {!isPersisted && (
+          <p className="flex items-center text-xs text-zinc-400 mt-2">
+            <CloudOff className="w-3.5 h-3.5 mr-1.5" />
+            Modo demonstração — conecte sua conta Google em "Conexões Google" para salvar seu progresso de verdade.
+          </p>
+        )}
+        {syncError && <p className="text-xs text-rose-500 mt-2">{syncError}</p>}
       </header>
 
       <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 shadow-sm flex items-center">

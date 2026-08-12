@@ -1,7 +1,9 @@
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { mockErrorLogs, mockTopics } from '../data/mockData';
 import { ErrorLog } from '../types';
-import { BookX, Plus, Sparkles } from 'lucide-react';
+import { useAuth } from '../context/AuthContext';
+import { getUserErrorLogs, addUserErrorLog } from '../lib/userData';
+import { BookX, Plus, Sparkles, CloudOff } from 'lucide-react';
 
 const TYPE_LABELS: Record<ErrorLog['type'], string> = {
   conceptual: 'Conceitual',
@@ -14,10 +16,32 @@ const TYPE_LABELS: Record<ErrorLog['type'], string> = {
 };
 
 export default function Erros() {
+  const { user, isConnected } = useAuth();
   const [logs, setLogs] = useState<ErrorLog[]>(mockErrorLogs);
   const [typeFilter, setTypeFilter] = useState<ErrorLog['type'] | 'all'>('all');
   const [showForm, setShowForm] = useState(false);
   const [form, setForm] = useState({ topicId: mockTopics[0].id, type: 'conceptual' as ErrorLog['type'], notes: '' });
+  const [syncError, setSyncError] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (!user) {
+      setLogs(mockErrorLogs);
+      setSyncError(null);
+      return;
+    }
+    let cancelled = false;
+    getUserErrorLogs(user.uid)
+      .then((data) => {
+        if (!cancelled) setLogs(data);
+      })
+      .catch((error) => {
+        console.error('Failed to load error logs:', error);
+        if (!cancelled) setSyncError('Não foi possível carregar seus erros salvos. Mostrando dados de demonstração.');
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [user]);
 
   const filtered = useMemo(
     () => (typeFilter === 'all' ? logs : logs.filter((l) => l.type === typeFilter)),
@@ -45,6 +69,13 @@ export default function Erros() {
     setLogs((prev) => [newLog, ...prev]);
     setForm({ topicId: mockTopics[0].id, type: 'conceptual', notes: '' });
     setShowForm(false);
+
+    if (user) {
+      addUserErrorLog(user.uid, newLog).catch((error) => {
+        console.error('Failed to save error log:', error);
+        setSyncError('Esse erro não foi salvo na nuvem — pode não persistir.');
+      });
+    }
   };
 
   return (
@@ -56,6 +87,13 @@ export default function Erros() {
             Caderno de Erros
           </h1>
           <p className="text-zinc-500 dark:text-zinc-400">Diagnóstico de padrões para atacar a causa raiz, não só o sintoma.</p>
+          {!isConnected && (
+            <p className="flex items-center text-xs text-zinc-400 mt-2">
+              <CloudOff className="w-3.5 h-3.5 mr-1.5" />
+              Modo demonstração — conecte sua conta Google para salvar seus erros de verdade.
+            </p>
+          )}
+          {syncError && <p className="text-xs text-rose-500 mt-2">{syncError}</p>}
         </div>
         <button
           onClick={() => setShowForm((s) => !s)}
