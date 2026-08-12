@@ -12,6 +12,7 @@ import {
   FlaskConical,
   TrendingUp,
   Target,
+  Compass,
   Link as LinkIcon,
   Sun,
   Moon,
@@ -61,6 +62,7 @@ export default function Layout() {
     { name: 'Laboratório & Métodos', path: '/laboratorio', icon: FlaskConical },
     { name: 'Evolução & Domínio', path: '/evolucao', icon: TrendingUp },
     { name: 'Prioridades por Vestibular', path: '/prioridades', icon: Target },
+    { name: 'Estratégias de Resolução', path: '/estrategias', icon: Compass },
     { name: 'Conexões Google', path: '/conexoes', icon: LinkIcon },
   ];
 

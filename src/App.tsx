@@ -19,6 +19,7 @@ import Tutor from './views/Tutor';
 import Laboratorio from './views/Laboratorio';
 import Evolucao from './views/Evolucao';
 import Prioridades from './views/Prioridades';
+import Estrategias from './views/Estrategias';
 import Conexoes from './views/Conexoes';
 
 export default function App() {
@@ -38,6 +39,7 @@ export default function App() {
             <Route path="laboratorio" element={<Laboratorio />} />
             <Route path="evolucao" element={<Evolucao />} />
             <Route path="prioridades" element={<Prioridades />} />
+            <Route path="estrategias" element={<Estrategias />} />
             <Route path="conexoes" element={<Conexoes />} />
           </Route>
         </Routes>
