@@ -22,6 +22,7 @@ import Prioridades from './views/Prioridades';
 import Estrategias from './views/Estrategias';
 import Conexoes from './views/Conexoes';
 import Perfil from './views/Perfil';
+import Redacao from './views/Redacao';
 
 export default function App() {
   return (
@@ -43,6 +44,7 @@ export default function App() {
             <Route path="estrategias" element={<Estrategias />} />
             <Route path="conexoes" element={<Conexoes />} />
             <Route path="perfil" element={<Perfil />} />
+            <Route path="redacao" element={<Redacao />} />
           </Route>
         </Routes>
       </BrowserRouter>
