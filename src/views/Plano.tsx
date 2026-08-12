@@ -2,7 +2,8 @@ import React, { useMemo, useState } from 'react';
 import { EfficiencyEngine } from '../lib/efficiencyEngine';
 import { mockTopics, mockProfile } from '../data/mockData';
 import { useUserMastery } from '../hooks/useUserMastery';
-import { Map, Clock, Battery, BatteryLow, BatteryFull, CloudOff } from 'lucide-react';
+import { useAvailableMinutes } from '../hooks/useAvailableMinutes';
+import { Map, Clock, Battery, BatteryLow, BatteryFull, CloudOff, CalendarCheck2 } from 'lucide-react';
 
 const SUBJECT_COLORS: Record<string, string> = {
   Biologia: 'bg-emerald-500',
@@ -12,7 +13,18 @@ const SUBJECT_COLORS: Record<string, string> = {
 
 export default function Plano() {
   const { mastery, isPersisted, syncError } = useUserMastery();
-  const [minutesToday, setMinutesToday] = useState(120);
+  const {
+    minutes: minutesToday,
+    usingAuto,
+    autoMode,
+    setAutoMode,
+    manualMinutes,
+    setManualMinutes,
+    isConnected: calendarConnected,
+    loading: calendarLoading,
+    error: calendarError,
+    busyCount,
+  } = useAvailableMinutes();
   const [energyLevel, setEnergyLevel] = useState<'low' | 'medium' | 'high'>(mockProfile.currentEnergyLevel);
 
   const profile = useMemo(() => ({ ...mockProfile, currentEnergyLevel: energyLevel }), [energyLevel]);
@@ -56,11 +68,44 @@ export default function Plano() {
       </header>
 
       <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 shadow-sm space-y-6">
+        {calendarConnected && (
+          <div className="flex items-center justify-between pb-6 border-b border-zinc-100 dark:border-zinc-800">
+            <div className="flex items-center min-w-0">
+              <CalendarCheck2 className="w-4 h-4 mr-2 text-indigo-500 shrink-0" />
+              <div className="min-w-0">
+                <p className="text-sm font-medium">Calcular pela agenda do Google</p>
+                <p className="text-xs text-zinc-500 truncate">
+                  {calendarLoading
+                    ? 'Carregando sua agenda...'
+                    : calendarError
+                    ? calendarError
+                    : `${busyCount} compromisso${busyCount === 1 ? '' : 's'} hoje até as 22h`}
+                </p>
+              </div>
+            </div>
+            <button
+              onClick={() => setAutoMode((v) => !v)}
+              disabled={calendarLoading || !!calendarError}
+              aria-label="Alternar cálculo automático pela agenda"
+              className={`relative w-11 h-6 rounded-full shrink-0 ml-4 transition-colors disabled:opacity-40 ${
+                autoMode ? 'bg-indigo-600' : 'bg-zinc-300 dark:bg-zinc-700'
+              }`}
+            >
+              <span
+                className={`absolute top-0.5 left-0.5 w-5 h-5 bg-white rounded-full transition-transform ${
+                  autoMode ? 'translate-x-5' : ''
+                }`}
+              />
+            </button>
+          </div>
+        )}
+
         <div>
           <div className="flex items-center justify-between mb-2">
             <label htmlFor="minutes" className="text-sm font-medium flex items-center text-zinc-700 dark:text-zinc-300">
               <Clock className="w-4 h-4 mr-2 text-zinc-400" />
               Minutos disponíveis hoje
+              {usingAuto && <span className="ml-2 text-xs font-normal text-indigo-500">(via agenda)</span>}
             </label>
             <span className="text-lg font-bold text-indigo-600 dark:text-indigo-400">{minutesToday} min</span>
           </div>
@@ -70,10 +115,16 @@ export default function Plano() {
             min={15}
             max={240}
             step={15}
-            value={minutesToday}
-            onChange={(e) => setMinutesToday(Number(e.target.value))}
-            className="w-full accent-indigo-600"
+            value={usingAuto ? minutesToday : manualMinutes}
+            disabled={usingAuto}
+            onChange={(e) => setManualMinutes(Number(e.target.value))}
+            className={`w-full accent-indigo-600 ${usingAuto ? 'opacity-50 cursor-not-allowed' : ''}`}
           />
+          {usingAuto && (
+            <p className="text-xs text-zinc-500 mt-2">
+              Calculado a partir do seu tempo livre entre agora e 22h, descontando os compromissos da sua agenda.
+            </p>
+          )}
         </div>
 
         <div>

@@ -2,6 +2,7 @@ import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { EfficiencyEngine } from '../lib/efficiencyEngine';
 import { mockTopics, mockProfile } from '../data/mockData';
 import { useUserMastery } from '../hooks/useUserMastery';
+import { useAvailableMinutes } from '../hooks/useAvailableMinutes';
 import { StudyAction } from '../types';
 import { PlayCircle, Pause, RotateCcw, CheckCircle2, PlayCircle as StartIcon, CloudOff } from 'lucide-react';
 
@@ -13,9 +14,10 @@ function formatTime(totalSeconds: number) {
 
 export default function Sessao() {
   const { mastery, isPersisted } = useUserMastery();
+  const { minutes: availableMinutes } = useAvailableMinutes();
   const dailyPlan = useMemo(
-    () => EfficiencyEngine.generateDailyPlan(mastery, mockTopics, mockProfile, 120),
-    [mastery]
+    () => EfficiencyEngine.generateDailyPlan(mastery, mockTopics, mockProfile, availableMinutes),
+    [mastery, availableMinutes]
   );
 
   const [selectedAction, setSelectedAction] = useState<StudyAction | null>(dailyPlan[0] ?? null);
