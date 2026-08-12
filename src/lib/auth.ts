@@ -215,6 +215,8 @@ export const getAuthDebugInfo = () => {
     localStorageAuthKeys,
     sessionStorageAuthKeys,
     currentUserUid: auth.currentUser?.uid ?? null,
+    connectedUserUid: connectedUser?.uid ?? null,
+    connectedUserListenerCount: connectedUserListeners.size,
     cachedAccessTokenPresent: !!cachedAccessToken,
     isSigningIn,
   };
