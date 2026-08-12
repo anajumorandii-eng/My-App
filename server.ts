@@ -110,6 +110,92 @@ app.post('/api/ai/socratic', async (req, res) => {
   }
 });
 
+app.post('/api/ai/error-hypothesis', async (req, res) => {
+  if (!ai) {
+    return res.status(500).json({ error: 'Gemini API not configured.' });
+  }
+
+  try {
+    const { topic, subject, errorType, notes } = req.body;
+
+    let prompt = `Você é o JUJU, um tutor especialista em diagnosticar erros de estudantes de vestibular de Medicina.\n`;
+    prompt += `Um aluno registrou um erro com os seguintes dados:\n`;
+    prompt += `Tópico: ${topic} (${subject})\n`;
+    prompt += `Categoria do erro: ${errorType}\n`;
+    prompt += `Relato do aluno sobre o que aconteceu: ${notes}\n\n`;
+    prompt += `Gere uma hipótese curta e objetiva (2-3 frases) sobre a causa raiz provável desse erro, `;
+    prompt += `e uma sugestão prática de como evitá-lo da próxima vez. Responda em português do Brasil, sem saudação.`;
+
+    const response = await ai.models.generateContent({
+      model: 'gemini-3.1-pro-preview',
+      contents: prompt,
+    });
+
+    res.json({ text: response.text });
+  } catch (error) {
+    console.error('AI Error:', error);
+    res.status(500).json({ error: 'Falha ao processar solicitação de IA' });
+  }
+});
+
+app.post('/api/ai/question-explanation', async (req, res) => {
+  if (!ai) {
+    return res.status(500).json({ error: 'Gemini API not configured.' });
+  }
+
+  try {
+    const { prompt: questionPrompt, subject, selectedAnswer, correctAnswer, isCorrect, baseExplanation } = req.body;
+
+    let prompt = `Você é o JUJU, um tutor especialista em vestibular de Medicina.\n`;
+    prompt += `Um aluno respondeu a seguinte questão de ${subject}:\n`;
+    prompt += `"${questionPrompt}"\n\n`;
+    prompt += `Resposta correta: ${correctAnswer}\n`;
+    prompt += `Resposta escolhida pelo aluno: ${selectedAnswer}\n`;
+    prompt += `O aluno acertou? ${isCorrect ? 'Sim' : 'Não'}\n`;
+    prompt += `Explicação padrão já mostrada ao aluno: ${baseExplanation}\n\n`;
+    prompt += `Gere uma explicação mais aprofundada e personalizada (4-6 frases) que vá além da explicação padrão: `;
+    prompt += `explore o raciocínio conceitual, e se o aluno errou, aponte possivelmente onde o raciocínio dele desviou. `;
+    prompt += `Responda em português do Brasil, direto ao ponto, sem saudação.`;
+
+    const response = await ai.models.generateContent({
+      model: 'gemini-3.1-pro-preview',
+      contents: prompt,
+    });
+
+    res.json({ text: response.text });
+  } catch (error) {
+    console.error('AI Error:', error);
+    res.status(500).json({ error: 'Falha ao processar solicitação de IA' });
+  }
+});
+
+app.post('/api/ai/podcast-script', async (req, res) => {
+  if (!ai) {
+    return res.status(500).json({ error: 'Gemini API not configured.' });
+  }
+
+  try {
+    const { title, subject, topic } = req.body;
+
+    let prompt = `Você é o roteirista do Podcast JUJU, um podcast de revisão para vestibular de Medicina.\n`;
+    prompt += `Escreva um roteiro de narração (150 a 250 palavras) sobre o episódio "${title}", `;
+    prompt += `do tema ${topic} (${subject}).\n`;
+    prompt += `O texto será lido em voz alta por um narrador, então escreva em prosa corrida, tom didático e envolvente, `;
+    prompt += `como se estivesse explicando o assunto para o aluno durante um trajeto de carro. `;
+    prompt += `Não use marcações, listas ou markdown — apenas o texto puro do roteiro, em português do Brasil.`;
+
+    const response = await ai.models.generateContent({
+      model: 'gemini-3.1-pro-preview',
+      contents: prompt,
+    });
+
+    res.json({ text: response.text });
+  } catch (error) {
+    console.error('AI Error:', error);
+    res.status(500).json({ error: 'Falha ao processar solicitação de IA' });
+  }
+});
+
 // Vite & Static file serving
 async function startServer() {
   if (process.env.NODE_ENV !== 'production') {

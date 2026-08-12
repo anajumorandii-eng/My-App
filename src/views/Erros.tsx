@@ -22,6 +22,7 @@ export default function Erros() {
   const [showForm, setShowForm] = useState(false);
   const [form, setForm] = useState({ topicId: mockTopics[0].id, type: 'conceptual' as ErrorLog['type'], notes: '' });
   const [syncError, setSyncError] = useState<string | null>(null);
+  const [generatingHypothesisFor, setGeneratingHypothesisFor] = useState<string | null>(null);
 
   useEffect(() => {
     if (!user) {
@@ -56,8 +57,9 @@ export default function Erros() {
     return counts;
   }, [logs]);
 
-  const addLog = () => {
+  const addLog = async () => {
     if (!form.notes.trim()) return;
+    const topic = mockTopics.find((t) => t.id === form.topicId);
     const newLog: ErrorLog = {
       id: `err_${Date.now()}`,
       topicId: form.topicId,
@@ -75,6 +77,34 @@ export default function Erros() {
         console.error('Failed to save error log:', error);
         setSyncError('Esse erro não foi salvo na nuvem — pode não persistir.');
       });
+    }
+
+    setGeneratingHypothesisFor(newLog.id);
+    try {
+      const res = await fetch('/api/ai/error-hypothesis', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          topic: topic?.name ?? 'Tópico desconhecido',
+          subject: topic?.subject ?? '',
+          errorType: TYPE_LABELS[newLog.type],
+          notes: newLog.notes,
+        }),
+      });
+      if (res.ok) {
+        const data = await res.json();
+        const withHypothesis: ErrorLog = { ...newLog, aiHypothesis: data.text };
+        setLogs((prev) => prev.map((l) => (l.id === newLog.id ? withHypothesis : l)));
+        if (user) {
+          addUserErrorLog(user.uid, withHypothesis).catch((error) => {
+            console.error('Failed to save AI hypothesis:', error);
+          });
+        }
+      }
+    } catch (error) {
+      console.error('Failed to generate AI hypothesis:', error);
+    } finally {
+      setGeneratingHypothesisFor(null);
     }
   };
 
@@ -201,6 +231,12 @@ export default function Erros() {
                 <div className="flex items-start p-3 rounded-lg bg-indigo-50 dark:bg-indigo-900/20 text-indigo-800 dark:text-indigo-300 text-sm">
                   <Sparkles className="w-4 h-4 mr-2 mt-0.5 shrink-0" />
                   <p>{log.aiHypothesis}</p>
+                </div>
+              )}
+              {!log.aiHypothesis && generatingHypothesisFor === log.id && (
+                <div className="flex items-center p-3 rounded-lg bg-zinc-50 dark:bg-zinc-800/50 text-zinc-500 text-sm">
+                  <Sparkles className="w-4 h-4 mr-2 shrink-0 animate-pulse" />
+                  Gerando hipótese com IA...
                 </div>
               )}
             </div>
