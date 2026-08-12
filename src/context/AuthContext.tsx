@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import { User } from 'firebase/auth';
-import { onUserChanged } from '../lib/auth';
+import { subscribeToConnectedUser } from '../lib/auth';
 
 interface AuthContextValue {
   user: User | null;
@@ -13,8 +13,10 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
 
   useEffect(() => {
-    const unsubscribe = onUserChanged(setUser);
-    return () => unsubscribe();
+    // Mirrors the exact same "connected" signal Conexoes.tsx sets after a
+    // successful googleSignIn()/initAuth() resolution, instead of deriving
+    // it independently from a second Firebase listener.
+    return subscribeToConnectedUser(setUser);
   }, []);
 
   return <AuthContext.Provider value={{ user, isConnected: !!user }}>{children}</AuthContext.Provider>;
