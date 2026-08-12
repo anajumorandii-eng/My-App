@@ -4,27 +4,29 @@ import { useAuth } from '../context/AuthContext';
 import { useUserMastery } from '../hooks/useUserMastery';
 import { addUserAttempt } from '../lib/userData';
 import { TopicMastery } from '../types';
-import { HelpCircle, CheckCircle2, XCircle, RotateCcw, CloudOff, Sparkles } from 'lucide-react';
+import { HelpCircle, CheckCircle2, XCircle, RotateCcw, CloudOff, Sparkles, BadgeCheck, ExternalLink } from 'lucide-react';
 
 export default function Questoes() {
   const { user } = useAuth();
   const { updateMastery, isPersisted, syncError } = useUserMastery();
   const subjects = useMemo(() => ['Todas', ...new Set(mockQuestions.map((q) => q.subject))], []);
   const [subjectFilter, setSubjectFilter] = useState('Todas');
+  const [onlyRealExams, setOnlyRealExams] = useState(false);
   const [index, setIndex] = useState(0);
   const [selectedOptionId, setSelectedOptionId] = useState<string | null>(null);
   const [history, setHistory] = useState<{ questionId: string; correct: boolean }[]>([]);
   const [deepExplanation, setDeepExplanation] = useState<string | null>(null);
   const [loadingDeepExplanation, setLoadingDeepExplanation] = useState(false);
 
-  const pool = useMemo(
-    () => (subjectFilter === 'Todas' ? mockQuestions : mockQuestions.filter((q) => q.subject === subjectFilter)),
-    [subjectFilter]
-  );
+  const pool = useMemo(() => {
+    let result = subjectFilter === 'Todas' ? mockQuestions : mockQuestions.filter((q) => q.subject === subjectFilter);
+    if (onlyRealExams) result = result.filter((q) => q.examSource);
+    return result;
+  }, [subjectFilter, onlyRealExams]);
 
-  const question = pool[index % pool.length];
+  const question = pool.length > 0 ? pool[index % pool.length] : null;
   const answered = selectedOptionId !== null;
-  const isCorrect = answered && selectedOptionId === question.correctOptionId;
+  const isCorrect = answered && question !== null && selectedOptionId === question.correctOptionId;
   const correctCount = history.filter((h) => h.correct).length;
 
   const changeSubject = (subject: string) => {
@@ -34,8 +36,15 @@ export default function Questoes() {
     setDeepExplanation(null);
   };
 
+  const toggleRealExams = () => {
+    setOnlyRealExams((v) => !v);
+    setIndex(0);
+    setSelectedOptionId(null);
+    setDeepExplanation(null);
+  };
+
   const selectOption = (optionId: string) => {
-    if (answered) return;
+    if (answered || !question) return;
     const correct = optionId === question.correctOptionId;
     setSelectedOptionId(optionId);
     setHistory((h) => [...h, { questionId: question.id, correct }]);
@@ -79,7 +88,7 @@ export default function Questoes() {
   };
 
   const fetchDeepExplanation = async () => {
-    if (!selectedOptionId) return;
+    if (!selectedOptionId || !question) return;
     setLoadingDeepExplanation(true);
     try {
       const selectedOption = question.options.find((o) => o.id === selectedOptionId);
@@ -139,6 +148,17 @@ export default function Questoes() {
               {subject}
             </button>
           ))}
+          <button
+            onClick={toggleRealExams}
+            className={`flex items-center px-4 py-2 rounded-lg text-sm font-medium border transition-colors ${
+              onlyRealExams
+                ? 'bg-emerald-600 border-emerald-600 text-white'
+                : 'border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-50 dark:hover:bg-zinc-800'
+            }`}
+          >
+            <BadgeCheck className="w-4 h-4 mr-1.5" />
+            Só questões reais
+          </button>
         </div>
         <div className="flex items-center gap-3 text-sm text-zinc-500">
           <span>
@@ -151,11 +171,30 @@ export default function Questoes() {
         </div>
       </div>
 
+      {!question ? (
+        <div className="text-center py-16 bg-zinc-50 dark:bg-zinc-900/50 rounded-2xl border border-dashed border-zinc-200 dark:border-zinc-800">
+          <p className="text-zinc-500">Nenhuma questão real disponível ainda para esse filtro. Tente outra matéria ou desligue "Só questões reais".</p>
+        </div>
+      ) : (
       <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-8 shadow-sm">
-        <div className="flex items-center justify-between mb-6">
-          <span className="text-xs font-semibold uppercase tracking-wide text-indigo-600 dark:text-indigo-400">
-            {question.subject} • {question.difficulty === 'easy' ? 'Fácil' : question.difficulty === 'medium' ? 'Médio' : 'Difícil'}
-          </span>
+        <div className="flex items-center justify-between mb-6 flex-wrap gap-2">
+          <div className="flex items-center gap-2 flex-wrap">
+            <span className="text-xs font-semibold uppercase tracking-wide text-indigo-600 dark:text-indigo-400">
+              {question.subject} • {question.difficulty === 'easy' ? 'Fácil' : question.difficulty === 'medium' ? 'Médio' : 'Difícil'}
+            </span>
+            {question.examSource && (
+              <a
+                href={question.examSource.sourceUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center text-xs font-semibold px-2 py-0.5 rounded-full bg-emerald-50 dark:bg-emerald-900/20 text-emerald-700 dark:text-emerald-300 hover:underline"
+              >
+                <BadgeCheck className="w-3.5 h-3.5 mr-1" />
+                {question.examSource.board} {question.examSource.year}
+                <ExternalLink className="w-3 h-3 ml-1" />
+              </a>
+            )}
+          </div>
           <span className="text-sm text-zinc-400">Questão {(index % pool.length) + 1} de {pool.length}</span>
         </div>
 
@@ -226,6 +265,7 @@ export default function Questoes() {
           Próxima questão
         </button>
       </div>
+      )}
     </div>
   );
 }

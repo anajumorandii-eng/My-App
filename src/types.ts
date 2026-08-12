@@ -71,6 +71,11 @@ export interface Question {
   correctOptionId: string;
   explanation: string;
   difficulty: 'easy' | 'medium' | 'hard';
+  examSource?: {
+    board: string; // e.g. 'ENEM', 'FUVEST', 'COMVEST', 'VUNESP', 'FAMERP'
+    year: number;
+    sourceUrl: string;
+  };
 }
 
 export interface PodcastEpisode {
