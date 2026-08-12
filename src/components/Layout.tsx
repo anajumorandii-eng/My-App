@@ -11,6 +11,7 @@ import {
   Brain,
   FlaskConical,
   TrendingUp,
+  Target,
   Link as LinkIcon,
   Sun,
   Moon,
@@ -59,6 +60,7 @@ export default function Layout() {
     { name: 'Tutor Socrático', path: '/tutor', icon: Brain },
     { name: 'Laboratório & Métodos', path: '/laboratorio', icon: FlaskConical },
     { name: 'Evolução & Domínio', path: '/evolucao', icon: TrendingUp },
+    { name: 'Prioridades por Vestibular', path: '/prioridades', icon: Target },
     { name: 'Conexões Google', path: '/conexoes', icon: LinkIcon },
   ];
 
