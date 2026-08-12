@@ -1,27 +1,34 @@
 import React, { useState, useEffect } from 'react';
-import { NavLink, Outlet } from 'react-router-dom';
-import { 
-  Calendar, 
-  Map, 
-  PlayCircle, 
-  HelpCircle, 
-  Repeat, 
-  BookX, 
-  Headphones, 
-  Brain, 
-  FlaskConical, 
-  TrendingUp, 
+import { NavLink, Outlet, useLocation } from 'react-router-dom';
+import {
+  Calendar,
+  Map,
+  PlayCircle,
+  HelpCircle,
+  Repeat,
+  BookX,
+  Headphones,
+  Brain,
+  FlaskConical,
+  TrendingUp,
   Link as LinkIcon,
   Sun,
   Moon,
   GraduationCap,
   X,
-  ArrowRight
+  ArrowRight,
+  Menu
 } from 'lucide-react';
 
 export default function Layout() {
   const [darkMode, setDarkMode] = useState(false);
   const [showOnboarding, setShowOnboarding] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    setMobileMenuOpen(false);
+  }, [location.pathname]);
 
   useEffect(() => {
     // Show onboarding only once
@@ -57,14 +64,48 @@ export default function Layout() {
 
   return (
     <div className={`min-h-screen flex ${darkMode ? 'dark' : ''} bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 transition-colors duration-200`}>
-      
+
+      {/* Mobile top bar */}
+      <div className="lg:hidden fixed top-0 inset-x-0 z-30 h-14 flex items-center px-4 border-b border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900">
+        <button
+          onClick={() => setMobileMenuOpen(true)}
+          aria-label="Abrir menu"
+          className="p-2 -ml-2 mr-2 rounded-lg text-zinc-600 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800"
+        >
+          <Menu className="w-5 h-5" />
+        </button>
+        <GraduationCap className="w-5 h-5 mr-2 text-indigo-600 dark:text-indigo-400" />
+        <h1 className="font-bold text-lg tracking-tight">JUJU</h1>
+      </div>
+
+      {/* Mobile backdrop */}
+      {mobileMenuOpen && (
+        <div
+          className="lg:hidden fixed inset-0 z-40 bg-black/50"
+          onClick={() => setMobileMenuOpen(false)}
+        />
+      )}
+
       {/* Sidebar */}
-      <aside className="w-64 border-r border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 flex flex-col shrink-0">
-        <div className="h-16 flex items-center px-6 border-b border-zinc-200 dark:border-zinc-800">
-          <GraduationCap className="w-6 h-6 mr-2 text-indigo-600 dark:text-indigo-400" />
-          <h1 className="font-bold text-xl tracking-tight">JUJU</h1>
+      <aside
+        className={`w-64 border-r border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 flex flex-col shrink-0 fixed inset-y-0 left-0 z-50 transform transition-transform duration-200 lg:static lg:translate-x-0 lg:z-auto ${
+          mobileMenuOpen ? 'translate-x-0' : '-translate-x-full'
+        }`}
+      >
+        <div className="h-16 flex items-center justify-between px-6 border-b border-zinc-200 dark:border-zinc-800">
+          <div className="flex items-center">
+            <GraduationCap className="w-6 h-6 mr-2 text-indigo-600 dark:text-indigo-400" />
+            <h1 className="font-bold text-xl tracking-tight">JUJU</h1>
+          </div>
+          <button
+            onClick={() => setMobileMenuOpen(false)}
+            aria-label="Fechar menu"
+            className="lg:hidden p-1 rounded-lg text-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-800"
+          >
+            <X className="w-5 h-5" />
+          </button>
         </div>
-        
+
         <nav className="flex-1 overflow-y-auto py-4 px-3 space-y-1">
           {navItems.map((item) => {
             const Icon = item.icon;
@@ -72,6 +113,8 @@ export default function Layout() {
               <NavLink
                 key={item.path}
                 to={item.path}
+                end={item.path === '/'}
+                onClick={() => setMobileMenuOpen(false)}
                 className={({ isActive }) =>
                   `flex items-center px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                     isActive
@@ -99,8 +142,8 @@ export default function Layout() {
       </aside>
 
       {/* Main Content */}
-      <main className="flex-1 overflow-y-auto">
-        <div className="p-8 max-w-6xl mx-auto">
+      <main className="flex-1 overflow-y-auto pt-14 lg:pt-0">
+        <div className="p-4 sm:p-8 max-w-6xl mx-auto">
           <Outlet />
         </div>
       </main>
