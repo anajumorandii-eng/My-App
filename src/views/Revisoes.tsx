@@ -13,6 +13,7 @@ const SUBJECT_COLORS: Record<string, string> = {
   Biologia: 'text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-900/20',
   Matemática: 'text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-900/20',
   Física: 'text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-900/20',
+  Química: 'text-rose-600 dark:text-rose-400 bg-rose-50 dark:bg-rose-900/20',
 };
 
 export default function Revisoes() {

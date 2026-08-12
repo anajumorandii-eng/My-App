@@ -22,6 +22,7 @@ const SUBJECT_HEX: Record<string, string> = {
   Biologia: '#10b981',
   Matemática: '#6366f1',
   Física: '#f59e0b',
+  Química: '#f43f5e',
 };
 
 function ChartTooltip({ active, payload }: any) {
