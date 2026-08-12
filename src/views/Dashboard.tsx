@@ -1,13 +1,16 @@
 import React, { useMemo } from 'react';
 import { EfficiencyEngine } from '../lib/efficiencyEngine';
-import { mockMastery, mockTopics, mockProfile } from '../data/mockData';
-import { PlayCircle, Target, Brain, AlertCircle } from 'lucide-react';
+import { mockTopics, mockProfile } from '../data/mockData';
+import { useUserMastery } from '../hooks/useUserMastery';
+import { PlayCircle, Target, Brain, AlertCircle, CloudOff } from 'lucide-react';
 
 export default function Dashboard() {
+  const { mastery, isPersisted } = useUserMastery();
+
   const dailyPlan = useMemo(() => {
     // Determine plan for 120 minutes of study today
-    return EfficiencyEngine.generateDailyPlan(mockMastery, mockTopics, mockProfile, 120);
-  }, []);
+    return EfficiencyEngine.generateDailyPlan(mastery, mockTopics, mockProfile, 120);
+  }, [mastery]);
 
   return (
     <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
@@ -17,6 +20,12 @@ export default function Dashboard() {
         <p className="text-zinc-500 dark:text-zinc-400">
           Seu foco para hoje, ordenado por prioridade de impacto.
         </p>
+        {!isPersisted && (
+          <p className="flex items-center text-xs text-zinc-400 mt-2">
+            <CloudOff className="w-3.5 h-3.5 mr-1.5" />
+            Modo demonstração — conecte sua conta Google em "Conexões Google" para salvar seu progresso de verdade.
+          </p>
+        )}
       </header>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
