@@ -58,6 +58,18 @@ export const subscribeToConnectedUser = (listener: ConnectedUserListener) => {
   };
 };
 
+// Keeps connectedUser in sync with Firebase's real auth state on every page,
+// not just when Conexoes.tsx happens to be mounted (initAuth() is only ever
+// called from there). Without this, reloading straight into e.g. /revisoes
+// never re-establishes "who's signed in" even though Firebase itself
+// already restored the session from localStorage — connectedUser would
+// just stay at its initial null for that entire page load.
+persistenceReady.then(() => {
+  onAuthStateChanged(auth, (user) => {
+    setConnectedUser(user);
+  });
+});
+
 // Error codes where the popup itself couldn't be used (blocked, unsupported
 // in an iframe, etc). For these we retry the sign-in via full-page redirect
 // instead of just failing.
