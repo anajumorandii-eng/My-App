@@ -1,17 +1,19 @@
 import React, { useMemo } from 'react';
 import { EfficiencyEngine } from '../lib/efficiencyEngine';
-import { mockTopics, mockProfile } from '../data/mockData';
+import { mockTopics } from '../data/mockData';
 import { useUserMastery } from '../hooks/useUserMastery';
+import { useUserProfile } from '../hooks/useUserProfile';
 import { useAvailableMinutes } from '../hooks/useAvailableMinutes';
 import { PlayCircle, Target, Brain, AlertCircle, CloudOff } from 'lucide-react';
 
 export default function Dashboard() {
   const { mastery, isPersisted } = useUserMastery();
+  const { profile } = useUserProfile();
   const { minutes: availableMinutes, usingAuto } = useAvailableMinutes();
 
   const dailyPlan = useMemo(() => {
-    return EfficiencyEngine.generateDailyPlan(mastery, mockTopics, mockProfile, availableMinutes);
-  }, [mastery, availableMinutes]);
+    return EfficiencyEngine.generateDailyPlan(mastery, mockTopics, profile, availableMinutes);
+  }, [mastery, profile, availableMinutes]);
 
   return (
     <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
@@ -46,7 +48,7 @@ export default function Dashboard() {
             <Brain className="w-5 h-5 mr-2" />
             <h3 className="font-medium">Autonomia</h3>
           </div>
-          <p className="text-3xl font-bold">{mockProfile.autonomyIndex}<span className="text-lg font-normal text-zinc-500 ml-1">/100</span></p>
+          <p className="text-3xl font-bold">{profile.autonomyIndex}<span className="text-lg font-normal text-zinc-500 ml-1">/100</span></p>
           <p className="text-sm text-zinc-500 mt-1">Crescimento lento e sustentável.</p>
         </div>
 

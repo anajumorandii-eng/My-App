@@ -17,6 +17,7 @@ import {
   Sun,
   Moon,
   GraduationCap,
+  UserCircle,
   X,
   ArrowRight,
   Menu
@@ -64,6 +65,7 @@ export default function Layout() {
     { name: 'Prioridades por Vestibular', path: '/prioridades', icon: Target },
     { name: 'Estratégias de Resolução', path: '/estrategias', icon: Compass },
     { name: 'Conexões Google', path: '/conexoes', icon: LinkIcon },
+    { name: 'Perfil', path: '/perfil', icon: UserCircle },
   ];
 
   return (
