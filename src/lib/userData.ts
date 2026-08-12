@@ -1,6 +1,6 @@
 import { doc, getDoc, setDoc, collection, getDocs, query, orderBy } from 'firebase/firestore';
 import { db } from './firestore';
-import { TopicMastery, ErrorLog, UserProfile } from '../types';
+import { TopicMastery, ErrorLog, UserProfile, DiscursiveAttempt } from '../types';
 import { mockMastery, mockProfile } from '../data/mockData';
 
 export interface QuestionAttempt {
@@ -62,5 +62,16 @@ export async function getUserAttempts(uid: string): Promise<QuestionAttempt[]> {
 
 export async function addUserAttempt(uid: string, attempt: QuestionAttempt): Promise<void> {
   const ref = doc(db, 'users', uid, 'attempts', attempt.id);
+  await setDoc(ref, attempt);
+}
+
+export async function getUserDiscursiveAttempts(uid: string): Promise<DiscursiveAttempt[]> {
+  const ref = collection(db, 'users', uid, 'discursiveAttempts');
+  const snap = await getDocs(query(ref, orderBy('date', 'desc')));
+  return snap.docs.map((d) => d.data() as DiscursiveAttempt);
+}
+
+export async function addUserDiscursiveAttempt(uid: string, attempt: DiscursiveAttempt): Promise<void> {
+  const ref = doc(db, 'users', uid, 'discursiveAttempts', attempt.id);
   await setDoc(ref, attempt);
 }
