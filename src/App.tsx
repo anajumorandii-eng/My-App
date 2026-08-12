@@ -21,6 +21,7 @@ import Evolucao from './views/Evolucao';
 import Prioridades from './views/Prioridades';
 import Estrategias from './views/Estrategias';
 import Conexoes from './views/Conexoes';
+import Perfil from './views/Perfil';
 
 export default function App() {
   return (
@@ -41,6 +42,7 @@ export default function App() {
             <Route path="prioridades" element={<Prioridades />} />
             <Route path="estrategias" element={<Estrategias />} />
             <Route path="conexoes" element={<Conexoes />} />
+            <Route path="perfil" element={<Perfil />} />
           </Route>
         </Routes>
       </BrowserRouter>

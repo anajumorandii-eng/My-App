@@ -1,7 +1,8 @@
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { EfficiencyEngine } from '../lib/efficiencyEngine';
-import { mockTopics, mockProfile } from '../data/mockData';
+import { mockTopics } from '../data/mockData';
 import { useUserMastery } from '../hooks/useUserMastery';
+import { useUserProfile } from '../hooks/useUserProfile';
 import { useAvailableMinutes } from '../hooks/useAvailableMinutes';
 import { Map, Clock, Battery, BatteryLow, BatteryFull, CloudOff, CalendarCheck2 } from 'lucide-react';
 
@@ -14,6 +15,7 @@ const SUBJECT_COLORS: Record<string, string> = {
 
 export default function Plano() {
   const { mastery, isPersisted, syncError } = useUserMastery();
+  const { profile: userProfile } = useUserProfile();
   const {
     minutes: minutesToday,
     usingAuto,
@@ -26,9 +28,13 @@ export default function Plano() {
     error: calendarError,
     busyCount,
   } = useAvailableMinutes();
-  const [energyLevel, setEnergyLevel] = useState<'low' | 'medium' | 'high'>(mockProfile.currentEnergyLevel);
+  const [energyLevel, setEnergyLevel] = useState<'low' | 'medium' | 'high'>(userProfile.currentEnergyLevel);
 
-  const profile = useMemo(() => ({ ...mockProfile, currentEnergyLevel: energyLevel }), [energyLevel]);
+  useEffect(() => {
+    setEnergyLevel(userProfile.currentEnergyLevel);
+  }, [userProfile.currentEnergyLevel]);
+
+  const profile = useMemo(() => ({ ...userProfile, currentEnergyLevel: energyLevel }), [userProfile, energyLevel]);
 
   const dailyPlan = useMemo(
     () => EfficiencyEngine.generateDailyPlan(mastery, mockTopics, profile, minutesToday),

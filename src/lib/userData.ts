@@ -1,7 +1,7 @@
 import { doc, getDoc, setDoc, collection, getDocs, query, orderBy } from 'firebase/firestore';
 import { db } from './firestore';
-import { TopicMastery, ErrorLog } from '../types';
-import { mockMastery } from '../data/mockData';
+import { TopicMastery, ErrorLog, UserProfile } from '../types';
+import { mockMastery, mockProfile } from '../data/mockData';
 
 export interface QuestionAttempt {
   id: string;
@@ -26,6 +26,21 @@ export async function getUserMastery(uid: string): Promise<TopicMastery[]> {
 export async function saveUserMastery(uid: string, items: TopicMastery[]): Promise<void> {
   const ref = doc(db, 'users', uid, 'data', 'mastery');
   await setDoc(ref, { items });
+}
+
+export async function getUserProfile(uid: string): Promise<UserProfile> {
+  const ref = doc(db, 'users', uid, 'data', 'profile');
+  const snap = await getDoc(ref);
+  if (snap.exists()) {
+    return snap.data() as UserProfile;
+  }
+  await setDoc(ref, mockProfile);
+  return mockProfile;
+}
+
+export async function saveUserProfile(uid: string, profile: UserProfile): Promise<void> {
+  const ref = doc(db, 'users', uid, 'data', 'profile');
+  await setDoc(ref, profile);
 }
 
 export async function getUserErrorLogs(uid: string): Promise<ErrorLog[]> {
