@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useState } from 'react';
 import {
   BarChart,
   Bar,
@@ -16,7 +16,7 @@ import {
 } from 'recharts';
 import { mockTopics } from '../data/mockData';
 import { useUserMastery } from '../hooks/useUserMastery';
-import { TrendingUp, Trophy, AlertCircle, Gauge, CloudOff } from 'lucide-react';
+import { TrendingUp, Trophy, AlertCircle, Gauge, CloudOff, Sparkles } from 'lucide-react';
 
 const SUBJECT_HEX: Record<string, string> = {
   Biologia: '#10b981',
@@ -37,6 +37,8 @@ function ChartTooltip({ active, payload }: any) {
 
 export default function Evolucao() {
   const { mastery: masteryData, isPersisted } = useUserMastery();
+  const [insight, setInsight] = useState<string | null>(null);
+  const [loadingInsight, setLoadingInsight] = useState(false);
 
   const topicRows = useMemo(
     () =>
@@ -66,6 +68,30 @@ export default function Evolucao() {
   const strongest = topicRows[0];
   const weakest = topicRows[topicRows.length - 1];
 
+  const fetchInsight = async () => {
+    setLoadingInsight(true);
+    try {
+      const res = await fetch('/api/ai/progress-insight', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          topics: topicRows.map((r) => ({ name: r.name, subject: r.subject, level: r.level })),
+          overallAverage,
+          strongest: strongest?.name,
+          weakest: weakest?.name,
+        }),
+      });
+      if (res.ok) {
+        const data = await res.json();
+        setInsight(data.text);
+      }
+    } catch (error) {
+      console.error('Failed to fetch progress insight:', error);
+    } finally {
+      setLoadingInsight(false);
+    }
+  };
+
   return (
     <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
       <header>
@@ -81,6 +107,32 @@ export default function Evolucao() {
           </p>
         )}
       </header>
+
+      <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 shadow-sm">
+        <div className="flex items-center justify-between flex-wrap gap-3 mb-1">
+          <h3 className="font-semibold flex items-center">
+            <Sparkles className="w-4 h-4 mr-2 text-indigo-500" />
+            Diagnóstico com IA
+          </h3>
+          {!insight && (
+            <button
+              onClick={fetchInsight}
+              disabled={loadingInsight}
+              className="flex items-center px-3 py-1.5 text-xs font-medium text-indigo-600 dark:text-indigo-400 border border-indigo-200 dark:border-indigo-800 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-900/20 disabled:opacity-50 transition-colors"
+            >
+              <Sparkles className={`w-3.5 h-3.5 mr-1.5 ${loadingInsight ? 'animate-pulse' : ''}`} />
+              {loadingInsight ? 'Analisando...' : 'Gerar diagnóstico'}
+            </button>
+          )}
+        </div>
+        {insight ? (
+          <p className="text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed mt-3">{insight}</p>
+        ) : (
+          <p className="text-sm text-zinc-500 mt-1">
+            Peça uma análise personalizada do seu progresso e das suas prioridades para os próximos dias.
+          </p>
+        )}
+      </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
         <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 shadow-sm">
