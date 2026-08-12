@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, Outlet, useLocation } from 'react-router-dom';
-import { useAuth } from '../context/AuthContext';
 import {
   Calendar,
   Map,
@@ -26,7 +25,6 @@ export default function Layout() {
   const [showOnboarding, setShowOnboarding] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
-  const { isConnected, user } = useAuth();
 
   useEffect(() => {
     setMobileMenuOpen(false);
@@ -149,12 +147,6 @@ export default function Layout() {
           <Outlet />
         </div>
       </main>
-
-      {/* Temporary debug badge — visible on every page, remove once the
-          "modo demonstração after reload" issue is confirmed fixed */}
-      <div className="fixed bottom-3 right-3 z-[60] px-3 py-1.5 rounded-lg bg-black/80 text-white text-[10px] font-mono">
-        AuthContext: {isConnected ? `conectado (${user?.uid.slice(0, 8)}…)` : 'desconectado'}
-      </div>
 
       {/* Onboarding Modal */}
       {showOnboarding && (
