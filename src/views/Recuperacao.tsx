@@ -1,5 +1,4 @@
 import React, { useMemo, useState } from 'react';
-import { Link } from 'react-router-dom';
 import { mockTopics, mockQuestions } from '../data/mockData';
 import { useUserBacklog } from '../hooks/useUserBacklog';
 import {
@@ -22,12 +21,10 @@ import {
   ChevronDown,
   CloudOff,
   CheckCircle2,
-  XCircle,
   Trophy,
   Trash2,
   Info,
   Sparkles,
-  Eye,
   X,
 } from 'lucide-react';
 
@@ -89,138 +86,125 @@ function ScorePicker({
   );
 }
 
+const EXERCISE_MODE_BY_LEVEL: Record<number, string> = {
+  1: 'explain_steps',
+  2: 'fill_gap',
+  3: 'solve',
+  4: 'solve_variant',
+  5: 'discursive',
+};
+
 function SupportLevelContent({ topic, supportLevel }: { topic: Topic; supportLevel: number }) {
-  const [aiText, setAiText] = useState<string | null>(null);
-  const [gapRevealed, setGapRevealed] = useState(false);
-  const [loading, setLoading] = useState(false);
-  const [practiceSelected, setPracticeSelected] = useState<string | null>(null);
+  const [aiExerciseText, setAiExerciseText] = useState<string | null>(null);
+  const [loadingExercise, setLoadingExercise] = useState(false);
+  const [studentAnswer, setStudentAnswer] = useState('');
+  const [correction, setCorrection] = useState<string | null>(null);
+  const [loadingCorrection, setLoadingCorrection] = useState(false);
 
-  const practiceQuestions = useMemo(() => mockQuestions.filter((q) => q.topicId === topic.id), [topic.id]);
-  const practiceQuestion = practiceQuestions[supportLevel - 3];
+  const realQuestion = useMemo(() => {
+    if (supportLevel !== 3 && supportLevel !== 4) return undefined;
+    return mockQuestions.filter((q) => q.topicId === topic.id)[supportLevel - 3];
+  }, [topic.id, supportLevel]);
 
-  const fetchExample = async (mode: 'full' | 'gapped') => {
-    setLoading(true);
+  const exerciseText = realQuestion
+    ? `${realQuestion.prompt}\n\nAlternativas:\n${realQuestion.options.map((o) => `- ${o.text}`).join('\n')}`
+    : aiExerciseText;
+
+  const groundingAnswer = realQuestion
+    ? `Alternativa correta: "${realQuestion.options.find((o) => o.id === realQuestion.correctOptionId)?.text}". Explicação: ${realQuestion.explanation}`
+    : undefined;
+
+  const fetchExercise = async () => {
+    setLoadingExercise(true);
     try {
-      const res = await fetch('/api/ai/worked-example', {
+      const res = await fetch('/api/ai/backlog-exercise', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ topic: topic.name, subject: topic.subject, mode }),
+        body: JSON.stringify({ topic: topic.name, subject: topic.subject, mode: EXERCISE_MODE_BY_LEVEL[supportLevel] }),
       });
       if (res.ok) {
         const data = await res.json();
-        setAiText(data.text);
+        setAiExerciseText(data.text);
       }
     } catch (error) {
-      console.error('Failed to fetch worked example:', error);
+      console.error('Failed to fetch backlog exercise:', error);
     } finally {
-      setLoading(false);
+      setLoadingExercise(false);
     }
   };
 
-  if (supportLevel === 1) {
-    return !aiText ? (
+  const fetchCorrection = async () => {
+    if (!exerciseText || !studentAnswer.trim()) return;
+    setLoadingCorrection(true);
+    try {
+      const res = await fetch('/api/ai/backlog-correction', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          topic: topic.name,
+          subject: topic.subject,
+          exercise: exerciseText,
+          studentAnswer,
+          groundingAnswer,
+        }),
+      });
+      if (res.ok) {
+        const data = await res.json();
+        setCorrection(data.text);
+      }
+    } catch (error) {
+      console.error('Failed to fetch backlog correction:', error);
+    } finally {
+      setLoadingCorrection(false);
+    }
+  };
+
+  if (!exerciseText) {
+    return (
       <button
-        onClick={() => fetchExample('full')}
-        disabled={loading}
+        onClick={fetchExercise}
+        disabled={loadingExercise}
         className="w-full flex items-center justify-center py-2.5 border border-indigo-200 dark:border-indigo-800 text-indigo-600 dark:text-indigo-400 rounded-xl font-medium text-sm hover:bg-indigo-50 dark:hover:bg-indigo-900/20 disabled:opacity-50 transition-colors"
       >
-        <Sparkles className={`w-4 h-4 mr-2 ${loading ? 'animate-pulse' : ''}`} />
-        {loading ? 'Gerando exemplo com IA...' : 'Gerar exemplo resolvido com IA'}
+        <Sparkles className={`w-4 h-4 mr-2 ${loadingExercise ? 'animate-pulse' : ''}`} />
+        {loadingExercise ? 'Gerando exercício com IA...' : 'Gerar exercício com IA'}
       </button>
-    ) : (
-      <div className="p-4 rounded-xl bg-indigo-50 dark:bg-indigo-900/20 text-indigo-900 dark:text-indigo-200 text-sm leading-relaxed whitespace-pre-line">
-        {aiText}
-      </div>
-    );
-  }
-
-  if (supportLevel === 2) {
-    if (!aiText) {
-      return (
-        <button
-          onClick={() => fetchExample('gapped')}
-          disabled={loading}
-          className="w-full flex items-center justify-center py-2.5 border border-indigo-200 dark:border-indigo-800 text-indigo-600 dark:text-indigo-400 rounded-xl font-medium text-sm hover:bg-indigo-50 dark:hover:bg-indigo-900/20 disabled:opacity-50 transition-colors"
-        >
-          <Sparkles className={`w-4 h-4 mr-2 ${loading ? 'animate-pulse' : ''}`} />
-          {loading ? 'Gerando exemplo com IA...' : 'Gerar exemplo com lacuna'}
-        </button>
-      );
-    }
-    const [before, after] = aiText.split('REVELAR:');
-    return (
-      <div className="space-y-2">
-        <div className="p-4 rounded-xl bg-indigo-50 dark:bg-indigo-900/20 text-indigo-900 dark:text-indigo-200 text-sm leading-relaxed whitespace-pre-line">
-          {before.trim()}
-        </div>
-        {!gapRevealed ? (
-          <button
-            onClick={() => setGapRevealed(true)}
-            className="w-full flex items-center justify-center py-2 border border-zinc-200 dark:border-zinc-700 rounded-xl text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-colors text-sm"
-          >
-            <Eye className="w-3.5 h-3.5 mr-2" />
-            Tentei — revelar o passo que faltou
-          </button>
-        ) : (
-          <div className="p-4 rounded-xl bg-emerald-50 dark:bg-emerald-900/20 text-emerald-900 dark:text-emerald-200 text-sm leading-relaxed whitespace-pre-line">
-            {(after ?? '').trim()}
-          </div>
-        )}
-      </div>
-    );
-  }
-
-  if (supportLevel === 3 || supportLevel === 4) {
-    if (!practiceQuestion) {
-      return (
-        <div className="p-3 rounded-lg bg-amber-50 dark:bg-amber-900/20 text-amber-800 dark:text-amber-300 text-xs">
-          Ainda não há questão cadastrada para esse tópico. Pratique em{' '}
-          <Link to="/questoes" className="underline font-medium">Questões & Tentativas</Link> ou{' '}
-          <Link to="/treino-2a-fase" className="underline font-medium">Treino de 2ª Fase</Link>.
-        </div>
-      );
-    }
-    const answered = practiceSelected !== null;
-    const isCorrect = answered && practiceSelected === practiceQuestion.correctOptionId;
-    return (
-      <div className="space-y-3">
-        <p className="text-sm font-medium leading-relaxed">{practiceQuestion.prompt}</p>
-        <div className="space-y-2">
-          {practiceQuestion.options.map((option) => {
-            const isSelected = practiceSelected === option.id;
-            const isCorrectOption = option.id === practiceQuestion.correctOptionId;
-            let stateClasses = 'border-zinc-200 dark:border-zinc-700 hover:bg-zinc-50 dark:hover:bg-zinc-800';
-            if (answered && isCorrectOption) stateClasses = 'border-emerald-500 bg-emerald-50 dark:bg-emerald-900/20';
-            else if (answered && isSelected && !isCorrectOption) stateClasses = 'border-rose-500 bg-rose-50 dark:bg-rose-900/20';
-            return (
-              <button
-                key={option.id}
-                onClick={() => !answered && setPracticeSelected(option.id)}
-                disabled={answered}
-                className={`w-full text-left px-4 py-2.5 rounded-lg border text-sm transition-colors flex items-center justify-between ${stateClasses}`}
-              >
-                <span>{option.text}</span>
-                {answered && isCorrectOption && <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0 ml-2" />}
-                {answered && isSelected && !isCorrectOption && <XCircle className="w-4 h-4 text-rose-500 shrink-0 ml-2" />}
-              </button>
-            );
-          })}
-        </div>
-        {answered && (
-          <div className={`p-3 rounded-lg text-xs leading-relaxed ${isCorrect ? 'bg-emerald-50 dark:bg-emerald-900/20 text-emerald-800 dark:text-emerald-300' : 'bg-rose-50 dark:bg-rose-900/20 text-rose-800 dark:text-rose-300'}`}>
-            <p className="font-semibold mb-1">{isCorrect ? 'Correto!' : 'Não foi dessa vez.'}</p>
-            <p>{practiceQuestion.explanation}</p>
-          </div>
-        )}
-      </div>
     );
   }
 
   return (
-    <div className="p-3 rounded-lg bg-indigo-50 dark:bg-indigo-900/20 text-indigo-800 dark:text-indigo-300 text-xs">
-      Responda no formato de prova: use uma questão discursiva de{' '}
-      <Link to="/treino-2a-fase" className="underline font-medium">Treino de 2ª Fase</Link> na mesma matéria, ou pratique múltipla escolha em{' '}
-      <Link to="/questoes" className="underline font-medium">Questões & Tentativas</Link>, seguindo o protocolo da sua banca-alvo em Estratégias de Resolução.
+    <div className="space-y-3">
+      <div className="p-4 rounded-xl bg-indigo-50 dark:bg-indigo-900/20 text-indigo-900 dark:text-indigo-200 text-sm leading-relaxed whitespace-pre-line">
+        {exerciseText}
+      </div>
+      <div>
+        <label htmlFor={`answer-${topic.id}-${supportLevel}`} className="text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-1.5 block">
+          Sua resposta
+        </label>
+        <textarea
+          id={`answer-${topic.id}-${supportLevel}`}
+          value={studentAnswer}
+          onChange={(e) => setStudentAnswer(e.target.value)}
+          rows={5}
+          placeholder="Escreva sua resposta ou raciocínio de verdade — é isso que a IA vai corrigir."
+          disabled={!!correction}
+          className="w-full px-3 py-2.5 rounded-xl border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-800 text-sm leading-relaxed focus:outline-none focus:ring-2 focus:ring-indigo-500 disabled:opacity-60"
+        />
+      </div>
+      {!correction ? (
+        <button
+          onClick={fetchCorrection}
+          disabled={loadingCorrection || !studentAnswer.trim()}
+          className="w-full flex items-center justify-center py-2.5 bg-indigo-600 hover:bg-indigo-700 disabled:bg-zinc-300 dark:disabled:bg-zinc-700 text-white rounded-xl font-medium text-sm transition-colors"
+        >
+          <Sparkles className={`w-4 h-4 mr-2 ${loadingCorrection ? 'animate-pulse' : ''}`} />
+          {loadingCorrection ? 'Corrigindo com IA...' : 'Corrigir com IA'}
+        </button>
+      ) : (
+        <div className="p-4 rounded-xl bg-emerald-50 dark:bg-emerald-900/20 text-emerald-900 dark:text-emerald-200 text-sm leading-relaxed whitespace-pre-line">
+          {correction}
+        </div>
+      )}
     </div>
   );
 }

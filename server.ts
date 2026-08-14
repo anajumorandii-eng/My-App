@@ -176,27 +176,61 @@ app.post('/api/ai/question-explanation', async (req, res) => {
   }
 });
 
-app.post('/api/ai/worked-example', async (req, res) => {
+const BACKLOG_EXERCISE_INSTRUCTIONS: Record<string, string> = {
+  explain_steps: 'Apresente um problema típico desse tópico já resolvido, com os passos numerados, mas SEM explicar o porquê de cada passo — apenas a operação/ação de cada um. Termine pedindo explicitamente ao aluno: "Explique, com suas palavras, por que cada passo abaixo é válido e qual princípio ele usa."',
+  fill_gap: 'Apresente um problema típico desse tópico com a resolução iniciada passo a passo, mas OMITA o último passo (ou um passo intermediário decisivo) da resolução. Termine com a pergunta direta: "Qual é o passo que falta aqui, e por quê?"',
+  solve: 'Crie uma questão nova e direta desse tópico, no nível de vestibular de Medicina de alta concorrência (Fuvest, Unicamp, Unesp, Famerp, Unifesp), pedindo para o aluno resolver sozinho, mostrando o raciocínio completo.',
+  solve_variant: 'Crie uma questão desse tópico diferente de uma questão-base típica — mude a representação (texto, gráfico descrito, tabela) ou combine com um subtópico próximo/relacionado — pedindo para o aluno resolver mostrando o raciocínio completo.',
+  discursive: 'Crie uma questão discursiva no formato de 2ª fase de vestibular (Fuvest, Unicamp, Unesp, Famerp ou Unifesp), com enunciado completo, podendo ter sub-itens (a, b, c), pedindo resposta discursiva completa.',
+};
+
+app.post('/api/ai/backlog-exercise', async (req, res) => {
   if (!ai) {
     return res.status(500).json({ error: 'Gemini API not configured.' });
   }
 
   try {
     const { topic, subject, mode } = req.body;
+    const instruction = BACKLOG_EXERCISE_INSTRUCTIONS[mode] ?? BACKLOG_EXERCISE_INSTRUCTIONS.solve;
 
     let prompt = `Você é o JUJU, um tutor especialista em vestibular de Medicina.\n`;
     prompt += `Tópico: ${topic} (${subject}).\n\n`;
+    prompt += `${instruction}\n\n`;
+    prompt += `Mostre apenas o exercício em si (enunciado e, quando aplicável, a resolução parcial e a pergunta final) — não dê a resposta completa nem revele o que foi omitido. `;
+    prompt += `Responda em português do Brasil, sem saudação.`;
 
-    if (mode === 'gapped') {
-      prompt += `Crie um exemplo resolvido de uma questão típica desse tópico, no nível de vestibular de Medicina de alta concorrência (Fuvest, Unicamp, Unesp, Famerp, Unifesp). `;
-      prompt += `Mostre o enunciado e a resolução passo a passo, mas OMITA o último passo (ou um passo intermediário decisivo), substituindo-o por uma pergunta direta ao aluno, do tipo "Qual seria o próximo passo aqui?". `;
-      prompt += `Depois, em uma nova linha, escreva exatamente a palavra "REVELAR:" sozinha, seguida da explicação completa do passo que foi omitido. `;
-      prompt += `Responda em português do Brasil, sem saudação.`;
+    const response = await ai.models.generateContent({
+      model: GEMINI_MODEL,
+      contents: prompt,
+      config: DEEP_THINKING_CONFIG,
+    });
+
+    res.json({ text: response.text });
+  } catch (error) {
+    console.error('AI Error:', error);
+    res.status(500).json({ error: 'Falha ao processar solicitação de IA' });
+  }
+});
+
+app.post('/api/ai/backlog-correction', async (req, res) => {
+  if (!ai) {
+    return res.status(500).json({ error: 'Gemini API not configured.' });
+  }
+
+  try {
+    const { topic, subject, exercise, studentAnswer, groundingAnswer } = req.body;
+
+    let prompt = `Você é o JUJU, um corretor especialista em vestibular de Medicina.\n`;
+    prompt += `Tópico: ${topic} (${subject}).\n\n`;
+    prompt += `Exercício proposto ao aluno:\n"${exercise}"\n\n`;
+    if (groundingAnswer) {
+      prompt += `Informação de referência sobre a resposta correta (use isso para embasar sua correção):\n${groundingAnswer}\n\n`;
     } else {
-      prompt += `Crie um exemplo resolvido completo e didático de uma questão típica desse tópico, no nível de vestibular de Medicina de alta concorrência (Fuvest, Unicamp, Unesp, Famerp, Unifesp). `;
-      prompt += `Mostre o enunciado, depois cada passo da resolução explicado — não só o cálculo ou a resposta, mas o porquê de cada passo — e a conclusão final. `;
-      prompt += `Responda em português do Brasil, em texto corrido bem estruturado, sem saudação.`;
+      prompt += `Primeiro, resolva mentalmente o exercício para determinar a resposta ou abordagem correta antes de corrigir.\n\n`;
     }
+    prompt += `Resposta do aluno:\n"${studentAnswer}"\n\n`;
+    prompt += `Avalie a resposta do aluno: aponte o que está correto, o que está faltando ou errado, e dê uma avaliação qualitativa clara ao final (Fraco, Mediano ou Forte). `;
+    prompt += `Seja específico e direto, como um corretor de banca faria. Responda em português do Brasil, sem saudação.`;
 
     const response = await ai.models.generateContent({
       model: GEMINI_MODEL,
