@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { NavLink, Outlet, useLocation } from 'react-router-dom';
+import { NavLink, Outlet, useLocation, useNavigate } from 'react-router-dom';
 import {
   Calendar,
   Map,
@@ -21,6 +21,7 @@ import {
   PenLine,
   ClipboardEdit,
   ListTodo,
+  Stethoscope,
   X,
   ArrowRight,
   Menu
@@ -31,6 +32,7 @@ export default function Layout() {
   const [showOnboarding, setShowOnboarding] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     setMobileMenuOpen(false);
@@ -49,6 +51,11 @@ export default function Layout() {
     localStorage.setItem('juju_onboarding', 'true');
   };
 
+  const startOnboardingDiagnostic = () => {
+    closeOnboarding();
+    navigate('/diagnostico');
+  };
+
   const toggleTheme = () => {
     setDarkMode(!darkMode);
     document.documentElement.classList.toggle('dark');
@@ -56,6 +63,7 @@ export default function Layout() {
 
   const navItems = [
     { name: 'Hoje', path: '/', icon: Calendar },
+    { name: 'Diagnóstico', path: '/diagnostico', icon: Stethoscope },
     { name: 'Plano', path: '/plano', icon: Map },
     { name: 'Recuperação de Atrasos', path: '/recuperacao', icon: ListTodo },
     { name: 'Sessão de Estudo', path: '/sessao', icon: PlayCircle },
@@ -196,8 +204,8 @@ export default function Layout() {
                 </div>
               </div>
 
-              <button 
-                onClick={closeOnboarding}
+              <button
+                onClick={startOnboardingDiagnostic}
                 className="w-full flex items-center justify-center py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-medium transition-colors"
               >
                 Iniciar Diagnóstico Adaptativo
