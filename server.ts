@@ -176,6 +176,41 @@ app.post('/api/ai/question-explanation', async (req, res) => {
   }
 });
 
+app.post('/api/ai/worked-example', async (req, res) => {
+  if (!ai) {
+    return res.status(500).json({ error: 'Gemini API not configured.' });
+  }
+
+  try {
+    const { topic, subject, mode } = req.body;
+
+    let prompt = `Você é o JUJU, um tutor especialista em vestibular de Medicina.\n`;
+    prompt += `Tópico: ${topic} (${subject}).\n\n`;
+
+    if (mode === 'gapped') {
+      prompt += `Crie um exemplo resolvido de uma questão típica desse tópico, no nível de vestibular de Medicina de alta concorrência (Fuvest, Unicamp, Unesp, Famerp, Unifesp). `;
+      prompt += `Mostre o enunciado e a resolução passo a passo, mas OMITA o último passo (ou um passo intermediário decisivo), substituindo-o por uma pergunta direta ao aluno, do tipo "Qual seria o próximo passo aqui?". `;
+      prompt += `Depois, em uma nova linha, escreva exatamente a palavra "REVELAR:" sozinha, seguida da explicação completa do passo que foi omitido. `;
+      prompt += `Responda em português do Brasil, sem saudação.`;
+    } else {
+      prompt += `Crie um exemplo resolvido completo e didático de uma questão típica desse tópico, no nível de vestibular de Medicina de alta concorrência (Fuvest, Unicamp, Unesp, Famerp, Unifesp). `;
+      prompt += `Mostre o enunciado, depois cada passo da resolução explicado — não só o cálculo ou a resposta, mas o porquê de cada passo — e a conclusão final. `;
+      prompt += `Responda em português do Brasil, em texto corrido bem estruturado, sem saudação.`;
+    }
+
+    const response = await ai.models.generateContent({
+      model: GEMINI_MODEL,
+      contents: prompt,
+      config: DEEP_THINKING_CONFIG,
+    });
+
+    res.json({ text: response.text });
+  } catch (error) {
+    console.error('AI Error:', error);
+    res.status(500).json({ error: 'Falha ao processar solicitação de IA' });
+  }
+});
+
 app.post('/api/ai/discursive-feedback', async (req, res) => {
   if (!ai) {
     return res.status(500).json({ error: 'Gemini API not configured.' });
