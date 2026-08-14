@@ -20,6 +20,7 @@ import {
   UserCircle,
   PenLine,
   ClipboardEdit,
+  ListTodo,
   X,
   ArrowRight,
   Menu
@@ -56,6 +57,7 @@ export default function Layout() {
   const navItems = [
     { name: 'Hoje', path: '/', icon: Calendar },
     { name: 'Plano', path: '/plano', icon: Map },
+    { name: 'Recuperação de Atrasos', path: '/recuperacao', icon: ListTodo },
     { name: 'Sessão de Estudo', path: '/sessao', icon: PlayCircle },
     { name: 'Questões & Tentativas', path: '/questoes', icon: HelpCircle },
     { name: 'Revisões Adaptativas', path: '/revisoes', icon: Repeat },

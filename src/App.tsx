@@ -24,6 +24,7 @@ import Conexoes from './views/Conexoes';
 import Perfil from './views/Perfil';
 import Redacao from './views/Redacao';
 import Treino2aFase from './views/Treino2aFase';
+import Recuperacao from './views/Recuperacao';
 
 export default function App() {
   return (
@@ -47,6 +48,7 @@ export default function App() {
             <Route path="perfil" element={<Perfil />} />
             <Route path="redacao" element={<Redacao />} />
             <Route path="treino-2a-fase" element={<Treino2aFase />} />
+            <Route path="recuperacao" element={<Recuperacao />} />
           </Route>
         </Routes>
       </BrowserRouter>

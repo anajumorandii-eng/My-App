@@ -1,7 +1,7 @@
 import { doc, getDoc, setDoc, collection, getDocs, query, orderBy } from 'firebase/firestore';
 import { db } from './firestore';
-import { TopicMastery, ErrorLog, UserProfile, DiscursiveAttempt } from '../types';
-import { mockMastery, mockProfile } from '../data/mockData';
+import { TopicMastery, ErrorLog, UserProfile, DiscursiveAttempt, BacklogItem } from '../types';
+import { mockMastery, mockProfile, mockBacklog } from '../data/mockData';
 
 export interface QuestionAttempt {
   id: string;
@@ -74,4 +74,19 @@ export async function getUserDiscursiveAttempts(uid: string): Promise<Discursive
 export async function addUserDiscursiveAttempt(uid: string, attempt: DiscursiveAttempt): Promise<void> {
   const ref = doc(db, 'users', uid, 'discursiveAttempts', attempt.id);
   await setDoc(ref, attempt);
+}
+
+export async function getUserBacklog(uid: string): Promise<BacklogItem[]> {
+  const ref = doc(db, 'users', uid, 'data', 'backlog');
+  const snap = await getDoc(ref);
+  if (snap.exists()) {
+    return (snap.data().items as BacklogItem[]) ?? [];
+  }
+  await setDoc(ref, { items: mockBacklog });
+  return mockBacklog;
+}
+
+export async function saveUserBacklog(uid: string, items: BacklogItem[]): Promise<void> {
+  const ref = doc(db, 'users', uid, 'data', 'backlog');
+  await setDoc(ref, { items });
 }
