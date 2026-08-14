@@ -14,6 +14,10 @@ const SUBJECT_COLORS: Record<string, string> = {
   Matemática: 'text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-900/20',
   Física: 'text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-900/20',
   Química: 'text-rose-600 dark:text-rose-400 bg-rose-50 dark:bg-rose-900/20',
+  Geografia: 'text-teal-600 dark:text-teal-400 bg-teal-50 dark:bg-teal-900/20',
+  História: 'text-orange-600 dark:text-orange-400 bg-orange-50 dark:bg-orange-900/20',
+  Português: 'text-violet-600 dark:text-violet-400 bg-violet-50 dark:bg-violet-900/20',
+  Inglês: 'text-sky-600 dark:text-sky-400 bg-sky-50 dark:bg-sky-900/20',
 };
 
 export default function Revisoes() {

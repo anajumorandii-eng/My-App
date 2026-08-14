@@ -41,6 +41,10 @@ const SUBJECT_COLORS: Record<string, string> = {
   Matemática: 'bg-indigo-500',
   Física: 'bg-amber-500',
   Química: 'bg-rose-500',
+  Geografia: 'bg-teal-500',
+  História: 'bg-orange-500',
+  Português: 'bg-violet-500',
+  Inglês: 'bg-sky-500',
 };
 
 function ScorePicker({
@@ -100,6 +104,7 @@ export default function Recuperacao() {
   const closedItems = backlog.filter((b) => b.closedAt);
   const backloggedTopicIds = new Set(backlog.map((b) => b.topicId));
   const availableTopics = mockTopics.filter((t) => !backloggedTopicIds.has(t.id));
+  const allSubjects = useMemo(() => [...new Set(mockTopics.map((t) => t.subject))], []);
   const topicById = (id: string) => mockTopics.find((t) => t.id === id);
 
   const grouped = useMemo(() => {
@@ -222,7 +227,7 @@ export default function Recuperacao() {
               className="w-full px-3 py-2.5 rounded-lg border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-800 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
             >
               <option value="">Selecione um tópico...</option>
-              {['Biologia', 'Matemática', 'Física', 'Química'].map((subject) => (
+              {allSubjects.map((subject) => (
                 <optgroup key={subject} label={subject}>
                   {availableTopics.filter((t) => t.subject === subject).map((t) => (
                     <option key={t.id} value={t.id}>{t.name}</option>
