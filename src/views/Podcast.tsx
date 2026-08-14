@@ -7,6 +7,10 @@ const SUBJECT_COLORS: Record<string, string> = {
   Matemática: 'bg-indigo-50 dark:bg-indigo-900/20 text-indigo-700 dark:text-indigo-300',
   Física: 'bg-amber-50 dark:bg-amber-900/20 text-amber-700 dark:text-amber-300',
   Química: 'bg-rose-50 dark:bg-rose-900/20 text-rose-700 dark:text-rose-300',
+  Geografia: 'bg-teal-50 dark:bg-teal-900/20 text-teal-700 dark:text-teal-300',
+  História: 'bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300',
+  Português: 'bg-violet-50 dark:bg-violet-900/20 text-violet-700 dark:text-violet-300',
+  Inglês: 'bg-sky-50 dark:bg-sky-900/20 text-sky-700 dark:text-sky-300',
 };
 
 const speechSupported = typeof window !== 'undefined' && 'speechSynthesis' in window;

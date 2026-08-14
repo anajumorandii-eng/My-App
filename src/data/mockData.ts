@@ -8,6 +8,8 @@ export const mockTopics: Topic[] = [
   { id: 'bio_04', name: 'Ecologia', subject: 'Biologia', prerequisites: [] },
   { id: 'bio_05', name: 'Evolução', subject: 'Biologia', prerequisites: ['bio_02'] },
   { id: 'bio_06', name: 'Microbiologia e Imunologia', subject: 'Biologia', prerequisites: ['bio_01'] },
+  { id: 'bio_07', name: 'Zoologia', subject: 'Biologia', prerequisites: [] },
+  { id: 'bio_08', name: 'Botânica', subject: 'Biologia', prerequisites: [] },
   // Matemática
   { id: 'mat_01', name: 'Funções de 1º Grau', subject: 'Matemática', prerequisites: [] },
   { id: 'mat_02', name: 'Análise Combinatória', subject: 'Matemática', prerequisites: [] },
@@ -15,6 +17,11 @@ export const mockTopics: Topic[] = [
   { id: 'mat_04', name: 'Geometria Plana', subject: 'Matemática', prerequisites: [] },
   { id: 'mat_05', name: 'Probabilidade', subject: 'Matemática', prerequisites: ['mat_02'] },
   { id: 'mat_06', name: 'Trigonometria', subject: 'Matemática', prerequisites: ['mat_04'] },
+  { id: 'mat_07', name: 'Progressões (PA e PG)', subject: 'Matemática', prerequisites: [] },
+  { id: 'mat_08', name: 'Funções Exponenciais e Logarítmicas', subject: 'Matemática', prerequisites: ['mat_01'] },
+  { id: 'mat_09', name: 'Geometria Espacial', subject: 'Matemática', prerequisites: ['mat_04'] },
+  { id: 'mat_10', name: 'Geometria Analítica', subject: 'Matemática', prerequisites: ['mat_04'] },
+  { id: 'mat_11', name: 'Estatística', subject: 'Matemática', prerequisites: [] },
   // Física
   { id: 'fis_01', name: 'Cinemática', subject: 'Física', prerequisites: ['mat_01'] },
   { id: 'fis_02', name: 'Eletrodinâmica', subject: 'Física', prerequisites: [] },
@@ -22,11 +29,38 @@ export const mockTopics: Topic[] = [
   { id: 'fis_04', name: 'Termologia', subject: 'Física', prerequisites: [] },
   { id: 'fis_05', name: 'Óptica', subject: 'Física', prerequisites: [] },
   { id: 'fis_06', name: 'Ondulatória', subject: 'Física', prerequisites: [] },
+  { id: 'fis_07', name: 'Trabalho e Energia', subject: 'Física', prerequisites: ['fis_03'] },
+  { id: 'fis_08', name: 'Eletromagnetismo', subject: 'Física', prerequisites: ['fis_02'] },
+  { id: 'fis_09', name: 'Estática e Hidrostática', subject: 'Física', prerequisites: ['fis_03'] },
   // Química
   { id: 'qui_01', name: 'Estequiometria', subject: 'Química', prerequisites: [] },
   { id: 'qui_02', name: 'Ligações Químicas', subject: 'Química', prerequisites: [] },
   { id: 'qui_03', name: 'Química Orgânica', subject: 'Química', prerequisites: ['qui_02'] },
-  { id: 'qui_04', name: 'Soluções e Concentração', subject: 'Química', prerequisites: ['qui_01'] }
+  { id: 'qui_04', name: 'Soluções e Concentração', subject: 'Química', prerequisites: ['qui_01'] },
+  { id: 'qui_05', name: 'Atomística', subject: 'Química', prerequisites: [] },
+  { id: 'qui_06', name: 'Físico-Química', subject: 'Química', prerequisites: ['qui_04'] },
+  // Geografia
+  { id: 'geo_01', name: 'Cartografia e Fundamentos', subject: 'Geografia', prerequisites: [] },
+  { id: 'geo_02', name: 'Climatologia e Dinâmica Ambiental', subject: 'Geografia', prerequisites: [] },
+  { id: 'geo_03', name: 'Geomorfologia e Recursos Hídricos', subject: 'Geografia', prerequisites: [] },
+  { id: 'geo_04', name: 'Geografia da População e Urbanização', subject: 'Geografia', prerequisites: [] },
+  { id: 'geo_05', name: 'Geografia Econômica e Industrial', subject: 'Geografia', prerequisites: [] },
+  { id: 'geo_06', name: 'Geopolítica Mundial', subject: 'Geografia', prerequisites: [] },
+  { id: 'geo_07', name: 'Geografia do Brasil: Território e Natureza', subject: 'Geografia', prerequisites: [] },
+  // História
+  { id: 'his_01', name: 'Antiguidade e Idade Média', subject: 'História', prerequisites: [] },
+  { id: 'his_02', name: 'Idade Moderna e Absolutismo', subject: 'História', prerequisites: ['his_01'] },
+  { id: 'his_03', name: 'Revoluções e Iluminismo', subject: 'História', prerequisites: ['his_02'] },
+  { id: 'his_04', name: 'Brasil Colônia', subject: 'História', prerequisites: [] },
+  { id: 'his_05', name: 'Brasil Império', subject: 'História', prerequisites: ['his_04'] },
+  { id: 'his_06', name: 'Brasil República', subject: 'História', prerequisites: ['his_05'] },
+  { id: 'his_07', name: 'Século XX: Guerras e Guerra Fria', subject: 'História', prerequisites: ['his_03'] },
+  // Português
+  { id: 'por_01', name: 'Gramática e Sintaxe', subject: 'Português', prerequisites: [] },
+  { id: 'por_02', name: 'Interpretação de Texto', subject: 'Português', prerequisites: [] },
+  { id: 'por_03', name: 'Literatura: Estilos de Época', subject: 'Português', prerequisites: [] },
+  // Inglês
+  { id: 'ing_01', name: 'Compreensão de Texto em Inglês', subject: 'Inglês', prerequisites: [] }
 ];
 
 export const mockMastery: TopicMastery[] = [
@@ -51,7 +85,37 @@ export const mockMastery: TopicMastery[] = [
   { topicId: 'qui_01', level: 30, uncertainty: 0.75, lastReviewed: new Date(Date.now() - 1 * 86400000).toISOString(), errorSignals: 3 },
   { topicId: 'qui_02', level: 55, uncertainty: 0.45, lastReviewed: new Date(Date.now() - 4 * 86400000).toISOString(), errorSignals: 1 },
   { topicId: 'qui_03', level: 20, uncertainty: 0.85, lastReviewed: new Date(Date.now() - 11 * 86400000).toISOString(), errorSignals: 2 },
-  { topicId: 'qui_04', level: 45, uncertainty: 0.5, lastReviewed: new Date(Date.now() - 7 * 86400000).toISOString(), errorSignals: 1 }
+  { topicId: 'qui_04', level: 45, uncertainty: 0.5, lastReviewed: new Date(Date.now() - 7 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'bio_07', level: 25, uncertainty: 0.8, lastReviewed: new Date(Date.now() - 16 * 86400000).toISOString(), errorSignals: 2 },
+  { topicId: 'bio_08', level: 20, uncertainty: 0.85, lastReviewed: new Date(Date.now() - 18 * 86400000).toISOString(), errorSignals: 2 },
+  { topicId: 'mat_07', level: 40, uncertainty: 0.6, lastReviewed: new Date(Date.now() - 8 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'mat_08', level: 15, uncertainty: 0.9, lastReviewed: new Date(Date.now() - 20 * 86400000).toISOString(), errorSignals: 3 },
+  { topicId: 'mat_09', level: 10, uncertainty: 0.9, lastReviewed: new Date(Date.now() - 22 * 86400000).toISOString(), errorSignals: 3 },
+  { topicId: 'mat_10', level: 15, uncertainty: 0.85, lastReviewed: new Date(Date.now() - 19 * 86400000).toISOString(), errorSignals: 2 },
+  { topicId: 'mat_11', level: 35, uncertainty: 0.65, lastReviewed: new Date(Date.now() - 12 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'fis_07', level: 30, uncertainty: 0.7, lastReviewed: new Date(Date.now() - 13 * 86400000).toISOString(), errorSignals: 2 },
+  { topicId: 'fis_08', level: 10, uncertainty: 0.9, lastReviewed: new Date(Date.now() - 21 * 86400000).toISOString(), errorSignals: 3 },
+  { topicId: 'fis_09', level: 20, uncertainty: 0.85, lastReviewed: new Date(Date.now() - 17 * 86400000).toISOString(), errorSignals: 2 },
+  { topicId: 'qui_05', level: 20, uncertainty: 0.85, lastReviewed: new Date(Date.now() - 15 * 86400000).toISOString(), errorSignals: 2 },
+  { topicId: 'qui_06', level: 15, uncertainty: 0.9, lastReviewed: new Date(Date.now() - 20 * 86400000).toISOString(), errorSignals: 3 },
+  { topicId: 'geo_01', level: 30, uncertainty: 0.75, lastReviewed: new Date(Date.now() - 25 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'geo_02', level: 25, uncertainty: 0.8, lastReviewed: new Date(Date.now() - 25 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'geo_03', level: 20, uncertainty: 0.8, lastReviewed: new Date(Date.now() - 25 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'geo_04', level: 20, uncertainty: 0.8, lastReviewed: new Date(Date.now() - 25 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'geo_05', level: 15, uncertainty: 0.85, lastReviewed: new Date(Date.now() - 25 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'geo_06', level: 25, uncertainty: 0.8, lastReviewed: new Date(Date.now() - 25 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'geo_07', level: 30, uncertainty: 0.75, lastReviewed: new Date(Date.now() - 25 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'his_01', level: 30, uncertainty: 0.75, lastReviewed: new Date(Date.now() - 25 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'his_02', level: 25, uncertainty: 0.8, lastReviewed: new Date(Date.now() - 25 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'his_03', level: 25, uncertainty: 0.8, lastReviewed: new Date(Date.now() - 25 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'his_04', level: 20, uncertainty: 0.8, lastReviewed: new Date(Date.now() - 25 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'his_05', level: 20, uncertainty: 0.8, lastReviewed: new Date(Date.now() - 25 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'his_06', level: 20, uncertainty: 0.8, lastReviewed: new Date(Date.now() - 25 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'his_07', level: 15, uncertainty: 0.85, lastReviewed: new Date(Date.now() - 25 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'por_01', level: 45, uncertainty: 0.55, lastReviewed: new Date(Date.now() - 10 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'por_02', level: 55, uncertainty: 0.45, lastReviewed: new Date(Date.now() - 9 * 86400000).toISOString(), errorSignals: 0 },
+  { topicId: 'por_03', level: 30, uncertainty: 0.7, lastReviewed: new Date(Date.now() - 14 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'ing_01', level: 60, uncertainty: 0.4, lastReviewed: new Date(Date.now() - 8 * 86400000).toISOString(), errorSignals: 0 }
 ];
 
 export const mockProfile: UserProfile = {
