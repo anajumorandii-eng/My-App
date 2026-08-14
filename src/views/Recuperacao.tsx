@@ -1,5 +1,6 @@
 import React, { useMemo, useState } from 'react';
-import { mockTopics } from '../data/mockData';
+import { Link } from 'react-router-dom';
+import { mockTopics, mockQuestions } from '../data/mockData';
 import { useUserBacklog } from '../hooks/useUserBacklog';
 import {
   priorityScore,
@@ -14,16 +15,19 @@ import {
   EXIT_CHECKLIST,
   BacklogQueue,
 } from '../lib/backlogEngine';
-import { BacklogItem } from '../types';
+import { BacklogItem, Topic } from '../types';
 import {
   ListTodo,
   Plus,
   ChevronDown,
   CloudOff,
   CheckCircle2,
+  XCircle,
   Trophy,
   Trash2,
   Info,
+  Sparkles,
+  Eye,
   X,
 } from 'lucide-react';
 
@@ -81,6 +85,142 @@ function ScorePicker({
           </button>
         ))}
       </div>
+    </div>
+  );
+}
+
+function SupportLevelContent({ topic, supportLevel }: { topic: Topic; supportLevel: number }) {
+  const [aiText, setAiText] = useState<string | null>(null);
+  const [gapRevealed, setGapRevealed] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [practiceSelected, setPracticeSelected] = useState<string | null>(null);
+
+  const practiceQuestions = useMemo(() => mockQuestions.filter((q) => q.topicId === topic.id), [topic.id]);
+  const practiceQuestion = practiceQuestions[supportLevel - 3];
+
+  const fetchExample = async (mode: 'full' | 'gapped') => {
+    setLoading(true);
+    try {
+      const res = await fetch('/api/ai/worked-example', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ topic: topic.name, subject: topic.subject, mode }),
+      });
+      if (res.ok) {
+        const data = await res.json();
+        setAiText(data.text);
+      }
+    } catch (error) {
+      console.error('Failed to fetch worked example:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  if (supportLevel === 1) {
+    return !aiText ? (
+      <button
+        onClick={() => fetchExample('full')}
+        disabled={loading}
+        className="w-full flex items-center justify-center py-2.5 border border-indigo-200 dark:border-indigo-800 text-indigo-600 dark:text-indigo-400 rounded-xl font-medium text-sm hover:bg-indigo-50 dark:hover:bg-indigo-900/20 disabled:opacity-50 transition-colors"
+      >
+        <Sparkles className={`w-4 h-4 mr-2 ${loading ? 'animate-pulse' : ''}`} />
+        {loading ? 'Gerando exemplo com IA...' : 'Gerar exemplo resolvido com IA'}
+      </button>
+    ) : (
+      <div className="p-4 rounded-xl bg-indigo-50 dark:bg-indigo-900/20 text-indigo-900 dark:text-indigo-200 text-sm leading-relaxed whitespace-pre-line">
+        {aiText}
+      </div>
+    );
+  }
+
+  if (supportLevel === 2) {
+    if (!aiText) {
+      return (
+        <button
+          onClick={() => fetchExample('gapped')}
+          disabled={loading}
+          className="w-full flex items-center justify-center py-2.5 border border-indigo-200 dark:border-indigo-800 text-indigo-600 dark:text-indigo-400 rounded-xl font-medium text-sm hover:bg-indigo-50 dark:hover:bg-indigo-900/20 disabled:opacity-50 transition-colors"
+        >
+          <Sparkles className={`w-4 h-4 mr-2 ${loading ? 'animate-pulse' : ''}`} />
+          {loading ? 'Gerando exemplo com IA...' : 'Gerar exemplo com lacuna'}
+        </button>
+      );
+    }
+    const [before, after] = aiText.split('REVELAR:');
+    return (
+      <div className="space-y-2">
+        <div className="p-4 rounded-xl bg-indigo-50 dark:bg-indigo-900/20 text-indigo-900 dark:text-indigo-200 text-sm leading-relaxed whitespace-pre-line">
+          {before.trim()}
+        </div>
+        {!gapRevealed ? (
+          <button
+            onClick={() => setGapRevealed(true)}
+            className="w-full flex items-center justify-center py-2 border border-zinc-200 dark:border-zinc-700 rounded-xl text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-colors text-sm"
+          >
+            <Eye className="w-3.5 h-3.5 mr-2" />
+            Tentei — revelar o passo que faltou
+          </button>
+        ) : (
+          <div className="p-4 rounded-xl bg-emerald-50 dark:bg-emerald-900/20 text-emerald-900 dark:text-emerald-200 text-sm leading-relaxed whitespace-pre-line">
+            {(after ?? '').trim()}
+          </div>
+        )}
+      </div>
+    );
+  }
+
+  if (supportLevel === 3 || supportLevel === 4) {
+    if (!practiceQuestion) {
+      return (
+        <div className="p-3 rounded-lg bg-amber-50 dark:bg-amber-900/20 text-amber-800 dark:text-amber-300 text-xs">
+          Ainda não há questão cadastrada para esse tópico. Pratique em{' '}
+          <Link to="/questoes" className="underline font-medium">Questões & Tentativas</Link> ou{' '}
+          <Link to="/treino-2a-fase" className="underline font-medium">Treino de 2ª Fase</Link>.
+        </div>
+      );
+    }
+    const answered = practiceSelected !== null;
+    const isCorrect = answered && practiceSelected === practiceQuestion.correctOptionId;
+    return (
+      <div className="space-y-3">
+        <p className="text-sm font-medium leading-relaxed">{practiceQuestion.prompt}</p>
+        <div className="space-y-2">
+          {practiceQuestion.options.map((option) => {
+            const isSelected = practiceSelected === option.id;
+            const isCorrectOption = option.id === practiceQuestion.correctOptionId;
+            let stateClasses = 'border-zinc-200 dark:border-zinc-700 hover:bg-zinc-50 dark:hover:bg-zinc-800';
+            if (answered && isCorrectOption) stateClasses = 'border-emerald-500 bg-emerald-50 dark:bg-emerald-900/20';
+            else if (answered && isSelected && !isCorrectOption) stateClasses = 'border-rose-500 bg-rose-50 dark:bg-rose-900/20';
+            return (
+              <button
+                key={option.id}
+                onClick={() => !answered && setPracticeSelected(option.id)}
+                disabled={answered}
+                className={`w-full text-left px-4 py-2.5 rounded-lg border text-sm transition-colors flex items-center justify-between ${stateClasses}`}
+              >
+                <span>{option.text}</span>
+                {answered && isCorrectOption && <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0 ml-2" />}
+                {answered && isSelected && !isCorrectOption && <XCircle className="w-4 h-4 text-rose-500 shrink-0 ml-2" />}
+              </button>
+            );
+          })}
+        </div>
+        {answered && (
+          <div className={`p-3 rounded-lg text-xs leading-relaxed ${isCorrect ? 'bg-emerald-50 dark:bg-emerald-900/20 text-emerald-800 dark:text-emerald-300' : 'bg-rose-50 dark:bg-rose-900/20 text-rose-800 dark:text-rose-300'}`}>
+            <p className="font-semibold mb-1">{isCorrect ? 'Correto!' : 'Não foi dessa vez.'}</p>
+            <p>{practiceQuestion.explanation}</p>
+          </div>
+        )}
+      </div>
+    );
+  }
+
+  return (
+    <div className="p-3 rounded-lg bg-indigo-50 dark:bg-indigo-900/20 text-indigo-800 dark:text-indigo-300 text-xs">
+      Responda no formato de prova: use uma questão discursiva de{' '}
+      <Link to="/treino-2a-fase" className="underline font-medium">Treino de 2ª Fase</Link> na mesma matéria, ou pratique múltipla escolha em{' '}
+      <Link to="/questoes" className="underline font-medium">Questões & Tentativas</Link>, seguindo o protocolo da sua banca-alvo em Estratégias de Resolução.
     </div>
   );
 }
@@ -369,11 +509,12 @@ export default function Recuperacao() {
 
                           <div>
                             <p className="text-sm font-semibold text-zinc-700 dark:text-zinc-300 mb-2">Retirada de apoio — nível {supportLevel}/5</p>
-                            <div className="p-3 rounded-lg bg-indigo-50 dark:bg-indigo-900/20 text-indigo-800 dark:text-indigo-300 text-sm mb-2">
+                            <div className="p-3 rounded-lg bg-indigo-50 dark:bg-indigo-900/20 text-indigo-800 dark:text-indigo-300 text-sm mb-3">
                               <p className="font-medium">{currentSupport.activity}</p>
                               <p className="text-xs mt-1">Pronta para avançar quando: {currentSupport.readyToAdvance}</p>
                             </div>
-                            <div className="flex gap-2">
+                            <SupportLevelContent key={`${item.id}_${supportLevel}`} topic={topic} supportLevel={supportLevel} />
+                            <div className="flex gap-2 mt-3">
                               <button
                                 onClick={() => patchItem(item.id, { supportLevel: Math.max(1, supportLevel - 1) })}
                                 disabled={supportLevel <= 1}
