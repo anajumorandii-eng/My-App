@@ -1,4 +1,4 @@
-import { Topic, TopicMastery, UserProfile, ErrorLog, Question, PodcastEpisode, StudyMethod } from '../types';
+import { Topic, TopicMastery, UserProfile, ErrorLog, Question, PodcastEpisode, StudyMethod, BacklogItem } from '../types';
 
 export const mockTopics: Topic[] = [
   // Biologia
@@ -1185,4 +1185,33 @@ export const mockStudyMethods: StudyMethod[] = [
     ],
     bestFor: ['Biologia e Química conceituais', 'Conexões interdisciplinares']
   }
+];
+
+export const mockBacklog: BacklogItem[] = [
+  {
+    id: 'backlog_qui_03',
+    topicId: 'qui_03',
+    state: 1,
+    dependencia: 2,
+    incidencia: 3,
+    lacuna: 3,
+    urgencia: 2,
+    custo: 2,
+    independentSuccesses: 0,
+    canExplainTypicalError: false,
+    dateAdded: new Date(Date.now() - 5 * 86400000).toISOString(),
+  },
+  {
+    id: 'backlog_mat_06',
+    topicId: 'mat_06',
+    state: 2,
+    dependencia: 1,
+    incidencia: 2,
+    lacuna: 2,
+    urgencia: 1,
+    custo: 2,
+    independentSuccesses: 1,
+    canExplainTypicalError: false,
+    dateAdded: new Date(Date.now() - 12 * 86400000).toISOString(),
+  },
 ];
