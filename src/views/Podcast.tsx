@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { mockPodcastEpisodes, mockTopics } from '../data/mockData';
+import { parseAiErrorMessage, AI_NETWORK_ERROR_MESSAGE } from '../lib/aiError';
 import { Headphones, Play, Square, Volume2, Sparkles } from 'lucide-react';
 
 const SUBJECT_COLORS: Record<string, string> = {
@@ -19,6 +20,7 @@ export default function Podcast() {
   const [playingId, setPlayingId] = useState<string | null>(null);
   const [aiScripts, setAiScripts] = useState<Record<string, string>>({});
   const [generatingId, setGeneratingId] = useState<string | null>(null);
+  const [scriptErrors, setScriptErrors] = useState<Record<string, string>>({});
 
   useEffect(() => {
     return () => {
@@ -50,6 +52,7 @@ export default function Podcast() {
   const generateScript = async (episodeId: string, title: string, subject: string, topicId: string) => {
     const topicName = mockTopics.find((t) => t.id === topicId)?.name ?? subject;
     setGeneratingId(episodeId);
+    setScriptErrors((prev) => ({ ...prev, [episodeId]: '' }));
     try {
       const res = await fetch('/api/ai/podcast-script', {
         method: 'POST',
@@ -59,9 +62,13 @@ export default function Podcast() {
       if (res.ok) {
         const data = await res.json();
         setAiScripts((prev) => ({ ...prev, [episodeId]: data.text }));
+      } else {
+        const message = await parseAiErrorMessage(res);
+        setScriptErrors((prev) => ({ ...prev, [episodeId]: message }));
       }
     } catch (error) {
       console.error('Failed to generate podcast script:', error);
+      setScriptErrors((prev) => ({ ...prev, [episodeId]: AI_NETWORK_ERROR_MESSAGE }));
     } finally {
       setGeneratingId(null);
     }
@@ -141,6 +148,9 @@ export default function Podcast() {
                   {isGenerating ? 'Gerando...' : aiScript ? 'Gerar novo' : 'Gerar com IA'}
                 </button>
               </div>
+              {scriptErrors[episode.id] && (
+                <p className="text-xs text-rose-500 mt-2 text-right">{scriptErrors[episode.id]}</p>
+              )}
             </div>
           );
         })}

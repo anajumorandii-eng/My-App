@@ -1,6 +1,7 @@
 import React, { useMemo, useState } from 'react';
 import { mockTopics, mockQuestions } from '../data/mockData';
 import { useUserBacklog } from '../hooks/useUserBacklog';
+import { parseAiErrorMessage, AI_NETWORK_ERROR_MESSAGE } from '../lib/aiError';
 import {
   priorityScore,
   priorityQueue,
@@ -97,9 +98,11 @@ const EXERCISE_MODE_BY_LEVEL: Record<number, string> = {
 function SupportLevelContent({ topic, supportLevel }: { topic: Topic; supportLevel: number }) {
   const [aiExerciseText, setAiExerciseText] = useState<string | null>(null);
   const [loadingExercise, setLoadingExercise] = useState(false);
+  const [exerciseError, setExerciseError] = useState<string | null>(null);
   const [studentAnswer, setStudentAnswer] = useState('');
   const [correction, setCorrection] = useState<string | null>(null);
   const [loadingCorrection, setLoadingCorrection] = useState(false);
+  const [correctionError, setCorrectionError] = useState<string | null>(null);
 
   const realQuestion = useMemo(() => {
     if (supportLevel !== 3 && supportLevel !== 4) return undefined;
@@ -116,6 +119,7 @@ function SupportLevelContent({ topic, supportLevel }: { topic: Topic; supportLev
 
   const fetchExercise = async () => {
     setLoadingExercise(true);
+    setExerciseError(null);
     try {
       const res = await fetch('/api/ai/backlog-exercise', {
         method: 'POST',
@@ -125,9 +129,12 @@ function SupportLevelContent({ topic, supportLevel }: { topic: Topic; supportLev
       if (res.ok) {
         const data = await res.json();
         setAiExerciseText(data.text);
+      } else {
+        setExerciseError(await parseAiErrorMessage(res));
       }
     } catch (error) {
       console.error('Failed to fetch backlog exercise:', error);
+      setExerciseError(AI_NETWORK_ERROR_MESSAGE);
     } finally {
       setLoadingExercise(false);
     }
@@ -136,6 +143,7 @@ function SupportLevelContent({ topic, supportLevel }: { topic: Topic; supportLev
   const fetchCorrection = async () => {
     if (!exerciseText || !studentAnswer.trim()) return;
     setLoadingCorrection(true);
+    setCorrectionError(null);
     try {
       const res = await fetch('/api/ai/backlog-correction', {
         method: 'POST',
@@ -151,9 +159,12 @@ function SupportLevelContent({ topic, supportLevel }: { topic: Topic; supportLev
       if (res.ok) {
         const data = await res.json();
         setCorrection(data.text);
+      } else {
+        setCorrectionError(await parseAiErrorMessage(res));
       }
     } catch (error) {
       console.error('Failed to fetch backlog correction:', error);
+      setCorrectionError(AI_NETWORK_ERROR_MESSAGE);
     } finally {
       setLoadingCorrection(false);
     }
@@ -161,14 +172,17 @@ function SupportLevelContent({ topic, supportLevel }: { topic: Topic; supportLev
 
   if (!exerciseText) {
     return (
-      <button
-        onClick={fetchExercise}
-        disabled={loadingExercise}
-        className="w-full flex items-center justify-center py-2.5 border border-indigo-200 dark:border-indigo-800 text-indigo-600 dark:text-indigo-400 rounded-xl font-medium text-sm hover:bg-indigo-50 dark:hover:bg-indigo-900/20 disabled:opacity-50 transition-colors"
-      >
-        <Sparkles className={`w-4 h-4 mr-2 ${loadingExercise ? 'animate-pulse' : ''}`} />
-        {loadingExercise ? 'Gerando exercício com IA...' : 'Gerar exercício com IA'}
-      </button>
+      <div>
+        <button
+          onClick={fetchExercise}
+          disabled={loadingExercise}
+          className="w-full flex items-center justify-center py-2.5 border border-indigo-200 dark:border-indigo-800 text-indigo-600 dark:text-indigo-400 rounded-xl font-medium text-sm hover:bg-indigo-50 dark:hover:bg-indigo-900/20 disabled:opacity-50 transition-colors"
+        >
+          <Sparkles className={`w-4 h-4 mr-2 ${loadingExercise ? 'animate-pulse' : ''}`} />
+          {loadingExercise ? 'Gerando exercício com IA...' : 'Gerar exercício com IA'}
+        </button>
+        {exerciseError && <p className="text-xs text-rose-500 mt-2">{exerciseError}</p>}
+      </div>
     );
   }
 
@@ -192,14 +206,17 @@ function SupportLevelContent({ topic, supportLevel }: { topic: Topic; supportLev
         />
       </div>
       {!correction ? (
-        <button
-          onClick={fetchCorrection}
-          disabled={loadingCorrection || !studentAnswer.trim()}
-          className="w-full flex items-center justify-center py-2.5 bg-indigo-600 hover:bg-indigo-700 disabled:bg-zinc-300 dark:disabled:bg-zinc-700 text-white rounded-xl font-medium text-sm transition-colors"
-        >
-          <Sparkles className={`w-4 h-4 mr-2 ${loadingCorrection ? 'animate-pulse' : ''}`} />
-          {loadingCorrection ? 'Corrigindo com IA...' : 'Corrigir com IA'}
-        </button>
+        <div>
+          <button
+            onClick={fetchCorrection}
+            disabled={loadingCorrection || !studentAnswer.trim()}
+            className="w-full flex items-center justify-center py-2.5 bg-indigo-600 hover:bg-indigo-700 disabled:bg-zinc-300 dark:disabled:bg-zinc-700 text-white rounded-xl font-medium text-sm transition-colors"
+          >
+            <Sparkles className={`w-4 h-4 mr-2 ${loadingCorrection ? 'animate-pulse' : ''}`} />
+            {loadingCorrection ? 'Corrigindo com IA...' : 'Corrigir com IA'}
+          </button>
+          {correctionError && <p className="text-xs text-rose-500 mt-2">{correctionError}</p>}
+        </div>
       ) : (
         <div className="p-4 rounded-xl bg-emerald-50 dark:bg-emerald-900/20 text-emerald-900 dark:text-emerald-200 text-sm leading-relaxed whitespace-pre-line">
           {correction}

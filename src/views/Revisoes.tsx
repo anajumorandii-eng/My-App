@@ -2,6 +2,7 @@ import React, { useMemo, useState } from 'react';
 import { mockTopics } from '../data/mockData';
 import { TopicMastery } from '../types';
 import { useUserMastery } from '../hooks/useUserMastery';
+import { parseAiErrorMessage, AI_NETWORK_ERROR_MESSAGE } from '../lib/aiError';
 import { Repeat, CheckCircle2, AlertTriangle, CloudOff, Sparkles } from 'lucide-react';
 
 function urgencyOf(mastery: TopicMastery): number {
@@ -24,6 +25,7 @@ export default function Revisoes() {
   const { mastery: masteryState, updateMastery, isPersisted, syncError } = useUserMastery();
   const [tips, setTips] = useState<Record<string, string>>({});
   const [loadingTipFor, setLoadingTipFor] = useState<string | null>(null);
+  const [tipErrors, setTipErrors] = useState<Record<string, string>>({});
 
   const queue = useMemo(() => {
     return masteryState
@@ -49,6 +51,7 @@ export default function Revisoes() {
 
   const fetchTip = async (mastery: TopicMastery, topicName: string, subject: string) => {
     setLoadingTipFor(mastery.topicId);
+    setTipErrors((prev) => ({ ...prev, [mastery.topicId]: '' }));
     try {
       const daysSinceReview = Math.round((Date.now() - new Date(mastery.lastReviewed).getTime()) / 86400000);
       const res = await fetch('/api/ai/review-tip', {
@@ -59,9 +62,13 @@ export default function Revisoes() {
       if (res.ok) {
         const data = await res.json();
         setTips((prev) => ({ ...prev, [mastery.topicId]: data.text }));
+      } else {
+        const message = await parseAiErrorMessage(res);
+        setTipErrors((prev) => ({ ...prev, [mastery.topicId]: message }));
       }
     } catch (error) {
       console.error('Failed to fetch review tip:', error);
+      setTipErrors((prev) => ({ ...prev, [mastery.topicId]: AI_NETWORK_ERROR_MESSAGE }));
     } finally {
       setLoadingTipFor(null);
     }
@@ -140,14 +147,19 @@ export default function Revisoes() {
               </div>
 
               {!tip && (
-                <button
-                  onClick={() => fetchTip(mastery, topic!.name, topic!.subject)}
-                  disabled={isLoadingTip}
-                  className="mt-4 flex items-center px-3 py-1.5 text-xs font-medium text-indigo-600 dark:text-indigo-400 border border-indigo-200 dark:border-indigo-800 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-900/20 disabled:opacity-50 transition-colors"
-                >
-                  <Sparkles className={`w-3.5 h-3.5 mr-1.5 ${isLoadingTip ? 'animate-pulse' : ''}`} />
-                  {isLoadingTip ? 'Gerando dica...' : 'Dica rápida com IA'}
-                </button>
+                <>
+                  <button
+                    onClick={() => fetchTip(mastery, topic!.name, topic!.subject)}
+                    disabled={isLoadingTip}
+                    className="mt-4 flex items-center px-3 py-1.5 text-xs font-medium text-indigo-600 dark:text-indigo-400 border border-indigo-200 dark:border-indigo-800 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-900/20 disabled:opacity-50 transition-colors"
+                  >
+                    <Sparkles className={`w-3.5 h-3.5 mr-1.5 ${isLoadingTip ? 'animate-pulse' : ''}`} />
+                    {isLoadingTip ? 'Gerando dica...' : 'Dica rápida com IA'}
+                  </button>
+                  {tipErrors[mastery.topicId] && (
+                    <p className="text-xs text-rose-500 mt-1.5">{tipErrors[mastery.topicId]}</p>
+                  )}
+                </>
               )}
 
               {tip && (

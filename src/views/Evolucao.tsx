@@ -16,6 +16,7 @@ import {
 } from 'recharts';
 import { mockTopics } from '../data/mockData';
 import { useUserMastery } from '../hooks/useUserMastery';
+import { parseAiErrorMessage, AI_NETWORK_ERROR_MESSAGE } from '../lib/aiError';
 import { TrendingUp, Trophy, AlertCircle, Gauge, CloudOff, Sparkles } from 'lucide-react';
 
 const SUBJECT_HEX: Record<string, string> = {
@@ -44,6 +45,7 @@ export default function Evolucao() {
   const { mastery: masteryData, isPersisted } = useUserMastery();
   const [insight, setInsight] = useState<string | null>(null);
   const [loadingInsight, setLoadingInsight] = useState(false);
+  const [insightError, setInsightError] = useState<string | null>(null);
 
   const topicRows = useMemo(
     () =>
@@ -75,6 +77,7 @@ export default function Evolucao() {
 
   const fetchInsight = async () => {
     setLoadingInsight(true);
+    setInsightError(null);
     try {
       const res = await fetch('/api/ai/progress-insight', {
         method: 'POST',
@@ -89,9 +92,12 @@ export default function Evolucao() {
       if (res.ok) {
         const data = await res.json();
         setInsight(data.text);
+      } else {
+        setInsightError(await parseAiErrorMessage(res));
       }
     } catch (error) {
       console.error('Failed to fetch progress insight:', error);
+      setInsightError(AI_NETWORK_ERROR_MESSAGE);
     } finally {
       setLoadingInsight(false);
     }
@@ -137,6 +143,7 @@ export default function Evolucao() {
             Peça uma análise personalizada do seu progresso e das suas prioridades para os próximos dias.
           </p>
         )}
+        {insightError && <p className="text-xs text-rose-500 mt-2">{insightError}</p>}
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">

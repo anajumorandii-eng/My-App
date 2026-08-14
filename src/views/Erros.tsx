@@ -3,7 +3,8 @@ import { mockErrorLogs, mockTopics } from '../data/mockData';
 import { ErrorLog } from '../types';
 import { useAuth } from '../context/AuthContext';
 import { getUserErrorLogs, addUserErrorLog } from '../lib/userData';
-import { BookX, Plus, Sparkles, CloudOff } from 'lucide-react';
+import { parseAiErrorMessage, AI_NETWORK_ERROR_MESSAGE } from '../lib/aiError';
+import { BookX, Plus, Sparkles, CloudOff, AlertTriangle } from 'lucide-react';
 
 const TYPE_LABELS: Record<ErrorLog['type'], string> = {
   conceptual: 'Conceitual',
@@ -23,6 +24,7 @@ export default function Erros() {
   const [form, setForm] = useState({ topicId: mockTopics[0].id, type: 'conceptual' as ErrorLog['type'], notes: '' });
   const [syncError, setSyncError] = useState<string | null>(null);
   const [generatingHypothesisFor, setGeneratingHypothesisFor] = useState<string | null>(null);
+  const [hypothesisErrors, setHypothesisErrors] = useState<Record<string, string>>({});
 
   useEffect(() => {
     if (!user) {
@@ -100,9 +102,13 @@ export default function Erros() {
             console.error('Failed to save AI hypothesis:', error);
           });
         }
+      } else {
+        const message = await parseAiErrorMessage(res);
+        setHypothesisErrors((prev) => ({ ...prev, [newLog.id]: message }));
       }
     } catch (error) {
       console.error('Failed to generate AI hypothesis:', error);
+      setHypothesisErrors((prev) => ({ ...prev, [newLog.id]: AI_NETWORK_ERROR_MESSAGE }));
     } finally {
       setGeneratingHypothesisFor(null);
     }
@@ -237,6 +243,12 @@ export default function Erros() {
                 <div className="flex items-center p-3 rounded-lg bg-zinc-50 dark:bg-zinc-800/50 text-zinc-500 text-sm">
                   <Sparkles className="w-4 h-4 mr-2 shrink-0 animate-pulse" />
                   Gerando hipótese com IA...
+                </div>
+              )}
+              {!log.aiHypothesis && generatingHypothesisFor !== log.id && hypothesisErrors[log.id] && (
+                <div className="flex items-start p-3 rounded-lg bg-amber-50 dark:bg-amber-900/20 text-amber-800 dark:text-amber-300 text-xs">
+                  <AlertTriangle className="w-3.5 h-3.5 mr-2 mt-0.5 shrink-0" />
+                  <p>{hypothesisErrors[log.id]}</p>
                 </div>
               )}
             </div>

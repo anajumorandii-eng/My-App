@@ -3,6 +3,7 @@ import { mockQuestions } from '../data/mockData';
 import { useAuth } from '../context/AuthContext';
 import { useUserMastery } from '../hooks/useUserMastery';
 import { addUserAttempt } from '../lib/userData';
+import { parseAiErrorMessage, AI_NETWORK_ERROR_MESSAGE } from '../lib/aiError';
 import { TopicMastery } from '../types';
 import { HelpCircle, CheckCircle2, XCircle, RotateCcw, CloudOff, Sparkles, BadgeCheck, ExternalLink } from 'lucide-react';
 
@@ -17,6 +18,7 @@ export default function Questoes() {
   const [history, setHistory] = useState<{ questionId: string; correct: boolean }[]>([]);
   const [deepExplanation, setDeepExplanation] = useState<string | null>(null);
   const [loadingDeepExplanation, setLoadingDeepExplanation] = useState(false);
+  const [deepExplanationError, setDeepExplanationError] = useState<string | null>(null);
 
   const pool = useMemo(() => {
     let result = subjectFilter === 'Todas' ? mockQuestions : mockQuestions.filter((q) => q.subject === subjectFilter);
@@ -34,6 +36,7 @@ export default function Questoes() {
     setIndex(0);
     setSelectedOptionId(null);
     setDeepExplanation(null);
+    setDeepExplanationError(null);
   };
 
   const toggleRealExams = () => {
@@ -41,6 +44,7 @@ export default function Questoes() {
     setIndex(0);
     setSelectedOptionId(null);
     setDeepExplanation(null);
+    setDeepExplanationError(null);
   };
 
   const selectOption = (optionId: string) => {
@@ -78,6 +82,7 @@ export default function Questoes() {
     setIndex((i) => i + 1);
     setSelectedOptionId(null);
     setDeepExplanation(null);
+    setDeepExplanationError(null);
   };
 
   const resetSession = () => {
@@ -85,11 +90,13 @@ export default function Questoes() {
     setSelectedOptionId(null);
     setHistory([]);
     setDeepExplanation(null);
+    setDeepExplanationError(null);
   };
 
   const fetchDeepExplanation = async () => {
     if (!selectedOptionId || !question) return;
     setLoadingDeepExplanation(true);
+    setDeepExplanationError(null);
     try {
       const selectedOption = question.options.find((o) => o.id === selectedOptionId);
       const correctOption = question.options.find((o) => o.id === question.correctOptionId);
@@ -108,9 +115,12 @@ export default function Questoes() {
       if (res.ok) {
         const data = await res.json();
         setDeepExplanation(data.text);
+      } else {
+        setDeepExplanationError(await parseAiErrorMessage(res));
       }
     } catch (error) {
       console.error('Failed to fetch deep explanation:', error);
+      setDeepExplanationError(AI_NETWORK_ERROR_MESSAGE);
     } finally {
       setLoadingDeepExplanation(false);
     }
@@ -240,14 +250,17 @@ export default function Questoes() {
         )}
 
         {answered && !deepExplanation && (
-          <button
-            onClick={fetchDeepExplanation}
-            disabled={loadingDeepExplanation}
-            className="w-full flex items-center justify-center py-2.5 mb-6 border border-indigo-200 dark:border-indigo-800 text-indigo-600 dark:text-indigo-400 rounded-xl font-medium text-sm hover:bg-indigo-50 dark:hover:bg-indigo-900/20 disabled:opacity-50 transition-colors"
-          >
-            <Sparkles className={`w-4 h-4 mr-2 ${loadingDeepExplanation ? 'animate-pulse' : ''}`} />
-            {loadingDeepExplanation ? 'Gerando explicação com IA...' : 'Aprofundar explicação com IA'}
-          </button>
+          <div className="mb-6">
+            <button
+              onClick={fetchDeepExplanation}
+              disabled={loadingDeepExplanation}
+              className="w-full flex items-center justify-center py-2.5 border border-indigo-200 dark:border-indigo-800 text-indigo-600 dark:text-indigo-400 rounded-xl font-medium text-sm hover:bg-indigo-50 dark:hover:bg-indigo-900/20 disabled:opacity-50 transition-colors"
+            >
+              <Sparkles className={`w-4 h-4 mr-2 ${loadingDeepExplanation ? 'animate-pulse' : ''}`} />
+              {loadingDeepExplanation ? 'Gerando explicação com IA...' : 'Aprofundar explicação com IA'}
+            </button>
+            {deepExplanationError && <p className="text-xs text-rose-500 mt-2">{deepExplanationError}</p>}
+          </div>
         )}
 
         {deepExplanation && (

@@ -57,11 +57,11 @@ export default function Tutor() {
       });
 
       const data = await res.json();
-      
+
       setMessages(prev => [...prev, {
         id: Date.now().toString(),
         sender: 'ai',
-        text: data.text || 'Ocorreu um erro ao processar a resposta.'
+        text: data.text || data.error || 'Ocorreu um erro ao processar a resposta.'
       }]);
     } catch (e) {
       setMessages(prev => [...prev, {

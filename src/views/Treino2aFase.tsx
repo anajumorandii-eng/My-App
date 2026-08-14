@@ -2,6 +2,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { discursiveQuestions, boardExamStructure } from '../data/discursiveQuestions';
 import { secondPhaseProtocols } from '../data/resolutionStrategies';
 import { useDiscursiveAttempts } from '../hooks/useDiscursiveAttempts';
+import { parseAiErrorMessage, AI_NETWORK_ERROR_MESSAGE } from '../lib/aiError';
 import { DiscursiveQuestion } from '../types';
 import {
   ClipboardEdit,
@@ -67,6 +68,7 @@ export default function Treino2aFase() {
   const [savedFlash, setSavedFlash] = useState(false);
   const [aiFeedback, setAiFeedback] = useState<string | null>(null);
   const [loadingFeedback, setLoadingFeedback] = useState(false);
+  const [feedbackError, setFeedbackError] = useState<string | null>(null);
 
   const [secondsLeft, setSecondsLeft] = useState((question?.suggestedMinutes ?? 15) * 60);
   const [isRunning, setIsRunning] = useState(false);
@@ -77,6 +79,7 @@ export default function Treino2aFase() {
     setShowProtocol(false);
     setRating(null);
     setAiFeedback(null);
+    setFeedbackError(null);
     setIsRunning(false);
     setSecondsLeft((question?.suggestedMinutes ?? 15) * 60);
   }, [question?.id]);
@@ -114,6 +117,7 @@ export default function Treino2aFase() {
   const fetchAiFeedback = async () => {
     if (!question || !answer.trim()) return;
     setLoadingFeedback(true);
+    setFeedbackError(null);
     try {
       const res = await fetch('/api/ai/discursive-feedback', {
         method: 'POST',
@@ -129,9 +133,12 @@ export default function Treino2aFase() {
       if (res.ok) {
         const data = await res.json();
         setAiFeedback(data.text);
+      } else {
+        setFeedbackError(await parseAiErrorMessage(res));
       }
     } catch (error) {
       console.error('Failed to fetch AI feedback:', error);
+      setFeedbackError(AI_NETWORK_ERROR_MESSAGE);
     } finally {
       setLoadingFeedback(false);
     }
@@ -333,14 +340,17 @@ export default function Treino2aFase() {
               </div>
 
               {!aiFeedback && (
-                <button
-                  onClick={fetchAiFeedback}
-                  disabled={loadingFeedback || !answer.trim()}
-                  className="w-full flex items-center justify-center py-2.5 border border-indigo-200 dark:border-indigo-800 text-indigo-600 dark:text-indigo-400 rounded-xl font-medium text-sm hover:bg-indigo-50 dark:hover:bg-indigo-900/20 disabled:opacity-50 transition-colors"
-                >
-                  <Sparkles className={`w-4 h-4 mr-2 ${loadingFeedback ? 'animate-pulse' : ''}`} />
-                  {loadingFeedback ? 'Corrigindo com IA...' : answer.trim() ? 'Corrigir minha resposta com IA' : 'Escreva sua resposta para pedir correção com IA'}
-                </button>
+                <div>
+                  <button
+                    onClick={fetchAiFeedback}
+                    disabled={loadingFeedback || !answer.trim()}
+                    className="w-full flex items-center justify-center py-2.5 border border-indigo-200 dark:border-indigo-800 text-indigo-600 dark:text-indigo-400 rounded-xl font-medium text-sm hover:bg-indigo-50 dark:hover:bg-indigo-900/20 disabled:opacity-50 transition-colors"
+                  >
+                    <Sparkles className={`w-4 h-4 mr-2 ${loadingFeedback ? 'animate-pulse' : ''}`} />
+                    {loadingFeedback ? 'Corrigindo com IA...' : answer.trim() ? 'Corrigir minha resposta com IA' : 'Escreva sua resposta para pedir correção com IA'}
+                  </button>
+                  {feedbackError && <p className="text-xs text-rose-500 mt-2">{feedbackError}</p>}
+                </div>
               )}
 
               {aiFeedback && (

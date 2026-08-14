@@ -2,6 +2,7 @@ import React, { useMemo, useState } from 'react';
 import { mockStudyMethods, mockTopics } from '../data/mockData';
 import { StudyMethod } from '../types';
 import { useUserMastery } from '../hooks/useUserMastery';
+import { parseAiErrorMessage, AI_NETWORK_ERROR_MESSAGE } from '../lib/aiError';
 import { FlaskConical, ChevronDown, Brain, Repeat as RepeatIcon, Target, Zap, Sparkles } from 'lucide-react';
 
 const CATEGORY_META: Record<StudyMethod['category'], { label: string; icon: React.ElementType; color: string }> = {
@@ -17,6 +18,7 @@ export default function Laboratorio() {
   const [expandedId, setExpandedId] = useState<string | null>(mockStudyMethods[0]?.id ?? null);
   const [examples, setExamples] = useState<Record<string, string>>({});
   const [loadingExampleFor, setLoadingExampleFor] = useState<string | null>(null);
+  const [exampleErrors, setExampleErrors] = useState<Record<string, string>>({});
 
   const filtered = useMemo(
     () => (categoryFilter === 'all' ? mockStudyMethods : mockStudyMethods.filter((m) => m.category === categoryFilter)),
@@ -31,6 +33,7 @@ export default function Laboratorio() {
 
   const fetchExample = async (method: StudyMethod) => {
     setLoadingExampleFor(method.id);
+    setExampleErrors((prev) => ({ ...prev, [method.id]: '' }));
     try {
       const res = await fetch('/api/ai/method-example', {
         method: 'POST',
@@ -45,9 +48,13 @@ export default function Laboratorio() {
       if (res.ok) {
         const data = await res.json();
         setExamples((prev) => ({ ...prev, [method.id]: data.text }));
+      } else {
+        const message = await parseAiErrorMessage(res);
+        setExampleErrors((prev) => ({ ...prev, [method.id]: message }));
       }
     } catch (error) {
       console.error('Failed to fetch method example:', error);
+      setExampleErrors((prev) => ({ ...prev, [method.id]: AI_NETWORK_ERROR_MESSAGE }));
     } finally {
       setLoadingExampleFor(null);
     }
@@ -139,16 +146,21 @@ export default function Laboratorio() {
 
                   <div className="mt-4">
                     {!examples[method.id] && (
-                      <button
-                        onClick={() => fetchExample(method)}
-                        disabled={loadingExampleFor === method.id}
-                        className="flex items-center px-3 py-1.5 text-xs font-medium text-indigo-600 dark:text-indigo-400 border border-indigo-200 dark:border-indigo-800 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-900/20 disabled:opacity-50 transition-colors"
-                      >
-                        <Sparkles className={`w-3.5 h-3.5 mr-1.5 ${loadingExampleFor === method.id ? 'animate-pulse' : ''}`} />
-                        {loadingExampleFor === method.id
-                          ? 'Gerando exemplo...'
-                          : `Exemplo aplicado ao meu ponto fraco (${weakestTopic.name})`}
-                      </button>
+                      <>
+                        <button
+                          onClick={() => fetchExample(method)}
+                          disabled={loadingExampleFor === method.id}
+                          className="flex items-center px-3 py-1.5 text-xs font-medium text-indigo-600 dark:text-indigo-400 border border-indigo-200 dark:border-indigo-800 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-900/20 disabled:opacity-50 transition-colors"
+                        >
+                          <Sparkles className={`w-3.5 h-3.5 mr-1.5 ${loadingExampleFor === method.id ? 'animate-pulse' : ''}`} />
+                          {loadingExampleFor === method.id
+                            ? 'Gerando exemplo...'
+                            : `Exemplo aplicado ao meu ponto fraco (${weakestTopic.name})`}
+                        </button>
+                        {exampleErrors[method.id] && (
+                          <p className="text-xs text-rose-500 mt-1.5">{exampleErrors[method.id]}</p>
+                        )}
+                      </>
                     )}
                     {examples[method.id] && (
                       <div className="flex items-start p-3 rounded-lg bg-indigo-50 dark:bg-indigo-900/20 text-indigo-800 dark:text-indigo-300 text-sm">
