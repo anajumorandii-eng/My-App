@@ -2,6 +2,7 @@ import React, { useMemo, useState } from 'react';
 import { mockTopics } from '../data/mockData';
 import { TopicMastery } from '../types';
 import { useUserMastery } from '../hooks/useUserMastery';
+import { requestAiText } from '../lib/aiClient';
 import { Repeat, CheckCircle2, AlertTriangle, CloudOff, Sparkles } from 'lucide-react';
 
 function urgencyOf(mastery: TopicMastery): number {
@@ -51,15 +52,8 @@ export default function Revisoes() {
     setLoadingTipFor(mastery.topicId);
     try {
       const daysSinceReview = Math.round((Date.now() - new Date(mastery.lastReviewed).getTime()) / 86400000);
-      const res = await fetch('/api/ai/review-tip', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ topic: topicName, subject, level: mastery.level, daysSinceReview }),
-      });
-      if (res.ok) {
-        const data = await res.json();
-        setTips((prev) => ({ ...prev, [mastery.topicId]: data.text }));
-      }
+      const data = await requestAiText('review-tip', { topic: topicName, subject, level: mastery.level, daysSinceReview });
+      setTips((prev) => ({ ...prev, [mastery.topicId]: data.text }));
     } catch (error) {
       console.error('Failed to fetch review tip:', error);
     } finally {

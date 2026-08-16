@@ -3,6 +3,7 @@ import { mockQuestions } from '../data/mockData';
 import { useAuth } from '../context/AuthContext';
 import { useUserMastery } from '../hooks/useUserMastery';
 import { addUserAttempt } from '../lib/userData';
+import { requestAiText } from '../lib/aiClient';
 import { TopicMastery } from '../types';
 import { HelpCircle, CheckCircle2, XCircle, RotateCcw, CloudOff, Sparkles, BadgeCheck, ExternalLink } from 'lucide-react';
 
@@ -93,22 +94,15 @@ export default function Questoes() {
     try {
       const selectedOption = question.options.find((o) => o.id === selectedOptionId);
       const correctOption = question.options.find((o) => o.id === question.correctOptionId);
-      const res = await fetch('/api/ai/question-explanation', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          prompt: question.prompt,
-          subject: question.subject,
-          selectedAnswer: selectedOption?.text ?? '',
-          correctAnswer: correctOption?.text ?? '',
-          isCorrect,
-          baseExplanation: question.explanation,
-        }),
+      const data = await requestAiText('question-explanation', {
+        prompt: question.prompt,
+        subject: question.subject,
+        selectedAnswer: selectedOption?.text ?? '',
+        correctAnswer: correctOption?.text ?? '',
+        isCorrect,
+        baseExplanation: question.explanation,
       });
-      if (res.ok) {
-        const data = await res.json();
-        setDeepExplanation(data.text);
-      }
+      setDeepExplanation(data.text);
     } catch (error) {
       console.error('Failed to fetch deep explanation:', error);
     } finally {

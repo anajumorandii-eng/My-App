@@ -1,5 +1,6 @@
 import React, { useMemo, useState, useRef, useEffect } from 'react';
 import { mockTopics } from '../data/mockData';
+import { aiErrorMessage, requestAiText } from '../lib/aiClient';
 import { Brain, Send, Bot, User, Sparkles } from 'lucide-react';
 
 interface Message {
@@ -46,28 +47,21 @@ export default function Tutor() {
     setIsLoading(true);
 
     try {
-      const res = await fetch('/api/ai/socratic', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          question: userMessage.text,
-          topic,
-          history: messages
-        })
+      const data = await requestAiText('socratic', {
+        question: userMessage.text,
+        topic,
       });
-
-      const data = await res.json();
       
       setMessages(prev => [...prev, {
         id: Date.now().toString(),
         sender: 'ai',
         text: data.text || 'Ocorreu um erro ao processar a resposta.'
       }]);
-    } catch (e) {
+    } catch (error) {
       setMessages(prev => [...prev, {
         id: Date.now().toString(),
         sender: 'ai',
-        text: 'Erro de conexão com o oráculo Socrático.'
+        text: aiErrorMessage(error)
       }]);
     } finally {
       setIsLoading(false);
