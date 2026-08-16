@@ -2,6 +2,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { discursiveQuestions, boardExamStructure } from '../data/discursiveQuestions';
 import { secondPhaseProtocols } from '../data/resolutionStrategies';
 import { useDiscursiveAttempts } from '../hooks/useDiscursiveAttempts';
+import { requestAiText } from '../lib/aiClient';
 import { DiscursiveQuestion } from '../types';
 import {
   ClipboardEdit,
@@ -115,21 +116,14 @@ export default function Treino2aFase() {
     if (!question || !answer.trim()) return;
     setLoadingFeedback(true);
     try {
-      const res = await fetch('/api/ai/discursive-feedback', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          board: question.board,
-          subject: question.subject,
-          prompt: fullQuestionText(question),
-          modelAnswer: question.modelAnswer,
-          studentAnswer: answer,
-        }),
+      const data = await requestAiText('discursive-feedback', {
+        board: question.board,
+        subject: question.subject,
+        prompt: fullQuestionText(question),
+        modelAnswer: question.modelAnswer,
+        studentAnswer: answer,
       });
-      if (res.ok) {
-        const data = await res.json();
-        setAiFeedback(data.text);
-      }
+      setAiFeedback(data.text);
     } catch (error) {
       console.error('Failed to fetch AI feedback:', error);
     } finally {

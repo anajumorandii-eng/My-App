@@ -2,6 +2,7 @@ import React, { useMemo, useState } from 'react';
 import { mockStudyMethods, mockTopics } from '../data/mockData';
 import { StudyMethod } from '../types';
 import { useUserMastery } from '../hooks/useUserMastery';
+import { requestAiText } from '../lib/aiClient';
 import { FlaskConical, ChevronDown, Brain, Repeat as RepeatIcon, Target, Zap, Sparkles } from 'lucide-react';
 
 const CATEGORY_META: Record<StudyMethod['category'], { label: string; icon: React.ElementType; color: string }> = {
@@ -32,20 +33,13 @@ export default function Laboratorio() {
   const fetchExample = async (method: StudyMethod) => {
     setLoadingExampleFor(method.id);
     try {
-      const res = await fetch('/api/ai/method-example', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          methodName: method.name,
-          methodSummary: method.summary,
-          topic: weakestTopic.name,
-          subject: weakestTopic.subject,
-        }),
+      const data = await requestAiText('method-example', {
+        methodName: method.name,
+        methodSummary: method.summary,
+        topic: weakestTopic.name,
+        subject: weakestTopic.subject,
       });
-      if (res.ok) {
-        const data = await res.json();
-        setExamples((prev) => ({ ...prev, [method.id]: data.text }));
-      }
+      setExamples((prev) => ({ ...prev, [method.id]: data.text }));
     } catch (error) {
       console.error('Failed to fetch method example:', error);
     } finally {

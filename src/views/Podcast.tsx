@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { mockPodcastEpisodes, mockTopics } from '../data/mockData';
+import { requestAiText } from '../lib/aiClient';
 import { Headphones, Play, Square, Volume2, Sparkles } from 'lucide-react';
 
 const SUBJECT_COLORS: Record<string, string> = {
@@ -51,15 +52,8 @@ export default function Podcast() {
     const topicName = mockTopics.find((t) => t.id === topicId)?.name ?? subject;
     setGeneratingId(episodeId);
     try {
-      const res = await fetch('/api/ai/podcast-script', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ title, subject, topic: topicName }),
-      });
-      if (res.ok) {
-        const data = await res.json();
-        setAiScripts((prev) => ({ ...prev, [episodeId]: data.text }));
-      }
+      const data = await requestAiText('podcast-script', { title, subject, topic: topicName });
+      setAiScripts((prev) => ({ ...prev, [episodeId]: data.text }));
     } catch (error) {
       console.error('Failed to generate podcast script:', error);
     } finally {

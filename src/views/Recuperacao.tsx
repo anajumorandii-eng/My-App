@@ -1,6 +1,7 @@
 import React, { useMemo, useState } from 'react';
 import { mockTopics, mockQuestions } from '../data/mockData';
 import { useUserBacklog } from '../hooks/useUserBacklog';
+import { requestAiText } from '../lib/aiClient';
 import {
   priorityScore,
   priorityQueue,
@@ -117,15 +118,12 @@ function SupportLevelContent({ topic, supportLevel }: { topic: Topic; supportLev
   const fetchExercise = async () => {
     setLoadingExercise(true);
     try {
-      const res = await fetch('/api/ai/backlog-exercise', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ topic: topic.name, subject: topic.subject, mode: EXERCISE_MODE_BY_LEVEL[supportLevel] }),
+      const data = await requestAiText('backlog-exercise', {
+        topic: topic.name,
+        subject: topic.subject,
+        mode: EXERCISE_MODE_BY_LEVEL[supportLevel],
       });
-      if (res.ok) {
-        const data = await res.json();
-        setAiExerciseText(data.text);
-      }
+      setAiExerciseText(data.text);
     } catch (error) {
       console.error('Failed to fetch backlog exercise:', error);
     } finally {
@@ -137,21 +135,14 @@ function SupportLevelContent({ topic, supportLevel }: { topic: Topic; supportLev
     if (!exerciseText || !studentAnswer.trim()) return;
     setLoadingCorrection(true);
     try {
-      const res = await fetch('/api/ai/backlog-correction', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          topic: topic.name,
-          subject: topic.subject,
-          exercise: exerciseText,
-          studentAnswer,
-          groundingAnswer,
-        }),
+      const data = await requestAiText('backlog-correction', {
+        topic: topic.name,
+        subject: topic.subject,
+        exercise: exerciseText,
+        studentAnswer,
+        groundingAnswer,
       });
-      if (res.ok) {
-        const data = await res.json();
-        setCorrection(data.text);
-      }
+      setCorrection(data.text);
     } catch (error) {
       console.error('Failed to fetch backlog correction:', error);
     } finally {

@@ -3,6 +3,7 @@ import { mockErrorLogs, mockTopics } from '../data/mockData';
 import { ErrorLog } from '../types';
 import { useAuth } from '../context/AuthContext';
 import { getUserErrorLogs, addUserErrorLog } from '../lib/userData';
+import { requestAiText } from '../lib/aiClient';
 import { BookX, Plus, Sparkles, CloudOff } from 'lucide-react';
 
 const TYPE_LABELS: Record<ErrorLog['type'], string> = {
@@ -81,25 +82,18 @@ export default function Erros() {
 
     setGeneratingHypothesisFor(newLog.id);
     try {
-      const res = await fetch('/api/ai/error-hypothesis', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          topic: topic?.name ?? 'Tópico desconhecido',
-          subject: topic?.subject ?? '',
-          errorType: TYPE_LABELS[newLog.type],
-          notes: newLog.notes,
-        }),
+      const data = await requestAiText('error-hypothesis', {
+        topic: topic?.name ?? 'Tópico desconhecido',
+        subject: topic?.subject ?? 'Matéria desconhecida',
+        errorType: TYPE_LABELS[newLog.type],
+        notes: newLog.notes,
       });
-      if (res.ok) {
-        const data = await res.json();
-        const withHypothesis: ErrorLog = { ...newLog, aiHypothesis: data.text };
-        setLogs((prev) => prev.map((l) => (l.id === newLog.id ? withHypothesis : l)));
-        if (user) {
-          addUserErrorLog(user.uid, withHypothesis).catch((error) => {
-            console.error('Failed to save AI hypothesis:', error);
-          });
-        }
+      const withHypothesis: ErrorLog = { ...newLog, aiHypothesis: data.text };
+      setLogs((prev) => prev.map((l) => (l.id === newLog.id ? withHypothesis : l)));
+      if (user) {
+        addUserErrorLog(user.uid, withHypothesis).catch((error) => {
+          console.error('Failed to save AI hypothesis:', error);
+        });
       }
     } catch (error) {
       console.error('Failed to generate AI hypothesis:', error);

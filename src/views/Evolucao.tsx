@@ -16,6 +16,7 @@ import {
 } from 'recharts';
 import { mockTopics } from '../data/mockData';
 import { useUserMastery } from '../hooks/useUserMastery';
+import { requestAiText } from '../lib/aiClient';
 import { TrendingUp, Trophy, AlertCircle, Gauge, CloudOff, Sparkles } from 'lucide-react';
 
 const SUBJECT_HEX: Record<string, string> = {
@@ -74,22 +75,16 @@ export default function Evolucao() {
   const weakest = topicRows[topicRows.length - 1];
 
   const fetchInsight = async () => {
+    if (!strongest || !weakest) return;
     setLoadingInsight(true);
     try {
-      const res = await fetch('/api/ai/progress-insight', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          topics: topicRows.map((r) => ({ name: r.name, subject: r.subject, level: r.level })),
-          overallAverage,
-          strongest: strongest?.name,
-          weakest: weakest?.name,
-        }),
+      const data = await requestAiText('progress-insight', {
+        topics: topicRows.map((r) => ({ name: r.name, subject: r.subject, level: r.level })),
+        overallAverage,
+        strongest: strongest.name,
+        weakest: weakest.name,
       });
-      if (res.ok) {
-        const data = await res.json();
-        setInsight(data.text);
-      }
+      setInsight(data.text);
     } catch (error) {
       console.error('Failed to fetch progress insight:', error);
     } finally {
