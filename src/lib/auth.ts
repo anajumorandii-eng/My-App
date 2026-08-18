@@ -16,6 +16,11 @@ import firebaseConfig from '../../firebase-applet-config.json';
 export const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
+export const getFirebaseIdToken = async (): Promise<string | null> => {
+  await persistenceReady;
+  return auth.currentUser?.getIdToken() ?? null;
+};
+
 // Firebase's default persistence reads/writes IndexedDB, which has a
 // long-standing WebKit/Safari bug that throws "Database is closing/hidden"
 // (common in Safari on iOS/iPadOS, especially in Private Browsing).

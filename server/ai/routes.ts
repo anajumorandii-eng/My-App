@@ -5,6 +5,8 @@ import { buildAiPrompt } from './prompts';
 import { AiService } from './service';
 import { AiTask } from './types';
 import { validateAiPayload } from './validation';
+import { estimateAiCostUsd } from './cost';
+import { AiMetricsRecorder } from './metrics';
 
 const ROUTES: Array<{ path: string; task: AiTask }> = [
   { path: '/socratic', task: 'socratic' },
@@ -19,15 +21,21 @@ const ROUTES: Array<{ path: string; task: AiTask }> = [
   { path: '/method-example', task: 'method-example' },
 ];
 
-export function createAiRouter(service: AiService): Router {
+export function createAiRouter(service: AiService, metrics?: AiMetricsRecorder): Router {
   const router = Router();
 
   for (const { path, task } of ROUTES) {
     router.post(path, async (req, res) => {
       const requestId = randomUUID();
+      const startedAt = Date.now();
       try {
         const payload = validateAiPayload(task, req.body);
-        const result = await service.generate({ task, prompt: buildAiPrompt(task, payload) });
+        const result = await service.generate({ task, prompt: buildAiPrompt(task, payload), userId: res.locals.userId });
+        const durationMs = Date.now() - startedAt;
+        const estimatedCostUsd = estimateAiCostUsd(result.model, result.usage);
+        console.info(JSON.stringify({ event: 'ai_request', requestId, userId: res.locals.userId, task, model: result.model, provider: result.provider, usage: result.usage, estimatedCostUsd, fallback: result.fallback, cached: result.cached, status: 200, durationMs }));
+        metrics?.record({ task, model: result.model, usage: result.usage, estimatedCostUsd, fallback: result.fallback, cached: result.cached, status: 200, durationMs })
+          .catch((metricError) => console.error('AI metrics write failed:', metricError));
         res.json({ ...result, requestId });
       } catch (error) {
         if (error instanceof AiValidationError) {
@@ -42,6 +50,7 @@ export function createAiRouter(service: AiService): Router {
 
         const cause = error instanceof AiGenerationError ? error.cause : error;
         console.error(`[AI ${requestId}] ${task} failed:`, cause ?? error);
+        console.info(JSON.stringify({ event: 'ai_request', requestId, userId: res.locals.userId, task, status: error instanceof AiTimeoutError ? 504 : 502, durationMs: Date.now() - startedAt }));
         return res.status(502).json({
           error: 'Falha ao processar solicitação de IA',
           code: 'AI_GENERATION_FAILED',
@@ -53,4 +62,3 @@ export function createAiRouter(service: AiService): Router {
 
   return router;
 }
-

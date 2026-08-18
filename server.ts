@@ -1,12 +1,18 @@
+import 'dotenv/config';
 import express from 'express';
 import path from 'path';
 import { createServer as createViteServer } from 'vite';
 import cookieParser from 'cookie-parser';
 import { google } from 'googleapis';
-import { GeminiProvider } from './server/ai/geminiProvider';
-import { createAiRateLimit } from './server/ai/rateLimit';
+import { OmniRouteProvider } from './server/ai/omniRouteProvider';
+import { createAiDailyLimit, createAiRateLimit } from './server/ai/rateLimit';
 import { createAiRouter } from './server/ai/routes';
 import { AiService, parseAiTimeout } from './server/ai/service';
+import { firebaseAuthMiddleware, getFirebaseAdminApp, requireAdmin } from './server/auth/firebaseAuth';
+import { getFirestore } from 'firebase-admin/firestore';
+import { FirestoreDailyQuotaStore } from './server/ai/firestoreQuotaStore';
+import { FirestoreAiMetricsRecorder } from './server/ai/metrics';
+import { createAdminRouter } from './server/admin/routes';
 
 const app = express();
 const PORT = Number(process.env.PORT) || 3000;
@@ -14,10 +20,21 @@ const PORT = Number(process.env.PORT) || 3000;
 app.use(express.json({ limit: '64kb' }));
 app.use(cookieParser());
 
-// Provider-neutral AI layer. Gemini remains the active provider until a later
-// migration explicitly selects OmniRoute or another implementation.
-const aiProvider = new GeminiProvider(process.env.GEMINI_API_KEY, process.env.GEMINI_MODEL);
+// Provider-neutral AI layer. Secrets stay server-side and task routing is
+// resolved by OmniRoute between the JUJU fast and deep combos.
+const aiProvider = new OmniRouteProvider({
+  baseUrl: process.env.OMNIROUTE_BASE_URL,
+  apiKey: process.env.OMNIROUTE_API_KEY,
+  deepModel: process.env.AI_DEEP_MODEL,
+  fastModel: process.env.AI_FAST_MODEL,
+});
 const aiService = new AiService(aiProvider, parseAiTimeout(process.env.AI_TIMEOUT_MS));
+const dailyQuotaStore = process.env.AI_QUOTA_STORE === 'firestore'
+  ? new FirestoreDailyQuotaStore(getFirestore(getFirebaseAdminApp()))
+  : undefined;
+const aiMetrics = process.env.AI_METRICS_STORE === 'firestore'
+  ? new FirestoreAiMetricsRecorder(getFirestore(getFirebaseAdminApp()))
+  : undefined;
 
 // OAuth config
 const GOOGLE_CLIENT_ID = process.env.GOOGLE_CLIENT_ID;
@@ -89,7 +106,8 @@ app.get('/api/drive/files', async (req, res) => {
 });
 
 // AI routes preserve their public paths and `{ text }` response contract.
-app.use('/api/ai', createAiRateLimit(), createAiRouter(aiService));
+app.use('/api/ai', firebaseAuthMiddleware(), createAiRateLimit(), createAiDailyLimit({ store: dailyQuotaStore }), createAiRouter(aiService, aiMetrics));
+app.use('/api/admin', firebaseAuthMiddleware(), requireAdmin, createAdminRouter(getFirestore(getFirebaseAdminApp())));
 
 // Vite & Static file serving
 async function startServer() {

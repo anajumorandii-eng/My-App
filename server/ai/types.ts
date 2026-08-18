@@ -13,18 +13,36 @@ export type AiTask =
 export interface AiGenerationRequest {
   task: AiTask;
   prompt: string;
+  userId?: string;
+  signal?: AbortSignal;
+}
+
+export interface AiUsage {
+  promptTokens?: number;
+  completionTokens?: number;
+  totalTokens?: number;
+}
+
+export interface AiProviderResult {
+  text: string;
+  model?: string;
+  usage?: AiUsage;
+  fallback?: boolean;
 }
 
 export interface AiGenerationResult {
   text: string;
   provider: string;
   model: string;
+  usage?: AiUsage;
+  fallback?: boolean;
+  cached?: boolean;
 }
 
 export interface AiProvider {
   readonly name: string;
   readonly model: string;
   readonly isConfigured: boolean;
-  generate(request: AiGenerationRequest): Promise<string>;
+  modelForTask?(task: AiTask): string;
+  generate(request: AiGenerationRequest): Promise<string | AiProviderResult>;
 }
-
