@@ -3,6 +3,7 @@ import { mockTopics } from '../data/mockData';
 import { TopicMastery } from '../types';
 import { useUserMastery } from '../hooks/useUserMastery';
 import { requestAiText } from '../lib/aiClient';
+import { AiText } from '../components/AiText';
 import { Repeat, CheckCircle2, AlertTriangle, CloudOff, Sparkles } from 'lucide-react';
 
 function urgencyOf(mastery: TopicMastery): number {
@@ -147,7 +148,7 @@ export default function Revisoes() {
               {tip && (
                 <div className="flex items-start mt-4 p-3 rounded-lg bg-indigo-50 dark:bg-indigo-900/20 text-indigo-800 dark:text-indigo-300 text-sm">
                   <Sparkles className="w-4 h-4 mr-2 mt-0.5 shrink-0" />
-                  <p>{tip}</p>
+                  <AiText text={tip} className="flex-1" />
                 </div>
               )}
             </div>

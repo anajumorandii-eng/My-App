@@ -4,6 +4,7 @@ import { ErrorLog } from '../types';
 import { useAuth } from '../context/AuthContext';
 import { getUserErrorLogs, addUserErrorLog } from '../lib/userData';
 import { requestAiText } from '../lib/aiClient';
+import { AiText } from '../components/AiText';
 import { BookX, Plus, Sparkles, CloudOff } from 'lucide-react';
 
 const TYPE_LABELS: Record<ErrorLog['type'], string> = {
@@ -224,7 +225,7 @@ export default function Erros() {
               {log.aiHypothesis && (
                 <div className="flex items-start p-3 rounded-lg bg-indigo-50 dark:bg-indigo-900/20 text-indigo-800 dark:text-indigo-300 text-sm">
                   <Sparkles className="w-4 h-4 mr-2 mt-0.5 shrink-0" />
-                  <p>{log.aiHypothesis}</p>
+                  <AiText text={log.aiHypothesis} className="flex-1" />
                 </div>
               )}
               {!log.aiHypothesis && generatingHypothesisFor === log.id && (

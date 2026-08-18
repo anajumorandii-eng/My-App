@@ -17,6 +17,7 @@ import {
 import { mockTopics } from '../data/mockData';
 import { useUserMastery } from '../hooks/useUserMastery';
 import { requestAiText } from '../lib/aiClient';
+import { AiText } from '../components/AiText';
 import { TrendingUp, Trophy, AlertCircle, Gauge, CloudOff, Sparkles } from 'lucide-react';
 
 const SUBJECT_HEX: Record<string, string> = {
@@ -126,7 +127,7 @@ export default function Evolucao() {
           )}
         </div>
         {insight ? (
-          <p className="text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed mt-3">{insight}</p>
+          <AiText text={insight} className="text-sm text-zinc-600 dark:text-zinc-300 mt-3" />
         ) : (
           <p className="text-sm text-zinc-500 mt-1">
             Peça uma análise personalizada do seu progresso e das suas prioridades para os próximos dias.
