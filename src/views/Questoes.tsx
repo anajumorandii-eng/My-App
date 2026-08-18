@@ -4,6 +4,7 @@ import { useAuth } from '../context/AuthContext';
 import { useUserMastery } from '../hooks/useUserMastery';
 import { addUserAttempt } from '../lib/userData';
 import { requestAiText } from '../lib/aiClient';
+import { AiText } from '../components/AiText';
 import { TopicMastery } from '../types';
 import { HelpCircle, CheckCircle2, XCircle, RotateCcw, CloudOff, Sparkles, BadgeCheck, ExternalLink } from 'lucide-react';
 
@@ -247,7 +248,7 @@ export default function Questoes() {
         {deepExplanation && (
           <div className="flex items-start p-4 rounded-xl mb-6 text-sm leading-relaxed bg-indigo-50 dark:bg-indigo-900/20 text-indigo-800 dark:text-indigo-300">
             <Sparkles className="w-4 h-4 mr-2 mt-0.5 shrink-0" />
-            <p>{deepExplanation}</p>
+            <AiText text={deepExplanation} className="flex-1" />
           </div>
         )}
 
