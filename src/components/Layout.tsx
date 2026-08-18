@@ -57,8 +57,10 @@ export default function Layout() {
   };
 
   const toggleTheme = () => {
-    setDarkMode(!darkMode);
-    document.documentElement.classList.toggle('dark');
+    const next = !darkMode;
+    setDarkMode(next);
+    document.documentElement.classList.toggle('dark', next);
+    document.getElementById('theme-color-meta')?.setAttribute('content', next ? '#09090b' : '#fafafa');
   };
 
   const navItems = [
