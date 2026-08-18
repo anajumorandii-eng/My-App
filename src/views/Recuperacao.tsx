@@ -2,6 +2,7 @@ import React, { useMemo, useState } from 'react';
 import { mockTopics, mockQuestions } from '../data/mockData';
 import { useUserBacklog } from '../hooks/useUserBacklog';
 import { requestAiText } from '../lib/aiClient';
+import { AiText } from '../components/AiText';
 import {
   priorityScore,
   priorityQueue,
@@ -165,8 +166,8 @@ function SupportLevelContent({ topic, supportLevel }: { topic: Topic; supportLev
 
   return (
     <div className="space-y-3">
-      <div className="p-4 rounded-xl bg-indigo-50 dark:bg-indigo-900/20 text-indigo-900 dark:text-indigo-200 text-sm leading-relaxed whitespace-pre-line">
-        {exerciseText}
+      <div className="p-4 rounded-xl bg-indigo-50 dark:bg-indigo-900/20 text-indigo-900 dark:text-indigo-200 text-sm">
+        <AiText text={exerciseText} />
       </div>
       <div>
         <label htmlFor={`answer-${topic.id}-${supportLevel}`} className="text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-1.5 block">
@@ -192,8 +193,8 @@ function SupportLevelContent({ topic, supportLevel }: { topic: Topic; supportLev
           {loadingCorrection ? 'Corrigindo com IA...' : 'Corrigir com IA'}
         </button>
       ) : (
-        <div className="p-4 rounded-xl bg-emerald-50 dark:bg-emerald-900/20 text-emerald-900 dark:text-emerald-200 text-sm leading-relaxed whitespace-pre-line">
-          {correction}
+        <div className="p-4 rounded-xl bg-emerald-50 dark:bg-emerald-900/20 text-emerald-900 dark:text-emerald-200 text-sm">
+          <AiText text={correction} />
         </div>
       )}
     </div>

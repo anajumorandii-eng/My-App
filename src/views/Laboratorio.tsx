@@ -3,6 +3,7 @@ import { mockStudyMethods, mockTopics } from '../data/mockData';
 import { StudyMethod } from '../types';
 import { useUserMastery } from '../hooks/useUserMastery';
 import { requestAiText } from '../lib/aiClient';
+import { AiText } from '../components/AiText';
 import { FlaskConical, ChevronDown, Brain, Repeat as RepeatIcon, Target, Zap, Sparkles } from 'lucide-react';
 
 const CATEGORY_META: Record<StudyMethod['category'], { label: string; icon: React.ElementType; color: string }> = {
@@ -147,7 +148,7 @@ export default function Laboratorio() {
                     {examples[method.id] && (
                       <div className="flex items-start p-3 rounded-lg bg-indigo-50 dark:bg-indigo-900/20 text-indigo-800 dark:text-indigo-300 text-sm">
                         <Sparkles className="w-4 h-4 mr-2 mt-0.5 shrink-0" />
-                        <p>{examples[method.id]}</p>
+                        <AiText text={examples[method.id]} className="flex-1" />
                       </div>
                     )}
                   </div>

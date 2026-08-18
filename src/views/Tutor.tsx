@@ -1,6 +1,7 @@
 import React, { useMemo, useState, useRef, useEffect } from 'react';
 import { mockTopics } from '../data/mockData';
 import { aiErrorMessage, requestAiText } from '../lib/aiClient';
+import { AiText } from '../components/AiText';
 import { Brain, Send, Bot, User, Sparkles } from 'lucide-react';
 
 interface Message {
@@ -125,7 +126,11 @@ export default function Tutor() {
                     ? 'bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-900'
                     : 'bg-zinc-100 text-zinc-900 dark:bg-zinc-800 dark:text-zinc-100 border border-zinc-200 dark:border-zinc-700'
                 }`}>
-                  <p className="whitespace-pre-wrap leading-relaxed">{msg.text}</p>
+                  {msg.sender === 'user' ? (
+                    <p className="whitespace-pre-wrap leading-relaxed">{msg.text}</p>
+                  ) : (
+                    <AiText text={msg.text} />
+                  )}
                 </div>
               </div>
             </div>

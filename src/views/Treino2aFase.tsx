@@ -3,6 +3,7 @@ import { discursiveQuestions, boardExamStructure } from '../data/discursiveQuest
 import { secondPhaseProtocols } from '../data/resolutionStrategies';
 import { useDiscursiveAttempts } from '../hooks/useDiscursiveAttempts';
 import { requestAiText } from '../lib/aiClient';
+import { AiText } from '../components/AiText';
 import { DiscursiveQuestion } from '../types';
 import {
   ClipboardEdit,
@@ -340,7 +341,7 @@ export default function Treino2aFase() {
               {aiFeedback && (
                 <div className="flex items-start p-4 rounded-xl text-sm leading-relaxed bg-indigo-50 dark:bg-indigo-900/20 text-indigo-800 dark:text-indigo-300">
                   <Sparkles className="w-4 h-4 mr-2 mt-0.5 shrink-0" />
-                  <p>{aiFeedback}</p>
+                  <AiText text={aiFeedback} className="flex-1" />
                 </div>
               )}
 
