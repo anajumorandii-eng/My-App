@@ -3,7 +3,7 @@ import path from 'path';
 import { createServer as createViteServer } from 'vite';
 import cookieParser from 'cookie-parser';
 import { google } from 'googleapis';
-import { GeminiProvider } from './server/ai/geminiProvider';
+import { createAiProvider } from './server/ai/provider';
 import { createAiRateLimit } from './server/ai/rateLimit';
 import { createAiRouter } from './server/ai/routes';
 import { AiService, parseAiTimeout } from './server/ai/service';
@@ -14,9 +14,9 @@ const PORT = Number(process.env.PORT) || 3000;
 app.use(express.json({ limit: '64kb' }));
 app.use(cookieParser());
 
-// Provider-neutral AI layer. Gemini remains the active provider until a later
-// migration explicitly selects OmniRoute or another implementation.
-const aiProvider = new GeminiProvider(process.env.GEMINI_API_KEY, process.env.GEMINI_MODEL);
+// Provider-neutral AI layer. Set AI_PROVIDER=omniroute to migrate without
+// changing the public API routes; Gemini remains available as a fallback.
+const aiProvider = createAiProvider();
 const aiService = new AiService(aiProvider, parseAiTimeout(process.env.AI_TIMEOUT_MS));
 
 // OAuth config
@@ -113,3 +113,4 @@ async function startServer() {
 }
 
 startServer();
+
