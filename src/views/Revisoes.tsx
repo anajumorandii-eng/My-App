@@ -4,12 +4,8 @@ import { TopicMastery } from '../types';
 import { useUserMastery } from '../hooks/useUserMastery';
 import { requestAiText } from '../lib/aiClient';
 import { AiText } from '../components/AiText';
+import { urgencyOf } from '../lib/reviewUrgency';
 import { Repeat, CheckCircle2, AlertTriangle, CloudOff, Sparkles } from 'lucide-react';
-
-function urgencyOf(mastery: TopicMastery): number {
-  const daysSinceReview = (Date.now() - new Date(mastery.lastReviewed).getTime()) / 86400000;
-  return Math.min(daysSinceReview * 5 + mastery.uncertainty * 50 + mastery.errorSignals * 8, 100);
-}
 
 const SUBJECT_COLORS: Record<string, string> = {
   Biologia: 'text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-900/20',
