@@ -60,7 +60,7 @@ export class EfficiencyEngine {
       }
 
       actions.push({
-        id: `action_${topic.id}_${Date.now()}`,
+        id: `action_${topic.id}_${new Date().toISOString().slice(0, 10)}`,
         type,
         topicId: topic.id,
         topicName: topic.name,

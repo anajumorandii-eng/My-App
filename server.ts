@@ -1,12 +1,18 @@
+import 'dotenv/config';
 import express from 'express';
 import path from 'path';
 import { createServer as createViteServer } from 'vite';
 import cookieParser from 'cookie-parser';
 import { google } from 'googleapis';
 import { createAiProvider } from './server/ai/provider';
-import { createAiRateLimit } from './server/ai/rateLimit';
+import { createAiDailyLimit, createAiRateLimit } from './server/ai/rateLimit';
 import { createAiRouter } from './server/ai/routes';
 import { AiService, parseAiTimeout } from './server/ai/service';
+import { firebaseAuthMiddleware, getFirebaseAdminApp, requireAdmin } from './server/auth/firebaseAuth';
+import { getFirestore } from 'firebase-admin/firestore';
+import { FirestoreDailyQuotaStore } from './server/ai/firestoreQuotaStore';
+import { FirestoreAiMetricsRecorder } from './server/ai/metrics';
+import { createAdminRouter } from './server/admin/routes';
 
 const app = express();
 const PORT = Number(process.env.PORT) || 3000;
@@ -16,8 +22,16 @@ app.use(cookieParser());
 
 // Provider-neutral AI layer. Set AI_PROVIDER=omniroute to migrate without
 // changing the public API routes; Gemini remains available as a fallback.
+// Secrets stay server-side and task routing is resolved by OmniRoute between
+// the JUJU fast and deep combos.
 const aiProvider = createAiProvider();
 const aiService = new AiService(aiProvider, parseAiTimeout(process.env.AI_TIMEOUT_MS));
+const dailyQuotaStore = process.env.AI_QUOTA_STORE === 'firestore'
+  ? new FirestoreDailyQuotaStore(getFirestore(getFirebaseAdminApp()))
+  : undefined;
+const aiMetrics = process.env.AI_METRICS_STORE === 'firestore'
+  ? new FirestoreAiMetricsRecorder(getFirestore(getFirebaseAdminApp()))
+  : undefined;
 
 // OAuth config
 const GOOGLE_CLIENT_ID = process.env.GOOGLE_CLIENT_ID;
@@ -89,7 +103,8 @@ app.get('/api/drive/files', async (req, res) => {
 });
 
 // AI routes preserve their public paths and `{ text }` response contract.
-app.use('/api/ai', createAiRateLimit(), createAiRouter(aiService));
+app.use('/api/ai', firebaseAuthMiddleware(), createAiRateLimit(), createAiDailyLimit({ store: dailyQuotaStore }), createAiRouter(aiService, aiMetrics));
+app.use('/api/admin', firebaseAuthMiddleware(), requireAdmin, createAdminRouter(getFirestore(getFirebaseAdminApp())));
 
 // Vite & Static file serving
 async function startServer() {

@@ -1,8 +1,13 @@
+import { getFirebaseIdToken } from './auth';
+
 export interface AiTextResponse {
   text: string;
   requestId?: string;
   provider?: string;
   model?: string;
+  usage?: { promptTokens?: number; completionTokens?: number; totalTokens?: number };
+  fallback?: boolean;
+  cached?: boolean;
 }
 
 interface AiErrorBody {
@@ -23,7 +28,7 @@ export class AiRequestError extends Error {
   }
 }
 
-const CLIENT_TIMEOUT_MS = 65_000;
+const CLIENT_TIMEOUT_MS = 160_000;
 
 export async function requestAiText(
   endpoint: string,
@@ -33,9 +38,13 @@ export async function requestAiText(
   const timeout = window.setTimeout(() => controller.abort(), CLIENT_TIMEOUT_MS);
 
   try {
+    const idToken = await getFirebaseIdToken();
+    if (!idToken) {
+      throw new AiRequestError('Entre na sua conta para usar a IA.', 401, 'AUTH_REQUIRED');
+    }
     const response = await fetch(`/api/ai/${endpoint}`, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${idToken}` },
       body: JSON.stringify(payload),
       signal: controller.signal,
     });
@@ -67,4 +76,3 @@ export async function requestAiText(
 export function aiErrorMessage(error: unknown): string {
   return error instanceof AiRequestError ? error.message : 'Não foi possível processar a solicitação de IA.';
 }
-

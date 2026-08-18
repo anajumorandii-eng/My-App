@@ -5,8 +5,10 @@ import { useUserMastery } from '../hooks/useUserMastery';
 import { useUserProfile } from '../hooks/useUserProfile';
 import { useAvailableMinutes } from '../hooks/useAvailableMinutes';
 import { PlayCircle, Target, Brain, AlertCircle, CloudOff } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 export default function Dashboard() {
+  const navigate = useNavigate();
   const { mastery, isPersisted } = useUserMastery();
   const { profile } = useUserProfile();
   const { minutes: availableMinutes, usingAuto } = useAvailableMinutes();
@@ -14,6 +16,12 @@ export default function Dashboard() {
   const dailyPlan = useMemo(() => {
     return EfficiencyEngine.generateDailyPlan(mastery, mockTopics, profile, availableMinutes);
   }, [mastery, profile, availableMinutes]);
+  const primary = dailyPlan[0];
+  const primaryMastery = mastery.find((item) => item.topicId === primary?.topicId);
+  const overdueReviews = mastery.filter((item) => Date.now() - new Date(item.lastReviewed).getTime() > 7 * 86400000).length;
+  const actionLabels = { review: 'Revisar para consolidar', practice: 'Praticar sem apoio', theory: 'Reconstruir a base', error_analysis: 'Analisar erros recorrentes' };
+
+  const startAction = (topicId?: string) => navigate(topicId ? `/sessao?topic=${encodeURIComponent(topicId)}` : '/sessao');
 
   return (
     <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
@@ -30,6 +38,19 @@ export default function Dashboard() {
           </p>
         )}
       </header>
+
+      {primary && (
+        <section className="relative overflow-hidden rounded-3xl bg-indigo-600 text-white p-6 sm:p-8 shadow-lg">
+          <div className="relative z-10 max-w-2xl">
+            <p className="text-indigo-100 text-sm font-medium uppercase tracking-wider">Sua missão principal</p>
+            <h2 className="text-3xl sm:text-4xl font-bold mt-2">{primary.topicName}</h2>
+            <p className="text-indigo-100 mt-3 text-lg">{actionLabels[primary.type]} em {primary.subject}. Esta ação lidera o plano por combinar lacuna, tempo sem revisão e sinais de erro.</p>
+            <div className="flex flex-wrap gap-3 mt-6 text-sm"><span className="bg-white/15 px-3 py-1.5 rounded-full">{primary.estimatedMinutes} minutos</span><span className="bg-white/15 px-3 py-1.5 rounded-full">Domínio atual: {primaryMastery?.level ?? 0}%</span><span className="bg-white/15 px-3 py-1.5 rounded-full">{overdueReviews} revisões atrasadas</span></div>
+            <button onClick={() => startAction(primary.topicId)} className="mt-7 inline-flex items-center bg-white text-indigo-700 px-5 py-3 rounded-xl font-semibold hover:bg-indigo-50 transition-colors"><PlayCircle className="w-5 h-5 mr-2"/>Começar agora</button>
+          </div>
+          <Brain className="absolute -right-10 -bottom-14 w-64 h-64 text-white/10" />
+        </section>
+      )}
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 shadow-sm">
@@ -85,7 +106,7 @@ export default function Dashboard() {
                   </div>
                 </div>
               </div>
-              <button className="hidden sm:flex items-center px-4 py-2 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 rounded-lg font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+              <button onClick={() => startAction(action.topicId)} className="hidden sm:flex items-center px-4 py-2 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 rounded-lg font-medium opacity-0 group-hover:opacity-100 transition-opacity">
                 <PlayCircle className="w-4 h-4 mr-2" />
                 Iniciar
               </button>
