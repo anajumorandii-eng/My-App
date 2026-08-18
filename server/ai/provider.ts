@@ -11,11 +11,12 @@ export function createAiProvider(env: NodeJS.ProcessEnv = process.env): AiProvid
       setGlobalDispatcher(new ProxyAgent(env.OMNIROUTE_PROXY_URL));
     }
 
-    return new OmniRouteProvider(
-      env.OMNIROUTE_API_KEY,
-      env.OMNIROUTE_BASE_URL,
-      env.OMNIROUTE_MODEL,
-    );
+    return new OmniRouteProvider({
+      baseUrl: env.OMNIROUTE_BASE_URL,
+      apiKey: env.OMNIROUTE_API_KEY,
+      deepModel: env.AI_DEEP_MODEL,
+      fastModel: env.AI_FAST_MODEL,
+    });
   }
 
   return new GeminiProvider(env.GEMINI_API_KEY, env.GEMINI_MODEL);

@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { EfficiencyEngine } from '../lib/efficiencyEngine';
 import { mockTopics } from '../data/mockData';
 import { useUserMastery } from '../hooks/useUserMastery';
@@ -6,6 +6,7 @@ import { useUserProfile } from '../hooks/useUserProfile';
 import { useAvailableMinutes } from '../hooks/useAvailableMinutes';
 import { StudyAction } from '../types';
 import { PlayCircle, Pause, RotateCcw, CheckCircle2, PlayCircle as StartIcon, CloudOff } from 'lucide-react';
+import { useSearchParams } from 'react-router-dom';
 
 function formatTime(totalSeconds: number) {
   const m = Math.floor(totalSeconds / 60).toString().padStart(2, '0');
@@ -14,7 +15,8 @@ function formatTime(totalSeconds: number) {
 }
 
 export default function Sessao() {
-  const { mastery, isPersisted } = useUserMastery();
+  const [searchParams] = useSearchParams();
+  const { mastery, updateMastery, isPersisted } = useUserMastery();
   const { profile } = useUserProfile();
   const { minutes: availableMinutes } = useAvailableMinutes();
   const dailyPlan = useMemo(
@@ -28,13 +30,36 @@ export default function Sessao() {
   const [completedIds, setCompletedIds] = useState<string[]>([]);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
+  const completeAction = useCallback((action: StudyAction) => {
+    setCompletedIds((ids) => {
+      if (ids.includes(action.id)) return ids;
+      updateMastery((items) => items.map((item) => item.topicId === action.topicId ? {
+        ...item,
+        level: Math.min(100, item.level + (action.type === 'theory' ? 4 : 3)),
+        uncertainty: Math.max(0, item.uncertainty - 0.05),
+        errorSignals: action.type === 'error_analysis' ? Math.max(0, item.errorSignals - 1) : item.errorSignals,
+        lastReviewed: new Date().toISOString(),
+      } : item));
+      return [...ids, action.id];
+    });
+  }, [updateMastery]);
+
+  useEffect(() => {
+    const topicId = searchParams.get('topic');
+    const requested = topicId ? dailyPlan.find((action) => action.topicId === topicId) : undefined;
+    if (requested) {
+      setSelectedAction(requested);
+      setSecondsLeft(requested.estimatedMinutes * 60);
+    }
+  }, [dailyPlan, searchParams]);
+
   useEffect(() => {
     if (isRunning) {
       intervalRef.current = setInterval(() => {
         setSecondsLeft((prev) => {
           if (prev <= 1) {
             setIsRunning(false);
-            if (selectedAction) setCompletedIds((ids) => [...new Set([...ids, selectedAction.id])]);
+            if (selectedAction) completeAction(selectedAction);
             return 0;
           }
           return prev - 1;
@@ -46,7 +71,7 @@ export default function Sessao() {
     return () => {
       if (intervalRef.current) clearInterval(intervalRef.current);
     };
-  }, [isRunning, selectedAction]);
+  }, [isRunning, selectedAction, completeAction]);
 
   const selectAction = (action: StudyAction) => {
     setIsRunning(false);
@@ -61,7 +86,7 @@ export default function Sessao() {
 
   const markComplete = () => {
     setIsRunning(false);
-    if (selectedAction) setCompletedIds((ids) => [...new Set([...ids, selectedAction.id])]);
+    if (selectedAction) completeAction(selectedAction);
   };
 
   const totalSeconds = (selectedAction?.estimatedMinutes ?? 25) * 60;

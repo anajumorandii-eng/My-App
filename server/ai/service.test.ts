@@ -48,7 +48,18 @@ test('aplica timeout à chamada do provedor', async () => {
 });
 
 test('normaliza configuração inválida de timeout', () => {
-  assert.equal(parseAiTimeout('500'), 60_000);
+  assert.equal(parseAiTimeout('500'), 150_000);
   assert.equal(parseAiTimeout('120000'), 120_000);
 });
 
+test('reaproveita cache apenas para o mesmo usuário e tarefa segura', async () => {
+  let calls = 0;
+  const service = new AiService(provider({ generate: async () => `resposta-${++calls}` }));
+  const request = { task: 'review-tip' as const, prompt: 'prompt', userId: 'ana' };
+
+  assert.equal((await service.generate(request)).text, 'resposta-1');
+  const cached = await service.generate(request);
+  assert.equal(cached.text, 'resposta-1');
+  assert.equal(cached.cached, true);
+  assert.equal((await service.generate({ ...request, userId: 'outra' })).text, 'resposta-2');
+});

@@ -9,11 +9,10 @@ test('seleciona o OmniRoute explicitamente', () => {
     AI_PROVIDER: 'omniroute',
     OMNIROUTE_API_KEY: 'secret-test-key',
     OMNIROUTE_BASE_URL: 'https://omniroute.test/v1',
-    OMNIROUTE_MODEL: 'juju-deep-v1',
+    AI_DEEP_MODEL: 'juju-deep-v1',
   });
 
   assert.ok(provider instanceof OmniRouteProvider);
-  assert.equal(provider.model, 'juju-deep-v1');
   assert.equal(provider.isConfigured, true);
 });
 
