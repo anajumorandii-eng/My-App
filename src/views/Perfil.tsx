@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useUserProfile } from '../hooks/useUserProfile';
+import { useAuth } from '../context/AuthContext';
+import { disableReviewReminders, enableReviewReminders, getCurrentPushSubscription, isPushSupported } from '../lib/push';
 import {
   UserCircle,
   CloudOff,
@@ -9,6 +11,8 @@ import {
   BatteryFull,
   Save,
   Brain,
+  Bell,
+  BellOff,
 } from 'lucide-react';
 
 const KNOWN_EXAMS = ['ENEM', 'FUVEST', 'UNICAMP', 'UNESP', 'FAMERP', 'UNIFESP'];
@@ -26,15 +30,47 @@ function toggleItem(list: string[], item: string): string[] {
 
 export default function Perfil() {
   const { profile, updateProfile, isPersisted, syncError } = useUserProfile();
+  const { isConnected } = useAuth();
   const [courseDraft, setCourseDraft] = useState(profile.targetCourse);
   const [hoursDraft, setHoursDraft] = useState(profile.availableHoursPerWeek);
   const [savedFlash, setSavedFlash] = useState(false);
+  const [reminderState, setReminderState] = useState<'unknown' | 'on' | 'off'>('unknown');
+  const [reminderError, setReminderError] = useState<string | null>(null);
+  const [reminderBusy, setReminderBusy] = useState(false);
 
   // Keep local drafts in sync once the persisted profile finishes loading.
   useEffect(() => {
     setCourseDraft(profile.targetCourse);
     setHoursDraft(profile.availableHoursPerWeek);
   }, [profile.targetCourse, profile.availableHoursPerWeek]);
+
+  useEffect(() => {
+    if (!isPushSupported()) {
+      setReminderState('off');
+      return;
+    }
+    getCurrentPushSubscription()
+      .then((subscription) => setReminderState(subscription ? 'on' : 'off'))
+      .catch(() => setReminderState('off'));
+  }, []);
+
+  const toggleReminders = async () => {
+    setReminderError(null);
+    setReminderBusy(true);
+    try {
+      if (reminderState === 'on') {
+        await disableReviewReminders();
+        setReminderState('off');
+      } else {
+        await enableReviewReminders();
+        setReminderState('on');
+      }
+    } catch (error) {
+      setReminderError(error instanceof Error ? error.message : 'Não foi possível atualizar as notificações.');
+    } finally {
+      setReminderBusy(false);
+    }
+  };
 
   const flashSaved = () => {
     setSavedFlash(true);
@@ -219,6 +255,34 @@ export default function Perfil() {
         <p className="text-xs text-zinc-500 mt-2">
           Calculado automaticamente pela JUJU a partir do seu histórico de estudo — não é editável diretamente.
         </p>
+      </div>
+
+      <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 shadow-sm">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center text-indigo-600 dark:text-indigo-400">
+            {reminderState === 'on' ? <Bell className="w-5 h-5 mr-2" /> : <BellOff className="w-5 h-5 mr-2" />}
+            <h3 className="font-medium text-zinc-900 dark:text-zinc-100">Lembretes de revisão</h3>
+          </div>
+          <button
+            onClick={toggleReminders}
+            disabled={reminderBusy || !isConnected || !isPushSupported()}
+            className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors disabled:opacity-50 ${
+              reminderState === 'on'
+                ? 'bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 hover:bg-zinc-200 dark:hover:bg-zinc-700'
+                : 'bg-indigo-600 hover:bg-indigo-700 text-white'
+            }`}
+          >
+            {reminderBusy ? 'Aguarde...' : reminderState === 'on' ? 'Desativar' : 'Ativar'}
+          </button>
+        </div>
+        <p className="text-xs text-zinc-500 mt-2">
+          {!isConnected
+            ? 'Conecte sua conta Google para ativar notificações.'
+            : !isPushSupported()
+            ? 'Seu navegador não suporta notificações push.'
+            : 'Quando ativado, você recebe um aviso quando houver tópicos urgentes esperando revisão.'}
+        </p>
+        {reminderError && <p className="text-xs text-rose-500 mt-2">{reminderError}</p>}
       </div>
 
       <div className="flex items-center text-xs text-zinc-400">

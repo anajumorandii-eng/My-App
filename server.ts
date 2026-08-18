@@ -13,6 +13,8 @@ import { getFirestore } from 'firebase-admin/firestore';
 import { FirestoreDailyQuotaStore } from './server/ai/firestoreQuotaStore';
 import { FirestoreAiMetricsRecorder } from './server/ai/metrics';
 import { createAdminRouter } from './server/admin/routes';
+import { createPushRouter, createReviewReminderRouter } from './server/push/routes';
+import { configureWebPush, loadVapidConfig } from './server/push/webPush';
 
 const app = express();
 const PORT = Number(process.env.PORT) || 3000;
@@ -32,6 +34,11 @@ const dailyQuotaStore = process.env.AI_QUOTA_STORE === 'firestore'
 const aiMetrics = process.env.AI_METRICS_STORE === 'firestore'
   ? new FirestoreAiMetricsRecorder(getFirestore(getFirebaseAdminApp()))
   : undefined;
+
+// Web Push for review reminders. Both routers still mount even when VAPID
+// isn't configured yet; they just respond 503 until the keys are set.
+const vapidConfig = loadVapidConfig();
+if (vapidConfig) configureWebPush(vapidConfig);
 
 // OAuth config
 const GOOGLE_CLIENT_ID = process.env.GOOGLE_CLIENT_ID;
@@ -105,6 +112,8 @@ app.get('/api/drive/files', async (req, res) => {
 // AI routes preserve their public paths and `{ text }` response contract.
 app.use('/api/ai', firebaseAuthMiddleware(), createAiRateLimit(), createAiDailyLimit({ store: dailyQuotaStore }), createAiRouter(aiService, aiMetrics));
 app.use('/api/admin', firebaseAuthMiddleware(), requireAdmin, createAdminRouter(getFirestore(getFirebaseAdminApp())));
+app.use('/api/push', createPushRouter(getFirestore(getFirebaseAdminApp()), vapidConfig?.publicKey, firebaseAuthMiddleware()));
+app.use('/api/push', createReviewReminderRouter(getFirestore(getFirebaseAdminApp()), vapidConfig, process.env.CRON_SECRET));
 
 // Vite & Static file serving
 async function startServer() {
