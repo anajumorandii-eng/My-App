@@ -1,6 +1,5 @@
 import type { AiGenerationRequest, AiProvider } from './types';
 
-const DEFAULT_BASE_URL = 'https://instance-20260813-1047.tail98f64c.ts.net/v1';
 const DEFAULT_MODEL = 'juju-deep-v1';
 
 type FetchLike = typeof fetch;
@@ -21,7 +20,7 @@ export class OmniRouteProvider implements AiProvider {
 
   constructor(
     private readonly apiKey: string | undefined,
-    baseUrl = DEFAULT_BASE_URL,
+    baseUrl = '',
     model = DEFAULT_MODEL,
     private readonly fetchImpl: FetchLike = fetch,
   ) {
