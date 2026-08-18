@@ -22,3 +22,14 @@ test('preserva Gemini como fallback compatível', () => {
   assert.ok(provider instanceof GeminiProvider);
 });
 
+test('aceita a configuração do proxy Tailscale', () => {
+  const provider = createAiProvider({
+    AI_PROVIDER: 'omniroute',
+    OMNIROUTE_API_KEY: 'secret-test-key',
+    OMNIROUTE_BASE_URL: 'https://omniroute.test/v1',
+    OMNIROUTE_PROXY_URL: 'http://localhost:1055',
+  });
+
+  assert.ok(provider instanceof OmniRouteProvider);
+  assert.equal(provider.isConfigured, true);
+});
