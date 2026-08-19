@@ -1,7 +1,7 @@
 import { doc, getDoc, setDoc, collection, getDocs, query, orderBy } from 'firebase/firestore';
 import { db } from './firestore';
 import { TopicMastery, ErrorLog, UserProfile, DiscursiveAttempt, BacklogItem } from '../types';
-import { mockMastery, mockProfile, mockBacklog } from '../data/mockData';
+import { mockMastery, mockProfile, mockBacklog, mockTopics } from '../data/mockData';
 
 export interface QuestionAttempt {
   id: string;
@@ -11,11 +11,34 @@ export interface QuestionAttempt {
   date: string;
 }
 
+// Keeps a saved mastery array in sync with the current topic catalog: a topic
+// added or renamed in mockTopics (e.g. the curriculum being replaced with a
+// real one) gets a fresh baseline entry instead of silently having no
+// mastery row at all, and rows for topics that no longer exist are dropped
+// instead of lingering as orphaned data nobody reads.
+function reconcileMastery(saved: TopicMastery[]): TopicMastery[] {
+  const byTopicId = new Map(saved.map((item) => [item.topicId, item]));
+  return mockTopics.map((topic) => byTopicId.get(topic.id) ?? {
+    topicId: topic.id,
+    level: 0,
+    uncertainty: 0.9,
+    lastReviewed: new Date(0).toISOString(),
+    errorSignals: 0,
+  });
+}
+
 export async function getUserMastery(uid: string): Promise<TopicMastery[]> {
   const ref = doc(db, 'users', uid, 'data', 'mastery');
   const snap = await getDoc(ref);
   if (snap.exists()) {
-    return (snap.data().items as TopicMastery[]) ?? [];
+    const saved = (snap.data().items as TopicMastery[]) ?? [];
+    const reconciled = reconcileMastery(saved);
+    const changed = reconciled.length !== saved.length
+      || reconciled.some((item, i) => item.topicId !== saved[i]?.topicId);
+    if (changed) {
+      await setDoc(ref, { items: reconciled });
+    }
+    return reconciled;
   }
   // First time this user shows up: seed with the demo dataset so the
   // app isn't empty, then every change from here on is their own.
