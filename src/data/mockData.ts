@@ -962,6 +962,161 @@ export const mockQuestions: Question[] = [
     explanation: 'O cálcio (grupo 2, 2 elétrons de valência) forma o cátion Ca²⁺ e o bromo (grupo 17, 7 elétrons de valência) forma o ânion Br⁻; a fórmula neutra correta é CaBr2. Por ser um composto iônico, ao dissolver-se em água ele se dissocia em íons livres, tornando a solução condutora de eletricidade.',
     difficulty: 'easy',
     examSource: { board: 'FAMERP', year: 2019, sourceUrl: 'https://www.indagacao.com.br/2019/01/famerp-2019-combinacao-dos-elementos-ca-e-br-forma-uma-substancia-soluvel-em-agua.html' }
+  },
+  // Biologia — Fisiologia Vegetal
+  {
+    id: 'q_bio_fisio_vegetal_1',
+    topicId: 'bio_fisio_vegetal',
+    subject: 'Biologia',
+    prompt: 'Qual estrutura é responsável por conduzir a seiva bruta (água e sais minerais) das raízes até as folhas em uma planta vascular?',
+    options: [
+      { id: 'a', text: 'Floema' },
+      { id: 'b', text: 'Xilema' },
+      { id: 'c', text: 'Câmbio' },
+      { id: 'd', text: 'Epiderme' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'O xilema (ou lenho) é o tecido condutor responsável pelo transporte ascendente da seiva bruta, impulsionado principalmente pela transpiração nas folhas (teoria da tensão-coesão-adesão). O floema, por sua vez, conduz a seiva elaborada (açúcares) produzida na fotossíntese.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_bio_fisio_vegetal_2',
+    topicId: 'bio_fisio_vegetal',
+    subject: 'Biologia',
+    prompt: 'O fototropismo positivo do caule em direção à luz é explicado pela ação de qual hormônio vegetal, que se acumula no lado sombreado e estimula o alongamento celular desse lado?',
+    options: [
+      { id: 'a', text: 'Etileno' },
+      { id: 'b', text: 'Ácido abscísico' },
+      { id: 'c', text: 'Auxina' },
+      { id: 'd', text: 'Citocinina' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'A auxina migra para o lado menos iluminado do caule e estimula o alongamento das células nesse lado, curvando o caule em direção à luz. É a base do modelo clássico de Cholodny-Went para o fototropismo.',
+    difficulty: 'medium'
+  },
+  // Física — Dinâmica Impulsiva
+  {
+    id: 'q_fis_dinamica_impulsiva_1',
+    topicId: 'fis_dinamica_impulsiva',
+    subject: 'Física',
+    prompt: 'Um corpo de massa 2 kg tem sua velocidade alterada de 3 m/s para 8 m/s por uma força constante durante 0,5 s. Qual é o impulso dessa força sobre o corpo?',
+    options: [
+      { id: 'a', text: '2,5 N·s' },
+      { id: 'b', text: '5 N·s' },
+      { id: 'c', text: '10 N·s' },
+      { id: 'd', text: '16 N·s' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'O impulso é igual à variação da quantidade de movimento: I = Δp = m·(v - v0) = 2 × (8 - 3) = 10 N·s. Não é necessário usar o tempo diretamente, já que o teorema do impulso relaciona impulso e variação de momento linear.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_dinamica_impulsiva_2',
+    topicId: 'fis_dinamica_impulsiva',
+    subject: 'Física',
+    prompt: 'Dois patinadores em repouso sobre o gelo (sem atrito) se empurram. O patinador A tem massa 60 kg e o patinador B tem massa 40 kg. Se A se afasta com velocidade de 2 m/s, qual é a velocidade de afastamento de B?',
+    options: [
+      { id: 'a', text: '1,3 m/s' },
+      { id: 'b', text: '2 m/s' },
+      { id: 'c', text: '3 m/s' },
+      { id: 'd', text: '4 m/s' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'Como o sistema parte do repouso e não há forças externas horizontais, a quantidade de movimento total se conserva e é igual a zero: mA·vA = mB·vB → 60 × 2 = 40 × vB → vB = 3 m/s, em sentido oposto ao de A.',
+    difficulty: 'medium'
+  },
+  // Física — Estática dos Corpos Sólidos e dos Fluidos
+  {
+    id: 'q_fis_estatica_1',
+    topicId: 'fis_estatica',
+    subject: 'Física',
+    prompt: 'Uma barra horizontal e homogênea de 4 m de comprimento está apoiada em um único ponto de apoio. Para que a barra fique em equilíbrio estático, esse ponto de apoio deve estar localizado:',
+    options: [
+      { id: 'a', text: 'Em uma das extremidades da barra' },
+      { id: 'b', text: 'No centro de massa da barra' },
+      { id: 'c', text: 'A 1 m de uma das extremidades' },
+      { id: 'd', text: 'Em qualquer ponto, desde que a barra seja rígida' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Para uma barra homogênea em equilíbrio apoiada em um único ponto, o apoio deve coincidir com o centro de massa (nesse caso, o ponto médio), de forma que o torque do peso em relação ao apoio seja nulo.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_fis_estatica_2',
+    topicId: 'fis_estatica',
+    subject: 'Física',
+    prompt: 'Um objeto de volume 200 cm³ é totalmente submerso em água (densidade 1 g/cm³). Considerando g = 10 m/s², qual é o valor do empuxo exercido pela água sobre o objeto?',
+    options: [
+      { id: 'a', text: '0,2 N' },
+      { id: 'b', text: '2 N' },
+      { id: 'c', text: '20 N' },
+      { id: 'd', text: '200 N' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Pelo Princípio de Arquimedes, E = ρ_fluido × V × g = 1000 kg/m³ × 200×10⁻⁶ m³ × 10 = 2 N. O empuxo é igual ao peso do volume de líquido deslocado pelo objeto.',
+    difficulty: 'medium'
+  },
+  // Física — Eletromagnetismo
+  {
+    id: 'q_fis_eletromagnetismo_1',
+    topicId: 'fis_eletromagnetismo',
+    subject: 'Física',
+    prompt: 'Uma carga elétrica positiva se move para a direita em uma região onde há um campo magnético uniforme apontando para dentro da página. Usando a regra da mão direita, a força magnética sobre a carga aponta para:',
+    options: [
+      { id: 'a', text: 'Cima' },
+      { id: 'b', text: 'Baixo' },
+      { id: 'c', text: 'Fora da página' },
+      { id: 'd', text: 'Dentro da página' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A força magnética é dada por F = qv × B. Apontando os dedos na direção de v (direita) e curvando-os para B (para dentro da página), o polegar aponta para cima — essa é a direção de F para uma carga positiva.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_eletromagnetismo_2',
+    topicId: 'fis_eletromagnetismo',
+    subject: 'Física',
+    prompt: 'Um ímã é aproximado rapidamente de uma espira condutora fechada, fazendo o fluxo magnético através dela aumentar. De acordo com a Lei de Lenz, a corrente induzida na espira:',
+    options: [
+      { id: 'a', text: 'Cria um campo magnético que reforça o aumento do fluxo' },
+      { id: 'b', text: 'Cria um campo magnético que se opõe ao aumento do fluxo' },
+      { id: 'c', text: 'Não é gerada, pois a espira está em repouso' },
+      { id: 'd', text: 'Tem sentido aleatório, imprevisível pela lei' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A Lei de Lenz estabelece que a corrente induzida sempre flui em um sentido que se opõe à variação do fluxo magnético que a gerou (conservação de energia) — nesse caso, criando um campo magnético contrário ao aumento do fluxo do ímã se aproximando.',
+    difficulty: 'medium'
+  },
+  // Português — Redação
+  {
+    id: 'q_por_redacao_1',
+    topicId: 'por_redacao',
+    subject: 'Português',
+    prompt: 'Em uma redação dissertativo-argumentativa, o uso de um dado estatístico de uma fonte confiável (como IBGE ou OMS) logo na introdução tem principalmente a função de:',
+    options: [
+      { id: 'a', text: 'Substituir a necessidade de uma tese' },
+      { id: 'b', text: 'Contextualizar e legitimar o problema abordado, sustentando a argumentação com repertório sociocultural' },
+      { id: 'c', text: 'Encerrar a discussão sobre o tema logo no início' },
+      { id: 'd', text: 'Preencher espaço quando faltam argumentos próprios' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Um repertório sociocultural produtivo — como um dado estatístico pertinente — contextualiza o problema e fortalece a argumentação ao ancorá-la em uma fonte externa confiável, mas deve estar articulado ao argumento, não apenas citado.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_por_redacao_2',
+    topicId: 'por_redacao',
+    subject: 'Português',
+    prompt: 'Qual das alternativas abaixo caracteriza uma proposta de intervenção completa e bem estruturada, nos moldes cobrados pelo ENEM e por vestibulares que adotam critério semelhante?',
+    options: [
+      { id: 'a', text: 'Uma sugestão genérica, como "a sociedade deveria mudar", sem detalhamento' },
+      { id: 'b', text: 'Uma ação com agente definido, meio de execução, finalidade e, quando possível, detalhamento — conectada aos argumentos desenvolvidos no texto' },
+      { id: 'c', text: 'A repetição da tese apresentada na introdução' },
+      { id: 'd', text: 'Uma crítica ao governo sem propor nenhuma ação concreta' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Uma proposta de intervenção bem avaliada precisa explicitar quem deve agir (agente), como (meio/modo), com que objetivo (finalidade) e, idealmente, detalhar a ação — sempre coerente com os argumentos já desenvolvidos no texto, não uma ideia solta ao final.',
+    difficulty: 'medium'
   }
 ];
 
@@ -1141,6 +1296,46 @@ export const mockPodcastEpisodes: PodcastEpisode[] = [
     subject: 'Química',
     durationMinutes: 5,
     script: 'Uma solução é uma mistura homogênea entre um soluto, presente em menor quantidade, e um solvente, presente em maior quantidade. A concentração mede a proporção entre eles, podendo ser expressa em gramas por litro, ou em quantidade de matéria, os mols por litro. Uma solução está saturada quando atingiu o limite máximo de soluto que consegue dissolver naquela temperatura; além desse ponto, o excesso forma um corpo de fundo. Esse conteúdo é a base para entender desde soro fisiológico até reações em laboratório, conectando química com aplicações do dia a dia e da medicina.'
+  },
+  {
+    id: 'pod_bio_fisio_vegetal',
+    topicId: 'bio_fisio_vegetal',
+    title: 'Fisiologia vegetal: como a planta bebe água e "decide" para onde crescer',
+    subject: 'Biologia',
+    durationMinutes: 5,
+    script: 'As plantas vasculares têm dois sistemas de transporte: o xilema, que leva água e sais minerais das raízes até as folhas, impulsionado pela transpiração; e o floema, que distribui os açúcares produzidos na fotossíntese para o resto da planta. Esse fluxo ascendente de seiva bruta depende de um efeito em cadeia de coesão entre moléculas de água, a chamada teoria da tensão-coesão-adesão. Além do transporte, hormônios vegetais como a auxina comandam o crescimento direcionado: quando a luz vem de um lado só, a auxina se acumula no lado sombreado e faz aquele lado crescer mais, curvando o caule em direção à luz — o fototropismo.'
+  },
+  {
+    id: 'pod_fis_dinamica_impulsiva',
+    topicId: 'fis_dinamica_impulsiva',
+    title: 'Impulso e colisões: a física por trás de uma batida',
+    subject: 'Física',
+    durationMinutes: 5,
+    script: 'A quantidade de movimento de um corpo é o produto entre sua massa e sua velocidade, e o impulso de uma força é exatamente a variação dessa quantidade de movimento. Em qualquer colisão, se não há forças externas relevantes agindo no sistema, a quantidade de movimento total se conserva — é o que permite calcular a velocidade dos corpos antes e depois de uma batida sem precisar saber os detalhes da força de contato entre eles. Colisões podem ser elásticas, quando a energia cinética também se conserva, ou inelásticas, quando parte dessa energia se transforma em calor, som ou deformação. Esse raciocínio de conservação é uma das ferramentas mais poderosas da física para o vestibular.'
+  },
+  {
+    id: 'pod_fis_estatica',
+    title: 'Estática e hidrostática: equilíbrio de corpos e empuxo',
+    topicId: 'fis_estatica',
+    subject: 'Física',
+    durationMinutes: 5,
+    script: 'Um corpo está em equilíbrio estático quando a força resultante e o torque resultante sobre ele são nulos. O torque, ou momento de uma força, depende não só da intensidade da força, mas também da distância dela até o ponto de rotação — por isso uma barra apoiada em um único ponto só fica em equilíbrio se esse ponto coincidir com o centro de massa. Já na hidrostática, o Princípio de Arquimedes explica por que objetos flutuam ou afundam: todo corpo submerso em um fluido recebe um empuxo para cima, igual ao peso do volume de fluido que ele desloca. Se esse empuxo for maior que o peso do objeto, ele flutua; se for menor, afunda.'
+  },
+  {
+    id: 'pod_fis_eletromagnetismo',
+    topicId: 'fis_eletromagnetismo',
+    title: 'Eletromagnetismo: campos magnéticos, força e indução',
+    subject: 'Física',
+    durationMinutes: 6,
+    script: 'Cargas elétricas em movimento dentro de um campo magnético sofrem uma força perpendicular tanto à velocidade quanto ao campo, calculada com a regra da mão direita. Esse é o princípio por trás de motores elétricos. O caminho inverso também funciona: quando o fluxo magnético através de um circuito varia, uma corrente elétrica é induzida nele — é a chamada indução eletromagnética, base dos geradores. A Lei de Lenz garante que essa corrente induzida sempre se oponha à variação que a criou, um reflexo direto da conservação de energia. Entender essa relação de mão dupla entre eletricidade e magnetismo é essencial para as questões de eletromagnetismo do vestibular.'
+  },
+  {
+    id: 'pod_por_redacao',
+    topicId: 'por_redacao',
+    title: 'Redação nota 1000: repertório, argumentação e proposta',
+    subject: 'Português',
+    durationMinutes: 6,
+    script: 'Uma boa redação dissertativo-argumentativa começa com uma tese clara logo na introdução, seguida por parágrafos de desenvolvimento que sustentam essa tese com argumentos consistentes. O repertório sociocultural — dados, referências históricas, citações — só tem valor quando está articulado ao argumento, explicando por que aquela informação sustenta o que você está defendendo, e não apenas jogado no texto. A conclusão precisa trazer uma proposta de intervenção completa: quem faz (agente), como faz (meio), com que objetivo (finalidade) e, sempre que possível, um detalhamento da ação, tudo conectado aos argumentos já desenvolvidos. Coesão entre parágrafos e domínio da norma culta fecham o pacote que as bancas mais valorizam.'
   }
 ];
 
