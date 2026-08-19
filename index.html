@@ -6,8 +6,14 @@
     <meta name="color-scheme" content="light dark" />
     <meta name="theme-color" content="#fafafa" id="theme-color-meta" />
     <link rel="manifest" href="/manifest.webmanifest" />
+    <!-- Light is the fallback for browsers that ignore `media` on these
+         link tags; iOS 18+ and current desktop browsers pick the variant
+         matching the system theme. -->
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" media="(prefers-color-scheme: dark)" href="/apple-touch-icon-dark.png" />
     <link rel="icon" href="/icon-192.png" />
+    <link rel="icon" href="/icon-192.png" media="(prefers-color-scheme: light)" />
+    <link rel="icon" href="/icon-192-dark.png" media="(prefers-color-scheme: dark)" />
     <!-- Required for iOS to launch as a standalone app and expose the Web
          Push API — Safari only grants push permission to apps added to the
          Home Screen, never to a regular browser tab. -->
