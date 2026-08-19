@@ -32,6 +32,16 @@ export interface ErrorLog {
   aiHypothesis?: string;
 }
 
+// Por que uma ação foi recomendada — mostrado em "Por que isso?" no plano diário.
+export type RecommendationReason =
+  | 'dominio_insuficiente'
+  | 'erro_recorrente'
+  | 'revisao_urgente'
+  | 'prerequisito_bloqueado'
+  | 'incidencia_banca_prioritaria'
+  | 'proximidade_prova'
+  | 'tempo_disponivel';
+
 export interface StudyAction {
   id: string;
   type: 'review' | 'practice' | 'theory' | 'error_analysis';
@@ -40,6 +50,40 @@ export interface StudyAction {
   subject: string;
   estimatedMinutes: number;
   priorityScore: number; // Assigned by Efficiency Engine
+  reasons: RecommendationReason[];
+}
+
+// Peso e foco de fase que a estudante atribui a uma banca já marcada como
+// ativa em UserProfile.targetExams — controla o quanto a proximidade e a
+// incidência daquela banca influenciam o plano, sem deixar a prova mais
+// próxima sequestrar o plano se ela não for prioritária.
+export interface BoardWeight {
+  board: string; // mesmo valor usado em UserProfile.targetExams / VestibularExam.board
+  weight: number; // 0 a 1
+  phaseFocus: '1a-fase' | '2a-fase' | 'ambas';
+}
+
+export interface StudentGoals {
+  primaryGoal: string;
+  secondaryGoals: string[];
+  boardWeights: BoardWeight[];
+}
+
+// Motivo estruturado de discordância de uma recomendação — registrado, mas
+// não altera o plano silenciosamente (a estudante decide, não a IA).
+export type DisagreeReason =
+  | 'ja_estudei'
+  | 'sem_material'
+  | 'nao_consigo_agora'
+  | 'prioridade_errada'
+  | 'quero_outra_atividade';
+
+export interface PlanFeedback {
+  id: string;
+  actionId: string;
+  topicId: string;
+  reason: DisagreeReason;
+  date: string;
 }
 
 export interface CalendarEvent {

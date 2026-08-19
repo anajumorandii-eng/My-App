@@ -1,7 +1,7 @@
 import { doc, getDoc, setDoc, collection, getDocs, query, orderBy } from 'firebase/firestore';
 import { db } from './firestore';
-import { TopicMastery, ErrorLog, UserProfile, DiscursiveAttempt, BacklogItem } from '../types';
-import { mockMastery, mockProfile, mockBacklog, mockTopics } from '../data/mockData';
+import { TopicMastery, ErrorLog, UserProfile, DiscursiveAttempt, BacklogItem, StudentGoals, PlanFeedback } from '../types';
+import { mockMastery, mockProfile, mockBacklog, mockTopics, mockStudentGoals } from '../data/mockData';
 
 export interface QuestionAttempt {
   id: string;
@@ -112,4 +112,32 @@ export async function getUserBacklog(uid: string): Promise<BacklogItem[]> {
 export async function saveUserBacklog(uid: string, items: BacklogItem[]): Promise<void> {
   const ref = doc(db, 'users', uid, 'data', 'backlog');
   await setDoc(ref, { items });
+}
+
+export async function getStudentGoals(uid: string): Promise<StudentGoals> {
+  const ref = doc(db, 'users', uid, 'data', 'goals');
+  const snap = await getDoc(ref);
+  if (snap.exists()) {
+    return snap.data() as StudentGoals;
+  }
+  await setDoc(ref, mockStudentGoals);
+  return mockStudentGoals;
+}
+
+export async function saveStudentGoals(uid: string, goals: StudentGoals): Promise<void> {
+  const ref = doc(db, 'users', uid, 'data', 'goals');
+  await setDoc(ref, goals);
+}
+
+// Feedback estruturado de "Discordo" numa recomendação — só registrado, o
+// plano não muda silenciosamente a partir disso (a estudante decide).
+export async function getPlanFeedback(uid: string): Promise<PlanFeedback[]> {
+  const ref = collection(db, 'users', uid, 'planFeedback');
+  const snap = await getDocs(query(ref, orderBy('date', 'desc')));
+  return snap.docs.map((d) => d.data() as PlanFeedback);
+}
+
+export async function addPlanFeedback(uid: string, feedback: PlanFeedback): Promise<void> {
+  const ref = doc(db, 'users', uid, 'planFeedback', feedback.id);
+  await setDoc(ref, feedback);
 }
