@@ -6,18 +6,30 @@ import { Topic, TopicMastery, UserProfile, ErrorLog, Question, PodcastEpisode, S
 export const mockTopics: Topic[] = [
   // Biologia
   {
-    id: 'bio_celular', name: 'Biologia Celular', subject: 'Biologia', prerequisites: [],
+    id: 'bio_estrutura_fisio_celular', name: 'Estrutura e Fisiologia Celular', subject: 'Biologia', prerequisites: [],
     chapters: [
       'Origem da Vida e as Primeiras Células', 'Composição Química Celular: Compostos Inorgânicos',
       'Composição Química Celular: Carboidratos e Lipídios', 'Composição Química Celular: Proteínas e sua Função Estrutural',
-      'Proteínas: Enzimas', 'Membranas Celulares', 'Citoplasma: Estrutura e Componentes I',
-      'Citoplasma: Estrutura e Componentes II', 'Bioenergética: Fermentação e Respiração',
-      'Bioenergética: Fotossíntese e Quimiossíntese', 'Ácidos Nucleicos', 'Biotecnologia',
-      'Núcleo Celular', 'Divisão Celular', 'Mutações Cromossômicas e Gametogênese',
+      'Membranas Celulares', 'Citoplasma: Estrutura e Componentes I', 'Citoplasma: Estrutura e Componentes II',
+      'Núcleo Celular',
     ],
   },
   {
-    id: 'bio_genetica', name: 'Genética', subject: 'Biologia', prerequisites: ['bio_celular'],
+    id: 'bio_metabolismo_energetico', name: 'Metabolismo Energético', subject: 'Biologia', prerequisites: ['bio_estrutura_fisio_celular'],
+    chapters: [
+      'Proteínas: Enzimas', 'Bioenergética: Fermentação e Respiração', 'Bioenergética: Fotossíntese e Quimiossíntese',
+    ],
+  },
+  {
+    id: 'bio_codigo_genetico_sintese', name: 'Código Genético e Síntese Proteica', subject: 'Biologia', prerequisites: ['bio_estrutura_fisio_celular'],
+    chapters: ['Ácidos Nucleicos', 'Divisão Celular', 'Mutações Cromossômicas e Gametogênese'],
+  },
+  {
+    id: 'bio_biotecnologia', name: 'Biotecnologia', subject: 'Biologia', prerequisites: ['bio_codigo_genetico_sintese'],
+    chapters: ['Biotecnologia'],
+  },
+  {
+    id: 'bio_genetica', name: 'Genética', subject: 'Biologia', prerequisites: ['bio_codigo_genetico_sintese'],
     chapters: [
       'Introdução à Genética', 'Alelos Múltiplos e Herança dos Grupos Sanguíneos', 'Herança Sexual',
       'Segunda Lei de Mendel', 'Segunda Lei de Mendel e Interação Gênica', 'Ligação Gênica', 'Mutações Gênicas',
@@ -54,11 +66,11 @@ export const mockTopics: Topic[] = [
     ],
   },
   {
-    id: 'bio_microbiologia', name: 'Microbiologia e Virologia', subject: 'Biologia', prerequisites: ['bio_celular'],
+    id: 'bio_microbiologia', name: 'Microbiologia e Virologia', subject: 'Biologia', prerequisites: ['bio_estrutura_fisio_celular'],
     chapters: ['Procariotos', 'Vírus'],
   },
   {
-    id: 'bio_fisio_animal', name: 'Fisiologia Animal e Humana', subject: 'Biologia', prerequisites: ['bio_celular'],
+    id: 'bio_fisio_animal', name: 'Fisiologia Animal e Humana', subject: 'Biologia', prerequisites: ['bio_estrutura_fisio_celular'],
     chapters: [
       'Embriologia Animal', 'Fisiologia da Sustentação e da Locomoção', 'Fisiologia da Digestão',
       'Sangue e Imunologia', 'Coração e Vasos Sanguíneos', 'Fisiologia da Respiração', 'Fisiologia da Excreção',
@@ -76,28 +88,60 @@ export const mockTopics: Topic[] = [
   },
   // Matemática
   {
-    id: 'mat_algebrica', name: 'Modelagem Algébrica de Problemas', subject: 'Matemática', prerequisites: [],
+    id: 'mat_aritmetica_proporcionalidade', name: 'Aritmética e Proporcionalidade', subject: 'Matemática', prerequisites: [],
+    chapters: ['Potências e Radicais', 'Razão e Proporção', 'Porcentagem'],
+  },
+  {
+    id: 'mat_teoria_numeros', name: 'Teoria dos Números Inteiros', subject: 'Matemática', prerequisites: [],
+    chapters: ['O Sistema de Numeração Decimal', 'Introdução à Teoria dos Números Inteiros'],
+  },
+  {
+    id: 'mat_sequencias_matrizes', name: 'Sequências, Matrizes e Sistemas Lineares', subject: 'Matemática', prerequisites: ['mat_aritmetica_proporcionalidade'],
     chapters: [
-      'Técnicas Algébricas', 'Igualdades', 'Desigualdades', 'Modelagem Algébrica de Problemas I',
-      'Equações do 2º Grau', 'Modelagem Algébrica de Problemas II', 'Introdução às Funções',
-      'Transformações em Gráficos de Funções', 'Composição de Funções', 'Inversão de Funções',
-      'Funções Bijetoras', 'Função Constante e Função Afim', 'Função Quadrática', 'Estudo do Sinal de Funções',
-      'A Trigonometria dos Números Reais', 'Outras Razões Trigonométricas', 'A Relação Fundamental da Trigonometria',
-      'Transformações Trigonométricas', 'Funções Trigonométricas', 'Módulo de um Número Real',
-      'Introdução ao Modelo Exponencial', 'Introdução aos Logaritmos', 'Equações e Funções Logarítmicas',
-      'Modelagem Exponencial de Problemas', 'Números Complexos', 'Polinômios', 'Equações Polinomiais',
+      'Introdução às Sequências', 'Progressão Aritmética', 'Progressão Geométrica', 'Sequências',
+      'Sistemas de Equações', 'Tabelas e Matrizes', 'Multiplicação de Matrizes', 'Determinantes',
+      'Discussão de Sistemas Lineares', 'Médias',
     ],
   },
   {
-    id: 'mat_geometrica', name: 'Modelagem Geométrica de Problemas', subject: 'Matemática', prerequisites: [],
+    id: 'mat_combinatoria', name: 'Análise Combinatória', subject: 'Matemática', prerequisites: ['mat_aritmetica_proporcionalidade'],
+    chapters: ['Introdução às Técnicas de Contagem', 'O Problema da Fila', 'O Problema do Grupo', 'Técnicas de Contagem'],
+  },
+  {
+    id: 'mat_dados_probabilidade', name: 'Probabilidade e Interpretação de Dados', subject: 'Matemática', prerequisites: ['mat_combinatoria'],
+    chapters: [
+      'Introdução às Probabilidades', 'Operações com Probabilidades', 'Eventos Disjuntos e Eventos Independentes',
+      'Estatística Descritiva',
+    ],
+  },
+  {
+    id: 'mat_geometria_plana', name: 'Geometria Plana', subject: 'Matemática', prerequisites: [],
     chapters: [
       'Introdução à Geometria Plana', 'Ângulos em Triângulos', 'Ângulos em Polígonos', 'Ângulos e Circunferências',
       'Simetrias e Congruências', 'Identificação de Simetrias I', 'Identificação de Simetrias II',
       'A Geometria da Proporcionalidade', 'Semelhança de Triângulos', 'O Ponto Médio e o Baricentro de um Triângulo',
-      'Triângulo Retângulo', 'Trigonometria no Triângulo Retângulo', 'Relações Trigonométricas em Polígonos',
-      'A Geometria Métrica Plana', 'Áreas de Polígonos', 'Área do Círculo e de suas Partes',
-      'Razões entre Áreas de Figuras Planas', 'Áreas de Figuras Planas', 'O Universo Tridimensional',
-      'Cubos e Paralelepípedos', 'Prismas', 'Pirâmides', 'Sólidos de Revolução', 'Razões entre Volumes de Sólidos',
+      'Triângulo Retângulo', 'A Geometria Métrica Plana', 'Áreas de Polígonos', 'Área do Círculo e de suas Partes',
+      'Razões entre Áreas de Figuras Planas', 'Áreas de Figuras Planas',
+    ],
+  },
+  {
+    id: 'mat_trigonometria', name: 'Trigonometria', subject: 'Matemática', prerequisites: ['mat_geometria_plana'],
+    chapters: [
+      'Trigonometria no Triângulo Retângulo', 'Relações Trigonométricas em Polígonos',
+      'A Trigonometria dos Números Reais', 'Outras Razões Trigonométricas', 'A Relação Fundamental da Trigonometria',
+      'Transformações Trigonométricas', 'Funções Trigonométricas',
+    ],
+  },
+  {
+    id: 'mat_geometria_espacial', name: 'Geometria Espacial', subject: 'Matemática', prerequisites: ['mat_geometria_plana'],
+    chapters: [
+      'O Universo Tridimensional', 'Cubos e Paralelepípedos', 'Prismas', 'Pirâmides', 'Sólidos de Revolução',
+      'Razões entre Volumes de Sólidos',
+    ],
+  },
+  {
+    id: 'mat_geometria_analitica', name: 'Geometria Analítica', subject: 'Matemática', prerequisites: ['mat_geometria_plana'],
+    chapters: [
       'Introdução à Geometria Analítica', 'Lugar Geométrico e Equação da Circunferência', 'Estudo Analítico da Reta',
       'Posições Relativas entre Duas Retas', 'Distância entre um Ponto e uma Reta',
       'Posições Relativas entre uma Reta e uma Circunferência', 'Introdução ao Estudo Analítico das Cônicas',
@@ -105,41 +149,66 @@ export const mockTopics: Topic[] = [
     ],
   },
   {
-    id: 'mat_numerica', name: 'Modelagem Numérica de Problemas', subject: 'Matemática', prerequisites: ['mat_algebrica'],
+    id: 'mat_equacoes', name: 'Equações, Desigualdades e Modelagem Algébrica', subject: 'Matemática', prerequisites: ['mat_aritmetica_proporcionalidade'],
     chapters: [
-      'Potências e Radicais', 'Razão e Proporção', 'Porcentagem', 'Introdução às Sequências',
-      'Progressão Aritmética', 'Progressão Geométrica', 'Sequências', 'Sistemas de Equações',
-      'Tabelas e Matrizes', 'Multiplicação de Matrizes', 'Determinantes', 'Discussão de Sistemas Lineares',
-      'Médias', 'O Sistema de Numeração Decimal', 'Introdução à Teoria dos Números Inteiros',
-      'Introdução às Técnicas de Contagem', 'O Problema da Fila', 'O Problema do Grupo', 'Técnicas de Contagem',
-      'Introdução às Probabilidades', 'Operações com Probabilidades', 'Eventos Disjuntos e Eventos Independentes',
-      'Estatística Descritiva',
+      'Técnicas Algébricas', 'Igualdades', 'Desigualdades', 'Modelagem Algébrica de Problemas I',
+      'Equações do 2º Grau', 'Modelagem Algébrica de Problemas II',
     ],
+  },
+  {
+    id: 'mat_funcoes', name: 'Funções', subject: 'Matemática', prerequisites: ['mat_equacoes'],
+    chapters: [
+      'Introdução às Funções', 'Transformações em Gráficos de Funções', 'Composição de Funções',
+      'Inversão de Funções', 'Funções Bijetoras', 'Função Constante e Função Afim', 'Função Quadrática',
+      'Estudo do Sinal de Funções',
+    ],
+  },
+  {
+    id: 'mat_log_exponenciais', name: 'Logaritmos e Exponenciais', subject: 'Matemática', prerequisites: ['mat_funcoes'],
+    chapters: [
+      'Introdução ao Modelo Exponencial', 'Introdução aos Logaritmos', 'Equações e Funções Logarítmicas',
+      'Modelagem Exponencial de Problemas',
+    ],
+  },
+  {
+    id: 'mat_complexos_polinomios', name: 'Números Complexos e Polinômios', subject: 'Matemática', prerequisites: ['mat_equacoes'],
+    chapters: ['Módulo de um Número Real', 'Números Complexos', 'Polinômios', 'Equações Polinomiais'],
   },
   // Física
   {
-    id: 'fis_cinematica', name: 'Cinemática', subject: 'Física', prerequisites: ['mat_algebrica'],
+    id: 'fis_cinematica', name: 'Cinemática Escalar', subject: 'Física', prerequisites: ['mat_funcoes'],
     chapters: [
       'Cinemática Escalar. Conceitos Fundamentais', 'Movimento Uniforme', 'Movimento Uniformemente Variado',
       'O Movimento Circular',
     ],
   },
   {
-    id: 'fis_dinamica', name: 'Dinâmica Newtoniana', subject: 'Física', prerequisites: ['fis_cinematica'],
+    id: 'fis_cinematica_vetorial', name: 'Cinemática Vetorial', subject: 'Física', prerequisites: ['fis_cinematica'],
     chapters: [
       'Grandezas Físicas e Operações com Vetores', 'Velocidade Vetorial', 'Composição de Movimentos',
-      'Aceleração Vetorial', 'Força e seus Tipos', 'Resultante de um Sistema de Forças', 'As Leis de Newton',
-      'A Força de Contato', 'Sistema de Corpos Interagindo e os Elementos Transmissores de Força',
-      'Plano Inclinado', 'Leis da Gravitação', 'Dinâmica do Movimento Circular',
-      'Analisando Movimentos Contidos em um Plano Vertical', 'Órbitas', 'Balística', 'Movimento Harmônico Simples (MHS)',
+      'Aceleração Vetorial',
     ],
   },
   {
-    id: 'fis_dinamica_impulsiva', name: 'Dinâmica Impulsiva', subject: 'Física', prerequisites: ['fis_dinamica'],
+    id: 'fis_leis_newton', name: 'Leis de Newton e Dinâmica do Movimento Retilíneo', subject: 'Física', prerequisites: ['fis_cinematica_vetorial'],
+    chapters: [
+      'Força e seus Tipos', 'Resultante de um Sistema de Forças', 'As Leis de Newton', 'A Força de Contato',
+      'Sistema de Corpos Interagindo e os Elementos Transmissores de Força', 'Plano Inclinado',
+    ],
+  },
+  {
+    id: 'fis_gravitacao_circular', name: 'Gravitação e Movimento Circular', subject: 'Física', prerequisites: ['fis_leis_newton'],
+    chapters: [
+      'Leis da Gravitação', 'Dinâmica do Movimento Circular', 'Analisando Movimentos Contidos em um Plano Vertical',
+      'Órbitas', 'Balística', 'Movimento Harmônico Simples (MHS)',
+    ],
+  },
+  {
+    id: 'fis_dinamica_impulsiva', name: 'Dinâmica Impulsiva', subject: 'Física', prerequisites: ['fis_leis_newton'],
     chapters: ['Impulso e Quantidade de Movimento', 'Sistemas Isolados e a Conservação da Quantidade de Movimento', 'Colisões'],
   },
   {
-    id: 'fis_energia', name: 'Dinâmica Energética e Transformações de Energia', subject: 'Física', prerequisites: ['fis_dinamica'],
+    id: 'fis_energia', name: 'Dinâmica Energética e Transformações de Energia', subject: 'Física', prerequisites: ['fis_leis_newton'],
     chapters: [
       'Trabalho e Energia: Trabalho de uma Força', 'Trabalho e Energia: Teorema da Energia Cinética',
       'Trabalho e Energia: o Teorema da Energia Potencial', 'Sistemas Conservativos e Sistemas Não Conservativos',
@@ -149,30 +218,41 @@ export const mockTopics: Topic[] = [
     ],
   },
   {
-    id: 'fis_estatica', name: 'Estática dos Corpos Sólidos e dos Fluidos', subject: 'Física', prerequisites: ['fis_dinamica'],
+    id: 'fis_estatica', name: 'Estática dos Corpos Sólidos e dos Fluidos', subject: 'Física', prerequisites: ['fis_leis_newton'],
     chapters: ['Estática', 'Hidrostática: Densidade e Pressão'],
   },
   {
-    id: 'fis_termofisica', name: 'Termofísica', subject: 'Física', prerequisites: [],
+    id: 'fis_calorimetria', name: 'Calorimetria', subject: 'Física', prerequisites: [],
     chapters: [
       'Temperatura, Calor e seus Mecanismos de Transferência', 'Dilatação ou Contração Térmica dos Sólidos e Líquidos',
-      'Calor Sensível e Calor Latente', 'Gases Ideais: Variáveis de Estado e as Transformações Gasosas',
-      'Trabalho da Força de Pressão do Gás', 'Primeira Lei da Termodinâmica',
-      'Primeira Lei da Termodinâmica Aplicada a Algumas Transformações Particulares', 'Máquinas Térmicas e Ciclo de Carnot',
+      'Calor Sensível e Calor Latente',
     ],
   },
   {
-    id: 'fis_eletricidade', name: 'Eletricidade', subject: 'Física', prerequisites: [],
+    id: 'fis_termodinamica_gases', name: 'Termodinâmica dos Gases', subject: 'Física', prerequisites: ['fis_calorimetria'],
+    chapters: [
+      'Gases Ideais: Variáveis de Estado e as Transformações Gasosas', 'Trabalho da Força de Pressão do Gás',
+      'Primeira Lei da Termodinâmica', 'Primeira Lei da Termodinâmica Aplicada a Algumas Transformações Particulares',
+      'Máquinas Térmicas e Ciclo de Carnot',
+    ],
+  },
+  {
+    id: 'fis_eletrostatica', name: 'Eletrostática e Campo Elétrico', subject: 'Física', prerequisites: [],
     chapters: [
       'Eletrostática: Processos de Eletrização e Aplicações', 'Força Elétrica: Lei de Coulomb', 'Campo Elétrico',
       'Energia Potencial e Potencial Elétrico', 'Mapeamento do Campo Elétrico: Linhas de Força e Superfícies Equipotenciais',
       'Campo Elétrico Uniforme: Abordagem Escalar e Abordagem Vetorial', 'Dinâmica das Cargas Elétricas',
+    ],
+  },
+  {
+    id: 'fis_circuitos', name: 'Circuitos Elétricos', subject: 'Física', prerequisites: ['fis_eletrostatica'],
+    chapters: [
       'Corrente Elétrica', 'Potência Elétrica', 'Resistores', 'Medidores Elétricos', 'Geradores', 'Receptores',
       'Circuitos de Malha Única', 'Eletrodinâmica: as Leis de Kirchhoff', 'Capacitores',
     ],
   },
   {
-    id: 'fis_eletromagnetismo', name: 'Eletromagnetismo', subject: 'Física', prerequisites: ['fis_eletricidade'],
+    id: 'fis_eletromagnetismo', name: 'Eletromagnetismo', subject: 'Física', prerequisites: ['fis_circuitos'],
     chapters: [
       'Ímãs, Campo de Indução Magnético devido a Ímãs e Campo Magnético Terrestre',
       'Campo Magnético devido à Corrente em Fio Reto e Espira: Descrição Vetorial e Aplicações',
@@ -182,122 +262,228 @@ export const mockTopics: Topic[] = [
     ],
   },
   {
-    id: 'fis_optica', name: 'Óptica Geométrica', subject: 'Física', prerequisites: [],
+    id: 'fis_optica_geometrica', name: 'Óptica Geométrica', subject: 'Física', prerequisites: [],
     chapters: [
       'Fundamentos da Óptica Geométrica', 'Reflexão em Superfícies Planas', 'Reflexão em Superfícies Esféricas',
       'Refração: Fundamentos, Leis e Aplicações', 'Lentes Esféricas: Estudo Gráfico',
+    ],
+  },
+  {
+    id: 'fis_optica_instrumental', name: 'Óptica Instrumental e da Visão', subject: 'Física', prerequisites: ['fis_optica_geometrica'],
+    chapters: [
       'Estudo Analítico das Lentes Esféricas', 'Equação do Fabricante de Lentes e Associação de Lentes',
       'Óptica da Visão', 'Microscópio e Luneta Astronômica (ou Telescópio Refrator): Noções Básicas',
     ],
   },
   {
-    id: 'fis_ondas', name: 'Oscilações e Ondas', subject: 'Física', prerequisites: [],
+    id: 'fis_ondas_fundamentos', name: 'Fundamentos de Ondas e Oscilações', subject: 'Física', prerequisites: [],
+    chapters: ['Conceitos Básicos', 'Equação Fundamental da Ondulatória'],
+  },
+  {
+    id: 'fis_ondulatoria', name: 'Ondulatória', subject: 'Física', prerequisites: ['fis_ondas_fundamentos'],
     chapters: [
-      'Conceitos Básicos', 'Equação Fundamental da Ondulatória', 'Ondulatória: Ondas Eletromagnéticas',
-      'Ondulatória: Som e suas Propriedades', 'Intensidade Sonora', 'Reflexão, Eco, Reverberação e Refração de Ondas',
-      'Fenômenos Ondulatórios: Análise de Refração e Reflexão em Cordas',
+      'Ondulatória: Ondas Eletromagnéticas', 'Ondulatória: Som e suas Propriedades', 'Intensidade Sonora',
+      'Reflexão, Eco, Reverberação e Refração de Ondas', 'Fenômenos Ondulatórios: Análise de Refração e Reflexão em Cordas',
       'Fenômenos Ondulatórios: Difração, Polarização e Ressonância',
       'Interferência de Ondas: Análise Quantitativa, Aplicações e Batimento',
       'Um Caso Particular de Interferência: Onda Estacionária', 'Ondas Estacionárias em Cordas',
       'Ondas Estacionárias em Tubos', 'Efeito Doppler: Descrição e Estudo Quantitativo',
-      'Noções Básicas de Física Quântica',
     ],
+  },
+  {
+    id: 'fis_fisica_moderna', name: 'Física Moderna', subject: 'Física', prerequisites: ['fis_ondulatoria'],
+    chapters: ['Noções Básicas de Física Quântica'],
   },
   // Química
   {
-    id: 'qui_atomistica', name: 'Atomística e Ligações Químicas', subject: 'Química', prerequisites: [],
+    id: 'qui_modelos_atomicos', name: 'Modelos Atômicos e Estrutura do Átomo', subject: 'Química', prerequisites: [],
+    chapters: ['Evolução dos Modelos Atômicos', 'Organização da Tabela Periódica dos Elementos'],
+  },
+  {
+    id: 'qui_radioatividade', name: 'Radioatividade', subject: 'Química', prerequisites: ['qui_modelos_atomicos'],
+    chapters: ['Radioatividade: o Estudo das Radiações'],
+  },
+  {
+    id: 'qui_polaridade_geometria', name: 'Polaridade das Ligações e Geometria Molecular', subject: 'Química', prerequisites: ['qui_modelos_atomicos'],
     chapters: [
-      'Evolução dos Modelos Atômicos', 'Organização da Tabela Periódica dos Elementos',
-      'Radioatividade: o Estudo das Radiações', 'Ligações Químicas e Alotropia', 'Geometria Molecular',
-      'Polaridade das Ligações e das Moléculas', 'Interações Intermoleculares',
+      'Ligações Químicas e Alotropia', 'Geometria Molecular', 'Polaridade das Ligações e das Moléculas',
+      'Interações Intermoleculares',
     ],
   },
   {
-    id: 'qui_geral', name: 'Química Geral', subject: 'Química', prerequisites: ['qui_atomistica'],
+    id: 'qui_gases', name: 'Gases', subject: 'Química', prerequisites: [],
+    chapters: ['Composição da Matéria: Estados Físicos', 'O Estado Gasoso', 'Estudo dos Gases II'],
+  },
+  {
+    id: 'qui_estequiometria', name: 'Análises Quantitativas e Estequiometria', subject: 'Química', prerequisites: ['qui_gases'],
     chapters: [
-      'Composição da Matéria: Estados Físicos', 'Separação de Misturas',
-      'Transformações Físicas e Químicas e Balanceamento de Equações', 'Massa Atômica, Mol e Massa Molar',
-      'O Estado Gasoso', 'Química Inorgânica', 'Estudo dos Gases II', 'Determinação de Fórmulas Químicas',
-      'Estequiometria: Leis Ponderais', 'Cálculos Estequiométricos',
-      'Equações Iônicas e outras Teorias para Ácidos e Bases', 'Processos de Oxirredução', 'Química Ambiental',
+      'Separação de Misturas', 'Transformações Físicas e Químicas e Balanceamento de Equações',
+      'Massa Atômica, Mol e Massa Molar', 'Determinação de Fórmulas Químicas', 'Estequiometria: Leis Ponderais',
+      'Cálculos Estequiométricos',
     ],
   },
   {
-    id: 'qui_organica', name: 'Química Orgânica', subject: 'Química', prerequisites: ['qui_atomistica'],
+    id: 'qui_inorganica', name: 'Química Inorgânica', subject: 'Química', prerequisites: ['qui_gases'],
+    chapters: ['Química Inorgânica', 'Equações Iônicas e outras Teorias para Ácidos e Bases'],
+  },
+  {
+    id: 'qui_oxirreducao', name: 'Oxirredução', subject: 'Química', prerequisites: ['qui_inorganica'],
+    chapters: ['Processos de Oxirredução', 'Química Ambiental'],
+  },
+  {
+    id: 'qui_organica_fundamentos', name: 'Fundamentos e Nomenclatura Orgânica', subject: 'Química', prerequisites: ['qui_polaridade_geometria'],
     chapters: [
       'Introdução à Química Orgânica', 'Nomenclatura de Compostos Orgânicos',
       'Nomenclatura de Compostos Orgânicos Oxigenados e Nitrogenados',
       'Reconhecimento de Funções Orgânicas e Algumas de suas Propriedades', 'Isomeria', 'Combustíveis Fósseis',
+    ],
+  },
+  {
+    id: 'qui_organica_reacoes', name: 'Reações e Aplicações Orgânicas', subject: 'Química', prerequisites: ['qui_organica_fundamentos'],
+    chapters: [
       'Interpretando Reações Orgânicas', 'Reações de Substituição', 'Reações de Adição',
       'Reações de Oxidação em Hidrocarbonetos', 'Álcoois', 'Ácidos Graxos e Esterificação',
       'Transesterificação (Alcoólise)', 'Acidez e Basicidade (pKa)', 'Polímeros',
     ],
   },
   {
-    id: 'qui_fisico_quimica', name: 'Físico-Química', subject: 'Química', prerequisites: ['qui_geral'],
+    id: 'qui_solucoes', name: 'Soluções', subject: 'Química', prerequisites: [],
+    chapters: ['Dispersões', 'Efeitos Coligativos'],
+  },
+  {
+    id: 'qui_termoquimica', name: 'Termoquímica', subject: 'Química', prerequisites: ['qui_solucoes'],
+    chapters: ['Termoquímica I', 'Termoquímica II'],
+  },
+  {
+    id: 'qui_cinetica', name: 'Cinética Química', subject: 'Química', prerequisites: ['qui_termoquimica'],
+    chapters: ['Cinética Química'],
+  },
+  {
+    id: 'qui_eletroquimica', name: 'Eletroquímica', subject: 'Química', prerequisites: ['qui_cinetica'],
     chapters: [
-      'Dispersões', 'Efeitos Coligativos', 'Termoquímica I', 'Termoquímica II',
-      'Introdução ao Estudo das Pilhas e Baterias', 'Cinética Química', 'Equilíbrios Químicos I',
-      'Eletroquímica de Processos Espontâneos', 'Eletroquímica de Processos não Espontâneos',
-      'Aspectos Quantitativos da Eletroquímica e Metalurgia', 'Deslocamento de Equilíbrio',
-      'Equilíbrios Iônicos', 'Equilíbrios Iônicos II',
+      'Introdução ao Estudo das Pilhas e Baterias', 'Eletroquímica de Processos Espontâneos',
+      'Eletroquímica de Processos não Espontâneos', 'Aspectos Quantitativos da Eletroquímica e Metalurgia',
     ],
+  },
+  {
+    id: 'qui_equilibrio', name: 'Equilíbrio Químico', subject: 'Química', prerequisites: ['qui_cinetica'],
+    chapters: ['Equilíbrios Químicos I', 'Deslocamento de Equilíbrio', 'Equilíbrios Iônicos', 'Equilíbrios Iônicos II'],
   },
   // Geografia
   {
-    id: 'geo_geral', name: 'Geografia Geral', subject: 'Geografia', prerequisites: [],
+    id: 'geo_cartografia', name: 'Cartografia e Fundamentos', subject: 'Geografia', prerequisites: [],
     chapters: [
       'Coordenadas Geográficas', 'Movimentos da Terra', 'Sistema de Fusos Horários', 'Linguagem Cartográfica',
       'Projeções Cartográficas', 'Cartografia Digital', 'Representações Gráficas e Cartográficas',
+    ],
+  },
+  {
+    id: 'geo_climatologia_socioambiental', name: 'Climatologia e Problemas Socioambientais', subject: 'Geografia', prerequisites: ['geo_cartografia'],
+    chapters: [
       'Dinâmica Climática', 'Clima Mundial', 'Geomorfologia Mundial', 'Biogeografia Mundial',
-      'Água na Superfície Terrestre', 'Geopolítica dos Recursos Hídricos', 'Hidrogeografia Mundial',
-      'Desafios Ambientais do Século XXI', 'Geopolítica Ambiental', 'Do Mundo Bipolar ao Multipolar',
-      'Globalização e Processos Econômicos Atuais', 'Geografia das Redes Mundiais',
+      'Água na Superfície Terrestre', 'Desafios Ambientais do Século XXI', 'Geopolítica Ambiental',
+    ],
+  },
+  {
+    id: 'geo_hidrogeografia', name: 'Hidrogeografia', subject: 'Geografia', prerequisites: ['geo_cartografia'],
+    chapters: ['Geopolítica dos Recursos Hídricos', 'Hidrogeografia Mundial'],
+  },
+  {
+    id: 'geo_globalizacao_economica', name: 'Globalização e Geografia Econômica', subject: 'Geografia', prerequisites: ['geo_climatologia_socioambiental'],
+    chapters: [
+      'Do Mundo Bipolar ao Multipolar', 'Globalização e Processos Econômicos Atuais', 'Geografia das Redes Mundiais',
       'Unilateralismo e Multilateralismo', 'Blocos Econômicos', 'União Europeia', 'Desigualdades Globais',
       'Mobilidade Populacional', 'Geografia do Turismo', 'Produção Agrícola Mundial', 'Indústria I', 'Indústria II',
-      'Gedeconomia Mundial', 'Terrorismo Internacional', 'Geografia das Religiões', 'Tensões Geopolíticas na Europa',
+      'Gedeconomia Mundial',
+    ],
+  },
+  {
+    id: 'geo_geopolitica_regional', name: 'Geopolítica Regional Contemporânea', subject: 'Geografia', prerequisites: ['geo_globalizacao_economica'],
+    chapters: [
+      'Terrorismo Internacional', 'Geografia das Religiões', 'Tensões Geopolíticas na Europa',
       'Geopolítica e Geoeconomia da América Latina', 'África no Mundo Atual', 'Geopolítica e Geoeconomia da Ásia',
       'Geografia do Oriente Médio', 'Questão Palestina', 'Conflitos no Mundo Árabe',
     ],
   },
   {
-    id: 'geo_brasil', name: 'Geografia do Brasil', subject: 'Geografia', prerequisites: ['geo_geral'],
+    id: 'geo_fisica_brasil', name: 'Geografia Física do Brasil', subject: 'Geografia', prerequisites: [],
     chapters: [
       'Paisagem, Espaço Geográfico e Ciência Geográfica', 'Geologia e Geomorfologia', 'Relevo Brasileiro',
       'Pedologia', 'Climatologia do Brasil', 'Biogeografia do Brasil I', 'Biogeografia do Brasil II',
       'Políticas Ambientais Brasileiras', 'Hidrogeografia do Brasil', 'Domínios Morfoclimáticos',
+    ],
+  },
+  {
+    id: 'geo_economica_brasil', name: 'Geografia Econômica do Brasil', subject: 'Geografia', prerequisites: ['geo_fisica_brasil'],
+    chapters: [
       'Matriz Energética', 'Combustíveis Fósseis e Biocombustíveis no Brasil', 'Energia Elétrica no Mundo',
-      'Energia Elétrica no Brasil', 'Produção Mineral', 'Dinâmica Demográfica',
-      'Estrutura Étnica e Fluxos Migratórios', 'Estrutura Ativa da População', 'O Espaço Agrário Brasileiro',
-      'O Espaço Industrial Brasileiro I', 'O Espaço Industrial Brasileiro II', 'O Espaço Urbano I',
-      'O Espaço Urbano II', 'As Redes de Transportes', 'Os Fluxos do Comércio Externo',
+      'Energia Elétrica no Brasil', 'Produção Mineral', 'O Espaço Agrário Brasileiro',
+      'O Espaço Industrial Brasileiro I', 'O Espaço Industrial Brasileiro II',
+    ],
+  },
+  {
+    id: 'geo_populacao_urbana_brasil', name: 'Geografia da População e Urbana do Brasil', subject: 'Geografia', prerequisites: ['geo_fisica_brasil'],
+    chapters: [
+      'Dinâmica Demográfica', 'Estrutura Étnica e Fluxos Migratórios', 'Estrutura Ativa da População',
+      'O Espaço Urbano I', 'O Espaço Urbano II', 'As Redes de Transportes', 'Os Fluxos do Comércio Externo',
     ],
   },
   // História
   {
-    id: 'his_geral', name: 'História Geral', subject: 'História', prerequisites: [],
+    id: 'his_idade_antiga', name: 'Idade Antiga', subject: 'História', prerequisites: [],
     chapters: [
       'Introdução à História e Primeiras Civilizações', 'Antiguidade Clássica: o Mundo Grego',
-      'Antiguidade Clássica: o Mundo Romano', 'Alta Idade Média e Feudalismo', 'Baixa Idade Média',
-      'A Primeira Globalização', 'América Espanhola', 'Vida Urbana e Renascimento Cultural', 'Reforma Religiosa',
-      'Absolutismo', 'Revolução Industrial', 'Iluminismo', 'Revolução Francesa', 'América no Século XIX',
-      'Europa no Século XIX', 'Imperialismo e Belle Époque', 'Primeira Guerra Mundial (1914-1918)',
-      'Grandes Revoluções do Século XX', 'O Período Entreguerras (1918-1939)', 'O Nazismo na Alemanha',
-      'Segunda Guerra Mundial (1939-1945)', 'Guerra Fria', 'Descolonização Afro-Asiática',
-      'América Latina no Século XX', 'O Fim da Guerra Fria',
+      'Antiguidade Clássica: o Mundo Romano',
     ],
   },
   {
-    id: 'his_brasil', name: 'História do Brasil', subject: 'História', prerequisites: ['his_geral'],
+    id: 'his_idade_media', name: 'Idade Média', subject: 'História', prerequisites: ['his_idade_antiga'],
+    chapters: ['Alta Idade Média e Feudalismo', 'Baixa Idade Média', 'A Primeira Globalização'],
+  },
+  {
+    id: 'his_moderna_iluminismo', name: 'Idade Moderna e Iluminismo', subject: 'História', prerequisites: ['his_idade_media'],
+    chapters: [
+      'América Espanhola', 'Vida Urbana e Renascimento Cultural', 'Reforma Religiosa', 'Absolutismo',
+      'Revolução Industrial', 'Iluminismo', 'Revolução Francesa', 'América no Século XIX',
+    ],
+  },
+  {
+    id: 'his_imperialismo_guerras', name: 'Imperialismo e Guerras Mundiais', subject: 'História', prerequisites: ['his_moderna_iluminismo'],
+    chapters: [
+      'Europa no Século XIX', 'Imperialismo e Belle Époque', 'Primeira Guerra Mundial (1914-1918)',
+      'Grandes Revoluções do Século XX', 'O Período Entreguerras (1918-1939)', 'O Nazismo na Alemanha',
+      'Segunda Guerra Mundial (1939-1945)',
+    ],
+  },
+  {
+    id: 'his_guerra_fria_contemporaneo', name: 'Guerra Fria e Mundo Contemporâneo', subject: 'História', prerequisites: ['his_imperialismo_guerras'],
+    chapters: ['Guerra Fria', 'Descolonização Afro-Asiática', 'América Latina no Século XX', 'O Fim da Guerra Fria'],
+  },
+  {
+    id: 'his_brasil_colonia', name: 'Brasil Colônia', subject: 'História', prerequisites: [],
     chapters: [
       'A História e o Brasil', 'Grandes Navegações e Conquista Colonial', 'A Montagem da Colonização',
       'Dinâmica Interna da Colonização', 'Disputas Europeias no Brasil Colonial', 'A Interiorização da Colonização',
       'A Mineração no Brasil Colonial', 'A Crise do Antigo Sistema Colonial', 'A Independência do Brasil',
+    ],
+  },
+  {
+    id: 'his_brasil_imperio', name: 'Brasil Império', subject: 'História', prerequisites: ['his_brasil_colonia'],
+    chapters: [
       'Brasil Império: Formação do Estado Nacional Brasileiro', 'Brasil Império: o Período Regencial (1831-1840)',
       'Brasil Império: Segundo Reinado (1840-1889)', 'Brasil Império: o Declínio do Segundo Reinado',
-      'A República da Espada', 'Ascensão e Domínio das Oligarquias',
-      'A Primeira República: o Declínio Oligárquico (1889-1930)', 'A Era Vargas',
-      'A Era Vargas: o Governo Constitucional (1934-1937)', 'A Era Vargas: o Estado Novo',
+    ],
+  },
+  {
+    id: 'his_primeira_republica_vargas', name: 'Primeira República e Era Vargas', subject: 'História', prerequisites: ['his_brasil_imperio'],
+    chapters: [
+      'A República da Espada', 'Ascensão e Domínio das Oligarquias', 'A Primeira República: o Declínio Oligárquico (1889-1930)',
+      'A Era Vargas', 'A Era Vargas: o Governo Constitucional (1934-1937)', 'A Era Vargas: o Estado Novo',
+    ],
+  },
+  {
+    id: 'his_republica_liberal_atual', name: 'República Liberal e Brasil Contemporâneo', subject: 'História', prerequisites: ['his_primeira_republica_vargas'],
+    chapters: [
       'República Liberal (1945-1964): Democracia em Tempos de Guerra Fria',
       'República Liberal (1945-1964): Desenvolvimentismo e Populismo', 'Regime Militar (1964-1985) I',
       'Regime Militar (1964-1985) II', 'O Brasil Atual',
@@ -305,17 +491,23 @@ export const mockTopics: Topic[] = [
   },
   // Português
   {
-    id: 'por_gramatica', name: 'Gramática', subject: 'Português', prerequisites: [],
+    id: 'por_norma_culta', name: 'Domínio da Norma Culta', subject: 'Português', prerequisites: [],
     chapters: [
       'Língua: um Sistema Complexo', 'Variação Linguística', 'Substantivo: os Nomes e a Visão do Enunciador',
       'Tipos de Texto: Explorando Elementos Concretos e Conceitos Abstratos',
-      'Artigo, Numeral e Adjetivo no Sintagma Nominal', 'Funções Sintáticas Nominais e Vocativo', 'Pronomes',
-      'Verbo', 'Advérbio e Locuções Adverbiais: Circunstanciadores', 'Verbo e Sintaxe da Oração',
-      'Tipos de Sujeito', 'Vozes Verbais', 'Concordância', 'Significados Implícitos', 'Tipos de Discurso',
-      'Orações Substantivas', 'Orações Adjetivas', 'Orações Adverbiais', 'Orações Coordenadas',
-      'Pontuação I: Princípios para o Uso da Vírgula', 'Pontuação II: Vírgula entre Orações e Outros Sinais de Pontuação',
+      'Artigo, Numeral e Adjetivo no Sintagma Nominal', 'Pronomes', 'Verbo',
+      'Advérbio e Locuções Adverbiais: Circunstanciadores', 'Verbo e Sintaxe da Oração', 'Concordância',
+      'Significados Implícitos', 'Tipos de Discurso', 'Pontuação I: Princípios para o Uso da Vírgula',
+      'Pontuação II: Vírgula entre Orações e Outros Sinais de Pontuação',
       'O Léxico em Contexto: Variadas Possibilidades Semânticas', 'Ambiguidade: Duplicidade no Léxico e na Sintaxe',
       'Mecanismo de Regência', 'Crase', 'Processos de Formação de Palavras',
+    ],
+  },
+  {
+    id: 'por_sintaxe', name: 'Análise Sintática', subject: 'Português', prerequisites: ['por_norma_culta'],
+    chapters: [
+      'Funções Sintáticas Nominais e Vocativo', 'Tipos de Sujeito', 'Vozes Verbais', 'Orações Substantivas',
+      'Orações Adjetivas', 'Orações Adverbiais', 'Orações Coordenadas',
     ],
   },
   {
@@ -329,54 +521,91 @@ export const mockTopics: Topic[] = [
     ],
   },
   {
-    id: 'por_literatura', name: 'Literatura', subject: 'Português', prerequisites: [],
+    id: 'por_lit_classica_barroca', name: 'Literatura Clássica, Medieval e Barroca', subject: 'Português', prerequisites: [],
     chapters: [
       'A Arte e suas Linguagens', 'Texto Literário x Texto não Literário', 'Trovadorismo e Humanismo',
       'Renascimento e Camões', 'Brasil: Primeiros Registros', 'A Estética Barroca', 'A Estética Neoclássica',
-      'A Estética Romântica: Poesia', 'Elementos da Narrativa', 'A Estética Romântica: Prosa',
-      'A Estética Realista', 'Machado de Assis', 'Naturalismo', 'Realismo Português: Eça de Queirós',
-      'Parnasianismo', 'Simbolismo', 'Pré-Modernismo', 'Vanguardas Artísticas', 'Fernando Pessoa',
-      'Semana de Arte Moderna', 'Modernismo no Brasil: Primeira Geração', 'Segunda Geração Modernista: Prosa',
-      'Graciliano Ramos', 'Segunda Geração Modernista: Poesia', 'Carlos Drummond de Andrade',
-      'João Cabral de Melo Neto', 'Poesia Concreta', 'Clarice Lispector', 'Guimarães Rosa',
-      'Poesia Brasileira: 1960-1980', 'Prosa Brasileira: 1960-1980', 'Literatura Lusófona Contemporânea',
-      'Poesia Brasileira Contemporânea', 'Prosa Brasileira Contemporânea', 'Artes Plásticas Brasileiras',
-      'Teatro Brasileiro', 'Cancioneiro Popular Brasileiro',
     ],
   },
   {
-    id: 'por_redacao', name: 'Redação', subject: 'Português', prerequisites: ['por_gramatica', 'por_texto'],
+    id: 'por_lit_romantismo_realismo', name: 'Romantismo e Realismo', subject: 'Português', prerequisites: ['por_lit_classica_barroca'],
+    chapters: [
+      'A Estética Romântica: Poesia', 'Elementos da Narrativa', 'A Estética Romântica: Prosa', 'A Estética Realista',
+      'Machado de Assis', 'Naturalismo', 'Realismo Português: Eça de Queirós',
+    ],
+  },
+  {
+    id: 'por_lit_modernismo', name: 'Simbolismo, Pré-Modernismo e Modernismo', subject: 'Português', prerequisites: ['por_lit_romantismo_realismo'],
+    chapters: [
+      'Parnasianismo', 'Simbolismo', 'Pré-Modernismo', 'Vanguardas Artísticas', 'Fernando Pessoa',
+      'Semana de Arte Moderna', 'Modernismo no Brasil: Primeira Geração', 'Segunda Geração Modernista: Prosa',
+      'Graciliano Ramos', 'Segunda Geração Modernista: Poesia', 'Carlos Drummond de Andrade',
+      'João Cabral de Melo Neto',
+    ],
+  },
+  {
+    id: 'por_lit_contemporanea', name: 'Literatura Contemporânea', subject: 'Português', prerequisites: ['por_lit_modernismo'],
+    chapters: [
+      'Poesia Concreta', 'Clarice Lispector', 'Guimarães Rosa', 'Poesia Brasileira: 1960-1980',
+      'Prosa Brasileira: 1960-1980', 'Literatura Lusófona Contemporânea', 'Poesia Brasileira Contemporânea',
+      'Prosa Brasileira Contemporânea', 'Artes Plásticas Brasileiras', 'Teatro Brasileiro',
+      'Cancioneiro Popular Brasileiro',
+    ],
+  },
+  {
+    id: 'por_red_fundamentos', name: 'Fundamentos da Dissertação', subject: 'Português', prerequisites: ['por_norma_culta', 'por_texto'],
     chapters: [
       'A Dissertação no Vestibular: Mitos e Verdades', 'O que se Avalia na Dissertação: Competências e Habilidades',
       'Organizando as Ideias: Brainstorm e Mind Maps', 'Projeto de Texto em Favor da Progressão Textual',
       'Repertório: o Diferencial de Redações de Sucesso', 'Qual Será o Tema deste Ano: Grandes Eixos Temáticos',
-      'Incrementando o Repertório: Meio Ambiente', 'Analisando Tema de Redação: Meio Ambiente',
       'Diferentes Graus de Adequação à Proposta', 'Tangenciamento e Fuga: a Fronteira do Tema',
+      'Gêneros e sua Relação com a Estrutura do Texto', 'Estrutura Clássica do Texto Dissertativo',
+    ],
+  },
+  {
+    id: 'por_red_repertorio', name: 'Leitura de Coletânea e Repertório Temático', subject: 'Português', prerequisites: ['por_red_fundamentos'],
+    chapters: [
       'Lendo a Coletânea: a Apreensão de Sentidos I', 'Lendo a Coletânea: a Apreensão de Sentidos II',
       'Lendo a Coletânea: a Compreensão e o Texto Autoral I', 'Lendo a Coletânea: a Compreensão e o Texto Autoral II',
+      'Incrementando o Repertório: Meio Ambiente', 'Analisando Tema de Redação: Meio Ambiente',
       'Incrementando o Repertório: Educação e Trabalho', 'Analisando Tema de Redação: Educação e Trabalho',
-      'Gêneros e sua Relação com a Estrutura do Texto', 'Estrutura Clássica do Texto Dissertativo',
+      'Incrementando o Repertório: Temas Abstratos', 'Analisando Tema Abstrato de Redação',
+      'Incrementando o Repertório: Corpo, Saúde e Sexualidade', 'Analisando Tema de Redação: Corpo, Saúde e Sexualidade',
+      'Incrementando o Repertório: Violência, Leis e Punição', 'Analisando Tema de Redação: Violência, Leis e Punição',
+      'Incrementando o Repertório: Cidadania e Poder', 'Analisando Tema de Redação: Cidadania e Poder',
+      'Incrementando o Repertório: Arte, Cultura e Relações Sociais',
+      'Analisando o Tema de Redação: Arte, Cultura e Relações Sociais',
+      'Incrementando o Repertório: Mídia e Sociedade', 'Analisando Tema de Redação: Mídia e Sociedade',
+    ],
+  },
+  {
+    id: 'por_red_argumentacao', name: 'Introdução, Argumentação e Coerência', subject: 'Português', prerequisites: ['por_red_fundamentos'],
+    chapters: [
       'Parágrafo de Introdução: Delimitando a Opinião', 'Parágrafo de Introdução: como Contextualizar',
       'Argumentação: Auditório Particular e Universal', 'Argumentação Quase-Lógica e Efeito de Verdade',
-      'Incrementando o Repertório: Temas Abstratos', 'Analisando Tema Abstrato de Redação',
       'Argumentação e Coerência Interna', 'Argumentação e Coerência Externa',
+      'Recursos Argumentativos: Dados Numéricos e Exemplos', 'Recursos Argumentativos: Vozes Prestigiadas',
+      'Ressalvando o Ponto de Vista Contrário', 'Refutando o Ponto Contrário',
+      'Recursos Argumentativos: Interdiscursividade e Intertextualidade',
+      'Recursos Argumentativos: Temas de Redação já Analisados', 'Recursos Argumentativos: Fatos da Atualidade',
+      'Recursos Argumentativos: Múltiplos Domínios do Saber',
+    ],
+  },
+  {
+    id: 'por_red_estrutura_coesao', name: 'Coesão, Conclusão e Proposta de Intervenção', subject: 'Português', prerequisites: ['por_red_argumentacao'],
+    chapters: [
       'Conclusão por Síntese ou Retomada da Tese', 'Conclusão: Sumarização, Focalização e Expressividade',
       'Proposta de Intervenção: Atores Sociais e Cidadania', 'Proposta de Intervenção: Viabilização e Inovação',
       'Proposta de Intervenção: Coerência Argumentativa', 'Proposta de Intervenção: Respeito aos Direitos Humanos',
-      'Incrementando o Repertório: Arte, Cultura e Relações Sociais',
-      'Analisando o Tema de Redação: Arte, Cultura e Relações Sociais',
-      'Recursos Argumentativos: Dados Numéricos e Exemplos', 'Recursos Argumentativos: Vozes Prestigiadas',
-      'Ressalvando o Ponto de Vista Contrário', 'Refutando o Ponto Contrário',
-      'Incrementando o Repertório: Corpo, Saúde e Sexualidade', 'Analisando Tema de Redação: Corpo, Saúde e Sexualidade',
-      'Recursos Argumentativos: Interdiscursividade e Intertextualidade',
-      'Recursos Argumentativos: Temas de Redação já Analisados', 'Recursos Argumentativos: Fatos da Atualidade',
-      'Recursos Argumentativos: Múltiplos Domínios do Saber', 'Incrementando o Repertório: Mídia e Sociedade',
-      'Analisando Tema de Redação: Mídia e Sociedade', 'Recursos de Coesão Referencial no Texto Dissertativo',
-      'Recursos de Coesão Sequencial no Texto Dissertativo', 'Coesão no Texto Dissertativo: Análise de Problemas',
-      'Recursos Linguísticos: Norma, Clareza e Expressividade', 'Incrementando o Repertório: Violência, Leis e Punição',
-      'Analisando Tema de Redação: Violência, Leis e Punição', 'Os Direitos Humanos de 1ª Geração: Direitos Individuais',
+      'Recursos de Coesão Referencial no Texto Dissertativo', 'Recursos de Coesão Sequencial no Texto Dissertativo',
+      'Coesão no Texto Dissertativo: Análise de Problemas', 'Recursos Linguísticos: Norma, Clareza e Expressividade',
+    ],
+  },
+  {
+    id: 'por_red_direitos_modelo', name: 'Direitos Humanos e Redações Modelo', subject: 'Português', prerequisites: ['por_red_estrutura_coesao'],
+    chapters: [
+      'Os Direitos Humanos de 1ª Geração: Direitos Individuais',
       'Os Direitos Humanos de 2ª e 3ª Geração: Direitos Sociais, Coletivos e Difusos',
-      'Incrementando o Repertório: Cidadania e Poder', 'Analisando Tema de Redação: Cidadania e Poder',
       'Redações Nota 1000: Trunfos a Inspirar', 'Redações na Mídia: como Aprimorar',
     ],
   },
@@ -401,7 +630,11 @@ export const mockTopics: Topic[] = [
 // níveis baixos/incertos por padrão; os módulos com histórico no banco de
 // questões acima herdam valores plausíveis de um primeiro contato.
 export const mockMastery: TopicMastery[] = [
-  { topicId: 'bio_celular', level: 85, uncertainty: 0.1, lastReviewed: new Date(Date.now() - 5 * 86400000).toISOString(), errorSignals: 0 },
+  // Biologia — carries forward the old bio_celular estimate to its 4 split topics
+  { topicId: 'bio_estrutura_fisio_celular', level: 85, uncertainty: 0.1, lastReviewed: new Date(Date.now() - 5 * 86400000).toISOString(), errorSignals: 0 },
+  { topicId: 'bio_metabolismo_energetico', level: 85, uncertainty: 0.1, lastReviewed: new Date(Date.now() - 5 * 86400000).toISOString(), errorSignals: 0 },
+  { topicId: 'bio_codigo_genetico_sintese', level: 85, uncertainty: 0.1, lastReviewed: new Date(Date.now() - 5 * 86400000).toISOString(), errorSignals: 0 },
+  { topicId: 'bio_biotecnologia', level: 85, uncertainty: 0.1, lastReviewed: new Date(Date.now() - 5 * 86400000).toISOString(), errorSignals: 0 },
   { topicId: 'bio_genetica', level: 30, uncertainty: 0.8, lastReviewed: new Date(Date.now() - 1 * 86400000).toISOString(), errorSignals: 1 },
   { topicId: 'bio_evolucao', level: 20, uncertainty: 0.85, lastReviewed: new Date(Date.now() - 12 * 86400000).toISOString(), errorSignals: 3 },
   { topicId: 'bio_ecologia', level: 40, uncertainty: 0.6, lastReviewed: new Date(Date.now() - 7 * 86400000).toISOString(), errorSignals: 1 },
@@ -410,31 +643,85 @@ export const mockMastery: TopicMastery[] = [
   { topicId: 'bio_microbiologia', level: 65, uncertainty: 0.35, lastReviewed: new Date(Date.now() - 6 * 86400000).toISOString(), errorSignals: 0 },
   { topicId: 'bio_fisio_animal', level: 55, uncertainty: 0.5, lastReviewed: new Date(Date.now() - 4 * 86400000).toISOString(), errorSignals: 2 },
   { topicId: 'bio_fisio_vegetal', level: 15, uncertainty: 0.9, lastReviewed: new Date(Date.now() - 30 * 86400000).toISOString(), errorSignals: 0 },
-  { topicId: 'mat_algebrica', level: 55, uncertainty: 0.45, lastReviewed: new Date(Date.now() - 8 * 86400000).toISOString(), errorSignals: 2 },
-  { topicId: 'mat_geometrica', level: 70, uncertainty: 0.3, lastReviewed: new Date(Date.now() - 8 * 86400000).toISOString(), errorSignals: 1 },
-  { topicId: 'mat_numerica', level: 50, uncertainty: 0.5, lastReviewed: new Date(Date.now() - 3 * 86400000).toISOString(), errorSignals: 3 },
+  // Matemática — carries forward the old 3-frente estimates to their split topics
+  { topicId: 'mat_aritmetica_proporcionalidade', level: 50, uncertainty: 0.5, lastReviewed: new Date(Date.now() - 3 * 86400000).toISOString(), errorSignals: 3 },
+  { topicId: 'mat_teoria_numeros', level: 50, uncertainty: 0.5, lastReviewed: new Date(Date.now() - 3 * 86400000).toISOString(), errorSignals: 3 },
+  { topicId: 'mat_sequencias_matrizes', level: 50, uncertainty: 0.5, lastReviewed: new Date(Date.now() - 3 * 86400000).toISOString(), errorSignals: 3 },
+  { topicId: 'mat_combinatoria', level: 50, uncertainty: 0.5, lastReviewed: new Date(Date.now() - 3 * 86400000).toISOString(), errorSignals: 3 },
+  { topicId: 'mat_dados_probabilidade', level: 50, uncertainty: 0.5, lastReviewed: new Date(Date.now() - 3 * 86400000).toISOString(), errorSignals: 3 },
+  { topicId: 'mat_geometria_plana', level: 70, uncertainty: 0.3, lastReviewed: new Date(Date.now() - 8 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'mat_trigonometria', level: 63, uncertainty: 0.38, lastReviewed: new Date(Date.now() - 8 * 86400000).toISOString(), errorSignals: 2 },
+  { topicId: 'mat_geometria_espacial', level: 70, uncertainty: 0.3, lastReviewed: new Date(Date.now() - 8 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'mat_geometria_analitica', level: 70, uncertainty: 0.3, lastReviewed: new Date(Date.now() - 8 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'mat_equacoes', level: 55, uncertainty: 0.45, lastReviewed: new Date(Date.now() - 8 * 86400000).toISOString(), errorSignals: 2 },
+  { topicId: 'mat_funcoes', level: 55, uncertainty: 0.45, lastReviewed: new Date(Date.now() - 8 * 86400000).toISOString(), errorSignals: 2 },
+  { topicId: 'mat_log_exponenciais', level: 55, uncertainty: 0.45, lastReviewed: new Date(Date.now() - 8 * 86400000).toISOString(), errorSignals: 2 },
+  { topicId: 'mat_complexos_polinomios', level: 55, uncertainty: 0.45, lastReviewed: new Date(Date.now() - 8 * 86400000).toISOString(), errorSignals: 2 },
+  // Física — carries forward the old frente estimates to their split topics
   { topicId: 'fis_cinematica', level: 75, uncertainty: 0.2, lastReviewed: new Date(Date.now() - 2 * 86400000).toISOString(), errorSignals: 1 },
-  { topicId: 'fis_dinamica', level: 60, uncertainty: 0.4, lastReviewed: new Date(Date.now() - 3 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'fis_cinematica_vetorial', level: 60, uncertainty: 0.4, lastReviewed: new Date(Date.now() - 3 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'fis_leis_newton', level: 60, uncertainty: 0.4, lastReviewed: new Date(Date.now() - 3 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'fis_gravitacao_circular', level: 60, uncertainty: 0.4, lastReviewed: new Date(Date.now() - 3 * 86400000).toISOString(), errorSignals: 1 },
   { topicId: 'fis_dinamica_impulsiva', level: 15, uncertainty: 0.9, lastReviewed: new Date(Date.now() - 30 * 86400000).toISOString(), errorSignals: 0 },
   { topicId: 'fis_energia', level: 30, uncertainty: 0.7, lastReviewed: new Date(Date.now() - 13 * 86400000).toISOString(), errorSignals: 2 },
   { topicId: 'fis_estatica', level: 20, uncertainty: 0.85, lastReviewed: new Date(Date.now() - 17 * 86400000).toISOString(), errorSignals: 2 },
-  { topicId: 'fis_termofisica', level: 35, uncertainty: 0.65, lastReviewed: new Date(Date.now() - 9 * 86400000).toISOString(), errorSignals: 2 },
-  { topicId: 'fis_eletricidade', level: 10, uncertainty: 0.9, lastReviewed: new Date(Date.now() - 10 * 86400000).toISOString(), errorSignals: 2 },
+  { topicId: 'fis_calorimetria', level: 35, uncertainty: 0.65, lastReviewed: new Date(Date.now() - 9 * 86400000).toISOString(), errorSignals: 2 },
+  { topicId: 'fis_termodinamica_gases', level: 35, uncertainty: 0.65, lastReviewed: new Date(Date.now() - 9 * 86400000).toISOString(), errorSignals: 2 },
+  { topicId: 'fis_eletrostatica', level: 10, uncertainty: 0.9, lastReviewed: new Date(Date.now() - 10 * 86400000).toISOString(), errorSignals: 2 },
+  { topicId: 'fis_circuitos', level: 10, uncertainty: 0.9, lastReviewed: new Date(Date.now() - 10 * 86400000).toISOString(), errorSignals: 2 },
   { topicId: 'fis_eletromagnetismo', level: 10, uncertainty: 0.9, lastReviewed: new Date(Date.now() - 21 * 86400000).toISOString(), errorSignals: 3 },
-  { topicId: 'fis_optica', level: 15, uncertainty: 0.9, lastReviewed: new Date(Date.now() - 14 * 86400000).toISOString(), errorSignals: 4 },
-  { topicId: 'fis_ondas', level: 80, uncertainty: 0.15, lastReviewed: new Date(Date.now() - 6 * 86400000).toISOString(), errorSignals: 0 },
-  { topicId: 'qui_atomistica', level: 55, uncertainty: 0.45, lastReviewed: new Date(Date.now() - 4 * 86400000).toISOString(), errorSignals: 1 },
-  { topicId: 'qui_geral', level: 30, uncertainty: 0.75, lastReviewed: new Date(Date.now() - 1 * 86400000).toISOString(), errorSignals: 3 },
-  { topicId: 'qui_organica', level: 20, uncertainty: 0.85, lastReviewed: new Date(Date.now() - 11 * 86400000).toISOString(), errorSignals: 2 },
-  { topicId: 'qui_fisico_quimica', level: 45, uncertainty: 0.5, lastReviewed: new Date(Date.now() - 7 * 86400000).toISOString(), errorSignals: 1 },
-  { topicId: 'geo_geral', level: 30, uncertainty: 0.75, lastReviewed: new Date(Date.now() - 25 * 86400000).toISOString(), errorSignals: 1 },
-  { topicId: 'geo_brasil', level: 20, uncertainty: 0.8, lastReviewed: new Date(Date.now() - 25 * 86400000).toISOString(), errorSignals: 1 },
-  { topicId: 'his_geral', level: 30, uncertainty: 0.75, lastReviewed: new Date(Date.now() - 25 * 86400000).toISOString(), errorSignals: 1 },
-  { topicId: 'his_brasil', level: 20, uncertainty: 0.8, lastReviewed: new Date(Date.now() - 25 * 86400000).toISOString(), errorSignals: 1 },
-  { topicId: 'por_gramatica', level: 45, uncertainty: 0.55, lastReviewed: new Date(Date.now() - 10 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'fis_optica_geometrica', level: 15, uncertainty: 0.9, lastReviewed: new Date(Date.now() - 14 * 86400000).toISOString(), errorSignals: 4 },
+  { topicId: 'fis_optica_instrumental', level: 15, uncertainty: 0.9, lastReviewed: new Date(Date.now() - 14 * 86400000).toISOString(), errorSignals: 4 },
+  { topicId: 'fis_ondas_fundamentos', level: 80, uncertainty: 0.15, lastReviewed: new Date(Date.now() - 6 * 86400000).toISOString(), errorSignals: 0 },
+  { topicId: 'fis_ondulatoria', level: 80, uncertainty: 0.15, lastReviewed: new Date(Date.now() - 6 * 86400000).toISOString(), errorSignals: 0 },
+  { topicId: 'fis_fisica_moderna', level: 80, uncertainty: 0.15, lastReviewed: new Date(Date.now() - 6 * 86400000).toISOString(), errorSignals: 0 },
+  // Química — carries forward the old frente estimates to their split topics
+  { topicId: 'qui_modelos_atomicos', level: 55, uncertainty: 0.45, lastReviewed: new Date(Date.now() - 4 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'qui_radioatividade', level: 55, uncertainty: 0.45, lastReviewed: new Date(Date.now() - 4 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'qui_polaridade_geometria', level: 55, uncertainty: 0.45, lastReviewed: new Date(Date.now() - 4 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'qui_gases', level: 30, uncertainty: 0.75, lastReviewed: new Date(Date.now() - 1 * 86400000).toISOString(), errorSignals: 3 },
+  { topicId: 'qui_estequiometria', level: 30, uncertainty: 0.75, lastReviewed: new Date(Date.now() - 1 * 86400000).toISOString(), errorSignals: 3 },
+  { topicId: 'qui_inorganica', level: 30, uncertainty: 0.75, lastReviewed: new Date(Date.now() - 1 * 86400000).toISOString(), errorSignals: 3 },
+  { topicId: 'qui_oxirreducao', level: 30, uncertainty: 0.75, lastReviewed: new Date(Date.now() - 1 * 86400000).toISOString(), errorSignals: 3 },
+  { topicId: 'qui_organica_fundamentos', level: 20, uncertainty: 0.85, lastReviewed: new Date(Date.now() - 11 * 86400000).toISOString(), errorSignals: 2 },
+  { topicId: 'qui_organica_reacoes', level: 20, uncertainty: 0.85, lastReviewed: new Date(Date.now() - 11 * 86400000).toISOString(), errorSignals: 2 },
+  { topicId: 'qui_solucoes', level: 45, uncertainty: 0.5, lastReviewed: new Date(Date.now() - 7 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'qui_termoquimica', level: 45, uncertainty: 0.5, lastReviewed: new Date(Date.now() - 7 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'qui_cinetica', level: 45, uncertainty: 0.5, lastReviewed: new Date(Date.now() - 7 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'qui_eletroquimica', level: 45, uncertainty: 0.5, lastReviewed: new Date(Date.now() - 7 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'qui_equilibrio', level: 45, uncertainty: 0.5, lastReviewed: new Date(Date.now() - 7 * 86400000).toISOString(), errorSignals: 1 },
+  // Geografia — carries forward the old frente estimates to their split topics
+  { topicId: 'geo_cartografia', level: 30, uncertainty: 0.75, lastReviewed: new Date(Date.now() - 25 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'geo_climatologia_socioambiental', level: 30, uncertainty: 0.75, lastReviewed: new Date(Date.now() - 25 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'geo_hidrogeografia', level: 30, uncertainty: 0.75, lastReviewed: new Date(Date.now() - 25 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'geo_globalizacao_economica', level: 30, uncertainty: 0.75, lastReviewed: new Date(Date.now() - 25 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'geo_geopolitica_regional', level: 30, uncertainty: 0.75, lastReviewed: new Date(Date.now() - 25 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'geo_fisica_brasil', level: 20, uncertainty: 0.8, lastReviewed: new Date(Date.now() - 25 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'geo_economica_brasil', level: 20, uncertainty: 0.8, lastReviewed: new Date(Date.now() - 25 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'geo_populacao_urbana_brasil', level: 20, uncertainty: 0.8, lastReviewed: new Date(Date.now() - 25 * 86400000).toISOString(), errorSignals: 1 },
+  // História — carries forward the old frente estimates to their split topics
+  { topicId: 'his_idade_antiga', level: 30, uncertainty: 0.75, lastReviewed: new Date(Date.now() - 25 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'his_idade_media', level: 30, uncertainty: 0.75, lastReviewed: new Date(Date.now() - 25 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'his_moderna_iluminismo', level: 30, uncertainty: 0.75, lastReviewed: new Date(Date.now() - 25 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'his_imperialismo_guerras', level: 30, uncertainty: 0.75, lastReviewed: new Date(Date.now() - 25 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'his_guerra_fria_contemporaneo', level: 30, uncertainty: 0.75, lastReviewed: new Date(Date.now() - 25 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'his_brasil_colonia', level: 20, uncertainty: 0.8, lastReviewed: new Date(Date.now() - 25 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'his_brasil_imperio', level: 20, uncertainty: 0.8, lastReviewed: new Date(Date.now() - 25 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'his_primeira_republica_vargas', level: 20, uncertainty: 0.8, lastReviewed: new Date(Date.now() - 25 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'his_republica_liberal_atual', level: 20, uncertainty: 0.8, lastReviewed: new Date(Date.now() - 25 * 86400000).toISOString(), errorSignals: 1 },
+  // Português — carries forward the old frente estimates to their split topics
+  { topicId: 'por_norma_culta', level: 45, uncertainty: 0.55, lastReviewed: new Date(Date.now() - 10 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'por_sintaxe', level: 45, uncertainty: 0.55, lastReviewed: new Date(Date.now() - 10 * 86400000).toISOString(), errorSignals: 1 },
   { topicId: 'por_texto', level: 55, uncertainty: 0.45, lastReviewed: new Date(Date.now() - 9 * 86400000).toISOString(), errorSignals: 0 },
-  { topicId: 'por_literatura', level: 30, uncertainty: 0.7, lastReviewed: new Date(Date.now() - 14 * 86400000).toISOString(), errorSignals: 1 },
-  { topicId: 'por_redacao', level: 15, uncertainty: 0.9, lastReviewed: new Date(Date.now() - 30 * 86400000).toISOString(), errorSignals: 0 },
+  { topicId: 'por_lit_classica_barroca', level: 30, uncertainty: 0.7, lastReviewed: new Date(Date.now() - 14 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'por_lit_romantismo_realismo', level: 30, uncertainty: 0.7, lastReviewed: new Date(Date.now() - 14 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'por_lit_modernismo', level: 30, uncertainty: 0.7, lastReviewed: new Date(Date.now() - 14 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'por_lit_contemporanea', level: 30, uncertainty: 0.7, lastReviewed: new Date(Date.now() - 14 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'por_red_fundamentos', level: 15, uncertainty: 0.9, lastReviewed: new Date(Date.now() - 30 * 86400000).toISOString(), errorSignals: 0 },
+  { topicId: 'por_red_repertorio', level: 15, uncertainty: 0.9, lastReviewed: new Date(Date.now() - 30 * 86400000).toISOString(), errorSignals: 0 },
+  { topicId: 'por_red_argumentacao', level: 15, uncertainty: 0.9, lastReviewed: new Date(Date.now() - 30 * 86400000).toISOString(), errorSignals: 0 },
+  { topicId: 'por_red_estrutura_coesao', level: 15, uncertainty: 0.9, lastReviewed: new Date(Date.now() - 30 * 86400000).toISOString(), errorSignals: 0 },
+  { topicId: 'por_red_direitos_modelo', level: 15, uncertainty: 0.9, lastReviewed: new Date(Date.now() - 30 * 86400000).toISOString(), errorSignals: 0 },
   { topicId: 'ing_01', level: 60, uncertainty: 0.4, lastReviewed: new Date(Date.now() - 8 * 86400000).toISOString(), errorSignals: 0 }
 ];
 
@@ -470,7 +757,7 @@ export const mockStudentGoals: StudentGoals = {
 export const mockErrorLogs: ErrorLog[] = [
   {
     id: 'err_1',
-    topicId: 'mat_numerica',
+    topicId: 'mat_combinatoria',
     questionId: 'q_mat_02_1',
     date: new Date().toISOString(),
     type: 'interpretation',
@@ -483,7 +770,7 @@ export const mockQuestions: Question[] = [
   // Biologia — Citologia
   {
     id: 'q_bio_01_1',
-    topicId: 'bio_celular',
+    topicId: 'bio_metabolismo_energetico',
     subject: 'Biologia',
     prompt: 'Qual organela é responsável pela produção de ATP através da respiração celular aeróbica?',
     options: [
@@ -498,7 +785,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_bio_01_2',
-    topicId: 'bio_celular',
+    topicId: 'bio_codigo_genetico_sintese',
     subject: 'Biologia',
     prompt: 'Qual estrutura é responsável pela síntese de proteínas na célula?',
     options: [
@@ -669,7 +956,7 @@ export const mockQuestions: Question[] = [
   // Matemática — Funções de 1º Grau
   {
     id: 'q_mat_01_1',
-    topicId: 'mat_algebrica',
+    topicId: 'mat_funcoes',
     subject: 'Matemática',
     prompt: 'Qual é o valor de x para que a função f(x) = 2x - 6 seja igual a zero?',
     options: [
@@ -684,7 +971,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_mat_01_2',
-    topicId: 'mat_algebrica',
+    topicId: 'mat_funcoes',
     subject: 'Matemática',
     prompt: 'Qual é o coeficiente angular da reta representada pela função f(x) = -3x + 7?',
     options: [
@@ -700,7 +987,7 @@ export const mockQuestions: Question[] = [
   // Matemática — Análise Combinatória
   {
     id: 'q_mat_02_1',
-    topicId: 'mat_numerica',
+    topicId: 'mat_combinatoria',
     subject: 'Matemática',
     prompt: 'De quantas formas 3 pessoas podem se sentar em 3 cadeiras em fila?',
     options: [
@@ -715,7 +1002,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_mat_02_2',
-    topicId: 'mat_numerica',
+    topicId: 'mat_combinatoria',
     subject: 'Matemática',
     prompt: 'Uma senha é formada por 4 dígitos distintos, escolhidos entre 0 e 9. Quantas senhas diferentes podem ser formadas?',
     options: [
@@ -731,7 +1018,7 @@ export const mockQuestions: Question[] = [
   // Matemática — Funções de 2º Grau
   {
     id: 'q_mat_03_1',
-    topicId: 'mat_algebrica',
+    topicId: 'mat_funcoes',
     subject: 'Matemática',
     prompt: 'Qual é o valor do discriminante (Δ) da função f(x) = x² - 5x + 6?',
     options: [
@@ -746,7 +1033,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_mat_03_2',
-    topicId: 'mat_algebrica',
+    topicId: 'mat_funcoes',
     subject: 'Matemática',
     prompt: 'Qual é o vértice da parábola representada por f(x) = x² - 4x + 3?',
     options: [
@@ -762,7 +1049,7 @@ export const mockQuestions: Question[] = [
   // Matemática — Geometria Plana
   {
     id: 'q_mat_04_1',
-    topicId: 'mat_geometrica',
+    topicId: 'mat_geometria_plana',
     subject: 'Matemática',
     prompt: 'Qual é a área de um triângulo retângulo com catetos medindo 6 cm e 8 cm?',
     options: [
@@ -777,7 +1064,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_mat_04_2',
-    topicId: 'mat_geometrica',
+    topicId: 'mat_geometria_plana',
     subject: 'Matemática',
     prompt: 'Um círculo tem raio de 5 cm. Qual é aproximadamente sua área, considerando π ≈ 3,14?',
     options: [
@@ -793,7 +1080,7 @@ export const mockQuestions: Question[] = [
   // Matemática — Probabilidade
   {
     id: 'q_mat_05_1',
-    topicId: 'mat_numerica',
+    topicId: 'mat_dados_probabilidade',
     subject: 'Matemática',
     prompt: 'Ao lançar um dado de 6 faces uma vez, qual a probabilidade de obter um número par?',
     options: [
@@ -808,7 +1095,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_mat_05_2',
-    topicId: 'mat_numerica',
+    topicId: 'mat_dados_probabilidade',
     subject: 'Matemática',
     prompt: 'Em uma urna há 4 bolas vermelhas e 6 bolas azuis. Retirando uma bola ao acaso, qual a probabilidade de ela ser vermelha?',
     options: [
@@ -824,7 +1111,7 @@ export const mockQuestions: Question[] = [
   // Matemática — Trigonometria
   {
     id: 'q_mat_06_1',
-    topicId: 'mat_algebrica',
+    topicId: 'mat_trigonometria',
     subject: 'Matemática',
     prompt: 'Qual é o valor de sen(30°)?',
     options: [
@@ -839,7 +1126,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_mat_06_2',
-    topicId: 'mat_algebrica',
+    topicId: 'mat_trigonometria',
     subject: 'Matemática',
     prompt: 'Em um triângulo retângulo, o cateto oposto a um ângulo mede 3 e a hipotenusa mede 5. Qual é o valor do cosseno desse ângulo?',
     options: [
@@ -886,7 +1173,7 @@ export const mockQuestions: Question[] = [
   // Física — Eletrodinâmica
   {
     id: 'q_fis_02_1',
-    topicId: 'fis_eletricidade',
+    topicId: 'fis_circuitos',
     subject: 'Física',
     prompt: 'Em um circuito com dois resistores de 10Ω em série ligados a uma fonte de 20V, qual a corrente total no circuito?',
     options: [
@@ -901,7 +1188,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_02_2',
-    topicId: 'fis_eletricidade',
+    topicId: 'fis_circuitos',
     subject: 'Física',
     prompt: 'Dois resistores de 10Ω cada estão associados em paralelo. Qual é a resistência equivalente?',
     options: [
@@ -917,7 +1204,7 @@ export const mockQuestions: Question[] = [
   // Física — Dinâmica
   {
     id: 'q_fis_03_1',
-    topicId: 'fis_dinamica',
+    topicId: 'fis_leis_newton',
     subject: 'Física',
     prompt: 'Segundo a Segunda Lei de Newton, qual é a força resultante necessária para acelerar um corpo de 5 kg a 4 m/s²?',
     options: [
@@ -932,7 +1219,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_03_2',
-    topicId: 'fis_dinamica',
+    topicId: 'fis_leis_newton',
     subject: 'Física',
     prompt: 'De acordo com a Terceira Lei de Newton (ação e reação), quando você empurra uma parede, o que acontece?',
     options: [
@@ -948,7 +1235,7 @@ export const mockQuestions: Question[] = [
   // Física — Termologia
   {
     id: 'q_fis_04_1',
-    topicId: 'fis_termofisica',
+    topicId: 'fis_calorimetria',
     subject: 'Física',
     prompt: 'Um corpo recebe 500 cal de calor e sua temperatura varia de 20°C para 30°C. Sabendo que sua massa é 100g, qual é o calor específico do material (Q = m·c·ΔT)?',
     options: [
@@ -963,7 +1250,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_04_2',
-    topicId: 'fis_termofisica',
+    topicId: 'fis_termodinamica_gases',
     subject: 'Física',
     prompt: 'O que ocorre com as moléculas de um gás quando sua temperatura aumenta, mantendo o volume constante?',
     options: [
@@ -979,7 +1266,7 @@ export const mockQuestions: Question[] = [
   // Física — Óptica
   {
     id: 'q_fis_05_1',
-    topicId: 'fis_optica',
+    topicId: 'fis_optica_geometrica',
     subject: 'Física',
     prompt: 'O que causa a formação do arco-íris na atmosfera?',
     options: [
@@ -994,7 +1281,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_05_2',
-    topicId: 'fis_optica',
+    topicId: 'fis_optica_instrumental',
     subject: 'Física',
     prompt: 'Uma pessoa míope enxerga mal objetos distantes porque a imagem se forma:',
     options: [
@@ -1010,7 +1297,7 @@ export const mockQuestions: Question[] = [
   // Física — Ondulatória
   {
     id: 'q_fis_06_1',
-    topicId: 'fis_ondas',
+    topicId: 'fis_ondulatoria',
     subject: 'Física',
     prompt: 'Uma onda tem frequência de 50 Hz e comprimento de onda de 4 m. Qual é sua velocidade de propagação?',
     options: [
@@ -1025,7 +1312,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_06_2',
-    topicId: 'fis_ondas',
+    topicId: 'fis_ondulatoria',
     subject: 'Física',
     prompt: 'O que caracteriza o fenômeno da ressonância?',
     options: [
@@ -1041,7 +1328,7 @@ export const mockQuestions: Question[] = [
   // Química — Estequiometria
   {
     id: 'q_qui_01_1',
-    topicId: 'qui_geral',
+    topicId: 'qui_estequiometria',
     subject: 'Química',
     prompt: 'Na reação 2H₂ + O₂ → 2H₂O, quantos mols de água são produzidos a partir de 4 mols de H₂ (com O₂ em excesso)?',
     options: [
@@ -1056,7 +1343,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_qui_01_2',
-    topicId: 'qui_geral',
+    topicId: 'qui_estequiometria',
     subject: 'Química',
     prompt: 'Qual é a massa molar aproximada do CO₂ (considerando C = 12 g/mol e O = 16 g/mol)?',
     options: [
@@ -1072,7 +1359,7 @@ export const mockQuestions: Question[] = [
   // Química — Ligações Químicas
   {
     id: 'q_qui_02_1',
-    topicId: 'qui_atomistica',
+    topicId: 'qui_polaridade_geometria',
     subject: 'Química',
     prompt: 'Qual tipo de ligação química ocorre entre um metal e um ametal, com transferência de elétrons?',
     options: [
@@ -1087,7 +1374,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_qui_02_2',
-    topicId: 'qui_atomistica',
+    topicId: 'qui_polaridade_geometria',
     subject: 'Química',
     prompt: 'Por que a molécula de água (H₂O) é polar?',
     options: [
@@ -1103,7 +1390,7 @@ export const mockQuestions: Question[] = [
   // Química — Química Orgânica
   {
     id: 'q_qui_03_1',
-    topicId: 'qui_organica',
+    topicId: 'qui_organica_fundamentos',
     subject: 'Química',
     prompt: 'Qual é o nome do composto orgânico mais simples da função álcool, com um único átomo de carbono?',
     options: [
@@ -1118,7 +1405,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_qui_03_2',
-    topicId: 'qui_organica',
+    topicId: 'qui_organica_fundamentos',
     subject: 'Química',
     prompt: 'Qual é a principal característica que define um hidrocarboneto?',
     options: [
@@ -1134,7 +1421,7 @@ export const mockQuestions: Question[] = [
   // Química — Soluções e Concentração
   {
     id: 'q_qui_04_1',
-    topicId: 'qui_fisico_quimica',
+    topicId: 'qui_solucoes',
     subject: 'Química',
     prompt: 'Uma solução foi preparada dissolvendo 20 g de sal em 500 mL de água. Qual é a concentração em g/L?',
     options: [
@@ -1149,7 +1436,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_qui_04_2',
-    topicId: 'qui_fisico_quimica',
+    topicId: 'qui_solucoes',
     subject: 'Química',
     prompt: 'O que significa dizer que uma solução está "saturada"?',
     options: [
@@ -1165,7 +1452,7 @@ export const mockQuestions: Question[] = [
   // Questões reais de provas passadas (verificadas contra o gabarito oficial)
   {
     id: 'q_real_enem_2023_qui',
-    topicId: 'qui_atomistica',
+    topicId: 'qui_organica_fundamentos',
     subject: 'Química',
     prompt: 'O Aldrin é um inseticida agrícola organoclorado sintético de baixa polaridade, cuja estrutura molecular simétrica, de fórmula C12H8Cl6, foi introduzida na agricultura a partir da década de 1950. Esse composto apresenta alta persistência no meio ambiente e acumulação nos organismos, sendo danoso para a saúde. Um pesquisador coletou fluidos biológicos de indivíduos de uma população contaminada por esse inseticida agrícola, analisando amostras de saliva, sangue, lágrima, urina e leite quanto à presença dessa substância. Em qual dos fluidos o pesquisador provavelmente encontrou a maior concentração dessa substância?',
     options: [
@@ -1182,7 +1469,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_real_enem_2023_mat',
-    topicId: 'mat_geometrica',
+    topicId: 'mat_geometria_plana',
     subject: 'Matemática',
     prompt: 'Sejam a, b e c as medidas dos lados de um triângulo retângulo, tendo a como medida da hipotenusa. Esses valores a, b e c são, respectivamente, os diâmetros dos círculos C1, C2 e C3. Essa construção assegura, pelo teorema de Pitágoras, que área(C1) = área(C2) + área(C3). Um professor de matemática desafiou dois amigos: sem usar instrumento de medição, ele poderia afirmar se a área do círculo correspondente à pizza que ele pedisse era maior, igual ou menor do que a soma das áreas das pizzas dos dois amigos. Formou-se um triângulo com os diâmetros das três pizzas, com ângulo α oposto ao diâmetro da pizza do professor. O professor afirmou que a área de sua pizza é maior do que a soma das áreas das outras duas. Isso ocorre porque:',
     options: [
@@ -1216,7 +1503,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_real_fuvest_2023_qui',
-    topicId: 'qui_geral',
+    topicId: 'qui_estequiometria',
     subject: 'Química',
     prompt: 'Combustíveis fósseis, como o diesel, contêm em sua composição uma fração de enxofre. Durante o processo de combustão, o enxofre é convertido em SO2, tornando-se um poluente ambiental, segundo a reação: S(s) + O2(g) → SO2(g). Em postos de combustível, normalmente são comercializados dois tipos de diesel: o Diesel S10, que contém 10 ppm de enxofre, e o Diesel S500, que contém 500 ppm de enxofre (1 ppm de enxofre equivale a 1 mg de enxofre por kg de diesel). Determine, em mg por kg de diesel, a diferença entre a massa de SO2 liberada na queima de 1 kg de Diesel S500 e a massa de SO2 liberada na queima de 1 kg de Diesel S10.',
     options: [
@@ -1233,7 +1520,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_real_comvest_2020_qui',
-    topicId: 'qui_fisico_quimica',
+    topicId: 'qui_solucoes',
     subject: 'Química',
     prompt: 'Um medicamento se apresenta na forma de comprimidos de 750 mg ou como suspensão oral na concentração de 100 mg/mL. A bula do remédio informa que o comprimido não pode ser partido, aberto ou mastigado e que, para crianças abaixo de 12 anos, a dosagem máxima é de 15 mg/kg/dose. Uma criança de 11 anos, pesando 40 kg, poderia ingerir com segurança, no máximo:',
     options: [
@@ -1265,7 +1552,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_real_vunesp_2022_qui',
-    topicId: 'qui_organica',
+    topicId: 'qui_organica_reacoes',
     subject: 'Química',
     prompt: 'A etanolamina (NH2CH2CH2OH) é uma substância prebiótica detectada no espaço interestelar, que contém quatro dos seis elementos químicos essenciais à vida. Ela é parte constituinte dos fosfolipídios que compõem as membranas celulares e pode servir de precursora do aminoácido glicina. A transformação da molécula de etanolamina em glicina envolve uma reação de:',
     options: [
@@ -1299,7 +1586,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_real_famerp_2018_fis',
-    topicId: 'fis_termofisica',
+    topicId: 'fis_calorimetria',
     subject: 'Física',
     prompt: 'Em um recipiente de capacidade térmica desprezível, 300 g de água, inicialmente a 20 ºC, foram aquecidos. Após 2,0 minutos, quando a temperatura da água era 40 ºC, mais 300 g de água a 20 ºC foram adicionados ao recipiente. Considerando que não ocorreu perda de calor da água para o meio e que a fonte fornece calor a uma potência constante durante o processo, o tempo decorrido, após a adição da água, para que a temperatura da água atingisse 80 ºC foi de:',
     options: [
@@ -1316,7 +1603,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_real_famerp_2019_qui',
-    topicId: 'qui_atomistica',
+    topicId: 'qui_polaridade_geometria',
     subject: 'Química',
     prompt: 'A combinação dos elementos Ca e Br forma uma substância solúvel em água, de fórmula ___________. Uma solução aquosa dessa substância é classificada como ___________ de eletricidade.',
     options: [
@@ -1458,7 +1745,7 @@ export const mockQuestions: Question[] = [
   // Português — Redação
   {
     id: 'q_por_redacao_1',
-    topicId: 'por_redacao',
+    topicId: 'por_red_argumentacao',
     subject: 'Português',
     prompt: 'Em uma redação dissertativo-argumentativa, o uso de um dado estatístico de uma fonte confiável (como IBGE ou OMS) logo na introdução tem principalmente a função de:',
     options: [
@@ -1473,7 +1760,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_por_redacao_2',
-    topicId: 'por_redacao',
+    topicId: 'por_red_estrutura_coesao',
     subject: 'Português',
     prompt: 'Qual das alternativas abaixo caracteriza uma proposta de intervenção completa e bem estruturada, nos moldes cobrados pelo ENEM e por vestibulares que adotam critério semelhante?',
     options: [
@@ -1491,7 +1778,7 @@ export const mockQuestions: Question[] = [
 export const mockPodcastEpisodes: PodcastEpisode[] = [
   {
     id: 'pod_bio_01',
-    topicId: 'bio_celular',
+    topicId: 'bio_estrutura_fisio_celular',
     title: 'Citologia em 5 minutos',
     subject: 'Biologia',
     durationMinutes: 5,
@@ -1539,7 +1826,7 @@ export const mockPodcastEpisodes: PodcastEpisode[] = [
   },
   {
     id: 'pod_mat_01',
-    topicId: 'mat_algebrica',
+    topicId: 'mat_funcoes',
     title: 'Funções de primeiro grau na prática',
     subject: 'Matemática',
     durationMinutes: 4,
@@ -1547,7 +1834,7 @@ export const mockPodcastEpisodes: PodcastEpisode[] = [
   },
   {
     id: 'pod_mat_02',
-    topicId: 'mat_numerica',
+    topicId: 'mat_combinatoria',
     title: 'Análise combinatória: quando somar e quando multiplicar',
     subject: 'Matemática',
     durationMinutes: 7,
@@ -1555,7 +1842,7 @@ export const mockPodcastEpisodes: PodcastEpisode[] = [
   },
   {
     id: 'pod_mat_03',
-    topicId: 'mat_algebrica',
+    topicId: 'mat_funcoes',
     title: 'Funções de segundo grau e a parábola',
     subject: 'Matemática',
     durationMinutes: 6,
@@ -1563,7 +1850,7 @@ export const mockPodcastEpisodes: PodcastEpisode[] = [
   },
   {
     id: 'pod_mat_04',
-    topicId: 'mat_geometrica',
+    topicId: 'mat_geometria_plana',
     title: 'Geometria plana: as fórmulas que mais caem',
     subject: 'Matemática',
     durationMinutes: 5,
@@ -1571,7 +1858,7 @@ export const mockPodcastEpisodes: PodcastEpisode[] = [
   },
   {
     id: 'pod_mat_05',
-    topicId: 'mat_numerica',
+    topicId: 'mat_dados_probabilidade',
     title: 'Probabilidade sem mistério',
     subject: 'Matemática',
     durationMinutes: 5,
@@ -1579,7 +1866,7 @@ export const mockPodcastEpisodes: PodcastEpisode[] = [
   },
   {
     id: 'pod_mat_06',
-    topicId: 'mat_algebrica',
+    topicId: 'mat_trigonometria',
     title: 'Trigonometria: seno, cosseno e tangente na prática',
     subject: 'Matemática',
     durationMinutes: 6,
@@ -1595,7 +1882,7 @@ export const mockPodcastEpisodes: PodcastEpisode[] = [
   },
   {
     id: 'pod_fis_02',
-    topicId: 'fis_eletricidade',
+    topicId: 'fis_circuitos',
     title: 'Eletrodinâmica: série, paralelo e a Lei de Ohm',
     subject: 'Física',
     durationMinutes: 6,
@@ -1603,7 +1890,7 @@ export const mockPodcastEpisodes: PodcastEpisode[] = [
   },
   {
     id: 'pod_fis_03',
-    topicId: 'fis_dinamica',
+    topicId: 'fis_leis_newton',
     title: 'As três Leis de Newton em um episódio só',
     subject: 'Física',
     durationMinutes: 6,
@@ -1611,7 +1898,7 @@ export const mockPodcastEpisodes: PodcastEpisode[] = [
   },
   {
     id: 'pod_fis_04',
-    topicId: 'fis_termofisica',
+    topicId: 'fis_calorimetria',
     title: 'Termologia: calor, temperatura e mudanças de estado',
     subject: 'Física',
     durationMinutes: 6,
@@ -1619,7 +1906,7 @@ export const mockPodcastEpisodes: PodcastEpisode[] = [
   },
   {
     id: 'pod_fis_05',
-    topicId: 'fis_optica',
+    topicId: 'fis_optica_geometrica',
     title: 'Óptica: luz, reflexão e a visão humana',
     subject: 'Física',
     durationMinutes: 5,
@@ -1627,7 +1914,7 @@ export const mockPodcastEpisodes: PodcastEpisode[] = [
   },
   {
     id: 'pod_fis_06',
-    topicId: 'fis_ondas',
+    topicId: 'fis_ondulatoria',
     title: 'Ondulatória: velocidade, frequência e ressonância',
     subject: 'Física',
     durationMinutes: 6,
@@ -1635,7 +1922,7 @@ export const mockPodcastEpisodes: PodcastEpisode[] = [
   },
   {
     id: 'pod_qui_01',
-    topicId: 'qui_geral',
+    topicId: 'qui_estequiometria',
     title: 'Estequiometria sem trava',
     subject: 'Química',
     durationMinutes: 6,
@@ -1643,7 +1930,7 @@ export const mockPodcastEpisodes: PodcastEpisode[] = [
   },
   {
     id: 'pod_qui_02',
-    topicId: 'qui_atomistica',
+    topicId: 'qui_polaridade_geometria',
     title: 'Ligações químicas: iônica, covalente e polaridade',
     subject: 'Química',
     durationMinutes: 6,
@@ -1651,7 +1938,7 @@ export const mockPodcastEpisodes: PodcastEpisode[] = [
   },
   {
     id: 'pod_qui_03',
-    topicId: 'qui_organica',
+    topicId: 'qui_organica_fundamentos',
     title: 'Química orgânica: carbono, cadeias e funções',
     subject: 'Química',
     durationMinutes: 6,
@@ -1659,7 +1946,7 @@ export const mockPodcastEpisodes: PodcastEpisode[] = [
   },
   {
     id: 'pod_qui_04',
-    topicId: 'qui_fisico_quimica',
+    topicId: 'qui_solucoes',
     title: 'Soluções e concentração no dia a dia',
     subject: 'Química',
     durationMinutes: 5,
@@ -1699,7 +1986,7 @@ export const mockPodcastEpisodes: PodcastEpisode[] = [
   },
   {
     id: 'pod_por_redacao',
-    topicId: 'por_redacao',
+    topicId: 'por_red_fundamentos',
     title: 'Redação nota 1000: repertório, argumentação e proposta',
     subject: 'Português',
     durationMinutes: 6,
@@ -1789,7 +2076,7 @@ export const mockStudyMethods: StudyMethod[] = [
 export const mockBacklog: BacklogItem[] = [
   {
     id: 'backlog_qui_03',
-    topicId: 'qui_organica',
+    topicId: 'qui_organica_fundamentos',
     state: 1,
     dependencia: 2,
     incidencia: 3,
@@ -1802,7 +2089,7 @@ export const mockBacklog: BacklogItem[] = [
   },
   {
     id: 'backlog_mat_06',
-    topicId: 'mat_algebrica',
+    topicId: 'mat_trigonometria',
     state: 2,
     dependencia: 1,
     incidencia: 2,

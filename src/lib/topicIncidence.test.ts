@@ -19,7 +19,7 @@ test('retorna 0 para um tópico sem temas mapeados no relatório', () => {
 });
 
 test('resolve o alias de assunto (Português -> Língua Portuguesa)', () => {
-  const weight = topicIncidenceWeight({ id: 'por_gramatica', subject: 'Português' });
+  const weight = topicIncidenceWeight({ id: 'por_norma_culta', subject: 'Português' });
   assert.ok(weight > 0);
 });
 

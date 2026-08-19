@@ -3,6 +3,7 @@ import { db } from './firestore';
 import { TopicMastery, ErrorLog, UserProfile, DiscursiveAttempt, BacklogItem, StudentGoals, PlanFeedback } from '../types';
 import { mockMastery, mockProfile, mockBacklog, mockTopics, mockStudentGoals } from '../data/mockData';
 import { remapLegacyTopicId } from '../data/legacyTopics';
+import { SPLIT_TOPIC_PARENTS } from '../data/topicSplits';
 
 export interface QuestionAttempt {
   id: string;
@@ -17,14 +18,37 @@ export interface QuestionAttempt {
 // real one) gets a fresh baseline entry instead of silently having no
 // mastery row at all, and rows for topics that no longer exist are dropped
 // instead of lingering as orphaned data nobody reads.
+//
+// A topic that was split into finer sub-areas (SPLIT_TOPIC_PARENTS, e.g.
+// "Modelagem Geométrica" -> Geometria Plana/Trigonometria/...) is a special
+// case: the student's real estimate for the old, broader topic is carried
+// forward to every child instead of resetting each one to an unstudied
+// baseline — averaged across parents when a child drew from more than one
+// old frente. This isn't more precise than what she actually reported, just
+// less destructive than silently discarding it.
 function reconcileMastery(saved: TopicMastery[]): TopicMastery[] {
   const byTopicId = new Map(saved.map((item) => [item.topicId, item]));
-  return mockTopics.map((topic) => byTopicId.get(topic.id) ?? {
-    topicId: topic.id,
-    level: 0,
-    uncertainty: 0.9,
-    lastReviewed: new Date(0).toISOString(),
-    errorSignals: 0,
+  return mockTopics.map((topic) => {
+    const existing = byTopicId.get(topic.id);
+    if (existing) return existing;
+    const parentIds = SPLIT_TOPIC_PARENTS[topic.id];
+    const parents = parentIds?.map((id) => byTopicId.get(id)).filter((m): m is TopicMastery => !!m);
+    if (parents && parents.length > 0) {
+      return {
+        topicId: topic.id,
+        level: Math.round(parents.reduce((sum, m) => sum + m.level, 0) / parents.length),
+        uncertainty: parents.reduce((sum, m) => sum + m.uncertainty, 0) / parents.length,
+        lastReviewed: parents.reduce((latest, m) => (m.lastReviewed > latest ? m.lastReviewed : latest), parents[0].lastReviewed),
+        errorSignals: Math.max(...parents.map((m) => m.errorSignals)),
+      };
+    }
+    return {
+      topicId: topic.id,
+      level: 0,
+      uncertainty: 0.9,
+      lastReviewed: new Date(0).toISOString(),
+      errorSignals: 0,
+    };
   });
 }
 
@@ -108,8 +132,19 @@ export async function addUserDiscursiveAttempt(uid: string, attempt: DiscursiveA
 // to resolve instead of letting it silently disappear.
 function reconcileBacklog(saved: BacklogItem[]): { items: BacklogItem[]; changed: boolean } {
   let changed = false;
+  const currentTopicIds = new Set(mockTopics.map((t) => t.id));
   const items = saved.map((item) => {
-    const topicId = remapLegacyTopicId(item.topicId);
+    let topicId = remapLegacyTopicId(item.topicId);
+    // A frente the item pointed at may since have been split into finer
+    // topics (see topicSplits.ts). If the item names a specific chapter,
+    // find the one new topic whose chapters actually include it — a precise
+    // remap, not a guess. Without a chapter to go on there's no way to know
+    // which child topic she meant, so it's left for her to resolve in the
+    // "tópico não existe mais" UI rather than picked arbitrarily.
+    if (item.subtopic && !currentTopicIds.has(topicId)) {
+      const match = mockTopics.find((t) => t.chapters?.includes(item.subtopic!));
+      if (match) topicId = match.id;
+    }
     if (topicId === item.topicId) return item;
     changed = true;
     return { ...item, topicId };

@@ -17,11 +17,17 @@ test('remapLegacyTopicId leaves a current-catalog id untouched', () => {
   assert.equal(remapLegacyTopicId('bio_ecologia'), 'bio_ecologia');
 });
 
-test('every migration target exists in the current topic catalog', () => {
+test('a migration target that later got split itself is left for reconcileBacklog to resolve further', () => {
+  // qui_organica (the qui_03 rename target) was itself split into
+  // qui_organica_fundamentos/qui_organica_reacoes in a later curriculum
+  // pass — remapLegacyTopicId doesn't chain through that, since it can't
+  // know which child the student meant. reconcileBacklog (userData.ts)
+  // handles this next step via the item's chapter, or leaves it orphaned.
   const currentIds = new Set(mockTopics.map((t) => t.id));
-  for (const targetId of Object.values(LEGACY_TOPIC_ID_MIGRATIONS)) {
-    assert.ok(currentIds.has(targetId), `${targetId} should exist in mockTopics`);
-  }
+  const stillCurrent = Object.values(LEGACY_TOPIC_ID_MIGRATIONS).filter((id) => currentIds.has(id));
+  const nowStale = Object.values(LEGACY_TOPIC_ID_MIGRATIONS).filter((id) => !currentIds.has(id));
+  assert.ok(stillCurrent.length > 0, 'at least one migration target should still be a live topic');
+  assert.deepEqual(new Set(nowStale), new Set(['qui_organica', 'qui_fisico_quimica']));
 });
 
 test('no migration target is itself a legacy id needing migration', () => {
