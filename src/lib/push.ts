@@ -49,7 +49,11 @@ export async function enableReviewReminders(): Promise<void> {
   if (!keyResponse.ok) throw new Error('Notificações push não estão configuradas no servidor.');
   const { publicKey } = await keyResponse.json() as { publicKey: string };
 
-  const registration = await navigator.serviceWorker.register('/sw.js');
+  await navigator.serviceWorker.register('/sw.js');
+  // register() resolves once the registration exists, not once it's
+  // active — subscribing before then throws "requires an active service
+  // worker". `.ready` waits for an active worker controlling the page.
+  const registration = await navigator.serviceWorker.ready;
   const subscription = await registration.pushManager.subscribe({
     userVisibleOnly: true,
     applicationServerKey: urlBase64ToUint8Array(publicKey),
