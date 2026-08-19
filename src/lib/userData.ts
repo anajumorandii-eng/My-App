@@ -2,6 +2,7 @@ import { doc, getDoc, setDoc, collection, getDocs, query, orderBy } from 'fireba
 import { db } from './firestore';
 import { TopicMastery, ErrorLog, UserProfile, DiscursiveAttempt, BacklogItem, StudentGoals, PlanFeedback } from '../types';
 import { mockMastery, mockProfile, mockBacklog, mockTopics, mockStudentGoals } from '../data/mockData';
+import { remapLegacyTopicId } from '../data/legacyTopics';
 
 export interface QuestionAttempt {
   id: string;
@@ -99,11 +100,33 @@ export async function addUserDiscursiveAttempt(uid: string, attempt: DiscursiveA
   await setDoc(ref, attempt);
 }
 
+// A backlog entry is the student's own diagnosis (state, dependência,
+// incidência, lacuna, urgência, custo — all self-scored), not a full-catalog
+// row like mastery, so it's never dropped or reset here. Only the topicId is
+// touched, and only when the rename is unambiguous (see legacyTopics.ts) —
+// anything else stays as-is and the backlog UI surfaces it for the student
+// to resolve instead of letting it silently disappear.
+function reconcileBacklog(saved: BacklogItem[]): { items: BacklogItem[]; changed: boolean } {
+  let changed = false;
+  const items = saved.map((item) => {
+    const topicId = remapLegacyTopicId(item.topicId);
+    if (topicId === item.topicId) return item;
+    changed = true;
+    return { ...item, topicId };
+  });
+  return { items, changed };
+}
+
 export async function getUserBacklog(uid: string): Promise<BacklogItem[]> {
   const ref = doc(db, 'users', uid, 'data', 'backlog');
   const snap = await getDoc(ref);
   if (snap.exists()) {
-    return (snap.data().items as BacklogItem[]) ?? [];
+    const saved = (snap.data().items as BacklogItem[]) ?? [];
+    const { items, changed } = reconcileBacklog(saved);
+    if (changed) {
+      await setDoc(ref, { items });
+    }
+    return items;
   }
   await setDoc(ref, { items: mockBacklog });
   return mockBacklog;
