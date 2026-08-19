@@ -1,6 +1,7 @@
 import React, { useMemo, useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { mockTopics } from '../data/mockData';
+import { Topic } from '../types';
 import { aiErrorMessage, requestAiText } from '../lib/aiClient';
 import { parseContentExplanation, parseAnswerCorrection, ContentExplanation, AnswerCorrection } from '../lib/tutorContracts';
 import { AiText } from '../components/AiText';
@@ -27,27 +28,62 @@ function useTopicPicker() {
     });
     return groups;
   }, []);
-  const [topicId, setTopicId] = useState(mockTopics[0].id);
+  const [topicId, setTopicIdRaw] = useState(mockTopics[0].id);
+  const [subtopic, setSubtopic] = useState('');
   const topic = mockTopics.find((t) => t.id === topicId) ?? mockTopics[0];
-  return { topicsBySubject, topicId, setTopicId, topic };
+  // Changing the topic invalidates whatever chapter was picked for the previous one.
+  const setTopicId = (id: string) => {
+    setTopicIdRaw(id);
+    setSubtopic('');
+  };
+  const effectiveTopic = subtopic ? `${topic.name} — ${subtopic}` : topic.name;
+  return { topicsBySubject, topicId, setTopicId, topic, subtopic, setSubtopic, effectiveTopic };
 }
 
-function TopicSelect({ topicsBySubject, topicId, onChange }: { topicsBySubject: Record<string, string[]>; topicId: string; onChange: (id: string) => void }) {
+function TopicSelect({
+  topicsBySubject,
+  topicId,
+  onChange,
+  topic,
+  subtopic,
+  setSubtopic,
+}: {
+  topicsBySubject: Record<string, string[]>;
+  topicId: string;
+  onChange: (id: string) => void;
+  topic: Topic;
+  subtopic: string;
+  setSubtopic: (s: string) => void;
+}) {
   return (
-    <select
-      value={topicId}
-      onChange={(e) => onChange(e.target.value)}
-      className="bg-transparent border border-zinc-300 dark:border-zinc-700 rounded-lg px-3 py-1.5 text-sm outline-none focus:ring-2 focus:ring-indigo-500"
-    >
-      {Object.entries(topicsBySubject).map(([subject, ids]) => (
-        <optgroup key={subject} label={subject}>
-          {ids.map((id) => {
-            const t = mockTopics.find((topic) => topic.id === id);
-            return t ? <option key={id} value={id}>{t.name}</option> : null;
-          })}
-        </optgroup>
-      ))}
-    </select>
+    <div className="flex items-center gap-2 flex-wrap">
+      <select
+        value={topicId}
+        onChange={(e) => onChange(e.target.value)}
+        className="bg-transparent border border-zinc-300 dark:border-zinc-700 rounded-lg px-3 py-1.5 text-sm outline-none focus:ring-2 focus:ring-indigo-500"
+      >
+        {Object.entries(topicsBySubject).map(([subject, ids]) => (
+          <optgroup key={subject} label={subject}>
+            {ids.map((id) => {
+              const t = mockTopics.find((topic) => topic.id === id);
+              return t ? <option key={id} value={id}>{t.name}</option> : null;
+            })}
+          </optgroup>
+        ))}
+      </select>
+      {!!topic.chapters?.length && (
+        <select
+          value={subtopic}
+          onChange={(e) => setSubtopic(e.target.value)}
+          className="bg-transparent border border-zinc-300 dark:border-zinc-700 rounded-lg px-3 py-1.5 text-sm outline-none focus:ring-2 focus:ring-indigo-500"
+        >
+          <option value="">Capítulo específico (opcional)</option>
+          {topic.chapters.map((chapter) => (
+            <option key={chapter} value={chapter}>{chapter}</option>
+          ))}
+        </select>
+      )}
+    </div>
   );
 }
 
@@ -84,7 +120,7 @@ function CorrectionCard({ correction }: { correction: AnswerCorrection }) {
   );
 }
 
-function ExplicarPanel({ topicsBySubject, topicId, setTopicId, topic }: ReturnType<typeof useTopicPicker>) {
+function ExplicarPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, setSubtopic, effectiveTopic }: ReturnType<typeof useTopicPicker>) {
   const [question, setQuestion] = useState('');
   const [loading, setLoading] = useState(false);
   const [explanation, setExplanation] = useState<ContentExplanation | null>(null);
@@ -95,7 +131,7 @@ function ExplicarPanel({ topicsBySubject, topicId, setTopicId, topic }: ReturnTy
     setError(null);
     try {
       const data = await requestAiText('content-explanation', {
-        topic: topic.name,
+        topic: effectiveTopic,
         subject: topic.subject,
         question: question.trim() || undefined,
       });
@@ -111,7 +147,7 @@ function ExplicarPanel({ topicsBySubject, topicId, setTopicId, topic }: ReturnTy
     <div className="p-6 space-y-4 overflow-y-auto flex-1">
       <div className="flex items-center justify-between flex-wrap gap-2">
         <span className="text-sm font-medium text-zinc-600 dark:text-zinc-400">Tópico</span>
-        <TopicSelect topicsBySubject={topicsBySubject} topicId={topicId} onChange={setTopicId} />
+        <TopicSelect topicsBySubject={topicsBySubject} topicId={topicId} onChange={setTopicId} topic={topic} subtopic={subtopic} setSubtopic={setSubtopic} />
       </div>
       <textarea
         value={question}
@@ -161,7 +197,7 @@ function ExplicarPanel({ topicsBySubject, topicId, setTopicId, topic }: ReturnTy
   );
 }
 
-function CorrigirPanel({ topicsBySubject, topicId, setTopicId, topic }: ReturnType<typeof useTopicPicker>) {
+function CorrigirPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, setSubtopic, effectiveTopic }: ReturnType<typeof useTopicPicker>) {
   const [question, setQuestion] = useState('');
   const [answer, setAnswer] = useState('');
   const [board, setBoard] = useState('');
@@ -175,7 +211,7 @@ function CorrigirPanel({ topicsBySubject, topicId, setTopicId, topic }: ReturnTy
     setError(null);
     try {
       const data = await requestAiText('answer-correction', {
-        topic: topic.name,
+        topic: effectiveTopic,
         subject: topic.subject,
         question: question.trim(),
         studentAnswer: answer.trim(),
@@ -193,7 +229,7 @@ function CorrigirPanel({ topicsBySubject, topicId, setTopicId, topic }: ReturnTy
     <div className="p-6 space-y-4 overflow-y-auto flex-1">
       <div className="flex items-center justify-between flex-wrap gap-2">
         <span className="text-sm font-medium text-zinc-600 dark:text-zinc-400">Tópico</span>
-        <TopicSelect topicsBySubject={topicsBySubject} topicId={topicId} onChange={setTopicId} />
+        <TopicSelect topicsBySubject={topicsBySubject} topicId={topicId} onChange={setTopicId} topic={topic} subtopic={subtopic} setSubtopic={setSubtopic} />
       </div>
       <div>
         <label className="text-xs text-zinc-500 mb-1 block">Questão (cole o enunciado)</label>
@@ -237,7 +273,7 @@ function CorrigirPanel({ topicsBySubject, topicId, setTopicId, topic }: ReturnTy
   );
 }
 
-function QuestaoPanel({ topicsBySubject, topicId, setTopicId, topic }: ReturnType<typeof useTopicPicker>) {
+function QuestaoPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, setSubtopic, effectiveTopic }: ReturnType<typeof useTopicPicker>) {
   const [isDiscursive, setIsDiscursive] = useState(false);
   const [board, setBoard] = useState(DISCURSIVE_BOARDS[0]);
   const [generating, setGenerating] = useState(false);
@@ -254,7 +290,7 @@ function QuestaoPanel({ topicsBySubject, topicId, setTopicId, topic }: ReturnTyp
     setAnswer('');
     try {
       const data = await requestAiText('backlog-exercise', {
-        topic: topic.name,
+        topic: effectiveTopic,
         subject: topic.subject,
         mode: isDiscursive ? 'discursive' : 'solve',
         board: isDiscursive ? board : undefined,
@@ -274,7 +310,7 @@ function QuestaoPanel({ topicsBySubject, topicId, setTopicId, topic }: ReturnTyp
     setError(null);
     try {
       const data = await requestAiText('answer-correction', {
-        topic: topic.name,
+        topic: effectiveTopic,
         subject: topic.subject,
         question: exercise,
         studentAnswer: answer.trim(),
@@ -292,7 +328,7 @@ function QuestaoPanel({ topicsBySubject, topicId, setTopicId, topic }: ReturnTyp
     <div className="p-6 space-y-4 overflow-y-auto flex-1">
       <div className="flex items-center justify-between flex-wrap gap-2">
         <span className="text-sm font-medium text-zinc-600 dark:text-zinc-400">Tópico</span>
-        <TopicSelect topicsBySubject={topicsBySubject} topicId={topicId} onChange={setTopicId} />
+        <TopicSelect topicsBySubject={topicsBySubject} topicId={topicId} onChange={setTopicId} topic={topic} subtopic={subtopic} setSubtopic={setSubtopic} />
       </div>
       <div className="flex items-center gap-3 flex-wrap">
         <label className="flex items-center text-sm gap-2">
@@ -383,7 +419,7 @@ interface Message {
   text: string;
 }
 
-function DuvidaPanel({ topicsBySubject, topicId, setTopicId, topic }: ReturnType<typeof useTopicPicker>) {
+function DuvidaPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, setSubtopic, effectiveTopic }: ReturnType<typeof useTopicPicker>) {
   const [input, setInput] = useState('');
   const [messages, setMessages] = useState<Message[]>([
     { id: '1', sender: 'ai', text: `Olá. Qual dúvida sobre ${topic.name} você quer resolver pensando junto comigo?` },
@@ -403,7 +439,7 @@ function DuvidaPanel({ topicsBySubject, topicId, setTopicId, topic }: ReturnType
     setInput('');
     setIsLoading(true);
     try {
-      const data = await requestAiText('socratic', { question: userMessage.text, topic: topic.name });
+      const data = await requestAiText('socratic', { question: userMessage.text, topic: effectiveTopic });
       setMessages((prev) => [...prev, { id: Date.now().toString(), sender: 'ai', text: data.text || 'Ocorreu um erro ao processar a resposta.' }]);
     } catch (error) {
       setMessages((prev) => [...prev, { id: Date.now().toString(), sender: 'ai', text: aiErrorMessage(error) }]);
@@ -419,7 +455,7 @@ function DuvidaPanel({ topicsBySubject, topicId, setTopicId, topic }: ReturnType
           <Brain className="w-5 h-5 mr-3 text-indigo-600 dark:text-indigo-400" />
           <span className="font-medium">Sessão ativa</span>
         </div>
-        <TopicSelect topicsBySubject={topicsBySubject} topicId={topicId} onChange={setTopicId} />
+        <TopicSelect topicsBySubject={topicsBySubject} topicId={topicId} onChange={setTopicId} topic={topic} subtopic={subtopic} setSubtopic={setSubtopic} />
       </div>
 
       <div ref={scrollRef} className="flex-1 overflow-y-auto p-6 space-y-6">
