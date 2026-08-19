@@ -3,6 +3,7 @@ import { EfficiencyEngine } from '../lib/efficiencyEngine';
 import { mockTopics } from '../data/mockData';
 import { useUserMastery } from '../hooks/useUserMastery';
 import { useUserProfile } from '../hooks/useUserProfile';
+import { useStudentGoals } from '../hooks/useStudentGoals';
 import { useAvailableMinutes } from '../hooks/useAvailableMinutes';
 import { Map, Clock, Battery, BatteryLow, BatteryFull, CloudOff, CalendarCheck2 } from 'lucide-react';
 
@@ -20,6 +21,7 @@ const SUBJECT_COLORS: Record<string, string> = {
 export default function Plano() {
   const { mastery, isPersisted, syncError } = useUserMastery();
   const { profile: userProfile } = useUserProfile();
+  const { goals } = useStudentGoals();
   const {
     minutes: minutesToday,
     usingAuto,
@@ -41,8 +43,8 @@ export default function Plano() {
   const profile = useMemo(() => ({ ...userProfile, currentEnergyLevel: energyLevel }), [userProfile, energyLevel]);
 
   const dailyPlan = useMemo(
-    () => EfficiencyEngine.generateDailyPlan(mastery, mockTopics, profile, minutesToday),
-    [mastery, profile, minutesToday]
+    () => EfficiencyEngine.generateDailyPlan(mastery, mockTopics, profile, minutesToday, goals),
+    [mastery, profile, minutesToday, goals]
   );
 
   const plannedTopicIds = new Set(dailyPlan.map((a) => a.topicId));

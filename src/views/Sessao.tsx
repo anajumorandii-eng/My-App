@@ -3,6 +3,7 @@ import { EfficiencyEngine } from '../lib/efficiencyEngine';
 import { mockTopics } from '../data/mockData';
 import { useUserMastery } from '../hooks/useUserMastery';
 import { useUserProfile } from '../hooks/useUserProfile';
+import { useStudentGoals } from '../hooks/useStudentGoals';
 import { useAvailableMinutes } from '../hooks/useAvailableMinutes';
 import { StudyAction } from '../types';
 import { PlayCircle, Pause, RotateCcw, CheckCircle2, PlayCircle as StartIcon, CloudOff } from 'lucide-react';
@@ -18,10 +19,11 @@ export default function Sessao() {
   const [searchParams] = useSearchParams();
   const { mastery, updateMastery, isPersisted } = useUserMastery();
   const { profile } = useUserProfile();
+  const { goals } = useStudentGoals();
   const { minutes: availableMinutes } = useAvailableMinutes();
   const dailyPlan = useMemo(
-    () => EfficiencyEngine.generateDailyPlan(mastery, mockTopics, profile, availableMinutes),
-    [mastery, profile, availableMinutes]
+    () => EfficiencyEngine.generateDailyPlan(mastery, mockTopics, profile, availableMinutes, goals),
+    [mastery, profile, availableMinutes, goals]
   );
 
   const [selectedAction, setSelectedAction] = useState<StudyAction | null>(dailyPlan[0] ?? null);

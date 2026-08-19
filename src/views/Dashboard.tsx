@@ -1,23 +1,155 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useState } from 'react';
 import { EfficiencyEngine } from '../lib/efficiencyEngine';
 import { mockTopics } from '../data/mockData';
 import { useUserMastery } from '../hooks/useUserMastery';
 import { useUserProfile } from '../hooks/useUserProfile';
+import { useStudentGoals } from '../hooks/useStudentGoals';
 import { useAvailableMinutes } from '../hooks/useAvailableMinutes';
+import { useAuth } from '../context/AuthContext';
 import { pendingReviewCount } from '../lib/reviewUrgency';
 import { nextExams, daysUntil } from '../data/examCalendar';
-import { PlayCircle, Target, Brain, AlertCircle, CloudOff, CalendarClock } from 'lucide-react';
+import { addPlanFeedback } from '../lib/userData';
+import { StudyAction, RecommendationReason, DisagreeReason, PlanFeedback } from '../types';
+import { PlayCircle, Target, Brain, AlertCircle, CloudOff, CalendarClock, ChevronDown, ChevronUp, ThumbsDown, Check } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+
+const REASON_LABELS: Record<RecommendationReason, string> = {
+  dominio_insuficiente: 'Domínio ainda insuficiente nesse tópico',
+  erro_recorrente: 'Erros recorrentes recentes',
+  revisao_urgente: 'Revisão está atrasada',
+  prerequisito_bloqueado: 'Um pré-requisito ainda está fraco',
+  incidencia_banca_prioritaria: 'Cai bastante na banca que você priorizou',
+  proximidade_prova: 'Uma prova relevante está se aproximando',
+  tempo_disponivel: 'Coube no seu tempo disponível hoje',
+};
+
+const DISAGREE_OPTIONS: { value: DisagreeReason; label: string }[] = [
+  { value: 'ja_estudei', label: 'Já estudei isso' },
+  { value: 'sem_material', label: 'Não tenho esse material' },
+  { value: 'nao_consigo_agora', label: 'Não consigo fazer agora' },
+  { value: 'prioridade_errada', label: 'Prioridade errada' },
+  { value: 'quero_outra_atividade', label: 'Quero escolher outra atividade' },
+];
+
+function ActionCard({
+  action,
+  index,
+  actionLabel,
+  onStart,
+  userId,
+}: {
+  action: StudyAction;
+  index: number;
+  actionLabel: string;
+  onStart: () => void;
+  userId: string | undefined;
+}) {
+  const [showReasons, setShowReasons] = useState(false);
+  const [showDisagree, setShowDisagree] = useState(false);
+  const [feedbackSent, setFeedbackSent] = useState(false);
+
+  const sendDisagreement = (reason: DisagreeReason) => {
+    const feedback: PlanFeedback = {
+      id: `feedback_${action.id}_${Date.now()}`,
+      actionId: action.id,
+      topicId: action.topicId,
+      reason,
+      date: new Date().toISOString(),
+    };
+    if (userId) {
+      addPlanFeedback(userId, feedback).catch((error) => console.error('Failed to save plan feedback:', error));
+    }
+    setShowDisagree(false);
+    setFeedbackSent(true);
+  };
+
+  return (
+    <div className="group bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-5 shadow-sm hover:border-indigo-300 dark:hover:border-indigo-700 transition-all">
+      <div className="flex items-center justify-between">
+        <div className="flex items-center">
+          <div className="w-10 h-10 rounded-full bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center mr-4 text-zinc-500 font-medium shrink-0">
+            {index + 1}
+          </div>
+          <div>
+            <h4 className="font-semibold text-lg">{action.topicName}</h4>
+            <div className="flex items-center text-sm text-zinc-500 mt-1 flex-wrap gap-x-3 gap-y-1">
+              <span className="capitalize">{actionLabel}</span>
+              <span>•</span>
+              <span>{action.subject}</span>
+              <span>•</span>
+              <span className="text-indigo-600 dark:text-indigo-400 font-medium">{action.estimatedMinutes} min</span>
+            </div>
+          </div>
+        </div>
+        <button onClick={onStart} className="hidden sm:flex items-center px-4 py-2 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 rounded-lg font-medium opacity-0 group-hover:opacity-100 transition-opacity shrink-0">
+          <PlayCircle className="w-4 h-4 mr-2" />
+          Iniciar
+        </button>
+      </div>
+
+      <div className="flex items-center gap-4 mt-3 pt-3 border-t border-zinc-100 dark:border-zinc-800">
+        <button
+          onClick={() => setShowReasons((v) => !v)}
+          className="flex items-center text-xs font-medium text-zinc-500 hover:text-zinc-700 dark:hover:text-zinc-300"
+        >
+          Por que isso?
+          {showReasons ? <ChevronUp className="w-3.5 h-3.5 ml-1" /> : <ChevronDown className="w-3.5 h-3.5 ml-1" />}
+        </button>
+        {!feedbackSent ? (
+          <button
+            onClick={() => setShowDisagree((v) => !v)}
+            className="flex items-center text-xs font-medium text-zinc-500 hover:text-zinc-700 dark:hover:text-zinc-300"
+          >
+            <ThumbsDown className="w-3.5 h-3.5 mr-1" />
+            Discordo
+          </button>
+        ) : (
+          <span className="flex items-center text-xs font-medium text-emerald-600 dark:text-emerald-400">
+            <Check className="w-3.5 h-3.5 mr-1" />
+            Registrado — o plano não muda sozinho por causa disso
+          </span>
+        )}
+      </div>
+
+      {showReasons && (
+        <ul className="mt-3 space-y-1.5 text-xs text-zinc-500 pl-1">
+          {action.reasons.map((reason) => (
+            <li key={reason} className="flex items-start">
+              <span className="w-1 h-1 rounded-full bg-zinc-400 mt-1.5 mr-2 shrink-0" />
+              {REASON_LABELS[reason]}
+            </li>
+          ))}
+        </ul>
+      )}
+
+      {showDisagree && (
+        <div className="mt-3 flex flex-wrap gap-2">
+          {DISAGREE_OPTIONS.map(({ value, label }) => (
+            <button
+              key={value}
+              onClick={() => sendDisagreement(value)}
+              className="px-3 py-1.5 rounded-full text-xs font-medium border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-50 dark:hover:bg-zinc-800"
+            >
+              {label}
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
 
 export default function Dashboard() {
   const navigate = useNavigate();
+  const { user } = useAuth();
   const { mastery, isPersisted } = useUserMastery();
   const { profile } = useUserProfile();
+  const { goals } = useStudentGoals();
   const { minutes: availableMinutes, usingAuto } = useAvailableMinutes();
 
   const dailyPlan = useMemo(() => {
-    return EfficiencyEngine.generateDailyPlan(mastery, mockTopics, profile, availableMinutes);
-  }, [mastery, profile, availableMinutes]);
+    return EfficiencyEngine.generateDailyPlan(mastery, mockTopics, profile, availableMinutes, goals);
+  }, [mastery, profile, availableMinutes, goals]);
   const primary = dailyPlan[0];
   const primaryMastery = mastery.find((item) => item.topicId === primary?.topicId);
   const overdueReviews = pendingReviewCount(mastery);
@@ -106,30 +238,14 @@ export default function Dashboard() {
         <h2 className="text-xl font-semibold mb-4">Ações Recomendadas</h2>
         <div className="space-y-4">
           {dailyPlan.map((action, index) => (
-            <div 
+            <ActionCard
               key={action.id}
-              className="group bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-5 shadow-sm hover:border-indigo-300 dark:hover:border-indigo-700 transition-all flex items-center justify-between"
-            >
-              <div className="flex items-center">
-                <div className="w-10 h-10 rounded-full bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center mr-4 text-zinc-500 font-medium">
-                  {index + 1}
-                </div>
-                <div>
-                  <h4 className="font-semibold text-lg">{action.topicName}</h4>
-                  <div className="flex items-center text-sm text-zinc-500 mt-1 space-x-3">
-                    <span className="capitalize">{action.type.replace('_', ' ')}</span>
-                    <span>•</span>
-                    <span>{action.subject}</span>
-                    <span>•</span>
-                    <span className="text-indigo-600 dark:text-indigo-400 font-medium">{action.estimatedMinutes} min</span>
-                  </div>
-                </div>
-              </div>
-              <button onClick={() => startAction(action.topicId)} className="hidden sm:flex items-center px-4 py-2 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 rounded-lg font-medium opacity-0 group-hover:opacity-100 transition-opacity">
-                <PlayCircle className="w-4 h-4 mr-2" />
-                Iniciar
-              </button>
-            </div>
+              action={action}
+              index={index}
+              actionLabel={actionLabels[action.type]}
+              onStart={() => startAction(action.topicId)}
+              userId={user?.uid}
+            />
           ))}
 
           {dailyPlan.length === 0 && (

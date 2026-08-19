@@ -1,4 +1,4 @@
-import { Topic, TopicMastery, UserProfile, ErrorLog, Question, PodcastEpisode, StudyMethod, BacklogItem } from '../types';
+import { Topic, TopicMastery, UserProfile, ErrorLog, Question, PodcastEpisode, StudyMethod, BacklogItem, StudentGoals } from '../types';
 
 // Currículo real, extraído dos sumários das apostilas (Anglo/Plural, cadernos de
 // estudo 1-4, 1º e 2º semestres de 2026) da aluna. Agrupado por assunto/módulo —
@@ -93,10 +93,30 @@ export const mockMastery: TopicMastery[] = [
 export const mockProfile: UserProfile = {
   targetCourse: 'Medicina',
   targetUniversities: ['USP', 'UNICAMP', 'UNESP'],
-  targetExams: ['ENEM', 'FUVEST'],
+  // Fuvest é a prioridade principal (ver mockStudentGoals), mas as demais
+  // bancas continuam ativas por padrão — nenhuma é ignorada de saída.
+  targetExams: ['FUVEST', 'UNICAMP', 'UNESP', 'ENEM', 'FAMERP', 'UNIFESP'],
   availableHoursPerWeek: 40,
   currentEnergyLevel: 'medium',
   autonomyIndex: 35 // starts low, increases over time
+};
+
+// Objetivos e peso por banca — ponto de partida editável em Perfil. Fuvest
+// como prioridade principal (peso 1, ambas as fases), as demais com peso
+// menor mas nenhuma zerada — "tema sem incidência não é irrelevante" vale
+// também para bancas: uma banca ativa com peso baixo ainda conta, só conta
+// menos.
+export const mockStudentGoals: StudentGoals = {
+  primaryGoal: 'FUVEST — Medicina',
+  secondaryGoals: ['Manter Unicamp e Unesp como alternativas reais', 'Não zerar Redação'],
+  boardWeights: [
+    { board: 'FUVEST', weight: 1, phaseFocus: 'ambas' },
+    { board: 'UNICAMP', weight: 0.7, phaseFocus: 'ambas' },
+    { board: 'UNESP', weight: 0.6, phaseFocus: 'ambas' },
+    { board: 'ENEM', weight: 0.6, phaseFocus: 'ambas' },
+    { board: 'FAMERP', weight: 0.35, phaseFocus: 'ambas' },
+    { board: 'UNIFESP', weight: 0.35, phaseFocus: 'ambas' },
+  ],
 };
 
 export const mockErrorLogs: ErrorLog[] = [
