@@ -42,12 +42,21 @@ export async function enableReviewReminders(): Promise<void> {
     applicationServerKey: urlBase64ToUint8Array(publicKey),
   });
 
-  const response = await authedFetch('/api/push/subscribe', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(subscription.toJSON()),
-  });
-  if (!response.ok) throw new Error('Não foi possível salvar a inscrição de notificação.');
+  try {
+    const response = await authedFetch('/api/push/subscribe', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(subscription.toJSON()),
+    });
+    if (!response.ok) throw new Error('Não foi possível salvar a inscrição de notificação.');
+  } catch (error) {
+    // Keep the browser subscription and the server record in sync: if the
+    // server never learned about this subscription, don't leave the
+    // browser (and thus getCurrentPushSubscription()) reporting it as
+    // active — the daily reminder job would never actually reach this user.
+    await subscription.unsubscribe().catch(() => undefined);
+    throw error;
+  }
 }
 
 export async function disableReviewReminders(): Promise<void> {

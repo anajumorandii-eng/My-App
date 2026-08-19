@@ -4,6 +4,7 @@ import { mockTopics } from '../data/mockData';
 import { useUserMastery } from '../hooks/useUserMastery';
 import { useUserProfile } from '../hooks/useUserProfile';
 import { useAvailableMinutes } from '../hooks/useAvailableMinutes';
+import { pendingReviewCount } from '../lib/reviewUrgency';
 import { PlayCircle, Target, Brain, AlertCircle, CloudOff } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
@@ -18,7 +19,7 @@ export default function Dashboard() {
   }, [mastery, profile, availableMinutes]);
   const primary = dailyPlan[0];
   const primaryMastery = mastery.find((item) => item.topicId === primary?.topicId);
-  const overdueReviews = mastery.filter((item) => Date.now() - new Date(item.lastReviewed).getTime() > 7 * 86400000).length;
+  const overdueReviews = pendingReviewCount(mastery);
   const actionLabels = { review: 'Revisar para consolidar', practice: 'Praticar sem apoio', theory: 'Reconstruir a base', error_analysis: 'Analisar erros recorrentes' };
 
   const startAction = (topicId?: string) => navigate(topicId ? `/sessao?topic=${encodeURIComponent(topicId)}` : '/sessao');
