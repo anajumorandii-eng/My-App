@@ -1,11 +1,16 @@
-// Datas reais dos vestibulares de Medicina 2026, extraídas do calendário
-// acadêmico do Anglo Vestibulares (V.7, 07/07/2026) que a aluna enviou. O
-// calendário mistura provas oficiais com simulados internos do próprio curso
-// (ex.: "AP-1".."AP-8", "FUVEST 1".."FUVEST 7", "ENEM 1".."ENEM 4", "UNICAMP 1"/"2")
-// — esses simulados foram propositalmente deixados de fora daqui. As datas de
-// 1ª fase/dia único têm alta confiança; as de 2ª fase (nov/dez) vieram de uma
-// grade mais densa do calendário e vale conferir no edital oficial de cada
-// instituição conforme a data se aproxima.
+// Datas reais dos vestibulares de Medicina 2026, verificadas diretamente nos
+// portais oficiais de cada instituição (Comvest, Fuvest, Vunesp, Santa Casa,
+// Einstein, Sírio-Libanês, INEP) em agosto de 2026 — não apenas lidas do
+// calendário interno do Anglo, que mistura provas oficiais com simulados
+// próprios (ex.: "AP-1".."AP-8", "FUVEST 1".."FUVEST 7", "ENEM 1".."ENEM 4",
+// "UNICAMP 1"/"2", "UNESP 1"/"2") e havia levado a algumas datas erradas aqui
+// numa primeira leitura (Unicamp 1ª fase, Santa Casa, Einstein e Unesp
+// tinham sido lidas incorretamente — corrigido depois de checar as fontes
+// oficiais). Unifesp (Medicina, Sistema Misto) ficou de fora: não foi
+// possível confirmar a data exata do ciclo 2027 nas buscas — no ciclo
+// anterior as provas complementares foram em 18-19/dez, então o padrão é
+// meados/fim de dezembro, mas vale conferir em ingresso.unifesp.br antes de
+// confiar numa data específica.
 export interface VestibularExam {
   id: string;
   board: string;
@@ -14,20 +19,22 @@ export interface VestibularExam {
 }
 
 export const vestibularCalendar2026: VestibularExam[] = [
-  { id: 'unesp1-sirio', board: 'UNESP', label: 'UNESP (1ª aplicação) ou Sírio-Libanês', date: '2026-05-10' },
-  { id: 'stacasa-d1', board: 'Santa Casa', label: 'Santa Casa — Dia 1', date: '2026-06-07' },
-  { id: 'stacasa-d2', board: 'Santa Casa', label: 'Santa Casa — Dia 2', date: '2026-06-14' },
-  { id: 'unifesp1-d1', board: 'Unifesp', label: 'UNIFESP (1ª aplicação) — Dia 1', date: '2026-08-05' },
-  { id: 'unifesp1-d2', board: 'Unifesp', label: 'UNIFESP (1ª aplicação) — Dia 2', date: '2026-08-12' },
-  { id: 'unesp2-einstein', board: 'UNESP', label: 'UNESP (2ª aplicação) ou Einstein', date: '2026-09-13' },
-  { id: 'unicamp-1fase', board: 'Unicamp', label: 'UNICAMP (Comvest) — 1ª fase', date: '2026-10-11' },
+  { id: 'stacasa-d1', board: 'Santa Casa', label: 'Santa Casa — Dia 1 (conhecimentos gerais)', date: '2026-09-26' },
+  { id: 'stacasa-d2', board: 'Santa Casa', label: 'Santa Casa — Dia 2 (conhecimentos específicos + redação)', date: '2026-09-27' },
+  { id: 'einstein-1fase', board: 'Einstein', label: 'Einstein — prova escrita (1ª fase)', date: '2026-10-11' },
+  { id: 'sirio-1fase', board: 'Sírio-Libanês', label: 'Sírio-Libanês — prova escrita (1ª fase)', date: '2026-10-12' },
+  { id: 'unicamp-1fase', board: 'Unicamp', label: 'UNICAMP (Comvest) — 1ª fase', date: '2026-10-18' },
   { id: 'fuvest-1fase', board: 'Fuvest', label: 'FUVEST — 1ª fase', date: '2026-11-01' },
   { id: 'enem-d1', board: 'ENEM', label: 'ENEM — Dia 1', date: '2026-11-08' },
   { id: 'enem-d2', board: 'ENEM', label: 'ENEM — Dia 2', date: '2026-11-15' },
-  { id: 'unicamp-2fase', board: 'Unicamp', label: 'UNICAMP — 2ª fase (discursiva)', date: '2026-11-29' },
-  { id: 'fuvest-2fase', board: 'Fuvest', label: 'FUVEST — 2ª fase (discursiva)', date: '2026-12-06' },
-  { id: 'unesp-2fase', board: 'UNESP', label: 'UNESP — 2ª fase (discursiva)', date: '2026-12-13' },
-  { id: 'unifesp-2fase', board: 'Unifesp', label: 'UNIFESP — reta final / prova', date: '2026-12-17' },
+  { id: 'unesp-1fase', board: 'UNESP', label: 'UNESP (Vunesp) — 1ª fase', date: '2026-11-22' },
+  { id: 'unicamp-2fase-d1', board: 'Unicamp', label: 'UNICAMP — 2ª fase, dia 1', date: '2026-11-29' },
+  { id: 'unicamp-2fase-d2', board: 'Unicamp', label: 'UNICAMP — 2ª fase, dia 2', date: '2026-11-30' },
+  { id: 'einstein-mme', board: 'Einstein', label: 'Einstein — Múltiplas Minientrevistas (MME)', date: '2026-12-03' },
+  { id: 'fuvest-2fase-d1', board: 'Fuvest', label: 'FUVEST — 2ª fase, dia 1', date: '2026-12-06' },
+  { id: 'fuvest-2fase-d2', board: 'Fuvest', label: 'FUVEST — 2ª fase, dia 2', date: '2026-12-07' },
+  { id: 'unesp-2fase-d1', board: 'UNESP', label: 'UNESP — 2ª fase, dia 1', date: '2026-12-13' },
+  { id: 'unesp-2fase-d2', board: 'UNESP', label: 'UNESP — 2ª fase, dia 2', date: '2026-12-14' },
 ];
 
 export function daysUntil(dateIso: string, from: Date = new Date()): number {
