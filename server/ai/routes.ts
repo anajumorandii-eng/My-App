@@ -38,24 +38,27 @@ export function createAiRouter(service: AiService, metrics?: AiMetricsRecorder):
           .catch((metricError) => console.error('AI metrics write failed:', metricError));
         res.json({ ...result, requestId });
       } catch (error) {
+        const durationMs = Date.now() - startedAt;
+        let status = 502;
+        let code = 'AI_GENERATION_FAILED';
+        let message = 'Falha ao processar solicitação de IA';
+
         if (error instanceof AiValidationError) {
-          return res.status(400).json({ error: error.message, code: 'INVALID_AI_REQUEST', requestId });
-        }
-        if (error instanceof AiUnavailableError) {
-          return res.status(503).json({ error: error.message, code: 'AI_UNAVAILABLE', requestId });
-        }
-        if (error instanceof AiTimeoutError) {
-          return res.status(504).json({ error: error.message, code: 'AI_TIMEOUT', requestId });
+          status = 400; code = 'INVALID_AI_REQUEST'; message = error.message;
+        } else if (error instanceof AiUnavailableError) {
+          status = 503; code = 'AI_UNAVAILABLE'; message = error.message;
+        } else if (error instanceof AiTimeoutError) {
+          status = 504; code = 'AI_TIMEOUT'; message = error.message;
+        } else {
+          const cause = error instanceof AiGenerationError ? error.cause : error;
+          console.error(`[AI ${requestId}] ${task} failed:`, cause ?? error);
         }
 
-        const cause = error instanceof AiGenerationError ? error.cause : error;
-        console.error(`[AI ${requestId}] ${task} failed:`, cause ?? error);
-        console.info(JSON.stringify({ event: 'ai_request', requestId, userId: res.locals.userId, task, status: error instanceof AiTimeoutError ? 504 : 502, durationMs: Date.now() - startedAt }));
-        return res.status(502).json({
-          error: 'Falha ao processar solicitação de IA',
-          code: 'AI_GENERATION_FAILED',
-          requestId,
-        });
+        console.info(JSON.stringify({ event: 'ai_request', requestId, userId: res.locals.userId, task, status, durationMs }));
+        metrics?.record({ task, status, durationMs })
+          .catch((metricError) => console.error('AI metrics write failed:', metricError));
+
+        return res.status(status).json({ error: message, code, requestId });
       }
     });
   }

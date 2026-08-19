@@ -44,10 +44,18 @@ export default function Sessao() {
     });
   }, [updateMastery]);
 
+  // Applies the ?topic= deep link at most once per topic. Without the ref
+  // guard, completing that same action changes `mastery` -> `dailyPlan`
+  // recomputes -> this effect re-fires (searchParams didn't change, but its
+  // dailyPlan dependency did) and resets the timer right after the block
+  // was just finished.
+  const appliedTopicRef = useRef<string | null>(null);
   useEffect(() => {
     const topicId = searchParams.get('topic');
-    const requested = topicId ? dailyPlan.find((action) => action.topicId === topicId) : undefined;
+    if (!topicId || appliedTopicRef.current === topicId) return;
+    const requested = dailyPlan.find((action) => action.topicId === topicId);
     if (requested) {
+      appliedTopicRef.current = topicId;
       setSelectedAction(requested);
       setSecondsLeft(requested.estimatedMinutes * 60);
     }
