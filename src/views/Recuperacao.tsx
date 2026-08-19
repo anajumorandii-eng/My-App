@@ -98,12 +98,14 @@ const EXERCISE_MODE_BY_LEVEL: Record<number, string> = {
   5: 'discursive',
 };
 
-function SupportLevelContent({ topic, supportLevel }: { topic: Topic; supportLevel: number }) {
+function SupportLevelContent({ topic, subtopic, supportLevel }: { topic: Topic; subtopic?: string; supportLevel: number }) {
   const [aiExerciseText, setAiExerciseText] = useState<string | null>(null);
   const [loadingExercise, setLoadingExercise] = useState(false);
   const [studentAnswer, setStudentAnswer] = useState('');
   const [correction, setCorrection] = useState<string | null>(null);
   const [loadingCorrection, setLoadingCorrection] = useState(false);
+
+  const effectiveTopic = subtopic ? `${topic.name} — ${subtopic}` : topic.name;
 
   const realQuestion = useMemo(() => {
     if (supportLevel !== 3 && supportLevel !== 4) return undefined;
@@ -122,7 +124,7 @@ function SupportLevelContent({ topic, supportLevel }: { topic: Topic; supportLev
     setLoadingExercise(true);
     try {
       const data = await requestAiText('backlog-exercise', {
-        topic: topic.name,
+        topic: effectiveTopic,
         subject: topic.subject,
         mode: EXERCISE_MODE_BY_LEVEL[supportLevel],
       });
@@ -139,7 +141,7 @@ function SupportLevelContent({ topic, supportLevel }: { topic: Topic; supportLev
     setLoadingCorrection(true);
     try {
       const data = await requestAiText('backlog-correction', {
-        topic: topic.name,
+        topic: effectiveTopic,
         subject: topic.subject,
         exercise: exerciseText,
         studentAnswer,
@@ -266,6 +268,7 @@ export default function Recuperacao() {
   const [checkedExit, setCheckedExit] = useState<Record<number, boolean>>({});
 
   const [formTopicId, setFormTopicId] = useState('');
+  const [formSubtopic, setFormSubtopic] = useState('');
   const [formState, setFormState] = useState(0);
   const [formDependencia, setFormDependencia] = useState(1);
   const [formIncidencia, setFormIncidencia] = useState(1);
@@ -275,10 +278,9 @@ export default function Recuperacao() {
 
   const activeItems = backlog.filter((b) => !b.closedAt);
   const closedItems = backlog.filter((b) => b.closedAt);
-  const backloggedTopicIds = new Set(backlog.map((b) => b.topicId));
-  const availableTopics = mockTopics.filter((t) => !backloggedTopicIds.has(t.id));
   const allSubjects = useMemo(() => [...new Set(mockTopics.map((t) => t.subject))], []);
   const topicById = (id: string) => mockTopics.find((t) => t.id === id);
+  const formTopic = formTopicId ? topicById(formTopicId) : null;
 
   const grouped = useMemo(() => {
     const map: Record<BacklogQueue, (BacklogItem & { score: number })[]> = { A: [], B: [], C: [], D: [] };
@@ -291,6 +293,7 @@ export default function Recuperacao() {
 
   const resetForm = () => {
     setFormTopicId('');
+    setFormSubtopic('');
     setFormState(0);
     setFormDependencia(1);
     setFormIncidencia(1);
@@ -304,6 +307,7 @@ export default function Recuperacao() {
     const newItem: BacklogItem = {
       id: `backlog_${formTopicId}_${Date.now()}`,
       topicId: formTopicId,
+      subtopic: formSubtopic || undefined,
       state: formState,
       dependencia: formDependencia,
       incidencia: formIncidencia,
@@ -396,19 +400,39 @@ export default function Recuperacao() {
             <select
               id="topic-select"
               value={formTopicId}
-              onChange={(e) => setFormTopicId(e.target.value)}
+              onChange={(e) => { setFormTopicId(e.target.value); setFormSubtopic(''); }}
               className="w-full px-3 py-2.5 rounded-lg border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-800 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
             >
               <option value="">Selecione um tópico...</option>
               {allSubjects.map((subject) => (
                 <optgroup key={subject} label={subject}>
-                  {availableTopics.filter((t) => t.subject === subject).map((t) => (
+                  {mockTopics.filter((t) => t.subject === subject).map((t) => (
                     <option key={t.id} value={t.id}>{t.name}</option>
                   ))}
                 </optgroup>
               ))}
             </select>
           </div>
+
+          {!!formTopic?.chapters?.length && (
+            <div>
+              <label htmlFor="subtopic-select" className="text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-2 block">
+                Capítulo específico (opcional)
+              </label>
+              <p className="text-xs text-zinc-500 mb-2">Deixe em branco se o atraso é na frente inteira, não num capítulo só.</p>
+              <select
+                id="subtopic-select"
+                value={formSubtopic}
+                onChange={(e) => setFormSubtopic(e.target.value)}
+                className="w-full px-3 py-2.5 rounded-lg border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-800 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              >
+                <option value="">Frente inteira ({formTopic.name})</option>
+                {formTopic.chapters!.map((chapter) => (
+                  <option key={chapter} value={chapter}>{chapter}</option>
+                ))}
+              </select>
+            </div>
+          )}
 
           <div>
             <p className="text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-2">Estado atual</p>
@@ -492,7 +516,7 @@ export default function Recuperacao() {
                         <div className="flex items-center min-w-0">
                           <span className={`w-2 h-2 rounded-full mr-3 shrink-0 ${SUBJECT_COLORS[topic.subject] ?? 'bg-zinc-400'}`} />
                           <div className="min-w-0">
-                            <p className="font-semibold truncate">{topic.name}</p>
+                            <p className="font-semibold truncate">{topic.name}{item.subtopic ? ` — ${item.subtopic}` : ''}</p>
                             <p className="text-xs text-zinc-500">{topic.subject} • {STATE_LABELS[item.state]} • score {priorityScore(item).toFixed(1)}</p>
                           </div>
                         </div>
@@ -556,7 +580,7 @@ export default function Recuperacao() {
                               <p className="font-medium">{currentSupport.activity}</p>
                               <p className="text-xs mt-1">Pronta para avançar quando: {currentSupport.readyToAdvance}</p>
                             </div>
-                            <SupportLevelContent key={`${item.id}_${supportLevel}`} topic={topic} supportLevel={supportLevel} />
+                            <SupportLevelContent key={`${item.id}_${supportLevel}`} topic={topic} subtopic={item.subtopic} supportLevel={supportLevel} />
                             <div className="flex gap-2 mt-3">
                               <button
                                 onClick={() => patchItem(item.id, { supportLevel: Math.max(1, supportLevel - 1) })}
@@ -653,7 +677,7 @@ export default function Recuperacao() {
                   <div className="flex items-center min-w-0">
                     <span className={`w-2 h-2 rounded-full mr-3 shrink-0 ${SUBJECT_COLORS[topic.subject] ?? 'bg-zinc-400'}`} />
                     <div className="min-w-0">
-                      <p className="font-medium truncate">{topic.name}</p>
+                      <p className="font-medium truncate">{topic.name}{item.subtopic ? ` — ${item.subtopic}` : ''}</p>
                       <p className="text-xs text-zinc-500">{topic.subject} — migrou para manutenção (Revisões Adaptativas)</p>
                     </div>
                   </div>

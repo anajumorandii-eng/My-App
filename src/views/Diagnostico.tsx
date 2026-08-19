@@ -28,6 +28,7 @@ export default function Diagnostico() {
   const subjects = useMemo(() => [...new Set(mockTopics.map((t) => t.subject))], []);
   const [subjectFilter, setSubjectFilter] = useState(subjects[0]);
   const [selectedTopicId, setSelectedTopicId] = useState<string | null>(null);
+  const [selectedSubtopic, setSelectedSubtopic] = useState('');
   const [phase, setPhase] = useState<Phase>('pick');
   const [selfState, setSelfState] = useState<number | null>(null);
   const [quizIndex, setQuizIndex] = useState(0);
@@ -47,6 +48,7 @@ export default function Diagnostico() {
 
   const startDiagnostic = (topicId: string) => {
     setSelectedTopicId(topicId);
+    setSelectedSubtopic('');
     setSelfState(null);
     setQuizIndex(0);
     setQuizAnswers([]);
@@ -108,6 +110,7 @@ export default function Diagnostico() {
 
   const reset = () => {
     setSelectedTopicId(null);
+    setSelectedSubtopic('');
     setPhase('pick');
     setSelfState(null);
     setQuizIndex(0);
@@ -192,8 +195,30 @@ export default function Diagnostico() {
             <p className="text-xs font-semibold uppercase tracking-wide text-indigo-600 dark:text-indigo-400">{topic.subject}</p>
             <h2 className="text-xl font-bold">{topic.name}</h2>
           </div>
+          {!!topic.chapters?.length && (
+            <div>
+              <label htmlFor="diag-subtopic" className="text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-2 block">
+                Capítulo específico (opcional)
+              </label>
+              <p className="text-xs text-zinc-500 mb-2">
+                O domínio salvo continua sendo da frente inteira — isso só deixa sua autoavaliação mais precisa sobre o que você está pensando agora.
+              </p>
+              <select
+                id="diag-subtopic"
+                value={selectedSubtopic}
+                onChange={(e) => setSelectedSubtopic(e.target.value)}
+                className="w-full px-3 py-2.5 rounded-lg border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-800 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              >
+                <option value="">Frente inteira ({topic.name})</option>
+                {topic.chapters!.map((chapter) => (
+                  <option key={chapter} value={chapter}>{chapter}</option>
+                ))}
+              </select>
+            </div>
+          )}
           <p className="text-sm text-zinc-600 dark:text-zinc-400">
-            Antes de qualquer teste: com que honestidade você diria que está esse tópico hoje?
+            Antes de qualquer teste: com que honestidade você diria que está
+            {selectedSubtopic ? ` em "${selectedSubtopic}"` : ' esse tópico'} hoje?
           </p>
           <div className="space-y-2">
             {[0, 1, 2, 3, 4].map((n) => (
@@ -269,7 +294,10 @@ export default function Diagnostico() {
         <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 sm:p-8 shadow-sm space-y-6">
           <div>
             <p className="text-xs font-semibold uppercase tracking-wide text-indigo-600 dark:text-indigo-400">{topic.subject}</p>
-            <h2 className="text-xl font-bold">{topic.name}</h2>
+            <h2 className="text-xl font-bold">{topic.name}{selectedSubtopic ? ` — ${selectedSubtopic}` : ''}</h2>
+            {selectedSubtopic && (
+              <p className="text-xs text-zinc-500 mt-1">O domínio abaixo é salvo para a frente inteira ({topic.name}), não só para este capítulo.</p>
+            )}
           </div>
 
           <div>

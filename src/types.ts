@@ -3,6 +3,7 @@ export interface Topic {
   name: string;
   subject: string;
   prerequisites: string[]; // IDs of other topics
+  chapters?: string[]; // Real chapter titles from the student's apostila, in study order
 }
 
 export interface TopicMastery {
@@ -210,6 +211,7 @@ export interface DiscursiveAttempt {
 export interface BacklogItem {
   id: string;
   topicId: string;
+  subtopic?: string; // Real chapter from the topic's apostila, when the student narrowed it down
   state: number; // 0-4: 0 desconhecido, 1 reconhecimento, 2 aplicação guiada, 3 aplicação independente, 4 transferência
   dependencia: number; // 0-3: este tópico destrava outros?
   incidencia: number; // 0-3: aparece muito nas bancas-alvo?
