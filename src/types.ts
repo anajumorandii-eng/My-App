@@ -3,6 +3,7 @@ export interface Topic {
   name: string;
   subject: string;
   prerequisites: string[]; // IDs of other topics
+  chapters?: string[]; // Real chapter titles from the student's apostila, in study order
 }
 
 export interface TopicMastery {
