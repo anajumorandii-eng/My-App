@@ -1,18 +1,28 @@
 import { TopicMastery, Topic, UserProfile, StudyAction } from '../types';
 import { nearestExamDate, daysUntil } from '../data/examCalendar';
+import { topicIncidenceWeight } from './topicIncidence';
 
-// Dentro dos últimos 90 dias antes da próxima prova real, todo o plano é
-// puxado para cima proporcionalmente — quanto mais perto, maior o boost,
-// até +40% na véspera.
+// Dentro dos últimos 90 dias antes da próxima prova real, o plano é puxado
+// para cima em duas camadas: um boost geral de urgência (tudo importa mais
+// perto da prova) somado a um boost específico por tópico, proporcional a
+// quanto aquele tema realmente cai na banca da prova mais próxima — dado
+// real de examPriorities.ts, não só a contagem regressiva.
 const DEADLINE_WINDOW_DAYS = 90;
-const DEADLINE_MAX_BOOST = 0.4;
+const BASE_DEADLINE_BOOST = 0.3;
+const INCIDENCE_BOOST_SCALE = 0.5;
 
-function deadlineMultiplier(): number {
+function deadlineProgress(): number {
   const exam = nearestExamDate();
-  if (!exam) return 1;
+  if (!exam) return 0;
   const remaining = daysUntil(exam.date);
-  if (remaining < 0 || remaining > DEADLINE_WINDOW_DAYS) return 1;
-  return 1 + ((DEADLINE_WINDOW_DAYS - remaining) / DEADLINE_WINDOW_DAYS) * DEADLINE_MAX_BOOST;
+  if (remaining < 0 || remaining > DEADLINE_WINDOW_DAYS) return 0;
+  return (DEADLINE_WINDOW_DAYS - remaining) / DEADLINE_WINDOW_DAYS;
+}
+
+function examFocusMultiplier(topic: Topic, progress: number, nearBoard: string | undefined): number {
+  if (progress === 0) return 1;
+  const incidence = topicIncidenceWeight(topic, nearBoard);
+  return 1 + (progress * BASE_DEADLINE_BOOST) + (progress * Math.min(incidence, 1) * INCIDENCE_BOOST_SCALE);
 }
 
 export class EfficiencyEngine {
@@ -28,7 +38,8 @@ export class EfficiencyEngine {
   ): StudyAction[] {
 
     let actions: StudyAction[] = [];
-    const deadlineBoost = deadlineMultiplier();
+    const progress = deadlineProgress();
+    const nearBoard = progress > 0 ? nearestExamDate()?.board : undefined;
 
     masteryData.forEach(mastery => {
       const topic = topics.find(t => t.id === mastery.topicId);
@@ -58,7 +69,7 @@ export class EfficiencyEngine {
         (learningNeeded * 0.4) +
         (reviewNecessity * 0.3) +
         (errorSignal * 0.3)
-      ) * energyMultiplier * deadlineBoost;
+      ) * energyMultiplier * examFocusMultiplier(topic, progress, nearBoard);
 
       // Determine action type based on mastery state
       let type: StudyAction['type'] = 'practice';
