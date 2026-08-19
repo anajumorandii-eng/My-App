@@ -1,4 +1,19 @@
 import { TopicMastery, Topic, UserProfile, StudyAction } from '../types';
+import { nearestExamDate, daysUntil } from '../data/examCalendar';
+
+// Dentro dos últimos 90 dias antes da próxima prova real, todo o plano é
+// puxado para cima proporcionalmente — quanto mais perto, maior o boost,
+// até +40% na véspera.
+const DEADLINE_WINDOW_DAYS = 90;
+const DEADLINE_MAX_BOOST = 0.4;
+
+function deadlineMultiplier(): number {
+  const exam = nearestExamDate();
+  if (!exam) return 1;
+  const remaining = daysUntil(exam.date);
+  if (remaining < 0 || remaining > DEADLINE_WINDOW_DAYS) return 1;
+  return 1 + ((DEADLINE_WINDOW_DAYS - remaining) / DEADLINE_WINDOW_DAYS) * DEADLINE_MAX_BOOST;
+}
 
 export class EfficiencyEngine {
   /**
@@ -11,9 +26,10 @@ export class EfficiencyEngine {
     profile: UserProfile,
     availableMinutesToday: number
   ): StudyAction[] {
-    
+
     let actions: StudyAction[] = [];
-    
+    const deadlineBoost = deadlineMultiplier();
+
     masteryData.forEach(mastery => {
       const topic = topics.find(t => t.id === mastery.topicId);
       if (!topic) return;
@@ -42,7 +58,7 @@ export class EfficiencyEngine {
         (learningNeeded * 0.4) +
         (reviewNecessity * 0.3) +
         (errorSignal * 0.3)
-      ) * energyMultiplier;
+      ) * energyMultiplier * deadlineBoost;
 
       // Determine action type based on mastery state
       let type: StudyAction['type'] = 'practice';

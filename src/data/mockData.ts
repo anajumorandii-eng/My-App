@@ -1,120 +1,92 @@
 import { Topic, TopicMastery, UserProfile, ErrorLog, Question, PodcastEpisode, StudyMethod, BacklogItem } from '../types';
 
+// Currículo real, extraído dos sumários das apostilas (Anglo/Plural, cadernos de
+// estudo 1-4, 1º e 2º semestres de 2026) da aluna. Agrupado por assunto/módulo —
+// não por capítulo — para casar com a granularidade do plano de estudos.
 export const mockTopics: Topic[] = [
   // Biologia
-  { id: 'bio_01', name: 'Citologia', subject: 'Biologia', prerequisites: [] },
-  { id: 'bio_02', name: 'Genética', subject: 'Biologia', prerequisites: ['bio_01'] },
-  { id: 'bio_03', name: 'Fisiologia Humana', subject: 'Biologia', prerequisites: [] },
-  { id: 'bio_04', name: 'Ecologia', subject: 'Biologia', prerequisites: [] },
-  { id: 'bio_05', name: 'Evolução', subject: 'Biologia', prerequisites: ['bio_02'] },
-  { id: 'bio_06', name: 'Microbiologia e Imunologia', subject: 'Biologia', prerequisites: ['bio_01'] },
-  { id: 'bio_07', name: 'Zoologia', subject: 'Biologia', prerequisites: [] },
-  { id: 'bio_08', name: 'Botânica', subject: 'Biologia', prerequisites: [] },
+  { id: 'bio_celular', name: 'Biologia Celular', subject: 'Biologia', prerequisites: [] },
+  { id: 'bio_genetica', name: 'Genética', subject: 'Biologia', prerequisites: ['bio_celular'] },
+  { id: 'bio_evolucao', name: 'Evolução', subject: 'Biologia', prerequisites: ['bio_genetica'] },
+  { id: 'bio_ecologia', name: 'Ecologia', subject: 'Biologia', prerequisites: [] },
+  { id: 'bio_zoologia', name: 'Zoologia', subject: 'Biologia', prerequisites: [] },
+  { id: 'bio_botanica', name: 'Botânica', subject: 'Biologia', prerequisites: [] },
+  { id: 'bio_microbiologia', name: 'Microbiologia e Virologia', subject: 'Biologia', prerequisites: ['bio_celular'] },
+  { id: 'bio_fisio_animal', name: 'Fisiologia Animal e Humana', subject: 'Biologia', prerequisites: ['bio_celular'] },
+  { id: 'bio_fisio_vegetal', name: 'Fisiologia Vegetal', subject: 'Biologia', prerequisites: ['bio_botanica'] },
   // Matemática
-  { id: 'mat_01', name: 'Funções de 1º Grau', subject: 'Matemática', prerequisites: [] },
-  { id: 'mat_02', name: 'Análise Combinatória', subject: 'Matemática', prerequisites: [] },
-  { id: 'mat_03', name: 'Funções de 2º Grau', subject: 'Matemática', prerequisites: ['mat_01'] },
-  { id: 'mat_04', name: 'Geometria Plana', subject: 'Matemática', prerequisites: [] },
-  { id: 'mat_05', name: 'Probabilidade', subject: 'Matemática', prerequisites: ['mat_02'] },
-  { id: 'mat_06', name: 'Trigonometria', subject: 'Matemática', prerequisites: ['mat_04'] },
-  { id: 'mat_07', name: 'Progressões (PA e PG)', subject: 'Matemática', prerequisites: [] },
-  { id: 'mat_08', name: 'Funções Exponenciais e Logarítmicas', subject: 'Matemática', prerequisites: ['mat_01'] },
-  { id: 'mat_09', name: 'Geometria Espacial', subject: 'Matemática', prerequisites: ['mat_04'] },
-  { id: 'mat_10', name: 'Geometria Analítica', subject: 'Matemática', prerequisites: ['mat_04'] },
-  { id: 'mat_11', name: 'Estatística', subject: 'Matemática', prerequisites: [] },
+  { id: 'mat_algebrica', name: 'Modelagem Algébrica de Problemas', subject: 'Matemática', prerequisites: [] },
+  { id: 'mat_geometrica', name: 'Modelagem Geométrica de Problemas', subject: 'Matemática', prerequisites: [] },
+  { id: 'mat_numerica', name: 'Modelagem Numérica de Problemas', subject: 'Matemática', prerequisites: ['mat_algebrica'] },
   // Física
-  { id: 'fis_01', name: 'Cinemática', subject: 'Física', prerequisites: ['mat_01'] },
-  { id: 'fis_02', name: 'Eletrodinâmica', subject: 'Física', prerequisites: [] },
-  { id: 'fis_03', name: 'Dinâmica', subject: 'Física', prerequisites: ['fis_01'] },
-  { id: 'fis_04', name: 'Termologia', subject: 'Física', prerequisites: [] },
-  { id: 'fis_05', name: 'Óptica', subject: 'Física', prerequisites: [] },
-  { id: 'fis_06', name: 'Ondulatória', subject: 'Física', prerequisites: [] },
-  { id: 'fis_07', name: 'Trabalho e Energia', subject: 'Física', prerequisites: ['fis_03'] },
-  { id: 'fis_08', name: 'Eletromagnetismo', subject: 'Física', prerequisites: ['fis_02'] },
-  { id: 'fis_09', name: 'Estática e Hidrostática', subject: 'Física', prerequisites: ['fis_03'] },
+  { id: 'fis_cinematica', name: 'Cinemática', subject: 'Física', prerequisites: ['mat_algebrica'] },
+  { id: 'fis_dinamica', name: 'Dinâmica Newtoniana', subject: 'Física', prerequisites: ['fis_cinematica'] },
+  { id: 'fis_dinamica_impulsiva', name: 'Dinâmica Impulsiva', subject: 'Física', prerequisites: ['fis_dinamica'] },
+  { id: 'fis_energia', name: 'Dinâmica Energética e Transformações de Energia', subject: 'Física', prerequisites: ['fis_dinamica'] },
+  { id: 'fis_estatica', name: 'Estática dos Corpos Sólidos e dos Fluidos', subject: 'Física', prerequisites: ['fis_dinamica'] },
+  { id: 'fis_termofisica', name: 'Termofísica', subject: 'Física', prerequisites: [] },
+  { id: 'fis_eletricidade', name: 'Eletricidade', subject: 'Física', prerequisites: [] },
+  { id: 'fis_eletromagnetismo', name: 'Eletromagnetismo', subject: 'Física', prerequisites: ['fis_eletricidade'] },
+  { id: 'fis_optica', name: 'Óptica Geométrica', subject: 'Física', prerequisites: [] },
+  { id: 'fis_ondas', name: 'Oscilações e Ondas', subject: 'Física', prerequisites: [] },
   // Química
-  { id: 'qui_01', name: 'Estequiometria', subject: 'Química', prerequisites: [] },
-  { id: 'qui_02', name: 'Ligações Químicas', subject: 'Química', prerequisites: [] },
-  { id: 'qui_03', name: 'Química Orgânica', subject: 'Química', prerequisites: ['qui_02'] },
-  { id: 'qui_04', name: 'Soluções e Concentração', subject: 'Química', prerequisites: ['qui_01'] },
-  { id: 'qui_05', name: 'Atomística', subject: 'Química', prerequisites: [] },
-  { id: 'qui_06', name: 'Físico-Química', subject: 'Química', prerequisites: ['qui_04'] },
+  { id: 'qui_atomistica', name: 'Atomística e Ligações Químicas', subject: 'Química', prerequisites: [] },
+  { id: 'qui_geral', name: 'Química Geral', subject: 'Química', prerequisites: ['qui_atomistica'] },
+  { id: 'qui_organica', name: 'Química Orgânica', subject: 'Química', prerequisites: ['qui_atomistica'] },
+  { id: 'qui_fisico_quimica', name: 'Físico-Química', subject: 'Química', prerequisites: ['qui_geral'] },
   // Geografia
-  { id: 'geo_01', name: 'Cartografia e Fundamentos', subject: 'Geografia', prerequisites: [] },
-  { id: 'geo_02', name: 'Climatologia e Dinâmica Ambiental', subject: 'Geografia', prerequisites: [] },
-  { id: 'geo_03', name: 'Geomorfologia e Recursos Hídricos', subject: 'Geografia', prerequisites: [] },
-  { id: 'geo_04', name: 'Geografia da População e Urbanização', subject: 'Geografia', prerequisites: [] },
-  { id: 'geo_05', name: 'Geografia Econômica e Industrial', subject: 'Geografia', prerequisites: [] },
-  { id: 'geo_06', name: 'Geopolítica Mundial', subject: 'Geografia', prerequisites: [] },
-  { id: 'geo_07', name: 'Geografia do Brasil: Território e Natureza', subject: 'Geografia', prerequisites: [] },
+  { id: 'geo_geral', name: 'Geografia Geral', subject: 'Geografia', prerequisites: [] },
+  { id: 'geo_brasil', name: 'Geografia do Brasil', subject: 'Geografia', prerequisites: ['geo_geral'] },
   // História
-  { id: 'his_01', name: 'Antiguidade e Idade Média', subject: 'História', prerequisites: [] },
-  { id: 'his_02', name: 'Idade Moderna e Absolutismo', subject: 'História', prerequisites: ['his_01'] },
-  { id: 'his_03', name: 'Revoluções e Iluminismo', subject: 'História', prerequisites: ['his_02'] },
-  { id: 'his_04', name: 'Brasil Colônia', subject: 'História', prerequisites: [] },
-  { id: 'his_05', name: 'Brasil Império', subject: 'História', prerequisites: ['his_04'] },
-  { id: 'his_06', name: 'Brasil República', subject: 'História', prerequisites: ['his_05'] },
-  { id: 'his_07', name: 'Século XX: Guerras e Guerra Fria', subject: 'História', prerequisites: ['his_03'] },
+  { id: 'his_geral', name: 'História Geral', subject: 'História', prerequisites: [] },
+  { id: 'his_brasil', name: 'História do Brasil', subject: 'História', prerequisites: ['his_geral'] },
   // Português
-  { id: 'por_01', name: 'Gramática e Sintaxe', subject: 'Português', prerequisites: [] },
-  { id: 'por_02', name: 'Interpretação de Texto', subject: 'Português', prerequisites: [] },
-  { id: 'por_03', name: 'Literatura: Estilos de Época', subject: 'Português', prerequisites: [] },
+  { id: 'por_gramatica', name: 'Gramática', subject: 'Português', prerequisites: [] },
+  { id: 'por_texto', name: 'Entendimento de Texto', subject: 'Português', prerequisites: [] },
+  { id: 'por_literatura', name: 'Literatura', subject: 'Português', prerequisites: [] },
+  { id: 'por_redacao', name: 'Redação', subject: 'Português', prerequisites: ['por_gramatica', 'por_texto'] },
   // Inglês
   { id: 'ing_01', name: 'Compreensão de Texto em Inglês', subject: 'Inglês', prerequisites: [] }
 ];
 
+// Ponto de partida para uma aluna que ainda não estudou pelo módulo agrupado —
+// níveis baixos/incertos por padrão; os módulos com histórico no banco de
+// questões acima herdam valores plausíveis de um primeiro contato.
 export const mockMastery: TopicMastery[] = [
-  { topicId: 'bio_01', level: 85, uncertainty: 0.1, lastReviewed: new Date(Date.now() - 5 * 86400000).toISOString(), errorSignals: 0 },
-  { topicId: 'bio_02', level: 30, uncertainty: 0.8, lastReviewed: new Date(Date.now() - 1 * 86400000).toISOString(), errorSignals: 1 },
-  { topicId: 'bio_03', level: 55, uncertainty: 0.5, lastReviewed: new Date(Date.now() - 4 * 86400000).toISOString(), errorSignals: 2 },
-  { topicId: 'bio_04', level: 40, uncertainty: 0.6, lastReviewed: new Date(Date.now() - 7 * 86400000).toISOString(), errorSignals: 1 },
-  { topicId: 'bio_05', level: 20, uncertainty: 0.85, lastReviewed: new Date(Date.now() - 12 * 86400000).toISOString(), errorSignals: 3 },
-  { topicId: 'bio_06', level: 65, uncertainty: 0.35, lastReviewed: new Date(Date.now() - 6 * 86400000).toISOString(), errorSignals: 0 },
-  { topicId: 'mat_01', level: 95, uncertainty: 0.05, lastReviewed: new Date(Date.now() - 15 * 86400000).toISOString(), errorSignals: 0 },
-  { topicId: 'mat_02', level: 60, uncertainty: 0.4, lastReviewed: new Date(Date.now() - 3 * 86400000).toISOString(), errorSignals: 4 },
-  { topicId: 'mat_03', level: 50, uncertainty: 0.5, lastReviewed: new Date(Date.now() - 5 * 86400000).toISOString(), errorSignals: 2 },
-  { topicId: 'mat_04', level: 70, uncertainty: 0.3, lastReviewed: new Date(Date.now() - 8 * 86400000).toISOString(), errorSignals: 1 },
-  { topicId: 'mat_05', level: 45, uncertainty: 0.55, lastReviewed: new Date(Date.now() - 2 * 86400000).toISOString(), errorSignals: 3 },
-  { topicId: 'mat_06', level: 25, uncertainty: 0.8, lastReviewed: new Date(Date.now() - 20 * 86400000).toISOString(), errorSignals: 2 },
-  { topicId: 'fis_01', level: 75, uncertainty: 0.2, lastReviewed: new Date(Date.now() - 2 * 86400000).toISOString(), errorSignals: 1 },
-  { topicId: 'fis_02', level: 10, uncertainty: 0.9, lastReviewed: new Date(Date.now() - 10 * 86400000).toISOString(), errorSignals: 2 },
-  { topicId: 'fis_03', level: 60, uncertainty: 0.4, lastReviewed: new Date(Date.now() - 3 * 86400000).toISOString(), errorSignals: 1 },
-  { topicId: 'fis_04', level: 35, uncertainty: 0.65, lastReviewed: new Date(Date.now() - 9 * 86400000).toISOString(), errorSignals: 2 },
-  { topicId: 'fis_05', level: 15, uncertainty: 0.9, lastReviewed: new Date(Date.now() - 14 * 86400000).toISOString(), errorSignals: 4 },
-  { topicId: 'fis_06', level: 80, uncertainty: 0.15, lastReviewed: new Date(Date.now() - 6 * 86400000).toISOString(), errorSignals: 0 },
-  { topicId: 'qui_01', level: 30, uncertainty: 0.75, lastReviewed: new Date(Date.now() - 1 * 86400000).toISOString(), errorSignals: 3 },
-  { topicId: 'qui_02', level: 55, uncertainty: 0.45, lastReviewed: new Date(Date.now() - 4 * 86400000).toISOString(), errorSignals: 1 },
-  { topicId: 'qui_03', level: 20, uncertainty: 0.85, lastReviewed: new Date(Date.now() - 11 * 86400000).toISOString(), errorSignals: 2 },
-  { topicId: 'qui_04', level: 45, uncertainty: 0.5, lastReviewed: new Date(Date.now() - 7 * 86400000).toISOString(), errorSignals: 1 },
-  { topicId: 'bio_07', level: 25, uncertainty: 0.8, lastReviewed: new Date(Date.now() - 16 * 86400000).toISOString(), errorSignals: 2 },
-  { topicId: 'bio_08', level: 20, uncertainty: 0.85, lastReviewed: new Date(Date.now() - 18 * 86400000).toISOString(), errorSignals: 2 },
-  { topicId: 'mat_07', level: 40, uncertainty: 0.6, lastReviewed: new Date(Date.now() - 8 * 86400000).toISOString(), errorSignals: 1 },
-  { topicId: 'mat_08', level: 15, uncertainty: 0.9, lastReviewed: new Date(Date.now() - 20 * 86400000).toISOString(), errorSignals: 3 },
-  { topicId: 'mat_09', level: 10, uncertainty: 0.9, lastReviewed: new Date(Date.now() - 22 * 86400000).toISOString(), errorSignals: 3 },
-  { topicId: 'mat_10', level: 15, uncertainty: 0.85, lastReviewed: new Date(Date.now() - 19 * 86400000).toISOString(), errorSignals: 2 },
-  { topicId: 'mat_11', level: 35, uncertainty: 0.65, lastReviewed: new Date(Date.now() - 12 * 86400000).toISOString(), errorSignals: 1 },
-  { topicId: 'fis_07', level: 30, uncertainty: 0.7, lastReviewed: new Date(Date.now() - 13 * 86400000).toISOString(), errorSignals: 2 },
-  { topicId: 'fis_08', level: 10, uncertainty: 0.9, lastReviewed: new Date(Date.now() - 21 * 86400000).toISOString(), errorSignals: 3 },
-  { topicId: 'fis_09', level: 20, uncertainty: 0.85, lastReviewed: new Date(Date.now() - 17 * 86400000).toISOString(), errorSignals: 2 },
-  { topicId: 'qui_05', level: 20, uncertainty: 0.85, lastReviewed: new Date(Date.now() - 15 * 86400000).toISOString(), errorSignals: 2 },
-  { topicId: 'qui_06', level: 15, uncertainty: 0.9, lastReviewed: new Date(Date.now() - 20 * 86400000).toISOString(), errorSignals: 3 },
-  { topicId: 'geo_01', level: 30, uncertainty: 0.75, lastReviewed: new Date(Date.now() - 25 * 86400000).toISOString(), errorSignals: 1 },
-  { topicId: 'geo_02', level: 25, uncertainty: 0.8, lastReviewed: new Date(Date.now() - 25 * 86400000).toISOString(), errorSignals: 1 },
-  { topicId: 'geo_03', level: 20, uncertainty: 0.8, lastReviewed: new Date(Date.now() - 25 * 86400000).toISOString(), errorSignals: 1 },
-  { topicId: 'geo_04', level: 20, uncertainty: 0.8, lastReviewed: new Date(Date.now() - 25 * 86400000).toISOString(), errorSignals: 1 },
-  { topicId: 'geo_05', level: 15, uncertainty: 0.85, lastReviewed: new Date(Date.now() - 25 * 86400000).toISOString(), errorSignals: 1 },
-  { topicId: 'geo_06', level: 25, uncertainty: 0.8, lastReviewed: new Date(Date.now() - 25 * 86400000).toISOString(), errorSignals: 1 },
-  { topicId: 'geo_07', level: 30, uncertainty: 0.75, lastReviewed: new Date(Date.now() - 25 * 86400000).toISOString(), errorSignals: 1 },
-  { topicId: 'his_01', level: 30, uncertainty: 0.75, lastReviewed: new Date(Date.now() - 25 * 86400000).toISOString(), errorSignals: 1 },
-  { topicId: 'his_02', level: 25, uncertainty: 0.8, lastReviewed: new Date(Date.now() - 25 * 86400000).toISOString(), errorSignals: 1 },
-  { topicId: 'his_03', level: 25, uncertainty: 0.8, lastReviewed: new Date(Date.now() - 25 * 86400000).toISOString(), errorSignals: 1 },
-  { topicId: 'his_04', level: 20, uncertainty: 0.8, lastReviewed: new Date(Date.now() - 25 * 86400000).toISOString(), errorSignals: 1 },
-  { topicId: 'his_05', level: 20, uncertainty: 0.8, lastReviewed: new Date(Date.now() - 25 * 86400000).toISOString(), errorSignals: 1 },
-  { topicId: 'his_06', level: 20, uncertainty: 0.8, lastReviewed: new Date(Date.now() - 25 * 86400000).toISOString(), errorSignals: 1 },
-  { topicId: 'his_07', level: 15, uncertainty: 0.85, lastReviewed: new Date(Date.now() - 25 * 86400000).toISOString(), errorSignals: 1 },
-  { topicId: 'por_01', level: 45, uncertainty: 0.55, lastReviewed: new Date(Date.now() - 10 * 86400000).toISOString(), errorSignals: 1 },
-  { topicId: 'por_02', level: 55, uncertainty: 0.45, lastReviewed: new Date(Date.now() - 9 * 86400000).toISOString(), errorSignals: 0 },
-  { topicId: 'por_03', level: 30, uncertainty: 0.7, lastReviewed: new Date(Date.now() - 14 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'bio_celular', level: 85, uncertainty: 0.1, lastReviewed: new Date(Date.now() - 5 * 86400000).toISOString(), errorSignals: 0 },
+  { topicId: 'bio_genetica', level: 30, uncertainty: 0.8, lastReviewed: new Date(Date.now() - 1 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'bio_evolucao', level: 20, uncertainty: 0.85, lastReviewed: new Date(Date.now() - 12 * 86400000).toISOString(), errorSignals: 3 },
+  { topicId: 'bio_ecologia', level: 40, uncertainty: 0.6, lastReviewed: new Date(Date.now() - 7 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'bio_zoologia', level: 25, uncertainty: 0.8, lastReviewed: new Date(Date.now() - 16 * 86400000).toISOString(), errorSignals: 2 },
+  { topicId: 'bio_botanica', level: 20, uncertainty: 0.85, lastReviewed: new Date(Date.now() - 18 * 86400000).toISOString(), errorSignals: 2 },
+  { topicId: 'bio_microbiologia', level: 65, uncertainty: 0.35, lastReviewed: new Date(Date.now() - 6 * 86400000).toISOString(), errorSignals: 0 },
+  { topicId: 'bio_fisio_animal', level: 55, uncertainty: 0.5, lastReviewed: new Date(Date.now() - 4 * 86400000).toISOString(), errorSignals: 2 },
+  { topicId: 'bio_fisio_vegetal', level: 15, uncertainty: 0.9, lastReviewed: new Date(Date.now() - 30 * 86400000).toISOString(), errorSignals: 0 },
+  { topicId: 'mat_algebrica', level: 55, uncertainty: 0.45, lastReviewed: new Date(Date.now() - 8 * 86400000).toISOString(), errorSignals: 2 },
+  { topicId: 'mat_geometrica', level: 70, uncertainty: 0.3, lastReviewed: new Date(Date.now() - 8 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'mat_numerica', level: 50, uncertainty: 0.5, lastReviewed: new Date(Date.now() - 3 * 86400000).toISOString(), errorSignals: 3 },
+  { topicId: 'fis_cinematica', level: 75, uncertainty: 0.2, lastReviewed: new Date(Date.now() - 2 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'fis_dinamica', level: 60, uncertainty: 0.4, lastReviewed: new Date(Date.now() - 3 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'fis_dinamica_impulsiva', level: 15, uncertainty: 0.9, lastReviewed: new Date(Date.now() - 30 * 86400000).toISOString(), errorSignals: 0 },
+  { topicId: 'fis_energia', level: 30, uncertainty: 0.7, lastReviewed: new Date(Date.now() - 13 * 86400000).toISOString(), errorSignals: 2 },
+  { topicId: 'fis_estatica', level: 20, uncertainty: 0.85, lastReviewed: new Date(Date.now() - 17 * 86400000).toISOString(), errorSignals: 2 },
+  { topicId: 'fis_termofisica', level: 35, uncertainty: 0.65, lastReviewed: new Date(Date.now() - 9 * 86400000).toISOString(), errorSignals: 2 },
+  { topicId: 'fis_eletricidade', level: 10, uncertainty: 0.9, lastReviewed: new Date(Date.now() - 10 * 86400000).toISOString(), errorSignals: 2 },
+  { topicId: 'fis_eletromagnetismo', level: 10, uncertainty: 0.9, lastReviewed: new Date(Date.now() - 21 * 86400000).toISOString(), errorSignals: 3 },
+  { topicId: 'fis_optica', level: 15, uncertainty: 0.9, lastReviewed: new Date(Date.now() - 14 * 86400000).toISOString(), errorSignals: 4 },
+  { topicId: 'fis_ondas', level: 80, uncertainty: 0.15, lastReviewed: new Date(Date.now() - 6 * 86400000).toISOString(), errorSignals: 0 },
+  { topicId: 'qui_atomistica', level: 55, uncertainty: 0.45, lastReviewed: new Date(Date.now() - 4 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'qui_geral', level: 30, uncertainty: 0.75, lastReviewed: new Date(Date.now() - 1 * 86400000).toISOString(), errorSignals: 3 },
+  { topicId: 'qui_organica', level: 20, uncertainty: 0.85, lastReviewed: new Date(Date.now() - 11 * 86400000).toISOString(), errorSignals: 2 },
+  { topicId: 'qui_fisico_quimica', level: 45, uncertainty: 0.5, lastReviewed: new Date(Date.now() - 7 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'geo_geral', level: 30, uncertainty: 0.75, lastReviewed: new Date(Date.now() - 25 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'geo_brasil', level: 20, uncertainty: 0.8, lastReviewed: new Date(Date.now() - 25 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'his_geral', level: 30, uncertainty: 0.75, lastReviewed: new Date(Date.now() - 25 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'his_brasil', level: 20, uncertainty: 0.8, lastReviewed: new Date(Date.now() - 25 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'por_gramatica', level: 45, uncertainty: 0.55, lastReviewed: new Date(Date.now() - 10 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'por_texto', level: 55, uncertainty: 0.45, lastReviewed: new Date(Date.now() - 9 * 86400000).toISOString(), errorSignals: 0 },
+  { topicId: 'por_literatura', level: 30, uncertainty: 0.7, lastReviewed: new Date(Date.now() - 14 * 86400000).toISOString(), errorSignals: 1 },
+  { topicId: 'por_redacao', level: 15, uncertainty: 0.9, lastReviewed: new Date(Date.now() - 30 * 86400000).toISOString(), errorSignals: 0 },
   { topicId: 'ing_01', level: 60, uncertainty: 0.4, lastReviewed: new Date(Date.now() - 8 * 86400000).toISOString(), errorSignals: 0 }
 ];
 
@@ -130,7 +102,7 @@ export const mockProfile: UserProfile = {
 export const mockErrorLogs: ErrorLog[] = [
   {
     id: 'err_1',
-    topicId: 'mat_02',
+    topicId: 'mat_numerica',
     questionId: 'q_mat_02_1',
     date: new Date().toISOString(),
     type: 'interpretation',
@@ -143,7 +115,7 @@ export const mockQuestions: Question[] = [
   // Biologia — Citologia
   {
     id: 'q_bio_01_1',
-    topicId: 'bio_01',
+    topicId: 'bio_celular',
     subject: 'Biologia',
     prompt: 'Qual organela é responsável pela produção de ATP através da respiração celular aeróbica?',
     options: [
@@ -158,7 +130,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_bio_01_2',
-    topicId: 'bio_01',
+    topicId: 'bio_celular',
     subject: 'Biologia',
     prompt: 'Qual estrutura é responsável pela síntese de proteínas na célula?',
     options: [
@@ -174,7 +146,7 @@ export const mockQuestions: Question[] = [
   // Biologia — Genética
   {
     id: 'q_bio_02_1',
-    topicId: 'bio_02',
+    topicId: 'bio_genetica',
     subject: 'Biologia',
     prompt: 'No cruzamento entre dois heterozigotos (Aa x Aa), qual a proporção fenotípica esperada considerando dominância completa?',
     options: [
@@ -189,7 +161,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_bio_02_2',
-    topicId: 'bio_02',
+    topicId: 'bio_genetica',
     subject: 'Biologia',
     prompt: 'Qual é a probabilidade de dois indivíduos heterozigotos Aa gerarem um filho homozigoto recessivo (aa)?',
     options: [
@@ -205,7 +177,7 @@ export const mockQuestions: Question[] = [
   // Biologia — Fisiologia Humana
   {
     id: 'q_bio_03_1',
-    topicId: 'bio_03',
+    topicId: 'bio_fisio_animal',
     subject: 'Biologia',
     prompt: 'Qual câmara do coração bombeia sangue oxigenado para todo o corpo através da artéria aorta?',
     options: [
@@ -220,7 +192,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_bio_03_2',
-    topicId: 'bio_03',
+    topicId: 'bio_fisio_animal',
     subject: 'Biologia',
     prompt: 'Qual é a principal função dos néfrons nos rins?',
     options: [
@@ -236,7 +208,7 @@ export const mockQuestions: Question[] = [
   // Biologia — Ecologia
   {
     id: 'q_bio_04_1',
-    topicId: 'bio_04',
+    topicId: 'bio_ecologia',
     subject: 'Biologia',
     prompt: 'Em uma cadeia alimentar, qual nível trófico é ocupado pelos organismos que realizam fotossíntese?',
     options: [
@@ -251,7 +223,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_bio_04_2',
-    topicId: 'bio_04',
+    topicId: 'bio_ecologia',
     subject: 'Biologia',
     prompt: 'O que caracteriza uma relação de mutualismo entre duas espécies?',
     options: [
@@ -267,7 +239,7 @@ export const mockQuestions: Question[] = [
   // Biologia — Evolução
   {
     id: 'q_bio_05_1',
-    topicId: 'bio_05',
+    topicId: 'bio_evolucao',
     subject: 'Biologia',
     prompt: 'Segundo a teoria da seleção natural de Darwin, o que determina a sobrevivência e reprodução diferencial dos indivíduos em uma população?',
     options: [
@@ -282,7 +254,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_bio_05_2',
-    topicId: 'bio_05',
+    topicId: 'bio_evolucao',
     subject: 'Biologia',
     prompt: 'O que é especiação por isolamento geográfico (alopátrica)?',
     options: [
@@ -298,7 +270,7 @@ export const mockQuestions: Question[] = [
   // Biologia — Microbiologia e Imunologia
   {
     id: 'q_bio_06_1',
-    topicId: 'bio_06',
+    topicId: 'bio_microbiologia',
     subject: 'Biologia',
     prompt: 'Qual estrutura é comum a todas as bactérias e ausente nas células eucarióticas?',
     options: [
@@ -313,7 +285,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_bio_06_2',
-    topicId: 'bio_06',
+    topicId: 'bio_microbiologia',
     subject: 'Biologia',
     prompt: 'Qual é a principal diferença entre imunidade inata e imunidade adaptativa?',
     options: [
@@ -329,7 +301,7 @@ export const mockQuestions: Question[] = [
   // Matemática — Funções de 1º Grau
   {
     id: 'q_mat_01_1',
-    topicId: 'mat_01',
+    topicId: 'mat_algebrica',
     subject: 'Matemática',
     prompt: 'Qual é o valor de x para que a função f(x) = 2x - 6 seja igual a zero?',
     options: [
@@ -344,7 +316,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_mat_01_2',
-    topicId: 'mat_01',
+    topicId: 'mat_algebrica',
     subject: 'Matemática',
     prompt: 'Qual é o coeficiente angular da reta representada pela função f(x) = -3x + 7?',
     options: [
@@ -360,7 +332,7 @@ export const mockQuestions: Question[] = [
   // Matemática — Análise Combinatória
   {
     id: 'q_mat_02_1',
-    topicId: 'mat_02',
+    topicId: 'mat_numerica',
     subject: 'Matemática',
     prompt: 'De quantas formas 3 pessoas podem se sentar em 3 cadeiras em fila?',
     options: [
@@ -375,7 +347,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_mat_02_2',
-    topicId: 'mat_02',
+    topicId: 'mat_numerica',
     subject: 'Matemática',
     prompt: 'Uma senha é formada por 4 dígitos distintos, escolhidos entre 0 e 9. Quantas senhas diferentes podem ser formadas?',
     options: [
@@ -391,7 +363,7 @@ export const mockQuestions: Question[] = [
   // Matemática — Funções de 2º Grau
   {
     id: 'q_mat_03_1',
-    topicId: 'mat_03',
+    topicId: 'mat_algebrica',
     subject: 'Matemática',
     prompt: 'Qual é o valor do discriminante (Δ) da função f(x) = x² - 5x + 6?',
     options: [
@@ -406,7 +378,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_mat_03_2',
-    topicId: 'mat_03',
+    topicId: 'mat_algebrica',
     subject: 'Matemática',
     prompt: 'Qual é o vértice da parábola representada por f(x) = x² - 4x + 3?',
     options: [
@@ -422,7 +394,7 @@ export const mockQuestions: Question[] = [
   // Matemática — Geometria Plana
   {
     id: 'q_mat_04_1',
-    topicId: 'mat_04',
+    topicId: 'mat_geometrica',
     subject: 'Matemática',
     prompt: 'Qual é a área de um triângulo retângulo com catetos medindo 6 cm e 8 cm?',
     options: [
@@ -437,7 +409,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_mat_04_2',
-    topicId: 'mat_04',
+    topicId: 'mat_geometrica',
     subject: 'Matemática',
     prompt: 'Um círculo tem raio de 5 cm. Qual é aproximadamente sua área, considerando π ≈ 3,14?',
     options: [
@@ -453,7 +425,7 @@ export const mockQuestions: Question[] = [
   // Matemática — Probabilidade
   {
     id: 'q_mat_05_1',
-    topicId: 'mat_05',
+    topicId: 'mat_numerica',
     subject: 'Matemática',
     prompt: 'Ao lançar um dado de 6 faces uma vez, qual a probabilidade de obter um número par?',
     options: [
@@ -468,7 +440,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_mat_05_2',
-    topicId: 'mat_05',
+    topicId: 'mat_numerica',
     subject: 'Matemática',
     prompt: 'Em uma urna há 4 bolas vermelhas e 6 bolas azuis. Retirando uma bola ao acaso, qual a probabilidade de ela ser vermelha?',
     options: [
@@ -484,7 +456,7 @@ export const mockQuestions: Question[] = [
   // Matemática — Trigonometria
   {
     id: 'q_mat_06_1',
-    topicId: 'mat_06',
+    topicId: 'mat_algebrica',
     subject: 'Matemática',
     prompt: 'Qual é o valor de sen(30°)?',
     options: [
@@ -499,7 +471,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_mat_06_2',
-    topicId: 'mat_06',
+    topicId: 'mat_algebrica',
     subject: 'Matemática',
     prompt: 'Em um triângulo retângulo, o cateto oposto a um ângulo mede 3 e a hipotenusa mede 5. Qual é o valor do cosseno desse ângulo?',
     options: [
@@ -515,7 +487,7 @@ export const mockQuestions: Question[] = [
   // Física — Cinemática
   {
     id: 'q_fis_01_1',
-    topicId: 'fis_01',
+    topicId: 'fis_cinematica',
     subject: 'Física',
     prompt: 'Um corpo parte do repouso com aceleração constante de 2 m/s². Qual sua velocidade após 5 segundos?',
     options: [
@@ -530,7 +502,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_01_2',
-    topicId: 'fis_01',
+    topicId: 'fis_cinematica',
     subject: 'Física',
     prompt: 'Um objeto é lançado verticalmente para cima com velocidade inicial de 20 m/s. Desprezando a resistência do ar (g = 10 m/s²), quanto tempo leva para atingir a altura máxima?',
     options: [
@@ -546,7 +518,7 @@ export const mockQuestions: Question[] = [
   // Física — Eletrodinâmica
   {
     id: 'q_fis_02_1',
-    topicId: 'fis_02',
+    topicId: 'fis_eletricidade',
     subject: 'Física',
     prompt: 'Em um circuito com dois resistores de 10Ω em série ligados a uma fonte de 20V, qual a corrente total no circuito?',
     options: [
@@ -561,7 +533,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_02_2',
-    topicId: 'fis_02',
+    topicId: 'fis_eletricidade',
     subject: 'Física',
     prompt: 'Dois resistores de 10Ω cada estão associados em paralelo. Qual é a resistência equivalente?',
     options: [
@@ -577,7 +549,7 @@ export const mockQuestions: Question[] = [
   // Física — Dinâmica
   {
     id: 'q_fis_03_1',
-    topicId: 'fis_03',
+    topicId: 'fis_dinamica',
     subject: 'Física',
     prompt: 'Segundo a Segunda Lei de Newton, qual é a força resultante necessária para acelerar um corpo de 5 kg a 4 m/s²?',
     options: [
@@ -592,7 +564,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_03_2',
-    topicId: 'fis_03',
+    topicId: 'fis_dinamica',
     subject: 'Física',
     prompt: 'De acordo com a Terceira Lei de Newton (ação e reação), quando você empurra uma parede, o que acontece?',
     options: [
@@ -608,7 +580,7 @@ export const mockQuestions: Question[] = [
   // Física — Termologia
   {
     id: 'q_fis_04_1',
-    topicId: 'fis_04',
+    topicId: 'fis_termofisica',
     subject: 'Física',
     prompt: 'Um corpo recebe 500 cal de calor e sua temperatura varia de 20°C para 30°C. Sabendo que sua massa é 100g, qual é o calor específico do material (Q = m·c·ΔT)?',
     options: [
@@ -623,7 +595,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_04_2',
-    topicId: 'fis_04',
+    topicId: 'fis_termofisica',
     subject: 'Física',
     prompt: 'O que ocorre com as moléculas de um gás quando sua temperatura aumenta, mantendo o volume constante?',
     options: [
@@ -639,7 +611,7 @@ export const mockQuestions: Question[] = [
   // Física — Óptica
   {
     id: 'q_fis_05_1',
-    topicId: 'fis_05',
+    topicId: 'fis_optica',
     subject: 'Física',
     prompt: 'O que causa a formação do arco-íris na atmosfera?',
     options: [
@@ -654,7 +626,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_05_2',
-    topicId: 'fis_05',
+    topicId: 'fis_optica',
     subject: 'Física',
     prompt: 'Uma pessoa míope enxerga mal objetos distantes porque a imagem se forma:',
     options: [
@@ -670,7 +642,7 @@ export const mockQuestions: Question[] = [
   // Física — Ondulatória
   {
     id: 'q_fis_06_1',
-    topicId: 'fis_06',
+    topicId: 'fis_ondas',
     subject: 'Física',
     prompt: 'Uma onda tem frequência de 50 Hz e comprimento de onda de 4 m. Qual é sua velocidade de propagação?',
     options: [
@@ -685,7 +657,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_06_2',
-    topicId: 'fis_06',
+    topicId: 'fis_ondas',
     subject: 'Física',
     prompt: 'O que caracteriza o fenômeno da ressonância?',
     options: [
@@ -701,7 +673,7 @@ export const mockQuestions: Question[] = [
   // Química — Estequiometria
   {
     id: 'q_qui_01_1',
-    topicId: 'qui_01',
+    topicId: 'qui_geral',
     subject: 'Química',
     prompt: 'Na reação 2H₂ + O₂ → 2H₂O, quantos mols de água são produzidos a partir de 4 mols de H₂ (com O₂ em excesso)?',
     options: [
@@ -716,7 +688,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_qui_01_2',
-    topicId: 'qui_01',
+    topicId: 'qui_geral',
     subject: 'Química',
     prompt: 'Qual é a massa molar aproximada do CO₂ (considerando C = 12 g/mol e O = 16 g/mol)?',
     options: [
@@ -732,7 +704,7 @@ export const mockQuestions: Question[] = [
   // Química — Ligações Químicas
   {
     id: 'q_qui_02_1',
-    topicId: 'qui_02',
+    topicId: 'qui_atomistica',
     subject: 'Química',
     prompt: 'Qual tipo de ligação química ocorre entre um metal e um ametal, com transferência de elétrons?',
     options: [
@@ -747,7 +719,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_qui_02_2',
-    topicId: 'qui_02',
+    topicId: 'qui_atomistica',
     subject: 'Química',
     prompt: 'Por que a molécula de água (H₂O) é polar?',
     options: [
@@ -763,7 +735,7 @@ export const mockQuestions: Question[] = [
   // Química — Química Orgânica
   {
     id: 'q_qui_03_1',
-    topicId: 'qui_03',
+    topicId: 'qui_organica',
     subject: 'Química',
     prompt: 'Qual é o nome do composto orgânico mais simples da função álcool, com um único átomo de carbono?',
     options: [
@@ -778,7 +750,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_qui_03_2',
-    topicId: 'qui_03',
+    topicId: 'qui_organica',
     subject: 'Química',
     prompt: 'Qual é a principal característica que define um hidrocarboneto?',
     options: [
@@ -794,7 +766,7 @@ export const mockQuestions: Question[] = [
   // Química — Soluções e Concentração
   {
     id: 'q_qui_04_1',
-    topicId: 'qui_04',
+    topicId: 'qui_fisico_quimica',
     subject: 'Química',
     prompt: 'Uma solução foi preparada dissolvendo 20 g de sal em 500 mL de água. Qual é a concentração em g/L?',
     options: [
@@ -809,7 +781,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_qui_04_2',
-    topicId: 'qui_04',
+    topicId: 'qui_fisico_quimica',
     subject: 'Química',
     prompt: 'O que significa dizer que uma solução está "saturada"?',
     options: [
@@ -825,7 +797,7 @@ export const mockQuestions: Question[] = [
   // Questões reais de provas passadas (verificadas contra o gabarito oficial)
   {
     id: 'q_real_enem_2023_qui',
-    topicId: 'qui_02',
+    topicId: 'qui_atomistica',
     subject: 'Química',
     prompt: 'O Aldrin é um inseticida agrícola organoclorado sintético de baixa polaridade, cuja estrutura molecular simétrica, de fórmula C12H8Cl6, foi introduzida na agricultura a partir da década de 1950. Esse composto apresenta alta persistência no meio ambiente e acumulação nos organismos, sendo danoso para a saúde. Um pesquisador coletou fluidos biológicos de indivíduos de uma população contaminada por esse inseticida agrícola, analisando amostras de saliva, sangue, lágrima, urina e leite quanto à presença dessa substância. Em qual dos fluidos o pesquisador provavelmente encontrou a maior concentração dessa substância?',
     options: [
@@ -842,7 +814,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_real_enem_2023_mat',
-    topicId: 'mat_04',
+    topicId: 'mat_geometrica',
     subject: 'Matemática',
     prompt: 'Sejam a, b e c as medidas dos lados de um triângulo retângulo, tendo a como medida da hipotenusa. Esses valores a, b e c são, respectivamente, os diâmetros dos círculos C1, C2 e C3. Essa construção assegura, pelo teorema de Pitágoras, que área(C1) = área(C2) + área(C3). Um professor de matemática desafiou dois amigos: sem usar instrumento de medição, ele poderia afirmar se a área do círculo correspondente à pizza que ele pedisse era maior, igual ou menor do que a soma das áreas das pizzas dos dois amigos. Formou-se um triângulo com os diâmetros das três pizzas, com ângulo α oposto ao diâmetro da pizza do professor. O professor afirmou que a área de sua pizza é maior do que a soma das áreas das outras duas. Isso ocorre porque:',
     options: [
@@ -859,7 +831,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_real_fuvest_2022_bio',
-    topicId: 'bio_02',
+    topicId: 'bio_genetica',
     subject: 'Biologia',
     prompt: 'A deficiência na enzima G6PD é uma condição recessiva ligada ao cromossomo X, que pode ser diagnosticada no teste do pezinho expandido. Pessoas com deficiência nessa enzima são suscetíveis à anemia hemolítica ao serem expostas à cloroquina ou primaquina, drogas amplamente prescritas por médicos no tratamento da malária. Assinale a alternativa correta:',
     options: [
@@ -876,7 +848,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_real_fuvest_2023_qui',
-    topicId: 'qui_01',
+    topicId: 'qui_geral',
     subject: 'Química',
     prompt: 'Combustíveis fósseis, como o diesel, contêm em sua composição uma fração de enxofre. Durante o processo de combustão, o enxofre é convertido em SO2, tornando-se um poluente ambiental, segundo a reação: S(s) + O2(g) → SO2(g). Em postos de combustível, normalmente são comercializados dois tipos de diesel: o Diesel S10, que contém 10 ppm de enxofre, e o Diesel S500, que contém 500 ppm de enxofre (1 ppm de enxofre equivale a 1 mg de enxofre por kg de diesel). Determine, em mg por kg de diesel, a diferença entre a massa de SO2 liberada na queima de 1 kg de Diesel S500 e a massa de SO2 liberada na queima de 1 kg de Diesel S10.',
     options: [
@@ -893,7 +865,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_real_comvest_2020_qui',
-    topicId: 'qui_04',
+    topicId: 'qui_fisico_quimica',
     subject: 'Química',
     prompt: 'Um medicamento se apresenta na forma de comprimidos de 750 mg ou como suspensão oral na concentração de 100 mg/mL. A bula do remédio informa que o comprimido não pode ser partido, aberto ou mastigado e que, para crianças abaixo de 12 anos, a dosagem máxima é de 15 mg/kg/dose. Uma criança de 11 anos, pesando 40 kg, poderia ingerir com segurança, no máximo:',
     options: [
@@ -909,7 +881,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_real_comvest_2023_fis',
-    topicId: 'fis_01',
+    topicId: 'fis_cinematica',
     subject: 'Física',
     prompt: 'Um balão, inicialmente em repouso no solo, decola e sobe em movimento uniformemente variado. Se o balão atinge a altura h = 80 m após um tempo t = 40 s, conclui-se que a aceleração vertical do balão nesse movimento é igual a:',
     options: [
@@ -925,7 +897,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_real_vunesp_2022_qui',
-    topicId: 'qui_03',
+    topicId: 'qui_organica',
     subject: 'Química',
     prompt: 'A etanolamina (NH2CH2CH2OH) é uma substância prebiótica detectada no espaço interestelar, que contém quatro dos seis elementos químicos essenciais à vida. Ela é parte constituinte dos fosfolipídios que compõem as membranas celulares e pode servir de precursora do aminoácido glicina. A transformação da molécula de etanolamina em glicina envolve uma reação de:',
     options: [
@@ -942,7 +914,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_real_vunesp_2023_bio',
-    topicId: 'bio_04',
+    topicId: 'bio_ecologia',
     subject: 'Biologia',
     prompt: '"Se a Amazônia é vista como o pulmão do mundo, podemos dizer que o Pantanal é o \'rim\' da porção da América do Sul", diz Cássio Bernardino, coordenador de Projetos do WWF-Brasil. Um professor solicitou aos alunos que analisassem a afirmação sobre a Amazônia e o Pantanal possuírem, respectivamente, funções análogas à função dos pulmões e à dos rins. É correto afirmar que:',
     options: [
@@ -959,7 +931,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_real_famerp_2018_fis',
-    topicId: 'fis_04',
+    topicId: 'fis_termofisica',
     subject: 'Física',
     prompt: 'Em um recipiente de capacidade térmica desprezível, 300 g de água, inicialmente a 20 ºC, foram aquecidos. Após 2,0 minutos, quando a temperatura da água era 40 ºC, mais 300 g de água a 20 ºC foram adicionados ao recipiente. Considerando que não ocorreu perda de calor da água para o meio e que a fonte fornece calor a uma potência constante durante o processo, o tempo decorrido, após a adição da água, para que a temperatura da água atingisse 80 ºC foi de:',
     options: [
@@ -976,7 +948,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_real_famerp_2019_qui',
-    topicId: 'qui_02',
+    topicId: 'qui_atomistica',
     subject: 'Química',
     prompt: 'A combinação dos elementos Ca e Br forma uma substância solúvel em água, de fórmula ___________. Uma solução aquosa dessa substância é classificada como ___________ de eletricidade.',
     options: [
@@ -996,7 +968,7 @@ export const mockQuestions: Question[] = [
 export const mockPodcastEpisodes: PodcastEpisode[] = [
   {
     id: 'pod_bio_01',
-    topicId: 'bio_01',
+    topicId: 'bio_celular',
     title: 'Citologia em 5 minutos',
     subject: 'Biologia',
     durationMinutes: 5,
@@ -1004,7 +976,7 @@ export const mockPodcastEpisodes: PodcastEpisode[] = [
   },
   {
     id: 'pod_bio_02',
-    topicId: 'bio_02',
+    topicId: 'bio_genetica',
     title: 'Genética Mendeliana sem decoreba',
     subject: 'Biologia',
     durationMinutes: 6,
@@ -1012,7 +984,7 @@ export const mockPodcastEpisodes: PodcastEpisode[] = [
   },
   {
     id: 'pod_bio_03',
-    topicId: 'bio_03',
+    topicId: 'bio_fisio_animal',
     title: 'Como o corpo humano se mantém em equilíbrio',
     subject: 'Biologia',
     durationMinutes: 6,
@@ -1020,7 +992,7 @@ export const mockPodcastEpisodes: PodcastEpisode[] = [
   },
   {
     id: 'pod_bio_04',
-    topicId: 'bio_04',
+    topicId: 'bio_ecologia',
     title: 'Ecologia: cadeias, teias e relações entre espécies',
     subject: 'Biologia',
     durationMinutes: 5,
@@ -1028,7 +1000,7 @@ export const mockPodcastEpisodes: PodcastEpisode[] = [
   },
   {
     id: 'pod_bio_05',
-    topicId: 'bio_05',
+    topicId: 'bio_evolucao',
     title: 'Evolução: como Darwin explicou a diversidade da vida',
     subject: 'Biologia',
     durationMinutes: 6,
@@ -1036,7 +1008,7 @@ export const mockPodcastEpisodes: PodcastEpisode[] = [
   },
   {
     id: 'pod_bio_06',
-    topicId: 'bio_06',
+    topicId: 'bio_microbiologia',
     title: 'Bactérias, vírus e o sistema imunológico',
     subject: 'Biologia',
     durationMinutes: 7,
@@ -1044,7 +1016,7 @@ export const mockPodcastEpisodes: PodcastEpisode[] = [
   },
   {
     id: 'pod_mat_01',
-    topicId: 'mat_01',
+    topicId: 'mat_algebrica',
     title: 'Funções de primeiro grau na prática',
     subject: 'Matemática',
     durationMinutes: 4,
@@ -1052,7 +1024,7 @@ export const mockPodcastEpisodes: PodcastEpisode[] = [
   },
   {
     id: 'pod_mat_02',
-    topicId: 'mat_02',
+    topicId: 'mat_numerica',
     title: 'Análise combinatória: quando somar e quando multiplicar',
     subject: 'Matemática',
     durationMinutes: 7,
@@ -1060,7 +1032,7 @@ export const mockPodcastEpisodes: PodcastEpisode[] = [
   },
   {
     id: 'pod_mat_03',
-    topicId: 'mat_03',
+    topicId: 'mat_algebrica',
     title: 'Funções de segundo grau e a parábola',
     subject: 'Matemática',
     durationMinutes: 6,
@@ -1068,7 +1040,7 @@ export const mockPodcastEpisodes: PodcastEpisode[] = [
   },
   {
     id: 'pod_mat_04',
-    topicId: 'mat_04',
+    topicId: 'mat_geometrica',
     title: 'Geometria plana: as fórmulas que mais caem',
     subject: 'Matemática',
     durationMinutes: 5,
@@ -1076,7 +1048,7 @@ export const mockPodcastEpisodes: PodcastEpisode[] = [
   },
   {
     id: 'pod_mat_05',
-    topicId: 'mat_05',
+    topicId: 'mat_numerica',
     title: 'Probabilidade sem mistério',
     subject: 'Matemática',
     durationMinutes: 5,
@@ -1084,7 +1056,7 @@ export const mockPodcastEpisodes: PodcastEpisode[] = [
   },
   {
     id: 'pod_mat_06',
-    topicId: 'mat_06',
+    topicId: 'mat_algebrica',
     title: 'Trigonometria: seno, cosseno e tangente na prática',
     subject: 'Matemática',
     durationMinutes: 6,
@@ -1092,7 +1064,7 @@ export const mockPodcastEpisodes: PodcastEpisode[] = [
   },
   {
     id: 'pod_fis_01',
-    topicId: 'fis_01',
+    topicId: 'fis_cinematica',
     title: 'Cinemática: as três equações que resolvem tudo',
     subject: 'Física',
     durationMinutes: 5,
@@ -1100,7 +1072,7 @@ export const mockPodcastEpisodes: PodcastEpisode[] = [
   },
   {
     id: 'pod_fis_02',
-    topicId: 'fis_02',
+    topicId: 'fis_eletricidade',
     title: 'Eletrodinâmica: série, paralelo e a Lei de Ohm',
     subject: 'Física',
     durationMinutes: 6,
@@ -1108,7 +1080,7 @@ export const mockPodcastEpisodes: PodcastEpisode[] = [
   },
   {
     id: 'pod_fis_03',
-    topicId: 'fis_03',
+    topicId: 'fis_dinamica',
     title: 'As três Leis de Newton em um episódio só',
     subject: 'Física',
     durationMinutes: 6,
@@ -1116,7 +1088,7 @@ export const mockPodcastEpisodes: PodcastEpisode[] = [
   },
   {
     id: 'pod_fis_04',
-    topicId: 'fis_04',
+    topicId: 'fis_termofisica',
     title: 'Termologia: calor, temperatura e mudanças de estado',
     subject: 'Física',
     durationMinutes: 6,
@@ -1124,7 +1096,7 @@ export const mockPodcastEpisodes: PodcastEpisode[] = [
   },
   {
     id: 'pod_fis_05',
-    topicId: 'fis_05',
+    topicId: 'fis_optica',
     title: 'Óptica: luz, reflexão e a visão humana',
     subject: 'Física',
     durationMinutes: 5,
@@ -1132,7 +1104,7 @@ export const mockPodcastEpisodes: PodcastEpisode[] = [
   },
   {
     id: 'pod_fis_06',
-    topicId: 'fis_06',
+    topicId: 'fis_ondas',
     title: 'Ondulatória: velocidade, frequência e ressonância',
     subject: 'Física',
     durationMinutes: 6,
@@ -1140,7 +1112,7 @@ export const mockPodcastEpisodes: PodcastEpisode[] = [
   },
   {
     id: 'pod_qui_01',
-    topicId: 'qui_01',
+    topicId: 'qui_geral',
     title: 'Estequiometria sem trava',
     subject: 'Química',
     durationMinutes: 6,
@@ -1148,7 +1120,7 @@ export const mockPodcastEpisodes: PodcastEpisode[] = [
   },
   {
     id: 'pod_qui_02',
-    topicId: 'qui_02',
+    topicId: 'qui_atomistica',
     title: 'Ligações químicas: iônica, covalente e polaridade',
     subject: 'Química',
     durationMinutes: 6,
@@ -1156,7 +1128,7 @@ export const mockPodcastEpisodes: PodcastEpisode[] = [
   },
   {
     id: 'pod_qui_03',
-    topicId: 'qui_03',
+    topicId: 'qui_organica',
     title: 'Química orgânica: carbono, cadeias e funções',
     subject: 'Química',
     durationMinutes: 6,
@@ -1164,7 +1136,7 @@ export const mockPodcastEpisodes: PodcastEpisode[] = [
   },
   {
     id: 'pod_qui_04',
-    topicId: 'qui_04',
+    topicId: 'qui_fisico_quimica',
     title: 'Soluções e concentração no dia a dia',
     subject: 'Química',
     durationMinutes: 5,
@@ -1254,7 +1226,7 @@ export const mockStudyMethods: StudyMethod[] = [
 export const mockBacklog: BacklogItem[] = [
   {
     id: 'backlog_qui_03',
-    topicId: 'qui_03',
+    topicId: 'qui_organica',
     state: 1,
     dependencia: 2,
     incidencia: 3,
@@ -1267,7 +1239,7 @@ export const mockBacklog: BacklogItem[] = [
   },
   {
     id: 'backlog_mat_06',
-    topicId: 'mat_06',
+    topicId: 'mat_algebrica',
     state: 2,
     dependencia: 1,
     incidencia: 2,

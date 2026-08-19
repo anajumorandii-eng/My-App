@@ -5,7 +5,8 @@ import { useUserMastery } from '../hooks/useUserMastery';
 import { useUserProfile } from '../hooks/useUserProfile';
 import { useAvailableMinutes } from '../hooks/useAvailableMinutes';
 import { pendingReviewCount } from '../lib/reviewUrgency';
-import { PlayCircle, Target, Brain, AlertCircle, CloudOff } from 'lucide-react';
+import { nextExams, daysUntil } from '../data/examCalendar';
+import { PlayCircle, Target, Brain, AlertCircle, CloudOff, CalendarClock } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 export default function Dashboard() {
@@ -20,6 +21,7 @@ export default function Dashboard() {
   const primary = dailyPlan[0];
   const primaryMastery = mastery.find((item) => item.topicId === primary?.topicId);
   const overdueReviews = pendingReviewCount(mastery);
+  const upcomingExams = useMemo(() => nextExams(new Date(), 3), []);
   const actionLabels = { review: 'Revisar para consolidar', practice: 'Praticar sem apoio', theory: 'Reconstruir a base', error_analysis: 'Analisar erros recorrentes' };
 
   const startAction = (topicId?: string) => navigate(topicId ? `/sessao?topic=${encodeURIComponent(topicId)}` : '/sessao');
@@ -39,6 +41,22 @@ export default function Dashboard() {
           </p>
         )}
       </header>
+
+      {upcomingExams.length > 0 && (
+        <section className="flex flex-wrap gap-3">
+          {upcomingExams.map((exam) => (
+            <div key={exam.id} className="flex items-center bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl px-4 py-2.5 shadow-sm">
+              <CalendarClock className="w-4 h-4 mr-2.5 text-indigo-600 dark:text-indigo-400 shrink-0" />
+              <div>
+                <p className="text-sm font-medium leading-tight">{exam.label}</p>
+                <p className="text-xs text-zinc-500 leading-tight mt-0.5">
+                  {daysUntil(exam.date) === 0 ? 'É hoje' : `Faltam ${daysUntil(exam.date)} dias`}
+                </p>
+              </div>
+            </div>
+          ))}
+        </section>
+      )}
 
       {primary && (
         <section className="relative overflow-hidden rounded-3xl bg-indigo-600 text-white p-6 sm:p-8 shadow-lg">
