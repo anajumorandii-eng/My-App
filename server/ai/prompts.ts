@@ -24,16 +24,31 @@ export function buildAiPrompt(task: AiTask, payload: Payload): string {
         '',
         'Responda de forma concisa, direta, orientada a prova, em português do Brasil.',
       ].join('\n');
-    case 'error-hypothesis':
-      return [
-        'Você é o JUJU, um tutor especialista em diagnosticar erros de estudantes de vestibular de Medicina.',
-        'Um aluno registrou um erro com os seguintes dados:',
+    case 'error-hypothesis': {
+      const notes = payload.notes ? text(payload, 'notes') : undefined;
+      const questionPrompt = payload.questionPrompt ? text(payload, 'questionPrompt') : undefined;
+      const evidenceLines = [
         `Tópico: ${text(payload, 'topic')} (${text(payload, 'subject')})`,
-        `Categoria do erro: ${text(payload, 'errorType')}`,
-        `Relato do aluno sobre o que aconteceu: ${text(payload, 'notes')}`,
+        payload.errorType ? `Categoria que o aluno já indicou (pode ou não estar certa): ${text(payload, 'errorType')}` : undefined,
+        notes ? `Relato do aluno sobre o que aconteceu: ${notes}` : undefined,
+        questionPrompt ? `Questão respondida:\n"${questionPrompt}"` : undefined,
+        payload.selectedAnswer ? `Resposta escolhida pelo aluno: ${text(payload, 'selectedAnswer')}` : undefined,
+        payload.correctAnswer ? `Resposta correta: ${text(payload, 'correctAnswer')}` : undefined,
+      ].filter(Boolean);
+      return [
+        'Você é o JUJU, um tutor especialista em diagnosticar o primeiro ponto de ruptura do raciocínio de um estudante de vestibular de Medicina — não apenas apontar "errou o tópico".',
+        'Exemplo do nível de precisão esperado: em vez de "errou trigonometria", algo como "não reconheceu que era necessário relacionar seno/cosseno à decomposição vetorial".',
         '',
-        'Gere uma hipótese curta e objetiva (2-3 frases) sobre a causa raiz provável desse erro, e uma sugestão prática de como evitá-lo da próxima vez. Responda em português do Brasil, sem saudação.',
+        ...evidenceLines,
+        '',
+        'Categorias de erro válidas (use exatamente um destes códigos): conceptual, concept_confusion, interpretation, data_selection, strategy, calculation, prerequisite, insufficient_justification, time, attention.',
+        'Tipos de intervenção válidos, do menor/mais barato ao maior/mais caro (use exatamente um destes códigos, escolhendo o MENOR que razoavelmente resolve o problema — só use "aula_completa" se a evidência mostrar claramente que nada menor basta): recuperacao_ativa, questao_guiada, comparacao_conceitos, microbloco_prerequisito, questao_aplicacao, revisao_curta, aula_completa.',
+        '',
+        'Responda APENAS com um objeto JSON válido, sem markdown, sem texto antes ou depois, no formato exato:',
+        '{"type": "<código da categoria>", "breakPoint": "<uma frase específica e observável sobre onde o raciocínio quebrou>", "evidence": "<o que, nos dados acima, sustenta esse diagnóstico>", "confidence": "baixa" | "media", "intervention": {"type": "<código do tipo de intervenção>", "description": "<uma frase dizendo exatamente o que fazer a seguir>"}}',
+        'Nunca marque confidence como "alta" — você está formulando uma hipótese a partir de evidência limitada, não confirmando um fato; quem confirma é a estudante. Se a evidência for pouca, use "baixa". Responda em português do Brasil.',
       ].join('\n');
+    }
     case 'question-explanation':
       return [
         'Você é o JUJU, um tutor especialista em vestibular de Medicina.',

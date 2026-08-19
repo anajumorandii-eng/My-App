@@ -22,14 +22,54 @@ export interface UserProfile {
   autonomyIndex: number; // 0 to 100
 }
 
+// A menor ação capaz de testar ou corrigir a lacuna diagnosticada — em
+// ordem crescente de custo, do mais barato ("pergunta de recuperação
+// ativa") ao mais caro ("aula completa", só quando há evidência real de
+// que nada menor resolve).
+export type InterventionType =
+  | 'recuperacao_ativa'
+  | 'questao_guiada'
+  | 'comparacao_conceitos'
+  | 'microbloco_prerequisito'
+  | 'questao_aplicacao'
+  | 'revisao_curta'
+  | 'aula_completa';
+
+export interface Intervention {
+  type: InterventionType;
+  description: string;
+}
+
 export interface ErrorLog {
   id: string;
   topicId: string;
   questionId: string;
   date: string;
-  type: 'conceptual' | 'interpretation' | 'calculation' | 'strategy' | 'attention' | 'time' | 'prerequisite';
+  type:
+    | 'conceptual'
+    | 'concept_confusion'
+    | 'interpretation'
+    | 'data_selection'
+    | 'strategy'
+    | 'calculation'
+    | 'prerequisite'
+    | 'insufficient_justification'
+    | 'time'
+    | 'attention';
   notes: string;
   aiHypothesis?: string;
+  // Ponto específico onde o raciocínio quebrou — não "errou o tópico" (ex:
+  // "não reconheceu que era necessário relacionar seno/cosseno à
+  // decomposição vetorial"). Junto com evidence/confidence, separa fato
+  // observado de hipótese, como as regras pedagógicas exigem.
+  breakPoint?: string;
+  evidence?: string;
+  // 'confirmado' só depois que a estudante valida a hipótese da IA —
+  // antes disso é sempre 'baixa' ou 'media', nunca tratado como fato.
+  confidence?: 'baixa' | 'media' | 'alta' | 'confirmado';
+  proposedIntervention?: Intervention;
+  interventionStatus?: 'pendente' | 'concluida' | 'recusada';
+  outcomeRating?: 'melhorou' | 'sem_mudanca' | 'ainda_dificil';
 }
 
 // Por que uma ação foi recomendada — mostrado em "Por que isso?" no plano diário.

@@ -92,13 +92,24 @@ export function validateAiPayload(task: AiTask, body: unknown): Payload {
         question: requiredString(payload, 'question', MAX_LONG_TEXT),
         topic: requiredString(payload, 'topic'),
       };
-    case 'error-hypothesis':
+    case 'error-hypothesis': {
+      const topic = requiredString(payload, 'topic');
+      const subject = requiredString(payload, 'subject');
+      const notes = optionalString(payload, 'notes', MAX_LONG_TEXT);
+      const questionPrompt = optionalString(payload, 'questionPrompt', MAX_LONG_TEXT);
+      if (!notes && !questionPrompt) {
+        throw new AiValidationError('Informe "notes" (relato da aluna) ou "questionPrompt" (questão respondida) para diagnosticar o erro.');
+      }
       return {
-        topic: requiredString(payload, 'topic'),
-        subject: requiredString(payload, 'subject'),
-        errorType: requiredString(payload, 'errorType'),
-        notes: requiredString(payload, 'notes', MAX_LONG_TEXT),
+        topic,
+        subject,
+        errorType: optionalString(payload, 'errorType', MAX_SHORT_TEXT),
+        notes,
+        questionPrompt,
+        selectedAnswer: optionalString(payload, 'selectedAnswer', MAX_SHORT_TEXT),
+        correctAnswer: optionalString(payload, 'correctAnswer', MAX_SHORT_TEXT),
       };
+    }
     case 'question-explanation':
       return {
         prompt: requiredString(payload, 'prompt', MAX_LONG_TEXT),
