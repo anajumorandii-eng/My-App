@@ -214,7 +214,6 @@ function OrphanedBacklogItem({
   onReassign: (topicId: string) => void;
   onRemove: () => void;
 }) {
-  const [selected, setSelected] = useState('');
   const oldLabel = LEGACY_TOPIC_LABELS[item.topicId];
 
   return (
@@ -226,14 +225,16 @@ function OrphanedBacklogItem({
             {oldLabel ? `"${oldLabel}"` : `Tópico "${item.topicId}"`} não existe mais no currículo atual
           </p>
           <p className="text-xs text-amber-700/80 dark:text-amber-400/80 mt-1">
-            O currículo foi atualizado e este item da fila ficou sem um tópico correspondente. Seus dados (estado, dependência, incidência, lacuna, urgência) continuam salvos — escolha o tópico correto ou remova o item.
+            O currículo foi atualizado e este item da fila ficou sem um tópico correspondente. Seus dados (estado, dependência, incidência, lacuna, urgência) continuam salvos — escolha o tópico correto abaixo (a troca é imediata) ou remova o item.
           </p>
         </div>
       </div>
       <div className="flex flex-col sm:flex-row gap-2">
         <select
-          value={selected}
-          onChange={(e) => setSelected(e.target.value)}
+          value=""
+          onChange={(e) => {
+            if (e.target.value) onReassign(e.target.value);
+          }}
           className="flex-1 px-3 py-2 rounded-lg border border-amber-200 dark:border-amber-800 bg-white dark:bg-zinc-800 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500"
         >
           <option value="">Selecione o tópico correto...</option>
@@ -245,13 +246,6 @@ function OrphanedBacklogItem({
             </optgroup>
           ))}
         </select>
-        <button
-          onClick={() => selected && onReassign(selected)}
-          disabled={!selected}
-          className="px-4 py-2 rounded-lg text-sm font-medium bg-amber-600 hover:bg-amber-700 disabled:bg-zinc-300 dark:disabled:bg-zinc-700 text-white transition-colors shrink-0"
-        >
-          Reatribuir
-        </button>
         <button
           onClick={onRemove}
           className="flex items-center justify-center px-4 py-2 rounded-lg text-sm font-medium border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-colors shrink-0"
