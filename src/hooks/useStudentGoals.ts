@@ -33,10 +33,12 @@ export function useStudentGoals() {
       setGoals((prev) => {
         const next = updater(prev);
         if (user) {
-          saveStudentGoals(user.uid, next).catch((error) => {
-            console.error('Failed to save student goals:', error);
-            setSyncError('Não foi possível salvar essa alteração. Ela pode não persistir.');
-          });
+          saveStudentGoals(user.uid, next)
+            .then(() => setSyncError(null))
+            .catch((error) => {
+              console.error('Failed to save student goals:', error);
+              setSyncError('Não foi possível salvar essa alteração. Ela pode não persistir.');
+            });
         }
         return next;
       });

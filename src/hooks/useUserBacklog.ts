@@ -33,10 +33,12 @@ export function useUserBacklog() {
       setBacklog((prev) => {
         const next = updater(prev);
         if (user) {
-          saveUserBacklog(user.uid, next).catch((error) => {
-            console.error('Failed to save user backlog:', error);
-            setSyncError('Não foi possível salvar essa alteração. Ela pode não persistir.');
-          });
+          saveUserBacklog(user.uid, next)
+            .then(() => setSyncError(null))
+            .catch((error) => {
+              console.error('Failed to save user backlog:', error);
+              setSyncError('Não foi possível salvar essa alteração. Ela pode não persistir.');
+            });
         }
         return next;
       });
