@@ -92,6 +92,21 @@ export function validateAiPayload(task: AiTask, body: unknown): Payload {
         question: requiredString(payload, 'question', MAX_LONG_TEXT),
         topic: requiredString(payload, 'topic'),
       };
+    case 'content-explanation':
+      return {
+        topic: requiredString(payload, 'topic'),
+        subject: requiredString(payload, 'subject'),
+        question: optionalString(payload, 'question', MAX_LONG_TEXT),
+      };
+    case 'answer-correction':
+      return {
+        topic: requiredString(payload, 'topic'),
+        subject: requiredString(payload, 'subject'),
+        question: requiredString(payload, 'question', MAX_LONG_TEXT),
+        studentAnswer: requiredString(payload, 'studentAnswer', MAX_LONG_TEXT),
+        board: optionalString(payload, 'board', MAX_SHORT_TEXT),
+        modelAnswer: payload.modelAnswer !== undefined ? requiredStringArray(payload, 'modelAnswer') : undefined,
+      };
     case 'error-hypothesis': {
       const topic = requiredString(payload, 'topic');
       const subject = requiredString(payload, 'subject');
@@ -124,6 +139,8 @@ export function validateAiPayload(task: AiTask, body: unknown): Payload {
         topic: requiredString(payload, 'topic'),
         subject: requiredString(payload, 'subject'),
         mode: optionalString(payload, 'mode', 50) ?? 'solve',
+        board: optionalString(payload, 'board', MAX_SHORT_TEXT),
+        transfer: payload.transfer === true,
       };
     case 'backlog-correction':
       return {
