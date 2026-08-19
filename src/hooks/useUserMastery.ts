@@ -41,10 +41,12 @@ export function useUserMastery() {
       setMastery((prev) => {
         const next = updater(prev);
         if (user) {
-          saveUserMastery(user.uid, next).catch((error) => {
-            console.error('Failed to save user mastery:', error);
-            setSyncError('Não foi possível salvar essa alteração. Ela pode não persistir.');
-          });
+          saveUserMastery(user.uid, next)
+            .then(() => setSyncError(null))
+            .catch((error) => {
+              console.error('Failed to save user mastery:', error);
+              setSyncError('Não foi possível salvar essa alteração. Ela pode não persistir.');
+            });
         }
         return next;
       });

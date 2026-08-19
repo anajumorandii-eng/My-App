@@ -307,7 +307,10 @@ export default function Recuperacao() {
     const newItem: BacklogItem = {
       id: `backlog_${formTopicId}_${Date.now()}`,
       topicId: formTopicId,
-      subtopic: formSubtopic || undefined,
+      // Firestore's setDoc rejects an explicit `undefined` value on a field —
+      // omit the key entirely when no chapter was picked, instead of setting
+      // it to undefined, or every save of a subtopic-less item throws.
+      ...(formSubtopic ? { subtopic: formSubtopic } : {}),
       state: formState,
       dependencia: formDependencia,
       incidencia: formIncidencia,
