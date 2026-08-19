@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useUserProfile } from '../hooks/useUserProfile';
 import { useAuth } from '../context/AuthContext';
-import { disableReviewReminders, enableReviewReminders, getCurrentPushSubscription, isPushSupported } from '../lib/push';
+import { disableReviewReminders, enableReviewReminders, getCurrentPushSubscription, isPushSupported, needsIosHomeScreenInstall } from '../lib/push';
 import {
   UserCircle,
   CloudOff,
@@ -278,6 +278,8 @@ export default function Perfil() {
         <p className="text-xs text-zinc-500 mt-2">
           {!isConnected
             ? 'Conecte sua conta Google para ativar notificações.'
+            : needsIosHomeScreenInstall()
+            ? 'No iPhone/iPad, notificações só funcionam depois de adicionar a JUJU à Tela de Início (compartilhar → "Adicionar à Tela de Início") e abrir pelo ícone.'
             : !isPushSupported()
             ? 'Seu navegador não suporta notificações push.'
             : 'Quando ativado, você recebe um aviso quando houver tópicos urgentes esperando revisão.'}

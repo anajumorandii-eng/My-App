@@ -4,6 +4,19 @@ export function isPushSupported(): boolean {
   return typeof window !== 'undefined' && 'serviceWorker' in navigator && 'PushManager' in window;
 }
 
+// iOS only exposes the Push API to a web app added to the Home Screen and
+// opened from its icon — never to a regular Safari/Chrome-on-iOS tab, even
+// with notification permission granted. Detecting this lets the UI point
+// the student at the actual fix instead of a dead-end "not supported".
+export function needsIosHomeScreenInstall(): boolean {
+  if (typeof window === 'undefined' || isPushSupported()) return false;
+  const isIos = /iphone|ipad|ipod/i.test(navigator.userAgent)
+    || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1); // iPadOS reports as Mac
+  const isStandalone = window.matchMedia('(display-mode: standalone)').matches
+    || (navigator as { standalone?: boolean }).standalone === true;
+  return isIos && !isStandalone;
+}
+
 function urlBase64ToUint8Array(base64String: string): Uint8Array {
   const padding = '='.repeat((4 - (base64String.length % 4)) % 4);
   const base64 = (base64String + padding).replace(/-/g, '+').replace(/_/g, '/');
