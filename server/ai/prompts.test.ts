@@ -71,3 +71,98 @@ test('feedback discursivo enumera todos os pontos-chave', () => {
   assert.match(prompt, /- Primeiro ponto\n- Segundo ponto/);
 });
 
+test('feedback discursivo da Unicamp exige a estrutura Comando → Fonte → Conceito → Relação', () => {
+  const payload = validateAiPayload('discursive-feedback', {
+    board: 'Unicamp',
+    subject: 'História',
+    prompt: 'Analise o processo.',
+    modelAnswer: ['Ponto único'],
+    studentAnswer: 'Minha resposta.',
+  });
+  const prompt = buildAiPrompt('discursive-feedback', payload);
+
+  assert.match(prompt, /Comando → Fonte → Conceito → Relação/);
+});
+
+test('feedback discursivo da Unesp exige a estrutura Resposta direta → Conceito\\/cálculo → Explicação → Aplicação', () => {
+  const payload = validateAiPayload('discursive-feedback', {
+    board: 'Unesp',
+    subject: 'Física',
+    prompt: 'Calcule e explique.',
+    modelAnswer: ['Ponto único'],
+    studentAnswer: 'Minha resposta.',
+  });
+  const prompt = buildAiPrompt('discursive-feedback', payload);
+
+  assert.match(prompt, /Resposta direta → Conceito\/cálculo → Explicação → Aplicação/);
+});
+
+test('exercício discursivo de banca gerado com board injeta a estrutura esperada', () => {
+  const payload = validateAiPayload('backlog-exercise', {
+    topic: 'Revolução Francesa',
+    subject: 'História',
+    mode: 'discursive',
+    board: 'Unicamp',
+  });
+  const prompt = buildAiPrompt('backlog-exercise', payload);
+
+  assert.match(prompt, /banca: Unicamp/);
+  assert.match(prompt, /Comando → Fonte → Conceito → Relação/);
+});
+
+test('questão de transferência avisa explicitamente que segue uma correção anterior', () => {
+  const payload = validateAiPayload('backlog-exercise', {
+    topic: 'Estequiometria',
+    subject: 'Química',
+    mode: 'solve',
+    transfer: true,
+  });
+  const prompt = buildAiPrompt('backlog-exercise', payload);
+
+  assert.match(prompt, /QUESTÃO DE TRANSFERÊNCIA/);
+});
+
+test('explicação de conteúdo pede os 6 elementos estruturados', () => {
+  const payload = validateAiPayload('content-explanation', {
+    topic: 'Efeito Doppler',
+    subject: 'Física',
+    question: 'Por que o som muda de tom quando a ambulância passa?',
+  });
+  const prompt = buildAiPrompt('content-explanation', payload);
+
+  assert.match(prompt, /intuição/);
+  assert.match(prompt, /comoCai/);
+  assert.match(prompt, /pegadinha/);
+  assert.match(prompt, /checagem/);
+  assert.match(prompt, /ambulância passa/);
+  assert.match(prompt, /APENAS com um objeto JSON válido/);
+});
+
+test('correção de resposta localiza o primeiro ponto de ruptura, não "errou tudo"', () => {
+  const payload = validateAiPayload('answer-correction', {
+    topic: 'Segunda Lei de Newton',
+    subject: 'Física',
+    question: 'Um bloco de 2kg recebe uma força de 10N. Qual a aceleração?',
+    studentAnswer: 'a = F + m = 12 m/s²',
+  });
+  const prompt = buildAiPrompt('answer-correction', payload);
+
+  assert.match(prompt, /rupturaPoint/);
+  assert.match(prompt, /não "errou tudo"/);
+  assert.match(prompt, /padraoRecorrente/);
+  assert.match(prompt, /a = F \+ m = 12 m\/s²/);
+});
+
+test('correção de resposta discursiva da Unesp aplica a estrutura da banca', () => {
+  const payload = validateAiPayload('answer-correction', {
+    topic: 'Fotossíntese',
+    subject: 'Biologia',
+    question: 'Explique o papel da luz na fotossíntese.',
+    studentAnswer: 'A luz ativa a clorofila.',
+    board: 'Unesp',
+  });
+  const prompt = buildAiPrompt('answer-correction', payload);
+
+  assert.match(prompt, /Resposta direta → Conceito\/cálculo → Explicação → Aplicação/);
+});
+

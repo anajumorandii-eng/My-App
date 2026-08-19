@@ -6,6 +6,8 @@ const DEFAULT_FAST_MODEL = 'juju-fast-v1';
 
 const DEEP_TASKS = new Set<AiTask>([
   'socratic',
+  'content-explanation',
+  'answer-correction',
   'error-hypothesis',
   'question-explanation',
   'backlog-exercise',

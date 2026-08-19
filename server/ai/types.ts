@@ -1,5 +1,7 @@
 export type AiTask =
   | 'socratic'
+  | 'content-explanation'
+  | 'answer-correction'
   | 'error-hypothesis'
   | 'question-explanation'
   | 'backlog-exercise'

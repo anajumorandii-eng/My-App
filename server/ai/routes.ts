@@ -10,6 +10,8 @@ import { AiMetricsRecorder } from './metrics';
 
 const ROUTES: Array<{ path: string; task: AiTask }> = [
   { path: '/socratic', task: 'socratic' },
+  { path: '/content-explanation', task: 'content-explanation' },
+  { path: '/answer-correction', task: 'answer-correction' },
   { path: '/error-hypothesis', task: 'error-hypothesis' },
   { path: '/question-explanation', task: 'question-explanation' },
   { path: '/backlog-exercise', task: 'backlog-exercise' },
