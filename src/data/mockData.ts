@@ -7276,6 +7276,51 @@ export const mockQuestions: Question[] = [
     correctOptionId: 'b',
     explanation: '"Although" is a subordinating conjunction used to introduce contrast or concession. Here, it contrasts the popularity of digital reading with the drawback that readers tend to skim rather than read deeply on screens.',
     difficulty: 'medium'
+  },
+  {
+    id: 'q_ing_01_3',
+    topicId: 'ing_01',
+    subject: 'Inglês',
+    prompt: 'Read the excerpt below and answer the question.\n\n"Climate scientists warn that unless global emissions are cut drastically within the next decade, some of the damage caused to ecosystems could become irreversible. Governments, however, have been slow to agree on binding targets, often citing economic concerns."\n\nWhat is the main tension presented in this excerpt?',
+    options: [
+      { id: 'a', text: 'Between two different groups of scientists who disagree about climate change' },
+      { id: 'b', text: 'Between the urgency scientists describe for emission cuts and the slow pace of government action, often justified by economic concerns' },
+      { id: 'c', text: 'Between governments that want faster action and scientists who are more cautious' },
+      { id: 'd', text: 'There is no tension; both scientists and governments fully agree on the same timeline' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'The excerpt sets up a contrast (signaled by "however") between the urgency scientists place on cutting emissions and the comparatively slow response from governments, who cite economic concerns as a reason for delay.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_ing_01_4',
+    topicId: 'ing_01',
+    subject: 'Inglês',
+    prompt: 'Read the excerpt below and answer the question.\n\n"She used to dismiss social media as a waste of time. Nowadays, however, she relies on it daily to keep up with news and friends abroad."\n\nWhat does the phrase "used to" indicate about the subject\'s past behavior?',
+    options: [
+      { id: 'a', text: 'That she still holds the same opinion about social media today' },
+      { id: 'b', text: 'That she had a habitual attitude or behavior in the past that is no longer true in the present' },
+      { id: 'c', text: 'That she will dismiss social media again in the future' },
+      { id: 'd', text: 'That the sentence is describing a hypothetical situation, not something that really happened' }
+    ],
+    correctOptionId: 'b',
+    explanation: '"Used to" describes a habitual state or repeated action in the past that no longer applies now — here, signaling that she previously dismissed social media, a stance clearly contrasted (via "however" and "nowadays") with her current daily reliance on it.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_ing_01_5',
+    topicId: 'ing_01',
+    subject: 'Inglês',
+    prompt: 'Read the excerpt below and answer the question.\n\n"Had the company invested earlier in renewable energy, it would likely have avoided the steep losses it faced when fuel prices spiked."\n\nWhat kind of situation is being described by this sentence structure?',
+    options: [
+      { id: 'a', text: 'A real, ongoing situation happening in the present' },
+      { id: 'b', text: 'A hypothetical situation about the past — describing something that did not actually happen, and its imagined consequence' },
+      { id: 'c', text: 'A simple factual statement about a decision the company is currently making' },
+      { id: 'd', text: 'A prediction about something that will definitely happen in the future' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'This is a third conditional structure ("Had [subject] + past participle, ... would have + past participle"), used to describe a hypothetical alternative to the past: the company did not invest earlier, and the sentence imagines what would have happened if it had.',
+    difficulty: 'hard'
   }
 ];
 
