@@ -3019,6 +3019,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_por_norma_culta_1',
+    chapter: 'Concordância',
     topicId: 'por_norma_culta',
     subject: 'Português',
     prompt: 'Explique por que os verbos "haver" (no sentido de existir) e "fazer" (indicando tempo decorrido) são impessoais, e o que isso implica para sua conjugação na norma-padrão.',
@@ -3032,6 +3033,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_por_norma_culta_2',
+    chapter: 'Crase',
     topicId: 'por_norma_culta',
     subject: 'Português',
     prompt: 'Explique a regra geral da crase (fusão da preposição "a" com o artigo feminino "a"), e por que ela não ocorre antes de palavras masculinas ou de determinados pronomes.',
@@ -3045,6 +3047,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_por_norma_culta_3',
+    chapter: 'Pronomes',
     topicId: 'por_norma_culta',
     subject: 'Português',
     prompt: 'Explique a diferença entre a próclise (pronome antes do verbo) e a ênclise (pronome depois do verbo), e cite uma situação em que a próclise é obrigatória na norma-padrão.',
@@ -3058,6 +3061,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_por_sintaxe_1',
+    chapter: 'Funções Sintáticas Nominais e Vocativo',
     topicId: 'por_sintaxe',
     subject: 'Português',
     prompt: 'Explique a diferença entre objeto direto e objeto indireto, relacionando isso à transitividade do verbo (transitivo direto x transitivo indireto).',
@@ -3071,6 +3075,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_por_sintaxe_2',
+    chapter: 'Orações Adjetivas',
     topicId: 'por_sintaxe',
     subject: 'Português',
     prompt: 'Explique a diferença entre uma oração subordinada adjetiva e uma oração subordinada substantiva, dando um exemplo de cada.',
@@ -3084,6 +3089,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_por_sintaxe_3',
+    chapter: 'Funções Sintáticas Nominais e Vocativo',
     topicId: 'por_sintaxe',
     subject: 'Português',
     prompt: 'Explique a função sintática do aposto, e por que ele se diferencia do predicativo, mesmo que ambos possam, à primeira vista, parecer estar "explicando" ou "qualificando" outro termo da oração.',
@@ -3097,6 +3103,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_por_texto_1',
+    chapter: 'Os Dois Níveis da Leitura',
     topicId: 'por_texto',
     subject: 'Português',
     prompt: 'Explique a diferença entre informação explícita e informação implícita (inferência) em um texto, e por que a habilidade de inferir é considerada mais avançada do que apenas localizar informações explícitas.',
@@ -3110,6 +3117,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_por_texto_2',
+    chapter: 'Modelos de Leitura e Distorções Interpretativas',
     topicId: 'por_texto',
     subject: 'Português',
     prompt: 'Explique por que reconhecer a ironia em um texto exige que o leitor vá além do sentido literal das palavras, e o que pode acontecer se essa ironia não for percebida.',
@@ -3123,6 +3131,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_por_texto_3',
+    chapter: 'Fatores de Textualidade',
     topicId: 'por_texto',
     subject: 'Português',
     prompt: 'Explique por que apresentar e refutar um contra-argumento é considerada uma estratégia argumentativa eficaz, e não um sinal de fraqueza na defesa de uma tese.',
@@ -3136,6 +3145,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_por_lit_classica_barroca_1',
+    chapter: 'A Estética Barroca',
     topicId: 'por_lit_classica_barroca',
     subject: 'Português',
     prompt: 'Explique o conflito central do Barroco (entre fé e razão/mundo terreno) e como o cultismo e o conceptismo são expressões estilísticas diferentes desse mesmo conflito.',
@@ -3149,6 +3159,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_por_lit_classica_barroca_2',
+    chapter: 'Renascimento e Camões',
     topicId: 'por_lit_classica_barroca',
     subject: 'Português',
     prompt: 'Explique por que "Os Lusíadas", de Luís de Camões, é considerado uma obra do Classicismo, relacionando isso à sua estrutura e temática.',
@@ -3162,6 +3173,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_por_lit_classica_barroca_3',
+    chapter: 'A Estética Barroca',
     topicId: 'por_lit_classica_barroca',
     subject: 'Português',
     prompt: 'Explique por que Gregório de Matos é considerado o principal representante do Barroco no Brasil colonial, e o que caracteriza sua obra poética.',
@@ -3175,6 +3187,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_por_lit_romantismo_realismo_1',
+    chapter: 'A Estética Romântica: Prosa',
     topicId: 'por_lit_romantismo_realismo',
     subject: 'Português',
     prompt: 'Explique como o indianismo romântico de José de Alencar (em obras como "O Guarani" e "Iracema") se relaciona ao projeto mais amplo do Romantismo de construir uma identidade nacional brasileira.',
@@ -3188,6 +3201,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_por_lit_romantismo_realismo_2',
+    chapter: 'Machado de Assis',
     topicId: 'por_lit_romantismo_realismo',
     subject: 'Português',
     prompt: 'Explique por que os narradores de Machado de Assis (como Bentinho, em "Dom Casmurro") são descritos como "não confiáveis", e como isso muda a forma como o leitor deve interpretar a obra.',
@@ -3201,6 +3215,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_por_lit_romantismo_realismo_3',
+    chapter: 'A Estética Realista',
     topicId: 'por_lit_romantismo_realismo',
     subject: 'Português',
     prompt: 'Explique a principal diferença entre a forma como o Romantismo e o Realismo tratavam os personagens e a realidade social, usando um exemplo de cada movimento.',
@@ -3214,6 +3229,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_por_lit_modernismo_1',
+    chapter: 'Semana de Arte Moderna',
     topicId: 'por_lit_modernismo',
     subject: 'Português',
     prompt: 'Explique por que a Semana de Arte Moderna de 1922 é considerada um marco de ruptura com a tradição literária anterior, e o que essa ruptura buscava propor.',
@@ -3227,6 +3243,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_por_lit_modernismo_2',
+    chapter: 'Modernismo no Brasil: Primeira Geração',
     topicId: 'por_lit_modernismo',
     subject: 'Português',
     prompt: 'Explique a proposta do "Manifesto Antropófago" de Oswald de Andrade, e por que a metáfora da "antropofagia" (devorar) foi escolhida para representar essa proposta cultural.',
@@ -3240,6 +3257,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_por_lit_modernismo_3',
+    chapter: 'Simbolismo',
     topicId: 'por_lit_modernismo',
     subject: 'Português',
     prompt: 'Explique a diferença entre o Simbolismo e o Realismo/Naturalismo (movimento imediatamente anterior), especialmente quanto ao tipo de linguagem e de realidade que cada um buscava retratar.',
@@ -3253,6 +3271,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_por_lit_contemporanea_1',
+    chapter: 'Prosa Brasileira Contemporânea',
     topicId: 'por_lit_contemporanea',
     subject: 'Português',
     prompt: 'Explique por que a literatura brasileira contemporânea é frequentemente descrita como plural e diversa, em vez de seguir um único estilo dominante como em movimentos literários anteriores.',
@@ -3266,6 +3285,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_por_lit_contemporanea_2',
+    chapter: 'Prosa Brasileira Contemporânea',
     topicId: 'por_lit_contemporanea',
     subject: 'Português',
     prompt: 'Explique o que caracteriza a chamada "literatura marginal" (ou periférica), e por que ela representa uma mudança de perspectiva em relação a como as periferias urbanas eram tradicionalmente retratadas na literatura.',
@@ -3279,6 +3299,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_por_lit_contemporanea_3',
+    chapter: 'Prosa Brasileira Contemporânea',
     topicId: 'por_lit_contemporanea',
     subject: 'Português',
     prompt: 'Explique por que o crescente reconhecimento de autoras e autores negros na literatura brasileira contemporânea é considerado importante para ampliar (e não apenas diversificar superficialmente) o cânone literário nacional.',
@@ -3292,6 +3313,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_por_red_fundamentos_1',
+    chapter: 'A Dissertação no Vestibular: Mitos e Verdades',
     topicId: 'por_red_fundamentos',
     subject: 'Português',
     prompt: 'Explique a diferença entre um texto dissertativo-expositivo e um texto dissertativo-argumentativo, e por que essa diferença é importante para quem está se preparando para uma prova de redação como a do ENEM.',
@@ -3305,6 +3327,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_por_red_fundamentos_2',
+    chapter: 'Tangenciamento e Fuga: a Fronteira do Tema',
     topicId: 'por_red_fundamentos',
     subject: 'Português',
     prompt: 'Explique por que a "fuga ao tema" é considerada um dos erros mais graves em uma redação, mesmo quando o texto produzido é bem escrito e gramaticalmente correto.',
@@ -3318,6 +3341,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_por_red_fundamentos_3',
+    chapter: 'Estrutura Clássica do Texto Dissertativo',
     topicId: 'por_red_fundamentos',
     subject: 'Português',
     prompt: 'Explique por que a tese de uma redação deve ser apresentada de forma clara já na introdução, e o que pode acontecer se ela ficar ambígua ou pouco definida ao longo do texto.',
@@ -3331,6 +3355,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_por_red_repertorio_1',
+    chapter: 'Lendo a Coletânea: a Compreensão e o Texto Autoral I',
     topicId: 'por_red_repertorio',
     subject: 'Português',
     prompt: 'Explique a função dos textos motivadores (a "coletânea") em uma proposta de redação do ENEM, e por que copiar ou parafrasear esses textos não é suficiente para uma boa redação.',
@@ -3370,6 +3395,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_por_red_argumentacao_1',
+    chapter: 'Argumentação e Coerência Interna',
     topicId: 'por_red_argumentacao',
     subject: 'Português',
     prompt: 'Explique a estrutura ideal de um parágrafo de desenvolvimento em uma redação dissertativo-argumentativa, detalhando o papel de cada parte.',
@@ -3383,6 +3409,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_por_red_argumentacao_2',
+    chapter: 'Argumentação e Coerência Interna',
     topicId: 'por_red_argumentacao',
     subject: 'Português',
     prompt: 'Explique a diferença entre coesão e coerência em um texto dissertativo-argumentativo, e por que um texto pode ser coeso (bem conectado gramaticalmente) mas ainda assim incoerente.',
@@ -3396,6 +3423,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_por_red_argumentacao_3',
+    chapter: 'Argumentação e Coerência Interna',
     topicId: 'por_red_argumentacao',
     subject: 'Português',
     prompt: 'Explique o que caracteriza o erro argumentativo da "circularidade", e por que ele compromete a progressão de um texto dissertativo-argumentativo.',
@@ -3409,6 +3437,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_por_red_estrutura_coesao_1',
+    chapter: 'Proposta de Intervenção: Viabilização e Inovação',
     topicId: 'por_red_estrutura_coesao',
     subject: 'Português',
     prompt: 'Explique os quatro elementos que compõem uma proposta de intervenção completa (agente, meio, finalidade e detalhamento), usando um exemplo hipotético.',
@@ -3422,6 +3451,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_por_red_estrutura_coesao_2',
+    chapter: 'Recursos de Coesão Sequencial no Texto Dissertativo',
     topicId: 'por_red_estrutura_coesao',
     subject: 'Português',
     prompt: 'Explique por que os conectivos são fundamentais para a coesão textual, e o que pode acontecer quando um texto os utiliza de forma inadequada (por exemplo, usando um conectivo de contraste onde deveria haver um de conclusão).',
@@ -3435,6 +3465,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_por_red_estrutura_coesao_3',
+    chapter: 'Conclusão por Síntese ou Retomada da Tese',
     topicId: 'por_red_estrutura_coesao',
     subject: 'Português',
     prompt: 'Explique por que uma boa conclusão de redação deve retomar a tese e os argumentos já desenvolvidos, em vez de introduzir ideias completamente novas.',
@@ -3448,6 +3479,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_por_red_direitos_modelo_1',
+    chapter: 'Os Direitos Humanos de 1ª Geração: Direitos Individuais',
     topicId: 'por_red_direitos_modelo',
     subject: 'Português',
     prompt: 'Explique por que o respeito aos direitos humanos é tratado como um critério "inegociável" na avaliação de redações do ENEM, mesmo em temas sensíveis como criminalidade ou violência.',
@@ -3461,6 +3493,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_por_red_direitos_modelo_2',
+    chapter: 'Os Direitos Humanos de 2ª e 3ª Geração: Direitos Sociais, Coletivos e Difusos',
     topicId: 'por_red_direitos_modelo',
     subject: 'Português',
     prompt: 'Explique por que uma proposta de intervenção que culpabiliza exclusivamente indivíduos (em vez de considerar fatores estruturais) é considerada uma abordagem menos sofisticada em temas sociais complexos.',
@@ -3474,6 +3507,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_por_red_direitos_modelo_3',
+    chapter: 'Redações Nota 1000: Trunfos a Inspirar',
     topicId: 'por_red_direitos_modelo',
     subject: 'Português',
     prompt: 'Explique quais elementos, combinados, costumam caracterizar uma redação "nota 1000" no ENEM, além do simples respeito aos direitos humanos.',
