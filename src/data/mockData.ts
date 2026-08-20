@@ -4583,6 +4583,7 @@ export const mockQuestions: Question[] = [
   // História — Idade Antiga
   {
     id: 'q_his_idade_antiga_1',
+    chapter: 'Antiguidade Clássica: o Mundo Grego',
     topicId: 'his_idade_antiga',
     subject: 'História',
     prompt: 'A democracia praticada na Atenas antiga, frequentemente citada como referência histórica, era caracterizada por:',
@@ -4598,6 +4599,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_his_idade_antiga_2',
+    chapter: 'Antiguidade Clássica: o Mundo Romano',
     topicId: 'his_idade_antiga',
     subject: 'História',
     prompt: 'O Império Romano, em seu apogeu, destacou-se historicamente por:',
@@ -4613,6 +4615,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_his_idade_antiga_3',
+    chapter: 'Introdução à História e Primeiras Civilizações',
     topicId: 'his_idade_antiga',
     subject: 'História',
     prompt: 'O Código de Hamurábi, um dos conjuntos de leis mais antigos conhecidos, elaborado na Babilônia antiga, é historicamente relevante principalmente por:',
@@ -4628,6 +4631,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_his_idade_antiga_4',
+    chapter: 'Introdução à História e Primeiras Civilizações',
     topicId: 'his_idade_antiga',
     subject: 'História',
     prompt: 'A civilização egípcia antiga, desenvolvida ao longo do rio Nilo, teve sua organização social e econômica fortemente marcada por:',
@@ -4643,6 +4647,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_his_idade_antiga_5',
+    chapter: 'Antiguidade Clássica: o Mundo Romano',
     topicId: 'his_idade_antiga',
     subject: 'História',
     prompt: 'A expansão do Império Romano e sua posterior fragmentação (queda do Império Romano do Ocidente, em 476 d.C.) marcaram uma transição histórica importante porque:',
@@ -4659,6 +4664,7 @@ export const mockQuestions: Question[] = [
   // História — Idade Média
   {
     id: 'q_his_idade_media_1',
+    chapter: 'Alta Idade Média e Feudalismo',
     topicId: 'his_idade_media',
     subject: 'História',
     prompt: 'O sistema feudal, predominante na Europa medieval, caracterizava-se principalmente por:',
@@ -4674,6 +4680,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_his_idade_media_2',
+    chapter: 'Alta Idade Média e Feudalismo',
     topicId: 'his_idade_media',
     subject: 'História',
     prompt: 'As Cruzadas, expedições militares religiosas ocorridas entre os séculos XI e XIII, tiveram entre suas principais motivações:',
@@ -4689,6 +4696,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_his_idade_media_3',
+    chapter: 'Alta Idade Média e Feudalismo',
     topicId: 'his_idade_media',
     subject: 'História',
     prompt: 'A Igreja Católica, durante a Idade Média europeia, exerceu um papel de grande influência na sociedade principalmente porque:',
@@ -4704,6 +4712,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_his_idade_media_4',
+    chapter: 'Baixa Idade Média',
     topicId: 'his_idade_media',
     subject: 'História',
     prompt: 'A Peste Negra, epidemia que assolou a Europa no século XIV, teve entre suas consequências históricas mais relevantes:',
@@ -4719,6 +4728,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_his_idade_media_5',
+    chapter: 'Baixa Idade Média',
     topicId: 'his_idade_media',
     subject: 'História',
     prompt: 'O ressurgimento do comércio e das cidades (burgos) na Baixa Idade Média está associado ao surgimento de um novo grupo social, a burguesia, cuja principal característica inicial era:',
@@ -4735,6 +4745,7 @@ export const mockQuestions: Question[] = [
   // História — Idade Moderna e Iluminismo
   {
     id: 'q_his_moderna_iluminismo_1',
+    chapter: 'Iluminismo',
     topicId: 'his_moderna_iluminismo',
     subject: 'História',
     prompt: 'O Iluminismo, movimento intelectual do século XVIII, defendia principalmente:',
@@ -4750,6 +4761,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_his_moderna_iluminismo_2',
+    chapter: 'Revolução Francesa',
     topicId: 'his_moderna_iluminismo',
     subject: 'História',
     prompt: 'A Revolução Francesa (1789) teve como um de seus principais desdobramentos:',
@@ -4765,6 +4777,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_his_moderna_iluminismo_3',
+    chapter: 'Absolutismo',
     topicId: 'his_moderna_iluminismo',
     subject: 'História',
     prompt: 'O Absolutismo monárquico, sistema político predominante em boa parte da Europa entre os séculos XVI e XVIII, se caracterizava por:',
@@ -4780,6 +4793,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_his_moderna_iluminismo_4',
+    chapter: 'Vida Urbana e Renascimento Cultural',
     topicId: 'his_moderna_iluminismo',
     subject: 'História',
     prompt: 'A Revolução Científica, ocorrida entre os séculos XVI e XVII (com figuras como Galileu, Copérnico e Newton), contribuiu para o pensamento iluminista posterior principalmente ao:',
@@ -4795,6 +4809,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_his_moderna_iluminismo_5',
+    chapter: 'América no Século XIX',
     topicId: 'his_moderna_iluminismo',
     subject: 'História',
     prompt: 'A Independência dos Estados Unidos (1776) é frequentemente citada como uma das primeiras aplicações práticas de ideais iluministas porque:',
@@ -4811,6 +4826,7 @@ export const mockQuestions: Question[] = [
   // História — Imperialismo e Guerras Mundiais
   {
     id: 'q_his_imperialismo_guerras_1',
+    chapter: 'Imperialismo e Belle Époque',
     topicId: 'his_imperialismo_guerras',
     subject: 'História',
     prompt: 'O imperialismo europeu do final do século XIX, especialmente na África e na Ásia, foi motivado principalmente por:',
@@ -4826,6 +4842,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_his_imperialismo_guerras_2',
+    chapter: 'Primeira Guerra Mundial (1914-1918)',
     topicId: 'his_imperialismo_guerras',
     subject: 'História',
     prompt: 'A Primeira Guerra Mundial (1914-1918) teve como estopim imediato:',
@@ -4841,6 +4858,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_his_imperialismo_guerras_3',
+    chapter: 'Imperialismo e Belle Époque',
     topicId: 'his_imperialismo_guerras',
     subject: 'História',
     prompt: 'A Conferência de Berlim (1884-1885), realizada por potências europeias, teve como principal objetivo:',
@@ -4856,6 +4874,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_his_imperialismo_guerras_4',
+    chapter: 'O Nazismo na Alemanha',
     topicId: 'his_imperialismo_guerras',
     subject: 'História',
     prompt: 'A ascensão do nazismo na Alemanha, na década de 1930, foi favorecida, entre outros fatores, por:',
@@ -4871,6 +4890,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_his_imperialismo_guerras_5',
+    chapter: 'Segunda Guerra Mundial (1939-1945)',
     topicId: 'his_imperialismo_guerras',
     subject: 'História',
     prompt: 'O Holocausto, o extermínio sistemático de judeus e outros grupos por parte do regime nazista durante a Segunda Guerra Mundial, é historicamente relevante por representar:',
@@ -4887,6 +4907,7 @@ export const mockQuestions: Question[] = [
   // História — Guerra Fria e Mundo Contemporâneo
   {
     id: 'q_his_guerra_fria_contemporaneo_1',
+    chapter: 'Guerra Fria',
     topicId: 'his_guerra_fria_contemporaneo',
     subject: 'História',
     prompt: 'A Guerra Fria, período de disputa entre Estados Unidos e União Soviética após a Segunda Guerra Mundial, caracterizou-se por:',
@@ -4902,6 +4923,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_his_guerra_fria_contemporaneo_2',
+    chapter: 'O Fim da Guerra Fria',
     topicId: 'his_guerra_fria_contemporaneo',
     subject: 'História',
     prompt: 'A queda do Muro de Berlim, em 1989, é historicamente associada a:',
@@ -4917,6 +4939,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_his_guerra_fria_contemporaneo_3',
+    chapter: 'Guerra Fria',
     topicId: 'his_guerra_fria_contemporaneo',
     subject: 'História',
     prompt: 'A Crise dos Mísseis de Cuba (1962), um dos episódios mais tensos da Guerra Fria, é considerada historicamente relevante por:',
@@ -4932,6 +4955,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_his_guerra_fria_contemporaneo_4',
+    chapter: 'Descolonização Afro-Asiática',
     topicId: 'his_guerra_fria_contemporaneo',
     subject: 'História',
     prompt: 'O processo de descolonização da África e da Ásia, intensificado especialmente após a Segunda Guerra Mundial, resultou em:',
@@ -4947,6 +4971,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_his_guerra_fria_contemporaneo_5',
+    chapter: 'O Fim da Guerra Fria',
     topicId: 'his_guerra_fria_contemporaneo',
     subject: 'História',
     prompt: 'Os atentados de 11 de setembro de 2001, nos Estados Unidos, tiveram como um de seus principais desdobramentos geopolíticos:',
@@ -4963,6 +4988,7 @@ export const mockQuestions: Question[] = [
   // História — Brasil Colônia
   {
     id: 'q_his_brasil_colonia_1',
+    chapter: 'Dinâmica Interna da Colonização',
     topicId: 'his_brasil_colonia',
     subject: 'História',
     prompt: 'A economia do Brasil Colônia, sobretudo entre os séculos XVI e XVIII, baseava-se principalmente em:',
@@ -4978,6 +5004,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_his_brasil_colonia_2',
+    chapter: 'A Crise do Antigo Sistema Colonial',
     topicId: 'his_brasil_colonia',
     subject: 'História',
     prompt: 'A Inconfidência Mineira (1789), um dos principais movimentos de contestação ao domínio português no Brasil Colônia, foi motivada principalmente por:',
@@ -4993,6 +5020,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_his_brasil_colonia_3',
+    chapter: 'A Montagem da Colonização',
     topicId: 'his_brasil_colonia',
     subject: 'História',
     prompt: 'O sistema de capitanias hereditárias, adotado por Portugal para colonizar o Brasil a partir de 1534, se caracterizava por:',
@@ -5008,6 +5036,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_his_brasil_colonia_4',
+    chapter: 'Dinâmica Interna da Colonização',
     topicId: 'his_brasil_colonia',
     subject: 'História',
     prompt: 'O tráfico transatlântico de pessoas escravizadas, que trouxe milhões de africanos ao Brasil colonial, teve como principal justificativa econômica, do ponto de vista dos colonizadores, a necessidade de:',
@@ -5023,6 +5052,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_his_brasil_colonia_5',
+    chapter: 'Dinâmica Interna da Colonização',
     topicId: 'his_brasil_colonia',
     subject: 'História',
     prompt: 'O Pacto Colonial (ou exclusivo metropolitano), princípio que regia as relações econômicas entre Portugal e sua colônia brasileira, determinava que:',
@@ -5039,6 +5069,7 @@ export const mockQuestions: Question[] = [
   // História — Brasil Império
   {
     id: 'q_his_brasil_imperio_1',
+    chapter: 'Brasil Império: Formação do Estado Nacional Brasileiro',
     topicId: 'his_brasil_imperio',
     subject: 'História',
     prompt: 'A independência do Brasil, proclamada em 1822, resultou em um processo político caracterizado por:',
@@ -5054,6 +5085,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_his_brasil_imperio_2',
+    chapter: 'Brasil Império: o Declínio do Segundo Reinado',
     topicId: 'his_brasil_imperio',
     subject: 'História',
     prompt: 'A Lei Áurea, sancionada em 1888, teve como principal efeito:',
@@ -5069,6 +5101,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_his_brasil_imperio_3',
+    chapter: 'Brasil Império: o Período Regencial (1831-1840)',
     topicId: 'his_brasil_imperio',
     subject: 'História',
     prompt: 'O Período Regencial (1831-1840), fase em que o Brasil foi governado por regentes devido à menoridade de D. Pedro II, foi marcado por:',
@@ -5084,6 +5117,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_his_brasil_imperio_4',
+    chapter: 'Brasil Império: Segundo Reinado (1840-1889)',
     topicId: 'his_brasil_imperio',
     subject: 'História',
     prompt: 'A Guerra do Paraguai (1864-1870), o maior conflito armado da história da América do Sul, envolveu o Paraguai de um lado e, do outro, a Tríplice Aliança, formada por:',
@@ -5099,6 +5133,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_his_brasil_imperio_5',
+    chapter: 'Brasil Império: o Declínio do Segundo Reinado',
     topicId: 'his_brasil_imperio',
     subject: 'História',
     prompt: 'A Proclamação da República no Brasil, em 1889, foi liderada principalmente por:',
@@ -5115,6 +5150,7 @@ export const mockQuestions: Question[] = [
   // História — Primeira República e Era Vargas
   {
     id: 'q_his_primeira_republica_vargas_1',
+    chapter: 'Ascensão e Domínio das Oligarquias',
     topicId: 'his_primeira_republica_vargas',
     subject: 'História',
     prompt: 'A política do "café com leite", característica da Primeira República (1889-1930), referia-se a:',
@@ -5130,6 +5166,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_his_primeira_republica_vargas_2',
+    chapter: 'A Era Vargas: o Estado Novo',
     topicId: 'his_primeira_republica_vargas',
     subject: 'História',
     prompt: 'O Estado Novo (1937-1945), período ditatorial do governo de Getúlio Vargas, foi marcado por:',
@@ -5145,6 +5182,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_his_primeira_republica_vargas_3',
+    chapter: 'Ascensão e Domínio das Oligarquias',
     topicId: 'his_primeira_republica_vargas',
     subject: 'História',
     prompt: 'O voto de cabresto, prática eleitoral marcante da Primeira República brasileira, se referia a:',
@@ -5160,6 +5198,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_his_primeira_republica_vargas_4',
+    chapter: 'A Primeira República: o Declínio Oligárquico (1889-1930)',
     topicId: 'his_primeira_republica_vargas',
     subject: 'História',
     prompt: 'A Revolução de 1930, que levou Getúlio Vargas ao poder e encerrou a Primeira República, teve entre seus fatores desencadeadores:',
@@ -5175,6 +5214,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_his_primeira_republica_vargas_5',
+    chapter: 'A Era Vargas: o Estado Novo',
     topicId: 'his_primeira_republica_vargas',
     subject: 'História',
     prompt: 'A Consolidação das Leis do Trabalho (CLT), criada durante o governo de Getúlio Vargas em 1943, teve como principal característica:',
@@ -5191,6 +5231,7 @@ export const mockQuestions: Question[] = [
   // História — República Liberal e Brasil Contemporâneo
   {
     id: 'q_his_republica_liberal_atual_1',
+    chapter: 'Regime Militar (1964-1985) I',
     topicId: 'his_republica_liberal_atual',
     subject: 'História',
     prompt: 'A ditadura militar brasileira (1964-1985) foi caracterizada, entre outros aspectos, por:',
@@ -5206,6 +5247,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_his_republica_liberal_atual_2',
+    chapter: 'O Brasil Atual',
     topicId: 'his_republica_liberal_atual',
     subject: 'História',
     prompt: 'A Constituição de 1988, conhecida como "Constituição Cidadã", é um marco histórico por:',
@@ -5221,6 +5263,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_his_republica_liberal_atual_3',
+    chapter: 'Regime Militar (1964-1985) II',
     topicId: 'his_republica_liberal_atual',
     subject: 'História',
     prompt: 'O "Milagre Econômico" brasileiro, período de forte crescimento econômico durante a ditadura militar (especialmente entre 1969 e 1973), é frequentemente lembrado por:',
@@ -5236,6 +5279,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_his_republica_liberal_atual_4',
+    chapter: 'Regime Militar (1964-1985) II',
     topicId: 'his_republica_liberal_atual',
     subject: 'História',
     prompt: 'O movimento "Diretas Já", ocorrido em 1984, foi um marco importante do processo de redemocratização brasileira porque:',
@@ -5251,6 +5295,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_his_republica_liberal_atual_5',
+    chapter: 'O Brasil Atual',
     topicId: 'his_republica_liberal_atual',
     subject: 'História',
     prompt: 'O Plano Real, implementado em 1994, é historicamente relevante por ter:',
