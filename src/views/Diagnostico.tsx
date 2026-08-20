@@ -63,6 +63,8 @@ export default function Diagnostico() {
   const [selectedOptionId, setSelectedOptionId] = useState<string | null>(null);
   const [discursiveRevealed, setDiscursiveRevealed] = useState(false);
   const [savedFlash, setSavedFlash] = useState(false);
+  const [quizChapter, setQuizChapter] = useState<string | null>(null);
+  const [chapterFallback, setChapterFallback] = useState(false);
 
   const topic = selectedTopicId ? mockTopics.find((t) => t.id === selectedTopicId) : null;
   const topicMastery = selectedTopicId ? mastery.find((m) => m.topicId === selectedTopicId) : null;
@@ -72,14 +74,27 @@ export default function Diagnostico() {
     ? selectedOptionId === currentItem.question.correctOptionId
     : false;
 
-  function buildQuizPool(topicId: string): QuizItem[] {
-    const mc: QuizItem[] = mockQuestions
+  // Below this, a chapter-filtered quiz would be too thin to mean anything —
+  // falls back to the whole topic's pool instead (disclosed in the UI via
+  // chapterFallback) rather than firing a 1-2 question "diagnostic".
+  const MIN_CHAPTER_ITEMS = 3;
+
+  function buildQuizPool(topicId: string, chapter?: string): { pool: QuizItem[]; usedChapterFilter: boolean } {
+    const allMc: QuizItem[] = mockQuestions
       .filter((q) => q.topicId === topicId)
       .map((question) => ({ kind: 'mc', question }));
-    const discursive: QuizItem[] = mockTopicDiscursivePrompts
+    const allDiscursive: QuizItem[] = mockTopicDiscursivePrompts
       .filter((p) => p.topicId === topicId)
       .map((prompt) => ({ kind: 'discursive', prompt }));
-    return shuffled([...mc, ...discursive]);
+    const all = [...allMc, ...allDiscursive];
+    if (!chapter) return { pool: shuffled(all), usedChapterFilter: false };
+    const filtered = all.filter((item) =>
+      item.kind === 'mc' ? item.question.chapter === chapter : item.prompt.chapter === chapter
+    );
+    if (filtered.length >= MIN_CHAPTER_ITEMS) {
+      return { pool: shuffled(filtered), usedChapterFilter: true };
+    }
+    return { pool: shuffled(all), usedChapterFilter: false };
   }
 
   const startDiagnostic = (topicId: string) => {
@@ -88,7 +103,9 @@ export default function Diagnostico() {
     setSelfState(null);
     setDontKnow(false);
     setQuizIndex(0);
-    setQuizPool(buildQuizPool(topicId));
+    setQuizPool(buildQuizPool(topicId).pool);
+    setQuizChapter(null);
+    setChapterFallback(false);
     setQuizAnswers([]);
     setSelectedOptionId(null);
     setDiscursiveRevealed(false);
@@ -98,7 +115,13 @@ export default function Diagnostico() {
   const confirmSelfReport = () => {
     if (selfState === null) return;
     setDontKnow(false);
-    if (quizPool.length > 0) {
+    const chapter = selectedSubtopic || undefined;
+    const { pool, usedChapterFilter } = buildQuizPool(selectedTopicId!, chapter);
+    setQuizPool(pool);
+    setQuizIndex(0);
+    setQuizChapter(usedChapterFilter ? chapter! : null);
+    setChapterFallback(!!chapter && !usedChapterFilter);
+    if (pool.length > 0) {
       setPhase('quiz');
     } else {
       setPhase('result');
@@ -110,7 +133,13 @@ export default function Diagnostico() {
   // quiz to actually answer the question, since without one there's no
   // signal at all to build a result from.
   const chooseDontKnow = () => {
-    if (quizPool.length === 0) return;
+    const chapter = selectedSubtopic || undefined;
+    const { pool, usedChapterFilter } = buildQuizPool(selectedTopicId!, chapter);
+    if (pool.length === 0) return;
+    setQuizPool(pool);
+    setQuizIndex(0);
+    setQuizChapter(usedChapterFilter ? chapter! : null);
+    setChapterFallback(!!chapter && !usedChapterFilter);
     setSelfState(null);
     setDontKnow(true);
     setPhase('quiz');
@@ -333,9 +362,16 @@ export default function Diagnostico() {
       {phase === 'quiz' && topic && currentItem && (
         <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 sm:p-8 shadow-sm space-y-6">
           <div className="flex items-center justify-between">
-            <p className="text-xs font-semibold uppercase tracking-wide text-indigo-600 dark:text-indigo-400">{topic.subject} · Teste rápido</p>
+            <p className="text-xs font-semibold uppercase tracking-wide text-indigo-600 dark:text-indigo-400">
+              {topic.subject}{quizChapter ? ` · ${quizChapter}` : ''} · Teste rápido
+            </p>
             <span className="text-sm text-zinc-400">Questão {quizIndex + 1} de {quizPool.length}</span>
           </div>
+          {chapterFallback && (
+            <p className="text-xs text-zinc-500 -mt-3">
+              Ainda não há questões suficientes específicas de "{selectedSubtopic}" — este teste está usando a frente inteira de {topic.name}.
+            </p>
+          )}
           {dontKnow && (
             <p className="text-xs text-zinc-500 -mt-3">
               Sem autoavaliação prévia — o resultado vai sair só dessas {quizPool.length} questões, com confiança baixa por serem poucas.
