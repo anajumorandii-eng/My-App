@@ -3665,6 +3665,486 @@ export const mockPodcastEpisodes: PodcastEpisode[] = [
     subject: 'Português',
     durationMinutes: 6,
     script: 'Uma boa redação dissertativo-argumentativa começa com uma tese clara logo na introdução, seguida por parágrafos de desenvolvimento que sustentam essa tese com argumentos consistentes. O repertório sociocultural — dados, referências históricas, citações — só tem valor quando está articulado ao argumento, explicando por que aquela informação sustenta o que você está defendendo, e não apenas jogado no texto. A conclusão precisa trazer uma proposta de intervenção completa: quem faz (agente), como faz (meio), com que objetivo (finalidade) e, sempre que possível, um detalhamento da ação, tudo conectado aos argumentos já desenvolvidos. Coesão entre parágrafos e domínio da norma culta fecham o pacote que as bancas mais valorizam.'
+  },
+  {
+    id: 'pod_bio_metabolismo_energetico',
+    topicId: 'bio_metabolismo_energetico',
+    title: 'Metabolismo energético: como a célula extrai energia dos alimentos',
+    subject: 'Biologia',
+    durationMinutes: 6,
+    script: 'O metabolismo energético da célula converte a energia química dos alimentos em ATP, a moeda energética universal. Na respiração celular aeróbica, a glicose passa pela glicólise no citoplasma, depois pelo ciclo de Krebs e pela cadeia respiratória nas mitocôndrias, usando oxigênio como aceptor final de elétrons e produzindo a maior parte do ATP. Quando falta oxigênio, algumas células recorrem à fermentação, um processo menos eficiente que produz pouco ATP e gera subprodutos como o ácido lático, no caso das células musculares, ou o etanol, no caso das leveduras. Entender essas rotas metabólicas ajuda a explicar desde a fadiga muscular até processos industriais como a produção de pão e álcool.'
+  },
+  {
+    id: 'pod_bio_codigo_genetico_sintese',
+    topicId: 'bio_codigo_genetico_sintese',
+    title: 'Do DNA à proteína: como a célula lê o código genético',
+    subject: 'Biologia',
+    durationMinutes: 6,
+    script: 'Toda a informação genética de uma célula está armazenada no DNA, mas é através da síntese proteica que essa informação se transforma em características reais. O processo começa com a transcrição, em que uma sequência de DNA é copiada para uma molécula de RNA mensageiro no núcleo. Esse RNA mensageiro sai para o citoplasma, onde ocorre a tradução: os ribossomos leem a sequência de RNA em trincas de bases chamadas códons, e cada códon corresponde a um aminoácido específico, formando progressivamente uma cadeia de proteína. O código genético é praticamente universal entre os seres vivos, uma das evidências mais fortes da origem comum da vida na Terra.'
+  },
+  {
+    id: 'pod_bio_biotecnologia',
+    topicId: 'bio_biotecnologia',
+    title: 'Biotecnologia: da PCR ao CRISPR',
+    subject: 'Biologia',
+    durationMinutes: 6,
+    script: 'A biotecnologia moderna se apoia em ferramentas que permitem manipular o material genético com grande precisão. A PCR, ou reação em cadeia da polimerase, permite copiar milhões de vezes um trecho específico de DNA, sendo essencial para testes diagnósticos e exames de paternidade, por exemplo. Já a tecnologia CRISPR-Cas9 funciona como uma tesoura molecular guiada por RNA, capaz de cortar o DNA em um ponto exato do genoma, permitindo remover, corrigir ou inserir genes com uma precisão sem precedentes. Essas técnicas têm aplicações que vão da agricultura, com plantas mais resistentes, até a medicina, no desenvolvimento de terapias gênicas para doenças antes consideradas incuráveis.'
+  },
+  {
+    id: 'pod_bio_zoologia',
+    topicId: 'bio_zoologia',
+    title: 'Zoologia: dos invertebrados aos vertebrados',
+    subject: 'Biologia',
+    durationMinutes: 6,
+    script: 'A zoologia organiza a diversidade animal em grandes grupos, dos invertebrados, como os moluscos, os artrópodes e os cnidários, até os vertebrados, reunidos no filo Chordata. Cada grupo apresenta adaptações específicas: os artrópodes, por exemplo, têm um exoesqueleto de quitina e apêndices articulados, o que explica seu enorme sucesso evolutivo. Entre os vertebrados, a classificação em peixes, anfíbios, répteis, aves e mamíferos reflete diferentes soluções evolutivas para problemas como a respiração fora da água, a reprodução em ambiente terrestre e a regulação da temperatura corporal. Entender essas adaptações, e não apenas decorar nomes de filos e classes, é o que realmente ajuda a resolver questões de zoologia.'
+  },
+  {
+    id: 'pod_bio_botanica',
+    topicId: 'bio_botanica',
+    title: 'Botânica: dos tecidos vegetais à reprodução das plantas',
+    subject: 'Biologia',
+    durationMinutes: 6,
+    script: 'As plantas possuem tecidos especializados que sustentam suas funções vitais. O xilema conduz água e sais minerais das raízes até as folhas, enquanto o floema transporta os açúcares produzidos na fotossíntese para o restante da planta. Além da fisiologia, a botânica também trata da classificação e da reprodução dos vegetais: briófitas e pteridófitas dependem de água para a reprodução, enquanto gimnospermas e angiospermas desenvolveram estruturas como a semente e, no caso das angiospermas, o fruto e a flor, que ampliaram enormemente sua capacidade de dispersão e adaptação a ambientes terrestres.'
+  },
+  {
+    id: 'pod_mat_aritmetica_proporcionalidade',
+    topicId: 'mat_aritmetica_proporcionalidade',
+    title: 'Proporcionalidade: a base de porcentagem, juros e escalas',
+    subject: 'Matemática',
+    durationMinutes: 5,
+    script: 'Proporcionalidade é um dos conceitos mais recorrentes no vestibular, aparecendo disfarçada em questões de porcentagem, juros, escalas de mapas e até em física e química. Duas grandezas são diretamente proporcionais quando, ao multiplicar uma por um número, a outra é multiplicada pelo mesmo número — como o preço total de um produto em função da quantidade comprada. Já grandezas inversamente proporcionais se comportam de forma oposta: quando uma aumenta, a outra diminui na mesma razão, como a velocidade e o tempo em um trajeto de distância fixa. Dominar a regra de três, simples ou composta, é a ferramenta prática mais direta para resolver esse tipo de problema rapidamente na prova.'
+  },
+  {
+    id: 'pod_mat_teoria_numeros',
+    topicId: 'mat_teoria_numeros',
+    title: 'MDC, MMC e números primos: teoria dos números na prática',
+    subject: 'Matemática',
+    durationMinutes: 5,
+    script: 'A teoria dos números trata das propriedades dos números inteiros, com destaque para os números primos, o máximo divisor comum e o mínimo múltiplo comum. O MDC de dois números é o maior número que divide ambos exatamente, útil, por exemplo, para dividir grupos ou terrenos em partes iguais. Já o MMC é o menor múltiplo comum entre eles, essencial em problemas de eventos periódicos, como sinais luminosos que piscam juntos em intervalos diferentes. Fatorar os números em primos é a estratégia mais confiável para calcular ambos com segurança, especialmente quando os números envolvidos são grandes.'
+  },
+  {
+    id: 'pod_mat_sequencias_matrizes',
+    topicId: 'mat_sequencias_matrizes',
+    title: 'Progressões, matrizes e sistemas lineares',
+    subject: 'Matemática',
+    durationMinutes: 6,
+    script: 'Progressões aritméticas e geométricas descrevem sequências de números com um padrão bem definido: na progressão aritmética, cada termo soma uma razão constante ao anterior; na geométrica, cada termo multiplica o anterior por uma razão constante. Já as matrizes organizam números em linhas e colunas, sendo fundamentais para representar e resolver sistemas de equações lineares, como aqueles que aparecem em problemas com múltiplas variáveis relacionadas entre si. Métodos como a substituição, a adição ou o escalonamento permitem encontrar a solução desses sistemas de forma organizada, uma habilidade que aparece tanto em matemática pura quanto em aplicações de física e economia.'
+  },
+  {
+    id: 'pod_mat_geometria_espacial',
+    topicId: 'mat_geometria_espacial',
+    title: 'Geometria espacial: volumes e áreas de sólidos',
+    subject: 'Matemática',
+    durationMinutes: 6,
+    script: 'A geometria espacial estuda figuras tridimensionais, como prismas, pirâmides, cilindros, cones e esferas, com foco no cálculo de suas áreas e volumes. O volume de um prisma, por exemplo, é obtido multiplicando a área da base pela altura, enquanto o volume de uma pirâmide ou de um cone é um terço desse mesmo produto. Já o volume da esfera segue uma fórmula própria, baseada no seu raio. Questões de vestibular costumam contextualizar esses sólidos em situações práticas, como o cálculo da quantidade de material necessário para construir uma caixa d\'água ou embalagens, exigindo não só a fórmula, mas a interpretação geométrica correta do problema.'
+  },
+  {
+    id: 'pod_mat_geometria_analitica',
+    topicId: 'mat_geometria_analitica',
+    title: 'Geometria analítica: pontos, retas e distâncias no plano cartesiano',
+    subject: 'Matemática',
+    durationMinutes: 5,
+    script: 'A geometria analítica conecta a álgebra à geometria, representando pontos, retas e outras figuras através de coordenadas no plano cartesiano. A distância entre dois pontos pode ser calculada por uma fórmula derivada do teorema de Pitágoras, enquanto o coeficiente angular de uma reta indica sua inclinação, sendo essencial para determinar se duas retas são paralelas ou perpendiculares. Esses conceitos permitem resolver algebricamente problemas que, de outra forma, exigiriam desenhos e medições — uma vantagem enorme em provas cronometradas, onde velocidade e precisão fazem toda a diferença.'
+  },
+  {
+    id: 'pod_mat_equacoes',
+    topicId: 'mat_equacoes',
+    title: 'Equações e desigualdades: modelando problemas do mundo real',
+    subject: 'Matemática',
+    durationMinutes: 5,
+    script: 'Resolver um problema matemático frequentemente começa por traduzir uma situação real em uma equação ou desigualdade. Equações do primeiro e do segundo grau permitem encontrar valores exatos que satisfazem uma condição, como o ponto de equilíbrio entre custo e receita em um problema de economia. Já as desigualdades descrevem intervalos de valores possíveis, muito usadas em problemas de otimização, onde se busca o maior ou o menor valor possível dentro de certas restrições. Dominar essa modelagem algébrica é o que transforma um enunciado longo e confuso em uma expressão matemática simples e resolvível.'
+  },
+  {
+    id: 'pod_mat_log_exponenciais',
+    topicId: 'mat_log_exponenciais',
+    title: 'Exponenciais e logaritmos: crescimento e seu inverso',
+    subject: 'Matemática',
+    durationMinutes: 5,
+    script: 'Funções exponenciais descrevem fenômenos de crescimento ou decrescimento acelerado, como o crescimento de uma população de bactérias ou a desvalorização de um bem ao longo do tempo. Os logaritmos, por sua vez, são a operação inversa da exponenciação: enquanto a exponencial responde quanto vale a potência, o logaritmo responde qual é o expoente que gera um determinado valor. Essa relação é essencial para resolver equações exponenciais mais complexas e aparece em contextos como escalas logarítmicas de terremotos, medições de pH e crescimento populacional — temas recorrentes em questões interdisciplinares do vestibular.'
+  },
+  {
+    id: 'pod_mat_complexos_polinomios',
+    topicId: 'mat_complexos_polinomios',
+    title: 'Números complexos e polinômios',
+    subject: 'Matemática',
+    durationMinutes: 6,
+    script: 'Os números complexos surgem para resolver equações que não têm solução dentro dos números reais, como a raiz quadrada de um número negativo, introduzindo a unidade imaginária i, definida por i ao quadrado igual a menos um. Já os polinômios são expressões algébricas com vários termos, e seu estudo envolve encontrar suas raízes, ou seja, os valores que os anulam. O Teorema Fundamental da Álgebra garante que todo polinômio de grau n tem exatamente n raízes complexas, contando multiplicidades — uma ideia que conecta esses dois temas e costuma aparecer em questões mais avançadas do vestibular.'
+  },
+  {
+    id: 'pod_fis_cinematica_vetorial',
+    topicId: 'fis_cinematica_vetorial',
+    title: 'Cinemática vetorial: quando a direção importa',
+    subject: 'Física',
+    durationMinutes: 6,
+    script: 'Diferente da cinemática escalar, que trata apenas do módulo das grandezas, a cinemática vetorial considera também a direção e o sentido do movimento. Um exemplo clássico é o lançamento horizontal ou oblíquo, em que o movimento se decompõe em duas componentes independentes: uma horizontal, com velocidade constante, e uma vertical, sob ação da gravidade. Para somar vetores perpendiculares, como forças ou velocidades em direções diferentes, usa-se o teorema de Pitágoras para encontrar o módulo do vetor resultante. Dominar essa decomposição é essencial para resolver problemas de lançamento de projéteis e de movimento em duas dimensões.'
+  },
+  {
+    id: 'pod_fis_gravitacao_circular',
+    topicId: 'fis_gravitacao_circular',
+    title: 'Gravitação universal e movimento circular',
+    subject: 'Física',
+    durationMinutes: 6,
+    script: 'A Lei da Gravitação Universal de Newton descreve como todos os corpos com massa se atraem mutuamente, com uma força proporcional ao produto das massas e inversamente proporcional ao quadrado da distância entre elas — é essa força que mantém planetas em órbita e faz objetos caírem na Terra. Já no movimento circular, mesmo quando a velocidade escalar é constante, existe uma aceleração centrípeta, direcionada para o centro da trajetória, responsável por mudar continuamente a direção do movimento. É a força gravitacional que atua como força centrípeta na órbita dos planetas e satélites, mantendo-os em trajetórias curvas ao redor de um corpo central.'
+  },
+  {
+    id: 'pod_fis_energia',
+    topicId: 'fis_energia',
+    title: 'Energia mecânica: cinética, potencial e sua conservação',
+    subject: 'Física',
+    durationMinutes: 6,
+    script: 'Todo corpo em movimento possui energia cinética, proporcional à sua massa e ao quadrado de sua velocidade. Já a energia potencial gravitacional depende da altura de um corpo em relação a um referencial. Quando apenas forças conservativas atuam sobre um sistema, como a gravidade sem atrito, a energia mecânica total — a soma da cinética com a potencial — permanece constante, podendo apenas se converter de uma forma para outra, como em uma montanha-russa. Já quando existe atrito ou outra força dissipativa, parte dessa energia se converte em calor, e a energia mecânica deixa de se conservar.'
+  },
+  {
+    id: 'pod_fis_termodinamica_gases',
+    topicId: 'fis_termodinamica_gases',
+    title: 'Termodinâmica dos gases: pressão, volume e temperatura',
+    subject: 'Física',
+    durationMinutes: 6,
+    script: 'As leis dos gases descrevem como pressão, volume e temperatura se relacionam em um gás ideal. A Lei de Boyle mostra que, a temperatura constante, pressão e volume são inversamente proporcionais: reduzir o volume aumenta a pressão. A Lei de Charles, por sua vez, relaciona volume e temperatura a pressão constante. Essas relações se resumem na Equação de Clapeyron, PV igual a nRT, que conecta todas as variáveis de um gás ideal em uma única fórmula. Além disso, as leis da termodinâmica explicam como calor e trabalho se relacionam: a energia não pode ser criada nem destruída, apenas convertida entre formas.'
+  },
+  {
+    id: 'pod_fis_eletrostatica',
+    topicId: 'fis_eletrostatica',
+    title: 'Eletrostática: cargas, campos e força elétrica',
+    subject: 'Física',
+    durationMinutes: 6,
+    script: 'A eletrostática estuda cargas elétricas em repouso e as forças que elas exercem entre si. Pela Lei de Coulomb, cargas de mesmo sinal se repelem e cargas de sinais opostos se atraem, com uma força que depende do produto das cargas e é inversamente proporcional ao quadrado da distância entre elas — uma relação semelhante à da gravitação universal. Ao redor de toda carga elétrica existe um campo elétrico, representado por linhas de campo que divergem de cargas positivas e convergem para cargas negativas. Esse conceito de campo é a base para entender fenômenos elétricos mais complexos, como capacitores e circuitos.'
+  },
+  {
+    id: 'pod_fis_optica_instrumental',
+    topicId: 'fis_optica_instrumental',
+    title: 'Óptica instrumental: como lentes formam imagens',
+    subject: 'Física',
+    durationMinutes: 6,
+    script: 'A óptica instrumental estuda como lentes e espelhos formam imagens, aplicando esse conhecimento a instrumentos como o olho humano, óculos, lupas, microscópios e telescópios. Lentes convergentes tendem a concentrar os raios de luz em um ponto, sendo usadas para corrigir a hipermetropia, enquanto lentes divergentes espalham os raios, corrigindo a miopia. A formação de imagens depende da posição do objeto em relação aos focos da lente, podendo gerar imagens reais ou virtuais, maiores ou menores que o objeto original. Entender esses princípios ajuda a explicar desde o funcionamento de instrumentos ópticos até problemas de visão comuns, um tema com forte conexão com biologia e medicina.'
+  },
+  {
+    id: 'pod_fis_ondas_fundamentos',
+    topicId: 'fis_ondas_fundamentos',
+    title: 'Ondas: fundamentos de frequência, comprimento e velocidade',
+    subject: 'Física',
+    durationMinutes: 5,
+    script: 'Uma onda transporta energia sem transportar matéria, e seu comportamento é descrito por três grandezas principais: a frequência, que indica quantas oscilações ocorrem por segundo; o comprimento de onda, a distância entre dois pontos equivalentes consecutivos da onda; e a velocidade de propagação, que relaciona as outras duas pela equação v igual a f vezes lambda. Ondas podem ser mecânicas, como o som, que precisam de um meio material para se propagar, ou eletromagnéticas, como a luz, que se propagam até no vácuo. Esses fundamentos são a base para entender fenômenos mais específicos, como reflexão, refração, interferência e ressonância.'
+  },
+  {
+    id: 'pod_fis_fisica_moderna',
+    topicId: 'fis_fisica_moderna',
+    title: 'Física moderna: quântica e relatividade em poucos minutos',
+    subject: 'Física',
+    durationMinutes: 6,
+    script: 'A física moderna revolucionou a forma como entendemos o universo no início do século vinte. O efeito fotoelétrico, explicado por Einstein, mostrou que a luz se comporta como pacotes discretos de energia, os fótons, capazes de arrancar elétrons de um material quando têm frequência suficientemente alta — uma ideia que deu origem à física quântica. Já a Teoria da Relatividade Restrita, também de Einstein, mostrou que espaço e tempo não são absolutos: à medida que um objeto se aproxima da velocidade da luz, o tempo passa mais devagar para ele, em relação a um observador parado, um fenômeno chamado dilatação temporal.'
+  },
+  {
+    id: 'pod_qui_modelos_atomicos',
+    topicId: 'qui_modelos_atomicos',
+    title: 'Modelos atômicos: a evolução da ideia de átomo',
+    subject: 'Química',
+    durationMinutes: 6,
+    script: 'A ideia de átomo evoluiu bastante ao longo da história da ciência. Dalton propôs o átomo como uma esfera maciça e indivisível. Thomson, ao descobrir o elétron, propôs o modelo do pudim de passas, com cargas negativas espalhadas em uma massa positiva. Rutherford, com seu famoso experimento de bombardeamento de folhas de ouro, descobriu que o átomo tem um núcleo pequeno, denso e positivo, com os elétrons girando ao redor. Bohr aperfeiçoou esse modelo propondo que os elétrons ocupam níveis de energia específicos ao redor do núcleo. O modelo atual, quântico, descreve os elétrons como distribuições de probabilidade em regiões chamadas orbitais.'
+  },
+  {
+    id: 'pod_qui_radioatividade',
+    topicId: 'qui_radioatividade',
+    title: 'Radioatividade: decaimento nuclear e meia-vida',
+    subject: 'Química',
+    durationMinutes: 6,
+    script: 'Radioatividade é a emissão espontânea de partículas ou radiação por núcleos atômicos instáveis, em busca de uma configuração mais estável. As partículas alfa correspondem a núcleos de hélio, com dois prótons e dois nêutrons; as partículas beta são elétrons ou pósitrons emitidos quando um nêutron se transforma em próton, ou vice-versa; e a radiação gama é uma forma de energia eletromagnética de altíssima frequência, sem massa ou carga. Um conceito central nesse tema é a meia-vida: o tempo necessário para que metade dos núcleos de uma amostra radioativa decaia — usado, por exemplo, na datação por carbono-14 e em tratamentos de radioterapia.'
+  },
+  {
+    id: 'pod_qui_gases',
+    topicId: 'qui_gases',
+    title: 'Comportamento dos gases: das leis simples à equação geral',
+    subject: 'Química',
+    durationMinutes: 5,
+    script: 'O comportamento de um gás ideal é descrito por relações entre pressão, volume, temperatura e quantidade de matéria. A Lei de Boyle mostra que, a temperatura constante, pressão e volume são inversamente proporcionais. Já a Lei de Charles relaciona volume e temperatura a pressão constante, e a Lei de Gay-Lussac relaciona pressão e temperatura a volume constante. Todas essas leis particulares estão contidas na Equação de Clapeyron, PV igual a nRT, que permite calcular qualquer uma dessas variáveis quando as demais são conhecidas — um tema frequentemente cobrado em contextos práticos, como o comportamento de gases em pneus ou processos industriais.'
+  },
+  {
+    id: 'pod_qui_inorganica',
+    topicId: 'qui_inorganica',
+    title: 'Funções inorgânicas: ácidos, bases, sais e óxidos',
+    subject: 'Química',
+    durationMinutes: 6,
+    script: 'A química inorgânica classifica as substâncias em quatro grandes funções: ácidos, que liberam íons H⁺ em solução aquosa; bases, que liberam íons hidroxila OH⁻; sais, formados na reação de neutralização entre um ácido e uma base, junto com água; e óxidos, compostos binários formados por oxigênio e outro elemento. Cada função tem propriedades características: ácidos e bases, por exemplo, têm comportamentos opostos em relação a indicadores como o papel tornassol, e sua força depende do grau de ionização ou dissociação em água. Reconhecer essas funções e prever produtos de reações entre elas é uma habilidade fundamental testada com frequência em vestibulares.'
+  },
+  {
+    id: 'pod_qui_oxirreducao',
+    topicId: 'qui_oxirreducao',
+    title: 'Oxirredução: quem ganha e quem perde elétrons',
+    subject: 'Química',
+    durationMinutes: 6,
+    script: 'Reações de oxirredução envolvem a transferência de elétrons entre espécies químicas. A espécie que perde elétrons sofre oxidação, aumentando seu número de oxidação; a que ganha elétrons sofre redução, diminuindo seu número de oxidação. Para identificar corretamente esses processos, é essencial saber calcular o número de oxidação de cada elemento em uma substância ou íon, seguindo regras como a de que o oxigênio geralmente tem Nox menos dois e o hidrogênio, mais um. Esse tema é a base para entender pilhas, baterias, corrosão de metais e processos industriais de eletrólise, todos aplicações diretas da oxirredução no dia a dia.'
+  },
+  {
+    id: 'pod_qui_organica_reacoes',
+    topicId: 'qui_organica_reacoes',
+    title: 'Reações orgânicas: substituição, adição e eliminação',
+    subject: 'Química',
+    durationMinutes: 6,
+    script: 'As reações da química orgânica costumam ser classificadas em três grandes tipos. Nas reações de substituição, um átomo ou grupo de átomos é trocado por outro, comuns em compostos saturados, como os alcanos. Nas reações de adição, típicas de compostos com ligações duplas ou triplas, como os alcenos e alcinos, novos átomos se ligam à molécula, quebrando essas ligações múltiplas. Já nas reações de eliminação, o processo é o oposto: a molécula perde átomos, formando uma ligação dupla ou tripla onde antes havia apenas ligações simples. Reconhecer o tipo de reação a partir da estrutura dos reagentes é essencial para prever corretamente os produtos formados.'
+  },
+  {
+    id: 'pod_qui_termoquimica',
+    topicId: 'qui_termoquimica',
+    title: 'Termoquímica: energia liberada ou absorvida nas reações',
+    subject: 'Química',
+    durationMinutes: 5,
+    script: 'A termoquímica estuda as trocas de energia, geralmente na forma de calor, que ocorrem durante as reações químicas. Uma reação é exotérmica quando libera calor para o ambiente, com variação de entalpia negativa; e é endotérmica quando absorve calor, com variação de entalpia positiva. A Lei de Hess permite calcular a variação de entalpia de uma reação global somando as variações de etapas intermediárias, mesmo sem realizar o experimento diretamente — uma ferramenta poderosa para prever quanto de energia uma reação libera ou consome, com aplicações que vão de combustíveis a processos biológicos como o metabolismo.'
+  },
+  {
+    id: 'pod_qui_cinetica',
+    topicId: 'qui_cinetica',
+    title: 'Cinética química: o que acelera ou retarda uma reação',
+    subject: 'Química',
+    durationMinutes: 6,
+    script: 'A cinética química estuda a velocidade das reações e os fatores que a influenciam. O aumento da temperatura geralmente acelera uma reação, pois eleva a energia cinética média das partículas, tornando as colisões entre elas mais frequentes e mais eficazes. O aumento da concentração dos reagentes também tende a acelerar a reação, pela mesma lógica. Já um catalisador acelera a reação por um caminho diferente: ele reduz a energia de ativação necessária, sem ser consumido no processo. Entender esses fatores explica processos do cotidiano, como a conservação de alimentos na geladeira, que funciona reduzindo a temperatura para desacelerar reações.'
+  },
+  {
+    id: 'pod_qui_eletroquimica',
+    topicId: 'qui_eletroquimica',
+    title: 'Eletroquímica: pilhas e eletrólise',
+    subject: 'Química',
+    durationMinutes: 5,
+    script: 'A eletroquímica estuda a relação entre reações químicas e energia elétrica, em dois processos opostos. Nas pilhas, uma reação de oxirredução espontânea gera corrente elétrica: a oxidação ocorre no ânodo e a redução no cátodo, com os elétrons fluindo pelo circuito externo. Já na eletrólise, o processo é invertido: fornece-se energia elétrica externa para forçar a ocorrência de uma reação não espontânea, como na produção industrial de metais ou na eletrodeposição de camadas metálicas sobre um objeto, como no processo de niquelação ou cromagem.'
+  },
+  {
+    id: 'pod_qui_equilibrio',
+    topicId: 'qui_equilibrio',
+    title: 'Equilíbrio químico e o Princípio de Le Chatelier',
+    subject: 'Química',
+    durationMinutes: 6,
+    script: 'Em uma reação reversível, o equilíbrio químico é atingido quando a velocidade da reação direta se iguala à da reação inversa, e as concentrações de reagentes e produtos permanecem constantes ao longo do tempo — embora as reações continuem ocorrendo nos dois sentidos. O Princípio de Le Chatelier prevê como esse equilíbrio responde a perturbações: aumentar a concentração de um reagente desloca o equilíbrio no sentido de consumi-lo; aumentar a pressão, em reações gasosas, desloca o equilíbrio para o lado com menor número de mols de gás; e alterações de temperatura favorecem o sentido endotérmico ou exotérmico da reação.'
+  },
+  {
+    id: 'pod_geo_cartografia',
+    topicId: 'geo_cartografia',
+    title: 'Cartografia: como ler e interpretar mapas',
+    subject: 'Geografia',
+    durationMinutes: 5,
+    script: 'A cartografia é a ciência de representar a superfície terrestre em mapas, e entender seus fundamentos é essencial para interpretar corretamente qualquer questão que envolva um mapa no vestibular. A escala indica a relação entre a distância representada no mapa e a distância real: uma escala de um para cinquenta mil, por exemplo, significa que cada centímetro no mapa equivale a cinquenta mil centímetros na realidade. As projeções cartográficas são formas de representar a superfície esférica da Terra em uma superfície plana, e cada uma distorce algum aspecto — a projeção de Mercator, por exemplo, preserva os ângulos, mas distorce bastante as áreas em latitudes altas.'
+  },
+  {
+    id: 'pod_geo_climatologia_socioambiental',
+    topicId: 'geo_climatologia_socioambiental',
+    title: 'Climatologia e problemas socioambientais',
+    subject: 'Geografia',
+    durationMinutes: 6,
+    script: 'O clima resulta da interação entre diversos fatores, como latitude, altitude, correntes marítimas e massas de ar, e seu estudo se conecta diretamente a problemas socioambientais contemporâneos. O efeito estufa intensificado, causado principalmente pelo aumento da concentração de gases como o gás carbônico e o metano na atmosfera, está relacionado às mudanças climáticas globais. Já a ilha de calor urbana ocorre porque o asfalto e o concreto das cidades retêm mais calor do que áreas rurais ou vegetadas, elevando a temperatura local. Compreender essas dinâmicas é essencial para discutir temas como aquecimento global, desertificação e eventos climáticos extremos.'
+  },
+  {
+    id: 'pod_geo_hidrogeografia',
+    topicId: 'geo_hidrogeografia',
+    title: 'Hidrogeografia: rios, bacias e recursos hídricos',
+    subject: 'Geografia',
+    durationMinutes: 5,
+    script: 'A hidrogeografia estuda a distribuição e o comportamento das águas continentais, como rios, lagos e aquíferos. Rios de planalto, com relevo acidentado e presença de corredeiras, têm grande potencial para geração de energia hidrelétrica, enquanto rios de planície, com menor declividade, favorecem a navegação. O Brasil possui uma das maiores reservas de água doce do mundo, incluindo o Aquífero Guarani, um dos maiores reservatórios subterrâneos do planeta. Esse tema costuma se conectar com questões de sustentabilidade e gestão dos recursos hídricos, especialmente diante de episódios recentes de escassez de água em diferentes regiões do país.'
+  },
+  {
+    id: 'pod_geo_globalizacao_economica',
+    topicId: 'geo_globalizacao_economica',
+    title: 'Globalização e geografia econômica',
+    subject: 'Geografia',
+    durationMinutes: 5,
+    script: 'A globalização intensificou a interconexão econômica entre os países, criando cadeias produtivas globais em que diferentes etapas de fabricação de um mesmo produto ocorrem em diferentes países, conforme a vantagem econômica de cada um. Esse processo também impulsionou a formação de blocos econômicos regionais, como o Mercosul e a União Europeia, que buscam reduzir barreiras comerciais entre seus membros e fortalecer sua posição no cenário internacional. Ao mesmo tempo, a globalização aprofundou desigualdades entre países centrais e periféricos, um tema central para entender a divisão internacional do trabalho na economia mundial contemporânea.'
+  },
+  {
+    id: 'pod_geo_geopolitica_regional',
+    topicId: 'geo_geopolitica_regional',
+    title: 'Geopolítica regional contemporânea',
+    subject: 'Geografia',
+    durationMinutes: 6,
+    script: 'A geopolítica contemporânea é marcada por conflitos e disputas regionais com raízes históricas profundas. O Oriente Médio, por exemplo, concentra disputas territoriais e religiosas, além de grande relevância estratégica pelas reservas de petróleo da região. Já agrupamentos como os BRICS reúnem potências emergentes — Brasil, Rússia, Índia, China, África do Sul, entre outros países que aderiram mais recentemente — buscando ampliar sua influência política e econômica frente a uma ordem internacional historicamente liderada por Estados Unidos e Europa Ocidental. Entender esses arranjos ajuda a interpretar notícias internacionais e questões de atualidades.'
+  },
+  {
+    id: 'pod_geo_fisica_brasil',
+    topicId: 'geo_fisica_brasil',
+    title: 'Geografia física do Brasil: relevo, clima e biomas',
+    subject: 'Geografia',
+    durationMinutes: 6,
+    script: 'O território brasileiro se caracteriza por um relevo antigo e bastante desgastado pela erosão, predominando planaltos e planícies de altitude moderada, sem grandes cadeias montanhosas jovens como os Andes. Essa estabilidade geológica está relacionada à localização do Brasil na Plataforma Sul-Americana. O país também abriga uma grande diversidade de biomas, com destaque para a Amazônia, o bioma de maior extensão territorial, concentrado principalmente na região Norte. Conhecer as características físicas do território é a base para entender temas mais aplicados, como distribuição populacional, atividades econômicas e problemas ambientais em cada região do país.'
+  },
+  {
+    id: 'pod_geo_economica_brasil',
+    topicId: 'geo_economica_brasil',
+    title: 'Geografia econômica do Brasil: agronegócio e indústria',
+    subject: 'Geografia',
+    durationMinutes: 6,
+    script: 'A economia brasileira combina um agronegócio forte, com destaque para exportações de soja, carne bovina e café, com um parque industrial historicamente concentrado na região Sudeste. Essa concentração industrial tem raízes históricas: o capital acumulado pela cafeicultura, a disponibilidade de mão de obra, a infraestrutura de transportes e a proximidade de um grande mercado consumidor favoreceram a instalação de indústrias na região desde o início do século vinte. Compreender essa geografia econômica ajuda a explicar desigualdades regionais no Brasil, conectando história econômica com a organização espacial da produção no país.'
+  },
+  {
+    id: 'pod_geo_populacao_urbana_brasil',
+    topicId: 'geo_populacao_urbana_brasil',
+    title: 'População e urbanização no Brasil',
+    subject: 'Geografia',
+    durationMinutes: 6,
+    script: 'O Brasil passou por um intenso processo de urbanização a partir da segunda metade do século vinte, impulsionado pelo êxodo rural e pela industrialização das cidades. Esse crescimento urbano, muitas vezes desordenado, gerou periferias e favelas, além de déficits de infraestrutura em várias regiões metropolitanas. Ao mesmo tempo, a pirâmide etária brasileira vem se transformando: a queda da taxa de natalidade e o aumento da expectativa de vida têm levado a um processo de envelhecimento populacional, estreitando a base e alargando o topo da pirâmide — transformações com implicações diretas para políticas públicas de saúde, previdência e planejamento urbano.'
+  },
+  {
+    id: 'pod_his_idade_antiga',
+    topicId: 'his_idade_antiga',
+    title: 'Idade Antiga: Grécia e Roma',
+    subject: 'História',
+    durationMinutes: 5,
+    script: 'A Grécia Antiga legou ao mundo ocidental conceitos fundamentais, como a democracia praticada em Atenas — uma democracia direta, mas restrita aos cidadãos do sexo masculino, livres e nascidos na cidade, excluindo mulheres, escravizados e estrangeiros. Já o Império Romano se destacou pela capacidade de administrar um vasto território ao redor do Mediterrâneo, apoiado em um sistema jurídico influente, o Direito Romano, e em obras de engenharia como estradas e aquedutos. Estudar essas duas civilizações é essencial para entender as raízes de instituições políticas, jurídicas e culturais que ainda influenciam o mundo contemporâneo.'
+  },
+  {
+    id: 'pod_his_idade_media',
+    topicId: 'his_idade_media',
+    title: 'Idade Média: feudalismo e Cruzadas',
+    subject: 'História',
+    durationMinutes: 5,
+    script: 'A Idade Média europeia foi organizada, em grande parte, pelo sistema feudal, baseado na posse da terra e em relações pessoais de vassalagem entre suseranos e vassalos, em um contexto de fragmentação do poder político após a queda do Império Romano do Ocidente. Nesse período também ocorreram as Cruzadas, expedições militares religiosas que combinaram motivações espirituais, como a reconquista de Jerusalém, com interesses econômicos e políticos da Igreja e da nobreza europeia. Compreender essa organização social e esses conflitos ajuda a explicar transformações posteriores, como o enfraquecimento do feudalismo e o fortalecimento dos poderes monárquicos centralizados.'
+  },
+  {
+    id: 'pod_his_moderna_iluminismo',
+    topicId: 'his_moderna_iluminismo',
+    title: 'Idade Moderna e Iluminismo',
+    subject: 'História',
+    durationMinutes: 5,
+    script: 'O Iluminismo, movimento intelectual do século dezoito, valorizava a razão como principal instrumento para compreender o mundo, criticando o absolutismo monárquico e os privilégios da nobreza e do clero do Antigo Regime. Pensadores como Voltaire, Montesquieu e Rousseau influenciaram diretamente processos revolucionários posteriores, com destaque para a Revolução Francesa de 1789, que derrubou o Antigo Regime na França e difundiu ideais como liberdade, igualdade e fraternidade — princípios que inspiraram movimentos constitucionais e revolucionários em diversas partes do mundo nos séculos seguintes.'
+  },
+  {
+    id: 'pod_his_imperialismo_guerras',
+    topicId: 'his_imperialismo_guerras',
+    title: 'Imperialismo e Guerras Mundiais',
+    subject: 'História',
+    durationMinutes: 6,
+    script: 'O imperialismo europeu do final do século dezenove, também chamado de neocolonialismo, foi impulsionado pela Segunda Revolução Industrial, que gerou necessidade de novas matérias-primas e mercados consumidores, levando à partilha da África e de parte da Ásia entre as potências europeias. Essa disputa por territórios, prestígio e poder, somada a rivalidades e alianças militares, culminou na Primeira Guerra Mundial, deflagrada após o assassinato do arquiduque Francisco Ferdinando em Sarajevo, em 1914. Já a Segunda Guerra Mundial, décadas depois, teve raízes nas tensões não resolvidas do pós-primeira guerra e no avanço de regimes totalitários na Europa.'
+  },
+  {
+    id: 'pod_his_guerra_fria_contemporaneo',
+    topicId: 'his_guerra_fria_contemporaneo',
+    title: 'Guerra Fria e o mundo contemporâneo',
+    subject: 'História',
+    durationMinutes: 6,
+    script: 'A Guerra Fria foi marcada pela disputa ideológica, econômica e tecnológica entre Estados Unidos e União Soviética após a Segunda Guerra Mundial, sem confronto militar direto entre as duas potências, mas com conflitos indiretos travados em outros países, como Coreia, Vietnã e Afeganistão. A queda do Muro de Berlim, em 1989, simbolizou o colapso do bloco socialista na Europa Oriental, sendo um marco central no processo que levaria ao fim da Guerra Fria e à posterior dissolução da União Soviética, em 1991. Compreender esse período é essencial para entender a configuração geopolítica do mundo atual.'
+  },
+  {
+    id: 'pod_his_brasil_colonia',
+    topicId: 'his_brasil_colonia',
+    title: 'Brasil Colônia: economia e resistência',
+    subject: 'História',
+    durationMinutes: 5,
+    script: 'A economia do Brasil Colônia era voltada à exportação, sustentada pelo trabalho escravizado, com destaque para o açúcar no período inicial e para o ouro durante o ciclo minerador do século dezoito. Nesse contexto de exploração colonial, surgiram movimentos de contestação ao domínio português, como a Inconfidência Mineira, de 1789, que envolveu setores da elite mineira insatisfeitos com a política fiscal portuguesa — sobretudo a ameaça da derrama — e influenciados por ideais iluministas e pelo exemplo da independência dos Estados Unidos.'
+  },
+  {
+    id: 'pod_his_brasil_imperio',
+    topicId: 'his_brasil_imperio',
+    title: 'Brasil Império: independência e abolição',
+    subject: 'História',
+    durationMinutes: 5,
+    script: 'A independência do Brasil, proclamada em 1822, manteve o regime monárquico e preservou estruturas herdadas do período colonial, como a escravidão e o latifúndio, configurando uma transição política sem rupturas sociais profundas. Ao longo do Império, a escravidão foi gradualmente contestada, até ser formalmente abolida pela Lei Áurea, em 1888. No entanto, essa abolição não veio acompanhada de políticas de reparação, terra ou inclusão social para os libertos, contribuindo para desigualdades estruturais que persistiram muito além do fim formal da escravidão no país.'
+  },
+  {
+    id: 'pod_his_primeira_republica_vargas',
+    topicId: 'his_primeira_republica_vargas',
+    title: 'Primeira República e Era Vargas',
+    subject: 'História',
+    durationMinutes: 6,
+    script: 'A Primeira República brasileira, entre 1889 e 1930, foi marcada pela política do café com leite, um acordo informal de revezamento na presidência entre as oligarquias paulista e mineira. Esse arranjo entrou em crise com a Revolução de 1930, que levou Getúlio Vargas ao poder. Durante o Estado Novo, entre 1937 e 1945, Vargas combinou um governo autoritário, com censura e repressão a opositores, com avanços na legislação trabalhista, como a criação da CLT — uma combinação que ajuda a explicar sua popularidade duradoura, apesar do caráter ditatorial do regime.'
+  },
+  {
+    id: 'pod_his_republica_liberal_atual',
+    topicId: 'his_republica_liberal_atual',
+    title: 'Da ditadura militar à redemocratização',
+    subject: 'História',
+    durationMinutes: 5,
+    script: 'A ditadura militar brasileira, entre 1964 e 1985, suprimiu direitos políticos, impôs censura e reprimiu opositores, mantendo-se no poder por 21 anos até a redemocratização. Esse processo de abertura política culminou na promulgação da Constituição de 1988, conhecida como Constituição Cidadã, que consolidou a redemocratização do país, ampliando direitos individuais, sociais e políticos após décadas de regime autoritário. Compreender essa transição é fundamental para entender as bases institucionais da democracia brasileira contemporânea e os desafios que ainda persistem na garantia efetiva desses direitos.'
+  },
+  {
+    id: 'pod_por_norma_culta',
+    topicId: 'por_norma_culta',
+    title: 'Norma culta: concordância e crase sem decoreba',
+    subject: 'Português',
+    durationMinutes: 5,
+    script: 'Dominar a norma culta não significa decorar regras soltas, mas entender a lógica por trás delas. Verbos impessoais, como fazer indicando tempo decorrido ou haver no sentido de existir, permanecem sempre na terceira pessoa do singular, mesmo quando o restante da frase sugere plural — por isso se diz faz dois anos e houve muitos candidatos, nunca fazem ou houveram. Já a crase é a fusão da preposição a com o artigo feminino a, e só ocorre antes de palavras que admitem esse artigo — por isso não existe crase antes de pronomes como ela, você ou ele, nem em locuções masculinas como a pé.'
+  },
+  {
+    id: 'pod_por_sintaxe',
+    topicId: 'por_sintaxe',
+    title: 'Análise sintática: identificando as funções da frase',
+    subject: 'Português',
+    durationMinutes: 5,
+    script: 'Analisar sintaticamente uma frase significa identificar a função de cada termo em relação ao verbo e ao restante da oração. O sujeito é quem pratica ou sofre a ação verbal; o objeto direto completa o sentido de verbos transitivos diretos, sem precisar de preposição; e o objeto indireto completa verbos transitivos indiretos, exigindo uma preposição. Já os adjuntos adverbiais expressam circunstâncias, como tempo, modo, causa ou concessão, sem serem exigidos obrigatoriamente pelo verbo. Reconhecer essas funções ajuda não só em questões de gramática, mas também na interpretação de textos mais complexos, já que a estrutura sintática organiza o sentido da frase.'
+  },
+  {
+    id: 'pod_por_texto',
+    topicId: 'por_texto',
+    title: 'Entendimento de texto: tese, argumentos e coesão',
+    subject: 'Português',
+    durationMinutes: 5,
+    script: 'Entender um texto vai além de captar seu significado literal: é preciso identificar a tese central defendida pelo autor e como os argumentos se articulam para sustentá-la. Conectivos como por outro lado, portanto ou apesar disso funcionam como sinalizadores dessa articulação, indicando relações de contraste, conclusão ou concessão entre as ideias. Essa habilidade de identificar a estrutura argumentativa de um texto é exatamente o que provas de interpretação de texto avaliam, indo muito além de simplesmente localizar informações explícitas — exigindo também inferência e compreensão das relações lógicas entre as partes do texto.'
+  },
+  {
+    id: 'pod_por_lit_classica_barroca',
+    topicId: 'por_lit_classica_barroca',
+    title: 'Literatura clássica, medieval e barroca',
+    subject: 'Português',
+    durationMinutes: 5,
+    script: 'O Barroco, movimento literário marcado pelo conflito entre valores religiosos e terrenos, entre fé e razão, caracteriza-se estilisticamente pelo cultismo, um jogo elaborado de palavras e metáforas, e pelo conceptismo, um jogo de ideias baseado em argumentação lógica. No Brasil colonial, Gregório de Matos, conhecido como Boca do Inferno, é o principal representante desse movimento, com poemas satíricos, religiosos e líricos que retratam as contradições da sociedade baiana da época. Entender esse contexto de conflito entre opostos é essencial para interpretar corretamente textos barrocos.'
+  },
+  {
+    id: 'pod_por_lit_romantismo_realismo',
+    topicId: 'por_lit_romantismo_realismo',
+    title: 'Romantismo e Realismo na literatura brasileira',
+    subject: 'Português',
+    durationMinutes: 6,
+    script: 'O Romantismo, movimento do século dezenove, exaltava o sentimentalismo, a subjetividade e o nacionalismo, muitas vezes idealizando o amor, a natureza e a figura do índio, como no indianismo de José de Alencar. Já o Realismo, que sucedeu o Romantismo, reagiu contra essa idealização, propondo uma análise mais crítica e objetiva da sociedade e da psicologia dos personagens — como em Dom Casmurro, de Machado de Assis, com sua narrativa ambígua e complexa. Comparar esses dois movimentos, entendendo o que cada um valorizava e criticava no anterior, é uma estratégia eficiente para responder questões que pedem contraste entre estilos de época.'
+  },
+  {
+    id: 'pod_por_lit_modernismo',
+    topicId: 'por_lit_modernismo',
+    title: 'Simbolismo, Pré-Modernismo e Modernismo',
+    subject: 'Português',
+    durationMinutes: 6,
+    script: 'O Simbolismo, de fins do século dezenove, valorizava a musicalidade, a sugestão e o subjetivismo, em oposição à objetividade do Realismo e do Naturalismo, tendo Cruz e Sousa como principal nome no Brasil. Já a Semana de Arte Moderna de 1922, em São Paulo, é considerada o marco inaugural do Modernismo brasileiro, propondo uma ruptura com estéticas tradicionais, como o Parnasianismo, e buscando uma identidade artística nacional renovada, com nomes como Mário e Oswald de Andrade. Entender essa transição entre movimentos ajuda a situar cronologicamente e estilisticamente as obras cobradas em provas.'
+  },
+  {
+    id: 'pod_por_lit_contemporanea',
+    topicId: 'por_lit_contemporanea',
+    title: 'Literatura brasileira contemporânea',
+    subject: 'Português',
+    durationMinutes: 5,
+    script: 'A literatura brasileira contemporânea, produzida a partir de meados do século vinte até os dias atuais, caracteriza-se por uma grande diversidade de estilos, temas e vozes, com maior espaço para autores antes marginalizados e forte diálogo com temas sociais urgentes. Autores como Clarice Lispector, reconhecida pela profunda introspecção psicológica de sua prosa, e Guimarães Rosa, conhecido pela experimentação linguística em obras como Grande Sertão: Veredas, são exemplos centrais dessa renovação da linguagem literária no século vinte, que ainda influencia a produção literária brasileira atual.'
+  },
+  {
+    id: 'pod_por_red_repertorio',
+    topicId: 'por_red_repertorio',
+    title: 'Repertório sociocultural: como usar a coletânea a seu favor',
+    subject: 'Português',
+    durationMinutes: 5,
+    script: 'Na redação do ENEM e de vestibulares similares, a coletânea de textos motivadores serve para contextualizar o tema, funcionando como ponto de partida — mas não como repertório suficiente por si só. É esperado que o candidato agregue repertório sociocultural próprio, evitando copiar ou apenas parafrasear os textos apresentados. Um repertório é considerado produtivo quando está efetivamente articulado ao argumento desenvolvido, contribuindo para sustentá-lo de forma pertinente ao tema — e não apenas citado de forma genérica, solto e sem conexão real com a linha argumentativa do texto.'
+  },
+  {
+    id: 'pod_por_red_argumentacao',
+    topicId: 'por_red_argumentacao',
+    title: 'Introdução, argumentação e coerência na redação',
+    subject: 'Português',
+    durationMinutes: 5,
+    script: 'Uma boa introdução dissertativo-argumentativa contextualiza o tema e apresenta claramente a tese que será defendida ao longo do texto. No desenvolvimento, cada parágrafo deve apresentar um argumento consistente, sustentado por repertório sociocultural pertinente, como dados estatísticos de fontes confiáveis — sempre articulados ao raciocínio do parágrafo, e não apenas citados soltos. A coerência argumentativa exige que os parágrafos dialoguem entre si, sem contradições, mantendo o foco na tese apresentada desde a introdução até a conclusão do texto.'
+  },
+  {
+    id: 'pod_por_red_estrutura_coesao',
+    topicId: 'por_red_estrutura_coesao',
+    title: 'Coesão, conclusão e proposta de intervenção',
+    subject: 'Português',
+    durationMinutes: 5,
+    script: 'A coesão textual é o que garante a fluidez entre as partes de uma redação, por meio de conectivos e referências que ligam frases e parágrafos de forma clara e organizada. Na conclusão, o texto deve retomar a tese, sintetizando os principais argumentos apresentados, e, no caso do ENEM, apresentar uma proposta de intervenção completa — com um agente definido, um meio de execução e uma finalidade clara, sempre coerente com os argumentos desenvolvidos ao longo do texto, e não uma ideia solta ao final.'
+  },
+  {
+    id: 'pod_por_red_direitos_modelo',
+    topicId: 'por_red_direitos_modelo',
+    title: 'Direitos humanos na redação: um princípio inegociável',
+    subject: 'Português',
+    durationMinutes: 5,
+    script: 'Ao abordar temas sociais sensíveis, como violência ou desigualdade, em uma redação dissertativo-argumentativa, é fundamental manter uma perspectiva de defesa e respeito aos direitos humanos como princípio inegociável — bancas como a do ENEM podem até zerar redações que desrespeitem esse princípio. Isso vale também para a proposta de intervenção: mesmo diante de temas como criminalidade, a solução proposta deve respeitar os direitos humanos, evitando responsabilizar exclusivamente as vítimas ou defender soluções puramente punitivas, sem qualquer dimensão social ou preventiva.'
+  },
+  {
+    id: 'pod_ing_01',
+    topicId: 'ing_01',
+    title: 'Reading comprehension: estratégias para o vestibular',
+    subject: 'Inglês',
+    durationMinutes: 5,
+    script: 'Questões de compreensão de texto em inglês, comuns em vestibulares, avaliam sua capacidade de entender um texto sem depender de tradução palavra por palavra. Uma estratégia eficiente é o skimming, uma leitura rápida para captar a ideia geral do texto antes de ler as perguntas, seguida do scanning, uma busca direcionada por informações específicas que as questões exigem. Preste atenção especial a conectivos como although, however e therefore, que sinalizam relações de contraste, concessão ou conclusão entre as ideias — exatamente como conectivos equivalentes funcionam em português. Você não precisa entender cada palavra do texto: focar na estrutura geral e nesses sinalizadores geralmente é suficiente para responder corretamente à maioria das questões.'
   }
 ];
 
