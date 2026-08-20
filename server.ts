@@ -15,6 +15,8 @@ import { FirestoreAiMetricsRecorder } from './server/ai/metrics';
 import { createAdminRouter } from './server/admin/routes';
 import { createPushRouter, createReviewReminderRouter } from './server/push/routes';
 import { configureWebPush, loadVapidConfig } from './server/push/webPush';
+import { createPodcastAudioRouter } from './server/podcast/routes';
+import { GeminiTtsService } from './server/podcast/ttsService';
 
 const app = express();
 const PORT = Number(process.env.PORT) || 3000;
@@ -34,6 +36,11 @@ const dailyQuotaStore = process.env.AI_QUOTA_STORE === 'firestore'
 const aiMetrics = process.env.AI_METRICS_STORE === 'firestore'
   ? new FirestoreAiMetricsRecorder(getFirestore(getFirebaseAdminApp()))
   : undefined;
+
+// Natural-voice podcast narration. Reuses the same GEMINI_API_KEY already
+// configured for text generation — Gemini's TTS models bill separately but
+// through the same account, and the daily AI quota below caps the cost.
+const podcastTtsService = new GeminiTtsService(process.env.GEMINI_API_KEY, process.env.GEMINI_TTS_MODEL);
 
 // Web Push for review reminders. Both routers still mount even when VAPID
 // isn't configured yet; they just respond 503 until the keys are set.
@@ -111,6 +118,9 @@ app.get('/api/drive/files', async (req, res) => {
 
 // AI routes preserve their public paths and `{ text }` response contract.
 app.use('/api/ai', firebaseAuthMiddleware(), createAiRateLimit(), createAiDailyLimit({ store: dailyQuotaStore }), createAiRouter(aiService, aiMetrics));
+// Shares the AI rate limit and daily quota store so narrated playback counts
+// against the same per-user budget as every other AI feature in the app.
+app.use('/api/podcast-audio', firebaseAuthMiddleware(), createAiRateLimit(), createAiDailyLimit({ store: dailyQuotaStore }), createPodcastAudioRouter(podcastTtsService));
 app.use('/api/admin', firebaseAuthMiddleware(), requireAdmin, createAdminRouter(getFirestore(getFirebaseAdminApp())));
 app.use('/api/push', createPushRouter(getFirestore(getFirebaseAdminApp()), vapidConfig?.publicKey, firebaseAuthMiddleware()));
 app.use('/api/push', createReviewReminderRouter(getFirestore(getFirebaseAdminApp()), vapidConfig, process.env.CRON_SECRET));

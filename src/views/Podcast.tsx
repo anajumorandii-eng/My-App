@@ -1,9 +1,10 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { mockPodcastEpisodes, mockTopics } from '../data/mockData';
 import { requestAiText } from '../lib/aiClient';
+import { synthesizePodcastAudio, podcastAudioErrorMessage } from '../lib/podcastAudio';
 import { useUserProfile } from '../hooks/useUserProfile';
 import { PodcastEpisode, UserProfile } from '../types';
-import { Headphones, Play, Square, Volume2, Sparkles, Clock } from 'lucide-react';
+import { Headphones, Play, Square, Volume2, Sparkles, Clock, Mic, Loader2 } from 'lucide-react';
 
 const SUBJECT_COLORS: Record<string, string> = {
   Biologia: 'bg-emerald-50 dark:bg-emerald-900/20 text-emerald-700 dark:text-emerald-300',
@@ -38,15 +39,30 @@ function orderByDurationPreference(
   return [...matching, ...rest];
 }
 
+// Curated subset of Gemini's prebuilt voices — matches server/podcast/routes.ts.
+const VOICE_OPTIONS: { value: string; label: string }[] = [
+  { value: 'Charon', label: 'Charon (informativa)' },
+  { value: 'Kore', label: 'Kore (firme)' },
+  { value: 'Aoede', label: 'Aoede (leve)' },
+  { value: 'Puck', label: 'Puck (animada)' },
+];
+const DEFAULT_VOICE = 'Charon';
+
 const speechSupported = typeof window !== 'undefined' && 'speechSynthesis' in window;
 
 export default function Podcast() {
   const { profile, updateProfile } = useUserProfile();
   const [playingId, setPlayingId] = useState<string | null>(null);
+  const [loadingId, setLoadingId] = useState<string | null>(null);
+  const [notice, setNotice] = useState<string | null>(null);
   const [aiScripts, setAiScripts] = useState<Record<string, string>>({});
   const [generatingId, setGeneratingId] = useState<string | null>(null);
 
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const audioCacheRef = useRef<Map<string, string>>(new Map());
+
   const durationPreference = profile.podcastDurationPreference ?? null;
+  const voiceName = profile.podcastVoiceName || DEFAULT_VOICE;
 
   const orderedEpisodes = useMemo(
     () => orderByDurationPreference(mockPodcastEpisodes, durationPreference),
@@ -65,16 +81,30 @@ export default function Podcast() {
     }));
   };
 
+  const setVoiceName = (value: string) => {
+    updateProfile((prev) => ({ ...prev, podcastVoiceName: value }));
+    setNotice(null);
+  };
+
   useEffect(() => {
+    audioRef.current = new Audio();
+    const cache = audioCacheRef.current;
     return () => {
+      audioRef.current?.pause();
+      cache.forEach((url) => URL.revokeObjectURL(url));
       if (speechSupported) window.speechSynthesis.cancel();
     };
   }, []);
 
-  const play = (episodeId: string, script: string) => {
-    if (!speechSupported) return;
-    window.speechSynthesis.cancel();
+  const stopAll = () => {
+    if (speechSupported) window.speechSynthesis.cancel();
+    audioRef.current?.pause();
+    setPlayingId(null);
+  };
 
+  const playWithBrowserVoice = (episodeId: string, script: string): boolean => {
+    if (!speechSupported) return false;
+    window.speechSynthesis.cancel();
     const utterance = new SpeechSynthesisUtterance(script);
     utterance.lang = 'pt-BR';
     utterance.rate = 0.95;
@@ -82,14 +112,49 @@ export default function Podcast() {
     if (ptVoice) utterance.voice = ptVoice;
     utterance.onend = () => setPlayingId(null);
     utterance.onerror = () => setPlayingId(null);
-
     setPlayingId(episodeId);
     window.speechSynthesis.speak(utterance);
+    return true;
   };
 
-  const stop = () => {
-    if (speechSupported) window.speechSynthesis.cancel();
-    setPlayingId(null);
+  const playObjectUrl = (episodeId: string, url: string) => {
+    const audio = audioRef.current;
+    if (!audio) return;
+    audio.src = url;
+    audio.onended = () => setPlayingId(null);
+    audio.onerror = () => setPlayingId(null);
+    audio.play().then(() => setPlayingId(episodeId)).catch(() => setPlayingId(null));
+  };
+
+  const play = async (episodeId: string, script: string) => {
+    if (playingId === episodeId) {
+      stopAll();
+      return;
+    }
+    stopAll();
+
+    const cacheKey = `${episodeId}::${voiceName}::${script}`;
+    const cachedUrl = audioCacheRef.current.get(cacheKey);
+    if (cachedUrl) {
+      playObjectUrl(episodeId, cachedUrl);
+      return;
+    }
+
+    setLoadingId(episodeId);
+    try {
+      const blob = await synthesizePodcastAudio(script, voiceName);
+      const url = URL.createObjectURL(blob);
+      audioCacheRef.current.set(cacheKey, url);
+      setNotice(null);
+      playObjectUrl(episodeId, url);
+    } catch (error) {
+      console.error('Failed to synthesize podcast audio:', error);
+      const message = podcastAudioErrorMessage(error);
+      const fellBack = playWithBrowserVoice(episodeId, script);
+      setNotice(fellBack ? `${message} Tocando com a voz do navegador enquanto isso.` : message);
+    } finally {
+      setLoadingId(null);
+    }
   };
 
   const generateScript = async (episodeId: string, title: string, subject: string, topicId: string) => {
@@ -113,46 +178,74 @@ export default function Podcast() {
           Podcast JUJU
         </h1>
         <p className="text-zinc-500 dark:text-zinc-400">
-          Resumos em áudio dos seus tópicos, narrados direto no navegador — ótimo para revisar no trajeto.
+          Resumos em áudio dos seus tópicos, narrados com voz natural — ótimo para revisar no trajeto.
         </p>
       </header>
 
-      {!speechSupported && (
+      {notice && (
         <div className="p-4 rounded-xl bg-amber-50 dark:bg-amber-900/20 text-amber-800 dark:text-amber-300 text-sm">
-          Seu navegador não tem suporte a narração por voz (Web Speech API). Tente em outro navegador para ouvir os episódios.
+          {notice}
         </div>
       )}
 
-      <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-4">
-        <div className="flex items-center text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-2">
-          <Clock className="w-4 h-4 mr-2 text-indigo-500" />
-          Duração preferida
+      <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-4 space-y-4">
+        <div>
+          <div className="flex items-center text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-2">
+            <Mic className="w-4 h-4 mr-2 text-indigo-500" />
+            Voz do narrador
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {VOICE_OPTIONS.map(({ value, label }) => (
+              <button
+                key={value}
+                onClick={() => setVoiceName(value)}
+                className={`px-3 py-1.5 rounded-lg text-xs font-medium border transition-colors ${
+                  voiceName === value
+                    ? 'bg-indigo-600 border-indigo-600 text-white'
+                    : 'border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-50 dark:hover:bg-zinc-800'
+                }`}
+              >
+                {label}
+              </button>
+            ))}
+          </div>
+          <p className="text-xs text-zinc-500 mt-2">
+            Episódios já ouvidos com a voz atual tocam na hora; trocar a voz gera um novo áudio na próxima vez que você apertar play.
+          </p>
         </div>
-        <div className="flex flex-wrap gap-2">
-          {DURATION_BUCKETS.map(({ value, label }) => (
-            <button
-              key={value}
-              onClick={() => setDurationPreference(value)}
-              className={`px-3 py-1.5 rounded-lg text-xs font-medium border transition-colors ${
-                durationPreference === value
-                  ? 'bg-indigo-600 border-indigo-600 text-white'
-                  : 'border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-50 dark:hover:bg-zinc-800'
-              }`}
-            >
-              {label}
-            </button>
-          ))}
+
+        <div className="border-t border-zinc-100 dark:border-zinc-800 pt-4">
+          <div className="flex items-center text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-2">
+            <Clock className="w-4 h-4 mr-2 text-indigo-500" />
+            Duração preferida
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {DURATION_BUCKETS.map(({ value, label }) => (
+              <button
+                key={value}
+                onClick={() => setDurationPreference(value)}
+                className={`px-3 py-1.5 rounded-lg text-xs font-medium border transition-colors ${
+                  durationPreference === value
+                    ? 'bg-indigo-600 border-indigo-600 text-white'
+                    : 'border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-50 dark:hover:bg-zinc-800'
+                }`}
+              >
+                {label}
+              </button>
+            ))}
+          </div>
+          <p className="text-xs text-zinc-500 mt-2">
+            {durationPreference
+              ? `Mostrando primeiro os ${matchingCount} de ${mockPodcastEpisodes.length} episódios nessa faixa de duração — os demais continuam logo abaixo, nada fica escondido.`
+              : 'Sem preferência: os episódios aparecem na ordem padrão. Escolha uma faixa para trazer episódios dessa duração para o topo da lista.'}
+          </p>
         </div>
-        <p className="text-xs text-zinc-500 mt-2">
-          {durationPreference
-            ? `Mostrando primeiro os ${matchingCount} de ${mockPodcastEpisodes.length} episódios nessa faixa de duração — os demais continuam logo abaixo, nada fica escondido.`
-            : 'Sem preferência: os episódios aparecem na ordem padrão. Escolha uma faixa para trazer episódios dessa duração para o topo da lista.'}
-        </p>
       </div>
 
       <div className="space-y-3">
         {orderedEpisodes.map((episode) => {
           const isPlaying = playingId === episode.id;
+          const isLoadingAudio = loadingId === episode.id;
           const isGenerating = generatingId === episode.id;
           const aiScript = aiScripts[episode.id];
           const activeScript = aiScript ?? episode.script;
@@ -165,15 +258,21 @@ export default function Podcast() {
               <div className="flex items-center justify-between">
                 <div className="flex items-center min-w-0">
                   <button
-                    onClick={() => (isPlaying ? stop() : play(episode.id, activeScript))}
-                    disabled={!speechSupported}
+                    onClick={() => play(episode.id, activeScript)}
+                    disabled={isLoadingAudio}
                     className={`w-11 h-11 rounded-full flex items-center justify-center mr-4 shrink-0 transition-colors ${
                       isPlaying
                         ? 'bg-indigo-600 text-white'
                         : 'bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 hover:bg-indigo-100 dark:hover:bg-indigo-900/50'
                     } disabled:opacity-40`}
                   >
-                    {isPlaying ? <Square className="w-4 h-4" /> : <Play className="w-4 h-4 ml-0.5" />}
+                    {isLoadingAudio ? (
+                      <Loader2 className="w-4 h-4 animate-spin" />
+                    ) : isPlaying ? (
+                      <Square className="w-4 h-4" />
+                    ) : (
+                      <Play className="w-4 h-4 ml-0.5" />
+                    )}
                   </button>
                   <div className="min-w-0">
                     <h4 className="font-semibold truncate flex items-center">

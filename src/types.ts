@@ -23,6 +23,8 @@ export interface UserProfile {
   autonomyIndex: number; // 0 to 100
   // Optional: absent for profiles saved before this preference existed — treat as "sem preferência".
   podcastDurationPreference?: 'curto' | 'medio' | 'longo' | null;
+  // Optional: which Gemini TTS voice narrates podcast episodes. Absent/null falls back to the default voice.
+  podcastVoiceName?: string | null;
 }
 
 // A menor ação capaz de testar ou corrigir a lacuna diagnosticada — em
