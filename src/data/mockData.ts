@@ -769,43 +769,164 @@ export const mockErrorLogs: ErrorLog[] = [
 ];
 
 export const mockQuestions: Question[] = [
-  // Biologia — Citologia
+  // Biologia — Metabolismo Energético
   {
-    id: 'q_bio_01_1',
+    id: 'q_bio_metabolismo_energetico_1',
     topicId: 'bio_metabolismo_energetico',
     subject: 'Biologia',
-    prompt: 'Qual organela é responsável pela produção de ATP através da respiração celular aeróbica?',
+    prompt: 'Na respiração celular aeróbica, a etapa conhecida como glicólise ocorre em qual compartimento da célula, e qual é o seu principal produto imediato antes das etapas seguintes?',
     options: [
-      { id: 'a', text: 'Complexo de Golgi' },
-      { id: 'b', text: 'Mitocôndria' },
-      { id: 'c', text: 'Retículo endoplasmático liso' },
-      { id: 'd', text: 'Lisossomo' }
+      { id: 'a', text: 'Na matriz mitocondrial, produzindo diretamente CO2 e H2O' },
+      { id: 'b', text: 'No citoplasma (citosol), produzindo ácido pirúvico (piruvato)' },
+      { id: 'c', text: 'Na membrana interna da mitocôndria, produzindo ATP em grande quantidade' },
+      { id: 'd', text: 'No núcleo celular, produzindo diretamente moléculas de glicose' }
     ],
     correctOptionId: 'b',
-    explanation: 'A mitocôndria realiza a fosforilação oxidativa na cadeia transportadora de elétrons, gerando a maior parte do ATP celular.',
+    explanation: 'A glicólise ocorre no citosol (fora da mitocôndria) e quebra uma molécula de glicose em duas de ácido pirúvico, com saldo líquido de 2 ATP e 2 NADH. Só depois, na presença de oxigênio, o piruvato entra na mitocôndria para as etapas seguintes (ciclo de Krebs e cadeia respiratória).',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_metabolismo_energetico_2',
+    topicId: 'bio_metabolismo_energetico',
+    subject: 'Biologia',
+    prompt: 'Na ausência de oxigênio, células musculares humanas realizam fermentação lática em vez de respiração aeróbica completa. Isso ocorre principalmente porque:',
+    options: [
+      { id: 'a', text: 'A fermentação produz muito mais ATP por molécula de glicose que a respiração aeróbica' },
+      { id: 'b', text: 'A fermentação regenera o NAD+ consumido na glicólise, permitindo que ela continue mesmo sem oxigênio disponível' },
+      { id: 'c', text: 'A fermentação ocorre exclusivamente na mitocôndria, dispensando o oxigênio' },
+      { id: 'd', text: 'A fermentação converte diretamente glicose em CO2 e água' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Sem oxigênio, a cadeia transportadora de elétrons para, e o NADH da glicólise não pode ser reoxidado a NAD+ por essa via. A fermentação lática regenera NAD+ ao converter piruvato em ácido lático, permitindo que a glicólise continue produzindo ATP (embora com rendimento energético bem menor que a respiração aeróbica completa).',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_bio_metabolismo_energetico_3',
+    topicId: 'bio_metabolismo_energetico',
+    subject: 'Biologia',
+    prompt: 'Na fotossíntese, as reações da fase clara (fotoquímica), que ocorrem nas membranas dos tilacoides, têm como principal função:',
+    options: [
+      { id: 'a', text: 'Fixar CO2 diretamente em moléculas de glicose' },
+      { id: 'b', text: 'Converter energia luminosa em energia química (ATP e NADPH), além de liberar O2 a partir da quebra da água' },
+      { id: 'c', text: 'Realizar exclusivamente a respiração celular da planta' },
+      { id: 'd', text: 'Armazenar amido nos cloroplastos sem qualquer produção de energia' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Na fase clara (fotoquímica), pigmentos fotossintéticos captam energia luminosa para produzir ATP e NADPH, usados na fase seguinte (ciclo de Calvin) para fixar CO2 em glicose. A quebra da água (fotólise) nessa fase libera O2 como subproduto.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_metabolismo_energetico_4',
+    topicId: 'bio_metabolismo_energetico',
+    subject: 'Biologia',
+    prompt: 'O ciclo de Krebs, etapa da respiração celular aeróbica que ocorre na matriz mitocondrial, tem como principal função:',
+    options: [
+      { id: 'a', text: 'Produzir a maior parte do ATP celular diretamente' },
+      { id: 'b', text: 'Oxidar completamente o acetil-CoA, liberando CO2 e gerando a maior parte dos transportadores de elétrons (NADH e FADH2) usados na cadeia respiratória' },
+      { id: 'c', text: 'Realizar a fotólise da água' },
+      { id: 'd', text: 'Converter diretamente glicose em ácido pirúvico' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'O ciclo de Krebs oxida o acetil-CoA (derivado do piruvato) em uma série de reações que liberam CO2 e produzem NADH e FADH2 — os principais transportadores de elétrons que alimentam a cadeia respiratória, onde a maior parte do ATP é de fato produzida.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_bio_metabolismo_energetico_5',
+    topicId: 'bio_metabolismo_energetico',
+    subject: 'Biologia',
+    prompt: 'Comparando a respiração celular aeróbica completa com a fermentação, a principal razão pela qual a respiração aeróbica produz muito mais ATP por molécula de glicose é que:',
+    options: [
+      { id: 'a', text: 'A respiração aeróbica usa o oxigênio como aceptor final de elétrons na cadeia respiratória, permitindo a oxidação completa da glicose e a produção de muito mais ATP na fosforilação oxidativa' },
+      { id: 'b', text: 'A fermentação ocorre mais rapidamente, mas produz moléculas maiores de ATP' },
+      { id: 'c', text: 'A respiração aeróbica não depende de nenhuma etapa citoplasmática' },
+      { id: 'd', text: 'A fermentação consome mais glicose por molécula de ATP produzida, mas gera mais energia por essa razão' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Na respiração aeróbica, o oxigênio como aceptor final de elétrons permite que a cadeia transportadora de elétrons opere plenamente, gerando um grande gradiente de prótons usado pela ATP sintase para produzir muito mais ATP (por fosforilação oxidativa) do que a fermentação, que para na glicólise e produz apenas 2 ATP líquidos por glicose.',
+    difficulty: 'hard'
+  },
+  // Biologia — Código Genético e Síntese Proteica
+  {
+    id: 'q_bio_codigo_genetico_sintese_1',
+    topicId: 'bio_codigo_genetico_sintese',
+    subject: 'Biologia',
+    prompt: 'No processo de transcrição, a enzima RNA polimerase utiliza uma das fitas do DNA como molde para sintetizar uma molécula de:',
+    options: [
+      { id: 'a', text: 'DNA, formando uma cópia idêntica do cromossomo' },
+      { id: 'b', text: 'RNA mensageiro (ou outro tipo de RNA), complementar à fita molde de DNA' },
+      { id: 'c', text: 'Proteína, diretamente a partir do DNA' },
+      { id: 'd', text: 'Um novo gene, inserido em outro local do genoma' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A transcrição é o processo de síntese de RNA (mensageiro, ribossômico, transportador, entre outros) a partir de uma fita de DNA usada como molde, com pareamento de bases complementares (com uracila no lugar da timina no RNA).',
     difficulty: 'easy'
   },
   {
-    id: 'q_bio_01_2',
+    id: 'q_bio_codigo_genetico_sintese_2',
     topicId: 'bio_codigo_genetico_sintese',
     subject: 'Biologia',
-    prompt: 'Qual estrutura é responsável pela síntese de proteínas na célula?',
+    prompt: 'Durante a tradução, cada trinca de nucleotídeos do RNA mensageiro (um códon) especifica:',
     options: [
-      { id: 'a', text: 'Ribossomo' },
-      { id: 'b', text: 'Complexo de Golgi' },
-      { id: 'c', text: 'Peroxissomo' },
-      { id: 'd', text: 'Vacúolo' }
+      { id: 'a', text: 'Um cromossomo inteiro' },
+      { id: 'b', text: 'Um aminoácido específico (ou um sinal de início/término da tradução)' },
+      { id: 'c', text: 'Uma molécula completa de DNA' },
+      { id: 'd', text: 'Um ribossomo específico' }
     ],
-    correctOptionId: 'a',
-    explanation: 'Os ribossomos traduzem o RNA mensageiro em cadeias polipeptídicas, sendo a estrutura responsável pela síntese proteica, livres no citoplasma ou aderidos ao retículo endoplasmático rugoso.',
-    difficulty: 'easy'
+    correctOptionId: 'b',
+    explanation: 'O código genético é lido em trincas (códons); cada códon corresponde a um aminoácido específico (ou a um sinal de início — AUG — ou de término da tradução), sendo decodificado pelos RNAs transportadores durante a síntese da proteína no ribossomo.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_codigo_genetico_sintese_3',
+    topicId: 'bio_codigo_genetico_sintese',
+    subject: 'Biologia',
+    prompt: 'Uma mutação pontual troca um único nucleotídeo em um gene, mas o aminoácido codificado permanece o mesmo, sem alterar a proteína final. Esse tipo de mutação é chamado de:',
+    options: [
+      { id: 'a', text: 'Mutação missense (com troca de sentido)' },
+      { id: 'b', text: 'Mutação silenciosa (sinônima)' },
+      { id: 'c', text: 'Mutação nonsense (sem sentido)' },
+      { id: 'd', text: 'Mutação por deleção' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Por causa da degenerescência do código genético (vários códons diferentes podem especificar o mesmo aminoácido), uma troca de nucleotídeo pode gerar um códon diferente que ainda assim codifica o mesmo aminoácido — essa é a mutação silenciosa (ou sinônima), que não altera a proteína final.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_bio_codigo_genetico_sintese_4',
+    topicId: 'bio_codigo_genetico_sintese',
+    subject: 'Biologia',
+    prompt: 'Os ribossomos, estruturas responsáveis pela tradução do RNA mensageiro em proteínas, são compostos por:',
+    options: [
+      { id: 'a', text: 'DNA e proteínas' },
+      { id: 'b', text: 'RNA ribossômico (rRNA) e proteínas' },
+      { id: 'c', text: 'Apenas lipídios de membrana' },
+      { id: 'd', text: 'Exclusivamente RNA transportador (tRNA)' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Os ribossomos são formados por duas subunidades compostas de RNA ribossômico (rRNA) associado a proteínas; eles não são delimitados por membrana e podem estar livres no citoplasma ou associados ao retículo endoplasmático rugoso.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_codigo_genetico_sintese_5',
+    topicId: 'bio_codigo_genetico_sintese',
+    subject: 'Biologia',
+    prompt: 'O código genético é considerado universal porque:',
+    options: [
+      { id: 'a', text: 'Todos os organismos possuem exatamente o mesmo número de genes' },
+      { id: 'b', text: 'A correspondência entre códons e aminoácidos é, com raríssimas exceções, a mesma em praticamente todos os seres vivos' },
+      { id: 'c', text: 'Todos os organismos usam apenas DNA, nunca RNA, na síntese proteica' },
+      { id: 'd', text: 'Cada espécie tem seu próprio código genético exclusivo' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A universalidade do código genético significa que o mesmo códon especifica, com raríssimas exceções, o mesmo aminoácido em organismos tão diferentes quanto bactérias, plantas e humanos — evidência forte da ancestralidade comum de toda a vida na Terra, e o que torna possível, por exemplo, transferir genes entre espécies diferentes na biotecnologia.',
+    difficulty: 'medium'
   },
   // Biologia — Genética
   {
-    id: 'q_bio_02_1',
+    id: 'q_bio_genetica_1',
     topicId: 'bio_genetica',
     subject: 'Biologia',
-    prompt: 'No cruzamento entre dois heterozigotos (Aa x Aa), qual a proporção fenotípica esperada considerando dominância completa?',
+    prompt: 'No cruzamento entre dois heterozigotos (Aa x Aa), considerando dominância completa, qual é a proporção fenotípica esperada na prole?',
     options: [
       { id: 'a', text: '1:1' },
       { id: 'b', text: '1:2:1' },
@@ -813,30 +934,60 @@ export const mockQuestions: Question[] = [
       { id: 'd', text: '9:3:3:1' }
     ],
     correctOptionId: 'c',
-    explanation: 'Com dominância completa, o cruzamento Aa x Aa produz genótipos na proporção 1AA:2Aa:1aa, resultando em fenótipos 3 dominantes : 1 recessivo.',
+    explanation: 'Com dominância completa, o cruzamento Aa x Aa produz genótipos na proporção 1AA:2Aa:1aa. Como AA e Aa têm o mesmo fenótipo dominante, a proporção fenotípica resultante é 3 dominantes : 1 recessivo.',
     difficulty: 'medium'
   },
   {
-    id: 'q_bio_02_2',
+    id: 'q_bio_genetica_2',
     topicId: 'bio_genetica',
     subject: 'Biologia',
-    prompt: 'Qual é a probabilidade de dois indivíduos heterozigotos Aa gerarem um filho homozigoto recessivo (aa)?',
+    prompt: 'Em um cruzamento di-híbrido entre dois indivíduos duplo-heterozigotos (AaBb x AaBb), com genes localizados em cromossomos diferentes (segregação independente), qual é a proporção fenotípica esperada na prole?',
     options: [
-      { id: 'a', text: '0%' },
-      { id: 'b', text: '25%' },
-      { id: 'c', text: '50%' },
-      { id: 'd', text: '75%' }
+      { id: 'a', text: '3:1' },
+      { id: 'b', text: '1:1:1:1' },
+      { id: 'c', text: '9:3:3:1' },
+      { id: 'd', text: '1:2:1' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'Pela Segunda Lei de Mendel (segregação independente), genes em cromossomos diferentes se combinam de forma independente. O cruzamento AaBb x AaBb gera a clássica proporção fenotípica 9:3:3:1 entre as quatro combinações possíveis de fenótipos.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_bio_genetica_3',
+    topicId: 'bio_genetica',
+    subject: 'Biologia',
+    prompt: 'Um casal tem um filho com um distúrbio genético recessivo autossômico, embora nenhum dos pais manifeste a doença. Isso é possível porque:',
+    options: [
+      { id: 'a', text: 'A doença surgiu por uma mutação espontânea apenas no filho, sem relação com os genes dos pais' },
+      { id: 'b', text: 'Ambos os pais são heterozigotos (portadores), carregando o alelo recessivo sem manifestar a doença, e cada um transmitiu esse alelo ao filho' },
+      { id: 'c', text: 'A doença é obrigatoriamente ligada ao cromossomo Y' },
+      { id: 'd', text: 'Um distúrbio recessivo nunca pode aparecer em um filho se os pais não o têm' }
     ],
     correctOptionId: 'b',
-    explanation: 'No cruzamento Aa x Aa, a proporção genotípica esperada é 1AA:2Aa:1aa, portanto 1/4 (25%) de chance de gerar um filho aa.',
+    explanation: 'Em uma doença autossômica recessiva, indivíduos heterozigotos (Aa) são portadores assintomáticos, pois o alelo dominante normal (A) mascara o efeito do alelo recessivo (a). Se ambos os pais são Aa, há 25% de chance de um filho herdar dois alelos recessivos (aa) e manifestar a doença, mesmo sem nenhum dos pais manifestá-la.',
     difficulty: 'medium'
   },
-  // Biologia — Fisiologia Humana
   {
-    id: 'q_bio_03_1',
+    id: 'q_bio_genetica_4',
+    topicId: 'bio_genetica',
+    subject: 'Biologia',
+    prompt: 'A hemofilia é uma condição recessiva ligada ao cromossomo X. Se uma mulher heterozigota (portadora, XHXh) tem filhos com um homem não hemofílico (XHY), qual é a probabilidade de um filho homem nascer hemofílico?',
+    options: [
+      { id: 'a', text: '0%' },
+      { id: 'b', text: '25% do total de filhos, ou 50% considerando apenas os filhos homens' },
+      { id: 'c', text: '100% dos filhos homens' },
+      { id: 'd', text: '50% do total de filhos, incluindo meninas' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Os filhos homens recebem o cromossomo Y do pai e um X da mãe. Da mãe heterozigota (XHXh), metade dos gametas carrega Xh. Logo, metade dos filhos homens (XhY) será hemofílica — o que corresponde a 25% do total de filhos (meninos e meninas juntos), ou 50% considerando apenas os filhos do sexo masculino.',
+    difficulty: 'hard'
+  },
+  // Biologia — Fisiologia Animal e Humana
+  {
+    id: 'q_bio_fisio_animal_1',
     topicId: 'bio_fisio_animal',
     subject: 'Biologia',
-    prompt: 'Qual câmara do coração bombeia sangue oxigenado para todo o corpo através da artéria aorta?',
+    prompt: 'No sistema circulatório humano, qual câmara do coração bombeia sangue oxigenado para todo o corpo através da artéria aorta?',
     options: [
       { id: 'a', text: 'Átrio direito' },
       { id: 'b', text: 'Ventrículo direito' },
@@ -844,30 +995,75 @@ export const mockQuestions: Question[] = [
       { id: 'd', text: 'Ventrículo esquerdo' }
     ],
     correctOptionId: 'd',
-    explanation: 'O ventrículo esquerdo recebe sangue oxigenado do átrio esquerdo (vindo dos pulmões) e o bombeia com alta pressão para a aorta, distribuindo-o para todo o corpo.',
+    explanation: 'O ventrículo esquerdo recebe sangue oxigenado do átrio esquerdo (vindo dos pulmões) e o bombeia com alta pressão para a aorta, distribuindo-o para todo o corpo — por isso tem a parede muscular mais espessa entre as quatro câmaras.',
     difficulty: 'easy'
   },
   {
-    id: 'q_bio_03_2',
+    id: 'q_bio_fisio_animal_2',
     topicId: 'bio_fisio_animal',
     subject: 'Biologia',
-    prompt: 'Qual é a principal função dos néfrons nos rins?',
+    prompt: 'Nos néfrons, unidades funcionais dos rins, a filtração do sangue ocorre em uma estrutura específica antes que o filtrado seja modificado ao longo dos túbulos renais. Essa estrutura é:',
     options: [
-      { id: 'a', text: 'Produzir hemácias' },
-      { id: 'b', text: 'Filtrar o sangue e formar a urina' },
-      { id: 'c', text: 'Armazenar bile' },
-      { id: 'd', text: 'Regular a temperatura corporal' }
+      { id: 'a', text: 'A alça de Henle' },
+      { id: 'b', text: 'O glomérulo (dentro da cápsula de Bowman)' },
+      { id: 'c', text: 'O ducto coletor' },
+      { id: 'd', text: 'A bexiga urinária' }
     ],
     correctOptionId: 'b',
-    explanation: 'Os néfrons são as unidades funcionais dos rins, responsáveis por filtrar o sangue, reabsorver substâncias úteis e formar a urina, eliminando excretas e regulando o equilíbrio hídrico.',
-    difficulty: 'easy'
+    explanation: 'A filtração do sangue ocorre no glomérulo, um novelo de capilares envolvido pela cápsula de Bowman. O filtrado inicial (semelhante ao plasma, sem as proteínas grandes) segue então pelos túbulos renais (túbulo contorcido proximal, alça de Henle, túbulo contorcido distal) onde ocorrem reabsorção e secreção seletivas até formar a urina final.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_fisio_animal_3',
+    topicId: 'bio_fisio_animal',
+    subject: 'Biologia',
+    prompt: 'No sistema nervoso, a transmissão do impulso nervoso entre dois neurônios ocorre em uma região especializada chamada sinapse, geralmente por meio de:',
+    options: [
+      { id: 'a', text: 'Contato elétrico direto entre as membranas dos dois neurônios, em todos os casos' },
+      { id: 'b', text: 'Liberação de neurotransmissores químicos pelo neurônio pré-sináptico, que se ligam a receptores no neurônio pós-sináptico' },
+      { id: 'c', text: 'Transferência direta de DNA entre os neurônios' },
+      { id: 'd', text: 'Fusão completa das membranas dos dois neurônios' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Na sinapse química (a mais comum), o neurônio pré-sináptico libera neurotransmissores na fenda sináptica; esses neurotransmissores se ligam a receptores específicos na membrana do neurônio pós-sináptico, podendo gerar um novo impulso nervoso (existem também sinapses elétricas, mais raras, com contato direto).',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_fisio_animal_4',
+    topicId: 'bio_fisio_animal',
+    subject: 'Biologia',
+    prompt: 'Durante a respiração pulmonar humana, a troca gasosa (difusão de O2 e CO2) entre o ar e o sangue ocorre principalmente em qual estrutura?',
+    options: [
+      { id: 'a', text: 'Na traqueia' },
+      { id: 'b', text: 'Nos brônquios principais' },
+      { id: 'c', text: 'Nos alvéolos pulmonares' },
+      { id: 'd', text: 'Na laringe' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'Os alvéolos pulmonares são pequenas bolsas de paredes finíssimas, envoltas por uma extensa rede de capilares sanguíneos, o que oferece grande área de superfície para a difusão eficiente de O2 (do ar para o sangue) e CO2 (do sangue para o ar). Traqueia, brônquios e laringe apenas conduzem o ar, sem realizar troca gasosa significativa.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_fisio_animal_5',
+    topicId: 'bio_fisio_animal',
+    subject: 'Biologia',
+    prompt: 'O sistema endócrino regula diversas funções do corpo por meio da liberação de hormônios na corrente sanguínea. Uma das principais diferenças entre a regulação hormonal (endócrina) e a regulação nervosa é que a regulação hormonal geralmente:',
+    options: [
+      { id: 'a', text: 'Age de forma mais lenta, mas com efeitos mais duradouros, já que os hormônios viajam pelo sangue até órgãos-alvo distantes' },
+      { id: 'b', text: 'Age de forma instantânea, sempre mais rápida que o sistema nervoso' },
+      { id: 'c', text: 'Não depende de receptores específicos nas células-alvo' },
+      { id: 'd', text: 'Atua exclusivamente sobre o próprio órgão que produziu o hormônio' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Hormônios são liberados na corrente sanguínea e podem levar segundos a horas para alcançar órgãos-alvo distantes, mas seus efeitos tendem a ser mais duradouros (minutos a dias) que os do sistema nervoso, que transmite impulsos elétricos quase instantaneamente, mas com efeitos geralmente mais breves e localizados.',
+    difficulty: 'hard'
   },
   // Biologia — Ecologia
   {
-    id: 'q_bio_04_1',
+    id: 'q_bio_ecologia_1',
     topicId: 'bio_ecologia',
     subject: 'Biologia',
-    prompt: 'Em uma cadeia alimentar, qual nível trófico é ocupado pelos organismos que realizam fotossíntese?',
+    prompt: 'Em uma cadeia alimentar, os organismos que realizam fotossíntese (como plantas e algas) ocupam qual nível trófico, na base de toda a cadeia?',
     options: [
       { id: 'a', text: 'Consumidores primários' },
       { id: 'b', text: 'Consumidores secundários' },
@@ -875,85 +1071,205 @@ export const mockQuestions: Question[] = [
       { id: 'd', text: 'Decompositores' }
     ],
     correctOptionId: 'c',
-    explanation: 'Os produtores (como plantas e algas) realizam fotossíntese, convertendo energia luminosa em energia química, e ocupam a base de toda cadeia alimentar.',
+    explanation: 'Os produtores (como plantas e algas) realizam fotossíntese, convertendo energia luminosa em energia química, e ocupam a base de toda cadeia alimentar — são a única entrada de energia (via luz solar) na maioria dos ecossistemas.',
     difficulty: 'easy'
   },
   {
-    id: 'q_bio_04_2',
+    id: 'q_bio_ecologia_2',
     topicId: 'bio_ecologia',
     subject: 'Biologia',
-    prompt: 'O que caracteriza uma relação de mutualismo entre duas espécies?',
+    prompt: 'Em uma relação de mutualismo entre duas espécies, como no caso clássico dos líquens (associação entre fungos e algas/cianobactérias), o que caracteriza esse tipo de interação ecológica?',
     options: [
       { id: 'a', text: 'Uma espécie se beneficia e a outra é prejudicada' },
-      { id: 'b', text: 'Ambas as espécies se beneficiam e frequentemente dependem uma da outra' },
+      { id: 'b', text: 'Ambas as espécies se beneficiam da interação, frequentemente de forma obrigatória (nenhuma sobrevive isoladamente)' },
       { id: 'c', text: 'Uma espécie se beneficia e a outra não é afetada' },
-      { id: 'd', text: 'Ambas as espécies competem pelo mesmo recurso' }
+      { id: 'd', text: 'Ambas as espécies competem diretamente pelo mesmo recurso' }
     ],
     correctOptionId: 'b',
-    explanation: 'No mutualismo, as duas espécies envolvidas se beneficiam da interação, muitas vezes de forma obrigatória, como no caso de líquens (fungos e algas/cianobactérias).',
+    explanation: 'No mutualismo, as duas espécies envolvidas se beneficiam da interação. No caso dos líquens, o fungo obtém compostos orgânicos produzidos pela fotossíntese da alga/cianobactéria, enquanto esta recebe proteção e retenção de água do fungo — uma relação tão estreita que nenhum dos dois sobrevive isoladamente na natureza.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_ecologia_3',
+    topicId: 'bio_ecologia',
+    subject: 'Biologia',
+    prompt: 'A eficiência ecológica de transferência de energia entre níveis tróficos consecutivos (por exemplo, de produtores para consumidores primários) costuma ser de apenas cerca de 10%. Isso explica principalmente por que:',
+    options: [
+      { id: 'a', text: 'Cadeias alimentares muito longas (com muitos níveis tróficos) são raras, já que a energia disponível diminui drasticamente a cada nível' },
+      { id: 'b', text: 'Todos os ecossistemas possuem exatamente o mesmo número de níveis tróficos' },
+      { id: 'c', text: 'Os decompositores recebem mais energia que os produtores' },
+      { id: 'd', text: 'A energia se acumula igualmente em todos os níveis tróficos, sem perdas' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A cada nível trófico, a maior parte da energia é perdida (na forma de calor, através da respiração, ou não é consumida/digerida), restando apenas cerca de 10% para o próximo nível. Por isso, após poucos níveis tróficos, a energia disponível se torna tão pequena que não sustenta mais um nível adicional — daí a raridade de cadeias alimentares muito longas.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_bio_ecologia_4',
+    topicId: 'bio_ecologia',
+    subject: 'Biologia',
+    prompt: 'Os decompositores (fungos e bactérias decompositoras) desempenham um papel fundamental nos ecossistemas porque:',
+    options: [
+      { id: 'a', text: 'Produzem energia luminosa para os produtores' },
+      { id: 'b', text: 'Decompõem matéria orgânica morta, devolvendo nutrientes inorgânicos ao ambiente, para serem reaproveitados pelos produtores' },
+      { id: 'c', text: 'Ocupam sempre o topo da cadeia alimentar' },
+      { id: 'd', text: 'Realizam fotossíntese em conjunto com as plantas' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Os decompositores quebram a matéria orgânica de organismos mortos (e de excretas), liberando nutrientes inorgânicos (como nitrogênio e fósforo) de volta ao solo ou à água, onde podem ser reabsorvidos pelos produtores — fechando os ciclos biogeoquímicos dos ecossistemas.',
     difficulty: 'medium'
   },
   // Biologia — Evolução
   {
-    id: 'q_bio_05_1',
+    id: 'q_bio_evolucao_1',
     topicId: 'bio_evolucao',
     subject: 'Biologia',
-    prompt: 'Segundo a teoria da seleção natural de Darwin, o que determina a sobrevivência e reprodução diferencial dos indivíduos em uma população?',
+    prompt: 'Segundo a teoria da seleção natural de Darwin, o que determina a sobrevivência e reprodução diferencial dos indivíduos de uma população ao longo de gerações?',
     options: [
-      { id: 'a', text: 'O uso e desuso das características' },
-      { id: 'b', text: 'Características adquiridas durante a vida' },
-      { id: 'c', text: 'Variações hereditárias mais adaptadas ao ambiente' },
-      { id: 'd', text: 'A vontade do organismo em se adaptar' }
+      { id: 'a', text: 'O uso e desuso das características ao longo da vida do indivíduo' },
+      { id: 'b', text: 'Características adquiridas durante a vida, transmitidas depois à prole' },
+      { id: 'c', text: 'Variações hereditárias pré-existentes na população, algumas mais adaptadas ao ambiente que outras' },
+      { id: 'd', text: 'A vontade consciente do organismo em se adaptar ao ambiente' }
     ],
     correctOptionId: 'c',
-    explanation: 'A seleção natural atua sobre variações hereditárias já existentes na população; indivíduos com características mais adaptadas ao ambiente tendem a sobreviver e deixar mais descendentes.',
+    explanation: 'A seleção natural atua sobre variações hereditárias já existentes na população (geradas por mutações e recombinação), não sobre características adquiridas durante a vida (essa era a ideia de Lamarck, hoje refutada). Indivíduos com variações mais adaptadas ao ambiente tendem a sobreviver e deixar mais descendentes, aumentando a frequência dessas variações na população ao longo de gerações.',
     difficulty: 'medium'
   },
   {
-    id: 'q_bio_05_2',
+    id: 'q_bio_evolucao_2',
     topicId: 'bio_evolucao',
     subject: 'Biologia',
-    prompt: 'O que é especiação por isolamento geográfico (alopátrica)?',
+    prompt: 'A especiação por isolamento geográfico (alopátrica) ocorre quando:',
     options: [
-      { id: 'a', text: 'Formação de novas espécies quando populações são separadas fisicamente e acumulam diferenças genéticas independentes' },
-      { id: 'b', text: 'Formação de espécies na mesma área geográfica sem qualquer barreira' },
-      { id: 'c', text: 'Extinção de uma espécie por competição' },
-      { id: 'd', text: 'Cruzamento entre espécies diferentes' }
+      { id: 'a', text: 'Populações de uma mesma espécie são separadas fisicamente (por uma barreira geográfica) e acumulam diferenças genéticas independentes, até não conseguirem mais se reproduzir entre si' },
+      { id: 'b', text: 'Novas espécies se formam na mesma área geográfica, sem qualquer barreira física entre as populações' },
+      { id: 'c', text: 'Uma espécie inteira é extinta por competição com outra' },
+      { id: 'd', text: 'Duas espécies diferentes se cruzam e geram descendentes férteis' }
     ],
     correctOptionId: 'a',
-    explanation: 'Na especiação alopátrica, uma barreira geográfica separa populações de uma mesma espécie; isoladas, elas acumulam mutações e adaptações distintas até não conseguirem mais se reproduzir entre si.',
-    difficulty: 'medium'
-  },
-  // Biologia — Microbiologia e Imunologia
-  {
-    id: 'q_bio_06_1',
-    topicId: 'bio_microbiologia',
-    subject: 'Biologia',
-    prompt: 'Qual estrutura é comum a todas as bactérias e ausente nas células eucarióticas?',
-    options: [
-      { id: 'a', text: 'Núcleo delimitado por membrana' },
-      { id: 'b', text: 'Parede celular de peptideoglicano' },
-      { id: 'c', text: 'Mitocôndrias' },
-      { id: 'd', text: 'Retículo endoplasmático' }
-    ],
-    correctOptionId: 'b',
-    explanation: 'As bactérias possuem parede celular composta por peptideoglicano (característica exclusiva de procariontes) e não possuem núcleo delimitado por membrana nem organelas membranosas complexas.',
+    explanation: 'Na especiação alopátrica, uma barreira geográfica (um rio, uma cordilheira, um oceano) separa fisicamente populações de uma mesma espécie. Isoladas, essas populações acumulam mutações e adaptações distintas ao longo de gerações, até se tornarem tão diferentes geneticamente que não conseguem mais se reproduzir entre si mesmo que a barreira desapareça — formando então duas espécies distintas.',
     difficulty: 'medium'
   },
   {
-    id: 'q_bio_06_2',
-    topicId: 'bio_microbiologia',
+    id: 'q_bio_evolucao_3',
+    topicId: 'bio_evolucao',
     subject: 'Biologia',
-    prompt: 'Qual é a principal diferença entre imunidade inata e imunidade adaptativa?',
+    prompt: 'Estruturas homólogas, como o braço humano, a asa do morcego e a nadadeira da baleia, têm a mesma origem embrionária e esquelética, mas funções diferentes. Essas estruturas são consideradas evidência evolutiva porque indicam que:',
     options: [
-      { id: 'a', text: 'A inata é específica e tem memória; a adaptativa não' },
-      { id: 'b', text: 'A inata é rápida e inespecífica; a adaptativa é mais lenta, específica e gera memória' },
-      { id: 'c', text: 'Apenas a adaptativa existe em humanos' },
-      { id: 'd', text: 'A inata só atua contra vírus' }
+      { id: 'a', text: 'Essas espécies compartilham um ancestral comum, cuja estrutura original foi modificada ao longo da evolução para funções diferentes' },
+      { id: 'b', text: 'Essas espécies desenvolveram, de forma totalmente independente, soluções estruturais coincidentemente parecidas' },
+      { id: 'c', text: 'Não há qualquer relação evolutiva entre essas espécies' },
+      { id: 'd', text: 'Essas estruturas surgiram simultaneamente em todas as espécies, sem relação de ancestralidade' }
     ],
-    correctOptionId: 'b',
-    explanation: 'A imunidade inata é a primeira linha de defesa, rápida mas inespecífica (ex: barreiras físicas, fagócitos). A imunidade adaptativa é mais lenta para se desenvolver, porém específica e gera células de memória, base da vacinação.',
+    correctOptionId: 'a',
+    explanation: 'Estruturas homólogas compartilham a mesma origem embrionária e o mesmo plano estrutural básico, apesar de exercerem funções diferentes hoje — evidência forte de que as espécies que as possuem descendem de um ancestral comum, cuja estrutura ancestral foi modificada por seleção natural para desempenhar funções distintas em cada linhagem (diferente de estruturas análogas, que têm função semelhante mas origens evolutivas distintas).',
     difficulty: 'hard'
+  },
+  {
+    id: 'q_bio_evolucao_4',
+    topicId: 'bio_evolucao',
+    subject: 'Biologia',
+    prompt: 'A deriva genética é um mecanismo evolutivo que causa mudanças na frequência dos alelos de uma população principalmente por:',
+    options: [
+      { id: 'a', text: 'Seleção ativa dos indivíduos mais adaptados ao ambiente' },
+      { id: 'b', text: 'Eventos aleatórios (ao acaso), com efeito mais pronunciado em populações pequenas' },
+      { id: 'c', text: 'Mutações que sempre aumentam a aptidão dos indivíduos' },
+      { id: 'd', text: 'Migração constante de indivíduos entre populações' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Diferentemente da seleção natural (que favorece características vantajosas de forma não aleatória), a deriva genética altera as frequências alélicas por puro acaso — por exemplo, por sobrevivência aleatória em um desastre natural. Seu efeito é muito mais pronunciado em populações pequenas, onde flutuações aleatórias têm maior impacto proporcional sobre a frequência dos alelos.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_bio_evolucao_5',
+    topicId: 'bio_evolucao',
+    subject: 'Biologia',
+    prompt: 'A resistência de populações de bactérias a antibióticos, um problema crescente de saúde pública, é um exemplo direto de seleção natural em ação porque:',
+    options: [
+      { id: 'a', text: 'O antibiótico "ensina" as bactérias a se tornarem resistentes, alterando seu DNA de forma direcionada' },
+      { id: 'b', text: 'Bactérias com variantes genéticas que já conferiam resistência, presentes ao acaso na população antes do contato com o antibiótico, sobrevivem e se reproduzem mais, aumentando a frequência dessa resistência na população' },
+      { id: 'c', text: 'Todas as bactérias de uma população se tornam resistentes simultaneamente e da mesma forma' },
+      { id: 'd', text: 'A resistência surge apenas depois que todas as bactérias sensíveis já morreram, sem qualquer relação com variação genética prévia' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Antes mesmo do contato com o antibiótico, algumas bactérias já possuem, por variação genética ao acaso (mutação), características que conferem resistência. Quando a população é exposta ao antibiótico, as bactérias sensíveis morrem, mas as resistentes sobrevivem e se reproduzem, aumentando a frequência dos genes de resistência nas gerações seguintes — um exemplo claro de seleção natural, não de "adaptação direcionada" pelo próprio antibiótico.',
+    difficulty: 'hard'
+  },
+  // Biologia — Microbiologia e Virologia
+  {
+    id: 'q_bio_microbiologia_1',
+    topicId: 'bio_microbiologia',
+    subject: 'Biologia',
+    prompt: 'As bactérias, organismos procariontes, se diferenciam estruturalmente das células eucarióticas principalmente por:',
+    options: [
+      { id: 'a', text: 'Possuírem núcleo delimitado por membrana' },
+      { id: 'b', text: 'Não possuírem núcleo delimitado por membrana nem organelas membranosas complexas, com material genético disperso no citoplasma' },
+      { id: 'c', text: 'Possuírem mitocôndrias em grande quantidade' },
+      { id: 'd', text: 'Possuírem retículo endoplasmático desenvolvido' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'As bactérias (procariontes) não possuem núcleo delimitado por membrana nem organelas membranosas complexas (como mitocôndrias ou retículo endoplasmático); seu material genético (geralmente um único cromossomo circular) fica disperso em uma região do citoplasma chamada nucleoide.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_microbiologia_2',
+    topicId: 'bio_microbiologia',
+    subject: 'Biologia',
+    prompt: 'Um vírus, ao contrário de bactérias e outros organismos celulares, é considerado por muitos biólogos como não vivo (ou na fronteira da vida) principalmente porque:',
+    options: [
+      { id: 'a', text: 'É formado por material genético e uma cápsula proteica, mas não realiza metabolismo próprio nem se reproduz sozinho, dependendo obrigatoriamente da maquinaria de uma célula hospedeira' },
+      { id: 'b', text: 'Não possui nenhum tipo de material genético' },
+      { id: 'c', text: 'É sempre maior que uma célula bacteriana' },
+      { id: 'd', text: 'Realiza fotossíntese de forma independente' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Vírus não têm estrutura celular nem metabolismo próprio: fora de uma célula hospedeira, são partículas inertes. Para se replicar, precisam invadir uma célula viva e sequestrar sua maquinaria metabólica (ribossomos, enzimas, energia) — por isso são considerados parasitas intracelulares obrigatórios, e sua classificação como "vivos" é debatida.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_microbiologia_3',
+    topicId: 'bio_microbiologia',
+    subject: 'Biologia',
+    prompt: 'Qual é a principal diferença entre imunidade inata e imunidade adaptativa no sistema imunológico humano?',
+    options: [
+      { id: 'a', text: 'A imunidade inata é específica para cada patógeno e gera memória imunológica; a adaptativa não' },
+      { id: 'b', text: 'A imunidade inata é rápida mas inespecífica (mesma resposta para diferentes patógenos); a adaptativa é mais lenta para se desenvolver, porém específica e gera memória imunológica' },
+      { id: 'c', text: 'Apenas a imunidade adaptativa existe em seres humanos' },
+      { id: 'd', text: 'A imunidade inata atua exclusivamente contra vírus, nunca contra bactérias' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A imunidade inata é a primeira linha de defesa, rápida mas inespecífica (barreiras físicas, fagócitos, inflamação — a mesma resposta geral para diferentes ameaças). A imunidade adaptativa é mais lenta para se desenvolver na primeira exposição, porém é altamente específica para o patógeno e gera células de memória, o que permite uma resposta muito mais rápida em exposições futuras — o princípio por trás da vacinação.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_bio_microbiologia_4',
+    topicId: 'bio_microbiologia',
+    subject: 'Biologia',
+    prompt: 'Os antibióticos são substâncias eficazes no tratamento de infecções bacterianas, mas não têm efeito contra infecções virais. Isso ocorre porque os antibióticos atuam sobre:',
+    options: [
+      { id: 'a', text: 'Estruturas ou processos metabólicos exclusivos de células bacterianas (como a parede celular ou a síntese proteica bacteriana), que os vírus simplesmente não possuem por não serem células' },
+      { id: 'b', text: 'O sistema imunológico do próprio paciente, independentemente do tipo de patógeno' },
+      { id: 'c', text: 'Qualquer tipo de material genético, seja de bactérias ou de vírus' },
+      { id: 'd', text: 'A membrana celular de forma genérica, igual em bactérias e em células humanas' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Antibióticos são desenhados para atacar estruturas ou processos específicos de células bacterianas (como a síntese da parede celular de peptideoglicano, ou a maquinaria de síntese proteica bacteriana, diferente da humana). Como vírus não são células e não possuem essas estruturas próprias (dependem da célula hospedeira para se replicar), antibióticos não têm alvo nenhum para atuar contra eles.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_bio_microbiologia_5',
+    topicId: 'bio_microbiologia',
+    subject: 'Biologia',
+    prompt: 'As vacinas funcionam estimulando o sistema imunológico a desenvolver memória imunológica contra um patógeno específico, sem causar a doença. Isso geralmente é feito por meio da exposição a:',
+    options: [
+      { id: 'a', text: 'O patógeno vivo e totalmente ativo, em sua forma mais virulenta' },
+      { id: 'b', text: 'Uma versão enfraquecida, inativada, ou apenas partes (como proteínas específicas) do patógeno, suficientes para provocar uma resposta imune sem causar a doença completa' },
+      { id: 'c', text: 'Antibióticos diretamente, sem qualquer componente do patógeno' },
+      { id: 'd', text: 'Células humanas saudáveis, sem qualquer relação com o patógeno' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Vacinas expõem o sistema imunológico a uma versão enfraquecida ou inativada do patógeno, ou apenas a fragmentos específicos dele (como uma proteína de superfície, ou mRNA que instrui a produção dessa proteína) — o suficiente para provocar uma resposta imune adaptativa e gerar células de memória, sem causar a doença em sua forma completa.',
+    difficulty: 'medium'
   },
   // Matemática — Funções
   {
@@ -2402,6 +2718,51 @@ export const mockQuestions: Question[] = [
     explanation: 'A auxina migra para o lado menos iluminado do caule e estimula o alongamento das células nesse lado, curvando o caule em direção à luz. É a base do modelo clássico de Cholodny-Went para o fototropismo.',
     difficulty: 'medium'
   },
+  {
+    id: 'q_bio_fisio_vegetal_3',
+    topicId: 'bio_fisio_vegetal',
+    subject: 'Biologia',
+    prompt: 'A transpiração, perda de água na forma de vapor pelos estômatos das folhas, é fundamental para a subida da seiva bruta pelo xilema principalmente porque:',
+    options: [
+      { id: 'a', text: 'Cria uma pressão positiva na raiz que empurra a água para cima' },
+      { id: 'b', text: 'Gera uma tensão (pressão negativa) nas folhas que "puxa" a coluna contínua de água pelo xilema, aproveitando a coesão entre as moléculas de água' },
+      { id: 'c', text: 'Aquece a água, fazendo-a subir por convecção' },
+      { id: 'd', text: 'Não tem qualquer relação com o transporte de água na planta' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Pela teoria da tensão-coesão-adesão, a evaporação de água nos estômatos gera uma tensão (pressão negativa) que se propaga por toda a coluna de água no xilema, "puxando-a" para cima. Isso só é possível porque as moléculas de água se mantêm coesas entre si (pontes de hidrogênio) e aderem às paredes dos vasos do xilema, formando uma coluna contínua capaz de suportar essa tensão sem se romper.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_bio_fisio_vegetal_4',
+    topicId: 'bio_fisio_vegetal',
+    subject: 'Biologia',
+    prompt: 'Os estômatos, poros presentes principalmente na epiderme das folhas, regulam a troca gasosa e a perda de água da planta. Sua abertura e fechamento são controlados principalmente por:',
+    options: [
+      { id: 'a', text: 'Mudanças na turgescência das células-guarda que os delimitam' },
+      { id: 'b', text: 'Contração muscular, semelhante à de animais' },
+      { id: 'c', text: 'Um processo puramente passivo, sem qualquer regulação celular' },
+      { id: 'd', text: 'A temperatura do solo, exclusivamente' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Os estômatos são delimitados por um par de células-guarda, cuja forma muda de acordo com sua turgescência (quantidade de água interna): quando túrgidas (cheias de água), essas células se curvam e abrem o poro estomático; quando perdem turgescência (flácidas), o poro se fecha. Esse mecanismo permite à planta regular a troca gasosa e a perda de água conforme as condições ambientais.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_fisio_vegetal_5',
+    topicId: 'bio_fisio_vegetal',
+    subject: 'Biologia',
+    prompt: 'O hormônio vegetal etileno, ao contrário da maioria dos outros hormônios vegetais (geralmente líquidos ou sólidos), é notável por ser um gás. Sua principal função conhecida é:',
+    options: [
+      { id: 'a', text: 'Estimular o alongamento celular em direção à luz' },
+      { id: 'b', text: 'Promover o amadurecimento de frutos' },
+      { id: 'c', text: 'Inibir totalmente a germinação de sementes, em qualquer condição' },
+      { id: 'd', text: 'Regular exclusivamente a abertura dos estômatos' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'O etileno é um hormônio vegetal gasoso, conhecido principalmente por promover o amadurecimento de frutos (mudança de cor, amolecimento, produção de aromas) — por isso frutos verdes são frequentemente armazenados junto de frutos maduros (que liberam etileno) para acelerar seu próprio amadurecimento.',
+    difficulty: 'medium'
+  },
   // Física — Dinâmica Impulsiva
   {
     id: 'q_fis_dinamica_impulsiva_1',
@@ -3827,6 +4188,51 @@ export const mockQuestions: Question[] = [
     explanation: 'No modelo do mosaico fluido, a membrana é uma bicamada lipídica fluida na qual proteínas estão dispersas e podem se mover lateralmente, o que sustenta funções como permeabilidade seletiva e sinalização celular.',
     difficulty: 'medium'
   },
+  {
+    id: 'q_bio_estrutura_fisio_celular_3',
+    topicId: 'bio_estrutura_fisio_celular',
+    subject: 'Biologia',
+    prompt: 'Uma célula é colocada em uma solução hipertônica em relação ao seu meio interno. O que se espera que aconteça com essa célula, por osmose?',
+    options: [
+      { id: 'a', text: 'A célula ganha água e incha, podendo se romper' },
+      { id: 'b', text: 'A célula perde água para o meio externo, podendo murchar (crenação/plasmólise)' },
+      { id: 'c', text: 'Não há qualquer movimento de água entre a célula e o meio' },
+      { id: 'd', text: 'A célula dobra de tamanho instantaneamente' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Em uma solução hipertônica (com maior concentração de soluto que o interior da célula), a água tende a sair da célula por osmose, seguindo o gradiente de concentração, em direção ao meio externo mais concentrado — causando murchamento da célula (plasmólise em células vegetais, crenação em hemácias, por exemplo).',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_estrutura_fisio_celular_4',
+    topicId: 'bio_estrutura_fisio_celular',
+    subject: 'Biologia',
+    prompt: 'O retículo endoplasmático rugoso (com ribossomos aderidos) e o retículo endoplasmático liso (sem ribossomos) têm funções diferentes na célula. Qual é a principal função do retículo endoplasmático rugoso?',
+    options: [
+      { id: 'a', text: 'Síntese de lipídios e desintoxicação de substâncias' },
+      { id: 'b', text: 'Síntese e processamento inicial de proteínas destinadas à secreção ou a outras organelas' },
+      { id: 'c', text: 'Digestão intracelular de macromoléculas' },
+      { id: 'd', text: 'Produção de ATP por fosforilação oxidativa' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'O retículo endoplasmático rugoso tem ribossomos aderidos à sua superfície, que sintetizam proteínas destinadas à secreção, à membrana plasmática ou a outras organelas — essas proteínas entram no lúmen do retículo para processamento inicial (como dobramento) antes de seguir para o complexo de Golgi. O liso, sem ribossomos, é responsável pela síntese de lipídios e desintoxicação.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_estrutura_fisio_celular_5',
+    topicId: 'bio_estrutura_fisio_celular',
+    subject: 'Biologia',
+    prompt: 'Os lisossomos, organelas presentes em células eucarióticas (especialmente animais), têm como principal função:',
+    options: [
+      { id: 'a', text: 'Produzir energia por meio da respiração celular' },
+      { id: 'b', text: 'Digerir macromoléculas e estruturas celulares desgastadas, por meio de enzimas digestivas' },
+      { id: 'c', text: 'Sintetizar proteínas destinadas à secreção' },
+      { id: 'd', text: 'Armazenar o material genético da célula' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Os lisossomos contêm enzimas digestivas (hidrolases ácidas) capazes de degradar macromoléculas, organelas desgastadas (autofagia) e partículas englobadas por fagocitose — funcionando como o "sistema digestivo" da célula.',
+    difficulty: 'easy'
+  },
   // Biologia — Biotecnologia
   {
     id: 'q_bio_biotecnologia_1',
@@ -3857,6 +4263,51 @@ export const mockQuestions: Question[] = [
     correctOptionId: 'b',
     explanation: 'No sistema CRISPR-Cas9, um RNA-guia direciona a enzima Cas9 até uma sequência específica de DNA, onde ela realiza um corte preciso — permitindo remover, inserir ou corrigir trechos do genoma.',
     difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_biotecnologia_3',
+    topicId: 'bio_biotecnologia',
+    subject: 'Biologia',
+    prompt: 'Organismos geneticamente modificados (transgênicos), como plantas resistentes a determinados herbicidas, são produzidos principalmente por meio de:',
+    options: [
+      { id: 'a', text: 'Cruzamento seletivo tradicional entre variedades da mesma espécie, sem qualquer manipulação direta do DNA' },
+      { id: 'b', text: 'Inserção direta, em laboratório, de um gene de interesse (às vezes de outra espécie) no genoma do organismo' },
+      { id: 'c', text: 'Exposição a altas doses de radiação, sem controle sobre o resultado' },
+      { id: 'd', text: 'Clonagem reprodutiva do organismo original, sem qualquer alteração genética' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Um organismo transgênico é aquele que recebeu, por engenharia genética, um gene de interesse inserido diretamente em seu genoma — muitas vezes um gene originado de uma espécie diferente — conferindo uma característica específica (como resistência a um herbicida ou a uma praga), diferentemente do cruzamento seletivo tradicional, que apenas recombina genes já existentes na mesma espécie.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_biotecnologia_4',
+    topicId: 'bio_biotecnologia',
+    subject: 'Biologia',
+    prompt: 'O teste de paternidade por DNA se baseia principalmente no fato de que:',
+    options: [
+      { id: 'a', text: 'Cada pessoa tem uma sequência de DNA completamente diferente de qualquer parente biológico' },
+      { id: 'b', text: 'Metade do material genético de uma pessoa vem obrigatoriamente do pai biológico e a outra metade da mãe biológica, o que permite comparar marcadores genéticos específicos entre filho e possíveis pais' },
+      { id: 'c', text: 'O DNA de uma pessoa muda completamente a cada geração, sem relação com os pais' },
+      { id: 'd', text: 'Apenas o cromossomo Y é analisado, independentemente do sexo do filho' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Um filho biológico herda metade de seus alelos do pai e metade da mãe. O teste de paternidade compara marcadores genéticos específicos (regiões de DNA muito variáveis entre indivíduos não aparentados) do suposto pai com os do filho, verificando se os alelos do filho podem de fato ter vindo daquele pai — com alta probabilidade estatística de exclusão ou confirmação.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_biotecnologia_5',
+    topicId: 'bio_biotecnologia',
+    subject: 'Biologia',
+    prompt: 'A clonagem reprodutiva, técnica usada para gerar um animal geneticamente idêntico a outro (como no caso da ovelha Dolly), envolve principalmente:',
+    options: [
+      { id: 'a', text: 'A fecundação normal entre um óvulo e um espermatozoide de indivíduos diferentes' },
+      { id: 'b', text: 'A transferência do núcleo de uma célula somática (não reprodutiva) do indivíduo a ser clonado para um óvulo enucleado (sem núcleo próprio), que é então estimulado a se desenvolver' },
+      { id: 'c', text: 'A simples divisão de um embrião já existente ao meio, sem qualquer manipulação de núcleo' },
+      { id: 'd', text: 'A edição direta de genes específicos usando CRISPR-Cas9' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Na clonagem reprodutiva (técnica usada para gerar a ovelha Dolly), o núcleo de uma célula somática do indivíduo a ser clonado é transferido para um óvulo do qual o núcleo original foi removido (enucleado). O óvulo reconstituído é então estimulado a se dividir e se desenvolver como um embrião, geneticamente idêntico (no núcleo) ao doador da célula somática.',
+    difficulty: 'hard'
   },
   // Biologia — Zoologia
   {
@@ -3889,6 +4340,51 @@ export const mockQuestions: Question[] = [
     explanation: 'Anfíbios como rãs e sapos passam por metamorfose: iniciam a vida em ambiente aquático (girinos, com respiração branquial) e, na fase adulta, ocupam ambientes terrestres, respirando por pulmões e por uma pele fina e permeável, o que os mantém dependentes de ambientes úmidos.',
     difficulty: 'medium'
   },
+  {
+    id: 'q_bio_zoologia_3',
+    topicId: 'bio_zoologia',
+    subject: 'Biologia',
+    prompt: 'Os artrópodes, o filo animal com maior número de espécies descritas, compartilham como características principais:',
+    options: [
+      { id: 'a', text: 'Corpo mole, sem qualquer proteção externa' },
+      { id: 'b', text: 'Exoesqueleto de quitina e apêndices articulados (pernas, antenas)' },
+      { id: 'c', text: 'Esqueleto interno ósseo, como os vertebrados' },
+      { id: 'd', text: 'Ausência total de simetria corporal' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Artrópodes (insetos, aracnídeos, crustáceos, entre outros) possuem um exoesqueleto rígido de quitina, que precisa ser trocado periodicamente (ecdise/muda) para permitir o crescimento, e apêndices articulados que dão nome ao filo (do grego, "pés articulados").',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_zoologia_4',
+    topicId: 'bio_zoologia',
+    subject: 'Biologia',
+    prompt: 'As aves, animais endotérmicos (de sangue quente), apresentam diversas adaptações para o voo, entre elas:',
+    options: [
+      { id: 'a', text: 'Ossos maciços e pesados, para maior estabilidade' },
+      { id: 'b', text: 'Ossos pneumáticos (parcialmente ocos), penas leves e sacos aéreos que otimizam a respiração' },
+      { id: 'c', text: 'Ausência completa de sistema respiratório especializado' },
+      { id: 'd', text: 'Membros anteriores idênticos aos membros posteriores' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'As aves possuem diversas adaptações para reduzir peso e aumentar eficiência energética durante o voo: ossos pneumáticos (parcialmente ocos, mas ainda resistentes), penas leves, e um sistema respiratório com sacos aéreos que permite um fluxo praticamente unidirecional de ar através dos pulmões, tornando as trocas gasosas mais eficientes que em mamíferos.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_zoologia_5',
+    topicId: 'bio_zoologia',
+    subject: 'Biologia',
+    prompt: 'Os mamíferos, grupo ao qual pertence a espécie humana, se diferenciam dos demais vertebrados principalmente pela presença de:',
+    options: [
+      { id: 'a', text: 'Glândulas mamárias (que produzem leite para os filhotes) e pelos' },
+      { id: 'b', text: 'Respiração exclusivamente branquial' },
+      { id: 'c', text: 'Desenvolvimento embrionário sempre externo, em ovos depositados no ambiente' },
+      { id: 'd', text: 'Ausência total de regulação da temperatura corporal' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'As glândulas mamárias (que dão nome ao grupo) e a presença de pelos são características exclusivas dos mamíferos entre os vertebrados. A maioria dos mamíferos também é endotérmica (regula ativamente a temperatura corporal) e tem desenvolvimento embrionário interno (vivíparo), com exceções como os monotremados (ex.: ornitorrinco), que põem ovos.',
+    difficulty: 'medium'
+  },
   // Biologia — Botânica
   {
     id: 'q_bio_botanica_1',
@@ -3918,6 +4414,51 @@ export const mockQuestions: Question[] = [
     ],
     correctOptionId: 'b',
     explanation: 'O xilema conduz a seiva bruta (água e sais minerais) das raízes até as folhas, enquanto o floema conduz a seiva elaborada (produtos da fotossíntese, como açúcares) das folhas para o restante da planta.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_botanica_3',
+    topicId: 'bio_botanica',
+    subject: 'Biologia',
+    prompt: 'As plantas angiospermas (que produzem flores e frutos) se diferenciam das gimnospermas (como pinheiros) principalmente por:',
+    options: [
+      { id: 'a', text: 'Produzirem sementes envolvidas por um fruto (originado do desenvolvimento do ovário), enquanto as gimnospermas produzem sementes "nuas", sem fruto envolvente' },
+      { id: 'b', text: 'Não produzirem sementes de forma alguma' },
+      { id: 'c', text: 'Não realizarem fotossíntese' },
+      { id: 'd', text: 'Serem exclusivamente aquáticas' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Angiospermas ("sementes em vaso/receptáculo") desenvolvem suas sementes dentro de um ovário, que se transforma em fruto após a fecundação. Já as gimnospermas ("sementes nuas") produzem sementes diretamente expostas, sem um fruto envolvente — como acontece nos cones (estróbilos) dos pinheiros.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_botanica_4',
+    topicId: 'bio_botanica',
+    subject: 'Biologia',
+    prompt: 'No ciclo de vida das plantas, ocorre uma alternância entre uma fase gametofítica (produtora de gametas, haploide) e uma fase esporofítica (produtora de esporos, diploide). Nas angiospermas, a fase predominante e visível do ciclo de vida é:',
+    options: [
+      { id: 'a', text: 'A fase gametofítica, representada pela planta inteira que vemos' },
+      { id: 'b', text: 'A fase esporofítica, representada pela planta inteira que vemos, com os gametófitos reduzidos a estruturas microscópicas dentro da flor' },
+      { id: 'c', text: 'Não há alternância de gerações nas angiospermas' },
+      { id: 'd', text: 'Apenas a fase gametofítica existe, sem qualquer fase esporofítica' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Nas angiospermas, a planta que vemos (raiz, caule, folhas, flores) é o esporófito (fase diploide, dominante). Os gametófitos (fase haploide, produtora de gametas) são extremamente reduzidos e microscópicos, formados dentro das estruturas florais (grão de pólen e saco embrionário) — ao contrário de plantas mais primitivas, como musgos, em que o gametófito é a fase dominante e visível.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_bio_botanica_5',
+    topicId: 'bio_botanica',
+    subject: 'Biologia',
+    prompt: 'As raízes das plantas desempenham, além da fixação ao solo, um papel fundamental na absorção de água e nutrientes minerais. Essa absorção é significativamente aumentada por:',
+    options: [
+      { id: 'a', text: 'Pelos absorventes (radiculares), que multiplicam enormemente a área de superfície de contato da raiz com o solo' },
+      { id: 'b', text: 'A presença de clorofila nas raízes, permitindo fotossíntese subterrânea' },
+      { id: 'c', text: 'A ausência total de células especializadas na raiz' },
+      { id: 'd', text: 'O crescimento exclusivamente em espessura da raiz, sem qualquer estrutura especializada' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Os pelos absorventes (ou radiculares) são extensões finas e numerosas das células da epiderme da raiz, que aumentam drasticamente a área de superfície em contato com as partículas do solo e a água intersticial, otimizando a absorção de água e íons minerais dissolvidos.',
     difficulty: 'medium'
   },
   // Física — Cinemática Vetorial
