@@ -1755,6 +1755,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_bio_estrutura_fisio_celular_1',
+    chapter: 'Membranas Celulares',
     topicId: 'bio_estrutura_fisio_celular',
     subject: 'Biologia',
     prompt: 'Explique por que se diz que a membrana plasmática é "seletivamente permeável", e como isso se relaciona com o modelo do mosaico fluido.',
@@ -1768,6 +1769,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_bio_estrutura_fisio_celular_2',
+    chapter: 'Membranas Celulares',
     topicId: 'bio_estrutura_fisio_celular',
     subject: 'Biologia',
     prompt: 'Explique a diferença entre osmose e difusão simples, e por que a osmose é considerada um caso particular de difusão.',
@@ -1781,6 +1783,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_bio_estrutura_fisio_celular_3',
+    chapter: 'Citoplasma: Estrutura e Componentes II',
     topicId: 'bio_estrutura_fisio_celular',
     subject: 'Biologia',
     prompt: 'Explique como o retículo endoplasmático rugoso, o complexo de Golgi e os lisossomos trabalham em conjunto no chamado "sistema de endomembranas" da célula.',
@@ -1794,6 +1797,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_bio_metabolismo_energetico_1',
+    chapter: 'Bioenergética: Fermentação e Respiração',
     topicId: 'bio_metabolismo_energetico',
     subject: 'Biologia',
     prompt: 'Explique por que a glicólise é considerada uma etapa comum tanto à respiração celular aeróbica quanto à fermentação, e o que diferencia o destino do piruvato em cada um desses processos.',
@@ -1807,6 +1811,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_bio_metabolismo_energetico_2',
+    chapter: 'Bioenergética: Fotossíntese e Quimiossíntese',
     topicId: 'bio_metabolismo_energetico',
     subject: 'Biologia',
     prompt: 'Explique a relação entre a fase clara (fotoquímica) e a fase escura (ciclo de Calvin) da fotossíntese — o que a fase escura precisa da fase clara para funcionar.',
@@ -1820,6 +1825,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_bio_metabolismo_energetico_3',
+    chapter: 'Bioenergética: Fermentação e Respiração',
     topicId: 'bio_metabolismo_energetico',
     subject: 'Biologia',
     prompt: 'Explique por que a cadeia transportadora de elétrons, na respiração celular aeróbica, para completamente na ausência de oxigênio, mesmo que o ciclo de Krebs tenha produzido bastante NADH e FADH2.',
@@ -1833,6 +1839,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_bio_codigo_genetico_sintese_1',
+    chapter: 'Ácidos Nucleicos',
     topicId: 'bio_codigo_genetico_sintese',
     subject: 'Biologia',
     prompt: 'Explique o "dogma central da biologia molecular" (DNA → RNA → proteína), descrevendo o que ocorre em cada uma das duas etapas principais.',
@@ -1846,6 +1853,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_bio_codigo_genetico_sintese_2',
+    chapter: 'Ácidos Nucleicos',
     topicId: 'bio_codigo_genetico_sintese',
     subject: 'Biologia',
     prompt: 'Explique o que significa dizer que o código genético é "degenerado" (redundante), e por que isso faz com que nem toda mutação pontual altere a proteína final.',
@@ -1859,6 +1867,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_bio_codigo_genetico_sintese_3',
+    chapter: 'Mutações Cromossômicas e Gametogênese',
     topicId: 'bio_codigo_genetico_sintese',
     subject: 'Biologia',
     prompt: 'Explique por que uma mutação por deleção ou inserção de um único nucleotídeo (não múltiplo de três) costuma ter um efeito muito mais drástico sobre a proteína final do que uma mutação pontual de substituição.',
@@ -1872,6 +1881,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_bio_genetica_1',
+    chapter: 'Introdução à Genética',
     topicId: 'bio_genetica',
     subject: 'Biologia',
     prompt: 'Explique a diferença entre genótipo e fenótipo, e por que dois indivíduos podem ter genótipos diferentes mas o mesmo fenótipo.',
@@ -1885,6 +1895,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_bio_genetica_2',
+    chapter: 'Introdução à Genética',
     topicId: 'bio_genetica',
     subject: 'Biologia',
     prompt: 'Explique a Primeira Lei de Mendel (Lei da Segregação), usando um cruzamento monoíbrido Aa x Aa como exemplo.',
@@ -1898,6 +1909,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_bio_genetica_3',
+    chapter: 'Herança Sexual',
     topicId: 'bio_genetica',
     subject: 'Biologia',
     prompt: 'Explique por que uma característica ligada ao cromossomo X (como o daltonismo) é muito mais comum em homens do que em mulheres.',
@@ -1911,6 +1923,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_bio_fisio_animal_1',
+    chapter: 'Coração e Vasos Sanguíneos',
     topicId: 'bio_fisio_animal',
     subject: 'Biologia',
     prompt: 'Explique o percurso do sangue na chamada "dupla circulação" do sistema circulatório humano (circulação pulmonar e circulação sistêmica).',
@@ -1924,6 +1937,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_bio_fisio_animal_2',
+    chapter: 'Fisiologia da Excreção',
     topicId: 'bio_fisio_animal',
     subject: 'Biologia',
     prompt: 'Explique o papel do glomérulo renal e dos túbulos renais na formação da urina, destacando a diferença entre filtração e reabsorção.',
@@ -1937,6 +1951,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_bio_fisio_animal_3',
+    chapter: 'Fisiologia da Coordenação Nervosa I',
     topicId: 'bio_fisio_animal',
     subject: 'Biologia',
     prompt: 'Explique a diferença entre um arco reflexo simples e uma resposta consciente processada pelo encéfalo, em termos de velocidade e do caminho percorrido pelo impulso nervoso.',
@@ -1950,6 +1965,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_bio_ecologia_1',
+    chapter: 'Introdução à Ecologia',
     topicId: 'bio_ecologia',
     subject: 'Biologia',
     prompt: 'Explique por que a energia flui de forma unidirecional através de um ecossistema (dos produtores até os últimos níveis tróficos), enquanto a matéria (nutrientes) é reciclada.',
@@ -1963,6 +1979,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_bio_ecologia_2',
+    chapter: 'Introdução à Ecologia',
     topicId: 'bio_ecologia',
     subject: 'Biologia',
     prompt: 'Explique a diferença entre competição intraespecífica e competição interespecífica, e por que a competição intraespecífica é geralmente considerada mais intensa.',
@@ -1976,6 +1993,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_bio_ecologia_3',
+    chapter: 'Sucessão Ecológica',
     topicId: 'bio_ecologia',
     subject: 'Biologia',
     prompt: 'Explique o que é uma sucessão ecológica primária, e por que ela costuma ser um processo muito mais lento que uma sucessão ecológica secundária.',
@@ -1989,6 +2007,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_bio_evolucao_1',
+    chapter: 'Evolução Biológica: Construção Histórica',
     topicId: 'bio_evolucao',
     subject: 'Biologia',
     prompt: 'Explique a principal diferença entre a teoria evolutiva de Lamarck (uso e desuso, herança de características adquiridas) e a teoria da seleção natural de Darwin.',
@@ -2002,6 +2021,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_bio_evolucao_2',
+    chapter: 'Evolução Biológica: Construção Histórica',
     topicId: 'bio_evolucao',
     subject: 'Biologia',
     prompt: 'Explique a diferença entre estruturas homólogas e estruturas análogas, dando um exemplo de cada.',
@@ -2015,6 +2035,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_bio_evolucao_3',
+    chapter: 'Mecanismos da Evolução Biológica',
     topicId: 'bio_evolucao',
     subject: 'Biologia',
     prompt: 'Explique por que a variabilidade genética dentro de uma população é considerada essencial para que a seleção natural possa atuar sobre ela.',
@@ -2028,6 +2049,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_bio_microbiologia_1',
+    chapter: 'Vírus',
     topicId: 'bio_microbiologia',
     subject: 'Biologia',
     prompt: 'Explique por que os vírus são considerados parasitas intracelulares obrigatórios, e o que isso significa em termos práticos para sua capacidade de se replicar.',
@@ -2041,6 +2063,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_bio_microbiologia_2',
+    chapter: 'Procariotos',
     topicId: 'bio_microbiologia',
     subject: 'Biologia',
     prompt: 'Explique por que o uso indiscriminado de antibióticos contribui para o surgimento de bactérias resistentes, relacionando isso ao conceito de seleção natural.',
@@ -2067,6 +2090,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_bio_zoologia_1',
+    chapter: 'Cordados Tetrápodes',
     topicId: 'bio_zoologia',
     subject: 'Biologia',
     prompt: 'Explique por que os anfíbios são considerados um grupo de transição evolutiva entre os animais aquáticos e os totalmente terrestres, relacionando isso ao seu ciclo de vida.',
@@ -2080,6 +2104,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_bio_zoologia_2',
+    chapter: 'Artrópodes: Insetos, Crustáceos e Miriápodes',
     topicId: 'bio_zoologia',
     subject: 'Biologia',
     prompt: 'Explique por que o exoesqueleto dos artrópodes, apesar de oferecer proteção, exige que esses animais passem por ecdises (mudas) periódicas ao longo da vida.',
@@ -2093,6 +2118,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_bio_zoologia_3',
+    chapter: 'Cordados Tetrápodes',
     topicId: 'bio_zoologia',
     subject: 'Biologia',
     prompt: 'Explique por que as aves são consideradas endotérmicas (de "sangue quente"), e como isso se relaciona com suas adaptações para o voo, como os sacos aéreos.',
@@ -2106,6 +2132,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_bio_botanica_1',
+    chapter: 'Plantas Terrestres II: Gimnospermas e Angiospermas',
     topicId: 'bio_botanica',
     subject: 'Biologia',
     prompt: 'Explique a diferença entre uma planta angiosperma e uma gimnosperma, com foco em como cada uma protege (ou não) suas sementes.',
@@ -2119,6 +2146,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_bio_botanica_2',
+    chapter: 'Ciclos de Vida',
     topicId: 'bio_botanica',
     subject: 'Biologia',
     prompt: 'Explique por que se diz que, nas plantas, há uma "alternância de gerações" entre uma fase gametofítica (haploide) e uma fase esporofítica (diploide), e qual dessas fases é dominante nas angiospermas.',
@@ -2132,6 +2160,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_bio_botanica_3',
+    chapter: 'Plantas Terrestres II: Gimnospermas e Angiospermas',
     topicId: 'bio_botanica',
     subject: 'Biologia',
     prompt: 'Explique por que os pelos absorventes (radiculares) são tão importantes para a absorção de água e nutrientes pela planta, do ponto de vista da área de superfície.',
@@ -3276,6 +3305,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_bio_biotecnologia_1',
+    chapter: 'Biotecnologia',
     topicId: 'bio_biotecnologia',
     subject: 'Biologia',
     prompt: 'Explique o princípio básico por trás da técnica de PCR (Reação em Cadeia da Polimerase), e por que ela permite amplificar um trecho específico de DNA a partir de uma quantidade muito pequena de amostra inicial.',
@@ -3289,6 +3319,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_bio_biotecnologia_2',
+    chapter: 'Biotecnologia',
     topicId: 'bio_biotecnologia',
     subject: 'Biologia',
     prompt: 'Explique como a tecnologia CRISPR-Cas9 permite editar precisamente um local específico do genoma, destacando o papel do RNA-guia.',
@@ -3302,6 +3333,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_bio_biotecnologia_3',
+    chapter: 'Biotecnologia',
     topicId: 'bio_biotecnologia',
     subject: 'Biologia',
     prompt: 'Explique por que um organismo transgênico é diferente de um organismo obtido por melhoramento genético tradicional (cruzamento seletivo), mesmo que ambos alterem características de uma espécie ao longo de gerações.',
@@ -3315,6 +3347,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_bio_fisio_vegetal_1',
+    chapter: 'Traqueófitas: Transpiração e Reposição Rápida de Água',
     topicId: 'bio_fisio_vegetal',
     subject: 'Biologia',
     prompt: 'Explique a teoria da tensão-coesão-adesão, e como ela explica a subida da seiva bruta pelo xilema sem que a planta precise de uma "bomba" ativa como o coração dos animais.',
@@ -3328,6 +3361,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_bio_fisio_vegetal_2',
+    chapter: 'Morfofisiologia Vegetal: Caules e Folhas',
     topicId: 'bio_fisio_vegetal',
     subject: 'Biologia',
     prompt: 'Explique como a abertura e o fechamento dos estômatos, controlados pelas células-guarda, equilibram duas necessidades opostas da planta: obter CO2 para a fotossíntese e evitar perda excessiva de água.',
@@ -3341,6 +3375,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_bio_fisio_vegetal_3',
+    chapter: 'Fisiologia Vegetal: Hormônios Vegetais',
     topicId: 'bio_fisio_vegetal',
     subject: 'Biologia',
     prompt: 'Explique o papel do hormônio vegetal auxina no fototropismo positivo do caule, incluindo por que o crescimento desigual entre os dois lados do caule causa a curvatura em direção à luz.',

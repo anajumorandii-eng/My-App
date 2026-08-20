@@ -160,6 +160,12 @@ export interface Question {
   correctOptionId: string;
   explanation: string;
   difficulty: 'easy' | 'medium' | 'hard';
+  // Real chapter title from the topic's apostila (must match one entry in
+  // Topic.chapters for that topicId) — lets the Diagnóstico quiz filter to a
+  // single chapter instead of always drawing from the whole topic. Absent
+  // for older questions not yet reclassified; those fall back to the
+  // full-topic pool.
+  chapter?: string;
   examSource?: {
     board: string; // e.g. 'ENEM', 'FUVEST', 'COMVEST', 'VUNESP', 'FAMERP'
     year: number;
@@ -183,6 +189,8 @@ export interface TopicDiscursivePrompt {
   modelAnswer: string;
   keyPoints: string[];
   difficulty: 'easy' | 'medium' | 'hard';
+  // Same chapter-filtering purpose as Question.chapter — see that comment.
+  chapter?: string;
 }
 
 export interface PodcastEpisode {

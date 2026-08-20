@@ -33,6 +33,20 @@ test('no duplicate id within mockTopicDiscursivePrompts', () => {
   assert.equal(new Set(ids).size, ids.length, 'mockTopicDiscursivePrompts has a duplicate id');
 });
 
+test('every question/discursive-prompt chapter tag matches a real chapter of its topic', () => {
+  const topicsById = new Map(mockTopics.map((t) => [t.id, t]));
+  for (const q of mockQuestions) {
+    if (!q.chapter) continue;
+    const topic = topicsById.get(q.topicId);
+    assert.ok(topic?.chapters?.includes(q.chapter), `${q.id} has chapter "${q.chapter}" not listed in ${q.topicId}'s chapters`);
+  }
+  for (const p of mockTopicDiscursivePrompts) {
+    if (!p.chapter) continue;
+    const topic = topicsById.get(p.topicId);
+    assert.ok(topic?.chapters?.includes(p.chapter), `${p.id} has chapter "${p.chapter}" not listed in ${p.topicId}'s chapters`);
+  }
+});
+
 test('every topic has exactly one mastery seed row', () => {
   const masteryIds = mockMastery.map((m) => m.topicId);
   assert.equal(new Set(masteryIds).size, masteryIds.length, 'no duplicate topicId in mockMastery');

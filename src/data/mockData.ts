@@ -772,6 +772,7 @@ export const mockQuestions: Question[] = [
   // Biologia — Metabolismo Energético
   {
     id: 'q_bio_metabolismo_energetico_1',
+    chapter: 'Bioenergética: Fermentação e Respiração',
     topicId: 'bio_metabolismo_energetico',
     subject: 'Biologia',
     prompt: 'Na respiração celular aeróbica, a etapa conhecida como glicólise ocorre em qual compartimento da célula, e qual é o seu principal produto imediato antes das etapas seguintes?',
@@ -787,6 +788,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_bio_metabolismo_energetico_2',
+    chapter: 'Bioenergética: Fermentação e Respiração',
     topicId: 'bio_metabolismo_energetico',
     subject: 'Biologia',
     prompt: 'Na ausência de oxigênio, células musculares humanas realizam fermentação lática em vez de respiração aeróbica completa. Isso ocorre principalmente porque:',
@@ -802,6 +804,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_bio_metabolismo_energetico_3',
+    chapter: 'Bioenergética: Fotossíntese e Quimiossíntese',
     topicId: 'bio_metabolismo_energetico',
     subject: 'Biologia',
     prompt: 'Na fotossíntese, as reações da fase clara (fotoquímica), que ocorrem nas membranas dos tilacoides, têm como principal função:',
@@ -817,6 +820,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_bio_metabolismo_energetico_4',
+    chapter: 'Bioenergética: Fermentação e Respiração',
     topicId: 'bio_metabolismo_energetico',
     subject: 'Biologia',
     prompt: 'O ciclo de Krebs, etapa da respiração celular aeróbica que ocorre na matriz mitocondrial, tem como principal função:',
@@ -832,6 +836,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_bio_metabolismo_energetico_5',
+    chapter: 'Bioenergética: Fermentação e Respiração',
     topicId: 'bio_metabolismo_energetico',
     subject: 'Biologia',
     prompt: 'Comparando a respiração celular aeróbica completa com a fermentação, a principal razão pela qual a respiração aeróbica produz muito mais ATP por molécula de glicose é que:',
@@ -848,6 +853,7 @@ export const mockQuestions: Question[] = [
   // Biologia — Código Genético e Síntese Proteica
   {
     id: 'q_bio_codigo_genetico_sintese_1',
+    chapter: 'Ácidos Nucleicos',
     topicId: 'bio_codigo_genetico_sintese',
     subject: 'Biologia',
     prompt: 'No processo de transcrição, a enzima RNA polimerase utiliza uma das fitas do DNA como molde para sintetizar uma molécula de:',
@@ -863,6 +869,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_bio_codigo_genetico_sintese_2',
+    chapter: 'Ácidos Nucleicos',
     topicId: 'bio_codigo_genetico_sintese',
     subject: 'Biologia',
     prompt: 'Durante a tradução, cada trinca de nucleotídeos do RNA mensageiro (um códon) especifica:',
@@ -878,6 +885,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_bio_codigo_genetico_sintese_3',
+    chapter: 'Mutações Cromossômicas e Gametogênese',
     topicId: 'bio_codigo_genetico_sintese',
     subject: 'Biologia',
     prompt: 'Uma mutação pontual troca um único nucleotídeo em um gene, mas o aminoácido codificado permanece o mesmo, sem alterar a proteína final. Esse tipo de mutação é chamado de:',
@@ -893,6 +901,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_bio_codigo_genetico_sintese_4',
+    chapter: 'Ácidos Nucleicos',
     topicId: 'bio_codigo_genetico_sintese',
     subject: 'Biologia',
     prompt: 'Os ribossomos, estruturas responsáveis pela tradução do RNA mensageiro em proteínas, são compostos por:',
@@ -908,6 +917,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_bio_codigo_genetico_sintese_5',
+    chapter: 'Ácidos Nucleicos',
     topicId: 'bio_codigo_genetico_sintese',
     subject: 'Biologia',
     prompt: 'O código genético é considerado universal porque:',
@@ -924,6 +934,7 @@ export const mockQuestions: Question[] = [
   // Biologia — Genética
   {
     id: 'q_bio_genetica_1',
+    chapter: 'Introdução à Genética',
     topicId: 'bio_genetica',
     subject: 'Biologia',
     prompt: 'No cruzamento entre dois heterozigotos (Aa x Aa), considerando dominância completa, qual é a proporção fenotípica esperada na prole?',
@@ -939,6 +950,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_bio_genetica_2',
+    chapter: 'Segunda Lei de Mendel',
     topicId: 'bio_genetica',
     subject: 'Biologia',
     prompt: 'Em um cruzamento di-híbrido entre dois indivíduos duplo-heterozigotos (AaBb x AaBb), com genes localizados em cromossomos diferentes (segregação independente), qual é a proporção fenotípica esperada na prole?',
@@ -954,6 +966,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_bio_genetica_3',
+    chapter: 'Introdução à Genética',
     topicId: 'bio_genetica',
     subject: 'Biologia',
     prompt: 'Um casal tem um filho com um distúrbio genético recessivo autossômico, embora nenhum dos pais manifeste a doença. Isso é possível porque:',
@@ -969,6 +982,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_bio_genetica_4',
+    chapter: 'Herança Sexual',
     topicId: 'bio_genetica',
     subject: 'Biologia',
     prompt: 'A hemofilia é uma condição recessiva ligada ao cromossomo X. Se uma mulher heterozigota (portadora, XHXh) tem filhos com um homem não hemofílico (XHY), qual é a probabilidade de um filho homem nascer hemofílico?',
@@ -985,6 +999,7 @@ export const mockQuestions: Question[] = [
   // Biologia — Fisiologia Animal e Humana
   {
     id: 'q_bio_fisio_animal_1',
+    chapter: 'Coração e Vasos Sanguíneos',
     topicId: 'bio_fisio_animal',
     subject: 'Biologia',
     prompt: 'No sistema circulatório humano, qual câmara do coração bombeia sangue oxigenado para todo o corpo através da artéria aorta?',
@@ -1000,6 +1015,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_bio_fisio_animal_2',
+    chapter: 'Fisiologia da Excreção',
     topicId: 'bio_fisio_animal',
     subject: 'Biologia',
     prompt: 'Nos néfrons, unidades funcionais dos rins, a filtração do sangue ocorre em uma estrutura específica antes que o filtrado seja modificado ao longo dos túbulos renais. Essa estrutura é:',
@@ -1015,6 +1031,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_bio_fisio_animal_3',
+    chapter: 'Fisiologia da Coordenação Nervosa I',
     topicId: 'bio_fisio_animal',
     subject: 'Biologia',
     prompt: 'No sistema nervoso, a transmissão do impulso nervoso entre dois neurônios ocorre em uma região especializada chamada sinapse, geralmente por meio de:',
@@ -1030,6 +1047,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_bio_fisio_animal_4',
+    chapter: 'Fisiologia da Respiração',
     topicId: 'bio_fisio_animal',
     subject: 'Biologia',
     prompt: 'Durante a respiração pulmonar humana, a troca gasosa (difusão de O2 e CO2) entre o ar e o sangue ocorre principalmente em qual estrutura?',
@@ -1045,6 +1063,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_bio_fisio_animal_5',
+    chapter: 'Coordenação Endócrina I',
     topicId: 'bio_fisio_animal',
     subject: 'Biologia',
     prompt: 'O sistema endócrino regula diversas funções do corpo por meio da liberação de hormônios na corrente sanguínea. Uma das principais diferenças entre a regulação hormonal (endócrina) e a regulação nervosa é que a regulação hormonal geralmente:',
@@ -1061,6 +1080,7 @@ export const mockQuestions: Question[] = [
   // Biologia — Ecologia
   {
     id: 'q_bio_ecologia_1',
+    chapter: 'Introdução à Ecologia',
     topicId: 'bio_ecologia',
     subject: 'Biologia',
     prompt: 'Em uma cadeia alimentar, os organismos que realizam fotossíntese (como plantas e algas) ocupam qual nível trófico, na base de toda a cadeia?',
@@ -1076,6 +1096,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_bio_ecologia_2',
+    chapter: 'Introdução à Ecologia',
     topicId: 'bio_ecologia',
     subject: 'Biologia',
     prompt: 'Em uma relação de mutualismo entre duas espécies, como no caso clássico dos líquens (associação entre fungos e algas/cianobactérias), o que caracteriza esse tipo de interação ecológica?',
@@ -1091,6 +1112,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_bio_ecologia_3',
+    chapter: 'Introdução à Ecologia',
     topicId: 'bio_ecologia',
     subject: 'Biologia',
     prompt: 'A eficiência ecológica de transferência de energia entre níveis tróficos consecutivos (por exemplo, de produtores para consumidores primários) costuma ser de apenas cerca de 10%. Isso explica principalmente por que:',
@@ -1106,6 +1128,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_bio_ecologia_4',
+    chapter: 'Ciclos Biogeoquímicos – Ciclo do Carbono',
     topicId: 'bio_ecologia',
     subject: 'Biologia',
     prompt: 'Os decompositores (fungos e bactérias decompositoras) desempenham um papel fundamental nos ecossistemas porque:',
@@ -1122,6 +1145,7 @@ export const mockQuestions: Question[] = [
   // Biologia — Evolução
   {
     id: 'q_bio_evolucao_1',
+    chapter: 'Evolução Biológica: Construção Histórica',
     topicId: 'bio_evolucao',
     subject: 'Biologia',
     prompt: 'Segundo a teoria da seleção natural de Darwin, o que determina a sobrevivência e reprodução diferencial dos indivíduos de uma população ao longo de gerações?',
@@ -1137,6 +1161,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_bio_evolucao_2',
+    chapter: 'Mecanismos da Evolução Biológica',
     topicId: 'bio_evolucao',
     subject: 'Biologia',
     prompt: 'A especiação por isolamento geográfico (alopátrica) ocorre quando:',
@@ -1152,6 +1177,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_bio_evolucao_3',
+    chapter: 'Evolução Biológica: Construção Histórica',
     topicId: 'bio_evolucao',
     subject: 'Biologia',
     prompt: 'Estruturas homólogas, como o braço humano, a asa do morcego e a nadadeira da baleia, têm a mesma origem embrionária e esquelética, mas funções diferentes. Essas estruturas são consideradas evidência evolutiva porque indicam que:',
@@ -1167,6 +1193,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_bio_evolucao_4',
+    chapter: 'Mecanismos da Evolução Biológica',
     topicId: 'bio_evolucao',
     subject: 'Biologia',
     prompt: 'A deriva genética é um mecanismo evolutivo que causa mudanças na frequência dos alelos de uma população principalmente por:',
@@ -1182,6 +1209,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_bio_evolucao_5',
+    chapter: 'Mecanismos da Evolução Biológica',
     topicId: 'bio_evolucao',
     subject: 'Biologia',
     prompt: 'A resistência de populações de bactérias a antibióticos, um problema crescente de saúde pública, é um exemplo direto de seleção natural em ação porque:',
@@ -1198,6 +1226,7 @@ export const mockQuestions: Question[] = [
   // Biologia — Microbiologia e Virologia
   {
     id: 'q_bio_microbiologia_1',
+    chapter: 'Procariotos',
     topicId: 'bio_microbiologia',
     subject: 'Biologia',
     prompt: 'As bactérias, organismos procariontes, se diferenciam estruturalmente das células eucarióticas principalmente por:',
@@ -1213,6 +1242,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_bio_microbiologia_2',
+    chapter: 'Vírus',
     topicId: 'bio_microbiologia',
     subject: 'Biologia',
     prompt: 'Um vírus, ao contrário de bactérias e outros organismos celulares, é considerado por muitos biólogos como não vivo (ou na fronteira da vida) principalmente porque:',
@@ -1243,6 +1273,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_bio_microbiologia_4',
+    chapter: 'Procariotos',
     topicId: 'bio_microbiologia',
     subject: 'Biologia',
     prompt: 'Os antibióticos são substâncias eficazes no tratamento de infecções bacterianas, mas não têm efeito contra infecções virais. Isso ocorre porque os antibióticos atuam sobre:',
@@ -2495,6 +2526,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_real_fuvest_2022_bio',
+    chapter: 'Herança Sexual',
     topicId: 'bio_genetica',
     subject: 'Biologia',
     prompt: 'A deficiência na enzima G6PD é uma condição recessiva ligada ao cromossomo X, que pode ser diagnosticada no teste do pezinho expandido. Pessoas com deficiência nessa enzima são suscetíveis à anemia hemolítica ao serem expostas à cloroquina ou primaquina, drogas amplamente prescritas por médicos no tratamento da malária. Assinale a alternativa correta:',
@@ -2638,6 +2670,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_real_vunesp_2023_bio',
+    chapter: 'Biomas Brasileiros',
     topicId: 'bio_ecologia',
     subject: 'Biologia',
     prompt: '"Se a Amazônia é vista como o pulmão do mundo, podemos dizer que o Pantanal é o \'rim\' da porção da América do Sul", diz Cássio Bernardino, coordenador de Projetos do WWF-Brasil. Um professor solicitou aos alunos que analisassem a afirmação sobre a Amazônia e o Pantanal possuírem, respectivamente, funções análogas à função dos pulmões e à dos rins. É correto afirmar que:',
@@ -2690,6 +2723,7 @@ export const mockQuestions: Question[] = [
   // Biologia — Fisiologia Vegetal
   {
     id: 'q_bio_fisio_vegetal_1',
+    chapter: 'Traqueófitas: Transpiração e Reposição Rápida de Água',
     topicId: 'bio_fisio_vegetal',
     subject: 'Biologia',
     prompt: 'Qual estrutura é responsável por conduzir a seiva bruta (água e sais minerais) das raízes até as folhas em uma planta vascular?',
@@ -2705,6 +2739,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_bio_fisio_vegetal_2',
+    chapter: 'Fisiologia Vegetal: Hormônios Vegetais',
     topicId: 'bio_fisio_vegetal',
     subject: 'Biologia',
     prompt: 'O fototropismo positivo do caule em direção à luz é explicado pela ação de qual hormônio vegetal, que se acumula no lado sombreado e estimula o alongamento celular desse lado?',
@@ -2720,6 +2755,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_bio_fisio_vegetal_3',
+    chapter: 'Traqueófitas: Transpiração e Reposição Rápida de Água',
     topicId: 'bio_fisio_vegetal',
     subject: 'Biologia',
     prompt: 'A transpiração, perda de água na forma de vapor pelos estômatos das folhas, é fundamental para a subida da seiva bruta pelo xilema principalmente porque:',
@@ -2735,6 +2771,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_bio_fisio_vegetal_4',
+    chapter: 'Morfofisiologia Vegetal: Caules e Folhas',
     topicId: 'bio_fisio_vegetal',
     subject: 'Biologia',
     prompt: 'Os estômatos, poros presentes principalmente na epiderme das folhas, regulam a troca gasosa e a perda de água da planta. Sua abertura e fechamento são controlados principalmente por:',
@@ -2750,6 +2787,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_bio_fisio_vegetal_5',
+    chapter: 'Fisiologia Vegetal: Hormônios Vegetais',
     topicId: 'bio_fisio_vegetal',
     subject: 'Biologia',
     prompt: 'O hormônio vegetal etileno, ao contrário da maioria dos outros hormônios vegetais (geralmente líquidos ou sólidos), é notável por ser um gás. Sua principal função conhecida é:',
@@ -5045,6 +5083,7 @@ export const mockQuestions: Question[] = [
   // Biologia — Estrutura e Fisiologia Celular
   {
     id: 'q_bio_estrutura_fisio_celular_1',
+    chapter: 'Citoplasma: Estrutura e Componentes I',
     topicId: 'bio_estrutura_fisio_celular',
     subject: 'Biologia',
     prompt: 'Qual organela é responsável pela produção de energia (ATP) por meio da respiração celular?',
@@ -5060,6 +5099,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_bio_estrutura_fisio_celular_2',
+    chapter: 'Membranas Celulares',
     topicId: 'bio_estrutura_fisio_celular',
     subject: 'Biologia',
     prompt: 'O modelo do mosaico fluido, usado para descrever a membrana plasmática, caracteriza-a como:',
@@ -5075,6 +5115,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_bio_estrutura_fisio_celular_3',
+    chapter: 'Membranas Celulares',
     topicId: 'bio_estrutura_fisio_celular',
     subject: 'Biologia',
     prompt: 'Uma célula é colocada em uma solução hipertônica em relação ao seu meio interno. O que se espera que aconteça com essa célula, por osmose?',
@@ -5090,6 +5131,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_bio_estrutura_fisio_celular_4',
+    chapter: 'Citoplasma: Estrutura e Componentes II',
     topicId: 'bio_estrutura_fisio_celular',
     subject: 'Biologia',
     prompt: 'O retículo endoplasmático rugoso (com ribossomos aderidos) e o retículo endoplasmático liso (sem ribossomos) têm funções diferentes na célula. Qual é a principal função do retículo endoplasmático rugoso?',
@@ -5105,6 +5147,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_bio_estrutura_fisio_celular_5',
+    chapter: 'Citoplasma: Estrutura e Componentes II',
     topicId: 'bio_estrutura_fisio_celular',
     subject: 'Biologia',
     prompt: 'Os lisossomos, organelas presentes em células eucarióticas (especialmente animais), têm como principal função:',
@@ -5121,6 +5164,7 @@ export const mockQuestions: Question[] = [
   // Biologia — Biotecnologia
   {
     id: 'q_bio_biotecnologia_1',
+    chapter: 'Biotecnologia',
     topicId: 'bio_biotecnologia',
     subject: 'Biologia',
     prompt: 'A técnica de PCR (Reação em Cadeia da Polimerase) é utilizada principalmente para:',
@@ -5136,6 +5180,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_bio_biotecnologia_2',
+    chapter: 'Biotecnologia',
     topicId: 'bio_biotecnologia',
     subject: 'Biologia',
     prompt: 'A tecnologia CRISPR-Cas9, amplamente usada em edição genética, funciona principalmente por meio de:',
@@ -5151,6 +5196,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_bio_biotecnologia_3',
+    chapter: 'Biotecnologia',
     topicId: 'bio_biotecnologia',
     subject: 'Biologia',
     prompt: 'Organismos geneticamente modificados (transgênicos), como plantas resistentes a determinados herbicidas, são produzidos principalmente por meio de:',
@@ -5166,6 +5212,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_bio_biotecnologia_4',
+    chapter: 'Biotecnologia',
     topicId: 'bio_biotecnologia',
     subject: 'Biologia',
     prompt: 'O teste de paternidade por DNA se baseia principalmente no fato de que:',
@@ -5181,6 +5228,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_bio_biotecnologia_5',
+    chapter: 'Biotecnologia',
     topicId: 'bio_biotecnologia',
     subject: 'Biologia',
     prompt: 'A clonagem reprodutiva, técnica usada para gerar um animal geneticamente idêntico a outro (como no caso da ovelha Dolly), envolve principalmente:',
@@ -5197,6 +5245,7 @@ export const mockQuestions: Question[] = [
   // Biologia — Zoologia
   {
     id: 'q_bio_zoologia_1',
+    chapter: 'Introdução aos Cordados e os Peixes',
     topicId: 'bio_zoologia',
     subject: 'Biologia',
     prompt: 'Os animais classificados como vertebrados pertencem ao filo:',
@@ -5212,6 +5261,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_bio_zoologia_2',
+    chapter: 'Cordados Tetrápodes',
     topicId: 'bio_zoologia',
     subject: 'Biologia',
     prompt: 'Os anfíbios são caracterizados, entre outros aspectos, por:',
@@ -5227,6 +5277,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_bio_zoologia_3',
+    chapter: 'Artrópodes: Insetos, Crustáceos e Miriápodes',
     topicId: 'bio_zoologia',
     subject: 'Biologia',
     prompt: 'Os artrópodes, o filo animal com maior número de espécies descritas, compartilham como características principais:',
@@ -5242,6 +5293,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_bio_zoologia_4',
+    chapter: 'Cordados Tetrápodes',
     topicId: 'bio_zoologia',
     subject: 'Biologia',
     prompt: 'As aves, animais endotérmicos (de sangue quente), apresentam diversas adaptações para o voo, entre elas:',
@@ -5257,6 +5309,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_bio_zoologia_5',
+    chapter: 'Cordados Tetrápodes',
     topicId: 'bio_zoologia',
     subject: 'Biologia',
     prompt: 'Os mamíferos, grupo ao qual pertence a espécie humana, se diferenciam dos demais vertebrados principalmente pela presença de:',
@@ -5288,6 +5341,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_bio_botanica_2',
+    chapter: 'Plantas Terrestres II: Gimnospermas e Angiospermas',
     topicId: 'bio_botanica',
     subject: 'Biologia',
     prompt: 'Os tecidos vasculares responsáveis, respectivamente, pelo transporte de água e sais minerais das raízes até as folhas, e pelo transporte dos produtos da fotossíntese pela planta, são:',
@@ -5303,6 +5357,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_bio_botanica_3',
+    chapter: 'Plantas Terrestres II: Gimnospermas e Angiospermas',
     topicId: 'bio_botanica',
     subject: 'Biologia',
     prompt: 'As plantas angiospermas (que produzem flores e frutos) se diferenciam das gimnospermas (como pinheiros) principalmente por:',
@@ -5318,6 +5373,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_bio_botanica_4',
+    chapter: 'Ciclos de Vida',
     topicId: 'bio_botanica',
     subject: 'Biologia',
     prompt: 'No ciclo de vida das plantas, ocorre uma alternância entre uma fase gametofítica (produtora de gametas, haploide) e uma fase esporofítica (produtora de esporos, diploide). Nas angiospermas, a fase predominante e visível do ciclo de vida é:',
@@ -5333,6 +5389,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_bio_botanica_5',
+    chapter: 'Plantas Terrestres II: Gimnospermas e Angiospermas',
     topicId: 'bio_botanica',
     subject: 'Biologia',
     prompt: 'As raízes das plantas desempenham, além da fixação ao solo, um papel fundamental na absorção de água e nutrientes minerais. Essa absorção é significativamente aumentada por:',
