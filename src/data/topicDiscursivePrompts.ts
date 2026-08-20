@@ -569,6 +569,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   // Física — Cinemática Escalar
   {
     id: 'disc_fis_cinematica_1',
+    chapter: 'Cinemática Escalar. Conceitos Fundamentais',
     topicId: 'fis_cinematica',
     subject: 'Física',
     prompt: 'Explique a diferença entre velocidade média e velocidade instantânea, e dê um exemplo de uma situação em que elas são bem diferentes uma da outra.',
@@ -582,6 +583,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_fis_cinematica_2',
+    chapter: 'Movimento Uniforme',
     topicId: 'fis_cinematica',
     subject: 'Física',
     prompt: 'Explique por que, no gráfico velocidade × tempo de um movimento, a área sob a curva representa o deslocamento do objeto — o que isso significa fisicamente?',
@@ -595,6 +597,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_fis_cinematica_3',
+    chapter: 'Movimento Uniformemente Variado',
     topicId: 'fis_cinematica',
     subject: 'Física',
     prompt: 'Um objeto é lançado verticalmente para cima. Explique o que acontece com sua velocidade e sua aceleração durante a subida e durante a descida (antes e depois de atingir a altura máxima), assumindo resistência do ar desprezível.',
@@ -609,6 +612,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   // Física — Cinemática Vetorial
   {
     id: 'disc_fis_cinematica_vetorial_1',
+    chapter: 'Composição de Movimentos',
     topicId: 'fis_cinematica_vetorial',
     subject: 'Física',
     prompt: 'Explique por que, no lançamento oblíquo, o movimento pode ser estudado separadamente nas direções horizontal e vertical, como se fossem dois movimentos independentes acontecendo ao mesmo tempo.',
@@ -622,6 +626,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_fis_cinematica_vetorial_2',
+    chapter: 'Velocidade Vetorial',
     topicId: 'fis_cinematica_vetorial',
     subject: 'Física',
     prompt: 'Explique o conceito de velocidade relativa, usando o exemplo de um barco atravessando um rio com correnteza — por que a velocidade do barco em relação à margem é diferente da velocidade do barco em relação à água?',
@@ -635,6 +640,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_fis_cinematica_vetorial_3',
+    chapter: 'Composição de Movimentos',
     topicId: 'fis_cinematica_vetorial',
     subject: 'Física',
     prompt: 'Em um lançamento oblíquo, sem resistência do ar, explique por que a velocidade horizontal permanece constante durante toda a trajetória, enquanto a velocidade vertical varia.',
@@ -649,6 +655,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   // Física — Leis de Newton e Dinâmica do Movimento Retilíneo
   {
     id: 'disc_fis_leis_newton_1',
+    chapter: 'As Leis de Newton',
     topicId: 'fis_leis_newton',
     subject: 'Física',
     prompt: 'Explique a Primeira Lei de Newton (Lei da Inércia) com suas próprias palavras, e dê um exemplo do cotidiano em que a inércia é perceptível (por exemplo, ao andar de ônibus).',
@@ -662,6 +669,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_fis_leis_newton_2',
+    chapter: 'As Leis de Newton',
     topicId: 'fis_leis_newton',
     subject: 'Física',
     prompt: 'Explique por que, na Terceira Lei de Newton, as forças de ação e reação nunca se anulam, mesmo tendo mesma intensidade e direções opostas — o que isso tem a ver com o fato de agirem em corpos diferentes?',
@@ -675,6 +683,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_fis_leis_newton_3',
+    chapter: 'A Força de Contato',
     topicId: 'fis_leis_newton',
     subject: 'Física',
     prompt: 'Um bloco está em repouso sobre uma superfície com atrito. Explique a diferença entre atrito estático e atrito cinético, e por que geralmente o atrito estático máximo é maior que o atrito cinético.',
@@ -689,6 +698,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   // Física — Gravitação e Movimento Circular
   {
     id: 'disc_fis_gravitacao_circular_1',
+    chapter: 'Leis da Gravitação',
     topicId: 'fis_gravitacao_circular',
     subject: 'Física',
     prompt: 'Explique por que a força gravitacional atua como força centrípeta na órbita de um satélite, e o que aconteceria com o satélite se essa força deixasse de existir repentinamente.',
@@ -702,6 +712,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_fis_gravitacao_circular_2',
+    chapter: 'Leis da Gravitação',
     topicId: 'fis_gravitacao_circular',
     subject: 'Física',
     prompt: 'Explique a Terceira Lei de Kepler (das órbitas) com suas próprias palavras, e o que ela nos diz sobre a relação entre o período orbital de um planeta e sua distância até o Sol.',
@@ -715,6 +726,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_fis_gravitacao_circular_3',
+    chapter: 'Dinâmica do Movimento Circular',
     topicId: 'fis_gravitacao_circular',
     subject: 'Física',
     prompt: 'Explique por que, no movimento circular uniforme, a velocidade escalar é constante, mas a velocidade vetorial não é — e por que isso implica a existência de uma aceleração (centrípeta), mesmo sem mudança no módulo da velocidade.',
@@ -729,6 +741,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   // Física — Dinâmica Impulsiva
   {
     id: 'disc_fis_dinamica_impulsiva_1',
+    chapter: 'Impulso e Quantidade de Movimento',
     topicId: 'fis_dinamica_impulsiva',
     subject: 'Física',
     prompt: 'Explique a relação entre impulso e variação da quantidade de movimento (momento linear), e por que essa relação é útil para analisar colisões que acontecem em um intervalo de tempo muito curto.',
@@ -742,6 +755,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_fis_dinamica_impulsiva_2',
+    chapter: 'Colisões',
     topicId: 'fis_dinamica_impulsiva',
     subject: 'Física',
     prompt: 'Explique a diferença entre uma colisão elástica e uma colisão perfeitamente inelástica, em termos do que se conserva e do que acontece com os corpos após o choque.',
@@ -755,6 +769,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_fis_dinamica_impulsiva_3',
+    chapter: 'Sistemas Isolados e a Conservação da Quantidade de Movimento',
     topicId: 'fis_dinamica_impulsiva',
     subject: 'Física',
     prompt: 'Em uma colisão, por que a quantidade de movimento total do sistema se conserva mesmo quando a energia cinética não se conserva (como em colisões inelásticas)? O que isso diz sobre a diferença entre essas duas grandezas físicas?',
@@ -769,6 +784,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   // Física — Dinâmica Energética e Transformações de Energia
   {
     id: 'disc_fis_energia_1',
+    chapter: 'Trabalho e Energia: Teorema da Energia Cinética',
     topicId: 'fis_energia',
     subject: 'Física',
     prompt: 'Explique o Teorema Trabalho-Energia Cinética: por que o trabalho realizado pela força resultante sobre um corpo é igual à variação de sua energia cinética?',
@@ -782,6 +798,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_fis_energia_2',
+    chapter: 'Sistemas Conservativos e Sistemas Não Conservativos',
     topicId: 'fis_energia',
     subject: 'Física',
     prompt: 'Explique por que, na ausência de atrito e outras forças dissipativas, a energia mecânica de um sistema se conserva — e o que acontece com essa conservação quando existe atrito.',
@@ -795,6 +812,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_fis_energia_3',
+    chapter: 'Trabalho e Energia: o Teorema da Energia Potencial',
     topicId: 'fis_energia',
     subject: 'Física',
     prompt: 'Explique a diferença entre energia potencial gravitacional e energia potencial elástica, dando um exemplo físico de cada uma.',
@@ -809,6 +827,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   // Física — Estática dos Corpos Sólidos e dos Fluidos
   {
     id: 'disc_fis_estatica_1',
+    chapter: 'Hidrostática: Densidade e Pressão',
     topicId: 'fis_estatica',
     subject: 'Física',
     prompt: 'Explique o Princípio de Arquimedes com suas próprias palavras, e explique por que um navio de aço, mais denso que a água, consegue flutuar.',
@@ -822,6 +841,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_fis_estatica_2',
+    chapter: 'Estática',
     topicId: 'fis_estatica',
     subject: 'Física',
     prompt: 'Explique o conceito de torque (momento de uma força), e por que, para abrir uma porta, é mais fácil empurrá-la na maçaneta (longe das dobradiças) do que perto das dobradiças.',
@@ -835,6 +855,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_fis_estatica_3',
+    chapter: 'Estática',
     topicId: 'fis_estatica',
     subject: 'Física',
     prompt: 'Explique as duas condições necessárias para o equilíbrio estático de um corpo rígido (equilíbrio de translação e de rotação), e dê um exemplo de uma situação em que um corpo tem resultante de forças nula, mas ainda assim gira (não está em equilíbrio completo).',
@@ -849,6 +870,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   // Física — Calorimetria
   {
     id: 'disc_fis_calorimetria_1',
+    chapter: 'Calor Sensível e Calor Latente',
     topicId: 'fis_calorimetria',
     subject: 'Física',
     prompt: 'Explique a diferença entre calor sensível e calor latente, usando como exemplo o aquecimento de um cubo de gelo até se transformar em vapor de água.',
@@ -862,6 +884,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_fis_calorimetria_2',
+    chapter: 'Temperatura, Calor e seus Mecanismos de Transferência',
     topicId: 'fis_calorimetria',
     subject: 'Física',
     prompt: 'Explique o princípio das trocas de calor (calorimetria): por que, em um sistema termicamente isolado, o calor perdido por um corpo mais quente é igual ao calor ganho por um corpo mais frio.',
@@ -875,6 +898,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_fis_calorimetria_3',
+    chapter: 'Calor Sensível e Calor Latente',
     topicId: 'fis_calorimetria',
     subject: 'Física',
     prompt: 'Explique por que, ao suar, o corpo humano se resfria — que processo físico relacionado à calorimetria explica esse efeito?',
@@ -889,6 +913,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   // Física — Termodinâmica dos Gases
   {
     id: 'disc_fis_termodinamica_gases_1',
+    chapter: 'Primeira Lei da Termodinâmica',
     topicId: 'fis_termodinamica_gases',
     subject: 'Física',
     prompt: 'Explique a Primeira Lei da Termodinâmica com suas próprias palavras, relacionando calor, trabalho e energia interna de um sistema.',
@@ -902,6 +927,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_fis_termodinamica_gases_2',
+    chapter: 'Primeira Lei da Termodinâmica Aplicada a Algumas Transformações Particulares',
     topicId: 'fis_termodinamica_gases',
     subject: 'Física',
     prompt: 'Explique por que, para um gás ideal, a energia interna depende apenas da temperatura (e não da pressão ou do volume isoladamente).',
@@ -915,6 +941,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_fis_termodinamica_gases_3',
+    chapter: 'Primeira Lei da Termodinâmica Aplicada a Algumas Transformações Particulares',
     topicId: 'fis_termodinamica_gases',
     subject: 'Física',
     prompt: 'Explique o que significa uma transformação "adiabática" em termodinâmica, e como ela se diferencia de uma transformação isotérmica.',
@@ -929,6 +956,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   // Física — Eletrostática e Campo Elétrico
   {
     id: 'disc_fis_eletrostatica_1',
+    chapter: 'Força Elétrica: Lei de Coulomb',
     topicId: 'fis_eletrostatica',
     subject: 'Física',
     prompt: 'Explique a Lei de Coulomb com suas próprias palavras, e explique o que acontece com a força elétrica entre duas cargas se a distância entre elas dobrar.',
@@ -942,6 +970,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_fis_eletrostatica_2',
+    chapter: 'Campo Elétrico',
     topicId: 'fis_eletrostatica',
     subject: 'Física',
     prompt: 'Explique o conceito de campo elétrico, e por que ele é útil para descrever a força que uma carga de prova sofreria em qualquer ponto do espaço, sem precisar saber previamente qual carga será colocada ali.',
@@ -955,6 +984,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_fis_eletrostatica_3',
+    chapter: 'Campo Elétrico',
     topicId: 'fis_eletrostatica',
     subject: 'Física',
     prompt: 'Explique por que, em um condutor em equilíbrio eletrostático, o campo elétrico em seu interior é sempre nulo.',
@@ -969,6 +999,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   // Física — Circuitos Elétricos
   {
     id: 'disc_fis_circuitos_1',
+    chapter: 'Circuitos de Malha Única',
     topicId: 'fis_circuitos',
     subject: 'Física',
     prompt: 'Explique a diferença entre uma associação de resistores em série e em paralelo, em termos de como a corrente e a tensão se distribuem entre eles.',
@@ -982,6 +1013,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_fis_circuitos_2',
+    chapter: 'Resistores',
     topicId: 'fis_circuitos',
     subject: 'Física',
     prompt: 'Explique a Primeira Lei de Ohm (V=RI), e o que significa dizer que um resistor é "ôhmico" — o que aconteceria com o gráfico V×I de um resistor não-ôhmico?',
@@ -995,6 +1027,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_fis_circuitos_3',
+    chapter: 'Potência Elétrica',
     topicId: 'fis_circuitos',
     subject: 'Física',
     prompt: 'Explique a relação entre potência elétrica, tensão e corrente (P=VI), e por que aparelhos de alta potência, como chuveiros elétricos, geralmente precisam de fios mais grossos para sua instalação.',
@@ -1009,6 +1042,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   // Física — Eletromagnetismo
   {
     id: 'disc_fis_eletromagnetismo_1',
+    chapter: 'Indução Eletromagnética: Lei de Lenz',
     topicId: 'fis_eletromagnetismo',
     subject: 'Física',
     prompt: 'Explique a Lei de Lenz e por que ela é considerada uma manifestação do princípio de conservação de energia.',
@@ -1022,6 +1056,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_fis_eletromagnetismo_2',
+    chapter: 'Força Magnética e Análise de Lançamentos de Cargas em um Campo Magnético Uniforme',
     topicId: 'fis_eletromagnetismo',
     subject: 'Física',
     prompt: 'Explique por que uma carga elétrica em repouso não sofre força magnética, mesmo estando dentro de um campo magnético — o que isso diz sobre a relação entre magnetismo e movimento de cargas?',
@@ -1035,6 +1070,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_fis_eletromagnetismo_3',
+    chapter: 'Indução Eletromagnética: Análise da Corrente Induzida em Geradores',
     topicId: 'fis_eletromagnetismo',
     subject: 'Física',
     prompt: 'Explique o princípio de funcionamento de um gerador elétrico simples, relacionando-o com a indução eletromagnética (Lei de Faraday).',
@@ -1049,6 +1085,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   // Física — Óptica Geométrica
   {
     id: 'disc_fis_optica_geometrica_1',
+    chapter: 'Fundamentos da Óptica Geométrica',
     topicId: 'fis_optica_geometrica',
     subject: 'Física',
     prompt: 'Explique a diferença entre uma imagem real e uma imagem virtual, formada por espelhos ou lentes, e como cada uma poderia (ou não) ser projetada em uma tela.',
@@ -1062,6 +1099,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_fis_optica_geometrica_2',
+    chapter: 'Refração: Fundamentos, Leis e Aplicações',
     topicId: 'fis_optica_geometrica',
     subject: 'Física',
     prompt: 'Explique a Lei da Refração (Lei de Snell) com suas próprias palavras: o que acontece com um raio de luz ao passar obliquamente de um meio menos denso opticamente para um meio mais denso opticamente?',
@@ -1075,6 +1113,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_fis_optica_geometrica_3',
+    chapter: 'Reflexão em Superfícies Esféricas',
     topicId: 'fis_optica_geometrica',
     subject: 'Física',
     prompt: 'Explique por que espelhos convexos (como os usados em retrovisores de carros e em corredores de lojas) sempre formam imagens virtuais, direitas e reduzidas, independentemente da posição do objeto.',
@@ -1089,6 +1128,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   // Física — Óptica Instrumental e da Visão
   {
     id: 'disc_fis_optica_instrumental_1',
+    chapter: 'Óptica da Visão',
     topicId: 'fis_optica_instrumental',
     subject: 'Física',
     prompt: 'Explique a diferença entre miopia e hipermetropia, em termos de onde a imagem se forma em relação à retina, e por que cada uma exige um tipo diferente de lente corretiva.',
@@ -1102,6 +1142,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_fis_optica_instrumental_2',
+    chapter: 'Óptica da Visão',
     topicId: 'fis_optica_instrumental',
     subject: 'Física',
     prompt: 'Explique o que é a acomodação visual do olho humano, e por que essa capacidade tende a diminuir com o envelhecimento (um fenômeno chamado presbiopia).',
@@ -1115,6 +1156,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_fis_optica_instrumental_3',
+    chapter: 'Microscópio e Luneta Astronômica (ou Telescópio Refrator): Noções Básicas',
     topicId: 'fis_optica_instrumental',
     subject: 'Física',
     prompt: 'Explique por que, para funcionar como lupa, o objeto observado precisa estar posicionado entre o foco e a lente convergente — o que aconteceria com a imagem se o objeto fosse colocado além do foco?',
@@ -1129,6 +1171,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   // Física — Fundamentos de Ondas e Oscilações
   {
     id: 'disc_fis_ondas_fundamentos_1',
+    chapter: 'Conceitos Básicos',
     topicId: 'fis_ondas_fundamentos',
     subject: 'Física',
     prompt: 'Explique a diferença entre onda transversal e onda longitudinal, dando um exemplo físico de cada uma.',
@@ -1142,6 +1185,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_fis_ondas_fundamentos_2',
+    chapter: 'Conceitos Básicos',
     topicId: 'fis_ondas_fundamentos',
     subject: 'Física',
     prompt: 'Explique por que uma onda transporta energia, mas não transporta matéria, usando o exemplo de uma onda se propagando na superfície da água.',
@@ -1155,6 +1199,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_fis_ondas_fundamentos_3',
+    chapter: 'Conceitos Básicos',
     topicId: 'fis_ondas_fundamentos',
     subject: 'Física',
     prompt: 'Explique a diferença entre interferência construtiva e destrutiva, e o que precisa acontecer com a fase de duas ondas para que cada tipo de interferência ocorra.',
@@ -1169,6 +1214,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   // Física — Ondulatória
   {
     id: 'disc_fis_ondulatoria_1',
+    chapter: 'Efeito Doppler: Descrição e Estudo Quantitativo',
     topicId: 'fis_ondulatoria',
     subject: 'Física',
     prompt: 'Explique o efeito Doppler com suas próprias palavras, e por que ele ocorre tanto quando a fonte sonora se move quanto quando o observador se move.',
@@ -1182,6 +1228,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_fis_ondulatoria_2',
+    chapter: 'Fenômenos Ondulatórios: Difração, Polarização e Ressonância',
     topicId: 'fis_ondulatoria',
     subject: 'Física',
     prompt: 'Explique o fenômeno da ressonância, e por que copos de cristal podem quebrar quando expostos a um som de frequência específica (a mesma de sua vibração natural).',
@@ -1195,6 +1242,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_fis_ondulatoria_3',
+    chapter: 'Ondulatória: Som e suas Propriedades',
     topicId: 'fis_ondulatoria',
     subject: 'Física',
     prompt: 'Explique por que, ao passar de um meio para outro (como do ar para a água), a frequência de uma onda sonora permanece constante, mas sua velocidade e comprimento de onda mudam.',
@@ -1209,6 +1257,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   // Física — Física Moderna
   {
     id: 'disc_fis_fisica_moderna_1',
+    chapter: 'Noções Básicas de Física Quântica',
     topicId: 'fis_fisica_moderna',
     subject: 'Física',
     prompt: 'Explique o efeito fotoelétrico com suas próprias palavras, e por que ele não pode ser explicado apenas pela teoria ondulatória clássica da luz (por que a intensidade da luz, sozinha, não é suficiente para arrancar elétrons).',
@@ -1222,6 +1271,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_fis_fisica_moderna_2',
+    chapter: 'Noções Básicas de Física Quântica',
     topicId: 'fis_fisica_moderna',
     subject: 'Física',
     prompt: 'Explique o que é a dilatação temporal, prevista pela Teoria da Relatividade Restrita, e em que condições (de velocidade) esse efeito se torna perceptível.',
@@ -1235,6 +1285,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_fis_fisica_moderna_3',
+    chapter: 'Noções Básicas de Física Quântica',
     topicId: 'fis_fisica_moderna',
     subject: 'Física',
     prompt: 'Explique a ideia de dualidade onda-partícula, e por que ela representa uma ruptura importante em relação à física clássica, que tratava ondas e partículas como categorias completamente separadas.',
