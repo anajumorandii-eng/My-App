@@ -3137,6 +3137,7 @@ export const mockQuestions: Question[] = [
   // Português — Redação
   {
     id: 'q_por_redacao_1',
+    chapter: 'Recursos Argumentativos: Dados Numéricos e Exemplos',
     topicId: 'por_red_argumentacao',
     subject: 'Português',
     prompt: 'Em uma redação dissertativo-argumentativa, o uso de um dado estatístico de uma fonte confiável (como IBGE ou OMS) logo na introdução tem principalmente a função de:',
@@ -3152,6 +3153,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_por_red_argumentacao_2',
+    chapter: 'Argumentação e Coerência Interna',
     topicId: 'por_red_argumentacao',
     subject: 'Português',
     prompt: 'Em um parágrafo de desenvolvimento de uma redação dissertativo-argumentativa, a estrutura considerada mais eficaz costuma seguir a lógica de:',
@@ -3167,6 +3169,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_por_red_argumentacao_3',
+    chapter: 'Argumentação e Coerência Interna',
     topicId: 'por_red_argumentacao',
     subject: 'Português',
     prompt: 'A coerência textual, um dos critérios avaliados em uma redação dissertativo-argumentativa, se refere principalmente a:',
@@ -3182,6 +3185,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_por_red_argumentacao_4',
+    chapter: 'Recursos Argumentativos: Vozes Prestigiadas',
     topicId: 'por_red_argumentacao',
     subject: 'Português',
     prompt: 'O uso de um argumento de autoridade em uma redação dissertativo-argumentativa (por exemplo, citar um especialista ou uma pesquisa científica) é eficaz principalmente quando:',
@@ -3197,6 +3201,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_por_red_argumentacao_5',
+    chapter: 'Argumentação e Coerência Interna',
     topicId: 'por_red_argumentacao',
     subject: 'Português',
     prompt: 'Um dos erros argumentativos mais comuns em redações é a chamada "circularidade" — quando o candidato:',
@@ -3212,6 +3217,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_por_red_estrutura_coesao_1',
+    chapter: 'Proposta de Intervenção: Viabilização e Inovação',
     topicId: 'por_red_estrutura_coesao',
     subject: 'Português',
     prompt: 'Qual das alternativas abaixo caracteriza uma proposta de intervenção completa e bem estruturada, nos moldes cobrados pelo ENEM e por vestibulares que adotam critério semelhante?',
@@ -3227,6 +3233,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_por_red_estrutura_coesao_2',
+    chapter: 'Recursos de Coesão Sequencial no Texto Dissertativo',
     topicId: 'por_red_estrutura_coesao',
     subject: 'Português',
     prompt: 'Os conectivos (como "portanto", "além disso", "no entanto") desempenham, em um texto dissertativo-argumentativo, o papel principal de:',
@@ -3242,6 +3249,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_por_red_estrutura_coesao_3',
+    chapter: 'Conclusão por Síntese ou Retomada da Tese',
     topicId: 'por_red_estrutura_coesao',
     subject: 'Português',
     prompt: 'Em uma conclusão de redação dissertativo-argumentativa, além da proposta de intervenção (exigida pelo ENEM), é esperado que o candidato também:',
@@ -3257,6 +3265,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_por_red_estrutura_coesao_4',
+    chapter: 'Recursos de Coesão Referencial no Texto Dissertativo',
     topicId: 'por_red_estrutura_coesao',
     subject: 'Português',
     prompt: 'A coesão referencial, um dos mecanismos de coesão textual, consiste em:',
@@ -3272,6 +3281,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_por_red_estrutura_coesao_5',
+    chapter: 'Proposta de Intervenção: Viabilização e Inovação',
     topicId: 'por_red_estrutura_coesao',
     subject: 'Português',
     prompt: 'Uma proposta de intervenção que sugere apenas "o governo deveria fazer mais campanhas de conscientização" tende a receber uma avaliação mais baixa, nos critérios do ENEM, principalmente porque:',
@@ -6850,6 +6860,7 @@ export const mockQuestions: Question[] = [
   // Português — Domínio da Norma Culta
   {
     id: 'q_por_norma_culta_1',
+    chapter: 'Concordância',
     topicId: 'por_norma_culta',
     subject: 'Português',
     prompt: 'Assinale a alternativa que respeita a concordância verbal segundo a norma-padrão:',
@@ -6865,6 +6876,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_por_norma_culta_2',
+    chapter: 'Crase',
     topicId: 'por_norma_culta',
     subject: 'Português',
     prompt: 'Assinale a alternativa em que o uso do acento indicativo de crase está correto:',
@@ -6880,6 +6892,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_por_norma_culta_3',
+    chapter: 'Mecanismo de Regência',
     topicId: 'por_norma_culta',
     subject: 'Português',
     prompt: 'Assinale a alternativa em que a regência verbal está de acordo com a norma-padrão:',
@@ -6895,6 +6908,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_por_norma_culta_4',
+    chapter: 'Pronomes',
     topicId: 'por_norma_culta',
     subject: 'Português',
     prompt: 'Assinale a alternativa em que a colocação pronominal está de acordo com a norma-padrão:',
@@ -6910,6 +6924,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_por_norma_culta_5',
+    chapter: 'Concordância',
     topicId: 'por_norma_culta',
     subject: 'Português',
     prompt: 'Assinale a alternativa em que a concordância nominal está de acordo com a norma-padrão:',
@@ -6926,6 +6941,7 @@ export const mockQuestions: Question[] = [
   // Português — Análise Sintática
   {
     id: 'q_por_sintaxe_1',
+    chapter: 'Funções Sintáticas Nominais e Vocativo',
     topicId: 'por_sintaxe',
     subject: 'Português',
     prompt: 'Na frase "O aluno estudou a matéria com dedicação", o termo "a matéria" exerce a função sintática de:',
@@ -6941,6 +6957,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_por_sintaxe_2',
+    chapter: 'Orações Adverbiais',
     topicId: 'por_sintaxe',
     subject: 'Português',
     prompt: 'Na frase "Os candidatos, apesar do cansaço, mantiveram a concentração até o fim da prova", o termo "apesar do cansaço" exerce a função de:',
@@ -6956,6 +6973,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_por_sintaxe_3',
+    chapter: 'Orações Adjetivas',
     topicId: 'por_sintaxe',
     subject: 'Português',
     prompt: 'Na frase "O livro que comprei ontem é excelente", a oração "que comprei ontem" exerce a função de:',
@@ -6971,6 +6989,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_por_sintaxe_4',
+    chapter: 'Orações Substantivas',
     topicId: 'por_sintaxe',
     subject: 'Português',
     prompt: 'Na frase "É necessário que os candidatos cheguem cedo ao local de prova", a oração "que os candidatos cheguem cedo ao local de prova" exerce a função sintática de:',
@@ -6986,6 +7005,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_por_sintaxe_5',
+    chapter: 'Funções Sintáticas Nominais e Vocativo',
     topicId: 'por_sintaxe',
     subject: 'Português',
     prompt: 'Na frase "Maria, minha melhor amiga, chegou atrasada à reunião", o termo "minha melhor amiga" exerce a função sintática de:',
@@ -7002,6 +7022,7 @@ export const mockQuestions: Question[] = [
   // Português — Entendimento de Texto
   {
     id: 'q_por_texto_1',
+    chapter: 'Fatores de Textualidade',
     topicId: 'por_texto',
     subject: 'Português',
     prompt: 'Em um texto, a ideia central defendida pelo autor, à qual os demais argumentos se articulam, é chamada de:',
@@ -7017,6 +7038,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_por_texto_2',
+    chapter: 'Fatores de Textualidade',
     topicId: 'por_texto',
     subject: 'Português',
     prompt: 'Quando um texto utiliza a expressão "por outro lado" para introduzir uma nova informação, ele está sinalizando, em termos de coesão textual, uma relação de:',
@@ -7032,6 +7054,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_por_texto_3',
+    chapter: 'Os Dois Níveis da Leitura',
     topicId: 'por_texto',
     subject: 'Português',
     prompt: 'Ao interpretar um texto, a diferença entre uma informação explícita e uma informação implícita (uma inferência) é que:',
@@ -7047,6 +7070,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_por_texto_4',
+    chapter: 'Modelos de Leitura e Distorções Interpretativas',
     topicId: 'por_texto',
     subject: 'Português',
     prompt: 'Identificar a intenção comunicativa de um autor (por exemplo, se ele pretende convencer, criticar ironicamente ou informar de forma neutra) é uma habilidade de leitura fundamental porque:',
@@ -7062,6 +7086,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_por_texto_5',
+    chapter: 'Fatores de Textualidade',
     topicId: 'por_texto',
     subject: 'Português',
     prompt: 'Quando um texto argumentativo apresenta um contra-argumento (uma ideia contrária à tese) para em seguida refutá-lo, essa estratégia é utilizada principalmente para:',
@@ -7078,6 +7103,7 @@ export const mockQuestions: Question[] = [
   // Português — Literatura Clássica, Medieval e Barroca
   {
     id: 'q_por_lit_classica_barroca_1',
+    chapter: 'A Estética Barroca',
     topicId: 'por_lit_classica_barroca',
     subject: 'Português',
     prompt: 'O Barroco, movimento literário marcado pelo conflito entre valores religiosos e terrenos (fé x razão, espírito x matéria), teve como uma de suas principais características estilísticas o uso do:',
@@ -7093,6 +7119,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_por_lit_classica_barroca_2',
+    chapter: 'A Estética Barroca',
     topicId: 'por_lit_classica_barroca',
     subject: 'Português',
     prompt: 'No Brasil colonial, o principal representante do Barroco, conhecido por seus poemas satíricos e religiosos, foi:',
@@ -7108,6 +7135,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_por_lit_classica_barroca_3',
+    chapter: 'Renascimento e Camões',
     topicId: 'por_lit_classica_barroca',
     subject: 'Português',
     prompt: 'O Classicismo, movimento literário que antecedeu o Barroco em Portugal (com Luís de Camões como principal expoente), caracterizava-se, entre outros aspectos, por:',
@@ -7123,6 +7151,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_por_lit_classica_barroca_4',
+    chapter: 'Renascimento e Camões',
     topicId: 'por_lit_classica_barroca',
     subject: 'Português',
     prompt: 'A obra "Os Lusíadas", de Luís de Camões, é considerada um marco da literatura em língua portuguesa principalmente por:',
@@ -7138,6 +7167,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_por_lit_classica_barroca_5',
+    chapter: 'A Estética Barroca',
     topicId: 'por_lit_classica_barroca',
     subject: 'Português',
     prompt: 'O jogo entre cultismo (valorização da forma, dos jogos de palavras e das metáforas rebuscadas) e conceptismo (valorização do conteúdo, da argumentação lógica e do jogo de ideias) no Barroco reflete, em última análise, o conflito central desse movimento entre:',
@@ -7154,6 +7184,7 @@ export const mockQuestions: Question[] = [
   // Português — Romantismo e Realismo
   {
     id: 'q_por_lit_romantismo_realismo_1',
+    chapter: 'A Estética Romântica: Prosa',
     topicId: 'por_lit_romantismo_realismo',
     subject: 'Português',
     prompt: 'O Romantismo, movimento literário do século XIX, caracterizou-se, entre outros aspectos, por:',
@@ -7169,6 +7200,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_por_lit_romantismo_realismo_2',
+    chapter: 'Machado de Assis',
     topicId: 'por_lit_romantismo_realismo',
     subject: 'Português',
     prompt: 'O Realismo, que sucedeu o Romantismo no Brasil e teve em Machado de Assis um de seus principais expoentes, caracteriza-se, em contraste com o Romantismo, por:',
@@ -7184,6 +7216,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_por_lit_romantismo_realismo_3',
+    chapter: 'A Estética Romântica: Prosa',
     topicId: 'por_lit_romantismo_realismo',
     subject: 'Português',
     prompt: 'O indianismo, tema recorrente na obra de José de Alencar durante o Romantismo brasileiro (como em "Iracema" e "O Guarani"), representa uma tentativa de:',
@@ -7199,6 +7232,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_por_lit_romantismo_realismo_4',
+    chapter: 'Naturalismo',
     topicId: 'por_lit_romantismo_realismo',
     subject: 'Português',
     prompt: 'O Naturalismo, movimento literário próximo ao Realismo (com Aluísio Azevedo como principal nome no Brasil, autor de "O Cortiço"), se diferencia por:',
@@ -7214,6 +7248,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_por_lit_romantismo_realismo_5',
+    chapter: 'Machado de Assis',
     topicId: 'por_lit_romantismo_realismo',
     subject: 'Português',
     prompt: 'Machado de Assis, em romances como "Dom Casmurro" e "Memórias Póstumas de Brás Cubas", é reconhecido por uma característica narrativa marcante, que é:',
@@ -7230,6 +7265,7 @@ export const mockQuestions: Question[] = [
   // Português — Simbolismo, Pré-Modernismo e Modernismo
   {
     id: 'q_por_lit_modernismo_1',
+    chapter: 'Semana de Arte Moderna',
     topicId: 'por_lit_modernismo',
     subject: 'Português',
     prompt: 'A Semana de Arte Moderna de 1922, em São Paulo, é considerada um marco histórico porque:',
@@ -7245,6 +7281,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_por_lit_modernismo_2',
+    chapter: 'Simbolismo',
     topicId: 'por_lit_modernismo',
     subject: 'Português',
     prompt: 'O Simbolismo, movimento literário de fins do século XIX, caracterizou-se principalmente por:',
@@ -7260,6 +7297,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_por_lit_modernismo_3',
+    chapter: 'Modernismo no Brasil: Primeira Geração',
     topicId: 'por_lit_modernismo',
     subject: 'Português',
     prompt: 'A primeira fase do Modernismo brasileiro (fase heroica, 1922-1930) é caracterizada, entre outros aspectos, por:',
@@ -7275,6 +7313,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_por_lit_modernismo_4',
+    chapter: 'Pré-Modernismo',
     topicId: 'por_lit_modernismo',
     subject: 'Português',
     prompt: 'O Pré-Modernismo, movimento de transição no início do século XX (com Euclides da Cunha e Lima Barreto como nomes de destaque), caracteriza-se principalmente por:',
@@ -7290,6 +7329,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_por_lit_modernismo_5',
+    chapter: 'Modernismo no Brasil: Primeira Geração',
     topicId: 'por_lit_modernismo',
     subject: 'Português',
     prompt: 'O "Manifesto Antropófago" (1928), de Oswald de Andrade, propunha, como estratégia de construção de uma identidade cultural brasileira, a ideia de:',
@@ -7306,6 +7346,7 @@ export const mockQuestions: Question[] = [
   // Português — Literatura Contemporânea
   {
     id: 'q_por_lit_contemporanea_1',
+    chapter: 'Prosa Brasileira Contemporânea',
     topicId: 'por_lit_contemporanea',
     subject: 'Português',
     prompt: 'A literatura brasileira contemporânea, produzida a partir de meados do século XX até os dias atuais, caracteriza-se, entre outros aspectos, por:',
@@ -7321,6 +7362,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_por_lit_contemporanea_2',
+    chapter: 'Clarice Lispector',
     topicId: 'por_lit_contemporanea',
     subject: 'Português',
     prompt: 'Autores como Clarice Lispector e Guimarães Rosa, associados à prosa brasileira do século XX, são reconhecidos principalmente por:',
@@ -7351,6 +7393,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_por_lit_contemporanea_4',
+    chapter: 'Prosa Brasileira Contemporânea',
     topicId: 'por_lit_contemporanea',
     subject: 'Português',
     prompt: 'A literatura marginal (ou literatura periférica), que ganhou visibilidade crescente no Brasil a partir das últimas décadas, se caracteriza por:',
@@ -7366,6 +7409,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_por_lit_contemporanea_5',
+    chapter: 'Prosa Brasileira Contemporânea',
     topicId: 'por_lit_contemporanea',
     subject: 'Português',
     prompt: 'O crescente reconhecimento de autoras e autores negros na literatura brasileira contemporânea (como Conceição Evaristo, entre outros) tem contribuído para:',
@@ -7382,6 +7426,7 @@ export const mockQuestions: Question[] = [
   // Português — Fundamentos da Dissertação
   {
     id: 'q_por_red_fundamentos_1',
+    chapter: 'A Dissertação no Vestibular: Mitos e Verdades',
     topicId: 'por_red_fundamentos',
     subject: 'Português',
     prompt: 'O texto dissertativo-argumentativo, modelo cobrado por exames como o ENEM, tem como principal objetivo:',
@@ -7397,6 +7442,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_por_red_fundamentos_2',
+    chapter: 'Estrutura Clássica do Texto Dissertativo',
     topicId: 'por_red_fundamentos',
     subject: 'Português',
     prompt: 'A estrutura clássica de uma redação dissertativo-argumentativa é organizada, tipicamente, em:',
@@ -7412,6 +7458,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_por_red_fundamentos_3',
+    chapter: 'Estrutura Clássica do Texto Dissertativo',
     topicId: 'por_red_fundamentos',
     subject: 'Português',
     prompt: 'A tese de uma redação dissertativo-argumentativa deve, idealmente, ser apresentada:',
@@ -7427,6 +7474,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_por_red_fundamentos_4',
+    chapter: 'A Dissertação no Vestibular: Mitos e Verdades',
     topicId: 'por_red_fundamentos',
     subject: 'Português',
     prompt: 'Diferentemente de um texto dissertativo-expositivo (que apenas expõe informações sobre um tema, de forma mais neutra), o texto dissertativo-argumentativo se distingue por:',
@@ -7442,6 +7490,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_por_red_fundamentos_5',
+    chapter: 'Tangenciamento e Fuga: a Fronteira do Tema',
     topicId: 'por_red_fundamentos',
     subject: 'Português',
     prompt: 'A "fuga ao tema", um dos erros mais graves em uma redação (podendo até zerar o texto em exames como o ENEM), ocorre quando o candidato:',
@@ -7458,6 +7507,7 @@ export const mockQuestions: Question[] = [
   // Português — Leitura de Coletânea e Repertório Temático
   {
     id: 'q_por_red_repertorio_1',
+    chapter: 'Lendo a Coletânea: a Apreensão de Sentidos I',
     topicId: 'por_red_repertorio',
     subject: 'Português',
     prompt: 'Na redação do ENEM, a "coletânea" apresentada junto à proposta de redação tem como função principal:',
@@ -7534,6 +7584,7 @@ export const mockQuestions: Question[] = [
   // Português — Direitos Humanos e Redações Modelo
   {
     id: 'q_por_red_direitos_modelo_1',
+    chapter: 'Os Direitos Humanos de 1ª Geração: Direitos Individuais',
     topicId: 'por_red_direitos_modelo',
     subject: 'Português',
     prompt: 'Ao abordar um tema relacionado a Direitos Humanos em uma redação dissertativo-argumentativa, é fundamental que o candidato:',
@@ -7549,6 +7600,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_por_red_direitos_modelo_2',
+    chapter: 'Os Direitos Humanos de 1ª Geração: Direitos Individuais',
     topicId: 'por_red_direitos_modelo',
     subject: 'Português',
     prompt: 'Uma proposta de intervenção bem avaliada, em uma redação sobre um tema social sensível (como desigualdade ou violência), deve, entre outros aspectos:',
@@ -7564,6 +7616,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_por_red_direitos_modelo_3',
+    chapter: 'Redações Nota 1000: Trunfos a Inspirar',
     topicId: 'por_red_direitos_modelo',
     subject: 'Português',
     prompt: 'Redações consideradas "nota 1000" pelo ENEM costumam compartilhar, entre outras características:',
@@ -7579,6 +7632,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_por_red_direitos_modelo_4',
+    chapter: 'Os Direitos Humanos de 1ª Geração: Direitos Individuais',
     topicId: 'por_red_direitos_modelo',
     subject: 'Português',
     prompt: 'Ao discutir um tema como a violência urbana em uma redação, um candidato que sugere, mesmo implicitamente, que certos grupos sociais "merecem" ser tratados com violência estaria:',
@@ -7594,6 +7648,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_por_red_direitos_modelo_5',
+    chapter: 'Os Direitos Humanos de 2ª e 3ª Geração: Direitos Sociais, Coletivos e Difusos',
     topicId: 'por_red_direitos_modelo',
     subject: 'Português',
     prompt: 'Ao abordar um tema social sensível, como a situação de pessoas em vulnerabilidade social, uma redação que evita estigmatizar ou culpabilizar individualmente essas pessoas, buscando entender fatores estruturais (sociais, econômicos, históricos) por trás da situação, demonstra:',
