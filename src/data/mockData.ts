@@ -3008,7 +3008,67 @@ export const mockQuestions: Question[] = [
     difficulty: 'easy'
   },
   {
-    id: 'q_por_redacao_2',
+    id: 'q_por_red_argumentacao_2',
+    topicId: 'por_red_argumentacao',
+    subject: 'Português',
+    prompt: 'Em um parágrafo de desenvolvimento de uma redação dissertativo-argumentativa, a estrutura considerada mais eficaz costuma seguir a lógica de:',
+    options: [
+      { id: 'a', text: 'Apresentar apenas uma afirmação solta, sem qualquer justificativa ou exemplo' },
+      { id: 'b', text: 'Apresentar um argumento (afirmação relacionada à tese), desenvolvê-lo com explicação, dado ou exemplo, e articulá-lo de volta à tese central' },
+      { id: 'c', text: 'Narrar uma história pessoal, sem qualquer relação com o tema' },
+      { id: 'd', text: 'Listar o maior número possível de argumentos diferentes, sem aprofundar nenhum deles' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Um parágrafo argumentativo eficaz apresenta uma ideia-núcleo (o argumento), a desenvolve com uma justificativa, dado ou exemplo que a sustente, e a conecta de volta à tese — evitando tanto afirmações soltas sem sustentação quanto um acúmulo raso de muitos argumentos não aprofundados.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_por_red_argumentacao_3',
+    topicId: 'por_red_argumentacao',
+    subject: 'Português',
+    prompt: 'A coerência textual, um dos critérios avaliados em uma redação dissertativo-argumentativa, se refere principalmente a:',
+    options: [
+      { id: 'a', text: 'O uso correto de acentuação e pontuação' },
+      { id: 'b', text: 'A relação lógica entre as ideias do texto, garantindo que não haja contradições internas e que os argumentos se conectem de forma consistente à tese' },
+      { id: 'c', text: 'O tamanho exato de cada parágrafo' },
+      { id: 'd', text: 'A caligrafia utilizada na redação' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Coerência é a qualidade que garante a lógica interna do texto: que as ideias se encadeiem sem contradições, que os argumentos realmente sustentem a tese proposta, e que o texto faça sentido como um todo — diferente da coesão, que trata da conexão gramatical/textual entre as partes (uso de conectivos, pronomes, etc.).',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_por_red_argumentacao_4',
+    topicId: 'por_red_argumentacao',
+    subject: 'Português',
+    prompt: 'O uso de um argumento de autoridade em uma redação dissertativo-argumentativa (por exemplo, citar um especialista ou uma pesquisa científica) é eficaz principalmente quando:',
+    options: [
+      { id: 'a', text: 'É usado isoladamente, sem qualquer conexão com o raciocínio do candidato' },
+      { id: 'b', text: 'Está integrado ao raciocínio do candidato, reforçando (e não substituindo) a argumentação própria sobre o tema' },
+      { id: 'c', text: 'É inventado ou impreciso, desde que pareça convincente' },
+      { id: 'd', text: 'Ocupa a maior parte do texto, deixando pouco espaço para as ideias do próprio candidato' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Um argumento de autoridade é mais eficaz quando complementa e reforça o raciocínio já desenvolvido pelo candidato, servindo como sustentação adicional — e não quando substitui a reflexão própria ou é usado de forma solta, sem integração ao restante da argumentação.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_por_red_argumentacao_5',
+    topicId: 'por_red_argumentacao',
+    subject: 'Português',
+    prompt: 'Um dos erros argumentativos mais comuns em redações é a chamada "circularidade" — quando o candidato:',
+    options: [
+      { id: 'a', text: 'Apresenta uma tese clara logo na introdução' },
+      { id: 'b', text: 'Repete a mesma ideia com palavras diferentes ao longo do texto, sem de fato avançar ou aprofundar o raciocínio' },
+      { id: 'c', text: 'Conclui o texto retomando brevemente a tese' },
+      { id: 'd', text: 'Utiliza exemplos concretos para sustentar os argumentos' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A circularidade argumentativa ocorre quando o texto parece avançar, mas na verdade fica reafirmando a mesma ideia inicial com outras palavras, sem acrescentar novos ângulos, evidências ou aprofundamento — um problema de progressão textual que compromete a qualidade da argumentação.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_por_red_estrutura_coesao_1',
     topicId: 'por_red_estrutura_coesao',
     subject: 'Português',
     prompt: 'Qual das alternativas abaixo caracteriza uma proposta de intervenção completa e bem estruturada, nos moldes cobrados pelo ENEM e por vestibulares que adotam critério semelhante?',
@@ -3021,6 +3081,66 @@ export const mockQuestions: Question[] = [
     correctOptionId: 'b',
     explanation: 'Uma proposta de intervenção bem avaliada precisa explicitar quem deve agir (agente), como (meio/modo), com que objetivo (finalidade) e, idealmente, detalhar a ação — sempre coerente com os argumentos já desenvolvidos no texto, não uma ideia solta ao final.',
     difficulty: 'medium'
+  },
+  {
+    id: 'q_por_red_estrutura_coesao_2',
+    topicId: 'por_red_estrutura_coesao',
+    subject: 'Português',
+    prompt: 'Os conectivos (como "portanto", "além disso", "no entanto") desempenham, em um texto dissertativo-argumentativo, o papel principal de:',
+    options: [
+      { id: 'a', text: 'Preencher espaço no texto, sem função lógica real' },
+      { id: 'b', text: 'Estabelecer e sinalizar explicitamente as relações lógicas entre as ideias (adição, oposição, conclusão, entre outras), garantindo a coesão textual' },
+      { id: 'c', text: 'Substituir a necessidade de uma tese clara' },
+      { id: 'd', text: 'Encerrar obrigatoriamente cada parágrafo do texto' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Conectivos são elementos coesivos que explicitam a relação lógica entre as partes do texto — por exemplo, "portanto" sinaliza conclusão, "além disso" sinaliza adição, e "no entanto" sinaliza contraste — orientando o leitor na compreensão da progressão argumentativa.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_por_red_estrutura_coesao_3',
+    topicId: 'por_red_estrutura_coesao',
+    subject: 'Português',
+    prompt: 'Em uma conclusão de redação dissertativo-argumentativa, além da proposta de intervenção (exigida pelo ENEM), é esperado que o candidato também:',
+    options: [
+      { id: 'a', text: 'Introduza um argumento completamente novo, não discutido antes no texto' },
+      { id: 'b', text: 'Retome, de forma sintética, a tese e os principais argumentos desenvolvidos, fechando o raciocínio de forma coerente com o restante do texto' },
+      { id: 'c', text: 'Repita literalmente, palavra por palavra, a introdução do texto' },
+      { id: 'd', text: 'Evite qualquer menção à tese apresentada anteriormente' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Uma boa conclusão retoma de forma sintética (não repetitiva) a tese e os principais argumentos já desenvolvidos, encerrando o raciocínio de forma coerente — e não introduzindo argumentos totalmente novos, que deveriam ter sido tratados no desenvolvimento.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_por_red_estrutura_coesao_4',
+    topicId: 'por_red_estrutura_coesao',
+    subject: 'Português',
+    prompt: 'A coesão referencial, um dos mecanismos de coesão textual, consiste em:',
+    options: [
+      { id: 'a', text: 'Retomar um termo já mencionado anteriormente no texto por meio de pronomes, sinônimos ou expressões equivalentes, evitando repetições desnecessárias' },
+      { id: 'b', text: 'Utilizar sempre o mesmo substantivo repetidamente, sem qualquer variação' },
+      { id: 'c', text: 'Eliminar toda pontuação do texto' },
+      { id: 'd', text: 'Utilizar apenas frases muito curtas, sem qualquer conector' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A coesão referencial retoma elementos já citados no texto por meio de pronomes (ele, essa, aquilo), sinônimos ou expressões equivalentes, evitando repetições desnecessárias e mantendo o texto fluido e bem articulado.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_por_red_estrutura_coesao_5',
+    topicId: 'por_red_estrutura_coesao',
+    subject: 'Português',
+    prompt: 'Uma proposta de intervenção que sugere apenas "o governo deveria fazer mais campanhas de conscientização" tende a receber uma avaliação mais baixa, nos critérios do ENEM, principalmente porque:',
+    options: [
+      { id: 'a', text: 'É uma proposta detalhada e completa, sem qualquer problema' },
+      { id: 'b', text: 'É uma proposta genérica, sem detalhamento do meio de execução, e não especifica como a campanha seria implementada nem sua conexão direta com os argumentos do texto' },
+      { id: 'c', text: 'Menciona o governo como agente, o que nunca é aceito pela banca' },
+      { id: 'd', text: 'Não pode envolver nenhum órgão público, apenas ONGs' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Embora "o governo" seja um agente válido, a proposta se torna fraca por ser genérica: não detalha o meio de execução (como seria feita a campanha, por qual órgão específico, com quais parceiros), nem articula claramente essa ação aos argumentos já desenvolvidos no texto — características exigidas para uma proposta de intervenção nota máxima.',
+    difficulty: 'hard'
   },
   // Matemática — Aritmética e Proporcionalidade
   {
@@ -6397,6 +6517,51 @@ export const mockQuestions: Question[] = [
     explanation: 'A crase é a fusão da preposição "a" com o artigo feminino "a". "À escola" está correto, pois "escola" é substantivo feminino que admite artigo. "A pé" não leva crase (locução adverbial masculina); pronomes como "ela", "você" e "ele" não admitem artigo antes deles, logo não recebem crase.',
     difficulty: 'medium'
   },
+  {
+    id: 'q_por_norma_culta_3',
+    topicId: 'por_norma_culta',
+    subject: 'Português',
+    prompt: 'Assinale a alternativa em que a regência verbal está de acordo com a norma-padrão:',
+    options: [
+      { id: 'a', text: 'Assisti o filme inteiro sem interrupções.' },
+      { id: 'b', text: 'Assisti ao filme inteiro sem interrupções.' },
+      { id: 'c', text: 'Prefiro mais viajar de trem do que de avião.' },
+      { id: 'd', text: 'Namorei com ela por dois anos.' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'O verbo "assistir", no sentido de "ver/presenciar", é transitivo indireto na norma-padrão, exigindo a preposição "a" ("assistir ao filme"). "Preferir" não deve ser reforçado por "mais... do que" (basta "prefiro viajar de trem a viajar de avião"), e "namorar" é transitivo direto, sem a preposição "com".',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_por_norma_culta_4',
+    topicId: 'por_norma_culta',
+    subject: 'Português',
+    prompt: 'Assinale a alternativa em que a colocação pronominal está de acordo com a norma-padrão:',
+    options: [
+      { id: 'a', text: 'Me empresta seu caderno, por favor.' },
+      { id: 'b', text: 'Empresta-me seu caderno, por favor.' },
+      { id: 'c', text: 'Nunca me falaram sobre isso.' },
+      { id: 'd', text: 'Telefonaram-me ontem à noite, mas eu não vi a chamada.' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'Na norma-padrão, a próclise (pronome antes do verbo) é obrigatória quando a frase é iniciada por palavra de sentido negativo, como "nunca" — por isso "nunca me falaram" está correto. Iniciar a frase com o pronome oblíquo átono ("Me empresta") é evitado na norma-padrão escrita formal.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_por_norma_culta_5',
+    topicId: 'por_norma_culta',
+    subject: 'Português',
+    prompt: 'Assinale a alternativa em que a concordância nominal está de acordo com a norma-padrão:',
+    options: [
+      { id: 'a', text: 'Seguem anexo os documentos solicitados.' },
+      { id: 'b', text: 'Segue anexas as fotos solicitadas.' },
+      { id: 'c', text: 'Está incluso, na embalagem, o manual de instruções.' },
+      { id: 'd', text: 'As despesas extras estão incluso na fatura.' }
+    ],
+    correctOptionId: 'c',
+    explanation: '"Anexo" e "incluso" são adjetivos e devem concordar em gênero e número com o substantivo a que se referem. Em "está incluso o manual" (masculino singular), a concordância está correta. Já em "seguem anexo os documentos" (deveria ser "anexos", concordando com "documentos", masculino plural) e "as despesas... incluso" (deveria ser "inclusas", concordando com "despesas", feminino plural), há erro de concordância.',
+    difficulty: 'hard'
+  },
   // Português — Análise Sintática
   {
     id: 'q_por_sintaxe_1',
@@ -6426,6 +6591,51 @@ export const mockQuestions: Question[] = [
     ],
     correctOptionId: 'c',
     explanation: '"Apesar do cansaço" expressa uma ideia de concessão, contrastando com o resultado apresentado na oração principal — classifica-se como adjunto adverbial de concessão, tipicamente introduzido por locuções como "apesar de", "embora" e "ainda que".',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_por_sintaxe_3',
+    topicId: 'por_sintaxe',
+    subject: 'Português',
+    prompt: 'Na frase "O livro que comprei ontem é excelente", a oração "que comprei ontem" exerce a função de:',
+    options: [
+      { id: 'a', text: 'Oração subordinada substantiva' },
+      { id: 'b', text: 'Oração subordinada adjetiva, restringindo o sentido de "o livro"' },
+      { id: 'c', text: 'Oração coordenada assindética' },
+      { id: 'd', text: 'Oração subordinada adverbial de tempo' }
+    ],
+    correctOptionId: 'b',
+    explanation: '"Que comprei ontem" retoma e qualifica o antecedente "o livro" (funcionando como um adjetivo), classificando-se como oração subordinada adjetiva — nesse caso, restritiva, pois especifica exatamente qual livro está sendo mencionado.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_por_sintaxe_4',
+    topicId: 'por_sintaxe',
+    subject: 'Português',
+    prompt: 'Na frase "É necessário que os candidatos cheguem cedo ao local de prova", a oração "que os candidatos cheguem cedo ao local de prova" exerce a função sintática de:',
+    options: [
+      { id: 'a', text: 'Sujeito da oração principal' },
+      { id: 'b', text: 'Objeto direto da oração principal' },
+      { id: 'c', text: 'Adjunto adverbial' },
+      { id: 'd', text: 'Aposto' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A oração "que os candidatos cheguem cedo..." completa o sentido do predicado "é necessário", funcionando como sujeito da oração principal (equivalente a dizer "Que os candidatos cheguem cedo é necessário") — uma oração subordinada substantiva subjetiva.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_por_sintaxe_5',
+    topicId: 'por_sintaxe',
+    subject: 'Português',
+    prompt: 'Na frase "Maria, minha melhor amiga, chegou atrasada à reunião", o termo "minha melhor amiga" exerce a função sintática de:',
+    options: [
+      { id: 'a', text: 'Predicativo do sujeito' },
+      { id: 'b', text: 'Aposto, explicando ou identificando o termo anterior ("Maria")' },
+      { id: 'c', text: 'Objeto direto' },
+      { id: 'd', text: 'Vocativo' }
+    ],
+    correctOptionId: 'b',
+    explanation: '"Minha melhor amiga" explica/identifica quem é "Maria", sem exercer função verbal (não depende de um verbo de ligação, como ocorreria com um predicativo) — trata-se de um aposto, termo que esclarece ou detalha outro termo da oração.',
     difficulty: 'medium'
   },
   // Português — Entendimento de Texto
@@ -6459,6 +6669,51 @@ export const mockQuestions: Question[] = [
     explanation: '"Por outro lado" é um conectivo que introduz contraste ou oposição entre ideias, ajudando a organizar a argumentação e sinalizar mudanças de perspectiva dentro do texto.',
     difficulty: 'medium'
   },
+  {
+    id: 'q_por_texto_3',
+    topicId: 'por_texto',
+    subject: 'Português',
+    prompt: 'Ao interpretar um texto, a diferença entre uma informação explícita e uma informação implícita (uma inferência) é que:',
+    options: [
+      { id: 'a', text: 'A informação explícita está diretamente escrita no texto; a informação implícita precisa ser deduzida a partir de pistas textuais e do contexto, sem estar literalmente escrita' },
+      { id: 'b', text: 'Não existe qualquer diferença entre os dois tipos de informação' },
+      { id: 'c', text: 'A informação implícita é sempre falsa, enquanto a explícita é sempre verdadeira' },
+      { id: 'd', text: 'Apenas textos literários possuem informações implícitas' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Informações explícitas estão diretamente escritas no texto, podendo ser localizadas literalmente. Informações implícitas (inferências) não estão escritas diretamente, mas podem ser deduzidas logicamente a partir de pistas textuais, do contexto e do conhecimento de mundo do leitor.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_por_texto_4',
+    topicId: 'por_texto',
+    subject: 'Português',
+    prompt: 'Identificar a intenção comunicativa de um autor (por exemplo, se ele pretende convencer, criticar ironicamente ou informar de forma neutra) é uma habilidade de leitura fundamental porque:',
+    options: [
+      { id: 'a', text: 'O sentido de um texto pode mudar significativamente dependendo dessa intenção — um texto irônico, por exemplo, pode expressar o oposto do que está literalmente escrito' },
+      { id: 'b', text: 'Todo texto tem exatamente a mesma intenção comunicativa, independentemente do gênero' },
+      { id: 'c', text: 'A intenção do autor nunca pode ser identificada com segurança' },
+      { id: 'd', text: 'Apenas textos jornalísticos possuem intenção comunicativa' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Reconhecer a intenção comunicativa é essencial porque o sentido de um texto pode depender diretamente dela — um exemplo claro é a ironia, em que o autor comunica, propositalmente, o oposto do sentido literal das palavras, e o leitor precisa reconhecer essa intenção para interpretar corretamente o texto.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_por_texto_5',
+    topicId: 'por_texto',
+    subject: 'Português',
+    prompt: 'Quando um texto argumentativo apresenta um contra-argumento (uma ideia contrária à tese) para em seguida refutá-lo, essa estratégia é utilizada principalmente para:',
+    options: [
+      { id: 'a', text: 'Enfraquecer a própria tese defendida pelo autor' },
+      { id: 'b', text: 'Antecipar e neutralizar possíveis objeções do leitor, fortalecendo a argumentação ao demonstrar que o autor considerou pontos de vista diferentes' },
+      { id: 'c', text: 'Confundir o leitor propositalmente, sem qualquer função argumentativa' },
+      { id: 'd', text: 'Substituir a necessidade de apresentar argumentos próprios' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Apresentar e refutar um contra-argumento é uma estratégia argumentativa que fortalece o texto: ao antecipar possíveis objeções e respondê-las de forma consistente, o autor demonstra domínio do tema e neutraliza objeções antes mesmo que o leitor as formule, reforçando a credibilidade da tese defendida.',
+    difficulty: 'hard'
+  },
   // Português — Literatura Clássica, Medieval e Barroca
   {
     id: 'q_por_lit_classica_barroca_1',
@@ -6489,6 +6744,51 @@ export const mockQuestions: Question[] = [
     correctOptionId: 'a',
     explanation: 'Gregório de Matos, conhecido como "Boca do Inferno", é o principal poeta do Barroco brasileiro, autor de poemas satíricos, religiosos e líricos na Bahia colonial.',
     difficulty: 'medium'
+  },
+  {
+    id: 'q_por_lit_classica_barroca_3',
+    topicId: 'por_lit_classica_barroca',
+    subject: 'Português',
+    prompt: 'O Classicismo, movimento literário que antecedeu o Barroco em Portugal (com Luís de Camões como principal expoente), caracterizava-se, entre outros aspectos, por:',
+    options: [
+      { id: 'a', text: 'A valorização do equilíbrio, da razão e dos modelos greco-romanos, em oposição aos exageros e conflitos que marcariam o Barroco posterior' },
+      { id: 'b', text: 'A exaltação exclusiva do sentimentalismo subjetivo, sem qualquer preocupação formal' },
+      { id: 'c', text: 'Uma linguagem popular e coloquial, sem qualquer influência clássica' },
+      { id: 'd', text: 'Temas voltados exclusivamente à vida cotidiana urbana moderna' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O Classicismo valorizava o equilíbrio, a razão e o retorno aos modelos estéticos greco-romanos (mitologia, formas poéticas clássicas), buscando harmonia formal — características que contrastam com os conflitos, exageros e o jogo de opostos que marcariam o Barroco na sequência.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_por_lit_classica_barroca_4',
+    topicId: 'por_lit_classica_barroca',
+    subject: 'Português',
+    prompt: 'A obra "Os Lusíadas", de Luís de Camões, é considerada um marco da literatura em língua portuguesa principalmente por:',
+    options: [
+      { id: 'a', text: 'Narrar, em versos épicos, as navegações portuguesas e a viagem de Vasco da Gama à Índia, celebrando os feitos históricos de Portugal' },
+      { id: 'b', text: 'Ser uma obra em prosa, sem qualquer relação com a poesia épica' },
+      { id: 'c', text: 'Tratar exclusivamente de temas religiosos, sem qualquer relação com a história de Portugal' },
+      { id: 'd', text: 'Ter sido escrita originalmente em espanhol e depois traduzida' }
+    ],
+    correctOptionId: 'a',
+    explanation: '"Os Lusíadas" é um poema épico que narra, com forte influência dos modelos clássicos greco-romanos (como a Eneida, de Virgílio), as navegações portuguesas e a viagem de Vasco da Gama à Índia, celebrando os feitos históricos e a identidade nacional portuguesa — sendo uma das obras mais importantes da literatura em língua portuguesa.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_por_lit_classica_barroca_5',
+    topicId: 'por_lit_classica_barroca',
+    subject: 'Português',
+    prompt: 'O jogo entre cultismo (valorização da forma, dos jogos de palavras e das metáforas rebuscadas) e conceptismo (valorização do conteúdo, da argumentação lógica e do jogo de ideias) no Barroco reflete, em última análise, o conflito central desse movimento entre:',
+    options: [
+      { id: 'a', text: 'Fé (valores religiosos) e razão/mundo terreno (prazeres materiais), típico da mentalidade da Contrarreforma' },
+      { id: 'b', text: 'Presente e futuro, sem qualquer relação com questões religiosas' },
+      { id: 'c', text: 'Cidade e campo, como única tensão temática relevante' },
+      { id: 'd', text: 'Nenhum conflito relevante, sendo um estilo puramente decorativo' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O Barroco reflete o conflito característico de sua época (marcada pela Contrarreforma católica): a tensão entre os valores religiosos e espirituais (fé, pecado, salvação) e os prazeres e tentações do mundo terreno e material — um dilema existencial que se manifesta tanto no conteúdo dos textos quanto no próprio jogo estilístico entre cultismo e conceptismo.',
+    difficulty: 'hard'
   },
   // Português — Romantismo e Realismo
   {
@@ -6521,6 +6821,51 @@ export const mockQuestions: Question[] = [
     explanation: 'O Realismo reage contra a idealização romântica, propondo uma análise mais crítica e objetiva da sociedade e da psicologia dos personagens — como em Dom Casmurro, de Machado de Assis.',
     difficulty: 'medium'
   },
+  {
+    id: 'q_por_lit_romantismo_realismo_3',
+    topicId: 'por_lit_romantismo_realismo',
+    subject: 'Português',
+    prompt: 'O indianismo, tema recorrente na obra de José de Alencar durante o Romantismo brasileiro (como em "Iracema" e "O Guarani"), representa uma tentativa de:',
+    options: [
+      { id: 'a', text: 'Retratar de forma documental e crítica a situação real dos povos indígenas no Brasil do século XIX' },
+      { id: 'b', text: 'Construir uma identidade nacional idealizada, elevando o indígena a uma figura heroica e nobre, associada às origens do Brasil' },
+      { id: 'c', text: 'Criticar duramente a colonização portuguesa, sem qualquer idealização' },
+      { id: 'd', text: 'Descrever exclusivamente a vida urbana das grandes cidades brasileiras' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'O indianismo romântico não pretendia ser um retrato realista da vida indígena, mas sim uma construção idealizada e heroica do indígena como símbolo das origens nobres da nação brasileira, servindo ao projeto romântico de construção de uma identidade nacional — um tratamento bem diferente da complexidade social real vivida pelos povos indígenas.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_por_lit_romantismo_realismo_4',
+    topicId: 'por_lit_romantismo_realismo',
+    subject: 'Português',
+    prompt: 'O Naturalismo, movimento literário próximo ao Realismo (com Aluísio Azevedo como principal nome no Brasil, autor de "O Cortiço"), se diferencia por:',
+    options: [
+      { id: 'a', text: 'Retratar personagens fortemente influenciados por fatores biológicos e sociais (como hereditariedade, meio ambiente e instintos), muitas vezes em ambientes de degradação social' },
+      { id: 'b', text: 'Idealizar completamente os personagens, sem qualquer traço de crítica social' },
+      { id: 'c', text: 'Evitar completamente qualquer descrição do ambiente social dos personagens' },
+      { id: 'd', text: 'Focar exclusivamente em temas religiosos e espirituais' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O Naturalismo radicaliza a objetividade do Realismo, incorporando fortes influências das ciências naturais da época (como o determinismo biológico e social), retratando personagens condicionados por hereditariedade, instintos e o ambiente social em que vivem — muitas vezes em cenários de degradação e miséria, como no cortiço retratado por Aluísio Azevedo.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_por_lit_romantismo_realismo_5',
+    topicId: 'por_lit_romantismo_realismo',
+    subject: 'Português',
+    prompt: 'Machado de Assis, em romances como "Dom Casmurro" e "Memórias Póstumas de Brás Cubas", é reconhecido por uma característica narrativa marcante, que é:',
+    options: [
+      { id: 'a', text: 'O uso de narradores completamente confiáveis e objetivos, sem qualquer ambiguidade' },
+      { id: 'b', text: 'O uso de narradores em primeira pessoa cuja confiabilidade é questionável, deixando ao leitor a tarefa de interpretar criticamente os fatos narrados' },
+      { id: 'c', text: 'A ausência total de análise psicológica dos personagens' },
+      { id: 'd', text: 'O uso exclusivo de narração em terceira pessoa onisciente e imparcial' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Uma marca central da obra de Machado de Assis é o uso de narradores em primeira pessoa cuja confiabilidade é ambígua ou questionável — como Bentinho em "Dom Casmurro", cuja versão sobre a suposta traição de Capitu é contada apenas por sua própria perspectiva, deixando ao leitor a tarefa de julgar criticamente os fatos, sem uma verdade definitiva apresentada pelo texto.',
+    difficulty: 'hard'
+  },
   // Português — Simbolismo, Pré-Modernismo e Modernismo
   {
     id: 'q_por_lit_modernismo_1',
@@ -6552,6 +6897,51 @@ export const mockQuestions: Question[] = [
     explanation: 'O Simbolismo valorizava a musicalidade, a sugestão (em vez da descrição direta), o subjetivismo e o misticismo, reagindo à objetividade do Realismo e do Naturalismo — com Cruz e Sousa como principal nome no Brasil.',
     difficulty: 'medium'
   },
+  {
+    id: 'q_por_lit_modernismo_3',
+    topicId: 'por_lit_modernismo',
+    subject: 'Português',
+    prompt: 'A primeira fase do Modernismo brasileiro (fase heroica, 1922-1930) é caracterizada, entre outros aspectos, por:',
+    options: [
+      { id: 'a', text: 'Um forte espírito de ruptura e experimentação, com a valorização do verso livre, da linguagem coloquial e de temas nacionais tratados de forma inovadora, muitas vezes com humor e irreverência' },
+      { id: 'b', text: 'Um apego rígido às formas poéticas clássicas, sem qualquer inovação' },
+      { id: 'c', text: 'A ausência total de qualquer preocupação com a identidade nacional' },
+      { id: 'd', text: 'Uma linguagem exclusivamente rebuscada e distante da fala cotidiana' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A fase heroica do Modernismo brasileiro (iniciada com a Semana de Arte Moderna de 1922) é marcada pelo espírito de ruptura com o passado acadêmico, pela experimentação formal (verso livre, ausência de rima obrigatória), pela valorização da linguagem coloquial e por uma abordagem inovadora e muitas vezes irreverente de temas nacionais — como em obras de Mário de Andrade e Oswald de Andrade.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_por_lit_modernismo_4',
+    topicId: 'por_lit_modernismo',
+    subject: 'Português',
+    prompt: 'O Pré-Modernismo, movimento de transição no início do século XX (com Euclides da Cunha e Lima Barreto como nomes de destaque), caracteriza-se principalmente por:',
+    options: [
+      { id: 'a', text: 'Um retrato idealizado e romantizado da realidade social brasileira' },
+      { id: 'b', text: 'Uma abordagem crítica das contradições sociais brasileiras (como o contraste entre litoral e sertão, ou as desigualdades urbanas), com estilo ainda em transição entre estéticas do século XIX e o Modernismo posterior' },
+      { id: 'c', text: 'A ausência total de qualquer crítica social' },
+      { id: 'd', text: 'A adoção exclusiva do verso livre, sem qualquer traço de prosa realista' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'O Pré-Modernismo, exemplificado por obras como "Os Sertões" (Euclides da Cunha, sobre a Guerra de Canudos) e "Triste Fim de Policarpo Quaresma" (Lima Barreto), aborda de forma crítica contradições sociais brasileiras, com um estilo de transição entre características ainda ligadas ao século XIX e antecipações do espírito crítico e nacional que seria plenamente desenvolvido pelo Modernismo.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_por_lit_modernismo_5',
+    topicId: 'por_lit_modernismo',
+    subject: 'Português',
+    prompt: 'O "Manifesto Antropófago" (1928), de Oswald de Andrade, propunha, como estratégia de construção de uma identidade cultural brasileira, a ideia de:',
+    options: [
+      { id: 'a', text: 'Rejeitar completamente qualquer influência cultural estrangeira' },
+      { id: 'b', text: '"Devorar" (assimilar criticamente) influências culturais estrangeiras e nacionais, recombinando-as de forma original para criar algo genuinamente brasileiro, em vez de apenas copiar modelos europeus' },
+      { id: 'c', text: 'Copiar fielmente os modelos literários europeus, sem qualquer adaptação' },
+      { id: 'd', text: 'Abandonar completamente qualquer referência à cultura indígena ou africana' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A metáfora da "antropofagia" (devorar) proposta por Oswald de Andrade defendia que a cultura brasileira deveria assimilar criticamente (e não simplesmente copiar) influências externas e internas — europeias, indígenas, africanas — "devorando-as" e recombinando-as de forma original, gerando uma produção cultural genuinamente brasileira, e não uma mera imitação de modelos estrangeiros.',
+    difficulty: 'hard'
+  },
   // Português — Literatura Contemporânea
   {
     id: 'q_por_lit_contemporanea_1',
@@ -6581,6 +6971,51 @@ export const mockQuestions: Question[] = [
     ],
     correctOptionId: 'b',
     explanation: 'Clarice Lispector é reconhecida pela profunda introspecção psicológica de sua prosa; Guimarães Rosa (autor de "Grande Sertão: Veredas") é reconhecido pela experimentação linguística e por um regionalismo que dialoga com temas universais.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_por_lit_contemporanea_3',
+    topicId: 'por_lit_contemporanea',
+    subject: 'Português',
+    prompt: 'A Geração de 1945, na poesia brasileira (com nomes como João Cabral de Melo Neto), é frequentemente descrita como uma reação:',
+    options: [
+      { id: 'a', text: 'Ao excesso de subjetivismo e informalidade da primeira fase modernista, propondo um retorno a maior rigor formal e objetividade na construção poética' },
+      { id: 'b', text: 'Contra qualquer forma de rigor ou disciplina na escrita poética' },
+      { id: 'c', text: 'Ao Barroco, movimento imediatamente anterior' },
+      { id: 'd', text: 'Contra a própria existência da poesia como gênero literário' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A Geração de 1945 (poesia de "45") reagiu ao que considerava um excesso de informalidade e subjetivismo herdado da primeira fase do Modernismo, propondo maior rigor formal, objetividade e um trabalho mais cuidadoso e "arquitetônico" com a linguagem — como se observa na poesia extremamente controlada e precisa de João Cabral de Melo Neto.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_por_lit_contemporanea_4',
+    topicId: 'por_lit_contemporanea',
+    subject: 'Português',
+    prompt: 'A literatura marginal (ou literatura periférica), que ganhou visibilidade crescente no Brasil a partir das últimas décadas, se caracteriza por:',
+    options: [
+      { id: 'a', text: 'Ser produzida exclusivamente por autores de classe média alta, sem qualquer relação com as periferias urbanas' },
+      { id: 'b', text: 'Dar voz literária a experiências e perspectivas de moradores de periferias urbanas, muitas vezes retratando de dentro (e não apenas sobre) a realidade social dessas comunidades' },
+      { id: 'c', text: 'Evitar completamente qualquer crítica social' },
+      { id: 'd', text: 'Ser um movimento restrito exclusivamente à poesia clássica' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A literatura marginal/periférica é caracterizada por autores que, muitas vezes vindos das próprias periferias urbanas, narram essas realidades a partir de dentro — em contraste com uma tradição literária anterior que costumava retratar essas realidades a partir de uma perspectiva externa — trazendo novas vozes e perspectivas à literatura brasileira contemporânea.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_por_lit_contemporanea_5',
+    topicId: 'por_lit_contemporanea',
+    subject: 'Português',
+    prompt: 'O crescente reconhecimento de autoras e autores negros na literatura brasileira contemporânea (como Conceição Evaristo, entre outros) tem contribuído para:',
+    options: [
+      { id: 'a', text: 'Ampliar as perspectivas e temas presentes na literatura nacional, incluindo experiências historicamente sub-representadas no cânone literário brasileiro' },
+      { id: 'b', text: 'Reduzir a diversidade temática da literatura brasileira' },
+      { id: 'c', text: 'Restringir a literatura brasileira a um único tema exclusivo' },
+      { id: 'd', text: 'Eliminar completamente a produção de outros grupos de autores' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O crescente espaço conquistado por autoras e autores negros na literatura contemporânea contribui para ampliar a diversidade de vozes, perspectivas e temas presentes na produção literária nacional, trazendo experiências e olhares historicamente sub-representados no cânone literário brasileiro tradicional.',
     difficulty: 'medium'
   },
   // Português — Fundamentos da Dissertação
@@ -6614,6 +7049,51 @@ export const mockQuestions: Question[] = [
     explanation: 'A estrutura clássica segue: introdução (contextualização e apresentação da tese), desenvolvimento (argumentos que sustentam a tese) e conclusão (retomada da tese e, no ENEM, proposta de intervenção).',
     difficulty: 'medium'
   },
+  {
+    id: 'q_por_red_fundamentos_3',
+    topicId: 'por_red_fundamentos',
+    subject: 'Português',
+    prompt: 'A tese de uma redação dissertativo-argumentativa deve, idealmente, ser apresentada:',
+    options: [
+      { id: 'a', text: 'Apenas na conclusão do texto, nunca antes' },
+      { id: 'b', text: 'Já na introdução, de forma clara, para orientar o leitor sobre qual será o ponto de vista defendido e sustentado ao longo do texto' },
+      { id: 'c', text: 'De forma ambígua, deixando o leitor sem saber qual é o posicionamento do candidato' },
+      { id: 'd', text: 'Somente de forma implícita, sem nunca ser explicitada diretamente' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A tese deve ser apresentada de forma clara já na introdução, orientando o leitor sobre o ponto de vista que será defendido — os argumentos do desenvolvimento e a conclusão devem estar diretamente conectados a essa tese inicial, sem ambiguidade sobre o posicionamento do candidato.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_por_red_fundamentos_4',
+    topicId: 'por_red_fundamentos',
+    subject: 'Português',
+    prompt: 'Diferentemente de um texto dissertativo-expositivo (que apenas expõe informações sobre um tema, de forma mais neutra), o texto dissertativo-argumentativo se distingue por:',
+    options: [
+      { id: 'a', text: 'Necessariamente incluir diálogos entre personagens' },
+      { id: 'b', text: 'Defender explicitamente um ponto de vista sobre o tema, buscando convencer o leitor por meio de argumentos, e não apenas informar de forma neutra' },
+      { id: 'c', text: 'Ser escrito exclusivamente em terceira pessoa' },
+      { id: 'd', text: 'Não poder utilizar dados ou repertório sociocultural' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Enquanto o texto dissertativo-expositivo busca apenas apresentar/explicar informações sobre um tema de forma mais neutra, o dissertativo-argumentativo vai além: defende explicitamente um ponto de vista (tese), buscando convencer o leitor por meio de argumentos organizados — a modalidade exigida, por exemplo, na redação do ENEM.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_por_red_fundamentos_5',
+    topicId: 'por_red_fundamentos',
+    subject: 'Português',
+    prompt: 'A "fuga ao tema", um dos erros mais graves em uma redação (podendo até zerar o texto em exames como o ENEM), ocorre quando o candidato:',
+    options: [
+      { id: 'a', text: 'Aborda uma perspectiva menos comum, mas ainda dentro do tema proposto' },
+      { id: 'b', text: 'Desenvolve um texto sobre um assunto diferente do que foi efetivamente proposto, ainda que de alguma forma relacionado superficialmente a ele' },
+      { id: 'c', text: 'Utiliza repertório sociocultural pouco conhecido' },
+      { id: 'd', text: 'Apresenta uma tese muito específica sobre o tema' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A fuga ao tema ocorre quando o texto produzido não trata efetivamente do assunto especificamente proposto pela banca, ainda que mantenha alguma relação superficial ou tangencial com ele — um erro grave porque o texto deixa de responder ao que foi realmente solicitado, sendo penalizado severamente (podendo até zerar a redação em exames como o ENEM).',
+    difficulty: 'medium'
+  },
   // Português — Leitura de Coletânea e Repertório Temático
   {
     id: 'q_por_red_repertorio_1',
@@ -6643,6 +7123,51 @@ export const mockQuestions: Question[] = [
     ],
     correctOptionId: 'b',
     explanation: 'Um repertório é considerado produtivo quando está articulado de forma pertinente ao argumento e ao tema, e não apenas citado ou usado de forma genérica e descolada da discussão.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_por_red_repertorio_3',
+    topicId: 'por_red_repertorio',
+    subject: 'Português',
+    prompt: 'Além dos textos motivadores da coletânea (fornecidos pela banca), um repertório sociocultural amplo e diversificado (histórico, filosófico, científico, artístico, entre outros) é valorizado em uma redação principalmente porque:',
+    options: [
+      { id: 'a', text: 'Demonstra maior domínio do tema e capacidade de conectar diferentes áreas do conhecimento à argumentação, desde que bem articulado' },
+      { id: 'b', text: 'É avaliado exclusivamente pela quantidade de referências citadas, independentemente da articulação' },
+      { id: 'c', text: 'Substitui totalmente a necessidade de uma tese própria' },
+      { id: 'd', text: 'É irrelevante para a nota final da redação' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Um repertório amplo e diversificado, quando bem articulado ao argumento, demonstra ao avaliador que o candidato consegue conectar diferentes áreas do conhecimento (história, filosofia, ciência, arte) à discussão proposta — o que é valorizado nos critérios de avaliação, desde que a articulação (e não apenas a quantidade de citações) seja pertinente e produtiva.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_por_red_repertorio_4',
+    topicId: 'por_red_repertorio',
+    subject: 'Português',
+    prompt: 'Um erro comum ao utilizar repertório sociocultural em uma redação é:',
+    options: [
+      { id: 'a', text: 'Citar uma referência de forma genérica, sem conectá-la especificamente ao argumento sendo desenvolvido, tratando-a como um "enfeite" desconectado do raciocínio' },
+      { id: 'b', text: 'Escolher uma referência diretamente relacionada ao argumento em discussão' },
+      { id: 'c', text: 'Explicar brevemente como a referência se conecta ao ponto defendido' },
+      { id: 'd', text: 'Usar uma referência que o candidato de fato compreende bem' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Um erro frequente é citar uma referência (um filme, um livro, um dado histórico) de forma solta e genérica, sem de fato conectá-la ao argumento específico que está sendo desenvolvido — tratando-a como um "enfeite" textual, e não como parte real da sustentação lógica do argumento.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_por_red_repertorio_5',
+    topicId: 'por_red_repertorio',
+    subject: 'Português',
+    prompt: 'Ao se preparar para a prova de redação, construir um repertório sociocultural amplo com antecedência (lendo sobre diferentes temas, história, atualidades) é uma estratégia recomendada principalmente porque:',
+    options: [
+      { id: 'a', text: 'Garante automaticamente a nota máxima, independentemente da qualidade da argumentação' },
+      { id: 'b', text: 'Aumenta a chance de o candidato ter, no momento da prova, referências pertinentes disponíveis para conectar de forma consistente ao tema sorteado, o que pode ser mais difícil de improvisar sob pressão' },
+      { id: 'c', text: 'É desnecessário, já que a coletânea da prova sempre é suficiente sozinha' },
+      { id: 'd', text: 'Só é útil para temas de ciências exatas' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Construir repertório com antecedência amplia o "banco" de referências disponíveis ao candidato, aumentando a chance de que, no dia da prova, ele já tenha conhecimento prévio sobre aspectos relacionados ao tema sorteado — uma vantagem importante, já que buscar e articular referências pertinentes de improviso, sob pressão do tempo de prova, é consideravelmente mais difícil.',
     difficulty: 'medium'
   },
   // Português — Direitos Humanos e Redações Modelo
@@ -6675,6 +7200,51 @@ export const mockQuestions: Question[] = [
     correctOptionId: 'b',
     explanation: 'Uma boa proposta de intervenção detalha agente, meio e finalidade da ação, mantém coerência com os argumentos do texto e respeita os direitos humanos, mesmo ao tratar de temas sensíveis como violência ou desigualdade.',
     difficulty: 'medium'
+  },
+  {
+    id: 'q_por_red_direitos_modelo_3',
+    topicId: 'por_red_direitos_modelo',
+    subject: 'Português',
+    prompt: 'Redações consideradas "nota 1000" pelo ENEM costumam compartilhar, entre outras características:',
+    options: [
+      { id: 'a', text: 'Um domínio da norma-padrão da língua, argumentação consistente e bem estruturada, repertório sociocultural produtivo e articulado, e uma proposta de intervenção detalhada e coerente com os argumentos do texto' },
+      { id: 'b', text: 'Um texto extenso, independentemente da qualidade dos argumentos' },
+      { id: 'c', text: 'O uso de linguagem extremamente rebuscada, mesmo quando prejudica a clareza' },
+      { id: 'd', text: 'A ausência total de qualquer repertório sociocultural, focando apenas na opinião pessoal do candidato' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Redações nota máxima combinam bom domínio da norma-padrão, argumentação consistente e organizada, repertório sociocultural bem articulado ao tema, e uma proposta de intervenção completa e coerente com o restante do texto — a excelência não está no tamanho do texto ou na complexidade artificial da linguagem, mas na qualidade e coerência de todos esses elementos combinados.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_por_red_direitos_modelo_4',
+    topicId: 'por_red_direitos_modelo',
+    subject: 'Português',
+    prompt: 'Ao discutir um tema como a violência urbana em uma redação, um candidato que sugere, mesmo implicitamente, que certos grupos sociais "merecem" ser tratados com violência estaria:',
+    options: [
+      { id: 'a', text: 'Fazendo uma análise puramente técnica, sem qualquer problema ético' },
+      { id: 'b', text: 'Violando o princípio de respeito aos direitos humanos, o que pode resultar em penalização severa (incluindo zerar a redação em exames como o ENEM)' },
+      { id: 'c', text: 'Demonstrando originalidade argumentativa, o que seria bem avaliado' },
+      { id: 'd', text: 'Seguindo a estrutura ideal de uma proposta de intervenção' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Qualquer proposta ou argumentação que sugira, mesmo implicitamente, a legitimidade de tratamento violento ou desumano contra qualquer grupo social viola o princípio de respeito aos direitos humanos — um critério que, em exames como o ENEM, pode levar à atribuição de nota zero à redação inteira, independentemente da qualidade técnica de outros aspectos do texto.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_por_red_direitos_modelo_5',
+    topicId: 'por_red_direitos_modelo',
+    subject: 'Português',
+    prompt: 'Ao abordar um tema social sensível, como a situação de pessoas em vulnerabilidade social, uma redação que evita estigmatizar ou culpabilizar individualmente essas pessoas, buscando entender fatores estruturais (sociais, econômicos, históricos) por trás da situação, demonstra:',
+    options: [
+      { id: 'a', text: 'Uma análise superficial, sem qualquer profundidade' },
+      { id: 'b', text: 'Uma abordagem mais madura e sofisticada do tema, capaz de ir além de explicações simplistas, articulando fatores estruturais à discussão' },
+      { id: 'c', text: 'Um desrespeito às normas de redação' },
+      { id: 'd', text: 'Uma fuga completa ao tema proposto' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Analisar um tema social sensível considerando fatores estruturais (em vez de simplesmente culpabilizar indivíduos pela própria situação) demonstra uma abordagem mais madura e sofisticada, capaz de articular causas mais profundas à discussão — uma qualidade valorizada na avaliação da competência argumentativa de uma redação.',
+    difficulty: 'hard'
   },
   // Inglês — Compreensão de Texto em Inglês
   {
