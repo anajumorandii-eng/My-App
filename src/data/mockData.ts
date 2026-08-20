@@ -2328,6 +2328,7 @@ export const mockQuestions: Question[] = [
   // Química — Análises Quantitativas e Estequiometria
   {
     id: 'q_qui_estequiometria_1',
+    chapter: 'Cálculos Estequiométricos',
     topicId: 'qui_estequiometria',
     subject: 'Química',
     prompt: 'Na reação de combustão do metano: CH₄ + 2O₂ → CO₂ + 2H₂O, quantos mols de O₂ são necessários para queimar completamente 3 mols de CH₄?',
@@ -2343,6 +2344,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_qui_estequiometria_2',
+    chapter: 'Cálculos Estequiométricos',
     topicId: 'qui_estequiometria',
     subject: 'Química',
     prompt: 'Reagindo 4 mols de H₂ com 1 mol de N₂, segundo a equação N₂ + 3H₂ → 2NH₃, qual reagente está em excesso, e quanto sobra dele ao final da reação?',
@@ -2358,6 +2360,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_qui_estequiometria_2b',
+    chapter: 'Cálculos Estequiométricos',
     topicId: 'qui_estequiometria',
     subject: 'Química',
     prompt: 'Qual é a massa (em gramas) de CO₂ produzida na queima completa de 44 g de propano (C₃H₈), segundo a reação C₃H₈ + 5O₂ → 3CO₂ + 4H₂O? (massas molares: C₃H₈ = 44 g/mol, CO₂ = 44 g/mol)',
@@ -2373,6 +2376,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_qui_estequiometria_4',
+    chapter: 'Cálculos Estequiométricos',
     topicId: 'qui_estequiometria',
     subject: 'Química',
     prompt: 'Uma reação tem rendimento real de 80%. Se o rendimento teórico previsto for de 50 g de produto, qual é a massa real obtida na prática?',
@@ -2389,6 +2393,7 @@ export const mockQuestions: Question[] = [
   // Química — Polaridade das Ligações e Geometria Molecular
   {
     id: 'q_qui_polaridade_geometria_1',
+    chapter: 'Geometria Molecular',
     topicId: 'qui_polaridade_geometria',
     subject: 'Química',
     prompt: 'Qual é a geometria molecular da molécula de água (H₂O), considerando os dois pares de elétrons não ligantes no oxigênio?',
@@ -2404,6 +2409,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_qui_polaridade_geometria_2',
+    chapter: 'Polaridade das Ligações e das Moléculas',
     topicId: 'qui_polaridade_geometria',
     subject: 'Química',
     prompt: 'A molécula de CO₂ (dióxido de carbono) é apolar, mesmo tendo ligações C=O polares. Por que isso ocorre?',
@@ -2419,6 +2425,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_qui_polaridade_geometria_3',
+    chapter: 'Geometria Molecular',
     topicId: 'qui_polaridade_geometria',
     subject: 'Química',
     prompt: 'A geometria molecular do metano (CH₄) é tetraédrica, com ângulos de ligação de aproximadamente 109,5°. O que determina essa geometria, segundo a Teoria da Repulsão dos Pares de Elétrons da Camada de Valência (VSEPR)?',
@@ -2434,6 +2441,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_qui_polaridade_geometria_4',
+    chapter: 'Interações Intermoleculares',
     topicId: 'qui_polaridade_geometria',
     subject: 'Química',
     prompt: 'Qual tipo de força intermolecular é responsável pelo ponto de ebulição anormalmente alto da água, comparado a outros hidretos de elementos do mesmo grupo (como H₂S)?',
@@ -2450,6 +2458,7 @@ export const mockQuestions: Question[] = [
   // Química — Fundamentos e Nomenclatura Orgânica
   {
     id: 'q_qui_organica_fundamentos_1',
+    chapter: 'Nomenclatura de Compostos Orgânicos',
     topicId: 'qui_organica_fundamentos',
     subject: 'Química',
     prompt: 'Qual é a fórmula molecular do etano, um alcano de 2 carbonos?',
@@ -2465,6 +2474,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_qui_organica_fundamentos_2',
+    chapter: 'Introdução à Química Orgânica',
     topicId: 'qui_organica_fundamentos',
     subject: 'Química',
     prompt: 'Um carbono é classificado como terciário quando está ligado a quantos outros átomos de carbono?',
@@ -2480,6 +2490,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_qui_organica_fundamentos_3',
+    chapter: 'Isomeria',
     topicId: 'qui_organica_fundamentos',
     subject: 'Química',
     prompt: 'Dois compostos orgânicos são isômeros entre si quando:',
@@ -2495,6 +2506,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_qui_organica_fundamentos_4',
+    chapter: 'Introdução à Química Orgânica',
     topicId: 'qui_organica_fundamentos',
     subject: 'Química',
     prompt: 'Qual é a hibridação dos átomos de carbono em uma ligação dupla C=C, como no eteno (H₂C=CH₂)?',
@@ -2511,6 +2523,7 @@ export const mockQuestions: Question[] = [
   // Química — Soluções
   {
     id: 'q_qui_solucoes_1',
+    chapter: 'Dispersões',
     topicId: 'qui_solucoes',
     subject: 'Química',
     prompt: 'Uma solução é preparada dissolvendo 20 g de sal em 500 mL de solução final. Qual é a concentração comum (em g/L) dessa solução?',
@@ -2526,6 +2539,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_qui_solucoes_2',
+    chapter: 'Dispersões',
     topicId: 'qui_solucoes',
     subject: 'Química',
     prompt: 'Uma solução aquosa tem concentração molar de 2 mol/L de NaCl, em um volume de 500 mL. Quantos mols de NaCl estão dissolvidos nessa solução?',
@@ -2541,6 +2555,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_qui_solucoes_3',
+    chapter: 'Dispersões',
     topicId: 'qui_solucoes',
     subject: 'Química',
     prompt: 'Ao misturar 200 mL de uma solução 1 mol/L de HCl com 300 mL de água pura, qual é a nova concentração molar da solução resultante (assumindo volumes aditivos)?',
@@ -2556,6 +2571,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_qui_solucoes_4',
+    chapter: 'Dispersões',
     topicId: 'qui_solucoes',
     subject: 'Química',
     prompt: 'Qual é a massa de soluto necessária para preparar 2 L de uma solução 0,5 mol/L de NaOH (massa molar = 40 g/mol)?',
@@ -2572,6 +2588,7 @@ export const mockQuestions: Question[] = [
   // Questões reais de provas passadas (verificadas contra o gabarito oficial)
   {
     id: 'q_real_enem_2023_qui',
+    chapter: 'Reconhecimento de Funções Orgânicas e Algumas de suas Propriedades',
     topicId: 'qui_organica_fundamentos',
     subject: 'Química',
     prompt: 'O Aldrin é um inseticida agrícola organoclorado sintético de baixa polaridade, cuja estrutura molecular simétrica, de fórmula C12H8Cl6, foi introduzida na agricultura a partir da década de 1950. Esse composto apresenta alta persistência no meio ambiente e acumulação nos organismos, sendo danoso para a saúde. Um pesquisador coletou fluidos biológicos de indivíduos de uma população contaminada por esse inseticida agrícola, analisando amostras de saliva, sangue, lágrima, urina e leite quanto à presença dessa substância. Em qual dos fluidos o pesquisador provavelmente encontrou a maior concentração dessa substância?',
@@ -2607,6 +2624,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_real_fuvest_2023_qui',
+    chapter: 'Cálculos Estequiométricos',
     topicId: 'qui_estequiometria',
     subject: 'Química',
     prompt: 'Combustíveis fósseis, como o diesel, contêm em sua composição uma fração de enxofre. Durante o processo de combustão, o enxofre é convertido em SO2, tornando-se um poluente ambiental, segundo a reação: S(s) + O2(g) → SO2(g). Em postos de combustível, normalmente são comercializados dois tipos de diesel: o Diesel S10, que contém 10 ppm de enxofre, e o Diesel S500, que contém 500 ppm de enxofre (1 ppm de enxofre equivale a 1 mg de enxofre por kg de diesel). Determine, em mg por kg de diesel, a diferença entre a massa de SO2 liberada na queima de 1 kg de Diesel S500 e a massa de SO2 liberada na queima de 1 kg de Diesel S10.',
@@ -2624,6 +2642,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_real_comvest_2020_qui',
+    chapter: 'Dispersões',
     topicId: 'qui_solucoes',
     subject: 'Química',
     prompt: 'Um medicamento se apresenta na forma de comprimidos de 750 mg ou como suspensão oral na concentração de 100 mg/mL. A bula do remédio informa que o comprimido não pode ser partido, aberto ou mastigado e que, para crianças abaixo de 12 anos, a dosagem máxima é de 15 mg/kg/dose. Uma criança de 11 anos, pesando 40 kg, poderia ingerir com segurança, no máximo:',
@@ -2657,6 +2676,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_real_vunesp_2022_qui',
+    chapter: 'Reações de Oxidação em Hidrocarbonetos',
     topicId: 'qui_organica_reacoes',
     subject: 'Química',
     prompt: 'A etanolamina (NH2CH2CH2OH) é uma substância prebiótica detectada no espaço interestelar, que contém quatro dos seis elementos químicos essenciais à vida. Ela é parte constituinte dos fosfolipídios que compõem as membranas celulares e pode servir de precursora do aminoácido glicina. A transformação da molécula de etanolamina em glicina envolve uma reação de:',
@@ -2674,6 +2694,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_qui_organica_reacoes_1',
+    chapter: 'Ácidos Graxos e Esterificação',
     topicId: 'qui_organica_reacoes',
     subject: 'Química',
     prompt: 'A produção industrial de perfumes e aromatizantes artificiais depende fortemente de uma classe de reações orgânicas que combina um ácido carboxílico com um álcool, liberando água como subproduto. Essa reação é chamada de:',
@@ -2689,6 +2710,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_qui_organica_reacoes_2',
+    chapter: 'Reações de Adição',
     topicId: 'qui_organica_reacoes',
     subject: 'Química',
     prompt: 'Na adição de HBr ao propeno (CH3-CH=CH2), a Regra de Markovnikov prevê que o produto principal será aquele em que o hidrogênio se liga:',
@@ -2704,6 +2726,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_qui_organica_reacoes_3',
+    chapter: 'Ácidos Graxos e Esterificação',
     topicId: 'qui_organica_reacoes',
     subject: 'Química',
     prompt: 'A reação de um ácido graxo (ácido carboxílico de cadeia longa) com uma base forte, como o NaOH, produzindo um sal que atua como sabão, é conhecida como:',
@@ -2719,6 +2742,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_qui_organica_reacoes_4',
+    chapter: 'Álcoois',
     topicId: 'qui_organica_reacoes',
     subject: 'Química',
     prompt: 'A desidratação intramolecular do etanol (CH3-CH2-OH), na presença de ácido sulfúrico concentrado e aquecimento acima de 170 °C, produz eteno e água. Essa transformação é classificada como uma reação de:',
@@ -2770,6 +2794,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_real_famerp_2019_qui',
+    chapter: 'Ligações Químicas e Alotropia',
     topicId: 'qui_polaridade_geometria',
     subject: 'Química',
     prompt: 'A combinação dos elementos Ca e Br forma uma substância solúvel em água, de fórmula ___________. Uma solução aquosa dessa substância é classificada como ___________ de eletricidade.',
@@ -6012,6 +6037,7 @@ export const mockQuestions: Question[] = [
   // Química — Modelos Atômicos e Estrutura do Átomo
   {
     id: 'q_qui_modelos_atomicos_1',
+    chapter: 'Evolução dos Modelos Atômicos',
     topicId: 'qui_modelos_atomicos',
     subject: 'Química',
     prompt: 'Um átomo neutro X possui número de massa (A) igual a 40 e número atômico (Z) igual a 18. Quantos nêutrons esse átomo possui?',
@@ -6027,6 +6053,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_qui_modelos_atomicos_2',
+    chapter: 'Evolução dos Modelos Atômicos',
     topicId: 'qui_modelos_atomicos',
     subject: 'Química',
     prompt: 'Dois átomos, X e Y, possuem o mesmo número atômico (Z), mas números de massa (A) diferentes. Esses átomos são classificados como:',
@@ -6042,6 +6069,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_qui_modelos_atomicos_3',
+    chapter: 'Evolução dos Modelos Atômicos',
     topicId: 'qui_modelos_atomicos',
     subject: 'Química',
     prompt: 'Um átomo perde 3 elétrons e se transforma em um cátion X³⁺ que possui 10 elétrons. Qual é o número atômico (Z) desse elemento?',
@@ -6057,6 +6085,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_qui_modelos_atomicos_4',
+    chapter: 'Evolução dos Modelos Atômicos',
     topicId: 'qui_modelos_atomicos',
     subject: 'Química',
     prompt: 'No modelo atômico de Bohr, um elétron emite um fóton de luz quando:',
@@ -6072,6 +6101,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_qui_modelos_atomicos_5',
+    chapter: 'Organização da Tabela Periódica dos Elementos',
     topicId: 'qui_modelos_atomicos',
     subject: 'Química',
     prompt: 'Um átomo tem a distribuição eletrônica em camadas 2-8-8-2. Quantos elétrons esse átomo possui na camada de valência (última camada)?',
@@ -6088,6 +6118,7 @@ export const mockQuestions: Question[] = [
   // Química — Radioatividade
   {
     id: 'q_qui_radioatividade_1',
+    chapter: 'Radioatividade: o Estudo das Radiações',
     topicId: 'qui_radioatividade',
     subject: 'Química',
     prompt: 'Ao emitir uma partícula alfa, um núcleo radioativo sofre as seguintes variações em seu número atômico (Z) e número de massa (A):',
@@ -6103,6 +6134,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_qui_radioatividade_2',
+    chapter: 'Radioatividade: o Estudo das Radiações',
     topicId: 'qui_radioatividade',
     subject: 'Química',
     prompt: 'Ao emitir uma partícula beta (elétron), um núcleo radioativo sofre a seguinte variação em seu número atômico (Z)?',
@@ -6118,6 +6150,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_qui_radioatividade_3',
+    chapter: 'Radioatividade: o Estudo das Radiações',
     topicId: 'qui_radioatividade',
     subject: 'Química',
     prompt: 'Uma amostra radioativa tem massa inicial de 160 g. Sabendo que sua meia-vida é de 5 dias, qual será, aproximadamente, a massa restante dessa amostra após 20 dias?',
@@ -6133,6 +6166,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_qui_radioatividade_4',
+    chapter: 'Radioatividade: o Estudo das Radiações',
     topicId: 'qui_radioatividade',
     subject: 'Química',
     prompt: 'O urânio-238 (Z = 92) decai, através de uma série de emissões, até o chumbo-206 (Z = 82), estável. Sabendo que a diferença de número de massa é 32 e que cada partícula alfa emitida reduz A em 4, quantas partículas alfa foram emitidas nessa série de decaimentos?',
@@ -6148,6 +6182,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_qui_radioatividade_5',
+    chapter: 'Radioatividade: o Estudo das Radiações',
     topicId: 'qui_radioatividade',
     subject: 'Química',
     prompt: 'A principal diferença entre os processos de fissão nuclear e fusão nuclear é que:',
@@ -6164,6 +6199,7 @@ export const mockQuestions: Question[] = [
   // Química — Gases
   {
     id: 'q_qui_gases_1',
+    chapter: 'O Estado Gasoso',
     topicId: 'qui_gases',
     subject: 'Química',
     prompt: 'Mantendo a temperatura constante, se o volume de um gás ideal for reduzido à metade, sua pressão, de acordo com a Lei de Boyle, deve:',
@@ -6179,6 +6215,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_qui_gases_2',
+    chapter: 'O Estado Gasoso',
     topicId: 'qui_gases',
     subject: 'Química',
     prompt: 'Um gás ideal ocupa 2,0 L a 27 °C (300 K), sob pressão constante. Qual será seu volume, aproximadamente, se a temperatura for elevada para 600 K, mantendo a pressão constante (Lei de Charles/Gay-Lussac)?',
@@ -6194,6 +6231,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_qui_gases_3',
+    chapter: 'Estudo dos Gases II',
     topicId: 'qui_gases',
     subject: 'Química',
     prompt: 'Uma mistura gasosa em um recipiente fechado exerce pressão total de 5 atm. Se o gás A contribui com 3 atm dessa pressão total, qual é a pressão parcial do gás B, supondo que a mistura contenha apenas os gases A e B?',
@@ -6209,6 +6247,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_qui_gases_4',
+    chapter: 'O Estado Gasoso',
     topicId: 'qui_gases',
     subject: 'Química',
     prompt: 'Nas Condições Normais de Temperatura e Pressão (CNTP: 0 °C e 1 atm), 1 mol de qualquer gás ideal ocupa aproximadamente 22,4 L (volume molar). Qual é o volume aproximado ocupado por 2 mol de um gás ideal nessas condições?',
@@ -6224,6 +6263,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_qui_gases_5',
+    chapter: 'Estudo dos Gases II',
     topicId: 'qui_gases',
     subject: 'Química',
     prompt: 'Um gás ideal, em um recipiente de volume variável, tem tanto sua pressão quanto seu volume aumentados simultaneamente. De acordo com a Equação Geral dos Gases (P₁V₁/T₁ = P₂V₂/T₂), o que deve necessariamente ter ocorrido com a temperatura absoluta do gás?',
@@ -6240,6 +6280,7 @@ export const mockQuestions: Question[] = [
   // Química — Química Inorgânica
   {
     id: 'q_qui_inorganica_1',
+    chapter: 'Química Inorgânica',
     topicId: 'qui_inorganica',
     subject: 'Química',
     prompt: 'O ácido HNO₃, muito usado na indústria e conhecido por sua alta capacidade oxidante, é corretamente nomeado como:',
@@ -6255,6 +6296,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_qui_inorganica_2',
+    chapter: 'Equações Iônicas e outras Teorias para Ácidos e Bases',
     topicId: 'qui_inorganica',
     subject: 'Química',
     prompt: 'Uma solução aquosa de hidróxido de sódio (NaOH), uma base forte, apresenta pH:',
@@ -6270,6 +6312,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_qui_inorganica_3',
+    chapter: 'Equações Iônicas e outras Teorias para Ácidos e Bases',
     topicId: 'qui_inorganica',
     subject: 'Química',
     prompt: 'Na reação de neutralização entre ácido clorídrico (HCl) e hidróxido de sódio (NaOH), os produtos formados são:',
@@ -6285,6 +6328,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_qui_inorganica_4',
+    chapter: 'Química Inorgânica',
     topicId: 'qui_inorganica',
     subject: 'Química',
     prompt: 'O óxido de sódio (Na₂O), ao reagir com água, forma NaOH, uma base. Esse óxido é classificado como um óxido:',
@@ -6300,6 +6344,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_qui_inorganica_5',
+    chapter: 'Química Inorgânica',
     topicId: 'qui_inorganica',
     subject: 'Química',
     prompt: 'O sulfato de alumínio, sal amplamente usado no tratamento de água, é formado pelo cátion Al³⁺ e pelo ânion SO₄²⁻. Qual é a fórmula molecular correta desse sal?',
@@ -6316,6 +6361,7 @@ export const mockQuestions: Question[] = [
   // Química — Oxirredução
   {
     id: 'q_qui_oxirreducao_1',
+    chapter: 'Processos de Oxirredução',
     topicId: 'qui_oxirreducao',
     subject: 'Química',
     prompt: 'Qual é o número de oxidação (Nox) do manganês (Mn) no íon permanganato (MnO₄⁻)?',
@@ -6331,6 +6377,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_qui_oxirreducao_2',
+    chapter: 'Processos de Oxirredução',
     topicId: 'qui_oxirreducao',
     subject: 'Química',
     prompt: 'Na reação 2Fe + 3Cl₂ → 2FeCl₃, o ferro (Fe) sofre oxidação, saindo de Nox 0 para +3, enquanto o cloro sofre redução, saindo de Nox 0 para -1. Nessa reação, o cloro (Cl₂) atua como o:',
@@ -6346,6 +6393,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_qui_oxirreducao_3',
+    chapter: 'Processos de Oxirredução',
     topicId: 'qui_oxirreducao',
     subject: 'Química',
     prompt: 'Em uma reação de oxirredução, o agente oxidante é a espécie que:',
@@ -6361,6 +6409,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_qui_oxirreducao_4',
+    chapter: 'Processos de Oxirredução',
     topicId: 'qui_oxirreducao',
     subject: 'Química',
     prompt: 'Um íon Fe²⁺ se transforma em Fe³⁺ em uma reação de oxirredução. Quantos elétrons esse íon perdeu nesse processo?',
@@ -6376,6 +6425,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_qui_oxirreducao_5',
+    chapter: 'Processos de Oxirredução',
     topicId: 'qui_oxirreducao',
     subject: 'Química',
     prompt: 'Qual é o número de oxidação (Nox) do enxofre (S) na molécula de ácido sulfúrico (H₂SO₄)?',
@@ -6392,6 +6442,7 @@ export const mockQuestions: Question[] = [
   // Química — Termoquímica
   {
     id: 'q_qui_termoquimica_1',
+    chapter: 'Termoquímica I',
     topicId: 'qui_termoquimica',
     subject: 'Química',
     prompt: 'Uma reação química que libera calor para o ambiente, com variação de entalpia (ΔH) negativa, é classificada como:',
@@ -6407,6 +6458,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_qui_termoquimica_2',
+    chapter: 'Termoquímica I',
     topicId: 'qui_termoquimica',
     subject: 'Química',
     prompt: 'A combustão completa de 1 mol de carbono grafite libera 394 kJ de energia (ΔH = -394 kJ/mol). Quanta energia é liberada na combustão completa de 2 mol de carbono grafite, nas mesmas condições?',
@@ -6422,6 +6474,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_qui_termoquimica_3',
+    chapter: 'Termoquímica II',
     topicId: 'qui_termoquimica',
     subject: 'Química',
     prompt: 'Considere as reações: A → B, com ΔH = -50 kJ/mol; e B → C, com ΔH = +30 kJ/mol. Qual é a variação de entalpia da reação global A → C, de acordo com a Lei de Hess?',
@@ -6437,6 +6490,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_qui_termoquimica_4',
+    chapter: 'Termoquímica I',
     topicId: 'qui_termoquimica',
     subject: 'Química',
     prompt: 'A entalpia padrão de formação (ΔHf°) de uma substância é definida como a variação de entalpia associada à:',
@@ -6452,6 +6506,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_qui_termoquimica_5',
+    chapter: 'Termoquímica II',
     topicId: 'qui_termoquimica',
     subject: 'Química',
     prompt: 'Uma reação exotérmica tem energia de ativação direta (Ea direta) igual a 60 kJ/mol e ΔH igual a -50 kJ/mol. Qual é, aproximadamente, a energia de ativação da reação inversa (Ea inversa)?',
@@ -6468,6 +6523,7 @@ export const mockQuestions: Question[] = [
   // Química — Cinética Química
   {
     id: 'q_qui_cinetica_1',
+    chapter: 'Cinética Química',
     topicId: 'qui_cinetica',
     subject: 'Química',
     prompt: 'Em um experimento, quando a concentração de um reagente A é duplicada (mantendo os demais constantes), a velocidade da reação quadruplica. Qual é a ordem da reação em relação ao reagente A?',
@@ -6483,6 +6539,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_qui_cinetica_2',
+    chapter: 'Cinética Química',
     topicId: 'qui_cinetica',
     subject: 'Química',
     prompt: 'Em um experimento, quando a concentração de um reagente B é duplicada (mantendo os demais constantes), a velocidade da reação também duplica. Qual é a ordem da reação em relação ao reagente B?',
@@ -6498,6 +6555,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_qui_cinetica_3',
+    chapter: 'Cinética Química',
     topicId: 'qui_cinetica',
     subject: 'Química',
     prompt: 'A energia de ativação de uma reação química corresponde à:',
@@ -6513,6 +6571,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_qui_cinetica_4',
+    chapter: 'Cinética Química',
     topicId: 'qui_cinetica',
     subject: 'Química',
     prompt: 'Um catalisador heterogêneo (sólido) atua sobre reagentes em fase gasosa ou líquida. Triturar esse catalisador sólido, aumentando sua superfície de contato, tem como efeito principal:',
@@ -6528,6 +6587,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_qui_cinetica_5',
+    chapter: 'Cinética Química',
     topicId: 'qui_cinetica',
     subject: 'Química',
     prompt: 'Segundo a Teoria das Colisões, para que uma colisão entre moléculas reagentes resulte efetivamente em reação química, são necessárias duas condições simultâneas:',
@@ -6544,6 +6604,7 @@ export const mockQuestions: Question[] = [
   // Química — Eletroquímica
   {
     id: 'q_qui_eletroquimica_1',
+    chapter: 'Introdução ao Estudo das Pilhas e Baterias',
     topicId: 'qui_eletroquimica',
     subject: 'Química',
     prompt: 'Na pilha de Daniell, formada por eletrodos de zinco e cobre, o zinco (Zn) sofre oxidação e o cobre (Cu²⁺) sofre redução. Nessa pilha, o eletrodo de zinco é o:',
@@ -6559,6 +6620,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_qui_eletroquimica_2',
+    chapter: 'Aspectos Quantitativos da Eletroquímica e Metalurgia',
     topicId: 'qui_eletroquimica',
     subject: 'Química',
     prompt: 'Na pilha de Daniell, o potencial padrão de redução do Cu²⁺/Cu é +0,34 V e o do Zn²⁺/Zn é -0,76 V. Qual é o valor aproximado da diferença de potencial (ddp) dessa pilha?',
@@ -6574,6 +6636,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_qui_eletroquimica_3',
+    chapter: 'Eletroquímica de Processos não Espontâneos',
     topicId: 'qui_eletroquimica',
     subject: 'Química',
     prompt: 'Na eletrólise aquosa de cloreto de sódio (salmoura), um dos produtos formados no cátodo, a partir da redução da água, é:',
@@ -6589,6 +6652,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_qui_eletroquimica_4',
+    chapter: 'Eletroquímica de Processos não Espontâneos',
     topicId: 'qui_eletroquimica',
     subject: 'Química',
     prompt: 'Em uma pilha (célula galvânica), o ânodo é o polo negativo. Já em uma célula eletrolítica (eletrólise), o ânodo é o polo:',
@@ -6604,6 +6668,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_qui_eletroquimica_5',
+    chapter: 'Eletroquímica de Processos Espontâneos',
     topicId: 'qui_eletroquimica',
     subject: 'Química',
     prompt: 'A corrosão do ferro (formação de ferrugem) é um processo espontâneo de oxidação do ferro metálico em contato com oxigênio e umidade. Esse fenômeno pode ser entendido, do ponto de vista eletroquímico, como análogo ao funcionamento de:',
@@ -6620,6 +6685,7 @@ export const mockQuestions: Question[] = [
   // Química — Equilíbrio Químico
   {
     id: 'q_qui_equilibrio_1',
+    chapter: 'Equilíbrios Químicos I',
     topicId: 'qui_equilibrio',
     subject: 'Química',
     prompt: 'Em uma reação reversível em equilíbrio, um valor de constante de equilíbrio (Kc) muito maior que 1 indica que, no equilíbrio:',
@@ -6635,6 +6701,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_qui_equilibrio_2',
+    chapter: 'Deslocamento de Equilíbrio',
     topicId: 'qui_equilibrio',
     subject: 'Química',
     prompt: 'A síntese de amônia, N₂(g) + 3H₂(g) ⇌ 2NH₃(g), é uma reação exotérmica (ΔH < 0). De acordo com o Princípio de Le Chatelier, aumentar a temperatura desse sistema em equilíbrio favorece o deslocamento no sentido:',
@@ -6650,6 +6717,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_qui_equilibrio_3',
+    chapter: 'Deslocamento de Equilíbrio',
     topicId: 'qui_equilibrio',
     subject: 'Química',
     prompt: 'Diferentemente de outras perturbações (como mudança de concentração ou pressão), uma mudança de temperatura em um sistema em equilíbrio químico tem um efeito único, que é:',
@@ -6665,6 +6733,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_qui_equilibrio_4',
+    chapter: 'Deslocamento de Equilíbrio',
     topicId: 'qui_equilibrio',
     subject: 'Química',
     prompt: 'Em um sistema gasoso em equilíbrio, a volume constante, a adição de um gás inerte (que não participa da reação, como o argônio) tem como efeito sobre a posição do equilíbrio:',
@@ -6680,6 +6749,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_qui_equilibrio_5',
+    chapter: 'Equilíbrios Químicos I',
     topicId: 'qui_equilibrio',
     subject: 'Química',
     prompt: 'Para a reação em equilíbrio 2SO₂(g) + O₂(g) ⇌ 2SO₃(g), qual é a expressão correta da constante de equilíbrio Kc?',

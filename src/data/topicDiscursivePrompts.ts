@@ -1299,6 +1299,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_qui_modelos_atomicos_1',
+    chapter: 'Evolução dos Modelos Atômicos',
     topicId: 'qui_modelos_atomicos',
     subject: 'Química',
     prompt: 'Explique a diferença entre número atômico (Z) e número de massa (A), e por que dois átomos podem ter o mesmo Z mas A diferente (isótopos).',
@@ -1312,6 +1313,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_qui_modelos_atomicos_2',
+    chapter: 'Evolução dos Modelos Atômicos',
     topicId: 'qui_modelos_atomicos',
     subject: 'Química',
     prompt: 'Explique, segundo o modelo de Bohr, o que acontece com um elétron quando ele absorve energia, e o que acontece quando esse mesmo elétron retorna ao seu nível de energia original.',
@@ -1325,6 +1327,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_qui_modelos_atomicos_3',
+    chapter: 'Organização da Tabela Periódica dos Elementos',
     topicId: 'qui_modelos_atomicos',
     subject: 'Química',
     prompt: 'Explique por que a camada de valência (a última camada eletrônica ocupada) é considerada a mais importante para determinar o comportamento químico de um átomo.',
@@ -1338,6 +1341,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_qui_radioatividade_1',
+    chapter: 'Radioatividade: o Estudo das Radiações',
     topicId: 'qui_radioatividade',
     subject: 'Química',
     prompt: 'Explique o que muda no número atômico (Z) e no número de massa (A) de um núcleo, respectivamente, quando ele emite uma partícula alfa e quando emite uma partícula beta.',
@@ -1351,6 +1355,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_qui_radioatividade_2',
+    chapter: 'Radioatividade: o Estudo das Radiações',
     topicId: 'qui_radioatividade',
     subject: 'Química',
     prompt: 'Explique o conceito de meia-vida de um isótopo radioativo, e como ele permite calcular quanto de uma amostra ainda restará após um determinado tempo.',
@@ -1364,6 +1369,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_qui_radioatividade_3',
+    chapter: 'Radioatividade: o Estudo das Radiações',
     topicId: 'qui_radioatividade',
     subject: 'Química',
     prompt: 'Explique a diferença entre fissão nuclear e fusão nuclear, e dê um exemplo de onde cada um desses processos ocorre (na tecnologia ou na natureza).',
@@ -1377,6 +1383,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_qui_polaridade_geometria_1',
+    chapter: 'Polaridade das Ligações e das Moléculas',
     topicId: 'qui_polaridade_geometria',
     subject: 'Química',
     prompt: 'Explique por que a molécula de água (H2O) é polar, considerando tanto a polaridade das ligações quanto a geometria molecular.',
@@ -1390,6 +1397,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_qui_polaridade_geometria_2',
+    chapter: 'Polaridade das Ligações e das Moléculas',
     topicId: 'qui_polaridade_geometria',
     subject: 'Química',
     prompt: 'Explique por que o dióxido de carbono (CO2), apesar de ter ligações covalentes polares (C=O), é uma molécula apolar.',
@@ -1403,6 +1411,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_qui_polaridade_geometria_3',
+    chapter: 'Geometria Molecular',
     topicId: 'qui_polaridade_geometria',
     subject: 'Química',
     prompt: 'Explique como a Teoria da Repulsão dos Pares de Elétrons da Camada de Valência (VSEPR) prevê a geometria tetraédrica do metano (CH4).',
@@ -1416,6 +1425,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_qui_gases_1',
+    chapter: 'O Estado Gasoso',
     topicId: 'qui_gases',
     subject: 'Química',
     prompt: 'Explique a Lei de Boyle, e por que, a temperatura constante, reduzir o volume de um gás aumenta sua pressão.',
@@ -1429,6 +1439,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_qui_gases_2',
+    chapter: 'Estudo dos Gases II',
     topicId: 'qui_gases',
     subject: 'Química',
     prompt: 'Explique o que é a Lei de Dalton das pressões parciais, e como ela se aplica a uma mistura de gases que não reagem entre si.',
@@ -1442,6 +1453,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_qui_gases_3',
+    chapter: 'O Estado Gasoso',
     topicId: 'qui_gases',
     subject: 'Química',
     prompt: 'Explique o conceito de volume molar de um gás nas Condições Normais de Temperatura e Pressão (CNTP), e por que esse valor é aproximadamente o mesmo para qualquer gás ideal.',
@@ -1455,6 +1467,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_qui_estequiometria_1',
+    chapter: 'Cálculos Estequiométricos',
     topicId: 'qui_estequiometria',
     subject: 'Química',
     prompt: 'Explique o conceito de reagente limitante em uma reação química, e por que ele determina a quantidade máxima de produto que pode ser formada.',
@@ -1468,6 +1481,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_qui_estequiometria_2',
+    chapter: 'Cálculos Estequiométricos',
     topicId: 'qui_estequiometria',
     subject: 'Química',
     prompt: 'Explique a diferença entre rendimento teórico e rendimento real de uma reação química, e cite pelo menos um motivo pelo qual eles costumam ser diferentes na prática.',
@@ -1481,6 +1495,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_qui_estequiometria_3',
+    chapter: 'Transformações Físicas e Químicas e Balanceamento de Equações',
     topicId: 'qui_estequiometria',
     subject: 'Química',
     prompt: 'Explique por que é necessário balancear uma equação química antes de fazer qualquer cálculo estequiométrico, relacionando isso à Lei de Conservação da Massa.',
@@ -1494,6 +1509,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_qui_inorganica_1',
+    chapter: 'Equações Iônicas e outras Teorias para Ácidos e Bases',
     topicId: 'qui_inorganica',
     subject: 'Química',
     prompt: 'Explique, segundo a definição de Arrhenius, o que caracteriza um ácido e o que caracteriza uma base, em termos dos íons liberados em solução aquosa.',
@@ -1507,6 +1523,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_qui_inorganica_2',
+    chapter: 'Equações Iônicas e outras Teorias para Ácidos e Bases',
     topicId: 'qui_inorganica',
     subject: 'Química',
     prompt: 'Explique por que a reação de neutralização entre um ácido e uma base sempre produz um sal e água, usando a reação entre HCl e NaOH como exemplo.',
@@ -1520,6 +1537,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_qui_inorganica_3',
+    chapter: 'Química Inorgânica',
     topicId: 'qui_inorganica',
     subject: 'Química',
     prompt: 'Explique a diferença entre um óxido básico e um óxido ácido, em termos do tipo de elemento que forma o óxido e do produto de sua reação com água.',
@@ -1533,6 +1551,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_qui_oxirreducao_1',
+    chapter: 'Processos de Oxirredução',
     topicId: 'qui_oxirreducao',
     subject: 'Química',
     prompt: 'Explique a diferença entre oxidação e redução em termos de transferência de elétrons, e o que significa dizer que uma reação de oxirredução sempre envolve as duas ocorrendo simultaneamente.',
@@ -1546,6 +1565,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_qui_oxirreducao_2',
+    chapter: 'Processos de Oxirredução',
     topicId: 'qui_oxirreducao',
     subject: 'Química',
     prompt: 'Explique o que é um agente oxidante e um agente redutor em uma reação de oxirredução, usando a reação entre ferro metálico e gás cloro como exemplo.',
@@ -1559,6 +1579,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_qui_oxirreducao_3',
+    chapter: 'Processos de Oxirredução',
     topicId: 'qui_oxirreducao',
     subject: 'Química',
     prompt: 'Explique como calcular o número de oxidação (Nox) de um átomo dentro de uma espécie poliatômica neutra, usando o ácido sulfúrico (H2SO4) como exemplo.',
@@ -1572,6 +1593,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_qui_organica_fundamentos_1',
+    chapter: 'Isomeria',
     topicId: 'qui_organica_fundamentos',
     subject: 'Química',
     prompt: 'Explique o que é isomeria em química orgânica, e por que dois isômeros podem ter propriedades físicas ou químicas bem diferentes mesmo tendo a mesma fórmula molecular.',
@@ -1585,6 +1607,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_qui_organica_fundamentos_2',
+    chapter: 'Introdução à Química Orgânica',
     topicId: 'qui_organica_fundamentos',
     subject: 'Química',
     prompt: 'Explique a diferença entre um carbono primário, secundário, terciário e quaternário, em termos do número de outros carbonos aos quais ele está ligado.',
@@ -1598,6 +1621,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_qui_organica_fundamentos_3',
+    chapter: 'Introdução à Química Orgânica',
     topicId: 'qui_organica_fundamentos',
     subject: 'Química',
     prompt: 'Explique por que o carbono é capaz de formar uma quantidade tão grande e diversa de compostos orgânicos, em comparação com a maioria dos outros elementos químicos.',
@@ -1611,6 +1635,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_qui_organica_reacoes_1',
+    chapter: 'Ácidos Graxos e Esterificação',
     topicId: 'qui_organica_reacoes',
     subject: 'Química',
     prompt: 'Explique o que é uma reação de esterificação, e por que os produtos dessa reação (ésteres) são tão usados na produção de aromas e fragrâncias artificiais.',
@@ -1624,6 +1649,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_qui_organica_reacoes_2',
+    chapter: 'Reações de Adição',
     topicId: 'qui_organica_reacoes',
     subject: 'Química',
     prompt: 'Explique a Regra de Markovnikov para reações de adição a alcenos assimétricos, e por que o carbocátion mais estável determina o produto principal.',
@@ -1637,6 +1663,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_qui_organica_reacoes_3',
+    chapter: 'Ácidos Graxos e Esterificação',
     topicId: 'qui_organica_reacoes',
     subject: 'Química',
     prompt: 'Explique o que é a reação de saponificação, e por que ela produz sabões a partir de gorduras ou óleos.',
@@ -1650,6 +1677,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_qui_solucoes_1',
+    chapter: 'Dispersões',
     topicId: 'qui_solucoes',
     subject: 'Química',
     prompt: 'Explique a diferença entre concentração em g/L e concentração em mol/L (molaridade), e como converter de uma unidade para a outra.',
@@ -1663,6 +1691,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_qui_solucoes_2',
+    chapter: 'Dispersões',
     topicId: 'qui_solucoes',
     subject: 'Química',
     prompt: 'Explique o que acontece com a concentração de uma solução quando ela é diluída (adicionando mais solvente, sem adicionar mais soluto), e como esse raciocínio se expressa na fórmula da diluição.',
@@ -1676,6 +1705,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_qui_solucoes_3',
+    chapter: 'Dispersões',
     topicId: 'qui_solucoes',
     subject: 'Química',
     prompt: 'Explique por que é importante distinguir entre soluções saturadas, insaturadas e supersaturadas ao se referir à concentração de uma solução.',
@@ -1689,6 +1719,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_qui_termoquimica_1',
+    chapter: 'Termoquímica I',
     topicId: 'qui_termoquimica',
     subject: 'Química',
     prompt: 'Explique a diferença entre uma reação exotérmica e uma reação endotérmica, em termos do sinal da variação de entalpia (ΔH) e da troca de calor com o ambiente.',
@@ -1702,6 +1733,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_qui_termoquimica_2',
+    chapter: 'Termoquímica II',
     topicId: 'qui_termoquimica',
     subject: 'Química',
     prompt: 'Explique a Lei de Hess, e por que ela permite calcular a entalpia de uma reação somando as entalpias de outras reações intermediárias.',
@@ -1715,6 +1747,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_qui_termoquimica_3',
+    chapter: 'Termoquímica II',
     topicId: 'qui_termoquimica',
     subject: 'Química',
     prompt: 'Explique o papel da energia de ativação no diagrama de energia de uma reação, e por que uma reação exotérmica ainda pode precisar de uma energia de ativação alta para começar.',
@@ -1728,6 +1761,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_qui_cinetica_1',
+    chapter: 'Cinética Química',
     topicId: 'qui_cinetica',
     subject: 'Química',
     prompt: 'Explique como determinar a ordem de uma reação em relação a um reagente, a partir de dados experimentais sobre como a velocidade da reação varia com a concentração desse reagente.',
@@ -1741,6 +1775,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_qui_cinetica_2',
+    chapter: 'Cinética Química',
     topicId: 'qui_cinetica',
     subject: 'Química',
     prompt: 'Explique como um catalisador acelera uma reação química, sem ser consumido no processo e sem alterar o produto final formado.',
@@ -1754,6 +1789,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_qui_cinetica_3',
+    chapter: 'Cinética Química',
     topicId: 'qui_cinetica',
     subject: 'Química',
     prompt: 'Explique, segundo a Teoria das Colisões, por que nem toda colisão entre moléculas reagentes resulta em uma reação química efetiva.',
@@ -1767,6 +1803,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_qui_eletroquimica_1',
+    chapter: 'Introdução ao Estudo das Pilhas e Baterias',
     topicId: 'qui_eletroquimica',
     subject: 'Química',
     prompt: 'Explique a diferença entre ânodo e cátodo em uma pilha (célula galvânica), em termos de qual reação (oxidação ou redução) ocorre em cada eletrodo.',
@@ -1780,6 +1817,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_qui_eletroquimica_2',
+    chapter: 'Eletroquímica de Processos não Espontâneos',
     topicId: 'qui_eletroquimica',
     subject: 'Química',
     prompt: 'Explique a diferença fundamental entre uma pilha e uma eletrólise, em termos da espontaneidade da reação envolvida e da direção da conversão de energia.',
@@ -1793,6 +1831,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_qui_eletroquimica_3',
+    chapter: 'Eletroquímica de Processos Espontâneos',
     topicId: 'qui_eletroquimica',
     subject: 'Química',
     prompt: 'Explique por que a corrosão do ferro metálico (formação de ferrugem) pode ser entendida como um processo eletroquímico, análogo ao funcionamento de uma pilha.',
@@ -1806,6 +1845,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_qui_equilibrio_1',
+    chapter: 'Deslocamento de Equilíbrio',
     topicId: 'qui_equilibrio',
     subject: 'Química',
     prompt: 'Explique o Princípio de Le Chatelier, e como um sistema em equilíbrio químico responde a uma perturbação, como o aumento da concentração de um dos reagentes.',
@@ -1819,6 +1859,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_qui_equilibrio_2',
+    chapter: 'Deslocamento de Equilíbrio',
     topicId: 'qui_equilibrio',
     subject: 'Química',
     prompt: 'Explique por que a temperatura é a única perturbação capaz de alterar o valor da constante de equilíbrio (Kc) de uma reação, ao contrário de mudanças de concentração ou pressão.',
@@ -1832,6 +1873,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_qui_equilibrio_3',
+    chapter: 'Equilíbrios Químicos I',
     topicId: 'qui_equilibrio',
     subject: 'Química',
     prompt: 'Explique como escrever a expressão da constante de equilíbrio (Kc) para uma reação reversível qualquer, a partir dos coeficientes estequiométricos da equação balanceada.',
