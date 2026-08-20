@@ -3352,4 +3352,43 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
     ],
     difficulty: 'medium',
   },
+  {
+    id: 'disc_ing_01_1',
+    topicId: 'ing_01',
+    subject: 'Inglês',
+    prompt: 'Explain, in Portuguese, the difference between "skimming" and "scanning" as reading strategies, and describe a situation in which each one would be more useful when reading a text in English during an exam.',
+    modelAnswer: '"Skimming" é a estratégia de ler um texto rapidamente, sem se deter em cada palavra, com o objetivo de captar a ideia geral (o assunto principal, o tom, a estrutura geral) do texto — é útil, por exemplo, quando o candidato precisa decidir rapidamente do que se trata um texto longo antes de ler as perguntas, ou para ter uma primeira impressão do argumento central antes de uma leitura mais detalhada. Já "scanning" é a estratégia de procurar uma informação específica dentro do texto (um nome, uma data, uma palavra-chave), sem necessariamente ler o texto inteiro com atenção — é mais útil quando o candidato já sabe exatamente que informação precisa localizar (por exemplo, depois de ler uma pergunta específica sobre um dado numérico ou um nome próprio mencionado no texto) e quer economizar tempo indo direto ao ponto, em vez de reler tudo com atenção total.',
+    keyPoints: [
+      'Skimming: leitura rápida para captar a ideia geral do texto, sem se deter em detalhes',
+      'Scanning: busca por uma informação específica no texto, sem ler tudo com atenção total',
+      'Skimming é mais útil antes de uma leitura detalhada; scanning é mais útil quando já se sabe exatamente o que procurar',
+    ],
+    difficulty: 'medium',
+  },
+  {
+    id: 'disc_ing_01_2',
+    topicId: 'ing_01',
+    subject: 'Inglês',
+    prompt: 'Explain, in Portuguese, why understanding connector words in English (like "however", "although", "therefore", "in addition") is essential for correctly interpreting the logical relationships within a text, even without translating every single word.',
+    modelAnswer: 'Conectivos em inglês (como "however", "although", "therefore", "in addition") desempenham a mesma função central que seus equivalentes em português: sinalizar explicitamente a relação lógica entre diferentes partes de um texto, sem que o leitor precise adivinhar essa relação. "However" e "although" geralmente sinalizam contraste ou concessão (uma ideia que se opõe, de alguma forma, à anterior); "therefore" sinaliza conclusão ou consequência lógica; "in addition" sinaliza que uma nova informação está sendo somada à anterior, reforçando o mesmo ponto. Reconhecer esses conectivos é essencial porque, mesmo que o leitor não conheça o significado exato de todas as palavras ao redor, identificar o tipo de relação lógica que o conectivo sinaliza já ajuda a inferir o sentido geral da frase e sua conexão com o restante do texto — uma estratégia de leitura eficiente, especialmente sob pressão de tempo em uma prova, quando não é possível (nem necessário) traduzir cada palavra individualmente para compreender a estrutura argumentativa geral do texto.',
+    keyPoints: [
+      'Conectivos em inglês sinalizam explicitamente a relação lógica entre partes do texto, sem que o leitor precise adivinhar',
+      '"However"/"although": contraste; "therefore": conclusão/consequência; "in addition": adição de informação',
+      'Reconhecer conectivos ajuda a inferir o sentido geral mesmo sem traduzir cada palavra — estratégia eficiente sob pressão de tempo',
+    ],
+    difficulty: 'medium',
+  },
+  {
+    id: 'disc_ing_01_3',
+    topicId: 'ing_01',
+    subject: 'Inglês',
+    prompt: 'Explain, in Portuguese, what "false cognates" (falsos cognatos) are between English and Portuguese, and why they can be a trap for readers trying to interpret a text in English.',
+    modelAnswer: 'Falsos cognatos são palavras que, em duas línguas diferentes (no caso, inglês e português), têm uma forma escrita muito semelhante ou quase idêntica, mas possuem significados diferentes — o que pode levar o leitor a assumir, erroneamente, que a palavra em inglês significa o mesmo que a palavra parecida em português. Um exemplo clássico é a palavra em inglês "actually", que se parece com "atualmente" em português, mas na verdade significa "na verdade" ou "de fato" (um sentido bem diferente de "atualmente", que em inglês seria "currently" ou "nowadays"). Outro exemplo é "pretend", que parece com "pretender" em português, mas significa "fingir", não "ter a intenção de". Esses falsos cognatos são uma armadilha porque o leitor, ao reconhecer uma palavra com grafia parecida ao português, tende a assumir automaticamente (e erroneamente) que já sabe o significado dela, sem checar o contexto — o que pode levar a interpretações completamente equivocadas do sentido de uma frase ou de um texto inteiro, mesmo que o restante do vocabulário seja bem compreendido.',
+    keyPoints: [
+      'Falsos cognatos: palavras com grafia semelhante entre inglês e português, mas significados diferentes',
+      'Exemplo: "actually" (na verdade/de fato) não significa "atualmente"; "pretend" (fingir) não significa "pretender"',
+      'São uma armadilha porque o leitor assume erroneamente o significado pela semelhança gráfica, sem checar o contexto real',
+    ],
+    difficulty: 'hard',
+  },
 ];
