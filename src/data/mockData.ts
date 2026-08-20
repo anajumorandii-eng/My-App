@@ -4269,6 +4269,51 @@ export const mockQuestions: Question[] = [
     explanation: 'Roma se destacou pela capacidade de administrar um vasto império por meio de um sistema jurídico influente (o Direito Romano), obras de engenharia como estradas e aquedutos, e uma estrutura administrativa que integrou territórios de três continentes ao redor do Mediterrâneo.',
     difficulty: 'medium'
   },
+  {
+    id: 'q_his_idade_antiga_3',
+    topicId: 'his_idade_antiga',
+    subject: 'História',
+    prompt: 'O Código de Hamurábi, um dos conjuntos de leis mais antigos conhecidos, elaborado na Babilônia antiga, é historicamente relevante principalmente por:',
+    options: [
+      { id: 'a', text: 'Ser o primeiro documento escrito da história da humanidade, sem qualquer relação com leis' },
+      { id: 'b', text: 'Representar uma das primeiras tentativas conhecidas de sistematizar e tornar públicas normas jurídicas, com penas frequentemente baseadas no princípio de "olho por olho"' },
+      { id: 'c', text: 'Ter sido escrito em papel, antecipando a invenção do papiro egípcio' },
+      { id: 'd', text: 'Não ter qualquer relação com organização social ou jurídica' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'O Código de Hamurábi, gravado em uma estela de pedra na Babilônia (cerca de 1750 a.C.), reúne leis que regulavam diversos aspectos da vida social, comercial e familiar, com penas frequentemente baseadas no princípio de reciprocidade ("olho por olho, dente por dente") — sendo um marco na história do direito escrito.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_idade_antiga_4',
+    topicId: 'his_idade_antiga',
+    subject: 'História',
+    prompt: 'A civilização egípcia antiga, desenvolvida ao longo do rio Nilo, teve sua organização social e econômica fortemente marcada por:',
+    options: [
+      { id: 'a', text: 'A total independência em relação ao regime de cheias do Nilo' },
+      { id: 'b', text: 'A dependência das cheias periódicas do Nilo para a agricultura, além de uma estrutura social hierarquizada, com o faraó no topo, considerado uma figura de poder político e religioso' },
+      { id: 'c', text: 'A ausência completa de qualquer forma de governo centralizado' },
+      { id: 'd', text: 'Uma economia baseada exclusivamente no comércio marítimo de longa distância' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'O Egito Antigo dependia diretamente das cheias periódicas do rio Nilo para fertilizar as terras e viabilizar a agricultura, base de sua economia. A sociedade era hierarquizada, com o faraó ocupando o topo, considerado um governante com autoridade tanto política quanto religiosa (frequentemente associado a divindades).',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_his_idade_antiga_5',
+    topicId: 'his_idade_antiga',
+    subject: 'História',
+    prompt: 'A expansão do Império Romano e sua posterior fragmentação (queda do Império Romano do Ocidente, em 476 d.C.) marcaram uma transição histórica importante porque:',
+    options: [
+      { id: 'a', text: 'Não trouxeram nenhuma mudança significativa para a organização política e social da Europa' },
+      { id: 'b', text: 'Encerraram, para a maior parte da historiografia ocidental, o período da Idade Antiga, abrindo caminho para a fragmentação política que caracterizaria a Idade Média' },
+      { id: 'c', text: 'Resultaram na unificação política imediata de toda a Europa sob um único governo' },
+      { id: 'd', text: 'Ocorreram sem qualquer relação com invasões de povos externos ao império' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A queda do Império Romano do Ocidente, em 476 d.C., é tradicionalmente usada pela historiografia ocidental como marco do fim da Idade Antiga e início da Idade Média — um período marcado pela fragmentação política em reinos menores, muitas vezes associada às invasões de povos germânicos sobre o território romano.',
+    difficulty: 'medium'
+  },
   // História — Idade Média
   {
     id: 'q_his_idade_media_1',
@@ -4298,6 +4343,51 @@ export const mockQuestions: Question[] = [
     ],
     correctOptionId: 'a',
     explanation: 'As Cruzadas combinaram motivações religiosas (retomar Jerusalém e a Terra Santa do domínio muçulmano) com interesses econômicos e políticos, como a expansão do comércio, o fortalecimento do poder da Igreja e a busca por terras e prestígio pela nobreza.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_idade_media_3',
+    topicId: 'his_idade_media',
+    subject: 'História',
+    prompt: 'A Igreja Católica, durante a Idade Média europeia, exerceu um papel de grande influência na sociedade principalmente porque:',
+    options: [
+      { id: 'a', text: 'Estava completamente separada de qualquer assunto político ou econômico, restrita apenas a questões espirituais' },
+      { id: 'b', text: 'Concentrava enorme poder político, econômico (com vastas propriedades de terra) e ideológico, influenciando desde a legitimação dos governantes até a vida cotidiana da população' },
+      { id: 'c', text: 'Não possuía qualquer propriedade de terra' },
+      { id: 'd', text: 'Era subordinada em todas as decisões aos reis e à nobreza local' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Na Europa medieval, a Igreja Católica acumulava grande poder político (legitimando reis, influenciando decisões), econômico (era uma das maiores proprietárias de terras, cobrando o dízimo) e ideológico (controlando a educação e a interpretação religiosa da vida cotidiana), tornando-se uma das instituições centrais da sociedade feudal.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_idade_media_4',
+    topicId: 'his_idade_media',
+    subject: 'História',
+    prompt: 'A Peste Negra, epidemia que assolou a Europa no século XIV, teve entre suas consequências históricas mais relevantes:',
+    options: [
+      { id: 'a', text: 'Uma redução populacional tão drástica que contribuiu para o enfraquecimento do sistema feudal, ao alterar a relação entre oferta de mão de obra e demanda por trabalhadores' },
+      { id: 'b', text: 'Nenhum impacto significativo na estrutura social ou econômica europeia' },
+      { id: 'c', text: 'O fortalecimento imediato e definitivo do sistema feudal' },
+      { id: 'd', text: 'A eliminação completa do comércio entre as cidades europeias' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A Peste Negra dizimou uma parcela expressiva da população europeia (estima-se que entre um terço e metade em algumas regiões), reduzindo drasticamente a mão de obra disponível. Essa escassez de trabalhadores aumentou seu poder de barganha frente aos senhores feudais, contribuindo, entre outros fatores, para o enfraquecimento gradual do sistema feudal nos séculos seguintes.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_his_idade_media_5',
+    topicId: 'his_idade_media',
+    subject: 'História',
+    prompt: 'O ressurgimento do comércio e das cidades (burgos) na Baixa Idade Média está associado ao surgimento de um novo grupo social, a burguesia, cuja principal característica inicial era:',
+    options: [
+      { id: 'a', text: 'Ser formada por nobres proprietários de grandes extensões de terra' },
+      { id: 'b', text: 'Ser formada por comerciantes e artesãos urbanos, cuja riqueza vinha do comércio e do trabalho manufatureiro, e não da posse de terras' },
+      { id: 'c', text: 'Ser composta exclusivamente por membros do clero' },
+      { id: 'd', text: 'Não ter qualquer papel econômico relevante na sociedade medieval' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A burguesia medieval surgiu nas cidades (burgos) em ressurgimento, formada principalmente por comerciantes e artesãos cuja riqueza vinha da atividade comercial e manufatureira urbana — uma fonte de riqueza diferente da posse de terras, que sustentava o poder da nobreza feudal, e que gradualmente ganharia importância crescente na sociedade europeia.',
     difficulty: 'medium'
   },
   // História — Idade Moderna e Iluminismo
@@ -4331,6 +4421,51 @@ export const mockQuestions: Question[] = [
     explanation: 'A Revolução Francesa derrubou o Antigo Regime, aboliu privilégios feudais e difundiu ideais iluministas (liberdade, igualdade, fraternidade) que influenciaram movimentos revolucionários e constitucionais em diversas partes do mundo nos séculos seguintes.',
     difficulty: 'medium'
   },
+  {
+    id: 'q_his_moderna_iluminismo_3',
+    topicId: 'his_moderna_iluminismo',
+    subject: 'História',
+    prompt: 'O Absolutismo monárquico, sistema político predominante em boa parte da Europa entre os séculos XVI e XVIII, se caracterizava por:',
+    options: [
+      { id: 'a', text: 'A concentração do poder político nas mãos do rei, frequentemente justificada pela teoria do direito divino dos reis, com pouca ou nenhuma divisão de poderes' },
+      { id: 'b', text: 'A divisão equilibrada de poderes entre Executivo, Legislativo e Judiciário' },
+      { id: 'c', text: 'A eliminação total da nobreza como grupo social' },
+      { id: 'd', text: 'A adoção de eleições diretas para escolha do monarca' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O Absolutismo concentrava o poder político no monarca, frequentemente legitimado pela ideia do direito divino dos reis (o poder do rei viria diretamente de Deus), sem a divisão de poderes que caracterizaria sistemas políticos posteriores — um sistema que os pensadores iluministas viriam a criticar duramente.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_moderna_iluminismo_4',
+    topicId: 'his_moderna_iluminismo',
+    subject: 'História',
+    prompt: 'A Revolução Científica, ocorrida entre os séculos XVI e XVII (com figuras como Galileu, Copérnico e Newton), contribuiu para o pensamento iluminista posterior principalmente ao:',
+    options: [
+      { id: 'a', text: 'Reforçar a ideia de que o conhecimento deveria se basear exclusivamente na autoridade religiosa tradicional' },
+      { id: 'b', text: 'Estabelecer o método científico e a observação empírica como formas privilegiadas de compreender a natureza, influenciando a valorização iluminista da razão como ferramenta de conhecimento' },
+      { id: 'c', text: 'Não ter qualquer relação com o desenvolvimento do pensamento europeu posterior' },
+      { id: 'd', text: 'Consolidar definitivamente o modelo geocêntrico do universo' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A Revolução Científica consolidou o método científico (observação, experimentação, formulação de leis matemáticas) como forma privilegiada de compreender a natureza, desafiando explicações baseadas exclusivamente na autoridade religiosa ou na tradição — um espírito que influenciou diretamente a valorização iluminista da razão como principal instrumento de conhecimento.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_moderna_iluminismo_5',
+    topicId: 'his_moderna_iluminismo',
+    subject: 'História',
+    prompt: 'A Independência dos Estados Unidos (1776) é frequentemente citada como uma das primeiras aplicações práticas de ideais iluministas porque:',
+    options: [
+      { id: 'a', text: 'Resultou na criação de uma monarquia absolutista' },
+      { id: 'b', text: 'Instituiu uma república baseada em princípios como soberania popular, divisão de poderes e direitos individuais, inspirados em pensadores iluministas' },
+      { id: 'c', text: 'Manteve as treze colônias sob controle britânico' },
+      { id: 'd', text: 'Não teve qualquer influência sobre movimentos revolucionários posteriores, como a Revolução Francesa' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A independência dos Estados Unidos resultou na criação de uma república fundamentada em princípios iluministas como a soberania popular, a divisão de poderes (Executivo, Legislativo e Judiciário) e a garantia de direitos individuais — servindo, inclusive, de inspiração e referência para revolucionários franceses poucos anos depois.',
+    difficulty: 'medium'
+  },
   // História — Imperialismo e Guerras Mundiais
   {
     id: 'q_his_imperialismo_guerras_1',
@@ -4362,6 +4497,51 @@ export const mockQuestions: Question[] = [
     explanation: 'O assassinato do arquiduque Francisco Ferdinando em Sarajevo, em 1914, foi o estopim que desencadeou a Primeira Guerra Mundial, num contexto já tenso de rivalidades imperialistas, alianças militares e nacionalismos exacerbados na Europa.',
     difficulty: 'easy'
   },
+  {
+    id: 'q_his_imperialismo_guerras_3',
+    topicId: 'his_imperialismo_guerras',
+    subject: 'História',
+    prompt: 'A Conferência de Berlim (1884-1885), realizada por potências europeias, teve como principal objetivo:',
+    options: [
+      { id: 'a', text: 'Estabelecer regras para a partilha colonial da África entre as potências europeias, sem qualquer participação dos povos africanos nas decisões' },
+      { id: 'b', text: 'Conceder independência imediata a todos os territórios africanos' },
+      { id: 'c', text: 'Formar uma aliança militar entre países africanos e europeus' },
+      { id: 'd', text: 'Encerrar definitivamente o comércio entre Europa e África' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A Conferência de Berlim reuniu potências europeias para estabelecer regras e critérios para a partilha territorial da África entre si, num processo conduzido inteiramente pelos europeus, sem qualquer participação ou consulta aos povos africanos diretamente afetados pelas decisões — um marco do imperialismo europeu no continente.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_imperialismo_guerras_4',
+    topicId: 'his_imperialismo_guerras',
+    subject: 'História',
+    prompt: 'A ascensão do nazismo na Alemanha, na década de 1930, foi favorecida, entre outros fatores, por:',
+    options: [
+      { id: 'a', text: 'A prosperidade econômica alemã e a total ausência de ressentimento em relação ao Tratado de Versalhes' },
+      { id: 'b', text: 'A crise econômica, o desemprego e o ressentimento nacionalista alemão decorrente das duras condições impostas pelo Tratado de Versalhes após a Primeira Guerra Mundial' },
+      { id: 'c', text: 'O apoio unânime e imediato de todas as potências europeias ao governo de Hitler' },
+      { id: 'd', text: 'A ausência completa de qualquer discurso nacionalista na Alemanha do período' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A ascensão do nazismo foi favorecida pela grave crise econômica alemã (agravada pela Grande Depressão de 1929), pelo alto desemprego, e pelo ressentimento nacionalista alimentado pelas duras condições impostas à Alemanha pelo Tratado de Versalhes ao final da Primeira Guerra Mundial (reparações pesadas, perda de território, humilhação nacional) — um terreno fértil explorado pela propaganda nazista.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_his_imperialismo_guerras_5',
+    topicId: 'his_imperialismo_guerras',
+    subject: 'História',
+    prompt: 'O Holocausto, o extermínio sistemático de judeus e outros grupos por parte do regime nazista durante a Segunda Guerra Mundial, é historicamente relevante por representar:',
+    options: [
+      { id: 'a', text: 'Um evento isolado, sem qualquer planejamento estatal por trás dele' },
+      { id: 'b', text: 'Um genocídio planejado e executado de forma sistemática pelo Estado nazista, resultando na morte de milhões de judeus e de outros grupos perseguidos' },
+      { id: 'c', text: 'Um episódio sem qualquer repercussão no direito internacional posterior' },
+      { id: 'd', text: 'Uma política aplicada apenas fora do território alemão' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'O Holocausto foi um genocídio planejado e executado sistematicamente pelo Estado nazista, resultando no extermínio de aproximadamente seis milhões de judeus, além de outros grupos perseguidos (como ciganos, pessoas com deficiência e opositores políticos) — um evento que teve profundas repercussões no direito internacional posterior, incluindo a criação do conceito jurídico de "crime contra a humanidade" e a definição legal de genocídio.',
+    difficulty: 'hard'
+  },
   // História — Guerra Fria e Mundo Contemporâneo
   {
     id: 'q_his_guerra_fria_contemporaneo_1',
@@ -4391,6 +4571,51 @@ export const mockQuestions: Question[] = [
     ],
     correctOptionId: 'c',
     explanation: 'A queda do Muro de Berlim em 1989 simbolizou o colapso do bloco socialista na Europa Oriental, sendo um marco central no processo que culminaria no fim da Guerra Fria e na posterior dissolução da União Soviética em 1991.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_guerra_fria_contemporaneo_3',
+    topicId: 'his_guerra_fria_contemporaneo',
+    subject: 'História',
+    prompt: 'A Crise dos Mísseis de Cuba (1962), um dos episódios mais tensos da Guerra Fria, é considerada historicamente relevante por:',
+    options: [
+      { id: 'a', text: 'Ter levado EUA e URSS ao ponto mais próximo de um confronto nuclear direto durante toda a Guerra Fria, resolvida por negociação diplomática' },
+      { id: 'b', text: 'Ter resultado em um ataque nuclear efetivo entre as duas potências' },
+      { id: 'c', text: 'Não ter gerado qualquer tensão entre as potências envolvidas' },
+      { id: 'd', text: 'Ter sido resolvida por meio de uma guerra convencional prolongada' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A Crise dos Mísseis de Cuba, desencadeada pela instalação de mísseis soviéticos em território cubano, levou EUA e URSS ao momento de maior tensão e risco de confronto nuclear direto durante toda a Guerra Fria — uma crise que foi, no fim, resolvida por meio de negociação diplomática entre as duas potências, evitando o pior cenário.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_his_guerra_fria_contemporaneo_4',
+    topicId: 'his_guerra_fria_contemporaneo',
+    subject: 'História',
+    prompt: 'O processo de descolonização da África e da Ásia, intensificado especialmente após a Segunda Guerra Mundial, resultou em:',
+    options: [
+      { id: 'a', text: 'A manutenção indefinida do domínio colonial europeu sobre esses territórios' },
+      { id: 'b', text: 'O surgimento de dezenas de novos países independentes, embora muitos enfrentassem, após a independência, desafios como fronteiras artificiais herdadas do período colonial e instabilidade política' },
+      { id: 'c', text: 'A ausência total de qualquer conflito posterior à independência desses territórios' },
+      { id: 'd', text: 'A anexação imediata desses territórios pelos Estados Unidos ou pela União Soviética' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'O processo de descolonização, acelerado após a Segunda Guerra Mundial, resultou na independência de dezenas de novos países na África e na Ásia. Muitos desses países, no entanto, enfrentaram desafios pós-independência ligados a fronteiras artificiais traçadas pelas potências coloniais (sem considerar divisões étnicas ou culturais locais) e a instabilidade política, muitas vezes agravada pela disputa de influência entre EUA e URSS durante a Guerra Fria.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_his_guerra_fria_contemporaneo_5',
+    topicId: 'his_guerra_fria_contemporaneo',
+    subject: 'História',
+    prompt: 'Os atentados de 11 de setembro de 2001, nos Estados Unidos, tiveram como um de seus principais desdobramentos geopolíticos:',
+    options: [
+      { id: 'a', text: 'O fortalecimento imediato e definitivo da paz mundial, sem qualquer conflito posterior' },
+      { id: 'b', text: 'O início da chamada "Guerra ao Terror", incluindo invasões militares lideradas pelos Estados Unidos ao Afeganistão e, posteriormente, ao Iraque' },
+      { id: 'c', text: 'A dissolução imediata da ONU' },
+      { id: 'd', text: 'O fim de qualquer tensão entre países ocidentais e o Oriente Médio' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Os atentados de 11 de setembro de 2001 levaram os Estados Unidos a declarar a chamada "Guerra ao Terror", que incluiu a invasão militar ao Afeganistão (2001) — em resposta ao regime Talibã, que abrigava a liderança da Al-Qaeda — e, posteriormente, ao Iraque (2003), com profundas e duradouras repercussões geopolíticas no Oriente Médio e nas relações internacionais.',
     difficulty: 'medium'
   },
   // História — Brasil Colônia
@@ -4424,6 +4649,51 @@ export const mockQuestions: Question[] = [
     explanation: 'A Inconfidência Mineira envolveu setores da elite (como Tiradentes) insatisfeitos com a política fiscal portuguesa (sobretudo a ameaça da derrama, cobrança retroativa de impostos sobre o ouro) e influenciados por ideais iluministas e pelo exemplo da independência dos Estados Unidos.',
     difficulty: 'medium'
   },
+  {
+    id: 'q_his_brasil_colonia_3',
+    topicId: 'his_brasil_colonia',
+    subject: 'História',
+    prompt: 'O sistema de capitanias hereditárias, adotado por Portugal para colonizar o Brasil a partir de 1534, se caracterizava por:',
+    options: [
+      { id: 'a', text: 'Dividir o território em faixas de terra doadas a donatários, com poderes administrativos e a responsabilidade de colonizar e defender a área, mas sem transferir a posse plena da terra (que permanecia da Coroa)' },
+      { id: 'b', text: 'Conceder independência total às capitanias em relação a Portugal' },
+      { id: 'c', text: 'Ser um sistema de sucesso amplamente uniforme em todas as capitanias' },
+      { id: 'd', text: 'Não ter qualquer relação com a defesa do território colonial' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O sistema de capitanias hereditárias dividiu o litoral brasileiro em faixas de terra doadas a donatários (a posse era transferida, mas não a soberania, que permanecia da Coroa portuguesa), com a responsabilidade de administrar, colonizar e defender a área — um sistema que teve resultados bastante desiguais, com poucas capitanias prosperando de fato.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_brasil_colonia_4',
+    topicId: 'his_brasil_colonia',
+    subject: 'História',
+    prompt: 'O tráfico transatlântico de pessoas escravizadas, que trouxe milhões de africanos ao Brasil colonial, teve como principal justificativa econômica, do ponto de vista dos colonizadores, a necessidade de:',
+    options: [
+      { id: 'a', text: 'Mão de obra em larga escala para sustentar atividades como a produção açucareira e, mais tarde, a mineração' },
+      { id: 'b', text: 'Substituir integralmente o trabalho livre europeu, que já era predominante na colônia' },
+      { id: 'c', text: 'Realizar exclusivamente trabalhos domésticos, sem qualquer papel na produção econômica' },
+      { id: 'd', text: 'Cumprir exigências religiosas específicas da Igreja Católica' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O tráfico transatlântico de pessoas escravizadas foi impulsionado pela necessidade de mão de obra em larga escala para sustentar atividades econômicas centrais da colônia, como a produção açucareira nos engenhos e, posteriormente, a extração de ouro e diamantes durante o ciclo minerador — a base sobre a qual se estruturou boa parte da economia colonial brasileira.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_his_brasil_colonia_5',
+    topicId: 'his_brasil_colonia',
+    subject: 'História',
+    prompt: 'O Pacto Colonial (ou exclusivo metropolitano), princípio que regia as relações econômicas entre Portugal e sua colônia brasileira, determinava que:',
+    options: [
+      { id: 'a', text: 'O comércio da colônia deveria ocorrer livremente com qualquer país, sem restrições' },
+      { id: 'b', text: 'A colônia deveria comercializar exclusivamente com a metrópole (Portugal), que se beneficiava do monopólio sobre a exportação e importação de produtos coloniais' },
+      { id: 'c', text: 'A colônia teria total autonomia política e econômica em relação a Portugal' },
+      { id: 'd', text: 'Não existia qualquer regulamentação sobre o comércio colonial' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'O Pacto Colonial estabelecia que a colônia deveria comercializar exclusivamente com sua metrópole, garantindo a Portugal o monopólio sobre a compra dos produtos coloniais (como açúcar e, depois, ouro) e a venda de produtos manufaturados à colônia — um sistema que subordinava economicamente o Brasil colonial aos interesses da Coroa portuguesa.',
+    difficulty: 'medium'
+  },
   // História — Brasil Império
   {
     id: 'q_his_brasil_imperio_1',
@@ -4454,6 +4724,51 @@ export const mockQuestions: Question[] = [
     correctOptionId: 'a',
     explanation: 'A Lei Áurea aboliu formalmente a escravidão no Brasil, mas não veio acompanhada de políticas de reparação, terra ou inclusão social para os libertos, contribuindo para desigualdades estruturais que persistiram após a abolição.',
     difficulty: 'easy'
+  },
+  {
+    id: 'q_his_brasil_imperio_3',
+    topicId: 'his_brasil_imperio',
+    subject: 'História',
+    prompt: 'O Período Regencial (1831-1840), fase em que o Brasil foi governado por regentes devido à menoridade de D. Pedro II, foi marcado por:',
+    options: [
+      { id: 'a', text: 'Estabilidade política completa, sem qualquer revolta ou tensão regional' },
+      { id: 'b', text: 'Diversas revoltas regionais (como a Cabanagem, a Sabinada e a Revolução Farroupilha), refletindo tensões sociais, econômicas e políticas em diferentes partes do território' },
+      { id: 'c', text: 'O fim definitivo da monarquia no Brasil' },
+      { id: 'd', text: 'A abolição imediata da escravidão' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'O Período Regencial foi marcado por instabilidade política e diversas revoltas regionais — como a Cabanagem (Pará), a Sabinada (Bahia) e a Revolução Farroupilha (Rio Grande do Sul) — que refletiam tensões sociais, econômicas e disputas de poder em um contexto de enfraquecimento do poder central durante a menoridade do futuro imperador D. Pedro II.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_brasil_imperio_4',
+    topicId: 'his_brasil_imperio',
+    subject: 'História',
+    prompt: 'A Guerra do Paraguai (1864-1870), o maior conflito armado da história da América do Sul, envolveu o Paraguai de um lado e, do outro, a Tríplice Aliança, formada por:',
+    options: [
+      { id: 'a', text: 'Brasil, Argentina e Uruguai' },
+      { id: 'b', text: 'Brasil, Bolívia e Chile' },
+      { id: 'c', text: 'Apenas o Brasil, isoladamente' },
+      { id: 'd', text: 'Argentina, Chile e Peru' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A Guerra do Paraguai (ou Guerra da Tríplice Aliança) opôs o Paraguai à aliança formada por Brasil, Argentina e Uruguai, resultando em um conflito longo e extremamente custoso em vidas humanas, com impacto demográfico e econômico duradouro sobre o Paraguai.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_brasil_imperio_5',
+    topicId: 'his_brasil_imperio',
+    subject: 'História',
+    prompt: 'A Proclamação da República no Brasil, em 1889, foi liderada principalmente por:',
+    options: [
+      { id: 'a', text: 'Um amplo movimento popular espontâneo, sem qualquer participação militar' },
+      { id: 'b', text: 'Setores das Forças Armadas (com destaque para o Marechal Deodoro da Fonseca), com apoio de setores da elite descontentes com o Império, em um movimento com pouca participação popular direta' },
+      { id: 'c', text: 'Uma decisão do próprio Imperador D. Pedro II, favorável à mudança de regime' },
+      { id: 'd', text: 'Um referendo popular nacional' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A Proclamação da República foi liderada por setores das Forças Armadas, com destaque para o Marechal Deodoro da Fonseca, contando com apoio de setores da elite (como cafeicultores insatisfeitos e republicanos) descontentes com o Império — um movimento conduzido essencialmente "de cima para baixo", com pouca participação popular direta no momento da proclamação.',
+    difficulty: 'medium'
   },
   // História — Primeira República e Era Vargas
   {
@@ -4486,6 +4801,51 @@ export const mockQuestions: Question[] = [
     explanation: 'O Estado Novo combinou autoritarismo — com censura, fechamento do Congresso e perseguição a opositores — com a criação de importantes direitos trabalhistas (como a CLT), consolidando Vargas como uma figura popular apesar do regime ditatorial.',
     difficulty: 'medium'
   },
+  {
+    id: 'q_his_primeira_republica_vargas_3',
+    topicId: 'his_primeira_republica_vargas',
+    subject: 'História',
+    prompt: 'O voto de cabresto, prática eleitoral marcante da Primeira República brasileira, se referia a:',
+    options: [
+      { id: 'a', text: 'Um sistema de voto totalmente livre, secreto e sem qualquer influência externa' },
+      { id: 'b', text: 'A manipulação e o controle do voto de eleitores, muitas vezes dependentes economicamente de coronéis locais, que direcionavam o resultado das eleições em favor das oligarquias' },
+      { id: 'c', text: 'Um sistema de votação exclusivamente por correspondência' },
+      { id: 'd', text: 'A extensão do direito de voto às mulheres pela primeira vez' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'O voto de cabresto era uma prática comum na Primeira República em que coronéis (grandes proprietários rurais com forte poder local) controlavam o voto de eleitores dependentes deles econômica ou socialmente, garantindo resultados eleitorais favoráveis às oligarquias — uma das faces do chamado "coronelismo" que caracterizou a política do período.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_primeira_republica_vargas_4',
+    topicId: 'his_primeira_republica_vargas',
+    subject: 'História',
+    prompt: 'A Revolução de 1930, que levou Getúlio Vargas ao poder e encerrou a Primeira República, teve entre seus fatores desencadeadores:',
+    options: [
+      { id: 'a', text: 'A crise do modelo agroexportador cafeeiro, agravada pela Grande Depressão de 1929, e o rompimento da política do "café com leite" (com a candidatura de Getúlio Vargas contra a indicação paulista)' },
+      { id: 'b', text: 'Um acordo pacífico entre todas as oligarquias regionais para a continuidade do sistema' },
+      { id: 'c', text: 'A ausência total de qualquer crise econômica no período' },
+      { id: 'd', text: 'A restauração da monarquia brasileira' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A Revolução de 1930 foi impulsionada pela crise do modelo agroexportador cafeeiro (agravada pela Grande Depressão de 1929, que derrubou os preços internacionais do café) e pelo rompimento da aliança "café com leite", quando Minas Gerais apoiou Getúlio Vargas em vez de aceitar a indicação de outro candidato paulista — resultando em um movimento armado que depôs o presidente eleito e levou Vargas ao poder.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_his_primeira_republica_vargas_5',
+    topicId: 'his_primeira_republica_vargas',
+    subject: 'História',
+    prompt: 'A Consolidação das Leis do Trabalho (CLT), criada durante o governo de Getúlio Vargas em 1943, teve como principal característica:',
+    options: [
+      { id: 'a', text: 'Eliminar completamente qualquer direito trabalhista existente até então' },
+      { id: 'b', text: 'Reunir e sistematizar diversos direitos trabalhistas (como jornada de trabalho, férias remuneradas e salário mínimo) em um único conjunto de leis, ao mesmo tempo em que os sindicatos ficavam sob forte controle e tutela do Estado' },
+      { id: 'c', text: 'Ser aplicada exclusivamente aos trabalhadores rurais' },
+      { id: 'd', text: 'Ter sido revogada imediatamente após sua criação' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A CLT sistematizou diversos direitos trabalhistas conquistados ao longo do governo Vargas (jornada de trabalho, férias remuneradas, salário mínimo, entre outros), representando um avanço social importante. Ao mesmo tempo, os sindicatos permaneceram sob forte controle e tutela do Estado (o chamado sindicalismo atrelado), o que limitava sua autonomia frente ao governo — uma combinação característica do populismo trabalhista de Vargas.',
+    difficulty: 'medium'
+  },
   // História — República Liberal e Brasil Contemporâneo
   {
     id: 'q_his_republica_liberal_atual_1',
@@ -4515,6 +4875,51 @@ export const mockQuestions: Question[] = [
     ],
     correctOptionId: 'b',
     explanation: 'A Constituição de 1988 consolidou a redemocratização brasileira, ampliando direitos fundamentais, sociais, políticos e trabalhistas, e estabelecendo as bases institucionais da República Federativa do Brasil atual.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_republica_liberal_atual_3',
+    topicId: 'his_republica_liberal_atual',
+    subject: 'História',
+    prompt: 'O "Milagre Econômico" brasileiro, período de forte crescimento econômico durante a ditadura militar (especialmente entre 1969 e 1973), é frequentemente lembrado por:',
+    options: [
+      { id: 'a', text: 'Ter promovido crescimento econômico acelerado, mas com forte concentração de renda e sem redução das desigualdades sociais no país' },
+      { id: 'b', text: 'Ter reduzido drasticamente as desigualdades sociais brasileiras' },
+      { id: 'c', text: 'Ter ocorrido em um contexto de plena liberdade política e democrática' },
+      { id: 'd', text: 'Não ter qualquer relação com investimento estatal na economia' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O "Milagre Econômico" foi um período de crescimento acelerado do PIB brasileiro, sustentado por forte investimento estatal e endividamento externo, mas que ocorreu em paralelo à repressão política do regime militar e resultou em concentração de renda, sem redução significativa das desigualdades sociais — um crescimento que não se traduziu em distribuição equitativa de seus benefícios.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_his_republica_liberal_atual_4',
+    topicId: 'his_republica_liberal_atual',
+    subject: 'História',
+    prompt: 'O movimento "Diretas Já", ocorrido em 1984, foi um marco importante do processo de redemocratização brasileira porque:',
+    options: [
+      { id: 'a', text: 'Reivindicava eleições diretas para presidente da República, mobilizando grandes manifestações populares, embora a emenda que propunha isso não tenha sido aprovada naquele momento pelo Congresso' },
+      { id: 'b', text: 'Resultou imediatamente em eleições diretas para presidente naquele mesmo ano' },
+      { id: 'c', text: 'Foi organizado e apoiado diretamente pelo governo militar' },
+      { id: 'd', text: 'Não teve qualquer repercussão popular significativa' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O movimento "Diretas Já" mobilizou grandes manifestações populares em todo o Brasil, reivindicando eleições diretas para presidente da República. Apesar da forte mobilização, a emenda constitucional que propunha isso (Emenda Dante de Oliveira) não foi aprovada pelo Congresso em 1984 — a eleição seguinte ainda seria indireta, mas o movimento teve papel simbólico fundamental no processo de redemocratização que culminaria, poucos anos depois, na Constituição de 1988 e em eleições diretas.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_his_republica_liberal_atual_5',
+    topicId: 'his_republica_liberal_atual',
+    subject: 'História',
+    prompt: 'O Plano Real, implementado em 1994, é historicamente relevante por ter:',
+    options: [
+      { id: 'a', text: 'Aumentado a inflação brasileira a níveis ainda mais altos do que os anteriores' },
+      { id: 'b', text: 'Conseguido estabilizar a economia brasileira, controlando um longo período de hiperinflação que afetava o país desde décadas anteriores' },
+      { id: 'c', text: 'Restaurado o regime militar no Brasil' },
+      { id: 'd', text: 'Eliminado completamente qualquer forma de moeda no país' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'O Plano Real, lançado em 1994, conseguiu estabilizar a economia brasileira após décadas de alta inflação (e episódios de hiperinflação), por meio de uma nova moeda (o Real) e mecanismos de transição que ajudaram a "ancorar" as expectativas de preços — um dos planos econômicos mais bem-sucedidos da história recente do país no combate à inflação crônica.',
     difficulty: 'medium'
   },
   // Biologia — Estrutura e Fisiologia Celular
