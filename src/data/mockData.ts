@@ -1305,6 +1305,7 @@ export const mockQuestions: Question[] = [
   // Matemática — Funções
   {
     id: 'q_mat_funcoes_1',
+    chapter: 'Composição de Funções',
     topicId: 'mat_funcoes',
     subject: 'Matemática',
     prompt: 'Se f(x) = 2x + 1 e g(x) = x², qual é o valor de f(g(3))?',
@@ -1320,6 +1321,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_mat_funcoes_2',
+    chapter: 'Inversão de Funções',
     topicId: 'mat_funcoes',
     subject: 'Matemática',
     prompt: 'Qual é a função inversa de f(x) = 3x - 6?',
@@ -1335,6 +1337,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_mat_funcoes_3',
+    chapter: 'Introdução às Funções',
     topicId: 'mat_funcoes',
     subject: 'Matemática',
     prompt: 'Qual é o domínio da função f(x) = 1/(x - 4) + √(x - 2)?',
@@ -1350,6 +1353,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_mat_funcoes_4',
+    chapter: 'Função Quadrática',
     topicId: 'mat_funcoes',
     subject: 'Matemática',
     prompt: 'O gráfico de uma função f é crescente no intervalo (-∞, 2) e decrescente no intervalo (2, +∞). O que podemos concluir sobre o ponto x = 2?',
@@ -1365,6 +1369,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_mat_funcoes_5',
+    chapter: 'Estudo do Sinal de Funções',
     topicId: 'mat_funcoes',
     subject: 'Matemática',
     prompt: 'Quantas soluções reais tem a equação |x - 2| = 5?',
@@ -1381,6 +1386,7 @@ export const mockQuestions: Question[] = [
   // Matemática — Análise Combinatória
   {
     id: 'q_mat_combinatoria_1',
+    chapter: 'O Problema da Fila',
     topicId: 'mat_combinatoria',
     subject: 'Matemática',
     prompt: 'Quantos anagramas distintos podem ser formados com as letras da palavra "ARARA"?',
@@ -1396,6 +1402,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_mat_combinatoria_2',
+    chapter: 'O Problema do Grupo',
     topicId: 'mat_combinatoria',
     subject: 'Matemática',
     prompt: 'De um grupo de 10 pessoas, quantas comissões de 3 pessoas podem ser formadas, sem distinção de cargo entre os membros?',
@@ -1411,6 +1418,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_mat_combinatoria_3',
+    chapter: 'O Problema do Grupo',
     topicId: 'mat_combinatoria',
     subject: 'Matemática',
     prompt: 'Uma prova tem 10 questões, das quais o aluno deve escolher exatamente 7 para responder — sendo que as duas primeiras questões são obrigatórias. De quantas formas diferentes o aluno pode escolher o conjunto de questões que vai responder?',
@@ -1426,6 +1434,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_mat_combinatoria_4',
+    chapter: 'O Problema da Fila',
     topicId: 'mat_combinatoria',
     subject: 'Matemática',
     prompt: 'Quantos números de 3 algarismos distintos podem ser formados usando apenas os algarismos 1, 2, 3, 4 e 5 (sem repetição)?',
@@ -1441,6 +1450,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_mat_combinatoria_5',
+    chapter: 'Técnicas de Contagem',
     topicId: 'mat_combinatoria',
     subject: 'Matemática',
     prompt: 'No desenvolvimento do binômio (x + y)⁶, qual é o coeficiente do termo x²y⁴?',
@@ -1457,6 +1467,7 @@ export const mockQuestions: Question[] = [
   // Matemática — Geometria Plana
   {
     id: 'q_mat_geometria_plana_1',
+    chapter: 'Semelhança de Triângulos',
     topicId: 'mat_geometria_plana',
     subject: 'Matemática',
     prompt: 'Duas torres verticais projetam sombras no chão no mesmo instante do dia. A torre menor, de 6 m de altura, projeta uma sombra de 4 m. Se a torre maior projeta uma sombra de 10 m, qual é sua altura, sabendo que as duas situações formam triângulos semelhantes?',
@@ -1472,6 +1483,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_mat_geometria_plana_2',
+    chapter: 'Áreas de Polígonos',
     topicId: 'mat_geometria_plana',
     subject: 'Matemática',
     prompt: 'Um trapézio tem bases medindo 8 cm e 12 cm, e altura de 5 cm. Qual é a sua área?',
@@ -1487,6 +1499,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_mat_geometria_plana_3',
+    chapter: 'Triângulo Retângulo',
     topicId: 'mat_geometria_plana',
     subject: 'Matemática',
     prompt: 'Em um triângulo retângulo, a altura relativa à hipotenusa mede 4,8 cm, e um dos segmentos que ela determina na hipotenusa mede 3,6 cm. Qual é o comprimento do cateto adjacente a esse segmento?',
@@ -1502,6 +1515,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_mat_geometria_plana_4',
+    chapter: 'Ângulos em Polígonos',
     topicId: 'mat_geometria_plana',
     subject: 'Matemática',
     prompt: 'Qual é a medida de cada ângulo interno de um hexágono regular?',
@@ -1517,6 +1531,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_real_enem_2023_mat',
+    chapter: 'Triângulo Retângulo',
     topicId: 'mat_geometria_plana',
     subject: 'Matemática',
     prompt: 'Sejam a, b e c as medidas dos lados de um triângulo retângulo, tendo a como medida da hipotenusa. Esses valores a, b e c são, respectivamente, os diâmetros dos círculos C1, C2 e C3. Essa construção assegura, pelo teorema de Pitágoras, que área(C1) = área(C2) + área(C3). Um professor de matemática desafiou dois amigos: sem usar instrumento de medição, ele poderia afirmar se a área do círculo correspondente à pizza que ele pedisse era maior, igual ou menor do que a soma das áreas das pizzas dos dois amigos. Formou-se um triângulo com os diâmetros das três pizzas, com ângulo α oposto ao diâmetro da pizza do professor. O professor afirmou que a área de sua pizza é maior do que a soma das áreas das outras duas. Isso ocorre porque:',
@@ -1535,6 +1550,7 @@ export const mockQuestions: Question[] = [
   // Matemática — Probabilidade e Interpretação de Dados
   {
     id: 'q_mat_dados_probabilidade_1',
+    chapter: 'Eventos Disjuntos e Eventos Independentes',
     topicId: 'mat_dados_probabilidade',
     subject: 'Matemática',
     prompt: 'Uma urna tem 5 bolas vermelhas e 3 azuis. Retiram-se 2 bolas sucessivamente, sem reposição. Qual é a probabilidade de as duas serem vermelhas?',
@@ -1550,6 +1566,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_mat_dados_probabilidade_2',
+    chapter: 'Operações com Probabilidades',
     topicId: 'mat_dados_probabilidade',
     subject: 'Matemática',
     prompt: 'Uma moeda honesta é lançada 3 vezes. Qual é a probabilidade de sair pelo menos uma cara?',
@@ -1565,6 +1582,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_mat_dados_probabilidade_3',
+    chapter: 'Operações com Probabilidades',
     topicId: 'mat_dados_probabilidade',
     subject: 'Matemática',
     prompt: 'Em uma sala de 40 alunos, 25 gostam de Matemática, 20 gostam de Física, e 10 gostam das duas matérias. Escolhendo um aluno ao acaso, qual é a probabilidade de que ele não goste de nenhuma das duas matérias?',
@@ -1580,6 +1598,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_mat_dados_probabilidade_4',
+    chapter: 'Estatística Descritiva',
     topicId: 'mat_dados_probabilidade',
     subject: 'Matemática',
     prompt: 'Um conjunto de dados tem os valores 2, 3, 3, 5 e 100. Qual medida de tendência central melhor representa o valor "típico" desse conjunto, considerando a presença do valor discrepante 100?',
@@ -1595,6 +1614,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_mat_dados_probabilidade_5',
+    chapter: 'Eventos Disjuntos e Eventos Independentes',
     topicId: 'mat_dados_probabilidade',
     subject: 'Matemática',
     prompt: 'Ao formar uma comissão de 3 pessoas escolhidas aleatoriamente entre 4 homens e 6 mulheres (total de 10 pessoas), qual é a probabilidade de a comissão ser formada por exatamente 2 mulheres e 1 homem?',
@@ -1611,6 +1631,7 @@ export const mockQuestions: Question[] = [
   // Matemática — Trigonometria
   {
     id: 'q_mat_trigonometria_1',
+    chapter: 'Relações Trigonométricas em Polígonos',
     topicId: 'mat_trigonometria',
     subject: 'Matemática',
     prompt: 'Em um triângulo, dois lados medem 7 cm e 10 cm, e o ângulo entre eles é 60°. Usando a Lei dos Cossenos (cos 60° = 0,5), qual é, aproximadamente, a medida do terceiro lado?',
@@ -1626,6 +1647,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_mat_trigonometria_2',
+    chapter: 'A Relação Fundamental da Trigonometria',
     topicId: 'mat_trigonometria',
     subject: 'Matemática',
     prompt: 'Se sen(x) = 0,6 e x é um ângulo agudo, qual é o valor de cos(x)?',
@@ -1641,6 +1663,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_mat_trigonometria_3',
+    chapter: 'Funções Trigonométricas',
     topicId: 'mat_trigonometria',
     subject: 'Matemática',
     prompt: 'Qual é o período da função f(x) = sen(2x)?',
@@ -1656,6 +1679,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_mat_trigonometria_4',
+    chapter: 'Trigonometria no Triângulo Retângulo',
     topicId: 'mat_trigonometria',
     subject: 'Matemática',
     prompt: 'De um ponto no chão, a 30 m da base de um prédio, o ângulo de elevação até o topo do prédio é de 45°. Qual é, aproximadamente, a altura do prédio?',
@@ -1671,6 +1695,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_mat_trigonometria_5',
+    chapter: 'Relações Trigonométricas em Polígonos',
     topicId: 'mat_trigonometria',
     subject: 'Matemática',
     prompt: 'Em um triângulo, um ângulo mede 45° e o lado oposto a ele mede 10 cm. Outro ângulo mede 30°. Pela Lei dos Senos (sen 30° = 0,5; sen 45° ≈ 0,71), qual é, aproximadamente, a medida do lado oposto ao ângulo de 30°?',
@@ -3183,6 +3208,7 @@ export const mockQuestions: Question[] = [
   // Matemática — Aritmética e Proporcionalidade
   {
     id: 'q_mat_aritmetica_proporcionalidade_1',
+    chapter: 'Razão e Proporção',
     topicId: 'mat_aritmetica_proporcionalidade',
     subject: 'Matemática',
     prompt: 'Uma torneira enche sozinha um tanque em 6 horas, e outra torneira, sozinha, enche o mesmo tanque em 3 horas. Abrindo as duas torneiras juntas, em quanto tempo o tanque será cheio?',
@@ -3198,6 +3224,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_mat_aritmetica_proporcionalidade_2',
+    chapter: 'Razão e Proporção',
     topicId: 'mat_aritmetica_proporcionalidade',
     subject: 'Matemática',
     prompt: 'Uma equipe de 8 trabalhadores constrói um muro em 12 dias, todos no mesmo ritmo. Se 2 trabalhadores saírem da equipe, em quantos dias os 6 restantes terminariam o mesmo muro?',
@@ -3213,6 +3240,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_mat_aritmetica_proporcionalidade_3',
+    chapter: 'Porcentagem',
     topicId: 'mat_aritmetica_proporcionalidade',
     subject: 'Matemática',
     prompt: 'Um investimento rende 10% de juros no primeiro ano e, sobre o novo montante, mais 10% no segundo ano. Qual é o rendimento percentual total acumulado nos dois anos, em relação ao valor inicial?',
@@ -3228,6 +3256,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_mat_aritmetica_proporcionalidade_4',
+    chapter: 'Razão e Proporção',
     topicId: 'mat_aritmetica_proporcionalidade',
     subject: 'Matemática',
     prompt: 'Uma máquina produz 150 peças em 5 horas, funcionando em ritmo constante. Mantendo o mesmo ritmo, quantas peças ela produzirá em 8 horas?',
@@ -3243,6 +3272,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_mat_aritmetica_proporcionalidade_5',
+    chapter: 'Razão e Proporção',
     topicId: 'mat_aritmetica_proporcionalidade',
     subject: 'Matemática',
     prompt: 'Uma herança de R$ 90.000,00 deve ser dividida entre três herdeiros na proporção direta de 2:3:4. Quanto receberá o herdeiro com a maior parte?',
@@ -3259,6 +3289,7 @@ export const mockQuestions: Question[] = [
   // Matemática — Teoria dos Números Inteiros
   {
     id: 'q_mat_teoria_numeros_1',
+    chapter: 'Introdução à Teoria dos Números Inteiros',
     topicId: 'mat_teoria_numeros',
     subject: 'Matemática',
     prompt: 'Um número inteiro positivo, quando dividido por 7, deixa resto 3; e quando dividido por 5, deixa resto 2. Qual das alternativas apresenta um valor possível para esse número?',
@@ -3274,6 +3305,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_mat_teoria_numeros_2',
+    chapter: 'Introdução à Teoria dos Números Inteiros',
     topicId: 'mat_teoria_numeros',
     subject: 'Matemática',
     prompt: 'Qual é o menor número natural maior que 10 que, ao ser dividido por 4, 6 e 9, deixa sempre resto 1?',
@@ -3289,6 +3321,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_mat_teoria_numeros_3',
+    chapter: 'Introdução à Teoria dos Números Inteiros',
     topicId: 'mat_teoria_numeros',
     subject: 'Matemática',
     prompt: 'O número 2¹⁰ - 1 (ou seja, 1023) é divisível por qual dos números abaixo?',
@@ -3304,6 +3337,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_mat_teoria_numeros_4',
+    chapter: 'Introdução à Teoria dos Números Inteiros',
     topicId: 'mat_teoria_numeros',
     subject: 'Matemática',
     prompt: 'Quantos números inteiros entre 1 e 100 são múltiplos de 3 ou de 5?',
@@ -3319,6 +3353,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_mat_teoria_numeros_5',
+    chapter: 'Introdução à Teoria dos Números Inteiros',
     topicId: 'mat_teoria_numeros',
     subject: 'Matemática',
     prompt: 'Qual é o número de divisores positivos de 360?',
@@ -3335,6 +3370,7 @@ export const mockQuestions: Question[] = [
   // Matemática — Sequências, Matrizes e Sistemas Lineares
   {
     id: 'q_mat_sequencias_matrizes_1',
+    chapter: 'Progressão Aritmética',
     topicId: 'mat_sequencias_matrizes',
     subject: 'Matemática',
     prompt: 'Em uma progressão aritmética, o quinto termo é 17 e o décimo termo é 37. Qual é a razão dessa progressão?',
@@ -3350,6 +3386,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_mat_sequencias_matrizes_2',
+    chapter: 'Progressão Geométrica',
     topicId: 'mat_sequencias_matrizes',
     subject: 'Matemática',
     prompt: 'Em uma progressão geométrica de razão 3, o terceiro termo vale 45. Qual é o primeiro termo dessa progressão?',
@@ -3365,6 +3402,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_mat_sequencias_matrizes_3',
+    chapter: 'Progressão Aritmética',
     topicId: 'mat_sequencias_matrizes',
     subject: 'Matemática',
     prompt: 'Qual é a soma dos 20 primeiros termos da progressão aritmética (3, 7, 11, 15, ...)?',
@@ -3380,6 +3418,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_mat_sequencias_matrizes_4',
+    chapter: 'Determinantes',
     topicId: 'mat_sequencias_matrizes',
     subject: 'Matemática',
     prompt: 'Resolvendo o sistema linear {2x + y = 8; x - y = 1} pela regra de Cramer, qual é o determinante da matriz dos coeficientes?',
@@ -3395,6 +3434,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_mat_sequencias_matrizes_5',
+    chapter: 'Progressão Geométrica',
     topicId: 'mat_sequencias_matrizes',
     subject: 'Matemática',
     prompt: 'Qual é a soma dos infinitos termos da progressão geométrica infinita (1, 1/2, 1/4, 1/8, ...)?',
@@ -3411,6 +3451,7 @@ export const mockQuestions: Question[] = [
   // Matemática — Geometria Espacial
   {
     id: 'q_mat_geometria_espacial_1',
+    chapter: 'Sólidos de Revolução',
     topicId: 'mat_geometria_espacial',
     subject: 'Matemática',
     prompt: 'Um cilindro reto tem volume de 500π cm³ e altura de 5 cm. Qual é o raio da base desse cilindro?',
@@ -3426,6 +3467,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_mat_geometria_espacial_2',
+    chapter: 'Razões entre Volumes de Sólidos',
     topicId: 'mat_geometria_espacial',
     subject: 'Matemática',
     prompt: 'Um cone e um cilindro têm a mesma base (mesmo raio) e a mesma altura. Qual é a razão entre o volume do cone e o volume do cilindro?',
@@ -3441,6 +3483,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_mat_geometria_espacial_3',
+    chapter: 'Cubos e Paralelepípedos',
     topicId: 'mat_geometria_espacial',
     subject: 'Matemática',
     prompt: 'Uma caixa em forma de paralelepípedo retângulo tem dimensões 4 cm × 5 cm × 6 cm. Qual é a área total (soma de todas as faces) dessa caixa?',
@@ -3456,6 +3499,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_mat_geometria_espacial_4',
+    chapter: 'Sólidos de Revolução',
     topicId: 'mat_geometria_espacial',
     subject: 'Matemática',
     prompt: 'Qual é o volume aproximado de uma esfera de raio 3 cm? (use π ≈ 3,14)',
@@ -3471,6 +3515,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_mat_geometria_espacial_5',
+    chapter: 'Razões entre Volumes de Sólidos',
     topicId: 'mat_geometria_espacial',
     subject: 'Matemática',
     prompt: 'Uma pirâmide é seccionada por um plano paralelo à base, exatamente na metade de sua altura. Qual é a razão entre o volume da pirâmide menor (o topo, semelhante à original) e o volume da pirâmide original?',
@@ -3487,6 +3532,7 @@ export const mockQuestions: Question[] = [
   // Matemática — Geometria Analítica
   {
     id: 'q_mat_geometria_analitica_1',
+    chapter: 'Estudo Analítico da Reta',
     topicId: 'mat_geometria_analitica',
     subject: 'Matemática',
     prompt: 'Qual é a equação da reta que passa pelos pontos A(0, 3) e B(2, 7)?',
@@ -3502,6 +3548,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_mat_geometria_analitica_2',
+    chapter: 'Distância entre um Ponto e uma Reta',
     topicId: 'mat_geometria_analitica',
     subject: 'Matemática',
     prompt: 'Qual é a distância do ponto (3, 4) à reta de equação 3x + 4y - 10 = 0?',
@@ -3517,6 +3564,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_mat_geometria_analitica_3',
+    chapter: 'Lugar Geométrico e Equação da Circunferência',
     topicId: 'mat_geometria_analitica',
     subject: 'Matemática',
     prompt: 'Qual é o raio da circunferência de equação x² + y² - 6x + 4y - 3 = 0?',
@@ -3532,6 +3580,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_mat_geometria_analitica_4',
+    chapter: 'Posições Relativas entre Duas Retas',
     topicId: 'mat_geometria_analitica',
     subject: 'Matemática',
     prompt: 'As retas r: y = 3x + 1 e s: y = mx - 2 são perpendiculares entre si. Qual é o valor de m?',
@@ -3547,6 +3596,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_mat_geometria_analitica_5',
+    chapter: 'Introdução à Geometria Analítica',
     topicId: 'mat_geometria_analitica',
     subject: 'Matemática',
     prompt: 'Qual é a área do triângulo cujos vértices são A(0,0), B(4,0) e C(0,3)?',
@@ -3563,6 +3613,7 @@ export const mockQuestions: Question[] = [
   // Matemática — Equações, Desigualdades e Modelagem Algébrica
   {
     id: 'q_mat_equacoes_1',
+    chapter: 'Modelagem Algébrica de Problemas I',
     topicId: 'mat_equacoes',
     subject: 'Matemática',
     prompt: 'A soma de dois números é 20, e o produto entre eles é 96. Quais são esses dois números?',
@@ -3578,6 +3629,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_mat_equacoes_2',
+    chapter: 'Desigualdades',
     topicId: 'mat_equacoes',
     subject: 'Matemática',
     prompt: 'Para quais valores de x a inequação x² - 5x + 6 ≤ 0 é satisfeita?',
@@ -3593,6 +3645,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_mat_equacoes_3',
+    chapter: 'Modelagem Algébrica de Problemas II',
     topicId: 'mat_equacoes',
     subject: 'Matemática',
     prompt: 'O lucro mensal de uma empresa, em milhares de reais, é dado por L(x) = -2x² + 40x - 150, onde x é a quantidade (em centenas) de produtos vendidos. Para qual quantidade x o lucro é máximo?',
@@ -3608,6 +3661,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_mat_equacoes_4',
+    chapter: 'Desigualdades',
     topicId: 'mat_equacoes',
     subject: 'Matemática',
     prompt: 'Para quais valores reais de x a expressão (x-1)(x+3) é negativa?',
@@ -3623,6 +3677,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_mat_equacoes_5',
+    chapter: 'Técnicas Algébricas',
     topicId: 'mat_equacoes',
     subject: 'Matemática',
     prompt: 'Resolvendo a equação irracional √(x+3) = x - 3, para x real (lembrando de verificar as soluções na equação original), qual é o valor válido de x?',
@@ -3639,6 +3694,7 @@ export const mockQuestions: Question[] = [
   // Matemática — Logaritmos e Exponenciais
   {
     id: 'q_mat_log_exponenciais_1',
+    chapter: 'Introdução aos Logaritmos',
     topicId: 'mat_log_exponenciais',
     subject: 'Matemática',
     prompt: 'Sabendo que log(2) ≈ 0,30 e log(3) ≈ 0,48, qual é o valor aproximado de log(6)?',
@@ -3654,6 +3710,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_mat_log_exponenciais_2',
+    chapter: 'Introdução ao Modelo Exponencial',
     topicId: 'mat_log_exponenciais',
     subject: 'Matemática',
     prompt: 'Resolva a equação 2^(x+1) = 32. Qual é o valor de x?',
@@ -3669,6 +3726,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_mat_log_exponenciais_3',
+    chapter: 'Equações e Funções Logarítmicas',
     topicId: 'mat_log_exponenciais',
     subject: 'Matemática',
     prompt: 'Resolva a equação log₂(x) + log₂(x - 2) = 3, para x real (lembre de verificar o domínio).',
@@ -3684,6 +3742,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_mat_log_exponenciais_4',
+    chapter: 'Modelagem Exponencial de Problemas',
     topicId: 'mat_log_exponenciais',
     subject: 'Matemática',
     prompt: 'Uma cultura de bactérias tem crescimento dado por P(t) = P₀ × 3ᵗ, sendo t em horas. Após quantas horas a população será 81 vezes o valor inicial?',
@@ -3699,6 +3758,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_mat_log_exponenciais_5',
+    chapter: 'Introdução aos Logaritmos',
     topicId: 'mat_log_exponenciais',
     subject: 'Matemática',
     prompt: 'Qual é o valor de log₄(8)?',
@@ -3715,6 +3775,7 @@ export const mockQuestions: Question[] = [
   // Matemática — Números Complexos e Polinômios
   {
     id: 'q_mat_complexos_polinomios_1',
+    chapter: 'Números Complexos',
     topicId: 'mat_complexos_polinomios',
     subject: 'Matemática',
     prompt: 'Qual é o resultado de (2 + 3i) × (1 - 2i)?',
@@ -3730,6 +3791,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_mat_complexos_polinomios_2',
+    chapter: 'Números Complexos',
     topicId: 'mat_complexos_polinomios',
     subject: 'Matemática',
     prompt: 'Qual é o módulo do número complexo z = 3 + 4i?',
@@ -3745,6 +3807,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_mat_complexos_polinomios_3',
+    chapter: 'Equações Polinomiais',
     topicId: 'mat_complexos_polinomios',
     subject: 'Matemática',
     prompt: 'Sabendo que 2 é uma raiz do polinômio P(x) = x³ - 4x² + x + 6, quais são as outras duas raízes?',
@@ -3760,6 +3823,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_mat_complexos_polinomios_4',
+    chapter: 'Números Complexos',
     topicId: 'mat_complexos_polinomios',
     subject: 'Matemática',
     prompt: 'Qual é o valor de i²³ (sendo i a unidade imaginária)?',
@@ -3775,6 +3839,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_mat_complexos_polinomios_5',
+    chapter: 'Equações Polinomiais',
     topicId: 'mat_complexos_polinomios',
     subject: 'Matemática',
     prompt: 'Um polinômio de grau 4 com coeficientes reais tem exatamente uma raiz real, x = 5, com multiplicidade 2. Quantas raízes complexas não reais (contando multiplicidade) esse polinômio deve ter?',
