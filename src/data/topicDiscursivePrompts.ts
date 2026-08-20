@@ -10,6 +10,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   // Matemática — Aritmética e Proporcionalidade
   {
     id: 'disc_mat_aritmetica_proporcionalidade_1',
+    chapter: 'Razão e Proporção',
     topicId: 'mat_aritmetica_proporcionalidade',
     subject: 'Matemática',
     prompt: 'Explique a diferença entre grandezas diretamente proporcionais e inversamente proporcionais, dando um exemplo do cotidiano de cada uma — sem usar os exemplos clássicos de velocidade/tempo ou preço/quantidade vistos em aula.',
@@ -23,6 +24,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_mat_aritmetica_proporcionalidade_2',
+    chapter: 'Porcentagem',
     topicId: 'mat_aritmetica_proporcionalidade',
     subject: 'Matemática',
     prompt: 'Um produto sofreu um aumento de 30% seguido de um desconto de 30% sobre o novo preço. Explique, em termos matemáticos, por que o preço final NÃO volta ao valor original — e calcule a variação percentual líquida.',
@@ -36,6 +38,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_mat_aritmetica_proporcionalidade_3',
+    chapter: 'Razão e Proporção',
     topicId: 'mat_aritmetica_proporcionalidade',
     subject: 'Matemática',
     prompt: 'Explique o método da regra de três composta, usando como exemplo um problema com pelo menos três grandezas relacionadas (por exemplo, número de trabalhadores, horas por dia e dias para concluir uma obra). Destaque como decidir se cada grandeza é direta ou inversamente proporcional à grandeza que se quer descobrir.',
@@ -50,6 +53,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   // Matemática — Teoria dos Números Inteiros
   {
     id: 'disc_mat_teoria_numeros_1',
+    chapter: 'Introdução à Teoria dos Números Inteiros',
     topicId: 'mat_teoria_numeros',
     subject: 'Matemática',
     prompt: 'Explique o que significa dizer que dois números são primos entre si (coprimos), e dê um exemplo de dois números que sejam coprimos mesmo sem nenhum dos dois ser primo.',
@@ -63,6 +67,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_mat_teoria_numeros_2',
+    chapter: 'Introdução à Teoria dos Números Inteiros',
     topicId: 'mat_teoria_numeros',
     subject: 'Matemática',
     prompt: 'Demonstre, com um exemplo numérico, por que o produto de dois números é sempre igual ao produto entre o MDC e o MMC desses dois números.',
@@ -76,6 +81,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_mat_teoria_numeros_3',
+    chapter: 'Introdução à Teoria dos Números Inteiros',
     topicId: 'mat_teoria_numeros',
     subject: 'Matemática',
     prompt: 'Explique como decidir, usando fatoração em números primos, se um número natural é um quadrado perfeito, sem precisar calcular sua raiz quadrada diretamente. Use 196 como exemplo.',
@@ -90,6 +96,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   // Matemática — Sequências, Matrizes e Sistemas Lineares
   {
     id: 'disc_mat_sequencias_matrizes_1',
+    chapter: 'Introdução às Sequências',
     topicId: 'mat_sequencias_matrizes',
     subject: 'Matemática',
     prompt: 'Explique a diferença entre uma progressão aritmética e uma progressão geométrica em termos de como cada termo se relaciona com o termo anterior, e diga que tipo de crescimento (linear ou exponencial) cada uma representa.',
@@ -103,6 +110,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_mat_sequencias_matrizes_2',
+    chapter: 'Discussão de Sistemas Lineares',
     topicId: 'mat_sequencias_matrizes',
     subject: 'Matemática',
     prompt: 'Um sistema linear 2x2 pode ter três tipos de solução: única, infinitas soluções, ou nenhuma solução. Explique, geometricamente (pensando em duas retas no plano), o que cada um desses casos representa, e o que isso tem a ver com o determinante da matriz dos coeficientes.',
@@ -116,6 +124,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_mat_sequencias_matrizes_3',
+    chapter: 'Sistemas de Equações',
     topicId: 'mat_sequencias_matrizes',
     subject: 'Matemática',
     prompt: 'Explique o método de resolução de um sistema linear por escalonamento (eliminação de Gauss), descrevendo pelo menos duas operações elementares que podem ser feitas com as linhas de uma matriz sem alterar o conjunto solução do sistema.',
@@ -130,6 +139,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   // Matemática — Análise Combinatória
   {
     id: 'disc_mat_combinatoria_1',
+    chapter: 'Técnicas de Contagem',
     topicId: 'mat_combinatoria',
     subject: 'Matemática',
     prompt: 'Explique a diferença entre um arranjo e uma combinação, usando como exemplo a escolha de 3 pessoas dentre 5 candidatos — uma vez para formar uma comissão sem cargos definidos, e outra vez para eleger presidente, vice-presidente e secretário.',
@@ -143,6 +153,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_mat_combinatoria_2',
+    chapter: 'Introdução às Técnicas de Contagem',
     topicId: 'mat_combinatoria',
     subject: 'Matemática',
     prompt: 'O Princípio Fundamental da Contagem (Princípio Multiplicativo) é a base de quase todos os problemas de análise combinatória. Explique esse princípio com suas próprias palavras e aplique-o para contar quantas placas de carro podem ser formadas com 3 letras seguidas de 4 números (permitindo repetição de letras e números).',
@@ -156,6 +167,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_mat_combinatoria_3',
+    chapter: 'O Problema do Grupo',
     topicId: 'mat_combinatoria',
     subject: 'Matemática',
     prompt: 'Explique por que, ao calcular uma combinação C(n,p), dividimos o número de arranjos A(n,p) pelo fatorial de p (p!). O que esse fatorial está "removendo" do cálculo?',
@@ -170,6 +182,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   // Matemática — Probabilidade e Interpretação de Dados
   {
     id: 'disc_mat_dados_probabilidade_1',
+    chapter: 'Eventos Disjuntos e Eventos Independentes',
     topicId: 'mat_dados_probabilidade',
     subject: 'Matemática',
     prompt: 'Explique a diferença entre probabilidade de eventos independentes e eventos dependentes (condicionais), dando um exemplo de cada com lançamento de dados ou retirada de bolas de uma urna.',
@@ -183,6 +196,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_mat_dados_probabilidade_2',
+    chapter: 'Estatística Descritiva',
     topicId: 'mat_dados_probabilidade',
     subject: 'Matemática',
     prompt: 'Um conjunto de dados tem média 20 e desvio padrão 5. Explique o que o desvio padrão está medindo nesse contexto — por que dois conjuntos de dados podem ter a mesma média, mas desvios padrão bem diferentes, e o que isso diz sobre a dispersão dos dados.',
@@ -196,6 +210,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_mat_dados_probabilidade_3',
+    chapter: 'Estatística Descritiva',
     topicId: 'mat_dados_probabilidade',
     subject: 'Matemática',
     prompt: 'Explique a diferença entre amostra e população em estatística, e por que a forma como uma amostra é selecionada (por exemplo, entrevistar apenas pessoas de um bairro de alta renda de uma cidade) pode gerar conclusões enviesadas sobre a população total.',
@@ -210,6 +225,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   // Matemática — Geometria Plana
   {
     id: 'disc_mat_geometria_plana_1',
+    chapter: 'Ângulos em Triângulos',
     topicId: 'mat_geometria_plana',
     subject: 'Matemática',
     prompt: 'Explique por que a soma dos ângulos internos de qualquer triângulo é sempre 180°, e use esse fato para deduzir a fórmula da soma dos ângulos internos de um polígono convexo de n lados (dividindo-o em triângulos a partir de um único vértice).',
@@ -223,6 +239,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_mat_geometria_plana_2',
+    chapter: 'Semelhança de Triângulos',
     topicId: 'mat_geometria_plana',
     subject: 'Matemática',
     prompt: 'Dois triângulos são semelhantes quando têm a mesma forma, mas não necessariamente o mesmo tamanho. Explique quais são os critérios (casos) que garantem que dois triângulos são semelhantes, e por que apenas ângulos correspondentes iguais (caso AA), sem nenhuma informação sobre os lados, já é suficiente para garantir semelhança.',
@@ -236,6 +253,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_mat_geometria_plana_3',
+    chapter: 'Triângulo Retângulo',
     topicId: 'mat_geometria_plana',
     subject: 'Matemática',
     prompt: 'Explique por que o Teorema de Pitágoras só se aplica exatamente a triângulos retângulos, e o que aconteceria com a relação a² = b² + c² se o triângulo fosse obtusângulo (com um ângulo maior que 90°) no lugar do ângulo reto — o lado oposto a esse ângulo maior ficaria maior ou menor do que o previsto pelo teorema?',
@@ -250,6 +268,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   // Matemática — Trigonometria
   {
     id: 'disc_mat_trigonometria_1',
+    chapter: 'Trigonometria no Triângulo Retângulo',
     topicId: 'mat_trigonometria',
     subject: 'Matemática',
     prompt: 'Explique por que, em um triângulo retângulo, o seno de um ângulo agudo é igual ao cosseno do outro ângulo agudo (os dois ângulos são complementares). Use as definições de seno e cosseno como razões entre lados para justificar.',
@@ -263,6 +282,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_mat_trigonometria_2',
+    chapter: 'Relações Trigonométricas em Polígonos',
     topicId: 'mat_trigonometria',
     subject: 'Matemática',
     prompt: 'Explique a diferença entre usar a Lei dos Senos e a Lei dos Cossenos para resolver um triângulo qualquer (não necessariamente retângulo) — em que situações (quais dados conhecidos) cada uma delas é mais indicada?',
@@ -276,6 +296,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_mat_trigonometria_3',
+    chapter: 'A Trigonometria dos Números Reais',
     topicId: 'mat_trigonometria',
     subject: 'Matemática',
     prompt: 'O círculo trigonométrico permite estender as definições de seno e cosseno para qualquer ângulo, não só os agudos de um triângulo retângulo. Explique como o sinal do seno e do cosseno muda entre os quatro quadrantes do círculo trigonométrico.',
@@ -290,6 +311,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   // Matemática — Geometria Espacial
   {
     id: 'disc_mat_geometria_espacial_1',
+    chapter: 'Pirâmides',
     topicId: 'mat_geometria_espacial',
     subject: 'Matemática',
     prompt: 'Explique por que a fórmula do volume de uma pirâmide (ou cone) tem o fator 1/3 em relação ao volume de um prisma (ou cilindro) de mesma base e altura. Não é preciso fazer a demonstração completa por cálculo, mas explique a ideia geométrica por trás disso (o que acontece com as "fatias" da pirâmide conforme ela sobe em direção ao topo).',
@@ -303,6 +325,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_mat_geometria_espacial_2',
+    chapter: 'Razões entre Volumes de Sólidos',
     topicId: 'mat_geometria_espacial',
     subject: 'Matemática',
     prompt: 'Ao comparar sólidos geométricos semelhantes (como duas pirâmides semelhantes, uma o dobro da outra em todas as dimensões), a razão entre as áreas de suas superfícies e a razão entre seus volumes NÃO são iguais à razão de semelhança linear. Explique como essas razões se relacionam com a razão de semelhança k, e por que isso faz sentido dimensionalmente (pense em área como algo que "escala ao quadrado" e volume como algo que "escala ao cubo").',
@@ -316,6 +339,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_mat_geometria_espacial_3',
+    chapter: 'Sólidos de Revolução',
     topicId: 'mat_geometria_espacial',
     subject: 'Matemática',
     prompt: 'Explique a diferença entre uma seção transversal paralela à base de um cone (que gera um círculo menor, semelhante à base) e uma seção meridiana (que passa pelo eixo do cone, gerando um triângulo). Por que essa distinção importa ao calcular áreas de seções de um sólido?',
@@ -330,6 +354,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   // Matemática — Geometria Analítica
   {
     id: 'disc_mat_geometria_analitica_1',
+    chapter: 'Lugar Geométrico e Equação da Circunferência',
     topicId: 'mat_geometria_analitica',
     subject: 'Matemática',
     prompt: 'Explique por que a equação geral de uma circunferência, x² + y² + Dx + Ey + F = 0, pode ser reescrita na forma (x-a)² + (y-b)² = r² usando o método de completar quadrados, e o que essa segunda forma revela imediatamente sobre a circunferência que a primeira não revela tão facilmente.',
@@ -343,6 +368,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_mat_geometria_analitica_2',
+    chapter: 'Posições Relativas entre Duas Retas',
     topicId: 'mat_geometria_analitica',
     subject: 'Matemática',
     prompt: 'Explique geometricamente por que duas retas são paralelas quando têm o mesmo coeficiente angular, e por que são perpendiculares quando o produto de seus coeficientes angulares é -1 (pense em como a inclinação de uma reta se relaciona com o ângulo que ela forma com o eixo x).',
@@ -356,6 +382,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_mat_geometria_analitica_3',
+    chapter: 'Introdução à Geometria Analítica',
     topicId: 'mat_geometria_analitica',
     subject: 'Matemática',
     prompt: 'Explique como calcular a distância entre dois pontos no plano cartesiano usando o Teorema de Pitágoras, e mostre como essa mesma lógica se estende para calcular a distância entre pontos no espaço tridimensional (com uma terceira coordenada z).',
@@ -370,6 +397,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   // Matemática — Equações, Desigualdades e Modelagem Algébrica
   {
     id: 'disc_mat_equacoes_1',
+    chapter: 'Técnicas Algébricas',
     topicId: 'mat_equacoes',
     subject: 'Matemática',
     prompt: 'Explique por que, ao resolver uma equação irracional (com raiz quadrada) elevando os dois lados ao quadrado, é necessário verificar as soluções encontradas na equação original — o que pode dar errado nesse processo?',
@@ -383,6 +411,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_mat_equacoes_2',
+    chapter: 'Equações do 2º Grau',
     topicId: 'mat_equacoes',
     subject: 'Matemática',
     prompt: 'Explique o que representa o discriminante (Δ) de uma equação do 2º grau e como seu sinal (positivo, zero ou negativo) determina o número de raízes reais dessa equação — e o que isso significa graficamente em relação à parábola e ao eixo x.',
@@ -396,6 +425,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_mat_equacoes_3',
+    chapter: 'Modelagem Algébrica de Problemas II',
     topicId: 'mat_equacoes',
     subject: 'Matemática',
     prompt: 'Um problema de otimização (como maximizar lucro ou área) frequentemente recai em uma função do 2º grau. Explique por que o vértice da parábola representa o ponto de máximo ou mínimo dessa função, e como decidir se é máximo ou mínimo observando o coeficiente "a" da função.',
@@ -410,6 +440,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   // Matemática — Funções
   {
     id: 'disc_mat_funcoes_1',
+    chapter: 'Funções Bijetoras',
     topicId: 'mat_funcoes',
     subject: 'Matemática',
     prompt: 'Explique o que significa uma função ser "injetora", "sobrejetora" e "bijetora", e por que só funções bijetoras possuem função inversa propriamente dita.',
@@ -423,6 +454,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_mat_funcoes_2',
+    chapter: 'Transformações em Gráficos de Funções',
     topicId: 'mat_funcoes',
     subject: 'Matemática',
     prompt: 'Explique, com suas próprias palavras, a diferença entre o gráfico de uma função afim (1º grau), uma função quadrática (2º grau) e uma função exponencial, em termos do tipo de crescimento de cada uma (constante, variável linear, ou multiplicativo).',
@@ -436,6 +468,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_mat_funcoes_3',
+    chapter: 'Composição de Funções',
     topicId: 'mat_funcoes',
     subject: 'Matemática',
     prompt: 'Explique por que a composição de funções f(g(x)) não é, em geral, igual a g(f(x)) — dê um exemplo numérico simples com duas funções para mostrar essa diferença.',
@@ -450,6 +483,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   // Matemática — Logaritmos e Exponenciais
   {
     id: 'disc_mat_log_exponenciais_1',
+    chapter: 'Introdução aos Logaritmos',
     topicId: 'mat_log_exponenciais',
     subject: 'Matemática',
     prompt: 'Explique por que a função logarítmica é a "inversa" da função exponencial, e o que isso significa em termos práticos: se você sabe que 2⁵ = 32, o que o logaritmo log₂(32) te diz de diferente?',
@@ -463,6 +497,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_mat_log_exponenciais_2',
+    chapter: 'Introdução aos Logaritmos',
     topicId: 'mat_log_exponenciais',
     subject: 'Matemática',
     prompt: 'Explique a propriedade do logaritmo do produto (log(a·b) = log(a) + log(b)) e demonstre, usando as propriedades de potência, por que essa regra funciona (dica: pense em a e b como potências de uma mesma base).',
@@ -476,6 +511,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_mat_log_exponenciais_3',
+    chapter: 'Equações e Funções Logarítmicas',
     topicId: 'mat_log_exponenciais',
     subject: 'Matemática',
     prompt: 'Explique por que a base de um logaritmo precisa ser positiva e diferente de 1, e por que o logaritmando (o número dentro do logaritmo) precisa ser positivo — o que aconteceria matematicamente se essas condições não fossem respeitadas?',
@@ -490,6 +526,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   // Matemática — Números Complexos e Polinômios
   {
     id: 'disc_mat_complexos_polinomios_1',
+    chapter: 'Números Complexos',
     topicId: 'mat_complexos_polinomios',
     subject: 'Matemática',
     prompt: 'Explique por que os números complexos surgem como uma extensão necessária dos números reais, dando o exemplo de uma equação do 2º grau que não tem solução real, mas tem solução complexa.',
@@ -503,6 +540,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_mat_complexos_polinomios_2',
+    chapter: 'Equações Polinomiais',
     topicId: 'mat_complexos_polinomios',
     subject: 'Matemática',
     prompt: 'Explique por que, em um polinômio com coeficientes reais, as raízes complexas (não reais) sempre aparecem em pares conjugados (a + bi e a - bi), e o que isso implica sobre o número de raízes reais de um polinômio de grau ímpar.',
@@ -516,6 +554,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_mat_complexos_polinomios_3',
+    chapter: 'Números Complexos',
     topicId: 'mat_complexos_polinomios',
     subject: 'Matemática',
     prompt: 'Explique geometricamente o que representa o módulo de um número complexo no plano de Argand-Gauss (plano complexo), e como ele se relaciona com a distância desse número até a origem.',
