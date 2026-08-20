@@ -734,7 +734,8 @@ export const mockProfile: UserProfile = {
   availableHoursPerWeek: 40,
   currentEnergyLevel: 'medium',
   autonomyIndex: 35, // starts low, increases over time
-  podcastDurationPreference: null
+  podcastDurationPreference: null,
+  podcastVoiceName: null
 };
 
 // Objetivos e peso por banca — ponto de partida editável em Perfil. Fuvest
