@@ -1337,190 +1337,582 @@ export const mockQuestions: Question[] = [
     explanation: 'Pela Lei dos Senos: x/sen(30°) = 10/sen(45°) → x = 10 × 0,5/0,71 ≈ 7,0 cm.',
     difficulty: 'hard'
   },
-  // Física — Cinemática
+  // Física — Cinemática Escalar
   {
-    id: 'q_fis_01_1',
+    id: 'q_fis_cinematica_1',
     topicId: 'fis_cinematica',
     subject: 'Física',
-    prompt: 'Um corpo parte do repouso com aceleração constante de 2 m/s². Qual sua velocidade após 5 segundos?',
+    prompt: 'Um trem se move com velocidade constante de 72 km/h. Convertendo para o Sistema Internacional (m/s), qual é essa velocidade?',
     options: [
-      { id: 'a', text: '2,5 m/s' },
-      { id: 'b', text: '5 m/s' },
-      { id: 'c', text: '7 m/s' },
-      { id: 'd', text: '10 m/s' }
+      { id: 'a', text: '7,2 m/s' },
+      { id: 'b', text: '20 m/s' },
+      { id: 'c', text: '36 m/s' },
+      { id: 'd', text: '200 m/s' }
     ],
-    correctOptionId: 'd',
-    explanation: 'Usando v = v0 + a·t, com v0 = 0: v = 2 × 5 = 10 m/s.',
+    correctOptionId: 'b',
+    explanation: 'Para converter km/h em m/s, divide-se por 3,6: 72/3,6 = 20 m/s.',
     difficulty: 'easy'
   },
   {
-    id: 'q_fis_01_2',
+    id: 'q_fis_cinematica_2',
     topicId: 'fis_cinematica',
     subject: 'Física',
-    prompt: 'Um objeto é lançado verticalmente para cima com velocidade inicial de 20 m/s. Desprezando a resistência do ar (g = 10 m/s²), quanto tempo leva para atingir a altura máxima?',
+    prompt: 'Um objeto é lançado verticalmente para cima com velocidade inicial de 30 m/s. Desprezando a resistência do ar e usando g = 10 m/s², quanto tempo leva até atingir a altura máxima?',
     options: [
-      { id: 'a', text: '1 s' },
-      { id: 'b', text: '2 s' },
-      { id: 'c', text: '3 s' },
-      { id: 'd', text: '4 s' }
+      { id: 'a', text: '1,5 s' },
+      { id: 'b', text: '3 s' },
+      { id: 'c', text: '6 s' },
+      { id: 'd', text: '9 s' }
     ],
     correctOptionId: 'b',
-    explanation: 'Na altura máxima, v = 0. Usando v = v0 - g·t: 0 = 20 - 10t → t = 2 s.',
+    explanation: 'Na altura máxima, v = 0. Usando v = v0 - g·t: 0 = 30 - 10t → t = 3 s.',
     difficulty: 'medium'
   },
-  // Física — Eletrodinâmica
   {
-    id: 'q_fis_02_1',
-    topicId: 'fis_circuitos',
+    id: 'q_fis_cinematica_3',
+    topicId: 'fis_cinematica',
     subject: 'Física',
-    prompt: 'Em um circuito com dois resistores de 10Ω em série ligados a uma fonte de 20V, qual a corrente total no circuito?',
+    prompt: 'Dois carros partem do mesmo ponto, no mesmo instante, na mesma direção e sentido. O carro A parte com velocidade constante de 20 m/s. O carro B parte do repouso, com aceleração constante de 4 m/s². Após quantos segundos o carro B alcança o carro A?',
     options: [
-      { id: 'a', text: '0,5 A' },
-      { id: 'b', text: '1 A' },
-      { id: 'c', text: '2 A' },
-      { id: 'd', text: '4 A' }
+      { id: 'a', text: '5 s' },
+      { id: 'b', text: '8 s' },
+      { id: 'c', text: '10 s' },
+      { id: 'd', text: '20 s' }
     ],
-    correctOptionId: 'b',
-    explanation: 'Resistência equivalente em série: 10 + 10 = 20Ω. Pela Lei de Ohm, I = V/R = 20/20 = 1 A.',
+    correctOptionId: 'c',
+    explanation: 'Posição de A: 20t. Posição de B: 2t² (usando s=½at²). Igualando: 20t = 2t² → t = 10 s (descartando t=0).',
     difficulty: 'hard'
   },
   {
-    id: 'q_fis_02_2',
+    id: 'q_fis_cinematica_4',
+    topicId: 'fis_cinematica',
+    subject: 'Física',
+    prompt: 'Um corpo em movimento retilíneo uniformemente variado parte com velocidade inicial de 10 m/s e aceleração de 2 m/s². Qual é a distância percorrida entre os instantes t=2s e t=5s?',
+    options: [
+      { id: 'a', text: '30 m' },
+      { id: 'b', text: '45 m' },
+      { id: 'c', text: '51 m' },
+      { id: 'd', text: '60 m' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'Posição s(t) = 10t + t². s(5) = 50+25 = 75 m. s(2) = 20+4 = 24 m. Distância percorrida entre os dois instantes: 75 - 24 = 51 m.',
+    difficulty: 'hard'
+  },
+  // Física — Eletrodinâmica (Circuitos Elétricos)
+  {
+    id: 'q_fis_circuitos_1',
     topicId: 'fis_circuitos',
     subject: 'Física',
-    prompt: 'Dois resistores de 10Ω cada estão associados em paralelo. Qual é a resistência equivalente?',
+    prompt: 'Em um circuito, um resistor de 10 Ω é percorrido por uma corrente de 2 A. Qual é a diferença de potencial (tensão) sobre esse resistor?',
     options: [
-      { id: 'a', text: '20Ω' },
-      { id: 'b', text: '10Ω' },
-      { id: 'c', text: '5Ω' },
-      { id: 'd', text: '2Ω' }
+      { id: 'a', text: '5 V' },
+      { id: 'b', text: '8 V' },
+      { id: 'c', text: '12 V' },
+      { id: 'd', text: '20 V' }
     ],
-    correctOptionId: 'c',
-    explanation: 'Em paralelo, 1/Req = 1/10 + 1/10 = 2/10, logo Req = 10/2 = 5Ω.',
-    difficulty: 'medium'
-  },
-  // Física — Dinâmica
-  {
-    id: 'q_fis_03_1',
-    topicId: 'fis_leis_newton',
-    subject: 'Física',
-    prompt: 'Segundo a Segunda Lei de Newton, qual é a força resultante necessária para acelerar um corpo de 5 kg a 4 m/s²?',
-    options: [
-      { id: 'a', text: '1,25 N' },
-      { id: 'b', text: '9 N' },
-      { id: 'c', text: '20 N' },
-      { id: 'd', text: '0,8 N' }
-    ],
-    correctOptionId: 'c',
-    explanation: 'F = m × a = 5 × 4 = 20 N, conforme a Segunda Lei de Newton (F = m.a).',
+    correctOptionId: 'd',
+    explanation: 'Pela Lei de Ohm, V = R × I = 10 × 2 = 20 V.',
     difficulty: 'easy'
   },
   {
-    id: 'q_fis_03_2',
-    topicId: 'fis_leis_newton',
+    id: 'q_fis_circuitos_2',
+    topicId: 'fis_circuitos',
     subject: 'Física',
-    prompt: 'De acordo com a Terceira Lei de Newton (ação e reação), quando você empurra uma parede, o que acontece?',
+    prompt: 'Dois resistores de 4 Ω e 6 Ω estão associados em série em um circuito com uma fonte de 20 V. Qual é a corrente total que percorre o circuito?',
     options: [
-      { id: 'a', text: 'Nada acontece com a parede' },
-      { id: 'b', text: 'A parede exerce sobre você uma força de mesma intensidade e direção oposta' },
-      { id: 'c', text: 'A parede exerce uma força maior sobre você' },
-      { id: 'd', text: 'A força de reação ocorre apenas em objetos com massa maior' }
+      { id: 'a', text: '0,5 A' },
+      { id: 'b', text: '2 A' },
+      { id: 'c', text: '5 A' },
+      { id: 'd', text: '10 A' }
     ],
     correctOptionId: 'b',
-    explanation: 'A Terceira Lei de Newton afirma que para toda ação há uma reação de mesma intensidade, mesma direção e sentido oposto, atuando em corpos diferentes — por isso a parede "empurra de volta".',
+    explanation: 'Em série, a resistência equivalente é 4+6 = 10 Ω. Pela Lei de Ohm, I = V/Req = 20/10 = 2 A.',
     difficulty: 'medium'
   },
-  // Física — Termologia
   {
-    id: 'q_fis_04_1',
-    topicId: 'fis_calorimetria',
+    id: 'q_fis_circuitos_3',
+    topicId: 'fis_circuitos',
     subject: 'Física',
-    prompt: 'Um corpo recebe 500 cal de calor e sua temperatura varia de 20°C para 30°C. Sabendo que sua massa é 100g, qual é o calor específico do material (Q = m·c·ΔT)?',
+    prompt: 'Dois resistores de 6 Ω cada estão associados em paralelo. Qual é a resistência equivalente dessa associação?',
     options: [
-      { id: 'a', text: '0,5 cal/g°C' },
-      { id: 'b', text: '1 cal/g°C' },
-      { id: 'c', text: '5 cal/g°C' },
-      { id: 'd', text: '0,1 cal/g°C' }
+      { id: 'a', text: '3 Ω' },
+      { id: 'b', text: '6 Ω' },
+      { id: 'c', text: '12 Ω' },
+      { id: 'd', text: '36 Ω' }
     ],
     correctOptionId: 'a',
-    explanation: 'Q = m·c·ΔT → 500 = 100 × c × 10 → c = 500/1000 = 0,5 cal/g°C.',
+    explanation: 'Em paralelo: 1/Req = 1/6 + 1/6 = 2/6 = 1/3, logo Req = 3 Ω.',
     difficulty: 'medium'
   },
   {
-    id: 'q_fis_04_2',
-    topicId: 'fis_termodinamica_gases',
+    id: 'q_fis_circuitos_4',
+    topicId: 'fis_circuitos',
     subject: 'Física',
-    prompt: 'O que ocorre com as moléculas de um gás quando sua temperatura aumenta, mantendo o volume constante?',
+    prompt: 'Em uma associação de resistores em série, o que se mantém igual em todos os resistores?',
     options: [
-      { id: 'a', text: 'Diminuem de velocidade e a pressão cai' },
-      { id: 'b', text: 'Aumentam de velocidade média, aumentando a pressão' },
-      { id: 'c', text: 'Param de se mover' },
-      { id: 'd', text: 'Reduzem de tamanho' }
+      { id: 'a', text: 'A corrente elétrica' },
+      { id: 'b', text: 'A tensão' },
+      { id: 'c', text: 'A potência dissipada' },
+      { id: 'd', text: 'A resistência' }
     ],
-    correctOptionId: 'b',
-    explanation: 'O aumento de temperatura eleva a energia cinética média das moléculas, fazendo-as se mover mais rápido e colidir com mais frequência e intensidade nas paredes do recipiente, aumentando a pressão (Lei de Gay-Lussac).',
-    difficulty: 'medium'
-  },
-  // Física — Óptica
-  {
-    id: 'q_fis_05_1',
-    topicId: 'fis_optica_geometrica',
-    subject: 'Física',
-    prompt: 'O que causa a formação do arco-íris na atmosfera?',
-    options: [
-      { id: 'a', text: 'Reflexão da luz solar em nuvens' },
-      { id: 'b', text: 'Refração e dispersão da luz branca ao atravessar gotas de água' },
-      { id: 'c', text: 'Absorção seletiva de cores pelo ar' },
-      { id: 'd', text: 'Difração da luz em partículas de poeira' }
-    ],
-    correctOptionId: 'b',
-    explanation: 'A luz branca do sol, ao entrar nas gotas de água, sofre refração, reflexão interna e nova refração, sendo decomposta (dispersa) em suas cores componentes devido aos diferentes índices de refração de cada comprimento de onda.',
+    correctOptionId: 'a',
+    explanation: 'Em uma associação em série, a mesma corrente atravessa todos os resistores, um após o outro — é a tensão que se divide entre eles, proporcionalmente à resistência de cada um.',
     difficulty: 'medium'
   },
   {
-    id: 'q_fis_05_2',
-    topicId: 'fis_optica_instrumental',
+    id: 'q_fis_circuitos_5',
+    topicId: 'fis_circuitos',
     subject: 'Física',
-    prompt: 'Uma pessoa míope enxerga mal objetos distantes porque a imagem se forma:',
+    prompt: 'Um chuveiro elétrico tem potência de 4.400 W e opera em uma tensão de 220 V. Qual é a corrente elétrica que passa pelo chuveiro durante o funcionamento?',
     options: [
-      { id: 'a', text: 'Atrás da retina' },
-      { id: 'b', text: 'Exatamente sobre a retina' },
-      { id: 'c', text: 'Na frente da retina' },
-      { id: 'd', text: 'Fora do olho' }
+      { id: 'a', text: '2 A' },
+      { id: 'b', text: '10 A' },
+      { id: 'c', text: '20 A' },
+      { id: 'd', text: '200 A' }
     ],
     correctOptionId: 'c',
-    explanation: 'Na miopia, o olho é mais "alongado" ou o cristalino tem convergência excessiva, fazendo a imagem de objetos distantes se formar antes da retina. Corrige-se com lentes divergentes (côncavas).',
+    explanation: 'A potência elétrica é P = V×I, logo I = P/V = 4400/220 = 20 A.',
+    difficulty: 'hard'
+  },
+  // Física — Leis de Newton e Dinâmica do Movimento Retilíneo
+  {
+    id: 'q_fis_leis_newton_1',
+    topicId: 'fis_leis_newton',
+    subject: 'Física',
+    prompt: 'Um bloco de massa 5 kg está sobre uma superfície horizontal sem atrito e é puxado por uma força horizontal de 20 N. Qual é a aceleração do bloco?',
+    options: [
+      { id: 'a', text: '2 m/s²' },
+      { id: 'b', text: '4 m/s²' },
+      { id: 'c', text: '5 m/s²' },
+      { id: 'd', text: '100 m/s²' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Pela Segunda Lei de Newton, a = F/m = 20/5 = 4 m/s².',
     difficulty: 'easy'
+  },
+  {
+    id: 'q_fis_leis_newton_2',
+    topicId: 'fis_leis_newton',
+    subject: 'Física',
+    prompt: 'Um bloco de massa 10 kg é puxado por uma força horizontal de 50 N sobre uma superfície com coeficiente de atrito cinético de 0,2. Usando g = 10 m/s², qual é a aceleração do bloco?',
+    options: [
+      { id: 'a', text: '2 m/s²' },
+      { id: 'b', text: '3 m/s²' },
+      { id: 'c', text: '5 m/s²' },
+      { id: 'd', text: '7 m/s²' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A força de atrito é Fat = μ×N = 0,2×10×10 = 20 N. A força resultante é 50-20 = 30 N. A aceleração é a = 30/10 = 3 m/s².',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_fis_leis_newton_3',
+    topicId: 'fis_leis_newton',
+    subject: 'Física',
+    prompt: 'Dois blocos, A (massa 3 kg) e B (massa 2 kg), estão conectados por um fio ideal e são puxados por uma força horizontal de 20 N aplicada em A, sobre uma superfície sem atrito. Qual é a tração no fio que conecta os blocos?',
+    options: [
+      { id: 'a', text: '4 N' },
+      { id: 'b', text: '8 N' },
+      { id: 'c', text: '12 N' },
+      { id: 'd', text: '20 N' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A massa total do sistema é 5 kg, então a aceleração é a = 20/5 = 4 m/s². A tração no fio é a força necessária para acelerar apenas o bloco B: T = mB×a = 2×4 = 8 N.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_fis_leis_newton_4',
+    topicId: 'fis_leis_newton',
+    subject: 'Física',
+    prompt: 'De acordo com a Terceira Lei de Newton (ação e reação), quando um cavalo puxa uma carroça para frente, a carroça também exerce uma força sobre o cavalo. Por que, então, o conjunto se move para frente, em vez de ficar parado?',
+    options: [
+      { id: 'a', text: 'Porque as forças de ação e reação atuam em corpos diferentes, então não se anulam entre si' },
+      { id: 'b', text: 'Porque a força da carroça sobre o cavalo é sempre menor' },
+      { id: 'c', text: 'Porque não existe atrito nesse sistema' },
+      { id: 'd', text: 'Porque a Terceira Lei não se aplica a esse caso' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'As forças de ação e reação têm sempre a mesma intensidade, mas atuam em corpos DIFERENTES (uma no cavalo, outra na carroça) — por isso nunca se cancelam entre si. O movimento do conjunto depende da resultante de todas as forças que atuam em cada corpo, incluindo o atrito do chão sobre as patas do cavalo.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_leis_newton_5',
+    topicId: 'fis_leis_newton',
+    subject: 'Física',
+    prompt: 'Um elevador de massa 800 kg sobe com aceleração de 2 m/s² (para cima). Usando g = 10 m/s², qual é a tração no cabo que sustenta o elevador?',
+    options: [
+      { id: 'a', text: '6.400 N' },
+      { id: 'b', text: '8.000 N' },
+      { id: 'c', text: '9.600 N' },
+      { id: 'd', text: '16.000 N' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'Pela Segunda Lei de Newton, T - mg = ma → T = m(g+a) = 800×(10+2) = 9.600 N.',
+    difficulty: 'hard'
+  },
+  // Física — Calorimetria
+  {
+    id: 'q_fis_calorimetria_1',
+    topicId: 'fis_calorimetria',
+    subject: 'Física',
+    prompt: 'Qual é a quantidade de calor necessária para elevar a temperatura de 500 g de água de 20°C para 60°C? (calor específico da água = 1 cal/g°C)',
+    options: [
+      { id: 'a', text: '2.000 cal' },
+      { id: 'b', text: '10.000 cal' },
+      { id: 'c', text: '20.000 cal' },
+      { id: 'd', text: '40.000 cal' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'Q = m×c×ΔT = 500×1×40 = 20.000 cal.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_fis_calorimetria_2',
+    topicId: 'fis_calorimetria',
+    subject: 'Física',
+    prompt: 'Durante uma mudança de estado físico (como a fusão do gelo), o que acontece com a temperatura da substância enquanto o calor está sendo fornecido?',
+    options: [
+      { id: 'a', text: 'Aumenta proporcionalmente ao calor fornecido' },
+      { id: 'b', text: 'Permanece constante até a mudança de estado se completar' },
+      { id: 'c', text: 'Diminui' },
+      { id: 'd', text: 'Oscila de forma imprevisível' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Durante uma mudança de estado, todo o calor fornecido (calor latente) é usado para reorganizar as ligações entre as moléculas, não para aumentar a agitação térmica — por isso a temperatura permanece constante até a transição terminar.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_calorimetria_3',
+    topicId: 'fis_calorimetria',
+    subject: 'Física',
+    prompt: 'Qual é a quantidade de calor necessária para fundir completamente 100 g de gelo a 0°C, sabendo que o calor latente de fusão do gelo é 80 cal/g?',
+    options: [
+      { id: 'a', text: '80 cal' },
+      { id: 'b', text: '800 cal' },
+      { id: 'c', text: '8.000 cal' },
+      { id: 'd', text: '80.000 cal' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'Q = m×L = 100×80 = 8.000 cal.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_calorimetria_4',
+    topicId: 'fis_calorimetria',
+    subject: 'Física',
+    prompt: 'Um bloco de metal de 200 g, a 100°C, é colocado em 300 g de água a 20°C, em um sistema termicamente isolado. O calor específico da água é 1 cal/g°C e do metal é 0,2 cal/g°C. Qual é, aproximadamente, a temperatura de equilíbrio do sistema?',
+    options: [
+      { id: 'a', text: '24°C' },
+      { id: 'b', text: '29°C' },
+      { id: 'c', text: '40°C' },
+      { id: 'd', text: '60°C' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'O calor perdido pelo metal é igual ao ganho pela água: 200×0,2×(100-Te) = 300×1×(Te-20). Resolvendo: 4000-40Te = 300Te-6000 → 10000 = 340Te → Te ≈ 29,4°C.',
+    difficulty: 'hard'
+  },
+  // Física — Termodinâmica dos Gases
+  {
+    id: 'q_fis_termodinamica_gases_1',
+    topicId: 'fis_termodinamica_gases',
+    subject: 'Física',
+    prompt: 'Um gás ideal está em um recipiente de volume fixo. Se sua temperatura absoluta dobra, o que acontece com sua pressão, mantendo o número de mols constante?',
+    options: [
+      { id: 'a', text: 'Permanece igual' },
+      { id: 'b', text: 'Dobra' },
+      { id: 'c', text: 'Reduz à metade' },
+      { id: 'd', text: 'Quadruplica' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A volume e número de mols constantes, pressão e temperatura absoluta são diretamente proporcionais (Lei de Gay-Lussac): dobrar T dobra P.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_termodinamica_gases_2',
+    topicId: 'fis_termodinamica_gases',
+    subject: 'Física',
+    prompt: 'Um gás ideal ocupa 2 L a uma pressão de 3 atm. Se a pressão for reduzida para 1 atm, mantendo a temperatura constante, qual será o novo volume do gás?',
+    options: [
+      { id: 'a', text: '2 L' },
+      { id: 'b', text: '3 L' },
+      { id: 'c', text: '6 L' },
+      { id: 'd', text: '9 L' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'Pela Lei de Boyle (transformação isotérmica), P1V1 = P2V2 → 3×2 = 1×V2 → V2 = 6 L.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_fis_termodinamica_gases_3',
+    topicId: 'fis_termodinamica_gases',
+    subject: 'Física',
+    prompt: 'Um gás ideal sofre uma transformação isotérmica (temperatura constante) de um estado A para um estado B, com redução do volume. O que acontece com a energia interna desse gás durante essa transformação?',
+    options: [
+      { id: 'a', text: 'Aumenta' },
+      { id: 'b', text: 'Diminui' },
+      { id: 'c', text: 'Permanece constante' },
+      { id: 'd', text: 'Torna-se zero' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'Para um gás ideal, a energia interna depende exclusivamente da temperatura. Como a transformação é isotérmica (T constante), a energia interna não muda, mesmo com a variação de volume e pressão.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_fis_termodinamica_gases_4',
+    topicId: 'fis_termodinamica_gases',
+    subject: 'Física',
+    prompt: 'Segundo a Primeira Lei da Termodinâmica, a variação da energia interna de um sistema é igual a:',
+    options: [
+      { id: 'a', text: 'Calor recebido mais trabalho realizado pelo sistema' },
+      { id: 'b', text: 'Calor recebido menos trabalho realizado pelo sistema' },
+      { id: 'c', text: 'Apenas o calor recebido' },
+      { id: 'd', text: 'Apenas o trabalho realizado' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A Primeira Lei da Termodinâmica é ΔU = Q - W, onde Q é o calor trocado com o sistema e W é o trabalho realizado PELO sistema.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_termodinamica_gases_5',
+    topicId: 'fis_termodinamica_gases',
+    subject: 'Física',
+    prompt: 'Um mol de gás ideal ocupa um volume de 22,4 L nas CNTP (0°C, 1 atm). Se a temperatura for elevada para 273°C, mantendo a pressão constante, qual será, aproximadamente, o novo volume?',
+    options: [
+      { id: 'a', text: '11,2 L' },
+      { id: 'b', text: '22,4 L' },
+      { id: 'c', text: '44,8 L' },
+      { id: 'd', text: '89,6 L' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'Em Kelvin, a temperatura inicial é 273 K e a final é 273+273 = 546 K, ou seja, dobra. A pressão constante, volume e temperatura absoluta são diretamente proporcionais (Lei de Charles): o volume também dobra, para 44,8 L.',
+    difficulty: 'hard'
+  },
+  // Física — Óptica Geométrica
+  {
+    id: 'q_fis_optica_geometrica_1',
+    topicId: 'fis_optica_geometrica',
+    subject: 'Física',
+    prompt: 'Um objeto está posicionado no centro de curvatura de um espelho côncavo. Onde se forma a imagem?',
+    options: [
+      { id: 'a', text: 'No foco' },
+      { id: 'b', text: 'No centro de curvatura' },
+      { id: 'c', text: 'No infinito' },
+      { id: 'd', text: 'Atrás do espelho (imagem virtual)' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Quando o objeto está no centro de curvatura de um espelho côncavo, a imagem se forma exatamente no mesmo ponto — real, invertida e de mesmo tamanho que o objeto.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_optica_geometrica_2',
+    topicId: 'fis_optica_geometrica',
+    subject: 'Física',
+    prompt: 'Um espelho plano gera uma imagem de um objeto colocado a 30 cm de sua superfície. A que distância do espelho está a imagem, e que tipo de imagem é formada?',
+    options: [
+      { id: 'a', text: '15 cm, real' },
+      { id: 'b', text: '30 cm, virtual' },
+      { id: 'c', text: '60 cm, real' },
+      { id: 'd', text: '30 cm, real' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Em um espelho plano, a imagem se forma sempre à mesma distância do espelho que o objeto, mas do lado oposto (atrás do espelho) — sendo sempre virtual e de mesmo tamanho.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_fis_optica_geometrica_3',
+    topicId: 'fis_optica_geometrica',
+    subject: 'Física',
+    prompt: 'Um objeto é colocado a 20 cm de uma lente convergente de distância focal 10 cm. Usando a equação de Gauss (1/f = 1/p + 1/p\'), a que distância da lente se forma a imagem?',
+    options: [
+      { id: 'a', text: '10 cm' },
+      { id: 'b', text: '15 cm' },
+      { id: 'c', text: '20 cm' },
+      { id: 'd', text: '40 cm' }
+    ],
+    correctOptionId: 'c',
+    explanation: '1/10 = 1/20 + 1/p\' → 1/p\' = 1/10 - 1/20 = 1/20 → p\' = 20 cm.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_fis_optica_geometrica_4',
+    topicId: 'fis_optica_geometrica',
+    subject: 'Física',
+    prompt: 'A refração da luz ocorre quando ela passa de um meio para outro com índice de refração diferente. O que acontece com a velocidade da luz ao passar do ar (menos denso opticamente) para a água (mais densa opticamente)?',
+    options: [
+      { id: 'a', text: 'Aumenta' },
+      { id: 'b', text: 'Diminui' },
+      { id: 'c', text: 'Permanece igual' },
+      { id: 'd', text: 'A luz para de se propagar' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Quanto maior o índice de refração de um meio, menor é a velocidade de propagação da luz nele. Como a água tem índice de refração maior que o ar, a velocidade da luz diminui ao entrar na água.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_optica_geometrica_5',
+    topicId: 'fis_optica_geometrica',
+    subject: 'Física',
+    prompt: 'Um raio de luz incide sobre um espelho plano com ângulo de incidência de 40° (medido em relação à reta normal à superfície). Qual é o ângulo de reflexão desse raio?',
+    options: [
+      { id: 'a', text: '20°' },
+      { id: 'b', text: '40°' },
+      { id: 'c', text: '50°' },
+      { id: 'd', text: '80°' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Pela Lei da Reflexão, o ângulo de incidência é sempre igual ao ângulo de reflexão, ambos medidos em relação à normal: 40°.',
+    difficulty: 'easy'
+  },
+  // Física — Óptica Instrumental e da Visão
+  {
+    id: 'q_fis_optica_instrumental_1',
+    topicId: 'fis_optica_instrumental',
+    subject: 'Física',
+    prompt: 'Uma pessoa com hipermetropia tem dificuldade para enxergar objetos próximos, pois a imagem se forma atrás da retina. Que tipo de lente corretiva é indicada?',
+    options: [
+      { id: 'a', text: 'Convergente' },
+      { id: 'b', text: 'Divergente' },
+      { id: 'c', text: 'Plana' },
+      { id: 'd', text: 'Nenhuma correção óptica resolve' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Lentes convergentes aumentam a convergência dos raios de luz, adiantando a formação da imagem para que ela caia exatamente sobre a retina, corrigindo a hipermetropia.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_fis_optica_instrumental_2',
+    topicId: 'fis_optica_instrumental',
+    subject: 'Física',
+    prompt: 'Uma pessoa com miopia tem dificuldade para enxergar objetos distantes, pois a imagem se forma antes da retina. Que tipo de lente corretiva é indicada?',
+    options: [
+      { id: 'a', text: 'Convergente' },
+      { id: 'b', text: 'Divergente' },
+      { id: 'c', text: 'Bifocal, apenas' },
+      { id: 'd', text: 'Nenhuma correção óptica resolve' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Lentes divergentes reduzem a convergência dos raios de luz, atrasando a formação da imagem até que ela caia exatamente sobre a retina, corrigindo a miopia.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_fis_optica_instrumental_3',
+    topicId: 'fis_optica_instrumental',
+    subject: 'Física',
+    prompt: 'Um microscópio composto é formado por duas lentes convergentes: a objetiva (próxima ao objeto) e a ocular (próxima ao olho). Qual é a principal função da lente objetiva nesse sistema?',
+    options: [
+      { id: 'a', text: 'Formar uma imagem real e ampliada do objeto, que servirá de objeto para a ocular' },
+      { id: 'b', text: 'Formar uma imagem virtual reduzida' },
+      { id: 'c', text: 'Corrigir apenas a miopia do observador' },
+      { id: 'd', text: 'Não tem função óptica relevante' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A objetiva forma uma primeira imagem real e ampliada do objeto original; essa imagem serve como "objeto" para a lente ocular, que a amplia ainda mais, formando a imagem final virtual observada pelo olho.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_fis_optica_instrumental_4',
+    topicId: 'fis_optica_instrumental',
+    subject: 'Física',
+    prompt: 'Uma lupa (lente de aumento) é uma lente convergente usada para observar objetos pequenos, ampliados. Para que a lupa produza uma imagem virtual, direita e ampliada, o objeto deve ser posicionado:',
+    options: [
+      { id: 'a', text: 'Além do centro de curvatura' },
+      { id: 'b', text: 'Exatamente no foco' },
+      { id: 'c', text: 'Entre o foco e a lente (distância menor que a focal)' },
+      { id: 'd', text: 'No infinito' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'Quando o objeto está entre o foco e a lente convergente, a imagem formada é virtual, direita e ampliada — exatamente o efeito desejado em uma lupa.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_fis_optica_instrumental_5',
+    topicId: 'fis_optica_instrumental',
+    subject: 'Física',
+    prompt: 'Qual é o nome dado à dificuldade de acomodação visual para perto, comum a partir dos 40-45 anos de idade, causada pela perda de elasticidade natural do cristalino ao longo da vida?',
+    options: [
+      { id: 'a', text: 'Miopia' },
+      { id: 'b', text: 'Hipermetropia' },
+      { id: 'c', text: 'Presbiopia' },
+      { id: 'd', text: 'Astigmatismo' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'A presbiopia (ou "vista cansada") é a perda progressiva da capacidade de acomodação visual do cristalino com o envelhecimento, dificultando o foco em objetos próximos.',
+    difficulty: 'medium'
   },
   // Física — Ondulatória
   {
-    id: 'q_fis_06_1',
+    id: 'q_fis_ondulatoria_1',
     topicId: 'fis_ondulatoria',
     subject: 'Física',
-    prompt: 'Uma onda tem frequência de 50 Hz e comprimento de onda de 4 m. Qual é sua velocidade de propagação?',
+    prompt: 'O efeito Doppler explica por que o som de uma ambulância parece mais agudo quando ela se aproxima e mais grave quando ela se afasta. O que causa essa mudança percebida na frequência do som?',
     options: [
-      { id: 'a', text: '12,5 m/s' },
-      { id: 'b', text: '54 m/s' },
-      { id: 'c', text: '200 m/s' },
-      { id: 'd', text: '46 m/s' }
-    ],
-    correctOptionId: 'c',
-    explanation: 'A velocidade de propagação é v = λ × f = 4 × 50 = 200 m/s.',
-    difficulty: 'easy'
-  },
-  {
-    id: 'q_fis_06_2',
-    topicId: 'fis_ondulatoria',
-    subject: 'Física',
-    prompt: 'O que caracteriza o fenômeno da ressonância?',
-    options: [
-      { id: 'a', text: 'Duas ondas se anulando completamente' },
-      { id: 'b', text: 'Um sistema vibrando com amplitude máxima ao receber energia numa frequência igual à sua frequência natural' },
-      { id: 'c', text: 'A reflexão de uma onda numa superfície' },
-      { id: 'd', text: 'A mudança de meio de propagação de uma onda' }
+      { id: 'a', text: 'Uma mudança real na velocidade do som no ar' },
+      { id: 'b', text: 'O movimento relativo entre a fonte sonora e o observador' },
+      { id: 'c', text: 'A mudança na temperatura do ar ao redor da ambulância' },
+      { id: 'd', text: 'O efeito Doppler não existe para ondas sonoras' }
     ],
     correctOptionId: 'b',
-    explanation: 'Ressonância ocorre quando um sistema é forçado a vibrar numa frequência igual à sua frequência natural de oscilação, resultando em amplitude de vibração muito maior — como um copo de cristal quebrando com um som na frequência certa.',
+    explanation: 'O efeito Doppler ocorre devido ao movimento relativo entre fonte e observador: quando se aproximam, as frentes de onda chegam mais compactadas (frequência percebida maior); quando se afastam, chegam mais espaçadas (frequência percebida menor).',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_ondulatoria_2',
+    topicId: 'fis_ondulatoria',
+    subject: 'Física',
+    prompt: 'Em um tubo sonoro fechado em uma extremidade, apenas harmônicos de ordem ímpar (1º, 3º, 5º...) da frequência fundamental são possíveis. Se a frequência fundamental de um tubo é 100 Hz, qual é a frequência do harmônico de ordem 5 nesse tubo?',
+    options: [
+      { id: 'a', text: '200 Hz' },
+      { id: 'b', text: '300 Hz' },
+      { id: 'c', text: '500 Hz' },
+      { id: 'd', text: '700 Hz' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'O harmônico de ordem n corresponde a n vezes a frequência fundamental: 5 × 100 Hz = 500 Hz.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_fis_ondulatoria_3',
+    topicId: 'fis_ondulatoria',
+    subject: 'Física',
+    prompt: 'O fenômeno da ressonância ocorre quando um sistema é excitado por uma força externa cuja frequência coincide com:',
+    options: [
+      { id: 'a', text: 'A frequência natural (própria) de vibração do sistema' },
+      { id: 'b', text: 'A velocidade do som no ar' },
+      { id: 'c', text: 'O comprimento de onda da luz visível' },
+      { id: 'd', text: 'A amplitude máxima possível de qualquer onda' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A ressonância ocorre quando a frequência da força excitadora coincide com a frequência natural de vibração do sistema, levando a uma amplitude de oscilação muito maior que o normal.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_ondulatoria_4',
+    topicId: 'fis_ondulatoria',
+    subject: 'Física',
+    prompt: 'Duas cordas de mesmo material e mesma tensão, mas com comprimentos diferentes (uma o dobro da outra), vibram livremente. Qual delas produz um som de frequência mais baixa (mais grave)?',
+    options: [
+      { id: 'a', text: 'A corda mais curta' },
+      { id: 'b', text: 'A corda mais longa' },
+      { id: 'c', text: 'As duas produzem a mesma frequência' },
+      { id: 'd', text: 'Não é possível determinar sem saber a tensão exata' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A frequência fundamental de uma corda vibrante é inversamente proporcional ao seu comprimento. A corda mais longa, portanto, produz uma frequência mais baixa (som mais grave).',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_fis_ondulatoria_5',
+    topicId: 'fis_ondulatoria',
+    subject: 'Física',
+    prompt: 'Uma onda sonora se propaga do ar para a água. O que permanece constante nessa transição entre os dois meios?',
+    options: [
+      { id: 'a', text: 'A velocidade de propagação' },
+      { id: 'b', text: 'O comprimento de onda' },
+      { id: 'c', text: 'A frequência' },
+      { id: 'd', text: 'A amplitude' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'A frequência de uma onda é determinada pela fonte que a gera, permanecendo constante ao mudar de meio. Já a velocidade de propagação e o comprimento de onda mudam, pois dependem das propriedades do meio.',
     difficulty: 'hard'
   },
   // Química — Estequiometria
@@ -1835,93 +2227,228 @@ export const mockQuestions: Question[] = [
     id: 'q_fis_dinamica_impulsiva_1',
     topicId: 'fis_dinamica_impulsiva',
     subject: 'Física',
-    prompt: 'Um corpo de massa 2 kg tem sua velocidade alterada de 3 m/s para 8 m/s por uma força constante durante 0,5 s. Qual é o impulso dessa força sobre o corpo?',
+    prompt: 'Qual é o impulso de uma força constante de 20 N aplicada durante 3 segundos sobre um corpo?',
     options: [
-      { id: 'a', text: '2,5 N·s' },
-      { id: 'b', text: '5 N·s' },
-      { id: 'c', text: '10 N·s' },
-      { id: 'd', text: '16 N·s' }
+      { id: 'a', text: '6,7 N·s' },
+      { id: 'b', text: '23 N·s' },
+      { id: 'c', text: '60 N·s' },
+      { id: 'd', text: '600 N·s' }
     ],
     correctOptionId: 'c',
-    explanation: 'O impulso é igual à variação da quantidade de movimento: I = Δp = m·(v - v0) = 2 × (8 - 3) = 10 N·s. Não é necessário usar o tempo diretamente, já que o teorema do impulso relaciona impulso e variação de momento linear.',
-    difficulty: 'medium'
+    explanation: 'I = F×t = 20×3 = 60 N·s.',
+    difficulty: 'easy'
   },
   {
     id: 'q_fis_dinamica_impulsiva_2',
     topicId: 'fis_dinamica_impulsiva',
     subject: 'Física',
-    prompt: 'Dois patinadores em repouso sobre o gelo (sem atrito) se empurram. O patinador A tem massa 60 kg e o patinador B tem massa 40 kg. Se A se afasta com velocidade de 2 m/s, qual é a velocidade de afastamento de B?',
+    prompt: 'Um corpo de massa 4 kg está em repouso e recebe um impulso de 20 N·s. Qual é a velocidade final desse corpo?',
     options: [
-      { id: 'a', text: '1,3 m/s' },
-      { id: 'b', text: '2 m/s' },
-      { id: 'c', text: '3 m/s' },
-      { id: 'd', text: '4 m/s' }
+      { id: 'a', text: '1,25 m/s' },
+      { id: 'b', text: '4 m/s' },
+      { id: 'c', text: '5 m/s' },
+      { id: 'd', text: '80 m/s' }
     ],
     correctOptionId: 'c',
-    explanation: 'Como o sistema parte do repouso e não há forças externas horizontais, a quantidade de movimento total se conserva e é igual a zero: mA·vA = mB·vB → 60 × 2 = 40 × vB → vB = 3 m/s, em sentido oposto ao de A.',
+    explanation: 'O impulso é igual à variação da quantidade de movimento: I = Δp = m×Δv → Δv = I/m = 20/4 = 5 m/s.',
     difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_dinamica_impulsiva_3',
+    topicId: 'fis_dinamica_impulsiva',
+    subject: 'Física',
+    prompt: 'Duas esferas de massas iguais colidem frontalmente e permanecem grudadas após a colisão (colisão perfeitamente inelástica). A esfera A tinha velocidade de 6 m/s e a esfera B estava parada. Qual é a velocidade do conjunto após a colisão?',
+    options: [
+      { id: 'a', text: '2 m/s' },
+      { id: 'b', text: '3 m/s' },
+      { id: 'c', text: '6 m/s' },
+      { id: 'd', text: '12 m/s' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Pela conservação da quantidade de movimento: m×6 + m×0 = 2m×v → v = 3 m/s.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_fis_dinamica_impulsiva_4',
+    topicId: 'fis_dinamica_impulsiva',
+    subject: 'Física',
+    prompt: 'Em uma colisão perfeitamente elástica entre dois corpos, o que se conserva, além da quantidade de movimento?',
+    options: [
+      { id: 'a', text: 'A energia cinética total' },
+      { id: 'b', text: 'Apenas a quantidade de movimento — nada mais se conserva' },
+      { id: 'c', text: 'A velocidade de cada corpo individualmente' },
+      { id: 'd', text: 'A energia térmica gerada pelo impacto' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A característica que define uma colisão como perfeitamente elástica é justamente a conservação da energia cinética total do sistema, além da quantidade de movimento (que se conserva em qualquer colisão).',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_dinamica_impulsiva_5',
+    topicId: 'fis_dinamica_impulsiva',
+    subject: 'Física',
+    prompt: 'Uma bola de massa 0,5 kg é arremessada contra uma parede com velocidade de 8 m/s e quica de volta com velocidade de 6 m/s (sentido oposto). Qual é o módulo do impulso exercido pela parede sobre a bola?',
+    options: [
+      { id: 'a', text: '1 N·s' },
+      { id: 'b', text: '3,5 N·s' },
+      { id: 'c', text: '7 N·s' },
+      { id: 'd', text: '14 N·s' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'Tomando o sentido inicial como positivo: p_inicial = 0,5×8 = 4 kg·m/s; p_final = 0,5×(-6) = -3 kg·m/s. O impulso é a variação: |Δp| = |-3-4| = 7 N·s.',
+    difficulty: 'hard'
   },
   // Física — Estática dos Corpos Sólidos e dos Fluidos
   {
     id: 'q_fis_estatica_1',
     topicId: 'fis_estatica',
     subject: 'Física',
-    prompt: 'Uma barra horizontal e homogênea de 4 m de comprimento está apoiada em um único ponto de apoio. Para que a barra fique em equilíbrio estático, esse ponto de apoio deve estar localizado:',
+    prompt: 'Uma barra horizontal rígida está em equilíbrio, apoiada em um único ponto, com um peso de 100 N pendurado a 2 m do apoio, de um lado. Qual peso deve ser pendurado a 4 m do apoio, do outro lado, para manter o equilíbrio?',
     options: [
-      { id: 'a', text: 'Em uma das extremidades da barra' },
-      { id: 'b', text: 'No centro de massa da barra' },
-      { id: 'c', text: 'A 1 m de uma das extremidades' },
-      { id: 'd', text: 'Em qualquer ponto, desde que a barra seja rígida' }
+      { id: 'a', text: '25 N' },
+      { id: 'b', text: '50 N' },
+      { id: 'c', text: '100 N' },
+      { id: 'd', text: '200 N' }
     ],
     correctOptionId: 'b',
-    explanation: 'Para uma barra homogênea em equilíbrio apoiada em um único ponto, o apoio deve coincidir com o centro de massa (nesse caso, o ponto médio), de forma que o torque do peso em relação ao apoio seja nulo.',
-    difficulty: 'easy'
+    explanation: 'Para o equilíbrio de rotação, os torques dos dois lados devem se igualar: 100×2 = P×4 → P = 50 N.',
+    difficulty: 'medium'
   },
   {
     id: 'q_fis_estatica_2',
     topicId: 'fis_estatica',
     subject: 'Física',
-    prompt: 'Um objeto de volume 200 cm³ é totalmente submerso em água (densidade 1 g/cm³). Considerando g = 10 m/s², qual é o valor do empuxo exercido pela água sobre o objeto?',
+    prompt: 'Um objeto totalmente submerso em água tem peso aparente (peso medido dentro da água) menor que seu peso real fora da água. Isso ocorre devido a qual força?',
     options: [
-      { id: 'a', text: '0,2 N' },
-      { id: 'b', text: '2 N' },
+      { id: 'a', text: 'Força de atrito' },
+      { id: 'b', text: 'Força de empuxo' },
+      { id: 'c', text: 'Força elástica' },
+      { id: 'd', text: 'Força centrípeta' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'O empuxo, previsto pelo Princípio de Arquimedes, é uma força vertical para cima exercida pelo fluido sobre qualquer corpo nele submerso, reduzindo o peso aparente medido.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_fis_estatica_3',
+    topicId: 'fis_estatica',
+    subject: 'Física',
+    prompt: 'Um bloco de volume 0,002 m³ está totalmente submerso em água (densidade 1000 kg/m³). Usando g = 10 m/s², qual é o módulo do empuxo sobre esse bloco?',
+    options: [
+      { id: 'a', text: '2 N' },
+      { id: 'b', text: '10 N' },
       { id: 'c', text: '20 N' },
       { id: 'd', text: '200 N' }
     ],
-    correctOptionId: 'b',
-    explanation: 'Pelo Princípio de Arquimedes, E = ρ_fluido × V × g = 1000 kg/m³ × 200×10⁻⁶ m³ × 10 = 2 N. O empuxo é igual ao peso do volume de líquido deslocado pelo objeto.',
+    correctOptionId: 'c',
+    explanation: 'E = densidade_fluido × V × g = 1000 × 0,002 × 10 = 20 N.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_fis_estatica_4',
+    topicId: 'fis_estatica',
+    subject: 'Física',
+    prompt: 'Para que um corpo rígido esteja em equilíbrio estático completo, quais duas condições precisam ser satisfeitas simultaneamente?',
+    options: [
+      { id: 'a', text: 'Resultante das forças nula e resultante dos torques nula' },
+      { id: 'b', text: 'Apenas resultante das forças nula' },
+      { id: 'c', text: 'Apenas resultante dos torques nula' },
+      { id: 'd', text: 'Massa nula' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O equilíbrio estático exige tanto o equilíbrio de translação (resultante das forças = 0) quanto o equilíbrio de rotação (resultante dos torques = 0) — um corpo pode ter forças equilibradas e ainda assim girar, se os torques não estiverem equilibrados.',
     difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_estatica_5',
+    topicId: 'fis_estatica',
+    subject: 'Física',
+    prompt: 'Um objeto flutua parcialmente submerso em um líquido, em equilíbrio. O que podemos concluir sobre a relação entre o peso do objeto e o empuxo que ele recebe?',
+    options: [
+      { id: 'a', text: 'O empuxo é maior que o peso' },
+      { id: 'b', text: 'O empuxo é igual ao peso' },
+      { id: 'c', text: 'O empuxo é menor que o peso' },
+      { id: 'd', text: 'Não há relação necessária entre eles' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Para um corpo flutuando em equilíbrio (sem afundar nem subir), a força de empuxo deve equilibrar exatamente o peso do corpo — por isso os dois têm o mesmo módulo.',
+    difficulty: 'hard'
   },
   // Física — Eletromagnetismo
   {
     id: 'q_fis_eletromagnetismo_1',
     topicId: 'fis_eletromagnetismo',
     subject: 'Física',
-    prompt: 'Uma carga elétrica positiva se move para a direita em uma região onde há um campo magnético uniforme apontando para dentro da página. Usando a regra da mão direita, a força magnética sobre a carga aponta para:',
+    prompt: 'Uma carga elétrica em movimento dentro de um campo magnético uniforme, com velocidade paralela às linhas de campo magnético, sofre qual força magnética?',
     options: [
-      { id: 'a', text: 'Cima' },
-      { id: 'b', text: 'Baixo' },
-      { id: 'c', text: 'Fora da página' },
-      { id: 'd', text: 'Dentro da página' }
+      { id: 'a', text: 'Máxima' },
+      { id: 'b', text: 'Nula' },
+      { id: 'c', text: 'Perpendicular à velocidade' },
+      { id: 'd', text: 'Igual ao peso da carga' }
     ],
-    correctOptionId: 'a',
-    explanation: 'A força magnética é dada por F = qv × B. Apontando os dedos na direção de v (direita) e curvando-os para B (para dentro da página), o polegar aponta para cima — essa é a direção de F para uma carga positiva.',
+    correctOptionId: 'b',
+    explanation: 'A força magnética é F = q·v·B·sen(θ), onde θ é o ângulo entre v e B. Quando v é paralela a B, θ=0° e sen(0°)=0, tornando a força nula.',
     difficulty: 'medium'
   },
   {
     id: 'q_fis_eletromagnetismo_2',
     topicId: 'fis_eletromagnetismo',
     subject: 'Física',
-    prompt: 'Um ímã é aproximado rapidamente de uma espira condutora fechada, fazendo o fluxo magnético através dela aumentar. De acordo com a Lei de Lenz, a corrente induzida na espira:',
+    prompt: 'Um fio retilíneo percorrido por uma corrente elétrica de 5 A está imerso em um campo magnético uniforme de 0,2 T, perpendicular ao fio, ao longo de um comprimento de 0,5 m. Qual é o módulo da força magnética sobre o fio?',
     options: [
-      { id: 'a', text: 'Cria um campo magnético que reforça o aumento do fluxo' },
-      { id: 'b', text: 'Cria um campo magnético que se opõe ao aumento do fluxo' },
-      { id: 'c', text: 'Não é gerada, pois a espira está em repouso' },
-      { id: 'd', text: 'Tem sentido aleatório, imprevisível pela lei' }
+      { id: 'a', text: '0,05 N' },
+      { id: 'b', text: '0,5 N' },
+      { id: 'c', text: '1 N' },
+      { id: 'd', text: '5 N' }
     ],
     correctOptionId: 'b',
-    explanation: 'A Lei de Lenz estabelece que a corrente induzida sempre flui em um sentido que se opõe à variação do fluxo magnético que a gerou (conservação de energia) — nesse caso, criando um campo magnético contrário ao aumento do fluxo do ímã se aproximando.',
+    explanation: 'F = B×I×L = 0,2×5×0,5 = 0,5 N.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_fis_eletromagnetismo_3',
+    topicId: 'fis_eletromagnetismo',
+    subject: 'Física',
+    prompt: 'Ao aproximar um ímã de uma espira condutora fechada, surge uma corrente induzida na espira. De acordo com a Lei de Lenz, o sentido dessa corrente induzida é tal que:',
+    options: [
+      { id: 'a', text: 'Favorece o aumento do fluxo magnético que a gerou' },
+      { id: 'b', text: 'Se opõe à variação do fluxo magnético que a gerou' },
+      { id: 'c', text: 'É sempre no mesmo sentido, independente do movimento do ímã' },
+      { id: 'd', text: 'Não tem sentido definido' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A Lei de Lenz estabelece que a corrente induzida sempre flui em um sentido que se opõe à variação do fluxo magnético que a gerou — uma consequência direta da conservação de energia.',
     difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_eletromagnetismo_4',
+    topicId: 'fis_eletromagnetismo',
+    subject: 'Física',
+    prompt: 'O que é necessário para que uma corrente elétrica seja induzida em uma espira condutora, segundo a Lei de Faraday?',
+    options: [
+      { id: 'a', text: 'A espira precisa estar em um campo magnético constante e parada' },
+      { id: 'b', text: 'Precisa haver variação do fluxo magnético através da espira' },
+      { id: 'c', text: 'A espira precisa ser feita de um material isolante' },
+      { id: 'd', text: 'Não é necessário nenhum campo magnético' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A Lei de Faraday afirma que a força eletromotriz induzida é proporcional à taxa de variação do fluxo magnético — sem variação de fluxo (mesmo com campo presente), não há indução.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_eletromagnetismo_5',
+    topicId: 'fis_eletromagnetismo',
+    subject: 'Física',
+    prompt: 'Um próton se move com velocidade perpendicular a um campo magnético uniforme. Qual é a direção da força magnética resultante sobre o próton, em relação à sua velocidade?',
+    options: [
+      { id: 'a', text: 'Paralela à velocidade' },
+      { id: 'b', text: 'Perpendicular tanto à velocidade quanto ao campo magnético' },
+      { id: 'c', text: 'Igual à direção do campo magnético' },
+      { id: 'd', text: 'Nula' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Pela regra da mão direita (F = qv×B), a força magnética é sempre perpendicular tanto ao vetor velocidade quanto ao vetor campo magnético — é essa força que causa o movimento circular de cargas em campos magnéticos.',
+    difficulty: 'hard'
   },
   // Português — Redação
   {
@@ -3218,61 +3745,151 @@ export const mockQuestions: Question[] = [
     id: 'q_fis_cinematica_vetorial_1',
     topicId: 'fis_cinematica_vetorial',
     subject: 'Física',
-    prompt: 'Um objeto realiza um lançamento horizontal a partir de uma certa altura, com velocidade inicial puramente horizontal. Desprezando a resistência do ar, o movimento vertical desse objeto durante a queda é:',
+    prompt: 'Um projétil é lançado horizontalmente do topo de um penhasco de 45 m de altura, com velocidade inicial de 10 m/s. Usando g = 10 m/s², qual é o alcance horizontal do projétil ao atingir o solo?',
     options: [
-      { id: 'a', text: 'Uniforme, com velocidade constante' },
-      { id: 'b', text: 'Uniformemente variado, com aceleração igual à da gravidade' },
-      { id: 'c', text: 'Circular uniforme' },
-      { id: 'd', text: 'Inexistente, pois o objeto só se move horizontalmente' }
+      { id: 'a', text: '10 m' },
+      { id: 'b', text: '15 m' },
+      { id: 'c', text: '30 m' },
+      { id: 'd', text: '45 m' }
     ],
-    correctOptionId: 'b',
-    explanation: 'No lançamento horizontal, o movimento se decompõe em duas componentes independentes: horizontal (uniforme, sem aceleração) e vertical (uniformemente variada, sob ação exclusiva da aceleração da gravidade).',
-    difficulty: 'easy'
+    correctOptionId: 'c',
+    explanation: 'Tempo de queda: h = ½gt² → 45 = 5t² → t² = 9 → t = 3 s. Alcance horizontal: x = v×t = 10×3 = 30 m.',
+    difficulty: 'medium'
   },
   {
     id: 'q_fis_cinematica_vetorial_2',
     topicId: 'fis_cinematica_vetorial',
     subject: 'Física',
-    prompt: 'Duas forças perpendiculares entre si atuam sobre um corpo: uma de 3 N e outra de 4 N. Qual é o módulo da força resultante?',
+    prompt: 'Um barco atravessa um rio cuja correnteza tem velocidade de 3 m/s, paralela à margem. O barco se move a 4 m/s em relação à água, na direção perpendicular à margem (atravessando o rio). Qual é o módulo da velocidade resultante do barco em relação à margem?',
     options: [
-      { id: 'a', text: '1 N' },
-      { id: 'b', text: '5 N' },
-      { id: 'c', text: '7 N' },
-      { id: 'd', text: '12 N' }
+      { id: 'a', text: '1 m/s' },
+      { id: 'b', text: '5 m/s' },
+      { id: 'c', text: '7 m/s' },
+      { id: 'd', text: '12 m/s' }
     ],
     correctOptionId: 'b',
-    explanation: 'Para vetores perpendiculares, o módulo da resultante é dado pelo Teorema de Pitágoras: √(3² + 4²) = √(9 + 16) = √25 = 5 N.',
+    explanation: 'As velocidades são perpendiculares entre si (correnteza paralela à margem, barco perpendicular a ela). O módulo da resultante é dado pelo Teorema de Pitágoras: √(3² + 4²) = √25 = 5 m/s.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_fis_cinematica_vetorial_3',
+    topicId: 'fis_cinematica_vetorial',
+    subject: 'Física',
+    prompt: 'Um vetor deslocamento tem componente horizontal de 8 m e componente vertical de 6 m. Qual é o módulo desse vetor deslocamento?',
+    options: [
+      { id: 'a', text: '8 m' },
+      { id: 'b', text: '10 m' },
+      { id: 'c', text: '14 m' },
+      { id: 'd', text: '48 m' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'O módulo do vetor é dado pela composição das componentes perpendiculares (Teorema de Pitágoras): √(8² + 6²) = √100 = 10 m.',
     difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_cinematica_vetorial_4',
+    topicId: 'fis_cinematica_vetorial',
+    subject: 'Física',
+    prompt: 'Um projétil é lançado obliquamente com velocidade inicial de 20 m/s, formando um ângulo de 30° com a horizontal (cos 30° ≈ 0,87). Qual é, aproximadamente, a componente horizontal dessa velocidade inicial?',
+    options: [
+      { id: 'a', text: '10 m/s' },
+      { id: 'b', text: '14 m/s' },
+      { id: 'c', text: '17,4 m/s' },
+      { id: 'd', text: '20 m/s' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'A componente horizontal é vx = v×cos(θ) = 20×0,87 = 17,4 m/s.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_fis_cinematica_vetorial_5',
+    topicId: 'fis_cinematica_vetorial',
+    subject: 'Física',
+    prompt: 'Um projétil é lançado obliquamente com velocidade inicial de 20 m/s, a 30° acima da horizontal (sen 30° = 0,5). Usando g = 10 m/s², qual é, aproximadamente, o tempo total que o projétil permanece no ar até retornar à mesma altura de lançamento?',
+    options: [
+      { id: 'a', text: '1 s' },
+      { id: 'b', text: '2 s' },
+      { id: 'c', text: '4 s' },
+      { id: 'd', text: '10 s' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A componente vertical inicial é vy = v×sen(30°) = 20×0,5 = 10 m/s. O tempo até o ponto mais alto é vy/g = 10/10 = 1 s. Como a subida e a descida (até a mesma altura) são simétricas, o tempo total é o dobro: 2 s.',
+    difficulty: 'hard'
   },
   // Física — Gravitação e Movimento Circular
   {
     id: 'q_fis_gravitacao_circular_1',
     topicId: 'fis_gravitacao_circular',
     subject: 'Física',
-    prompt: 'De acordo com a Lei da Gravitação Universal de Newton, a força gravitacional entre dois corpos é:',
+    prompt: 'Um satélite orbita a Terra a uma altitude constante, em movimento circular uniforme. Se a distância do satélite ao centro da Terra dobrar, o que acontece com a força gravitacional que a Terra exerce sobre ele?',
     options: [
-      { id: 'a', text: 'Diretamente proporcional às massas dos corpos e inversamente proporcional ao quadrado da distância entre eles' },
-      { id: 'b', text: 'Inversamente proporcional às massas e diretamente proporcional à distância' },
-      { id: 'c', text: 'Independente das massas dos corpos' },
-      { id: 'd', text: 'Diretamente proporcional ao cubo da distância entre eles' }
+      { id: 'a', text: 'Permanece igual' },
+      { id: 'b', text: 'Dobra' },
+      { id: 'c', text: 'Reduz à metade' },
+      { id: 'd', text: 'Reduz a 1/4' }
     ],
-    correctOptionId: 'a',
-    explanation: 'A Lei da Gravitação Universal é expressa por F = G·m₁·m₂/r², ou seja, a força é diretamente proporcional ao produto das massas e inversamente proporcional ao quadrado da distância entre os corpos.',
-    difficulty: 'easy'
+    correctOptionId: 'd',
+    explanation: 'A força gravitacional é inversamente proporcional ao quadrado da distância (F ∝ 1/r²). Dobrando a distância, a força se reduz a 1/2² = 1/4 do valor original.',
+    difficulty: 'medium'
   },
   {
     id: 'q_fis_gravitacao_circular_2',
     topicId: 'fis_gravitacao_circular',
     subject: 'Física',
-    prompt: 'Um carro faz uma curva de raio constante com velocidade escalar constante. Sobre a aceleração desse carro durante a curva, é correto afirmar que:',
+    prompt: 'Um planeta orbita o Sol a uma distância de 4 UA (unidades astronômicas). Pela Terceira Lei de Kepler (T² ∝ r³, com T em anos terrestres e r em UA), qual é, aproximadamente, o período orbital desse planeta?',
     options: [
-      { id: 'a', text: 'É nula, pois a velocidade escalar é constante' },
-      { id: 'b', text: 'Existe uma aceleração centrípeta, direcionada para o centro da curva, responsável por mudar a direção da velocidade' },
-      { id: 'c', text: 'A aceleração aponta na mesma direção do movimento' },
-      { id: 'd', text: 'Só existe aceleração se a velocidade escalar também estiver variando' }
+      { id: 'a', text: '4 anos' },
+      { id: 'b', text: '8 anos' },
+      { id: 'c', text: '16 anos' },
+      { id: 'd', text: '64 anos' }
     ],
     correctOptionId: 'b',
-    explanation: 'Mesmo com velocidade escalar constante, um corpo em movimento circular possui aceleração centrípeta, direcionada para o centro da trajetória, responsável por mudar continuamente a direção do vetor velocidade.',
+    explanation: 'Pela Terceira Lei de Kepler, T² = r³ (em unidades de anos e UA). Com r=4: T² = 4³ = 64, logo T = 8 anos.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_fis_gravitacao_circular_3',
+    topicId: 'fis_gravitacao_circular',
+    subject: 'Física',
+    prompt: 'Um carro faz uma curva circular de raio 50 m com velocidade constante de 10 m/s. Qual é o módulo da aceleração centrípeta desse carro?',
+    options: [
+      { id: 'a', text: '0,2 m/s²' },
+      { id: 'b', text: '2 m/s²' },
+      { id: 'c', text: '5 m/s²' },
+      { id: 'd', text: '20 m/s²' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A aceleração centrípeta é ac = v²/r = 10²/50 = 100/50 = 2 m/s².',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_gravitacao_circular_4',
+    topicId: 'fis_gravitacao_circular',
+    subject: 'Física',
+    prompt: 'Dobrando a velocidade de um corpo em movimento circular uniforme, mantendo o raio da trajetória constante, o que acontece com a aceleração centrípeta?',
+    options: [
+      { id: 'a', text: 'Dobra' },
+      { id: 'b', text: 'Quadruplica' },
+      { id: 'c', text: 'Permanece igual' },
+      { id: 'd', text: 'Reduz à metade' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Como ac = v²/r, a aceleração centrípeta é proporcional ao QUADRADO da velocidade. Dobrando v, ac quadruplica.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_fis_gravitacao_circular_5',
+    topicId: 'fis_gravitacao_circular',
+    subject: 'Física',
+    prompt: 'Qual é a principal razão pela qual, em uma órbita circular, mesmo com velocidade escalar constante, dizemos que o satélite está em movimento acelerado?',
+    options: [
+      { id: 'a', text: 'Porque existe atrito no espaço' },
+      { id: 'b', text: 'Porque a direção da velocidade muda constantemente, mesmo com módulo constante' },
+      { id: 'c', text: 'Porque o satélite ganha energia cinética constantemente' },
+      { id: 'd', text: 'Na verdade, esse movimento não é acelerado' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Aceleração é a variação do vetor velocidade — não só do seu módulo. Mesmo com módulo constante, a mudança contínua de direção da velocidade no movimento circular já configura uma aceleração (a centrípeta).',
     difficulty: 'medium'
   },
   // Física — Dinâmica Energética e Transformações de Energia
@@ -3280,61 +3897,151 @@ export const mockQuestions: Question[] = [
     id: 'q_fis_energia_1',
     topicId: 'fis_energia',
     subject: 'Física',
-    prompt: 'Um corpo de massa 2 kg se move com velocidade de 5 m/s. Qual é a sua energia cinética?',
+    prompt: 'Um corpo de massa 2 kg é erguido a uma altura de 5 m. Usando g = 10 m/s², qual é o trabalho realizado contra a gravidade para erguê-lo (assumindo velocidade constante)?',
     options: [
       { id: 'a', text: '10 J' },
-      { id: 'b', text: '12,5 J' },
-      { id: 'c', text: '25 J' },
-      { id: 'd', text: '50 J' }
+      { id: 'b', text: '50 J' },
+      { id: 'c', text: '100 J' },
+      { id: 'd', text: '200 J' }
     ],
     correctOptionId: 'c',
-    explanation: 'A energia cinética é dada por Ec = (m·v²)/2 = (2 × 5²)/2 = (2 × 25)/2 = 25 J.',
-    difficulty: 'easy'
+    explanation: 'W = m×g×h = 2×10×5 = 100 J.',
+    difficulty: 'medium'
   },
   {
     id: 'q_fis_energia_2',
     topicId: 'fis_energia',
     subject: 'Física',
-    prompt: 'De acordo com o Princípio da Conservação de Energia Mecânica, em um sistema onde atuam apenas forças conservativas (como a gravidade, sem atrito), a energia mecânica total:',
+    prompt: 'Um bloco de massa 2 kg desliza sobre uma superfície horizontal com atrito, partindo com velocidade de 10 m/s e parando após percorrer 20 m. Qual é o trabalho realizado pela força de atrito sobre o bloco?',
     options: [
-      { id: 'a', text: 'Aumenta continuamente ao longo do tempo' },
-      { id: 'b', text: 'Diminui continuamente ao longo do tempo' },
-      { id: 'c', text: 'Permanece constante, podendo haver conversão entre energia cinética e potencial' },
-      { id: 'd', text: 'É sempre igual a zero' }
+      { id: 'a', text: '-50 J' },
+      { id: 'b', text: '-100 J' },
+      { id: 'c', text: '-200 J' },
+      { id: 'd', text: '100 J' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Pelo Teorema Trabalho-Energia, o trabalho da força resultante (aqui, só o atrito) é igual à variação de energia cinética: W = Ec_final - Ec_inicial = 0 - ½×2×10² = -100 J.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_fis_energia_3',
+    topicId: 'fis_energia',
+    subject: 'Física',
+    prompt: 'Uma mola ideal tem constante elástica k = 200 N/m. Qual é a energia potencial elástica armazenada quando ela é comprimida 0,1 m?',
+    options: [
+      { id: 'a', text: '0,1 J' },
+      { id: 'b', text: '1 J' },
+      { id: 'c', text: '2 J' },
+      { id: 'd', text: '10 J' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Epe = ½×k×x² = ½×200×0,1² = ½×200×0,01 = 1 J.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_energia_4',
+    topicId: 'fis_energia',
+    subject: 'Física',
+    prompt: 'Um corpo desliza, a partir do repouso, por uma rampa sem atrito de altura 5 m. Usando g = 10 m/s², qual é a velocidade do corpo ao chegar na base da rampa?',
+    options: [
+      { id: 'a', text: '5 m/s' },
+      { id: 'b', text: '7 m/s' },
+      { id: 'c', text: '10 m/s' },
+      { id: 'd', text: '50 m/s' }
     ],
     correctOptionId: 'c',
-    explanation: 'Na ausência de forças dissipativas (como o atrito), a energia mecânica total (cinética + potencial) se conserva, podendo apenas ser convertida entre essas duas formas ao longo do movimento.',
-    difficulty: 'medium'
+    explanation: 'Pela conservação de energia mecânica: mgh = ½mv² → v = √(2gh) = √(2×10×5) = √100 = 10 m/s.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_fis_energia_5',
+    topicId: 'fis_energia',
+    subject: 'Física',
+    prompt: 'Um pêndulo é solto de uma altura de 0,8 m em relação ao ponto mais baixo de sua trajetória, sem atrito. Usando g = 10 m/s², qual é a velocidade do pêndulo ao passar pelo ponto mais baixo?',
+    options: [
+      { id: 'a', text: '2 m/s' },
+      { id: 'b', text: '4 m/s' },
+      { id: 'c', text: '8 m/s' },
+      { id: 'd', text: '16 m/s' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Pela conservação de energia mecânica: v = √(2gh) = √(2×10×0,8) = √16 = 4 m/s.',
+    difficulty: 'hard'
   },
   // Física — Eletrostática e Campo Elétrico
   {
     id: 'q_fis_eletrostatica_1',
     topicId: 'fis_eletrostatica',
     subject: 'Física',
-    prompt: 'Duas cargas elétricas de mesmo sinal, ao serem aproximadas uma da outra, exercem entre si uma força de:',
+    prompt: 'Duas cargas puntiformes de +2 μC e +3 μC estão separadas por uma distância de 3 m no vácuo (k ≈ 9×10⁹ N·m²/C²). Qual é, aproximadamente, a força elétrica entre elas?',
     options: [
-      { id: 'a', text: 'Atração' },
-      { id: 'b', text: 'Repulsão' },
-      { id: 'c', text: 'Nula — cargas de mesmo sinal não interagem' },
-      { id: 'd', text: 'Apenas gravitacional' }
+      { id: 'a', text: '2 mN' },
+      { id: 'b', text: '6 mN' },
+      { id: 'c', text: '18 mN' },
+      { id: 'd', text: '54 mN' }
     ],
     correctOptionId: 'b',
-    explanation: 'Pela Lei de Coulomb, cargas de mesmo sinal se repelem, enquanto cargas de sinais opostos se atraem.',
-    difficulty: 'easy'
+    explanation: 'F = k×q1×q2/r² = 9×10⁹ × 2×10⁻⁶ × 3×10⁻⁶ / 9 = 9×10⁹ × 6×10⁻¹² / 9 = 6×10⁻³ N = 6 mN.',
+    difficulty: 'hard'
   },
   {
     id: 'q_fis_eletrostatica_2',
     topicId: 'fis_eletrostatica',
     subject: 'Física',
-    prompt: 'As linhas de campo elétrico geradas por uma carga puntiforme positiva isolada são:',
+    prompt: 'Se a distância entre duas cargas puntiformes triplicar, mantendo as cargas constantes, o que acontece com a força elétrica entre elas?',
     options: [
-      { id: 'a', text: 'Circulares, envolvendo a carga' },
-      { id: 'b', text: 'Radiais, apontando para fora da carga (divergentes)' },
-      { id: 'c', text: 'Radiais, apontando para dentro da carga (convergentes)' },
-      { id: 'd', text: 'Paralelas entre si, independentemente da posição da carga' }
+      { id: 'a', text: 'Reduz para 1/3' },
+      { id: 'b', text: 'Reduz para 1/9' },
+      { id: 'c', text: 'Triplica' },
+      { id: 'd', text: 'Permanece igual' }
     ],
     correctOptionId: 'b',
-    explanation: 'As linhas de campo elétrico de uma carga positiva isolada divergem radialmente a partir dela; para uma carga negativa isolada, elas convergem radialmente em direção a ela.',
+    explanation: 'Pela Lei de Coulomb, F ∝ 1/r². Triplicando a distância, a força se reduz a 1/3² = 1/9 do valor original.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_eletrostatica_3',
+    topicId: 'fis_eletrostatica',
+    subject: 'Física',
+    prompt: 'O que caracteriza um campo elétrico uniforme, como o existente entre as placas de um capacitor de placas paralelas?',
+    options: [
+      { id: 'a', text: 'Linhas de campo paralelas e igualmente espaçadas, com mesma intensidade em todos os pontos' },
+      { id: 'b', text: 'Linhas de campo que convergem para um único ponto' },
+      { id: 'c', text: 'Campo que varia aleatoriamente de ponto a ponto' },
+      { id: 'd', text: 'Ausência total de linhas de campo' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Um campo elétrico uniforme tem a mesma intensidade e direção em todos os pontos, representado por linhas de campo paralelas e igualmente espaçadas.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_eletrostatica_4',
+    topicId: 'fis_eletrostatica',
+    subject: 'Física',
+    prompt: 'Um elétron é colocado em um campo elétrico uniforme de intensidade 500 N/C. Sabendo que a carga do elétron é aproximadamente 1,6×10⁻¹⁹ C, qual é o módulo da força elétrica sobre o elétron?',
+    options: [
+      { id: 'a', text: '8×10⁻¹⁷ N' },
+      { id: 'b', text: '8×10⁻¹⁹ N' },
+      { id: 'c', text: '3,2×10⁻¹⁶ N' },
+      { id: 'd', text: '5×10² N' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'F = q×E = 1,6×10⁻¹⁹ × 500 = 8×10⁻¹⁷ N.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_fis_eletrostatica_5',
+    topicId: 'fis_eletrostatica',
+    subject: 'Física',
+    prompt: 'Duas cargas de sinais opostos são colocadas próximas uma da outra. O que acontece com as linhas de campo elétrico entre elas?',
+    options: [
+      { id: 'a', text: 'Saem da carga negativa e entram na positiva' },
+      { id: 'b', text: 'Saem da carga positiva e entram na negativa' },
+      { id: 'c', text: 'São paralelas entre si, sem relação com as cargas' },
+      { id: 'd', text: 'Não existem linhas de campo entre cargas de sinais opostos' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Por convenção, as linhas de campo elétrico sempre saem de cargas positivas e entram em cargas negativas.',
     difficulty: 'medium'
   },
   // Física — Fundamentos de Ondas e Oscilações
@@ -3342,62 +4049,152 @@ export const mockQuestions: Question[] = [
     id: 'q_fis_ondas_fundamentos_1',
     topicId: 'fis_ondas_fundamentos',
     subject: 'Física',
-    prompt: 'A velocidade de propagação de uma onda está relacionada à sua frequência (f) e ao seu comprimento de onda (λ) pela equação:',
+    prompt: 'Uma onda tem frequência de 20 Hz. Qual é o seu período?',
     options: [
-      { id: 'a', text: 'v = f + λ' },
-      { id: 'b', text: 'v = f × λ' },
-      { id: 'c', text: 'v = f / λ' },
-      { id: 'd', text: 'v = f − λ' }
+      { id: 'a', text: '0,05 s' },
+      { id: 'b', text: '0,2 s' },
+      { id: 'c', text: '5 s' },
+      { id: 'd', text: '20 s' }
     ],
-    correctOptionId: 'b',
-    explanation: 'A equação fundamental da ondulatória relaciona a velocidade de propagação (v) com a frequência (f) e o comprimento de onda (λ) pela fórmula v = f × λ.',
+    correctOptionId: 'a',
+    explanation: 'O período é o inverso da frequência: T = 1/f = 1/20 = 0,05 s.',
     difficulty: 'easy'
   },
   {
     id: 'q_fis_ondas_fundamentos_2',
     topicId: 'fis_ondas_fundamentos',
     subject: 'Física',
-    prompt: 'Uma onda tem frequência de 50 Hz e comprimento de onda de 4 m. Qual é a sua velocidade de propagação?',
+    prompt: 'Uma onda sonora se propaga no ar a 340 m/s e tem frequência de 680 Hz. Qual é o seu comprimento de onda?',
     options: [
-      { id: 'a', text: '12,5 m/s' },
-      { id: 'b', text: '46 m/s' },
-      { id: 'c', text: '54 m/s' },
-      { id: 'd', text: '200 m/s' }
+      { id: 'a', text: '0,25 m' },
+      { id: 'b', text: '0,5 m' },
+      { id: 'c', text: '2 m' },
+      { id: 'd', text: '1360 m' }
     ],
-    correctOptionId: 'd',
-    explanation: 'Usando v = f × λ: v = 50 × 4 = 200 m/s.',
+    correctOptionId: 'b',
+    explanation: 'Usando v = f×λ: λ = v/f = 340/680 = 0,5 m.',
     difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_ondas_fundamentos_3',
+    topicId: 'fis_ondas_fundamentos',
+    subject: 'Física',
+    prompt: 'O que diferencia uma onda mecânica de uma onda eletromagnética, em termos de necessidade de um meio material para se propagar?',
+    options: [
+      { id: 'a', text: 'A onda mecânica precisa de meio material; a eletromagnética se propaga até no vácuo' },
+      { id: 'b', text: 'As duas precisam de meio material' },
+      { id: 'c', text: 'Nenhuma das duas precisa de meio material' },
+      { id: 'd', text: 'Apenas a eletromagnética precisa de meio material' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Ondas mecânicas (como o som) precisam de um meio material (sólido, líquido ou gasoso) para se propagar, enquanto ondas eletromagnéticas (como a luz) se propagam mesmo no vácuo.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_ondas_fundamentos_4',
+    topicId: 'fis_ondas_fundamentos',
+    subject: 'Física',
+    prompt: 'Uma onda transversal tem amplitude de 5 cm. O que representa fisicamente essa amplitude?',
+    options: [
+      { id: 'a', text: 'A distância entre duas cristas consecutivas' },
+      { id: 'b', text: 'O deslocamento máximo de um ponto do meio em relação à posição de equilíbrio' },
+      { id: 'c', text: 'A velocidade máxima da onda' },
+      { id: 'd', text: 'O número de oscilações por segundo' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A amplitude é o deslocamento máximo de um ponto do meio em relação à sua posição de equilíbrio (repouso), não devendo ser confundida com o comprimento de onda (distância entre cristas) ou a frequência.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_fis_ondas_fundamentos_5',
+    topicId: 'fis_ondas_fundamentos',
+    subject: 'Física',
+    prompt: 'Duas ondas idênticas se sobrepõem em fase (crista com crista, vale com vale) em um mesmo ponto do meio. Que tipo de interferência ocorre, e o que acontece com a amplitude resultante?',
+    options: [
+      { id: 'a', text: 'Interferência destrutiva, amplitude reduzida' },
+      { id: 'b', text: 'Interferência construtiva, amplitude aumentada (soma das amplitudes)' },
+      { id: 'c', text: 'As ondas se cancelam completamente' },
+      { id: 'd', text: 'Não há interferência' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Quando duas ondas se sobrepõem em fase, seus efeitos se somam, resultando em interferência construtiva, com amplitude igual à soma das amplitudes individuais.',
+    difficulty: 'hard'
   },
   // Física — Física Moderna
   {
     id: 'q_fis_fisica_moderna_1',
     topicId: 'fis_fisica_moderna',
     subject: 'Física',
-    prompt: 'O efeito fotoelétrico, explicado por Einstein e fundamental para o desenvolvimento da física quântica, consiste:',
+    prompt: 'No efeito fotoelétrico, um metal só libera elétrons quando iluminado por luz de frequência igual ou superior a um valor mínimo, chamado frequência de corte. O que acontece se a luz incidente tiver frequência abaixo desse valor, mesmo com intensidade muito alta?',
     options: [
-      { id: 'a', text: 'Na emissão de elétrons por um material quando este é iluminado por luz de frequência suficientemente alta' },
-      { id: 'b', text: 'No aquecimento de um material apenas pela luz visível' },
-      { id: 'c', text: 'Na reflexão total da luz incidente sobre qualquer superfície metálica' },
-      { id: 'd', text: 'Na produção contínua de luz por qualquer material aquecido' }
+      { id: 'a', text: 'Elétrons são liberados de qualquer forma, com energia menor' },
+      { id: 'b', text: 'Nenhum elétron é liberado, independentemente da intensidade da luz' },
+      { id: 'c', text: 'O metal derrete' },
+      { id: 'd', text: 'A frequência de corte não existe na prática' }
     ],
-    correctOptionId: 'a',
-    explanation: 'No efeito fotoelétrico, luz incidente com frequência acima de um valor mínimo (frequência de corte) ejeta elétrons de um material; Einstein explicou o fenômeno propondo que a luz se comporta em pacotes discretos de energia, os fótons, com energia E = h·f.',
-    difficulty: 'easy'
+    correctOptionId: 'b',
+    explanation: 'No efeito fotoelétrico, cada fóton precisa ter energia (E=hf) suficiente para arrancar um elétron. Abaixo da frequência de corte, nenhum fóton individual tem energia suficiente, e aumentar apenas a intensidade (mais fótons, não mais energéticos) não resolve isso.',
+    difficulty: 'medium'
   },
   {
     id: 'q_fis_fisica_moderna_2',
     topicId: 'fis_fisica_moderna',
     subject: 'Física',
-    prompt: 'Segundo a Teoria da Relatividade Restrita de Einstein, à medida que a velocidade de um objeto se aproxima da velocidade da luz no vácuo:',
+    prompt: 'Segundo a equação do efeito fotoelétrico de Einstein, a energia cinética máxima dos elétrons ejetados é dada por Ec = hf - W, onde W é a função trabalho do metal. O que representa fisicamente essa função trabalho W?',
     options: [
-      { id: 'a', text: 'O tempo passa mais rápido para um observador externo, em comparação ao objeto em movimento' },
-      { id: 'b', text: 'O tempo passa mais devagar para o objeto em movimento, em relação a um observador externo (dilatação do tempo)' },
-      { id: 'c', text: 'A velocidade da luz no vácuo observada muda conforme o referencial' },
-      { id: 'd', text: 'Não há nenhuma alteração perceptível em nenhuma grandeza física' }
+      { id: 'a', text: 'A energia mínima necessária para arrancar um elétron do metal' },
+      { id: 'b', text: 'A velocidade da luz incidente' },
+      { id: 'c', text: 'A frequência da luz incidente' },
+      { id: 'd', text: 'A massa do elétron' }
     ],
-    correctOptionId: 'b',
-    explanation: 'A dilatação temporal relativística prevê que, para um observador externo, relógios em movimento (em velocidades próximas à da luz) marcam o tempo mais lentamente do que relógios parados em relação a esse observador.',
+    correctOptionId: 'a',
+    explanation: 'A função trabalho W representa a energia mínima necessária para libertar um elétron da superfície do metal; a energia do fóton (hf) que excede esse valor se converte em energia cinética do elétron ejetado.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_fis_fisica_moderna_3',
+    topicId: 'fis_fisica_moderna',
+    subject: 'Física',
+    prompt: 'Segundo a Teoria da Relatividade Restrita, dois eventos que são simultâneos para um observador podem não ser simultâneos para outro observador em movimento relativo ao primeiro. O que essa ideia contraria, da física clássica (newtoniana)?',
+    options: [
+      { id: 'a', text: 'A noção de tempo absoluto, igual para todos os observadores' },
+      { id: 'b', text: 'A lei da conservação de energia' },
+      { id: 'c', text: 'A terceira lei de Newton' },
+      { id: 'd', text: 'A lei de Coulomb' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A física clássica assumia um tempo absoluto e universal. A Relatividade Restrita mostrou que a simultaneidade de eventos depende do referencial do observador, contrariando essa noção clássica.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_fis_fisica_moderna_4',
+    topicId: 'fis_fisica_moderna',
+    subject: 'Física',
+    prompt: 'De acordo com a dualidade onda-partícula, proposta na física quântica, a luz pode se comportar como onda em alguns experimentos (como a difração) e como partícula em outros (como o efeito fotoelétrico). Isso significa que:',
+    options: [
+      { id: 'a', text: 'A luz é sempre uma onda, e o comportamento de partícula é apenas uma ilusão' },
+      { id: 'b', text: 'A luz é sempre uma partícula, e o comportamento de onda é apenas uma ilusão' },
+      { id: 'c', text: 'A luz apresenta características tanto de onda quanto de partícula, dependendo do experimento realizado' },
+      { id: 'd', text: 'A luz não é nem onda nem partícula, sendo um fenômeno totalmente sem relação com nenhum dos dois' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'A dualidade onda-partícula é um princípio central da física quântica: a luz (e outras entidades quânticas) apresenta comportamentos ondulatórios e corpusculares, cada um evidenciado por tipos diferentes de experimentos.',
     difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_fisica_moderna_5',
+    topicId: 'fis_fisica_moderna',
+    subject: 'Física',
+    prompt: 'Segundo a Teoria da Relatividade Restrita, nenhum objeto com massa pode atingir ou ultrapassar a velocidade da luz no vácuo. O que acontece com a energia necessária para acelerar um objeto com massa à medida que sua velocidade se aproxima da velocidade da luz?',
+    options: [
+      { id: 'a', text: 'Permanece constante' },
+      { id: 'b', text: 'Diminui progressivamente' },
+      { id: 'c', text: 'Tende ao infinito' },
+      { id: 'd', text: 'Torna-se negativa' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'Pela Relatividade Restrita, a energia necessária para continuar acelerando um objeto com massa cresce cada vez mais rápido conforme sua velocidade se aproxima de c, tendendo ao infinito — por isso nenhum objeto com massa pode atingir a velocidade da luz.',
+    difficulty: 'hard'
   },
   // Química — Modelos Atômicos e Estrutura do Átomo
   {
