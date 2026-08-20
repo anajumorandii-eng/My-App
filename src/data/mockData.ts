@@ -1915,129 +1915,249 @@ export const mockQuestions: Question[] = [
     explanation: 'A frequência de uma onda é determinada pela fonte que a gera, permanecendo constante ao mudar de meio. Já a velocidade de propagação e o comprimento de onda mudam, pois dependem das propriedades do meio.',
     difficulty: 'hard'
   },
-  // Química — Estequiometria
+  // Química — Análises Quantitativas e Estequiometria
   {
-    id: 'q_qui_01_1',
+    id: 'q_qui_estequiometria_1',
     topicId: 'qui_estequiometria',
     subject: 'Química',
-    prompt: 'Na reação 2H₂ + O₂ → 2H₂O, quantos mols de água são produzidos a partir de 4 mols de H₂ (com O₂ em excesso)?',
+    prompt: 'Na reação de combustão do metano: CH₄ + 2O₂ → CO₂ + 2H₂O, quantos mols de O₂ são necessários para queimar completamente 3 mols de CH₄?',
     options: [
-      { id: 'a', text: '2 mols' },
-      { id: 'b', text: '4 mols' },
-      { id: 'c', text: '8 mols' },
-      { id: 'd', text: '1 mol' }
+      { id: 'a', text: '3 mols' },
+      { id: 'b', text: '6 mols' },
+      { id: 'c', text: '9 mols' },
+      { id: 'd', text: '12 mols' }
     ],
     correctOptionId: 'b',
-    explanation: 'Pela proporção estequiométrica da equação balanceada, 2 mols de H₂ produzem 2 mols de H₂O (proporção 1:1). Logo, 4 mols de H₂ produzem 4 mols de H₂O.',
+    explanation: 'Pela proporção estequiométrica (1 CH₄ : 2 O₂), 3 mols de CH₄ exigem 3×2 = 6 mols de O₂.',
     difficulty: 'medium'
   },
   {
-    id: 'q_qui_01_2',
+    id: 'q_qui_estequiometria_2',
     topicId: 'qui_estequiometria',
     subject: 'Química',
-    prompt: 'Qual é a massa molar aproximada do CO₂ (considerando C = 12 g/mol e O = 16 g/mol)?',
+    prompt: 'Reagindo 4 mols de H₂ com 1 mol de N₂, segundo a equação N₂ + 3H₂ → 2NH₃, qual reagente está em excesso, e quanto sobra dele ao final da reação?',
     options: [
-      { id: 'a', text: '28 g/mol' },
-      { id: 'b', text: '32 g/mol' },
-      { id: 'c', text: '44 g/mol' },
-      { id: 'd', text: '16 g/mol' }
+      { id: 'a', text: 'N₂ em excesso, sobra 1 mol' },
+      { id: 'b', text: 'H₂ em excesso, sobra 1 mol' },
+      { id: 'c', text: 'H₂ em excesso, sobra 3 mols' },
+      { id: 'd', text: 'Nenhum reagente está em excesso' }
+    ],
+    correctOptionId: 'b',
+    explanation: '1 mol de N₂ precisa de 3 mols de H₂ para reagir completamente. Como há 4 mols de H₂ disponíveis, sobra 4-3 = 1 mol de H₂ ao final — o N₂ é o reagente limitante.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_qui_estequiometria_2b',
+    topicId: 'qui_estequiometria',
+    subject: 'Química',
+    prompt: 'Qual é a massa (em gramas) de CO₂ produzida na queima completa de 44 g de propano (C₃H₈), segundo a reação C₃H₈ + 5O₂ → 3CO₂ + 4H₂O? (massas molares: C₃H₈ = 44 g/mol, CO₂ = 44 g/mol)',
+    options: [
+      { id: 'a', text: '44 g' },
+      { id: 'b', text: '88 g' },
+      { id: 'c', text: '132 g' },
+      { id: 'd', text: '176 g' }
     ],
     correctOptionId: 'c',
-    explanation: 'Massa molar do CO₂ = 12 (C) + 2×16 (O) = 12 + 32 = 44 g/mol.',
-    difficulty: 'easy'
+    explanation: '44 g de propano correspondem a 1 mol. Pela proporção (1 C₃H₈ : 3 CO₂), formam-se 3 mols de CO₂ = 3×44 = 132 g.',
+    difficulty: 'hard'
   },
-  // Química — Ligações Químicas
   {
-    id: 'q_qui_02_1',
+    id: 'q_qui_estequiometria_4',
+    topicId: 'qui_estequiometria',
+    subject: 'Química',
+    prompt: 'Uma reação tem rendimento real de 80%. Se o rendimento teórico previsto for de 50 g de produto, qual é a massa real obtida na prática?',
+    options: [
+      { id: 'a', text: '10 g' },
+      { id: 'b', text: '40 g' },
+      { id: 'c', text: '50 g' },
+      { id: 'd', text: '62,5 g' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A massa real é 80% do rendimento teórico: 50 × 0,8 = 40 g.',
+    difficulty: 'hard'
+  },
+  // Química — Polaridade das Ligações e Geometria Molecular
+  {
+    id: 'q_qui_polaridade_geometria_1',
     topicId: 'qui_polaridade_geometria',
     subject: 'Química',
-    prompt: 'Qual tipo de ligação química ocorre entre um metal e um ametal, com transferência de elétrons?',
+    prompt: 'Qual é a geometria molecular da molécula de água (H₂O), considerando os dois pares de elétrons não ligantes no oxigênio?',
     options: [
-      { id: 'a', text: 'Ligação covalente' },
-      { id: 'b', text: 'Ligação metálica' },
-      { id: 'c', text: 'Ligação iônica' },
-      { id: 'd', text: 'Ligação de hidrogênio' }
+      { id: 'a', text: 'Linear' },
+      { id: 'b', text: 'Angular' },
+      { id: 'c', text: 'Trigonal plana' },
+      { id: 'd', text: 'Tetraédrica' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Os dois pares de elétrons não ligantes no oxigênio "empurram" as ligações O-H, resultando em uma geometria angular (dobrada), com ângulo de ligação de aproximadamente 104,5°.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_qui_polaridade_geometria_2',
+    topicId: 'qui_polaridade_geometria',
+    subject: 'Química',
+    prompt: 'A molécula de CO₂ (dióxido de carbono) é apolar, mesmo tendo ligações C=O polares. Por que isso ocorre?',
+    options: [
+      { id: 'a', text: 'Porque o carbono não tem eletronegatividade' },
+      { id: 'b', text: 'Porque a molécula é linear e simétrica, fazendo os vetores de polaridade das duas ligações se cancelarem' },
+      { id: 'c', text: 'Porque o oxigênio é menos eletronegativo que o carbono' },
+      { id: 'd', text: 'Porque CO₂ não tem ligações covalentes' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Apesar de cada ligação C=O ser polar, a geometria linear e simétrica do CO₂ faz com que os dois vetores de dipolo, de mesma intensidade e sentidos opostos, se cancelem exatamente, resultando em uma molécula apolar.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_qui_polaridade_geometria_3',
+    topicId: 'qui_polaridade_geometria',
+    subject: 'Química',
+    prompt: 'A geometria molecular do metano (CH₄) é tetraédrica, com ângulos de ligação de aproximadamente 109,5°. O que determina essa geometria, segundo a Teoria da Repulsão dos Pares de Elétrons da Camada de Valência (VSEPR)?',
+    options: [
+      { id: 'a', text: 'Os pares de elétrons ao redor do átomo central se repelem, distribuindo-se o mais afastados possível uns dos outros' },
+      { id: 'b', text: 'A geometria é determinada apenas pelo tamanho dos átomos de hidrogênio' },
+      { id: 'c', text: 'Não existe nenhuma regra geral; cada molécula é um caso único' },
+      { id: 'd', text: 'A geometria depende exclusivamente da massa atômica do carbono' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A Teoria VSEPR prevê que os pares de elétrons (ligantes ou não) ao redor de um átomo central se repelem eletrostaticamente, adotando a disposição espacial que minimiza essa repulsão — no caso de 4 pares ligantes sem pares isolados, essa disposição é a tetraédrica.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_qui_polaridade_geometria_4',
+    topicId: 'qui_polaridade_geometria',
+    subject: 'Química',
+    prompt: 'Qual tipo de força intermolecular é responsável pelo ponto de ebulição anormalmente alto da água, comparado a outros hidretos de elementos do mesmo grupo (como H₂S)?',
+    options: [
+      { id: 'a', text: 'Força de London (dipolo induzido)' },
+      { id: 'b', text: 'Ligação de hidrogênio' },
+      { id: 'c', text: 'Força íon-dipolo' },
+      { id: 'd', text: 'Ligação covalente' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'As ligações (pontes) de hidrogênio, muito mais fortes que outras forças intermoleculares, ocorrem entre moléculas de água devido à alta eletronegatividade do oxigênio ligado a hidrogênio, exigindo mais energia (temperatura mais alta) para separar as moléculas na ebulição.',
+    difficulty: 'medium'
+  },
+  // Química — Fundamentos e Nomenclatura Orgânica
+  {
+    id: 'q_qui_organica_fundamentos_1',
+    topicId: 'qui_organica_fundamentos',
+    subject: 'Química',
+    prompt: 'Qual é a fórmula molecular do etano, um alcano de 2 carbonos?',
+    options: [
+      { id: 'a', text: 'C₂H₄' },
+      { id: 'b', text: 'C₂H₆' },
+      { id: 'c', text: 'C₂H₂' },
+      { id: 'd', text: 'C₃H₈' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Alcanos seguem a fórmula geral CnH2n+2. Para n=2: C₂H(2×2+2) = C₂H₆.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_qui_organica_fundamentos_2',
+    topicId: 'qui_organica_fundamentos',
+    subject: 'Química',
+    prompt: 'Um carbono é classificado como terciário quando está ligado a quantos outros átomos de carbono?',
+    options: [
+      { id: 'a', text: '1' },
+      { id: 'b', text: '2' },
+      { id: 'c', text: '3' },
+      { id: 'd', text: '4' }
     ],
     correctOptionId: 'c',
-    explanation: 'A ligação iônica ocorre pela transferência de elétrons de um átomo (geralmente metal, que perde elétrons) para outro (geralmente ametal, que ganha elétrons), formando íons de cargas opostas que se atraem.',
-    difficulty: 'easy'
-  },
-  {
-    id: 'q_qui_02_2',
-    topicId: 'qui_polaridade_geometria',
-    subject: 'Química',
-    prompt: 'Por que a molécula de água (H₂O) é polar?',
-    options: [
-      { id: 'a', text: 'Porque possui apenas ligações covalentes apolares' },
-      { id: 'b', text: 'Porque tem geometria angular e diferença de eletronegatividade entre H e O, gerando um dipolo elétrico' },
-      { id: 'c', text: 'Porque é uma molécula iônica' },
-      { id: 'd', text: 'Porque não possui pares de elétrons não ligantes' }
-    ],
-    correctOptionId: 'b',
-    explanation: 'O oxigênio é mais eletronegativo que o hidrogênio e a molécula tem geometria angular (não linear), fazendo com que os vetores de dipolo não se cancelem, resultando em uma molécula polar — essencial para as propriedades da água.',
+    explanation: 'A classificação do carbono (primário, secundário, terciário, quaternário) depende do número de OUTROS átomos de carbono aos quais ele está diretamente ligado — o carbono terciário está ligado a exatamente 3 outros carbonos.',
     difficulty: 'medium'
   },
-  // Química — Química Orgânica
   {
-    id: 'q_qui_03_1',
+    id: 'q_qui_organica_fundamentos_3',
     topicId: 'qui_organica_fundamentos',
     subject: 'Química',
-    prompt: 'Qual é o nome do composto orgânico mais simples da função álcool, com um único átomo de carbono?',
+    prompt: 'Dois compostos orgânicos são isômeros entre si quando:',
     options: [
-      { id: 'a', text: 'Metanol' },
-      { id: 'b', text: 'Etanol' },
-      { id: 'c', text: 'Metano' },
-      { id: 'd', text: 'Ácido fórmico' }
+      { id: 'a', text: 'Têm a mesma fórmula molecular, mas estruturas diferentes' },
+      { id: 'b', text: 'Têm fórmulas moleculares diferentes, mas propriedades iguais' },
+      { id: 'c', text: 'São sempre da mesma função orgânica' },
+      { id: 'd', text: 'Têm o mesmo número de átomos de hidrogênio apenas' }
     ],
     correctOptionId: 'a',
-    explanation: 'O metanol (CH₃OH) é o álcool mais simples, com um átomo de carbono ligado a uma hidroxila (-OH), grupo funcional característico dos álcoois.',
-    difficulty: 'easy'
+    explanation: 'Isômeros são compostos com a mesma fórmula molecular (mesmos átomos, nas mesmas quantidades), mas com estruturas (arranjos espaciais ou de ligações) diferentes — podendo até pertencer a funções orgânicas diferentes.',
+    difficulty: 'hard'
   },
   {
-    id: 'q_qui_03_2',
+    id: 'q_qui_organica_fundamentos_4',
     topicId: 'qui_organica_fundamentos',
     subject: 'Química',
-    prompt: 'Qual é a principal característica que define um hidrocarboneto?',
+    prompt: 'Qual é a hibridação dos átomos de carbono em uma ligação dupla C=C, como no eteno (H₂C=CH₂)?',
     options: [
-      { id: 'a', text: 'Conter apenas átomos de carbono e hidrogênio' },
-      { id: 'b', text: 'Conter obrigatoriamente oxigênio' },
-      { id: 'c', text: 'Ser sempre um composto cíclico' },
-      { id: 'd', text: 'Conter nitrogênio na cadeia' }
-    ],
-    correctOptionId: 'a',
-    explanation: 'Hidrocarbonetos são compostos orgânicos formados exclusivamente por átomos de carbono e hidrogênio, como o metano (CH₄) e o etano (C₂H₆).',
-    difficulty: 'easy'
-  },
-  // Química — Soluções e Concentração
-  {
-    id: 'q_qui_04_1',
-    topicId: 'qui_solucoes',
-    subject: 'Química',
-    prompt: 'Uma solução foi preparada dissolvendo 20 g de sal em 500 mL de água. Qual é a concentração em g/L?',
-    options: [
-      { id: 'a', text: '20 g/L' },
-      { id: 'b', text: '40 g/L' },
-      { id: 'c', text: '10 g/L' },
-      { id: 'd', text: '4 g/L' }
+      { id: 'a', text: 'sp' },
+      { id: 'b', text: 'sp²' },
+      { id: 'c', text: 'sp³' },
+      { id: 'd', text: 'Não há hibridação em ligações duplas' }
     ],
     correctOptionId: 'b',
-    explanation: 'Concentração (g/L) = massa do soluto (g) / volume da solução (L) = 20 / 0,5 = 40 g/L.',
+    explanation: 'Carbonos com uma ligação dupla (e duas ligações simples adicionais) apresentam hibridação sp², com geometria trigonal plana ao redor de cada carbono da dupla ligação.',
+    difficulty: 'hard'
+  },
+  // Química — Soluções
+  {
+    id: 'q_qui_solucoes_1',
+    topicId: 'qui_solucoes',
+    subject: 'Química',
+    prompt: 'Uma solução é preparada dissolvendo 20 g de sal em 500 mL de solução final. Qual é a concentração comum (em g/L) dessa solução?',
+    options: [
+      { id: 'a', text: '10 g/L' },
+      { id: 'b', text: '20 g/L' },
+      { id: 'c', text: '40 g/L' },
+      { id: 'd', text: '100 g/L' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'Concentração comum = massa do soluto (g) / volume da solução (L) = 20 / 0,5 = 40 g/L.',
     difficulty: 'medium'
   },
   {
-    id: 'q_qui_04_2',
+    id: 'q_qui_solucoes_2',
     topicId: 'qui_solucoes',
     subject: 'Química',
-    prompt: 'O que significa dizer que uma solução está "saturada"?',
+    prompt: 'Uma solução aquosa tem concentração molar de 2 mol/L de NaCl, em um volume de 500 mL. Quantos mols de NaCl estão dissolvidos nessa solução?',
     options: [
-      { id: 'a', text: 'Ela contém mais soluto do que consegue dissolver, com corpo de fundo' },
-      { id: 'b', text: 'Ela atingiu a quantidade máxima de soluto dissolvido para aquela temperatura, sem sobra' },
-      { id: 'c', text: 'Ela contém apenas água pura' },
-      { id: 'd', text: 'Ela está sempre em ebulição' }
+      { id: 'a', text: '0,5 mol' },
+      { id: 'b', text: '1 mol' },
+      { id: 'c', text: '2 mols' },
+      { id: 'd', text: '4 mols' }
     ],
     correctOptionId: 'b',
-    explanation: 'Uma solução saturada é aquela que atingiu o limite de solubilidade do soluto naquela temperatura — dissolveu o máximo possível sem formar precipitado. Além desse ponto, o excesso forma corpo de fundo.',
+    explanation: 'n = C×V = 2 mol/L × 0,5 L = 1 mol.',
     difficulty: 'medium'
+  },
+  {
+    id: 'q_qui_solucoes_3',
+    topicId: 'qui_solucoes',
+    subject: 'Química',
+    prompt: 'Ao misturar 200 mL de uma solução 1 mol/L de HCl com 300 mL de água pura, qual é a nova concentração molar da solução resultante (assumindo volumes aditivos)?',
+    options: [
+      { id: 'a', text: '0,2 mol/L' },
+      { id: 'b', text: '0,4 mol/L' },
+      { id: 'c', text: '0,6 mol/L' },
+      { id: 'd', text: '1 mol/L' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Os mols de HCl não mudam com a diluição: n = 1×0,2 = 0,2 mol. O novo volume é 200+300 = 500 mL = 0,5 L. Nova concentração: C = 0,2/0,5 = 0,4 mol/L.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_qui_solucoes_4',
+    topicId: 'qui_solucoes',
+    subject: 'Química',
+    prompt: 'Qual é a massa de soluto necessária para preparar 2 L de uma solução 0,5 mol/L de NaOH (massa molar = 40 g/mol)?',
+    options: [
+      { id: 'a', text: '10 g' },
+      { id: 'b', text: '20 g' },
+      { id: 'c', text: '40 g' },
+      { id: 'd', text: '80 g' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'n = C×V = 0,5×2 = 1 mol. Massa = n×massa molar = 1×40 = 40 g.',
+    difficulty: 'hard'
   },
   // Questões reais de provas passadas (verificadas contra o gabarito oficial)
   {
@@ -2139,6 +2259,66 @@ export const mockQuestions: Question[] = [
     explanation: 'Na etanolamina, o carbono da hidroxila tem nox -1; na glicina, o carbono da carboxila tem nox +3. O aumento do número de oxidação do carbono caracteriza uma oxidação (conversão de álcool a ácido carboxílico) — não isomerização, esterificação, redução ou adição.',
     difficulty: 'medium',
     examSource: { board: 'VUNESP', year: 2022, sourceUrl: 'https://old.kuadro.com.br/gabarito/unesp/2022/quimica' }
+  },
+  {
+    id: 'q_qui_organica_reacoes_1',
+    topicId: 'qui_organica_reacoes',
+    subject: 'Química',
+    prompt: 'A produção industrial de perfumes e aromatizantes artificiais depende fortemente de uma classe de reações orgânicas que combina um ácido carboxílico com um álcool, liberando água como subproduto. Essa reação é chamada de:',
+    options: [
+      { id: 'a', text: 'Saponificação' },
+      { id: 'b', text: 'Esterificação' },
+      { id: 'c', text: 'Halogenação' },
+      { id: 'd', text: 'Hidrogenação' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A esterificação é a reação entre um ácido carboxílico e um álcool, formando um éster e água. Ésteres de cadeia curta têm odores característicos de frutas e flores, sendo a base de aromatizantes e perfumes artificiais.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_qui_organica_reacoes_2',
+    topicId: 'qui_organica_reacoes',
+    subject: 'Química',
+    prompt: 'Na adição de HBr ao propeno (CH3-CH=CH2), a Regra de Markovnikov prevê que o produto principal será aquele em que o hidrogênio se liga:',
+    options: [
+      { id: 'a', text: 'ao carbono com maior número de hidrogênios já ligados a ele' },
+      { id: 'b', text: 'sempre ao carbono da extremidade da cadeia, independentemente da estrutura' },
+      { id: 'c', text: 'ao carbono mais substituído da dupla ligação' },
+      { id: 'd', text: 'igualmente aos dois carbonos da dupla, formando uma mistura 50/50' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A Regra de Markovnikov afirma que, na adição de HX a um alceno assimétrico, o hidrogênio se liga ao carbono da dupla que já possui mais hidrogênios (menos substituído), e o halogênio ao carbono mais substituído — que estabiliza melhor o carbocátion intermediário.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_qui_organica_reacoes_3',
+    topicId: 'qui_organica_reacoes',
+    subject: 'Química',
+    prompt: 'A reação de um ácido graxo (ácido carboxílico de cadeia longa) com uma base forte, como o NaOH, produzindo um sal que atua como sabão, é conhecida como:',
+    options: [
+      { id: 'a', text: 'Esterificação' },
+      { id: 'b', text: 'Saponificação' },
+      { id: 'c', text: 'Craqueamento' },
+      { id: 'd', text: 'Polimerização' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A saponificação é a hidrólise básica de um éster (como um triglicerídeo) ou a reação direta de um ácido graxo com uma base forte, gerando o sal de ácido graxo (sabão) e glicerol ou água.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_qui_organica_reacoes_4',
+    topicId: 'qui_organica_reacoes',
+    subject: 'Química',
+    prompt: 'A desidratação intramolecular do etanol (CH3-CH2-OH), na presença de ácido sulfúrico concentrado e aquecimento acima de 170 °C, produz eteno e água. Essa transformação é classificada como uma reação de:',
+    options: [
+      { id: 'a', text: 'Adição' },
+      { id: 'b', text: 'Substituição' },
+      { id: 'c', text: 'Eliminação' },
+      { id: 'd', text: 'Oxirredução' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'A desidratação intramolecular do etanol remove uma molécula de água da própria cadeia carbônica, formando uma dupla ligação (eteno). Reações que removem átomos ou grupos de uma molécula, formando uma insaturação ou ciclo, são classificadas como eliminação — o inverso de uma adição.',
+    difficulty: 'medium'
   },
   {
     id: 'q_real_vunesp_2023_bio',
@@ -4201,30 +4381,75 @@ export const mockQuestions: Question[] = [
     id: 'q_qui_modelos_atomicos_1',
     topicId: 'qui_modelos_atomicos',
     subject: 'Química',
-    prompt: 'No modelo atômico atual, os elétrons de um átomo estão localizados principalmente:',
+    prompt: 'Um átomo neutro X possui número de massa (A) igual a 40 e número atômico (Z) igual a 18. Quantos nêutrons esse átomo possui?',
     options: [
-      { id: 'a', text: 'No núcleo, junto com prótons e nêutrons' },
-      { id: 'b', text: 'Na eletrosfera, região ao redor do núcleo, organizados em níveis de energia' },
-      { id: 'c', text: 'Fora do átomo, orbitando toda a molécula' },
-      { id: 'd', text: 'Distribuídos igualmente entre o núcleo e a eletrosfera' }
+      { id: 'a', text: '18' },
+      { id: 'b', text: '22' },
+      { id: 'c', text: '40' },
+      { id: 'd', text: '58' }
     ],
     correctOptionId: 'b',
-    explanation: 'No modelo atual, prótons e nêutrons ocupam o núcleo, enquanto os elétrons ocupam a eletrosfera, distribuídos em níveis e subníveis de energia ao redor do núcleo.',
+    explanation: 'O número de massa A é a soma de prótons (Z) e nêutrons (n): A = Z + n. Logo, n = A - Z = 40 - 18 = 22 nêutrons.',
     difficulty: 'easy'
   },
   {
     id: 'q_qui_modelos_atomicos_2',
     topicId: 'qui_modelos_atomicos',
     subject: 'Química',
-    prompt: 'Um átomo neutro possui número atômico (Z) igual a 17. Quantos elétrons esse átomo possui?',
+    prompt: 'Dois átomos, X e Y, possuem o mesmo número atômico (Z), mas números de massa (A) diferentes. Esses átomos são classificados como:',
     options: [
-      { id: 'a', text: '17' },
-      { id: 'b', text: '18' },
-      { id: 'c', text: '35' },
-      { id: 'd', text: '8' }
+      { id: 'a', text: 'Isóbaros' },
+      { id: 'b', text: 'Isótonos' },
+      { id: 'c', text: 'Isótopos' },
+      { id: 'd', text: 'Isoeletrônicos' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'Isótopos são átomos do mesmo elemento químico (mesmo Z), portanto com o mesmo número de prótons, mas com números de massa (A) diferentes, o que significa números de nêutrons diferentes.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_qui_modelos_atomicos_3',
+    topicId: 'qui_modelos_atomicos',
+    subject: 'Química',
+    prompt: 'Um átomo perde 3 elétrons e se transforma em um cátion X³⁺ que possui 10 elétrons. Qual é o número atômico (Z) desse elemento?',
+    options: [
+      { id: 'a', text: '7' },
+      { id: 'b', text: '10' },
+      { id: 'c', text: '13' },
+      { id: 'd', text: '16' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'O átomo neutro tinha 10 elétrons + 3 elétrons perdidos = 13 elétrons originalmente. Como um átomo neutro tem número de elétrons igual ao número de prótons (Z), Z = 13.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_qui_modelos_atomicos_4',
+    topicId: 'qui_modelos_atomicos',
+    subject: 'Química',
+    prompt: 'No modelo atômico de Bohr, um elétron emite um fóton de luz quando:',
+    options: [
+      { id: 'a', text: 'Absorve energia e salta para um nível de energia mais externo (mais afastado do núcleo)' },
+      { id: 'b', text: 'Salta de um nível de energia mais externo para um nível mais interno (mais próximo do núcleo)' },
+      { id: 'c', text: 'Permanece parado em um mesmo nível de energia, sem qualquer transição' },
+      { id: 'd', text: 'É arrancado definitivamente do átomo, tornando-o um cátion' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'No modelo de Bohr, o elétron absorve energia (fóton) para saltar a um nível mais externo (mais energético) e emite um fóton de energia bem definida ao retornar a um nível mais interno (menos energético).',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_qui_modelos_atomicos_5',
+    topicId: 'qui_modelos_atomicos',
+    subject: 'Química',
+    prompt: 'Um átomo tem a distribuição eletrônica em camadas 2-8-8-2. Quantos elétrons esse átomo possui na camada de valência (última camada)?',
+    options: [
+      { id: 'a', text: '2' },
+      { id: 'b', text: '8' },
+      { id: 'c', text: '18' },
+      { id: 'd', text: '20' }
     ],
     correctOptionId: 'a',
-    explanation: 'O número atômico (Z) indica o número de prótons. Em um átomo neutro, o número de elétrons é igual ao número de prótons, logo esse átomo possui 17 elétrons.',
+    explanation: 'A camada de valência é a última camada eletrônica ocupada. Na distribuição 2-8-8-2, a última camada listada possui 2 elétrons, portanto essa é a quantidade de elétrons de valência.',
     difficulty: 'medium'
   },
   // Química — Radioatividade
@@ -4232,30 +4457,75 @@ export const mockQuestions: Question[] = [
     id: 'q_qui_radioatividade_1',
     topicId: 'qui_radioatividade',
     subject: 'Química',
-    prompt: 'As partículas alfa, emitidas em certos processos de decaimento radioativo, são constituídas por:',
+    prompt: 'Ao emitir uma partícula alfa, um núcleo radioativo sofre as seguintes variações em seu número atômico (Z) e número de massa (A):',
     options: [
-      { id: 'a', text: 'Apenas elétrons' },
-      { id: 'b', text: '2 prótons e 2 nêutrons (equivalente a um núcleo de hélio)' },
-      { id: 'c', text: 'Apenas fótons de alta energia' },
-      { id: 'd', text: 'Nêutrons isolados' }
+      { id: 'a', text: 'Z diminui em 2 e A diminui em 4' },
+      { id: 'b', text: 'Z aumenta em 1 e A permanece igual' },
+      { id: 'c', text: 'Z permanece igual e A diminui em 2' },
+      { id: 'd', text: 'Z diminui em 1 e A diminui em 1' }
     ],
-    correctOptionId: 'b',
-    explanation: 'A partícula alfa corresponde a um núcleo de hélio-4, composto por 2 prótons e 2 nêutrons, emitida em decaimentos de núcleos pesados e instáveis.',
+    correctOptionId: 'a',
+    explanation: 'A partícula alfa é um núcleo de hélio (2 prótons, 2 nêutrons). Ao ser emitida, o núcleo original perde 2 prótons (Z diminui em 2) e 4 unidades de massa no total (A diminui em 4).',
     difficulty: 'easy'
   },
   {
     id: 'q_qui_radioatividade_2',
     topicId: 'qui_radioatividade',
     subject: 'Química',
-    prompt: 'Uma amostra radioativa tem meia-vida de 10 anos e massa inicial de 80 g. Aproximadamente quantos gramas dessa amostra ainda restarão, sem ter decaído, após 30 anos?',
+    prompt: 'Ao emitir uma partícula beta (elétron), um núcleo radioativo sofre a seguinte variação em seu número atômico (Z)?',
     options: [
-      { id: 'a', text: '40 g' },
-      { id: 'b', text: '20 g' },
-      { id: 'c', text: '10 g' },
-      { id: 'd', text: '5 g' }
+      { id: 'a', text: 'Z diminui em 1, pois um próton é perdido' },
+      { id: 'b', text: 'Z aumenta em 1, pois um nêutron se converte em próton' },
+      { id: 'c', text: 'Z permanece exatamente igual' },
+      { id: 'd', text: 'Z diminui em 2, como na emissão alfa' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Na emissão beta, um nêutron do núcleo se transforma em um próton, emitindo um elétron (partícula beta). Como o número de prótons aumenta em 1, Z aumenta em 1, enquanto A permanece o mesmo.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_qui_radioatividade_3',
+    topicId: 'qui_radioatividade',
+    subject: 'Química',
+    prompt: 'Uma amostra radioativa tem massa inicial de 160 g. Sabendo que sua meia-vida é de 5 dias, qual será, aproximadamente, a massa restante dessa amostra após 20 dias?',
+    options: [
+      { id: 'a', text: '80 g' },
+      { id: 'b', text: '40 g' },
+      { id: 'c', text: '20 g' },
+      { id: 'd', text: '10 g' }
+    ],
+    correctOptionId: 'd',
+    explanation: '20 dias equivalem a 4 meias-vidas (20 ÷ 5). A cada meia-vida a massa cai à metade: 160 → 80 → 40 → 20 → 10 g.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_qui_radioatividade_4',
+    topicId: 'qui_radioatividade',
+    subject: 'Química',
+    prompt: 'O urânio-238 (Z = 92) decai, através de uma série de emissões, até o chumbo-206 (Z = 82), estável. Sabendo que a diferença de número de massa é 32 e que cada partícula alfa emitida reduz A em 4, quantas partículas alfa foram emitidas nessa série de decaimentos?',
+    options: [
+      { id: 'a', text: '4' },
+      { id: 'b', text: '6' },
+      { id: 'c', text: '8' },
+      { id: 'd', text: '10' }
     ],
     correctOptionId: 'c',
-    explanation: '30 anos correspondem a 3 meias-vidas (30 ÷ 10). A cada meia-vida, a massa se reduz à metade: 80 g → 40 g → 20 g → 10 g.',
+    explanation: 'A diferença de massa é 238 - 206 = 32. Como cada partícula alfa reduz A em 4 unidades, o número de partículas alfa emitidas é 32 ÷ 4 = 8.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_qui_radioatividade_5',
+    topicId: 'qui_radioatividade',
+    subject: 'Química',
+    prompt: 'A principal diferença entre os processos de fissão nuclear e fusão nuclear é que:',
+    options: [
+      { id: 'a', text: 'Na fissão, um núcleo pesado se divide em núcleos menores; na fusão, núcleos leves se unem para formar um núcleo mais pesado' },
+      { id: 'b', text: 'Na fissão, núcleos leves se unem; na fusão, um núcleo pesado se divide' },
+      { id: 'c', text: 'Ambos os processos consistem exclusivamente na emissão de partículas alfa' },
+      { id: 'd', text: 'Não há qualquer diferença física entre os dois processos' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Fissão nuclear é a divisão de um núcleo pesado (como urânio) em núcleos menores, liberando energia; fusão nuclear é a união de núcleos leves (como isótopos de hidrogênio) para formar um núcleo mais pesado, também liberando energia (processo que ocorre no Sol).',
     difficulty: 'medium'
   },
   // Química — Gases
@@ -4278,46 +4548,136 @@ export const mockQuestions: Question[] = [
     id: 'q_qui_gases_2',
     topicId: 'qui_gases',
     subject: 'Química',
-    prompt: 'De acordo com a Equação de Clapeyron (PV = nRT), para uma quantidade fixa de gás (n constante), se a temperatura T aumentar mantendo o volume V constante, a pressão P deve:',
+    prompt: 'Um gás ideal ocupa 2,0 L a 27 °C (300 K), sob pressão constante. Qual será seu volume, aproximadamente, se a temperatura for elevada para 600 K, mantendo a pressão constante (Lei de Charles/Gay-Lussac)?',
     options: [
-      { id: 'a', text: 'Diminuir' },
-      { id: 'b', text: 'Permanecer constante' },
-      { id: 'c', text: 'Aumentar' },
-      { id: 'd', text: 'Tornar-se nula' }
+      { id: 'a', text: '1,0 L' },
+      { id: 'b', text: '2,0 L' },
+      { id: 'c', text: '4,0 L' },
+      { id: 'd', text: '6,0 L' }
     ],
     correctOptionId: 'c',
-    explanation: 'Com n e V fixos, P = (nR/V) × T, ou seja, P é diretamente proporcional a T. Se a temperatura aumenta, a pressão também aumenta.',
+    explanation: 'A pressão constante, V/T é constante (Lei de Charles). Duplicando a temperatura absoluta (300 K → 600 K), o volume também duplica: 2,0 L → 4,0 L.',
     difficulty: 'medium'
+  },
+  {
+    id: 'q_qui_gases_3',
+    topicId: 'qui_gases',
+    subject: 'Química',
+    prompt: 'Uma mistura gasosa em um recipiente fechado exerce pressão total de 5 atm. Se o gás A contribui com 3 atm dessa pressão total, qual é a pressão parcial do gás B, supondo que a mistura contenha apenas os gases A e B?',
+    options: [
+      { id: 'a', text: '2 atm' },
+      { id: 'b', text: '3 atm' },
+      { id: 'c', text: '5 atm' },
+      { id: 'd', text: '8 atm' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Pela Lei de Dalton das pressões parciais, a soma das pressões parciais é igual à pressão total: P_total = P_A + P_B. Logo, P_B = 5 - 3 = 2 atm.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_qui_gases_4',
+    topicId: 'qui_gases',
+    subject: 'Química',
+    prompt: 'Nas Condições Normais de Temperatura e Pressão (CNTP: 0 °C e 1 atm), 1 mol de qualquer gás ideal ocupa aproximadamente 22,4 L (volume molar). Qual é o volume aproximado ocupado por 2 mol de um gás ideal nessas condições?',
+    options: [
+      { id: 'a', text: '11,2 L' },
+      { id: 'b', text: '22,4 L' },
+      { id: 'c', text: '44,8 L' },
+      { id: 'd', text: '67,2 L' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'O volume molar nas CNTP é de 22,4 L por mol. Para 2 mol, o volume é diretamente proporcional: 2 × 22,4 = 44,8 L.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_qui_gases_5',
+    topicId: 'qui_gases',
+    subject: 'Química',
+    prompt: 'Um gás ideal, em um recipiente de volume variável, tem tanto sua pressão quanto seu volume aumentados simultaneamente. De acordo com a Equação Geral dos Gases (P₁V₁/T₁ = P₂V₂/T₂), o que deve necessariamente ter ocorrido com a temperatura absoluta do gás?',
+    options: [
+      { id: 'a', text: 'A temperatura absoluta necessariamente diminuiu' },
+      { id: 'b', text: 'A temperatura absoluta necessariamente aumentou' },
+      { id: 'c', text: 'A temperatura absoluta permaneceu necessariamente constante' },
+      { id: 'd', text: 'Não é possível dizer nada sobre a temperatura sem valores numéricos' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Como P e V aumentaram simultaneamente, o produto PV aumentou. Pela Equação Geral dos Gases, PV/T é constante quando n é fixo, então se PV aumentou, T também deve ter aumentado para manter a proporção.',
+    difficulty: 'hard'
   },
   // Química — Química Inorgânica
   {
     id: 'q_qui_inorganica_1',
     topicId: 'qui_inorganica',
     subject: 'Química',
-    prompt: 'Ácidos, segundo a definição de Arrhenius, são substâncias que, em solução aquosa, liberam como único cátion:',
+    prompt: 'O ácido HNO₃, muito usado na indústria e conhecido por sua alta capacidade oxidante, é corretamente nomeado como:',
     options: [
-      { id: 'a', text: 'O ânion hidroxila (OH⁻)' },
-      { id: 'b', text: 'O cátion hidrônio/hidrogênio (H⁺)' },
-      { id: 'c', text: 'Um cátion metálico' },
-      { id: 'd', text: 'Apenas moléculas neutras' }
+      { id: 'a', text: 'Ácido nitroso' },
+      { id: 'b', text: 'Ácido nítrico' },
+      { id: 'c', text: 'Ácido nitrídrico' },
+      { id: 'd', text: 'Ácido nitroso hídrico' }
     ],
     correctOptionId: 'b',
-    explanation: 'Pela definição de Arrhenius, ácidos são substâncias que, em solução aquosa, liberam H⁺ (na prática, H₃O⁺) como único tipo de cátion.',
+    explanation: 'O HNO₃ é o ácido nítrico (nitrogênio no seu maior Nox comum, +5, entre os oxiácidos de nitrogênio); o ácido nitroso é o HNO₂, com nitrogênio em Nox +3.',
     difficulty: 'easy'
   },
   {
     id: 'q_qui_inorganica_2',
     topicId: 'qui_inorganica',
     subject: 'Química',
-    prompt: 'Uma reação de neutralização, típica entre um ácido e uma base, produz como resultado:',
+    prompt: 'Uma solução aquosa de hidróxido de sódio (NaOH), uma base forte, apresenta pH:',
     options: [
-      { id: 'a', text: 'Apenas gás e água' },
-      { id: 'b', text: 'Um sal e água' },
-      { id: 'c', text: 'Apenas um óxido' },
-      { id: 'd', text: 'Dois ácidos diferentes' }
+      { id: 'a', text: 'Igual a 7' },
+      { id: 'b', text: 'Menor que 7' },
+      { id: 'c', text: 'Maior que 7' },
+      { id: 'd', text: 'Sempre igual a 14, independentemente da concentração' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'Bases, ao se dissociarem em água, liberam OH⁻, tornando a solução básica, com pH maior que 7 (o valor exato depende da concentração, mas nunca é igual nem menor que 7 para uma base forte em solução).',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_qui_inorganica_3',
+    topicId: 'qui_inorganica',
+    subject: 'Química',
+    prompt: 'Na reação de neutralização entre ácido clorídrico (HCl) e hidróxido de sódio (NaOH), os produtos formados são:',
+    options: [
+      { id: 'a', text: 'NaCl e H₂O' },
+      { id: 'b', text: 'NaCl e H₂' },
+      { id: 'c', text: 'Na₂O e HCl' },
+      { id: 'd', text: 'NaOH e HCl, sem reação' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'HCl + NaOH → NaCl + H₂O. A reação entre um ácido e uma base forma um sal (NaCl) e água, típica de uma neutralização.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_qui_inorganica_4',
+    topicId: 'qui_inorganica',
+    subject: 'Química',
+    prompt: 'O óxido de sódio (Na₂O), ao reagir com água, forma NaOH, uma base. Esse óxido é classificado como um óxido:',
+    options: [
+      { id: 'a', text: 'Ácido' },
+      { id: 'b', text: 'Básico' },
+      { id: 'c', text: 'Neutro' },
+      { id: 'd', text: 'Anfótero' }
     ],
     correctOptionId: 'b',
-    explanation: 'Na reação de neutralização de Arrhenius, um ácido reage com uma base formando um sal e água (ex.: HCl + NaOH → NaCl + H₂O).',
+    explanation: 'Óxidos de metais alcalinos e alcalino-terrosos, como o Na₂O, reagem com água formando bases (hidróxidos), sendo por isso classificados como óxidos básicos.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_qui_inorganica_5',
+    topicId: 'qui_inorganica',
+    subject: 'Química',
+    prompt: 'O sulfato de alumínio, sal amplamente usado no tratamento de água, é formado pelo cátion Al³⁺ e pelo ânion SO₄²⁻. Qual é a fórmula molecular correta desse sal?',
+    options: [
+      { id: 'a', text: 'AlSO₄' },
+      { id: 'b', text: 'Al₂(SO₄)₃' },
+      { id: 'c', text: 'Al₃(SO₄)₂' },
+      { id: 'd', text: 'Al(SO₄)₃' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Para neutralizar as cargas, é preciso igualar 3+ e 2-: o mínimo múltiplo comum é 6, exigindo 2 cátions Al³⁺ (2×3=6) e 3 ânions SO₄²⁻ (3×2=6), resultando em Al₂(SO₄)₃.',
     difficulty: 'medium'
   },
   // Química — Oxirredução
@@ -4325,22 +4685,67 @@ export const mockQuestions: Question[] = [
     id: 'q_qui_oxirreducao_1',
     topicId: 'qui_oxirreducao',
     subject: 'Química',
-    prompt: 'Em uma reação de oxirredução, a espécie que perde elétrons sofre:',
+    prompt: 'Qual é o número de oxidação (Nox) do manganês (Mn) no íon permanganato (MnO₄⁻)?',
     options: [
-      { id: 'a', text: 'Redução' },
-      { id: 'b', text: 'Oxidação' },
-      { id: 'c', text: 'Neutralização' },
-      { id: 'd', text: 'Sublimação' }
+      { id: 'a', text: '+2' },
+      { id: 'b', text: '+4' },
+      { id: 'c', text: '+6' },
+      { id: 'd', text: '+7' }
     ],
-    correctOptionId: 'b',
-    explanation: 'Oxidação é o processo em que uma espécie perde elétrons (aumentando seu número de oxidação); redução é o processo inverso, de ganho de elétrons.',
-    difficulty: 'easy'
+    correctOptionId: 'd',
+    explanation: 'Cada oxigênio tem Nox -2, totalizando -8 para os 4 átomos. Como a carga total do íon é -1: Nox(Mn) + (-8) = -1, logo Nox(Mn) = +7.',
+    difficulty: 'medium'
   },
   {
     id: 'q_qui_oxirreducao_2',
     topicId: 'qui_oxirreducao',
     subject: 'Química',
-    prompt: 'Qual é o número de oxidação (Nox) do enxofre (S) no íon sulfato (SO₄²⁻)?',
+    prompt: 'Na reação 2Fe + 3Cl₂ → 2FeCl₃, o ferro (Fe) sofre oxidação, saindo de Nox 0 para +3, enquanto o cloro sofre redução, saindo de Nox 0 para -1. Nessa reação, o cloro (Cl₂) atua como o:',
+    options: [
+      { id: 'a', text: 'Agente redutor, pois perde elétrons' },
+      { id: 'b', text: 'Agente oxidante, pois ganha elétrons e provoca a oxidação do ferro' },
+      { id: 'c', text: 'Catalisador da reação' },
+      { id: 'd', text: 'Produto final da reação, sem papel na transferência de elétrons' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'O Cl₂ ganha elétrons (é reduzido, de 0 para -1) e, ao fazê-lo, provoca a oxidação do ferro — por isso é chamado de agente oxidante. O ferro, que perde elétrons, é o agente redutor.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_qui_oxirreducao_3',
+    topicId: 'qui_oxirreducao',
+    subject: 'Química',
+    prompt: 'Em uma reação de oxirredução, o agente oxidante é a espécie que:',
+    options: [
+      { id: 'a', text: 'Perde elétrons e sofre oxidação' },
+      { id: 'b', text: 'Ganha elétrons e provoca a oxidação de outra espécie, sendo ela mesma reduzida' },
+      { id: 'c', text: 'Não participa da transferência de elétrons' },
+      { id: 'd', text: 'Sempre é um elemento no estado gasoso' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'O agente oxidante é a espécie que ganha elétrons (sofre redução), causando a oxidação de outra espécie na reação. O agente redutor, por sua vez, perde elétrons e sofre oxidação.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_qui_oxirreducao_4',
+    topicId: 'qui_oxirreducao',
+    subject: 'Química',
+    prompt: 'Um íon Fe²⁺ se transforma em Fe³⁺ em uma reação de oxirredução. Quantos elétrons esse íon perdeu nesse processo?',
+    options: [
+      { id: 'a', text: '1' },
+      { id: 'b', text: '2' },
+      { id: 'c', text: '3' },
+      { id: 'd', text: '5' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A variação de carga foi de +2 para +3, um aumento de 1 unidade positiva, o que corresponde à perda de exatamente 1 elétron.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_qui_oxirreducao_5',
+    topicId: 'qui_oxirreducao',
+    subject: 'Química',
+    prompt: 'Qual é o número de oxidação (Nox) do enxofre (S) na molécula de ácido sulfúrico (H₂SO₄)?',
     options: [
       { id: 'a', text: '+2' },
       { id: 'b', text: '+4' },
@@ -4348,7 +4753,7 @@ export const mockQuestions: Question[] = [
       { id: 'd', text: '-2' }
     ],
     correctOptionId: 'c',
-    explanation: 'Cada oxigênio tem Nox -2, totalizando -8 para os 4 átomos de oxigênio. Como a carga total do íon é -2, o Nox do enxofre deve satisfazer: Nox(S) + (-8) = -2, logo Nox(S) = +6.',
+    explanation: 'O hidrogênio tem Nox +1 (total +2) e cada oxigênio tem Nox -2 (total -8). Como a molécula é neutra: 2(+1) + Nox(S) + 4(-2) = 0 → Nox(S) = +6.',
     difficulty: 'medium'
   },
   // Química — Termoquímica
@@ -4371,46 +4776,136 @@ export const mockQuestions: Question[] = [
     id: 'q_qui_termoquimica_2',
     topicId: 'qui_termoquimica',
     subject: 'Química',
-    prompt: 'Considere as reações: A → B, com ΔH = -50 kJ/mol; e B → C, com ΔH = +20 kJ/mol. Qual é a variação de entalpia da reação global A → C?',
+    prompt: 'A combustão completa de 1 mol de carbono grafite libera 394 kJ de energia (ΔH = -394 kJ/mol). Quanta energia é liberada na combustão completa de 2 mol de carbono grafite, nas mesmas condições?',
     options: [
-      { id: 'a', text: '-70 kJ/mol' },
-      { id: 'b', text: '-30 kJ/mol' },
-      { id: 'c', text: '+30 kJ/mol' },
-      { id: 'd', text: '+70 kJ/mol' }
+      { id: 'a', text: '197 kJ' },
+      { id: 'b', text: '394 kJ' },
+      { id: 'c', text: '788 kJ' },
+      { id: 'd', text: '1182 kJ' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'A entalpia de reação é uma grandeza extensiva, proporcional à quantidade de matéria. Para 2 mol, a energia liberada dobra: 2 × 394 = 788 kJ.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_qui_termoquimica_3',
+    topicId: 'qui_termoquimica',
+    subject: 'Química',
+    prompt: 'Considere as reações: A → B, com ΔH = -50 kJ/mol; e B → C, com ΔH = +30 kJ/mol. Qual é a variação de entalpia da reação global A → C, de acordo com a Lei de Hess?',
+    options: [
+      { id: 'a', text: '-80 kJ/mol' },
+      { id: 'b', text: '-20 kJ/mol' },
+      { id: 'c', text: '+20 kJ/mol' },
+      { id: 'd', text: '+80 kJ/mol' }
     ],
     correctOptionId: 'b',
-    explanation: 'Pela Lei de Hess, a variação de entalpia da reação global é a soma das variações das etapas intermediárias: -50 + 20 = -30 kJ/mol.',
+    explanation: 'Pela Lei de Hess, a variação de entalpia da reação global é a soma algébrica das variações das etapas intermediárias, desde que elas se somem à reação total: -50 + 30 = -20 kJ/mol.',
     difficulty: 'medium'
+  },
+  {
+    id: 'q_qui_termoquimica_4',
+    topicId: 'qui_termoquimica',
+    subject: 'Química',
+    prompt: 'A entalpia padrão de formação (ΔHf°) de uma substância é definida como a variação de entalpia associada à:',
+    options: [
+      { id: 'a', text: 'Combustão completa de 1 mol da substância' },
+      { id: 'b', text: 'Formação de 1 mol da substância a partir de seus elementos constituintes, no estado padrão' },
+      { id: 'c', text: 'Decomposição total de 1 mol da substância em seus átomos isolados' },
+      { id: 'd', text: 'Mudança de estado físico de 1 mol da substância, sem reação química' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A entalpia padrão de formação é a variação de entalpia da reação de formação de 1 mol de uma substância a partir de seus elementos no estado padrão (forma mais estável, 25 °C e 1 atm).',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_qui_termoquimica_5',
+    topicId: 'qui_termoquimica',
+    subject: 'Química',
+    prompt: 'Uma reação exotérmica tem energia de ativação direta (Ea direta) igual a 60 kJ/mol e ΔH igual a -50 kJ/mol. Qual é, aproximadamente, a energia de ativação da reação inversa (Ea inversa)?',
+    options: [
+      { id: 'a', text: '10 kJ/mol' },
+      { id: 'b', text: '50 kJ/mol' },
+      { id: 'c', text: '60 kJ/mol' },
+      { id: 'd', text: '110 kJ/mol' }
+    ],
+    correctOptionId: 'd',
+    explanation: 'A energia de ativação da reação inversa é igual à energia de ativação direta menos o ΔH da reação: Ea_inversa = Ea_direta - ΔH = 60 - (-50) = 110 kJ/mol.',
+    difficulty: 'hard'
   },
   // Química — Cinética Química
   {
     id: 'q_qui_cinetica_1',
     topicId: 'qui_cinetica',
     subject: 'Química',
-    prompt: 'Um catalisador atua em uma reação química:',
+    prompt: 'Em um experimento, quando a concentração de um reagente A é duplicada (mantendo os demais constantes), a velocidade da reação quadruplica. Qual é a ordem da reação em relação ao reagente A?',
     options: [
-      { id: 'a', text: 'Aumentando a energia de ativação necessária para a reação ocorrer' },
-      { id: 'b', text: 'Diminuindo a energia de ativação, aumentando a velocidade da reação, sem ser consumido no processo' },
-      { id: 'c', text: 'Sendo consumido totalmente durante a reação' },
-      { id: 'd', text: 'Alterando o produto final da reação' }
+      { id: 'a', text: 'Ordem 0' },
+      { id: 'b', text: 'Ordem 1' },
+      { id: 'c', text: 'Ordem 2' },
+      { id: 'd', text: 'Ordem 4' }
     ],
-    correctOptionId: 'b',
-    explanation: 'Um catalisador oferece um caminho reacional alternativo com menor energia de ativação, acelerando a reação, sem ser consumido no processo nem alterar o produto final.',
-    difficulty: 'easy'
+    correctOptionId: 'c',
+    explanation: 'Se v = k[A]ⁿ, duplicar [A] e quadruplicar v significa que 2ⁿ = 4, logo n = 2. A reação é de segunda ordem em relação a A.',
+    difficulty: 'hard'
   },
   {
     id: 'q_qui_cinetica_2',
     topicId: 'qui_cinetica',
     subject: 'Química',
-    prompt: 'O aumento da temperatura de um sistema reacional geralmente provoca um aumento na velocidade da reação principalmente porque:',
+    prompt: 'Em um experimento, quando a concentração de um reagente B é duplicada (mantendo os demais constantes), a velocidade da reação também duplica. Qual é a ordem da reação em relação ao reagente B?',
     options: [
-      { id: 'a', text: 'Diminui o número de colisões entre as partículas' },
-      { id: 'b', text: 'Aumenta a energia cinética média das partículas, elevando a frequência e a eficácia das colisões entre elas' },
-      { id: 'c', text: 'Reduz a concentração dos reagentes' },
-      { id: 'd', text: 'Não tem qualquer relação com a velocidade da reação' }
+      { id: 'a', text: 'Ordem 0' },
+      { id: 'b', text: 'Ordem 1' },
+      { id: 'c', text: 'Ordem 2' },
+      { id: 'd', text: 'Ordem 3' }
     ],
     correctOptionId: 'b',
-    explanation: 'O aumento de temperatura eleva a energia cinética média das partículas, tornando as colisões mais frequentes e mais efetivas (com energia suficiente para superar a energia de ativação), o que acelera a reação.',
+    explanation: 'Se v = k[B]ⁿ, duplicar [B] e duplicar v significa que 2ⁿ = 2, logo n = 1. A reação é de primeira ordem em relação a B.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_qui_cinetica_3',
+    topicId: 'qui_cinetica',
+    subject: 'Química',
+    prompt: 'A energia de ativação de uma reação química corresponde à:',
+    options: [
+      { id: 'a', text: 'Energia total liberada na reação' },
+      { id: 'b', text: 'Energia mínima necessária para que uma colisão entre reagentes resulte em reação' },
+      { id: 'c', text: 'Diferença entre as entalpias dos produtos e dos reagentes' },
+      { id: 'd', text: 'Energia armazenada exclusivamente nos produtos da reação' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A energia de ativação é a energia mínima que as partículas reagentes precisam ter, no momento da colisão, para que essa colisão seja efetiva e resulte na formação dos produtos.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_qui_cinetica_4',
+    topicId: 'qui_cinetica',
+    subject: 'Química',
+    prompt: 'Um catalisador heterogêneo (sólido) atua sobre reagentes em fase gasosa ou líquida. Triturar esse catalisador sólido, aumentando sua superfície de contato, tem como efeito principal:',
+    options: [
+      { id: 'a', text: 'Diminuir a velocidade da reação, pois reduz a estabilidade do catalisador' },
+      { id: 'b', text: 'Aumentar a velocidade da reação, pois amplia a área de contato disponível para as colisões efetivas' },
+      { id: 'c', text: 'Não ter qualquer efeito sobre a velocidade da reação' },
+      { id: 'd', text: 'Alterar permanentemente o produto final da reação' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Em catálise heterogênea, a reação ocorre na superfície do catalisador sólido. Aumentar a área de superfície (triturando o sólido) aumenta o número de sítios ativos disponíveis, acelerando a reação.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_qui_cinetica_5',
+    topicId: 'qui_cinetica',
+    subject: 'Química',
+    prompt: 'Segundo a Teoria das Colisões, para que uma colisão entre moléculas reagentes resulte efetivamente em reação química, são necessárias duas condições simultâneas:',
+    options: [
+      { id: 'a', text: 'Temperatura baixa e concentração alta' },
+      { id: 'b', text: 'Orientação geométrica adequada e energia igual ou superior à energia de ativação' },
+      { id: 'c', text: 'Presença obrigatória de um catalisador e ausência de luz' },
+      { id: 'd', text: 'Pressão constante e volume constante' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A Teoria das Colisões estabelece que uma colisão só é efetiva (leva à formação de produtos) se as moléculas colidirem com orientação geométrica favorável e com energia cinética igual ou superior à energia de ativação da reação.',
     difficulty: 'medium'
   },
   // Química — Eletroquímica
@@ -4418,30 +4913,75 @@ export const mockQuestions: Question[] = [
     id: 'q_qui_eletroquimica_1',
     topicId: 'qui_eletroquimica',
     subject: 'Química',
-    prompt: 'Em uma pilha eletroquímica, o eletrodo onde ocorre a oxidação é chamado de:',
+    prompt: 'Na pilha de Daniell, formada por eletrodos de zinco e cobre, o zinco (Zn) sofre oxidação e o cobre (Cu²⁺) sofre redução. Nessa pilha, o eletrodo de zinco é o:',
     options: [
-      { id: 'a', text: 'Cátodo' },
-      { id: 'b', text: 'Ânodo' },
-      { id: 'c', text: 'Eletrólito' },
-      { id: 'd', text: 'Ponte salina' }
+      { id: 'a', text: 'Cátodo, pois é onde ocorre a redução' },
+      { id: 'b', text: 'Ânodo, pois é onde ocorre a oxidação' },
+      { id: 'c', text: 'Eletrólito da pilha' },
+      { id: 'd', text: 'Ponte salina da pilha' }
     ],
     correctOptionId: 'b',
-    explanation: 'Em uma pilha (célula galvânica), a oxidação ocorre no ânodo (perda de elétrons) e a redução ocorre no cátodo (ganho de elétrons).',
+    explanation: 'Em uma pilha (célula galvânica), a oxidação ocorre no ânodo (o zinco, que perde elétrons) e a redução ocorre no cátodo (o cobre, que ganha elétrons).',
     difficulty: 'easy'
   },
   {
     id: 'q_qui_eletroquimica_2',
     topicId: 'qui_eletroquimica',
     subject: 'Química',
-    prompt: 'Na eletrólise, ao contrário do que ocorre em uma pilha, a energia:',
+    prompt: 'Na pilha de Daniell, o potencial padrão de redução do Cu²⁺/Cu é +0,34 V e o do Zn²⁺/Zn é -0,76 V. Qual é o valor aproximado da diferença de potencial (ddp) dessa pilha?',
     options: [
-      { id: 'a', text: 'Elétrica é gerada a partir de uma reação química espontânea' },
-      { id: 'b', text: 'Elétrica é fornecida ao sistema para forçar a ocorrência de uma reação química não espontânea' },
-      { id: 'c', text: 'Nunca está envolvida no processo' },
-      { id: 'd', text: 'É sempre convertida em energia térmica apenas' }
+      { id: 'a', text: '0,42 V' },
+      { id: 'b', text: '0,76 V' },
+      { id: 'c', text: '1,10 V' },
+      { id: 'd', text: '1,44 V' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'A ddp da pilha é a diferença entre o potencial de redução do cátodo (maior, +0,34 V) e o do ânodo (menor, -0,76 V): E = 0,34 - (-0,76) = 1,10 V.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_qui_eletroquimica_3',
+    topicId: 'qui_eletroquimica',
+    subject: 'Química',
+    prompt: 'Na eletrólise aquosa de cloreto de sódio (salmoura), um dos produtos formados no cátodo, a partir da redução da água, é:',
+    options: [
+      { id: 'a', text: 'Gás cloro (Cl₂)' },
+      { id: 'b', text: 'Gás hidrogênio (H₂)' },
+      { id: 'c', text: 'Sódio metálico (Na)' },
+      { id: 'd', text: 'Gás oxigênio (O₂)' }
     ],
     correctOptionId: 'b',
-    explanation: 'Enquanto a pilha converte energia de uma reação química espontânea em energia elétrica, a eletrólise faz o processo inverso: usa energia elétrica fornecida externamente para forçar uma reação não espontânea.',
+    explanation: 'Na eletrólise aquosa de NaCl, o cátodo reduz preferencialmente a água (não o Na⁺, mais difícil de reduzir), liberando gás hidrogênio (H₂) e íons OH⁻; o cloro (Cl₂) se forma no ânodo.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_qui_eletroquimica_4',
+    topicId: 'qui_eletroquimica',
+    subject: 'Química',
+    prompt: 'Em uma pilha (célula galvânica), o ânodo é o polo negativo. Já em uma célula eletrolítica (eletrólise), o ânodo é o polo:',
+    options: [
+      { id: 'a', text: 'Negativo, exatamente como na pilha' },
+      { id: 'b', text: 'Positivo, pois está ligado ao polo positivo da fonte externa de energia' },
+      { id: 'c', text: 'Neutro, sem polaridade definida' },
+      { id: 'd', text: 'Indefinido, pois eletrólise não possui ânodo' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Na eletrólise, a fonte externa de energia impõe a polaridade: o ânodo (onde ocorre oxidação) é conectado ao polo positivo da fonte, invertendo a convenção de sinal em relação à pilha, embora em ambos os casos a oxidação ocorra no ânodo.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_qui_eletroquimica_5',
+    topicId: 'qui_eletroquimica',
+    subject: 'Química',
+    prompt: 'A corrosão do ferro (formação de ferrugem) é um processo espontâneo de oxidação do ferro metálico em contato com oxigênio e umidade. Esse fenômeno pode ser entendido, do ponto de vista eletroquímico, como análogo ao funcionamento de:',
+    options: [
+      { id: 'a', text: 'Uma célula eletrolítica, pois exige energia elétrica externa' },
+      { id: 'b', text: 'Uma pilha (célula galvânica), pois é um processo espontâneo de oxirredução' },
+      { id: 'c', text: 'Uma reação de neutralização ácido-base' },
+      { id: 'd', text: 'Um processo puramente físico, sem transferência de elétrons' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A corrosão do ferro é um processo espontâneo de oxirredução (o ferro se oxida, o oxigênio se reduz), assim como ocorre em uma pilha — por isso é frequentemente descrita como uma "pilha de corrosão" em miniatura na superfície do metal.',
     difficulty: 'medium'
   },
   // Química — Equilíbrio Químico
@@ -4449,30 +4989,75 @@ export const mockQuestions: Question[] = [
     id: 'q_qui_equilibrio_1',
     topicId: 'qui_equilibrio',
     subject: 'Química',
-    prompt: 'De acordo com o Princípio de Le Chatelier, quando um sistema em equilíbrio químico sofre uma perturbação (como aumento de concentração de um reagente), o sistema tende a:',
+    prompt: 'Em uma reação reversível em equilíbrio, um valor de constante de equilíbrio (Kc) muito maior que 1 indica que, no equilíbrio:',
     options: [
-      { id: 'a', text: 'Permanecer inalterado' },
-      { id: 'b', text: 'Se deslocar no sentido de minimizar essa perturbação, buscando um novo estado de equilíbrio' },
-      { id: 'c', text: 'Parar completamente a reação' },
-      { id: 'd', text: 'Inverter espontaneamente todos os produtos em reagentes, sem relação com a perturbação' }
+      { id: 'a', text: 'Praticamente só existem reagentes' },
+      { id: 'b', text: 'Reagentes e produtos estão em quantidades exatamente iguais' },
+      { id: 'c', text: 'A concentração de produtos é predominante em relação à de reagentes' },
+      { id: 'd', text: 'A reação não atingiu de fato o equilíbrio' }
     ],
-    correctOptionId: 'b',
-    explanation: 'O Princípio de Le Chatelier prevê que um sistema em equilíbrio, ao ser perturbado, se desloca no sentido que tende a minimizar (contrabalançar) essa perturbação.',
-    difficulty: 'easy'
+    correctOptionId: 'c',
+    explanation: 'Como Kc é a razão entre as concentrações dos produtos e dos reagentes (elevadas aos coeficientes estequiométricos), um Kc >> 1 indica que, no equilíbrio, a concentração de produtos é muito maior que a de reagentes.',
+    difficulty: 'medium'
   },
   {
     id: 'q_qui_equilibrio_2',
     topicId: 'qui_equilibrio',
     subject: 'Química',
-    prompt: 'Em uma reação reversível em equilíbrio, aumentar a pressão total do sistema (por redução de volume), em uma reação gasosa, favorece o deslocamento do equilíbrio no sentido:',
+    prompt: 'A síntese de amônia, N₂(g) + 3H₂(g) ⇌ 2NH₃(g), é uma reação exotérmica (ΔH < 0). De acordo com o Princípio de Le Chatelier, aumentar a temperatura desse sistema em equilíbrio favorece o deslocamento no sentido:',
     options: [
-      { id: 'a', text: 'Do lado com maior número de mols de gás' },
-      { id: 'b', text: 'Do lado com menor número de mols de gás' },
-      { id: 'c', text: 'Sempre dos reagentes, independentemente do número de mols' },
-      { id: 'd', text: 'Sempre dos produtos, independentemente do número de mols' }
+      { id: 'a', text: 'Direto, formando mais NH₃' },
+      { id: 'b', text: 'Inverso, consumindo NH₃ e formando mais N₂ e H₂' },
+      { id: 'c', text: 'Nenhum, a temperatura não afeta o equilíbrio dessa reação' },
+      { id: 'd', text: 'Direto, mas apenas se a pressão também for reduzida' }
     ],
     correctOptionId: 'b',
-    explanation: 'Aumentar a pressão (reduzindo o volume) desloca o equilíbrio para o lado com menor número total de mols de gás, já que esse deslocamento tende a reduzir a pressão do sistema, conforme o Princípio de Le Chatelier.',
+    explanation: 'Em uma reação exotérmica, o calor pode ser tratado como um "produto". Aumentar a temperatura desloca o equilíbrio no sentido endotérmico (inverso), consumindo o produto NH₃ e regenerando os reagentes N₂ e H₂.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_qui_equilibrio_3',
+    topicId: 'qui_equilibrio',
+    subject: 'Química',
+    prompt: 'Diferentemente de outras perturbações (como mudança de concentração ou pressão), uma mudança de temperatura em um sistema em equilíbrio químico tem um efeito único, que é:',
+    options: [
+      { id: 'a', text: 'Deslocar o equilíbrio sem alterar o valor da constante de equilíbrio (Kc)' },
+      { id: 'b', text: 'Alterar o próprio valor numérico da constante de equilíbrio (Kc)' },
+      { id: 'c', text: 'Nunca deslocar o equilíbrio, apenas acelerar a reação' },
+      { id: 'd', text: 'Impedir que o sistema atinja o equilíbrio' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Mudanças de concentração, pressão ou volume deslocam o equilíbrio mas mantêm Kc constante (a uma dada temperatura). Já a temperatura é a única perturbação que efetivamente altera o valor numérico de Kc.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_qui_equilibrio_4',
+    topicId: 'qui_equilibrio',
+    subject: 'Química',
+    prompt: 'Em um sistema gasoso em equilíbrio, a volume constante, a adição de um gás inerte (que não participa da reação, como o argônio) tem como efeito sobre a posição do equilíbrio:',
+    options: [
+      { id: 'a', text: 'Deslocar o equilíbrio para o lado com maior número de mols' },
+      { id: 'b', text: 'Deslocar o equilíbrio para o lado com menor número de mols' },
+      { id: 'c', text: 'Não deslocar o equilíbrio, pois as pressões parciais dos reagentes e produtos não se alteram' },
+      { id: 'd', text: 'Deslocar totalmente o equilíbrio para os produtos, independentemente da reação' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'A volume constante, adicionar um gás inerte aumenta a pressão total, mas não altera as concentrações (pressões parciais) dos reagentes e produtos já presentes, portanto o equilíbrio não se desloca.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_qui_equilibrio_5',
+    topicId: 'qui_equilibrio',
+    subject: 'Química',
+    prompt: 'Para a reação em equilíbrio 2SO₂(g) + O₂(g) ⇌ 2SO₃(g), qual é a expressão correta da constante de equilíbrio Kc?',
+    options: [
+      { id: 'a', text: 'Kc = [SO₃]² / ([SO₂]²·[O₂])' },
+      { id: 'b', text: 'Kc = [SO₂]²·[O₂] / [SO₃]²' },
+      { id: 'c', text: 'Kc = [SO₃] / ([SO₂]·[O₂])' },
+      { id: 'd', text: 'Kc = [SO₂]·[O₂] / [SO₃]' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A constante de equilíbrio é a razão entre as concentrações dos produtos e dos reagentes, cada uma elevada ao seu coeficiente estequiométrico: Kc = [SO₃]² / ([SO₂]²·[O₂]).',
     difficulty: 'medium'
   },
   // Português — Domínio da Norma Culta
