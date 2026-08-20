@@ -2306,6 +2306,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_geo_cartografia_1',
+    chapter: 'Linguagem Cartográfica',
     topicId: 'geo_cartografia',
     subject: 'Geografia',
     prompt: 'Explique o que é a escala de um mapa, e por que uma escala "grande" (como 1:1.000) representa uma área menor, com mais detalhes, do que uma escala "pequena" (como 1:1.000.000).',
@@ -2319,6 +2320,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_geo_cartografia_2',
+    chapter: 'Projeções Cartográficas',
     topicId: 'geo_cartografia',
     subject: 'Geografia',
     prompt: 'Explique por que é impossível representar a superfície esférica da Terra em um mapa plano sem introduzir algum tipo de distorção, e como isso justifica a existência de diferentes tipos de projeções cartográficas.',
@@ -2332,6 +2334,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_geo_cartografia_3',
+    chapter: 'Representações Gráficas e Cartográficas',
     topicId: 'geo_cartografia',
     subject: 'Geografia',
     prompt: 'Explique como as curvas de nível em um mapa topográfico permitem representar a altitude e o relevo de uma área, mesmo o mapa sendo uma representação bidimensional.',
@@ -2345,6 +2348,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_geo_climatologia_socioambiental_1',
+    chapter: 'Dinâmica Climática',
     topicId: 'geo_climatologia_socioambiental',
     subject: 'Geografia',
     prompt: 'Explique a diferença entre tempo atmosférico e clima, e por que um dia excepcionalmente frio não contradiz a existência do aquecimento global.',
@@ -2358,6 +2362,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_geo_climatologia_socioambiental_2',
+    chapter: 'Dinâmica Climática',
     topicId: 'geo_climatologia_socioambiental',
     subject: 'Geografia',
     prompt: 'Explique o mecanismo básico do efeito estufa natural, e por que ele é necessário para a vida na Terra, antes de discutir o problema do efeito estufa "intensificado".',
@@ -2371,6 +2376,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_geo_climatologia_socioambiental_3',
+    chapter: 'Desafios Ambientais do Século XXI',
     topicId: 'geo_climatologia_socioambiental',
     subject: 'Geografia',
     prompt: 'Explique por que a desertificação, apesar de ocorrer em regiões áridas e semiáridas, é considerada um problema causado (ou fortemente agravado) por atividades humanas, e não apenas um processo climático natural.',
@@ -2384,6 +2390,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_geo_hidrogeografia_1',
+    chapter: 'Hidrogeografia Mundial',
     topicId: 'geo_hidrogeografia',
     subject: 'Geografia',
     prompt: 'Explique por que rios de planalto (com relevo acidentado) e rios de planície (com relevo plano) têm vocações econômicas tão diferentes — um mais voltado à geração de energia, o outro à navegação.',
@@ -2397,6 +2404,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_geo_hidrogeografia_2',
+    chapter: 'Hidrogeografia Mundial',
     topicId: 'geo_hidrogeografia',
     subject: 'Geografia',
     prompt: 'Explique o papel de um aquífero, como o Aquífero Guarani, no ciclo hidrológico e no abastecimento de água, e por que a contaminação de um aquífero é considerada um problema particularmente grave e duradouro.',
@@ -2410,6 +2418,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_geo_hidrogeografia_3',
+    chapter: 'Hidrogeografia Mundial',
     topicId: 'geo_hidrogeografia',
     subject: 'Geografia',
     prompt: 'Explique as principais etapas do ciclo hidrológico (ciclo da água), descrevendo como a água circula entre a atmosfera, a superfície terrestre e os corpos d\'água.',
@@ -2423,6 +2432,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_geo_globalizacao_economica_1',
+    chapter: 'Globalização e Processos Econômicos Atuais',
     topicId: 'geo_globalizacao_economica',
     subject: 'Geografia',
     prompt: 'Explique o que é uma cadeia produtiva global, usando como exemplo hipotético um produto cujas peças são fabricadas em diferentes países antes da montagem final.',
@@ -2436,6 +2446,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_geo_globalizacao_economica_2',
+    chapter: 'Blocos Econômicos',
     topicId: 'geo_globalizacao_economica',
     subject: 'Geografia',
     prompt: 'Explique por que os blocos econômicos regionais, como o Mercosul, buscam reduzir barreiras comerciais entre seus membros, e qual é o principal benefício estratégico esperado desse tipo de integração.',
@@ -2449,6 +2460,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_geo_globalizacao_economica_3',
+    chapter: 'Desigualdades Globais',
     topicId: 'geo_globalizacao_economica',
     subject: 'Geografia',
     prompt: 'Explique por que a globalização econômica é frequentemente descrita como um processo que pode tanto aproximar quanto aprofundar desigualdades entre países, apresentando um argumento para cada lado.',
@@ -2462,6 +2474,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_geo_geopolitica_regional_1',
+    chapter: 'Geografia do Oriente Médio',
     topicId: 'geo_geopolitica_regional',
     subject: 'Geografia',
     prompt: 'Explique por que a região do Oriente Médio é considerada estrategicamente importante na geopolítica mundial, além de sua relevância religiosa e histórica.',
@@ -2488,6 +2501,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_geo_geopolitica_regional_3',
+    chapter: 'Tensões Geopolíticas na Europa',
     topicId: 'geo_geopolitica_regional',
     subject: 'Geografia',
     prompt: 'Explique por que a expansão da OTAN em direção ao leste europeu, ao longo das últimas décadas, é frequentemente citada como um dos fatores geopolíticos relacionados às tensões entre Rússia e países da Europa Oriental.',
@@ -2501,6 +2515,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_geo_fisica_brasil_1',
+    chapter: 'Relevo Brasileiro',
     topicId: 'geo_fisica_brasil',
     subject: 'Geografia',
     prompt: 'Explique por que o relevo brasileiro é predominantemente formado por planaltos e planícies de altitude moderada, relacionando isso à estabilidade tectônica do território.',
@@ -2514,6 +2529,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_geo_fisica_brasil_2',
+    chapter: 'Biogeografia do Brasil I',
     topicId: 'geo_fisica_brasil',
     subject: 'Geografia',
     prompt: 'Explique por que o bioma Cerrado, apesar de sua vegetação aparentemente menos exuberante que a da Amazônia, é considerado um dos biomas mais ricos em biodiversidade do mundo, e um dos mais ameaçados pela expansão agrícola.',
@@ -2527,6 +2543,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_geo_fisica_brasil_3',
+    chapter: 'Políticas Ambientais Brasileiras',
     topicId: 'geo_fisica_brasil',
     subject: 'Geografia',
     prompt: 'Explique por que o desmatamento da Amazônia é considerado uma questão de relevância não apenas local ou nacional, mas também global.',
@@ -2540,6 +2557,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_geo_economica_brasil_1',
+    chapter: 'O Espaço Industrial Brasileiro I',
     topicId: 'geo_economica_brasil',
     subject: 'Geografia',
     prompt: 'Explique os principais fatores históricos que explicam por que a região Sudeste concentrou a maior parte da industrialização brasileira, apesar de outras regiões terem recursos naturais relevantes.',
@@ -2553,6 +2571,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_geo_economica_brasil_2',
+    chapter: 'O Espaço Agrário Brasileiro',
     topicId: 'geo_economica_brasil',
     subject: 'Geografia',
     prompt: 'Explique o que caracteriza uma economia fortemente baseada em commodities, como a brasileira, e um risco econômico associado a essa característica.',
@@ -2566,6 +2585,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_geo_economica_brasil_3',
+    chapter: 'O Espaço Industrial Brasileiro II',
     topicId: 'geo_economica_brasil',
     subject: 'Geografia',
     prompt: 'Explique o processo de desconcentração industrial no Brasil a partir do final do século XX, destacando por que empresas passaram a se instalar fora do Sudeste mesmo essa região concentrando historicamente a indústria nacional.',
@@ -2579,6 +2599,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_geo_populacao_urbana_brasil_1',
+    chapter: 'O Espaço Urbano I',
     topicId: 'geo_populacao_urbana_brasil',
     subject: 'Geografia',
     prompt: 'Explique o processo de êxodo rural no Brasil e sua relação direta com a rápida urbanização do país ao longo do século XX.',
@@ -2592,6 +2613,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_geo_populacao_urbana_brasil_2',
+    chapter: 'Dinâmica Demográfica',
     topicId: 'geo_populacao_urbana_brasil',
     subject: 'Geografia',
     prompt: 'Explique a transição demográfica que a pirâmide etária brasileira vem passando nas últimas décadas, e uma implicação social ou econômica desse processo.',
@@ -2605,6 +2627,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_geo_populacao_urbana_brasil_3',
+    chapter: 'O Espaço Urbano II',
     topicId: 'geo_populacao_urbana_brasil',
     subject: 'Geografia',
     prompt: 'Explique o que é a segregação socioespacial nas cidades brasileiras, e como ela se relaciona com o acesso desigual à infraestrutura urbana.',
