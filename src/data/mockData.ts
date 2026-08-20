@@ -1772,6 +1772,750 @@ export const mockQuestions: Question[] = [
     correctOptionId: 'b',
     explanation: 'Uma proposta de intervenção bem avaliada precisa explicitar quem deve agir (agente), como (meio/modo), com que objetivo (finalidade) e, idealmente, detalhar a ação — sempre coerente com os argumentos já desenvolvidos no texto, não uma ideia solta ao final.',
     difficulty: 'medium'
+  },
+  // Matemática — Aritmética e Proporcionalidade
+  {
+    id: 'q_mat_aritmetica_proporcionalidade_1',
+    topicId: 'mat_aritmetica_proporcionalidade',
+    subject: 'Matemática',
+    prompt: 'Uma receita rende 8 porções usando 300 g de farinha. Mantendo a mesma proporção, quantos gramas de farinha são necessários para render 20 porções?',
+    options: [
+      { id: 'a', text: '600 g' },
+      { id: 'b', text: '750 g' },
+      { id: 'c', text: '800 g' },
+      { id: 'd', text: '900 g' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A razão é 300/8 = 37,5 g por porção. Para 20 porções: 37,5 × 20 = 750 g.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_mat_aritmetica_proporcionalidade_2',
+    topicId: 'mat_aritmetica_proporcionalidade',
+    subject: 'Matemática',
+    prompt: 'Um produto teve o preço aumentado em 20% e, em seguida, sobre o novo preço, foi aplicado um desconto de 20%. Em relação ao preço original, o preço final está:',
+    options: [
+      { id: 'a', text: 'Igual ao original' },
+      { id: 'b', text: '4% menor' },
+      { id: 'c', text: '4% maior' },
+      { id: 'd', text: '2% menor' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Partindo de 100: após +20% fica 120; após -20% sobre 120 fica 120 × 0,8 = 96. Isso é 4% menor que o valor original de 100, pois aumento e desconto percentuais sucessivos não se cancelam quando aplicados sobre bases diferentes.',
+    difficulty: 'medium'
+  },
+  // Matemática — Teoria dos Números Inteiros
+  {
+    id: 'q_mat_teoria_numeros_1',
+    topicId: 'mat_teoria_numeros',
+    subject: 'Matemática',
+    prompt: 'Qual é o máximo divisor comum (MDC) entre 84 e 126?',
+    options: [
+      { id: 'a', text: '6' },
+      { id: 'b', text: '14' },
+      { id: 'c', text: '21' },
+      { id: 'd', text: '42' }
+    ],
+    correctOptionId: 'd',
+    explanation: '84 = 2² × 3 × 7 e 126 = 2 × 3² × 7. O MDC toma os fatores comuns com menor expoente: 2 × 3 × 7 = 42.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_mat_teoria_numeros_2',
+    topicId: 'mat_teoria_numeros',
+    subject: 'Matemática',
+    prompt: 'Dois sinais luminosos, um a cada 18 segundos e outro a cada 24 segundos, piscam juntos às 8h00. Depois de quantos segundos eles voltarão a piscar juntos novamente?',
+    options: [
+      { id: 'a', text: '36 segundos' },
+      { id: 'b', text: '48 segundos' },
+      { id: 'c', text: '72 segundos' },
+      { id: 'd', text: '432 segundos' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'A resposta é o MMC(18, 24). 18 = 2 × 3² e 24 = 2³ × 3, então MMC = 2³ × 3² = 72 segundos.',
+    difficulty: 'medium'
+  },
+  // Matemática — Sequências, Matrizes e Sistemas Lineares
+  {
+    id: 'q_mat_sequencias_matrizes_1',
+    topicId: 'mat_sequencias_matrizes',
+    subject: 'Matemática',
+    prompt: 'Numa progressão aritmética, o primeiro termo é 5 e a razão é 4. Qual é o 12º termo dessa progressão?',
+    options: [
+      { id: 'a', text: '44' },
+      { id: 'b', text: '48' },
+      { id: 'c', text: '49' },
+      { id: 'd', text: '53' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'aₙ = a₁ + (n-1)r → a₁₂ = 5 + 11 × 4 = 5 + 44 = 49.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_mat_sequencias_matrizes_2',
+    topicId: 'mat_sequencias_matrizes',
+    subject: 'Matemática',
+    prompt: 'Resolvendo o sistema linear { x + y = 10 ; x − y = 2 }, os valores de x e y são, respectivamente:',
+    options: [
+      { id: 'a', text: '4 e 6' },
+      { id: 'b', text: '6 e 4' },
+      { id: 'c', text: '5 e 5' },
+      { id: 'd', text: '8 e 2' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Somando as duas equações: 2x = 12 → x = 6. Substituindo em x + y = 10: y = 4.',
+    difficulty: 'medium'
+  },
+  // Matemática — Geometria Espacial
+  {
+    id: 'q_mat_geometria_espacial_1',
+    topicId: 'mat_geometria_espacial',
+    subject: 'Matemática',
+    prompt: 'Qual é o volume de um cubo cuja aresta mede 5 cm?',
+    options: [
+      { id: 'a', text: '25 cm³' },
+      { id: 'b', text: '75 cm³' },
+      { id: 'c', text: '100 cm³' },
+      { id: 'd', text: '125 cm³' }
+    ],
+    correctOptionId: 'd',
+    explanation: 'O volume do cubo é aresta³ = 5³ = 125 cm³.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_mat_geometria_espacial_2',
+    topicId: 'mat_geometria_espacial',
+    subject: 'Matemática',
+    prompt: 'Um cilindro reto tem raio da base igual a 3 cm e altura igual a 10 cm. Qual é aproximadamente o seu volume? (use π ≈ 3,14)',
+    options: [
+      { id: 'a', text: '94,2 cm³' },
+      { id: 'b', text: '188,4 cm³' },
+      { id: 'c', text: '282,6 cm³' },
+      { id: 'd', text: '376,8 cm³' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'V = π × r² × h = 3,14 × 9 × 10 = 282,6 cm³.',
+    difficulty: 'medium'
+  },
+  // Matemática — Geometria Analítica
+  {
+    id: 'q_mat_geometria_analitica_1',
+    topicId: 'mat_geometria_analitica',
+    subject: 'Matemática',
+    prompt: 'Qual é a distância entre os pontos A(1, 2) e B(4, 6) no plano cartesiano?',
+    options: [
+      { id: 'a', text: '3' },
+      { id: 'b', text: '4' },
+      { id: 'c', text: '5' },
+      { id: 'd', text: '7' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'd = √[(4-1)² + (6-2)²] = √(9 + 16) = √25 = 5.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_mat_geometria_analitica_2',
+    topicId: 'mat_geometria_analitica',
+    subject: 'Matemática',
+    prompt: 'Qual é o coeficiente angular da reta que passa pelos pontos A(2, 3) e B(5, 9)?',
+    options: [
+      { id: 'a', text: '1' },
+      { id: 'b', text: '2' },
+      { id: 'c', text: '3' },
+      { id: 'd', text: '6' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'm = (y₂ - y₁)/(x₂ - x₁) = (9 - 3)/(5 - 2) = 6/3 = 2.',
+    difficulty: 'medium'
+  },
+  // Matemática — Equações, Desigualdades e Modelagem Algébrica
+  {
+    id: 'q_mat_equacoes_1',
+    topicId: 'mat_equacoes',
+    subject: 'Matemática',
+    prompt: 'Qual é o conjunto solução da equação do 2º grau x² − 5x + 6 = 0?',
+    options: [
+      { id: 'a', text: '{1, 6}' },
+      { id: 'b', text: '{2, 3}' },
+      { id: 'c', text: '{-2, -3}' },
+      { id: 'd', text: '{2, -3}' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Fatorando: (x-2)(x-3) = 0, pois 2 × 3 = 6 e 2 + 3 = 5. Logo x = 2 ou x = 3.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_mat_equacoes_2',
+    topicId: 'mat_equacoes',
+    subject: 'Matemática',
+    prompt: 'Para quais valores de x a desigualdade 2x − 3 > 7 é satisfeita?',
+    options: [
+      { id: 'a', text: 'x > 2' },
+      { id: 'b', text: 'x > 5' },
+      { id: 'c', text: 'x < 5' },
+      { id: 'd', text: 'x > 10' }
+    ],
+    correctOptionId: 'b',
+    explanation: '2x - 3 > 7 → 2x > 10 → x > 5.',
+    difficulty: 'easy'
+  },
+  // Matemática — Logaritmos e Exponenciais
+  {
+    id: 'q_mat_log_exponenciais_1',
+    topicId: 'mat_log_exponenciais',
+    subject: 'Matemática',
+    prompt: 'Qual é o valor de log₂(32)?',
+    options: [
+      { id: 'a', text: '4' },
+      { id: 'b', text: '5' },
+      { id: 'c', text: '6' },
+      { id: 'd', text: '16' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'log₂(32) é o expoente x tal que 2ˣ = 32. Como 2⁵ = 32, log₂(32) = 5.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_mat_log_exponenciais_2',
+    topicId: 'mat_log_exponenciais',
+    subject: 'Matemática',
+    prompt: 'Uma população de bactérias dobra a cada hora, partindo de 100 indivíduos. Quantas bactérias haverá após 4 horas?',
+    options: [
+      { id: 'a', text: '400' },
+      { id: 'b', text: '800' },
+      { id: 'c', text: '1200' },
+      { id: 'd', text: '1600' }
+    ],
+    correctOptionId: 'd',
+    explanation: 'Crescimento exponencial: P(t) = 100 × 2ᵗ. Em t = 4: 100 × 2⁴ = 100 × 16 = 1600.',
+    difficulty: 'medium'
+  },
+  // Geografia — Cartografia e Fundamentos
+  {
+    id: 'q_geo_cartografia_1',
+    topicId: 'geo_cartografia',
+    subject: 'Geografia',
+    prompt: 'Um mapa está na escala 1:50.000. Uma distância de 4 cm no mapa corresponde, na realidade, a quantos quilômetros?',
+    options: [
+      { id: 'a', text: '0,2 km' },
+      { id: 'b', text: '2 km' },
+      { id: 'c', text: '20 km' },
+      { id: 'd', text: '200 km' }
+    ],
+    correctOptionId: 'b',
+    explanation: '4 cm × 50.000 = 200.000 cm = 2.000 m = 2 km.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_geo_cartografia_2',
+    topicId: 'geo_cartografia',
+    subject: 'Geografia',
+    prompt: 'A projeção cartográfica de Mercator, amplamente usada em navegação, é classificada como conforme porque:',
+    options: [
+      { id: 'a', text: 'Preserva as áreas reais dos continentes' },
+      { id: 'b', text: 'Preserva os ângulos e as formas locais, mas distorce as áreas, especialmente em altas latitudes' },
+      { id: 'c', text: 'Preserva as distâncias entre todos os pontos do globo' },
+      { id: 'd', text: 'É a única projeção sem nenhum tipo de distorção' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Projeções conformes, como a de Mercator, preservam ângulos e formas locais (úteis para navegação), mas distorcem áreas — por isso a Groenlândia aparece desproporcionalmente grande em relação à África nesse tipo de projeção.',
+    difficulty: 'medium'
+  },
+  // Geografia — Climatologia e Problemas Socioambientais
+  {
+    id: 'q_geo_climatologia_socioambiental_1',
+    topicId: 'geo_climatologia_socioambiental',
+    subject: 'Geografia',
+    prompt: 'O fenômeno da ilha de calor urbana é caracterizado por:',
+    options: [
+      { id: 'a', text: 'Temperaturas mais baixas nos centros urbanos em comparação às áreas rurais vizinhas' },
+      { id: 'b', text: 'Temperaturas mais altas nas áreas centrais e densamente construídas das cidades em relação ao seu entorno' },
+      { id: 'c', text: 'Formação de ilhas artificiais para regulação térmica' },
+      { id: 'd', text: 'Aumento do nível do mar causado exclusivamente pela urbanização' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A ilha de calor urbana ocorre porque o asfalto, o concreto e a menor cobertura vegetal absorvem e retêm mais calor, elevando a temperatura nas áreas centrais das cidades em relação às áreas rurais ou verdes do entorno.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_geo_climatologia_socioambiental_2',
+    topicId: 'geo_climatologia_socioambiental',
+    subject: 'Geografia',
+    prompt: 'O efeito estufa intensificado, associado às mudanças climáticas contemporâneas, é impulsionado principalmente pelo aumento da concentração atmosférica de gases como:',
+    options: [
+      { id: 'a', text: 'Oxigênio e nitrogênio' },
+      { id: 'b', text: 'Gás carbônico (CO₂) e metano (CH₄)' },
+      { id: 'c', text: 'Hidrogênio e hélio' },
+      { id: 'd', text: 'Ozônio troposférico apenas' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A queima de combustíveis fósseis, o desmatamento e a pecuária intensiva elevam a concentração de CO₂ e CH₄ na atmosfera, intensificando a retenção de calor e o efeito estufa natural do planeta.',
+    difficulty: 'easy'
+  },
+  // Geografia — Hidrogeografia
+  {
+    id: 'q_geo_hidrogeografia_1',
+    topicId: 'geo_hidrogeografia',
+    subject: 'Geografia',
+    prompt: 'O maior aquífero subterrâneo da América do Sul, com grande extensão em território brasileiro, é o:',
+    options: [
+      { id: 'a', text: 'Aquífero Guarani' },
+      { id: 'b', text: 'Aquífero Alter do Chão' },
+      { id: 'c', text: 'Aquífero Cárstico' },
+      { id: 'd', text: 'Aquífero Bambuí' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O Aquífero Guarani é um dos maiores reservatórios subterrâneos de água doce do mundo, estendendo-se por Brasil, Argentina, Paraguai e Uruguai.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_geo_hidrogeografia_2',
+    topicId: 'geo_hidrogeografia',
+    subject: 'Geografia',
+    prompt: 'Um rio de planalto, com relevo acidentado e presença de corredeiras e quedas d\'água, apresenta principalmente potencial para:',
+    options: [
+      { id: 'a', text: 'Navegação de grande porte' },
+      { id: 'b', text: 'Geração de energia hidrelétrica' },
+      { id: 'c', text: 'Irrigação exclusiva de áreas costeiras' },
+      { id: 'd', text: 'Formação de grandes deltas' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Rios de planalto, com desníveis acentuados e correnteza forte, favorecem o aproveitamento hidrelétrico — diferente dos rios de planície, mais navegáveis por terem menor declividade.',
+    difficulty: 'medium'
+  },
+  // Geografia — Globalização e Geografia Econômica
+  {
+    id: 'q_geo_globalizacao_economica_1',
+    topicId: 'geo_globalizacao_economica',
+    subject: 'Geografia',
+    prompt: 'A fragmentação do processo produtivo entre diferentes países, em que cada etapa de fabricação de um produto ocorre onde é mais vantajosa economicamente, é conhecida como:',
+    options: [
+      { id: 'a', text: 'Autarquia econômica' },
+      { id: 'b', text: 'Cadeia produtiva global (ou global commodity chain)' },
+      { id: 'c', text: 'Protecionismo comercial' },
+      { id: 'd', text: 'Economia de subsistência' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'As cadeias produtivas globais são uma marca da globalização econômica: componentes e etapas de um mesmo produto são fabricados em diferentes países conforme custo de mão de obra, insumos e logística.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_globalizacao_economica_2',
+    topicId: 'geo_globalizacao_economica',
+    subject: 'Geografia',
+    prompt: 'Os blocos econômicos regionais, como o Mercosul e a União Europeia, têm como um de seus principais objetivos:',
+    options: [
+      { id: 'a', text: 'Eliminar completamente o comércio com países fora do bloco' },
+      { id: 'b', text: 'Reduzir ou eliminar barreiras comerciais entre os países-membros, fortalecendo sua posição econômica conjunta' },
+      { id: 'c', text: 'Unificar obrigatoriamente a moeda de todos os países-membros' },
+      { id: 'd', text: 'Impedir a livre circulação de mercadorias entre os membros' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Blocos econômicos regionais buscam reduzir tarifas e barreiras entre membros para ampliar o comércio interno e fortalecer o poder de negociação do grupo no cenário internacional — nem todos adotam moeda única, como é o caso do Mercosul.',
+    difficulty: 'medium'
+  },
+  // Geografia — Geopolítica Regional Contemporânea
+  {
+    id: 'q_geo_geopolitica_regional_1',
+    topicId: 'geo_geopolitica_regional',
+    subject: 'Geografia',
+    prompt: 'O termo "Oriente Médio" designa uma região marcada, entre outros fatores, por conflitos históricos ligados a:',
+    options: [
+      { id: 'a', text: 'Disputas territoriais, religiosas e pelo controle de recursos energéticos, como o petróleo' },
+      { id: 'b', text: 'Ausência total de reservas de petróleo na região' },
+      { id: 'c', text: 'Homogeneidade religiosa e étnica completa entre todos os países da região' },
+      { id: 'd', text: 'Isolamento total em relação às potências ocidentais' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A geopolítica do Oriente Médio é marcada por disputas territoriais e religiosas (como o conflito israelo-palestino), diversidade étnico-religiosa entre os países e grande relevância estratégica pelas reservas de petróleo da região.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_geopolitica_regional_2',
+    topicId: 'geo_geopolitica_regional',
+    subject: 'Geografia',
+    prompt: 'Os BRICS (Brasil, Rússia, Índia, China, África do Sul, entre outros membros que aderiram mais recentemente) representam um agrupamento geopolítico que busca principalmente:',
+    options: [
+      { id: 'a', text: 'Ampliar a influência política e econômica de potências emergentes frente à ordem internacional tradicionalmente liderada por EUA e Europa Ocidental' },
+      { id: 'b', text: 'Formar uma aliança militar nos moldes da OTAN' },
+      { id: 'c', text: 'Unificar as moedas nacionais de seus membros' },
+      { id: 'd', text: 'Restringir o comércio entre seus próprios membros' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Os BRICS surgiram como articulação de potências emergentes buscando maior peso político e econômico no cenário internacional, historicamente dominado por EUA e potências europeias — sem caráter de aliança militar.',
+    difficulty: 'medium'
+  },
+  // Geografia — Geografia Física do Brasil
+  {
+    id: 'q_geo_fisica_brasil_1',
+    topicId: 'geo_fisica_brasil',
+    subject: 'Geografia',
+    prompt: 'O bioma brasileiro com a maior extensão territorial, ocupando principalmente a região Norte, é:',
+    options: [
+      { id: 'a', text: 'Cerrado' },
+      { id: 'b', text: 'Caatinga' },
+      { id: 'c', text: 'Amazônia' },
+      { id: 'd', text: 'Mata Atlântica' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'O bioma Amazônia é o de maior extensão territorial no Brasil, cobrindo a maior parte da região Norte do país.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_geo_fisica_brasil_2',
+    topicId: 'geo_fisica_brasil',
+    subject: 'Geografia',
+    prompt: 'O relevo predominante no território brasileiro é caracterizado principalmente por:',
+    options: [
+      { id: 'a', text: 'Grandes cadeias de montanhas jovens e altas, como os Andes' },
+      { id: 'b', text: 'Planaltos e planícies, com altitudes predominantemente moderadas, resultado de um relevo antigo e bastante desgastado pela erosão' },
+      { id: 'c', text: 'Desertos que cobrem a maior parte do território' },
+      { id: 'd', text: 'Ausência total de planícies' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'O Brasil está localizado em uma área tectonicamente estável (a Plataforma Sul-Americana), o que resultou em um relevo antigo, já bastante erodido, predominando planaltos e planícies de altitudes moderadas — sem grandes cadeias montanhosas jovens.',
+    difficulty: 'medium'
+  },
+  // Geografia — Geografia Econômica do Brasil
+  {
+    id: 'q_geo_economica_brasil_1',
+    topicId: 'geo_economica_brasil',
+    subject: 'Geografia',
+    prompt: 'O agronegócio brasileiro, um dos setores mais relevantes da economia do país, tem entre seus principais produtos de exportação:',
+    options: [
+      { id: 'a', text: 'Soja, carne bovina e café' },
+      { id: 'b', text: 'Petróleo bruto exclusivamente' },
+      { id: 'c', text: 'Produtos eletrônicos de alta tecnologia' },
+      { id: 'd', text: 'Automóveis exclusivamente' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O Brasil é um dos maiores exportadores mundiais de commodities agropecuárias, com destaque para soja, carne bovina e café entre seus principais produtos de exportação.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_geo_economica_brasil_2',
+    topicId: 'geo_economica_brasil',
+    subject: 'Geografia',
+    prompt: 'A região Sudeste concentra a maior parte da indústria brasileira principalmente devido a fatores históricos como:',
+    options: [
+      { id: 'a', text: 'Acúmulo de capital originado do café, mão de obra disponível, infraestrutura de transportes e proximidade de mercado consumidor' },
+      { id: 'b', text: 'Clima extremamente frio, propício à instalação de fábricas' },
+      { id: 'c', text: 'Isolamento geográfico total em relação ao restante do país' },
+      { id: 'd', text: 'Ausência completa de outras atividades econômicas na região' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A industrialização concentrada no Sudeste resulta de um processo histórico: o capital acumulado pela cafeicultura, disponibilidade de mão de obra (inclusive imigrante), infraestrutura de transporte e proximidade de um grande mercado consumidor favoreceram a instalação industrial na região.',
+    difficulty: 'medium'
+  },
+  // Geografia — Geografia da População e Urbana do Brasil
+  {
+    id: 'q_geo_populacao_urbana_brasil_1',
+    topicId: 'geo_populacao_urbana_brasil',
+    subject: 'Geografia',
+    prompt: 'O processo de êxodo rural no Brasil, intensificado sobretudo a partir da segunda metade do século XX, teve como uma de suas principais consequências:',
+    options: [
+      { id: 'a', text: 'A redução da população urbana em favor da rural' },
+      { id: 'b', text: 'A acelerada urbanização do país, muitas vezes acompanhada de crescimento desordenado das cidades' },
+      { id: 'c', text: 'O desaparecimento completo da agropecuária brasileira' },
+      { id: 'd', text: 'A distribuição igualitária da população entre todas as regiões do país' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'O êxodo rural, impulsionado pela mecanização do campo e pela industrialização urbana, levou a uma rápida urbanização brasileira — muitas vezes desordenada, gerando periferias, favelas e déficit de infraestrutura nas grandes cidades.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_geo_populacao_urbana_brasil_2',
+    topicId: 'geo_populacao_urbana_brasil',
+    subject: 'Geografia',
+    prompt: 'A pirâmide etária brasileira vem passando, nas últimas décadas, por um processo de:',
+    options: [
+      { id: 'a', text: 'Rejuvenescimento acelerado da população' },
+      { id: 'b', text: 'Envelhecimento populacional, com queda da taxa de natalidade e aumento da expectativa de vida' },
+      { id: 'c', text: 'Estabilidade total, sem qualquer alteração estrutural' },
+      { id: 'd', text: 'Redução da população total do país' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A queda sustentada da taxa de natalidade e o aumento da expectativa de vida vêm alterando o formato da pirâmide etária brasileira, que se estreita na base e se alarga no topo — um processo de transição demográfica e envelhecimento populacional.',
+    difficulty: 'medium'
+  },
+  // História — Idade Antiga
+  {
+    id: 'q_his_idade_antiga_1',
+    topicId: 'his_idade_antiga',
+    subject: 'História',
+    prompt: 'A democracia praticada na Atenas antiga, frequentemente citada como referência histórica, era caracterizada por:',
+    options: [
+      { id: 'a', text: 'Participação política de todos os habitantes, sem qualquer exclusão' },
+      { id: 'b', text: 'Uma democracia direta, mas restrita aos cidadãos do sexo masculino, livres e nascidos em Atenas — excluindo mulheres, escravizados e estrangeiros' },
+      { id: 'c', text: 'Um sistema de voto obrigatório por representantes eleitos, semelhante ao atual' },
+      { id: 'd', text: 'Ausência completa de qualquer forma de participação popular' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A democracia ateniense era direta (os cidadãos deliberavam diretamente na Ecclesia), mas profundamente excludente: mulheres, escravizados e estrangeiros (metecos) não eram considerados cidadãos e não participavam da vida política.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_his_idade_antiga_2',
+    topicId: 'his_idade_antiga',
+    subject: 'História',
+    prompt: 'O Império Romano, em seu apogeu, destacou-se historicamente por:',
+    options: [
+      { id: 'a', text: 'Uma extensa rede de leis, engenharia (estradas, aquedutos) e organização administrativa que integrou vastos territórios ao redor do Mediterrâneo' },
+      { id: 'b', text: 'Isolamento total em relação aos povos vizinhos' },
+      { id: 'c', text: 'Ausência de qualquer sistema jurídico organizado' },
+      { id: 'd', text: 'Restringir-se apenas à Península Itálica, sem expansão territorial' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Roma se destacou pela capacidade de administrar um vasto império por meio de um sistema jurídico influente (o Direito Romano), obras de engenharia como estradas e aquedutos, e uma estrutura administrativa que integrou territórios de três continentes ao redor do Mediterrâneo.',
+    difficulty: 'medium'
+  },
+  // História — Idade Média
+  {
+    id: 'q_his_idade_media_1',
+    topicId: 'his_idade_media',
+    subject: 'História',
+    prompt: 'O sistema feudal, predominante na Europa medieval, caracterizava-se principalmente por:',
+    options: [
+      { id: 'a', text: 'Relações de vassalagem e suserania, com a posse da terra (feudo) como base da organização social, política e econômica' },
+      { id: 'b', text: 'Um governo central forte e unificado em toda a Europa' },
+      { id: 'c', text: 'Ausência total de hierarquia social' },
+      { id: 'd', text: 'Uma economia baseada exclusivamente no comércio marítimo internacional' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O feudalismo se organizava em torno da posse da terra e de relações pessoais de vassalagem (fidelidade e proteção mútua entre suseranos e vassalos), num contexto de fragmentação do poder político central após a queda do Império Romano do Ocidente.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_his_idade_media_2',
+    topicId: 'his_idade_media',
+    subject: 'História',
+    prompt: 'As Cruzadas, expedições militares religiosas ocorridas entre os séculos XI e XIII, tiveram entre suas principais motivações:',
+    options: [
+      { id: 'a', text: 'A reconquista de Jerusalém e da Terra Santa, além de interesses econômicos e políticos da Igreja e da nobreza europeia' },
+      { id: 'b', text: 'A unificação política de toda a Europa sob um único rei' },
+      { id: 'c', text: 'A abolição do sistema feudal' },
+      { id: 'd', text: 'A criação da primeira república europeia' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'As Cruzadas combinaram motivações religiosas (retomar Jerusalém e a Terra Santa do domínio muçulmano) com interesses econômicos e políticos, como a expansão do comércio, o fortalecimento do poder da Igreja e a busca por terras e prestígio pela nobreza.',
+    difficulty: 'medium'
+  },
+  // História — Idade Moderna e Iluminismo
+  {
+    id: 'q_his_moderna_iluminismo_1',
+    topicId: 'his_moderna_iluminismo',
+    subject: 'História',
+    prompt: 'O Iluminismo, movimento intelectual do século XVIII, defendia principalmente:',
+    options: [
+      { id: 'a', text: 'O fortalecimento do poder absoluto dos reis por direito divino' },
+      { id: 'b', text: 'O uso da razão como principal instrumento para compreender o mundo, criticando o absolutismo e os privilégios do Antigo Regime' },
+      { id: 'c', text: 'A manutenção da servidão feudal como base da economia' },
+      { id: 'd', text: 'A submissão total do pensamento científico à autoridade religiosa' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Os iluministas (como Voltaire, Montesquieu e Rousseau) valorizavam a razão e a ciência, criticando o absolutismo monárquico, os privilégios da nobreza e do clero, e influenciando diretamente processos como a Revolução Francesa.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_his_moderna_iluminismo_2',
+    topicId: 'his_moderna_iluminismo',
+    subject: 'História',
+    prompt: 'A Revolução Francesa (1789) teve como um de seus principais desdobramentos:',
+    options: [
+      { id: 'a', text: 'O fortalecimento definitivo da monarquia absolutista francesa' },
+      { id: 'b', text: 'O fim do Antigo Regime na França e a difusão de ideais como liberdade, igualdade e fraternidade, influenciando movimentos posteriores em outras partes do mundo' },
+      { id: 'c', text: 'A manutenção inalterada dos privilégios do clero e da nobreza' },
+      { id: 'd', text: 'O isolamento total da França em relação ao restante da Europa' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A Revolução Francesa derrubou o Antigo Regime, aboliu privilégios feudais e difundiu ideais iluministas (liberdade, igualdade, fraternidade) que influenciaram movimentos revolucionários e constitucionais em diversas partes do mundo nos séculos seguintes.',
+    difficulty: 'medium'
+  },
+  // História — Imperialismo e Guerras Mundiais
+  {
+    id: 'q_his_imperialismo_guerras_1',
+    topicId: 'his_imperialismo_guerras',
+    subject: 'História',
+    prompt: 'O imperialismo europeu do final do século XIX, especialmente na África e na Ásia, foi motivado principalmente por:',
+    options: [
+      { id: 'a', text: 'Busca de matérias-primas, mercados consumidores e prestígio político-militar entre as potências industrializadas' },
+      { id: 'b', text: 'Desinteresse total das potências europeias por territórios além-mar' },
+      { id: 'c', text: 'Acordos de cooperação igualitária com os povos colonizados' },
+      { id: 'd', text: 'Ausência de qualquer motivação econômica' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O imperialismo (ou neocolonialismo) foi impulsionado pela Segunda Revolução Industrial, que gerou necessidade de matérias-primas e novos mercados, além da disputa por prestígio e poder entre as potências europeias — resultando na partilha da África e de parte da Ásia.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_imperialismo_guerras_2',
+    topicId: 'his_imperialismo_guerras',
+    subject: 'História',
+    prompt: 'A Primeira Guerra Mundial (1914-1918) teve como estopim imediato:',
+    options: [
+      { id: 'a', text: 'O assassinato do arquiduque Francisco Ferdinando, herdeiro do trono austro-húngaro, em Sarajevo' },
+      { id: 'b', text: 'A invasão da Polônia pela Alemanha' },
+      { id: 'c', text: 'O ataque a Pearl Harbor' },
+      { id: 'd', text: 'A Revolução Russa de 1917' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O assassinato do arquiduque Francisco Ferdinando em Sarajevo, em 1914, foi o estopim que desencadeou a Primeira Guerra Mundial, num contexto já tenso de rivalidades imperialistas, alianças militares e nacionalismos exacerbados na Europa.',
+    difficulty: 'easy'
+  },
+  // História — Guerra Fria e Mundo Contemporâneo
+  {
+    id: 'q_his_guerra_fria_contemporaneo_1',
+    topicId: 'his_guerra_fria_contemporaneo',
+    subject: 'História',
+    prompt: 'A Guerra Fria, período de disputa entre Estados Unidos e União Soviética após a Segunda Guerra Mundial, caracterizou-se por:',
+    options: [
+      { id: 'a', text: 'Confronto militar direto e declarado entre as duas potências em seus próprios territórios' },
+      { id: 'b', text: 'Uma disputa ideológica, econômica e tecnológica entre capitalismo e socialismo, com conflitos indiretos (guerras por procuração) em outras regiões do mundo' },
+      { id: 'c', text: 'Total ausência de tensão entre as duas potências' },
+      { id: 'd', text: 'Aliança militar formal entre EUA e URSS' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A Guerra Fria não envolveu confronto militar direto entre EUA e URSS, mas sim disputa ideológica (capitalismo x socialismo), corrida armamentista e espacial, e conflitos indiretos travados em outros países, como Coreia, Vietnã e Afeganistão.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_his_guerra_fria_contemporaneo_2',
+    topicId: 'his_guerra_fria_contemporaneo',
+    subject: 'História',
+    prompt: 'A queda do Muro de Berlim, em 1989, é historicamente associada a:',
+    options: [
+      { id: 'a', text: 'O início da Guerra Fria' },
+      { id: 'b', text: 'O fortalecimento do bloco socialista liderado pela URSS' },
+      { id: 'c', text: 'O símbolo do fim da divisão entre os blocos capitalista e socialista na Europa, e um marco do processo que levaria ao fim da Guerra Fria' },
+      { id: 'd', text: 'A criação da União Europeia' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'A queda do Muro de Berlim em 1989 simbolizou o colapso do bloco socialista na Europa Oriental, sendo um marco central no processo que culminaria no fim da Guerra Fria e na posterior dissolução da União Soviética em 1991.',
+    difficulty: 'medium'
+  },
+  // História — Brasil Colônia
+  {
+    id: 'q_his_brasil_colonia_1',
+    topicId: 'his_brasil_colonia',
+    subject: 'História',
+    prompt: 'A economia do Brasil Colônia, sobretudo entre os séculos XVI e XVIII, baseava-se principalmente em:',
+    options: [
+      { id: 'a', text: 'Uma economia agroexportadora, voltada ao mercado externo, com destaque para o açúcar e, posteriormente, o ouro' },
+      { id: 'b', text: 'Uma economia industrial diversificada e voltada ao mercado interno' },
+      { id: 'c', text: 'Ausência total de mão de obra escravizada' },
+      { id: 'd', text: 'Isolamento comercial completo em relação a Portugal' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A economia colonial brasileira baseava-se no pacto colonial, voltada à exportação de produtos primários — com destaque para o açúcar no período inicial e para o ouro durante o ciclo minerador do século XVIII — e amplamente sustentada pelo trabalho escravizado.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_his_brasil_colonia_2',
+    topicId: 'his_brasil_colonia',
+    subject: 'História',
+    prompt: 'A Inconfidência Mineira (1789), um dos principais movimentos de contestação ao domínio português no Brasil Colônia, foi motivada principalmente por:',
+    options: [
+      { id: 'a', text: 'A insatisfação de setores da elite mineira com a cobrança de impostos, especialmente a derrama, além da influência de ideais iluministas' },
+      { id: 'b', text: 'A abolição imediata da escravidão' },
+      { id: 'c', text: 'A independência já consolidada do Brasil' },
+      { id: 'd', text: 'Um acordo pacífico com a Coroa portuguesa para reduzir impostos' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A Inconfidência Mineira envolveu setores da elite (como Tiradentes) insatisfeitos com a política fiscal portuguesa (sobretudo a ameaça da derrama, cobrança retroativa de impostos sobre o ouro) e influenciados por ideais iluministas e pelo exemplo da independência dos Estados Unidos.',
+    difficulty: 'medium'
+  },
+  // História — Brasil Império
+  {
+    id: 'q_his_brasil_imperio_1',
+    topicId: 'his_brasil_imperio',
+    subject: 'História',
+    prompt: 'A independência do Brasil, proclamada em 1822, resultou em um processo político caracterizado por:',
+    options: [
+      { id: 'a', text: 'Uma ruptura completa e imediata com todas as estruturas econômicas e sociais do período colonial' },
+      { id: 'b', text: 'A manutenção de diversas estruturas herdadas do período colonial, como a escravidão e a grande propriedade rural, sob um novo regime monárquico' },
+      { id: 'c', text: 'A implantação imediata de uma república democrática' },
+      { id: 'd', text: 'O fim total dos laços econômicos com a Inglaterra' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A independência do Brasil manteve a monarquia (com D. Pedro I como imperador) e preservou estruturas sociais e econômicas herdadas da colônia, como a escravidão e o latifúndio, configurando uma transição política sem rupturas sociais profundas.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_brasil_imperio_2',
+    topicId: 'his_brasil_imperio',
+    subject: 'História',
+    prompt: 'A Lei Áurea, sancionada em 1888, teve como principal efeito:',
+    options: [
+      { id: 'a', text: 'Abolir formalmente a escravidão no Brasil, sem, no entanto, garantir políticas efetivas de inclusão social e econômica para os libertos' },
+      { id: 'b', text: 'Conceder terras automaticamente a todos os ex-escravizados' },
+      { id: 'c', text: 'Instituir a república no Brasil' },
+      { id: 'd', text: 'Ampliar o direito de voto a todos os cidadãos, homens e mulheres' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A Lei Áurea aboliu formalmente a escravidão no Brasil, mas não veio acompanhada de políticas de reparação, terra ou inclusão social para os libertos, contribuindo para desigualdades estruturais que persistiram após a abolição.',
+    difficulty: 'easy'
+  },
+  // História — Primeira República e Era Vargas
+  {
+    id: 'q_his_primeira_republica_vargas_1',
+    topicId: 'his_primeira_republica_vargas',
+    subject: 'História',
+    prompt: 'A política do "café com leite", característica da Primeira República (1889-1930), referia-se a:',
+    options: [
+      { id: 'a', text: 'Um acordo informal de alternância no poder entre as oligarquias de São Paulo (café) e Minas Gerais (leite)' },
+      { id: 'b', text: 'Um programa de distribuição gratuita de alimentos à população' },
+      { id: 'c', text: 'Uma política de industrialização acelerada' },
+      { id: 'd', text: 'Um acordo comercial entre Brasil e Argentina' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A política do "café com leite" descreve o revezamento na presidência entre as oligarquias paulista (associada à produção cafeeira) e mineira (associada à pecuária leiteira), uma marca do domínio das elites regionais durante a Primeira República.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_primeira_republica_vargas_2',
+    topicId: 'his_primeira_republica_vargas',
+    subject: 'História',
+    prompt: 'O Estado Novo (1937-1945), período ditatorial do governo de Getúlio Vargas, foi marcado por:',
+    options: [
+      { id: 'a', text: 'Ampla liberdade de imprensa e pluripartidarismo' },
+      { id: 'b', text: 'Centralização do poder no Executivo, censura, repressão política e, ao mesmo tempo, avanços na legislação trabalhista' },
+      { id: 'c', text: 'A restauração da monarquia no Brasil' },
+      { id: 'd', text: 'A total ausência de intervenção estatal na economia' },
+    ],
+    correctOptionId: 'b',
+    explanation: 'O Estado Novo combinou autoritarismo — com censura, fechamento do Congresso e perseguição a opositores — com a criação de importantes direitos trabalhistas (como a CLT), consolidando Vargas como uma figura popular apesar do regime ditatorial.',
+    difficulty: 'medium'
+  },
+  // História — República Liberal e Brasil Contemporâneo
+  {
+    id: 'q_his_republica_liberal_atual_1',
+    topicId: 'his_republica_liberal_atual',
+    subject: 'História',
+    prompt: 'A ditadura militar brasileira (1964-1985) foi caracterizada, entre outros aspectos, por:',
+    options: [
+      { id: 'a', text: 'Ampla democracia participativa e liberdade de expressão' },
+      { id: 'b', text: 'Supressão de direitos políticos, censura e repressão a opositores, sob um regime de exceção que durou mais de duas décadas' },
+      { id: 'c', text: 'Eleições diretas e livres para presidente durante todo o período' },
+      { id: 'd', text: 'Ausência completa de qualquer forma de resistência ou oposição' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A ditadura militar instaurada em 1964 suprimiu direitos políticos, impôs censura e reprimiu opositores (incluindo tortura e perseguição), mantendo-se no poder por 21 anos até a redemocratização em 1985.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_his_republica_liberal_atual_2',
+    topicId: 'his_republica_liberal_atual',
+    subject: 'História',
+    prompt: 'A Constituição de 1988, conhecida como "Constituição Cidadã", é um marco histórico por:',
+    options: [
+      { id: 'a', text: 'Ter restaurado o regime militar no Brasil' },
+      { id: 'b', text: 'Consolidar o processo de redemocratização, ampliando direitos individuais, sociais e políticos após o fim da ditadura militar' },
+      { id: 'c', text: 'Ter sido a primeira constituição republicana do Brasil' },
+      { id: 'd', text: 'Ter eliminado o voto direto para presidente' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A Constituição de 1988 consolidou a redemocratização brasileira, ampliando direitos fundamentais, sociais, políticos e trabalhistas, e estabelecendo as bases institucionais da República Federativa do Brasil atual.',
+    difficulty: 'medium'
   }
 ];
 
