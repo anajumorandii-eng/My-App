@@ -2641,6 +2641,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_his_idade_antiga_1',
+    chapter: 'Antiguidade Clássica: o Mundo Grego',
     topicId: 'his_idade_antiga',
     subject: 'História',
     prompt: 'Explique por que a democracia ateniense, apesar de ser lembrada como referência histórica, é considerada por historiadores uma democracia profundamente excludente para os padrões atuais.',
@@ -2654,6 +2655,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_his_idade_antiga_2',
+    chapter: 'Antiguidade Clássica: o Mundo Romano',
     topicId: 'his_idade_antiga',
     subject: 'História',
     prompt: 'Explique como o Direito Romano e a engenharia (estradas, aquedutos) contribuíram para a capacidade do Império Romano de administrar um território tão vasto e diverso.',
@@ -2667,6 +2669,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_his_idade_antiga_3',
+    chapter: 'Antiguidade Clássica: o Mundo Romano',
     topicId: 'his_idade_antiga',
     subject: 'História',
     prompt: 'Explique por que a queda do Império Romano do Ocidente, em 476 d.C., é tradicionalmente usada como marco divisório entre a Idade Antiga e a Idade Média.',
@@ -2680,6 +2683,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_his_idade_media_1',
+    chapter: 'Alta Idade Média e Feudalismo',
     topicId: 'his_idade_media',
     subject: 'História',
     prompt: 'Explique as relações de vassalagem e suserania que estruturavam o sistema feudal, descrevendo as obrigações mútuas entre suserano e vassalo.',
@@ -2693,6 +2697,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_his_idade_media_2',
+    chapter: 'Baixa Idade Média',
     topicId: 'his_idade_media',
     subject: 'História',
     prompt: 'Explique como a Peste Negra do século XIV contribuiu, indiretamente, para o enfraquecimento do sistema feudal na Europa.',
@@ -2706,6 +2711,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_his_idade_media_3',
+    chapter: 'Baixa Idade Média',
     topicId: 'his_idade_media',
     subject: 'História',
     prompt: 'Explique por que o ressurgimento do comércio e das cidades (burgos) na Baixa Idade Média é considerado um fator de transformação da sociedade feudal, ligado ao surgimento da burguesia.',
@@ -2719,6 +2725,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_his_moderna_iluminismo_1',
+    chapter: 'Iluminismo',
     topicId: 'his_moderna_iluminismo',
     subject: 'História',
     prompt: 'Explique como o Iluminismo se opunha ao Absolutismo monárquico e aos privilégios do Antigo Regime, e como essas ideias influenciaram a Revolução Francesa.',
@@ -2732,6 +2739,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_his_moderna_iluminismo_2',
+    chapter: 'Vida Urbana e Renascimento Cultural',
     topicId: 'his_moderna_iluminismo',
     subject: 'História',
     prompt: 'Explique de que forma a Revolução Científica dos séculos XVI e XVII preparou terreno intelectual para o pensamento iluminista do século XVIII.',
@@ -2745,6 +2753,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_his_moderna_iluminismo_3',
+    chapter: 'América no Século XIX',
     topicId: 'his_moderna_iluminismo',
     subject: 'História',
     prompt: 'Explique por que a Independência dos Estados Unidos (1776) é considerada uma das primeiras aplicações práticas dos ideais iluministas, e como ela influenciou eventos posteriores.',
@@ -2758,6 +2767,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_his_imperialismo_guerras_1',
+    chapter: 'Imperialismo e Belle Époque',
     topicId: 'his_imperialismo_guerras',
     subject: 'História',
     prompt: 'Explique as principais motivações econômicas e políticas por trás do imperialismo europeu na África e na Ásia no final do século XIX.',
@@ -2771,6 +2781,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_his_imperialismo_guerras_2',
+    chapter: 'Primeira Guerra Mundial (1914-1918)',
     topicId: 'his_imperialismo_guerras',
     subject: 'História',
     prompt: 'Explique por que o assassinato do arquiduque Francisco Ferdinando, em 1914, é descrito como o "estopim" da Primeira Guerra Mundial, e não sua causa profunda.',
@@ -2784,6 +2795,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_his_imperialismo_guerras_3',
+    chapter: 'O Nazismo na Alemanha',
     topicId: 'his_imperialismo_guerras',
     subject: 'História',
     prompt: 'Explique como a crise econômica e o ressentimento nacionalista, decorrentes das condições impostas pelo Tratado de Versalhes, contribuíram para a ascensão do nazismo na Alemanha.',
@@ -2797,6 +2809,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_his_guerra_fria_contemporaneo_1',
+    chapter: 'Guerra Fria',
     topicId: 'his_guerra_fria_contemporaneo',
     subject: 'História',
     prompt: 'Explique por que a Guerra Fria é descrita como um conflito sem confronto militar direto entre as duas potências centrais, apesar de ser chamada de "guerra".',
@@ -2810,6 +2823,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_his_guerra_fria_contemporaneo_2',
+    chapter: 'O Fim da Guerra Fria',
     topicId: 'his_guerra_fria_contemporaneo',
     subject: 'História',
     prompt: 'Explique por que a queda do Muro de Berlim em 1989 é considerada um marco simbólico do processo que levaria ao fim da Guerra Fria.',
@@ -2823,6 +2837,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_his_guerra_fria_contemporaneo_3',
+    chapter: 'Descolonização Afro-Asiática',
     topicId: 'his_guerra_fria_contemporaneo',
     subject: 'História',
     prompt: 'Explique por que muitos países recém-independentes da África e da Ásia, após o processo de descolonização, enfrentaram instabilidade política e conflitos internos nas décadas seguintes.',
@@ -2836,6 +2851,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_his_brasil_colonia_1',
+    chapter: 'Dinâmica Interna da Colonização',
     topicId: 'his_brasil_colonia',
     subject: 'História',
     prompt: 'Explique o funcionamento do Pacto Colonial e por que ele beneficiava especificamente a metrópole portuguesa em detrimento da colônia brasileira.',
@@ -2849,6 +2865,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_his_brasil_colonia_2',
+    chapter: 'Dinâmica Interna da Colonização',
     topicId: 'his_brasil_colonia',
     subject: 'História',
     prompt: 'Explique por que a mão de obra escravizada africana se tornou central para a economia do Brasil colonial, relacionando isso às atividades econômicas predominantes do período.',
@@ -2862,6 +2879,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_his_brasil_colonia_3',
+    chapter: 'A Crise do Antigo Sistema Colonial',
     topicId: 'his_brasil_colonia',
     subject: 'História',
     prompt: 'Explique por que a Inconfidência Mineira, apesar de fracassar em seus objetivos imediatos, é considerada um evento historicamente relevante.',
@@ -2875,6 +2893,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_his_brasil_imperio_1',
+    chapter: 'Brasil Império: Formação do Estado Nacional Brasileiro',
     topicId: 'his_brasil_imperio',
     subject: 'História',
     prompt: 'Explique por que a independência do Brasil, em 1822, é frequentemente descrita como um processo de "continuidade" mais do que de "ruptura" em relação ao período colonial.',
@@ -2888,6 +2907,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_his_brasil_imperio_2',
+    chapter: 'Brasil Império: o Declínio do Segundo Reinado',
     topicId: 'his_brasil_imperio',
     subject: 'História',
     prompt: 'Explique por que a Lei Áurea, apesar de abolir formalmente a escravidão em 1888, não resolveu as desigualdades sociais enfrentadas pela população negra brasileira.',
@@ -2901,6 +2921,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_his_brasil_imperio_3',
+    chapter: 'Brasil Império: o Período Regencial (1831-1840)',
     topicId: 'his_brasil_imperio',
     subject: 'História',
     prompt: 'Explique por que o Período Regencial (1831-1840) foi marcado por instabilidade política e diversas revoltas regionais no Brasil Império.',
@@ -2914,6 +2935,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_his_primeira_republica_vargas_1',
+    chapter: 'Ascensão e Domínio das Oligarquias',
     topicId: 'his_primeira_republica_vargas',
     subject: 'História',
     prompt: 'Explique como funcionava a política do "café com leite" e o "coronelismo" (incluindo o voto de cabresto) na Primeira República brasileira, e como esses mecanismos se relacionavam.',
@@ -2927,6 +2949,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_his_primeira_republica_vargas_2',
+    chapter: 'A Primeira República: o Declínio Oligárquico (1889-1930)',
     topicId: 'his_primeira_republica_vargas',
     subject: 'História',
     prompt: 'Explique como a crise do modelo agroexportador cafeeiro, agravada pela Grande Depressão de 1929, contribuiu para a Revolução de 1930.',
@@ -2940,6 +2963,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_his_primeira_republica_vargas_3',
+    chapter: 'A Era Vargas: o Estado Novo',
     topicId: 'his_primeira_republica_vargas',
     subject: 'História',
     prompt: 'Explique a combinação de autoritarismo político e avanços trabalhistas que caracterizou o Estado Novo de Getúlio Vargas (1937-1945).',
@@ -2953,6 +2977,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_his_republica_liberal_atual_1',
+    chapter: 'Regime Militar (1964-1985) II',
     topicId: 'his_republica_liberal_atual',
     subject: 'História',
     prompt: 'Explique por que o "Milagre Econômico" da ditadura militar brasileira é considerado um crescimento econômico que não beneficiou igualmente toda a população.',
@@ -2966,6 +2991,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_his_republica_liberal_atual_2',
+    chapter: 'Regime Militar (1964-1985) II',
     topicId: 'his_republica_liberal_atual',
     subject: 'História',
     prompt: 'Explique o papel do movimento "Diretas Já" no processo de redemocratização brasileira, mesmo sem ter conseguido aprovar eleições diretas imediatamente em 1984.',
@@ -2979,6 +3005,7 @@ export const mockTopicDiscursivePrompts: TopicDiscursivePrompt[] = [
   },
   {
     id: 'disc_his_republica_liberal_atual_3',
+    chapter: 'O Brasil Atual',
     topicId: 'his_republica_liberal_atual',
     subject: 'História',
     prompt: 'Explique por que o Plano Real (1994) é considerado um marco histórico na estabilização da economia brasileira, relacionando isso ao problema da inflação crônica que o país enfrentava.',
