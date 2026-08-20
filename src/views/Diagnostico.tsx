@@ -31,6 +31,7 @@ export default function Diagnostico() {
   const [selectedSubtopic, setSelectedSubtopic] = useState('');
   const [phase, setPhase] = useState<Phase>('pick');
   const [selfState, setSelfState] = useState<number | null>(null);
+  const [dontKnow, setDontKnow] = useState(false);
   const [quizIndex, setQuizIndex] = useState(0);
   const [quizAnswers, setQuizAnswers] = useState<{ questionId: string; correct: boolean }[]>([]);
   const [selectedOptionId, setSelectedOptionId] = useState<string | null>(null);
@@ -50,6 +51,7 @@ export default function Diagnostico() {
     setSelectedTopicId(topicId);
     setSelectedSubtopic('');
     setSelfState(null);
+    setDontKnow(false);
     setQuizIndex(0);
     setQuizAnswers([]);
     setSelectedOptionId(null);
@@ -58,11 +60,23 @@ export default function Diagnostico() {
 
   const confirmSelfReport = () => {
     if (selfState === null) return;
+    setDontKnow(false);
     if (quizPool.length > 0) {
       setPhase('quiz');
     } else {
       setPhase('result');
     }
+  };
+
+  // For when the honest answer is "eu não sei" — forcing a pick among 0-4
+  // would just be a guess dressed up as data. Only offered when there's a
+  // quiz to actually answer the question, since without one there's no
+  // signal at all to build a result from.
+  const chooseDontKnow = () => {
+    if (quizPool.length === 0) return;
+    setSelfState(null);
+    setDontKnow(true);
+    setPhase('quiz');
   };
 
   const selectQuizOption = (optionId: string) => {
@@ -82,14 +96,25 @@ export default function Diagnostico() {
   };
 
   const computedResult = useMemo(() => {
-    if (selfState === null) return null;
-    let level = STATE_BASE_LEVEL[selfState];
     const correctCount = quizAnswers.filter((a) => a.correct).length;
     const wrongCount = quizAnswers.length - correctCount;
+    if (dontKnow) {
+      if (quizAnswers.length === 0) return null;
+      // No self-report anchor at all — the level comes purely from how she
+      // did on 3 questions. That's not enough to claim real precision, so
+      // it starts from a neutral midpoint and stays at high uncertainty
+      // regardless of the score, instead of pretending 3 questions can
+      // pin down an exact level the way a self-report + quiz combo can.
+      const ratio = correctCount / quizAnswers.length;
+      const level = Math.min(100, Math.max(0, Math.round(20 + ratio * 60)));
+      return { level, uncertainty: 0.55, errorSignals: wrongCount };
+    }
+    if (selfState === null) return null;
+    let level = STATE_BASE_LEVEL[selfState];
     level = Math.min(100, Math.max(0, level + correctCount * 6 - wrongCount * 6));
     const uncertainty = quizAnswers.length > 0 ? 0.15 : 0.35;
     return { level: Math.round(level), uncertainty, errorSignals: wrongCount };
-  }, [selfState, quizAnswers]);
+  }, [selfState, dontKnow, quizAnswers]);
 
   const saveDiagnostic = () => {
     if (!selectedTopicId || !computedResult) return;
@@ -113,6 +138,7 @@ export default function Diagnostico() {
     setSelectedSubtopic('');
     setPhase('pick');
     setSelfState(null);
+    setDontKnow(false);
     setQuizIndex(0);
     setQuizAnswers([]);
     setSelectedOptionId(null);
@@ -243,6 +269,14 @@ export default function Diagnostico() {
           >
             {quizPool.length > 0 ? 'Continuar para o teste rápido' : 'Ver resultado'}
           </button>
+          {quizPool.length > 0 && (
+            <button
+              onClick={chooseDontKnow}
+              className="w-full py-3 border border-dashed border-zinc-300 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 rounded-xl font-medium text-sm hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-colors"
+            >
+              Não sei — é isso que eu quero descobrir com o teste
+            </button>
+          )}
         </div>
       )}
 
@@ -252,6 +286,11 @@ export default function Diagnostico() {
             <p className="text-xs font-semibold uppercase tracking-wide text-indigo-600 dark:text-indigo-400">{topic.subject} · Teste rápido</p>
             <span className="text-sm text-zinc-400">Questão {quizIndex + 1} de {quizPool.length}</span>
           </div>
+          {dontKnow && (
+            <p className="text-xs text-zinc-500 -mt-3">
+              Sem autoavaliação prévia — o resultado vai sair só dessas {quizPool.length} questões, com confiança baixa por serem poucas.
+            </p>
+          )}
           <p className="text-lg font-medium leading-relaxed">{currentQuestion.prompt}</p>
           <div className="space-y-3">
             {currentQuestion.options.map((option) => {
@@ -309,8 +348,17 @@ export default function Diagnostico() {
               <div className="h-full bg-indigo-500" style={{ width: `${computedResult.level}%` }} />
             </div>
             <p className="text-xs text-zinc-500 mt-2">
-              Ponto de partida pela sua autoavaliação ({STATE_LABELS[selfState ?? 0]})
-              {quizAnswers.length > 0 && `, ajustado por ${quizAnswers.filter((a) => a.correct).length} acerto(s) e ${quizAnswers.filter((a) => !a.correct).length} erro(s) no teste rápido`}.
+              {dontKnow ? (
+                <>
+                  Sem autoavaliação — calculado só por {quizAnswers.filter((a) => a.correct).length} acerto(s) e {quizAnswers.filter((a) => !a.correct).length} erro(s) em {quizAnswers.length} questões.
+                  Confiança baixa de propósito: poucas questões não dão pra cravar um número exato.
+                </>
+              ) : (
+                <>
+                  Ponto de partida pela sua autoavaliação ({STATE_LABELS[selfState ?? 0]})
+                  {quizAnswers.length > 0 && `, ajustado por ${quizAnswers.filter((a) => a.correct).length} acerto(s) e ${quizAnswers.filter((a) => !a.correct).length} erro(s) no teste rápido`}.
+                </>
+              )}
             </p>
           </div>
 
