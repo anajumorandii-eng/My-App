@@ -3661,6 +3661,51 @@ export const mockQuestions: Question[] = [
     explanation: 'Projeções conformes, como a de Mercator, preservam ângulos e formas locais (úteis para navegação), mas distorcem áreas — por isso a Groenlândia aparece desproporcionalmente grande em relação à África nesse tipo de projeção.',
     difficulty: 'medium'
   },
+  {
+    id: 'q_geo_cartografia_3',
+    topicId: 'geo_cartografia',
+    subject: 'Geografia',
+    prompt: 'Em um mapa com curvas de nível bastante espaçadas entre si em uma determinada área, isso indica que, naquele trecho, o relevo apresenta:',
+    options: [
+      { id: 'a', text: 'Declividade acentuada (relevo íngreme)' },
+      { id: 'b', text: 'Declividade suave (relevo mais plano)' },
+      { id: 'c', text: 'Uma depressão absoluta abaixo do nível do mar' },
+      { id: 'd', text: 'Impossibilidade de representar a altitude' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Curvas de nível representam pontos de mesma altitude; quando estão bem espaçadas entre si, significa que a altitude varia pouco ao longo de uma distância maior, indicando um relevo suave. Curvas muito próximas umas das outras indicam, ao contrário, declividade acentuada.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_cartografia_4',
+    topicId: 'geo_cartografia',
+    subject: 'Geografia',
+    prompt: 'O Sistema de Posicionamento Global (GPS) permite determinar a localização exata de um ponto na superfície terrestre principalmente por meio de:',
+    options: [
+      { id: 'a', text: 'Comparação visual direta com mapas impressos' },
+      { id: 'b', text: 'Triangulação de sinais recebidos de uma rede de satélites artificiais' },
+      { id: 'c', text: 'Medição exclusiva da altitude em relação ao nível do mar' },
+      { id: 'd', text: 'Cálculo baseado unicamente na direção do vento' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'O GPS funciona por meio da triangulação: um receptor calcula sua posição com base no tempo que os sinais de rádio levam para chegar de múltiplos satélites (normalmente pelo menos 4), cada um com posição orbital conhecida, permitindo determinar latitude, longitude e altitude com precisão.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_cartografia_5',
+    topicId: 'geo_cartografia',
+    subject: 'Geografia',
+    prompt: 'Diferentemente das projeções conformes (como Mercator), as projeções equivalentes (como a de Peters) priorizam preservar:',
+    options: [
+      { id: 'a', text: 'Os ângulos e as formas locais dos continentes' },
+      { id: 'b', text: 'As áreas reais dos continentes, mesmo distorcendo suas formas' },
+      { id: 'c', text: 'Exclusivamente as distâncias entre os polos' },
+      { id: 'd', text: 'Apenas a cor dos oceanos' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Projeções equivalentes, como a de Peters, priorizam a representação proporcionalmente correta das áreas dos continentes (útil para comparar o tamanho real de diferentes países), ao custo de distorcer suas formas — o oposto do que fazem as projeções conformes, como a de Mercator.',
+    difficulty: 'medium'
+  },
   // Geografia — Climatologia e Problemas Socioambientais
   {
     id: 'q_geo_climatologia_socioambiental_1',
@@ -3692,6 +3737,51 @@ export const mockQuestions: Question[] = [
     explanation: 'A queima de combustíveis fósseis, o desmatamento e a pecuária intensiva elevam a concentração de CO₂ e CH₄ na atmosfera, intensificando a retenção de calor e o efeito estufa natural do planeta.',
     difficulty: 'easy'
   },
+  {
+    id: 'q_geo_climatologia_socioambiental_3',
+    topicId: 'geo_climatologia_socioambiental',
+    subject: 'Geografia',
+    prompt: 'A chuva ácida, um problema socioambiental associado à poluição atmosférica industrial e veicular, é formada principalmente pela combinação de água presente na atmosfera com:',
+    options: [
+      { id: 'a', text: 'Gás oxigênio e gás nitrogênio, componentes naturais do ar' },
+      { id: 'b', text: 'Óxidos de enxofre e de nitrogênio, liberados pela queima de combustíveis fósseis' },
+      { id: 'c', text: 'Vapor de água puro, sem qualquer poluente' },
+      { id: 'd', text: 'Gás carbônico exclusivamente, sem outros poluentes' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A chuva ácida se forma quando óxidos de enxofre (SOx) e de nitrogênio (NOx), liberados principalmente pela queima de combustíveis fósseis em indústrias e veículos, reagem com a água presente na atmosfera, formando ácidos que precipitam na chuva, prejudicando solos, corpos d\'água, construções e ecossistemas.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_climatologia_socioambiental_4',
+    topicId: 'geo_climatologia_socioambiental',
+    subject: 'Geografia',
+    prompt: 'O fenômeno El Niño, caracterizado pelo aquecimento anômalo das águas do Oceano Pacífico equatorial, tende a causar, entre outros efeitos, no Brasil:',
+    options: [
+      { id: 'a', text: 'Chuvas intensas no Sul e seca no Norte/Nordeste, entre outros padrões regionais alterados' },
+      { id: 'b', text: 'Nenhuma alteração perceptível no clima brasileiro' },
+      { id: 'c', text: 'Queda uniforme de temperatura em todo o território nacional' },
+      { id: 'd', text: 'Aumento generalizado e uniforme de chuvas em todo o país' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O El Niño altera padrões de circulação atmosférica globalmente, e no Brasil costuma estar associado a chuvas acima da média na região Sul e a estiagens mais intensas no Norte e Nordeste, entre outras alterações regionais — os efeitos não são uniformes em todo o território.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_climatologia_socioambiental_5',
+    topicId: 'geo_climatologia_socioambiental',
+    subject: 'Geografia',
+    prompt: 'A desertificação, processo de degradação de terras em regiões áridas e semiáridas, é intensificada, além de fatores climáticos naturais, principalmente por ações humanas como:',
+    options: [
+      { id: 'a', text: 'Reflorestamento intensivo e conservação do solo' },
+      { id: 'b', text: 'Desmatamento, sobrepastoreio e práticas agrícolas inadequadas, que aceleram a degradação do solo' },
+      { id: 'c', text: 'Irrigação controlada e manejo sustentável exclusivamente' },
+      { id: 'd', text: 'Ausência total de atividade humana na região' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Embora a desertificação tenha relação com condições climáticas naturais de regiões áridas/semiáridas, ela é fortemente intensificada por práticas humanas insustentáveis — como desmatamento da vegetação nativa, sobrepastoreio (excesso de gado por área) e uso inadequado do solo agrícola — que aceleram a perda de fertilidade e a degradação do solo, tornando a terra progressivamente mais improdutiva.',
+    difficulty: 'medium'
+  },
   // Geografia — Hidrogeografia
   {
     id: 'q_geo_hidrogeografia_1',
@@ -3721,6 +3811,51 @@ export const mockQuestions: Question[] = [
     ],
     correctOptionId: 'b',
     explanation: 'Rios de planalto, com desníveis acentuados e correnteza forte, favorecem o aproveitamento hidrelétrico — diferente dos rios de planície, mais navegáveis por terem menor declividade.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_hidrogeografia_3',
+    topicId: 'geo_hidrogeografia',
+    subject: 'Geografia',
+    prompt: 'A Bacia Hidrográfica Amazônica, a maior do mundo em volume de água, se destaca também por:',
+    options: [
+      { id: 'a', text: 'Ter seus rios praticamente sem uso para navegação, devido ao relevo extremamente acidentado' },
+      { id: 'b', text: 'Concentrar uma rede de rios volumosos, com grande potencial de navegação, que funcionam como importantes vias de transporte regional' },
+      { id: 'c', text: 'Estar localizada exclusivamente fora do território brasileiro' },
+      { id: 'd', text: 'Não possuir nenhum afluente relevante' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A Bacia Amazônica reúne o rio Amazonas e diversos afluentes volumosos (como o Negro, o Madeira e o Tapajós), que, por percorrerem trechos de planície com pouca declividade, oferecem grande potencial de navegação, sendo vias essenciais de transporte de pessoas e mercadorias na região.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_hidrogeografia_4',
+    topicId: 'geo_hidrogeografia',
+    subject: 'Geografia',
+    prompt: 'O ciclo hidrológico (ciclo da água) descreve a circulação contínua da água entre a atmosfera, a superfície terrestre e os corpos d\'água. A etapa em que a água líquida se transforma em vapor, retornando à atmosfera a partir de rios, lagos e oceanos, é chamada de:',
+    options: [
+      { id: 'a', text: 'Precipitação' },
+      { id: 'b', text: 'Evaporação' },
+      { id: 'c', text: 'Infiltração' },
+      { id: 'd', text: 'Escoamento superficial' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A evaporação é a etapa do ciclo hidrológico em que a água líquida, presente em oceanos, rios e lagos, se transforma em vapor d\'água e retorna à atmosfera, de onde poderá formar nuvens e, posteriormente, precipitar novamente na forma de chuva.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_geo_hidrogeografia_5',
+    topicId: 'geo_hidrogeografia',
+    subject: 'Geografia',
+    prompt: 'A poluição de rios urbanos no Brasil, um problema socioambiental recorrente, é causada principalmente por:',
+    options: [
+      { id: 'a', text: 'Lançamento de esgoto doméstico e industrial sem tratamento adequado diretamente nos corpos d\'água' },
+      { id: 'b', text: 'Excesso de chuvas naturais na região' },
+      { id: 'c', text: 'Presença excessiva de peixes nos rios' },
+      { id: 'd', text: 'Ausência total de urbanização nas margens dos rios' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Grande parte da poluição de rios urbanos brasileiros decorre do lançamento de esgoto doméstico e efluentes industriais sem tratamento adequado, além do descarte irregular de resíduos sólidos — problemas agravados pela falta de infraestrutura de saneamento básico em muitas cidades.',
     difficulty: 'medium'
   },
   // Geografia — Globalização e Geografia Econômica
@@ -3754,6 +3889,51 @@ export const mockQuestions: Question[] = [
     explanation: 'Blocos econômicos regionais buscam reduzir tarifas e barreiras entre membros para ampliar o comércio interno e fortalecer o poder de negociação do grupo no cenário internacional — nem todos adotam moeda única, como é o caso do Mercosul.',
     difficulty: 'medium'
   },
+  {
+    id: 'q_geo_globalizacao_economica_3',
+    topicId: 'geo_globalizacao_economica',
+    subject: 'Geografia',
+    prompt: 'A "divisão internacional do trabalho", conceito central para entender a globalização econômica, se refere a:',
+    options: [
+      { id: 'a', text: 'Todos os países desempenharem exatamente o mesmo papel na economia mundial' },
+      { id: 'b', text: 'Diferentes países ou regiões se especializarem em determinadas funções na economia global (como produção de matérias-primas, manufatura ou serviços de alta tecnologia), de acordo com vantagens comparativas' },
+      { id: 'c', text: 'Um único país concentrar toda a produção mundial de qualquer bem' },
+      { id: 'd', text: 'A divisão igualitária da riqueza mundial entre todos os países' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A divisão internacional do trabalho descreve como diferentes países/regiões se especializam em funções específicas na economia globalizada — por exemplo, alguns países concentram a extração de matérias-primas, outros a manufatura de baixo custo, e outros ainda serviços de alta tecnologia e pesquisa — de acordo com vantagens comparativas como custo de mão de obra, disponibilidade de recursos naturais ou nível tecnológico.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_globalizacao_economica_4',
+    topicId: 'geo_globalizacao_economica',
+    subject: 'Geografia',
+    prompt: 'As empresas transnacionais (ou multinacionais), atores centrais da globalização econômica, se caracterizam por:',
+    options: [
+      { id: 'a', text: 'Operar exclusivamente dentro das fronteiras de seu país de origem' },
+      { id: 'b', text: 'Possuir unidades produtivas, filiais ou operações em múltiplos países, buscando otimizar custos, acessar mercados e recursos em escala global' },
+      { id: 'c', text: 'Serem obrigatoriamente controladas por governos nacionais' },
+      { id: 'd', text: 'Produzirem apenas para consumo interno, sem qualquer exportação' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Empresas transnacionais operam em múltiplos países simultaneamente, distribuindo etapas de produção, centros de distribuição e mercados consumidores de acordo com vantagens estratégicas em cada local (custo de mão de obra, incentivos fiscais, proximidade de mercados ou recursos) — um dos motores centrais da globalização econômica contemporânea.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_globalizacao_economica_5',
+    topicId: 'geo_globalizacao_economica',
+    subject: 'Geografia',
+    prompt: 'Um dos efeitos mais discutidos da globalização econômica sobre os países em desenvolvimento é:',
+    options: [
+      { id: 'a', text: 'A eliminação total e imediata das desigualdades econômicas entre países' },
+      { id: 'b', text: 'A possibilidade de maior integração aos mercados globais, mas também o risco de aprofundar desigualdades e dependência econômica em relação a economias mais desenvolvidas' },
+      { id: 'c', text: 'O isolamento completo desses países do comércio internacional' },
+      { id: 'd', text: 'A garantia automática de desenvolvimento econômico igual ao dos países mais ricos' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A globalização econômica oferece a países em desenvolvimento oportunidades de integração a cadeias produtivas e mercados globais, mas esse processo é debatido justamente porque pode também aprofundar desigualdades — por exemplo, quando esses países ficam concentrados em atividades de menor valor agregado (extração de matérias-primas, manufatura básica), mantendo relações de dependência econômica e tecnológica em relação a países mais desenvolvidos.',
+    difficulty: 'hard'
+  },
   // Geografia — Geopolítica Regional Contemporânea
   {
     id: 'q_geo_geopolitica_regional_1',
@@ -3783,6 +3963,51 @@ export const mockQuestions: Question[] = [
     ],
     correctOptionId: 'a',
     explanation: 'Os BRICS surgiram como articulação de potências emergentes buscando maior peso político e econômico no cenário internacional, historicamente dominado por EUA e potências europeias — sem caráter de aliança militar.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_geopolitica_regional_3',
+    topicId: 'geo_geopolitica_regional',
+    subject: 'Geografia',
+    prompt: 'A União Europeia, um dos blocos regionais mais integrados do mundo, enfrentou em anos recentes um marco geopolítico significativo com:',
+    options: [
+      { id: 'a', text: 'A saída do Reino Unido do bloco (Brexit), formalizada após um referendo popular' },
+      { id: 'b', text: 'A entrada simultânea de todos os países da Ásia no bloco' },
+      { id: 'c', text: 'A fusão completa de todas as economias europeias em um único país' },
+      { id: 'd', text: 'A dissolução total e definitiva do bloco' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O Brexit — a saída do Reino Unido da União Europeia, decidida por referendo popular em 2016 e formalizada em 2020 — foi um marco geopolítico importante, gerando debates sobre soberania nacional, livre circulação de pessoas e os limites da integração regional europeia.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_geopolitica_regional_4',
+    topicId: 'geo_geopolitica_regional',
+    subject: 'Geografia',
+    prompt: 'O conflito entre Rússia e Ucrânia, intensificado a partir de 2022, tem entre suas raízes geopolíticas discutidas:',
+    options: [
+      { id: 'a', text: 'A disputa por influência geopolítica na Europa Oriental, incluindo a possível expansão da OTAN e questões de soberania territorial da Ucrânia' },
+      { id: 'b', text: 'Uma disputa exclusivamente religiosa, sem qualquer componente territorial ou geopolítico' },
+      { id: 'c', text: 'Uma questão resolvida definitivamente por acordo diplomático nos anos 1990' },
+      { id: 'd', text: 'A ausência total de interesse de outras potências no conflito' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O conflito envolve, entre outros fatores, disputas históricas de influência geopolítica na Europa Oriental — incluindo o debate sobre a expansão da OTAN em direção às fronteiras russas, questões de soberania territorial (como a Crimeia e regiões do leste ucraniano) e identidades nacionais em disputa — um conflito com forte repercussão geopolítica global, inclusive em mercados de energia e alimentos.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_geo_geopolitica_regional_5',
+    topicId: 'geo_geopolitica_regional',
+    subject: 'Geografia',
+    prompt: 'A ascensão da China como potência econômica e geopolítica global nas últimas décadas está associada, entre outros fatores, a:',
+    options: [
+      { id: 'a', text: 'Um modelo de abertura econômica gradual ao capital estrangeiro, mantendo forte controle estatal e do Partido Comunista sobre setores estratégicos' },
+      { id: 'b', text: 'Isolamento completo da economia chinesa em relação ao comércio internacional' },
+      { id: 'c', text: 'Ausência total de investimentos em infraestrutura e tecnologia' },
+      { id: 'd', text: 'Adoção de um sistema político idêntico ao dos países ocidentais' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A China combinou reformas econômicas graduais (abertura ao investimento estrangeiro e ao comércio internacional, a partir do final dos anos 1970) com forte controle estatal e do Partido Comunista sobre setores estratégicos da economia — um modelo próprio que impulsionou seu crescimento econômico acelerado e sua crescente influência geopolítica global, incluindo projetos como a Nova Rota da Seda.',
     difficulty: 'medium'
   },
   // Geografia — Geografia Física do Brasil
@@ -3816,6 +4041,51 @@ export const mockQuestions: Question[] = [
     explanation: 'O Brasil está localizado em uma área tectonicamente estável (a Plataforma Sul-Americana), o que resultou em um relevo antigo, já bastante erodido, predominando planaltos e planícies de altitudes moderadas — sem grandes cadeias montanhosas jovens.',
     difficulty: 'medium'
   },
+  {
+    id: 'q_geo_fisica_brasil_3',
+    topicId: 'geo_fisica_brasil',
+    subject: 'Geografia',
+    prompt: 'O clima predominante na maior parte do território brasileiro, marcado por temperaturas médias elevadas ao longo do ano, é classificado principalmente como:',
+    options: [
+      { id: 'a', text: 'Polar' },
+      { id: 'b', text: 'Tropical, em suas diversas variações regionais' },
+      { id: 'c', text: 'Desértico frio' },
+      { id: 'd', text: 'Temperado continental, uniforme em todo o país' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Por estar localizado majoritariamente entre os trópicos, o Brasil apresenta predominantemente climas tropicais (com variações regionais, como o tropical equatorial na Amazônia, o tropical semiárido no sertão nordestino e o tropical de altitude em áreas mais elevadas do Sudeste), com temperaturas médias elevadas ao longo do ano na maior parte do território.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_geo_fisica_brasil_4',
+    topicId: 'geo_fisica_brasil',
+    subject: 'Geografia',
+    prompt: 'O bioma Cerrado, o segundo maior do Brasil em extensão, é caracterizado principalmente por:',
+    options: [
+      { id: 'a', text: 'Vegetação de savana tropical, com árvores baixas e tortuosas, arbustos e um estrato herbáceo, adaptada a solos ácidos e à estação seca prolongada' },
+      { id: 'b', text: 'Floresta densa e fechada, sem qualquer período de seca ao longo do ano' },
+      { id: 'c', text: 'Vegetação exclusivamente aquática, sem qualquer espécie terrestre' },
+      { id: 'd', text: 'Ausência total de vida vegetal' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O Cerrado é um bioma de savana tropical, com árvores de troncos tortuosos e cascas grossas (adaptação ao fogo e à seca), arbustos e um denso estrato herbáceo, adaptado a solos ácidos e pobres em nutrientes e a uma estação seca bem definida — bastante diferente da floresta densa e úmida da Amazônia.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_fisica_brasil_5',
+    topicId: 'geo_fisica_brasil',
+    subject: 'Geografia',
+    prompt: 'O desmatamento na Amazônia brasileira tem entre suas principais causas históricas:',
+    options: [
+      { id: 'a', text: 'A expansão de atividades como pecuária extensiva, agricultura e extração ilegal de madeira e minérios' },
+      { id: 'b', text: 'Exclusivamente causas climáticas naturais, sem qualquer relação com atividade humana' },
+      { id: 'c', text: 'A ausência total de qualquer atividade econômica na região' },
+      { id: 'd', text: 'Um processo interrompido completamente desde a década de 1980' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O desmatamento na Amazônia está historicamente associado à expansão da pecuária extensiva, à abertura de áreas para agricultura, e a atividades ilegais como extração de madeira e mineração — processos frequentemente ligados também à expansão de rodovias e à grilagem de terras públicas.',
+    difficulty: 'medium'
+  },
   // Geografia — Geografia Econômica do Brasil
   {
     id: 'q_geo_economica_brasil_1',
@@ -3847,6 +4117,51 @@ export const mockQuestions: Question[] = [
     explanation: 'A industrialização concentrada no Sudeste resulta de um processo histórico: o capital acumulado pela cafeicultura, disponibilidade de mão de obra (inclusive imigrante), infraestrutura de transporte e proximidade de um grande mercado consumidor favoreceram a instalação industrial na região.',
     difficulty: 'medium'
   },
+  {
+    id: 'q_geo_economica_brasil_3',
+    topicId: 'geo_economica_brasil',
+    subject: 'Geografia',
+    prompt: 'A partir das últimas décadas do século XX, observou-se no Brasil um processo de desconcentração industrial, com a instalação de indústrias em regiões fora do Sudeste. Esse fenômeno é explicado principalmente por:',
+    options: [
+      { id: 'a', text: 'Incentivos fiscais oferecidos por estados de outras regiões, custos de mão de obra mais baixos e busca por proximidade de novos mercados consumidores' },
+      { id: 'b', text: 'Uma decisão espontânea e sem qualquer motivação econômica das empresas' },
+      { id: 'c', text: 'A proibição legal de novas indústrias se instalarem no Sudeste' },
+      { id: 'd', text: 'O desaparecimento completo da indústria no Sudeste' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A desconcentração industrial no Brasil foi impulsionada por incentivos fiscais (guerra fiscal entre estados), custos de mão de obra menores em outras regiões, saturação de infraestrutura no Sudeste e busca por proximidade de novos mercados consumidores em expansão — embora o Sudeste ainda concentre parcela expressiva da indústria nacional.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_economica_brasil_4',
+    topicId: 'geo_economica_brasil',
+    subject: 'Geografia',
+    prompt: 'O Brasil é um dos maiores produtores mundiais de energia hidrelétrica, o que se relaciona diretamente com:',
+    options: [
+      { id: 'a', text: 'A abundância de grandes rios com desníveis aproveitáveis, especialmente em regiões de planalto' },
+      { id: 'b', text: 'A ausência total de rios no território nacional' },
+      { id: 'c', text: 'A predominância de um relevo montanhoso extremamente elevado em todo o país' },
+      { id: 'd', text: 'A proibição de uso de outras fontes de energia' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A grande disponibilidade de rios volumosos com desníveis aproveitáveis (especialmente em áreas de planalto, como a Bacia do Paraná) permitiu ao Brasil desenvolver uma matriz energética fortemente baseada em hidrelétricas, embora o país venha diversificando sua matriz com outras fontes renováveis, como eólica e solar.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_economica_brasil_5',
+    topicId: 'geo_economica_brasil',
+    subject: 'Geografia',
+    prompt: 'O conceito de "commodity", frequentemente associado à pauta de exportações brasileira, se refere a:',
+    options: [
+      { id: 'a', text: 'Produtos manufaturados de altíssimo valor agregado e tecnologia exclusiva' },
+      { id: 'b', text: 'Produtos primários (agrícolas, minerais) padronizados, negociados em larga escala no mercado internacional, com pouca diferenciação e agregação de valor' },
+      { id: 'c', text: 'Serviços financeiros exclusivamente' },
+      { id: 'd', text: 'Produtos exclusivos de uma única empresa, sem padronização de mercado' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Commodities são produtos primários (como soja, minério de ferro, petróleo bruto) padronizados e negociados em larga escala em mercados internacionais, com preços definidos globalmente e pouca diferenciação entre produtores — uma característica marcante da pauta de exportações brasileira, com implicações sobre a dependência de preços internacionais e o valor agregado da economia.',
+    difficulty: 'medium'
+  },
   // Geografia — Geografia da População e Urbana do Brasil
   {
     id: 'q_geo_populacao_urbana_brasil_1',
@@ -3876,6 +4191,51 @@ export const mockQuestions: Question[] = [
     ],
     correctOptionId: 'b',
     explanation: 'A queda sustentada da taxa de natalidade e o aumento da expectativa de vida vêm alterando o formato da pirâmide etária brasileira, que se estreita na base e se alarga no topo — um processo de transição demográfica e envelhecimento populacional.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_populacao_urbana_brasil_3',
+    topicId: 'geo_populacao_urbana_brasil',
+    subject: 'Geografia',
+    prompt: 'A macrocefalia urbana, fenômeno observado em algumas regiões metropolitanas brasileiras, se refere a:',
+    options: [
+      { id: 'a', text: 'A distribuição igualitária da população entre pequenas e grandes cidades de uma região' },
+      { id: 'b', text: 'A concentração desproporcional da população e das atividades econômicas em uma única grande cidade (ou região metropolitana), em detrimento das demais cidades da região' },
+      { id: 'c', text: 'O crescimento populacional exclusivo de áreas rurais' },
+      { id: 'd', text: 'A ausência total de cidades grandes no país' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A macrocefalia urbana ocorre quando uma cidade (geralmente a capital ou principal centro econômico de uma região) concentra desproporcionalmente população, empregos e serviços em relação às demais cidades da mesma região, criando um desequilíbrio na rede urbana — um padrão historicamente observado em várias regiões metropolitanas brasileiras.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_populacao_urbana_brasil_4',
+    topicId: 'geo_populacao_urbana_brasil',
+    subject: 'Geografia',
+    prompt: 'A segregação socioespacial nas cidades brasileiras se manifesta, entre outras formas, por:',
+    options: [
+      { id: 'a', text: 'Distribuição totalmente igualitária de infraestrutura e serviços entre todos os bairros de uma cidade' },
+      { id: 'b', text: 'Distância física e desigualdade de acesso a infraestrutura, serviços públicos e oportunidades entre diferentes grupos sociais e áreas da cidade' },
+      { id: 'c', text: 'Ausência completa de diferenças entre bairros centrais e periféricos' },
+      { id: 'd', text: 'Um fenômeno observado exclusivamente em outros países, nunca no Brasil' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A segregação socioespacial se manifesta na desigual distribuição de infraestrutura urbana (saneamento, transporte, saúde, educação) e no distanciamento físico entre diferentes grupos sociais na cidade — frequentemente com populações de menor renda concentradas em periferias com pior acesso a serviços, enquanto áreas centrais ou nobres concentram melhor infraestrutura.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_populacao_urbana_brasil_5',
+    topicId: 'geo_populacao_urbana_brasil',
+    subject: 'Geografia',
+    prompt: 'As migrações internas no Brasil, como o histórico fluxo de nordestinos para o Sudeste, foram impulsionadas principalmente por:',
+    options: [
+      { id: 'a', text: 'Fatores de repulsão (falta de oportunidades econômicas, secas prolongadas) na região de origem e fatores de atração (oferta de empregos industriais) na região de destino' },
+      { id: 'b', text: 'Determinação legal obrigatória do governo federal' },
+      { id: 'c', text: 'Ausência total de qualquer motivação econômica' },
+      { id: 'd', text: 'Um fenômeno que nunca ocorreu de fato na história do país' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'As migrações internas brasileiras, como o fluxo histórico de nordestinos rumo ao Sudeste industrializado, foram impulsionadas pela combinação de fatores de repulsão na região de origem (secas recorrentes, concentração fundiária, falta de oportunidades econômicas) e fatores de atração no destino (oferta de empregos industriais e urbanos, melhores salários) — um padrão clássico de análise das migrações internas.',
     difficulty: 'medium'
   },
   // História — Idade Antiga
