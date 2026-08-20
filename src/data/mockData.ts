@@ -850,6 +850,70 @@ export const mockQuestions: Question[] = [
     explanation: 'Na respiração aeróbica, o oxigênio como aceptor final de elétrons permite que a cadeia transportadora de elétrons opere plenamente, gerando um grande gradiente de prótons usado pela ATP sintase para produzir muito mais ATP (por fosforilação oxidativa) do que a fermentação, que para na glicólise e produz apenas 2 ATP líquidos por glicose.',
     difficulty: 'hard'
   },
+  {
+    id: 'q_bio_metabolismo_energetico_6',
+    chapter: 'Proteínas: Enzimas',
+    topicId: 'bio_metabolismo_energetico',
+    subject: 'Biologia',
+    prompt: 'As enzimas são catalisadores biológicos, geralmente de natureza proteica, cuja principal função é:',
+    options: [
+      { id: 'a', text: 'Fornecer energia diretamente às reações metabólicas' },
+      { id: 'b', text: 'Diminuir a energia de ativação das reações químicas, acelerando-as, sem serem consumidas no processo' },
+      { id: 'c', text: 'Ser consumidas totalmente a cada reação que catalisam' },
+      { id: 'd', text: 'Alterar o produto final de uma reação química' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Enzimas são catalisadores biológicos que diminuem a energia de ativação necessária para uma reação ocorrer, acelerando-a consideravelmente, sem serem consumidas no processo — podendo catalisar a mesma reação repetidamente.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_bio_metabolismo_energetico_7',
+    chapter: 'Proteínas: Enzimas',
+    topicId: 'bio_metabolismo_energetico',
+    subject: 'Biologia',
+    prompt: 'O modelo de "encaixe induzido" (diferente do antigo modelo "chave-fechadura") descreve a interação entre uma enzima e seu substrato como:',
+    options: [
+      { id: 'a', text: 'Um encaixe rígido e perfeito, sem qualquer mudança de forma da enzima' },
+      { id: 'b', text: 'Uma interação em que o sítio ativo da enzima muda ligeiramente sua conformação ao se ligar ao substrato, ajustando-se para otimizar a catálise' },
+      { id: 'c', text: 'Uma ligação permanente e irreversível entre enzima e substrato' },
+      { id: 'd', text: 'Uma interação em que a enzima é degradada ao se ligar ao substrato' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'O modelo do encaixe induzido propõe que o sítio ativo da enzima não é uma forma perfeitamente rígida (como uma fechadura), mas sim flexível, ajustando ligeiramente sua conformação ao entrar em contato com o substrato — otimizando o encaixe e a catálise da reação.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_metabolismo_energetico_8',
+    chapter: 'Proteínas: Enzimas',
+    topicId: 'bio_metabolismo_energetico',
+    subject: 'Biologia',
+    prompt: 'Um aumento excessivo de temperatura, muito além da temperatura ótima de uma enzima, geralmente causa:',
+    options: [
+      { id: 'a', text: 'Aumento indefinido da velocidade da reação catalisada' },
+      { id: 'b', text: 'Desnaturação da enzima, perdendo sua conformação tridimensional e, consequentemente, sua função catalítica' },
+      { id: 'c', text: 'Nenhum efeito sobre a atividade enzimática' },
+      { id: 'd', text: 'Transformação da enzima em substrato' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Temperaturas muito acima da temperatura ótima de uma enzima rompem as ligações que mantêm sua estrutura tridimensional, causando desnaturação — a perda da conformação espacial e, com ela, da capacidade catalítica da enzima, geralmente de forma irreversível.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_metabolismo_energetico_9',
+    chapter: 'Bioenergética: Fotossíntese e Quimiossíntese',
+    topicId: 'bio_metabolismo_energetico',
+    subject: 'Biologia',
+    prompt: 'A quimiossíntese, processo realizado por certas bactérias (como as que vivem em fontes hidrotermais no fundo do oceano), se assemelha à fotossíntese porque ambas:',
+    options: [
+      { id: 'a', text: 'Utilizam luz solar como fonte de energia' },
+      { id: 'b', text: 'São processos autotróficos que produzem matéria orgânica a partir de matéria inorgânica, mas usando fontes de energia diferentes (luz na fotossíntese, energia química de reações inorgânicas na quimiossíntese)' },
+      { id: 'c', text: 'Ocorrem exclusivamente em plantas' },
+      { id: 'd', text: 'Não produzem qualquer tipo de energia utilizável pelo organismo' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Tanto a fotossíntese quanto a quimiossíntese são processos autotróficos, produzindo matéria orgânica a partir de matéria inorgânica (CO2), mas diferem na fonte de energia: a fotossíntese usa energia luminosa, enquanto a quimiossíntese usa a energia liberada por reações químicas inorgânicas (como a oxidação de compostos de enxofre), permitindo que certas bactérias vivam sem luz solar, como no fundo do oceano.',
+    difficulty: 'medium'
+  },
   // Biologia — Código Genético e Síntese Proteica
   {
     id: 'q_bio_codigo_genetico_sintese_1',
@@ -931,6 +995,70 @@ export const mockQuestions: Question[] = [
     explanation: 'A universalidade do código genético significa que o mesmo códon especifica, com raríssimas exceções, o mesmo aminoácido em organismos tão diferentes quanto bactérias, plantas e humanos — evidência forte da ancestralidade comum de toda a vida na Terra, e o que torna possível, por exemplo, transferir genes entre espécies diferentes na biotecnologia.',
     difficulty: 'medium'
   },
+  {
+    id: 'q_bio_codigo_genetico_sintese_6',
+    chapter: 'Divisão Celular',
+    topicId: 'bio_codigo_genetico_sintese',
+    subject: 'Biologia',
+    prompt: 'A mitose, tipo de divisão celular responsável pelo crescimento e reparo de tecidos, produz, a partir de uma célula-mãe:',
+    options: [
+      { id: 'a', text: 'Duas células-filhas geneticamente idênticas entre si e à célula-mãe, com o mesmo número de cromossomos' },
+      { id: 'b', text: 'Quatro células-filhas com metade do número de cromossomos da célula-mãe' },
+      { id: 'c', text: 'Duas células-filhas geneticamente diferentes entre si' },
+      { id: 'd', text: 'Uma única célula, sem qualquer divisão real' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A mitose produz duas células-filhas geneticamente idênticas entre si e idênticas à célula-mãe original, mantendo o mesmo número de cromossomos (processo diploide-diploide, por exemplo) — um mecanismo essencial para o crescimento, a reposição de células e a reprodução assexuada.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_bio_codigo_genetico_sintese_7',
+    chapter: 'Divisão Celular',
+    topicId: 'bio_codigo_genetico_sintese',
+    subject: 'Biologia',
+    prompt: 'A meiose, diferente da mitose, é o tipo de divisão celular responsável pela formação de gametas, produzindo, a partir de uma célula-mãe diploide:',
+    options: [
+      { id: 'a', text: 'Duas células-filhas diploides, idênticas entre si' },
+      { id: 'b', text: 'Quatro células-filhas haploides (com metade do número de cromossomos), geneticamente diferentes entre si devido à recombinação gênica' },
+      { id: 'c', text: 'Uma única célula diploide' },
+      { id: 'd', text: 'Duas células-filhas, uma diploide e outra haploide' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A meiose envolve duas divisões celulares sucessivas, produzindo quatro células-filhas haploides (n), com metade do número de cromossomos da célula-mãe diploide (2n). Devido ao crossing-over e à segregação independente dos cromossomos, essas células são geneticamente diferentes entre si — a base da variabilidade genética na reprodução sexuada.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_codigo_genetico_sintese_8',
+    chapter: 'Divisão Celular',
+    topicId: 'bio_codigo_genetico_sintese',
+    subject: 'Biologia',
+    prompt: 'O crossing-over (permutação), fenômeno que ocorre durante a meiose, consiste em:',
+    options: [
+      { id: 'a', text: 'A destruição de parte do material genético do gameta' },
+      { id: 'b', text: 'A troca de segmentos entre cromátides homólogas, gerando novas combinações de alelos e aumentando a variabilidade genética dos gametas' },
+      { id: 'c', text: 'A duplicação exata do DNA sem qualquer troca de material' },
+      { id: 'd', text: 'Um erro raro que sempre resulta em doenças genéticas' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'O crossing-over é a troca de segmentos de DNA entre cromátides homólogas durante a prófase I da meiose, criando novas combinações de alelos nos cromossomos recombinantes — um mecanismo natural (não um erro) que aumenta significativamente a variabilidade genética dos gametas produzidos.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_codigo_genetico_sintese_9',
+    chapter: 'Mutações Cromossômicas e Gametogênese',
+    topicId: 'bio_codigo_genetico_sintese',
+    subject: 'Biologia',
+    prompt: 'A síndrome de Down, causada por uma alteração no número de cromossomos (trissomia do cromossomo 21), é um exemplo de:',
+    options: [
+      { id: 'a', text: 'Mutação gênica pontual, afetando apenas um nucleotídeo' },
+      { id: 'b', text: 'Mutação cromossômica numérica (aneuploidia), decorrente de um erro na separação dos cromossomos durante a gametogênese (não disjunção)' },
+      { id: 'c', text: 'Uma característica hereditária dominante comum, sem relação com erros de divisão celular' },
+      { id: 'd', text: 'Uma infecção viral adquirida após o nascimento' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A síndrome de Down é uma aneuploidia (mutação cromossômica numérica), na qual o indivíduo possui uma cópia extra do cromossomo 21 (trissomia). Geralmente resulta de um erro de não disjunção durante a meiose na formação dos gametas, quando os cromossomos homólogos (ou cromátides-irmãs) não se separam corretamente.',
+    difficulty: 'medium'
+  },
   // Biologia — Genética
   {
     id: 'q_bio_genetica_1',
@@ -995,6 +1123,230 @@ export const mockQuestions: Question[] = [
     correctOptionId: 'b',
     explanation: 'Os filhos homens recebem o cromossomo Y do pai e um X da mãe. Da mãe heterozigota (XHXh), metade dos gametas carrega Xh. Logo, metade dos filhos homens (XhY) será hemofílica — o que corresponde a 25% do total de filhos (meninos e meninas juntos), ou 50% considerando apenas os filhos do sexo masculino.',
     difficulty: 'hard'
+  },
+  {
+    id: 'q_bio_genetica_5',
+    chapter: 'Alelos Múltiplos e Herança dos Grupos Sanguíneos',
+    topicId: 'bio_genetica',
+    subject: 'Biologia',
+    prompt: 'O sistema sanguíneo ABO é determinado por um gene com três alelos possíveis (IA, IB, i), sendo um exemplo de:',
+    options: [
+      { id: 'a', text: 'Herança ligada ao sexo' },
+      { id: 'b', text: 'Alelos múltiplos: mais de dois alelos possíveis para o mesmo gene na população, embora cada indivíduo possua apenas dois' },
+      { id: 'c', text: 'Uma característica determinada por dois genes diferentes' },
+      { id: 'd', text: 'Herança citoplasmática, fora do núcleo' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'O sistema ABO é um exemplo clássico de alelos múltiplos: existem três alelos possíveis na população (IA, IB, i) para o mesmo gene, embora cada indivíduo diploide carregue apenas dois deles (um de cada progenitor).',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_bio_genetica_6',
+    chapter: 'Alelos Múltiplos e Herança dos Grupos Sanguíneos',
+    topicId: 'bio_genetica',
+    subject: 'Biologia',
+    prompt: 'No sistema ABO, os alelos IA e IB são codominantes entre si, e ambos são dominantes sobre o alelo i. Um indivíduo com genótipo IAIB apresenta fenótipo sanguíneo:',
+    options: [
+      { id: 'a', text: 'Tipo A' },
+      { id: 'b', text: 'Tipo AB, pois os dois alelos IA e IB se expressam simultaneamente' },
+      { id: 'c', text: 'Tipo O' },
+      { id: 'd', text: 'Tipo B' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Como IA e IB são codominantes, um indivíduo IAIB expressa simultaneamente os dois antígenos (A e B) nas hemácias, resultando no fenótipo sanguíneo tipo AB.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_genetica_7',
+    chapter: 'Alelos Múltiplos e Herança dos Grupos Sanguíneos',
+    topicId: 'bio_genetica',
+    subject: 'Biologia',
+    prompt: 'O sistema Rh, que classifica o sangue como Rh positivo ou Rh negativo, é relevante clinicamente na gestação porque:',
+    options: [
+      { id: 'a', text: 'Nunca causa qualquer problema, independentemente da combinação entre mãe e feto' },
+      { id: 'b', text: 'Uma mãe Rh negativo gestando um feto Rh positivo pode desenvolver anticorpos contra o fator Rh do feto, o que pode afetar gestações Rh positivas subsequentes' },
+      { id: 'c', text: 'Determina exclusivamente o sexo do bebê' },
+      { id: 'd', text: 'Só é relevante para o tipo sanguíneo ABO, sem qualquer relação com gestação' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Quando uma mãe Rh negativo gesta um feto Rh positivo (herdado do pai), pode haver sensibilização do sistema imune materno ao entrar em contato com o sangue fetal (geralmente no parto), gerando anticorpos anti-Rh que podem atacar as hemácias de um feto Rh positivo em gestações futuras — por isso a importância do acompanhamento e, quando necessário, da profilaxia com imunoglobulina anti-Rh.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_bio_genetica_8',
+    chapter: 'Segunda Lei de Mendel',
+    topicId: 'bio_genetica',
+    subject: 'Biologia',
+    prompt: 'A Segunda Lei de Mendel (Lei da Segregação Independente) se aplica corretamente à transmissão conjunta de duas características quando:',
+    options: [
+      { id: 'a', text: 'Os genes que determinam essas características estão localizados em cromossomos diferentes (ou distantes o suficiente no mesmo cromossomo), segregando de forma independente durante a meiose' },
+      { id: 'b', text: 'Os genes estão sempre no mesmo cromossomo, próximos um do outro' },
+      { id: 'c', text: 'As duas características são determinadas por um único gene' },
+      { id: 'd', text: 'Não há qualquer relação entre os genes e os cromossomos' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A Segunda Lei de Mendel pressupõe que os genes de características diferentes segregam de forma independente durante a formação dos gametas — o que ocorre quando esses genes estão em cromossomos diferentes (ou suficientemente distantes no mesmo cromossomo, permitindo recombinação livre por crossing-over).',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_genetica_9',
+    chapter: 'Segunda Lei de Mendel',
+    topicId: 'bio_genetica',
+    subject: 'Biologia',
+    prompt: 'No cruzamento entre um indivíduo AaBb e um indivíduo aabb (retrocruzamento-teste), qual é a proporção fenotípica esperada na prole, considerando segregação independente?',
+    options: [
+      { id: 'a', text: '9:3:3:1' },
+      { id: 'b', text: '1:1:1:1' },
+      { id: 'c', text: '3:1' },
+      { id: 'd', text: '1:2:1' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'O indivíduo AaBb produz 4 tipos de gametas em igual proporção (AB, Ab, aB, ab), enquanto aabb produz apenas um tipo (ab). Combinando-os, obtém-se 4 fenótipos diferentes em proporção igual: 1:1:1:1 — esse tipo de cruzamento (com o duplo-recessivo) é chamado de cruzamento-teste, usado para determinar o genótipo de um indivíduo com fenótipo dominante.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_bio_genetica_10',
+    chapter: 'Segunda Lei de Mendel e Interação Gênica',
+    topicId: 'bio_genetica',
+    subject: 'Biologia',
+    prompt: 'Na interação gênica, uma característica é determinada pela ação conjunta de dois ou mais genes diferentes, ao contrário da herança mendeliana simples (um gene, uma característica). Um exemplo clássico é a herança da:',
+    options: [
+      { id: 'a', text: 'Cor dos olhos determinada por um único gene' },
+      { id: 'b', text: 'Forma da crista em galinhas, resultado da interação entre dois genes diferentes, gerando quatro tipos de crista' },
+      { id: 'c', text: 'Tipagem sanguínea ABO, determinada por um único gene com múltiplos alelos' },
+      { id: 'd', text: 'Cor da pele humana, determinada por um único gene dominante' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A forma da crista em galinhas é um exemplo clássico de interação gênica: dois genes diferentes (cada um com um alelo dominante e um recessivo) interagem para determinar quatro fenótipos possíveis de crista (ervilha, rosa, noz e simples), em vez de uma herança simples de um único gene.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_genetica_11',
+    chapter: 'Segunda Lei de Mendel e Interação Gênica',
+    topicId: 'bio_genetica',
+    subject: 'Biologia',
+    prompt: 'A epistasia, um tipo específico de interação gênica, ocorre quando:',
+    options: [
+      { id: 'a', text: 'Um gene mascara ou impede a expressão fenotípica de outro gene, não alélico a ele' },
+      { id: 'b', text: 'Dois alelos do mesmo gene se expressam simultaneamente (codominância)' },
+      { id: 'c', text: 'Um gene está localizado no cromossomo X' },
+      { id: 'd', text: 'Não há qualquer relação entre os genes envolvidos' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Na epistasia, um gene (chamado epistático) mascara ou suprime a expressão fenotípica de outro gene não alélico (chamado hipostático) — diferente da dominância comum, que ocorre entre alelos do mesmo gene.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_bio_genetica_12',
+    chapter: 'Segunda Lei de Mendel e Interação Gênica',
+    topicId: 'bio_genetica',
+    subject: 'Biologia',
+    prompt: 'A herança poligênica (ou quantitativa), como a que determina a cor da pele humana ou a estatura, se caracteriza por:',
+    options: [
+      { id: 'a', text: 'Ser determinada por um único par de alelos, com dominância completa' },
+      { id: 'b', text: 'Ser determinada por vários genes atuando em conjunto, cada um contribuindo de forma aditiva, gerando uma variação contínua e gradual do fenótipo (não categorias discretas)' },
+      { id: 'c', text: 'Não ter qualquer influência genética, sendo determinada apenas pelo ambiente' },
+      { id: 'd', text: 'Produzir sempre apenas dois fenótipos possíveis, como no cruzamento mendeliano simples' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Características poligênicas são determinadas por vários genes atuando conjuntamente, cada um contribuindo com um pequeno efeito aditivo — o que gera uma variação contínua do fenótipo (como uma gama de tons de pele ou alturas), ao contrário de características mendelianas simples, que geram categorias fenotípicas discretas.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_genetica_13',
+    chapter: 'Ligação Gênica',
+    topicId: 'bio_genetica',
+    subject: 'Biologia',
+    prompt: 'A ligação gênica (ou linkage) ocorre quando dois genes estão:',
+    options: [
+      { id: 'a', text: 'Localizados no mesmo cromossomo, próximos um do outro, e tendem a ser herdados juntos, não seguindo a segregação independente da Segunda Lei de Mendel' },
+      { id: 'b', text: 'Localizados em cromossomos diferentes' },
+      { id: 'c', text: 'Ambos localizados fora do núcleo celular' },
+      { id: 'd', text: 'Determinando exatamente a mesma característica' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Genes ligados estão no mesmo cromossomo, próximos entre si, e por isso tendem a ser transmitidos juntos aos gametas, não seguindo a segregação totalmente independente prevista pela Segunda Lei de Mendel — uma exceção importante a essa lei.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_genetica_14',
+    chapter: 'Ligação Gênica',
+    topicId: 'bio_genetica',
+    subject: 'Biologia',
+    prompt: 'A frequência de recombinação entre dois genes ligados (medida pela porcentagem de gametas recombinantes) é usada para:',
+    options: [
+      { id: 'a', text: 'Determinar exatamente a cor dos olhos de um indivíduo' },
+      { id: 'b', text: 'Estimar a distância relativa entre os dois genes no cromossomo: quanto maior a frequência de recombinação, mais distantes eles provavelmente estão' },
+      { id: 'c', text: 'Provar que os genes estão em cromossomos diferentes' },
+      { id: 'd', text: 'Eliminar a necessidade de mapas genéticos' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Quanto mais distantes dois genes estiverem no mesmo cromossomo, maior a chance de ocorrer crossing-over entre eles durante a meiose, gerando mais gametas recombinantes. Por isso, a frequência de recombinação é usada para estimar distâncias relativas entre genes, permitindo construir mapas genéticos (mapas de ligação).',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_bio_genetica_15',
+    chapter: 'Ligação Gênica',
+    topicId: 'bio_genetica',
+    subject: 'Biologia',
+    prompt: 'Genes completamente ligados (sem qualquer recombinação entre eles, geralmente por estarem extremamente próximos no cromossomo) produzem, em um cruzamento-teste, gametas:',
+    options: [
+      { id: 'a', text: 'Apenas do tipo parental, na mesma proporção da célula original, sem qualquer gameta recombinante' },
+      { id: 'b', text: 'Exclusivamente do tipo recombinante' },
+      { id: 'c', text: 'Em proporção idêntica à segregação independente (1:1:1:1)' },
+      { id: 'd', text: 'Aleatórios, sem qualquer padrão' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Quando dois genes estão completamente ligados (sem recombinação detectável), eles são sempre transmitidos juntos como estavam originalmente nos cromossomos parentais, gerando apenas gametas do tipo parental — sem os gametas recombinantes que apareceriam se houvesse crossing-over entre eles.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_bio_genetica_16',
+    chapter: 'Mutações Gênicas',
+    topicId: 'bio_genetica',
+    subject: 'Biologia',
+    prompt: 'A anemia falciforme, doença genética recessiva, é causada por uma mutação gênica que altera:',
+    options: [
+      { id: 'a', text: 'Um cromossomo inteiro' },
+      { id: 'b', text: 'Um único nucleotídeo no gene da hemoglobina, resultando na troca de um aminoácido na proteína, o que altera a forma das hemácias' },
+      { id: 'c', text: 'O número total de cromossomos da célula' },
+      { id: 'd', text: 'Nenhuma proteína, sendo uma doença puramente ambiental' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A anemia falciforme resulta de uma mutação pontual (troca de um único nucleotídeo) no gene que codifica a hemoglobina, causando a substituição de um aminoácido na proteína — o que altera a forma da hemoglobina e, consequentemente, das hemácias, que assumem formato de foice em condições de baixa oxigenação.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_genetica_17',
+    chapter: 'Mutações Gênicas',
+    topicId: 'bio_genetica',
+    subject: 'Biologia',
+    prompt: 'Mutações gênicas, embora geralmente associadas a efeitos neutros ou prejudiciais, também são a fonte última de:',
+    options: [
+      { id: 'a', text: 'Toda a variabilidade genética que existiu ou existirá, sendo a matéria-prima sobre a qual a seleção natural pode atuar ao longo do tempo' },
+      { id: 'b', text: 'Nenhuma consequência evolutiva relevante' },
+      { id: 'c', text: 'Apenas doenças, nunca de características vantajosas' },
+      { id: 'd', text: 'Mudanças exclusivamente no fenótipo, nunca no genótipo' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Apesar de a maioria das mutações serem neutras ou prejudiciais, elas são a fonte última de toda nova variabilidade genética em uma população — sem mutações, não haveria matéria-prima genética nova sobre a qual a seleção natural pudesse atuar, tornando-as fundamentais (embora indiretamente) para a evolução.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_genetica_18',
+    chapter: 'Mutações Gênicas',
+    topicId: 'bio_genetica',
+    subject: 'Biologia',
+    prompt: 'Agentes mutagênicos, como a radiação ultravioleta e certos compostos químicos, aumentam a taxa de mutações gênicas principalmente porque:',
+    options: [
+      { id: 'a', text: 'Danificam diretamente a estrutura do DNA (por exemplo, formando ligações anômalas entre bases), aumentando a chance de erros durante a replicação ou o reparo do DNA' },
+      { id: 'b', text: 'Não têm qualquer efeito sobre o material genético' },
+      { id: 'c', text: 'Atuam exclusivamente sobre proteínas, nunca sobre o DNA' },
+      { id: 'd', text: 'Sempre corrigem mutações já existentes' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Agentes mutagênicos (físicos, como radiação UV, ou químicos) danificam diretamente a estrutura do DNA — por exemplo, formando dímeros de timina que distorcem a dupla-hélice — aumentando a probabilidade de erros durante a replicação ou de falhas nos mecanismos de reparo celular, o que eleva a taxa de mutações gênicas.',
+    difficulty: 'medium'
   },
   // Biologia — Fisiologia Animal e Humana
   {
@@ -1077,6 +1429,550 @@ export const mockQuestions: Question[] = [
     explanation: 'Hormônios são liberados na corrente sanguínea e podem levar segundos a horas para alcançar órgãos-alvo distantes, mas seus efeitos tendem a ser mais duradouros (minutos a dias) que os do sistema nervoso, que transmite impulsos elétricos quase instantaneamente, mas com efeitos geralmente mais breves e localizados.',
     difficulty: 'hard'
   },
+  {
+    id: 'q_bio_fisio_animal_6',
+    chapter: 'Embriologia Animal',
+    topicId: 'bio_fisio_animal',
+    subject: 'Biologia',
+    prompt: 'Durante o desenvolvimento embrionário animal, a gastrulação é um processo fundamental porque:',
+    options: [
+      { id: 'a', text: 'Origina os três folhetos germinativos (ectoderma, mesoderma e endoderma), a partir dos quais todos os tecidos e órgãos se diferenciam' },
+      { id: 'b', text: 'É a etapa em que o zigoto se divide pela primeira vez' },
+      { id: 'c', text: 'Ocorre apenas em animais que se reproduzem assexuadamente' },
+      { id: 'd', text: 'Marca o momento da fecundação do óvulo pelo espermatozoide' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A gastrulação é o processo de movimentação e reorganização celular que estabelece os três folhetos germinativos primários — ectoderma, mesoderma e endoderma —, cada um dando origem a um conjunto específico de tecidos e órgãos (por exemplo, o ectoderma origina pele e sistema nervoso, o mesoderma origina músculos e esqueleto, e o endoderma origina o revestimento do tubo digestório).',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_fisio_animal_7',
+    chapter: 'Embriologia Animal',
+    topicId: 'bio_fisio_animal',
+    subject: 'Biologia',
+    prompt: 'Os anexos embrionários (âmnio, córion, saco vitelino e alantoide), presentes em répteis, aves e mamíferos, têm como função principal:',
+    options: [
+      { id: 'a', text: 'Substituir completamente a placenta em todos os vertebrados' },
+      { id: 'b', text: 'Proteger, nutrir e permitir trocas gasosas para o embrião durante seu desenvolvimento, muitas vezes fora de um ambiente aquático' },
+      { id: 'c', text: 'Produzir gametas para a próxima geração' },
+      { id: 'd', text: 'Realizar fotossíntese para fornecer energia ao embrião' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Os anexos embrionários evoluíram como uma adaptação à reprodução em ambiente terrestre: o âmnio protege o embrião em um ambiente líquido próprio, o córion participa das trocas gasosas, o saco vitelino armazena nutrientes, e o alantoide armazena excretas e auxilia nas trocas gasosas — conjunto que permitiu a répteis, aves e mamíferos se reproduzirem sem depender diretamente da água externa.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_bio_fisio_animal_8',
+    chapter: 'Embriologia Animal',
+    topicId: 'bio_fisio_animal',
+    subject: 'Biologia',
+    prompt: 'Logo após a fecundação, o zigoto humano passa por uma série de divisões mitóticas rápidas chamadas clivagem, resultando inicialmente em uma estrutura chamada:',
+    options: [
+      { id: 'a', text: 'Mórula, uma massa compacta de células ainda sem cavidade interna' },
+      { id: 'b', text: 'Nêurula, já com o tubo neural formado' },
+      { id: 'c', text: 'Gástrula, já com os três folhetos germinativos definidos' },
+      { id: 'd', text: 'Feto, com órgãos já totalmente formados' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A clivagem consiste em divisões mitóticas sucessivas e rápidas do zigoto, sem aumento de volume total, formando primeiro a mórula (massa compacta de células). Em seguida, a mórula se cavita e forma a blástula (no ser humano, o blastocisto), para só depois passar pela gastrulação — a ordem correta de desenvolvimento é clivagem → blástula → gástrula → nêurula.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_fisio_animal_9',
+    chapter: 'Fisiologia da Sustentação e da Locomoção',
+    topicId: 'bio_fisio_animal',
+    subject: 'Biologia',
+    prompt: 'A contração muscular esquelética ocorre, segundo o modelo do filamento deslizante, pela ação de duas proteínas principais. Essas proteínas são:',
+    options: [
+      { id: 'a', text: 'Colágeno e queratina' },
+      { id: 'b', text: 'Actina e miosina, cujos filamentos deslizam um sobre o outro, encurtando o sarcômero' },
+      { id: 'c', text: 'Hemoglobina e mioglobina' },
+      { id: 'd', text: 'Insulina e glucagon' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'No modelo do filamento deslizante, os filamentos finos de actina deslizam sobre os filamentos grossos de miosina (usando ATP como fonte de energia e cálcio como sinalizador), encurtando o comprimento do sarcômero e, consequentemente, de toda a fibra muscular — mecanismo básico da contração muscular esquelética e cardíaca.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_fisio_animal_10',
+    chapter: 'Fisiologia da Sustentação e da Locomoção',
+    topicId: 'bio_fisio_animal',
+    subject: 'Biologia',
+    prompt: 'O tecido ósseo humano é constantemente remodelado ao longo da vida pela ação conjunta de dois tipos celulares com funções opostas:',
+    options: [
+      { id: 'a', text: 'Osteoblastos, que formam nova matriz óssea, e osteoclastos, que reabsorvem (degradam) tecido ósseo' },
+      { id: 'b', text: 'Condrócitos e hepatócitos, ambos formadores de matriz óssea' },
+      { id: 'c', text: 'Neurônios e células gliais' },
+      { id: 'd', text: 'Hemácias e leucócitos' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Os osteoblastos são responsáveis por sintetizar e depositar nova matriz óssea (colágeno e sais de cálcio), enquanto os osteoclastos reabsorvem tecido ósseo existente. O equilíbrio dinâmico entre essas duas atividades permite a remodelação óssea contínua, a reparação de fraturas e a regulação dos níveis de cálcio no sangue.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_fisio_animal_11',
+    chapter: 'Fisiologia da Sustentação e da Locomoção',
+    topicId: 'bio_fisio_animal',
+    subject: 'Biologia',
+    prompt: 'As articulações sinoviais (como o joelho e o cotovelo), que permitem grande amplitude de movimento, apresentam uma cavidade preenchida por um líquido que reduz o atrito entre os ossos. Esse líquido é chamado de:',
+    options: [
+      { id: 'a', text: 'Líquido cefalorraquidiano' },
+      { id: 'b', text: 'Líquido sinovial' },
+      { id: 'c', text: 'Linfa' },
+      { id: 'd', text: 'Plasma sanguíneo' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'O líquido sinovial, secretado pela membrana sinovial que reveste a cápsula articular, lubrifica a articulação, reduz o atrito entre as superfícies ósseas cobertas por cartilagem e auxilia na nutrição da cartilagem articular, que não possui vasos sanguíneos próprios.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_bio_fisio_animal_12',
+    chapter: 'Fisiologia da Digestão',
+    topicId: 'bio_fisio_animal',
+    subject: 'Biologia',
+    prompt: 'A maior parte da absorção de nutrientes provenientes da digestão (aminoácidos, açúcares simples, ácidos graxos) ocorre em qual porção do sistema digestório humano?',
+    options: [
+      { id: 'a', text: 'No estômago' },
+      { id: 'b', text: 'No intestino delgado, graças à grande área de superfície oferecida pelas vilosidades e microvilosidades' },
+      { id: 'c', text: 'No intestino grosso' },
+      { id: 'd', text: 'No esôfago' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'O intestino delgado é o principal local de absorção de nutrientes: suas paredes internas apresentam dobras, vilosidades e microvilosidades que multiplicam enormemente a área de superfície disponível para a absorção de aminoácidos, monossacarídeos, ácidos graxos e outros produtos finais da digestão para a corrente sanguínea e linfática.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_bio_fisio_animal_13',
+    chapter: 'Fisiologia da Digestão',
+    topicId: 'bio_fisio_animal',
+    subject: 'Biologia',
+    prompt: 'O pâncreas exerce um papel duplo na digestão e na fisiologia humana. Em relação à sua função exócrina digestiva, o pâncreas secreta:',
+    options: [
+      { id: 'a', text: 'Apenas insulina e glucagon diretamente no sangue' },
+      { id: 'b', text: 'Enzimas digestivas (como tripsina, amilase e lipase pancreáticas) e bicarbonato, lançados no duodeno para digerir proteínas, carboidratos e lipídios e neutralizar a acidez do quimo' },
+      { id: 'c', text: 'Bile, armazenada posteriormente na vesícula biliar' },
+      { id: 'd', text: 'Ácido clorídrico, para digestão no estômago' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A porção exócrina do pâncreas produz e libera no duodeno enzimas digestivas (tripsina e quimotripsina para proteínas, amilase pancreática para carboidratos, lipase para lipídios) e bicarbonato de sódio, que neutraliza a acidez do quimo vindo do estômago, criando o pH ideal para a ação dessas enzimas. A função endócrina (insulina/glucagon) é feita por células diferentes, as ilhotas de Langerhans.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_bio_fisio_animal_14',
+    chapter: 'Fisiologia da Digestão',
+    topicId: 'bio_fisio_animal',
+    subject: 'Biologia',
+    prompt: 'A bile, produzida pelo fígado e armazenada na vesícula biliar, participa da digestão de lipídios principalmente por meio de sua ação:',
+    options: [
+      { id: 'a', text: 'Enzimática direta, quebrando ligações químicas dos triglicerídeos' },
+      { id: 'b', text: 'Emulsificante, quebrando as grandes gotas de gordura em gotículas menores, aumentando a superfície de contato para a ação da lipase' },
+      { id: 'c', text: 'De neutralização do pH ácido do estômago' },
+      { id: 'd', text: 'De digestão de proteínas, semelhante à pepsina' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A bile não contém enzimas digestivas; sua ação é emulsificante — os sais biliares quebram grandes glóbulos de gordura em gotículas menores (emulsificação), aumentando muito a área de superfície disponível para que a lipase pancreática atue de forma eficiente na digestão dos triglicerídeos.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_fisio_animal_15',
+    chapter: 'Sangue e Imunologia',
+    topicId: 'bio_fisio_animal',
+    subject: 'Biologia',
+    prompt: 'As hemácias (eritrócitos) humanas maduras têm uma característica estrutural incomum entre as células do corpo: elas',
+    options: [
+      { id: 'a', text: 'Possuem núcleo grande e muitas mitocôndrias' },
+      { id: 'b', text: 'Perdem o núcleo durante sua maturação, otimizando o espaço interno para transporte de hemoglobina e oxigênio' },
+      { id: 'c', text: 'São as maiores células do corpo humano' },
+      { id: 'd', text: 'Realizam fotossíntese para produzir seu próprio ATP' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'As hemácias humanas maduras perdem o núcleo e a maioria das organelas durante a eritropoiese, o que aumenta o espaço interno disponível para moléculas de hemoglobina, otimizando sua função de transporte de oxigênio — em compensação, isso limita sua vida útil (cerca de 120 dias) e capacidade de autorreparo.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_fisio_animal_16',
+    chapter: 'Sangue e Imunologia',
+    topicId: 'bio_fisio_animal',
+    subject: 'Biologia',
+    prompt: 'As plaquetas (fragmentos celulares presentes no sangue) desempenham papel central em qual processo fisiológico?',
+    options: [
+      { id: 'a', text: 'Transporte de oxigênio pelos tecidos' },
+      { id: 'b', text: 'Coagulação sanguínea, ao se aglutinarem e liberarem fatores que iniciam a cascata de coagulação em locais de lesão vascular' },
+      { id: 'c', text: 'Produção de anticorpos específicos' },
+      { id: 'd', text: 'Digestão de patógenos por fagocitose' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Quando há lesão em um vaso sanguíneo, as plaquetas aderem ao local, se agregam e liberam substâncias que desencadeiam a cascata de coagulação, culminando na conversão de fibrinogênio em fibrina e na formação do coágulo, que estanca o sangramento.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_fisio_animal_17',
+    chapter: 'Sangue e Imunologia',
+    topicId: 'bio_fisio_animal',
+    subject: 'Biologia',
+    prompt: 'Os leucócitos (glóbulos brancos) são um grupo diverso de células com papel central na imunidade. Qual das opções descreve corretamente uma de suas funções?',
+    options: [
+      { id: 'a', text: 'Os linfócitos B, quando ativados, podem se diferenciar em plasmócitos produtores de anticorpos' },
+      { id: 'b', text: 'Todos os leucócitos são incapazes de sair da corrente sanguínea' },
+      { id: 'c', text: 'Os leucócitos são responsáveis exclusivamente pelo transporte de oxigênio' },
+      { id: 'd', text: 'Os leucócitos não participam de nenhum mecanismo de defesa imunológica' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Os linfócitos B, ao serem ativados por um antígeno específico (com auxílio de linfócitos T auxiliares), diferenciam-se em plasmócitos, células especializadas na produção e secreção de grandes quantidades de anticorpos direcionados àquele antígeno — parte central da resposta imune adaptativa humoral.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_bio_fisio_animal_18',
+    chapter: 'Coração e Vasos Sanguíneos',
+    topicId: 'bio_fisio_animal',
+    subject: 'Biologia',
+    prompt: 'O ciclo cardíaco é dividido em duas fases principais. A sístole ventricular corresponde a:',
+    options: [
+      { id: 'a', text: 'O relaxamento dos ventrículos, permitindo seu enchimento com sangue' },
+      { id: 'b', text: 'A contração dos ventrículos, que ejeta o sangue para a artéria pulmonar e para a aorta' },
+      { id: 'c', text: 'A parada completa e simultânea de todas as câmaras cardíacas' },
+      { id: 'd', text: 'A fase em que apenas os átrios se contraem' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A sístole ventricular é a fase de contração dos ventrículos, que gera pressão suficiente para abrir as valvas semilunares e ejetar o sangue para a artéria pulmonar (ventrículo direito) e para a aorta (ventrículo esquerdo). Já a diástole é a fase de relaxamento, em que as câmaras se enchem de sangue.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_fisio_animal_19',
+    chapter: 'Coração e Vasos Sanguíneos',
+    topicId: 'bio_fisio_animal',
+    subject: 'Biologia',
+    prompt: 'Em relação à estrutura dos vasos sanguíneos, é correto afirmar que:',
+    options: [
+      { id: 'a', text: 'As artérias têm paredes mais espessas e elásticas, adaptadas a suportar a alta pressão do sangue bombeado pelo coração' },
+      { id: 'b', text: 'Os capilares possuem paredes musculares espessas, semelhantes às das artérias' },
+      { id: 'c', text: 'As veias sempre transportam sangue arterial e as artérias sempre transportam sangue venoso' },
+      { id: 'd', text: 'Todos os vasos sanguíneos têm exatamente a mesma espessura de parede' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'As artérias possuem paredes musculares e elásticas espessas, adaptadas para suportar a alta pressão do sangue ejetado pelo coração. Os capilares, em contraste, têm paredes finíssimas (uma única camada de células), o que favorece as trocas de gases e nutrientes com os tecidos. As veias têm paredes mais finas que as artérias e contam com valvas para evitar refluxo, já que operam sob baixa pressão.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_fisio_animal_20',
+    chapter: 'Fisiologia da Respiração',
+    topicId: 'bio_fisio_animal',
+    subject: 'Biologia',
+    prompt: 'A inspiração pulmonar humana é impulsionada principalmente pela contração de qual músculo, que aumenta o volume da caixa torácica?',
+    options: [
+      { id: 'a', text: 'O diafragma, que se contrai e se achata, aumentando o volume torácico e reduzindo a pressão interna, permitindo a entrada de ar' },
+      { id: 'b', text: 'O músculo cardíaco' },
+      { id: 'c', text: 'O músculo liso do esôfago' },
+      { id: 'd', text: 'Os músculos da língua' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Durante a inspiração, o diafragma se contrai e se achata (descendo), aumentando o volume da cavidade torácica; isso reduz a pressão interna dos pulmões abaixo da pressão atmosférica, fazendo o ar fluir para dentro. Na expiração normal (passiva), o diafragma relaxa e retorna à sua posição em cúpula.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_fisio_animal_21',
+    chapter: 'Fisiologia da Respiração',
+    topicId: 'bio_fisio_animal',
+    subject: 'Biologia',
+    prompt: 'O transporte de oxigênio pelo sangue depende fundamentalmente de uma proteína presente nas hemácias. Essa proteína é:',
+    options: [
+      { id: 'a', text: 'A hemoglobina, que se liga reversivelmente ao oxigênio nos pulmões e o libera nos tecidos' },
+      { id: 'b', text: 'A queratina' },
+      { id: 'c', text: 'A insulina' },
+      { id: 'd', text: 'O colágeno' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A hemoglobina, presente em alta concentração nas hemácias, liga-se reversivelmente ao oxigênio nos capilares pulmonares (onde a concentração de O2 é alta) formando oxi-hemoglobina, e o libera nos tecidos periféricos (onde a concentração de O2 é baixa e a demanda é alta), sendo essencial para o transporte eficiente de oxigênio no sangue.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_bio_fisio_animal_22',
+    chapter: 'Fisiologia da Excreção',
+    topicId: 'bio_fisio_animal',
+    subject: 'Biologia',
+    prompt: 'O hormônio antidiurético (ADH ou vasopressina) atua nos rins regulando a reabsorção de água. Seu principal efeito é:',
+    options: [
+      { id: 'a', text: 'Aumentar a permeabilidade dos túbulos coletores à água, aumentando sua reabsorção e produzindo uma urina mais concentrada' },
+      { id: 'b', text: 'Impedir totalmente a formação de urina' },
+      { id: 'c', text: 'Diminuir a reabsorção de água, sempre produzindo urina diluída' },
+      { id: 'd', text: 'Atuar exclusivamente sobre o glomérulo, sem efeito nos túbulos' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Quando há desidratação ou aumento da osmolaridade do sangue, o ADH é liberado pela hipófise posterior e aumenta a permeabilidade dos túbulos coletores renais à água, elevando sua reabsorção e concentrando a urina — um mecanismo importante de regulação do equilíbrio hídrico do corpo.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_bio_fisio_animal_23',
+    chapter: 'Fisiologia da Excreção',
+    topicId: 'bio_fisio_animal',
+    subject: 'Biologia',
+    prompt: 'Ao longo dos túbulos renais, após a filtração glomerular, ocorrem os processos de reabsorção tubular e secreção tubular. A reabsorção tubular consiste em:',
+    options: [
+      { id: 'a', text: 'Retornar à corrente sanguínea substâncias úteis do filtrado, como glicose, aminoácidos e a maior parte da água' },
+      { id: 'b', text: 'Filtrar o sangue pela primeira vez no glomérulo' },
+      { id: 'c', text: 'Eliminar diretamente a urina para o exterior do corpo' },
+      { id: 'd', text: 'Produzir hemácias novas' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Após a filtração no glomérulo, o filtrado (semelhante ao plasma) passa pelos túbulos renais, onde substâncias úteis ao organismo — como glicose, aminoácidos e a maior parte da água — são reabsorvidas de volta para a corrente sanguínea, enquanto a secreção tubular adiciona certas substâncias (como íons H+ e alguns fármacos) do sangue para o filtrado, ajustando a composição final da urina.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_fisio_animal_24',
+    chapter: 'Fisiologia da Coordenação Nervosa I',
+    topicId: 'bio_fisio_animal',
+    subject: 'Biologia',
+    prompt: 'O potencial de ação em um neurônio é gerado por mudanças rápidas na permeabilidade da membrana a determinados íons. A despolarização inicial do potencial de ação é causada principalmente por:',
+    options: [
+      { id: 'a', text: 'Entrada rápida de íons sódio (Na+) através de canais de sódio dependentes de voltagem que se abrem' },
+      { id: 'b', text: 'Saída de íons cálcio (Ca2+) da célula' },
+      { id: 'c', text: 'Entrada de íons cloreto (Cl-) na célula' },
+      { id: 'd', text: 'Ausência total de qualquer movimento iônico' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Quando o estímulo atinge o limiar, canais de sódio dependentes de voltagem se abrem, permitindo um rápido influxo de Na+ para dentro do neurônio, o que despolariza a membrana (torna o interior mais positivo) — essa fase de despolarização é seguida pela repolarização, causada pelo efluxo de íons potássio (K+).',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_bio_fisio_animal_25',
+    chapter: 'Fisiologia da Coordenação Nervosa I',
+    topicId: 'bio_fisio_animal',
+    subject: 'Biologia',
+    prompt: 'O arco reflexo (como o reflexo patelar) é um circuito nervoso que permite uma resposta motora rápida a um estímulo, sem a necessidade de processamento consciente pelo encéfalo. Esse circuito envolve, na ordem correta:',
+    options: [
+      { id: 'a', text: 'Receptor sensorial → neurônio sensorial (aferente) → centro integrador na medula espinal → neurônio motor (eferente) → músculo (efetuador)' },
+      { id: 'b', text: 'Apenas o cérebro, sem qualquer participação da medula espinal' },
+      { id: 'c', text: 'Músculo → medula → cérebro → receptor sensorial, nessa ordem' },
+      { id: 'd', text: 'Um único neurônio que faz todo o trajeto do estímulo à resposta' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'No arco reflexo, um receptor sensorial capta o estímulo e o neurônio aferente (sensorial) conduz o impulso até um centro integrador na medula espinal (não no cérebro), onde geralmente faz sinapse direta ou por um interneurônio com o neurônio eferente (motor), que conduz a resposta até o músculo efetuador — permitindo uma resposta muito mais rápida que se o sinal precisasse chegar ao encéfalo primeiro.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_bio_fisio_animal_26',
+    chapter: 'Coordenação Nervosa II',
+    topicId: 'bio_fisio_animal',
+    subject: 'Biologia',
+    prompt: 'O sistema nervoso autônomo, responsável por regular funções involuntárias do corpo (como frequência cardíaca e digestão), se divide em duas divisões com ações geralmente antagônicas. Essas divisões são:',
+    options: [
+      { id: 'a', text: 'Simpático e parassimpático, sendo o simpático associado a respostas de "luta ou fuga" e o parassimpático a respostas de "repouso e digestão"' },
+      { id: 'b', text: 'Sensorial e motor, sem qualquer relação com respostas involuntárias' },
+      { id: 'c', text: 'Central e periférico, ambos exclusivamente voluntários' },
+      { id: 'd', text: 'Aferente e eferente, controlando apenas os músculos esqueléticos' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O sistema nervoso autônomo divide-se em simpático, que prepara o corpo para situações de estresse ou emergência ("luta ou fuga": aumenta frequência cardíaca, dilata pupilas, reduz digestão), e parassimpático, que promove funções de "repouso e digestão" (reduz frequência cardíaca, estimula digestão) — as duas divisões geralmente atuam de forma antagônica sobre os mesmos órgãos-alvo.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_fisio_animal_27',
+    chapter: 'Coordenação Nervosa II',
+    topicId: 'bio_fisio_animal',
+    subject: 'Biologia',
+    prompt: 'O cerebelo, uma das principais estruturas do encéfalo humano, tem como função principal:',
+    options: [
+      { id: 'a', text: 'Coordenar o equilíbrio, a postura e a precisão dos movimentos voluntários' },
+      { id: 'b', text: 'Processar exclusivamente informações visuais' },
+      { id: 'c', text: 'Produzir hormônios diretamente na corrente sanguínea' },
+      { id: 'd', text: 'Controlar a digestão de forma isolada, sem relação com o restante do sistema nervoso' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O cerebelo integra informações sensoriais (proprioceptivas, vestibulares e visuais) com comandos motores do córtex cerebral para ajustar e refinar o equilíbrio, a postura e a precisão/coordenação dos movimentos voluntários — lesões cerebelares tipicamente causam perda de coordenação motora (ataxia), sem paralisia.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_fisio_animal_28',
+    chapter: 'Sistemas Sensoriais: Visão e Audição',
+    topicId: 'bio_fisio_animal',
+    subject: 'Biologia',
+    prompt: 'Na retina do olho humano, dois tipos principais de fotorreceptores captam a luz. Os cones são responsáveis por:',
+    options: [
+      { id: 'a', text: 'Visão em cores e alta acuidade visual em condições de boa luminosidade' },
+      { id: 'b', text: 'Visão em preto e branco em condições de baixa luminosidade, sendo muito mais sensíveis à luz que os bastonetes' },
+      { id: 'c', text: 'Produção de lágrimas' },
+      { id: 'd', text: 'Acomodação do cristalino' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Os cones são fotorreceptores especializados em visão de cores (existem três tipos, sensíveis a diferentes comprimentos de onda) e alta acuidade visual, mas exigem boa luminosidade para funcionar bem. Já os bastonetes são muito mais sensíveis à luz (permitindo visão em baixa luminosidade), porém não distinguem cores e têm menor acuidade.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_fisio_animal_29',
+    chapter: 'Sistemas Sensoriais: Visão e Audição',
+    topicId: 'bio_fisio_animal',
+    subject: 'Biologia',
+    prompt: 'No ouvido interno, a cóclea é a estrutura responsável pela audição propriamente dita. Sua função é:',
+    options: [
+      { id: 'a', text: 'Converter as vibrações mecânicas do som em impulsos nervoros, por meio de células ciliadas sensíveis a diferentes frequências' },
+      { id: 'b', text: 'Amplificar exclusivamente o som, sem qualquer conversão em sinal nervoso' },
+      { id: 'c', text: 'Controlar o equilíbrio corporal, sem qualquer relação com a audição' },
+      { id: 'd', text: 'Produzir cera (cerúmen) para proteger o canal auditivo' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A cóclea é uma estrutura espiralada preenchida por líquido, contendo o órgão de Corti com células ciliadas que, ao serem deformadas pelas ondas sonoras (transmitidas pelos ossículos do ouvido médio), convertem essa energia mecânica em impulsos nervosos enviados ao encéfalo via nervo auditivo — diferentes regiões da cóclea respondem a diferentes frequências sonoras.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_bio_fisio_animal_30',
+    chapter: 'Coordenação Endócrina I',
+    topicId: 'bio_fisio_animal',
+    subject: 'Biologia',
+    prompt: 'A hipófise (glândula pituitária) é frequentemente chamada de "glândula mestra" porque:',
+    options: [
+      { id: 'a', text: 'Produz hormônios que regulam a atividade de várias outras glândulas endócrinas, como a tireoide e as adrenais' },
+      { id: 'b', text: 'É a única glândula endócrina do corpo humano' },
+      { id: 'c', text: 'Não sofre qualquer regulação por outras estruturas' },
+      { id: 'd', text: 'Produz apenas insulina' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A hipófise secreta hormônios trópicos que estimulam e regulam a atividade de outras glândulas endócrinas (por exemplo, TSH estimula a tireoide, ACTH estimula o córtex adrenal), coordenando boa parte do sistema endócrino — por isso é chamada de "glândula mestra", embora ela própria seja regulada pelo hipotálamo.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_fisio_animal_31',
+    chapter: 'Coordenação Endócrina I',
+    topicId: 'bio_fisio_animal',
+    subject: 'Biologia',
+    prompt: 'A glândula tireoide produz os hormônios tiroxina (T4) e tri-iodotironina (T3), cuja principal função é:',
+    options: [
+      { id: 'a', text: 'Regular a taxa metabólica basal do corpo, influenciando o consumo de oxigênio e a produção de calor pelas células' },
+      { id: 'b', text: 'Regular exclusivamente os níveis de glicose no sangue' },
+      { id: 'c', text: 'Controlar a coagulação sanguínea' },
+      { id: 'd', text: 'Produzir anticorpos' },
+    ],
+    correctOptionId: 'a',
+    explanation: 'Os hormônios tireoidianos T3 e T4 atuam sobre praticamente todas as células do corpo, regulando a taxa metabólica basal — influenciam o consumo de oxigênio, a produção de calor e o metabolismo de carboidratos, lipídios e proteínas. Disfunções na tireoide (hipo ou hipertireoidismo) alteram significativamente o metabolismo geral do corpo.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_fisio_animal_32',
+    chapter: 'Coordenação Endócrina II',
+    topicId: 'bio_fisio_animal',
+    subject: 'Biologia',
+    prompt: 'O pâncreas endócrino, através das ilhotas de Langerhans, regula os níveis de glicose no sangue por meio de dois hormônios antagônicos. São eles:',
+    options: [
+      { id: 'a', text: 'Insulina (reduz a glicemia, promovendo a entrada de glicose nas células) e glucagon (aumenta a glicemia, estimulando a quebra de glicogênio hepático)' },
+      { id: 'b', text: 'Adrenalina e cortisol, ambos produzidos pelo pâncreas' },
+      { id: 'c', text: 'Apenas insulina, sem qualquer hormônio antagônico' },
+      { id: 'd', text: 'TSH e ACTH' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'As células beta das ilhotas de Langerhans produzem insulina, que reduz a glicemia ao facilitar a entrada de glicose nas células e estimular sua conversão em glicogênio; as células alfa produzem glucagon, que eleva a glicemia estimulando a quebra do glicogênio hepático (glicogenólise) e a produção de glicose (gliconeogênese). Juntos, mantêm a glicemia dentro de uma faixa estreita.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_fisio_animal_33',
+    chapter: 'Coordenação Endócrina II',
+    topicId: 'bio_fisio_animal',
+    subject: 'Biologia',
+    prompt: 'A maioria dos hormônios do corpo humano é regulada por um mecanismo de retroalimentação (feedback) negativa. Isso significa que:',
+    options: [
+      { id: 'a', text: 'O aumento da concentração de um hormônio (ou de seu efeito) tende a inibir sua própria produção adicional, mantendo a homeostase' },
+      { id: 'b', text: 'O aumento de um hormônio sempre estimula ainda mais sua própria produção, sem qualquer limite' },
+      { id: 'c', text: 'Os hormônios não sofrem qualquer tipo de regulação' },
+      { id: 'd', text: 'Apenas hormônios sexuais utilizam retroalimentação' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'No feedback negativo (o mecanismo mais comum na regulação hormonal), o aumento de um hormônio ou de seu efeito fisiológico sinaliza para a glândula produtora (ou para o eixo hipotálamo-hipófise que a controla) reduzir a produção adicional — como ocorre com o hormônio tireoidiano, que inibe a liberação de TSH pela hipófise, mantendo os níveis hormonais dentro de uma faixa estável (homeostase).',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_bio_fisio_animal_34',
+    chapter: 'Reprodução Humana e Métodos Contraceptivos',
+    topicId: 'bio_fisio_animal',
+    subject: 'Biologia',
+    prompt: 'No ciclo menstrual humano, a ovulação (liberação do óvulo pelo ovário) é desencadeada principalmente por:',
+    options: [
+      { id: 'a', text: 'Um pico repentino do hormônio luteinizante (LH), estimulado pelo aumento prévio de estrogênio' },
+      { id: 'b', text: 'Uma queda contínua de progesterona ao longo de todo o ciclo' },
+      { id: 'c', text: 'A ausência total de hormônios hipofisários' },
+      { id: 'd', text: 'A menstruação em si, que ocorre simultaneamente à ovulação' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Ao longo da fase folicular, o estrogênio produzido pelo folículo em desenvolvimento aumenta progressivamente; quando atinge um nível suficientemente alto, ele desencadeia (por retroalimentação positiva, uma exceção à regra geral) um pico abrupto de LH pela hipófise, o que induz a ovulação cerca de 24-36 horas depois.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_bio_fisio_animal_35',
+    chapter: 'Reprodução Humana e Métodos Contraceptivos',
+    topicId: 'bio_fisio_animal',
+    subject: 'Biologia',
+    prompt: 'Os métodos contraceptivos hormonais (como a pílula anticoncepcional combinada) previnem a gravidez principalmente por:',
+    options: [
+      { id: 'a', text: 'Inibir a ovulação, mantendo níveis hormonais artificialmente estáveis que impedem o pico de LH necessário para liberar o óvulo' },
+      { id: 'b', text: 'Formar uma barreira física entre espermatozoide e óvulo, como um preservativo' },
+      { id: 'c', text: 'Destruir diretamente os espermatozoides no trato reprodutivo' },
+      { id: 'd', text: 'Impedir totalmente a menstruação, sem qualquer efeito sobre a ovulação' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A pílula combinada (estrogênio + progestagênio) mantém níveis hormonais relativamente constantes e elevados, o que impede o pico de LH necessário para desencadear a ovulação — diferentemente de métodos de barreira (como preservativos), que atuam impedindo fisicamente o encontro entre espermatozoide e óvulo, sem interferir no eixo hormonal.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_fisio_animal_36',
+    chapter: 'Reprodução Humana e Métodos Contraceptivos',
+    topicId: 'bio_fisio_animal',
+    subject: 'Biologia',
+    prompt: 'Ao contrário da produção contínua de espermatozoides (espermatogênese) nos testículos a partir da puberdade, a produção de óvulos na mulher (ovogênese) tem uma característica distinta:',
+    options: [
+      { id: 'a', text: 'Os oócitos primários já estão formados desde a vida fetal, ficando estacionados em uma fase da meiose até serem recrutados ciclo a ciclo' },
+      { id: 'b', text: 'Novos oócitos são produzidos continuamente ao longo de toda a vida adulta da mulher, assim como os espermatozoides' },
+      { id: 'c', text: 'A ovogênese não envolve qualquer processo de meiose' },
+      { id: 'd', text: 'Cada oócito primário origina, ao final, quatro óvulos funcionais, assim como ocorre na espermatogênese' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Diferentemente da espermatogênese (contínua a partir da puberdade), na ovogênese os oócitos primários já são formados durante a vida fetal e ficam estacionados na prófase I da meiose até serem recrutados, um a cada ciclo, a partir da puberdade. Além disso, a meiose na ovogênese é desigual, produzindo um óvulo funcional e corpúsculos polares (não aproveitáveis) a cada ciclo, e só se completa caso ocorra fecundação.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_bio_fisio_animal_37',
+    chapter: 'Coordenação Nervosa II',
+    topicId: 'bio_fisio_animal',
+    subject: 'Biologia',
+    prompt: 'O córtex cerebral humano é dividido em áreas especializadas para diferentes funções. A área de Broca, localizada no lobo frontal, está diretamente associada a:',
+    options: [
+      { id: 'a', text: 'A produção da fala articulada — lesões nessa área causam dificuldade para falar, embora a compreensão da linguagem possa permanecer intacta' },
+      { id: 'b', text: 'O processamento exclusivamente de estímulos visuais' },
+      { id: 'c', text: 'O controle do equilíbrio corporal' },
+      { id: 'd', text: 'A produção de hormônios hipofisários' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A área de Broca, no lobo frontal (geralmente do hemisfério esquerdo), está associada à produção motora da fala. Lesões nessa área causam a chamada afasia de Broca, em que a pessoa compreende a linguagem mas tem grande dificuldade para articular palavras e frases de forma fluente — distinta da área de Wernicke, associada à compreensão da linguagem.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_bio_fisio_animal_38',
+    chapter: 'Sistemas Sensoriais: Visão e Audição',
+    topicId: 'bio_fisio_animal',
+    subject: 'Biologia',
+    prompt: 'A acomodação visual, processo pelo qual o olho ajusta o foco para enxergar objetos a diferentes distâncias, é realizada principalmente por meio de:',
+    options: [
+      { id: 'a', text: 'Mudanças na curvatura do cristalino, controladas pela contração ou relaxamento do músculo ciliar' },
+      { id: 'b', text: 'Movimentos do globo ocular inteiro, sem qualquer alteração no cristalino' },
+      { id: 'c', text: 'Dilatação e contração exclusivas da pupila' },
+      { id: 'd', text: 'Mudanças na quantidade de fotorreceptores ativos na retina' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O músculo ciliar, ao se contrair ou relaxar, altera a tensão sobre os ligamentos suspensores que sustentam o cristalino, modificando sua curvatura: para focar objetos próximos, o cristalino se torna mais convexo (músculo ciliar contraído); para objetos distantes, ele se achata (músculo ciliar relaxado). Esse ajuste fino de foco é chamado de acomodação visual.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_bio_fisio_animal_39',
+    chapter: 'Coordenação Endócrina II',
+    topicId: 'bio_fisio_animal',
+    subject: 'Biologia',
+    prompt: 'As glândulas adrenais (suprarrenais), localizadas sobre os rins, produzem o hormônio adrenalina (epinefrina) em situações de estresse. Seus efeitos incluem:',
+    options: [
+      { id: 'a', text: 'Reduzir a frequência cardíaca e promover sonolência' },
+      { id: 'b', text: 'Aumentar a frequência cardíaca, elevar a glicemia e redirecionar o fluxo sanguíneo para os músculos, preparando o corpo para uma resposta rápida' },
+      { id: 'c', text: 'Diminuir exclusivamente a pressão arterial, sem qualquer outro efeito' },
+      { id: 'd', text: 'Atuar apenas sobre o sistema digestório, estimulando a digestão' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A adrenalina, liberada pela medula das glândulas adrenais em resposta a situações de estresse ou perigo, atua em conjunto com o sistema nervoso simpático: aumenta a frequência cardíaca e a pressão arterial, eleva a glicemia (mobilizando reservas de glicogênio) e redireciona o fluxo sanguíneo para os músculos esqueléticos, preparando rapidamente o corpo para a resposta de "luta ou fuga".',
+    difficulty: 'medium'
+  },
   // Biologia — Ecologia
   {
     id: 'q_bio_ecologia_1',
@@ -1140,6 +2036,486 @@ export const mockQuestions: Question[] = [
     ],
     correctOptionId: 'b',
     explanation: 'Os decompositores quebram a matéria orgânica de organismos mortos (e de excretas), liberando nutrientes inorgânicos (como nitrogênio e fósforo) de volta ao solo ou à água, onde podem ser reabsorvidos pelos produtores — fechando os ciclos biogeoquímicos dos ecossistemas.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_ecologia_5',
+    chapter: 'Dinâmica de Populações',
+    topicId: 'bio_ecologia',
+    subject: 'Biologia',
+    prompt: 'O crescimento populacional em forma de "J" (exponencial), observado quando uma população tem recursos praticamente ilimitados, tende a ser substituído, na prática, pelo crescimento em forma de "S" (logístico) principalmente porque:',
+    options: [
+      { id: 'a', text: 'Os recursos do ambiente são finitos, e a população eventualmente se aproxima da capacidade de suporte do meio, desacelerando seu crescimento' },
+      { id: 'b', text: 'As populações nunca crescem de forma exponencial em nenhuma circunstância' },
+      { id: 'c', text: 'O crescimento em "S" ocorre apenas em laboratório, nunca na natureza' },
+      { id: 'd', text: 'A capacidade de suporte do ambiente é sempre infinita' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O crescimento exponencial (em "J") só se sustenta enquanto os recursos são abundantes. Na prática, à medida que a população cresce, os recursos (alimento, espaço) tornam-se limitantes, e fatores como competição e predação desaceleram o crescimento, que se estabiliza próximo à capacidade de suporte do ambiente — gerando a curva em "S" (logística).',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_ecologia_6',
+    chapter: 'Dinâmica de Populações',
+    topicId: 'bio_ecologia',
+    subject: 'Biologia',
+    prompt: 'A capacidade de suporte de um ambiente, conceito central na dinâmica de populações, se refere a:',
+    options: [
+      { id: 'a', text: 'O número máximo de espécies diferentes que podem viver em um mesmo local' },
+      { id: 'b', text: 'O tamanho populacional máximo que um ambiente consegue sustentar de forma estável, considerando os recursos disponíveis' },
+      { id: 'c', text: 'A taxa de natalidade de uma população, isoladamente' },
+      { id: 'd', text: 'Uma medida fixa, igual para todas as espécies e ambientes' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A capacidade de suporte é o tamanho populacional máximo que um determinado ambiente pode sustentar de forma estável a longo prazo, dados os recursos disponíveis (alimento, água, espaço, abrigo) — variando conforme a espécie e as condições específicas de cada ambiente.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_bio_ecologia_7',
+    chapter: 'Dinâmica de Populações',
+    topicId: 'bio_ecologia',
+    subject: 'Biologia',
+    prompt: 'Fatores dependentes da densidade populacional (como competição por alimento e disseminação de doenças) regulam o tamanho de uma população principalmente porque:',
+    options: [
+      { id: 'a', text: 'Seu efeito se intensifica à medida que a densidade populacional aumenta, funcionando como um mecanismo natural de controle' },
+      { id: 'b', text: 'Atuam da mesma forma, independentemente do tamanho da população' },
+      { id: 'c', text: 'Não têm qualquer relação com o tamanho da população' },
+      { id: 'd', text: 'Só atuam quando a população está muito pequena' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Fatores dependentes da densidade (como competição por recursos, predação e disseminação de doenças) se intensificam à medida que a densidade populacional aumenta — quanto mais indivíduos, maior a competição e a facilidade de transmissão de doenças —, atuando como um mecanismo natural que tende a limitar o crescimento populacional quando ele se aproxima da capacidade de suporte.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_ecologia_8',
+    chapter: 'Espécies Invasoras e Controle Biológico',
+    topicId: 'bio_ecologia',
+    subject: 'Biologia',
+    prompt: 'Uma espécie invasora, introduzida em um novo ambiente (geralmente pela ação humana), costuma se tornar um problema ecológico grave principalmente porque:',
+    options: [
+      { id: 'a', text: 'Chega ao novo ambiente já adaptada, mas sem seus predadores ou competidores naturais, podendo se proliferar descontroladamente e prejudicar espécies nativas' },
+      { id: 'b', text: 'É sempre mais fraca que as espécies nativas, nunca representando risco algum' },
+      { id: 'c', text: 'Nunca consegue sobreviver fora de seu ambiente de origem' },
+      { id: 'd', text: 'É automaticamente eliminada pelo ambiente em poucos meses' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Uma espécie invasora, ao chegar a um novo ambiente sem os predadores, parasitas ou competidores naturais que normalmente controlariam sua população em seu habitat de origem, pode se proliferar sem controle, competindo com espécies nativas por recursos e, em muitos casos, causando desequilíbrios ecológicos significativos ou até extinções locais.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_ecologia_9',
+    chapter: 'Espécies Invasoras e Controle Biológico',
+    topicId: 'bio_ecologia',
+    subject: 'Biologia',
+    prompt: 'O controle biológico, estratégia usada para conter populações de pragas ou espécies invasoras, consiste em:',
+    options: [
+      { id: 'a', text: 'Utilizar exclusivamente produtos químicos sintéticos (agrotóxicos)' },
+      { id: 'b', text: 'Introduzir ou favorecer um inimigo natural (predador, parasita ou patógeno) da praga ou espécie invasora, para reduzir sua população de forma mais natural' },
+      { id: 'c', text: 'Eliminar completamente todas as espécies de um ecossistema' },
+      { id: 'd', text: 'Não ter qualquer relação com o manejo de pragas' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'O controle biológico consiste em usar inimigos naturais (predadores, parasitoides ou patógenos específicos) de uma praga ou espécie invasora para reduzir sua população, como alternativa (ou complemento) ao uso de agrotóxicos — buscando um controle mais sustentável e com menor impacto ambiental, embora exija estudo cuidadoso para evitar que o próprio agente de controle se torne um problema.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_ecologia_10',
+    chapter: 'Espécies Invasoras e Controle Biológico',
+    topicId: 'bio_ecologia',
+    subject: 'Biologia',
+    prompt: 'A introdução de um agente de controle biológico sem estudos prévios adequados pode, paradoxalmente, causar novos problemas ecológicos porque:',
+    options: [
+      { id: 'a', text: 'O agente introduzido pode não se limitar à praga-alvo, atacando também espécies nativas, tornando-se ele mesmo uma nova espécie invasora' },
+      { id: 'b', text: 'Isso nunca acontece na prática, sendo sempre um método totalmente seguro' },
+      { id: 'c', text: 'O agente de controle sempre desaparece completamente após eliminar a praga-alvo' },
+      { id: 'd', text: 'Não há qualquer risco ecológico associado ao controle biológico' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Um agente de controle biológico mal avaliado pode não se restringir à espécie-alvo, atacando também espécies nativas ou se estabelecendo e se proliferando descontroladamente no novo ambiente — tornando-se, ele mesmo, uma nova espécie invasora e criando um problema ecológico adicional, em vez de resolver o original.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_bio_ecologia_11',
+    chapter: 'Sucessão Ecológica',
+    topicId: 'bio_ecologia',
+    subject: 'Biologia',
+    prompt: 'A comunidade clímax, estágio final de uma sucessão ecológica, é caracterizada por:',
+    options: [
+      { id: 'a', text: 'Ser instável e mudar completamente a cada poucos dias' },
+      { id: 'b', text: 'Ser uma comunidade relativamente estável, em equilíbrio dinâmico com as condições ambientais locais, que se mantém até que uma nova perturbação ocorra' },
+      { id: 'c', text: 'Ser composta exclusivamente por espécies pioneiras' },
+      { id: 'd', text: 'Nunca ocorrer na natureza' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A comunidade clímax é o estágio relativamente estável e maduro de uma sucessão ecológica, em equilíbrio dinâmico com as condições ambientais (clima, solo) da região — tendendo a se manter dessa forma até que uma nova perturbação (natural ou humana) reinicie o processo sucessional.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_ecologia_12',
+    chapter: 'Sucessão Ecológica',
+    topicId: 'bio_ecologia',
+    subject: 'Biologia',
+    prompt: 'As espécies pioneiras, primeiras a colonizar um ambiente durante uma sucessão ecológica, geralmente compartilham características como:',
+    options: [
+      { id: 'a', text: 'Crescimento lento e grande porte, como grandes árvores' },
+      { id: 'b', text: 'Rápido crescimento, alta capacidade de dispersão e tolerância a condições ambientais adversas (como solo pobre em nutrientes ou grande exposição solar)' },
+      { id: 'c', text: 'Total dependência de uma comunidade já estabelecida para sobreviver' },
+      { id: 'd', text: 'Serem sempre as espécies dominantes da comunidade clímax final' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Espécies pioneiras (como líquens e certas gramíneas) costumam ter crescimento rápido, alta capacidade de dispersão de sementes ou esporos e tolerância a condições ambientais adversas — características que lhes permitem colonizar ambientes ainda inóspitos, antes de espécies de crescimento mais lento se estabelecerem nas etapas seguintes da sucessão.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_ecologia_13',
+    chapter: 'Ciclos Biogeoquímicos – Ciclo do Carbono',
+    topicId: 'bio_ecologia',
+    subject: 'Biologia',
+    prompt: 'No ciclo do carbono, o CO2 atmosférico é removido principalmente pela ação de:',
+    options: [
+      { id: 'a', text: 'Respiração celular dos animais' },
+      { id: 'b', text: 'Fotossíntese, realizada por produtores (plantas, algas e cianobactérias), que fixam o carbono do CO2 em moléculas orgânicas' },
+      { id: 'c', text: 'Queima de combustíveis fósseis' },
+      { id: 'd', text: 'Decomposição de matéria orgânica' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A fotossíntese é o principal processo que remove CO2 da atmosfera, fixando o carbono em moléculas orgânicas (como a glicose) nos produtores — o carbono fixado então circula pela cadeia alimentar, sendo devolvido à atmosfera por processos como a respiração celular e a decomposição.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_bio_ecologia_14',
+    chapter: 'Ciclo do Nitrogênio',
+    topicId: 'bio_ecologia',
+    subject: 'Biologia',
+    prompt: 'A fixação biológica do nitrogênio, processo pelo qual o N2 atmosférico (inerte, inutilizável pela maioria dos seres vivos) é convertido em compostos nitrogenados utilizáveis (como amônia), é realizada principalmente por:',
+    options: [
+      { id: 'a', text: 'Todas as plantas, sem exceção' },
+      { id: 'b', text: 'Bactérias fixadoras de nitrogênio, algumas vivendo livremente no solo e outras em associação simbiótica com raízes de certas plantas (como as leguminosas)' },
+      { id: 'c', text: 'Exclusivamente por processos físicos, sem qualquer participação de seres vivos' },
+      { id: 'd', text: 'Animais herbívoros, durante a digestão' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A fixação biológica do nitrogênio é realizada por bactérias fixadoras (como as do gênero Rhizobium, em simbiose com raízes de leguminosas, e outras de vida livre no solo), que convertem o N2 atmosférico em amônia (NH3) — uma forma que pode ser incorporada por plantas e, através da cadeia alimentar, por outros organismos.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_ecologia_15',
+    chapter: 'Ciclo do Nitrogênio',
+    topicId: 'bio_ecologia',
+    subject: 'Biologia',
+    prompt: 'A nitrificação, etapa do ciclo do nitrogênio realizada por bactérias nitrificantes no solo, consiste na conversão de:',
+    options: [
+      { id: 'a', text: 'Amônia (ou amônio) em nitrito e, depois, em nitrato — formas mais facilmente absorvidas pelas raízes das plantas' },
+      { id: 'b', text: 'Nitrato diretamente em gás nitrogênio atmosférico' },
+      { id: 'c', text: 'Proteínas em carboidratos' },
+      { id: 'd', text: 'Gás nitrogênio em oxigênio' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Na nitrificação, bactérias específicas do solo convertem amônia/amônio primeiro em nitrito, e depois em nitrato — uma forma nitrogenada geralmente mais facilmente absorvida pelas raízes das plantas do que o próprio amônio, dando continuidade ao ciclo do nitrogênio.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_ecologia_16',
+    chapter: 'Ciclo do Nitrogênio',
+    topicId: 'bio_ecologia',
+    subject: 'Biologia',
+    prompt: 'A desnitrificação, etapa final do ciclo do nitrogênio realizada por bactérias desnitrificantes (geralmente em ambientes com pouco oxigênio, como solos encharcados), tem como efeito:',
+    options: [
+      { id: 'a', text: 'Converter nitrato de volta em gás nitrogênio (N2), devolvendo-o à atmosfera e fechando o ciclo' },
+      { id: 'b', text: 'Aumentar indefinidamente a quantidade de nitrato disponível no solo' },
+      { id: 'c', text: 'Converter gás nitrogênio diretamente em proteínas' },
+      { id: 'd', text: 'Não ter qualquer papel no ciclo do nitrogênio' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A desnitrificação converte nitrato (NO3⁻) de volta em gás nitrogênio (N2), que retorna à atmosfera — fechando o ciclo do nitrogênio e evitando o acúmulo indefinido de compostos nitrogenados no solo e na água.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_ecologia_17',
+    chapter: 'Ciclo Hidrológico e Poluição da Água',
+    topicId: 'bio_ecologia',
+    subject: 'Biologia',
+    prompt: 'A poluição de corpos d\'água por esgoto doméstico não tratado, um problema ambiental comum, prejudica os ecossistemas aquáticos principalmente porque:',
+    options: [
+      { id: 'a', text: 'Aumenta a quantidade de oxigênio dissolvido disponível para os peixes' },
+      { id: 'b', text: 'Fornece excesso de matéria orgânica, que é decomposta por bactérias que consomem grandes quantidades de oxigênio dissolvido na água, podendo causar a morte de peixes e outros organismos aquáticos por asfixia' },
+      { id: 'c', text: 'Não tem qualquer efeito sobre os organismos aquáticos' },
+      { id: 'd', text: 'Elimina completamente a presença de bactérias na água' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'O excesso de matéria orgânica do esgoto é decomposto por bactérias aeróbicas, que consomem grandes quantidades de oxigênio dissolvido na água durante esse processo — reduzindo drasticamente o oxigênio disponível para peixes e outros organismos aquáticos, podendo causar sua morte por asfixia.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_ecologia_18',
+    chapter: 'Ciclo Hidrológico e Poluição da Água',
+    topicId: 'bio_ecologia',
+    subject: 'Biologia',
+    prompt: 'A impermeabilização do solo pela urbanização (asfalto, concreto) afeta o ciclo hidrológico local principalmente porque:',
+    options: [
+      { id: 'a', text: 'Aumenta a infiltração de água no solo, reduzindo enchentes' },
+      { id: 'b', text: 'Reduz a infiltração da água da chuva no solo, aumentando o escoamento superficial e elevando o risco de enchentes' },
+      { id: 'c', text: 'Não tem qualquer efeito sobre o ciclo hidrológico' },
+      { id: 'd', text: 'Elimina completamente a evaporação de água nas cidades' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Superfícies impermeabilizadas (asfalto, concreto) impedem que a água da chuva infiltre no solo, aumentando o volume de água que escoa superficialmente — sobrecarregando sistemas de drenagem urbana e elevando significativamente o risco de enchentes em áreas urbanizadas.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_bio_ecologia_19',
+    chapter: 'Ciclo Hidrológico e Poluição da Água',
+    topicId: 'bio_ecologia',
+    subject: 'Biologia',
+    prompt: 'As matas ciliares, vegetação preservada às margens de rios e lagos, desempenham um papel importante na proteção dos corpos d\'água porque:',
+    options: [
+      { id: 'a', text: 'Ajudam a filtrar sedimentos e poluentes carregados pela água da chuva antes que cheguem ao rio, além de estabilizar as margens contra erosão' },
+      { id: 'b', text: 'Não têm qualquer função ecológica relevante' },
+      { id: 'c', text: 'Aumentam a poluição da água ao redor' },
+      { id: 'd', text: 'Impedem completamente qualquer entrada de água no rio' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'As matas ciliares atuam como uma barreira natural, filtrando sedimentos, agrotóxicos e outros poluentes carregados pelo escoamento superficial antes que atinjam o corpo d\'água, além de estabilizar o solo das margens com suas raízes, reduzindo a erosão e o assoreamento dos rios.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_ecologia_20',
+    chapter: 'Eutrofização',
+    topicId: 'bio_ecologia',
+    subject: 'Biologia',
+    prompt: 'A eutrofização de um corpo d\'água, processo frequentemente causado pelo excesso de nutrientes (como nitrogênio e fósforo de fertilizantes ou esgoto), se caracteriza por:',
+    options: [
+      { id: 'a', text: 'Uma redução drástica na quantidade de nutrientes disponíveis na água' },
+      { id: 'b', text: 'Um crescimento excessivo de algas e plantas aquáticas (proliferação, incluindo florações de algas), que pode levar à morte de peixes por falta de oxigênio quando essa biomassa se decompõe' },
+      { id: 'c', text: 'A purificação natural da água, sem qualquer consequência ecológica' },
+      { id: 'd', text: 'O aumento permanente da transparência da água' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A eutrofização ocorre quando o excesso de nutrientes (nitrogênio, fósforo) estimula o crescimento explosivo de algas e plantas aquáticas. Quando essa grande quantidade de biomassa morre, sua decomposição por bactérias consome muito oxigênio dissolvido, podendo causar a morte de peixes e outros organismos aquáticos por asfixia.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_ecologia_21',
+    chapter: 'Eutrofização',
+    topicId: 'bio_ecologia',
+    subject: 'Biologia',
+    prompt: 'As florações de algas (blooms), fenômeno associado à eutrofização, podem representar um risco adicional à saúde pública quando envolvem:',
+    options: [
+      { id: 'a', text: 'Cianobactérias capazes de produzir toxinas nocivas, contaminando a água usada para consumo humano ou recreação' },
+      { id: 'b', text: 'Apenas espécies de algas completamente inofensivas, sem qualquer risco à saúde' },
+      { id: 'c', text: 'Uma redução da quantidade de algas na água' },
+      { id: 'd', text: 'Nenhum tipo de risco, já que algas são sempre benéficas ao ecossistema' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Algumas florações de algas, especialmente as causadas por cianobactérias, podem produzir toxinas nocivas à saúde humana e animal, contaminando a água usada para abastecimento, pesca ou recreação — um risco adicional de saúde pública associado a corpos d\'água eutrofizados.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_ecologia_22',
+    chapter: 'Poluição do Ar',
+    topicId: 'bio_ecologia',
+    subject: 'Biologia',
+    prompt: 'O ozônio troposférico (próximo à superfície), formado pela reação de poluentes emitidos por veículos e indústrias sob luz solar, é considerado um poluente prejudicial porque:',
+    options: [
+      { id: 'a', text: 'Protege a superfície terrestre da radiação ultravioleta, da mesma forma que o ozônio da estratosfera' },
+      { id: 'b', text: 'Causa irritação respiratória e danos a plantas e materiais, sendo prejudicial à saúde e ao ambiente ao nível do solo, diferente do ozônio estratosférico (protetor)' },
+      { id: 'c', text: 'É completamente inofensivo à saúde humana' },
+      { id: 'd', text: 'Não tem qualquer relação com poluentes veiculares ou industriais' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Diferente do ozônio da estratosfera (que protege contra radiação UV), o ozônio troposférico é um poluente prejudicial: formado pela reação fotoquímica de poluentes (óxidos de nitrogênio e compostos orgânicos voláteis) sob luz solar, causa irritação respiratória em seres humanos e danos a plantas e materiais.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_bio_ecologia_23',
+    chapter: 'Poluição do Ar',
+    topicId: 'bio_ecologia',
+    subject: 'Biologia',
+    prompt: 'O material particulado (partículas sólidas ou líquidas em suspensão no ar, como fuligem e poeira), emitido principalmente por veículos e indústrias, é especialmente prejudicial à saúde quando:',
+    options: [
+      { id: 'a', text: 'Suas partículas são grandes o suficiente para não penetrar no sistema respiratório' },
+      { id: 'b', text: 'Suas partículas são finas o suficiente para penetrar profundamente nos pulmões (e até na corrente sanguínea), causando ou agravando doenças respiratórias e cardiovasculares' },
+      { id: 'c', text: 'É composto exclusivamente de vapor de água' },
+      { id: 'd', text: 'Nunca atinge as vias respiratórias humanas' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Partículas finas (como o material particulado fino, MP2,5) conseguem penetrar profundamente no sistema respiratório, alcançando os alvéolos pulmonares e, em alguns casos, a corrente sanguínea — associando-se a doenças respiratórias, cardiovasculares e outros problemas de saúde, especialmente com exposição prolongada.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_ecologia_24',
+    chapter: 'Biomagnificação',
+    topicId: 'bio_ecologia',
+    subject: 'Biologia',
+    prompt: 'A biomagnificação (ou magnificação trófica) é o fenômeno pelo qual certas substâncias tóxicas (como metais pesados e alguns pesticidas):',
+    options: [
+      { id: 'a', text: 'Se diluem progressivamente à medida que sobem na cadeia alimentar, tornando-se inofensivas nos consumidores de topo' },
+      { id: 'b', text: 'Se acumulam em concentrações cada vez maiores nos organismos de níveis tróficos mais altos, já que cada nível consome muitos organismos do nível anterior sem eliminar completamente essas substâncias' },
+      { id: 'c', text: 'Afetam exclusivamente os produtores da cadeia alimentar' },
+      { id: 'd', text: 'Não têm qualquer relação com a posição do organismo na cadeia alimentar' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Na biomagnificação, substâncias tóxicas persistentes (não facilmente eliminadas pelo organismo) se acumulam em concentrações cada vez maiores à medida que sobem na cadeia alimentar, já que cada predador consome muitas presas contaminadas, concentrando a substância — por isso predadores de topo (como grandes peixes ou aves) costumam apresentar as maiores concentrações dessas substâncias.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_ecologia_25',
+    chapter: 'Biomagnificação',
+    topicId: 'bio_ecologia',
+    subject: 'Biologia',
+    prompt: 'O mercúrio, um metal pesado tóxico que sofre biomagnificação em ambientes aquáticos, representa um risco particular para populações humanas que:',
+    options: [
+      { id: 'a', text: 'Consomem regularmente peixes de grande porte e predadores de topo, que tendem a acumular as maiores concentrações desse metal' },
+      { id: 'b', text: 'Não consomem nenhum tipo de peixe' },
+      { id: 'c', text: 'Vivem exclusivamente em regiões desérticas, sem qualquer corpo d\'água próximo' },
+      { id: 'd', text: 'Consomem apenas produtores primários, como algas' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Por causa da biomagnificação, peixes predadores de topo (como atum e outros peixes grandes) tendem a acumular as maiores concentrações de mercúrio na cadeia alimentar aquática — por isso populações humanas que consomem regularmente esses peixes em grande quantidade correm maior risco de exposição a esse metal tóxico.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_ecologia_26',
+    chapter: 'Poluição: Aquecimento Global, POPs e Biorremediação',
+    topicId: 'bio_ecologia',
+    subject: 'Biologia',
+    prompt: 'Os Poluentes Orgânicos Persistentes (POPs), como certos organoclorados, são particularmente preocupantes do ponto de vista ambiental porque:',
+    options: [
+      { id: 'a', text: 'Se degradam rapidamente no ambiente, desaparecendo em poucos dias' },
+      { id: 'b', text: 'Resistem à degradação por longos períodos, podem se dispersar por longas distâncias e tendem a se acumular nos tecidos adiposos dos organismos (bioacumulação), sofrendo biomagnificação ao longo da cadeia alimentar' },
+      { id: 'c', text: 'São compostos exclusivamente inorgânicos' },
+      { id: 'd', text: 'Não têm qualquer capacidade de se acumular em organismos vivos' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Poluentes Orgânicos Persistentes (POPs) são caracterizados por sua resistência à degradação ambiental (permanecendo por anos ou décadas), capacidade de se dispersar por longas distâncias (inclusive por via atmosférica) e tendência a se acumular no tecido adiposo de organismos vivos, sofrendo biomagnificação ao longo da cadeia alimentar — características que tornam seu controle e eliminação especialmente desafiadores.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_bio_ecologia_27',
+    chapter: 'Poluição: Aquecimento Global, POPs e Biorremediação',
+    topicId: 'bio_ecologia',
+    subject: 'Biologia',
+    prompt: 'A biorremediação, técnica que utiliza organismos vivos (geralmente micro-organismos) para tratar ambientes contaminados, consiste em:',
+    options: [
+      { id: 'a', text: 'Utilizar bactérias, fungos ou plantas capazes de degradar, absorver ou neutralizar poluentes presentes no solo, na água ou no ar, reduzindo a contaminação de forma mais sustentável' },
+      { id: 'b', text: 'Utilizar exclusivamente processos físicos, sem qualquer participação de organismos vivos' },
+      { id: 'c', text: 'Aumentar deliberadamente a quantidade de poluentes em um ambiente' },
+      { id: 'd', text: 'Uma técnica que nunca é utilizada na prática' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A biorremediação utiliza a capacidade metabólica de certos organismos (bactérias, fungos, ou mesmo plantas, na fitorremediação) para degradar, absorver ou neutralizar poluentes presentes em solos, águas ou no ar contaminados — uma alternativa geralmente mais sustentável e de menor custo do que métodos exclusivamente físicos ou químicos de descontaminação.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_ecologia_28',
+    chapter: 'Biomas Brasileiros',
+    topicId: 'bio_ecologia',
+    subject: 'Biologia',
+    prompt: 'O Pantanal, bioma brasileiro caracterizado por grandes planícies alagáveis sazonalmente, é considerado uma das áreas de maior biodiversidade do planeta principalmente devido a:',
+    options: [
+      { id: 'a', text: 'Seu regime de cheias e secas sazonais, que cria uma grande diversidade de habitats e favorece a concentração de fauna, especialmente durante a estação seca' },
+      { id: 'b', text: 'Ser um bioma completamente árido, sem qualquer presença de água' },
+      { id: 'c', text: 'Estar localizado exclusivamente em regiões de altitude elevada' },
+      { id: 'd', text: 'Não ter qualquer relação com corpos d\'água' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O regime sazonal de cheias (na estação chuvosa) e secas (quando a água se retrai, concentrando animais ao redor dos corpos d\'água remanescentes) cria uma grande diversidade de habitats e favorece a observação e a concentração de fauna abundante, tornando o Pantanal um dos ecossistemas de maior biodiversidade visível do planeta.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_ecologia_29',
+    chapter: 'Ciclos Biogeoquímicos – Ciclo do Carbono',
+    topicId: 'bio_ecologia',
+    subject: 'Biologia',
+    prompt: 'No ciclo do carbono, o processo de fotossíntese e o processo de respiração celular desempenham papéis opostos e complementares. Isso significa que:',
+    options: [
+      { id: 'a', text: 'A fotossíntese remove CO2 da atmosfera, fixando-o em matéria orgânica, enquanto a respiração celular libera CO2 de volta à atmosfera ao degradar essa matéria orgânica' },
+      { id: 'b', text: 'Ambos os processos liberam CO2 para a atmosfera, sem qualquer processo de fixação' },
+      { id: 'c', text: 'A respiração celular ocorre apenas em plantas, nunca em animais' },
+      { id: 'd', text: 'A fotossíntese libera carbono, e a respiração o fixa em compostos orgânicos' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A fotossíntese, realizada por organismos autotróficos, remove CO2 da atmosfera e o converte em compostos orgânicos (glicose) usando energia luminosa. A respiração celular, realizada por praticamente todos os seres vivos, quebra essas moléculas orgânicas para obter energia, liberando CO2 de volta à atmosfera — os dois processos, em equilíbrio, mantêm o ciclo do carbono na biosfera.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_ecologia_30',
+    chapter: 'Eutrofização',
+    topicId: 'bio_ecologia',
+    subject: 'Biologia',
+    prompt: 'A eutrofização de corpos d\'água, frequentemente causada pelo excesso de nutrientes (nitrogênio e fósforo) provenientes de esgoto ou fertilizantes agrícolas, pode levar à morte de peixes principalmente porque:',
+    options: [
+      { id: 'a', text: 'O excesso de nutrientes causa proliferação de algas, cuja posterior decomposição por bactérias consome grande parte do oxigênio dissolvido na água, causando hipóxia' },
+      { id: 'b', text: 'Os nutrientes são diretamente tóxicos para os peixes' },
+      { id: 'c', text: 'A eutrofização reduz a temperatura da água drasticamente' },
+      { id: 'd', text: 'O excesso de nutrientes impede totalmente a fotossíntese na água' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O excesso de nutrientes (nitrogênio, fósforo) estimula um crescimento explosivo de algas e cianobactérias (florações). Quando essas algas morrem, sua decomposição por bactérias aeróbicas consome grande quantidade do oxigênio dissolvido na água, gerando hipóxia (baixa concentração de oxigênio) que pode causar a morte em massa de peixes e outros organismos aquáticos.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_ecologia_31',
+    chapter: 'Poluição do Ar',
+    topicId: 'bio_ecologia',
+    subject: 'Biologia',
+    prompt: 'A chuva ácida, fenômeno associado à poluição atmosférica urbana e industrial, é formada principalmente pela reação da água da chuva com:',
+    options: [
+      { id: 'a', text: 'Óxidos de enxofre (SOx) e óxidos de nitrogênio (NOx), liberados na queima de combustíveis fósseis, que reagem com a umidade atmosférica formando ácidos sulfúrico e nítrico' },
+      { id: 'b', text: 'Oxigênio puro, sem qualquer poluente envolvido' },
+      { id: 'c', text: 'Vapor d\'água exclusivamente, sem qualquer gás poluente' },
+      { id: 'd', text: 'Gases nobres, como o argônio' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A queima de combustíveis fósseis (em veículos e indústrias) libera óxidos de enxofre e de nitrogênio na atmosfera. Esses gases reagem com a água presente no ar, formando ácido sulfúrico e ácido nítrico, que caem como chuva ácida, capaz de acidificar solos e corpos d\'água, corroer construções e prejudicar a vegetação.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_ecologia_32',
+    chapter: 'Biomagnificação',
+    topicId: 'bio_ecologia',
+    subject: 'Biologia',
+    prompt: 'A biomagnificação de certos poluentes (como mercúrio ou alguns pesticidas) ao longo de uma cadeia alimentar significa que:',
+    options: [
+      { id: 'a', text: 'A concentração do poluente tende a aumentar progressivamente a cada nível trófico, atingindo as maiores concentrações nos predadores de topo de cadeia' },
+      { id: 'b', text: 'O poluente se dilui progressivamente a cada nível trófico, sendo inofensivo para os predadores de topo' },
+      { id: 'c', text: 'A concentração do poluente permanece exatamente igual em todos os níveis tróficos' },
+      { id: 'd', text: 'O fenômeno ocorre apenas em ambientes terrestres, nunca em ambientes aquáticos' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Poluentes persistentes e lipossolúveis (como mercúrio e certos organoclorados) não são facilmente eliminados pelo organismo e se acumulam nos tecidos. Como cada predador consome muitas presas ao longo da vida, a concentração desses poluentes tende a aumentar a cada nível trófico (biomagnificação), atingindo os níveis mais altos nos predadores de topo de cadeia — inclusive o ser humano, em muitos casos.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_bio_ecologia_33',
+    chapter: 'Poluição: Aquecimento Global, POPs e Biorremediação',
+    topicId: 'bio_ecologia',
+    subject: 'Biologia',
+    prompt: 'O efeito estufa, fenômeno natural intensificado pela atividade humana e associado ao aquecimento global, ocorre porque determinados gases atmosféricos (como CO2 e metano):',
+    options: [
+      { id: 'a', text: 'Retêm parte da radiação infravermelha (calor) reemitida pela superfície terrestre, impedindo que ela escape totalmente para o espaço' },
+      { id: 'b', text: 'Bloqueiam completamente a entrada de luz solar na atmosfera' },
+      { id: 'c', text: 'Não têm qualquer capacidade de absorver ou reter energia' },
+      { id: 'd', text: 'Resfriam diretamente a superfície terrestre' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Gases de efeito estufa, como CO2 e metano, são relativamente transparentes à luz visível do Sol, mas absorvem parte da radiação infravermelha (calor) que a superfície terrestre reemite, redirecionando parte dessa energia de volta à superfície. Esse fenômeno é natural e necessário para manter a Terra habitável, mas o aumento das concentrações desses gases pela atividade humana intensifica a retenção de calor, causando o aquecimento global.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_ecologia_34',
+    chapter: 'Biomas Brasileiros',
+    topicId: 'bio_ecologia',
+    subject: 'Biologia',
+    prompt: 'O Cerrado, segundo maior bioma brasileiro em extensão, é caracterizado por uma vegetação típica de:',
+    options: [
+      { id: 'a', text: 'Árvores de grande porte com troncos retos e copas densamente fechadas, formando um dossel contínuo' },
+      { id: 'b', text: 'Árvores e arbustos de porte baixo a médio, com troncos tortuosos, casca grossa e raízes profundas, adaptados a solos ácidos e pobres e a um regime de estação seca prolongada' },
+      { id: 'c', text: 'Vegetação exclusivamente aquática submersa' },
+      { id: 'd', text: 'Ausência total de vegetação, sendo um bioma desértico' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'O Cerrado é uma savana tropical caracterizada por árvores e arbustos de porte baixo a médio, com troncos tortuosos e casca grossa (adaptação ao fogo, comum na estação seca) e raízes profundas que alcançam lençóis freáticos, permitindo sobreviver a solos ácidos, pobres em nutrientes e a uma estação seca prolongada — bem diferente da vegetação densa e fechada de florestas como a Amazônia.',
     difficulty: 'medium'
   },
   // Biologia — Evolução
@@ -1301,6 +2677,38 @@ export const mockQuestions: Question[] = [
     correctOptionId: 'b',
     explanation: 'Vacinas expõem o sistema imunológico a uma versão enfraquecida ou inativada do patógeno, ou apenas a fragmentos específicos dele (como uma proteína de superfície, ou mRNA que instrui a produção dessa proteína) — o suficiente para provocar uma resposta imune adaptativa e gerar células de memória, sem causar a doença em sua forma completa.',
     difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_microbiologia_6',
+    chapter: 'Vírus',
+    topicId: 'bio_microbiologia',
+    subject: 'Biologia',
+    prompt: 'O ciclo lisogênico de um vírus bacteriófago se diferencia do ciclo lítico principalmente porque:',
+    options: [
+      { id: 'a', text: 'No ciclo lisogênico, o DNA viral se integra ao cromossomo bacteriano e é replicado passivamente junto com ele por várias gerações, sem lise imediata da célula' },
+      { id: 'b', text: 'No ciclo lisogênico, a célula hospedeira é sempre destruída imediatamente após a infecção' },
+      { id: 'c', text: 'O ciclo lisogênico não envolve nenhum tipo de material genético viral' },
+      { id: 'd', text: 'Apenas o ciclo lítico ocorre em vírus de DNA, nunca em vírus de RNA' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'No ciclo lisogênico, o DNA do bacteriófago se integra ao cromossomo da bactéria hospedeira (tornando-se um prófago) e é duplicado passivamente a cada divisão celular, sem produzir novas partículas virais nem lisar a célula — ao contrário do ciclo lítico, em que o vírus replica-se ativamente e rompe (lisa) a célula hospedeira para liberar novas partículas virais.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_bio_microbiologia_7',
+    chapter: 'Vírus',
+    topicId: 'bio_microbiologia',
+    subject: 'Biologia',
+    prompt: 'Vírus de RNA, como o HIV, utilizam uma enzima chamada transcriptase reversa. A função dessa enzima é:',
+    options: [
+      { id: 'a', text: 'Transcrever RNA viral em DNA, que pode então se integrar ao genoma da célula hospedeira' },
+      { id: 'b', text: 'Traduzir diretamente o RNA viral em proteínas, sem qualquer intermediário' },
+      { id: 'c', text: 'Degradar o DNA da célula hospedeira' },
+      { id: 'd', text: 'Sintetizar a cápsula proteica do vírus diretamente a partir do DNA' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A transcriptase reversa, presente em retrovírus como o HIV, catalisa a transcrição reversa: converte o RNA genômico viral em DNA complementar (cDNA). Esse DNA pode então se integrar ao genoma da célula hospedeira, onde passa a ser transcrito e traduzido junto com os genes da própria célula, um processo inverso ao "dogma central" tradicional (DNA → RNA).',
+    difficulty: 'hard'
   },
   // Matemática — Funções
   {
@@ -2889,6 +4297,166 @@ export const mockQuestions: Question[] = [
     ],
     correctOptionId: 'b',
     explanation: 'O etileno é um hormônio vegetal gasoso, conhecido principalmente por promover o amadurecimento de frutos (mudança de cor, amolecimento, produção de aromas) — por isso frutos verdes são frequentemente armazenados junto de frutos maduros (que liberam etileno) para acelerar seu próprio amadurecimento.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_fisio_vegetal_6',
+    chapter: 'Histologia e Morfologia Vegetal',
+    topicId: 'bio_fisio_vegetal',
+    subject: 'Biologia',
+    prompt: 'Os meristemas são tecidos vegetais formados por células indiferenciadas com alta capacidade de divisão. Sua principal função é:',
+    options: [
+      { id: 'a', text: 'Realizar fotossíntese em grande escala' },
+      { id: 'b', text: 'Originar, por divisão celular contínua, novos tecidos e permitir o crescimento da planta ao longo de toda a sua vida' },
+      { id: 'c', text: 'Armazenar exclusivamente substâncias de reserva' },
+      { id: 'd', text: 'Conduzir a seiva elaborada' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Os meristemas são tecidos embrionários formados por células indiferenciadas com grande capacidade de divisão mitótica. A partir deles, por diferenciação celular, originam-se os demais tecidos vegetais (de revestimento, fundamentais e condutores), permitindo o crescimento contínuo (indeterminado) característico das plantas, tanto em comprimento (meristemas apicais) quanto em espessura (meristemas laterais, como o câmbio).',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_fisio_vegetal_7',
+    chapter: 'Histologia e Morfologia Vegetal',
+    topicId: 'bio_fisio_vegetal',
+    subject: 'Biologia',
+    prompt: 'A epiderme, tecido de revestimento que recobre externamente raízes, caules e folhas jovens, tem entre suas funções principais:',
+    options: [
+      { id: 'a', text: 'Realizar toda a fotossíntese da planta' },
+      { id: 'b', text: 'Proteger a planta contra perda excessiva de água e contra a entrada de patógenos, muitas vezes auxiliada por uma cutícula cerosa' },
+      { id: 'c', text: 'Conduzir a seiva bruta das raízes até as folhas' },
+      { id: 'd', text: 'Armazenar grandes quantidades de amido' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A epiderme é o tecido de revestimento externo da planta, geralmente formado por uma única camada de células vivas justapostas, muitas vezes recoberta por uma cutícula cerosa (impermeabilizante). Suas funções incluem proteção contra a perda excessiva de água por evaporação e contra a entrada de microrganismos patogênicos, além de abrigar estruturas especializadas como estômatos e pelos.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_bio_fisio_vegetal_8',
+    chapter: 'Histologia e Morfologia Vegetal',
+    topicId: 'bio_fisio_vegetal',
+    subject: 'Biologia',
+    prompt: 'Os tecidos fundamentais (parênquima, colênquima e esclerênquima) desempenham papéis distintos na planta. O parênquima clorofiliano, especificamente, é responsável principalmente por:',
+    options: [
+      { id: 'a', text: 'Sustentação rígida em órgãos já totalmente diferenciados, por meio de paredes espessadas por lignina' },
+      { id: 'b', text: 'Realizar fotossíntese, sendo abundante no mesofilo das folhas' },
+      { id: 'c', text: 'Conduzir seiva bruta a longas distâncias' },
+      { id: 'd', text: 'Formar exclusivamente a epiderme das folhas' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'O parênquima clorofiliano (ou clorênquima) é rico em cloroplastos e constitui a maior parte do mesofilo das folhas, sendo o principal responsável pela realização da fotossíntese na planta. Já o colênquima oferece sustentação flexível em órgãos ainda em crescimento, e o esclerênquima oferece sustentação rígida em órgãos já maduros, com paredes espessadas por lignina.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_fisio_vegetal_9',
+    chapter: 'Morfofisiologia Vegetal: Caules e Folhas',
+    topicId: 'bio_fisio_vegetal',
+    subject: 'Biologia',
+    prompt: 'Nas plantas lenhosas, o crescimento em espessura do caule (crescimento secundário) é resultado da atividade de qual estrutura meristemática?',
+    options: [
+      { id: 'a', text: 'O meristema apical caulinar, exclusivamente' },
+      { id: 'b', text: 'O câmbio (meristema lateral), que produz novas camadas de xilema e floema secundários ano após ano' },
+      { id: 'c', text: 'A epiderme, por divisão contínua de suas células' },
+      { id: 'd', text: 'Os estômatos' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'O crescimento secundário (em espessura) das plantas lenhosas resulta da atividade do câmbio vascular, um meristema lateral situado entre o xilema e o floema primários, que produz novas camadas de xilema secundário (para dentro) e floema secundário (para fora) a cada período de crescimento — processo responsável pela formação dos "anéis de crescimento" visíveis no tronco de árvores.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_bio_fisio_vegetal_10',
+    chapter: 'Morfofisiologia Vegetal: Caules e Folhas',
+    topicId: 'bio_fisio_vegetal',
+    subject: 'Biologia',
+    prompt: 'As folhas são o principal órgão fotossintetizante da maioria das plantas. Sua estrutura achatada e delgada favorece a fotossíntese principalmente porque:',
+    options: [
+      { id: 'a', text: 'Maximiza a área de captação de luz solar e facilita a difusão de gases (CO2 e O2) através dos estômatos' },
+      { id: 'b', text: 'Impede totalmente a entrada de luz, forçando a planta a depender de outros órgãos' },
+      { id: 'c', text: 'Aumenta o peso da planta, sem qualquer vantagem fotossintética' },
+      { id: 'd', text: 'Elimina a necessidade de água para a fotossíntese' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A forma achatada e delgada da maioria das folhas maximiza a área de superfície exposta à luz solar (essencial para captar energia luminosa) e mantém uma distância curta entre o ar externo e as células do mesofilo, facilitando a difusão eficiente de CO2 (entrada) e O2 (saída) através dos estômatos.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_bio_fisio_vegetal_11',
+    chapter: 'Traqueófitas: Transpiração e Reposição Rápida de Água',
+    topicId: 'bio_fisio_vegetal',
+    subject: 'Biologia',
+    prompt: 'Além da transpiração foliar, a raiz de uma planta pode gerar uma "pressão radicular" que empurra a água para cima no xilema, especialmente à noite. Esse fenômeno é evidenciado por um efeito visível chamado:',
+    options: [
+      { id: 'a', text: 'Gutação, em que gotas de água (não orvalho) surgem nas bordas das folhas devido à pressão positiva na raiz' },
+      { id: 'b', text: 'Fotossíntese noturna' },
+      { id: 'c', text: 'Fototropismo negativo' },
+      { id: 'd', text: 'Dormência de sementes' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A gutação é a exsudação de gotas de água líquida (não confundir com orvalho, que é condensação) pelas bordas ou pontas das folhas de certas plantas, especialmente à noite, quando a transpiração é baixa mas a absorção radicular continua, gerando pressão radicular positiva que empurra o excesso de água para fora através de estruturas especializadas (hidatódios).',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_bio_fisio_vegetal_12',
+    chapter: 'Fisiologia Vegetal: Transporte no Floema',
+    topicId: 'bio_fisio_vegetal',
+    subject: 'Biologia',
+    prompt: 'Ao contrário do xilema (transporte unidirecional, das raízes às folhas), o floema transporta a seiva elaborada (rica em açúcares) de forma:',
+    options: [
+      { id: 'a', text: 'Sempre unidirecional, das raízes para as folhas' },
+      { id: 'b', text: 'Bidirecional, dos órgãos-fonte (produtores de açúcar, como folhas fotossintetizantes) para os órgãos-dreno (consumidores ou armazenadores, como raízes e frutos), podendo mudar de direção conforme a necessidade da planta' },
+      { id: 'c', text: 'Exclusivamente das folhas para a atmosfera' },
+      { id: 'd', text: 'Não existe transporte no floema, apenas armazenamento local' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'O transporte pelo floema segue o modelo fonte-dreno: a seiva elaborada flui dos órgãos-fonte (que produzem ou liberam açúcares, como folhas fotossintetizantes maduras) para os órgãos-dreno (que consomem ou armazenam açúcares, como raízes, frutos em crescimento ou sementes). Como fontes e drenos podem mudar ao longo do desenvolvimento da planta, o sentido do fluxo no floema pode se inverter, ao contrário do fluxo unidirecional do xilema.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_bio_fisio_vegetal_13',
+    chapter: 'Fisiologia Vegetal: Transporte no Floema',
+    topicId: 'bio_fisio_vegetal',
+    subject: 'Biologia',
+    prompt: 'O modelo do fluxo de pressão (ou fluxo em massa), proposto para explicar o transporte pelo floema, baseia-se na ideia de que:',
+    options: [
+      { id: 'a', text: 'O carregamento ativo de açúcares nas células-fonte reduz o potencial hídrico ali, atraindo água por osmose e gerando uma pressão de turgor que empurra a seiva elaborada em direção às regiões de menor pressão (drenos)' },
+      { id: 'b', text: 'A seiva elaborada é transportada exclusivamente por evaporação nas folhas' },
+      { id: 'c', text: 'Não há qualquer movimento de água envolvido no transporte do floema' },
+      { id: 'd', text: 'O transporte no floema depende unicamente da força da gravidade' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'No modelo do fluxo de pressão, o carregamento ativo (com gasto de energia) de açúcares nas células do floema próximas à fonte reduz o potencial hídrico ali, o que atrai água por osmose do xilema adjacente; isso gera uma pressão de turgor elevada na região da fonte, que empurra a seiva elaborada ao longo dos tubos crivados em direção às regiões de menor pressão, próximas aos drenos, onde os açúcares são descarregados.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_bio_fisio_vegetal_14',
+    chapter: 'Fisiologia Vegetal: Transporte no Floema',
+    topicId: 'bio_fisio_vegetal',
+    subject: 'Biologia',
+    prompt: 'As células condutoras do floema (elementos crivados) apresentam uma característica única entre as células vegetais especializadas em transporte: elas',
+    options: [
+      { id: 'a', text: 'São células mortas na maturidade, sem qualquer conteúdo citoplasmático' },
+      { id: 'b', text: 'Permanecem vivas na maturidade, mas perdem a maioria das organelas (incluindo o núcleo), dependendo de células-companheiras adjacentes para suas funções metabólicas' },
+      { id: 'c', text: 'Possuem parede celular espessada por lignina, como os vasos do xilema' },
+      { id: 'd', text: 'Realizam fotossíntese ativa para produzir seu próprio alimento' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Os elementos crivados (células condutoras do floema) permanecem vivos na maturidade, mas perdem o núcleo e a maior parte das organelas, o que reduz a resistência ao fluxo da seiva elaborada. Para suprir suas necessidades metabólicas, dependem de células-companheiras adjacentes, conectadas por plasmodesmos — uma relação de interdependência única no reino vegetal.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_bio_fisio_vegetal_15',
+    chapter: 'Fisiologia Vegetal: Hormônios Vegetais',
+    topicId: 'bio_fisio_vegetal',
+    subject: 'Biologia',
+    prompt: 'As giberelinas, um grupo de hormônios vegetais, têm entre suas funções conhecidas:',
+    options: [
+      { id: 'a', text: 'Inibir totalmente o crescimento do caule, em qualquer situação' },
+      { id: 'b', text: 'Promover o alongamento do caule e quebrar a dormência de sementes, estimulando sua germinação' },
+      { id: 'c', text: 'Promover exclusivamente o amadurecimento de frutos, como o etileno' },
+      { id: 'd', text: 'Atuar apenas em raízes, sem qualquer efeito na parte aérea da planta' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'As giberelinas promovem o alongamento do caule (efeito clássico observado em plantas anãs tratadas com giberelina, que passam a crescer normalmente) e têm papel importante na quebra de dormência de sementes, estimulando a síntese de enzimas (como a alfa-amilase) que mobilizam reservas de amido necessárias para a germinação.',
     difficulty: 'medium'
   },
   // Física — Dinâmica Impulsiva
@@ -5400,6 +6968,278 @@ export const mockQuestions: Question[] = [
     explanation: 'Os lisossomos contêm enzimas digestivas (hidrolases ácidas) capazes de degradar macromoléculas, organelas desgastadas (autofagia) e partículas englobadas por fagocitose — funcionando como o "sistema digestivo" da célula.',
     difficulty: 'easy'
   },
+  {
+    id: 'q_bio_estrutura_fisio_celular_6',
+    chapter: 'Origem da Vida e as Primeiras Células',
+    topicId: 'bio_estrutura_fisio_celular',
+    subject: 'Biologia',
+    prompt: 'O experimento de Miller-Urey (1953), que simulou condições da atmosfera primitiva da Terra com descargas elétricas sobre uma mistura de gases, é historicamente relevante porque:',
+    options: [
+      { id: 'a', text: 'Provou definitivamente como a vida surgiu na Terra' },
+      { id: 'b', text: 'Demonstrou que moléculas orgânicas simples (como aminoácidos) podem se formar espontaneamente a partir de compostos inorgânicos, sob condições semelhantes às da Terra primitiva' },
+      { id: 'c', text: 'Criou as primeiras células vivas em laboratório' },
+      { id: 'd', text: 'Refutou completamente qualquer hipótese de evolução química' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'O experimento demonstrou que aminoácidos e outras moléculas orgânicas simples podem se formar a partir de compostos inorgânicos (metano, amônia, hidrogênio, água) sob energia externa (descargas elétricas simulando raios) — uma evidência a favor da hipótese da evolução química, sem provar como a vida de fato surgiu.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_estrutura_fisio_celular_7',
+    chapter: 'Origem da Vida e as Primeiras Células',
+    topicId: 'bio_estrutura_fisio_celular',
+    subject: 'Biologia',
+    prompt: 'As primeiras células a surgir na Terra, segundo a maioria das hipóteses científicas, eram provavelmente:',
+    options: [
+      { id: 'a', text: 'Eucarióticas complexas, com núcleo bem definido' },
+      { id: 'b', text: 'Procarióticas simples, sem núcleo organizado, semelhantes a bactérias atuais' },
+      { id: 'c', text: 'Organismos multicelulares já bem desenvolvidos' },
+      { id: 'd', text: 'Idênticas às células vegetais atuais, já com cloroplastos' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'As evidências fósseis e moleculares indicam que as primeiras células foram procarióticas (sem núcleo organizado por membrana), estruturalmente mais simples — semelhantes às bactérias atuais —, surgindo bilhões de anos antes das primeiras células eucarióticas.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_bio_estrutura_fisio_celular_8',
+    chapter: 'Origem da Vida e as Primeiras Células',
+    topicId: 'bio_estrutura_fisio_celular',
+    subject: 'Biologia',
+    prompt: 'A teoria endossimbiótica propõe que mitocôndrias e cloroplastos, organelas presentes em células eucarióticas, teriam se originado a partir de:',
+    options: [
+      { id: 'a', text: 'Dobramentos da própria membrana plasmática da célula eucariótica, sem qualquer relação externa' },
+      { id: 'b', text: 'Bactérias procarióticas de vida livre que passaram a viver em simbiose dentro de uma célula hospedeira ancestral, sendo progressivamente incorporadas' },
+      { id: 'c', text: 'Vírus que infectaram a célula e nunca mais saíram' },
+      { id: 'd', text: 'Fragmentos do núcleo celular que se especializaram' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A teoria endossimbiótica, hoje amplamente aceita, propõe que mitocôndrias e cloroplastos descendem de bactérias de vida livre (procariontes) que foram incorporadas por endocitose em uma célula hospedeira ancestral, estabelecendo uma relação simbiótica que se tornou permanente — evidenciada, por exemplo, pelo fato de essas organelas terem seu próprio DNA circular, semelhante ao de bactérias.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_bio_estrutura_fisio_celular_9',
+    chapter: 'Composição Química Celular: Compostos Inorgânicos',
+    topicId: 'bio_estrutura_fisio_celular',
+    subject: 'Biologia',
+    prompt: 'A água é a substância mais abundante nos seres vivos, sendo fundamental para a vida principalmente porque:',
+    options: [
+      { id: 'a', text: 'É uma molécula apolar, o que facilita reações com lipídios' },
+      { id: 'b', text: 'É uma molécula polar, capaz de formar pontes de hidrogênio, o que a torna um excelente solvente para substâncias polares e permite reações químicas em meio aquoso' },
+      { id: 'c', text: 'Não participa de nenhuma reação química celular' },
+      { id: 'd', text: 'Está presente apenas em organismos aquáticos' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A polaridade da molécula de água, decorrente da diferença de eletronegatividade entre oxigênio e hidrogênio, permite a formação de pontes de hidrogênio entre suas moléculas e com outras substâncias polares — tornando-a um excelente solvente (o "solvente universal") e o meio onde ocorre a maioria das reações metabólicas celulares.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_bio_estrutura_fisio_celular_10',
+    chapter: 'Composição Química Celular: Compostos Inorgânicos',
+    topicId: 'bio_estrutura_fisio_celular',
+    subject: 'Biologia',
+    prompt: 'Os sais minerais, compostos inorgânicos presentes nos seres vivos, desempenham funções como:',
+    options: [
+      { id: 'a', text: 'Fornecer a maior parte da energia metabólica da célula' },
+      { id: 'b', text: 'Participar da formação de estruturas rígidas (como ossos e conchas) e da regulação de processos celulares (como a contração muscular e a condução de impulsos nervosos)' },
+      { id: 'c', text: 'Substituir completamente a função das proteínas' },
+      { id: 'd', text: 'Não ter qualquer função biológica relevante' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Sais minerais (como cálcio, fósforo, sódio e potássio) participam da formação de estruturas rígidas (ossos, conchas, exoesqueletos) e são essenciais para processos fisiológicos como a contração muscular, a condução de impulsos nervosos e o equilíbrio osmótico — mesmo não sendo fontes diretas de energia como carboidratos e lipídios.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_bio_estrutura_fisio_celular_11',
+    chapter: 'Composição Química Celular: Compostos Inorgânicos',
+    topicId: 'bio_estrutura_fisio_celular',
+    subject: 'Biologia',
+    prompt: 'Uma solução tampão (buffer), presente no sangue e em outros fluidos biológicos, tem como função:',
+    options: [
+      { id: 'a', text: 'Aumentar drasticamente o pH do meio a cada reação química' },
+      { id: 'b', text: 'Resistir a variações bruscas de pH, mantendo-o relativamente estável mesmo diante da adição de pequenas quantidades de ácidos ou bases' },
+      { id: 'c', text: 'Eliminar completamente qualquer variação de pH, tornando-o sempre neutro' },
+      { id: 'd', text: 'Não ter qualquer relação com o equilíbrio ácido-base do organismo' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Soluções tampão resistem a variações bruscas de pH, absorvendo o excesso de H⁺ ou OH⁻ adicionado ao meio — um mecanismo essencial para manter o pH sanguíneo dentro de uma faixa estreita e compatível com a vida, mesmo diante de pequenas alterações na produção ou eliminação de ácidos e bases pelo metabolismo.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_estrutura_fisio_celular_12',
+    chapter: 'Composição Química Celular: Carboidratos e Lipídios',
+    topicId: 'bio_estrutura_fisio_celular',
+    subject: 'Biologia',
+    prompt: 'A glicose é classificada como um monossacarídeo, a unidade mais simples dos carboidratos. O glicogênio (reserva energética em animais) e o amido (reserva energética em plantas) são exemplos de:',
+    options: [
+      { id: 'a', text: 'Monossacarídeos, assim como a glicose' },
+      { id: 'b', text: 'Polissacarídeos, formados pela união de muitas unidades de glicose' },
+      { id: 'c', text: 'Lipídios de reserva energética' },
+      { id: 'd', text: 'Proteínas estruturais' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Glicogênio e amido são polissacarídeos — macromoléculas formadas pela união de milhares de unidades de glicose por ligações glicosídicas — que funcionam como reservas energéticas de longo prazo em animais e plantas, respectivamente.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_bio_estrutura_fisio_celular_13',
+    chapter: 'Composição Química Celular: Carboidratos e Lipídios',
+    topicId: 'bio_estrutura_fisio_celular',
+    subject: 'Biologia',
+    prompt: 'Os fosfolipídios, principais componentes estruturais das membranas celulares, têm uma característica molecular fundamental para essa função, que é:',
+    options: [
+      { id: 'a', text: 'Serem moléculas completamente apolares, sem qualquer região hidrofílica' },
+      { id: 'b', text: 'Serem anfipáticos: possuem uma "cabeça" polar (hidrofílica) e "caudas" apolares (hidrofóbicas), o que os leva a se organizar espontaneamente em bicamadas em meio aquoso' },
+      { id: 'c', text: 'Serem incapazes de se organizar em qualquer estrutura ordenada' },
+      { id: 'd', text: 'Não terem qualquer relação com a formação de membranas biológicas' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Fosfolipídios são moléculas anfipáticas: a "cabeça" (grupo fosfato) é polar/hidrofílica, e as "caudas" (ácidos graxos) são apolares/hidrofóbicas. Em meio aquoso, essa dupla natureza faz com que se organizem espontaneamente em bicamadas, com as caudas voltadas para dentro (protegidas da água) e as cabeças voltadas para o meio aquoso — a base estrutural de todas as membranas biológicas.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_estrutura_fisio_celular_14',
+    chapter: 'Composição Química Celular: Carboidratos e Lipídios',
+    topicId: 'bio_estrutura_fisio_celular',
+    subject: 'Biologia',
+    prompt: 'O colesterol, um tipo de lipídio (esteroide) presente nas membranas de células animais, tem como função:',
+    options: [
+      { id: 'a', text: 'Regular a fluidez da membrana, tornando-a nem excessivamente rígida nem excessivamente fluida, conforme a temperatura' },
+      { id: 'b', text: 'Ser a única molécula que compõe a membrana plasmática' },
+      { id: 'c', text: 'Impedir completamente qualquer movimento das proteínas de membrana' },
+      { id: 'd', text: 'Não ter qualquer função na membrana celular' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O colesterol se intercala entre os fosfolipídios da membrana, ajudando a regular sua fluidez: em temperaturas mais altas, restringe o movimento excessivo dos fosfolipídios (evitando fluidez excessiva); em temperaturas mais baixas, impede que a membrana se torne rígida demais — mantendo a membrana funcional em uma faixa de temperaturas.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_estrutura_fisio_celular_15',
+    chapter: 'Composição Química Celular: Proteínas e sua Função Estrutural',
+    topicId: 'bio_estrutura_fisio_celular',
+    subject: 'Biologia',
+    prompt: 'As proteínas são formadas pela união de unidades menores chamadas:',
+    options: [
+      { id: 'a', text: 'Nucleotídeos' },
+      { id: 'b', text: 'Aminoácidos, unidos por ligações peptídicas' },
+      { id: 'c', text: 'Monossacarídeos' },
+      { id: 'd', text: 'Ácidos graxos' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Proteínas são polímeros formados pela união de aminoácidos através de ligações peptídicas, formando cadeias (polipeptídeos) que se dobram em estruturas tridimensionais específicas, determinando a função de cada proteína.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_bio_estrutura_fisio_celular_16',
+    chapter: 'Composição Química Celular: Proteínas e sua Função Estrutural',
+    topicId: 'bio_estrutura_fisio_celular',
+    subject: 'Biologia',
+    prompt: 'A estrutura tridimensional final de uma proteína (sua conformação enovelada) é fundamental para sua função porque:',
+    options: [
+      { id: 'a', text: 'A forma da proteína não tem qualquer relação com sua função biológica' },
+      { id: 'b', text: 'A forma específica determina como a proteína interage com outras moléculas (como um encaixe), sendo essencial para funções como catálise enzimática, reconhecimento de receptores e função estrutural' },
+      { id: 'c', text: 'Todas as proteínas têm exatamente a mesma forma, independentemente da sequência de aminoácidos' },
+      { id: 'd', text: 'A forma só importa para proteínas estruturais, nunca para enzimas' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A conformação tridimensional de uma proteína determina sua função: enzimas precisam de um sítio ativo com forma específica para se ligar ao substrato, proteínas estruturais (como o colágeno) precisam de uma forma que confira resistência mecânica, e receptores precisam de uma forma que reconheça moléculas específicas — perder essa conformação (desnaturação) geralmente significa perder a função.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_estrutura_fisio_celular_17',
+    chapter: 'Composição Química Celular: Proteínas e sua Função Estrutural',
+    topicId: 'bio_estrutura_fisio_celular',
+    subject: 'Biologia',
+    prompt: 'O colágeno, a proteína mais abundante no corpo humano, presente na pele, tendões e ossos, é um exemplo de proteína com função:',
+    options: [
+      { id: 'a', text: 'Enzimática, catalisando reações metabólicas' },
+      { id: 'b', text: 'Estrutural, conferindo resistência mecânica e sustentação aos tecidos' },
+      { id: 'c', text: 'Hormonal, regulando o metabolismo à distância' },
+      { id: 'd', text: 'De transporte de oxigênio no sangue' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'O colágeno tem função estrutural: sua estrutura fibrosa em tripla-hélice confere resistência mecânica e sustentação a tecidos como pele, tendões, cartilagens e ossos — diferente de proteínas enzimáticas (como a amilase), hormonais (como a insulina) ou de transporte (como a hemoglobina).',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_bio_estrutura_fisio_celular_18',
+    chapter: 'Citoplasma: Estrutura e Componentes I',
+    topicId: 'bio_estrutura_fisio_celular',
+    subject: 'Biologia',
+    prompt: 'O citoesqueleto, uma rede de filamentos proteicos presente no citoplasma das células eucarióticas, tem como uma de suas principais funções:',
+    options: [
+      { id: 'a', text: 'Produzir ATP por respiração celular' },
+      { id: 'b', text: 'Dar sustentação e forma à célula, além de participar de movimentos celulares e do transporte intracelular de organelas' },
+      { id: 'c', text: 'Armazenar o material genético da célula' },
+      { id: 'd', text: 'Realizar a fotossíntese em células vegetais' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'O citoesqueleto (formado por microfilamentos, filamentos intermediários e microtúbulos) dá sustentação estrutural à célula, mantém sua forma, participa de movimentos celulares (como a contração muscular e a locomoção de células como leucócitos) e serve como "trilhos" para o transporte de organelas e vesículas dentro da célula.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_estrutura_fisio_celular_19',
+    chapter: 'Citoplasma: Estrutura e Componentes I',
+    topicId: 'bio_estrutura_fisio_celular',
+    subject: 'Biologia',
+    prompt: 'Os centríolos, estruturas cilíndricas formadas por microtúbulos, presentes na maioria das células animais, estão diretamente relacionados a:',
+    options: [
+      { id: 'a', text: 'A produção de ATP na respiração celular' },
+      { id: 'b', text: 'A organização do fuso mitótico durante a divisão celular e a formação de cílios e flagelos' },
+      { id: 'c', text: 'A síntese de proteínas' },
+      { id: 'd', text: 'A digestão intracelular de macromoléculas' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Os centríolos organizam o fuso mitótico (estrutura de microtúbulos que separa os cromossomos durante a divisão celular) e também dão origem aos corpos basais que organizam cílios e flagelos — estruturas relacionadas ao movimento celular ou ao movimento de fluidos sobre a superfície de certas células.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_estrutura_fisio_celular_20',
+    chapter: 'Núcleo Celular',
+    topicId: 'bio_estrutura_fisio_celular',
+    subject: 'Biologia',
+    prompt: 'O envoltório nuclear (carioteca), membrana dupla que delimita o núcleo nas células eucarióticas, possui poros nucleares cuja função é:',
+    options: [
+      { id: 'a', text: 'Impedir totalmente qualquer troca de substâncias entre núcleo e citoplasma' },
+      { id: 'b', text: 'Permitir a passagem seletiva de substâncias entre o núcleo e o citoplasma, como RNA mensageiro (saindo) e proteínas (entrando)' },
+      { id: 'c', text: 'Produzir ATP para as atividades nucleares' },
+      { id: 'd', text: 'Substituir a função dos ribossomos na síntese proteica' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Os poros nucleares são estruturas complexas que atravessam o envoltório nuclear, permitindo o transporte seletivo e controlado de moléculas entre núcleo e citoplasma — como a saída de RNA mensageiro (produzido no núcleo, mas traduzido no citoplasma) e a entrada de proteínas necessárias às atividades nucleares.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_estrutura_fisio_celular_21',
+    chapter: 'Núcleo Celular',
+    topicId: 'bio_estrutura_fisio_celular',
+    subject: 'Biologia',
+    prompt: 'O nucléolo, estrutura densa visível dentro do núcleo (mas sem membrana própria), tem como principal função:',
+    options: [
+      { id: 'a', text: 'Armazenar todo o DNA da célula' },
+      { id: 'b', text: 'Sintetizar e montar os componentes do RNA ribossômico (rRNA), formando as subunidades dos ribossomos' },
+      { id: 'c', text: 'Realizar a digestão de macromoléculas' },
+      { id: 'd', text: 'Produzir energia para as atividades celulares' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'O nucléolo é a região do núcleo onde o RNA ribossômico é sintetizado e onde as subunidades ribossômicas começam a ser montadas, antes de serem exportadas ao citoplasma através dos poros nucleares para completar a formação dos ribossomos funcionais.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_estrutura_fisio_celular_22',
+    chapter: 'Núcleo Celular',
+    topicId: 'bio_estrutura_fisio_celular',
+    subject: 'Biologia',
+    prompt: 'A cromatina, material observado no núcleo de células que não estão se dividindo, corresponde a:',
+    options: [
+      { id: 'a', text: 'DNA associado a proteínas (histonas), em uma forma mais frouxa e descondensada do que os cromossomos visíveis durante a divisão celular' },
+      { id: 'b', text: 'Uma estrutura exclusivamente proteica, sem qualquer DNA' },
+      { id: 'c', text: 'RNA ribossômico armazenado temporariamente' },
+      { id: 'd', text: 'Uma organela citoplasmática, não nuclear' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A cromatina é o complexo de DNA associado a proteínas histonas, em um estado mais descondensado (frouxo) durante a maior parte do ciclo celular, o que facilita o acesso aos genes para transcrição. Durante a divisão celular, essa cromatina se condensa, tornando-se visível como cromossomos bem definidos.',
+    difficulty: 'medium'
+  },
   // Biologia — Biotecnologia
   {
     id: 'q_bio_biotecnologia_1',
@@ -5562,6 +7402,438 @@ export const mockQuestions: Question[] = [
     explanation: 'As glândulas mamárias (que dão nome ao grupo) e a presença de pelos são características exclusivas dos mamíferos entre os vertebrados. A maioria dos mamíferos também é endotérmica (regula ativamente a temperatura corporal) e tem desenvolvimento embrionário interno (vivíparo), com exceções como os monotremados (ex.: ornitorrinco), que põem ovos.',
     difficulty: 'medium'
   },
+  {
+    id: 'q_bio_zoologia_6',
+    chapter: 'Classificação Biológica, Nomenclatura Científica e Noções de Sistemática Filogenética',
+    topicId: 'bio_zoologia',
+    subject: 'Biologia',
+    prompt: 'Na nomenclatura binomial criada por Lineu, o nome científico de uma espécie (como Homo sapiens) é formado por:',
+    options: [
+      { id: 'a', text: 'Apenas o nome do gênero, sem qualquer outro termo' },
+      { id: 'b', text: 'Duas palavras: o nome do gênero (com inicial maiúscula) seguido do epíteto específico (em minúscula), geralmente em latim e grafados em itálico' },
+      { id: 'c', text: 'Um número de identificação, sem qualquer relação com palavras' },
+      { id: 'd', text: 'O nome popular do organismo, sem qualquer padronização' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A nomenclatura binomial de Lineu identifica cada espécie por duas palavras: o gênero (iniciado por maiúscula) e o epíteto específico (em minúscula), ambos geralmente em latim e escritos em itálico (ou sublinhados, quando manuscritos) — um padrão universal que evita confusões causadas pelos nomes populares, que variam entre regiões e idiomas.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_bio_zoologia_7',
+    chapter: 'Classificação Biológica, Nomenclatura Científica e Noções de Sistemática Filogenética',
+    topicId: 'bio_zoologia',
+    subject: 'Biologia',
+    prompt: 'Um cladograma, ferramenta usada na sistemática filogenética, representa graficamente:',
+    options: [
+      { id: 'a', text: 'Apenas a distribuição geográfica atual das espécies, sem relação evolutiva' },
+      { id: 'b', text: 'As relações de parentesco evolutivo entre diferentes grupos de organismos, baseadas em características compartilhadas por ancestralidade comum' },
+      { id: 'c', text: 'A quantidade de indivíduos de cada espécie em uma população' },
+      { id: 'd', text: 'Uma classificação puramente alfabética das espécies' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Um cladograma é uma representação gráfica (em forma de árvore ramificada) das relações de parentesco evolutivo entre grupos de organismos, construída a partir de características compartilhadas que indicam ancestralidade comum — quanto mais recente o ponto de ramificação compartilhado entre dois grupos, mais próximo é seu parentesco evolutivo.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_zoologia_8',
+    chapter: 'Classificação Biológica, Nomenclatura Científica e Noções de Sistemática Filogenética',
+    topicId: 'bio_zoologia',
+    subject: 'Biologia',
+    prompt: 'A hierarquia taxonômica tradicional, do nível mais abrangente ao mais específico, segue a ordem:',
+    options: [
+      { id: 'a', text: 'Espécie, Gênero, Família, Ordem, Classe, Filo, Reino, Domínio' },
+      { id: 'b', text: 'Domínio, Reino, Filo, Classe, Ordem, Família, Gênero, Espécie' },
+      { id: 'c', text: 'Reino, Domínio, Espécie, Gênero, Filo, Classe, Ordem, Família' },
+      { id: 'd', text: 'Não existe qualquer hierarquia entre esses níveis taxonômicos' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A hierarquia taxonômica tradicional vai do nível mais abrangente (Domínio) ao mais específico (Espécie): Domínio, Reino, Filo, Classe, Ordem, Família, Gênero, Espécie — cada nível agrupa organismos com características cada vez mais específicas e um parentesco evolutivo cada vez mais próximo.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_bio_zoologia_9',
+    chapter: 'Protozoários e Protozooses',
+    topicId: 'bio_zoologia',
+    subject: 'Biologia',
+    prompt: 'Os protozoários são organismos unicelulares eucarióticos, heterotróficos, que podem causar diversas doenças (protozooses) em humanos. Um exemplo é a malária, causada por um protozoário do gênero:',
+    options: [
+      { id: 'a', text: 'Plasmodium, transmitido pela picada do mosquito Anopheles' },
+      { id: 'b', text: 'Escherichia, uma bactéria intestinal' },
+      { id: 'c', text: 'Influenza, um vírus respiratório' },
+      { id: 'd', text: 'Penicillium, um fungo' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A malária é causada por protozoários do gênero Plasmodium, transmitidos pela picada de fêmeas infectadas do mosquito Anopheles, que atuam como vetores biológicos da doença.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_bio_zoologia_10',
+    chapter: 'Protozoários e Protozooses',
+    topicId: 'bio_zoologia',
+    subject: 'Biologia',
+    prompt: 'A doença de Chagas, protozoose causada pelo Trypanosoma cruzi, é transmitida principalmente por:',
+    options: [
+      { id: 'a', text: 'Água contaminada, por ingestão direta' },
+      { id: 'b', text: 'Fezes de triatomíneos (o "barbeiro"), que contaminam o local da picada quando a pessoa coça a região' },
+      { id: 'c', text: 'Contato direto pelo ar, como um vírus respiratório' },
+      { id: 'd', text: 'Picada direta do inseto, sem qualquer relação com suas fezes' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A transmissão da doença de Chagas ocorre principalmente quando o triatomíneo (o "barbeiro"), ao picar a pessoa para se alimentar de sangue, defeca próximo ao local da picada — o protozoário presente nas fezes do inseto penetra no organismo quando a pessoa coça o local, levando as fezes contaminadas para a ferida.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_zoologia_11',
+    chapter: 'Protozoários e Protozooses',
+    topicId: 'bio_zoologia',
+    subject: 'Biologia',
+    prompt: 'A amebíase, protozoose intestinal causada pela Entamoeba histolytica, é transmitida principalmente por:',
+    options: [
+      { id: 'a', text: 'Picada de mosquito infectado' },
+      { id: 'b', text: 'Ingestão de água ou alimentos contaminados com cistos do protozoário, geralmente por falta de saneamento básico adequado' },
+      { id: 'c', text: 'Contato sanguíneo direto, como uma transfusão' },
+      { id: 'd', text: 'Herança genética dos pais' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A amebíase é transmitida principalmente pela via fecal-oral, através da ingestão de água ou alimentos contaminados com cistos de Entamoeba histolytica, um problema associado à falta de saneamento básico e a más condições de higiene.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_zoologia_12',
+    chapter: 'Poríferos e Cnidários',
+    topicId: 'bio_zoologia',
+    subject: 'Biologia',
+    prompt: 'As esponjas (filo Porífera), animais aquáticos considerados os mais simples estruturalmente entre os metazoários, se alimentam principalmente por meio de:',
+    options: [
+      { id: 'a', text: 'Fotossíntese, como as plantas' },
+      { id: 'b', text: 'Filtração da água que passa por seu corpo, capturando partículas de alimento (filtração realizada pelos coanócitos)' },
+      { id: 'c', text: 'Caça ativa de presas de grande porte' },
+      { id: 'd', text: 'Absorção direta de nutrientes do solo' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'As esponjas se alimentam por filtração: células especializadas chamadas coanócitos, localizadas no interior do corpo, criam correntes de água que passam pelo organismo, capturando partículas de alimento (bactérias e outros microrganismos) em suspensão.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_zoologia_13',
+    chapter: 'Poríferos e Cnidários',
+    topicId: 'bio_zoologia',
+    subject: 'Biologia',
+    prompt: 'Os cnidários (como águas-vivas, corais e anêmonas) possuem uma estrutura de defesa e captura de presas característica do filo, chamada:',
+    options: [
+      { id: 'a', text: 'Coanócitos' },
+      { id: 'b', text: 'Cnidócitos, células urticantes que disparam um filamento com substâncias tóxicas ao serem estimuladas' },
+      { id: 'c', text: 'Nefrídios' },
+      { id: 'd', text: 'Ventosas musculares' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Os cnidários possuem cnidócitos, células especializadas contendo um filamento enrolado (nematocisto) que é disparado ao ser estimulado, injetando substâncias urticantes/tóxicas usadas tanto para captura de presas quanto para defesa — uma característica exclusiva e definidora do filo.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_zoologia_14',
+    chapter: 'Poríferos e Cnidários',
+    topicId: 'bio_zoologia',
+    subject: 'Biologia',
+    prompt: 'Os recifes de coral, formados por colônias de corais (cnidários), são construídos ao longo de gerações pelo acúmulo de:',
+    options: [
+      { id: 'a', text: 'Exoesqueletos de carbonato de cálcio secretados pelos pólipos de coral' },
+      { id: 'b', text: 'Areia trazida pelas correntes marinhas, sem qualquer participação biológica' },
+      { id: 'c', text: 'Restos de plantas terrestres levadas pelo vento' },
+      { id: 'd', text: 'Conchas de moluscos exclusivamente' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Os recifes de coral são estruturas formadas ao longo de muitas gerações pelo acúmulo de exoesqueletos de carbonato de cálcio (calcário) secretados pelos pólipos de coral — pequenos animais cnidários que vivem em colônias, sustentando um dos ecossistemas marinhos de maior biodiversidade do planeta.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_zoologia_15',
+    chapter: 'Arquitetura Corporal dos Animais e o Filo dos Platelmintos e dos Nematódeos',
+    topicId: 'bio_zoologia',
+    subject: 'Biologia',
+    prompt: 'A teníase, verminose intestinal causada pela tênia (um platelminto, ou "verme achatado"), é transmitida principalmente pela ingestão de:',
+    options: [
+      { id: 'a', text: 'Carne de boi ou porco mal cozida, contendo cisticercos (larvas da tênia)' },
+      { id: 'b', text: 'Água do mar contaminada' },
+      { id: 'c', text: 'Picada de um inseto vetor' },
+      { id: 'd', text: 'Ar contaminado por esporos' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A teníase é adquirida principalmente pela ingestão de carne (bovina ou suína) mal cozida contendo cisticercos, a forma larval da tênia, que se desenvolve no intestino humano em um verme adulto após a ingestão.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_zoologia_16',
+    chapter: 'Arquitetura Corporal dos Animais e o Filo dos Platelmintos e dos Nematódeos',
+    topicId: 'bio_zoologia',
+    subject: 'Biologia',
+    prompt: 'A ascaridíase, verminose intestinal causada pelo nematódeo (verme cilíndrico) Ascaris lumbricoides, é transmitida principalmente por:',
+    options: [
+      { id: 'a', text: 'Ingestão de água ou alimentos contaminados com ovos do parasita, geralmente presentes em solo ou água poluídos por fezes humanas' },
+      { id: 'b', text: 'Picada de mosquito infectado' },
+      { id: 'c', text: 'Contato sexual' },
+      { id: 'd', text: 'Herança genética' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A ascaridíase é transmitida pela via fecal-oral, através da ingestão de água ou alimentos (como verduras mal lavadas) contaminados com ovos do Ascaris lumbricoides, um problema diretamente associado à falta de saneamento básico adequado.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_zoologia_17',
+    chapter: 'Arquitetura Corporal dos Animais e o Filo dos Platelmintos e dos Nematódeos',
+    topicId: 'bio_zoologia',
+    subject: 'Biologia',
+    prompt: 'Uma diferença estrutural fundamental entre platelmintos (vermes achatados, como a tênia) e nematódeos (vermes cilíndricos, como a lombriga) é que:',
+    options: [
+      { id: 'a', text: 'Platelmintos têm corpo achatado dorsoventralmente, enquanto nematódeos têm corpo cilíndrico, alongado e não segmentado' },
+      { id: 'b', text: 'Ambos têm exatamente a mesma forma corporal, sem qualquer diferença' },
+      { id: 'c', text: 'Apenas nematódeos são parasitas, enquanto platelmintos nunca causam doenças' },
+      { id: 'd', text: 'Platelmintos são sempre maiores que nematódeos' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Platelmintos têm corpo achatado dorsoventralmente (achatado de cima para baixo, como uma fita), enquanto nematódeos têm corpo cilíndrico, alongado e não segmentado (como um fio) — uma diferença estrutural que dá nome aos dois filos e reflete organizações corporais distintas.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_zoologia_18',
+    chapter: 'Moluscos',
+    topicId: 'bio_zoologia',
+    subject: 'Biologia',
+    prompt: 'Os moluscos, filo que inclui caracóis, mexilhões e polvos, apresentam grande diversidade de formas corporais, mas compartilham, entre outras características, a presença de:',
+    options: [
+      { id: 'a', text: 'Um exoesqueleto de quitina, como os artrópodes' },
+      { id: 'b', text: 'Um manto (dobra do corpo que geralmente secreta a concha, quando presente) e um pé muscular, usado para locomoção ou fixação' },
+      { id: 'c', text: 'Ausência total de sistema nervoso' },
+      { id: 'd', text: 'Corpo sempre segmentado, como os anelídeos' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Moluscos compartilham características como o manto (uma dobra do corpo que, em muitas espécies, secreta a concha calcária) e um pé muscular, usado para locomoção (como em caracóis), fixação (como em mexilhões) ou mesmo capturar presas (como nos tentáculos de polvos, uma modificação do pé).',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_zoologia_19',
+    chapter: 'Moluscos',
+    topicId: 'bio_zoologia',
+    subject: 'Biologia',
+    prompt: 'Os cefalópodes (como polvos e lulas), considerados os moluscos com sistema nervoso mais desenvolvido, se destacam por:',
+    options: [
+      { id: 'a', text: 'Serem os únicos moluscos com concha externa bem desenvolvida' },
+      { id: 'b', text: 'Apresentarem comportamentos complexos, como capacidade de aprendizado, camuflagem ativa e, em muitas espécies, redução ou perda da concha externa' },
+      { id: 'c', text: 'Não possuírem qualquer tipo de sistema nervoso' },
+      { id: 'd', text: 'Serem exclusivamente herbívoros' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Cefalópodes como polvos e lulas têm o sistema nervoso mais desenvolvido entre os invertebrados, exibindo comportamentos complexos (aprendizado, resolução de problemas) e capacidade de camuflagem ativa (mudança rápida de cor e textura). A maioria das espécies também apresenta redução ou perda evolutiva da concha externa, diferente de outros moluscos como caracóis.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_zoologia_20',
+    chapter: 'Anelídeos',
+    topicId: 'bio_zoologia',
+    subject: 'Biologia',
+    prompt: 'As minhocas, anelídeos comuns no solo, são consideradas benéficas para a agricultura principalmente porque:',
+    options: [
+      { id: 'a', text: 'Consomem exclusivamente as raízes das plantas cultivadas, prejudicando a produção' },
+      { id: 'b', text: 'Ao se locomoverem pelo solo e se alimentarem de matéria orgânica, aeram e fertilizam o solo, melhorando sua estrutura e disponibilidade de nutrientes' },
+      { id: 'c', text: 'Eliminam completamente a necessidade de água para as plantações' },
+      { id: 'd', text: 'Não têm qualquer efeito sobre as propriedades do solo' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'As minhocas beneficiam a agricultura ao se locomoverem através do solo (criando canais que melhoram a aeração e a infiltração de água) e ao se alimentarem de matéria orgânica em decomposição, cujos resíduos (húmus) enriquecem o solo com nutrientes disponíveis às plantas.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_bio_zoologia_21',
+    chapter: 'Anelídeos',
+    topicId: 'bio_zoologia',
+    subject: 'Biologia',
+    prompt: 'A principal característica estrutural que dá nome ao filo dos anelídeos (como minhocas e sanguessugas) é:',
+    options: [
+      { id: 'a', text: 'A ausência total de qualquer segmentação corporal' },
+      { id: 'b', text: 'O corpo dividido em uma série de segmentos (anéis) repetidos, chamados metâmeros' },
+      { id: 'c', text: 'A presença obrigatória de uma concha externa' },
+      { id: 'd', text: 'A capacidade exclusiva de voo' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'O nome "anelídeo" reflete a característica definidora do filo: o corpo é dividido em uma série de segmentos (anéis) repetidos, chamados metâmeros, cada um contendo, em geral, estruturas internas e externas semelhantes — uma organização corporal chamada metameria.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_bio_zoologia_22',
+    chapter: 'Artrópodes: Insetos, Crustáceos e Miriápodes',
+    topicId: 'bio_zoologia',
+    subject: 'Biologia',
+    prompt: 'Os insetos, o grupo de artrópodes com maior número de espécies descritas, apresentam corpo tipicamente dividido em três regiões:',
+    options: [
+      { id: 'a', text: 'Cabeça, tórax e abdômen' },
+      { id: 'b', text: 'Cabeça, cefalotórax e cauda' },
+      { id: 'c', text: 'Apenas cabeça e corpo, sem qualquer outra divisão' },
+      { id: 'd', text: 'Quatro regiões: cabeça, pescoço, tórax e abdômen' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O corpo dos insetos é tipicamente dividido em três regiões (tagmas): cabeça, tórax (de onde partem as pernas e, quando presentes, as asas) e abdômen — uma organização corporal característica da classe Insecta, diferente de outros artrópodes como os crustáceos (que costumam ter cefalotórax e abdômen).',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_bio_zoologia_23',
+    chapter: 'Artrópodes: Aracnídeos',
+    topicId: 'bio_zoologia',
+    subject: 'Biologia',
+    prompt: 'Os aracnídeos (como aranhas, escorpiões e carrapatos) se diferenciam dos insetos, entre outros aspectos, por apresentarem:',
+    options: [
+      { id: 'a', text: 'Seis pares de pernas e antenas bem desenvolvidas' },
+      { id: 'b', text: 'Quatro pares de pernas, corpo geralmente dividido em cefalotórax e abdômen, e ausência de antenas' },
+      { id: 'c', text: 'Asas bem desenvolvidas na maioria das espécies' },
+      { id: 'd', text: 'Corpo dividido em cabeça, tórax e abdômen, como os insetos' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Aracnídeos apresentam quatro pares de pernas (oito ao todo), corpo tipicamente dividido em cefalotórax (fusão de cabeça e tórax) e abdômen, e não possuem antenas — características que os diferenciam claramente dos insetos (seis pernas, três pares, corpo em três regiões, com antenas).',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_zoologia_24',
+    chapter: 'Artrópodes: Aracnídeos',
+    topicId: 'bio_zoologia',
+    subject: 'Biologia',
+    prompt: 'As aranhas, aracnídeos predadores, capturam suas presas principalmente por meio de:',
+    options: [
+      { id: 'a', text: 'Fotossíntese, obtendo energia diretamente da luz solar' },
+      { id: 'b', text: 'Veneno inoculado por quelíceras (estruturas bucais especializadas) e, em muitas espécies, teias de seda usadas para capturar presas' },
+      { id: 'c', text: 'Filtração de partículas suspensas na água, como as esponjas' },
+      { id: 'd', text: 'Absorção direta de nutrientes do ar' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Aranhas são predadoras que utilizam quelíceras para injetar veneno em suas presas, imobilizando-as ou matando-as, e muitas espécies constroem teias de seda para capturar presas que voam ou se movem próximo a elas — duas adaptações características do grupo.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_bio_zoologia_25',
+    chapter: 'Equinodermos',
+    topicId: 'bio_zoologia',
+    subject: 'Biologia',
+    prompt: 'Os equinodermos (como estrelas-do-mar e ouriços-do-mar), animais exclusivamente marinhos, apresentam uma característica estrutural única entre os invertebrados, chamada:',
+    options: [
+      { id: 'a', text: 'Sistema circulatório fechado, como o dos anelídeos' },
+      { id: 'b', text: 'Sistema aquífero (ou vascular aquífero), uma rede de canais preenchidos com água usada para locomoção, alimentação e trocas gasosas' },
+      { id: 'c', text: 'Exoesqueleto de quitina, como os artrópodes' },
+      { id: 'd', text: 'Ausência total de simetria corporal' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'O sistema aquífero (ou ambulacrário) é uma característica exclusiva dos equinodermos: uma rede interna de canais preenchidos com água que se conecta aos "pés ambulacrários", pequenas estruturas usadas para locomoção, fixação a substratos e, em algumas espécies, para capturar alimento.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_zoologia_26',
+    chapter: 'Equinodermos',
+    topicId: 'bio_zoologia',
+    subject: 'Biologia',
+    prompt: 'A simetria radial (organização do corpo em torno de um eixo central, geralmente em cinco partes) é uma característica típica dos equinodermos adultos, embora suas larvas apresentem:',
+    options: [
+      { id: 'a', text: 'Simetria radial idêntica à do adulto, sem qualquer diferença' },
+      { id: 'b', text: 'Simetria bilateral, sugerindo uma origem evolutiva a partir de ancestrais com simetria bilateral, com a simetria radial surgindo secundariamente durante o desenvolvimento' },
+      { id: 'c', text: 'Ausência completa de qualquer tipo de simetria' },
+      { id: 'd', text: 'Simetria radial em seis partes, diferente do adulto' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Um dado interessante da biologia evolutiva dos equinodermos é que suas larvas (na fase de vida livre) apresentam simetria bilateral, mesmo que os adultos exibam simetria radial — um indício de que o grupo descende evolutivamente de ancestrais com simetria bilateral, e que a simetria radial dos adultos é uma característica derivada, surgida secundariamente.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_bio_zoologia_27',
+    chapter: 'Introdução aos Cordados e os Peixes',
+    topicId: 'bio_zoologia',
+    subject: 'Biologia',
+    prompt: 'Os peixes, primeiros vertebrados a surgir na história evolutiva, respiram principalmente por meio de:',
+    options: [
+      { id: 'a', text: 'Pulmões, como os mamíferos' },
+      { id: 'b', text: 'Brânquias, estruturas especializadas na extração de oxigênio dissolvido na água' },
+      { id: 'c', text: 'Pele exclusivamente, sem qualquer órgão respiratório especializado' },
+      { id: 'd', text: 'Traqueias, como os insetos' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Os peixes respiram por meio de brânquias, estruturas ricamente vascularizadas que extraem o oxigênio dissolvido na água conforme ela passa sobre elas — uma adaptação eficiente para a vida em ambiente aquático, diferente da respiração pulmonar dos vertebrados terrestres.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_bio_zoologia_28',
+    chapter: 'Introdução aos Cordados e os Peixes',
+    topicId: 'bio_zoologia',
+    subject: 'Biologia',
+    prompt: 'Todos os cordados (filo ao qual pertencem os vertebrados) compartilham, em algum momento do desenvolvimento embrionário, quatro características estruturais básicas, entre elas:',
+    options: [
+      { id: 'a', text: 'A notocorda, um bastão flexível de sustentação, presente ao longo do dorso do embrião' },
+      { id: 'b', text: 'Um exoesqueleto de quitina' },
+      { id: 'c', text: 'Ausência total de qualquer estrutura de sustentação corporal' },
+      { id: 'd', text: 'Quatro pares de patas bem desenvolvidas' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A notocorda é uma das características definidoras do filo Chordata, presente em algum momento do desenvolvimento embrionário de todos os cordados — um bastão flexível de sustentação ao longo do dorso, que nos vertebrados é substituído (ou envolvido) pela coluna vertebral durante o desenvolvimento.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_zoologia_29',
+    chapter: 'Moluscos',
+    topicId: 'bio_zoologia',
+    subject: 'Biologia',
+    prompt: 'O filo Mollusca reúne animais com grande diversidade de forma (caracóis, polvos, mexilhões), mas que compartilham um plano corporal básico comum, incluindo:',
+    options: [
+      { id: 'a', text: 'Pé muscular (usado para locomoção ou captura de presas), massa visceral e manto (que em muitas espécies secreta uma concha calcária)' },
+      { id: 'b', text: 'Exoesqueleto de quitina segmentado, como os artrópodes' },
+      { id: 'c', text: 'Sistema ambulacrário, exclusivo de equinodermos' },
+      { id: 'd', text: 'Notocorda em algum estágio do desenvolvimento' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Apesar da grande diversidade de formas entre gastrópodes (caracóis), bivalves (mexilhões) e cefalópodes (polvos, lulas), todos os moluscos compartilham um plano corporal básico com pé muscular, massa visceral (contendo os órgãos internos) e manto — uma dobra do tegumento que, em muitas espécies, secreta uma concha calcária protetora.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_zoologia_30',
+    chapter: 'Anelídeos',
+    topicId: 'bio_zoologia',
+    subject: 'Biologia',
+    prompt: 'Os anelídeos (como a minhoca) apresentam o corpo dividido em uma série de segmentos repetidos (metâmeros). Essa segmentação corporal (metameria) representa uma vantagem evolutiva porque:',
+    options: [
+      { id: 'a', text: 'Permite maior especialização de diferentes regiões do corpo e movimentos mais eficientes e independentes entre segmentos' },
+      { id: 'b', text: 'Impede totalmente a locomoção do animal' },
+      { id: 'c', text: 'Elimina a necessidade de qualquer sistema nervoso' },
+      { id: 'd', text: 'É exclusiva de anelídeos, não sendo encontrada em nenhum outro filo animal' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A metameria (segmentação do corpo em unidades repetidas) permite que diferentes segmentos se especializem em funções distintas ao longo da evolução, além de possibilitar movimentos mais eficientes e coordenados (cada segmento pode se contrair de forma relativamente independente, como se observa na locomoção peristáltica das minhocas). A metameria também está presente, de forma diferente, em artrópodes e cordados.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_bio_zoologia_31',
+    chapter: 'Artrópodes: Aracnídeos',
+    topicId: 'bio_zoologia',
+    subject: 'Biologia',
+    prompt: 'Os aracnídeos (aranhas, escorpiões, ácaros) se diferenciam dos insetos, entre outras características, por apresentarem:',
+    options: [
+      { id: 'a', text: 'Corpo geralmente dividido em duas regiões (cefalotórax e abdômen) e quatro pares de pernas, sem antenas' },
+      { id: 'b', text: 'Corpo dividido em cabeça, tórax e abdômen, com três pares de pernas e um par de antenas' },
+      { id: 'c', text: 'Ausência total de qualquer tipo de apêndice locomotor' },
+      { id: 'd', text: 'Exoesqueleto composto de celulose, como as plantas' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Os aracnídeos apresentam corpo tipicamente dividido em cefalotórax e abdômen, quatro pares de pernas locomotoras e ausência de antenas — diferentemente dos insetos, que têm corpo dividido em cabeça, tórax e abdômen distintos, três pares de pernas e um par de antenas. Essas diferenças estruturais ajudam a diferenciar as duas classes dentro do filo Arthropoda.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_zoologia_32',
+    chapter: 'Equinodermos',
+    topicId: 'bio_zoologia',
+    subject: 'Biologia',
+    prompt: 'Os equinodermos (como estrelas-do-mar e ouriços-do-mar) possuem um sistema exclusivo do filo, utilizado para locomoção, alimentação e trocas gasosas. Esse sistema é chamado de:',
+    options: [
+      { id: 'a', text: 'Sistema ambulacrário (ou aquífero), uma rede de canais preenchidos por água que movimenta os pés ambulacrais por variação de pressão hidráulica' },
+      { id: 'b', text: 'Sistema circulatório fechado, semelhante ao dos anelídeos' },
+      { id: 'c', text: 'Sistema traqueal, semelhante ao dos insetos' },
+      { id: 'd', text: 'Sistema nervoso centralizado em um cérebro complexo' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O sistema ambulacrário (ou aquífero) é exclusivo dos equinodermos: uma rede interna de canais preenchidos por água do mar que, por variações de pressão hidráulica, movimenta pequenas estruturas chamadas pés ambulacrais, usadas na locomoção lenta, na fixação a superfícies, na captura de alimento e também em trocas gasosas — um sistema sem equivalente em nenhum outro filo animal.',
+    difficulty: 'hard'
+  },
   // Biologia — Botânica
   {
     id: 'q_bio_botanica_1',
@@ -5640,6 +7912,166 @@ export const mockQuestions: Question[] = [
     ],
     correctOptionId: 'a',
     explanation: 'Os pelos absorventes (ou radiculares) são extensões finas e numerosas das células da epiderme da raiz, que aumentam drasticamente a área de superfície em contato com as partículas do solo e a água intersticial, otimizando a absorção de água e íons minerais dissolvidos.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_botanica_6',
+    chapter: 'Fungos',
+    topicId: 'bio_botanica',
+    subject: 'Biologia',
+    prompt: 'A parede celular dos fungos, diferentemente da das plantas, é composta principalmente por:',
+    options: [
+      { id: 'a', text: 'Celulose' },
+      { id: 'b', text: 'Quitina' },
+      { id: 'c', text: 'Peptidoglicano' },
+      { id: 'd', text: 'Lignina' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A parede celular fúngica é formada majoritariamente por quitina, um polissacarídeo nitrogenado também encontrado no exoesqueleto de artrópodes — o que distingue os fungos das plantas (parede de celulose) e das bactérias (parede de peptidoglicano), sendo uma das razões pelas quais os fungos formam um reino à parte.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_botanica_7',
+    chapter: 'Fungos',
+    topicId: 'bio_botanica',
+    subject: 'Biologia',
+    prompt: 'Os fungos obtêm nutrientes de forma heterotrófica por absorção. Isso significa que eles:',
+    options: [
+      { id: 'a', text: 'Realizam fotossíntese para produzir seu próprio alimento' },
+      { id: 'b', text: 'Ingerem partículas sólidas de alimento por fagocitose' },
+      { id: 'c', text: 'Secretam enzimas digestivas no ambiente externo e depois absorvem as moléculas simples resultantes' },
+      { id: 'd', text: 'Obtêm energia exclusivamente por quimiossíntese' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'Os fungos são heterótrofos por absorção: liberam enzimas digestivas (digestão extracorpórea) que quebram a matéria orgânica do substrato em moléculas pequenas, as quais são então absorvidas através da parede e membrana celular — estratégia essencial ao papel dos fungos como decompositores.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_botanica_8',
+    chapter: 'Fungos',
+    topicId: 'bio_botanica',
+    subject: 'Biologia',
+    prompt: 'As leveduras (como Saccharomyces cerevisiae), usadas na produção de pão e bebidas fermentadas, são fungos que se destacam por:',
+    options: [
+      { id: 'a', text: 'Serem sempre pluricelulares e formarem grandes corpos de frutificação visíveis' },
+      { id: 'b', text: 'Serem unicelulares e se reproduzirem predominantemente por brotamento (gemulação)' },
+      { id: 'c', text: 'Realizarem fotossíntese oxigênica' },
+      { id: 'd', text: 'Não realizarem qualquer tipo de respiração celular' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Leveduras são fungos unicelulares cuja forma mais comum de reprodução assexuada é o brotamento (gemulação), em que uma célula-filha surge como uma protuberância da célula-mãe. Sua fermentação (respiração anaeróbica) é a base da produção de pão, cerveja e vinho.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_bio_botanica_9',
+    chapter: 'Algas',
+    topicId: 'bio_botanica',
+    subject: 'Biologia',
+    prompt: 'As algas, organismos fotossintetizantes classificados fora do reino Plantae, têm importância ecológica por serem:',
+    options: [
+      { id: 'a', text: 'Consumidoras primárias na maioria dos ecossistemas aquáticos' },
+      { id: 'b', text: 'Produtoras primárias, responsáveis por grande parte da fotossíntese e da produção de oxigênio nos oceanos' },
+      { id: 'c', text: 'Decompositoras exclusivas de matéria orgânica no fundo do oceano' },
+      { id: 'd', text: 'Parasitas obrigatórias de peixes e outros organismos marinhos' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'As algas (especialmente o fitoplâncton) são a base da cadeia alimentar aquática como produtoras primárias, realizando fotossíntese e sendo responsáveis por uma fração substancial da produção mundial de oxigênio, além de fixarem grande parte do carbono atmosférico.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_botanica_10',
+    chapter: 'Algas',
+    topicId: 'bio_botanica',
+    subject: 'Biologia',
+    prompt: 'Em relação à organização do corpo das algas, é correto afirmar que:',
+    options: [
+      { id: 'a', text: 'Todas as algas são obrigatoriamente unicelulares' },
+      { id: 'b', text: 'Todas as algas são obrigatoriamente pluricelulares e possuem tecidos verdadeiros como as plantas' },
+      { id: 'c', text: 'Há algas unicelulares (como diatomáceas) e pluricelulares (como algumas algas pardas e vermelhas), mas mesmo as pluricelulares não formam tecidos verdadeiros' },
+      { id: 'd', text: 'Todas as algas possuem raiz, caule e folha diferenciados' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'As algas apresentam grande diversidade: existem formas unicelulares (diatomáceas, algumas cianobactérias fotossintetizantes) e pluricelulares (macroalgas pardas e vermelhas), mas seu corpo (talo) não possui a diferenciação em tecidos verdadeiros (vasculares, dérmicos, fundamentais) que caracteriza as plantas terrestres — por isso não são classificadas como Plantae.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_botanica_11',
+    chapter: 'Algas',
+    topicId: 'bio_botanica',
+    subject: 'Biologia',
+    prompt: 'A diversidade de pigmentos fotossintéticos entre os grupos de algas (clorofilas, ficoeritrina, ficocianina, fucoxantina) está diretamente relacionada a:',
+    options: [
+      { id: 'a', text: 'Diferenças aleatórias sem função adaptativa' },
+      { id: 'b', text: 'Adaptações que permitem captar comprimentos de onda de luz disponíveis em diferentes profundidades da coluna d\'água' },
+      { id: 'c', text: 'Ausência total de fotossíntese em algumas espécies' },
+      { id: 'd', text: 'Uma única espécie de alga que apresenta todos esses pigmentos simultaneamente' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'À medida que a profundidade aumenta, a luz solar é filtrada seletivamente pela água (vermelho e laranja são absorvidos primeiro). Pigmentos acessórios como ficoeritrina (algas vermelhas) e fucoxantina (algas pardas) permitem captar comprimentos de onda que penetram mais fundo, possibilitando fotossíntese em profundidades onde a clorofila sozinha seria ineficiente.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_bio_botanica_12',
+    chapter: 'Ciclos de Vida',
+    topicId: 'bio_botanica',
+    subject: 'Biologia',
+    prompt: 'O conceito de "alternância de gerações", presente no ciclo de vida de plantas e de várias algas, refere-se à alternância entre:',
+    options: [
+      { id: 'a', text: 'Uma fase multicelular haploide (gametófito) e uma fase multicelular diploide (esporófito)' },
+      { id: 'b', text: 'Duas fases diploides distintas, sem qualquer fase haploide' },
+      { id: 'c', text: 'Reprodução exclusivamente assexuada em todas as fases do ciclo' },
+      { id: 'd', text: 'Um único indivíduo que nunca produz esporos nem gametas' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A alternância de gerações caracteriza-se pela sucessão entre uma geração multicelular haploide (gametófito, que produz gametas por mitose) e uma geração multicelular diploide (esporófito, que produz esporos haploides por meiose) — padrão comum a briófitas, pteridófitas, gimnospermas e angiospermas, variando apenas o grau de dominância e redução de cada fase.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_botanica_13',
+    chapter: 'Plantas Terrestres I: Briófitas e Pteridófitas',
+    topicId: 'bio_botanica',
+    subject: 'Biologia',
+    prompt: 'As briófitas (como os musgos) são consideradas plantas terrestres primitivas principalmente porque:',
+    options: [
+      { id: 'a', text: 'Possuem tecidos vasculares (xilema e floema) bem desenvolvidos' },
+      { id: 'b', text: 'Não possuem tecidos vasculares verdadeiros, dependendo de água líquida para a fecundação e apresentando porte pequeno' },
+      { id: 'c', text: 'Produzem sementes e flores' },
+      { id: 'd', text: 'São exclusivamente aquáticas, nunca ocorrendo em ambiente terrestre' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'As briófitas não possuem tecido vascular verdadeiro (avasculares), o que limita seu porte (geralmente pequeno) e sua distribuição de água/nutrientes por difusão célula a célula. Além disso, seus gametas masculinos flagelados dependem de um filme de água líquida para nadar até o gameta feminino, restringindo-as a ambientes úmidos.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_bio_botanica_14',
+    chapter: 'Plantas Terrestres I: Briófitas e Pteridófitas',
+    topicId: 'bio_botanica',
+    subject: 'Biologia',
+    prompt: 'Em relação às pteridófitas (como as samambaias), é correto afirmar que:',
+    options: [
+      { id: 'a', text: 'São as primeiras plantas a apresentar tecido vascular (xilema e floema), mas ainda dependem de água líquida para a fecundação, como as briófitas' },
+      { id: 'b', text: 'Não possuem qualquer tecido de condução de seiva' },
+      { id: 'c', text: 'Produzem sementes, como as gimnospermas' },
+      { id: 'd', text: 'O esporófito é reduzido e dependente do gametófito, como nas briófitas' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'As pteridófitas foram o primeiro grupo a evoluir tecidos vasculares verdadeiros (xilema e floema), permitindo maior porte e melhor distribuição de água e nutrientes. Porém, assim como as briófitas, ainda produzem gametas masculinos flagelados que dependem de água líquida para atingir o gameta feminino — por isso ainda não são consideradas totalmente independentes da água para reprodução, ao contrário de gimnospermas e angiospermas.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_bio_botanica_15',
+    chapter: 'Plantas Terrestres I: Briófitas e Pteridófitas',
+    topicId: 'bio_botanica',
+    subject: 'Biologia',
+    prompt: 'Nas pteridófitas, a folha adulta enrolada em forma de báculo (chamada "cabeça de bispo" ou crosier), visível antes de se desenrolar completamente, é uma característica de desenvolvimento típica:',
+    options: [
+      { id: 'a', text: 'Das flores das angiospermas' },
+      { id: 'b', text: 'Das folhas jovens (frondes) das samambaias, que se desenrolam à medida que crescem' },
+      { id: 'c', text: 'Dos cones das gimnospermas' },
+      { id: 'd', text: 'Dos rizoides das briófitas' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'As frondes (folhas) jovens das samambaias emergem enroladas em espiral (crosier ou "cabeça de bispo") e se desenrolam gradualmente durante o crescimento — um padrão de desenvolvimento foliar característico das pteridófitas, distinto do desenvolvimento foliar de gimnospermas e angiospermas.',
     difficulty: 'medium'
   },
   // Física — Cinemática Vetorial
