@@ -2516,6 +2516,936 @@ export const mockQuestions: Question[] = [
     correctOptionId: 'b',
     explanation: 'A Constituição de 1988 consolidou a redemocratização brasileira, ampliando direitos fundamentais, sociais, políticos e trabalhistas, e estabelecendo as bases institucionais da República Federativa do Brasil atual.',
     difficulty: 'medium'
+  },
+  // Biologia — Estrutura e Fisiologia Celular
+  {
+    id: 'q_bio_estrutura_fisio_celular_1',
+    topicId: 'bio_estrutura_fisio_celular',
+    subject: 'Biologia',
+    prompt: 'Qual organela é responsável pela produção de energia (ATP) por meio da respiração celular?',
+    options: [
+      { id: 'a', text: 'Complexo de Golgi' },
+      { id: 'b', text: 'Mitocôndria' },
+      { id: 'c', text: 'Ribossomo' },
+      { id: 'd', text: 'Lisossomo' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A mitocôndria é o principal sítio da respiração celular aeróbica, onde ocorre a produção de ATP por fosforilação oxidativa.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_bio_estrutura_fisio_celular_2',
+    topicId: 'bio_estrutura_fisio_celular',
+    subject: 'Biologia',
+    prompt: 'O modelo do mosaico fluido, usado para descrever a membrana plasmática, caracteriza-a como:',
+    options: [
+      { id: 'a', text: 'Uma estrutura rígida e estática, composta apenas por proteínas' },
+      { id: 'b', text: 'Uma bicamada lipídica fluida, com proteínas dispersas que podem se mover lateralmente' },
+      { id: 'c', text: 'Uma camada única de fosfolipídios, impermeável a todas as substâncias' },
+      { id: 'd', text: 'Uma parede celular rígida, presente em todas as células' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'No modelo do mosaico fluido, a membrana é uma bicamada lipídica fluida na qual proteínas estão dispersas e podem se mover lateralmente, o que sustenta funções como permeabilidade seletiva e sinalização celular.',
+    difficulty: 'medium'
+  },
+  // Biologia — Biotecnologia
+  {
+    id: 'q_bio_biotecnologia_1',
+    topicId: 'bio_biotecnologia',
+    subject: 'Biologia',
+    prompt: 'A técnica de PCR (Reação em Cadeia da Polimerase) é utilizada principalmente para:',
+    options: [
+      { id: 'a', text: 'Sequenciar diretamente proteínas' },
+      { id: 'b', text: 'Amplificar (copiar) um segmento específico de DNA, obtendo muitas cópias dele' },
+      { id: 'c', text: 'Transferir genes entre diferentes espécies' },
+      { id: 'd', text: 'Editar diretamente o RNA mensageiro' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A PCR amplifica um trecho específico de DNA por meio de ciclos de aquecimento e resfriamento, usando primers e uma DNA polimerase, gerando milhões de cópias daquele segmento.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_bio_biotecnologia_2',
+    topicId: 'bio_biotecnologia',
+    subject: 'Biologia',
+    prompt: 'A tecnologia CRISPR-Cas9, amplamente usada em edição genética, funciona principalmente por meio de:',
+    options: [
+      { id: 'a', text: 'Um vírus que insere genes aleatoriamente no genoma' },
+      { id: 'b', text: 'Uma enzima (Cas9) guiada por uma sequência de RNA que corta o DNA em um local específico, permitindo edições precisas' },
+      { id: 'c', text: 'Um processo puramente químico, sem qualquer componente biológico' },
+      { id: 'd', text: 'A fusão direta de células de diferentes espécies' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'No sistema CRISPR-Cas9, um RNA-guia direciona a enzima Cas9 até uma sequência específica de DNA, onde ela realiza um corte preciso — permitindo remover, inserir ou corrigir trechos do genoma.',
+    difficulty: 'medium'
+  },
+  // Biologia — Zoologia
+  {
+    id: 'q_bio_zoologia_1',
+    topicId: 'bio_zoologia',
+    subject: 'Biologia',
+    prompt: 'Os animais classificados como vertebrados pertencem ao filo:',
+    options: [
+      { id: 'a', text: 'Mollusca' },
+      { id: 'b', text: 'Arthropoda' },
+      { id: 'c', text: 'Chordata' },
+      { id: 'd', text: 'Cnidaria' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'Os vertebrados formam um subfilo dentro do filo Chordata, cujas características incluem, em algum momento do desenvolvimento, notocorda, tubo neural dorsal e fendas faríngeas.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_bio_zoologia_2',
+    topicId: 'bio_zoologia',
+    subject: 'Biologia',
+    prompt: 'Os anfíbios são caracterizados, entre outros aspectos, por:',
+    options: [
+      { id: 'a', text: 'Respiração exclusivamente branquial durante toda a vida' },
+      { id: 'b', text: 'Pele geralmente permeável e um ciclo de vida que tipicamente inclui uma fase aquática (larval) e uma fase terrestre (adulta)' },
+      { id: 'c', text: 'Ausência total de qualquer fase aquática no ciclo de vida' },
+      { id: 'd', text: 'Presença de penas que os protegem da dessecação' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Anfíbios como rãs e sapos passam por metamorfose: iniciam a vida em ambiente aquático (girinos, com respiração branquial) e, na fase adulta, ocupam ambientes terrestres, respirando por pulmões e por uma pele fina e permeável, o que os mantém dependentes de ambientes úmidos.',
+    difficulty: 'medium'
+  },
+  // Biologia — Botânica
+  {
+    id: 'q_bio_botanica_1',
+    topicId: 'bio_botanica',
+    subject: 'Biologia',
+    prompt: 'O processo pelo qual as plantas convertem energia luminosa em energia química, produzindo glicose e liberando oxigênio, é chamado de:',
+    options: [
+      { id: 'a', text: 'Respiração celular' },
+      { id: 'b', text: 'Fotossíntese' },
+      { id: 'c', text: 'Transpiração' },
+      { id: 'd', text: 'Fermentação' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A fotossíntese, realizada nos cloroplastos, converte energia luminosa, água e gás carbônico em glicose e oxigênio, sendo a base da cadeia produtiva de energia nos ecossistemas.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_bio_botanica_2',
+    topicId: 'bio_botanica',
+    subject: 'Biologia',
+    prompt: 'Os tecidos vasculares responsáveis, respectivamente, pelo transporte de água e sais minerais das raízes até as folhas, e pelo transporte dos produtos da fotossíntese pela planta, são:',
+    options: [
+      { id: 'a', text: 'Floema e xilema' },
+      { id: 'b', text: 'Xilema e floema' },
+      { id: 'c', text: 'Parênquima e colênquima' },
+      { id: 'd', text: 'Epiderme e córtex' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'O xilema conduz a seiva bruta (água e sais minerais) das raízes até as folhas, enquanto o floema conduz a seiva elaborada (produtos da fotossíntese, como açúcares) das folhas para o restante da planta.',
+    difficulty: 'medium'
+  },
+  // Física — Cinemática Vetorial
+  {
+    id: 'q_fis_cinematica_vetorial_1',
+    topicId: 'fis_cinematica_vetorial',
+    subject: 'Física',
+    prompt: 'Um objeto realiza um lançamento horizontal a partir de uma certa altura, com velocidade inicial puramente horizontal. Desprezando a resistência do ar, o movimento vertical desse objeto durante a queda é:',
+    options: [
+      { id: 'a', text: 'Uniforme, com velocidade constante' },
+      { id: 'b', text: 'Uniformemente variado, com aceleração igual à da gravidade' },
+      { id: 'c', text: 'Circular uniforme' },
+      { id: 'd', text: 'Inexistente, pois o objeto só se move horizontalmente' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'No lançamento horizontal, o movimento se decompõe em duas componentes independentes: horizontal (uniforme, sem aceleração) e vertical (uniformemente variada, sob ação exclusiva da aceleração da gravidade).',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_fis_cinematica_vetorial_2',
+    topicId: 'fis_cinematica_vetorial',
+    subject: 'Física',
+    prompt: 'Duas forças perpendiculares entre si atuam sobre um corpo: uma de 3 N e outra de 4 N. Qual é o módulo da força resultante?',
+    options: [
+      { id: 'a', text: '1 N' },
+      { id: 'b', text: '5 N' },
+      { id: 'c', text: '7 N' },
+      { id: 'd', text: '12 N' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Para vetores perpendiculares, o módulo da resultante é dado pelo Teorema de Pitágoras: √(3² + 4²) = √(9 + 16) = √25 = 5 N.',
+    difficulty: 'medium'
+  },
+  // Física — Gravitação e Movimento Circular
+  {
+    id: 'q_fis_gravitacao_circular_1',
+    topicId: 'fis_gravitacao_circular',
+    subject: 'Física',
+    prompt: 'De acordo com a Lei da Gravitação Universal de Newton, a força gravitacional entre dois corpos é:',
+    options: [
+      { id: 'a', text: 'Diretamente proporcional às massas dos corpos e inversamente proporcional ao quadrado da distância entre eles' },
+      { id: 'b', text: 'Inversamente proporcional às massas e diretamente proporcional à distância' },
+      { id: 'c', text: 'Independente das massas dos corpos' },
+      { id: 'd', text: 'Diretamente proporcional ao cubo da distância entre eles' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A Lei da Gravitação Universal é expressa por F = G·m₁·m₂/r², ou seja, a força é diretamente proporcional ao produto das massas e inversamente proporcional ao quadrado da distância entre os corpos.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_fis_gravitacao_circular_2',
+    topicId: 'fis_gravitacao_circular',
+    subject: 'Física',
+    prompt: 'Um carro faz uma curva de raio constante com velocidade escalar constante. Sobre a aceleração desse carro durante a curva, é correto afirmar que:',
+    options: [
+      { id: 'a', text: 'É nula, pois a velocidade escalar é constante' },
+      { id: 'b', text: 'Existe uma aceleração centrípeta, direcionada para o centro da curva, responsável por mudar a direção da velocidade' },
+      { id: 'c', text: 'A aceleração aponta na mesma direção do movimento' },
+      { id: 'd', text: 'Só existe aceleração se a velocidade escalar também estiver variando' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Mesmo com velocidade escalar constante, um corpo em movimento circular possui aceleração centrípeta, direcionada para o centro da trajetória, responsável por mudar continuamente a direção do vetor velocidade.',
+    difficulty: 'medium'
+  },
+  // Física — Dinâmica Energética e Transformações de Energia
+  {
+    id: 'q_fis_energia_1',
+    topicId: 'fis_energia',
+    subject: 'Física',
+    prompt: 'Um corpo de massa 2 kg se move com velocidade de 5 m/s. Qual é a sua energia cinética?',
+    options: [
+      { id: 'a', text: '10 J' },
+      { id: 'b', text: '12,5 J' },
+      { id: 'c', text: '25 J' },
+      { id: 'd', text: '50 J' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'A energia cinética é dada por Ec = (m·v²)/2 = (2 × 5²)/2 = (2 × 25)/2 = 25 J.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_fis_energia_2',
+    topicId: 'fis_energia',
+    subject: 'Física',
+    prompt: 'De acordo com o Princípio da Conservação de Energia Mecânica, em um sistema onde atuam apenas forças conservativas (como a gravidade, sem atrito), a energia mecânica total:',
+    options: [
+      { id: 'a', text: 'Aumenta continuamente ao longo do tempo' },
+      { id: 'b', text: 'Diminui continuamente ao longo do tempo' },
+      { id: 'c', text: 'Permanece constante, podendo haver conversão entre energia cinética e potencial' },
+      { id: 'd', text: 'É sempre igual a zero' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'Na ausência de forças dissipativas (como o atrito), a energia mecânica total (cinética + potencial) se conserva, podendo apenas ser convertida entre essas duas formas ao longo do movimento.',
+    difficulty: 'medium'
+  },
+  // Física — Eletrostática e Campo Elétrico
+  {
+    id: 'q_fis_eletrostatica_1',
+    topicId: 'fis_eletrostatica',
+    subject: 'Física',
+    prompt: 'Duas cargas elétricas de mesmo sinal, ao serem aproximadas uma da outra, exercem entre si uma força de:',
+    options: [
+      { id: 'a', text: 'Atração' },
+      { id: 'b', text: 'Repulsão' },
+      { id: 'c', text: 'Nula — cargas de mesmo sinal não interagem' },
+      { id: 'd', text: 'Apenas gravitacional' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Pela Lei de Coulomb, cargas de mesmo sinal se repelem, enquanto cargas de sinais opostos se atraem.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_fis_eletrostatica_2',
+    topicId: 'fis_eletrostatica',
+    subject: 'Física',
+    prompt: 'As linhas de campo elétrico geradas por uma carga puntiforme positiva isolada são:',
+    options: [
+      { id: 'a', text: 'Circulares, envolvendo a carga' },
+      { id: 'b', text: 'Radiais, apontando para fora da carga (divergentes)' },
+      { id: 'c', text: 'Radiais, apontando para dentro da carga (convergentes)' },
+      { id: 'd', text: 'Paralelas entre si, independentemente da posição da carga' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'As linhas de campo elétrico de uma carga positiva isolada divergem radialmente a partir dela; para uma carga negativa isolada, elas convergem radialmente em direção a ela.',
+    difficulty: 'medium'
+  },
+  // Física — Fundamentos de Ondas e Oscilações
+  {
+    id: 'q_fis_ondas_fundamentos_1',
+    topicId: 'fis_ondas_fundamentos',
+    subject: 'Física',
+    prompt: 'A velocidade de propagação de uma onda está relacionada à sua frequência (f) e ao seu comprimento de onda (λ) pela equação:',
+    options: [
+      { id: 'a', text: 'v = f + λ' },
+      { id: 'b', text: 'v = f × λ' },
+      { id: 'c', text: 'v = f / λ' },
+      { id: 'd', text: 'v = f − λ' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A equação fundamental da ondulatória relaciona a velocidade de propagação (v) com a frequência (f) e o comprimento de onda (λ) pela fórmula v = f × λ.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_fis_ondas_fundamentos_2',
+    topicId: 'fis_ondas_fundamentos',
+    subject: 'Física',
+    prompt: 'Uma onda tem frequência de 50 Hz e comprimento de onda de 4 m. Qual é a sua velocidade de propagação?',
+    options: [
+      { id: 'a', text: '12,5 m/s' },
+      { id: 'b', text: '46 m/s' },
+      { id: 'c', text: '54 m/s' },
+      { id: 'd', text: '200 m/s' }
+    ],
+    correctOptionId: 'd',
+    explanation: 'Usando v = f × λ: v = 50 × 4 = 200 m/s.',
+    difficulty: 'medium'
+  },
+  // Física — Física Moderna
+  {
+    id: 'q_fis_fisica_moderna_1',
+    topicId: 'fis_fisica_moderna',
+    subject: 'Física',
+    prompt: 'O efeito fotoelétrico, explicado por Einstein e fundamental para o desenvolvimento da física quântica, consiste:',
+    options: [
+      { id: 'a', text: 'Na emissão de elétrons por um material quando este é iluminado por luz de frequência suficientemente alta' },
+      { id: 'b', text: 'No aquecimento de um material apenas pela luz visível' },
+      { id: 'c', text: 'Na reflexão total da luz incidente sobre qualquer superfície metálica' },
+      { id: 'd', text: 'Na produção contínua de luz por qualquer material aquecido' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'No efeito fotoelétrico, luz incidente com frequência acima de um valor mínimo (frequência de corte) ejeta elétrons de um material; Einstein explicou o fenômeno propondo que a luz se comporta em pacotes discretos de energia, os fótons, com energia E = h·f.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_fis_fisica_moderna_2',
+    topicId: 'fis_fisica_moderna',
+    subject: 'Física',
+    prompt: 'Segundo a Teoria da Relatividade Restrita de Einstein, à medida que a velocidade de um objeto se aproxima da velocidade da luz no vácuo:',
+    options: [
+      { id: 'a', text: 'O tempo passa mais rápido para um observador externo, em comparação ao objeto em movimento' },
+      { id: 'b', text: 'O tempo passa mais devagar para o objeto em movimento, em relação a um observador externo (dilatação do tempo)' },
+      { id: 'c', text: 'A velocidade da luz no vácuo observada muda conforme o referencial' },
+      { id: 'd', text: 'Não há nenhuma alteração perceptível em nenhuma grandeza física' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A dilatação temporal relativística prevê que, para um observador externo, relógios em movimento (em velocidades próximas à da luz) marcam o tempo mais lentamente do que relógios parados em relação a esse observador.',
+    difficulty: 'medium'
+  },
+  // Química — Modelos Atômicos e Estrutura do Átomo
+  {
+    id: 'q_qui_modelos_atomicos_1',
+    topicId: 'qui_modelos_atomicos',
+    subject: 'Química',
+    prompt: 'No modelo atômico atual, os elétrons de um átomo estão localizados principalmente:',
+    options: [
+      { id: 'a', text: 'No núcleo, junto com prótons e nêutrons' },
+      { id: 'b', text: 'Na eletrosfera, região ao redor do núcleo, organizados em níveis de energia' },
+      { id: 'c', text: 'Fora do átomo, orbitando toda a molécula' },
+      { id: 'd', text: 'Distribuídos igualmente entre o núcleo e a eletrosfera' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'No modelo atual, prótons e nêutrons ocupam o núcleo, enquanto os elétrons ocupam a eletrosfera, distribuídos em níveis e subníveis de energia ao redor do núcleo.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_qui_modelos_atomicos_2',
+    topicId: 'qui_modelos_atomicos',
+    subject: 'Química',
+    prompt: 'Um átomo neutro possui número atômico (Z) igual a 17. Quantos elétrons esse átomo possui?',
+    options: [
+      { id: 'a', text: '17' },
+      { id: 'b', text: '18' },
+      { id: 'c', text: '35' },
+      { id: 'd', text: '8' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O número atômico (Z) indica o número de prótons. Em um átomo neutro, o número de elétrons é igual ao número de prótons, logo esse átomo possui 17 elétrons.',
+    difficulty: 'medium'
+  },
+  // Química — Radioatividade
+  {
+    id: 'q_qui_radioatividade_1',
+    topicId: 'qui_radioatividade',
+    subject: 'Química',
+    prompt: 'As partículas alfa, emitidas em certos processos de decaimento radioativo, são constituídas por:',
+    options: [
+      { id: 'a', text: 'Apenas elétrons' },
+      { id: 'b', text: '2 prótons e 2 nêutrons (equivalente a um núcleo de hélio)' },
+      { id: 'c', text: 'Apenas fótons de alta energia' },
+      { id: 'd', text: 'Nêutrons isolados' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A partícula alfa corresponde a um núcleo de hélio-4, composto por 2 prótons e 2 nêutrons, emitida em decaimentos de núcleos pesados e instáveis.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_qui_radioatividade_2',
+    topicId: 'qui_radioatividade',
+    subject: 'Química',
+    prompt: 'Uma amostra radioativa tem meia-vida de 10 anos e massa inicial de 80 g. Aproximadamente quantos gramas dessa amostra ainda restarão, sem ter decaído, após 30 anos?',
+    options: [
+      { id: 'a', text: '40 g' },
+      { id: 'b', text: '20 g' },
+      { id: 'c', text: '10 g' },
+      { id: 'd', text: '5 g' }
+    ],
+    correctOptionId: 'c',
+    explanation: '30 anos correspondem a 3 meias-vidas (30 ÷ 10). A cada meia-vida, a massa se reduz à metade: 80 g → 40 g → 20 g → 10 g.',
+    difficulty: 'medium'
+  },
+  // Química — Gases
+  {
+    id: 'q_qui_gases_1',
+    topicId: 'qui_gases',
+    subject: 'Química',
+    prompt: 'Mantendo a temperatura constante, se o volume de um gás ideal for reduzido à metade, sua pressão, de acordo com a Lei de Boyle, deve:',
+    options: [
+      { id: 'a', text: 'Permanecer constante' },
+      { id: 'b', text: 'Dobrar' },
+      { id: 'c', text: 'Reduzir à metade' },
+      { id: 'd', text: 'Quadruplicar' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A Lei de Boyle estabelece que, a temperatura constante, pressão e volume de um gás são inversamente proporcionais (P₁V₁ = P₂V₂). Reduzindo o volume à metade, a pressão dobra.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_qui_gases_2',
+    topicId: 'qui_gases',
+    subject: 'Química',
+    prompt: 'De acordo com a Equação de Clapeyron (PV = nRT), para uma quantidade fixa de gás (n constante), se a temperatura T aumentar mantendo o volume V constante, a pressão P deve:',
+    options: [
+      { id: 'a', text: 'Diminuir' },
+      { id: 'b', text: 'Permanecer constante' },
+      { id: 'c', text: 'Aumentar' },
+      { id: 'd', text: 'Tornar-se nula' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'Com n e V fixos, P = (nR/V) × T, ou seja, P é diretamente proporcional a T. Se a temperatura aumenta, a pressão também aumenta.',
+    difficulty: 'medium'
+  },
+  // Química — Química Inorgânica
+  {
+    id: 'q_qui_inorganica_1',
+    topicId: 'qui_inorganica',
+    subject: 'Química',
+    prompt: 'Ácidos, segundo a definição de Arrhenius, são substâncias que, em solução aquosa, liberam como único cátion:',
+    options: [
+      { id: 'a', text: 'O ânion hidroxila (OH⁻)' },
+      { id: 'b', text: 'O cátion hidrônio/hidrogênio (H⁺)' },
+      { id: 'c', text: 'Um cátion metálico' },
+      { id: 'd', text: 'Apenas moléculas neutras' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Pela definição de Arrhenius, ácidos são substâncias que, em solução aquosa, liberam H⁺ (na prática, H₃O⁺) como único tipo de cátion.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_qui_inorganica_2',
+    topicId: 'qui_inorganica',
+    subject: 'Química',
+    prompt: 'Uma reação de neutralização, típica entre um ácido e uma base, produz como resultado:',
+    options: [
+      { id: 'a', text: 'Apenas gás e água' },
+      { id: 'b', text: 'Um sal e água' },
+      { id: 'c', text: 'Apenas um óxido' },
+      { id: 'd', text: 'Dois ácidos diferentes' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Na reação de neutralização de Arrhenius, um ácido reage com uma base formando um sal e água (ex.: HCl + NaOH → NaCl + H₂O).',
+    difficulty: 'medium'
+  },
+  // Química — Oxirredução
+  {
+    id: 'q_qui_oxirreducao_1',
+    topicId: 'qui_oxirreducao',
+    subject: 'Química',
+    prompt: 'Em uma reação de oxirredução, a espécie que perde elétrons sofre:',
+    options: [
+      { id: 'a', text: 'Redução' },
+      { id: 'b', text: 'Oxidação' },
+      { id: 'c', text: 'Neutralização' },
+      { id: 'd', text: 'Sublimação' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Oxidação é o processo em que uma espécie perde elétrons (aumentando seu número de oxidação); redução é o processo inverso, de ganho de elétrons.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_qui_oxirreducao_2',
+    topicId: 'qui_oxirreducao',
+    subject: 'Química',
+    prompt: 'Qual é o número de oxidação (Nox) do enxofre (S) no íon sulfato (SO₄²⁻)?',
+    options: [
+      { id: 'a', text: '+2' },
+      { id: 'b', text: '+4' },
+      { id: 'c', text: '+6' },
+      { id: 'd', text: '-2' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'Cada oxigênio tem Nox -2, totalizando -8 para os 4 átomos de oxigênio. Como a carga total do íon é -2, o Nox do enxofre deve satisfazer: Nox(S) + (-8) = -2, logo Nox(S) = +6.',
+    difficulty: 'medium'
+  },
+  // Química — Termoquímica
+  {
+    id: 'q_qui_termoquimica_1',
+    topicId: 'qui_termoquimica',
+    subject: 'Química',
+    prompt: 'Uma reação química que libera calor para o ambiente, com variação de entalpia (ΔH) negativa, é classificada como:',
+    options: [
+      { id: 'a', text: 'Endotérmica' },
+      { id: 'b', text: 'Exotérmica' },
+      { id: 'c', text: 'Isotérmica' },
+      { id: 'd', text: 'Adiabática' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Reações exotérmicas liberam calor para o ambiente e têm ΔH negativo; reações endotérmicas absorvem calor e têm ΔH positivo.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_qui_termoquimica_2',
+    topicId: 'qui_termoquimica',
+    subject: 'Química',
+    prompt: 'Considere as reações: A → B, com ΔH = -50 kJ/mol; e B → C, com ΔH = +20 kJ/mol. Qual é a variação de entalpia da reação global A → C?',
+    options: [
+      { id: 'a', text: '-70 kJ/mol' },
+      { id: 'b', text: '-30 kJ/mol' },
+      { id: 'c', text: '+30 kJ/mol' },
+      { id: 'd', text: '+70 kJ/mol' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Pela Lei de Hess, a variação de entalpia da reação global é a soma das variações das etapas intermediárias: -50 + 20 = -30 kJ/mol.',
+    difficulty: 'medium'
+  },
+  // Química — Cinética Química
+  {
+    id: 'q_qui_cinetica_1',
+    topicId: 'qui_cinetica',
+    subject: 'Química',
+    prompt: 'Um catalisador atua em uma reação química:',
+    options: [
+      { id: 'a', text: 'Aumentando a energia de ativação necessária para a reação ocorrer' },
+      { id: 'b', text: 'Diminuindo a energia de ativação, aumentando a velocidade da reação, sem ser consumido no processo' },
+      { id: 'c', text: 'Sendo consumido totalmente durante a reação' },
+      { id: 'd', text: 'Alterando o produto final da reação' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Um catalisador oferece um caminho reacional alternativo com menor energia de ativação, acelerando a reação, sem ser consumido no processo nem alterar o produto final.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_qui_cinetica_2',
+    topicId: 'qui_cinetica',
+    subject: 'Química',
+    prompt: 'O aumento da temperatura de um sistema reacional geralmente provoca um aumento na velocidade da reação principalmente porque:',
+    options: [
+      { id: 'a', text: 'Diminui o número de colisões entre as partículas' },
+      { id: 'b', text: 'Aumenta a energia cinética média das partículas, elevando a frequência e a eficácia das colisões entre elas' },
+      { id: 'c', text: 'Reduz a concentração dos reagentes' },
+      { id: 'd', text: 'Não tem qualquer relação com a velocidade da reação' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'O aumento de temperatura eleva a energia cinética média das partículas, tornando as colisões mais frequentes e mais efetivas (com energia suficiente para superar a energia de ativação), o que acelera a reação.',
+    difficulty: 'medium'
+  },
+  // Química — Eletroquímica
+  {
+    id: 'q_qui_eletroquimica_1',
+    topicId: 'qui_eletroquimica',
+    subject: 'Química',
+    prompt: 'Em uma pilha eletroquímica, o eletrodo onde ocorre a oxidação é chamado de:',
+    options: [
+      { id: 'a', text: 'Cátodo' },
+      { id: 'b', text: 'Ânodo' },
+      { id: 'c', text: 'Eletrólito' },
+      { id: 'd', text: 'Ponte salina' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Em uma pilha (célula galvânica), a oxidação ocorre no ânodo (perda de elétrons) e a redução ocorre no cátodo (ganho de elétrons).',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_qui_eletroquimica_2',
+    topicId: 'qui_eletroquimica',
+    subject: 'Química',
+    prompt: 'Na eletrólise, ao contrário do que ocorre em uma pilha, a energia:',
+    options: [
+      { id: 'a', text: 'Elétrica é gerada a partir de uma reação química espontânea' },
+      { id: 'b', text: 'Elétrica é fornecida ao sistema para forçar a ocorrência de uma reação química não espontânea' },
+      { id: 'c', text: 'Nunca está envolvida no processo' },
+      { id: 'd', text: 'É sempre convertida em energia térmica apenas' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Enquanto a pilha converte energia de uma reação química espontânea em energia elétrica, a eletrólise faz o processo inverso: usa energia elétrica fornecida externamente para forçar uma reação não espontânea.',
+    difficulty: 'medium'
+  },
+  // Química — Equilíbrio Químico
+  {
+    id: 'q_qui_equilibrio_1',
+    topicId: 'qui_equilibrio',
+    subject: 'Química',
+    prompt: 'De acordo com o Princípio de Le Chatelier, quando um sistema em equilíbrio químico sofre uma perturbação (como aumento de concentração de um reagente), o sistema tende a:',
+    options: [
+      { id: 'a', text: 'Permanecer inalterado' },
+      { id: 'b', text: 'Se deslocar no sentido de minimizar essa perturbação, buscando um novo estado de equilíbrio' },
+      { id: 'c', text: 'Parar completamente a reação' },
+      { id: 'd', text: 'Inverter espontaneamente todos os produtos em reagentes, sem relação com a perturbação' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'O Princípio de Le Chatelier prevê que um sistema em equilíbrio, ao ser perturbado, se desloca no sentido que tende a minimizar (contrabalançar) essa perturbação.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_qui_equilibrio_2',
+    topicId: 'qui_equilibrio',
+    subject: 'Química',
+    prompt: 'Em uma reação reversível em equilíbrio, aumentar a pressão total do sistema (por redução de volume), em uma reação gasosa, favorece o deslocamento do equilíbrio no sentido:',
+    options: [
+      { id: 'a', text: 'Do lado com maior número de mols de gás' },
+      { id: 'b', text: 'Do lado com menor número de mols de gás' },
+      { id: 'c', text: 'Sempre dos reagentes, independentemente do número de mols' },
+      { id: 'd', text: 'Sempre dos produtos, independentemente do número de mols' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Aumentar a pressão (reduzindo o volume) desloca o equilíbrio para o lado com menor número total de mols de gás, já que esse deslocamento tende a reduzir a pressão do sistema, conforme o Princípio de Le Chatelier.',
+    difficulty: 'medium'
+  },
+  // Português — Domínio da Norma Culta
+  {
+    id: 'q_por_norma_culta_1',
+    topicId: 'por_norma_culta',
+    subject: 'Português',
+    prompt: 'Assinale a alternativa que respeita a concordância verbal segundo a norma-padrão:',
+    options: [
+      { id: 'a', text: 'Fazem dois anos que não nos vemos.' },
+      { id: 'b', text: 'Faz dois anos que não nos vemos.' },
+      { id: 'c', text: 'Houveram muitos candidatos na prova.' },
+      { id: 'd', text: 'Deveram haver mais vagas.' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'O verbo "fazer" indicando tempo decorrido é impessoal e permanece na 3ª pessoa do singular ("faz dois anos"). O verbo "haver" no sentido de existir também é impessoal e singular ("houve muitos candidatos"), tornando "c" e "d" incorretas.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_por_norma_culta_2',
+    topicId: 'por_norma_culta',
+    subject: 'Português',
+    prompt: 'Assinale a alternativa em que o uso do acento indicativo de crase está correto:',
+    options: [
+      { id: 'a', text: 'Ela foi à pé até a escola.' },
+      { id: 'b', text: 'Entreguei o documento à ela pessoalmente.' },
+      { id: 'c', text: 'Cheguei à escola antes das oito horas.' },
+      { id: 'd', text: 'Refiro-me à você, não à ele.' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'A crase é a fusão da preposição "a" com o artigo feminino "a". "À escola" está correto, pois "escola" é substantivo feminino que admite artigo. "A pé" não leva crase (locução adverbial masculina); pronomes como "ela", "você" e "ele" não admitem artigo antes deles, logo não recebem crase.',
+    difficulty: 'medium'
+  },
+  // Português — Análise Sintática
+  {
+    id: 'q_por_sintaxe_1',
+    topicId: 'por_sintaxe',
+    subject: 'Português',
+    prompt: 'Na frase "O aluno estudou a matéria com dedicação", o termo "a matéria" exerce a função sintática de:',
+    options: [
+      { id: 'a', text: 'Sujeito' },
+      { id: 'b', text: 'Objeto direto' },
+      { id: 'c', text: 'Objeto indireto' },
+      { id: 'd', text: 'Adjunto adverbial' }
+    ],
+    correctOptionId: 'b',
+    explanation: '"Estudou o quê? A matéria" — como o verbo "estudar" é transitivo direto (não exige preposição obrigatória para seu complemento), "a matéria" é o objeto direto da oração.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_por_sintaxe_2',
+    topicId: 'por_sintaxe',
+    subject: 'Português',
+    prompt: 'Na frase "Os candidatos, apesar do cansaço, mantiveram a concentração até o fim da prova", o termo "apesar do cansaço" exerce a função de:',
+    options: [
+      { id: 'a', text: 'Sujeito' },
+      { id: 'b', text: 'Predicativo do sujeito' },
+      { id: 'c', text: 'Adjunto adverbial de concessão' },
+      { id: 'd', text: 'Complemento nominal' }
+    ],
+    correctOptionId: 'c',
+    explanation: '"Apesar do cansaço" expressa uma ideia de concessão, contrastando com o resultado apresentado na oração principal — classifica-se como adjunto adverbial de concessão, tipicamente introduzido por locuções como "apesar de", "embora" e "ainda que".',
+    difficulty: 'medium'
+  },
+  // Português — Entendimento de Texto
+  {
+    id: 'q_por_texto_1',
+    topicId: 'por_texto',
+    subject: 'Português',
+    prompt: 'Em um texto, a ideia central defendida pelo autor, à qual os demais argumentos se articulam, é chamada de:',
+    options: [
+      { id: 'a', text: 'Repertório sociocultural' },
+      { id: 'b', text: 'Tese' },
+      { id: 'c', text: 'Conectivo' },
+      { id: 'd', text: 'Coesão referencial' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A tese é a ideia central defendida pelo autor em um texto dissertativo-argumentativo; os argumentos desenvolvidos ao longo do texto devem sustentar e se articular a essa tese.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_por_texto_2',
+    topicId: 'por_texto',
+    subject: 'Português',
+    prompt: 'Quando um texto utiliza a expressão "por outro lado" para introduzir uma nova informação, ele está sinalizando, em termos de coesão textual, uma relação de:',
+    options: [
+      { id: 'a', text: 'Causa e consequência' },
+      { id: 'b', text: 'Adição pura, sem qualquer contraste' },
+      { id: 'c', text: 'Oposição ou contraste em relação à ideia anterior' },
+      { id: 'd', text: 'Conclusão final do texto' }
+    ],
+    correctOptionId: 'c',
+    explanation: '"Por outro lado" é um conectivo que introduz contraste ou oposição entre ideias, ajudando a organizar a argumentação e sinalizar mudanças de perspectiva dentro do texto.',
+    difficulty: 'medium'
+  },
+  // Português — Literatura Clássica, Medieval e Barroca
+  {
+    id: 'q_por_lit_classica_barroca_1',
+    topicId: 'por_lit_classica_barroca',
+    subject: 'Português',
+    prompt: 'O Barroco, movimento literário marcado pelo conflito entre valores religiosos e terrenos (fé x razão, espírito x matéria), teve como uma de suas principais características estilísticas o uso do:',
+    options: [
+      { id: 'a', text: 'Uso de frases extremamente simples e diretas, sem figuras de linguagem' },
+      { id: 'b', text: 'Cultismo (jogo de palavras, metáforas rebuscadas) e do conceptismo (jogo de ideias, argumentação lógica)' },
+      { id: 'c', text: 'Uma linguagem exclusivamente coloquial e popular' },
+      { id: 'd', text: 'Temas exclusivamente voltados à vida cotidiana urbana moderna' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'O Barroco é marcado pelo conflito entre opostos (fé/razão, espírito/matéria) e, estilisticamente, pelo cultismo (ornamentação formal, jogo de palavras) e pelo conceptismo (argumentação elaborada, jogo de ideias).',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_por_lit_classica_barroca_2',
+    topicId: 'por_lit_classica_barroca',
+    subject: 'Português',
+    prompt: 'No Brasil colonial, o principal representante do Barroco, conhecido por seus poemas satíricos e religiosos, foi:',
+    options: [
+      { id: 'a', text: 'Gregório de Matos' },
+      { id: 'b', text: 'Machado de Assis' },
+      { id: 'c', text: 'José de Alencar' },
+      { id: 'd', text: 'Castro Alves' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Gregório de Matos, conhecido como "Boca do Inferno", é o principal poeta do Barroco brasileiro, autor de poemas satíricos, religiosos e líricos na Bahia colonial.',
+    difficulty: 'medium'
+  },
+  // Português — Romantismo e Realismo
+  {
+    id: 'q_por_lit_romantismo_realismo_1',
+    topicId: 'por_lit_romantismo_realismo',
+    subject: 'Português',
+    prompt: 'O Romantismo, movimento literário do século XIX, caracterizou-se, entre outros aspectos, por:',
+    options: [
+      { id: 'a', text: 'Uma valorização da razão e da objetividade científica acima de tudo' },
+      { id: 'b', text: 'A exaltação do sentimentalismo, da subjetividade, do nacionalismo e, muitas vezes, da idealização (do amor, da natureza, do índio)' },
+      { id: 'c', text: 'Uma crítica social objetiva e desapaixonada da realidade' },
+      { id: 'd', text: 'O abandono completo de qualquer tema nacional' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'O Romantismo é marcado pelo predomínio da emoção e da subjetividade, pelo nacionalismo e, frequentemente, pela idealização — como no indianismo de José de Alencar.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_por_lit_romantismo_realismo_2',
+    topicId: 'por_lit_romantismo_realismo',
+    subject: 'Português',
+    prompt: 'O Realismo, que sucedeu o Romantismo no Brasil e teve em Machado de Assis um de seus principais expoentes, caracteriza-se, em contraste com o Romantismo, por:',
+    options: [
+      { id: 'a', text: 'Uma idealização excessiva dos personagens e das relações amorosas' },
+      { id: 'b', text: 'Uma análise crítica e objetiva da sociedade e da psicologia humana, com personagens mais complexos e ambíguos' },
+      { id: 'c', text: 'O abandono total da prosa em favor exclusivo da poesia' },
+      { id: 'd', text: 'A exaltação ingênua dos sentimentos, sem qualquer crítica social' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'O Realismo reage contra a idealização romântica, propondo uma análise mais crítica e objetiva da sociedade e da psicologia dos personagens — como em Dom Casmurro, de Machado de Assis.',
+    difficulty: 'medium'
+  },
+  // Português — Simbolismo, Pré-Modernismo e Modernismo
+  {
+    id: 'q_por_lit_modernismo_1',
+    topicId: 'por_lit_modernismo',
+    subject: 'Português',
+    prompt: 'A Semana de Arte Moderna de 1922, em São Paulo, é considerada um marco histórico porque:',
+    options: [
+      { id: 'a', text: 'Consolidou o Romantismo como movimento oficial no Brasil' },
+      { id: 'b', text: 'Inaugurou o Modernismo brasileiro, propondo a ruptura com estéticas tradicionais e a busca por uma identidade artística nacional renovada' },
+      { id: 'c', text: 'Marcou o fim de toda a produção literária no Brasil' },
+      { id: 'd', text: 'Foi um evento exclusivamente musical, sem relação com a literatura' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A Semana de Arte Moderna de 1922 é o marco inaugural do Modernismo brasileiro, propondo ruptura com o academicismo e o Parnasianismo e buscando uma estética renovada e mais identificada com a realidade nacional.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_por_lit_modernismo_2',
+    topicId: 'por_lit_modernismo',
+    subject: 'Português',
+    prompt: 'O Simbolismo, movimento literário de fins do século XIX, caracterizou-se principalmente por:',
+    options: [
+      { id: 'a', text: 'Uma linguagem objetiva, voltada à descrição científica da realidade' },
+      { id: 'b', text: 'Uma linguagem musical e sugestiva, voltada à exploração do subjetivo, do onírico e do simbólico, em oposição ao Realismo/Naturalismo' },
+      { id: 'c', text: 'A ausência total de qualquer recurso sonoro ou rítmico' },
+      { id: 'd', text: 'A exaltação exclusiva de temas políticos e sociais' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'O Simbolismo valorizava a musicalidade, a sugestão (em vez da descrição direta), o subjetivismo e o misticismo, reagindo à objetividade do Realismo e do Naturalismo — com Cruz e Sousa como principal nome no Brasil.',
+    difficulty: 'medium'
+  },
+  // Português — Literatura Contemporânea
+  {
+    id: 'q_por_lit_contemporanea_1',
+    topicId: 'por_lit_contemporanea',
+    subject: 'Português',
+    prompt: 'A literatura brasileira contemporânea, produzida a partir de meados do século XX até os dias atuais, caracteriza-se, entre outros aspectos, por:',
+    options: [
+      { id: 'a', text: 'Uma unidade estética rígida e um único estilo dominante compartilhado por todos os autores' },
+      { id: 'b', text: 'Uma grande diversidade de estilos, temas e vozes, incluindo maior espaço para autores antes marginalizados e abordagens de temas sociais urgentes' },
+      { id: 'c', text: 'O retorno exclusivo aos moldes clássicos e formais do Parnasianismo' },
+      { id: 'd', text: 'A ausência completa de qualquer crítica social' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A literatura contemporânea brasileira se caracteriza pela pluralidade de estilos, temas e vozes, com maior visibilidade para autores historicamente marginalizados e forte diálogo com questões sociais atuais.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_por_lit_contemporanea_2',
+    topicId: 'por_lit_contemporanea',
+    subject: 'Português',
+    prompt: 'Autores como Clarice Lispector e Guimarães Rosa, associados à prosa brasileira do século XX, são reconhecidos principalmente por:',
+    options: [
+      { id: 'a', text: 'Uma linguagem simples e convencional, sem qualquer inovação formal' },
+      { id: 'b', text: 'Uma renovação da linguagem literária, explorando a introspecção psicológica (Lispector) e a experimentação linguística e o regionalismo universalizado (Guimarães Rosa)' },
+      { id: 'c', text: 'Escreverem exclusivamente poesia parnasiana' },
+      { id: 'd', text: 'Não terem qualquer relevância para a literatura brasileira contemporânea' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Clarice Lispector é reconhecida pela profunda introspecção psicológica de sua prosa; Guimarães Rosa (autor de "Grande Sertão: Veredas") é reconhecido pela experimentação linguística e por um regionalismo que dialoga com temas universais.',
+    difficulty: 'medium'
+  },
+  // Português — Fundamentos da Dissertação
+  {
+    id: 'q_por_red_fundamentos_1',
+    topicId: 'por_red_fundamentos',
+    subject: 'Português',
+    prompt: 'O texto dissertativo-argumentativo, modelo cobrado por exames como o ENEM, tem como principal objetivo:',
+    options: [
+      { id: 'a', text: 'Narrar uma sequência de eventos fictícios' },
+      { id: 'b', text: 'Defender um ponto de vista sobre um tema, por meio de argumentos consistentes e organizados' },
+      { id: 'c', text: 'Descrever detalhadamente um objeto ou cena, sem qualquer defesa de ideia' },
+      { id: 'd', text: 'Reproduzir literalmente um texto de referência, sem qualquer autoria própria' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'O texto dissertativo-argumentativo tem como finalidade central defender um ponto de vista (tese) sobre um tema, sustentando-o com argumentos organizados e consistentes.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_por_red_fundamentos_2',
+    topicId: 'por_red_fundamentos',
+    subject: 'Português',
+    prompt: 'A estrutura clássica de uma redação dissertativo-argumentativa é organizada, tipicamente, em:',
+    options: [
+      { id: 'a', text: 'Apenas dois parágrafos: introdução e conclusão' },
+      { id: 'b', text: 'Introdução (com tese), desenvolvimento (com argumentos) e conclusão (com síntese e, no caso do ENEM, proposta de intervenção)' },
+      { id: 'c', text: 'Uma sequência de parágrafos narrativos, sem uma tese central' },
+      { id: 'd', text: 'Exclusivamente diálogos entre personagens' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A estrutura clássica segue: introdução (contextualização e apresentação da tese), desenvolvimento (argumentos que sustentam a tese) e conclusão (retomada da tese e, no ENEM, proposta de intervenção).',
+    difficulty: 'medium'
+  },
+  // Português — Leitura de Coletânea e Repertório Temático
+  {
+    id: 'q_por_red_repertorio_1',
+    topicId: 'por_red_repertorio',
+    subject: 'Português',
+    prompt: 'Na redação do ENEM, a "coletânea" apresentada junto à proposta de redação tem como função principal:',
+    options: [
+      { id: 'a', text: 'Fornecer a resposta pronta que o candidato deve copiar' },
+      { id: 'b', text: 'Apresentar textos motivadores que ajudam a contextualizar o tema, servindo de ponto de partida — mas não de repertório suficiente por si só — para a argumentação do candidato' },
+      { id: 'c', text: 'Substituir totalmente a necessidade de repertório sociocultural próprio' },
+      { id: 'd', text: 'Avaliar exclusivamente a ortografia do candidato' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Os textos motivadores da coletânea contextualizam o tema e servem de ponto de partida, mas espera-se que o candidato agregue repertório sociocultural próprio, sem apenas copiar ou parafrasear os textos apresentados.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_por_red_repertorio_2',
+    topicId: 'por_red_repertorio',
+    subject: 'Português',
+    prompt: 'Um repertório sociocultural é considerado produtivo em uma redação quando:',
+    options: [
+      { id: 'a', text: 'É apenas citado, sem qualquer articulação com o argumento desenvolvido' },
+      { id: 'b', text: 'Está efetivamente articulado ao argumento, contribuindo para sustentá-lo de forma pertinente ao tema' },
+      { id: 'c', text: 'É usado de forma genérica, podendo ser aplicado a qualquer tema sem nenhum ajuste' },
+      { id: 'd', text: 'Substitui integralmente a necessidade de argumentação própria do candidato' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Um repertório é considerado produtivo quando está articulado de forma pertinente ao argumento e ao tema, e não apenas citado ou usado de forma genérica e descolada da discussão.',
+    difficulty: 'medium'
+  },
+  // Português — Direitos Humanos e Redações Modelo
+  {
+    id: 'q_por_red_direitos_modelo_1',
+    topicId: 'por_red_direitos_modelo',
+    subject: 'Português',
+    prompt: 'Ao abordar um tema relacionado a Direitos Humanos em uma redação dissertativo-argumentativa, é fundamental que o candidato:',
+    options: [
+      { id: 'a', text: 'Trate o respeito aos direitos humanos como um valor a ser relativizado conforme o caso' },
+      { id: 'b', text: 'Mantenha uma perspectiva de defesa e respeito aos direitos humanos como princípio inegociável, mesmo ao discutir situações de violência ou criminalidade' },
+      { id: 'c', text: 'Evite completamente qualquer menção a direitos humanos, mesmo que o tema exija isso' },
+      { id: 'd', text: 'Defenda posições que envolvam qualquer forma de violação a esses direitos, se isso reforçar o argumento' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Bancas como a do ENEM penalizam (podendo até zerar) redações que desrespeitem os direitos humanos; mesmo em temas sensíveis, como criminalidade, a defesa desses direitos deve ser mantida como princípio inegociável.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_por_red_direitos_modelo_2',
+    topicId: 'por_red_direitos_modelo',
+    subject: 'Português',
+    prompt: 'Uma proposta de intervenção bem avaliada, em uma redação sobre um tema social sensível (como desigualdade ou violência), deve, entre outros aspectos:',
+    options: [
+      { id: 'a', text: 'Responsabilizar exclusivamente as vítimas pela situação apresentada' },
+      { id: 'b', text: 'Propor uma ação com agente, meio e finalidade claros, respeitando os direitos humanos e sendo coerente com os argumentos desenvolvidos no texto' },
+      { id: 'c', text: 'Ignorar completamente os direitos humanos, focando apenas em soluções punitivas' },
+      { id: 'd', text: 'Ser genérica, sem qualquer detalhamento de agente ou meio de execução' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Uma boa proposta de intervenção detalha agente, meio e finalidade da ação, mantém coerência com os argumentos do texto e respeita os direitos humanos, mesmo ao tratar de temas sensíveis como violência ou desigualdade.',
+    difficulty: 'medium'
+  },
+  // Inglês — Compreensão de Texto em Inglês
+  {
+    id: 'q_ing_01_1',
+    topicId: 'ing_01',
+    subject: 'Inglês',
+    prompt: 'Read the excerpt below and answer the question.\n\n"Reading habits have changed significantly in the last decade. More people now read on smartphones and tablets than on paper, especially among younger generations. However, some studies suggest that reading on paper may still lead to better comprehension for complex texts."\n\nAccording to the text, what has changed in the last decade?',
+    options: [
+      { id: 'a', text: 'People stopped reading complex texts entirely' },
+      { id: 'b', text: 'Reading habits have shifted, with more people reading on digital devices instead of paper' },
+      { id: 'c', text: 'Paper books have become more popular than digital devices' },
+      { id: 'd', text: 'Younger generations have completely stopped reading' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'The text states that more people now read on smartphones and tablets than on paper — indicating a clear shift in reading habits toward digital devices, especially among younger generations.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_ing_01_2',
+    topicId: 'ing_01',
+    subject: 'Inglês',
+    prompt: 'Read the excerpt below and answer the question.\n\n"Although digital reading is now more common, research indicates that readers often skim on screens rather than reading deeply. This is why some educators still recommend printed materials for subjects that require careful, sustained attention."\n\nWhat can be inferred from the word "although" at the beginning of the text?',
+    options: [
+      { id: 'a', text: 'It introduces a cause-and-effect relationship' },
+      { id: 'b', text: 'It signals a contrast between the popularity of digital reading and a potential drawback associated with it' },
+      { id: 'c', text: 'It has no grammatical or semantic function in the sentence' },
+      { id: 'd', text: 'It indicates that the text will conclude immediately' }
+    ],
+    correctOptionId: 'b',
+    explanation: '"Although" is a subordinating conjunction used to introduce contrast or concession. Here, it contrasts the popularity of digital reading with the drawback that readers tend to skim rather than read deeply on screens.',
+    difficulty: 'medium'
   }
 ];
 
