@@ -1712,6 +1712,7 @@ export const mockQuestions: Question[] = [
   // Física — Cinemática Escalar
   {
     id: 'q_fis_cinematica_1',
+    chapter: 'Cinemática Escalar. Conceitos Fundamentais',
     topicId: 'fis_cinematica',
     subject: 'Física',
     prompt: 'Um trem se move com velocidade constante de 72 km/h. Convertendo para o Sistema Internacional (m/s), qual é essa velocidade?',
@@ -1727,6 +1728,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_cinematica_2',
+    chapter: 'Movimento Uniformemente Variado',
     topicId: 'fis_cinematica',
     subject: 'Física',
     prompt: 'Um objeto é lançado verticalmente para cima com velocidade inicial de 30 m/s. Desprezando a resistência do ar e usando g = 10 m/s², quanto tempo leva até atingir a altura máxima?',
@@ -1742,6 +1744,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_cinematica_3',
+    chapter: 'Movimento Uniforme',
     topicId: 'fis_cinematica',
     subject: 'Física',
     prompt: 'Dois carros partem do mesmo ponto, no mesmo instante, na mesma direção e sentido. O carro A parte com velocidade constante de 20 m/s. O carro B parte do repouso, com aceleração constante de 4 m/s². Após quantos segundos o carro B alcança o carro A?',
@@ -1757,6 +1760,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_cinematica_4',
+    chapter: 'Movimento Uniformemente Variado',
     topicId: 'fis_cinematica',
     subject: 'Física',
     prompt: 'Um corpo em movimento retilíneo uniformemente variado parte com velocidade inicial de 10 m/s e aceleração de 2 m/s². Qual é a distância percorrida entre os instantes t=2s e t=5s?',
@@ -1773,6 +1777,7 @@ export const mockQuestions: Question[] = [
   // Física — Eletrodinâmica (Circuitos Elétricos)
   {
     id: 'q_fis_circuitos_1',
+    chapter: 'Resistores',
     topicId: 'fis_circuitos',
     subject: 'Física',
     prompt: 'Em um circuito, um resistor de 10 Ω é percorrido por uma corrente de 2 A. Qual é a diferença de potencial (tensão) sobre esse resistor?',
@@ -1788,6 +1793,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_circuitos_2',
+    chapter: 'Circuitos de Malha Única',
     topicId: 'fis_circuitos',
     subject: 'Física',
     prompt: 'Dois resistores de 4 Ω e 6 Ω estão associados em série em um circuito com uma fonte de 20 V. Qual é a corrente total que percorre o circuito?',
@@ -1803,6 +1809,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_circuitos_3',
+    chapter: 'Resistores',
     topicId: 'fis_circuitos',
     subject: 'Física',
     prompt: 'Dois resistores de 6 Ω cada estão associados em paralelo. Qual é a resistência equivalente dessa associação?',
@@ -1818,6 +1825,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_circuitos_4',
+    chapter: 'Circuitos de Malha Única',
     topicId: 'fis_circuitos',
     subject: 'Física',
     prompt: 'Em uma associação de resistores em série, o que se mantém igual em todos os resistores?',
@@ -1833,6 +1841,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_circuitos_5',
+    chapter: 'Potência Elétrica',
     topicId: 'fis_circuitos',
     subject: 'Física',
     prompt: 'Um chuveiro elétrico tem potência de 4.400 W e opera em uma tensão de 220 V. Qual é a corrente elétrica que passa pelo chuveiro durante o funcionamento?',
@@ -1849,6 +1858,7 @@ export const mockQuestions: Question[] = [
   // Física — Leis de Newton e Dinâmica do Movimento Retilíneo
   {
     id: 'q_fis_leis_newton_1',
+    chapter: 'As Leis de Newton',
     topicId: 'fis_leis_newton',
     subject: 'Física',
     prompt: 'Um bloco de massa 5 kg está sobre uma superfície horizontal sem atrito e é puxado por uma força horizontal de 20 N. Qual é a aceleração do bloco?',
@@ -1864,6 +1874,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_leis_newton_2',
+    chapter: 'A Força de Contato',
     topicId: 'fis_leis_newton',
     subject: 'Física',
     prompt: 'Um bloco de massa 10 kg é puxado por uma força horizontal de 50 N sobre uma superfície com coeficiente de atrito cinético de 0,2. Usando g = 10 m/s², qual é a aceleração do bloco?',
@@ -1879,6 +1890,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_leis_newton_3',
+    chapter: 'Sistema de Corpos Interagindo e os Elementos Transmissores de Força',
     topicId: 'fis_leis_newton',
     subject: 'Física',
     prompt: 'Dois blocos, A (massa 3 kg) e B (massa 2 kg), estão conectados por um fio ideal e são puxados por uma força horizontal de 20 N aplicada em A, sobre uma superfície sem atrito. Qual é a tração no fio que conecta os blocos?',
@@ -1894,6 +1906,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_leis_newton_4',
+    chapter: 'As Leis de Newton',
     topicId: 'fis_leis_newton',
     subject: 'Física',
     prompt: 'De acordo com a Terceira Lei de Newton (ação e reação), quando um cavalo puxa uma carroça para frente, a carroça também exerce uma força sobre o cavalo. Por que, então, o conjunto se move para frente, em vez de ficar parado?',
@@ -1909,6 +1922,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_leis_newton_5',
+    chapter: 'Sistema de Corpos Interagindo e os Elementos Transmissores de Força',
     topicId: 'fis_leis_newton',
     subject: 'Física',
     prompt: 'Um elevador de massa 800 kg sobe com aceleração de 2 m/s² (para cima). Usando g = 10 m/s², qual é a tração no cabo que sustenta o elevador?',
@@ -1925,6 +1939,7 @@ export const mockQuestions: Question[] = [
   // Física — Calorimetria
   {
     id: 'q_fis_calorimetria_1',
+    chapter: 'Calor Sensível e Calor Latente',
     topicId: 'fis_calorimetria',
     subject: 'Física',
     prompt: 'Qual é a quantidade de calor necessária para elevar a temperatura de 500 g de água de 20°C para 60°C? (calor específico da água = 1 cal/g°C)',
@@ -1940,6 +1955,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_calorimetria_2',
+    chapter: 'Calor Sensível e Calor Latente',
     topicId: 'fis_calorimetria',
     subject: 'Física',
     prompt: 'Durante uma mudança de estado físico (como a fusão do gelo), o que acontece com a temperatura da substância enquanto o calor está sendo fornecido?',
@@ -1955,6 +1971,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_calorimetria_3',
+    chapter: 'Calor Sensível e Calor Latente',
     topicId: 'fis_calorimetria',
     subject: 'Física',
     prompt: 'Qual é a quantidade de calor necessária para fundir completamente 100 g de gelo a 0°C, sabendo que o calor latente de fusão do gelo é 80 cal/g?',
@@ -1970,6 +1987,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_calorimetria_4',
+    chapter: 'Temperatura, Calor e seus Mecanismos de Transferência',
     topicId: 'fis_calorimetria',
     subject: 'Física',
     prompt: 'Um bloco de metal de 200 g, a 100°C, é colocado em 300 g de água a 20°C, em um sistema termicamente isolado. O calor específico da água é 1 cal/g°C e do metal é 0,2 cal/g°C. Qual é, aproximadamente, a temperatura de equilíbrio do sistema?',
@@ -1986,6 +2004,7 @@ export const mockQuestions: Question[] = [
   // Física — Termodinâmica dos Gases
   {
     id: 'q_fis_termodinamica_gases_1',
+    chapter: 'Gases Ideais: Variáveis de Estado e as Transformações Gasosas',
     topicId: 'fis_termodinamica_gases',
     subject: 'Física',
     prompt: 'Um gás ideal está em um recipiente de volume fixo. Se sua temperatura absoluta dobra, o que acontece com sua pressão, mantendo o número de mols constante?',
@@ -2001,6 +2020,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_termodinamica_gases_2',
+    chapter: 'Gases Ideais: Variáveis de Estado e as Transformações Gasosas',
     topicId: 'fis_termodinamica_gases',
     subject: 'Física',
     prompt: 'Um gás ideal ocupa 2 L a uma pressão de 3 atm. Se a pressão for reduzida para 1 atm, mantendo a temperatura constante, qual será o novo volume do gás?',
@@ -2016,6 +2036,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_termodinamica_gases_3',
+    chapter: 'Trabalho da Força de Pressão do Gás',
     topicId: 'fis_termodinamica_gases',
     subject: 'Física',
     prompt: 'Um gás ideal sofre uma transformação isotérmica (temperatura constante) de um estado A para um estado B, com redução do volume. O que acontece com a energia interna desse gás durante essa transformação?',
@@ -2031,6 +2052,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_termodinamica_gases_4',
+    chapter: 'Primeira Lei da Termodinâmica',
     topicId: 'fis_termodinamica_gases',
     subject: 'Física',
     prompt: 'Segundo a Primeira Lei da Termodinâmica, a variação da energia interna de um sistema é igual a:',
@@ -2046,6 +2068,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_termodinamica_gases_5',
+    chapter: 'Gases Ideais: Variáveis de Estado e as Transformações Gasosas',
     topicId: 'fis_termodinamica_gases',
     subject: 'Física',
     prompt: 'Um mol de gás ideal ocupa um volume de 22,4 L nas CNTP (0°C, 1 atm). Se a temperatura for elevada para 273°C, mantendo a pressão constante, qual será, aproximadamente, o novo volume?',
@@ -2062,6 +2085,7 @@ export const mockQuestions: Question[] = [
   // Física — Óptica Geométrica
   {
     id: 'q_fis_optica_geometrica_1',
+    chapter: 'Reflexão em Superfícies Esféricas',
     topicId: 'fis_optica_geometrica',
     subject: 'Física',
     prompt: 'Um objeto está posicionado no centro de curvatura de um espelho côncavo. Onde se forma a imagem?',
@@ -2077,6 +2101,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_optica_geometrica_2',
+    chapter: 'Reflexão em Superfícies Planas',
     topicId: 'fis_optica_geometrica',
     subject: 'Física',
     prompt: 'Um espelho plano gera uma imagem de um objeto colocado a 30 cm de sua superfície. A que distância do espelho está a imagem, e que tipo de imagem é formada?',
@@ -2092,6 +2117,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_optica_geometrica_3',
+    chapter: 'Lentes Esféricas: Estudo Gráfico',
     topicId: 'fis_optica_geometrica',
     subject: 'Física',
     prompt: 'Um objeto é colocado a 20 cm de uma lente convergente de distância focal 10 cm. Usando a equação de Gauss (1/f = 1/p + 1/p\'), a que distância da lente se forma a imagem?',
@@ -2107,6 +2133,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_optica_geometrica_4',
+    chapter: 'Refração: Fundamentos, Leis e Aplicações',
     topicId: 'fis_optica_geometrica',
     subject: 'Física',
     prompt: 'A refração da luz ocorre quando ela passa de um meio para outro com índice de refração diferente. O que acontece com a velocidade da luz ao passar do ar (menos denso opticamente) para a água (mais densa opticamente)?',
@@ -2122,6 +2149,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_optica_geometrica_5',
+    chapter: 'Reflexão em Superfícies Planas',
     topicId: 'fis_optica_geometrica',
     subject: 'Física',
     prompt: 'Um raio de luz incide sobre um espelho plano com ângulo de incidência de 40° (medido em relação à reta normal à superfície). Qual é o ângulo de reflexão desse raio?',
@@ -2138,6 +2166,7 @@ export const mockQuestions: Question[] = [
   // Física — Óptica Instrumental e da Visão
   {
     id: 'q_fis_optica_instrumental_1',
+    chapter: 'Óptica da Visão',
     topicId: 'fis_optica_instrumental',
     subject: 'Física',
     prompt: 'Uma pessoa com hipermetropia tem dificuldade para enxergar objetos próximos, pois a imagem se forma atrás da retina. Que tipo de lente corretiva é indicada?',
@@ -2153,6 +2182,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_optica_instrumental_2',
+    chapter: 'Óptica da Visão',
     topicId: 'fis_optica_instrumental',
     subject: 'Física',
     prompt: 'Uma pessoa com miopia tem dificuldade para enxergar objetos distantes, pois a imagem se forma antes da retina. Que tipo de lente corretiva é indicada?',
@@ -2168,6 +2198,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_optica_instrumental_3',
+    chapter: 'Microscópio e Luneta Astronômica (ou Telescópio Refrator): Noções Básicas',
     topicId: 'fis_optica_instrumental',
     subject: 'Física',
     prompt: 'Um microscópio composto é formado por duas lentes convergentes: a objetiva (próxima ao objeto) e a ocular (próxima ao olho). Qual é a principal função da lente objetiva nesse sistema?',
@@ -2183,6 +2214,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_optica_instrumental_4',
+    chapter: 'Microscópio e Luneta Astronômica (ou Telescópio Refrator): Noções Básicas',
     topicId: 'fis_optica_instrumental',
     subject: 'Física',
     prompt: 'Uma lupa (lente de aumento) é uma lente convergente usada para observar objetos pequenos, ampliados. Para que a lupa produza uma imagem virtual, direita e ampliada, o objeto deve ser posicionado:',
@@ -2198,6 +2230,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_optica_instrumental_5',
+    chapter: 'Óptica da Visão',
     topicId: 'fis_optica_instrumental',
     subject: 'Física',
     prompt: 'Qual é o nome dado à dificuldade de acomodação visual para perto, comum a partir dos 40-45 anos de idade, causada pela perda de elasticidade natural do cristalino ao longo da vida?',
@@ -2214,6 +2247,7 @@ export const mockQuestions: Question[] = [
   // Física — Ondulatória
   {
     id: 'q_fis_ondulatoria_1',
+    chapter: 'Efeito Doppler: Descrição e Estudo Quantitativo',
     topicId: 'fis_ondulatoria',
     subject: 'Física',
     prompt: 'O efeito Doppler explica por que o som de uma ambulância parece mais agudo quando ela se aproxima e mais grave quando ela se afasta. O que causa essa mudança percebida na frequência do som?',
@@ -2229,6 +2263,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_ondulatoria_2',
+    chapter: 'Ondas Estacionárias em Tubos',
     topicId: 'fis_ondulatoria',
     subject: 'Física',
     prompt: 'Em um tubo sonoro fechado em uma extremidade, apenas harmônicos de ordem ímpar (1º, 3º, 5º...) da frequência fundamental são possíveis. Se a frequência fundamental de um tubo é 100 Hz, qual é a frequência do harmônico de ordem 5 nesse tubo?',
@@ -2244,6 +2279,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_ondulatoria_3',
+    chapter: 'Fenômenos Ondulatórios: Difração, Polarização e Ressonância',
     topicId: 'fis_ondulatoria',
     subject: 'Física',
     prompt: 'O fenômeno da ressonância ocorre quando um sistema é excitado por uma força externa cuja frequência coincide com:',
@@ -2259,6 +2295,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_ondulatoria_4',
+    chapter: 'Ondas Estacionárias em Cordas',
     topicId: 'fis_ondulatoria',
     subject: 'Física',
     prompt: 'Duas cordas de mesmo material e mesma tensão, mas com comprimentos diferentes (uma o dobro da outra), vibram livremente. Qual delas produz um som de frequência mais baixa (mais grave)?',
@@ -2274,6 +2311,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_ondulatoria_5',
+    chapter: 'Ondulatória: Som e suas Propriedades',
     topicId: 'fis_ondulatoria',
     subject: 'Física',
     prompt: 'Uma onda sonora se propaga do ar para a água. O que permanece constante nessa transição entre os dois meios?',
@@ -2602,6 +2640,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_real_comvest_2023_fis',
+    chapter: 'Movimento Uniformemente Variado',
     topicId: 'fis_cinematica',
     subject: 'Física',
     prompt: 'Um balão, inicialmente em repouso no solo, decola e sobe em movimento uniformemente variado. Se o balão atinge a altura h = 80 m após um tempo t = 40 s, conclui-se que a aceleração vertical do balão nesse movimento é igual a:',
@@ -2713,6 +2752,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_real_famerp_2018_fis',
+    chapter: 'Calor Sensível e Calor Latente',
     topicId: 'fis_calorimetria',
     subject: 'Física',
     prompt: 'Em um recipiente de capacidade térmica desprezível, 300 g de água, inicialmente a 20 ºC, foram aquecidos. Após 2,0 minutos, quando a temperatura da água era 40 ºC, mais 300 g de água a 20 ºC foram adicionados ao recipiente. Considerando que não ocorreu perda de calor da água para o meio e que a fonte fornece calor a uma potência constante durante o processo, o tempo decorrido, após a adição da água, para que a temperatura da água atingisse 80 ºC foi de:',
@@ -2829,6 +2869,7 @@ export const mockQuestions: Question[] = [
   // Física — Dinâmica Impulsiva
   {
     id: 'q_fis_dinamica_impulsiva_1',
+    chapter: 'Impulso e Quantidade de Movimento',
     topicId: 'fis_dinamica_impulsiva',
     subject: 'Física',
     prompt: 'Qual é o impulso de uma força constante de 20 N aplicada durante 3 segundos sobre um corpo?',
@@ -2844,6 +2885,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_dinamica_impulsiva_2',
+    chapter: 'Impulso e Quantidade de Movimento',
     topicId: 'fis_dinamica_impulsiva',
     subject: 'Física',
     prompt: 'Um corpo de massa 4 kg está em repouso e recebe um impulso de 20 N·s. Qual é a velocidade final desse corpo?',
@@ -2859,6 +2901,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_dinamica_impulsiva_3',
+    chapter: 'Colisões',
     topicId: 'fis_dinamica_impulsiva',
     subject: 'Física',
     prompt: 'Duas esferas de massas iguais colidem frontalmente e permanecem grudadas após a colisão (colisão perfeitamente inelástica). A esfera A tinha velocidade de 6 m/s e a esfera B estava parada. Qual é a velocidade do conjunto após a colisão?',
@@ -2874,6 +2917,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_dinamica_impulsiva_4',
+    chapter: 'Colisões',
     topicId: 'fis_dinamica_impulsiva',
     subject: 'Física',
     prompt: 'Em uma colisão perfeitamente elástica entre dois corpos, o que se conserva, além da quantidade de movimento?',
@@ -2889,6 +2933,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_dinamica_impulsiva_5',
+    chapter: 'Impulso e Quantidade de Movimento',
     topicId: 'fis_dinamica_impulsiva',
     subject: 'Física',
     prompt: 'Uma bola de massa 0,5 kg é arremessada contra uma parede com velocidade de 8 m/s e quica de volta com velocidade de 6 m/s (sentido oposto). Qual é o módulo do impulso exercido pela parede sobre a bola?',
@@ -2905,6 +2950,7 @@ export const mockQuestions: Question[] = [
   // Física — Estática dos Corpos Sólidos e dos Fluidos
   {
     id: 'q_fis_estatica_1',
+    chapter: 'Estática',
     topicId: 'fis_estatica',
     subject: 'Física',
     prompt: 'Uma barra horizontal rígida está em equilíbrio, apoiada em um único ponto, com um peso de 100 N pendurado a 2 m do apoio, de um lado. Qual peso deve ser pendurado a 4 m do apoio, do outro lado, para manter o equilíbrio?',
@@ -2920,6 +2966,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_estatica_2',
+    chapter: 'Hidrostática: Densidade e Pressão',
     topicId: 'fis_estatica',
     subject: 'Física',
     prompt: 'Um objeto totalmente submerso em água tem peso aparente (peso medido dentro da água) menor que seu peso real fora da água. Isso ocorre devido a qual força?',
@@ -2935,6 +2982,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_estatica_3',
+    chapter: 'Hidrostática: Densidade e Pressão',
     topicId: 'fis_estatica',
     subject: 'Física',
     prompt: 'Um bloco de volume 0,002 m³ está totalmente submerso em água (densidade 1000 kg/m³). Usando g = 10 m/s², qual é o módulo do empuxo sobre esse bloco?',
@@ -2950,6 +2998,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_estatica_4',
+    chapter: 'Estática',
     topicId: 'fis_estatica',
     subject: 'Física',
     prompt: 'Para que um corpo rígido esteja em equilíbrio estático completo, quais duas condições precisam ser satisfeitas simultaneamente?',
@@ -2965,6 +3014,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_estatica_5',
+    chapter: 'Hidrostática: Densidade e Pressão',
     topicId: 'fis_estatica',
     subject: 'Física',
     prompt: 'Um objeto flutua parcialmente submerso em um líquido, em equilíbrio. O que podemos concluir sobre a relação entre o peso do objeto e o empuxo que ele recebe?',
@@ -2981,6 +3031,7 @@ export const mockQuestions: Question[] = [
   // Física — Eletromagnetismo
   {
     id: 'q_fis_eletromagnetismo_1',
+    chapter: 'Força Magnética e Análise de Lançamentos de Cargas em um Campo Magnético Uniforme',
     topicId: 'fis_eletromagnetismo',
     subject: 'Física',
     prompt: 'Uma carga elétrica em movimento dentro de um campo magnético uniforme, com velocidade paralela às linhas de campo magnético, sofre qual força magnética?',
@@ -2996,6 +3047,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_eletromagnetismo_2',
+    chapter: 'Análise de Força Magnética em Fios Percorridos por Correntes Contínuas',
     topicId: 'fis_eletromagnetismo',
     subject: 'Física',
     prompt: 'Um fio retilíneo percorrido por uma corrente elétrica de 5 A está imerso em um campo magnético uniforme de 0,2 T, perpendicular ao fio, ao longo de um comprimento de 0,5 m. Qual é o módulo da força magnética sobre o fio?',
@@ -3011,6 +3063,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_eletromagnetismo_3',
+    chapter: 'Indução Eletromagnética: Lei de Lenz',
     topicId: 'fis_eletromagnetismo',
     subject: 'Física',
     prompt: 'Ao aproximar um ímã de uma espira condutora fechada, surge uma corrente induzida na espira. De acordo com a Lei de Lenz, o sentido dessa corrente induzida é tal que:',
@@ -3026,6 +3079,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_eletromagnetismo_4',
+    chapter: 'Indução Eletromagnética: Lei de Lenz',
     topicId: 'fis_eletromagnetismo',
     subject: 'Física',
     prompt: 'O que é necessário para que uma corrente elétrica seja induzida em uma espira condutora, segundo a Lei de Faraday?',
@@ -3041,6 +3095,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_eletromagnetismo_5',
+    chapter: 'Força Magnética e Análise de Lançamentos de Cargas em um Campo Magnético Uniforme',
     topicId: 'fis_eletromagnetismo',
     subject: 'Física',
     prompt: 'Um próton se move com velocidade perpendicular a um campo magnético uniforme. Qual é a direção da força magnética resultante sobre o próton, em relação à sua velocidade?',
@@ -5471,6 +5526,7 @@ export const mockQuestions: Question[] = [
   // Física — Cinemática Vetorial
   {
     id: 'q_fis_cinematica_vetorial_1',
+    chapter: 'Composição de Movimentos',
     topicId: 'fis_cinematica_vetorial',
     subject: 'Física',
     prompt: 'Um projétil é lançado horizontalmente do topo de um penhasco de 45 m de altura, com velocidade inicial de 10 m/s. Usando g = 10 m/s², qual é o alcance horizontal do projétil ao atingir o solo?',
@@ -5486,6 +5542,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_cinematica_vetorial_2',
+    chapter: 'Composição de Movimentos',
     topicId: 'fis_cinematica_vetorial',
     subject: 'Física',
     prompt: 'Um barco atravessa um rio cuja correnteza tem velocidade de 3 m/s, paralela à margem. O barco se move a 4 m/s em relação à água, na direção perpendicular à margem (atravessando o rio). Qual é o módulo da velocidade resultante do barco em relação à margem?',
@@ -5501,6 +5558,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_cinematica_vetorial_3',
+    chapter: 'Grandezas Físicas e Operações com Vetores',
     topicId: 'fis_cinematica_vetorial',
     subject: 'Física',
     prompt: 'Um vetor deslocamento tem componente horizontal de 8 m e componente vertical de 6 m. Qual é o módulo desse vetor deslocamento?',
@@ -5516,6 +5574,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_cinematica_vetorial_4',
+    chapter: 'Composição de Movimentos',
     topicId: 'fis_cinematica_vetorial',
     subject: 'Física',
     prompt: 'Um projétil é lançado obliquamente com velocidade inicial de 20 m/s, formando um ângulo de 30° com a horizontal (cos 30° ≈ 0,87). Qual é, aproximadamente, a componente horizontal dessa velocidade inicial?',
@@ -5531,6 +5590,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_cinematica_vetorial_5',
+    chapter: 'Composição de Movimentos',
     topicId: 'fis_cinematica_vetorial',
     subject: 'Física',
     prompt: 'Um projétil é lançado obliquamente com velocidade inicial de 20 m/s, a 30° acima da horizontal (sen 30° = 0,5). Usando g = 10 m/s², qual é, aproximadamente, o tempo total que o projétil permanece no ar até retornar à mesma altura de lançamento?',
@@ -5547,6 +5607,7 @@ export const mockQuestions: Question[] = [
   // Física — Gravitação e Movimento Circular
   {
     id: 'q_fis_gravitacao_circular_1',
+    chapter: 'Órbitas',
     topicId: 'fis_gravitacao_circular',
     subject: 'Física',
     prompt: 'Um satélite orbita a Terra a uma altitude constante, em movimento circular uniforme. Se a distância do satélite ao centro da Terra dobrar, o que acontece com a força gravitacional que a Terra exerce sobre ele?',
@@ -5562,6 +5623,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_gravitacao_circular_2',
+    chapter: 'Leis da Gravitação',
     topicId: 'fis_gravitacao_circular',
     subject: 'Física',
     prompt: 'Um planeta orbita o Sol a uma distância de 4 UA (unidades astronômicas). Pela Terceira Lei de Kepler (T² ∝ r³, com T em anos terrestres e r em UA), qual é, aproximadamente, o período orbital desse planeta?',
@@ -5577,6 +5639,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_gravitacao_circular_3',
+    chapter: 'Dinâmica do Movimento Circular',
     topicId: 'fis_gravitacao_circular',
     subject: 'Física',
     prompt: 'Um carro faz uma curva circular de raio 50 m com velocidade constante de 10 m/s. Qual é o módulo da aceleração centrípeta desse carro?',
@@ -5592,6 +5655,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_gravitacao_circular_4',
+    chapter: 'Dinâmica do Movimento Circular',
     topicId: 'fis_gravitacao_circular',
     subject: 'Física',
     prompt: 'Dobrando a velocidade de um corpo em movimento circular uniforme, mantendo o raio da trajetória constante, o que acontece com a aceleração centrípeta?',
@@ -5607,6 +5671,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_gravitacao_circular_5',
+    chapter: 'Órbitas',
     topicId: 'fis_gravitacao_circular',
     subject: 'Física',
     prompt: 'Qual é a principal razão pela qual, em uma órbita circular, mesmo com velocidade escalar constante, dizemos que o satélite está em movimento acelerado?',
@@ -5623,6 +5688,7 @@ export const mockQuestions: Question[] = [
   // Física — Dinâmica Energética e Transformações de Energia
   {
     id: 'q_fis_energia_1',
+    chapter: 'Trabalho e Energia: Trabalho de uma Força',
     topicId: 'fis_energia',
     subject: 'Física',
     prompt: 'Um corpo de massa 2 kg é erguido a uma altura de 5 m. Usando g = 10 m/s², qual é o trabalho realizado contra a gravidade para erguê-lo (assumindo velocidade constante)?',
@@ -5638,6 +5704,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_energia_2',
+    chapter: 'Trabalho e Energia: Teorema da Energia Cinética',
     topicId: 'fis_energia',
     subject: 'Física',
     prompt: 'Um bloco de massa 2 kg desliza sobre uma superfície horizontal com atrito, partindo com velocidade de 10 m/s e parando após percorrer 20 m. Qual é o trabalho realizado pela força de atrito sobre o bloco?',
@@ -5653,6 +5720,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_energia_3',
+    chapter: 'Trabalho e Energia: o Teorema da Energia Potencial',
     topicId: 'fis_energia',
     subject: 'Física',
     prompt: 'Uma mola ideal tem constante elástica k = 200 N/m. Qual é a energia potencial elástica armazenada quando ela é comprimida 0,1 m?',
@@ -5668,6 +5736,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_energia_4',
+    chapter: 'Sistemas Conservativos e Sistemas Não Conservativos',
     topicId: 'fis_energia',
     subject: 'Física',
     prompt: 'Um corpo desliza, a partir do repouso, por uma rampa sem atrito de altura 5 m. Usando g = 10 m/s², qual é a velocidade do corpo ao chegar na base da rampa?',
@@ -5683,6 +5752,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_energia_5',
+    chapter: 'Sistemas Conservativos e Sistemas Não Conservativos',
     topicId: 'fis_energia',
     subject: 'Física',
     prompt: 'Um pêndulo é solto de uma altura de 0,8 m em relação ao ponto mais baixo de sua trajetória, sem atrito. Usando g = 10 m/s², qual é a velocidade do pêndulo ao passar pelo ponto mais baixo?',
@@ -5699,6 +5769,7 @@ export const mockQuestions: Question[] = [
   // Física — Eletrostática e Campo Elétrico
   {
     id: 'q_fis_eletrostatica_1',
+    chapter: 'Força Elétrica: Lei de Coulomb',
     topicId: 'fis_eletrostatica',
     subject: 'Física',
     prompt: 'Duas cargas puntiformes de +2 μC e +3 μC estão separadas por uma distância de 3 m no vácuo (k ≈ 9×10⁹ N·m²/C²). Qual é, aproximadamente, a força elétrica entre elas?',
@@ -5714,6 +5785,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_eletrostatica_2',
+    chapter: 'Força Elétrica: Lei de Coulomb',
     topicId: 'fis_eletrostatica',
     subject: 'Física',
     prompt: 'Se a distância entre duas cargas puntiformes triplicar, mantendo as cargas constantes, o que acontece com a força elétrica entre elas?',
@@ -5729,6 +5801,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_eletrostatica_3',
+    chapter: 'Campo Elétrico Uniforme: Abordagem Escalar e Abordagem Vetorial',
     topicId: 'fis_eletrostatica',
     subject: 'Física',
     prompt: 'O que caracteriza um campo elétrico uniforme, como o existente entre as placas de um capacitor de placas paralelas?',
@@ -5744,6 +5817,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_eletrostatica_4',
+    chapter: 'Dinâmica das Cargas Elétricas',
     topicId: 'fis_eletrostatica',
     subject: 'Física',
     prompt: 'Um elétron é colocado em um campo elétrico uniforme de intensidade 500 N/C. Sabendo que a carga do elétron é aproximadamente 1,6×10⁻¹⁹ C, qual é o módulo da força elétrica sobre o elétron?',
@@ -5759,6 +5833,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_eletrostatica_5',
+    chapter: 'Mapeamento do Campo Elétrico: Linhas de Força e Superfícies Equipotenciais',
     topicId: 'fis_eletrostatica',
     subject: 'Física',
     prompt: 'Duas cargas de sinais opostos são colocadas próximas uma da outra. O que acontece com as linhas de campo elétrico entre elas?',
@@ -5775,6 +5850,7 @@ export const mockQuestions: Question[] = [
   // Física — Fundamentos de Ondas e Oscilações
   {
     id: 'q_fis_ondas_fundamentos_1',
+    chapter: 'Conceitos Básicos',
     topicId: 'fis_ondas_fundamentos',
     subject: 'Física',
     prompt: 'Uma onda tem frequência de 20 Hz. Qual é o seu período?',
@@ -5790,6 +5866,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_ondas_fundamentos_2',
+    chapter: 'Equação Fundamental da Ondulatória',
     topicId: 'fis_ondas_fundamentos',
     subject: 'Física',
     prompt: 'Uma onda sonora se propaga no ar a 340 m/s e tem frequência de 680 Hz. Qual é o seu comprimento de onda?',
@@ -5805,6 +5882,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_ondas_fundamentos_3',
+    chapter: 'Conceitos Básicos',
     topicId: 'fis_ondas_fundamentos',
     subject: 'Física',
     prompt: 'O que diferencia uma onda mecânica de uma onda eletromagnética, em termos de necessidade de um meio material para se propagar?',
@@ -5820,6 +5898,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_ondas_fundamentos_4',
+    chapter: 'Conceitos Básicos',
     topicId: 'fis_ondas_fundamentos',
     subject: 'Física',
     prompt: 'Uma onda transversal tem amplitude de 5 cm. O que representa fisicamente essa amplitude?',
@@ -5835,6 +5914,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_ondas_fundamentos_5',
+    chapter: 'Conceitos Básicos',
     topicId: 'fis_ondas_fundamentos',
     subject: 'Física',
     prompt: 'Duas ondas idênticas se sobrepõem em fase (crista com crista, vale com vale) em um mesmo ponto do meio. Que tipo de interferência ocorre, e o que acontece com a amplitude resultante?',
@@ -5851,6 +5931,7 @@ export const mockQuestions: Question[] = [
   // Física — Física Moderna
   {
     id: 'q_fis_fisica_moderna_1',
+    chapter: 'Noções Básicas de Física Quântica',
     topicId: 'fis_fisica_moderna',
     subject: 'Física',
     prompt: 'No efeito fotoelétrico, um metal só libera elétrons quando iluminado por luz de frequência igual ou superior a um valor mínimo, chamado frequência de corte. O que acontece se a luz incidente tiver frequência abaixo desse valor, mesmo com intensidade muito alta?',
@@ -5866,6 +5947,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_fisica_moderna_2',
+    chapter: 'Noções Básicas de Física Quântica',
     topicId: 'fis_fisica_moderna',
     subject: 'Física',
     prompt: 'Segundo a equação do efeito fotoelétrico de Einstein, a energia cinética máxima dos elétrons ejetados é dada por Ec = hf - W, onde W é a função trabalho do metal. O que representa fisicamente essa função trabalho W?',
@@ -5881,6 +5963,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_fisica_moderna_3',
+    chapter: 'Noções Básicas de Física Quântica',
     topicId: 'fis_fisica_moderna',
     subject: 'Física',
     prompt: 'Segundo a Teoria da Relatividade Restrita, dois eventos que são simultâneos para um observador podem não ser simultâneos para outro observador em movimento relativo ao primeiro. O que essa ideia contraria, da física clássica (newtoniana)?',
@@ -5896,6 +5979,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_fisica_moderna_4',
+    chapter: 'Noções Básicas de Física Quântica',
     topicId: 'fis_fisica_moderna',
     subject: 'Física',
     prompt: 'De acordo com a dualidade onda-partícula, proposta na física quântica, a luz pode se comportar como onda em alguns experimentos (como a difração) e como partícula em outros (como o efeito fotoelétrico). Isso significa que:',
@@ -5911,6 +5995,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_fis_fisica_moderna_5',
+    chapter: 'Noções Básicas de Física Quântica',
     topicId: 'fis_fisica_moderna',
     subject: 'Física',
     prompt: 'Segundo a Teoria da Relatividade Restrita, nenhum objeto com massa pode atingir ou ultrapassar a velocidade da luz no vácuo. O que acontece com a energia necessária para acelerar um objeto com massa à medida que sua velocidade se aproxima da velocidade da luz?',
