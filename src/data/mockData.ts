@@ -3936,6 +3936,7 @@ export const mockQuestions: Question[] = [
   // Geografia — Cartografia e Fundamentos
   {
     id: 'q_geo_cartografia_1',
+    chapter: 'Linguagem Cartográfica',
     topicId: 'geo_cartografia',
     subject: 'Geografia',
     prompt: 'Um mapa está na escala 1:50.000. Uma distância de 4 cm no mapa corresponde, na realidade, a quantos quilômetros?',
@@ -3951,6 +3952,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_geo_cartografia_2',
+    chapter: 'Projeções Cartográficas',
     topicId: 'geo_cartografia',
     subject: 'Geografia',
     prompt: 'A projeção cartográfica de Mercator, amplamente usada em navegação, é classificada como conforme porque:',
@@ -3966,6 +3968,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_geo_cartografia_3',
+    chapter: 'Representações Gráficas e Cartográficas',
     topicId: 'geo_cartografia',
     subject: 'Geografia',
     prompt: 'Em um mapa com curvas de nível bastante espaçadas entre si em uma determinada área, isso indica que, naquele trecho, o relevo apresenta:',
@@ -3981,6 +3984,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_geo_cartografia_4',
+    chapter: 'Cartografia Digital',
     topicId: 'geo_cartografia',
     subject: 'Geografia',
     prompt: 'O Sistema de Posicionamento Global (GPS) permite determinar a localização exata de um ponto na superfície terrestre principalmente por meio de:',
@@ -3996,6 +4000,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_geo_cartografia_5',
+    chapter: 'Projeções Cartográficas',
     topicId: 'geo_cartografia',
     subject: 'Geografia',
     prompt: 'Diferentemente das projeções conformes (como Mercator), as projeções equivalentes (como a de Peters) priorizam preservar:',
@@ -4012,6 +4017,7 @@ export const mockQuestions: Question[] = [
   // Geografia — Climatologia e Problemas Socioambientais
   {
     id: 'q_geo_climatologia_socioambiental_1',
+    chapter: 'Desafios Ambientais do Século XXI',
     topicId: 'geo_climatologia_socioambiental',
     subject: 'Geografia',
     prompt: 'O fenômeno da ilha de calor urbana é caracterizado por:',
@@ -4027,6 +4033,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_geo_climatologia_socioambiental_2',
+    chapter: 'Desafios Ambientais do Século XXI',
     topicId: 'geo_climatologia_socioambiental',
     subject: 'Geografia',
     prompt: 'O efeito estufa intensificado, associado às mudanças climáticas contemporâneas, é impulsionado principalmente pelo aumento da concentração atmosférica de gases como:',
@@ -4042,6 +4049,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_geo_climatologia_socioambiental_3',
+    chapter: 'Desafios Ambientais do Século XXI',
     topicId: 'geo_climatologia_socioambiental',
     subject: 'Geografia',
     prompt: 'A chuva ácida, um problema socioambiental associado à poluição atmosférica industrial e veicular, é formada principalmente pela combinação de água presente na atmosfera com:',
@@ -4057,6 +4065,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_geo_climatologia_socioambiental_4',
+    chapter: 'Dinâmica Climática',
     topicId: 'geo_climatologia_socioambiental',
     subject: 'Geografia',
     prompt: 'O fenômeno El Niño, caracterizado pelo aquecimento anômalo das águas do Oceano Pacífico equatorial, tende a causar, entre outros efeitos, no Brasil:',
@@ -4072,6 +4081,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_geo_climatologia_socioambiental_5',
+    chapter: 'Desafios Ambientais do Século XXI',
     topicId: 'geo_climatologia_socioambiental',
     subject: 'Geografia',
     prompt: 'A desertificação, processo de degradação de terras em regiões áridas e semiáridas, é intensificada, além de fatores climáticos naturais, principalmente por ações humanas como:',
@@ -4088,6 +4098,7 @@ export const mockQuestions: Question[] = [
   // Geografia — Hidrogeografia
   {
     id: 'q_geo_hidrogeografia_1',
+    chapter: 'Hidrogeografia Mundial',
     topicId: 'geo_hidrogeografia',
     subject: 'Geografia',
     prompt: 'O maior aquífero subterrâneo da América do Sul, com grande extensão em território brasileiro, é o:',
@@ -4103,6 +4114,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_geo_hidrogeografia_2',
+    chapter: 'Hidrogeografia Mundial',
     topicId: 'geo_hidrogeografia',
     subject: 'Geografia',
     prompt: 'Um rio de planalto, com relevo acidentado e presença de corredeiras e quedas d\'água, apresenta principalmente potencial para:',
@@ -4118,6 +4130,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_geo_hidrogeografia_3',
+    chapter: 'Hidrogeografia Mundial',
     topicId: 'geo_hidrogeografia',
     subject: 'Geografia',
     prompt: 'A Bacia Hidrográfica Amazônica, a maior do mundo em volume de água, se destaca também por:',
@@ -4133,6 +4146,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_geo_hidrogeografia_4',
+    chapter: 'Hidrogeografia Mundial',
     topicId: 'geo_hidrogeografia',
     subject: 'Geografia',
     prompt: 'O ciclo hidrológico (ciclo da água) descreve a circulação contínua da água entre a atmosfera, a superfície terrestre e os corpos d\'água. A etapa em que a água líquida se transforma em vapor, retornando à atmosfera a partir de rios, lagos e oceanos, é chamada de:',
@@ -4148,6 +4162,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_geo_hidrogeografia_5',
+    chapter: 'Hidrogeografia Mundial',
     topicId: 'geo_hidrogeografia',
     subject: 'Geografia',
     prompt: 'A poluição de rios urbanos no Brasil, um problema socioambiental recorrente, é causada principalmente por:',
@@ -4164,6 +4179,7 @@ export const mockQuestions: Question[] = [
   // Geografia — Globalização e Geografia Econômica
   {
     id: 'q_geo_globalizacao_economica_1',
+    chapter: 'Globalização e Processos Econômicos Atuais',
     topicId: 'geo_globalizacao_economica',
     subject: 'Geografia',
     prompt: 'A fragmentação do processo produtivo entre diferentes países, em que cada etapa de fabricação de um produto ocorre onde é mais vantajosa economicamente, é conhecida como:',
@@ -4179,6 +4195,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_geo_globalizacao_economica_2',
+    chapter: 'Blocos Econômicos',
     topicId: 'geo_globalizacao_economica',
     subject: 'Geografia',
     prompt: 'Os blocos econômicos regionais, como o Mercosul e a União Europeia, têm como um de seus principais objetivos:',
@@ -4194,6 +4211,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_geo_globalizacao_economica_3',
+    chapter: 'Globalização e Processos Econômicos Atuais',
     topicId: 'geo_globalizacao_economica',
     subject: 'Geografia',
     prompt: 'A "divisão internacional do trabalho", conceito central para entender a globalização econômica, se refere a:',
@@ -4209,6 +4227,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_geo_globalizacao_economica_4',
+    chapter: 'Globalização e Processos Econômicos Atuais',
     topicId: 'geo_globalizacao_economica',
     subject: 'Geografia',
     prompt: 'As empresas transnacionais (ou multinacionais), atores centrais da globalização econômica, se caracterizam por:',
@@ -4224,6 +4243,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_geo_globalizacao_economica_5',
+    chapter: 'Desigualdades Globais',
     topicId: 'geo_globalizacao_economica',
     subject: 'Geografia',
     prompt: 'Um dos efeitos mais discutidos da globalização econômica sobre os países em desenvolvimento é:',
@@ -4240,6 +4260,7 @@ export const mockQuestions: Question[] = [
   // Geografia — Geopolítica Regional Contemporânea
   {
     id: 'q_geo_geopolitica_regional_1',
+    chapter: 'Geografia do Oriente Médio',
     topicId: 'geo_geopolitica_regional',
     subject: 'Geografia',
     prompt: 'O termo "Oriente Médio" designa uma região marcada, entre outros fatores, por conflitos históricos ligados a:',
@@ -4270,6 +4291,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_geo_geopolitica_regional_3',
+    chapter: 'Tensões Geopolíticas na Europa',
     topicId: 'geo_geopolitica_regional',
     subject: 'Geografia',
     prompt: 'A União Europeia, um dos blocos regionais mais integrados do mundo, enfrentou em anos recentes um marco geopolítico significativo com:',
@@ -4285,6 +4307,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_geo_geopolitica_regional_4',
+    chapter: 'Tensões Geopolíticas na Europa',
     topicId: 'geo_geopolitica_regional',
     subject: 'Geografia',
     prompt: 'O conflito entre Rússia e Ucrânia, intensificado a partir de 2022, tem entre suas raízes geopolíticas discutidas:',
@@ -4300,6 +4323,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_geo_geopolitica_regional_5',
+    chapter: 'Geopolítica e Geoeconomia da Ásia',
     topicId: 'geo_geopolitica_regional',
     subject: 'Geografia',
     prompt: 'A ascensão da China como potência econômica e geopolítica global nas últimas décadas está associada, entre outros fatores, a:',
@@ -4316,6 +4340,7 @@ export const mockQuestions: Question[] = [
   // Geografia — Geografia Física do Brasil
   {
     id: 'q_geo_fisica_brasil_1',
+    chapter: 'Biogeografia do Brasil I',
     topicId: 'geo_fisica_brasil',
     subject: 'Geografia',
     prompt: 'O bioma brasileiro com a maior extensão territorial, ocupando principalmente a região Norte, é:',
@@ -4331,6 +4356,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_geo_fisica_brasil_2',
+    chapter: 'Relevo Brasileiro',
     topicId: 'geo_fisica_brasil',
     subject: 'Geografia',
     prompt: 'O relevo predominante no território brasileiro é caracterizado principalmente por:',
@@ -4346,6 +4372,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_geo_fisica_brasil_3',
+    chapter: 'Climatologia do Brasil',
     topicId: 'geo_fisica_brasil',
     subject: 'Geografia',
     prompt: 'O clima predominante na maior parte do território brasileiro, marcado por temperaturas médias elevadas ao longo do ano, é classificado principalmente como:',
@@ -4361,6 +4388,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_geo_fisica_brasil_4',
+    chapter: 'Biogeografia do Brasil I',
     topicId: 'geo_fisica_brasil',
     subject: 'Geografia',
     prompt: 'O bioma Cerrado, o segundo maior do Brasil em extensão, é caracterizado principalmente por:',
@@ -4376,6 +4404,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_geo_fisica_brasil_5',
+    chapter: 'Políticas Ambientais Brasileiras',
     topicId: 'geo_fisica_brasil',
     subject: 'Geografia',
     prompt: 'O desmatamento na Amazônia brasileira tem entre suas principais causas históricas:',
@@ -4392,6 +4421,7 @@ export const mockQuestions: Question[] = [
   // Geografia — Geografia Econômica do Brasil
   {
     id: 'q_geo_economica_brasil_1',
+    chapter: 'O Espaço Agrário Brasileiro',
     topicId: 'geo_economica_brasil',
     subject: 'Geografia',
     prompt: 'O agronegócio brasileiro, um dos setores mais relevantes da economia do país, tem entre seus principais produtos de exportação:',
@@ -4407,6 +4437,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_geo_economica_brasil_2',
+    chapter: 'O Espaço Industrial Brasileiro I',
     topicId: 'geo_economica_brasil',
     subject: 'Geografia',
     prompt: 'A região Sudeste concentra a maior parte da indústria brasileira principalmente devido a fatores históricos como:',
@@ -4422,6 +4453,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_geo_economica_brasil_3',
+    chapter: 'O Espaço Industrial Brasileiro II',
     topicId: 'geo_economica_brasil',
     subject: 'Geografia',
     prompt: 'A partir das últimas décadas do século XX, observou-se no Brasil um processo de desconcentração industrial, com a instalação de indústrias em regiões fora do Sudeste. Esse fenômeno é explicado principalmente por:',
@@ -4437,6 +4469,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_geo_economica_brasil_4',
+    chapter: 'Energia Elétrica no Brasil',
     topicId: 'geo_economica_brasil',
     subject: 'Geografia',
     prompt: 'O Brasil é um dos maiores produtores mundiais de energia hidrelétrica, o que se relaciona diretamente com:',
@@ -4452,6 +4485,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_geo_economica_brasil_5',
+    chapter: 'O Espaço Agrário Brasileiro',
     topicId: 'geo_economica_brasil',
     subject: 'Geografia',
     prompt: 'O conceito de "commodity", frequentemente associado à pauta de exportações brasileira, se refere a:',
@@ -4468,6 +4502,7 @@ export const mockQuestions: Question[] = [
   // Geografia — Geografia da População e Urbana do Brasil
   {
     id: 'q_geo_populacao_urbana_brasil_1',
+    chapter: 'O Espaço Urbano I',
     topicId: 'geo_populacao_urbana_brasil',
     subject: 'Geografia',
     prompt: 'O processo de êxodo rural no Brasil, intensificado sobretudo a partir da segunda metade do século XX, teve como uma de suas principais consequências:',
@@ -4483,6 +4518,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_geo_populacao_urbana_brasil_2',
+    chapter: 'Dinâmica Demográfica',
     topicId: 'geo_populacao_urbana_brasil',
     subject: 'Geografia',
     prompt: 'A pirâmide etária brasileira vem passando, nas últimas décadas, por um processo de:',
@@ -4498,6 +4534,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_geo_populacao_urbana_brasil_3',
+    chapter: 'O Espaço Urbano II',
     topicId: 'geo_populacao_urbana_brasil',
     subject: 'Geografia',
     prompt: 'A macrocefalia urbana, fenômeno observado em algumas regiões metropolitanas brasileiras, se refere a:',
@@ -4513,6 +4550,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_geo_populacao_urbana_brasil_4',
+    chapter: 'O Espaço Urbano II',
     topicId: 'geo_populacao_urbana_brasil',
     subject: 'Geografia',
     prompt: 'A segregação socioespacial nas cidades brasileiras se manifesta, entre outras formas, por:',
@@ -4528,6 +4566,7 @@ export const mockQuestions: Question[] = [
   },
   {
     id: 'q_geo_populacao_urbana_brasil_5',
+    chapter: 'Estrutura Étnica e Fluxos Migratórios',
     topicId: 'geo_populacao_urbana_brasil',
     subject: 'Geografia',
     prompt: 'As migrações internas no Brasil, como o histórico fluxo de nordestinos para o Sudeste, foram impulsionadas principalmente por:',
