@@ -1,7 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { mockPodcastEpisodes, mockTopics } from '../data/mockData';
 import { requestAiText } from '../lib/aiClient';
-import { Headphones, Play, Square, Volume2, Sparkles } from 'lucide-react';
+import { useUserProfile } from '../hooks/useUserProfile';
+import { PodcastEpisode, UserProfile } from '../types';
+import { Headphones, Play, Square, Volume2, Sparkles, Clock } from 'lucide-react';
 
 const SUBJECT_COLORS: Record<string, string> = {
   Biologia: 'bg-emerald-50 dark:bg-emerald-900/20 text-emerald-700 dark:text-emerald-300',
@@ -14,12 +16,54 @@ const SUBJECT_COLORS: Record<string, string> = {
   Inglês: 'bg-sky-50 dark:bg-sky-900/20 text-sky-700 dark:text-sky-300',
 };
 
+type DurationBucket = 'curto' | 'medio' | 'longo';
+
+const DURATION_BUCKETS: { value: DurationBucket; label: string; test: (minutes: number) => boolean }[] = [
+  { value: 'curto', label: 'Curtos (até 5 min)', test: (m) => m <= 5 },
+  { value: 'medio', label: 'Médios (6 min)', test: (m) => m === 6 },
+  { value: 'longo', label: 'Longos (7+ min)', test: (m) => m >= 7 },
+];
+
+function bucketOf(minutes: number): DurationBucket {
+  return DURATION_BUCKETS.find((b) => b.test(minutes))?.value ?? 'medio';
+}
+
+function orderByDurationPreference(
+  episodes: PodcastEpisode[],
+  preference: UserProfile['podcastDurationPreference']
+): PodcastEpisode[] {
+  if (!preference) return episodes;
+  const matching = episodes.filter((e) => bucketOf(e.durationMinutes) === preference);
+  const rest = episodes.filter((e) => bucketOf(e.durationMinutes) !== preference);
+  return [...matching, ...rest];
+}
+
 const speechSupported = typeof window !== 'undefined' && 'speechSynthesis' in window;
 
 export default function Podcast() {
+  const { profile, updateProfile } = useUserProfile();
   const [playingId, setPlayingId] = useState<string | null>(null);
   const [aiScripts, setAiScripts] = useState<Record<string, string>>({});
   const [generatingId, setGeneratingId] = useState<string | null>(null);
+
+  const durationPreference = profile.podcastDurationPreference ?? null;
+
+  const orderedEpisodes = useMemo(
+    () => orderByDurationPreference(mockPodcastEpisodes, durationPreference),
+    [durationPreference]
+  );
+
+  const matchingCount = useMemo(
+    () => (durationPreference ? mockPodcastEpisodes.filter((e) => bucketOf(e.durationMinutes) === durationPreference).length : 0),
+    [durationPreference]
+  );
+
+  const setDurationPreference = (value: DurationBucket | null) => {
+    updateProfile((prev) => ({
+      ...prev,
+      podcastDurationPreference: prev.podcastDurationPreference === value ? null : value,
+    }));
+  };
 
   useEffect(() => {
     return () => {
@@ -79,12 +123,40 @@ export default function Podcast() {
         </div>
       )}
 
+      <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-4">
+        <div className="flex items-center text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-2">
+          <Clock className="w-4 h-4 mr-2 text-indigo-500" />
+          Duração preferida
+        </div>
+        <div className="flex flex-wrap gap-2">
+          {DURATION_BUCKETS.map(({ value, label }) => (
+            <button
+              key={value}
+              onClick={() => setDurationPreference(value)}
+              className={`px-3 py-1.5 rounded-lg text-xs font-medium border transition-colors ${
+                durationPreference === value
+                  ? 'bg-indigo-600 border-indigo-600 text-white'
+                  : 'border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-50 dark:hover:bg-zinc-800'
+              }`}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
+        <p className="text-xs text-zinc-500 mt-2">
+          {durationPreference
+            ? `Mostrando primeiro os ${matchingCount} de ${mockPodcastEpisodes.length} episódios nessa faixa de duração — os demais continuam logo abaixo, nada fica escondido.`
+            : 'Sem preferência: os episódios aparecem na ordem padrão. Escolha uma faixa para trazer episódios dessa duração para o topo da lista.'}
+        </p>
+      </div>
+
       <div className="space-y-3">
-        {mockPodcastEpisodes.map((episode) => {
+        {orderedEpisodes.map((episode) => {
           const isPlaying = playingId === episode.id;
           const isGenerating = generatingId === episode.id;
           const aiScript = aiScripts[episode.id];
           const activeScript = aiScript ?? episode.script;
+          const matchesPreference = durationPreference !== null && bucketOf(episode.durationMinutes) === durationPreference;
           return (
             <div
               key={episode.id}
@@ -114,6 +186,15 @@ export default function Podcast() {
                       </span>
                       <span>•</span>
                       <span>{episode.durationMinutes} min</span>
+                      {matchesPreference && (
+                        <>
+                          <span>•</span>
+                          <span className="flex items-center text-indigo-500">
+                            <Clock className="w-3 h-3 mr-1" />
+                            Duração preferida
+                          </span>
+                        </>
+                      )}
                       {aiScript && (
                         <>
                           <span>•</span>

@@ -733,7 +733,8 @@ export const mockProfile: UserProfile = {
   targetExams: ['FUVEST', 'UNICAMP', 'UNESP', 'ENEM', 'FAMERP', 'UNIFESP'],
   availableHoursPerWeek: 40,
   currentEnergyLevel: 'medium',
-  autonomyIndex: 35 // starts low, increases over time
+  autonomyIndex: 35, // starts low, increases over time
+  podcastDurationPreference: null
 };
 
 // Objetivos e peso por banca — ponto de partida editável em Perfil. Fuvest
