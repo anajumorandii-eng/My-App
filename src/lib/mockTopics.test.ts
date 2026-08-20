@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import { mockTopics, mockMastery, mockQuestions, mockPodcastEpisodes, mockBacklog, mockErrorLogs } from '../data/mockData';
+import { mockTopicDiscursivePrompts } from '../data/topicDiscursivePrompts';
 import { SPLIT_TOPIC_PARENTS } from '../data/topicSplits';
 
 test('no topic id is duplicated', () => {
@@ -24,6 +25,12 @@ test('every topicId referenced elsewhere in the mock dataset resolves to a real 
   for (const p of mockPodcastEpisodes) assert.ok(ids.has(p.topicId), `mockPodcastEpisodes references unknown topic ${p.topicId}`);
   for (const b of mockBacklog) assert.ok(ids.has(b.topicId), `mockBacklog references unknown topic ${b.topicId}`);
   for (const e of mockErrorLogs) assert.ok(ids.has(e.topicId), `mockErrorLogs references unknown topic ${e.topicId}`);
+  for (const d of mockTopicDiscursivePrompts) assert.ok(ids.has(d.topicId), `mockTopicDiscursivePrompts references unknown topic ${d.topicId}`);
+});
+
+test('no duplicate id within mockTopicDiscursivePrompts', () => {
+  const ids = mockTopicDiscursivePrompts.map((d) => d.id);
+  assert.equal(new Set(ids).size, ids.length, 'mockTopicDiscursivePrompts has a duplicate id');
 });
 
 test('every topic has exactly one mastery seed row', () => {

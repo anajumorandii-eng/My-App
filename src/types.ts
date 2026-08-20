@@ -167,6 +167,24 @@ export interface Question {
   };
 }
 
+// A short, original open-ended prompt scoped to one topic in the curriculum
+// catalog (topicId), used inside the Diagnóstico quiz alongside multiple-
+// choice Questions. Unlike DiscursiveQuestion (real sourced 2ª-fase exam
+// questions, used in Treino de 2ª Fase), these aren't tied to a specific
+// exam/board/year — just a way to test whether the student can actually
+// explain the concept, not just recognize the right option. There's no
+// auto-grading for free text, so the student self-rates against the model
+// answer (same fraco/mediano/forte scale as DiscursiveAttempt).
+export interface TopicDiscursivePrompt {
+  id: string;
+  topicId: string;
+  subject: string;
+  prompt: string;
+  modelAnswer: string;
+  keyPoints: string[];
+  difficulty: 'easy' | 'medium' | 'hard';
+}
+
 export interface PodcastEpisode {
   id: string;
   topicId: string;

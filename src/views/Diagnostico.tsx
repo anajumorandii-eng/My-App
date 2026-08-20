@@ -1,8 +1,9 @@
 import React, { useMemo, useState } from 'react';
 import { mockTopics, mockQuestions } from '../data/mockData';
+import { mockTopicDiscursivePrompts } from '../data/topicDiscursivePrompts';
 import { useUserMastery } from '../hooks/useUserMastery';
 import { STATE_LABELS, STATE_DESCRIPTIONS } from '../lib/backlogEngine';
-import { Question } from '../types';
+import { Question, TopicDiscursivePrompt } from '../types';
 import {
   Stethoscope,
   CheckCircle2,
@@ -11,10 +12,34 @@ import {
   RotateCcw,
   ArrowRight,
   Clock,
+  PenLine,
 } from 'lucide-react';
 
 const STATE_BASE_LEVEL: Record<number, number> = { 0: 8, 1: 28, 2: 50, 3: 72, 4: 92 };
-const QUIZ_LENGTH = 3;
+
+type QuizItem =
+  | { kind: 'mc'; question: Question }
+  | { kind: 'discursive'; prompt: TopicDiscursivePrompt };
+
+type QuizSignal = 'correct' | 'wrong' | 'neutral';
+
+const SELF_RATING_SIGNAL: Record<'fraco' | 'mediano' | 'forte', QuizSignal> = {
+  fraco: 'wrong',
+  mediano: 'neutral',
+  forte: 'correct',
+};
+
+// Fresh shuffle per attempt (not a stable sort) so the same handful of
+// questions don't show up first every single time — the whole point of a
+// bigger question bank is that it actually gets used, not just sliced at [0..n).
+function shuffled<T>(items: T[]): T[] {
+  const copy = [...items];
+  for (let i = copy.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [copy[i], copy[j]] = [copy[j], copy[i]];
+  }
+  return copy;
+}
 
 function daysAgo(dateIso: string): number {
   return Math.floor((Date.now() - new Date(dateIso).getTime()) / 86400000);
@@ -33,19 +58,29 @@ export default function Diagnostico() {
   const [selfState, setSelfState] = useState<number | null>(null);
   const [dontKnow, setDontKnow] = useState(false);
   const [quizIndex, setQuizIndex] = useState(0);
-  const [quizAnswers, setQuizAnswers] = useState<{ questionId: string; correct: boolean }[]>([]);
+  const [quizPool, setQuizPool] = useState<QuizItem[]>([]);
+  const [quizAnswers, setQuizAnswers] = useState<{ questionId: string; signal: QuizSignal }[]>([]);
   const [selectedOptionId, setSelectedOptionId] = useState<string | null>(null);
+  const [discursiveRevealed, setDiscursiveRevealed] = useState(false);
   const [savedFlash, setSavedFlash] = useState(false);
 
   const topic = selectedTopicId ? mockTopics.find((t) => t.id === selectedTopicId) : null;
   const topicMastery = selectedTopicId ? mastery.find((m) => m.topicId === selectedTopicId) : null;
-  const quizPool: Question[] = useMemo(
-    () => (selectedTopicId ? mockQuestions.filter((q) => q.topicId === selectedTopicId).slice(0, QUIZ_LENGTH) : []),
-    [selectedTopicId]
-  );
-  const currentQuestion = quizPool[quizIndex];
-  const answered = selectedOptionId !== null;
-  const isCorrect = answered && currentQuestion ? selectedOptionId === currentQuestion.correctOptionId : false;
+  const currentItem = quizPool[quizIndex];
+  const answered = currentItem?.kind === 'mc' ? selectedOptionId !== null : discursiveRevealed;
+  const isCorrect = currentItem?.kind === 'mc' && selectedOptionId !== null
+    ? selectedOptionId === currentItem.question.correctOptionId
+    : false;
+
+  function buildQuizPool(topicId: string): QuizItem[] {
+    const mc: QuizItem[] = mockQuestions
+      .filter((q) => q.topicId === topicId)
+      .map((question) => ({ kind: 'mc', question }));
+    const discursive: QuizItem[] = mockTopicDiscursivePrompts
+      .filter((p) => p.topicId === topicId)
+      .map((prompt) => ({ kind: 'discursive', prompt }));
+    return shuffled([...mc, ...discursive]);
+  }
 
   const startDiagnostic = (topicId: string) => {
     setSelectedTopicId(topicId);
@@ -53,8 +88,10 @@ export default function Diagnostico() {
     setSelfState(null);
     setDontKnow(false);
     setQuizIndex(0);
+    setQuizPool(buildQuizPool(topicId));
     setQuizAnswers([]);
     setSelectedOptionId(null);
+    setDiscursiveRevealed(false);
     setPhase('selfreport');
   };
 
@@ -80,31 +117,44 @@ export default function Diagnostico() {
   };
 
   const selectQuizOption = (optionId: string) => {
-    if (answered || !currentQuestion) return;
-    const correct = optionId === currentQuestion.correctOptionId;
+    if (answered || !currentItem || currentItem.kind !== 'mc') return;
+    const correct = optionId === currentItem.question.correctOptionId;
     setSelectedOptionId(optionId);
-    setQuizAnswers((prev) => [...prev, { questionId: currentQuestion.id, correct }]);
+    setQuizAnswers((prev) => [...prev, { questionId: currentItem.question.id, signal: correct ? 'correct' : 'wrong' }]);
+  };
+
+  const revealDiscursiveAnswer = () => {
+    if (!currentItem || currentItem.kind !== 'discursive') return;
+    setDiscursiveRevealed(true);
+  };
+
+  const rateDiscursiveAnswer = (rating: 'fraco' | 'mediano' | 'forte') => {
+    if (!currentItem || currentItem.kind !== 'discursive') return;
+    setQuizAnswers((prev) => [...prev, { questionId: currentItem.prompt.id, signal: SELF_RATING_SIGNAL[rating] }]);
+    nextQuizStep();
   };
 
   const nextQuizStep = () => {
     if (quizIndex + 1 < quizPool.length) {
       setQuizIndex((i) => i + 1);
       setSelectedOptionId(null);
+      setDiscursiveRevealed(false);
     } else {
       setPhase('result');
     }
   };
 
   const computedResult = useMemo(() => {
-    const correctCount = quizAnswers.filter((a) => a.correct).length;
-    const wrongCount = quizAnswers.length - correctCount;
+    const correctCount = quizAnswers.filter((a) => a.signal === 'correct').length;
+    const wrongCount = quizAnswers.filter((a) => a.signal === 'wrong').length;
     if (dontKnow) {
       if (quizAnswers.length === 0) return null;
       // No self-report anchor at all — the level comes purely from how she
-      // did on 3 questions. That's not enough to claim real precision, so
-      // it starts from a neutral midpoint and stays at high uncertainty
-      // regardless of the score, instead of pretending 3 questions can
-      // pin down an exact level the way a self-report + quiz combo can.
+      // did on the quiz. That's not enough to claim real precision, so it
+      // starts from a neutral midpoint and stays at high uncertainty
+      // regardless of the score, instead of pretending a handful of
+      // questions can pin down an exact level the way a self-report + quiz
+      // combo can.
       const ratio = correctCount / quizAnswers.length;
       const level = Math.min(100, Math.max(0, Math.round(20 + ratio * 60)));
       return { level, uncertainty: 0.55, errorSignals: wrongCount };
@@ -186,7 +236,7 @@ export default function Diagnostico() {
               .filter((t) => t.subject === subjectFilter)
               .map((t) => {
                 const m = mastery.find((mm) => mm.topicId === t.id);
-                const hasQuiz = mockQuestions.some((q) => q.topicId === t.id);
+                const hasQuiz = mockQuestions.some((q) => q.topicId === t.id) || mockTopicDiscursivePrompts.some((p) => p.topicId === t.id);
                 return (
                   <button
                     key={t.id}
@@ -280,7 +330,7 @@ export default function Diagnostico() {
         </div>
       )}
 
-      {phase === 'quiz' && topic && currentQuestion && (
+      {phase === 'quiz' && topic && currentItem && (
         <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 sm:p-8 shadow-sm space-y-6">
           <div className="flex items-center justify-between">
             <p className="text-xs font-semibold uppercase tracking-wide text-indigo-600 dark:text-indigo-400">{topic.subject} · Teste rápido</p>
@@ -291,41 +341,104 @@ export default function Diagnostico() {
               Sem autoavaliação prévia — o resultado vai sair só dessas {quizPool.length} questões, com confiança baixa por serem poucas.
             </p>
           )}
-          <p className="text-lg font-medium leading-relaxed">{currentQuestion.prompt}</p>
-          <div className="space-y-3">
-            {currentQuestion.options.map((option) => {
-              const isSelected = selectedOptionId === option.id;
-              const isCorrectOption = option.id === currentQuestion.correctOptionId;
-              let stateClasses = 'border-zinc-200 dark:border-zinc-700 hover:bg-zinc-50 dark:hover:bg-zinc-800';
-              if (answered && isCorrectOption) stateClasses = 'border-emerald-500 bg-emerald-50 dark:bg-emerald-900/20';
-              else if (answered && isSelected && !isCorrectOption) stateClasses = 'border-rose-500 bg-rose-50 dark:bg-rose-900/20';
-              return (
-                <button
-                  key={option.id}
-                  onClick={() => selectQuizOption(option.id)}
-                  disabled={answered}
-                  className={`w-full text-left px-5 py-4 rounded-xl border transition-colors flex items-center justify-between ${stateClasses}`}
-                >
-                  <span>{option.text}</span>
-                  {answered && isCorrectOption && <CheckCircle2 className="w-5 h-5 text-emerald-500 shrink-0 ml-3" />}
-                  {answered && isSelected && !isCorrectOption && <XCircle className="w-5 h-5 text-rose-500 shrink-0 ml-3" />}
-                </button>
-              );
-            })}
-          </div>
-          {answered && (
-            <div className={`p-4 rounded-xl text-sm leading-relaxed ${isCorrect ? 'bg-emerald-50 dark:bg-emerald-900/20 text-emerald-800 dark:text-emerald-300' : 'bg-rose-50 dark:bg-rose-900/20 text-rose-800 dark:text-rose-300'}`}>
-              <p className="font-semibold mb-1">{isCorrect ? 'Correto!' : 'Não foi dessa vez.'}</p>
-              <p>{currentQuestion.explanation}</p>
-            </div>
+
+          {currentItem.kind === 'mc' && (
+            <>
+              <p className="text-lg font-medium leading-relaxed">{currentItem.question.prompt}</p>
+              <div className="space-y-3">
+                {currentItem.question.options.map((option) => {
+                  const isSelected = selectedOptionId === option.id;
+                  const isCorrectOption = option.id === currentItem.question.correctOptionId;
+                  let stateClasses = 'border-zinc-200 dark:border-zinc-700 hover:bg-zinc-50 dark:hover:bg-zinc-800';
+                  if (answered && isCorrectOption) stateClasses = 'border-emerald-500 bg-emerald-50 dark:bg-emerald-900/20';
+                  else if (answered && isSelected && !isCorrectOption) stateClasses = 'border-rose-500 bg-rose-50 dark:bg-rose-900/20';
+                  return (
+                    <button
+                      key={option.id}
+                      onClick={() => selectQuizOption(option.id)}
+                      disabled={answered}
+                      className={`w-full text-left px-5 py-4 rounded-xl border transition-colors flex items-center justify-between ${stateClasses}`}
+                    >
+                      <span>{option.text}</span>
+                      {answered && isCorrectOption && <CheckCircle2 className="w-5 h-5 text-emerald-500 shrink-0 ml-3" />}
+                      {answered && isSelected && !isCorrectOption && <XCircle className="w-5 h-5 text-rose-500 shrink-0 ml-3" />}
+                    </button>
+                  );
+                })}
+              </div>
+              {answered && (
+                <div className={`p-4 rounded-xl text-sm leading-relaxed ${isCorrect ? 'bg-emerald-50 dark:bg-emerald-900/20 text-emerald-800 dark:text-emerald-300' : 'bg-rose-50 dark:bg-rose-900/20 text-rose-800 dark:text-rose-300'}`}>
+                  <p className="font-semibold mb-1">{isCorrect ? 'Correto!' : 'Não foi dessa vez.'}</p>
+                  <p>{currentItem.question.explanation}</p>
+                </div>
+              )}
+              <button
+                onClick={nextQuizStep}
+                disabled={!answered}
+                className="w-full py-3 bg-indigo-600 hover:bg-indigo-700 disabled:bg-zinc-300 dark:disabled:bg-zinc-700 text-white rounded-xl font-medium transition-colors"
+              >
+                {quizIndex + 1 < quizPool.length ? 'Próxima questão' : 'Ver resultado'}
+              </button>
+            </>
           )}
-          <button
-            onClick={nextQuizStep}
-            disabled={!answered}
-            className="w-full py-3 bg-indigo-600 hover:bg-indigo-700 disabled:bg-zinc-300 dark:disabled:bg-zinc-700 text-white rounded-xl font-medium transition-colors"
-          >
-            {quizIndex + 1 < quizPool.length ? 'Próxima questão' : 'Ver resultado'}
-          </button>
+
+          {currentItem.kind === 'discursive' && (
+            <>
+              <div className="flex items-center text-xs font-medium text-indigo-500">
+                <PenLine className="w-3.5 h-3.5 mr-1.5" />
+                Questão discursiva — sem múltipla escolha, você mesma avalia sua resposta
+              </div>
+              <p className="text-lg font-medium leading-relaxed">{currentItem.prompt.prompt}</p>
+              {!discursiveRevealed ? (
+                <button
+                  onClick={revealDiscursiveAnswer}
+                  className="w-full py-3 border border-dashed border-zinc-300 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 rounded-xl font-medium text-sm hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-colors"
+                >
+                  Pensei na resposta — ver o gabarito
+                </button>
+              ) : (
+                <>
+                  <div className="p-4 rounded-xl bg-indigo-50 dark:bg-indigo-900/20 text-sm leading-relaxed space-y-3">
+                    <div>
+                      <p className="font-semibold text-indigo-800 dark:text-indigo-300 mb-1">Resposta modelo</p>
+                      <p className="text-indigo-900 dark:text-indigo-200">{currentItem.prompt.modelAnswer}</p>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-indigo-800 dark:text-indigo-300 mb-1">Pontos-chave que sua resposta deveria cobrir</p>
+                      <ul className="list-disc list-inside text-indigo-900 dark:text-indigo-200 space-y-0.5">
+                        {currentItem.prompt.keyPoints.map((point) => (
+                          <li key={point}>{point}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                  <div>
+                    <p className="text-sm text-zinc-600 dark:text-zinc-400 mb-2">Comparando com o que você pensou, como foi sua resposta?</p>
+                    <div className="grid grid-cols-3 gap-2">
+                      <button
+                        onClick={() => rateDiscursiveAnswer('fraco')}
+                        className="py-2.5 rounded-xl border border-rose-200 dark:border-rose-900 text-rose-700 dark:text-rose-300 text-sm font-medium hover:bg-rose-50 dark:hover:bg-rose-900/20 transition-colors"
+                      >
+                        Fraco
+                      </button>
+                      <button
+                        onClick={() => rateDiscursiveAnswer('mediano')}
+                        className="py-2.5 rounded-xl border border-amber-200 dark:border-amber-900 text-amber-700 dark:text-amber-300 text-sm font-medium hover:bg-amber-50 dark:hover:bg-amber-900/20 transition-colors"
+                      >
+                        Mediano
+                      </button>
+                      <button
+                        onClick={() => rateDiscursiveAnswer('forte')}
+                        className="py-2.5 rounded-xl border border-emerald-200 dark:border-emerald-900 text-emerald-700 dark:text-emerald-300 text-sm font-medium hover:bg-emerald-50 dark:hover:bg-emerald-900/20 transition-colors"
+                      >
+                        Forte
+                      </button>
+                    </div>
+                  </div>
+                </>
+              )}
+            </>
+          )}
         </div>
       )}
 
@@ -350,13 +463,14 @@ export default function Diagnostico() {
             <p className="text-xs text-zinc-500 mt-2">
               {dontKnow ? (
                 <>
-                  Sem autoavaliação — calculado só por {quizAnswers.filter((a) => a.correct).length} acerto(s) e {quizAnswers.filter((a) => !a.correct).length} erro(s) em {quizAnswers.length} questões.
+                  Sem autoavaliação — calculado só por {quizAnswers.filter((a) => a.signal === 'correct').length} acerto(s) e {quizAnswers.filter((a) => a.signal === 'wrong').length} erro(s) em {quizAnswers.length} questões
+                  {quizAnswers.some((a) => a.signal === 'neutral') && ` (incluindo ${quizAnswers.filter((a) => a.signal === 'neutral').length} discursiva(s) autoavaliada(s) como "mediano", que não pesam nem para acerto nem para erro)`}.
                   Confiança baixa de propósito: poucas questões não dão pra cravar um número exato.
                 </>
               ) : (
                 <>
                   Ponto de partida pela sua autoavaliação ({STATE_LABELS[selfState ?? 0]})
-                  {quizAnswers.length > 0 && `, ajustado por ${quizAnswers.filter((a) => a.correct).length} acerto(s) e ${quizAnswers.filter((a) => !a.correct).length} erro(s) no teste rápido`}.
+                  {quizAnswers.length > 0 && `, ajustado por ${quizAnswers.filter((a) => a.signal === 'correct').length} acerto(s) e ${quizAnswers.filter((a) => a.signal === 'wrong').length} erro(s) no teste rápido`}.
                 </>
               )}
             </p>

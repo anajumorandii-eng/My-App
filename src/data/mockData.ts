@@ -955,191 +955,387 @@ export const mockQuestions: Question[] = [
     explanation: 'A imunidade inata é a primeira linha de defesa, rápida mas inespecífica (ex: barreiras físicas, fagócitos). A imunidade adaptativa é mais lenta para se desenvolver, porém específica e gera células de memória, base da vacinação.',
     difficulty: 'hard'
   },
-  // Matemática — Funções de 1º Grau
+  // Matemática — Funções
   {
-    id: 'q_mat_01_1',
+    id: 'q_mat_funcoes_1',
     topicId: 'mat_funcoes',
     subject: 'Matemática',
-    prompt: 'Qual é o valor de x para que a função f(x) = 2x - 6 seja igual a zero?',
-    options: [
-      { id: 'a', text: 'x = -3' },
-      { id: 'b', text: 'x = 0' },
-      { id: 'c', text: 'x = 3' },
-      { id: 'd', text: 'x = 6' }
-    ],
-    correctOptionId: 'c',
-    explanation: 'Isolando x: 2x - 6 = 0 → 2x = 6 → x = 3. Essa é a raiz da função, onde o gráfico cruza o eixo x.',
-    difficulty: 'easy'
-  },
-  {
-    id: 'q_mat_01_2',
-    topicId: 'mat_funcoes',
-    subject: 'Matemática',
-    prompt: 'Qual é o coeficiente angular da reta representada pela função f(x) = -3x + 7?',
+    prompt: 'Se f(x) = 2x + 1 e g(x) = x², qual é o valor de f(g(3))?',
     options: [
       { id: 'a', text: '7' },
-      { id: 'b', text: '-3' },
-      { id: 'c', text: '3' },
-      { id: 'd', text: '-7' }
+      { id: 'b', text: '10' },
+      { id: 'c', text: '19' },
+      { id: 'd', text: '37' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'Primeiro calcula-se g(3) = 3² = 9. Em seguida, f(9) = 2×9 + 1 = 19.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_funcoes_2',
+    topicId: 'mat_funcoes',
+    subject: 'Matemática',
+    prompt: 'Qual é a função inversa de f(x) = 3x - 6?',
+    options: [
+      { id: 'a', text: 'f⁻¹(x) = (x + 6)/3' },
+      { id: 'b', text: 'f⁻¹(x) = (x - 6)/3' },
+      { id: 'c', text: 'f⁻¹(x) = 3x + 6' },
+      { id: 'd', text: 'f⁻¹(x) = x/3 - 6' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Trocando x por y e isolando y: x = 3y - 6 → 3y = x + 6 → y = (x + 6)/3.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_mat_funcoes_3',
+    topicId: 'mat_funcoes',
+    subject: 'Matemática',
+    prompt: 'Qual é o domínio da função f(x) = 1/(x - 4) + √(x - 2)?',
+    options: [
+      { id: 'a', text: 'x ≥ 2' },
+      { id: 'b', text: 'x ≥ 2 e x ≠ 4' },
+      { id: 'c', text: 'x > 2' },
+      { id: 'd', text: 'x ≠ 4' }
     ],
     correctOptionId: 'b',
-    explanation: 'Na forma f(x) = ax + b, o coeficiente angular é o valor de a, que determina a inclinação da reta. Aqui, a = -3, indicando uma função decrescente.',
-    difficulty: 'easy'
+    explanation: 'A raiz quadrada exige x - 2 ≥ 0, ou seja, x ≥ 2. Já a fração exige que o denominador não seja zero, ou seja, x ≠ 4. As duas condições precisam valer ao mesmo tempo.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_funcoes_4',
+    topicId: 'mat_funcoes',
+    subject: 'Matemática',
+    prompt: 'O gráfico de uma função f é crescente no intervalo (-∞, 2) e decrescente no intervalo (2, +∞). O que podemos concluir sobre o ponto x = 2?',
+    options: [
+      { id: 'a', text: 'É um ponto de mínimo' },
+      { id: 'b', text: 'É um ponto de máximo' },
+      { id: 'c', text: 'É necessariamente uma raiz da função' },
+      { id: 'd', text: 'Não é possível concluir nada sobre esse ponto' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Quando uma função para de crescer e passa a decrescer em um ponto, esse ponto é um máximo local (o valor da função ali é maior que em pontos vizinhos de ambos os lados).',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_funcoes_5',
+    topicId: 'mat_funcoes',
+    subject: 'Matemática',
+    prompt: 'Quantas soluções reais tem a equação |x - 2| = 5?',
+    options: [
+      { id: 'a', text: 'Nenhuma' },
+      { id: 'b', text: 'Uma' },
+      { id: 'c', text: 'Duas' },
+      { id: 'd', text: 'Infinitas' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'A equação modular se desdobra em dois casos: x - 2 = 5 (x = 7) ou x - 2 = -5 (x = -3). Ambos são válidos, logo há duas soluções.',
+    difficulty: 'medium'
   },
   // Matemática — Análise Combinatória
   {
-    id: 'q_mat_02_1',
+    id: 'q_mat_combinatoria_1',
     topicId: 'mat_combinatoria',
     subject: 'Matemática',
-    prompt: 'De quantas formas 3 pessoas podem se sentar em 3 cadeiras em fila?',
+    prompt: 'Quantos anagramas distintos podem ser formados com as letras da palavra "ARARA"?',
     options: [
-      { id: 'a', text: '3' },
-      { id: 'b', text: '6' },
-      { id: 'c', text: '9' },
-      { id: 'd', text: '12' }
-    ],
-    correctOptionId: 'b',
-    explanation: 'É uma permutação simples de 3 elementos: 3! = 3 × 2 × 1 = 6 formas distintas.',
-    difficulty: 'medium'
-  },
-  {
-    id: 'q_mat_02_2',
-    topicId: 'mat_combinatoria',
-    subject: 'Matemática',
-    prompt: 'Uma senha é formada por 4 dígitos distintos, escolhidos entre 0 e 9. Quantas senhas diferentes podem ser formadas?',
-    options: [
-      { id: 'a', text: '5040' },
-      { id: 'b', text: '10000' },
-      { id: 'c', text: '210' },
-      { id: 'd', text: '720' }
+      { id: 'a', text: '10' },
+      { id: 'b', text: '20' },
+      { id: 'c', text: '60' },
+      { id: 'd', text: '120' }
     ],
     correctOptionId: 'a',
-    explanation: 'É um arranjo simples de 10 elementos tomados 4 a 4 (ordem importa, sem repetição): A(10,4) = 10×9×8×7 = 5040.',
+    explanation: 'A palavra tem 5 letras, com a letra A repetida 3 vezes e a letra R repetida 2 vezes. O número de anagramas distintos é 5!/(3!×2!) = 120/12 = 10.',
     difficulty: 'hard'
   },
-  // Matemática — Funções de 2º Grau
   {
-    id: 'q_mat_03_1',
-    topicId: 'mat_funcoes',
+    id: 'q_mat_combinatoria_2',
+    topicId: 'mat_combinatoria',
     subject: 'Matemática',
-    prompt: 'Qual é o valor do discriminante (Δ) da função f(x) = x² - 5x + 6?',
+    prompt: 'De um grupo de 10 pessoas, quantas comissões de 3 pessoas podem ser formadas, sem distinção de cargo entre os membros?',
     options: [
-      { id: 'a', text: '1' },
-      { id: 'b', text: '-1' },
-      { id: 'c', text: '49' },
-      { id: 'd', text: '25' }
+      { id: 'a', text: '30' },
+      { id: 'b', text: '70' },
+      { id: 'c', text: '120' },
+      { id: 'd', text: '720' }
     ],
-    correctOptionId: 'a',
-    explanation: 'Δ = b² - 4ac = (-5)² - 4(1)(6) = 25 - 24 = 1. Como Δ > 0, a função possui duas raízes reais distintas.',
+    correctOptionId: 'c',
+    explanation: 'Como a ordem não importa (é uma comissão, não cargos distintos), usa-se combinação: C(10,3) = 10!/(3!×7!) = 120.',
     difficulty: 'medium'
   },
   {
-    id: 'q_mat_03_2',
-    topicId: 'mat_funcoes',
+    id: 'q_mat_combinatoria_3',
+    topicId: 'mat_combinatoria',
     subject: 'Matemática',
-    prompt: 'Qual é o vértice da parábola representada por f(x) = x² - 4x + 3?',
+    prompt: 'Uma prova tem 10 questões, das quais o aluno deve escolher exatamente 7 para responder — sendo que as duas primeiras questões são obrigatórias. De quantas formas diferentes o aluno pode escolher o conjunto de questões que vai responder?',
     options: [
-      { id: 'a', text: '(2, -1)' },
-      { id: 'b', text: '(-2, 1)' },
-      { id: 'c', text: '(2, 1)' },
-      { id: 'd', text: '(4, 3)' }
+      { id: 'a', text: '21' },
+      { id: 'b', text: '56' },
+      { id: 'c', text: '70' },
+      { id: 'd', text: '120' }
     ],
-    correctOptionId: 'a',
-    explanation: 'xv = -b/2a = 4/2 = 2. yv = f(2) = 4 - 8 + 3 = -1. O vértice é (2, -1), ponto de mínimo da parábola (concavidade para cima).',
+    correctOptionId: 'b',
+    explanation: 'As 2 obrigatórias já estão garantidas; restam escolher 5 das outras 8 questões: C(8,5) = 56.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_mat_combinatoria_4',
+    topicId: 'mat_combinatoria',
+    subject: 'Matemática',
+    prompt: 'Quantos números de 3 algarismos distintos podem ser formados usando apenas os algarismos 1, 2, 3, 4 e 5 (sem repetição)?',
+    options: [
+      { id: 'a', text: '10' },
+      { id: 'b', text: '60' },
+      { id: 'c', text: '125' },
+      { id: 'd', text: '625' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A ordem dos algarismos importa (123 é diferente de 321), então é um arranjo: A(5,3) = 5×4×3 = 60.',
     difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_combinatoria_5',
+    topicId: 'mat_combinatoria',
+    subject: 'Matemática',
+    prompt: 'No desenvolvimento do binômio (x + y)⁶, qual é o coeficiente do termo x²y⁴?',
+    options: [
+      { id: 'a', text: '6' },
+      { id: 'b', text: '15' },
+      { id: 'c', text: '20' },
+      { id: 'd', text: '30' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Pelo binômio de Newton, o termo geral é C(6,k)·x^(6-k)·y^k. Para obter x²y⁴, precisamos de k = 4, e o coeficiente é C(6,4) = 15.',
+    difficulty: 'hard'
   },
   // Matemática — Geometria Plana
   {
-    id: 'q_mat_04_1',
+    id: 'q_mat_geometria_plana_1',
     topicId: 'mat_geometria_plana',
     subject: 'Matemática',
-    prompt: 'Qual é a área de um triângulo retângulo com catetos medindo 6 cm e 8 cm?',
+    prompt: 'Duas torres verticais projetam sombras no chão no mesmo instante do dia. A torre menor, de 6 m de altura, projeta uma sombra de 4 m. Se a torre maior projeta uma sombra de 10 m, qual é sua altura, sabendo que as duas situações formam triângulos semelhantes?',
     options: [
-      { id: 'a', text: '14 cm²' },
-      { id: 'b', text: '24 cm²' },
-      { id: 'c', text: '48 cm²' },
-      { id: 'd', text: '28 cm²' }
+      { id: 'a', text: '12 m' },
+      { id: 'b', text: '15 m' },
+      { id: 'c', text: '18 m' },
+      { id: 'd', text: '20 m' }
     ],
     correctOptionId: 'b',
-    explanation: 'A área do triângulo é (base × altura) / 2. Usando os catetos como base e altura: (6 × 8) / 2 = 24 cm².',
-    difficulty: 'easy'
+    explanation: 'Por semelhança de triângulos, a razão altura/sombra é constante: 6/4 = h/10 → h = 60/4 = 15 m.',
+    difficulty: 'medium'
   },
   {
-    id: 'q_mat_04_2',
+    id: 'q_mat_geometria_plana_2',
     topicId: 'mat_geometria_plana',
     subject: 'Matemática',
-    prompt: 'Um círculo tem raio de 5 cm. Qual é aproximadamente sua área, considerando π ≈ 3,14?',
+    prompt: 'Um trapézio tem bases medindo 8 cm e 12 cm, e altura de 5 cm. Qual é a sua área?',
     options: [
-      { id: 'a', text: '15,7 cm²' },
-      { id: 'b', text: '31,4 cm²' },
-      { id: 'c', text: '78,5 cm²' },
-      { id: 'd', text: '157 cm²' }
+      { id: 'a', text: '40 cm²' },
+      { id: 'b', text: '45 cm²' },
+      { id: 'c', text: '50 cm²' },
+      { id: 'd', text: '60 cm²' }
     ],
     correctOptionId: 'c',
-    explanation: 'A área do círculo é π × r². Com r = 5: 3,14 × 25 = 78,5 cm².',
+    explanation: 'A área do trapézio é dada por (base maior + base menor)/2 × altura = (12 + 8)/2 × 5 = 10 × 5 = 50 cm².',
     difficulty: 'easy'
   },
-  // Matemática — Probabilidade
   {
-    id: 'q_mat_05_1',
+    id: 'q_mat_geometria_plana_3',
+    topicId: 'mat_geometria_plana',
+    subject: 'Matemática',
+    prompt: 'Em um triângulo retângulo, a altura relativa à hipotenusa mede 4,8 cm, e um dos segmentos que ela determina na hipotenusa mede 3,6 cm. Qual é o comprimento do cateto adjacente a esse segmento?',
+    options: [
+      { id: 'a', text: '4,8 cm' },
+      { id: 'b', text: '6 cm' },
+      { id: 'c', text: '7,2 cm' },
+      { id: 'd', text: '8,4 cm' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Pela relação h² = m·n, o outro segmento é n = h²/m = 4,8²/3,6 = 23,04/3,6 = 6,4 cm. A hipotenusa total é m + n = 10 cm. O cateto adjacente ao segmento m satisfaz c² = m × hipotenusa = 3,6 × 10 = 36, logo c = 6 cm.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_mat_geometria_plana_4',
+    topicId: 'mat_geometria_plana',
+    subject: 'Matemática',
+    prompt: 'Qual é a medida de cada ângulo interno de um hexágono regular?',
+    options: [
+      { id: 'a', text: '100°' },
+      { id: 'b', text: '108°' },
+      { id: 'c', text: '120°' },
+      { id: 'd', text: '135°' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'A soma dos ângulos internos de um polígono de n lados é (n-2)×180°. Para o hexágono (n=6): (6-2)×180° = 720°. Dividindo pelos 6 ângulos iguais: 720°/6 = 120°.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_real_enem_2023_mat',
+    topicId: 'mat_geometria_plana',
+    subject: 'Matemática',
+    prompt: 'Sejam a, b e c as medidas dos lados de um triângulo retângulo, tendo a como medida da hipotenusa. Esses valores a, b e c são, respectivamente, os diâmetros dos círculos C1, C2 e C3. Essa construção assegura, pelo teorema de Pitágoras, que área(C1) = área(C2) + área(C3). Um professor de matemática desafiou dois amigos: sem usar instrumento de medição, ele poderia afirmar se a área do círculo correspondente à pizza que ele pedisse era maior, igual ou menor do que a soma das áreas das pizzas dos dois amigos. Formou-se um triângulo com os diâmetros das três pizzas, com ângulo α oposto ao diâmetro da pizza do professor. O professor afirmou que a área de sua pizza é maior do que a soma das áreas das outras duas. Isso ocorre porque:',
+    options: [
+      { id: 'a', text: '0° < α < 90°' },
+      { id: 'b', text: 'α = 90°' },
+      { id: 'c', text: '90° < α < 180°' },
+      { id: 'd', text: 'α = 180°' },
+      { id: 'e', text: '180° < α < 360°' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'Quando α = 90°, o triângulo é retângulo e, pelo Teorema de Pitágoras, a área do maior círculo é exatamente igual à soma das outras duas. Se α aumenta além de 90° (triângulo obtusângulo), o lado oposto a α cresce em relação ao caso retângulo, tornando a área do círculo maior do professor ainda maior que a soma das outras duas.',
+    difficulty: 'hard',
+    examSource: { board: 'ENEM', year: 2023, sourceUrl: 'https://rendewo.com/content/enem_2023/q142.html' }
+  },
+  // Matemática — Probabilidade e Interpretação de Dados
+  {
+    id: 'q_mat_dados_probabilidade_1',
     topicId: 'mat_dados_probabilidade',
     subject: 'Matemática',
-    prompt: 'Ao lançar um dado de 6 faces uma vez, qual a probabilidade de obter um número par?',
+    prompt: 'Uma urna tem 5 bolas vermelhas e 3 azuis. Retiram-se 2 bolas sucessivamente, sem reposição. Qual é a probabilidade de as duas serem vermelhas?',
     options: [
-      { id: 'a', text: '1/6' },
-      { id: 'b', text: '1/3' },
+      { id: 'a', text: '5/14' },
+      { id: 'b', text: '5/8' },
+      { id: 'c', text: '25/64' },
+      { id: 'd', text: '1/2' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Na primeira retirada, P(vermelha) = 5/8. Sem reposição, na segunda retirada restam 4 vermelhas em 7 bolas: P(vermelha) = 4/7. A probabilidade das duas é (5/8)×(4/7) = 20/56 = 5/14.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_dados_probabilidade_2',
+    topicId: 'mat_dados_probabilidade',
+    subject: 'Matemática',
+    prompt: 'Uma moeda honesta é lançada 3 vezes. Qual é a probabilidade de sair pelo menos uma cara?',
+    options: [
+      { id: 'a', text: '1/8' },
+      { id: 'b', text: '3/8' },
       { id: 'c', text: '1/2' },
-      { id: 'd', text: '2/3' }
+      { id: 'd', text: '7/8' }
     ],
-    correctOptionId: 'c',
-    explanation: 'Há 3 números pares (2, 4, 6) em 6 possibilidades totais, logo a probabilidade é 3/6 = 1/2.',
-    difficulty: 'easy'
+    correctOptionId: 'd',
+    explanation: 'É mais fácil calcular o complementar: P(nenhuma cara) = (1/2)³ = 1/8. Logo, P(pelo menos uma cara) = 1 - 1/8 = 7/8.',
+    difficulty: 'medium'
   },
   {
-    id: 'q_mat_05_2',
+    id: 'q_mat_dados_probabilidade_3',
     topicId: 'mat_dados_probabilidade',
     subject: 'Matemática',
-    prompt: 'Em uma urna há 4 bolas vermelhas e 6 bolas azuis. Retirando uma bola ao acaso, qual a probabilidade de ela ser vermelha?',
+    prompt: 'Em uma sala de 40 alunos, 25 gostam de Matemática, 20 gostam de Física, e 10 gostam das duas matérias. Escolhendo um aluno ao acaso, qual é a probabilidade de que ele não goste de nenhuma das duas matérias?',
     options: [
-      { id: 'a', text: '0,2' },
-      { id: 'b', text: '0,4' },
-      { id: 'c', text: '0,5' },
-      { id: 'd', text: '0,6' }
+      { id: 'a', text: '1/8' },
+      { id: 'b', text: '1/4' },
+      { id: 'c', text: '3/8' },
+      { id: 'd', text: '1/2' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Pelo princípio da inclusão-exclusão, gostam de pelo menos uma: 25 + 20 - 10 = 35. Não gostam de nenhuma: 40 - 35 = 5. A probabilidade é 5/40 = 1/8.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_mat_dados_probabilidade_4',
+    topicId: 'mat_dados_probabilidade',
+    subject: 'Matemática',
+    prompt: 'Um conjunto de dados tem os valores 2, 3, 3, 5 e 100. Qual medida de tendência central melhor representa o valor "típico" desse conjunto, considerando a presença do valor discrepante 100?',
+    options: [
+      { id: 'a', text: 'A média' },
+      { id: 'b', text: 'A mediana' },
+      { id: 'c', text: 'As duas representam igualmente bem' },
+      { id: 'd', text: 'Nenhuma das duas' }
     ],
     correctOptionId: 'b',
-    explanation: 'A probabilidade é o número de casos favoráveis sobre o total: 4 vermelhas / 10 bolas totais = 0,4 (40%).',
-    difficulty: 'easy'
+    explanation: 'A média é 113/5 = 22,6, fortemente distorcida pelo valor discrepante 100. A mediana (o valor central, 3) não é afetada por esse outlier e representa melhor o "típico" desse conjunto.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_dados_probabilidade_5',
+    topicId: 'mat_dados_probabilidade',
+    subject: 'Matemática',
+    prompt: 'Ao formar uma comissão de 3 pessoas escolhidas aleatoriamente entre 4 homens e 6 mulheres (total de 10 pessoas), qual é a probabilidade de a comissão ser formada por exatamente 2 mulheres e 1 homem?',
+    options: [
+      { id: 'a', text: '1/3' },
+      { id: 'b', text: '2/5' },
+      { id: 'c', text: '1/2' },
+      { id: 'd', text: '3/5' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'Casos favoráveis: C(6,2)×C(4,1) = 15×4 = 60. Total de comissões possíveis: C(10,3) = 120. Probabilidade = 60/120 = 1/2.',
+    difficulty: 'hard'
   },
   // Matemática — Trigonometria
   {
-    id: 'q_mat_06_1',
+    id: 'q_mat_trigonometria_1',
     topicId: 'mat_trigonometria',
     subject: 'Matemática',
-    prompt: 'Qual é o valor de sen(30°)?',
+    prompt: 'Em um triângulo, dois lados medem 7 cm e 10 cm, e o ângulo entre eles é 60°. Usando a Lei dos Cossenos (cos 60° = 0,5), qual é, aproximadamente, a medida do terceiro lado?',
     options: [
-      { id: 'a', text: '0' },
-      { id: 'b', text: '1/2' },
-      { id: 'c', text: '√2/2' },
-      { id: 'd', text: '√3/2' }
+      { id: 'a', text: '7,9 cm' },
+      { id: 'b', text: '8,9 cm' },
+      { id: 'c', text: '9,9 cm' },
+      { id: 'd', text: '10,9 cm' }
     ],
     correctOptionId: 'b',
-    explanation: 'sen(30°) = 1/2 é um dos valores notáveis da trigonometria, obtido a partir do triângulo retângulo de ângulos 30-60-90.',
-    difficulty: 'easy'
+    explanation: 'Pela Lei dos Cossenos: a² = 7² + 10² - 2×7×10×0,5 = 49 + 100 - 70 = 79. Logo, a = √79 ≈ 8,9 cm.',
+    difficulty: 'hard'
   },
   {
-    id: 'q_mat_06_2',
+    id: 'q_mat_trigonometria_2',
     topicId: 'mat_trigonometria',
     subject: 'Matemática',
-    prompt: 'Em um triângulo retângulo, o cateto oposto a um ângulo mede 3 e a hipotenusa mede 5. Qual é o valor do cosseno desse ângulo?',
+    prompt: 'Se sen(x) = 0,6 e x é um ângulo agudo, qual é o valor de cos(x)?',
     options: [
-      { id: 'a', text: '3/5' },
-      { id: 'b', text: '4/5' },
-      { id: 'c', text: '3/4' },
-      { id: 'd', text: '5/4' }
+      { id: 'a', text: '0,4' },
+      { id: 'b', text: '0,6' },
+      { id: 'c', text: '0,8' },
+      { id: 'd', text: '1,0' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'Pela relação fundamental sen²(x) + cos²(x) = 1: cos²(x) = 1 - 0,36 = 0,64, logo cos(x) = 0,8 (positivo, pois x é agudo).',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_trigonometria_3',
+    topicId: 'mat_trigonometria',
+    subject: 'Matemática',
+    prompt: 'Qual é o período da função f(x) = sen(2x)?',
+    options: [
+      { id: 'a', text: 'π/2' },
+      { id: 'b', text: 'π' },
+      { id: 'c', text: '2π' },
+      { id: 'd', text: '4π' }
     ],
     correctOptionId: 'b',
-    explanation: 'Pelo Teorema de Pitágoras, o cateto adjacente é √(5² - 3²) = √16 = 4. Como cosseno = cateto adjacente/hipotenusa, cos = 4/5.',
+    explanation: 'O período da função seno padrão é 2π. Quando o argumento é multiplicado por 2 (sen(2x)), o período é dividido por 2: 2π/2 = π.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_mat_trigonometria_4',
+    topicId: 'mat_trigonometria',
+    subject: 'Matemática',
+    prompt: 'De um ponto no chão, a 30 m da base de um prédio, o ângulo de elevação até o topo do prédio é de 45°. Qual é, aproximadamente, a altura do prédio?',
+    options: [
+      { id: 'a', text: '15 m' },
+      { id: 'b', text: '21 m' },
+      { id: 'c', text: '26 m' },
+      { id: 'd', text: '30 m' }
+    ],
+    correctOptionId: 'd',
+    explanation: 'tan(45°) = altura/distância = 1. Como a distância é 30 m, a altura também é 30 m.',
     difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_trigonometria_5',
+    topicId: 'mat_trigonometria',
+    subject: 'Matemática',
+    prompt: 'Em um triângulo, um ângulo mede 45° e o lado oposto a ele mede 10 cm. Outro ângulo mede 30°. Pela Lei dos Senos (sen 30° = 0,5; sen 45° ≈ 0,71), qual é, aproximadamente, a medida do lado oposto ao ângulo de 30°?',
+    options: [
+      { id: 'a', text: '5,0 cm' },
+      { id: 'b', text: '6,0 cm' },
+      { id: 'c', text: '7,0 cm' },
+      { id: 'd', text: '8,5 cm' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'Pela Lei dos Senos: x/sen(30°) = 10/sen(45°) → x = 10 × 0,5/0,71 ≈ 7,0 cm.',
+    difficulty: 'hard'
   },
   // Física — Cinemática
   {
@@ -1470,23 +1666,6 @@ export const mockQuestions: Question[] = [
     examSource: { board: 'ENEM', year: 2023, sourceUrl: 'https://www.indagacao.com.br/2023/11/enem-2023-o-aldrin-e-um-inseticida-agricola-organoclorado-sintetico-de-baixa-polaridade-cuja-estrutura-molecular-simetrica-de-formula-c12h8cl16-esta-representada-na-figura.html' }
   },
   {
-    id: 'q_real_enem_2023_mat',
-    topicId: 'mat_geometria_plana',
-    subject: 'Matemática',
-    prompt: 'Sejam a, b e c as medidas dos lados de um triângulo retângulo, tendo a como medida da hipotenusa. Esses valores a, b e c são, respectivamente, os diâmetros dos círculos C1, C2 e C3. Essa construção assegura, pelo teorema de Pitágoras, que área(C1) = área(C2) + área(C3). Um professor de matemática desafiou dois amigos: sem usar instrumento de medição, ele poderia afirmar se a área do círculo correspondente à pizza que ele pedisse era maior, igual ou menor do que a soma das áreas das pizzas dos dois amigos. Formou-se um triângulo com os diâmetros das três pizzas, com ângulo α oposto ao diâmetro da pizza do professor. O professor afirmou que a área de sua pizza é maior do que a soma das áreas das outras duas. Isso ocorre porque:',
-    options: [
-      { id: 'a', text: '0° < α < 90°' },
-      { id: 'b', text: 'α = 90°' },
-      { id: 'c', text: '90° < α < 180°' },
-      { id: 'd', text: 'α = 180°' },
-      { id: 'e', text: '180° < α < 360°' }
-    ],
-    correctOptionId: 'c',
-    explanation: 'Quando α = 90°, o triângulo é retângulo e, pelo Teorema de Pitágoras, a área do maior círculo é exatamente igual à soma das outras duas. Se α aumenta além de 90° (triângulo obtusângulo), o lado oposto a α cresce em relação ao caso retângulo, tornando a área do círculo maior do professor ainda maior que a soma das outras duas.',
-    difficulty: 'hard',
-    examSource: { board: 'ENEM', year: 2023, sourceUrl: 'https://rendewo.com/content/enem_2023/q142.html' }
-  },
-  {
     id: 'q_real_fuvest_2022_bio',
     topicId: 'bio_genetica',
     subject: 'Biologia',
@@ -1780,92 +1959,227 @@ export const mockQuestions: Question[] = [
     id: 'q_mat_aritmetica_proporcionalidade_1',
     topicId: 'mat_aritmetica_proporcionalidade',
     subject: 'Matemática',
-    prompt: 'Uma receita rende 8 porções usando 300 g de farinha. Mantendo a mesma proporção, quantos gramas de farinha são necessários para render 20 porções?',
+    prompt: 'Uma torneira enche sozinha um tanque em 6 horas, e outra torneira, sozinha, enche o mesmo tanque em 3 horas. Abrindo as duas torneiras juntas, em quanto tempo o tanque será cheio?',
     options: [
-      { id: 'a', text: '600 g' },
-      { id: 'b', text: '750 g' },
-      { id: 'c', text: '800 g' },
-      { id: 'd', text: '900 g' }
+      { id: 'a', text: '2 horas' },
+      { id: 'b', text: '4,5 horas' },
+      { id: 'c', text: '1,5 hora' },
+      { id: 'd', text: '9 horas' }
     ],
-    correctOptionId: 'b',
-    explanation: 'A razão é 300/8 = 37,5 g por porção. Para 20 porções: 37,5 × 20 = 750 g.',
-    difficulty: 'easy'
+    correctOptionId: 'a',
+    explanation: 'As vazões (taxas de enchimento) se somam: 1/6 + 1/3 = 1/6 + 2/6 = 3/6 = 1/2 do tanque por hora. Para encher o tanque inteiro, o tempo é o inverso: 2 horas.',
+    difficulty: 'medium'
   },
   {
     id: 'q_mat_aritmetica_proporcionalidade_2',
     topicId: 'mat_aritmetica_proporcionalidade',
     subject: 'Matemática',
-    prompt: 'Um produto teve o preço aumentado em 20% e, em seguida, sobre o novo preço, foi aplicado um desconto de 20%. Em relação ao preço original, o preço final está:',
+    prompt: 'Uma equipe de 8 trabalhadores constrói um muro em 12 dias, todos no mesmo ritmo. Se 2 trabalhadores saírem da equipe, em quantos dias os 6 restantes terminariam o mesmo muro?',
     options: [
-      { id: 'a', text: 'Igual ao original' },
-      { id: 'b', text: '4% menor' },
-      { id: 'c', text: '4% maior' },
-      { id: 'd', text: '2% menor' }
+      { id: 'a', text: '9 dias' },
+      { id: 'b', text: '10 dias' },
+      { id: 'c', text: '14 dias' },
+      { id: 'd', text: '16 dias' }
+    ],
+    correctOptionId: 'd',
+    explanation: 'Número de trabalhadores e dias são inversamente proporcionais (menos gente demora mais). O produto se mantém constante: 8 × 12 = 6 × x → x = 96/6 = 16 dias.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_aritmetica_proporcionalidade_3',
+    topicId: 'mat_aritmetica_proporcionalidade',
+    subject: 'Matemática',
+    prompt: 'Um investimento rende 10% de juros no primeiro ano e, sobre o novo montante, mais 10% no segundo ano. Qual é o rendimento percentual total acumulado nos dois anos, em relação ao valor inicial?',
+    options: [
+      { id: 'a', text: '20%' },
+      { id: 'b', text: '21%' },
+      { id: 'c', text: '22%' },
+      { id: 'd', text: '19%' }
     ],
     correctOptionId: 'b',
-    explanation: 'Partindo de 100: após +20% fica 120; após -20% sobre 120 fica 120 × 0,8 = 96. Isso é 4% menor que o valor original de 100, pois aumento e desconto percentuais sucessivos não se cancelam quando aplicados sobre bases diferentes.',
+    explanation: 'Juros compostos não se somam diretamente: partindo de 100, após o primeiro ano fica 110, e após o segundo, 110 × 1,10 = 121. O rendimento total é 21%, não 20%.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_mat_aritmetica_proporcionalidade_4',
+    topicId: 'mat_aritmetica_proporcionalidade',
+    subject: 'Matemática',
+    prompt: 'Uma máquina produz 150 peças em 5 horas, funcionando em ritmo constante. Mantendo o mesmo ritmo, quantas peças ela produzirá em 8 horas?',
+    options: [
+      { id: 'a', text: '210' },
+      { id: 'b', text: '225' },
+      { id: 'c', text: '240' },
+      { id: 'd', text: '270' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'A taxa de produção é 150/5 = 30 peças por hora (grandezas diretamente proporcionais). Em 8 horas: 30 × 8 = 240 peças.',
     difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_aritmetica_proporcionalidade_5',
+    topicId: 'mat_aritmetica_proporcionalidade',
+    subject: 'Matemática',
+    prompt: 'Uma herança de R$ 90.000,00 deve ser dividida entre três herdeiros na proporção direta de 2:3:4. Quanto receberá o herdeiro com a maior parte?',
+    options: [
+      { id: 'a', text: 'R$ 30.000,00' },
+      { id: 'b', text: 'R$ 36.000,00' },
+      { id: 'c', text: 'R$ 40.000,00' },
+      { id: 'd', text: 'R$ 45.000,00' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'A soma das partes é 2+3+4 = 9. Cada parte vale 90.000/9 = 10.000. O herdeiro com a maior proporção (4 partes) recebe 4 × 10.000 = 40.000.',
+    difficulty: 'hard'
   },
   // Matemática — Teoria dos Números Inteiros
   {
     id: 'q_mat_teoria_numeros_1',
     topicId: 'mat_teoria_numeros',
     subject: 'Matemática',
-    prompt: 'Qual é o máximo divisor comum (MDC) entre 84 e 126?',
+    prompt: 'Um número inteiro positivo, quando dividido por 7, deixa resto 3; e quando dividido por 5, deixa resto 2. Qual das alternativas apresenta um valor possível para esse número?',
     options: [
-      { id: 'a', text: '6' },
-      { id: 'b', text: '14' },
-      { id: 'c', text: '21' },
-      { id: 'd', text: '42' }
+      { id: 'a', text: '17' },
+      { id: 'b', text: '21' },
+      { id: 'c', text: '33' },
+      { id: 'd', text: '45' }
     ],
-    correctOptionId: 'd',
-    explanation: '84 = 2² × 3 × 7 e 126 = 2 × 3² × 7. O MDC toma os fatores comuns com menor expoente: 2 × 3 × 7 = 42.',
-    difficulty: 'easy'
+    correctOptionId: 'a',
+    explanation: '17 ÷ 7 = 2 resto 3, e 17 ÷ 5 = 3 resto 2 — as duas condições valem. Os demais falham em pelo menos uma delas (por exemplo, 45 ÷ 7 dá resto 3, mas 45 ÷ 5 dá resto 0).',
+    difficulty: 'hard'
   },
   {
     id: 'q_mat_teoria_numeros_2',
     topicId: 'mat_teoria_numeros',
     subject: 'Matemática',
-    prompt: 'Dois sinais luminosos, um a cada 18 segundos e outro a cada 24 segundos, piscam juntos às 8h00. Depois de quantos segundos eles voltarão a piscar juntos novamente?',
+    prompt: 'Qual é o menor número natural maior que 10 que, ao ser dividido por 4, 6 e 9, deixa sempre resto 1?',
     options: [
-      { id: 'a', text: '36 segundos' },
-      { id: 'b', text: '48 segundos' },
-      { id: 'c', text: '72 segundos' },
-      { id: 'd', text: '432 segundos' }
+      { id: 'a', text: '36' },
+      { id: 'b', text: '37' },
+      { id: 'c', text: '72' },
+      { id: 'd', text: '73' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'O número procurado é MMC(4,6,9) + 1. Como MMC(4,6,9) = 36, o menor valor maior que 10 é 36 + 1 = 37.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_teoria_numeros_3',
+    topicId: 'mat_teoria_numeros',
+    subject: 'Matemática',
+    prompt: 'O número 2¹⁰ - 1 (ou seja, 1023) é divisível por qual dos números abaixo?',
+    options: [
+      { id: 'a', text: '7' },
+      { id: 'b', text: '11' },
+      { id: 'c', text: '13' },
+      { id: 'd', text: '17' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Fatorando, 1023 = 3 × 11 × 31. Logo, 1023 é divisível por 11 (1023/11 = 93), mas não por 7, 13 ou 17.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_mat_teoria_numeros_4',
+    topicId: 'mat_teoria_numeros',
+    subject: 'Matemática',
+    prompt: 'Quantos números inteiros entre 1 e 100 são múltiplos de 3 ou de 5?',
+    options: [
+      { id: 'a', text: '40' },
+      { id: 'b', text: '44' },
+      { id: 'c', text: '47' },
+      { id: 'd', text: '53' }
     ],
     correctOptionId: 'c',
-    explanation: 'A resposta é o MMC(18, 24). 18 = 2 × 3² e 24 = 2³ × 3, então MMC = 2³ × 3² = 72 segundos.',
-    difficulty: 'medium'
+    explanation: 'Pelo princípio da inclusão-exclusão: múltiplos de 3 são 33, múltiplos de 5 são 20, e múltiplos de ambos (de 15) são 6. Total: 33 + 20 - 6 = 47.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_mat_teoria_numeros_5',
+    topicId: 'mat_teoria_numeros',
+    subject: 'Matemática',
+    prompt: 'Qual é o número de divisores positivos de 360?',
+    options: [
+      { id: 'a', text: '16' },
+      { id: 'b', text: '20' },
+      { id: 'c', text: '24' },
+      { id: 'd', text: '30' }
+    ],
+    correctOptionId: 'c',
+    explanation: '360 = 2³ × 3² × 5¹. O número de divisores é (3+1)×(2+1)×(1+1) = 4×3×2 = 24.',
+    difficulty: 'hard'
   },
   // Matemática — Sequências, Matrizes e Sistemas Lineares
   {
     id: 'q_mat_sequencias_matrizes_1',
     topicId: 'mat_sequencias_matrizes',
     subject: 'Matemática',
-    prompt: 'Numa progressão aritmética, o primeiro termo é 5 e a razão é 4. Qual é o 12º termo dessa progressão?',
+    prompt: 'Em uma progressão aritmética, o quinto termo é 17 e o décimo termo é 37. Qual é a razão dessa progressão?',
     options: [
-      { id: 'a', text: '44' },
-      { id: 'b', text: '48' },
-      { id: 'c', text: '49' },
-      { id: 'd', text: '53' }
+      { id: 'a', text: '2' },
+      { id: 'b', text: '4' },
+      { id: 'c', text: '5' },
+      { id: 'd', text: '8' }
     ],
-    correctOptionId: 'c',
-    explanation: 'aₙ = a₁ + (n-1)r → a₁₂ = 5 + 11 × 4 = 5 + 44 = 49.',
-    difficulty: 'easy'
+    correctOptionId: 'b',
+    explanation: 'Entre o 5º e o 10º termo há 5 intervalos de razão: a₁₀ - a₅ = 5r → 37 - 17 = 5r → r = 4.',
+    difficulty: 'medium'
   },
   {
     id: 'q_mat_sequencias_matrizes_2',
     topicId: 'mat_sequencias_matrizes',
     subject: 'Matemática',
-    prompt: 'Resolvendo o sistema linear { x + y = 10 ; x − y = 2 }, os valores de x e y são, respectivamente:',
+    prompt: 'Em uma progressão geométrica de razão 3, o terceiro termo vale 45. Qual é o primeiro termo dessa progressão?',
     options: [
-      { id: 'a', text: '4 e 6' },
-      { id: 'b', text: '6 e 4' },
-      { id: 'c', text: '5 e 5' },
-      { id: 'd', text: '8 e 2' }
+      { id: 'a', text: '3' },
+      { id: 'b', text: '5' },
+      { id: 'c', text: '15' },
+      { id: 'd', text: '135' }
     ],
     correctOptionId: 'b',
-    explanation: 'Somando as duas equações: 2x = 12 → x = 6. Substituindo em x + y = 10: y = 4.',
+    explanation: 'a₃ = a₁ × r² → 45 = a₁ × 9 → a₁ = 5.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_sequencias_matrizes_3',
+    topicId: 'mat_sequencias_matrizes',
+    subject: 'Matemática',
+    prompt: 'Qual é a soma dos 20 primeiros termos da progressão aritmética (3, 7, 11, 15, ...)?',
+    options: [
+      { id: 'a', text: '780' },
+      { id: 'b', text: '800' },
+      { id: 'c', text: '820' },
+      { id: 'd', text: '840' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'a₁ = 3, r = 4, então a₂₀ = 3 + 19×4 = 79. A soma é Sₙ = n(a₁+aₙ)/2 = 20×(3+79)/2 = 20×41 = 820.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_mat_sequencias_matrizes_4',
+    topicId: 'mat_sequencias_matrizes',
+    subject: 'Matemática',
+    prompt: 'Resolvendo o sistema linear {2x + y = 8; x - y = 1} pela regra de Cramer, qual é o determinante da matriz dos coeficientes?',
+    options: [
+      { id: 'a', text: '-3' },
+      { id: 'b', text: '-1' },
+      { id: 'c', text: '1' },
+      { id: 'd', text: '3' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A matriz dos coeficientes é [[2,1],[1,-1]]. O determinante é 2×(-1) - 1×1 = -2 - 1 = -3.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_mat_sequencias_matrizes_5',
+    topicId: 'mat_sequencias_matrizes',
+    subject: 'Matemática',
+    prompt: 'Qual é a soma dos infinitos termos da progressão geométrica infinita (1, 1/2, 1/4, 1/8, ...)?',
+    options: [
+      { id: 'a', text: '1' },
+      { id: 'b', text: '1,5' },
+      { id: 'c', text: '2' },
+      { id: 'd', text: 'Infinito (a soma diverge)' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'Como |r| < 1 (r = 1/2), a soma converge: S = a₁/(1-r) = 1/(1-0,5) = 2.',
     difficulty: 'medium'
   },
   // Matemática — Geometria Espacial
@@ -1873,61 +2187,151 @@ export const mockQuestions: Question[] = [
     id: 'q_mat_geometria_espacial_1',
     topicId: 'mat_geometria_espacial',
     subject: 'Matemática',
-    prompt: 'Qual é o volume de um cubo cuja aresta mede 5 cm?',
+    prompt: 'Um cilindro reto tem volume de 500π cm³ e altura de 5 cm. Qual é o raio da base desse cilindro?',
     options: [
-      { id: 'a', text: '25 cm³' },
-      { id: 'b', text: '75 cm³' },
-      { id: 'c', text: '100 cm³' },
-      { id: 'd', text: '125 cm³' }
+      { id: 'a', text: '5 cm' },
+      { id: 'b', text: '10 cm' },
+      { id: 'c', text: '25 cm' },
+      { id: 'd', text: '50 cm' }
     ],
-    correctOptionId: 'd',
-    explanation: 'O volume do cubo é aresta³ = 5³ = 125 cm³.',
-    difficulty: 'easy'
+    correctOptionId: 'b',
+    explanation: 'V = π×r²×h → 500π = π×r²×5 → r² = 100 → r = 10 cm.',
+    difficulty: 'medium'
   },
   {
     id: 'q_mat_geometria_espacial_2',
     topicId: 'mat_geometria_espacial',
     subject: 'Matemática',
-    prompt: 'Um cilindro reto tem raio da base igual a 3 cm e altura igual a 10 cm. Qual é aproximadamente o seu volume? (use π ≈ 3,14)',
+    prompt: 'Um cone e um cilindro têm a mesma base (mesmo raio) e a mesma altura. Qual é a razão entre o volume do cone e o volume do cilindro?',
     options: [
-      { id: 'a', text: '94,2 cm³' },
-      { id: 'b', text: '188,4 cm³' },
-      { id: 'c', text: '282,6 cm³' },
-      { id: 'd', text: '376,8 cm³' }
+      { id: 'a', text: '1/4' },
+      { id: 'b', text: '1/3' },
+      { id: 'c', text: '1/2' },
+      { id: 'd', text: '2/3' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'V(cone) = (1/3)πr²h e V(cilindro) = πr²h, com o mesmo r e h. A razão entre eles é sempre 1/3, independentemente das dimensões.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_geometria_espacial_3',
+    topicId: 'mat_geometria_espacial',
+    subject: 'Matemática',
+    prompt: 'Uma caixa em forma de paralelepípedo retângulo tem dimensões 4 cm × 5 cm × 6 cm. Qual é a área total (soma de todas as faces) dessa caixa?',
+    options: [
+      { id: 'a', text: '74 cm²' },
+      { id: 'b', text: '120 cm²' },
+      { id: 'c', text: '148 cm²' },
+      { id: 'd', text: '158 cm²' }
     ],
     correctOptionId: 'c',
-    explanation: 'V = π × r² × h = 3,14 × 9 × 10 = 282,6 cm³.',
+    explanation: 'A área total é 2×(ab + ac + bc) = 2×(4×5 + 4×6 + 5×6) = 2×(20+24+30) = 2×74 = 148 cm².',
     difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_geometria_espacial_4',
+    topicId: 'mat_geometria_espacial',
+    subject: 'Matemática',
+    prompt: 'Qual é o volume aproximado de uma esfera de raio 3 cm? (use π ≈ 3,14)',
+    options: [
+      { id: 'a', text: '37,68 cm³' },
+      { id: 'b', text: '94,2 cm³' },
+      { id: 'c', text: '113,04 cm³' },
+      { id: 'd', text: '339,12 cm³' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'V = (4/3)×π×r³ = (4/3)×3,14×27 = 339,12/3 = 113,04 cm³.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_geometria_espacial_5',
+    topicId: 'mat_geometria_espacial',
+    subject: 'Matemática',
+    prompt: 'Uma pirâmide é seccionada por um plano paralelo à base, exatamente na metade de sua altura. Qual é a razão entre o volume da pirâmide menor (o topo, semelhante à original) e o volume da pirâmide original?',
+    options: [
+      { id: 'a', text: '1/2' },
+      { id: 'b', text: '1/4' },
+      { id: 'c', text: '1/8' },
+      { id: 'd', text: '1/16' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'Em sólidos semelhantes, o volume escala com o cubo da razão de semelhança linear. Como a razão linear é 1/2, a razão de volumes é (1/2)³ = 1/8.',
+    difficulty: 'hard'
   },
   // Matemática — Geometria Analítica
   {
     id: 'q_mat_geometria_analitica_1',
     topicId: 'mat_geometria_analitica',
     subject: 'Matemática',
-    prompt: 'Qual é a distância entre os pontos A(1, 2) e B(4, 6) no plano cartesiano?',
+    prompt: 'Qual é a equação da reta que passa pelos pontos A(0, 3) e B(2, 7)?',
     options: [
-      { id: 'a', text: '3' },
-      { id: 'b', text: '4' },
-      { id: 'c', text: '5' },
-      { id: 'd', text: '7' }
+      { id: 'a', text: 'y = 2x + 3' },
+      { id: 'b', text: 'y = 2x - 3' },
+      { id: 'c', text: 'y = 3x + 2' },
+      { id: 'd', text: 'y = 4x + 3' }
     ],
-    correctOptionId: 'c',
-    explanation: 'd = √[(4-1)² + (6-2)²] = √(9 + 16) = √25 = 5.',
-    difficulty: 'easy'
+    correctOptionId: 'a',
+    explanation: 'O coeficiente angular é (7-3)/(2-0) = 2. Como a reta passa por (0,3), o coeficiente linear é 3. A equação é y = 2x + 3.',
+    difficulty: 'medium'
   },
   {
     id: 'q_mat_geometria_analitica_2',
     topicId: 'mat_geometria_analitica',
     subject: 'Matemática',
-    prompt: 'Qual é o coeficiente angular da reta que passa pelos pontos A(2, 3) e B(5, 9)?',
+    prompt: 'Qual é a distância do ponto (3, 4) à reta de equação 3x + 4y - 10 = 0?',
     options: [
       { id: 'a', text: '1' },
       { id: 'b', text: '2' },
       { id: 'c', text: '3' },
-      { id: 'd', text: '6' }
+      { id: 'd', text: '5' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'd = |3×3 + 4×4 - 10|/√(3²+4²) = |9+16-10|/5 = 15/5 = 3.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_mat_geometria_analitica_3',
+    topicId: 'mat_geometria_analitica',
+    subject: 'Matemática',
+    prompt: 'Qual é o raio da circunferência de equação x² + y² - 6x + 4y - 3 = 0?',
+    options: [
+      { id: 'a', text: '3' },
+      { id: 'b', text: '4' },
+      { id: 'c', text: '5' },
+      { id: 'd', text: '16' }
     ],
     correctOptionId: 'b',
-    explanation: 'm = (y₂ - y₁)/(x₂ - x₁) = (9 - 3)/(5 - 2) = 6/3 = 2.',
+    explanation: 'Completando quadrados: (x-3)² - 9 + (y+2)² - 4 - 3 = 0 → (x-3)² + (y+2)² = 16. Logo r² = 16, r = 4.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_mat_geometria_analitica_4',
+    topicId: 'mat_geometria_analitica',
+    subject: 'Matemática',
+    prompt: 'As retas r: y = 3x + 1 e s: y = mx - 2 são perpendiculares entre si. Qual é o valor de m?',
+    options: [
+      { id: 'a', text: '-3' },
+      { id: 'b', text: '-1/3' },
+      { id: 'c', text: '1/3' },
+      { id: 'd', text: '3' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Retas perpendiculares têm coeficientes angulares cujo produto é -1: 3×m = -1 → m = -1/3.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_geometria_analitica_5',
+    topicId: 'mat_geometria_analitica',
+    subject: 'Matemática',
+    prompt: 'Qual é a área do triângulo cujos vértices são A(0,0), B(4,0) e C(0,3)?',
+    options: [
+      { id: 'a', text: '3,5' },
+      { id: 'b', text: '6' },
+      { id: 'c', text: '7' },
+      { id: 'd', text: '12' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'O lado AB está sobre o eixo x (comprimento 4) e a altura até C é 3 (distância de C ao eixo x). Área = (base × altura)/2 = (4×3)/2 = 6.',
     difficulty: 'medium'
   },
   // Matemática — Equações, Desigualdades e Modelagem Algébrica
@@ -1935,62 +2339,228 @@ export const mockQuestions: Question[] = [
     id: 'q_mat_equacoes_1',
     topicId: 'mat_equacoes',
     subject: 'Matemática',
-    prompt: 'Qual é o conjunto solução da equação do 2º grau x² − 5x + 6 = 0?',
+    prompt: 'A soma de dois números é 20, e o produto entre eles é 96. Quais são esses dois números?',
     options: [
-      { id: 'a', text: '{1, 6}' },
-      { id: 'b', text: '{2, 3}' },
-      { id: 'c', text: '{-2, -3}' },
-      { id: 'd', text: '{2, -3}' }
+      { id: 'a', text: '10 e 10' },
+      { id: 'b', text: '12 e 8' },
+      { id: 'c', text: '15 e 5' },
+      { id: 'd', text: '16 e 4' }
     ],
     correctOptionId: 'b',
-    explanation: 'Fatorando: (x-2)(x-3) = 0, pois 2 × 3 = 6 e 2 + 3 = 5. Logo x = 2 ou x = 3.',
-    difficulty: 'easy'
+    explanation: 'Chamando os números de x e 20-x: x(20-x) = 96 → x² - 20x + 96 = 0. O discriminante é 400-384=16, e as raízes são (20±4)/2 = 12 ou 8.',
+    difficulty: 'medium'
   },
   {
     id: 'q_mat_equacoes_2',
     topicId: 'mat_equacoes',
     subject: 'Matemática',
-    prompt: 'Para quais valores de x a desigualdade 2x − 3 > 7 é satisfeita?',
+    prompt: 'Para quais valores de x a inequação x² - 5x + 6 ≤ 0 é satisfeita?',
     options: [
-      { id: 'a', text: 'x > 2' },
-      { id: 'b', text: 'x > 5' },
-      { id: 'c', text: 'x < 5' },
-      { id: 'd', text: 'x > 10' }
+      { id: 'a', text: 'x ≤ 2 ou x ≥ 3' },
+      { id: 'b', text: '2 ≤ x ≤ 3' },
+      { id: 'c', text: 'x < 2' },
+      { id: 'd', text: 'x > 3' }
     ],
     correctOptionId: 'b',
-    explanation: '2x - 3 > 7 → 2x > 10 → x > 5.',
-    difficulty: 'easy'
+    explanation: 'As raízes de x² - 5x + 6 são 2 e 3. Como a parábola tem concavidade para cima, ela é negativa ou nula (≤0) apenas entre as raízes: 2 ≤ x ≤ 3.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_equacoes_3',
+    topicId: 'mat_equacoes',
+    subject: 'Matemática',
+    prompt: 'O lucro mensal de uma empresa, em milhares de reais, é dado por L(x) = -2x² + 40x - 150, onde x é a quantidade (em centenas) de produtos vendidos. Para qual quantidade x o lucro é máximo?',
+    options: [
+      { id: 'a', text: '5' },
+      { id: 'b', text: '10' },
+      { id: 'c', text: '15' },
+      { id: 'd', text: '20' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'O máximo de uma função quadrática com concavidade para baixo ocorre no vértice: x = -b/2a = -40/(2×(-2)) = 10.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_mat_equacoes_4',
+    topicId: 'mat_equacoes',
+    subject: 'Matemática',
+    prompt: 'Para quais valores reais de x a expressão (x-1)(x+3) é negativa?',
+    options: [
+      { id: 'a', text: 'x < -3' },
+      { id: 'b', text: '-3 < x < 1' },
+      { id: 'c', text: 'x > 1' },
+      { id: 'd', text: 'x < -3 ou x > 1' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'As raízes são -3 e 1. Como o coeficiente de x² é positivo (concavidade para cima), a expressão é negativa apenas entre as raízes: -3 < x < 1.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_equacoes_5',
+    topicId: 'mat_equacoes',
+    subject: 'Matemática',
+    prompt: 'Resolvendo a equação irracional √(x+3) = x - 3, para x real (lembrando de verificar as soluções na equação original), qual é o valor válido de x?',
+    options: [
+      { id: 'a', text: '1' },
+      { id: 'b', text: '6' },
+      { id: 'c', text: '1 e 6' },
+      { id: 'd', text: 'Nenhuma solução real' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Elevando ao quadrado: x+3 = (x-3)² → x² - 7x + 6 = 0 → x = 1 ou x = 6. Mas o lado direito (x-3) precisa ser ≥ 0, ou seja, x ≥ 3. Isso elimina x=1; apenas x=6 é válido (verificação: √9 = 3 = 6-3 ✓).',
+    difficulty: 'hard'
   },
   // Matemática — Logaritmos e Exponenciais
   {
     id: 'q_mat_log_exponenciais_1',
     topicId: 'mat_log_exponenciais',
     subject: 'Matemática',
-    prompt: 'Qual é o valor de log₂(32)?',
+    prompt: 'Sabendo que log(2) ≈ 0,30 e log(3) ≈ 0,48, qual é o valor aproximado de log(6)?',
     options: [
-      { id: 'a', text: '4' },
-      { id: 'b', text: '5' },
-      { id: 'c', text: '6' },
-      { id: 'd', text: '16' }
+      { id: 'a', text: '0,18' },
+      { id: 'b', text: '0,60' },
+      { id: 'c', text: '0,78' },
+      { id: 'd', text: '1,44' }
     ],
-    correctOptionId: 'b',
-    explanation: 'log₂(32) é o expoente x tal que 2ˣ = 32. Como 2⁵ = 32, log₂(32) = 5.',
-    difficulty: 'easy'
+    correctOptionId: 'c',
+    explanation: 'Como 6 = 2×3, log(6) = log(2) + log(3) = 0,30 + 0,48 = 0,78.',
+    difficulty: 'medium'
   },
   {
     id: 'q_mat_log_exponenciais_2',
     topicId: 'mat_log_exponenciais',
     subject: 'Matemática',
-    prompt: 'Uma população de bactérias dobra a cada hora, partindo de 100 indivíduos. Quantas bactérias haverá após 4 horas?',
+    prompt: 'Resolva a equação 2^(x+1) = 32. Qual é o valor de x?',
     options: [
-      { id: 'a', text: '400' },
-      { id: 'b', text: '800' },
-      { id: 'c', text: '1200' },
-      { id: 'd', text: '1600' }
+      { id: 'a', text: '3' },
+      { id: 'b', text: '4' },
+      { id: 'c', text: '5' },
+      { id: 'd', text: '16' }
     ],
-    correctOptionId: 'd',
-    explanation: 'Crescimento exponencial: P(t) = 100 × 2ᵗ. Em t = 4: 100 × 2⁴ = 100 × 16 = 1600.',
+    correctOptionId: 'b',
+    explanation: 'Como 32 = 2⁵, temos x+1 = 5, logo x = 4.',
     difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_log_exponenciais_3',
+    topicId: 'mat_log_exponenciais',
+    subject: 'Matemática',
+    prompt: 'Resolva a equação log₂(x) + log₂(x - 2) = 3, para x real (lembre de verificar o domínio).',
+    options: [
+      { id: 'a', text: '-2' },
+      { id: 'b', text: '4' },
+      { id: 'c', text: '-2 e 4' },
+      { id: 'd', text: '8' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Usando log(a)+log(b)=log(ab): log₂[x(x-2)] = 3 → x(x-2) = 8 → x²-2x-8=0 → x=4 ou x=-2. Como o domínio exige x>0 e x-2>0 (ou seja, x>2), apenas x=4 é válido.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_mat_log_exponenciais_4',
+    topicId: 'mat_log_exponenciais',
+    subject: 'Matemática',
+    prompt: 'Uma cultura de bactérias tem crescimento dado por P(t) = P₀ × 3ᵗ, sendo t em horas. Após quantas horas a população será 81 vezes o valor inicial?',
+    options: [
+      { id: 'a', text: '3' },
+      { id: 'b', text: '4' },
+      { id: 'c', text: '9' },
+      { id: 'd', text: '27' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Precisamos de 3ᵗ = 81 = 3⁴, logo t = 4 horas.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_log_exponenciais_5',
+    topicId: 'mat_log_exponenciais',
+    subject: 'Matemática',
+    prompt: 'Qual é o valor de log₄(8)?',
+    options: [
+      { id: 'a', text: '1/2' },
+      { id: 'b', text: '2/3' },
+      { id: 'c', text: '3/2' },
+      { id: 'd', text: '2' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'Usando mudança de base: log₄(8) = log₂(8)/log₂(4) = 3/2.',
+    difficulty: 'hard'
+  },
+  // Matemática — Números Complexos e Polinômios
+  {
+    id: 'q_mat_complexos_polinomios_1',
+    topicId: 'mat_complexos_polinomios',
+    subject: 'Matemática',
+    prompt: 'Qual é o resultado de (2 + 3i) × (1 - 2i)?',
+    options: [
+      { id: 'a', text: '8 - i' },
+      { id: 'b', text: '2 - i' },
+      { id: 'c', text: '-4 + 7i' },
+      { id: 'd', text: '8 + i' }
+    ],
+    correctOptionId: 'a',
+    explanation: '(2+3i)(1-2i) = 2 - 4i + 3i - 6i² = 2 - i - 6(-1) = 2 - i + 6 = 8 - i.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_complexos_polinomios_2',
+    topicId: 'mat_complexos_polinomios',
+    subject: 'Matemática',
+    prompt: 'Qual é o módulo do número complexo z = 3 + 4i?',
+    options: [
+      { id: 'a', text: '3' },
+      { id: 'b', text: '4' },
+      { id: 'c', text: '5' },
+      { id: 'd', text: '7' }
+    ],
+    correctOptionId: 'c',
+    explanation: '|z| = √(3² + 4²) = √25 = 5.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_complexos_polinomios_3',
+    topicId: 'mat_complexos_polinomios',
+    subject: 'Matemática',
+    prompt: 'Sabendo que 2 é uma raiz do polinômio P(x) = x³ - 4x² + x + 6, quais são as outras duas raízes?',
+    options: [
+      { id: 'a', text: '1 e 3' },
+      { id: 'b', text: '-1 e 3' },
+      { id: 'c', text: '-3 e 1' },
+      { id: 'd', text: '-2 e 3' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Dividindo P(x) por (x-2), obtemos o quociente x² - 2x - 3 = (x-3)(x+1). As outras raízes são 3 e -1.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_mat_complexos_polinomios_4',
+    topicId: 'mat_complexos_polinomios',
+    subject: 'Matemática',
+    prompt: 'Qual é o valor de i²³ (sendo i a unidade imaginária)?',
+    options: [
+      { id: 'a', text: 'i' },
+      { id: 'b', text: '-i' },
+      { id: 'c', text: '1' },
+      { id: 'd', text: '-1' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'As potências de i se repetem em ciclos de 4. Como 23 = 4×5 + 3, i²³ = i³ = -i.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_complexos_polinomios_5',
+    topicId: 'mat_complexos_polinomios',
+    subject: 'Matemática',
+    prompt: 'Um polinômio de grau 4 com coeficientes reais tem exatamente uma raiz real, x = 5, com multiplicidade 2. Quantas raízes complexas não reais (contando multiplicidade) esse polinômio deve ter?',
+    options: [
+      { id: 'a', text: '0' },
+      { id: 'b', text: '1' },
+      { id: 'c', text: '2' },
+      { id: 'd', text: '4' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'Um polinômio de grau 4 tem 4 raízes ao todo (Teorema Fundamental da Álgebra). Se 2 delas são reais (5, com multiplicidade 2), as outras 2 devem ser complexas não reais — e, como os coeficientes são reais, elas formam um par conjugado.',
+    difficulty: 'hard'
   },
   // Geografia — Cartografia e Fundamentos
   {
