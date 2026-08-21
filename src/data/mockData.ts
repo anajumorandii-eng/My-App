@@ -10456,6 +10456,214 @@ export const mockQuestions: Question[] = [
     explanation: 'Projeções equivalentes, como a de Peters, priorizam a representação proporcionalmente correta das áreas dos continentes (útil para comparar o tamanho real de diferentes países), ao custo de distorcer suas formas — o oposto do que fazem as projeções conformes, como a de Mercator.',
     difficulty: 'medium'
   },
+  {
+    id: 'q_geo_cartografia_6',
+    chapter: 'Coordenadas Geográficas',
+    topicId: 'geo_cartografia',
+    subject: 'Geografia',
+    prompt: 'A latitude de um ponto na superfície terrestre mede:',
+    options: [
+      { id: 'a', text: 'A distância angular entre o ponto e a Linha do Equador, variando de 0° a 90° para norte ou sul' },
+      { id: 'b', text: 'A distância angular entre o ponto e o Meridiano de Greenwich' },
+      { id: 'c', text: 'A altitude do ponto em relação ao nível do mar' },
+      { id: 'd', text: 'A distância em quilômetros até o polo mais próximo' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A latitude mede a distância angular entre um ponto e a Linha do Equador (paralelo de referência 0°), variando de 0° a 90° tanto para o hemisfério norte quanto para o sul — diferente da longitude, que usa o Meridiano de Greenwich como referência.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_geo_cartografia_7',
+    chapter: 'Coordenadas Geográficas',
+    topicId: 'geo_cartografia',
+    subject: 'Geografia',
+    prompt: 'A longitude de um ponto na superfície terrestre é medida em relação a qual linha de referência?',
+    options: [
+      { id: 'a', text: 'A Linha do Equador' },
+      { id: 'b', text: 'O Meridiano de Greenwich (meridiano 0°)' },
+      { id: 'c', text: 'O Trópico de Câncer' },
+      { id: 'd', text: 'O Círculo Polar Ártico' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A longitude mede a distância angular (de 0° a 180°, para leste ou oeste) entre um ponto e o Meridiano de Greenwich, o meridiano de referência 0° adotado internacionalmente.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_geo_cartografia_8',
+    chapter: 'Coordenadas Geográficas',
+    topicId: 'geo_cartografia',
+    subject: 'Geografia',
+    prompt: 'Os paralelos, linhas imaginárias usadas no sistema de coordenadas geográficas, se caracterizam por:',
+    options: [
+      { id: 'a', text: 'Serem sempre paralelos entre si e à Linha do Equador, usados para medir a latitude' },
+      { id: 'b', text: 'Convergirem todos nos polos, usados para medir a longitude' },
+      { id: 'c', text: 'Terem todos exatamente o mesmo comprimento, incluindo os próximos aos polos' },
+      { id: 'd', text: 'Não terem qualquer relação com o sistema de coordenadas' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Os paralelos são círculos imaginários paralelos entre si e à Linha do Equador (o maior deles), usados para medir a latitude de um ponto. Já os meridianos convergem nos polos e são usados para medir a longitude — os dois sistemas combinados formam a grade de coordenadas geográficas.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_cartografia_9',
+    chapter: 'Movimentos da Terra',
+    topicId: 'geo_cartografia',
+    subject: 'Geografia',
+    prompt: 'O movimento de rotação da Terra, que ela realiza em torno de seu próprio eixo em aproximadamente 24 horas, é responsável principalmente por:',
+    options: [
+      { id: 'a', text: 'A alternância entre dia e noite' },
+      { id: 'b', text: 'A ocorrência das quatro estações do ano' },
+      { id: 'c', text: 'As variações climáticas sazonais' },
+      { id: 'd', text: 'A formação das marés oceânicas' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A rotação da Terra em torno de seu próprio eixo, completada em aproximadamente 24 horas, é o movimento responsável pela alternância entre dia e noite, já que diferentes partes do planeta ficam voltadas para o Sol (dia) ou de costas para ele (noite) ao longo desse ciclo.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_geo_cartografia_10',
+    chapter: 'Movimentos da Terra',
+    topicId: 'geo_cartografia',
+    subject: 'Geografia',
+    prompt: 'O movimento de translação da Terra, realizado em torno do Sol em aproximadamente 365 dias, combinado com a inclinação do eixo terrestre, é responsável por:',
+    options: [
+      { id: 'a', text: 'A ocorrência das estações do ano' },
+      { id: 'b', text: 'A alternância entre dia e noite' },
+      { id: 'c', text: 'A formação dos fusos horários' },
+      { id: 'd', text: 'A rotação da Lua em torno da Terra' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A translação (órbita da Terra ao redor do Sol, completada em cerca de 365 dias) combinada com a inclinação do eixo terrestre (cerca de 23,5°) faz com que diferentes regiões do planeta recebam quantidades variáveis de luz solar ao longo do ano, originando as estações do ano — fenômeno inverso entre os hemisférios norte e sul.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_cartografia_11',
+    chapter: 'Movimentos da Terra',
+    topicId: 'geo_cartografia',
+    subject: 'Geografia',
+    prompt: 'Os solstícios e equinócios, momentos específicos do ano relacionados ao movimento de translação da Terra, marcam respectivamente:',
+    options: [
+      { id: 'a', text: 'Os pontos de maior/menor duração do dia (solstícios) e os pontos em que dia e noite têm duração igual (equinócios)' },
+      { id: 'b', text: 'O início e o fim do movimento de rotação da Terra' },
+      { id: 'c', text: 'Momentos em que a Terra está mais próxima da Lua' },
+      { id: 'd', text: 'Eventos que ocorrem apenas no hemisfério sul' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Os solstícios marcam os momentos de maior (verão) ou menor (inverno) duração do dia em relação à noite, enquanto os equinócios marcam os momentos em que a duração do dia e da noite é igual (aproximadamente 12 horas cada) — esses quatro eventos delimitam o início de cada estação do ano.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_cartografia_12',
+    chapter: 'Sistema de Fusos Horários',
+    topicId: 'geo_cartografia',
+    subject: 'Geografia',
+    prompt: 'O sistema de fusos horários divide a superfície terrestre em 24 fusos, cada um correspondendo a uma diferença de horário de:',
+    options: [
+      { id: 'a', text: '1 hora' },
+      { id: 'b', text: '15 minutos' },
+      { id: 'c', text: '30 minutos' },
+      { id: 'd', text: '2 horas' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Como a Terra completa uma volta de 360° em 24 horas de rotação, cada fuso horário corresponde a 360°/24 = 15° de longitude, equivalente a uma diferença de exatamente 1 hora entre fusos adjacentes.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_geo_cartografia_13',
+    chapter: 'Sistema de Fusos Horários',
+    topicId: 'geo_cartografia',
+    subject: 'Geografia',
+    prompt: 'O Meridiano de Greenwich é usado como referência para o sistema de fusos horários, correspondendo ao:',
+    options: [
+      { id: 'a', text: 'Fuso horário de referência (0h), a partir do qual todos os outros fusos são contados, para leste (horas adiantadas) ou para oeste (horas atrasadas)' },
+      { id: 'b', text: 'Fuso horário mais atrasado do mundo' },
+      { id: 'c', text: 'Único fuso horário que nunca muda de horário de verão' },
+      { id: 'd', text: 'Fuso horário exclusivo do hemisfério sul' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O Meridiano de Greenwich (0°) serve como referência para o Tempo Universal Coordenado (UTC): os fusos a leste dele têm horários adiantados (UTC+n) e os fusos a oeste têm horários atrasados (UTC-n), até o Meridiano de 180°, onde se localiza a Linha Internacional de Data.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_cartografia_14',
+    chapter: 'Sistema de Fusos Horários',
+    topicId: 'geo_cartografia',
+    subject: 'Geografia',
+    prompt: 'A Linha Internacional de Data, localizada aproximadamente no meridiano de 180°, tem como função:',
+    options: [
+      { id: 'a', text: 'Marcar o ponto onde ocorre a mudança de data no calendário, ao se cruzar de um lado para o outro' },
+      { id: 'b', text: 'Dividir o planeta entre hemisfério norte e sul' },
+      { id: 'c', text: 'Servir como referência 0° para a longitude, no lugar de Greenwich' },
+      { id: 'd', text: 'Marcar a fronteira entre todos os países do mundo' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A Linha Internacional de Data, situada aproximadamente no meridiano de 180° (antípoda de Greenwich), marca o ponto convencional onde ocorre a mudança de data no calendário: ao cruzá-la viajando para leste, "ganha-se" um dia; ao cruzá-la para oeste, "perde-se" um dia — necessário para manter a consistência do sistema de fusos horários em torno do globo.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_cartografia_15',
+    chapter: 'Linguagem Cartográfica',
+    topicId: 'geo_cartografia',
+    subject: 'Geografia',
+    prompt: 'A legenda de um mapa tem como função:',
+    options: [
+      { id: 'a', text: 'Explicar o significado dos símbolos, cores e outros elementos gráficos utilizados na representação cartográfica' },
+      { id: 'b', text: 'Indicar exclusivamente a escala numérica do mapa' },
+      { id: 'c', text: 'Substituir completamente a necessidade de uma escala' },
+      { id: 'd', text: 'Indicar apenas o nome do cartógrafo responsável' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A legenda é um elemento essencial da linguagem cartográfica, responsável por explicar o que cada símbolo, cor ou padrão gráfico usado no mapa representa — sem ela, seria impossível interpretar corretamente as informações apresentadas.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_geo_cartografia_16',
+    chapter: 'Cartografia Digital',
+    topicId: 'geo_cartografia',
+    subject: 'Geografia',
+    prompt: 'Os Sistemas de Informação Geográfica (SIG), ferramentas centrais da cartografia digital, permitem principalmente:',
+    options: [
+      { id: 'a', text: 'Armazenar, analisar e cruzar diferentes camadas de dados georreferenciados, gerando mapas e análises espaciais complexas' },
+      { id: 'b', text: 'Apenas desenhar mapas à mão, sem qualquer recurso digital' },
+      { id: 'c', text: 'Substituir totalmente a necessidade de coordenadas geográficas' },
+      { id: 'd', text: 'Funcionar exclusivamente sem qualquer conexão com satélites' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Os SIG (Sistemas de Informação Geográfica) permitem armazenar diferentes tipos de dados georreferenciados em camadas sobrepostas (relevo, hidrografia, uso do solo, densidade populacional, etc.), possibilitando cruzar essas informações para gerar análises espaciais complexas e mapas temáticos personalizados.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_cartografia_17',
+    chapter: 'Cartografia Digital',
+    topicId: 'geo_cartografia',
+    subject: 'Geografia',
+    prompt: 'O sensoriamento remoto, técnica amplamente usada na cartografia digital, consiste em:',
+    options: [
+      { id: 'a', text: 'Obter informações sobre a superfície terrestre sem contato físico direto, geralmente por meio de satélites ou aeronaves' },
+      { id: 'b', text: 'Coletar dados exclusivamente por meio de medições feitas diretamente no solo' },
+      { id: 'c', text: 'Um método usado apenas antes da invenção dos satélites' },
+      { id: 'd', text: 'Uma técnica restrita à observação de fenômenos meteorológicos' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O sensoriamento remoto obtém informações sobre objetos ou áreas (geralmente a superfície terrestre) sem contato físico direto, captando a energia eletromagnética refletida ou emitida por eles através de sensores instalados em satélites, aviões ou drones — fundamental para o monitoramento ambiental, agrícola e urbano em larga escala.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_cartografia_18',
+    chapter: 'Representações Gráficas e Cartográficas',
+    topicId: 'geo_cartografia',
+    subject: 'Geografia',
+    prompt: 'Os gráficos e tabelas, usados como complemento aos mapas na representação de dados geográficos, são especialmente úteis para:',
+    options: [
+      { id: 'a', text: 'Mostrar tendências, comparações quantitativas e evoluções temporais de forma mais direta que um mapa' },
+      { id: 'b', text: 'Substituir totalmente a necessidade de qualquer mapa' },
+      { id: 'c', text: 'Representar exclusivamente a localização exata de fenômenos no espaço' },
+      { id: 'd', text: 'Indicar apenas informações qualitativas, nunca quantitativas' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Gráficos e tabelas complementam os mapas ao facilitar a visualização de tendências, comparações numéricas entre diferentes regiões ou países, e evoluções ao longo do tempo — informações que, embora possam ser representadas espacialmente em um mapa, muitas vezes ficam mais claras em formatos gráficos dedicados.',
+    difficulty: 'easy'
+  },
   // Geografia — Climatologia e Problemas Socioambientais
   {
     id: 'q_geo_climatologia_socioambiental_1',
@@ -10535,6 +10743,246 @@ export const mockQuestions: Question[] = [
     ],
     correctOptionId: 'b',
     explanation: 'Embora a desertificação tenha relação com condições climáticas naturais de regiões áridas/semiáridas, ela é fortemente intensificada por práticas humanas insustentáveis — como desmatamento da vegetação nativa, sobrepastoreio (excesso de gado por área) e uso inadequado do solo agrícola — que aceleram a perda de fertilidade e a degradação do solo, tornando a terra progressivamente mais improdutiva.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_climatologia_socioambiental_6',
+    chapter: 'Clima Mundial',
+    topicId: 'geo_climatologia_socioambiental',
+    subject: 'Geografia',
+    prompt: 'O clima equatorial, típico de regiões próximas à Linha do Equador (como a Amazônia e a Bacia do Congo), é caracterizado por:',
+    options: [
+      { id: 'a', text: 'Altas temperaturas o ano todo e chuvas abundantes e bem distribuídas ao longo do ano, sem uma estação seca definida' },
+      { id: 'b', text: 'Temperaturas muito baixas durante todo o ano' },
+      { id: 'c', text: 'Uma longa estação seca e ausência quase total de chuvas' },
+      { id: 'd', text: 'Grandes variações sazonais de temperatura, com invernos rigorosos' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O clima equatorial se caracteriza por temperaturas altas e relativamente constantes ao longo do ano (devido à incidência quase perpendicular dos raios solares) e chuvas abundantes e bem distribuídas, sem uma estação seca bem definida — condições que favorecem o desenvolvimento de florestas tropicais densas, como a Amazônia.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_geo_climatologia_socioambiental_7',
+    chapter: 'Clima Mundial',
+    topicId: 'geo_climatologia_socioambiental',
+    subject: 'Geografia',
+    prompt: 'O clima mediterrâneo, encontrado na região do Mar Mediterrâneo e em outras áreas do mundo com características semelhantes, se caracteriza por:',
+    options: [
+      { id: 'a', text: 'Verões quentes e secos, e invernos amenos e chuvosos' },
+      { id: 'b', text: 'Chuvas abundantes durante todo o ano, sem qualquer estação seca' },
+      { id: 'c', text: 'Temperaturas extremamente baixas durante todo o ano' },
+      { id: 'd', text: 'Ausência total de estações do ano definidas' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O clima mediterrâneo é marcado por verões quentes e secos e invernos amenos com chuvas concentradas — um padrão característico não só da bacia do Mediterrâneo, mas também de outras regiões do mundo com posição geográfica e circulação atmosférica semelhantes (como partes da Califórnia e do Chile).',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_climatologia_socioambiental_8',
+    chapter: 'Clima Mundial',
+    topicId: 'geo_climatologia_socioambiental',
+    subject: 'Geografia',
+    prompt: 'O fenômeno El Niño, caracterizado pelo aquecimento anômalo das águas do Oceano Pacífico equatorial, provoca alterações climáticas significativas em diversas regiões do mundo, como:',
+    options: [
+      { id: 'a', text: 'Secas em algumas regiões e chuvas intensas em outras, alterando os padrões normais de precipitação' },
+      { id: 'b', text: 'Nenhum efeito perceptível sobre o clima global' },
+      { id: 'c', text: 'Resfriamento uniforme de todo o planeta' },
+      { id: 'd', text: 'Apenas efeitos localizados, restritos exclusivamente à costa do Peru' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O El Niño altera os padrões normais de circulação atmosférica e oceânica, provocando efeitos climáticos amplos e variados ao redor do mundo: secas em regiões normalmente chuvosas (como parte da Amazônia e sudeste asiático) e chuvas mais intensas em áreas normalmente mais secas (como partes do sul da América do Sul), entre outros impactos globais.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_climatologia_socioambiental_9',
+    chapter: 'Geomorfologia Mundial',
+    topicId: 'geo_climatologia_socioambiental',
+    subject: 'Geografia',
+    prompt: 'As cadeias montanhosas mais jovens do planeta, como os Andes e o Himalaia, foram formadas principalmente por:',
+    options: [
+      { id: 'a', text: 'Colisão entre placas tectônicas, gerando dobramentos e soerguimento das rochas' },
+      { id: 'b', text: 'Erosão exclusiva causada por rios e chuva' },
+      { id: 'c', text: 'Deposição de sedimentos ao longo de milhões de anos, sem qualquer atividade tectônica' },
+      { id: 'd', text: 'Atividade vulcânica isolada, sem relação com placas tectônicas' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Cadeias montanhosas jovens, como os Andes (colisão entre a placa de Nazca e a placa Sul-Americana) e o Himalaia (colisão entre a placa Indiana e a placa Eurasiática), foram formadas por processos orogênicos — o soerguimento e dobramento de rochas causado pela colisão de placas tectônicas, um processo geologicamente relativamente recente e ainda ativo (essas cordilheiras continuam crescendo).',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_climatologia_socioambiental_10',
+    chapter: 'Geomorfologia Mundial',
+    topicId: 'geo_climatologia_socioambiental',
+    subject: 'Geografia',
+    prompt: 'As planícies, uma das principais formas de relevo encontradas no mundo, se caracterizam por:',
+    options: [
+      { id: 'a', text: 'Superfícies relativamente planas e baixas, geralmente formadas por processos de sedimentação ao longo do tempo' },
+      { id: 'b', text: 'Serem sempre as regiões de maior altitude do planeta' },
+      { id: 'c', text: 'Serem formadas exclusivamente por atividade vulcânica' },
+      { id: 'd', text: 'Não terem nenhuma relação com processos de erosão ou sedimentação' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'As planícies são áreas de relevo relativamente plano e de baixa altitude, formadas principalmente pelo acúmulo de sedimentos transportados por rios, ventos ou geleiras ao longo de longos períodos de tempo — como as extensas planícies fluviais formadas ao redor de grandes rios, como o Amazonas e o Nilo.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_geo_climatologia_socioambiental_11',
+    chapter: 'Biogeografia Mundial',
+    topicId: 'geo_climatologia_socioambiental',
+    subject: 'Geografia',
+    prompt: 'A distribuição dos principais biomas do planeta (florestas tropicais, savanas, desertos, tundra, entre outros) está diretamente relacionada, principalmente, a:',
+    options: [
+      { id: 'a', text: 'Fatores climáticos (como temperatura e precipitação), que combinados determinam o tipo de vegetação predominante em cada região' },
+      { id: 'b', text: 'Apenas à densidade populacional de cada região' },
+      { id: 'c', text: 'Exclusivamente à altitude, sem qualquer relação com o clima' },
+      { id: 'd', text: 'Fatores puramente aleatórios, sem qualquer padrão identificável' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A distribuição dos biomas mundiais está fortemente correlacionada a fatores climáticos, especialmente temperatura e regime de precipitação: florestas tropicais ocorrem em regiões quentes e úmidas; desertos, em regiões de baixíssima precipitação; tundra, em regiões de frio extremo — essa relação clima-vegetação é a base da biogeografia.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_climatologia_socioambiental_12',
+    chapter: 'Biogeografia Mundial',
+    topicId: 'geo_climatologia_socioambiental',
+    subject: 'Geografia',
+    prompt: 'A savana, bioma encontrado em regiões tropicais como partes da África (onde é chamada de savana africana), se caracteriza por:',
+    options: [
+      { id: 'a', text: 'Vegetação predominantemente herbácea (gramíneas), com árvores e arbustos espaçados, adaptada a uma estação seca bem definida' },
+      { id: 'b', text: 'Florestas densas e fechadas, sem qualquer vegetação rasteira' },
+      { id: 'c', text: 'Ausência completa de vegetação, como um deserto' },
+      { id: 'd', text: 'Vegetação adaptada exclusivamente a climas polares' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A savana é caracterizada por uma vegetação predominantemente herbácea (gramíneas), com árvores e arbustos esparsos, adaptada a um clima tropical com estação seca bem marcada — diferente das florestas tropicais densas, que ocorrem em regiões sem estação seca definida.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_geo_climatologia_socioambiental_13',
+    chapter: 'Água na Superfície Terrestre',
+    topicId: 'geo_climatologia_socioambiental',
+    subject: 'Geografia',
+    prompt: 'O ciclo hidrológico (ciclo da água) descreve a circulação contínua da água entre a atmosfera, a superfície terrestre e os oceanos, através de processos como:',
+    options: [
+      { id: 'a', text: 'Evaporação, condensação, precipitação e escoamento' },
+      { id: 'b', text: 'Apenas evaporação, sem qualquer outro processo envolvido' },
+      { id: 'c', text: 'Fotossíntese exclusivamente' },
+      { id: 'd', text: 'Erosão do solo, sem qualquer relação com a água' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O ciclo hidrológico envolve a evaporação da água (dos oceanos, rios e outras superfícies) para a atmosfera, sua condensação em nuvens, a precipitação (chuva, neve) de volta à superfície, e o escoamento superficial e subterrâneo que devolve essa água aos oceanos e corpos d\'água, reiniciando o ciclo continuamente.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_geo_climatologia_socioambiental_14',
+    chapter: 'Água na Superfície Terrestre',
+    topicId: 'geo_climatologia_socioambiental',
+    subject: 'Geografia',
+    prompt: 'Do total de água doce disponível no planeta, a maior parte está armazenada em:',
+    options: [
+      { id: 'a', text: 'Geleiras e calotas polares, na forma de gelo' },
+      { id: 'b', text: 'Rios e lagos superficiais, facilmente acessíveis' },
+      { id: 'c', text: 'Água subterrânea (aquíferos), exclusivamente' },
+      { id: 'd', text: 'Vapor d\'água na atmosfera' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A maior parte da água doce do planeta está armazenada em geleiras e calotas polares na forma de gelo — água de difícil acesso direto para uso humano, o que torna a proporção de água doce líquida e facilmente disponível (rios, lagos, parte dos aquíferos) muito menor do que se poderia imaginar.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_climatologia_socioambiental_15',
+    chapter: 'Geopolítica Ambiental',
+    topicId: 'geo_climatologia_socioambiental',
+    subject: 'Geografia',
+    prompt: 'Os acordos internacionais sobre mudanças climáticas, como o Acordo de Paris, têm como objetivo principal:',
+    options: [
+      { id: 'a', text: 'Estabelecer metas e compromissos entre os países para reduzir as emissões de gases de efeito estufa e limitar o aquecimento global' },
+      { id: 'b', text: 'Impor sanções econômicas automáticas e imediatas a qualquer país que não os cumprir' },
+      { id: 'c', text: 'Eliminar completamente a necessidade de qualquer fonte de energia' },
+      { id: 'd', text: 'Regular exclusivamente o comércio internacional de petróleo' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Acordos como o Acordo de Paris (2015) estabelecem metas voluntárias (mas monitoradas) para que os países-membros reduzam suas emissões de gases de efeito estufa, com o objetivo comum de limitar o aumento da temperatura média global — refletindo a dimensão geopolítica das negociações climáticas, em que países com diferentes níveis de desenvolvimento e responsabilidade histórica pelas emissões negociam compromissos distintos.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_climatologia_socioambiental_16',
+    chapter: 'Geopolítica Ambiental',
+    topicId: 'geo_climatologia_socioambiental',
+    subject: 'Geografia',
+    prompt: 'O conceito de "dívida ecológica" ou "dívida climática", frequentemente mencionado em negociações internacionais sobre o clima, refere-se ao argumento de que:',
+    options: [
+      { id: 'a', text: 'Os países desenvolvidos, historicamente responsáveis pela maior parte das emissões acumuladas de gases de efeito estufa, têm uma responsabilidade maior de agir e apoiar países em desenvolvimento' },
+      { id: 'b', text: 'Todos os países do mundo têm exatamente a mesma responsabilidade histórica pelas emissões' },
+      { id: 'c', text: 'Apenas os países em desenvolvimento são responsáveis pelas mudanças climáticas' },
+      { id: 'd', text: 'Não existe qualquer diferença de responsabilidade entre países ricos e pobres' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O conceito de dívida ecológica/climática argumenta que os países desenvolvidos, por terem se industrializado antes e serem historicamente responsáveis pela maior parte das emissões acumuladas de gases de efeito estufa, têm uma responsabilidade maior (financeira e de ação) para lidar com as mudanças climáticas, inclusive apoiando países em desenvolvimento — um argumento central nas negociações sobre financiamento climático internacional.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_geo_climatologia_socioambiental_17',
+    chapter: 'Geopolítica Ambiental',
+    topicId: 'geo_climatologia_socioambiental',
+    subject: 'Geografia',
+    prompt: 'Os "refugiados climáticos" ou "refugiados ambientais", categoria emergente de deslocados que ganha atenção internacional crescente, referem-se a pessoas que:',
+    options: [
+      { id: 'a', text: 'São forçadas a deixar suas casas devido a desastres naturais intensificados ou eventos ambientais causados pelas mudanças climáticas' },
+      { id: 'b', text: 'Se deslocam voluntariamente por razões exclusivamente econômicas, sem relação ambiental' },
+      { id: 'c', text: 'Já possuem status legal de refugiado plenamente reconhecido em todos os países' },
+      { id: 'd', text: 'São deslocados apenas dentro do próprio país de origem, nunca cruzando fronteiras internacionais' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Refugiados climáticos/ambientais são pessoas forçadas a abandonar suas moradias devido a eventos ambientais como elevação do nível do mar, secas prolongadas, ou desastres naturais intensificados pelas mudanças climáticas — uma categoria que ainda carece de reconhecimento legal formal e proteção internacional adequada em muitos tratados, o que gera importantes debates geopolíticos.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_geo_climatologia_socioambiental_18',
+    chapter: 'Geomorfologia Mundial',
+    topicId: 'geo_climatologia_socioambiental',
+    subject: 'Geografia',
+    prompt: 'Os vales de rifte (rift valleys), como o Grande Vale do Rift na África Oriental, são formados por:',
+    options: [
+      { id: 'a', text: 'Um processo de afastamento (divergência) entre placas tectônicas, causando o abatimento de um bloco de crosta terrestre entre falhas' },
+      { id: 'b', text: 'Colisão frontal entre duas placas tectônicas' },
+      { id: 'c', text: 'Deposição exclusiva de sedimentos fluviais' },
+      { id: 'd', text: 'Ação exclusiva de geleiras' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Os vales de rifte se formam em zonas de divergência de placas tectônicas, onde a crosta terrestre é estirada e um bloco central afunda entre falhas paralelas — o Grande Vale do Rift Africano é um exemplo clássico desse processo, associado também a intensa atividade vulcânica na região.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_geo_climatologia_socioambiental_19',
+    chapter: 'Biogeografia Mundial',
+    topicId: 'geo_climatologia_socioambiental',
+    subject: 'Geografia',
+    prompt: 'A tundra, bioma encontrado em altas latitudes próximas aos polos, se caracteriza por:',
+    options: [
+      { id: 'a', text: 'Vegetação rasteira e de pequeno porte (musgos, líquens, gramíneas), adaptada a temperaturas extremamente baixas e a um subsolo permanentemente congelado (permafrost)' },
+      { id: 'b', text: 'Florestas densas de grandes árvores tropicais' },
+      { id: 'c', text: 'Um clima quente e úmido durante todo o ano' },
+      { id: 'd', text: 'Ausência total de qualquer forma de vida vegetal' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A tundra é caracterizada por vegetação rasteira e de baixo porte (musgos, líquens, pequenos arbustos), adaptada a temperaturas extremamente baixas durante a maior parte do ano e a um subsolo permanentemente congelado (permafrost), que impede o desenvolvimento de raízes profundas — um bioma encontrado em regiões próximas aos polos Ártico e, em menor extensão, Antártico.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_climatologia_socioambiental_20',
+    chapter: 'Água na Superfície Terrestre',
+    topicId: 'geo_climatologia_socioambiental',
+    subject: 'Geografia',
+    prompt: 'Os aquíferos, importantes reservatórios de água subterrânea, se formam quando a água da chuva:',
+    options: [
+      { id: 'a', text: 'Se infiltra no solo e se acumula em camadas de rochas porosas e permeáveis, capazes de armazenar e transmitir água' },
+      { id: 'b', text: 'Evapora completamente antes de atingir o subsolo' },
+      { id: 'c', text: 'Permanece exclusivamente na superfície, sem qualquer infiltração' },
+      { id: 'd', text: 'Se transforma imediatamente em gelo, independentemente do clima' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Os aquíferos se formam quando a água da chuva se infiltra no solo e se acumula em camadas de rochas porosas e permeáveis (como arenito), que funcionam como reservatórios naturais, armazenando e permitindo a circulação lenta da água subterrânea — fontes essenciais de abastecimento de água em muitas regiões do mundo.',
     difficulty: 'medium'
   },
   // Geografia — Hidrogeografia
@@ -10618,6 +11066,54 @@ export const mockQuestions: Question[] = [
     explanation: 'Grande parte da poluição de rios urbanos brasileiros decorre do lançamento de esgoto doméstico e efluentes industriais sem tratamento adequado, além do descarte irregular de resíduos sólidos — problemas agravados pela falta de infraestrutura de saneamento básico em muitas cidades.',
     difficulty: 'medium'
   },
+  {
+    id: 'q_geo_hidrogeografia_6',
+    chapter: 'Geopolítica dos Recursos Hídricos',
+    topicId: 'geo_hidrogeografia',
+    subject: 'Geografia',
+    prompt: 'Rios internacionais, que atravessam ou fazem fronteira entre mais de um país (como o Rio Nilo, compartilhado por vários países africanos), frequentemente geram tensões geopolíticas relacionadas a:',
+    options: [
+      { id: 'a', text: 'Disputas pelo uso e controle da água, especialmente quando um país constrói represas ou capta grandes volumes que afetam os países a jusante' },
+      { id: 'b', text: 'A ausência total de qualquer interesse dos países envolvidos pelo recurso hídrico' },
+      { id: 'c', text: 'Acordos sempre pacíficos e sem qualquer conflito, em todos os casos históricos' },
+      { id: 'd', text: 'Questões exclusivamente comerciais, sem qualquer relação com o uso da água' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Rios internacionais frequentemente geram tensões geopolíticas quando um país situado a montante constrói barragens ou capta grandes volumes de água, reduzindo a disponibilidade para os países situados a jusante — como ocorre nas tensões envolvendo o Rio Nilo (Egito, Sudão e Etiópia) em torno da Grande Barragem do Renascimento Etíope.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_hidrogeografia_7',
+    chapter: 'Geopolítica dos Recursos Hídricos',
+    topicId: 'geo_hidrogeografia',
+    subject: 'Geografia',
+    prompt: 'O conceito de "estresse hídrico", usado para descrever regiões onde a demanda por água se aproxima ou excede a oferta disponível, tende a se agravar globalmente devido a:',
+    options: [
+      { id: 'a', text: 'Crescimento populacional, mudanças climáticas e uso ineficiente ou poluição dos recursos hídricos disponíveis' },
+      { id: 'b', text: 'Uma redução constante e generalizada da população mundial' },
+      { id: 'c', text: 'Um aumento uniforme e generalizado da disponibilidade de água em todas as regiões do planeta' },
+      { id: 'd', text: 'Fatores que não têm qualquer relação com atividades humanas' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O estresse hídrico tende a se intensificar globalmente devido à combinação de crescimento populacional (maior demanda), mudanças climáticas (alterando padrões de precipitação e disponibilidade), e uso ineficiente ou poluição das fontes de água doce disponíveis — um problema geopolítico crescente em diversas regiões do mundo, incluindo partes do Oriente Médio, norte da África e sul da Ásia.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_hidrogeografia_8',
+    chapter: 'Geopolítica dos Recursos Hídricos',
+    topicId: 'geo_hidrogeografia',
+    subject: 'Geografia',
+    prompt: 'O Aquífero Guarani, um dos maiores reservatórios de água doce subterrânea do mundo, é compartilhado por quatro países da América do Sul: Brasil, Argentina, Paraguai e Uruguai. Sua gestão compartilhada exige, entre outros desafios:',
+    options: [
+      { id: 'a', text: 'Cooperação internacional entre os países para monitorar e evitar a superexploração ou contaminação do recurso hídrico compartilhado' },
+      { id: 'b', text: 'Que apenas um único país tenha acesso exclusivo ao aquífero' },
+      { id: 'c', text: 'A impossibilidade de qualquer acordo entre os países envolvidos' },
+      { id: 'd', text: 'A ausência de qualquer risco de contaminação, já que é um recurso subterrâneo' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Por ser um recurso hídrico transfronteiriço, o Aquífero Guarani exige cooperação e acordos entre os quatro países que o compartilham (Brasil, Argentina, Paraguai e Uruguai), visando monitorar seu uso sustentável, evitar a superexploração em determinadas regiões e prevenir riscos de contaminação — um exemplo importante de geopolítica de recursos hídricos compartilhados na América do Sul.',
+    difficulty: 'medium'
+  },
   // Geografia — Globalização e Geografia Econômica
   {
     id: 'q_geo_globalizacao_economica_1',
@@ -10699,6 +11195,518 @@ export const mockQuestions: Question[] = [
     explanation: 'A globalização econômica oferece a países em desenvolvimento oportunidades de integração a cadeias produtivas e mercados globais, mas esse processo é debatido justamente porque pode também aprofundar desigualdades — por exemplo, quando esses países ficam concentrados em atividades de menor valor agregado (extração de matérias-primas, manufatura básica), mantendo relações de dependência econômica e tecnológica em relação a países mais desenvolvidos.',
     difficulty: 'hard'
   },
+  {
+    id: 'q_geo_globalizacao_economica_6',
+    chapter: 'Desigualdades Globais',
+    topicId: 'geo_globalizacao_economica',
+    subject: 'Geografia',
+    prompt: 'O Índice de Desenvolvimento Humano (IDH), usado para comparar o nível de desenvolvimento entre países, considera, além da renda, quais outras dimensões?',
+    options: [
+      { id: 'a', text: 'Educação (anos de escolaridade) e saúde (expectativa de vida)' },
+      { id: 'b', text: 'Apenas o tamanho territorial do país' },
+      { id: 'c', text: 'Exclusivamente o número de empresas multinacionais sediadas no país' },
+      { id: 'd', text: 'Somente a taxa de urbanização' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O IDH combina três dimensões: renda (PIB per capita), educação (anos médios e esperados de escolaridade) e saúde (expectativa de vida ao nascer) — uma tentativa de medir o desenvolvimento de forma mais ampla do que apenas indicadores econômicos, revelando desigualdades que a renda per capita isolada poderia mascarar.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_globalizacao_economica_7',
+    chapter: 'Do Mundo Bipolar ao Multipolar',
+    topicId: 'geo_globalizacao_economica',
+    subject: 'Geografia',
+    prompt: 'Durante a Guerra Fria, a ordem mundial era caracterizada como "bipolar" porque:',
+    options: [
+      { id: 'a', text: 'O poder geopolítico global se concentrava em torno de duas superpotências — Estados Unidos e União Soviética — e seus respectivos blocos de aliados' },
+      { id: 'b', text: 'Existiam exatamente dois continentes habitados no mundo' },
+      { id: 'c', text: 'Havia apenas dois países no mundo com qualquer poder militar' },
+      { id: 'd', text: 'O mundo era dividido apenas entre hemisfério norte e sul' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A ordem bipolar da Guerra Fria (1947-1991) se caracterizava pela concentração do poder geopolítico global em torno de duas superpotências rivais — Estados Unidos (bloco capitalista/ocidental) e União Soviética (bloco socialista) — cada uma liderando alianças militares, econômicas e ideológicas próprias.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_geo_globalizacao_economica_8',
+    chapter: 'Do Mundo Bipolar ao Multipolar',
+    topicId: 'geo_globalizacao_economica',
+    subject: 'Geografia',
+    prompt: 'Após o fim da Guerra Fria, muitos analistas descrevem a ordem mundial contemporânea como caminhando para uma configuração "multipolar". Isso significa que:',
+    options: [
+      { id: 'a', text: 'O poder geopolítico e econômico global está cada vez mais distribuído entre múltiplos centros de poder (EUA, China, União Europeia, entre outros), sem uma única potência dominante incontestável' },
+      { id: 'b', text: 'Existe atualmente apenas uma única superpotência global, sem qualquer concorrente' },
+      { id: 'c', text: 'O mundo retornou exatamente à configuração bipolar da Guerra Fria' },
+      { id: 'd', text: 'Não existe mais nenhuma forma de disputa geopolítica no mundo atual' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A multipolaridade descreve uma configuração geopolítica em que o poder (econômico, militar, tecnológico) está distribuído entre múltiplos centros relevantes — como Estados Unidos, China, União Europeia, e potências regionais emergentes — ao invés de se concentrar em um único polo hegemônico ou em apenas dois blocos rivais.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_globalizacao_economica_9',
+    chapter: 'Do Mundo Bipolar ao Multipolar',
+    topicId: 'geo_globalizacao_economica',
+    subject: 'Geografia',
+    prompt: 'A ascensão econômica da China nas últimas décadas é frequentemente citada como um dos principais fatores que impulsionam a transição para um mundo mais multipolar, principalmente porque:',
+    options: [
+      { id: 'a', text: 'A China se tornou uma das maiores economias do mundo, com crescente influência geopolítica, comercial e tecnológica em escala global' },
+      { id: 'b', text: 'A China deixou completamente de participar do comércio internacional' },
+      { id: 'c', text: 'A economia chinesa permaneceu estagnada nas últimas décadas, sem qualquer crescimento' },
+      { id: 'd', text: 'A China não exerce nenhuma influência fora de seu próprio território' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O crescimento econômico acelerado da China nas últimas décadas a transformou em uma das maiores economias globais, com crescente capacidade de influência geopolítica, comercial (como parceiro comercial central de muitos países) e tecnológica — um dos fatores centrais na discussão sobre a transição de uma ordem unipolar (dominada pelos EUA) para uma configuração mais multipolar.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_globalizacao_economica_10',
+    chapter: 'Geografia das Redes Mundiais',
+    topicId: 'geo_globalizacao_economica',
+    subject: 'Geografia',
+    prompt: 'As redes de telecomunicações e a internet, elementos centrais da globalização contemporânea, contribuíram principalmente para:',
+    options: [
+      { id: 'a', text: 'Reduzir drasticamente as barreiras de tempo e espaço na comunicação e no fluxo de informações entre diferentes partes do mundo' },
+      { id: 'b', text: 'Isolar completamente os países entre si' },
+      { id: 'c', text: 'Eliminar totalmente a necessidade de transporte físico de mercadorias' },
+      { id: 'd', text: 'Restringir a comunicação a apenas alguns poucos países desenvolvidos' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'As redes de telecomunicações e a internet reduziram drasticamente as barreiras de tempo e espaço na comunicação global, permitindo o fluxo quase instantâneo de informações, capital financeiro e coordenação de atividades econômicas entre diferentes partes do mundo — um dos pilares tecnológicos centrais da globalização contemporânea.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_globalizacao_economica_11',
+    chapter: 'Geografia das Redes Mundiais',
+    topicId: 'geo_globalizacao_economica',
+    subject: 'Geografia',
+    prompt: 'As "cidades globais" (como Nova York, Londres e Tóquio), nós centrais das redes mundiais de fluxos econômicos e de informação, se destacam por concentrar:',
+    options: [
+      { id: 'a', text: 'Sedes de grandes corporações multinacionais, centros financeiros e de tomada de decisão estratégica com influência em escala global' },
+      { id: 'b', text: 'Apenas a maior população absoluta entre todas as cidades do mundo' },
+      { id: 'c', text: 'Exclusivamente atividades agrícolas de subsistência' },
+      { id: 'd', text: 'Nenhuma conexão relevante com o restante do mundo' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'As cidades globais se destacam não necessariamente pelo maior tamanho populacional absoluto, mas pela concentração de sedes de corporações multinacionais, centros financeiros de referência mundial e capacidade de tomada de decisões estratégicas que influenciam fluxos econômicos em escala global — funcionando como nós centrais nas redes de comando da economia globalizada.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_globalizacao_economica_12',
+    chapter: 'Geografia das Redes Mundiais',
+    topicId: 'geo_globalizacao_economica',
+    subject: 'Geografia',
+    prompt: 'A "divisão digital" (digital divide), conceito relevante para entender as desigualdades nas redes mundiais contemporâneas, refere-se a:',
+    options: [
+      { id: 'a', text: 'Disparidades no acesso à internet e às tecnologias digitais entre diferentes regiões, países ou grupos sociais' },
+      { id: 'b', text: 'Uma divisão física do cabo de internet entre continentes' },
+      { id: 'c', text: 'A completa ausência de qualquer diferença de acesso digital no mundo atual' },
+      { id: 'd', text: 'Uma divisão exclusivamente etária, sem qualquer relação geográfica' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A divisão digital descreve as disparidades significativas no acesso à internet, a dispositivos digitais e à infraestrutura de telecomunicações entre diferentes regiões do mundo (países desenvolvidos versus em desenvolvimento), entre áreas urbanas e rurais, e entre diferentes grupos socioeconômicos — uma dimensão importante das desigualdades na era da globalização digital.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_globalizacao_economica_13',
+    chapter: 'Unilateralismo e Multilateralismo',
+    topicId: 'geo_globalizacao_economica',
+    subject: 'Geografia',
+    prompt: 'O unilateralismo, na política externa de um país, se caracteriza por:',
+    options: [
+      { id: 'a', text: 'Tomar decisões e agir de forma independente, sem necessariamente buscar consenso ou cooperação com outros países ou organismos internacionais' },
+      { id: 'b', text: 'Sempre buscar o consenso de múltiplos países antes de qualquer decisão' },
+      { id: 'c', text: 'Agir exclusivamente através de organizações internacionais, como a ONU' },
+      { id: 'd', text: 'Nunca tomar qualquer decisão em política externa' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O unilateralismo caracteriza-se por um país agir de forma independente em política externa, tomando decisões (como sanções, intervenções ou acordos) sem necessariamente buscar consenso prévio com outros países ou organismos multilaterais — uma abordagem frequentemente contrastada com o multilateralismo, que busca cooperação e decisões conjuntas entre múltiplos atores internacionais.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_globalizacao_economica_14',
+    chapter: 'Unilateralismo e Multilateralismo',
+    topicId: 'geo_globalizacao_economica',
+    subject: 'Geografia',
+    prompt: 'O multilateralismo, em contraste com o unilateralismo, se caracteriza por:',
+    options: [
+      { id: 'a', text: 'Buscar cooperação, negociação e decisões conjuntas entre múltiplos países, frequentemente através de organismos internacionais' },
+      { id: 'b', text: 'Um único país tomar todas as decisões relevantes sozinho' },
+      { id: 'c', text: 'A total ausência de qualquer organização internacional' },
+      { id: 'd', text: 'Decisões tomadas exclusivamente por dois países, nunca mais que isso' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O multilateralismo busca a cooperação e a tomada de decisões conjuntas entre múltiplos países, frequentemente mediada por organismos internacionais (como a ONU, OMC ou G20) — um modelo que busca legitimidade e efetividade através do consenso mais amplo possível entre os atores envolvidos, em contraste com ações unilaterais de um único país.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_globalizacao_economica_15',
+    chapter: 'Unilateralismo e Multilateralismo',
+    topicId: 'geo_globalizacao_economica',
+    subject: 'Geografia',
+    prompt: 'A Organização das Nações Unidas (ONU), principal organismo multilateral do mundo contemporâneo, tem como um de seus objetivos centrais:',
+    options: [
+      { id: 'a', text: 'Promover a cooperação internacional, a paz e a segurança entre os países-membros' },
+      { id: 'b', text: 'Impor um governo mundial único, substituindo a soberania de todos os países' },
+      { id: 'c', text: 'Representar exclusivamente os interesses de um único país' },
+      { id: 'd', text: 'Regular apenas questões comerciais, sem qualquer papel na segurança internacional' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A ONU foi criada com o objetivo central de promover a cooperação internacional, a manutenção da paz e da segurança global, além de outras áreas como direitos humanos e desenvolvimento — funcionando como o principal fórum multilateral para negociações entre praticamente todos os países do mundo.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_geo_globalizacao_economica_16',
+    chapter: 'Blocos Econômicos',
+    topicId: 'geo_globalizacao_economica',
+    subject: 'Geografia',
+    prompt: 'O Mercosul (Mercado Comum do Sul), bloco econômico regional que inclui o Brasil, tem como um de seus principais objetivos:',
+    options: [
+      { id: 'a', text: 'Facilitar o comércio entre os países-membros através da redução de tarifas alfandegárias e barreiras comerciais' },
+      { id: 'b', text: 'Unificar completamente as moedas de todos os países-membros, como o euro' },
+      { id: 'c', text: 'Impedir qualquer tipo de comércio entre os países-membros' },
+      { id: 'd', text: 'Restringir exclusivamente o fluxo de pessoas entre os países-membros' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O Mercosul, criado em 1991 (Tratado de Assunção), tem como objetivo central facilitar o comércio entre seus países-membros (Brasil, Argentina, Paraguai, Uruguai, entre outros associados) através da redução de tarifas alfandegárias e barreiras comerciais, promovendo maior integração econômica regional — diferente de blocos mais aprofundados como a União Europeia, ainda não adotou moeda única.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_geo_globalizacao_economica_17',
+    chapter: 'União Europeia',
+    topicId: 'geo_globalizacao_economica',
+    subject: 'Geografia',
+    prompt: 'A União Europeia, um dos blocos econômicos mais integrados do mundo, se diferencia de outros blocos regionais principalmente por ter:',
+    options: [
+      { id: 'a', text: 'Uma moeda única (o euro, adotada pela maioria dos membros), livre circulação de pessoas e um parlamento supranacional com poder legislativo' },
+      { id: 'b', text: 'Apenas acordos comerciais informais, sem qualquer estrutura institucional' },
+      { id: 'c', text: 'Nenhuma integração além do comércio de mercadorias' },
+      { id: 'd', text: 'Uma única língua oficial obrigatória para todos os membros' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A União Europeia é um dos exemplos mais avançados de integração regional: além da união aduaneira e do mercado comum, adotou uma moeda única (o euro, usada pela maioria, mas não todos os membros), permite livre circulação de pessoas, bens, serviços e capitais entre os países-membros, e possui instituições supranacionais como o Parlamento Europeu, com poder de legislar sobre diversas áreas.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_globalizacao_economica_18',
+    chapter: 'União Europeia',
+    topicId: 'geo_globalizacao_economica',
+    subject: 'Geografia',
+    prompt: 'O Brexit, processo de saída do Reino Unido da União Europeia (efetivado em 2020), foi motivado, entre outros fatores, por debates internos sobre:',
+    options: [
+      { id: 'a', text: 'Soberania nacional, controle sobre imigração e insatisfação com regulações impostas pela União Europeia' },
+      { id: 'b', text: 'Um desejo unânime de todos os cidadãos britânicos de permanecer na União Europeia' },
+      { id: 'c', text: 'A criação de uma nova moeda única para substituir a libra esterlina' },
+      { id: 'd', text: 'A anexação de novos territórios pela União Europeia' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O Brexit foi impulsionado por debates internos no Reino Unido sobre soberania nacional (retomar controle sobre leis e regulações sem interferência de Bruxelas), controle sobre políticas de imigração, e insatisfação com contribuições financeiras e regulações impostas pela União Europeia — um processo que gerou intenso debate político e dividiu a opinião pública britânica.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_globalizacao_economica_19',
+    chapter: 'União Europeia',
+    topicId: 'geo_globalizacao_economica',
+    subject: 'Geografia',
+    prompt: 'A Zona do Euro, formada pelos países da União Europeia que adotaram o euro como moeda oficial, apresenta como desafio estrutural o fato de que:',
+    options: [
+      { id: 'a', text: 'Os países-membros compartilham a mesma política monetária, mas mantêm políticas fiscais (de gastos e impostos) independentes, o que pode gerar tensões em momentos de crise econômica' },
+      { id: 'b', text: 'Todos os países-membros têm exatamente a mesma economia, sem qualquer diferença' },
+      { id: 'c', text: 'Não existe nenhum banco central responsável pela moeda comum' },
+      { id: 'd', text: 'A política monetária é definida individualmente por cada país-membro' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Um dos principais desafios estruturais da Zona do Euro é que, embora os países-membros compartilhem uma política monetária unificada (definida pelo Banco Central Europeu), cada um mantém autonomia sobre sua política fiscal (impostos, gastos públicos) — essa assimetria pode gerar tensões significativas em momentos de crise econômica, quando países com situações fiscais muito diferentes precisam responder a uma mesma política monetária.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_geo_globalizacao_economica_20',
+    chapter: 'Mobilidade Populacional',
+    topicId: 'geo_globalizacao_economica',
+    subject: 'Geografia',
+    prompt: 'Os fluxos migratórios internacionais contemporâneos, intensificados pela globalização, são impulsionados principalmente por uma combinação de fatores de:',
+    options: [
+      { id: 'a', text: 'Expulsão (guerras, pobreza, perseguição) nos países de origem e atração (melhores oportunidades econômicas, segurança) nos países de destino' },
+      { id: 'b', text: 'Uma distribuição aleatória, sem qualquer padrão identificável' },
+      { id: 'c', text: 'Exclusivamente decisões de governos, sem qualquer motivação individual' },
+      { id: 'd', text: 'Apenas fatores climáticos, sem qualquer relação econômica ou política' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Os fluxos migratórios internacionais resultam da combinação de fatores de expulsão (push factors) nos países de origem — como conflitos armados, pobreza extrema, perseguição política — e fatores de atração (pull factors) nos países de destino — como melhores oportunidades de emprego, segurança e qualidade de vida — moldando padrões característicos de migração global.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_globalizacao_economica_21',
+    chapter: 'Mobilidade Populacional',
+    topicId: 'geo_globalizacao_economica',
+    subject: 'Geografia',
+    prompt: 'A "fuga de cérebros" (brain drain), fenômeno migratório relevante para países em desenvolvimento, refere-se à:',
+    options: [
+      { id: 'a', text: 'Emigração de profissionais altamente qualificados de seus países de origem em busca de melhores oportunidades em países mais desenvolvidos' },
+      { id: 'b', text: 'Migração exclusiva de trabalhadores sem qualquer qualificação' },
+      { id: 'c', text: 'Um fenômeno que beneficia exclusivamente o país de origem dos migrantes' },
+      { id: 'd', text: 'Migração forçada por motivos climáticos, sem qualquer relação com qualificação profissional' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A "fuga de cérebros" descreve a emigração de profissionais altamente qualificados (cientistas, engenheiros, médicos) de países em desenvolvimento em direção a países mais desenvolvidos, atraídos por melhores salários, condições de trabalho e oportunidades de carreira — um fenômeno que pode representar uma perda significativa de capital humano para o país de origem.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_globalizacao_economica_22',
+    chapter: 'Geografia do Turismo',
+    topicId: 'geo_globalizacao_economica',
+    subject: 'Geografia',
+    prompt: 'O turismo, atividade econômica intensificada pela globalização, gera impactos significativos sobre os territórios receptores, incluindo:',
+    options: [
+      { id: 'a', text: 'Geração de emprego e renda, mas também pressão sobre recursos naturais, infraestrutura local e, por vezes, descaracterização cultural' },
+      { id: 'b', text: 'Apenas benefícios, sem qualquer impacto negativo em nenhum caso' },
+      { id: 'c', text: 'Nenhum efeito econômico perceptível sobre a região receptora' },
+      { id: 'd', text: 'Exclusivamente a preservação intocada da cultura e do ambiente local, sem qualquer alteração' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O turismo pode gerar importantes benefícios econômicos (emprego, renda, divisas), mas também traz desafios: pressão sobre recursos naturais e infraestrutura (água, energia, transporte), riscos de degradação ambiental em áreas sensíveis, e, em alguns casos, descaracterização de tradições culturais locais para atender à demanda turística — impactos que exigem planejamento cuidadoso do turismo sustentável.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_globalizacao_economica_23',
+    chapter: 'Geografia do Turismo',
+    topicId: 'geo_globalizacao_economica',
+    subject: 'Geografia',
+    prompt: 'O turismo de massa, modalidade caracterizada por grandes fluxos de visitantes concentrados em determinados destinos e períodos, pode gerar como consequência negativa:',
+    options: [
+      { id: 'a', text: 'A superlotação ("overtourism"), com sobrecarga da infraestrutura local e degradação de atrativos naturais ou culturais' },
+      { id: 'b', text: 'Sempre uma distribuição perfeitamente equilibrada de visitantes ao longo de todo o território e do ano' },
+      { id: 'c', text: 'A ausência total de qualquer impacto ambiental' },
+      { id: 'd', text: 'Um benefício exclusivamente para a população local, sem qualquer custo' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O turismo de massa, ao concentrar grandes volumes de visitantes em destinos e períodos específicos, pode causar o fenômeno de "overtourism" (superlotação), sobrecarregando a infraestrutura local (transporte, saneamento, moradia) e acelerando a degradação de atrativos naturais ou patrimônios culturais — um desafio crescente em muitos destinos turísticos populares ao redor do mundo.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_globalizacao_economica_24',
+    chapter: 'Geografia do Turismo',
+    topicId: 'geo_globalizacao_economica',
+    subject: 'Geografia',
+    prompt: 'O turismo sustentável, alternativa ao turismo de massa tradicional, busca principalmente:',
+    options: [
+      { id: 'a', text: 'Equilibrar os benefícios econômicos do turismo com a preservação ambiental e cultural, e o bem-estar das comunidades locais no longo prazo' },
+      { id: 'b', text: 'Maximizar exclusivamente o lucro de curto prazo, sem qualquer preocupação ambiental' },
+      { id: 'c', text: 'Eliminar completamente qualquer atividade turística' },
+      { id: 'd', text: 'Restringir o turismo apenas a visitantes de um único país' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O turismo sustentável busca equilibrar os benefícios econômicos da atividade turística com a preservação dos recursos naturais e do patrimônio cultural, além de garantir que as comunidades locais se beneficiem de forma justa e duradoura — uma abordagem que considera os impactos de longo prazo, em oposição ao turismo de massa focado apenas no volume e no lucro imediato.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_globalizacao_economica_25',
+    chapter: 'Produção Agrícola Mundial',
+    topicId: 'geo_globalizacao_economica',
+    subject: 'Geografia',
+    prompt: 'O agronegócio, modelo de produção agrícola em larga escala e altamente tecnificado, se caracteriza principalmente por:',
+    options: [
+      { id: 'a', text: 'Grandes propriedades, uso intensivo de tecnologia (maquinário, insumos, biotecnologia) e forte orientação para o mercado (interno e exportação)' },
+      { id: 'b', text: 'Pequenas propriedades de subsistência, sem qualquer uso de tecnologia' },
+      { id: 'c', text: 'Produção exclusivamente para consumo local imediato, sem qualquer comercialização' },
+      { id: 'd', text: 'Ausência total de qualquer mecanização' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O agronegócio caracteriza-se por operar em grandes propriedades, com uso intensivo de tecnologia (maquinário pesado, insumos agrícolas, sementes geneticamente modificadas) e forte orientação para o mercado — tanto para abastecimento interno quanto, frequentemente, para exportação em larga escala, sendo um setor central da economia de diversos países, incluindo o Brasil.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_globalizacao_economica_26',
+    chapter: 'Produção Agrícola Mundial',
+    topicId: 'geo_globalizacao_economica',
+    subject: 'Geografia',
+    prompt: 'A agricultura familiar, modelo produtivo distinto do agronegócio, se caracteriza por:',
+    options: [
+      { id: 'a', text: 'Ser gerida predominantemente pela mão de obra da própria família proprietária, geralmente em propriedades de menor porte' },
+      { id: 'b', text: 'Ser sempre voltada exclusivamente para exportação em grande escala' },
+      { id: 'c', text: 'Utilizar exclusivamente mão de obra assalariada contratada em larga escala' },
+      { id: 'd', text: 'Ter sempre maior área plantada que o agronegócio' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A agricultura familiar é caracterizada pela gestão e trabalho predominantemente realizados pela própria família proprietária, geralmente em propriedades de menor porte que o agronegócio — sendo responsável, em muitos países como o Brasil, por parcela significativa da produção de alimentos destinados ao consumo interno, apesar de deter uma fração menor da área total cultivada.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_globalizacao_economica_27',
+    chapter: 'Produção Agrícola Mundial',
+    topicId: 'geo_globalizacao_economica',
+    subject: 'Geografia',
+    prompt: 'A "Revolução Verde", movimento de modernização agrícola iniciado em meados do século XX, teve como principal objetivo:',
+    options: [
+      { id: 'a', text: 'Aumentar a produtividade agrícola através de sementes melhoradas, uso intensivo de fertilizantes e defensivos químicos, e mecanização' },
+      { id: 'b', text: 'Eliminar completamente o uso de qualquer insumo químico na agricultura' },
+      { id: 'c', text: 'Reduzir drasticamente a área total cultivada no mundo' },
+      { id: 'd', text: 'Substituir toda a produção agrícola por atividades exclusivamente industriais' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A Revolução Verde, iniciada a partir das décadas de 1940-1960, buscou aumentar significativamente a produtividade agrícola através do desenvolvimento de sementes melhoradas (de alto rendimento), uso intensivo de fertilizantes e defensivos químicos, irrigação e mecanização — contribuindo para aumentar a produção de alimentos globalmente, embora também tenha gerado críticas relacionadas a impactos ambientais e à concentração fundiária.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_globalizacao_economica_28',
+    chapter: 'Indústria I',
+    topicId: 'geo_globalizacao_economica',
+    subject: 'Geografia',
+    prompt: 'A Primeira Revolução Industrial, iniciada na Inglaterra no final do século XVIII, foi impulsionada principalmente pela invenção e difusão de:',
+    options: [
+      { id: 'a', text: 'A máquina a vapor, movida a carvão, que revolucionou a produção têxtil e os transportes' },
+      { id: 'b', text: 'A energia elétrica e o motor de combustão interna' },
+      { id: 'c', text: 'A informática e os computadores' },
+      { id: 'd', text: 'A energia nuclear' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A Primeira Revolução Industrial (final do século XVIII, iniciada na Inglaterra) foi impulsionada principalmente pela máquina a vapor movida a carvão, que revolucionou a produção têxtil (com a mecanização de teares) e os transportes (locomotivas e navios a vapor) — marcando a transição de uma produção artesanal para a produção fabril em larga escala.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_geo_globalizacao_economica_29',
+    chapter: 'Indústria I',
+    topicId: 'geo_globalizacao_economica',
+    subject: 'Geografia',
+    prompt: 'A Segunda Revolução Industrial, ocorrida a partir da segunda metade do século XIX, teve como principais inovações tecnológicas:',
+    options: [
+      { id: 'a', text: 'A energia elétrica, o motor de combustão interna e o desenvolvimento da indústria química e do aço' },
+      { id: 'b', text: 'A máquina a vapor, exclusivamente' },
+      { id: 'c', text: 'A internet e a automação robótica' },
+      { id: 'd', text: 'A agricultura de subsistência' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A Segunda Revolução Industrial (a partir de meados do século XIX) trouxe inovações como a energia elétrica, o motor de combustão interna (impulsionando a indústria automobilística), e o desenvolvimento acelerado das indústrias química e siderúrgica (aço) — expandindo e diversificando a produção industrial para além do modelo inicial da Primeira Revolução Industrial.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_globalizacao_economica_30',
+    chapter: 'Indústria II',
+    topicId: 'geo_globalizacao_economica',
+    subject: 'Geografia',
+    prompt: 'A Terceira Revolução Industrial (ou Revolução Técnico-Científico-Informacional), a partir de meados do século XX, foi marcada principalmente por:',
+    options: [
+      { id: 'a', text: 'O desenvolvimento da informática, das telecomunicações e da automação, integrando fortemente ciência, tecnologia e produção' },
+      { id: 'b', text: 'A invenção exclusiva da máquina a vapor' },
+      { id: 'c', text: 'O fim completo de qualquer atividade industrial no mundo' },
+      { id: 'd', text: 'O retorno à produção artesanal em pequena escala, sem qualquer tecnologia' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A Terceira Revolução Industrial, também chamada de Revolução Técnico-Científico-Informacional, foi marcada pelo desenvolvimento da informática, das telecomunicações e da automação de processos produtivos — um período em que a ciência e a tecnologia se tornaram diretamente incorporadas ao processo produtivo, permitindo maior flexibilidade e integração global da produção industrial (essencial para a globalização econômica contemporânea).',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_globalizacao_economica_31',
+    chapter: 'Indústria II',
+    topicId: 'geo_globalizacao_economica',
+    subject: 'Geografia',
+    prompt: 'A chamada "Quarta Revolução Industrial" (Indústria 4.0), conceito discutido atualmente, se refere à integração de tecnologias como:',
+    options: [
+      { id: 'a', text: 'Inteligência artificial, internet das coisas, big data e automação avançada, integradas aos processos produtivos industriais' },
+      { id: 'b', text: 'Apenas a máquina a vapor, atualizada com novos materiais' },
+      { id: 'c', text: 'Exclusivamente processos manuais, sem qualquer tecnologia digital' },
+      { id: 'd', text: 'Um retrocesso tecnológico deliberado em relação às revoluções industriais anteriores' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A Indústria 4.0 (ou Quarta Revolução Industrial) se refere à integração de tecnologias digitais avançadas — como inteligência artificial, internet das coisas (IoT), big data, robótica avançada e manufatura aditiva (impressão 3D) — aos processos produtivos industriais, buscando maior automação, personalização e eficiência na produção.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_globalizacao_economica_32',
+    chapter: 'Indústria II',
+    topicId: 'geo_globalizacao_economica',
+    subject: 'Geografia',
+    prompt: 'A desconcentração industrial, fenômeno observado em diversos países ao longo do processo de globalização, refere-se à tendência de:',
+    options: [
+      { id: 'a', text: 'Empresas transferirem parte de suas atividades produtivas de regiões tradicionalmente industrializadas para novas áreas, muitas vezes em busca de menores custos' },
+      { id: 'b', text: 'Toda a produção industrial mundial se concentrar permanentemente em um único país' },
+      { id: 'c', text: 'A completa extinção da atividade industrial em todo o mundo' },
+      { id: 'd', text: 'Um fenômeno que não tem qualquer relação com custos de produção' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A desconcentração industrial descreve o movimento de empresas transferindo parte (ou toda) sua produção de regiões tradicionalmente industrializadas (com custos de mão de obra e operação mais altos) para novas áreas — dentro do próprio país ou internacionalmente — em busca de menores custos, incentivos fiscais ou proximidade de novos mercados, um fenômeno intensificado pela globalização econômica.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_globalizacao_economica_33',
+    chapter: 'Gedeconomia Mundial',
+    topicId: 'geo_globalizacao_economica',
+    subject: 'Geografia',
+    prompt: 'A geoeconomia, campo de estudo que combina geografia e economia, analisa principalmente:',
+    options: [
+      { id: 'a', text: 'Como fatores econômicos (comércio, investimentos, recursos) são utilizados como instrumentos de poder e influência entre países e regiões' },
+      { id: 'b', text: 'Exclusivamente aspectos militares, sem qualquer relação com economia' },
+      { id: 'c', text: 'Apenas questões culturais, sem qualquer dimensão econômica' },
+      { id: 'd', text: 'Fenômenos que não têm nenhuma relação com o território ou a geografia' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A geoeconomia analisa como fatores econômicos — comércio internacional, investimentos, controle de recursos estratégicos, sanções econômicas — são utilizados por Estados como instrumentos de poder e influência geopolítica, complementando (ou substituindo) o uso tradicional da força militar nas relações internacionais contemporâneas.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_globalizacao_economica_34',
+    chapter: 'Gedeconomia Mundial',
+    topicId: 'geo_globalizacao_economica',
+    subject: 'Geografia',
+    prompt: 'As sanções econômicas, ferramenta cada vez mais utilizada nas relações internacionais contemporâneas, consistem em:',
+    options: [
+      { id: 'a', text: 'Restrições comerciais, financeiras ou de outra natureza impostas por um país (ou grupo de países) contra outro, como forma de pressão política sem recorrer diretamente à força militar' },
+      { id: 'b', text: 'Acordos de livre comércio sem qualquer restrição' },
+      { id: 'c', text: 'Uma forma de ajuda financeira incondicional' },
+      { id: 'd', text: 'Um tipo de aliança militar formal' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Sanções econômicas são restrições impostas por um país ou coalizão de países (como bloqueios comerciais, congelamento de ativos, restrições financeiras) contra outro país, geralmente como forma de pressão política ou punição por ações consideradas inaceitáveis (como violações de direitos humanos ou agressões militares), funcionando como instrumento de geoeconomia sem envolver diretamente conflito armado.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_globalizacao_economica_35',
+    chapter: 'Gedeconomia Mundial',
+    topicId: 'geo_globalizacao_economica',
+    subject: 'Geografia',
+    prompt: 'O controle sobre recursos estratégicos (como petróleo, terras raras e tecnologias de ponta) é frequentemente citado como um elemento central da geoeconomia contemporânea porque:',
+    options: [
+      { id: 'a', text: 'Países que controlam ou dominam o fornecimento desses recursos podem exercer influência significativa sobre outros países que deles dependem' },
+      { id: 'b', text: 'Esses recursos não têm nenhum valor econômico ou estratégico atualmente' },
+      { id: 'c', text: 'Todos os países do mundo têm exatamente o mesmo acesso a esses recursos' },
+      { id: 'd', text: 'Recursos estratégicos nunca são utilizados como instrumento de política externa' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O controle sobre recursos estratégicos — como reservas de petróleo, terras raras (essenciais para tecnologias avançadas) e capacidade de produção de semicondutores — confere a países produtores ou controladores uma importante influência geoeconômica sobre países dependentes desses recursos, podendo ser usado como instrumento de pressão ou negociação nas relações internacionais.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_globalizacao_economica_36',
+    chapter: 'Mobilidade Populacional',
+    topicId: 'geo_globalizacao_economica',
+    subject: 'Geografia',
+    prompt: 'As remessas financeiras enviadas por trabalhadores migrantes a seus países de origem representam, para muitos países em desenvolvimento, uma fonte significativa de:',
+    options: [
+      { id: 'a', text: 'Divisas estrangeiras e renda para as famílias que permanecem no país de origem, com impacto relevante em algumas economias nacionais' },
+      { id: 'b', text: 'Nenhuma relevância econômica para os países receptores dessas remessas' },
+      { id: 'c', text: 'Dívida externa, sem qualquer benefício ao país de origem' },
+      { id: 'd', text: 'Um fenômeno restrito exclusivamente a países desenvolvidos' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'As remessas enviadas por trabalhadores migrantes a seus países de origem representam uma fonte significativa de divisas estrangeiras e de renda direta para famílias em muitos países em desenvolvimento, chegando a representar uma parcela relevante do PIB em algumas nações — um fluxo financeiro importante associado à mobilidade populacional internacional contemporânea.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_globalizacao_economica_37',
+    chapter: 'Indústria I',
+    topicId: 'geo_globalizacao_economica',
+    subject: 'Geografia',
+    prompt: 'O modelo de produção fordista, associado à Segunda Revolução Industrial e popularizado pela indústria automobilística no início do século XX, se caracterizava por:',
+    options: [
+      { id: 'a', text: 'Produção em massa através de linhas de montagem padronizadas, buscando reduzir custos e tornar produtos acessíveis a um público mais amplo' },
+      { id: 'b', text: 'Produção artesanal individualizada, sem qualquer padronização' },
+      { id: 'c', text: 'Ausência total de qualquer divisão do trabalho' },
+      { id: 'd', text: 'Um modelo baseado exclusivamente em automação robótica avançada' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O fordismo, popularizado por Henry Ford na indústria automobilística, caracterizava-se pela produção em massa através de linhas de montagem padronizadas, com forte divisão do trabalho em tarefas repetitivas e especializadas — buscando reduzir custos de produção e tornar produtos (como o automóvel) acessíveis a um público consumidor mais amplo, revolucionando os métodos produtivos industriais do início do século XX.',
+    difficulty: 'medium'
+  },
   // Geografia — Geopolítica Regional Contemporânea
   {
     id: 'q_geo_geopolitica_regional_1',
@@ -10777,6 +11785,342 @@ export const mockQuestions: Question[] = [
     ],
     correctOptionId: 'a',
     explanation: 'A China combinou reformas econômicas graduais (abertura ao investimento estrangeiro e ao comércio internacional, a partir do final dos anos 1970) com forte controle estatal e do Partido Comunista sobre setores estratégicos da economia — um modelo próprio que impulsionou seu crescimento econômico acelerado e sua crescente influência geopolítica global, incluindo projetos como a Nova Rota da Seda.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_geopolitica_regional_6',
+    chapter: 'Geopolítica e Geoeconomia da Ásia',
+    topicId: 'geo_geopolitica_regional',
+    subject: 'Geografia',
+    prompt: 'A Nova Rota da Seda (Belt and Road Initiative), projeto de infraestrutura liderado pela China, tem como um de seus principais objetivos:',
+    options: [
+      { id: 'a', text: 'Expandir a influência econômica e geopolítica chinesa através do financiamento de infraestrutura (portos, ferrovias, estradas) em diversos países da Ásia, África e Europa' },
+      { id: 'b', text: 'Isolar completamente a China do comércio internacional' },
+      { id: 'c', text: 'Restringir exclusivamente o comércio dentro do próprio território chinês' },
+      { id: 'd', text: 'Eliminar toda a infraestrutura de transporte já existente nos países parceiros' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A Nova Rota da Seda é uma iniciativa chinesa de investimento massivo em infraestrutura (portos, ferrovias, rodovias, redes de energia) em dezenas de países da Ásia, África, Europa e além, visando expandir rotas comerciais sob influência chinesa e fortalecer laços econômicos e geopolíticos com essas regiões — um dos maiores projetos de infraestrutura já concebidos no mundo.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_geopolitica_regional_7',
+    chapter: 'Geografia do Oriente Médio',
+    topicId: 'geo_geopolitica_regional',
+    subject: 'Geografia',
+    prompt: 'A região do Oriente Médio concentra uma parcela expressiva das reservas mundiais de petróleo, um fator central para entender sua importância geopolítica global. Essa concentração de recursos está historicamente associada a:',
+    options: [
+      { id: 'a', text: 'Forte interesse de potências externas na região, influenciando alianças, intervenções e conflitos ao longo do século XX e XXI' },
+      { id: 'b', text: 'Total desinteresse das potências mundiais pela região' },
+      { id: 'c', text: 'Ausência completa de qualquer conflito armado na história recente da região' },
+      { id: 'd', text: 'Uma distribuição de petróleo igual entre todos os países do mundo' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A concentração de reservas de petróleo no Oriente Médio tornou a região estrategicamente central para potências externas ao longo do século XX e XXI, influenciando alianças políticas, intervenções militares e disputas geopolíticas — o controle e o acesso a essa fonte de energia foram (e continuam sendo) fatores centrais nas relações internacionais envolvendo a região.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_geopolitica_regional_8',
+    chapter: 'Questão Palestina',
+    topicId: 'geo_geopolitica_regional',
+    subject: 'Geografia',
+    prompt: 'O conflito israelo-palestino, um dos conflitos geopolíticos mais duradouros do mundo contemporâneo, tem em sua origem, entre outros fatores, disputas sobre:',
+    options: [
+      { id: 'a', text: 'Território, soberania e reivindicações históricas e religiosas de ambos os povos sobre a mesma região' },
+      { id: 'b', text: 'Uma disputa exclusivamente comercial, sem qualquer componente territorial' },
+      { id: 'c', text: 'Questões que surgiram apenas nas últimas décadas, sem qualquer raiz histórica' },
+      { id: 'd', text: 'Um conflito que já foi completamente resolvido há muitas décadas' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O conflito israelo-palestino tem raízes em disputas territoriais, políticas e religiosas de longa data, envolvendo reivindicações históricas de ambos os povos sobre a mesma região — um conflito complexo e multifacetado, marcado por guerras, acordos de paz parciais e tensões que persistem até os dias atuais.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_geopolitica_regional_9',
+    chapter: 'Questão Palestina',
+    topicId: 'geo_geopolitica_regional',
+    subject: 'Geografia',
+    prompt: 'A solução de "dois Estados", frequentemente mencionada nas negociações sobre o conflito israelo-palestino, propõe:',
+    options: [
+      { id: 'a', text: 'A coexistência de um Estado israelense e um Estado palestino independentes, cada um com soberania sobre seu próprio território' },
+      { id: 'b', text: 'A unificação total dos dois povos sob um único governo, sem qualquer divisão territorial' },
+      { id: 'c', text: 'A anexação completa de toda a região por um único Estado, excluindo o outro povo' },
+      { id: 'd', text: 'A criação de três Estados independentes na região, ao invés de dois' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A solução de "dois Estados" propõe a criação (ou reconhecimento pleno) de um Estado palestino independente, coexistindo lado a lado com o Estado de Israel, cada um com soberania sobre seu próprio território — uma das propostas mais discutidas internacionalmente para uma resolução negociada e duradoura do conflito, embora sua implementação prática enfrente grandes desafios políticos.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_geopolitica_regional_10',
+    chapter: 'Questão Palestina',
+    topicId: 'geo_geopolitica_regional',
+    subject: 'Geografia',
+    prompt: 'A Faixa de Gaza e a Cisjordânia, territórios centrais na questão palestina, se diferenciam, entre outros aspectos, por:',
+    options: [
+      { id: 'a', text: 'Serem territórios geograficamente separados entre si (não contíguos), ambos reivindicados como parte de um futuro Estado palestino' },
+      { id: 'b', text: 'Serem exatamente o mesmo território, apenas com nomes diferentes' },
+      { id: 'c', text: 'Não terem nenhuma relevância na questão palestina' },
+      { id: 'd', text: 'Estarem localizados fora do Oriente Médio' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A Faixa de Gaza e a Cisjordânia são territórios palestinos geograficamente separados um do outro (não contíguos, com território israelense entre eles), ambos centrais nas reivindicações territoriais palestinas e nas negociações internacionais sobre um possível futuro Estado palestino — essa descontinuidade territorial é, inclusive, um dos desafios práticos frequentemente citados em propostas de solução do conflito.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_geo_geopolitica_regional_11',
+    chapter: 'Conflitos no Mundo Árabe',
+    topicId: 'geo_geopolitica_regional',
+    subject: 'Geografia',
+    prompt: 'A chamada "Primavera Árabe", onda de protestos e revoltas populares que se espalhou por diversos países do mundo árabe a partir de 2010-2011, foi motivada principalmente por:',
+    options: [
+      { id: 'a', text: 'Insatisfação popular com regimes autoritários, desemprego, corrupção e falta de liberdades políticas' },
+      { id: 'b', text: 'Um desejo unânime da população de manter os governos exatamente como estavam' },
+      { id: 'c', text: 'Exclusivamente disputas religiosas, sem qualquer motivação política ou econômica' },
+      { id: 'd', text: 'Uma intervenção militar direta de países ocidentais que iniciou os protestos' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A Primavera Árabe foi impulsionada por uma combinação de fatores: insatisfação popular generalizada com regimes autoritários de longa data, altas taxas de desemprego (especialmente entre jovens), corrupção governamental e falta de liberdades políticas e civis — resultando em protestos e revoltas que derrubaram alguns governos (como na Tunísia e no Egito) e desencadearam guerras civis prolongadas em outros (como na Síria e na Líbia).',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_geopolitica_regional_12',
+    chapter: 'Conflitos no Mundo Árabe',
+    topicId: 'geo_geopolitica_regional',
+    subject: 'Geografia',
+    prompt: 'A guerra civil na Síria, iniciada em 2011 no contexto da Primavera Árabe, se tornou um conflito particularmente complexo devido, entre outros fatores, a:',
+    options: [
+      { id: 'a', text: 'Envolvimento de múltiplos atores internos (governo, oposição, grupos extremistas, milícias curdas) e externos (potências regionais e globais apoiando diferentes lados)' },
+      { id: 'b', text: 'Ser um conflito extremamente simples, envolvendo apenas duas partes, sem qualquer interferência externa' },
+      { id: 'c', text: 'Ter se resolvido rapidamente, em questão de poucos meses' },
+      { id: 'd', text: 'Não ter gerado nenhum deslocamento de refugiados' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A guerra civil síria se tornou um dos conflitos mais complexos do século XXI devido ao envolvimento de múltiplos atores internos (o governo de Bashar al-Assad, diversos grupos de oposição, grupos extremistas como o Estado Islâmico, milícias curdas) e ao apoio (militar, financeiro, político) de potências regionais e globais a diferentes lados do conflito, prolongando a guerra e gerando uma das maiores crises de refugiados do mundo contemporâneo.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_geo_geopolitica_regional_13',
+    chapter: 'Conflitos no Mundo Árabe',
+    topicId: 'geo_geopolitica_regional',
+    subject: 'Geografia',
+    prompt: 'Os conflitos prolongados no mundo árabe (como na Síria, Iêmen e Líbia) têm gerado significativos fluxos de refugiados e deslocados internos, com impactos geopolíticos que incluem:',
+    options: [
+      { id: 'a', text: 'Pressão sobre países vizinhos e europeus para acolhimento de refugiados, gerando debates políticos internos sobre imigração e políticas de asilo' },
+      { id: 'b', text: 'Nenhum impacto perceptível fora das fronteiras dos países em conflito' },
+      { id: 'c', text: 'Uma redução geral da população mundial de refugiados' },
+      { id: 'd', text: 'A resolução automática e rápida da crise humanitária' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Os conflitos prolongados em países árabes geraram enormes fluxos de refugiados e deslocados internos, pressionando países vizinhos (como Turquia, Líbano e Jordânia) e países europeus a lidar com o acolhimento desses refugiados — gerando debates políticos internos significativos sobre políticas de imigração e asilo, e influenciando dinâmicas eleitorais em diversos países receptores.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_geopolitica_regional_14',
+    chapter: 'Terrorismo Internacional',
+    topicId: 'geo_geopolitica_regional',
+    subject: 'Geografia',
+    prompt: 'O terrorismo internacional, fenômeno com implicações geopolíticas globais, é caracterizado principalmente por:',
+    options: [
+      { id: 'a', text: 'Uso de violência (ou ameaça de violência) contra civis ou não combatentes, com objetivos políticos, ideológicos ou religiosos, buscando gerar medo e repercussão ampla' },
+      { id: 'b', text: 'Conflitos armados exclusivamente entre exércitos regulares de dois Estados' },
+      { id: 'c', text: 'Um fenômeno restrito a uma única região geográfica do mundo' },
+      { id: 'd', text: 'Ações sem qualquer motivação política, ideológica ou religiosa' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O terrorismo se caracteriza pelo uso (ou ameaça) de violência direcionada frequentemente contra civis ou alvos não militares, com objetivos políticos, ideológicos ou religiosos, buscando gerar medo generalizado e ampla repercussão para pressionar governos ou sociedades — um fenômeno que, na era da globalização, frequentemente ultrapassa fronteiras nacionais e envolve redes internacionais.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_geopolitica_regional_15',
+    chapter: 'Terrorismo Internacional',
+    topicId: 'geo_geopolitica_regional',
+    subject: 'Geografia',
+    prompt: 'Os ataques de 11 de setembro de 2001, nos Estados Unidos, tiveram como uma de suas principais consequências geopolíticas:',
+    options: [
+      { id: 'a', text: 'O início da "Guerra ao Terror" liderada pelos EUA, incluindo intervenções militares no Afeganistão e, posteriormente, no Iraque' },
+      { id: 'b', text: 'O fim completo e definitivo de qualquer ameaça terrorista no mundo' },
+      { id: 'c', text: 'Uma redução geral dos gastos militares e de segurança em todo o mundo' },
+      { id: 'd', text: 'O isolamento completo dos Estados Unidos das relações internacionais' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Os ataques de 11 de setembro de 2001 desencadearam a chamada "Guerra ao Terror" liderada pelos Estados Unidos, que incluiu a invasão do Afeganistão (2001, buscando desmantelar a al-Qaeda e o regime Talibã que a abrigava) e, posteriormente, a invasão do Iraque (2003) — eventos que reconfiguraram significativamente a geopolítica global e as políticas de segurança internacional nas décadas seguintes.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_geopolitica_regional_16',
+    chapter: 'Terrorismo Internacional',
+    topicId: 'geo_geopolitica_regional',
+    subject: 'Geografia',
+    prompt: 'O combate ao terrorismo internacional, adotado por diversos países, frequentemente gera debates sobre o equilíbrio entre:',
+    options: [
+      { id: 'a', text: 'Segurança nacional e preservação de liberdades civis e direitos individuais' },
+      { id: 'b', text: 'Questões que não têm qualquer relação com direitos civis' },
+      { id: 'c', text: 'Um consenso unânime e sem controvérsias sobre todas as medidas antiterrorismo adotadas' },
+      { id: 'd', text: 'Apenas aspectos econômicos, sem qualquer dimensão de segurança' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'As políticas de combate ao terrorismo frequentemente geram debates importantes sobre o equilíbrio entre garantir a segurança nacional (vigilância, restrições de acesso, operações de inteligência) e preservar liberdades civis e direitos individuais (privacidade, devido processo legal) — uma tensão recorrente nas democracias que buscam responder a ameaças terroristas sem comprometer princípios democráticos fundamentais.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_geo_geopolitica_regional_17',
+    chapter: 'Geografia das Religiões',
+    topicId: 'geo_geopolitica_regional',
+    subject: 'Geografia',
+    prompt: 'A distribuição geográfica das principais religiões do mundo (cristianismo, islamismo, hinduísmo, budismo, entre outras) está historicamente associada a:',
+    options: [
+      { id: 'a', text: 'Processos históricos de expansão religiosa, como colonização, comércio, migrações e conquistas, que difundiram crenças por diferentes regiões ao longo dos séculos' },
+      { id: 'b', text: 'Uma distribuição totalmente aleatória, sem qualquer processo histórico identificável' },
+      { id: 'c', text: 'Fatores exclusivamente climáticos, sem qualquer relação histórica ou cultural' },
+      { id: 'd', text: 'Uma divisão que nunca mudou ao longo de toda a história humana' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A distribuição geográfica das grandes religiões mundiais resulta de processos históricos complexos — expansão através de rotas comerciais, colonização, migrações populacionais e, em alguns casos, conquistas militares — que ao longo dos séculos difundiram crenças religiosas para além de suas regiões de origem, moldando o mapa religioso atual do mundo.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_geopolitica_regional_18',
+    chapter: 'Geografia das Religiões',
+    topicId: 'geo_geopolitica_regional',
+    subject: 'Geografia',
+    prompt: 'Conflitos com componente religioso significativo, presentes em diversas regiões do mundo, geralmente envolvem, além da dimensão religiosa em si:',
+    options: [
+      { id: 'a', text: 'Disputas territoriais, políticas e étnicas entrelaçadas com identidades religiosas, tornando os conflitos mais complexos do que uma simples divergência de crença' },
+      { id: 'b', text: 'Apenas divergências teológicas abstratas, sem qualquer componente territorial ou político' },
+      { id: 'c', text: 'Nenhuma relação com fatores históricos ou étnicos' },
+      { id: 'd', text: 'Um consenso religioso completo entre todas as partes envolvidas' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Conflitos com componente religioso raramente se resumem a divergências puramente teológicas: frequentemente envolvem disputas territoriais, rivalidades políticas históricas e identidades étnicas entrelaçadas com a identidade religiosa das partes envolvidas — tornando esses conflitos particularmente complexos e difíceis de resolver apenas por meio de diálogo religioso.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_geopolitica_regional_19',
+    chapter: 'Geopolítica e Geoeconomia da América Latina',
+    topicId: 'geo_geopolitica_regional',
+    subject: 'Geografia',
+    prompt: 'A América Latina, região historicamente marcada por desigualdades socioeconômicas, tem buscado maior integração regional através de blocos como o Mercosul e a Aliança do Pacífico, com o objetivo principal de:',
+    options: [
+      { id: 'a', text: 'Fortalecer o comércio intrarregional e aumentar o poder de negociação conjunta dos países latino-americanos no cenário internacional' },
+      { id: 'b', text: 'Isolar completamente a região do comércio internacional' },
+      { id: 'c', text: 'Eliminar toda e qualquer forma de cooperação entre os países da região' },
+      { id: 'd', text: 'Unificar imediatamente todos os países latino-americanos em um único Estado' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Blocos regionais como o Mercosul e a Aliança do Pacífico buscam fortalecer o comércio entre os países latino-americanos (reduzindo tarifas e barreiras) e aumentar o poder de negociação conjunta da região frente a outros blocos e potências globais — uma estratégia para lidar com os desafios de uma região historicamente marcada por desigualdades socioeconômicas e dependência de exportação de commodities.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_geopolitica_regional_20',
+    chapter: 'Geopolítica e Geoeconomia da América Latina',
+    topicId: 'geo_geopolitica_regional',
+    subject: 'Geografia',
+    prompt: 'A instabilidade política recorrente em diversos países latino-americanos ao longo das últimas décadas está associada, entre outros fatores, a:',
+    options: [
+      { id: 'a', text: 'Desigualdades socioeconômicas persistentes, fragilidade institucional e, em alguns casos, forte dependência de commodities, tornando as economias vulneráveis a choques externos' },
+      { id: 'b', text: 'Uma completa ausência de qualquer desigualdade social na região' },
+      { id: 'c', text: 'Instituições democráticas extremamente fortes e estáveis em todos os países da região, sem exceção' },
+      { id: 'd', text: 'Independência total em relação a fatores econômicos externos' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A instabilidade política em diversos países latino-americanos está frequentemente associada a desigualdades socioeconômicas persistentes, instituições democráticas ainda em consolidação (fragilidade institucional) e, em muitos casos, forte dependência da exportação de commodities (minérios, produtos agrícolas), o que torna essas economias particularmente vulneráveis a flutuações nos preços internacionais desses produtos.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_geopolitica_regional_21',
+    chapter: 'África no Mundo Atual',
+    topicId: 'geo_geopolitica_regional',
+    subject: 'Geografia',
+    prompt: 'As fronteiras de muitos países africanos, estabelecidas principalmente durante o período colonial europeu (especialmente após a Conferência de Berlim, 1884-1885), são frequentemente apontadas como fator relevante para explicar:',
+    options: [
+      { id: 'a', text: 'Conflitos étnicos e políticos internos, já que essas fronteiras muitas vezes ignoraram divisões étnicas, culturais e linguísticas pré-existentes' },
+      { id: 'b', text: 'Uma total ausência de qualquer conflito na África atual' },
+      { id: 'c', text: 'Fronteiras estabelecidas exclusivamente pelos próprios povos africanos, sem qualquer influência europeia' },
+      { id: 'd', text: 'A completa homogeneidade étnica e cultural dentro de cada país africano' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'As fronteiras de muitos países africanos foram traçadas artificialmente por potências coloniais europeias (principalmente após a Conferência de Berlim), frequentemente sem considerar as divisões étnicas, culturais e linguísticas pré-existentes entre os povos africanos — um fator historicamente apontado como contribuinte para tensões e conflitos internos em diversos países do continente após a independência.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_geopolitica_regional_22',
+    chapter: 'África no Mundo Atual',
+    topicId: 'geo_geopolitica_regional',
+    subject: 'Geografia',
+    prompt: 'O continente africano, apesar de historicamente associado a desafios socioeconômicos, tem apresentado nas últimas décadas, em diversos países, sinais de:',
+    options: [
+      { id: 'a', text: 'Crescimento econômico acelerado, expansão da classe média urbana e crescente atração de investimentos estrangeiros, especialmente de países como a China' },
+      { id: 'b', text: 'Estagnação econômica completa em todos os 54 países do continente, sem qualquer exceção' },
+      { id: 'c', text: 'Total ausência de qualquer investimento estrangeiro' },
+      { id: 'd', text: 'Redução constante da população em todos os países africanos' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Diversos países africanos têm apresentado, nas últimas décadas, sinais de crescimento econômico significativo, expansão de uma classe média urbana e crescente atração de investimentos estrangeiros (particularmente da China, através de projetos de infraestrutura) — uma narrativa que contrasta com estereótipos simplificados sobre o continente, embora desafios socioeconômicos significativos ainda persistam em muitas regiões.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_geopolitica_regional_23',
+    chapter: 'Geografia das Religiões',
+    topicId: 'geo_geopolitica_regional',
+    subject: 'Geografia',
+    prompt: 'A Jerusalém, cidade sagrada para judeus, cristãos e muçulmanos, é um exemplo emblemático de como a geografia das religiões pode se entrelaçar com disputas geopolíticas, principalmente porque:',
+    options: [
+      { id: 'a', text: 'A cidade abriga locais sagrados centrais para as três religiões monoteístas, tornando sua soberania e controle uma questão altamente sensível e disputada' },
+      { id: 'b', text: 'A cidade não possui nenhum significado religioso para qualquer uma dessas três religiões' },
+      { id: 'c', text: 'É uma cidade sem qualquer relevância histórica ou geopolítica' },
+      { id: 'd', text: 'O controle da cidade nunca foi motivo de disputa ao longo da história' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Jerusalém abriga locais sagrados centrais para judaísmo (Muro das Lamentações), cristianismo (Igreja do Santo Sepulcro) e islamismo (Domo da Rocha e Mesquita Al-Aqsa), tornando o controle e a soberania sobre a cidade uma questão extremamente sensível nas negociações do conflito israelo-palestino e um símbolo de disputas religiosas e geopolíticas de longa data.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_geopolitica_regional_24',
+    chapter: 'Geopolítica e Geoeconomia da América Latina',
+    topicId: 'geo_geopolitica_regional',
+    subject: 'Geografia',
+    prompt: 'A dependência histórica de muitos países latino-americanos em relação à exportação de commodities (produtos primários) é frequentemente associada a um padrão de vulnerabilidade econômica conhecido como:',
+    options: [
+      { id: 'a', text: 'Dependência de um modelo primário-exportador, tornando essas economias mais suscetíveis a flutuações nos preços internacionais desses produtos' },
+      { id: 'b', text: 'Total independência em relação a qualquer fator econômico externo' },
+      { id: 'c', text: 'Um modelo econômico baseado exclusivamente em alta tecnologia' },
+      { id: 'd', text: 'Ausência completa de qualquer relação com o mercado internacional' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A dependência de um modelo primário-exportador (forte concentração das exportações em commodities agrícolas e minerais) torna as economias latino-americanas mais vulneráveis a flutuações nos preços internacionais desses produtos, gerando ciclos de crescimento e crise fortemente influenciados por fatores externos ao controle desses países.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_geopolitica_regional_25',
+    chapter: 'Geopolítica e Geoeconomia da Ásia',
+    topicId: 'geo_geopolitica_regional',
+    subject: 'Geografia',
+    prompt: 'A disputa territorial no Mar do Sul da China, envolvendo a China e diversos países do sudeste asiático, está relacionada principalmente a:',
+    options: [
+      { id: 'a', text: 'Controle de rotas comerciais estratégicas e de recursos naturais (como pesca e possíveis reservas de petróleo e gás), além de questões de soberania territorial' },
+      { id: 'b', text: 'Uma disputa exclusivamente religiosa entre os países envolvidos' },
+      { id: 'c', text: 'Uma região sem qualquer relevância econômica ou estratégica' },
+      { id: 'd', text: 'Um conflito já completamente resolvido, sem qualquer tensão remanescente' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A disputa no Mar do Sul da China envolve o controle de rotas marítimas comerciais estratégicas (por onde passa parcela significativa do comércio internacional), acesso a recursos naturais (pesca, possíveis reservas de petróleo e gás) e questões de soberania territorial sobre ilhas e recifes reivindicados por múltiplos países da região, incluindo China, Vietnã, Filipinas, Malásia e Brunei.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_geo_geopolitica_regional_26',
+    chapter: 'África no Mundo Atual',
+    topicId: 'geo_geopolitica_regional',
+    subject: 'Geografia',
+    prompt: 'A crescente presença econômica da China no continente africano nas últimas décadas se manifesta principalmente através de:',
+    options: [
+      { id: 'a', text: 'Investimentos em infraestrutura (portos, ferrovias, estradas) e empréstimos a governos africanos, em troca de acesso a recursos naturais e mercados' },
+      { id: 'b', text: 'Total ausência de qualquer investimento chinês no continente' },
+      { id: 'c', text: 'Investimentos exclusivamente em pesquisa acadêmica, sem qualquer componente econômico' },
+      { id: 'd', text: 'Uma relação restrita apenas ao comércio de produtos agrícolas' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A China tem expandido significativamente sua presença econômica na África através de investimentos em infraestrutura (portos, ferrovias, estradas, muitas vezes ligados à Nova Rota da Seda) e empréstimos a governos africanos, geralmente buscando em troca acesso privilegiado a recursos naturais estratégicos (minérios, petróleo) e a mercados consumidores em expansão no continente.',
     difficulty: 'medium'
   },
   // Geografia — Geografia Física do Brasil
@@ -10860,6 +12204,358 @@ export const mockQuestions: Question[] = [
     explanation: 'O desmatamento na Amazônia está historicamente associado à expansão da pecuária extensiva, à abertura de áreas para agricultura, e a atividades ilegais como extração de madeira e mineração — processos frequentemente ligados também à expansão de rodovias e à grilagem de terras públicas.',
     difficulty: 'medium'
   },
+  {
+    id: 'q_geo_fisica_brasil_6',
+    chapter: 'Políticas Ambientais Brasileiras',
+    topicId: 'geo_fisica_brasil',
+    subject: 'Geografia',
+    prompt: 'O Código Florestal Brasileiro, legislação que regula o uso e a proteção da vegetação nativa em propriedades rurais, estabelece exigências como:',
+    options: [
+      { id: 'a', text: 'Manutenção de Áreas de Preservação Permanente (APPs) e de Reserva Legal, variáveis conforme o bioma e o tamanho da propriedade' },
+      { id: 'b', text: 'A proibição total de qualquer atividade agrícola em todo o território nacional' },
+      { id: 'c', text: 'A ausência de qualquer exigência sobre preservação de vegetação nativa' },
+      { id: 'd', text: 'A obrigatoriedade de desmatamento total de todas as propriedades rurais' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O Código Florestal estabelece a obrigatoriedade de manutenção de Áreas de Preservação Permanente (APPs, como margens de rios e topos de morros) e de Reserva Legal (percentual da propriedade rural que deve manter vegetação nativa, variando conforme o bioma), buscando equilibrar produção agrícola e conservação ambiental.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_fisica_brasil_7',
+    chapter: 'Paisagem, Espaço Geográfico e Ciência Geográfica',
+    topicId: 'geo_fisica_brasil',
+    subject: 'Geografia',
+    prompt: 'O conceito de "espaço geográfico", central para a Geografia como ciência, refere-se a:',
+    options: [
+      { id: 'a', text: 'O espaço transformado e organizado pela sociedade ao longo do tempo, resultado da relação entre elementos naturais e ação humana' },
+      { id: 'b', text: 'Apenas o espaço físico natural, sem qualquer influência humana' },
+      { id: 'c', text: 'Um conceito exclusivamente astronômico, sem relação com a superfície terrestre' },
+      { id: 'd', text: 'Uma medida fixa e imutável ao longo da história' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O espaço geográfico é entendido como o espaço socialmente produzido e transformado pela ação humana ao longo do tempo, resultado da interação entre elementos naturais (relevo, clima, vegetação) e a organização social, econômica e cultural das sociedades que nele vivem — um conceito central e dinâmico da Geografia como ciência.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_fisica_brasil_8',
+    chapter: 'Paisagem, Espaço Geográfico e Ciência Geográfica',
+    topicId: 'geo_fisica_brasil',
+    subject: 'Geografia',
+    prompt: 'O conceito de "paisagem", frequentemente estudado em Geografia, se refere a:',
+    options: [
+      { id: 'a', text: 'O conjunto visível de elementos naturais e construídos em uma determinada porção do espaço, captado em um momento específico' },
+      { id: 'b', text: 'Apenas elementos naturais, excluindo qualquer construção humana' },
+      { id: 'c', text: 'Um conceito exclusivo da pintura artística, sem relação com a Geografia' },
+      { id: 'd', text: 'Algo que nunca muda ao longo do tempo' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A paisagem geográfica é o conjunto visível de elementos naturais (relevo, vegetação, corpos d\'água) e elementos construídos pela ação humana (edificações, estradas, plantações) em uma determinada porção do espaço, captada visualmente em um dado momento — mas que resulta de processos históricos e continua se transformando ao longo do tempo.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_geo_fisica_brasil_9',
+    chapter: 'Paisagem, Espaço Geográfico e Ciência Geográfica',
+    topicId: 'geo_fisica_brasil',
+    subject: 'Geografia',
+    prompt: 'A Geografia, como ciência, se caracteriza por estudar as relações entre:',
+    options: [
+      { id: 'a', text: 'A sociedade e a natureza, e como essas relações se expressam e se organizam no espaço' },
+      { id: 'b', text: 'Exclusivamente fenômenos biológicos, sem qualquer relação com a sociedade' },
+      { id: 'c', text: 'Apenas questões históricas, sem qualquer dimensão espacial' },
+      { id: 'd', text: 'Fenômenos completamente isolados do espaço geográfico' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A Geografia se dedica a estudar as relações entre a sociedade e a natureza, analisando como essas relações se organizam, se transformam e se expressam espacialmente — abrangendo tanto aspectos físicos (relevo, clima, hidrografia) quanto humanos (população, economia, cultura, política) do espaço geográfico.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_geo_fisica_brasil_10',
+    chapter: 'Geologia e Geomorfologia',
+    topicId: 'geo_fisica_brasil',
+    subject: 'Geografia',
+    prompt: 'O território brasileiro é geologicamente considerado uma área relativamente estável, com baixa ocorrência de terremotos e vulcões ativos, principalmente porque:',
+    options: [
+      { id: 'a', text: 'O Brasil está localizado no interior da Placa Tectônica Sul-Americana, distante das bordas de contato com outras placas, onde ocorre a maior parte da atividade sísmica e vulcânica' },
+      { id: 'b', text: 'O Brasil está localizado exatamente sobre uma fronteira entre duas placas tectônicas' },
+      { id: 'c', text: 'O território brasileiro nunca sofreu qualquer processo geológico' },
+      { id: 'd', text: 'O Brasil possui a maior concentração de vulcões ativos do mundo' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O Brasil está situado no interior da Placa Sul-Americana, longe das bordas de contato com outras placas tectônicas (como a Placa de Nazca, a oeste, onde ocorre a subducção que forma os Andes) — por isso, apresenta baixa atividade sísmica e vulcânica, sendo geologicamente considerado uma área estável (embora não totalmente livre de tremores de terra ocasionais).',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_fisica_brasil_11',
+    chapter: 'Geologia e Geomorfologia',
+    topicId: 'geo_fisica_brasil',
+    subject: 'Geografia',
+    prompt: 'As bacias sedimentares, importantes estruturas geológicas no território brasileiro, são formadas por:',
+    options: [
+      { id: 'a', text: 'Acúmulo de sedimentos ao longo de milhões de anos, frequentemente associadas à presença de importantes reservas de petróleo e gás natural' },
+      { id: 'b', text: 'Rochas exclusivamente vulcânicas, sem qualquer sedimento' },
+      { id: 'c', text: 'Formações geológicas que nunca ocorrem no território brasileiro' },
+      { id: 'd', text: 'Áreas sem qualquer relevância econômica' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'As bacias sedimentares são grandes depressões da crosta terrestre onde se acumularam camadas de sedimentos ao longo de milhões de anos — no Brasil, bacias como a de Campos e a do pré-sal são economicamente estratégicas por conterem importantes reservas de petróleo e gás natural.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_fisica_brasil_12',
+    chapter: 'Relevo Brasileiro',
+    topicId: 'geo_fisica_brasil',
+    subject: 'Geografia',
+    prompt: 'O relevo brasileiro, em sua maior parte, é classificado como:',
+    options: [
+      { id: 'a', text: 'Predominantemente formado por planaltos e planícies, com altitudes relativamente modestas em comparação a outras regiões do mundo com cadeias montanhosas jovens' },
+      { id: 'b', text: 'Predominantemente formado por altas cadeias montanhosas recentes, como os Andes' },
+      { id: 'c', text: 'Completamente plano, sem qualquer variação de altitude' },
+      { id: 'd', text: 'Formado exclusivamente por desertos' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O relevo brasileiro é predominantemente formado por planaltos (áreas mais elevadas e antigas, já bastante erodidas) e planícies (áreas baixas, geralmente associadas a rios), sem grandes cadeias montanhosas jovens como os Andes — resultado de sua posição geológica estável no interior da Placa Sul-Americana.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_geo_fisica_brasil_13',
+    chapter: 'Pedologia',
+    topicId: 'geo_fisica_brasil',
+    subject: 'Geografia',
+    prompt: 'A pedologia, ciência que estuda os solos, os classifica considerando fatores como:',
+    options: [
+      { id: 'a', text: 'Composição mineral, textura, fertilidade e processo de formação (influenciado por clima, relevo, material de origem e organismos vivos)' },
+      { id: 'b', text: 'Apenas a cor do solo, sem qualquer outra característica' },
+      { id: 'c', text: 'Exclusivamente a altitude do local, sem qualquer relação com o solo em si' },
+      { id: 'd', text: 'Fatores que não têm nenhuma relação com o clima ou o relevo' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A pedologia classifica os solos considerando sua composição mineral, textura (proporção de areia, silte e argila), fertilidade natural, e o processo de formação (pedogênese), que é influenciado por fatores como clima, relevo, material de origem (rocha-mãe) e a ação de organismos vivos ao longo do tempo.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_fisica_brasil_14',
+    chapter: 'Pedologia',
+    topicId: 'geo_fisica_brasil',
+    subject: 'Geografia',
+    prompt: 'O solo conhecido como "massapé", característico de algumas regiões litorâneas do Nordeste brasileiro, é historicamente associado a:',
+    options: [
+      { id: 'a', text: 'Alta fertilidade natural, tendo sido historicamente utilizado no cultivo de cana-de-açúcar durante o período colonial' },
+      { id: 'b', text: 'Baixíssima fertilidade, sendo impróprio para qualquer tipo de cultivo agrícola' },
+      { id: 'c', text: 'Regiões desérticas do interior do Nordeste' },
+      { id: 'd', text: 'Solos exclusivos da região amazônica' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O massapé é um solo de coloração escura e alta fertilidade natural, encontrado em regiões litorâneas do Nordeste brasileiro — historicamente associado ao cultivo da cana-de-açúcar durante o período colonial, sendo um dos fatores que explicam a concentração da atividade açucareira nessa região do país.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_fisica_brasil_15',
+    chapter: 'Pedologia',
+    topicId: 'geo_fisica_brasil',
+    subject: 'Geografia',
+    prompt: 'A "terra roxa", solo associado ao cultivo de café em regiões do sudeste brasileiro (especialmente São Paulo e Paraná), se originou principalmente da decomposição de:',
+    options: [
+      { id: 'a', text: 'Rochas basálticas (de origem vulcânica), ricas em nutrientes que conferem alta fertilidade ao solo' },
+      { id: 'b', text: 'Rochas sedimentares pobres em nutrientes' },
+      { id: 'c', text: 'Depósitos de areia do deserto' },
+      { id: 'd', text: 'Restos exclusivamente de vegetação de mangue' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A "terra roxa" resulta da decomposição de rochas basálticas (de origem vulcânica), ricas em minerais que conferem alta fertilidade natural ao solo — características que tornaram essa região especialmente favorável ao cultivo do café, impulsionando a economia cafeeira paulista e paranaense entre os séculos XIX e XX.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_fisica_brasil_16',
+    chapter: 'Climatologia do Brasil',
+    topicId: 'geo_fisica_brasil',
+    subject: 'Geografia',
+    prompt: 'O Brasil, por sua grande extensão territorial e posição predominantemente tropical, apresenta uma diversidade climática considerável. O clima semiárido, encontrado principalmente no interior do Nordeste, se caracteriza por:',
+    options: [
+      { id: 'a', text: 'Baixos e irregulares índices pluviométricos, com longos períodos de estiagem, favorecendo a formação da vegetação de caatinga' },
+      { id: 'b', text: 'Chuvas abundantes e bem distribuídas durante todo o ano' },
+      { id: 'c', text: 'Temperaturas extremamente baixas durante todo o ano' },
+      { id: 'd', text: 'Ausência total de qualquer vegetação na região' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O clima semiárido do sertão nordestino se caracteriza por baixos índices pluviométricos e irregularidade das chuvas, com longos períodos de estiagem — condições que favoreceram a adaptação da vegetação de caatinga, composta por plantas resistentes à seca (muitas vezes caducifólias e com espinhos).',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_geo_fisica_brasil_17',
+    chapter: 'Climatologia do Brasil',
+    topicId: 'geo_fisica_brasil',
+    subject: 'Geografia',
+    prompt: 'As massas de ar que atuam sobre o território brasileiro, influenciando os diferentes tipos climáticos do país, incluem, entre outras, a massa Equatorial (quente e úmida) e a massa Polar (fria). O avanço da massa Polar em direção ao sul e sudeste do Brasil, especialmente no inverno, costuma causar:',
+    options: [
+      { id: 'a', text: 'Quedas bruscas de temperatura, podendo causar geadas em algumas regiões' },
+      { id: 'b', text: 'Aumento significativo da temperatura em todo o país' },
+      { id: 'c', text: 'Chuvas intensas exclusivamente na região amazônica' },
+      { id: 'd', text: 'Nenhum efeito perceptível sobre o clima brasileiro' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A massa de ar Polar Atlântica, de origem fria, avança periodicamente sobre o Brasil (principalmente sul e sudeste) durante o inverno, causando quedas bruscas de temperatura e, em algumas regiões (especialmente no sul), a ocorrência de geadas — fenômeno relevante inclusive para a agricultura, podendo prejudicar culturas sensíveis ao frio.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_fisica_brasil_18',
+    chapter: 'Biogeografia do Brasil II',
+    topicId: 'geo_fisica_brasil',
+    subject: 'Geografia',
+    prompt: 'O Pantanal, um dos principais biomas brasileiros, é caracterizado por sua vulnerabilidade a:',
+    options: [
+      { id: 'a', text: 'Queimadas intensas, especialmente durante a estação seca, e alterações no regime hídrico causadas por atividades a montante da bacia' },
+      { id: 'b', text: 'Nenhum tipo de ameaça ambiental, sendo completamente protegido de qualquer degradação' },
+      { id: 'c', text: 'Desertificação completa, semelhante ao que ocorre em regiões áridas' },
+      { id: 'd', text: 'Congelamento total durante o inverno' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O Pantanal é vulnerável a queimadas intensas (especialmente durante a estação seca, quando a vegetação fica mais suscetível ao fogo, muitas vezes de origem antrópica) e a alterações no regime hídrico causadas por barragens, desmatamento e mudanças no uso do solo nas áreas mais altas da bacia que o alimenta — fatores que ameaçam esse ecossistema de grande biodiversidade.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_fisica_brasil_19',
+    chapter: 'Biogeografia do Brasil II',
+    topicId: 'geo_fisica_brasil',
+    subject: 'Geografia',
+    prompt: 'O Cerrado brasileiro, segundo maior bioma do país em extensão, tem sofrido intensa pressão de degradação nas últimas décadas, principalmente devido à:',
+    options: [
+      { id: 'a', text: 'Expansão da fronteira agrícola, especialmente para o cultivo de soja e a pecuária' },
+      { id: 'b', text: 'Ausência total de qualquer atividade econômica na região' },
+      { id: 'c', text: 'Expansão exclusiva de áreas urbanas de grande porte' },
+      { id: 'd', text: 'Um clima extremamente frio que impede qualquer uso agrícola' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O Cerrado tem sofrido intensa pressão de desmatamento e degradação devido à expansão da fronteira agrícola nas últimas décadas, especialmente para o cultivo de soja e a pecuária — atividades que transformaram significativamente a paisagem original desse bioma, hoje considerado um dos mais ameaçados do Brasil.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_fisica_brasil_20',
+    chapter: 'Biogeografia do Brasil II',
+    topicId: 'geo_fisica_brasil',
+    subject: 'Geografia',
+    prompt: 'A Mata Atlântica, bioma que originalmente cobria grande parte do litoral brasileiro, atualmente preserva apenas uma pequena fração de sua cobertura original, principalmente devido a:',
+    options: [
+      { id: 'a', text: 'Séculos de ocupação humana intensiva, já que essa faixa litorânea concentra historicamente a maior parte da população e das atividades econômicas do país' },
+      { id: 'b', text: 'Um clima extremamente hostil que sempre impediu qualquer ocupação humana' },
+      { id: 'c', text: 'Ausência total de qualquer atividade agrícola na região desde o período colonial' },
+      { id: 'd', text: 'Estar localizada exclusivamente no interior do país, longe do litoral' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A Mata Atlântica foi o bioma mais afetado pela ocupação humana no Brasil, já que a faixa litorânea onde se originalmente estendia concentra, desde o período colonial, a maior parte da população, das cidades e das atividades econômicas do país — resultando na perda de mais de 85% de sua cobertura vegetal original.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_fisica_brasil_21',
+    chapter: 'Hidrogeografia do Brasil',
+    topicId: 'geo_fisica_brasil',
+    subject: 'Geografia',
+    prompt: 'A Bacia Amazônica, maior bacia hidrográfica do mundo, se destaca por:',
+    options: [
+      { id: 'a', text: 'Concentrar o maior volume de água doce em escala mundial, drenando uma área que se estende por vários países da América do Sul' },
+      { id: 'b', text: 'Estar completamente restrita ao território brasileiro, sem qualquer relação com outros países' },
+      { id: 'c', text: 'Ser uma das menores bacias hidrográficas do mundo' },
+      { id: 'd', text: 'Não possuir nenhum rio de porte significativo' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A Bacia Amazônica é a maior bacia hidrográfica do mundo em volume de água e extensão territorial, drenando áreas de diversos países sul-americanos (Brasil, Peru, Colômbia, entre outros) — concentrando uma parcela significativa de toda a água doce superficial disponível no planeta.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_geo_fisica_brasil_22',
+    chapter: 'Hidrogeografia do Brasil',
+    topicId: 'geo_fisica_brasil',
+    subject: 'Geografia',
+    prompt: 'O Rio São Francisco, importante rio que atravessa o semiárido nordestino, é fundamental para a região por:',
+    options: [
+      { id: 'a', text: 'Fornecer água para irrigação, abastecimento humano e geração de energia hidrelétrica em uma região historicamente marcada pela escassez hídrica' },
+      { id: 'b', text: 'Ser completamente seco durante todo o ano' },
+      { id: 'c', text: 'Não ter qualquer utilização econômica ou social' },
+      { id: 'd', text: 'Estar localizado exclusivamente na região amazônica' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O Rio São Francisco, conhecido como "Rio da Integração Nacional", atravessa parte do semiárido nordestino, fornecendo água essencial para irrigação agrícola, abastecimento humano e geração de energia hidrelétrica (como na usina de Sobradinho e Paulo Afonso) em uma região historicamente marcada pela escassez de água — sendo também alvo de projetos de transposição para ampliar seu alcance.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_fisica_brasil_23',
+    chapter: 'Domínios Morfoclimáticos',
+    topicId: 'geo_fisica_brasil',
+    subject: 'Geografia',
+    prompt: 'O conceito de "domínio morfoclimático", desenvolvido pelo geógrafo brasileiro Aziz Ab\'Sáber, busca classificar grandes áreas do território considerando a interação entre:',
+    options: [
+      { id: 'a', text: 'Clima, relevo, vegetação e solos, formando conjuntos de paisagens naturais com características semelhantes' },
+      { id: 'b', text: 'Apenas fatores econômicos, sem qualquer relação com elementos naturais' },
+      { id: 'c', text: 'Exclusivamente a densidade populacional de cada região' },
+      { id: 'd', text: 'Fatores que não têm qualquer relação com o meio físico' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O conceito de domínio morfoclimático, proposto por Aziz Ab\'Sáber, classifica o território brasileiro em grandes conjuntos de paisagens naturais que compartilham características semelhantes de clima, relevo, vegetação e solos — como os domínios Amazônico, dos Cerrados, das Caatingas, dos Mares de Morros, das Araucárias e das Pradarias, cada um com uma combinação característica desses elementos.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_fisica_brasil_24',
+    chapter: 'Domínios Morfoclimáticos',
+    topicId: 'geo_fisica_brasil',
+    subject: 'Geografia',
+    prompt: 'O domínio morfoclimático dos "Mares de Morros", encontrado principalmente na região sudeste do Brasil, se caracteriza por:',
+    options: [
+      { id: 'a', text: 'Um relevo ondulado composto por numerosas colinas arredondadas (morros), associado historicamente à Mata Atlântica' },
+      { id: 'b', text: 'Um relevo completamente plano, sem qualquer variação de altitude' },
+      { id: 'c', text: 'Vegetação exclusivamente de caatinga, adaptada à seca extrema' },
+      { id: 'd', text: 'Ser encontrado apenas na região Norte do país' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O domínio dos "Mares de Morros" caracteriza-se por um relevo ondulado, com numerosas colinas arredondadas (morros) que se sucedem visualmente como "ondas" de um mar, encontrado principalmente nas regiões sudeste e parte do sul do Brasil, historicamente associado à cobertura original de Mata Atlântica — uma das regiões mais densamente povoadas e economicamente importantes do país.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_fisica_brasil_25',
+    chapter: 'Domínios Morfoclimáticos',
+    topicId: 'geo_fisica_brasil',
+    subject: 'Geografia',
+    prompt: 'O domínio morfoclimático das Caatingas, típico do sertão nordestino, apresenta como característica central:',
+    options: [
+      { id: 'a', text: 'Vegetação adaptada à seca (xerófila), com plantas de pequeno porte, muitas vezes caducifólias e com espinhos, em um clima semiárido' },
+      { id: 'b', text: 'Vegetação de florestas tropicais densas e sempre verdes' },
+      { id: 'c', text: 'Um clima extremamente úmido, com chuvas constantes durante todo o ano' },
+      { id: 'd', text: 'Ausência completa de qualquer vegetação nativa' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O domínio das Caatingas se caracteriza por vegetação xerófila (adaptada à seca), composta por plantas geralmente de pequeno porte, muitas caducifólias (perdem as folhas na estiagem) e com espinhos, adaptadas ao clima semiárido do sertão nordestino, marcado por baixa e irregular precipitação.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_geo_fisica_brasil_26',
+    chapter: 'Geologia e Geomorfologia',
+    topicId: 'geo_fisica_brasil',
+    subject: 'Geografia',
+    prompt: 'O Escudo (ou Cráton) Brasileiro, formado por rochas cristalinas extremamente antigas, corresponde a:',
+    options: [
+      { id: 'a', text: 'Áreas de estrutura geológica muito estável e antiga, resistentes a processos orogênicos recentes, formando grande parte do embasamento do território brasileiro' },
+      { id: 'b', text: 'Uma cadeia montanhosa jovem, ainda em formação ativa' },
+      { id: 'c', text: 'Uma bacia sedimentar recente, formada há poucos milhares de anos' },
+      { id: 'd', text: 'Uma região vulcânica ativa no litoral brasileiro' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Os escudos (ou crátons) são áreas de estrutura geológica muito antiga e estável, formadas por rochas cristalinas que já não sofrem processos significativos de dobramento ou soerguimento — no Brasil, o Escudo Brasileiro forma grande parte do embasamento geológico do território, explicando em parte a estabilidade tectônica e a baixa atividade sísmica do país.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_geo_fisica_brasil_27',
+    chapter: 'Hidrogeografia do Brasil',
+    topicId: 'geo_fisica_brasil',
+    subject: 'Geografia',
+    prompt: 'O Aquífero Guarani, um dos maiores reservatórios subterrâneos de água doce do mundo, está localizado principalmente sob o território de quais países, incluindo o Brasil?',
+    options: [
+      { id: 'a', text: 'Brasil, Argentina, Paraguai e Uruguai' },
+      { id: 'b', text: 'Brasil, Peru e Colômbia' },
+      { id: 'c', text: 'Brasil e Estados Unidos, exclusivamente' },
+      { id: 'd', text: 'Apenas o território brasileiro, sem qualquer extensão a outros países' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O Aquífero Guarani se estende sob o território de quatro países sul-americanos — Brasil, Argentina, Paraguai e Uruguai —, sendo um dos maiores reservatórios subterrâneos de água doce do mundo, o que exige cooperação internacional entre esses países para sua gestão sustentável e proteção contra contaminação.',
+    difficulty: 'medium'
+  },
   // Geografia — Geografia Econômica do Brasil
   {
     id: 'q_geo_economica_brasil_1',
@@ -10941,6 +12637,262 @@ export const mockQuestions: Question[] = [
     explanation: 'Commodities são produtos primários (como soja, minério de ferro, petróleo bruto) padronizados e negociados em larga escala em mercados internacionais, com preços definidos globalmente e pouca diferenciação entre produtores — uma característica marcante da pauta de exportações brasileira, com implicações sobre a dependência de preços internacionais e o valor agregado da economia.',
     difficulty: 'medium'
   },
+  {
+    id: 'q_geo_economica_brasil_6',
+    chapter: 'Matriz Energética',
+    topicId: 'geo_economica_brasil',
+    subject: 'Geografia',
+    prompt: 'A matriz energética de um país representa:',
+    options: [
+      { id: 'a', text: 'A composição das diferentes fontes de energia (hidrelétrica, petróleo, eólica, entre outras) que compõem o total de energia consumida ou produzida' },
+      { id: 'b', text: 'Apenas a quantidade total de petróleo produzida pelo país' },
+      { id: 'c', text: 'Exclusivamente as reservas de carvão mineral disponíveis' },
+      { id: 'd', text: 'Um conceito que não tem relação com fontes energéticas' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A matriz energética representa a composição das diferentes fontes de energia (renováveis como hidrelétrica, eólica e solar; e não renováveis como petróleo, gás natural e carvão) que, combinadas, compõem o total de energia consumida ou produzida por um país ou região — a matriz brasileira se destaca por uma participação relativamente alta de fontes renováveis, especialmente hidrelétrica.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_geo_economica_brasil_7',
+    chapter: 'Matriz Energética',
+    topicId: 'geo_economica_brasil',
+    subject: 'Geografia',
+    prompt: 'Comparada à matriz energética mundial (ainda fortemente dependente de combustíveis fósseis), a matriz energética brasileira se destaca por:',
+    options: [
+      { id: 'a', text: 'Ter uma participação relativamente alta de fontes renováveis, especialmente hidrelétrica e, mais recentemente, eólica e solar' },
+      { id: 'b', text: 'Depender exclusivamente do carvão mineral' },
+      { id: 'c', text: 'Não utilizar nenhuma fonte renovável de energia' },
+      { id: 'd', text: 'Ser idêntica à matriz energética da maioria dos países desenvolvidos' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A matriz energética brasileira se destaca internacionalmente por sua participação relativamente elevada de fontes renováveis — especialmente a energia hidrelétrica (historicamente dominante) e, mais recentemente, a expansão significativa da energia eólica e solar — em contraste com a matriz energética mundial, ainda majoritariamente dependente de combustíveis fósseis.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_economica_brasil_8',
+    chapter: 'Matriz Energética',
+    topicId: 'geo_economica_brasil',
+    subject: 'Geografia',
+    prompt: 'A diversificação da matriz energética de um país, incluindo múltiplas fontes de energia, é geralmente considerada vantajosa porque:',
+    options: [
+      { id: 'a', text: 'Reduz a dependência de uma única fonte, aumentando a segurança energética diante de variações climáticas, de preços ou de disponibilidade de recursos' },
+      { id: 'b', text: 'Aumenta sempre o custo total da energia, sem qualquer benefício' },
+      { id: 'c', text: 'Elimina totalmente a necessidade de qualquer planejamento energético' },
+      { id: 'd', text: 'Não tem qualquer relação com a segurança energética de um país' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Uma matriz energética diversificada reduz a dependência de uma única fonte de energia, tornando o sistema mais resiliente a variações climáticas (como períodos de seca que afetam hidrelétricas), flutuações nos preços internacionais de combustíveis, ou problemas de disponibilidade — contribuindo para maior segurança energética do país.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_economica_brasil_9',
+    chapter: 'Combustíveis Fósseis e Biocombustíveis no Brasil',
+    topicId: 'geo_economica_brasil',
+    subject: 'Geografia',
+    prompt: 'A descoberta e exploração do petróleo na camada pré-sal, em águas profundas do litoral brasileiro, representou:',
+    options: [
+      { id: 'a', text: 'Um marco importante para a produção nacional de petróleo, aumentando significativamente as reservas comprovadas do país' },
+      { id: 'b', text: 'O fim completo da produção de petróleo no Brasil' },
+      { id: 'c', text: 'Uma descoberta sem qualquer relevância econômica' },
+      { id: 'd', text: 'A eliminação total da necessidade de importação de petróleo por qualquer país do mundo' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A descoberta do pré-sal (reservatórios de petróleo e gás situados abaixo de uma extensa camada de sal, em águas muito profundas do litoral brasileiro) representou um marco significativo, aumentando substancialmente as reservas comprovadas de petróleo do país e consolidando o Brasil entre os principais produtores mundiais, embora sua exploração exija tecnologia avançada e investimentos elevados.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_economica_brasil_10',
+    chapter: 'Combustíveis Fósseis e Biocombustíveis no Brasil',
+    topicId: 'geo_economica_brasil',
+    subject: 'Geografia',
+    prompt: 'O etanol, biocombustível amplamente produzido no Brasil a partir da cana-de-açúcar, se destaca por:',
+    options: [
+      { id: 'a', text: 'Ser uma alternativa renovável aos combustíveis fósseis, amplamente utilizada em veículos flex no país' },
+      { id: 'b', text: 'Ser um combustível fóssil não renovável' },
+      { id: 'c', text: 'Não ter qualquer uso prático como combustível veicular' },
+      { id: 'd', text: 'Ser produzido exclusivamente a partir do petróleo' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O etanol produzido a partir da cana-de-açúcar é um biocombustível renovável amplamente utilizado no Brasil, especialmente em veículos flex (que podem usar tanto etanol quanto gasolina) — o Brasil é um dos maiores produtores e consumidores mundiais desse biocombustível, com décadas de desenvolvimento tecnológico no setor desde o Proálcool, na década de 1970.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_geo_economica_brasil_11',
+    chapter: 'Combustíveis Fósseis e Biocombustíveis no Brasil',
+    topicId: 'geo_economica_brasil',
+    subject: 'Geografia',
+    prompt: 'O biodiesel, outro biocombustível relevante na matriz energética brasileira, é produzido principalmente a partir de:',
+    options: [
+      { id: 'a', text: 'Óleos vegetais (como soja) ou gorduras animais, através do processo de transesterificação' },
+      { id: 'b', text: 'Petróleo bruto, através de processos de refino convencional' },
+      { id: 'c', text: 'Carvão mineral' },
+      { id: 'd', text: 'Água do mar, através de eletrólise' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O biodiesel brasileiro é produzido principalmente a partir de óleos vegetais (com destaque para a soja) ou gorduras animais, através da reação de transesterificação — sendo misturado ao diesel de petróleo em proporções reguladas pelo governo, contribuindo para diversificar a matriz de combustíveis usados no transporte de cargas e outros veículos a diesel no país.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_economica_brasil_12',
+    chapter: 'Energia Elétrica no Mundo',
+    topicId: 'geo_economica_brasil',
+    subject: 'Geografia',
+    prompt: 'Em escala global, a maior parte da energia elétrica ainda é gerada a partir de:',
+    options: [
+      { id: 'a', text: 'Combustíveis fósseis (especialmente carvão e gás natural), apesar do crescimento das fontes renováveis' },
+      { id: 'b', text: 'Exclusivamente energia solar' },
+      { id: 'c', text: 'Exclusivamente energia hidrelétrica' },
+      { id: 'd', text: 'Fontes que não emitem nenhum tipo de gás de efeito estufa' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Apesar do crescimento acelerado das fontes renováveis (solar, eólica) nas últimas décadas, a matriz elétrica mundial ainda depende fortemente de combustíveis fósseis, especialmente carvão mineral e gás natural, para geração de eletricidade — um dos principais desafios para a transição energética global rumo a fontes mais limpas.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_economica_brasil_13',
+    chapter: 'Energia Elétrica no Mundo',
+    topicId: 'geo_economica_brasil',
+    subject: 'Geografia',
+    prompt: 'Países como a China e a Índia, com forte crescimento econômico e populacional, enfrentam o desafio de expandir sua geração de energia elétrica enquanto tentam:',
+    options: [
+      { id: 'a', text: 'Reduzir gradualmente a dependência de fontes altamente poluentes, como o carvão, diversificando para fontes mais limpas' },
+      { id: 'b', text: 'Aumentar exclusivamente o uso de carvão, sem qualquer diversificação' },
+      { id: 'c', text: 'Eliminar completamente qualquer geração de energia elétrica' },
+      { id: 'd', text: 'Depender apenas de importação de energia de outros países' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Países como China e Índia, historicamente muito dependentes do carvão (fonte abundante localmente, mas altamente poluente) para atender sua crescente demanda energética, têm buscado diversificar sua matriz elétrica com fontes mais limpas (como energia solar, eólica e nuclear), embora o carvão ainda represente uma parcela significativa de sua geração devido ao custo e à infraestrutura já existente.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_economica_brasil_14',
+    chapter: 'Energia Elétrica no Brasil',
+    topicId: 'geo_economica_brasil',
+    subject: 'Geografia',
+    prompt: 'As usinas hidrelétricas brasileiras, historicamente a principal fonte de energia elétrica do país, enfrentam como principal vulnerabilidade:',
+    options: [
+      { id: 'a', text: 'A dependência do regime de chuvas, tornando a geração de energia suscetível a períodos de seca prolongada' },
+      { id: 'b', text: 'Nenhuma vulnerabilidade relevante, sendo uma fonte totalmente estável e previsível' },
+      { id: 'c', text: 'Dependência exclusiva da importação de combustíveis fósseis' },
+      { id: 'd', text: 'A impossibilidade de gerar energia em qualquer condição climática' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A geração hidrelétrica depende diretamente do volume de água disponível nos reservatórios, que por sua vez depende do regime de chuvas — em anos de seca prolongada (como já ocorreu em diversas crises hídricas no Brasil), a geração pode ser significativamente reduzida, exigindo o acionamento de usinas termelétricas (mais caras e poluentes) como complemento.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_economica_brasil_15',
+    chapter: 'Energia Elétrica no Brasil',
+    topicId: 'geo_economica_brasil',
+    subject: 'Geografia',
+    prompt: 'A energia eólica no Brasil tem se expandido significativamente nas últimas décadas, concentrando-se principalmente em:',
+    options: [
+      { id: 'a', text: 'Regiões litorâneas do Nordeste, favorecidas por ventos constantes e de boa intensidade' },
+      { id: 'b', text: 'Exclusivamente na região amazônica' },
+      { id: 'c', text: 'Regiões montanhosas do Sudeste, sem qualquer relação com ventos costeiros' },
+      { id: 'd', text: 'Áreas urbanas densamente povoadas' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A energia eólica brasileira se concentra principalmente nas regiões litorâneas do Nordeste, onde os ventos alísios sopram de forma constante e com boa intensidade ao longo de grande parte do ano — condições que tornaram essa região um dos principais polos de geração eólica do país nas últimas duas décadas.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_economica_brasil_16',
+    chapter: 'Produção Mineral',
+    topicId: 'geo_economica_brasil',
+    subject: 'Geografia',
+    prompt: 'O Brasil é um dos maiores produtores e exportadores mundiais de minério de ferro, com destaque para reservas localizadas principalmente em:',
+    options: [
+      { id: 'a', text: 'Minas Gerais (Quadrilátero Ferrífero) e no estado do Pará (Serra dos Carajás)' },
+      { id: 'b', text: 'Exclusivamente na região Sul do país' },
+      { id: 'c', text: 'Apenas em pequenas jazidas, sem relevância na produção mundial' },
+      { id: 'd', text: 'Somente em áreas urbanas densamente povoadas' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'As principais reservas de minério de ferro do Brasil estão concentradas no Quadrilátero Ferrífero, em Minas Gerais (uma das regiões mineradoras mais tradicionais do país), e na Serra dos Carajás, no Pará (uma das maiores reservas de ferro de alta qualidade do mundo) — fazendo do Brasil um dos líderes mundiais na produção e exportação desse minério.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_economica_brasil_17',
+    chapter: 'Produção Mineral',
+    topicId: 'geo_economica_brasil',
+    subject: 'Geografia',
+    prompt: 'A atividade de mineração no Brasil, apesar de sua importância econômica, tem sido associada a graves problemas ambientais e sociais, como evidenciado por desastres com rompimento de barragens de rejeitos, como os ocorridos em:',
+    options: [
+      { id: 'a', text: 'Mariana e Brumadinho, ambos no estado de Minas Gerais' },
+      { id: 'b', text: 'Apenas na região amazônica, sem qualquer registro em outras regiões' },
+      { id: 'c', text: 'Regiões fora do território brasileiro' },
+      { id: 'd', text: 'Locais sem qualquer atividade de mineração' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Os desastres de rompimento de barragens de rejeitos de mineração em Mariana (2015) e Brumadinho (2019), ambos em Minas Gerais, causaram graves impactos ambientais (contaminação de rios, destruição de ecossistemas) e sociais (mortes, deslocamento de comunidades) — episódios que intensificaram o debate sobre segurança e regulação da atividade mineradora no Brasil.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_economica_brasil_18',
+    chapter: 'O Espaço Industrial Brasileiro I',
+    topicId: 'geo_economica_brasil',
+    subject: 'Geografia',
+    prompt: 'A industrialização brasileira, historicamente concentrada na região Sudeste (especialmente em São Paulo), começou a se espalhar para outras regiões do país a partir da segunda metade do século XX, em um processo conhecido como:',
+    options: [
+      { id: 'a', text: 'Desconcentração industrial' },
+      { id: 'b', text: 'Concentração industrial extrema, sem qualquer dispersão' },
+      { id: 'c', text: 'Desindustrialização completa do país' },
+      { id: 'd', text: 'Um processo que nunca ocorreu na história econômica brasileira' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A desconcentração industrial no Brasil refere-se ao processo, iniciado principalmente a partir das décadas de 1970-1980, de dispersão de atividades industriais anteriormente muito concentradas na região Sudeste (especialmente São Paulo) para outras regiões do país, impulsionado por incentivos fiscais, custos de produção e busca por proximidade de novos mercados e recursos.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_economica_brasil_19',
+    chapter: 'O Espaço Industrial Brasileiro II',
+    topicId: 'geo_economica_brasil',
+    subject: 'Geografia',
+    prompt: 'A Zona Franca de Manaus, importante polo industrial na região Norte do Brasil, foi criada com o objetivo de:',
+    options: [
+      { id: 'a', text: 'Atrair investimentos industriais para a região amazônica através de incentivos fiscais, promovendo desenvolvimento econômico regional' },
+      { id: 'b', text: 'Impedir completamente qualquer atividade econômica na região amazônica' },
+      { id: 'c', text: 'Restringir a Zona Franca exclusivamente a atividades agrícolas' },
+      { id: 'd', text: 'Eliminar qualquer incentivo fiscal na região' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A Zona Franca de Manaus foi criada em 1967 com o objetivo de atrair investimentos industriais para a região amazônica através de incentivos fiscais significativos (redução de impostos), buscando promover o desenvolvimento econômico regional e, ao mesmo tempo, favorecer a ocupação e integração dessa área do território nacional — tornando-se um importante polo de indústrias eletroeletrônicas e de duas rodas, entre outras.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_economica_brasil_20',
+    chapter: 'Energia Elétrica no Mundo',
+    topicId: 'geo_economica_brasil',
+    subject: 'Geografia',
+    prompt: 'A energia nuclear, utilizada para geração de energia elétrica em diversos países (como França, Estados Unidos e China), apresenta como principal vantagem em relação a combustíveis fósseis:',
+    options: [
+      { id: 'a', text: 'Não emitir gases de efeito estufa durante a geração de eletricidade, apesar dos desafios relacionados ao armazenamento de resíduos radioativos e à segurança das usinas' },
+      { id: 'b', text: 'Ser completamente livre de qualquer risco ou desafio técnico' },
+      { id: 'c', text: 'Não gerar nenhum tipo de resíduo' },
+      { id: 'd', text: 'Ser a fonte de energia mais barata de se construir, sem exceção' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A energia nuclear não emite gases de efeito estufa durante a operação das usinas (diferente de termelétricas a carvão ou gás), sendo considerada por muitos uma alternativa relevante na transição energética — porém apresenta desafios significativos relacionados ao armazenamento seguro de resíduos radioativos de longa duração e a riscos associados a acidentes nas usinas.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_economica_brasil_21',
+    chapter: 'Produção Mineral',
+    topicId: 'geo_economica_brasil',
+    subject: 'Geografia',
+    prompt: 'Além do minério de ferro, o Brasil também é um importante produtor mundial de outros minerais, como o nióbio, do qual o país detém a maior parte das reservas mundiais conhecidas. O nióbio é um metal estratégico usado principalmente em:',
+    options: [
+      { id: 'a', text: 'Ligas metálicas de alta resistência, utilizadas em setores como a indústria aeroespacial, automotiva e de construção' },
+      { id: 'b', text: 'Produção exclusiva de joias e bijuterias' },
+      { id: 'c', text: 'Fabricação de alimentos processados' },
+      { id: 'd', text: 'Nenhuma aplicação industrial relevante' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O nióbio é um metal estratégico usado para produzir ligas metálicas de alta resistência e leveza, empregadas em setores como a indústria aeroespacial, automotiva e de construção civil — o Brasil detém a maior parte das reservas mundiais conhecidas desse mineral, concentradas principalmente em Minas Gerais e Goiás, o que confere ao país uma posição estratégica nesse mercado global.',
+    difficulty: 'medium'
+  },
   // Geografia — Geografia da População e Urbana do Brasil
   {
     id: 'q_geo_populacao_urbana_brasil_1',
@@ -11020,6 +12972,214 @@ export const mockQuestions: Question[] = [
     ],
     correctOptionId: 'a',
     explanation: 'As migrações internas brasileiras, como o fluxo histórico de nordestinos rumo ao Sudeste industrializado, foram impulsionadas pela combinação de fatores de repulsão na região de origem (secas recorrentes, concentração fundiária, falta de oportunidades econômicas) e fatores de atração no destino (oferta de empregos industriais e urbanos, melhores salários) — um padrão clássico de análise das migrações internas.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_populacao_urbana_brasil_6',
+    chapter: 'Dinâmica Demográfica',
+    topicId: 'geo_populacao_urbana_brasil',
+    subject: 'Geografia',
+    prompt: 'A transição demográfica brasileira, processo de mudança nos padrões de natalidade e mortalidade ao longo das últimas décadas, se caracteriza atualmente por:',
+    options: [
+      { id: 'a', text: 'Queda significativa nas taxas de natalidade e mortalidade, resultando em um crescimento populacional mais lento e um processo de envelhecimento da população' },
+      { id: 'b', text: 'Taxas de natalidade cada vez mais altas, sem qualquer redução' },
+      { id: 'c', text: 'Uma população extremamente jovem, sem qualquer sinal de envelhecimento' },
+      { id: 'd', text: 'Crescimento populacional acelerado e constante, sem qualquer desaceleração' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O Brasil passou por uma transição demográfica acelerada nas últimas décadas: as taxas de natalidade caíram significativamente (influenciadas por urbanização, maior acesso a métodos contraceptivos e mudanças socioculturais), assim como as taxas de mortalidade (devido a avanços na saúde) — resultando em um crescimento populacional mais lento e um processo crescente de envelhecimento da população brasileira.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_populacao_urbana_brasil_7',
+    chapter: 'Estrutura Étnica e Fluxos Migratórios',
+    topicId: 'geo_populacao_urbana_brasil',
+    subject: 'Geografia',
+    prompt: 'A formação étnica da população brasileira resulta historicamente da combinação de:',
+    options: [
+      { id: 'a', text: 'Povos indígenas originários, colonizadores europeus, africanos trazidos forçadamente através do tráfico escravista, e ondas posteriores de imigração de diversas partes do mundo' },
+      { id: 'b', text: 'Uma única etnia predominante, sem qualquer mistura ao longo da história' },
+      { id: 'c', text: 'Apenas colonizadores europeus, sem qualquer outra influência étnica' },
+      { id: 'd', text: 'Migrações exclusivamente do século XXI, sem qualquer formação histórica anterior' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A formação étnica brasileira resulta de um processo histórico complexo: povos indígenas originários, colonizadores portugueses e outros europeus, africanos trazidos forçadamente através do trágico tráfico transatlântico de escravizados, e ondas posteriores de imigração (italiana, alemã, japonesa, entre outras, principalmente entre os séculos XIX e XX) — moldando a diversidade étnica e cultural característica do país.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_geo_populacao_urbana_brasil_8',
+    chapter: 'Estrutura Étnica e Fluxos Migratórios',
+    topicId: 'geo_populacao_urbana_brasil',
+    subject: 'Geografia',
+    prompt: 'A imigração japonesa para o Brasil, iniciada oficialmente em 1908, concentrou-se inicialmente principalmente em qual atividade econômica?',
+    options: [
+      { id: 'a', text: 'Trabalho nas lavouras de café, especialmente no estado de São Paulo' },
+      { id: 'b', text: 'Extração mineral na região amazônica' },
+      { id: 'c', text: 'Pesca industrial no litoral nordestino' },
+      { id: 'd', text: 'Indústria pesada no Rio de Janeiro' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A imigração japonesa para o Brasil, iniciada oficialmente em 1908 com a chegada do navio Kasato Maru, concentrou-se inicialmente no trabalho nas lavouras de café em São Paulo, suprindo a demanda por mão de obra após o fim da escravidão — os descendentes dessa imigração formam hoje a maior comunidade nikkei (de origem japonesa) fora do Japão.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_populacao_urbana_brasil_9',
+    chapter: 'Estrutura Ativa da População',
+    topicId: 'geo_populacao_urbana_brasil',
+    subject: 'Geografia',
+    prompt: 'A População Economicamente Ativa (PEA) de um país é composta por:',
+    options: [
+      { id: 'a', text: 'Pessoas em idade de trabalhar que estão empregadas ou procurando ativamente emprego' },
+      { id: 'b', text: 'Toda a população do país, incluindo crianças e idosos aposentados' },
+      { id: 'c', text: 'Apenas pessoas empregadas no setor industrial' },
+      { id: 'd', text: 'Exclusivamente pessoas com ensino superior completo' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A População Economicamente Ativa (PEA) inclui todas as pessoas em idade de trabalhar que estão empregadas ou que estão desempregadas, mas procurando ativamente por trabalho — excluindo, portanto, crianças, muitos aposentados, estudantes em tempo integral e pessoas que não desejam ou não podem trabalhar.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_geo_populacao_urbana_brasil_10',
+    chapter: 'Estrutura Ativa da População',
+    topicId: 'geo_populacao_urbana_brasil',
+    subject: 'Geografia',
+    prompt: 'A informalidade no mercado de trabalho brasileiro, fenômeno persistente ao longo das últimas décadas, se refere a:',
+    options: [
+      { id: 'a', text: 'Trabalhadores que exercem atividades sem carteira assinada ou vínculo empregatício formal, geralmente sem acesso a direitos trabalhistas e previdenciários' },
+      { id: 'b', text: 'Trabalhadores que possuem exclusivamente empregos formais registrados' },
+      { id: 'c', text: 'Um fenômeno inexistente no Brasil contemporâneo' },
+      { id: 'd', text: 'Apenas trabalhadores do setor público' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A informalidade no mercado de trabalho brasileiro se refere a trabalhadores que atuam sem carteira assinada ou vínculo empregatício formal (como muitos autônomos, ambulantes e trabalhadores por conta própria não registrados), geralmente sem acesso a direitos trabalhistas (férias, décimo terceiro) e previdenciários (aposentadoria) — um desafio estrutural persistente da economia brasileira.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_populacao_urbana_brasil_11',
+    chapter: 'Estrutura Ativa da População',
+    topicId: 'geo_populacao_urbana_brasil',
+    subject: 'Geografia',
+    prompt: 'A terceirização do setor de serviços na economia brasileira, com crescente participação desse setor no PIB nacional, reflete uma tendência observada também em outros países, conhecida como:',
+    options: [
+      { id: 'a', text: 'Terciarização da economia, em que o setor de serviços ganha peso relativo em relação à indústria e à agropecuária' },
+      { id: 'b', text: 'Uma redução total e completa do setor de serviços' },
+      { id: 'c', text: 'O desaparecimento total do setor industrial' },
+      { id: 'd', text: 'Um fenômeno restrito exclusivamente a países em desenvolvimento' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A terciarização da economia descreve o crescimento relativo do setor de serviços (comércio, finanças, tecnologia da informação, educação, saúde, entre outros) em relação aos setores primário (agropecuária) e secundário (indústria) — uma tendência observada não apenas no Brasil, mas em muitas economias ao redor do mundo à medida que se desenvolvem.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_populacao_urbana_brasil_12',
+    chapter: 'O Espaço Urbano I',
+    topicId: 'geo_populacao_urbana_brasil',
+    subject: 'Geografia',
+    prompt: 'O processo de "conurbação", observado em diversas regiões metropolitanas brasileiras, se refere a:',
+    options: [
+      { id: 'a', text: 'O crescimento urbano que leva à fusão física entre duas ou mais cidades vizinhas, formando uma mancha urbana contínua' },
+      { id: 'b', text: 'A separação total e definitiva entre cidades vizinhas' },
+      { id: 'c', text: 'Um fenômeno restrito exclusivamente a áreas rurais' },
+      { id: 'd', text: 'A redução do tamanho populacional de uma cidade' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A conurbação ocorre quando o crescimento urbano de duas ou mais cidades vizinhas leva à sua fusão física, formando uma mancha urbana contínua, sem uma separação nítida entre os limites administrativos originais das cidades — um fenômeno comum em regiões metropolitanas brasileiras, como a Grande São Paulo e a Baixada Santista.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_populacao_urbana_brasil_13',
+    chapter: 'As Redes de Transportes',
+    topicId: 'geo_populacao_urbana_brasil',
+    subject: 'Geografia',
+    prompt: 'A matriz de transportes brasileira, historicamente dominada pelo modal rodoviário, apresenta como principal desvantagem em relação a outros modais (como ferroviário e hidroviário) para o transporte de cargas de longa distância:',
+    options: [
+      { id: 'a', text: 'Custos operacionais geralmente mais altos por tonelada transportada em longas distâncias, além de maior emissão de poluentes por unidade de carga' },
+      { id: 'b', text: 'Ser sempre o modal mais barato para qualquer tipo de transporte, sem exceção' },
+      { id: 'c', text: 'Não ter nenhuma relação com o custo do transporte de mercadorias' },
+      { id: 'd', text: 'Ser o único modal de transporte utilizado no Brasil' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O modal rodoviário, predominante na matriz de transportes brasileira, tende a apresentar custos operacionais mais elevados por tonelada transportada em longas distâncias (comparado a ferrovias e hidrovias) e maior emissão de poluentes por unidade de carga — uma desvantagem relevante considerando as grandes distâncias do território brasileiro entre regiões produtoras e portos de exportação.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_populacao_urbana_brasil_14',
+    chapter: 'As Redes de Transportes',
+    topicId: 'geo_populacao_urbana_brasil',
+    subject: 'Geografia',
+    prompt: 'O transporte hidroviário, ainda pouco explorado no Brasil em relação ao seu potencial, apresenta como principal vantagem para o transporte de cargas pesadas e de baixo valor agregado (como grãos e minérios):',
+    options: [
+      { id: 'a', text: 'Menor custo por tonelada transportada em grandes volumes e longas distâncias, além de menor impacto ambiental relativo' },
+      { id: 'b', text: 'Ser sempre mais rápido que o transporte aéreo' },
+      { id: 'c', text: 'Não exigir nenhum tipo de infraestrutura portuária' },
+      { id: 'd', text: 'Ser adequado exclusivamente para cargas de altíssimo valor agregado' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O transporte hidroviário, apesar de mais lento que o rodoviário, apresenta menor custo por tonelada transportada quando se trata de grandes volumes de cargas de baixo valor agregado (como grãos e minérios) em longas distâncias, além de menor impacto ambiental relativo por unidade de carga transportada — características que tornam esse modal estrategicamente importante, embora ainda subutilizado no Brasil devido à falta de infraestrutura adequada em muitos rios navegáveis.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_populacao_urbana_brasil_15',
+    chapter: 'As Redes de Transportes',
+    topicId: 'geo_populacao_urbana_brasil',
+    subject: 'Geografia',
+    prompt: 'A malha ferroviária brasileira, atualmente concentrada principalmente no transporte de cargas (especialmente minérios e grãos), se distingue de países com ferrovias mais desenvolvidas por:',
+    options: [
+      { id: 'a', text: 'Ter uma extensão relativamente menor em relação ao tamanho do território, além de baixa participação no transporte de passageiros de longa distância' },
+      { id: 'b', text: 'Ser a maior malha ferroviária do mundo em extensão total' },
+      { id: 'c', text: 'Ser utilizada exclusivamente para transporte de passageiros' },
+      { id: 'd', text: 'Não transportar nenhum tipo de carga mineral' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A malha ferroviária brasileira, apesar de relevante para o transporte de cargas específicas (como minério de ferro e, em menor escala, grãos), possui uma extensão relativamente pequena em relação ao tamanho do território nacional e apresenta baixa participação no transporte de passageiros de longa distância, diferente de países como os da Europa ou o Japão, onde ferrovias de passageiros são muito mais desenvolvidas.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_populacao_urbana_brasil_16',
+    chapter: 'Os Fluxos do Comércio Externo',
+    topicId: 'geo_populacao_urbana_brasil',
+    subject: 'Geografia',
+    prompt: 'A balança comercial de um país, indicador central para entender seus fluxos de comércio externo, é calculada pela diferença entre:',
+    options: [
+      { id: 'a', text: 'O valor total das exportações e o valor total das importações' },
+      { id: 'b', text: 'A população total e a área territorial do país' },
+      { id: 'c', text: 'O PIB e a taxa de câmbio' },
+      { id: 'd', text: 'A taxa de natalidade e a taxa de mortalidade' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A balança comercial é calculada pela diferença entre o valor total das exportações e o valor total das importações de um país em um determinado período — um saldo positivo (superávit) indica que o país exportou mais do que importou, enquanto um saldo negativo (déficit) indica o contrário.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_geo_populacao_urbana_brasil_17',
+    chapter: 'Os Fluxos do Comércio Externo',
+    topicId: 'geo_populacao_urbana_brasil',
+    subject: 'Geografia',
+    prompt: 'A pauta de exportações brasileira, historicamente concentrada em produtos primários (commodities agrícolas e minerais), reflete um padrão de inserção do país no comércio internacional conhecido como:',
+    options: [
+      { id: 'a', text: 'Primário-exportador, com baixa participação relativa de produtos manufaturados de alto valor agregado' },
+      { id: 'b', text: 'Exclusivamente de produtos tecnológicos de ponta' },
+      { id: 'c', text: 'Um padrão idêntico ao de todos os países desenvolvidos' },
+      { id: 'd', text: 'Baseado inteiramente em serviços financeiros' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A pauta de exportações brasileira mantém, historicamente, forte concentração em produtos primários (como soja, minério de ferro, petróleo bruto e carne), um padrão frequentemente chamado de "primário-exportador" — embora o país também exporte produtos manufaturados, a participação relativa desses produtos de maior valor agregado é menor comparada a economias mais industrializadas.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_geo_populacao_urbana_brasil_18',
+    chapter: 'Os Fluxos do Comércio Externo',
+    topicId: 'geo_populacao_urbana_brasil',
+    subject: 'Geografia',
+    prompt: 'A China se tornou, nas últimas décadas, um dos principais parceiros comerciais do Brasil, sendo hoje um dos maiores destinos das exportações brasileiras. Essa relação comercial é caracterizada principalmente por:',
+    options: [
+      { id: 'a', text: 'Exportação brasileira de commodities (como soja e minério de ferro) e importação de produtos manufaturados chineses' },
+      { id: 'b', text: 'Ausência total de qualquer relação comercial entre os dois países' },
+      { id: 'c', text: 'Exportação exclusiva de produtos tecnológicos brasileiros para a China' },
+      { id: 'd', text: 'Um comércio restrito apenas a serviços financeiros' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A relação comercial Brasil-China é caracterizada principalmente pela exportação brasileira de commodities (soja, minério de ferro, petróleo, carne) para atender à grande demanda chinesa por matérias-primas, e pela importação de produtos manufaturados chineses (eletrônicos, maquinário, bens de consumo) pelo Brasil — um padrão de comércio que reflete as diferentes estruturas produtivas dos dois países.',
     difficulty: 'medium'
   },
   // História — Idade Antiga
