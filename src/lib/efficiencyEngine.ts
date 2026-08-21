@@ -1,6 +1,9 @@
 import { TopicMastery, Topic, UserProfile, StudyAction, StudentGoals, RecommendationReason } from '../types';
 import { daysUntil, examsForBoard } from '../data/examCalendar';
 import { topicIncidenceWeight } from './topicIncidence';
+import { currentStudyPhase } from './studyPhase';
+import { urgencyOf } from './reviewUrgency';
+import { interleaveBySubject } from './interleaving';
 
 // Dentro dos últimos 90 dias antes de uma prova, o plano é puxado para cima
 // em duas camadas: um boost de urgência geral (essa prova está chegando)
@@ -87,11 +90,12 @@ export class EfficiencyEngine {
     topics: Topic[],
     profile: UserProfile,
     availableMinutesToday: number,
-    goals: StudentGoals
+    goals: StudentGoals,
+    now: Date = new Date()
   ): StudyAction[] {
 
     const actions: StudyAction[] = [];
-    const boardSignals = computeBoardSignals(goals);
+    const boardSignals = computeBoardSignals(goals, now);
     const masteryByTopicId = new Map(masteryData.map((m) => [m.topicId, m]));
 
     masteryData.forEach(mastery => {
@@ -101,9 +105,10 @@ export class EfficiencyEngine {
       // 1. Learning Needed (Inverse to mastery level)
       const learningNeeded = 100 - mastery.level;
 
-      // 2. Review Necessity (Based on time since last review and uncertainty)
-      const daysSinceReview = (new Date().getTime() - new Date(mastery.lastReviewed).getTime()) / (1000 * 3600 * 24);
-      const reviewNecessity = Math.min((daysSinceReview * 5) + (mastery.uncertainty * 50), 100);
+      // 2. Review Necessity — mesmo sinal de urgência baseado em repetição
+      // espaçada usado em Revisões Adaptativas (reviewUrgency.ts), pra que as
+      // duas telas concordem sobre o que está "vencido" pra revisão.
+      const reviewNecessity = urgencyOf(mastery, now);
 
       // 3. Error Signal Urgency
       const errorSignal = mastery.errorSignals * 20; // 5 errors = 100 max signal
@@ -155,7 +160,7 @@ export class EfficiencyEngine {
       if (examFocus.hasProximityReason) reasons.push('proximidade_prova');
 
       actions.push({
-        id: `action_${topic.id}_${new Date().toISOString().slice(0, 10)}`,
+        id: `action_${topic.id}_${now.toISOString().slice(0, 10)}`,
         type,
         topicId: topic.id,
         topicName: topic.name,
@@ -169,20 +174,57 @@ export class EfficiencyEngine {
     // Sort by highest priority first
     actions.sort((a, b) => b.priorityScore - a.priorityScore);
 
-    // Fit within available time limit
-    let totalTime = 0;
+    // A fase atual (quão perto está a prova mais próxima entre as bancas
+    // ativas) define quanto do tempo disponível deve ir para revisão/erro
+    // versus conteúdo novo/prática. Preenchemos os dois "baldes"
+    // separadamente, respeitando a ordem de prioridade dentro de cada um, e
+    // só depois deixamos o tempo que sobrou de um balde vazar pro outro —
+    // assim a reta final realmente empurra mais revisão pro plano de hoje,
+    // sem desperdiçar minutos quando não há itens suficientes de um tipo.
+    const phase = currentStudyPhase(goals, now);
+    const reviewTypes = new Set<StudyAction['type']>(['review', 'error_analysis']);
+    const reviewBudget = Math.round(availableMinutesToday * phase.reviewRatio);
+    const contentBudget = availableMinutesToday - reviewBudget;
+
+    let reviewTime = 0;
+    let contentTime = 0;
     const finalPlan: StudyAction[] = [];
+    const deferred: StudyAction[] = [];
 
     for (const action of actions) {
-      if (totalTime + action.estimatedMinutes <= availableMinutesToday) {
+      const isReview = reviewTypes.has(action.type);
+      const bucketTime = isReview ? reviewTime : contentTime;
+      const bucketBudget = isReview ? reviewBudget : contentBudget;
+
+      if (bucketTime + action.estimatedMinutes <= bucketBudget) {
         // Só quem entrou no plano de hoje ganha esse motivo — ele é sobre
         // ter cabido no tempo disponível, não sobre prioridade.
+        action.reasons.push('tempo_disponivel');
+        if (phase.id !== 'consolidacao' && isReview) action.reasons.push('fase_revisao_intensificada');
+        finalPlan.push(action);
+        if (isReview) reviewTime += action.estimatedMinutes;
+        else contentTime += action.estimatedMinutes;
+      } else {
+        deferred.push(action);
+      }
+    }
+
+    // Segunda passada: aproveita o tempo que sobrou de um balde no outro,
+    // pra não desperdiçar minutos disponíveis quando faltam itens de um tipo.
+    let totalTime = reviewTime + contentTime;
+    for (const action of deferred) {
+      if (totalTime + action.estimatedMinutes <= availableMinutesToday) {
         action.reasons.push('tempo_disponivel');
         finalPlan.push(action);
         totalTime += action.estimatedMinutes;
       }
     }
 
-    return finalPlan;
+    finalPlan.sort((a, b) => b.priorityScore - a.priorityScore);
+    // Prática intercalada: evita enfileirar vários itens seguidos da mesma
+    // matéria só porque ela dominou o ranking de prioridade (ver
+    // interleaving.ts) — melhora a discriminação entre conceitos/estratégias
+    // na hora de aplicar o que foi estudado.
+    return interleaveBySubject(finalPlan);
   }
 }

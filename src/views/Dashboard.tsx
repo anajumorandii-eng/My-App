@@ -21,6 +21,7 @@ const REASON_LABELS: Record<RecommendationReason, string> = {
   incidencia_banca_prioritaria: 'Cai bastante na banca que você priorizou',
   proximidade_prova: 'Uma prova relevante está se aproximando',
   tempo_disponivel: 'Coube no seu tempo disponível hoje',
+  fase_revisao_intensificada: 'Fase atual do seu plano prioriza revisão (prova se aproximando)',
 };
 
 const DISAGREE_OPTIONS: { value: DisagreeReason; label: string }[] = [

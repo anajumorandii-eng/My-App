@@ -1,43 +1,51 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { pendingReviewCount, urgencyOf } from './reviewUrgency';
+import { urgencyOf, pendingReviewCount } from './reviewUrgency';
 import { TopicMastery } from '../types';
 
 function mastery(overrides: Partial<TopicMastery> = {}): TopicMastery {
   return {
     topicId: 't1',
     level: 50,
-    uncertainty: 0.1,
+    uncertainty: 0.3,
     errorSignals: 0,
-    lastReviewed: new Date().toISOString(),
+    lastReviewed: new Date('2026-08-01T00:00:00').toISOString(),
     ...overrides,
   };
 }
 
-test('urgência cresce com dias desde a revisão, incerteza e sinais de erro', () => {
-  const fresh = urgencyOf(mastery());
-  const stale = urgencyOf(mastery({ lastReviewed: new Date(Date.now() - 10 * 86400000).toISOString() }));
-  const uncertain = urgencyOf(mastery({ uncertainty: 0.9 }));
-  const errorProne = urgencyOf(mastery({ errorSignals: 5 }));
-
-  assert.ok(stale > fresh);
-  assert.ok(uncertain > fresh);
-  assert.ok(errorProne > fresh);
+test('urgencyOf é baixa quando o vencimento ainda está longe', () => {
+  const m = mastery({ intervalDays: 20 }); // vence em 2026-08-21
+  const urgency = urgencyOf(m, new Date('2026-08-05T00:00:00')); // 16 dias antes de vencer
+  assert.ok(urgency < 10);
 });
 
-test('urgência satura em 100', () => {
-  const maxedOut = urgencyOf(mastery({
-    lastReviewed: new Date(Date.now() - 365 * 86400000).toISOString(),
-    uncertainty: 1,
-    errorSignals: 20,
-  }));
-  assert.equal(maxedOut, 100);
+test('urgencyOf sobe conforme o vencimento se aproxima e satura perto de 100 quando bem atrasado', () => {
+  const m = mastery({ intervalDays: 6 }); // vence em 2026-08-07
+  const noDia = urgencyOf(m, new Date('2026-08-07T00:00:00'));
+  const atrasado = urgencyOf(m, new Date('2026-08-20T00:00:00')); // 13 dias atrasado
+  assert.ok(noDia >= 55 && noDia <= 65);
+  assert.equal(atrasado, 100);
 });
 
-test('conta apenas tópicos com urgência acima de 50', () => {
-  const items = [
-    mastery({ topicId: 'urgent', lastReviewed: new Date(Date.now() - 15 * 86400000).toISOString() }),
-    mastery({ topicId: 'fine', lastReviewed: new Date().toISOString(), uncertainty: 0 }),
+test('urgencyOf nunca ultrapassa 100 nem fica negativa', () => {
+  const m = mastery({ intervalDays: 1, errorSignals: 10 });
+  const urgency = urgencyOf(m, new Date('2027-01-01T00:00:00'));
+  assert.ok(urgency <= 100 && urgency >= 0);
+});
+
+test('urgencyOf: sinais de erro empurram a urgência pra cima mesmo antes do vencimento', () => {
+  const semErro = mastery({ intervalDays: 20, errorSignals: 0 });
+  const comErro = mastery({ intervalDays: 20, errorSignals: 5 });
+  const now = new Date('2026-08-05T00:00:00');
+  assert.ok(urgencyOf(comErro, now) > urgencyOf(semErro, now));
+});
+
+test('pendingReviewCount conta só tópicos com urgência acima de 50', () => {
+  const now = new Date('2026-08-20T00:00:00');
+  const masteryState = [
+    mastery({ topicId: 'vencido', intervalDays: 1 }), // venceu há muito
+    mastery({ topicId: 'em_dia', intervalDays: 60 }), // longe do vencimento
   ];
-  assert.equal(pendingReviewCount(items), 1);
+  assert.equal(pendingReviewCount(masteryState, now), 1);
 });

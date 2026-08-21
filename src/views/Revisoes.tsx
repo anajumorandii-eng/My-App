@@ -5,7 +5,16 @@ import { useUserMastery } from '../hooks/useUserMastery';
 import { requestAiText } from '../lib/aiClient';
 import { AiText } from '../components/AiText';
 import { urgencyOf } from '../lib/reviewUrgency';
-import { Repeat, CheckCircle2, AlertTriangle, CloudOff, Sparkles } from 'lucide-react';
+import { applyReviewOutcome, qualityFromSelfRating } from '../lib/spacedRepetition';
+import { Repeat, CheckCircle2, AlertTriangle, CloudOff, Sparkles, Frown, Meh, Smile } from 'lucide-react';
+
+type SelfRating = 'fraco' | 'mediano' | 'forte';
+
+const RATING_OPTIONS: { value: SelfRating; label: string; icon: typeof Frown; classes: string }[] = [
+  { value: 'fraco', label: 'Esqueci', icon: Frown, classes: 'bg-rose-50 dark:bg-rose-900/30 text-rose-700 dark:text-rose-300 hover:bg-rose-100 dark:hover:bg-rose-900/50' },
+  { value: 'mediano', label: 'Foi difícil', icon: Meh, classes: 'bg-amber-50 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 hover:bg-amber-100 dark:hover:bg-amber-900/50' },
+  { value: 'forte', label: 'Lembrei fácil', icon: Smile, classes: 'bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 hover:bg-emerald-100 dark:hover:bg-emerald-900/50' },
+];
 
 const SUBJECT_COLORS: Record<string, string> = {
   Biologia: 'text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-900/20',
@@ -35,13 +44,13 @@ export default function Revisoes() {
 
   const pendingToday = queue.filter((entry) => entry.urgency > 50).length;
 
-  const markReviewed = (topicId: string) => {
+  // Repetição espaçada de verdade (SM-2 — ver spacedRepetition.ts): a
+  // autoavaliação da lembrança decide o próximo intervalo, não um simples
+  // "revisado" genérico — lembrar fácil adia bastante a próxima revisão,
+  // lembrar com dificuldade adia pouco, e esquecer reseta o ciclo.
+  const rateReview = (topicId: string, rating: SelfRating) => {
     updateMastery((prev: TopicMastery[]) =>
-      prev.map((m) =>
-        m.topicId === topicId
-          ? { ...m, lastReviewed: new Date().toISOString(), uncertainty: Math.max(m.uncertainty - 0.2, 0.05) }
-          : m
-      )
+      prev.map((m) => (m.topicId === topicId ? { ...m, ...applyReviewOutcome(m, qualityFromSelfRating(rating)) } : m))
     );
   };
 
@@ -66,7 +75,7 @@ export default function Revisoes() {
           Revisões Adaptativas
         </h1>
         <p className="text-zinc-500 dark:text-zinc-400">
-          Fila ordenada por urgência: tempo desde a última revisão, incerteza e sinais de erro recentes.
+          Fila ordenada por repetição espaçada: cada tópico tem sua própria data de revisão, que se ajusta pela sua resposta — lembrar fácil adia bastante a próxima, esquecer traz de volta pra amanhã.
         </p>
         {!isPersisted && (
           <p className="flex items-center text-xs text-zinc-400 mt-2">
@@ -120,13 +129,22 @@ export default function Revisoes() {
                     </div>
                     <span className="text-xs text-zinc-500 w-8 text-right">{Math.round(urgency)}%</span>
                   </div>
-                  <button
-                    onClick={() => markReviewed(mastery.topicId)}
-                    className="flex items-center px-3 py-2 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 rounded-lg text-sm font-medium hover:bg-indigo-100 dark:hover:bg-indigo-900/50 transition-colors"
-                  >
-                    <CheckCircle2 className="w-4 h-4 mr-1.5" />
-                    Revisado
-                  </button>
+                </div>
+              </div>
+
+              <div className="mt-4 pt-4 border-t border-zinc-100 dark:border-zinc-800">
+                <p className="text-xs text-zinc-500 mb-2">Sem olhar o material: você lembrou desse tópico agora?</p>
+                <div className="flex gap-2">
+                  {RATING_OPTIONS.map(({ value, label, icon: Icon, classes }) => (
+                    <button
+                      key={value}
+                      onClick={() => rateReview(mastery.topicId, value)}
+                      className={`flex-1 flex items-center justify-center px-3 py-2 rounded-lg text-sm font-medium transition-colors ${classes}`}
+                    >
+                      <Icon className="w-4 h-4 mr-1.5" />
+                      {label}
+                    </button>
+                  ))}
                 </div>
               </div>
 
