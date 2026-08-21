@@ -13263,6 +13263,38 @@ export const mockQuestions: Question[] = [
     explanation: 'A queda do Império Romano do Ocidente, em 476 d.C., é tradicionalmente usada pela historiografia ocidental como marco do fim da Idade Antiga e início da Idade Média — um período marcado pela fragmentação política em reinos menores, muitas vezes associada às invasões de povos germânicos sobre o território romano.',
     difficulty: 'medium'
   },
+  {
+    id: 'q_his_idade_antiga_6',
+    chapter: 'Introdução à História e Primeiras Civilizações',
+    topicId: 'his_idade_antiga',
+    subject: 'História',
+    prompt: 'A invenção da escrita, um dos marcos que tradicionalmente delimita o início da "História" (em oposição à "Pré-História"), é atribuída primeiramente a qual civilização da Mesopotâmia?',
+    options: [
+      { id: 'a', text: 'Os sumérios, com a escrita cuneiforme' },
+      { id: 'b', text: 'Os egípcios, com os hieróglifos' },
+      { id: 'c', text: 'Os fenícios, com o alfabeto' },
+      { id: 'd', text: 'Os romanos, com o latim' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A escrita cuneiforme, desenvolvida pelos sumérios na Mesopotâmia (região entre os rios Tigre e Eufrates) por volta de 3200 a.C., é considerada uma das primeiras formas de escrita conhecidas — sua invenção é tradicionalmente usada como marco convencional da transição da Pré-História para a História, já que permitiu o registro documental de eventos.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_his_idade_antiga_7',
+    chapter: 'Antiguidade Clássica: o Mundo Grego',
+    topicId: 'his_idade_antiga',
+    subject: 'História',
+    prompt: 'A democracia ateniense, frequentemente citada como uma das origens do conceito moderno de democracia, se diferenciava significativamente das democracias contemporâneas porque:',
+    options: [
+      { id: 'a', text: 'A participação política era restrita aos cidadãos do sexo masculino, livres e nascidos em Atenas, excluindo mulheres, estrangeiros e escravizados' },
+      { id: 'b', text: 'Todos os habitantes da cidade, sem qualquer exceção, tinham direito ao voto' },
+      { id: 'c', text: 'Não existia nenhuma forma de assembleia ou participação popular' },
+      { id: 'd', text: 'Era idêntica em todos os aspectos às democracias representativas atuais' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A democracia ateniense, embora inovadora para sua época ao permitir a participação direta dos cidadãos nas decisões políticas (através da Assembleia), restringia a cidadania plena a homens livres nascidos em Atenas — excluindo mulheres, estrangeiros (mesmo residentes de longa data) e a numerosa população escravizada, que não tinham qualquer direito político.',
+    difficulty: 'medium'
+  },
   // História — Idade Média
   {
     id: 'q_his_idade_media_1',
@@ -13342,6 +13374,54 @@ export const mockQuestions: Question[] = [
     ],
     correctOptionId: 'b',
     explanation: 'A burguesia medieval surgiu nas cidades (burgos) em ressurgimento, formada principalmente por comerciantes e artesãos cuja riqueza vinha da atividade comercial e manufatureira urbana — uma fonte de riqueza diferente da posse de terras, que sustentava o poder da nobreza feudal, e que gradualmente ganharia importância crescente na sociedade europeia.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_idade_media_6',
+    chapter: 'A Primeira Globalização',
+    topicId: 'his_idade_media',
+    subject: 'História',
+    prompt: 'A Rota da Seda, extensa rede de rotas comerciais que conectava a Ásia à Europa durante grande parte da Idade Média, é frequentemente citada como um exemplo de:',
+    options: [
+      { id: 'a', text: 'Uma "primeira globalização", ao conectar diferentes regiões do mundo através do comércio de mercadorias, tecnologias e ideias' },
+      { id: 'b', text: 'Um isolamento completo entre a Ásia e a Europa durante toda a Idade Média' },
+      { id: 'c', text: 'Uma rota exclusivamente marítima, sem qualquer trecho terrestre' },
+      { id: 'd', text: 'Um fenômeno restrito apenas ao comércio de um único produto' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A Rota da Seda conectava a China a regiões da Ásia Central, Oriente Médio e Europa através de uma extensa rede de rotas terrestres (e também marítimas), permitindo a circulação de mercadorias (seda, especiarias), tecnologias (como a pólvora e o papel) e ideias entre civilizações distantes — sendo frequentemente descrita como uma "primeira globalização" pré-moderna.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_idade_media_7',
+    chapter: 'A Primeira Globalização',
+    topicId: 'his_idade_media',
+    subject: 'História',
+    prompt: 'As Cruzadas, expedições militares organizadas por reinos cristãos europeus entre os séculos XI e XIII com o objetivo declarado de retomar Jerusalém e a Terra Santa do controle muçulmano, tiveram como uma de suas consequências não intencionais:',
+    options: [
+      { id: 'a', text: 'A intensificação do contato comercial e cultural entre a Europa e o Oriente, incluindo a difusão de novos produtos e conhecimentos' },
+      { id: 'b', text: 'O isolamento completo da Europa em relação ao restante do mundo' },
+      { id: 'c', text: 'A eliminação total de qualquer contato posterior entre cristãos e muçulmanos' },
+      { id: 'd', text: 'O fim imediato e definitivo do comércio internacional' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Apesar de seu objetivo religioso e militar declarado, as Cruzadas tiveram como consequência não intencional a intensificação do contato comercial e cultural entre a Europa e o Oriente (mundo islâmico e bizantino), facilitando a circulação de produtos (especiarias, tecidos), conhecimentos técnicos e científicos — contribuindo, entre outros fatores, para o ressurgimento comercial das cidades italianas e para mudanças culturais na Europa medieval.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_idade_media_8',
+    chapter: 'A Primeira Globalização',
+    topicId: 'his_idade_media',
+    subject: 'História',
+    prompt: 'As viagens de Marco Polo, mercador veneziano que percorreu a Ásia no século XIII, contribuíram para a "primeira globalização" medieval principalmente por:',
+    options: [
+      { id: 'a', text: 'Difundir na Europa relatos e conhecimentos sobre regiões distantes da Ásia, despertando interesse comercial e geográfico que influenciaria explorações posteriores' },
+      { id: 'b', text: 'Encerrar definitivamente qualquer contato entre Europa e Ásia' },
+      { id: 'c', text: 'Não ter qualquer impacto ou repercussão na Europa de sua época' },
+      { id: 'd', text: 'Ser uma viagem realizada exclusivamente por via marítima direta' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Os relatos de Marco Polo sobre suas viagens pela Ásia (incluindo a corte do Grande Khan mongol na China) despertaram grande interesse na Europa sobre as riquezas e possibilidades comerciais do Oriente, contribuindo para estimular o imaginário geográfico europeu e influenciar, séculos depois, o interesse por rotas alternativas de acesso à Ásia — um dos fatores que impulsionariam as Grandes Navegações.',
     difficulty: 'medium'
   },
   // História — Idade Moderna e Iluminismo
@@ -13425,6 +13505,262 @@ export const mockQuestions: Question[] = [
     explanation: 'A independência dos Estados Unidos resultou na criação de uma república fundamentada em princípios iluministas como a soberania popular, a divisão de poderes (Executivo, Legislativo e Judiciário) e a garantia de direitos individuais — servindo, inclusive, de inspiração e referência para revolucionários franceses poucos anos depois.',
     difficulty: 'medium'
   },
+  {
+    id: 'q_his_moderna_iluminismo_6',
+    chapter: 'América Espanhola',
+    topicId: 'his_moderna_iluminismo',
+    subject: 'História',
+    prompt: 'A colonização espanhola na América, diferente do modelo português predominante no Brasil, caracterizou-se pela:',
+    options: [
+      { id: 'a', text: 'Exploração intensiva de metais preciosos (ouro e prata), com destaque para regiões como o Peru e o México, sustentando um forte sistema administrativo centralizado' },
+      { id: 'b', text: 'Ausência total de qualquer exploração de recursos minerais' },
+      { id: 'c', text: 'Um modelo de colonização idêntico em todos os aspectos ao português' },
+      { id: 'd', text: 'Exclusiva dedicação à agricultura de subsistência, sem qualquer exportação' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A colonização espanhola na América se destacou pela intensa exploração de metais preciosos, especialmente prata (nas minas de Potosí, atual Bolívia) e ouro, sustentando um sistema administrativo centralizado através de vice-reinos — um modelo que, embora compartilhasse características com a colonização portuguesa (exploração de recursos, mão de obra indígena e escravizada africana), tinha ênfase econômica e estrutura administrativa distintas.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_moderna_iluminismo_7',
+    chapter: 'América Espanhola',
+    topicId: 'his_moderna_iluminismo',
+    subject: 'História',
+    prompt: 'O sistema de encomienda, utilizado pela Coroa espanhola na América, consistia em:',
+    options: [
+      { id: 'a', text: 'Conceder a colonos espanhóis o direito de utilizar o trabalho forçado de populações indígenas, em troca da suposta obrigação de catequizá-las e protegê-las' },
+      { id: 'b', text: 'Um sistema de livre contratação de trabalhadores indígenas, com salários justos' },
+      { id: 'c', text: 'Uma forma de autogoverno completo concedido às populações indígenas' },
+      { id: 'd', text: 'Um sistema exclusivo de comércio marítimo, sem qualquer relação com trabalho' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A encomienda era um sistema em que a Coroa espanhola concedia a colonos (encomenderos) o direito de exigir trabalho forçado e tributos de populações indígenas, sob a justificativa oficial de que os encomenderos deveriam, em troca, catequizá-las e "protegê-las" — na prática, um sistema que resultou em intensa exploração e sofrimento das populações indígenas americanas.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_moderna_iluminismo_8',
+    chapter: 'América Espanhola',
+    topicId: 'his_moderna_iluminismo',
+    subject: 'História',
+    prompt: 'As missões jesuíticas, estabelecidas por padres da Companhia de Jesus em regiões da América espanhola (como a região do Guarani, na fronteira entre atuais Brasil, Argentina e Paraguai), tinham como objetivo principal:',
+    options: [
+      { id: 'a', text: 'Catequizar e "civilizar" as populações indígenas segundo os padrões europeus, organizando-as em comunidades sob supervisão religiosa' },
+      { id: 'b', text: 'Promover exclusivamente atividades comerciais e de mineração' },
+      { id: 'c', text: 'Impedir qualquer contato entre europeus e indígenas' },
+      { id: 'd', text: 'Estabelecer bases militares para conquista de novos territórios' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'As missões jesuíticas buscavam catequizar as populações indígenas, organizando-as em comunidades (reduções) sob supervisão religiosa, ensinando ofícios e costumes europeus, além da doutrina católica — um projeto que, apesar de gerar alguma proteção relativa contra a escravização direta por outros colonos, ainda impunha uma transformação cultural forçada sobre os povos indígenas.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_moderna_iluminismo_9',
+    chapter: 'Vida Urbana e Renascimento Cultural',
+    topicId: 'his_moderna_iluminismo',
+    subject: 'História',
+    prompt: 'O Renascimento, movimento cultural e artístico que floresceu na Europa (especialmente na Itália) entre os séculos XIV e XVI, se caracterizou principalmente por:',
+    options: [
+      { id: 'a', text: 'Um renovado interesse pela cultura clássica greco-romana e uma valorização do humanismo, colocando o ser humano no centro das preocupações intelectuais e artísticas' },
+      { id: 'b', text: 'Um retorno completo aos valores e à cultura medieval' },
+      { id: 'c', text: 'A rejeição total de qualquer influência da Antiguidade Clássica' },
+      { id: 'd', text: 'Um movimento restrito exclusivamente à religião, sem qualquer expressão artística' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O Renascimento se caracterizou por um renovado interesse pela cultura clássica greco-romana (arte, filosofia, literatura) e pela valorização do humanismo — uma visão de mundo que colocava o ser humano e suas capacidades racionais e criativas no centro das preocupações intelectuais, artísticas e científicas, em contraste com o teocentrismo mais acentuado da Idade Média.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_moderna_iluminismo_10',
+    chapter: 'Reforma Religiosa',
+    topicId: 'his_moderna_iluminismo',
+    subject: 'História',
+    prompt: 'A Reforma Protestante, iniciada por Martinho Lutero em 1517, teve como um de seus principais elementos desencadeadores:',
+    options: [
+      { id: 'a', text: 'A crítica à venda de indulgências pela Igreja Católica, prática que Lutero considerava incompatível com os ensinamentos bíblicos sobre a salvação' },
+      { id: 'b', text: 'Um apoio incondicional ao Papa e às práticas da Igreja Católica' },
+      { id: 'c', text: 'A ausência total de qualquer crítica às práticas religiosas da época' },
+      { id: 'd', text: 'Uma disputa exclusivamente territorial, sem qualquer componente religioso' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Martinho Lutero criticou fortemente a venda de indulgências (perdão de pecados mediante pagamento), considerando essa prática incompatível com sua interpretação bíblica sobre a salvação pela fé — essa crítica, formalizada nas "95 Teses" afixadas na porta da igreja de Wittenberg em 1517, é tradicionalmente considerada o marco inicial da Reforma Protestante.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_his_moderna_iluminismo_11',
+    chapter: 'Reforma Religiosa',
+    topicId: 'his_moderna_iluminismo',
+    subject: 'História',
+    prompt: 'A Contrarreforma (ou Reforma Católica), reação da Igreja Católica ao avanço do protestantismo, incluiu medidas como:',
+    options: [
+      { id: 'a', text: 'A realização do Concílio de Trento, que reafirmou dogmas católicos, e a criação de instrumentos de controle religioso, como a Inquisição' },
+      { id: 'b', text: 'A adoção total e imediata dos princípios protestantes por toda a Igreja Católica' },
+      { id: 'c', text: 'O completo desinteresse da Igreja Católica diante do avanço protestante' },
+      { id: 'd', text: 'A eliminação total de qualquer forma de organização eclesiástica' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A Contrarreforma incluiu o Concílio de Trento (1545-1563), que reafirmou dogmas católicos centrais contestados pelos protestantes, além de medidas de controle e combate a ideias consideradas heréticas, como o fortalecimento da Inquisição e a criação de novas ordens religiosas (como a Companhia de Jesus) voltadas à catequese e ao combate ao avanço protestante.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_moderna_iluminismo_12',
+    chapter: 'Reforma Religiosa',
+    topicId: 'his_moderna_iluminismo',
+    subject: 'História',
+    prompt: 'O Calvinismo, uma das principais vertentes do protestantismo, desenvolvida por João Calvino, se destacou, entre outros aspectos, por sua doutrina da:',
+    options: [
+      { id: 'a', text: 'Predestinação, segundo a qual Deus já teria determinado previamente quem seria salvo ou condenado' },
+      { id: 'b', text: 'Total submissão ao Papa e à hierarquia católica' },
+      { id: 'c', text: 'Rejeição completa de qualquer forma de organização religiosa' },
+      { id: 'd', text: 'Adoção integral dos rituais e práticas católicas tradicionais' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O Calvinismo se destacou pela doutrina da predestinação, segundo a qual Deus já teria determinado previamente, de forma soberana, quem seria salvo ou condenado, independentemente das ações humanas em vida — uma doutrina que influenciou significativamente a ética de trabalho e a visão de mundo de muitas comunidades protestantes, especialmente em regiões como a Suíça, a Holanda e partes da Inglaterra e da América do Norte.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_his_moderna_iluminismo_13',
+    chapter: 'Absolutismo',
+    topicId: 'his_moderna_iluminismo',
+    subject: 'História',
+    prompt: 'O absolutismo monárquico, sistema político predominante em diversos países europeus durante a Idade Moderna, se fundamentava, entre outras teorias, na ideia de que:',
+    options: [
+      { id: 'a', text: 'O poder do rei era de origem divina, não estando sujeito a nenhuma limitação por outras instituições (como parlamentos ou nobreza)' },
+      { id: 'b', text: 'O poder deveria ser sempre dividido igualmente entre várias instituições' },
+      { id: 'c', text: 'O rei deveria governar exclusivamente segundo a vontade popular direta' },
+      { id: 'd', text: 'Nenhum governante poderia exercer autoridade centralizada' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O absolutismo se fundamentava, entre outras teorias, na ideia do "direito divino dos reis", segundo a qual o poder do monarca teria origem divina, não estando sujeito a limitações impostas por outras instituições (parlamentos, nobreza) — uma justificativa ideológica para a concentração do poder político nas mãos do rei, exemplificada pelo reinado de Luís XIV na França ("O Estado sou eu").',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_moderna_iluminismo_14',
+    chapter: 'Absolutismo',
+    topicId: 'his_moderna_iluminismo',
+    subject: 'História',
+    prompt: 'O mercantilismo, política econômica associada ao período absolutista europeu, se caracterizava por:',
+    options: [
+      { id: 'a', text: 'Forte intervenção estatal na economia, busca por superávit comercial (exportar mais do que importar) e acúmulo de metais preciosos como medida de riqueza nacional' },
+      { id: 'b', text: 'Completa ausência de qualquer intervenção do Estado na economia' },
+      { id: 'c', text: 'Livre comércio irrestrito, sem qualquer barreira alfandegária' },
+      { id: 'd', text: 'Rejeição total ao comércio internacional' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O mercantilismo se caracterizava pela forte intervenção estatal na economia, buscando um superávit comercial favorável (exportações maiores que importações) e o acúmulo de metais preciosos (ouro e prata) como medida central de riqueza e poder nacional — uma política econômica que justificava, entre outros aspectos, a exploração colonial das metrópoles europeias sobre suas colônias.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_moderna_iluminismo_15',
+    chapter: 'Revolução Industrial',
+    topicId: 'his_moderna_iluminismo',
+    subject: 'História',
+    prompt: 'A Revolução Industrial, iniciada na Inglaterra no final do século XVIII, foi favorecida por uma combinação de fatores, incluindo:',
+    options: [
+      { id: 'a', text: 'Disponibilidade de capital acumulado (via comércio e colonização), reservas de carvão mineral, mão de obra disponível e um ambiente institucional favorável ao investimento privado' },
+      { id: 'b', text: 'A ausência completa de qualquer atividade comercial prévia na Inglaterra' },
+      { id: 'c', text: 'Uma população extremamente pequena, sem qualquer disponibilidade de trabalhadores' },
+      { id: 'd', text: 'A inexistência de qualquer reserva de recursos naturais no território inglês' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A Revolução Industrial inglesa foi favorecida por uma combinação de fatores: capital acumulado através do comércio e da exploração colonial, abundantes reservas de carvão mineral (fonte de energia essencial para as máquinas a vapor), disponibilidade de mão de obra (impulsionada, entre outros fatores, pelo êxodo rural) e um ambiente institucional relativamente favorável ao investimento privado e à inovação tecnológica.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_moderna_iluminismo_16',
+    chapter: 'Revolução Industrial',
+    topicId: 'his_moderna_iluminismo',
+    subject: 'História',
+    prompt: 'As péssimas condições de trabalho durante a Primeira Revolução Industrial (jornadas extenuantes, uso de mão de obra infantil, salários baixos) contribuíram para o surgimento de:',
+    options: [
+      { id: 'a', text: 'Movimentos operários organizados, buscando melhores condições de trabalho e direitos trabalhistas' },
+      { id: 'b', text: 'Uma total ausência de qualquer reação ou organização por parte dos trabalhadores' },
+      { id: 'c', text: 'Um aumento imediato e generalizado nos salários, sem qualquer conflito' },
+      { id: 'd', text: 'O fim completo da atividade industrial em toda a Europa' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'As condições precárias de trabalho durante a Primeira Revolução Industrial — jornadas exaustivas, exploração de mão de obra infantil, salários muito baixos e ambientes de trabalho perigosos — impulsionaram o surgimento de movimentos operários organizados, buscando melhores condições de trabalho, redução da jornada e reconhecimento de direitos trabalhistas, um processo que se intensificaria ao longo do século XIX.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_moderna_iluminismo_17',
+    chapter: 'Revolução Industrial',
+    topicId: 'his_moderna_iluminismo',
+    subject: 'História',
+    prompt: 'O ludismo, movimento de trabalhadores ingleses do início do século XIX, se caracterizou por:',
+    options: [
+      { id: 'a', text: 'A destruição deliberada de máquinas industriais, vistas como responsáveis pelo desemprego e pela deterioração das condições de trabalho' },
+      { id: 'b', text: 'A defesa incondicional da introdução de novas máquinas na indústria' },
+      { id: 'c', text: 'Um movimento exclusivamente político, sem qualquer ação prática direta' },
+      { id: 'd', text: 'Uma organização formal de sindicatos reconhecidos legalmente pelo governo' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O ludismo foi um movimento de trabalhadores (especialmente artesãos têxteis) que, na Inglaterra do início do século XIX, promoveu a destruição deliberada de máquinas industriais, vistas como responsáveis pelo desemprego (ao substituir trabalho manual qualificado) e pela deterioração das condições de trabalho — uma forma de protesto direto contra os impactos sociais da industrialização, embora não representasse uma rejeição categórica ao progresso tecnológico em si.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_his_moderna_iluminismo_18',
+    chapter: 'Iluminismo',
+    topicId: 'his_moderna_iluminismo',
+    subject: 'História',
+    prompt: 'Montesquieu, um dos principais pensadores iluministas, é especialmente conhecido por sua teoria sobre:',
+    options: [
+      { id: 'a', text: 'A separação dos poderes do Estado em Executivo, Legislativo e Judiciário, como forma de evitar a concentração e o abuso de poder' },
+      { id: 'b', text: 'A defesa incondicional do absolutismo monárquico' },
+      { id: 'c', text: 'A negação completa de qualquer forma de organização política' },
+      { id: 'd', text: 'A defesa de que todo poder deveria estar concentrado em uma única pessoa' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Montesquieu, em sua obra "O Espírito das Leis" (1748), desenvolveu a teoria da separação dos poderes do Estado em Executivo, Legislativo e Judiciário, cada um com funções distintas e capazes de controlar mutuamente os demais — uma ideia que influenciou profundamente a organização política de diversos Estados modernos, incluindo a Constituição dos Estados Unidos.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_moderna_iluminismo_19',
+    chapter: 'Revolução Francesa',
+    topicId: 'his_moderna_iluminismo',
+    subject: 'História',
+    prompt: 'A Revolução Francesa (1789), um dos eventos mais marcantes da história moderna, teve entre seus principais desencadeadores:',
+    options: [
+      { id: 'a', text: 'Uma grave crise financeira do Estado, combinada com desigualdades sociais estruturais entre os três estados (clero, nobreza e o Terceiro Estado)' },
+      { id: 'b', text: 'Uma completa prosperidade econômica e satisfação geral da população francesa' },
+      { id: 'c', text: 'A ausência total de qualquer influência das ideias iluministas' },
+      { id: 'd', text: 'Um acordo pacífico e consensual entre todas as classes sociais francesas' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A Revolução Francesa foi desencadeada por uma combinação de fatores: grave crise financeira do Estado francês (agravada por guerras e pelo apoio à independência americana), desigualdades sociais estruturais entre os privilegiados (clero e nobreza, isentos de muitos impostos) e o Terceiro Estado (burguesia, camponeses e trabalhadores urbanos, que arcavam com a maior parte da carga tributária), além da influência crescente das ideias iluministas.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_moderna_iluminismo_20',
+    chapter: 'Revolução Francesa',
+    topicId: 'his_moderna_iluminismo',
+    subject: 'História',
+    prompt: 'A Declaração dos Direitos do Homem e do Cidadão (1789), documento fundamental produzido durante a Revolução Francesa, estabeleceu princípios como:',
+    options: [
+      { id: 'a', text: 'Liberdade, igualdade perante a lei e propriedade como direitos naturais e inalienáveis dos cidadãos' },
+      { id: 'b', text: 'A manutenção dos privilégios tradicionais da nobreza e do clero' },
+      { id: 'c', text: 'A concentração absoluta de todo o poder político nas mãos do rei' },
+      { id: 'd', text: 'A exclusão total de qualquer direito individual' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A Declaração dos Direitos do Homem e do Cidadão estabeleceu princípios revolucionários para a época, como a liberdade individual, a igualdade perante a lei (abolindo formalmente os privilégios da nobreza e do clero) e o direito à propriedade, consagrados como direitos naturais e inalienáveis — um documento que influenciou profundamente declarações de direitos posteriores ao redor do mundo.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_moderna_iluminismo_21',
+    chapter: 'América no Século XIX',
+    topicId: 'his_moderna_iluminismo',
+    subject: 'História',
+    prompt: 'Os processos de independência das colônias espanholas na América, ocorridos principalmente nas primeiras décadas do século XIX, foram liderados por figuras como Simón Bolívar e José de San Martín, e foram influenciados, entre outros fatores, por:',
+    options: [
+      { id: 'a', text: 'Ideais iluministas e liberais, além do enfraquecimento temporário do controle espanhol sobre suas colônias durante as invasões napoleônicas na Península Ibérica' },
+      { id: 'b', text: 'Um fortalecimento contínuo e ininterrupto do controle espanhol sobre a região' },
+      { id: 'c', text: 'A ausência total de qualquer influência das ideias iluministas na América espanhola' },
+      { id: 'd', text: 'Uma decisão voluntária da própria Coroa espanhola de conceder independência a todas as colônias' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Os movimentos de independência na América espanhola foram influenciados por ideais iluministas e liberais (inspirados também pela independência americana e pela Revolução Francesa), além de terem sido favorecidos pelo enfraquecimento temporário do controle espanhol durante as invasões napoleônicas na Península Ibérica (que ocuparam a Espanha e geraram uma crise de legitimidade da monarquia espanhola) — um contexto que abriu espaço para as elites criollas locais liderarem movimentos de independência.',
+    difficulty: 'medium'
+  },
   // História — Imperialismo e Guerras Mundiais
   {
     id: 'q_his_imperialismo_guerras_1',
@@ -13506,6 +13842,214 @@ export const mockQuestions: Question[] = [
     explanation: 'O Holocausto foi um genocídio planejado e executado sistematicamente pelo Estado nazista, resultando no extermínio de aproximadamente seis milhões de judeus, além de outros grupos perseguidos (como ciganos, pessoas com deficiência e opositores políticos) — um evento que teve profundas repercussões no direito internacional posterior, incluindo a criação do conceito jurídico de "crime contra a humanidade" e a definição legal de genocídio.',
     difficulty: 'hard'
   },
+  {
+    id: 'q_his_imperialismo_guerras_6',
+    chapter: 'Europa no Século XIX',
+    topicId: 'his_imperialismo_guerras',
+    subject: 'História',
+    prompt: 'O imperialismo europeu do século XIX, período de intensa expansão colonial (especialmente sobre a África e a Ásia), foi impulsionado, entre outros fatores, por:',
+    options: [
+      { id: 'a', text: 'Necessidade de matérias-primas e mercados consumidores para a produção industrial, além de motivações políticas, militares e ideológicas (como o "fardo do homem branco")' },
+      { id: 'b', text: 'Um desinteresse total das potências europeias por territórios além de seus próprios continentes' },
+      { id: 'c', text: 'A ausência completa de qualquer motivação econômica' },
+      { id: 'd', text: 'Um processo pacífico e consensual, sem qualquer resistência dos povos colonizados' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O imperialismo do século XIX foi impulsionado pela necessidade das potências industrializadas europeias de garantir matérias-primas e mercados consumidores para sua produção crescente, além de motivações políticas (prestígio e poder), militares (bases estratégicas) e ideológicas (justificativas racistas de suposta "missão civilizadora", como o conceito do "fardo do homem branco") — processo que envolveu intensa violência e resistência por parte dos povos colonizados.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_imperialismo_guerras_7',
+    chapter: 'Europa no Século XIX',
+    topicId: 'his_imperialismo_guerras',
+    subject: 'História',
+    prompt: 'A Conferência de Berlim (1884-1885), reunião entre potências europeias para tratar da partilha do continente africano, teve como principal consequência:',
+    options: [
+      { id: 'a', text: 'A divisão de territórios africanos entre potências europeias, sem qualquer participação de representantes africanos, ignorando frequentemente fronteiras étnicas e culturais pré-existentes' },
+      { id: 'b', text: 'A concessão de total independência a todos os territórios africanos' },
+      { id: 'c', text: 'A participação ativa e decisiva de líderes africanos nas decisões tomadas' },
+      { id: 'd', text: 'O fim completo de qualquer interesse europeu pelo continente africano' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A Conferência de Berlim reuniu potências europeias para negociar e formalizar a partilha do território africano entre si, estabelecendo regras para reivindicações coloniais — sem qualquer participação de representantes africanos, resultando em fronteiras artificiais que frequentemente ignoravam divisões étnicas, culturais e linguísticas pré-existentes entre os povos do continente, com consequências que persistem até os dias atuais.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_imperialismo_guerras_8',
+    chapter: 'Europa no Século XIX',
+    topicId: 'his_imperialismo_guerras',
+    subject: 'História',
+    prompt: 'A unificação da Alemanha (1871), liderada pela Prússia sob o chanceler Otto von Bismarck, foi alcançada principalmente através de:',
+    options: [
+      { id: 'a', text: 'Uma combinação de diplomacia estratégica ("Realpolitik") e uma série de guerras contra vizinhos europeus, que fortaleceram o sentimento nacionalista alemão sob liderança prussiana' },
+      { id: 'b', text: 'Um processo exclusivamente pacífico e diplomático, sem qualquer conflito armado' },
+      { id: 'c', text: 'A intervenção direta e decisiva de potências não europeias' },
+      { id: 'd', text: 'A manutenção da fragmentação política alemã em múltiplos Estados independentes' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A unificação alemã foi conduzida por Bismarck através de uma combinação de diplomacia calculada (Realpolitik) e uma série de guerras vitoriosas (contra a Dinamarca, o Império Austríaco e a França), que fortaleceram o sentimento nacionalista alemão e consolidaram a liderança prussiana sobre os demais Estados alemães, culminando na proclamação do Império Alemão em 1871.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_imperialismo_guerras_9',
+    chapter: 'Primeira Guerra Mundial (1914-1918)',
+    topicId: 'his_imperialismo_guerras',
+    subject: 'História',
+    prompt: 'O sistema de alianças militares entre as principais potências europeias, formado nas décadas anteriores a 1914, contribuiu para transformar o assassinato do arquiduque Francisco Ferdinando em um conflito de escala continental porque:',
+    options: [
+      { id: 'a', text: 'As alianças obrigavam países a entrar em guerra em apoio a seus aliados, fazendo com que um conflito bilateral inicial se expandisse rapidamente para envolver múltiplas potências' },
+      { id: 'b', text: 'Não existia nenhum sistema de alianças entre as potências europeias antes de 1914' },
+      { id: 'c', text: 'As alianças impediram completamente qualquer escalada do conflito' },
+      { id: 'd', text: 'O assassinato não teve qualquer relação com o início da guerra' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O sistema de alianças (como a Tríplice Aliança e a Tríplice Entente) criou uma rede de compromissos militares mútuos entre as potências europeias — quando a Áustria-Hungria declarou guerra à Sérvia após o assassinato do arquiduque, esses compromissos de aliança rapidamente arrastaram outras potências ao conflito (Rússia em apoio à Sérvia, Alemanha em apoio à Áustria-Hungria, França e Reino Unido em apoio à Rússia), transformando um conflito regional em uma guerra de escala continental.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_imperialismo_guerras_10',
+    chapter: 'Grandes Revoluções do Século XX',
+    topicId: 'his_imperialismo_guerras',
+    subject: 'História',
+    prompt: 'A Revolução Russa de 1917, um dos eventos mais transformadores do século XX, resultou na:',
+    options: [
+      { id: 'a', text: 'Derrubada do governo czarista (e, posteriormente, do governo provisório) e na ascensão dos bolcheviques, liderados por Lênin, ao poder' },
+      { id: 'b', text: 'Manutenção do regime czarista sem qualquer alteração' },
+      { id: 'c', text: 'Uma completa continuidade do sistema político e econômico russo anterior' },
+      { id: 'd', text: 'Uma aliança imediata e duradoura entre a Rússia e as potências capitalistas ocidentais' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A Revolução Russa de 1917 ocorreu em duas etapas principais: a Revolução de Fevereiro, que derrubou o czar Nicolau II, e a Revolução de Outubro, que levou os bolcheviques, liderados por Vladimir Lênin, ao poder — estabelecendo posteriormente o primeiro Estado socialista do mundo, a União Soviética, com profundas transformações políticas, econômicas e sociais.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_imperialismo_guerras_11',
+    chapter: 'Grandes Revoluções do Século XX',
+    topicId: 'his_imperialismo_guerras',
+    subject: 'História',
+    prompt: 'A Revolução Chinesa, que culminou na proclamação da República Popular da China em 1949 sob liderança de Mao Tsé-Tung, resultou de um longo processo que incluiu:',
+    options: [
+      { id: 'a', text: 'Uma guerra civil prolongada entre as forças comunistas (lideradas por Mao Tsé-Tung) e o governo nacionalista, além de resistência à ocupação japonesa durante a Segunda Guerra Mundial' },
+      { id: 'b', text: 'Um processo exclusivamente pacífico e sem qualquer conflito armado' },
+      { id: 'c', text: 'A manutenção contínua do governo imperial chinês até os dias atuais' },
+      { id: 'd', text: 'Uma intervenção militar direta de potências europeias que instalou o governo comunista' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A Revolução Chinesa resultou de décadas de conflito, incluindo uma longa guerra civil entre as forças comunistas de Mao Tsé-Tung e o governo nacionalista (Kuomintang) de Chiang Kai-shek, interrompida temporariamente durante a resistência conjunta contra a ocupação japonesa na Segunda Guerra Mundial — culminando na vitória comunista e na proclamação da República Popular da China em 1949, com o governo nacionalista se refugiando em Taiwan.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_imperialismo_guerras_12',
+    chapter: 'Grandes Revoluções do Século XX',
+    topicId: 'his_imperialismo_guerras',
+    subject: 'História',
+    prompt: 'A Revolução Cubana (1959), liderada por Fidel Castro e seus aliados (incluindo Che Guevara), resultou na:',
+    options: [
+      { id: 'a', text: 'Derrubada do regime autoritário de Fulgêncio Batista e no estabelecimento posterior de um governo socialista em Cuba' },
+      { id: 'b', text: 'Manutenção indefinida do governo de Batista' },
+      { id: 'c', text: 'Uma aliança imediata entre Cuba e os Estados Unidos' },
+      { id: 'd', text: 'A ausência completa de qualquer mudança política em Cuba' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A Revolução Cubana derrubou o regime autoritário de Fulgêncio Batista, apoiado pelos Estados Unidos, culminando no estabelecimento de um governo liderado por Fidel Castro que, nos anos seguintes, se alinhou ao bloco socialista liderado pela União Soviética — um evento com profundas repercussões geopolíticas durante a Guerra Fria, incluindo a Crise dos Mísseis de Cuba (1962).',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_imperialismo_guerras_13',
+    chapter: 'O Período Entreguerras (1918-1939)',
+    topicId: 'his_imperialismo_guerras',
+    subject: 'História',
+    prompt: 'A Crise de 1929 (a "Grande Depressão"), iniciada nos Estados Unidos com a quebra da bolsa de valores de Nova York, teve como uma de suas causas centrais:',
+    options: [
+      { id: 'a', text: 'Superprodução industrial e agrícola combinada com especulação financeira excessiva, gerando uma bolha que eventualmente estourou' },
+      { id: 'b', text: 'Uma escassez extrema de produtos industriais e agrícolas' },
+      { id: 'c', text: 'A total ausência de qualquer atividade especulativa no mercado financeiro americano' },
+      { id: 'd', text: 'Uma decisão deliberada do governo americano de encerrar toda atividade econômica' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A Crise de 1929 resultou de uma combinação de superprodução industrial e agrícola (oferta maior que a demanda) com intensa especulação financeira no mercado de ações americano, criando uma bolha especulativa que eventualmente estourou, causando a quebra da bolsa de Nova York e desencadeando uma crise econômica de proporções globais conhecida como a Grande Depressão.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_imperialismo_guerras_14',
+    chapter: 'O Período Entreguerras (1918-1939)',
+    topicId: 'his_imperialismo_guerras',
+    subject: 'História',
+    prompt: 'O New Deal, conjunto de políticas implementadas pelo presidente americano Franklin D. Roosevelt para enfrentar a Grande Depressão, se caracterizou por:',
+    options: [
+      { id: 'a', text: 'Maior intervenção do governo federal na economia, incluindo programas de obras públicas, regulação financeira e criação de redes de proteção social' },
+      { id: 'b', text: 'Uma redução ainda maior da intervenção estatal na economia' },
+      { id: 'c', text: 'A completa privatização de todos os setores econômicos' },
+      { id: 'd', text: 'A eliminação de qualquer programa social ou de emprego público' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O New Deal representou uma ruptura com o modelo liberal clássico de mínima intervenção estatal, adotando políticas de maior intervenção do governo federal na economia — incluindo programas de obras públicas para gerar empregos, regulação do sistema financeiro (para evitar novas crises especulativas) e a criação de redes de proteção social (como a previdência social), buscando reativar a economia americana e reduzir o desemprego massivo.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_imperialismo_guerras_15',
+    chapter: 'O Período Entreguerras (1918-1939)',
+    topicId: 'his_imperialismo_guerras',
+    subject: 'História',
+    prompt: 'O fascismo italiano, liderado por Benito Mussolini a partir de 1922, se caracterizou, entre outros aspectos, por:',
+    options: [
+      { id: 'a', text: 'Nacionalismo extremado, culto à personalidade do líder, repressão a opositores políticos e forte propaganda estatal' },
+      { id: 'b', text: 'Uma defesa incondicional da democracia liberal e do pluralismo político' },
+      { id: 'c', text: 'A ausência total de qualquer forma de propaganda governamental' },
+      { id: 'd', text: 'Um governo baseado exclusivamente em eleições livres e periódicas, sem qualquer restrição política' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O regime fascista de Mussolini na Itália se caracterizou por forte nacionalismo, culto à personalidade do líder (o "Duce"), repressão sistemática a opositores políticos e sindicatos independentes, e intensa propaganda estatal para legitimar e consolidar o regime — servindo, inclusive, de referência e inspiração parcial para outros regimes autoritários que surgiriam na Europa entreguerras, como o nazismo alemão.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_imperialismo_guerras_16',
+    chapter: 'O Nazismo na Alemanha',
+    topicId: 'his_imperialismo_guerras',
+    subject: 'História',
+    prompt: 'A ideologia nazista, além do intenso nacionalismo e do antissemitismo, se fundamentava também em uma concepção racial que classificava os povos em uma hierarquia, colocando o suposto "povo ariano" no topo. Essa ideia de superioridade racial foi usada para justificar:',
+    options: [
+      { id: 'a', text: 'Políticas de perseguição, discriminação e, posteriormente, extermínio de grupos considerados "inferiores" pelo regime, especialmente judeus' },
+      { id: 'b', text: 'Uma política de igualdade racial e proteção a todas as minorias' },
+      { id: 'c', text: 'A ausência total de qualquer discurso sobre raça na propaganda nazista' },
+      { id: 'd', text: 'Uma aliança imediata e pacífica com todos os países vizinhos, sem qualquer expansão territorial' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A ideologia racial nazista, baseada em teorias pseudocientíficas de superioridade da suposta "raça ariana", foi utilizada para justificar políticas sistemáticas de perseguição, discriminação legal, e, eventualmente, o extermínio em massa (Holocausto) de grupos considerados "inferiores" ou "indesejáveis" pelo regime — principalmente judeus, mas também ciganos, pessoas com deficiência, homossexuais e opositores políticos.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_his_imperialismo_guerras_17',
+    chapter: 'Segunda Guerra Mundial (1939-1945)',
+    topicId: 'his_imperialismo_guerras',
+    subject: 'História',
+    prompt: 'A invasão da Polônia pela Alemanha nazista, em setembro de 1939, é tradicionalmente considerada o marco do início da Segunda Guerra Mundial porque:',
+    options: [
+      { id: 'a', text: 'Levou o Reino Unido e a França, que haviam garantido apoio à Polônia, a declararem guerra à Alemanha' },
+      { id: 'b', text: 'Foi um evento sem qualquer repercussão internacional' },
+      { id: 'c', text: 'Resultou na imediata rendição alemã' },
+      { id: 'd', text: 'Não teve qualquer relação com as tensões geopolíticas da época' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A invasão da Polônia pela Alemanha nazista em 1º de setembro de 1939 levou o Reino Unido e a França, que haviam garantido apoio militar à soberania polonesa, a declararem guerra à Alemanha dias depois — marcando o início oficial da Segunda Guerra Mundial na Europa, embora tensões e conflitos relacionados já estivessem em curso em outras partes do mundo (como a guerra sino-japonesa desde 1937).',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_imperialismo_guerras_18',
+    chapter: 'Segunda Guerra Mundial (1939-1945)',
+    topicId: 'his_imperialismo_guerras',
+    subject: 'História',
+    prompt: 'O ataque japonês a Pearl Harbor, em dezembro de 1941, teve como consequência imediata:',
+    options: [
+      { id: 'a', text: 'A entrada oficial dos Estados Unidos na Segunda Guerra Mundial, declarando guerra ao Japão e, posteriormente, à Alemanha e à Itália' },
+      { id: 'b', text: 'A manutenção da neutralidade americana durante toda a guerra' },
+      { id: 'c', text: 'Uma aliança imediata entre Estados Unidos e Japão' },
+      { id: 'd', text: 'O fim imediato do conflito no Pacífico' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O ataque surpresa japonês à base naval americana de Pearl Harbor, no Havaí, em 7 de dezembro de 1941, levou os Estados Unidos a declararem guerra ao Japão no dia seguinte, e poucos dias depois à Alemanha e à Itália (que declararam guerra aos EUA em solidariedade ao Japão) — marcando a entrada oficial americana na Segunda Guerra Mundial, um evento com repercussões decisivas para o desfecho do conflito.',
+    difficulty: 'medium'
+  },
   // História — Guerra Fria e Mundo Contemporâneo
   {
     id: 'q_his_guerra_fria_contemporaneo_1',
@@ -13585,6 +14129,70 @@ export const mockQuestions: Question[] = [
     ],
     correctOptionId: 'b',
     explanation: 'Os atentados de 11 de setembro de 2001 levaram os Estados Unidos a declarar a chamada "Guerra ao Terror", que incluiu a invasão militar ao Afeganistão (2001) — em resposta ao regime Talibã, que abrigava a liderança da Al-Qaeda — e, posteriormente, ao Iraque (2003), com profundas e duradouras repercussões geopolíticas no Oriente Médio e nas relações internacionais.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_guerra_fria_contemporaneo_6',
+    chapter: 'Descolonização Afro-Asiática',
+    topicId: 'his_guerra_fria_contemporaneo',
+    subject: 'História',
+    prompt: 'A Conferência de Bandung (1955), reunião de países recém-independentes ou em processo de descolonização da Ásia e da África, teve como um de seus objetivos principais:',
+    options: [
+      { id: 'a', text: 'Afirmar uma posição de não alinhamento em relação aos blocos capitalista e socialista da Guerra Fria, além de promover a cooperação entre países afro-asiáticos' },
+      { id: 'b', text: 'Formalizar uma aliança militar total com a União Soviética' },
+      { id: 'c', text: 'Declarar apoio incondicional aos Estados Unidos na Guerra Fria' },
+      { id: 'd', text: 'Restabelecer o domínio colonial europeu sobre os territórios africanos e asiáticos' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A Conferência de Bandung reuniu líderes de países afro-asiáticos recém-independentes ou em processo de descolonização, buscando afirmar uma posição de não alinhamento em relação aos dois blocos da Guerra Fria (capitalista, liderado pelos EUA, e socialista, liderado pela URSS), além de promover a cooperação e solidariedade entre países que compartilhavam experiências de colonização e o desafio do desenvolvimento pós-independência — um marco importante do chamado "Terceiro Mundo" e do posterior Movimento dos Países Não-Alinhados.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_guerra_fria_contemporaneo_7',
+    chapter: 'América Latina no Século XX',
+    topicId: 'his_guerra_fria_contemporaneo',
+    subject: 'História',
+    prompt: 'Diversos países da América Latina passaram por ditaduras militares durante o período da Guerra Fria (como Brasil, Argentina e Chile), muitas delas instaladas com apoio, direto ou indireto, dos Estados Unidos. Um dos principais argumentos usado para justificar essas intervenções era:',
+    options: [
+      { id: 'a', text: 'O combate à suposta ameaça comunista na região, dentro do contexto ideológico da Guerra Fria' },
+      { id: 'b', text: 'A defesa incondicional de governos democraticamente eleitos' },
+      { id: 'c', text: 'A ausência total de qualquer interesse geopolítico americano na região' },
+      { id: 'd', text: 'Um acordo de cooperação econômica sem qualquer componente político ou militar' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Durante a Guerra Fria, os Estados Unidos frequentemente apoiaram (direta ou indiretamente) golpes militares e ditaduras na América Latina sob a justificativa de combater a suposta ameaça comunista na região, alinhada à sua estratégia global de contenção da influência soviética — uma dinâmica que resultou em regimes autoritários, violações de direitos humanos e repressão política em diversos países latino-americanos ao longo das décadas de 1960 a 1980.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_guerra_fria_contemporaneo_8',
+    chapter: 'América Latina no Século XX',
+    topicId: 'his_guerra_fria_contemporaneo',
+    subject: 'História',
+    prompt: 'A Operação Condor, articulação entre serviços de inteligência e forças militares de diversos países latino-americanos durante as ditaduras dos anos 1970-1980, tinha como objetivo:',
+    options: [
+      { id: 'a', text: 'Coordenar ações de repressão, vigilância e perseguição transnacional contra opositores políticos dos regimes militares, incluindo assassinatos e desaparecimentos forçados' },
+      { id: 'b', text: 'Promover a cooperação econômica pacífica entre os países envolvidos' },
+      { id: 'c', text: 'Defender ativamente os direitos humanos na região' },
+      { id: 'd', text: 'Restabelecer imediatamente governos democráticos em todos os países participantes' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A Operação Condor foi uma articulação clandestina entre os serviços de inteligência e forças militares de diversos regimes ditatoriais latino-americanos (incluindo Brasil, Argentina, Chile, Uruguai, Paraguai e Bolívia), coordenando ações de repressão transnacional contra opositores políticos — incluindo vigilância, sequestros, torturas, assassinatos e desaparecimentos forçados, mesmo quando as vítimas se encontravam exiladas em países vizinhos.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_his_guerra_fria_contemporaneo_9',
+    chapter: 'América Latina no Século XX',
+    topicId: 'his_guerra_fria_contemporaneo',
+    subject: 'História',
+    prompt: 'A transição democrática ocorrida em diversos países latino-americanos ao longo da década de 1980, encerrando ciclos de ditaduras militares, foi impulsionada, entre outros fatores, por:',
+    options: [
+      { id: 'a', text: 'Crescente pressão popular por democracia, crises econômicas que deslegitimaram os regimes militares, e mudanças no contexto internacional' },
+      { id: 'b', text: 'Um desejo unânime das forças armadas de permanecer indefinidamente no poder' },
+      { id: 'c', text: 'A ausência total de qualquer movimento de oposição aos regimes militares' },
+      { id: 'd', text: 'Uma intervenção militar direta de potências estrangeiras para derrubar os governos militares' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A transição para a democracia em países como Brasil, Argentina e Chile durante a década de 1980 foi impulsionada por uma combinação de fatores: crescente mobilização e pressão popular por redemocratização, crises econômicas que enfraqueceram a legitimidade dos regimes militares, e mudanças no cenário internacional — um processo gradual e negociado em muitos casos, mas resultado direto da resistência e articulação de diversos setores da sociedade civil.',
     difficulty: 'medium'
   },
   // História — Brasil Colônia
@@ -13668,6 +14276,342 @@ export const mockQuestions: Question[] = [
     explanation: 'O Pacto Colonial estabelecia que a colônia deveria comercializar exclusivamente com sua metrópole, garantindo a Portugal o monopólio sobre a compra dos produtos coloniais (como açúcar e, depois, ouro) e a venda de produtos manufaturados à colônia — um sistema que subordinava economicamente o Brasil colonial aos interesses da Coroa portuguesa.',
     difficulty: 'medium'
   },
+  {
+    id: 'q_his_brasil_colonia_6',
+    chapter: 'A História e o Brasil',
+    topicId: 'his_brasil_colonia',
+    subject: 'História',
+    prompt: 'O estudo da história do Brasil, como o de qualquer outra sociedade, exige considerar múltiplas fontes históricas (documentos, objetos, relatos orais, entre outros) porque:',
+    options: [
+      { id: 'a', text: 'Diferentes fontes oferecem perspectivas distintas e complementares sobre o passado, permitindo uma compreensão mais completa e crítica dos eventos históricos' },
+      { id: 'b', text: 'Uma única fonte documental é sempre suficiente para compreender completamente qualquer período histórico' },
+      { id: 'c', text: 'Fontes históricas nunca podem conter qualquer viés ou perspectiva particular' },
+      { id: 'd', text: 'A história não depende de nenhum tipo de fonte ou evidência documental' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O trabalho historiográfico se beneficia da análise crítica de múltiplas fontes (documentos oficiais, cartas, relatos de viajantes, registros arqueológicos, tradições orais), já que cada uma delas oferece uma perspectiva parcial e situada sobre o passado — cruzar diferentes fontes permite uma compreensão mais completa, contextualizada e criticamente informada dos eventos históricos.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_brasil_colonia_7',
+    chapter: 'A História e o Brasil',
+    topicId: 'his_brasil_colonia',
+    subject: 'História',
+    prompt: 'Antes da chegada dos portugueses em 1500, o território que hoje corresponde ao Brasil já era habitado por diversos povos indígenas, com organizações sociais e culturas próprias. Um erro comum ao estudar esses povos é:',
+    options: [
+      { id: 'a', text: 'Tratá-los como um grupo homogêneo, ignorando a grande diversidade linguística, cultural e social existente entre as centenas de povos indígenas do território' },
+      { id: 'b', text: 'Reconhecer corretamente a diversidade de línguas e culturas indígenas existentes antes da colonização' },
+      { id: 'c', text: 'Considerar que esses povos possuíam formas próprias e complexas de organização social' },
+      { id: 'd', text: 'Estudar suas relações com o ambiente natural em que viviam' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Um erro historiográfico comum é tratar os povos indígenas pré-coloniais como um grupo culturalmente homogêneo ("os índios"), quando na realidade havia centenas de povos distintos, falando línguas diferentes (agrupadas em troncos linguísticos como tupi-guarani e macro-jê, entre outros) e com organizações sociais, econômicas e culturais próprias e diversificadas.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_brasil_colonia_8',
+    chapter: 'A História e o Brasil',
+    topicId: 'his_brasil_colonia',
+    subject: 'História',
+    prompt: 'A expressão "descobrimento do Brasil", tradicionalmente usada para descrever a chegada dos portugueses em 1500, tem sido cada vez mais questionada por historiadores porque:',
+    options: [
+      { id: 'a', text: 'O território já era habitado por milhões de indígenas havia milênios, tornando mais apropriado falar em "chegada" ou "invasão" do que em "descobrimento"' },
+      { id: 'b', text: 'Os portugueses foram os primeiros seres humanos a pisar no território brasileiro' },
+      { id: 'c', text: 'O território estava completamente desabitado antes de 1500' },
+      { id: 'd', text: 'Não existe qualquer controvérsia historiográfica sobre esse termo' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A expressão "descobrimento" é criticada por muitos historiadores por sugerir que o território era "vazio" ou "desconhecido" antes da chegada portuguesa, quando na verdade já era habitado por milhões de indígenas organizados em centenas de povos distintos havia milênios — termos como "chegada", "invasão" ou "encontro" (com suas próprias implicações) são frequentemente propostos como alternativas que reconhecem essa realidade histórica.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_brasil_colonia_9',
+    chapter: 'Grandes Navegações e Conquista Colonial',
+    topicId: 'his_brasil_colonia',
+    subject: 'História',
+    prompt: 'As Grandes Navegações europeias dos séculos XV e XVI, que resultaram na chegada dos portugueses ao Brasil, foram impulsionadas, entre outros fatores, por:',
+    options: [
+      { id: 'a', text: 'Busca por novas rotas comerciais para o comércio de especiarias com o Oriente, além de avanços na tecnologia náutica (como a caravela e instrumentos de navegação)' },
+      { id: 'b', text: 'Um desinteresse total das monarquias europeias por expansão territorial ou comercial' },
+      { id: 'c', text: 'A ausência completa de qualquer avanço tecnológico na época' },
+      { id: 'd', text: 'Um acordo de não-expansão entre as potências europeias' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'As Grandes Navegações foram impulsionadas pela busca de rotas alternativas para o comércio de especiarias e produtos orientais (contornando o monopólio de intermediários como os venezianos e otomanos), além de avanços tecnológicos náuticos (caravelas, astrolábio, bússola) que permitiram viagens marítimas mais longas e seguras — combinados a motivações religiosas (expansão do cristianismo) e ao interesse por riquezas e prestígio das monarquias ibéricas.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_brasil_colonia_10',
+    chapter: 'Grandes Navegações e Conquista Colonial',
+    topicId: 'his_brasil_colonia',
+    subject: 'História',
+    prompt: 'O Tratado de Tordesilhas (1494), acordo entre Portugal e Espanha mediado pelo Papa, teve como objetivo:',
+    options: [
+      { id: 'a', text: 'Dividir as terras "descobertas" e a serem descobertas fora da Europa entre as duas coroas ibéricas, através de uma linha imaginária' },
+      { id: 'b', text: 'Estabelecer uma aliança militar permanente entre Portugal e Espanha' },
+      { id: 'c', text: 'Impedir completamente qualquer expansão marítima portuguesa ou espanhola' },
+      { id: 'd', text: 'Conceder toda a América exclusivamente a Portugal' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O Tratado de Tordesilhas estabeleceu uma linha imaginária (a cerca de 370 léguas a oeste das ilhas de Cabo Verde) dividindo as terras "descobertas" e a serem descobertas fora da Europa entre Portugal (a leste da linha) e Espanha (a oeste) — um acordo que, entre outros fatores, explicaria por que parte do território que viria a ser o Brasil ficou sob domínio português.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_brasil_colonia_11',
+    chapter: 'Grandes Navegações e Conquista Colonial',
+    topicId: 'his_brasil_colonia',
+    subject: 'História',
+    prompt: 'Nos primeiros anos após 1500, o interesse comercial português no território que viria a ser o Brasil se concentrou inicialmente na exploração de:',
+    options: [
+      { id: 'a', text: 'Pau-brasil, madeira usada para extração de corante vermelho, então valorizada no mercado europeu' },
+      { id: 'b', text: 'Ouro e prata em grande escala, desde o primeiro momento' },
+      { id: 'c', text: 'Petróleo, extraído em larga escala já no início do século XVI' },
+      { id: 'd', text: 'Produtos industrializados, fabricados localmente' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Nos primeiros anos da colonização, antes do estabelecimento de um sistema colonial mais estruturado, o principal interesse comercial português no território brasileiro foi a extração do pau-brasil, madeira usada para extrair um corante vermelho valorizado no mercado europeu têxtil — atividade que, inclusive, deu origem ao nome do território.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_his_brasil_colonia_12',
+    chapter: 'A Montagem da Colonização',
+    topicId: 'his_brasil_colonia',
+    subject: 'História',
+    prompt: 'O sistema de Capitanias Hereditárias, implementado por Portugal no Brasil a partir de 1534, consistia em:',
+    options: [
+      { id: 'a', text: 'Dividir o território em grandes lotes de terra, doados a donatários que deveriam colonizá-los e explorá-los economicamente, mantendo vínculo com a Coroa' },
+      { id: 'b', text: 'Um sistema de governo totalmente centralizado, sem qualquer divisão territorial' },
+      { id: 'c', text: 'A concessão de total independência política aos colonos' },
+      { id: 'd', text: 'Uma forma de administração exclusivamente militar, sem qualquer interesse econômico' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O sistema de Capitanias Hereditárias dividiu o território colonial em grandes faixas de terra, doadas a donatários (geralmente da pequena nobreza portuguesa) que tinham amplos poderes administrativos e a responsabilidade de colonizar e explorar economicamente a região, mantendo vínculo de fidelidade e obrigações com a Coroa portuguesa — um sistema que teve resultados desiguais, com poucas capitanias (como Pernambuco e São Vicente) obtendo sucesso relativo.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_brasil_colonia_13',
+    chapter: 'A Montagem da Colonização',
+    topicId: 'his_brasil_colonia',
+    subject: 'História',
+    prompt: 'O Governo-Geral, instituído por Portugal em 1548 após o relativo fracasso do sistema de Capitanias Hereditárias, tinha como principal objetivo:',
+    options: [
+      { id: 'a', text: 'Centralizar a administração colonial, coordenando as capitanias sob autoridade de um governador-geral nomeado diretamente pela Coroa' },
+      { id: 'b', text: 'Eliminar completamente qualquer forma de organização administrativa na colônia' },
+      { id: 'c', text: 'Conceder total autonomia política aos donatários das capitanias' },
+      { id: 'd', text: 'Transferir imediatamente a capital do império português para o Brasil' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O Governo-Geral foi criado para centralizar e fortalecer a administração colonial, coordenando as diferentes capitanias sob a autoridade de um governador-geral nomeado diretamente pela Coroa portuguesa (o primeiro foi Tomé de Sousa, que também fundou Salvador como sede administrativa) — uma resposta ao relativo fracasso do sistema descentralizado das Capitanias Hereditárias.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_brasil_colonia_14',
+    chapter: 'Disputas Europeias no Brasil Colonial',
+    topicId: 'his_brasil_colonia',
+    subject: 'História',
+    prompt: 'A invasão francesa na Baía de Guanabara no século XVI, que resultou na tentativa de estabelecer a "França Antártica", foi combatida pelos portugueses, que fundaram, em resposta, a cidade de:',
+    options: [
+      { id: 'a', text: 'Rio de Janeiro' },
+      { id: 'b', text: 'Salvador' },
+      { id: 'c', text: 'Recife' },
+      { id: 'd', text: 'São Luís' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A tentativa francesa de estabelecer a "França Antártica" na Baía de Guanabara (a partir de 1555) levou os portugueses a expulsarem os franceses e fundarem, em 1565, a cidade do Rio de Janeiro, com o objetivo de fortalecer a presença portuguesa e proteger a região de novas incursões estrangeiras.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_brasil_colonia_15',
+    chapter: 'Disputas Europeias no Brasil Colonial',
+    topicId: 'his_brasil_colonia',
+    subject: 'História',
+    prompt: 'A invasão holandesa no Nordeste açucareiro brasileiro (especialmente em Pernambuco, no século XVII) esteve diretamente relacionada a:',
+    options: [
+      { id: 'a', text: 'Interesses comerciais holandeses na lucrativa produção açucareira, além do contexto de guerra entre a Holanda e a União Ibérica (Portugal e Espanha unificadas na época)' },
+      { id: 'b', text: 'Um interesse holandês exclusivamente religioso, sem qualquer motivação econômica' },
+      { id: 'c', text: 'A ausência total de qualquer produção açucareira na região nordeste' },
+      { id: 'd', text: 'Uma aliança permanente e pacífica entre Holanda e Portugal' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A invasão holandesa no Nordeste (através da Companhia das Índias Ocidentais) esteve associada ao interesse comercial na lucrativa produção açucareira da região, combinado ao contexto de guerra entre as Províncias Unidas (Holanda) e a União Ibérica (Portugal e Espanha unificadas entre 1580-1640) — resultando em décadas de ocupação holandesa em partes do Nordeste, notadamente sob o governo de Maurício de Nassau em Pernambuco.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_brasil_colonia_26',
+    chapter: 'Disputas Europeias no Brasil Colonial',
+    topicId: 'his_brasil_colonia',
+    subject: 'História',
+    prompt: 'O governo de Maurício de Nassau em Pernambuco (1637-1644), durante o período de ocupação holandesa, ficou historicamente marcado por:',
+    options: [
+      { id: 'a', text: 'Um período de relativa tolerância religiosa e investimentos em infraestrutura e cultura, contrastando com a administração colonial portuguesa mais rígida da época' },
+      { id: 'b', text: 'Uma completa ausência de qualquer investimento ou desenvolvimento na região' },
+      { id: 'c', text: 'A imediata expulsão de todos os colonos portugueses da região' },
+      { id: 'd', text: 'Uma perseguição religiosa ainda mais intensa que a promovida pelos portugueses' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O governo de Maurício de Nassau em Pernambuco ficou marcado por uma administração relativamente tolerante em termos religiosos (para os padrões da época) e por investimentos em infraestrutura urbana e cultura (incluindo a construção de pontes, e o financiamento de pintores e cientistas que documentaram a fauna, flora e população local) — um período muitas vezes visto como excepcional dentro do contexto mais amplo e conflituoso da ocupação holandesa no Nordeste.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_brasil_colonia_16',
+    chapter: 'A Interiorização da Colonização',
+    topicId: 'his_brasil_colonia',
+    subject: 'História',
+    prompt: 'As Bandeiras, expedições organizadas principalmente por paulistas nos séculos XVI e XVII, tinham como um de seus principais objetivos iniciais:',
+    options: [
+      { id: 'a', text: 'Capturar indígenas para escravização e explorar riquezas minerais no interior do território' },
+      { id: 'b', text: 'Estabelecer relações comerciais pacíficas exclusivamente com outras potências europeias' },
+      { id: 'c', text: 'Defender exclusivamente o litoral brasileiro de invasões estrangeiras' },
+      { id: 'd', text: 'Promover a colonização apenas através de meios diplomáticos' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'As Bandeiras (expedições organizadas principalmente a partir de São Paulo) tinham como objetivos iniciais principais a captura de indígenas para escravização (as chamadas "bandeiras de apresamento") e a busca por riquezas minerais no interior do território — atividades que, ao longo do tempo, contribuíram significativamente para a expansão territorial e a interiorização da colonização portuguesa muito além dos limites estabelecidos pelo Tratado de Tordesilhas.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_brasil_colonia_17',
+    chapter: 'A Interiorização da Colonização',
+    topicId: 'his_brasil_colonia',
+    subject: 'História',
+    prompt: 'A pecuária extensiva, atividade econômica desenvolvida no interior e no sertão nordestino durante o período colonial, teve papel importante na interiorização da colonização porque:',
+    options: [
+      { id: 'a', text: 'Exigia grandes extensões de terra para criação de gado, impulsionando a ocupação de áreas afastadas do litoral açucareiro' },
+      { id: 'b', text: 'Era uma atividade restrita exclusivamente às regiões litorâneas' },
+      { id: 'c', text: 'Não gerava nenhuma forma de ocupação territorial' },
+      { id: 'd', text: 'Competia diretamente pela mesma terra usada para o cultivo de cana-de-açúcar' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A pecuária extensiva, praticada em grandes extensões de terra (necessárias devido à baixa densidade de cabeças de gado por área), foi empurrada para o interior do território justamente para não competir diretamente com as terras mais valorizadas do litoral, dedicadas ao cultivo de cana-de-açúcar — esse processo contribuiu significativamente para a ocupação e interiorização de regiões como o sertão nordestino.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_brasil_colonia_18',
+    chapter: 'A Interiorização da Colonização',
+    topicId: 'his_brasil_colonia',
+    subject: 'História',
+    prompt: 'As missões jesuíticas estabelecidas no interior do território colonial brasileiro, especialmente na região Sul (como as Missões dos Sete Povos), tinham como objetivo principal:',
+    options: [
+      { id: 'a', text: 'Catequizar populações indígenas (especialmente guaranis), organizando-as em comunidades sob supervisão religiosa e protegendo-as parcialmente da escravização direta por colonos e bandeirantes' },
+      { id: 'b', text: 'Promover exclusivamente atividades comerciais e de mineração' },
+      { id: 'c', text: 'Impedir completamente qualquer atividade religiosa na colônia' },
+      { id: 'd', text: 'Estabelecer alianças militares com potências estrangeiras' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'As missões jesuíticas, como as Missões dos Sete Povos na região Sul, buscavam catequizar populações indígenas guaranis, organizando-as em comunidades (reduções) sob supervisão religiosa — oferecendo, em certa medida, proteção contra a captura e escravização direta por bandeirantes paulistas, embora ainda impusessem uma transformação cultural e religiosa forçada sobre os indígenas envolvidos.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_brasil_colonia_19',
+    chapter: 'A Mineração no Brasil Colonial',
+    topicId: 'his_brasil_colonia',
+    subject: 'História',
+    prompt: 'A descoberta de ouro em Minas Gerais no final do século XVII e início do XVIII provocou um intenso movimento migratório interno conhecido como:',
+    options: [
+      { id: 'a', text: 'Corrida do ouro (ou "febre do ouro"), atraindo colonos de diversas partes do Brasil e também imigrantes de Portugal' },
+      { id: 'b', text: 'Uma completa estagnação populacional na região' },
+      { id: 'c', text: 'Um movimento exclusivamente de saída de habitantes da região mineira' },
+      { id: 'd', text: 'Um fenômeno restrito apenas à população indígena local' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A descoberta de ouro em Minas Gerais provocou uma intensa corrida migratória, atraindo colonos vindos de diversas regiões do Brasil (especialmente do litoral açucareiro em declínio) e também novos imigrantes diretamente de Portugal, em busca de enriquecimento rápido — um movimento que transformou profundamente a demografia e a economia da região.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_his_brasil_colonia_20',
+    chapter: 'A Mineração no Brasil Colonial',
+    topicId: 'his_brasil_colonia',
+    subject: 'História',
+    prompt: 'O Quinto, tributo cobrado pela Coroa portuguesa sobre a produção de ouro no Brasil colonial, correspondia a:',
+    options: [
+      { id: 'a', text: 'Um quinto (20%) de toda a produção de ouro extraída, que deveria ser destinado à Coroa portuguesa' },
+      { id: 'b', text: 'A totalidade da produção de ouro, sem qualquer parte destinada aos mineradores' },
+      { id: 'c', text: 'Um imposto sobre a produção de açúcar, sem qualquer relação com o ouro' },
+      { id: 'd', text: 'Uma taxa aplicada apenas sobre a exportação de produtos agrícolas' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O Quinto correspondia à cobrança de 20% (um quinto) de toda a produção de ouro extraída na colônia, que deveria ser destinada à Coroa portuguesa — um tributo cuja fiscalização rigorosa (incluindo as Casas de Fundição) gerou tensões e conflitos entre colonos e a metrópole, contribuindo para movimentos de contestação como a Inconfidência Mineira.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_brasil_colonia_21',
+    chapter: 'A Mineração no Brasil Colonial',
+    topicId: 'his_brasil_colonia',
+    subject: 'História',
+    prompt: 'A Inconfidência Mineira (1789), movimento de contestação ao domínio português organizado em Minas Gerais, foi motivada, entre outros fatores, por:',
+    options: [
+      { id: 'a', text: 'Insatisfação com a pesada cobrança de impostos sobre a mineração (como a derrama) em um contexto de declínio da produção aurífera' },
+      { id: 'b', text: 'Uma completa satisfação da população local com o sistema colonial vigente' },
+      { id: 'c', text: 'A ausência total de qualquer influência das ideias iluministas' },
+      { id: 'd', text: 'Um apoio incondicional à manutenção do domínio português' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A Inconfidência Mineira foi motivada, entre outros fatores, pela insatisfação com a pesada carga tributária imposta pela Coroa portuguesa sobre a mineração — especialmente a ameaça da derrama (cobrança forçada de dívidas acumuladas do Quinto) em um contexto de declínio da produção aurífera — além da influência de ideias iluministas e do exemplo da recente independência dos Estados Unidos.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_brasil_colonia_22',
+    chapter: 'A Crise do Antigo Sistema Colonial',
+    topicId: 'his_brasil_colonia',
+    subject: 'História',
+    prompt: 'A vinda da Família Real portuguesa para o Brasil em 1808, fugindo da invasão napoleônica em Portugal, teve como uma de suas principais consequências:',
+    options: [
+      { id: 'a', text: 'A abertura dos portos brasileiros às nações amigas, rompendo com o antigo Pacto Colonial e permitindo o comércio direto com outros países' },
+      { id: 'b', text: 'O fechamento ainda mais rígido dos portos brasileiros ao comércio internacional' },
+      { id: 'c', text: 'A manutenção inalterada de todas as estruturas coloniais anteriores' },
+      { id: 'd', text: 'O retorno imediato da Família Real a Portugal, sem qualquer permanência no Brasil' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A vinda da Família Real portuguesa para o Brasil, em 1808, resultou na Abertura dos Portos às Nações Amigas, permitindo o comércio direto entre o Brasil e outros países (especialmente a Inglaterra) — uma medida que rompeu com o antigo Pacto Colonial e é vista como um dos marcos importantes do processo que levaria, mais tarde, à independência do Brasil.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_brasil_colonia_23',
+    chapter: 'A Independência do Brasil',
+    topicId: 'his_brasil_colonia',
+    subject: 'História',
+    prompt: 'A elevação do Brasil à condição de Reino Unido a Portugal e Algarves, em 1815, representou:',
+    options: [
+      { id: 'a', text: 'Uma mudança significativa no status político do Brasil, deixando de ser oficialmente uma colônia para se tornar parte integrante do reino português' },
+      { id: 'b', text: 'A independência completa e imediata do Brasil' },
+      { id: 'c', text: 'A manutenção do Brasil como colônia subordinada, sem qualquer alteração de status' },
+      { id: 'd', text: 'A separação definitiva entre Brasil e Portugal' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Em 1815, o Brasil foi elevado à condição de Reino Unido a Portugal e Algarves, deixando de ser oficialmente uma colônia para se tornar parte constitutiva do reino português (em pé de igualdade formal com Portugal) — uma mudança significativa de status político, embora ainda dentro do mesmo Estado, que refletia a nova importância do Brasil após a chegada da Corte portuguesa.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_brasil_colonia_24',
+    chapter: 'A Independência do Brasil',
+    topicId: 'his_brasil_colonia',
+    subject: 'História',
+    prompt: 'A Revolução Constitucionalista do Porto (1820), ocorrida em Portugal, teve como uma de suas exigências o retorno de D. João VI a Portugal e a recolonização do Brasil, o que contribuiu para:',
+    options: [
+      { id: 'a', text: 'Acelerar o processo que levaria à independência, já que essas exigências eram vistas como uma ameaça aos interesses da elite brasileira que havia se beneficiado do novo status do Brasil' },
+      { id: 'b', text: 'Fortalecer indefinidamente os laços coloniais entre Brasil e Portugal' },
+      { id: 'c', text: 'Não ter qualquer relação com o processo de independência brasileira' },
+      { id: 'd', text: 'Ser plenamente aceita e apoiada por toda a elite política brasileira' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A Revolução do Porto exigia, entre outras medidas, o retorno de D. João VI a Portugal e a recondução do Brasil ao status de colônia — exigências vistas como uma ameaça pelos setores da elite brasileira que haviam se beneficiado do novo status do Brasil desde 1808 (abertura dos portos, elevação a Reino Unido), contribuindo para acelerar as tensões que culminariam na declaração de independência em 1822.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_brasil_colonia_25',
+    chapter: 'A Independência do Brasil',
+    topicId: 'his_brasil_colonia',
+    subject: 'História',
+    prompt: 'A independência do Brasil, proclamada por D. Pedro I em 1822, é frequentemente descrita por historiadores como um processo que se caracterizou por:',
+    options: [
+      { id: 'a', text: 'Continuidades significativas em relação ao período colonial (manutenção da escravidão, da estrutura latifundiária e da monarquia), ao lado de rupturas políticas formais' },
+      { id: 'b', text: 'Uma ruptura completa e imediata com todas as estruturas sociais e econômicas do período colonial' },
+      { id: 'c', text: 'A abolição imediata da escravidão logo após a independência' },
+      { id: 'd', text: 'A instauração imediata de uma república democrática' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A independência brasileira é frequentemente analisada como um processo marcado por importantes continuidades em relação ao período colonial — mantendo a escravidão, a estrutura latifundiária de propriedade da terra, e até a forma de governo monárquica (com um membro da própria família real portuguesa, D. Pedro I, assumindo o trono) — ao lado de rupturas políticas formais em relação ao domínio direto de Portugal.',
+    difficulty: 'hard'
+  },
   // História — Brasil Império
   {
     id: 'q_his_brasil_imperio_1',
@@ -13747,6 +14691,70 @@ export const mockQuestions: Question[] = [
     ],
     correctOptionId: 'b',
     explanation: 'A Proclamação da República foi liderada por setores das Forças Armadas, com destaque para o Marechal Deodoro da Fonseca, contando com apoio de setores da elite (como cafeicultores insatisfeitos e republicanos) descontentes com o Império — um movimento conduzido essencialmente "de cima para baixo", com pouca participação popular direta no momento da proclamação.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_brasil_imperio_6',
+    chapter: 'Brasil Império: Formação do Estado Nacional Brasileiro',
+    topicId: 'his_brasil_imperio',
+    subject: 'História',
+    prompt: 'A primeira Constituição brasileira, outorgada por D. Pedro I em 1824, estabeleceu, entre outros elementos, o chamado "Poder Moderador", que:',
+    options: [
+      { id: 'a', text: 'Conferia ao Imperador um poder adicional, acima dos três poderes tradicionais (Executivo, Legislativo e Judiciário), permitindo-lhe intervir e arbitrar conflitos entre eles' },
+      { id: 'b', text: 'Eliminava completamente qualquer poder do Imperador sobre o governo' },
+      { id: 'c', text: 'Instituía uma divisão de poderes idêntica à de repúblicas democráticas modernas, sem qualquer poder adicional ao monarca' },
+      { id: 'd', text: 'Era exercido exclusivamente pelo Poder Legislativo, sem qualquer participação do Imperador' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O Poder Moderador, previsto na Constituição de 1824, conferia ao Imperador um quarto poder, acima dos três poderes tradicionais (Executivo, Legislativo e Judiciário), permitindo-lhe intervir em conflitos entre eles, dissolver a Câmara dos Deputados e nomear senadores, entre outras prerrogativas — um mecanismo que concentrava significativo poder político nas mãos do monarca, mesmo dentro de um sistema formalmente constitucional.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_brasil_imperio_7',
+    chapter: 'Brasil Império: o Período Regencial (1831-1840)',
+    topicId: 'his_brasil_imperio',
+    subject: 'História',
+    prompt: 'O Período Regencial (1831-1840), marcado pela ausência de um imperador adulto no trono após a abdicação de D. Pedro I, foi caracterizado por:',
+    options: [
+      { id: 'a', text: 'Intensa instabilidade política, com diversas rebeliões regionais (como a Cabanagem, a Sabinada e a Revolução Farroupilha) refletindo tensões sociais e disputas de poder' },
+      { id: 'b', text: 'Completa estabilidade política em todo o território nacional' },
+      { id: 'c', text: 'A ausência total de qualquer conflito ou tensão regional' },
+      { id: 'd', text: 'Um fortalecimento imediato e indiscutível do poder central' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O Período Regencial foi marcado por intensa instabilidade política, com o poder central enfraquecido na ausência de um imperador adulto, o que favoreceu a eclosão de diversas rebeliões regionais — como a Cabanagem (Pará), a Sabinada (Bahia), a Balaiada (Maranhão) e a Revolução Farroupilha (Rio Grande do Sul) — refletindo tensões sociais, econômicas e disputas de poder regional em diferentes partes do território.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_brasil_imperio_8',
+    chapter: 'Brasil Império: Segundo Reinado (1840-1889)',
+    topicId: 'his_brasil_imperio',
+    subject: 'História',
+    prompt: 'A Lei Eusébio de Queirós (1850), que proibiu efetivamente o tráfico transatlântico de escravizados para o Brasil, foi motivada, entre outros fatores, por:',
+    options: [
+      { id: 'a', text: 'Forte pressão diplomática e naval britânica, interessada em encerrar o comércio de escravizados' },
+      { id: 'b', text: 'Um desejo espontâneo e unânime da elite brasileira de abolir imediatamente a escravidão' },
+      { id: 'c', text: 'A ausência total de qualquer pressão externa sobre o Brasil' },
+      { id: 'd', text: 'Uma decisão popular tomada por referendo nacional' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A Lei Eusébio de Queirós foi promulgada em grande parte devido à intensa pressão diplomática e naval do Reino Unido (que já havia abolido o tráfico e pressionava outras nações a fazer o mesmo, inclusive com a Bill Aberdeen, autorizando a marinha britânica a interceptar navios negreiros) — embora a escravidão em si só seria abolida décadas depois, com a Lei Áurea de 1888.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_brasil_imperio_9',
+    chapter: 'Brasil Império: Segundo Reinado (1840-1889)',
+    topicId: 'his_brasil_imperio',
+    subject: 'História',
+    prompt: 'A Lei do Ventre Livre (1871), uma das leis do processo gradual de abolição da escravidão no Brasil Império, determinava que:',
+    options: [
+      { id: 'a', text: 'Filhos de mulheres escravizadas nascidos a partir daquela data seriam considerados livres, embora sujeitos a certas condições até atingirem a maioridade' },
+      { id: 'b', text: 'Todos os escravizados seriam libertados imediatamente' },
+      { id: 'c', text: 'A escravidão seria mantida indefinidamente, sem qualquer alteração' },
+      { id: 'd', text: 'Apenas escravizados idosos seriam libertados' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A Lei do Ventre Livre determinava que os filhos de mulheres escravizadas, nascidos a partir de 1871, seriam considerados livres — embora, na prática, ficassem sob a tutela do senhor de sua mãe até completarem certa idade (geralmente 21 anos), quando poderiam ser efetivamente libertados. Era uma das etapas do processo gradual e lento de abolição da escravidão no Brasil, que só se completaria com a Lei Áurea em 1888.',
     difficulty: 'medium'
   },
   // História — Primeira República e Era Vargas
@@ -13830,6 +14838,166 @@ export const mockQuestions: Question[] = [
     explanation: 'A CLT sistematizou diversos direitos trabalhistas conquistados ao longo do governo Vargas (jornada de trabalho, férias remuneradas, salário mínimo, entre outros), representando um avanço social importante. Ao mesmo tempo, os sindicatos permaneceram sob forte controle e tutela do Estado (o chamado sindicalismo atrelado), o que limitava sua autonomia frente ao governo — uma combinação característica do populismo trabalhista de Vargas.',
     difficulty: 'medium'
   },
+  {
+    id: 'q_his_primeira_republica_vargas_6',
+    chapter: 'A República da Espada',
+    topicId: 'his_primeira_republica_vargas',
+    subject: 'História',
+    prompt: 'O período conhecido como "República da Espada" (1889-1894), correspondente aos governos dos marechais Deodoro da Fonseca e Floriano Peixoto logo após a Proclamação da República, é assim chamado porque:',
+    options: [
+      { id: 'a', text: 'Os dois primeiros presidentes da República eram militares, refletindo a forte influência das Forças Armadas na consolidação do novo regime' },
+      { id: 'b', text: 'Foi um período marcado pela ausência total de qualquer governo' },
+      { id: 'c', text: 'Os presidentes eram exclusivamente civis, sem qualquer vínculo militar' },
+      { id: 'd', text: 'Correspondeu a um período de paz absoluta, sem qualquer conflito interno' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A expressão "República da Espada" se refere ao fato de que os dois primeiros presidentes da República — Deodoro da Fonseca e Floriano Peixoto — eram militares, refletindo a forte influência e o protagonismo das Forças Armadas (especialmente do Exército) na proclamação e na consolidação inicial do novo regime republicano.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_his_primeira_republica_vargas_7',
+    chapter: 'A República da Espada',
+    topicId: 'his_primeira_republica_vargas',
+    subject: 'História',
+    prompt: 'A Revolta da Armada (1893-1894), rebelião de setores da Marinha contra o governo de Floriano Peixoto, refletia, entre outros fatores, tensões relacionadas a:',
+    options: [
+      { id: 'a', text: 'Disputas de poder entre diferentes setores das Forças Armadas (Exército e Marinha) e insatisfações políticas com a centralização do poder sob Floriano Peixoto' },
+      { id: 'b', text: 'Uma total ausência de qualquer tensão política durante o governo de Floriano' },
+      { id: 'c', text: 'Um apoio unânime e incondicional de toda a Marinha ao governo' },
+      { id: 'd', text: 'Uma disputa exclusivamente religiosa, sem qualquer componente político' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A Revolta da Armada refletia disputas de poder entre diferentes setores das Forças Armadas (rivalidade entre Exército e Marinha) e insatisfações políticas de setores da elite com a forma centralizadora e autoritária de Floriano Peixoto conduzir o governo, evidenciando as tensões e instabilidades do período de consolidação da jovem República.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_primeira_republica_vargas_8',
+    chapter: 'A República da Espada',
+    topicId: 'his_primeira_republica_vargas',
+    subject: 'História',
+    prompt: 'A Constituição de 1891, primeira constituição republicana brasileira, estabeleceu, entre outras mudanças em relação ao período imperial:',
+    options: [
+      { id: 'a', text: 'O federalismo, concedendo maior autonomia política e administrativa aos estados (antigas províncias)' },
+      { id: 'b', text: 'A manutenção da monarquia como forma de governo' },
+      { id: 'c', text: 'Uma centralização ainda maior do poder do que existia no período imperial' },
+      { id: 'd', text: 'A extinção completa de qualquer forma de eleição' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A Constituição de 1891 estabeleceu o federalismo como forma de organização do Estado brasileiro, concedendo maior autonomia política, administrativa e fiscal aos estados (que substituíram as antigas províncias) — uma mudança significativa em relação à centralização característica do período imperial, embora essa autonomia estadual tenha também favorecido o domínio das oligarquias regionais durante a Primeira República.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_primeira_republica_vargas_9',
+    chapter: 'A Primeira República: o Declínio Oligárquico (1889-1930)',
+    topicId: 'his_primeira_republica_vargas',
+    subject: 'História',
+    prompt: 'O tenentismo, movimento de jovens oficiais do Exército (tenentes) que se rebelaram em diversos episódios durante a década de 1920 (como a Coluna Prestes), criticava principalmente:',
+    options: [
+      { id: 'a', text: 'O domínio das oligarquias regionais sobre a política nacional (a "política do café com leite") e a exclusão da maior parte da população do processo eleitoral' },
+      { id: 'b', text: 'A ausência total de qualquer problema político na Primeira República' },
+      { id: 'c', text: 'Um apoio incondicional ao sistema político vigente' },
+      { id: 'd', text: 'Exclusivamente questões relacionadas à política externa brasileira' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O tenentismo criticava o domínio político das oligarquias regionais (especialmente de São Paulo e Minas Gerais, através da "política do café com leite"), a fraude eleitoral generalizada (o chamado "voto de cabresto") e a exclusão da maior parte da população (incluindo analfabetos e mulheres) do processo eleitoral — defendendo reformas políticas e sociais, embora sem um projeto ideológico unificado entre seus participantes.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_primeira_republica_vargas_10',
+    chapter: 'A Era Vargas',
+    topicId: 'his_primeira_republica_vargas',
+    subject: 'História',
+    prompt: 'O primeiro Governo Provisório de Getúlio Vargas (1930-1934), instaurado após a Revolução de 1930, se caracterizou por:',
+    options: [
+      { id: 'a', text: 'Governar por decretos, sem uma constituição em vigor, concentrando poderes enquanto se preparava uma nova ordem política e institucional para o país' },
+      { id: 'b', text: 'Manter integralmente a Constituição de 1891 em pleno funcionamento' },
+      { id: 'c', text: 'Convocar imediatamente novas eleições presidenciais diretas' },
+      { id: 'd', text: 'Uma completa ausência de qualquer centralização de poder' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O Governo Provisório de Vargas (1930-1934) governou através de decretos, sem uma constituição formalmente em vigor (a Constituição de 1891 foi revogada), concentrando amplos poderes no Executivo enquanto se estruturava uma nova ordem política — período que incluiu medidas como a criação do Ministério do Trabalho e o início de reformas trabalhistas, além de enfrentar oposição como a Revolução Constitucionalista de 1932 em São Paulo.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_primeira_republica_vargas_11',
+    chapter: 'A Era Vargas',
+    topicId: 'his_primeira_republica_vargas',
+    subject: 'História',
+    prompt: 'A Revolução Constitucionalista de 1932, movimento armado liderado por São Paulo contra o Governo Provisório de Vargas, tinha como principal reivindicação:',
+    options: [
+      { id: 'a', text: 'A convocação de uma Assembleia Constituinte para elaborar uma nova constituição, encerrando o governo por decretos' },
+      { id: 'b', text: 'A manutenção indefinida do Governo Provisório sem qualquer constituição' },
+      { id: 'c', text: 'A separação definitiva de São Paulo do restante do território brasileiro' },
+      { id: 'd', text: 'Um apoio incondicional a Getúlio Vargas, sem qualquer reivindicação' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A Revolução Constitucionalista de 1932 teve como principal reivindicação a convocação de uma Assembleia Nacional Constituinte, para elaborar uma nova constituição e encerrar o período de governo por decretos do Governo Provisório de Vargas — embora derrotado militarmente, o movimento teve como consequência indireta a convocação da Constituinte que elaboraria a Constituição de 1934.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_primeira_republica_vargas_12',
+    chapter: 'A Era Vargas',
+    topicId: 'his_primeira_republica_vargas',
+    subject: 'História',
+    prompt: 'O Golpe do Estado Novo (1937), através do qual Getúlio Vargas encerrou o período constitucional e instaurou uma ditadura, foi justificado oficialmente pelo governo com base em:',
+    options: [
+      { id: 'a', text: 'A alegação de uma suposta ameaça comunista iminente (baseada em um documento forjado conhecido como Plano Cohen)' },
+      { id: 'b', text: 'Uma solicitação popular direta e legítima para o fechamento do Congresso' },
+      { id: 'c', text: 'Um pedido formal e voluntário de renúncia de todos os governadores estaduais' },
+      { id: 'd', text: 'A ausência total de qualquer contexto político que justificasse o golpe' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O golpe que instaurou o Estado Novo foi justificado oficialmente com base no Plano Cohen, um documento forjado (atribuído a uma suposta conspiração comunista) usado como pretexto para gerar pânico e legitimar a decretação de estado de emergência, o fechamento do Congresso e a outorga de uma nova constituição autoritária (a Constituição de 1937, conhecida como "Polaca"), consolidando a ditadura de Vargas.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_his_primeira_republica_vargas_13',
+    chapter: 'A Era Vargas: o Governo Constitucional (1934-1937)',
+    topicId: 'his_primeira_republica_vargas',
+    subject: 'História',
+    prompt: 'A Constituição de 1934, elaborada após a Revolução Constitucionalista de 1932, incorporou, entre outras novidades em relação à Constituição de 1891:',
+    options: [
+      { id: 'a', text: 'Direitos sociais e trabalhistas (como jornada de trabalho e salário mínimo) e o voto feminino' },
+      { id: 'b', text: 'A manutenção da exclusão total das mulheres do direito ao voto' },
+      { id: 'c', text: 'A eliminação de qualquer direito trabalhista previsto anteriormente' },
+      { id: 'd', text: 'O retorno ao sistema de governo monárquico' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A Constituição de 1934 incorporou avanços significativos em relação à Constituição de 1891, incluindo a previsão de direitos sociais e trabalhistas (influenciada por constituições como a de Weimar, na Alemanha) e a garantia do voto feminino, já conquistado por legislação eleitoral anterior (1932) e agora consolidado constitucionalmente — refletindo mudanças sociais e políticas em curso no país durante o período.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_primeira_republica_vargas_14',
+    chapter: 'A Era Vargas: o Governo Constitucional (1934-1937)',
+    topicId: 'his_primeira_republica_vargas',
+    subject: 'História',
+    prompt: 'A Intentona Comunista (1935), levante armado organizado pela Aliança Nacional Libertadora (ANL) com apoio do Partido Comunista, teve como uma de suas consequências políticas:',
+    options: [
+      { id: 'a', text: 'O fortalecimento do discurso anticomunista do governo Vargas, usado posteriormente para justificar medidas de repressão política' },
+      { id: 'b', text: 'A vitória completa e imediata do movimento comunista no Brasil' },
+      { id: 'c', text: 'Nenhuma repercussão política relevante para o governo Vargas' },
+      { id: 'd', text: 'O fortalecimento imediato e duradouro da ANL como força política legal' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A Intentona Comunista, um levante malsucedido em algumas guarnições militares, foi rapidamente reprimida, mas serviu para fortalecer o discurso anticomunista do governo Vargas, que passou a usar a "ameaça comunista" como justificativa para intensificar a repressão política contra opositores — um discurso que seria posteriormente ampliado (e mesmo forjado, como no caso do Plano Cohen) para justificar o golpe do Estado Novo em 1937.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_primeira_republica_vargas_15',
+    chapter: 'A Era Vargas: o Governo Constitucional (1934-1937)',
+    topicId: 'his_primeira_republica_vargas',
+    subject: 'História',
+    prompt: 'A Ação Integralista Brasileira (AIB), movimento político de extrema-direita liderado por Plínio Salgado durante os anos 1930, se caracterizava por:',
+    options: [
+      { id: 'a', text: 'Um forte nacionalismo, defesa de um Estado autoritário e centralizado, e oposição tanto ao comunismo quanto ao liberalismo' },
+      { id: 'b', text: 'Uma defesa incondicional dos ideais comunistas' },
+      { id: 'c', text: 'Uma defesa integral da democracia liberal e do pluripartidarismo' },
+      { id: 'd', text: 'Um movimento sem qualquer influência de ideologias europeias da época' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A Ação Integralista Brasileira, inspirada em parte pelo fascismo europeu, defendia um forte nacionalismo, a instauração de um Estado autoritário e centralizado, e se posicionava firmemente contra o comunismo e, também, contra o liberalismo democrático — sendo um dos principais movimentos políticos de extrema-direita organizados no Brasil durante a década de 1930, embora tenha sido posteriormente reprimido pelo próprio Estado Novo de Vargas.',
+    difficulty: 'medium'
+  },
   // História — República Liberal e Brasil Contemporâneo
   {
     id: 'q_his_republica_liberal_atual_1',
@@ -13910,6 +15078,134 @@ export const mockQuestions: Question[] = [
     correctOptionId: 'b',
     explanation: 'O Plano Real, lançado em 1994, conseguiu estabilizar a economia brasileira após décadas de alta inflação (e episódios de hiperinflação), por meio de uma nova moeda (o Real) e mecanismos de transição que ajudaram a "ancorar" as expectativas de preços — um dos planos econômicos mais bem-sucedidos da história recente do país no combate à inflação crônica.',
     difficulty: 'medium'
+  },
+  {
+    id: 'q_his_republica_liberal_atual_6',
+    chapter: 'República Liberal (1945-1964): Democracia em Tempos de Guerra Fria',
+    topicId: 'his_republica_liberal_atual',
+    subject: 'História',
+    prompt: 'A Constituição de 1946, promulgada após o fim do Estado Novo, restabeleceu no Brasil:',
+    options: [
+      { id: 'a', text: 'Princípios democráticos e liberais, como eleições diretas, liberdade de imprensa e a separação dos poderes, após o período autoritário do Estado Novo' },
+      { id: 'b', text: 'A manutenção integral do regime autoritário do Estado Novo' },
+      { id: 'c', text: 'O retorno ao sistema monárquico' },
+      { id: 'd', text: 'A eliminação completa de qualquer processo eleitoral' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A Constituição de 1946 restabeleceu princípios democráticos e liberais no Brasil após o encerramento do Estado Novo, garantindo eleições diretas, liberdade de imprensa e organização partidária, e a separação dos poderes — marcando o início do período conhecido como República Liberal (ou "Populista"), que se estenderia até o golpe militar de 1964.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_republica_liberal_atual_7',
+    chapter: 'República Liberal (1945-1964): Democracia em Tempos de Guerra Fria',
+    topicId: 'his_republica_liberal_atual',
+    subject: 'História',
+    prompt: 'Durante o período da República Liberal (1945-1964), o contexto internacional da Guerra Fria influenciou a política brasileira principalmente através de:',
+    options: [
+      { id: 'a', text: 'Pressões e debates internos sobre alinhamento ideológico (entre posições mais próximas dos EUA e setores nacionalistas ou de esquerda), incluindo restrições à atuação do Partido Comunista' },
+      { id: 'b', text: 'Uma total indiferença brasileira em relação ao conflito entre EUA e URSS' },
+      { id: 'c', text: 'Uma aliança militar formal e direta entre Brasil e União Soviética' },
+      { id: 'd', text: 'A ausência completa de qualquer debate ideológico na política brasileira do período' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O contexto da Guerra Fria influenciou fortemente a política brasileira do período, gerando debates internos sobre alinhamento internacional (entre posições mais alinhadas aos Estados Unidos e setores nacionalistas ou de esquerda que defendiam maior autonomia ou aproximação com o bloco socialista), e resultando, entre outras medidas, na cassação do registro do Partido Comunista Brasileiro em 1947, refletindo o clima de polarização ideológica global.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_republica_liberal_atual_8',
+    chapter: 'República Liberal (1945-1964): Democracia em Tempos de Guerra Fria',
+    topicId: 'his_republica_liberal_atual',
+    subject: 'História',
+    prompt: 'O suicídio do presidente Getúlio Vargas, em agosto de 1954, ocorreu em um contexto de intensa crise política, incluindo pressões de setores militares e da oposição pela sua renúncia. Esse evento teve como uma de suas consequências imediatas:',
+    options: [
+      { id: 'a', text: 'Uma onda de comoção popular que, ao menos temporariamente, fortaleceu a imagem política de Vargas e enfraqueceu a oposição mais radical que pedia sua saída' },
+      { id: 'b', text: 'A imediata instauração de um regime militar permanente' },
+      { id: 'c', text: 'Nenhuma repercussão política ou social relevante' },
+      { id: 'd', text: 'O fim definitivo de qualquer influência do getulismo na política brasileira' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O suicídio de Vargas, deixando uma carta-testamento com forte apelo emocional e político, gerou uma onda de comoção popular que, ao menos temporariamente, fortaleceu sua imagem e a de seus aliados políticos, enfraquecendo setores da oposição mais radical (incluindo alguns setores militares) que haviam pressionado por sua renúncia — um evento com repercussões duradouras na política brasileira subsequente.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_his_republica_liberal_atual_9',
+    chapter: 'República Liberal (1945-1964): Desenvolvimentismo e Populismo',
+    topicId: 'his_republica_liberal_atual',
+    subject: 'História',
+    prompt: 'O governo de Juscelino Kubitschek (1956-1961), conhecido pelo lema "cinquenta anos em cinco", se caracterizou por:',
+    options: [
+      { id: 'a', text: 'Um ambicioso plano de metas voltado para acelerar a industrialização e o desenvolvimento econômico do país, incluindo a construção de Brasília' },
+      { id: 'b', text: 'Uma política de total isolamento econômico e desindustrialização' },
+      { id: 'c', text: 'A ausência completa de qualquer projeto de desenvolvimento nacional' },
+      { id: 'd', text: 'Um governo marcado pela estagnação total da economia brasileira' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O governo de Juscelino Kubitschek ficou marcado pelo ambicioso Plano de Metas, buscando acelerar a industrialização e a modernização da infraestrutura brasileira (energia, transportes, indústria de base) sob o lema "cinquenta anos de progresso em cinco anos de governo" — sendo a construção de Brasília, nova capital federal inaugurada em 1960, um dos símbolos mais marcantes desse projeto desenvolvimentista.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_republica_liberal_atual_10',
+    chapter: 'República Liberal (1945-1964): Desenvolvimentismo e Populismo',
+    topicId: 'his_republica_liberal_atual',
+    subject: 'História',
+    prompt: 'O populismo, fenômeno político característico de diversos governos brasileiros entre 1945 e 1964 (como os de Getúlio Vargas e João Goulart), se caracterizava por:',
+    options: [
+      { id: 'a', text: 'Uma relação direta entre líderes carismáticos e as massas populares (especialmente urbanas), muitas vezes contornando ou enfraquecendo instituições partidárias tradicionais' },
+      { id: 'b', text: 'A ausência total de qualquer apelo às classes populares' },
+      { id: 'c', text: 'Um sistema baseado exclusivamente em partidos políticos fortes e institucionalizados, sem qualquer liderança pessoal' },
+      { id: 'd', text: 'Uma rejeição completa de qualquer política voltada aos trabalhadores urbanos' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O populismo se caracterizava por uma relação direta e carismática entre líderes políticos e as massas populares (especialmente a crescente população urbana e trabalhadora), frequentemente através de discursos que apelavam diretamente ao povo, concessão de direitos trabalhistas e sociais, e uma retórica nacionalista — muitas vezes contornando ou enfraquecendo o papel de partidos políticos mais institucionalizados.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_republica_liberal_atual_11',
+    chapter: 'República Liberal (1945-1964): Desenvolvimentismo e Populismo',
+    topicId: 'his_republica_liberal_atual',
+    subject: 'História',
+    prompt: 'A crise da renúncia de Jânio Quadros (1961), apenas alguns meses após assumir a presidência, e a posterior resistência à posse do vice-presidente João Goulart, refletiram:',
+    options: [
+      { id: 'a', text: 'Tensões políticas e ideológicas profundas, incluindo resistência de setores militares e conservadores à ascensão de Goulart, associado a políticas mais nacionalistas e de esquerda' },
+      { id: 'b', text: 'Uma completa unanimidade política em torno da sucessão presidencial' },
+      { id: 'c', text: 'A ausência total de qualquer crise política no período' },
+      { id: 'd', text: 'Um apoio unânime e imediato de todos os setores políticos e militares à posse de Goulart' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A renúncia repentina de Jânio Quadros gerou uma crise política significativa, agravada pela resistência de setores militares e conservadores à posse do vice-presidente João Goulart (visto com desconfiança por sua proximidade com pautas nacionalistas e trabalhistas) — uma crise que só foi resolvida através de uma solução de compromisso (o parlamentarismo temporário), mas que evidenciou tensões que culminariam, poucos anos depois, no golpe militar de 1964.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_his_republica_liberal_atual_12',
+    chapter: 'Regime Militar (1964-1985) I',
+    topicId: 'his_republica_liberal_atual',
+    subject: 'História',
+    prompt: 'O golpe militar de 1964, que derrubou o governo de João Goulart, foi justificado pelos militares e seus apoiadores civis com o argumento de:',
+    options: [
+      { id: 'a', text: 'Combater uma suposta ameaça de instauração de um regime comunista no Brasil, em meio ao contexto ideológico da Guerra Fria' },
+      { id: 'b', text: 'Defender incondicionalmente as reformas propostas pelo governo Goulart' },
+      { id: 'c', text: 'Promover a imediata redemocratização do país' },
+      { id: 'd', text: 'Uma disputa exclusivamente relacionada à política externa, sem qualquer componente ideológico interno' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O golpe militar de 1964 foi justificado por seus articuladores (militares e setores civis conservadores) com o argumento de combater uma suposta ameaça comunista, associada às reformas de base propostas pelo governo João Goulart (como a reforma agrária) — um discurso alinhado ao contexto ideológico da Guerra Fria, que resultou na instauração de um regime autoritário que se estenderia por 21 anos.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_his_republica_liberal_atual_13',
+    chapter: 'Regime Militar (1964-1985) I',
+    topicId: 'his_republica_liberal_atual',
+    subject: 'História',
+    prompt: 'O Ato Institucional nº 5 (AI-5), decretado em 1968 durante o regime militar, é considerado um dos instrumentos mais repressivos da ditadura porque:',
+    options: [
+      { id: 'a', text: 'Concedeu poderes excepcionais ao presidente, incluindo o fechamento do Congresso, cassação de mandatos e suspensão de direitos e garantias constitucionais, intensificando a repressão política' },
+      { id: 'b', text: 'Restabeleceu imediatamente todas as liberdades democráticas no país' },
+      { id: 'c', text: 'Não teve qualquer efeito prático sobre a vida política do país' },
+      { id: 'd', text: 'Foi aplicado exclusivamente para reduzir os poderes do Executivo' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O AI-5 concedeu ao presidente poderes excepcionais, incluindo o fechamento do Congresso Nacional, a cassação de mandatos eletivos e a suspensão de direitos políticos e garantias constitucionais (como o habeas corpus para crimes políticos), marcando o início do período mais repressivo da ditadura militar — conhecido como os "anos de chumbo", marcado por intensificação da censura, tortura e perseguição a opositores do regime.',
+    difficulty: 'hard'
   },
   // Biologia — Estrutura e Fisiologia Celular
   {
