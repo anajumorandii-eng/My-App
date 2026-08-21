@@ -26,12 +26,12 @@ test('buildRoadmap soma minutos de estudo líquido da semana toda (seg-dom)', ()
 });
 
 test('buildRoadmap marca a fase correta conforme a semana se aproxima da prova, e volta a subir a revisão pra 2ª fase', () => {
-  const from = new Date('2026-08-21T00:00:00');
+  const from = new Date('2026-07-01T00:00:00'); // mais de 60 dias antes da Unicamp (18/10)
   const until = new Date('2026-10-13T00:00:00'); // semana que contém a Unicamp 1ª fase (18/10)
   const weeks = buildRoadmap(goalsWith([{ board: 'UNICAMP', weight: 1, phaseFocus: 'ambas' }]), from, until);
   const firstWeek = weeks[0];
   const examWeek = weeks[weeks.length - 1];
-  assert.equal(firstWeek.phase.id, 'consolidacao'); // mais de 45 dias antes da prova
+  assert.equal(firstWeek.phase.id, 'consolidacao'); // mais de 60 dias antes da prova
   assert.equal(examWeek.phase.id, 'reta_final'); // semana da própria prova
 });
 
@@ -39,7 +39,7 @@ test('buildRoadmap volta pra revisão ativa depois da 1ª fase, mirando a 2ª fa
   const from = new Date('2026-10-19T00:00:00'); // logo depois da Unicamp 1ª fase (18/10, domingo)
   const weeks = buildRoadmap(goalsWith([{ board: 'UNICAMP', weight: 1, phaseFocus: 'ambas' }]), from, from);
   // A 2ª fase da Unicamp é em 29-30/11 — a ~38 dias dessa semana, o que já
-  // conta como revisão ativa (entre 20 e 45 dias) segundo a classificação.
+  // conta como revisão ativa (entre 30 e 60 dias) segundo a classificação.
   assert.equal(weeks[0].phase.id, 'revisao_ativa');
 });
 

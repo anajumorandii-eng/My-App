@@ -153,7 +153,7 @@ test('generateDailyPlan em reta final reserva orçamento pra revisão mesmo quan
 });
 
 test('generateDailyPlan em consolidação (sem prova próxima) não marca fase_revisao_intensificada', () => {
-  const now = new Date('2026-08-21T00:00:00');
+  const now = new Date('2026-07-01T00:00:00'); // mais de 60 dias antes da Unicamp (18/10)
   const goals = goalsWith([{ board: 'UNICAMP', weight: 1, phaseFocus: 'ambas' }]);
   const topics = [topic({ id: 'revisar_1', name: 'Revisar 1' })];
   const masteryData = [
