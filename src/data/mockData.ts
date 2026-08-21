@@ -24666,6 +24666,806 @@ export const mockQuestions: Question[] = [
     correctOptionId: 'b',
     explanation: 'This is a third conditional structure ("Had [subject] + past participle, ... would have + past participle"), used to describe a hypothetical alternative to the past: the company did not invest earlier, and the sentence imagines what would have happened if it had.',
     difficulty: 'hard'
+  },
+  {
+    id: 'q_ing_01_6',
+    chapter: 'Text Comprehension: Taxonomy and Terminology',
+    topicId: 'ing_01',
+    subject: 'Inglês',
+    prompt: 'Read the excerpt below and answer the question.\n\n"In biology, taxonomy is the science of naming, describing, and classifying organisms. Each species is assigned a unique two-part scientific name, known as a binomial, which allows scientists across the world to refer to the same organism unambiguously, regardless of the language they speak."\n\nAccording to the text, why is binomial nomenclature useful to scientists?',
+    options: [
+      { id: 'a', text: 'It allows scientists from different countries to refer to the same species without ambiguity, despite language differences' },
+      { id: 'b', text: 'It replaces the need for any further description of an organism' },
+      { id: 'c', text: 'It is used only by scientists who speak Latin as their first language' },
+      { id: 'd', text: 'It applies exclusively to plants, not animals' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'The text explains that the binomial (two-part scientific name) allows scientists worldwide to refer to the same organism unambiguously, regardless of the language they speak — solving the problem of different common names existing in different languages.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_ing_01_7',
+    chapter: 'Text Comprehension: Taxonomy and Terminology',
+    topicId: 'ing_01',
+    subject: 'Inglês',
+    prompt: 'Read the excerpt below and answer the question.\n\n"Taxonomic classification is hierarchical: organisms are grouped into increasingly broad categories, from species and genus up to kingdom and domain. Two species placed in the same genus are considered more closely related than two species that only share the same kingdom."\n\nWhat does the word "hierarchical" suggest about the taxonomic system described?',
+    options: [
+      { id: 'a', text: 'That categories are organized in ranked levels, from more specific to more general' },
+      { id: 'b', text: 'That all categories are equally broad and unordered' },
+      { id: 'c', text: 'That only one category level exists in the system' },
+      { id: 'd', text: 'That the system has no relation to how closely species are related' }
+    ],
+    correctOptionId: 'a',
+    explanation: '"Hierarchical" indicates an organization in ranked levels — here, from the most specific (species) to the broadest (domain) — with each level nesting inside the next, which is why species sharing a genus are more closely related than species that only share a kingdom.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_ing_01_8',
+    chapter: 'Text Comprehension: Taxonomy and Terminology',
+    topicId: 'ing_01',
+    subject: 'Inglês',
+    prompt: 'Read the excerpt below and answer the question.\n\n"Common names for organisms often vary from region to region and can refer to entirely different species. Scientific terminology, by contrast, aims to be precise and universally recognized, minimizing the risk of confusion in research and communication."\n\nWhat contrast does the text establish?',
+    options: [
+      { id: 'a', text: 'Between the regional variability and potential ambiguity of common names, and the precision and universality of scientific terminology' },
+      { id: 'b', text: 'Between two different scientific naming systems that are equally imprecise' },
+      { id: 'c', text: 'Between common names, which are always precise, and scientific names, which are always ambiguous' },
+      { id: 'd', text: 'There is no contrast; both naming systems work identically everywhere' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'The text contrasts common names — which vary regionally and can refer to different species — with scientific terminology, described as precise and universally recognized, minimizing confusion in research and communication.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_ing_01_9',
+    chapter: 'Text Comprehension: Songs and Poems',
+    topicId: 'ing_01',
+    subject: 'Inglês',
+    prompt: 'Read the excerpt below and answer the question.\n\n"Poetry often relies on devices such as repetition, rhyme, and imagery to convey emotion in ways that ordinary prose does not. A single well-chosen image can carry more emotional weight than several paragraphs of straightforward description."\n\nAccording to the text, how does poetry typically differ from ordinary prose?',
+    options: [
+      { id: 'a', text: 'Poetry relies on devices like repetition, rhyme, and imagery to convey emotion more powerfully than plain description' },
+      { id: 'b', text: 'Poetry never uses imagery, unlike prose' },
+      { id: 'c', text: 'Prose is always more emotionally powerful than poetry' },
+      { id: 'd', text: 'Poetry and prose are described as functioning in exactly the same way' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'The text states that poetry relies on devices such as repetition, rhyme, and imagery to convey emotion in ways ordinary prose does not — emphasizing that a well-chosen image can carry more emotional weight than extended straightforward description.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_ing_01_10',
+    chapter: 'Text Comprehension: Songs and Poems',
+    topicId: 'ing_01',
+    subject: 'Inglês',
+    prompt: 'Read the song lyric excerpt below and answer the question.\n\n"I used to walk these streets alone, now every corner feels like home."\n\nWhat contrast is being expressed in this line?',
+    options: [
+      { id: 'a', text: 'Between a past feeling of loneliness and a present feeling of belonging' },
+      { id: 'b', text: 'Between two different cities the speaker has lived in' },
+      { id: 'c', text: 'Between walking and other forms of transportation' },
+      { id: 'd', text: 'There is no contrast; both parts of the line describe the same feeling' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'The line contrasts a past state ("used to walk...alone," suggesting loneliness) with a present state ("now every corner feels like home," suggesting belonging and comfort) — a common lyrical device marking emotional change over time.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_ing_01_11',
+    chapter: 'Text Comprehension: Songs and Poems',
+    topicId: 'ing_01',
+    subject: 'Inglês',
+    prompt: 'Read the excerpt below and answer the question.\n\n"Metaphor allows poets to describe one thing in terms of another, inviting readers to see familiar experiences in an unfamiliar light. When a poet writes that \'the city is a beating heart,\' readers are asked to reconsider the city\'s rhythm and vitality."\n\nWhat is the function of metaphor, according to the text?',
+    options: [
+      { id: 'a', text: 'To describe one thing in terms of another, prompting readers to perceive familiar experiences in new, unfamiliar ways' },
+      { id: 'b', text: 'To provide a literal, factual description of an object' },
+      { id: 'c', text: 'To eliminate any emotional response from the reader' },
+      { id: 'd', text: 'To replace the need for any other poetic device' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'The text explains that metaphor describes one thing in terms of another, inviting readers to reconsider familiar experiences in an unfamiliar light — as illustrated by the example of describing a city as "a beating heart" to evoke its rhythm and vitality.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_ing_01_12',
+    chapter: 'Text Comprehension: Calories and Energy',
+    topicId: 'ing_01',
+    subject: 'Inglês',
+    prompt: 'Read the excerpt below and answer the question.\n\n"A calorie is a unit used to measure the amount of energy that food provides to the body. Foods high in fat tend to contain more calories per gram than foods high in protein or carbohydrates, which is why nutritionists often recommend moderating fat intake for weight management."\n\nAccording to the text, why might nutritionists recommend moderating fat intake?',
+    options: [
+      { id: 'a', text: 'Because fat contains more calories per gram than protein or carbohydrates, which can affect weight management' },
+      { id: 'b', text: 'Because fat contains no calories at all' },
+      { id: 'c', text: 'Because protein and carbohydrates always contain more calories than fat' },
+      { id: 'd', text: 'Because calories have no relation to weight management' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'The text explains that fat contains more calories per gram than protein or carbohydrates, which is why nutritionists often recommend moderating fat intake as part of weight management strategies.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_ing_01_13',
+    chapter: 'Text Comprehension: Calories and Energy',
+    topicId: 'ing_01',
+    subject: 'Inglês',
+    prompt: 'Read the excerpt below and answer the question.\n\n"The human body converts the chemical energy stored in food into forms it can use, such as movement and heat. Even at rest, the body burns calories to maintain basic functions like breathing and circulation — a baseline known as the basal metabolic rate."\n\nWhat does the phrase "basal metabolic rate" refer to, according to the text?',
+    options: [
+      { id: 'a', text: 'The minimum number of calories the body burns at rest to maintain basic functions such as breathing and circulation' },
+      { id: 'b', text: 'The maximum amount of energy the body can use during intense exercise' },
+      { id: 'c', text: 'The total number of calories a person consumes in a single meal' },
+      { id: 'd', text: 'A measure that applies exclusively to muscle movement' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'The text defines the "basal metabolic rate" as the baseline number of calories the body burns even at rest, to maintain essential functions like breathing and circulation.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_ing_01_14',
+    chapter: 'Text Comprehension: Calories and Energy',
+    topicId: 'ing_01',
+    subject: 'Inglês',
+    prompt: 'Read the excerpt below and answer the question.\n\n"Energy balance refers to the relationship between calories consumed through food and calories expended through daily activity and exercise. When intake consistently exceeds expenditure, the surplus energy tends to be stored, often as fat."\n\nAccording to the text, what happens when calorie intake consistently exceeds calorie expenditure?',
+    options: [
+      { id: 'a', text: 'The surplus energy tends to be stored in the body, often as fat' },
+      { id: 'b', text: 'The body automatically eliminates all excess calories immediately' },
+      { id: 'c', text: 'Energy balance remains unaffected by intake or expenditure' },
+      { id: 'd', text: 'The body stops converting any food into usable energy' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'The text states that when calorie intake consistently exceeds expenditure, the surplus energy tends to be stored in the body, often as fat — describing the basic principle of energy balance.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_ing_01_15',
+    chapter: 'Text Comprehension: Earthquakes',
+    topicId: 'ing_01',
+    subject: 'Inglês',
+    prompt: 'Read the excerpt below and answer the question.\n\n"Earthquakes occur when built-up stress along a fault line is suddenly released, causing the ground to shake. The point underground where the rupture begins is called the focus, while the point on the surface directly above it is called the epicenter."\n\nAccording to the text, what is the difference between the "focus" and the "epicenter" of an earthquake?',
+    options: [
+      { id: 'a', text: 'The focus is the underground point where the rupture begins, while the epicenter is the point on the surface directly above it' },
+      { id: 'b', text: 'They refer to exactly the same location, just with different names' },
+      { id: 'c', text: 'The epicenter is always located underground, while the focus is on the surface' },
+      { id: 'd', text: 'The focus refers only to earthquakes in the ocean, while the epicenter refers only to earthquakes on land' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'The text distinguishes the focus (the underground point where the rupture begins) from the epicenter (the point on the surface directly above the focus) — two related but distinct reference points used to describe an earthquake\'s location.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_ing_01_16',
+    chapter: 'Text Comprehension: Earthquakes',
+    topicId: 'ing_01',
+    subject: 'Inglês',
+    prompt: 'Read the excerpt below and answer the question.\n\n"While earthquakes cannot yet be predicted with precision, scientists can estimate the probability of a major earthquake occurring in a given region over a certain period, based on historical patterns and the accumulation of stress along known fault lines."\n\nWhat distinction does the text draw between "predicting" and "estimating the probability of" an earthquake?',
+    options: [
+      { id: 'a', text: 'Prediction would mean knowing exactly when and where an earthquake will occur, while probability estimates only indicate likelihood over time based on patterns and stress accumulation' },
+      { id: 'b', text: 'The two terms mean exactly the same thing in the text' },
+      { id: 'c', text: 'Scientists can predict earthquakes with complete precision, according to the text' },
+      { id: 'd', text: 'Probability estimates are described as less reliable than random guesses' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'The text draws a distinction: scientists cannot predict earthquakes with precision (an exact time and place), but they can estimate the probability of a major earthquake occurring in a region over a period, based on historical patterns and stress accumulation.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_ing_01_17',
+    chapter: 'Text Comprehension: Earthquakes',
+    topicId: 'ing_01',
+    subject: 'Inglês',
+    prompt: 'Read the excerpt below and answer the question.\n\n"Building codes in earthquake-prone regions increasingly require structures to be designed with flexibility in mind, allowing them to sway slightly during a quake rather than remaining rigid, which can lead to sudden structural failure."\n\nAccording to the text, why are flexible structures preferred over rigid ones in earthquake-prone regions?',
+    options: [
+      { id: 'a', text: 'Because flexibility allows buildings to sway slightly during a quake instead of remaining rigid, which can lead to sudden structural failure' },
+      { id: 'b', text: 'Because rigid structures are always safer during earthquakes' },
+      { id: 'c', text: 'Because flexible structures are cheaper to build, regardless of safety' },
+      { id: 'd', text: 'Because building codes in earthquake-prone regions do not consider structural design at all' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'The text explains that flexible structures are favored because they can sway slightly during an earthquake, whereas rigid structures are more prone to sudden structural failure — a key principle behind modern earthquake-resistant building codes.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_ing_01_18',
+    chapter: 'Text Comprehension: Hurricanes',
+    topicId: 'ing_01',
+    subject: 'Inglês',
+    prompt: 'Read the excerpt below and answer the question.\n\n"Hurricanes form over warm ocean waters, drawing energy from the heat and moisture in the air above the sea surface. As the storm intensifies, it develops a calm central region known as the eye, surrounded by the eyewall, where the strongest winds occur."\n\nAccording to the text, where do the strongest winds of a hurricane typically occur?',
+    options: [
+      { id: 'a', text: 'In the eyewall, which surrounds the calm central region known as the eye' },
+      { id: 'b', text: 'In the eye, the calm central region of the storm' },
+      { id: 'c', text: 'Exclusively over land, never over the ocean' },
+      { id: 'd', text: 'Equally distributed throughout the entire storm, with no region being stronger than another' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'The text explains that the eyewall — the region surrounding the calm central eye — is where the strongest winds of a hurricane occur, distinguishing it from the relatively calm conditions at the storm\'s center.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_ing_01_19',
+    chapter: 'Text Comprehension: Hurricanes',
+    topicId: 'ing_01',
+    subject: 'Inglês',
+    prompt: 'Read the excerpt below and answer the question.\n\n"Hurricanes are classified by category based on sustained wind speed, ranging from Category 1 to Category 5. A higher category generally indicates greater potential for damage, although factors like storm surge and rainfall also significantly affect the overall impact."\n\nAccording to the text, what determines a hurricane\'s category classification?',
+    options: [
+      { id: 'a', text: 'Sustained wind speed, with higher categories generally indicating greater potential for damage' },
+      { id: 'b', text: 'Exclusively the amount of rainfall produced by the storm' },
+      { id: 'c', text: 'The exact geographic location where the hurricane makes landfall' },
+      { id: 'd', text: 'The number of days the storm has existed' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'The text states that hurricanes are classified by category based on sustained wind speed, though it also notes that factors like storm surge and rainfall significantly affect the overall impact beyond just the category classification.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_ing_01_20',
+    chapter: 'Text Comprehension: Hurricanes',
+    topicId: 'ing_01',
+    subject: 'Inglês',
+    prompt: 'Read the excerpt below and answer the question.\n\n"Coastal communities are often more vulnerable to hurricane damage not only because of high winds, but also due to storm surge — a rise in sea level caused by the storm that can flood low-lying areas well beyond the immediate coastline."\n\nAccording to the text, why are coastal communities considered especially vulnerable to hurricanes?',
+    options: [
+      { id: 'a', text: 'Because they face both high winds and storm surge, which can flood low-lying areas beyond the immediate coastline' },
+      { id: 'b', text: 'Because coastal communities never experience high winds during hurricanes' },
+      { id: 'c', text: 'Because storm surge only affects areas far inland, never the coast itself' },
+      { id: 'd', text: 'Because hurricanes exclusively affect areas away from any coastline' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'The text explains that coastal communities face a combined vulnerability: high winds and storm surge (a rise in sea level caused by the storm) that can flood low-lying areas even beyond the immediate coastline.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_ing_01_21',
+    chapter: 'Text Comprehension: Ecology (Greenhouse Gases)',
+    topicId: 'ing_01',
+    subject: 'Inglês',
+    prompt: 'Read the excerpt below and answer the question.\n\n"Greenhouse gases, such as carbon dioxide and methane, trap heat in the Earth\'s atmosphere, a process essential for maintaining temperatures suitable for life. However, human activities have significantly increased the concentration of these gases, intensifying the natural greenhouse effect."\n\nAccording to the text, what has changed due to human activity?',
+    options: [
+      { id: 'a', text: 'The concentration of greenhouse gases has significantly increased, intensifying the natural greenhouse effect' },
+      { id: 'b', text: 'Greenhouse gases have completely disappeared from the atmosphere' },
+      { id: 'c', text: 'The greenhouse effect has stopped functioning entirely' },
+      { id: 'd', text: 'Carbon dioxide and methane are no longer considered greenhouse gases' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'The text explains that while the greenhouse effect is a natural process essential for life, human activities have significantly increased the concentration of greenhouse gases, intensifying this natural process beyond its typical balance.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_ing_01_22',
+    chapter: 'Text Comprehension: Ecology (Greenhouse Gases)',
+    topicId: 'ing_01',
+    subject: 'Inglês',
+    prompt: 'Read the excerpt below and answer the question.\n\n"Deforestation contributes to increased greenhouse gas concentrations in two ways: it releases carbon stored in trees when they are cut down or burned, and it also reduces the number of trees available to absorb carbon dioxide from the atmosphere."\n\nAccording to the text, how does deforestation contribute to greenhouse gas concentrations?',
+    options: [
+      { id: 'a', text: 'By releasing carbon stored in trees when cut down or burned, and by reducing the number of trees available to absorb carbon dioxide' },
+      { id: 'b', text: 'By having no measurable effect on carbon dioxide levels' },
+      { id: 'c', text: 'By increasing the number of trees available to absorb carbon dioxide' },
+      { id: 'd', text: 'Exclusively through a mechanism unrelated to carbon at all' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'The text describes two mechanisms by which deforestation increases greenhouse gas concentrations: releasing carbon previously stored in trees, and reducing the number of trees that would otherwise absorb carbon dioxide from the atmosphere.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_ing_01_23',
+    chapter: 'Text Comprehension: Ecology (Greenhouse Gases)',
+    topicId: 'ing_01',
+    subject: 'Inglês',
+    prompt: 'Read the excerpt below and answer the question.\n\n"International agreements on greenhouse gas emissions often set targets for reducing output over specific timeframes. Achieving these targets typically requires a combination of policy changes, technological innovation, and shifts in energy consumption patterns."\n\nAccording to the text, what is typically required to achieve emission reduction targets?',
+    options: [
+      { id: 'a', text: 'A combination of policy changes, technological innovation, and shifts in energy consumption patterns' },
+      { id: 'b', text: 'Exclusively new technology, with no need for policy changes' },
+      { id: 'c', text: 'No changes are required at all to meet these targets' },
+      { id: 'd', text: 'Only changes in energy consumption, without any policy involvement' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'The text states that achieving emission reduction targets typically requires a combination of factors: policy changes, technological innovation, and shifts in energy consumption patterns — not a single isolated measure.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_ing_01_24',
+    chapter: 'Text Comprehension: Pollution',
+    topicId: 'ing_01',
+    subject: 'Inglês',
+    prompt: 'Read the excerpt below and answer the question.\n\n"Air pollution is linked not only to respiratory diseases but also to cardiovascular problems, as fine particulate matter can enter the bloodstream and affect organs beyond the lungs."\n\nAccording to the text, why is air pollution linked to cardiovascular problems, and not just respiratory ones?',
+    options: [
+      { id: 'a', text: 'Because fine particulate matter can enter the bloodstream and affect organs beyond the lungs' },
+      { id: 'b', text: 'Because air pollution has no effect whatsoever on the cardiovascular system' },
+      { id: 'c', text: 'Because particulate matter is entirely filtered out before reaching the bloodstream' },
+      { id: 'd', text: 'Because cardiovascular problems are unrelated to any environmental factor' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'The text explains that fine particulate matter from air pollution can enter the bloodstream, allowing it to affect organs beyond the lungs — which is why air pollution is linked to cardiovascular problems in addition to respiratory diseases.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_ing_01_25',
+    chapter: 'Text Comprehension: Pollution',
+    topicId: 'ing_01',
+    subject: 'Inglês',
+    prompt: 'Read the excerpt below and answer the question.\n\n"Plastic pollution in oceans breaks down into microplastics over time rather than fully decomposing. These tiny particles have been found in marine organisms and, increasingly, in the human food chain."\n\nAccording to the text, what happens to plastic pollution in the ocean over time?',
+    options: [
+      { id: 'a', text: 'It breaks down into microplastics rather than fully decomposing, and these particles have been found in marine organisms and the human food chain' },
+      { id: 'b', text: 'It fully decomposes and disappears completely from the ocean' },
+      { id: 'c', text: 'It remains entirely unchanged, with no breakdown at all' },
+      { id: 'd', text: 'It is described as having no connection to marine organisms or human food' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'The text states that plastic pollution breaks down into microplastics rather than fully decomposing, and that these tiny particles have been found both in marine organisms and, increasingly, in the human food chain.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_ing_01_26',
+    chapter: 'Text Comprehension: Pollution',
+    topicId: 'ing_01',
+    subject: 'Inglês',
+    prompt: 'Read the excerpt below and answer the question.\n\n"Noise pollution, though less visible than air or water pollution, has been linked to sleep disturbances, stress, and even long-term cardiovascular effects, particularly in densely populated urban areas."\n\nAccording to the text, why might noise pollution be less commonly discussed than air or water pollution?',
+    options: [
+      { id: 'a', text: 'Because it is described as "less visible" than air or water pollution, even though it has serious health effects such as sleep disturbances and cardiovascular impacts' },
+      { id: 'b', text: 'Because noise pollution has no proven effects on human health' },
+      { id: 'c', text: 'Because noise pollution only occurs in rural, sparsely populated areas' },
+      { id: 'd', text: 'Because the text states noise pollution is entirely harmless' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'The text characterizes noise pollution as "less visible" than air or water pollution, which may explain why it receives less attention — despite being linked to real health effects such as sleep disturbances, stress, and long-term cardiovascular impacts, especially in dense urban areas.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_ing_01_27',
+    chapter: 'Text Comprehension: The Human Brain',
+    topicId: 'ing_01',
+    subject: 'Inglês',
+    prompt: 'Read the excerpt below and answer the question.\n\n"The human brain exhibits a property known as neuroplasticity: its ability to reorganize itself by forming new neural connections throughout life. This means the brain can adapt in response to learning, experience, or even injury."\n\nAccording to the text, what does "neuroplasticity" refer to?',
+    options: [
+      { id: 'a', text: 'The brain\'s ability to reorganize itself by forming new neural connections throughout life, adapting to learning, experience, or injury' },
+      { id: 'b', text: 'The brain\'s complete inability to change after childhood' },
+      { id: 'c', text: 'A property found only in artificial computer systems, not in the human brain' },
+      { id: 'd', text: 'The exact number of neurons present in an adult brain' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'The text defines neuroplasticity as the brain\'s ability to reorganize itself by forming new neural connections throughout life, allowing it to adapt in response to learning, new experiences, or even injury.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_ing_01_28',
+    chapter: 'Text Comprehension: The Human Brain',
+    topicId: 'ing_01',
+    subject: 'Inglês',
+    prompt: 'Read the excerpt below and answer the question.\n\n"Different regions of the brain are associated with different functions: the frontal lobe plays a key role in decision-making and impulse control, while the occipital lobe is primarily responsible for processing visual information."\n\nAccording to the text, what is the frontal lobe primarily associated with?',
+    options: [
+      { id: 'a', text: 'Decision-making and impulse control' },
+      { id: 'b', text: 'Processing visual information exclusively' },
+      { id: 'c', text: 'No specific function at all, according to the text' },
+      { id: 'd', text: 'Exactly the same function as the occipital lobe' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'The text distinguishes between brain regions and their functions: the frontal lobe is associated with decision-making and impulse control, while the occipital lobe is primarily responsible for processing visual information.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_ing_01_29',
+    chapter: 'Text Comprehension: The Human Brain',
+    topicId: 'ing_01',
+    subject: 'Inglês',
+    prompt: 'Read the excerpt below and answer the question.\n\n"Sleep plays a crucial role in memory consolidation, the process by which short-term memories are stabilized and transferred into long-term storage. Disrupted sleep patterns have been shown to impair this process, affecting learning and retention."\n\nAccording to the text, what happens when sleep patterns are disrupted?',
+    options: [
+      { id: 'a', text: 'The process of memory consolidation is impaired, negatively affecting learning and retention' },
+      { id: 'b', text: 'Memory consolidation becomes faster and more efficient' },
+      { id: 'c', text: 'Sleep has no relationship whatsoever with memory' },
+      { id: 'd', text: 'Long-term memories are converted back into short-term memories' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'The text explains that sleep plays a crucial role in memory consolidation, and that disrupted sleep patterns have been shown to impair this process, negatively affecting learning and retention of information.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_ing_01_30',
+    chapter: 'Text Comprehension: Global Warming',
+    topicId: 'ing_01',
+    subject: 'Inglês',
+    prompt: 'Read the excerpt below and answer the question.\n\n"Global warming refers to the long-term increase in Earth\'s average surface temperature, primarily driven by human activities that release greenhouse gases. Its effects include rising sea levels, more frequent extreme weather events, and disruptions to ecosystems worldwide."\n\nAccording to the text, what is identified as the primary driver of global warming?',
+    options: [
+      { id: 'a', text: 'Human activities that release greenhouse gases' },
+      { id: 'b', text: 'Natural cycles that have no connection to human activity' },
+      { id: 'c', text: 'A temporary and reversible cooling trend' },
+      { id: 'd', text: 'Events that occur exclusively at the Earth\'s poles' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'The text identifies human activities that release greenhouse gases as the primary driver of global warming, listing rising sea levels, extreme weather, and ecosystem disruptions among its effects.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_ing_01_31',
+    chapter: 'Text Comprehension: Global Warming',
+    topicId: 'ing_01',
+    subject: 'Inglês',
+    prompt: 'Read the excerpt below and answer the question.\n\n"Some regions may experience global warming differently than others: while average global temperatures rise, certain areas could actually see more extreme cold events, as shifting weather patterns disrupt what were once predictable seasonal norms."\n\nWhat apparent contradiction does the text address regarding global warming?',
+    options: [
+      { id: 'a', text: 'That average global temperatures are rising overall, even though some regions might experience more extreme cold events due to disrupted weather patterns' },
+      { id: 'b', text: 'That global warming causes every single region on Earth to become uniformly warmer with no exceptions' },
+      { id: 'c', text: 'That global warming has stopped affecting weather patterns anywhere in the world' },
+      { id: 'd', text: 'That cold events prove global warming is not occurring at all' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'The text addresses an apparent contradiction: even though average global temperatures rise, some regions might experience more extreme cold events, because shifting weather patterns disrupt previously predictable seasonal norms — a distinction between global averages and regional variability.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_ing_01_32',
+    chapter: 'Text Comprehension: Novels/Short Stories',
+    topicId: 'ing_01',
+    subject: 'Inglês',
+    prompt: 'Read the excerpt below and answer the question.\n\n"A short story typically focuses on a single incident or a limited set of characters, unlike a novel, which can develop multiple plotlines and a broader cast over a much longer span of pages."\n\nAccording to the text, how does a short story typically differ from a novel?',
+    options: [
+      { id: 'a', text: 'A short story typically focuses on a single incident or limited characters, while a novel can develop multiple plotlines and a broader cast over more pages' },
+      { id: 'b', text: 'A short story is always longer than a novel' },
+      { id: 'c', text: 'Novels never include more than one character' },
+      { id: 'd', text: 'There is no meaningful difference between the two forms, according to the text' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'The text contrasts short stories, which typically focus on a single incident or limited characters, with novels, which can develop multiple plotlines and a broader cast of characters over a much longer span of pages.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_ing_01_33',
+    chapter: 'Text Comprehension: Novels/Short Stories',
+    topicId: 'ing_01',
+    subject: 'Inglês',
+    prompt: 'Read the excerpt below and answer the question.\n\n"An unreliable narrator is one whose credibility has been seriously compromised, whether due to limited knowledge, personal bias, or deliberate deception. Readers of such narratives must often infer the truth by reading between the lines."\n\nWhat does the text suggest readers must do when facing an unreliable narrator?',
+    options: [
+      { id: 'a', text: 'Infer the truth by reading between the lines, since the narrator\'s credibility has been compromised' },
+      { id: 'b', text: 'Trust every statement made by the narrator without question' },
+      { id: 'c', text: 'Assume the narrator has no bias or limitations whatsoever' },
+      { id: 'd', text: 'Ignore the story entirely, since it cannot be understood' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'The text explains that because an unreliable narrator\'s credibility is compromised (due to limited knowledge, bias, or deliberate deception), readers must infer the truth by reading between the lines, rather than trusting the narration at face value.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_ing_01_34',
+    chapter: 'Text Comprehension: Novels/Short Stories',
+    topicId: 'ing_01',
+    subject: 'Inglês',
+    prompt: 'Read the excerpt below and answer the question.\n\n"Foreshadowing is a literary technique in which an author hints at events that will occur later in the story, often creating tension or preparing the reader for a significant turn in the plot."\n\nAccording to the text, what is the purpose of foreshadowing?',
+    options: [
+      { id: 'a', text: 'To hint at later events in the story, often creating tension or preparing the reader for a significant plot turn' },
+      { id: 'b', text: 'To reveal the entire ending of the story at its very beginning' },
+      { id: 'c', text: 'To confuse the reader with information unrelated to the plot' },
+      { id: 'd', text: 'To remove any sense of tension from the narrative' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'The text defines foreshadowing as a technique used to hint at later events, often creating tension or preparing the reader for a significant turn in the plot — a subtle preparation, not a full revelation of the ending.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_ing_01_35',
+    chapter: 'Text Comprehension: Bacteria',
+    topicId: 'ing_01',
+    subject: 'Inglês',
+    prompt: 'Read the excerpt below and answer the question.\n\n"Not all bacteria are harmful; in fact, many species play essential roles in digestion, nutrient cycling, and even the production of certain foods and medicines. The overgeneralization that all bacteria are dangerous ignores this diversity of function."\n\nAccording to the text, what misconception does it address about bacteria?',
+    options: [
+      { id: 'a', text: 'The overgeneralization that all bacteria are dangerous, when in fact many play essential beneficial roles in digestion, nutrient cycling, and food or medicine production' },
+      { id: 'b', text: 'The idea that bacteria are entirely absent from the human body' },
+      { id: 'c', text: 'The claim that no bacteria have ever been useful to humans' },
+      { id: 'd', text: 'The notion that bacteria are exclusively found in laboratories' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'The text addresses the misconception that all bacteria are harmful, pointing out that many species play essential beneficial roles in digestion, nutrient cycling, and the production of certain foods and medicines.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_ing_01_36',
+    chapter: 'Text Comprehension: Bacteria',
+    topicId: 'ing_01',
+    subject: 'Inglês',
+    prompt: 'Read the excerpt below and answer the question.\n\n"Antibiotic resistance occurs when bacteria evolve mechanisms to survive drugs designed to kill them. Overuse and misuse of antibiotics, including incomplete treatment courses, accelerate this evolutionary process."\n\nAccording to the text, what accelerates the development of antibiotic resistance?',
+    options: [
+      { id: 'a', text: 'Overuse and misuse of antibiotics, including incomplete treatment courses' },
+      { id: 'b', text: 'The complete absence of any antibiotic use whatsoever' },
+      { id: 'c', text: 'Bacteria that have no ability to evolve at all' },
+      { id: 'd', text: 'The use of antibiotics exclusively in correct, complete treatment courses' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'The text explains that antibiotic resistance develops as bacteria evolve to survive the drugs meant to kill them, and that this evolutionary process is accelerated by the overuse and misuse of antibiotics, including incomplete treatment courses.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_ing_01_37',
+    chapter: 'Text Comprehension: Bacteria',
+    topicId: 'ing_01',
+    subject: 'Inglês',
+    prompt: 'Read the excerpt below and answer the question.\n\n"The human gut hosts trillions of bacteria collectively known as the gut microbiome. This community assists in digesting certain foods, synthesizing vitamins, and even influencing the immune system\'s development."\n\nAccording to the text, what roles does the gut microbiome play in the human body?',
+    options: [
+      { id: 'a', text: 'It assists in digesting certain foods, synthesizing vitamins, and influencing the development of the immune system' },
+      { id: 'b', text: 'It has no measurable effect on digestion, vitamins, or immunity' },
+      { id: 'c', text: 'It exclusively causes disease, with no beneficial function' },
+      { id: 'd', text: 'It is described as being entirely absent from the human body' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'The text describes several roles played by the gut microbiome: assisting in digestion of certain foods, synthesizing vitamins, and even influencing the development of the immune system — highlighting bacteria\'s beneficial functions within the body.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_ing_01_38',
+    chapter: 'Text Comprehension: Viruses',
+    topicId: 'ing_01',
+    subject: 'Inglês',
+    prompt: 'Read the excerpt below and answer the question.\n\n"Unlike bacteria, viruses cannot reproduce on their own; they must invade a host cell and hijack its machinery to replicate. This fundamental difference is one reason antibiotics, which target bacterial processes, are ineffective against viral infections."\n\nAccording to the text, why are antibiotics ineffective against viral infections?',
+    options: [
+      { id: 'a', text: 'Because antibiotics target bacterial processes, while viruses reproduce differently, by hijacking a host cell\'s machinery rather than reproducing independently' },
+      { id: 'b', text: 'Because antibiotics are effective against all types of infections, including viral ones' },
+      { id: 'c', text: 'Because viruses reproduce in exactly the same way as bacteria' },
+      { id: 'd', text: 'Because viruses do not require a host cell to reproduce' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'The text explains that viruses, unlike bacteria, cannot reproduce independently — they must hijack a host cell\'s machinery — which is why antibiotics, designed to target bacterial processes, are ineffective against viral infections.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_ing_01_39',
+    chapter: 'Text Comprehension: Viruses',
+    topicId: 'ing_01',
+    subject: 'Inglês',
+    prompt: 'Read the excerpt below and answer the question.\n\n"Vaccines work by training the immune system to recognize a specific virus without causing the disease itself, often by introducing a harmless piece of the virus or a weakened version of it."\n\nAccording to the text, how do vaccines train the immune system without causing illness?',
+    options: [
+      { id: 'a', text: 'By introducing a harmless piece of the virus or a weakened version of it, allowing the immune system to learn to recognize it without triggering the actual disease' },
+      { id: 'b', text: 'By introducing the full, unweakened virus in its most dangerous form' },
+      { id: 'c', text: 'By removing the immune system\'s ability to recognize any virus at all' },
+      { id: 'd', text: 'By having no interaction whatsoever with the immune system' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'The text explains that vaccines work by introducing a harmless piece of the virus or a weakened version of it, training the immune system to recognize the virus without causing the disease itself.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_ing_01_40',
+    chapter: 'Text Comprehension: Viruses',
+    topicId: 'ing_01',
+    subject: 'Inglês',
+    prompt: 'Read the excerpt below and answer the question.\n\n"Viruses mutate over time, and some mutations allow new variants to spread more easily or partially evade immunity built up from previous infections or vaccinations. This is one reason ongoing surveillance of viral evolution remains important."\n\nAccording to the text, why is ongoing surveillance of viral evolution considered important?',
+    options: [
+      { id: 'a', text: 'Because viral mutations can allow new variants to spread more easily or partially evade existing immunity, making monitoring important' },
+      { id: 'b', text: 'Because viruses never mutate, making surveillance unnecessary' },
+      { id: 'c', text: 'Because all viral mutations make a virus weaker and less transmissible' },
+      { id: 'd', text: 'Because previous immunity always fully protects against any new variant' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'The text explains that viral mutations can produce new variants that spread more easily or partially evade immunity from previous infections or vaccinations — which is why ongoing surveillance of viral evolution remains important.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_ing_01_41',
+    chapter: 'Text Comprehension: Discrimination Against Women',
+    topicId: 'ing_01',
+    subject: 'Inglês',
+    prompt: 'Read the excerpt below and answer the question.\n\n"Despite legal advances toward gender equality in many countries, women continue to face a persistent wage gap, often earning less than men for comparable work, a disparity that widens further for women of color."\n\nAccording to the text, what disparity is described as widening further for women of color?',
+    options: [
+      { id: 'a', text: 'The wage gap between women and men for comparable work' },
+      { id: 'b', text: 'A disparity that has been completely eliminated by legal advances' },
+      { id: 'c', text: 'A gap that the text says affects only men, not women' },
+      { id: 'd', text: 'A disparity unrelated to wages or employment' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'The text describes a persistent wage gap in which women often earn less than men for comparable work, noting that this disparity widens further specifically for women of color, despite legal advances toward gender equality.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_ing_01_42',
+    chapter: 'Text Comprehension: Discrimination Against Women',
+    topicId: 'ing_01',
+    subject: 'Inglês',
+    prompt: 'Read the excerpt below and answer the question.\n\n"Workplace discrimination against women can take subtle forms, such as being passed over for promotions despite equal qualifications, or having their contributions in meetings attributed to male colleagues."\n\nAccording to the text, how can workplace discrimination against women manifest?',
+    options: [
+      { id: 'a', text: 'Through subtle forms, such as being passed over for promotions despite equal qualifications, or having contributions attributed to male colleagues' },
+      { id: 'b', text: 'Only through obvious, explicit forms of exclusion, never subtle ones' },
+      { id: 'c', text: 'The text states that workplace discrimination against women no longer exists in any form' },
+      { id: 'd', text: 'Exclusively through differences in job titles, with no other examples given' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'The text describes subtle forms of workplace discrimination against women: being passed over for promotions despite equal qualifications, or having their contributions in meetings attributed to male colleagues.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_ing_01_43',
+    chapter: 'Text Comprehension: Discrimination Against Women',
+    topicId: 'ing_01',
+    subject: 'Inglês',
+    prompt: 'Read the excerpt below and answer the question.\n\n"Historically, many professions explicitly excluded women, a practice justified at the time by now-discredited assumptions about women\'s capabilities. Though formal exclusion has largely ended, its legacy still shapes representation in certain fields today."\n\nAccording to the text, what is the relationship between historical exclusion and current representation in certain fields?',
+    options: [
+      { id: 'a', text: 'Although formal exclusion of women from professions has largely ended, its legacy still shapes representation in certain fields today' },
+      { id: 'b', text: 'Historical exclusion has had no lasting effect on any field today' },
+      { id: 'c', text: 'Formal exclusion of women from professions still exists exactly as it did historically' },
+      { id: 'd', text: 'Representation today is entirely unrelated to any historical practice' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'The text explains that although formal, explicit exclusion of women from certain professions has largely ended, its historical legacy still shapes representation in those fields today — a lingering effect beyond the formal end of the practice.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_ing_01_44',
+    chapter: 'Text Comprehension: Women Empowerment',
+    topicId: 'ing_01',
+    subject: 'Inglês',
+    prompt: 'Read the excerpt below and answer the question.\n\n"Access to education is widely regarded as one of the most effective tools for women\'s empowerment, as it expands economic opportunities and increases women\'s participation in decision-making, both within families and in public life."\n\nAccording to the text, why is access to education considered effective for women\'s empowerment?',
+    options: [
+      { id: 'a', text: 'Because it expands economic opportunities and increases women\'s participation in decision-making, both in families and public life' },
+      { id: 'b', text: 'Because it has no measurable effect on economic opportunities' },
+      { id: 'c', text: 'Because it reduces women\'s participation in public life' },
+      { id: 'd', text: 'Because it is described as irrelevant to decision-making of any kind' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'The text explains that access to education is considered effective for women\'s empowerment because it expands economic opportunities and increases women\'s participation in decision-making, both within families and in public life.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_ing_01_45',
+    chapter: 'Text Comprehension: Women Empowerment',
+    topicId: 'ing_01',
+    subject: 'Inglês',
+    prompt: 'Read the excerpt below and answer the question.\n\n"Microfinance programs, which provide small loans to individuals who lack access to traditional banking, have empowered many women entrepreneurs in developing regions to start small businesses and gain financial independence."\n\nAccording to the text, how have microfinance programs contributed to women\'s empowerment?',
+    options: [
+      { id: 'a', text: 'By providing small loans to those lacking access to traditional banking, enabling many women to start small businesses and gain financial independence' },
+      { id: 'b', text: 'By restricting women\'s access to any form of banking or credit' },
+      { id: 'c', text: 'By requiring large loans only accessible through traditional banks' },
+      { id: 'd', text: 'By having no effect whatsoever on financial independence' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'The text explains that microfinance programs provide small loans to people lacking access to traditional banking, and that this has empowered many women entrepreneurs in developing regions to start small businesses and achieve financial independence.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_ing_01_46',
+    chapter: 'Text Comprehension: Women Empowerment',
+    topicId: 'ing_01',
+    subject: 'Inglês',
+    prompt: 'Read the excerpt below and answer the question.\n\n"Representation matters: when young girls see women occupying leadership roles in politics, science, and business, they are more likely to envision similar possibilities for their own futures."\n\nAccording to the text, why does representation of women in leadership roles matter?',
+    options: [
+      { id: 'a', text: 'Because seeing women in leadership roles makes young girls more likely to envision similar possibilities for their own futures' },
+      { id: 'b', text: 'Because representation has no effect on how young girls view their own future possibilities' },
+      { id: 'c', text: 'Because leadership roles are described as being closed to women in politics, science, and business' },
+      { id: 'd', text: 'Because young girls are explicitly discouraged from pursuing leadership roles' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'The text explains that representation matters because when young girls see women occupying leadership roles in politics, science, and business, they are more likely to envision similar possibilities for their own futures.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_ing_01_47',
+    chapter: 'Text Comprehension: Digital Technology',
+    topicId: 'ing_01',
+    subject: 'Inglês',
+    prompt: 'Read the excerpt below and answer the question.\n\n"The digital divide refers to the gap between individuals who have ready access to computers and the internet and those who do not, a disparity that can affect access to education, jobs, and essential services."\n\nAccording to the text, what does the "digital divide" refer to?',
+    options: [
+      { id: 'a', text: 'The gap between those who have ready access to computers and the internet and those who do not, affecting access to education, jobs, and services' },
+      { id: 'b', text: 'A situation in which everyone has exactly equal access to digital technology' },
+      { id: 'c', text: 'A term that refers exclusively to differences in smartphone brands' },
+      { id: 'd', text: 'A gap that has no relation to education, jobs, or essential services' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'The text defines the "digital divide" as the gap between those with ready access to computers and the internet and those without, noting that this disparity can affect access to education, jobs, and essential services.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_ing_01_48',
+    chapter: 'Text Comprehension: Digital Technology',
+    topicId: 'ing_01',
+    subject: 'Inglês',
+    prompt: 'Read the excerpt below and answer the question.\n\n"Artificial intelligence systems are trained on large datasets, which means their outputs can inherit and even amplify biases present in that data, raising concerns about fairness in automated decision-making."\n\nAccording to the text, why can artificial intelligence systems raise concerns about fairness?',
+    options: [
+      { id: 'a', text: 'Because they are trained on datasets that may contain biases, which the systems can then inherit and even amplify in their outputs' },
+      { id: 'b', text: 'Because artificial intelligence systems are never trained on any data at all' },
+      { id: 'c', text: 'Because these systems always eliminate any bias present in their training data' },
+      { id: 'd', text: 'Because fairness in automated decision-making is described as never being a concern' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'The text explains that because AI systems are trained on large datasets, they can inherit — and even amplify — biases present in that data, which raises legitimate concerns about fairness in automated decision-making.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_ing_01_49',
+    chapter: 'Text Comprehension: Digital Technology',
+    topicId: 'ing_01',
+    subject: 'Inglês',
+    prompt: 'Read the excerpt below and answer the question.\n\n"Cybersecurity threats have grown more sophisticated as more aspects of daily life move online, requiring individuals and organizations alike to adopt stronger practices, such as multi-factor authentication, to protect sensitive information."\n\nAccording to the text, why have stronger security practices, such as multi-factor authentication, become necessary?',
+    options: [
+      { id: 'a', text: 'Because cybersecurity threats have grown more sophisticated as more aspects of daily life move online' },
+      { id: 'b', text: 'Because cybersecurity threats have completely disappeared in recent years' },
+      { id: 'c', text: 'Because fewer aspects of daily life now occur online than before' },
+      { id: 'd', text: 'Because multi-factor authentication is described as unnecessary for protecting information' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'The text explains that stronger security practices, such as multi-factor authentication, have become necessary because cybersecurity threats have grown more sophisticated as more aspects of daily life move online.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_ing_01_50',
+    chapter: 'Text Comprehension: Health – Probiotics',
+    topicId: 'ing_01',
+    subject: 'Inglês',
+    prompt: 'Read the excerpt below and answer the question.\n\n"Probiotics are live microorganisms that, when consumed in adequate amounts, are believed to confer health benefits, particularly by supporting a balanced gut microbiome and potentially aiding digestion."\n\nAccording to the text, what benefit are probiotics believed to provide?',
+    options: [
+      { id: 'a', text: 'Support for a balanced gut microbiome and potential aid to digestion, when consumed in adequate amounts' },
+      { id: 'b', text: 'The complete elimination of all bacteria from the gut' },
+      { id: 'c', text: 'No measurable health benefit whatsoever, according to the text' },
+      { id: 'd', text: 'Benefits exclusively related to muscle growth, unrelated to digestion' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'The text defines probiotics as live microorganisms believed to confer health benefits when consumed in adequate amounts, particularly by supporting a balanced gut microbiome and potentially aiding digestion.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_ing_01_51',
+    chapter: 'Text Comprehension: Health – Probiotics',
+    topicId: 'ing_01',
+    subject: 'Inglês',
+    prompt: 'Read the excerpt below and answer the question.\n\n"Not all probiotic strains produce the same effects, and research suggests that the benefits observed in one clinical study may not necessarily apply to a different strain or a different health condition."\n\nAccording to the text, why can\'t research findings about one probiotic strain necessarily be generalized?',
+    options: [
+      { id: 'a', text: 'Because not all probiotic strains produce the same effects, so benefits observed for one strain may not apply to a different strain or health condition' },
+      { id: 'b', text: 'Because all probiotic strains are described as producing identical effects in every situation' },
+      { id: 'c', text: 'Because research on probiotics is said to be entirely irrelevant to health conditions' },
+      { id: 'd', text: 'Because clinical studies on probiotics have never been conducted, according to the text' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'The text explains that because not all probiotic strains produce the same effects, findings about one strain\'s benefits in a clinical study may not necessarily generalize to a different strain or a different health condition.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_ing_01_52',
+    chapter: 'Text Comprehension: Health – Probiotics',
+    topicId: 'ing_01',
+    subject: 'Inglês',
+    prompt: 'Read the excerpt below and answer the question.\n\n"Fermented foods such as yogurt, kefir, and kimchi are natural sources of probiotics, offering an alternative to supplements for those looking to incorporate beneficial microorganisms into their diet."\n\nAccording to the text, what do fermented foods like yogurt, kefir, and kimchi offer?',
+    options: [
+      { id: 'a', text: 'A natural source of probiotics, offering an alternative to supplements for incorporating beneficial microorganisms into the diet' },
+      { id: 'b', text: 'No nutritional value of any kind' },
+      { id: 'c', text: 'The complete elimination of all bacteria present in food' },
+      { id: 'd', text: 'A source exclusively of harmful microorganisms' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'The text explains that fermented foods such as yogurt, kefir, and kimchi are natural sources of probiotics, offering an alternative to supplements for people looking to incorporate beneficial microorganisms into their diet.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_ing_01_53',
+    chapter: 'Text Comprehension: Stem Cells',
+    topicId: 'ing_01',
+    subject: 'Inglês',
+    prompt: 'Read the excerpt below and answer the question.\n\n"Stem cells are unique in their ability to develop into many different cell types in the body, a property known as differentiation, which makes them a key focus of research into regenerative medicine."\n\nAccording to the text, what unique ability do stem cells have that makes them important for regenerative medicine research?',
+    options: [
+      { id: 'a', text: 'The ability to develop into many different cell types, a property known as differentiation' },
+      { id: 'b', text: 'The inability to change into any other cell type whatsoever' },
+      { id: 'c', text: 'A property exclusive to fully mature, specialized cells' },
+      { id: 'd', text: 'The complete absence of any specialized function' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'The text explains that stem cells are unique in their ability to develop into many different cell types in the body — a property called differentiation — which is why they are a key focus of research into regenerative medicine.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_ing_01_54',
+    chapter: 'Text Comprehension: Stem Cells',
+    topicId: 'ing_01',
+    subject: 'Inglês',
+    prompt: 'Read the excerpt below and answer the question.\n\n"The use of embryonic stem cells has historically raised ethical debates, since obtaining them typically involves the destruction of an early-stage embryo. This has motivated research into alternative sources, such as induced pluripotent stem cells."\n\nAccording to the text, what has motivated research into alternative stem cell sources like induced pluripotent stem cells?',
+    options: [
+      { id: 'a', text: 'The ethical debates raised by the use of embryonic stem cells, since obtaining them typically involves destroying an early-stage embryo' },
+      { id: 'b', text: 'The complete absence of any ethical concern regarding embryonic stem cells' },
+      { id: 'c', text: 'A global shortage of embryos available for any kind of research' },
+      { id: 'd', text: 'The fact that embryonic stem cells are described as entirely ineffective for research' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'The text explains that the ethical debates surrounding embryonic stem cells — since obtaining them typically involves destroying an early-stage embryo — have motivated research into alternative sources, such as induced pluripotent stem cells.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_ing_01_55',
+    chapter: 'Text Comprehension: Stem Cells',
+    topicId: 'ing_01',
+    subject: 'Inglês',
+    prompt: 'Read the excerpt below and answer the question.\n\n"Stem cell therapies are already used clinically in certain contexts, such as bone marrow transplants for some blood cancers, though many other proposed applications remain in earlier stages of research and clinical trials."\n\nAccording to the text, what is the current status of stem cell therapy applications, in general?',
+    options: [
+      { id: 'a', text: 'Some applications, like bone marrow transplants for certain blood cancers, are already used clinically, while many other proposed applications remain in earlier stages of research' },
+      { id: 'b', text: 'All proposed stem cell therapy applications are already in full clinical use' },
+      { id: 'c', text: 'No stem cell therapy has ever been used in a clinical setting' },
+      { id: 'd', text: 'Bone marrow transplants are described as unrelated to stem cells' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'The text distinguishes between stem cell applications already used clinically — such as bone marrow transplants for certain blood cancers — and many other proposed applications that remain in earlier stages of research and clinical trials.',
+    difficulty: 'medium'
   }
 ];
 
