@@ -3,9 +3,10 @@ import { daysUntil, examsForBoard } from '../data/examCalendar';
 
 // Divide o tempo até a prova em três fases, cada uma com uma fração-alvo do
 // tempo disponível dedicada a revisão (o resto vai pra conteúdo novo/prática).
-// Os limiares (45 e 20 dias) foram calibrados pra que, com Unicamp em 18/10 e
-// Fuvest em 01/11 como as provas mais próximas, a "revisão ativa" comece
-// ainda em setembro — dando tempo real de rampa antes da reta final.
+// Os limiares (60 e 30 dias — ajustados a pedido da Ana Júlia, que prefere
+// começar a rampa de revisão mais cedo, com margem de segurança maior) fazem
+// a "revisão ativa" começar bem antes de outubro, dando tempo real de
+// consolidação antes da reta final.
 export interface StudyPhase {
   id: 'consolidacao' | 'revisao_ativa' | 'reta_final';
   label: string;
@@ -36,8 +37,8 @@ export const RETA_FINAL: StudyPhase = {
 
 export const STUDY_PHASES: StudyPhase[] = [CONSOLIDACAO, REVISAO_ATIVA, RETA_FINAL];
 
-const REVISAO_ATIVA_THRESHOLD_DAYS = 45;
-const RETA_FINAL_THRESHOLD_DAYS = 20;
+const REVISAO_ATIVA_THRESHOLD_DAYS = 60;
+const RETA_FINAL_THRESHOLD_DAYS = 30;
 
 export function phaseForDaysRemaining(days: number): StudyPhase {
   if (days <= RETA_FINAL_THRESHOLD_DAYS) return RETA_FINAL;
