@@ -85,7 +85,8 @@ export type RecommendationReason =
   | 'prerequisito_bloqueado'
   | 'incidencia_banca_prioritaria'
   | 'proximidade_prova'
-  | 'tempo_disponivel';
+  | 'tempo_disponivel'
+  | 'fase_revisao_intensificada';
 
 export interface StudyAction {
   id: string;

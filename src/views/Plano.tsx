@@ -5,7 +5,22 @@ import { useUserMastery } from '../hooks/useUserMastery';
 import { useUserProfile } from '../hooks/useUserProfile';
 import { useStudentGoals } from '../hooks/useStudentGoals';
 import { useAvailableMinutes } from '../hooks/useAvailableMinutes';
-import { Map, Clock, Battery, BatteryLow, BatteryFull, CloudOff, CalendarCheck2 } from 'lucide-react';
+import { currentStudyPhase } from '../lib/studyPhase';
+import { upcomingMilestones } from '../lib/studyRoadmap';
+import { daysUntil } from '../data/examCalendar';
+import { Map, Clock, Battery, BatteryLow, BatteryFull, CloudOff, CalendarCheck2, Flag, Coffee } from 'lucide-react';
+
+function formatDatePtBr(iso: string): string {
+  const [, m, d] = iso.split('-');
+  return `${d}/${m}`;
+}
+
+function daysUntilLabel(iso: string): string {
+  const days = daysUntil(iso);
+  if (days === 0) return 'hoje';
+  if (days === 1) return 'amanhã';
+  return `${days} dias`;
+}
 
 const SUBJECT_COLORS: Record<string, string> = {
   Biologia: 'bg-emerald-500',
@@ -33,8 +48,12 @@ export default function Plano() {
     loading: calendarLoading,
     error: calendarError,
     busyCount,
+    todayWindow,
   } = useAvailableMinutes();
   const [energyLevel, setEnergyLevel] = useState<'low' | 'medium' | 'high'>(userProfile.currentEnergyLevel);
+
+  const phase = useMemo(() => currentStudyPhase(goals), [goals]);
+  const nextMilestone = useMemo(() => upcomingMilestones(goals)[0], [goals]);
 
   useEffect(() => {
     setEnergyLevel(userProfile.currentEnergyLevel);
@@ -79,6 +98,23 @@ export default function Plano() {
         )}
         {syncError && <p className="text-xs text-rose-500 mt-2">{syncError}</p>}
       </header>
+
+      <div className="bg-indigo-50 dark:bg-indigo-950/30 border border-indigo-200 dark:border-indigo-900 rounded-2xl p-6 shadow-sm">
+        <div className="flex items-center min-w-0">
+          <Flag className="w-5 h-5 mr-3 text-indigo-600 dark:text-indigo-400 shrink-0" />
+          <div className="min-w-0">
+            <p className="font-semibold text-indigo-900 dark:text-indigo-200">
+              Fase atual: {phase.label}
+              {nextMilestone && (
+                <span className="font-normal text-indigo-700 dark:text-indigo-300">
+                  {' '}— {nextMilestone.board} em {daysUntilLabel(nextMilestone.date)} ({formatDatePtBr(nextMilestone.date)})
+                </span>
+              )}
+            </p>
+            <p className="text-sm text-indigo-700 dark:text-indigo-300 mt-1">{phase.description}</p>
+          </div>
+        </div>
+      </div>
 
       <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 shadow-sm space-y-6">
         {calendarConnected && (
@@ -126,7 +162,7 @@ export default function Plano() {
             id="minutes"
             type="range"
             min={15}
-            max={240}
+            max={330}
             step={15}
             value={usingAuto ? minutesToday : manualMinutes}
             disabled={usingAuto}
@@ -135,9 +171,42 @@ export default function Plano() {
           />
           {usingAuto && (
             <p className="text-xs text-zinc-500 mt-2">
-              Calculado a partir do seu tempo livre entre agora e 22h, descontando os compromissos da sua agenda.
+              Calculado a partir do seu horário de estudo líquido de hoje ({todayWindow.windowStart}–{todayWindow.windowEnd}), descontando pausas e os compromissos da sua agenda.
             </p>
           )}
+        </div>
+
+        <div>
+          <div className="flex items-center justify-between mb-2">
+            <p className="text-sm font-medium text-zinc-700 dark:text-zinc-300 flex items-center">
+              <Coffee className="w-4 h-4 mr-2 text-zinc-400" />
+              Seu estudo líquido hoje
+            </p>
+            <span className="text-xs text-zinc-500">{todayWindow.windowStart}–{todayWindow.windowEnd}</span>
+          </div>
+          {todayWindow.blocks.length > 0 ? (
+            <div className="flex flex-wrap gap-1.5">
+              {todayWindow.blocks.map((block, i) => (
+                <span
+                  key={i}
+                  title={`${block.start}–${block.end}`}
+                  className={`text-[11px] px-2 py-1 rounded-md font-medium ${
+                    block.type === 'estudo'
+                      ? 'bg-indigo-100 text-indigo-700 dark:bg-indigo-900/40 dark:text-indigo-300'
+                      : 'bg-zinc-100 text-zinc-500 dark:bg-zinc-800 dark:text-zinc-400'
+                  }`}
+                >
+                  {block.start}
+                  {block.type === 'pausa' ? ' pausa' : ''}
+                </span>
+              ))}
+            </div>
+          ) : (
+            <p className="text-xs text-zinc-500">Hoje o cursinho ocupa até depois da sua janela de estudo — sem tempo líquido sobrando.</p>
+          )}
+          <p className="text-xs text-zinc-500 mt-2">
+            {Math.round(todayWindow.netMinutes / 60 * 10) / 10}h líquidas de estudo hoje, já com as pausas descontadas.
+          </p>
         </div>
 
         <div>

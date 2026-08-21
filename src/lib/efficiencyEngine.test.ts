@@ -131,3 +131,46 @@ test('examFocusFor não penaliza tópico sem dado de incidência, mas também n�
   assert.equal(focus.hasIncidenceReason, false);
   assert.ok(focus.multiplier > 1); // ainda ganha o boost geral de urgência, só não o de incidência
 });
+
+test('generateDailyPlan em reta final reserva orçamento pra revisão mesmo quando o conteúdo novo teria prioridade maior', () => {
+  const now = new Date('2026-10-08T00:00:00'); // 10 dias antes da Unicamp (18/10/2026) — reta final
+  const goals = goalsWith([{ board: 'UNICAMP', weight: 1, phaseFocus: 'ambas' }]);
+  const topics = [topic({ id: 'revisar_1', name: 'Revisar 1' }), topic({ id: 'novo_1', name: 'Novo 1' })];
+  const masteryData = [
+    // reviewNecessity>70 => type 'review', 15min
+    mastery({ topicId: 'revisar_1', level: 80, uncertainty: 0.9, lastReviewed: new Date(now.getTime() - 20 * 86400000).toISOString() }),
+    // level<40 => type 'theory', 45min — score bruto maior (learningNeeded alto), mas não deve caber
+    mastery({ topicId: 'novo_1', level: 10, uncertainty: 0.3 }),
+  ];
+  // 50min disponíveis: reviewRatio 0.85 => orçamento de revisão 43min (cabe o
+  // item de 15min), orçamento de conteúdo só 7min (não cabe o item de
+  // 45min) — e nem sobra espaço geral pro conteúdo entrar por vazamento
+  // (15 + 45 = 60 > 50).
+  const plan = EfficiencyEngine.generateDailyPlan(masteryData, topics, profile(), 50, goals, now);
+  assert.equal(plan.length, 1);
+  assert.equal(plan[0].topicId, 'revisar_1');
+  assert.ok(plan[0].reasons.includes('fase_revisao_intensificada'));
+});
+
+test('generateDailyPlan em consolidação (sem prova próxima) não marca fase_revisao_intensificada', () => {
+  const now = new Date('2026-08-21T00:00:00');
+  const goals = goalsWith([{ board: 'UNICAMP', weight: 1, phaseFocus: 'ambas' }]);
+  const topics = [topic({ id: 'revisar_1', name: 'Revisar 1' })];
+  const masteryData = [
+    mastery({ topicId: 'revisar_1', level: 80, uncertainty: 0.9, lastReviewed: new Date(now.getTime() - 20 * 86400000).toISOString() }),
+  ];
+  const plan = EfficiencyEngine.generateDailyPlan(masteryData, topics, profile(), 120, goals, now);
+  assert.ok(!plan.some((a) => a.reasons.includes('fase_revisao_intensificada')));
+});
+
+test('generateDailyPlan não desperdiça orçamento de um balde quando falta item do outro tipo', () => {
+  const now = new Date('2026-10-08T00:00:00'); // reta final, reviewRatio alto
+  const goals = goalsWith([{ board: 'UNICAMP', weight: 1, phaseFocus: 'ambas' }]);
+  const topics = [topic({ id: 'novo_1', name: 'Novo 1' })];
+  // Só existe um item de conteúdo (theory, 45min) e nenhum de revisão — o
+  // orçamento de revisão (não usado) deve poder vazar pro de conteúdo.
+  const masteryData = [mastery({ topicId: 'novo_1', level: 10, uncertainty: 0.3 })];
+  const plan = EfficiencyEngine.generateDailyPlan(masteryData, topics, profile(), 60, goals, now);
+  assert.equal(plan.length, 1);
+  assert.ok(plan[0].reasons.includes('tempo_disponivel'));
+});

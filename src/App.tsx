@@ -10,6 +10,7 @@ import { AuthProvider } from './context/AuthContext';
 
 import Dashboard from './views/Dashboard';
 import Plano from './views/Plano';
+import RetaFinal from './views/RetaFinal';
 import Sessao from './views/Sessao';
 import Questoes from './views/Questoes';
 import Revisoes from './views/Revisoes';
@@ -36,6 +37,7 @@ export default function App() {
           <Route path="/" element={<Layout />}>
             <Route index element={<Dashboard />} />
             <Route path="plano" element={<Plano />} />
+            <Route path="reta-final" element={<RetaFinal />} />
             <Route path="sessao" element={<Sessao />} />
             <Route path="questoes" element={<Questoes />} />
             <Route path="revisoes" element={<Revisoes />} />
