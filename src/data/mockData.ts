@@ -6374,6 +6374,230 @@ export const mockQuestions: Question[] = [
     explanation: 'A massa real é 80% do rendimento teórico: 50 × 0,8 = 40 g.',
     difficulty: 'hard'
   },
+  {
+    id: 'q_qui_estequiometria_5',
+    chapter: 'Separação de Misturas',
+    topicId: 'qui_estequiometria',
+    subject: 'Química',
+    prompt: 'A destilação simples é um método de separação de misturas usado principalmente para:',
+    options: [
+      { id: 'a', text: 'Separar um líquido de um sólido dissolvido nele, aproveitando a diferença de temperatura de ebulição' },
+      { id: 'b', text: 'Separar dois sólidos de tamanhos diferentes' },
+      { id: 'c', text: 'Separar dois líquidos com pontos de ebulição muito próximos' },
+      { id: 'd', text: 'Separar gases de densidades diferentes' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A destilação simples separa um líquido de um soluto sólido nele dissolvido (como água e sal): a mistura é aquecida até a evaporação do líquido, que depois é condensado e coletado separadamente, deixando o sólido para trás.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_qui_estequiometria_6',
+    chapter: 'Separação de Misturas',
+    topicId: 'qui_estequiometria',
+    subject: 'Química',
+    prompt: 'A filtração é um método de separação de misturas heterogêneas usado para:',
+    options: [
+      { id: 'a', text: 'Separar um sólido insolúvel de um líquido, utilizando um meio poroso (filtro) que retém as partículas sólidas' },
+      { id: 'b', text: 'Separar dois líquidos miscíveis entre si' },
+      { id: 'c', text: 'Separar dois gases diferentes' },
+      { id: 'd', text: 'Separar dois sólidos totalmente dissolvidos em água' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A filtração separa misturas heterogêneas do tipo sólido-líquido, fazendo a mistura passar por um meio poroso (papel de filtro, por exemplo) que retém as partículas sólidas insolúveis enquanto o líquido passa através dele.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_qui_estequiometria_7',
+    chapter: 'Separação de Misturas',
+    topicId: 'qui_estequiometria',
+    subject: 'Química',
+    prompt: 'A destilação fracionada, diferente da destilação simples, é usada principalmente para:',
+    options: [
+      { id: 'a', text: 'Separar dois ou mais líquidos miscíveis entre si, com pontos de ebulição diferentes (como na destilação do petróleo)' },
+      { id: 'b', text: 'Separar apenas sólidos de líquidos' },
+      { id: 'c', text: 'Separar misturas heterogêneas sólido-sólido' },
+      { id: 'd', text: 'Separar isótopos de um mesmo elemento' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A destilação fracionada utiliza uma coluna de fracionamento para separar misturas homogêneas de líquidos com pontos de ebulição próximos (mas diferentes), aproveitando as sucessivas condensações e evaporações ao longo da coluna — é o processo usado, por exemplo, no refino do petróleo, separando-o em frações como gasolina, querosene e diesel.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_qui_estequiometria_8',
+    chapter: 'Transformações Físicas e Químicas e Balanceamento de Equações',
+    topicId: 'qui_estequiometria',
+    subject: 'Química',
+    prompt: 'Uma transformação química, diferente de uma transformação física, é caracterizada por:',
+    options: [
+      { id: 'a', text: 'Formação de uma ou mais substâncias novas, com propriedades diferentes das substâncias originais' },
+      { id: 'b', text: 'Apenas mudança de estado físico, sem qualquer alteração na composição das substâncias' },
+      { id: 'c', text: 'Nunca envolver quebra ou formação de ligações químicas' },
+      { id: 'd', text: 'Ser sempre reversível de forma simples' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Uma transformação química (reação química) envolve a quebra e formação de ligações químicas, resultando em substâncias novas com propriedades diferentes das originais — diferente de uma transformação física (como fusão ou evaporação), em que a composição química das substâncias não muda.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_qui_estequiometria_9',
+    chapter: 'Transformações Físicas e Químicas e Balanceamento de Equações',
+    topicId: 'qui_estequiometria',
+    subject: 'Química',
+    prompt: 'Ao balancear a equação química Al + O₂ → Al₂O₃, quais coeficientes tornam a equação corretamente balanceada?',
+    options: [
+      { id: 'a', text: '2 Al + 3 O₂ → 2 Al₂O₃' },
+      { id: 'b', text: '4 Al + 3 O₂ → 2 Al₂O₃' },
+      { id: 'c', text: '2 Al + O₂ → Al₂O₃' },
+      { id: 'd', text: '4 Al + 2 O₂ → 2 Al₂O₃' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Balanceando: 4 Al + 3 O₂ → 2 Al₂O₃. Verificação: 4 átomos de Al de cada lado; 6 átomos de O de cada lado (3×2 à esquerda, 2×3 à direita) — a equação está corretamente balanceada, respeitando a Lei de Conservação da Massa.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_qui_estequiometria_10',
+    chapter: 'Massa Atômica, Mol e Massa Molar',
+    topicId: 'qui_estequiometria',
+    subject: 'Química',
+    prompt: 'O mol é definido como a quantidade de matéria que contém um número fixo de entidades elementares, conhecido como número de Avogadro. Esse número é aproximadamente:',
+    options: [
+      { id: 'a', text: '6,02 × 10²³' },
+      { id: 'b', text: '3,14 × 10⁸' },
+      { id: 'c', text: '9,8 × 10¹⁰' },
+      { id: 'd', text: '1,6 × 10⁻¹⁹' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O número de Avogadro, aproximadamente 6,02 × 10²³, representa a quantidade de entidades elementares (átomos, moléculas, íons) presentes em 1 mol de qualquer substância.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_qui_estequiometria_11',
+    chapter: 'Massa Atômica, Mol e Massa Molar',
+    topicId: 'qui_estequiometria',
+    subject: 'Química',
+    prompt: 'A massa molar de uma substância representa:',
+    options: [
+      { id: 'a', text: 'A massa, em gramas, de 1 mol dessa substância' },
+      { id: 'b', text: 'A massa de um único átomo dessa substância' },
+      { id: 'c', text: 'O número de átomos presentes em 1 grama da substância' },
+      { id: 'd', text: 'Sempre um valor igual a 1 grama, para qualquer substância' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A massa molar é a massa, em gramas, correspondente a 1 mol (6,02×10²³ entidades) de uma substância — numericamente igual à massa atômica ou molecular da substância, expressa em unidades de massa atômica (u), mas com unidade em g/mol.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_qui_estequiometria_12',
+    chapter: 'Massa Atômica, Mol e Massa Molar',
+    topicId: 'qui_estequiometria',
+    subject: 'Química',
+    prompt: 'Quantos mols existem em 88 g de CO₂ (massa molar = 44 g/mol)?',
+    options: [
+      { id: 'a', text: '1 mol' },
+      { id: 'b', text: '2 mols' },
+      { id: 'c', text: '4 mols' },
+      { id: 'd', text: '44 mols' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Número de mols = massa/massa molar = 88/44 = 2 mols.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_qui_estequiometria_13',
+    chapter: 'Determinação de Fórmulas Químicas',
+    topicId: 'qui_estequiometria',
+    subject: 'Química',
+    prompt: 'A fórmula mínima (ou empírica) de um composto expressa:',
+    options: [
+      { id: 'a', text: 'A menor proporção inteira entre os átomos dos elementos presentes no composto' },
+      { id: 'b', text: 'O número exato e real de átomos de cada elemento em uma molécula do composto' },
+      { id: 'c', text: 'Apenas a massa molar do composto' },
+      { id: 'd', text: 'Sempre o mesmo valor que a fórmula molecular, sem exceção' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A fórmula mínima (empírica) representa a menor proporção inteira entre os átomos dos elementos que compõem o composto (por exemplo, CH₂O para a glicose), enquanto a fórmula molecular representa o número real de átomos na molécula (C₆H₁₂O₆ para a glicose) — a fórmula molecular é sempre um múltiplo inteiro da fórmula mínima.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_qui_estequiometria_14',
+    chapter: 'Determinação de Fórmulas Químicas',
+    topicId: 'qui_estequiometria',
+    subject: 'Química',
+    prompt: 'Um composto tem fórmula mínima CH₂ e massa molar igual a 42 g/mol. Sabendo que a massa molar da fórmula mínima é 14 g/mol, qual é a fórmula molecular desse composto?',
+    options: [
+      { id: 'a', text: 'CH₂' },
+      { id: 'b', text: 'C₂H₄' },
+      { id: 'c', text: 'C₃H₆' },
+      { id: 'd', text: 'C₄H₈' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'O fator multiplicativo é obtido dividindo a massa molar real pela massa da fórmula mínima: 42/14 = 3. Multiplicando os índices da fórmula mínima por 3: C₃H₆.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_qui_estequiometria_15',
+    chapter: 'Determinação de Fórmulas Químicas',
+    topicId: 'qui_estequiometria',
+    subject: 'Química',
+    prompt: 'Para determinar a fórmula mínima de um composto a partir da composição percentual em massa dos elementos, o procedimento correto é:',
+    options: [
+      { id: 'a', text: 'Dividir a porcentagem de cada elemento pela sua massa atômica, obtendo o número relativo de mols, e depois dividir esses valores pelo menor deles' },
+      { id: 'b', text: 'Somar diretamente as porcentagens de todos os elementos' },
+      { id: 'c', text: 'Multiplicar a porcentagem de cada elemento pela massa molar total do composto' },
+      { id: 'd', text: 'Ignorar a massa atômica de cada elemento' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Para achar a fórmula mínima: divide-se a porcentagem em massa de cada elemento por sua massa atômica (obtendo o número relativo de mols de cada um); em seguida, divide-se todos esses valores pelo menor deles, obtendo a proporção mínima inteira entre os átomos.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_qui_estequiometria_16',
+    chapter: 'Estequiometria: Leis Ponderais',
+    topicId: 'qui_estequiometria',
+    subject: 'Química',
+    prompt: 'A Lei de Conservação da Massa (Lei de Lavoisier) afirma que, em uma reação química realizada em sistema fechado:',
+    options: [
+      { id: 'a', text: 'A massa total dos reagentes é igual à massa total dos produtos' },
+      { id: 'b', text: 'A massa dos reagentes é sempre maior que a dos produtos' },
+      { id: 'c', text: 'A massa dos produtos é sempre maior que a dos reagentes' },
+      { id: 'd', text: 'A massa não pode ser medida durante uma reação química' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A Lei de Lavoisier ("na natureza, nada se cria, nada se perde, tudo se transforma") estabelece que, em um sistema fechado, a massa total dos reagentes antes da reação é igual à massa total dos produtos após a reação — a matéria não é criada nem destruída, apenas rearranjada.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_qui_estequiometria_17',
+    chapter: 'Estequiometria: Leis Ponderais',
+    topicId: 'qui_estequiometria',
+    subject: 'Química',
+    prompt: 'A Lei de Proust (Lei das Proporções Constantes ou Definidas) estabelece que:',
+    options: [
+      { id: 'a', text: 'Uma substância composta é sempre formada pelos mesmos elementos, combinados sempre na mesma proporção fixa em massa, independentemente da origem ou do processo de obtenção' },
+      { id: 'b', text: 'A proporção entre os elementos de um composto varia conforme o método de preparação' },
+      { id: 'c', text: 'A massa total de um sistema pode variar durante uma reação química' },
+      { id: 'd', text: 'Todos os compostos têm a mesma composição percentual em massa' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A Lei de Proust estabelece que uma substância composta específica (como a água, H₂O) sempre apresenta os mesmos elementos combinados na mesma proporção fixa em massa, não importando sua origem ou o método usado para obtê-la — por exemplo, a água sempre tem a proporção de aproximadamente 1:8 em massa entre hidrogênio e oxigênio.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_qui_estequiometria_18',
+    chapter: 'Estequiometria: Leis Ponderais',
+    topicId: 'qui_estequiometria',
+    subject: 'Química',
+    prompt: '10 g de um elemento X reagem completamente com 15 g de um elemento Y, formando um composto XY. Se dobrarmos a massa de X para 20 g, mantendo a mesma reação completa (sem excesso), qual será a massa de Y necessária, segundo a Lei de Proust?',
+    options: [
+      { id: 'a', text: '15 g' },
+      { id: 'b', text: '20 g' },
+      { id: 'c', text: '25 g' },
+      { id: 'd', text: '30 g' }
+    ],
+    correctOptionId: 'd',
+    explanation: 'Pela Lei de Proust, a proporção entre X e Y deve permanecer constante: 10/15 = 20/y → y = 20×15/10 = 30 g.',
+    difficulty: 'medium'
+  },
   // Química — Polaridade das Ligações e Geometria Molecular
   {
     id: 'q_qui_polaridade_geometria_1',
@@ -6437,6 +6661,70 @@ export const mockQuestions: Question[] = [
     ],
     correctOptionId: 'b',
     explanation: 'As ligações (pontes) de hidrogênio, muito mais fortes que outras forças intermoleculares, ocorrem entre moléculas de água devido à alta eletronegatividade do oxigênio ligado a hidrogênio, exigindo mais energia (temperatura mais alta) para separar as moléculas na ebulição.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_qui_polaridade_geometria_5',
+    chapter: 'Ligações Químicas e Alotropia',
+    topicId: 'qui_polaridade_geometria',
+    subject: 'Química',
+    prompt: 'A ligação iônica, típica entre metais e ametais, se caracteriza principalmente por:',
+    options: [
+      { id: 'a', text: 'Transferência completa de elétrons de um átomo para outro, formando íons de cargas opostas que se atraem eletrostaticamente' },
+      { id: 'b', text: 'Compartilhamento igualitário de elétrons entre os dois átomos' },
+      { id: 'c', text: 'Compartilhamento de um "mar de elétrons" livres entre muitos átomos' },
+      { id: 'd', text: 'Ausência total de qualquer interação eletrostática' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Na ligação iônica, há transferência completa (não compartilhamento) de um ou mais elétrons do átomo menos eletronegativo (geralmente um metal) para o mais eletronegativo (geralmente um ametal), formando um cátion e um ânion que se atraem por força eletrostática — diferente da ligação covalente (compartilhamento) e da ligação metálica ("mar de elétrons").',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_qui_polaridade_geometria_6',
+    chapter: 'Ligações Químicas e Alotropia',
+    topicId: 'qui_polaridade_geometria',
+    subject: 'Química',
+    prompt: 'A alotropia é o fenômeno em que um mesmo elemento químico forma substâncias simples diferentes. O carbono é um exemplo clássico, podendo formar tanto grafite quanto diamante. A diferença entre essas duas formas alotrópicas está em:',
+    options: [
+      { id: 'a', text: 'A disposição espacial (estrutura cristalina) dos átomos de carbono, que resulta em propriedades físicas muito diferentes' },
+      { id: 'b', text: 'O número de prótons no núcleo de cada átomo de carbono' },
+      { id: 'c', text: 'A presença de elementos diferentes em cada uma das formas' },
+      { id: 'd', text: 'A quantidade de nêutrons em cada átomo' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A alotropia ocorre quando o mesmo elemento químico se organiza em diferentes estruturas cristalinas (disposições espaciais dos átomos), resultando em propriedades físicas muito distintas: no grafite, os átomos de carbono formam camadas planas (macio, conduz eletricidade); no diamante, formam uma rede tridimensional rígida (extremamente duro, isolante elétrico) — mesmo elemento, mesma fórmula empírica, propriedades radicalmente diferentes.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_qui_polaridade_geometria_7',
+    chapter: 'Interações Intermoleculares',
+    topicId: 'qui_polaridade_geometria',
+    subject: 'Química',
+    prompt: 'As forças de Van der Waals (ou forças de London/dipolo induzido) são as mais fracas entre as forças intermoleculares, e estão presentes:',
+    options: [
+      { id: 'a', text: 'Em todas as moléculas, inclusive as apolares, sendo a única força intermolecular presente em substâncias apolares' },
+      { id: 'b', text: 'Apenas em moléculas com ligações de hidrogênio' },
+      { id: 'c', text: 'Exclusivamente em compostos iônicos' },
+      { id: 'd', text: 'Nunca em gases nobres' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'As forças de Van der Waals (dipolo induzido-dipolo induzido, ou forças de London) resultam de flutuações momentâneas na distribuição eletrônica, criando dipolos instantâneos e induzidos. São a única força intermolecular presente em moléculas apolares (como gases nobres e hidrocarbonetos) e, embora fracas, aumentam com o tamanho e a massa molecular da substância.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_qui_polaridade_geometria_8',
+    chapter: 'Interações Intermoleculares',
+    topicId: 'qui_polaridade_geometria',
+    subject: 'Química',
+    prompt: 'A força dipolo-dipolo, presente entre moléculas polares (mas sem ligações de hidrogênio), é responsável, por exemplo, por moléculas como o HCl terem ponto de ebulição mais alto que moléculas apolares de massa molar semelhante. Isso ocorre porque:',
+    options: [
+      { id: 'a', text: 'A extremidade positiva de uma molécula polar atrai a extremidade negativa de outra molécula polar vizinha' },
+      { id: 'b', text: 'Moléculas polares nunca interagem entre si' },
+      { id: 'c', text: 'A força dipolo-dipolo é mais forte que a ligação de hidrogênio' },
+      { id: 'd', text: 'Apenas moléculas apolares apresentam essa força' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Nas moléculas polares (que possuem um dipolo permanente), a extremidade parcialmente positiva de uma molécula é atraída pela extremidade parcialmente negativa de uma molécula vizinha — essa força dipolo-dipolo é mais forte que as forças de Van der Waals (presentes em moléculas apolares), mas mais fraca que as ligações de hidrogênio.',
     difficulty: 'medium'
   },
   // Química — Fundamentos e Nomenclatura Orgânica
@@ -6504,6 +6792,182 @@ export const mockQuestions: Question[] = [
     explanation: 'Carbonos com uma ligação dupla (e duas ligações simples adicionais) apresentam hibridação sp², com geometria trigonal plana ao redor de cada carbono da dupla ligação.',
     difficulty: 'hard'
   },
+  {
+    id: 'q_qui_organica_fundamentos_5',
+    chapter: 'Nomenclatura de Compostos Orgânicos',
+    topicId: 'qui_organica_fundamentos',
+    subject: 'Química',
+    prompt: 'Qual é o nome do alcano de cadeia normal com 4 átomos de carbono?',
+    options: [
+      { id: 'a', text: 'Propano' },
+      { id: 'b', text: 'Butano' },
+      { id: 'c', text: 'Pentano' },
+      { id: 'd', text: 'Hexano' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A nomenclatura dos alcanos segue prefixos numéricos: met(1), et(2), prop(3), but(4), pent(5), hex(6)... seguidos do sufixo "-ano". Com 4 carbonos, o nome é butano.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_qui_organica_fundamentos_6',
+    chapter: 'Nomenclatura de Compostos Orgânicos',
+    topicId: 'qui_organica_fundamentos',
+    subject: 'Química',
+    prompt: 'Na nomenclatura de hidrocarbonetos insaturados, o sufixo "-eno" indica a presença de:',
+    options: [
+      { id: 'a', text: 'Uma ligação dupla entre carbonos' },
+      { id: 'b', text: 'Uma ligação tripla entre carbonos' },
+      { id: 'c', text: 'Apenas ligações simples, sem qualquer insaturação' },
+      { id: 'd', text: 'Um anel aromático' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O sufixo "-eno" indica a presença de uma ligação dupla na cadeia carbônica (como no eteno, H₂C=CH₂), enquanto o sufixo "-ino" indica ligação tripla (como no etino/acetileno) — diferente do sufixo "-ano", que indica cadeia saturada (apenas ligações simples).',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_qui_organica_fundamentos_7',
+    chapter: 'Nomenclatura de Compostos Orgânicos Oxigenados e Nitrogenados',
+    topicId: 'qui_organica_fundamentos',
+    subject: 'Química',
+    prompt: 'Um composto orgânico com o grupo funcional -OH ligado a um carbono saturado é classificado como:',
+    options: [
+      { id: 'a', text: 'Álcool' },
+      { id: 'b', text: 'Ácido carboxílico' },
+      { id: 'c', text: 'Cetona' },
+      { id: 'd', text: 'Amina' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O grupo funcional hidroxila (-OH) ligado a um carbono saturado (sp³) caracteriza a função álcool — diferente do fenol, em que a hidroxila está ligada a um carbono de anel aromático.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_qui_organica_fundamentos_8',
+    chapter: 'Nomenclatura de Compostos Orgânicos Oxigenados e Nitrogenados',
+    topicId: 'qui_organica_fundamentos',
+    subject: 'Química',
+    prompt: 'O grupo funcional carboxila (-COOH) caracteriza qual função orgânica?',
+    options: [
+      { id: 'a', text: 'Ácido carboxílico' },
+      { id: 'b', text: 'Éster' },
+      { id: 'c', text: 'Amida' },
+      { id: 'd', text: 'Aldeído' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O grupo carboxila (-COOH, combinação de carbonila e hidroxila no mesmo carbono) caracteriza os ácidos carboxílicos, como o ácido acético (presente no vinagre).',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_qui_organica_fundamentos_9',
+    chapter: 'Nomenclatura de Compostos Orgânicos Oxigenados e Nitrogenados',
+    topicId: 'qui_organica_fundamentos',
+    subject: 'Química',
+    prompt: 'As aminas são compostos orgânicos nitrogenados derivados formalmente da amônia (NH₃), pela substituição de um ou mais hidrogênios por grupos orgânicos. Uma amina primária é aquela em que:',
+    options: [
+      { id: 'a', text: 'Apenas um hidrogênio da amônia é substituído por um grupo orgânico' },
+      { id: 'b', text: 'Todos os três hidrogênios são substituídos' },
+      { id: 'c', text: 'Nenhum hidrogênio é substituído' },
+      { id: 'd', text: 'O nitrogênio está ligado a um grupo carboxila' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Nas aminas primárias, apenas um dos três hidrogênios da amônia é substituído por um grupo orgânico (R-NH₂). Nas aminas secundárias, dois hidrogênios são substituídos (R-NH-R\'), e nas terciárias, todos os três (R-N(R\')-R\'\').',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_qui_organica_fundamentos_10',
+    chapter: 'Reconhecimento de Funções Orgânicas e Algumas de suas Propriedades',
+    topicId: 'qui_organica_fundamentos',
+    subject: 'Química',
+    prompt: 'Os ésteres, formados pela reação entre um ácido carboxílico e um álcool, são amplamente conhecidos por:',
+    options: [
+      { id: 'a', text: 'Serem responsáveis por muitos aromas e sabores característicos de frutas' },
+      { id: 'b', text: 'Serem sempre tóxicos e nunca encontrados na natureza' },
+      { id: 'c', text: 'Nunca reagirem com água' },
+      { id: 'd', text: 'Serem exclusivamente encontrados em compostos inorgânicos' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Muitos ésteres de cadeia curta são responsáveis pelos aromas característicos de frutas (como o acetato de isoamila, com odor de banana) e são amplamente utilizados na indústria de alimentos e perfumaria — formados pela reação de esterificação entre um ácido carboxílico e um álcool.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_qui_organica_fundamentos_11',
+    chapter: 'Reconhecimento de Funções Orgânicas e Algumas de suas Propriedades',
+    topicId: 'qui_organica_fundamentos',
+    subject: 'Química',
+    prompt: 'Os aldeídos e as cetonas compartilham o mesmo grupo funcional (carbonila, C=O), mas se diferenciam pela posição desse grupo na cadeia carbônica. Nos aldeídos, a carbonila está sempre:',
+    options: [
+      { id: 'a', text: 'Em um carbono da extremidade (ponta) da cadeia, ligado a pelo menos um átomo de hidrogênio' },
+      { id: 'b', text: 'Em um carbono no meio da cadeia, ligado a dois outros carbonos' },
+      { id: 'c', text: 'Ligada a um grupo hidroxila diretamente' },
+      { id: 'd', text: 'Ausente completamente na molécula' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Nos aldeídos, a carbonila (C=O) está sempre em um carbono na extremidade da cadeia, ligado a pelo menos um hidrogênio (–CHO). Já nas cetonas, a carbonila está em um carbono interno da cadeia, ligado a dois outros átomos de carbono.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_qui_organica_fundamentos_12',
+    chapter: 'Isomeria',
+    topicId: 'qui_organica_fundamentos',
+    subject: 'Química',
+    prompt: 'A isomeria geométrica (cis-trans), presente em alguns alcenos, ocorre devido a:',
+    options: [
+      { id: 'a', text: 'À restrição de rotação livre em torno da ligação dupla carbono-carbono, permitindo diferentes arranjos espaciais dos substituintes' },
+      { id: 'b', text: 'À diferença no número de átomos de carbono entre os isômeros' },
+      { id: 'c', text: 'À presença exclusiva de ligações simples na molécula' },
+      { id: 'd', text: 'À diferença na fórmula molecular entre os isômeros' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Diferente das ligações simples (que permitem livre rotação), a ligação dupla carbono-carbono restringe a rotação, "congelando" a posição relativa dos substituintes ligados aos carbonos da dupla — isso permite a existência de isômeros geométricos cis (substituintes do mesmo lado) e trans (substituintes em lados opostos), com propriedades físicas frequentemente diferentes.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_qui_organica_fundamentos_13',
+    chapter: 'Combustíveis Fósseis',
+    topicId: 'qui_organica_fundamentos',
+    subject: 'Química',
+    prompt: 'O petróleo, principal combustível fóssil utilizado atualmente, é formado por:',
+    options: [
+      { id: 'a', text: 'Uma mistura complexa de hidrocarbonetos, originada da decomposição de matéria orgânica (principalmente restos de organismos marinhos) ao longo de milhões de anos' },
+      { id: 'b', text: 'Um único hidrocarboneto puro, sempre com a mesma fórmula molecular' },
+      { id: 'c', text: 'Compostos exclusivamente inorgânicos, sem qualquer origem biológica' },
+      { id: 'd', text: 'Uma substância recém-formada, produzida continuamente pela atividade vulcânica' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O petróleo é uma mistura complexa de diferentes hidrocarbonetos (e outros compostos em menor quantidade), formada pela decomposição de matéria orgânica (principalmente microrganismos marinhos) submetida a altas pressões e temperaturas ao longo de milhões de anos — por isso é classificado como um combustível fóssil não renovável.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_qui_organica_fundamentos_14',
+    chapter: 'Combustíveis Fósseis',
+    topicId: 'qui_organica_fundamentos',
+    subject: 'Química',
+    prompt: 'O processo de destilação fracionada do petróleo, realizado nas refinarias, separa a mistura em diferentes frações principalmente devido a diferenças em:',
+    options: [
+      { id: 'a', text: 'Ponto de ebulição, relacionado ao tamanho das cadeias carbônicas dos hidrocarbonetos presentes' },
+      { id: 'b', text: 'Cor dos diferentes componentes da mistura' },
+      { id: 'c', text: 'Carga elétrica das moléculas' },
+      { id: 'd', text: 'Presença de átomos radioativos em cada fração' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Na destilação fracionada do petróleo, os diferentes hidrocarbonetos são separados de acordo com seus pontos de ebulição, que aumentam com o tamanho da cadeia carbônica: frações mais leves (menor cadeia, menor ponto de ebulição, como o gás e a gasolina) saem no topo da torre de destilação, enquanto frações mais pesadas (maior cadeia, maior ponto de ebulição, como óleo diesel e asfalto) são coletadas mais abaixo.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_qui_organica_fundamentos_15',
+    chapter: 'Combustíveis Fósseis',
+    topicId: 'qui_organica_fundamentos',
+    subject: 'Química',
+    prompt: 'A queima incompleta de combustíveis fósseis, quando há insuficiência de oxigênio, gera, entre outros produtos, o monóxido de carbono (CO), um gás altamente tóxico. Isso ocorre porque:',
+    options: [
+      { id: 'a', text: 'Sem oxigênio suficiente para oxidar completamente o carbono a CO₂, forma-se CO, um produto de oxidação incompleta' },
+      { id: 'b', text: 'O monóxido de carbono é sempre o produto principal, mesmo com excesso de oxigênio' },
+      { id: 'c', text: 'A queima completa também produz sempre CO, junto com CO₂' },
+      { id: 'd', text: 'Não há qualquer relação entre a quantidade de oxigênio disponível e os produtos da combustão' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Na combustão completa (com oxigênio suficiente), o carbono dos hidrocarbonetos é totalmente oxidado a CO₂. Já na combustão incompleta (oxigênio insuficiente), parte do carbono é oxidada apenas parcialmente, formando monóxido de carbono (CO) — um gás incolor, inodoro e extremamente tóxico, pois se liga à hemoglobina do sangue com mais afinidade que o oxigênio, prejudicando o transporte de oxigênio no corpo.',
+    difficulty: 'medium'
+  },
   // Química — Soluções
   {
     id: 'q_qui_solucoes_1',
@@ -6568,6 +7032,54 @@ export const mockQuestions: Question[] = [
     correctOptionId: 'c',
     explanation: 'n = C×V = 0,5×2 = 1 mol. Massa = n×massa molar = 1×40 = 40 g.',
     difficulty: 'hard'
+  },
+  {
+    id: 'q_qui_solucoes_5',
+    chapter: 'Efeitos Coligativos',
+    topicId: 'qui_solucoes',
+    subject: 'Química',
+    prompt: 'As propriedades coligativas de uma solução (como a tonoscopia, ebulioscopia, crioscopia e osmoscopia) dependem principalmente de:',
+    options: [
+      { id: 'a', text: 'Da quantidade (concentração) de partículas de soluto dissolvidas, e não da natureza específica do soluto' },
+      { id: 'b', text: 'Da cor do soluto dissolvido' },
+      { id: 'c', text: 'Exclusivamente da identidade química específica do soluto, nunca da sua quantidade' },
+      { id: 'd', text: 'Da temperatura do solvente antes da dissolução, exclusivamente' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'As propriedades coligativas dependem fundamentalmente do número de partículas de soluto dissolvidas na solução (a concentração, em mols de partículas), independentemente de qual seja a natureza química específica dessas partículas — por isso, uma solução com maior número de partículas dissolvidas (considerando dissociação, no caso de eletrólitos) causa efeitos coligativos mais intensos.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_qui_solucoes_6',
+    chapter: 'Efeitos Coligativos',
+    topicId: 'qui_solucoes',
+    subject: 'Química',
+    prompt: 'O efeito crioscópico (ou crioscopia) descreve como a adição de um soluto a um solvente afeta a temperatura de congelamento da solução resultante. Esse efeito consiste em:',
+    options: [
+      { id: 'a', text: 'Diminuir a temperatura de congelamento da solução em relação à do solvente puro' },
+      { id: 'b', text: 'Aumentar a temperatura de congelamento da solução' },
+      { id: 'c', text: 'Não ter qualquer efeito sobre a temperatura de congelamento' },
+      { id: 'd', text: 'Aumentar a pressão de vapor da solução' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A crioscopia é o efeito coligativo pelo qual a presença de um soluto dissolvido diminui a temperatura de congelamento da solução em relação ao solvente puro — é o princípio por trás do uso de sal nas estradas para evitar o congelamento da água em regiões frias, e também da adição de anticongelantes em radiadores de veículos.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_qui_solucoes_7',
+    chapter: 'Efeitos Coligativos',
+    topicId: 'qui_solucoes',
+    subject: 'Química',
+    prompt: 'O fenômeno da osmose, base do efeito coligativo chamado osmoscopia, consiste na passagem de:',
+    options: [
+      { id: 'a', text: 'Solvente através de uma membrana semipermeável, da solução menos concentrada para a mais concentrada, tendendo a igualar as concentrações' },
+      { id: 'b', text: 'Soluto através de uma membrana impermeável, sem qualquer movimento de solvente' },
+      { id: 'c', text: 'Gases através de uma membrana sólida totalmente impermeável' },
+      { id: 'd', text: 'Solvente da solução mais concentrada para a menos concentrada' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Na osmose, moléculas de solvente atravessam uma membrana semipermeável (que permite a passagem do solvente, mas não do soluto), migrando da região de menor concentração de soluto para a de maior concentração, tendendo a igualar as concentrações dos dois lados — fenômeno essencial, por exemplo, para a absorção de água pelas raízes das plantas e para o funcionamento das células vivas.',
+    difficulty: 'medium'
   },
   // Questões reais de provas passadas (verificadas contra o gabarito oficial)
   {
@@ -6739,6 +7251,326 @@ export const mockQuestions: Question[] = [
     correctOptionId: 'c',
     explanation: 'A desidratação intramolecular do etanol remove uma molécula de água da própria cadeia carbônica, formando uma dupla ligação (eteno). Reações que removem átomos ou grupos de uma molécula, formando uma insaturação ou ciclo, são classificadas como eliminação — o inverso de uma adição.',
     difficulty: 'medium'
+  },
+  {
+    id: 'q_qui_organica_reacoes_5',
+    chapter: 'Interpretando Reações Orgânicas',
+    topicId: 'qui_organica_reacoes',
+    subject: 'Química',
+    prompt: 'Ao interpretar uma equação de reação orgânica, identificar o tipo de reação (adição, substituição, eliminação ou oxirredução) depende principalmente de:',
+    options: [
+      { id: 'a', text: 'Comparar as estruturas dos reagentes e produtos, observando se átomos/grupos foram adicionados, trocados, removidos, ou se houve mudança no estado de oxidação dos carbonos' },
+      { id: 'b', text: 'Apenas contar o número total de átomos de carbono nos reagentes' },
+      { id: 'c', text: 'Verificar exclusivamente a cor da solução reacional' },
+      { id: 'd', text: 'Sempre assumir que toda reação orgânica é uma reação de substituição' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Para classificar corretamente uma reação orgânica, é preciso comparar estruturalmente reagentes e produtos: se uma insaturação (dupla/tripla ligação) é "quebrada" com adição de novos átomos, é adição; se um átomo/grupo é trocado por outro, é substituição; se átomos são removidos formando uma insaturação, é eliminação; se há mudança clara no número de oxidação de um carbono, é oxirredução.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_qui_organica_reacoes_6',
+    chapter: 'Interpretando Reações Orgânicas',
+    topicId: 'qui_organica_reacoes',
+    subject: 'Química',
+    prompt: 'Nas reações orgânicas, o termo "reagente nucleofílico" se refere a uma espécie química que:',
+    options: [
+      { id: 'a', text: 'Possui um par de elétrons disponível para doar, atacando regiões com deficiência eletrônica' },
+      { id: 'b', text: 'É sempre deficiente em elétrons, atacando regiões ricas em elétrons' },
+      { id: 'c', text: 'Nunca participa de reações orgânicas' },
+      { id: 'd', text: 'É sempre um gás nobre' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Um nucleófilo ("que ama núcleos", ou seja, cargas positivas) é uma espécie rica em elétrons (com pares isolados ou carga negativa) que ataca regiões deficientes em elétrons (eletrófilos) em uma reação — conceito central para entender mecanismos de substituição e adição em química orgânica.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_qui_organica_reacoes_7',
+    chapter: 'Interpretando Reações Orgânicas',
+    topicId: 'qui_organica_reacoes',
+    subject: 'Química',
+    prompt: 'A regra de Markovnikov, aplicada a reações de adição de haletos de hidrogênio (HX) a alcenos assimétricos, prevê que:',
+    options: [
+      { id: 'a', text: 'O hidrogênio se liga preferencialmente ao carbono da dupla ligação que já possui mais átomos de hidrogênio' },
+      { id: 'b', text: 'O halogênio sempre se liga ao carbono com mais hidrogênios' },
+      { id: 'c', text: 'A reação nunca ocorre em alcenos assimétricos' },
+      { id: 'd', text: 'O produto é sempre um único composto, independente da estrutura do alceno' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A regra de Markovnikov prevê que, na adição de HX a um alceno assimétrico, o hidrogênio se liga preferencialmente ao carbono da dupla ligação que já tem mais hidrogênios (o carbono "mais pobre" em substituintes), enquanto o halogênio se liga ao carbono mais substituído — resultado da maior estabilidade do carbocátion intermediário mais substituído.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_qui_organica_reacoes_8',
+    chapter: 'Reações de Substituição',
+    topicId: 'qui_organica_reacoes',
+    subject: 'Química',
+    prompt: 'As reações de substituição, típicas de hidrocarbonetos saturados (alcanos) e de compostos aromáticos, se caracterizam por:',
+    options: [
+      { id: 'a', text: 'Um átomo ou grupo da molécula original ser trocado por outro átomo ou grupo, sem alterar o grau de saturação da cadeia' },
+      { id: 'b', text: 'Sempre formar uma nova insaturação na cadeia carbônica' },
+      { id: 'c', text: 'Ocorrer exclusivamente em alcenos e alcinos' },
+      { id: 'd', text: 'Envolver a quebra completa da cadeia carbônica em fragmentos menores' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Nas reações de substituição, um átomo (geralmente hidrogênio) ou grupo funcional é trocado por outro, sem alterar o grau de saturação da molécula (o número de ligações simples e múltiplas permanece o mesmo) — típicas de compostos saturados (alcanos) e de anéis aromáticos, que não têm insaturações "livres" para reagir por adição sem perder a aromaticidade.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_qui_organica_reacoes_9',
+    chapter: 'Reações de Substituição',
+    topicId: 'qui_organica_reacoes',
+    subject: 'Química',
+    prompt: 'A halogenação de um alcano, como o metano reagindo com cloro (CH₄ + Cl₂ → CH₃Cl + HCl) na presença de luz, é um exemplo clássico de reação de:',
+    options: [
+      { id: 'a', text: 'Substituição, em que um átomo de hidrogênio do alcano é substituído por um átomo de cloro' },
+      { id: 'b', text: 'Adição, em que o cloro se adiciona a uma ligação dupla' },
+      { id: 'c', text: 'Eliminação, formando uma nova insaturação' },
+      { id: 'd', text: 'Neutralização ácido-base' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Na halogenação de alcanos, um átomo de hidrogênio da cadeia saturada é substituído por um átomo de halogênio (como cloro), formando um haleto orgânico e um ácido halogenídrico (HCl) como subproduto — uma reação de substituição via mecanismo radicalar, iniciada pela luz.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_qui_organica_reacoes_10',
+    chapter: 'Reações de Substituição',
+    topicId: 'qui_organica_reacoes',
+    subject: 'Química',
+    prompt: 'A nitração do benzeno (formando nitrobenzeno), uma reação de substituição eletrofílica aromática clássica, exige a presença de:',
+    options: [
+      { id: 'a', text: 'Uma mistura de ácido nítrico concentrado e ácido sulfúrico concentrado (catalisador), que gera o eletrófilo NO₂⁺' },
+      { id: 'b', text: 'Apenas água pura, sem qualquer catalisador' },
+      { id: 'c', text: 'Luz ultravioleta intensa, sem qualquer reagente químico' },
+      { id: 'd', text: 'Temperaturas extremamente baixas, próximas de 0 K' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A nitração do benzeno é uma substituição eletrofílica aromática que exige ácido nítrico concentrado (fonte do grupo nitro) e ácido sulfúrico concentrado (catalisador, que protona o ácido nítrico e gera o eletrófilo NO₂⁺, atacante do anel aromático rico em elétrons).',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_qui_organica_reacoes_11',
+    chapter: 'Reações de Adição',
+    topicId: 'qui_organica_reacoes',
+    subject: 'Química',
+    prompt: 'A hidrogenação de um alceno, transformando-o em um alcano pela adição de H₂ (na presença de um catalisador metálico), é utilizada industrialmente, entre outras aplicações, para:',
+    options: [
+      { id: 'a', text: 'Converter óleos vegetais líquidos (insaturados) em gorduras sólidas (mais saturadas), como na produção de margarina' },
+      { id: 'b', text: 'Aumentar o grau de insaturação de óleos vegetais' },
+      { id: 'c', text: 'Produzir exclusivamente compostos aromáticos' },
+      { id: 'd', text: 'Remover completamente o carbono da cadeia' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A hidrogenação catalítica adiciona hidrogênio às ligações duplas de óleos vegetais (ricos em ácidos graxos insaturados), convertendo-os parcial ou totalmente em gorduras mais saturadas, de consistência mais sólida à temperatura ambiente — o processo usado industrialmente na fabricação de margarina a partir de óleos vegetais líquidos.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_qui_organica_reacoes_12',
+    chapter: 'Reações de Oxidação em Hidrocarbonetos',
+    topicId: 'qui_organica_reacoes',
+    subject: 'Química',
+    prompt: 'A combustão completa de um hidrocarboneto, na presença de oxigênio em excesso, produz sempre como produtos:',
+    options: [
+      { id: 'a', text: 'Dióxido de carbono (CO₂) e água (H₂O)' },
+      { id: 'b', text: 'Monóxido de carbono (CO) e hidrogênio gasoso (H₂)' },
+      { id: 'c', text: 'Apenas carbono sólido (fuligem)' },
+      { id: 'd', text: 'Ácido carbônico puro, sem qualquer outro produto' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A combustão completa de qualquer hidrocarboneto (com oxigênio em quantidade suficiente) sempre produz dióxido de carbono e água, liberando energia na forma de calor — a reação de oxidação total do carbono e do hidrogênio presentes na molécula.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_qui_organica_reacoes_13',
+    chapter: 'Reações de Oxidação em Hidrocarbonetos',
+    topicId: 'qui_organica_reacoes',
+    subject: 'Química',
+    prompt: 'A oxidação branda (parcial) de um alceno por uma solução aquosa e fria de permanganato de potássio (KMnO₄) produz:',
+    options: [
+      { id: 'a', text: 'Um diol (composto com dois grupos hidroxila), adicionados aos dois carbonos que formavam a ligação dupla' },
+      { id: 'b', text: 'A quebra completa da cadeia carbônica em CO₂ e água' },
+      { id: 'c', text: 'Nenhuma reação, já que alcenos não reagem com KMnO₄' },
+      { id: 'd', text: 'Um novo alceno, sem qualquer oxidação' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A oxidação branda de um alceno com KMnO₄ diluído e frio (reação de Baeyer) adiciona dois grupos hidroxila aos carbonos da antiga dupla ligação, formando um diol vicinal — essa reação também é usada como teste qualitativo para identificar insaturações, já que descolora a solução roxa de permanganato.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_qui_organica_reacoes_14',
+    chapter: 'Álcoois',
+    topicId: 'qui_organica_reacoes',
+    subject: 'Química',
+    prompt: 'A oxidação de um álcool primário, na presença de um agente oxidante adequado, pode produzir, dependendo das condições da reação, primeiramente:',
+    options: [
+      { id: 'a', text: 'Um aldeído, que pode ser oxidado ainda mais a um ácido carboxílico' },
+      { id: 'b', text: 'Uma cetona, diretamente' },
+      { id: 'c', text: 'Um éter, sem qualquer alteração adicional' },
+      { id: 'd', text: 'Um alcano, por remoção completa do oxigênio' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A oxidação de um álcool primário (R-CH₂-OH) produz inicialmente um aldeído (R-CHO); com oxidação mais forte ou prolongada, esse aldeído pode ser oxidado ainda mais, formando um ácido carboxílico (R-COOH). Álcoois secundários, por sua vez, são oxidados a cetonas, que geralmente não sofrem oxidação adicional nessas condições.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_qui_organica_reacoes_15',
+    chapter: 'Álcoois',
+    topicId: 'qui_organica_reacoes',
+    subject: 'Química',
+    prompt: 'A fermentação alcoólica, processo biológico usado na produção de bebidas alcoólicas, converte açúcares (como a glicose) em:',
+    options: [
+      { id: 'a', text: 'Etanol e dióxido de carbono, através da ação de microrganismos como leveduras' },
+      { id: 'b', text: 'Metanol e oxigênio gasoso' },
+      { id: 'c', text: 'Ácido acético diretamente, sem qualquer etapa intermediária' },
+      { id: 'd', text: 'Apenas água, sem formação de nenhum álcool' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A fermentação alcoólica é um processo anaeróbico realizado por microrganismos (como leveduras da espécie Saccharomyces cerevisiae), que converte açúcares simples (como glicose) em etanol e dióxido de carbono — a base da produção de bebidas alcoólicas e também do etanol combustível.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_qui_organica_reacoes_16',
+    chapter: 'Transesterificação (Alcoólise)',
+    topicId: 'qui_organica_reacoes',
+    subject: 'Química',
+    prompt: 'A transesterificação, reação química fundamental na produção do biodiesel, consiste em:',
+    options: [
+      { id: 'a', text: 'Fazer reagir um éster (geralmente um triglicerídeo, óleo vegetal ou gordura animal) com um álcool, na presença de um catalisador, produzindo um novo éster e glicerol' },
+      { id: 'b', text: 'Queimar diretamente óleos vegetais sem qualquer transformação química' },
+      { id: 'c', text: 'Fazer reagir um ácido carboxílico com uma base forte, formando apenas um sal' },
+      { id: 'd', text: 'Hidrolisar completamente uma proteína em aminoácidos' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Na transesterificação (base da produção de biodiesel), um triglicerídeo (éster presente em óleos vegetais ou gorduras animais) reage com um álcool (geralmente metanol ou etanol), na presença de um catalisador (ácido ou básico), produzindo ésteres de cadeia menor (o biodiesel propriamente dito) e glicerol como subproduto.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_qui_organica_reacoes_17',
+    chapter: 'Transesterificação (Alcoólise)',
+    topicId: 'qui_organica_reacoes',
+    subject: 'Química',
+    prompt: 'Comparado ao diesel de origem fóssil, o biodiesel produzido por transesterificação apresenta como principal vantagem ambiental:',
+    options: [
+      { id: 'a', text: 'Ser produzido a partir de fontes renováveis (óleos vegetais ou gorduras animais), reduzindo a dependência de combustíveis fósseis' },
+      { id: 'b', text: 'Ser completamente livre de qualquer emissão de gases ao ser queimado' },
+      { id: 'c', text: 'Não poder ser misturado ao diesel convencional em nenhuma proporção' },
+      { id: 'd', text: 'Ter origem exclusivamente mineral, como o petróleo' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O biodiesel é produzido a partir de fontes renováveis (óleos vegetais, como soja e palma, ou gorduras animais), diferente do diesel fóssil, de origem mineral e não renovável — embora sua queima ainda emita CO₂, o carbono liberado é parte de um ciclo mais curto (absorvido recentemente pelas plantas usadas na produção), o que geralmente resulta em menor impacto climático líquido comparado ao combustível fóssil.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_qui_organica_reacoes_18',
+    chapter: 'Transesterificação (Alcoólise)',
+    topicId: 'qui_organica_reacoes',
+    subject: 'Química',
+    prompt: 'Na reação de transesterificação, o subproduto glicerol (glicerina) é formado porque:',
+    options: [
+      { id: 'a', text: 'O triglicerídeo original, ao reagir com o álcool, libera a molécula de glicerol que originalmente estava esterificada aos três ácidos graxos' },
+      { id: 'b', text: 'O glicerol é adicionado externamente à reação, sem qualquer relação com o triglicerídeo' },
+      { id: 'c', text: 'É formado a partir do próprio álcool utilizado na reação' },
+      { id: 'd', text: 'Não existe formação de glicerol em nenhuma etapa dessa reação' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Um triglicerídeo é um éster formado por uma molécula de glicerol esterificada a três ácidos graxos. Na transesterificação, o álcool "toma o lugar" do glicerol nos três ésteres, formando três novas moléculas de éster (biodiesel) e liberando a molécula de glicerol original como subproduto.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_qui_organica_reacoes_19',
+    chapter: 'Acidez e Basicidade (pKa)',
+    topicId: 'qui_organica_reacoes',
+    subject: 'Química',
+    prompt: 'O valor de pKa de um ácido orgânico indica sua força ácida relativa. Quanto MENOR o valor de pKa:',
+    options: [
+      { id: 'a', text: 'Mais forte é o ácido (maior sua tendência de doar prótons)' },
+      { id: 'b', text: 'Mais fraco é o ácido' },
+      { id: 'c', text: 'Mais básico é o composto' },
+      { id: 'd', text: 'Não há relação entre pKa e força ácida' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O pKa é uma medida logarítmica inversa da constante de acidez (Ka): quanto menor o pKa, maior o Ka, e portanto mais forte é o ácido (maior sua tendência de se ionizar, doando prótons H⁺) — de forma análoga à relação entre pH e concentração de H⁺.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_qui_organica_reacoes_20',
+    chapter: 'Acidez e Basicidade (pKa)',
+    topicId: 'qui_organica_reacoes',
+    subject: 'Química',
+    prompt: 'Os ácidos carboxílicos são geralmente muito mais ácidos que os álcoois (pKa muito menor), mesmo ambos possuindo um grupo -OH. Isso ocorre principalmente porque:',
+    options: [
+      { id: 'a', text: 'O ânion carboxilato formado após a perda do próton é estabilizado por ressonância entre os dois átomos de oxigênio, distribuindo a carga negativa' },
+      { id: 'b', text: 'Os ácidos carboxílicos não possuem nenhum grupo -OH' },
+      { id: 'c', text: 'Os álcoois são sempre mais ácidos que os ácidos carboxílicos' },
+      { id: 'd', text: 'Não existe nenhuma diferença estrutural relevante entre os dois grupos' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Ao perder o próton, o ácido carboxílico forma um ânion carboxilato estabilizado por ressonância, em que a carga negativa se distribui igualmente entre os dois átomos de oxigênio — essa estabilização extra torna a desprotonação muito mais favorável do que no caso do ânion alcóxido (formado a partir de um álcool), que não tem essa estabilização por ressonância, explicando a diferença de acidez.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_qui_organica_reacoes_21',
+    chapter: 'Acidez e Basicidade (pKa)',
+    topicId: 'qui_organica_reacoes',
+    subject: 'Química',
+    prompt: 'As aminas, compostos orgânicos nitrogenados, apresentam caráter básico devido a:',
+    options: [
+      { id: 'a', text: 'O par de elétrons não compartilhado (isolado) no átomo de nitrogênio, capaz de aceitar um próton (H⁺)' },
+      { id: 'b', text: 'Um grupo -COOH presente na molécula' },
+      { id: 'c', text: 'A ausência total de qualquer elétron disponível no nitrogênio' },
+      { id: 'd', text: 'Ligações duplas carbono-carbono na cadeia' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'As aminas são bases porque o átomo de nitrogênio possui um par de elétrons não compartilhado (isolado), disponível para se ligar a (aceitar) um próton H⁺ — comportamento típico de uma base de Brønsted-Lowry, semelhante à amônia (NH₃), da qual as aminas são formalmente derivadas.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_qui_organica_reacoes_22',
+    chapter: 'Polímeros',
+    topicId: 'qui_organica_reacoes',
+    subject: 'Química',
+    prompt: 'Os polímeros de adição, como o polietileno (usado em sacolas plásticas), são formados por:',
+    options: [
+      { id: 'a', text: 'Sucessivas adições de monômeros insaturados (como o eteno) entre si, sem perda de nenhum átomo, apenas com abertura das ligações duplas' },
+      { id: 'b', text: 'Reações de condensação, com liberação de moléculas pequenas como água' },
+      { id: 'c', text: 'Reações exclusivamente de substituição em anéis aromáticos' },
+      { id: 'd', text: 'Um único monômero que nunca se repete' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Nos polímeros de adição, monômeros insaturados (com ligações duplas, como o eteno CH₂=CH₂) se unem sucessivamente por abertura das duplas ligações, formando longas cadeias sem perda de nenhum átomo — diferente dos polímeros de condensação, em que os monômeros se unem com a liberação de moléculas pequenas, como água.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_qui_organica_reacoes_23',
+    chapter: 'Polímeros',
+    topicId: 'qui_organica_reacoes',
+    subject: 'Química',
+    prompt: 'Os polímeros de condensação, como o náilon e o PET (politereftalato de etileno), se formam por:',
+    options: [
+      { id: 'a', text: 'Reações sucessivas entre monômeros (geralmente com dois grupos funcionais reativos cada), liberando uma molécula pequena, como água, a cada nova ligação formada' },
+      { id: 'b', text: 'Simples abertura de ligações duplas, sem qualquer perda de átomos' },
+      { id: 'c', text: 'Reações que nunca envolvem mais de um tipo de monômero' },
+      { id: 'd', text: 'Processos que ocorrem exclusivamente sem qualquer catalisador' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Nos polímeros de condensação, os monômeros (geralmente bifuncionais, com dois grupos reativos) se ligam sucessivamente, liberando uma molécula pequena (frequentemente água) a cada nova ligação formada entre eles — como ocorre na formação de poliésteres (PET) e poliamidas (náilon).',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_qui_organica_reacoes_24',
+    chapter: 'Polímeros',
+    topicId: 'qui_organica_reacoes',
+    subject: 'Química',
+    prompt: 'Os polímeros biodegradáveis, alternativa aos plásticos convencionais, se diferenciam principalmente por:',
+    options: [
+      { id: 'a', text: 'Poderem ser decompostos por microrganismos em um período de tempo relativamente curto, reduzindo o acúmulo ambiental de resíduos plásticos' },
+      { id: 'b', text: 'Serem sempre mais resistentes mecanicamente que os plásticos convencionais' },
+      { id: 'c', text: 'Nunca se degradarem, mantendo-se inalterados por milhares de anos' },
+      { id: 'd', text: 'Serem produzidos exclusivamente a partir de petróleo' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Polímeros biodegradáveis são projetados para serem decompostos por ação de microrganismos (bactérias, fungos) em um período de tempo relativamente curto (meses a poucos anos), em contraste com plásticos convencionais (como o polietileno), que podem levar séculos para se decompor no ambiente, contribuindo significativamente para a poluição plástica.',
+    difficulty: 'easy'
   },
   {
     id: 'q_real_vunesp_2023_bio',
@@ -13393,6 +14225,22 @@ export const mockQuestions: Question[] = [
     explanation: 'A camada de valência é a última camada eletrônica ocupada. Na distribuição 2-8-8-2, a última camada listada possui 2 elétrons, portanto essa é a quantidade de elétrons de valência.',
     difficulty: 'medium'
   },
+  {
+    id: 'q_qui_modelos_atomicos_6',
+    chapter: 'Organização da Tabela Periódica dos Elementos',
+    topicId: 'qui_modelos_atomicos',
+    subject: 'Química',
+    prompt: 'Na tabela periódica, os elementos de um mesmo grupo (coluna) apresentam propriedades químicas semelhantes principalmente porque:',
+    options: [
+      { id: 'a', text: 'Possuem o mesmo número de elétrons na camada de valência' },
+      { id: 'b', text: 'Possuem sempre o mesmo número de prótons' },
+      { id: 'c', text: 'Estão sempre no mesmo período (linha) da tabela' },
+      { id: 'd', text: 'Têm sempre a mesma massa atômica' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Elementos de um mesmo grupo (coluna vertical) da tabela periódica compartilham o mesmo número de elétrons na camada de valência, o que determina em grande parte seu comportamento químico — por isso apresentam propriedades químicas semelhantes, como reatividade e tipos de ligações que costumam formar.',
+    difficulty: 'medium'
+  },
   // Química — Radioatividade
   {
     id: 'q_qui_radioatividade_1',
@@ -13555,6 +14403,54 @@ export const mockQuestions: Question[] = [
     explanation: 'Como P e V aumentaram simultaneamente, o produto PV aumentou. Pela Equação Geral dos Gases, PV/T é constante quando n é fixo, então se PV aumentou, T também deve ter aumentado para manter a proporção.',
     difficulty: 'hard'
   },
+  {
+    id: 'q_qui_gases_6',
+    chapter: 'Composição da Matéria: Estados Físicos',
+    topicId: 'qui_gases',
+    subject: 'Química',
+    prompt: 'Nos três estados físicos fundamentais da matéria (sólido, líquido e gasoso), o estado gasoso se caracteriza por:',
+    options: [
+      { id: 'a', text: 'Partículas muito afastadas entre si, com movimento livre e desordenado, sem forma ou volume fixos' },
+      { id: 'b', text: 'Partículas rigidamente organizadas em uma estrutura fixa, sem qualquer movimento' },
+      { id: 'c', text: 'Volume fixo, mas forma variável' },
+      { id: 'd', text: 'Forças de coesão entre partículas mais fortes que no estado sólido' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'No estado gasoso, as partículas estão muito afastadas entre si (forças de coesão fracas ou desprezíveis), movimentando-se livre e desordenadamente, o que faz o gás não ter forma nem volume fixos, ocupando todo o espaço disponível do recipiente — diferente do sólido (forma e volume fixos) e do líquido (volume fixo, forma variável).',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_qui_gases_7',
+    chapter: 'Composição da Matéria: Estados Físicos',
+    topicId: 'qui_gases',
+    subject: 'Química',
+    prompt: 'A mudança do estado líquido para o estado gasoso é chamada de:',
+    options: [
+      { id: 'a', text: 'Vaporização (podendo ocorrer por evaporação, ebulição ou calefação)' },
+      { id: 'b', text: 'Sublimação' },
+      { id: 'c', text: 'Fusão' },
+      { id: 'd', text: 'Condensação' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A vaporização é a passagem do estado líquido para o gasoso, podendo ocorrer de três formas: evaporação (lenta, à temperatura ambiente, na superfície do líquido), ebulição (rápida, em toda a massa do líquido, ao atingir a temperatura de ebulição) ou calefação (muito rápida, quando o líquido entra em contato com uma superfície muito mais quente que sua temperatura de ebulição).',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_qui_gases_8',
+    chapter: 'Composição da Matéria: Estados Físicos',
+    topicId: 'qui_gases',
+    subject: 'Química',
+    prompt: 'A sublimação é a mudança de estado físico em que uma substância passa diretamente:',
+    options: [
+      { id: 'a', text: 'Do estado sólido para o estado gasoso (ou vice-versa), sem passar pelo estado líquido' },
+      { id: 'b', text: 'Do estado líquido para o sólido' },
+      { id: 'c', text: 'Do estado gasoso para o líquido' },
+      { id: 'd', text: 'Sempre passa necessariamente pelo estado líquido' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A sublimação é a passagem direta do estado sólido para o gasoso (sublimação propriamente dita) ou do gasoso para o sólido (ressublimação ou sublimação inversa), sem que a substância passe pelo estado líquido — como ocorre com o gelo-seco (CO₂ sólido) à temperatura ambiente.',
+    difficulty: 'medium'
+  },
   // Química — Química Inorgânica
   {
     id: 'q_qui_inorganica_1',
@@ -13715,6 +14611,54 @@ export const mockQuestions: Question[] = [
     ],
     correctOptionId: 'c',
     explanation: 'O hidrogênio tem Nox +1 (total +2) e cada oxigênio tem Nox -2 (total -8). Como a molécula é neutra: 2(+1) + Nox(S) + 4(-2) = 0 → Nox(S) = +6.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_qui_oxirreducao_6',
+    chapter: 'Química Ambiental',
+    topicId: 'qui_oxirreducao',
+    subject: 'Química',
+    prompt: 'A corrosão dos metais, como a formação de ferrugem no ferro, é um processo eletroquímico espontâneo que envolve reações de:',
+    options: [
+      { id: 'a', text: 'Oxirredução, em que o metal é oxidado (perde elétrons) na presença de oxigênio e umidade' },
+      { id: 'b', text: 'Neutralização ácido-base, sem qualquer transferência de elétrons' },
+      { id: 'c', text: 'Precipitação simples, sem qualquer reação química envolvida' },
+      { id: 'd', text: 'Fusão nuclear' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A corrosão (como a ferrugem, óxido de ferro hidratado) é um processo eletroquímico de oxirredução, em que o metal (como o ferro) é oxidado (perde elétrons) na presença de oxigênio e umidade do ambiente, formando óxidos ou hidróxidos — um problema ambiental e econômico relevante, já que degrada estruturas metálicas.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_qui_oxirreducao_7',
+    chapter: 'Química Ambiental',
+    topicId: 'qui_oxirreducao',
+    subject: 'Química',
+    prompt: 'A chuva ácida, fenômeno ambiental associado à poluição atmosférica, é intensificada por reações de oxidação de poluentes como o dióxido de enxofre (SO₂), liberado principalmente por:',
+    options: [
+      { id: 'a', text: 'Queima de combustíveis fósseis que contêm enxofre, como carvão e alguns derivados de petróleo' },
+      { id: 'b', text: 'Fotossíntese realizada por plantas' },
+      { id: 'c', text: 'Respiração celular de animais' },
+      { id: 'd', text: 'Evaporação natural da água dos oceanos' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A queima de combustíveis fósseis contendo enxofre (como certos tipos de carvão e óleo diesel) libera dióxido de enxofre (SO₂), que na atmosfera é oxidado a trióxido de enxofre (SO₃) e reage com a água formando ácido sulfúrico — um dos principais componentes da chuva ácida, com impactos ambientais significativos.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_qui_oxirreducao_8',
+    chapter: 'Química Ambiental',
+    topicId: 'qui_oxirreducao',
+    subject: 'Química',
+    prompt: 'O tratamento de efluentes industriais contendo metais pesados frequentemente utiliza reações de oxirredução para:',
+    options: [
+      { id: 'a', text: 'Converter os íons metálicos tóxicos em formas menos solúveis ou menos reativas, facilitando sua remoção da água' },
+      { id: 'b', text: 'Aumentar a solubilidade dos metais pesados na água' },
+      { id: 'c', text: 'Transformar os metais pesados em gases inofensivos, sem qualquer outra etapa' },
+      { id: 'd', text: 'Não têm nenhuma aplicação no tratamento de efluentes' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Reações de oxirredução são frequentemente empregadas no tratamento de efluentes para alterar o estado de oxidação de íons metálicos tóxicos, tornando-os menos solúveis (favorecendo sua precipitação) ou menos reativos/tóxicos, facilitando sua remoção da água antes do descarte no ambiente.',
     difficulty: 'medium'
   },
   // Química — Termoquímica
@@ -13960,6 +14904,70 @@ export const mockQuestions: Question[] = [
     explanation: 'A corrosão do ferro é um processo espontâneo de oxirredução (o ferro se oxida, o oxigênio se reduz), assim como ocorre em uma pilha — por isso é frequentemente descrita como uma "pilha de corrosão" em miniatura na superfície do metal.',
     difficulty: 'medium'
   },
+  {
+    id: 'q_qui_eletroquimica_6',
+    chapter: 'Introdução ao Estudo das Pilhas e Baterias',
+    topicId: 'qui_eletroquimica',
+    subject: 'Química',
+    prompt: 'Em uma pilha (célula galvânica), o eletrodo onde ocorre a oxidação é chamado de:',
+    options: [
+      { id: 'a', text: 'Ânodo' },
+      { id: 'b', text: 'Cátodo' },
+      { id: 'c', text: 'Eletrólito' },
+      { id: 'd', text: 'Ponte salina' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Em uma pilha, o ânodo é o eletrodo onde ocorre a oxidação (perda de elétrons) — na pilha, o ânodo é o polo negativo. O cátodo, onde ocorre a redução (ganho de elétrons), é o polo positivo.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_qui_eletroquimica_7',
+    chapter: 'Eletroquímica de Processos Espontâneos',
+    topicId: 'qui_eletroquimica',
+    subject: 'Química',
+    prompt: 'Em uma pilha, o fluxo de elétrons através do circuito externo (fio condutor) ocorre sempre no sentido de:',
+    options: [
+      { id: 'a', text: 'Do ânodo (onde há oxidação, liberando elétrons) para o cátodo (onde há redução, consumindo elétrons)' },
+      { id: 'b', text: 'Do cátodo para o ânodo, sempre' },
+      { id: 'c', text: 'Não há fluxo de elétrons em uma pilha em funcionamento' },
+      { id: 'd', text: 'Depende exclusivamente da temperatura ambiente' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Os elétrons liberados na oxidação (no ânodo) fluem pelo circuito externo em direção ao cátodo, onde são consumidos na reação de redução — esse fluxo espontâneo de elétrons é o que gera a corrente elétrica útil de uma pilha em funcionamento.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_qui_eletroquimica_8',
+    chapter: 'Aspectos Quantitativos da Eletroquímica e Metalurgia',
+    topicId: 'qui_eletroquimica',
+    subject: 'Química',
+    prompt: 'As Leis de Faraday da eletrólise relacionam a quantidade de substância depositada (ou liberada) em um eletrodo com:',
+    options: [
+      { id: 'a', text: 'A quantidade de carga elétrica (em coulombs) que passou pelo sistema durante a eletrólise' },
+      { id: 'b', text: 'Apenas a temperatura da solução eletrolítica' },
+      { id: 'c', text: 'A cor da solução, exclusivamente' },
+      { id: 'd', text: 'O tamanho físico do recipiente utilizado' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'As Leis de Faraday estabelecem que a massa de substância depositada ou liberada em um eletrodo durante a eletrólise é diretamente proporcional à quantidade de carga elétrica (Q = i×t) que atravessa o sistema — uma relação fundamental para calcular quantitativamente processos eletrolíticos, como a produção industrial de metais e a metalurgia.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_qui_eletroquimica_9',
+    chapter: 'Aspectos Quantitativos da Eletroquímica e Metalurgia',
+    topicId: 'qui_eletroquimica',
+    subject: 'Química',
+    prompt: 'A eletrólise ígnea (de sal fundido, sem água) é utilizada industrialmente na metalurgia para obter metais muito reativos, como o sódio e o alumínio, principalmente porque:',
+    options: [
+      { id: 'a', text: 'Esses metais são tão reativos que não podem ser obtidos por redução química convencional a partir de seus minérios, exigindo a força de uma corrente elétrica' },
+      { id: 'b', text: 'A eletrólise ígnea é sempre mais barata que qualquer outro método' },
+      { id: 'c', text: 'Metais reativos nunca podem ser extraídos de seus minérios' },
+      { id: 'd', text: 'A presença de água é sempre necessária para a extração desses metais' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Metais muito reativos, como sódio e alumínio, formam compostos (óxidos, sais) muito estáveis, difíceis de reduzir por métodos químicos convencionais. A eletrólise ígnea (do composto fundido, sem a interferência da água) fornece a energia elétrica necessária para forçar a redução desses íons metálicos a metal puro — como ocorre na produção industrial do alumínio a partir da bauxita.',
+    difficulty: 'hard'
+  },
   // Química — Equilíbrio Químico
   {
     id: 'q_qui_equilibrio_1',
@@ -14040,6 +15048,102 @@ export const mockQuestions: Question[] = [
     correctOptionId: 'a',
     explanation: 'A constante de equilíbrio é a razão entre as concentrações dos produtos e dos reagentes, cada uma elevada ao seu coeficiente estequiométrico: Kc = [SO₃]² / ([SO₂]²·[O₂]).',
     difficulty: 'medium'
+  },
+  {
+    id: 'q_qui_equilibrio_6',
+    chapter: 'Equilíbrios Iônicos',
+    topicId: 'qui_equilibrio',
+    subject: 'Química',
+    prompt: 'A constante de ionização de um ácido fraco (Ka) indica:',
+    options: [
+      { id: 'a', text: 'O grau de dissociação do ácido em água, sendo tanto maior quanto mais forte for o ácido' },
+      { id: 'b', text: 'A massa molar do ácido' },
+      { id: 'c', text: 'A cor da solução ácida' },
+      { id: 'd', text: 'Um valor sempre igual a 1, para qualquer ácido' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A constante de ionização ácida (Ka) mede o quanto um ácido fraco se dissocia (ioniza) em água, estabelecendo um equilíbrio entre a forma não dissociada e os íons formados: quanto maior o valor de Ka, mais o equilíbrio favorece a dissociação, e mais forte é o ácido (dentro da categoria dos ácidos fracos).',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_qui_equilibrio_7',
+    chapter: 'Equilíbrios Iônicos',
+    topicId: 'qui_equilibrio',
+    subject: 'Química',
+    prompt: 'O produto iônico da água (Kw), a 25°C, tem valor constante de 10⁻¹⁴. Essa constante relaciona:',
+    options: [
+      { id: 'a', text: 'As concentrações dos íons H⁺ e OH⁻ presentes em qualquer solução aquosa, sendo Kw = [H⁺]×[OH⁻]' },
+      { id: 'b', text: 'Apenas a concentração de íons H⁺, sem qualquer relação com OH⁻' },
+      { id: 'c', text: 'A temperatura de ebulição da água' },
+      { id: 'd', text: 'A pressão de vapor da água' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O produto iônico da água, Kw = [H⁺]×[OH⁻] = 10⁻¹⁴ (a 25°C), é constante em qualquer solução aquosa: se a concentração de H⁺ aumenta (solução ácida), a de OH⁻ diminui proporcionalmente, e vice-versa (solução básica) — essa relação é a base do conceito de pH e pOH.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_qui_equilibrio_8',
+    chapter: 'Equilíbrios Iônicos',
+    topicId: 'qui_equilibrio',
+    subject: 'Química',
+    prompt: 'O efeito do íon comum, aplicado a equilíbrios iônicos, descreve o que ocorre quando se adiciona a uma solução em equilíbrio uma substância que fornece um íon já presente nesse equilíbrio. O resultado é:',
+    options: [
+      { id: 'a', text: 'O equilíbrio se desloca no sentido de consumir o excesso do íon comum adicionado, reduzindo o grau de ionização da espécie original' },
+      { id: 'b', text: 'O equilíbrio se desloca sempre no sentido de produzir mais do íon comum adicionado' },
+      { id: 'c', text: 'Não há qualquer efeito sobre o equilíbrio' },
+      { id: 'd', text: 'A constante de equilíbrio (Ka ou Kb) muda de valor' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Pelo Princípio de Le Chatelier, ao adicionar um íon já presente no equilíbrio (íon comum), o sistema se desloca no sentido de consumir o excesso desse íon, reduzindo o grau de ionização da espécie original — a constante de equilíbrio (Ka/Kb) permanece a mesma, apenas as concentrações das espécies no novo equilíbrio se alteram.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_qui_equilibrio_9',
+    chapter: 'Equilíbrios Iônicos II',
+    topicId: 'qui_equilibrio',
+    subject: 'Química',
+    prompt: 'Uma solução tampão é uma mistura capaz de resistir a variações bruscas de pH quando pequenas quantidades de ácido ou base são adicionadas. Ela é tipicamente formada por:',
+    options: [
+      { id: 'a', text: 'Um ácido fraco e sua base conjugada (ou uma base fraca e seu ácido conjugado), em concentrações comparáveis' },
+      { id: 'b', text: 'Um ácido forte e uma base forte, em quantidades exatamente equivalentes' },
+      { id: 'c', text: 'Apenas água pura, sem qualquer outro componente' },
+      { id: 'd', text: 'Um sal neutro dissolvido em água destilada' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Uma solução tampão é formada por um par ácido-base conjugado (um ácido fraco e sua base conjugada, ou uma base fraca e seu ácido conjugado), em concentrações comparáveis. Ao adicionar um ácido, a base conjugada o neutraliza; ao adicionar uma base, o ácido fraco a neutraliza — mantendo o pH relativamente estável.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_qui_equilibrio_10',
+    chapter: 'Equilíbrios Iônicos II',
+    topicId: 'qui_equilibrio',
+    subject: 'Química',
+    prompt: 'O produto de solubilidade (Kps) de um sal pouco solúvel indica:',
+    options: [
+      { id: 'a', text: 'O produto das concentrações dos íons do sal em uma solução saturada, elevadas aos respectivos coeficientes estequiométricos' },
+      { id: 'b', text: 'A massa total do sal dissolvido, independentemente da concentração' },
+      { id: 'c', text: 'A temperatura de fusão do sal' },
+      { id: 'd', text: 'Um valor sempre igual para qualquer sal, independentemente de sua solubilidade real' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O Kps é o produto das concentrações molares dos íons presentes em uma solução saturada de um sal pouco solúvel, cada uma elevada ao respectivo coeficiente estequiométrico da equação de dissociação — quanto menor o valor de Kps, menos solúvel é o sal.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_qui_equilibrio_11',
+    chapter: 'Equilíbrios Iônicos II',
+    topicId: 'qui_equilibrio',
+    subject: 'Química',
+    prompt: 'Ao comparar o Kps (produto de solubilidade) de dois sais diferentes, sendo ambos do mesmo tipo estequiométrico (por exemplo, AgCl e AgBr, ambos do tipo AB), é correto afirmar que:',
+    options: [
+      { id: 'a', text: 'O sal com maior Kps é o mais solúvel entre os dois' },
+      { id: 'b', text: 'O sal com maior Kps é sempre o menos solúvel' },
+      { id: 'c', text: 'O valor de Kps não tem qualquer relação com a solubilidade' },
+      { id: 'd', text: 'Ambos os sais têm sempre a mesma solubilidade, independentemente do Kps' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Para sais do mesmo tipo estequiométrico (mesma proporção de íons, como AB, AB₂, etc.), quanto maior o valor de Kps, maior é a solubilidade do sal — essa comparação direta só é válida, porém, quando os sais têm a mesma proporção estequiométrica entre os íons.',
+    difficulty: 'hard'
   },
   // Português — Domínio da Norma Culta
   {
