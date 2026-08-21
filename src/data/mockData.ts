@@ -2791,6 +2791,262 @@ export const mockQuestions: Question[] = [
     explanation: 'A equação modular se desdobra em dois casos: x - 2 = 5 (x = 7) ou x - 2 = -5 (x = -3). Ambos são válidos, logo há duas soluções.',
     difficulty: 'medium'
   },
+  {
+    id: 'q_mat_funcoes_6',
+    chapter: 'Introdução às Funções',
+    topicId: 'mat_funcoes',
+    subject: 'Matemática',
+    prompt: 'Uma relação f associa a cada elemento x de um conjunto A exatamente um elemento y de um conjunto B. Para que essa relação seja considerada uma função, é necessário que:',
+    options: [
+      { id: 'a', text: 'Todo elemento de A tenha correspondência com pelo menos um elemento de B, podendo haver elementos de A sem correspondente' },
+      { id: 'b', text: 'Todo elemento de A tenha correspondência com exatamente um único elemento de B' },
+      { id: 'c', text: 'Todo elemento de B tenha correspondência com todos os elementos de A' },
+      { id: 'd', text: 'Os conjuntos A e B tenham necessariamente o mesmo número de elementos' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Por definição, uma função f: A → B associa a cada elemento do domínio A um, e apenas um, elemento do contradomínio B. Se algum elemento de A não tiver imagem, ou tiver mais de uma imagem, a relação não é uma função.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_mat_funcoes_7',
+    chapter: 'Introdução às Funções',
+    topicId: 'mat_funcoes',
+    subject: 'Matemática',
+    prompt: 'O teste da reta vertical é usado para verificar se um gráfico representa uma função. Ele consiste em:',
+    options: [
+      { id: 'a', text: 'Verificar se toda reta vertical traçada no plano intercepta o gráfico em no máximo um ponto' },
+      { id: 'b', text: 'Verificar se toda reta horizontal intercepta o gráfico em exatamente um ponto' },
+      { id: 'c', text: 'Contar quantas vezes o gráfico cruza o eixo x' },
+      { id: 'd', text: 'Verificar se o gráfico é simétrico em relação à origem' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Se alguma reta vertical (x = k, para algum k) interceptasse o gráfico em mais de um ponto, isso significaria que o valor x = k tem mais de uma imagem associada — o que violaria a definição de função. Por isso, o gráfico representa uma função se, e somente se, toda reta vertical o intercepta em no máximo um ponto.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_funcoes_8',
+    chapter: 'Transformações em Gráficos de Funções',
+    topicId: 'mat_funcoes',
+    subject: 'Matemática',
+    prompt: 'Se o gráfico de g(x) é obtido a partir do gráfico de f(x) pela transformação g(x) = f(x) + 3, o que ocorre com o gráfico?',
+    options: [
+      { id: 'a', text: 'Desloca-se 3 unidades para a esquerda' },
+      { id: 'b', text: 'Desloca-se 3 unidades para a direita' },
+      { id: 'c', text: 'Desloca-se 3 unidades para cima' },
+      { id: 'd', text: 'Desloca-se 3 unidades para baixo' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'Somar uma constante positiva à função, g(x) = f(x) + k (k > 0), desloca todo o gráfico verticalmente para cima em k unidades, já que cada valor de y aumenta em k mantendo o mesmo x.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_mat_funcoes_9',
+    chapter: 'Transformações em Gráficos de Funções',
+    topicId: 'mat_funcoes',
+    subject: 'Matemática',
+    prompt: 'Se g(x) = f(-x), o gráfico de g é obtido a partir do gráfico de f por meio de:',
+    options: [
+      { id: 'a', text: 'Uma reflexão em torno do eixo y' },
+      { id: 'b', text: 'Uma reflexão em torno do eixo x' },
+      { id: 'c', text: 'Uma translação horizontal' },
+      { id: 'd', text: 'Uma rotação de 180° em torno da origem' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Trocar x por -x no argumento da função reflete o gráfico horizontalmente em torno do eixo y: cada ponto (x, y) do gráfico original passa a corresponder ao ponto (-x, y) no gráfico de g.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_funcoes_10',
+    chapter: 'Composição de Funções',
+    topicId: 'mat_funcoes',
+    subject: 'Matemática',
+    prompt: 'Sejam f(x) = 2x + 1 e g(x) = x². Qual é o valor de (f∘g)(3), ou seja, f(g(3))?',
+    options: [
+      { id: 'a', text: '7' },
+      { id: 'b', text: '10' },
+      { id: 'c', text: '19' },
+      { id: 'd', text: '49' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'Primeiro calcula-se g(3) = 3² = 9. Em seguida, f(9) = 2×9 + 1 = 19.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_funcoes_11',
+    chapter: 'Inversão de Funções',
+    topicId: 'mat_funcoes',
+    subject: 'Matemática',
+    prompt: 'Para que uma função f admita uma função inversa f⁻¹, é necessário que f seja:',
+    options: [
+      { id: 'a', text: 'Apenas sobrejetora' },
+      { id: 'b', text: 'Bijetora (injetora e sobrejetora ao mesmo tempo)' },
+      { id: 'c', text: 'Apenas contínua' },
+      { id: 'd', text: 'Necessariamente crescente em todo o seu domínio' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A função inversa só existe (como função) quando f é bijetora: injetora garante que cada imagem venha de um único elemento do domínio (necessário para que f⁻¹ seja bem definida, sem ambiguidade), e sobrejetora garante que todo elemento do contradomínio tenha um correspondente no domínio (necessário para que f⁻¹ esteja definida em todo o seu próprio domínio).',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_funcoes_12',
+    chapter: 'Inversão de Funções',
+    topicId: 'mat_funcoes',
+    subject: 'Matemática',
+    prompt: 'Se f(x) = 3x - 6, qual é a expressão da função inversa f⁻¹(x)?',
+    options: [
+      { id: 'a', text: 'f⁻¹(x) = x/3 - 6' },
+      { id: 'b', text: 'f⁻¹(x) = (x + 6)/3' },
+      { id: 'c', text: 'f⁻¹(x) = 3x + 6' },
+      { id: 'd', text: 'f⁻¹(x) = (x - 6)/3' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Para achar a inversa, escreve-se y = 3x - 6 e troca-se x por y (e vice-versa): x = 3y - 6. Isolando y: x + 6 = 3y → y = (x + 6)/3.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_funcoes_13',
+    chapter: 'Funções Bijetoras',
+    topicId: 'mat_funcoes',
+    subject: 'Matemática',
+    prompt: 'Uma função f: A → B é dita sobrejetora quando:',
+    options: [
+      { id: 'a', text: 'Todo elemento de B é imagem de pelo menos um elemento de A, ou seja, o conjunto imagem de f coincide com o contradomínio B' },
+      { id: 'b', text: 'Elementos distintos do domínio sempre têm imagens distintas' },
+      { id: 'c', text: 'Nenhum elemento de B possui correspondente em A' },
+      { id: 'd', text: 'A função não possui domínio definido' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Uma função é sobrejetora (ou "sobre") quando todo elemento do contradomínio B é atingido por pelo menos um elemento do domínio A, isto é, o conjunto imagem coincide exatamente com o contradomínio — não sobra nenhum elemento de B sem correspondente.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_funcoes_14',
+    chapter: 'Funções Bijetoras',
+    topicId: 'mat_funcoes',
+    subject: 'Matemática',
+    prompt: 'Uma função f: A → B é dita injetora (ou injetiva) quando:',
+    options: [
+      { id: 'a', text: 'Elementos distintos do domínio sempre têm imagens distintas no contradomínio (nunca dois elementos de A "caem" no mesmo ponto de B)' },
+      { id: 'b', text: 'Todo elemento do contradomínio é imagem de algum elemento do domínio' },
+      { id: 'c', text: 'A função não possui contradomínio definido' },
+      { id: 'd', text: 'O domínio e o contradomínio são conjuntos idênticos' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Uma função é injetora quando elementos diferentes do domínio nunca compartilham a mesma imagem: se x1 ≠ x2, então f(x1) ≠ f(x2). Uma função pode ser injetora sem ser sobrejetora (e vice-versa); quando é ambas ao mesmo tempo, é chamada de bijetora.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_funcoes_15',
+    chapter: 'Função Constante e Função Afim',
+    topicId: 'mat_funcoes',
+    subject: 'Matemática',
+    prompt: 'A função afim f(x) = ax + b, com a ≠ 0, tem como gráfico uma reta. O coeficiente "a" (coeficiente angular) representa:',
+    options: [
+      { id: 'a', text: 'O valor de f(0), ou seja, onde a reta cruza o eixo y' },
+      { id: 'b', text: 'A taxa de variação da função — quanto y varia para cada unidade de variação em x — determinando a inclinação da reta' },
+      { id: 'c', text: 'A raiz da função, sempre' },
+      { id: 'd', text: 'Um valor que nunca pode ser negativo' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'O coeficiente angular "a" indica a inclinação da reta: quanto o valor de f(x) varia para cada aumento de uma unidade em x. Se a > 0, a função é crescente; se a < 0, é decrescente. O coeficiente "b" (coeficiente linear) é que determina onde a reta cruza o eixo y, ou seja, f(0) = b.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_mat_funcoes_16',
+    chapter: 'Função Constante e Função Afim',
+    topicId: 'mat_funcoes',
+    subject: 'Matemática',
+    prompt: 'Uma função constante f(x) = k (onde k é um número real fixo) tem como característica gráfica:',
+    options: [
+      { id: 'a', text: 'Uma reta horizontal, paralela ao eixo x, passando pelo ponto (0, k)' },
+      { id: 'b', text: 'Uma reta vertical, paralela ao eixo y' },
+      { id: 'c', text: 'Uma parábola com vértice na origem' },
+      { id: 'd', text: 'Uma reta que passa necessariamente pela origem' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Na função constante f(x) = k, o valor de y é sempre k, independentemente do valor de x escolhido. Isso resulta em uma reta horizontal (paralela ao eixo x), passando pelo ponto (0, k) — diferente da função afim geral, que tem inclinação não nula.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_mat_funcoes_17',
+    chapter: 'Função Constante e Função Afim',
+    topicId: 'mat_funcoes',
+    subject: 'Matemática',
+    prompt: 'Uma reta passa pelos pontos (1, 5) e (3, 11). Qual é o coeficiente angular dessa reta?',
+    options: [
+      { id: 'a', text: '2' },
+      { id: 'b', text: '3' },
+      { id: 'c', text: '4' },
+      { id: 'd', text: '6' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'O coeficiente angular é dado por a = (y2 - y1)/(x2 - x1) = (11 - 5)/(3 - 1) = 6/2 = 3.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_funcoes_18',
+    chapter: 'Função Quadrática',
+    topicId: 'mat_funcoes',
+    subject: 'Matemática',
+    prompt: 'Na função quadrática f(x) = ax² + bx + c (com a ≠ 0), o sinal do coeficiente "a" determina:',
+    options: [
+      { id: 'a', text: 'A concavidade da parábola: para cima se a > 0 (ponto de mínimo) ou para baixo se a < 0 (ponto de máximo)' },
+      { id: 'b', text: 'Apenas a posição do eixo de simetria da parábola' },
+      { id: 'c', text: 'O número de raízes reais da função, sempre' },
+      { id: 'd', text: 'Se a função é crescente ou decrescente em todo o seu domínio, sem exceções' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Se a > 0, a parábola tem concavidade voltada para cima e possui um ponto de mínimo (seu vértice); se a < 0, a concavidade é voltada para baixo e o vértice é um ponto de máximo. O sinal de "a" não determina diretamente o número de raízes (isso depende do discriminante Δ = b² - 4ac).',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_funcoes_19',
+    chapter: 'Função Quadrática',
+    topicId: 'mat_funcoes',
+    subject: 'Matemática',
+    prompt: 'Qual é a coordenada x do vértice da parábola f(x) = x² - 6x + 8?',
+    options: [
+      { id: 'a', text: '2' },
+      { id: 'b', text: '3' },
+      { id: 'c', text: '4' },
+      { id: 'd', text: '6' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A coordenada x do vértice é dada por xv = -b/(2a) = -(-6)/(2×1) = 6/2 = 3.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_funcoes_20',
+    chapter: 'Estudo do Sinal de Funções',
+    topicId: 'mat_funcoes',
+    subject: 'Matemática',
+    prompt: 'Estudar o sinal de uma função f(x) significa determinar:',
+    options: [
+      { id: 'a', text: 'Os intervalos do domínio em que f(x) é positiva, negativa ou nula' },
+      { id: 'b', text: 'Apenas o valor máximo que a função pode assumir' },
+      { id: 'c', text: 'Se a função é par ou ímpar' },
+      { id: 'd', text: 'O domínio da função, exclusivamente' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O estudo do sinal de uma função consiste em identificar, para cada intervalo do domínio, se f(x) > 0 (função positiva), f(x) < 0 (função negativa) ou f(x) = 0 (raízes da função) — informação essencial, por exemplo, para resolver inequações e analisar o comportamento gráfico da função.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_mat_funcoes_21',
+    chapter: 'Estudo do Sinal de Funções',
+    topicId: 'mat_funcoes',
+    subject: 'Matemática',
+    prompt: 'No estudo do sinal da função afim f(x) = 2x - 6, para quais valores de x temos f(x) > 0?',
+    options: [
+      { id: 'a', text: 'x > 3' },
+      { id: 'b', text: 'x < 3' },
+      { id: 'c', text: 'x > 6' },
+      { id: 'd', text: 'x < -3' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A raiz de f(x) = 2x - 6 é x = 3. Como a função é crescente (coeficiente angular positivo), f(x) > 0 para valores de x maiores que a raiz, ou seja, x > 3.',
+    difficulty: 'medium'
+  },
   // Matemática — Análise Combinatória
   {
     id: 'q_mat_combinatoria_1',
@@ -2871,6 +3127,70 @@ export const mockQuestions: Question[] = [
     correctOptionId: 'b',
     explanation: 'Pelo binômio de Newton, o termo geral é C(6,k)·x^(6-k)·y^k. Para obter x²y⁴, precisamos de k = 4, e o coeficiente é C(6,4) = 15.',
     difficulty: 'hard'
+  },
+  {
+    id: 'q_mat_combinatoria_6',
+    chapter: 'Introdução às Técnicas de Contagem',
+    topicId: 'mat_combinatoria',
+    subject: 'Matemática',
+    prompt: 'O Princípio Fundamental da Contagem (Princípio Multiplicativo) afirma que, se uma decisão pode ser tomada em etapas sucessivas e independentes, com m1 possibilidades na primeira etapa, m2 na segunda, e assim por diante, o número total de possibilidades é:',
+    options: [
+      { id: 'a', text: 'A soma m1 + m2 + ... + mn' },
+      { id: 'b', text: 'O produto m1 × m2 × ... × mn' },
+      { id: 'c', text: 'Sempre igual ao maior valor entre m1, m2, ..., mn' },
+      { id: 'd', text: 'A média aritmética entre m1, m2, ..., mn' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'O Princípio Fundamental da Contagem estabelece que, para etapas sucessivas e independentes, o número total de possibilidades é o produto do número de opções de cada etapa — e não a soma, que seria usada apenas se as etapas fossem alternativas mutuamente exclusivas (ou isso ou aquilo), não sucessivas.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_mat_combinatoria_7',
+    chapter: 'Introdução às Técnicas de Contagem',
+    topicId: 'mat_combinatoria',
+    subject: 'Matemática',
+    prompt: 'Um restaurante oferece 4 opções de entrada, 5 de prato principal e 3 de sobremesa. De quantas formas diferentes um cliente pode montar uma refeição completa, escolhendo uma opção de cada categoria?',
+    options: [
+      { id: 'a', text: '12' },
+      { id: 'b', text: '15' },
+      { id: 'c', text: '60' },
+      { id: 'd', text: '20' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'Pelo Princípio Fundamental da Contagem, multiplica-se o número de opções de cada etapa independente: 4 × 5 × 3 = 60 combinações possíveis de refeição completa.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_mat_combinatoria_8',
+    chapter: 'O Problema da Fila',
+    topicId: 'mat_combinatoria',
+    subject: 'Matemática',
+    prompt: 'De quantas maneiras diferentes 5 pessoas distintas podem se organizar em uma fila?',
+    options: [
+      { id: 'a', text: '10' },
+      { id: 'b', text: '25' },
+      { id: 'c', text: '60' },
+      { id: 'd', text: '120' }
+    ],
+    correctOptionId: 'd',
+    explanation: 'Trata-se de uma permutação simples de 5 elementos distintos: P(5) = 5! = 5×4×3×2×1 = 120.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_combinatoria_9',
+    chapter: 'Técnicas de Contagem',
+    topicId: 'mat_combinatoria',
+    subject: 'Matemática',
+    prompt: 'A diferença essencial entre um arranjo e uma combinação, ambos com r elementos escolhidos de um conjunto de n elementos, é que:',
+    options: [
+      { id: 'a', text: 'No arranjo, a ordem dos elementos escolhidos importa (formando agrupamentos distintos); na combinação, a ordem não importa' },
+      { id: 'b', text: 'No arranjo, elementos podem se repetir; na combinação, nunca' },
+      { id: 'c', text: 'Combinação e arranjo são sempre exatamente o mesmo valor, para quaisquer n e r' },
+      { id: 'd', text: 'A combinação sempre resulta em um número maior que o arranjo, para os mesmos n e r' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'No arranjo A(n,r), a ordem dos r elementos escolhidos importa — {1,2,3} e {3,2,1} são agrupamentos diferentes. Na combinação C(n,r), a ordem não importa — esses dois seriam o mesmo agrupamento. Por isso, para os mesmos n e r (com r > 1), A(n,r) é sempre maior que C(n,r), já que A(n,r) = C(n,r) × r!.',
+    difficulty: 'medium'
   },
   // Matemática — Geometria Plana
   {
@@ -2955,6 +3275,646 @@ export const mockQuestions: Question[] = [
     difficulty: 'hard',
     examSource: { board: 'ENEM', year: 2023, sourceUrl: 'https://rendewo.com/content/enem_2023/q142.html' }
   },
+  {
+    id: 'q_mat_geometria_plana_41',
+    chapter: 'Introdução à Geometria Plana',
+    topicId: 'mat_geometria_plana',
+    subject: 'Matemática',
+    prompt: 'Na geometria plana, dois postulados fundamentais estabelecem que:',
+    options: [
+      { id: 'a', text: 'Por dois pontos distintos passa uma única reta, e por três pontos não colineares passa um único plano' },
+      { id: 'b', text: 'Por dois pontos distintos passam infinitas retas' },
+      { id: 'c', text: 'Três pontos quaisquer são sempre colineares' },
+      { id: 'd', text: 'Não existe uma reta única definida por dois pontos' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Dois dos postulados básicos da geometria euclidiana afirmam que dois pontos distintos determinam uma única reta que passa por ambos, e que três pontos não colineares determinam um único plano — a base para toda a construção lógica da geometria plana e espacial.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_mat_geometria_plana_42',
+    chapter: 'Introdução à Geometria Plana',
+    topicId: 'mat_geometria_plana',
+    subject: 'Matemática',
+    prompt: 'Duas retas no mesmo plano que nunca se encontram, mantendo sempre a mesma distância entre si, são chamadas de:',
+    options: [
+      { id: 'a', text: 'Retas concorrentes' },
+      { id: 'b', text: 'Retas paralelas' },
+      { id: 'c', text: 'Retas perpendiculares' },
+      { id: 'd', text: 'Retas coincidentes' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Retas paralelas estão no mesmo plano e nunca se interceptam, mantendo distância constante entre si em toda a sua extensão — diferente das retas concorrentes, que se cruzam em um único ponto.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_mat_geometria_plana_43',
+    chapter: 'Introdução à Geometria Plana',
+    topicId: 'mat_geometria_plana',
+    subject: 'Matemática',
+    prompt: 'Quando duas retas paralelas são cortadas por uma reta transversal, os ângulos correspondentes formados são:',
+    options: [
+      { id: 'a', text: 'Sempre suplementares (somam 180°)' },
+      { id: 'b', text: 'Sempre congruentes (têm a mesma medida)' },
+      { id: 'c', text: 'Sempre complementares (somam 90°)' },
+      { id: 'd', text: 'Impossíveis de determinar sem medição direta' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Quando uma transversal corta duas retas paralelas, os ângulos correspondentes (que ocupam a mesma posição relativa em cada interseção) são sempre congruentes — uma propriedade fundamental usada para demonstrar diversos teoremas de geometria plana.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_geometria_plana_44',
+    chapter: 'Ângulos em Triângulos',
+    topicId: 'mat_geometria_plana',
+    subject: 'Matemática',
+    prompt: 'Um triângulo tem ângulos internos medindo 50° e 70°. Qual é a medida do terceiro ângulo?',
+    options: [
+      { id: 'a', text: '50°' },
+      { id: 'b', text: '60°' },
+      { id: 'c', text: '70°' },
+      { id: 'd', text: '120°' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A soma dos ângulos internos de qualquer triângulo é 180°. Logo, o terceiro ângulo mede 180° - 50° - 70° = 60°.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_mat_geometria_plana_5',
+    chapter: 'Ângulos em Triângulos',
+    topicId: 'mat_geometria_plana',
+    subject: 'Matemática',
+    prompt: 'O ângulo externo de um triângulo, formado pelo prolongamento de um dos lados, é igual a:',
+    options: [
+      { id: 'a', text: 'Sempre 90°, independentemente do triângulo' },
+      { id: 'b', text: 'A soma dos dois ângulos internos não adjacentes a ele' },
+      { id: 'c', text: 'A metade do ângulo interno adjacente' },
+      { id: 'd', text: 'Sempre igual ao maior ângulo interno do triângulo' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'O teorema do ângulo externo estabelece que a medida de um ângulo externo de um triângulo é igual à soma das medidas dos dois ângulos internos não adjacentes a ele (os dois "distantes" daquele vértice) — consequência direta de que a soma dos ângulos internos é 180°.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_geometria_plana_6',
+    chapter: 'Ângulos em Polígonos',
+    topicId: 'mat_geometria_plana',
+    subject: 'Matemática',
+    prompt: 'Qual é a soma dos ângulos internos de um pentágono regular?',
+    options: [
+      { id: 'a', text: '360°' },
+      { id: 'b', text: '450°' },
+      { id: 'c', text: '540°' },
+      { id: 'd', text: '720°' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'A soma dos ângulos internos de um polígono de n lados é (n-2)×180°. Para o pentágono (n=5): (5-2)×180° = 3×180° = 540°.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_mat_geometria_plana_7',
+    chapter: 'Ângulos em Polígonos',
+    topicId: 'mat_geometria_plana',
+    subject: 'Matemática',
+    prompt: 'A soma dos ângulos externos de qualquer polígono convexo (um em cada vértice) é sempre igual a:',
+    options: [
+      { id: 'a', text: '180°, independentemente do número de lados' },
+      { id: 'b', text: '360°, independentemente do número de lados' },
+      { id: 'c', text: '(n-2)×180°, dependendo do número de lados n' },
+      { id: 'd', text: 'Sempre igual à soma dos ângulos internos' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Diferentemente da soma dos ângulos internos (que depende do número de lados), a soma dos ângulos externos de qualquer polígono convexo é sempre igual a 360° — o equivalente a dar uma volta completa ao percorrer o contorno do polígono.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_geometria_plana_8',
+    chapter: 'Ângulos e Circunferências',
+    topicId: 'mat_geometria_plana',
+    subject: 'Matemática',
+    prompt: 'Um ângulo central em uma circunferência mede 80°. Qual é a medida do arco correspondente?',
+    options: [
+      { id: 'a', text: '40°' },
+      { id: 'b', text: '80°' },
+      { id: 'c', text: '160°' },
+      { id: 'd', text: '360°' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'O ângulo central tem vértice no centro da circunferência, e sua medida é sempre igual à medida do arco que ele subtende.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_mat_geometria_plana_9',
+    chapter: 'Ângulos e Circunferências',
+    topicId: 'mat_geometria_plana',
+    subject: 'Matemática',
+    prompt: 'Um ângulo inscrito em uma circunferência subtende um arco de 100°. Qual é a medida desse ângulo inscrito?',
+    options: [
+      { id: 'a', text: '25°' },
+      { id: 'b', text: '50°' },
+      { id: 'c', text: '100°' },
+      { id: 'd', text: '200°' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A medida de um ângulo inscrito em uma circunferência é sempre igual à metade da medida do arco correspondente que ele subtende: 100°/2 = 50°.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_geometria_plana_10',
+    chapter: 'Ângulos e Circunferências',
+    topicId: 'mat_geometria_plana',
+    subject: 'Matemática',
+    prompt: 'Uma reta tangente a uma circunferência forma com o raio no ponto de tangência um ângulo de:',
+    options: [
+      { id: 'a', text: '45°, sempre' },
+      { id: 'b', text: '90°, sempre' },
+      { id: 'c', text: '180°, sempre' },
+      { id: 'd', text: 'Um valor que varia conforme o raio da circunferência' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Uma propriedade fundamental da tangência é que a reta tangente a uma circunferência é sempre perpendicular ao raio traçado até o ponto de tangência, formando um ângulo de 90° — independentemente do tamanho do raio.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_geometria_plana_11',
+    chapter: 'Simetrias e Congruências',
+    topicId: 'mat_geometria_plana',
+    subject: 'Matemática',
+    prompt: 'Duas figuras geométricas são consideradas congruentes quando:',
+    options: [
+      { id: 'a', text: 'Têm exatamente a mesma forma e o mesmo tamanho, podendo ser sobrepostas perfeitamente' },
+      { id: 'b', text: 'Têm a mesma forma, mas tamanhos diferentes' },
+      { id: 'c', text: 'Têm o mesmo perímetro, mas formas diferentes' },
+      { id: 'd', text: 'Ocupam a mesma posição no plano cartesiano' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Figuras congruentes têm exatamente a mesma forma e o mesmo tamanho — todos os lados e ângulos correspondentes são iguais — de modo que uma pode ser sobreposta exatamente sobre a outra, possivelmente após uma translação, rotação ou reflexão.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_mat_geometria_plana_12',
+    chapter: 'Simetrias e Congruências',
+    topicId: 'mat_geometria_plana',
+    subject: 'Matemática',
+    prompt: 'O critério de congruência de triângulos LAL (Lado-Ângulo-Lado) garante que dois triângulos são congruentes quando:',
+    options: [
+      { id: 'a', text: 'Têm dois lados e o ângulo entre eles (ângulo compreendido) respectivamente congruentes' },
+      { id: 'b', text: 'Têm apenas um lado em comum, sem qualquer informação sobre ângulos' },
+      { id: 'c', text: 'Têm três ângulos congruentes, mas lados de tamanhos diferentes' },
+      { id: 'd', text: 'Têm o mesmo perímetro, independentemente dos lados individuais' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O critério LAL estabelece que, se dois lados de um triângulo e o ângulo formado entre eles são respectivamente congruentes aos de outro triângulo, então os dois triângulos são congruentes — um dos critérios clássicos de congruência (junto com ALA e LLL).',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_geometria_plana_13',
+    chapter: 'Simetrias e Congruências',
+    topicId: 'mat_geometria_plana',
+    subject: 'Matemática',
+    prompt: 'Uma figura apresenta simetria axial (ou de reflexão) em relação a uma reta r quando:',
+    options: [
+      { id: 'a', text: 'Ao ser refletida em relação à reta r, a figura coincide exatamente consigo mesma' },
+      { id: 'b', text: 'A figura pode ser girada em qualquer ângulo e permanece idêntica' },
+      { id: 'c', text: 'A figura não possui nenhum eixo de simetria' },
+      { id: 'd', text: 'A reta r deve necessariamente passar fora da figura' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A simetria axial ocorre quando existe uma reta (eixo de simetria) tal que, ao refletir a figura em relação a ela, a imagem obtida coincide exatamente com a figura original — como ocorre, por exemplo, com qualquer diâmetro de uma circunferência.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_mat_geometria_plana_14',
+    chapter: 'Identificação de Simetrias I',
+    topicId: 'mat_geometria_plana',
+    subject: 'Matemática',
+    prompt: 'Um quadrado possui quantos eixos de simetria?',
+    options: [
+      { id: 'a', text: '1' },
+      { id: 'b', text: '2' },
+      { id: 'c', text: '4' },
+      { id: 'd', text: 'Infinitos' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'O quadrado possui 4 eixos de simetria: as duas diagonais e as duas retas que passam pelos pontos médios de lados opostos.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_mat_geometria_plana_15',
+    chapter: 'Identificação de Simetrias I',
+    topicId: 'mat_geometria_plana',
+    subject: 'Matemática',
+    prompt: 'Uma circunferência possui quantos eixos de simetria?',
+    options: [
+      { id: 'a', text: 'Nenhum' },
+      { id: 'b', text: 'Exatamente 2' },
+      { id: 'c', text: 'Exatamente 4' },
+      { id: 'd', text: 'Infinitos (qualquer reta que passe pelo centro)' }
+    ],
+    correctOptionId: 'd',
+    explanation: 'Toda reta que passa pelo centro de uma circunferência (isto é, todo diâmetro) é um eixo de simetria, já que reflete a circunferência exatamente sobre si mesma — por isso a circunferência tem infinitos eixos de simetria.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_geometria_plana_16',
+    chapter: 'Identificação de Simetrias I',
+    topicId: 'mat_geometria_plana',
+    subject: 'Matemática',
+    prompt: 'Um triângulo escaleno (com os três lados de medidas diferentes) possui quantos eixos de simetria?',
+    options: [
+      { id: 'a', text: 'Nenhum' },
+      { id: 'b', text: '1' },
+      { id: 'c', text: '3' },
+      { id: 'd', text: 'Infinitos' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Como o triângulo escaleno não tem nenhum lado ou ângulo repetido, não existe nenhuma reta em relação à qual a figura seja simétrica — diferente do triângulo isósceles (1 eixo) e do equilátero (3 eixos).',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_geometria_plana_17',
+    chapter: 'Identificação de Simetrias II',
+    topicId: 'mat_geometria_plana',
+    subject: 'Matemática',
+    prompt: 'Uma figura apresenta simetria de rotação (ou simetria rotacional) quando:',
+    options: [
+      { id: 'a', text: 'Existe um ângulo de rotação, menor que 360°, em torno de um ponto, que faz a figura coincidir consigo mesma' },
+      { id: 'b', text: 'A figura só coincide consigo mesma após uma rotação de exatamente 360°' },
+      { id: 'c', text: 'A figura precisa necessariamente ser refletida para coincidir consigo mesma' },
+      { id: 'd', text: 'É exclusiva de figuras tridimensionais' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A simetria rotacional existe quando há algum ângulo de rotação menor que 360° (em torno de um ponto central) que leva a figura a coincidir exatamente consigo mesma — por exemplo, um hexágono regular tem simetria rotacional de 60°.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_geometria_plana_18',
+    chapter: 'Identificação de Simetrias II',
+    topicId: 'mat_geometria_plana',
+    subject: 'Matemática',
+    prompt: 'Um retângulo (não quadrado) apresenta simetria de rotação de qual ordem (menor ângulo, diferente de 360°, que leva a figura a coincidir consigo mesma)?',
+    options: [
+      { id: 'a', text: '90°' },
+      { id: 'b', text: '180°' },
+      { id: 'c', text: '270°' },
+      { id: 'd', text: 'Não apresenta nenhuma simetria de rotação' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Um retângulo (com lados de comprimentos diferentes) coincide consigo mesmo ao ser rotacionado 180° em torno de seu centro, mas não a 90° (isso só ocorreria se fosse um quadrado, onde os lados são iguais).',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_geometria_plana_19',
+    chapter: 'Identificação de Simetrias II',
+    topicId: 'mat_geometria_plana',
+    subject: 'Matemática',
+    prompt: 'Um hexágono regular apresenta simetria de rotação de qual menor ângulo (diferente de 360°)?',
+    options: [
+      { id: 'a', text: '30°' },
+      { id: 'b', text: '60°' },
+      { id: 'c', text: '90°' },
+      { id: 'd', text: '120°' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Um polígono regular de n lados apresenta simetria de rotação em múltiplos de 360°/n. Para o hexágono (n=6): 360°/6 = 60° é o menor ângulo de rotação que faz a figura coincidir consigo mesma.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_geometria_plana_20',
+    chapter: 'A Geometria da Proporcionalidade',
+    topicId: 'mat_geometria_plana',
+    subject: 'Matemática',
+    prompt: 'Duas figuras são ditas semelhantes quando:',
+    options: [
+      { id: 'a', text: 'Têm a mesma forma, com ângulos correspondentes congruentes e lados correspondentes proporcionais, podendo ter tamanhos diferentes' },
+      { id: 'b', text: 'Têm exatamente o mesmo tamanho e a mesma forma' },
+      { id: 'c', text: 'Têm o mesmo perímetro, independentemente da forma' },
+      { id: 'd', text: 'São necessariamente congruentes' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Figuras semelhantes preservam a forma (ângulos correspondentes iguais) mas podem ter tamanhos diferentes, com os lados correspondentes proporcionais entre si (razão de semelhança constante) — a congruência é um caso particular de semelhança, em que a razão de semelhança é 1.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_mat_geometria_plana_21',
+    chapter: 'A Geometria da Proporcionalidade',
+    topicId: 'mat_geometria_plana',
+    subject: 'Matemática',
+    prompt: 'Se dois polígonos são semelhantes com razão de semelhança k, a razão entre suas áreas é:',
+    options: [
+      { id: 'a', text: 'k' },
+      { id: 'b', text: 'k²' },
+      { id: 'c', text: '2k' },
+      { id: 'd', text: 'k³' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Quando duas figuras planas são semelhantes com razão de semelhança k (entre os lados correspondentes), a razão entre suas áreas é k², já que a área é uma grandeza que envolve o produto de duas dimensões lineares.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_geometria_plana_22',
+    chapter: 'A Geometria da Proporcionalidade',
+    topicId: 'mat_geometria_plana',
+    subject: 'Matemática',
+    prompt: 'O Teorema de Tales estabelece que, quando um feixe de retas paralelas é cortado por duas retas transversais, os segmentos determinados sobre uma transversal são:',
+    options: [
+      { id: 'a', text: 'Sempre congruentes entre si, independentemente da configuração' },
+      { id: 'b', text: 'Proporcionais aos segmentos correspondentes determinados na outra transversal' },
+      { id: 'c', text: 'Sempre perpendiculares às retas paralelas' },
+      { id: 'd', text: 'Impossíveis de comparar entre as duas transversais' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'O Teorema de Tales afirma que, quando retas paralelas cortam duas transversais, os segmentos determinados em uma transversal são proporcionais aos segmentos correspondentes determinados na outra — uma ferramenta fundamental para resolver problemas de proporcionalidade em geometria.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_geometria_plana_23',
+    chapter: 'Semelhança de Triângulos',
+    topicId: 'mat_geometria_plana',
+    subject: 'Matemática',
+    prompt: 'O critério AA (Ângulo-Ângulo) de semelhança de triângulos garante que dois triângulos são semelhantes quando:',
+    options: [
+      { id: 'a', text: 'Têm dois ângulos respectivamente congruentes (o terceiro ângulo será automaticamente igual, já que a soma dos ângulos internos é 180°)' },
+      { id: 'b', text: 'Têm todos os lados proporcionais, mas ângulos diferentes' },
+      { id: 'c', text: 'Têm o mesmo perímetro' },
+      { id: 'd', text: 'Têm apenas um ângulo em comum, sem qualquer outra informação' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Pelo critério AA, basta que dois ângulos de um triângulo sejam respectivamente congruentes aos de outro triângulo para garantir a semelhança — como a soma dos ângulos internos é sempre 180°, o terceiro ângulo automaticamente também será igual, um dos critérios mais usados por exigir menos informação que LLL ou LAL.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_geometria_plana_24',
+    chapter: 'O Ponto Médio e o Baricentro de um Triângulo',
+    topicId: 'mat_geometria_plana',
+    subject: 'Matemática',
+    prompt: 'A mediana de um triângulo é o segmento que liga:',
+    options: [
+      { id: 'a', text: 'Um vértice ao ponto médio do lado oposto' },
+      { id: 'b', text: 'Os pontos médios de dois lados quaisquer' },
+      { id: 'c', text: 'Um vértice ao vértice oposto, diagonalmente' },
+      { id: 'd', text: 'O centro da circunferência circunscrita a cada vértice' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A mediana de um triângulo é o segmento de reta que conecta um vértice ao ponto médio do lado oposto a esse vértice. Todo triângulo possui exatamente três medianas, uma para cada vértice.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_mat_geometria_plana_25',
+    chapter: 'O Ponto Médio e o Baricentro de um Triângulo',
+    topicId: 'mat_geometria_plana',
+    subject: 'Matemática',
+    prompt: 'O baricentro de um triângulo, ponto de encontro das três medianas, divide cada mediana em qual razão, a partir do vértice?',
+    options: [
+      { id: 'a', text: '1:1 (o ponto médio exato da mediana)' },
+      { id: 'b', text: '2:1 (dois terços da mediana a partir do vértice, um terço a partir do lado oposto)' },
+      { id: 'c', text: '3:1' },
+      { id: 'd', text: '1:3' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'O baricentro divide cada mediana na razão 2:1, ficando a uma distância do vértice igual a 2/3 do comprimento total da mediana, e a 1/3 de distância do ponto médio do lado oposto — uma propriedade importante em física, já que o baricentro corresponde ao centro de massa de uma placa triangular homogênea.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_mat_geometria_plana_26',
+    chapter: 'O Ponto Médio e o Baricentro de um Triângulo',
+    topicId: 'mat_geometria_plana',
+    subject: 'Matemática',
+    prompt: 'O Teorema da Base Média de um triângulo afirma que o segmento que liga os pontos médios de dois lados de um triângulo é:',
+    options: [
+      { id: 'a', text: 'Paralelo ao terceiro lado e igual à metade de sua medida' },
+      { id: 'b', text: 'Perpendicular ao terceiro lado' },
+      { id: 'c', text: 'Igual em medida ao terceiro lado' },
+      { id: 'd', text: 'Sempre maior que o terceiro lado' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O Teorema da Base Média estabelece que o segmento que une os pontos médios de dois lados de um triângulo é paralelo ao terceiro lado e possui exatamente metade de seu comprimento — uma consequência da semelhança entre o triângulo menor formado e o triângulo original (razão de semelhança 1:2).',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_geometria_plana_27',
+    chapter: 'A Geometria Métrica Plana',
+    topicId: 'mat_geometria_plana',
+    subject: 'Matemática',
+    prompt: 'Em um triângulo retângulo, o Teorema de Pitágoras relaciona as medidas dos lados através da fórmula:',
+    options: [
+      { id: 'a', text: 'a + b = c, onde c é a hipotenusa' },
+      { id: 'b', text: 'a² = b² + c², onde a é um dos catetos' },
+      { id: 'c', text: 'a² = b² + c², onde a é a hipotenusa e b, c são os catetos' },
+      { id: 'd', text: 'a × b = c, onde c é a hipotenusa' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'O Teorema de Pitágoras estabelece que, em um triângulo retângulo, o quadrado da medida da hipotenusa (o lado oposto ao ângulo reto, sempre o maior lado) é igual à soma dos quadrados das medidas dos catetos: a² = b² + c².',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_mat_geometria_plana_28',
+    chapter: 'A Geometria Métrica Plana',
+    topicId: 'mat_geometria_plana',
+    subject: 'Matemática',
+    prompt: 'Em um triângulo retângulo, a altura relativa à hipotenusa forma dois triângulos menores. Esses dois triângulos menores e o triângulo original são, entre si:',
+    options: [
+      { id: 'a', text: 'Congruentes, sempre' },
+      { id: 'b', text: 'Semelhantes entre si' },
+      { id: 'c', text: 'Sem qualquer relação geométrica entre si' },
+      { id: 'd', text: 'Sempre equiláteros' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Ao traçar a altura relativa à hipotenusa em um triângulo retângulo, formam-se dois triângulos menores que são semelhantes entre si e também semelhantes ao triângulo original — a base das relações métricas do triângulo retângulo (como h² = m×n, entre outras).',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_mat_geometria_plana_29',
+    chapter: 'A Geometria Métrica Plana',
+    topicId: 'mat_geometria_plana',
+    subject: 'Matemática',
+    prompt: 'Um triângulo retângulo tem catetos medindo 6 cm e 8 cm. Qual é a medida da hipotenusa?',
+    options: [
+      { id: 'a', text: '10 cm' },
+      { id: 'b', text: '12 cm' },
+      { id: 'c', text: '14 cm' },
+      { id: 'd', text: '48 cm' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Pelo Teorema de Pitágoras: hipotenusa² = 6² + 8² = 36 + 64 = 100, logo a hipotenusa = √100 = 10 cm.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_mat_geometria_plana_30',
+    chapter: 'Áreas de Polígonos',
+    topicId: 'mat_geometria_plana',
+    subject: 'Matemática',
+    prompt: 'Qual é a área de um trapézio com bases medindo 6 cm e 10 cm, e altura de 5 cm?',
+    options: [
+      { id: 'a', text: '30 cm²' },
+      { id: 'b', text: '40 cm²' },
+      { id: 'c', text: '50 cm²' },
+      { id: 'd', text: '80 cm²' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A área do trapézio é dada por A = (base maior + base menor)×altura/2 = (10+6)×5/2 = 80/2 = 40 cm².',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_mat_geometria_plana_31',
+    chapter: 'Áreas de Polígonos',
+    topicId: 'mat_geometria_plana',
+    subject: 'Matemática',
+    prompt: 'Qual é a área de um losango cujas diagonais medem 8 cm e 12 cm?',
+    options: [
+      { id: 'a', text: '24 cm²' },
+      { id: 'b', text: '48 cm²' },
+      { id: 'c', text: '96 cm²' },
+      { id: 'd', text: '20 cm²' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A área do losango é dada por A = (diagonal maior × diagonal menor)/2 = (12×8)/2 = 96/2 = 48 cm².',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_geometria_plana_32',
+    chapter: 'Área do Círculo e de suas Partes',
+    topicId: 'mat_geometria_plana',
+    subject: 'Matemática',
+    prompt: 'Qual é a área de um círculo de raio 5 cm? (use π ≈ 3,14)',
+    options: [
+      { id: 'a', text: '15,7 cm²' },
+      { id: 'b', text: '31,4 cm²' },
+      { id: 'c', text: '78,5 cm²' },
+      { id: 'd', text: '157 cm²' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'A área do círculo é A = π×r² = 3,14×5² = 3,14×25 = 78,5 cm².',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_mat_geometria_plana_33',
+    chapter: 'Área do Círculo e de suas Partes',
+    topicId: 'mat_geometria_plana',
+    subject: 'Matemática',
+    prompt: 'Um setor circular tem ângulo central de 90° em um círculo de raio 4 cm. Qual é a área desse setor? (use π ≈ 3,14)',
+    options: [
+      { id: 'a', text: '6,28 cm²' },
+      { id: 'b', text: '12,56 cm²' },
+      { id: 'c', text: '25,12 cm²' },
+      { id: 'd', text: '50,24 cm²' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A área do setor é proporcional ao ângulo central: A = (ângulo/360°)×π×r² = (90/360)×3,14×16 = 0,25×50,24 = 12,56 cm².',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_geometria_plana_34',
+    chapter: 'Área do Círculo e de suas Partes',
+    topicId: 'mat_geometria_plana',
+    subject: 'Matemática',
+    prompt: 'A coroa circular é a região entre duas circunferências concêntricas. Sua área é calculada por:',
+    options: [
+      { id: 'a', text: 'A soma das áreas dos dois círculos' },
+      { id: 'b', text: 'A diferença entre a área do círculo maior e a área do círculo menor' },
+      { id: 'c', text: 'O produto entre os dois raios' },
+      { id: 'd', text: 'A média aritmética entre as duas áreas' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A coroa circular é a região compreendida entre duas circunferências concêntricas de raios diferentes; sua área é obtida subtraindo a área do círculo menor (o "buraco" interno) da área do círculo maior: A = π×(R² - r²).',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_geometria_plana_35',
+    chapter: 'Razões entre Áreas de Figuras Planas',
+    topicId: 'mat_geometria_plana',
+    subject: 'Matemática',
+    prompt: 'Dois triângulos semelhantes têm razão de semelhança 3:2 entre seus lados correspondentes. Qual é a razão entre suas áreas?',
+    options: [
+      { id: 'a', text: '3:2' },
+      { id: 'b', text: '6:4' },
+      { id: 'c', text: '9:4' },
+      { id: 'd', text: '27:8' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'A razão entre as áreas de figuras semelhantes é o quadrado da razão de semelhança entre os lados: (3/2)² = 9/4, ou seja, razão 9:4.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_geometria_plana_36',
+    chapter: 'Razões entre Áreas de Figuras Planas',
+    topicId: 'mat_geometria_plana',
+    subject: 'Matemática',
+    prompt: 'Um quadrado tem seu lado dobrado. O que ocorre com sua área?',
+    options: [
+      { id: 'a', text: 'A área também dobra' },
+      { id: 'b', text: 'A área quadruplica' },
+      { id: 'c', text: 'A área permanece igual' },
+      { id: 'd', text: 'A área triplica' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Como a razão de semelhança entre os lados é 2, a razão entre as áreas é 2² = 4 — ou seja, ao dobrar o lado de um quadrado, sua área quadruplica.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_geometria_plana_37',
+    chapter: 'Razões entre Áreas de Figuras Planas',
+    topicId: 'mat_geometria_plana',
+    subject: 'Matemática',
+    prompt: 'Ao ligar os pontos médios dos três lados de um triângulo, formando um triângulo menor no interior, qual é a razão entre a área do triângulo menor e a área do triângulo original?',
+    options: [
+      { id: 'a', text: '1:2' },
+      { id: 'b', text: '1:3' },
+      { id: 'c', text: '1:4' },
+      { id: 'd', text: '1:8' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'Pelo Teorema da Base Média, o triângulo médio (formado pelos pontos médios dos lados) é semelhante ao triângulo original com razão de semelhança 1:2. Logo, a razão entre as áreas é (1/2)² = 1/4, ou seja, 1:4.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_mat_geometria_plana_38',
+    chapter: 'Áreas de Figuras Planas',
+    topicId: 'mat_geometria_plana',
+    subject: 'Matemática',
+    prompt: 'Qual é a área de um triângulo com base 12 cm e altura 7 cm?',
+    options: [
+      { id: 'a', text: '19 cm²' },
+      { id: 'b', text: '42 cm²' },
+      { id: 'c', text: '84 cm²' },
+      { id: 'd', text: '168 cm²' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A área do triângulo é A = (base×altura)/2 = (12×7)/2 = 84/2 = 42 cm².',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_mat_geometria_plana_39',
+    chapter: 'Áreas de Figuras Planas',
+    topicId: 'mat_geometria_plana',
+    subject: 'Matemática',
+    prompt: 'A fórmula de Heron permite calcular a área de um triângulo conhecendo apenas:',
+    options: [
+      { id: 'a', text: 'A base e a altura' },
+      { id: 'b', text: 'As medidas dos três lados, sem necessidade de conhecer a altura' },
+      { id: 'c', text: 'Apenas os três ângulos internos' },
+      { id: 'd', text: 'O raio da circunferência circunscrita, exclusivamente' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A fórmula de Heron, A = √[p(p-a)(p-b)(p-c)] (onde p é o semiperímetro), permite calcular a área de qualquer triângulo conhecendo apenas as medidas dos três lados, sem a necessidade de conhecer diretamente a altura relativa a nenhum deles.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_mat_geometria_plana_40',
+    chapter: 'Áreas de Figuras Planas',
+    topicId: 'mat_geometria_plana',
+    subject: 'Matemática',
+    prompt: 'Um terreno retangular tem 20 m de largura e 30 m de comprimento. Qual é sua área?',
+    options: [
+      { id: 'a', text: '50 m²' },
+      { id: 'b', text: '100 m²' },
+      { id: 'c', text: '300 m²' },
+      { id: 'd', text: '600 m²' }
+    ],
+    correctOptionId: 'd',
+    explanation: 'A área do retângulo é A = base × altura = 20 × 30 = 600 m².',
+    difficulty: 'easy'
+  },
   // Matemática — Probabilidade e Interpretação de Dados
   {
     id: 'q_mat_dados_probabilidade_1',
@@ -3036,6 +3996,70 @@ export const mockQuestions: Question[] = [
     explanation: 'Casos favoráveis: C(6,2)×C(4,1) = 15×4 = 60. Total de comissões possíveis: C(10,3) = 120. Probabilidade = 60/120 = 1/2.',
     difficulty: 'hard'
   },
+  {
+    id: 'q_mat_dados_probabilidade_6',
+    chapter: 'Introdução às Probabilidades',
+    topicId: 'mat_dados_probabilidade',
+    subject: 'Matemática',
+    prompt: 'A probabilidade de ocorrência de um evento é definida, no espaço amostral equiprovável, como:',
+    options: [
+      { id: 'a', text: 'O número de casos favoráveis ao evento' },
+      { id: 'b', text: 'A razão entre o número de casos favoráveis e o número total de casos possíveis' },
+      { id: 'c', text: 'O número total de casos possíveis, exclusivamente' },
+      { id: 'd', text: 'A diferença entre casos favoráveis e casos possíveis' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Em um espaço amostral equiprovável (todos os resultados igualmente prováveis), a probabilidade de um evento A é P(A) = (número de casos favoráveis a A) / (número total de casos possíveis) — sempre um valor entre 0 e 1.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_mat_dados_probabilidade_7',
+    chapter: 'Introdução às Probabilidades',
+    topicId: 'mat_dados_probabilidade',
+    subject: 'Matemática',
+    prompt: 'Ao lançar um dado honesto de 6 faces, qual é a probabilidade de obter um número par?',
+    options: [
+      { id: 'a', text: '1/6' },
+      { id: 'b', text: '1/3' },
+      { id: 'c', text: '1/2' },
+      { id: 'd', text: '2/3' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'Existem 3 números pares possíveis (2, 4, 6) entre os 6 resultados possíveis do dado. Probabilidade = 3/6 = 1/2.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_mat_dados_probabilidade_8',
+    chapter: 'Introdução às Probabilidades',
+    topicId: 'mat_dados_probabilidade',
+    subject: 'Matemática',
+    prompt: 'Se a probabilidade de chover amanhã é de 30%, qual é a probabilidade de não chover?',
+    options: [
+      { id: 'a', text: '30%' },
+      { id: 'b', text: '50%' },
+      { id: 'c', text: '70%' },
+      { id: 'd', text: '100%' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'A probabilidade do evento complementar (não chover) é sempre 100% menos a probabilidade do evento original: 100% - 30% = 70%. Isso vale porque um evento e seu complementar cobrem todos os casos possíveis, sem sobreposição.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_mat_dados_probabilidade_9',
+    chapter: 'Operações com Probabilidades',
+    topicId: 'mat_dados_probabilidade',
+    subject: 'Matemática',
+    prompt: 'A probabilidade condicional P(A|B), lida como "probabilidade de A dado B", representa:',
+    options: [
+      { id: 'a', text: 'A probabilidade de A ocorrer, sabendo-se que o evento B já ocorreu' },
+      { id: 'b', text: 'A probabilidade de A e B ocorrerem simultaneamente, sem qualquer relação de dependência' },
+      { id: 'c', text: 'A probabilidade de nenhum dos dois eventos ocorrer' },
+      { id: 'd', text: 'Sempre o mesmo valor que P(B|A)' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A probabilidade condicional P(A|B) mede a probabilidade de A ocorrer, considerando que já se sabe que B ocorreu — é calculada por P(A|B) = P(A∩B)/P(B), e não é, em geral, igual a P(B|A) (a menos que P(A) = P(B)).',
+    difficulty: 'medium'
+  },
   // Matemática — Trigonometria
   {
     id: 'q_mat_trigonometria_1',
@@ -3116,6 +4140,214 @@ export const mockQuestions: Question[] = [
     correctOptionId: 'c',
     explanation: 'Pela Lei dos Senos: x/sen(30°) = 10/sen(45°) → x = 10 × 0,5/0,71 ≈ 7,0 cm.',
     difficulty: 'hard'
+  },
+  {
+    id: 'q_mat_trigonometria_6',
+    chapter: 'Trigonometria no Triângulo Retângulo',
+    topicId: 'mat_trigonometria',
+    subject: 'Matemática',
+    prompt: 'Em um triângulo retângulo, o cosseno de um ângulo agudo é definido como a razão entre:',
+    options: [
+      { id: 'a', text: 'O cateto oposto ao ângulo e a hipotenusa' },
+      { id: 'b', text: 'O cateto adjacente ao ângulo e a hipotenusa' },
+      { id: 'c', text: 'O cateto oposto e o cateto adjacente' },
+      { id: 'd', text: 'A hipotenusa e o cateto adjacente' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'No triângulo retângulo, o cosseno de um ângulo agudo é a razão entre a medida do cateto adjacente a esse ângulo e a medida da hipotenusa (cos θ = cateto adjacente / hipotenusa) — diferente do seno, que usa o cateto oposto.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_mat_trigonometria_7',
+    chapter: 'A Trigonometria dos Números Reais',
+    topicId: 'mat_trigonometria',
+    subject: 'Matemática',
+    prompt: 'O ciclo trigonométrico (circunferência de raio 1 centrada na origem) permite estender as razões trigonométricas para além dos ângulos agudos de um triângulo retângulo. Nesse contexto, o seno de um ângulo θ corresponde a:',
+    options: [
+      { id: 'a', text: 'A abscissa (coordenada x) do ponto correspondente a θ no ciclo trigonométrico' },
+      { id: 'b', text: 'A ordenada (coordenada y) do ponto correspondente a θ no ciclo trigonométrico' },
+      { id: 'c', text: 'O raio da circunferência, sempre igual a 1' },
+      { id: 'd', text: 'A distância entre dois pontos quaisquer da circunferência' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'No ciclo trigonométrico, para um ângulo θ medido a partir do eixo x positivo, o cosseno de θ corresponde à abscissa (x) e o seno de θ corresponde à ordenada (y) do ponto onde o lado terminal do ângulo intercepta a circunferência de raio 1 — essa representação permite definir seno e cosseno para qualquer ângulo real, não apenas os agudos de um triângulo.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_trigonometria_8',
+    chapter: 'A Trigonometria dos Números Reais',
+    topicId: 'mat_trigonometria',
+    subject: 'Matemática',
+    prompt: 'No ciclo trigonométrico, um ângulo de 180° corresponde, em radianos, a:',
+    options: [
+      { id: 'a', text: 'π/2' },
+      { id: 'b', text: 'π' },
+      { id: 'c', text: '2π' },
+      { id: 'd', text: 'π/4' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A conversão entre graus e radianos usa a proporção 180° = π rad. Logo, um ângulo de 180° corresponde exatamente a π radianos.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_mat_trigonometria_9',
+    chapter: 'Outras Razões Trigonométricas',
+    topicId: 'mat_trigonometria',
+    subject: 'Matemática',
+    prompt: 'A tangente de um ângulo θ, no triângulo retângulo, é definida como a razão entre:',
+    options: [
+      { id: 'a', text: 'O cateto oposto e o cateto adjacente a θ, equivalendo também a sen θ / cos θ' },
+      { id: 'b', text: 'A hipotenusa e o cateto oposto' },
+      { id: 'c', text: 'O cateto adjacente e a hipotenusa' },
+      { id: 'd', text: 'A soma dos dois catetos e a hipotenusa' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A tangente de um ângulo é definida como a razão entre o cateto oposto e o cateto adjacente a esse ângulo, o que é equivalente a tan θ = sen θ / cos θ — uma identidade que decorre diretamente das definições de seno e cosseno.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_mat_trigonometria_10',
+    chapter: 'Outras Razões Trigonométricas',
+    topicId: 'mat_trigonometria',
+    subject: 'Matemática',
+    prompt: 'A cossecante de um ângulo θ é definida como:',
+    options: [
+      { id: 'a', text: 'O inverso multiplicativo do seno: csc θ = 1/sen θ' },
+      { id: 'b', text: 'O inverso multiplicativo do cosseno' },
+      { id: 'c', text: 'O mesmo que a tangente' },
+      { id: 'd', text: 'A soma entre seno e cosseno' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A cossecante é definida como o inverso multiplicativo do seno: csc θ = 1/sen θ (para sen θ ≠ 0). De forma análoga, a secante é o inverso do cosseno (sec θ = 1/cos θ) e a cotangente é o inverso da tangente (cot θ = 1/tan θ = cos θ/sen θ).',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_trigonometria_11',
+    chapter: 'Outras Razões Trigonométricas',
+    topicId: 'mat_trigonometria',
+    subject: 'Matemática',
+    prompt: 'Sabendo que tan θ = 3/4 e que θ é um ângulo agudo, qual é o valor de cot θ (cotangente de θ)?',
+    options: [
+      { id: 'a', text: '3/4' },
+      { id: 'b', text: '4/3' },
+      { id: 'c', text: '1' },
+      { id: 'd', text: '7/12' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A cotangente é o inverso multiplicativo da tangente: cot θ = 1/tan θ = 1/(3/4) = 4/3.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_trigonometria_12',
+    chapter: 'A Relação Fundamental da Trigonometria',
+    topicId: 'mat_trigonometria',
+    subject: 'Matemática',
+    prompt: 'A relação fundamental da trigonometria estabelece que, para qualquer ângulo θ:',
+    options: [
+      { id: 'a', text: 'sen θ + cos θ = 1' },
+      { id: 'b', text: 'sen²θ + cos²θ = 1' },
+      { id: 'c', text: 'sen θ × cos θ = 1' },
+      { id: 'd', text: 'sen²θ - cos²θ = 1' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A relação fundamental da trigonometria, sen²θ + cos²θ = 1, é válida para qualquer ângulo θ e decorre diretamente do Teorema de Pitágoras aplicado ao triângulo retângulo formado no ciclo trigonométrico (onde a hipotenusa tem comprimento 1).',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_mat_trigonometria_13',
+    chapter: 'A Relação Fundamental da Trigonometria',
+    topicId: 'mat_trigonometria',
+    subject: 'Matemática',
+    prompt: 'Sabendo que sen θ = 0,6 e que θ é um ângulo agudo, qual é o valor de cos θ, usando a relação fundamental da trigonometria?',
+    options: [
+      { id: 'a', text: '0,4' },
+      { id: 'b', text: '0,6' },
+      { id: 'c', text: '0,8' },
+      { id: 'd', text: '1,0' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'Pela relação fundamental, cos²θ = 1 - sen²θ = 1 - 0,36 = 0,64, logo cos θ = √0,64 = 0,8 (positivo, pois θ é agudo).',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_trigonometria_14',
+    chapter: 'Transformações Trigonométricas',
+    topicId: 'mat_trigonometria',
+    subject: 'Matemática',
+    prompt: 'A fórmula da soma de arcos para o seno, sen(a+b), é dada por:',
+    options: [
+      { id: 'a', text: 'sen a × cos b + sen b × cos a' },
+      { id: 'b', text: 'sen a × sen b + cos a × cos b' },
+      { id: 'c', text: 'sen a + sen b' },
+      { id: 'd', text: 'cos a × cos b - sen a × sen b' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A fórmula da soma de arcos para o seno é sen(a+b) = sen a·cos b + sen b·cos a — uma identidade trigonométrica fundamental usada para simplificar e calcular senos de ângulos compostos.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_mat_trigonometria_15',
+    chapter: 'Transformações Trigonométricas',
+    topicId: 'mat_trigonometria',
+    subject: 'Matemática',
+    prompt: 'A fórmula do arco duplo para o cosseno, cos(2a), pode ser escrita, entre outras formas equivalentes, como:',
+    options: [
+      { id: 'a', text: 'cos²a - sen²a' },
+      { id: 'b', text: '2×sen a' },
+      { id: 'c', text: 'sen a + cos a' },
+      { id: 'd', text: 'cos²a + sen²a' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A fórmula do cosseno do arco duplo é cos(2a) = cos²a - sen²a, que também pode ser reescrita (usando a relação fundamental) como 2cos²a - 1 ou 1 - 2sen²a. A opção (d), cos²a + sen²a, é sempre igual a 1 pela relação fundamental, não representando cos(2a).',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_mat_trigonometria_16',
+    chapter: 'Transformações Trigonométricas',
+    topicId: 'mat_trigonometria',
+    subject: 'Matemática',
+    prompt: 'Sabendo que sen a = 0,5, qual é o valor de sen(2a), usando a fórmula do arco duplo sen(2a) = 2×sen a×cos a, considerando cos a = 0,87 (aproximadamente)?',
+    options: [
+      { id: 'a', text: '0,435' },
+      { id: 'b', text: '0,87' },
+      { id: 'c', text: '1,0' },
+      { id: 'd', text: '1,74' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Aplicando a fórmula: sen(2a) = 2×0,5×0,87 = 0,87.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_trigonometria_17',
+    chapter: 'Funções Trigonométricas',
+    topicId: 'mat_trigonometria',
+    subject: 'Matemática',
+    prompt: 'A função f(x) = sen(x) tem como período:',
+    options: [
+      { id: 'a', text: 'π' },
+      { id: 'b', text: '2π' },
+      { id: 'c', text: 'π/2' },
+      { id: 'd', text: 'Não é uma função periódica' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A função seno é periódica com período 2π, ou seja, sen(x + 2π) = sen(x) para todo x — o gráfico se repete identicamente a cada intervalo de 2π radianos.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_mat_trigonometria_18',
+    chapter: 'Funções Trigonométricas',
+    topicId: 'mat_trigonometria',
+    subject: 'Matemática',
+    prompt: 'Qual é o período da função f(x) = tan(x)?',
+    options: [
+      { id: 'a', text: 'π/2' },
+      { id: 'b', text: 'π' },
+      { id: 'c', text: '2π' },
+      { id: 'd', text: '4π' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Diferentemente das funções seno e cosseno (período 2π), a função tangente tem período π, ou seja, tan(x + π) = tan(x) para todo x em que a tangente está definida.',
+    difficulty: 'medium'
   },
   // Física — Cinemática Escalar
   {
@@ -4944,6 +6176,70 @@ export const mockQuestions: Question[] = [
     explanation: 'A soma das partes é 2+3+4 = 9. Cada parte vale 90.000/9 = 10.000. O herdeiro com a maior proporção (4 partes) recebe 4 × 10.000 = 40.000.',
     difficulty: 'hard'
   },
+  {
+    id: 'q_mat_aritmetica_proporcionalidade_6',
+    chapter: 'Potências e Radicais',
+    topicId: 'mat_aritmetica_proporcionalidade',
+    subject: 'Matemática',
+    prompt: 'Qual é o valor de 2⁻³?',
+    options: [
+      { id: 'a', text: '-8' },
+      { id: 'b', text: '-6' },
+      { id: 'c', text: '1/8' },
+      { id: 'd', text: '8' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'Um expoente negativo indica o inverso da potência com expoente positivo: 2⁻³ = 1/2³ = 1/8.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_mat_aritmetica_proporcionalidade_7',
+    chapter: 'Potências e Radicais',
+    topicId: 'mat_aritmetica_proporcionalidade',
+    subject: 'Matemática',
+    prompt: 'Qual é o valor de √144?',
+    options: [
+      { id: 'a', text: '10' },
+      { id: 'b', text: '11' },
+      { id: 'c', text: '12' },
+      { id: 'd', text: '14' }
+    ],
+    correctOptionId: 'c',
+    explanation: '12 × 12 = 144, logo √144 = 12.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_mat_aritmetica_proporcionalidade_8',
+    chapter: 'Potências e Radicais',
+    topicId: 'mat_aritmetica_proporcionalidade',
+    subject: 'Matemática',
+    prompt: 'Simplificando a expressão √50, obtemos:',
+    options: [
+      { id: 'a', text: '5√2' },
+      { id: 'b', text: '2√5' },
+      { id: 'c', text: '25√2' },
+      { id: 'd', text: '10√5' }
+    ],
+    correctOptionId: 'a',
+    explanation: '50 = 25 × 2, e √25 = 5, então √50 = √25 × √2 = 5√2.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_aritmetica_proporcionalidade_9',
+    chapter: 'Porcentagem',
+    topicId: 'mat_aritmetica_proporcionalidade',
+    subject: 'Matemática',
+    prompt: 'Um produto que custava R$ 80,00 teve um desconto de 15%. Qual é o novo preço?',
+    options: [
+      { id: 'a', text: 'R$ 12,00' },
+      { id: 'b', text: 'R$ 65,00' },
+      { id: 'c', text: 'R$ 68,00' },
+      { id: 'd', text: 'R$ 92,00' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'O desconto é 15% de 80 = 0,15 × 80 = 12. O novo preço é 80 - 12 = R$ 68,00.',
+    difficulty: 'easy'
+  },
   // Matemática — Teoria dos Números Inteiros
   {
     id: 'q_mat_teoria_numeros_1',
@@ -5025,6 +6321,54 @@ export const mockQuestions: Question[] = [
     explanation: '360 = 2³ × 3² × 5¹. O número de divisores é (3+1)×(2+1)×(1+1) = 4×3×2 = 24.',
     difficulty: 'hard'
   },
+  {
+    id: 'q_mat_teoria_numeros_6',
+    chapter: 'O Sistema de Numeração Decimal',
+    topicId: 'mat_teoria_numeros',
+    subject: 'Matemática',
+    prompt: 'No número 3.542, o algarismo 5 ocupa a posição das:',
+    options: [
+      { id: 'a', text: 'Unidades' },
+      { id: 'b', text: 'Dezenas' },
+      { id: 'c', text: 'Centenas' },
+      { id: 'd', text: 'Unidades de milhar' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'No sistema de numeração decimal (posicional), cada posição representa uma potência de 10. Em 3.542, da direita para a esquerda temos: 2 (unidades), 4 (dezenas), 5 (centenas), 3 (unidades de milhar) — logo, o 5 ocupa a posição das centenas.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_mat_teoria_numeros_7',
+    chapter: 'O Sistema de Numeração Decimal',
+    topicId: 'mat_teoria_numeros',
+    subject: 'Matemática',
+    prompt: 'O sistema de numeração decimal é chamado de "posicional" porque:',
+    options: [
+      { id: 'a', text: 'O valor de cada algarismo depende da posição que ele ocupa no número' },
+      { id: 'b', text: 'Os algarismos podem ser escritos em qualquer ordem sem alterar o valor do número' },
+      { id: 'c', text: 'Utiliza apenas os algarismos 0 e 1' },
+      { id: 'd', text: 'Cada número deve ter exatamente 10 algarismos' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'No sistema posicional decimal, o mesmo algarismo representa valores diferentes conforme sua posição: o 3 em "300" vale 3 centenas, mas em "30" vale 3 dezenas — diferente de sistemas não posicionais (como os numerais romanos), em que o valor de cada símbolo é fixo.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_teoria_numeros_8',
+    chapter: 'O Sistema de Numeração Decimal',
+    topicId: 'mat_teoria_numeros',
+    subject: 'Matemática',
+    prompt: 'O número 2.475 pode ser decomposto, segundo o valor posicional de cada algarismo, como:',
+    options: [
+      { id: 'a', text: '2 + 4 + 7 + 5' },
+      { id: 'b', text: '2×1000 + 4×100 + 7×10 + 5×1' },
+      { id: 'c', text: '2×10 + 4×10 + 7×10 + 5×10' },
+      { id: 'd', text: '2475 × 1' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A decomposição de um número decimal segue o valor posicional (potências de 10) de cada algarismo: 2.475 = 2×1000 + 4×100 + 7×10 + 5×1, refletindo exatamente o sistema de numeração posicional de base 10.',
+    difficulty: 'easy'
+  },
   // Matemática — Sequências, Matrizes e Sistemas Lineares
   {
     id: 'q_mat_sequencias_matrizes_1',
@@ -5104,6 +6448,358 @@ export const mockQuestions: Question[] = [
     ],
     correctOptionId: 'c',
     explanation: 'Como |r| < 1 (r = 1/2), a soma converge: S = a₁/(1-r) = 1/(1-0,5) = 2.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_sequencias_matrizes_6',
+    chapter: 'Introdução às Sequências',
+    topicId: 'mat_sequencias_matrizes',
+    subject: 'Matemática',
+    prompt: 'Uma sequência numérica é definida pela lei de formação an = 2n + 1, para n = 1, 2, 3, .... Qual é o valor do quarto termo (a4)?',
+    options: [
+      { id: 'a', text: '7' },
+      { id: 'b', text: '8' },
+      { id: 'c', text: '9' },
+      { id: 'd', text: '11' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'Substituindo n = 4 na fórmula: a4 = 2×4 + 1 = 9.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_mat_sequencias_matrizes_7',
+    chapter: 'Introdução às Sequências',
+    topicId: 'mat_sequencias_matrizes',
+    subject: 'Matemática',
+    prompt: 'Uma sequência é dita recursiva quando:',
+    options: [
+      { id: 'a', text: 'Cada termo é definido em função de um ou mais termos anteriores da própria sequência' },
+      { id: 'b', text: 'Todos os termos são iguais entre si' },
+      { id: 'c', text: 'A sequência possui um número finito e pequeno de termos, sempre' },
+      { id: 'd', text: 'Não existe nenhuma regra ou padrão entre os termos' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Em uma sequência recursiva, cada termo (a partir de um certo ponto) é calculado a partir de termos anteriores, por meio de uma fórmula de recorrência — como na sequência de Fibonacci, em que cada termo é a soma dos dois anteriores.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_sequencias_matrizes_8',
+    chapter: 'Progressão Aritmética',
+    topicId: 'mat_sequencias_matrizes',
+    subject: 'Matemática',
+    prompt: 'Uma progressão aritmética (PA) tem primeiro termo 5 e razão 4. Qual é o vigésimo termo (a20)?',
+    options: [
+      { id: 'a', text: '76' },
+      { id: 'b', text: '80' },
+      { id: 'c', text: '81' },
+      { id: 'd', text: '85' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'O termo geral da PA é an = a1 + (n-1)×r. Logo, a20 = 5 + (20-1)×4 = 5 + 76 = 81.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_sequencias_matrizes_9',
+    chapter: 'Sequências',
+    topicId: 'mat_sequencias_matrizes',
+    subject: 'Matemática',
+    prompt: 'A sequência de Fibonacci (1, 1, 2, 3, 5, 8, 13, ...) é construída segundo a regra:',
+    options: [
+      { id: 'a', text: 'Cada termo, a partir do terceiro, é a soma dos dois termos imediatamente anteriores' },
+      { id: 'b', text: 'Cada termo é o dobro do termo anterior' },
+      { id: 'c', text: 'Cada termo é obtido somando 1 ao termo anterior' },
+      { id: 'd', text: 'Os termos seguem uma razão constante, como em uma progressão geométrica' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Na sequência de Fibonacci, cada termo (a partir do terceiro) é obtido somando os dois termos imediatamente anteriores: 1+1=2, 1+2=3, 2+3=5, 3+5=8, e assim por diante — não sendo, portanto, nem uma PA nem uma PG.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_mat_sequencias_matrizes_10',
+    chapter: 'Sequências',
+    topicId: 'mat_sequencias_matrizes',
+    subject: 'Matemática',
+    prompt: 'Uma sequência é dita finita quando:',
+    options: [
+      { id: 'a', text: 'Possui um número limitado (finito) de termos' },
+      { id: 'b', text: 'Possui infinitos termos, sem exceção' },
+      { id: 'c', text: 'Todos os termos são números finitos, mesmo que a sequência tenha infinitos termos' },
+      { id: 'd', text: 'É sempre uma progressão aritmética' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Uma sequência finita é aquela que possui um número limitado de termos (por exemplo, os dias da semana, com 7 termos), em oposição a uma sequência infinita, que continua indefinidamente (como os números naturais).',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_mat_sequencias_matrizes_11',
+    chapter: 'Sequências',
+    topicId: 'mat_sequencias_matrizes',
+    subject: 'Matemática',
+    prompt: 'Uma sequência (an) é dita crescente quando:',
+    options: [
+      { id: 'a', text: 'Cada termo é maior que o termo anterior, para todo n' },
+      { id: 'b', text: 'Cada termo é menor que o termo anterior, para todo n' },
+      { id: 'c', text: 'Todos os termos são iguais entre si' },
+      { id: 'd', text: 'A sequência possui apenas números negativos' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Uma sequência é crescente quando an+1 > an para todo n do domínio considerado, ou seja, cada termo é estritamente maior que o termo imediatamente anterior.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_mat_sequencias_matrizes_12',
+    chapter: 'Sistemas de Equações',
+    topicId: 'mat_sequencias_matrizes',
+    subject: 'Matemática',
+    prompt: 'Resolvendo o sistema de equações {x + y = 10; x - y = 2}, quais são os valores de x e y?',
+    options: [
+      { id: 'a', text: 'x = 5, y = 5' },
+      { id: 'b', text: 'x = 6, y = 4' },
+      { id: 'c', text: 'x = 4, y = 6' },
+      { id: 'd', text: 'x = 8, y = 2' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Somando as duas equações: 2x = 12 → x = 6. Substituindo na primeira: 6 + y = 10 → y = 4.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_sequencias_matrizes_13',
+    chapter: 'Sistemas de Equações',
+    topicId: 'mat_sequencias_matrizes',
+    subject: 'Matemática',
+    prompt: 'O método da substituição, usado para resolver sistemas de equações lineares, consiste em:',
+    options: [
+      { id: 'a', text: 'Isolar uma variável em uma das equações e substituir sua expressão na outra equação' },
+      { id: 'b', text: 'Somar diretamente as duas equações sem qualquer manipulação prévia' },
+      { id: 'c', text: 'Multiplicar as duas equações por zero' },
+      { id: 'd', text: 'Ignorar uma das equações do sistema' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'No método da substituição, isola-se uma variável em termos da outra em uma das equações, e essa expressão é substituída na outra equação, reduzindo o sistema a uma única equação com uma incógnita, que pode então ser resolvida diretamente.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_sequencias_matrizes_14',
+    chapter: 'Tabelas e Matrizes',
+    topicId: 'mat_sequencias_matrizes',
+    subject: 'Matemática',
+    prompt: 'Uma matriz de ordem 3x4 possui:',
+    options: [
+      { id: 'a', text: '3 linhas e 4 colunas, totalizando 12 elementos' },
+      { id: 'b', text: '4 linhas e 3 colunas, totalizando 12 elementos' },
+      { id: 'c', text: '3 elementos apenas' },
+      { id: 'd', text: '7 elementos, correspondentes à soma 3+4' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Na notação de ordem de uma matriz (m x n), o primeiro número indica o número de linhas e o segundo o número de colunas. Uma matriz 3x4 tem 3 linhas e 4 colunas, totalizando 3×4 = 12 elementos.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_mat_sequencias_matrizes_15',
+    chapter: 'Tabelas e Matrizes',
+    topicId: 'mat_sequencias_matrizes',
+    subject: 'Matemática',
+    prompt: 'Uma matriz quadrada é aquela em que:',
+    options: [
+      { id: 'a', text: 'O número de linhas é igual ao número de colunas' },
+      { id: 'b', text: 'Todos os elementos são iguais a zero' },
+      { id: 'c', text: 'Possui apenas uma linha' },
+      { id: 'd', text: 'Possui apenas uma coluna' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Uma matriz quadrada tem o mesmo número de linhas e colunas (ordem n x n) — só matrizes quadradas possuem determinante definido e diagonal principal no sentido usual.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_mat_sequencias_matrizes_16',
+    chapter: 'Tabelas e Matrizes',
+    topicId: 'mat_sequencias_matrizes',
+    subject: 'Matemática',
+    prompt: 'Ao somar duas matrizes de mesma ordem, o resultado é obtido:',
+    options: [
+      { id: 'a', text: 'Somando os elementos correspondentes (mesma posição) de cada matriz' },
+      { id: 'b', text: 'Multiplicando todos os elementos de uma matriz pelos da outra, um a um' },
+      { id: 'c', text: 'Somando apenas os elementos da diagonal principal' },
+      { id: 'd', text: 'É impossível somar duas matrizes, mesmo de mesma ordem' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A soma de matrizes de mesma ordem é feita elemento a elemento: cada elemento da matriz resultante é a soma dos elementos correspondentes (de mesma posição - linha e coluna) das duas matrizes originais.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_mat_sequencias_matrizes_17',
+    chapter: 'Multiplicação de Matrizes',
+    topicId: 'mat_sequencias_matrizes',
+    subject: 'Matemática',
+    prompt: 'Para que seja possível multiplicar a matriz A (de ordem m x n) pela matriz B, é necessário que:',
+    options: [
+      { id: 'a', text: 'B tenha exatamente n linhas (o número de colunas de A deve ser igual ao número de linhas de B)' },
+      { id: 'b', text: 'A e B tenham exatamente a mesma ordem' },
+      { id: 'c', text: 'B tenha exatamente m colunas' },
+      { id: 'd', text: 'Ambas as matrizes sejam quadradas' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A multiplicação de matrizes A(m x n) por B só é definida quando o número de colunas de A (n) é igual ao número de linhas de B — o produto resultante terá ordem m x p, onde p é o número de colunas de B.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_sequencias_matrizes_18',
+    chapter: 'Multiplicação de Matrizes',
+    topicId: 'mat_sequencias_matrizes',
+    subject: 'Matemática',
+    prompt: 'Diferentemente da multiplicação de números reais, a multiplicação de matrizes:',
+    options: [
+      { id: 'a', text: 'É sempre comutativa: A×B = B×A, para quaisquer matrizes A e B' },
+      { id: 'b', text: 'Não é, em geral, comutativa: A×B pode ser diferente de B×A' },
+      { id: 'c', text: 'Nunca pode ser realizada, em nenhuma situação' },
+      { id: 'd', text: 'Sempre resulta em uma matriz identidade' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Ao contrário da multiplicação de números reais, a multiplicação de matrizes não é, em geral, comutativa: A×B costuma ser diferente de B×A (e às vezes um dos dois produtos nem está definido) — uma propriedade importante a se ter em mente ao operar com matrizes.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_sequencias_matrizes_19',
+    chapter: 'Multiplicação de Matrizes',
+    topicId: 'mat_sequencias_matrizes',
+    subject: 'Matemática',
+    prompt: 'A matriz identidade I, ao multiplicar qualquer matriz quadrada A de mesma ordem, tem como propriedade:',
+    options: [
+      { id: 'a', text: 'A×I = I×A = A, funcionando como o elemento neutro da multiplicação de matrizes' },
+      { id: 'b', text: 'A×I resulta sempre na matriz nula' },
+      { id: 'c', text: 'A×I altera completamente todos os elementos de A' },
+      { id: 'd', text: 'A×I só é definida se A for uma matriz linha' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A matriz identidade (com 1 na diagonal principal e 0 nas demais posições) funciona como o elemento neutro multiplicativo: multiplicar qualquer matriz quadrada A pela matriz identidade de mesma ordem (à esquerda ou à direita) resulta na própria matriz A, sem alterações.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_sequencias_matrizes_20',
+    chapter: 'Determinantes',
+    topicId: 'mat_sequencias_matrizes',
+    subject: 'Matemática',
+    prompt: 'Qual é o determinante da matriz [[4, 2], [3, 1]]?',
+    options: [
+      { id: 'a', text: '-2' },
+      { id: 'b', text: '2' },
+      { id: 'c', text: '4' },
+      { id: 'd', text: '10' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Para uma matriz 2x2 [[a,b],[c,d]], o determinante é ad - bc. Aqui: 4×1 - 2×3 = 4 - 6 = -2.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_mat_sequencias_matrizes_21',
+    chapter: 'Determinantes',
+    topicId: 'mat_sequencias_matrizes',
+    subject: 'Matemática',
+    prompt: 'Se o determinante de uma matriz quadrada A é igual a zero, isso significa que:',
+    options: [
+      { id: 'a', text: 'A matriz A é invertível (possui matriz inversa)' },
+      { id: 'b', text: 'A matriz A não é invertível (não possui matriz inversa)' },
+      { id: 'c', text: 'Todos os elementos de A são necessariamente zero' },
+      { id: 'd', text: 'A matriz A é obrigatoriamente a matriz identidade' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Uma matriz quadrada só é invertível (admite matriz inversa) se, e somente se, seu determinante for diferente de zero. Se det(A) = 0, a matriz é chamada de singular e não possui inversa.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_sequencias_matrizes_22',
+    chapter: 'Discussão de Sistemas Lineares',
+    topicId: 'mat_sequencias_matrizes',
+    subject: 'Matemática',
+    prompt: 'Um sistema linear é classificado como "possível e determinado" (SPD) quando:',
+    options: [
+      { id: 'a', text: 'Possui exatamente uma única solução' },
+      { id: 'b', text: 'Possui infinitas soluções' },
+      { id: 'c', text: 'Não possui nenhuma solução' },
+      { id: 'd', text: 'Possui exatamente duas soluções' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Um sistema linear possível e determinado (SPD) é aquele que admite exatamente uma única solução — geralmente identificado, no método da matriz dos coeficientes, quando o determinante dessa matriz é diferente de zero.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_sequencias_matrizes_23',
+    chapter: 'Discussão de Sistemas Lineares',
+    topicId: 'mat_sequencias_matrizes',
+    subject: 'Matemática',
+    prompt: 'Um sistema linear é classificado como "impossível" (SI) quando:',
+    options: [
+      { id: 'a', text: 'Não admite nenhuma solução que satisfaça simultaneamente todas as equações do sistema' },
+      { id: 'b', text: 'Admite exatamente uma solução' },
+      { id: 'c', text: 'Admite infinitas soluções' },
+      { id: 'd', text: 'É sempre um sistema com apenas uma equação' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Um sistema linear impossível (SI) é aquele em que não existe nenhum conjunto de valores para as incógnitas que satisfaça todas as equações simultaneamente — geometricamente, por exemplo, pode corresponder a duas retas paralelas e distintas no plano, que nunca se cruzam.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_sequencias_matrizes_24',
+    chapter: 'Médias',
+    topicId: 'mat_sequencias_matrizes',
+    subject: 'Matemática',
+    prompt: 'A média aritmética dos números 4, 8, 10 e 14 é:',
+    options: [
+      { id: 'a', text: '8' },
+      { id: 'b', text: '9' },
+      { id: 'c', text: '9,5' },
+      { id: 'd', text: '11' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A média aritmética é a soma dos valores dividida pela quantidade de valores: (4+8+10+14)/4 = 36/4 = 9.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_mat_sequencias_matrizes_25',
+    chapter: 'Médias',
+    topicId: 'mat_sequencias_matrizes',
+    subject: 'Matemática',
+    prompt: 'A média geométrica é mais apropriada que a média aritmética quando se trabalha com:',
+    options: [
+      { id: 'a', text: 'Taxas de crescimento ou variações percentuais compostas ao longo do tempo' },
+      { id: 'b', text: 'Somas simples de valores absolutos, sem qualquer relação multiplicativa' },
+      { id: 'c', text: 'Valores que nunca podem ser positivos' },
+      { id: 'd', text: 'Conjuntos de dados com apenas um único valor' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A média geométrica é mais adequada para representar taxas de crescimento compostas (como rendimentos de investimento ao longo de vários períodos), já que ela captura corretamente o efeito multiplicativo dessas variações, diferentemente da média aritmética, que trataria as taxas de forma aditiva.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_mat_sequencias_matrizes_26',
+    chapter: 'Médias',
+    topicId: 'mat_sequencias_matrizes',
+    subject: 'Matemática',
+    prompt: 'Um aluno obteve notas 6, 7 e 9 em três avaliações com pesos 2, 3 e 5, respectivamente. Qual é sua média ponderada?',
+    options: [
+      { id: 'a', text: '7,0' },
+      { id: 'b', text: '7,3' },
+      { id: 'c', text: '7,8' },
+      { id: 'd', text: '8,0' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'A média ponderada é a soma dos produtos nota×peso dividida pela soma dos pesos: (6×2 + 7×3 + 9×5)/(2+3+5) = (12+21+45)/10 = 78/10 = 7,8.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_mat_sequencias_matrizes_27',
+    chapter: 'Progressão Geométrica',
+    topicId: 'mat_sequencias_matrizes',
+    subject: 'Matemática',
+    prompt: 'Uma progressão geométrica (PG) tem primeiro termo 3 e razão 2. Qual é o quinto termo (a5)?',
+    options: [
+      { id: 'a', text: '24' },
+      { id: 'b', text: '48' },
+      { id: 'c', text: '32' },
+      { id: 'd', text: '96' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'O termo geral da PG é an = a1 × r^(n-1). Logo, a5 = 3 × 2⁴ = 3 × 16 = 48.',
     difficulty: 'medium'
   },
   // Matemática — Geometria Espacial
@@ -5187,6 +6883,166 @@ export const mockQuestions: Question[] = [
     explanation: 'Em sólidos semelhantes, o volume escala com o cubo da razão de semelhança linear. Como a razão linear é 1/2, a razão de volumes é (1/2)³ = 1/8.',
     difficulty: 'hard'
   },
+  {
+    id: 'q_mat_geometria_espacial_6',
+    chapter: 'O Universo Tridimensional',
+    topicId: 'mat_geometria_espacial',
+    subject: 'Matemática',
+    prompt: 'Na geometria espacial, dois planos distintos que nunca se interceptam, em nenhum ponto, são chamados de:',
+    options: [
+      { id: 'a', text: 'Planos concorrentes' },
+      { id: 'b', text: 'Planos paralelos' },
+      { id: 'c', text: 'Planos perpendiculares' },
+      { id: 'd', text: 'Planos coincidentes' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Dois planos distintos são paralelos quando não possuem nenhum ponto em comum, ou seja, nunca se interceptam — análogo ao conceito de retas paralelas, mas estendido ao espaço tridimensional.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_mat_geometria_espacial_7',
+    chapter: 'O Universo Tridimensional',
+    topicId: 'mat_geometria_espacial',
+    subject: 'Matemática',
+    prompt: 'Uma reta é considerada perpendicular a um plano quando:',
+    options: [
+      { id: 'a', text: 'Ela é perpendicular a todas as retas do plano que passam pelo ponto de interseção' },
+      { id: 'b', text: 'Ela é paralela a apenas uma reta do plano' },
+      { id: 'c', text: 'Ela não intercepta o plano em nenhum ponto' },
+      { id: 'd', text: 'Ela está contida no próprio plano' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Uma reta é perpendicular a um plano quando forma um ângulo de 90° com toda e qualquer reta do plano que passe pelo ponto de interseção entre a reta e o plano — não basta ser perpendicular a apenas uma reta do plano.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_geometria_espacial_8',
+    chapter: 'O Universo Tridimensional',
+    topicId: 'mat_geometria_espacial',
+    subject: 'Matemática',
+    prompt: 'Duas retas no espaço tridimensional que não são paralelas e também não se interceptam são chamadas de:',
+    options: [
+      { id: 'a', text: 'Retas concorrentes' },
+      { id: 'b', text: 'Retas coincidentes' },
+      { id: 'c', text: 'Retas reversas (ou retas ortogonais/reversas, conforme o ângulo)' },
+      { id: 'd', text: 'Retas perpendiculares, sempre' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'No espaço tridimensional (diferente do plano), duas retas podem não ser paralelas e ainda assim nunca se cruzarem, por estarem em planos diferentes — são chamadas de retas reversas, um conceito que não existe na geometria plana, onde duas retas não paralelas sempre se interceptam.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_mat_geometria_espacial_9',
+    chapter: 'Cubos e Paralelepípedos',
+    topicId: 'mat_geometria_espacial',
+    subject: 'Matemática',
+    prompt: 'Qual é o volume de um cubo cuja aresta mede 5 cm?',
+    options: [
+      { id: 'a', text: '15 cm³' },
+      { id: 'b', text: '25 cm³' },
+      { id: 'c', text: '100 cm³' },
+      { id: 'd', text: '125 cm³' }
+    ],
+    correctOptionId: 'd',
+    explanation: 'O volume do cubo é dado por V = a³ = 5³ = 125 cm³.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_mat_geometria_espacial_10',
+    chapter: 'Cubos e Paralelepípedos',
+    topicId: 'mat_geometria_espacial',
+    subject: 'Matemática',
+    prompt: 'Um paralelepípedo retângulo tem dimensões 3 cm, 4 cm e 6 cm. Qual é seu volume?',
+    options: [
+      { id: 'a', text: '13 cm³' },
+      { id: 'b', text: '36 cm³' },
+      { id: 'c', text: '48 cm³' },
+      { id: 'd', text: '72 cm³' }
+    ],
+    correctOptionId: 'd',
+    explanation: 'O volume do paralelepípedo retângulo é o produto das três dimensões: V = 3×4×6 = 72 cm³.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_mat_geometria_espacial_11',
+    chapter: 'Prismas',
+    topicId: 'mat_geometria_espacial',
+    subject: 'Matemática',
+    prompt: 'Um prisma é um sólido geométrico caracterizado por:',
+    options: [
+      { id: 'a', text: 'Duas bases paralelas e congruentes, unidas por faces laterais planas (em geral, paralelogramos)' },
+      { id: 'b', text: 'Uma única base e um vértice (ápice), com faces laterais triangulares' },
+      { id: 'c', text: 'Ser sempre uma esfera perfeita' },
+      { id: 'd', text: 'Não possuir nenhuma face plana' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Um prisma é definido por duas bases paralelas e congruentes (polígonos idênticos), conectadas por faces laterais planas, geralmente paralelogramos (retângulos, no caso de prismas retos) — diferente das pirâmides, que possuem uma única base e um ápice.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_mat_geometria_espacial_12',
+    chapter: 'Prismas',
+    topicId: 'mat_geometria_espacial',
+    subject: 'Matemática',
+    prompt: 'O volume de um prisma qualquer (reto ou oblíquo) é calculado por:',
+    options: [
+      { id: 'a', text: 'Área da base × altura' },
+      { id: 'b', text: '(Área da base × altura)/3' },
+      { id: 'c', text: 'Perímetro da base × altura' },
+      { id: 'd', text: 'Área da base × área lateral' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O volume de qualquer prisma (reto ou oblíquo) é dado pelo produto da área da base pela altura (distância perpendicular entre as duas bases) — diferente das pirâmides, cujo volume tem um fator adicional de 1/3.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_geometria_espacial_13',
+    chapter: 'Prismas',
+    topicId: 'mat_geometria_espacial',
+    subject: 'Matemática',
+    prompt: 'Um prisma reto de base triangular (área da base = 12 cm²) tem altura de 10 cm. Qual é o seu volume?',
+    options: [
+      { id: 'a', text: '40 cm³' },
+      { id: 'b', text: '60 cm³' },
+      { id: 'c', text: '120 cm³' },
+      { id: 'd', text: '360 cm³' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'O volume do prisma é área da base × altura = 12 × 10 = 120 cm³.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_mat_geometria_espacial_14',
+    chapter: 'Pirâmides',
+    topicId: 'mat_geometria_espacial',
+    subject: 'Matemática',
+    prompt: 'O volume de uma pirâmide é calculado por:',
+    options: [
+      { id: 'a', text: 'Área da base × altura' },
+      { id: 'b', text: '(Área da base × altura)/2' },
+      { id: 'c', text: '(Área da base × altura)/3' },
+      { id: 'd', text: '2×(Área da base × altura)' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'O volume da pirâmide é V = (área da base × altura)/3 — o fator 1/3 a diferencia do prisma de mesma base e altura, que teria o triplo do volume.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_geometria_espacial_15',
+    chapter: 'Pirâmides',
+    topicId: 'mat_geometria_espacial',
+    subject: 'Matemática',
+    prompt: 'Uma pirâmide de base quadrada (lado 6 cm) tem altura de 9 cm. Qual é o seu volume?',
+    options: [
+      { id: 'a', text: '54 cm³' },
+      { id: 'b', text: '108 cm³' },
+      { id: 'c', text: '162 cm³' },
+      { id: 'd', text: '324 cm³' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Área da base = 6² = 36 cm². Volume = (36×9)/3 = 324/3 = 108 cm³.',
+    difficulty: 'medium'
+  },
   // Matemática — Geometria Analítica
   {
     id: 'q_mat_geometria_analitica_1',
@@ -5267,6 +7123,310 @@ export const mockQuestions: Question[] = [
     correctOptionId: 'b',
     explanation: 'O lado AB está sobre o eixo x (comprimento 4) e a altura até C é 3 (distância de C ao eixo x). Área = (base × altura)/2 = (4×3)/2 = 6.',
     difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_geometria_analitica_6',
+    chapter: 'Introdução à Geometria Analítica',
+    topicId: 'mat_geometria_analitica',
+    subject: 'Matemática',
+    prompt: 'Qual é a distância entre os pontos A(1, 2) e B(4, 6)?',
+    options: [
+      { id: 'a', text: '3' },
+      { id: 'b', text: '4' },
+      { id: 'c', text: '5' },
+      { id: 'd', text: '7' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'A distância entre dois pontos é d = √[(x2-x1)² + (y2-y1)²] = √[(4-1)² + (6-2)²] = √[9+16] = √25 = 5.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_mat_geometria_analitica_7',
+    chapter: 'Lugar Geométrico e Equação da Circunferência',
+    topicId: 'mat_geometria_analitica',
+    subject: 'Matemática',
+    prompt: 'A equação (x-2)² + (y+3)² = 16 representa, no plano cartesiano, uma circunferência com:',
+    options: [
+      { id: 'a', text: 'Centro (2, -3) e raio 4' },
+      { id: 'b', text: 'Centro (-2, 3) e raio 16' },
+      { id: 'c', text: 'Centro (2, -3) e raio 16' },
+      { id: 'd', text: 'Centro (-2, -3) e raio 4' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Na equação reduzida (x-a)² + (y-b)² = r², o centro é (a, b) e o raio é r. Aqui, a = 2, b = -3 (pois y-(-3) = y+3), e r² = 16, logo r = 4.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_geometria_analitica_8',
+    chapter: 'Estudo Analítico da Reta',
+    topicId: 'mat_geometria_analitica',
+    subject: 'Matemática',
+    prompt: 'Qual é a equação geral da reta que passa pelos pontos A(1, 2) e B(3, 6)?',
+    options: [
+      { id: 'a', text: 'y = 2x' },
+      { id: 'b', text: 'y = x + 1' },
+      { id: 'c', text: 'y = 3x - 1' },
+      { id: 'd', text: 'y = 4x - 2' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O coeficiente angular é (6-2)/(3-1) = 4/2 = 2. Usando o ponto A: y - 2 = 2(x - 1) → y = 2x - 2 + 2 = 2x.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_geometria_analitica_9',
+    chapter: 'Estudo Analítico da Reta',
+    topicId: 'mat_geometria_analitica',
+    subject: 'Matemática',
+    prompt: 'A equação geral de uma reta, ax + by + c = 0, pode ser reescrita na forma reduzida y = mx + q. Nessa conversão, o coeficiente angular m é dado por:',
+    options: [
+      { id: 'a', text: 'm = -a/b (com b ≠ 0)' },
+      { id: 'b', text: 'm = a/c' },
+      { id: 'c', text: 'm = -c/b' },
+      { id: 'd', text: 'm = b/a' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Isolando y na equação geral ax + by + c = 0: by = -ax - c → y = (-a/b)x + (-c/b). Comparando com y = mx + q, temos m = -a/b (o coeficiente angular) e q = -c/b (o coeficiente linear).',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_mat_geometria_analitica_10',
+    chapter: 'Posições Relativas entre Duas Retas',
+    topicId: 'mat_geometria_analitica',
+    subject: 'Matemática',
+    prompt: 'Duas retas r e s são concorrentes quando:',
+    options: [
+      { id: 'a', text: 'Possuem coeficientes angulares diferentes, cruzando-se em exatamente um ponto' },
+      { id: 'b', text: 'Possuem exatamente o mesmo coeficiente angular e o mesmo coeficiente linear' },
+      { id: 'c', text: 'Possuem o mesmo coeficiente angular, mas coeficientes lineares diferentes' },
+      { id: 'd', text: 'Nunca se interceptam em nenhum ponto' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Duas retas são concorrentes quando têm coeficientes angulares diferentes, o que garante que elas se cruzem em exatamente um ponto — diferente de retas paralelas (mesmo coeficiente angular, coeficientes lineares diferentes) ou coincidentes (mesmo coeficiente angular e linear).',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_geometria_analitica_11',
+    chapter: 'Distância entre um Ponto e uma Reta',
+    topicId: 'mat_geometria_analitica',
+    subject: 'Matemática',
+    prompt: 'A fórmula para calcular a distância de um ponto P(x0, y0) até uma reta de equação geral ax + by + c = 0 é:',
+    options: [
+      { id: 'a', text: 'd = |ax0 + by0 + c| / √(a² + b²)' },
+      { id: 'b', text: 'd = (ax0 + by0 + c) / (a + b)' },
+      { id: 'c', text: 'd = a×x0 + b×y0' },
+      { id: 'd', text: 'd = √(a² + b²)' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A distância de um ponto P(x0, y0) a uma reta ax + by + c = 0 é dada por d = |ax0 + by0 + c| / √(a² + b²) — o valor absoluto no numerador garante que a distância seja sempre não negativa.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_mat_geometria_analitica_12',
+    chapter: 'Distância entre um Ponto e uma Reta',
+    topicId: 'mat_geometria_analitica',
+    subject: 'Matemática',
+    prompt: 'Qual é a distância do ponto P(0, 0) até a reta de equação 3x + 4y - 10 = 0?',
+    options: [
+      { id: 'a', text: '1' },
+      { id: 'b', text: '2' },
+      { id: 'c', text: '3' },
+      { id: 'd', text: '5' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'd = |3×0 + 4×0 - 10| / √(3² + 4²) = |-10| / √25 = 10/5 = 2.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_geometria_analitica_13',
+    chapter: 'Posições Relativas entre uma Reta e uma Circunferência',
+    topicId: 'mat_geometria_analitica',
+    subject: 'Matemática',
+    prompt: 'Uma reta é dita secante a uma circunferência quando:',
+    options: [
+      { id: 'a', text: 'A distância entre o centro da circunferência e a reta é menor que o raio, interceptando-a em dois pontos' },
+      { id: 'b', text: 'A distância entre o centro e a reta é exatamente igual ao raio' },
+      { id: 'c', text: 'A distância entre o centro e a reta é maior que o raio' },
+      { id: 'd', text: 'A reta passa exatamente pelo centro da circunferência, sempre' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Uma reta secante intercepta a circunferência em exatamente dois pontos, o que ocorre quando a distância do centro da circunferência até a reta é menor que o raio. Se a distância for igual ao raio, a reta é tangente (um único ponto de interseção); se for maior, a reta é externa (nenhum ponto de interseção).',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_geometria_analitica_14',
+    chapter: 'Posições Relativas entre uma Reta e uma Circunferência',
+    topicId: 'mat_geometria_analitica',
+    subject: 'Matemática',
+    prompt: 'Uma reta é tangente a uma circunferência quando a distância entre o centro da circunferência e a reta é:',
+    options: [
+      { id: 'a', text: 'Menor que o raio' },
+      { id: 'b', text: 'Exatamente igual ao raio' },
+      { id: 'c', text: 'Maior que o raio' },
+      { id: 'd', text: 'Igual ao diâmetro' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A reta tangente toca a circunferência em exatamente um único ponto, o que ocorre precisamente quando a distância do centro até a reta é igual ao raio — nesse caso a reta é perpendicular ao raio no ponto de tangência.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_geometria_analitica_15',
+    chapter: 'Posições Relativas entre uma Reta e uma Circunferência',
+    topicId: 'mat_geometria_analitica',
+    subject: 'Matemática',
+    prompt: 'Uma circunferência tem centro (0,0) e raio 5. A reta x = 8 (vertical) é, em relação a essa circunferência:',
+    options: [
+      { id: 'a', text: 'Secante, cruzando-a em dois pontos' },
+      { id: 'b', text: 'Tangente, tocando-a em um único ponto' },
+      { id: 'c', text: 'Externa, sem nenhum ponto de interseção' },
+      { id: 'd', text: 'Coincidente com a própria circunferência' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'A distância do centro (0,0) até a reta vertical x = 8 é 8, que é maior que o raio 5. Como a distância é maior que o raio, a reta é externa à circunferência, sem nenhum ponto de interseção.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_geometria_analitica_16',
+    chapter: 'Introdução ao Estudo Analítico das Cônicas',
+    topicId: 'mat_geometria_analitica',
+    subject: 'Matemática',
+    prompt: 'As cônicas (elipse, parábola, hipérbole e circunferência) recebem esse nome porque:',
+    options: [
+      { id: 'a', text: 'São todas obtidas pela interseção de um plano com um cone duplo, variando o ângulo de corte' },
+      { id: 'b', text: 'São figuras exclusivamente tridimensionais, sem representação no plano' },
+      { id: 'c', text: 'Foram descobertas por um matemático de sobrenome "Cônico"' },
+      { id: 'd', text: 'Só existem no espaço, nunca no plano cartesiano' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'As cônicas recebem esse nome porque cada uma delas (circunferência, elipse, parábola, hipérbole) pode ser obtida geometricamente como a curva de interseção entre um plano e um cone duplo, variando o ângulo de inclinação do plano em relação ao eixo do cone.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_geometria_analitica_17',
+    chapter: 'Introdução ao Estudo Analítico das Cônicas',
+    topicId: 'mat_geometria_analitica',
+    subject: 'Matemática',
+    prompt: 'Uma elipse é definida como o lugar geométrico dos pontos do plano cuja:',
+    options: [
+      { id: 'a', text: 'Soma das distâncias a dois pontos fixos (focos) é constante' },
+      { id: 'b', text: 'Diferença das distâncias a dois pontos fixos é constante' },
+      { id: 'c', text: 'Distância a um único ponto fixo é sempre a mesma' },
+      { id: 'd', text: 'Distância a uma reta fixa e a um ponto fixo são sempre iguais' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A elipse é definida como o lugar geométrico dos pontos cuja soma das distâncias a dois pontos fixos (os focos) é constante — diferente da hipérbole (diferença constante), da circunferência (distância a um único ponto fixo) e da parábola (distância a um ponto e a uma reta fixos, sempre iguais).',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_geometria_analitica_18',
+    chapter: 'Introdução ao Estudo Analítico das Cônicas',
+    topicId: 'mat_geometria_analitica',
+    subject: 'Matemática',
+    prompt: 'Uma parábola é definida como o lugar geométrico dos pontos do plano equidistantes de:',
+    options: [
+      { id: 'a', text: 'Dois pontos fixos (os focos)' },
+      { id: 'b', text: 'Um ponto fixo (o foco) e uma reta fixa (a diretriz)' },
+      { id: 'c', text: 'Duas retas fixas paralelas entre si' },
+      { id: 'd', text: 'Um único ponto fixo (o centro), sempre' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A parábola é definida como o lugar geométrico dos pontos equidistantes de um ponto fixo, chamado foco, e de uma reta fixa, chamada diretriz — cada ponto da parábola tem exatamente a mesma distância até o foco e até a diretriz.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_geometria_analitica_19',
+    chapter: 'Representação Geométrica de Inequações',
+    topicId: 'mat_geometria_analitica',
+    subject: 'Matemática',
+    prompt: 'A inequação y > 2x + 1 representa, no plano cartesiano, geometricamente:',
+    options: [
+      { id: 'a', text: 'Toda a região do plano acima da reta y = 2x + 1 (excluindo a própria reta)' },
+      { id: 'b', text: 'Apenas a reta y = 2x + 1' },
+      { id: 'c', text: 'Toda a região abaixo da reta y = 2x + 1' },
+      { id: 'd', text: 'Um único ponto do plano' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A inequação y > 2x + 1 representa o semiplano acima da reta y = 2x + 1 (sem incluir a própria reta, já que a desigualdade é estrita) — todos os pontos cuja coordenada y é maior que o valor correspondente na reta.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_geometria_analitica_20',
+    chapter: 'Representação Geométrica de Inequações',
+    topicId: 'mat_geometria_analitica',
+    subject: 'Matemática',
+    prompt: 'A inequação x² + y² ≤ 9 representa, no plano cartesiano, geometricamente:',
+    options: [
+      { id: 'a', text: 'Apenas os pontos da circunferência de centro (0,0) e raio 3' },
+      { id: 'b', text: 'Todos os pontos internos e sobre a circunferência de centro (0,0) e raio 3 (o disco fechado)' },
+      { id: 'c', text: 'Todos os pontos externos à circunferência de centro (0,0) e raio 3' },
+      { id: 'd', text: 'Uma reta, não uma região' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A equação x² + y² = 9 representa a circunferência de centro (0,0) e raio 3 (já que r² = 9). A inequação x² + y² ≤ 9 inclui essa circunferência e também todos os pontos internos a ela (mais próximos da origem), formando o disco fechado.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_mat_geometria_analitica_21',
+    chapter: 'Representação Geométrica de Inequações',
+    topicId: 'mat_geometria_analitica',
+    subject: 'Matemática',
+    prompt: 'Um sistema de inequações no plano cartesiano, com duas ou mais inequações combinadas, representa geometricamente:',
+    options: [
+      { id: 'a', text: 'A união de todas as regiões definidas por cada inequação, separadamente' },
+      { id: 'b', text: 'A interseção das regiões definidas por cada inequação — apenas os pontos que satisfazem todas simultaneamente' },
+      { id: 'c', text: 'Sempre o plano inteiro, sem exceção' },
+      { id: 'd', text: 'Nunca uma região, apenas pontos isolados' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A solução de um sistema de inequações é a interseção das regiões definidas por cada inequação individual — ou seja, apenas os pontos do plano que satisfazem todas as inequações do sistema simultaneamente, formando geralmente uma região poligonal (usada, por exemplo, em problemas de programação linear).',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_geometria_analitica_22',
+    chapter: 'A Geometria dos Números Complexos',
+    topicId: 'mat_geometria_analitica',
+    subject: 'Matemática',
+    prompt: 'No plano de Argand-Gauss, um número complexo z = a + bi é representado como o ponto:',
+    options: [
+      { id: 'a', text: '(a, b), onde a é a coordenada no eixo real e b no eixo imaginário' },
+      { id: 'b', text: '(b, a), invertendo a ordem' },
+      { id: 'c', text: 'Apenas o valor de a, ignorando a parte imaginária' },
+      { id: 'd', text: 'Um ponto fora do plano cartesiano, em um espaço à parte' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'No plano de Argand-Gauss (plano complexo), o número complexo z = a + bi é representado pelo ponto de coordenadas (a, b): a parte real (a) no eixo horizontal (eixo real) e a parte imaginária (b) no eixo vertical (eixo imaginário).',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_mat_geometria_analitica_23',
+    chapter: 'A Geometria dos Números Complexos',
+    topicId: 'mat_geometria_analitica',
+    subject: 'Matemática',
+    prompt: 'O módulo de um número complexo z = a + bi, geometricamente, representa:',
+    options: [
+      { id: 'a', text: 'A distância do ponto (a, b) até a origem do plano complexo' },
+      { id: 'b', text: 'O ângulo formado entre o eixo real e o segmento que liga a origem ao ponto' },
+      { id: 'c', text: 'Apenas o valor de a, ignorando b' },
+      { id: 'd', text: 'Sempre um número negativo' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O módulo de z = a + bi, calculado como |z| = √(a² + b²), representa geometricamente a distância entre o ponto (a, b), que representa z no plano complexo, e a origem (0, 0) — análogo ao cálculo da distância entre dois pontos na geometria analítica.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_geometria_analitica_24',
+    chapter: 'A Geometria dos Números Complexos',
+    topicId: 'mat_geometria_analitica',
+    subject: 'Matemática',
+    prompt: 'Qual é o módulo do número complexo z = 3 + 4i?',
+    options: [
+      { id: 'a', text: '3' },
+      { id: 'b', text: '4' },
+      { id: 'c', text: '5' },
+      { id: 'd', text: '7' }
+    ],
+    correctOptionId: 'c',
+    explanation: '|z| = √(3² + 4²) = √(9+16) = √25 = 5.',
+    difficulty: 'easy'
   },
   // Matemática — Equações, Desigualdades e Modelagem Algébrica
   {
@@ -5349,6 +7509,166 @@ export const mockQuestions: Question[] = [
     explanation: 'Elevando ao quadrado: x+3 = (x-3)² → x² - 7x + 6 = 0 → x = 1 ou x = 6. Mas o lado direito (x-3) precisa ser ≥ 0, ou seja, x ≥ 3. Isso elimina x=1; apenas x=6 é válido (verificação: √9 = 3 = 6-3 ✓).',
     difficulty: 'hard'
   },
+  {
+    id: 'q_mat_equacoes_6',
+    chapter: 'Igualdades',
+    topicId: 'mat_equacoes',
+    subject: 'Matemática',
+    prompt: 'Uma igualdade matemática que é verdadeira para todos os valores possíveis das variáveis envolvidas é chamada de:',
+    options: [
+      { id: 'a', text: 'Equação' },
+      { id: 'b', text: 'Identidade' },
+      { id: 'c', text: 'Inequação' },
+      { id: 'd', text: 'Função' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Uma identidade é uma igualdade válida para todos os valores possíveis das variáveis (por exemplo, (a+b)² = a² + 2ab + b²), diferente de uma equação, que só é verdadeira para valores específicos das incógnitas (suas soluções ou raízes).',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_equacoes_7',
+    chapter: 'Igualdades',
+    topicId: 'mat_equacoes',
+    subject: 'Matemática',
+    prompt: 'Ao resolver uma equação, uma das propriedades fundamentais da igualdade permite que:',
+    options: [
+      { id: 'a', text: 'Somando (ou subtraindo) o mesmo valor a ambos os lados da equação, a igualdade se mantém' },
+      { id: 'b', text: 'Somando um valor apenas a um dos lados, a igualdade se mantém' },
+      { id: 'c', text: 'Multiplicando apenas um lado por zero, a igualdade se mantém' },
+      { id: 'd', text: 'Elevar apenas um dos lados ao quadrado sempre preserva a igualdade' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Uma propriedade fundamental da igualdade é que somar (ou subtrair) o mesmo valor a ambos os lados de uma equação preserva a igualdade — a base de praticamente toda manipulação algébrica usada para isolar a incógnita e resolver equações.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_mat_equacoes_8',
+    chapter: 'Igualdades',
+    topicId: 'mat_equacoes',
+    subject: 'Matemática',
+    prompt: 'Ao elevar ambos os lados de uma equação ao quadrado (uma técnica comum para resolver equações irracionais), é necessário depois:',
+    options: [
+      { id: 'a', text: 'Verificar as soluções obtidas na equação original, pois esse processo pode introduzir soluções estranhas (que não satisfazem a equação original)' },
+      { id: 'b', text: 'Assumir automaticamente que todas as soluções obtidas são válidas, sem qualquer verificação' },
+      { id: 'c', text: 'Dividir o resultado final por dois, sempre' },
+      { id: 'd', text: 'Ignorar completamente o resultado obtido' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Elevar ao quadrado ambos os lados de uma equação não é uma operação reversível de forma direta: pode introduzir soluções estranhas, que satisfazem a equação elevada ao quadrado mas não a equação original. Por isso, é essencial verificar cada solução obtida na equação original antes de aceitá-la como válida.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_equacoes_9',
+    chapter: 'Desigualdades',
+    topicId: 'mat_equacoes',
+    subject: 'Matemática',
+    prompt: 'Ao multiplicar ou dividir ambos os lados de uma desigualdade por um número negativo, é necessário:',
+    options: [
+      { id: 'a', text: 'Inverter o sentido da desigualdade' },
+      { id: 'b', text: 'Manter o sentido da desigualdade inalterado' },
+      { id: 'c', text: 'Transformar a desigualdade em uma igualdade' },
+      { id: 'd', text: 'Somar 1 a ambos os lados, além da multiplicação' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Ao multiplicar ou dividir uma desigualdade por um número negativo, o sentido da desigualdade deve ser invertido (por exemplo, se a < b, então -a > -b) — um erro comum é esquecer essa inversão ao resolver inequações.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_equacoes_10',
+    chapter: 'Modelagem Algébrica de Problemas I',
+    topicId: 'mat_equacoes',
+    subject: 'Matemática',
+    prompt: 'A idade de Pedro é o dobro da idade de sua irmã Ana. Juntos, eles têm 36 anos. Qual é a idade de Ana?',
+    options: [
+      { id: 'a', text: '10 anos' },
+      { id: 'b', text: '12 anos' },
+      { id: 'c', text: '18 anos' },
+      { id: 'd', text: '24 anos' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Se a idade de Ana é x, a de Pedro é 2x. Juntos: x + 2x = 36 → 3x = 36 → x = 12 anos (Ana) e 24 anos (Pedro).',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_mat_equacoes_11',
+    chapter: 'Modelagem Algébrica de Problemas I',
+    topicId: 'mat_equacoes',
+    subject: 'Matemática',
+    prompt: 'Um número somado ao seu triplo resulta em 48. Qual é esse número?',
+    options: [
+      { id: 'a', text: '10' },
+      { id: 'b', text: '12' },
+      { id: 'c', text: '14' },
+      { id: 'd', text: '16' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Se o número é x, a equação é x + 3x = 48 → 4x = 48 → x = 12.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_mat_equacoes_12',
+    chapter: 'Equações do 2º Grau',
+    topicId: 'mat_equacoes',
+    subject: 'Matemática',
+    prompt: 'Usando a fórmula de Bhaskara, quais são as raízes da equação x² - 5x + 6 = 0?',
+    options: [
+      { id: 'a', text: 'x = 1 e x = 6' },
+      { id: 'b', text: 'x = 2 e x = 3' },
+      { id: 'c', text: 'x = -2 e x = -3' },
+      { id: 'd', text: 'x = 5 e x = 6' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Δ = (-5)² - 4×1×6 = 25 - 24 = 1. x = (5 ± √1)/2 = (5±1)/2, resultando em x = 3 ou x = 2.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_equacoes_13',
+    chapter: 'Equações do 2º Grau',
+    topicId: 'mat_equacoes',
+    subject: 'Matemática',
+    prompt: 'Na equação do 2º grau ax² + bx + c = 0, quando o discriminante Δ = b² - 4ac é negativo, isso significa que a equação:',
+    options: [
+      { id: 'a', text: 'Possui duas raízes reais e distintas' },
+      { id: 'b', text: 'Possui exatamente uma raiz real (raiz dupla)' },
+      { id: 'c', text: 'Não possui nenhuma raiz real (as raízes são números complexos não reais)' },
+      { id: 'd', text: 'Possui infinitas raízes reais' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'Quando Δ < 0, a raiz quadrada de Δ na fórmula de Bhaskara envolve um número negativo, o que não tem solução dentro dos números reais — a equação não possui raízes reais, apenas raízes complexas (não reais). Se Δ = 0, há uma raiz dupla; se Δ > 0, há duas raízes reais distintas.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_equacoes_14',
+    chapter: 'Modelagem Algébrica de Problemas II',
+    topicId: 'mat_equacoes',
+    subject: 'Matemática',
+    prompt: 'Um retângulo tem perímetro de 28 cm e o comprimento é 4 cm maior que a largura. Quais são as dimensões desse retângulo?',
+    options: [
+      { id: 'a', text: 'Largura 5 cm e comprimento 9 cm' },
+      { id: 'b', text: 'Largura 6 cm e comprimento 10 cm' },
+      { id: 'c', text: 'Largura 4 cm e comprimento 8 cm' },
+      { id: 'd', text: 'Largura 7 cm e comprimento 11 cm' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Se a largura é x, o comprimento é x+4. O perímetro é 2(x + x+4) = 28 → 2(2x+4) = 28 → 4x+8=28 → 4x=20 → x=5 (largura) e x+4=9 (comprimento).',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_equacoes_15',
+    chapter: 'Técnicas Algébricas',
+    topicId: 'mat_equacoes',
+    subject: 'Matemática',
+    prompt: 'Fatorando a expressão x² - 9, obtemos:',
+    options: [
+      { id: 'a', text: '(x - 3)(x - 3)' },
+      { id: 'b', text: '(x + 3)(x - 3)' },
+      { id: 'c', text: '(x + 9)(x - 1)' },
+      { id: 'd', text: 'Não é possível fatorar essa expressão' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A expressão x² - 9 é uma diferença de quadrados (x² - 3²), que se fatora pela regra a² - b² = (a+b)(a-b): x² - 9 = (x+3)(x-3).',
+    difficulty: 'medium'
+  },
   // Matemática — Logaritmos e Exponenciais
   {
     id: 'q_mat_log_exponenciais_1',
@@ -5428,6 +7748,86 @@ export const mockQuestions: Question[] = [
     ],
     correctOptionId: 'c',
     explanation: 'Usando mudança de base: log₄(8) = log₂(8)/log₂(4) = 3/2.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_mat_log_exponenciais_6',
+    chapter: 'Introdução ao Modelo Exponencial',
+    topicId: 'mat_log_exponenciais',
+    subject: 'Matemática',
+    prompt: 'Uma função exponencial f(x) = a×bˣ (com b > 1) é caracterizada por:',
+    options: [
+      { id: 'a', text: 'Crescimento cada vez mais lento à medida que x aumenta' },
+      { id: 'b', text: 'Crescimento cada vez mais rápido à medida que x aumenta (a variável está no expoente)' },
+      { id: 'c', text: 'Um valor constante, independente de x' },
+      { id: 'd', text: 'Decrescimento constante, sempre' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Na função exponencial com base b > 1, o crescimento se acelera cada vez mais à medida que x aumenta, já que a variável está no expoente — diferente do crescimento linear (constante) ou polinomial, que crescem de forma mais previsível e gradual.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_log_exponenciais_7',
+    chapter: 'Introdução ao Modelo Exponencial',
+    topicId: 'mat_log_exponenciais',
+    subject: 'Matemática',
+    prompt: 'Uma população de bactérias dobra a cada hora, começando com 100 indivíduos. Quantas bactérias existirão após 3 horas?',
+    options: [
+      { id: 'a', text: '300' },
+      { id: 'b', text: '400' },
+      { id: 'c', text: '600' },
+      { id: 'd', text: '800' }
+    ],
+    correctOptionId: 'd',
+    explanation: 'O modelo é P(t) = 100×2ᵗ. Após 3 horas: P(3) = 100×2³ = 100×8 = 800 bactérias.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_log_exponenciais_8',
+    chapter: 'Equações e Funções Logarítmicas',
+    topicId: 'mat_log_exponenciais',
+    subject: 'Matemática',
+    prompt: 'Para que log_b(x) esteja definido, é necessário que:',
+    options: [
+      { id: 'a', text: 'A base b seja positiva, diferente de 1, e o logaritmando x seja positivo' },
+      { id: 'b', text: 'A base b possa ser qualquer número real, inclusive negativo' },
+      { id: 'c', text: 'O logaritmando x possa ser negativo ou zero, sem restrição' },
+      { id: 'd', text: 'A base b seja sempre igual a 1' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Para que o logaritmo log_b(x) esteja definido no conjunto dos números reais, a base b deve ser positiva e diferente de 1 (b > 0, b ≠ 1), e o logaritmando x deve ser estritamente positivo (x > 0) — essas condições de existência devem sempre ser verificadas.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_log_exponenciais_9',
+    chapter: 'Modelagem Exponencial de Problemas',
+    topicId: 'mat_log_exponenciais',
+    subject: 'Matemática',
+    prompt: 'Um material radioativo tem meia-vida de 10 anos (a cada 10 anos, a quantidade se reduz à metade). Partindo de 80 g, quantos gramas restarão após 30 anos?',
+    options: [
+      { id: 'a', text: '5 g' },
+      { id: 'b', text: '10 g' },
+      { id: 'c', text: '20 g' },
+      { id: 'd', text: '40 g' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Em 30 anos, ocorrem 3 períodos de meia-vida (30/10 = 3). A cada período, a quantidade se reduz à metade: 80 → 40 → 20 → 10 g.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_log_exponenciais_10',
+    chapter: 'Modelagem Exponencial de Problemas',
+    topicId: 'mat_log_exponenciais',
+    subject: 'Matemática',
+    prompt: 'A escala Richter, usada para medir a magnitude de terremotos, é uma escala logarítmica. Isso significa que um terremoto de magnitude 6 libera, em termos de energia, aproximadamente quantas vezes mais energia que um de magnitude 5?',
+    options: [
+      { id: 'a', text: 'O dobro' },
+      { id: 'b', text: 'Aproximadamente 10 vezes mais' },
+      { id: 'c', text: 'Aproximadamente 32 vezes mais' },
+      { id: 'd', text: 'A mesma quantidade de energia' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'Na escala Richter, cada aumento de uma unidade corresponde a um aumento de aproximadamente 10 vezes na amplitude das ondas sísmicas, mas de aproximadamente 31,6 vezes na energia liberada — uma consequência direta da natureza logarítmica da escala, em que pequenas diferenças numéricas escondem diferenças enormes na grandeza real medida.',
     difficulty: 'hard'
   },
   // Matemática — Números Complexos e Polinômios
@@ -5510,6 +7910,102 @@ export const mockQuestions: Question[] = [
     correctOptionId: 'c',
     explanation: 'Um polinômio de grau 4 tem 4 raízes ao todo (Teorema Fundamental da Álgebra). Se 2 delas são reais (5, com multiplicidade 2), as outras 2 devem ser complexas não reais — e, como os coeficientes são reais, elas formam um par conjugado.',
     difficulty: 'hard'
+  },
+  {
+    id: 'q_mat_complexos_polinomios_6',
+    chapter: 'Módulo de um Número Real',
+    topicId: 'mat_complexos_polinomios',
+    subject: 'Matemática',
+    prompt: 'O módulo (ou valor absoluto) de um número real x, representado por |x|, é definido como:',
+    options: [
+      { id: 'a', text: 'x, se x ≥ 0, e -x, se x < 0 — sempre um valor não negativo' },
+      { id: 'b', text: 'Sempre igual a x, mesmo quando x é negativo' },
+      { id: 'c', text: 'Sempre um número negativo' },
+      { id: 'd', text: 'x², para qualquer valor de x' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O módulo de um número real x é definido por partes: |x| = x quando x ≥ 0, e |x| = -x quando x < 0 (o que resulta em um valor positivo, já que -x é positivo quando x é negativo) — o módulo representa a distância de x até zero na reta real, sempre não negativa.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_mat_complexos_polinomios_7',
+    chapter: 'Módulo de um Número Real',
+    topicId: 'mat_complexos_polinomios',
+    subject: 'Matemática',
+    prompt: 'Qual é o valor de |-7| + |3|?',
+    options: [
+      { id: 'a', text: '-4' },
+      { id: 'b', text: '4' },
+      { id: 'c', text: '10' },
+      { id: 'd', text: '-10' }
+    ],
+    correctOptionId: 'c',
+    explanation: '|-7| = 7 e |3| = 3. Somando: 7 + 3 = 10.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_mat_complexos_polinomios_8',
+    chapter: 'Módulo de um Número Real',
+    topicId: 'mat_complexos_polinomios',
+    subject: 'Matemática',
+    prompt: 'Quantas soluções reais tem a equação |x + 1| = 4?',
+    options: [
+      { id: 'a', text: 'Nenhuma' },
+      { id: 'b', text: 'Uma' },
+      { id: 'c', text: 'Duas' },
+      { id: 'd', text: 'Infinitas' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'A equação modular se desdobra em dois casos: x+1 = 4 (x = 3) ou x+1 = -4 (x = -5). Ambos são soluções válidas, logo há duas soluções reais.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_complexos_polinomios_9',
+    chapter: 'Polinômios',
+    topicId: 'mat_complexos_polinomios',
+    subject: 'Matemática',
+    prompt: 'O grau de um polinômio é determinado por:',
+    options: [
+      { id: 'a', text: 'O maior expoente da variável presente no polinômio, com coeficiente não nulo' },
+      { id: 'b', text: 'O número total de termos do polinômio' },
+      { id: 'c', text: 'A soma de todos os coeficientes' },
+      { id: 'd', text: 'O menor expoente da variável presente no polinômio' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O grau de um polinômio é dado pelo maior expoente da variável que aparece com coeficiente não nulo. Por exemplo, no polinômio 3x⁴ - 2x² + 5, o grau é 4, já que esse é o maior expoente com coeficiente diferente de zero.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_mat_complexos_polinomios_10',
+    chapter: 'Polinômios',
+    topicId: 'mat_complexos_polinomios',
+    subject: 'Matemática',
+    prompt: 'Dividindo o polinômio P(x) = x² - 5x + 6 por (x - 2), qual é o quociente?',
+    options: [
+      { id: 'a', text: 'x - 3' },
+      { id: 'b', text: 'x + 3' },
+      { id: 'c', text: 'x - 2' },
+      { id: 'd', text: 'x + 2' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Como x=2 é raiz de P(x) (2² - 5×2 + 6 = 4-10+6 = 0), a divisão é exata. Fatorando: x² - 5x + 6 = (x-2)(x-3), logo o quociente é x-3.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_mat_complexos_polinomios_11',
+    chapter: 'Polinômios',
+    topicId: 'mat_complexos_polinomios',
+    subject: 'Matemática',
+    prompt: 'O Teorema do Resto afirma que o resto da divisão de um polinômio P(x) por (x - a) é igual a:',
+    options: [
+      { id: 'a', text: 'P(a), o valor do polinômio calculado em x = a' },
+      { id: 'b', text: 'Sempre zero, para qualquer polinômio' },
+      { id: 'c', text: 'O grau do polinômio P(x)' },
+      { id: 'd', text: 'A soma dos coeficientes de P(x)' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O Teorema do Resto estabelece que, ao dividir um polinômio P(x) por (x - a), o resto dessa divisão é exatamente P(a) — o valor do polinômio calculado substituindo x por a. Se P(a) = 0, então (x-a) é um fator de P(x) (Teorema de D\'Alembert), e a divisão é exata.',
+    difficulty: 'medium'
   },
   // Geografia — Cartografia e Fundamentos
   {
