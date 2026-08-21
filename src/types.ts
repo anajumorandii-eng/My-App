@@ -12,6 +12,13 @@ export interface TopicMastery {
   uncertainty: number; // 0 to 1 (0 = highly certain of level, 1 = low confidence in the level metric)
   lastReviewed: string; // ISO Date
   errorSignals: number; // recent consecutive errors
+  // Estado do algoritmo de repetição espaçada (estilo SM-2 — Wozniak, 1990),
+  // usado por src/lib/spacedRepetition.ts para agendar a próxima revisão.
+  // Opcionais e com fallback sensato em spacedRepetition.ts para não quebrar
+  // dados existentes (mock ou já persistidos) que ainda não os têm.
+  easeFactor?: number; // fator de facilidade — cresce quando a lembrança é fácil, cai quando é difícil
+  intervalDays?: number; // intervalo atual, em dias, até a próxima revisão programada
+  reviewCount?: number; // repetições espaçadas consecutivas bem-sucedidas (zera ao esquecer)
 }
 
 export interface UserProfile {

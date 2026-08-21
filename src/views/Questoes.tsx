@@ -8,6 +8,7 @@ import { parseErrorDiagnosis, ErrorDiagnosis } from '../lib/errorDiagnosis';
 import { ERROR_TYPE_LABELS, INTERVENTION_LABELS } from '../lib/errorLabels';
 import { AiText } from '../components/AiText';
 import { TopicMastery, ErrorLog } from '../types';
+import { applyReviewOutcome, qualityFromAnswerCorrectness } from '../lib/spacedRepetition';
 import { HelpCircle, CheckCircle2, XCircle, RotateCcw, CloudOff, Sparkles, BadgeCheck, ExternalLink, Stethoscope, Check } from 'lucide-react';
 
 export default function Questoes() {
@@ -66,17 +67,14 @@ export default function Questoes() {
     setSelectedOptionId(optionId);
     setHistory((h) => [...h, { questionId: question.id, correct }]);
 
-    // Practicing nudges the topic's mastery: small gain on a correct
-    // answer, a small dip plus an error signal on a wrong one.
+    // Responder uma questão é uma tentativa de recuperação ativa (retrieval
+    // practice — Roediger & Karpicke, 2006), então também alimenta o
+    // cronograma de repetição espaçada do tópico (spacedRepetition.ts), não
+    // só o nível de domínio: acertar adia a próxima revisão programada,
+    // errar traz ela de volta pra amanhã.
     updateMastery((prev: TopicMastery[]) =>
       prev.map((m) =>
-        m.topicId === question.topicId
-          ? {
-              ...m,
-              level: Math.min(100, Math.max(0, m.level + (correct ? 3 : -2))),
-              errorSignals: correct ? Math.max(0, m.errorSignals - 1) : m.errorSignals + 1,
-            }
-          : m
+        m.topicId === question.topicId ? { ...m, ...applyReviewOutcome(m, qualityFromAnswerCorrectness(correct)) } : m
       )
     );
 

@@ -4,7 +4,12 @@ import { StudyMethod } from '../types';
 import { useUserMastery } from '../hooks/useUserMastery';
 import { requestAiText } from '../lib/aiClient';
 import { AiText } from '../components/AiText';
-import { FlaskConical, ChevronDown, Brain, Repeat as RepeatIcon, Target, Zap, Sparkles } from 'lucide-react';
+import { FlaskConical, ChevronDown, Brain, Repeat as RepeatIcon, Target, Zap, Sparkles, CheckCircle2 } from 'lucide-react';
+
+// Métodos que não ficam só na teoria: já rodam de verdade no motor do
+// plano (spacedRepetition.ts agenda as revisões; interleaving.ts intercala
+// as matérias no plano de hoje) — não apenas descritos aqui como sugestão.
+const ACTIVE_IN_ENGINE = new Set(['method_spaced_repetition', 'method_interleaving']);
 
 const CATEGORY_META: Record<StudyMethod['category'], { label: string; icon: React.ElementType; color: string }> = {
   aquisicao: { label: 'Aquisição', icon: Brain, color: 'text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-900/20' },
@@ -102,7 +107,15 @@ export default function Laboratorio() {
                     <meta.icon className="w-5 h-5" />
                   </span>
                   <div className="min-w-0">
-                    <h3 className="font-semibold">{method.name}</h3>
+                    <h3 className="font-semibold flex items-center flex-wrap gap-2">
+                      {method.name}
+                      {ACTIVE_IN_ENGINE.has(method.id) && (
+                        <span className="inline-flex items-center text-[11px] font-medium px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300">
+                          <CheckCircle2 className="w-3 h-3 mr-1" />
+                          Ativo no seu plano
+                        </span>
+                      )}
+                    </h3>
                     <p className="text-sm text-zinc-500 mt-0.5 truncate">{method.summary}</p>
                   </div>
                 </div>
@@ -111,6 +124,16 @@ export default function Laboratorio() {
 
               {isExpanded && (
                 <div className="px-5 pb-5 pt-1 border-t border-zinc-100 dark:border-zinc-800">
+                  {method.id === 'method_spaced_repetition' && (
+                    <p className="mt-4 text-xs text-zinc-500 bg-zinc-50 dark:bg-zinc-800/50 rounded-lg p-3">
+                      Isso já roda de verdade: cada tópico tem seu próprio intervalo, recalculado a cada vez que você avalia como lembrou em "Revisões Adaptativas" ou responde uma questão em "Questões & Tentativas".
+                    </p>
+                  )}
+                  {method.id === 'method_interleaving' && (
+                    <p className="mt-4 text-xs text-zinc-500 bg-zinc-50 dark:bg-zinc-800/50 rounded-lg p-3">
+                      Isso já roda de verdade: o plano do dia (em "Plano" e "Hoje") intercala matérias automaticamente, em vez de deixar vários itens seguidos da mesma matéria.
+                    </p>
+                  )}
                   <div className="mt-4">
                     <p className="text-sm font-semibold text-zinc-700 dark:text-zinc-300 mb-2">Como aplicar</p>
                     <ol className="space-y-2">

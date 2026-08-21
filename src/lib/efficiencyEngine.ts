@@ -2,6 +2,8 @@ import { TopicMastery, Topic, UserProfile, StudyAction, StudentGoals, Recommenda
 import { daysUntil, examsForBoard } from '../data/examCalendar';
 import { topicIncidenceWeight } from './topicIncidence';
 import { currentStudyPhase } from './studyPhase';
+import { urgencyOf } from './reviewUrgency';
+import { interleaveBySubject } from './interleaving';
 
 // Dentro dos últimos 90 dias antes de uma prova, o plano é puxado para cima
 // em duas camadas: um boost de urgência geral (essa prova está chegando)
@@ -103,9 +105,10 @@ export class EfficiencyEngine {
       // 1. Learning Needed (Inverse to mastery level)
       const learningNeeded = 100 - mastery.level;
 
-      // 2. Review Necessity (Based on time since last review and uncertainty)
-      const daysSinceReview = (now.getTime() - new Date(mastery.lastReviewed).getTime()) / (1000 * 3600 * 24);
-      const reviewNecessity = Math.min((daysSinceReview * 5) + (mastery.uncertainty * 50), 100);
+      // 2. Review Necessity — mesmo sinal de urgência baseado em repetição
+      // espaçada usado em Revisões Adaptativas (reviewUrgency.ts), pra que as
+      // duas telas concordem sobre o que está "vencido" pra revisão.
+      const reviewNecessity = urgencyOf(mastery, now);
 
       // 3. Error Signal Urgency
       const errorSignal = mastery.errorSignals * 20; // 5 errors = 100 max signal
@@ -218,6 +221,10 @@ export class EfficiencyEngine {
     }
 
     finalPlan.sort((a, b) => b.priorityScore - a.priorityScore);
-    return finalPlan;
+    // Prática intercalada: evita enfileirar vários itens seguidos da mesma
+    // matéria só porque ela dominou o ranking de prioridade (ver
+    // interleaving.ts) — melhora a discriminação entre conceitos/estratégias
+    // na hora de aplicar o que foi estudado.
+    return interleaveBySubject(finalPlan);
   }
 }
