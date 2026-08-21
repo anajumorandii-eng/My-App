@@ -4414,6 +4414,86 @@ export const mockQuestions: Question[] = [
     explanation: 'Posição s(t) = 10t + t². s(5) = 50+25 = 75 m. s(2) = 20+4 = 24 m. Distância percorrida entre os dois instantes: 75 - 24 = 51 m.',
     difficulty: 'hard'
   },
+  {
+    id: 'q_fis_cinematica_5',
+    chapter: 'Cinemática Escalar. Conceitos Fundamentais',
+    topicId: 'fis_cinematica',
+    subject: 'Física',
+    prompt: 'A velocidade escalar média de um móvel é definida como:',
+    options: [
+      { id: 'a', text: 'A razão entre o espaço percorrido (deslocamento escalar) e o intervalo de tempo gasto' },
+      { id: 'b', text: 'A velocidade em um único instante específico' },
+      { id: 'c', text: 'O produto entre o espaço percorrido e o tempo gasto' },
+      { id: 'd', text: 'A aceleração média do movimento' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A velocidade escalar média é definida como Vm = ΔS/Δt, ou seja, a razão entre a variação de espaço (deslocamento escalar) e o intervalo de tempo correspondente — diferente da velocidade instantânea, que se refere a um único instante.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_fis_cinematica_6',
+    chapter: 'Movimento Uniforme',
+    topicId: 'fis_cinematica',
+    subject: 'Física',
+    prompt: 'No Movimento Retilíneo Uniforme (MRU), a função horária da posição s(t) = s0 + v×t descreve um movimento com:',
+    options: [
+      { id: 'a', text: 'Velocidade constante e aceleração nula' },
+      { id: 'b', text: 'Velocidade variável e aceleração constante' },
+      { id: 'c', text: 'Aceleração crescente ao longo do tempo' },
+      { id: 'd', text: 'Velocidade sempre igual a zero' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'No MRU, a velocidade v é constante (não varia com o tempo), o que implica aceleração nula — a posição varia linearmente com o tempo, como mostra a função horária s(t) = s0 + v×t, sem termo quadrático em t.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_fis_cinematica_7',
+    chapter: 'O Movimento Circular',
+    topicId: 'fis_cinematica',
+    subject: 'Física',
+    prompt: 'No movimento circular uniforme (MCU), a velocidade angular ω se relaciona com o período T pela fórmula:',
+    options: [
+      { id: 'a', text: 'ω = 2π/T' },
+      { id: 'b', text: 'ω = T/2π' },
+      { id: 'c', text: 'ω = 2πT' },
+      { id: 'd', text: 'ω = π/T²' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A velocidade angular no MCU é dada por ω = 2π/T, já que em um período T o móvel completa uma volta completa, correspondente a um ângulo de 2π radianos.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_cinematica_8',
+    chapter: 'O Movimento Circular',
+    topicId: 'fis_cinematica',
+    subject: 'Física',
+    prompt: 'No movimento circular uniforme, a aceleração centrípeta é responsável por:',
+    options: [
+      { id: 'a', text: 'Alterar apenas o módulo da velocidade, mantendo a direção constante' },
+      { id: 'b', text: 'Alterar apenas a direção da velocidade, mantendo seu módulo constante, apontando sempre para o centro da trajetória' },
+      { id: 'c', text: 'Fazer o corpo parar completamente' },
+      { id: 'd', text: 'Não ter nenhum efeito sobre o movimento' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'No MCU, a aceleração centrípeta aponta sempre para o centro da trajetória circular, sendo responsável por mudar continuamente a direção do vetor velocidade (mantendo módulo constante) — sem essa aceleração, o corpo se moveria em linha reta (tangente à circunferência), pela primeira lei de Newton.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_cinematica_9',
+    chapter: 'O Movimento Circular',
+    topicId: 'fis_cinematica',
+    subject: 'Física',
+    prompt: 'Uma partícula descreve um movimento circular com raio 2 m e velocidade angular constante de 4 rad/s. Qual é o módulo de sua velocidade escalar (linear)?',
+    options: [
+      { id: 'a', text: '2 m/s' },
+      { id: 'b', text: '4 m/s' },
+      { id: 'c', text: '6 m/s' },
+      { id: 'd', text: '8 m/s' }
+    ],
+    correctOptionId: 'd',
+    explanation: 'A relação entre velocidade linear e angular é v = ω×R = 4×2 = 8 m/s.',
+    difficulty: 'medium'
+  },
   // Física — Eletrodinâmica (Circuitos Elétricos)
   {
     id: 'q_fis_circuitos_1',
@@ -4493,6 +4573,310 @@ export const mockQuestions: Question[] = [
     ],
     correctOptionId: 'c',
     explanation: 'A potência elétrica é P = V×I, logo I = P/V = 4400/220 = 20 A.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_fis_circuitos_6',
+    chapter: 'Corrente Elétrica',
+    topicId: 'fis_circuitos',
+    subject: 'Física',
+    prompt: 'A corrente elétrica em um condutor é definida como:',
+    options: [
+      { id: 'a', text: 'A quantidade de carga elétrica que atravessa uma seção transversal do condutor por unidade de tempo' },
+      { id: 'b', text: 'A energia total armazenada no condutor' },
+      { id: 'c', text: 'A resistência oferecida pelo condutor à passagem de carga' },
+      { id: 'd', text: 'A diferença de potencial entre dois pontos do condutor' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A corrente elétrica i é definida como i = ΔQ/Δt, ou seja, a quantidade de carga elétrica (ΔQ) que atravessa a seção transversal do condutor por unidade de tempo (Δt), medida em ampères (C/s).',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_fis_circuitos_7',
+    chapter: 'Corrente Elétrica',
+    topicId: 'fis_circuitos',
+    subject: 'Física',
+    prompt: 'A Primeira Lei de Ohm relaciona a tensão (U), a resistência (R) e a corrente (i) de um resistor ôhmico pela fórmula:',
+    options: [
+      { id: 'a', text: 'U = R/i' },
+      { id: 'b', text: 'U = R × i' },
+      { id: 'c', text: 'U = R + i' },
+      { id: 'd', text: 'R = U + i' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A Primeira Lei de Ohm estabelece que, para um resistor ôhmico (à temperatura constante), a tensão é diretamente proporcional à corrente, sendo a resistência a constante de proporcionalidade: U = R×i.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_fis_circuitos_8',
+    chapter: 'Corrente Elétrica',
+    topicId: 'fis_circuitos',
+    subject: 'Física',
+    prompt: 'Um resistor de 10 Ω é percorrido por uma corrente de 3 A. Qual é a tensão (diferença de potencial) sobre esse resistor?',
+    options: [
+      { id: 'a', text: '3,33 V' },
+      { id: 'b', text: '13 V' },
+      { id: 'c', text: '30 V' },
+      { id: 'd', text: '300 V' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'Pela Primeira Lei de Ohm: U = R×i = 10×3 = 30 V.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_fis_circuitos_9',
+    chapter: 'Medidores Elétricos',
+    topicId: 'fis_circuitos',
+    subject: 'Física',
+    prompt: 'O amperímetro, instrumento usado para medir a corrente elétrica em um circuito, deve ser conectado:',
+    options: [
+      { id: 'a', text: 'Em série com o componente cuja corrente se deseja medir' },
+      { id: 'b', text: 'Em paralelo com o componente cuja corrente se deseja medir' },
+      { id: 'c', text: 'Diretamente na fonte de energia, sem qualquer conexão ao circuito' },
+      { id: 'd', text: 'Em qualquer posição, sem diferença entre série ou paralelo' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O amperímetro é sempre conectado em série no trecho do circuito onde se deseja medir a corrente, para que toda a corrente daquele trecho passe através dele. Por isso, um amperímetro ideal deve ter resistência interna desprezível (próxima de zero), para não alterar a corrente do circuito.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_circuitos_10',
+    chapter: 'Medidores Elétricos',
+    topicId: 'fis_circuitos',
+    subject: 'Física',
+    prompt: 'O voltímetro, instrumento usado para medir a diferença de potencial (tensão) entre dois pontos de um circuito, deve ser conectado:',
+    options: [
+      { id: 'a', text: 'Em série com o componente cuja tensão se deseja medir' },
+      { id: 'b', text: 'Em paralelo com o componente cuja tensão se deseja medir' },
+      { id: 'c', text: 'Nunca pode ser conectado a um circuito em funcionamento' },
+      { id: 'd', text: 'Apenas em circuitos sem nenhuma fonte de energia' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'O voltímetro é sempre conectado em paralelo com o componente cuja tensão se deseja medir, para registrar a diferença de potencial entre seus dois terminais. Por isso, um voltímetro ideal deve ter resistência interna infinita (ou muito alta), para não desviar corrente do circuito original.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_circuitos_11',
+    chapter: 'Medidores Elétricos',
+    topicId: 'fis_circuitos',
+    subject: 'Física',
+    prompt: 'Um amperímetro real (não ideal), ao ser inserido em um circuito, introduz um pequeno erro de medição porque:',
+    options: [
+      { id: 'a', text: 'Possui uma resistência interna não nula, que altera ligeiramente a corrente total do circuito' },
+      { id: 'b', text: 'Possui resistência interna infinita, bloqueando toda a corrente' },
+      { id: 'c', text: 'Gera energia elétrica adicional no circuito' },
+      { id: 'd', text: 'Nunca introduz qualquer erro, mesmo sendo real' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Um amperímetro real possui uma pequena resistência interna (não nula, ao contrário do amperímetro ideal), o que introduz uma resistência adicional ao circuito e altera ligeiramente a corrente medida em relação ao valor que existiria sem o instrumento — quanto menor essa resistência interna, mais preciso é o amperímetro.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_fis_circuitos_12',
+    chapter: 'Geradores',
+    topicId: 'fis_circuitos',
+    subject: 'Física',
+    prompt: 'Um gerador elétrico real possui uma força eletromotriz (fem) ε e uma resistência interna r. A tensão nos terminais desse gerador, quando fornece uma corrente i ao circuito externo, é dada por:',
+    options: [
+      { id: 'a', text: 'U = ε + r×i' },
+      { id: 'b', text: 'U = ε - r×i' },
+      { id: 'c', text: 'U = ε × r × i' },
+      { id: 'd', text: 'U = ε, independentemente de r e i' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A equação do gerador é U = ε - r×i: a tensão nos terminais é sempre menor que a fem ideal, devido à queda de tensão interna (r×i) causada pela resistência interna do gerador quando percorrido por corrente.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_circuitos_13',
+    chapter: 'Geradores',
+    topicId: 'fis_circuitos',
+    subject: 'Física',
+    prompt: 'Um gerador tem fem de 12 V e resistência interna de 0,5 Ω. Fornecendo uma corrente de 4 A, qual é a tensão nos seus terminais?',
+    options: [
+      { id: 'a', text: '10 V' },
+      { id: 'b', text: '11 V' },
+      { id: 'c', text: '12 V' },
+      { id: 'd', text: '14 V' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'U = ε - r×i = 12 - 0,5×4 = 12 - 2 = 10 V.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_circuitos_14',
+    chapter: 'Geradores',
+    topicId: 'fis_circuitos',
+    subject: 'Física',
+    prompt: 'A situação de curto-circuito em um gerador ocorre quando a resistência externa do circuito é nula, resultando em:',
+    options: [
+      { id: 'a', text: 'Uma corrente de curto-circuito máxima, dada por icc = ε/r' },
+      { id: 'b', text: 'Corrente nula em todo o circuito' },
+      { id: 'c', text: 'Tensão nos terminais igual à própria fem' },
+      { id: 'd', text: 'Nenhum efeito perceptível sobre o gerador' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'No curto-circuito, a resistência externa é zero, e a tensão nos terminais também se torna zero (U = 0). Nesse caso, toda a fem é "consumida" pela resistência interna: ε = r×icc, logo icc = ε/r — a corrente máxima que o gerador pode fornecer, geralmente muito alta e potencialmente danosa ao gerador.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_fis_circuitos_15',
+    chapter: 'Receptores',
+    topicId: 'fis_circuitos',
+    subject: 'Física',
+    prompt: 'Um receptor elétrico (como um motor) é um dispositivo que converte energia elétrica em:',
+    options: [
+      { id: 'a', text: 'Energia elétrica de volta, sem qualquer outra forma de energia' },
+      { id: 'b', text: 'Outras formas de energia (como mecânica), além de uma parcela dissipada como calor' },
+      { id: 'c', text: 'Apenas calor, exclusivamente' },
+      { id: 'd', text: 'Energia elétrica com potencial elevado, atuando como um gerador' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Um receptor elétrico (como um motor elétrico) converte parte da energia elétrica recebida em outra forma de energia útil (como energia mecânica, no caso de um motor), e o restante é dissipado como calor devido à resistência interna do receptor — diferente de um resistor puro, que dissipa toda a energia como calor.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_circuitos_16',
+    chapter: 'Receptores',
+    topicId: 'fis_circuitos',
+    subject: 'Física',
+    prompt: 'A equação do receptor elétrico, U = ε\' + r\'×i, relaciona a tensão nos seus terminais (U) com a força contraeletromotriz (ε\') e a resistência interna (r\'). Nessa equação, diferente do gerador:',
+    options: [
+      { id: 'a', text: 'A tensão nos terminais é sempre menor que a força contraeletromotriz' },
+      { id: 'b', text: 'A tensão nos terminais é sempre maior que a força contraeletromotriz, já que parte da tensão é usada para "vencer" a força contraeletromotriz e outra parte é dissipada na resistência interna' },
+      { id: 'c', text: 'Não existe nenhuma resistência interna em um receptor' },
+      { id: 'd', text: 'A força contraeletromotriz é sempre igual a zero' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Ao contrário do gerador (onde U = ε - r×i, a tensão é menor que a fem), no receptor a equação é U = ε\' + r\'×i: a tensão aplicada precisa ser maior que a força contraeletromotriz, já que parte dela é usada para vencer essa força contrária e outra parte é dissipada como calor na resistência interna do receptor.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_fis_circuitos_17',
+    chapter: 'Eletrodinâmica: as Leis de Kirchhoff',
+    topicId: 'fis_circuitos',
+    subject: 'Física',
+    prompt: 'A Primeira Lei de Kirchhoff (Lei dos Nós) estabelece que, em qualquer nó de um circuito elétrico:',
+    options: [
+      { id: 'a', text: 'A soma das correntes que entram no nó é igual à soma das correntes que saem dele' },
+      { id: 'b', text: 'A soma das tensões ao redor de qualquer malha fechada é sempre zero' },
+      { id: 'c', text: 'Toda a corrente do circuito se concentra em um único ponto' },
+      { id: 'd', text: 'A corrente é sempre nula em qualquer nó' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A Lei dos Nós (Primeira Lei de Kirchhoff) é uma consequência da conservação da carga elétrica: em qualquer nó (ponto de encontro de três ou mais condutores), a soma das correntes que entram deve ser igual à soma das correntes que saem, já que a carga não pode se acumular indefinidamente em um ponto.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_circuitos_18',
+    chapter: 'Eletrodinâmica: as Leis de Kirchhoff',
+    topicId: 'fis_circuitos',
+    subject: 'Física',
+    prompt: 'A Segunda Lei de Kirchhoff (Lei das Malhas) estabelece que, ao percorrer qualquer malha fechada de um circuito elétrico:',
+    options: [
+      { id: 'a', text: 'A soma algébrica das diferenças de potencial (elevações e quedas de tensão) ao longo da malha é sempre zero' },
+      { id: 'b', text: 'A soma das correntes que entram é sempre maior que a soma das correntes que saem' },
+      { id: 'c', text: 'A resistência total é sempre igual a zero' },
+      { id: 'd', text: 'Não existe nenhuma relação entre as tensões dos componentes da malha' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A Lei das Malhas (Segunda Lei de Kirchhoff) decorre da conservação de energia: ao percorrer qualquer caminho fechado (malha) de um circuito, voltando ao ponto de partida, a soma algébrica de todas as elevações e quedas de potencial deve ser igual a zero.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_circuitos_19',
+    chapter: 'Capacitores',
+    topicId: 'fis_circuitos',
+    subject: 'Física',
+    prompt: 'Um capacitor é um componente elétrico cuja função principal é:',
+    options: [
+      { id: 'a', text: 'Armazenar energia na forma de campo elétrico, acumulando cargas elétricas em suas placas' },
+      { id: 'b', text: 'Converter energia elétrica em energia mecânica' },
+      { id: 'c', text: 'Dissipar toda a energia recebida na forma de calor, como um resistor' },
+      { id: 'd', text: 'Gerar corrente elétrica continuamente, como um gerador' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Um capacitor é formado por duas placas condutoras separadas por um material isolante (dielétrico), e sua função é armazenar energia na forma de campo elétrico, acumulando cargas de sinais opostos em cada placa quando submetido a uma diferença de potencial.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_fis_circuitos_20',
+    chapter: 'Capacitores',
+    topicId: 'fis_circuitos',
+    subject: 'Física',
+    prompt: 'A capacitância de um capacitor, medida em Farads, relaciona a carga armazenada (Q) e a tensão aplicada (U) pela fórmula:',
+    options: [
+      { id: 'a', text: 'C = Q × U' },
+      { id: 'b', text: 'C = Q / U' },
+      { id: 'c', text: 'C = U / Q' },
+      { id: 'd', text: 'C = Q + U' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A capacitância é definida como C = Q/U, ou seja, a razão entre a carga armazenada nas placas e a diferença de potencial aplicada entre elas — quanto maior a capacitância, mais carga o capacitor armazena para uma mesma tensão.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_circuitos_21',
+    chapter: 'Capacitores',
+    topicId: 'fis_circuitos',
+    subject: 'Física',
+    prompt: 'Um capacitor de 4 μF é submetido a uma tensão de 12 V. Qual é a carga armazenada nesse capacitor?',
+    options: [
+      { id: 'a', text: '3 μC' },
+      { id: 'b', text: '16 μC' },
+      { id: 'c', text: '48 μC' },
+      { id: 'd', text: '480 μC' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'Q = C×U = 4×12 = 48 μC.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_fis_circuitos_22',
+    chapter: 'Potência Elétrica',
+    topicId: 'fis_circuitos',
+    subject: 'Física',
+    prompt: 'A potência elétrica dissipada por um resistor pode ser calculada, alternativamente à fórmula P = V×i, também pela fórmula P = R×i². Essa fórmula é útil especialmente quando se conhece:',
+    options: [
+      { id: 'a', text: 'A resistência e a corrente que passa pelo resistor, sem necessidade de conhecer diretamente a tensão' },
+      { id: 'b', text: 'Apenas a tensão, sem qualquer outra informação' },
+      { id: 'c', text: 'Apenas a potência, sem qualquer outra grandeza' },
+      { id: 'd', text: 'Somente o tempo de funcionamento do resistor' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A fórmula P = R×i² (derivada combinando P=V×i com a Lei de Ohm V=R×i) é útil quando se conhece a resistência e a corrente do resistor, sem precisar calcular ou medir diretamente a tensão sobre ele.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_circuitos_23',
+    chapter: 'Receptores',
+    topicId: 'fis_circuitos',
+    subject: 'Física',
+    prompt: 'O rendimento de um receptor elétrico (como um motor) é definido como a razão entre:',
+    options: [
+      { id: 'a', text: 'A potência útil (convertida em energia mecânica ou outra forma útil) e a potência total recebida pelo receptor' },
+      { id: 'b', text: 'A potência dissipada como calor e a potência útil' },
+      { id: 'c', text: 'Sempre igual a 100%, para qualquer receptor real' },
+      { id: 'd', text: 'A resistência interna e a força contraeletromotriz' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O rendimento de um receptor é η = Putil/Ptotal, a razão entre a potência convertida em energia útil (como energia mecânica em um motor) e a potência total recebida pelo receptor — parte da energia é sempre dissipada como calor pela resistência interna, tornando o rendimento real sempre menor que 100%.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_circuitos_24',
+    chapter: 'Eletrodinâmica: as Leis de Kirchhoff',
+    topicId: 'fis_circuitos',
+    subject: 'Física',
+    prompt: 'Em um circuito com duas malhas e múltiplos ramos, para resolver completamente o sistema (encontrar todas as correntes), geralmente é necessário combinar:',
+    options: [
+      { id: 'a', text: 'A Lei dos Nós (aplicada aos nós do circuito) e a Lei das Malhas (aplicada a cada malha independente), formando um sistema de equações' },
+      { id: 'b', text: 'Apenas a Lei dos Nós, que sozinha sempre resolve qualquer circuito' },
+      { id: 'c', text: 'Apenas a Lei das Malhas, sem qualquer outra equação' },
+      { id: 'd', text: 'Nenhuma das leis de Kirchhoff, apenas a Lei de Ohm' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Circuitos mais complexos, com múltiplas malhas e ramificações, geralmente exigem a combinação da Lei dos Nós (uma equação por nó independente) e da Lei das Malhas (uma equação por malha independente) para formar um sistema de equações lineares que permite determinar todas as correntes desconhecidas do circuito.',
     difficulty: 'hard'
   },
   // Física — Leis de Newton e Dinâmica do Movimento Retilíneo
@@ -4576,6 +4960,182 @@ export const mockQuestions: Question[] = [
     explanation: 'Pela Segunda Lei de Newton, T - mg = ma → T = m(g+a) = 800×(10+2) = 9.600 N.',
     difficulty: 'hard'
   },
+  {
+    id: 'q_fis_leis_newton_6',
+    chapter: 'Força e seus Tipos',
+    topicId: 'fis_leis_newton',
+    subject: 'Física',
+    prompt: 'A força peso, que age sobre todo corpo próximo à superfície da Terra, tem como origem:',
+    options: [
+      { id: 'a', text: 'A atração gravitacional exercida pela Terra sobre o corpo' },
+      { id: 'b', text: 'O atrito entre o corpo e o ar' },
+      { id: 'c', text: 'A força de contato entre dois corpos sólidos' },
+      { id: 'd', text: 'A tensão em um fio ou cabo' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A força peso é a força de atração gravitacional que a Terra exerce sobre qualquer corpo com massa, calculada por P = m×g, onde g é a aceleração da gravidade local — diferente de forças de contato, como normal, atrito ou tensão.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_fis_leis_newton_7',
+    chapter: 'Força e seus Tipos',
+    topicId: 'fis_leis_newton',
+    subject: 'Física',
+    prompt: 'A força de atrito entre duas superfícies em contato surge devido a:',
+    options: [
+      { id: 'a', text: 'Irregularidades microscópicas entre as superfícies, que se opõem ao deslizamento relativo entre elas' },
+      { id: 'b', text: 'Uma força de origem exclusivamente gravitacional' },
+      { id: 'c', text: 'Campos magnéticos entre as superfícies' },
+      { id: 'd', text: 'Cargas elétricas acumuladas nas superfícies' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A força de atrito surge das irregularidades microscópicas nas superfícies em contato, que se "engancham" e se opõem ao deslizamento relativo entre elas — sua intensidade depende da natureza dos materiais em contato (coeficiente de atrito) e da força normal entre as superfícies.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_leis_newton_8',
+    chapter: 'Força e seus Tipos',
+    topicId: 'fis_leis_newton',
+    subject: 'Física',
+    prompt: 'A força normal, exercida por uma superfície sobre um corpo apoiado nela, tem como direção:',
+    options: [
+      { id: 'a', text: 'Sempre perpendicular à superfície de contato' },
+      { id: 'b', text: 'Sempre paralela à superfície de contato' },
+      { id: 'c', text: 'Sempre na direção vertical, independentemente da inclinação da superfície' },
+      { id: 'd', text: 'Aleatória, sem relação com a superfície' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A força normal é sempre perpendicular à superfície de contato entre os dois corpos, independentemente da orientação dessa superfície — em um plano inclinado, por exemplo, a normal não é vertical, mas sim perpendicular ao próprio plano inclinado.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_fis_leis_newton_9',
+    chapter: 'Resultante de um Sistema de Forças',
+    topicId: 'fis_leis_newton',
+    subject: 'Física',
+    prompt: 'Segundo a Segunda Lei de Newton, a força resultante que atua sobre um corpo é dada por:',
+    options: [
+      { id: 'a', text: 'FR = m/a' },
+      { id: 'b', text: 'FR = m × a' },
+      { id: 'c', text: 'FR = m + a' },
+      { id: 'd', text: 'FR = a/m' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A Segunda Lei de Newton estabelece que a força resultante sobre um corpo é o produto de sua massa pela aceleração que ela produz: FR = m×a.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_fis_leis_newton_10',
+    chapter: 'Resultante de um Sistema de Forças',
+    topicId: 'fis_leis_newton',
+    subject: 'Física',
+    prompt: 'Duas forças de 30 N e 40 N atuam perpendicularmente sobre um mesmo ponto. Qual é o módulo da força resultante?',
+    options: [
+      { id: 'a', text: '10 N' },
+      { id: 'b', text: '35 N' },
+      { id: 'c', text: '50 N' },
+      { id: 'd', text: '70 N' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'Como as forças são perpendiculares, a resultante é dada pelo Teorema de Pitágoras: FR = √(30² + 40²) = √(900+1600) = √2500 = 50 N.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_leis_newton_11',
+    chapter: 'Resultante de um Sistema de Forças',
+    topicId: 'fis_leis_newton',
+    subject: 'Física',
+    prompt: 'Um corpo de 5 kg está em equilíbrio (resultante das forças igual a zero) sobre uma superfície horizontal. Isso significa que:',
+    options: [
+      { id: 'a', text: 'Não existe nenhuma força atuando sobre o corpo' },
+      { id: 'b', text: 'A soma vetorial de todas as forças que atuam sobre o corpo é nula, mesmo que existam forças individuais não nulas (como peso e normal)' },
+      { id: 'c', text: 'O corpo necessariamente não possui massa' },
+      { id: 'd', text: 'O corpo está necessariamente acelerando' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'O equilíbrio (resultante nula) não significa ausência de forças, mas sim que a soma vetorial de todas as forças que atuam sobre o corpo é zero — no caso de um corpo parado sobre uma superfície horizontal, por exemplo, o peso e a força normal têm mesma intensidade e sentidos opostos, cancelando-se mutuamente.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_leis_newton_12',
+    chapter: 'A Força de Contato',
+    topicId: 'fis_leis_newton',
+    subject: 'Física',
+    prompt: 'Dois blocos, A (3 kg) e B (2 kg), estão em contato e são empurrados juntos por uma força horizontal de 20 N aplicada em A. Qual é a força de contato que A exerce sobre B?',
+    options: [
+      { id: 'a', text: '4 N' },
+      { id: 'b', text: '8 N' },
+      { id: 'c', text: '12 N' },
+      { id: 'd', text: '20 N' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A aceleração do sistema é a = F/(mA+mB) = 20/5 = 4 m/s². A força de contato sobre B (que só recebe essa força) é FB = mB×a = 2×4 = 8 N.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_fis_leis_newton_13',
+    chapter: 'Plano Inclinado',
+    topicId: 'fis_leis_newton',
+    subject: 'Física',
+    prompt: 'Em um plano inclinado sem atrito, a componente do peso que acelera o corpo ao longo do plano (na direção do movimento) é dada por:',
+    options: [
+      { id: 'a', text: 'P × sen(θ), onde θ é o ângulo de inclinação do plano' },
+      { id: 'b', text: 'P × cos(θ)' },
+      { id: 'c', text: 'P, o peso total, sem decomposição' },
+      { id: 'd', text: 'A força normal, exclusivamente' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'No plano inclinado, o peso é decomposto em duas componentes: uma paralela ao plano (P×sen θ, que acelera o corpo ao longo da rampa) e outra perpendicular ao plano (P×cos θ, equilibrada pela força normal).',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_leis_newton_14',
+    chapter: 'Plano Inclinado',
+    topicId: 'fis_leis_newton',
+    subject: 'Física',
+    prompt: 'Um bloco desliza sem atrito por um plano inclinado de 30° com a horizontal. Usando g = 10 m/s² e sen(30°) = 0,5, qual é a aceleração do bloco ao longo do plano?',
+    options: [
+      { id: 'a', text: '2,5 m/s²' },
+      { id: 'b', text: '5 m/s²' },
+      { id: 'c', text: '8,7 m/s²' },
+      { id: 'd', text: '10 m/s²' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Sem atrito, a aceleração ao longo do plano é a = g×sen(θ) = 10×0,5 = 5 m/s².',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_leis_newton_15',
+    chapter: 'Plano Inclinado',
+    topicId: 'fis_leis_newton',
+    subject: 'Física',
+    prompt: 'Em um plano inclinado com atrito, para que um bloco permaneça em repouso (não deslize), é necessário que:',
+    options: [
+      { id: 'a', text: 'A componente do peso paralela ao plano seja menor ou igual à força de atrito estático máxima' },
+      { id: 'b', text: 'Não exista nenhuma força de atrito atuando' },
+      { id: 'c', text: 'A força normal seja nula' },
+      { id: 'd', text: 'O ângulo de inclinação seja sempre maior que 90°' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Para que o bloco permaneça em repouso em um plano inclinado com atrito, a força de atrito estático (que pode variar até um valor máximo) deve conseguir equilibrar a componente do peso paralela ao plano — se essa componente exceder o atrito estático máximo, o bloco começa a deslizar.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_fis_leis_newton_16',
+    chapter: 'Sistema de Corpos Interagindo e os Elementos Transmissores de Força',
+    topicId: 'fis_leis_newton',
+    subject: 'Física',
+    prompt: 'Dois blocos, A (4 kg) e B (6 kg), estão conectados por um fio ideal (inextensível e de massa desprezível) sobre uma superfície horizontal sem atrito. Uma força de 20 N é aplicada em A, puxando o sistema. Qual é a tração no fio que conecta os blocos?',
+    options: [
+      { id: 'a', text: '8 N' },
+      { id: 'b', text: '12 N' },
+      { id: 'c', text: '16 N' },
+      { id: 'd', text: '20 N' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A aceleração do sistema é a = F/(mA+mB) = 20/10 = 2 m/s². Como o fio é inextensível, os dois blocos têm a mesma aceleração. A tração é a força que puxa apenas o bloco B: T = mB×a = 6×2 = 12 N.',
+    difficulty: 'hard'
+  },
   // Física — Calorimetria
   {
     id: 'q_fis_calorimetria_1',
@@ -4639,6 +5199,70 @@ export const mockQuestions: Question[] = [
     ],
     correctOptionId: 'b',
     explanation: 'O calor perdido pelo metal é igual ao ganho pela água: 200×0,2×(100-Te) = 300×1×(Te-20). Resolvendo: 4000-40Te = 300Te-6000 → 10000 = 340Te → Te ≈ 29,4°C.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_fis_calorimetria_5',
+    chapter: 'Temperatura, Calor e seus Mecanismos de Transferência',
+    topicId: 'fis_calorimetria',
+    subject: 'Física',
+    prompt: 'A propagação de calor por condução ocorre principalmente:',
+    options: [
+      { id: 'a', text: 'Em sólidos, através da transferência de energia entre partículas vizinhas, sem transporte de matéria' },
+      { id: 'b', text: 'Apenas no vácuo, sem necessidade de meio material' },
+      { id: 'c', text: 'Exclusivamente através de ondas eletromagnéticas' },
+      { id: 'd', text: 'Apenas em líquidos, nunca em sólidos' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A condução térmica ocorre principalmente em sólidos (embora também exista em fluidos), por meio da transferência de energia vibracional entre partículas vizinhas de um material, sem que haja transporte efetivo de matéria — diferente da convecção (movimento de fluidos) e da irradiação (ondas eletromagnéticas, que dispensam meio material).',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_calorimetria_6',
+    chapter: 'Dilatação ou Contração Térmica dos Sólidos e Líquidos',
+    topicId: 'fis_calorimetria',
+    subject: 'Física',
+    prompt: 'A dilatação linear de uma barra sólida ao ser aquecida é calculada pela fórmula ΔL = L0 × α × ΔT. Nessa fórmula, α representa:',
+    options: [
+      { id: 'a', text: 'O coeficiente de dilatação linear do material, uma propriedade específica de cada substância' },
+      { id: 'b', text: 'A temperatura inicial da barra' },
+      { id: 'c', text: 'O comprimento final da barra' },
+      { id: 'd', text: 'A variação de temperatura sofrida pela barra' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O coeficiente de dilatação linear (α) é uma propriedade característica de cada material, que indica o quanto ele se expande (ou contrai) por unidade de comprimento para cada grau de variação de temperatura — materiais diferentes (aço, alumínio, vidro) têm coeficientes de dilatação diferentes.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_calorimetria_7',
+    chapter: 'Dilatação ou Contração Térmica dos Sólidos e Líquidos',
+    topicId: 'fis_calorimetria',
+    subject: 'Física',
+    prompt: 'Uma barra de metal com 2 m de comprimento a 20°C tem coeficiente de dilatação linear de 0,00002 °C⁻¹. Qual será seu comprimento aproximado ao ser aquecida a 120°C?',
+    options: [
+      { id: 'a', text: '2,002 m' },
+      { id: 'b', text: '2,004 m' },
+      { id: 'c', text: '2,04 m' },
+      { id: 'd', text: '2,4 m' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'ΔL = L0×α×ΔT = 2×0,00002×100 = 0,004 m. Novo comprimento = 2 + 0,004 = 2,004 m.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_fis_calorimetria_8',
+    chapter: 'Dilatação ou Contração Térmica dos Sólidos e Líquidos',
+    topicId: 'fis_calorimetria',
+    subject: 'Física',
+    prompt: 'A água apresenta um comportamento anômalo de dilatação entre 0°C e 4°C: ao ser aquecida nesse intervalo específico, ela:',
+    options: [
+      { id: 'a', text: 'Se contrai (diminui de volume), ao invés de se dilatar' },
+      { id: 'b', text: 'Se dilata normalmente, como a maioria das substâncias' },
+      { id: 'c', text: 'Permanece com volume constante, sem qualquer variação' },
+      { id: 'd', text: 'Evapora instantaneamente' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Entre 0°C e 4°C, a água apresenta dilatação anômala: em vez de se expandir ao ser aquecida (como a maioria das substâncias), ela se contrai, atingindo densidade máxima a 4°C. Esse comportamento é fundamental ecologicamente, pois faz com que o gelo (menos denso) flutue e a água mais densa (a 4°C) permaneça no fundo de lagos congelados, protegendo a vida aquática.',
     difficulty: 'hard'
   },
   // Física — Termodinâmica dos Gases
@@ -4722,6 +5346,118 @@ export const mockQuestions: Question[] = [
     explanation: 'Em Kelvin, a temperatura inicial é 273 K e a final é 273+273 = 546 K, ou seja, dobra. A pressão constante, volume e temperatura absoluta são diretamente proporcionais (Lei de Charles): o volume também dobra, para 44,8 L.',
     difficulty: 'hard'
   },
+  {
+    id: 'q_fis_termodinamica_gases_6',
+    chapter: 'Trabalho da Força de Pressão do Gás',
+    topicId: 'fis_termodinamica_gases',
+    subject: 'Física',
+    prompt: 'Em uma transformação isobárica (pressão constante), o trabalho realizado por um gás é calculado por:',
+    options: [
+      { id: 'a', text: 'W = P × ΔV' },
+      { id: 'b', text: 'W = ΔP × V' },
+      { id: 'c', text: 'W = P / ΔV' },
+      { id: 'd', text: 'W = P + V' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Em uma transformação isobárica, como a pressão P é constante, o trabalho realizado pelo gás é simplesmente W = P×ΔV, onde ΔV é a variação de volume.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_termodinamica_gases_7',
+    chapter: 'Trabalho da Força de Pressão do Gás',
+    topicId: 'fis_termodinamica_gases',
+    subject: 'Física',
+    prompt: 'Um gás se expande isobaricamente sob pressão de 2×10⁵ Pa, com volume variando de 0,01 m³ para 0,03 m³. Qual é o trabalho realizado pelo gás?',
+    options: [
+      { id: 'a', text: '400 J' },
+      { id: 'b', text: '2.000 J' },
+      { id: 'c', text: '4.000 J' },
+      { id: 'd', text: '6.000 J' }
+    ],
+    correctOptionId: 'c',
+    explanation: 'W = P×ΔV = 2×10⁵ × (0,03-0,01) = 2×10⁵ × 0,02 = 4.000 J.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_termodinamica_gases_8',
+    chapter: 'Primeira Lei da Termodinâmica',
+    topicId: 'fis_termodinamica_gases',
+    subject: 'Física',
+    prompt: 'Em uma transformação isotérmica (temperatura constante) de um gás ideal, a variação da energia interna (ΔU) é:',
+    options: [
+      { id: 'a', text: 'Sempre nula, já que a energia interna de um gás ideal depende apenas da temperatura' },
+      { id: 'b', text: 'Sempre positiva, independentemente da transformação' },
+      { id: 'c', text: 'Sempre igual ao trabalho realizado, com o mesmo sinal' },
+      { id: 'd', text: 'Impossível de determinar em transformações isotérmicas' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Para um gás ideal, a energia interna depende exclusivamente da temperatura absoluta. Em uma transformação isotérmica, a temperatura não varia, logo ΔU = 0 — pela Primeira Lei da Termodinâmica, isso implica que todo o calor recebido é convertido integralmente em trabalho realizado pelo gás (Q = W).',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_termodinamica_gases_9',
+    chapter: 'Primeira Lei da Termodinâmica Aplicada a Algumas Transformações Particulares',
+    topicId: 'fis_termodinamica_gases',
+    subject: 'Física',
+    prompt: 'Em uma transformação isocórica (volume constante), o trabalho realizado pelo gás é sempre:',
+    options: [
+      { id: 'a', text: 'Nulo, já que não há variação de volume (W = P×ΔV = 0)' },
+      { id: 'b', text: 'Máximo, sempre maior que em outras transformações' },
+      { id: 'c', text: 'Sempre negativo' },
+      { id: 'd', text: 'Igual à variação de energia interna, com sinal trocado' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Na transformação isocórica (a volume constante), como ΔV = 0, o trabalho realizado pelo gás é sempre nulo (W = P×ΔV = 0). Pela Primeira Lei da Termodinâmica, isso significa que todo o calor trocado é convertido integralmente em variação de energia interna (Q = ΔU).',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_termodinamica_gases_10',
+    chapter: 'Máquinas Térmicas e Ciclo de Carnot',
+    topicId: 'fis_termodinamica_gases',
+    subject: 'Física',
+    prompt: 'Uma máquina térmica converte calor em trabalho operando em ciclos entre duas fontes de calor. Pela Segunda Lei da Termodinâmica, o rendimento dessa máquina:',
+    options: [
+      { id: 'a', text: 'Nunca pode ser de 100%, já que sempre há rejeição de parte do calor para a fonte fria' },
+      { id: 'b', text: 'Pode chegar a 100% em máquinas reais bem construídas' },
+      { id: 'c', text: 'É sempre igual a 0%' },
+      { id: 'd', text: 'Independe das temperaturas das fontes quente e fria' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Pela Segunda Lei da Termodinâmica, nenhuma máquina térmica pode converter 100% do calor recebido em trabalho — é necessário sempre rejeitar uma parte do calor para uma fonte fria, limitando o rendimento a um valor sempre menor que 100%, mesmo em máquinas ideais (como a máquina de Carnot).',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_termodinamica_gases_11',
+    chapter: 'Máquinas Térmicas e Ciclo de Carnot',
+    topicId: 'fis_termodinamica_gases',
+    subject: 'Física',
+    prompt: 'O Ciclo de Carnot é um ciclo termodinâmico teórico que representa o maior rendimento possível para uma máquina térmica operando entre duas temperaturas fixas. Esse rendimento máximo depende exclusivamente de:',
+    options: [
+      { id: 'a', text: 'Das temperaturas absolutas das fontes quente e fria' },
+      { id: 'b', text: 'Do tipo específico de gás utilizado na máquina' },
+      { id: 'c', text: 'Do material usado na construção da máquina' },
+      { id: 'd', text: 'Da pressão inicial do sistema, exclusivamente' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O rendimento do Ciclo de Carnot, ηCarnot = 1 - Tfria/Tquente (com temperaturas em Kelvin), depende exclusivamente das temperaturas absolutas das fontes quente e fria — sendo o maior rendimento teoricamente possível para qualquer máquina térmica operando entre essas duas temperaturas, independentemente do material ou do gás utilizado.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_fis_termodinamica_gases_12',
+    chapter: 'Máquinas Térmicas e Ciclo de Carnot',
+    topicId: 'fis_termodinamica_gases',
+    subject: 'Física',
+    prompt: 'Uma máquina de Carnot opera entre uma fonte quente a 600 K e uma fonte fria a 300 K. Qual é o rendimento máximo teórico dessa máquina?',
+    options: [
+      { id: 'a', text: '25%' },
+      { id: 'b', text: '50%' },
+      { id: 'c', text: '75%' },
+      { id: 'd', text: '100%' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'ηCarnot = 1 - Tfria/Tquente = 1 - 300/600 = 1 - 0,5 = 0,5, ou seja, 50%.',
+    difficulty: 'medium'
+  },
   // Física — Óptica Geométrica
   {
     id: 'q_fis_optica_geometrica_1',
@@ -4801,6 +5537,118 @@ export const mockQuestions: Question[] = [
     ],
     correctOptionId: 'b',
     explanation: 'Pela Lei da Reflexão, o ângulo de incidência é sempre igual ao ângulo de reflexão, ambos medidos em relação à normal: 40°.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_fis_optica_geometrica_6',
+    chapter: 'Fundamentos da Óptica Geométrica',
+    topicId: 'fis_optica_geometrica',
+    subject: 'Física',
+    prompt: 'A óptica geométrica se baseia no princípio da propagação retilínea da luz, que afirma que:',
+    options: [
+      { id: 'a', text: 'Em um meio homogêneo e transparente, a luz se propaga em linha reta' },
+      { id: 'b', text: 'A luz sempre se propaga em trajetórias curvas, mesmo em meios homogêneos' },
+      { id: 'c', text: 'A luz não se propaga, permanecendo estática' },
+      { id: 'd', text: 'A luz se propaga apenas em meios opacos' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O princípio da propagação retilínea da luz, base da óptica geométrica, estabelece que, em um meio homogêneo e transparente, a luz se propaga em linha reta — esse princípio explica fenômenos como a formação de sombras e o funcionamento da câmara escura.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_fis_optica_geometrica_7',
+    chapter: 'Fundamentos da Óptica Geométrica',
+    topicId: 'fis_optica_geometrica',
+    subject: 'Física',
+    prompt: 'O princípio da reversibilidade dos raios de luz afirma que:',
+    options: [
+      { id: 'a', text: 'A trajetória seguida pela luz é a mesma, independentemente do sentido em que ela se propaga' },
+      { id: 'b', text: 'A luz nunca pode percorrer o mesmo caminho em sentido contrário' },
+      { id: 'c', text: 'A velocidade da luz aumenta ao inverter seu sentido de propagação' },
+      { id: 'd', text: 'A luz muda de cor ao ser revertida' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O princípio da reversibilidade dos raios de luz estabelece que, se invertermos o sentido de propagação de um raio de luz, ele percorrerá exatamente a mesma trajetória (em sentido contrário) — válido tanto para reflexão quanto para refração.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_optica_geometrica_8',
+    chapter: 'Reflexão em Superfícies Esféricas',
+    topicId: 'fis_optica_geometrica',
+    subject: 'Física',
+    prompt: 'Um espelho côncavo (superfície esférica refletora, com a face refletora voltada para o centro de curvatura) é utilizado para:',
+    options: [
+      { id: 'a', text: 'Convergir os raios de luz refletidos, podendo formar imagens reais ou virtuais, dependendo da posição do objeto' },
+      { id: 'b', text: 'Sempre divergir os raios de luz refletidos, formando apenas imagens virtuais' },
+      { id: 'c', text: 'Nunca formar nenhuma imagem' },
+      { id: 'd', text: 'Apenas refratar a luz, sem refleti-la' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O espelho côncavo é convergente: dependendo da posição do objeto em relação ao foco e ao centro de curvatura, pode formar imagens reais (invertidas, quando o objeto está além do foco) ou virtuais (direitas e ampliadas, quando o objeto está entre o foco e o espelho) — diferente do espelho convexo, sempre divergente.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_optica_geometrica_9',
+    chapter: 'Refração: Fundamentos, Leis e Aplicações',
+    topicId: 'fis_optica_geometrica',
+    subject: 'Física',
+    prompt: 'A refração da luz, fenômeno que ocorre ao passar de um meio para outro com índices de refração diferentes, causa uma mudança em qual grandeza física da onda luminosa?',
+    options: [
+      { id: 'a', text: 'A velocidade de propagação e, geralmente, a direção do raio de luz' },
+      { id: 'b', text: 'A frequência da onda, exclusivamente' },
+      { id: 'c', text: 'A cor da luz, sempre' },
+      { id: 'd', text: 'Nenhuma grandeza, a luz permanece completamente inalterada' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Ao passar de um meio para outro com índice de refração diferente, a velocidade de propagação da luz muda (e, consequentemente, seu comprimento de onda), enquanto a frequência permanece constante. Essa mudança de velocidade, quando a incidência não é perpendicular à superfície, também causa um desvio na direção do raio de luz (refração propriamente dita).',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_optica_geometrica_10',
+    chapter: 'Lentes Esféricas: Estudo Gráfico',
+    topicId: 'fis_optica_geometrica',
+    subject: 'Física',
+    prompt: 'Uma lente convergente, ao receber um raio de luz paralelo ao eixo principal, o refrata de modo que ele passe:',
+    options: [
+      { id: 'a', text: 'Pelo foco imagem da lente' },
+      { id: 'b', text: 'Paralelo ao eixo principal, sem qualquer desvio' },
+      { id: 'c', text: 'Perpendicularmente ao eixo principal' },
+      { id: 'd', text: 'Sempre de volta na direção de onde veio' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Uma das propriedades fundamentais usadas na construção gráfica de imagens em lentes convergentes é que todo raio paralelo ao eixo principal, ao ser refratado pela lente, passa pelo foco imagem — uma das retas notáveis usadas para traçar imagens graficamente.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_optica_geometrica_11',
+    chapter: 'Lentes Esféricas: Estudo Gráfico',
+    topicId: 'fis_optica_geometrica',
+    subject: 'Física',
+    prompt: 'Uma lente divergente, ao formar imagens de objetos reais, sempre produz imagens:',
+    options: [
+      { id: 'a', text: 'Virtuais, direitas e reduzidas' },
+      { id: 'b', text: 'Reais, invertidas e ampliadas' },
+      { id: 'c', text: 'Reais, sempre do mesmo tamanho do objeto' },
+      { id: 'd', text: 'Virtuais, invertidas e ampliadas' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Uma lente divergente, para objetos reais, sempre produz imagens virtuais (do mesmo lado do objeto), direitas (não invertidas) e reduzidas (menores que o objeto) — ao contrário das lentes convergentes, cujo tipo de imagem varia conforme a posição do objeto.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_optica_geometrica_12',
+    chapter: 'Reflexão em Superfícies Planas',
+    topicId: 'fis_optica_geometrica',
+    subject: 'Física',
+    prompt: 'A imagem formada por um espelho plano, de um objeto real, é sempre:',
+    options: [
+      { id: 'a', text: 'Virtual, direita e do mesmo tamanho do objeto' },
+      { id: 'b', text: 'Real, invertida e ampliada' },
+      { id: 'c', text: 'Virtual, invertida e reduzida' },
+      { id: 'd', text: 'Real, direita e do mesmo tamanho do objeto' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O espelho plano sempre forma, para um objeto real, uma imagem virtual (atrás do espelho, não pode ser projetada em um anteparo), direita (não invertida verticalmente) e do mesmo tamanho do objeto, situada à mesma distância do espelho que o objeto (mas do outro lado).',
     difficulty: 'easy'
   },
   // Física — Óptica Instrumental e da Visão
@@ -4884,6 +5732,102 @@ export const mockQuestions: Question[] = [
     explanation: 'A presbiopia (ou "vista cansada") é a perda progressiva da capacidade de acomodação visual do cristalino com o envelhecimento, dificultando o foco em objetos próximos.',
     difficulty: 'medium'
   },
+  {
+    id: 'q_fis_optica_instrumental_6',
+    chapter: 'Estudo Analítico das Lentes Esféricas',
+    topicId: 'fis_optica_instrumental',
+    subject: 'Física',
+    prompt: 'A equação de Gauss para lentes esféricas relaciona a distância focal (f), a distância do objeto (p) e a distância da imagem (p\') pela fórmula:',
+    options: [
+      { id: 'a', text: '1/f = 1/p + 1/p\'' },
+      { id: 'b', text: 'f = p + p\'' },
+      { id: 'c', text: 'f = p × p\'' },
+      { id: 'd', text: '1/f = p - p\'' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A equação de Gauss (equação dos pontos conjugados) para lentes esféricas é 1/f = 1/p + 1/p\', permitindo calcular a posição da imagem (p\') conhecendo a distância focal (f) e a posição do objeto (p), ou vice-versa.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_optica_instrumental_7',
+    chapter: 'Estudo Analítico das Lentes Esféricas',
+    topicId: 'fis_optica_instrumental',
+    subject: 'Física',
+    prompt: 'Um objeto é colocado a 30 cm de uma lente convergente de distância focal 10 cm. Usando a equação de Gauss, a que distância da lente se forma a imagem?',
+    options: [
+      { id: 'a', text: '7,5 cm' },
+      { id: 'b', text: '10 cm' },
+      { id: 'c', text: '15 cm' },
+      { id: 'd', text: '20 cm' }
+    ],
+    correctOptionId: 'c',
+    explanation: '1/f = 1/p + 1/p\' → 1/10 = 1/30 + 1/p\' → 1/p\' = 1/10 - 1/30 = 3/30 - 1/30 = 2/30 = 1/15 → p\' = 15 cm.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_fis_optica_instrumental_8',
+    chapter: 'Estudo Analítico das Lentes Esféricas',
+    topicId: 'fis_optica_instrumental',
+    subject: 'Física',
+    prompt: 'O aumento linear transversal (A) de uma imagem formada por uma lente, definido como a razão entre o tamanho da imagem e o tamanho do objeto, também pode ser calculado, em módulo, por:',
+    options: [
+      { id: 'a', text: 'A = p\'/p, a razão entre a distância da imagem e a distância do objeto' },
+      { id: 'b', text: 'A = f, a distância focal da lente' },
+      { id: 'c', text: 'A = p + p\'' },
+      { id: 'd', text: 'A = 1/f, o inverso da distância focal' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O aumento linear transversal pode ser calculado tanto pela razão entre os tamanhos da imagem e do objeto quanto, de forma equivalente, pela razão entre as distâncias correspondentes: A = -p\'/p (o sinal indica se a imagem é direita ou invertida em relação ao objeto).',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_optica_instrumental_9',
+    chapter: 'Equação do Fabricante de Lentes e Associação de Lentes',
+    topicId: 'fis_optica_instrumental',
+    subject: 'Física',
+    prompt: 'A Equação dos Fabricantes de Lentes relaciona a distância focal (f) de uma lente com o índice de refração do material e os raios de curvatura de suas faces. Essa equação é útil principalmente para:',
+    options: [
+      { id: 'a', text: 'Determinar a distância focal de uma lente a partir de suas características físicas de fabricação (material e formato das faces)' },
+      { id: 'b', text: 'Calcular exclusivamente a posição de objetos, sem qualquer relação com a lente em si' },
+      { id: 'c', text: 'Determinar apenas a cor da luz que atravessa a lente' },
+      { id: 'd', text: 'Substituir completamente a equação de Gauss em qualquer situação' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A Equação dos Fabricantes de Lentes permite calcular a distância focal de uma lente a partir de suas propriedades físicas de construção: o índice de refração do material da lente em relação ao meio externo e os raios de curvatura de suas duas faces — essencial no processo de design e fabricação de lentes ópticas.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_optica_instrumental_10',
+    chapter: 'Equação do Fabricante de Lentes e Associação de Lentes',
+    topicId: 'fis_optica_instrumental',
+    subject: 'Física',
+    prompt: 'Ao associar duas lentes justapostas (uma exatamente encostada na outra), a vergência (grau, medido em dioptrias) do sistema resultante é dada por:',
+    options: [
+      { id: 'a', text: 'A soma algébrica das vergências individuais de cada lente' },
+      { id: 'b', text: 'A multiplicação das vergências individuais' },
+      { id: 'c', text: 'Sempre igual à vergência da lente mais fraca' },
+      { id: 'd', text: 'Sempre igual a zero, independentemente das lentes' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Quando duas lentes são justapostas (associação de lentes coaxiais e encostadas), a vergência do sistema equivalente é a soma algébrica das vergências individuais: Vtotal = V1 + V2 — é esse princípio que permite corrigir a visão combinando lentes de diferentes graus, como em óculos multifocais.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_fis_optica_instrumental_11',
+    chapter: 'Equação do Fabricante de Lentes e Associação de Lentes',
+    topicId: 'fis_optica_instrumental',
+    subject: 'Física',
+    prompt: 'Um óculos de grau +2,0 di (dioptrias) possui uma vergência positiva, indicando que a lente é:',
+    options: [
+      { id: 'a', text: 'Convergente' },
+      { id: 'b', text: 'Divergente' },
+      { id: 'c', text: 'Plana, sem qualquer curvatura' },
+      { id: 'd', text: 'Necessariamente feita de vidro comum, sem tratamento especial' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Por convenção, a vergência (grau) de uma lente convergente é sempre positiva, enquanto a de uma lente divergente é sempre negativa. Um grau de +2,0 di indica uma lente convergente, usada tipicamente para corrigir a hipermetropia.',
+    difficulty: 'medium'
+  },
   // Física — Ondulatória
   {
     id: 'q_fis_ondulatoria_1',
@@ -4964,6 +5908,406 @@ export const mockQuestions: Question[] = [
     correctOptionId: 'c',
     explanation: 'A frequência de uma onda é determinada pela fonte que a gera, permanecendo constante ao mudar de meio. Já a velocidade de propagação e o comprimento de onda mudam, pois dependem das propriedades do meio.',
     difficulty: 'hard'
+  },
+  {
+    id: 'q_fis_ondulatoria_6',
+    chapter: 'Ondulatória: Ondas Eletromagnéticas',
+    topicId: 'fis_ondulatoria',
+    subject: 'Física',
+    prompt: 'Diferentemente das ondas mecânicas (como o som), as ondas eletromagnéticas (como a luz) têm como característica fundamental:',
+    options: [
+      { id: 'a', text: 'Não precisar de um meio material para se propagar, podendo viajar até mesmo no vácuo' },
+      { id: 'b', text: 'Necessitar sempre de um meio material denso para se propagar' },
+      { id: 'c', text: 'Terem velocidade de propagação sempre menor que a do som' },
+      { id: 'd', text: 'Não transportarem nenhuma energia' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Ondas eletromagnéticas resultam da oscilação combinada de campos elétrico e magnético perpendiculares entre si, e não dependem de um meio material para se propagar — podem viajar até mesmo no vácuo (como a luz do Sol que atravessa o espaço), diferente das ondas mecânicas, que exigem um meio material.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_ondulatoria_7',
+    chapter: 'Ondulatória: Ondas Eletromagnéticas',
+    topicId: 'fis_ondulatoria',
+    subject: 'Física',
+    prompt: 'O espectro eletromagnético organiza as ondas eletromagnéticas (rádio, micro-ondas, infravermelho, luz visível, ultravioleta, raios X, raios gama) principalmente em ordem de:',
+    options: [
+      { id: 'a', text: 'Frequência (ou, de forma inversa, comprimento de onda)' },
+      { id: 'b', text: 'Cor visível ao olho humano, exclusivamente' },
+      { id: 'c', text: 'Velocidade de propagação no vácuo, que varia entre os tipos' },
+      { id: 'd', text: 'Massa das partículas que compõem a onda' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O espectro eletromagnético organiza os diferentes tipos de radiação eletromagnética por frequência crescente (e comprimento de onda decrescente) — das ondas de rádio (baixa frequência, grande comprimento de onda) até os raios gama (altíssima frequência, comprimento de onda minúsculo). Todas viajam à mesma velocidade no vácuo (a velocidade da luz).',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_ondulatoria_8',
+    chapter: 'Ondulatória: Ondas Eletromagnéticas',
+    topicId: 'fis_ondulatoria',
+    subject: 'Física',
+    prompt: 'A luz visível ocupa uma faixa muito estreita do espectro eletromagnético, situada entre:',
+    options: [
+      { id: 'a', text: 'A radiação infravermelha e a radiação ultravioleta' },
+      { id: 'b', text: 'As ondas de rádio e as micro-ondas' },
+      { id: 'c', text: 'Os raios X e os raios gama' },
+      { id: 'd', text: 'As micro-ondas e o infravermelho' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A luz visível (a única faixa do espectro que o olho humano detecta diretamente) ocupa uma estreita região entre a radiação infravermelha (frequência menor, usada em controles remotos e sensores de calor) e a radiação ultravioleta (frequência maior, responsável por queimaduras solares).',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_fis_ondulatoria_9',
+    chapter: 'Intensidade Sonora',
+    topicId: 'fis_ondulatoria',
+    subject: 'Física',
+    prompt: 'A intensidade sonora de uma onda é definida fisicamente como:',
+    options: [
+      { id: 'a', text: 'A potência sonora transmitida por unidade de área perpendicular à direção de propagação' },
+      { id: 'b', text: 'A frequência da onda sonora' },
+      { id: 'c', text: 'O comprimento de onda do som' },
+      { id: 'd', text: 'A velocidade de propagação do som no meio' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A intensidade sonora (I) é definida como a potência da onda sonora que atravessa uma unidade de área perpendicular à direção de propagação: I = P/A, medida em W/m².',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_ondulatoria_10',
+    chapter: 'Intensidade Sonora',
+    topicId: 'fis_ondulatoria',
+    subject: 'Física',
+    prompt: 'O nível sonoro, medido em decibéis (dB), é uma escala logarítmica porque:',
+    options: [
+      { id: 'a', text: 'A percepção humana da intensidade sonora varia em uma escala aproximadamente logarítmica, e não linear, em relação à intensidade física real' },
+      { id: 'b', text: 'A intensidade sonora real do som já é medida diretamente em decibéis' },
+      { id: 'c', text: 'É apenas uma convenção arbitrária, sem relação com a percepção humana' },
+      { id: 'd', text: 'O som não pode ser medido de nenhuma outra forma' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A escala logarítmica em decibéis reflete o fato de que a percepção humana da intensidade sonora (e de outras sensações, como brilho e dor) segue aproximadamente uma relação logarítmica com o estímulo físico real (a Lei de Weber-Fechner) — permitindo representar de forma mais compacta a enorme faixa de intensidades sonoras que o ouvido humano detecta.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_fis_ondulatoria_11',
+    chapter: 'Intensidade Sonora',
+    topicId: 'fis_ondulatoria',
+    subject: 'Física',
+    prompt: 'À medida que a distância de uma fonte sonora pontual aumenta, a intensidade sonora recebida:',
+    options: [
+      { id: 'a', text: 'Diminui, sendo inversamente proporcional ao quadrado da distância' },
+      { id: 'b', text: 'Aumenta com a distância' },
+      { id: 'c', text: 'Permanece sempre constante, independentemente da distância' },
+      { id: 'd', text: 'É diretamente proporcional à distância' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Para uma fonte sonora pontual, a energia sonora se espalha por uma superfície esférica cada vez maior à medida que a distância aumenta, fazendo a intensidade diminuir com o quadrado da distância (I ∝ 1/d²) — por isso um som fica perceptivelmente mais fraco quanto mais longe estamos da fonte.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_ondulatoria_12',
+    chapter: 'Reflexão, Eco, Reverberação e Refração de Ondas',
+    topicId: 'fis_ondulatoria',
+    subject: 'Física',
+    prompt: 'O eco, fenômeno acústico bem conhecido, ocorre quando:',
+    options: [
+      { id: 'a', text: 'O som refletido chega ao ouvinte com um atraso perceptível (geralmente maior que 0,1 s), sendo percebido como um som distinto e separado do som original' },
+      { id: 'b', text: 'O som refletido chega tão rapidamente que se funde com o som original, prolongando-o' },
+      { id: 'c', text: 'Não há nenhuma reflexão de som envolvida' },
+      { id: 'd', text: 'O som muda de frequência ao ser refletido' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O eco ocorre quando o som refletido por um obstáculo distante retorna ao ouvinte com um atraso perceptível (geralmente maior que cerca de 0,1 segundo em relação ao som direto), sendo percebido como um som distinto e separado — diferente da reverberação, em que o atraso é menor e os sons se sobrepõem, prolongando a sensação sonora.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_ondulatoria_13',
+    chapter: 'Reflexão, Eco, Reverberação e Refração de Ondas',
+    topicId: 'fis_ondulatoria',
+    subject: 'Física',
+    prompt: 'A reverberação, fenômeno comum em ambientes fechados como igrejas ou auditórios, se diferencia do eco porque:',
+    options: [
+      { id: 'a', text: 'O atraso entre o som direto e o som refletido é pequeno o suficiente para que os dois se sobreponham, prolongando a sensação sonora, sem serem percebidos como sons distintos' },
+      { id: 'b', text: 'Não envolve nenhuma reflexão sonora' },
+      { id: 'c', text: 'Sempre ocorre apenas em ambientes ao ar livre, nunca em espaços fechados' },
+      { id: 'd', text: 'É idêntica ao eco em todos os aspectos' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Na reverberação, o atraso entre o som original e suas múltiplas reflexões (nas paredes, teto e outros obstáculos de um ambiente fechado) é pequeno demais para ser percebido como sons distintos, mas suficiente para prolongar a sensação sonora — diferente do eco, em que o atraso é grande o bastante para produzir um som claramente separado e repetido.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_ondulatoria_14',
+    chapter: 'Reflexão, Eco, Reverberação e Refração de Ondas',
+    topicId: 'fis_ondulatoria',
+    subject: 'Física',
+    prompt: 'Ao passar de um meio para outro com propriedades diferentes, uma onda sonora sofre refração. Nesse processo, o que permanece constante e o que muda?',
+    options: [
+      { id: 'a', text: 'A frequência permanece constante; a velocidade de propagação e o comprimento de onda mudam' },
+      { id: 'b', text: 'A frequência muda; a velocidade permanece sempre constante' },
+      { id: 'c', text: 'Tanto a frequência quanto a velocidade permanecem sempre constantes' },
+      { id: 'd', text: 'Nenhuma grandeza muda ao atravessar meios diferentes' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Assim como ocorre na refração da luz, na refração do som a frequência é determinada pela fonte e permanece constante ao mudar de meio, enquanto a velocidade de propagação (que depende das propriedades do novo meio) muda, e consequentemente o comprimento de onda também se altera (já que v = f×λ).',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_ondulatoria_15',
+    chapter: 'Fenômenos Ondulatórios: Análise de Refração e Reflexão em Cordas',
+    topicId: 'fis_ondulatoria',
+    subject: 'Física',
+    prompt: 'Quando um pulso se propaga em uma corda e encontra uma extremidade fixa (presa rigidamente), o pulso refletido:',
+    options: [
+      { id: 'a', text: 'Se inverte (muda de fase em 180°) em relação ao pulso incidente' },
+      { id: 'b', text: 'Mantém exatamente a mesma orientação do pulso incidente, sem inversão' },
+      { id: 'c', text: 'Desaparece completamente, sem qualquer reflexão' },
+      { id: 'd', text: 'Dobra de amplitude, sem qualquer inversão' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Ao encontrar uma extremidade fixa, o pulso refletido se inverte (sofre uma defasagem de 180°) em relação ao pulso incidente — resultado da reação da extremidade fixa, que impede o deslocamento e "empurra" o pulso de volta invertido. Em uma extremidade livre, ao contrário, o pulso refletido mantém a mesma orientação (sem inversão).',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_fis_ondulatoria_16',
+    chapter: 'Fenômenos Ondulatórios: Análise de Refração e Reflexão em Cordas',
+    topicId: 'fis_ondulatoria',
+    subject: 'Física',
+    prompt: 'A velocidade de propagação de uma onda em uma corda esticada depende de:',
+    options: [
+      { id: 'a', text: 'Da tração na corda e de sua densidade linear (massa por unidade de comprimento)' },
+      { id: 'b', text: 'Apenas da frequência da onda que se propaga' },
+      { id: 'c', text: 'Apenas do comprimento total da corda' },
+      { id: 'd', text: 'Da cor da corda' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A velocidade de propagação de uma onda transversal em uma corda é dada por v = √(T/μ), onde T é a tração aplicada na corda e μ é a densidade linear (massa por unidade de comprimento) — quanto maior a tração, mais rápida a propagação; quanto maior a densidade linear, mais lenta.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_ondulatoria_17',
+    chapter: 'Fenômenos Ondulatórios: Análise de Refração e Reflexão em Cordas',
+    topicId: 'fis_ondulatoria',
+    subject: 'Física',
+    prompt: 'Ao passar de uma corda mais fina (menor densidade linear) para uma corda mais grossa (maior densidade linear), conectadas uma à outra, uma onda:',
+    options: [
+      { id: 'a', text: 'Diminui sua velocidade de propagação, já que a velocidade é inversamente relacionada à raiz quadrada da densidade linear' },
+      { id: 'b', text: 'Aumenta sua velocidade de propagação' },
+      { id: 'c', text: 'Mantém a mesma velocidade, independentemente da densidade' },
+      { id: 'd', text: 'Deixa de se propagar completamente' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Como v = √(T/μ) e a tração T é a mesma em toda a corda conectada (em equilíbrio), uma maior densidade linear (μ) resulta em menor velocidade de propagação — ao passar para a corda mais grossa (maior μ), a onda desacelera.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_fis_ondulatoria_18',
+    chapter: 'Fenômenos Ondulatórios: Difração, Polarização e Ressonância',
+    topicId: 'fis_ondulatoria',
+    subject: 'Física',
+    prompt: 'A polarização é um fenômeno ondulatório exclusivo de:',
+    options: [
+      { id: 'a', text: 'Ondas transversais, como a luz — não ocorre em ondas longitudinais, como o som' },
+      { id: 'b', text: 'Ondas longitudinais, exclusivamente' },
+      { id: 'c', text: 'Qualquer tipo de onda, sem exceção' },
+      { id: 'd', text: 'Apenas ondas mecânicas, nunca eletromagnéticas' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A polarização — restringir as oscilações de uma onda a um único plano — só é possível em ondas transversais (como a luz, cujas oscilações do campo elétrico e magnético são perpendiculares à direção de propagação). Ondas longitudinais, como o som (oscilações na mesma direção de propagação), não podem ser polarizadas.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_ondulatoria_19',
+    chapter: 'Interferência de Ondas: Análise Quantitativa, Aplicações e Batimento',
+    topicId: 'fis_ondulatoria',
+    subject: 'Física',
+    prompt: 'O fenômeno do batimento ocorre quando duas ondas sonoras de frequências próximas, mas não idênticas, se sobrepõem, produzindo:',
+    options: [
+      { id: 'a', text: 'Uma variação periódica e perceptível na intensidade (volume) do som resultante' },
+      { id: 'b', text: 'Um silêncio completo e permanente' },
+      { id: 'c', text: 'Uma terceira frequência, completamente independente das duas originais, sem qualquer variação de intensidade' },
+      { id: 'd', text: 'Nenhum efeito perceptível ao ouvido humano' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Quando duas ondas sonoras de frequências próximas (mas diferentes) se sobrepõem, elas alternam entre momentos de interferência construtiva (volume mais alto) e destrutiva (volume mais baixo), produzindo uma variação periódica perceptível na intensidade do som — o batimento, com frequência igual à diferença entre as duas frequências originais.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_fis_ondulatoria_20',
+    chapter: 'Interferência de Ondas: Análise Quantitativa, Aplicações e Batimento',
+    topicId: 'fis_ondulatoria',
+    subject: 'Física',
+    prompt: 'Duas ondas sonoras de 440 Hz e 444 Hz se sobrepõem. Qual é a frequência do batimento resultante?',
+    options: [
+      { id: 'a', text: '2 Hz' },
+      { id: 'b', text: '4 Hz' },
+      { id: 'c', text: '442 Hz' },
+      { id: 'd', text: '884 Hz' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A frequência do batimento é igual à diferença entre as duas frequências: |444 - 440| = 4 Hz.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_ondulatoria_21',
+    chapter: 'Interferência de Ondas: Análise Quantitativa, Aplicações e Batimento',
+    topicId: 'fis_ondulatoria',
+    subject: 'Física',
+    prompt: 'Para que ocorra interferência destrutiva total entre duas ondas de mesma frequência e amplitude, a diferença de fase entre elas deve ser de:',
+    options: [
+      { id: 'a', text: '180° (ou meio comprimento de onda de diferença no caminho percorrido)' },
+      { id: 'b', text: '0° (as ondas em fase)' },
+      { id: 'c', text: '90°' },
+      { id: 'd', text: '360°' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A interferência destrutiva total ocorre quando duas ondas de mesma frequência e amplitude estão em oposição de fase (diferença de fase de 180°, ou meio comprimento de onda de diferença de caminho) — nesse caso, a crista de uma onda coincide com o vale da outra, cancelando-se mutuamente.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_ondulatoria_22',
+    chapter: 'Um Caso Particular de Interferência: Onda Estacionária',
+    topicId: 'fis_ondulatoria',
+    subject: 'Física',
+    prompt: 'Uma onda estacionária é formada pela interferência entre:',
+    options: [
+      { id: 'a', text: 'Uma onda incidente e sua onda refletida, de mesma frequência e amplitude, propagando-se em sentidos opostos no mesmo meio' },
+      { id: 'b', text: 'Duas ondas de frequências completamente diferentes' },
+      { id: 'c', text: 'Apenas uma única onda, sem qualquer reflexão' },
+      { id: 'd', text: 'Ondas que se propagam sempre no mesmo sentido' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A onda estacionária resulta da superposição de uma onda incidente com sua onda refletida (de mesma frequência e amplitude), propagando-se em sentidos opostos no mesmo meio — essa interferência cria pontos fixos de amplitude máxima (ventres) e mínima/nula (nós), sem que a onda pareça se propagar visualmente.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_ondulatoria_23',
+    chapter: 'Um Caso Particular de Interferência: Onda Estacionária',
+    topicId: 'fis_ondulatoria',
+    subject: 'Física',
+    prompt: 'Em uma onda estacionária, os pontos chamados de "nós" são caracterizados por:',
+    options: [
+      { id: 'a', text: 'Amplitude de vibração nula (ou mínima), permanecendo praticamente parados' },
+      { id: 'b', text: 'Amplitude de vibração máxima' },
+      { id: 'c', text: 'Não existirem em ondas estacionárias, apenas em ondas progressivas' },
+      { id: 'd', text: 'Se moverem ao longo de toda a extensão da onda' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Os nós são os pontos de uma onda estacionária onde a interferência é sempre destrutiva, resultando em amplitude de vibração nula (esses pontos permanecem praticamente parados) — alternam-se ao longo da onda com os ventres, pontos de amplitude máxima (interferência sempre construtiva).',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_ondulatoria_24',
+    chapter: 'Um Caso Particular de Interferência: Onda Estacionária',
+    topicId: 'fis_ondulatoria',
+    subject: 'Física',
+    prompt: 'A distância entre dois nós consecutivos (ou dois ventres consecutivos) em uma onda estacionária é sempre igual a:',
+    options: [
+      { id: 'a', text: 'Meio comprimento de onda (λ/2)' },
+      { id: 'b', text: 'Um comprimento de onda inteiro (λ)' },
+      { id: 'c', text: 'Um quarto do comprimento de onda (λ/4)' },
+      { id: 'd', text: 'Dois comprimentos de onda (2λ)' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Em uma onda estacionária, a distância entre dois nós consecutivos (e também entre dois ventres consecutivos) é sempre igual a meio comprimento de onda (λ/2) — enquanto a distância entre um nó e o ventre mais próximo é um quarto do comprimento de onda (λ/4).',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_ondulatoria_25',
+    chapter: 'Ondas Estacionárias em Cordas',
+    topicId: 'fis_ondulatoria',
+    subject: 'Física',
+    prompt: 'Uma corda de comprimento L, presa em ambas as extremidades (dois nós fixos), vibrando em seu modo fundamental (primeiro harmônico), tem comprimento de onda igual a:',
+    options: [
+      { id: 'a', text: 'λ = 2L' },
+      { id: 'b', text: 'λ = L' },
+      { id: 'c', text: 'λ = L/2' },
+      { id: 'd', text: 'λ = 4L' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'No modo fundamental de uma corda presa nas duas extremidades, cabe apenas meio comprimento de onda entre os dois nós fixos (L = λ/2), logo λ = 2L — o modo mais simples possível, com apenas um ventre no meio da corda.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_ondulatoria_26',
+    chapter: 'Ondas Estacionárias em Cordas',
+    topicId: 'fis_ondulatoria',
+    subject: 'Física',
+    prompt: 'Uma corda de 1,2 m de comprimento, presa nas duas extremidades, vibra em seu modo fundamental com velocidade de propagação de 240 m/s. Qual é a frequência fundamental dessa corda?',
+    options: [
+      { id: 'a', text: '50 Hz' },
+      { id: 'b', text: '100 Hz' },
+      { id: 'c', text: '200 Hz' },
+      { id: 'd', text: '400 Hz' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'No modo fundamental, λ = 2L = 2×1,2 = 2,4 m. Pela equação fundamental da ondulatória: f = v/λ = 240/2,4 = 100 Hz.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_fis_ondulatoria_27',
+    chapter: 'Ondas Estacionárias em Tubos',
+    topicId: 'fis_ondulatoria',
+    subject: 'Física',
+    prompt: 'Em um tubo sonoro aberto em ambas as extremidades, os harmônicos possíveis (frequências de ressonância) correspondem a:',
+    options: [
+      { id: 'a', text: 'Todos os múltiplos inteiros da frequência fundamental (1ª, 2ª, 3ª harmônico, e assim por diante)' },
+      { id: 'b', text: 'Apenas harmônicos ímpares (1º, 3º, 5º...)' },
+      { id: 'c', text: 'Apenas a frequência fundamental, sem outros harmônicos possíveis' },
+      { id: 'd', text: 'Nenhum harmônico, já que tubos abertos não produzem ressonância' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Em um tubo sonoro aberto nas duas extremidades (que formam ventres em ambas as pontas), todos os harmônicos são possíveis: 1º, 2º, 3º, e assim por diante — diferente do tubo fechado em uma extremidade, que produz apenas os harmônicos ímpares.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_fis_ondulatoria_28',
+    chapter: 'Ondas Estacionárias em Tubos',
+    topicId: 'fis_ondulatoria',
+    subject: 'Física',
+    prompt: 'Em um tubo sonoro fechado em uma extremidade e aberto na outra, o modo fundamental (primeiro harmônico) corresponde a um comprimento de onda igual a:',
+    options: [
+      { id: 'a', text: 'λ = 4L, onde L é o comprimento do tubo' },
+      { id: 'b', text: 'λ = 2L' },
+      { id: 'c', text: 'λ = L' },
+      { id: 'd', text: 'λ = L/4' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'No tubo fechado em uma extremidade (que forma um nó ali) e aberto na outra (que forma um ventre), o modo fundamental corresponde a apenas um quarto do comprimento de onda dentro do tubo (L = λ/4), logo λ = 4L — o dobro do valor equivalente para um tubo aberto nas duas extremidades.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_fis_ondulatoria_29',
+    chapter: 'Efeito Doppler: Descrição e Estudo Quantitativo',
+    topicId: 'fis_ondulatoria',
+    subject: 'Física',
+    prompt: 'O Efeito Doppler explica por que a sirene de uma ambulância parece ter um tom mais agudo quando ela se aproxima do observador e mais grave quando ela se afasta. Isso ocorre porque:',
+    options: [
+      { id: 'a', text: 'A aproximação da fonte comprime as frentes de onda recebidas pelo observador (aumentando a frequência percebida), e o afastamento as espalha (diminuindo a frequência percebida)' },
+      { id: 'b', text: 'A velocidade real do som muda conforme a fonte se aproxima ou se afasta' },
+      { id: 'c', text: 'A ambulância realmente muda a frequência emitida pela sirene ao se mover' },
+      { id: 'd', text: 'Esse fenômeno não tem explicação física conhecida' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O Efeito Doppler ocorre porque o movimento relativo entre fonte e observador altera a frequência percebida (não a frequência real emitida, nem a velocidade real de propagação do som no meio): ao se aproximar, a fonte "empurra" as frentes de onda, comprimindo-as e aumentando a frequência percebida; ao se afastar, o efeito é o oposto, espalhando as frentes de onda e diminuindo a frequência percebida.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_ondulatoria_30',
+    chapter: 'Ondulatória: Som e suas Propriedades',
+    topicId: 'fis_ondulatoria',
+    subject: 'Física',
+    prompt: 'O som é classificado como uma onda mecânica longitudinal porque:',
+    options: [
+      { id: 'a', text: 'A vibração das partículas do meio ocorre na mesma direção em que a onda se propaga, e é necessário um meio material para sua propagação' },
+      { id: 'b', text: 'A vibração ocorre perpendicularmente à direção de propagação' },
+      { id: 'c', text: 'Não necessita de nenhum meio material para se propagar' },
+      { id: 'd', text: 'É uma onda eletromagnética, como a luz' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O som é uma onda mecânica (precisa de um meio material — sólido, líquido ou gasoso — para se propagar, não existindo no vácuo) e longitudinal (as partículas do meio vibram na mesma direção em que a onda se propaga, através de compressões e rarefações sucessivas) — diferente de ondas transversais, como a luz, em que a vibração é perpendicular à propagação.',
+    difficulty: 'easy'
   },
   // Química — Análises Quantitativas e Estequiometria
   {
@@ -5772,6 +7116,38 @@ export const mockQuestions: Question[] = [
     explanation: 'Tomando o sentido inicial como positivo: p_inicial = 0,5×8 = 4 kg·m/s; p_final = 0,5×(-6) = -3 kg·m/s. O impulso é a variação: |Δp| = |-3-4| = 7 N·s.',
     difficulty: 'hard'
   },
+  {
+    id: 'q_fis_dinamica_impulsiva_6',
+    chapter: 'Sistemas Isolados e a Conservação da Quantidade de Movimento',
+    topicId: 'fis_dinamica_impulsiva',
+    subject: 'Física',
+    prompt: 'A lei da conservação da quantidade de movimento é válida quando:',
+    options: [
+      { id: 'a', text: 'A resultante das forças externas que atuam sobre o sistema é nula (sistema isolado)' },
+      { id: 'b', text: 'Existem forças externas atuando livremente sobre o sistema, sem qualquer restrição' },
+      { id: 'c', text: 'Apenas em colisões elásticas, nunca em colisões inelásticas' },
+      { id: 'd', text: 'Somente quando as massas dos corpos envolvidos são iguais' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A quantidade de movimento total de um sistema se conserva quando a resultante das forças externas que atuam sobre ele é nula (sistema isolado ou mecanicamente isolado) — essa conservação vale tanto para colisões elásticas quanto inelásticas, desde que o sistema seja isolado de forças externas.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_dinamica_impulsiva_7',
+    chapter: 'Sistemas Isolados e a Conservação da Quantidade de Movimento',
+    topicId: 'fis_dinamica_impulsiva',
+    subject: 'Física',
+    prompt: 'Um canhão de massa 500 kg dispara um projétil de massa 5 kg com velocidade de 200 m/s. Desprezando o atrito, qual é a velocidade de recuo do canhão?',
+    options: [
+      { id: 'a', text: '1 m/s' },
+      { id: 'b', text: '2 m/s' },
+      { id: 'c', text: '5 m/s' },
+      { id: 'd', text: '10 m/s' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Pela conservação da quantidade de movimento (sistema inicialmente em repouso, p_total = 0): 500×v_canhão = 5×200 → v_canhão = 1000/500 = 2 m/s (em sentido oposto ao do projétil).',
+    difficulty: 'hard'
+  },
   // Física — Estática dos Corpos Sólidos e dos Fluidos
   {
     id: 'q_fis_estatica_1',
@@ -5933,6 +7309,166 @@ export const mockQuestions: Question[] = [
     correctOptionId: 'b',
     explanation: 'Pela regra da mão direita (F = qv×B), a força magnética é sempre perpendicular tanto ao vetor velocidade quanto ao vetor campo magnético — é essa força que causa o movimento circular de cargas em campos magnéticos.',
     difficulty: 'hard'
+  },
+  {
+    id: 'q_fis_eletromagnetismo_6',
+    chapter: 'Ímãs, Campo de Indução Magnético devido a Ímãs e Campo Magnético Terrestre',
+    topicId: 'fis_eletromagnetismo',
+    subject: 'Física',
+    prompt: 'Um ímã, ao ser cortado ao meio, resulta em:',
+    options: [
+      { id: 'a', text: 'Dois novos ímãs, cada um com seus próprios polos norte e sul, já que não é possível isolar um único polo magnético' },
+      { id: 'b', text: 'Um pedaço apenas com polo norte e outro apenas com polo sul' },
+      { id: 'c', text: 'Dois pedaços sem nenhuma propriedade magnética' },
+      { id: 'd', text: 'Um único ímã, sem qualquer alteração' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Ao contrário das cargas elétricas (que podem ser isoladas como positivas ou negativas), os polos magnéticos não existem isoladamente (não há "monopolo magnético" conhecido): ao cortar um ímã ao meio, cada novo pedaço se torna um ímã completo, com seus próprios polos norte e sul.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_eletromagnetismo_7',
+    chapter: 'Ímãs, Campo de Indução Magnético devido a Ímãs e Campo Magnético Terrestre',
+    topicId: 'fis_eletromagnetismo',
+    subject: 'Física',
+    prompt: 'O campo magnético terrestre, que faz a agulha de uma bússola apontar aproximadamente para o norte geográfico, tem sua origem atribuída, segundo a teoria do dínamo, a:',
+    options: [
+      { id: 'a', text: 'Correntes de convecção do material condutor (ferro e níquel líquidos) no núcleo externo da Terra' },
+      { id: 'b', text: 'Um enorme ímã permanente sólido localizado no núcleo terrestre' },
+      { id: 'c', text: 'Radiação solar diretamente incidente sobre os polos' },
+      { id: 'd', text: 'Nenhuma fonte física identificada até hoje' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A teoria do dínamo geomagnético atribui o campo magnético terrestre a correntes de convecção no núcleo externo líquido (ferro e níquel fundidos), combinadas com a rotação da Terra — esse movimento de material condutor gera correntes elétricas que, por sua vez, geram o campo magnético.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_fis_eletromagnetismo_8',
+    chapter: 'Campo Magnético devido à Corrente em Fio Reto e Espira: Descrição Vetorial e Aplicações',
+    topicId: 'fis_eletromagnetismo',
+    subject: 'Física',
+    prompt: 'Um fio retilíneo longo, percorrido por uma corrente elétrica, gera ao seu redor um campo magnético cujas linhas de campo formam:',
+    options: [
+      { id: 'a', text: 'Círculos concêntricos ao redor do fio, em planos perpendiculares a ele' },
+      { id: 'b', text: 'Linhas retas, paralelas ao fio' },
+      { id: 'c', text: 'Nenhum campo magnético é gerado por corrente em fio reto' },
+      { id: 'd', text: 'Linhas que se afastam radialmente do fio, como em uma carga elétrica' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Um fio retilíneo percorrido por corrente elétrica gera um campo magnético cujas linhas de campo formam círculos concêntricos ao redor do fio, em planos perpendiculares a ele — o sentido desses círculos é dado pela regra da mão direita, e a intensidade do campo diminui com a distância ao fio.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_eletromagnetismo_9',
+    chapter: 'Campo Magnético devido à Corrente em Fio Reto e Espira: Descrição Vetorial e Aplicações',
+    topicId: 'fis_eletromagnetismo',
+    subject: 'Física',
+    prompt: 'Em uma espira circular percorrida por corrente elétrica, o campo magnético resultante no centro da espira:',
+    options: [
+      { id: 'a', text: 'É perpendicular ao plano da espira, com intensidade proporcional à corrente e inversamente proporcional ao raio' },
+      { id: 'b', text: 'É sempre paralelo ao plano da espira' },
+      { id: 'c', text: 'Não depende da corrente que percorre a espira' },
+      { id: 'd', text: 'É sempre nulo, independentemente da corrente' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'No centro de uma espira circular percorrida por corrente, o campo magnético resultante é perpendicular ao plano da espira, com intensidade diretamente proporcional à corrente que a percorre e inversamente proporcional ao raio da espira — quanto maior a corrente ou menor o raio, mais intenso o campo no centro.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_fis_eletromagnetismo_10',
+    chapter: 'Análise de Força Magnética em Fios Percorridos por Correntes Contínuas',
+    topicId: 'fis_eletromagnetismo',
+    subject: 'Física',
+    prompt: 'Dois fios paralelos, percorridos por correntes elétricas no mesmo sentido, exercem entre si uma força magnética que é:',
+    options: [
+      { id: 'a', text: 'De atração, aproximando os fios' },
+      { id: 'b', text: 'De repulsão, afastando os fios' },
+      { id: 'c', text: 'Nula, já que fios paralelos nunca interagem magneticamente' },
+      { id: 'd', text: 'Sempre perpendicular aos fios, sem componente de atração ou repulsão' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Dois fios paralelos percorridos por correntes de mesmo sentido se atraem mutuamente (força de atração magnética entre eles); se as correntes tiverem sentidos opostos, a força passa a ser de repulsão — esse fenômeno é, inclusive, historicamente usado para definir a unidade de corrente elétrica, o ampère.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_fis_eletromagnetismo_11',
+    chapter: 'Análise de Força Magnética em Fios Percorridos por Correntes Contínuas',
+    topicId: 'fis_eletromagnetismo',
+    subject: 'Física',
+    prompt: 'A força magnética que atua sobre um fio retilíneo de comprimento L, percorrido por corrente i, imerso em um campo magnético uniforme B perpendicular ao fio, é dada por:',
+    options: [
+      { id: 'a', text: 'F = B × i × L' },
+      { id: 'b', text: 'F = B / (i × L)' },
+      { id: 'c', text: 'F = B + i + L' },
+      { id: 'd', text: 'F = i / (B × L)' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A força magnética sobre um fio retilíneo percorrido por corrente, com o campo perpendicular ao fio, é dada por F = B×i×L, onde B é o módulo do campo magnético, i é a corrente e L é o comprimento do fio imerso no campo.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_eletromagnetismo_12',
+    chapter: 'Indução Eletromagnética: Análise da Corrente Induzida em Geradores',
+    topicId: 'fis_eletromagnetismo',
+    subject: 'Física',
+    prompt: 'A Lei de Lenz estabelece que o sentido da corrente induzida em um circuito é sempre tal que:',
+    options: [
+      { id: 'a', text: 'Se opõe à variação do fluxo magnético que a originou' },
+      { id: 'b', text: 'Reforça sempre a variação do fluxo magnético que a originou' },
+      { id: 'c', text: 'É sempre nulo, independentemente da variação de fluxo' },
+      { id: 'd', text: 'Não tem relação alguma com o fluxo magnético' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A Lei de Lenz (complemento da Lei de Faraday) estabelece que a corrente induzida sempre flui em um sentido que se opõe à variação do fluxo magnético que a gerou — uma manifestação da conservação de energia, pois se a corrente reforçasse a variação, geraria energia do nada.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_eletromagnetismo_13',
+    chapter: 'Indução Eletromagnética: Análise da Corrente Induzida em Geradores',
+    topicId: 'fis_eletromagnetismo',
+    subject: 'Física',
+    prompt: 'Um gerador elétrico de corrente alternada (como os usados em usinas) converte energia mecânica em energia elétrica através de:',
+    options: [
+      { id: 'a', text: 'A rotação de uma espira (ou conjunto de espiras) dentro de um campo magnético, induzindo uma força eletromotriz variável no tempo' },
+      { id: 'b', text: 'Reações químicas internas, como em uma pilha' },
+      { id: 'c', text: 'Fissão nuclear direta dentro do próprio gerador' },
+      { id: 'd', text: 'Aquecimento resistivo de um filamento' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Um gerador de corrente alternada funciona fazendo uma espira (ou bobina) girar dentro de um campo magnético (ou, equivalentemente, fazendo o campo girar em torno de uma bobina fixa) — essa variação contínua do fluxo magnético através da espira induz uma força eletromotriz que varia senoidalmente no tempo, gerando corrente alternada.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_eletromagnetismo_14',
+    chapter: 'Ímãs, Campo de Indução Magnético devido a Ímãs e Campo Magnético Terrestre',
+    topicId: 'fis_eletromagnetismo',
+    subject: 'Física',
+    prompt: 'Ao aproximar o polo norte de um ímã do polo norte de outro ímã, a força magnética entre eles será:',
+    options: [
+      { id: 'a', text: 'De repulsão, já que polos de mesmo nome se repelem' },
+      { id: 'b', text: 'De atração, já que polos de mesmo nome se atraem' },
+      { id: 'c', text: 'Nula, já que polos de mesmo nome não interagem' },
+      { id: 'd', text: 'Depende exclusivamente da distância, nunca do tipo de polo' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Assim como cargas elétricas de mesmo sinal se repelem, polos magnéticos de mesmo nome (dois polos norte, ou dois polos sul) se repelem, enquanto polos de nomes diferentes (norte e sul) se atraem.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_fis_eletromagnetismo_15',
+    chapter: 'Campo Magnético devido à Corrente em Fio Reto e Espira: Descrição Vetorial e Aplicações',
+    topicId: 'fis_eletromagnetismo',
+    subject: 'Física',
+    prompt: 'A regra da mão direita, usada para determinar o sentido do campo magnético gerado por um fio retilíneo percorrido por corrente, consiste em:',
+    options: [
+      { id: 'a', text: 'Apontar o polegar no sentido da corrente; os demais dedos, curvados ao redor do fio, indicam o sentido das linhas de campo magnético' },
+      { id: 'b', text: 'Apontar todos os dedos no sentido do campo magnético, sem qualquer relação com a corrente' },
+      { id: 'c', text: 'Usar apenas a mão esquerda, nunca a direita' },
+      { id: 'd', text: 'Não ter nenhuma relação com o sentido da corrente elétrica' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Na regra da mão direita para um fio retilíneo, aponta-se o polegar no sentido convencional da corrente elétrica; os demais dedos, curvados ao redor do fio, indicam o sentido das linhas de campo magnético circulares geradas por essa corrente.',
+    difficulty: 'medium'
   },
   // Português — Redação
   {
@@ -10651,6 +12187,118 @@ export const mockQuestions: Question[] = [
     explanation: 'A componente vertical inicial é vy = v×sen(30°) = 20×0,5 = 10 m/s. O tempo até o ponto mais alto é vy/g = 10/10 = 1 s. Como a subida e a descida (até a mesma altura) são simétricas, o tempo total é o dobro: 2 s.',
     difficulty: 'hard'
   },
+  {
+    id: 'q_fis_cinematica_vetorial_6',
+    chapter: 'Grandezas Físicas e Operações com Vetores',
+    topicId: 'fis_cinematica_vetorial',
+    subject: 'Física',
+    prompt: 'Uma grandeza vetorial, diferentemente de uma grandeza escalar, precisa ser especificada por:',
+    options: [
+      { id: 'a', text: 'Apenas um valor numérico e uma unidade de medida' },
+      { id: 'b', text: 'Um valor numérico (módulo), uma unidade de medida, uma direção e um sentido' },
+      { id: 'c', text: 'Apenas uma direção, sem qualquer valor numérico' },
+      { id: 'd', text: 'Apenas um sentido, sem módulo ou direção' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Uma grandeza vetorial precisa de módulo (intensidade numérica), unidade de medida, direção (a reta ao longo da qual atua) e sentido (para qual dos dois lados dessa reta aponta) para ser completamente especificada — diferente de uma grandeza escalar (como massa ou temperatura), que precisa apenas de valor numérico e unidade.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_fis_cinematica_vetorial_7',
+    chapter: 'Grandezas Físicas e Operações com Vetores',
+    topicId: 'fis_cinematica_vetorial',
+    subject: 'Física',
+    prompt: 'Dois vetores de módulos 3 e 4, perpendiculares entre si, são somados. Qual é o módulo do vetor resultante?',
+    options: [
+      { id: 'a', text: '1' },
+      { id: 'b', text: '5' },
+      { id: 'c', text: '7' },
+      { id: 'd', text: '12' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Como os vetores são perpendiculares, o módulo da soma é dado pelo Teorema de Pitágoras: √(3² + 4²) = √(9+16) = √25 = 5.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_cinematica_vetorial_8',
+    chapter: 'Velocidade Vetorial',
+    topicId: 'fis_cinematica_vetorial',
+    subject: 'Física',
+    prompt: 'A velocidade vetorial média de um móvel é definida como a razão entre:',
+    options: [
+      { id: 'a', text: 'O vetor deslocamento e o intervalo de tempo correspondente' },
+      { id: 'b', text: 'O espaço total percorrido (incluindo idas e vindas) e o tempo total' },
+      { id: 'c', text: 'A aceleração e o tempo' },
+      { id: 'd', text: 'A massa e o tempo' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A velocidade vetorial média é dada por vm = Δr/Δt, onde Δr é o vetor deslocamento (a diferença entre a posição final e inicial, não o caminho percorrido) — diferente da velocidade escalar média, que usa o espaço percorrido ao longo da trajetória.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_cinematica_vetorial_9',
+    chapter: 'Velocidade Vetorial',
+    topicId: 'fis_cinematica_vetorial',
+    subject: 'Física',
+    prompt: 'No lançamento oblíquo (sem resistência do ar), a componente horizontal da velocidade do projétil, durante todo o voo, permanece:',
+    options: [
+      { id: 'a', text: 'Constante, já que não há força horizontal atuando (apenas a gravidade, vertical)' },
+      { id: 'b', text: 'Crescente ao longo de todo o voo' },
+      { id: 'c', text: 'Decrescente ao longo de todo o voo' },
+      { id: 'd', text: 'Sempre igual a zero' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'No lançamento oblíquo, desprezando a resistência do ar, a única força atuante é o peso (vertical). Como não há força na direção horizontal, a componente horizontal da velocidade permanece constante durante todo o movimento — apenas a componente vertical varia, devido à aceleração da gravidade.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_cinematica_vetorial_10',
+    chapter: 'Aceleração Vetorial',
+    topicId: 'fis_cinematica_vetorial',
+    subject: 'Física',
+    prompt: 'A aceleração vetorial de um móvel pode ser decomposta em duas componentes: a aceleração tangencial e a aceleração centrípeta (ou normal). A aceleração tangencial é responsável por:',
+    options: [
+      { id: 'a', text: 'Alterar o módulo da velocidade (fazer o móvel acelerar ou desacelerar)' },
+      { id: 'b', text: 'Alterar apenas a direção da velocidade, sem afetar seu módulo' },
+      { id: 'c', text: 'Manter o móvel sempre em repouso' },
+      { id: 'd', text: 'Nunca existir em movimentos curvilíneos' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A aceleração tangencial é a componente da aceleração na direção da velocidade (tangente à trajetória), responsável por alterar o módulo da velocidade (acelerar ou desacelerar o móvel). Já a aceleração centrípeta (perpendicular à velocidade) é responsável por mudar a direção do movimento, sem alterar seu módulo.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_cinematica_vetorial_11',
+    chapter: 'Aceleração Vetorial',
+    topicId: 'fis_cinematica_vetorial',
+    subject: 'Física',
+    prompt: 'Em um Movimento Circular Uniforme (MCU), a aceleração tangencial é:',
+    options: [
+      { id: 'a', text: 'Nula, já que o módulo da velocidade permanece constante — apenas a aceleração centrípeta existe' },
+      { id: 'b', text: 'Máxima, sempre igual à aceleração centrípeta' },
+      { id: 'c', text: 'Sempre maior que a aceleração centrípeta' },
+      { id: 'd', text: 'Igual a zero apenas em alguns pontos específicos da trajetória' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'No MCU, o módulo da velocidade é constante (só a direção muda), então não há variação no módulo da velocidade — logo, a aceleração tangencial é nula. Toda a aceleração do movimento é centrípeta, responsável apenas por mudar a direção do vetor velocidade, mantendo a trajetória circular.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_cinematica_vetorial_12',
+    chapter: 'Aceleração Vetorial',
+    topicId: 'fis_cinematica_vetorial',
+    subject: 'Física',
+    prompt: 'Em um Movimento Circular Uniformemente Variado (MCUV), a aceleração vetorial total do móvel é dada por:',
+    options: [
+      { id: 'a', text: 'Apenas a soma dos módulos da aceleração tangencial e centrípeta, já que ambas existem simultaneamente' },
+      { id: 'b', text: 'A soma vetorial da aceleração tangencial (constante, na direção da velocidade) e da aceleração centrípeta (perpendicular, variável em módulo)' },
+      { id: 'c', text: 'Sempre nula, como no MCU' },
+      { id: 'd', text: 'Apenas a aceleração tangencial, já que a centrípeta não existe no MCUV' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'No MCUV, tanto a aceleração tangencial (constante, responsável por variar o módulo da velocidade) quanto a aceleração centrípeta (perpendicular à velocidade, cujo módulo varia conforme a velocidade muda) coexistem — a aceleração total do móvel é a soma vetorial dessas duas componentes perpendiculares entre si.',
+    difficulty: 'hard'
+  },
   // Física — Gravitação e Movimento Circular
   {
     id: 'q_fis_gravitacao_circular_1',
@@ -10732,6 +12380,166 @@ export const mockQuestions: Question[] = [
     explanation: 'Aceleração é a variação do vetor velocidade — não só do seu módulo. Mesmo com módulo constante, a mudança contínua de direção da velocidade no movimento circular já configura uma aceleração (a centrípeta).',
     difficulty: 'medium'
   },
+  {
+    id: 'q_fis_gravitacao_circular_6',
+    chapter: 'Analisando Movimentos Contidos em um Plano Vertical',
+    topicId: 'fis_gravitacao_circular',
+    subject: 'Física',
+    prompt: 'No ponto mais alto de um loop vertical (como em uma montanha-russa), a força centrípeta necessária para manter o movimento circular é fornecida por:',
+    options: [
+      { id: 'a', text: 'A soma do peso e da força normal, ambos apontando para o centro da trajetória (para baixo, nesse ponto)' },
+      { id: 'b', text: 'Apenas a força de atrito' },
+      { id: 'c', text: 'Nenhuma força, já que a velocidade é sempre nula nesse ponto' },
+      { id: 'd', text: 'Uma força que aponta para fora da trajetória circular' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'No ponto mais alto de um loop vertical, tanto o peso quanto a força normal (exercida pelos trilhos sobre o carrinho) apontam para baixo, ou seja, para o centro da trajetória circular naquele ponto — a soma dessas duas forças fornece a força centrípeta necessária para manter o movimento circular.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_fis_gravitacao_circular_7',
+    chapter: 'Analisando Movimentos Contidos em um Plano Vertical',
+    topicId: 'fis_gravitacao_circular',
+    subject: 'Física',
+    prompt: 'Em um pêndulo cônico (uma massa presa a um fio, girando em um círculo horizontal), a componente vertical da tração no fio deve:',
+    options: [
+      { id: 'a', text: 'Equilibrar exatamente o peso da massa' },
+      { id: 'b', text: 'Ser sempre nula' },
+      { id: 'c', text: 'Ser responsável pela força centrípeta' },
+      { id: 'd', text: 'Ser sempre maior que o peso, fazendo a massa subir continuamente' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'No pêndulo cônico, a tração no fio é decomposta em uma componente vertical, que equilibra o peso da massa (mantendo-a na mesma altura), e uma componente horizontal, que aponta para o centro da trajetória circular e fornece a força centrípeta necessária ao movimento.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_fis_gravitacao_circular_8',
+    chapter: 'Balística',
+    topicId: 'fis_gravitacao_circular',
+    subject: 'Física',
+    prompt: 'No estudo balístico do lançamento oblíquo, o alcance horizontal máximo de um projétil (para uma dada velocidade inicial, desprezando resistência do ar) é obtido quando o ângulo de lançamento é:',
+    options: [
+      { id: 'a', text: '30°' },
+      { id: 'b', text: '45°' },
+      { id: 'c', text: '60°' },
+      { id: 'd', text: '90°' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'Desprezando a resistência do ar, o alcance horizontal de um projétil é máximo quando o ângulo de lançamento é de 45°, já que esse ângulo maximiza o produto entre as componentes horizontal e vertical da velocidade inicial (proporcional a sen(2θ), que é máximo quando 2θ = 90°, ou seja, θ = 45°).',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_gravitacao_circular_9',
+    chapter: 'Balística',
+    topicId: 'fis_gravitacao_circular',
+    subject: 'Física',
+    prompt: 'Um projétil é lançado horizontalmente do alto de uma torre de 45 m de altura, com velocidade inicial de 20 m/s. Usando g = 10 m/s², quanto tempo o projétil leva para atingir o solo?',
+    options: [
+      { id: 'a', text: '2 s' },
+      { id: 'b', text: '3 s' },
+      { id: 'c', text: '4,5 s' },
+      { id: 'd', text: '9 s' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'No lançamento horizontal, o tempo de queda depende apenas da componente vertical do movimento: h = g×t²/2 → 45 = 10×t²/2 → t² = 9 → t = 3 s.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_gravitacao_circular_10',
+    chapter: 'Balística',
+    topicId: 'fis_gravitacao_circular',
+    subject: 'Física',
+    prompt: 'No lançamento oblíquo, dois ângulos de lançamento complementares entre si (que somam 90°, como 30° e 60°), para a mesma velocidade inicial, resultam em:',
+    options: [
+      { id: 'a', text: 'Alcances horizontais iguais entre si (embora com alturas máximas e tempos de voo diferentes)' },
+      { id: 'b', text: 'Alcances horizontais completamente diferentes, sem qualquer relação' },
+      { id: 'c', text: 'O mesmo tempo de voo, sempre' },
+      { id: 'd', text: 'A mesma altura máxima, sempre' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Como o alcance é proporcional a sen(2θ), e sen(2×30°) = sen(60°) = sen(2×60°) = sen(120°) (já que sen(x) = sen(180°-x)), ângulos complementares (que somam 90°) produzem o mesmo alcance horizontal — embora a altura máxima e o tempo de voo sejam diferentes entre os dois casos.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_fis_gravitacao_circular_11',
+    chapter: 'Movimento Harmônico Simples (MHS)',
+    topicId: 'fis_gravitacao_circular',
+    subject: 'Física',
+    prompt: 'O Movimento Harmônico Simples (MHS) é caracterizado por uma força restauradora que:',
+    options: [
+      { id: 'a', text: 'É proporcional ao deslocamento em relação à posição de equilíbrio e sempre aponta em sentido contrário a esse deslocamento' },
+      { id: 'b', text: 'É constante, independentemente da posição do corpo' },
+      { id: 'c', text: 'Aumenta quadraticamente com a velocidade do corpo' },
+      { id: 'd', text: 'Nunca muda de sentido, independentemente da posição' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'No MHS, a força restauradora (como a de uma mola ideal, F = -kx) é proporcional ao deslocamento x em relação à posição de equilíbrio e sempre aponta no sentido oposto a esse deslocamento, tendendo a trazer o corpo de volta ao equilíbrio — essa característica é o que gera o movimento oscilatório periódico.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_gravitacao_circular_12',
+    chapter: 'Movimento Harmônico Simples (MHS)',
+    topicId: 'fis_gravitacao_circular',
+    subject: 'Física',
+    prompt: 'Em um sistema massa-mola realizando MHS, a velocidade do corpo é máxima quando ele está:',
+    options: [
+      { id: 'a', text: 'Nos pontos de amplitude máxima (extremos do movimento)' },
+      { id: 'b', text: 'Na posição de equilíbrio (deslocamento nulo)' },
+      { id: 'c', text: 'Sempre constante, em qualquer posição' },
+      { id: 'd', text: 'Nula em todas as posições' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'No MHS, a velocidade é máxima na posição de equilíbrio (onde a força restauradora e, portanto, a aceleração são nulas) e nula nos pontos de amplitude máxima (extremos do movimento, onde a força restauradora e a aceleração são máximas).',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_gravitacao_circular_13',
+    chapter: 'Movimento Harmônico Simples (MHS)',
+    topicId: 'fis_gravitacao_circular',
+    subject: 'Física',
+    prompt: 'O período de oscilação de um pêndulo simples, para pequenas oscilações, depende de:',
+    options: [
+      { id: 'a', text: 'Apenas do comprimento do fio e da aceleração da gravidade local, sendo independente da massa do pêndulo' },
+      { id: 'b', text: 'Apenas da massa do pêndulo' },
+      { id: 'c', text: 'Da amplitude da oscilação, para qualquer amplitude' },
+      { id: 'd', text: 'Da cor do fio utilizado' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O período do pêndulo simples é dado por T = 2π√(L/g), dependendo apenas do comprimento do fio (L) e da aceleração da gravidade local (g) — para pequenas oscilações, o período independe tanto da massa do pêndulo quanto (aproximadamente) da amplitude do movimento.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_gravitacao_circular_14',
+    chapter: 'Analisando Movimentos Contidos em um Plano Vertical',
+    topicId: 'fis_gravitacao_circular',
+    subject: 'Física',
+    prompt: 'No ponto mais baixo de um loop vertical, a força normal exercida pelos trilhos sobre um carrinho é:',
+    options: [
+      { id: 'a', text: 'Sempre menor que o peso do carrinho' },
+      { id: 'b', text: 'Sempre maior que o peso do carrinho, já que precisa fornecer tanto a sustentação contra o peso quanto a força centrípeta' },
+      { id: 'c', text: 'Sempre igual a zero' },
+      { id: 'd', text: 'Sempre igual ao peso do carrinho' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'No ponto mais baixo do loop, a força normal (para cima) precisa equilibrar o peso (para baixo) e ainda fornecer a força centrípeta adicional (também para cima, em direção ao centro da trajetória circular): N - P = Fcp, logo N = P + Fcp, sempre maior que o peso.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_fis_gravitacao_circular_15',
+    chapter: 'Órbitas',
+    topicId: 'fis_gravitacao_circular',
+    subject: 'Física',
+    prompt: 'A Terceira Lei de Kepler relaciona o período orbital (T) de um planeta com o raio médio de sua órbita (r) pela proporção:',
+    options: [
+      { id: 'a', text: 'T²/r³ = constante, para todos os planetas orbitando o mesmo corpo central' },
+      { id: 'b', text: 'T/r = constante' },
+      { id: 'c', text: 'T³/r² = constante' },
+      { id: 'd', text: 'T e r não têm nenhuma relação matemática' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A Terceira Lei de Kepler (Lei dos Períodos) estabelece que a razão entre o quadrado do período orbital e o cubo do raio médio da órbita é constante para todos os planetas que orbitam o mesmo corpo central: T²/r³ = k — uma relação fundamental para comparar órbitas de diferentes corpos celestes em torno de um mesmo astro.',
+    difficulty: 'hard'
+  },
   // Física — Dinâmica Energética e Transformações de Energia
   {
     id: 'q_fis_energia_1',
@@ -10811,6 +12619,214 @@ export const mockQuestions: Question[] = [
     ],
     correctOptionId: 'b',
     explanation: 'Pela conservação de energia mecânica: v = √(2gh) = √(2×10×0,8) = √16 = 4 m/s.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_fis_energia_6',
+    chapter: 'Trabalho e Energia: Trabalho de uma Força',
+    topicId: 'fis_energia',
+    subject: 'Física',
+    prompt: 'O trabalho realizado por uma força constante F, que forma um ângulo θ com o deslocamento d, é calculado por:',
+    options: [
+      { id: 'a', text: 'W = F × d × cos(θ)' },
+      { id: 'b', text: 'W = F × d × sen(θ)' },
+      { id: 'c', text: 'W = F + d' },
+      { id: 'd', text: 'W = F / d' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O trabalho de uma força constante é dado por W = F×d×cos(θ), onde θ é o ângulo entre a direção da força e a direção do deslocamento — apenas a componente da força na direção do movimento realiza trabalho.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_fis_energia_7',
+    chapter: 'Trabalho e Energia: Trabalho de uma Força',
+    topicId: 'fis_energia',
+    subject: 'Física',
+    prompt: 'Uma força de 50 N é aplicada perpendicularmente à direção do deslocamento de um corpo. Qual é o trabalho realizado por essa força?',
+    options: [
+      { id: 'a', text: 'Zero, já que cos(90°) = 0' },
+      { id: 'b', text: '50 J, igual ao módulo da força' },
+      { id: 'c', text: 'Depende apenas da massa do corpo' },
+      { id: 'd', text: 'Infinito' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Quando a força é perpendicular ao deslocamento (θ = 90°), o trabalho realizado é nulo, já que W = F×d×cos(90°) = F×d×0 = 0 — é o caso, por exemplo, da força normal ou da força peso em um deslocamento horizontal.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_energia_8',
+    chapter: 'Trabalho e Energia: Teorema da Energia Cinética',
+    topicId: 'fis_energia',
+    subject: 'Física',
+    prompt: 'O Teorema da Energia Cinética (ou Teorema Trabalho-Energia) estabelece que o trabalho total realizado sobre um corpo é igual a:',
+    options: [
+      { id: 'a', text: 'A variação de sua energia cinética' },
+      { id: 'b', text: 'A variação de sua energia potencial gravitacional, exclusivamente' },
+      { id: 'c', text: 'A massa do corpo, sempre' },
+      { id: 'd', text: 'Zero, em qualquer situação' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O Teorema da Energia Cinética afirma que o trabalho total (resultante de todas as forças) realizado sobre um corpo é igual à variação de sua energia cinética: Wtotal = ΔEc = Ec_final - Ec_inicial.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_energia_9',
+    chapter: 'Trabalho e Energia: o Teorema da Energia Potencial',
+    topicId: 'fis_energia',
+    subject: 'Física',
+    prompt: 'O trabalho realizado por uma força conservativa (como a força peso) sobre um corpo é igual a:',
+    options: [
+      { id: 'a', text: 'O negativo da variação da energia potencial associada a essa força' },
+      { id: 'b', text: 'Sempre igual a zero, independentemente do deslocamento' },
+      { id: 'c', text: 'A soma da energia cinética e potencial' },
+      { id: 'd', text: 'Sempre positivo, independentemente da trajetória' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O trabalho de uma força conservativa é igual ao negativo da variação da energia potencial associada: W = -ΔEp. Isso reflete a relação entre trabalho e energia potencial — quando a energia potencial diminui, a força conservativa realiza trabalho positivo, e vice-versa.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_energia_10',
+    chapter: 'Potência, Máquina e Rendimento',
+    topicId: 'fis_energia',
+    subject: 'Física',
+    prompt: 'A potência mecânica média é definida como a razão entre:',
+    options: [
+      { id: 'a', text: 'O trabalho realizado e o intervalo de tempo gasto para realizá-lo' },
+      { id: 'b', text: 'A força aplicada e a massa do corpo' },
+      { id: 'c', text: 'A energia cinética e a energia potencial' },
+      { id: 'd', text: 'A velocidade e a aceleração' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A potência média é definida como Pm = W/Δt, a razão entre o trabalho realizado (ou energia transferida) e o intervalo de tempo gasto — quanto maior a potência, mais rapidamente um trabalho é realizado.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_fis_energia_11',
+    chapter: 'Potência, Máquina e Rendimento',
+    topicId: 'fis_energia',
+    subject: 'Física',
+    prompt: 'Um motor realiza um trabalho de 6.000 J em 4 segundos. Qual é a potência média desse motor?',
+    options: [
+      { id: 'a', text: '1.500 W' },
+      { id: 'b', text: '2.400 W' },
+      { id: 'c', text: '24.000 W' },
+      { id: 'd', text: '6.000 W' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Pm = W/Δt = 6000/4 = 1.500 W.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_fis_energia_12',
+    chapter: 'Potência, Máquina e Rendimento',
+    topicId: 'fis_energia',
+    subject: 'Física',
+    prompt: 'O rendimento (eficiência) de uma máquina é definido como a razão entre:',
+    options: [
+      { id: 'a', text: 'A potência útil (ou energia útil produzida) e a potência total (ou energia total fornecida) à máquina' },
+      { id: 'b', text: 'A potência dissipada e a potência útil, exclusivamente' },
+      { id: 'c', text: 'A massa da máquina e seu volume' },
+      { id: 'd', text: 'Sempre igual a 100%, para qualquer máquina real' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O rendimento é definido como η = Putil/Ptotal (ou Eutil/Etotal), expresso geralmente em porcentagem. Como toda máquina real dissipa parte da energia (geralmente como calor, devido a atritos e outras perdas), o rendimento real é sempre menor que 100%.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_energia_13',
+    chapter: "A Física por trás da Obtenção de Energia Elétrica, das Quedas-d'Água aos Reatores Nucleares",
+    topicId: 'fis_energia',
+    subject: 'Física',
+    prompt: 'Em uma usina hidrelétrica, a energia elétrica é gerada a partir da conversão de:',
+    options: [
+      { id: 'a', text: 'Energia potencial gravitacional da água (armazenada em uma represa) em energia cinética, que movimenta turbinas conectadas a geradores' },
+      { id: 'b', text: 'Energia nuclear diretamente em energia elétrica, sem qualquer etapa intermediária' },
+      { id: 'c', text: 'Energia química dos combustíveis fósseis' },
+      { id: 'd', text: 'Energia solar captada por painéis fotovoltaicos' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Nas usinas hidrelétricas, a água represada possui energia potencial gravitacional. Ao ser liberada e cair (ou fluir) através das turbinas, essa energia potencial se converte em energia cinética, que faz girar as turbinas conectadas a geradores elétricos, convertendo energia mecânica em energia elétrica.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_energia_14',
+    chapter: "A Física por trás da Obtenção de Energia Elétrica, das Quedas-d'Água aos Reatores Nucleares",
+    topicId: 'fis_energia',
+    subject: 'Física',
+    prompt: 'Em uma usina nuclear, a energia elétrica é gerada, em última análise, a partir de:',
+    options: [
+      { id: 'a', text: 'Reações de fissão nuclear, que liberam grande quantidade de energia térmica, usada para aquecer água e gerar vapor que movimenta turbinas' },
+      { id: 'b', text: 'Queima direta de urânio, como um combustível fóssil comum' },
+      { id: 'c', text: 'Energia potencial gravitacional, como nas hidrelétricas' },
+      { id: 'd', text: 'Reações químicas de combustão' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Nas usinas nucleares, a fissão nuclear (divisão de núcleos atômicos pesados, como urânio-235) libera grande quantidade de energia térmica. Essa energia é usada para aquecer água, gerando vapor sob alta pressão que movimenta turbinas conectadas a geradores elétricos — de forma similar, no princípio final, a usinas termelétricas convencionais.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_energia_15',
+    chapter: "A Física por trás da Obtenção de Energia Elétrica, das Quedas-d'Água aos Reatores Nucleares",
+    topicId: 'fis_energia',
+    subject: 'Física',
+    prompt: 'Usinas termelétricas convencionais (movidas a carvão ou gás natural) geram energia elétrica a partir da conversão de:',
+    options: [
+      { id: 'a', text: 'Energia química (da queima do combustível) em energia térmica, depois em energia mecânica (turbinas) e finalmente em energia elétrica' },
+      { id: 'b', text: 'Energia nuclear diretamente' },
+      { id: 'c', text: 'Energia potencial gravitacional da água represada' },
+      { id: 'd', text: 'Energia eólica, captada por hélices' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Nas usinas termelétricas convencionais, a queima do combustível (carvão, gás natural) libera energia química na forma de calor (energia térmica), que aquece água e gera vapor. Esse vapor movimenta turbinas (energia mecânica), que por sua vez giram geradores, produzindo energia elétrica.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_energia_16',
+    chapter: 'Equivalência Massa-Energia',
+    topicId: 'fis_energia',
+    subject: 'Física',
+    prompt: 'A famosa equação de Einstein E = mc² estabelece uma equivalência entre massa e energia. Segundo essa equação, uma pequena quantidade de massa pode ser convertida em:',
+    options: [
+      { id: 'a', text: 'Uma enorme quantidade de energia, já que c (velocidade da luz) é um número extremamente grande, e está elevado ao quadrado' },
+      { id: 'b', text: 'Uma quantidade desprezível de energia, sempre' },
+      { id: 'c', text: 'Energia negativa' },
+      { id: 'd', text: 'Nenhuma energia, já que massa e energia são grandezas completamente independentes' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Como a velocidade da luz (c ≈ 3×10⁸ m/s) é um valor extremamente grande, e a equação envolve c², mesmo uma pequena quantidade de massa convertida corresponde a uma quantidade imensa de energia — princípio por trás da enorme energia liberada em reações nucleares (fissão e fusão).',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_energia_17',
+    chapter: 'Equivalência Massa-Energia',
+    topicId: 'fis_energia',
+    subject: 'Física',
+    prompt: 'Nas reações de fissão e fusão nuclear, a energia liberada tem origem em:',
+    options: [
+      { id: 'a', text: 'Uma pequena diferença de massa (defeito de massa) entre os reagentes e os produtos, convertida em energia segundo E = mc²' },
+      { id: 'b', text: 'Reações químicas comuns, semelhantes à combustão' },
+      { id: 'c', text: 'Energia potencial gravitacional armazenada no núcleo' },
+      { id: 'd', text: 'Atrito entre partículas subatômicas' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Nas reações nucleares (fissão ou fusão), a massa total dos produtos é ligeiramente menor que a massa total dos reagentes — essa diferença, chamada defeito de massa, é convertida em uma quantidade enorme de energia segundo E = mc², explicando por que essas reações liberam tanta energia em comparação com reações químicas comuns.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_fis_energia_18',
+    chapter: 'Equivalência Massa-Energia',
+    topicId: 'fis_energia',
+    subject: 'Física',
+    prompt: 'Qual é, aproximadamente, a energia equivalente a 1 grama de massa (0,001 kg), usando E = mc² e c ≈ 3×10⁸ m/s?',
+    options: [
+      { id: 'a', text: '9×10¹⁰ J' },
+      { id: 'b', text: '9×10¹³ J' },
+      { id: 'c', text: '3×10⁸ J' },
+      { id: 'd', text: '9×10¹⁶ J' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'E = mc² = 0,001×(3×10⁸)² = 0,001×9×10¹⁶ = 9×10¹³ J — uma quantidade de energia comparável à liberada por dezenas de milhares de toneladas de TNT, ilustrando o quão concentrada é a energia equivalente até mesmo a uma pequena massa.',
     difficulty: 'hard'
   },
   // Física — Eletrostática e Campo Elétrico
@@ -10894,6 +12910,214 @@ export const mockQuestions: Question[] = [
     explanation: 'Por convenção, as linhas de campo elétrico sempre saem de cargas positivas e entram em cargas negativas.',
     difficulty: 'medium'
   },
+  {
+    id: 'q_fis_eletrostatica_6',
+    chapter: 'Eletrostática: Processos de Eletrização e Aplicações',
+    topicId: 'fis_eletrostatica',
+    subject: 'Física',
+    prompt: 'A eletrização por atrito ocorre quando dois materiais diferentes são esfregados um contra o outro, resultando em:',
+    options: [
+      { id: 'a', text: 'Transferência de elétrons de um material para o outro, deixando um positivamente carregado e o outro negativamente carregado' },
+      { id: 'b', text: 'Criação de novas cargas elétricas, do nada' },
+      { id: 'c', text: 'Transferência de prótons entre os materiais' },
+      { id: 'd', text: 'Nenhum efeito elétrico perceptível' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Na eletrização por atrito, elétrons são transferidos de um material para o outro (dependendo da afinidade relativa de cada material por elétrons, descrita pela série triboelétrica) — o material que perde elétrons fica com carga positiva, e o que ganha elétrons fica com carga negativa. Nenhuma carga é criada; apenas redistribuída.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_fis_eletrostatica_7',
+    chapter: 'Eletrostática: Processos de Eletrização e Aplicações',
+    topicId: 'fis_eletrostatica',
+    subject: 'Física',
+    prompt: 'A eletrização por indução, diferente da eletrização por contato, ocorre:',
+    options: [
+      { id: 'a', text: 'Sem contato direto entre os corpos, através da aproximação de um corpo carregado que induz uma redistribuição de cargas em outro corpo' },
+      { id: 'b', text: 'Apenas através do contato físico direto entre dois corpos' },
+      { id: 'c', text: 'Somente em materiais isolantes, nunca em condutores' },
+      { id: 'd', text: 'Sempre resultando em cargas de mesmo sinal nos dois corpos' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Na eletrização por indução, um corpo carregado é aproximado (sem tocar) de um corpo neutro condutor, induzindo uma redistribuição das cargas livres nesse corpo — cargas de sinal oposto ao indutor se aproximam dele, e cargas de mesmo sinal se afastam, permitindo, com um aterramento momentâneo, eletrizar o corpo neutro com carga de sinal oposto ao do indutor.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_eletrostatica_8',
+    chapter: 'Eletrostática: Processos de Eletrização e Aplicações',
+    topicId: 'fis_eletrostatica',
+    subject: 'Física',
+    prompt: 'O para-raios, aplicação prática de conceitos eletrostáticos, funciona principalmente com base em:',
+    options: [
+      { id: 'a', text: 'O poder das pontas — o acúmulo de cargas se concentra em regiões pontiagudas, favorecendo a descarga elétrica controlada por esse ponto' },
+      { id: 'b', text: 'A ausência total de condução elétrica em sua estrutura' },
+      { id: 'c', text: 'A eletrização exclusivamente por atrito com o ar' },
+      { id: 'd', text: 'A produção de campo magnético, não elétrico' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O para-raios se baseia no poder das pontas: em condutores com formato pontiagudo, o campo elétrico e a densidade de cargas se concentram na ponta, favorecendo a formação de descargas elétricas controladas por esse caminho preferencial, protegendo a estrutura ao redor de descargas atmosféricas descontroladas.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_eletrostatica_9',
+    chapter: 'Campo Elétrico',
+    topicId: 'fis_eletrostatica',
+    subject: 'Física',
+    prompt: 'O campo elétrico gerado por uma carga puntiforme Q, a uma distância r, tem seu módulo calculado por E = k×|Q|/r². Duplicando a distância r, o campo elétrico:',
+    options: [
+      { id: 'a', text: 'Permanece igual' },
+      { id: 'b', text: 'Dobra de intensidade' },
+      { id: 'c', text: 'Reduz-se à metade' },
+      { id: 'd', text: 'Reduz-se a um quarto do valor original' }
+    ],
+    correctOptionId: 'd',
+    explanation: 'Como o campo elétrico é inversamente proporcional ao quadrado da distância (E ∝ 1/r²), dobrando a distância, o campo se reduz a 1/2² = 1/4 do valor original.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_eletrostatica_10',
+    chapter: 'Energia Potencial e Potencial Elétrico',
+    topicId: 'fis_eletrostatica',
+    subject: 'Física',
+    prompt: 'O potencial elétrico em um ponto do espaço, gerado por uma carga puntiforme, representa:',
+    options: [
+      { id: 'a', text: 'A energia potencial elétrica por unidade de carga que uma carga de prova teria se colocada naquele ponto' },
+      { id: 'b', text: 'A força elétrica que atuaria sobre uma carga de prova naquele ponto' },
+      { id: 'c', text: 'A massa da carga geradora do campo' },
+      { id: 'd', text: 'Sempre um valor igual a zero, para qualquer ponto' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'O potencial elétrico V em um ponto é definido como V = Ep/q, a energia potencial elétrica por unidade de carga que uma carga de prova teria se posicionada nesse ponto — uma grandeza escalar, diferente do campo elétrico, que é vetorial.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_eletrostatica_11',
+    chapter: 'Energia Potencial e Potencial Elétrico',
+    topicId: 'fis_eletrostatica',
+    subject: 'Física',
+    prompt: 'Uma carga de prova q = 2×10⁻⁶ C está em um ponto onde o potencial elétrico é 500 V. Qual é a energia potencial elétrica dessa carga nesse ponto?',
+    options: [
+      { id: 'a', text: '10⁻³ J' },
+      { id: 'b', text: '10⁻² J' },
+      { id: 'c', text: '2,5×10² J' },
+      { id: 'd', text: '10³ J' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Ep = q×V = 2×10⁻⁶ × 500 = 10⁻³ J.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_eletrostatica_12',
+    chapter: 'Energia Potencial e Potencial Elétrico',
+    topicId: 'fis_eletrostatica',
+    subject: 'Física',
+    prompt: 'O trabalho realizado pela força elétrica ao mover uma carga entre dois pontos de mesmo potencial elétrico (pontos de uma mesma superfície equipotencial) é:',
+    options: [
+      { id: 'a', text: 'Sempre nulo, já que não há variação de potencial (e, portanto, de energia potencial elétrica)' },
+      { id: 'b', text: 'Sempre máximo' },
+      { id: 'c', text: 'Sempre negativo' },
+      { id: 'd', text: 'Depende exclusivamente da massa da carga' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Como o trabalho da força elétrica é W = -ΔEp = -q×ΔV, e entre dois pontos de mesmo potencial ΔV = 0, o trabalho realizado é sempre nulo — por isso as superfícies equipotenciais são úteis para identificar deslocamentos sem realização de trabalho elétrico.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_eletrostatica_13',
+    chapter: 'Mapeamento do Campo Elétrico: Linhas de Força e Superfícies Equipotenciais',
+    topicId: 'fis_eletrostatica',
+    subject: 'Física',
+    prompt: 'As superfícies equipotenciais de um campo elétrico são sempre:',
+    options: [
+      { id: 'a', text: 'Perpendiculares às linhas de campo elétrico em cada ponto' },
+      { id: 'b', text: 'Paralelas às linhas de campo elétrico em cada ponto' },
+      { id: 'c', text: 'Coincidentes com as próprias linhas de campo' },
+      { id: 'd', text: 'Sempre planas, independentemente da configuração de cargas' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'As superfícies equipotenciais são sempre perpendiculares às linhas de campo elétrico em cada ponto — uma propriedade geral que decorre do fato de que não há realização de trabalho ao se mover uma carga ao longo de uma superfície equipotencial, o que só é possível se a força elétrica (na direção do campo) for perpendicular ao deslocamento.',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_fis_eletrostatica_14',
+    chapter: 'Campo Elétrico Uniforme: Abordagem Escalar e Abordagem Vetorial',
+    topicId: 'fis_eletrostatica',
+    subject: 'Física',
+    prompt: 'Um campo elétrico uniforme é caracterizado por ter, em toda a região considerada:',
+    options: [
+      { id: 'a', text: 'Módulo, direção e sentido constantes' },
+      { id: 'b', text: 'Módulo variável, mas direção e sentido constantes' },
+      { id: 'c', text: 'Direção variável, mas módulo constante' },
+      { id: 'd', text: 'Sempre módulo igual a zero' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Um campo elétrico uniforme tem módulo, direção e sentido idênticos em todos os pontos da região considerada — representado graficamente por linhas de campo paralelas e igualmente espaçadas, como o campo entre duas placas planas e paralelas com cargas opostas.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_fis_eletrostatica_15',
+    chapter: 'Campo Elétrico Uniforme: Abordagem Escalar e Abordagem Vetorial',
+    topicId: 'fis_eletrostatica',
+    subject: 'Física',
+    prompt: 'Em um campo elétrico uniforme de módulo E, a diferença de potencial (U) entre dois pontos separados por uma distância d (medida na direção do campo) é dada por:',
+    options: [
+      { id: 'a', text: 'U = E × d' },
+      { id: 'b', text: 'U = E / d' },
+      { id: 'c', text: 'U = E + d' },
+      { id: 'd', text: 'U = d / E' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'No campo elétrico uniforme, a relação entre a diferença de potencial e o campo elétrico é U = E×d, onde d é a distância entre os dois pontos medida ao longo da direção do campo.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_eletrostatica_16',
+    chapter: 'Dinâmica das Cargas Elétricas',
+    topicId: 'fis_eletrostatica',
+    subject: 'Física',
+    prompt: 'Uma carga elétrica positiva, ao ser abandonada em repouso dentro de um campo elétrico uniforme, tende a se mover:',
+    options: [
+      { id: 'a', text: 'No mesmo sentido do campo elétrico' },
+      { id: 'b', text: 'No sentido contrário ao do campo elétrico' },
+      { id: 'c', text: 'Perpendicularmente ao campo elétrico' },
+      { id: 'd', text: 'Permanece sempre em repouso, independentemente do campo' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'Uma carga positiva sofre uma força elétrica no mesmo sentido do campo elétrico (F = qE, com q > 0), acelerando-se nesse sentido — diferente de uma carga negativa, que se move no sentido contrário ao campo.',
+    difficulty: 'medium'
+  },
+  {
+    id: 'q_fis_eletrostatica_17',
+    chapter: 'Dinâmica das Cargas Elétricas',
+    topicId: 'fis_eletrostatica',
+    subject: 'Física',
+    prompt: 'Uma carga elétrica de 4×10⁻⁶ C, com massa 2×10⁻³ kg, é submetida a um campo elétrico uniforme de 300 N/C. Desprezando a gravidade, qual é a aceleração dessa carga?',
+    options: [
+      { id: 'a', text: '0,3 m/s²' },
+      { id: 'b', text: '0,6 m/s²' },
+      { id: 'c', text: '1,2 m/s²' },
+      { id: 'd', text: '2,4 m/s²' }
+    ],
+    correctOptionId: 'b',
+    explanation: 'A força elétrica é F = q×E = 4×10⁻⁶ × 300 = 1,2×10⁻³ N. Pela Segunda Lei de Newton: a = F/m = 1,2×10⁻³/2×10⁻³ = 0,6 m/s².',
+    difficulty: 'hard'
+  },
+  {
+    id: 'q_fis_eletrostatica_18',
+    chapter: 'Mapeamento do Campo Elétrico: Linhas de Força e Superfícies Equipotenciais',
+    topicId: 'fis_eletrostatica',
+    subject: 'Física',
+    prompt: 'Em um mapeamento de campo elétrico, quanto mais próximas estiverem as linhas de campo em uma determinada região:',
+    options: [
+      { id: 'a', text: 'Mais intenso é o campo elétrico nessa região' },
+      { id: 'b', text: 'Mais fraco é o campo elétrico nessa região' },
+      { id: 'c', text: 'Não há relação entre a densidade de linhas e a intensidade do campo' },
+      { id: 'd', text: 'O campo elétrico é necessariamente nulo' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A densidade (concentração) das linhas de campo em uma região é proporcional à intensidade do campo elétrico ali: quanto mais próximas as linhas, mais intenso o campo — por isso, próximo a uma carga puntiforme (onde as linhas convergem), o campo é mais forte do que longe dela.',
+    difficulty: 'medium'
+  },
   // Física — Fundamentos de Ondas e Oscilações
   {
     id: 'q_fis_ondas_fundamentos_1',
@@ -10974,6 +13198,38 @@ export const mockQuestions: Question[] = [
     correctOptionId: 'b',
     explanation: 'Quando duas ondas se sobrepõem em fase, seus efeitos se somam, resultando em interferência construtiva, com amplitude igual à soma das amplitudes individuais.',
     difficulty: 'hard'
+  },
+  {
+    id: 'q_fis_ondas_fundamentos_6',
+    chapter: 'Equação Fundamental da Ondulatória',
+    topicId: 'fis_ondas_fundamentos',
+    subject: 'Física',
+    prompt: 'A equação fundamental da ondulatória relaciona a velocidade de propagação (v), a frequência (f) e o comprimento de onda (λ) pela fórmula:',
+    options: [
+      { id: 'a', text: 'v = f × λ' },
+      { id: 'b', text: 'v = f / λ' },
+      { id: 'c', text: 'v = f + λ' },
+      { id: 'd', text: 'λ = v + f' }
+    ],
+    correctOptionId: 'a',
+    explanation: 'A equação fundamental da ondulatória é v = f×λ, relacionando a velocidade de propagação de uma onda com sua frequência e seu comprimento de onda — válida para qualquer tipo de onda periódica.',
+    difficulty: 'easy'
+  },
+  {
+    id: 'q_fis_ondas_fundamentos_7',
+    chapter: 'Equação Fundamental da Ondulatória',
+    topicId: 'fis_ondas_fundamentos',
+    subject: 'Física',
+    prompt: 'Uma onda tem frequência de 50 Hz e comprimento de onda de 4 m. Qual é sua velocidade de propagação?',
+    options: [
+      { id: 'a', text: '12,5 m/s' },
+      { id: 'b', text: '54 m/s' },
+      { id: 'c', text: '100 m/s' },
+      { id: 'd', text: '200 m/s' }
+    ],
+    correctOptionId: 'd',
+    explanation: 'v = f×λ = 50×4 = 200 m/s.',
+    difficulty: 'easy'
   },
   // Física — Física Moderna
   {
