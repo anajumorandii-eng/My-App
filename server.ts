@@ -15,6 +15,7 @@ import { FirestoreAiMetricsRecorder } from './server/ai/metrics';
 import { FirestoreApostilaReferenceStore } from './server/ai/apostilaReferenceStore';
 import { createAdminRouter } from './server/admin/routes';
 import { createApostilaIngestRouter } from './server/admin/apostilaIngestRoutes';
+import { createLiteraryAdminRouter } from './server/literary/literaryAdminRoutes';
 import { createPushRouter, createReviewReminderRouter } from './server/push/routes';
 import { configureWebPush, loadVapidConfig } from './server/push/webPush';
 import { createPodcastAudioRouter } from './server/podcast/routes';
@@ -28,6 +29,17 @@ const PORT = Number(process.env.PORT) || 3000;
 // de chegar no parser de 20mb desta rota se estivesse depois. Montada aqui,
 // ela responde e encerra a requisição antes do parser global ser atingido.
 app.use('/api/internal', express.json({ limit: '20mb' }), createApostilaIngestRouter(getFirestore(getFirebaseAdminApp()), process.env.APOSTILA_INGEST_SECRET));
+
+// Feature flag literary_works (seção 13 do roteiro de Obras Obrigatórias):
+// enquanto não estiver pronta pra uso real, as rotas nem existem — nada de
+// endpoint "desligado" respondendo 404 de propósito, ele simplesmente não
+// é montado.
+if (process.env.LITERARY_WORKS_ENABLED === 'true') {
+  // Mesmo motivo do /api/internal acima: PDFs de obra em base64 passam
+  // longe dos 64kb do parser global — precisa do parser de 50mb próprio,
+  // montado antes.
+  app.use('/api/admin/literary', express.json({ limit: '50mb' }), firebaseAuthMiddleware(), requireAdmin, createLiteraryAdminRouter(getFirestore(getFirebaseAdminApp())));
+}
 
 app.use(express.json({ limit: '64kb' }));
 app.use(cookieParser());
