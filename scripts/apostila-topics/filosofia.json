@@ -1,0 +1,97 @@
+[
+  {
+    "id": "fil_origem_pre_socraticos",
+    "name": "Origens da Filosofia e os Pré-Socráticos",
+    "chapters": [
+      "O Nascimento da Filosofia: do Mito ao Logos",
+      "Os Filósofos da Physis: Tales, Anaximandro e Anaxímenes",
+      "Heráclito e Parmênides: o Ser e o Devir",
+      "Os Sofistas e a Crise da Verdade"
+    ]
+  },
+  {
+    "id": "fil_socrates_platao",
+    "name": "Sócrates e Platão",
+    "chapters": [
+      "O Método Socrático e a Maiêutica",
+      "A Teoria das Ideias de Platão",
+      "O Mito da Caverna",
+      "A Alegoria da Linha Dividida e o Conhecimento"
+    ]
+  },
+  {
+    "id": "fil_aristoteles",
+    "name": "Aristóteles",
+    "chapters": [
+      "Lógica e Metafísica Aristotélicas",
+      "A Ética a Nicômaco e a Doutrina do Meio-Termo",
+      "Política Aristotélica: o Homem como Animal Político"
+    ]
+  },
+  {
+    "id": "fil_medieval",
+    "name": "Filosofia Medieval",
+    "chapters": [
+      "Patrística e Santo Agostinho",
+      "Escolástica e Santo Tomás de Aquino",
+      "A Relação entre Fé e Razão"
+    ]
+  },
+  {
+    "id": "fil_moderna_racionalismo_empirismo",
+    "name": "Filosofia Moderna: Racionalismo e Empirismo",
+    "chapters": [
+      "Descartes e o Método: a Dúvida Hiperbólica",
+      "Racionalismo Continental: Espinosa e Leibniz",
+      "Empirismo Britânico: Locke, Berkeley e Hume",
+      "A Crítica de Hume à Causalidade"
+    ]
+  },
+  {
+    "id": "fil_contratualismo_iluminismo",
+    "name": "Contratualismo Político e Iluminismo",
+    "chapters": [
+      "Hobbes e o Estado de Natureza",
+      "Locke e os Direitos Naturais",
+      "Rousseau e a Vontade Geral",
+      "O Ideal Iluminista de Razão e Progresso"
+    ]
+  },
+  {
+    "id": "fil_kant_idealismo",
+    "name": "Kant e o Idealismo Alemão",
+    "chapters": [
+      "A Crítica da Razão Pura",
+      "A Ética Kantiana e o Imperativo Categórico",
+      "Hegel e a Dialética"
+    ]
+  },
+  {
+    "id": "fil_marx_critica_sociedade",
+    "name": "Marx e a Crítica à Sociedade Capitalista",
+    "chapters": [
+      "O Materialismo Histórico",
+      "Alienação e Mais-Valia",
+      "A Luta de Classes na Filosofia Marxista"
+    ]
+  },
+  {
+    "id": "fil_niilismo_existencialismo",
+    "name": "Nietzsche, Existencialismo e Filosofia Contemporânea",
+    "chapters": [
+      "Nietzsche e a Crítica aos Valores Morais",
+      "O Existencialismo de Sartre",
+      "A Escola de Frankfurt e a Indústria Cultural",
+      "Foucault e as Relações de Poder"
+    ]
+  },
+  {
+    "id": "fil_etica_politica_contemporanea",
+    "name": "Ética e Política Contemporâneas",
+    "chapters": [
+      "Justiça e Direitos Humanos",
+      "Ética Aplicada e Bioética",
+      "Filosofia Política Contemporânea"
+    ]
+  }
+]

@@ -15,6 +15,8 @@ const SUBJECT_COLORS: Record<string, string> = {
   História: 'bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300',
   Português: 'bg-violet-50 dark:bg-violet-900/20 text-violet-700 dark:text-violet-300',
   Inglês: 'bg-sky-50 dark:bg-sky-900/20 text-sky-700 dark:text-sky-300',
+  Filosofia: 'bg-stone-50 dark:bg-stone-900/20 text-stone-700 dark:text-stone-300',
+  Sociologia: 'bg-purple-50 dark:bg-purple-900/20 text-purple-700 dark:text-purple-300',
 };
 
 type DurationBucket = 'curto' | 'medio' | 'longo';
