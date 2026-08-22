@@ -4,6 +4,7 @@ import { Firestore } from 'firebase-admin/firestore';
 import { LiteraryWork, WorkEdition, ExamRequirement, WorkUnit, AuditStatus } from '../../src/types/literaryWorks';
 import { uploadWorkEditionSource, computeFileHash, getSignedReadUrl, downloadWorkEditionSource } from './literaryStorage';
 import { extractPagesText, segmentIntoUnits } from './literarySegmenter';
+import { SEED_WORKS, SEED_EXAM_REQUIREMENTS } from './seedCatalog';
 
 // A obra declara o gênero em texto livre (LiteraryWork.genre, ex.: "poesia",
 // "romance", "canção/poesia musicada") — o segmentador só precisa saber se
@@ -21,6 +22,24 @@ function segmenterHintFromGenre(genre: string): 'chapter' | 'poem' | 'song' {
 // (a própria Ana ou eu) deve poder subir/alterar material de obra.
 export function createLiteraryAdminRouter(db: Firestore): Router {
   const router = Router();
+
+  // Semeia de uma vez as 18 LiteraryWork + 18 ExamRequirement já curadas na
+  // Fase 0 (ver seedCatalog.ts e AUDITORIA_FASE0.md) — poupa preencher os
+  // ~180 campos manualmente pelo formulário. Idempotente: usa os ids fixos
+  // do seed (.set() sem merge sobrescreve com o mesmo valor, então rodar de
+  // novo não duplica nada). Não cria WorkEdition — o arquivo em si ainda
+  // precisa ser enviado por edição, pra manter o hash/proveniência reais.
+  router.post('/seed', async (_req, res) => {
+    const batch = db.batch();
+    for (const work of SEED_WORKS) {
+      batch.set(db.collection('literaryWorks').doc(work.id), work);
+    }
+    for (const requirement of SEED_EXAM_REQUIREMENTS) {
+      batch.set(db.collection('literaryWorks').doc(requirement.workId).collection('examRequirements').doc(requirement.id), requirement);
+    }
+    await batch.commit();
+    res.json({ works: SEED_WORKS.length, examRequirements: SEED_EXAM_REQUIREMENTS.length });
+  });
 
   router.post('/works', async (req, res) => {
     const { slug, title, author, originalYear, genre, language } = req.body ?? {};

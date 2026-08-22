@@ -83,6 +83,15 @@ export default function AdminObras() {
     try { await fn(); } catch (cause) { setError((cause as Error).message); } finally { setBusy(false); }
   }
 
+  function handleSeed() {
+    withBusy(async () => {
+      if (!token) return;
+      const result = await adminFetch<{ works: number; examRequirements: number }>('/seed', token, { method: 'POST' });
+      await loadWorks(token);
+      window.alert(`Catálogo semeado: ${result.works} obras e ${result.examRequirements} exigências de banca.`);
+    });
+  }
+
   function handleCreateWork(form: HTMLFormElement) {
     const data = new FormData(form);
     withBusy(async () => {
@@ -178,6 +187,11 @@ export default function AdminObras() {
 
     <section className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-5">
       <h2 className="font-semibold flex items-center mb-4"><BookOpen className="w-5 h-5 mr-2" />Obras</h2>
+      {works.length === 0 && (
+        <button disabled={busy} onClick={handleSeed} className="mb-4 bg-emerald-600 text-white rounded-lg px-3 py-1.5 text-sm disabled:opacity-50">
+          Semear as 18 obras do ciclo 2027 (Fase 0)
+        </button>
+      )}
       <div className="flex flex-wrap gap-2 mb-4">
         {works.map((w) => (
           <button key={w.id} onClick={() => setSelectedWorkId(w.id)}
