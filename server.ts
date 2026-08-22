@@ -23,6 +23,12 @@ import { GeminiTtsService } from './server/podcast/ttsService';
 const app = express();
 const PORT = Number(process.env.PORT) || 3000;
 
+// Precisa vir ANTES do parser global de 64kb abaixo: como esse último não
+// tem path (roda pra toda rota), ele rejeitaria o corpo grande antes mesmo
+// de chegar no parser de 20mb desta rota se estivesse depois. Montada aqui,
+// ela responde e encerra a requisição antes do parser global ser atingido.
+app.use('/api/internal', express.json({ limit: '20mb' }), createApostilaIngestRouter(getFirestore(getFirebaseAdminApp()), process.env.APOSTILA_INGEST_SECRET));
+
 app.use(express.json({ limit: '64kb' }));
 app.use(cookieParser());
 
