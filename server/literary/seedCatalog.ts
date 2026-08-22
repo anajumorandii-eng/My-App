@@ -41,12 +41,10 @@ export const SEED_WORKS: LiteraryWork[] = [
   { id: 'cancoes-escolhidas-14-letras', slug: 'cancoes-escolhidas-14-letras', title: 'Canções Escolhidas (14 letras)', author: 'Paulo César Pinheiro', genre: 'canção/poesia musicada', language: 'pt-BR' },
 ];
 
-// As 2 obras Unicamp ainda sem material-fonte (bloqueador da Fase 0, seção
-// 3.3 do roteiro) — sem WorkEdition ainda. Não inventar/baixar cópia de
-// procedência desconhecida: aguardando a Ana Júlia enviar a fonte
-// autorizada de cada uma.
-const PENDING_MATERIAL_WORK_IDS = new Set(['olhos-dagua', 'cancoes-escolhidas-14-letras']);
-export const PENDING_MATERIAL_WORKS = SEED_WORKS.filter((w) => PENDING_MATERIAL_WORK_IDS.has(w.id));
+// Os 2 materiais que bloqueavam a Fase 0 (seção 3.3 do roteiro) foram
+// enviados pela Ana Júlia em 22/08/2026 — ver as edições correspondentes
+// logo abaixo. Nenhuma obra segue sem material-fonte.
+export const PENDING_MATERIAL_WORKS: LiteraryWork[] = [];
 
 export const SEED_EDITIONS: WorkEdition[] = [
   {
@@ -169,6 +167,32 @@ export const SEED_EDITIONS: WorkEdition[] = [
     // tradutor identificado nesta auditoria (Édson Braga); falta mapear os 8 contos
     // obrigatórios como WorkUnit na segmentação.
   },
+  {
+    id: 'olhos-dagua-ed1', workId: 'olhos-dagua', publisher: 'Pallas Editora', year: 2014,
+    pdfPageCount: 83, sourceFileId: 'pending-ingestion',
+    fileHash: '96d810fadda2f7354be7e93d1e3d5565653ab101b9559d1b895a1bf5d994d32e',
+    rightsStatus: 'authorized', integrityStatus: 'verified', extractionStatus: 'needs_review',
+    // enviado pela Ana Júlia em 22/08/2026, resolvendo o bloqueador da Fase 0.
+    // achado: conto real termina na pág. ~71; págs. 72-83 são aviso de site de
+    // digitalização não-oficial + catálogo comercial da Pallas — mesmo tratamento
+    // dado a "A visão das plantas" e "Canção para ninar menino grande" (excluir do
+    // corpus antes da segmentação).
+  },
+  {
+    id: 'cancoes-escolhidas-14-letras-ed1', workId: 'cancoes-escolhidas-14-letras',
+    // fonte é .docx, não PDF — pdfPageCount não se aplica; contagem real é de 14
+    // letras (canções), não de páginas. O modelo WorkEdition assume PDF; revisitar
+    // esse campo se mais fontes não-PDF entrarem no catálogo.
+    pdfPageCount: 0, sourceFileId: 'pending-ingestion',
+    fileHash: '8132656bb3b1c8f396525bf96c7f5ec49e978b0edbbb43d23fff89a846992dc2',
+    rightsStatus: 'authorized', integrityStatus: 'verified', extractionStatus: 'verified',
+    // enviado pela Ana Júlia em 22/08/2026, resolvendo o bloqueador da Fase 0.
+    // arquivo limpo, sem contaminação de site de download. As 14 letras
+    // confirmadas: Viagem, Canto das Três Raças, Estrela da Terra, Mordaça, Na
+    // Volta que o Mundo Dá, Pesadelo, Vento Bravo, Evangelho, Cordilheira,
+    // Desenredo, Navio Fantasma, O Dia em que o Morro Descer e Não For Carnaval,
+    // Velho Arvoredo e Vontade de Chorar.
+  },
 ];
 
 export const SEED_EXAM_REQUIREMENTS: ExamRequirement[] = [
@@ -189,8 +213,8 @@ export const SEED_EXAM_REQUIREMENTS: ExamRequirement[] = [
   { id: 'morangos-mofados-unicamp-2027', workId: 'morangos-mofados', board: 'UNICAMP', examCycle: '2027', officialListUrl: UNICAMP_OFFICIAL_LIST_URL, officiallyVerifiedAt: VERIFIED_AT, requiredScope: '6 contos: "Diálogo", "Além do Ponto", "Terça-Feira Gorda", "Pêra, uva ou maçã?", "O dia em que Júpiter encontrou Saturno" e "Aqueles dois"', active: true },
   { id: 'gonzaga-de-sa-unicamp-2027', workId: 'gonzaga-de-sa', board: 'UNICAMP', examCycle: '2027', officialListUrl: UNICAMP_OFFICIAL_LIST_URL, officiallyVerifiedAt: VERIFIED_AT, requiredScope: 'obra completa', active: true },
   { id: 'no-seu-pescoco-unicamp-2027', workId: 'no-seu-pescoco', board: 'UNICAMP', examCycle: '2027', officialListUrl: UNICAMP_OFFICIAL_LIST_URL, officiallyVerifiedAt: VERIFIED_AT, requiredScope: '12 contos (obra completa)', active: true },
-  { id: 'olhos-dagua-unicamp-2027', workId: 'olhos-dagua', board: 'UNICAMP', examCycle: '2027', officialListUrl: UNICAMP_OFFICIAL_LIST_URL, officiallyVerifiedAt: VERIFIED_AT, requiredScope: 'obra completa — material-fonte ainda ausente (bloqueador Fase 0)', active: true },
+  { id: 'olhos-dagua-unicamp-2027', workId: 'olhos-dagua', board: 'UNICAMP', examCycle: '2027', officialListUrl: UNICAMP_OFFICIAL_LIST_URL, officiallyVerifiedAt: VERIFIED_AT, requiredScope: 'obra completa', active: true },
   { id: 'bras-cubas-unicamp-2027', workId: 'bras-cubas', board: 'UNICAMP', examCycle: '2027', officialListUrl: UNICAMP_OFFICIAL_LIST_URL, officiallyVerifiedAt: VERIFIED_AT, requiredScope: 'obra completa', active: true },
   { id: 'funerais-da-mamae-grande-unicamp-2027', workId: 'funerais-da-mamae-grande', board: 'UNICAMP', examCycle: '2027', officialListUrl: UNICAMP_OFFICIAL_LIST_URL, officiallyVerifiedAt: VERIFIED_AT, requiredScope: '8 contos (obra completa; mapeamento de cada conto pendente na Fase 1)', active: true },
-  { id: 'cancoes-escolhidas-14-letras-unicamp-2027', workId: 'cancoes-escolhidas-14-letras', board: 'UNICAMP', examCycle: '2027', officialListUrl: UNICAMP_OFFICIAL_LIST_URL, officiallyVerifiedAt: VERIFIED_AT, requiredScope: '14 letras oficiais de Paulo César Pinheiro — lista exata e material-fonte ainda ausentes (bloqueador Fase 0)', active: true },
+  { id: 'cancoes-escolhidas-14-letras-unicamp-2027', workId: 'cancoes-escolhidas-14-letras', board: 'UNICAMP', examCycle: '2027', officialListUrl: UNICAMP_OFFICIAL_LIST_URL, officiallyVerifiedAt: VERIFIED_AT, requiredScope: '14 letras: Viagem, Canto das Três Raças, Estrela da Terra, Mordaça, Na Volta que o Mundo Dá, Pesadelo, Vento Bravo, Evangelho, Cordilheira, Desenredo, Navio Fantasma, O Dia em que o Morro Descer e Não For Carnaval, Velho Arvoredo e Vontade de Chorar', active: true },
 ];

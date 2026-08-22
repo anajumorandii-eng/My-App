@@ -84,25 +84,46 @@ scan puro exigindo OCR.
 - **Nebulosas**: edição 2024 traz introdução e notas críticas — precisam ser
   segmentadas como paratexto, separadas do corpo dos 44 poemas.
 
-## 5. Bloqueadores ainda abertos (não resolvidos nesta auditoria)
+## 5. Os 2 bloqueadores de material — resolvidos em 22/08/2026
 
-1. **Material-fonte ausente**: `Olhos d'Água` (Conceição Evaristo) e
-   `Canções escolhidas — 14 letras` (Paulo César Pinheiro) — confirmados
-   como parte da lista Unicamp 2027, mas sem PDF/fonte enviada. Registradas
-   no catálogo (`SEED_EXAM_REQUIREMENTS`) com `requiredScope` sinalizando a
-   pendência. **Preciso que a Ana Júlia envie a fonte autorizada de cada
-   uma** (não faz sentido eu baixar uma cópia de procedência desconhecida da
-   internet para um material que vai virar conteúdo de estudo citável).
-2. **Proveniência do arquivo "Geografia e o Cristo Cigano"**: veio de um
-   site de digitalização não-oficial ("eLivros"). A autorização de
-   processamento já dada pela Ana Júlia cobre o uso deste arquivo dentro do
-   próprio aplicativo de estudo, mas vale registrar que, se surgir uma cópia
-   de fonte editorial oficial no futuro, é preferível substituir por ela.
+A Ana Júlia enviou os dois materiais que faltavam:
 
-## 6. Status geral
+- **Olhos d'Água** (Conceição Evaristo, Pallas Editora, 2014) — 83 páginas
+  PDF. Mesmo padrão de contaminação já visto em outros arquivos: págs. 1
+  trazem aviso de site de digitalização não-oficial ("Le Livros"/
+  LeLivros.org); o conto real termina na pág. ~71; págs. 72-83 trazem um
+  SEGUNDO aviso de outro site ("estradadoslivros.org") seguido de catálogo
+  comercial da Pallas. Ambos os trechos precisam ser excluídos do corpus de
+  IA antes da segmentação (seção 2.2 do roteiro).
+- **Canções Escolhidas — 14 letras** (Paulo César Pinheiro) — enviado como
+  `.docx`, não PDF (o modelo `WorkEdition.pdfPageCount` assume PDF; ficou
+  registrado como `0` com nota explicando a exceção). Arquivo limpo, sem
+  contaminação de site de download. Conferidas as 14 letras exatas: Viagem,
+  Canto das Três Raças, Estrela da Terra, Mordaça, Na Volta que o Mundo Dá,
+  Pesadelo, Vento Bravo, Evangelho, Cordilheira, Desenredo, Navio Fantasma,
+  O Dia em que o Morro Descer e Não For Carnaval, Velho Arvoredo e Vontade
+  de Chorar — bate exatamente com as "14 letras" exigidas pelo roteiro.
 
-Dos 18 requisitos oficiais do ciclo 2027: 16 têm PDF-fonte auditado (todos
-com `rightsStatus: authorized`, conforme autorização já confirmada pela Ana
-Júlia); 2 seguem sem material. Nenhum PDF é servido publicamente — todos
-seguem em `obras-brutos/`, fora de `public/` e do bundle do front-end, até a
-Fase 1 mover cada um pro bucket privado via o painel de ingestão.
+Com isso, os 18 requisitos oficiais do ciclo 2027 têm material-fonte
+auditado. Nenhum bloqueador de material segue aberto.
+
+## 6. Achado transversal: sites de digitalização não-oficiais
+
+Três dos 18 arquivos («Geografia e o Cristo Cigano», «Olhos d'Água» e,
+indiretamente, o padrão se repete) vieram de sites de digitalização não
+autorizados pela editora (avisos "eLivros"/"Le Livros"/
+"estradadoslivros.org" embutidos no próprio arquivo). A autorização de
+processamento já dada pela Ana Júlia cobre o uso desses arquivos dentro do
+próprio aplicativo de estudo, mas os avisos em si não são conteúdo da obra
+e devem ser excluídos do corpus de IA na Etapa C (segmentação). Se no
+futuro surgir uma cópia de fonte editorial oficial para algum desses
+títulos, é preferível substituir.
+
+## 7. Status geral
+
+Todos os 18 requisitos oficiais do ciclo 2027 (9 Fuvest + 9 Unicamp) têm
+material-fonte auditado, com `rightsStatus: authorized` (autorização já
+confirmada pela Ana Júlia). Nenhum PDF/arquivo é servido publicamente —
+todos seguem em `obras-brutos/`, fora de `public/` e do bundle do
+front-end, até a Fase 1 mover cada um pro bucket privado via o painel de
+ingestão.

@@ -25,12 +25,12 @@ test('catálogo Fase 0: toda ExamRequirement aponta pra uma obra existente e tem
   }
 });
 
-test('catálogo Fase 0: 16 obras com edição auditada + 2 com material ainda ausente', () => {
-  assert.equal(SEED_EDITIONS.length, 16);
-  assert.equal(PENDING_MATERIAL_WORKS.length, 2);
+test('catálogo Fase 0: todas as 18 obras têm edição auditada, nenhuma com material pendente', () => {
+  assert.equal(SEED_EDITIONS.length, 18);
+  assert.equal(PENDING_MATERIAL_WORKS.length, 0);
   const editionWorkIds = new Set(SEED_EDITIONS.map((e) => e.workId));
-  for (const work of PENDING_MATERIAL_WORKS) {
-    assert.ok(!editionWorkIds.has(work.id), `${work.id} tem edição mas deveria estar pendente de material`);
+  for (const work of SEED_WORKS) {
+    assert.ok(editionWorkIds.has(work.id), `${work.id} não tem WorkEdition cadastrada`);
   }
 });
 
