@@ -7,7 +7,6 @@ export interface LiteraryWork {
   author: string;
   movement: string;
   examAngle: string;
-  uncertain?: boolean;
 }
 
 export interface ExamLiteraryList {
@@ -21,14 +20,13 @@ export const literaryWorks: ExamLiteraryList[] = [
   {
     board: 'Fuvest',
     cycle: 'Vestibular 2027 (ciclo de obras só de autoras mulheres)',
-    note: 'Os títulos 1 e 4 desta lista tiveram confirmação um pouco mais frágil na pesquisa (existe uma troca parecida para o ciclo 2028) — vale conferir diretamente em fuvest.br antes de estudar por eles com 100% de confiança.',
+    note: 'Lista das 9 obras confirmada (auditoria Fase 0, 22/08/2026) contra fuvest.br/fuvest-renova-sua-lista-de-leituras-obrigatorias-para-o-vestibular-2026-2029/ e cobertura jornalística independente (CNN Brasil, Anglo). Opúsculo Humanitário e Caminho de pedras — antes marcadas como incertas — estão confirmadas para o ciclo 2027.',
     works: [
       {
         title: 'Opúsculo Humanitário',
         author: 'Nísia Floresta',
         movement: 'Romantismo (ensaio/manifesto)',
         examAngle: 'Uma das primeiras defesas públicas dos direitos das mulheres e da educação feminina no Brasil. Questões tendem a cobrar a tese central — educação como caminho de emancipação — e o contexto histórico do Brasil oitocentista.',
-        uncertain: true,
       },
       {
         title: 'Nebulosas',
@@ -47,7 +45,6 @@ export const literaryWorks: ExamLiteraryList[] = [
         author: 'Rachel de Queiroz',
         movement: 'Modernismo — 2ª fase ("Romance de 30"), regionalismo social',
         examAngle: 'A protagonista Noemi, casada, envolve-se com um militante socialista. Tema central é a jornada de emancipação política e pessoal da protagonista contra normas conservadoras — ângulo recorrente: luta de classes + autonomia feminina.',
-        uncertain: true,
       },
       {
         title: 'A Paixão Segundo G.H.',
