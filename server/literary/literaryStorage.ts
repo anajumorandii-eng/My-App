@@ -16,15 +16,25 @@ export function computeFileHash(buffer: Buffer): string {
   return createHash('sha256').update(buffer).digest('hex');
 }
 
-function sourceFilePath(workId: string, editionId: string): string {
-  return `${PRIVATE_PREFIX}/${workId}/${editionId}.pdf`;
+// Quase toda edição é PDF, mas "Canções Escolhidas — 14 letras" (Paulo César
+// Pinheiro) chegou como .docx (ver AUDITORIA_FASE0.md) — sem conversão
+// confiável disponível no pipeline, o upload aceita o formato original em
+// vez de forçar uma conversão frágil.
+const EXTENSION_BY_MIME: Record<string, string> = {
+  'application/pdf': 'pdf',
+  'application/vnd.openxmlformats-officedocument.wordprocessingml.document': 'docx',
+};
+
+function sourceFilePath(workId: string, editionId: string, mimeType: string): string {
+  const ext = EXTENSION_BY_MIME[mimeType] ?? 'bin';
+  return `${PRIVATE_PREFIX}/${workId}/${editionId}.${ext}`;
 }
 
-/** Sobe o PDF original pro bucket privado. Retorna o sourceFileId (o próprio path) e o hash, pra WorkEdition. */
-export async function uploadWorkEditionSource(workId: string, editionId: string, fileBuffer: Buffer): Promise<{ sourceFileId: string; fileHash: string }> {
-  const path = sourceFilePath(workId, editionId);
+/** Sobe o arquivo original (PDF na quase totalidade dos casos) pro bucket privado. Retorna o sourceFileId (o próprio path) e o hash, pra WorkEdition. */
+export async function uploadWorkEditionSource(workId: string, editionId: string, fileBuffer: Buffer, mimeType = 'application/pdf'): Promise<{ sourceFileId: string; fileHash: string }> {
+  const path = sourceFilePath(workId, editionId, mimeType);
   const file = bucket().file(path);
-  await file.save(fileBuffer, { contentType: 'application/pdf', private: true });
+  await file.save(fileBuffer, { contentType: mimeType, private: true });
   return { sourceFileId: path, fileHash: computeFileHash(fileBuffer) };
 }
 

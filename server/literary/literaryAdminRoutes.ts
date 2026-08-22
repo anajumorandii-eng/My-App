@@ -42,7 +42,7 @@ export function createLiteraryAdminRouter(db: Firestore): Router {
   // processamento de conteúdo.
   router.post('/works/:workId/editions', async (req, res) => {
     const { workId } = req.params;
-    const { fileBase64, publisher, edition, year, isbn, translator, organizer, printedPageCount, rightsStatus } = req.body ?? {};
+    const { fileBase64, mimeType, publisher, edition, year, isbn, translator, organizer, printedPageCount, rightsStatus } = req.body ?? {};
     if (!fileBase64 || !rightsStatus) {
       return res.status(400).json({ error: 'Campos obrigatórios: fileBase64, rightsStatus.', code: 'INVALID_EDITION' });
     }
@@ -60,7 +60,9 @@ export function createLiteraryAdminRouter(db: Firestore): Router {
     }
 
     const editionId = randomUUID();
-    const { sourceFileId } = await uploadWorkEditionSource(workId, editionId, fileBuffer);
+    // Quase toda edição é PDF; "Canções Escolhidas" (Paulo César Pinheiro)
+    // chegou como .docx — ver literaryStorage.ts.
+    const { sourceFileId } = await uploadWorkEditionSource(workId, editionId, fileBuffer, mimeType || 'application/pdf');
 
     // Contagem de páginas fica pra Etapa B (auditoria) — precisa abrir o PDF
     // de verdade; aqui só registra o esqueleto administrativo.
@@ -140,6 +142,9 @@ export function createLiteraryAdminRouter(db: Firestore): Router {
     }
     const work = workDoc.data() as LiteraryWork;
     const edition = editionDoc.data() as WorkEdition;
+    if (!edition.sourceFileId.endsWith('.pdf')) {
+      return res.status(400).json({ error: 'Segmentação automática só funciona com fonte em PDF; cadastre as unidades manualmente via POST /units.', code: 'UNSUPPORTED_SOURCE_FORMAT' });
+    }
     try {
       const buffer = await downloadWorkEditionSource(edition.sourceFileId);
       const pages = await extractPagesText(buffer);

@@ -109,7 +109,8 @@ export default function AdminObras() {
       await adminFetch(`/works/${selectedWorkId}/editions`, token, {
         method: 'POST',
         body: JSON.stringify({
-          fileBase64, publisher: data.get('publisher') || undefined, edition: data.get('edition') || undefined,
+          fileBase64, mimeType: file.type || undefined,
+          publisher: data.get('publisher') || undefined, edition: data.get('edition') || undefined,
           rightsStatus: data.get('rightsStatus'),
         }),
       });
@@ -236,8 +237,8 @@ export default function AdminObras() {
             <option value="pending_review">pending_review</option>
             <option value="restricted">restricted</option>
           </select>
-          <input name="file" type="file" accept="application/pdf" required className="text-xs" />
-          <button disabled={busy} className="sm:col-span-4 bg-indigo-600 text-white rounded-lg px-3 py-1.5 disabled:opacity-50">Enviar edição (PDF)</button>
+          <input name="file" type="file" accept="application/pdf,.docx" required className="text-xs" />
+          <button disabled={busy} className="sm:col-span-4 bg-indigo-600 text-white rounded-lg px-3 py-1.5 disabled:opacity-50">Enviar edição (PDF ou .docx)</button>
         </form>
       </section>
 
