@@ -28,6 +28,8 @@ import Treino2aFase from './views/Treino2aFase';
 import Recuperacao from './views/Recuperacao';
 import Diagnostico from './views/Diagnostico';
 import Admin from './views/Admin';
+import Flashcards from './views/Flashcards';
+import ObrasObrigatorias from './views/ObrasObrigatorias';
 
 export default function App() {
   return (
@@ -54,6 +56,8 @@ export default function App() {
             <Route path="treino-2a-fase" element={<Treino2aFase />} />
             <Route path="recuperacao" element={<Recuperacao />} />
             <Route path="diagnostico" element={<Diagnostico />} />
+            <Route path="flashcards" element={<Flashcards />} />
+            <Route path="obras-obrigatorias" element={<ObrasObrigatorias />} />
             <Route path="admin" element={<Admin />} />
           </Route>
         </Routes>

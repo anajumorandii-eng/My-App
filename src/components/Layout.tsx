@@ -25,7 +25,9 @@ import {
   Flag,
   X,
   ArrowRight,
-  Menu
+  Menu,
+  Layers,
+  BookOpen
 } from 'lucide-react';
 
 export default function Layout() {
@@ -73,6 +75,8 @@ export default function Layout() {
     { name: 'Sessão de Estudo', path: '/sessao', icon: PlayCircle },
     { name: 'Questões & Tentativas', path: '/questoes', icon: HelpCircle },
     { name: 'Revisões Adaptativas', path: '/revisoes', icon: Repeat },
+    { name: 'Flashcards', path: '/flashcards', icon: Layers },
+    { name: 'Obras Obrigatórias', path: '/obras-obrigatorias', icon: BookOpen },
     { name: 'Caderno de Erros', path: '/erros', icon: BookX },
     { name: 'Podcast JUJU', path: '/podcast', icon: Headphones },
     { name: 'Tutor Socrático', path: '/tutor', icon: Brain },

@@ -69,19 +69,18 @@ export interface ReviewOutcomePatch {
   reviewCount: number;
 }
 
-/**
- * Aplica o resultado de uma revisão/tentativa ao estado de repetição
- * espaçada de um tópico, seguindo a regra clássica do SM-2: uma nota abaixo
- * de 3 ("esqueceu") reseta o intervalo pra 1 dia e zera a sequência de
- * acertos; uma nota 3+ avança a sequência (1 dia -> 6 dias -> intervalo
- * anterior × fator de facilidade), e o fator de facilidade sobe ou desce
- * conforme a nota, ficando nunca abaixo de MIN_EASE_FACTOR.
- */
-export function applyReviewOutcome(mastery: TopicMastery, quality: ReviewQuality, now: Date = new Date()): ReviewOutcomePatch {
-  const prevEase = easeFactorOf(mastery);
-  const prevInterval = intervalDaysOf(mastery);
-  const prevCount = reviewCountOf(mastery);
+export interface Schedule {
+  easeFactor: number;
+  intervalDays: number;
+  reviewCount: number;
+}
 
+/**
+ * Núcleo do SM-2, isolado de TopicMastery pra poder ser reaproveitado por
+ * qualquer coisa com repetição espaçada própria (tópicos, flashcards, etc.)
+ * sem precisar forjar um objeto TopicMastery só pra extrair o agendamento.
+ */
+export function computeSchedule(prevEase: number, prevInterval: number, prevCount: number, quality: ReviewQuality): Schedule {
   const rawNextEase = prevEase + (0.1 - (5 - quality) * (0.08 + (5 - quality) * 0.02));
   const easeFactor = Math.round(Math.max(MIN_EASE_FACTOR, rawNextEase) * 100) / 100;
 
@@ -96,6 +95,25 @@ export function applyReviewOutcome(mastery: TopicMastery, quality: ReviewQuality
     else if (reviewCount === 2) intervalDays = SECOND_INTERVAL_DAYS;
     else intervalDays = Math.round(prevInterval * easeFactor);
   }
+
+  return { easeFactor, intervalDays, reviewCount };
+}
+
+/**
+ * Aplica o resultado de uma revisão/tentativa ao estado de repetição
+ * espaçada de um tópico, seguindo a regra clássica do SM-2: uma nota abaixo
+ * de 3 ("esqueceu") reseta o intervalo pra 1 dia e zera a sequência de
+ * acertos; uma nota 3+ avança a sequência (1 dia -> 6 dias -> intervalo
+ * anterior × fator de facilidade), e o fator de facilidade sobe ou desce
+ * conforme a nota, ficando nunca abaixo de MIN_EASE_FACTOR.
+ */
+export function applyReviewOutcome(mastery: TopicMastery, quality: ReviewQuality, now: Date = new Date()): ReviewOutcomePatch {
+  const { easeFactor, intervalDays, reviewCount } = computeSchedule(
+    easeFactorOf(mastery),
+    intervalDaysOf(mastery),
+    reviewCountOf(mastery),
+    quality
+  );
 
   // Incerteza (já usada em outras partes do app) reflete diretamente a nota
   // da última revisão: 0 pra nota máxima, subindo conforme a lembrança foi
