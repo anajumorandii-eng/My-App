@@ -1,0 +1,207 @@
+[
+  {
+    "id": "por_norma_culta",
+    "name": "Domínio da Norma Culta",
+    "chapters": [
+      "Língua: um Sistema Complexo",
+      "Variação Linguística",
+      "Substantivo: os Nomes e a Visão do Enunciador",
+      "Tipos de Texto: Explorando Elementos Concretos e Conceitos Abstratos",
+      "Artigo, Numeral e Adjetivo no Sintagma Nominal",
+      "Pronomes",
+      "Verbo",
+      "Advérbio e Locuções Adverbiais: Circunstanciadores",
+      "Verbo e Sintaxe da Oração",
+      "Concordância",
+      "Significados Implícitos",
+      "Tipos de Discurso",
+      "Pontuação I: Princípios para o Uso da Vírgula",
+      "Pontuação II: Vírgula entre Orações e Outros Sinais de Pontuação",
+      "O Léxico em Contexto: Variadas Possibilidades Semânticas",
+      "Ambiguidade: Duplicidade no Léxico e na Sintaxe",
+      "Mecanismo de Regência",
+      "Crase",
+      "Processos de Formação de Palavras"
+    ]
+  },
+  {
+    "id": "por_sintaxe",
+    "name": "Análise Sintática",
+    "chapters": [
+      "Funções Sintáticas Nominais e Vocativo",
+      "Tipos de Sujeito",
+      "Vozes Verbais",
+      "Orações Substantivas",
+      "Orações Adjetivas",
+      "Orações Adverbiais",
+      "Orações Coordenadas"
+    ]
+  },
+  {
+    "id": "por_texto",
+    "name": "Entendimento de Texto",
+    "chapters": [
+      "Fatores de Textualidade",
+      "Os Dois Níveis da Leitura",
+      "Intertextualidade e Interdiscursividade",
+      "Gêneros Textuais",
+      "Gêneros Narrativos e Níveis de Compreensão",
+      "Gêneros não Verbais: Fundamentos de Leitura",
+      "Funções da Linguagem",
+      "Função Poética e Linguagem Literária",
+      "Figuras de Linguagem",
+      "Modelos de Leitura e Distorções Interpretativas",
+      "Leitura de Textos Cômicos",
+      "Tecnologias Digitais da Informação e Comunicação (TDIC): Impactos Sociais"
+    ]
+  },
+  {
+    "id": "por_lit_classica_barroca",
+    "name": "Literatura Clássica, Medieval e Barroca",
+    "chapters": [
+      "A Arte e suas Linguagens",
+      "Texto Literário x Texto não Literário",
+      "Trovadorismo e Humanismo",
+      "Renascimento e Camões",
+      "Brasil: Primeiros Registros",
+      "A Estética Barroca",
+      "A Estética Neoclássica"
+    ]
+  },
+  {
+    "id": "por_lit_romantismo_realismo",
+    "name": "Romantismo e Realismo",
+    "chapters": [
+      "A Estética Romântica: Poesia",
+      "Elementos da Narrativa",
+      "A Estética Romântica: Prosa",
+      "A Estética Realista",
+      "Machado de Assis",
+      "Naturalismo",
+      "Realismo Português: Eça de Queirós"
+    ]
+  },
+  {
+    "id": "por_lit_modernismo",
+    "name": "Simbolismo, Pré-Modernismo e Modernismo",
+    "chapters": [
+      "Parnasianismo",
+      "Simbolismo",
+      "Pré-Modernismo",
+      "Vanguardas Artísticas",
+      "Fernando Pessoa",
+      "Semana de Arte Moderna",
+      "Modernismo no Brasil: Primeira Geração",
+      "Segunda Geração Modernista: Prosa",
+      "Graciliano Ramos",
+      "Segunda Geração Modernista: Poesia",
+      "Carlos Drummond de Andrade",
+      "João Cabral de Melo Neto"
+    ]
+  },
+  {
+    "id": "por_lit_contemporanea",
+    "name": "Literatura Contemporânea",
+    "chapters": [
+      "Poesia Concreta",
+      "Clarice Lispector",
+      "Guimarães Rosa",
+      "Poesia Brasileira: 1960-1980",
+      "Prosa Brasileira: 1960-1980",
+      "Literatura Lusófona Contemporânea",
+      "Poesia Brasileira Contemporânea",
+      "Prosa Brasileira Contemporânea",
+      "Artes Plásticas Brasileiras",
+      "Teatro Brasileiro",
+      "Cancioneiro Popular Brasileiro"
+    ]
+  },
+  {
+    "id": "por_red_fundamentos",
+    "name": "Fundamentos da Dissertação",
+    "chapters": [
+      "A Dissertação no Vestibular: Mitos e Verdades",
+      "O que se Avalia na Dissertação: Competências e Habilidades",
+      "Organizando as Ideias: Brainstorm e Mind Maps",
+      "Projeto de Texto em Favor da Progressão Textual",
+      "Repertório: o Diferencial de Redações de Sucesso",
+      "Qual Será o Tema deste Ano: Grandes Eixos Temáticos",
+      "Diferentes Graus de Adequação à Proposta",
+      "Tangenciamento e Fuga: a Fronteira do Tema",
+      "Gêneros e sua Relação com a Estrutura do Texto",
+      "Estrutura Clássica do Texto Dissertativo"
+    ]
+  },
+  {
+    "id": "por_red_repertorio",
+    "name": "Leitura de Coletânea e Repertório Temático",
+    "chapters": [
+      "Lendo a Coletânea: a Apreensão de Sentidos I",
+      "Lendo a Coletânea: a Apreensão de Sentidos II",
+      "Lendo a Coletânea: a Compreensão e o Texto Autoral I",
+      "Lendo a Coletânea: a Compreensão e o Texto Autoral II",
+      "Incrementando o Repertório: Meio Ambiente",
+      "Analisando Tema de Redação: Meio Ambiente",
+      "Incrementando o Repertório: Educação e Trabalho",
+      "Analisando Tema de Redação: Educação e Trabalho",
+      "Incrementando o Repertório: Temas Abstratos",
+      "Analisando Tema Abstrato de Redação",
+      "Incrementando o Repertório: Corpo, Saúde e Sexualidade",
+      "Analisando Tema de Redação: Corpo, Saúde e Sexualidade",
+      "Incrementando o Repertório: Violência, Leis e Punição",
+      "Analisando Tema de Redação: Violência, Leis e Punição",
+      "Incrementando o Repertório: Cidadania e Poder",
+      "Analisando Tema de Redação: Cidadania e Poder",
+      "Incrementando o Repertório: Arte, Cultura e Relações Sociais",
+      "Analisando o Tema de Redação: Arte, Cultura e Relações Sociais",
+      "Incrementando o Repertório: Mídia e Sociedade",
+      "Analisando Tema de Redação: Mídia e Sociedade"
+    ]
+  },
+  {
+    "id": "por_red_argumentacao",
+    "name": "Introdução, Argumentação e Coerência",
+    "chapters": [
+      "Parágrafo de Introdução: Delimitando a Opinião",
+      "Parágrafo de Introdução: como Contextualizar",
+      "Argumentação: Auditório Particular e Universal",
+      "Argumentação Quase-Lógica e Efeito de Verdade",
+      "Argumentação e Coerência Interna",
+      "Argumentação e Coerência Externa",
+      "Recursos Argumentativos: Dados Numéricos e Exemplos",
+      "Recursos Argumentativos: Vozes Prestigiadas",
+      "Ressalvando o Ponto de Vista Contrário",
+      "Refutando o Ponto Contrário",
+      "Recursos Argumentativos: Interdiscursividade e Intertextualidade",
+      "Recursos Argumentativos: Temas de Redação já Analisados",
+      "Recursos Argumentativos: Fatos da Atualidade",
+      "Recursos Argumentativos: Múltiplos Domínios do Saber"
+    ]
+  },
+  {
+    "id": "por_red_estrutura_coesao",
+    "name": "Coesão, Conclusão e Proposta de Intervenção",
+    "chapters": [
+      "Conclusão por Síntese ou Retomada da Tese",
+      "Conclusão: Sumarização, Focalização e Expressividade",
+      "Proposta de Intervenção: Atores Sociais e Cidadania",
+      "Proposta de Intervenção: Viabilização e Inovação",
+      "Proposta de Intervenção: Coerência Argumentativa",
+      "Proposta de Intervenção: Respeito aos Direitos Humanos",
+      "Recursos de Coesão Referencial no Texto Dissertativo",
+      "Recursos de Coesão Sequencial no Texto Dissertativo",
+      "Coesão no Texto Dissertativo: Análise de Problemas",
+      "Recursos Linguísticos: Norma, Clareza e Expressividade"
+    ]
+  },
+  {
+    "id": "por_red_direitos_modelo",
+    "name": "Direitos Humanos e Redações Modelo",
+    "chapters": [
+      "Os Direitos Humanos de 1ª Geração: Direitos Individuais",
+      "Os Direitos Humanos de 2ª e 3ª Geração: Direitos Sociais, Coletivos e Difusos",
+      "Redações Nota 1000: Trunfos a Inspirar",
+      "Redações na Mídia: como Aprimorar"
+    ]
+  }
+]

@@ -1,0 +1,163 @@
+[
+  {
+    "id": "mat_aritmetica_proporcionalidade",
+    "name": "Aritmética e Proporcionalidade",
+    "chapters": [
+      "Potências e Radicais",
+      "Razão e Proporção",
+      "Porcentagem"
+    ]
+  },
+  {
+    "id": "mat_teoria_numeros",
+    "name": "Teoria dos Números Inteiros",
+    "chapters": [
+      "O Sistema de Numeração Decimal",
+      "Introdução à Teoria dos Números Inteiros"
+    ]
+  },
+  {
+    "id": "mat_sequencias_matrizes",
+    "name": "Sequências, Matrizes e Sistemas Lineares",
+    "chapters": [
+      "Introdução às Sequências",
+      "Progressão Aritmética",
+      "Progressão Geométrica",
+      "Sequências",
+      "Sistemas de Equações",
+      "Tabelas e Matrizes",
+      "Multiplicação de Matrizes",
+      "Determinantes",
+      "Discussão de Sistemas Lineares",
+      "Médias"
+    ]
+  },
+  {
+    "id": "mat_combinatoria",
+    "name": "Análise Combinatória",
+    "chapters": [
+      "Introdução às Técnicas de Contagem",
+      "O Problema da Fila",
+      "O Problema do Grupo",
+      "Técnicas de Contagem"
+    ]
+  },
+  {
+    "id": "mat_dados_probabilidade",
+    "name": "Probabilidade e Interpretação de Dados",
+    "chapters": [
+      "Introdução às Probabilidades",
+      "Operações com Probabilidades",
+      "Eventos Disjuntos e Eventos Independentes",
+      "Estatística Descritiva"
+    ]
+  },
+  {
+    "id": "mat_geometria_plana",
+    "name": "Geometria Plana",
+    "chapters": [
+      "Introdução à Geometria Plana",
+      "Ângulos em Triângulos",
+      "Ângulos em Polígonos",
+      "Ângulos e Circunferências",
+      "Simetrias e Congruências",
+      "Identificação de Simetrias I",
+      "Identificação de Simetrias II",
+      "A Geometria da Proporcionalidade",
+      "Semelhança de Triângulos",
+      "O Ponto Médio e o Baricentro de um Triângulo",
+      "Triângulo Retângulo",
+      "A Geometria Métrica Plana",
+      "Áreas de Polígonos",
+      "Área do Círculo e de suas Partes",
+      "Razões entre Áreas de Figuras Planas",
+      "Áreas de Figuras Planas"
+    ]
+  },
+  {
+    "id": "mat_trigonometria",
+    "name": "Trigonometria",
+    "chapters": [
+      "Trigonometria no Triângulo Retângulo",
+      "Relações Trigonométricas em Polígonos",
+      "A Trigonometria dos Números Reais",
+      "Outras Razões Trigonométricas",
+      "A Relação Fundamental da Trigonometria",
+      "Transformações Trigonométricas",
+      "Funções Trigonométricas"
+    ]
+  },
+  {
+    "id": "mat_geometria_espacial",
+    "name": "Geometria Espacial",
+    "chapters": [
+      "O Universo Tridimensional",
+      "Cubos e Paralelepípedos",
+      "Prismas",
+      "Pirâmides",
+      "Sólidos de Revolução",
+      "Razões entre Volumes de Sólidos"
+    ]
+  },
+  {
+    "id": "mat_geometria_analitica",
+    "name": "Geometria Analítica",
+    "chapters": [
+      "Introdução à Geometria Analítica",
+      "Lugar Geométrico e Equação da Circunferência",
+      "Estudo Analítico da Reta",
+      "Posições Relativas entre Duas Retas",
+      "Distância entre um Ponto e uma Reta",
+      "Posições Relativas entre uma Reta e uma Circunferência",
+      "Introdução ao Estudo Analítico das Cônicas",
+      "Representação Geométrica de Inequações",
+      "A Geometria dos Números Complexos"
+    ]
+  },
+  {
+    "id": "mat_equacoes",
+    "name": "Equações, Desigualdades e Modelagem Algébrica",
+    "chapters": [
+      "Técnicas Algébricas",
+      "Igualdades",
+      "Desigualdades",
+      "Modelagem Algébrica de Problemas I",
+      "Equações do 2º Grau",
+      "Modelagem Algébrica de Problemas II"
+    ]
+  },
+  {
+    "id": "mat_funcoes",
+    "name": "Funções",
+    "chapters": [
+      "Introdução às Funções",
+      "Transformações em Gráficos de Funções",
+      "Composição de Funções",
+      "Inversão de Funções",
+      "Funções Bijetoras",
+      "Função Constante e Função Afim",
+      "Função Quadrática",
+      "Estudo do Sinal de Funções"
+    ]
+  },
+  {
+    "id": "mat_log_exponenciais",
+    "name": "Logaritmos e Exponenciais",
+    "chapters": [
+      "Introdução ao Modelo Exponencial",
+      "Introdução aos Logaritmos",
+      "Equações e Funções Logarítmicas",
+      "Modelagem Exponencial de Problemas"
+    ]
+  },
+  {
+    "id": "mat_complexos_polinomios",
+    "name": "Números Complexos e Polinômios",
+    "chapters": [
+      "Módulo de um Número Real",
+      "Números Complexos",
+      "Polinômios",
+      "Equações Polinomiais"
+    ]
+  }
+]

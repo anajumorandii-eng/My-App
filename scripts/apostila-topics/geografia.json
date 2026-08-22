@@ -1,0 +1,113 @@
+[
+  {
+    "id": "geo_cartografia",
+    "name": "Cartografia e Fundamentos",
+    "chapters": [
+      "Coordenadas Geográficas",
+      "Movimentos da Terra",
+      "Sistema de Fusos Horários",
+      "Linguagem Cartográfica",
+      "Projeções Cartográficas",
+      "Cartografia Digital",
+      "Representações Gráficas e Cartográficas"
+    ]
+  },
+  {
+    "id": "geo_climatologia_socioambiental",
+    "name": "Climatologia e Problemas Socioambientais",
+    "chapters": [
+      "Dinâmica Climática",
+      "Clima Mundial",
+      "Geomorfologia Mundial",
+      "Biogeografia Mundial",
+      "Água na Superfície Terrestre",
+      "Desafios Ambientais do Século XXI",
+      "Geopolítica Ambiental"
+    ]
+  },
+  {
+    "id": "geo_hidrogeografia",
+    "name": "Hidrogeografia",
+    "chapters": [
+      "Geopolítica dos Recursos Hídricos",
+      "Hidrogeografia Mundial"
+    ]
+  },
+  {
+    "id": "geo_globalizacao_economica",
+    "name": "Globalização e Geografia Econômica",
+    "chapters": [
+      "Do Mundo Bipolar ao Multipolar",
+      "Globalização e Processos Econômicos Atuais",
+      "Geografia das Redes Mundiais",
+      "Unilateralismo e Multilateralismo",
+      "Blocos Econômicos",
+      "União Europeia",
+      "Desigualdades Globais",
+      "Mobilidade Populacional",
+      "Geografia do Turismo",
+      "Produção Agrícola Mundial",
+      "Indústria I",
+      "Indústria II",
+      "Gedeconomia Mundial"
+    ]
+  },
+  {
+    "id": "geo_geopolitica_regional",
+    "name": "Geopolítica Regional Contemporânea",
+    "chapters": [
+      "Terrorismo Internacional",
+      "Geografia das Religiões",
+      "Tensões Geopolíticas na Europa",
+      "Geopolítica e Geoeconomia da América Latina",
+      "África no Mundo Atual",
+      "Geopolítica e Geoeconomia da Ásia",
+      "Geografia do Oriente Médio",
+      "Questão Palestina",
+      "Conflitos no Mundo Árabe"
+    ]
+  },
+  {
+    "id": "geo_fisica_brasil",
+    "name": "Geografia Física do Brasil",
+    "chapters": [
+      "Paisagem, Espaço Geográfico e Ciência Geográfica",
+      "Geologia e Geomorfologia",
+      "Relevo Brasileiro",
+      "Pedologia",
+      "Climatologia do Brasil",
+      "Biogeografia do Brasil I",
+      "Biogeografia do Brasil II",
+      "Políticas Ambientais Brasileiras",
+      "Hidrogeografia do Brasil",
+      "Domínios Morfoclimáticos"
+    ]
+  },
+  {
+    "id": "geo_economica_brasil",
+    "name": "Geografia Econômica do Brasil",
+    "chapters": [
+      "Matriz Energética",
+      "Combustíveis Fósseis e Biocombustíveis no Brasil",
+      "Energia Elétrica no Mundo",
+      "Energia Elétrica no Brasil",
+      "Produção Mineral",
+      "O Espaço Agrário Brasileiro",
+      "O Espaço Industrial Brasileiro I",
+      "O Espaço Industrial Brasileiro II"
+    ]
+  },
+  {
+    "id": "geo_populacao_urbana_brasil",
+    "name": "Geografia da População e Urbana do Brasil",
+    "chapters": [
+      "Dinâmica Demográfica",
+      "Estrutura Étnica e Fluxos Migratórios",
+      "Estrutura Ativa da População",
+      "O Espaço Urbano I",
+      "O Espaço Urbano II",
+      "As Redes de Transportes",
+      "Os Fluxos do Comércio Externo"
+    ]
+  }
+]
