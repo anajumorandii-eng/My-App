@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "clean": "rm -rf dist server.js",
     "lint": "tsc --noEmit",
-    "test": "tsx --test server/ai/*.test.ts server/auth/*.test.ts server/podcast/*.test.ts src/lib/*.test.ts"
+    "test": "tsx --test server/ai/*.test.ts server/auth/*.test.ts server/podcast/*.test.ts server/literary/*.test.ts src/lib/*.test.ts"
   },
   "dependencies": {
     "@google/genai": "^2.4.0",
@@ -27,6 +27,7 @@
     "katex": "^0.18.4",
     "lucide-react": "^1.31.0",
     "motion": "^12.23.24",
+    "pdf-parse": "^2.4.5",
     "react": "^19.0.1",
     "react-dom": "^19.0.1",
     "react-markdown": "^10.1.0",

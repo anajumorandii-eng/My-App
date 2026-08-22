@@ -2,13 +2,44 @@ import { randomUUID } from 'node:crypto';
 import { Router } from 'express';
 import { Firestore } from 'firebase-admin/firestore';
 import { LiteraryWork, WorkEdition, ExamRequirement, WorkUnit, AuditStatus } from '../../src/types/literaryWorks';
-import { uploadWorkEditionSource, computeFileHash, getSignedReadUrl } from './literaryStorage';
+import { uploadWorkEditionSource, computeFileHash, getSignedReadUrl, downloadWorkEditionSource } from './literaryStorage';
+import { extractPagesText, segmentIntoUnits } from './literarySegmenter';
+import { SEED_WORKS, SEED_EXAM_REQUIREMENTS } from './seedCatalog';
+
+// A obra declara o gênero em texto livre (LiteraryWork.genre, ex.: "poesia",
+// "romance", "canção/poesia musicada") — o segmentador só precisa saber se
+// deve priorizar o heurístico de poema/canção quando não achar capítulo
+// numerado (ver segmentIntoUnits).
+function segmenterHintFromGenre(genre: string): 'chapter' | 'poem' | 'song' {
+  const g = genre.toLowerCase();
+  if (g.includes('canção') || g.includes('cancao')) return 'song';
+  if (g.includes('poesia')) return 'poem';
+  return 'chapter';
+}
 
 // Painel de ingestão/auditoria (Fase 1 do roteiro) — protegido por
 // requireAdmin no mount (ver server.ts), já que só quem cura o conteúdo
 // (a própria Ana ou eu) deve poder subir/alterar material de obra.
 export function createLiteraryAdminRouter(db: Firestore): Router {
   const router = Router();
+
+  // Semeia de uma vez as 18 LiteraryWork + 18 ExamRequirement já curadas na
+  // Fase 0 (ver seedCatalog.ts e AUDITORIA_FASE0.md) — poupa preencher os
+  // ~180 campos manualmente pelo formulário. Idempotente: usa os ids fixos
+  // do seed (.set() sem merge sobrescreve com o mesmo valor, então rodar de
+  // novo não duplica nada). Não cria WorkEdition — o arquivo em si ainda
+  // precisa ser enviado por edição, pra manter o hash/proveniência reais.
+  router.post('/seed', async (_req, res) => {
+    const batch = db.batch();
+    for (const work of SEED_WORKS) {
+      batch.set(db.collection('literaryWorks').doc(work.id), work);
+    }
+    for (const requirement of SEED_EXAM_REQUIREMENTS) {
+      batch.set(db.collection('literaryWorks').doc(requirement.workId).collection('examRequirements').doc(requirement.id), requirement);
+    }
+    await batch.commit();
+    res.json({ works: SEED_WORKS.length, examRequirements: SEED_EXAM_REQUIREMENTS.length });
+  });
 
   router.post('/works', async (req, res) => {
     const { slug, title, author, originalYear, genre, language } = req.body ?? {};
@@ -30,7 +61,7 @@ export function createLiteraryAdminRouter(db: Firestore): Router {
   // processamento de conteúdo.
   router.post('/works/:workId/editions', async (req, res) => {
     const { workId } = req.params;
-    const { fileBase64, publisher, edition, year, isbn, translator, organizer, printedPageCount, rightsStatus } = req.body ?? {};
+    const { fileBase64, mimeType, publisher, edition, year, isbn, translator, organizer, printedPageCount, rightsStatus } = req.body ?? {};
     if (!fileBase64 || !rightsStatus) {
       return res.status(400).json({ error: 'Campos obrigatórios: fileBase64, rightsStatus.', code: 'INVALID_EDITION' });
     }
@@ -48,7 +79,9 @@ export function createLiteraryAdminRouter(db: Firestore): Router {
     }
 
     const editionId = randomUUID();
-    const { sourceFileId } = await uploadWorkEditionSource(workId, editionId, fileBuffer);
+    // Quase toda edição é PDF; "Canções Escolhidas" (Paulo César Pinheiro)
+    // chegou como .docx — ver literaryStorage.ts.
+    const { sourceFileId } = await uploadWorkEditionSource(workId, editionId, fileBuffer, mimeType || 'application/pdf');
 
     // Contagem de páginas fica pra Etapa B (auditoria) — precisa abrir o PDF
     // de verdade; aqui só registra o esqueleto administrativo.
@@ -110,6 +143,35 @@ export function createLiteraryAdminRouter(db: Firestore): Router {
     await ref.set(patch, { merge: true });
     const updated = await ref.get();
     res.json(updated.data());
+  });
+
+  // Etapa C (extração estruturada): roda o segmentador heurístico sobre o
+  // PDF já ingerido e devolve unidades CANDIDATAS — nada é salvo aqui. Quem
+  // cura confirma/ajusta e persiste de fato via POST /works/:workId/units
+  // (seção 7/Etapa C do roteiro: "validação humana do começo e fim de cada
+  // unidade" antes de virar WorkUnit definitivo).
+  router.post('/works/:workId/editions/:editionId/segment', async (req, res) => {
+    const workDoc = await db.collection('literaryWorks').doc(req.params.workId).get();
+    if (!workDoc.exists) {
+      return res.status(404).json({ error: 'Obra não encontrada.', code: 'WORK_NOT_FOUND' });
+    }
+    const editionDoc = await db.collection('literaryWorks').doc(req.params.workId).collection('editions').doc(req.params.editionId).get();
+    if (!editionDoc.exists) {
+      return res.status(404).json({ error: 'Edição não encontrada.', code: 'EDITION_NOT_FOUND' });
+    }
+    const work = workDoc.data() as LiteraryWork;
+    const edition = editionDoc.data() as WorkEdition;
+    if (!edition.sourceFileId.endsWith('.pdf')) {
+      return res.status(400).json({ error: 'Segmentação automática só funciona com fonte em PDF; cadastre as unidades manualmente via POST /units.', code: 'UNSUPPORTED_SOURCE_FORMAT' });
+    }
+    try {
+      const buffer = await downloadWorkEditionSource(edition.sourceFileId);
+      const pages = await extractPagesText(buffer);
+      const candidates = segmentIntoUnits(pages, segmenterHintFromGenre(work.genre));
+      res.json({ candidates });
+    } catch (cause) {
+      res.status(500).json({ error: 'Falha ao processar o PDF pra segmentação.', code: 'SEGMENT_FAILED', detail: String(cause) });
+    }
   });
 
   router.post('/works/:workId/exam-requirements', async (req, res) => {

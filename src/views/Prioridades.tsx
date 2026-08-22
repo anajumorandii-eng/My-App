@@ -144,12 +144,7 @@ export default function Prioridades() {
                           className="w-full flex items-center justify-between p-4 text-left"
                         >
                           <div className="min-w-0">
-                            <p className="font-medium truncate flex items-center">
-                              {work.title}
-                              {work.uncertain && (
-                                <AlertTriangle className="w-3.5 h-3.5 ml-2 text-amber-500 shrink-0" />
-                              )}
-                            </p>
+                            <p className="font-medium truncate">{work.title}</p>
                             <p className="text-xs text-zinc-500 mt-0.5">{work.author} • {work.movement}</p>
                           </div>
                           <ChevronDown className={`w-4 h-4 text-zinc-400 shrink-0 ml-3 transition-transform ${isExpanded ? 'rotate-180' : ''}`} />

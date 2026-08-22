@@ -28,6 +28,7 @@ import Treino2aFase from './views/Treino2aFase';
 import Recuperacao from './views/Recuperacao';
 import Diagnostico from './views/Diagnostico';
 import Admin from './views/Admin';
+import AdminObras from './views/AdminObras';
 import Flashcards from './views/Flashcards';
 import ObrasObrigatorias from './views/ObrasObrigatorias';
 
@@ -59,6 +60,7 @@ export default function App() {
             <Route path="flashcards" element={<Flashcards />} />
             <Route path="obras-obrigatorias" element={<ObrasObrigatorias />} />
             <Route path="admin" element={<Admin />} />
+            <Route path="admin/obras" element={<AdminObras />} />
           </Route>
         </Routes>
       </BrowserRouter>
