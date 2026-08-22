@@ -1,0 +1,134 @@
+[
+  {
+    "id": "qui_modelos_atomicos",
+    "name": "Modelos Atômicos e Estrutura do Átomo",
+    "chapters": [
+      "Evolução dos Modelos Atômicos",
+      "Organização da Tabela Periódica dos Elementos"
+    ]
+  },
+  {
+    "id": "qui_radioatividade",
+    "name": "Radioatividade",
+    "chapters": [
+      "Radioatividade: o Estudo das Radiações"
+    ]
+  },
+  {
+    "id": "qui_polaridade_geometria",
+    "name": "Polaridade das Ligações e Geometria Molecular",
+    "chapters": [
+      "Ligações Químicas e Alotropia",
+      "Geometria Molecular",
+      "Polaridade das Ligações e das Moléculas",
+      "Interações Intermoleculares"
+    ]
+  },
+  {
+    "id": "qui_gases",
+    "name": "Gases",
+    "chapters": [
+      "Composição da Matéria: Estados Físicos",
+      "O Estado Gasoso",
+      "Estudo dos Gases II"
+    ]
+  },
+  {
+    "id": "qui_estequiometria",
+    "name": "Análises Quantitativas e Estequiometria",
+    "chapters": [
+      "Separação de Misturas",
+      "Transformações Físicas e Químicas e Balanceamento de Equações",
+      "Massa Atômica, Mol e Massa Molar",
+      "Determinação de Fórmulas Químicas",
+      "Estequiometria: Leis Ponderais",
+      "Cálculos Estequiométricos"
+    ]
+  },
+  {
+    "id": "qui_inorganica",
+    "name": "Química Inorgânica",
+    "chapters": [
+      "Química Inorgânica",
+      "Equações Iônicas e outras Teorias para Ácidos e Bases"
+    ]
+  },
+  {
+    "id": "qui_oxirreducao",
+    "name": "Oxirredução",
+    "chapters": [
+      "Processos de Oxirredução",
+      "Química Ambiental"
+    ]
+  },
+  {
+    "id": "qui_organica_fundamentos",
+    "name": "Fundamentos e Nomenclatura Orgânica",
+    "chapters": [
+      "Introdução à Química Orgânica",
+      "Nomenclatura de Compostos Orgânicos",
+      "Nomenclatura de Compostos Orgânicos Oxigenados e Nitrogenados",
+      "Reconhecimento de Funções Orgânicas e Algumas de suas Propriedades",
+      "Isomeria",
+      "Combustíveis Fósseis"
+    ]
+  },
+  {
+    "id": "qui_organica_reacoes",
+    "name": "Reações e Aplicações Orgânicas",
+    "chapters": [
+      "Interpretando Reações Orgânicas",
+      "Reações de Substituição",
+      "Reações de Adição",
+      "Reações de Oxidação em Hidrocarbonetos",
+      "Álcoois",
+      "Ácidos Graxos e Esterificação",
+      "Transesterificação (Alcoólise)",
+      "Acidez e Basicidade (pKa)",
+      "Polímeros"
+    ]
+  },
+  {
+    "id": "qui_solucoes",
+    "name": "Soluções",
+    "chapters": [
+      "Dispersões",
+      "Efeitos Coligativos"
+    ]
+  },
+  {
+    "id": "qui_termoquimica",
+    "name": "Termoquímica",
+    "chapters": [
+      "Termoquímica I",
+      "Termoquímica II"
+    ]
+  },
+  {
+    "id": "qui_cinetica",
+    "name": "Cinética Química",
+    "chapters": [
+      "Cinética Química"
+    ]
+  },
+  {
+    "id": "qui_eletroquimica",
+    "name": "Eletroquímica",
+    "chapters": [
+      "Introdução ao Estudo das Pilhas e Baterias",
+      "Eletroquímica de Processos Espontâneos",
+      "Eletroquímica de Processos não Espontâneos",
+      "Aspectos Quantitativos da Eletroquímica e Metalurgia"
+    ]
+  },
+  {
+    "id": "qui_equilibrio",
+    "name": "Equilíbrio Químico",
+    "chapters": [
+      "Equilíbrios Químicos I",
+      "Deslocamento de Equilíbrio",
+      "Equilíbrios Iônicos",
+      "Equilíbrios Iônicos II"
+    ]
+  }
+]
