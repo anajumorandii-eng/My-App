@@ -263,3 +263,43 @@ export interface BacklogItem {
   dateAdded: string;
   closedAt?: string;
 }
+
+// Flashcard "de matéria" — vinculado (quando possível) a um Topic real do
+// currículo, pra entrar no mesmo fluxo de revisão por tópico do resto do
+// app. Conteúdo estático (não muda por usuária), carregado sob demanda de
+// /flashcards/{subject-slug}.json — ver src/lib/flashcardContent.ts.
+export interface Flashcard {
+  id: string;
+  subject: string;
+  topicId?: string; // ausente quando o baralho original não bate com nenhum tópico cadastrado
+  chapter: string; // nome original do assunto/capítulo no baralho de origem
+  front: string; // HTML
+  back: string; // HTML
+  tags: string[];
+  source: 'sistema_priorizado' | 'lembre_se';
+}
+
+// Estado de repetição espaçada por flashcard (SM-2, mesma base de
+// src/lib/spacedRepetition.ts — ver computeSchedule) — por ser um estado
+// por usuária e por cartão (dezenas de milhares no total), fica numa
+// subcoleção do Firestore indexada por dueDate, não num único documento
+// grande como TopicMastery.
+export interface FlashcardReview {
+  cardId: string;
+  easeFactor: number;
+  intervalDays: number;
+  reviewCount: number;
+  dueDate: string; // ISO Date — próxima revisão programada
+  lastReviewed: string; // ISO Date
+}
+
+// Flashcard de obra obrigatória — seção separada, organizada por obra
+// literária, não pelo currículo de Topic/chapters (ver ObrasObrigatorias.tsx).
+export interface WorkFlashcard {
+  id: string;
+  work: string; // título da obra
+  front: string;
+  back: string;
+  tags: string[];
+  source: 'lembre_se' | 'obras_fuvest';
+}
