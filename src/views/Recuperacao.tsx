@@ -50,6 +50,8 @@ const SUBJECT_COLORS: Record<string, string> = {
   História: 'bg-orange-500',
   Português: 'bg-violet-500',
   Inglês: 'bg-sky-500',
+  Filosofia: 'bg-stone-500',
+  Sociologia: 'bg-purple-500',
 };
 
 function ScorePicker({

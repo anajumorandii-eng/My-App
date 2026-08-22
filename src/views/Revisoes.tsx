@@ -25,6 +25,8 @@ const SUBJECT_COLORS: Record<string, string> = {
   História: 'text-orange-600 dark:text-orange-400 bg-orange-50 dark:bg-orange-900/20',
   Português: 'text-violet-600 dark:text-violet-400 bg-violet-50 dark:bg-violet-900/20',
   Inglês: 'text-sky-600 dark:text-sky-400 bg-sky-50 dark:bg-sky-900/20',
+  Filosofia: 'text-stone-600 dark:text-stone-400 bg-stone-50 dark:bg-stone-900/20',
+  Sociologia: 'text-purple-600 dark:text-purple-400 bg-purple-50 dark:bg-purple-900/20',
 };
 
 export default function Revisoes() {

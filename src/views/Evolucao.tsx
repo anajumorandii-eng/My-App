@@ -29,6 +29,8 @@ const SUBJECT_HEX: Record<string, string> = {
   História: '#f97316',
   Português: '#8b5cf6',
   Inglês: '#0ea5e9',
+  Filosofia: '#78716c',
+  Sociologia: '#a855f7',
 };
 
 function ChartTooltip({ active, payload }: any) {

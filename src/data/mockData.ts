@@ -624,6 +624,128 @@ export const mockTopics: Topic[] = [
       'Text Comprehension: Stem Cells',
     ],
   },
+  // Filosofia
+  {
+    id: 'fil_origem_pre_socraticos', name: 'Origens da Filosofia e os Pré-Socráticos', subject: 'Filosofia', prerequisites: [],
+    chapters: [
+      'O Nascimento da Filosofia: do Mito ao Logos', 'Os Filósofos da Physis: Tales, Anaximandro e Anaxímenes',
+      'Heráclito e Parmênides: o Ser e o Devir', 'Os Sofistas e a Crise da Verdade',
+    ],
+  },
+  {
+    id: 'fil_socrates_platao', name: 'Sócrates e Platão', subject: 'Filosofia', prerequisites: ['fil_origem_pre_socraticos'],
+    chapters: [
+      'O Método Socrático e a Maiêutica', 'A Teoria das Ideias de Platão',
+      'O Mito da Caverna', 'A Alegoria da Linha Dividida e o Conhecimento',
+    ],
+  },
+  {
+    id: 'fil_aristoteles', name: 'Aristóteles', subject: 'Filosofia', prerequisites: ['fil_socrates_platao'],
+    chapters: [
+      'Lógica e Metafísica Aristotélicas', 'A Ética a Nicômaco e a Doutrina do Meio-Termo',
+      'Política Aristotélica: o Homem como Animal Político',
+    ],
+  },
+  {
+    id: 'fil_medieval', name: 'Filosofia Medieval', subject: 'Filosofia', prerequisites: ['fil_aristoteles'],
+    chapters: [
+      'Patrística e Santo Agostinho', 'Escolástica e Santo Tomás de Aquino', 'A Relação entre Fé e Razão',
+    ],
+  },
+  {
+    id: 'fil_moderna_racionalismo_empirismo', name: 'Filosofia Moderna: Racionalismo e Empirismo', subject: 'Filosofia', prerequisites: ['fil_medieval'],
+    chapters: [
+      'Descartes e o Método: a Dúvida Hiperbólica', 'Racionalismo Continental: Espinosa e Leibniz',
+      'Empirismo Britânico: Locke, Berkeley e Hume', 'A Crítica de Hume à Causalidade',
+    ],
+  },
+  {
+    id: 'fil_contratualismo_iluminismo', name: 'Contratualismo Político e Iluminismo', subject: 'Filosofia', prerequisites: ['fil_moderna_racionalismo_empirismo'],
+    chapters: [
+      'Hobbes e o Estado de Natureza', 'Locke e os Direitos Naturais',
+      'Rousseau e a Vontade Geral', 'O Ideal Iluminista de Razão e Progresso',
+    ],
+  },
+  {
+    id: 'fil_kant_idealismo', name: 'Kant e o Idealismo Alemão', subject: 'Filosofia', prerequisites: ['fil_contratualismo_iluminismo'],
+    chapters: [
+      'A Crítica da Razão Pura', 'A Ética Kantiana e o Imperativo Categórico', 'Hegel e a Dialética',
+    ],
+  },
+  {
+    id: 'fil_marx_critica_sociedade', name: 'Marx e a Crítica à Sociedade Capitalista', subject: 'Filosofia', prerequisites: ['fil_kant_idealismo'],
+    chapters: [
+      'O Materialismo Histórico', 'Alienação e Mais-Valia', 'A Luta de Classes na Filosofia Marxista',
+    ],
+  },
+  {
+    id: 'fil_niilismo_existencialismo', name: 'Nietzsche, Existencialismo e Filosofia Contemporânea', subject: 'Filosofia', prerequisites: ['fil_marx_critica_sociedade'],
+    chapters: [
+      'Nietzsche e a Crítica aos Valores Morais', 'O Existencialismo de Sartre',
+      'A Escola de Frankfurt e a Indústria Cultural', 'Foucault e as Relações de Poder',
+    ],
+  },
+  {
+    id: 'fil_etica_politica_contemporanea', name: 'Ética e Política Contemporâneas', subject: 'Filosofia', prerequisites: ['fil_niilismo_existencialismo'],
+    chapters: [
+      'Justiça e Direitos Humanos', 'Ética Aplicada e Bioética', 'Filosofia Política Contemporânea',
+    ],
+  },
+  // Sociologia
+  {
+    id: 'soc_formacao_ciencia', name: 'A Formação da Sociologia como Ciência', subject: 'Sociologia', prerequisites: [],
+    chapters: [
+      'O Contexto Histórico do Surgimento da Sociologia', 'O que é o Fato Social', 'Sociologia e Senso Comum',
+    ],
+  },
+  {
+    id: 'soc_durkheim', name: 'Émile Durkheim e o Fato Social', subject: 'Sociologia', prerequisites: ['soc_formacao_ciencia'],
+    chapters: [
+      'Solidariedade Mecânica e Solidariedade Orgânica', 'Anomia e Coesão Social', 'Educação e Socialização em Durkheim',
+    ],
+  },
+  {
+    id: 'soc_marx_sociologia', name: 'Karl Marx e a Sociologia', subject: 'Sociologia', prerequisites: ['soc_durkheim'],
+    chapters: [
+      'Modo de Produção e Estrutura Social', 'Ideologia e Alienação', 'A Luta de Classes na Análise Sociológica',
+    ],
+  },
+  {
+    id: 'soc_weber', name: 'Max Weber e a Ação Social', subject: 'Sociologia', prerequisites: ['soc_marx_sociologia'],
+    chapters: [
+      'Tipos de Ação Social', 'Dominação e Poder em Weber', 'Ética Protestante e o Espírito do Capitalismo',
+    ],
+  },
+  {
+    id: 'soc_cultura_identidade', name: 'Cultura, Identidade e Diversidade', subject: 'Sociologia', prerequisites: ['soc_weber'],
+    chapters: [
+      'Cultura e Etnocentrismo', 'Identidade e Diferença', 'Multiculturalismo e Relativismo Cultural',
+    ],
+  },
+  {
+    id: 'soc_estratificacao_desigualdade', name: 'Estratificação Social e Desigualdade', subject: 'Sociologia', prerequisites: ['soc_cultura_identidade'],
+    chapters: [
+      'Classes Sociais e Mobilidade Social', 'Desigualdade Racial no Brasil', 'Desigualdade de Gênero',
+    ],
+  },
+  {
+    id: 'soc_trabalho_sociedade', name: 'Trabalho e Sociedade', subject: 'Sociologia', prerequisites: ['soc_estratificacao_desigualdade'],
+    chapters: [
+      'Divisão Social do Trabalho', 'Transformações no Mundo do Trabalho', 'Precarização e Uberização do Trabalho',
+    ],
+  },
+  {
+    id: 'soc_movimentos_sociais', name: 'Movimentos Sociais e Cidadania', subject: 'Sociologia', prerequisites: ['soc_trabalho_sociedade'],
+    chapters: [
+      'Movimentos Sociais Clássicos e Contemporâneos', 'Cidadania e Direitos', 'Democracia e Participação Política',
+    ],
+  },
+  {
+    id: 'soc_globalizacao', name: 'Globalização e Sociedade Contemporânea', subject: 'Sociologia', prerequisites: ['soc_movimentos_sociais'],
+    chapters: [
+      'Globalização Econômica e Cultural', 'O Estado-Nação na Era Global', 'A Sociedade da Informação',
+    ],
+  },
 ];
 
 // Ponto de partida para uma aluna que ainda não estudou pelo módulo agrupado —
@@ -722,7 +844,27 @@ export const mockMastery: TopicMastery[] = [
   { topicId: 'por_red_argumentacao', level: 15, uncertainty: 0.9, lastReviewed: new Date(Date.now() - 30 * 86400000).toISOString(), errorSignals: 0 },
   { topicId: 'por_red_estrutura_coesao', level: 15, uncertainty: 0.9, lastReviewed: new Date(Date.now() - 30 * 86400000).toISOString(), errorSignals: 0 },
   { topicId: 'por_red_direitos_modelo', level: 15, uncertainty: 0.9, lastReviewed: new Date(Date.now() - 30 * 86400000).toISOString(), errorSignals: 0 },
-  { topicId: 'ing_01', level: 60, uncertainty: 0.4, lastReviewed: new Date(Date.now() - 8 * 86400000).toISOString(), errorSignals: 0 }
+  { topicId: 'ing_01', level: 60, uncertainty: 0.4, lastReviewed: new Date(Date.now() - 8 * 86400000).toISOString(), errorSignals: 0 },
+  // Filosofia e Sociologia: matérias recém-cadastradas, ainda sem estudo real.
+  { topicId: 'fil_origem_pre_socraticos', level: 0, uncertainty: 0.9, lastReviewed: new Date(0).toISOString(), errorSignals: 0 },
+  { topicId: 'fil_socrates_platao', level: 0, uncertainty: 0.9, lastReviewed: new Date(0).toISOString(), errorSignals: 0 },
+  { topicId: 'fil_aristoteles', level: 0, uncertainty: 0.9, lastReviewed: new Date(0).toISOString(), errorSignals: 0 },
+  { topicId: 'fil_medieval', level: 0, uncertainty: 0.9, lastReviewed: new Date(0).toISOString(), errorSignals: 0 },
+  { topicId: 'fil_moderna_racionalismo_empirismo', level: 0, uncertainty: 0.9, lastReviewed: new Date(0).toISOString(), errorSignals: 0 },
+  { topicId: 'fil_contratualismo_iluminismo', level: 0, uncertainty: 0.9, lastReviewed: new Date(0).toISOString(), errorSignals: 0 },
+  { topicId: 'fil_kant_idealismo', level: 0, uncertainty: 0.9, lastReviewed: new Date(0).toISOString(), errorSignals: 0 },
+  { topicId: 'fil_marx_critica_sociedade', level: 0, uncertainty: 0.9, lastReviewed: new Date(0).toISOString(), errorSignals: 0 },
+  { topicId: 'fil_niilismo_existencialismo', level: 0, uncertainty: 0.9, lastReviewed: new Date(0).toISOString(), errorSignals: 0 },
+  { topicId: 'fil_etica_politica_contemporanea', level: 0, uncertainty: 0.9, lastReviewed: new Date(0).toISOString(), errorSignals: 0 },
+  { topicId: 'soc_formacao_ciencia', level: 0, uncertainty: 0.9, lastReviewed: new Date(0).toISOString(), errorSignals: 0 },
+  { topicId: 'soc_durkheim', level: 0, uncertainty: 0.9, lastReviewed: new Date(0).toISOString(), errorSignals: 0 },
+  { topicId: 'soc_marx_sociologia', level: 0, uncertainty: 0.9, lastReviewed: new Date(0).toISOString(), errorSignals: 0 },
+  { topicId: 'soc_weber', level: 0, uncertainty: 0.9, lastReviewed: new Date(0).toISOString(), errorSignals: 0 },
+  { topicId: 'soc_cultura_identidade', level: 0, uncertainty: 0.9, lastReviewed: new Date(0).toISOString(), errorSignals: 0 },
+  { topicId: 'soc_estratificacao_desigualdade', level: 0, uncertainty: 0.9, lastReviewed: new Date(0).toISOString(), errorSignals: 0 },
+  { topicId: 'soc_trabalho_sociedade', level: 0, uncertainty: 0.9, lastReviewed: new Date(0).toISOString(), errorSignals: 0 },
+  { topicId: 'soc_movimentos_sociais', level: 0, uncertainty: 0.9, lastReviewed: new Date(0).toISOString(), errorSignals: 0 },
+  { topicId: 'soc_globalizacao', level: 0, uncertainty: 0.9, lastReviewed: new Date(0).toISOString(), errorSignals: 0 },
 ];
 
 export const mockProfile: UserProfile = {
