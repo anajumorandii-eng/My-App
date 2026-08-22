@@ -1,0 +1,188 @@
+[
+  {
+    "id": "fis_cinematica",
+    "name": "Cinemática Escalar",
+    "chapters": [
+      "Cinemática Escalar. Conceitos Fundamentais",
+      "Movimento Uniforme",
+      "Movimento Uniformemente Variado",
+      "O Movimento Circular"
+    ]
+  },
+  {
+    "id": "fis_cinematica_vetorial",
+    "name": "Cinemática Vetorial",
+    "chapters": [
+      "Grandezas Físicas e Operações com Vetores",
+      "Velocidade Vetorial",
+      "Composição de Movimentos",
+      "Aceleração Vetorial"
+    ]
+  },
+  {
+    "id": "fis_leis_newton",
+    "name": "Leis de Newton e Dinâmica do Movimento Retilíneo",
+    "chapters": [
+      "Força e seus Tipos",
+      "Resultante de um Sistema de Forças",
+      "As Leis de Newton",
+      "A Força de Contato",
+      "Sistema de Corpos Interagindo e os Elementos Transmissores de Força",
+      "Plano Inclinado"
+    ]
+  },
+  {
+    "id": "fis_gravitacao_circular",
+    "name": "Gravitação e Movimento Circular",
+    "chapters": [
+      "Leis da Gravitação",
+      "Dinâmica do Movimento Circular",
+      "Analisando Movimentos Contidos em um Plano Vertical",
+      "Órbitas",
+      "Balística",
+      "Movimento Harmônico Simples (MHS)"
+    ]
+  },
+  {
+    "id": "fis_dinamica_impulsiva",
+    "name": "Dinâmica Impulsiva",
+    "chapters": [
+      "Impulso e Quantidade de Movimento",
+      "Sistemas Isolados e a Conservação da Quantidade de Movimento",
+      "Colisões"
+    ]
+  },
+  {
+    "id": "fis_energia",
+    "name": "Dinâmica Energética e Transformações de Energia",
+    "chapters": [
+      "Trabalho e Energia: Trabalho de uma Força",
+      "Trabalho e Energia: Teorema da Energia Cinética",
+      "Trabalho e Energia: o Teorema da Energia Potencial",
+      "Sistemas Conservativos e Sistemas Não Conservativos",
+      "Potência, Máquina e Rendimento",
+      "Água aos Reatores Nucleares\",\n      "
+    ]
+  },
+  {
+    "id": "fis_estatica",
+    "name": "Estática dos Corpos Sólidos e dos Fluidos",
+    "chapters": [
+      "Estática",
+      "Hidrostática: Densidade e Pressão"
+    ]
+  },
+  {
+    "id": "fis_calorimetria",
+    "name": "Calorimetria",
+    "chapters": [
+      "Temperatura, Calor e seus Mecanismos de Transferência",
+      "Dilatação ou Contração Térmica dos Sólidos e Líquidos",
+      "Calor Sensível e Calor Latente"
+    ]
+  },
+  {
+    "id": "fis_termodinamica_gases",
+    "name": "Termodinâmica dos Gases",
+    "chapters": [
+      "Gases Ideais: Variáveis de Estado e as Transformações Gasosas",
+      "Trabalho da Força de Pressão do Gás",
+      "Primeira Lei da Termodinâmica",
+      "Primeira Lei da Termodinâmica Aplicada a Algumas Transformações Particulares",
+      "Máquinas Térmicas e Ciclo de Carnot"
+    ]
+  },
+  {
+    "id": "fis_eletrostatica",
+    "name": "Eletrostática e Campo Elétrico",
+    "chapters": [
+      "Eletrostática: Processos de Eletrização e Aplicações",
+      "Força Elétrica: Lei de Coulomb",
+      "Campo Elétrico",
+      "Energia Potencial e Potencial Elétrico",
+      "Mapeamento do Campo Elétrico: Linhas de Força e Superfícies Equipotenciais",
+      "Campo Elétrico Uniforme: Abordagem Escalar e Abordagem Vetorial",
+      "Dinâmica das Cargas Elétricas"
+    ]
+  },
+  {
+    "id": "fis_circuitos",
+    "name": "Circuitos Elétricos",
+    "chapters": [
+      "Corrente Elétrica",
+      "Potência Elétrica",
+      "Resistores",
+      "Medidores Elétricos",
+      "Geradores",
+      "Receptores",
+      "Circuitos de Malha Única",
+      "Eletrodinâmica: as Leis de Kirchhoff",
+      "Capacitores"
+    ]
+  },
+  {
+    "id": "fis_eletromagnetismo",
+    "name": "Eletromagnetismo",
+    "chapters": [
+      "Ímãs, Campo de Indução Magnético devido a Ímãs e Campo Magnético Terrestre",
+      "Campo Magnético devido à Corrente em Fio Reto e Espira: Descrição Vetorial e Aplicações",
+      "Força Magnética e Análise de Lançamentos de Cargas em um Campo Magnético Uniforme",
+      "Análise de Força Magnética em Fios Percorridos por Correntes Contínuas",
+      "Indução Eletromagnética: Lei de Lenz",
+      "Indução Eletromagnética: Análise da Corrente Induzida em Geradores"
+    ]
+  },
+  {
+    "id": "fis_optica_geometrica",
+    "name": "Óptica Geométrica",
+    "chapters": [
+      "Fundamentos da Óptica Geométrica",
+      "Reflexão em Superfícies Planas",
+      "Reflexão em Superfícies Esféricas",
+      "Refração: Fundamentos, Leis e Aplicações",
+      "Lentes Esféricas: Estudo Gráfico"
+    ]
+  },
+  {
+    "id": "fis_optica_instrumental",
+    "name": "Óptica Instrumental e da Visão",
+    "chapters": [
+      "Estudo Analítico das Lentes Esféricas",
+      "Equação do Fabricante de Lentes e Associação de Lentes",
+      "Óptica da Visão",
+      "Microscópio e Luneta Astronômica (ou Telescópio Refrator): Noções Básicas"
+    ]
+  },
+  {
+    "id": "fis_ondas_fundamentos",
+    "name": "Fundamentos de Ondas e Oscilações",
+    "chapters": [
+      "Conceitos Básicos",
+      "Equação Fundamental da Ondulatória"
+    ]
+  },
+  {
+    "id": "fis_ondulatoria",
+    "name": "Ondulatória",
+    "chapters": [
+      "Ondulatória: Ondas Eletromagnéticas",
+      "Ondulatória: Som e suas Propriedades",
+      "Intensidade Sonora",
+      "Reflexão, Eco, Reverberação e Refração de Ondas",
+      "Fenômenos Ondulatórios: Análise de Refração e Reflexão em Cordas",
+      "Fenômenos Ondulatórios: Difração, Polarização e Ressonância",
+      "Interferência de Ondas: Análise Quantitativa, Aplicações e Batimento",
+      "Um Caso Particular de Interferência: Onda Estacionária",
+      "Ondas Estacionárias em Cordas",
+      "Ondas Estacionárias em Tubos",
+      "Efeito Doppler: Descrição e Estudo Quantitativo"
+    ]
+  },
+  {
+    "id": "fis_fisica_moderna",
+    "name": "Física Moderna",
+    "chapters": [
+      "Noções Básicas de Física Quântica"
+    ]
+  }
+]

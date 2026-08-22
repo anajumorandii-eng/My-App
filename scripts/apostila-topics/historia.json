@@ -1,0 +1,105 @@
+[
+  {
+    "id": "his_idade_antiga",
+    "name": "Idade Antiga",
+    "chapters": [
+      "Introdução à História e Primeiras Civilizações",
+      "Antiguidade Clássica: o Mundo Grego",
+      "Antiguidade Clássica: o Mundo Romano"
+    ]
+  },
+  {
+    "id": "his_idade_media",
+    "name": "Idade Média",
+    "chapters": [
+      "Alta Idade Média e Feudalismo",
+      "Baixa Idade Média",
+      "A Primeira Globalização"
+    ]
+  },
+  {
+    "id": "his_moderna_iluminismo",
+    "name": "Idade Moderna e Iluminismo",
+    "chapters": [
+      "América Espanhola",
+      "Vida Urbana e Renascimento Cultural",
+      "Reforma Religiosa",
+      "Absolutismo",
+      "Revolução Industrial",
+      "Iluminismo",
+      "Revolução Francesa",
+      "América no Século XIX"
+    ]
+  },
+  {
+    "id": "his_imperialismo_guerras",
+    "name": "Imperialismo e Guerras Mundiais",
+    "chapters": [
+      "Europa no Século XIX",
+      "Imperialismo e Belle Époque",
+      "Primeira Guerra Mundial (1914-1918)",
+      "Grandes Revoluções do Século XX",
+      "O Período Entreguerras (1918-1939)",
+      "O Nazismo na Alemanha",
+      "Segunda Guerra Mundial (1939-1945)"
+    ]
+  },
+  {
+    "id": "his_guerra_fria_contemporaneo",
+    "name": "Guerra Fria e Mundo Contemporâneo",
+    "chapters": [
+      "Guerra Fria",
+      "Descolonização Afro-Asiática",
+      "América Latina no Século XX",
+      "O Fim da Guerra Fria"
+    ]
+  },
+  {
+    "id": "his_brasil_colonia",
+    "name": "Brasil Colônia",
+    "chapters": [
+      "A História e o Brasil",
+      "Grandes Navegações e Conquista Colonial",
+      "A Montagem da Colonização",
+      "Dinâmica Interna da Colonização",
+      "Disputas Europeias no Brasil Colonial",
+      "A Interiorização da Colonização",
+      "A Mineração no Brasil Colonial",
+      "A Crise do Antigo Sistema Colonial",
+      "A Independência do Brasil"
+    ]
+  },
+  {
+    "id": "his_brasil_imperio",
+    "name": "Brasil Império",
+    "chapters": [
+      "Brasil Império: Formação do Estado Nacional Brasileiro",
+      "Brasil Império: o Período Regencial (1831-1840)",
+      "Brasil Império: Segundo Reinado (1840-1889)",
+      "Brasil Império: o Declínio do Segundo Reinado"
+    ]
+  },
+  {
+    "id": "his_primeira_republica_vargas",
+    "name": "Primeira República e Era Vargas",
+    "chapters": [
+      "A República da Espada",
+      "Ascensão e Domínio das Oligarquias",
+      "A Primeira República: o Declínio Oligárquico (1889-1930)",
+      "A Era Vargas",
+      "A Era Vargas: o Governo Constitucional (1934-1937)",
+      "A Era Vargas: o Estado Novo"
+    ]
+  },
+  {
+    "id": "his_republica_liberal_atual",
+    "name": "República Liberal e Brasil Contemporâneo",
+    "chapters": [
+      "República Liberal (1945-1964): Democracia em Tempos de Guerra Fria",
+      "República Liberal (1945-1964): Desenvolvimentismo e Populismo",
+      "Regime Militar (1964-1985) I",
+      "Regime Militar (1964-1985) II",
+      "O Brasil Atual"
+    ]
+  }
+]
