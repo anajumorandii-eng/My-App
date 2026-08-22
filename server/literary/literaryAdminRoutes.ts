@@ -2,7 +2,19 @@ import { randomUUID } from 'node:crypto';
 import { Router } from 'express';
 import { Firestore } from 'firebase-admin/firestore';
 import { LiteraryWork, WorkEdition, ExamRequirement, WorkUnit, AuditStatus } from '../../src/types/literaryWorks';
-import { uploadWorkEditionSource, computeFileHash, getSignedReadUrl } from './literaryStorage';
+import { uploadWorkEditionSource, computeFileHash, getSignedReadUrl, downloadWorkEditionSource } from './literaryStorage';
+import { extractPagesText, segmentIntoUnits } from './literarySegmenter';
+
+// A obra declara o gênero em texto livre (LiteraryWork.genre, ex.: "poesia",
+// "romance", "canção/poesia musicada") — o segmentador só precisa saber se
+// deve priorizar o heurístico de poema/canção quando não achar capítulo
+// numerado (ver segmentIntoUnits).
+function segmenterHintFromGenre(genre: string): 'chapter' | 'poem' | 'song' {
+  const g = genre.toLowerCase();
+  if (g.includes('canção') || g.includes('cancao')) return 'song';
+  if (g.includes('poesia')) return 'poem';
+  return 'chapter';
+}
 
 // Painel de ingestão/auditoria (Fase 1 do roteiro) — protegido por
 // requireAdmin no mount (ver server.ts), já que só quem cura o conteúdo
@@ -110,6 +122,32 @@ export function createLiteraryAdminRouter(db: Firestore): Router {
     await ref.set(patch, { merge: true });
     const updated = await ref.get();
     res.json(updated.data());
+  });
+
+  // Etapa C (extração estruturada): roda o segmentador heurístico sobre o
+  // PDF já ingerido e devolve unidades CANDIDATAS — nada é salvo aqui. Quem
+  // cura confirma/ajusta e persiste de fato via POST /works/:workId/units
+  // (seção 7/Etapa C do roteiro: "validação humana do começo e fim de cada
+  // unidade" antes de virar WorkUnit definitivo).
+  router.post('/works/:workId/editions/:editionId/segment', async (req, res) => {
+    const workDoc = await db.collection('literaryWorks').doc(req.params.workId).get();
+    if (!workDoc.exists) {
+      return res.status(404).json({ error: 'Obra não encontrada.', code: 'WORK_NOT_FOUND' });
+    }
+    const editionDoc = await db.collection('literaryWorks').doc(req.params.workId).collection('editions').doc(req.params.editionId).get();
+    if (!editionDoc.exists) {
+      return res.status(404).json({ error: 'Edição não encontrada.', code: 'EDITION_NOT_FOUND' });
+    }
+    const work = workDoc.data() as LiteraryWork;
+    const edition = editionDoc.data() as WorkEdition;
+    try {
+      const buffer = await downloadWorkEditionSource(edition.sourceFileId);
+      const pages = await extractPagesText(buffer);
+      const candidates = segmentIntoUnits(pages, segmenterHintFromGenre(work.genre));
+      res.json({ candidates });
+    } catch (cause) {
+      res.status(500).json({ error: 'Falha ao processar o PDF pra segmentação.', code: 'SEGMENT_FAILED', detail: String(cause) });
+    }
   });
 
   router.post('/works/:workId/exam-requirements', async (req, res) => {
