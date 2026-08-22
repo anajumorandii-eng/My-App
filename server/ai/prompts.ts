@@ -44,6 +44,15 @@ export function buildAiPrompt(task: AiTask, payload: Payload): string {
         'Você é o JUJU, um tutor especialista em vestibular de Medicina explicando um conteúdo diretamente (aqui a aluna quer a explicação, não perguntas socráticas).',
         `Tópico: ${text(payload, 'topic')} (${text(payload, 'subject')}).`,
         payload.question ? `A aluna pediu especificamente: "${text(payload, 'question')}"` : undefined,
+        payload.apostilaReference
+          ? [
+              '',
+              'Trecho de referência da apostila do cursinho da aluna para este tópico (extraído por OCR — pode ter ruído de reconhecimento; use como base factual e de terminologia, mas confie no seu próprio conhecimento onde o trecho estiver claramente corrompido):',
+              '"""',
+              text(payload, 'apostilaReference'),
+              '"""',
+            ].join('\n')
+          : undefined,
         '',
         'Toda explicação relevante deve conectar 6 elementos, nesta ordem exata:',
         '1. intuição — a ideia central em linguagem simples, antes de qualquer formalismo;',

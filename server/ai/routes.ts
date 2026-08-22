@@ -7,6 +7,12 @@ import { AiTask } from './types';
 import { validateAiPayload } from './validation';
 import { estimateAiCostUsd } from './cost';
 import { AiMetricsRecorder } from './metrics';
+import { ApostilaReferenceStore } from './apostilaReferenceStore';
+
+// Prompt já é grande o bastante sem precisar de um trecho de apostila
+// inteiro — isso aqui é só grounding factual/terminológico, não a fonte
+// primária de conteúdo.
+const MAX_REFERENCE_CHARS_IN_PROMPT = 3000;
 
 const ROUTES: Array<{ path: string; task: AiTask }> = [
   { path: '/socratic', task: 'socratic' },
@@ -23,7 +29,7 @@ const ROUTES: Array<{ path: string; task: AiTask }> = [
   { path: '/method-example', task: 'method-example' },
 ];
 
-export function createAiRouter(service: AiService, metrics?: AiMetricsRecorder): Router {
+export function createAiRouter(service: AiService, metrics?: AiMetricsRecorder, apostilaReferences?: ApostilaReferenceStore): Router {
   const router = Router();
 
   for (const { path, task } of ROUTES) {
@@ -32,6 +38,16 @@ export function createAiRouter(service: AiService, metrics?: AiMetricsRecorder):
       const startedAt = Date.now();
       try {
         const payload = validateAiPayload(task, req.body);
+
+        if (task === 'content-explanation' && apostilaReferences && typeof payload.topic === 'string' && typeof payload.subject === 'string') {
+          try {
+            const reference = await apostilaReferences.getReference(payload.subject, payload.topic);
+            if (reference) payload.apostilaReference = reference.text.slice(0, MAX_REFERENCE_CHARS_IN_PROMPT);
+          } catch (referenceError) {
+            console.error('Falha ao buscar referência da apostila (seguindo sem grounding):', referenceError);
+          }
+        }
+
         const result = await service.generate({ task, prompt: buildAiPrompt(task, payload), userId: res.locals.userId });
         const durationMs = Date.now() - startedAt;
         const estimatedCostUsd = estimateAiCostUsd(result.model, result.usage);

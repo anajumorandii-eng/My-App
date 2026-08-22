@@ -12,6 +12,7 @@ import { firebaseAuthMiddleware, getFirebaseAdminApp, requireAdmin } from './ser
 import { getFirestore } from 'firebase-admin/firestore';
 import { FirestoreDailyQuotaStore } from './server/ai/firestoreQuotaStore';
 import { FirestoreAiMetricsRecorder } from './server/ai/metrics';
+import { FirestoreApostilaReferenceStore } from './server/ai/apostilaReferenceStore';
 import { createAdminRouter } from './server/admin/routes';
 import { createPushRouter, createReviewReminderRouter } from './server/push/routes';
 import { configureWebPush, loadVapidConfig } from './server/push/webPush';
@@ -35,6 +36,14 @@ const dailyQuotaStore = process.env.AI_QUOTA_STORE === 'firestore'
   : undefined;
 const aiMetrics = process.env.AI_METRICS_STORE === 'firestore'
   ? new FirestoreAiMetricsRecorder(getFirestore(getFirebaseAdminApp()))
+  : undefined;
+// Grounding factual/terminológico com trechos reais das apostilas do
+// cursinho da aluna (ver scripts/split-chapters.py e
+// scripts/upload-apostila-references.ts) — opcional, cai de volta pro
+// conhecimento geral do modelo quando não configurado ou sem cobertura
+// pro tópico pedido.
+const apostilaReferences = process.env.AI_APOSTILA_REFERENCES === 'firestore'
+  ? new FirestoreApostilaReferenceStore(getFirestore(getFirebaseAdminApp()))
   : undefined;
 
 // Natural-voice podcast narration. Reuses the same GEMINI_API_KEY already
@@ -117,7 +126,7 @@ app.get('/api/drive/files', async (req, res) => {
 });
 
 // AI routes preserve their public paths and `{ text }` response contract.
-app.use('/api/ai', firebaseAuthMiddleware(), createAiRateLimit(), createAiDailyLimit({ store: dailyQuotaStore }), createAiRouter(aiService, aiMetrics));
+app.use('/api/ai', firebaseAuthMiddleware(), createAiRateLimit(), createAiDailyLimit({ store: dailyQuotaStore }), createAiRouter(aiService, aiMetrics, apostilaReferences));
 // Shares the AI rate limit and daily quota store so narrated playback counts
 // against the same per-user budget as every other AI feature in the app.
 app.use('/api/podcast-audio', firebaseAuthMiddleware(), createAiRateLimit(), createAiDailyLimit({ store: dailyQuotaStore }), createPodcastAudioRouter(podcastTtsService));
