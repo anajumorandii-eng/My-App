@@ -9,18 +9,31 @@ set -euo pipefail
 
 SRC_DIR="$1"
 OUT_FILE="$2"
-JOBS="${3:-3}"
+JOBS="${3:-4}"
 WORK_DIR=$(mktemp -d)
 trap 'rm -rf "$WORK_DIR"' EXIT
+
+# Sem isso, cada processo tesseract tenta usar várias threads (OpenMP) e N
+# processos em paralelo saturam a CPU (N x threads-por-processo), o que na
+# prática travava o lote inteiro por minutos por página em vez de ~2s.
+export OMP_THREAD_LIMIT=1
 
 : > "$OUT_FILE"
 
 ocr_one_page() {
   local pdf="$1" page="$2" work="$3"
   local img="$work/p${page}.png"
-  pdftoppm -f "$page" -l "$page" -r 150 -png -singlefile "$pdf" "$work/p${page}"
-  tesseract "$img" - -l por --psm 6 2>/dev/null
-  rm -f "$img"
+  timeout 25 pdftoppm -f "$page" -l "$page" -r 150 -png -singlefile "$pdf" "$work/p${page}"
+  if [ -f "$img" ]; then
+    # Páginas de capa/divisórias com muita imagem podem travar o tesseract
+    # por minutos (análise de layout patológica) — timeout descarta a
+    # página em vez de travar o lote inteiro; capas não têm conteúdo de
+    # teoria relevante mesmo.
+    timeout 20 tesseract "$img" - -l por --psm 6 2>/dev/null || echo "[OCR timeout/erro nesta página]"
+    rm -f "$img"
+  else
+    echo "[falha ao renderizar página]"
+  fi
 }
 export -f ocr_one_page
 
