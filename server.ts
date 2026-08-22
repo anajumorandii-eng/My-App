@@ -14,6 +14,7 @@ import { FirestoreDailyQuotaStore } from './server/ai/firestoreQuotaStore';
 import { FirestoreAiMetricsRecorder } from './server/ai/metrics';
 import { FirestoreApostilaReferenceStore } from './server/ai/apostilaReferenceStore';
 import { createAdminRouter } from './server/admin/routes';
+import { createApostilaIngestRouter } from './server/admin/apostilaIngestRoutes';
 import { createPushRouter, createReviewReminderRouter } from './server/push/routes';
 import { configureWebPush, loadVapidConfig } from './server/push/webPush';
 import { createPodcastAudioRouter } from './server/podcast/routes';
@@ -131,6 +132,12 @@ app.use('/api/ai', firebaseAuthMiddleware(), createAiRateLimit(), createAiDailyL
 // against the same per-user budget as every other AI feature in the app.
 app.use('/api/podcast-audio', firebaseAuthMiddleware(), createAiRateLimit(), createAiDailyLimit({ store: dailyQuotaStore }), createPodcastAudioRouter(podcastTtsService));
 app.use('/api/admin', firebaseAuthMiddleware(), requireAdmin, createAdminRouter(getFirestore(getFirebaseAdminApp())));
+// Sem login de usuário — protegida só pelo segredo compartilhado
+// (x-ingest-secret), pra permitir subir referências de apostila direto
+// pra produção a partir do pipeline local (scripts/split-chapters.py).
+// Corpo maior que o limite global de 64kb porque o texto extraído de
+// uma matéria inteira passa de 1MB.
+app.use('/api/internal', express.json({ limit: '20mb' }), createApostilaIngestRouter(getFirestore(getFirebaseAdminApp()), process.env.APOSTILA_INGEST_SECRET));
 app.use('/api/push', createPushRouter(getFirestore(getFirebaseAdminApp()), vapidConfig?.publicKey, firebaseAuthMiddleware()));
 app.use('/api/push', createReviewReminderRouter(getFirestore(getFirebaseAdminApp()), vapidConfig, process.env.CRON_SECRET));
 
