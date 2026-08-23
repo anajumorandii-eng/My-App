@@ -1,5 +1,5 @@
 import { randomUUID } from 'node:crypto';
-import { Router } from 'express';
+import { Router, Request, Response } from 'express';
 import { Firestore } from 'firebase-admin/firestore';
 import { LiteraryWork, WorkEdition, ExamRequirement, WorkUnit, AuditStatus } from '../../src/types/literaryWorks';
 import { uploadWorkEditionSource, computeFileHash, getSignedReadUrl, downloadWorkEditionSource } from './literaryStorage';
@@ -17,6 +17,23 @@ function segmenterHintFromGenre(genre: string): 'chapter' | 'poem' | 'song' {
   return 'chapter';
 }
 
+// Sem isso, uma rejeição não tratada dentro de um handler async do Express
+// (ex.: bucket do Storage sem permissão, Firestore fora do ar) não vira uma
+// resposta de erro — vira um "unhandledRejection" que derruba o processo
+// Node inteiro (padrão desde o Node 15), e o Cloud Run passa a responder
+// 503 pra TODAS as rotas do app até subir uma instância nova. Envolve cada
+// handler pra sempre responder um JSON de erro em vez de deixar estourar.
+function asyncRoute(handler: (req: Request, res: Response) => Promise<unknown>) {
+  return async (req: Request, res: Response) => {
+    try {
+      await handler(req, res);
+    } catch (cause) {
+      console.error('Erro em rota administrativa de literary:', cause);
+      res.status(500).json({ error: 'Erro interno ao processar a requisição.', code: 'INTERNAL_ERROR', detail: String(cause) });
+    }
+  };
+}
+
 // Painel de ingestão/auditoria (Fase 1 do roteiro) — protegido por
 // requireAdmin no mount (ver server.ts), já que só quem cura o conteúdo
 // (a própria Ana ou eu) deve poder subir/alterar material de obra.
@@ -29,7 +46,7 @@ export function createLiteraryAdminRouter(db: Firestore): Router {
   // do seed (.set() sem merge sobrescreve com o mesmo valor, então rodar de
   // novo não duplica nada). Não cria WorkEdition — o arquivo em si ainda
   // precisa ser enviado por edição, pra manter o hash/proveniência reais.
-  router.post('/seed', async (_req, res) => {
+  router.post('/seed', asyncRoute(async (_req, res) => {
     const batch = db.batch();
     for (const work of SEED_WORKS) {
       batch.set(db.collection('literaryWorks').doc(work.id), work);
@@ -39,9 +56,9 @@ export function createLiteraryAdminRouter(db: Firestore): Router {
     }
     await batch.commit();
     res.json({ works: SEED_WORKS.length, examRequirements: SEED_EXAM_REQUIREMENTS.length });
-  });
+  }));
 
-  router.post('/works', async (req, res) => {
+  router.post('/works', asyncRoute(async (req, res) => {
     const { slug, title, author, originalYear, genre, language } = req.body ?? {};
     if (!slug || !title || !author || !genre || !language) {
       return res.status(400).json({ error: 'Campos obrigatórios: slug, title, author, genre, language.', code: 'INVALID_WORK' });
@@ -49,17 +66,17 @@ export function createLiteraryAdminRouter(db: Firestore): Router {
     const work: LiteraryWork = { id: randomUUID(), slug, title, author, originalYear, genre, language };
     await db.collection('literaryWorks').doc(work.id).set(work);
     res.json(work);
-  });
+  }));
 
-  router.get('/works', async (_req, res) => {
+  router.get('/works', asyncRoute(async (_req, res) => {
     const snap = await db.collection('literaryWorks').get();
     res.json(snap.docs.map((d) => d.data()));
-  });
+  }));
 
   // Recebe o PDF em base64 — Etapa A (recebimento): hash, checagem de
   // duplicata e registro de direitos/proveniência antes de qualquer
   // processamento de conteúdo.
-  router.post('/works/:workId/editions', async (req, res) => {
+  router.post('/works/:workId/editions', asyncRoute(async (req, res) => {
     const { workId } = req.params;
     const { fileBase64, mimeType, publisher, edition, year, isbn, translator, organizer, printedPageCount, rightsStatus } = req.body ?? {};
     if (!fileBase64 || !rightsStatus) {
@@ -104,16 +121,16 @@ export function createLiteraryAdminRouter(db: Firestore): Router {
     };
     await db.collection('literaryWorks').doc(workId).collection('editions').doc(editionId).set(editionData);
     res.json(editionData);
-  });
+  }));
 
-  router.get('/works/:workId/editions', async (req, res) => {
+  router.get('/works/:workId/editions', asyncRoute(async (req, res) => {
     const snap = await db.collection('literaryWorks').doc(req.params.workId).collection('editions').get();
     res.json(snap.docs.map((d) => d.data()));
-  });
+  }));
 
   // URL assinada temporária pra revisão manual do PDF durante a auditoria —
   // nunca fica pública nem em cache.
-  router.get('/works/:workId/editions/:editionId/read-url', async (req, res) => {
+  router.get('/works/:workId/editions/:editionId/read-url', asyncRoute(async (req, res) => {
     const editionDoc = await db.collection('literaryWorks').doc(req.params.workId).collection('editions').doc(req.params.editionId).get();
     if (!editionDoc.exists) {
       return res.status(404).json({ error: 'Edição não encontrada.', code: 'EDITION_NOT_FOUND' });
@@ -121,11 +138,11 @@ export function createLiteraryAdminRouter(db: Firestore): Router {
     const edition = editionDoc.data() as WorkEdition;
     const url = await getSignedReadUrl(edition.sourceFileId);
     res.json({ url, expiresInMinutes: 15 });
-  });
+  }));
 
   // Etapa B (auditoria documental): status final por edição —
   // rejected/needs_review/verified, conforme a seção 2.2/Etapa B do roteiro.
-  router.patch('/works/:workId/editions/:editionId/audit', async (req, res) => {
+  router.patch('/works/:workId/editions/:editionId/audit', asyncRoute(async (req, res) => {
     const { integrityStatus, extractionStatus, pdfPageCount, printedPageCount } = req.body ?? {};
     const validStatuses: AuditStatus[] = ['pending', 'needs_review', 'verified', 'rejected'];
     if (integrityStatus && !validStatuses.includes(integrityStatus)) {
@@ -143,14 +160,14 @@ export function createLiteraryAdminRouter(db: Firestore): Router {
     await ref.set(patch, { merge: true });
     const updated = await ref.get();
     res.json(updated.data());
-  });
+  }));
 
   // Etapa C (extração estruturada): roda o segmentador heurístico sobre o
   // PDF já ingerido e devolve unidades CANDIDATAS — nada é salvo aqui. Quem
   // cura confirma/ajusta e persiste de fato via POST /works/:workId/units
   // (seção 7/Etapa C do roteiro: "validação humana do começo e fim de cada
   // unidade" antes de virar WorkUnit definitivo).
-  router.post('/works/:workId/editions/:editionId/segment', async (req, res) => {
+  router.post('/works/:workId/editions/:editionId/segment', asyncRoute(async (req, res) => {
     const workDoc = await db.collection('literaryWorks').doc(req.params.workId).get();
     if (!workDoc.exists) {
       return res.status(404).json({ error: 'Obra não encontrada.', code: 'WORK_NOT_FOUND' });
@@ -172,9 +189,9 @@ export function createLiteraryAdminRouter(db: Firestore): Router {
     } catch (cause) {
       res.status(500).json({ error: 'Falha ao processar o PDF pra segmentação.', code: 'SEGMENT_FAILED', detail: String(cause) });
     }
-  });
+  }));
 
-  router.post('/works/:workId/exam-requirements', async (req, res) => {
+  router.post('/works/:workId/exam-requirements', asyncRoute(async (req, res) => {
     const { board, examCycle, officialListUrl, officiallyVerifiedAt, requiredScope, active } = req.body ?? {};
     if (!board || !examCycle || !officialListUrl || !officiallyVerifiedAt || !requiredScope) {
       return res.status(400).json({ error: 'Campos obrigatórios: board, examCycle, officialListUrl, officiallyVerifiedAt, requiredScope.', code: 'INVALID_REQUIREMENT' });
@@ -185,13 +202,13 @@ export function createLiteraryAdminRouter(db: Firestore): Router {
     };
     await db.collection('literaryWorks').doc(req.params.workId).collection('examRequirements').doc(requirement.id).set(requirement);
     res.json(requirement);
-  });
+  }));
 
   // Etapa C (extração estruturada): unidades registradas manualmente ou por
   // um segmentador — sempre com validação humana do começo/fim de cada uma
   // antes de virar 'verified' (o segmentador em si ainda depende de ter
   // PDFs reais pra processar, ver literarySegmenter.ts).
-  router.post('/works/:workId/units', async (req, res) => {
+  router.post('/works/:workId/units', asyncRoute(async (req, res) => {
     const units = req.body?.units as Partial<WorkUnit>[] | undefined;
     if (!Array.isArray(units) || units.length === 0) {
       return res.status(400).json({ error: 'Campo obrigatório: units (array).', code: 'INVALID_UNITS' });
@@ -216,12 +233,12 @@ export function createLiteraryAdminRouter(db: Firestore): Router {
     }
     await batch.commit();
     res.json(saved);
-  });
+  }));
 
-  router.get('/works/:workId/units', async (req, res) => {
+  router.get('/works/:workId/units', asyncRoute(async (req, res) => {
     const snap = await db.collection('literaryWorks').doc(req.params.workId).collection('units').orderBy('order').get();
     res.json(snap.docs.map((d) => d.data()));
-  });
+  }));
 
   return router;
 }
