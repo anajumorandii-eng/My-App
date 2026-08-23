@@ -4,12 +4,13 @@ import { ReviewQuality, qualityFromSelfRating } from '../lib/flashcardScheduler'
 import {
   confirmFlashcardRating,
   cleanupFlashcardSessionLifecycle,
+  createFlashcardSessionIdentity,
   createFlashcardSessionLifecycle,
   isFlashcardSessionLifecycleCurrent,
-  renewFlashcardSessionLifecycle,
   resolveFlashcardRatingProgress,
   runFlashcardCompletion,
   setupFlashcardSessionLifecycle,
+  syncFlashcardSessionIdentity,
 } from '../lib/flashcardSessionFlow';
 import type { FlashcardRatingResult } from '../lib/flashcardSessionFlow';
 
@@ -44,6 +45,8 @@ export default function FlashcardSession({ title, cards, onRate, onExit, onCompl
   const ratingRef = useRef(false);
   const completionCalledRef = useRef(false);
   const lifecycleRef = useRef(createFlashcardSessionLifecycle());
+  const sessionIdentity = createFlashcardSessionIdentity(cards);
+  const sessionIdentityRef = useRef(sessionIdentity);
   const current = cards[index];
 
   useEffect(() => {
@@ -52,14 +55,20 @@ export default function FlashcardSession({ title, cards, onRate, onExit, onCompl
   }, []);
 
   useEffect(() => {
-    renewFlashcardSessionLifecycle(lifecycleRef.current);
+    const synced = syncFlashcardSessionIdentity(
+      lifecycleRef.current,
+      sessionIdentityRef.current,
+      cards,
+    );
+    sessionIdentityRef.current = synced.identity;
+    if (!synced.reset) return;
     ratingRef.current = false;
     completionCalledRef.current = false;
     setRating(false);
     setRatingError(null);
     setIndex(0);
     setRevealed(false);
-  }, [cards]);
+  }, [sessionIdentity]);
 
   const progressLabel = useMemo(() => `${Math.min(index + 1, cards.length)} de ${cards.length}`, [index, cards.length]);
 

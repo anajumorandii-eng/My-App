@@ -77,3 +77,18 @@ export function isFlashcardSessionLifecycleCurrent(
 ): boolean {
   return lifecycle.mounted && lifecycle.generation === generation;
 }
+
+export function createFlashcardSessionIdentity(cards: readonly { id: string }[]): string {
+  return JSON.stringify(cards.map((card) => card.id));
+}
+
+export function syncFlashcardSessionIdentity(
+  lifecycle: FlashcardSessionLifecycle,
+  currentIdentity: string,
+  cards: readonly { id: string }[],
+): { identity: string; reset: boolean } {
+  const identity = createFlashcardSessionIdentity(cards);
+  if (identity === currentIdentity) return { identity, reset: false };
+  renewFlashcardSessionLifecycle(lifecycle);
+  return { identity, reset: true };
+}

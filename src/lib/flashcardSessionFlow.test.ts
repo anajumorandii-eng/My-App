@@ -6,12 +6,14 @@ import {
   clearFlashcardSessionSnapshot,
   cleanupFlashcardSessionLifecycle,
   createFlashcardSessionLifecycle,
+  createFlashcardSessionIdentity,
   isFlashcardSessionLifecycleCurrent,
   renewFlashcardSessionLifecycle,
   resolveFlashcardRatingProgress,
   runFlashcardCompletion,
   setupFlashcardSessionLifecycle,
   startFlashcardSessionSnapshot,
+  syncFlashcardSessionIdentity,
 } from './flashcardSessionFlow';
 
 test('não confirma avanço quando avaliação retorna null ou false', async () => {
@@ -90,4 +92,31 @@ test('lifecycle restaura mounted após replay do StrictMode e desmonta no cleanu
   cleanupFlashcardSessionLifecycle(lifecycle);
   assert.equal(lifecycle.mounted, false);
   assert.equal(isFlashcardSessionLifecycleCurrent(lifecycle, lifecycle.generation), false);
+});
+
+test('array reconstruído com os mesmos IDs não renova geração nem reseta sessão', () => {
+  const lifecycle = createFlashcardSessionLifecycle();
+  setupFlashcardSessionLifecycle(lifecycle);
+  const identity = createFlashcardSessionIdentity([{ id: 'A' }, { id: 'B' }, { id: 'C' }]);
+  const generation = lifecycle.generation;
+
+  const synced = syncFlashcardSessionIdentity(
+    lifecycle,
+    identity,
+    [{ id: 'A' }, { id: 'B' }, { id: 'C' }],
+  );
+
+  assert.deepEqual(synced, { identity, reset: false });
+  assert.equal(lifecycle.generation, generation);
+  const indexAfterRating = 1;
+  assert.equal(['A', 'B', 'C'][indexAfterRating], 'B');
+});
+
+test('sequência diferente renova geração e solicita reset', () => {
+  const lifecycle = createFlashcardSessionLifecycle();
+  const identity = createFlashcardSessionIdentity([{ id: 'A' }, { id: 'B' }]);
+  const synced = syncFlashcardSessionIdentity(lifecycle, identity, [{ id: 'A' }, { id: 'C' }]);
+
+  assert.equal(synced.reset, true);
+  assert.equal(lifecycle.generation, 1);
 });
