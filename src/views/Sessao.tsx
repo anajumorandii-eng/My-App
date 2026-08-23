@@ -6,8 +6,12 @@ import { useUserProfile } from '../hooks/useUserProfile';
 import { useStudentGoals } from '../hooks/useStudentGoals';
 import { useAvailableMinutes } from '../hooks/useAvailableMinutes';
 import { StudyAction } from '../types';
+import { StudySessionRecord, StudyVerification } from '../types';
 import { PlayCircle, Pause, RotateCcw, CheckCircle2, PlayCircle as StartIcon, CloudOff } from 'lucide-react';
 import { useSearchParams } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
+import { saveUserStudySession } from '../lib/userData';
+import { applyReviewOutcome, qualityFromStudyVerification } from '../lib/spacedRepetition';
 
 function formatTime(totalSeconds: number) {
   const m = Math.floor(totalSeconds / 60).toString().padStart(2, '0');
@@ -18,6 +22,7 @@ function formatTime(totalSeconds: number) {
 export default function Sessao() {
   const [searchParams] = useSearchParams();
   const { mastery, updateMastery, isPersisted } = useUserMastery();
+  const { user } = useAuth();
   const { profile } = useUserProfile();
   const { goals } = useStudentGoals();
   const { minutes: availableMinutes } = useAvailableMinutes();
@@ -30,21 +35,50 @@ export default function Sessao() {
   const [secondsLeft, setSecondsLeft] = useState((selectedAction?.estimatedMinutes ?? 25) * 60);
   const [isRunning, setIsRunning] = useState(false);
   const [completedIds, setCompletedIds] = useState<string[]>([]);
+  const completedIdsRef = useRef<string[]>([]);
+  const [verifiedIds, setVerifiedIds] = useState<string[]>([]);
+  const [sessions, setSessions] = useState<Record<string, StudySessionRecord>>({});
+  const [syncError, setSyncError] = useState<string | null>(null);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
-  const completeAction = useCallback((action: StudyAction) => {
-    setCompletedIds((ids) => {
-      if (ids.includes(action.id)) return ids;
-      updateMastery((items) => items.map((item) => item.topicId === action.topicId ? {
-        ...item,
-        level: Math.min(100, item.level + (action.type === 'theory' ? 4 : 3)),
-        uncertainty: Math.max(0, item.uncertainty - 0.05),
-        errorSignals: action.type === 'error_analysis' ? Math.max(0, item.errorSignals - 1) : item.errorSignals,
-        lastReviewed: new Date().toISOString(),
-      } : item));
-      return [...ids, action.id];
-    });
-  }, [updateMastery]);
+  const completeAction = useCallback((action: StudyAction, elapsedSeconds: number) => {
+    if (completedIdsRef.current.includes(action.id)) return;
+    const completedAt = new Date().toISOString();
+    const session: StudySessionRecord = {
+      id: `${action.id}-${Date.now()}`,
+      actionId: action.id,
+      topicId: action.topicId,
+      actionType: action.type,
+      plannedMinutes: action.estimatedMinutes,
+      completedMinutes: Math.max(1, Math.round(elapsedSeconds / 60)),
+      completedAt,
+    };
+    completedIdsRef.current = [...completedIdsRef.current, action.id];
+    setCompletedIds(completedIdsRef.current);
+    setSessions((current) => ({ ...current, [action.id]: session }));
+    setSyncError(null);
+    if (user) saveUserStudySession(user.uid, session).catch(() => setSyncError('O bloco ficou salvo nesta tela, mas não sincronizou com a nuvem.'));
+  }, [user]);
+
+  const verifyLearning = async (result: StudyVerification) => {
+    if (!selectedAction || verifiedIds.includes(selectedAction.id)) return;
+    const session = sessions[selectedAction.id];
+    if (!session) return;
+    const verifiedAt = new Date().toISOString();
+    setSyncError(null);
+    try {
+      const verifiedSession = { ...session, verification: result, verifiedAt };
+      if (user) await saveUserStudySession(user.uid, verifiedSession);
+      const saved = await updateMastery((items) => items.map((item) => item.topicId === selectedAction.topicId
+        ? { ...item, ...applyReviewOutcome(item, qualityFromStudyVerification(result), new Date(verifiedAt)) }
+        : item));
+      if (!saved) throw new Error('mastery-persistence-failed');
+      setSessions((current) => ({ ...current, [selectedAction.id]: verifiedSession }));
+      setVerifiedIds((ids) => [...ids, selectedAction.id]);
+    } catch {
+      setSyncError('Não foi possível registrar a checagem. Tente novamente antes de sair.');
+    }
+  };
 
   // Applies the ?topic= deep link at most once per topic. Without the ref
   // guard, completing that same action changes `mastery` -> `dailyPlan`
@@ -69,7 +103,7 @@ export default function Sessao() {
         setSecondsLeft((prev) => {
           if (prev <= 1) {
             setIsRunning(false);
-            if (selectedAction) completeAction(selectedAction);
+            if (selectedAction) completeAction(selectedAction, selectedAction.estimatedMinutes * 60);
             return 0;
           }
           return prev - 1;
@@ -96,12 +130,13 @@ export default function Sessao() {
 
   const markComplete = () => {
     setIsRunning(false);
-    if (selectedAction) completeAction(selectedAction);
+    if (selectedAction) completeAction(selectedAction, totalSeconds - secondsLeft);
   };
 
   const totalSeconds = (selectedAction?.estimatedMinutes ?? 25) * 60;
   const progress = totalSeconds > 0 ? ((totalSeconds - secondsLeft) / totalSeconds) * 100 : 0;
   const isDone = selectedAction ? completedIds.includes(selectedAction.id) : false;
+  const isVerified = selectedAction ? verifiedIds.includes(selectedAction.id) : false;
 
   return (
     <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
@@ -177,9 +212,29 @@ export default function Sessao() {
               {isDone ? (
                 <div className="flex items-center text-emerald-600 dark:text-emerald-400 font-medium mb-4">
                   <CheckCircle2 className="w-5 h-5 mr-2" />
-                  Bloco concluído
+                  Tempo de estudo registrado
                 </div>
               ) : null}
+
+              {isDone && !isVerified && (
+                <div className="w-full max-w-xl p-4 mb-5 rounded-xl border border-indigo-200 dark:border-indigo-800 bg-indigo-50/70 dark:bg-indigo-900/20 text-left">
+                  <p className="font-semibold text-sm mb-1">Checagem rápida de aprendizagem</p>
+                  <p className="text-xs text-zinc-600 dark:text-zinc-400 mb-3">Sem consultar o material, você consegue explicar a ideia central ou resolver um exemplo básico? O tempo conta como esforço; somente esta evidência altera o domínio.</p>
+                  <div className="flex flex-wrap gap-2">
+                    {([
+                      ['nao_consegui', 'Ainda não consigo'],
+                      ['com_ajuda', 'Consigo com ajuda'],
+                      ['sem_apoio', 'Consigo sem apoio'],
+                    ] as const).map(([value, label]) => (
+                      <button key={value} onClick={() => verifyLearning(value)} className="px-3 py-2 rounded-lg bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 text-sm hover:border-indigo-400">
+                        {label}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+              {isVerified && <p className="text-sm text-emerald-600 dark:text-emerald-400 mb-4">Checagem registrada; o plano foi recalculado com essa evidência.</p>}
+              {syncError && <p className="text-sm text-rose-500 mb-4">{syncError}</p>}
 
               <div className="flex items-center gap-3">
                 <button

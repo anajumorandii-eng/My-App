@@ -21,6 +21,7 @@ export const boardExamStructure: Record<string, string> = {
 export const discursiveQuestions: DiscursiveQuestion[] = [
   {
     id: 'disc_fuvest_bio_2024',
+    topicId: 'bio_fisio_animal',
     board: 'Fuvest',
     year: 2024,
     subject: 'Biologia',
@@ -40,6 +41,7 @@ export const discursiveQuestions: DiscursiveQuestion[] = [
   },
   {
     id: 'disc_fuvest_fis_2024',
+    topicId: 'fis_calorimetria',
     board: 'Fuvest',
     year: 2024,
     subject: 'Física',
@@ -59,6 +61,7 @@ export const discursiveQuestions: DiscursiveQuestion[] = [
   },
   {
     id: 'disc_fuvest_qui_2024',
+    topicId: 'qui_equilibrio',
     board: 'Fuvest',
     year: 2024,
     subject: 'Química',
@@ -78,6 +81,7 @@ export const discursiveQuestions: DiscursiveQuestion[] = [
   },
   {
     id: 'disc_fuvest_mat_2022',
+    topicId: 'mat_dados_probabilidade',
     board: 'Fuvest',
     year: 2022,
     subject: 'Matemática',
@@ -97,6 +101,7 @@ export const discursiveQuestions: DiscursiveQuestion[] = [
   },
   {
     id: 'disc_comvest_bio_2020',
+    topicId: 'bio_evolucao',
     board: 'Unicamp / Comvest',
     year: 2020,
     subject: 'Biologia',
@@ -112,6 +117,7 @@ export const discursiveQuestions: DiscursiveQuestion[] = [
   },
   {
     id: 'disc_comvest_qui_2024',
+    topicId: 'qui_equilibrio',
     board: 'Unicamp / Comvest',
     year: 2024,
     subject: 'Química',
@@ -130,6 +136,7 @@ export const discursiveQuestions: DiscursiveQuestion[] = [
   },
   {
     id: 'disc_unesp_geo_2024',
+    topicId: 'geo_populacao_urbana_brasil',
     board: 'Unesp / Vunesp',
     year: 2024,
     subject: 'Geografia',
@@ -147,6 +154,7 @@ export const discursiveQuestions: DiscursiveQuestion[] = [
   },
   {
     id: 'disc_unesp_fis_2024',
+    topicId: 'fis_eletrostatica',
     board: 'Unesp / Vunesp',
     year: 2024,
     subject: 'Física',
@@ -164,6 +172,7 @@ export const discursiveQuestions: DiscursiveQuestion[] = [
   },
   {
     id: 'disc_famerp_bio_2015',
+    topicId: 'bio_fisio_vegetal',
     board: 'Famerp',
     year: 2015,
     subject: 'Biologia',
@@ -181,6 +190,7 @@ export const discursiveQuestions: DiscursiveQuestion[] = [
   },
   {
     id: 'disc_famerp_qui_2018',
+    topicId: 'qui_estequiometria',
     board: 'Famerp',
     year: 2018,
     subject: 'Química',
@@ -202,6 +212,7 @@ export const discursiveQuestions: DiscursiveQuestion[] = [
   },
   {
     id: 'disc_unifesp_bio_2020',
+    topicId: 'bio_ecologia',
     board: 'Unifesp',
     year: 2020,
     subject: 'Biologia',
