@@ -1,7 +1,8 @@
 import React, { useMemo, useState } from 'react';
-import { mockStudyMethods, mockTopics } from '../data/mockData';
+import { mockTopics } from '../data/mockData';
 import { StudyMethod } from '../types';
 import { useUserMastery } from '../hooks/useUserMastery';
+import { useStudyMethods } from '../hooks/useStudyMethods';
 import { requestAiText } from '../lib/aiClient';
 import { AiText } from '../components/AiText';
 import { FlaskConical, ChevronDown, Brain, Repeat as RepeatIcon, Target, Zap, Sparkles, CheckCircle2 } from 'lucide-react';
@@ -20,14 +21,15 @@ const CATEGORY_META: Record<StudyMethod['category'], { label: string; icon: Reac
 
 export default function Laboratorio() {
   const { mastery } = useUserMastery();
+  const { studyMethods, syncError } = useStudyMethods();
   const [categoryFilter, setCategoryFilter] = useState<StudyMethod['category'] | 'all'>('all');
-  const [expandedId, setExpandedId] = useState<string | null>(mockStudyMethods[0]?.id ?? null);
+  const [expandedId, setExpandedId] = useState<string | null>(studyMethods[0]?.id ?? null);
   const [examples, setExamples] = useState<Record<string, string>>({});
   const [loadingExampleFor, setLoadingExampleFor] = useState<string | null>(null);
 
   const filtered = useMemo(
-    () => (categoryFilter === 'all' ? mockStudyMethods : mockStudyMethods.filter((m) => m.category === categoryFilter)),
-    [categoryFilter]
+    () => (categoryFilter === 'all' ? studyMethods : studyMethods.filter((m) => m.category === categoryFilter)),
+    [studyMethods, categoryFilter]
   );
 
   const weakestTopic = useMemo(() => {
@@ -63,6 +65,7 @@ export default function Laboratorio() {
         <p className="text-zinc-500 dark:text-zinc-400">
           Técnicas de estudo com evidência científica, prontas para aplicar hoje.
         </p>
+        {syncError && <p className="text-xs text-rose-500 mt-2">{syncError}</p>}
       </header>
 
       <div className="flex gap-2 flex-wrap">

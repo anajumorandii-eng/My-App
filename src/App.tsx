@@ -29,6 +29,7 @@ import Recuperacao from './views/Recuperacao';
 import Diagnostico from './views/Diagnostico';
 import Admin from './views/Admin';
 import AdminObras from './views/AdminObras';
+import AdminConteudo from './views/AdminConteudo';
 import Flashcards from './views/Flashcards';
 import ObrasObrigatorias from './views/ObrasObrigatorias';
 import Obras from './views/Obras';
@@ -65,6 +66,7 @@ export default function App() {
             <Route path="obras/:workSlug" element={<ObraDetalhe />} />
             <Route path="admin" element={<Admin />} />
             <Route path="admin/obras" element={<AdminObras />} />
+            <Route path="admin/conteudo" element={<AdminConteudo />} />
           </Route>
         </Routes>
       </BrowserRouter>

@@ -1,8 +1,9 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { mockPodcastEpisodes, mockTopics } from '../data/mockData';
+import { mockTopics } from '../data/mockData';
 import { requestAiText } from '../lib/aiClient';
 import { synthesizePodcastAudio, podcastAudioErrorMessage } from '../lib/podcastAudio';
 import { useUserProfile } from '../hooks/useUserProfile';
+import { usePodcastEpisodes } from '../hooks/usePodcastEpisodes';
 import { PodcastEpisode, UserProfile } from '../types';
 import { Headphones, Play, Square, Volume2, Sparkles, Clock, Mic, Loader2 } from 'lucide-react';
 
@@ -54,6 +55,7 @@ const speechSupported = typeof window !== 'undefined' && 'speechSynthesis' in wi
 
 export default function Podcast() {
   const { profile, updateProfile } = useUserProfile();
+  const { episodes: mockPodcastEpisodes, syncError: episodesSyncError } = usePodcastEpisodes();
   const [playingId, setPlayingId] = useState<string | null>(null);
   const [loadingId, setLoadingId] = useState<string | null>(null);
   const [notice, setNotice] = useState<string | null>(null);
@@ -68,12 +70,12 @@ export default function Podcast() {
 
   const orderedEpisodes = useMemo(
     () => orderByDurationPreference(mockPodcastEpisodes, durationPreference),
-    [durationPreference]
+    [mockPodcastEpisodes, durationPreference]
   );
 
   const matchingCount = useMemo(
     () => (durationPreference ? mockPodcastEpisodes.filter((e) => bucketOf(e.durationMinutes) === durationPreference).length : 0),
-    [durationPreference]
+    [mockPodcastEpisodes, durationPreference]
   );
 
   const setDurationPreference = (value: DurationBucket | null) => {
@@ -182,6 +184,7 @@ export default function Podcast() {
         <p className="text-zinc-500 dark:text-zinc-400">
           Resumos em áudio dos seus tópicos, narrados com voz natural — ótimo para revisar no trajeto.
         </p>
+        {episodesSyncError && <p className="text-xs text-rose-500 mt-2">{episodesSyncError}</p>}
       </header>
 
       {notice && (

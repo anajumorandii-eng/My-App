@@ -16,6 +16,7 @@ import { FirestoreApostilaReferenceStore } from './server/ai/apostilaReferenceSt
 import { createAdminRouter } from './server/admin/routes';
 import { createApostilaIngestRouter } from './server/admin/apostilaIngestRoutes';
 import { createLiteraryAdminRouter } from './server/literary/literaryAdminRoutes';
+import { createContentAdminRouter } from './server/content/contentAdminRoutes';
 import { createPushRouter, createReviewReminderRouter } from './server/push/routes';
 import { configureWebPush, loadVapidConfig } from './server/push/webPush';
 import { createPodcastAudioRouter } from './server/podcast/routes';
@@ -150,6 +151,10 @@ app.use('/api/ai', firebaseAuthMiddleware(), createAiRateLimit(), createAiDailyL
 // against the same per-user budget as every other AI feature in the app.
 app.use('/api/podcast-audio', firebaseAuthMiddleware(), createAiRateLimit(), createAiDailyLimit({ store: dailyQuotaStore }), createPodcastAudioRouter(podcastTtsService));
 app.use('/api/admin', firebaseAuthMiddleware(), requireAdmin, createAdminRouter(getFirestore(getFirebaseAdminApp())));
+// Painel /admin/conteudo: questões, métodos de estudo e episódios de
+// podcast, antes hardcoded em src/data/mockData.ts, agora administráveis
+// sem deploy (ver server/content/contentAdminRoutes.ts).
+app.use('/api/admin/content', firebaseAuthMiddleware(), requireAdmin, createContentAdminRouter(getFirestore(getFirebaseAdminApp())));
 // Sem login de usuário — protegida só pelo segredo compartilhado
 // (x-ingest-secret), pra permitir subir referências de apostila direto
 // pra produção a partir do pipeline local (scripts/split-chapters.py).

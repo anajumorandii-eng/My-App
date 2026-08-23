@@ -26,5 +26,19 @@ service cloud.firestore {
         allow read: if request.auth != null;
       }
     }
+
+    // Banco de conteúdo compartilhado (questões, métodos de estudo, episódios
+    // de podcast) — antes vivia hardcoded em src/data/mockData.ts; agora é
+    // lido daqui por qualquer aluna logada. Escrita só via Admin SDK (painel
+    // /admin/conteudo), igual ao catálogo de Obras acima.
+    match /questions/{questionId} {
+      allow read: if request.auth != null;
+    }
+    match /studyMethods/{methodId} {
+      allow read: if request.auth != null;
+    }
+    match /podcastEpisodes/{episodeId} {
+      allow read: if request.auth != null;
+    }
   }
 }
