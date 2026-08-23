@@ -4,8 +4,13 @@ import test from 'node:test';
 import {
   confirmFlashcardRating,
   clearFlashcardSessionSnapshot,
+  cleanupFlashcardSessionLifecycle,
+  createFlashcardSessionLifecycle,
+  isFlashcardSessionLifecycleCurrent,
+  renewFlashcardSessionLifecycle,
   resolveFlashcardRatingProgress,
   runFlashcardCompletion,
+  setupFlashcardSessionLifecycle,
   startFlashcardSessionSnapshot,
 } from './flashcardSessionFlow';
 
@@ -69,4 +74,20 @@ test('falha não avança nem conclui e sucesso intermediário apenas avança', (
 
 test('conclusão de Obras limpa o snapshot para a próxima lista recalculada', () => {
   assert.equal(clearFlashcardSessionSnapshot(['A', 'B', 'C']), null);
+});
+
+test('lifecycle restaura mounted após replay do StrictMode e desmonta no cleanup final', () => {
+  const lifecycle = createFlashcardSessionLifecycle();
+  setupFlashcardSessionLifecycle(lifecycle);
+  cleanupFlashcardSessionLifecycle(lifecycle);
+  setupFlashcardSessionLifecycle(lifecycle);
+  assert.equal(lifecycle.mounted, true);
+
+  const generation = lifecycle.generation;
+  renewFlashcardSessionLifecycle(lifecycle);
+  assert.equal(isFlashcardSessionLifecycleCurrent(lifecycle, generation), false);
+
+  cleanupFlashcardSessionLifecycle(lifecycle);
+  assert.equal(lifecycle.mounted, false);
+  assert.equal(isFlashcardSessionLifecycleCurrent(lifecycle, lifecycle.generation), false);
 });

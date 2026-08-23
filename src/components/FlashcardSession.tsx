@@ -3,8 +3,13 @@ import { CheckCircle2, Frown, Meh, Smile, RotateCcw, ArrowLeft } from 'lucide-re
 import { ReviewQuality, qualityFromSelfRating } from '../lib/flashcardScheduler';
 import {
   confirmFlashcardRating,
+  cleanupFlashcardSessionLifecycle,
+  createFlashcardSessionLifecycle,
+  isFlashcardSessionLifecycleCurrent,
+  renewFlashcardSessionLifecycle,
   resolveFlashcardRatingProgress,
   runFlashcardCompletion,
+  setupFlashcardSessionLifecycle,
 } from '../lib/flashcardSessionFlow';
 import type { FlashcardRatingResult } from '../lib/flashcardSessionFlow';
 
@@ -38,12 +43,23 @@ export default function FlashcardSession({ title, cards, onRate, onExit, onCompl
   const [ratingError, setRatingError] = useState<string | null>(null);
   const ratingRef = useRef(false);
   const completionCalledRef = useRef(false);
-  const mountedRef = useRef(true);
+  const lifecycleRef = useRef(createFlashcardSessionLifecycle());
   const current = cards[index];
 
-  useEffect(() => () => {
-    mountedRef.current = false;
+  useEffect(() => {
+    setupFlashcardSessionLifecycle(lifecycleRef.current);
+    return () => cleanupFlashcardSessionLifecycle(lifecycleRef.current);
   }, []);
+
+  useEffect(() => {
+    renewFlashcardSessionLifecycle(lifecycleRef.current);
+    ratingRef.current = false;
+    completionCalledRef.current = false;
+    setRating(false);
+    setRatingError(null);
+    setIndex(0);
+    setRevealed(false);
+  }, [cards]);
 
   const progressLabel = useMemo(() => `${Math.min(index + 1, cards.length)} de ${cards.length}`, [index, cards.length]);
 
@@ -66,12 +82,13 @@ export default function FlashcardSession({ title, cards, onRate, onExit, onCompl
   const rate = async (selfRating: SelfRating) => {
     if (ratingRef.current || completionCalledRef.current) return;
     ratingRef.current = true;
+    const lifecycleGeneration = lifecycleRef.current.generation;
     setRating(true);
     setRatingError(null);
     const confirmed = await confirmFlashcardRating(() => (
       onRate(current.id, qualityFromSelfRating(selfRating))
     ));
-    if (!mountedRef.current) return;
+    if (!isFlashcardSessionLifecycleCurrent(lifecycleRef.current, lifecycleGeneration)) return;
     const progress = resolveFlashcardRatingProgress(confirmed, index, cards.length);
     if (progress.complete && onComplete) {
       completionCalledRef.current = runFlashcardCompletion(

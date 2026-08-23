@@ -47,3 +47,33 @@ export function runFlashcardCompletion(
 export function clearFlashcardSessionSnapshot<T>(_snapshot: T[] | null): null {
   return null;
 }
+
+export type FlashcardSessionLifecycle = {
+  mounted: boolean;
+  generation: number;
+};
+
+export function createFlashcardSessionLifecycle(): FlashcardSessionLifecycle {
+  return { mounted: false, generation: 0 };
+}
+
+export function setupFlashcardSessionLifecycle(lifecycle: FlashcardSessionLifecycle): void {
+  lifecycle.mounted = true;
+}
+
+export function cleanupFlashcardSessionLifecycle(lifecycle: FlashcardSessionLifecycle): void {
+  lifecycle.mounted = false;
+  lifecycle.generation += 1;
+}
+
+export function renewFlashcardSessionLifecycle(lifecycle: FlashcardSessionLifecycle): number {
+  lifecycle.generation += 1;
+  return lifecycle.generation;
+}
+
+export function isFlashcardSessionLifecycleCurrent(
+  lifecycle: FlashcardSessionLifecycle,
+  generation: number,
+): boolean {
+  return lifecycle.mounted && lifecycle.generation === generation;
+}
