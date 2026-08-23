@@ -6,6 +6,7 @@ import { useFlashcardReviews } from '../hooks/useFlashcardReviews';
 import { isDue } from '../lib/flashcardScheduler';
 import FlashcardSession, { SessionCard } from '../components/FlashcardSession';
 import { createFlashcardReviewAccess } from '../lib/flashcardReviewHydration';
+import { startFlashcardSessionSnapshot } from '../lib/flashcardSessionFlow';
 
 function toSessionCard(card: WorkFlashcard): SessionCard {
   return { id: card.id, front: card.front, back: card.back };
@@ -16,6 +17,7 @@ export default function ObrasObrigatorias() {
     reviews,
     recordReview,
     hydrationStatus,
+    currentOwnerUid,
     isReadyForStudy,
     retryHydration,
     isPersisted,
@@ -25,11 +27,13 @@ export default function ObrasObrigatorias() {
   const [loading, setLoading] = useState(true);
   const [loadError, setLoadError] = useState<string | null>(null);
   const [work, setWork] = useState<string | null>(null);
+  const [sessionCards, setSessionCards] = useState<SessionCard[] | null>(null);
   const reviewAccess = createFlashcardReviewAccess(hydrationStatus, isReadyForStudy);
 
   useEffect(() => {
-    if (!reviewAccess.canStudy) setWork(null);
-  }, [reviewAccess.canStudy]);
+    setWork(null);
+    setSessionCards(null);
+  }, [currentOwnerUid, reviewAccess.canStudy]);
 
   useEffect(() => {
     loadObraFlashcards()
@@ -48,10 +52,21 @@ export default function ObrasObrigatorias() {
     return Array.from(counts.entries()).sort((a, b) => b[1] - a[1]);
   }, [allCards]);
 
-  const dueCards = useMemo(() => {
-    if (!allCards || !work) return [];
-    return allCards.filter((c) => c.work === work && isDue(reviews[c.id]));
-  }, [allCards, work, reviews]);
+  const startWorkSession = (name: string) => {
+    if (!reviewAccess.canStudy || !allCards || sessionCards !== null) return;
+    const candidates = allCards
+      .filter((card) => card.work === name && isDue(reviews[card.id]))
+      .map(toSessionCard);
+    const snapshot = startFlashcardSessionSnapshot(sessionCards, candidates);
+    if (!snapshot) return;
+    setWork(name);
+    setSessionCards(snapshot);
+  };
+
+  const exitWorkSession = () => {
+    setWork(null);
+    setSessionCards(null);
+  };
 
   return (
     <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
@@ -109,7 +124,7 @@ export default function ObrasObrigatorias() {
           {worksWithCounts.map(([name, count]) => (
             <button
               key={name}
-              onClick={() => setWork(name)}
+              onClick={() => startWorkSession(name)}
               className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-4 text-left shadow-sm hover:shadow-md transition-shadow"
             >
               <p className="font-semibold">{name}</p>
@@ -119,12 +134,12 @@ export default function ObrasObrigatorias() {
         </div>
       )}
 
-      {!loading && reviewAccess.canStudy && work && (
+      {!loading && reviewAccess.canStudy && work && sessionCards && (
         <FlashcardSession
           title={work}
-          cards={dueCards.map(toSessionCard)}
+          cards={sessionCards}
           onRate={recordReview}
-          onExit={() => setWork(null)}
+          onExit={exitWorkSession}
         />
       )}
     </div>

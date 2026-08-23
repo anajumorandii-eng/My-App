@@ -9,3 +9,11 @@ export async function confirmFlashcardRating(
     return false;
   }
 }
+
+export function startFlashcardSessionSnapshot<T>(
+  current: T[] | null,
+  candidates: readonly T[],
+): T[] | null {
+  if (current !== null) return current;
+  return candidates.length > 0 ? [...candidates] : null;
+}
