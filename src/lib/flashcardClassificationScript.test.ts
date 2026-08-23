@@ -19,6 +19,12 @@ const card = (overrides: Partial<Flashcard> = {}): Flashcard => ({
   ...overrides,
 });
 
+const legacyCard = (overrides: Partial<Flashcard> = {}): Flashcard => card({
+  source: 'lembre_se',
+  tags: ['lembrese'],
+  ...overrides,
+});
+
 test('materializa metadados sem alterar identidade ou conteudo', () => {
   const { cards, report } = classifyCards([card()], true);
 
@@ -46,6 +52,47 @@ test('segunda classificacao produz exatamente o mesmo resultado', () => {
   const once = classifyCards([card()], true).cards;
 
   assert.deepEqual(classifyCards(once, true).cards, once);
+});
+
+test('strict materializes absent legacy metadata and accepts the exact trio idempotently', () => {
+  const once = classifyCards([legacyCard()], true).cards;
+
+  assert.deepEqual(once[0], legacyCard({
+    priority: 'regular',
+    trainingType: 'objetivos',
+    classificationOrigin: 'inherited',
+  }));
+  assert.deepEqual(classifyCards(once, true).cards, once);
+});
+
+test('strict rejects divergent partial and invalid legacy metadata with the card id', () => {
+  const invalidCases: Array<[string, Partial<Flashcard>]> = [
+    ['legacy-divergent', {
+      priority: 'essencial',
+      trainingType: 'objetivos',
+      classificationOrigin: 'inherited',
+    }],
+    ['legacy-partial', { priority: 'regular' }],
+    ['legacy-invalid', {
+      priority: 'regular',
+      trainingType: 'objetivos',
+      classificationOrigin: 'manual' as Flashcard['classificationOrigin'],
+    }],
+  ];
+
+  let strictRejectedDivergentLegacy = false;
+  for (const [id, metadata] of invalidCases) {
+    let rejected = false;
+    try {
+      classifyCards([legacyCard({ id, ...metadata })], true);
+    } catch (error) {
+      rejected = true;
+      assert.match(String(error), new RegExp(`materializada.*divergente.*${id}`, 'i'));
+      if (id === 'legacy-divergent') strictRejectedDivergentLegacy = true;
+    }
+    assert.equal(rejected, true, id);
+  }
+  assert.equal(strictRejectedDivergentLegacy, true);
 });
 
 test('strict mode rejects materialized metadata divergent from tags', () => {
@@ -102,6 +149,29 @@ test('valida toda a materia antes de substituir o arquivo de destino', async () 
   await assert.rejects(
     classifySubjectFile(inputPath, outputPath),
     /classificação inválida.*invalid-id/i,
+  );
+
+  assert.equal(await readFile(outputPath, 'utf8'), priorOutput);
+  assert.deepEqual((await readdir(directory)).sort(), ['biologia.json', 'output.json']);
+});
+
+test('legacy metadata inconsistency does not replace the destination or leave a temp file', async () => {
+  const directory = await mkdtemp(path.join(tmpdir(), 'flashcard-classification-'));
+  const inputPath = path.join(directory, 'biologia.json');
+  const outputPath = path.join(directory, 'output.json');
+  const priorOutput = '[{"preserve":true}]\n';
+
+  await writeFile(inputPath, JSON.stringify([legacyCard({
+    id: 'legacy-divergent',
+    priority: 'essencial',
+    trainingType: 'objetivos',
+    classificationOrigin: 'inherited',
+  })]));
+  await writeFile(outputPath, priorOutput);
+
+  await assert.rejects(
+    classifySubjectFile(inputPath, outputPath),
+    /materializada.*divergente.*legacy-divergent/i,
   );
 
   assert.equal(await readFile(outputPath, 'utf8'), priorOutput);

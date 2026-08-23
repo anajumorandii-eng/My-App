@@ -55,7 +55,7 @@ export function classifyCards(cards: Flashcard[], strict = false): Classificatio
   const classifiedCards = cards.map((card) => {
     const { classification, materializedConsistent } = resolveFlashcardClassification(card);
 
-    if (strict && card.source === 'sistema_priorizado' && !materializedConsistent) {
+    if (strict && !materializedConsistent) {
       throw new Error(`ClassificaÃ§Ã£o materializada divergente para flashcard ${card.id}`);
     }
 

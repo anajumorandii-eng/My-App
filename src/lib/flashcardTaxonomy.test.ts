@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { classifyFlashcard } from './flashcardTaxonomy';
+import { classifyFlashcard, resolveFlashcardClassification } from './flashcardTaxonomy';
 import { Flashcard } from '../types';
 
 function card(patch: Partial<Flashcard>): Flashcard {
@@ -286,4 +286,35 @@ test('valid but stale materialized metadata cannot mask tag derivation', () => {
     trainingType: 'interpretacao',
     classificationOrigin: 'tagged',
   });
+});
+
+test('lembre_se validates absent exact divergent partial and invalid materialized states', () => {
+  const inherited = {
+    priority: 'regular',
+    trainingType: 'objetivos',
+    classificationOrigin: 'inherited',
+  } as const;
+  const cases: Array<[
+    label: string,
+    metadata: Partial<Flashcard>,
+    materializedConsistent: boolean,
+  ]> = [
+    ['absent', {}, true],
+    ['exact', inherited, true],
+    ['divergent', { ...inherited, priority: 'essencial' }, false],
+    ['partial', { priority: 'regular' }, false],
+    ['invalid', {
+      ...inherited,
+      classificationOrigin: 'manual' as Flashcard['classificationOrigin'],
+    }, false],
+  ];
+
+  for (const [label, metadata, materializedConsistent] of cases) {
+    const legacyCard = card({ source: 'lembre_se', tags: ['lembrese'], ...metadata });
+    assert.deepEqual(resolveFlashcardClassification(legacyCard), {
+      classification: inherited,
+      materializedConsistent,
+    }, label);
+    assert.deepEqual(classifyFlashcard(legacyCard), inherited, label);
+  }
 });

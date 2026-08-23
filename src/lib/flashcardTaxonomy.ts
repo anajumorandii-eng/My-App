@@ -156,11 +156,18 @@ export function deriveFlashcardClassification(card: Flashcard): FlashcardClassif
 
 export function resolveFlashcardClassification(card: Flashcard): FlashcardClassificationResolution {
   const derived = deriveFlashcardClassification(card);
+  const materialized = readMaterializedClassification(card);
   if (card.source === 'lembre_se') {
-    return { classification: INHERITED_CLASSIFICATION, materializedConsistent: true };
+    return {
+      classification: INHERITED_CLASSIFICATION,
+      materializedConsistent: materialized.status === 'absent'
+        || (
+          materialized.status === 'valid'
+          && classificationsEqual(materialized.classification, INHERITED_CLASSIFICATION)
+        ),
+    };
   }
 
-  const materialized = readMaterializedClassification(card);
   if (materialized.status === 'invalid') {
     return { classification: FALLBACK_CLASSIFICATION, materializedConsistent: false };
   }
