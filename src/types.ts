@@ -293,6 +293,10 @@ export interface StudySessionRecord {
   verifiedAt?: string;
 }
 
+export type FlashcardPriority = 'essencial' | 'alta' | 'regular';
+export type FlashcardTrainingType = 'objetivos' | 'discursivos' | 'interpretacao' | 'pegadinhas' | 'padroes_bancas';
+export type FlashcardClassificationOrigin = 'tagged' | 'inherited' | 'fallback';
+
 // Flashcard "de matéria" — vinculado (quando possível) a um Topic real do
 // currículo, pra entrar no mesmo fluxo de revisão por tópico do resto do
 // app. Conteúdo estático (não muda por usuária), carregado sob demanda de
@@ -306,6 +310,9 @@ export interface Flashcard {
   back: string; // HTML
   tags: string[];
   source: 'sistema_priorizado' | 'lembre_se';
+  priority?: FlashcardPriority;
+  trainingType?: FlashcardTrainingType;
+  classificationOrigin?: FlashcardClassificationOrigin;
 }
 
 // Estado de repetição espaçada por flashcard (SM-2, mesma base de
