@@ -9,6 +9,7 @@
     "start": "node dist/server.cjs",
     "preview": "vite preview",
     "clean": "rm -rf dist server.js",
+    "flashcards:classify": "tsx scripts/classifyFlashcards.ts",
     "lint": "tsc --noEmit",
     "test": "tsx --test server/ai/*.test.ts server/auth/*.test.ts server/podcast/*.test.ts server/literary/*.test.ts src/lib/*.test.ts"
   },
