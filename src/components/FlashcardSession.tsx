@@ -1,7 +1,11 @@
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { CheckCircle2, Frown, Meh, Smile, RotateCcw, ArrowLeft } from 'lucide-react';
 import { ReviewQuality, qualityFromSelfRating } from '../lib/flashcardScheduler';
-import { confirmFlashcardRating } from '../lib/flashcardSessionFlow';
+import {
+  confirmFlashcardRating,
+  resolveFlashcardRatingProgress,
+  runFlashcardCompletion,
+} from '../lib/flashcardSessionFlow';
 import type { FlashcardRatingResult } from '../lib/flashcardSessionFlow';
 
 type SelfRating = 'fraco' | 'mediano' | 'forte';
@@ -24,14 +28,22 @@ interface FlashcardSessionProps {
   cards: SessionCard[];
   onRate: (cardId: string, quality: ReviewQuality) => FlashcardRatingResult | Promise<FlashcardRatingResult>;
   onExit: () => void;
+  onComplete?: () => void;
 }
 
-export default function FlashcardSession({ title, cards, onRate, onExit }: FlashcardSessionProps) {
+export default function FlashcardSession({ title, cards, onRate, onExit, onComplete }: FlashcardSessionProps) {
   const [index, setIndex] = useState(0);
   const [revealed, setRevealed] = useState(false);
   const [rating, setRating] = useState(false);
   const [ratingError, setRatingError] = useState<string | null>(null);
+  const ratingRef = useRef(false);
+  const completionCalledRef = useRef(false);
+  const mountedRef = useRef(true);
   const current = cards[index];
+
+  useEffect(() => () => {
+    mountedRef.current = false;
+  }, []);
 
   const progressLabel = useMemo(() => `${Math.min(index + 1, cards.length)} de ${cards.length}`, [index, cards.length]);
 
@@ -52,14 +64,26 @@ export default function FlashcardSession({ title, cards, onRate, onExit }: Flash
   }
 
   const rate = async (selfRating: SelfRating) => {
-    if (rating) return;
+    if (ratingRef.current || completionCalledRef.current) return;
+    ratingRef.current = true;
     setRating(true);
     setRatingError(null);
     const confirmed = await confirmFlashcardRating(() => (
       onRate(current.id, qualityFromSelfRating(selfRating))
     ));
+    if (!mountedRef.current) return;
+    const progress = resolveFlashcardRatingProgress(confirmed, index, cards.length);
+    if (progress.complete && onComplete) {
+      completionCalledRef.current = runFlashcardCompletion(
+        progress,
+        completionCalledRef.current,
+        onComplete,
+      );
+      return;
+    }
+    ratingRef.current = false;
     setRating(false);
-    if (!confirmed) {
+    if (!progress.advance) {
       setRatingError('Não foi possível salvar esta revisão. Tente novamente.');
       return;
     }

@@ -6,7 +6,10 @@ import { useFlashcardReviews } from '../hooks/useFlashcardReviews';
 import { isDue } from '../lib/flashcardScheduler';
 import FlashcardSession, { SessionCard } from '../components/FlashcardSession';
 import { createFlashcardReviewAccess } from '../lib/flashcardReviewHydration';
-import { startFlashcardSessionSnapshot } from '../lib/flashcardSessionFlow';
+import {
+  clearFlashcardSessionSnapshot,
+  startFlashcardSessionSnapshot,
+} from '../lib/flashcardSessionFlow';
 
 function toSessionCard(card: WorkFlashcard): SessionCard {
   return { id: card.id, front: card.front, back: card.back };
@@ -32,7 +35,7 @@ export default function ObrasObrigatorias() {
 
   useEffect(() => {
     setWork(null);
-    setSessionCards(null);
+    setSessionCards((snapshot) => clearFlashcardSessionSnapshot(snapshot));
   }, [currentOwnerUid, reviewAccess.canStudy]);
 
   useEffect(() => {
@@ -65,7 +68,7 @@ export default function ObrasObrigatorias() {
 
   const exitWorkSession = () => {
     setWork(null);
-    setSessionCards(null);
+    setSessionCards((snapshot) => clearFlashcardSessionSnapshot(snapshot));
   };
 
   return (
@@ -140,6 +143,7 @@ export default function ObrasObrigatorias() {
           cards={sessionCards}
           onRate={recordReview}
           onExit={exitWorkSession}
+          onComplete={exitWorkSession}
         />
       )}
     </div>

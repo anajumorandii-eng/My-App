@@ -17,3 +17,33 @@ export function startFlashcardSessionSnapshot<T>(
   if (current !== null) return current;
   return candidates.length > 0 ? [...candidates] : null;
 }
+
+export type FlashcardRatingProgress = {
+  advance: boolean;
+  complete: boolean;
+};
+
+export function resolveFlashcardRatingProgress(
+  confirmed: boolean,
+  index: number,
+  total: number,
+): FlashcardRatingProgress {
+  return {
+    advance: confirmed,
+    complete: confirmed && total > 0 && index === total - 1,
+  };
+}
+
+export function runFlashcardCompletion(
+  progress: FlashcardRatingProgress,
+  completionAlreadyCalled: boolean,
+  onComplete: () => void,
+): boolean {
+  if (!progress.complete || completionAlreadyCalled) return completionAlreadyCalled;
+  onComplete();
+  return true;
+}
+
+export function clearFlashcardSessionSnapshot<T>(_snapshot: T[] | null): null {
+  return null;
+}

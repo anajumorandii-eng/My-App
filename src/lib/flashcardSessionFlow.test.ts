@@ -3,6 +3,9 @@ import test from 'node:test';
 
 import {
   confirmFlashcardRating,
+  clearFlashcardSessionSnapshot,
+  resolveFlashcardRatingProgress,
+  runFlashcardCompletion,
   startFlashcardSessionSnapshot,
 } from './flashcardSessionFlow';
 
@@ -39,4 +42,31 @@ test('não inicia sessão vazia nem substitui início existente', () => {
   assert.equal(startFlashcardSessionSnapshot<string>(null, []), null);
   const current = ['A'];
   assert.equal(startFlashcardSessionSnapshot(current, ['B']), current);
+});
+
+test('último sucesso conclui exatamente uma vez', () => {
+  const progress = resolveFlashcardRatingProgress(true, 2, 3);
+  let completions = 0;
+  let completed = runFlashcardCompletion(progress, false, () => { completions += 1; });
+  completed = runFlashcardCompletion(progress, completed, () => { completions += 1; });
+
+  assert.deepEqual(progress, { advance: true, complete: true });
+  assert.equal(completed, true);
+  assert.equal(completions, 1);
+});
+
+test('falha não avança nem conclui e sucesso intermediário apenas avança', () => {
+  assert.deepEqual(resolveFlashcardRatingProgress(false, 2, 3), {
+    advance: false,
+    complete: false,
+  });
+  const intermediate = resolveFlashcardRatingProgress(true, 1, 3);
+  let completions = 0;
+  assert.equal(runFlashcardCompletion(intermediate, false, () => { completions += 1; }), false);
+  assert.deepEqual(intermediate, { advance: true, complete: false });
+  assert.equal(completions, 0);
+});
+
+test('conclusão de Obras limpa o snapshot para a próxima lista recalculada', () => {
+  assert.equal(clearFlashcardSessionSnapshot(['A', 'B', 'C']), null);
 });
