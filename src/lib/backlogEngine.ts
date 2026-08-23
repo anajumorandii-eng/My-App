@@ -75,3 +75,59 @@ export function priorityQueue(item: BacklogItem): BacklogQueue {
 export function isReadyToClose(item: BacklogItem): boolean {
   return item.independentSuccesses >= 2 && item.canExplainTypicalError;
 }
+
+export type RecoveryOutcome = 'ainda_dificil' | 'com_ajuda' | 'independente';
+
+function studyDay(date: Date): string {
+  return new Intl.DateTimeFormat('en-CA', {
+    timeZone: 'America/Sao_Paulo',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+  }).format(date);
+}
+
+export function isDistinctRecoveryOccasion(item: BacklogItem, now: Date): boolean {
+  if (!item.lastIndependentSuccessAt) return true;
+  const previous = new Date(item.lastIndependentSuccessAt);
+  return Number.isNaN(previous.getTime()) || studyDay(previous) !== studyDay(now);
+}
+
+/** Applies explicit student evidence without letting the AI close backlog items. */
+export function applyRecoveryOutcome(
+  item: BacklogItem,
+  outcome: RecoveryOutcome,
+  now: Date = new Date()
+): BacklogItem {
+  const supportLevel = item.supportLevel ?? 1;
+  const common = { lastOutcome: outcome, lastOutcomeAt: now.toISOString() };
+
+  if (outcome === 'ainda_dificil') {
+    return {
+      ...item,
+      ...common,
+      state: Math.max(0, item.state - 1),
+      supportLevel: Math.max(1, supportLevel - 1),
+      independentSuccesses: 0,
+    };
+  }
+
+  if (outcome === 'com_ajuda') {
+    return {
+      ...item,
+      ...common,
+      state: Math.max(item.state, 2),
+      independentSuccesses: 0,
+    };
+  }
+
+  const distinctOccasion = isDistinctRecoveryOccasion(item, now);
+  return {
+    ...item,
+    ...common,
+    state: Math.max(item.state, supportLevel >= 4 ? 4 : 3),
+    supportLevel: Math.min(5, supportLevel + 1),
+    independentSuccesses: item.independentSuccesses + (distinctOccasion ? 1 : 0),
+    lastIndependentSuccessAt: distinctOccasion ? now.toISOString() : item.lastIndependentSuccessAt,
+  };
+}

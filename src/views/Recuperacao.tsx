@@ -1,6 +1,7 @@
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { mockTopics } from '../data/mockData';
 import { useUserBacklog } from '../hooks/useUserBacklog';
+import { useUserMastery } from '../hooks/useUserMastery';
 import { useQuestions } from '../hooks/useQuestions';
 import { requestAiText } from '../lib/aiClient';
 import { AiText } from '../components/AiText';
@@ -8,6 +9,7 @@ import {
   priorityScore,
   priorityQueue,
   isReadyToClose,
+  RecoveryOutcome,
   QUEUE_LABELS,
   QUEUE_CRITERIA,
   QUEUE_TREATMENT,
@@ -17,7 +19,10 @@ import {
   EXIT_CHECKLIST,
   BacklogQueue,
 } from '../lib/backlogEngine';
-import { BacklogItem, Topic } from '../types';
+import { BacklogItem, RecoveryEvidence, Topic } from '../types';
+import { applyRecoveryEvidence } from '../lib/recoveryEvidence';
+import { recordUserRecoveryEvidence } from '../lib/userData';
+import { useAuth } from '../context/AuthContext';
 import { LEGACY_TOPIC_LABELS } from '../data/legacyTopics';
 import {
   ListTodo,
@@ -101,12 +106,42 @@ const EXERCISE_MODE_BY_LEVEL: Record<number, string> = {
   5: 'discursive',
 };
 
-function SupportLevelContent({ topic, subtopic, supportLevel }: { topic: Topic; subtopic?: string; supportLevel: number }) {
+function SupportLevelContent({
+  topic,
+  subtopic,
+  supportLevel,
+  onOutcome,
+}: {
+  topic: Topic;
+  subtopic?: string;
+  supportLevel: number;
+  onOutcome: (outcome: RecoveryOutcome, evidenceId: string) => Promise<boolean>;
+}) {
   const [aiExerciseText, setAiExerciseText] = useState<string | null>(null);
   const [loadingExercise, setLoadingExercise] = useState(false);
   const [studentAnswer, setStudentAnswer] = useState('');
   const [correction, setCorrection] = useState<string | null>(null);
   const [loadingCorrection, setLoadingCorrection] = useState(false);
+  const [recordedOutcome, setRecordedOutcome] = useState<RecoveryOutcome | null>(null);
+  const [pendingOutcome, setPendingOutcome] = useState<{ id: string; outcome: RecoveryOutcome } | null>(null);
+  const [savingOutcome, setSavingOutcome] = useState(false);
+  const [outcomeError, setOutcomeError] = useState<string | null>(null);
+
+  const submitOutcome = async (outcome: RecoveryOutcome) => {
+    if (recordedOutcome || savingOutcome) return;
+    const pending = pendingOutcome ?? {
+      id: globalThis.crypto?.randomUUID?.() ?? `recovery_${Date.now()}_${Math.random().toString(36).slice(2)}`,
+      outcome,
+    };
+    if (pending.outcome !== outcome) return;
+    setPendingOutcome(pending);
+    setSavingOutcome(true);
+    setOutcomeError(null);
+    const saved = await onOutcome(outcome, pending.id);
+    setSavingOutcome(false);
+    if (saved) setRecordedOutcome(outcome);
+    else setOutcomeError('Não foi possível salvar esta evidência. Tente novamente.');
+  };
 
   const effectiveTopic = subtopic ? `${topic.name} — ${subtopic}` : topic.name;
   const { questions } = useQuestions();
@@ -201,9 +236,32 @@ function SupportLevelContent({ topic, subtopic, supportLevel }: { topic: Topic; 
           {loadingCorrection ? 'Corrigindo com IA...' : 'Corrigir com IA'}
         </button>
       ) : (
-        <div className="p-4 rounded-xl bg-emerald-50 dark:bg-emerald-900/20 text-emerald-900 dark:text-emerald-200 text-sm">
-          <AiText text={correction} />
-        </div>
+        <>
+          <div className="p-4 rounded-xl bg-emerald-50 dark:bg-emerald-900/20 text-emerald-900 dark:text-emerald-200 text-sm">
+            <AiText text={correction} />
+          </div>
+          <div>
+            <p className="text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-2">Depois da correção, como você resolveu?</p>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+              {([
+                ['ainda_dificil', 'Ainda não consegui'],
+                ['com_ajuda', 'Consegui com ajuda'],
+                ['independente', 'Consegui sozinha'],
+              ] as const).map(([value, label]) => (
+                <button
+                  key={value}
+                  disabled={recordedOutcome !== null || savingOutcome || (!!pendingOutcome && pendingOutcome.outcome !== value)}
+                  onClick={() => void submitOutcome(value)}
+                  className={`px-3 py-2 rounded-lg border text-sm font-medium disabled:opacity-60 ${recordedOutcome === value ? 'bg-indigo-600 border-indigo-600 text-white' : 'border-zinc-200 dark:border-zinc-700'}`}
+                >
+                  {label}
+                </button>
+              ))}
+            </div>
+            {savingOutcome && <p className="text-xs text-zinc-500 mt-2">Salvando evidência...</p>}
+            {outcomeError && <p className="text-xs text-rose-500 mt-2">{outcomeError}</p>}
+          </div>
+        </>
       )}
     </div>
   );
@@ -265,11 +323,24 @@ function OrphanedBacklogItem({
 }
 
 export default function Recuperacao() {
-  const { backlog, updateBacklog, isPersisted, syncError } = useUserBacklog();
+  const { user } = useAuth();
+  const activeRecoveryUid = useRef<string | null>(user?.uid ?? null);
+  activeRecoveryUid.current = user?.uid ?? null;
+  const { backlog, updateBacklog, acceptCommittedBacklog, isPersisted, syncError } = useUserBacklog();
+  const { mastery, updateMastery, acceptCommittedMastery, syncError: masterySyncError } = useUserMastery();
+  const [recoverySyncError, setRecoverySyncError] = useState<string | null>(null);
   const [showAddForm, setShowAddForm] = useState(false);
   const [showTracks, setShowTracks] = useState(false);
   const [expandedId, setExpandedId] = useState<string | null>(null);
   const [checkedExit, setCheckedExit] = useState<Record<number, boolean>>({});
+  const [manualEvidenceIds, setManualEvidenceIds] = useState<Record<string, string>>({});
+  const [manualSavingId, setManualSavingId] = useState<string | null>(null);
+
+  useEffect(() => {
+    setRecoverySyncError(null);
+    setManualEvidenceIds({});
+    setManualSavingId(null);
+  }, [user?.uid]);
 
   const [formTopicId, setFormTopicId] = useState('');
   const [formSubtopic, setFormSubtopic] = useState('');
@@ -334,6 +405,60 @@ export default function Recuperacao() {
     updateBacklog((prev) => prev.map((b) => (b.id === id ? { ...b, ...patch } : b)));
   };
 
+  const recordRecoveryOutcome = async (item: BacklogItem, outcome: RecoveryOutcome, evidenceId: string): Promise<boolean> => {
+    const now = new Date();
+    const evidence: RecoveryEvidence = {
+      id: evidenceId,
+      backlogItemId: item.id,
+      topicId: item.topicId,
+      outcome,
+      occurredAt: now.toISOString(),
+    };
+    setRecoverySyncError(null);
+
+    if (!user) {
+      const result = applyRecoveryEvidence(backlog, mastery, evidence, false);
+      const [backlogSaved, masterySaved] = await Promise.all([
+        updateBacklog(() => result.backlog),
+        updateMastery(() => result.mastery),
+      ]);
+      return backlogSaved && masterySaved;
+    }
+
+    const operationUid = user.uid;
+    try {
+      const result = await recordUserRecoveryEvidence(operationUid, evidence);
+      const acceptedBacklog = acceptCommittedBacklog(operationUid, result.backlog);
+      const acceptedMastery = acceptCommittedMastery(operationUid, result.mastery);
+      return acceptedBacklog && acceptedMastery;
+    } catch (error) {
+      console.error('Failed to save recovery evidence:', error);
+      if (activeRecoveryUid.current === operationUid) {
+        setRecoverySyncError('Não foi possível salvar a evidência de recuperação. Nenhuma alteração foi confirmada.');
+      }
+      return false;
+    }
+  };
+
+  const recordManualSuccess = async (item: BacklogItem) => {
+    if (manualSavingId) return;
+    const operationUid = activeRecoveryUid.current;
+    const evidenceId = manualEvidenceIds[item.id]
+      ?? (globalThis.crypto?.randomUUID?.() ?? `recovery_${Date.now()}_${Math.random().toString(36).slice(2)}`);
+    setManualEvidenceIds((current) => ({ ...current, [item.id]: evidenceId }));
+    setManualSavingId(item.id);
+    const saved = await recordRecoveryOutcome(item, 'independente', evidenceId);
+    if (activeRecoveryUid.current !== operationUid) return;
+    setManualSavingId(null);
+    if (saved) {
+      setManualEvidenceIds((current) => {
+        const next = { ...current };
+        delete next[item.id];
+        return next;
+      });
+    }
+  };
+
   const removeItem = (id: string) => {
     updateBacklog((prev) => prev.filter((b) => b.id !== id));
     if (expandedId === id) setExpandedId(null);
@@ -360,7 +485,9 @@ export default function Recuperacao() {
             Modo demonstração — conecte sua conta Google em "Conexões Google" para salvar sua fila de verdade.
           </p>
         )}
-        {syncError && <p className="text-xs text-rose-500 mt-2">{syncError}</p>}
+        {(recoverySyncError || syncError || masterySyncError) && (
+          <p className="text-xs text-rose-500 mt-2">{recoverySyncError || syncError || masterySyncError}</p>
+        )}
       </header>
 
       <div className="flex gap-2 flex-wrap">
@@ -587,7 +714,13 @@ export default function Recuperacao() {
                               <p className="font-medium">{currentSupport.activity}</p>
                               <p className="text-xs mt-1">Pronta para avançar quando: {currentSupport.readyToAdvance}</p>
                             </div>
-                            <SupportLevelContent key={`${item.id}_${supportLevel}`} topic={topic} subtopic={item.subtopic} supportLevel={supportLevel} />
+                            <SupportLevelContent
+                              key={`${user?.uid ?? 'demo'}_${item.id}_${supportLevel}`}
+                              topic={topic}
+                              subtopic={item.subtopic}
+                              supportLevel={supportLevel}
+                              onOutcome={(outcome, evidenceId) => recordRecoveryOutcome(item, outcome, evidenceId)}
+                            />
                             <div className="flex gap-2 mt-3">
                               <button
                                 onClick={() => patchItem(item.id, { supportLevel: Math.max(1, supportLevel - 1) })}
@@ -641,11 +774,12 @@ export default function Recuperacao() {
                               </label>
                             </div>
                             <button
-                              onClick={() => patchItem(item.id, { independentSuccesses: item.independentSuccesses + 1 })}
+                              onClick={() => void recordManualSuccess(item)}
+                              disabled={manualSavingId === item.id}
                               className="flex items-center px-3 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg text-sm font-medium transition-colors shrink-0 ml-3"
                             >
                               <CheckCircle2 className="w-4 h-4 mr-1.5" />
-                              Registrar sucesso
+                              {manualSavingId === item.id ? 'Salvando...' : 'Registrar sucesso'}
                             </button>
                           </div>
 

@@ -7,11 +7,15 @@ import {
   commonMistakes,
   revisionChecklist,
 } from '../data/essayModule';
-import { PenLine, ChevronDown, Lightbulb, AlertTriangle, CheckCircle2, XCircle, MessageSquareQuote } from 'lucide-react';
+import { PenLine, ChevronDown, Lightbulb, AlertTriangle, CheckCircle2, XCircle, MessageSquareQuote, Sparkles, Save } from 'lucide-react';
+import { aiErrorMessage, requestAiText } from '../lib/aiClient';
+import { AnswerCorrection, parseAnswerCorrection } from '../lib/tutorContracts';
+import { AiText } from '../components/AiText';
 
-type Tab = 'estrutura' | 'bancas' | 'erros' | 'checklist';
+type Tab = 'pratica' | 'estrutura' | 'bancas' | 'erros' | 'checklist';
 
 const TABS: { id: Tab; label: string }[] = [
+  { id: 'pratica', label: 'Escrever e Reescrever' },
   { id: 'estrutura', label: 'Guia de Estrutura' },
   { id: 'bancas', label: 'Por Vestibular' },
   { id: 'erros', label: 'Erros que Limitam a Nota' },
@@ -21,8 +25,43 @@ const TABS: { id: Tab; label: string }[] = [
 const PART_ORDER: Array<'Introdução' | 'Desenvolvimento' | 'Conclusão'> = ['Introdução', 'Desenvolvimento', 'Conclusão'];
 
 export default function Redacao() {
-  const [tab, setTab] = useState<Tab>('estrutura');
+  const [tab, setTab] = useState<Tab>('pratica');
   const [expandedBoard, setExpandedBoard] = useState<string | null>(essayBoardProfiles[0]?.board ?? null);
+  const [board, setBoard] = useState('ENEM');
+  const [theme, setTheme] = useState(() => localStorage.getItem('juju-essay-theme') ?? '');
+  const [draft, setDraft] = useState(() => localStorage.getItem('juju-essay-draft') ?? '');
+  const [rewrite, setRewrite] = useState(() => localStorage.getItem('juju-essay-rewrite') ?? '');
+  const [correction, setCorrection] = useState<AnswerCorrection | null>(null);
+  const [correcting, setCorrecting] = useState(false);
+  const [practiceError, setPracticeError] = useState<string | null>(null);
+
+  const saveDraft = () => {
+    localStorage.setItem('juju-essay-theme', theme);
+    localStorage.setItem('juju-essay-draft', draft);
+    localStorage.setItem('juju-essay-rewrite', rewrite);
+  };
+
+  const correctEssay = async () => {
+    if (!theme.trim() || !draft.trim()) return;
+    saveDraft();
+    setCorrecting(true);
+    setPracticeError(null);
+    try {
+      const result = await requestAiText('answer-correction', {
+        topic: `Redação — ${theme.trim()}`,
+        subject: 'Língua Portuguesa / Redação',
+        board,
+        question: `Produza uma redação sobre o tema: ${theme.trim()}. Avalie tese, argumentação, coesão, repertório, adequação ao tema e ao perfil da banca ${board}.`,
+        studentAnswer: draft.trim(),
+      });
+      setCorrection(parseAnswerCorrection(result.text));
+      setRewrite(draft);
+    } catch (error) {
+      setPracticeError(aiErrorMessage(error));
+    } finally {
+      setCorrecting(false);
+    }
+  };
 
   return (
     <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
@@ -51,6 +90,45 @@ export default function Redacao() {
           </button>
         ))}
       </div>
+
+      {tab === 'pratica' && (
+        <section className="space-y-5">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+            <select value={board} onChange={(e) => setBoard(e.target.value)} className="border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 rounded-xl px-4 py-3">
+              {['ENEM', 'Fuvest', 'Unicamp', 'Unesp/Vunesp', 'Famerp', 'Unifesp'].map((item) => <option key={item}>{item}</option>)}
+            </select>
+            <input value={theme} onChange={(e) => setTheme(e.target.value)} placeholder="Tema ou proposta de redação" className="md:col-span-2 border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 rounded-xl px-4 py-3" />
+          </div>
+          <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-5">
+            <div className="flex justify-between text-sm mb-2"><span className="font-semibold">Primeira versão</span><span className="text-zinc-500">{draft.trim() ? draft.trim().split(/\s+/).length : 0} palavras</span></div>
+            <textarea value={draft} onChange={(e) => { setDraft(e.target.value); setCorrection(null); }} rows={16} placeholder="Escreva sua redação aqui..." className="w-full bg-zinc-50 dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-700 rounded-xl p-4 leading-7 outline-none focus:ring-2 focus:ring-indigo-500" />
+            <div className="flex flex-wrap gap-2 mt-3">
+              <button onClick={saveDraft} className="flex items-center px-4 py-2 border border-zinc-200 dark:border-zinc-700 rounded-lg"><Save className="w-4 h-4 mr-2" />Salvar rascunho</button>
+              <button onClick={correctEssay} disabled={correcting || !theme.trim() || !draft.trim()} className="flex items-center px-4 py-2 bg-indigo-600 disabled:bg-zinc-300 text-white rounded-lg"><Sparkles className="w-4 h-4 mr-2" />{correcting ? 'Corrigindo...' : 'Corrigir com IA'}</button>
+            </div>
+            {practiceError && <p className="text-sm text-rose-500 mt-3">{practiceError}</p>}
+          </div>
+
+          {correction && (
+            <div className="space-y-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {[
+                  ['O que funcionou', correction.acertos],
+                  ['Primeiro ponto de ruptura', correction.rupturaPoint],
+                  ['Por que compromete o texto', correction.porque],
+                  ['Correção mínima', correction.correcaoMinima],
+                ].map(([title, content]) => <div key={title} className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900 text-sm"><p className="font-semibold mb-1 text-indigo-700 dark:text-indigo-300">{title}</p><AiText text={content} /></div>)}
+              </div>
+              <div className="p-4 rounded-xl bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 text-sm"><p className="font-semibold mb-1">Versão-modelo para comparação</p><AiText text={correction.respostaModelo} /></div>
+              <div className="bg-white dark:bg-zinc-900 border border-indigo-200 dark:border-indigo-800 rounded-2xl p-5">
+                <div className="flex justify-between text-sm mb-2"><span className="font-semibold">Reescrita obrigatória</span><span className="text-zinc-500">Corrija primeiro o ponto de ruptura indicado</span></div>
+                <textarea value={rewrite} onChange={(e) => setRewrite(e.target.value)} rows={16} className="w-full bg-zinc-50 dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-700 rounded-xl p-4 leading-7 outline-none focus:ring-2 focus:ring-indigo-500" />
+                <button onClick={saveDraft} disabled={rewrite.trim() === draft.trim()} className="mt-3 flex items-center px-4 py-2 bg-emerald-600 disabled:bg-zinc-300 text-white rounded-lg"><Save className="w-4 h-4 mr-2" />Salvar reescrita</button>
+              </div>
+            </div>
+          )}
+        </section>
+      )}
 
       {tab === 'estrutura' && (
         <div className="space-y-8">

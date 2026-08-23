@@ -1,6 +1,6 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { useAuth } from '../context/AuthContext';
-import { getUserMastery, saveUserMastery } from '../lib/userData';
+import { getUserMastery, updateUserMastery } from '../lib/userData';
 import { mockMastery } from '../data/mockData';
 import { TopicMastery } from '../types';
 
@@ -9,11 +9,24 @@ export function useUserMastery() {
   const [mastery, setMastery] = useState<TopicMastery[]>(mockMastery);
   const [loading, setLoading] = useState(false);
   const [syncError, setSyncError] = useState<string | null>(null);
+  const [pendingWrites, setPendingWrites] = useState(0);
+  const pendingWritesRef = useRef(0);
+  const localRevision = useRef(0);
+  const activeUid = useRef<string | null>(null);
+
+  const uid = user?.uid ?? null;
+  if (activeUid.current !== uid) {
+    activeUid.current = uid;
+    localRevision.current += 1;
+  }
 
   useEffect(() => {
+    pendingWritesRef.current = 0;
+    setPendingWrites(0);
     if (!user) {
       setMastery(mockMastery);
       setSyncError(null);
+      setPendingWrites(0);
       return;
     }
 
@@ -37,22 +50,62 @@ export function useUserMastery() {
   }, [user]);
 
   const updateMastery = useCallback(
-    (updater: (prev: TopicMastery[]) => TopicMastery[]) => {
-      setMastery((prev) => {
-        const next = updater(prev);
-        if (user) {
-          saveUserMastery(user.uid, next)
-            .then(() => setSyncError(null))
-            .catch((error) => {
-              console.error('Failed to save user mastery:', error);
-              setSyncError('Não foi possível salvar essa alteração. Ela pode não persistir.');
-            });
-        }
-        return next;
-      });
+    (updater: (prev: TopicMastery[]) => TopicMastery[]): Promise<boolean> => {
+      setMastery((prev) => updater(prev));
+      if (!user) return Promise.resolve(true);
+
+      const revision = ++localRevision.current;
+      const operationUid = user.uid;
+      pendingWritesRef.current += 1;
+      setPendingWrites(pendingWritesRef.current);
+      setSyncError(null);
+      return updateUserMastery(operationUid, updater)
+        .then((committed) => {
+          // Do not replace a newer optimistic state with an older transaction
+          // result. The newest transaction will reconcile the UI when it ends.
+          if (activeUid.current === operationUid && revision === localRevision.current) {
+            setMastery(committed);
+            setSyncError(null);
+          }
+          return true;
+        })
+        .catch((error) => {
+          console.error('Failed to save user mastery:', error);
+          if (activeUid.current === operationUid && revision === localRevision.current) {
+            setSyncError('Não foi possível salvar essa alteração. Ela pode não persistir.');
+          }
+          return false;
+        })
+        .finally(() => {
+          if (activeUid.current === operationUid) {
+            pendingWritesRef.current = Math.max(0, pendingWritesRef.current - 1);
+            setPendingWrites(pendingWritesRef.current);
+            if (pendingWritesRef.current === 0) {
+              const refreshRevision = localRevision.current;
+              void getUserMastery(operationUid).then((authoritative) => {
+                if (activeUid.current === operationUid && localRevision.current === refreshRevision) {
+                  setMastery(authoritative);
+                }
+              }).catch((error) => {
+                console.error('Failed to reconcile user mastery after save:', error);
+                if (activeUid.current === operationUid && localRevision.current === refreshRevision) {
+                  setSyncError('Não foi possível confirmar o progresso salvo. Recarregue a página.');
+                }
+              });
+            }
+          }
+        });
     },
     [user]
   );
 
-  return { mastery, updateMastery, loading, syncError, isPersisted: !!user };
+  const acceptCommittedMastery = useCallback((uid: string, committed: TopicMastery[]) => {
+    if (activeUid.current !== uid) return false;
+    localRevision.current += 1;
+    setMastery(committed);
+    setSyncError(null);
+    return true;
+  }, []);
+
+  return { mastery, updateMastery, acceptCommittedMastery, loading, syncError, syncing: pendingWrites > 0, isPersisted: !!user };
 }

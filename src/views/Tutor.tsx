@@ -6,6 +6,8 @@ import { aiErrorMessage, requestAiText } from '../lib/aiClient';
 import { parseContentExplanation, parseAnswerCorrection, ContentExplanation, AnswerCorrection } from '../lib/tutorContracts';
 import { AiText } from '../components/AiText';
 import { Brain, Send, Bot, User, Sparkles, BookOpenText, ClipboardCheck, CalendarClock, PencilLine, Lightbulb, Target, School, AlertTriangle, HelpCircle, RotateCcw } from 'lucide-react';
+import { useUserMastery } from '../hooks/useUserMastery';
+import { applyDiscursiveSelfRatingOutcome } from '../lib/spacedRepetition';
 
 const DISCURSIVE_BOARDS = ['Fuvest', 'Unicamp', 'Unesp', 'Famerp', 'Unifesp'];
 
@@ -125,6 +127,11 @@ function ExplicarPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, 
   const [loading, setLoading] = useState(false);
   const [explanation, setExplanation] = useState<ContentExplanation | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [checkAnswer, setCheckAnswer] = useState('');
+  const [checkLoading, setCheckLoading] = useState(false);
+  const [checkCorrection, setCheckCorrection] = useState<AnswerCorrection | null>(null);
+  const [checkRecorded, setCheckRecorded] = useState(false);
+  const { updateMastery, syncing } = useUserMastery();
 
   const explain = async () => {
     setLoading(true);
@@ -136,11 +143,45 @@ function ExplicarPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, 
         question: question.trim() || undefined,
       });
       setExplanation(parseContentExplanation(data.text));
+      setCheckAnswer('');
+      setCheckCorrection(null);
+      setCheckRecorded(false);
     } catch (err) {
       setError(aiErrorMessage(err));
     } finally {
       setLoading(false);
     }
+  };
+
+  const correctCheck = async () => {
+    if (!explanation || !checkAnswer.trim()) return;
+    setCheckLoading(true);
+    setError(null);
+    try {
+      const data = await requestAiText('answer-correction', {
+        topic: effectiveTopic,
+        subject: topic.subject,
+        question: explanation.checagem,
+        studentAnswer: checkAnswer.trim(),
+      });
+      setCheckCorrection(parseAnswerCorrection(data.text));
+    } catch (err) {
+      setError(aiErrorMessage(err));
+    } finally {
+      setCheckLoading(false);
+    }
+  };
+
+  const recordCheck = async (rating: 'fraco' | 'mediano' | 'forte') => {
+    if (checkRecorded) return;
+    const saved = await updateMastery((items) => items.map((item) => item.topicId === topicId
+      ? { ...item, ...applyDiscursiveSelfRatingOutcome(item, rating) }
+      : item));
+    if (!saved) {
+      setError('Não foi possível salvar a checagem. Tente novamente.');
+      return;
+    }
+    setCheckRecorded(true);
   };
 
   return (
@@ -190,7 +231,33 @@ function ExplicarPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, 
           <div className="p-4 rounded-xl bg-emerald-50 dark:bg-emerald-900/20 text-emerald-800 dark:text-emerald-300 text-sm">
             <p className="font-semibold mb-1 flex items-center"><HelpCircle className="w-4 h-4 mr-2" />Pergunta de checagem</p>
             <AiText text={explanation.checagem} />
+            <textarea
+              value={checkAnswer}
+              onChange={(e) => { setCheckAnswer(e.target.value); setCheckCorrection(null); setCheckRecorded(false); }}
+              rows={3}
+              placeholder="Responda sem consultar a explicação..."
+              className="mt-3 w-full bg-white dark:bg-zinc-950 border border-emerald-200 dark:border-emerald-800 rounded-lg px-3 py-2 text-sm text-zinc-900 dark:text-zinc-100 outline-none focus:ring-2 focus:ring-emerald-500"
+            />
+            <button onClick={correctCheck} disabled={checkLoading || !checkAnswer.trim()} className="mt-2 px-4 py-2 bg-emerald-600 hover:bg-emerald-700 disabled:bg-zinc-300 text-white rounded-lg font-medium">
+              {checkLoading ? 'Avaliando...' : 'Avaliar minha resposta'}
+            </button>
           </div>
+          {checkCorrection && (
+            <div className="space-y-3">
+              <CorrectionCard correction={checkCorrection} />
+              {!checkRecorded ? (
+                <div className="p-4 rounded-xl border border-indigo-200 dark:border-indigo-800">
+                  <p className="text-sm font-semibold mb-2">Comparando com a correção, como foi sua recuperação?</p>
+                  <div className="flex flex-wrap gap-2">
+                    <button disabled={syncing} onClick={() => recordCheck('fraco')} className="px-3 py-2 border rounded-lg text-sm">Não consegui</button>
+                    <button disabled={syncing} onClick={() => recordCheck('mediano')} className="px-3 py-2 border rounded-lg text-sm">Parcial / com ajuda</button>
+                    <button disabled={syncing} onClick={() => recordCheck('forte')} className="px-3 py-2 border rounded-lg text-sm">Consegui sem apoio</button>
+                  </div>
+                  <p className="text-xs text-zinc-500 mt-2">A explicação sozinha não altera seu domínio; esta checagem tem peso limitado.</p>
+                </div>
+              ) : <p className="text-sm text-emerald-600">Checagem registrada no domínio e nas próximas revisões.</p>}
+            </div>
+          )}
         </div>
       )}
     </div>

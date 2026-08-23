@@ -226,6 +226,7 @@ export interface DiscursiveSubItem {
 
 export interface DiscursiveQuestion {
   id: string;
+  topicId: string;
   board: string;
   year: number;
   subject: string;
@@ -242,6 +243,9 @@ export interface DiscursiveQuestion {
 export interface DiscursiveAttempt {
   id: string;
   questionId: string;
+  // Optional for attempts persisted before discursive training joined the
+  // shared topic mastery and review flow.
+  topicId?: string;
   selfRating: 'fraco' | 'mediano' | 'forte';
   date: string;
 }
@@ -262,6 +266,31 @@ export interface BacklogItem {
   supportLevel?: number; // 1-5: nível atual na escada de retirada de apoio
   dateAdded: string;
   closedAt?: string;
+  lastOutcome?: 'ainda_dificil' | 'com_ajuda' | 'independente';
+  lastOutcomeAt?: string;
+  lastIndependentSuccessAt?: string;
+}
+
+export interface RecoveryEvidence {
+  id: string;
+  backlogItemId: string;
+  topicId: string;
+  outcome: 'ainda_dificil' | 'com_ajuda' | 'independente';
+  occurredAt: string;
+}
+
+export type StudyVerification = 'nao_consegui' | 'com_ajuda' | 'sem_apoio';
+
+export interface StudySessionRecord {
+  id: string;
+  actionId: string;
+  topicId: string;
+  actionType: StudyAction['type'];
+  plannedMinutes: number;
+  completedMinutes: number;
+  completedAt: string;
+  verification?: StudyVerification;
+  verifiedAt?: string;
 }
 
 // Flashcard "de matéria" — vinculado (quando possível) a um Topic real do

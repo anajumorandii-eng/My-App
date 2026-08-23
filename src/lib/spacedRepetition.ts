@@ -1,4 +1,4 @@
-import { TopicMastery } from '../types';
+import { StudyVerification, TopicMastery } from '../types';
 
 // Algoritmo de repetição espaçada no estilo SM-2 (Wozniak, 1990 — a base do
 // SuperMemo e, mais tarde, do Anki), fundamentado na curva de esquecimento
@@ -51,12 +51,37 @@ export function qualityFromSelfRating(rating: 'fraco' | 'mediano' | 'forte'): Re
   return 5;
 }
 
+/**
+ * Self-rating schedules the next review, but it is weaker evidence than an
+ * objectively scored answer. A positive mastery change is capped at two
+ * points per discursive attempt.
+ */
+export function applyDiscursiveSelfRatingOutcome(
+  mastery: TopicMastery,
+  rating: 'fraco' | 'mediano' | 'forte',
+  now: Date = new Date()
+): ReviewOutcomePatch {
+  const outcome = applyReviewOutcome(mastery, qualityFromSelfRating(rating), now);
+  return {
+    ...outcome,
+    level: outcome.level > mastery.level
+      ? Math.min(100, mastery.level + Math.min(2, outcome.level - mastery.level))
+      : outcome.level,
+  };
+}
+
 // Resultado objetivo de responder uma questão (certo/errado) também vira
 // nota de qualidade — toda tentativa de recuperação ativa (retrieval
 // practice) deve alimentar o mesmo cronograma de repetição espaçada,
 // não só o botão explícito de "revisado".
 export function qualityFromAnswerCorrectness(correct: boolean): ReviewQuality {
   return correct ? 4 : 1;
+}
+
+export function qualityFromStudyVerification(result: StudyVerification): ReviewQuality {
+  if (result === 'nao_consegui') return 2;
+  if (result === 'com_ajuda') return 3;
+  return 4;
 }
 
 export interface ReviewOutcomePatch {

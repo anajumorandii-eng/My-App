@@ -4,12 +4,20 @@ import {
   nextReviewDate,
   daysOverdue,
   applyReviewOutcome,
+  qualityFromStudyVerification,
+  applyDiscursiveSelfRatingOutcome,
   qualityFromSelfRating,
   qualityFromAnswerCorrectness,
   easeFactorOf,
   intervalDaysOf,
   reviewCountOf,
 } from './spacedRepetition';
+
+test('checagem de sessão distingue esforço de evidência de aprendizagem', () => {
+  assert.equal(qualityFromStudyVerification('nao_consegui'), 2);
+  assert.equal(qualityFromStudyVerification('com_ajuda'), 3);
+  assert.equal(qualityFromStudyVerification('sem_apoio'), 4);
+});
 import { TopicMastery } from '../types';
 
 function mastery(overrides: Partial<TopicMastery> = {}): TopicMastery {
@@ -115,4 +123,20 @@ test('applyReviewOutcome atualiza lastReviewed para o momento informado', () => 
   const now = new Date('2026-09-01T12:00:00');
   const patch = applyReviewOutcome(m, 4, now);
   assert.equal(patch.lastReviewed, now.toISOString());
+});
+
+test('autoavaliação discursiva forte limita o ganho de domínio a dois pontos', () => {
+  const m = mastery({ level: 50 });
+  const patch = applyDiscursiveSelfRatingOutcome(m, 'forte');
+  assert.equal(patch.level, 52);
+  assert.equal(patch.reviewCount, 1);
+});
+
+test('autoavaliação discursiva fraca ainda registra lacuna e revisão próxima', () => {
+  const m = mastery({ level: 50, errorSignals: 1, intervalDays: 12, reviewCount: 4 });
+  const patch = applyDiscursiveSelfRatingOutcome(m, 'fraco');
+  assert.equal(patch.level, 46);
+  assert.equal(patch.errorSignals, 2);
+  assert.equal(patch.intervalDays, 1);
+  assert.equal(patch.reviewCount, 0);
 });
