@@ -45,6 +45,7 @@ export default function AdminObras() {
   const [token, setToken] = useState<string | null>(null);
   const [error, setError] = useState('');
   const [works, setWorks] = useState<LiteraryWork[]>([]);
+  const [editionCounts, setEditionCounts] = useState<Record<string, number>>({});
   const [selectedWorkId, setSelectedWorkId] = useState<string | null>(null);
   const [editions, setEditions] = useState<WorkEdition[]>([]);
   const [units, setUnits] = useState<WorkUnit[]>([]);
@@ -55,7 +56,12 @@ export default function AdminObras() {
   const selectedWork = works.find((w) => w.id === selectedWorkId) ?? null;
 
   const loadWorks = useCallback(async (t: string) => {
-    setWorks(await adminFetch<LiteraryWork[]>('/works', t));
+    const [ws, counts] = await Promise.all([
+      adminFetch<LiteraryWork[]>('/works', t),
+      adminFetch<Record<string, number>>('/editions-summary', t),
+    ]);
+    setWorks(ws);
+    setEditionCounts(counts);
   }, []);
 
   const loadWorkDetail = useCallback(async (t: string, workId: string) => {
@@ -126,7 +132,7 @@ export default function AdminObras() {
           rightsStatus: data.get('rightsStatus'),
         }),
       });
-      await loadWorkDetail(token, selectedWorkId);
+      await Promise.all([loadWorkDetail(token, selectedWorkId), loadWorks(token)]);
       form.reset();
     });
   }
@@ -189,7 +195,10 @@ export default function AdminObras() {
     {error && <div className="p-4 rounded-xl bg-rose-50 text-rose-700 border border-rose-200">{error}</div>}
 
     <section className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-5">
-      <h2 className="font-semibold flex items-center mb-4"><BookOpen className="w-5 h-5 mr-2" />Obras</h2>
+      <h2 className="font-semibold flex items-center mb-1"><BookOpen className="w-5 h-5 mr-2" />Obras</h2>
+      {works.length > 0 && (
+        <p className="text-sm text-zinc-500 mb-4">{Object.keys(editionCounts).length} de {works.length} obras com PDF/edição enviada.</p>
+      )}
       {works.length === 0 && (
         <button disabled={busy} onClick={handleSeed} className="mb-4 bg-emerald-600 text-white rounded-lg px-3 py-1.5 text-sm disabled:opacity-50">
           Semear as 18 obras do ciclo 2027 (Fase 0)
@@ -199,7 +208,7 @@ export default function AdminObras() {
         {works.map((w) => (
           <button key={w.id} onClick={() => setSelectedWorkId(w.id)}
             className={`px-3 py-1.5 rounded-lg text-sm border ${selectedWorkId === w.id ? 'bg-indigo-600 text-white border-indigo-600' : 'border-zinc-200 dark:border-zinc-700'}`}>
-            {w.title}
+            {editionCounts[w.id] > 0 ? '✅ ' : ''}{w.title}
           </button>
         ))}
       </div>
