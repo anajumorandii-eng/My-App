@@ -1,19 +1,23 @@
-import React, { useMemo, useReducer, useState } from 'react';
+import React, { useMemo, useReducer, useRef, useState } from 'react';
 import { ArrowLeft, CloudOff, Layers, Loader2 } from 'lucide-react';
 import { Flashcard, FlashcardPriority, FlashcardTrainingType } from '../types';
 import { mockTopics } from '../data/mockData';
 import { loadFlashcardsForSubject } from '../lib/flashcardContent';
 import { useFlashcardReviews } from '../hooks/useFlashcardReviews';
 import {
-  buildFlashcardTopicIndex,
   FLASHCARD_PRIORITY_ORDER,
   FLASHCARD_TRAINING_TYPE_ORDER,
-  selectDueCards,
+  FlashcardTopicSummary,
 } from '../lib/flashcardCatalog';
 import {
   flashcardNavigationReducer,
   initialFlashcardNavigationState,
 } from '../lib/flashcardNavigation';
+import {
+  canSelectFlashcardTopic,
+  createFlashcardStudySnapshot,
+  isFlashcardDueNavigationBlocked,
+} from '../lib/flashcardStudyView';
 import FlashcardSession, { SessionCard } from '../components/FlashcardSession';
 
 // Contagens conhecidas de antemão (conteúdo estático) — evita ter que
@@ -63,25 +67,42 @@ function BackButton({ onClick }: { onClick: () => void }) {
 }
 
 export default function Flashcards() {
-  const { reviews, recordReview, isPersisted, syncError } = useFlashcardReviews();
+  const {
+    reviews,
+    recordReview,
+    loading: reviewsLoading,
+    isPersisted,
+    syncError,
+  } = useFlashcardReviews();
   const [navigation, dispatch] = useReducer(
     flashcardNavigationReducer,
     initialFlashcardNavigationState,
   );
   const [cards, setCards] = useState<Flashcard[] | null>(null);
   const [sessionCards, setSessionCards] = useState<Flashcard[]>([]);
+  const [selectionNow, setSelectionNow] = useState(() => new Date());
   const [loadingSubject, setLoadingSubject] = useState<string | null>(null);
   const [loadError, setLoadError] = useState<string | null>(null);
+  const latestLoadRequest = useRef(0);
+
+  const dueNavigationBlocked = isFlashcardDueNavigationBlocked(
+    isPersisted,
+    reviewsLoading,
+  );
 
   const subjectTopics = useMemo(
     () => mockTopics.filter((topic) => topic.subject === navigation.subject),
     [navigation.subject],
   );
 
-  const topicIndex = useMemo(
-    () => (cards ? buildFlashcardTopicIndex(cards, subjectTopics, reviews) : []),
-    [cards, subjectTopics, reviews],
+  const studySnapshot = useMemo(
+    () => (cards
+      ? createFlashcardStudySnapshot(cards, subjectTopics, reviews, selectionNow)
+      : null),
+    [cards, reviews, selectionNow, subjectTopics],
   );
+
+  const topicIndex = studySnapshot?.topicIndex ?? [];
 
   const selectedTopic = useMemo(
     () => topicIndex.find((topic) => (
@@ -102,51 +123,58 @@ export default function Flashcards() {
   }, [navigation, selectedTopic]);
 
   const openSubject = async (name: string) => {
+    if (dueNavigationBlocked || loadingSubject !== null) return;
+    const requestId = latestLoadRequest.current + 1;
+    latestLoadRequest.current = requestId;
     setLoadingSubject(name);
     setLoadError(null);
     try {
       const data = await loadFlashcardsForSubject(name);
+      if (requestId !== latestLoadRequest.current) return;
       setCards(data);
+      setSelectionNow(new Date());
       dispatch({ type: 'select_subject', subject: name });
     } catch (error) {
+      if (requestId !== latestLoadRequest.current) return;
       console.error('Failed to load flashcards:', error);
       setLoadError('Não foi possível carregar os flashcards dessa matéria.');
     } finally {
-      setLoadingSubject(null);
+      if (requestId === latestLoadRequest.current) {
+        setLoadingSubject(null);
+      }
     }
   };
 
-  const chooseTopic = (topicId: string | null) => {
-    const navigationTopicId = topicId ?? OTHER_TOPICS_NAVIGATION_ID;
+  const chooseTopic = (topic: FlashcardTopicSummary) => {
+    if (dueNavigationBlocked || !canSelectFlashcardTopic(topic)) return;
+    const navigationTopicId = topic.topicId ?? OTHER_TOPICS_NAVIGATION_ID;
     dispatch({ type: 'select_topic', topicId: navigationTopicId });
     dispatch({ type: 'back' });
   };
 
   const reviewAllDueForTopic = () => {
-    if (!cards || !selectedTopic) return;
-    setSessionCards(selectDueCards(
-      cards,
-      subjectTopics,
-      { topicId: selectedTopic.topicId, allDueForTopic: true },
-      reviews,
-    ));
+    if (dueNavigationBlocked || !studySnapshot || !selectedTopic) return;
+    setSessionCards(studySnapshot.selectDue({
+      topicId: selectedTopic.topicId,
+      allDueForTopic: true,
+    }));
     dispatch({ type: 'review_all_due' });
   };
 
   const startTrainingSession = (trainingType: FlashcardTrainingType) => {
-    if (!cards || !selectedTopic || !navigation.priority) return;
-    setSessionCards(selectDueCards(
-      cards,
-      subjectTopics,
-      {
-        topicId: selectedTopic.topicId,
-        priority: navigation.priority,
-        trainingType,
-        allDueForTopic: false,
-      },
-      reviews,
-    ));
+    if (dueNavigationBlocked || !studySnapshot || !selectedTopic || !navigation.priority) return;
+    setSessionCards(studySnapshot.selectDue({
+      topicId: selectedTopic.topicId,
+      priority: navigation.priority,
+      trainingType,
+      allDueForTopic: false,
+    }));
     dispatch({ type: 'select_training_type', trainingType });
+  };
+
+  const exitSession = () => {
+    setSelectionNow(new Date());
+    dispatch({ type: 'back' });
   };
 
   const priorityCounts = (priority: FlashcardPriority) => (
@@ -180,14 +208,20 @@ export default function Flashcards() {
         {syncError && <p className="text-xs text-rose-500 mt-2">{syncError}</p>}
       </header>
 
-      {navigation.step === 'subject' && (
+      {dueNavigationBlocked && (
+        <div className="flex items-center justify-center py-16 text-zinc-400">
+          <Loader2 className="w-6 h-6 animate-spin mr-2" /> Carregando seu progresso de flashcards...
+        </div>
+      )}
+
+      {!dueNavigationBlocked && navigation.step === 'subject' && (
         <div className="space-y-4">
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
             {SUBJECTS.map(({ name, count, colorClasses }) => (
               <button
                 key={name}
                 onClick={() => openSubject(name)}
-                disabled={loadingSubject !== null}
+                disabled={loadingSubject !== null || dueNavigationBlocked}
                 className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-4 text-left shadow-sm hover:shadow-md transition-shadow disabled:opacity-60 disabled:cursor-wait"
               >
                 <span className={`text-xs font-semibold px-2 py-1 rounded-full ${colorClasses}`}>{name}</span>
@@ -210,7 +244,7 @@ export default function Flashcards() {
         </div>
       )}
 
-      {navigation.step === 'topic' && (
+      {!dueNavigationBlocked && navigation.step === 'topic' && (
         <div className="space-y-4">
           <BackButton onClick={() => dispatch({ type: 'back' })} />
           <div>
@@ -224,9 +258,10 @@ export default function Flashcards() {
               return (
                 <button
                   key={navigationTopicId}
-                  onClick={() => chooseTopic(topic.topicId)}
+                  onClick={() => chooseTopic(topic)}
+                  disabled={!canSelectFlashcardTopic(topic)}
                   aria-pressed={isSelected}
-                  className={`rounded-xl border p-4 text-left shadow-sm transition-colors ${
+                  className={`rounded-xl border p-4 text-left shadow-sm transition-colors disabled:cursor-not-allowed disabled:opacity-50 ${
                     isSelected
                       ? 'border-indigo-500 bg-indigo-50 dark:bg-indigo-900/20'
                       : 'border-zinc-200 bg-white hover:border-indigo-300 dark:border-zinc-800 dark:bg-zinc-900 dark:hover:border-indigo-700'
@@ -265,7 +300,7 @@ export default function Flashcards() {
         </div>
       )}
 
-      {navigation.step === 'priority' && selectedTopic && (
+      {!dueNavigationBlocked && navigation.step === 'priority' && selectedTopic && (
         <div className="space-y-4">
           <BackButton onClick={() => dispatch({ type: 'back' })} />
           <div>
@@ -293,7 +328,7 @@ export default function Flashcards() {
         </div>
       )}
 
-      {navigation.step === 'training_type' && selectedTopic && navigation.priority && (
+      {!dueNavigationBlocked && navigation.step === 'training_type' && selectedTopic && navigation.priority && (
         <div className="space-y-4">
           <BackButton onClick={() => dispatch({ type: 'back' })} />
           <div>
@@ -323,19 +358,19 @@ export default function Flashcards() {
         </div>
       )}
 
-      {navigation.step === 'session' && selectedTopic && (
+      {!dueNavigationBlocked && navigation.step === 'session' && selectedTopic && (
         sessionCards.length > 0 ? (
           <FlashcardSession
             title={sessionTitle}
             cards={sessionCards.map(toSessionCard)}
             onRate={recordReview}
-            onExit={() => dispatch({ type: 'back' })}
+            onExit={exitSession}
           />
         ) : (
           <div className="rounded-2xl border border-zinc-200 bg-white p-8 text-center shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
             <h3 className="text-lg font-semibold">Nenhum cartão vencido neste tópico</h3>
             <button
-              onClick={() => dispatch({ type: 'back' })}
+              onClick={exitSession}
               className="mt-5 inline-flex items-center rounded-lg bg-indigo-600 px-4 py-2 text-sm font-medium text-white hover:bg-indigo-700"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />

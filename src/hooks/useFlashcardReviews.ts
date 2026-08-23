@@ -10,18 +10,20 @@ import { FlashcardReview } from '../types';
 export function useFlashcardReviews() {
   const { user } = useAuth();
   const [reviews, setReviews] = useState<Record<string, FlashcardReview>>({});
-  const [loading, setLoading] = useState(false);
+  const [hydratedUserId, setHydratedUserId] = useState<string | null>(null);
   const [syncError, setSyncError] = useState<string | null>(null);
 
   useEffect(() => {
     if (!user) {
       setReviews({});
+      setHydratedUserId(null);
       setSyncError(null);
       return;
     }
 
     let cancelled = false;
-    setLoading(true);
+    setReviews({});
+    setSyncError(null);
     getFlashcardReviews(user.uid)
       .then((data) => {
         if (cancelled) return;
@@ -32,7 +34,7 @@ export function useFlashcardReviews() {
         if (!cancelled) setSyncError('Não foi possível carregar seu progresso de flashcards salvo.');
       })
       .finally(() => {
-        if (!cancelled) setLoading(false);
+        if (!cancelled) setHydratedUserId(user.uid);
       });
 
     return () => {
@@ -55,5 +57,11 @@ export function useFlashcardReviews() {
     [user, reviews]
   );
 
-  return { reviews, recordReview, loading, syncError, isPersisted: !!user };
+  return {
+    reviews,
+    recordReview,
+    loading: !!user && hydratedUserId !== user.uid,
+    syncError,
+    isPersisted: !!user,
+  };
 }
