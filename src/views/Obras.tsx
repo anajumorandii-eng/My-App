@@ -1,0 +1,123 @@
+import React, { useEffect, useMemo, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Library, Loader2, Search } from 'lucide-react';
+import { LiteraryWork, ExamBoard, ExamRequirement } from '../types/literaryWorks';
+import { getLiteraryWorks, getAllExamRequirements } from '../lib/literaryCatalog';
+
+type BoardFilter = 'todas' | ExamBoard;
+
+export default function Obras() {
+  const [works, setWorks] = useState<LiteraryWork[] | null>(null);
+  const [requirementsByWork, setRequirementsByWork] = useState<Record<string, ExamRequirement[]>>({});
+  const [loadError, setLoadError] = useState<string | null>(null);
+  const [boardFilter, setBoardFilter] = useState<BoardFilter>('todas');
+  const [search, setSearch] = useState('');
+
+  useEffect(() => {
+    getLiteraryWorks()
+      .then(async (ws) => {
+        setWorks(ws);
+        setRequirementsByWork(await getAllExamRequirements(ws.map((w) => w.id)));
+      })
+      .catch((error) => {
+        console.error('Failed to load literary catalog:', error);
+        setLoadError('Não foi possível carregar o catálogo de obras. Tente recarregar a página.');
+      });
+  }, []);
+
+  const filtered = useMemo(() => {
+    if (!works) return [];
+    const term = search.trim().toLowerCase();
+    return works.filter((w) => {
+      const reqs = requirementsByWork[w.id] ?? [];
+      const boardMatch = boardFilter === 'todas' || reqs.some((r) => r.board === boardFilter && r.active);
+      const searchMatch = !term || w.title.toLowerCase().includes(term) || w.author.toLowerCase().includes(term);
+      return boardMatch && searchMatch;
+    });
+  }, [works, requirementsByWork, boardFilter, search]);
+
+  return (
+    <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
+      <header>
+        <h1 className="text-3xl font-bold tracking-tight mb-2 flex items-center">
+          <Library className="w-7 h-7 mr-3 text-indigo-500" />
+          Obras Obrigatórias — Ciclo 2027
+        </h1>
+        <p className="text-zinc-500 dark:text-zinc-400">
+          Leitura guiada, análise e treino de prova para as 18 obras exigidas por FUVEST e Unicamp/Comvest.
+        </p>
+      </header>
+
+      <div className="flex flex-wrap gap-3 items-center">
+        <div className="relative flex-1 min-w-[200px]">
+          <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-zinc-400" />
+          <input
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            placeholder="Buscar por obra ou autor..."
+            className="w-full pl-9 pr-3 py-2 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-sm"
+          />
+        </div>
+        <div className="flex gap-2">
+          {(['todas', 'FUVEST', 'UNICAMP'] as BoardFilter[]).map((b) => (
+            <button
+              key={b}
+              onClick={() => setBoardFilter(b)}
+              className={`px-3 py-1.5 rounded-lg text-sm border ${
+                boardFilter === b
+                  ? 'bg-indigo-600 text-white border-indigo-600'
+                  : 'border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400'
+              }`}
+            >
+              {b === 'todas' ? 'Todas' : b}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {loadError && (
+        <div className="bg-rose-50 dark:bg-rose-900/20 text-rose-700 dark:text-rose-300 rounded-xl p-4 text-sm">{loadError}</div>
+      )}
+
+      {!works && !loadError && (
+        <div className="flex items-center justify-center py-16 text-zinc-400">
+          <Loader2 className="w-6 h-6 animate-spin mr-2" /> Carregando catálogo...
+        </div>
+      )}
+
+      {works && filtered.length === 0 && (
+        <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-8 text-center text-zinc-500">
+          Nenhuma obra encontrada com esse filtro.
+        </div>
+      )}
+
+      {works && filtered.length > 0 && (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {filtered.map((w) => {
+            const reqs = (requirementsByWork[w.id] ?? []).filter((r) => r.active);
+            return (
+              <Link
+                key={w.id}
+                to={`/obras/${w.slug}`}
+                className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-5 hover:shadow-md transition-shadow"
+              >
+                <p className="font-semibold leading-snug">{w.title}</p>
+                <p className="text-sm text-zinc-500 mt-1">{w.author} · {w.genre}</p>
+                <div className="flex flex-wrap gap-1.5 mt-3">
+                  {reqs.map((r) => (
+                    <span key={r.id} className="text-xs px-2 py-0.5 rounded-full bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300">
+                      {r.board}
+                    </span>
+                  ))}
+                </div>
+                {reqs[0]?.requiredScope && reqs[0].requiredScope !== 'obra completa' && (
+                  <p className="text-xs text-amber-600 dark:text-amber-400 mt-2 line-clamp-2">{reqs[0].requiredScope}</p>
+                )}
+              </Link>
+            );
+          })}
+        </div>
+      )}
+    </div>
+  );
+}
