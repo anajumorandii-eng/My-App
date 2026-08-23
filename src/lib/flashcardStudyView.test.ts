@@ -4,8 +4,11 @@ import test from 'node:test';
 import { Flashcard, FlashcardReview, Topic } from '../types';
 import {
   canSelectFlashcardTopic,
+  createFlashcardLoadRequestToken,
   createFlashcardStudySnapshot,
+  invalidateFlashcardLoadRequests,
   isFlashcardDueNavigationBlocked,
+  isCurrentFlashcardLoadRequest,
 } from './flashcardStudyView';
 
 test('bloqueia navegação por vencimento somente durante hidratação autenticada', () => {
@@ -18,6 +21,22 @@ test('bloqueia navegação por vencimento somente durante hidratação autentica
 test('não permite selecionar tópico sem cartões', () => {
   assert.equal(canSelectFlashcardTopic({ total: 0 }), false);
   assert.equal(canSelectFlashcardTopic({ total: 1 }), true);
+});
+
+test('invalida requisições antigas ao iniciar outra carga ou desmontar a tela', () => {
+  let currentToken = 0;
+  const firstRequest = createFlashcardLoadRequestToken(currentToken);
+  currentToken = firstRequest;
+  assert.equal(isCurrentFlashcardLoadRequest(firstRequest, currentToken), true);
+
+  const secondRequest = createFlashcardLoadRequestToken(currentToken);
+  currentToken = secondRequest;
+  assert.equal(isCurrentFlashcardLoadRequest(firstRequest, currentToken), false);
+  assert.equal(isCurrentFlashcardLoadRequest(secondRequest, currentToken), true);
+
+  currentToken = invalidateFlashcardLoadRequests(currentToken);
+  assert.equal(isCurrentFlashcardLoadRequest(firstRequest, currentToken), false);
+  assert.equal(isCurrentFlashcardLoadRequest(secondRequest, currentToken), false);
 });
 
 test('usa o mesmo instante explícito para contagens e seleção de vencidos', () => {

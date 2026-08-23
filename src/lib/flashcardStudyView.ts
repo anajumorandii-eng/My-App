@@ -17,6 +17,21 @@ export function canSelectFlashcardTopic(topic: Pick<FlashcardTopicSummary, 'tota
   return topic.total > 0;
 }
 
+export function createFlashcardLoadRequestToken(currentToken: number): number {
+  return currentToken + 1;
+}
+
+export function isCurrentFlashcardLoadRequest(
+  requestToken: number,
+  currentToken: number,
+): boolean {
+  return requestToken === currentToken;
+}
+
+export function invalidateFlashcardLoadRequests(currentToken: number): number {
+  return currentToken + 1;
+}
+
 export interface FlashcardStudySnapshot {
   topicIndex: FlashcardTopicSummary[];
   selectDue: (selection: FlashcardSessionSelection) => Flashcard[];

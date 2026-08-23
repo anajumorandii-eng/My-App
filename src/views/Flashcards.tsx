@@ -1,4 +1,4 @@
-import React, { useMemo, useReducer, useRef, useState } from 'react';
+import React, { useEffect, useMemo, useReducer, useRef, useState } from 'react';
 import { ArrowLeft, CloudOff, Layers, Loader2 } from 'lucide-react';
 import { Flashcard, FlashcardPriority, FlashcardTrainingType } from '../types';
 import { mockTopics } from '../data/mockData';
@@ -15,8 +15,11 @@ import {
 } from '../lib/flashcardNavigation';
 import {
   canSelectFlashcardTopic,
+  createFlashcardLoadRequestToken,
   createFlashcardStudySnapshot,
+  invalidateFlashcardLoadRequests,
   isFlashcardDueNavigationBlocked,
+  isCurrentFlashcardLoadRequest,
 } from '../lib/flashcardStudyView';
 import FlashcardSession, { SessionCard } from '../components/FlashcardSession';
 
@@ -85,6 +88,10 @@ export default function Flashcards() {
   const [loadError, setLoadError] = useState<string | null>(null);
   const latestLoadRequest = useRef(0);
 
+  useEffect(() => () => {
+    latestLoadRequest.current = invalidateFlashcardLoadRequests(latestLoadRequest.current);
+  }, []);
+
   const dueNavigationBlocked = isFlashcardDueNavigationBlocked(
     isPersisted,
     reviewsLoading,
@@ -124,22 +131,22 @@ export default function Flashcards() {
 
   const openSubject = async (name: string) => {
     if (dueNavigationBlocked || loadingSubject !== null) return;
-    const requestId = latestLoadRequest.current + 1;
-    latestLoadRequest.current = requestId;
+    const requestToken = createFlashcardLoadRequestToken(latestLoadRequest.current);
+    latestLoadRequest.current = requestToken;
     setLoadingSubject(name);
     setLoadError(null);
     try {
       const data = await loadFlashcardsForSubject(name);
-      if (requestId !== latestLoadRequest.current) return;
+      if (!isCurrentFlashcardLoadRequest(requestToken, latestLoadRequest.current)) return;
       setCards(data);
       setSelectionNow(new Date());
       dispatch({ type: 'select_subject', subject: name });
     } catch (error) {
-      if (requestId !== latestLoadRequest.current) return;
+      if (!isCurrentFlashcardLoadRequest(requestToken, latestLoadRequest.current)) return;
       console.error('Failed to load flashcards:', error);
       setLoadError('Não foi possível carregar os flashcards dessa matéria.');
     } finally {
-      if (requestId === latestLoadRequest.current) {
+      if (isCurrentFlashcardLoadRequest(requestToken, latestLoadRequest.current)) {
         setLoadingSubject(null);
       }
     }
