@@ -16,6 +16,8 @@ import {
 import {
   canSelectFlashcardTopic,
   createFlashcardLoadRequestToken,
+  createFlashcardOwnerReset,
+  createFlashcardSessionStart,
   createFlashcardStudySnapshot,
   invalidateFlashcardLoadRequests,
   isFlashcardDueNavigationBlocked,
@@ -73,7 +75,11 @@ export default function Flashcards() {
   const {
     reviews,
     recordReview,
-    loading: reviewsLoading,
+    hydrationStatus,
+    hydratedOwnerUid,
+    currentOwnerUid,
+    isReadyForStudy,
+    retryHydration,
     isPersisted,
     syncError,
   } = useFlashcardReviews();
@@ -86,16 +92,38 @@ export default function Flashcards() {
   const [selectionNow, setSelectionNow] = useState(() => new Date());
   const [loadingSubject, setLoadingSubject] = useState<string | null>(null);
   const [loadError, setLoadError] = useState<string | null>(null);
+  const [studyOwnerUid, setStudyOwnerUid] = useState<string | null>(currentOwnerUid);
   const latestLoadRequest = useRef(0);
+  const previousHydrationStatus = useRef(hydrationStatus);
 
   useEffect(() => () => {
     latestLoadRequest.current = invalidateFlashcardLoadRequests(latestLoadRequest.current);
   }, []);
 
+  useEffect(() => {
+    const leftReady = currentOwnerUid !== null
+      && previousHydrationStatus.current === 'ready'
+      && hydrationStatus !== 'ready';
+    previousHydrationStatus.current = hydrationStatus;
+    if (studyOwnerUid === currentOwnerUid && !leftReady) return;
+    const reset = createFlashcardOwnerReset(currentOwnerUid, new Date());
+    latestLoadRequest.current = invalidateFlashcardLoadRequests(latestLoadRequest.current);
+    dispatch(reset.navigationAction);
+    setCards(reset.cards);
+    setSessionCards(reset.sessionCards);
+    setSelectionNow(reset.selectionNow);
+    setLoadingSubject(null);
+    setLoadError(null);
+    setStudyOwnerUid(reset.ownerUid);
+  }, [currentOwnerUid, hydrationStatus, studyOwnerUid]);
+
+  const studyOwnerMatches = studyOwnerUid === currentOwnerUid;
+  const reviewsOwnerMatches = !isPersisted || hydratedOwnerUid === currentOwnerUid;
+
   const dueNavigationBlocked = isFlashcardDueNavigationBlocked(
     isPersisted,
-    reviewsLoading,
-  );
+    !isReadyForStudy || !reviewsOwnerMatches,
+  ) || !studyOwnerMatches;
 
   const subjectTopics = useMemo(
     () => mockTopics.filter((topic) => topic.subject === navigation.subject),
@@ -152,30 +180,61 @@ export default function Flashcards() {
     }
   };
 
+  const renewStudySnapshot = () => {
+    if (!cards) return null;
+    const now = new Date();
+    const snapshot = createFlashcardStudySnapshot(cards, subjectTopics, reviews, now);
+    setSelectionNow(now);
+    return snapshot;
+  };
+
   const chooseTopic = (topic: FlashcardTopicSummary) => {
     if (dueNavigationBlocked || !canSelectFlashcardTopic(topic)) return;
+    const refreshedSnapshot = renewStudySnapshot();
+    if (!refreshedSnapshot) return;
     const navigationTopicId = topic.topicId ?? OTHER_TOPICS_NAVIGATION_ID;
+    const refreshedTopic = refreshedSnapshot.topicIndex.find((candidate) => (
+      candidate.topicId ?? OTHER_TOPICS_NAVIGATION_ID
+    ) === navigationTopicId);
+    if (!refreshedTopic || !canSelectFlashcardTopic(refreshedTopic)) return;
     dispatch({ type: 'select_topic', topicId: navigationTopicId });
     dispatch({ type: 'back' });
   };
 
   const reviewAllDueForTopic = () => {
-    if (dueNavigationBlocked || !studySnapshot || !selectedTopic) return;
-    setSessionCards(studySnapshot.selectDue({
-      topicId: selectedTopic.topicId,
-      allDueForTopic: true,
-    }));
+    if (dueNavigationBlocked || !selectedTopic) return;
+    if (!cards) return;
+    const now = new Date();
+    const start = createFlashcardSessionStart(
+      cards,
+      subjectTopics,
+      reviews,
+      { topicId: selectedTopic.topicId, allDueForTopic: true },
+      now,
+    );
+    setSelectionNow(now);
+    setSessionCards(start.sessionCards);
     dispatch({ type: 'review_all_due' });
   };
 
   const startTrainingSession = (trainingType: FlashcardTrainingType) => {
-    if (dueNavigationBlocked || !studySnapshot || !selectedTopic || !navigation.priority) return;
-    setSessionCards(studySnapshot.selectDue({
-      topicId: selectedTopic.topicId,
-      priority: navigation.priority,
-      trainingType,
-      allDueForTopic: false,
-    }));
+    if (dueNavigationBlocked || !selectedTopic || !navigation.priority) return;
+    if (!cards) return;
+    const now = new Date();
+    const start = createFlashcardSessionStart(
+      cards,
+      subjectTopics,
+      reviews,
+      {
+        topicId: selectedTopic.topicId,
+        priority: navigation.priority,
+        trainingType,
+        allDueForTopic: false,
+      },
+      now,
+    );
+    setSelectionNow(now);
+    setSessionCards(start.sessionCards);
     dispatch({ type: 'select_training_type', trainingType });
   };
 
@@ -215,9 +274,21 @@ export default function Flashcards() {
         {syncError && <p className="text-xs text-rose-500 mt-2">{syncError}</p>}
       </header>
 
-      {dueNavigationBlocked && (
+      {dueNavigationBlocked && (!studyOwnerMatches || hydrationStatus !== 'error') && (
         <div className="flex items-center justify-center py-16 text-zinc-400">
           <Loader2 className="w-6 h-6 animate-spin mr-2" /> Carregando seu progresso de flashcards...
+        </div>
+      )}
+
+      {dueNavigationBlocked && hydrationStatus === 'error' && studyOwnerMatches && (
+        <div className="rounded-xl bg-rose-50 p-5 text-center text-rose-700 dark:bg-rose-900/20 dark:text-rose-300">
+          <p className="text-sm">Seu progresso não pôde ser carregado. Tente novamente antes de estudar.</p>
+          <button
+            onClick={retryHydration}
+            className="mt-3 rounded-lg bg-rose-600 px-4 py-2 text-sm font-medium text-white hover:bg-rose-700"
+          >
+            Tentar novamente
+          </button>
         </div>
       )}
 

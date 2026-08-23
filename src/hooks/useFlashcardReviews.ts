@@ -2,6 +2,15 @@ import { useCallback, useEffect, useState } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { getFlashcardReviews, saveFlashcardReview } from '../lib/flashcardReviews';
 import { applyFlashcardReview, ReviewQuality } from '../lib/flashcardScheduler';
+import {
+  beginFlashcardReviewHydration,
+  canRecordFlashcardReview,
+  completeFlashcardReviewHydration,
+  failFlashcardReviewHydration,
+  flashcardReviewDemoState,
+  FlashcardReviewHydrationState,
+  isFlashcardReviewStudyReady,
+} from '../lib/flashcardReviewHydration';
 import { FlashcardReview } from '../types';
 
 // Sem conta conectada (modo demonstração), o progresso de flashcard só
@@ -9,58 +18,88 @@ import { FlashcardReview } from '../types';
 // usado em Revisões, sem persistência real.
 export function useFlashcardReviews() {
   const { user } = useAuth();
+  const currentOwnerUid = user?.uid ?? null;
   const [reviews, setReviews] = useState<Record<string, FlashcardReview>>({});
-  const [hydratedUserId, setHydratedUserId] = useState<string | null>(null);
+  const [hydration, setHydration] = useState<FlashcardReviewHydrationState>(() => (
+    currentOwnerUid
+      ? beginFlashcardReviewHydration(flashcardReviewDemoState, currentOwnerUid)
+      : flashcardReviewDemoState
+  ));
+  const [retryVersion, setRetryVersion] = useState(0);
   const [syncError, setSyncError] = useState<string | null>(null);
 
   useEffect(() => {
-    if (!user) {
+    if (currentOwnerUid === null) {
       setReviews({});
-      setHydratedUserId(null);
+      setHydration(flashcardReviewDemoState);
       setSyncError(null);
       return;
     }
 
     let cancelled = false;
+    const ownerUid = currentOwnerUid;
     setReviews({});
+    setHydration((state) => beginFlashcardReviewHydration(state, ownerUid));
     setSyncError(null);
-    getFlashcardReviews(user.uid)
+    getFlashcardReviews(ownerUid)
       .then((data) => {
         if (cancelled) return;
         setReviews(Object.fromEntries(data.map((r) => [r.cardId, r])));
+        setHydration((state) => completeFlashcardReviewHydration(state, ownerUid));
       })
       .catch((error) => {
         console.error('Failed to load flashcard reviews:', error);
-        if (!cancelled) setSyncError('Não foi possível carregar seu progresso de flashcards salvo.');
-      })
-      .finally(() => {
-        if (!cancelled) setHydratedUserId(user.uid);
+        if (!cancelled) {
+          setHydration((state) => failFlashcardReviewHydration(state, ownerUid));
+          setSyncError('Não foi possível carregar seu progresso de flashcards salvo.');
+        }
       });
 
     return () => {
       cancelled = true;
     };
-  }, [user]);
+  }, [currentOwnerUid, retryVersion]);
+
+  const retryHydration = useCallback(() => {
+    if (currentOwnerUid === null) return;
+    setReviews({});
+    setHydration((state) => beginFlashcardReviewHydration(state, currentOwnerUid));
+    setSyncError(null);
+    setRetryVersion((version) => version + 1);
+  }, [currentOwnerUid]);
 
   const recordReview = useCallback(
     (cardId: string, quality: ReviewQuality) => {
+      if (!canRecordFlashcardReview(hydration, currentOwnerUid)) return null;
       const next = applyFlashcardReview(cardId, reviews[cardId], quality);
       setReviews((prev) => ({ ...prev, [cardId]: next }));
-      if (user) {
-        saveFlashcardReview(user.uid, next).catch((error) => {
+      if (currentOwnerUid) {
+        saveFlashcardReview(currentOwnerUid, next).catch((error) => {
           console.error('Failed to save flashcard review:', error);
           setSyncError('Não foi possível salvar essa revisão. Ela pode não persistir.');
         });
       }
       return next;
     },
-    [user, reviews]
+    [currentOwnerUid, hydration, reviews]
   );
+
+  const isReadyForStudy = isFlashcardReviewStudyReady(hydration, currentOwnerUid);
+  const hydrationStatus = currentOwnerUid === null
+    ? 'demo'
+    : hydration.ownerUid === currentOwnerUid
+      ? hydration.status
+      : 'loading';
 
   return {
     reviews,
     recordReview,
-    loading: !!user && hydratedUserId !== user.uid,
+    hydrationStatus,
+    hydratedOwnerUid: hydration.status === 'ready' ? hydration.ownerUid : null,
+    currentOwnerUid,
+    isReadyForStudy,
+    loading: !!user && hydrationStatus === 'loading',
+    retryHydration,
     syncError,
     isPersisted: !!user,
   };

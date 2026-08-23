@@ -5,6 +5,8 @@ import { Flashcard, FlashcardReview, Topic } from '../types';
 import {
   canSelectFlashcardTopic,
   createFlashcardLoadRequestToken,
+  createFlashcardOwnerReset,
+  createFlashcardSessionStart,
   createFlashcardStudySnapshot,
   invalidateFlashcardLoadRequests,
   isFlashcardDueNavigationBlocked,
@@ -37,6 +39,18 @@ test('invalida requisições antigas ao iniciar outra carga ou desmontar a tela'
   currentToken = invalidateFlashcardLoadRequests(currentToken);
   assert.equal(isCurrentFlashcardLoadRequest(firstRequest, currentToken), false);
   assert.equal(isCurrentFlashcardLoadRequest(secondRequest, currentToken), false);
+});
+
+test('troca de owner limpa navegação, cartões carregados e snapshot da sessão', () => {
+  const now = new Date('2026-08-23T15:00:00.000Z');
+
+  assert.deepEqual(createFlashcardOwnerReset('user-b', now), {
+    ownerUid: 'user-b',
+    navigationAction: { type: 'reset' },
+    cards: null,
+    sessionCards: [],
+    selectionNow: now,
+  });
 });
 
 test('usa o mesmo instante explícito para contagens e seleção de vencidos', () => {
@@ -76,15 +90,13 @@ test('usa o mesmo instante explícito para contagens e seleção de vencidos', (
     allDueForTopic: true,
   }), []);
 
-  const whenDue = createFlashcardStudySnapshot(
+  const whenDue = createFlashcardSessionStart(
     cards,
     topics,
     reviews,
+    { topicId: 'bio_ecologia', allDueForTopic: true },
     new Date('2026-08-23T12:00:00.500Z'),
   );
-  assert.equal(whenDue.topicIndex[0].due, 1);
-  assert.deepEqual(whenDue.selectDue({
-    topicId: 'bio_ecologia',
-    allDueForTopic: true,
-  }).map((card) => card.id), ['card-1']);
+  assert.equal(whenDue.snapshot.topicIndex[0].due, 1);
+  assert.deepEqual(whenDue.sessionCards.map((card) => card.id), ['card-1']);
 });
