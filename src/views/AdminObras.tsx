@@ -25,7 +25,10 @@ async function adminFetch<T>(path: string, token: string, options: RequestInit =
     headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json', ...options.headers },
   });
   const body = await response.json().catch(() => ({}));
-  if (!response.ok) throw new Error(body.error || `Falha em ${path} (${response.status})`);
+  if (!response.ok) {
+    const message = body.error || `Falha em ${path} (${response.status})`;
+    throw new Error(body.detail ? `${message} — ${body.detail}` : message);
+  }
   return body as T;
 }
 
