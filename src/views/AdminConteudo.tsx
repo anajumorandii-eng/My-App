@@ -41,6 +41,9 @@ export default function AdminConteudo() {
   const [episodes, setEpisodes] = useState<PodcastEpisode[]>([]);
   const [questionSearch, setQuestionSearch] = useState('');
   const [questionSubjectFilter, setQuestionSubjectFilter] = useState('Todas');
+  const [editingQuestion, setEditingQuestion] = useState<Question | null>(null);
+  const [editingMethod, setEditingMethod] = useState<StudyMethod | null>(null);
+  const [editingEpisode, setEditingEpisode] = useState<PodcastEpisode | null>(null);
 
   const loadAll = useCallback(async (t: string) => {
     const [q, m, e] = await Promise.all([
@@ -76,64 +79,73 @@ export default function AdminConteudo() {
     });
   }
 
-  function handleCreateQuestion(form: HTMLFormElement) {
+  function handleSubmitQuestion(form: HTMLFormElement) {
     const data = new FormData(form);
     const optionTexts = [1, 2, 3, 4].map((n) => String(data.get(`option${n}`) ?? '').trim()).filter(Boolean);
     const options: QuizOption[] = optionTexts.map((text, i) => ({ id: `o${i + 1}`, text }));
     const correctIndex = Number(data.get('correctOption')) - 1;
+    const payload = {
+      topicId: data.get('topicId'),
+      subject: data.get('subject'),
+      prompt: data.get('prompt'),
+      options,
+      correctOptionId: options[correctIndex]?.id,
+      explanation: data.get('explanation'),
+      difficulty: data.get('difficulty'),
+      chapter: data.get('chapter') || undefined,
+    };
     withBusy(async () => {
       if (!token) return;
-      await adminFetch('/questions', token, {
-        method: 'POST',
-        body: JSON.stringify({
-          topicId: data.get('topicId'),
-          subject: data.get('subject'),
-          prompt: data.get('prompt'),
-          options,
-          correctOptionId: options[correctIndex]?.id,
-          explanation: data.get('explanation'),
-          difficulty: data.get('difficulty'),
-          chapter: data.get('chapter') || undefined,
-        }),
-      });
+      if (editingQuestion) {
+        await adminFetch(`/questions/${editingQuestion.id}`, token, { method: 'PATCH', body: JSON.stringify(payload) });
+        setEditingQuestion(null);
+      } else {
+        await adminFetch('/questions', token, { method: 'POST', body: JSON.stringify(payload) });
+      }
       await loadAll(token);
       form.reset();
     });
   }
 
-  function handleCreateStudyMethod(form: HTMLFormElement) {
+  function handleSubmitStudyMethod(form: HTMLFormElement) {
     const data = new FormData(form);
+    const payload = {
+      name: data.get('name'),
+      category: data.get('category'),
+      summary: data.get('summary'),
+      steps: linesToArray(data.get('steps')),
+      bestFor: csvToArray(data.get('bestFor')),
+    };
     withBusy(async () => {
       if (!token) return;
-      await adminFetch('/study-methods', token, {
-        method: 'POST',
-        body: JSON.stringify({
-          name: data.get('name'),
-          category: data.get('category'),
-          summary: data.get('summary'),
-          steps: linesToArray(data.get('steps')),
-          bestFor: csvToArray(data.get('bestFor')),
-        }),
-      });
+      if (editingMethod) {
+        await adminFetch(`/study-methods/${editingMethod.id}`, token, { method: 'PATCH', body: JSON.stringify(payload) });
+        setEditingMethod(null);
+      } else {
+        await adminFetch('/study-methods', token, { method: 'POST', body: JSON.stringify(payload) });
+      }
       await loadAll(token);
       form.reset();
     });
   }
 
-  function handleCreateEpisode(form: HTMLFormElement) {
+  function handleSubmitEpisode(form: HTMLFormElement) {
     const data = new FormData(form);
+    const payload = {
+      topicId: data.get('topicId'),
+      title: data.get('title'),
+      subject: data.get('subject'),
+      durationMinutes: Number(data.get('durationMinutes')),
+      script: data.get('script'),
+    };
     withBusy(async () => {
       if (!token) return;
-      await adminFetch('/podcast-episodes', token, {
-        method: 'POST',
-        body: JSON.stringify({
-          topicId: data.get('topicId'),
-          title: data.get('title'),
-          subject: data.get('subject'),
-          durationMinutes: Number(data.get('durationMinutes')),
-          script: data.get('script'),
-        }),
-      });
+      if (editingEpisode) {
+        await adminFetch(`/podcast-episodes/${editingEpisode.id}`, token, { method: 'PATCH', body: JSON.stringify(payload) });
+        setEditingEpisode(null);
+      } else {
+        await adminFetch('/podcast-episodes', token, { method: 'POST', body: JSON.stringify(payload) });
+      }
       await loadAll(token);
       form.reset();
     });
@@ -146,6 +158,13 @@ export default function AdminConteudo() {
       await loadAll(token);
     });
   }
+
+  // Índice 1-based da alternativa correta dentro de options — o formulário
+  // pré-preenchido reordena as alternativas na mesma ordem do array salvo,
+  // então a posição (não o id original) é o que importa aqui.
+  const editingQuestionCorrectPosition = editingQuestion
+    ? editingQuestion.options.findIndex((o) => o.id === editingQuestion.correctOptionId) + 1
+    : undefined;
 
   const subjects = useMemo(() => ['Todas', ...new Set(questions.map((q) => q.subject))].sort(), [questions]);
   const filteredQuestions = useMemo(() => {
@@ -185,71 +204,115 @@ export default function AdminConteudo() {
         {filteredQuestions.map((q) => (
           <li key={q.id} className="flex items-start justify-between gap-2 border-b border-zinc-100 dark:border-zinc-800 py-1.5">
             <span className="truncate">{q.subject} — {q.prompt}</span>
-            <button disabled={busy} onClick={() => handleDeleteQuestion(q.id)} className="shrink-0 text-xs text-rose-500 hover:underline">excluir</button>
+            <span className="shrink-0 flex gap-2">
+              <button disabled={busy} onClick={() => setEditingQuestion(q)} className="text-xs text-indigo-500 hover:underline">editar</button>
+              <button disabled={busy} onClick={() => handleDeleteQuestion(q.id)} className="text-xs text-rose-500 hover:underline">excluir</button>
+            </span>
           </li>
         ))}
         {questions.length > filteredQuestions.length && (
           <li className="text-xs text-zinc-400 pt-1">Mostrando as 100 primeiras — refine a busca para ver outras.</li>
         )}
       </ul>
-      <form onSubmit={(e) => { e.preventDefault(); handleCreateQuestion(e.currentTarget); }} className="grid sm:grid-cols-2 gap-2 text-sm">
-        <select name="topicId" required className="border rounded-lg px-2 py-1.5 dark:bg-zinc-800 sm:col-span-2">
+      {editingQuestion && (
+        <p className="text-xs text-indigo-500 mb-2">Editando questão — as alterações substituem a questão selecionada.</p>
+      )}
+      <form key={editingQuestion?.id ?? 'new-question'} onSubmit={(e) => { e.preventDefault(); handleSubmitQuestion(e.currentTarget); }} className="grid sm:grid-cols-2 gap-2 text-sm">
+        <select name="topicId" required defaultValue={editingQuestion?.topicId} className="border rounded-lg px-2 py-1.5 dark:bg-zinc-800 sm:col-span-2">
           {mockTopics.map((t) => <option key={t.id} value={t.id}>{t.subject} — {t.name}</option>)}
         </select>
-        <input name="subject" placeholder="Matéria (ex.: Biologia)" required className="border rounded-lg px-2 py-1.5 dark:bg-zinc-800" />
-        <select name="difficulty" required className="border rounded-lg px-2 py-1.5 dark:bg-zinc-800">
+        <input name="subject" placeholder="Matéria (ex.: Biologia)" required defaultValue={editingQuestion?.subject} className="border rounded-lg px-2 py-1.5 dark:bg-zinc-800" />
+        <select name="difficulty" required defaultValue={editingQuestion?.difficulty} className="border rounded-lg px-2 py-1.5 dark:bg-zinc-800">
           <option value="easy">easy</option>
           <option value="medium">medium</option>
           <option value="hard">hard</option>
         </select>
-        <textarea name="prompt" placeholder="Enunciado" required className="border rounded-lg px-2 py-1.5 dark:bg-zinc-800 sm:col-span-2" rows={2} />
+        <textarea name="prompt" placeholder="Enunciado" required defaultValue={editingQuestion?.prompt} className="border rounded-lg px-2 py-1.5 dark:bg-zinc-800 sm:col-span-2" rows={2} />
         {[1, 2, 3, 4].map((n) => (
-          <input key={n} name={`option${n}`} placeholder={`Alternativa ${n}${n > 2 ? ' (opcional)' : ''}`} required={n <= 2} className="border rounded-lg px-2 py-1.5 dark:bg-zinc-800" />
+          <input key={n} name={`option${n}`} placeholder={`Alternativa ${n}${n > 2 ? ' (opcional)' : ''}`} required={n <= 2}
+            defaultValue={editingQuestion?.options[n - 1]?.text} className="border rounded-lg px-2 py-1.5 dark:bg-zinc-800" />
         ))}
-        <select name="correctOption" required className="border rounded-lg px-2 py-1.5 dark:bg-zinc-800">
+        <select name="correctOption" required defaultValue={editingQuestionCorrectPosition} className="border rounded-lg px-2 py-1.5 dark:bg-zinc-800">
           <option value="">Alternativa correta...</option>
           {[1, 2, 3, 4].map((n) => <option key={n} value={n}>Alternativa {n}</option>)}
         </select>
-        <input name="chapter" placeholder="Capítulo (opcional)" className="border rounded-lg px-2 py-1.5 dark:bg-zinc-800" />
-        <textarea name="explanation" placeholder="Explicação da resposta" required className="border rounded-lg px-2 py-1.5 dark:bg-zinc-800 sm:col-span-2" rows={2} />
-        <button disabled={busy} className="sm:col-span-2 bg-indigo-600 text-white rounded-lg px-3 py-1.5 disabled:opacity-50">Cadastrar questão</button>
+        <input name="chapter" placeholder="Capítulo (opcional)" defaultValue={editingQuestion?.chapter} className="border rounded-lg px-2 py-1.5 dark:bg-zinc-800" />
+        <textarea name="explanation" placeholder="Explicação da resposta" required defaultValue={editingQuestion?.explanation} className="border rounded-lg px-2 py-1.5 dark:bg-zinc-800 sm:col-span-2" rows={2} />
+        <div className="sm:col-span-2 flex gap-2">
+          <button disabled={busy} className="flex-1 bg-indigo-600 text-white rounded-lg px-3 py-1.5 disabled:opacity-50">
+            {editingQuestion ? 'Salvar alterações' : 'Cadastrar questão'}
+          </button>
+          {editingQuestion && (
+            <button type="button" disabled={busy} onClick={() => setEditingQuestion(null)} className="px-3 py-1.5 rounded-lg border text-zinc-600 dark:text-zinc-400">Cancelar</button>
+          )}
+        </div>
       </form>
     </section>
 
     <section className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-5">
       <h2 className="font-semibold flex items-center mb-4"><FlaskConical className="w-5 h-5 mr-2" />Métodos de estudo ({studyMethods.length})</h2>
       <ul className="text-sm space-y-1 max-h-48 overflow-y-auto mb-4">
-        {studyMethods.map((m) => <li key={m.id} className="border-b border-zinc-100 dark:border-zinc-800 py-1.5">{m.name} <em className="text-zinc-400">({m.category})</em></li>)}
+        {studyMethods.map((m) => (
+          <li key={m.id} className="flex items-center justify-between gap-2 border-b border-zinc-100 dark:border-zinc-800 py-1.5">
+            <span>{m.name} <em className="text-zinc-400">({m.category})</em></span>
+            <button disabled={busy} onClick={() => setEditingMethod(m)} className="shrink-0 text-xs text-indigo-500 hover:underline">editar</button>
+          </li>
+        ))}
       </ul>
-      <form onSubmit={(e) => { e.preventDefault(); handleCreateStudyMethod(e.currentTarget); }} className="grid sm:grid-cols-2 gap-2 text-sm">
-        <input name="name" placeholder="Nome do método" required className="border rounded-lg px-2 py-1.5 dark:bg-zinc-800" />
-        <select name="category" required className="border rounded-lg px-2 py-1.5 dark:bg-zinc-800">
+      {editingMethod && (
+        <p className="text-xs text-indigo-500 mb-2">Editando método — as alterações substituem o método selecionado.</p>
+      )}
+      <form key={editingMethod?.id ?? 'new-method'} onSubmit={(e) => { e.preventDefault(); handleSubmitStudyMethod(e.currentTarget); }} className="grid sm:grid-cols-2 gap-2 text-sm">
+        <input name="name" placeholder="Nome do método" required defaultValue={editingMethod?.name} className="border rounded-lg px-2 py-1.5 dark:bg-zinc-800" />
+        <select name="category" required defaultValue={editingMethod?.category} className="border rounded-lg px-2 py-1.5 dark:bg-zinc-800">
           <option value="aquisicao">aquisição</option>
           <option value="retencao">retenção</option>
           <option value="aplicacao">aplicação</option>
           <option value="foco">foco</option>
         </select>
-        <textarea name="summary" placeholder="Resumo" required className="border rounded-lg px-2 py-1.5 dark:bg-zinc-800 sm:col-span-2" rows={2} />
-        <textarea name="steps" placeholder="Passos (um por linha)" required className="border rounded-lg px-2 py-1.5 dark:bg-zinc-800 sm:col-span-2" rows={3} />
-        <input name="bestFor" placeholder="Bom para (separado por vírgula)" required className="border rounded-lg px-2 py-1.5 dark:bg-zinc-800 sm:col-span-2" />
-        <button disabled={busy} className="sm:col-span-2 bg-indigo-600 text-white rounded-lg px-3 py-1.5 disabled:opacity-50">Cadastrar método</button>
+        <textarea name="summary" placeholder="Resumo" required defaultValue={editingMethod?.summary} className="border rounded-lg px-2 py-1.5 dark:bg-zinc-800 sm:col-span-2" rows={2} />
+        <textarea name="steps" placeholder="Passos (um por linha)" required defaultValue={editingMethod?.steps.join('\n')} className="border rounded-lg px-2 py-1.5 dark:bg-zinc-800 sm:col-span-2" rows={3} />
+        <input name="bestFor" placeholder="Bom para (separado por vírgula)" required defaultValue={editingMethod?.bestFor.join(', ')} className="border rounded-lg px-2 py-1.5 dark:bg-zinc-800 sm:col-span-2" />
+        <div className="sm:col-span-2 flex gap-2">
+          <button disabled={busy} className="flex-1 bg-indigo-600 text-white rounded-lg px-3 py-1.5 disabled:opacity-50">
+            {editingMethod ? 'Salvar alterações' : 'Cadastrar método'}
+          </button>
+          {editingMethod && (
+            <button type="button" disabled={busy} onClick={() => setEditingMethod(null)} className="px-3 py-1.5 rounded-lg border text-zinc-600 dark:text-zinc-400">Cancelar</button>
+          )}
+        </div>
       </form>
     </section>
 
     <section className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-5">
       <h2 className="font-semibold flex items-center mb-4"><Headphones className="w-5 h-5 mr-2" />Episódios de podcast ({episodes.length})</h2>
       <ul className="text-sm space-y-1 max-h-48 overflow-y-auto mb-4">
-        {episodes.map((ep) => <li key={ep.id} className="border-b border-zinc-100 dark:border-zinc-800 py-1.5">{ep.title} <em className="text-zinc-400">({ep.subject}, {ep.durationMinutes} min)</em></li>)}
+        {episodes.map((ep) => (
+          <li key={ep.id} className="flex items-center justify-between gap-2 border-b border-zinc-100 dark:border-zinc-800 py-1.5">
+            <span>{ep.title} <em className="text-zinc-400">({ep.subject}, {ep.durationMinutes} min)</em></span>
+            <button disabled={busy} onClick={() => setEditingEpisode(ep)} className="shrink-0 text-xs text-indigo-500 hover:underline">editar</button>
+          </li>
+        ))}
       </ul>
-      <form onSubmit={(e) => { e.preventDefault(); handleCreateEpisode(e.currentTarget); }} className="grid sm:grid-cols-2 gap-2 text-sm">
-        <select name="topicId" required className="border rounded-lg px-2 py-1.5 dark:bg-zinc-800 sm:col-span-2">
+      {editingEpisode && (
+        <p className="text-xs text-indigo-500 mb-2">Editando episódio — as alterações substituem o episódio selecionado.</p>
+      )}
+      <form key={editingEpisode?.id ?? 'new-episode'} onSubmit={(e) => { e.preventDefault(); handleSubmitEpisode(e.currentTarget); }} className="grid sm:grid-cols-2 gap-2 text-sm">
+        <select name="topicId" required defaultValue={editingEpisode?.topicId} className="border rounded-lg px-2 py-1.5 dark:bg-zinc-800 sm:col-span-2">
           {mockTopics.map((t) => <option key={t.id} value={t.id}>{t.subject} — {t.name}</option>)}
         </select>
-        <input name="title" placeholder="Título" required className="border rounded-lg px-2 py-1.5 dark:bg-zinc-800" />
-        <input name="subject" placeholder="Matéria" required className="border rounded-lg px-2 py-1.5 dark:bg-zinc-800" />
-        <input name="durationMinutes" type="number" min={1} placeholder="Duração (min)" required className="border rounded-lg px-2 py-1.5 dark:bg-zinc-800" />
-        <textarea name="script" placeholder="Roteiro narrado" required className="border rounded-lg px-2 py-1.5 dark:bg-zinc-800 sm:col-span-2" rows={4} />
-        <button disabled={busy} className="sm:col-span-2 bg-indigo-600 text-white rounded-lg px-3 py-1.5 disabled:opacity-50">Cadastrar episódio</button>
+        <input name="title" placeholder="Título" required defaultValue={editingEpisode?.title} className="border rounded-lg px-2 py-1.5 dark:bg-zinc-800" />
+        <input name="subject" placeholder="Matéria" required defaultValue={editingEpisode?.subject} className="border rounded-lg px-2 py-1.5 dark:bg-zinc-800" />
+        <input name="durationMinutes" type="number" min={1} placeholder="Duração (min)" required defaultValue={editingEpisode?.durationMinutes} className="border rounded-lg px-2 py-1.5 dark:bg-zinc-800" />
+        <textarea name="script" placeholder="Roteiro narrado" required defaultValue={editingEpisode?.script} className="border rounded-lg px-2 py-1.5 dark:bg-zinc-800 sm:col-span-2" rows={4} />
+        <div className="sm:col-span-2 flex gap-2">
+          <button disabled={busy} className="flex-1 bg-indigo-600 text-white rounded-lg px-3 py-1.5 disabled:opacity-50">
+            {editingEpisode ? 'Salvar alterações' : 'Cadastrar episódio'}
+          </button>
+          {editingEpisode && (
+            <button type="button" disabled={busy} onClick={() => setEditingEpisode(null)} className="px-3 py-1.5 rounded-lg border text-zinc-600 dark:text-zinc-400">Cancelar</button>
+          )}
+        </div>
       </form>
     </section>
   </div>;
