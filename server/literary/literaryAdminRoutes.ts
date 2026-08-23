@@ -80,6 +80,18 @@ export function createLiteraryAdminRouter(db: Firestore): Router {
     res.json(snap.docs.map((d) => d.data()));
   }));
 
+  // Quantas edições cada obra já tem — usado só pra mostrar um indicador de
+  // progresso na lista de obras do painel, sem precisar abrir uma por uma.
+  router.get('/editions-summary', asyncRoute(async (_req, res) => {
+    const snap = await db.collectionGroup('editions').get();
+    const counts: Record<string, number> = {};
+    for (const doc of snap.docs) {
+      const workId = (doc.data() as WorkEdition).workId;
+      counts[workId] = (counts[workId] ?? 0) + 1;
+    }
+    res.json(counts);
+  }));
+
   // Recebe o PDF em base64 — Etapa A (recebimento): hash, checagem de
   // duplicata e registro de direitos/proveniência antes de qualquer
   // processamento de conteúdo.
