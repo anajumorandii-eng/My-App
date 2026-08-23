@@ -43,16 +43,16 @@ const TRAINING_TYPE_PRECEDENCE: FlashcardTrainingType[] = [
 const PRIORITIES: FlashcardPriority[] = ['essencial', 'alta', 'regular'];
 
 export function classifyFlashcard(card: Flashcard): FlashcardClassification {
+  if (card.source === 'lembre_se') {
+    return { priority: 'regular', trainingType: 'objetivos', classificationOrigin: 'inherited' };
+  }
+
   if (card.priority && card.trainingType && card.classificationOrigin) {
     return {
       priority: card.priority,
       trainingType: card.trainingType,
       classificationOrigin: card.classificationOrigin,
     };
-  }
-
-  if (card.source === 'lembre_se') {
-    return { priority: 'regular', trainingType: 'objetivos', classificationOrigin: 'inherited' };
   }
 
   const priorityTag = card.tags.find((tag) => tag.startsWith('prioridade_'));

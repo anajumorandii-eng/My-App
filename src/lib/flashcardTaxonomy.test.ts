@@ -38,6 +38,19 @@ test('classifica lembre_se como regular e objetivo herdado', () => {
   });
 });
 
+test('lembre_se prevalece sobre metadados explícitos conflitantes', () => {
+  assert.deepEqual(classifyFlashcard(card({
+    source: 'lembre_se',
+    priority: 'essencial',
+    trainingType: 'discursivos',
+    classificationOrigin: 'tagged',
+  })), {
+    priority: 'regular',
+    trainingType: 'objetivos',
+    classificationOrigin: 'inherited',
+  });
+});
+
 test('classifica cada tag de modelo na família de treino correta', () => {
   const cases: Array<[string, Flashcard['trainingType']]> = [
     ['01_basico_mapa_minimo', 'objetivos'],
