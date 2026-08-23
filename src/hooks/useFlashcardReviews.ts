@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { getFlashcardReviews, saveFlashcardReview } from '../lib/flashcardReviews';
 import { applyFlashcardReview, ReviewQuality } from '../lib/flashcardScheduler';
@@ -27,6 +27,10 @@ export function useFlashcardReviews() {
   ));
   const [retryVersion, setRetryVersion] = useState(0);
   const [syncError, setSyncError] = useState<string | null>(null);
+  const hydrationRef = useRef(hydration);
+  const ownerUidRef = useRef(currentOwnerUid);
+  hydrationRef.current = hydration;
+  ownerUidRef.current = currentOwnerUid;
 
   useEffect(() => {
     if (currentOwnerUid === null) {
@@ -69,19 +73,27 @@ export function useFlashcardReviews() {
   }, [currentOwnerUid]);
 
   const recordReview = useCallback(
-    (cardId: string, quality: ReviewQuality) => {
-      if (!canRecordFlashcardReview(hydration, currentOwnerUid)) return null;
+    async (cardId: string, quality: ReviewQuality): Promise<boolean> => {
+      if (!canRecordFlashcardReview(hydrationRef.current, ownerUidRef.current)) return false;
+      const ownerUid = ownerUidRef.current;
       const next = applyFlashcardReview(cardId, reviews[cardId], quality);
-      setReviews((prev) => ({ ...prev, [cardId]: next }));
-      if (currentOwnerUid) {
-        saveFlashcardReview(currentOwnerUid, next).catch((error) => {
+      if (ownerUid) {
+        try {
+          await saveFlashcardReview(ownerUid, next);
+        } catch (error) {
           console.error('Failed to save flashcard review:', error);
           setSyncError('Não foi possível salvar essa revisão. Ela pode não persistir.');
-        });
+          return false;
+        }
+        if (
+          ownerUidRef.current !== ownerUid
+          || !canRecordFlashcardReview(hydrationRef.current, ownerUid)
+        ) return false;
       }
-      return next;
+      setReviews((prev) => ({ ...prev, [cardId]: next }));
+      return true;
     },
-    [currentOwnerUid, hydration, reviews]
+    [reviews]
   );
 
   const isReadyForStudy = isFlashcardReviewStudyReady(hydration, currentOwnerUid);

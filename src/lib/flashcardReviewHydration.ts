@@ -44,3 +44,22 @@ export function canRecordFlashcardReview(
 ): boolean {
   return isFlashcardReviewStudyReady(state, currentOwnerUid);
 }
+
+export type FlashcardReviewAccess = {
+  canStudy: boolean;
+  showLoading: boolean;
+  showError: boolean;
+  canRetry: boolean;
+};
+
+export function createFlashcardReviewAccess(
+  status: FlashcardReviewHydrationState['status'],
+  isReadyForStudy: boolean,
+): FlashcardReviewAccess {
+  return {
+    canStudy: isReadyForStudy,
+    showLoading: status === 'loading',
+    showError: status === 'error',
+    canRetry: status === 'error',
+  };
+}

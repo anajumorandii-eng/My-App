@@ -5,17 +5,31 @@ import { loadObraFlashcards } from '../lib/flashcardContent';
 import { useFlashcardReviews } from '../hooks/useFlashcardReviews';
 import { isDue } from '../lib/flashcardScheduler';
 import FlashcardSession, { SessionCard } from '../components/FlashcardSession';
+import { createFlashcardReviewAccess } from '../lib/flashcardReviewHydration';
 
 function toSessionCard(card: WorkFlashcard): SessionCard {
   return { id: card.id, front: card.front, back: card.back };
 }
 
 export default function ObrasObrigatorias() {
-  const { reviews, recordReview, isPersisted, syncError } = useFlashcardReviews();
+  const {
+    reviews,
+    recordReview,
+    hydrationStatus,
+    isReadyForStudy,
+    retryHydration,
+    isPersisted,
+    syncError,
+  } = useFlashcardReviews();
   const [allCards, setAllCards] = useState<WorkFlashcard[] | null>(null);
   const [loading, setLoading] = useState(true);
   const [loadError, setLoadError] = useState<string | null>(null);
   const [work, setWork] = useState<string | null>(null);
+  const reviewAccess = createFlashcardReviewAccess(hydrationStatus, isReadyForStudy);
+
+  useEffect(() => {
+    if (!reviewAccess.canStudy) setWork(null);
+  }, [reviewAccess.canStudy]);
 
   useEffect(() => {
     loadObraFlashcards()
@@ -58,7 +72,7 @@ export default function ObrasObrigatorias() {
         {syncError && <p className="text-xs text-rose-500 mt-2">{syncError}</p>}
       </header>
 
-      {loading && (
+      {loading && reviewAccess.canStudy && (
         <div className="flex items-center justify-center py-16 text-zinc-400">
           <Loader2 className="w-6 h-6 animate-spin mr-2" /> Carregando obras...
         </div>
@@ -70,7 +84,27 @@ export default function ObrasObrigatorias() {
         </div>
       )}
 
-      {!loading && !work && (
+      {reviewAccess.showLoading && (
+        <div className="flex items-center justify-center py-16 text-zinc-400">
+          <Loader2 className="w-6 h-6 animate-spin mr-2" /> Carregando seu progresso de flashcards...
+        </div>
+      )}
+
+      {reviewAccess.showError && (
+        <div className="rounded-xl bg-rose-50 p-5 text-center text-rose-700 dark:bg-rose-900/20 dark:text-rose-300">
+          <p className="text-sm">Seu progresso não pôde ser carregado. Tente novamente antes de estudar.</p>
+          {reviewAccess.canRetry && (
+            <button
+              onClick={retryHydration}
+              className="mt-3 rounded-lg bg-rose-600 px-4 py-2 text-sm font-medium text-white hover:bg-rose-700"
+            >
+              Tentar novamente
+            </button>
+          )}
+        </div>
+      )}
+
+      {!loading && reviewAccess.canStudy && !work && (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
           {worksWithCounts.map(([name, count]) => (
             <button
@@ -85,7 +119,7 @@ export default function ObrasObrigatorias() {
         </div>
       )}
 
-      {!loading && work && (
+      {!loading && reviewAccess.canStudy && work && (
         <FlashcardSession
           title={work}
           cards={dueCards.map(toSessionCard)}

@@ -5,6 +5,7 @@ import {
   beginFlashcardReviewHydration,
   canRecordFlashcardReview,
   completeFlashcardReviewHydration,
+  createFlashcardReviewAccess,
   failFlashcardReviewHydration,
   flashcardReviewDemoState,
   isFlashcardReviewStudyReady,
@@ -56,4 +57,21 @@ test('reidratação do mesmo UID invalida ready antes do novo fetch', () => {
     status: 'loading',
     ownerUid: 'user-a',
   });
+});
+
+test('acesso da view bloqueia Obras em loading/error e oferece retry no erro', () => {
+  assert.deepEqual(createFlashcardReviewAccess('loading', false), {
+    canStudy: false,
+    showLoading: true,
+    showError: false,
+    canRetry: false,
+  });
+  assert.deepEqual(createFlashcardReviewAccess('error', false), {
+    canStudy: false,
+    showLoading: false,
+    showError: true,
+    canRetry: true,
+  });
+  assert.equal(createFlashcardReviewAccess('demo', true).canStudy, true);
+  assert.equal(createFlashcardReviewAccess('ready', true).canStudy, true);
 });
