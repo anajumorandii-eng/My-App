@@ -85,6 +85,14 @@ test('revisa todos os vencidos e retorna ao tópico sem prioridade ou tipo', () 
   let state = initialFlashcardNavigationState;
   state = flashcardNavigationReducer(state, { type: 'select_subject', subject: 'Biologia' });
   state = flashcardNavigationReducer(state, { type: 'select_topic', topicId: 'bio_ecologia' });
+  state = flashcardNavigationReducer(state, { type: 'select_priority', priority: 'alta' });
+  state = flashcardNavigationReducer(state, { type: 'back' });
+  state = flashcardNavigationReducer(state, { type: 'back' });
+  assert.deepEqual(state, {
+    step: 'topic',
+    subject: 'Biologia',
+    topicId: 'bio_ecologia',
+  });
   state = flashcardNavigationReducer(state, { type: 'review_all_due' });
 
   assert.deepEqual(state, {
@@ -111,6 +119,10 @@ test('trocar matéria limpa tópico, prioridade e tipo anteriores', () => {
     type: 'select_training_type',
     trainingType: 'interpretacao',
   });
+  state = flashcardNavigationReducer(state, { type: 'back' });
+  state = flashcardNavigationReducer(state, { type: 'back' });
+  state = flashcardNavigationReducer(state, { type: 'back' });
+  state = flashcardNavigationReducer(state, { type: 'back' });
   state = flashcardNavigationReducer(state, { type: 'select_subject', subject: 'Química' });
 
   assert.deepEqual(state, { step: 'topic', subject: 'Química' });
@@ -125,4 +137,51 @@ test('reset volta ao estado inicial', () => {
   state = flashcardNavigationReducer(state, { type: 'reset' });
 
   assert.deepEqual(state, initialFlashcardNavigationState);
+});
+
+test('rejeita ações fora da etapa exata e preserva a mesma referência', () => {
+  let state = initialFlashcardNavigationState;
+
+  let next = flashcardNavigationReducer(state, { type: 'select_topic', topicId: 'bio_ecologia' });
+  assert.strictEqual(next, state);
+
+  state = flashcardNavigationReducer(state, { type: 'select_subject', subject: 'Biologia' });
+  next = flashcardNavigationReducer(state, { type: 'select_subject', subject: 'Química' });
+  assert.strictEqual(next, state);
+  next = flashcardNavigationReducer(state, { type: 'review_all_due' });
+  assert.strictEqual(next, state);
+  next = flashcardNavigationReducer(state, { type: 'select_priority', priority: 'essencial' });
+  assert.strictEqual(next, state);
+
+  state = flashcardNavigationReducer(state, { type: 'select_topic', topicId: 'bio_ecologia' });
+  next = flashcardNavigationReducer(state, { type: 'review_all_due' });
+  assert.strictEqual(next, state);
+
+  state = flashcardNavigationReducer(state, { type: 'select_priority', priority: 'essencial' });
+  next = flashcardNavigationReducer(state, { type: 'select_priority', priority: 'alta' });
+  assert.strictEqual(next, state);
+
+  state = flashcardNavigationReducer(state, {
+    type: 'select_training_type',
+    trainingType: 'interpretacao',
+  });
+  next = flashcardNavigationReducer(state, {
+    type: 'select_training_type',
+    trainingType: 'objetivos',
+  });
+  assert.strictEqual(next, state);
+  next = flashcardNavigationReducer(state, { type: 'select_subject', subject: 'Química' });
+  assert.strictEqual(next, state);
+});
+
+test('não permite escolher prioridade na tela de tópico após voltar', () => {
+  let state = initialFlashcardNavigationState;
+  state = flashcardNavigationReducer(state, { type: 'select_subject', subject: 'Biologia' });
+  state = flashcardNavigationReducer(state, { type: 'select_topic', topicId: 'bio_ecologia' });
+  state = flashcardNavigationReducer(state, { type: 'select_priority', priority: 'essencial' });
+  state = flashcardNavigationReducer(state, { type: 'back' });
+  state = flashcardNavigationReducer(state, { type: 'back' });
+
+  const next = flashcardNavigationReducer(state, { type: 'select_priority', priority: 'alta' });
+  assert.strictEqual(next, state);
 });

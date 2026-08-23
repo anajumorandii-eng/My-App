@@ -33,14 +33,15 @@ export function flashcardNavigationReducer(
 ): FlashcardNavigationState {
   switch (action.type) {
     case 'select_subject':
+      if (state.step !== 'subject') return state;
       return { step: 'topic', subject: action.subject };
 
     case 'select_topic':
-      if (!state.subject) return state;
+      if (state.step !== 'topic' || !state.subject) return state;
       return { step: 'priority', subject: state.subject, topicId: action.topicId };
 
     case 'select_priority':
-      if (!state.subject || !state.topicId) return state;
+      if (state.step !== 'priority' || !state.subject || !state.topicId) return state;
       return {
         step: 'training_type',
         subject: state.subject,
@@ -49,7 +50,9 @@ export function flashcardNavigationReducer(
       };
 
     case 'select_training_type':
-      if (!state.subject || !state.topicId || !state.priority) return state;
+      if (state.step !== 'training_type' || !state.subject || !state.topicId || !state.priority) {
+        return state;
+      }
       return {
         step: 'session',
         subject: state.subject,
@@ -60,7 +63,7 @@ export function flashcardNavigationReducer(
       };
 
     case 'review_all_due':
-      if (!state.subject || !state.topicId) return state;
+      if (state.step !== 'topic' || !state.subject || !state.topicId) return state;
       return {
         step: 'session',
         subject: state.subject,
