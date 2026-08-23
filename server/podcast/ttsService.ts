@@ -1,5 +1,6 @@
 import { createHash } from 'node:crypto';
 import { GoogleGenAI } from '@google/genai';
+import { readCachedAudio, writeCachedAudio } from './podcastStorage';
 
 export interface TtsResult {
   buffer: Buffer;
@@ -54,6 +55,15 @@ export class GeminiTtsService {
     const cached = this.cache.get(cacheKey);
     if (cached) return { buffer: cached, mimeType: 'audio/wav' };
 
+    // Segundo nível de cache, persistente entre reinícios/instâncias (o Map
+    // acima é só em memória, então some a cada deploy e não é compartilhado
+    // entre instâncias do Cloud Run) — ver podcastStorage.ts.
+    const stored = await readCachedAudio(cacheKey);
+    if (stored) {
+      this.rememberInMemory(cacheKey, stored);
+      return { buffer: stored, mimeType: 'audio/wav' };
+    }
+
     const response = await this.client.models.generateContent({
       model: this.model,
       contents: text,
@@ -68,16 +78,22 @@ export class GeminiTtsService {
     if (!base64Data) throw new Error('Gemini TTS returned no audio data.');
 
     const wav = pcmToWav(Buffer.from(base64Data, 'base64'));
+    this.rememberInMemory(cacheKey, wav);
+    // Não bloqueia a resposta pro usuário — o upload falhando (ou demorando)
+    // só significa que a próxima chamada regenera, igual a hoje.
+    void writeCachedAudio(cacheKey, wav);
 
-    // Bounded in-memory cache: same episode script + voice never needs to be
-    // regenerated twice from the same server instance, keeping repeat plays
-    // free and instant. Oldest entry evicted once the cap is hit.
+    return { buffer: wav, mimeType: 'audio/wav' };
+  }
+
+  // Cache em memória com limite: mesmo episódio/voz nunca precisa ser
+  // regenerado duas vezes na mesma instância, mantendo replays instantâneos
+  // e gratuitos. Entrada mais antiga é descartada quando o limite é atingido.
+  private rememberInMemory(cacheKey: string, buffer: Buffer): void {
     if (this.cache.size >= MAX_CACHE_ENTRIES) {
       const oldestKey = this.cache.keys().next().value;
       if (oldestKey) this.cache.delete(oldestKey);
     }
-    this.cache.set(cacheKey, wav);
-
-    return { buffer: wav, mimeType: 'audio/wav' };
+    this.cache.set(cacheKey, buffer);
   }
 }
