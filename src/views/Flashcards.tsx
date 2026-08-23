@@ -1,9 +1,28 @@
-import React, { useMemo, useState } from 'react';
-import { Layers, CloudOff, Loader2 } from 'lucide-react';
-import { Flashcard } from '../types';
+import React, { useEffect, useMemo, useReducer, useRef, useState } from 'react';
+import { ArrowLeft, CloudOff, Layers, Loader2 } from 'lucide-react';
+import { Flashcard, FlashcardPriority, FlashcardTrainingType } from '../types';
+import { mockTopics } from '../data/mockData';
 import { loadFlashcardsForSubject } from '../lib/flashcardContent';
 import { useFlashcardReviews } from '../hooks/useFlashcardReviews';
-import { isDue } from '../lib/flashcardScheduler';
+import {
+  FLASHCARD_PRIORITY_ORDER,
+  FLASHCARD_TRAINING_TYPE_ORDER,
+  FlashcardTopicSummary,
+} from '../lib/flashcardCatalog';
+import {
+  flashcardNavigationReducer,
+  initialFlashcardNavigationState,
+} from '../lib/flashcardNavigation';
+import {
+  canSelectFlashcardTopic,
+  createFlashcardLoadRequestToken,
+  createFlashcardOwnerReset,
+  createFlashcardSessionStart,
+  createFlashcardStudySnapshot,
+  invalidateFlashcardLoadRequests,
+  isFlashcardDueNavigationBlocked,
+  isCurrentFlashcardLoadRequest,
+} from '../lib/flashcardStudyView';
 import FlashcardSession, { SessionCard } from '../components/FlashcardSession';
 
 // Contagens conhecidas de antemão (conteúdo estático) — evita ter que
@@ -21,41 +40,220 @@ const SUBJECTS: { name: string; count: number; colorClasses: string }[] = [
   { name: 'Sociologia', count: 315, colorClasses: 'bg-purple-50 dark:bg-purple-900/20 text-purple-700 dark:text-purple-300' },
 ];
 
+const PRIORITY_LABELS: Record<FlashcardPriority, string> = {
+  essencial: 'Essencial',
+  alta: 'Alta',
+  regular: 'Regular',
+};
+
+const TRAINING_TYPE_LABELS: Record<FlashcardTrainingType, string> = {
+  objetivos: 'Objetivos',
+  discursivos: 'Discursivos',
+  interpretacao: 'Interpretação',
+  pegadinhas: 'Pegadinhas',
+  padroes_bancas: 'Padrões das bancas',
+};
+
+const OTHER_TOPICS_NAVIGATION_ID = '__other_flashcard_topics__';
+
 function toSessionCard(card: Flashcard): SessionCard {
   return { id: card.id, front: card.front, back: card.back, label: card.chapter };
 }
 
-export default function Flashcards() {
-  const { reviews, recordReview, isPersisted, syncError } = useFlashcardReviews();
-  const [subject, setSubject] = useState<string | null>(null);
-  const [cards, setCards] = useState<Flashcard[] | null>(null);
-  const [loading, setLoading] = useState(false);
-  const [loadError, setLoadError] = useState<string | null>(null);
+function BackButton({ onClick }: { onClick: () => void }) {
+  return (
+    <button
+      onClick={onClick}
+      className="inline-flex items-center text-sm text-zinc-500 hover:text-zinc-800 dark:hover:text-zinc-200"
+    >
+      <ArrowLeft className="w-4 h-4 mr-1.5" /> Voltar
+    </button>
+  );
+}
 
-  const dueCards = useMemo(() => {
-    if (!cards) return [];
-    return cards.filter((c) => isDue(reviews[c.id]));
-  }, [cards, reviews]);
+export default function Flashcards() {
+  const {
+    reviews,
+    recordReview,
+    hydrationStatus,
+    hydratedOwnerUid,
+    currentOwnerUid,
+    isReadyForStudy,
+    retryHydration,
+    isPersisted,
+    syncError,
+  } = useFlashcardReviews();
+  const [navigation, dispatch] = useReducer(
+    flashcardNavigationReducer,
+    initialFlashcardNavigationState,
+  );
+  const [cards, setCards] = useState<Flashcard[] | null>(null);
+  const [sessionCards, setSessionCards] = useState<Flashcard[]>([]);
+  const [selectionNow, setSelectionNow] = useState(() => new Date());
+  const [loadingSubject, setLoadingSubject] = useState<string | null>(null);
+  const [loadError, setLoadError] = useState<string | null>(null);
+  const [studyOwnerUid, setStudyOwnerUid] = useState<string | null>(currentOwnerUid);
+  const latestLoadRequest = useRef(0);
+  const previousHydrationStatus = useRef(hydrationStatus);
+
+  useEffect(() => () => {
+    latestLoadRequest.current = invalidateFlashcardLoadRequests(latestLoadRequest.current);
+  }, []);
+
+  useEffect(() => {
+    const leftReady = currentOwnerUid !== null
+      && previousHydrationStatus.current === 'ready'
+      && hydrationStatus !== 'ready';
+    previousHydrationStatus.current = hydrationStatus;
+    if (studyOwnerUid === currentOwnerUid && !leftReady) return;
+    const reset = createFlashcardOwnerReset(currentOwnerUid, new Date());
+    latestLoadRequest.current = invalidateFlashcardLoadRequests(latestLoadRequest.current);
+    dispatch(reset.navigationAction);
+    setCards(reset.cards);
+    setSessionCards(reset.sessionCards);
+    setSelectionNow(reset.selectionNow);
+    setLoadingSubject(null);
+    setLoadError(null);
+    setStudyOwnerUid(reset.ownerUid);
+  }, [currentOwnerUid, hydrationStatus, studyOwnerUid]);
+
+  const studyOwnerMatches = studyOwnerUid === currentOwnerUid;
+  const reviewsOwnerMatches = !isPersisted || hydratedOwnerUid === currentOwnerUid;
+
+  const dueNavigationBlocked = isFlashcardDueNavigationBlocked(
+    isPersisted,
+    !isReadyForStudy || !reviewsOwnerMatches,
+  ) || !studyOwnerMatches;
+
+  const subjectTopics = useMemo(
+    () => mockTopics.filter((topic) => topic.subject === navigation.subject),
+    [navigation.subject],
+  );
+
+  const studySnapshot = useMemo(
+    () => (cards
+      ? createFlashcardStudySnapshot(cards, subjectTopics, reviews, selectionNow)
+      : null),
+    [cards, reviews, selectionNow, subjectTopics],
+  );
+
+  const topicIndex = studySnapshot?.topicIndex ?? [];
+
+  const selectedTopic = useMemo(
+    () => topicIndex.find((topic) => (
+      topic.topicId ?? OTHER_TOPICS_NAVIGATION_ID
+    ) === navigation.topicId),
+    [navigation.topicId, topicIndex],
+  );
+
+  const sessionTitle = useMemo(() => {
+    if (navigation.step !== 'session' || !navigation.subject || !selectedTopic) return '';
+    if (navigation.allDueForTopic) {
+      return `${navigation.subject} — ${selectedTopic.label} — todos os vencidos`;
+    }
+    if (!navigation.priority || !navigation.trainingType) {
+      return `${navigation.subject} — ${selectedTopic.label}`;
+    }
+    return `${navigation.subject} — ${selectedTopic.label} — ${PRIORITY_LABELS[navigation.priority]} — ${TRAINING_TYPE_LABELS[navigation.trainingType]}`;
+  }, [navigation, selectedTopic]);
 
   const openSubject = async (name: string) => {
-    setSubject(name);
-    setLoading(true);
+    if (dueNavigationBlocked || loadingSubject !== null) return;
+    const requestToken = createFlashcardLoadRequestToken(latestLoadRequest.current);
+    latestLoadRequest.current = requestToken;
+    setLoadingSubject(name);
     setLoadError(null);
     try {
       const data = await loadFlashcardsForSubject(name);
+      if (!isCurrentFlashcardLoadRequest(requestToken, latestLoadRequest.current)) return;
       setCards(data);
+      setSelectionNow(new Date());
+      dispatch({ type: 'select_subject', subject: name });
     } catch (error) {
+      if (!isCurrentFlashcardLoadRequest(requestToken, latestLoadRequest.current)) return;
       console.error('Failed to load flashcards:', error);
       setLoadError('Não foi possível carregar os flashcards dessa matéria.');
     } finally {
-      setLoading(false);
+      if (isCurrentFlashcardLoadRequest(requestToken, latestLoadRequest.current)) {
+        setLoadingSubject(null);
+      }
     }
   };
 
-  const backToPicker = () => {
-    setSubject(null);
-    setCards(null);
+  const renewStudySnapshot = () => {
+    if (!cards) return null;
+    const now = new Date();
+    const snapshot = createFlashcardStudySnapshot(cards, subjectTopics, reviews, now);
+    setSelectionNow(now);
+    return snapshot;
   };
+
+  const chooseTopic = (topic: FlashcardTopicSummary) => {
+    if (dueNavigationBlocked || !canSelectFlashcardTopic(topic)) return;
+    const refreshedSnapshot = renewStudySnapshot();
+    if (!refreshedSnapshot) return;
+    const navigationTopicId = topic.topicId ?? OTHER_TOPICS_NAVIGATION_ID;
+    const refreshedTopic = refreshedSnapshot.topicIndex.find((candidate) => (
+      candidate.topicId ?? OTHER_TOPICS_NAVIGATION_ID
+    ) === navigationTopicId);
+    if (!refreshedTopic || !canSelectFlashcardTopic(refreshedTopic)) return;
+    dispatch({ type: 'select_topic', topicId: navigationTopicId });
+    dispatch({ type: 'back' });
+  };
+
+  const reviewAllDueForTopic = () => {
+    if (dueNavigationBlocked || !selectedTopic) return;
+    if (!cards) return;
+    const now = new Date();
+    const start = createFlashcardSessionStart(
+      cards,
+      subjectTopics,
+      reviews,
+      { topicId: selectedTopic.topicId, allDueForTopic: true },
+      now,
+    );
+    setSelectionNow(now);
+    setSessionCards(start.sessionCards);
+    dispatch({ type: 'review_all_due' });
+  };
+
+  const startTrainingSession = (trainingType: FlashcardTrainingType) => {
+    if (dueNavigationBlocked || !selectedTopic || !navigation.priority) return;
+    if (!cards) return;
+    const now = new Date();
+    const start = createFlashcardSessionStart(
+      cards,
+      subjectTopics,
+      reviews,
+      {
+        topicId: selectedTopic.topicId,
+        priority: navigation.priority,
+        trainingType,
+        allDueForTopic: false,
+      },
+      now,
+    );
+    setSelectionNow(now);
+    setSessionCards(start.sessionCards);
+    dispatch({ type: 'select_training_type', trainingType });
+  };
+
+  const exitSession = () => {
+    setSelectionNow(new Date());
+    dispatch({ type: 'back' });
+  };
+
+  const priorityCounts = (priority: FlashcardPriority) => (
+    selectedTopic
+      ? FLASHCARD_TRAINING_TYPE_ORDER.reduce(
+        (counts, trainingType) => ({
+          total: counts.total + selectedTopic.buckets[priority][trainingType].total,
+          due: counts.due + selectedTopic.buckets[priority][trainingType].due,
+        }),
+        { total: 0, due: 0 },
+      )
+      : { total: 0, due: 0 }
+  );
 
   return (
     <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
@@ -70,46 +268,194 @@ export default function Flashcards() {
         {!isPersisted && (
           <p className="flex items-center text-xs text-zinc-400 mt-2">
             <CloudOff className="w-3.5 h-3.5 mr-1.5" />
-            Modo demonstração — conecte sua conta Google em "Conexões Google" para salvar seu progresso de verdade.
+            Modo demonstração — conecte sua conta Google em &quot;Conexões Google&quot; para salvar seu progresso de verdade.
           </p>
         )}
         {syncError && <p className="text-xs text-rose-500 mt-2">{syncError}</p>}
       </header>
 
-      {!subject && (
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
-          {SUBJECTS.map(({ name, count, colorClasses }) => (
-            <button
-              key={name}
-              onClick={() => openSubject(name)}
-              className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-4 text-left shadow-sm hover:shadow-md transition-shadow"
-            >
-              <span className={`text-xs font-semibold px-2 py-1 rounded-full ${colorClasses}`}>{name}</span>
-              <p className="text-sm text-zinc-500 mt-2">{count.toLocaleString('pt-BR')} cartões</p>
-            </button>
-          ))}
-        </div>
-      )}
-
-      {subject && loading && (
+      {dueNavigationBlocked && (!studyOwnerMatches || hydrationStatus !== 'error') && (
         <div className="flex items-center justify-center py-16 text-zinc-400">
-          <Loader2 className="w-6 h-6 animate-spin mr-2" /> Carregando flashcards de {subject}...
+          <Loader2 className="w-6 h-6 animate-spin mr-2" /> Carregando seu progresso de flashcards...
         </div>
       )}
 
-      {subject && loadError && (
-        <div className="bg-rose-50 dark:bg-rose-900/20 text-rose-700 dark:text-rose-300 rounded-xl p-4 text-sm">
-          {loadError}
+      {dueNavigationBlocked && hydrationStatus === 'error' && studyOwnerMatches && (
+        <div className="rounded-xl bg-rose-50 p-5 text-center text-rose-700 dark:bg-rose-900/20 dark:text-rose-300">
+          <p className="text-sm">Seu progresso não pôde ser carregado. Tente novamente antes de estudar.</p>
+          <button
+            onClick={retryHydration}
+            className="mt-3 rounded-lg bg-rose-600 px-4 py-2 text-sm font-medium text-white hover:bg-rose-700"
+          >
+            Tentar novamente
+          </button>
         </div>
       )}
 
-      {subject && cards && !loading && (
-        <FlashcardSession
-          title={subject}
-          cards={dueCards.map(toSessionCard)}
-          onRate={recordReview}
-          onExit={backToPicker}
-        />
+      {!dueNavigationBlocked && navigation.step === 'subject' && (
+        <div className="space-y-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+            {SUBJECTS.map(({ name, count, colorClasses }) => (
+              <button
+                key={name}
+                onClick={() => openSubject(name)}
+                disabled={loadingSubject !== null || dueNavigationBlocked}
+                className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-4 text-left shadow-sm hover:shadow-md transition-shadow disabled:opacity-60 disabled:cursor-wait"
+              >
+                <span className={`text-xs font-semibold px-2 py-1 rounded-full ${colorClasses}`}>{name}</span>
+                <p className="text-sm text-zinc-500 mt-2">{count.toLocaleString('pt-BR')} cartões</p>
+              </button>
+            ))}
+          </div>
+
+          {loadingSubject && (
+            <div className="flex items-center justify-center py-4 text-zinc-400">
+              <Loader2 className="w-5 h-5 animate-spin mr-2" /> Carregando flashcards de {loadingSubject}...
+            </div>
+          )}
+
+          {loadError && (
+            <div className="bg-rose-50 dark:bg-rose-900/20 text-rose-700 dark:text-rose-300 rounded-xl p-4 text-sm">
+              {loadError}
+            </div>
+          )}
+        </div>
+      )}
+
+      {!dueNavigationBlocked && navigation.step === 'topic' && (
+        <div className="space-y-4">
+          <BackButton onClick={() => dispatch({ type: 'back' })} />
+          <div>
+            <h2 className="text-xl font-semibold">{navigation.subject} — escolha um tópico</h2>
+            <p className="text-sm text-zinc-500 mt-1">Selecione o recorte que deseja revisar.</p>
+          </div>
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {topicIndex.map((topic) => {
+              const navigationTopicId = topic.topicId ?? OTHER_TOPICS_NAVIGATION_ID;
+              const isSelected = navigation.topicId === navigationTopicId;
+              return (
+                <button
+                  key={navigationTopicId}
+                  onClick={() => chooseTopic(topic)}
+                  disabled={!canSelectFlashcardTopic(topic)}
+                  aria-pressed={isSelected}
+                  className={`rounded-xl border p-4 text-left shadow-sm transition-colors disabled:cursor-not-allowed disabled:opacity-50 ${
+                    isSelected
+                      ? 'border-indigo-500 bg-indigo-50 dark:bg-indigo-900/20'
+                      : 'border-zinc-200 bg-white hover:border-indigo-300 dark:border-zinc-800 dark:bg-zinc-900 dark:hover:border-indigo-700'
+                  }`}
+                >
+                  <span className="font-medium">{topic.label}</span>
+                  <p className="mt-1 text-sm text-zinc-500">
+                    {topic.total.toLocaleString('pt-BR')} cartões · {topic.due.toLocaleString('pt-BR')} vencidos
+                  </p>
+                </button>
+              );
+            })}
+          </div>
+
+          {selectedTopic && (
+            <div className="flex flex-col gap-2 rounded-xl border border-zinc-200 bg-white p-4 sm:flex-row dark:border-zinc-800 dark:bg-zinc-900">
+              <button
+                onClick={reviewAllDueForTopic}
+                disabled={selectedTopic.due === 0}
+                className="flex-1 rounded-lg bg-indigo-600 px-4 py-2.5 text-sm font-medium text-white hover:bg-indigo-700 disabled:cursor-not-allowed disabled:opacity-50"
+              >
+                Revisar todos os vencidos deste tópico
+              </button>
+              <button
+                onClick={() => {
+                  if (navigation.topicId) {
+                    dispatch({ type: 'select_topic', topicId: navigation.topicId });
+                  }
+                }}
+                className="flex-1 rounded-lg border border-zinc-300 px-4 py-2.5 text-sm font-medium hover:bg-zinc-50 dark:border-zinc-700 dark:hover:bg-zinc-800"
+              >
+                Escolher prioridade
+              </button>
+            </div>
+          )}
+        </div>
+      )}
+
+      {!dueNavigationBlocked && navigation.step === 'priority' && selectedTopic && (
+        <div className="space-y-4">
+          <BackButton onClick={() => dispatch({ type: 'back' })} />
+          <div>
+            <h2 className="text-xl font-semibold">{navigation.subject} — {selectedTopic.label}</h2>
+            <p className="text-sm text-zinc-500 mt-1">Escolha a prioridade dos cartões.</p>
+          </div>
+          <div className="grid gap-3 sm:grid-cols-3">
+            {FLASHCARD_PRIORITY_ORDER.map((priority) => {
+              const counts = priorityCounts(priority);
+              return (
+                <button
+                  key={priority}
+                  onClick={() => dispatch({ type: 'select_priority', priority })}
+                  disabled={counts.total === 0}
+                  className="rounded-xl border border-zinc-200 bg-white p-4 text-left shadow-sm hover:border-indigo-300 disabled:cursor-not-allowed disabled:opacity-50 dark:border-zinc-800 dark:bg-zinc-900 dark:hover:border-indigo-700"
+                >
+                  <span className="font-medium">{PRIORITY_LABELS[priority]}</span>
+                  <p className="mt-1 text-sm text-zinc-500">
+                    {counts.total.toLocaleString('pt-BR')} cartões · {counts.due.toLocaleString('pt-BR')} vencidos
+                  </p>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      )}
+
+      {!dueNavigationBlocked && navigation.step === 'training_type' && selectedTopic && navigation.priority && (
+        <div className="space-y-4">
+          <BackButton onClick={() => dispatch({ type: 'back' })} />
+          <div>
+            <h2 className="text-xl font-semibold">
+              {navigation.subject} — {selectedTopic.label} — {PRIORITY_LABELS[navigation.priority]}
+            </h2>
+            <p className="text-sm text-zinc-500 mt-1">Escolha o tipo de treino.</p>
+          </div>
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {FLASHCARD_TRAINING_TYPE_ORDER.map((trainingType) => {
+              const counts = selectedTopic.buckets[navigation.priority][trainingType];
+              return (
+                <button
+                  key={trainingType}
+                  onClick={() => startTrainingSession(trainingType)}
+                  disabled={counts.total === 0}
+                  className="rounded-xl border border-zinc-200 bg-white p-4 text-left shadow-sm hover:border-indigo-300 disabled:cursor-not-allowed disabled:opacity-50 dark:border-zinc-800 dark:bg-zinc-900 dark:hover:border-indigo-700"
+                >
+                  <span className="font-medium">{TRAINING_TYPE_LABELS[trainingType]}</span>
+                  <p className="mt-1 text-sm text-zinc-500">
+                    {counts.total.toLocaleString('pt-BR')} cartões · {counts.due.toLocaleString('pt-BR')} vencidos
+                  </p>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      )}
+
+      {!dueNavigationBlocked && navigation.step === 'session' && selectedTopic && (
+        sessionCards.length > 0 ? (
+          <FlashcardSession
+            title={sessionTitle}
+            cards={sessionCards.map(toSessionCard)}
+            onRate={recordReview}
+            onExit={exitSession}
+          />
+        ) : (
+          <div className="rounded-2xl border border-zinc-200 bg-white p-8 text-center shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
+            <h3 className="text-lg font-semibold">Nenhum cartão vencido neste tópico</h3>
+            <button
+              onClick={exitSession}
+              className="mt-5 inline-flex items-center rounded-lg bg-indigo-600 px-4 py-2 text-sm font-medium text-white hover:bg-indigo-700"
+            >
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              {navigation.allDueForTopic ? 'Voltar ao tópico' : 'Voltar aos tipos de treino'}
+            </button>
+          </div>
+        )
       )}
     </div>
   );

@@ -1,6 +1,18 @@
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { CheckCircle2, Frown, Meh, Smile, RotateCcw, ArrowLeft } from 'lucide-react';
 import { ReviewQuality, qualityFromSelfRating } from '../lib/flashcardScheduler';
+import {
+  confirmFlashcardRating,
+  cleanupFlashcardSessionLifecycle,
+  createFlashcardSessionIdentity,
+  createFlashcardSessionLifecycle,
+  isFlashcardSessionLifecycleCurrent,
+  resolveFlashcardRatingProgress,
+  runFlashcardCompletion,
+  setupFlashcardSessionLifecycle,
+  syncFlashcardSessionIdentity,
+} from '../lib/flashcardSessionFlow';
+import type { FlashcardRatingResult } from '../lib/flashcardSessionFlow';
 
 type SelfRating = 'fraco' | 'mediano' | 'forte';
 
@@ -20,14 +32,43 @@ export interface SessionCard {
 interface FlashcardSessionProps {
   title: string;
   cards: SessionCard[];
-  onRate: (cardId: string, quality: ReviewQuality) => void;
+  onRate: (cardId: string, quality: ReviewQuality) => FlashcardRatingResult | Promise<FlashcardRatingResult>;
   onExit: () => void;
+  onComplete?: () => void;
 }
 
-export default function FlashcardSession({ title, cards, onRate, onExit }: FlashcardSessionProps) {
+export default function FlashcardSession({ title, cards, onRate, onExit, onComplete }: FlashcardSessionProps) {
   const [index, setIndex] = useState(0);
   const [revealed, setRevealed] = useState(false);
+  const [rating, setRating] = useState(false);
+  const [ratingError, setRatingError] = useState<string | null>(null);
+  const ratingRef = useRef(false);
+  const completionCalledRef = useRef(false);
+  const lifecycleRef = useRef(createFlashcardSessionLifecycle());
+  const sessionIdentity = createFlashcardSessionIdentity(cards);
+  const sessionIdentityRef = useRef(sessionIdentity);
   const current = cards[index];
+
+  useEffect(() => {
+    setupFlashcardSessionLifecycle(lifecycleRef.current);
+    return () => cleanupFlashcardSessionLifecycle(lifecycleRef.current);
+  }, []);
+
+  useEffect(() => {
+    const synced = syncFlashcardSessionIdentity(
+      lifecycleRef.current,
+      sessionIdentityRef.current,
+      cards,
+    );
+    sessionIdentityRef.current = synced.identity;
+    if (!synced.reset) return;
+    ratingRef.current = false;
+    completionCalledRef.current = false;
+    setRating(false);
+    setRatingError(null);
+    setIndex(0);
+    setRevealed(false);
+  }, [sessionIdentity]);
 
   const progressLabel = useMemo(() => `${Math.min(index + 1, cards.length)} de ${cards.length}`, [index, cards.length]);
 
@@ -47,8 +88,31 @@ export default function FlashcardSession({ title, cards, onRate, onExit }: Flash
     );
   }
 
-  const rate = (rating: SelfRating) => {
-    onRate(current.id, qualityFromSelfRating(rating));
+  const rate = async (selfRating: SelfRating) => {
+    if (ratingRef.current || completionCalledRef.current) return;
+    ratingRef.current = true;
+    const lifecycleGeneration = lifecycleRef.current.generation;
+    setRating(true);
+    setRatingError(null);
+    const confirmed = await confirmFlashcardRating(() => (
+      onRate(current.id, qualityFromSelfRating(selfRating))
+    ));
+    if (!isFlashcardSessionLifecycleCurrent(lifecycleRef.current, lifecycleGeneration)) return;
+    const progress = resolveFlashcardRatingProgress(confirmed, index, cards.length);
+    if (progress.complete && onComplete) {
+      completionCalledRef.current = runFlashcardCompletion(
+        progress,
+        completionCalledRef.current,
+        onComplete,
+      );
+      return;
+    }
+    ratingRef.current = false;
+    setRating(false);
+    if (!progress.advance) {
+      setRatingError('Não foi possível salvar esta revisão. Tente novamente.');
+      return;
+    }
     setRevealed(false);
     setIndex((i) => i + 1);
   };
@@ -84,17 +148,21 @@ export default function FlashcardSession({ title, cards, onRate, onExit }: Flash
           <RotateCcw className="w-4 h-4 mr-2" /> Mostrar resposta
         </button>
       ) : (
-        <div className="flex gap-2">
-          {RATING_OPTIONS.map(({ value, label, icon: Icon, classes }) => (
-            <button
-              key={value}
-              onClick={() => rate(value)}
-              className={`flex-1 flex items-center justify-center px-3 py-3 rounded-xl text-sm font-medium transition-colors ${classes}`}
-            >
-              <Icon className="w-4 h-4 mr-1.5" />
-              {label}
-            </button>
-          ))}
+        <div className="space-y-2">
+          {ratingError && <p className="text-sm text-rose-600 dark:text-rose-400">{ratingError}</p>}
+          <div className="flex gap-2">
+            {RATING_OPTIONS.map(({ value, label, icon: Icon, classes }) => (
+              <button
+                key={value}
+                onClick={() => void rate(value)}
+                disabled={rating}
+                className={`flex-1 flex items-center justify-center px-3 py-3 rounded-xl text-sm font-medium transition-colors disabled:cursor-not-allowed disabled:opacity-60 ${classes}`}
+              >
+                <Icon className="w-4 h-4 mr-1.5" />
+                {rating ? 'Salvando...' : label}
+              </button>
+            ))}
+          </div>
         </div>
       )}
     </div>
