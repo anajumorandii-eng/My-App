@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { mkdtemp, readFile, writeFile } from 'node:fs/promises';
+import { mkdir, mkdtemp, readFile, readdir, stat, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import test from 'node:test';
@@ -48,6 +48,41 @@ test('segunda classificacao produz exatamente o mesmo resultado', () => {
   assert.deepEqual(classifyCards(once, true).cards, once);
 });
 
+test('strict mode rejects materialized metadata divergent from tags', () => {
+  assert.throws(
+    () => classifyCards([card({
+      priority: 'essencial',
+      trainingType: 'objetivos',
+      classificationOrigin: 'tagged',
+    })], true),
+    /materializada.*divergente.*fixed-id/i,
+  );
+});
+
+test('invalid materialized enum becomes fallback without corrupting counters', () => {
+  const { cards, report } = classifyCards([card({
+    priority: 'urgente' as Flashcard['priority'],
+    trainingType: 'interpretacao',
+    classificationOrigin: 'tagged',
+  })]);
+
+  assert.deepEqual(cards[0], {
+    ...card(),
+    priority: 'regular',
+    trainingType: 'objetivos',
+    classificationOrigin: 'fallback',
+  });
+  assert.deepEqual(report.byPriority, { essencial: 0, alta: 0, regular: 1 });
+  assert.deepEqual(report.byTrainingType, {
+    objetivos: 1,
+    discursivos: 0,
+    interpretacao: 0,
+    pegadinhas: 0,
+    padroes_bancas: 0,
+  });
+  assert.deepEqual(report.byOrigin, { tagged: 0, inherited: 0, fallback: 1 });
+});
+
 test('modo estrito rejeita sistema priorizado sem classificacao valida', () => {
   assert.throws(
     () => classifyCards([card({ tags: [] })], true),
@@ -70,6 +105,20 @@ test('valida toda a materia antes de substituir o arquivo de destino', async () 
   );
 
   assert.equal(await readFile(outputPath, 'utf8'), priorOutput);
+  assert.deepEqual((await readdir(directory)).sort(), ['biologia.json', 'output.json']);
+});
+
+test('cleans temporary file when atomic replacement fails', async () => {
+  const directory = await mkdtemp(path.join(tmpdir(), 'flashcard-classification-'));
+  const inputPath = path.join(directory, 'biologia.json');
+  const outputPath = path.join(directory, 'output.json');
+
+  await writeFile(inputPath, JSON.stringify([card()]));
+  await mkdir(outputPath);
+
+  await assert.rejects(classifySubjectFile(inputPath, outputPath));
+
+  assert.deepEqual((await readdir(directory)).sort(), ['biologia.json', 'output.json']);
 });
 
 test('escreve cartoes classificados como JSON formatado com newline', async () => {
@@ -78,6 +127,8 @@ test('escreve cartoes classificados como JSON formatado com newline', async () =
   const outputPath = path.join(directory, 'output.json');
 
   await writeFile(inputPath, JSON.stringify([card()]));
+  await writeFile(outputPath, '[{"old":true}]\n');
+  const originalInode = (await stat(outputPath)).ino;
 
   const report = await classifySubjectFile(inputPath, outputPath);
 
@@ -86,4 +137,6 @@ test('escreve cartoes classificados como JSON formatado com newline', async () =
     await readFile(outputPath, 'utf8'),
     `${JSON.stringify(classifyCards([card()], true).cards, null, 2)}\n`,
   );
+  assert.notEqual((await stat(outputPath)).ino, originalInode);
+  assert.deepEqual((await readdir(directory)).sort(), ['biologia.json', 'output.json']);
 });

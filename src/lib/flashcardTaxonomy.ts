@@ -39,19 +39,83 @@ const MODEL_SIGNATURES: FlashcardModelSignature[] = [
 ];
 
 const PRIORITIES: FlashcardPriority[] = ['essencial', 'alta', 'regular'];
+const TRAINING_TYPES: FlashcardTrainingType[] = [
+  'objetivos',
+  'discursivos',
+  'interpretacao',
+  'pegadinhas',
+  'padroes_bancas',
+];
+const TRAINING_TYPE_PRECEDENCE: FlashcardTrainingType[] = [
+  'discursivos',
+  'interpretacao',
+  'pegadinhas',
+  'padroes_bancas',
+  'objetivos',
+];
+const CLASSIFICATION_ORIGINS: FlashcardClassificationOrigin[] = [
+  'tagged',
+  'inherited',
+  'fallback',
+];
 
-export function classifyFlashcard(card: Flashcard): FlashcardClassification {
-  if (card.source === 'lembre_se') {
-    return { priority: 'regular', trainingType: 'objetivos', classificationOrigin: 'inherited' };
+const FALLBACK_CLASSIFICATION: FlashcardClassification = {
+  priority: 'regular',
+  trainingType: 'objetivos',
+  classificationOrigin: 'fallback',
+};
+const INHERITED_CLASSIFICATION: FlashcardClassification = {
+  priority: 'regular',
+  trainingType: 'objetivos',
+  classificationOrigin: 'inherited',
+};
+
+type MaterializedClassification =
+  | { status: 'absent' }
+  | { status: 'invalid' }
+  | { status: 'valid'; classification: FlashcardClassification };
+
+export interface FlashcardClassificationResolution {
+  classification: FlashcardClassification;
+  materializedConsistent: boolean;
+}
+
+function readMaterializedClassification(card: Flashcard): MaterializedClassification {
+  const values = [card.priority, card.trainingType, card.classificationOrigin];
+  if (values.every((value) => value === undefined)) return { status: 'absent' };
+  if (
+    !card.priority
+    || !PRIORITIES.includes(card.priority)
+    || !card.trainingType
+    || !TRAINING_TYPES.includes(card.trainingType)
+    || !card.classificationOrigin
+    || !CLASSIFICATION_ORIGINS.includes(card.classificationOrigin)
+    || (card.source === 'sistema_priorizado' && card.classificationOrigin === 'inherited')
+  ) {
+    return { status: 'invalid' };
   }
 
-  if (card.priority && card.trainingType && card.classificationOrigin) {
-    return {
+  return {
+    status: 'valid',
+    classification: {
       priority: card.priority,
       trainingType: card.trainingType,
       classificationOrigin: card.classificationOrigin,
-    };
-  }
+    },
+  };
+}
+
+function classificationsEqual(
+  left: FlashcardClassification,
+  right: FlashcardClassification,
+): boolean {
+  return left.priority === right.priority
+    && left.trainingType === right.trainingType
+    && left.classificationOrigin === right.classificationOrigin;
+}
+
+export function deriveFlashcardClassification(card: Flashcard): FlashcardClassification {
+  if (card.source === 'lembre_se') return INHERITED_CLASSIFICATION;
 
   const tagSet = new Set(card.tags);
   const taggedPriorities = new Set(
@@ -61,24 +125,54 @@ export function classifyFlashcard(card: Flashcard): FlashcardClassification {
   );
   const [priorityValue] = taggedPriorities;
   const priority = priorityValue as FlashcardPriority | undefined;
-  const matchedTrainingTypes = new Set(
+  const approvedTrainingTypes = new Set(
     MODEL_SIGNATURES
-      .filter(({ approvedTag, legacyTags }) => (
-        tagSet.has(approvedTag) || legacyTags.every((tag) => tagSet.has(tag))
-      ))
+      .filter(({ approvedTag }) => tagSet.has(approvedTag))
       .map(({ trainingType }) => trainingType),
   );
-  const [trainingType] = matchedTrainingTypes;
+  const approvedTrainingType = TRAINING_TYPE_PRECEDENCE.find(
+    (trainingType) => approvedTrainingTypes.has(trainingType),
+  );
+  const legacyTrainingTypes = new Set(
+    MODEL_SIGNATURES
+      .filter(({ legacyTags }) => legacyTags.every((tag) => tagSet.has(tag)))
+      .map(({ trainingType }) => trainingType),
+  );
+  const [legacyTrainingType] = legacyTrainingTypes;
+  const trainingType = approvedTrainingType
+    ?? (legacyTrainingTypes.size === 1 ? legacyTrainingType : undefined);
 
   if (
     taggedPriorities.size !== 1
     || !priority
     || !PRIORITIES.includes(priority)
-    || matchedTrainingTypes.size !== 1
     || !trainingType
   ) {
-    return { priority: 'regular', trainingType: 'objetivos', classificationOrigin: 'fallback' };
+    return FALLBACK_CLASSIFICATION;
   }
 
   return { priority, trainingType, classificationOrigin: 'tagged' };
+}
+
+export function resolveFlashcardClassification(card: Flashcard): FlashcardClassificationResolution {
+  const derived = deriveFlashcardClassification(card);
+  if (card.source === 'lembre_se') {
+    return { classification: INHERITED_CLASSIFICATION, materializedConsistent: true };
+  }
+
+  const materialized = readMaterializedClassification(card);
+  if (materialized.status === 'invalid') {
+    return { classification: FALLBACK_CLASSIFICATION, materializedConsistent: false };
+  }
+  if (materialized.status === 'absent') {
+    return { classification: derived, materializedConsistent: true };
+  }
+  return {
+    classification: derived,
+    materializedConsistent: classificationsEqual(materialized.classification, derived),
+  };
+}
+
+export function classifyFlashcard(card: Flashcard): FlashcardClassification {
+  return resolveFlashcardClassification(card).classification;
 }

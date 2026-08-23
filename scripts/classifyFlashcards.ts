@@ -1,8 +1,9 @@
-import { readFile, writeFile } from 'node:fs/promises';
+import { randomUUID } from 'node:crypto';
+import { readFile, rename, unlink, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
 
-import { classifyFlashcard } from '../src/lib/flashcardTaxonomy';
+import { resolveFlashcardClassification } from '../src/lib/flashcardTaxonomy';
 import type {
   Flashcard,
   FlashcardClassificationOrigin,
@@ -52,7 +53,11 @@ export function classifyCards(cards: Flashcard[], strict = false): Classificatio
   };
 
   const classifiedCards = cards.map((card) => {
-    const classification = classifyFlashcard(card);
+    const { classification, materializedConsistent } = resolveFlashcardClassification(card);
+
+    if (strict && card.source === 'sistema_priorizado' && !materializedConsistent) {
+      throw new Error(`ClassificaÃ§Ã£o materializada divergente para flashcard ${card.id}`);
+    }
 
     if (
       strict
@@ -80,8 +85,19 @@ export async function classifySubjectFile(
   const source = await readFile(inputPath, 'utf8');
   const cards = JSON.parse(source) as Flashcard[];
   const { cards: classifiedCards, report } = classifyCards(cards, true);
+  const serialized = `${JSON.stringify(classifiedCards, null, 2)}\n`;
+  const temporaryPath = path.join(
+    path.dirname(outputPath),
+    `.${path.basename(outputPath)}.${process.pid}.${randomUUID()}.tmp`,
+  );
 
-  await writeFile(outputPath, `${JSON.stringify(classifiedCards, null, 2)}\n`);
+  try {
+    await writeFile(temporaryPath, serialized);
+    await rename(temporaryPath, outputPath);
+  } catch (error) {
+    await unlink(temporaryPath).catch(() => undefined);
+    throw error;
+  }
   return report;
 }
 

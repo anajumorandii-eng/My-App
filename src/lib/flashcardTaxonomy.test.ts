@@ -97,6 +97,25 @@ test('usa precedência determinística independente da ordem das tags', () => {
   assert.equal(classifyFlashcard(card({
     tags: ['prioridade_regular', ...tags.reverse()],
   })).trainingType, 'objetivos');
+
+  const mixedFamilies = [
+    '01_basico_mapa_minimo',
+    '11_fuvest_2a_fase_resposta_pontuavel',
+  ];
+  assert.deepEqual(classifyFlashcard(card({
+    tags: ['prioridade_alta', ...mixedFamilies],
+  })), {
+    priority: 'alta',
+    trainingType: 'discursivos',
+    classificationOrigin: 'tagged',
+  });
+  assert.deepEqual(classifyFlashcard(card({
+    tags: ['prioridade_alta', ...mixedFamilies.reverse()],
+  })), {
+    priority: 'alta',
+    trainingType: 'discursivos',
+    classificationOrigin: 'tagged',
+  });
 });
 
 test('usa fallback quando faltam tags válidas de prioridade ou modelo', () => {
@@ -184,9 +203,6 @@ test('falls back for incompatible models or generic discursiva alone', () => {
   };
 
   assert.deepEqual(classifyFlashcard(card({
-    tags: ['prioridade_alta', '01_basico_mapa_minimo', '11_fuvest_2a_fase_resposta_pontuavel'],
-  })), fallback);
-  assert.deepEqual(classifyFlashcard(card({
     tags: ['prioridade_alta', 'transferencia', 'discursiva', 'fuvest', 'segunda_fase'],
   })), fallback);
   assert.deepEqual(classifyFlashcard(card({
@@ -208,4 +224,66 @@ test('falls back for missing invalid or conflicting priorities', () => {
   assert.deepEqual(classifyFlashcard(card({
     tags: ['prioridade_alta', 'prioridade_essencial', 'recuperacao_ativa'],
   })), fallback);
+});
+
+test('lembre_se keeps its invariant with invalid materialized metadata', () => {
+  assert.deepEqual(classifyFlashcard(card({
+    source: 'lembre_se',
+    priority: 'invalida' as Flashcard['priority'],
+    trainingType: 'invalido' as Flashcard['trainingType'],
+    classificationOrigin: 'invalida' as Flashcard['classificationOrigin'],
+  })), {
+    priority: 'regular',
+    trainingType: 'objetivos',
+    classificationOrigin: 'inherited',
+  });
+});
+
+test('invalid materialized enums return a safe fallback instead of masking tags', () => {
+  const invalidMetadata: Partial<Flashcard>[] = [
+    { priority: 'urgente' as Flashcard['priority'] },
+    { trainingType: 'leitura' as Flashcard['trainingType'] },
+    { classificationOrigin: 'manual' as Flashcard['classificationOrigin'] },
+  ];
+  const fallback = {
+    priority: 'regular',
+    trainingType: 'objetivos',
+    classificationOrigin: 'fallback',
+  };
+
+  for (const invalid of invalidMetadata) {
+    assert.deepEqual(classifyFlashcard(card({
+      tags: ['prioridade_alta', '06_grafico_tabela_texto_ou_experimento'],
+      priority: 'alta',
+      trainingType: 'interpretacao',
+      classificationOrigin: 'tagged',
+      ...invalid,
+    })), fallback);
+  }
+});
+
+test('materialized origin incompatible with sistema_priorizado returns safe fallback', () => {
+  assert.deepEqual(classifyFlashcard(card({
+    tags: ['prioridade_alta', '06_grafico_tabela_texto_ou_experimento'],
+    priority: 'alta',
+    trainingType: 'interpretacao',
+    classificationOrigin: 'inherited',
+  })), {
+    priority: 'regular',
+    trainingType: 'objetivos',
+    classificationOrigin: 'fallback',
+  });
+});
+
+test('valid but stale materialized metadata cannot mask tag derivation', () => {
+  assert.deepEqual(classifyFlashcard(card({
+    tags: ['prioridade_alta', '06_grafico_tabela_texto_ou_experimento'],
+    priority: 'essencial',
+    trainingType: 'objetivos',
+    classificationOrigin: 'tagged',
+  })), {
+    priority: 'alta',
+    trainingType: 'interpretacao',
+    classificationOrigin: 'tagged',
+  });
 });
