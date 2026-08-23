@@ -87,24 +87,16 @@ test('classifica cada tag de modelo na família de treino correta', () => {
 test('usa precedência determinística independente da ordem das tags', () => {
   const tags = [
     '01_basico_mapa_minimo',
-    '09_fuvest_1a_fase_assunto_disfarcado',
-    '05_comparacao_e_fronteira_conceitual',
-    '06_grafico_tabela_texto_ou_experimento',
-    '11_fuvest_2a_fase_resposta_pontuavel',
+    '17_sintese_de_alta_incidencia',
+    '18_questao_mista_transferencia_maxima',
   ];
 
   assert.equal(classifyFlashcard(card({
     tags: ['prioridade_regular', ...tags],
-  })).trainingType, 'discursivos');
+  })).trainingType, 'objetivos');
   assert.equal(classifyFlashcard(card({
-    tags: ['prioridade_regular', ...tags.slice(0, -1)],
-  })).trainingType, 'interpretacao');
-  assert.equal(classifyFlashcard(card({
-    tags: ['prioridade_regular', ...tags.slice(0, -2)],
-  })).trainingType, 'pegadinhas');
-  assert.equal(classifyFlashcard(card({
-    tags: ['prioridade_regular', ...tags.slice(0, -3)],
-  })).trainingType, 'padroes_bancas');
+    tags: ['prioridade_regular', ...tags.reverse()],
+  })).trainingType, 'objetivos');
 });
 
 test('usa fallback quando faltam tags válidas de prioridade ou modelo', () => {
@@ -115,4 +107,105 @@ test('usa fallback quando faltam tags válidas de prioridade ou modelo', () => {
     trainingType: 'objetivos',
     classificationOrigin: 'fallback',
   });
+});
+
+test('recognizes all 18 legacy signatures as approved model equivalents', () => {
+  const cases: Array<[
+    legacyTags: string[],
+    approvedTag: string,
+    trainingType: Flashcard['trainingType'],
+  ]> = [
+    [['recuperacao_ativa'], '01_basico_mapa_minimo', 'objetivos'],
+    [['conceitos'], '02_vocabulario_de_precisao', 'objetivos'],
+    [['causa_efeito'], '03_por_que_funciona', 'objetivos'],
+    [['raciocinio_causal'], '04_causa_consequencia', 'objetivos'],
+    [['pegadinha', 'comparacao'], '05_comparacao_e_fronteira_conceitual', 'pegadinhas'],
+    [['graficos_tabelas', 'fontes'], '06_grafico_tabela_texto_ou_experimento', 'interpretacao'],
+    [['distratores', 'prova_objetiva'], '07_objetiva_eliminacao_de_distratores', 'objetivos'],
+    [['gestao_tempo', 'prova_objetiva'], '08_objetiva_decisao_sob_tempo', 'objetivos'],
+    [['fuvest', 'primeira_fase', 'prova_objetiva'], '09_fuvest_1a_fase_assunto_disfarcado', 'padroes_bancas'],
+    [['enem', 'prova_objetiva', 'aplicacao'], '10_enem_contexto_e_habilidade', 'padroes_bancas'],
+    [['fuvest', 'segunda_fase', 'discursiva'], '11_fuvest_2a_fase_resposta_pontuavel', 'discursivos'],
+    [['unicamp', 'discursiva', 'fontes'], '12_unicamp_2a_fase_c_f_c_r', 'discursivos'],
+    [['vunesp', 'discursiva', 'unesp', 'famerp', 'unifesp'], '13_vunesp_2a_fase_d_c_e_a', 'discursivos'],
+    [['caderno_erros', 'metacognicao'], '14_autopsia_do_erro', 'pegadinhas'],
+    [['contrafactual'], '15_cenario_e_se', 'objetivos'],
+    [['interdisciplinar'], '16_conexao_interdisciplinar', 'objetivos'],
+    [['revisao_final', 'alta_incidencia'], '17_sintese_de_alta_incidencia', 'objetivos'],
+    [['transferencia', 'discursiva'], '18_questao_mista_transferencia_maxima', 'objetivos'],
+  ];
+
+  for (const [legacyTags, approvedTag, trainingType] of cases) {
+    const expected = {
+      priority: 'alta',
+      trainingType,
+      classificationOrigin: 'tagged',
+    };
+
+    assert.deepEqual(classifyFlashcard(card({
+      tags: ['prioridade_alta', ...legacyTags],
+    })), expected, approvedTag);
+    assert.deepEqual(classifyFlashcard(card({
+      tags: ['prioridade_alta', approvedTag],
+    })), expected, approvedTag);
+  }
+});
+
+test('legacy signatures are independent from tag order', () => {
+  const tags = ['fontes', 'tag_de_assunto', 'discursiva', 'unicamp', 'prioridade_essencial'];
+
+  assert.deepEqual(classifyFlashcard(card({ tags })), {
+    priority: 'essencial',
+    trainingType: 'discursivos',
+    classificationOrigin: 'tagged',
+  });
+  assert.deepEqual(classifyFlashcard(card({ tags: [...tags].reverse() })), {
+    priority: 'essencial',
+    trainingType: 'discursivos',
+    classificationOrigin: 'tagged',
+  });
+});
+
+test('legacy transfer signature takes precedence over generic discursiva tag', () => {
+  assert.deepEqual(classifyFlashcard(card({
+    tags: ['prioridade_alta', 'transferencia', 'discursiva'],
+  })), {
+    priority: 'alta',
+    trainingType: 'objetivos',
+    classificationOrigin: 'tagged',
+  });
+});
+
+test('falls back for incompatible models or generic discursiva alone', () => {
+  const fallback = {
+    priority: 'regular',
+    trainingType: 'objetivos',
+    classificationOrigin: 'fallback',
+  };
+
+  assert.deepEqual(classifyFlashcard(card({
+    tags: ['prioridade_alta', '01_basico_mapa_minimo', '11_fuvest_2a_fase_resposta_pontuavel'],
+  })), fallback);
+  assert.deepEqual(classifyFlashcard(card({
+    tags: ['prioridade_alta', 'transferencia', 'discursiva', 'fuvest', 'segunda_fase'],
+  })), fallback);
+  assert.deepEqual(classifyFlashcard(card({
+    tags: ['prioridade_alta', 'discursiva'],
+  })), fallback);
+});
+
+test('falls back for missing invalid or conflicting priorities', () => {
+  const fallback = {
+    priority: 'regular',
+    trainingType: 'objetivos',
+    classificationOrigin: 'fallback',
+  };
+
+  assert.deepEqual(classifyFlashcard(card({ tags: ['recuperacao_ativa'] })), fallback);
+  assert.deepEqual(classifyFlashcard(card({
+    tags: ['prioridade_invalida', 'recuperacao_ativa'],
+  })), fallback);
+  assert.deepEqual(classifyFlashcard(card({
+    tags: ['prioridade_alta', 'prioridade_essencial', 'recuperacao_ativa'],
+  })), fallback);
 });
