@@ -1,0 +1,24 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  lint-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      # Mesmo gerenciador de pacotes do Dockerfile (não há package-lock.json
+      # commitado, só bun.lock — o build de produção também usa npm install).
+      - run: npm install --no-audit --no-fund
+
+      - run: npm run lint
+
+      - run: npm test
