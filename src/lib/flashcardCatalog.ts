@@ -93,12 +93,17 @@ export function buildFlashcardTopicIndex(
  */
 export function selectDueCards(
   cards: Flashcard[],
+  topics: Topic[],
   selection: FlashcardSessionSelection,
   reviews: Record<string, FlashcardReview>,
   now: Date = new Date(),
 ): Flashcard[] {
+  const knownTopicIds = new Set(topics.map((topic) => topic.id));
   const dueCardsInTopic = cards.filter((card) =>
-    (card.topicId ?? null) === selection.topicId && isDue(reviews[card.id], now),
+    (selection.topicId === null
+      ? !card.topicId || !knownTopicIds.has(card.topicId)
+      : card.topicId === selection.topicId)
+    && isDue(reviews[card.id], now),
   );
 
   if (selection.allDueForTopic) {

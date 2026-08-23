@@ -86,11 +86,11 @@ test('seleciona vencidos de um tópico por prioridade ou tipo', () => {
   };
 
   assert.deepEqual(
-    selectDueCards(cards, { topicId: 'topic-physics', priority: 'alta', allDueForTopic: false }, reviews, now).map((item) => item.id),
+    selectDueCards(cards, topics, { topicId: 'topic-physics', priority: 'alta', allDueForTopic: false }, reviews, now).map((item) => item.id),
     ['high-objective'],
   );
   assert.deepEqual(
-    selectDueCards(cards, { topicId: 'topic-physics', trainingType: 'objetivos', allDueForTopic: false }, reviews, now).map((item) => item.id),
+    selectDueCards(cards, topics, { topicId: 'topic-physics', trainingType: 'objetivos', allDueForTopic: false }, reviews, now).map((item) => item.id),
     ['essential-objective', 'high-objective'],
   );
 });
@@ -104,7 +104,7 @@ test('seleciona todos os vencidos do tópico pela prioridade, mantendo ordem ori
     card({ id: 'regular-second', tags: ['prioridade_regular', '11_fuvest_2a_fase_resposta_pontuavel'] }),
   ];
 
-  const selected = selectDueCards(cards, { topicId: 'topic-physics', allDueForTopic: true }, {}, now);
+  const selected = selectDueCards(cards, topics, { topicId: 'topic-physics', allDueForTopic: true }, {}, now);
 
   assert.deepEqual(selected.map((item) => item.id), [
     'essential',
@@ -113,4 +113,17 @@ test('seleciona todos os vencidos do tópico pela prioridade, mantendo ordem ori
     'regular-first',
     'regular-second',
   ]);
+});
+
+test('seleciona o bucket Outros tópicos com cartões sem tópico e de tópico desconhecido', () => {
+  const cards = [
+    card({ id: 'missing-topic', topicId: undefined, tags: ['prioridade_regular', '01_basico_mapa_minimo'] }),
+    card({ id: 'unknown-topic', topicId: 'removed-topic', tags: ['prioridade_alta', '01_basico_mapa_minimo'] }),
+    card({ id: 'known-topic', topicId: 'topic-physics', tags: ['prioridade_essencial', '01_basico_mapa_minimo'] }),
+  ];
+
+  const selected = selectDueCards(cards, topics, { topicId: null, allDueForTopic: true }, {}, now);
+
+  assert.deepEqual(selected.map((item) => item.id), ['unknown-topic', 'missing-topic']);
+  assert.equal(selected.find((item) => item.id === 'unknown-topic')?.topicId, 'removed-topic');
 });
