@@ -1,6 +1,7 @@
 import React, { useMemo, useState } from 'react';
-import { mockTopics, mockQuestions } from '../data/mockData';
+import { mockTopics } from '../data/mockData';
 import { useUserBacklog } from '../hooks/useUserBacklog';
+import { useQuestions } from '../hooks/useQuestions';
 import { requestAiText } from '../lib/aiClient';
 import { AiText } from '../components/AiText';
 import {
@@ -108,11 +109,12 @@ function SupportLevelContent({ topic, subtopic, supportLevel }: { topic: Topic; 
   const [loadingCorrection, setLoadingCorrection] = useState(false);
 
   const effectiveTopic = subtopic ? `${topic.name} — ${subtopic}` : topic.name;
+  const { questions } = useQuestions();
 
   const realQuestion = useMemo(() => {
     if (supportLevel !== 3 && supportLevel !== 4) return undefined;
-    return mockQuestions.filter((q) => q.topicId === topic.id)[supportLevel - 3];
-  }, [topic.id, supportLevel]);
+    return questions.filter((q) => q.topicId === topic.id)[supportLevel - 3];
+  }, [questions, topic.id, supportLevel]);
 
   const exerciseText = realQuestion
     ? `${realQuestion.prompt}\n\nAlternativas:\n${realQuestion.options.map((o) => `- ${o.text}`).join('\n')}`

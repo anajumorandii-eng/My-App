@@ -1,7 +1,8 @@
 import React, { useMemo, useState } from 'react';
-import { mockQuestions, mockTopics } from '../data/mockData';
+import { mockTopics } from '../data/mockData';
 import { useAuth } from '../context/AuthContext';
 import { useUserMastery } from '../hooks/useUserMastery';
+import { useQuestions } from '../hooks/useQuestions';
 import { addUserAttempt, addUserErrorLog } from '../lib/userData';
 import { requestAiText } from '../lib/aiClient';
 import { parseErrorDiagnosis, ErrorDiagnosis } from '../lib/errorDiagnosis';
@@ -14,7 +15,8 @@ import { HelpCircle, CheckCircle2, XCircle, RotateCcw, CloudOff, Sparkles, Badge
 export default function Questoes() {
   const { user } = useAuth();
   const { updateMastery, isPersisted, syncError } = useUserMastery();
-  const subjects = useMemo(() => ['Todas', ...new Set(mockQuestions.map((q) => q.subject))], []);
+  const { questions: mockQuestions, syncError: questionsSyncError } = useQuestions();
+  const subjects = useMemo(() => ['Todas', ...new Set(mockQuestions.map((q) => q.subject))], [mockQuestions]);
   const [subjectFilter, setSubjectFilter] = useState('Todas');
   const [onlyRealExams, setOnlyRealExams] = useState(false);
   const [index, setIndex] = useState(0);
@@ -31,7 +33,7 @@ export default function Questoes() {
     let result = subjectFilter === 'Todas' ? mockQuestions : mockQuestions.filter((q) => q.subject === subjectFilter);
     if (onlyRealExams) result = result.filter((q) => q.examSource);
     return result;
-  }, [subjectFilter, onlyRealExams]);
+  }, [mockQuestions, subjectFilter, onlyRealExams]);
 
   const question = pool.length > 0 ? pool[index % pool.length] : null;
   const answered = selectedOptionId !== null;
@@ -189,6 +191,7 @@ export default function Questoes() {
           </p>
         )}
         {syncError && <p className="text-xs text-rose-500 mt-2">{syncError}</p>}
+        {questionsSyncError && <p className="text-xs text-rose-500 mt-2">{questionsSyncError}</p>}
       </header>
 
       <div className="flex items-center justify-between flex-wrap gap-4">

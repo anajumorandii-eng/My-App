@@ -1,7 +1,8 @@
 import React, { useMemo, useState } from 'react';
-import { mockTopics, mockQuestions } from '../data/mockData';
+import { mockTopics } from '../data/mockData';
 import { mockTopicDiscursivePrompts } from '../data/topicDiscursivePrompts';
 import { useUserMastery } from '../hooks/useUserMastery';
+import { useQuestions } from '../hooks/useQuestions';
 import { STATE_LABELS, STATE_DESCRIPTIONS } from '../lib/backlogEngine';
 import { Question, TopicDiscursivePrompt } from '../types';
 import {
@@ -49,6 +50,7 @@ type Phase = 'pick' | 'selfreport' | 'quiz' | 'result';
 
 export default function Diagnostico() {
   const { mastery, updateMastery, isPersisted, syncError } = useUserMastery();
+  const { questions: mockQuestions, syncError: questionsSyncError } = useQuestions();
 
   const subjects = useMemo(() => [...new Set(mockTopics.map((t) => t.subject))], []);
   const [subjectFilter, setSubjectFilter] = useState(subjects[0]);
@@ -240,6 +242,7 @@ export default function Diagnostico() {
           </p>
         )}
         {syncError && <p className="text-xs text-rose-500 mt-2">{syncError}</p>}
+        {questionsSyncError && <p className="text-xs text-rose-500 mt-2">{questionsSyncError}</p>}
       </header>
 
       {phase === 'pick' && (
