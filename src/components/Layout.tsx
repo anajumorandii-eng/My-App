@@ -160,7 +160,20 @@ export default function Layout() {
           })}
         </nav>
 
-        <div className="p-4 border-t border-zinc-200 dark:border-zinc-800">
+        <div className="p-4 border-t border-zinc-200 dark:border-zinc-800 space-y-3">
+          {/* Só existe alguma coisa pra ver aqui se a conta logada estiver em
+              ADMIN_EMAILS no servidor — pra quem não é admin, essas rotas já
+              mostram "Entre na conta administrativa" em vez de quebrar (ver
+              Admin.tsx, AdminObras.tsx, AdminConteudo.tsx). Deixado discreto
+              (texto pequeno, sem ícone grande) pra não competir com o menu
+              de estudo, que é o que a maioria de quem usa o app vai usar. */}
+          <div className="flex items-center justify-center gap-3 text-xs text-zinc-400 dark:text-zinc-500">
+            <NavLink to="/admin" className="hover:text-zinc-600 dark:hover:text-zinc-300 hover:underline">Admin</NavLink>
+            <span aria-hidden="true">·</span>
+            <NavLink to="/admin/obras" className="hover:text-zinc-600 dark:hover:text-zinc-300 hover:underline">Obras</NavLink>
+            <span aria-hidden="true">·</span>
+            <NavLink to="/admin/conteudo" className="hover:text-zinc-600 dark:hover:text-zinc-300 hover:underline">Conteúdo</NavLink>
+          </div>
           <button
             onClick={toggleTheme}
             className="flex items-center justify-center w-full px-4 py-2 text-sm font-medium rounded-lg text-zinc-600 dark:text-zinc-400 bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors"

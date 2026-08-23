@@ -159,6 +159,24 @@ export default function AdminConteudo() {
     });
   }
 
+  function handleDeleteStudyMethod(id: string) {
+    withBusy(async () => {
+      if (!token) return;
+      await adminFetch(`/study-methods/${id}`, token, { method: 'DELETE' });
+      if (editingMethod?.id === id) setEditingMethod(null);
+      await loadAll(token);
+    });
+  }
+
+  function handleDeleteEpisode(id: string) {
+    withBusy(async () => {
+      if (!token) return;
+      await adminFetch(`/podcast-episodes/${id}`, token, { method: 'DELETE' });
+      if (editingEpisode?.id === id) setEditingEpisode(null);
+      await loadAll(token);
+    });
+  }
+
   // Índice 1-based da alternativa correta dentro de options — o formulário
   // pré-preenchido reordena as alternativas na mesma ordem do array salvo,
   // então a posição (não o id original) é o que importa aqui.
@@ -166,13 +184,23 @@ export default function AdminConteudo() {
     ? editingQuestion.options.findIndex((o) => o.id === editingQuestion.correctOptionId) + 1
     : undefined;
 
+  const QUESTION_PAGE_SIZE = 100;
+  const [questionVisibleCount, setQuestionVisibleCount] = useState(QUESTION_PAGE_SIZE);
+  useEffect(() => {
+    setQuestionVisibleCount(QUESTION_PAGE_SIZE);
+  }, [questionSearch, questionSubjectFilter]);
+
   const subjects = useMemo(() => ['Todas', ...new Set(questions.map((q) => q.subject))].sort(), [questions]);
-  const filteredQuestions = useMemo(() => {
+  const matchingQuestions = useMemo(() => {
     let result = questionSubjectFilter === 'Todas' ? questions : questions.filter((q) => q.subject === questionSubjectFilter);
     const term = questionSearch.trim().toLowerCase();
     if (term) result = result.filter((q) => q.prompt.toLowerCase().includes(term));
-    return result.slice(0, 100);
+    return result;
   }, [questions, questionSubjectFilter, questionSearch]);
+  const filteredQuestions = useMemo(
+    () => matchingQuestions.slice(0, questionVisibleCount),
+    [matchingQuestions, questionVisibleCount]
+  );
 
   return <div className="space-y-8">
     <header>
@@ -210,8 +238,12 @@ export default function AdminConteudo() {
             </span>
           </li>
         ))}
-        {questions.length > filteredQuestions.length && (
-          <li className="text-xs text-zinc-400 pt-1">Mostrando as 100 primeiras — refine a busca para ver outras.</li>
+        {matchingQuestions.length > filteredQuestions.length && (
+          <li className="pt-1">
+            <button onClick={() => setQuestionVisibleCount((c) => c + QUESTION_PAGE_SIZE)} className="text-xs text-indigo-500 hover:underline">
+              Mostrando {filteredQuestions.length} de {matchingQuestions.length} — carregar mais
+            </button>
+          </li>
         )}
       </ul>
       {editingQuestion && (
@@ -255,7 +287,10 @@ export default function AdminConteudo() {
         {studyMethods.map((m) => (
           <li key={m.id} className="flex items-center justify-between gap-2 border-b border-zinc-100 dark:border-zinc-800 py-1.5">
             <span>{m.name} <em className="text-zinc-400">({m.category})</em></span>
-            <button disabled={busy} onClick={() => setEditingMethod(m)} className="shrink-0 text-xs text-indigo-500 hover:underline">editar</button>
+            <span className="shrink-0 flex gap-2">
+              <button disabled={busy} onClick={() => setEditingMethod(m)} className="text-xs text-indigo-500 hover:underline">editar</button>
+              <button disabled={busy} onClick={() => handleDeleteStudyMethod(m.id)} className="text-xs text-rose-500 hover:underline">excluir</button>
+            </span>
           </li>
         ))}
       </ul>
@@ -290,7 +325,10 @@ export default function AdminConteudo() {
         {episodes.map((ep) => (
           <li key={ep.id} className="flex items-center justify-between gap-2 border-b border-zinc-100 dark:border-zinc-800 py-1.5">
             <span>{ep.title} <em className="text-zinc-400">({ep.subject}, {ep.durationMinutes} min)</em></span>
-            <button disabled={busy} onClick={() => setEditingEpisode(ep)} className="shrink-0 text-xs text-indigo-500 hover:underline">editar</button>
+            <span className="shrink-0 flex gap-2">
+              <button disabled={busy} onClick={() => setEditingEpisode(ep)} className="text-xs text-indigo-500 hover:underline">editar</button>
+              <button disabled={busy} onClick={() => handleDeleteEpisode(ep.id)} className="text-xs text-rose-500 hover:underline">excluir</button>
+            </span>
           </li>
         ))}
       </ul>
