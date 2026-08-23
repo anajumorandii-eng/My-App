@@ -31,6 +31,8 @@ import Admin from './views/Admin';
 import AdminObras from './views/AdminObras';
 import Flashcards from './views/Flashcards';
 import ObrasObrigatorias from './views/ObrasObrigatorias';
+import Obras from './views/Obras';
+import ObraDetalhe from './views/ObraDetalhe';
 
 export default function App() {
   return (
@@ -59,6 +61,8 @@ export default function App() {
             <Route path="diagnostico" element={<Diagnostico />} />
             <Route path="flashcards" element={<Flashcards />} />
             <Route path="obras-obrigatorias" element={<ObrasObrigatorias />} />
+            <Route path="obras" element={<Obras />} />
+            <Route path="obras/:workSlug" element={<ObraDetalhe />} />
             <Route path="admin" element={<Admin />} />
             <Route path="admin/obras" element={<AdminObras />} />
           </Route>
