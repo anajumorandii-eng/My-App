@@ -23,6 +23,13 @@ function segmenterHintFromGenre(genre: string): 'chapter' | 'poem' | 'song' {
 // Node inteiro (padrão desde o Node 15), e o Cloud Run passa a responder
 // 503 pra TODAS as rotas do app até subir uma instância nova. Envolve cada
 // handler pra sempre responder um JSON de erro em vez de deixar estourar.
+// O Firestore recusa gravar um campo com valor `undefined` (diferente de só
+// não ter a chave) — comum aqui porque vários campos são opcionais e vêm
+// direto do formulário (ex.: publisher, edition, isbn de uma WorkEdition).
+function stripUndefined<T extends object>(obj: T): T {
+  return Object.fromEntries(Object.entries(obj).filter(([, v]) => v !== undefined)) as T;
+}
+
 function asyncRoute(handler: (req: Request, res: Response) => Promise<unknown>) {
   return async (req: Request, res: Response) => {
     try {
@@ -63,7 +70,7 @@ export function createLiteraryAdminRouter(db: Firestore): Router {
     if (!slug || !title || !author || !genre || !language) {
       return res.status(400).json({ error: 'Campos obrigatórios: slug, title, author, genre, language.', code: 'INVALID_WORK' });
     }
-    const work: LiteraryWork = { id: randomUUID(), slug, title, author, originalYear, genre, language };
+    const work: LiteraryWork = stripUndefined({ id: randomUUID(), slug, title, author, originalYear, genre, language });
     await db.collection('literaryWorks').doc(work.id).set(work);
     res.json(work);
   }));
@@ -102,7 +109,7 @@ export function createLiteraryAdminRouter(db: Firestore): Router {
 
     // Contagem de páginas fica pra Etapa B (auditoria) — precisa abrir o PDF
     // de verdade; aqui só registra o esqueleto administrativo.
-    const editionData: WorkEdition = {
+    const editionData: WorkEdition = stripUndefined({
       id: editionId,
       workId,
       publisher,
@@ -118,7 +125,7 @@ export function createLiteraryAdminRouter(db: Firestore): Router {
       rightsStatus,
       integrityStatus: 'pending',
       extractionStatus: 'pending',
-    };
+    });
     await db.collection('literaryWorks').doc(workId).collection('editions').doc(editionId).set(editionData);
     res.json(editionData);
   }));
@@ -219,14 +226,14 @@ export function createLiteraryAdminRouter(db: Firestore): Router {
       if (!u.title || !u.type || u.order === undefined || u.pdfStartPage === undefined || u.pdfEndPage === undefined) {
         return res.status(400).json({ error: 'Cada unidade precisa de title, type, order, pdfStartPage, pdfEndPage.', code: 'INVALID_UNIT' });
       }
-      const unit: WorkUnit = {
+      const unit: WorkUnit = stripUndefined({
         id: randomUUID(), workId: req.params.workId, parentUnitId: u.parentUnitId,
         type: u.type, order: u.order, title: u.title,
         pdfStartPage: u.pdfStartPage, pdfEndPage: u.pdfEndPage,
         printedStartPage: u.printedStartPage, printedEndPage: u.printedEndPage,
         requiredByExam: u.requiredByExam ?? true,
         extractionConfidence: u.extractionConfidence ?? 'medium',
-      };
+      });
       const ref = db.collection('literaryWorks').doc(req.params.workId).collection('units').doc(unit.id);
       batch.set(ref, unit);
       saved.push(unit);
