@@ -27,6 +27,7 @@ import Treino2aFase from './views/Treino2aFase';
 import Recuperacao from './views/Recuperacao';
 import Diagnostico from './views/Diagnostico';
 import Admin from './views/Admin';
+import Resumos from './views/Resumos';
 
 export default function App() {
   return (
@@ -38,6 +39,7 @@ export default function App() {
             <Route path="plano" element={<Plano />} />
             <Route path="sessao" element={<Sessao />} />
             <Route path="questoes" element={<Questoes />} />
+            <Route path="resumos" element={<Resumos />} />
             <Route path="revisoes" element={<Revisoes />} />
             <Route path="erros" element={<Erros />} />
             <Route path="podcast" element={<Podcast />} />

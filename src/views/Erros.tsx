@@ -5,6 +5,9 @@ import { useAuth } from '../context/AuthContext';
 import { getUserErrorLogs, addUserErrorLog } from '../lib/userData';
 import { requestAiText } from '../lib/aiClient';
 import { BookX, Plus, Sparkles, CloudOff } from 'lucide-react';
+import { useSummaryProgress } from '../hooks/useSummaryProgress';
+import { interactiveSummaries } from '../data/interactiveSummaries';
+import SummaryErrorsPanel from '../components/SummaryErrorsPanel';
 
 const TYPE_LABELS: Record<ErrorLog['type'], string> = {
   conceptual: 'Conceitual',
@@ -18,6 +21,7 @@ const TYPE_LABELS: Record<ErrorLog['type'], string> = {
 
 export default function Erros() {
   const { user, isConnected } = useAuth();
+  const { progress: summaryProgress } = useSummaryProgress();
   const [logs, setLogs] = useState<ErrorLog[]>(mockErrorLogs);
   const [typeFilter, setTypeFilter] = useState<ErrorLog['type'] | 'all'>('all');
   const [showForm, setShowForm] = useState(false);
@@ -127,6 +131,8 @@ export default function Erros() {
           Registrar erro
         </button>
       </header>
+
+      <SummaryErrorsPanel progress={summaryProgress} summaries={interactiveSummaries} />
 
       {showForm && (
         <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 shadow-sm space-y-4">

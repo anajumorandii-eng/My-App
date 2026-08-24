@@ -4,6 +4,9 @@ import { TopicMastery } from '../types';
 import { useUserMastery } from '../hooks/useUserMastery';
 import { requestAiText } from '../lib/aiClient';
 import { Repeat, CheckCircle2, AlertTriangle, CloudOff, Sparkles } from 'lucide-react';
+import { useSummaryProgress } from '../hooks/useSummaryProgress';
+import { interactiveSummaries } from '../data/interactiveSummaries';
+import SummaryReviewsPanel from '../components/SummaryReviewsPanel';
 
 function urgencyOf(mastery: TopicMastery): number {
   const daysSinceReview = (Date.now() - new Date(mastery.lastReviewed).getTime()) / 86400000;
@@ -23,6 +26,7 @@ const SUBJECT_COLORS: Record<string, string> = {
 
 export default function Revisoes() {
   const { mastery: masteryState, updateMastery, isPersisted, syncError } = useUserMastery();
+  const { progress: summaryProgress } = useSummaryProgress();
   const [tips, setTips] = useState<Record<string, string>>({});
   const [loadingTipFor, setLoadingTipFor] = useState<string | null>(null);
 
@@ -79,6 +83,8 @@ export default function Revisoes() {
         )}
         {syncError && <p className="text-xs text-rose-500 mt-2">{syncError}</p>}
       </header>
+
+      <SummaryReviewsPanel progress={summaryProgress} summaries={interactiveSummaries} />
 
       <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 shadow-sm flex items-center">
         <div className={`w-12 h-12 rounded-full flex items-center justify-center mr-4 ${pendingToday > 0 ? 'bg-amber-100 text-amber-600 dark:bg-amber-900/30 dark:text-amber-400' : 'bg-emerald-100 text-emerald-600 dark:bg-emerald-900/30 dark:text-emerald-400'}`}>

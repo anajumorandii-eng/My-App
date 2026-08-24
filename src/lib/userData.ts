@@ -1,6 +1,7 @@
 import { doc, getDoc, setDoc, collection, getDocs, query, orderBy } from 'firebase/firestore';
 import { db } from './firestore';
 import { TopicMastery, ErrorLog, UserProfile, DiscursiveAttempt, BacklogItem } from '../types';
+import type { SummaryProgressMap } from '../types/summary';
 import { mockMastery, mockProfile, mockBacklog } from '../data/mockData';
 
 export interface QuestionAttempt {
@@ -89,4 +90,15 @@ export async function getUserBacklog(uid: string): Promise<BacklogItem[]> {
 export async function saveUserBacklog(uid: string, items: BacklogItem[]): Promise<void> {
   const ref = doc(db, 'users', uid, 'data', 'backlog');
   await setDoc(ref, { items });
+}
+
+export async function getUserSummaryProgress(uid: string): Promise<SummaryProgressMap> {
+  const ref = doc(db, 'users', uid, 'data', 'summaryProgress');
+  const snap = await getDoc(ref);
+  return snap.exists() ? ((snap.data().items as SummaryProgressMap) ?? {}) : {};
+}
+
+export async function saveUserSummaryProgress(uid: string, items: SummaryProgressMap): Promise<void> {
+  const ref = doc(db, 'users', uid, 'data', 'summaryProgress');
+  await setDoc(ref, { items, updatedAt: new Date().toISOString() });
 }
