@@ -13,7 +13,7 @@
     "lint": "tsc --noEmit",
     "test": "npm run test:node && npm run test:vitest",
     "test:node": "tsx --test server/ai/*.test.ts server/auth/*.test.ts server/podcast/*.test.ts server/literary/*.test.ts src/lib/*.test.ts",
-    "test:vitest": "vitest run serverCalendar.test.ts src/features/availability src/hooks/useDailyPlan.test.tsx src/views/DailyPlanConsistency.test.tsx"
+    "test:vitest": "vitest run serverCalendar.test.ts src/features/availability src/hooks/useDailyPlan.test.tsx src/views/DailyPlanConsistency.test.tsx src/components/*.ui.test.tsx src/views/*.ui.test.tsx"
   },
   "dependencies": {
     "@date-fns/tz": "^1.5.0",
@@ -47,6 +47,7 @@
   "devDependencies": {
     "@testing-library/jest-dom": "^7.0.1",
     "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^14.6.6",
     "@types/cookie-parser": "^1.4.10",
     "@types/express": "^4.17.21",
     "@types/node": "^22.14.0",

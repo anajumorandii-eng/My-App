@@ -7,6 +7,7 @@ import {
   HelpCircle,
   Repeat,
   BookX,
+  Library,
   Headphones,
   Brain,
   FlaskConical,
@@ -27,8 +28,7 @@ import {
   ArrowRight,
   Menu,
   Layers,
-  BookOpen,
-  Library
+  BookOpen
 } from 'lucide-react';
 
 export default function Layout() {
@@ -76,6 +76,7 @@ export default function Layout() {
     { name: 'Recuperação de Atrasos', path: '/recuperacao', icon: ListTodo },
     { name: 'Sessão de Estudo', path: '/sessao', icon: PlayCircle },
     { name: 'Questões & Tentativas', path: '/questoes', icon: HelpCircle },
+    { name: 'Resumos Interativos', path: '/resumos', icon: Library },
     { name: 'Revisões Adaptativas', path: '/revisoes', icon: Repeat },
     { name: 'Flashcards', path: '/flashcards', icon: Layers },
     { name: 'Flashcards de Obras', path: '/obras-obrigatorias', icon: BookOpen },

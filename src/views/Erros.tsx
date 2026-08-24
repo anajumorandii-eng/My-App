@@ -7,6 +7,9 @@ import { requestAiText } from '../lib/aiClient';
 import { ERROR_TYPE_LABELS as TYPE_LABELS, INTERVENTION_LABELS, CONFIDENCE_LABELS } from '../lib/errorLabels';
 import { AiText } from '../components/AiText';
 import { BookX, Plus, Sparkles, CloudOff, Stethoscope } from 'lucide-react';
+import { useSummaryProgress } from '../hooks/useSummaryProgress';
+import { interactiveSummaries } from '../data/interactiveSummaries';
+import SummaryErrorsPanel from '../components/SummaryErrorsPanel';
 
 const OUTCOME_LABELS: Record<NonNullable<ErrorLog['outcomeRating']>, string> = {
   melhorou: 'Melhorou',
@@ -16,6 +19,7 @@ const OUTCOME_LABELS: Record<NonNullable<ErrorLog['outcomeRating']>, string> = {
 
 export default function Erros() {
   const { user, isConnected } = useAuth();
+  const { progress: summaryProgress } = useSummaryProgress();
   const [logs, setLogs] = useState<ErrorLog[]>(mockErrorLogs);
   const [typeFilter, setTypeFilter] = useState<ErrorLog['type'] | 'all'>('all');
   const [showForm, setShowForm] = useState(false);
@@ -141,6 +145,8 @@ export default function Erros() {
           Registrar erro
         </button>
       </header>
+
+      <SummaryErrorsPanel progress={summaryProgress} summaries={interactiveSummaries} />
 
       {showForm && (
         <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 shadow-sm space-y-4">

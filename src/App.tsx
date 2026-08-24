@@ -35,6 +35,7 @@ import ObrasObrigatorias from './views/ObrasObrigatorias';
 import Obras from './views/Obras';
 import ObraDetalhe from './views/ObraDetalhe';
 import AgendaView from './features/availability/AgendaView';
+import Resumos from './views/Resumos';
 
 export default function App() {
   return (
@@ -48,6 +49,7 @@ export default function App() {
             <Route path="reta-final" element={<RetaFinal />} />
             <Route path="sessao" element={<Sessao />} />
             <Route path="questoes" element={<Questoes />} />
+            <Route path="resumos" element={<Resumos />} />
             <Route path="revisoes" element={<Revisoes />} />
             <Route path="erros" element={<Erros />} />
             <Route path="podcast" element={<Podcast />} />
@@ -75,4 +77,3 @@ export default function App() {
     </AuthProvider>
   );
 }
-
