@@ -105,11 +105,6 @@ describe('useDailyPlan', () => {
         intervalEnd: '2026-08-24T15:00:00.000Z',
       },
       {
-        topicId: 'bio_03',
-        intervalStart: '2026-08-24T15:00:00.000Z',
-        intervalEnd: '2026-08-24T15:15:00.000Z',
-      },
-      {
         topicId: 'bio_02',
         intervalStart: '2026-08-24T15:40:00.000Z',
         intervalEnd: '2026-08-24T16:25:00.000Z',

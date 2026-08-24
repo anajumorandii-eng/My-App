@@ -78,8 +78,8 @@ describe('allocateStudyActions', () => {
       [action('high-45', 45, 100), action('middle-45', 45, 90), action('low-5', 5, 80)],
       intervals,
     );
-    expect(allocated.map(({ id }) => id)).toEqual(['high-45', 'low-5', 'middle-45']);
-    expect(allocated.map(({ priorityScore }) => priorityScore)).toEqual([100, 80, 90]);
+    expect(allocated.map(({ id }) => id)).toEqual(['high-45', 'middle-45', 'low-5']);
+    expect(allocated.map(({ priorityScore }) => priorityScore)).toEqual([100, 90, 80]);
     expect(allocated.every((item, index) => index === 0 || item.intervalStart >= allocated[index - 1].intervalStart)).toBe(true);
   });
 

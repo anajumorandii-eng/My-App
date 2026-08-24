@@ -215,7 +215,7 @@ export default function AgendaView() {
           <div><h2 id="disponibilidade-efetiva" className="text-xl font-semibold">Disponibilidade efetiva</h2><p className="text-sm text-zinc-500">Para {localDate}</p></div>
           <strong className="text-indigo-600 dark:text-indigo-400">{availability?.totalMinutes ?? 0} min</strong>
         </div>
-        <p role="status" className="text-sm text-zinc-600 dark:text-zinc-400">Calendar: {availability?.warnings.some(({ code }) => code === 'calendar-disconnected') ? 'desconectado' : availability?.status === 'degraded' ? 'falha na consulta' : availability?.status === 'ready' ? 'exceções aplicadas' : 'sem blocos disponíveis'}</p>
+        <p role="status" className="text-sm text-zinc-600 dark:text-zinc-400">Calendar: {availability?.warnings.some(({ code }) => code === 'calendar-disconnected') ? 'desconectado' : availability?.warnings.some(({ code }) => code === 'calendar-failed') ? 'falha na consulta' : availability?.status === 'ready' ? 'exceções aplicadas' : 'indisponível'}</p>
         {syncError && <p role="alert" className="text-sm text-amber-700">{syncError}</p>}
         {availability?.warnings.map((warning) => <p key={warning.code} role="status" className="text-sm text-amber-700 dark:text-amber-300">{warning.message}</p>)}
         <ul aria-label="Blocos disponíveis" className="flex flex-wrap gap-2">

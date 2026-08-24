@@ -23,6 +23,7 @@ export function allocateStudyActions(
     .sort((left, right) => left.cursorMs - right.cursorMs);
 
   const allocated: AllocatedStudyAction[] = [];
+  let currentIntervalIndex = 0;
 
   for (const action of prioritizedActions) {
     if (!Number.isFinite(action.estimatedMinutes) || action.estimatedMinutes <= 0 || action.estimatedMinutes > 50) {
@@ -30,7 +31,14 @@ export function allocateStudyActions(
     }
 
     const durationMs = action.estimatedMinutes * 60_000;
-    const cursor = cursors.find((candidate) => candidate.cursorMs + durationMs <= candidate.endMs);
+    while (
+      currentIntervalIndex < cursors.length
+      && cursors[currentIntervalIndex].cursorMs + durationMs > cursors[currentIntervalIndex].endMs
+    ) {
+      currentIntervalIndex += 1;
+    }
+
+    const cursor = cursors[currentIntervalIndex];
     if (!cursor) continue;
 
     const intervalEndMs = cursor.cursorMs + durationMs;
@@ -45,5 +53,5 @@ export function allocateStudyActions(
     cursor.cursor = intervalEnd;
   }
 
-  return allocated.sort((left, right) => new Date(left.intervalStart).getTime() - new Date(right.intervalStart).getTime());
+  return allocated;
 }
