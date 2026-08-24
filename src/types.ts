@@ -42,6 +42,12 @@ export interface StudyAction {
   priorityScore: number; // Assigned by Efficiency Engine
 }
 
+export interface AllocatedStudyAction extends StudyAction {
+  intervalStart: string;
+  intervalEnd: string;
+  allocatedMinutes: number;
+}
+
 export interface CalendarEvent {
   id: string;
   summary: string;

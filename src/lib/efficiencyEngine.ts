@@ -5,11 +5,11 @@ export class EfficiencyEngine {
    * Deterministic ranking of study topics based on multiple weighted criteria.
    * Returns a prioritized list of actions to take.
    */
-  public static generateDailyPlan(
+  public static rankStudyActions(
     masteryData: TopicMastery[],
     topics: Topic[],
     profile: UserProfile,
-    availableMinutesToday: number
+    now: Date = new Date(),
   ): StudyAction[] {
     
     let actions: StudyAction[] = [];
@@ -22,7 +22,7 @@ export class EfficiencyEngine {
       const learningNeeded = 100 - mastery.level;
       
       // 2. Review Necessity (Based on time since last review and uncertainty)
-      const daysSinceReview = (new Date().getTime() - new Date(mastery.lastReviewed).getTime()) / (1000 * 3600 * 24);
+      const daysSinceReview = (now.getTime() - new Date(mastery.lastReviewed).getTime()) / (1000 * 3600 * 24);
       const reviewNecessity = Math.min((daysSinceReview * 5) + (mastery.uncertainty * 50), 100);
       
       // 3. Error Signal Urgency
@@ -60,7 +60,7 @@ export class EfficiencyEngine {
       }
 
       actions.push({
-        id: `action_${topic.id}_${Date.now()}`,
+        id: `action_${topic.id}_${now.getTime()}`,
         type,
         topicId: topic.id,
         topicName: topic.name,
@@ -73,17 +73,19 @@ export class EfficiencyEngine {
     // Sort by highest priority first
     actions.sort((a, b) => b.priorityScore - a.priorityScore);
 
-    // Fit within available time limit
-    let totalTime = 0;
-    const finalPlan: StudyAction[] = [];
-    
-    for (const action of actions) {
-      if (totalTime + action.estimatedMinutes <= availableMinutesToday) {
-        finalPlan.push(action);
-        totalTime += action.estimatedMinutes;
-      }
-    }
+    return actions;
+  }
 
-    return finalPlan;
+  /**
+   * @deprecated Consumers should use rankStudyActions and allocateStudyActions.
+   * Kept temporarily so existing views compile until they migrate to useDailyPlan.
+   */
+  public static generateDailyPlan(
+    masteryData: TopicMastery[],
+    topics: Topic[],
+    profile: UserProfile,
+    _legacyAvailableMinutesToday: number,
+  ): StudyAction[] {
+    return this.rankStudyActions(masteryData, topics, profile);
   }
 }
