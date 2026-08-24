@@ -133,6 +133,28 @@ describe('scheduleRepository', () => {
     expect(firestore.setDoc).toHaveBeenCalledWith({ path: 'users/user-1/data/weeklySchedule' }, value);
   });
 
+  it('rejects study windows that overlap protected periods or pass the weekday ceiling', async () => {
+    const overlapping = schedule();
+    overlapping.days.monday = [
+      { id: 'class', label: 'Aula', kind: 'class', start: '14:00', end: '15:00' },
+      { id: 'study', label: 'Estudo', kind: 'study_window', start: '14:40', end: '20:30' },
+    ];
+    await expect(saveWeeklySchedule('user-1', overlapping)).rejects.toThrow('Invalid weekly schedule');
+
+    const late = schedule();
+    late.days.saturday = [{ id: 'late', label: 'Estudo', kind: 'study_window', start: '19:50', end: '21:00' }];
+    await expect(saveWeeklySchedule('user-1', late)).rejects.toThrow('Invalid weekly schedule');
+    expect(firestore.setDoc).not.toHaveBeenCalled();
+  });
+
+  it('rejects loaded schedules with cross-entry overlaps', async () => {
+    const invalid = schedule();
+    invalid.days.monday.push({ id: 'meal', label: 'Refeição', kind: 'meal', start: '14:30', end: '15:00' });
+    firestore.getDoc.mockResolvedValue({ exists: () => true, data: () => invalid });
+
+    await expect(getOrCreateWeeklySchedule('user-1')).rejects.toThrow('Invalid weekly schedule document');
+  });
+
   it('reads, saves, and deletes an exception at its date-specific user path', async () => {
     const value = exception();
     firestore.getDoc.mockResolvedValue({ exists: () => true, data: () => value });
@@ -151,5 +173,15 @@ describe('scheduleRepository', () => {
 
     await expect(saveScheduleException('user-1', invalid)).rejects.toThrow('Invalid schedule exception');
     expect(firestore.setDoc).not.toHaveBeenCalled();
+  });
+
+  it('rejects replacement windows after 20:30 from Monday through Saturday', async () => {
+    const invalid = { ...exception(), operation: 'replacement_windows' as const, intervals: [{ start: '19:30', end: '21:00' }] };
+    await expect(saveScheduleException('user-1', invalid)).rejects.toThrow('Invalid schedule exception');
+  });
+
+  it('rejects overlapping replacement windows', async () => {
+    const invalid = { ...exception(), operation: 'replacement_windows' as const, intervals: [{ start: '14:00', end: '16:00' }, { start: '15:00', end: '17:00' }] };
+    await expect(saveScheduleException('user-1', invalid)).rejects.toThrow('Invalid schedule exception');
   });
 });

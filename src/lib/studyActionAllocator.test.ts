@@ -62,7 +62,7 @@ describe('allocateStudyActions', () => {
     expect(allocateStudyActions(actions, intervals).map(({ id }) => id)).toEqual(['valid']);
   });
 
-  it('preserves input priority order while using intervals chronologically', () => {
+  it('returns the packed plan in chronological execution order while preserving priority scores', () => {
     const actions = [action('highest', 45, 100), action('middle', 20, 90), action('lowest', 30, 80)];
 
     const allocated = allocateStudyActions(actions, [...intervals].reverse());
@@ -71,6 +71,16 @@ describe('allocateStudyActions', () => {
     expect(allocated[0].intervalStart).toBe(intervals[0].start);
     expect(allocated[1].intervalStart).toBe(intervals[1].start);
     expect(allocated[2].intervalStart).toBe('2026-08-24T16:00:00.000Z');
+  });
+
+  it('never backfills a later-priority action before an already allocated action', () => {
+    const allocated = allocateStudyActions(
+      [action('high-45', 45, 100), action('middle-45', 45, 90), action('low-5', 5, 80)],
+      intervals,
+    );
+    expect(allocated.map(({ id }) => id)).toEqual(['high-45', 'low-5', 'middle-45']);
+    expect(allocated.map(({ priorityScore }) => priorityScore)).toEqual([100, 80, 90]);
+    expect(allocated.every((item, index) => index === 0 || item.intervalStart >= allocated[index - 1].intervalStart)).toBe(true);
   });
 
   it('never lets an allocated action end after its containing interval', () => {

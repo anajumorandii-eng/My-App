@@ -9,10 +9,13 @@ const availabilityState = vi.hoisted(() => ({
   schedule: undefined as WeeklySchedule | undefined,
   saveSchedule: vi.fn(),
   saveException: vi.fn(),
+  requestedDates: [] as string[],
 }));
 
 vi.mock('./useDailyStudyAvailability', () => ({
-  useDailyStudyAvailability: () => ({
+  useDailyStudyAvailability: (localDate: string) => {
+    availabilityState.requestedDates.push(localDate);
+    return ({
     availability: {
       localDate: '2026-08-24',
       timeZone: SAO_PAULO_TIME_ZONE,
@@ -34,7 +37,8 @@ vi.mock('./useDailyStudyAvailability', () => ({
     saveSchedule: availabilityState.saveSchedule,
     saveException: availabilityState.saveException,
     deleteException: vi.fn(),
-  }),
+    });
+  },
 }));
 
 vi.mock('../../context/AuthContext', () => ({
@@ -52,6 +56,7 @@ describe('AgendaView', () => {
     availabilityState.schedule = createInitialWeeklySchedule('2026-08-24T15:00:00.000Z');
     availabilityState.saveSchedule.mockReset().mockResolvedValue(true);
     availabilityState.saveException.mockReset().mockResolvedValue(undefined);
+    availabilityState.requestedDates = [];
   });
 
   afterEach(() => {
@@ -93,6 +98,14 @@ describe('AgendaView', () => {
     const thursdayCard = screen.getByRole('heading', { name: 'Quinta-feira' }).closest('article')!;
     expect(within(thursdayCard).getByText(/Estimativa edit\u00e1vel/i)).toBeInTheDocument();
     expect(screen.getByLabelText('Fim de quinta-feira')).toHaveValue('17:30');
+  });
+
+  it('rejects a recurring course-day window after 20:30 before persistence', async () => {
+    render(<AgendaView />);
+    fireEvent.change(screen.getByLabelText('Fim de segunda-feira'), { target: { value: '21:00' } });
+    await act(async () => fireEvent.click(screen.getByRole('button', { name: 'Salvar semana' })));
+    expect(availabilityState.saveSchedule).not.toHaveBeenCalled();
+    expect(screen.getByRole('alert')).toHaveTextContent(/períodos protegidos|20:30/i);
   });
 
   it('keeps an estimated edit open when the weekly save reports failure', async () => {
@@ -148,6 +161,35 @@ describe('AgendaView', () => {
     }));
     expect(availabilityState.saveSchedule).not.toHaveBeenCalled();
     expect(availabilityState.schedule).toEqual(createInitialWeeklySchedule('2026-08-24T15:00:00.000Z'));
+  });
+
+  it('creates and removes a stable study window for an initially empty Sunday', async () => {
+    render(<AgendaView />);
+    const sunday = screen.getByRole('heading', { name: 'Domingo' }).closest('article')!;
+    fireEvent.click(within(sunday).getByRole('button', { name: /Adicionar janela/i }));
+    expect(within(sunday).getByLabelText('Início de domingo')).toHaveValue('14:40');
+    await act(async () => fireEvent.click(screen.getByRole('button', { name: 'Salvar semana' })));
+    const saved = availabilityState.saveSchedule.mock.calls[0][0] as WeeklySchedule;
+    expect(saved.days.sunday[0]).toMatchObject({ id: 'sunday-study', kind: 'study_window' });
+
+    fireEvent.click(within(sunday).getByRole('button', { name: /Remover janela/i }));
+    await act(async () => fireEvent.click(screen.getByRole('button', { name: 'Salvar semana' })));
+    expect((availabilityState.saveSchedule.mock.calls[1][0] as WeeklySchedule).days.sunday).toEqual([]);
+  });
+
+  it('ignores a cleared native date and keeps the signed-out preview on the last valid date', () => {
+    render(<AgendaView />);
+    const input = screen.getByLabelText('Data da exceção');
+    fireEvent.change(input, { target: { value: '' } });
+    expect(input).toHaveValue('2026-08-24');
+    expect(availabilityState.requestedDates).not.toContain('');
+    expect(screen.queryByText(/Carregando agenda/i)).not.toBeInTheDocument();
+  });
+
+  it('labels disconnected Calendar state accurately', () => {
+    render(<AgendaView />);
+    expect(screen.getByText(/Calendar: desconectado/i)).toBeInTheDocument();
+    expect(screen.queryByText(/Calendar: agenda aplicada/i)).not.toBeInTheDocument();
   });
 
   it('links to the Agenda from the primary navigation', () => {

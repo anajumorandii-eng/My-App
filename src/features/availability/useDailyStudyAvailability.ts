@@ -56,6 +56,13 @@ export function useDailyStudyAvailability(localDate: string): DailyStudyAvailabi
     exceptionRef.current = undefined;
 
     const load = async () => {
+      if (!isValidLocalDate(localDate)) {
+        if (!cancelled) {
+          setAvailability(degradedAvailability(localDate));
+          setLoading(false);
+        }
+        return;
+      }
       if (!user) {
         const previewSchedule = createInitialWeeklySchedule(new Date().toISOString());
         const calendar: CalendarOverlayInput = { status: 'disconnected' };
@@ -156,6 +163,13 @@ export function useDailyStudyAvailability(localDate: string): DailyStudyAvailabi
     saveException,
     deleteException,
   };
+}
+
+function isValidLocalDate(value: string): boolean {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(value)) return false;
+  const [year, month, day] = value.split('-').map(Number);
+  const date = new Date(Date.UTC(year, month - 1, day));
+  return date.getUTCFullYear() === year && date.getUTCMonth() === month - 1 && date.getUTCDate() === day;
 }
 
 async function loadCalendarOverlay(localDate: string, isConnected: boolean): Promise<CalendarOverlayInput> {

@@ -1,6 +1,7 @@
 import { TZDate } from '@date-fns/tz';
 import { scheduleStudyBlocks, type CandidateStudyWindow } from './blockScheduler';
 import { localDateTimeToDate, localDateTimeToIso } from './time';
+import { ceilingForDay, rangesDoNotOverlap, safeStudyWindows } from './scheduleSafety';
 import {
   SAO_PAULO_TIME_ZONE,
   type AvailabilityCalendarEvent,
@@ -26,11 +27,9 @@ export function resolveEffectiveStudyAvailability(
   validateInput(schedule, exception, localDate);
 
   const weekday = WEEKDAYS[localDateTimeToDate(localDate, '00:00').getDay()];
-  let windows = schedule.days[weekday]
-    .filter((entry) => entry.kind === 'study_window')
-    .map(({ start, end }) => ({ start, end }));
+  let windows = safeStudyWindows(weekday, schedule.days[weekday]);
 
-  windows = applyException(windows, exception, localDate);
+  windows = applyException(windows, exception, localDate, weekday);
 
   let ranges = windows.map((window) => wallRange(localDate, window));
   if (calendar.status === 'connected') {
@@ -72,6 +71,7 @@ function applyException(
   windows: CandidateStudyWindow[],
   exception: ScheduleException | undefined,
   localDate: string,
+  weekday: Weekday,
 ): CandidateStudyWindow[] {
   if (!exception) return windows;
 
@@ -79,7 +79,9 @@ function applyException(
     case 'day_unavailable':
       return [];
     case 'replacement_windows':
-      return (exception.intervals ?? []).map(({ start, end }) => ({ start, end }));
+      return rangesDoNotOverlap(exception.intervals ?? [])
+        ? (exception.intervals ?? []).map(({ start, end }) => ({ start, end: minTime(end, ceilingForDay(weekday)) })).filter((range) => range.end > range.start)
+        : [];
     case 'busy_interval': {
       const busyRanges = (exception.intervals ?? []).map((interval) => wallRange(localDate, interval));
       return busyRanges
@@ -103,6 +105,10 @@ function applyException(
         .filter(isCandidateStudyWindow);
     }
   }
+}
+
+function minTime(value: string, ceiling: string | undefined): string {
+  return ceiling && value > ceiling ? ceiling : value;
 }
 
 function applyCalendarOverlay(ranges: TimeRange[], events: AvailabilityCalendarEvent[], localDate: string): TimeRange[] {

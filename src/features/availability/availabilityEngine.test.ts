@@ -201,4 +201,33 @@ describe('resolveEffectiveStudyAvailability', () => {
 
     expect(schedule).toEqual(before);
   });
+
+  it('fails closed for recurring windows overlapping protected time or exceeding 20:30', () => {
+    const unsafe = structuredClone(schedule);
+    unsafe.days.monday = [
+      { id: 'class', label: 'Aula', kind: 'class', start: '14:00', end: '15:00' },
+      { id: 'study', label: 'Estudo', kind: 'study_window', start: '14:40', end: '21:00' },
+    ];
+
+    const result = resolveEffectiveStudyAvailability(unsafe, undefined, { status: 'connected', events: [] }, localDate);
+    expect(result.intervals).toEqual([]);
+    expect(result.totalMinutes).toBe(0);
+  });
+
+  it('caps replacement windows at the Monday-Saturday 20:30 ceiling', () => {
+    const result = resolveEffectiveStudyAvailability(schedule, exception({
+      operation: 'replacement_windows',
+      intervals: [{ start: '19:30', end: '21:30' }],
+    }), { status: 'connected', events: [] }, localDate);
+
+    expect(result.intervals).toHaveLength(1);
+    expect(result.intervals[0].end).toBe('2026-08-24T20:20:00-03:00');
+  });
+
+  it('fails closed for overlapping replacement windows', () => {
+    const result = resolveEffectiveStudyAvailability(schedule, exception({ operation: 'replacement_windows', intervals: [
+      { start: '14:40', end: '16:00' }, { start: '15:30', end: '17:00' },
+    ] }), { status: 'connected', events: [] }, localDate);
+    expect(result.intervals).toEqual([]);
+  });
 });

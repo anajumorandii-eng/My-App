@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { CalendarDays, Clock3, Save } from 'lucide-react';
 import { useDailyStudyAvailability } from './useDailyStudyAvailability';
+import { entriesAreSafe } from './scheduleSafety';
 import {
   SAO_PAULO_TIME_ZONE,
   type ScheduleEntry,
@@ -83,6 +84,16 @@ export default function AgendaView() {
     setEditedEntryIds((current) => new Set(current).add(entryId));
   };
 
+  const addStudyWindow = (day: Weekday) => setDraftSchedule((current) => current && ({
+    ...current,
+    days: { ...current.days, [day]: [...current.days[day], { id: `${day}-study`, label: 'Estudo autônomo', kind: 'study_window', start: '14:40', end: day === 'sunday' ? '15:30' : '20:30' }] },
+  }));
+
+  const removeStudyWindow = (day: Weekday, entryId: string) => setDraftSchedule((current) => current && ({
+    ...current,
+    days: { ...current.days, [day]: current.days[day].filter((entry) => entry.id !== entryId) },
+  }));
+
   const saveWeeklySchedule = async () => {
     if (!draftSchedule) return;
     const invalidWindow = WEEKDAYS
@@ -90,6 +101,10 @@ export default function AgendaView() {
       .find((entry) => entry.kind === 'study_window' && entry.end <= entry.start);
     if (invalidWindow) {
       setScheduleSaveError('O fim precisa ser posterior ao início da janela de estudo.');
+      return;
+    }
+    if (WEEKDAYS.some(({ key }) => !entriesAreSafe(key, draftSchedule.days[key]))) {
+      setScheduleSaveError('Janelas de estudo não podem sobrepor períodos protegidos nem passar de 20:30 de segunda a sábado.');
       return;
     }
     const confirmedSchedule: WeeklySchedule = {
@@ -126,6 +141,7 @@ export default function AgendaView() {
   };
 
   const updateException = <Field extends keyof ExceptionForm>(field: Field, value: ExceptionForm[Field]) => {
+    if (field === 'localDate' && !/^\d{4}-\d{2}-\d{2}$/.test(value as string)) return;
     setExceptionForm((current) => ({ ...current, [field]: value }));
     if (field === 'localDate') setLocalDate(value as string);
   };
@@ -154,6 +170,8 @@ export default function AgendaView() {
               label={label}
               entries={draftSchedule?.days[key] ?? []}
               onChange={(entryId, field, value) => updateStudyWindow(key, entryId, field, value)}
+              onAdd={() => addStudyWindow(key)}
+              onRemove={(entryId) => removeStudyWindow(key, entryId)}
             />
           ))}
         </div>
@@ -197,7 +215,7 @@ export default function AgendaView() {
           <div><h2 id="disponibilidade-efetiva" className="text-xl font-semibold">Disponibilidade efetiva</h2><p className="text-sm text-zinc-500">Para {localDate}</p></div>
           <strong className="text-indigo-600 dark:text-indigo-400">{availability?.totalMinutes ?? 0} min</strong>
         </div>
-        <p role="status" className="text-sm text-zinc-600 dark:text-zinc-400">Calendar: {availability?.status === 'degraded' ? 'disponibilidade degradada' : availability?.status === 'ready' ? 'agenda aplicada' : 'sem blocos disponíveis'}</p>
+        <p role="status" className="text-sm text-zinc-600 dark:text-zinc-400">Calendar: {availability?.warnings.some(({ code }) => code === 'calendar-disconnected') ? 'desconectado' : availability?.status === 'degraded' ? 'falha na consulta' : availability?.status === 'ready' ? 'exceções aplicadas' : 'sem blocos disponíveis'}</p>
         {syncError && <p role="alert" className="text-sm text-amber-700">{syncError}</p>}
         {availability?.warnings.map((warning) => <p key={warning.code} role="status" className="text-sm text-amber-700 dark:text-amber-300">{warning.message}</p>)}
         <ul aria-label="Blocos disponíveis" className="flex flex-wrap gap-2">
@@ -217,8 +235,8 @@ function Field({ label, children }: { label: string; children: React.ReactNode }
   return <label className="block text-sm font-medium text-zinc-700 dark:text-zinc-300">{label}<span className="mt-1 block">{children}</span></label>;
 }
 
-function WeekdayCard({ label, entries, onChange }: { label: string; entries: ScheduleEntry[]; onChange: (entryId: string, field: 'start' | 'end', value: string) => void }) {
+function WeekdayCard({ label, entries, onChange, onAdd, onRemove }: { label: string; entries: ScheduleEntry[]; onChange: (entryId: string, field: 'start' | 'end', value: string) => void; onAdd: () => void; onRemove: (entryId: string) => void }) {
   const studyEntries = entries.filter((entry) => entry.kind === 'study_window');
   const protectedEntries = entries.filter((entry) => entry.kind !== 'study_window');
-  return <article className="rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-3 space-y-3"><h3 className="font-semibold">{label}</h3><ul className="text-sm text-zinc-500 space-y-1">{protectedEntries.map((entry) => <li key={entry.id}>{entry.label}: {entry.start}–{entry.end}{entry.isEstimate && <span className="ml-2 text-amber-700 dark:text-amber-300">Estimativa editável</span>}</li>)}</ul>{studyEntries.map((entry) => <div key={entry.id} className="grid grid-cols-2 gap-2"><Field label={`Início de ${label.toLowerCase()}`}><input aria-label={`Início de ${label.toLowerCase()}`} type="time" value={entry.start} onChange={(event) => onChange(entry.id, 'start', event.target.value)} className="field" /></Field><Field label={`Fim de ${label.toLowerCase()}`}><input aria-label={`Fim de ${label.toLowerCase()}`} type="time" value={entry.end} onChange={(event) => onChange(entry.id, 'end', event.target.value)} className="field" /></Field>{entry.isEstimate && <p className="col-span-2 text-xs text-amber-700 dark:text-amber-300">Estimativa editável</p>}</div>)}</article>;
+  return <article className="rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-3 space-y-3"><h3 className="font-semibold">{label}</h3><ul className="text-sm text-zinc-500 space-y-1">{protectedEntries.map((entry) => <li key={entry.id}>{entry.label}: {entry.start}–{entry.end}{entry.isEstimate && <span className="ml-2 text-amber-700 dark:text-amber-300">Estimativa editável</span>}</li>)}</ul>{studyEntries.map((entry) => <div key={entry.id} className="grid grid-cols-2 gap-2"><Field label={`Início de ${label.toLowerCase()}`}><input aria-label={`Início de ${label.toLowerCase()}`} type="time" value={entry.start} onChange={(event) => onChange(entry.id, 'start', event.target.value)} className="field" /></Field><Field label={`Fim de ${label.toLowerCase()}`}><input aria-label={`Fim de ${label.toLowerCase()}`} type="time" value={entry.end} onChange={(event) => onChange(entry.id, 'end', event.target.value)} className="field" /></Field>{entry.isEstimate && <p className="col-span-2 text-xs text-amber-700 dark:text-amber-300">Estimativa editável</p>}<button type="button" onClick={() => onRemove(entry.id)} className="col-span-2 text-sm text-red-700">Remover janela</button></div>)}{studyEntries.length === 0 && <button type="button" onClick={onAdd} className="text-sm text-indigo-700">Adicionar janela</button>}</article>;
 }

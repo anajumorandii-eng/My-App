@@ -45,5 +45,5 @@ export function allocateStudyActions(
     cursor.cursor = intervalEnd;
   }
 
-  return allocated;
+  return allocated.sort((left, right) => new Date(left.intervalStart).getTime() - new Date(right.intervalStart).getTime());
 }

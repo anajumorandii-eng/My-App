@@ -1,6 +1,7 @@
 import { deleteDoc, doc, getDoc, runTransaction, setDoc } from 'firebase/firestore';
 import { db } from '../../lib/firestore';
 import { createInitialWeeklySchedule } from './weeklyScheduleSeed';
+import { ceilingForDay, entriesAreSafe, rangesDoNotOverlap } from './scheduleSafety';
 import {
   SAO_PAULO_TIME_ZONE,
   type ScheduleEntry,
@@ -92,7 +93,7 @@ function isWeeklySchedule(value: unknown): value is WeeklySchedule {
     return false;
   }
   if (!isBlockPolicy(value.blockPolicy) || !isRecord(value.days) || !hasOnlyWeekdays(value.days)) return false;
-  return WEEKDAYS.every((day) => Array.isArray(value.days[day]) && value.days[day].every(isScheduleEntry));
+  return WEEKDAYS.every((day) => Array.isArray(value.days[day]) && value.days[day].every(isScheduleEntry) && entriesAreSafe(day, value.days[day]));
 }
 
 function isBlockPolicy(value: unknown): value is WeeklySchedule['blockPolicy'] {
@@ -137,8 +138,15 @@ function isScheduleException(value: unknown): value is ScheduleException {
     case 'day_unavailable':
       return value.intervals === undefined && value.departureTime === undefined;
     case 'busy_interval':
-    case 'replacement_windows':
       return intervalsAreValid && value.departureTime === undefined;
+    case 'replacement_windows': {
+      if (!intervalsAreValid || value.departureTime !== undefined) return false;
+      const date = new Date(`${value.localDate}T12:00:00Z`);
+      const weekday = WEEKDAYS[date.getUTCDay() === 0 ? 6 : date.getUTCDay() - 1];
+      const ceiling = ceilingForDay(weekday);
+      const intervals = value.intervals as Array<{ start: string; end: string }>;
+      return rangesDoNotOverlap(intervals) && (!ceiling || intervals.every((interval) => interval.end <= ceiling));
+    }
     case 'early_departure':
       return value.intervals === undefined && isTime(value.departureTime);
   }

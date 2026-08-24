@@ -204,6 +204,13 @@ describe('useDailyStudyAvailability', () => {
     expect(repository.deleteScheduleException).not.toHaveBeenCalled();
   });
 
+  it('settles safely for a cleared native date while signed out', async () => {
+    const { result } = renderHook(() => useDailyStudyAvailability(''));
+    await waitFor(() => expect(result.current.loading).toBe(false));
+    expect(result.current.availability).toMatchObject({ status: 'degraded', intervals: [], totalMinutes: 0 });
+    expect(result.current.schedule).toBeUndefined();
+  });
+
   it('persists authenticated schedule and exception mutations for the active user', async () => {
     auth.state = { user: { uid: 'user-1' }, isConnected: false };
     const { result } = renderHook(() => useDailyStudyAvailability(LOCAL_DATE));

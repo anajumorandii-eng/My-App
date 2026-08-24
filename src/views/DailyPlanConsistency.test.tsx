@@ -20,11 +20,11 @@ const availability: DailyStudyAvailability = {
   localDate: LOCAL_DATE,
   timeZone: 'America/Sao_Paulo',
   intervals: [
-    { start: '2026-08-24T14:40:00.000Z', end: '2026-08-24T15:30:00.000Z', durationMinutes: 50 },
-    { start: '2026-08-24T15:40:00.000Z', end: '2026-08-24T16:30:00.000Z', durationMinutes: 50 },
-    { start: '2026-08-24T17:00:00.000Z', end: '2026-08-24T17:50:00.000Z', durationMinutes: 50 },
-    { start: '2026-08-24T18:00:00.000Z', end: '2026-08-24T18:50:00.000Z', durationMinutes: 50 },
-    { start: '2026-08-24T19:00:00.000Z', end: '2026-08-24T19:50:00.000Z', durationMinutes: 50 },
+    { start: '2026-08-24T14:40:00-03:00', end: '2026-08-24T15:30:00-03:00', durationMinutes: 50 },
+    { start: '2026-08-24T15:40:00-03:00', end: '2026-08-24T16:30:00-03:00', durationMinutes: 50 },
+    { start: '2026-08-24T17:00:00-03:00', end: '2026-08-24T17:50:00-03:00', durationMinutes: 50 },
+    { start: '2026-08-24T18:00:00-03:00', end: '2026-08-24T18:50:00-03:00', durationMinutes: 50 },
+    { start: '2026-08-24T19:00:00-03:00', end: '2026-08-24T19:50:00-03:00', durationMinutes: 50 },
   ],
   totalMinutes: 250,
   status: 'degraded',
@@ -43,8 +43,8 @@ const allocatedActions: AllocatedStudyAction[] = [
     subject: 'Biologia',
     estimatedMinutes: 45,
     priorityScore: 100,
-    intervalStart: '2026-08-24T14:40:00.000Z',
-    intervalEnd: '2026-08-24T15:00:00.000Z',
+    intervalStart: '2026-08-24T14:40:00-03:00',
+    intervalEnd: '2026-08-24T15:00:00-03:00',
     allocatedMinutes: 20,
   },
   {
@@ -55,8 +55,8 @@ const allocatedActions: AllocatedStudyAction[] = [
     subject: 'Matemática',
     estimatedMinutes: 45,
     priorityScore: 90,
-    intervalStart: '2026-08-24T15:40:00.000Z',
-    intervalEnd: '2026-08-24T16:25:00.000Z',
+    intervalStart: '2026-08-24T15:40:00-03:00',
+    intervalEnd: '2026-08-24T16:25:00-03:00',
     allocatedMinutes: 45,
   },
   {
@@ -67,8 +67,8 @@ const allocatedActions: AllocatedStudyAction[] = [
     subject: 'Física',
     estimatedMinutes: 15,
     priorityScore: 80,
-    intervalStart: '2026-08-24T17:00:00.000Z',
-    intervalEnd: '2026-08-24T17:15:00.000Z',
+    intervalStart: '2026-08-24T17:00:00-03:00',
+    intervalEnd: '2026-08-24T17:15:00-03:00',
     allocatedMinutes: 15,
   },
   {
@@ -79,8 +79,8 @@ const allocatedActions: AllocatedStudyAction[] = [
     subject: 'Química',
     estimatedMinutes: 30,
     priorityScore: 70,
-    intervalStart: '2026-08-24T18:00:00.000Z',
-    intervalEnd: '2026-08-24T18:30:00.000Z',
+    intervalStart: '2026-08-24T18:00:00-03:00',
+    intervalEnd: '2026-08-24T18:30:00-03:00',
     allocatedMinutes: 30,
   },
   {
@@ -91,8 +91,8 @@ const allocatedActions: AllocatedStudyAction[] = [
     subject: 'Biologia',
     estimatedMinutes: 20,
     priorityScore: 60,
-    intervalStart: '2026-08-24T19:00:00.000Z',
-    intervalEnd: '2026-08-24T19:20:00.000Z',
+    intervalStart: '2026-08-24T19:00:00-03:00',
+    intervalEnd: '2026-08-24T19:20:00-03:00',
     allocatedMinutes: 20,
   },
 ];
@@ -165,11 +165,12 @@ describe('daily plan consistency across views', () => {
     ['Plano', Plano],
     ['Sessão', Sessao],
   ])('%s shows the shared effective minutes, first action, and scheduled start', (_name, View) => {
+    expect(allocatedActions.every((action, index) => index === 0 || action.intervalStart >= allocatedActions[index - 1].intervalStart)).toBe(true);
     render(<View />);
 
     expect(screen.getByText('250 min')).toBeInTheDocument();
     expect(screen.getAllByText(FIRST_TOPIC).length).toBeGreaterThan(0);
-    expect(screen.getAllByText(/11:40/).length).toBeGreaterThan(0);
+    expect(screen.getAllByText(/14:40/).length).toBeGreaterThan(0);
   });
 
   it('Plano removes manual and Calendar-primary controls while retaining warnings and unallocated priorities', () => {
@@ -193,13 +194,13 @@ describe('daily plan consistency across views', () => {
         ...allocatedActions[0],
         estimatedMinutes: 45,
         allocatedMinutes: 20,
-        intervalEnd: '2026-08-24T14:55:00.000Z',
+        intervalEnd: '2026-08-24T15:00:00-03:00',
       }],
     };
 
     render(<Sessao />);
 
-    expect(screen.getByText('15:00')).toBeInTheDocument();
+    expect(screen.getAllByText((_content, element) => element?.textContent?.includes('14:40–15:00') ?? false).length).toBeGreaterThan(0);
   });
 
   it('Sessão selects the first allocated action when the loaded daily plan arrives', () => {
