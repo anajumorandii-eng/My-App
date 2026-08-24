@@ -121,6 +121,22 @@ describe('useDailyStudyAvailability', () => {
     expect(fetch).not.toHaveBeenCalled();
   });
 
+  it('treats an authenticated reload without a cached Google token as Calendar disconnected', async () => {
+    auth.state = { user: { uid: 'user-1' }, isConnected: true };
+    accessToken.mockResolvedValue(null);
+
+    const { result } = renderHook(() => useDailyStudyAvailability(LOCAL_DATE));
+    await waitFor(() => expect(result.current.loading).toBe(false));
+
+    expect(result.current.availability).toMatchObject({
+      status: 'ready',
+      warnings: [{ code: 'calendar-disconnected' }],
+    });
+    expect(result.current.availability?.intervals[0]).toMatchObject({ durationMinutes: 50 });
+    expect(result.current.syncError).toBeNull();
+    expect(fetch).not.toHaveBeenCalled();
+  });
+
   it('distinguishes a successful connected Calendar response with no events', async () => {
     auth.state = { user: { uid: 'user-1' }, isConnected: true };
 

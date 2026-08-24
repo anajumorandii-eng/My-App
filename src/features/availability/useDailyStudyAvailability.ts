@@ -161,7 +161,7 @@ async function loadCalendarOverlay(localDate: string, isConnected: boolean): Pro
 
   try {
     const token = await getAccessToken();
-    if (!token) throw new Error('No Google access token available');
+    if (!token) return { status: 'disconnected' };
     const response = await fetch(`/api/calendar/events?date=${encodeURIComponent(localDate)}`, {
       headers: { Authorization: `Bearer ${token}` },
     });
