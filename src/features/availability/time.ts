@@ -27,3 +27,12 @@ export function isoToLocalDate(iso: string): string {
   const day = String(date.getDate()).padStart(2, '0');
   return `${year}-${month}-${day}`;
 }
+
+export function todayInSaoPaulo(now: Date = new Date()): string {
+  return isoToLocalDate(now.toISOString());
+}
+
+export function formatIsoTimeInSaoPaulo(iso: string): string {
+  const date = new TZDate(iso, SAO_PAULO_TIME_ZONE);
+  return `${String(date.getHours()).padStart(2, '0')}:${String(date.getMinutes()).padStart(2, '0')}`;
+}

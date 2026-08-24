@@ -1,5 +1,4 @@
 import { TopicMastery, Topic, UserProfile, StudyAction } from '../types';
-import { fitActionsToMinuteBudget } from './studyActionAllocator';
 
 export class EfficiencyEngine {
   /**
@@ -77,17 +76,4 @@ export class EfficiencyEngine {
     return actions;
   }
 
-  /**
-   * @deprecated Consumers should use rankStudyActions and allocateStudyActions.
-   * Kept temporarily so existing views compile until they migrate to useDailyPlan.
-   */
-  public static generateDailyPlan(
-    masteryData: TopicMastery[],
-    topics: Topic[],
-    profile: UserProfile,
-    legacyAvailableMinutesToday: number,
-  ): StudyAction[] {
-    const prioritizedActions = this.rankStudyActions(masteryData, topics, profile);
-    return fitActionsToMinuteBudget(prioritizedActions, legacyAvailableMinutesToday);
-  }
 }

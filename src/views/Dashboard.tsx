@@ -1,23 +1,16 @@
-import React, { useMemo } from 'react';
-import { EfficiencyEngine } from '../lib/efficiencyEngine';
-import { mockTopics } from '../data/mockData';
-import { useUserMastery } from '../hooks/useUserMastery';
+import React from 'react';
+import { AlertCircle, Brain, CloudOff, PlayCircle, Target } from 'lucide-react';
+import { formatIsoTimeInSaoPaulo, todayInSaoPaulo } from '../features/availability/time';
+import { useDailyPlan } from '../hooks/useDailyPlan';
 import { useUserProfile } from '../hooks/useUserProfile';
-import { useAvailableMinutes } from '../hooks/useAvailableMinutes';
-import { PlayCircle, Target, Brain, AlertCircle, CloudOff } from 'lucide-react';
 
 export default function Dashboard() {
-  const { mastery, isPersisted } = useUserMastery();
   const { profile } = useUserProfile();
-  const { minutes: availableMinutes, usingAuto } = useAvailableMinutes();
-
-  const dailyPlan = useMemo(() => {
-    return EfficiencyEngine.generateDailyPlan(mastery, mockTopics, profile, availableMinutes);
-  }, [mastery, profile, availableMinutes]);
+  const { availability, allocatedActions, isPersisted } = useDailyPlan(todayInSaoPaulo());
+  const effectiveMinutes = availability?.totalMinutes ?? 0;
 
   return (
     <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
-      
       <header>
         <h1 className="text-3xl font-bold tracking-tight mb-2">Hoje</h1>
         <p className="text-zinc-500 dark:text-zinc-400">
@@ -26,7 +19,7 @@ export default function Dashboard() {
         {!isPersisted && (
           <p className="flex items-center text-xs text-zinc-400 mt-2">
             <CloudOff className="w-3.5 h-3.5 mr-1.5" />
-            Modo demonstração — conecte sua conta Google em "Conexões Google" para salvar seu progresso de verdade.
+            Modo demonstração — conecte sua conta Google em &quot;Conexões Google&quot; para salvar seu progresso de verdade.
           </p>
         )}
       </header>
@@ -37,12 +30,10 @@ export default function Dashboard() {
             <Target className="w-5 h-5 mr-2" />
             <h3 className="font-medium">Tempo de Estudo</h3>
           </div>
-          <p className="text-3xl font-bold">{availableMinutes}<span className="text-lg font-normal text-zinc-500 ml-1">min</span></p>
-          <p className="text-sm text-zinc-500 mt-1">
-            {usingAuto ? 'Calculado a partir da sua agenda do Google' : 'Meta diária ajustada à energia (Média)'}
-          </p>
+          <p className="text-3xl font-bold">{effectiveMinutes} min</p>
+          <p className="text-sm text-zinc-500 mt-1">Calculado pela sua agenda semanal</p>
         </div>
-        
+
         <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 shadow-sm">
           <div className="flex items-center text-emerald-600 dark:text-emerald-400 mb-4">
             <Brain className="w-5 h-5 mr-2" />
@@ -57,7 +48,7 @@ export default function Dashboard() {
             <AlertCircle className="w-5 h-5 mr-2" />
             <h3 className="font-medium">Prioridade Máxima</h3>
           </div>
-          <p className="text-xl font-bold truncate">{dailyPlan.length > 0 ? dailyPlan[0].topicName : 'Tudo em dia'}</p>
+          <p className="text-xl font-bold truncate">{allocatedActions[0]?.topicName ?? 'Tudo em dia'}</p>
           <p className="text-sm text-zinc-500 mt-1">Revisão e Prática</p>
         </div>
       </div>
@@ -65,8 +56,8 @@ export default function Dashboard() {
       <section>
         <h2 className="text-xl font-semibold mb-4">Ações Recomendadas</h2>
         <div className="space-y-4">
-          {dailyPlan.map((action, index) => (
-            <div 
+          {allocatedActions.map((action, index) => (
+            <div
               key={action.id}
               className="group bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-5 shadow-sm hover:border-indigo-300 dark:hover:border-indigo-700 transition-all flex items-center justify-between"
             >
@@ -81,7 +72,9 @@ export default function Dashboard() {
                     <span>•</span>
                     <span>{action.subject}</span>
                     <span>•</span>
-                    <span className="text-indigo-600 dark:text-indigo-400 font-medium">{action.estimatedMinutes} min</span>
+                    <span>{formatIsoTimeInSaoPaulo(action.intervalStart)}–{formatIsoTimeInSaoPaulo(action.intervalEnd)}</span>
+                    <span>•</span>
+                    <span className="text-indigo-600 dark:text-indigo-400 font-medium">{action.allocatedMinutes} min</span>
                   </div>
                 </div>
               </div>
@@ -92,7 +85,7 @@ export default function Dashboard() {
             </div>
           ))}
 
-          {dailyPlan.length === 0 && (
+          {allocatedActions.length === 0 && (
             <div className="text-center py-12 bg-zinc-50 dark:bg-zinc-900/50 rounded-xl border border-dashed border-zinc-200 dark:border-zinc-800">
               <p className="text-zinc-500">Sem metas para hoje. Descanse.</p>
             </div>
