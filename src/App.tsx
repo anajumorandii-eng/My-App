@@ -26,6 +26,7 @@ import Redacao from './views/Redacao';
 import Treino2aFase from './views/Treino2aFase';
 import Recuperacao from './views/Recuperacao';
 import Diagnostico from './views/Diagnostico';
+import AgendaView from './features/availability/AgendaView';
 
 export default function App() {
   return (
@@ -35,6 +36,7 @@ export default function App() {
           <Route path="/" element={<Layout />}>
             <Route index element={<Dashboard />} />
             <Route path="plano" element={<Plano />} />
+            <Route path="agenda" element={<AgendaView />} />
             <Route path="sessao" element={<Sessao />} />
             <Route path="questoes" element={<Questoes />} />
             <Route path="revisoes" element={<Revisoes />} />
