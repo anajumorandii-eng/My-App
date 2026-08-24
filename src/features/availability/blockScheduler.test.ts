@@ -16,6 +16,12 @@ describe('scheduleStudyBlocks', () => {
     expect(scheduleStudyBlocks('2026-08-24', [{ start: '18:00', end: '18:49' }], policy)).toEqual([]);
   });
 
+  it('rejects a policy that changes the required 50-minute block length', () => {
+    const invalidPolicy = { ...policy, blockMinutes: 25 } as unknown as typeof policy;
+    expect(() => scheduleStudyBlocks('2026-08-24', [{ start: '14:40', end: '16:00' }], invalidPolicy))
+      .toThrow('Block duration must be 50 minutes');
+  });
+
   it('restarts placement after an interruption-created segment', () => {
     const result = scheduleStudyBlocks('2026-08-24', [
       { start: '14:40', end: '16:00' },

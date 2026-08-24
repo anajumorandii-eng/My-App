@@ -5,7 +5,10 @@ import { SAO_PAULO_TIME_ZONE, type StudyInterval, type WeeklySchedule } from './
 export type CandidateStudyWindow = { start: string; end: string };
 
 type BlockPolicy = {
-  [Key in keyof WeeklySchedule['blockPolicy']]: number;
+  blockMinutes: WeeklySchedule['blockPolicy']['blockMinutes'];
+  shortBreakMinutes: number;
+  longBreakMinutes: number;
+  blocksBeforeLongBreak: number;
 };
 
 export function scheduleStudyBlocks(
@@ -13,6 +16,10 @@ export function scheduleStudyBlocks(
   windows: CandidateStudyWindow[],
   policy: BlockPolicy,
 ): StudyInterval[] {
+  if (policy.blockMinutes !== 50) {
+    throw new Error('Block duration must be 50 minutes');
+  }
+
   const segments = windows
     .map((window) => {
       const start = localDateTimeToDate(localDate, window.start);
