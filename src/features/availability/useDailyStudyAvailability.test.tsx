@@ -188,10 +188,12 @@ describe('useDailyStudyAvailability', () => {
     const editedSchedule = { ...result.current.schedule!, updatedAt: '2026-08-24T15:30:00.000Z' };
     const exception = storedException();
 
+    let scheduleSaved: boolean | undefined;
     await act(async () => {
-      await result.current.saveSchedule(editedSchedule);
+      scheduleSaved = await result.current.saveSchedule(editedSchedule);
       await result.current.saveException(exception);
     });
+    expect(scheduleSaved).toBe(true);
     expect(result.current.schedule).toEqual(editedSchedule);
     expect(result.current.exception).toEqual(exception);
     expect(repository.saveWeeklySchedule).not.toHaveBeenCalled();
@@ -218,5 +220,28 @@ describe('useDailyStudyAvailability', () => {
     expect(repository.saveWeeklySchedule).toHaveBeenCalledWith('user-1', editedSchedule);
     expect(repository.saveScheduleException).toHaveBeenCalledWith('user-1', exception);
     expect(repository.deleteScheduleException).toHaveBeenCalledWith('user-1', LOCAL_DATE);
+  });
+
+  it('reports a failed weekly persistence without confirming the in-memory schedule', async () => {
+    auth.state = { user: { uid: 'user-1' }, isConnected: false };
+    const originalSchedule = storedSchedule();
+    const editedSchedule = {
+      ...originalSchedule,
+      days: { ...originalSchedule.days, monday: [{ ...originalSchedule.days.monday[0], start: '15:30' }] },
+    };
+    repository.getOrCreateWeeklySchedule.mockResolvedValue(originalSchedule);
+    repository.saveWeeklySchedule.mockRejectedValue(new Error('Firestore unavailable'));
+
+    const { result } = renderHook(() => useDailyStudyAvailability(LOCAL_DATE));
+    await waitFor(() => expect(result.current.loading).toBe(false));
+
+    let saved: boolean | undefined;
+    await act(async () => {
+      saved = await result.current.saveSchedule(editedSchedule);
+    });
+
+    expect(saved).toBe(false);
+    expect(result.current.schedule).toEqual(originalSchedule);
+    expect(result.current.syncError).toMatch(/N\u00e3o foi poss\u00edvel salvar essa altera\u00e7\u00e3o/i);
   });
 });

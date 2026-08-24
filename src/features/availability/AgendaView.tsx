@@ -59,6 +59,7 @@ export default function AgendaView() {
   const { availability, schedule, exception, loading, syncError, saveSchedule, saveException, deleteException } = useDailyStudyAvailability(localDate);
   const [draftSchedule, setDraftSchedule] = useState<WeeklySchedule>();
   const [editedEntryIds, setEditedEntryIds] = useState<Set<string>>(new Set());
+  const [scheduleSaveError, setScheduleSaveError] = useState<string | null>(null);
   const [exceptionForm, setExceptionForm] = useState<ExceptionForm>(() => newExceptionForm(localDate));
 
   useEffect(() => {
@@ -71,6 +72,7 @@ export default function AgendaView() {
   }, [exception, localDate]);
 
   const updateStudyWindow = (day: Weekday, entryId: string, field: 'start' | 'end', value: string) => {
+    setScheduleSaveError(null);
     setDraftSchedule((current) => current && {
       ...current,
       days: {
@@ -83,6 +85,13 @@ export default function AgendaView() {
 
   const saveWeeklySchedule = async () => {
     if (!draftSchedule) return;
+    const invalidWindow = WEEKDAYS
+      .flatMap(({ key }) => draftSchedule.days[key])
+      .find((entry) => entry.kind === 'study_window' && entry.end <= entry.start);
+    if (invalidWindow) {
+      setScheduleSaveError('O fim precisa ser posterior ao início da janela de estudo.');
+      return;
+    }
     const confirmedSchedule: WeeklySchedule = {
       ...draftSchedule,
       days: Object.fromEntries(WEEKDAYS.map(({ key }) => [
@@ -91,7 +100,11 @@ export default function AgendaView() {
       ])) as WeeklySchedule['days'],
       updatedAt: new Date().toISOString(),
     };
-    await saveSchedule(confirmedSchedule);
+    const saved = await saveSchedule(confirmedSchedule);
+    if (!saved) {
+      setScheduleSaveError('Não foi possível salvar a semana. Revise os horários e tente novamente.');
+      return;
+    }
     setDraftSchedule(confirmedSchedule);
     setEditedEntryIds(new Set());
   };
@@ -146,6 +159,7 @@ export default function AgendaView() {
         <button type="button" onClick={() => void saveWeeklySchedule()} disabled={!draftSchedule} className="inline-flex items-center px-4 py-2 rounded-lg bg-indigo-600 text-white text-sm font-medium disabled:opacity-50">
           <Save className="w-4 h-4 mr-2" /> Salvar semana
         </button>
+        {scheduleSaveError && <p role="alert" className="text-sm text-red-700 dark:text-red-300">{scheduleSaveError}</p>}
       </section>
 
       <section aria-labelledby="excecao-data" className="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-4 space-y-4">

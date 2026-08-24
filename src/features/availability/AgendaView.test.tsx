@@ -1,4 +1,4 @@
-import { cleanup, fireEvent, render, screen } from '@testing-library/react';
+import { act, cleanup, fireEvent, render, screen, within } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import type { ReactNode } from 'react';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
@@ -50,7 +50,7 @@ describe('AgendaView', () => {
     vi.useFakeTimers();
     vi.setSystemTime(new Date('2026-08-24T15:00:00.000Z'));
     availabilityState.schedule = createInitialWeeklySchedule('2026-08-24T15:00:00.000Z');
-    availabilityState.saveSchedule.mockReset().mockResolvedValue(undefined);
+    availabilityState.saveSchedule.mockReset().mockResolvedValue(true);
     availabilityState.saveException.mockReset().mockResolvedValue(undefined);
   });
 
@@ -78,6 +78,36 @@ describe('AgendaView', () => {
     const confirmedThursdayStudy = savedSchedule.days.thursday.find((entry) => entry.id === 'thu-study');
     expect(confirmedThursdayStudy).toMatchObject({ id: 'thu-study', start: '17:40' });
     expect(confirmedThursdayStudy).not.toHaveProperty('isEstimate');
+  });
+
+  it('keeps an estimated edit open and explains invalid weekly time ordering', async () => {
+    render(<AgendaView />);
+
+    fireEvent.change(screen.getByLabelText('Fim de quinta-feira'), { target: { value: '17:30' } });
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', { name: 'Salvar semana' }));
+    });
+
+    expect(availabilityState.saveSchedule).not.toHaveBeenCalled();
+    expect(screen.getByRole('alert')).toHaveTextContent(/fim precisa ser posterior ao in\u00edcio/i);
+    const thursdayCard = screen.getByRole('heading', { name: 'Quinta-feira' }).closest('article')!;
+    expect(within(thursdayCard).getByText(/Estimativa edit\u00e1vel/i)).toBeInTheDocument();
+    expect(screen.getByLabelText('Fim de quinta-feira')).toHaveValue('17:30');
+  });
+
+  it('keeps an estimated edit open when the weekly save reports failure', async () => {
+    availabilityState.saveSchedule.mockResolvedValue(false);
+    render(<AgendaView />);
+
+    fireEvent.change(screen.getByLabelText('In\u00edcio de quinta-feira'), { target: { value: '17:40' } });
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', { name: 'Salvar semana' }));
+    });
+
+    expect(screen.getByRole('alert')).toHaveTextContent(/n\u00e3o foi poss\u00edvel salvar a semana/i);
+    const thursdayCard = screen.getByRole('heading', { name: 'Quinta-feira' }).closest('article')!;
+    expect(within(thursdayCard).getByText(/Estimativa edit\u00e1vel/i)).toBeInTheDocument();
+    expect(screen.getByLabelText('In\u00edcio de quinta-feira')).toHaveValue('17:40');
   });
 
   it('saves a date-only early departure without changing the weekly schedule', () => {

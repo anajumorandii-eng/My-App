@@ -29,7 +29,7 @@ export interface DailyStudyAvailabilityState {
   exception: ScheduleException | undefined;
   loading: boolean;
   syncError: string | null;
-  saveSchedule: (schedule: WeeklySchedule) => Promise<void>;
+  saveSchedule: (schedule: WeeklySchedule) => Promise<boolean>;
   saveException: (exception: ScheduleException) => Promise<void>;
   deleteException: () => Promise<void>;
 }
@@ -119,8 +119,10 @@ export function useDailyStudyAvailability(localDate: string): DailyStudyAvailabi
       if (user) await saveWeeklySchedule(user.uid, nextSchedule);
       updateResolvedState(nextSchedule, exceptionRef.current);
       setSyncError(calendarRef.current.status === 'failed' ? calendarRef.current.warning : null);
+      return true;
     } catch {
       setSyncError(SAVE_WARNING);
+      return false;
     }
   }, [updateResolvedState, user]);
 
