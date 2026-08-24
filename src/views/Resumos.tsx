@@ -18,7 +18,11 @@ export default function Resumos() {
   const requestedSummaryId = searchParams.get('summary');
   const requestedQuestionId = searchParams.get('question');
   const [selectedId, setSelectedId] = useState<string | null>(requestedSummaryId);
-  const [query, setQuery] = useState(''); const [subject, setSubject] = useState(''); const [board, setBoard] = useState(''); const [phase, setPhase] = useState(''); const [status, setStatus] = useState<StudyStatus | ''>('');
+  const [query, setQuery] = useState('');
+  const [subject, setSubject] = useState(() => searchParams.get('subject') ?? '');
+  const [board, setBoard] = useState(() => searchParams.get('board') ?? '');
+  const [phase, setPhase] = useState(() => searchParams.get('phase') ?? '');
+  const [status, setStatus] = useState<StudyStatus | ''>('');
   const [mode, setMode] = useState<SummaryDepth>(() => (localStorage.getItem('juju_summary_mode') as SummaryDepth) || 'rapida');
   const [expanded, setExpanded] = useState<string[]>([]); const [drafts, setDrafts] = useState<Record<string, string>>({}); const [feedbackId, setFeedbackId] = useState<string | null>(null);
   useEffect(() => { localStorage.setItem('juju_summary_mode', mode); }, [mode]);

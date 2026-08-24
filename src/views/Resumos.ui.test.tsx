@@ -34,6 +34,15 @@ describe('restauração do contexto do resumo', () => {
     expect(screen.getByRole('heading', { name: /Calor, temperatura/ })).toBeInTheDocument();
   });
 
+  it('restaura filtros acionáveis do Painel de Evolução pela URL', () => {
+    render(<MemoryRouter initialEntries={['/resumos?subject=Geografia&board=Unesp%2FVunesp&phase=segunda']}><Resumos/></MemoryRouter>);
+    expect(screen.getByLabelText('Filtrar por disciplina')).toHaveValue('Geografia');
+    expect(screen.getByLabelText('Filtrar por banca')).toHaveValue('Unesp/Vunesp');
+    expect(screen.getByLabelText('Filtrar por fase')).toHaveValue('segunda');
+    expect(screen.getByRole('heading', { name: 'Transição e bônus demográfico' })).toBeInTheDocument();
+    expect(screen.queryByRole('heading', { name: /Calor, temperatura/ })).not.toBeInTheDocument();
+  });
+
   it('submete resposta parcial e produz a entrada derivada no caderno', async () => {
     const user = userEvent.setup();
     render(<MemoryRouter initialEntries={['/resumos?summary=fis-termologia-calor&question=calor-r1']}><Resumos/></MemoryRouter>);
