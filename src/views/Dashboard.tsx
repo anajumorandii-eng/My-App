@@ -1,15 +1,13 @@
 import React, { useMemo, useState } from 'react';
-import { EfficiencyEngine } from '../lib/efficiencyEngine';
-import { mockTopics } from '../data/mockData';
 import { useUserMastery } from '../hooks/useUserMastery';
 import { useUserProfile } from '../hooks/useUserProfile';
-import { useStudentGoals } from '../hooks/useStudentGoals';
-import { useAvailableMinutes } from '../hooks/useAvailableMinutes';
+import { useDailyPlan } from '../hooks/useDailyPlan';
+import { formatIsoTimeInSaoPaulo, todayInSaoPaulo } from '../features/availability/time';
 import { useAuth } from '../context/AuthContext';
 import { pendingReviewCount } from '../lib/reviewUrgency';
 import { nextExams, daysUntil } from '../data/examCalendar';
 import { addPlanFeedback } from '../lib/userData';
-import { StudyAction, RecommendationReason, DisagreeReason, PlanFeedback } from '../types';
+import { AllocatedStudyAction, RecommendationReason, DisagreeReason, PlanFeedback } from '../types';
 import { PlayCircle, Target, Brain, AlertCircle, CloudOff, CalendarClock, ChevronDown, ChevronUp, ThumbsDown, Check } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
@@ -39,7 +37,7 @@ function ActionCard({
   onStart,
   userId,
 }: {
-  action: StudyAction;
+  action: AllocatedStudyAction;
   index: number;
   actionLabel: string;
   onStart: () => void;
@@ -79,6 +77,8 @@ function ActionCard({
               <span>{action.subject}</span>
               <span>•</span>
               <span className="text-indigo-600 dark:text-indigo-400 font-medium">{action.estimatedMinutes} min</span>
+              <span>•</span>
+              <span>{formatIsoTimeInSaoPaulo(action.intervalStart)}–{formatIsoTimeInSaoPaulo(action.intervalEnd)}</span>
             </div>
           </div>
         </div>
@@ -145,12 +145,8 @@ export default function Dashboard() {
   const { user } = useAuth();
   const { mastery, isPersisted } = useUserMastery();
   const { profile } = useUserProfile();
-  const { goals } = useStudentGoals();
-  const { minutes: availableMinutes, usingAuto } = useAvailableMinutes();
-
-  const dailyPlan = useMemo(() => {
-    return EfficiencyEngine.generateDailyPlan(mastery, mockTopics, profile, availableMinutes, goals);
-  }, [mastery, profile, availableMinutes, goals]);
+  const { availability, allocatedActions: dailyPlan } = useDailyPlan(todayInSaoPaulo());
+  const availableMinutes = availability?.totalMinutes ?? 0;
   const primary = dailyPlan[0];
   const primaryMastery = mastery.find((item) => item.topicId === primary?.topicId);
   const overdueReviews = pendingReviewCount(mastery);
@@ -210,9 +206,9 @@ export default function Dashboard() {
             <Target className="w-5 h-5 mr-2" />
             <h3 className="font-medium">Tempo de Estudo</h3>
           </div>
-          <p className="text-3xl font-bold">{availableMinutes}<span className="text-lg font-normal text-zinc-500 ml-1">min</span></p>
+          <p className="text-3xl font-bold"><span>{availableMinutes} min</span></p>
           <p className="text-sm text-zinc-500 mt-1">
-            {usingAuto ? 'Calculado a partir da sua agenda do Google' : 'Meta diária ajustada à energia (Média)'}
+            Calculado pela agenda semanal e pelas exceções do dia
           </p>
         </div>
         

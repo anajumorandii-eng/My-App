@@ -34,6 +34,7 @@ import Flashcards from './views/Flashcards';
 import ObrasObrigatorias from './views/ObrasObrigatorias';
 import Obras from './views/Obras';
 import ObraDetalhe from './views/ObraDetalhe';
+import AgendaView from './features/availability/AgendaView';
 
 export default function App() {
   return (
@@ -43,6 +44,7 @@ export default function App() {
           <Route path="/" element={<Layout />}>
             <Route index element={<Dashboard />} />
             <Route path="plano" element={<Plano />} />
+            <Route path="agenda" element={<AgendaView />} />
             <Route path="reta-final" element={<RetaFinal />} />
             <Route path="sessao" element={<Sessao />} />
             <Route path="questoes" element={<Questoes />} />

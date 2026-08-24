@@ -1,25 +1,15 @@
-import React, { useEffect, useMemo, useState } from 'react';
-import { EfficiencyEngine } from '../lib/efficiencyEngine';
-import { mockTopics } from '../data/mockData';
-import { useUserMastery } from '../hooks/useUserMastery';
-import { useUserProfile } from '../hooks/useUserProfile';
+import React, { useMemo } from 'react';
+import { AlertTriangle, CalendarClock, Clock, CloudOff, Flag, Map } from 'lucide-react';
+import { formatIsoTimeInSaoPaulo, todayInSaoPaulo } from '../features/availability/time';
+import { useDailyPlan } from '../hooks/useDailyPlan';
 import { useStudentGoals } from '../hooks/useStudentGoals';
-import { useAvailableMinutes } from '../hooks/useAvailableMinutes';
 import { currentStudyPhase } from '../lib/studyPhase';
 import { upcomingMilestones } from '../lib/studyRoadmap';
 import { daysUntil } from '../data/examCalendar';
-import { Map, Clock, Battery, BatteryLow, BatteryFull, CloudOff, CalendarCheck2, Flag, Coffee } from 'lucide-react';
 
 function formatDatePtBr(iso: string): string {
-  const [, m, d] = iso.split('-');
-  return `${d}/${m}`;
-}
-
-function daysUntilLabel(iso: string): string {
-  const days = daysUntil(iso);
-  if (days === 0) return 'hoje';
-  if (days === 1) return 'amanhã';
-  return `${days} dias`;
+  const [, month, day] = iso.split('-');
+  return `${day}/${month}`;
 }
 
 const SUBJECT_COLORS: Record<string, string> = {
@@ -31,56 +21,25 @@ const SUBJECT_COLORS: Record<string, string> = {
   História: 'bg-orange-500',
   Português: 'bg-violet-500',
   Inglês: 'bg-sky-500',
-  Filosofia: 'bg-stone-500',
-  Sociologia: 'bg-purple-500',
 };
 
 export default function Plano() {
-  const { mastery, isPersisted, syncError } = useUserMastery();
-  const { profile: userProfile } = useUserProfile();
   const { goals } = useStudentGoals();
-  const {
-    minutes: minutesToday,
-    usingAuto,
-    autoMode,
-    setAutoMode,
-    manualMinutes,
-    setManualMinutes,
-    isConnected: calendarConnected,
-    loading: calendarLoading,
-    error: calendarError,
-    busyCount,
-    todayWindow,
-  } = useAvailableMinutes();
-  const [energyLevel, setEnergyLevel] = useState<'low' | 'medium' | 'high'>(userProfile.currentEnergyLevel);
-
   const phase = useMemo(() => currentStudyPhase(goals), [goals]);
   const nextMilestone = useMemo(() => upcomingMilestones(goals)[0], [goals]);
+  const {
+    availability,
+    prioritizedActions,
+    allocatedActions,
+    loading,
+    warnings,
+    isPersisted,
+  } = useDailyPlan(todayInSaoPaulo());
 
-  useEffect(() => {
-    setEnergyLevel(userProfile.currentEnergyLevel);
-  }, [userProfile.currentEnergyLevel]);
-
-  const profile = useMemo(() => ({ ...userProfile, currentEnergyLevel: energyLevel }), [userProfile, energyLevel]);
-
-  const dailyPlan = useMemo(
-    () => EfficiencyEngine.generateDailyPlan(mastery, mockTopics, profile, minutesToday, goals),
-    [mastery, profile, minutesToday, goals]
-  );
-
-  const plannedTopicIds = new Set(dailyPlan.map((a) => a.topicId));
-  const backlog = mockTopics
-    .map((topic) => ({ topic, mastery: mastery.find((m) => m.topicId === topic.id) }))
-    .filter((entry) => entry.mastery && !plannedTopicIds.has(entry.topic.id))
-    .sort((a, b) => (a.mastery?.level ?? 0) - (b.mastery?.level ?? 0));
-
-  const totalPlannedMinutes = dailyPlan.reduce((sum, a) => sum + a.estimatedMinutes, 0);
-
-  const energyOptions: { value: 'low' | 'medium' | 'high'; label: string; icon: React.ElementType }[] = [
-    { value: 'low', label: 'Baixa', icon: BatteryLow },
-    { value: 'medium', label: 'Média', icon: Battery },
-    { value: 'high', label: 'Alta', icon: BatteryFull },
-  ];
+  const allocatedIds = new Set(allocatedActions.map(({ id }) => id));
+  const unallocatedActions = prioritizedActions.filter(({ id }) => !allocatedIds.has(id));
+  const effectiveMinutes = availability?.totalMinutes ?? 0;
+  const totalPlannedMinutes = allocatedActions.reduce((total, action) => total + action.allocatedMinutes, 0);
 
   return (
     <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
@@ -90,18 +49,17 @@ export default function Plano() {
           Plano de Estudo
         </h1>
         <p className="text-zinc-500 dark:text-zinc-400">
-          Ajuste seu tempo e energia disponíveis para ver o plano se recalcular na hora.
+          Veja como suas prioridades cabem nas janelas efetivas de estudo de hoje.
         </p>
         {!isPersisted && (
           <p className="flex items-center text-xs text-zinc-400 mt-2">
             <CloudOff className="w-3.5 h-3.5 mr-1.5" />
-            Modo demonstração — conecte sua conta Google em "Conexões Google" para salvar seu progresso de verdade.
+            Modo demonstração — conecte sua conta Google em &quot;Conexões Google&quot; para salvar seu progresso de verdade.
           </p>
         )}
-        {syncError && <p className="text-xs text-rose-500 mt-2">{syncError}</p>}
       </header>
 
-      <div className="bg-indigo-50 dark:bg-indigo-950/30 border border-indigo-200 dark:border-indigo-900 rounded-2xl p-6 shadow-sm">
+      <section className="bg-indigo-50 dark:bg-indigo-950/30 border border-indigo-200 dark:border-indigo-900 rounded-2xl p-6 shadow-sm">
         <div className="flex items-center min-w-0">
           <Flag className="w-5 h-5 mr-3 text-indigo-600 dark:text-indigo-400 shrink-0" />
           <div className="min-w-0">
@@ -109,139 +67,75 @@ export default function Plano() {
               Fase atual: {phase.label}
               {nextMilestone && (
                 <span className="font-normal text-indigo-700 dark:text-indigo-300">
-                  {' '}— {nextMilestone.board} em {daysUntilLabel(nextMilestone.date)} ({formatDatePtBr(nextMilestone.date)})
+                  {' '}— {nextMilestone.board} em {daysUntil(nextMilestone.date)} dias ({formatDatePtBr(nextMilestone.date)})
                 </span>
               )}
             </p>
             <p className="text-sm text-indigo-700 dark:text-indigo-300 mt-1">{phase.description}</p>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 shadow-sm space-y-6">
-        {calendarConnected && (
-          <div className="flex items-center justify-between pb-6 border-b border-zinc-100 dark:border-zinc-800">
-            <div className="flex items-center min-w-0">
-              <CalendarCheck2 className="w-4 h-4 mr-2 text-indigo-500 shrink-0" />
-              <div className="min-w-0">
-                <p className="text-sm font-medium">Calcular pela agenda do Google</p>
-                <p className="text-xs text-zinc-500 truncate">
-                  {calendarLoading
-                    ? 'Carregando sua agenda...'
-                    : calendarError
-                    ? calendarError
-                    : `${busyCount} compromisso${busyCount === 1 ? '' : 's'} hoje até as 22h`}
-                </p>
-              </div>
-            </div>
-            <button
-              onClick={() => setAutoMode((v) => !v)}
-              disabled={calendarLoading || !!calendarError}
-              aria-label="Alternar cálculo automático pela agenda"
-              className={`relative w-11 h-6 rounded-full shrink-0 ml-4 transition-colors disabled:opacity-40 ${
-                autoMode ? 'bg-indigo-600' : 'bg-zinc-300 dark:bg-zinc-700'
-              }`}
-            >
-              <span
-                className={`absolute top-0.5 left-0.5 w-5 h-5 bg-white rounded-full transition-transform ${
-                  autoMode ? 'translate-x-5' : ''
-                }`}
-              />
-            </button>
+      <section className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 shadow-sm space-y-5">
+        <div className="flex items-center justify-between gap-4">
+          <div>
+            <p className="text-sm font-medium flex items-center text-zinc-700 dark:text-zinc-300">
+              <Clock className="w-4 h-4 mr-2 text-zinc-400" />
+              Disponibilidade efetiva hoje
+            </p>
+            <p className="text-xs text-zinc-500 mt-1">Calculado pela sua agenda semanal</p>
+          </div>
+          <span className="text-2xl font-bold text-indigo-600 dark:text-indigo-400">
+            {effectiveMinutes} min
+          </span>
+        </div>
+
+        {warnings.length > 0 && (
+          <div className="space-y-2" aria-label="Avisos de disponibilidade">
+            {warnings.map((warning, index) => (
+              <p
+                key={`${warning.code}-${index}`}
+                className="flex items-start text-sm text-amber-700 dark:text-amber-300 bg-amber-50 dark:bg-amber-950/30 rounded-lg px-3 py-2"
+              >
+                <AlertTriangle className="w-4 h-4 mr-2 mt-0.5 shrink-0" />
+                {warning.message}
+              </p>
+            ))}
           </div>
         )}
 
         <div>
-          <div className="flex items-center justify-between mb-2">
-            <label htmlFor="minutes" className="text-sm font-medium flex items-center text-zinc-700 dark:text-zinc-300">
-              <Clock className="w-4 h-4 mr-2 text-zinc-400" />
-              Minutos disponíveis hoje
-              {usingAuto && <span className="ml-2 text-xs font-normal text-indigo-500">(via agenda)</span>}
-            </label>
-            <span className="text-lg font-bold text-indigo-600 dark:text-indigo-400">{minutesToday} min</span>
-          </div>
-          <input
-            id="minutes"
-            type="range"
-            min={15}
-            max={330}
-            step={15}
-            value={usingAuto ? minutesToday : manualMinutes}
-            disabled={usingAuto}
-            onChange={(e) => setManualMinutes(Number(e.target.value))}
-            className={`w-full accent-indigo-600 ${usingAuto ? 'opacity-50 cursor-not-allowed' : ''}`}
-          />
-          {usingAuto && (
-            <p className="text-xs text-zinc-500 mt-2">
-              Calculado a partir do seu horário de estudo líquido de hoje ({todayWindow.windowStart}–{todayWindow.windowEnd}), descontando pausas e os compromissos da sua agenda.
-            </p>
-          )}
-        </div>
-
-        <div>
-          <div className="flex items-center justify-between mb-2">
-            <p className="text-sm font-medium text-zinc-700 dark:text-zinc-300 flex items-center">
-              <Coffee className="w-4 h-4 mr-2 text-zinc-400" />
-              Seu estudo líquido hoje
-            </p>
-            <span className="text-xs text-zinc-500">{todayWindow.windowStart}–{todayWindow.windowEnd}</span>
-          </div>
-          {todayWindow.blocks.length > 0 ? (
-            <div className="flex flex-wrap gap-1.5">
-              {todayWindow.blocks.map((block, i) => (
-                <span
-                  key={i}
-                  title={`${block.start}–${block.end}`}
-                  className={`text-[11px] px-2 py-1 rounded-md font-medium ${
-                    block.type === 'estudo'
-                      ? 'bg-indigo-100 text-indigo-700 dark:bg-indigo-900/40 dark:text-indigo-300'
-                      : 'bg-zinc-100 text-zinc-500 dark:bg-zinc-800 dark:text-zinc-400'
-                  }`}
-                >
-                  {block.start}
-                  {block.type === 'pausa' ? ' pausa' : ''}
-                </span>
-              ))}
-            </div>
-          ) : (
-            <p className="text-xs text-zinc-500">Hoje o cursinho ocupa até depois da sua janela de estudo — sem tempo líquido sobrando.</p>
-          )}
-          <p className="text-xs text-zinc-500 mt-2">
-            {Math.round(todayWindow.netMinutes / 60 * 10) / 10}h líquidas de estudo hoje, já com as pausas descontadas.
-          </p>
-        </div>
-
-        <div>
-          <p className="text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-2">Nível de energia hoje</p>
-          <div className="flex gap-2">
-            {energyOptions.map(({ value, label, icon: Icon }) => (
-              <button
-                key={value}
-                onClick={() => setEnergyLevel(value)}
-                className={`flex-1 flex items-center justify-center px-4 py-2.5 rounded-lg text-sm font-medium border transition-colors ${
-                  energyLevel === value
-                    ? 'bg-indigo-600 border-indigo-600 text-white'
-                    : 'border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-50 dark:hover:bg-zinc-800'
-                }`}
+          <h2 className="text-sm font-semibold flex items-center mb-3">
+            <CalendarClock className="w-4 h-4 mr-2 text-indigo-500" />
+            Janelas de estudo
+          </h2>
+          <div className="flex flex-wrap gap-2">
+            {availability?.intervals.map((interval) => (
+              <span
+                key={`${interval.start}-${interval.end}`}
+                className="text-sm px-3 py-2 rounded-lg bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300"
               >
-                <Icon className="w-4 h-4 mr-2" />
-                {label}
-              </button>
+                {formatIsoTimeInSaoPaulo(interval.start)}–{formatIsoTimeInSaoPaulo(interval.end)} · {interval.durationMinutes} min
+              </span>
             ))}
+            {!loading && availability?.intervals.length === 0 && (
+              <p className="text-sm text-zinc-500">Nenhuma janela completa disponível nesta data.</p>
+            )}
+            {loading && <p className="text-sm text-zinc-500">Calculando sua disponibilidade...</p>}
           </div>
         </div>
-      </div>
+      </section>
 
       <section>
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-xl font-semibold">Plano de Hoje</h2>
           <span className="text-sm text-zinc-500">
-            {totalPlannedMinutes} de {minutesToday} min ocupados
+            {totalPlannedMinutes} de {effectiveMinutes} min ocupados
           </span>
         </div>
 
         <div className="space-y-3">
-          {dailyPlan.map((action, index) => (
+          {allocatedActions.map((action, index) => (
             <div
               key={action.id}
               className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-5 shadow-sm flex items-center justify-between"
@@ -256,45 +150,39 @@ export default function Plano() {
                     <span className="capitalize">{action.type.replace('_', ' ')}</span>
                     <span>•</span>
                     <span>{action.subject}</span>
+                    <span>•</span>
+                    <span>{formatIsoTimeInSaoPaulo(action.intervalStart)}–{formatIsoTimeInSaoPaulo(action.intervalEnd)}</span>
                   </div>
                 </div>
               </div>
               <span className="shrink-0 ml-4 text-sm font-medium text-indigo-600 dark:text-indigo-400">
-                {action.estimatedMinutes} min
+                {action.allocatedMinutes} min
               </span>
             </div>
           ))}
 
-          {dailyPlan.length === 0 && (
+          {!loading && allocatedActions.length === 0 && (
             <div className="text-center py-12 bg-zinc-50 dark:bg-zinc-900/50 rounded-xl border border-dashed border-zinc-200 dark:border-zinc-800">
-              <p className="text-zinc-500">Nenhum tópico coube no tempo disponível. Aumente os minutos acima.</p>
+              <p className="text-zinc-500">Nenhuma ação foi alocada nas janelas disponíveis hoje.</p>
             </div>
           )}
         </div>
       </section>
 
-      {backlog.length > 0 && (
+      {unallocatedActions.length > 0 && (
         <section>
           <h2 className="text-xl font-semibold mb-4">Fila de Espera</h2>
           <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl divide-y divide-zinc-100 dark:divide-zinc-800 overflow-hidden">
-            {backlog.map(({ topic, mastery }) => (
-              <div key={topic.id} className="p-4 flex items-center justify-between">
+            {unallocatedActions.map((action) => (
+              <div key={action.id} className="p-4 flex items-center justify-between">
                 <div className="flex items-center min-w-0">
-                  <span className={`w-2 h-2 rounded-full mr-3 shrink-0 ${SUBJECT_COLORS[topic.subject] ?? 'bg-zinc-400'}`} />
+                  <span className={`w-2 h-2 rounded-full mr-3 shrink-0 ${SUBJECT_COLORS[action.subject] ?? 'bg-zinc-400'}`} />
                   <div className="min-w-0">
-                    <p className="font-medium truncate">{topic.name}</p>
-                    <p className="text-xs text-zinc-500">{topic.subject}</p>
+                    <p className="font-medium truncate">{action.topicName}</p>
+                    <p className="text-xs text-zinc-500">{action.subject} · {action.type.replace('_', ' ')}</p>
                   </div>
                 </div>
-                <div className="flex items-center shrink-0 ml-4 w-32">
-                  <div className="w-full h-1.5 bg-zinc-100 dark:bg-zinc-800 rounded-full overflow-hidden mr-2">
-                    <div
-                      className={`h-full ${SUBJECT_COLORS[topic.subject] ?? 'bg-zinc-400'}`}
-                      style={{ width: `${mastery?.level ?? 0}%` }}
-                    />
-                  </div>
-                  <span className="text-xs text-zinc-500 w-8 text-right">{mastery?.level ?? 0}%</span>
-                </div>
+                <span className="text-xs text-zinc-500 shrink-0 ml-4">{action.estimatedMinutes} min estimados</span>
               </div>
             ))}
           </div>

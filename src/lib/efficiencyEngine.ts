@@ -85,11 +85,10 @@ export class EfficiencyEngine {
    * Deterministic ranking of study topics based on multiple weighted criteria.
    * Returns a prioritized list of actions to take.
    */
-  public static generateDailyPlan(
+  public static rankStudyActions(
     masteryData: TopicMastery[],
     topics: Topic[],
     profile: UserProfile,
-    availableMinutesToday: number,
     goals: StudentGoals,
     now: Date = new Date()
   ): StudyAction[] {
@@ -173,6 +172,19 @@ export class EfficiencyEngine {
 
     // Sort by highest priority first
     actions.sort((a, b) => b.priorityScore - a.priorityScore);
+
+    return actions;
+  }
+
+  public static generateDailyPlan(
+    masteryData: TopicMastery[],
+    topics: Topic[],
+    profile: UserProfile,
+    availableMinutesToday: number,
+    goals: StudentGoals,
+    now: Date = new Date()
+  ): StudyAction[] {
+    const actions = this.rankStudyActions(masteryData, topics, profile, goals, now);
 
     // A fase atual (quão perto está a prova mais próxima entre as bancas
     // ativas) define quanto do tempo disponível deve ir para revisão/erro

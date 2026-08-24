@@ -1,11 +1,8 @@
-import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { EfficiencyEngine } from '../lib/efficiencyEngine';
-import { mockTopics } from '../data/mockData';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { useUserMastery } from '../hooks/useUserMastery';
-import { useUserProfile } from '../hooks/useUserProfile';
-import { useStudentGoals } from '../hooks/useStudentGoals';
-import { useAvailableMinutes } from '../hooks/useAvailableMinutes';
-import { StudyAction } from '../types';
+import { useDailyPlan } from '../hooks/useDailyPlan';
+import { formatIsoTimeInSaoPaulo, todayInSaoPaulo } from '../features/availability/time';
+import { AllocatedStudyAction } from '../types';
 import { StudySessionRecord, StudyVerification } from '../types';
 import { PlayCircle, Pause, RotateCcw, CheckCircle2, PlayCircle as StartIcon, CloudOff } from 'lucide-react';
 import { useSearchParams } from 'react-router-dom';
@@ -23,16 +20,10 @@ export default function Sessao() {
   const [searchParams] = useSearchParams();
   const { mastery, updateMastery, isPersisted } = useUserMastery();
   const { user } = useAuth();
-  const { profile } = useUserProfile();
-  const { goals } = useStudentGoals();
-  const { minutes: availableMinutes } = useAvailableMinutes();
-  const dailyPlan = useMemo(
-    () => EfficiencyEngine.generateDailyPlan(mastery, mockTopics, profile, availableMinutes, goals),
-    [mastery, profile, availableMinutes, goals]
-  );
+  const { availability, allocatedActions: dailyPlan } = useDailyPlan(todayInSaoPaulo());
 
-  const [selectedAction, setSelectedAction] = useState<StudyAction | null>(dailyPlan[0] ?? null);
-  const [secondsLeft, setSecondsLeft] = useState((selectedAction?.estimatedMinutes ?? 25) * 60);
+  const [selectedAction, setSelectedAction] = useState<AllocatedStudyAction | null>(dailyPlan[0] ?? null);
+  const [secondsLeft, setSecondsLeft] = useState((selectedAction?.allocatedMinutes ?? 0) * 60);
   const [isRunning, setIsRunning] = useState(false);
   const [completedIds, setCompletedIds] = useState<string[]>([]);
   const completedIdsRef = useRef<string[]>([]);
@@ -41,7 +32,7 @@ export default function Sessao() {
   const [syncError, setSyncError] = useState<string | null>(null);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
-  const completeAction = useCallback((action: StudyAction, elapsedSeconds: number) => {
+  const completeAction = useCallback((action: AllocatedStudyAction, elapsedSeconds: number) => {
     if (completedIdsRef.current.includes(action.id)) return;
     const completedAt = new Date().toISOString();
     const session: StudySessionRecord = {
@@ -49,7 +40,7 @@ export default function Sessao() {
       actionId: action.id,
       topicId: action.topicId,
       actionType: action.type,
-      plannedMinutes: action.estimatedMinutes,
+      plannedMinutes: action.allocatedMinutes,
       completedMinutes: Math.max(1, Math.round(elapsedSeconds / 60)),
       completedAt,
     };
@@ -93,9 +84,16 @@ export default function Sessao() {
     if (requested) {
       appliedTopicRef.current = topicId;
       setSelectedAction(requested);
-      setSecondsLeft(requested.estimatedMinutes * 60);
+      setSecondsLeft(requested.allocatedMinutes * 60);
     }
   }, [dailyPlan, searchParams]);
+
+  useEffect(() => {
+    if (selectedAction && dailyPlan.some((action) => action.id === selectedAction.id)) return;
+    const next = dailyPlan[0] ?? null;
+    setSelectedAction(next);
+    setSecondsLeft((next?.allocatedMinutes ?? 0) * 60);
+  }, [dailyPlan, selectedAction]);
 
   useEffect(() => {
     if (isRunning) {
@@ -103,7 +101,7 @@ export default function Sessao() {
         setSecondsLeft((prev) => {
           if (prev <= 1) {
             setIsRunning(false);
-            if (selectedAction) completeAction(selectedAction, selectedAction.estimatedMinutes * 60);
+            if (selectedAction) completeAction(selectedAction, selectedAction.allocatedMinutes * 60);
             return 0;
           }
           return prev - 1;
@@ -117,15 +115,15 @@ export default function Sessao() {
     };
   }, [isRunning, selectedAction, completeAction]);
 
-  const selectAction = (action: StudyAction) => {
+  const selectAction = (action: AllocatedStudyAction) => {
     setIsRunning(false);
     setSelectedAction(action);
-    setSecondsLeft(action.estimatedMinutes * 60);
+    setSecondsLeft(action.allocatedMinutes * 60);
   };
 
   const resetTimer = () => {
     setIsRunning(false);
-    setSecondsLeft((selectedAction?.estimatedMinutes ?? 25) * 60);
+    setSecondsLeft((selectedAction?.allocatedMinutes ?? 0) * 60);
   };
 
   const markComplete = () => {
@@ -133,7 +131,7 @@ export default function Sessao() {
     if (selectedAction) completeAction(selectedAction, totalSeconds - secondsLeft);
   };
 
-  const totalSeconds = (selectedAction?.estimatedMinutes ?? 25) * 60;
+  const totalSeconds = (selectedAction?.allocatedMinutes ?? 0) * 60;
   const progress = totalSeconds > 0 ? ((totalSeconds - secondsLeft) / totalSeconds) * 100 : 0;
   const isDone = selectedAction ? completedIds.includes(selectedAction.id) : false;
   const isVerified = selectedAction ? verifiedIds.includes(selectedAction.id) : false;
@@ -148,6 +146,7 @@ export default function Sessao() {
         <p className="text-zinc-500 dark:text-zinc-400">
           Escolha um bloco do seu plano e execute com foco cronometrado.
         </p>
+        <p className="text-sm text-zinc-500 mt-2"><span>{availability?.totalMinutes ?? 0} min</span> efetivos hoje</p>
         {!isPersisted && (
           <p className="flex items-center text-xs text-zinc-400 mt-2">
             <CloudOff className="w-3.5 h-3.5 mr-1.5" />
@@ -172,7 +171,7 @@ export default function Sessao() {
               >
                 <div className="min-w-0">
                   <p className="font-medium truncate">{action.topicName}</p>
-                  <p className="text-xs text-zinc-500">{action.estimatedMinutes} min • {action.subject}</p>
+                  <p className="text-xs text-zinc-500">{action.allocatedMinutes} min • {action.subject} • {formatIsoTimeInSaoPaulo(action.intervalStart)}–{formatIsoTimeInSaoPaulo(action.intervalEnd)}</p>
                 </div>
                 {completedIds.includes(action.id) && <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0 ml-2" />}
               </button>

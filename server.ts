@@ -21,6 +21,7 @@ import { createPushRouter, createReviewReminderRouter } from './server/push/rout
 import { configureWebPush, loadVapidConfig } from './server/push/webPush';
 import { createPodcastAudioRouter } from './server/podcast/routes';
 import { GeminiTtsService } from './server/podcast/ttsService';
+import { buildCalendarEventsQuery } from './serverCalendar';
 
 const app = express();
 const PORT = Number(process.env.PORT) || 3000;
@@ -101,22 +102,19 @@ app.get('/api/calendar/events', async (req, res) => {
   }
   
   try {
+    const localDate = typeof req.query.date === 'string' ? req.query.date : '';
+    const query = buildCalendarEventsQuery(localDate);
     const oauth2Client = new google.auth.OAuth2();
     oauth2Client.setCredentials({ access_token: token });
     
     const calendar = google.calendar({ version: 'v3', auth: oauth2Client });
-    const response = await calendar.events.list({
-      calendarId: 'primary',
-      timeMin: new Date().toISOString(),
-      maxResults: 10,
-      singleEvents: true,
-      orderBy: 'startTime',
-    });
+    const response = await calendar.events.list(query);
     
     res.json({ events: response.data.items || [] });
   } catch (error) {
     console.error('Calendar Fetch Error:', error);
-    res.status(500).json({ error: 'Failed to fetch events' });
+    const status = error instanceof Error && error.message === 'Invalid local date' ? 400 : 500;
+    res.status(status).json({ error: status === 400 ? 'Invalid date' : 'Failed to fetch events' });
   }
 });
 

@@ -71,6 +71,7 @@ export default function Layout() {
     { name: 'Hoje', path: '/', icon: Calendar },
     { name: 'Diagnóstico', path: '/diagnostico', icon: Stethoscope },
     { name: 'Plano', path: '/plano', icon: Map },
+    { name: 'Agenda', path: '/agenda', icon: Calendar },
     { name: 'Reta Final', path: '/reta-final', icon: Flag },
     { name: 'Recuperação de Atrasos', path: '/recuperacao', icon: ListTodo },
     { name: 'Sessão de Estudo', path: '/sessao', icon: PlayCircle },

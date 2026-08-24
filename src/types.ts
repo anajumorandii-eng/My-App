@@ -139,11 +139,19 @@ export interface PlanFeedback {
   date: string;
 }
 
+export interface AllocatedStudyAction extends StudyAction {
+  intervalStart: string;
+  intervalEnd: string;
+  allocatedMinutes: number;
+}
+
 export interface CalendarEvent {
   id: string;
   summary: string;
   start: { dateTime?: string; date?: string };
   end: { dateTime?: string; date?: string };
+  transparency?: 'opaque' | 'transparent';
+  status?: 'confirmed' | 'tentative' | 'cancelled';
 }
 
 export interface DriveFile {
