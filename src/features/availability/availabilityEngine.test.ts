@@ -80,6 +80,23 @@ describe('resolveEffectiveStudyAvailability', () => {
     expect(result.totalMinutes).toBe(200);
   });
 
+  it('rounds a fractional-second Calendar end up so no block overlaps the busy event', () => {
+    const result = resolveEffectiveStudyAvailability(schedule, undefined, {
+      status: 'connected',
+      events: [{
+        id: 'precise-consulta', summary: 'Consulta',
+        start: { dateTime: '2026-08-24T16:00:00-03:00' },
+        end: { dateTime: '2026-08-24T16:30:30.500-03:00' },
+      }],
+    }, localDate);
+
+    expect(result.intervals.every((block) => (
+      block.end <= '2026-08-24T16:00:00-03:00'
+      || block.start >= '2026-08-24T16:30:30.500-03:00'
+    ))).toBe(true);
+    expect(result.intervals.map(({ start }) => start.slice(11, 16))).toContain('16:31');
+  });
+
   it.each([
     { label: 'transparent', transparency: 'transparent' as const },
     { label: 'cancelled', status: 'cancelled' as const },

@@ -39,7 +39,7 @@ export function resolveEffectiveStudyAvailability(
 
   const intervals = scheduleStudyBlocks(
     localDate,
-    ranges.map(toCandidateStudyWindow),
+    ranges.map(toCandidateStudyWindow).filter(isCandidateStudyWindow),
     schedule.blockPolicy,
   );
   const warnings = calendarWarnings(calendar, intervals.length === 0);
@@ -87,7 +87,8 @@ function applyException(
           (remaining, busy) => remaining.flatMap((window) => subtractInterval(window, busy)),
           windows.map((window) => wallRange(localDate, window)),
         )
-        .map(toCandidateStudyWindow);
+        .map(toCandidateStudyWindow)
+        .filter(isCandidateStudyWindow);
     }
     case 'early_departure': {
       if (!exception.departureTime) throw new Error('Early departure requires a departure time');
@@ -98,7 +99,8 @@ function applyException(
           return { start: range.start, end: departure < range.end ? departure : range.end };
         })
         .filter((window) => window.end > window.start)
-        .map(toCandidateStudyWindow);
+        .map(toCandidateStudyWindow)
+        .filter(isCandidateStudyWindow);
     }
   }
 }
@@ -136,11 +138,27 @@ function wallRange(localDate: string, range: CandidateStudyWindow): TimeRange {
   return { start, end };
 }
 
-function toCandidateStudyWindow(range: TimeRange): CandidateStudyWindow {
-  return {
-    start: toWallTime(range.start),
-    end: toWallTime(range.end),
+function toCandidateStudyWindow(range: TimeRange): CandidateStudyWindow | undefined {
+  const window = {
+    start: toWallTime(roundToMinute(range.start, 'up')),
+    end: toWallTime(roundToMinute(range.end, 'down')),
   };
+  return window.end > window.start ? window : undefined;
+}
+
+function isCandidateStudyWindow(window: CandidateStudyWindow | undefined): window is CandidateStudyWindow {
+  return Boolean(window && window.end > window.start);
+}
+
+function roundToMinute(iso: string, direction: 'up' | 'down'): string {
+  const instant = new Date(iso).getTime();
+  const remainder = instant % 60_000;
+  const rounded = direction === 'up' && remainder > 0
+    ? instant + 60_000 - remainder
+    : direction === 'down'
+      ? instant - remainder
+      : instant;
+  return new Date(rounded).toISOString();
 }
 
 function toWallTime(iso: string): string {
