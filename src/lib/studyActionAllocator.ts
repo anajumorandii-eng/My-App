@@ -8,6 +8,26 @@ interface IntervalCursor {
   endMs: number;
 }
 
+/**
+ * @deprecated Transitional support for generateDailyPlan until all views use interval allocation.
+ */
+export function fitActionsToMinuteBudget(
+  prioritizedActions: StudyAction[],
+  availableMinutes: number,
+): StudyAction[] {
+  let allocatedMinutes = 0;
+  const fittedActions: StudyAction[] = [];
+
+  for (const action of prioritizedActions) {
+    if (allocatedMinutes + action.estimatedMinutes <= availableMinutes) {
+      fittedActions.push(action);
+      allocatedMinutes += action.estimatedMinutes;
+    }
+  }
+
+  return fittedActions;
+}
+
 export function allocateStudyActions(
   prioritizedActions: StudyAction[],
   intervals: StudyInterval[],

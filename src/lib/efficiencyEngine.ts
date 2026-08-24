@@ -1,4 +1,5 @@
 import { TopicMastery, Topic, UserProfile, StudyAction } from '../types';
+import { fitActionsToMinuteBudget } from './studyActionAllocator';
 
 export class EfficiencyEngine {
   /**
@@ -84,8 +85,9 @@ export class EfficiencyEngine {
     masteryData: TopicMastery[],
     topics: Topic[],
     profile: UserProfile,
-    _legacyAvailableMinutesToday: number,
+    legacyAvailableMinutesToday: number,
   ): StudyAction[] {
-    return this.rankStudyActions(masteryData, topics, profile);
+    const prioritizedActions = this.rankStudyActions(masteryData, topics, profile);
+    return fitActionsToMinuteBudget(prioritizedActions, legacyAvailableMinutesToday);
   }
 }

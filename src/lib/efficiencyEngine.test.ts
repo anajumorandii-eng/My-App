@@ -57,4 +57,21 @@ describe('EfficiencyEngine.rankStudyActions', () => {
       { id: `action_practice_${NOW.getTime()}`, topicId: 'practice', type: 'practice', estimatedMinutes: 30 },
     ]);
   });
+
+  it('keeps the legacy daily-plan entry point empty when its minute budget is zero', () => {
+    vi.setSystemTime(NOW);
+    const actions = EfficiencyEngine.generateDailyPlan(mastery, topics, profile, 0);
+
+    expect(actions).toEqual([]);
+  });
+
+  it('keeps the legacy sequential fit behavior for a small minute budget', () => {
+    vi.setSystemTime(NOW);
+    const actions = EfficiencyEngine.generateDailyPlan(mastery, topics, profile, 35);
+
+    expect(actions.map(({ topicId, estimatedMinutes }) => ({ topicId, estimatedMinutes }))).toEqual([
+      { topicId: 'errors', estimatedMinutes: 20 },
+      { topicId: 'review', estimatedMinutes: 15 },
+    ]);
+  });
 });
