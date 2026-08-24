@@ -110,6 +110,26 @@ describe('AgendaView', () => {
     expect(screen.getByLabelText('In\u00edcio de quinta-feira')).toHaveValue('17:40');
   });
 
+  it('removes the prior save error after a successful retry confirms the weekly edit', async () => {
+    availabilityState.saveSchedule.mockResolvedValueOnce(false).mockResolvedValueOnce(true);
+    render(<AgendaView />);
+
+    fireEvent.change(screen.getByLabelText('In\u00edcio de quinta-feira'), { target: { value: '17:40' } });
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', { name: 'Salvar semana' }));
+    });
+    expect(screen.getByRole('alert')).toHaveTextContent(/n\u00e3o foi poss\u00edvel salvar a semana/i);
+
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', { name: 'Salvar semana' }));
+    });
+
+    expect(availabilityState.saveSchedule).toHaveBeenCalledTimes(2);
+    expect(screen.queryByRole('alert')).not.toBeInTheDocument();
+    const thursdayCard = screen.getByRole('heading', { name: 'Quinta-feira' }).closest('article')!;
+    expect(within(thursdayCard).queryByText(/Estimativa edit\u00e1vel/i)).not.toBeInTheDocument();
+  });
+
   it('saves a date-only early departure without changing the weekly schedule', () => {
     render(<AgendaView />);
 

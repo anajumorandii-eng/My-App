@@ -105,6 +105,7 @@ export default function AgendaView() {
       setScheduleSaveError('Não foi possível salvar a semana. Revise os horários e tente novamente.');
       return;
     }
+    setScheduleSaveError(null);
     setDraftSchedule(confirmedSchedule);
     setEditedEntryIds(new Set());
   };
