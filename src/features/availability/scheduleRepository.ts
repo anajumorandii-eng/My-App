@@ -1,4 +1,4 @@
-import { deleteDoc, doc, getDoc, setDoc } from 'firebase/firestore';
+import { deleteDoc, doc, getDoc, runTransaction, setDoc } from 'firebase/firestore';
 import { db } from '../../lib/firestore';
 import { createInitialWeeklySchedule } from './weeklyScheduleSeed';
 import {
@@ -24,12 +24,14 @@ const ISO_DATE_TIME_RE = /^\d{4}-\d{2}-\d{2}T.+(?:Z|[+-]\d{2}:\d{2})$/;
 
 export async function getOrCreateWeeklySchedule(uid: string): Promise<WeeklySchedule> {
   const ref = weeklyScheduleRef(uid);
-  const snapshot = await getDoc(ref);
-  if (snapshot.exists()) return parseWeeklySchedule(snapshot.data());
+  return runTransaction(db, async (transaction) => {
+    const snapshot = await transaction.get(ref);
+    if (snapshot.exists()) return parseWeeklySchedule(snapshot.data());
 
-  const schedule = createInitialWeeklySchedule(new Date().toISOString());
-  await setDoc(ref, schedule);
-  return schedule;
+    const schedule = createInitialWeeklySchedule(new Date().toISOString());
+    transaction.set(ref, schedule);
+    return schedule;
+  });
 }
 
 export async function saveWeeklySchedule(uid: string, schedule: WeeklySchedule): Promise<void> {

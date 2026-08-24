@@ -5,6 +5,7 @@ const firestore = vi.hoisted(() => ({
   deleteDoc: vi.fn(),
   doc: vi.fn((_db: unknown, ...path: string[]) => ({ path: path.join('/') })),
   getDoc: vi.fn(),
+  runTransaction: vi.fn(),
   setDoc: vi.fn(),
 }));
 
@@ -56,6 +57,10 @@ function exception(): ScheduleException {
 describe('scheduleRepository', () => {
   beforeEach(() => {
     vi.clearAllMocks();
+    firestore.runTransaction.mockImplementation(async (_db, update) => update({
+      get: firestore.getDoc,
+      set: firestore.setDoc,
+    }));
   });
 
   it('seeds a missing weekly schedule once at the user document path', async () => {
@@ -78,6 +83,29 @@ describe('scheduleRepository', () => {
 
     await expect(getOrCreateWeeklySchedule('user-1')).resolves.toEqual(existing);
 
+    expect(firestore.setDoc).not.toHaveBeenCalled();
+  });
+
+  it('keeps a concurrent edited schedule when Firestore retries the create transaction', async () => {
+    const concurrentEdit: WeeklySchedule = {
+      ...schedule(),
+      days: { ...schedule().days, monday: [{ id: 'user-edit', label: 'Estudo editado', kind: 'study_window', start: '15:00', end: '20:30' }] },
+    };
+    firestore.getDoc.mockResolvedValue({ exists: () => false, data: () => undefined });
+    firestore.runTransaction.mockImplementation(async (_db, update) => {
+      const transaction = {
+        get: vi.fn()
+          .mockResolvedValueOnce({ exists: () => false, data: () => undefined })
+          .mockResolvedValueOnce({ exists: () => true, data: () => concurrentEdit }),
+        set: vi.fn(),
+      };
+
+      await update(transaction);
+      return update(transaction);
+    });
+
+    await expect(getOrCreateWeeklySchedule('user-1')).resolves.toEqual(concurrentEdit);
+    expect(firestore.runTransaction).toHaveBeenCalledTimes(1);
     expect(firestore.setDoc).not.toHaveBeenCalled();
   });
 
