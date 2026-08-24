@@ -1,5 +1,6 @@
 import { cleanup, render, screen, within } from '@testing-library/react';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
+import { MemoryRouter } from 'react-router-dom';
 import type { DailyStudyAvailability } from '../features/availability/types';
 import type { DailyPlanState } from '../hooks/useDailyPlan';
 import type { AllocatedStudyAction, StudyAction } from '../types';
@@ -9,9 +10,18 @@ import Sessao from './Sessao';
 
 const dailyPlanHook = vi.hoisted(() => vi.fn());
 const profileHook = vi.hoisted(() => vi.fn());
+const masteryHook = vi.hoisted(() => vi.fn());
+const goalsHook = vi.hoisted(() => vi.fn());
 
 vi.mock('../hooks/useDailyPlan', () => ({ useDailyPlan: dailyPlanHook }));
 vi.mock('../hooks/useUserProfile', () => ({ useUserProfile: profileHook }));
+vi.mock('../hooks/useUserMastery', () => ({ useUserMastery: masteryHook }));
+vi.mock('../hooks/useStudentGoals', () => ({ useStudentGoals: goalsHook }));
+vi.mock('../context/AuthContext', () => ({ useAuth: () => ({ user: undefined }) }));
+
+function renderView(view: React.ReactNode) {
+  return render(<MemoryRouter>{view}</MemoryRouter>);
+}
 
 const LOCAL_DATE = '2026-08-24';
 const FIRST_TOPIC = 'Genética Molecular';
@@ -43,6 +53,7 @@ const allocatedActions: AllocatedStudyAction[] = [
     subject: 'Biologia',
     estimatedMinutes: 45,
     priorityScore: 100,
+    reasons: [],
     intervalStart: '2026-08-24T14:40:00-03:00',
     intervalEnd: '2026-08-24T15:00:00-03:00',
     allocatedMinutes: 20,
@@ -55,6 +66,7 @@ const allocatedActions: AllocatedStudyAction[] = [
     subject: 'Matemática',
     estimatedMinutes: 45,
     priorityScore: 90,
+    reasons: [],
     intervalStart: '2026-08-24T15:40:00-03:00',
     intervalEnd: '2026-08-24T16:25:00-03:00',
     allocatedMinutes: 45,
@@ -67,6 +79,7 @@ const allocatedActions: AllocatedStudyAction[] = [
     subject: 'Física',
     estimatedMinutes: 15,
     priorityScore: 80,
+    reasons: [],
     intervalStart: '2026-08-24T17:00:00-03:00',
     intervalEnd: '2026-08-24T17:15:00-03:00',
     allocatedMinutes: 15,
@@ -79,6 +92,7 @@ const allocatedActions: AllocatedStudyAction[] = [
     subject: 'Química',
     estimatedMinutes: 30,
     priorityScore: 70,
+    reasons: [],
     intervalStart: '2026-08-24T18:00:00-03:00',
     intervalEnd: '2026-08-24T18:30:00-03:00',
     allocatedMinutes: 30,
@@ -91,6 +105,7 @@ const allocatedActions: AllocatedStudyAction[] = [
     subject: 'Biologia',
     estimatedMinutes: 20,
     priorityScore: 60,
+    reasons: [],
     intervalStart: '2026-08-24T19:00:00-03:00',
     intervalEnd: '2026-08-24T19:20:00-03:00',
     allocatedMinutes: 20,
@@ -105,6 +120,7 @@ const waitingAction: StudyAction = {
   subject: 'Biologia',
   estimatedMinutes: 30,
   priorityScore: 50,
+  reasons: [],
 };
 
 const prioritizedActions: StudyAction[] = [
@@ -152,6 +168,16 @@ describe('daily plan consistency across views', () => {
       isPersisted: true,
       updateProfile: vi.fn(),
     });
+    masteryHook.mockReturnValue({
+      mastery: [],
+      updateMastery: vi.fn().mockResolvedValue(true),
+      loading: false,
+      syncError: null,
+      isPersisted: true,
+    });
+    goalsHook.mockReturnValue({
+      goals: { primaryGoal: 'Medicina', secondaryGoals: [], boardWeights: [] },
+    });
   });
 
   afterEach(() => {
@@ -166,7 +192,7 @@ describe('daily plan consistency across views', () => {
     ['Sessão', Sessao],
   ])('%s shows the shared effective minutes, first action, and scheduled start', (_name, View) => {
     expect(allocatedActions.every((action, index) => index === 0 || action.intervalStart >= allocatedActions[index - 1].intervalStart)).toBe(true);
-    render(<View />);
+    renderView(<View />);
 
     expect(screen.getByText('250 min')).toBeInTheDocument();
     expect(screen.getAllByText(FIRST_TOPIC).length).toBeGreaterThan(0);
@@ -174,7 +200,7 @@ describe('daily plan consistency across views', () => {
   });
 
   it('Plano removes manual and Calendar-primary controls while retaining warnings and unallocated priorities', () => {
-    render(<Plano />);
+    renderView(<Plano />);
 
     expect(screen.queryByRole('slider')).not.toBeInTheDocument();
     expect(screen.queryByText('Calcular pela agenda do Google')).not.toBeInTheDocument();
@@ -198,18 +224,18 @@ describe('daily plan consistency across views', () => {
       }],
     };
 
-    render(<Sessao />);
+    renderView(<Sessao />);
 
     expect(screen.getAllByText((_content, element) => element?.textContent?.includes('14:40–15:00') ?? false).length).toBeGreaterThan(0);
   });
 
   it('Sessão selects the first allocated action when the loaded daily plan arrives', () => {
     currentPlan = loadingPlan;
-    const rendered = render(<Sessao />);
+    const rendered = renderView(<Sessao />);
     expect(screen.queryByText(FIRST_TOPIC)).not.toBeInTheDocument();
 
     currentPlan = sharedPlan;
-    rendered.rerender(<Sessao />);
+    rendered.rerender(<MemoryRouter><Sessao /></MemoryRouter>);
 
     expect(screen.getAllByText(FIRST_TOPIC).length).toBeGreaterThan(0);
     expect(screen.getByText('20:00')).toBeInTheDocument();

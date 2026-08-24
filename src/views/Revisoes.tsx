@@ -2,12 +2,19 @@ import React, { useMemo, useState } from 'react';
 import { mockTopics } from '../data/mockData';
 import { TopicMastery } from '../types';
 import { useUserMastery } from '../hooks/useUserMastery';
-import { Repeat, CheckCircle2, AlertTriangle, CloudOff, Sparkles } from 'lucide-react';
+import { requestAiText } from '../lib/aiClient';
+import { AiText } from '../components/AiText';
+import { urgencyOf } from '../lib/reviewUrgency';
+import { applyReviewOutcome, qualityFromSelfRating } from '../lib/spacedRepetition';
+import { Repeat, CheckCircle2, AlertTriangle, CloudOff, Sparkles, Frown, Meh, Smile } from 'lucide-react';
 
-function urgencyOf(mastery: TopicMastery): number {
-  const daysSinceReview = (Date.now() - new Date(mastery.lastReviewed).getTime()) / 86400000;
-  return Math.min(daysSinceReview * 5 + mastery.uncertainty * 50 + mastery.errorSignals * 8, 100);
-}
+type SelfRating = 'fraco' | 'mediano' | 'forte';
+
+const RATING_OPTIONS: { value: SelfRating; label: string; icon: typeof Frown; classes: string }[] = [
+  { value: 'fraco', label: 'Esqueci', icon: Frown, classes: 'bg-rose-50 dark:bg-rose-900/30 text-rose-700 dark:text-rose-300 hover:bg-rose-100 dark:hover:bg-rose-900/50' },
+  { value: 'mediano', label: 'Foi difícil', icon: Meh, classes: 'bg-amber-50 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 hover:bg-amber-100 dark:hover:bg-amber-900/50' },
+  { value: 'forte', label: 'Lembrei fácil', icon: Smile, classes: 'bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 hover:bg-emerald-100 dark:hover:bg-emerald-900/50' },
+];
 
 const SUBJECT_COLORS: Record<string, string> = {
   Biologia: 'text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-900/20',
@@ -18,6 +25,8 @@ const SUBJECT_COLORS: Record<string, string> = {
   História: 'text-orange-600 dark:text-orange-400 bg-orange-50 dark:bg-orange-900/20',
   Português: 'text-violet-600 dark:text-violet-400 bg-violet-50 dark:bg-violet-900/20',
   Inglês: 'text-sky-600 dark:text-sky-400 bg-sky-50 dark:bg-sky-900/20',
+  Filosofia: 'text-stone-600 dark:text-stone-400 bg-stone-50 dark:bg-stone-900/20',
+  Sociologia: 'text-purple-600 dark:text-purple-400 bg-purple-50 dark:bg-purple-900/20',
 };
 
 export default function Revisoes() {
@@ -37,13 +46,13 @@ export default function Revisoes() {
 
   const pendingToday = queue.filter((entry) => entry.urgency > 50).length;
 
-  const markReviewed = (topicId: string) => {
+  // Repetição espaçada de verdade (SM-2 — ver spacedRepetition.ts): a
+  // autoavaliação da lembrança decide o próximo intervalo, não um simples
+  // "revisado" genérico — lembrar fácil adia bastante a próxima revisão,
+  // lembrar com dificuldade adia pouco, e esquecer reseta o ciclo.
+  const rateReview = (topicId: string, rating: SelfRating) => {
     updateMastery((prev: TopicMastery[]) =>
-      prev.map((m) =>
-        m.topicId === topicId
-          ? { ...m, lastReviewed: new Date().toISOString(), uncertainty: Math.max(m.uncertainty - 0.2, 0.05) }
-          : m
-      )
+      prev.map((m) => (m.topicId === topicId ? { ...m, ...applyReviewOutcome(m, qualityFromSelfRating(rating)) } : m))
     );
   };
 
@@ -51,15 +60,8 @@ export default function Revisoes() {
     setLoadingTipFor(mastery.topicId);
     try {
       const daysSinceReview = Math.round((Date.now() - new Date(mastery.lastReviewed).getTime()) / 86400000);
-      const res = await fetch('/api/ai/review-tip', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ topic: topicName, subject, level: mastery.level, daysSinceReview }),
-      });
-      if (res.ok) {
-        const data = await res.json();
-        setTips((prev) => ({ ...prev, [mastery.topicId]: data.text }));
-      }
+      const data = await requestAiText('review-tip', { topic: topicName, subject, level: mastery.level, daysSinceReview });
+      setTips((prev) => ({ ...prev, [mastery.topicId]: data.text }));
     } catch (error) {
       console.error('Failed to fetch review tip:', error);
     } finally {
@@ -75,7 +77,7 @@ export default function Revisoes() {
           Revisões Adaptativas
         </h1>
         <p className="text-zinc-500 dark:text-zinc-400">
-          Fila ordenada por urgência: tempo desde a última revisão, incerteza e sinais de erro recentes.
+          Fila ordenada por repetição espaçada: cada tópico tem sua própria data de revisão, que se ajusta pela sua resposta — lembrar fácil adia bastante a próxima, esquecer traz de volta pra amanhã.
         </p>
         {!isPersisted && (
           <p className="flex items-center text-xs text-zinc-400 mt-2">
@@ -129,13 +131,22 @@ export default function Revisoes() {
                     </div>
                     <span className="text-xs text-zinc-500 w-8 text-right">{Math.round(urgency)}%</span>
                   </div>
-                  <button
-                    onClick={() => markReviewed(mastery.topicId)}
-                    className="flex items-center px-3 py-2 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 rounded-lg text-sm font-medium hover:bg-indigo-100 dark:hover:bg-indigo-900/50 transition-colors"
-                  >
-                    <CheckCircle2 className="w-4 h-4 mr-1.5" />
-                    Revisado
-                  </button>
+                </div>
+              </div>
+
+              <div className="mt-4 pt-4 border-t border-zinc-100 dark:border-zinc-800">
+                <p className="text-xs text-zinc-500 mb-2">Sem olhar o material: você lembrou desse tópico agora?</p>
+                <div className="flex gap-2">
+                  {RATING_OPTIONS.map(({ value, label, icon: Icon, classes }) => (
+                    <button
+                      key={value}
+                      onClick={() => rateReview(mastery.topicId, value)}
+                      className={`flex-1 flex items-center justify-center px-3 py-2 rounded-lg text-sm font-medium transition-colors ${classes}`}
+                    >
+                      <Icon className="w-4 h-4 mr-1.5" />
+                      {label}
+                    </button>
+                  ))}
                 </div>
               </div>
 
@@ -153,7 +164,7 @@ export default function Revisoes() {
               {tip && (
                 <div className="flex items-start mt-4 p-3 rounded-lg bg-indigo-50 dark:bg-indigo-900/20 text-indigo-800 dark:text-indigo-300 text-sm">
                   <Sparkles className="w-4 h-4 mr-2 mt-0.5 shrink-0" />
-                  <p>{tip}</p>
+                  <AiText text={tip} className="flex-1" />
                 </div>
               )}
             </div>

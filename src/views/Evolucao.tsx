@@ -16,7 +16,9 @@ import {
 } from 'recharts';
 import { mockTopics } from '../data/mockData';
 import { useUserMastery } from '../hooks/useUserMastery';
-import { TrendingUp, Trophy, AlertCircle, Gauge, CloudOff, Sparkles } from 'lucide-react';
+import { requestAiText } from '../lib/aiClient';
+import { AiText } from '../components/AiText';
+import { TrendingUp, Trophy, AlertCircle, Gauge, CloudOff, Sparkles, ChevronDown } from 'lucide-react';
 
 const SUBJECT_HEX: Record<string, string> = {
   Biologia: '#10b981',
@@ -27,6 +29,8 @@ const SUBJECT_HEX: Record<string, string> = {
   História: '#f97316',
   Português: '#8b5cf6',
   Inglês: '#0ea5e9',
+  Filosofia: '#78716c',
+  Sociologia: '#a855f7',
 };
 
 function ChartTooltip({ active, payload }: any) {
@@ -44,13 +48,20 @@ export default function Evolucao() {
   const { mastery: masteryData, isPersisted } = useUserMastery();
   const [insight, setInsight] = useState<string | null>(null);
   const [loadingInsight, setLoadingInsight] = useState(false);
+  const [expandedTopicId, setExpandedTopicId] = useState<string | null>(null);
 
   const topicRows = useMemo(
     () =>
       mockTopics
         .map((topic) => {
           const mastery = masteryData.find((m) => m.topicId === topic.id);
-          return { name: topic.name, subject: topic.subject, level: mastery?.level ?? 0 };
+          return {
+            topicId: topic.id,
+            name: topic.name,
+            subject: topic.subject,
+            level: mastery?.level ?? 0,
+            chapters: topic.chapters,
+          };
         })
         .sort((a, b) => b.level - a.level),
     [masteryData]
@@ -74,22 +85,16 @@ export default function Evolucao() {
   const weakest = topicRows[topicRows.length - 1];
 
   const fetchInsight = async () => {
+    if (!strongest || !weakest) return;
     setLoadingInsight(true);
     try {
-      const res = await fetch('/api/ai/progress-insight', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          topics: topicRows.map((r) => ({ name: r.name, subject: r.subject, level: r.level })),
-          overallAverage,
-          strongest: strongest?.name,
-          weakest: weakest?.name,
-        }),
+      const data = await requestAiText('progress-insight', {
+        topics: topicRows.map((r) => ({ name: r.name, subject: r.subject, level: r.level })),
+        overallAverage,
+        strongest: strongest.name,
+        weakest: weakest.name,
       });
-      if (res.ok) {
-        const data = await res.json();
-        setInsight(data.text);
-      }
+      setInsight(data.text);
     } catch (error) {
       console.error('Failed to fetch progress insight:', error);
     } finally {
@@ -131,7 +136,7 @@ export default function Evolucao() {
           )}
         </div>
         {insight ? (
-          <p className="text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed mt-3">{insight}</p>
+          <AiText text={insight} className="text-sm text-zinc-600 dark:text-zinc-300 mt-3" />
         ) : (
           <p className="text-sm text-zinc-500 mt-1">
             Peça uma análise personalizada do seu progresso e das suas prioridades para os próximos dias.
@@ -202,23 +207,49 @@ export default function Evolucao() {
       </div>
 
       <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl divide-y divide-zinc-100 dark:divide-zinc-800 overflow-hidden">
-        {topicRows.map((row) => (
-          <div key={row.name} className="p-4 flex items-center justify-between">
-            <div className="flex items-center min-w-0">
-              <span className="w-2 h-2 rounded-full mr-3 shrink-0" style={{ backgroundColor: SUBJECT_HEX[row.subject] ?? '#a1a1aa' }} />
-              <div className="min-w-0">
-                <p className="font-medium truncate">{row.name}</p>
-                <p className="text-xs text-zinc-500">{row.subject}</p>
-              </div>
+        {topicRows.map((row) => {
+          const isExpanded = expandedTopicId === row.topicId;
+          const hasChapters = !!row.chapters?.length;
+          return (
+            <div key={row.topicId}>
+              <button
+                onClick={() => hasChapters && setExpandedTopicId(isExpanded ? null : row.topicId)}
+                className="w-full p-4 flex items-center justify-between text-left"
+              >
+                <div className="flex items-center min-w-0">
+                  <span className="w-2 h-2 rounded-full mr-3 shrink-0" style={{ backgroundColor: SUBJECT_HEX[row.subject] ?? '#a1a1aa' }} />
+                  <div className="min-w-0">
+                    <p className="font-medium truncate">{row.name}</p>
+                    <p className="text-xs text-zinc-500">
+                      {row.subject}
+                      {hasChapters && ` • ${row.chapters!.length} capítulos da apostila`}
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-center shrink-0 ml-4">
+                  <div className="w-32 flex items-center">
+                    <div className="w-full h-1.5 bg-zinc-100 dark:bg-zinc-800 rounded-full overflow-hidden mr-2">
+                      <div className="h-full" style={{ width: `${row.level}%`, backgroundColor: SUBJECT_HEX[row.subject] ?? '#a1a1aa' }} />
+                    </div>
+                    <span className="text-xs text-zinc-500 w-8 text-right">{row.level}%</span>
+                  </div>
+                  {hasChapters && (
+                    <ChevronDown className={`w-4 h-4 text-zinc-400 ml-2 transition-transform ${isExpanded ? 'rotate-180' : ''}`} />
+                  )}
+                </div>
+              </button>
+              {isExpanded && hasChapters && (
+                <div className="px-4 pb-4 pl-8">
+                  <ol className="text-sm text-zinc-600 dark:text-zinc-400 space-y-1 list-decimal list-inside">
+                    {row.chapters!.map((chapter) => (
+                      <li key={chapter}>{chapter}</li>
+                    ))}
+                  </ol>
+                </div>
+              )}
             </div>
-            <div className="flex items-center shrink-0 ml-4 w-32">
-              <div className="w-full h-1.5 bg-zinc-100 dark:bg-zinc-800 rounded-full overflow-hidden mr-2">
-                <div className="h-full" style={{ width: `${row.level}%`, backgroundColor: SUBJECT_HEX[row.subject] ?? '#a1a1aa' }} />
-              </div>
-              <span className="text-xs text-zinc-500 w-8 text-right">{row.level}%</span>
-            </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );

@@ -7,6 +7,7 @@ import { allocateStudyActions } from '../lib/studyActionAllocator';
 import type { AllocatedStudyAction, StudyAction } from '../types';
 import { useUserMastery } from './useUserMastery';
 import { useUserProfile } from './useUserProfile';
+import { useStudentGoals } from './useStudentGoals';
 
 export interface DailyPlanState {
   availability: DailyStudyAvailability | undefined;
@@ -21,10 +22,11 @@ export function useDailyPlan(localDate: string): DailyPlanState {
   const availabilityState = useDailyStudyAvailability(localDate);
   const masteryState = useUserMastery();
   const profileState = useUserProfile();
+  const { goals } = useStudentGoals();
 
   const prioritizedActions = useMemo(
-    () => EfficiencyEngine.rankStudyActions(masteryState.mastery, mockTopics, profileState.profile),
-    [masteryState.mastery, profileState.profile],
+    () => EfficiencyEngine.rankStudyActions(masteryState.mastery, mockTopics, profileState.profile, goals),
+    [goals, masteryState.mastery, profileState.profile],
   );
   const allocatedActions = useMemo(
     () => allocateStudyActions(prioritizedActions, availabilityState.availability?.intervals ?? []),

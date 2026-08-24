@@ -1,0 +1,146 @@
+[
+  {
+    "id": "bio_estrutura_fisio_celular",
+    "name": "Estrutura e Fisiologia Celular",
+    "chapters": [
+      "Origem da Vida e as Primeiras Células",
+      "Composição Química Celular: Compostos Inorgânicos",
+      "Composição Química Celular: Carboidratos e Lipídios",
+      "Composição Química Celular: Proteínas e sua Função Estrutural",
+      "Membranas Celulares",
+      "Citoplasma: Estrutura e Componentes I",
+      "Citoplasma: Estrutura e Componentes II",
+      "Núcleo Celular"
+    ]
+  },
+  {
+    "id": "bio_metabolismo_energetico",
+    "name": "Metabolismo Energético",
+    "chapters": [
+      "Proteínas: Enzimas",
+      "Bioenergética: Fermentação e Respiração",
+      "Bioenergética: Fotossíntese e Quimiossíntese"
+    ]
+  },
+  {
+    "id": "bio_codigo_genetico_sintese",
+    "name": "Código Genético e Síntese Proteica",
+    "chapters": [
+      "Ácidos Nucleicos",
+      "Divisão Celular",
+      "Mutações Cromossômicas e Gametogênese"
+    ]
+  },
+  {
+    "id": "bio_biotecnologia",
+    "name": "Biotecnologia",
+    "chapters": [
+      "Biotecnologia"
+    ]
+  },
+  {
+    "id": "bio_genetica",
+    "name": "Genética",
+    "chapters": [
+      "Introdução à Genética",
+      "Alelos Múltiplos e Herança dos Grupos Sanguíneos",
+      "Herança Sexual",
+      "Segunda Lei de Mendel",
+      "Segunda Lei de Mendel e Interação Gênica",
+      "Ligação Gênica",
+      "Mutações Gênicas"
+    ]
+  },
+  {
+    "id": "bio_evolucao",
+    "name": "Evolução",
+    "chapters": [
+      "Evolução Biológica: Construção Histórica",
+      "Mecanismos da Evolução Biológica"
+    ]
+  },
+  {
+    "id": "bio_ecologia",
+    "name": "Ecologia",
+    "chapters": [
+      "Introdução à Ecologia",
+      "Dinâmica de Populações",
+      "Espécies Invasoras e Controle Biológico",
+      "Sucessão Ecológica",
+      "Ciclos Biogeoquímicos – Ciclo do Carbono",
+      "Ciclo do Nitrogênio",
+      "Ciclo Hidrológico e Poluição da Água",
+      "Eutrofização",
+      "Poluição do Ar",
+      "Biomagnificação",
+      "Poluição: Aquecimento Global, POPs e Biorremediação",
+      "Biomas Brasileiros"
+    ]
+  },
+  {
+    "id": "bio_zoologia",
+    "name": "Zoologia",
+    "chapters": [
+      "Classificação Biológica, Nomenclatura Científica e Noções de Sistemática Filogenética",
+      "Protozoários e Protozooses",
+      "Poríferos e Cnidários",
+      "Arquitetura Corporal dos Animais e o Filo dos Platelmintos e dos Nematódeos",
+      "Moluscos",
+      "Anelídeos",
+      "Artrópodes: Insetos, Crustáceos e Miriápodes",
+      "Artrópodes: Aracnídeos",
+      "Equinodermos",
+      "Introdução aos Cordados e os Peixes",
+      "Cordados Tetrápodes"
+    ]
+  },
+  {
+    "id": "bio_botanica",
+    "name": "Botânica",
+    "chapters": [
+      "Fungos",
+      "Algas",
+      "Ciclos de Vida",
+      "Plantas Terrestres I: Briófitas e Pteridófitas",
+      "Plantas Terrestres II: Gimnospermas e Angiospermas"
+    ]
+  },
+  {
+    "id": "bio_microbiologia",
+    "name": "Microbiologia e Virologia",
+    "chapters": [
+      "Procariotos",
+      "Vírus"
+    ]
+  },
+  {
+    "id": "bio_fisio_animal",
+    "name": "Fisiologia Animal e Humana",
+    "chapters": [
+      "Embriologia Animal",
+      "Fisiologia da Sustentação e da Locomoção",
+      "Fisiologia da Digestão",
+      "Sangue e Imunologia",
+      "Coração e Vasos Sanguíneos",
+      "Fisiologia da Respiração",
+      "Fisiologia da Excreção",
+      "Fisiologia da Coordenação Nervosa I",
+      "Coordenação Nervosa II",
+      "Sistemas Sensoriais: Visão e Audição",
+      "Coordenação Endócrina I",
+      "Coordenação Endócrina II",
+      "Reprodução Humana e Métodos Contraceptivos"
+    ]
+  },
+  {
+    "id": "bio_fisio_vegetal",
+    "name": "Fisiologia Vegetal",
+    "chapters": [
+      "Histologia e Morfologia Vegetal",
+      "Morfofisiologia Vegetal: Caules e Folhas",
+      "Traqueófitas: Transpiração e Reposição Rápida de Água",
+      "Fisiologia Vegetal: Transporte no Floema",
+      "Fisiologia Vegetal: Hormônios Vegetais"
+    ]
+  }
+]

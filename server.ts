@@ -1,23 +1,81 @@
+import 'dotenv/config';
 import express from 'express';
 import path from 'path';
 import { createServer as createViteServer } from 'vite';
 import cookieParser from 'cookie-parser';
-import { GoogleGenAI, ThinkingLevel } from '@google/genai';
 import { google } from 'googleapis';
+import { createAiProvider } from './server/ai/provider';
+import { createAiDailyLimit, createAiRateLimit } from './server/ai/rateLimit';
+import { createAiRouter } from './server/ai/routes';
+import { AiService, parseAiTimeout } from './server/ai/service';
+import { firebaseAuthMiddleware, getFirebaseAdminApp, requireAdmin } from './server/auth/firebaseAuth';
+import { getFirestore } from 'firebase-admin/firestore';
+import { FirestoreDailyQuotaStore } from './server/ai/firestoreQuotaStore';
+import { FirestoreAiMetricsRecorder } from './server/ai/metrics';
+import { FirestoreApostilaReferenceStore } from './server/ai/apostilaReferenceStore';
+import { createAdminRouter } from './server/admin/routes';
+import { createApostilaIngestRouter } from './server/admin/apostilaIngestRoutes';
+import { createLiteraryAdminRouter } from './server/literary/literaryAdminRoutes';
+import { createContentAdminRouter } from './server/content/contentAdminRoutes';
+import { createPushRouter, createReviewReminderRouter } from './server/push/routes';
+import { configureWebPush, loadVapidConfig } from './server/push/webPush';
+import { createPodcastAudioRouter } from './server/podcast/routes';
+import { GeminiTtsService } from './server/podcast/ttsService';
 import { buildCalendarEventsQuery } from './serverCalendar';
 
 const app = express();
 const PORT = Number(process.env.PORT) || 3000;
 
-app.use(express.json());
+// Precisa vir ANTES do parser global de 64kb abaixo: como esse último não
+// tem path (roda pra toda rota), ele rejeitaria o corpo grande antes mesmo
+// de chegar no parser de 20mb desta rota se estivesse depois. Montada aqui,
+// ela responde e encerra a requisição antes do parser global ser atingido.
+app.use('/api/internal', express.json({ limit: '20mb' }), createApostilaIngestRouter(getFirestore(getFirebaseAdminApp()), process.env.APOSTILA_INGEST_SECRET));
+
+// Feature flag literary_works (seção 13 do roteiro de Obras Obrigatórias):
+// enquanto não estiver pronta pra uso real, as rotas nem existem — nada de
+// endpoint "desligado" respondendo 404 de propósito, ele simplesmente não
+// é montado.
+if (process.env.LITERARY_WORKS_ENABLED === 'true') {
+  // Mesmo motivo do /api/internal acima: PDFs de obra em base64 passam
+  // longe dos 64kb do parser global — precisa do parser de 50mb próprio,
+  // montado antes.
+  app.use('/api/admin/literary', express.json({ limit: '50mb' }), firebaseAuthMiddleware(), requireAdmin, createLiteraryAdminRouter(getFirestore(getFirebaseAdminApp())));
+}
+
+app.use(express.json({ limit: '64kb' }));
 app.use(cookieParser());
 
-// Initialize Gemini Client
-const ai = process.env.GEMINI_API_KEY ? new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY }) : null;
-const GEMINI_MODEL = 'gemini-3.1-pro-preview';
-// All AI features use the model's deepest reasoning level — these are tutoring
-// responses where answer quality matters more than shaving off latency.
-const DEEP_THINKING_CONFIG = { thinkingConfig: { thinkingLevel: ThinkingLevel.HIGH } };
+// Provider-neutral AI layer. Set AI_PROVIDER=omniroute to migrate without
+// changing the public API routes; Gemini remains available as a fallback.
+// Secrets stay server-side and task routing is resolved by OmniRoute between
+// the JUJU fast and deep combos.
+const aiProvider = createAiProvider();
+const aiService = new AiService(aiProvider, parseAiTimeout(process.env.AI_TIMEOUT_MS));
+const dailyQuotaStore = process.env.AI_QUOTA_STORE === 'firestore'
+  ? new FirestoreDailyQuotaStore(getFirestore(getFirebaseAdminApp()))
+  : undefined;
+const aiMetrics = process.env.AI_METRICS_STORE === 'firestore'
+  ? new FirestoreAiMetricsRecorder(getFirestore(getFirebaseAdminApp()))
+  : undefined;
+// Grounding factual/terminológico com trechos reais das apostilas do
+// cursinho da aluna (ver scripts/split-chapters.py e
+// scripts/upload-apostila-references.ts) — opcional, cai de volta pro
+// conhecimento geral do modelo quando não configurado ou sem cobertura
+// pro tópico pedido.
+const apostilaReferences = process.env.AI_APOSTILA_REFERENCES === 'firestore'
+  ? new FirestoreApostilaReferenceStore(getFirestore(getFirebaseAdminApp()))
+  : undefined;
+
+// Natural-voice podcast narration. Reuses the same GEMINI_API_KEY already
+// configured for text generation — Gemini's TTS models bill separately but
+// through the same account, and the daily AI quota below caps the cost.
+const podcastTtsService = new GeminiTtsService(process.env.GEMINI_API_KEY, process.env.GEMINI_TTS_MODEL);
+
+// Web Push for review reminders. Both routers still mount even when VAPID
+// isn't configured yet; they just respond 503 until the keys are set.
+const vapidConfig = loadVapidConfig();
+if (vapidConfig) configureWebPush(vapidConfig);
 
 // OAuth config
 const GOOGLE_CLIENT_ID = process.env.GOOGLE_CLIENT_ID;
@@ -38,43 +96,25 @@ app.get('/api/health', (req, res) => res.json({ status: 'ok' }));
 
 // Fetch events from Calendar
 app.get('/api/calendar/events', async (req, res) => {
-  const date = req.query.date;
-  if (typeof date !== 'string') {
-    return res.status(400).json({ error: 'A valid date in YYYY-MM-DD format is required' });
-  }
-
-  let query;
-  try {
-    query = buildCalendarEventsQuery(date);
-  } catch {
-    return res.status(400).json({ error: 'A valid date in YYYY-MM-DD format is required' });
-  }
-
   const token = req.headers.authorization?.split(' ')[1];
   if (!token) {
     return res.status(401).json({ error: 'No token provided' });
   }
   
   try {
+    const localDate = typeof req.query.date === 'string' ? req.query.date : '';
+    const query = buildCalendarEventsQuery(localDate);
     const oauth2Client = new google.auth.OAuth2();
     oauth2Client.setCredentials({ access_token: token });
     
     const calendar = google.calendar({ version: 'v3', auth: oauth2Client });
     const response = await calendar.events.list(query);
     
-    res.json({
-      events: (response.data.items || []).map((event) => ({
-        id: event.id || '',
-        summary: event.summary || '',
-        start: event.start || {},
-        end: event.end || {},
-        transparency: event.transparency || 'opaque',
-        status: event.status || 'confirmed',
-      })),
-    });
+    res.json({ events: response.data.items || [] });
   } catch (error) {
     console.error('Calendar Fetch Error:', error);
-    res.status(500).json({ error: 'Failed to fetch events' });
+    const status = error instanceof Error && error.message === 'Invalid local date' ? 400 : 500;
+    res.status(status).json({ error: status === 400 ? 'Invalid date' : 'Failed to fetch events' });
   }
 });
 
@@ -103,305 +143,24 @@ app.get('/api/drive/files', async (req, res) => {
   }
 });
 
-// AI Routes
-app.post('/api/ai/socratic', async (req, res) => {
-  if (!ai) {
-    return res.status(500).json({ error: 'Gemini API not configured.' });
-  }
-  
-  try {
-    const { question, topic, history } = req.body;
-    
-    let prompt = `Você é o JUJU, um Tutor Socrático especializado no vestibular de Medicina.\n`;
-    prompt += `Seu objetivo não é dar a resposta pronta, mas guiar o aluno através de perguntas reflexivas para que ele chegue à resposta sozinho.\n`;
-    prompt += `Tópico: ${topic}\n`;
-    prompt += `Dúvida do aluno: ${question}\n\n`;
-    prompt += `Responda de forma concisa, direta, orientada a prova, em português do Brasil.\n`;
-    
-    const response = await ai.models.generateContent({
-      model: GEMINI_MODEL,
-      contents: prompt,
-      config: DEEP_THINKING_CONFIG,
-    });
-    
-    res.json({ text: response.text });
-  } catch (error) {
-    console.error('AI Error:', error);
-    res.status(500).json({ error: 'Falha ao processar solicitação de IA' });
-  }
-});
-
-app.post('/api/ai/error-hypothesis', async (req, res) => {
-  if (!ai) {
-    return res.status(500).json({ error: 'Gemini API not configured.' });
-  }
-
-  try {
-    const { topic, subject, errorType, notes } = req.body;
-
-    let prompt = `Você é o JUJU, um tutor especialista em diagnosticar erros de estudantes de vestibular de Medicina.\n`;
-    prompt += `Um aluno registrou um erro com os seguintes dados:\n`;
-    prompt += `Tópico: ${topic} (${subject})\n`;
-    prompt += `Categoria do erro: ${errorType}\n`;
-    prompt += `Relato do aluno sobre o que aconteceu: ${notes}\n\n`;
-    prompt += `Gere uma hipótese curta e objetiva (2-3 frases) sobre a causa raiz provável desse erro, `;
-    prompt += `e uma sugestão prática de como evitá-lo da próxima vez. Responda em português do Brasil, sem saudação.`;
-
-    const response = await ai.models.generateContent({
-      model: GEMINI_MODEL,
-      contents: prompt,
-      config: DEEP_THINKING_CONFIG,
-    });
-
-    res.json({ text: response.text });
-  } catch (error) {
-    console.error('AI Error:', error);
-    res.status(500).json({ error: 'Falha ao processar solicitação de IA' });
-  }
-});
-
-app.post('/api/ai/question-explanation', async (req, res) => {
-  if (!ai) {
-    return res.status(500).json({ error: 'Gemini API not configured.' });
-  }
-
-  try {
-    const { prompt: questionPrompt, subject, selectedAnswer, correctAnswer, isCorrect, baseExplanation } = req.body;
-
-    let prompt = `Você é o JUJU, um tutor especialista em vestibular de Medicina.\n`;
-    prompt += `Um aluno respondeu a seguinte questão de ${subject}:\n`;
-    prompt += `"${questionPrompt}"\n\n`;
-    prompt += `Resposta correta: ${correctAnswer}\n`;
-    prompt += `Resposta escolhida pelo aluno: ${selectedAnswer}\n`;
-    prompt += `O aluno acertou? ${isCorrect ? 'Sim' : 'Não'}\n`;
-    prompt += `Explicação padrão já mostrada ao aluno: ${baseExplanation}\n\n`;
-    prompt += `Gere uma explicação mais aprofundada e personalizada (4-6 frases) que vá além da explicação padrão: `;
-    prompt += `explore o raciocínio conceitual, e se o aluno errou, aponte possivelmente onde o raciocínio dele desviou. `;
-    prompt += `Responda em português do Brasil, direto ao ponto, sem saudação.`;
-
-    const response = await ai.models.generateContent({
-      model: GEMINI_MODEL,
-      contents: prompt,
-      config: DEEP_THINKING_CONFIG,
-    });
-
-    res.json({ text: response.text });
-  } catch (error) {
-    console.error('AI Error:', error);
-    res.status(500).json({ error: 'Falha ao processar solicitação de IA' });
-  }
-});
-
-const BACKLOG_EXERCISE_INSTRUCTIONS: Record<string, string> = {
-  explain_steps: 'Apresente um problema típico desse tópico já resolvido, com os passos numerados, mas SEM explicar o porquê de cada passo — apenas a operação/ação de cada um. Termine pedindo explicitamente ao aluno: "Explique, com suas palavras, por que cada passo abaixo é válido e qual princípio ele usa."',
-  fill_gap: 'Apresente um problema típico desse tópico com a resolução iniciada passo a passo, mas OMITA o último passo (ou um passo intermediário decisivo) da resolução. Termine com a pergunta direta: "Qual é o passo que falta aqui, e por quê?"',
-  solve: 'Crie uma questão nova e direta desse tópico, no nível de vestibular de Medicina de alta concorrência (Fuvest, Unicamp, Unesp, Famerp, Unifesp), pedindo para o aluno resolver sozinho, mostrando o raciocínio completo.',
-  solve_variant: 'Crie uma questão desse tópico diferente de uma questão-base típica — mude a representação (texto, gráfico descrito, tabela) ou combine com um subtópico próximo/relacionado — pedindo para o aluno resolver mostrando o raciocínio completo.',
-  discursive: 'Crie uma questão discursiva no formato de 2ª fase de vestibular (Fuvest, Unicamp, Unesp, Famerp ou Unifesp), com enunciado completo, podendo ter sub-itens (a, b, c), pedindo resposta discursiva completa.',
-};
-
-app.post('/api/ai/backlog-exercise', async (req, res) => {
-  if (!ai) {
-    return res.status(500).json({ error: 'Gemini API not configured.' });
-  }
-
-  try {
-    const { topic, subject, mode } = req.body;
-    const instruction = BACKLOG_EXERCISE_INSTRUCTIONS[mode] ?? BACKLOG_EXERCISE_INSTRUCTIONS.solve;
-
-    let prompt = `Você é o JUJU, um tutor especialista em vestibular de Medicina.\n`;
-    prompt += `Tópico: ${topic} (${subject}).\n\n`;
-    prompt += `${instruction}\n\n`;
-    prompt += `Mostre apenas o exercício em si (enunciado e, quando aplicável, a resolução parcial e a pergunta final) — não dê a resposta completa nem revele o que foi omitido. `;
-    prompt += `Responda em português do Brasil, sem saudação.`;
-
-    const response = await ai.models.generateContent({
-      model: GEMINI_MODEL,
-      contents: prompt,
-      config: DEEP_THINKING_CONFIG,
-    });
-
-    res.json({ text: response.text });
-  } catch (error) {
-    console.error('AI Error:', error);
-    res.status(500).json({ error: 'Falha ao processar solicitação de IA' });
-  }
-});
-
-app.post('/api/ai/backlog-correction', async (req, res) => {
-  if (!ai) {
-    return res.status(500).json({ error: 'Gemini API not configured.' });
-  }
-
-  try {
-    const { topic, subject, exercise, studentAnswer, groundingAnswer } = req.body;
-
-    let prompt = `Você é o JUJU, um corretor especialista em vestibular de Medicina.\n`;
-    prompt += `Tópico: ${topic} (${subject}).\n\n`;
-    prompt += `Exercício proposto ao aluno:\n"${exercise}"\n\n`;
-    if (groundingAnswer) {
-      prompt += `Informação de referência sobre a resposta correta (use isso para embasar sua correção):\n${groundingAnswer}\n\n`;
-    } else {
-      prompt += `Primeiro, resolva mentalmente o exercício para determinar a resposta ou abordagem correta antes de corrigir.\n\n`;
-    }
-    prompt += `Resposta do aluno:\n"${studentAnswer}"\n\n`;
-    prompt += `Avalie a resposta do aluno: aponte o que está correto, o que está faltando ou errado, e dê uma avaliação qualitativa clara ao final (Fraco, Mediano ou Forte). `;
-    prompt += `Seja específico e direto, como um corretor de banca faria. Responda em português do Brasil, sem saudação.`;
-
-    const response = await ai.models.generateContent({
-      model: GEMINI_MODEL,
-      contents: prompt,
-      config: DEEP_THINKING_CONFIG,
-    });
-
-    res.json({ text: response.text });
-  } catch (error) {
-    console.error('AI Error:', error);
-    res.status(500).json({ error: 'Falha ao processar solicitação de IA' });
-  }
-});
-
-app.post('/api/ai/discursive-feedback', async (req, res) => {
-  if (!ai) {
-    return res.status(500).json({ error: 'Gemini API not configured.' });
-  }
-
-  try {
-    const { board, subject, prompt: questionPrompt, modelAnswer, studentAnswer } = req.body;
-
-    let prompt = `Você é o JUJU, um corretor especialista em questões discursivas de 2ª fase de vestibular de Medicina (banca: ${board}).\n`;
-    prompt += `Questão de ${subject}:\n"${questionPrompt}"\n\n`;
-    prompt += `Pontos-chave esperados na resposta:\n${(modelAnswer as string[]).map((m: string) => `- ${m}`).join('\n')}\n\n`;
-    prompt += `Resposta do aluno:\n"${studentAnswer}"\n\n`;
-    prompt += `Avalie a resposta do aluno comparando com os pontos-chave esperados. Aponte o que foi bem coberto, `;
-    prompt += `o que está faltando ou incompleto, e erros conceituais se houver — como um corretor de banca faria. `;
-    prompt += `Termine com uma avaliação qualitativa clara (Fraco, Mediano ou Forte). `;
-    prompt += `Responda em português do Brasil, de forma direta e específica, sem saudação.`;
-
-    const response = await ai.models.generateContent({
-      model: GEMINI_MODEL,
-      contents: prompt,
-      config: DEEP_THINKING_CONFIG,
-    });
-
-    res.json({ text: response.text });
-  } catch (error) {
-    console.error('AI Error:', error);
-    res.status(500).json({ error: 'Falha ao processar solicitação de IA' });
-  }
-});
-
-app.post('/api/ai/podcast-script', async (req, res) => {
-  if (!ai) {
-    return res.status(500).json({ error: 'Gemini API not configured.' });
-  }
-
-  try {
-    const { title, subject, topic } = req.body;
-
-    let prompt = `Você é o roteirista do Podcast JUJU, um podcast de revisão para vestibular de Medicina.\n`;
-    prompt += `Escreva um roteiro de narração (150 a 250 palavras) sobre o episódio "${title}", `;
-    prompt += `do tema ${topic} (${subject}).\n`;
-    prompt += `O texto será lido em voz alta por um narrador, então escreva em prosa corrida, tom didático e envolvente, `;
-    prompt += `como se estivesse explicando o assunto para o aluno durante um trajeto de carro. `;
-    prompt += `Não use marcações, listas ou markdown — apenas o texto puro do roteiro, em português do Brasil.`;
-
-    const response = await ai.models.generateContent({
-      model: GEMINI_MODEL,
-      contents: prompt,
-      config: DEEP_THINKING_CONFIG,
-    });
-
-    res.json({ text: response.text });
-  } catch (error) {
-    console.error('AI Error:', error);
-    res.status(500).json({ error: 'Falha ao processar solicitação de IA' });
-  }
-});
-
-app.post('/api/ai/progress-insight', async (req, res) => {
-  if (!ai) {
-    return res.status(500).json({ error: 'Gemini API not configured.' });
-  }
-
-  try {
-    const { topics, overallAverage, strongest, weakest } = req.body;
-
-    let prompt = `Você é o JUJU, um tutor especialista em vestibular de Medicina que analisa o progresso do aluno.\n`;
-    prompt += `Domínio médio geral: ${overallAverage}/100.\n`;
-    prompt += `Tópico mais forte: ${strongest} (o aluno já domina bem).\n`;
-    prompt += `Tópico que mais precisa de atenção: ${weakest}.\n`;
-    prompt += `Domínio por tópico: ${JSON.stringify(topics)}\n\n`;
-    prompt += `Escreva um diagnóstico curto (3-5 frases) em tom direto e motivador, explicando o que esses números revelam `;
-    prompt += `sobre o padrão de estudo do aluno e qual deve ser a prioridade dos próximos dias. `;
-    prompt += `Responda em português do Brasil, sem saudação, sem markdown.`;
-
-    const response = await ai.models.generateContent({
-      model: GEMINI_MODEL,
-      contents: prompt,
-      config: DEEP_THINKING_CONFIG,
-    });
-
-    res.json({ text: response.text });
-  } catch (error) {
-    console.error('AI Error:', error);
-    res.status(500).json({ error: 'Falha ao processar solicitação de IA' });
-  }
-});
-
-app.post('/api/ai/review-tip', async (req, res) => {
-  if (!ai) {
-    return res.status(500).json({ error: 'Gemini API not configured.' });
-  }
-
-  try {
-    const { topic, subject, level, daysSinceReview } = req.body;
-
-    let prompt = `Você é o JUJU, um tutor especialista em vestibular de Medicina.\n`;
-    prompt += `Um aluno vai revisar agora o tópico "${topic}" (${subject}).\n`;
-    prompt += `Domínio atual estimado: ${level}%. Dias desde a última revisão: ${daysSinceReview}.\n\n`;
-    prompt += `Gere uma dica rápida de revisão (3-4 frases) relembrando os 2-3 conceitos-chave mais importantes desse tópico, `;
-    prompt += `como um lembrete mental antes de praticar. Responda em português do Brasil, direto, sem saudação, sem markdown.`;
-
-    const response = await ai.models.generateContent({
-      model: GEMINI_MODEL,
-      contents: prompt,
-      config: DEEP_THINKING_CONFIG,
-    });
-
-    res.json({ text: response.text });
-  } catch (error) {
-    console.error('AI Error:', error);
-    res.status(500).json({ error: 'Falha ao processar solicitação de IA' });
-  }
-});
-
-app.post('/api/ai/method-example', async (req, res) => {
-  if (!ai) {
-    return res.status(500).json({ error: 'Gemini API not configured.' });
-  }
-
-  try {
-    const { methodName, methodSummary, topic, subject } = req.body;
-
-    let prompt = `Você é o JUJU, um tutor especialista em técnicas de estudo para vestibular de Medicina.\n`;
-    prompt += `Técnica de estudo: ${methodName} — ${methodSummary}\n`;
-    prompt += `Tópico do aluno para aplicar a técnica: ${topic} (${subject})\n\n`;
-    prompt += `Escreva um exemplo curto e concreto (3-4 frases) mostrando exatamente como aplicar essa técnica nesse tópico específico, `;
-    prompt += `como se fosse um passo a passo prático. Responda em português do Brasil, direto, sem saudação, sem markdown.`;
-
-    const response = await ai.models.generateContent({
-      model: GEMINI_MODEL,
-      contents: prompt,
-      config: DEEP_THINKING_CONFIG,
-    });
-
-    res.json({ text: response.text });
-  } catch (error) {
-    console.error('AI Error:', error);
-    res.status(500).json({ error: 'Falha ao processar solicitação de IA' });
-  }
-});
+// AI routes preserve their public paths and `{ text }` response contract.
+app.use('/api/ai', firebaseAuthMiddleware(), createAiRateLimit(), createAiDailyLimit({ store: dailyQuotaStore }), createAiRouter(aiService, aiMetrics, apostilaReferences));
+// Shares the AI rate limit and daily quota store so narrated playback counts
+// against the same per-user budget as every other AI feature in the app.
+app.use('/api/podcast-audio', firebaseAuthMiddleware(), createAiRateLimit(), createAiDailyLimit({ store: dailyQuotaStore }), createPodcastAudioRouter(podcastTtsService));
+app.use('/api/admin', firebaseAuthMiddleware(), requireAdmin, createAdminRouter(getFirestore(getFirebaseAdminApp())));
+// Painel /admin/conteudo: questões, métodos de estudo e episódios de
+// podcast, antes hardcoded em src/data/mockData.ts, agora administráveis
+// sem deploy (ver server/content/contentAdminRoutes.ts).
+app.use('/api/admin/content', firebaseAuthMiddleware(), requireAdmin, createContentAdminRouter(getFirestore(getFirebaseAdminApp())));
+// Sem login de usuário — protegida só pelo segredo compartilhado
+// (x-ingest-secret), pra permitir subir referências de apostila direto
+// pra produção a partir do pipeline local (scripts/split-chapters.py).
+// Corpo maior que o limite global de 64kb porque o texto extraído de
+// uma matéria inteira passa de 1MB.
+app.use('/api/internal', express.json({ limit: '20mb' }), createApostilaIngestRouter(getFirestore(getFirebaseAdminApp()), process.env.APOSTILA_INGEST_SECRET));
+app.use('/api/push', createPushRouter(getFirestore(getFirebaseAdminApp()), vapidConfig?.publicKey, firebaseAuthMiddleware()));
+app.use('/api/push', createReviewReminderRouter(getFirestore(getFirebaseAdminApp()), vapidConfig, process.env.CRON_SECRET));
 
 // Vite & Static file serving
 async function startServer() {
@@ -425,3 +184,4 @@ async function startServer() {
 }
 
 startServer();
+

@@ -1,0 +1,83 @@
+[
+  {
+    "id": "soc_formacao_ciencia",
+    "name": "A Formação da Sociologia como Ciência",
+    "chapters": [
+      "O Contexto Histórico do Surgimento da Sociologia",
+      "O que é o Fato Social",
+      "Sociologia e Senso Comum"
+    ]
+  },
+  {
+    "id": "soc_durkheim",
+    "name": "Émile Durkheim e o Fato Social",
+    "chapters": [
+      "Solidariedade Mecânica e Solidariedade Orgânica",
+      "Anomia e Coesão Social",
+      "Educação e Socialização em Durkheim"
+    ]
+  },
+  {
+    "id": "soc_marx_sociologia",
+    "name": "Karl Marx e a Sociologia",
+    "chapters": [
+      "Modo de Produção e Estrutura Social",
+      "Ideologia e Alienação",
+      "A Luta de Classes na Análise Sociológica"
+    ]
+  },
+  {
+    "id": "soc_weber",
+    "name": "Max Weber e a Ação Social",
+    "chapters": [
+      "Tipos de Ação Social",
+      "Dominação e Poder em Weber",
+      "Ética Protestante e o Espírito do Capitalismo"
+    ]
+  },
+  {
+    "id": "soc_cultura_identidade",
+    "name": "Cultura, Identidade e Diversidade",
+    "chapters": [
+      "Cultura e Etnocentrismo",
+      "Identidade e Diferença",
+      "Multiculturalismo e Relativismo Cultural"
+    ]
+  },
+  {
+    "id": "soc_estratificacao_desigualdade",
+    "name": "Estratificação Social e Desigualdade",
+    "chapters": [
+      "Classes Sociais e Mobilidade Social",
+      "Desigualdade Racial no Brasil",
+      "Desigualdade de Gênero"
+    ]
+  },
+  {
+    "id": "soc_trabalho_sociedade",
+    "name": "Trabalho e Sociedade",
+    "chapters": [
+      "Divisão Social do Trabalho",
+      "Transformações no Mundo do Trabalho",
+      "Precarização e Uberização do Trabalho"
+    ]
+  },
+  {
+    "id": "soc_movimentos_sociais",
+    "name": "Movimentos Sociais e Cidadania",
+    "chapters": [
+      "Movimentos Sociais Clássicos e Contemporâneos",
+      "Cidadania e Direitos",
+      "Democracia e Participação Política"
+    ]
+  },
+  {
+    "id": "soc_globalizacao",
+    "name": "Globalização e Sociedade Contemporânea",
+    "chapters": [
+      "Globalização Econômica e Cultural",
+      "O Estado-Nação na Era Global",
+      "A Sociedade da Informação"
+    ]
+  }
+]

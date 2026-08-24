@@ -31,10 +31,12 @@ export function useDiscursiveAttempts() {
     (attempt: DiscursiveAttempt) => {
       setAttempts((prev) => [attempt, ...prev]);
       if (user) {
-        addUserDiscursiveAttempt(user.uid, attempt).catch((error) => {
-          console.error('Failed to save discursive attempt:', error);
-          setSyncError('Não foi possível salvar essa avaliação. Ela pode não persistir.');
-        });
+        addUserDiscursiveAttempt(user.uid, attempt)
+          .then(() => setSyncError(null))
+          .catch((error) => {
+            console.error('Failed to save discursive attempt:', error);
+            setSyncError('Não foi possível salvar essa avaliação. Ela pode não persistir.');
+          });
       }
     },
     [user]

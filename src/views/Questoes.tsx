@@ -1,15 +1,22 @@
 import React, { useMemo, useState } from 'react';
-import { mockQuestions } from '../data/mockData';
+import { mockTopics } from '../data/mockData';
 import { useAuth } from '../context/AuthContext';
 import { useUserMastery } from '../hooks/useUserMastery';
-import { addUserAttempt } from '../lib/userData';
-import { TopicMastery } from '../types';
-import { HelpCircle, CheckCircle2, XCircle, RotateCcw, CloudOff, Sparkles, BadgeCheck, ExternalLink } from 'lucide-react';
+import { useQuestions } from '../hooks/useQuestions';
+import { addUserAttempt, addUserErrorLog } from '../lib/userData';
+import { requestAiText } from '../lib/aiClient';
+import { parseErrorDiagnosis, ErrorDiagnosis } from '../lib/errorDiagnosis';
+import { ERROR_TYPE_LABELS, INTERVENTION_LABELS } from '../lib/errorLabels';
+import { AiText } from '../components/AiText';
+import { TopicMastery, ErrorLog } from '../types';
+import { applyReviewOutcome, qualityFromAnswerCorrectness } from '../lib/spacedRepetition';
+import { HelpCircle, CheckCircle2, XCircle, RotateCcw, CloudOff, Sparkles, BadgeCheck, ExternalLink, Stethoscope, Check } from 'lucide-react';
 
 export default function Questoes() {
   const { user } = useAuth();
   const { updateMastery, isPersisted, syncError } = useUserMastery();
-  const subjects = useMemo(() => ['Todas', ...new Set(mockQuestions.map((q) => q.subject))], []);
+  const { questions: mockQuestions, syncError: questionsSyncError } = useQuestions();
+  const subjects = useMemo(() => ['Todas', ...new Set(mockQuestions.map((q) => q.subject))], [mockQuestions]);
   const [subjectFilter, setSubjectFilter] = useState('Todas');
   const [onlyRealExams, setOnlyRealExams] = useState(false);
   const [index, setIndex] = useState(0);
@@ -17,23 +24,35 @@ export default function Questoes() {
   const [history, setHistory] = useState<{ questionId: string; correct: boolean }[]>([]);
   const [deepExplanation, setDeepExplanation] = useState<string | null>(null);
   const [loadingDeepExplanation, setLoadingDeepExplanation] = useState(false);
+  const [diagnosis, setDiagnosis] = useState<ErrorDiagnosis | null>(null);
+  const [diagnosing, setDiagnosing] = useState(false);
+  const [diagnosisSaved, setDiagnosisSaved] = useState(false);
+  const [diagnosisDismissed, setDiagnosisDismissed] = useState(false);
 
   const pool = useMemo(() => {
     let result = subjectFilter === 'Todas' ? mockQuestions : mockQuestions.filter((q) => q.subject === subjectFilter);
     if (onlyRealExams) result = result.filter((q) => q.examSource);
     return result;
-  }, [subjectFilter, onlyRealExams]);
+  }, [mockQuestions, subjectFilter, onlyRealExams]);
 
   const question = pool.length > 0 ? pool[index % pool.length] : null;
   const answered = selectedOptionId !== null;
   const isCorrect = answered && question !== null && selectedOptionId === question.correctOptionId;
   const correctCount = history.filter((h) => h.correct).length;
 
+  const resetDiagnosisState = () => {
+    setDiagnosis(null);
+    setDiagnosing(false);
+    setDiagnosisSaved(false);
+    setDiagnosisDismissed(false);
+  };
+
   const changeSubject = (subject: string) => {
     setSubjectFilter(subject);
     setIndex(0);
     setSelectedOptionId(null);
     setDeepExplanation(null);
+    resetDiagnosisState();
   };
 
   const toggleRealExams = () => {
@@ -41,6 +60,7 @@ export default function Questoes() {
     setIndex(0);
     setSelectedOptionId(null);
     setDeepExplanation(null);
+    resetDiagnosisState();
   };
 
   const selectOption = (optionId: string) => {
@@ -49,17 +69,14 @@ export default function Questoes() {
     setSelectedOptionId(optionId);
     setHistory((h) => [...h, { questionId: question.id, correct }]);
 
-    // Practicing nudges the topic's mastery: small gain on a correct
-    // answer, a small dip plus an error signal on a wrong one.
+    // Responder uma questão é uma tentativa de recuperação ativa (retrieval
+    // practice — Roediger & Karpicke, 2006), então também alimenta o
+    // cronograma de repetição espaçada do tópico (spacedRepetition.ts), não
+    // só o nível de domínio: acertar adia a próxima revisão programada,
+    // errar traz ela de volta pra amanhã.
     updateMastery((prev: TopicMastery[]) =>
       prev.map((m) =>
-        m.topicId === question.topicId
-          ? {
-              ...m,
-              level: Math.min(100, Math.max(0, m.level + (correct ? 3 : -2))),
-              errorSignals: correct ? Math.max(0, m.errorSignals - 1) : m.errorSignals + 1,
-            }
-          : m
+        m.topicId === question.topicId ? { ...m, ...applyReviewOutcome(m, qualityFromAnswerCorrectness(correct)) } : m
       )
     );
 
@@ -78,6 +95,7 @@ export default function Questoes() {
     setIndex((i) => i + 1);
     setSelectedOptionId(null);
     setDeepExplanation(null);
+    resetDiagnosisState();
   };
 
   const resetSession = () => {
@@ -85,6 +103,55 @@ export default function Questoes() {
     setSelectedOptionId(null);
     setHistory([]);
     setDeepExplanation(null);
+    resetDiagnosisState();
+  };
+
+  const runDiagnosis = async () => {
+    if (!question || !selectedOptionId) return;
+    setDiagnosing(true);
+    try {
+      const topic = mockTopics.find((t) => t.id === question.topicId);
+      const selectedOption = question.options.find((o) => o.id === selectedOptionId);
+      const correctOption = question.options.find((o) => o.id === question.correctOptionId);
+      const data = await requestAiText('error-hypothesis', {
+        topic: topic?.name ?? question.subject,
+        subject: question.subject,
+        questionPrompt: question.prompt,
+        selectedAnswer: selectedOption?.text ?? '',
+        correctAnswer: correctOption?.text ?? '',
+      });
+      setDiagnosis(parseErrorDiagnosis(data.text));
+    } catch (error) {
+      console.error('Failed to diagnose error:', error);
+    } finally {
+      setDiagnosing(false);
+    }
+  };
+
+  const confirmDiagnosis = () => {
+    if (!diagnosis || !question) return;
+    const log: ErrorLog = {
+      id: `err_${Date.now()}`,
+      topicId: question.topicId,
+      questionId: question.id,
+      date: new Date().toISOString(),
+      type: diagnosis.type,
+      notes: 'Diagnosticado a partir de uma questão de prática (JUJU sugeriu, você confirmou).',
+      breakPoint: diagnosis.breakPoint,
+      evidence: diagnosis.evidence,
+      confidence: 'confirmado',
+      proposedIntervention: diagnosis.intervention,
+      interventionStatus: 'pendente',
+    };
+    if (user) {
+      addUserErrorLog(user.uid, log).catch((error) => console.error('Failed to save error log:', error));
+    }
+    setDiagnosisSaved(true);
+  };
+
+  const dismissDiagnosis = () => {
+    setDiagnosis(null);
+    setDiagnosisDismissed(true);
   };
 
   const fetchDeepExplanation = async () => {
@@ -93,22 +160,15 @@ export default function Questoes() {
     try {
       const selectedOption = question.options.find((o) => o.id === selectedOptionId);
       const correctOption = question.options.find((o) => o.id === question.correctOptionId);
-      const res = await fetch('/api/ai/question-explanation', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          prompt: question.prompt,
-          subject: question.subject,
-          selectedAnswer: selectedOption?.text ?? '',
-          correctAnswer: correctOption?.text ?? '',
-          isCorrect,
-          baseExplanation: question.explanation,
-        }),
+      const data = await requestAiText('question-explanation', {
+        prompt: question.prompt,
+        subject: question.subject,
+        selectedAnswer: selectedOption?.text ?? '',
+        correctAnswer: correctOption?.text ?? '',
+        isCorrect,
+        baseExplanation: question.explanation,
       });
-      if (res.ok) {
-        const data = await res.json();
-        setDeepExplanation(data.text);
-      }
+      setDeepExplanation(data.text);
     } catch (error) {
       console.error('Failed to fetch deep explanation:', error);
     } finally {
@@ -131,6 +191,7 @@ export default function Questoes() {
           </p>
         )}
         {syncError && <p className="text-xs text-rose-500 mt-2">{syncError}</p>}
+        {questionsSyncError && <p className="text-xs text-rose-500 mt-2">{questionsSyncError}</p>}
       </header>
 
       <div className="flex items-center justify-between flex-wrap gap-4">
@@ -239,6 +300,55 @@ export default function Questoes() {
           </div>
         )}
 
+        {answered && !isCorrect && !diagnosis && !diagnosisSaved && !diagnosisDismissed && (
+          <button
+            onClick={runDiagnosis}
+            disabled={diagnosing}
+            className="w-full flex items-center justify-center py-2.5 mb-6 border border-rose-200 dark:border-rose-800 text-rose-600 dark:text-rose-400 rounded-xl font-medium text-sm hover:bg-rose-50 dark:hover:bg-rose-900/20 disabled:opacity-50 transition-colors"
+          >
+            <Stethoscope className={`w-4 h-4 mr-2 ${diagnosing ? 'animate-pulse' : ''}`} />
+            {diagnosing ? 'Diagnosticando...' : 'Diagnosticar esse erro'}
+          </button>
+        )}
+
+        {diagnosis && (
+          <div className="p-4 rounded-xl mb-6 bg-zinc-50 dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700 text-sm">
+            <div className="flex items-center gap-2 mb-2">
+              <Stethoscope className="w-4 h-4 text-rose-500 shrink-0" />
+              <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-rose-100 dark:bg-rose-900/30 text-rose-700 dark:text-rose-300">
+                {ERROR_TYPE_LABELS[diagnosis.type]}
+              </span>
+              <span className="text-xs text-zinc-400">hipótese da IA — ainda não confirmada</span>
+            </div>
+            <p className="text-zinc-700 dark:text-zinc-300 mb-2">{diagnosis.breakPoint}</p>
+            {diagnosis.evidence && <p className="text-xs text-zinc-500 mb-3">Evidência: {diagnosis.evidence}</p>}
+            <p className="text-xs font-medium text-zinc-600 dark:text-zinc-400 mb-3">
+              Próximo passo sugerido ({INTERVENTION_LABELS[diagnosis.intervention.type]}): {diagnosis.intervention.description}
+            </p>
+            <div className="flex gap-2">
+              <button
+                onClick={confirmDiagnosis}
+                className="flex-1 py-2 bg-rose-600 hover:bg-rose-700 text-white rounded-lg text-sm font-medium transition-colors"
+              >
+                Registrar no Caderno de Erros
+              </button>
+              <button
+                onClick={dismissDiagnosis}
+                className="flex-1 py-2 border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 rounded-lg text-sm font-medium hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-colors"
+              >
+                Não foi isso
+              </button>
+            </div>
+          </div>
+        )}
+
+        {diagnosisSaved && (
+          <div className="flex items-center p-3 rounded-xl mb-6 text-sm bg-emerald-50 dark:bg-emerald-900/20 text-emerald-700 dark:text-emerald-300">
+            <Check className="w-4 h-4 mr-2 shrink-0" />
+            Registrado no Caderno de Erros.
+          </div>
+        )}
+
         {answered && !deepExplanation && (
           <button
             onClick={fetchDeepExplanation}
@@ -253,7 +363,7 @@ export default function Questoes() {
         {deepExplanation && (
           <div className="flex items-start p-4 rounded-xl mb-6 text-sm leading-relaxed bg-indigo-50 dark:bg-indigo-900/20 text-indigo-800 dark:text-indigo-300">
             <Sparkles className="w-4 h-4 mr-2 mt-0.5 shrink-0" />
-            <p>{deepExplanation}</p>
+            <AiText text={deepExplanation} className="flex-1" />
           </div>
         )}
 

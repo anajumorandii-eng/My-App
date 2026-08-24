@@ -7,5 +7,38 @@ service cloud.firestore {
     match /users/{uid}/{document=**} {
       allow read, write: if request.auth != null && request.auth.uid == uid;
     }
+
+    // Catálogo de Obras Obrigatórias (Fase 2 do roteiro): metadados
+    // estruturais — obra, edição, exigência de banca, unidade de leitura —
+    // não carregam camada de evidência (sem editorialStatus), então
+    // qualquer aluna logada pode ler. Escrita continua só via Admin SDK
+    // (painel /admin/obras), nunca pelo cliente.
+    match /literaryWorks/{workId} {
+      allow read: if request.auth != null;
+
+      match /editions/{editionId} {
+        allow read: if request.auth != null;
+      }
+      match /examRequirements/{requirementId} {
+        allow read: if request.auth != null;
+      }
+      match /units/{unitId} {
+        allow read: if request.auth != null;
+      }
+    }
+
+    // Banco de conteúdo compartilhado (questões, métodos de estudo, episódios
+    // de podcast) — antes vivia hardcoded em src/data/mockData.ts; agora é
+    // lido daqui por qualquer aluna logada. Escrita só via Admin SDK (painel
+    // /admin/conteudo), igual ao catálogo de Obras acima.
+    match /questions/{questionId} {
+      allow read: if request.auth != null;
+    }
+    match /studyMethods/{methodId} {
+      allow read: if request.auth != null;
+    }
+    match /podcastEpisodes/{episodeId} {
+      allow read: if request.auth != null;
+    }
   }
 }

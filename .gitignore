@@ -7,3 +7,7 @@ coverage/
 .env*
 !.env.example
 .worktrees/
+
+# Texto extraído (OCR) das apostilas — material protegido por direitos
+# autorais da Anglo, não deve ficar no histórico do git.
+materiais-extraidos/

@@ -6,12 +6,14 @@ import type { TopicMastery, UserProfile } from '../types';
 const availabilityHook = vi.hoisted(() => vi.fn());
 const masteryHook = vi.hoisted(() => vi.fn());
 const profileHook = vi.hoisted(() => vi.fn());
+const goalsHook = vi.hoisted(() => vi.fn());
 
 vi.mock('../features/availability/useDailyStudyAvailability', () => ({
   useDailyStudyAvailability: availabilityHook,
 }));
 vi.mock('./useUserMastery', () => ({ useUserMastery: masteryHook }));
 vi.mock('./useUserProfile', () => ({ useUserProfile: profileHook }));
+vi.mock('./useStudentGoals', () => ({ useStudentGoals: goalsHook }));
 
 import { useDailyPlan } from './useDailyPlan';
 
@@ -29,10 +31,10 @@ const availability: DailyStudyAvailability = {
   warnings: [{ code: 'calendar-disconnected', message: 'Calendar disconnected' }],
 };
 const mastery: TopicMastery[] = [
-  { topicId: 'bio_01', level: 60, uncertainty: 0.4, lastReviewed: '2026-08-04T12:00:00.000Z', errorSignals: 4 },
-  { topicId: 'bio_02', level: 20, uncertainty: 0.2, lastReviewed: '2026-08-19T12:00:00.000Z', errorSignals: 1 },
-  { topicId: 'bio_03', level: 70, uncertainty: 0.2, lastReviewed: '2026-08-04T12:00:00.000Z', errorSignals: 0 },
-  { topicId: 'bio_04', level: 50, uncertainty: 0.1, lastReviewed: '2026-08-23T12:00:00.000Z', errorSignals: 0 },
+  { topicId: 'bio_estrutura_fisio_celular', level: 60, uncertainty: 0.4, lastReviewed: '2026-08-04T12:00:00.000Z', errorSignals: 4 },
+  { topicId: 'bio_metabolismo_energetico', level: 20, uncertainty: 0.2, lastReviewed: '2026-08-19T12:00:00.000Z', errorSignals: 1 },
+  { topicId: 'bio_codigo_genetico_sintese', level: 70, uncertainty: 0.2, lastReviewed: '2026-08-04T12:00:00.000Z', errorSignals: 0 },
+  { topicId: 'bio_biotecnologia', level: 50, uncertainty: 0.1, lastReviewed: '2026-08-23T12:00:00.000Z', errorSignals: 0 },
 ];
 const profile: UserProfile = {
   targetCourse: 'Medicine',
@@ -71,6 +73,9 @@ describe('useDailyPlan', () => {
       syncError: null,
       isPersisted: true,
     });
+    goalsHook.mockReturnValue({
+      goals: { primaryGoal: 'Medicina', secondaryGoals: [], boardWeights: [] },
+    });
   });
 
   afterEach(() => {
@@ -89,10 +94,10 @@ describe('useDailyPlan', () => {
       isPersisted: true,
     });
     expect(first.result.current.prioritizedActions.map(({ topicId }) => topicId)).toEqual([
-      'bio_01',
-      'bio_02',
-      'bio_03',
-      'bio_04',
+      'bio_estrutura_fisio_celular',
+      'bio_metabolismo_energetico',
+      'bio_codigo_genetico_sintese',
+      'bio_biotecnologia',
     ]);
     expect(first.result.current.allocatedActions.map((action) => ({
       topicId: action.topicId,
@@ -100,12 +105,12 @@ describe('useDailyPlan', () => {
       intervalEnd: action.intervalEnd,
     }))).toEqual([
       {
-        topicId: 'bio_01',
+        topicId: 'bio_estrutura_fisio_celular',
         intervalStart: '2026-08-24T14:40:00.000Z',
         intervalEnd: '2026-08-24T15:00:00.000Z',
       },
       {
-        topicId: 'bio_02',
+        topicId: 'bio_metabolismo_energetico',
         intervalStart: '2026-08-24T15:40:00.000Z',
         intervalEnd: '2026-08-24T16:25:00.000Z',
       },

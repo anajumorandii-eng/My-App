@@ -3,6 +3,7 @@ export interface Topic {
   name: string;
   subject: string;
   prerequisites: string[]; // IDs of other topics
+  chapters?: string[]; // Real chapter titles from the student's apostila, in study order
 }
 
 export interface TopicMastery {
@@ -11,6 +12,13 @@ export interface TopicMastery {
   uncertainty: number; // 0 to 1 (0 = highly certain of level, 1 = low confidence in the level metric)
   lastReviewed: string; // ISO Date
   errorSignals: number; // recent consecutive errors
+  // Estado do algoritmo de repetição espaçada (estilo SM-2 — Wozniak, 1990),
+  // usado por src/lib/spacedRepetition.ts para agendar a próxima revisão.
+  // Opcionais e com fallback sensato em spacedRepetition.ts para não quebrar
+  // dados existentes (mock ou já persistidos) que ainda não os têm.
+  easeFactor?: number; // fator de facilidade — cresce quando a lembrança é fácil, cai quando é difícil
+  intervalDays?: number; // intervalo atual, em dias, até a próxima revisão programada
+  reviewCount?: number; // repetições espaçadas consecutivas bem-sucedidas (zera ao esquecer)
 }
 
 export interface UserProfile {
@@ -20,6 +28,28 @@ export interface UserProfile {
   availableHoursPerWeek: number;
   currentEnergyLevel: 'low' | 'medium' | 'high';
   autonomyIndex: number; // 0 to 100
+  // Optional: absent for profiles saved before this preference existed — treat as "sem preferência".
+  podcastDurationPreference?: 'curto' | 'medio' | 'longo' | null;
+  // Optional: which Gemini TTS voice narrates podcast episodes. Absent/null falls back to the default voice.
+  podcastVoiceName?: string | null;
+}
+
+// A menor ação capaz de testar ou corrigir a lacuna diagnosticada — em
+// ordem crescente de custo, do mais barato ("pergunta de recuperação
+// ativa") ao mais caro ("aula completa", só quando há evidência real de
+// que nada menor resolve).
+export type InterventionType =
+  | 'recuperacao_ativa'
+  | 'questao_guiada'
+  | 'comparacao_conceitos'
+  | 'microbloco_prerequisito'
+  | 'questao_aplicacao'
+  | 'revisao_curta'
+  | 'aula_completa';
+
+export interface Intervention {
+  type: InterventionType;
+  description: string;
 }
 
 export interface ErrorLog {
@@ -27,10 +57,43 @@ export interface ErrorLog {
   topicId: string;
   questionId: string;
   date: string;
-  type: 'conceptual' | 'interpretation' | 'calculation' | 'strategy' | 'attention' | 'time' | 'prerequisite';
+  type:
+    | 'conceptual'
+    | 'concept_confusion'
+    | 'interpretation'
+    | 'data_selection'
+    | 'strategy'
+    | 'calculation'
+    | 'prerequisite'
+    | 'insufficient_justification'
+    | 'time'
+    | 'attention';
   notes: string;
   aiHypothesis?: string;
+  // Ponto específico onde o raciocínio quebrou — não "errou o tópico" (ex:
+  // "não reconheceu que era necessário relacionar seno/cosseno à
+  // decomposição vetorial"). Junto com evidence/confidence, separa fato
+  // observado de hipótese, como as regras pedagógicas exigem.
+  breakPoint?: string;
+  evidence?: string;
+  // 'confirmado' só depois que a estudante valida a hipótese da IA —
+  // antes disso é sempre 'baixa' ou 'media', nunca tratado como fato.
+  confidence?: 'baixa' | 'media' | 'alta' | 'confirmado';
+  proposedIntervention?: Intervention;
+  interventionStatus?: 'pendente' | 'concluida' | 'recusada';
+  outcomeRating?: 'melhorou' | 'sem_mudanca' | 'ainda_dificil';
 }
+
+// Por que uma ação foi recomendada — mostrado em "Por que isso?" no plano diário.
+export type RecommendationReason =
+  | 'dominio_insuficiente'
+  | 'erro_recorrente'
+  | 'revisao_urgente'
+  | 'prerequisito_bloqueado'
+  | 'incidencia_banca_prioritaria'
+  | 'proximidade_prova'
+  | 'tempo_disponivel'
+  | 'fase_revisao_intensificada';
 
 export interface StudyAction {
   id: string;
@@ -40,6 +103,40 @@ export interface StudyAction {
   subject: string;
   estimatedMinutes: number;
   priorityScore: number; // Assigned by Efficiency Engine
+  reasons: RecommendationReason[];
+}
+
+// Peso e foco de fase que a estudante atribui a uma banca já marcada como
+// ativa em UserProfile.targetExams — controla o quanto a proximidade e a
+// incidência daquela banca influenciam o plano, sem deixar a prova mais
+// próxima sequestrar o plano se ela não for prioritária.
+export interface BoardWeight {
+  board: string; // mesmo valor usado em UserProfile.targetExams / VestibularExam.board
+  weight: number; // 0 a 1
+  phaseFocus: '1a-fase' | '2a-fase' | 'ambas';
+}
+
+export interface StudentGoals {
+  primaryGoal: string;
+  secondaryGoals: string[];
+  boardWeights: BoardWeight[];
+}
+
+// Motivo estruturado de discordância de uma recomendação — registrado, mas
+// não altera o plano silenciosamente (a estudante decide, não a IA).
+export type DisagreeReason =
+  | 'ja_estudei'
+  | 'sem_material'
+  | 'nao_consigo_agora'
+  | 'prioridade_errada'
+  | 'quero_outra_atividade';
+
+export interface PlanFeedback {
+  id: string;
+  actionId: string;
+  topicId: string;
+  reason: DisagreeReason;
+  date: string;
 }
 
 export interface AllocatedStudyAction extends StudyAction {
@@ -79,11 +176,37 @@ export interface Question {
   correctOptionId: string;
   explanation: string;
   difficulty: 'easy' | 'medium' | 'hard';
+  // Real chapter title from the topic's apostila (must match one entry in
+  // Topic.chapters for that topicId) — lets the Diagnóstico quiz filter to a
+  // single chapter instead of always drawing from the whole topic. Absent
+  // for older questions not yet reclassified; those fall back to the
+  // full-topic pool.
+  chapter?: string;
   examSource?: {
     board: string; // e.g. 'ENEM', 'FUVEST', 'COMVEST', 'VUNESP', 'FAMERP'
     year: number;
     sourceUrl: string;
   };
+}
+
+// A short, original open-ended prompt scoped to one topic in the curriculum
+// catalog (topicId), used inside the Diagnóstico quiz alongside multiple-
+// choice Questions. Unlike DiscursiveQuestion (real sourced 2ª-fase exam
+// questions, used in Treino de 2ª Fase), these aren't tied to a specific
+// exam/board/year — just a way to test whether the student can actually
+// explain the concept, not just recognize the right option. There's no
+// auto-grading for free text, so the student self-rates against the model
+// answer (same fraco/mediano/forte scale as DiscursiveAttempt).
+export interface TopicDiscursivePrompt {
+  id: string;
+  topicId: string;
+  subject: string;
+  prompt: string;
+  modelAnswer: string;
+  keyPoints: string[];
+  difficulty: 'easy' | 'medium' | 'hard';
+  // Same chapter-filtering purpose as Question.chapter — see that comment.
+  chapter?: string;
 }
 
 export interface PodcastEpisode {
@@ -111,6 +234,7 @@ export interface DiscursiveSubItem {
 
 export interface DiscursiveQuestion {
   id: string;
+  topicId: string;
   board: string;
   year: number;
   subject: string;
@@ -127,6 +251,9 @@ export interface DiscursiveQuestion {
 export interface DiscursiveAttempt {
   id: string;
   questionId: string;
+  // Optional for attempts persisted before discursive training joined the
+  // shared topic mastery and review flow.
+  topicId?: string;
   selfRating: 'fraco' | 'mediano' | 'forte';
   date: string;
 }
@@ -134,6 +261,7 @@ export interface DiscursiveAttempt {
 export interface BacklogItem {
   id: string;
   topicId: string;
+  subtopic?: string; // Real chapter from the topic's apostila, when the student narrowed it down
   state: number; // 0-4: 0 desconhecido, 1 reconhecimento, 2 aplicação guiada, 3 aplicação independente, 4 transferência
   dependencia: number; // 0-3: este tópico destrava outros?
   incidencia: number; // 0-3: aparece muito nas bancas-alvo?
@@ -146,4 +274,76 @@ export interface BacklogItem {
   supportLevel?: number; // 1-5: nível atual na escada de retirada de apoio
   dateAdded: string;
   closedAt?: string;
+  lastOutcome?: 'ainda_dificil' | 'com_ajuda' | 'independente';
+  lastOutcomeAt?: string;
+  lastIndependentSuccessAt?: string;
+}
+
+export interface RecoveryEvidence {
+  id: string;
+  backlogItemId: string;
+  topicId: string;
+  outcome: 'ainda_dificil' | 'com_ajuda' | 'independente';
+  occurredAt: string;
+}
+
+export type StudyVerification = 'nao_consegui' | 'com_ajuda' | 'sem_apoio';
+
+export interface StudySessionRecord {
+  id: string;
+  actionId: string;
+  topicId: string;
+  actionType: StudyAction['type'];
+  plannedMinutes: number;
+  completedMinutes: number;
+  completedAt: string;
+  verification?: StudyVerification;
+  verifiedAt?: string;
+}
+
+export type FlashcardPriority = 'essencial' | 'alta' | 'regular';
+export type FlashcardTrainingType = 'objetivos' | 'discursivos' | 'interpretacao' | 'pegadinhas' | 'padroes_bancas';
+export type FlashcardClassificationOrigin = 'tagged' | 'inherited' | 'fallback';
+
+// Flashcard "de matéria" — vinculado (quando possível) a um Topic real do
+// currículo, pra entrar no mesmo fluxo de revisão por tópico do resto do
+// app. Conteúdo estático (não muda por usuária), carregado sob demanda de
+// /flashcards/{subject-slug}.json — ver src/lib/flashcardContent.ts.
+export interface Flashcard {
+  id: string;
+  subject: string;
+  topicId?: string; // ausente quando o baralho original não bate com nenhum tópico cadastrado
+  chapter: string; // nome original do assunto/capítulo no baralho de origem
+  front: string; // HTML
+  back: string; // HTML
+  tags: string[];
+  source: 'sistema_priorizado' | 'lembre_se';
+  priority?: FlashcardPriority;
+  trainingType?: FlashcardTrainingType;
+  classificationOrigin?: FlashcardClassificationOrigin;
+}
+
+// Estado de repetição espaçada por flashcard (SM-2, mesma base de
+// src/lib/spacedRepetition.ts — ver computeSchedule) — por ser um estado
+// por usuária e por cartão (dezenas de milhares no total), fica numa
+// subcoleção do Firestore indexada por dueDate, não num único documento
+// grande como TopicMastery.
+export interface FlashcardReview {
+  cardId: string;
+  easeFactor: number;
+  intervalDays: number;
+  reviewCount: number;
+  dueDate: string; // ISO Date — próxima revisão programada
+  lastReviewed: string; // ISO Date
+}
+
+// Flashcard de obra obrigatória — seção separada, organizada por obra
+// literária, não pelo currículo de Topic/chapters (ver ObrasObrigatorias.tsx).
+export interface WorkFlashcard {
+  id: string;
+  work: string; // título da obra
+  front: string;
+  back: string;
+  tags: string[];
+  source: 'lembre_se' | 'obras_fuvest';
 }

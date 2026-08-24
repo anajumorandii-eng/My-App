@@ -3,16 +3,15 @@ import { mockErrorLogs, mockTopics } from '../data/mockData';
 import { ErrorLog } from '../types';
 import { useAuth } from '../context/AuthContext';
 import { getUserErrorLogs, addUserErrorLog } from '../lib/userData';
-import { BookX, Plus, Sparkles, CloudOff } from 'lucide-react';
+import { requestAiText } from '../lib/aiClient';
+import { ERROR_TYPE_LABELS as TYPE_LABELS, INTERVENTION_LABELS, CONFIDENCE_LABELS } from '../lib/errorLabels';
+import { AiText } from '../components/AiText';
+import { BookX, Plus, Sparkles, CloudOff, Stethoscope } from 'lucide-react';
 
-const TYPE_LABELS: Record<ErrorLog['type'], string> = {
-  conceptual: 'Conceitual',
-  interpretation: 'Interpretação',
-  calculation: 'Cálculo',
-  strategy: 'Estratégia',
-  attention: 'Atenção',
-  time: 'Tempo',
-  prerequisite: 'Pré-requisito',
+const OUTCOME_LABELS: Record<NonNullable<ErrorLog['outcomeRating']>, string> = {
+  melhorou: 'Melhorou',
+  sem_mudanca: 'Sem mudança',
+  ainda_dificil: 'Ainda difícil',
 };
 
 export default function Erros() {
@@ -81,25 +80,18 @@ export default function Erros() {
 
     setGeneratingHypothesisFor(newLog.id);
     try {
-      const res = await fetch('/api/ai/error-hypothesis', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          topic: topic?.name ?? 'Tópico desconhecido',
-          subject: topic?.subject ?? '',
-          errorType: TYPE_LABELS[newLog.type],
-          notes: newLog.notes,
-        }),
+      const data = await requestAiText('error-hypothesis', {
+        topic: topic?.name ?? 'Tópico desconhecido',
+        subject: topic?.subject ?? 'Matéria desconhecida',
+        errorType: TYPE_LABELS[newLog.type],
+        notes: newLog.notes,
       });
-      if (res.ok) {
-        const data = await res.json();
-        const withHypothesis: ErrorLog = { ...newLog, aiHypothesis: data.text };
-        setLogs((prev) => prev.map((l) => (l.id === newLog.id ? withHypothesis : l)));
-        if (user) {
-          addUserErrorLog(user.uid, withHypothesis).catch((error) => {
-            console.error('Failed to save AI hypothesis:', error);
-          });
-        }
+      const withHypothesis: ErrorLog = { ...newLog, aiHypothesis: data.text };
+      setLogs((prev) => prev.map((l) => (l.id === newLog.id ? withHypothesis : l)));
+      if (user) {
+        addUserErrorLog(user.uid, withHypothesis).catch((error) => {
+          console.error('Failed to save AI hypothesis:', error);
+        });
       }
     } catch (error) {
       console.error('Failed to generate AI hypothesis:', error);
@@ -107,6 +99,22 @@ export default function Erros() {
       setGeneratingHypothesisFor(null);
     }
   };
+
+  const updateLog = (updated: ErrorLog) => {
+    setLogs((prev) => prev.map((l) => (l.id === updated.id ? updated : l)));
+    if (user) {
+      addUserErrorLog(user.uid, updated).catch((error) => {
+        console.error('Failed to update error log:', error);
+        setSyncError('Essa atualização não foi salva na nuvem — pode não persistir.');
+      });
+    }
+  };
+
+  const setInterventionStatus = (log: ErrorLog, interventionStatus: ErrorLog['interventionStatus']) =>
+    updateLog({ ...log, interventionStatus });
+
+  const setOutcomeRating = (log: ErrorLog, outcomeRating: ErrorLog['outcomeRating']) =>
+    updateLog({ ...log, outcomeRating });
 
   return (
     <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
@@ -226,17 +234,74 @@ export default function Erros() {
                 </div>
                 <span className="text-xs text-zinc-400">{new Date(log.date).toLocaleDateString('pt-BR')}</span>
               </div>
-              <p className="text-sm text-zinc-600 dark:text-zinc-300 mb-3">{log.notes}</p>
+              <p className="text-sm text-zinc-600 dark:text-zinc-300 mb-1">{log.breakPoint || log.notes}</p>
+              {log.breakPoint && log.notes && (
+                <p className="text-xs text-zinc-400 mb-3">{log.notes}</p>
+              )}
+              {log.evidence && (
+                <p className="text-xs text-zinc-500 mb-3">Evidência: {log.evidence}</p>
+              )}
+              {log.confidence && (
+                <p className="text-xs text-zinc-400 mb-3">{CONFIDENCE_LABELS[log.confidence]}</p>
+              )}
               {log.aiHypothesis && (
-                <div className="flex items-start p-3 rounded-lg bg-indigo-50 dark:bg-indigo-900/20 text-indigo-800 dark:text-indigo-300 text-sm">
+                <div className="flex items-start p-3 rounded-lg bg-indigo-50 dark:bg-indigo-900/20 text-indigo-800 dark:text-indigo-300 text-sm mb-3">
                   <Sparkles className="w-4 h-4 mr-2 mt-0.5 shrink-0" />
-                  <p>{log.aiHypothesis}</p>
+                  <AiText text={log.aiHypothesis} className="flex-1" />
                 </div>
               )}
               {!log.aiHypothesis && generatingHypothesisFor === log.id && (
-                <div className="flex items-center p-3 rounded-lg bg-zinc-50 dark:bg-zinc-800/50 text-zinc-500 text-sm">
+                <div className="flex items-center p-3 rounded-lg bg-zinc-50 dark:bg-zinc-800/50 text-zinc-500 text-sm mb-3">
                   <Sparkles className="w-4 h-4 mr-2 shrink-0 animate-pulse" />
                   Gerando hipótese com IA...
+                </div>
+              )}
+
+              {log.proposedIntervention && (
+                <div className="p-3 rounded-lg bg-zinc-50 dark:bg-zinc-800/50 text-sm">
+                  <div className="flex items-start mb-2">
+                    <Stethoscope className="w-4 h-4 mr-2 mt-0.5 shrink-0 text-zinc-500" />
+                    <div>
+                      <p className="font-medium text-zinc-700 dark:text-zinc-300">{INTERVENTION_LABELS[log.proposedIntervention.type]}</p>
+                      <p className="text-zinc-500">{log.proposedIntervention.description}</p>
+                    </div>
+                  </div>
+                  {(!log.interventionStatus || log.interventionStatus === 'pendente') && (
+                    <div className="flex gap-2 mt-2">
+                      <button
+                        onClick={() => setInterventionStatus(log, 'concluida')}
+                        className="px-3 py-1.5 rounded-full text-xs font-medium bg-emerald-600 hover:bg-emerald-700 text-white"
+                      >
+                        Marcar como feita
+                      </button>
+                      <button
+                        onClick={() => setInterventionStatus(log, 'recusada')}
+                        className="px-3 py-1.5 rounded-full text-xs font-medium border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-800"
+                      >
+                        Não vou fazer
+                      </button>
+                    </div>
+                  )}
+                  {log.interventionStatus === 'concluida' && !log.outcomeRating && (
+                    <div className="flex gap-2 mt-2 flex-wrap">
+                      <span className="text-xs text-zinc-500 self-center mr-1">Como foi?</span>
+                      {(Object.entries(OUTCOME_LABELS) as [NonNullable<ErrorLog['outcomeRating']>, string][]).map(([value, label]) => (
+                        <button
+                          key={value}
+                          onClick={() => setOutcomeRating(log, value)}
+                          className="px-3 py-1.5 rounded-full text-xs font-medium border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-800"
+                        >
+                          {label}
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                  {log.interventionStatus === 'concluida' && log.outcomeRating && (
+                    <p className="text-xs text-emerald-600 dark:text-emerald-400 mt-2">Feita — {OUTCOME_LABELS[log.outcomeRating]}</p>
+                  )}
+                  {log.interventionStatus === 'recusada' && (
+                    <p className="text-xs text-zinc-400 mt-2">Recusada</p>
+                  )}
                 </div>
               )}
             </div>

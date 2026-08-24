@@ -2,6 +2,10 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { discursiveQuestions, boardExamStructure } from '../data/discursiveQuestions';
 import { secondPhaseProtocols } from '../data/resolutionStrategies';
 import { useDiscursiveAttempts } from '../hooks/useDiscursiveAttempts';
+import { useUserMastery } from '../hooks/useUserMastery';
+import { applyDiscursiveSelfRatingOutcome } from '../lib/spacedRepetition';
+import { requestAiText } from '../lib/aiClient';
+import { AiText } from '../components/AiText';
 import { DiscursiveQuestion } from '../types';
 import {
   ClipboardEdit,
@@ -42,6 +46,7 @@ const RATING_LABELS: { value: Rating; label: string; classes: string }[] = [
 
 export default function Treino2aFase() {
   const { attempts, addAttempt, isPersisted, syncError } = useDiscursiveAttempts();
+  const { updateMastery, syncing: masterySyncing, syncError: masterySyncError } = useUserMastery();
 
   const boards = useMemo(() => ['Todas', ...new Set(discursiveQuestions.map((q) => q.board))], []);
   const [boardFilter, setBoardFilter] = useState('Todas');
@@ -99,14 +104,18 @@ export default function Treino2aFase() {
     : undefined;
 
   const rate = (value: Rating) => {
-    if (!question) return;
+    if (!question || rating) return;
     setRating(value);
     addAttempt({
       id: `disc_attempt_${Date.now()}`,
       questionId: question.id,
+      topicId: question.topicId,
       selfRating: value,
       date: new Date().toISOString(),
     });
+    updateMastery((items) => items.map((item) => item.topicId === question.topicId
+      ? { ...item, ...applyDiscursiveSelfRatingOutcome(item, value) }
+      : item));
     setSavedFlash(true);
     setTimeout(() => setSavedFlash(false), 1500);
   };
@@ -115,21 +124,14 @@ export default function Treino2aFase() {
     if (!question || !answer.trim()) return;
     setLoadingFeedback(true);
     try {
-      const res = await fetch('/api/ai/discursive-feedback', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          board: question.board,
-          subject: question.subject,
-          prompt: fullQuestionText(question),
-          modelAnswer: question.modelAnswer,
-          studentAnswer: answer,
-        }),
+      const data = await requestAiText('discursive-feedback', {
+        board: question.board,
+        subject: question.subject,
+        prompt: fullQuestionText(question),
+        modelAnswer: question.modelAnswer,
+        studentAnswer: answer,
       });
-      if (res.ok) {
-        const data = await res.json();
-        setAiFeedback(data.text);
-      }
+      setAiFeedback(data.text);
     } catch (error) {
       console.error('Failed to fetch AI feedback:', error);
     } finally {
@@ -157,7 +159,7 @@ export default function Treino2aFase() {
             </p>
           )}
         </div>
-        {syncError && <p className="text-xs text-rose-500 mt-2">{syncError}</p>}
+        {(syncError || masterySyncError) && <p className="text-xs text-rose-500 mt-2">{syncError || masterySyncError}</p>}
       </header>
 
       <div className="flex items-start p-3 rounded-lg bg-amber-50 dark:bg-amber-900/20 text-amber-800 dark:text-amber-300 text-xs">
@@ -346,7 +348,7 @@ export default function Treino2aFase() {
               {aiFeedback && (
                 <div className="flex items-start p-4 rounded-xl text-sm leading-relaxed bg-indigo-50 dark:bg-indigo-900/20 text-indigo-800 dark:text-indigo-300">
                   <Sparkles className="w-4 h-4 mr-2 mt-0.5 shrink-0" />
-                  <p>{aiFeedback}</p>
+                  <AiText text={aiFeedback} className="flex-1" />
                 </div>
               )}
 
@@ -359,16 +361,18 @@ export default function Treino2aFase() {
                       Salvo
                     </p>
                   )}
+                  {masterySyncing && <p className="text-xs text-zinc-400">Sincronizando domínio...</p>}
                 </div>
                 <div className="flex gap-2">
                   {RATING_LABELS.map((r) => (
                     <button
                       key={r.value}
                       onClick={() => rate(r.value)}
+                      disabled={rating !== null}
                       className={`flex-1 px-4 py-2.5 rounded-lg text-sm font-medium border transition-colors ${
                         rating === r.value
                           ? r.classes
-                          : 'border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-50 dark:hover:bg-zinc-800'
+                          : 'border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-50 dark:hover:bg-zinc-800 disabled:opacity-60'
                       }`}
                     >
                       {r.label}

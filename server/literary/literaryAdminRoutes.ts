@@ -1,0 +1,263 @@
+import { randomUUID } from 'node:crypto';
+import { Router, Request, Response } from 'express';
+import { Firestore } from 'firebase-admin/firestore';
+import { LiteraryWork, WorkEdition, ExamRequirement, WorkUnit, AuditStatus } from '../../src/types/literaryWorks';
+import { uploadWorkEditionSource, computeFileHash, getSignedReadUrl, downloadWorkEditionSource } from './literaryStorage';
+import { extractPagesText, segmentIntoUnits } from './literarySegmenter';
+import { SEED_WORKS, SEED_EXAM_REQUIREMENTS } from './seedCatalog';
+
+// A obra declara o gênero em texto livre (LiteraryWork.genre, ex.: "poesia",
+// "romance", "canção/poesia musicada") — o segmentador só precisa saber se
+// deve priorizar o heurístico de poema/canção quando não achar capítulo
+// numerado (ver segmentIntoUnits).
+function segmenterHintFromGenre(genre: string): 'chapter' | 'poem' | 'song' {
+  const g = genre.toLowerCase();
+  if (g.includes('canção') || g.includes('cancao')) return 'song';
+  if (g.includes('poesia')) return 'poem';
+  return 'chapter';
+}
+
+// Sem isso, uma rejeição não tratada dentro de um handler async do Express
+// (ex.: bucket do Storage sem permissão, Firestore fora do ar) não vira uma
+// resposta de erro — vira um "unhandledRejection" que derruba o processo
+// Node inteiro (padrão desde o Node 15), e o Cloud Run passa a responder
+// 503 pra TODAS as rotas do app até subir uma instância nova. Envolve cada
+// handler pra sempre responder um JSON de erro em vez de deixar estourar.
+// O Firestore recusa gravar um campo com valor `undefined` (diferente de só
+// não ter a chave) — comum aqui porque vários campos são opcionais e vêm
+// direto do formulário (ex.: publisher, edition, isbn de uma WorkEdition).
+function stripUndefined<T extends object>(obj: T): T {
+  return Object.fromEntries(Object.entries(obj).filter(([, v]) => v !== undefined)) as T;
+}
+
+function asyncRoute(handler: (req: Request, res: Response) => Promise<unknown>) {
+  return async (req: Request, res: Response) => {
+    try {
+      await handler(req, res);
+    } catch (cause) {
+      console.error('Erro em rota administrativa de literary:', cause);
+      res.status(500).json({ error: 'Erro interno ao processar a requisição.', code: 'INTERNAL_ERROR', detail: String(cause) });
+    }
+  };
+}
+
+// Painel de ingestão/auditoria (Fase 1 do roteiro) — protegido por
+// requireAdmin no mount (ver server.ts), já que só quem cura o conteúdo
+// (a própria Ana ou eu) deve poder subir/alterar material de obra.
+export function createLiteraryAdminRouter(db: Firestore): Router {
+  const router = Router();
+
+  // Semeia de uma vez as 18 LiteraryWork + 18 ExamRequirement já curadas na
+  // Fase 0 (ver seedCatalog.ts e AUDITORIA_FASE0.md) — poupa preencher os
+  // ~180 campos manualmente pelo formulário. Idempotente: usa os ids fixos
+  // do seed (.set() sem merge sobrescreve com o mesmo valor, então rodar de
+  // novo não duplica nada). Não cria WorkEdition — o arquivo em si ainda
+  // precisa ser enviado por edição, pra manter o hash/proveniência reais.
+  router.post('/seed', asyncRoute(async (_req, res) => {
+    const batch = db.batch();
+    for (const work of SEED_WORKS) {
+      batch.set(db.collection('literaryWorks').doc(work.id), work);
+    }
+    for (const requirement of SEED_EXAM_REQUIREMENTS) {
+      batch.set(db.collection('literaryWorks').doc(requirement.workId).collection('examRequirements').doc(requirement.id), requirement);
+    }
+    await batch.commit();
+    res.json({ works: SEED_WORKS.length, examRequirements: SEED_EXAM_REQUIREMENTS.length });
+  }));
+
+  router.post('/works', asyncRoute(async (req, res) => {
+    const { slug, title, author, originalYear, genre, language } = req.body ?? {};
+    if (!slug || !title || !author || !genre || !language) {
+      return res.status(400).json({ error: 'Campos obrigatórios: slug, title, author, genre, language.', code: 'INVALID_WORK' });
+    }
+    const work: LiteraryWork = stripUndefined({ id: randomUUID(), slug, title, author, originalYear, genre, language });
+    await db.collection('literaryWorks').doc(work.id).set(work);
+    res.json(work);
+  }));
+
+  router.get('/works', asyncRoute(async (_req, res) => {
+    const snap = await db.collection('literaryWorks').get();
+    res.json(snap.docs.map((d) => d.data()));
+  }));
+
+  // Quantas edições cada obra já tem — usado só pra mostrar um indicador de
+  // progresso na lista de obras do painel, sem precisar abrir uma por uma.
+  router.get('/editions-summary', asyncRoute(async (_req, res) => {
+    const snap = await db.collectionGroup('editions').get();
+    const counts: Record<string, number> = {};
+    for (const doc of snap.docs) {
+      const workId = (doc.data() as WorkEdition).workId;
+      counts[workId] = (counts[workId] ?? 0) + 1;
+    }
+    res.json(counts);
+  }));
+
+  // Recebe o PDF em base64 — Etapa A (recebimento): hash, checagem de
+  // duplicata e registro de direitos/proveniência antes de qualquer
+  // processamento de conteúdo.
+  router.post('/works/:workId/editions', asyncRoute(async (req, res) => {
+    const { workId } = req.params;
+    const { fileBase64, mimeType, publisher, edition, year, isbn, translator, organizer, printedPageCount, rightsStatus } = req.body ?? {};
+    if (!fileBase64 || !rightsStatus) {
+      return res.status(400).json({ error: 'Campos obrigatórios: fileBase64, rightsStatus.', code: 'INVALID_EDITION' });
+    }
+    const workDoc = await db.collection('literaryWorks').doc(workId).get();
+    if (!workDoc.exists) {
+      return res.status(404).json({ error: 'Obra não encontrada.', code: 'WORK_NOT_FOUND' });
+    }
+
+    const fileBuffer = Buffer.from(fileBase64, 'base64');
+    const fileHash = computeFileHash(fileBuffer);
+
+    const dup = await db.collectionGroup('editions').where('fileHash', '==', fileHash).limit(1).get();
+    if (!dup.empty) {
+      return res.status(409).json({ error: 'Esse arquivo já foi enviado antes (mesmo hash).', code: 'DUPLICATE_FILE', existingEditionId: dup.docs[0].id });
+    }
+
+    const editionId = randomUUID();
+    // Quase toda edição é PDF; "Canções Escolhidas" (Paulo César Pinheiro)
+    // chegou como .docx — ver literaryStorage.ts.
+    const { sourceFileId } = await uploadWorkEditionSource(workId, editionId, fileBuffer, mimeType || 'application/pdf');
+
+    // Contagem de páginas fica pra Etapa B (auditoria) — precisa abrir o PDF
+    // de verdade; aqui só registra o esqueleto administrativo.
+    const editionData: WorkEdition = stripUndefined({
+      id: editionId,
+      workId,
+      publisher,
+      edition,
+      year,
+      isbn,
+      translator,
+      organizer,
+      printedPageCount,
+      pdfPageCount: 0,
+      sourceFileId,
+      fileHash,
+      rightsStatus,
+      integrityStatus: 'pending',
+      extractionStatus: 'pending',
+    });
+    await db.collection('literaryWorks').doc(workId).collection('editions').doc(editionId).set(editionData);
+    res.json(editionData);
+  }));
+
+  router.get('/works/:workId/editions', asyncRoute(async (req, res) => {
+    const snap = await db.collection('literaryWorks').doc(req.params.workId).collection('editions').get();
+    res.json(snap.docs.map((d) => d.data()));
+  }));
+
+  // URL assinada temporária pra revisão manual do PDF durante a auditoria —
+  // nunca fica pública nem em cache.
+  router.get('/works/:workId/editions/:editionId/read-url', asyncRoute(async (req, res) => {
+    const editionDoc = await db.collection('literaryWorks').doc(req.params.workId).collection('editions').doc(req.params.editionId).get();
+    if (!editionDoc.exists) {
+      return res.status(404).json({ error: 'Edição não encontrada.', code: 'EDITION_NOT_FOUND' });
+    }
+    const edition = editionDoc.data() as WorkEdition;
+    const url = await getSignedReadUrl(edition.sourceFileId);
+    res.json({ url, expiresInMinutes: 15 });
+  }));
+
+  // Etapa B (auditoria documental): status final por edição —
+  // rejected/needs_review/verified, conforme a seção 2.2/Etapa B do roteiro.
+  router.patch('/works/:workId/editions/:editionId/audit', asyncRoute(async (req, res) => {
+    const { integrityStatus, extractionStatus, pdfPageCount, printedPageCount } = req.body ?? {};
+    const validStatuses: AuditStatus[] = ['pending', 'needs_review', 'verified', 'rejected'];
+    if (integrityStatus && !validStatuses.includes(integrityStatus)) {
+      return res.status(400).json({ error: 'integrityStatus inválido.', code: 'INVALID_STATUS' });
+    }
+    if (extractionStatus && !validStatuses.includes(extractionStatus)) {
+      return res.status(400).json({ error: 'extractionStatus inválido.', code: 'INVALID_STATUS' });
+    }
+    const ref = db.collection('literaryWorks').doc(req.params.workId).collection('editions').doc(req.params.editionId);
+    const patch: Partial<WorkEdition> = {};
+    if (integrityStatus) patch.integrityStatus = integrityStatus;
+    if (extractionStatus) patch.extractionStatus = extractionStatus;
+    if (pdfPageCount) patch.pdfPageCount = pdfPageCount;
+    if (printedPageCount) patch.printedPageCount = printedPageCount;
+    await ref.set(patch, { merge: true });
+    const updated = await ref.get();
+    res.json(updated.data());
+  }));
+
+  // Etapa C (extração estruturada): roda o segmentador heurístico sobre o
+  // PDF já ingerido e devolve unidades CANDIDATAS — nada é salvo aqui. Quem
+  // cura confirma/ajusta e persiste de fato via POST /works/:workId/units
+  // (seção 7/Etapa C do roteiro: "validação humana do começo e fim de cada
+  // unidade" antes de virar WorkUnit definitivo).
+  router.post('/works/:workId/editions/:editionId/segment', asyncRoute(async (req, res) => {
+    const workDoc = await db.collection('literaryWorks').doc(req.params.workId).get();
+    if (!workDoc.exists) {
+      return res.status(404).json({ error: 'Obra não encontrada.', code: 'WORK_NOT_FOUND' });
+    }
+    const editionDoc = await db.collection('literaryWorks').doc(req.params.workId).collection('editions').doc(req.params.editionId).get();
+    if (!editionDoc.exists) {
+      return res.status(404).json({ error: 'Edição não encontrada.', code: 'EDITION_NOT_FOUND' });
+    }
+    const work = workDoc.data() as LiteraryWork;
+    const edition = editionDoc.data() as WorkEdition;
+    if (!edition.sourceFileId.endsWith('.pdf')) {
+      return res.status(400).json({ error: 'Segmentação automática só funciona com fonte em PDF; cadastre as unidades manualmente via POST /units.', code: 'UNSUPPORTED_SOURCE_FORMAT' });
+    }
+    try {
+      const buffer = await downloadWorkEditionSource(edition.sourceFileId);
+      const pages = await extractPagesText(buffer);
+      const candidates = segmentIntoUnits(pages, segmenterHintFromGenre(work.genre));
+      res.json({ candidates });
+    } catch (cause) {
+      res.status(500).json({ error: 'Falha ao processar o PDF pra segmentação.', code: 'SEGMENT_FAILED', detail: String(cause) });
+    }
+  }));
+
+  router.post('/works/:workId/exam-requirements', asyncRoute(async (req, res) => {
+    const { board, examCycle, officialListUrl, officiallyVerifiedAt, requiredScope, active } = req.body ?? {};
+    if (!board || !examCycle || !officialListUrl || !officiallyVerifiedAt || !requiredScope) {
+      return res.status(400).json({ error: 'Campos obrigatórios: board, examCycle, officialListUrl, officiallyVerifiedAt, requiredScope.', code: 'INVALID_REQUIREMENT' });
+    }
+    const requirement: ExamRequirement = {
+      id: randomUUID(), workId: req.params.workId, board, examCycle, officialListUrl,
+      officiallyVerifiedAt, requiredScope, active: active ?? true,
+    };
+    await db.collection('literaryWorks').doc(req.params.workId).collection('examRequirements').doc(requirement.id).set(requirement);
+    res.json(requirement);
+  }));
+
+  // Etapa C (extração estruturada): unidades registradas manualmente ou por
+  // um segmentador — sempre com validação humana do começo/fim de cada uma
+  // antes de virar 'verified' (o segmentador em si ainda depende de ter
+  // PDFs reais pra processar, ver literarySegmenter.ts).
+  router.post('/works/:workId/units', asyncRoute(async (req, res) => {
+    const units = req.body?.units as Partial<WorkUnit>[] | undefined;
+    if (!Array.isArray(units) || units.length === 0) {
+      return res.status(400).json({ error: 'Campo obrigatório: units (array).', code: 'INVALID_UNITS' });
+    }
+    const batch = db.batch();
+    const saved: WorkUnit[] = [];
+    for (const u of units) {
+      if (!u.title || !u.type || u.order === undefined || u.pdfStartPage === undefined || u.pdfEndPage === undefined) {
+        return res.status(400).json({ error: 'Cada unidade precisa de title, type, order, pdfStartPage, pdfEndPage.', code: 'INVALID_UNIT' });
+      }
+      const unit: WorkUnit = stripUndefined({
+        id: randomUUID(), workId: req.params.workId, parentUnitId: u.parentUnitId,
+        type: u.type, order: u.order, title: u.title,
+        pdfStartPage: u.pdfStartPage, pdfEndPage: u.pdfEndPage,
+        printedStartPage: u.printedStartPage, printedEndPage: u.printedEndPage,
+        requiredByExam: u.requiredByExam ?? true,
+        extractionConfidence: u.extractionConfidence ?? 'medium',
+      });
+      const ref = db.collection('literaryWorks').doc(req.params.workId).collection('units').doc(unit.id);
+      batch.set(ref, unit);
+      saved.push(unit);
+    }
+    await batch.commit();
+    res.json(saved);
+  }));
+
+  router.get('/works/:workId/units', asyncRoute(async (req, res) => {
+    const snap = await db.collection('literaryWorks').doc(req.params.workId).collection('units').orderBy('order').get();
+    res.json(snap.docs.map((d) => d.data()));
+  }));
+
+  return router;
+}

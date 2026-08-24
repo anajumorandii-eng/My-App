@@ -10,6 +10,7 @@ import { AuthProvider } from './context/AuthContext';
 
 import Dashboard from './views/Dashboard';
 import Plano from './views/Plano';
+import RetaFinal from './views/RetaFinal';
 import Sessao from './views/Sessao';
 import Questoes from './views/Questoes';
 import Revisoes from './views/Revisoes';
@@ -26,6 +27,13 @@ import Redacao from './views/Redacao';
 import Treino2aFase from './views/Treino2aFase';
 import Recuperacao from './views/Recuperacao';
 import Diagnostico from './views/Diagnostico';
+import Admin from './views/Admin';
+import AdminObras from './views/AdminObras';
+import AdminConteudo from './views/AdminConteudo';
+import Flashcards from './views/Flashcards';
+import ObrasObrigatorias from './views/ObrasObrigatorias';
+import Obras from './views/Obras';
+import ObraDetalhe from './views/ObraDetalhe';
 import AgendaView from './features/availability/AgendaView';
 
 export default function App() {
@@ -37,6 +45,7 @@ export default function App() {
             <Route index element={<Dashboard />} />
             <Route path="plano" element={<Plano />} />
             <Route path="agenda" element={<AgendaView />} />
+            <Route path="reta-final" element={<RetaFinal />} />
             <Route path="sessao" element={<Sessao />} />
             <Route path="questoes" element={<Questoes />} />
             <Route path="revisoes" element={<Revisoes />} />
@@ -53,6 +62,13 @@ export default function App() {
             <Route path="treino-2a-fase" element={<Treino2aFase />} />
             <Route path="recuperacao" element={<Recuperacao />} />
             <Route path="diagnostico" element={<Diagnostico />} />
+            <Route path="flashcards" element={<Flashcards />} />
+            <Route path="obras-obrigatorias" element={<ObrasObrigatorias />} />
+            <Route path="obras" element={<Obras />} />
+            <Route path="obras/:workSlug" element={<ObraDetalhe />} />
+            <Route path="admin" element={<Admin />} />
+            <Route path="admin/obras" element={<AdminObras />} />
+            <Route path="admin/conteudo" element={<AdminConteudo />} />
           </Route>
         </Routes>
       </BrowserRouter>

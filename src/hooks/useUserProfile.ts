@@ -33,10 +33,12 @@ export function useUserProfile() {
       setProfile((prev) => {
         const next = updater(prev);
         if (user) {
-          saveUserProfile(user.uid, next).catch((error) => {
-            console.error('Failed to save user profile:', error);
-            setSyncError('Não foi possível salvar essa alteração. Ela pode não persistir.');
-          });
+          saveUserProfile(user.uid, next)
+            .then(() => setSyncError(null))
+            .catch((error) => {
+              console.error('Failed to save user profile:', error);
+              setSyncError('Não foi possível salvar essa alteração. Ela pode não persistir.');
+            });
         }
         return next;
       });
