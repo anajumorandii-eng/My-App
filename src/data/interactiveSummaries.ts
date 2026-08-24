@@ -1,4 +1,5 @@
 import type { InteractiveSummary } from '../types/summary';
+import { expandedInteractiveSummaries } from './expandedInteractiveSummaries';
 
 export const interactiveSummaries: InteractiveSummary[] = [
   {
@@ -78,4 +79,5 @@ export const interactiveSummaries: InteractiveSummary[] = [
       { label: 'Associated Press — síntese independente', kind: 'fonte-independente', url: 'https://apnews.com/article/f41d0dac0553825bdbe1fba5ac31ed90', verifiedAt: '2026-08-24' },
     ],
   },
+  ...expandedInteractiveSummaries,
 ];

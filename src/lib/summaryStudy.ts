@@ -37,6 +37,7 @@ function snapshotAttempt(summary: InteractiveSummary, question: RetrievalPrompt,
     summaryTitle: summary.title, questionPrompt: question.prompt, sectionId: question.sectionId,
     subject: summary.subject, topic: summary.topic, boards: summary.boards.map((item) => item.board),
     materialIds: summary.sources.flatMap((source) => source.materialId ? [source.materialId] : []),
+    board: question.board, phase: question.phase,
   };
 }
 

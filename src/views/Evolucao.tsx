@@ -19,6 +19,10 @@ import { useUserMastery } from '../hooks/useUserMastery';
 import { requestAiText } from '../lib/aiClient';
 import { AiText } from '../components/AiText';
 import { TrendingUp, Trophy, AlertCircle, Gauge, CloudOff, Sparkles, ChevronDown } from 'lucide-react';
+import { useSummaryProgress } from '../hooks/useSummaryProgress';
+import { interactiveSummaries } from '../data/interactiveSummaries';
+import { buildSummaryProgressDashboard } from '../lib/summaryProgressDashboard';
+import SummaryProgressDashboard from '../components/SummaryProgressDashboard';
 
 const SUBJECT_HEX: Record<string, string> = {
   Biologia: '#10b981',
@@ -46,9 +50,14 @@ function ChartTooltip({ active, payload }: any) {
 
 export default function Evolucao() {
   const { mastery: masteryData, isPersisted } = useUserMastery();
+  const { progress: summaryProgress, loading: summaryLoading, syncError: summaryError } = useSummaryProgress();
   const [insight, setInsight] = useState<string | null>(null);
   const [loadingInsight, setLoadingInsight] = useState(false);
   const [expandedTopicId, setExpandedTopicId] = useState<string | null>(null);
+  const summaryDashboard = useMemo(
+    () => buildSummaryProgressDashboard({ summaries: interactiveSummaries, progress: summaryProgress }),
+    [summaryProgress],
+  );
 
   const topicRows = useMemo(
     () =>
@@ -113,11 +122,14 @@ export default function Evolucao() {
         {!isPersisted && (
           <p className="flex items-center text-xs text-zinc-400 mt-2">
             <CloudOff className="w-3.5 h-3.5 mr-1.5" />
-            Modo demonstração — conecte sua conta Google em "Conexões Google" para salvar seu progresso de verdade.
+            Sem dados de domínio sincronizados — conecte sua conta Google para acompanhar esse histórico.
           </p>
         )}
       </header>
 
+      <SummaryProgressDashboard model={summaryDashboard} loading={summaryLoading} error={summaryError} />
+
+      {isPersisted ? <>
       <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 shadow-sm">
         <div className="flex items-center justify-between flex-wrap gap-3 mb-1">
           <h3 className="font-semibold flex items-center">
@@ -251,6 +263,7 @@ export default function Evolucao() {
           );
         })}
       </div>
+      </> : <div className="rounded-2xl border border-dashed border-zinc-300 p-6 text-sm text-zinc-500 dark:border-zinc-700">O domínio por tópicos aparecerá quando houver dados sincronizados. Nenhum valor demonstrativo é usado neste painel.</div>}
     </div>
   );
 }
