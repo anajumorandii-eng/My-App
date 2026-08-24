@@ -3,6 +3,7 @@ import { useAuth } from '../context/AuthContext';
 import { getAccessToken } from '../lib/auth';
 import { CalendarEvent } from '../types';
 import { computeFreeMinutes, getBusyIntervalsForDay, getDefaultStudyWindow } from '../lib/calendarPlanner';
+import { isoToLocalDate } from '../features/availability/time';
 
 const DEFAULT_MANUAL_MINUTES = 120;
 
@@ -29,7 +30,8 @@ export function useAvailableMinutes() {
       try {
         const token = await getAccessToken();
         if (!token) throw new Error('No Google access token available');
-        const res = await fetch('/api/calendar/events', { headers: { Authorization: `Bearer ${token}` } });
+        const localDate = isoToLocalDate(new Date().toISOString());
+        const res = await fetch(`/api/calendar/events?date=${encodeURIComponent(localDate)}`, { headers: { Authorization: `Bearer ${token}` } });
         if (!res.ok) throw new Error(`Calendar request failed: ${res.status}`);
         const data = await res.json();
         if (!cancelled) setEvents(data.events || []);

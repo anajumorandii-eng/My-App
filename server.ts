@@ -4,6 +4,7 @@ import { createServer as createViteServer } from 'vite';
 import cookieParser from 'cookie-parser';
 import { GoogleGenAI, ThinkingLevel } from '@google/genai';
 import { google } from 'googleapis';
+import { buildCalendarEventsQuery } from './serverCalendar';
 
 const app = express();
 const PORT = Number(process.env.PORT) || 3000;
@@ -37,6 +38,18 @@ app.get('/api/health', (req, res) => res.json({ status: 'ok' }));
 
 // Fetch events from Calendar
 app.get('/api/calendar/events', async (req, res) => {
+  const date = req.query.date;
+  if (typeof date !== 'string') {
+    return res.status(400).json({ error: 'A valid date in YYYY-MM-DD format is required' });
+  }
+
+  let query;
+  try {
+    query = buildCalendarEventsQuery(date);
+  } catch {
+    return res.status(400).json({ error: 'A valid date in YYYY-MM-DD format is required' });
+  }
+
   const token = req.headers.authorization?.split(' ')[1];
   if (!token) {
     return res.status(401).json({ error: 'No token provided' });
@@ -47,15 +60,18 @@ app.get('/api/calendar/events', async (req, res) => {
     oauth2Client.setCredentials({ access_token: token });
     
     const calendar = google.calendar({ version: 'v3', auth: oauth2Client });
-    const response = await calendar.events.list({
-      calendarId: 'primary',
-      timeMin: new Date().toISOString(),
-      maxResults: 10,
-      singleEvents: true,
-      orderBy: 'startTime',
-    });
+    const response = await calendar.events.list(query);
     
-    res.json({ events: response.data.items || [] });
+    res.json({
+      events: (response.data.items || []).map((event) => ({
+        id: event.id || '',
+        summary: event.summary || '',
+        start: event.start || {},
+        end: event.end || {},
+        transparency: event.transparency || 'opaque',
+        status: event.status || 'confirmed',
+      })),
+    });
   } catch (error) {
     console.error('Calendar Fetch Error:', error);
     res.status(500).json({ error: 'Failed to fetch events' });
