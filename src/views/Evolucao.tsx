@@ -14,10 +14,23 @@ import {
   PolarRadiusAxis,
   Radar,
 } from 'recharts';
+import { Link } from 'react-router-dom';
 import { mockTopics } from '../data/mockData';
+import { interactiveSummaries } from '../data/interactiveSummaries';
 import { useUserMastery } from '../hooks/useUserMastery';
+import { useSummaryProgress } from '../hooks/useSummaryProgress';
+import { getReadingProgress } from '../lib/summaryEngine';
 import { requestAiText } from '../lib/aiClient';
-import { TrendingUp, Trophy, AlertCircle, Gauge, CloudOff, Sparkles } from 'lucide-react';
+import { TrendingUp, Trophy, AlertCircle, Gauge, CloudOff, Sparkles, BookOpen } from 'lucide-react';
+import type { StudyStatus } from '../types/summary';
+
+const STATUS_LABELS: Record<StudyStatus, string> = { 'nao-iniciado': 'Não iniciado', 'em-revisao': 'Em revisão', dificuldade: 'Com dificuldade', dominado: 'Dominado' };
+const STATUS_BADGE: Record<StudyStatus, string> = {
+  'nao-iniciado': 'bg-zinc-100 text-zinc-700 dark:bg-zinc-800 dark:text-zinc-300',
+  'em-revisao': 'bg-sky-100 text-sky-800 dark:bg-sky-950/40 dark:text-sky-300',
+  dificuldade: 'bg-amber-100 text-amber-900 dark:bg-amber-950/40 dark:text-amber-300',
+  dominado: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-950/40 dark:text-emerald-300',
+};
 
 const SUBJECT_HEX: Record<string, string> = {
   Biologia: '#10b981',
@@ -43,8 +56,29 @@ function ChartTooltip({ active, payload }: any) {
 
 export default function Evolucao() {
   const { mastery: masteryData, isPersisted } = useUserMastery();
+  const { progress: summaryProgress, loading: loadingSummaries } = useSummaryProgress();
   const [insight, setInsight] = useState<string | null>(null);
   const [loadingInsight, setLoadingInsight] = useState(false);
+
+  const summaryRows = useMemo(
+    () =>
+      interactiveSummaries
+        .map((item) => ({
+          id: item.id,
+          title: item.title,
+          subject: item.subject,
+          topic: item.topic,
+          status: summaryProgress[item.id]?.status ?? 'nao-iniciado',
+          readingProgress: getReadingProgress(item, summaryProgress[item.id]),
+        }))
+        .sort((a, b) => a.readingProgress - b.readingProgress),
+    [summaryProgress]
+  );
+  const summaryReadingAverage = summaryRows.length
+    ? Math.round(summaryRows.reduce((sum, r) => sum + r.readingProgress, 0) / summaryRows.length)
+    : 0;
+  const summariesMastered = summaryRows.filter((r) => r.status === 'dominado').length;
+  const summariesStruggling = summaryRows.filter((r) => r.status === 'dificuldade').length;
 
   const topicRows = useMemo(
     () =>
@@ -215,6 +249,57 @@ export default function Evolucao() {
           </div>
         ))}
       </div>
+
+      <section aria-labelledby="summary-mastery-title" className="space-y-4">
+        <header className="flex items-center">
+          <BookOpen className="w-5 h-5 mr-2 text-indigo-500" />
+          <div>
+            <h2 id="summary-mastery-title" className="text-xl font-bold">Domínio dos Resumos</h2>
+            <p className="text-sm text-zinc-500">Leitura e recuperação ativa nos resumos interativos.</p>
+          </div>
+        </header>
+
+        {loadingSummaries ? (
+          <p className="text-sm text-zinc-500">Carregando progresso dos resumos…</p>
+        ) : (
+          <>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+              <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 shadow-sm">
+                <h3 className="font-medium text-sm text-indigo-600 dark:text-indigo-400 mb-3">Progresso médio de leitura</h3>
+                <p className="text-3xl font-bold">{summaryReadingAverage}<span className="text-lg font-normal text-zinc-500 ml-1">%</span></p>
+              </div>
+              <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 shadow-sm">
+                <h3 className="font-medium text-sm text-emerald-600 dark:text-emerald-400 mb-3">Resumos dominados</h3>
+                <p className="text-3xl font-bold">{summariesMastered}<span className="text-lg font-normal text-zinc-500 ml-1">/{summaryRows.length}</span></p>
+              </div>
+              <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 shadow-sm">
+                <h3 className="font-medium text-sm text-amber-600 dark:text-amber-400 mb-3">Com dificuldade</h3>
+                <p className="text-3xl font-bold">{summariesStruggling}<span className="text-lg font-normal text-zinc-500 ml-1">/{summaryRows.length}</span></p>
+              </div>
+            </div>
+
+            <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl divide-y divide-zinc-100 dark:divide-zinc-800 overflow-hidden">
+              {summaryRows.map((row) => (
+                <Link key={row.id} to={`/resumos?summary=${encodeURIComponent(row.id)}`} className="p-4 flex items-center justify-between gap-4 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 transition-colors">
+                  <div className="min-w-0">
+                    <p className="font-medium truncate">{row.title}</p>
+                    <p className="text-xs text-zinc-500">{row.subject} · {row.topic}</p>
+                  </div>
+                  <div className="flex items-center gap-3 shrink-0">
+                    <span className={`rounded-full px-2.5 py-1 text-xs font-bold ${STATUS_BADGE[row.status]}`}>{STATUS_LABELS[row.status]}</span>
+                    <div className="flex items-center w-24">
+                      <div className="w-full h-1.5 bg-zinc-100 dark:bg-zinc-800 rounded-full overflow-hidden mr-2">
+                        <div className="h-full bg-indigo-500" style={{ width: `${row.readingProgress}%` }} />
+                      </div>
+                      <span className="text-xs text-zinc-500 w-8 text-right">{row.readingProgress}%</span>
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </>
+        )}
+      </section>
     </div>
   );
 }
