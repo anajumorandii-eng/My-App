@@ -47,6 +47,8 @@ export interface CalendarEvent {
   summary: string;
   start: { dateTime?: string; date?: string };
   end: { dateTime?: string; date?: string };
+  transparency?: 'opaque' | 'transparent';
+  status?: 'confirmed' | 'tentative' | 'cancelled';
 }
 
 export interface DriveFile {
