@@ -61,10 +61,15 @@ interface DailyStudyAvailability {
   warnings: AvailabilityWarning[];
 }
 
+type CalendarOverlayInput =
+  | { status: 'connected'; events: CalendarEvent[] }
+  | { status: 'disconnected' }
+  | { status: 'failed'; warning: string };
+
 async function getEffectiveStudyAvailability(
   uid: string,
   localDate: string,
-  calendarEvents?: CalendarEvent[]
+  calendar: CalendarOverlayInput
 ): Promise<DailyStudyAvailability>;
 ```
 
@@ -98,7 +103,7 @@ Holiday and day-without-classes exceptions do not automatically create availabil
 
 Receives already-fetched Calendar events and subtracts only event intersections with the post-exception candidate study windows. Therefore, a Calendar copy of a class, transport period, or meal outside those windows cannot be subtracted twice.
 
-The overlay ignores events marked transparent/free. All-day busy events remove all candidate windows for that date. Calendar errors do not cause the module to invent availability: it falls back to the recurring schedule plus stored date exceptions, returns `status: 'degraded'`, and includes a warning explaining that Calendar exceptions could not be applied.
+The explicit overlay input distinguishes a successful query with no events from a disconnected account and a failed query. The overlay ignores events marked transparent/free. All-day busy events remove all candidate windows for that date. A disconnected account uses the recurring schedule plus stored date exceptions and returns a warning without claiming that Calendar was checked. A failed query uses the same closed fallback, returns `status: 'degraded'`, and includes the supplied warning. Neither state may expand availability beyond the recurring schedule plus stored date exceptions.
 
 ### Block scheduler
 
@@ -147,6 +152,7 @@ interface ScheduleEntry {
   kind: 'class' | 'transport' | 'meal' | 'rest' | 'study_window' | 'unavailable';
   start: string; // HH:mm
   end: string;   // HH:mm
+  isEstimate?: boolean;
 }
 ```
 
@@ -189,12 +195,12 @@ The known recurring routine is:
 - Monday: regular classes end at 13:45; lunch/transition is protected from 13:45 to 14:40; base study window is 14:40–20:30; transport home is 20:30–21:10; no English class.
 - Tuesday: regular classes end at 13:45; the student remains at the course until 20:30; post-class meal/transition remains protected and the autonomous-study window ends at 20:30.
 - Wednesday: regular classes end at 13:45; the student remains at the course until 20:30; post-class meal/transition remains protected and the autonomous-study window ends at 20:30.
-- Thursday: regular classes end at 17:35; autonomous study may occur afterward at the course and ends at 20:30.
+- Thursday: regular classes end at 17:35; autonomous study may occur afterward at the course and ends at 20:30. The 17:35 start is stored as an editable estimate because the transition after the final class has not been confirmed.
 - Friday: regular classes end at 13:45; the student remains at the course until 20:30; post-class meal/transition remains protected and the autonomous-study window ends at 20:30.
 - Saturday: regular classes end at 13:45; the student remains at the course until 20:30; post-class meal/transition remains protected and the autonomous-study window ends at 20:30.
 - Sunday: no study window is inferred until the user explicitly configures one.
 
-For days other than Monday, where the exact meal/transition end has not yet been separately confirmed, the seed uses the supplied Monday transition convention of 55 minutes after the final 13:45 class. These entries remain editable in the schedule UI. Thursday begins its candidate window at 17:35; the block policy naturally leaves unusable margin and does not turn it into a partial session.
+For days other than Monday, where the exact meal/transition end has not yet been separately confirmed, the seed uses the supplied Monday transition convention of 55 minutes after the final 13:45 class. These entries remain editable and are marked as estimates in the schedule UI. Thursday begins its candidate window at the editable estimate of 17:35; the block policy naturally leaves unusable margin and does not turn it into a partial session. The hard 20:30 departure boundary applies Monday through Saturday even where the post-course transport duration is not yet known.
 
 The schedule UI and seed source must not contain the former Monday 14:55–15:45 English class.
 
@@ -218,14 +224,29 @@ With no date exception and no intersecting busy Calendar event:
 
 ## Academic Planner Integration
 
-The existing `EfficiencyEngine` keeps responsibility for ranking topics and creating academic actions. Its availability input changes from an undifferentiated minute count to the effective intervals returned by the schedule facade.
+The existing `EfficiencyEngine` keeps responsibility for ranking topics and creating academic actions. Ranking and allocation become two explicit deterministic steps: the engine first returns ordered academic actions without applying a minute budget, then an allocator transforms those prioritized actions plus effective intervals into scheduled actions with concrete start and end timestamps.
+
+```ts
+interface AllocatedStudyAction extends StudyAction {
+  intervalStart: string;
+  intervalEnd: string;
+  allocatedMinutes: number;
+}
+
+function allocateStudyActions(
+  prioritizedActions: StudyAction[],
+  intervals: StudyInterval[]
+): AllocatedStudyAction[];
+```
+
+The allocator owns packing. It processes actions in priority order and intervals chronologically. Actions of 15, 20, 30, or 45 minutes may share a 50-minute interval when their combined duration fits; unused remainder stays margin. No action crosses an effective interval boundary. Actions longer than the remaining capacity move to the next interval. An action longer than 50 minutes is not allocated until an explicit split rule exists.
 
 Integration rules:
 
 - topic, mastery, error, review, backlog, and exam-priority logic remain outside the schedule module;
 - the planner does not recalculate free time;
 - an action must fit wholly inside an effective interval;
-- actions estimated at less than 50 minutes may share one interval only under explicit planner packing rules; the schedule interval itself remains 50 minutes;
+- `allocateStudyActions` is the sole owner of planner packing; the schedule interval itself remains 50 minutes;
 - actions longer than 50 minutes must be split by an explicit academic-action rule or deferred; they may not silently overrun pauses or protected time;
 - Dashboard, Plano, and Sessão consume the same resolved availability for the same user and date.
 
@@ -242,7 +263,7 @@ The schedule UI stays compact and operational:
 - a warning when Calendar is disconnected or unavailable;
 - no subject, topic, backlog, or priority fields.
 
-Monday must visibly omit English and show the 14:40–20:30 base window plus the five calculated blocks.
+Monday must visibly omit English and show the 14:40–20:30 base window plus the five calculated blocks. Estimated seed entries, including Thursday's 17:35 study-window start and unconfirmed weekday transition times, must be visibly marked as editable estimates.
 
 ## Validation and Failure Handling
 
@@ -276,7 +297,10 @@ Unit tests cover:
 - no availability after 20:30;
 - Monday English being absent from the seed and UI data;
 - degraded behavior when Calendar fails;
+- distinct disconnected, failed, connected-empty, and connected-with-events Calendar states;
 - safe no-availability behavior when Firestore schedule loading fails.
+
+Allocator unit tests cover priority-order preservation, chronological allocation, packing compatible short actions into one interval, moving a non-fitting action to the next interval, refusing actions longer than 50 minutes, and never crossing an interval boundary.
 
 Repository tests use the Firestore API behind a mockable repository boundary. Planner integration tests verify that Dashboard, Plano, and Sessão receive the same effective intervals and that the academic engine never schedules across an interval boundary.
 
@@ -294,6 +318,9 @@ Repository tests use the Firestore API behind a mockable repository boundary. Pl
 10. The academic planner consumes the facade result without importing recurring-schedule, exception, Calendar, transport, meal, or pause implementation details.
 11. Existing topic and priority data are neither recreated nor copied into the schedule module.
 12. All schedule calculations are deterministic in `America/Sao_Paulo`.
+13. Calendar disconnected, failed, connected-empty, and connected-with-events states remain distinguishable through the availability calculation.
+14. `allocateStudyActions` deterministically converts prioritized actions and effective intervals into allocated actions with concrete start and end timestamps.
+15. Thursday's 17:35 start is shown as an editable estimate, while the 20:30 departure boundary is enforced Monday through Saturday.
 
 ## Delivery Order
 
