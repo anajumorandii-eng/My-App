@@ -159,6 +159,7 @@ export default function Dashboard() {
     <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
       
       <header>
+        <p className="text-sm font-bold text-indigo-600 dark:text-indigo-400 mb-1">ANA JÚLIA · MEDICINA</p>
         <h1 className="text-3xl font-bold tracking-tight mb-2">Hoje</h1>
         <p className="text-zinc-500 dark:text-zinc-400">
           Seu foco para hoje, ordenado por prioridade de impacto.
@@ -230,6 +231,11 @@ export default function Dashboard() {
           <p className="text-sm text-zinc-500 mt-1">Revisão e Prática</p>
         </div>
       </div>
+
+      <section className="rounded-2xl border border-indigo-200 dark:border-indigo-900 bg-indigo-50/60 dark:bg-indigo-950/20 p-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        <div><p className="text-xs font-bold uppercase tracking-wide text-indigo-600">Prioridade Fuvest</p><h2 className="text-lg font-bold mt-1">Retome seus resumos estratégicos</h2><p className="text-sm text-zinc-500 mt-1">Revisão rápida, aprofundamento e recuperação ativa com progresso salvo.</p></div>
+        <button onClick={() => navigate("/resumos")} className="shrink-0 inline-flex items-center justify-center rounded-xl bg-indigo-600 px-4 py-2.5 text-white font-semibold">Abrir resumos</button>
+      </section>
 
       <section>
         <h2 className="text-xl font-semibold mb-4">Ações Recomendadas</h2>

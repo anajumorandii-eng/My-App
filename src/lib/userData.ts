@@ -1,6 +1,7 @@
 import { doc, getDoc, setDoc, collection, getDocs, query, orderBy, runTransaction, serverTimestamp } from 'firebase/firestore';
 import { db } from './firestore';
 import { TopicMastery, ErrorLog, UserProfile, DiscursiveAttempt, BacklogItem, StudentGoals, PlanFeedback, StudySessionRecord, RecoveryEvidence } from '../types';
+import type { SummaryProgressMap } from '../types/summary';
 import { mockMastery, mockProfile, mockBacklog, mockTopics, mockStudentGoals } from '../data/mockData';
 import { remapLegacyTopicId } from '../data/legacyTopics';
 import { SPLIT_TOPIC_PARENTS } from '../data/topicSplits';
@@ -283,4 +284,15 @@ export async function addPlanFeedback(uid: string, feedback: PlanFeedback): Prom
 export async function saveUserStudySession(uid: string, session: StudySessionRecord): Promise<void> {
   const ref = doc(db, 'users', uid, 'studySessions', session.id);
   await setDoc(ref, session, { merge: true });
+}
+
+export async function getUserSummaryProgress(uid: string): Promise<SummaryProgressMap> {
+  const ref = doc(db, 'users', uid, 'data', 'summaryProgress');
+  const snap = await getDoc(ref);
+  return snap.exists() ? ((snap.data().items as SummaryProgressMap) ?? {}) : {};
+}
+
+export async function saveUserSummaryProgress(uid: string, items: SummaryProgressMap): Promise<void> {
+  const ref = doc(db, 'users', uid, 'data', 'summaryProgress');
+  await setDoc(ref, { items, updatedAt: new Date().toISOString() });
 }
