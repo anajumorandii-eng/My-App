@@ -106,6 +106,19 @@ export default function Flashcards() {
       && hydrationStatus !== 'ready';
     previousHydrationStatus.current = hydrationStatus;
     if (studyOwnerUid === currentOwnerUid && !leftReady) return;
+
+    // Firebase Auth always resolves asynchronously, even with a persisted
+    // session — so on every fresh page load `currentOwnerUid` briefly reads
+    // as null (unknown, not "logged out") before flipping to the real uid a
+    // beat later. That first flip isn't an account switch — there's no
+    // previous owner's session to protect against — so it shouldn't discard
+    // a subject load already in flight (e.g. a click made the instant the
+    // page rendered, before auth caught up) or the navigation under it.
+    if (studyOwnerUid === null && currentOwnerUid !== null && !leftReady) {
+      setStudyOwnerUid(currentOwnerUid);
+      return;
+    }
+
     const reset = createFlashcardOwnerReset(currentOwnerUid, new Date());
     latestLoadRequest.current = invalidateFlashcardLoadRequests(latestLoadRequest.current);
     dispatch(reset.navigationAction);
