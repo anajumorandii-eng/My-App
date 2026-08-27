@@ -88,3 +88,15 @@ for (const subject of ['História', 'Língua Inglesa', 'Redação', 'Gramática'
     assert.deepEqual(audit.missing.filter((item) => item.subject === subject), []);
   });
 }
+
+test('publica exatamente uma entrada para cada um dos 550 tópicos curriculares', async () => {
+  const { interactiveSummaries } = await import('../data/interactiveSummaries');
+  const curricularSubjects = new Set(summaryCurriculum.map((item) => item.subject));
+  const curricularSummaries = interactiveSummaries.filter((item) => curricularSubjects.has(item.subject));
+  const audit = auditSummaryCoverage(summaryCurriculum, curricularSummaries);
+  assert.equal(curricularSummaries.length, 550);
+  assert.deepEqual(audit.missing, []);
+  assert.deepEqual(audit.duplicates, []);
+  assert.deepEqual(audit.extras, []);
+  assert.deepEqual(audit.invalidSubjects, []);
+});

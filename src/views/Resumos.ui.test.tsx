@@ -43,6 +43,15 @@ describe('restauração do contexto do resumo', () => {
     expect(screen.queryByRole('heading', { name: /Calor, temperatura/ })).not.toBeInTheDocument();
   });
 
+  it.each(['História', 'Língua Inglesa', 'Redação', 'Gramática', 'Literatura', 'Entendimento de Texto', 'Matemática', 'Química'])(
+    'oferece e restaura o catálogo de %s',
+    (subject) => {
+      render(<MemoryRouter initialEntries={[`/resumos?subject=${encodeURIComponent(subject)}`]}><Resumos/></MemoryRouter>);
+      expect(screen.getByLabelText('Filtrar por disciplina')).toHaveValue(subject);
+      expect(screen.getAllByRole('heading', { level: 2 }).length).toBeGreaterThan(0);
+    },
+  );
+
   it('submete resposta parcial e produz a entrada derivada no caderno', async () => {
     const user = userEvent.setup();
     render(<MemoryRouter initialEntries={['/resumos?summary=fis-termologia-calor&question=calor-r1']}><Resumos/></MemoryRouter>);

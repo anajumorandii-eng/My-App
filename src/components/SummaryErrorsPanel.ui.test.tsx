@@ -17,7 +17,7 @@ describe('erros derivados dos resumos', () => {
     render(<MemoryRouter><SummaryErrorsPanel progress={partialProgress} summaries={interactiveSummaries}/></MemoryRouter>);
     expect(screen.getAllByRole('article')).toHaveLength(1);
     expect(screen.getByText('Resposta parcial')).toBeInTheDocument();
-    expect(screen.getByText(/Física · Termologia/)).toBeInTheDocument();
+    expect(screen.getByText(/Física · Temperatura, Calor e seus Mecanismos de Transferência/)).toBeInTheDocument();
     expect(screen.getByText(/Fuvest/)).toBeInTheDocument();
     expect(screen.getByText(/pod_fis_04/)).toBeInTheDocument();
     expect(screen.getByRole('link', { name: /Retomar pergunta/ })).toHaveAttribute('href', expect.stringContaining('question=calor-r1'));
