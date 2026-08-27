@@ -1,3 +1,5 @@
+import { biologySummaryMaterials } from './biologyInteractiveSummaries';
+
 export interface SummaryMaterial {
   id: string;
   subject: string;
@@ -32,4 +34,5 @@ export const summaryMaterials: SummaryMaterial[] = [
   { id: 'disc_fuvest_mat_2022', subject: 'Matemática', topic: 'Probabilidade', format: 'questao-discursiva', sourceFile: 'src/data/discursiveQuestions.ts', board: 'Fuvest', phase: 'segunda', uncertain: true },
   { id: 'disc_unesp_geo_2024', subject: 'Geografia', topic: 'Geografia do Brasil', format: 'questao-discursiva', sourceFile: 'src/data/discursiveQuestions.ts', board: 'Unesp/Vunesp', phase: 'segunda' },
   { id: 'resolutionStrategies', subject: 'Interdisciplinar', topic: 'Estratégias de prova', format: 'estrategia', sourceFile: 'src/data/resolutionStrategies.ts' },
+  ...biologySummaryMaterials,
 ];

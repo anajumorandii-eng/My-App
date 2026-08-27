@@ -62,3 +62,9 @@ test('audita ausências, duplicatas, extras e matéria inválida sem adivinhar e
   assert.deepEqual(audit.extras, [{ subject: 'Astronomia', topic: 'Estrelas', summaryId: 'extra' }]);
   assert.deepEqual(audit.invalidSubjects, ['Astronomia']);
 });
+
+test('não deixa tópicos de Biologia fora do catálogo publicado', async () => {
+  const { interactiveSummaries } = await import('../data/interactiveSummaries');
+  const audit = auditSummaryCoverage(summaryCurriculum, interactiveSummaries);
+  assert.deepEqual(audit.missing.filter((item) => item.subject === 'Biologia'), []);
+});

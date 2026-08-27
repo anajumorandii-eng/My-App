@@ -1,4 +1,5 @@
 import type { InteractiveSummary } from '../types/summary';
+import { biologyInteractiveSummaries } from './biologyInteractiveSummaries';
 import { ecologyInteractiveSummaries } from './ecologyInteractiveSummaries';
 import { expandedInteractiveSummaries } from './expandedInteractiveSummaries';
 
@@ -60,5 +61,6 @@ export const interactiveSummaries: InteractiveSummary[] = [
     ],
   },
   ...ecologyInteractiveSummaries,
+  ...biologyInteractiveSummaries,
   ...expandedInteractiveSummaries,
 ];
