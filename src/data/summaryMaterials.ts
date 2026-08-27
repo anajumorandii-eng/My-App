@@ -1,5 +1,6 @@
 import { biologySummaryMaterials } from './biologyInteractiveSummaries';
 import { physicsSummaryMaterials } from './physicsInteractiveSummaries';
+import { geographySummaryMaterials } from './geographyInteractiveSummaries';
 
 export interface SummaryMaterial {
   id: string;
@@ -37,4 +38,5 @@ export const summaryMaterials: SummaryMaterial[] = [
   { id: 'resolutionStrategies', subject: 'Interdisciplinar', topic: 'Estratégias de prova', format: 'estrategia', sourceFile: 'src/data/resolutionStrategies.ts' },
   ...biologySummaryMaterials,
   ...physicsSummaryMaterials,
+  ...geographySummaryMaterials,
 ];

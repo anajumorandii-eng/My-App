@@ -52,7 +52,7 @@ export const expandedInteractiveSummaries: InteractiveSummary[] = [
     ],
   },
   {
-    id: 'geo-bonus-demografico', title: 'Transição e bônus demográfico', subject: 'Geografia', topic: 'Demografia', priority: 'alta',
+    id: 'geo-bonus-demografico', title: 'Transição e bônus demográfico', subject: 'Geografia', topic: 'Estrutura Ativa da População', priority: 'alta',
     prerequisites: ['Natalidade e mortalidade', 'Pirâmides etárias', 'População economicamente ativa'], overview: 'Da estrutura etária à janela de oportunidade — e por que ela não garante desenvolvimento.', boards: commonBoards,
     sections: [
       { id: 'bonus-intuicao', title: 'Intuição: uma janela, não um prêmio automático', stage: 'intuicao', depth: 'rapida', content: 'Quando cresce a proporção de pessoas em idade ativa em relação aos dependentes, a sociedade ganha uma possibilidade de produzir e poupar mais. O resultado depende de emprego, educação, saúde e políticas públicas.' },

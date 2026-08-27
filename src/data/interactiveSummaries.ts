@@ -2,6 +2,7 @@ import type { InteractiveSummary } from '../types/summary';
 import { biologyInteractiveSummaries } from './biologyInteractiveSummaries';
 import { ecologyInteractiveSummaries } from './ecologyInteractiveSummaries';
 import { expandedInteractiveSummaries } from './expandedInteractiveSummaries';
+import { geographyInteractiveSummaries } from './geographyInteractiveSummaries';
 import { physicsInteractiveSummaries } from './physicsInteractiveSummaries';
 
 export const interactiveSummaries: InteractiveSummary[] = [
@@ -64,5 +65,6 @@ export const interactiveSummaries: InteractiveSummary[] = [
   ...ecologyInteractiveSummaries,
   ...biologyInteractiveSummaries,
   ...physicsInteractiveSummaries,
+  ...geographyInteractiveSummaries,
   ...expandedInteractiveSummaries,
 ];
