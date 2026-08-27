@@ -2,8 +2,11 @@ export interface SummaryMaterial {
   id: string;
   subject: string;
   topic: string;
-  format: 'roteiro' | 'questao-discursiva' | 'estrategia';
+  format: 'roteiro' | 'questao-discursiva' | 'estrategia' | 'apostila';
   sourceFile: string;
+  chapter?: string;
+  startPage?: number;
+  endPage?: number;
   board?: string;
   phase?: 'primeira' | 'segunda' | 'unica';
   uncertain?: boolean;

@@ -7,7 +7,16 @@ export type EvidenceKind = 'fato' | 'contexto' | 'interpretacao' | 'hipotese';
 
 export interface SummarySection { id: string; title: string; stage: PedagogicalStage; depth: SummaryDepth; content: string; evidenceKind?: EvidenceKind; callout?: string; }
 export interface SummaryBoard { board: string; phases: ExamPhase[]; guidance?: string; }
-export interface SummarySource { label: string; kind: 'material-interno' | 'fonte-oficial' | 'fonte-independente'; materialId?: string; url?: string; verifiedAt?: string; }
+export interface SummarySource {
+  label: string;
+  kind: 'material-interno' | 'fonte-oficial' | 'fonte-independente';
+  materialId?: string;
+  url?: string;
+  verifiedAt?: string;
+  chapter?: string;
+  startPage?: number;
+  endPage?: number;
+}
 export interface RetrievalElement { label: string; keywords: string[]; }
 export interface RetrievalPrompt { id: string; sectionId?: string; prompt: string; expectedElements: RetrievalElement[]; hint: string; transferPrompt: string; board?: string; phase?: ExamPhase; }
 export interface InteractiveSummary {

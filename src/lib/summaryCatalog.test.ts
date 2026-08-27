@@ -31,3 +31,28 @@ test('detecta IDs duplicados, pergunta fora de seção e material interno descon
   assert.ok(issues.some((issue) => issue.code === 'missing-question-section'));
   assert.ok(issues.some((issue) => issue.code === 'unknown-material'));
 });
+
+test('aceita capítulo de apostila com localização resolvível', () => {
+  const material = {
+    id: 'bio-eco-introducao', subject: 'Biologia', topic: 'Introdução à Ecologia',
+    format: 'apostila' as const, sourceFile: 'materiais brutos/Biologia (v1) 1.pdf',
+    chapter: 'Introdução à Ecologia', startPage: 10, endPage: 22,
+  };
+  const summary = {
+    ...interactiveSummaries[0],
+    sources: [{ label: material.chapter, kind: 'material-interno' as const, materialId: material.id, chapter: material.chapter, startPage: 10, endPage: 22 }],
+  };
+  assert.deepEqual(validateSummaryCatalog([summary], [material]), []);
+});
+
+test('rejeita fonte de apostila sem localização e resumo sem os três níveis', () => {
+  const material = { id: 'bio-eco-incompleto', subject: 'Biologia', topic: 'Ecologia', format: 'apostila' as const, sourceFile: 'bio.pdf' };
+  const summary = {
+    ...interactiveSummaries[0],
+    sections: interactiveSummaries[0].sections.filter((section) => section.depth !== 'prova'),
+    sources: [{ label: 'Ecologia', kind: 'material-interno' as const, materialId: material.id }],
+  };
+  const codes = validateSummaryCatalog([summary], [material]).map((issue) => issue.code);
+  assert.ok(codes.includes('missing-source-location'));
+  assert.ok(codes.includes('missing-depth'));
+});
