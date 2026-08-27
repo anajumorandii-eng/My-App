@@ -3,7 +3,7 @@ import { mockTopics } from '../data/mockData';
 import { useUserBacklog } from '../hooks/useUserBacklog';
 import { useUserMastery } from '../hooks/useUserMastery';
 import { useQuestions } from '../hooks/useQuestions';
-import { requestAiText } from '../lib/aiClient';
+import { aiErrorMessage, requestAiText } from '../lib/aiClient';
 import { AiText } from '../components/AiText';
 import {
   priorityScore,
@@ -119,9 +119,11 @@ function SupportLevelContent({
 }) {
   const [aiExerciseText, setAiExerciseText] = useState<string | null>(null);
   const [loadingExercise, setLoadingExercise] = useState(false);
+  const [exerciseError, setExerciseError] = useState<string | null>(null);
   const [studentAnswer, setStudentAnswer] = useState('');
   const [correction, setCorrection] = useState<string | null>(null);
   const [loadingCorrection, setLoadingCorrection] = useState(false);
+  const [correctionError, setCorrectionError] = useState<string | null>(null);
   const [recordedOutcome, setRecordedOutcome] = useState<RecoveryOutcome | null>(null);
   const [pendingOutcome, setPendingOutcome] = useState<{ id: string; outcome: RecoveryOutcome } | null>(null);
   const [savingOutcome, setSavingOutcome] = useState(false);
@@ -161,6 +163,7 @@ function SupportLevelContent({
 
   const fetchExercise = async () => {
     setLoadingExercise(true);
+    setExerciseError(null);
     try {
       const data = await requestAiText('backlog-exercise', {
         topic: effectiveTopic,
@@ -170,6 +173,7 @@ function SupportLevelContent({
       setAiExerciseText(data.text);
     } catch (error) {
       console.error('Failed to fetch backlog exercise:', error);
+      setExerciseError(aiErrorMessage(error));
     } finally {
       setLoadingExercise(false);
     }
@@ -178,6 +182,7 @@ function SupportLevelContent({
   const fetchCorrection = async () => {
     if (!exerciseText || !studentAnswer.trim()) return;
     setLoadingCorrection(true);
+    setCorrectionError(null);
     try {
       const data = await requestAiText('backlog-correction', {
         topic: effectiveTopic,
@@ -189,6 +194,7 @@ function SupportLevelContent({
       setCorrection(data.text);
     } catch (error) {
       console.error('Failed to fetch backlog correction:', error);
+      setCorrectionError(aiErrorMessage(error));
     } finally {
       setLoadingCorrection(false);
     }
@@ -196,14 +202,17 @@ function SupportLevelContent({
 
   if (!exerciseText) {
     return (
-      <button
-        onClick={fetchExercise}
-        disabled={loadingExercise}
-        className="w-full flex items-center justify-center py-2.5 border border-indigo-200 dark:border-indigo-800 text-indigo-600 dark:text-indigo-400 rounded-xl font-medium text-sm hover:bg-indigo-50 dark:hover:bg-indigo-900/20 disabled:opacity-50 transition-colors"
-      >
-        <Sparkles className={`w-4 h-4 mr-2 ${loadingExercise ? 'animate-pulse' : ''}`} />
-        {loadingExercise ? 'Gerando exercício com IA...' : 'Gerar exercício com IA'}
-      </button>
+      <div className="space-y-2">
+        <button
+          onClick={fetchExercise}
+          disabled={loadingExercise}
+          className="w-full flex items-center justify-center py-2.5 border border-indigo-200 dark:border-indigo-800 text-indigo-600 dark:text-indigo-400 rounded-xl font-medium text-sm hover:bg-indigo-50 dark:hover:bg-indigo-900/20 disabled:opacity-50 transition-colors"
+        >
+          <Sparkles className={`w-4 h-4 mr-2 ${loadingExercise ? 'animate-pulse' : ''}`} />
+          {loadingExercise ? 'Gerando exercício com IA...' : 'Gerar exercício com IA'}
+        </button>
+        {exerciseError && <p className="text-sm text-rose-500">{exerciseError}</p>}
+      </div>
     );
   }
 
@@ -227,14 +236,17 @@ function SupportLevelContent({
         />
       </div>
       {!correction ? (
-        <button
-          onClick={fetchCorrection}
-          disabled={loadingCorrection || !studentAnswer.trim()}
-          className="w-full flex items-center justify-center py-2.5 bg-indigo-600 hover:bg-indigo-700 disabled:bg-zinc-300 dark:disabled:bg-zinc-700 text-white rounded-xl font-medium text-sm transition-colors"
-        >
-          <Sparkles className={`w-4 h-4 mr-2 ${loadingCorrection ? 'animate-pulse' : ''}`} />
-          {loadingCorrection ? 'Corrigindo com IA...' : 'Corrigir com IA'}
-        </button>
+        <div className="space-y-2">
+          <button
+            onClick={fetchCorrection}
+            disabled={loadingCorrection || !studentAnswer.trim()}
+            className="w-full flex items-center justify-center py-2.5 bg-indigo-600 hover:bg-indigo-700 disabled:bg-zinc-300 dark:disabled:bg-zinc-700 text-white rounded-xl font-medium text-sm transition-colors"
+          >
+            <Sparkles className={`w-4 h-4 mr-2 ${loadingCorrection ? 'animate-pulse' : ''}`} />
+            {loadingCorrection ? 'Corrigindo com IA...' : 'Corrigir com IA'}
+          </button>
+          {correctionError && <p className="text-sm text-rose-500">{correctionError}</p>}
+        </div>
       ) : (
         <>
           <div className="p-4 rounded-xl bg-emerald-50 dark:bg-emerald-900/20 text-emerald-900 dark:text-emerald-200 text-sm">

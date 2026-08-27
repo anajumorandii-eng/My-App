@@ -69,6 +69,7 @@ export function createAiRouter(service: AiService, metrics?: AiMetricsRecorder, 
           status = 504; code = 'AI_TIMEOUT'; message = error.message;
         } else {
           const cause = error instanceof AiGenerationError ? error.cause : error;
+          if (error instanceof AiGenerationError) message = error.message;
           console.error(`[AI ${requestId}] ${task} failed:`, cause ?? error);
         }
 

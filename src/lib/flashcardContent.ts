@@ -13,10 +13,19 @@ function slugify(subject: string): string {
     .replace(/^-+|-+$/g, '');
 }
 
+/**
+ * Keeps malformed source records out of the study flow. A card without a
+ * prompt or answer cannot be studied and otherwise renders as a blank side.
+ */
+export function sanitizeFlashcards(cards: Flashcard[]): Flashcard[] {
+  return cards.filter((card) => card.front.trim().length > 0 && card.back.trim().length > 0);
+}
+
 export async function loadFlashcardsForSubject(subject: string): Promise<Flashcard[]> {
   const res = await fetch(`/flashcards/${slugify(subject)}.json`);
   if (!res.ok) throw new Error(`Não foi possível carregar os flashcards de ${subject}.`);
-  return res.json();
+  const cards = await res.json() as Flashcard[];
+  return sanitizeFlashcards(cards);
 }
 
 export async function loadObraFlashcards(): Promise<WorkFlashcard[]> {
