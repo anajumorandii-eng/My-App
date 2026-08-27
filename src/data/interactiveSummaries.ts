@@ -1,4 +1,5 @@
 import type { InteractiveSummary } from '../types/summary';
+import { ecologyInteractiveSummaries } from './ecologyInteractiveSummaries';
 import { expandedInteractiveSummaries } from './expandedInteractiveSummaries';
 
 export const interactiveSummaries: InteractiveSummary[] = [
@@ -31,27 +32,6 @@ export const interactiveSummaries: InteractiveSummary[] = [
     ],
   },
   {
-    id: 'bio-ecologia-eutrofizacao', title: 'Eutrofização e fluxo de energia', subject: 'Biologia', topic: 'Ecologia', priority: 'muito-alta',
-    prerequisites: ['Cadeias alimentares', 'Produtores e consumidores', 'Ciclos do nitrogênio e fósforo'], overview: 'Uma cadeia causal para interpretar fertilizantes, florações e desequilíbrios aquáticos.',
-    boards: [
-      { board: 'Fuvest', phases: ['primeira', 'segunda'], guidance: 'Explique a cadeia causal inteira; nomear eutrofização sem mecanismo é resposta incompleta.' },
-      { board: 'Unicamp/Comvest', phases: ['primeira', 'segunda'], guidance: 'C-F-C-R: use gráfico/texto como evidência, nomeie eutrofização e relacione nutrientes, biomassa e oxigênio.' },
-      { board: 'Unesp/Vunesp', phases: ['primeira', 'segunda'], guidance: 'D-C-E-A: responda diretamente, apresente o processo e aplique ao ambiente descrito.' },
-      { board: 'Famerp', phases: ['unica', 'segunda'] }, { board: 'Unifesp', phases: ['unica', 'segunda'] }, { board: 'ENEM/Inep', phases: ['unica'] },
-    ],
-    sections: [
-      { id: 'eutro-intuicao', title: 'Intuição: excesso de nutriente não é “saúde”', stage: 'intuicao', depth: 'rapida', content: 'Nutrientes podem limitar produtores. Quando chegam em excesso, favorecem crescimento rápido; depois, a decomposição da biomassa amplia o consumo de oxigênio e pode produzir hipóxia.' },
-      { id: 'eutro-mecanismo', title: 'Mecanismo em cadeia causal', stage: 'conceito', depth: 'aprofundamento', content: 'Aporte de nitratos/fosfatos → proliferação de produtores → aumento de biomassa e turbidez → morte/decomposição → maior demanda bioquímica de oxigênio → queda do O₂ dissolvido → mortalidade de organismos aeróbios. Pegadinha: o produtor libera O₂ na fotossíntese, mas o saldo do sistema pode cair pela respiração e decomposição.' },
-      { id: 'eutro-aplicacao', title: 'Conexões com saúde e clima', stage: 'aplicacao', depth: 'aprofundamento', content: 'O mecanismo conecta saneamento, agricultura, qualidade da água, pesca e saúde pública. Em prova, diferencie eutrofização por enriquecimento de nutrientes de contaminação por patógenos; podem coexistir, mas não são sinônimos.' },
-      { id: 'eutro-exercicio', title: 'Aplicação discursiva do acervo', stage: 'exercicio', depth: 'prova', content: 'A questão Unifesp 2020 reconstruída relaciona fertilizantes transportados até o Atlântico, sargaço e cadeia trófica. Antes do modelo, escreva: fenômeno → nutriente → produtor → consumidores → possível desequilíbrio.', callout: 'Material: disc_unifesp_bio_2020.' },
-      { id: 'eutro-prova', title: 'Como reconhecer e responder', stage: 'estrategia', depth: 'prova', content: 'Sinais: fertilizante/esgoto, água esverdeada, floração algal, turbidez e oxigênio dissolvido baixo. Fuvest 2ª fase: não salte do fertilizante para a morte dos peixes; explicite decompositores e consumo de O₂. Em alternativas, desconfie de “falta de nutrientes” e de causalidade invertida.' },
-    ],
-    retrieval: [{ id: 'eutro-r1', sectionId: 'eutro-exercicio', prompt: 'Reconstrua a cadeia causal entre fertilizantes e morte de peixes.', expectedElements: [
-      { label: 'excesso de nutrientes', keywords: ['nutrientes', 'nitrato', 'fosfato', 'fertilizante'] }, { label: 'proliferação de produtores', keywords: ['algas', 'produtores', 'proliferação', 'bloom'] }, { label: 'decomposição', keywords: ['decomposição', 'decompositores'] }, { label: 'queda do oxigênio', keywords: ['oxigênio', 'hipóxia', 'hipoxia'] },
-    ], hint: 'O elo frequentemente esquecido é quem consome oxigênio depois do aumento de biomassa.', transferPrompt: 'Se um gráfico mostrar clorofila subindo antes do O₂ cair, explique a defasagem temporal.' }],
-    sources: [{ label: 'Roteiro interno “Ecologia: cadeias, teias e relações”', kind: 'material-interno', materialId: 'pod_bio_04' }, { label: 'Questão discursiva Unifesp 2020 — sargaço', kind: 'material-interno', materialId: 'disc_unifesp_bio_2020' }, { label: 'Estratégias de Biologia', kind: 'material-interno', materialId: 'resolutionStrategies' }],
-  },
-  {
     id: 'atu-cop30-belem', title: 'COP30 em Belém: avanços, limites e leitura de prova', subject: 'Atualidades', topic: 'Clima, energia e meio ambiente', priority: 'muito-alta', prerequisites: ['Acordo de Paris', 'NDCs', 'Justiça climática'],
     overview: 'Dossiê A.T.U.A.L. sobre a conferência realizada em Belém em novembro de 2025, distinguindo decisão formal de avaliação crítica.',
     currentAffairs: { axis: 'clima-energia-meio-ambiente', verifiedAt: '2026-08-24' },
@@ -79,5 +59,6 @@ export const interactiveSummaries: InteractiveSummary[] = [
       { label: 'Associated Press — síntese independente', kind: 'fonte-independente', url: 'https://apnews.com/article/f41d0dac0553825bdbe1fba5ac31ed90', verifiedAt: '2026-08-24' },
     ],
   },
+  ...ecologyInteractiveSummaries,
   ...expandedInteractiveSummaries,
 ];

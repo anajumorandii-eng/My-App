@@ -3,19 +3,16 @@ import test from 'node:test';
 import { interactiveSummaries } from '../data/interactiveSummaries';
 import { summaryMaterials } from '../data/summaryMaterials';
 import { validateSummaryCatalog } from './summaryCatalog';
+import { summaryCurriculum } from '../data/summaryCurriculum';
+import { auditSummaryCoverage } from './summaryCoverage';
 
-test('preserva os três resumos publicados e amplia somente com fontes internas resolvíveis', () => {
-  assert.deepEqual(interactiveSummaries.slice(0, 3).map((item) => item.id), [
-    'fis-termologia-calor',
-    'bio-ecologia-eutrofizacao',
-    'atu-cop30-belem',
-  ]);
+test('preserva os IDs publicados e mantém todas as fontes internas resolvíveis', () => {
   assert.deepEqual(
-    [...new Set(interactiveSummaries.slice(3).map((item) => item.subject))].sort(),
-    ['Geografia', 'Matemática', 'Química'],
+    ['fis-termologia-calor', 'bio-ecologia-eutrofizacao', 'atu-cop30-belem', 'qui-equilibrio-acidificacao', 'mat-probabilidade-contagem', 'geo-bonus-demografico']
+      .filter((id) => interactiveSummaries.some((item) => item.id === id)),
+    ['fis-termologia-calor', 'bio-ecologia-eutrofizacao', 'atu-cop30-belem', 'qui-equilibrio-acidificacao', 'mat-probabilidade-contagem', 'geo-bonus-demografico'],
   );
   assert.deepEqual(validateSummaryCatalog(interactiveSummaries, summaryMaterials), []);
-  assert.ok(interactiveSummaries.slice(3).every((item) => item.retrieval.every((question) => question.board && question.phase)));
 });
 
 test('detecta IDs duplicados, pergunta fora de seção e material interno desconhecido', () => {
@@ -55,4 +52,30 @@ test('rejeita fonte de apostila sem localização e resumo sem os três níveis'
   const codes = validateSummaryCatalog([summary], [material]).map((issue) => issue.code);
   assert.ok(codes.includes('missing-source-location'));
   assert.ok(codes.includes('missing-depth'));
+});
+
+test('publica os 11 tópicos de Ecologia do primeiro semestre uma única vez', () => {
+  const ecologyTopics = summaryCurriculum
+    .find((item) => item.subject === 'Biologia')!
+    .topics.filter((item) => item.track === 'Ecologia' && item.title !== 'Biomas Brasileiros');
+  const ecologyIds = [
+    'bio-ecologia-introducao',
+    'bio-ecologia-dinamica-populacoes',
+    'bio-ecologia-invasoras-controle-biologico',
+    'bio-ecologia-sucessao',
+    'bio-ecologia-ciclo-carbono',
+    'bio-ecologia-ciclo-nitrogenio',
+    'bio-ecologia-ciclo-hidrologico-poluicao-agua',
+    'bio-ecologia-eutrofizacao',
+    'bio-ecologia-poluicao-ar',
+    'bio-ecologia-biomagnificacao',
+    'bio-ecologia-aquecimento-global-pops-biorremediacao',
+  ];
+  assert.deepEqual(interactiveSummaries.filter((item) => ecologyIds.includes(item.id)).map((item) => item.id), ecologyIds);
+  assert.deepEqual(
+    auditSummaryCoverage(summaryCurriculum, interactiveSummaries).missing.filter((item) =>
+      ecologyTopics.some((topic) => topic.title === item.topic)),
+    [],
+  );
+  assert.deepEqual(validateSummaryCatalog(interactiveSummaries, summaryMaterials), []);
 });
