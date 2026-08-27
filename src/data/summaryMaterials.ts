@@ -1,4 +1,5 @@
 import { biologySummaryMaterials } from './biologyInteractiveSummaries';
+import { physicsSummaryMaterials } from './physicsInteractiveSummaries';
 
 export interface SummaryMaterial {
   id: string;
@@ -35,4 +36,5 @@ export const summaryMaterials: SummaryMaterial[] = [
   { id: 'disc_unesp_geo_2024', subject: 'Geografia', topic: 'Geografia do Brasil', format: 'questao-discursiva', sourceFile: 'src/data/discursiveQuestions.ts', board: 'Unesp/Vunesp', phase: 'segunda' },
   { id: 'resolutionStrategies', subject: 'Interdisciplinar', topic: 'Estratégias de prova', format: 'estrategia', sourceFile: 'src/data/resolutionStrategies.ts' },
   ...biologySummaryMaterials,
+  ...physicsSummaryMaterials,
 ];

@@ -68,3 +68,9 @@ test('não deixa tópicos de Biologia fora do catálogo publicado', async () => 
   const audit = auditSummaryCoverage(summaryCurriculum, interactiveSummaries);
   assert.deepEqual(audit.missing.filter((item) => item.subject === 'Biologia'), []);
 });
+
+test('não deixa tópicos de Física fora do catálogo publicado', async () => {
+  const { interactiveSummaries } = await import('../data/interactiveSummaries');
+  const audit = auditSummaryCoverage(summaryCurriculum, interactiveSummaries);
+  assert.deepEqual(audit.missing.filter((item) => item.subject === 'Física'), []);
+});

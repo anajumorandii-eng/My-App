@@ -2,10 +2,11 @@ import type { InteractiveSummary } from '../types/summary';
 import { biologyInteractiveSummaries } from './biologyInteractiveSummaries';
 import { ecologyInteractiveSummaries } from './ecologyInteractiveSummaries';
 import { expandedInteractiveSummaries } from './expandedInteractiveSummaries';
+import { physicsInteractiveSummaries } from './physicsInteractiveSummaries';
 
 export const interactiveSummaries: InteractiveSummary[] = [
   {
-    id: 'fis-termologia-calor', title: 'Calor, temperatura e mudanças de estado', subject: 'Física', topic: 'Termologia', priority: 'muito-alta',
+    id: 'fis-termologia-calor', title: 'Calor, temperatura e mudanças de estado', subject: 'Física', topic: 'Temperatura, Calor e seus Mecanismos de Transferência', priority: 'muito-alta',
     prerequisites: ['Proporcionalidade', 'Conversão de unidades', 'Energia'],
     overview: 'Do significado físico de calor às etapas de uma resolução discursiva com aquecimento e fusão.',
     boards: [
@@ -62,5 +63,6 @@ export const interactiveSummaries: InteractiveSummary[] = [
   },
   ...ecologyInteractiveSummaries,
   ...biologyInteractiveSummaries,
+  ...physicsInteractiveSummaries,
   ...expandedInteractiveSummaries,
 ];
