@@ -11,7 +11,7 @@ const commonBoards: InteractiveSummary['boards'] = [
 
 export const expandedInteractiveSummaries: InteractiveSummary[] = [
   {
-    id: 'qui-equilibrio-acidificacao', title: 'Equilíbrio químico, acidez e intemperismo', subject: 'Química', topic: 'Equilíbrio químico', priority: 'muito-alta',
+    id: 'qui-equilibrio-acidificacao', title: 'Equilíbrio químico, acidez e intemperismo', subject: 'Química', topic: 'Equilíbrios Químicos I', priority: 'muito-alta',
     prerequisites: ['Mol e concentração', 'Ácidos e bases', 'Princípio de Le Chatelier'],
     overview: 'Do balanço entre espécies à leitura de uma intervenção ambiental na Fuvest.', boards: commonBoards,
     sections: [
@@ -32,7 +32,7 @@ export const expandedInteractiveSummaries: InteractiveSummary[] = [
     ],
   },
   {
-    id: 'mat-probabilidade-contagem', title: 'Contagem sistemática e probabilidade', subject: 'Matemática', topic: 'Probabilidade', priority: 'muito-alta',
+    id: 'mat-probabilidade-contagem', title: 'Contagem sistemática e probabilidade', subject: 'Matemática', topic: 'Introdução às Probabilidades', priority: 'muito-alta',
     prerequisites: ['Conjuntos', 'Divisibilidade', 'Princípio multiplicativo'], overview: 'Como definir o espaço amostral, contar sem duplicar e justificar a razão final.', boards: commonBoards,
     sections: [
       { id: 'prob-intuicao', title: 'Intuição: probabilidade começa antes da divisão', stage: 'intuicao', depth: 'rapida', content: 'A fração favoráveis/possíveis só é válida quando o espaço amostral e a equiprobabilidade estão claros. O trabalho decisivo costuma ser organizar a contagem.' },

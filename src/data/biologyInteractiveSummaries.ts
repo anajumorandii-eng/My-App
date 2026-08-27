@@ -93,7 +93,7 @@ export const biologySummaryMaterials: SummaryMaterial[] = remainingTopics.map((t
   subject: 'Biologia',
   topic: topic.title,
   format: 'apostila',
-  sourceFile: `materiais brutos/Biologia (v1) ${topic.track === 'Fisiologia Vegetal' || topic.track === 'Genética' || topic.track === 'Evolução' ? '3–4' : '1–4'}.pdf`,
+  sourceFile: 'materiais brutos/Biologia (v1) 1.pdf',
   chapter: topic.title,
   startPage: 1,
   endPage: 367,

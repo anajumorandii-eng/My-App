@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
+import { existsSync } from 'node:fs';
 import { interactiveSummaries } from '../data/interactiveSummaries';
 import { summaryMaterials } from '../data/summaryMaterials';
 import { validateSummaryCatalog } from './summaryCatalog';
@@ -13,6 +14,14 @@ test('preserva os IDs publicados e mantém todas as fontes internas resolvíveis
     ['fis-termologia-calor', 'bio-ecologia-eutrofizacao', 'atu-cop30-belem', 'qui-equilibrio-acidificacao', 'mat-probabilidade-contagem', 'geo-bonus-demografico'],
   );
   assert.deepEqual(validateSummaryCatalog(interactiveSummaries, summaryMaterials), []);
+});
+
+test('toda apostila publicada aponta para um arquivo existente', () => {
+  const missingFiles = summaryMaterials
+    .filter((material) => material.format === 'apostila')
+    .filter((material) => !existsSync(material.sourceFile))
+    .map((material) => material.sourceFile);
+  assert.deepEqual([...new Set(missingFiles)], []);
 });
 
 test('detecta IDs duplicados, pergunta fora de seção e material interno desconhecido', () => {

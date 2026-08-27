@@ -80,3 +80,11 @@ test('não deixa tópicos de Geografia fora do catálogo publicado', async () =>
   const audit = auditSummaryCoverage(summaryCurriculum, interactiveSummaries);
   assert.deepEqual(audit.missing.filter((item) => item.subject === 'Geografia'), []);
 });
+
+for (const subject of ['História', 'Língua Inglesa', 'Redação', 'Gramática', 'Literatura', 'Entendimento de Texto', 'Matemática', 'Química']) {
+  test(`não deixa tópicos de ${subject} fora do catálogo publicado`, async () => {
+    const { interactiveSummaries } = await import('../data/interactiveSummaries');
+    const audit = auditSummaryCoverage(summaryCurriculum, interactiveSummaries);
+    assert.deepEqual(audit.missing.filter((item) => item.subject === subject), []);
+  });
+}

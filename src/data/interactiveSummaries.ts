@@ -4,6 +4,7 @@ import { ecologyInteractiveSummaries } from './ecologyInteractiveSummaries';
 import { expandedInteractiveSummaries } from './expandedInteractiveSummaries';
 import { geographyInteractiveSummaries } from './geographyInteractiveSummaries';
 import { physicsInteractiveSummaries } from './physicsInteractiveSummaries';
+import { remainingInteractiveSummaries } from './remainingInteractiveSummaries';
 
 export const interactiveSummaries: InteractiveSummary[] = [
   {
@@ -66,5 +67,6 @@ export const interactiveSummaries: InteractiveSummary[] = [
   ...biologyInteractiveSummaries,
   ...physicsInteractiveSummaries,
   ...geographyInteractiveSummaries,
+  ...remainingInteractiveSummaries,
   ...expandedInteractiveSummaries,
 ];
