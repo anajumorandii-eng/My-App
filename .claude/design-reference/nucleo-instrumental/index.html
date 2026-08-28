@@ -1,0 +1,315 @@
+<!-- PROTOTYPE — throwaway. Answers: "does the Núcleo Instrumental
+     direction (Orbital + Laboratório consolidated, ~60/40) work as one
+     coherent flagship experience for Hoje, across themes/breakpoints/states/
+     subjects?" Not production code — no tests, no real data, no framework.
+     Dev controls (bottom bar) are prototype-only, not part of the design. -->
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Núcleo Instrumental — protótipo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;1,6..72,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg-0:#07090A; --bg-1:#0C1512; --bg-2:#121B17; --mineral:#1B2420;
+  --glass:rgba(210,225,218,0.05); --glass-strong:rgba(210,225,218,0.09);
+  --border:rgba(210,225,218,0.11); --border-strong:rgba(210,225,218,0.2);
+  --text:#EDEFEA; --text-dim:#93A29A; --text-faint:#57655D;
+  --ember:#D9B583; --ember-2:#C89458; --gold:#E7C688; /* fixed brand-mark gold — never touched by JS */
+  --wine:#A1394A; --wine-deep:#6C1C27;
+  --shadow: 0 30px 90px rgba(0,0,0,0.55);
+  /* per-matéria palette — set/tweened by JS (setPaletteVars/tweenPalette).
+     --accent is the primaryAccent; everything below is the rest of the
+     SubjectVisualProfile's SISTEMA CROMÁTICO. Defaults here = física. */
+  --accent:#4C7FE0; --secondary:#E0B23A; --emissive:#F3F6FF; --text-highlight:#CFE0FF;
+  --data-positive:#6FCF97; --data-warning:#E0954C; --sub-bg:#0A0E15; --sub-surface:#121A24;
+  --atmo-a:#16264A; --atmo-b:#080A0F;
+}
+html[data-theme="light"] {
+  --bg-0:#F7F3EA; --bg-1:#EFE8D8; --bg-2:#E7DFC9; --mineral:#E9E2D0;
+  --glass:rgba(23,49,42,0.035); --glass-strong:rgba(23,49,42,0.06);
+  --border:rgba(23,49,42,0.14); --border-strong:rgba(23,49,42,0.24);
+  --text:#171A18; --text-dim:#4C564F; --text-faint:#838C85;
+  --ember:#95602E; --ember-2:#B77A3E; --gold:#8A6226;
+  --wine:#852636; --wine-deep:#6C1C27;
+  --shadow: 0 24px 70px rgba(23,49,42,0.14);
+}
+* { box-sizing:border-box; }
+html,body { margin:0; height:100%; background:var(--bg-0); color:var(--text); font-family:"Inter",ui-sans-serif,sans-serif; overflow-x:hidden; transition:background .5s ease,color .5s ease; }
+body { padding-bottom:66px; } /* clearance for the fixed prototype devbar below */
+.mono { font-family:"JetBrains Mono",ui-monospace,monospace; }
+::selection { background:var(--accent); color:#0A0B0A; }
+:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+
+/* ---- z-layer architecture (explicit — nothing paints outside its layer) ----
+   z0 atmosphere/cor de fundo · z1 campo da matéria (canvas ambiente)
+   z2 conexões de "Por que isso?" (contidas na .why-bay) · z3 Núcleo
+   z4 textos/métricas/explicações · z5 navegação/CTA/controles */
+.stage { min-height:100vh; position:relative; display:flex; flex-direction:column; }
+.stage::before {
+  content:''; position:fixed; inset:0; z-index:0; pointer-events:none;
+  background:
+    radial-gradient(60% 50% at 84% 6%, color-mix(in oklab, var(--atmo-a) 55%, transparent), transparent 62%),
+    radial-gradient(50% 42% at 4% 98%, color-mix(in oklab, var(--atmo-b) 50%, transparent), transparent 60%),
+    color-mix(in oklab, var(--sub-bg) 30%, var(--bg-1));
+  opacity:.9; transition:opacity .5s ease;
+}
+html[data-theme="light"] .stage::before { opacity:.55; }
+#fieldCanvas { position:fixed; inset:0; z-index:1; pointer-events:none; width:100%; height:100%; }
+
+/* ---- topbar ---- */
+.topbar { position:relative; z-index:5; display:flex; align-items:center; gap:1.1rem; padding:1.35rem clamp(1.2rem,4vw,3.2rem) 0; }
+.mark { width:28px; height:28px; border-radius:9px; border:1.3px solid var(--ember); display:grid; place-items:center; color:var(--ember); background:var(--glass); }
+.mark svg { width:15px; height:15px; }
+.brandword { font-family:"Newsreader",serif; font-weight:600; font-size:1.08rem; }
+.topnav { display:flex; gap:1.3rem; font-size:.8rem; color:var(--text-dim); margin-left:.4rem; }
+.topnav b { color:var(--text); border-bottom:1px solid var(--ember); padding-bottom:2px; font-weight:600; }
+.top-spacer { flex:1; }
+.subject-rail { display:flex; gap:.35rem; flex-wrap:wrap; max-width:56vw; justify-content:flex-end; }
+.subject-pill {
+  font-family:"JetBrains Mono",monospace; font-size:.64rem; letter-spacing:.02em; padding:.38rem .6rem;
+  border-radius:999px; border:1px solid var(--border); background:var(--glass); color:var(--text-dim);
+  cursor:pointer; transition:all .18s ease; white-space:nowrap;
+}
+.subject-pill:hover { border-color:var(--border-strong); color:var(--text); }
+.subject-pill.active { background:color-mix(in oklab, var(--accent,var(--ember)) 22%, var(--glass)); border-color:var(--accent,var(--ember)); color:var(--text); }
+
+/* ---- hero grid ---- */
+.hero { position:relative; z-index:4; flex:1; display:grid; grid-template-columns:1.05fr 1fr; gap:1.5rem; align-items:center; padding:1.6rem clamp(1.2rem,4vw,3.2rem) 1.2rem; min-height:0; }
+.editorial { position:relative; z-index:4; }
+.eyebrow { font-family:"JetBrains Mono",monospace; font-size:.68rem; letter-spacing:.2em; text-transform:uppercase; color:var(--accent,var(--ember)); margin-bottom:.85rem; display:flex; align-items:center; gap:.5rem; }
+.eyebrow .pulse { width:6px; height:6px; border-radius:50%; background:var(--accent,var(--ember)); box-shadow:0 0 8px var(--accent,var(--ember)); animation:eyebrowPulse 2.4s ease-in-out infinite; }
+@keyframes eyebrowPulse { 0%,100%{ opacity:1; transform:scale(1); } 50%{ opacity:.45; transform:scale(0.7); } }
+@media (prefers-reduced-motion:reduce) { .eyebrow .pulse { animation:none; } }
+.headline { font-family:"Newsreader",serif; font-weight:600; font-style:italic; font-size:clamp(2.6rem,4.6vw,4.3rem); line-height:.98; margin:0 0 .9rem; letter-spacing:-.01em; text-wrap:balance; min-height:2.1em; }
+.headline .ch { display:inline-block; }
+.decision-line { font-size:1.02rem; color:var(--text-dim); max-width:38ch; line-height:1.55; margin:0 0 1.5rem; }
+.decision-line b { color:color-mix(in oklab, var(--text-highlight) 55%, var(--text)); font-weight:600; transition:color .6s ease; }
+
+.action-row { display:flex; align-items:center; gap:1.3rem; margin-bottom:1.9rem; }
+.cta {
+  position:relative; appearance:none; border:none; cursor:pointer; overflow:hidden;
+  background:linear-gradient(155deg, color-mix(in oklab, var(--accent) 88%, white 6%), var(--secondary));
+  color:var(--cta-text, #FBF0EC); /* --cta-text set in JS per-subject (luminance-checked, never tweened) */
+  font-family:"Inter",sans-serif; font-weight:600; font-size:.95rem;
+  padding:.95rem 1.9rem; border-radius:999px; box-shadow:0 12px 32px color-mix(in oklab, var(--accent) 45%, transparent);
+  transition:transform .12s ease, background .6s ease, box-shadow .6s ease;
+}
+.cta:active { transform:scale(.97); }
+.cta .ripple { position:absolute; border-radius:50%; background:rgba(255,255,255,.5); transform:scale(0); pointer-events:none; mix-blend-mode:overlay; }
+.why-link { font-size:.85rem; color:var(--text-dim); cursor:pointer; display:flex; align-items:center; gap:.4rem; border-bottom:1px dotted transparent; transition:border-color .15s; }
+.why-link:hover { color:var(--text); border-color:var(--text-dim); }
+
+.telemetry { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:.9rem 1.6rem; max-width:520px; }
+.tele-item { font-family:"JetBrains Mono",monospace; padding:.5rem .65rem .6rem; border-radius:9px; background:var(--glass); border:1px solid transparent; transition:border-radius .5s ease, background .5s ease; }
+.tele-k { font-size:.62rem; letter-spacing:.08em; text-transform:uppercase; color:var(--text-faint); }
+.tele-v { font-size:1.15rem; margin-top:.15rem; color:var(--text); }
+.tele-v small { font-size:.68rem; color:var(--text-dim); font-weight:400; }
+.tele-scale { height:3px; border-radius:2px; background:var(--glass-strong); margin-top:.4rem; overflow:hidden; position:relative; }
+.tele-fill { height:100%; background:linear-gradient(90deg,var(--accent,var(--ember)),var(--secondary)); transition:width .6s cubic-bezier(.4,0,.2,1), background .6s ease; }
+@keyframes teleBreathe { 50% { filter:brightness(1.3); } }
+@keyframes teleShift { to { background-position:200% 0; } }
+
+/* ---- per-subject surface material — the whole interface's "operating system"
+   reconfigures per matéria, not just the central drawing. Radii/borders/bg
+   texture shift with data-geometry (set from SUBJECTS[key].geometry), and
+   the domínio bar (tele-fill) is restyled per matéria too — visualização
+   dos dados is part of the SubjectVisualProfile, not just the Núcleo. ---- */
+[data-geometry="grid"] .tele-item, [data-geometry="grid"] .flow-node, [data-geometry="grid"] .factor-row { border-radius:2px; border-color:var(--border); }
+[data-geometry="grid"] .core-frame { border-radius:3px; }
+[data-geometry="grid"] .tele-scale::before { content:''; position:absolute; inset:0; background:repeating-linear-gradient(90deg, var(--bg-0) 0 1px, transparent 1px 7px); z-index:1; opacity:.7; }
+[data-geometry="field"] .tele-item, [data-geometry="field"] .factor-row { border-radius:3px 12px 3px 12px; }
+[data-geometry="field"] .tele-fill { background:linear-gradient(90deg,var(--accent,var(--ember)),var(--secondary),var(--accent,var(--ember))); }
+[data-geometry="bond"] .tele-item, [data-geometry="bond"] .flow-node, [data-geometry="bond"] .factor-row { border-radius:11px; background:linear-gradient(155deg, var(--glass-strong), var(--glass)); }
+[data-geometry="bond"] .tele-fill { background:linear-gradient(90deg,var(--accent),var(--secondary),var(--accent)); background-size:220% 100%; animation:teleShift 3.2s linear infinite; }
+[data-geometry="branch"] .tele-item, [data-geometry="branch"] .flow-node, [data-geometry="branch"] .factor-row { border-radius:18px; }
+[data-geometry="branch"] .tele-fill { animation:teleBreathe 2.6s ease-in-out infinite; }
+[data-geometry="type"] .headline { letter-spacing:-.015em; }
+[data-geometry="type"] .tele-item, [data-geometry="type"] .factor-row { border-radius:0; border-bottom:1.5px solid var(--border-strong); background:transparent; }
+[data-geometry="type"] .tele-fill { background:var(--accent); }
+[data-geometry="layer"] .tele-item, [data-geometry="layer"] .flow-node, [data-geometry="layer"] .factor-row { border-radius:2px 14px 2px 14px; }
+[data-geometry="layer"] .tele-fill { background:linear-gradient(90deg, transparent, var(--accent) 45%, var(--secondary)); }
+[data-geometry="argument"] .tele-item, [data-geometry="argument"] .flow-node, [data-geometry="argument"] .factor-row { border-radius:3px; border-left:2px solid var(--accent,var(--ember)); }
+[data-geometry="timeline"] .tele-item, [data-geometry="timeline"] .flow-node, [data-geometry="timeline"] .factor-row { border-radius:0; border-bottom:1px solid var(--border-strong); background:transparent; }
+[data-geometry="timeline"] .tele-fill { background:linear-gradient(90deg, var(--accent) 0 50%, var(--secondary) 50% 100%); }
+[data-geometry="topo"] .tele-item, [data-geometry="topo"] .flow-node, [data-geometry="topo"] .factor-row { border-radius:2px 16px; }
+[data-geometry="topo"] .tele-fill { background:linear-gradient(90deg, var(--data-positive), var(--accent), var(--secondary)); }
+[data-geometry="pulse"] .tele-item, [data-geometry="pulse"] .flow-node, [data-geometry="pulse"] .factor-row { border-radius:16px 4px 16px 4px; }
+[data-geometry="pulse"] .tele-fill { animation:teleBreathe 1.1s ease-in-out infinite; }
+
+/* ---- core column ---- */
+.core-col { position:relative; z-index:3; display:flex; flex-direction:column; align-items:center; justify-content:center; min-height:0; }
+.core-frame { position:relative; width:min(96%,560px); aspect-ratio:1/0.92; }
+.core-frame canvas { width:100%; height:100%; display:block; }
+.core-caption { margin-top:.6rem; font-family:"JetBrains Mono",monospace; font-size:.66rem; letter-spacing:.06em; text-transform:uppercase; color:var(--text-faint); text-align:center; }
+.core-caption b { color:var(--accent,var(--ember)); font-weight:500; }
+
+/* ---- why panel (inspection) — the "baía de análise" ----
+   Structural rule: the core visualization dims (handled in engine.js via
+   `focus` when whyOpen), then this bay appears BELOW it with its own
+   contained coordinate space. Connector lines never reach into the hero:
+   they run only inside .why-bay (overflow:hidden), from a small local
+   "núcleo echo" anchor down to each factor — short, curved, controlled. */
+.why-panel { position:relative; z-index:4; margin:0 clamp(1.2rem,4vw,3.2rem) 1.4rem; border-top:1px solid var(--border); padding-top:1.4rem; display:none; flex-direction:column; gap:0; }
+.why-panel.open { display:flex; }
+.why-head { font-family:"JetBrains Mono",monospace; font-size:.68rem; letter-spacing:.1em; text-transform:uppercase; color:var(--text-faint); margin:0 0 1.1rem; }
+.why-bay { position:relative; overflow:hidden; border-radius:16px; padding:1.5rem clamp(1rem,3vw,2.2rem) 1.3rem; background:var(--glass); border:1px solid var(--border); mask-image:linear-gradient(to bottom, transparent 0, #000 22px, #000 calc(100% - 10px), transparent 100%); }
+.why-echo { position:relative; z-index:4; display:flex; flex-direction:column; align-items:center; gap:.45rem; margin-bottom:1.3rem; }
+.echo-dot { width:9px; height:9px; border-radius:50%; background:var(--accent,var(--ember)); box-shadow:0 0 14px var(--accent,var(--ember)); }
+.echo-label { font-family:"JetBrains Mono",monospace; font-size:.6rem; letter-spacing:.1em; text-transform:uppercase; color:var(--text-faint); }
+#connector-svg { position:absolute; inset:0; z-index:2; pointer-events:none; overflow:hidden; }
+#connector-svg path.glow { stroke:var(--accent,var(--ember)); stroke-width:3; opacity:.12; fill:none; }
+#connector-svg path.line { stroke:var(--accent,var(--ember)); stroke-width:1; opacity:.55; fill:none; stroke-dasharray:2 3; }
+.factor-list { position:relative; z-index:4; display:flex; flex-direction:column; gap:.85rem; max-width:620px; margin:0 auto; }
+.factor-row { position:relative; display:flex; align-items:center; gap:.7rem; padding:.55rem .8rem; border-radius:10px; background:var(--bg-1); border:1px solid var(--border); }
+.factor-dot { width:8px; height:8px; border-radius:50%; background:var(--accent,var(--ember)); box-shadow:0 0 8px var(--accent,var(--ember)); flex-shrink:0; }
+.factor-row.dim .factor-dot { background:var(--text-faint); box-shadow:none; }
+.factor-body { flex:1; }
+.factor-name { font-size:.92rem; }
+.factor-meta { font-family:"JetBrains Mono",monospace; font-size:.68rem; color:var(--text-faint); }
+.factor-w { font-family:"JetBrains Mono",monospace; font-size:.85rem; color:var(--accent,var(--ember)); }
+.why-note { font-size:.8rem; color:var(--text-faint); margin-top:.9rem; }
+
+/* ---- trail ---- */
+.trail-wrap { position:relative; z-index:4; padding:0 clamp(1.2rem,4vw,3.2rem) 2rem; }
+.trail-head { display:flex; justify-content:space-between; align-items:baseline; margin-bottom:1rem; }
+.trail-head h3 { font-family:"Newsreader",serif; font-weight:500; font-size:1.05rem; color:var(--text-dim); margin:0; }
+.trail-head span { font-family:"JetBrains Mono",monospace; font-size:.66rem; color:var(--text-faint); }
+.flow { display:flex; gap:0; overflow-x:auto; padding-bottom:.4rem; }
+.flow-node { position:relative; flex:0 0 auto; width:220px; padding:0 1.1rem 0 0; }
+.flow-node:not(:last-child)::after { content:''; position:absolute; top:22px; right:0; width:1.1rem; height:1px; background:var(--border-strong); }
+.flow-no { font-family:"JetBrains Mono",monospace; font-size:.7rem; color:var(--accent,var(--ember)); }
+.flow-dot { width:9px; height:9px; border-radius:50%; background:var(--accent,var(--ember)); margin:.4rem 0 .5rem; box-shadow:0 0 8px var(--accent,var(--ember)); }
+.flow-t { font-size:.92rem; margin-bottom:.15rem; }
+.flow-m { font-family:"JetBrains Mono",monospace; font-size:.68rem; color:var(--text-faint); }
+.flow-node.quiet { width:150px; opacity:.55; }
+.flow-node.quiet .flow-dot { background:var(--text-faint); box-shadow:none; width:6px; height:6px; }
+.flow-node.quiet .flow-t { font-size:.8rem; }
+
+/* ---- mobile ---- */
+.bottomnav { display:none; }
+@media (max-width: 880px) {
+  .stage { min-height:auto; }
+  .hero { grid-template-columns:1fr; flex:none; padding-top:.2rem; align-items:stretch; gap:.4rem; }
+  .core-col { order:-1; }
+  .core-frame { width:min(58%,220px); aspect-ratio:1/0.85; margin:0 auto; }
+  .core-caption { margin-top:.3rem; }
+  .telemetry { grid-template-columns:repeat(2,minmax(0,1fr)); max-width:100%; }
+  /* mobile "por que isso?": no diagonals over content — the echo/svg fan is
+     hidden and factors become a plain vertical connected sequence instead. */
+  .why-bay { mask-image:none; padding:1.1rem 1rem 1rem; }
+  .why-echo, #connector-svg { display:none; }
+  .factor-row:not(:last-child)::after { content:''; position:absolute; left:calc(.8rem + 4px); top:100%; width:1px; height:.85rem; background:var(--border-strong); }
+  .subject-rail { max-width:62vw; }
+  .topnav { display:none; }
+  body { padding-bottom:76px; }
+  .bottomnav {
+    display:flex; position:fixed; bottom:0; inset-inline:0; z-index:5; height:60px;
+    background:var(--glass-strong); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px);
+    border-top:1px solid var(--border); justify-content:space-around; align-items:center;
+    padding-bottom:env(safe-area-inset-bottom);
+  }
+  .bottomnav .bn-item { display:flex; flex-direction:column; align-items:center; gap:.15rem; font-size:.62rem; color:var(--text-faint); }
+  .bottomnav .bn-item.active { color:var(--accent,var(--ember)); }
+  .bottomnav .bn-dot { width:4px; height:4px; border-radius:50%; background:currentColor; }
+}
+
+/* ---- reduced motion (site-level, mirrors prefers-reduced-motion) ---- */
+.reduced * { transition-duration:.01ms !important; animation-duration:.01ms !important; }
+.reduced .eyebrow .pulse { animation:none; opacity:1; transform:none; }
+
+/* ---- spotlight (localized, hover-only) ---- */
+.spot { position:relative; isolation:isolate; }
+.spot::after {
+  content:''; position:absolute; inset:0; border-radius:inherit; pointer-events:none; opacity:0;
+  transition:opacity .15s ease;
+  background:radial-gradient(120px circle at var(--sx,50%) var(--sy,50%), color-mix(in oklab, var(--accent,var(--ember)) 20%, transparent), transparent 70%);
+}
+@media (hover:hover) and (pointer:fine) { .spot:hover::after { opacity:1; } }
+
+/* ---- dev controls (prototype only) ---- */
+#devbar {
+  position:fixed; left:50%; bottom:14px; transform:translateX(-50%); z-index:50;
+  display:flex; align-items:center; gap:.4rem; padding:.5rem .6rem; border-radius:14px;
+  background:#0B0D0C; border:1px solid rgba(255,255,255,.14); box-shadow:0 20px 50px rgba(0,0,0,.5);
+  font-family:"JetBrains Mono",monospace; font-size:.66rem; color:#C7CDC9; flex-wrap:wrap; max-width:94vw;
+}
+#devbar .grp { display:flex; align-items:center; gap:.25rem; padding:0 .4rem; border-right:1px solid rgba(255,255,255,.1); }
+#devbar .grp:last-child { border-right:none; }
+#devbar button, #devbar select {
+  appearance:none; border:1px solid rgba(255,255,255,.16); background:transparent; color:#C7CDC9;
+  padding:.32rem .55rem; border-radius:8px; font-family:inherit; font-size:.66rem; cursor:pointer;
+}
+#devbar button.on { background:var(--ember,#D9B583); border-color:var(--ember,#D9B583); color:#171A18; font-weight:600; }
+#devbar .lbl { color:#6B7570; margin-right:.15rem; }
+</style>
+</head>
+<body>
+<div class="stage" id="stage">
+  <canvas id="fieldCanvas"></canvas>
+  <div class="topbar">
+    <span class="mark"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="2.2" fill="currentColor"/><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.3"/></svg></span>
+    <span class="brandword">Crivo</span>
+    <span class="topnav"><b>Hoje</b><span>Plano</span><span>Estudar</span><span>Análises</span></span>
+    <span class="top-spacer"></span>
+    <div class="subject-rail" id="subjectRail"></div>
+  </div>
+
+  <div class="hero">
+    <div class="editorial">
+      <p class="eyebrow"><span class="pulse"></span><span id="eyebrowText">Foco de hoje · convergência concluída</span></p>
+      <h1 class="headline" id="headline"></h1>
+      <p class="decision-line" id="decisionLine"></p>
+
+      <div class="action-row">
+        <button class="cta spot" id="ctaBtn">Começar</button>
+        <span class="why-link spot" id="whyLink">por que isso? <span id="whyChevron">▾</span></span>
+      </div>
+
+      <div class="telemetry" id="telemetry"></div>
+    </div>
+
+    <div class="core-col">
+      <div class="core-frame">
+        <canvas id="coreCanvas"></canvas>
+      </div>
+      <p class="core-caption">estado — <b id="stateLabel">pronto</b> · <span id="coreTypeTag">núcleo</span></p>
+    </div>
+  </div>
+
+  <div class="why-panel" id="whyPanel">
+    <p class="why-head">como os sinais convergiram para esta recomendação</p>
+    <div class="why-bay" id="whyBay">
+      <svg id="connector-svg"></svg>
+      <div class="why-echo" id="whyEcho"><span class="echo-dot"></span><span class="echo-label">sinal do núcleo</span></div>
+      <div class="factor-list" id="factorList"></div>
+    </div>
+    <p class="why-note">Pesos de uma heurística inicial determinística — ainda não validados cientificamente.</p>
+  </div>
+
+  <div class="trail-wrap">
+    <div class="trail-head"><h3 id="trailHeadTitle">Sequência calculada</h3><span id="trailHeadMeta">3 depois disso · 3 podem esperar</span></div>
+    <div class="flow" id="flow"></div>
+  </div>
+
+  <div class="bottomnav">
+    <span class="bn-item active"><span class="bn-dot"></span>Hoje</span>
+    <span class="bn-item"><span class="bn-dot"></span>Plano</span>
+    <span class="bn-item"><span class="bn-dot"></span>Estudar</span>
+    <span class="bn-item"><span class="bn-dot"></span>Análises</span>
+  </div>
+</div>
+
+<div id="devbar">
+  <div class="grp"><span class="lbl">tema</span><button data-act="theme:dark" class="on">escuro</button><button data-act="theme:light">claro</button></div>
+  <div class="grp"><span class="lbl">estado</span><button data-act="state:idle">repouso</button><button data-act="state:listening">sinais</button><button data-act="state:analyzing">análise</button><button data-act="state:converging">convergindo</button><button data-act="state:ready" class="on">pronto</button><button data-act="state:recalibrating">recalibrando</button></div>
+  <div class="grp"><span class="lbl">reduzido</span><button data-act="rm:on">ligar</button><button data-act="rm:off" class="on">desligar</button></div>
+  <div class="grp"><button data-act="demo">▶ demo completa</button></div>
+</div>
+
+<script src="engine.js"></script>
+</body>
+</html>
