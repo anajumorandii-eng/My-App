@@ -4,7 +4,8 @@ import { cn } from '../lib/cn';
 import { useRafLoop } from '../hooks/useRafLoop';
 import { getSubjectProfile, type CrivoPalette } from '../design-system/crivoSubjects';
 import { CORE_REGISTRY, type CanvasContextLike } from '../design-system/crivoCoreRegistry';
-import { makeSpring, stepSpring } from '../design-system/crivoSpring';
+import { drawExternalShell, drawCenterLight, drawScanSweep } from '../design-system/crivoCoreShell';
+import { makeSpring, stepSpring, type Spring } from '../design-system/crivoSpring';
 import { tweenPalette } from '../design-system/crivoPaletteTween';
 import { topicVariantSeed } from '../design-system/crivoTopicVariant';
 import { MOTION_DURATION } from '../design-system/motion/tokens';
@@ -20,22 +21,42 @@ const STATE_LABEL: Record<CrivoCoreState, string> = {
   recalibrating: 'Recalculando com sua resposta',
 };
 
+// The external shell's pose per state — shared "Crivo identity" language,
+// the same across every matéria (only the internal artifact and palette
+// carry subject identity). Faithful port of the approved reference's
+// STATE_PARAMS/STATE_FOCUS_TARGET tables.
+interface StatePose { spread: number; glow: number; tiltX: number; tiltY: number; scan: boolean }
+const STATE_POSE: Record<CrivoCoreState, StatePose> = {
+  idle: { spread: 0.34, glow: 0.3, tiltX: 9, tiltY: -13, scan: false },
+  listening: { spread: 0.5, glow: 0.45, tiltX: 11, tiltY: 9, scan: false },
+  analyzing: { spread: 0.88, glow: 0.62, tiltX: -7, tiltY: 22, scan: true },
+  converging: { spread: 0.16, glow: 0.92, tiltX: 4, tiltY: -9, scan: false },
+  ready: { spread: 0.32, glow: 0.55, tiltX: 6, tiltY: -16, scan: false },
+  recalibrating: { spread: 1.1, glow: 0.7, tiltX: -11, tiltY: 15, scan: false },
+};
 // "focus" is the one scalar every matéria's Núcleo renderer keys off of —
 // low while the engine is still scattering possibilities, high once it has
-// converged on a legible recommendation. The spring below eases toward
-// whichever value the current state targets, at a rate set by the matéria's
-// own rhythm/damping (its "law of motion"), not a single shared curve.
+// converged on a legible recommendation.
 const STATE_FOCUS: Record<CrivoCoreState, number> = {
-  idle: 0.5,
-  listening: 0.2,
-  analyzing: 0.1,
-  converging: 0.6,
-  ready: 1,
-  recalibrating: 0.35,
+  idle: 0.65,
+  listening: 0.22,
+  analyzing: 0.12,
+  converging: 0.9,
+  ready: 1.0,
+  recalibrating: 0.05,
 };
 
-const SPRING_STIFFNESS = 70;
-const SPRING_DAMPING = 13;
+interface CoreSprings { spread: Spring; glow: Spring; tiltX: Spring; tiltY: Spring; focus: Spring }
+function makeCoreSprings(state: CrivoCoreState): CoreSprings {
+  const pose = STATE_POSE[state];
+  return {
+    spread: makeSpring(pose.spread),
+    glow: makeSpring(pose.glow),
+    tiltX: makeSpring(pose.tiltX),
+    tiltY: makeSpring(pose.tiltY),
+    focus: makeSpring(STATE_FOCUS[state]),
+  };
+}
 
 export interface CrivoCoreProps {
   state: CrivoCoreState;
@@ -50,13 +71,16 @@ export interface CrivoCoreProps {
 }
 
 /**
- * Núcleo do Crivo — the app's signature object. Canvas 2D, one instance,
- * redrawn every frame by the matéria's own registered artifact (see
- * crivoCoreRegistry.ts) rather than three generic CSS rings. `useReducedMotion`
- * skips the animation loop entirely and draws a single static frame instead
- * of a loop that merely draws nothing; a failed/unavailable 2D context falls
- * back to a plain CSS radial gradient — there is no dependency on 3D of any
- * kind, so both paths are real "no 3D" fallbacks, not just no-WebGL ones.
+ * Núcleo do Crivo — the app's signature object. A shared external shell
+ * (three orbital rings + a small metallic mount, the constant "Crivo
+ * identity") frames a per-matéria internal artifact drawn by the matéria's
+ * own registered renderer (see crivoCoreRegistry.ts), all in Canvas 2D —
+ * ported faithfully from the approved reference prototype, not a
+ * simplification of it. `useReducedMotion` skips the animation loop
+ * entirely and draws a single static frame instead of a loop that merely
+ * draws nothing; a failed/unavailable 2D context falls back to a plain CSS
+ * radial gradient — there is no dependency on 3D of any kind, so both paths
+ * are real "no 3D" fallbacks, not just no-WebGL ones.
  */
 export function CrivoCore({ state, className, size = 96, subject, previousSubject, topicId }: CrivoCoreProps) {
   const reducedMotion = useReducedMotion();
@@ -78,8 +102,9 @@ export function CrivoCore({ state, className, size = 96, subject, previousSubjec
     [reducedMotion, previousProfile, profile]
   );
 
-  const springRef = useRef(makeSpring(STATE_FOCUS[state]));
+  const springsRef = useRef<CoreSprings>(makeCoreSprings(state));
   const elapsedRef = useRef(0);
+  const scanAngleRef = useRef(0);
   const metamorphosisElapsedRef = useRef(0);
   const metamorphosisDoneRef = useRef(!needsMetamorphosis);
 
@@ -106,28 +131,36 @@ export function CrivoCore({ state, className, size = 96, subject, previousSubjec
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
   }, [size, canvasFailed]);
 
-  const drawFrame = (focus: number, palette: CrivoPalette, time: number) => {
+  const drawFrame = (springs: CoreSprings, palette: CrivoPalette, time: number) => {
     const ctx = ctxRef.current;
     if (!ctx) return;
     ctx.clearRect(0, 0, size, size);
+    const shellCtx = ctx as unknown as CanvasContextLike;
+    const cx = size / 2, cy = size / 2;
+    const baseR = size * 0.3;
+    const squashY = 1 - Math.min(0.5, Math.abs(springs.tiltX.x) / 40);
+    const skewX = springs.tiltY.x / 90;
+    const shellPose = { cx, cy, baseR, spread: springs.spread.x, glow: springs.glow.x, squashY, skewX };
+
+    drawExternalShell(shellCtx, shellPose, palette);
     const drawFn = CORE_REGISTRY[profile.coreType] ?? CORE_REGISTRY.default_neutro;
-    // CanvasContextLike is a deliberately duck-typed interface (see
-    // crivoCoreRegistry.ts) so the draw functions can be unit-tested with a
-    // plain fake — a real 2D context satisfies it structurally but has no
-    // literal string index signature, which TS won't infer on its own.
-    drawFn({ ctx: ctx as unknown as CanvasContextLike, width: size, height: size, state: { focus }, palette, variantSeed, time });
+    drawFn({ ctx: shellCtx, width: size, height: size, state: { focus: springs.focus.x }, palette, variantSeed, time, squashY, skewX });
+    if (STATE_POSE[state].scan) drawScanSweep(shellCtx, cx, cy, baseR, scanAngleRef.current, palette);
+    drawCenterLight(shellCtx, shellPose, palette);
   };
 
   useRafLoop(
     (dt) => {
       elapsedRef.current += dt;
-      const focus = stepSpring(
-        springRef.current,
-        STATE_FOCUS[state],
-        dt,
-        SPRING_STIFFNESS * profile.rhythm,
-        SPRING_DAMPING * profile.damping
-      );
+      scanAngleRef.current += dt * 3.4;
+      const springs = springsRef.current;
+      const pose = STATE_POSE[state];
+      const rk = profile.rhythm, rd = profile.damping;
+      stepSpring(springs.spread, pose.spread, dt, 55 * rk, 11 * rd);
+      stepSpring(springs.glow, pose.glow, dt, 60 * rk, 12 * rd);
+      stepSpring(springs.tiltX, pose.tiltX, dt, 45 * rk, 10 * rd);
+      stepSpring(springs.tiltY, pose.tiltY, dt, 45 * rk, 10 * rd);
+      stepSpring(springs.focus, STATE_FOCUS[state], dt, 50 * rk, 11 * rd);
 
       let palette = profile.palette;
       if (needsMetamorphosis && !metamorphosisDoneRef.current && previousProfile) {
@@ -137,15 +170,23 @@ export function CrivoCore({ state, className, size = 96, subject, previousSubjec
         if (progress >= 1) metamorphosisDoneRef.current = true;
       }
 
-      drawFrame(focus, palette, elapsedRef.current);
+      drawFrame(springs, palette, elapsedRef.current);
     },
     { paused: reducedMotion || canvasFailed, target: wrapperNode }
   );
 
-  // Reduced motion: exactly one frame, at the state's target pose, no tween.
+  // Reduced motion: exactly one frame, at the state's target pose, no tween, no loop.
   useEffect(() => {
     if (!reducedMotion || canvasFailed) return;
-    drawFrame(STATE_FOCUS[state], profile.palette, 0);
+    const pose = STATE_POSE[state];
+    const springs: CoreSprings = {
+      spread: makeSpring(pose.spread),
+      glow: makeSpring(pose.glow),
+      tiltX: makeSpring(pose.tiltX),
+      tiltY: makeSpring(pose.tiltY),
+      focus: makeSpring(STATE_FOCUS[state]),
+    };
+    drawFrame(springs, profile.palette, 0);
     // eslint-disable-next-line react-hooks/exhaustive-deps -- drawFrame closes over refs/size/variantSeed already listed
   }, [reducedMotion, canvasFailed, state, profile, size, variantSeed]);
 
