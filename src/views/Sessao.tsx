@@ -67,7 +67,7 @@ export default function Sessao() {
   const [sessions, setSessions] = useState<Record<string, StudySessionRecord>>({});
   const [syncError, setSyncError] = useState<string | null>(null);
   const [isVerifying, setIsVerifying] = useState(false);
-  const [announceTimer, setAnnounceTimer] = useState(true);
+  const [timerAnnouncement, setTimerAnnouncement] = useState('');
   const [reconciledUid, setReconciledUid] = useState<string | null | undefined>(undefined);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const sessionReconciliationLoading = reconciledUid !== activeUid;
@@ -80,7 +80,7 @@ export default function Sessao() {
     setSessions({});
     setSelectedAction(null);
     setSecondsLeft(0);
-    setAnnounceTimer(true);
+    setTimerAnnouncement('');
     setIsVerifying(false);
     setSyncError(null);
 
@@ -258,7 +258,7 @@ export default function Sessao() {
       appliedTopicRef.current = topicId;
       setSelectedAction(requested);
       setSecondsLeft(requested.allocatedMinutes * 60);
-      setAnnounceTimer(true);
+      setTimerAnnouncement('');
     }
   }, [dailyPlan, searchParams, sessionReconciliationLoading]);
 
@@ -268,7 +268,7 @@ export default function Sessao() {
     const next = dailyPlan[0] ?? null;
     setSelectedAction(next);
     setSecondsLeft((next?.allocatedMinutes ?? 0) * 60);
-    setAnnounceTimer(true);
+    setTimerAnnouncement('');
   }, [dailyPlan, selectedAction, sessionReconciliationLoading]);
 
   useEffect(() => {
@@ -277,12 +277,12 @@ export default function Sessao() {
         setSecondsLeft((prev) => {
           if (prev <= 1) {
             setIsRunning(false);
-            setAnnounceTimer(true);
+            setTimerAnnouncement('Cronômetro concluído: 00:00');
             if (selectedAction) completeAction(selectedAction, selectedAction.allocatedMinutes * 60);
             return 0;
           }
           const next = prev - 1;
-          setAnnounceTimer(next % 60 === 0);
+          if (next % 60 === 0) setTimerAnnouncement(`Tempo restante: ${formatTime(next)}`);
           return next;
         });
       }, 1000);
@@ -298,18 +298,18 @@ export default function Sessao() {
     setIsRunning(false);
     setSelectedAction(action);
     setSecondsLeft(action.allocatedMinutes * 60);
-    setAnnounceTimer(true);
+    setTimerAnnouncement('');
   };
 
   const resetTimer = () => {
     setIsRunning(false);
     setSecondsLeft((selectedAction?.allocatedMinutes ?? 0) * 60);
-    setAnnounceTimer(true);
+    setTimerAnnouncement(`Cronômetro reiniciado: ${formatTime((selectedAction?.allocatedMinutes ?? 0) * 60)}`);
   };
 
   const markComplete = () => {
     setIsRunning(false);
-    setAnnounceTimer(true);
+    setTimerAnnouncement(`Cronômetro concluído: ${formatTime(secondsLeft)}`);
     if (selectedAction) completeAction(selectedAction, totalSeconds - secondsLeft);
   };
 
@@ -481,8 +481,9 @@ export default function Sessao() {
                         strokeDashoffset={2 * Math.PI * 45 * (1 - progress / 100)}
                       />
                     </svg>
-                    <div aria-live={announceTimer ? 'polite' : 'off'} aria-atomic="true" className="absolute inset-0 flex items-center justify-center">
-                      <span className="text-4xl font-bold text-text-primary tabular-nums">{formatTime(secondsLeft)}</span>
+                    <div aria-live="polite" aria-atomic="true" className="absolute inset-0 flex items-center justify-center">
+                      <span aria-hidden="true" className="text-4xl font-bold text-text-primary tabular-nums">{formatTime(secondsLeft)}</span>
+                      <span className="sr-only">{timerAnnouncement}</span>
                     </div>
                   </div>
 
@@ -516,8 +517,9 @@ export default function Sessao() {
                   <div className="flex items-center gap-3">
                     <Button
                       onClick={() => {
-                        setAnnounceTimer(true);
-                        setIsRunning((running) => !running);
+                        const nextRunning = !isRunning;
+                        setTimerAnnouncement(`Cronômetro ${nextRunning ? 'iniciado' : 'pausado'}: ${formatTime(secondsLeft)}`);
+                        setIsRunning(nextRunning);
                       }}
                       disabled={secondsLeft === 0}
                       aria-pressed={isRunning}

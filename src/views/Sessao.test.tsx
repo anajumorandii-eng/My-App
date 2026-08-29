@@ -442,14 +442,38 @@ describe('Sessao', () => {
     vi.useFakeTimers();
 
     const liveTimer = container.querySelector('[aria-live="polite"]');
-    expect(liveTimer).toHaveTextContent('02:00');
 
     fireEvent.click(screen.getByRole('button', { name: 'Iniciar' }));
     act(() => vi.advanceTimersByTime(60_000));
-    expect(liveTimer).toHaveTextContent('01:00');
+    expect(liveTimer).toHaveTextContent('Tempo restante: 01:00');
 
     act(() => vi.advanceTimersByTime(60_000));
-    expect(liveTimer).toHaveTextContent('00:00');
+    expect(liveTimer).toHaveTextContent('Cronômetro concluído: 00:00');
+    expect(screen.getByText('Tempo de estudo registrado')).toBeInTheDocument();
+  });
+
+  it('anuncia iniciar, pausar e concluir manualmente sem anunciar o segundo intermediário', async () => {
+    const theoryAction = makeAction({ id: 'genetics', type: 'theory', topicId: 'bio-genetics', topicName: 'Genética Molecular', allocatedMinutes: 2 });
+    dailyPlanHook.mockReturnValue(planWith([theoryAction]));
+    masteryHook.mockReturnValue({ mastery: [], updateMastery: vi.fn().mockResolvedValue(true), isPersisted: true });
+    questionsHook.mockReturnValue({ questions: [], syncError: null });
+
+    const { container } = renderSessao();
+    expect((await screen.findAllByText('02:00')).length).toBeGreaterThan(0);
+    vi.useFakeTimers();
+    const liveTimer = container.querySelector('[aria-live="polite"]');
+
+    fireEvent.click(screen.getByRole('button', { name: 'Iniciar' }));
+    expect(liveTimer).toHaveTextContent('Cronômetro iniciado: 02:00');
+
+    act(() => vi.advanceTimersByTime(1_000));
+    expect(liveTimer).toHaveTextContent('Cronômetro iniciado: 02:00');
+
+    fireEvent.click(screen.getByRole('button', { name: 'Pausar' }));
+    expect(liveTimer).toHaveTextContent('Cronômetro pausado: 01:59');
+
+    fireEvent.click(screen.getByRole('button', { name: 'Concluir' }));
+    expect(liveTimer).toHaveTextContent('Cronômetro concluído: 01:59');
     expect(screen.getByText('Tempo de estudo registrado')).toBeInTheDocument();
   });
 });
