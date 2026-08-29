@@ -1,5 +1,7 @@
 import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
+import { flushSync } from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { MemoryRouter } from 'react-router-dom';
 import type { DailyPlanState } from '../hooks/useDailyPlan';
 import type { AllocatedStudyAction, Question, StudySessionRecord, TopicMastery } from '../types';
@@ -143,6 +145,64 @@ describe('Sessao', () => {
     expect(await screen.findByText('Tempo de estudo registrado')).toBeInTheDocument();
     expect(screen.getByText('Checagem registrada; o plano foi recalculado com essa evidência.')).toBeInTheDocument();
     expect(screen.getByRole('button', { name: 'Concluir' })).toBeDisabled();
+  });
+
+  it('não exibe uma ação já derivada enquanto a autenticação tardia reconcilia o novo UID', async () => {
+    const theoryAction = makeAction({ id: 'genetics', type: 'theory', topicId: 'bio-genetics', topicName: 'Genética Molecular' });
+    let currentUser: { uid: string } | null = null;
+    authHook.mockImplementation(() => ({ user: currentUser }));
+    dailyPlanHook.mockReturnValue(planWith([theoryAction]));
+    masteryHook.mockReturnValue({ mastery: [], updateMastery: vi.fn().mockResolvedValue(true), isPersisted: true });
+    questionsHook.mockReturnValue({ questions: [], syncError: null });
+    getUserStudySessionsForDateMock.mockReturnValue(new Promise<StudySessionRecord[]>(() => {}));
+
+    const host = document.createElement('div');
+    document.body.appendChild(host);
+    const root = createRoot(host);
+    try {
+      flushSync(() => root.render(<MemoryRouter><Sessao /></MemoryRouter>));
+      await waitFor(() => expect(host.textContent).toContain('Genética Molecular'));
+
+      currentUser = { uid: 'student-1' };
+      flushSync(() => root.render(<MemoryRouter><Sessao /></MemoryRouter>));
+
+      expect(host.querySelectorAll('.animate-pulse').length).toBeGreaterThan(0);
+      expect(host.textContent).not.toContain('Genética Molecular');
+    } finally {
+      root.unmount();
+      host.remove();
+    }
+  });
+
+  it('limpa a conclusão da conta anterior quando a leitura da nova conta falha', async () => {
+    const theoryAction = makeAction({ id: 'genetics', type: 'theory', topicId: 'bio-genetics', topicName: 'Genética Molecular' });
+    const previousSession: StudySessionRecord = {
+      id: 'genetics-student-one',
+      actionId: theoryAction.id,
+      topicId: theoryAction.topicId,
+      actionType: theoryAction.type,
+      plannedMinutes: theoryAction.allocatedMinutes,
+      completedMinutes: theoryAction.allocatedMinutes,
+      completedAt: '2026-08-24T15:00:00.000Z',
+      verification: 'sem_apoio',
+    };
+    dailyPlanHook.mockReturnValue(planWith([theoryAction]));
+    masteryHook.mockReturnValue({ mastery: [], updateMastery: vi.fn().mockResolvedValue(true), isPersisted: true });
+    questionsHook.mockReturnValue({ questions: [], syncError: null });
+    getUserStudySessionsForDateMock
+      .mockResolvedValueOnce([previousSession])
+      .mockRejectedValueOnce(new Error('student-two-offline'));
+
+    const rendered = renderSessao();
+    expect(await screen.findByText('Tempo de estudo registrado')).toBeInTheDocument();
+
+    authHook.mockReturnValue({ user: { uid: 'student-2' } });
+    rendered.rerender(<MemoryRouter><Sessao /></MemoryRouter>);
+
+    expect(await screen.findByText('Não foi possível recuperar os blocos já concluídos hoje. Você ainda pode estudar normalmente.')).toBeInTheDocument();
+    expect(screen.queryByText('Tempo de estudo registrado')).not.toBeInTheDocument();
+    expect(screen.queryByText('Checagem registrada; o plano foi recalculado com essa evidência.')).not.toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Concluir' })).toBeEnabled();
   });
 
   it('continua renderizando a sessão e mostra um aviso quando a reconciliação falha', async () => {

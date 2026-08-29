@@ -46,6 +46,7 @@ export default function Sessao() {
   const [searchParams] = useSearchParams();
   const { mastery, updateMastery, isPersisted } = useUserMastery();
   const { user } = useAuth();
+  const activeUid = user?.uid ?? null;
   const localDate = todayInSaoPaulo();
   const { availability, allocatedActions: dailyPlan, loading: dailyPlanLoading } = useDailyPlan(localDate);
   const { questions } = useQuestions();
@@ -58,19 +59,26 @@ export default function Sessao() {
   const [verifiedIds, setVerifiedIds] = useState<string[]>([]);
   const [sessions, setSessions] = useState<Record<string, StudySessionRecord>>({});
   const [syncError, setSyncError] = useState<string | null>(null);
-  const [sessionReconciliationLoading, setSessionReconciliationLoading] = useState(!!user);
+  const [reconciledUid, setReconciledUid] = useState<string | null | undefined>(undefined);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const sessionReconciliationLoading = reconciledUid !== activeUid;
 
   useEffect(() => {
-    if (!user) {
-      setSessionReconciliationLoading(false);
+    completedIdsRef.current = [];
+    setCompletedIds([]);
+    setVerifiedIds([]);
+    setSessions({});
+    setSelectedAction(null);
+    setSecondsLeft(0);
+    setSyncError(null);
+
+    if (!activeUid) {
+      setReconciledUid(null);
       return;
     }
 
     let active = true;
-    setSessionReconciliationLoading(true);
-    setSyncError(null);
-    getUserStudySessionsForDate(user.uid, localDate).then((persistedSessions) => {
+    getUserStudySessionsForDate(activeUid, localDate).then((persistedSessions) => {
       if (!active) return;
       const latestSessions = persistedSessions.reduce<Record<string, StudySessionRecord>>((byActionId, session) => {
         if (!byActionId[session.actionId]) byActionId[session.actionId] = session;
@@ -86,13 +94,13 @@ export default function Sessao() {
     }).catch(() => {
       if (active) setSyncError('Não foi possível recuperar os blocos já concluídos hoje. Você ainda pode estudar normalmente.');
     }).finally(() => {
-      if (active) setSessionReconciliationLoading(false);
+      if (active) setReconciledUid(activeUid);
     });
 
     return () => {
       active = false;
     };
-  }, [localDate, user]);
+  }, [activeUid, localDate]);
 
   // Banco de MC filtrado por tópico para a mini-atividade (ver
   // MINI_ACTIVITY_TYPES), embaralhado e recortado a até MINI_ACTIVITY_SIZE
