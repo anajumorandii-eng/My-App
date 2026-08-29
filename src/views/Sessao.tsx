@@ -41,6 +41,7 @@ export default function Sessao() {
         uncertainty: Math.max(0, item.uncertainty - 0.05),
         errorSignals: action.type === 'error_analysis' ? Math.max(0, item.errorSignals - 1) : item.errorSignals,
         lastReviewed: new Date().toISOString(),
+        origin: 'observed',
       } : item));
       return [...ids, action.id];
     });
