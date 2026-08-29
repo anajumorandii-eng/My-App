@@ -18,6 +18,8 @@ function action(id: string, estimatedMinutes: number, priorityScore: number): St
     estimatedMinutes,
     priorityScore,
     reasons: [],
+    factors: [],
+    snapshot: { masteryLevel: 0, uncertainty: 0, calculatedAt: new Date().toISOString() },
   };
 }
 
