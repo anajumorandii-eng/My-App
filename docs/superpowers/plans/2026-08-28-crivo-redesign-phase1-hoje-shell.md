@@ -553,9 +553,12 @@ git commit -m "feat: add masteryOrigin helper and the Crivo design-token stylesh
 ## Task 8: Adopt the global shell (`Layout.tsx`) with full nav parity, and the theme-flash-prevention `index.html`
 
 > **Amended after Task 8's first dispatch was correctly BLOCKED:** copying in the new `Layout.tsx` activates `useTheme()` → `theme.ts`'s `systemPrefersDark()`, whose default parameter dereferences `window.matchMedia.bind(window)`. jsdom (the vitest test environment) doesn't implement `window.matchMedia`, and `src/testSetup.ts` (an `origin/main`-owned file, not previously in this plan's scope) doesn't polyfill it — so `origin/main`'s own pre-existing `AgendaView.test.tsx` (which renders `<Layout>` to test nav links) now crashes. This never surfaced in the source checkout because no test there ever rendered `Layout`+`useTheme` together. Fix: add a standard jsdom `matchMedia` polyfill to `testSetup.ts` — see the new Step 3.5 below. Real browsers have `window.matchMedia`, so this is purely a test-environment gap, not a production bug.
+>
+> **Amended again after Round 2 was correctly BLOCKED:** with the polyfill in place, a second, previously-masked issue surfaced: `src/components/BottomNav.tsx` (Task 3) hardcodes its mobile "Agenda" tab to `path: '/conexoes'`, with a comment explaining that at the time it was written, "there is no standalone Agenda route" on the source checkout it was built against. Task 8's Step 2 just added the REAL `/agenda` sidebar entry (which genuinely exists on `origin/main`), so the workaround is now stale and the tab points at the wrong screen (Conexões Google instead of the actual Agenda/availability view) — confirmed by `origin/main`'s own test finding two elements matching `getByRole('link', {name:'Agenda'})`. This isn't an open product question — the workaround's own comment states the precondition it needs (a real Agenda route) that Task 8 just satisfied. Fix: repoint the tab to `/agenda` — see the new Step 2.5 below.
 
 **Files:**
 - Modify: `/c/wtmain/src/components/Layout.tsx` (currently `origin/main`'s version — replace with local's, then patch)
+- Modify: `/c/wtmain/src/components/BottomNav.tsx` (repoint the stale "Agenda" tab — see amendment note above)
 - Modify: `/c/wtmain/index.html`
 - Modify: `/c/wtmain/src/testSetup.ts` (add `window.matchMedia` polyfill — see amendment note above)
 
@@ -583,6 +586,40 @@ In the "Prática" group, insert after `Questões & Tentativas`:
 ```
 
 (`Calendar` is already imported for the `Hoje` entry; `Library` is already imported for `Dossiês de Obras` — no new imports needed. If the two icons visually collide against `Dossiês de Obras`, that's a cosmetic follow-up for Task 10's browser QA, not a blocker here.)
+
+- [ ] **Step 2.5:** Fix `src/components/BottomNav.tsx`'s stale "Agenda" tab. Replace:
+
+```typescript
+// Five real destinations, mapped from the brief's ideal set (Hoje, Plano,
+// Estudar, Análises, Agenda) onto the routes that actually exist in this
+// app (see App.tsx) — there is no standalone "Agenda" route, so it points
+// at Conexões Google, which is where the calendar integration that feeds
+// the day's available time actually lives.
+const ITEMS: BottomNavItem[] = [
+  { name: 'Hoje', path: '/', icon: Calendar },
+  { name: 'Plano', path: '/plano', icon: Map },
+  { name: 'Estudar', path: '/sessao', icon: PlayCircle },
+  { name: 'Análises', path: '/evolucao', icon: TrendingUp },
+  { name: 'Agenda', path: '/conexoes', icon: LinkIcon },
+];
+```
+
+with:
+
+```typescript
+// Five real destinations, mapped from the brief's ideal set (Hoje, Plano,
+// Estudar, Análises, Agenda) onto the routes that actually exist in this app
+// (see App.tsx).
+const ITEMS: BottomNavItem[] = [
+  { name: 'Hoje', path: '/', icon: Calendar },
+  { name: 'Plano', path: '/plano', icon: Map },
+  { name: 'Estudar', path: '/sessao', icon: PlayCircle },
+  { name: 'Análises', path: '/evolucao', icon: TrendingUp },
+  { name: 'Agenda', path: '/agenda', icon: Calendar },
+];
+```
+
+`Calendar` is reused for both `Hoje` and `Agenda` (both already import it; no new import needed) — if that reads as visually ambiguous in Task 10/11's browser QA, that's a cosmetic follow-up, not a blocker here. The unused `LinkIcon`/`Link as LinkIcon` import becomes dead after this change — remove it from the `lucide-react` import line too (`tsc`'s `noUnusedLocals`, if enabled, would otherwise flag it; remove it regardless for cleanliness).
 
 - [ ] **Step 3:** Re-scan for full parity, not just the two known gaps — compare every path automatically instead of trusting the manual audit alone:
 
@@ -627,7 +664,7 @@ if (typeof window !== 'undefined' && !window.matchMedia) {
 - [ ] **Step 6:** Commit.
 
 ```bash
-git add src/components/Layout.tsx index.html src/testSetup.ts
+git add src/components/Layout.tsx src/components/BottomNav.tsx index.html src/testSetup.ts
 git commit -m "feat: adopt the Crivo navigation shell app-wide, with full route/nav parity"
 ```
 
