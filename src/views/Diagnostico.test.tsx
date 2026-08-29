@@ -1,5 +1,5 @@
 import { act, fireEvent, render, screen, waitFor } from '@testing-library/react';
-import { describe, expect, it, vi } from 'vitest';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { STATE_LABELS } from '../lib/backlogEngine';
 import type { Question } from '../types';
 import Diagnostico from './Diagnostico';
@@ -77,8 +77,8 @@ function setup({
     isPersisted: !!user,
   });
   questionsHook.mockReturnValue({ questions, syncError: null });
-  render(<Diagnostico />);
-  return { updateMastery };
+  const view = render(<Diagnostico />);
+  return { updateMastery, unmount: view.unmount };
 }
 
 // Autoavaliação (estado 2 = "Aplicação guiada") seguida de confirmação —
@@ -89,6 +89,13 @@ function selfReport(stateIndex = 2) {
 }
 
 describe('Diagnostico', () => {
+  // Rascunho de retomada vive em sessionStorage, não em mock — sem isolar
+  // entre testes, um rascunho gravado (ou corrompido de propósito) num teste
+  // vazaria pro próximo.
+  beforeEach(() => {
+    window.sessionStorage.clear();
+  });
+
   it('grava um QuestionAttempt real ao responder uma questão de múltipla escolha', () => {
     setup();
     fireEvent.click(screen.getByText('Tópico MC'));
@@ -197,5 +204,67 @@ describe('Diagnostico', () => {
       resolvePending(true);
       await Promise.resolve();
     });
+  });
+
+  it('retoma no mesmo índice do quiz e mantém a resposta já dada ao desmontar e remontar (simulando reload)', () => {
+    // Segunda questão de múltipla escolha só para este teste, pra "mesmo
+    // índice" ser uma afirmação real (com 1 questão só, o índice não teria pra onde ir).
+    const secondQuestion: Question = {
+      id: 'q2',
+      topicId: MC_TOPIC_ID,
+      subject: 'Matemática',
+      prompt: 'Quanto é 3 + 3?',
+      options: [
+        { id: 'a', text: '5' },
+        { id: 'b', text: '6' },
+      ],
+      correctOptionId: 'b',
+      explanation: 'Porque 3 + 3 = 6.',
+      difficulty: 'easy',
+    };
+    const questions = [mcQuestion, secondQuestion];
+
+    // buildQuizPool embaralha com Math.random — travado aqui só pra pool sair
+    // na mesma ordem nas duas montagens (o que o rascunho real precisa garantir sozinho).
+    const randomSpy = vi.spyOn(Math, 'random').mockReturnValue(0.99);
+    try {
+      const { unmount } = setup({ questions });
+      fireEvent.click(screen.getByText('Tópico MC'));
+      selfReport();
+      fireEvent.click(screen.getByText('4'));
+
+      expect(screen.getByText('Questão 1 de 2')).toBeInTheDocument();
+
+      unmount();
+      setup({ questions });
+
+      expect(screen.getByText('Questão 1 de 2')).toBeInTheDocument();
+      expect(screen.getByText('Correto!')).toBeInTheDocument();
+      expect(screen.getByText('Próxima questão')).toBeEnabled();
+    } finally {
+      randomSpy.mockRestore();
+    }
+  });
+
+  it('sessionStorage com rascunho corrompido não impede a tela de abrir normalmente em "pick"', () => {
+    window.sessionStorage.setItem('crivo_diagnostico_draft:user-1', '{not valid json');
+
+    expect(() => setup()).not.toThrow();
+    expect(screen.getByText('Tópico MC')).toBeInTheDocument();
+  });
+
+  it('apaga o rascunho em sessionStorage ao concluir "saveDiagnostic" com sucesso', async () => {
+    setup({ updateMastery: vi.fn().mockResolvedValue(true) });
+    fireEvent.click(screen.getByText('Tópico MC'));
+    selfReport();
+    fireEvent.click(screen.getByText('4'));
+    fireEvent.click(screen.getByText('Ver resultado'));
+
+    expect(window.sessionStorage.getItem('crivo_diagnostico_draft:user-1')).not.toBeNull();
+
+    fireEvent.click(screen.getByText('Salvar diagnóstico'));
+
+    await waitFor(() => expect(screen.getByText(/Diagnóstico salvo/)).toBeInTheDocument());
+    expect(window.sessionStorage.getItem('crivo_diagnostico_draft:user-1')).toBeNull();
   });
 });

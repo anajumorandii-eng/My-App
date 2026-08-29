@@ -1,4 +1,4 @@
-import React, { useMemo, useRef, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { mockTopics } from '../data/mockData';
 import { mockTopicDiscursivePrompts } from '../data/topicDiscursivePrompts';
 import { useAuth } from '../context/AuthContext';
@@ -50,36 +50,169 @@ function daysAgo(dateIso: string): number {
 
 type Phase = 'pick' | 'selfreport' | 'quiz' | 'result';
 
+// Rascunho de retomada: espelha o estado da tela em sessionStorage (nunca
+// Firestore — não é evidência, é só "onde eu parei", descartável a qualquer
+// momento) para sobreviver a um F5 ou fechar/abrir aba. A pool do quiz é
+// embaralhada com Math.random (buildQuizPool/shuffled), então reconstruí-la
+// de novo a partir de topicId+chapter daria uma ORDEM DIFERENTE — por isso
+// guardamos aqui a lista de itens (kind + id) na ordem exata já sorteada,
+// e resolvemos de volta para os objetos reais no próximo mount.
+const DIAGNOSTICO_DRAFT_KEY_PREFIX = 'crivo_diagnostico_draft:';
+
+type QuizPoolItemRef = { kind: 'mc' | 'discursive'; id: string };
+
+interface DiagnosticoDraft {
+  topicId: string;
+  selectedSubtopic: string;
+  phase: Exclude<Phase, 'pick'>;
+  selfState: number | null;
+  dontKnow: boolean;
+  quizIndex: number;
+  quizAnswers: { questionId: string; signal: QuizSignal }[];
+  quizChapter: string | null;
+  chapterFallback: boolean;
+  quizPoolItems: QuizPoolItemRef[];
+}
+
+const DRAFT_PHASES: ReadonlySet<string> = new Set(['selfreport', 'quiz', 'result']);
+const DRAFT_SIGNALS: ReadonlySet<string> = new Set(['correct', 'wrong', 'neutral']);
+
+function isValidDraftAnswer(value: unknown): value is { questionId: string; signal: QuizSignal } {
+  if (!value || typeof value !== 'object') return false;
+  const candidate = value as Record<string, unknown>;
+  return (
+    typeof candidate.questionId === 'string' && !!candidate.questionId &&
+    typeof candidate.signal === 'string' && DRAFT_SIGNALS.has(candidate.signal)
+  );
+}
+
+function isValidDraftPoolItem(value: unknown): value is QuizPoolItemRef {
+  if (!value || typeof value !== 'object') return false;
+  const candidate = value as Record<string, unknown>;
+  return (
+    typeof candidate.id === 'string' && !!candidate.id &&
+    (candidate.kind === 'mc' || candidate.kind === 'discursive')
+  );
+}
+
+// Mesmo padrão defensivo de parseAdaptiveRankingSnapshot (useAdaptiveRankingChange.ts):
+// valida campo a campo, nunca lança, corrupção vira "sem rascunho" (não vira crash nem tela em branco).
+function parseDiagnosticoDraft(raw: string | null): DiagnosticoDraft | null {
+  if (!raw) return null;
+
+  try {
+    const parsed: unknown = JSON.parse(raw);
+    if (!parsed || typeof parsed !== 'object') return null;
+    const candidate = parsed as Record<string, unknown>;
+
+    if (typeof candidate.topicId !== 'string' || !candidate.topicId) return null;
+    if (typeof candidate.selectedSubtopic !== 'string') return null;
+    if (typeof candidate.phase !== 'string' || !DRAFT_PHASES.has(candidate.phase)) return null;
+    if (candidate.selfState !== null && typeof candidate.selfState !== 'number') return null;
+    if (typeof candidate.dontKnow !== 'boolean') return null;
+    if (typeof candidate.quizIndex !== 'number' || candidate.quizIndex < 0) return null;
+    if (!Array.isArray(candidate.quizAnswers) || !candidate.quizAnswers.every(isValidDraftAnswer)) return null;
+    if (candidate.quizChapter !== null && typeof candidate.quizChapter !== 'string') return null;
+    if (typeof candidate.chapterFallback !== 'boolean') return null;
+    if (!Array.isArray(candidate.quizPoolItems) || !candidate.quizPoolItems.every(isValidDraftPoolItem)) return null;
+
+    return {
+      topicId: candidate.topicId,
+      selectedSubtopic: candidate.selectedSubtopic,
+      phase: candidate.phase as Exclude<Phase, 'pick'>,
+      selfState: candidate.selfState as number | null,
+      dontKnow: candidate.dontKnow,
+      quizIndex: candidate.quizIndex,
+      quizAnswers: candidate.quizAnswers as DiagnosticoDraft['quizAnswers'],
+      quizChapter: candidate.quizChapter as string | null,
+      chapterFallback: candidate.chapterFallback,
+      quizPoolItems: candidate.quizPoolItems as QuizPoolItemRef[],
+    };
+  } catch {
+    return null;
+  }
+}
+
+// Troca as referências (kind + id) do rascunho pelos objetos reais de questão/prompt,
+// preservando a ordem exata gravada. Se algum id não existir mais no banco atual
+// (conteúdo mudou), a pool não é reconstruível com fidelidade — trata como rascunho inválido.
+function resolveDraftPool(items: QuizPoolItemRef[], mockQuestions: Question[]): QuizItem[] | null {
+  const pool: QuizItem[] = [];
+  for (const item of items) {
+    if (item.kind === 'mc') {
+      const question = mockQuestions.find((q) => q.id === item.id);
+      if (!question) return null;
+      pool.push({ kind: 'mc', question });
+    } else {
+      const prompt = mockTopicDiscursivePrompts.find((p) => p.id === item.id);
+      if (!prompt) return null;
+      pool.push({ kind: 'discursive', prompt });
+    }
+  }
+  return pool;
+}
+
 export default function Diagnostico() {
   const { user } = useAuth();
   const { mastery, updateMastery, isPersisted, syncError } = useUserMastery();
   const { questions: mockQuestions, syncError: questionsSyncError } = useQuestions();
 
+  const draftKey = `${DIAGNOSTICO_DRAFT_KEY_PREFIX}${user?.uid ?? 'demo'}`;
+
+  // Lido uma única vez, na primeira renderização (via ref, não useEffect),
+  // pra tela já nascer na fase certa em vez de "piscar" em 'pick' antes de saltar.
+  const initialDraftRef = useRef<{ draft: DiagnosticoDraft; pool: QuizItem[] } | null | undefined>(undefined);
+  if (initialDraftRef.current === undefined) {
+    initialDraftRef.current = (() => {
+      try {
+        if (typeof window === 'undefined') return null;
+        const draft = parseDiagnosticoDraft(window.sessionStorage.getItem(draftKey));
+        if (!draft) return null;
+        if (!mockTopics.some((t) => t.id === draft.topicId)) return null;
+        const pool = resolveDraftPool(draft.quizPoolItems, mockQuestions);
+        if (!pool) return null;
+        return { draft, pool };
+      } catch {
+        return null;
+      }
+    })();
+  }
+  const initialDraft = initialDraftRef.current;
+
   const subjects = useMemo(() => [...new Set(mockTopics.map((t) => t.subject))], []);
   const [subjectFilter, setSubjectFilter] = useState(subjects[0]);
-  const [selectedTopicId, setSelectedTopicId] = useState<string | null>(null);
-  const [selectedSubtopic, setSelectedSubtopic] = useState('');
-  const [phase, setPhase] = useState<Phase>('pick');
-  const [selfState, setSelfState] = useState<number | null>(null);
-  const [dontKnow, setDontKnow] = useState(false);
-  const [quizIndex, setQuizIndex] = useState(0);
-  const [quizPool, setQuizPool] = useState<QuizItem[]>([]);
-  const [quizAnswers, setQuizAnswers] = useState<{ questionId: string; signal: QuizSignal }[]>([]);
+  const [selectedTopicId, setSelectedTopicId] = useState<string | null>(initialDraft?.draft.topicId ?? null);
+  const [selectedSubtopic, setSelectedSubtopic] = useState(initialDraft?.draft.selectedSubtopic ?? '');
+  const [phase, setPhase] = useState<Phase>(initialDraft?.draft.phase ?? 'pick');
+  const [selfState, setSelfState] = useState<number | null>(initialDraft?.draft.selfState ?? null);
+  const [dontKnow, setDontKnow] = useState(initialDraft?.draft.dontKnow ?? false);
+  const [quizIndex, setQuizIndex] = useState(initialDraft?.draft.quizIndex ?? 0);
+  const [quizPool, setQuizPool] = useState<QuizItem[]>(initialDraft?.pool ?? []);
+  const [quizAnswers, setQuizAnswers] = useState<{ questionId: string; signal: QuizSignal }[]>(initialDraft?.draft.quizAnswers ?? []);
   const [selectedOptionId, setSelectedOptionId] = useState<string | null>(null);
   const [discursiveRevealed, setDiscursiveRevealed] = useState(false);
   const [savedFlash, setSavedFlash] = useState(false);
   const [saving, setSaving] = useState(false);
   const [saveError, setSaveError] = useState<string | null>(null);
   const savingRef = useRef(false);
-  const [quizChapter, setQuizChapter] = useState<string | null>(null);
-  const [chapterFallback, setChapterFallback] = useState(false);
+  const [quizChapter, setQuizChapter] = useState<string | null>(initialDraft?.draft.quizChapter ?? null);
+  const [chapterFallback, setChapterFallback] = useState(initialDraft?.draft.chapterFallback ?? false);
 
   const topic = selectedTopicId ? mockTopics.find((t) => t.id === selectedTopicId) : null;
   const topicMastery = selectedTopicId ? mastery.find((m) => m.topicId === selectedTopicId) : null;
   const currentItem = quizPool[quizIndex];
-  const answered = currentItem?.kind === 'mc' ? selectedOptionId !== null : discursiveRevealed;
-  const isCorrect = currentItem?.kind === 'mc' && selectedOptionId !== null
-    ? selectedOptionId === currentItem.question.correctOptionId
+  const currentItemId = currentItem ? (currentItem.kind === 'mc' ? currentItem.question.id : currentItem.prompt.id) : null;
+  // Ao retomar um rascunho no meio do quiz, o índice atual pode já ter sido
+  // respondido antes do recarregamento — a escolha visual exata (qual alternativa,
+  // ou se o gabarito já tinha sido revelado) não é persistida, só o sinal final em
+  // quizAnswers. Usamos esse registro para saber que já foi respondida, tanto pra
+  // mostrar o resultado certo quanto pra não deixar contar a mesma questão 2x.
+  const currentAnswerRecord = currentItemId ? quizAnswers.find((a) => a.questionId === currentItemId) : undefined;
+  const answered = currentItem?.kind === 'mc'
+    ? selectedOptionId !== null || !!currentAnswerRecord
+    : discursiveRevealed || !!currentAnswerRecord;
+  const isCorrect = currentItem?.kind === 'mc'
+    ? (selectedOptionId !== null ? selectedOptionId === currentItem.question.correctOptionId : currentAnswerRecord?.signal === 'correct')
     : false;
 
   // Below this, a chapter-filtered quiz would be too thin to mean anything —
@@ -182,15 +315,19 @@ export default function Diagnostico() {
 
   const rateDiscursiveAnswer = (rating: 'fraco' | 'mediano' | 'forte') => {
     if (!currentItem || currentItem.kind !== 'discursive') return;
-    setQuizAnswers((prev) => [...prev, { questionId: currentItem.prompt.id, signal: SELF_RATING_SIGNAL[rating] }]);
-    if (user && selectedTopicId) {
-      addUserDiscursiveAttempt(user.uid, {
-        id: `disc_attempt_${Date.now()}`,
-        questionId: currentItem.prompt.id,
-        topicId: selectedTopicId,
-        selfRating: rating,
-        date: new Date().toISOString(),
-      }).catch((error) => console.error('Failed to save diagnostic discursive attempt:', error));
+    // Retomando um rascunho, este item pode já ter um registro (currentAnswerRecord)
+    // de antes do recarregamento — só grava/soma de novo se ainda não tiver.
+    if (!currentAnswerRecord) {
+      setQuizAnswers((prev) => [...prev, { questionId: currentItem.prompt.id, signal: SELF_RATING_SIGNAL[rating] }]);
+      if (user && selectedTopicId) {
+        addUserDiscursiveAttempt(user.uid, {
+          id: `disc_attempt_${Date.now()}`,
+          questionId: currentItem.prompt.id,
+          topicId: selectedTopicId,
+          selfRating: rating,
+          date: new Date().toISOString(),
+        }).catch((error) => console.error('Failed to save diagnostic discursive attempt:', error));
+      }
     }
     nextQuizStep();
   };
@@ -227,6 +364,35 @@ export default function Diagnostico() {
     return { level: Math.round(level), uncertainty, errorSignals: wrongCount };
   }, [selfState, dontKnow, quizAnswers]);
 
+  // Espelha o estado de retomada em sessionStorage a cada mudança relevante.
+  // Sai de 'pick' -> grava; volta a 'pick' (reset()) -> o próprio efeito apaga.
+  useEffect(() => {
+    try {
+      if (typeof window === 'undefined') return;
+      if (phase === 'pick' || !selectedTopicId) {
+        window.sessionStorage.removeItem(draftKey);
+        return;
+      }
+      const draft: DiagnosticoDraft = {
+        topicId: selectedTopicId,
+        selectedSubtopic,
+        phase,
+        selfState,
+        dontKnow,
+        quizIndex,
+        quizAnswers,
+        quizChapter,
+        chapterFallback,
+        quizPoolItems: quizPool.map((item) =>
+          item.kind === 'mc' ? { kind: 'mc', id: item.question.id } : { kind: 'discursive', id: item.prompt.id }
+        ),
+      };
+      window.sessionStorage.setItem(draftKey, JSON.stringify(draft));
+    } catch {
+      // Modo privado / sessionStorage indisponível — sem rascunho, sem drama.
+    }
+  }, [draftKey, phase, selectedTopicId, selectedSubtopic, selfState, dontKnow, quizIndex, quizAnswers, quizChapter, chapterFallback, quizPool]);
+
   const saveDiagnostic = async () => {
     // Guarda por ref (não só o estado `saving`) porque um segundo clique
     // pode chegar antes do React repintar o botão desabilitado — o guard
@@ -250,6 +416,13 @@ export default function Diagnostico() {
     savingRef.current = false;
     setSaving(false);
     if (saved) {
+      // Virou evidência de verdade (Firestore, via updateMastery) — o rascunho
+      // local perde o sentido de existir, mesmo a fase não voltando pra 'pick'.
+      try {
+        if (typeof window !== 'undefined') window.sessionStorage.removeItem(draftKey);
+      } catch {
+        // Sem rascunho pra apagar não é um erro.
+      }
       setSavedFlash(true);
       setTimeout(() => setSavedFlash(false), 1800);
     } else {
@@ -472,7 +645,7 @@ export default function Diagnostico() {
                 Questão discursiva — sem múltipla escolha, você mesma avalia sua resposta
               </div>
               <p className="text-lg font-medium leading-relaxed">{currentItem.prompt.prompt}</p>
-              {!discursiveRevealed ? (
+              {!answered ? (
                 <button
                   onClick={revealDiscursiveAnswer}
                   className="w-full py-3 border border-dashed border-zinc-300 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 rounded-xl font-medium text-sm hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-colors"
