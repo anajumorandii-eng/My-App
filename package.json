@@ -10,10 +10,10 @@
     "preview": "vite preview",
     "clean": "rm -rf dist server.js",
     "flashcards:classify": "tsx scripts/classifyFlashcards.ts",
-    "lint": "tsc --noEmit",
+    "lint": "node --max-old-space-size=4096 node_modules/typescript/bin/tsc --noEmit",
     "test": "npm run test:node && npm run test:vitest",
-    "test:node": "tsx --test server/ai/*.test.ts server/auth/*.test.ts server/podcast/*.test.ts server/literary/*.test.ts src/lib/*.test.ts",
-    "test:vitest": "vitest run serverCalendar.test.ts src/features/availability src/hooks/useDailyPlan.test.tsx src/views/DailyPlanConsistency.test.tsx src/components/*.ui.test.tsx src/views/*.ui.test.tsx"
+    "test:node": "tsx --test server/ai/*.test.ts server/auth/*.test.ts server/podcast/*.test.ts server/literary/*.test.ts src/lib/*.test.ts src/design-system/*.test.ts",
+    "test:vitest": "vitest run serverCalendar.test.ts src/features/availability src/hooks/useDailyPlan.test.tsx src/components src/views"
   },
   "dependencies": {
     "@date-fns/tz": "^1.5.0",

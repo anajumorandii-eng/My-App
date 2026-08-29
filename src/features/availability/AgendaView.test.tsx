@@ -196,7 +196,13 @@ describe('AgendaView', () => {
     localStorage.setItem('juju_onboarding', 'true');
     render(<MemoryRouter><Layout /></MemoryRouter>);
 
-    expect(screen.getByRole('link', { name: 'Agenda' })).toHaveAttribute('href', '/agenda');
+    // Both the desktop rail and the mobile bottom nav render an "Agenda"
+    // link — jsdom doesn't evaluate the lg: media queries that make only
+    // one of them visible at a real viewport size, so both are present in
+    // this test's DOM. Every one of them must point at the real route.
+    const agendaLinks = screen.getAllByRole('link', { name: 'Agenda' });
+    expect(agendaLinks.length).toBeGreaterThan(0);
+    agendaLinks.forEach((link) => expect(link).toHaveAttribute('href', '/agenda'));
   });
 
   it('renders the Agenda at its application route', () => {

@@ -1,15 +1,26 @@
 import React, { useMemo, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { AlertCircle, Brain, CalendarClock, CheckCircle2, CloudOff, History, Stethoscope, Target, WifiOff } from 'lucide-react';
+import { useDailyPlan } from '../hooks/useDailyPlan';
 import { useUserMastery } from '../hooks/useUserMastery';
 import { useUserProfile } from '../hooks/useUserProfile';
-import { useDailyPlan } from '../hooks/useDailyPlan';
-import { formatIsoTimeInSaoPaulo, todayInSaoPaulo } from '../features/availability/time';
 import { useAuth } from '../context/AuthContext';
+import { useAdaptiveRankingChange } from '../hooks/useAdaptiveRankingChange';
+import { todayInSaoPaulo } from '../features/availability/time';
 import { pendingReviewCount } from '../lib/reviewUrgency';
 import { nextExams, daysUntil } from '../data/examCalendar';
 import { addPlanFeedback } from '../lib/userData';
-import { AllocatedStudyAction, RecommendationReason, DisagreeReason, PlanFeedback } from '../types';
-import { PlayCircle, Target, Brain, AlertCircle, CloudOff, CalendarClock, ChevronDown, ChevronUp, ThumbsDown, Check } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { deriveMasteryOrigin } from '../lib/masteryOrigin';
+import { StudyAction, RecommendationReason, DisagreeReason, PlanFeedback } from '../types';
+import { CrivoCore } from '../components/CrivoCore';
+import { TodayFocus } from '../features/daily-plan/components/TodayFocus';
+import { SubjectAtmosphere } from '../features/daily-plan/components/SubjectAtmosphere';
+import { SecondaryActionList } from '../features/daily-plan/components/SecondaryActionList';
+import { FeedbackStatus } from '../features/daily-plan/components/DisagreeControl';
+import { EmptyState } from '../components/ui/EmptyState';
+import { Skeleton } from '../components/ui/Skeleton';
+import { Panel } from '../components/ui/Panel';
+import { Button } from '../components/ui/Button';
 
 const REASON_LABELS: Record<RecommendationReason, string> = {
   dominio_insuficiente: 'Domínio ainda insuficiente nesse tópico',
@@ -22,242 +33,242 @@ const REASON_LABELS: Record<RecommendationReason, string> = {
   fase_revisao_intensificada: 'Fase atual do seu plano prioriza revisão (prova se aproximando)',
 };
 
-const DISAGREE_OPTIONS: { value: DisagreeReason; label: string }[] = [
-  { value: 'ja_estudei', label: 'Já estudei isso' },
-  { value: 'sem_material', label: 'Não tenho esse material' },
-  { value: 'nao_consigo_agora', label: 'Não consigo fazer agora' },
-  { value: 'prioridade_errada', label: 'Prioridade errada' },
-  { value: 'quero_outra_atividade', label: 'Quero escolher outra atividade' },
-];
+const ACTION_LABELS: Record<StudyAction['type'], string> = {
+  review: 'Revisar para consolidar',
+  practice: 'Praticar sem apoio',
+  theory: 'Reconstruir a base',
+  error_analysis: 'Analisar erros recorrentes',
+};
 
-function ActionCard({
-  action,
-  index,
-  actionLabel,
-  onStart,
-  userId,
-}: {
-  action: AllocatedStudyAction;
-  index: number;
-  actionLabel: string;
-  onStart: () => void;
-  userId: string | undefined;
-}) {
-  const [showReasons, setShowReasons] = useState(false);
-  const [showDisagree, setShowDisagree] = useState(false);
-  const [feedbackSent, setFeedbackSent] = useState(false);
-
-  const sendDisagreement = (reason: DisagreeReason) => {
-    const feedback: PlanFeedback = {
-      id: `feedback_${action.id}_${Date.now()}`,
-      actionId: action.id,
-      topicId: action.topicId,
-      reason,
-      date: new Date().toISOString(),
-    };
-    if (userId) {
-      addPlanFeedback(userId, feedback).catch((error) => console.error('Failed to save plan feedback:', error));
-    }
-    setShowDisagree(false);
-    setFeedbackSent(true);
-  };
-
-  return (
-    <div className="group bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-5 shadow-sm hover:border-indigo-300 dark:hover:border-indigo-700 transition-all">
-      <div className="flex items-center justify-between">
-        <div className="flex items-center">
-          <div className="w-10 h-10 rounded-full bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center mr-4 text-zinc-500 font-medium shrink-0">
-            {index + 1}
-          </div>
-          <div>
-            <h4 className="font-semibold text-lg">{action.topicName}</h4>
-            <div className="flex items-center text-sm text-zinc-500 mt-1 flex-wrap gap-x-3 gap-y-1">
-              <span className="capitalize">{actionLabel}</span>
-              <span>•</span>
-              <span>{action.subject}</span>
-              <span>•</span>
-              <span className="text-indigo-600 dark:text-indigo-400 font-medium">{action.estimatedMinutes} min</span>
-              <span>•</span>
-              <span>{formatIsoTimeInSaoPaulo(action.intervalStart)}–{formatIsoTimeInSaoPaulo(action.intervalEnd)}</span>
-            </div>
-          </div>
-        </div>
-        <button onClick={onStart} className="hidden sm:flex items-center px-4 py-2 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 rounded-lg font-medium opacity-0 group-hover:opacity-100 transition-opacity shrink-0">
-          <PlayCircle className="w-4 h-4 mr-2" />
-          Iniciar
-        </button>
-      </div>
-
-      <div className="flex items-center gap-4 mt-3 pt-3 border-t border-zinc-100 dark:border-zinc-800">
-        <button
-          onClick={() => setShowReasons((v) => !v)}
-          className="flex items-center text-xs font-medium text-zinc-500 hover:text-zinc-700 dark:hover:text-zinc-300"
-        >
-          Por que isso?
-          {showReasons ? <ChevronUp className="w-3.5 h-3.5 ml-1" /> : <ChevronDown className="w-3.5 h-3.5 ml-1" />}
-        </button>
-        {!feedbackSent ? (
-          <button
-            onClick={() => setShowDisagree((v) => !v)}
-            className="flex items-center text-xs font-medium text-zinc-500 hover:text-zinc-700 dark:hover:text-zinc-300"
-          >
-            <ThumbsDown className="w-3.5 h-3.5 mr-1" />
-            Discordo
-          </button>
-        ) : (
-          <span className="flex items-center text-xs font-medium text-emerald-600 dark:text-emerald-400">
-            <Check className="w-3.5 h-3.5 mr-1" />
-            Registrado — o plano não muda sozinho por causa disso
-          </span>
-        )}
-      </div>
-
-      {showReasons && (
-        <ul className="mt-3 space-y-1.5 text-xs text-zinc-500 pl-1">
-          {action.reasons.map((reason) => (
-            <li key={reason} className="flex items-start">
-              <span className="w-1 h-1 rounded-full bg-zinc-400 mt-1.5 mr-2 shrink-0" />
-              {REASON_LABELS[reason]}
-            </li>
-          ))}
-        </ul>
-      )}
-
-      {showDisagree && (
-        <div className="mt-3 flex flex-wrap gap-2">
-          {DISAGREE_OPTIONS.map(({ value, label }) => (
-            <button
-              key={value}
-              onClick={() => sendDisagreement(value)}
-              className="px-3 py-1.5 rounded-full text-xs font-medium border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-50 dark:hover:bg-zinc-800"
-            >
-              {label}
-            </button>
-          ))}
-        </div>
-      )}
-    </div>
-  );
+// The single most decision-relevant reason, for the one-line summary in
+// TodayFocus — tempo_disponivel/fase_revisao_intensificada are about having
+// fit the time budget, not about *why* this topic outranked the rest, so
+// they're skipped here (they still show up inside "Por que isso?").
+function mainReasonFor(action: StudyAction): string {
+  const ranked = action.reasons.filter((r) => r !== 'tempo_disponivel' && r !== 'fase_revisao_intensificada');
+  const primary = ranked[0] ?? action.reasons[0];
+  return primary ? REASON_LABELS[primary] : 'Prioridade calculada a partir do seu histórico de estudo.';
 }
 
 export default function Dashboard() {
   const navigate = useNavigate();
   const { user } = useAuth();
-  const { mastery, isPersisted } = useUserMastery();
+  // One shared source of truth for "what is today's plan" — the same hook
+  // Plano and Sessão read, so the three views can never disagree about the
+  // effective minutes, the first action, or its scheduled slot.
+  const { availability, prioritizedActions, allocatedActions: dailyPlan, loading, warnings, isPersisted } = useDailyPlan(todayInSaoPaulo());
+  const { mastery } = useUserMastery();
   const { profile } = useUserProfile();
-  const { availability, allocatedActions: dailyPlan } = useDailyPlan(todayInSaoPaulo());
+
   const availableMinutes = availability?.totalMinutes ?? 0;
+  const masteryOrigin = deriveMasteryOrigin(mastery, isPersisted);
+  // Demo data counts as "has evidence" — it's a populated sample dataset,
+  // not an untouched baseline; only a real account still at the baseline
+  // (never diagnosed) counts as 'seed'.
+  const hasEvidence = masteryOrigin !== 'seed';
+
   const primary = dailyPlan[0];
-  const primaryMastery = mastery.find((item) => item.topicId === primary?.topicId);
+  const secondary = dailyPlan.slice(1);
+
+  // `prioritizedActions` is the complete ranking that the allocator received.
+  // Its complement to the allocated IDs is the only waiting queue that can
+  // account for fragmented intervals as well as the total-time budget.
+  const canWait = useMemo(() => {
+    const planned = new Set(dailyPlan.map((action) => action.id));
+    return prioritizedActions.filter((action) => !planned.has(action.id));
+  }, [prioritizedActions, dailyPlan]);
+
   const overdueReviews = pendingReviewCount(mastery);
   const upcomingExams = useMemo(() => nextExams(new Date(), 3), []);
-  const actionLabels = { review: 'Revisar para consolidar', practice: 'Praticar sem apoio', theory: 'Reconstruir a base', error_analysis: 'Analisar erros recorrentes' };
+  // 'calendar-disconnected' is a normal state (and already covered by the
+  // demo-mode notice), not something that went wrong — only real failures
+  // are surfaced as a warning line.
+  const failureWarnings = warnings.filter((warning) => warning.code !== 'calendar-disconnected');
+  const { changed: rankingChanged, previousSubject } = useAdaptiveRankingChange(primary?.topicId, primary?.subject);
+
+  const [feedbackStatus, setFeedbackStatus] = useState<FeedbackStatus>('idle');
 
   const startAction = (topicId?: string) => navigate(topicId ? `/sessao?topic=${encodeURIComponent(topicId)}` : '/sessao');
 
-  return (
-    <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
-      
-      <header>
-        <p className="text-sm font-bold text-indigo-600 dark:text-indigo-400 mb-1">ANA JÚLIA · MEDICINA</p>
-        <h1 className="text-3xl font-bold tracking-tight mb-2">Hoje</h1>
-        <p className="text-zinc-500 dark:text-zinc-400">
-          Seu foco para hoje, ordenado por prioridade de impacto.
-        </p>
-        {!isPersisted && (
-          <p className="flex items-center text-xs text-zinc-400 mt-2">
-            <CloudOff className="w-3.5 h-3.5 mr-1.5" />
-            Modo demonstração — conecte sua conta Google em "Conexões Google" para salvar seu progresso de verdade.
-          </p>
-        )}
-      </header>
+  const handleDisagree = async (reason: DisagreeReason) => {
+    if (!primary) return;
+    setFeedbackStatus('saving');
+    const feedback: PlanFeedback = {
+      id: `feedback_${primary.id}_${Date.now()}`,
+      actionId: primary.id,
+      topicId: primary.topicId,
+      reason,
+      date: new Date().toISOString(),
+    };
+    if (!user) {
+      // Demo mode: nothing to persist, but the interaction still confirms —
+      // it just won't survive a reload.
+      setFeedbackStatus('saved');
+      return;
+    }
+    try {
+      await addPlanFeedback(user.uid, feedback);
+      setFeedbackStatus('saved');
+    } catch (error) {
+      console.error('Failed to save plan feedback:', error);
+      setFeedbackStatus('error');
+    }
+  };
 
-      {upcomingExams.length > 0 && (
-        <section className="flex flex-wrap gap-3">
-          {upcomingExams.map((exam) => (
-            <div key={exam.id} className="flex items-center bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl px-4 py-2.5 shadow-sm">
-              <CalendarClock className="w-4 h-4 mr-2.5 text-indigo-600 dark:text-indigo-400 shrink-0" />
-              <div>
-                <p className="text-sm font-medium leading-tight">{exam.label}</p>
-                <p className="text-xs text-zinc-500 leading-tight mt-0.5">
-                  {daysUntil(exam.date) === 0 ? 'É hoje' : `Faltam ${daysUntil(exam.date)} dias`}
-                </p>
-              </div>
-            </div>
-          ))}
-        </section>
-      )}
-
-      {primary && (
-        <section className="relative overflow-hidden rounded-3xl bg-indigo-600 text-white p-6 sm:p-8 shadow-lg">
-          <div className="relative z-10 max-w-2xl">
-            <p className="text-indigo-100 text-sm font-medium uppercase tracking-wider">Sua missão principal</p>
-            <h2 className="text-3xl sm:text-4xl font-bold mt-2">{primary.topicName}</h2>
-            <p className="text-indigo-100 mt-3 text-lg">{actionLabels[primary.type]} em {primary.subject}. Esta ação lidera o plano por combinar lacuna, tempo sem revisão e sinais de erro.</p>
-            <div className="flex flex-wrap gap-3 mt-6 text-sm"><span className="bg-white/15 px-3 py-1.5 rounded-full">{primary.estimatedMinutes} minutos</span><span className="bg-white/15 px-3 py-1.5 rounded-full">Domínio atual: {primaryMastery?.level ?? 0}%</span><span className="bg-white/15 px-3 py-1.5 rounded-full">{overdueReviews} revisões atrasadas</span></div>
-            <button onClick={() => startAction(primary.topicId)} className="mt-7 inline-flex items-center bg-white text-indigo-700 px-5 py-3 rounded-xl font-semibold hover:bg-indigo-50 transition-colors"><PlayCircle className="w-5 h-5 mr-2"/>Começar agora</button>
+  if (loading) {
+    return (
+      <div className="space-y-6" aria-busy="true" aria-live="polite">
+        <span className="sr-only">Lendo seu histórico para montar o plano de hoje…</span>
+        <div className="flex items-center gap-4 rounded-card border border-border-subtle bg-surface-elevated p-6 sm:p-8">
+          <CrivoCore state="listening" size={56} />
+          <div className="flex-1 space-y-2.5">
+            <Skeleton className="h-3 w-32" />
+            <Skeleton className="h-6 w-56" />
+            <Skeleton className="h-3 w-44" />
           </div>
-          <Brain className="absolute -right-10 -bottom-14 w-64 h-64 text-white/10" />
-        </section>
-      )}
-
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 shadow-sm">
-          <div className="flex items-center text-indigo-600 dark:text-indigo-400 mb-4">
-            <Target className="w-5 h-5 mr-2" />
-            <h3 className="font-medium">Tempo de Estudo</h3>
-          </div>
-          <p className="text-3xl font-bold"><span>{availableMinutes} min</span></p>
-          <p className="text-sm text-zinc-500 mt-1">
-            Calculado pela agenda semanal e pelas exceções do dia
-          </p>
         </div>
-        
-        <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 shadow-sm">
-          <div className="flex items-center text-emerald-600 dark:text-emerald-400 mb-4">
-            <Brain className="w-5 h-5 mr-2" />
-            <h3 className="font-medium">Autonomia</h3>
-          </div>
-          <p className="text-3xl font-bold">{profile.autonomyIndex}<span className="text-lg font-normal text-zinc-500 ml-1">/100</span></p>
-          <p className="text-sm text-zinc-500 mt-1">Crescimento lento e sustentável.</p>
-        </div>
-
-        <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 shadow-sm">
-          <div className="flex items-center text-rose-600 dark:text-rose-400 mb-4">
-            <AlertCircle className="w-5 h-5 mr-2" />
-            <h3 className="font-medium">Prioridade Máxima</h3>
-          </div>
-          <p className="text-xl font-bold truncate">{dailyPlan.length > 0 ? dailyPlan[0].topicName : 'Tudo em dia'}</p>
-          <p className="text-sm text-zinc-500 mt-1">Revisão e Prática</p>
-        </div>
+        <Skeleton className="h-20 w-full" />
+        <Skeleton className="h-20 w-full" />
       </div>
+    );
+  }
 
-      <section className="rounded-2xl border border-indigo-200 dark:border-indigo-900 bg-indigo-50/60 dark:bg-indigo-950/20 p-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-        <div><p className="text-xs font-bold uppercase tracking-wide text-indigo-600">Prioridade Fuvest</p><h2 className="text-lg font-bold mt-1">Retome seus resumos estratégicos</h2><p className="text-sm text-zinc-500 mt-1">Revisão rápida, aprofundamento e recuperação ativa com progresso salvo.</p></div>
-        <button onClick={() => navigate("/resumos")} className="shrink-0 inline-flex items-center justify-center rounded-xl bg-indigo-600 px-4 py-2.5 text-white font-semibold">Abrir resumos</button>
-      </section>
-
-      <section>
-        <h2 className="text-xl font-semibold mb-4">Ações Recomendadas</h2>
-        <div className="space-y-4">
-          {dailyPlan.map((action, index) => (
-            <ActionCard
-              key={action.id}
-              action={action}
-              index={index}
-              actionLabel={actionLabels[action.type]}
-              onStart={() => startAction(action.topicId)}
-              userId={user?.uid}
-            />
-          ))}
-
-          {dailyPlan.length === 0 && (
-            <div className="text-center py-12 bg-zinc-50 dark:bg-zinc-900/50 rounded-xl border border-dashed border-zinc-200 dark:border-zinc-800">
-              <p className="text-zinc-500">Sem metas para hoje. Descanse.</p>
-            </div>
+  return (
+    <SubjectAtmosphere subject={primary?.subject}>
+      <div className="space-y-6">
+        <header>
+          <h1 className="font-display text-3xl font-semibold text-text-primary">Hoje</h1>
+          <p className="text-xs font-semibold uppercase tracking-widest text-text-muted mt-1.5">ANA JÚLIA · MEDICINA</p>
+          <p className="text-text-secondary mt-2">Seu foco para hoje, ordenado por prioridade de impacto.</p>
+          {!isPersisted && (
+            <p className="flex items-center text-xs text-text-muted mt-2">
+              <CloudOff className="w-3.5 h-3.5 mr-1.5 shrink-0" aria-hidden="true" />
+              Modo demonstração — conecte sua conta Google em "Conexões Google" para salvar seu progresso de verdade.
+            </p>
           )}
+          {failureWarnings.map((warning) => (
+            <p key={warning.code} className="flex items-center text-xs text-status-warning mt-2">
+              <WifiOff className="w-3.5 h-3.5 mr-1.5 shrink-0" aria-hidden="true" />
+              {warning.message}
+            </p>
+          ))}
+        </header>
+
+        {/* Contexto do dia — só o que muda a decisão de hoje. */}
+        {(upcomingExams.length > 0 || overdueReviews > 0) && (
+          <section aria-label="Contexto de hoje" className="flex flex-wrap gap-3">
+            {upcomingExams.map((exam) => (
+              <Panel key={exam.id} className="flex items-center gap-2.5 px-4 py-2.5">
+                {/* Burgundy carries "priority" on ivory, but it collapses into
+                    the dark surfaces (≈1.4:1) — Ember, the family reserved for
+                    small indicators, keeps the same read there. */}
+                <CalendarClock className="w-4 h-4 text-priority-high dark:text-ember-400 shrink-0" aria-hidden="true" />
+                <div>
+                  <p className="text-sm font-medium text-text-primary leading-tight">{exam.label}</p>
+                  <p className="text-xs text-text-muted leading-tight mt-0.5">
+                    {daysUntil(exam.date) === 0 ? 'É hoje' : `Faltam ${daysUntil(exam.date)} dias`}
+                  </p>
+                </div>
+              </Panel>
+            ))}
+            {overdueReviews > 0 && (
+              <Panel className="flex items-center gap-2.5 px-4 py-2.5">
+                <History className="w-4 h-4 text-text-muted shrink-0" aria-hidden="true" />
+                <div>
+                  <p className="text-sm font-medium text-text-primary leading-tight">
+                    {overdueReviews} {overdueReviews === 1 ? 'revisão atrasada' : 'revisões atrasadas'}
+                  </p>
+                  <p className="text-xs text-text-muted leading-tight mt-0.5">Já pesam na ordem de hoje</p>
+                </div>
+              </Panel>
+            )}
+          </section>
+        )}
+
+        {primary ? (
+          <div className="space-y-6">
+            <TodayFocus
+              key={primary.id}
+              action={primary}
+              actionLabel={ACTION_LABELS[primary.type]}
+              mainReason={mainReasonFor(primary)}
+              onStart={() => startAction(primary.topicId)}
+              showAdaptiveUpdate={rankingChanged}
+              previousSubject={previousSubject}
+              userId={user?.uid}
+              feedbackStatus={feedbackStatus}
+              onDisagree={handleDisagree}
+            />
+            <SecondaryActionList title="Depois disso" actions={secondary} actionLabels={ACTION_LABELS} onStart={startAction} />
+            <SecondaryActionList title="Pode esperar" actions={canWait} actionLabels={ACTION_LABELS} onStart={startAction} quiet />
+          </div>
+        ) : !hasEvidence ? (
+          <EmptyState
+            icon={Stethoscope}
+            title="Ainda não há um diagnóstico seu"
+            description="O plano de hoje é montado a partir do seu diagnóstico inicial. Sem ele, não há uma base real para recomendar prioridades — em vez de inventar uma, preferimos pedir o diagnóstico primeiro."
+            action={<Button onClick={() => navigate('/diagnostico')}>Iniciar diagnóstico</Button>}
+          />
+        ) : availableMinutes <= 0 ? (
+          <EmptyState
+            icon={CalendarClock}
+            title="Sem tempo disponível hoje"
+            description="Sua agenda semanal, somada às exceções de hoje, não deixou nenhuma janela de estudo livre."
+            action={
+              <Button variant="secondary" onClick={() => navigate('/plano')}>
+                Ajustar em Plano de Estudo
+              </Button>
+            }
+          />
+        ) : (
+          <EmptyState
+            icon={CheckCircle2}
+            title="Não precisa fazer nada extra hoje"
+            description="Com base no seu histórico, você já tem evidências suficientes de domínio nos tópicos ativos e nenhuma revisão urgente pendente."
+          />
+        )}
+
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <Panel className="p-5">
+            <p className="text-xs font-medium text-text-muted flex items-center gap-1.5">
+              <Target className="w-3.5 h-3.5" aria-hidden="true" />
+              Tempo de Estudo
+            </p>
+            <p className="font-display text-2xl font-semibold text-text-primary mt-2">{availableMinutes} min</p>
+            <p className="text-xs text-text-muted mt-1">Calculado pela agenda semanal e pelas exceções do dia</p>
+          </Panel>
+          <Panel className="p-5">
+            <p className="text-xs font-medium text-text-muted flex items-center gap-1.5">
+              <Brain className="w-3.5 h-3.5" aria-hidden="true" />
+              Autonomia
+            </p>
+            <p className="font-display text-2xl font-semibold text-text-primary mt-2">
+              {profile.autonomyIndex}
+              <span className="text-base text-text-muted">/100</span>
+            </p>
+            <p className="text-xs text-text-muted mt-1">Crescimento lento e sustentável.</p>
+          </Panel>
+          <Panel className="p-5">
+            <p className="text-xs font-medium text-text-muted flex items-center gap-1.5">
+              <AlertCircle className="w-3.5 h-3.5" aria-hidden="true" />
+              Prioridade Máxima
+            </p>
+            <p className="font-display text-lg font-semibold text-text-primary mt-2">{primary ? primary.topicName : 'Tudo em dia'}</p>
+            <p className="text-xs text-text-muted mt-1">{primary ? ACTION_LABELS[primary.type] : 'Nenhuma ação pendente'}</p>
+          </Panel>
         </div>
-      </section>
-    </div>
+
+        <Panel className="p-5 flex items-center justify-between gap-4 flex-wrap">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-widest text-priority-high dark:text-ember-400">Prioridade Fuvest</p>
+            <p className="font-display text-lg font-semibold text-text-primary mt-1">Retome seus resumos estratégicos</p>
+            <p className="text-sm text-text-secondary mt-1">Revisão rápida, aprofundamento e recuperação ativa com progresso salvo.</p>
+          </div>
+          <Button variant="secondary" onClick={() => navigate('/resumos')}>
+            Abrir resumos
+          </Button>
+        </Panel>
+      </div>
+    </SubjectAtmosphere>
   );
 }

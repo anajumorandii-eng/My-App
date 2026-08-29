@@ -54,6 +54,8 @@ const allocatedActions: AllocatedStudyAction[] = [
     estimatedMinutes: 45,
     priorityScore: 100,
     reasons: [],
+    factors: [],
+    snapshot: { masteryLevel: 0, uncertainty: 0, calculatedAt: new Date().toISOString() },
     intervalStart: '2026-08-24T14:40:00-03:00',
     intervalEnd: '2026-08-24T15:00:00-03:00',
     allocatedMinutes: 20,
@@ -67,6 +69,8 @@ const allocatedActions: AllocatedStudyAction[] = [
     estimatedMinutes: 45,
     priorityScore: 90,
     reasons: [],
+    factors: [],
+    snapshot: { masteryLevel: 0, uncertainty: 0, calculatedAt: new Date().toISOString() },
     intervalStart: '2026-08-24T15:40:00-03:00',
     intervalEnd: '2026-08-24T16:25:00-03:00',
     allocatedMinutes: 45,
@@ -80,6 +84,8 @@ const allocatedActions: AllocatedStudyAction[] = [
     estimatedMinutes: 15,
     priorityScore: 80,
     reasons: [],
+    factors: [],
+    snapshot: { masteryLevel: 0, uncertainty: 0, calculatedAt: new Date().toISOString() },
     intervalStart: '2026-08-24T17:00:00-03:00',
     intervalEnd: '2026-08-24T17:15:00-03:00',
     allocatedMinutes: 15,
@@ -93,6 +99,8 @@ const allocatedActions: AllocatedStudyAction[] = [
     estimatedMinutes: 30,
     priorityScore: 70,
     reasons: [],
+    factors: [],
+    snapshot: { masteryLevel: 0, uncertainty: 0, calculatedAt: new Date().toISOString() },
     intervalStart: '2026-08-24T18:00:00-03:00',
     intervalEnd: '2026-08-24T18:30:00-03:00',
     allocatedMinutes: 30,
@@ -106,6 +114,8 @@ const allocatedActions: AllocatedStudyAction[] = [
     estimatedMinutes: 20,
     priorityScore: 60,
     reasons: [],
+    factors: [],
+    snapshot: { masteryLevel: 0, uncertainty: 0, calculatedAt: new Date().toISOString() },
     intervalStart: '2026-08-24T19:00:00-03:00',
     intervalEnd: '2026-08-24T19:20:00-03:00',
     allocatedMinutes: 20,
@@ -121,6 +131,8 @@ const waitingAction: StudyAction = {
   estimatedMinutes: 30,
   priorityScore: 50,
   reasons: [],
+  factors: [],
+  snapshot: { masteryLevel: 0, uncertainty: 0, calculatedAt: new Date().toISOString() },
 };
 
 const prioritizedActions: StudyAction[] = [
@@ -197,6 +209,23 @@ describe('daily plan consistency across views', () => {
     expect(screen.getByText('250 min')).toBeInTheDocument();
     expect(screen.getAllByText(FIRST_TOPIC).length).toBeGreaterThan(0);
     expect(screen.getAllByText(/14:40/).length).toBeGreaterThan(0);
+  });
+
+  it('Dashboard mostra cada ação priorizada uma vez entre foco, depois disso e pode esperar', () => {
+    renderView(<Dashboard />);
+
+    const laterActions = within(screen.getByRole('heading', { name: 'Depois disso' }).closest('section')!);
+    const waitingActions = within(screen.getByRole('heading', { name: 'Pode esperar' }).closest('section')!);
+
+    expect(screen.getByRole('heading', { name: FIRST_TOPIC })).toBeInTheDocument();
+    expect(laterActions.queryByText(FIRST_TOPIC)).not.toBeInTheDocument();
+    expect(waitingActions.queryByText(FIRST_TOPIC)).not.toBeInTheDocument();
+    for (const action of allocatedActions.slice(1)) {
+      expect(laterActions.getAllByText(action.topicName)).toHaveLength(1);
+      expect(waitingActions.queryByText(action.topicName)).not.toBeInTheDocument();
+    }
+    expect(laterActions.queryByText(waitingAction.topicName)).not.toBeInTheDocument();
+    expect(waitingActions.getAllByText(waitingAction.topicName)).toHaveLength(1);
   });
 
   it('Plano removes manual and Calendar-primary controls while retaining warnings and unallocated priorities', () => {
