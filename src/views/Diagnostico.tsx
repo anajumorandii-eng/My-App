@@ -1,10 +1,12 @@
-import React, { useMemo, useState } from 'react';
+import React, { useMemo, useRef, useState } from 'react';
 import { mockTopics } from '../data/mockData';
 import { mockTopicDiscursivePrompts } from '../data/topicDiscursivePrompts';
+import { useAuth } from '../context/AuthContext';
 import { useUserMastery } from '../hooks/useUserMastery';
 import { useQuestions } from '../hooks/useQuestions';
+import { addUserAttempt, addUserDiscursiveAttempt } from '../lib/userData';
 import { STATE_LABELS, STATE_DESCRIPTIONS } from '../lib/backlogEngine';
-import { Question, TopicDiscursivePrompt } from '../types';
+import { Question, TopicDiscursivePrompt, TopicMastery } from '../types';
 import {
   Stethoscope,
   CheckCircle2,
@@ -49,6 +51,7 @@ function daysAgo(dateIso: string): number {
 type Phase = 'pick' | 'selfreport' | 'quiz' | 'result';
 
 export default function Diagnostico() {
+  const { user } = useAuth();
   const { mastery, updateMastery, isPersisted, syncError } = useUserMastery();
   const { questions: mockQuestions, syncError: questionsSyncError } = useQuestions();
 
@@ -65,6 +68,9 @@ export default function Diagnostico() {
   const [selectedOptionId, setSelectedOptionId] = useState<string | null>(null);
   const [discursiveRevealed, setDiscursiveRevealed] = useState(false);
   const [savedFlash, setSavedFlash] = useState(false);
+  const [saving, setSaving] = useState(false);
+  const [saveError, setSaveError] = useState<string | null>(null);
+  const savingRef = useRef(false);
   const [quizChapter, setQuizChapter] = useState<string | null>(null);
   const [chapterFallback, setChapterFallback] = useState(false);
 
@@ -111,6 +117,7 @@ export default function Diagnostico() {
     setQuizAnswers([]);
     setSelectedOptionId(null);
     setDiscursiveRevealed(false);
+    setSaveError(null);
     setPhase('selfreport');
   };
 
@@ -152,6 +159,20 @@ export default function Diagnostico() {
     const correct = optionId === currentItem.question.correctOptionId;
     setSelectedOptionId(optionId);
     setQuizAnswers((prev) => [...prev, { questionId: currentItem.question.id, signal: correct ? 'correct' : 'wrong' }]);
+
+    // Mesma evidência durável por tentativa que Questoes.tsx já grava para o
+    // banco de questões geral — aqui alimentando o histórico do Diagnóstico,
+    // não só o resultado calculado em memória. Ausente em modo demonstração,
+    // como o resto do app já faz honestamente para "sem persistir".
+    if (user && selectedTopicId) {
+      addUserAttempt(user.uid, {
+        id: `attempt_${Date.now()}`,
+        questionId: currentItem.question.id,
+        topicId: selectedTopicId,
+        correct,
+        date: new Date().toISOString(),
+      }).catch((error) => console.error('Failed to save diagnostic attempt:', error));
+    }
   };
 
   const revealDiscursiveAnswer = () => {
@@ -162,6 +183,15 @@ export default function Diagnostico() {
   const rateDiscursiveAnswer = (rating: 'fraco' | 'mediano' | 'forte') => {
     if (!currentItem || currentItem.kind !== 'discursive') return;
     setQuizAnswers((prev) => [...prev, { questionId: currentItem.prompt.id, signal: SELF_RATING_SIGNAL[rating] }]);
+    if (user && selectedTopicId) {
+      addUserDiscursiveAttempt(user.uid, {
+        id: `disc_attempt_${Date.now()}`,
+        questionId: currentItem.prompt.id,
+        topicId: selectedTopicId,
+        selfRating: rating,
+        date: new Date().toISOString(),
+      }).catch((error) => console.error('Failed to save diagnostic discursive attempt:', error));
+    }
     nextQuizStep();
   };
 
@@ -197,21 +227,34 @@ export default function Diagnostico() {
     return { level: Math.round(level), uncertainty, errorSignals: wrongCount };
   }, [selfState, dontKnow, quizAnswers]);
 
-  const saveDiagnostic = () => {
-    if (!selectedTopicId || !computedResult) return;
-    updateMastery((prev) => {
+  const saveDiagnostic = async () => {
+    // Guarda por ref (não só o estado `saving`) porque um segundo clique
+    // pode chegar antes do React repintar o botão desabilitado — o guard
+    // síncrono é o que realmente impede a gravação duplicada.
+    if (!selectedTopicId || !computedResult || savingRef.current) return;
+    savingRef.current = true;
+    setSaving(true);
+    setSaveError(null);
+    const entry: TopicMastery = {
+      topicId: selectedTopicId,
+      level: computedResult.level,
+      uncertainty: computedResult.uncertainty,
+      lastReviewed: new Date().toISOString(),
+      errorSignals: computedResult.errorSignals,
+      origin: 'diagnostic',
+    };
+    const saved = await updateMastery((prev) => {
       const exists = prev.some((m) => m.topicId === selectedTopicId);
-      const entry = {
-        topicId: selectedTopicId,
-        level: computedResult.level,
-        uncertainty: computedResult.uncertainty,
-        lastReviewed: new Date().toISOString(),
-        errorSignals: computedResult.errorSignals,
-      };
       return exists ? prev.map((m) => (m.topicId === selectedTopicId ? entry : m)) : [...prev, entry];
     });
-    setSavedFlash(true);
-    setTimeout(() => setSavedFlash(false), 1800);
+    savingRef.current = false;
+    setSaving(false);
+    if (saved) {
+      setSavedFlash(true);
+      setTimeout(() => setSavedFlash(false), 1800);
+    } else {
+      setSaveError('Não foi possível salvar essa alteração. Ela pode não persistir.');
+    }
   };
 
   const reset = () => {
@@ -223,6 +266,7 @@ export default function Diagnostico() {
     setQuizIndex(0);
     setQuizAnswers([]);
     setSelectedOptionId(null);
+    setSaveError(null);
   };
 
   return (
@@ -521,12 +565,16 @@ export default function Diagnostico() {
               Diagnóstico salvo — já atualizado em Hoje, Plano e Evolução & Domínio
             </div>
           ) : (
-            <button
-              onClick={saveDiagnostic}
-              className="w-full py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-medium transition-colors"
-            >
-              Salvar diagnóstico
-            </button>
+            <div className="space-y-2">
+              {saveError && <p className="text-xs text-rose-500">{saveError}</p>}
+              <button
+                onClick={saveDiagnostic}
+                disabled={saving}
+                className="w-full py-3 bg-indigo-600 hover:bg-indigo-700 disabled:bg-zinc-300 dark:disabled:bg-zinc-700 text-white rounded-xl font-medium transition-colors"
+              >
+                {saving ? 'Salvando…' : saveError ? 'Tentar novamente' : 'Salvar diagnóstico'}
+              </button>
+            </div>
           )}
 
           <button
