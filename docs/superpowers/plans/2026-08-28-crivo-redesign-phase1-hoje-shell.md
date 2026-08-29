@@ -552,9 +552,12 @@ git commit -m "feat: add masteryOrigin helper and the Crivo design-token stylesh
 
 ## Task 8: Adopt the global shell (`Layout.tsx`) with full nav parity, and the theme-flash-prevention `index.html`
 
+> **Amended after Task 8's first dispatch was correctly BLOCKED:** copying in the new `Layout.tsx` activates `useTheme()` → `theme.ts`'s `systemPrefersDark()`, whose default parameter dereferences `window.matchMedia.bind(window)`. jsdom (the vitest test environment) doesn't implement `window.matchMedia`, and `src/testSetup.ts` (an `origin/main`-owned file, not previously in this plan's scope) doesn't polyfill it — so `origin/main`'s own pre-existing `AgendaView.test.tsx` (which renders `<Layout>` to test nav links) now crashes. This never surfaced in the source checkout because no test there ever rendered `Layout`+`useTheme` together. Fix: add a standard jsdom `matchMedia` polyfill to `testSetup.ts` — see the new Step 3.5 below. Real browsers have `window.matchMedia`, so this is purely a test-environment gap, not a production bug.
+
 **Files:**
 - Modify: `/c/wtmain/src/components/Layout.tsx` (currently `origin/main`'s version — replace with local's, then patch)
 - Modify: `/c/wtmain/index.html`
+- Modify: `/c/wtmain/src/testSetup.ts` (add `window.matchMedia` polyfill — see amendment note above)
 
 **Interfaces:**
 - Consumes: `useTheme`, `useSpotlight`, `CrivoMark`, `BottomNav`, `OnboardingModal`, `IconButton` (Task 3), `MOTION_DURATION`/`MOTION_EASE` (Task 2).
@@ -600,12 +603,31 @@ diff "$SRC/index.html" /c/wtmain/index.html
 
 Apply the local version's additions (Newsreader/Inter font links, the inline theme-resolution `<script>`, `theme-color`/`apple-mobile-web-app-title`/`<title>` → Crivo) onto `/c/wtmain/index.html` by hand, keeping anything origin/main's copy has that local's doesn't (there shouldn't be much — origin/main's file is minimal — but verify rather than assume).
 
+- [ ] **Step 3.5:** Add a `window.matchMedia` polyfill to `/c/wtmain/src/testSetup.ts` — jsdom doesn't implement it, and `useTheme()` (now reachable from `<Layout>`, which `origin/main`'s own `AgendaView.test.tsx` renders) calls it via `theme.ts`'s `systemPrefersDark()` default parameter. Add this above the existing `afterEach(cleanup);` line, keeping the existing imports/line untouched:
+
+```typescript
+if (typeof window !== 'undefined' && !window.matchMedia) {
+  window.matchMedia = ((query: string) => ({
+    matches: false,
+    media: query,
+    onchange: null,
+    addListener: () => {},
+    removeListener: () => {},
+    addEventListener: () => {},
+    removeEventListener: () => {},
+    dispatchEvent: () => false,
+  })) as unknown as typeof window.matchMedia;
+}
+```
+
+`matches: false` is the right default here — it makes `systemPrefersDark()` resolve to light in tests unless a test explicitly overrides `window.matchMedia` itself (`resolveInitialTheme` still checks `getStoredTheme()` first, so this only affects the no-stored-preference fallback path). Do not touch `theme.ts`/`useTheme.ts` themselves — they're correct as ported; this is purely a test-environment gap.
+
 - [ ] **Step 5:** `npm run lint && npm test && npm run build`.
 
 - [ ] **Step 6:** Commit.
 
 ```bash
-git add src/components/Layout.tsx index.html
+git add src/components/Layout.tsx index.html src/testSetup.ts
 git commit -m "feat: adopt the Crivo navigation shell app-wide, with full route/nav parity"
 ```
 
