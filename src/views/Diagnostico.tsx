@@ -477,11 +477,16 @@ export default function Diagnostico() {
   // TodayFocus: TYPOGRAPHY_PRESETS por matéria, via getSubjectProfile.
   const typographyPreset = topic ? TYPOGRAPHY_PRESETS[getSubjectProfile(topic.subject).tipografia] : null;
 
-  const pickDescribedByIds = [
+  // syncError/questionsSyncError vêm dos hooks e não são limpos por transição
+  // de fase — podem estar presentes em 'pick', 'selfreport', 'quiz' ou
+  // 'result' igualmente. O aria-describedby que os associa (nível de grupo/
+  // região, não por controle individual) por isso precisa acompanhar
+  // qualquer fase em que o header os renderize, não só 'pick'.
+  const headerErrorDescribedByIds = [
     syncError ? 'diagnostico-mastery-sync-error' : null,
     questionsSyncError ? 'diagnostico-questions-sync-error' : null,
   ].filter((id): id is string => !!id);
-  const pickDescribedBy = pickDescribedByIds.length > 0 ? pickDescribedByIds.join(' ') : undefined;
+  const headerErrorDescribedBy = headerErrorDescribedByIds.length > 0 ? headerErrorDescribedByIds.join(' ') : undefined;
 
   return (
     <SubjectAtmosphere subject={topic?.subject}>
@@ -523,7 +528,7 @@ export default function Diagnostico() {
               className="grid grid-cols-1 sm:grid-cols-2 gap-3"
               role="group"
               aria-label="Tópicos disponíveis"
-              aria-describedby={pickDescribedBy}
+              aria-describedby={headerErrorDescribedBy}
             >
               {mockTopics
                 .filter((t) => t.subject === subjectFilter)
@@ -563,7 +568,7 @@ export default function Diagnostico() {
         )}
 
         {phase === 'selfreport' && topic && (
-          <Panel elevation="elevated" className="p-6 sm:p-8 space-y-5">
+          <Panel elevation="elevated" className="p-6 sm:p-8 space-y-5" aria-describedby={headerErrorDescribedBy}>
             <div className="flex items-start justify-between gap-4">
               <div className="min-w-0">
                 <p className="text-[11px] font-semibold uppercase tracking-widest text-text-muted">{topic.subject}</p>
@@ -642,7 +647,7 @@ export default function Diagnostico() {
         )}
 
         {phase === 'quiz' && topic && currentItem && (
-          <Panel elevation="elevated" className="p-6 sm:p-8 space-y-6">
+          <Panel elevation="elevated" className="p-6 sm:p-8 space-y-6" aria-describedby={headerErrorDescribedBy}>
             <div className="flex items-start justify-between gap-4">
               <div className="min-w-0">
                 <p className="text-[11px] font-semibold uppercase tracking-widest text-text-muted">
@@ -766,16 +771,20 @@ export default function Diagnostico() {
         )}
 
         {phase === 'quiz' && topic && !currentItem && (
-          <EmptyState
-            icon={Stethoscope}
-            title="Nenhuma questão disponível"
-            description="Este tópico ainda não tem questões cadastradas para o teste rápido. Volte e escolha outro tópico."
-            action={<Button variant="secondary" onClick={reset}>Escolher outro tópico</Button>}
-          />
+          // EmptyState não repassa aria-describedby (sua interface não tem
+          // ...props) — o wrapper carrega a associação com o erro do header.
+          <div aria-describedby={headerErrorDescribedBy}>
+            <EmptyState
+              icon={Stethoscope}
+              title="Nenhuma questão disponível"
+              description="Este tópico ainda não tem questões cadastradas para o teste rápido. Volte e escolha outro tópico."
+              action={<Button variant="secondary" onClick={reset}>Escolher outro tópico</Button>}
+            />
+          </div>
         )}
 
         {phase === 'result' && topic && computedResult && (
-          <Panel elevation="elevated" className="p-6 sm:p-8 space-y-6">
+          <Panel elevation="elevated" className="p-6 sm:p-8 space-y-6" aria-describedby={headerErrorDescribedBy}>
             <div className="flex items-start justify-between gap-4">
               <div className="min-w-0">
                 <p className="text-[11px] font-semibold uppercase tracking-widest text-text-muted">
