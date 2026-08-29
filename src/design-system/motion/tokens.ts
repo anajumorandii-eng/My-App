@@ -122,7 +122,7 @@ export const MOTION_MATRIX = [
     duration: MOTION_DURATION.micro,
     easing: 'MOTION_EASE',
     property: 'opacity',
-    reducedMotion: 'No transition â€” new route renders immediately',
+    reducedMotion: 'No transition — new route renders immediately',
   },
   {
     component: 'Spotlight hover (nav items, primary button, interactive cards)',
