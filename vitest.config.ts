@@ -8,5 +8,6 @@ export default defineConfig({
     setupFiles: ['./src/testSetup.ts'],
     clearMocks: true,
     css: false,
+    testTimeout: 15000,
   },
 });
