@@ -8,8 +8,9 @@ import { StudySessionRecord, StudyVerification } from '../types';
 import { PlayCircle, Pause, RotateCcw, CheckCircle2, XCircle, PlayCircle as StartIcon, CloudOff } from 'lucide-react';
 import { useSearchParams } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import { addUserAttempt, saveUserStudySession } from '../lib/userData';
+import { addUserAttempt, getUserStudySessionsForDate, saveUserStudySession } from '../lib/userData';
 import { applyReviewOutcome, qualityFromAnswerCorrectness, qualityFromStudyVerification } from '../lib/spacedRepetition';
+import { Skeleton } from '../components/ui/Skeleton';
 
 function formatTime(totalSeconds: number) {
   const m = Math.floor(totalSeconds / 60).toString().padStart(2, '0');
@@ -45,10 +46,11 @@ export default function Sessao() {
   const [searchParams] = useSearchParams();
   const { mastery, updateMastery, isPersisted } = useUserMastery();
   const { user } = useAuth();
-  const { availability, allocatedActions: dailyPlan, loading: dailyPlanLoading } = useDailyPlan(todayInSaoPaulo());
+  const localDate = todayInSaoPaulo();
+  const { availability, allocatedActions: dailyPlan, loading: dailyPlanLoading } = useDailyPlan(localDate);
   const { questions } = useQuestions();
 
-  const [selectedAction, setSelectedAction] = useState<AllocatedStudyAction | null>(dailyPlan[0] ?? null);
+  const [selectedAction, setSelectedAction] = useState<AllocatedStudyAction | null>(null);
   const [secondsLeft, setSecondsLeft] = useState((selectedAction?.allocatedMinutes ?? 0) * 60);
   const [isRunning, setIsRunning] = useState(false);
   const [completedIds, setCompletedIds] = useState<string[]>([]);
@@ -56,7 +58,41 @@ export default function Sessao() {
   const [verifiedIds, setVerifiedIds] = useState<string[]>([]);
   const [sessions, setSessions] = useState<Record<string, StudySessionRecord>>({});
   const [syncError, setSyncError] = useState<string | null>(null);
+  const [sessionReconciliationLoading, setSessionReconciliationLoading] = useState(!!user);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+
+  useEffect(() => {
+    if (!user) {
+      setSessionReconciliationLoading(false);
+      return;
+    }
+
+    let active = true;
+    setSessionReconciliationLoading(true);
+    setSyncError(null);
+    getUserStudySessionsForDate(user.uid, localDate).then((persistedSessions) => {
+      if (!active) return;
+      const latestSessions = persistedSessions.reduce<Record<string, StudySessionRecord>>((byActionId, session) => {
+        if (!byActionId[session.actionId]) byActionId[session.actionId] = session;
+        return byActionId;
+      }, {});
+      const completed = [...new Set(persistedSessions.map((session) => session.actionId))];
+      completedIdsRef.current = completed;
+      setCompletedIds(completed);
+      setSessions(latestSessions);
+      setVerifiedIds([...new Set(persistedSessions
+        .filter((session) => session.verification)
+        .map((session) => session.actionId))]);
+    }).catch(() => {
+      if (active) setSyncError('Não foi possível recuperar os blocos já concluídos hoje. Você ainda pode estudar normalmente.');
+    }).finally(() => {
+      if (active) setSessionReconciliationLoading(false);
+    });
+
+    return () => {
+      active = false;
+    };
+  }, [localDate, user]);
 
   // Banco de MC filtrado por tópico para a mini-atividade (ver
   // MINI_ACTIVITY_TYPES), embaralhado e recortado a até MINI_ACTIVITY_SIZE
@@ -190,6 +226,7 @@ export default function Sessao() {
   // was just finished.
   const appliedTopicRef = useRef<string | null>(null);
   useEffect(() => {
+    if (sessionReconciliationLoading) return;
     const topicId = searchParams.get('topic');
     if (!topicId || appliedTopicRef.current === topicId) return;
     const requested = dailyPlan.find((action) => action.topicId === topicId);
@@ -198,14 +235,15 @@ export default function Sessao() {
       setSelectedAction(requested);
       setSecondsLeft(requested.allocatedMinutes * 60);
     }
-  }, [dailyPlan, searchParams]);
+  }, [dailyPlan, searchParams, sessionReconciliationLoading]);
 
   useEffect(() => {
+    if (sessionReconciliationLoading) return;
     if (selectedAction && dailyPlan.some((action) => action.id === selectedAction.id)) return;
     const next = dailyPlan[0] ?? null;
     setSelectedAction(next);
     setSecondsLeft((next?.allocatedMinutes ?? 0) * 60);
-  }, [dailyPlan, selectedAction]);
+  }, [dailyPlan, selectedAction, sessionReconciliationLoading]);
 
   useEffect(() => {
     if (isRunning) {
@@ -278,6 +316,20 @@ export default function Sessao() {
         )}
       </header>
 
+      {sessionReconciliationLoading ? (
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div className="lg:col-span-1 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-4 shadow-sm space-y-3">
+            <Skeleton className="h-4 w-28" />
+            <Skeleton className="h-16 w-full" />
+            <Skeleton className="h-16 w-full" />
+          </div>
+          <div className="lg:col-span-2 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-8 shadow-sm flex flex-col items-center gap-6">
+            <Skeleton className="h-5 w-40" />
+            <Skeleton className="h-8 w-64" />
+            <Skeleton className="h-56 w-56 rounded-full" />
+          </div>
+        </div>
+      ) : (
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="lg:col-span-1 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-4 shadow-sm">
           <h3 className="text-sm font-semibold text-zinc-500 px-2 mb-2">Blocos de hoje</h3>
@@ -446,6 +498,7 @@ export default function Sessao() {
           )}
         </div>
       </div>
+      )}
     </div>
   );
 }

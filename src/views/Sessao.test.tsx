@@ -2,7 +2,7 @@ import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { MemoryRouter } from 'react-router-dom';
 import type { DailyPlanState } from '../hooks/useDailyPlan';
-import type { AllocatedStudyAction, Question, TopicMastery } from '../types';
+import type { AllocatedStudyAction, Question, StudySessionRecord, TopicMastery } from '../types';
 import Sessao from './Sessao';
 
 const dailyPlanHook = vi.hoisted(() => vi.fn());
@@ -10,6 +10,7 @@ const masteryHook = vi.hoisted(() => vi.fn());
 const questionsHook = vi.hoisted(() => vi.fn());
 const authHook = vi.hoisted(() => vi.fn());
 const addUserAttemptMock = vi.hoisted(() => vi.fn().mockResolvedValue(undefined));
+const getUserStudySessionsForDateMock = vi.hoisted(() => vi.fn().mockResolvedValue([]));
 const saveUserStudySessionMock = vi.hoisted(() => vi.fn().mockResolvedValue(undefined));
 
 vi.mock('../hooks/useDailyPlan', () => ({ useDailyPlan: dailyPlanHook }));
@@ -18,6 +19,7 @@ vi.mock('../hooks/useQuestions', () => ({ useQuestions: questionsHook }));
 vi.mock('../context/AuthContext', () => ({ useAuth: authHook }));
 vi.mock('../lib/userData', () => ({
   addUserAttempt: addUserAttemptMock,
+  getUserStudySessionsForDate: getUserStudySessionsForDateMock,
   saveUserStudySession: saveUserStudySessionMock,
 }));
 
@@ -77,13 +79,14 @@ function makeQuestion(overrides: Partial<Question>): Question {
 describe('Sessao', () => {
   beforeEach(() => {
     authHook.mockReturnValue({ user: { uid: 'student-1' } });
+    getUserStudySessionsForDateMock.mockResolvedValue([]);
   });
 
   afterEach(() => {
     vi.clearAllMocks();
   });
 
-  it('mostra um aviso não bloqueante e cai para a primeira ação do plano quando ?topic= não existe em dailyPlan', () => {
+  it('mostra um aviso não bloqueante e cai para a primeira ação do plano quando ?topic= não existe em dailyPlan', async () => {
     const theoryAction = makeAction({ id: 'genetics', type: 'theory', topicId: 'bio-genetics', topicName: 'Genética Molecular' });
     dailyPlanHook.mockReturnValue(planWith([theoryAction]));
     masteryHook.mockReturnValue({ mastery: [], updateMastery: vi.fn().mockResolvedValue(true), isPersisted: true });
@@ -94,7 +97,7 @@ describe('Sessao', () => {
     expect(
       screen.getByText('O tópico solicitado não está mais no plano de hoje — mostrando sua prioridade atual.')
     ).toBeInTheDocument();
-    expect(screen.getAllByText('Genética Molecular').length).toBeGreaterThan(0);
+    expect((await screen.findAllByText('Genética Molecular')).length).toBeGreaterThan(0);
   });
 
   it('não mostra o aviso quando ?topic= corresponde a uma ação do plano', () => {
@@ -118,7 +121,56 @@ describe('Sessao', () => {
     expect(screen.queryByText(/não está mais no plano de hoje/)).not.toBeInTheDocument();
   });
 
-  it('type practice com questões disponíveis: mini-atividade real aparece antes do cronômetro e responder grava tentativa + domínio', () => {
+  it('reconcilia um bloco já concluído hoje antes de qualquer interação', async () => {
+    const theoryAction = makeAction({ id: 'genetics', type: 'theory', topicId: 'bio-genetics', topicName: 'Genética Molecular' });
+    const persistedSession: StudySessionRecord = {
+      id: 'genetics-previous-session',
+      actionId: theoryAction.id,
+      topicId: theoryAction.topicId,
+      actionType: theoryAction.type,
+      plannedMinutes: theoryAction.allocatedMinutes,
+      completedMinutes: theoryAction.allocatedMinutes,
+      completedAt: '2026-08-24T15:00:00.000Z',
+      verification: 'sem_apoio',
+    };
+    dailyPlanHook.mockReturnValue(planWith([theoryAction]));
+    masteryHook.mockReturnValue({ mastery: [], updateMastery: vi.fn().mockResolvedValue(true), isPersisted: true });
+    questionsHook.mockReturnValue({ questions: [], syncError: null });
+    getUserStudySessionsForDateMock.mockResolvedValue([persistedSession]);
+
+    renderSessao();
+
+    expect(await screen.findByText('Tempo de estudo registrado')).toBeInTheDocument();
+    expect(screen.getByText('Checagem registrada; o plano foi recalculado com essa evidência.')).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Concluir' })).toBeDisabled();
+  });
+
+  it('continua renderizando a sessão e mostra um aviso quando a reconciliação falha', async () => {
+    const theoryAction = makeAction({ id: 'genetics', type: 'theory', topicId: 'bio-genetics', topicName: 'Genética Molecular' });
+    dailyPlanHook.mockReturnValue(planWith([theoryAction]));
+    masteryHook.mockReturnValue({ mastery: [], updateMastery: vi.fn().mockResolvedValue(true), isPersisted: true });
+    questionsHook.mockReturnValue({ questions: [], syncError: null });
+    getUserStudySessionsForDateMock.mockRejectedValue(new Error('offline'));
+
+    renderSessao();
+
+    expect(await screen.findByText('Não foi possível recuperar os blocos já concluídos hoje. Você ainda pode estudar normalmente.')).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: /iniciar/i })).toBeInTheDocument();
+  });
+
+  it('mostra skeleton enquanto reconcilia as sessões persistidas', () => {
+    const theoryAction = makeAction({ id: 'genetics', type: 'theory', topicId: 'bio-genetics', topicName: 'Genética Molecular' });
+    dailyPlanHook.mockReturnValue(planWith([theoryAction]));
+    masteryHook.mockReturnValue({ mastery: [], updateMastery: vi.fn().mockResolvedValue(true), isPersisted: true });
+    questionsHook.mockReturnValue({ questions: [], syncError: null });
+    getUserStudySessionsForDateMock.mockReturnValue(new Promise<StudySessionRecord[]>(() => {}));
+
+    const { container } = renderSessao();
+
+    expect(container.querySelectorAll('.animate-pulse').length).toBeGreaterThan(0);
+  });
+
+  it('type practice com questões disponíveis: mini-atividade real aparece antes do cronômetro e responder grava tentativa + domínio', async () => {
     const randomSpy = vi.spyOn(Math, 'random').mockReturnValue(0.99);
     try {
       const practiceAction = makeAction({
@@ -155,7 +207,7 @@ describe('Sessao', () => {
 
       // A mini-atividade aparece ANTES do cronômetro: nenhum controle de
       // cronômetro (botão "Iniciar") deve existir ainda.
-      expect(screen.getByText('Pergunta 1')).toBeInTheDocument();
+      expect(await screen.findByText('Pergunta 1')).toBeInTheDocument();
       expect(screen.queryByRole('button', { name: /iniciar/i })).not.toBeInTheDocument();
 
       fireEvent.click(screen.getByText('Resposta certa 1'));
@@ -215,7 +267,7 @@ describe('Sessao', () => {
 
     renderSessao();
 
-    fireEvent.click(screen.getByText('Resposta certa 1'));
+    fireEvent.click(await screen.findByText('Resposta certa 1'));
 
     // updateMastery foi chamado (a tentativa não é descartada silenciosamente
     // antes de tentar persistir) e, como resolveu false, o aviso aparece —
@@ -232,7 +284,7 @@ describe('Sessao', () => {
     expect(screen.getByRole('button', { name: /iniciar/i })).toBeInTheDocument();
   });
 
-  it('type theory: sem mini-atividade, cronômetro direto e texto honesto visível', () => {
+  it('type theory: sem mini-atividade, cronômetro direto e texto honesto visível', async () => {
     const theoryAction = makeAction({ id: 'genetics', type: 'theory', topicId: 'bio-genetics', topicName: 'Genética Molecular' });
     dailyPlanHook.mockReturnValue(planWith([theoryAction]));
     masteryHook.mockReturnValue({ mastery: [], updateMastery: vi.fn().mockResolvedValue(true), isPersisted: true });
@@ -242,11 +294,11 @@ describe('Sessao', () => {
     renderSessao();
 
     expect(screen.queryByText(/Mini-atividade antes do cronômetro/)).not.toBeInTheDocument();
-    expect(screen.getByText('Reconstrua a base sem apoio; ao final, avalie o que conseguiu.')).toBeInTheDocument();
+    expect(await screen.findByText('Reconstrua a base sem apoio; ao final, avalie o que conseguiu.')).toBeInTheDocument();
     expect(screen.getByRole('button', { name: /iniciar/i })).toBeInTheDocument();
   });
 
-  it('type practice sem nenhuma questão para o tópico: cai no cronômetro focado com o mesmo aviso honesto, sem quebrar', () => {
+  it('type practice sem nenhuma questão para o tópico: cai no cronômetro focado com o mesmo aviso honesto, sem quebrar', async () => {
     const practiceAction = makeAction({ id: 'stoichiometry', type: 'practice', topicId: 'chem-stoichiometry', topicName: 'Estequiometria' });
     dailyPlanHook.mockReturnValue(planWith([practiceAction]));
     masteryHook.mockReturnValue({ mastery: [], updateMastery: vi.fn().mockResolvedValue(true), isPersisted: true });
@@ -254,7 +306,7 @@ describe('Sessao', () => {
 
     expect(() => renderSessao()).not.toThrow();
     expect(screen.queryByText(/Mini-atividade antes do cronômetro/)).not.toBeInTheDocument();
-    expect(screen.getByText('Reconstrua a base sem apoio; ao final, avalie o que conseguiu.')).toBeInTheDocument();
+    expect(await screen.findByText('Reconstrua a base sem apoio; ao final, avalie o que conseguiu.')).toBeInTheDocument();
     expect(screen.getByRole('button', { name: /iniciar/i })).toBeInTheDocument();
   });
 });

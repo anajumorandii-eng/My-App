@@ -6,6 +6,7 @@ import { mockMastery, mockProfile, mockBacklog, mockTopics, mockStudentGoals } f
 import { remapLegacyTopicId } from '../data/legacyTopics';
 import { SPLIT_TOPIC_PARENTS } from '../data/topicSplits';
 import { applyRecoveryEvidence, preserveLegacyMasteryRows, RecoveryEvidenceResult } from './recoveryEvidence';
+import { isoToLocalDate } from '../features/availability/time';
 
 export interface QuestionAttempt {
   id: string;
@@ -284,6 +285,14 @@ export async function addPlanFeedback(uid: string, feedback: PlanFeedback): Prom
 export async function saveUserStudySession(uid: string, session: StudySessionRecord): Promise<void> {
   const ref = doc(db, 'users', uid, 'studySessions', session.id);
   await setDoc(ref, session, { merge: true });
+}
+
+export async function getUserStudySessionsForDate(uid: string, localDate: string): Promise<StudySessionRecord[]> {
+  const ref = collection(db, 'users', uid, 'studySessions');
+  const snap = await getDocs(query(ref, orderBy('completedAt', 'desc')));
+  return snap.docs
+    .map((d) => d.data() as StudySessionRecord)
+    .filter((session) => isoToLocalDate(session.completedAt) === localDate);
 }
 
 export async function getUserSummaryProgress(uid: string): Promise<SummaryProgressMap> {
