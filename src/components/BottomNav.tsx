@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { Calendar, Map, PlayCircle, TrendingUp, Link as LinkIcon, type LucideIcon } from 'lucide-react';
+import { Calendar, Map, PlayCircle, TrendingUp, type LucideIcon } from 'lucide-react';
 import { cn } from '../lib/cn';
 
 interface BottomNavItem {
@@ -10,16 +10,14 @@ interface BottomNavItem {
 }
 
 // Five real destinations, mapped from the brief's ideal set (Hoje, Plano,
-// Estudar, Análises, Agenda) onto the routes that actually exist in this
-// app (see App.tsx) — there is no standalone "Agenda" route, so it points
-// at Conexões Google, which is where the calendar integration that feeds
-// the day's available time actually lives.
+// Estudar, Análises, Agenda) onto the routes that actually exist in this app
+// (see App.tsx).
 const ITEMS: BottomNavItem[] = [
   { name: 'Hoje', path: '/', icon: Calendar },
   { name: 'Plano', path: '/plano', icon: Map },
   { name: 'Estudar', path: '/sessao', icon: PlayCircle },
   { name: 'Análises', path: '/evolucao', icon: TrendingUp },
-  { name: 'Agenda', path: '/conexoes', icon: LinkIcon },
+  { name: 'Agenda', path: '/agenda', icon: Calendar },
 ];
 
 export function BottomNav() {
