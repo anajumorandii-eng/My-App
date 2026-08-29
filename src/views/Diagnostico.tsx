@@ -201,16 +201,22 @@ export default function Diagnostico() {
   const topic = selectedTopicId ? mockTopics.find((t) => t.id === selectedTopicId) : null;
   const topicMastery = selectedTopicId ? mastery.find((m) => m.topicId === selectedTopicId) : null;
   const currentItem = quizPool[quizIndex];
-  const currentItemId = currentItem ? (currentItem.kind === 'mc' ? currentItem.question.id : currentItem.prompt.id) : null;
-  // Ao retomar um rascunho no meio do quiz, o índice atual pode já ter sido
-  // respondido antes do recarregamento — a escolha visual exata (qual alternativa,
-  // ou se o gabarito já tinha sido revelado) não é persistida, só o sinal final em
-  // quizAnswers. Usamos esse registro para saber que já foi respondida, tanto pra
-  // mostrar o resultado certo quanto pra não deixar contar a mesma questão 2x.
-  const currentAnswerRecord = currentItemId ? quizAnswers.find((a) => a.questionId === currentItemId) : undefined;
+  // Ao retomar um rascunho no meio do quiz, a questão MC do índice atual pode
+  // já ter sido respondida antes do recarregamento — a alternativa exata
+  // clicada não é persistida, só o sinal final em quizAnswers. Usamos esse
+  // registro pra mostrar o resultado certo e não deixar responder de novo
+  // (o que contaria a mesma questão 2x). Isso só se aplica ao lado MC: no
+  // lado discursivo, o registro em quizAnswers e o avanço de índice
+  // (nextQuizStep) acontecem no mesmo handler síncrono de rateDiscursiveAnswer
+  // — não existe um estado remontável em que a questão discursiva atual já
+  // tenha registro e ainda seja a atual, então não há nada pra este guard
+  // proteger ali.
+  const currentAnswerRecord = currentItem?.kind === 'mc'
+    ? quizAnswers.find((a) => a.questionId === currentItem.question.id)
+    : undefined;
   const answered = currentItem?.kind === 'mc'
     ? selectedOptionId !== null || !!currentAnswerRecord
-    : discursiveRevealed || !!currentAnswerRecord;
+    : discursiveRevealed;
   const isCorrect = currentItem?.kind === 'mc'
     ? (selectedOptionId !== null ? selectedOptionId === currentItem.question.correctOptionId : currentAnswerRecord?.signal === 'correct')
     : false;
@@ -315,19 +321,15 @@ export default function Diagnostico() {
 
   const rateDiscursiveAnswer = (rating: 'fraco' | 'mediano' | 'forte') => {
     if (!currentItem || currentItem.kind !== 'discursive') return;
-    // Retomando um rascunho, este item pode já ter um registro (currentAnswerRecord)
-    // de antes do recarregamento — só grava/soma de novo se ainda não tiver.
-    if (!currentAnswerRecord) {
-      setQuizAnswers((prev) => [...prev, { questionId: currentItem.prompt.id, signal: SELF_RATING_SIGNAL[rating] }]);
-      if (user && selectedTopicId) {
-        addUserDiscursiveAttempt(user.uid, {
-          id: `disc_attempt_${Date.now()}`,
-          questionId: currentItem.prompt.id,
-          topicId: selectedTopicId,
-          selfRating: rating,
-          date: new Date().toISOString(),
-        }).catch((error) => console.error('Failed to save diagnostic discursive attempt:', error));
-      }
+    setQuizAnswers((prev) => [...prev, { questionId: currentItem.prompt.id, signal: SELF_RATING_SIGNAL[rating] }]);
+    if (user && selectedTopicId) {
+      addUserDiscursiveAttempt(user.uid, {
+        id: `disc_attempt_${Date.now()}`,
+        questionId: currentItem.prompt.id,
+        topicId: selectedTopicId,
+        selfRating: rating,
+        date: new Date().toISOString(),
+      }).catch((error) => console.error('Failed to save diagnostic discursive attempt:', error));
     }
     nextQuizStep();
   };
@@ -645,7 +647,7 @@ export default function Diagnostico() {
                 Questão discursiva — sem múltipla escolha, você mesma avalia sua resposta
               </div>
               <p className="text-lg font-medium leading-relaxed">{currentItem.prompt.prompt}</p>
-              {!answered ? (
+              {!discursiveRevealed ? (
                 <button
                   onClick={revealDiscursiveAnswer}
                   className="w-full py-3 border border-dashed border-zinc-300 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 rounded-xl font-medium text-sm hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-colors"

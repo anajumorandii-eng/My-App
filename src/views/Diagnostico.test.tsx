@@ -206,9 +206,11 @@ describe('Diagnostico', () => {
     });
   });
 
-  it('retoma no mesmo índice do quiz e mantém a resposta já dada ao desmontar e remontar (simulando reload)', () => {
+  it('retoma no índice 2 do quiz (não no 1) e mantém a resposta da questão anterior ao desmontar e remontar (simulando reload)', () => {
     // Segunda questão de múltipla escolha só para este teste, pra "mesmo
-    // índice" ser uma afirmação real (com 1 questão só, o índice não teria pra onde ir).
+    // índice" ser uma afirmação real: respondemos a questão 1 e avançamos
+    // pra questão 2 ANTES de recarregar — só assim um bug em quizIndex (ex.:
+    // sempre voltar pro índice 0) teria como reprovar o teste.
     const secondQuestion: Question = {
       id: 'q2',
       topicId: MC_TOPIC_ID,
@@ -231,16 +233,25 @@ describe('Diagnostico', () => {
       const { unmount } = setup({ questions });
       fireEvent.click(screen.getByText('Tópico MC'));
       selfReport();
-      fireEvent.click(screen.getByText('4'));
+      fireEvent.click(screen.getByText('4')); // responde a questão 1 (correta)
+      fireEvent.click(screen.getByText('Próxima questão')); // avança pro índice 1
 
-      expect(screen.getByText('Questão 1 de 2')).toBeInTheDocument();
+      expect(screen.getByText('Questão 2 de 2')).toBeInTheDocument();
 
       unmount();
       setup({ questions });
 
-      expect(screen.getByText('Questão 1 de 2')).toBeInTheDocument();
-      expect(screen.getByText('Correto!')).toBeInTheDocument();
-      expect(screen.getByText('Próxima questão')).toBeEnabled();
+      // Reabriu direto na questão 2 — não voltou pra questão 1 nem pra 'pick'.
+      expect(screen.getByText('Questão 2 de 2')).toBeInTheDocument();
+      expect(screen.queryByText('Correto!')).not.toBeInTheDocument();
+
+      // Responde a questão 2 e confirma que o resultado final soma as DUAS
+      // respostas — prova de que a resposta da questão 1 (dada antes do
+      // recarregamento, quando essa questão nem era mais a atual) não foi perdida.
+      fireEvent.click(screen.getByText('6'));
+      fireEvent.click(screen.getByText('Ver resultado'));
+
+      expect(screen.getByText(/ajustado por 2 acerto\(s\) e 0 erro\(s\)/)).toBeInTheDocument();
     } finally {
       randomSpy.mockRestore();
     }
@@ -251,6 +262,32 @@ describe('Diagnostico', () => {
 
     expect(() => setup()).not.toThrow();
     expect(screen.getByText('Tópico MC')).toBeInTheDocument();
+  });
+
+  it('rascunho com formato válido mas topicId que não existe mais em mockTopics abre em "pick"', () => {
+    // Formato correto (passa por todas as validações de parseDiagnosticoDraft),
+    // só o topicId é de um tópico que não está (mais) no catálogo — cobre a
+    // checagem "topicId ainda existe em mockTopics" do contrato, separada da
+    // validação de formato do JSON.
+    window.sessionStorage.setItem(
+      'crivo_diagnostico_draft:user-1',
+      JSON.stringify({
+        topicId: 'topic-que-nao-existe-mais',
+        selectedSubtopic: '',
+        phase: 'quiz',
+        selfState: 2,
+        dontKnow: false,
+        quizIndex: 0,
+        quizAnswers: [],
+        quizChapter: null,
+        chapterFallback: false,
+        quizPoolItems: [{ kind: 'mc', id: 'q1' }],
+      })
+    );
+
+    expect(() => setup()).not.toThrow();
+    expect(screen.getByText('Tópico MC')).toBeInTheDocument();
+    expect(screen.queryByText(/Questão \d+ de \d+/)).not.toBeInTheDocument();
   });
 
   it('apaga o rascunho em sessionStorage ao concluir "saveDiagnostic" com sucesso', async () => {
