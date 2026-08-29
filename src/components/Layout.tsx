@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, Outlet, useLocation, useNavigate } from 'react-router-dom';
-import { motion, useReducedMotion } from 'motion/react';
+import { AnimatePresence, motion, useReducedMotion } from 'motion/react';
 import {
   Calendar,
   Map,
@@ -292,7 +292,17 @@ export default function Layout() {
       {/* Main Content */}
       <main className="flex-1 overflow-y-auto pt-14 lg:pt-0 pb-16 lg:pb-0">
         <div className="p-4 sm:p-8 max-w-6xl mx-auto">
-          <Outlet />
+          <AnimatePresence mode="wait" initial={false}>
+            <motion.div
+              key={location.pathname}
+              initial={reducedMotion ? false : { opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={reducedMotion ? undefined : { opacity: 0 }}
+              transition={{ duration: MOTION_DURATION.micro, ease: MOTION_EASE }}
+            >
+              <Outlet />
+            </motion.div>
+          </AnimatePresence>
         </div>
       </main>
 

@@ -116,6 +116,15 @@ export const MOTION_MATRIX = [
     reducedMotion: 'Width/opacity snap to the target value',
   },
   {
+    component: 'Route transition (Layout <Outlet />)',
+    trigger: 'Pathname change',
+    purpose: 'Acknowledge a navigation happened without competing with any screen\'s own entrance motion',
+    duration: MOTION_DURATION.micro,
+    easing: 'MOTION_EASE',
+    property: 'opacity',
+    reducedMotion: 'No transition â€” new route renders immediately',
+  },
+  {
     component: 'Spotlight hover (nav items, primary button, interactive cards)',
     trigger: 'Pointer move within the element',
     purpose: 'Mark what is explorable, locally — never a page-wide cursor glow',
