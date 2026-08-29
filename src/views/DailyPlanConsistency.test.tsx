@@ -211,6 +211,23 @@ describe('daily plan consistency across views', () => {
     expect(screen.getAllByText(/14:40/).length).toBeGreaterThan(0);
   });
 
+  it('Dashboard mostra cada ação priorizada uma vez entre foco, depois disso e pode esperar', () => {
+    renderView(<Dashboard />);
+
+    const laterActions = within(screen.getByRole('heading', { name: 'Depois disso' }).closest('section')!);
+    const waitingActions = within(screen.getByRole('heading', { name: 'Pode esperar' }).closest('section')!);
+
+    expect(screen.getByRole('heading', { name: FIRST_TOPIC })).toBeInTheDocument();
+    expect(laterActions.queryByText(FIRST_TOPIC)).not.toBeInTheDocument();
+    expect(waitingActions.queryByText(FIRST_TOPIC)).not.toBeInTheDocument();
+    for (const action of allocatedActions.slice(1)) {
+      expect(laterActions.getAllByText(action.topicName)).toHaveLength(1);
+      expect(waitingActions.queryByText(action.topicName)).not.toBeInTheDocument();
+    }
+    expect(laterActions.queryByText(waitingAction.topicName)).not.toBeInTheDocument();
+    expect(waitingActions.getAllByText(waitingAction.topicName)).toHaveLength(1);
+  });
+
   it('Plano removes manual and Calendar-primary controls while retaining warnings and unallocated priorities', () => {
     renderView(<Plano />);
 

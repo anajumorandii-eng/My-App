@@ -1,12 +1,9 @@
 import React, { useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AlertCircle, Brain, CalendarClock, CheckCircle2, CloudOff, History, Stethoscope, Target, WifiOff } from 'lucide-react';
-import { EfficiencyEngine } from '../lib/efficiencyEngine';
-import { mockTopics } from '../data/mockData';
 import { useDailyPlan } from '../hooks/useDailyPlan';
 import { useUserMastery } from '../hooks/useUserMastery';
 import { useUserProfile } from '../hooks/useUserProfile';
-import { useStudentGoals } from '../hooks/useStudentGoals';
 import { useAuth } from '../context/AuthContext';
 import { useAdaptiveRankingChange } from '../hooks/useAdaptiveRankingChange';
 import { todayInSaoPaulo } from '../features/availability/time';
@@ -59,10 +56,9 @@ export default function Dashboard() {
   // One shared source of truth for "what is today's plan" — the same hook
   // Plano and Sessão read, so the three views can never disagree about the
   // effective minutes, the first action, or its scheduled slot.
-  const { availability, allocatedActions: dailyPlan, loading, warnings, isPersisted } = useDailyPlan(todayInSaoPaulo());
+  const { availability, prioritizedActions, allocatedActions: dailyPlan, loading, warnings, isPersisted } = useDailyPlan(todayInSaoPaulo());
   const { mastery } = useUserMastery();
   const { profile } = useUserProfile();
-  const { goals } = useStudentGoals();
 
   const availableMinutes = availability?.totalMinutes ?? 0;
   const masteryOrigin = deriveMasteryOrigin(mastery, isPersisted);
@@ -72,20 +68,15 @@ export default function Dashboard() {
   const hasEvidence = masteryOrigin !== 'seed';
 
   const primary = dailyPlan[0];
-  const secondary = dailyPlan.slice(1, 4);
+  const secondary = dailyPlan.slice(1);
 
-  // "Pode esperar": ranked today but left out of the time budget. The
-  // allocator can still place an action the budget split deferred (it packs
-  // against the real calendar intervals, not a single total), so anything
-  // already on today's clock is filtered out rather than listed twice.
-  const deferredActions = useMemo(
-    () => EfficiencyEngine.generateDeferredActions(mastery, mockTopics, profile, availableMinutes, goals),
-    [mastery, profile, availableMinutes, goals]
-  );
+  // `prioritizedActions` is the complete ranking that the allocator received.
+  // Its complement to the allocated IDs is the only waiting queue that can
+  // account for fragmented intervals as well as the total-time budget.
   const canWait = useMemo(() => {
     const planned = new Set(dailyPlan.map((action) => action.id));
-    return deferredActions.filter((action) => !planned.has(action.id)).slice(0, 3);
-  }, [deferredActions, dailyPlan]);
+    return prioritizedActions.filter((action) => !planned.has(action.id));
+  }, [prioritizedActions, dailyPlan]);
 
   const overdueReviews = pendingReviewCount(mastery);
   const upcomingExams = useMemo(() => nextExams(new Date(), 3), []);
