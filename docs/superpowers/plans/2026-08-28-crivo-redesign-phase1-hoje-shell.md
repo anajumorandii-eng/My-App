@@ -863,6 +863,8 @@ git commit -m "feat: add a subtle opacity-only page transition, respecting prefe
 
 ## Task 11: Full verification and browser QA
 
+> **Amended after Task 10's review round 2:** the `AnimatePresence mode="wait"` outgoing-route hold (the exiting page staying mounted for its ~160ms opacity fade before the incoming page mounts) could not be proven in jsdom — Motion's presence-tree exit completes synchronously in that environment regardless of component shape (confirmed via 3 different implementation attempts, all reverted). This is a real, accepted test-environment ceiling, not a code defect — see the ledger's Task 10 ruling. Step 3 below now explicitly requires proving this specific behavior in a real browser before Phase 1 is considered done.
+
 **Files:** none (verification only).
 
 - [ ] **Step 1:** Full automated suite.
@@ -893,6 +895,7 @@ Expected: no output.
   - [ ] `prefers-reduced-motion: reduce` — zero continuous animation loops (Núcleo, atmosphere, spotlight all static), route changes are instant.
   - [ ] Canvas-2D-unavailable fallback still renders (spot-check via the existing fallback path, don't skip because it "should still work").
   - [ ] Every OTHER screen (Diagnóstico, Sessão, Questões, Revisões, Flashcards, Podcast, Evolução, Perfil, Conexões, Agenda, Resumos, etc.) loads with its `origin/main` content, inside the new shell chrome, with no console errors — these screens' own internal visual style stays exactly as `origin/main` has it; only the shell around them is new. This is the explicit boundary of this phase.
+  - [ ] Page transition (Task 10): navigate between two routes (e.g. `/` → `/plano` → `/`) and confirm a real, visible opacity-only fade with no transform/slide/scale; the outgoing page's content should not vanish instantly nor should the incoming page pop in before the fade completes. Navigate away from `/sessao` mid-session (or any form with unsaved input) and confirm there is no perceptible stall or blocked interaction from `mode="wait"`. This specific check exists because automated coverage could not observe it (jsdom completes Motion exits synchronously) — see Task 10's ledger ruling.
   - [ ] Zero console errors/warnings other than the expected one-time "matéria sem perfil registrado" notice for Inglês/Filosofia/Sociologia.
 - [ ] **Step 4:** Report results. If anything in Step 3 fails, fix it as a follow-up commit on this same branch before calling Phase 1 done — do not defer known breakage to "later phases."
 
