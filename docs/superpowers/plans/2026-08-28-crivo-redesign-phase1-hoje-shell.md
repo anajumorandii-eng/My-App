@@ -555,10 +555,13 @@ git commit -m "feat: add masteryOrigin helper and the Crivo design-token stylesh
 > **Amended after Task 8's first dispatch was correctly BLOCKED:** copying in the new `Layout.tsx` activates `useTheme()` → `theme.ts`'s `systemPrefersDark()`, whose default parameter dereferences `window.matchMedia.bind(window)`. jsdom (the vitest test environment) doesn't implement `window.matchMedia`, and `src/testSetup.ts` (an `origin/main`-owned file, not previously in this plan's scope) doesn't polyfill it — so `origin/main`'s own pre-existing `AgendaView.test.tsx` (which renders `<Layout>` to test nav links) now crashes. This never surfaced in the source checkout because no test there ever rendered `Layout`+`useTheme` together. Fix: add a standard jsdom `matchMedia` polyfill to `testSetup.ts` — see the new Step 3.5 below. Real browsers have `window.matchMedia`, so this is purely a test-environment gap, not a production bug.
 >
 > **Amended again after Round 2 was correctly BLOCKED:** with the polyfill in place, a second, previously-masked issue surfaced: `src/components/BottomNav.tsx` (Task 3) hardcodes its mobile "Agenda" tab to `path: '/conexoes'`, with a comment explaining that at the time it was written, "there is no standalone Agenda route" on the source checkout it was built against. Task 8's Step 2 just added the REAL `/agenda` sidebar entry (which genuinely exists on `origin/main`), so the workaround is now stale and the tab points at the wrong screen (Conexões Google instead of the actual Agenda/availability view) — confirmed by `origin/main`'s own test finding two elements matching `getByRole('link', {name:'Agenda'})`. This isn't an open product question — the workaround's own comment states the precondition it needs (a real Agenda route) that Task 8 just satisfied. Fix: repoint the tab to `/agenda` — see the new Step 2.5 below.
+>
+> **Amended a third time after Round 3 was correctly BLOCKED:** with `BottomNav`'s href fixed, the same test still fails, for a different, now purely structural reason: `origin/main`'s `AgendaView.test.tsx:199` calls `screen.getByRole('link', { name: 'Agenda' })` — singular, expects exactly one match. jsdom doesn't evaluate CSS media queries, so `Layout`'s sidebar rail (`hidden lg:flex`-style classes) and `BottomNav` (`lg:hidden`) are BOTH present in the test DOM simultaneously, and both now correctly render an "Agenda" link/tab — this is the intended UX (the same destination reachable from either responsive surface), not a bug to route around. The test's "exactly one nav surface" assumption predates `BottomNav` existing at all. Fix: change the assertion to `getAllByRole` and check every match, rather than a single arbitrary one — see the new Step 2.6 below.
 
 **Files:**
 - Modify: `/c/wtmain/src/components/Layout.tsx` (currently `origin/main`'s version — replace with local's, then patch)
 - Modify: `/c/wtmain/src/components/BottomNav.tsx` (repoint the stale "Agenda" tab — see amendment note above)
+- Modify: `/c/wtmain/src/features/availability/AgendaView.test.tsx` (1 assertion — see Step 2.6)
 - Modify: `/c/wtmain/index.html`
 - Modify: `/c/wtmain/src/testSetup.ts` (add `window.matchMedia` polyfill — see amendment note above)
 
@@ -621,6 +624,36 @@ const ITEMS: BottomNavItem[] = [
 
 `Calendar` is reused for both `Hoje` and `Agenda` (both already import it; no new import needed) — if that reads as visually ambiguous in Task 10/11's browser QA, that's a cosmetic follow-up, not a blocker here. The unused `LinkIcon`/`Link as LinkIcon` import becomes dead after this change — remove it from the `lucide-react` import line too (`tsc`'s `noUnusedLocals`, if enabled, would otherwise flag it; remove it regardless for cleanliness).
 
+- [ ] **Step 2.6:** Fix `src/features/availability/AgendaView.test.tsx`'s nav-link assertion to tolerate more than one responsive nav surface. Replace (currently around line 195-200):
+
+```typescript
+  it('links to the Agenda from the primary navigation', () => {
+    localStorage.setItem('juju_onboarding', 'true');
+    render(<MemoryRouter><Layout /></MemoryRouter>);
+
+    expect(screen.getByRole('link', { name: 'Agenda' })).toHaveAttribute('href', '/agenda');
+  });
+```
+
+with:
+
+```typescript
+  it('links to the Agenda from the primary navigation', () => {
+    localStorage.setItem('juju_onboarding', 'true');
+    render(<MemoryRouter><Layout /></MemoryRouter>);
+
+    // Both the desktop rail and the mobile bottom nav render an "Agenda"
+    // link — jsdom doesn't evaluate the lg: media queries that make only
+    // one of them visible at a real viewport size, so both are present in
+    // this test's DOM. Every one of them must point at the real route.
+    const agendaLinks = screen.getAllByRole('link', { name: 'Agenda' });
+    expect(agendaLinks.length).toBeGreaterThan(0);
+    agendaLinks.forEach((link) => expect(link).toHaveAttribute('href', '/agenda'));
+  });
+```
+
+Do not touch the other test in this file (`renders the Agenda at its application route`) — it asserts on a `heading`, not a `link`, so it's unaffected by this duplication and should already be passing.
+
 - [ ] **Step 3:** Re-scan for full parity, not just the two known gaps — compare every path automatically instead of trusting the manual audit alone:
 
 ```bash
@@ -664,7 +697,7 @@ if (typeof window !== 'undefined' && !window.matchMedia) {
 - [ ] **Step 6:** Commit.
 
 ```bash
-git add src/components/Layout.tsx src/components/BottomNav.tsx index.html src/testSetup.ts
+git add src/components/Layout.tsx src/components/BottomNav.tsx src/features/availability/AgendaView.test.tsx index.html src/testSetup.ts
 git commit -m "feat: adopt the Crivo navigation shell app-wide, with full route/nav parity"
 ```
 
