@@ -35,7 +35,7 @@ export function BottomNav() {
             end={item.path === '/'}
             className={({ isActive }) =>
               cn(
-                'flex-1 flex flex-col items-center justify-center gap-1 min-h-11 py-2 text-[11px] font-medium',
+                'flex-1 flex flex-col items-center justify-center gap-1 min-h-11 py-2 text-xs font-medium',
                 isActive ? 'text-action-primary' : 'text-text-muted'
               )
             }

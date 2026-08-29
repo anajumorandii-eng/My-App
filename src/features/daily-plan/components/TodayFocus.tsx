@@ -72,7 +72,7 @@ export function TodayFocus({ action, actionLabel, mainReason, onStart, showAdapt
       <Panel elevation="elevated" className="p-6 sm:p-8">
         <div className="flex items-start justify-between gap-4">
           <div className="min-w-0">
-            <p className="text-[11px] font-semibold uppercase tracking-widest text-text-muted">Foco de hoje</p>
+            <p className="text-xs font-semibold uppercase tracking-widest text-text-muted">Foco de hoje</p>
             <KineticText
               as="h2"
               runKey={action.id}

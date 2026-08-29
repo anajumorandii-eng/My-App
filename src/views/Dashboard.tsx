@@ -260,7 +260,7 @@ export default function Dashboard() {
 
         <Panel className="p-5 flex items-center justify-between gap-4 flex-wrap">
           <div>
-            <p className="text-[11px] font-semibold uppercase tracking-widest text-priority-high dark:text-ember-400">Prioridade Fuvest</p>
+            <p className="text-xs font-semibold uppercase tracking-widest text-priority-high dark:text-ember-400">Prioridade Fuvest</p>
             <p className="font-display text-lg font-semibold text-text-primary mt-1">Retome seus resumos estratégicos</p>
             <p className="text-sm text-text-secondary mt-1">Revisão rápida, aprofundamento e recuperação ativa com progresso salvo.</p>
           </div>

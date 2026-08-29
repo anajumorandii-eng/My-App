@@ -219,7 +219,7 @@ export default function Layout() {
         <nav className="flex-1 overflow-y-auto overflow-x-hidden py-4 px-3 space-y-5">
           {NAV_GROUPS.map((group) => (
             <div key={group.label}>
-              <p className={cn('px-3 mb-1.5 text-[10px] font-semibold uppercase tracking-widest text-warm-100/40 whitespace-nowrap', !railExpanded && 'lg:hidden')}>
+              <p className={cn('px-3 mb-1.5 text-xs font-semibold uppercase tracking-widest text-warm-100/40 whitespace-nowrap', !railExpanded && 'lg:hidden')}>
                 {group.label}
               </p>
               <div className="space-y-0.5">

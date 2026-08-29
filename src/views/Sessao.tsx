@@ -172,7 +172,7 @@ export default function Sessao() {
     updateMastery((prev) =>
       prev.map((m) =>
         m.topicId === currentActivityQuestion.topicId
-          ? { ...m, ...applyReviewOutcome(m, qualityFromAnswerCorrectness(correct)) }
+          ? { ...m, ...applyReviewOutcome(m, qualityFromAnswerCorrectness(correct)), origin: 'observed' }
           : m
       )
     ).then((saved) => {
@@ -231,7 +231,7 @@ export default function Sessao() {
       const verifiedSession = { ...session, verification: result, verifiedAt };
       if (user) await saveUserStudySession(user.uid, verifiedSession);
       const saved = await updateMastery((items) => items.map((item) => item.topicId === selectedAction.topicId
-        ? { ...item, ...applyReviewOutcome(item, qualityFromStudyVerification(result), new Date(verifiedAt)) }
+        ? { ...item, ...applyReviewOutcome(item, qualityFromStudyVerification(result), new Date(verifiedAt)), origin: 'observed' }
         : item));
       if (!saved) throw new Error('mastery-persistence-failed');
       setSessions((current) => ({ ...current, [selectedAction.id]: verifiedSession }));

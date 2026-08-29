@@ -571,7 +571,7 @@ export default function Diagnostico() {
           <Panel elevation="elevated" className="p-6 sm:p-8 space-y-5" aria-describedby={headerErrorDescribedBy}>
             <div className="flex items-start justify-between gap-4">
               <div className="min-w-0">
-                <p className="text-[11px] font-semibold uppercase tracking-widest text-text-muted">{topic.subject}</p>
+                <p className="text-xs font-semibold uppercase tracking-widest text-text-muted">{topic.subject}</p>
                 <KineticText
                   as="h2"
                   runKey={topic.id}
@@ -650,7 +650,7 @@ export default function Diagnostico() {
           <Panel elevation="elevated" className="p-6 sm:p-8 space-y-6" aria-describedby={headerErrorDescribedBy}>
             <div className="flex items-start justify-between gap-4">
               <div className="min-w-0">
-                <p className="text-[11px] font-semibold uppercase tracking-widest text-text-muted">
+                <p className="text-xs font-semibold uppercase tracking-widest text-text-muted">
                   {topic.subject}{quizChapter ? ` · ${quizChapter}` : ''} · Teste rápido
                 </p>
                 <span aria-live="polite" className="text-sm text-text-muted">
@@ -787,7 +787,7 @@ export default function Diagnostico() {
           <Panel elevation="elevated" className="p-6 sm:p-8 space-y-6" aria-describedby={headerErrorDescribedBy}>
             <div className="flex items-start justify-between gap-4">
               <div className="min-w-0">
-                <p className="text-[11px] font-semibold uppercase tracking-widest text-text-muted">
+                <p className="text-xs font-semibold uppercase tracking-widest text-text-muted">
                   {topic.subject}{selectedSubtopic ? ` · ${selectedSubtopic}` : ''}
                 </p>
                 <KineticText
