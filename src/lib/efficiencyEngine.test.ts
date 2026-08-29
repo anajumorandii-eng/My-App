@@ -163,6 +163,70 @@ test('generateDailyPlan em consolidação (sem prova próxima) não marca fase_r
   assert.ok(!plan.some((a) => a.reasons.includes('fase_revisao_intensificada')));
 });
 
+test('generateDailyPlan: a soma das contribuições dos fatores reconstrói o priorityScore exatamente', () => {
+  const topics = [topic({ id: 'a' }), topic({ id: 'b' })];
+  const masteryData = [
+    mastery({ topicId: 'a', level: 15, errorSignals: 4, uncertainty: 0.8 }),
+    mastery({ topicId: 'b', level: 70, errorSignals: 0, uncertainty: 0.2 }),
+  ];
+  const goals = goalsWith([{ board: 'FUVEST', weight: 1, phaseFocus: 'ambas' }]);
+  const plan = EfficiencyEngine.generateDailyPlan(masteryData, topics, profile({ currentEnergyLevel: 'high' }), 500, goals, new Date('2026-10-15T00:00:00'));
+  for (const action of plan) {
+    assert.equal(action.factors.length, 5);
+    const sum = action.factors.reduce((total, f) => total + f.contribution, 0);
+    assert.ok(Math.abs(sum - action.priorityScore) < 1e-9, `factors should sum to priorityScore for ${action.topicId}`);
+  }
+});
+
+test('generateDailyPlan: fatores obrigatórios cobrem os 5 kinds na ordem esperada', () => {
+  const plan = EfficiencyEngine.generateDailyPlan([mastery({ level: 50 })], [topic()], profile(), 500, NO_GOALS);
+  const kinds = plan[0].factors.map((f) => f.kind);
+  assert.deepEqual(kinds, ['learning_gap', 'review_urgency', 'recurring_errors', 'energy_adjustment', 'exam_relevance']);
+});
+
+test('generateDailyPlan: energy_adjustment não contribui (delta 0) com energia média', () => {
+  const plan = EfficiencyEngine.generateDailyPlan([mastery({ level: 10 })], [topic()], profile({ currentEnergyLevel: 'medium' }), 500, NO_GOALS);
+  const energyFactor = plan[0].factors.find((f) => f.kind === 'energy_adjustment')!;
+  assert.equal(energyFactor.rawValue, 1);
+  assert.equal(energyFactor.contribution, 0);
+});
+
+test('generateDailyPlan: exam_relevance não contribui sem bancas ativas', () => {
+  const plan = EfficiencyEngine.generateDailyPlan([mastery({ level: 50 })], [topic()], profile(), 500, NO_GOALS);
+  const examFactor = plan[0].factors.find((f) => f.kind === 'exam_relevance')!;
+  assert.equal(examFactor.rawValue, 1);
+  assert.equal(examFactor.contribution, 0);
+});
+
+test('generateDailyPlan: snapshot reflete o domínio e a incerteza usados no ranking, não uma segunda leitura', () => {
+  const now = new Date('2026-09-01T00:00:00');
+  const masteryData = [mastery({ topicId: 'a', level: 33, uncertainty: 0.42 })];
+  const plan = EfficiencyEngine.generateDailyPlan(masteryData, [topic({ id: 'a' })], profile(), 500, NO_GOALS, now);
+  assert.equal(plan[0].snapshot.masteryLevel, 33);
+  assert.equal(plan[0].snapshot.uncertainty, 0.42);
+  assert.equal(plan[0].snapshot.calculatedAt, now.toISOString());
+});
+
+test('generateDeferredActions: lista quem não coube no orçamento, e nunca duplica quem está no plano', () => {
+  const topics = [topic({ id: 'a', name: 'A' }), topic({ id: 'b', name: 'B' })];
+  const masteryData = [
+    mastery({ topicId: 'a', level: 10 }), // theory, 45min — cabe
+    mastery({ topicId: 'b', level: 10 }), // theory, 45min — não cabe
+  ];
+  const plan = EfficiencyEngine.generateDailyPlan(masteryData, topics, profile(), 45, NO_GOALS);
+  const deferred = EfficiencyEngine.generateDeferredActions(masteryData, topics, profile(), 45, NO_GOALS);
+  assert.equal(plan.length, 1);
+  assert.equal(deferred.length, 1);
+  assert.notEqual(plan[0].topicId, deferred[0].topicId);
+  const planIds = new Set(plan.map((a) => a.id));
+  assert.ok(!deferred.some((a) => planIds.has(a.id)));
+});
+
+test('generateDeferredActions: vazio quando tudo cabe no tempo disponível', () => {
+  const deferred = EfficiencyEngine.generateDeferredActions([mastery({ level: 50 })], [topic()], profile(), 500, NO_GOALS);
+  assert.equal(deferred.length, 0);
+});
+
 test('generateDailyPlan não desperdiça orçamento de um balde quando falta item do outro tipo', () => {
   const now = new Date('2026-10-08T00:00:00'); // reta final, reviewRatio alto
   const goals = goalsWith([{ board: 'UNICAMP', weight: 1, phaseFocus: 'ambas' }]);

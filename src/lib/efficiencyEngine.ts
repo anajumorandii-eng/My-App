@@ -1,4 +1,4 @@
-import { TopicMastery, Topic, UserProfile, StudyAction, StudentGoals, RecommendationReason } from '../types';
+import { TopicMastery, Topic, UserProfile, StudyAction, StudentGoals, RecommendationReason, RecommendationFactor, RecommendationSnapshot } from '../types';
 import { daysUntil, examsForBoard } from '../data/examCalendar';
 import { topicIncidenceWeight } from './topicIncidence';
 import { currentStudyPhase } from './studyPhase';
@@ -80,6 +80,13 @@ export function examFocusFor(topic: Topic, signals: BoardSignal[]): ExamFocus {
   return { multiplier, hasProximityReason, hasIncidenceReason };
 }
 
+export interface RankedPlan {
+  plan: StudyAction[];
+  // Real, scored actions that didn't fit today's time budget — "Pode
+  // esperar", grounded in the same ranking, not a fabricated list.
+  deferred: StudyAction[];
+}
+
 export class EfficiencyEngine {
   /**
    * Deterministic ranking of study topics based on multiple weighted criteria.
@@ -93,6 +100,29 @@ export class EfficiencyEngine {
     goals: StudentGoals,
     now: Date = new Date()
   ): StudyAction[] {
+    return EfficiencyEngine.rank(masteryData, topics, profile, availableMinutesToday, goals, now).plan;
+  }
+
+  /** Same ranking as generateDailyPlan, but the items time-budget left out — "Pode esperar". */
+  public static generateDeferredActions(
+    masteryData: TopicMastery[],
+    topics: Topic[],
+    profile: UserProfile,
+    availableMinutesToday: number,
+    goals: StudentGoals,
+    now: Date = new Date()
+  ): StudyAction[] {
+    return EfficiencyEngine.rank(masteryData, topics, profile, availableMinutesToday, goals, now).deferred;
+  }
+
+  private static rank(
+    masteryData: TopicMastery[],
+    topics: Topic[],
+    profile: UserProfile,
+    availableMinutesToday: number,
+    goals: StudentGoals,
+    now: Date = new Date()
+  ): RankedPlan {
 
     const actions: StudyAction[] = [];
     const boardSignals = computeBoardSignals(goals, now);
@@ -124,12 +154,35 @@ export class EfficiencyEngine {
 
       const examFocus = examFocusFor(topic, boardSignals);
 
-      // Base Score Calculation
-      const rawScore = (
-        (learningNeeded * 0.4) +
-        (reviewNecessity * 0.3) +
-        (errorSignal * 0.3)
-      ) * energyMultiplier * examFocus.multiplier;
+      // Base Score Calculation — kept as a waterfall (base terms, then each
+      // multiplier applied as a delta over the running total) instead of one
+      // multiplied expression, so every term below is a real, addable
+      // contribution: summing all five factors' `contribution` reconstructs
+      // rawScore exactly, which is what DecisionExplanation shows the
+      // student instead of a black-box number.
+      const learningContribution = learningNeeded * 0.4;
+      const reviewContribution = reviewNecessity * 0.3;
+      const errorContribution = errorSignal * 0.3;
+      const baseScore = learningContribution + reviewContribution + errorContribution;
+      const afterEnergy = baseScore * energyMultiplier;
+      const energyContribution = afterEnergy - baseScore;
+      const afterExamFocus = afterEnergy * examFocus.multiplier;
+      const examContribution = afterExamFocus - afterEnergy;
+      const rawScore = afterExamFocus;
+
+      const factors: RecommendationFactor[] = [
+        { kind: 'learning_gap', rawValue: learningNeeded, contribution: learningContribution },
+        { kind: 'review_urgency', rawValue: reviewNecessity, contribution: reviewContribution },
+        { kind: 'recurring_errors', rawValue: mastery.errorSignals, contribution: errorContribution },
+        { kind: 'energy_adjustment', rawValue: energyMultiplier, contribution: energyContribution },
+        { kind: 'exam_relevance', rawValue: examFocus.multiplier, contribution: examContribution },
+      ];
+
+      const snapshot: RecommendationSnapshot = {
+        masteryLevel: mastery.level,
+        uncertainty: mastery.uncertainty,
+        calculatedAt: now.toISOString(),
+      };
 
       // Determine action type based on mastery state
       let type: StudyAction['type'] = 'practice';
@@ -168,6 +221,8 @@ export class EfficiencyEngine {
         estimatedMinutes,
         priorityScore: rawScore,
         reasons,
+        factors,
+        snapshot,
       });
     });
 
@@ -225,6 +280,14 @@ export class EfficiencyEngine {
     // matéria só porque ela dominou o ranking de prioridade (ver
     // interleaving.ts) — melhora a discriminação entre conceitos/estratégias
     // na hora de aplicar o que foi estudado.
-    return interleaveBySubject(finalPlan);
+    const plan = interleaveBySubject(finalPlan);
+
+    // The second pass above can promote a `deferred` item into `finalPlan`
+    // without removing it from `deferred` — filter those back out so
+    // "Pode esperar" only ever lists what's genuinely not in today's plan.
+    const finalPlanIds = new Set(plan.map((a) => a.id));
+    const stillDeferred = deferred.filter((a) => !finalPlanIds.has(a.id)).sort((a, b) => b.priorityScore - a.priorityScore);
+
+    return { plan, deferred: stillDeferred };
   }
 }

@@ -1,4 +1,4 @@
-import { doc, getDoc, setDoc, collection, getDocs, query, orderBy } from 'firebase/firestore';
+import { doc, getDoc, setDoc, collection, getDocs, query, orderBy, limit } from 'firebase/firestore';
 import { db } from './firestore';
 import { TopicMastery, ErrorLog, UserProfile, DiscursiveAttempt, BacklogItem, StudentGoals, PlanFeedback } from '../types';
 import { mockMastery, mockProfile, mockBacklog, mockTopics, mockStudentGoals } from '../data/mockData';
@@ -189,9 +189,14 @@ export async function saveStudentGoals(uid: string, goals: StudentGoals): Promis
 
 // Feedback estruturado de "Discordo" numa recomendação — só registrado, o
 // plano não muda silenciosamente a partir disso (a estudante decide).
-export async function getPlanFeedback(uid: string): Promise<PlanFeedback[]> {
+//
+// `max` bounds the read instead of pulling the whole history: callers that
+// want "já discordei desse tópico antes?" (DecisionExplanation) filter the
+// result by topicId client-side rather than via a `where` on topicId, which
+// would need a composite index (topicId + orderBy date) not yet provisioned.
+export async function getPlanFeedback(uid: string, max = 30): Promise<PlanFeedback[]> {
   const ref = collection(db, 'users', uid, 'planFeedback');
-  const snap = await getDocs(query(ref, orderBy('date', 'desc')));
+  const snap = await getDocs(query(ref, orderBy('date', 'desc'), limit(max)));
   return snap.docs.map((d) => d.data() as PlanFeedback);
 }
 

@@ -6,12 +6,25 @@ export interface Topic {
   chapters?: string[]; // Real chapter titles from the student's apostila, in study order
 }
 
+// Where a mastery estimate came from — lets the UI tell "haven't been
+// diagnosed yet" apart from "diagnosed, but no study evidence since" apart
+// from "backed by real study/review evidence", instead of inferring any of
+// that from proxies like "user is logged in" (which only tells you the data
+// is real, not where it came from). Absent on a TopicMastery row means it
+// predates this field or was never written by a tagged call site — treated
+// as 'seed' when the row is still at its untouched baseline, 'observed'
+// otherwise (see deriveMasteryOrigin in lib/masteryOrigin.ts).
+export type MasteryOrigin = 'demo' | 'seed' | 'diagnostic' | 'observed';
+
 export interface TopicMastery {
   topicId: string;
   level: number; // 0 to 100
   uncertainty: number; // 0 to 1 (0 = highly certain of level, 1 = low confidence in the level metric)
   lastReviewed: string; // ISO Date
   errorSignals: number; // recent consecutive errors
+  // Optional — see MasteryOrigin above. Absent for rows written before this
+  // field existed or by a call site not yet tagged.
+  origin?: MasteryOrigin;
   // Estado do algoritmo de repetição espaçada (estilo SM-2 — Wozniak, 1990),
   // usado por src/lib/spacedRepetition.ts para agendar a próxima revisão.
   // Opcionais e com fallback sensato em spacedRepetition.ts para não quebrar
@@ -95,6 +108,38 @@ export type RecommendationReason =
   | 'tempo_disponivel'
   | 'fase_revisao_intensificada';
 
+// The signals the Efficiency Engine actually used to compute a
+// priorityScore — the numeric counterpart to `reasons` above. Kept in
+// English/structured (no Portuguese labels here): translating a factor kind
+// into copy is a UI concern, not the engine's.
+export type RecommendationFactorKind =
+  | 'learning_gap'
+  | 'review_urgency'
+  | 'recurring_errors'
+  | 'energy_adjustment'
+  | 'exam_relevance';
+
+export interface RecommendationFactor {
+  kind: RecommendationFactorKind;
+  // The signal's own value before it's folded into the score — e.g. 0-100
+  // for learning_gap/review_urgency, an error count for recurring_errors, a
+  // multiplier for energy_adjustment/exam_relevance.
+  rawValue: number;
+  // How many priorityScore points this factor is responsible for. Summing
+  // every factor's contribution reconstructs priorityScore exactly (see
+  // efficiencyEngine.ts's waterfall: base terms first, then each multiplier
+  // applied as a delta over the running total) — this is what lets
+  // DecisionExplanation show real arithmetic instead of a plausible-looking
+  // guess.
+  contribution: number;
+}
+
+export interface RecommendationSnapshot {
+  masteryLevel: number; // TopicMastery.level at the moment this action was generated
+  uncertainty: number; // TopicMastery.uncertainty at that same moment
+  calculatedAt: string; // ISO date — when generateDailyPlan produced this
+}
+
 export interface StudyAction {
   id: string;
   type: 'review' | 'practice' | 'theory' | 'error_analysis';
@@ -104,6 +149,8 @@ export interface StudyAction {
   estimatedMinutes: number;
   priorityScore: number; // Assigned by Efficiency Engine
   reasons: RecommendationReason[];
+  factors: RecommendationFactor[];
+  snapshot: RecommendationSnapshot;
 }
 
 // Peso e foco de fase que a estudante atribui a uma banca já marcada como
