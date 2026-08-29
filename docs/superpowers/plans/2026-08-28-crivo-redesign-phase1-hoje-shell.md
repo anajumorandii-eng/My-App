@@ -304,13 +304,23 @@ git commit -m "feat: add RecommendationFactor/RecommendationSnapshot and StudyAc
 
 ## Task 6: Extend `efficiencyEngine.ts` with the factors/snapshot waterfall and `generateDeferredActions`
 
+> **Amended:** Task 5's review found that `AllocatedStudyAction extends StudyAction` means adding `factors`/`snapshot` as required fields also broke two `origin/main`-owned test fixtures that build `StudyAction`/`AllocatedStudyAction` object literals directly: `src/features/availability/studyActionAllocator.test.ts` (1 literal) and `src/views/DailyPlanConsistency.test.tsx` (6 literals). Neither file is otherwise in scope for this plan — added as a required step below so the branch stays lint-clean after this task, per the Global Constraint that lint must be clean before moving on.
+
 **Files:**
 - Modify: `/c/wtmain/src/lib/efficiencyEngine.ts`
 - Modify: `/c/wtmain/src/lib/efficiencyEngine.test.ts`
+- Modify: `/c/wtmain/src/features/availability/studyActionAllocator.test.ts` (1 fixture literal)
+- Modify: `/c/wtmain/src/views/DailyPlanConsistency.test.tsx` (6 fixture literals)
 
 **Interfaces:**
 - Consumes: `RecommendationFactor`/`RecommendationSnapshot` from Task 5.
 - Produces: `EfficiencyEngine.rankStudyActions(...)` (existing signature, now returns `factors`/`snapshot` populated), `EfficiencyEngine.generateDailyPlan(...)` (existing signature, unchanged behavior), **new** `EfficiencyEngine.generateDeferredActions(masteryData, topics, profile, availableMinutesToday, goals, now?) → StudyAction[]` — consumed by Task 9 (`Dashboard.tsx`'s "Pode esperar" section).
+
+- [ ] **Step 0:** Fix the two `origin/main`-owned test fixtures broken by Task 5's addition — add `factors: []` and `snapshot: { masteryLevel: 0, uncertainty: 0, calculatedAt: new Date().toISOString() }` (or whatever value is locally convenient — these tests don't assert on `factors`/`snapshot` content, only on allocation/consistency behavior) to each of the 7 total object literals:
+  - `src/features/availability/studyActionAllocator.test.ts:12` (1 literal)
+  - `src/views/DailyPlanConsistency.test.tsx:48,61,74,87,100,115` (6 literals)
+
+  Run `npm run lint` and confirm these 7 errors are gone before moving to Step 1 (they're unrelated to the waterfall/deferred work below — fix them first so Step 1-8's lint checks aren't muddied by pre-existing noise).
 
 - [ ] **Step 1:** In `rankStudyActions`, replace the single-expression score with the waterfall breakdown and build `factors`/`snapshot`. Replace:
 
