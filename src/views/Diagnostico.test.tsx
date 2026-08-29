@@ -1,5 +1,5 @@
 import { act, fireEvent, render, screen, waitFor } from '@testing-library/react';
-import { beforeEach, describe, expect, it, vi } from 'vitest';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { STATE_LABELS } from '../lib/backlogEngine';
 import type { Question } from '../types';
 import Diagnostico from './Diagnostico';
@@ -303,5 +303,73 @@ describe('Diagnostico', () => {
 
     await waitFor(() => expect(screen.getByText(/Diagnóstico salvo/)).toBeInTheDocument());
     expect(window.sessionStorage.getItem('crivo_diagnostico_draft:user-1')).toBeNull();
+  });
+
+  // Sistema de design "Crivo" (Fase 1, já em produção em Hoje) + semântica de
+  // formulário acessível — Tarefa 3. A autoavaliação 0-4 precisa ser um
+  // <fieldset>/<legend> real com <input type="radio"> reais (não um
+  // role="radio" recriado à mão sobre <button>s).
+  it('a autoavaliação é um grupo de radio nativo e acessível, com legend e cada nível como radio', () => {
+    setup();
+    fireEvent.click(screen.getByText('Tópico MC'));
+
+    const group = screen.getByRole('group', { name: /com que honestidade você diria que está/i });
+    expect(group.tagName).toBe('FIELDSET');
+
+    const radio2 = screen.getByRole('radio', { name: new RegExp(`2 — ${STATE_LABELS[2]}`) });
+    expect(radio2).not.toBeChecked();
+    fireEvent.click(radio2);
+    expect(radio2).toBeChecked();
+  });
+
+  // Uma região aria-live="polite" precisa anunciar transições relevantes —
+  // aqui, o resultado (certo/errado) de uma questão de múltipla escolha, no
+  // mesmo instante em que ele já aparece visualmente no feedback da questão.
+  it('anuncia o resultado da questão via aria-live ao responder uma múltipla escolha', () => {
+    setup();
+    fireEvent.click(screen.getByText('Tópico MC'));
+    selfReport();
+    fireEvent.click(screen.getByText('4'));
+
+    const liveRegions = Array.from(document.querySelectorAll('[aria-live="polite"]'));
+    const combined = liveRegions.map((el) => el.textContent).join(' ');
+    expect(combined).toContain('Correto!');
+  });
+
+  // prefers-reduced-motion: o Núcleo do Crivo (CrivoCore) e o campo ambiente
+  // (SubjectAtmosphere) usam useReducedMotion() internamente — precisam
+  // renderizar sem erro (caminho de frame único, sem loop de animação)
+  // assim que um tópico é escolhido.
+  describe('com prefers-reduced-motion ativo', () => {
+    const originalMatchMedia = window.matchMedia;
+
+    beforeEach(() => {
+      Object.defineProperty(window, 'matchMedia', {
+        configurable: true,
+        value: vi.fn((query: string) => ({
+          matches: true,
+          media: query,
+          onchange: null,
+          addListener: () => {},
+          removeListener: () => {},
+          addEventListener: () => {},
+          removeEventListener: () => {},
+          dispatchEvent: () => false,
+        })),
+      });
+    });
+
+    afterEach(() => {
+      Object.defineProperty(window, 'matchMedia', { configurable: true, value: originalMatchMedia });
+    });
+
+    it('renderiza o Núcleo do Crivo sem erros ao escolher um tópico', () => {
+      expect(() => {
+        setup();
+        fireEvent.click(screen.getByText('Tópico MC'));
+      }).not.toThrow();
+
+      expect(screen.getByRole('img')).toBeInTheDocument();
+    });
   });
 });
