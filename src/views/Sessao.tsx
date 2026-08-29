@@ -100,18 +100,29 @@ export default function Sessao() {
     const correct = optionId === currentActivityQuestion.correctOptionId;
     setActivitySelectedOptionId(optionId);
     setActivityResults((prev) => [...prev, { questionId: currentActivityQuestion.id, correct }]);
+    setSyncError(null);
 
-    // Mesmo par de chamadas que Questoes.tsx já faz a cada resposta: alimenta
-    // o domínio + agenda SM-2 (spacedRepetition.ts) e grava a tentativa
-    // individual — essa é a evidência REAL da Sessão, anterior ao cronômetro,
-    // não um substituto da checagem pós-cronômetro (verifyLearning, abaixo).
+    // Mesma FORMA/ORDEM de chamada que Questoes.tsx já faz a cada resposta:
+    // alimenta o domínio + agenda SM-2 (spacedRepetition.ts) e grava a
+    // tentativa individual — essa é a evidência REAL da Sessão, anterior ao
+    // cronômetro, não um substituto da checagem pós-cronômetro
+    // (verifyLearning, abaixo). Diferente de Questoes.tsx, aqui o retorno
+    // Promise<boolean> de updateMastery É checado (mesmo idioma não
+    // bloqueante que verifyLearning já usa neste arquivo): a resposta não é
+    // desfeita nem bloqueia o avanço por uma falha de sincronização, mas
+    // também não finge sucesso incondicional quando a escrita de domínio
+    // falha silenciosamente.
     updateMastery((prev) =>
       prev.map((m) =>
         m.topicId === currentActivityQuestion.topicId
           ? { ...m, ...applyReviewOutcome(m, qualityFromAnswerCorrectness(correct)) }
           : m
       )
-    );
+    ).then((saved) => {
+      if (!saved) setSyncError('Não foi possível registrar essa resposta no seu domínio. Ela pode não persistir.');
+    }).catch(() => {
+      setSyncError('Não foi possível registrar essa resposta no seu domínio. Ela pode não persistir.');
+    });
 
     if (user) {
       addUserAttempt(user.uid, {
@@ -337,6 +348,7 @@ export default function Sessao() {
                   {activityAnswered && (
                     <p className="text-sm mb-4 text-zinc-600 dark:text-zinc-400">{currentActivityQuestion.explanation}</p>
                   )}
+                  {syncError && <p className="text-sm text-rose-500 mb-4">{syncError}</p>}
                   <button
                     onClick={advanceActivity}
                     disabled={!activityAnswered}

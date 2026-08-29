@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from '@testing-library/react';
+import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { MemoryRouter } from 'react-router-dom';
 import type { DailyPlanState } from '../hooks/useDailyPlan';
@@ -197,6 +197,39 @@ describe('Sessao', () => {
     } finally {
       randomSpy.mockRestore();
     }
+  });
+
+  it('quando updateMastery falha (resolve false) na mini-atividade, mostra aviso não bloqueante sem descartar silenciosamente a resposta nem travar o avanço', async () => {
+    const practiceAction = makeAction({ id: 'functions', type: 'practice', topicId: 'math-functions', topicName: 'Funções Exponenciais' });
+    const q1 = makeQuestion({
+      id: 'q1',
+      topicId: 'math-functions',
+      prompt: 'Pergunta 1',
+      options: [{ id: 'a', text: 'Resposta certa 1' }, { id: 'b', text: 'Resposta errada 1' }],
+      correctOptionId: 'a',
+    });
+    dailyPlanHook.mockReturnValue(planWith([practiceAction]));
+    const updateMastery = vi.fn().mockResolvedValue(false);
+    masteryHook.mockReturnValue({ mastery: [], updateMastery, isPersisted: true });
+    questionsHook.mockReturnValue({ questions: [q1], syncError: null });
+
+    renderSessao();
+
+    fireEvent.click(screen.getByText('Resposta certa 1'));
+
+    // updateMastery foi chamado (a tentativa não é descartada silenciosamente
+    // antes de tentar persistir) e, como resolveu false, o aviso aparece —
+    // sem bloquear a mini-atividade.
+    expect(updateMastery).toHaveBeenCalledTimes(1);
+    await waitFor(() =>
+      expect(
+        screen.getByText('Não foi possível registrar essa resposta no seu domínio. Ela pode não persistir.')
+      ).toBeInTheDocument()
+    );
+
+    // Não bloqueante: o aluno ainda consegue concluir a mini-atividade e chegar ao cronômetro.
+    fireEvent.click(screen.getByText('Concluir mini-atividade e iniciar cronômetro'));
+    expect(screen.getByRole('button', { name: /iniciar/i })).toBeInTheDocument();
   });
 
   it('type theory: sem mini-atividade, cronômetro direto e texto honesto visível', () => {
