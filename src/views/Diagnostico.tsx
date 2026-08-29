@@ -207,6 +207,7 @@ export default function Diagnostico() {
         uncertainty: computedResult.uncertainty,
         lastReviewed: new Date().toISOString(),
         errorSignals: computedResult.errorSignals,
+        origin: 'diagnostic' as const,
       };
       return exists ? prev.map((m) => (m.topicId === selectedTopicId ? entry : m)) : [...prev, entry];
     });
