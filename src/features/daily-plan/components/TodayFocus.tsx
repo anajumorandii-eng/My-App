@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { motion, useReducedMotion } from 'motion/react';
 import { PlayCircle } from 'lucide-react';
-import { StudyAction, DisagreeReason } from '../../../types';
+import { AllocatedStudyAction, DisagreeReason } from '../../../types';
+import { formatIsoTimeInSaoPaulo } from '../../../features/availability/time';
 import { Panel } from '../../../components/ui/Panel';
 import { Button } from '../../../components/ui/Button';
 import { KineticText } from '../../../components/ui/KineticText';
@@ -16,7 +17,10 @@ import { MOTION_DURATION } from '../../../design-system/motion/tokens';
 import { usePreviousFeedback } from '../../../hooks/usePreviousFeedback';
 
 export interface TodayFocusProps {
-  action: StudyAction;
+  /** Allocated, not merely ranked: the focus card states *when* today's
+   * recommendation is scheduled, so it needs the slot the allocator placed
+   * it in, not just the priority-engine fields. */
+  action: AllocatedStudyAction;
   actionLabel: string;
   mainReason: string;
   onStart: () => void;
@@ -80,6 +84,8 @@ export function TodayFocus({ action, actionLabel, mainReason, onStart, showAdapt
             />
             <p className="text-text-secondary mt-2">
               {actionLabel} em {action.subject} · <span className="font-medium text-text-primary">{action.estimatedMinutes} min</span>
+              {' · '}
+              {formatIsoTimeInSaoPaulo(action.intervalStart)}–{formatIsoTimeInSaoPaulo(action.intervalEnd)}
             </p>
           </div>
           <CrivoCore

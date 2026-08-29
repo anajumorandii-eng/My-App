@@ -1,15 +1,25 @@
 import React from 'react';
 import { motion, useReducedMotion } from 'motion/react';
 import { PlayCircle } from 'lucide-react';
-import { StudyAction } from '../../../types';
+import { AllocatedStudyAction, StudyAction } from '../../../types';
 import { Panel } from '../../../components/ui/Panel';
 import { IconButton } from '../../../components/ui/IconButton';
 import { listItem } from '../../../design-system/motion/variants';
 import { MOTION_DURATION, MOTION_EASE, MOTION_STAGGER } from '../../../design-system/motion/tokens';
+import { formatIsoTimeInSaoPaulo } from '../../../features/availability/time';
+
+/**
+ * Rows come from two places: today's allocated plan ("Depois disso"), where
+ * every action already owns a slot on the clock, and the deferred queue
+ * ("Pode esperar"), which by definition never got one — there was no time
+ * left to place it. Widening to AllocatedStudyAction lets the scheduled slot
+ * be shown where it exists without inventing one where it doesn't.
+ */
+export type SecondaryAction = AllocatedStudyAction | StudyAction;
 
 export interface SecondaryActionListProps {
   title: string;
-  actions: StudyAction[];
+  actions: SecondaryAction[];
   actionLabels: Record<StudyAction['type'], string>;
   onStart: (topicId: string) => void;
   quiet?: boolean;
@@ -28,7 +38,11 @@ export function SecondaryActionList({ title, actions, actionLabels, onStart, qui
         {title}
       </h3>
       <div className="space-y-1.5">
-        {actions.map((action, index) => (
+        {actions.map((action, index) => {
+          const slot = 'intervalStart' in action
+            ? `${formatIsoTimeInSaoPaulo(action.intervalStart)}–${formatIsoTimeInSaoPaulo(action.intervalEnd)}`
+            : null;
+          return (
           <motion.div
             key={action.id}
             initial={reducedMotion ? false : 'hidden'}
@@ -46,6 +60,7 @@ export function SecondaryActionList({ title, actions, actionLabels, onStart, qui
                 </p>
                 <p className="text-xs text-text-muted truncate">
                   {actionLabels[action.type]} · {action.estimatedMinutes} min
+                  {slot ? ` · ${slot}` : ''}
                 </p>
               </div>
               <IconButton aria-label={`Começar ${action.topicName}`} onClick={() => onStart(action.topicId)}>
@@ -53,7 +68,8 @@ export function SecondaryActionList({ title, actions, actionLabels, onStart, qui
               </IconButton>
             </Panel>
           </motion.div>
-        ))}
+          );
+        })}
       </div>
     </section>
   );
