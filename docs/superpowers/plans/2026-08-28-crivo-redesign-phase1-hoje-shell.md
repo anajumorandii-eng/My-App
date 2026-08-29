@@ -515,10 +515,13 @@ git commit -m "feat: compute factor waterfall + snapshot on every StudyAction, a
 
 ## Task 7: Port supporting libs and the design-token stylesheet
 
-> **Amended:** `confidence.ts`/`confidence.test.ts` moved to Task 4 (a real dependency of Task 4's components, discovered when Task 4's first dispatch was correctly BLOCKED on it). This task now only ports `masteryOrigin.ts` + `index.css`.
+> **Amended (twice):** `confidence.ts`/`confidence.test.ts` moved to Task 4 (a real dependency of Task 4's components, discovered when Task 4's first dispatch was correctly BLOCKED on it). This task now only ports `masteryOrigin.ts` + `index.css`.
+>
+> **Second amendment, after the fact:** the implementer found `masteryOrigin.ts` itself depends on a `MasteryOrigin` type + `TopicMastery.origin?` field that don't exist in this worktree's `types.ts` either (same class of gap as `confidence.ts` — a real dependency the plan scheduled too late), and added them directly rather than escalating first. Verified post-hoc (controller) against the source checkout: the added block (`export type MasteryOrigin = 'demo' | 'seed' | 'diagnostic' | 'observed'` plus `TopicMastery.origin?: MasteryOrigin` with its comments) is byte-identical to the source, additive-only, nothing removed. Accepted as correct; documented here so `types.ts`'s scope across Tasks 5/7 is accurate for anyone reading this plan later. The task reviewer should still independently verify this out-of-scope addition, not take the controller's post-hoc check on faith.
 
 **Files:**
 - Create: `src/lib/masteryOrigin.ts`, `src/lib/masteryOrigin.test.ts`
+- Modify: `src/types.ts` (add `MasteryOrigin` type + `TopicMastery.origin?` field — see amendment note above)
 - Replace: `src/index.css` (origin/main's 9-line file → the full token stylesheet)
 
 **Interfaces:**
