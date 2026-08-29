@@ -95,6 +95,25 @@ export type RecommendationReason =
   | 'tempo_disponivel'
   | 'fase_revisao_intensificada';
 
+export type RecommendationFactorKind =
+  | 'learning_gap'
+  | 'review_urgency'
+  | 'recurring_errors'
+  | 'energy_adjustment'
+  | 'exam_relevance';
+
+export interface RecommendationFactor {
+  kind: RecommendationFactorKind;
+  rawValue: number;
+  contribution: number;
+}
+
+export interface RecommendationSnapshot {
+  masteryLevel: number;
+  uncertainty: number;
+  calculatedAt: string;
+}
+
 export interface StudyAction {
   id: string;
   type: 'review' | 'practice' | 'theory' | 'error_analysis';
@@ -104,6 +123,8 @@ export interface StudyAction {
   estimatedMinutes: number;
   priorityScore: number; // Assigned by Efficiency Engine
   reasons: RecommendationReason[];
+  factors: RecommendationFactor[];
+  snapshot: RecommendationSnapshot;
 }
 
 // Peso e foco de fase que a estudante atribui a uma banca já marcada como
