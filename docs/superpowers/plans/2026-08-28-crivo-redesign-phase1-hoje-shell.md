@@ -188,6 +188,8 @@ git commit -m "feat: add Crivo hooks (theme, spotlight, raf loop, adaptive ranki
 
 ## Task 4: Port the daily-plan feature components
 
+> **Amended after Task 4's first dispatch was BLOCKED:** the implementer correctly found that `DecisionExplanation.tsx`/`ConfidenceIndicator.tsx`/`MasteryMeter.tsx` import `src/lib/confidence.ts` directly, which the original plan didn't schedule until Task 7 — a real ordering defect, not a copy mistake. Ruling: pull `confidence.ts`+`confidence.test.ts` forward into this task (both are self-contained, no interaction with the `types.ts`/`efficiencyEngine.ts` merge in Tasks 5-6). Task 7 no longer ports these two files — see its amended file list.
+
 **Files:**
 - Create:
   - `src/features/daily-plan/components/TodayFocus.tsx`
@@ -198,10 +200,11 @@ git commit -m "feat: add Crivo hooks (theme, spotlight, raf loop, adaptive ranki
   - `src/features/daily-plan/components/DisagreeControl.tsx`
   - `src/features/daily-plan/components/MasteryMeter.tsx`
   - `src/features/daily-plan/components/SecondaryActionList.tsx`
+  - `src/lib/confidence.ts`, `src/lib/confidence.test.ts` (moved forward from Task 7 — see amendment note above)
 
 **Interfaces:**
-- Consumes: Task 2/3 exports, plus `StudyAction.factors`/`.snapshot` and `AllocatedStudyAction.intervalStart/intervalEnd` — **not yet available**, so this task will not compile clean until Task 6 lands. That's expected and fine — commit anyway, lint failure is tracked and resolved by Task 6.
-- Produces: `<TodayFocus action actionLabel mainReason onStart showAdaptiveUpdate previousSubject userId feedbackStatus onDisagree />`, `<SecondaryActionList title actions actionLabels onStart quiet? />`, `<DecisionExplanation mainReason factors snapshot onDisagree />`, `<MasteryMeter level uncertainty topicName />` — all consumed by Task 9 (`Dashboard.tsx` rewrite).
+- Consumes: Task 2/3 exports, plus `StudyAction.factors`/`.snapshot` and `AllocatedStudyAction.intervalStart/intervalEnd` — **not yet available**, so this task will not compile clean until Task 6 lands. That's expected and fine — commit anyway, lint failure is tracked and resolved by Task 6. This includes errors of the shape `Module '"../../../types"' has no exported member 'RecommendationFactor'` (not just `Property 'factors' does not exist...`) — same root cause (types.ts not yet updated), different TS error shape; both are expected redness, not new blockers.
+- Produces: `<TodayFocus action actionLabel mainReason onStart showAdaptiveUpdate previousSubject userId feedbackStatus onDisagree />`, `<SecondaryActionList title actions actionLabels onStart quiet? />`, `<DecisionExplanation mainReason factors snapshot onDisagree />`, `<MasteryMeter level uncertainty topicName />` — all consumed by Task 9 (`Dashboard.tsx` rewrite). `confidence.ts`'s exports consumed by these same components (whatever it exports — verify against actual usage, not guessed) and later by `Dashboard.tsx` (Task 9).
 
 - [ ] **Step 1:** Copy every file listed above.
 
@@ -217,13 +220,15 @@ for f in \
   src/features/daily-plan/components/DisagreeControl.tsx \
   src/features/daily-plan/components/MasteryMeter.tsx \
   src/features/daily-plan/components/SecondaryActionList.tsx \
+  src/lib/confidence.ts \
+  src/lib/confidence.test.ts \
 ; do
   mkdir -p "$DST/$(dirname "$f")"
   cp "$SRC/$f" "$DST/$f"
 done
 ```
 
-- [ ] **Step 2:** `npm run lint` — record the exact list of type errors (expected: `Property 'factors' does not exist on type 'StudyAction'`, `Property 'snapshot' does not exist...`, and similar). Do not fix yet.
+- [ ] **Step 2:** `npm run lint` — record the exact list of type errors (expected: `Property 'factors' does not exist on type 'StudyAction'`, `Property 'snapshot' does not exist...`, `Module has no exported member 'RecommendationFactor'/'RecommendationSnapshot'`, and similar — all tracing back to `types.ts` not yet having Task 5's additions). Do not fix yet. `confidence.test.ts` should run and pass on its own (it's self-contained, no dependency on the missing types).
 
 - [ ] **Step 3:** Commit anyway — this is a deliberately red checkpoint, resolved by Task 6.
 
@@ -500,20 +505,20 @@ git commit -m "feat: compute factor waterfall + snapshot on every StudyAction, a
 
 ## Task 7: Port supporting libs and the design-token stylesheet
 
+> **Amended:** `confidence.ts`/`confidence.test.ts` moved to Task 4 (a real dependency of Task 4's components, discovered when Task 4's first dispatch was correctly BLOCKED on it). This task now only ports `masteryOrigin.ts` + `index.css`.
+
 **Files:**
-- Create: `src/lib/confidence.ts`, `src/lib/confidence.test.ts`, `src/lib/masteryOrigin.ts`, `src/lib/masteryOrigin.test.ts`
+- Create: `src/lib/masteryOrigin.ts`, `src/lib/masteryOrigin.test.ts`
 - Replace: `src/index.css` (origin/main's 9-line file → the full token stylesheet)
 
 **Interfaces:**
-- Produces: whatever `confidence.ts`/`masteryOrigin.ts` export (used by `MasteryMeter`/`ConfidenceIndicator`, already ported in Task 4, and by `Dashboard.tsx` in Task 9 — check the old checkout's `Dashboard.tsx` for `deriveMasteryOrigin` usage as the reference).
+- Produces: whatever `masteryOrigin.ts` exports (used by `Dashboard.tsx` in Task 9 — check the old checkout's `Dashboard.tsx` for `deriveMasteryOrigin` usage as the reference).
 
-- [ ] **Step 1:** Copy the two lib files + their tests, and replace `index.css` wholesale.
+- [ ] **Step 1:** Copy the lib file + its test, and replace `index.css` wholesale.
 
 ```bash
 SRC="/c/Users/Maria Fernanda/Downloads/My-App-main (1)/My-App-main/My-App"
 DST="/c/wtmain"
-cp "$SRC/src/lib/confidence.ts" "$DST/src/lib/confidence.ts"
-cp "$SRC/src/lib/confidence.test.ts" "$DST/src/lib/confidence.test.ts"
 cp "$SRC/src/lib/masteryOrigin.ts" "$DST/src/lib/masteryOrigin.ts"
 cp "$SRC/src/lib/masteryOrigin.test.ts" "$DST/src/lib/masteryOrigin.test.ts"
 cp "$SRC/src/index.css" "$DST/src/index.css"
@@ -526,8 +531,8 @@ cp "$SRC/src/index.css" "$DST/src/index.css"
 - [ ] **Step 4:** Commit.
 
 ```bash
-git add src/lib/confidence.ts src/lib/confidence.test.ts src/lib/masteryOrigin.ts src/lib/masteryOrigin.test.ts src/index.css
-git commit -m "feat: add confidence/masteryOrigin helpers and the Crivo design-token stylesheet"
+git add src/lib/masteryOrigin.ts src/lib/masteryOrigin.test.ts src/index.css
+git commit -m "feat: add masteryOrigin helper and the Crivo design-token stylesheet"
 ```
 
 ---
