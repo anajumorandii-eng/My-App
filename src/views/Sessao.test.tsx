@@ -1,4 +1,4 @@
-import { fireEvent, render, screen, waitFor } from '@testing-library/react';
+import { act, fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { flushSync } from 'react-dom';
 import { createRoot } from 'react-dom/client';
@@ -80,11 +80,15 @@ function makeQuestion(overrides: Partial<Question>): Question {
 
 describe('Sessao', () => {
   beforeEach(() => {
+    vi.spyOn(HTMLCanvasElement.prototype, 'getContext').mockReturnValue(null);
     authHook.mockReturnValue({ user: { uid: 'student-1' } });
     getUserStudySessionsForDateMock.mockResolvedValue([]);
   });
 
   afterEach(() => {
+    vi.useRealTimers();
+    vi.unstubAllGlobals();
+    vi.restoreAllMocks();
     vi.clearAllMocks();
   });
 
@@ -392,5 +396,60 @@ describe('Sessao', () => {
     expect(screen.queryByText(/Mini-atividade antes do cronômetro/)).not.toBeInTheDocument();
     expect(await screen.findByText('Reconstrua a base sem apoio; ao final, avalie o que conseguiu.')).toBeInTheDocument();
     expect(screen.getByRole('button', { name: /iniciar/i })).toBeInTheDocument();
+  });
+
+  it('respeita redução de movimento no anel de progresso sem alterar o tempo exibido', async () => {
+    vi.stubGlobal('matchMedia', vi.fn().mockImplementation(() => ({
+      matches: true,
+      media: '(prefers-reduced-motion: reduce)',
+      onchange: null,
+      addEventListener: vi.fn(),
+      removeEventListener: vi.fn(),
+      addListener: vi.fn(),
+      removeListener: vi.fn(),
+      dispatchEvent: vi.fn(),
+    })));
+    const theoryAction = makeAction({ id: 'genetics', type: 'theory', topicId: 'bio-genetics', topicName: 'Genética Molecular', allocatedMinutes: 30 });
+    dailyPlanHook.mockReturnValue(planWith([theoryAction]));
+    masteryHook.mockReturnValue({ mastery: [], updateMastery: vi.fn().mockResolvedValue(true), isPersisted: true });
+    questionsHook.mockReturnValue({ questions: [], syncError: null });
+
+    vi.resetModules();
+    const motionDom = await import('motion-dom');
+    motionDom.hasReducedMotionListener.current = false;
+    motionDom.prefersReducedMotion.current = null;
+    const { default: ReducedMotionSessao } = await import('./Sessao');
+    const { container } = render(
+      <MemoryRouter>
+        <ReducedMotionSessao />
+      </MemoryRouter>
+    );
+
+    expect((await screen.findAllByText('30:00')).length).toBeGreaterThan(0);
+    const progressRing = container.querySelector('circle[stroke-linecap="round"]');
+    expect(progressRing).toBeInTheDocument();
+    expect(progressRing).not.toHaveClass('transition-all');
+  });
+
+  it('anuncia o tempo do cronômetro ao cruzar um minuto e ao concluir', async () => {
+    const theoryAction = makeAction({ id: 'genetics', type: 'theory', topicId: 'bio-genetics', topicName: 'Genética Molecular', allocatedMinutes: 2 });
+    dailyPlanHook.mockReturnValue(planWith([theoryAction]));
+    masteryHook.mockReturnValue({ mastery: [], updateMastery: vi.fn().mockResolvedValue(true), isPersisted: true });
+    questionsHook.mockReturnValue({ questions: [], syncError: null });
+
+    const { container } = renderSessao();
+    expect((await screen.findAllByText('02:00')).length).toBeGreaterThan(0);
+    vi.useFakeTimers();
+
+    const liveTimer = container.querySelector('[aria-live="polite"]');
+    expect(liveTimer).toHaveTextContent('02:00');
+
+    fireEvent.click(screen.getByRole('button', { name: 'Iniciar' }));
+    act(() => vi.advanceTimersByTime(60_000));
+    expect(liveTimer).toHaveTextContent('01:00');
+
+    act(() => vi.advanceTimersByTime(60_000));
+    expect(liveTimer).toHaveTextContent('00:00');
+    expect(screen.getByText('Tempo de estudo registrado')).toBeInTheDocument();
   });
 });
