@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, Outlet, useLocation, useNavigate } from 'react-router-dom';
+import { motion, useReducedMotion } from 'motion/react';
 import {
   Calendar,
   Map,
@@ -16,7 +17,6 @@ import {
   Link as LinkIcon,
   Sun,
   Moon,
-  GraduationCap,
   UserCircle,
   PenLine,
   ClipboardEdit,
@@ -24,26 +24,120 @@ import {
   Stethoscope,
   Flag,
   X,
-  ArrowRight,
   Menu,
   Layers,
   BookOpen,
-  Library
+  Library,
+  PanelLeftClose,
+  PanelLeftOpen,
+  type LucideIcon,
 } from 'lucide-react';
+import { CrivoMark } from './CrivoMark';
+import { OnboardingModal } from './OnboardingModal';
+import { BottomNav } from './BottomNav';
+import { IconButton } from './ui/IconButton';
+import { useTheme } from '../hooks/useTheme';
+import { useSpotlight } from '../hooks/useSpotlight';
+import { MOTION_DURATION, MOTION_EASE } from '../design-system/motion/tokens';
+import { cn } from '../lib/cn';
+
+interface NavItem {
+  name: string;
+  path: string;
+  icon: LucideIcon;
+}
+
+interface NavGroup {
+  label: string;
+  items: NavItem[];
+}
+
+const NAV_GROUPS: NavGroup[] = [
+  {
+    label: 'Diagnóstico & Plano',
+    items: [
+      { name: 'Hoje', path: '/', icon: Calendar },
+      { name: 'Diagnóstico', path: '/diagnostico', icon: Stethoscope },
+      { name: 'Plano', path: '/plano', icon: Map },
+      { name: 'Reta Final', path: '/reta-final', icon: Flag },
+      { name: 'Recuperação de Atrasos', path: '/recuperacao', icon: ListTodo },
+    ],
+  },
+  {
+    label: 'Prática',
+    items: [
+      { name: 'Sessão de Estudo', path: '/sessao', icon: PlayCircle },
+      { name: 'Questões & Tentativas', path: '/questoes', icon: HelpCircle },
+      { name: 'Revisões Adaptativas', path: '/revisoes', icon: Repeat },
+      { name: 'Flashcards', path: '/flashcards', icon: Layers },
+      { name: 'Flashcards de Obras', path: '/obras-obrigatorias', icon: BookOpen },
+      { name: 'Dossiês de Obras', path: '/obras', icon: Library },
+      { name: 'Caderno de Erros', path: '/erros', icon: BookX },
+    ],
+  },
+  {
+    label: 'Aprofundamento',
+    items: [
+      { name: 'Podcast Crivo', path: '/podcast', icon: Headphones },
+      { name: 'Tutor Socrático', path: '/tutor', icon: Brain },
+      { name: 'Laboratório & Métodos', path: '/laboratorio', icon: FlaskConical },
+      { name: 'Treino de 2ª Fase', path: '/treino-2a-fase', icon: ClipboardEdit },
+      { name: 'Módulo de Redação', path: '/redacao', icon: PenLine },
+      { name: 'Estratégias de Resolução', path: '/estrategias', icon: Compass },
+    ],
+  },
+  {
+    label: 'Acompanhamento',
+    items: [
+      { name: 'Evolução & Domínio', path: '/evolucao', icon: TrendingUp },
+      { name: 'Prioridades por Vestibular', path: '/prioridades', icon: Target },
+    ],
+  },
+  {
+    label: 'Conta',
+    items: [
+      { name: 'Conexões Google', path: '/conexoes', icon: LinkIcon },
+      { name: 'Perfil', path: '/perfil', icon: UserCircle },
+    ],
+  },
+];
+
+const RAIL_STORAGE_KEY = 'crivo_rail_expanded';
+
+function getStoredRailExpanded(): boolean {
+  try {
+    const stored = localStorage.getItem(RAIL_STORAGE_KEY);
+    return stored === null ? true : stored === 'true';
+  } catch {
+    return true;
+  }
+}
+
+const NAV_ITEM_CLASS = (isActive: boolean, compact: boolean) =>
+  cn(
+    'spotlight relative flex items-center gap-3 px-3 py-2.5 min-h-11 rounded-control text-sm transition-colors',
+    'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus-ring',
+    compact && 'justify-center px-0',
+    isActive ? 'bg-navigation-selected text-warm-50 font-semibold' : 'text-warm-100/70 hover:bg-forest-800/60 hover:text-warm-50 font-medium'
+  );
 
 export default function Layout() {
-  const [darkMode, setDarkMode] = useState(false);
+  const { isDark, toggleTheme } = useTheme();
   const [showOnboarding, setShowOnboarding] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [railExpanded, setRailExpanded] = useState(getStoredRailExpanded);
   const location = useLocation();
   const navigate = useNavigate();
+  const reducedMotion = useReducedMotion();
+  const { onPointerMove } = useSpotlight();
 
   useEffect(() => {
     setMobileMenuOpen(false);
   }, [location.pathname]);
 
   useEffect(() => {
-    // Show onboarding only once
+    // Internal storage key, not a visible brand string — left as `juju_` on
+    // purpose (see the rebrand's out-of-scope note on internal identifiers).
     const hasSeenOnboarding = localStorage.getItem('juju_onboarding');
     if (!hasSeenOnboarding) {
       setShowOnboarding(true);
@@ -60,184 +154,149 @@ export default function Layout() {
     navigate('/diagnostico');
   };
 
-  const toggleTheme = () => {
-    const next = !darkMode;
-    setDarkMode(next);
-    document.documentElement.classList.toggle('dark', next);
-    document.getElementById('theme-color-meta')?.setAttribute('content', next ? '#09090b' : '#fafafa');
+  const toggleRail = () => {
+    setRailExpanded((prev) => {
+      const next = !prev;
+      try {
+        localStorage.setItem(RAIL_STORAGE_KEY, String(next));
+      } catch {
+        // best-effort persistence only
+      }
+      return next;
+    });
   };
 
-  const navItems = [
-    { name: 'Hoje', path: '/', icon: Calendar },
-    { name: 'Diagnóstico', path: '/diagnostico', icon: Stethoscope },
-    { name: 'Plano', path: '/plano', icon: Map },
-    { name: 'Reta Final', path: '/reta-final', icon: Flag },
-    { name: 'Recuperação de Atrasos', path: '/recuperacao', icon: ListTodo },
-    { name: 'Sessão de Estudo', path: '/sessao', icon: PlayCircle },
-    { name: 'Questões & Tentativas', path: '/questoes', icon: HelpCircle },
-    { name: 'Revisões Adaptativas', path: '/revisoes', icon: Repeat },
-    { name: 'Flashcards', path: '/flashcards', icon: Layers },
-    { name: 'Flashcards de Obras', path: '/obras-obrigatorias', icon: BookOpen },
-    { name: 'Dossiês de Obras', path: '/obras', icon: Library },
-    { name: 'Caderno de Erros', path: '/erros', icon: BookX },
-    { name: 'Podcast JUJU', path: '/podcast', icon: Headphones },
-    { name: 'Tutor Socrático', path: '/tutor', icon: Brain },
-    { name: 'Laboratório & Métodos', path: '/laboratorio', icon: FlaskConical },
-    { name: 'Evolução & Domínio', path: '/evolucao', icon: TrendingUp },
-    { name: 'Prioridades por Vestibular', path: '/prioridades', icon: Target },
-    { name: 'Estratégias de Resolução', path: '/estrategias', icon: Compass },
-    { name: 'Treino de 2ª Fase', path: '/treino-2a-fase', icon: ClipboardEdit },
-    { name: 'Módulo de Redação', path: '/redacao', icon: PenLine },
-    { name: 'Conexões Google', path: '/conexoes', icon: LinkIcon },
-    { name: 'Perfil', path: '/perfil', icon: UserCircle },
-  ];
+  const railTransitionClass = reducedMotion ? '' : 'transition-[width] duration-[280ms] ease-[cubic-bezier(0.4,0,0.2,1)]';
 
   return (
-    <div className={`min-h-screen flex ${darkMode ? 'dark' : ''} bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 transition-colors duration-200`}>
-
+    <div className="min-h-screen flex bg-background-base text-text-primary transition-colors duration-200">
       {/* Mobile top bar */}
-      <div className="lg:hidden fixed top-0 inset-x-0 z-30 h-14 flex items-center px-4 border-b border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900">
-        <button
-          onClick={() => setMobileMenuOpen(true)}
-          aria-label="Abrir menu"
-          className="p-2 -ml-2 mr-2 rounded-lg text-zinc-600 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800"
-        >
-          <Menu className="w-5 h-5" />
-        </button>
-        <GraduationCap className="w-5 h-5 mr-2 text-indigo-600 dark:text-indigo-400" />
-        <h1 className="font-bold text-lg tracking-tight">JUJU</h1>
+      <div className="lg:hidden fixed top-0 inset-x-0 z-30 h-14 flex items-center px-3 border-b border-border-subtle bg-surface-elevated">
+        <IconButton aria-label="Abrir menu" onClick={() => setMobileMenuOpen(true)}>
+          <Menu className="w-5 h-5" aria-hidden="true" />
+        </IconButton>
+        <CrivoMark className="w-5 h-5 mx-2 text-action-primary" />
+        <h1 className="font-display text-lg font-semibold tracking-tight">Crivo</h1>
       </div>
 
       {/* Mobile backdrop */}
       {mobileMenuOpen && (
-        <div
-          className="lg:hidden fixed inset-0 z-40 bg-black/50"
-          onClick={() => setMobileMenuOpen(false)}
-        />
+        <div className="lg:hidden fixed inset-0 z-40 bg-ink-950/50" onClick={() => setMobileMenuOpen(false)} />
       )}
 
-      {/* Sidebar */}
+      {/* Sidebar rail — Forest-toned in both themes; it's structure, not
+          content. Compactable on desktop (icon-only, labels via title/
+          sr-only) but always fully expanded on the mobile drawer, where it's
+          a temporary overlay and legibility matters more than reclaiming
+          width. */}
       <aside
-        className={`w-64 border-r border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 flex flex-col shrink-0 fixed inset-y-0 left-0 z-50 transform transition-transform duration-200 lg:static lg:translate-x-0 lg:z-auto ${
-          mobileMenuOpen ? 'translate-x-0' : '-translate-x-full'
-        }`}
+        className={cn(
+          'bg-navigation-background flex flex-col shrink-0 fixed inset-y-0 left-0 z-50 transform lg:static lg:translate-x-0 lg:z-auto',
+          mobileMenuOpen ? 'translate-x-0' : '-translate-x-full',
+          'w-64',
+          railExpanded ? 'lg:w-64' : 'lg:w-[76px]',
+          railTransitionClass
+        )}
       >
-        <div className="h-16 flex items-center justify-between px-6 border-b border-zinc-200 dark:border-zinc-800">
-          <div className="flex items-center">
-            <GraduationCap className="w-6 h-6 mr-2 text-indigo-600 dark:text-indigo-400" />
-            <h1 className="font-bold text-xl tracking-tight">JUJU</h1>
+        <div className={cn('h-16 flex items-center border-b border-warm-50/10', railExpanded ? 'justify-between px-5' : 'lg:justify-center px-5 lg:px-0')}>
+          <div className={cn('flex items-center gap-2', !railExpanded && 'lg:gap-0')}>
+            <CrivoMark className="w-6 h-6 text-ember-500 shrink-0" />
+            <h1 className={cn('font-display text-xl font-semibold tracking-tight text-warm-50 whitespace-nowrap', !railExpanded && 'lg:hidden')}>
+              Crivo
+            </h1>
           </div>
           <button
             onClick={() => setMobileMenuOpen(false)}
             aria-label="Fechar menu"
-            className="lg:hidden p-1 rounded-lg text-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-800"
+            className="lg:hidden p-2 -mr-2 min-w-11 min-h-11 flex items-center justify-center rounded-control text-warm-100/70 hover:bg-forest-800/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus-ring"
           >
-            <X className="w-5 h-5" />
+            <X className="w-5 h-5" aria-hidden="true" />
           </button>
         </div>
 
-        <nav className="flex-1 overflow-y-auto py-4 px-3 space-y-1">
-          {navItems.map((item) => {
-            const Icon = item.icon;
-            return (
-              <NavLink
-                key={item.path}
-                to={item.path}
-                end={item.path === '/'}
-                onClick={() => setMobileMenuOpen(false)}
-                className={({ isActive }) =>
-                  `flex items-center px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
-                    isActive
-                      ? 'bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300'
-                      : 'text-zinc-600 dark:text-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-800 hover:text-zinc-900 dark:hover:text-zinc-100'
-                  }`
-                }
-              >
-                <Icon className="w-4 h-4 mr-3 shrink-0" />
-                {item.name}
-              </NavLink>
-            );
-          })}
+        <nav className="flex-1 overflow-y-auto overflow-x-hidden py-4 px-3 space-y-5">
+          {NAV_GROUPS.map((group) => (
+            <div key={group.label}>
+              <p className={cn('px-3 mb-1.5 text-[10px] font-semibold uppercase tracking-widest text-warm-100/40 whitespace-nowrap', !railExpanded && 'lg:hidden')}>
+                {group.label}
+              </p>
+              <div className="space-y-0.5">
+                {group.items.map((item) => {
+                  const Icon = item.icon;
+                  const isActive = item.path === '/' ? location.pathname === '/' : location.pathname.startsWith(item.path);
+                  return (
+                    <NavLink
+                      key={item.path}
+                      to={item.path}
+                      end={item.path === '/'}
+                      onClick={() => setMobileMenuOpen(false)}
+                      onPointerMove={onPointerMove}
+                      title={!railExpanded ? item.name : undefined}
+                      className={({ isActive: active }) => NAV_ITEM_CLASS(active, !railExpanded)}
+                    >
+                      {isActive && (
+                        <motion.span
+                          layoutId="nav-active-glow"
+                          className="absolute left-0 inset-y-1.5 w-0.5 rounded-full bg-ember-500"
+                          transition={reducedMotion ? { duration: 0 } : { duration: MOTION_DURATION.panel, ease: MOTION_EASE }}
+                        />
+                      )}
+                      <Icon className="w-4 h-4 shrink-0" aria-hidden="true" />
+                      <span className={cn('whitespace-nowrap', !railExpanded && 'lg:sr-only')}>{item.name}</span>
+                    </NavLink>
+                  );
+                })}
+              </div>
+            </div>
+          ))}
         </nav>
 
-        <div className="p-4 border-t border-zinc-200 dark:border-zinc-800 space-y-3">
+        <div className={cn('p-4 border-t border-warm-50/10 space-y-3', !railExpanded && 'lg:px-2')}>
           {/* Só existe alguma coisa pra ver aqui se a conta logada estiver em
               ADMIN_EMAILS no servidor — pra quem não é admin, essas rotas já
               mostram "Entre na conta administrativa" em vez de quebrar (ver
               Admin.tsx, AdminObras.tsx, AdminConteudo.tsx). Deixado discreto
               (texto pequeno, sem ícone grande) pra não competir com o menu
               de estudo, que é o que a maioria de quem usa o app vai usar. */}
-          <div className="flex items-center justify-center gap-3 text-xs text-zinc-400 dark:text-zinc-500">
-            <NavLink to="/admin" className="hover:text-zinc-600 dark:hover:text-zinc-300 hover:underline">Admin</NavLink>
+          <div className={cn('flex items-center justify-center gap-3 text-xs text-warm-100/40', !railExpanded && 'lg:hidden')}>
+            <NavLink to="/admin" className="hover:text-warm-100/70 hover:underline">Admin</NavLink>
             <span aria-hidden="true">·</span>
-            <NavLink to="/admin/obras" className="hover:text-zinc-600 dark:hover:text-zinc-300 hover:underline">Obras</NavLink>
+            <NavLink to="/admin/obras" className="hover:text-warm-100/70 hover:underline">Obras</NavLink>
             <span aria-hidden="true">·</span>
-            <NavLink to="/admin/conteudo" className="hover:text-zinc-600 dark:hover:text-zinc-300 hover:underline">Conteúdo</NavLink>
+            <NavLink to="/admin/conteudo" className="hover:text-warm-100/70 hover:underline">Conteúdo</NavLink>
           </div>
           <button
             onClick={toggleTheme}
-            className="flex items-center justify-center w-full px-4 py-2 text-sm font-medium rounded-lg text-zinc-600 dark:text-zinc-400 bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors"
+            title={!railExpanded ? `Modo ${isDark ? 'Claro' : 'Escuro'}` : undefined}
+            className={cn(
+              'spotlight flex items-center justify-center w-full min-h-11 px-4 py-2 text-sm font-medium rounded-control text-warm-100/80 bg-forest-800/60 hover:bg-forest-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus-ring',
+              !railExpanded && 'lg:px-0'
+            )}
+            onPointerMove={onPointerMove}
           >
-            {darkMode ? <Sun className="w-4 h-4 mr-2" /> : <Moon className="w-4 h-4 mr-2" />}
-            Modo {darkMode ? 'Claro' : 'Escuro'}
+            {isDark ? <Sun className="w-4 h-4 shrink-0" aria-hidden="true" /> : <Moon className="w-4 h-4 shrink-0" aria-hidden="true" />}
+            <span className={cn('ml-2', !railExpanded && 'lg:sr-only')}>Modo {isDark ? 'Claro' : 'Escuro'}</span>
+          </button>
+          <button
+            onClick={toggleRail}
+            aria-label={railExpanded ? 'Recolher menu' : 'Expandir menu'}
+            className="hidden lg:flex items-center justify-center w-full min-h-9 rounded-control text-warm-100/50 hover:bg-forest-800/60 hover:text-warm-100/80 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus-ring"
+          >
+            {railExpanded ? <PanelLeftClose className="w-4 h-4" aria-hidden="true" /> : <PanelLeftOpen className="w-4 h-4" aria-hidden="true" />}
           </button>
         </div>
       </aside>
 
       {/* Main Content */}
-      <main className="flex-1 overflow-y-auto pt-14 lg:pt-0">
+      <main className="flex-1 overflow-y-auto pt-14 lg:pt-0 pb-16 lg:pb-0">
         <div className="p-4 sm:p-8 max-w-6xl mx-auto">
           <Outlet />
         </div>
       </main>
 
-      {/* Onboarding Modal */}
-      {showOnboarding && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-in fade-in duration-300">
-          <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-3xl shadow-xl max-w-xl w-full overflow-hidden animate-in zoom-in-95 duration-300">
-            <div className="p-8">
-              <div className="flex justify-between items-start mb-6">
-                <div className="w-12 h-12 rounded-xl bg-indigo-100 text-indigo-600 dark:bg-indigo-900/30 dark:text-indigo-400 flex items-center justify-center">
-                  <GraduationCap className="w-6 h-6" />
-                </div>
-                <button onClick={closeOnboarding} className="text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-300">
-                  <X className="w-5 h-5" />
-                </button>
-              </div>
-              
-              <h2 className="text-2xl font-bold mb-3">Bem-vindo à JUJU</h2>
-              <p className="text-zinc-600 dark:text-zinc-400 mb-8 leading-relaxed">
-                Nós não somos um jogo. Não temos streaks ou pontos. Nosso único objetivo é construir a sua <strong>autonomia</strong> e o seu <strong>domínio real</strong> sobre o conteúdo até o dia da prova.
-              </p>
-              
-              <div className="space-y-4 mb-8">
-                <div className="flex items-start">
-                  <div className="w-8 h-8 rounded-full bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center mr-4 shrink-0 font-semibold text-zinc-500">1</div>
-                  <div>
-                    <h4 className="font-semibold">Diagnóstico Inicial</h4>
-                    <p className="text-sm text-zinc-500 mt-1">Precisamos saber de onde você está partindo para gerar o seu plano ideal.</p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <div className="w-8 h-8 rounded-full bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center mr-4 shrink-0 font-semibold text-zinc-500">2</div>
-                  <div>
-                    <h4 className="font-semibold">Conecte sua Agenda</h4>
-                    <p className="text-sm text-zinc-500 mt-1">Otimizaremos sua carga horária dinamicamente com base nas suas obrigações diárias.</p>
-                  </div>
-                </div>
-              </div>
+      <BottomNav />
 
-              <button
-                onClick={startOnboardingDiagnostic}
-                className="w-full flex items-center justify-center py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-medium transition-colors"
-              >
-                Iniciar Diagnóstico Adaptativo
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
+      <OnboardingModal open={showOnboarding} onClose={closeOnboarding} onStartDiagnostic={startOnboardingDiagnostic} />
     </div>
   );
 }

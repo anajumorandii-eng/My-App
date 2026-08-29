@@ -1,9 +1,256 @@
 @import "tailwindcss";
 
-html, body {
-  background-color: theme('colors.zinc.50');
-}
-html.dark, html.dark body {
-  background-color: theme('colors.zinc.950');
+/* Tailwind v4 defaults `dark:` to `prefers-color-scheme`. The app toggles a
+   `.dark` class on <html> (see src/design-system/theme.ts), so the variant
+   has to be re-pointed at that class instead — without this line every
+   `dark:` utility in the codebase is inert. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ---------------------------------------------------------------------
+ * Crivo design tokens
+ *
+ * Primitives (Warm/Forest/Burgundy/Ember/Ink) are the only five families in
+ * play — semantic tokens below are just named slots pointing at them, so a
+ * future palette pass only ever edits this block. Distribution across a
+ * screen should land roughly 65-75% Warm, 15-20% Forest, 5-10% Burgundy,
+ * 2-5% Ember: Forest structures navigation, Burgundy is reserved for
+ * priority/decisive actions (stays rare — it is not a general-purpose
+ * accent), Ember marks small indicators, Warm is the field the content
+ * sits on, Ink is text.
+ * ------------------------------------------------------------------- */
+:root {
+  /* Warm */
+  --warm-25: #FEFCF7;
+  --warm-50: #FBF8F2;
+  --warm-100: #F5EFE5;
+  --warm-200: #EDE3D5;
+  --warm-300: #DED0BC;
+
+  /* Forest */
+  --forest-950: #10251F;
+  --forest-900: #17312A;
+  --forest-800: #24443A;
+  --forest-700: #34594D;
+
+  /* Burgundy */
+  --burgundy-900: #54151D;
+  --burgundy-800: #6C1C27;
+  --burgundy-700: #852636;
+  --burgundy-600: #A1394A;
+
+  /* Ember */
+  --ember-600: #B77A3E;
+  --ember-500: #C89458;
+  --ember-400: #D9B583;
+
+  /* Ink */
+  --ink-950: #171A18;
+  --ink-800: #303532;
+  --ink-600: #5A625D;
+  --ink-400: #818983;
+
+  /* Semantic tokens — light theme. Surfaces are warm-tinted near-white
+     (--warm-25), never pure #FFFFFF — an editorial, "printed on ivory stock"
+     read rather than a screen-default white, per the light theme being a
+     deliberate design and not an inverted dark mode. */
+  --background-base: var(--warm-50);
+  --background-subtle: var(--warm-100);
+  --surface-default: var(--warm-25);
+  --surface-secondary: var(--warm-100);
+  --surface-elevated: var(--warm-25);
+  --surface-strong: var(--warm-200);
+
+  --text-primary: var(--ink-950);
+  --text-secondary: var(--ink-600);
+  --text-muted: var(--ink-400);
+  --text-inverse: var(--warm-50);
+
+  --navigation-background: var(--forest-950);
+  --navigation-selected: var(--forest-800);
+
+  --action-primary: var(--burgundy-700);
+  --action-primary-hover: var(--burgundy-800);
+  --action-primary-pressed: var(--burgundy-900);
+
+  --priority-critical: var(--burgundy-900);
+  --priority-high: var(--burgundy-600);
+
+  --border-subtle: var(--warm-300);
+  --focus-ring: var(--ember-600);
+
+  --status-success: #15803D;
+  --status-warning: #B45309;
+  --status-error: #B91C1C;
+
+  /* Shadows — atmospheric, never a hard black drop shadow. Named with a
+     -value suffix so the @theme block below can point --shadow-soft-* at
+     these without colliding with its own (identically-prefixed) output. */
+  --shadow-soft-sm-value: 0 1px 2px rgba(20, 25, 22, 0.04);
+  --shadow-soft-md-value: 0 6px 18px rgba(20, 25, 22, 0.05);
+  --shadow-soft-lg-value: 0 18px 48px rgba(20, 25, 22, 0.06);
 }
 
+:root.dark {
+  --background-base: var(--ink-950);
+  --background-subtle: var(--ink-800);
+  /* Ink (warm-neutral) carries the *default* card fill so dark mode doesn't
+     read as one monochrome green wash — Forest is saved for the elevated
+     hero card and for surfaces that should visually recede (secondary),
+     the same "spend the boldness in one place" idea as Burgundy below. */
+  --surface-default: var(--ink-800);
+  --surface-secondary: var(--forest-900);
+  --surface-elevated: var(--forest-700);
+  --surface-strong: var(--ink-600);
+
+  --text-primary: var(--warm-50);
+  --text-secondary: var(--warm-300);
+  --text-muted: var(--ink-400);
+  --text-inverse: var(--ink-950);
+
+  --navigation-background: var(--forest-950);
+  --navigation-selected: var(--forest-700);
+
+  /* Dark surfaces recede, so priority/action colors move to the lighter
+     end of the Burgundy scale here to keep the same emphasis order —
+     critical stays the most saturated/visible step, high the dimmer one. */
+  --action-primary: var(--burgundy-600);
+  --action-primary-hover: var(--burgundy-700);
+  --action-primary-pressed: var(--burgundy-800);
+
+  --priority-critical: var(--burgundy-600);
+  --priority-high: var(--burgundy-700);
+
+  --border-subtle: var(--forest-700);
+  --focus-ring: var(--ember-400);
+
+  --status-success: #22C55E;
+  --status-warning: #F59E0B;
+  --status-error: #EF4444;
+
+  --shadow-soft-sm-value: 0 1px 2px rgba(0, 0, 0, 0.20);
+  --shadow-soft-md-value: 0 6px 18px rgba(0, 0, 0, 0.28);
+  --shadow-soft-lg-value: 0 18px 48px rgba(0, 0, 0, 0.36);
+}
+
+@theme {
+  --font-display: "Newsreader", ui-serif, Georgia, serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  /* Primitives, exposed directly too (bg-warm-50, text-ink-950, ...) for the
+     rare spot that wants a specific step of a family regardless of theme —
+     everything else should reach for the semantic tokens below instead. */
+  --color-warm-25: var(--warm-25);
+  --color-warm-50: var(--warm-50);
+  --color-warm-100: var(--warm-100);
+  --color-warm-200: var(--warm-200);
+  --color-warm-300: var(--warm-300);
+  --color-forest-950: var(--forest-950);
+  --color-forest-900: var(--forest-900);
+  --color-forest-800: var(--forest-800);
+  --color-forest-700: var(--forest-700);
+  --color-burgundy-900: var(--burgundy-900);
+  --color-burgundy-800: var(--burgundy-800);
+  --color-burgundy-700: var(--burgundy-700);
+  --color-burgundy-600: var(--burgundy-600);
+  --color-ember-600: var(--ember-600);
+  --color-ember-500: var(--ember-500);
+  --color-ember-400: var(--ember-400);
+  --color-ink-950: var(--ink-950);
+  --color-ink-800: var(--ink-800);
+  --color-ink-600: var(--ink-600);
+  --color-ink-400: var(--ink-400);
+
+  --color-background-base: var(--background-base);
+  --color-background-subtle: var(--background-subtle);
+  --color-surface-default: var(--surface-default);
+  --color-surface-secondary: var(--surface-secondary);
+  --color-surface-elevated: var(--surface-elevated);
+  --color-surface-strong: var(--surface-strong);
+
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-text-inverse: var(--text-inverse);
+
+  --color-navigation-background: var(--navigation-background);
+  --color-navigation-selected: var(--navigation-selected);
+
+  --color-action-primary: var(--action-primary);
+  --color-action-primary-hover: var(--action-primary-hover);
+  --color-action-primary-pressed: var(--action-primary-pressed);
+
+  --color-priority-critical: var(--priority-critical);
+  --color-priority-high: var(--priority-high);
+
+  --color-border-subtle: var(--border-subtle);
+  --color-focus-ring: var(--focus-ring);
+
+  --color-status-success: var(--status-success);
+  --color-status-warning: var(--status-warning);
+  --color-status-error: var(--status-error);
+
+  /* Radius — named distinctly from Tailwind's built-in scale so this
+     doesn't silently reflow every existing rounded-sm/lg/xl usage. */
+  --radius-small: 6px;
+  --radius-control: 8px;
+  --radius-button: 10px;
+  --radius-card: 12px;
+  --radius-panel: 16px;
+
+  --shadow-soft-sm: var(--shadow-soft-sm-value);
+  --shadow-soft-md: var(--shadow-soft-md-value);
+  --shadow-soft-lg: var(--shadow-soft-lg-value);
+}
+
+html, body {
+  background-color: var(--background-base);
+}
+
+/* ---------------------------------------------------------------------
+ * Spotlight — a small, local glow that follows the pointer inside one
+ * element (nav items, the primary button, interactive cards). Pairs with
+ * `useSpotlight()`. Deliberately never global: no page-wide cursor tracker.
+ * Disabled outright for touch (no hover to mark) and reduced motion.
+ * ------------------------------------------------------------------- */
+.spotlight {
+  position: relative;
+  isolation: isolate;
+}
+.spotlight::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 160ms ease;
+  background: radial-gradient(
+    140px circle at var(--spotlight-x, 50%) var(--spotlight-y, 50%),
+    color-mix(in oklab, var(--ember-500) 16%, transparent),
+    transparent 70%
+  );
+}
+@media (hover: hover) and (pointer: fine) {
+  .spotlight:hover::after {
+    opacity: 1;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .spotlight::after {
+    display: none;
+  }
+}
+
+/* Global safety net: every animated interaction that goes through
+ * motion/react is already gated per-component via useReducedMotion(), but
+ * plain CSS transitions (the nav rail's width toggle, hover color changes)
+ * aren't — this collapses those to effectively-instant instead of leaving a
+ * second, ungated motion system for reduced-motion users to run into. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
