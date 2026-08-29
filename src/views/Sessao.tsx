@@ -64,6 +64,7 @@ export default function Sessao() {
   const sessionReconciliationLoading = reconciledUid !== activeUid;
 
   useEffect(() => {
+    setIsRunning(false);
     completedIdsRef.current = [];
     setCompletedIds([]);
     setVerifiedIds([]);

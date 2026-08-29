@@ -205,6 +205,30 @@ describe('Sessao', () => {
     expect(screen.getByRole('button', { name: 'Concluir' })).toBeEnabled();
   });
 
+  it('pausa o cronômetro ao trocar de conta antes de selecionar o bloco da nova conta', async () => {
+    const theoryAction = makeAction({
+      id: 'genetics',
+      type: 'theory',
+      topicId: 'bio-genetics',
+      topicName: 'Genética Molecular',
+      allocatedMinutes: 1,
+    });
+    dailyPlanHook.mockReturnValue(planWith([theoryAction]));
+    masteryHook.mockReturnValue({ mastery: [], updateMastery: vi.fn().mockResolvedValue(true), isPersisted: true });
+    questionsHook.mockReturnValue({ questions: [], syncError: null });
+    getUserStudySessionsForDateMock.mockResolvedValue([]);
+
+    const rendered = renderSessao();
+    fireEvent.click(await screen.findByRole('button', { name: 'Iniciar' }));
+    expect(screen.getByRole('button', { name: 'Pausar' })).toBeInTheDocument();
+
+    authHook.mockReturnValue({ user: { uid: 'student-2' } });
+    rendered.rerender(<MemoryRouter><Sessao /></MemoryRouter>);
+
+    expect(await screen.findByRole('button', { name: 'Iniciar' })).toBeInTheDocument();
+    expect(screen.queryByText('Tempo de estudo registrado')).not.toBeInTheDocument();
+  });
+
   it('continua renderizando a sessão e mostra um aviso quando a reconciliação falha', async () => {
     const theoryAction = makeAction({ id: 'genetics', type: 'theory', topicId: 'bio-genetics', topicName: 'Genética Molecular' });
     dailyPlanHook.mockReturnValue(planWith([theoryAction]));
