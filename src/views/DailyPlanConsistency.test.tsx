@@ -48,14 +48,20 @@ const allocatedActions: AllocatedStudyAction[] = [
   {
     id: 'genetics',
     type: 'theory',
-    topicId: 'bio-genetics',
+    topicId: 'bio_genetica',
     topicName: FIRST_TOPIC,
     subject: 'Biologia',
     estimatedMinutes: 45,
     priorityScore: 100,
-    reasons: [],
-    factors: [],
-    snapshot: { masteryLevel: 0, uncertainty: 0, calculatedAt: new Date().toISOString() },
+    reasons: ['dominio_insuficiente', 'revisao_urgente', 'proximidade_prova', 'tempo_disponivel'],
+    factors: [
+      { kind: 'learning_gap', rawValue: 65, contribution: 26 },
+      { kind: 'review_urgency', rawValue: 73, contribution: 21.9 },
+      { kind: 'recurring_errors', rawValue: 2, contribution: 12 },
+      { kind: 'energy_adjustment', rawValue: 1, contribution: 0 },
+      { kind: 'exam_relevance', rawValue: 1.08225, contribution: 4.93 },
+    ],
+    snapshot: { masteryLevel: 35, uncertainty: 0.3, calculatedAt: '2026-08-24T12:00:00.000Z' },
     intervalStart: '2026-08-24T14:40:00-03:00',
     intervalEnd: '2026-08-24T15:00:00-03:00',
     allocatedMinutes: 20,
@@ -188,7 +194,11 @@ describe('daily plan consistency across views', () => {
       isPersisted: true,
     });
     goalsHook.mockReturnValue({
-      goals: { primaryGoal: 'Medicina', secondaryGoals: [], boardWeights: [] },
+      goals: {
+        primaryGoal: 'Medicina',
+        secondaryGoals: [],
+        boardWeights: [{ board: 'FUVEST', weight: 1, phaseFocus: 'ambas' }],
+      },
     });
   });
 
@@ -239,8 +249,41 @@ describe('daily plan consistency across views', () => {
     for (const label of ['Domínio', 'Confiança', 'Urgência', 'Tempo']) {
       expect(within(signals).getByText(label)).toBeInTheDocument();
     }
+    for (const value of ['35%', '70%', '73%', '20 min']) {
+      expect(within(signals).getByText(value)).toBeInTheDocument();
+    }
     expect(screen.queryByText('Prioridade Máxima')).not.toBeInTheDocument();
     expect(screen.queryByText('Prioridade Fuvest')).not.toBeInTheDocument();
+  });
+
+  it('Dashboard discloses only context causally supported by the current action', () => {
+    renderView(<Dashboard />);
+
+    const context = screen.getByText('Contexto que entrou na decisão').closest('details');
+    expect(context).not.toBeNull();
+    expect(within(context!).getByText('250 min')).toBeInTheDocument();
+    expect(within(context!).getByText('73% de urgência neste tópico')).toBeInTheDocument();
+    expect(within(context!).getByText('FUVEST — 1ª fase')).toBeInTheDocument();
+    expect(within(context!).queryByText(/Santa Casa/)).not.toBeInTheDocument();
+  });
+
+  it('Dashboard omits decision context when no current-action signal contributed', () => {
+    currentPlan = {
+      ...sharedPlan,
+      allocatedActions: [{
+        ...allocatedActions[0],
+        reasons: ['dominio_insuficiente'],
+        factors: allocatedActions[0].factors.map((factor) => ({
+          ...factor,
+          rawValue: factor.kind === 'exam_relevance' ? 1 : factor.rawValue,
+          contribution: 0,
+        })),
+      }],
+    };
+
+    renderView(<Dashboard />);
+
+    expect(screen.queryByText('Contexto que entrou na decisão')).not.toBeInTheDocument();
   });
 
   it('Plano removes manual and Calendar-primary controls while retaining warnings and unallocated priorities', () => {

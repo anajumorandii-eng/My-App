@@ -3,14 +3,16 @@ import { useNavigate } from 'react-router-dom';
 import { CalendarClock, CheckCircle2, CloudOff, History, Stethoscope, WifiOff } from 'lucide-react';
 import { useDailyPlan } from '../hooks/useDailyPlan';
 import { useUserMastery } from '../hooks/useUserMastery';
+import { useStudentGoals } from '../hooks/useStudentGoals';
 import { useAuth } from '../context/AuthContext';
 import { useAdaptiveRankingChange } from '../hooks/useAdaptiveRankingChange';
 import { todayInSaoPaulo } from '../features/availability/time';
-import { pendingReviewCount } from '../lib/reviewUrgency';
-import { nextExams, daysUntil } from '../data/examCalendar';
+import { computeBoardSignals, examFocusFor } from '../lib/efficiencyEngine';
+import { examsForBoard, daysUntil, sameBoard, VestibularExam } from '../data/examCalendar';
+import { mockTopics } from '../data/mockData';
 import { addPlanFeedback } from '../lib/userData';
 import { deriveMasteryOrigin } from '../lib/masteryOrigin';
-import { StudyAction, RecommendationReason, DisagreeReason, PlanFeedback } from '../types';
+import { StudyAction, RecommendationReason, DisagreeReason, PlanFeedback, RecommendationFactorKind, StudentGoals } from '../types';
 import { CrivoCore } from '../components/CrivoCore';
 import { TodayFocus } from '../features/daily-plan/components/TodayFocus';
 import { SubjectAtmosphere } from '../features/daily-plan/components/SubjectAtmosphere';
@@ -48,6 +50,45 @@ function mainReasonFor(action: StudyAction): string {
   return primary ? REASON_LABELS[primary] : 'Prioridade calculada a partir do seu histórico de estudo.';
 }
 
+const CONTRIBUTION_EPSILON = 0.01;
+const EXAM_MULTIPLIER_EPSILON = 0.001;
+
+function contributingFactor(action: StudyAction, kind: RecommendationFactorKind) {
+  const factor = action.factors.find((candidate) => candidate.kind === kind);
+  return factor && factor.contribution > CONTRIBUTION_EPSILON ? factor : undefined;
+}
+
+// RecommendationFactor intentionally stores the aggregate exam multiplier,
+// not a board id. Rebuild that aggregate at the snapshot instant and only
+// name a board when removing its signal actually lowers the action's score.
+// This keeps the disclosure conservative: ties with no uniquely influential
+// board produce no exam claim instead of inventing causality.
+function causalExamsFor(action: StudyAction, goals: StudentGoals): VestibularExam[] {
+  const hasExamReason = action.reasons.some((reason) =>
+    reason === 'proximidade_prova' || reason === 'incidencia_banca_prioritaria',
+  );
+  const factor = contributingFactor(action, 'exam_relevance');
+  const topic = mockTopics.find((candidate) => candidate.id === action.topicId);
+  const calculatedAt = new Date(action.snapshot.calculatedAt);
+
+  if (!hasExamReason || !factor || !topic || Number.isNaN(calculatedAt.getTime())) return [];
+
+  const signals = computeBoardSignals(goals, calculatedAt);
+  const aggregate = examFocusFor(topic, signals).multiplier;
+  if (Math.abs(aggregate - factor.rawValue) > EXAM_MULTIPLIER_EPSILON) return [];
+
+  return signals
+    .filter((_, signalIndex) => {
+      const withoutSignal = signals.filter((__, candidateIndex) => candidateIndex !== signalIndex);
+      return aggregate - examFocusFor(topic, withoutSignal).multiplier > CONTRIBUTION_EPSILON;
+    })
+    .flatMap((signal) => {
+      const preference = goals.boardWeights.find((candidate) => sameBoard(candidate.board, signal.board));
+      return examsForBoard(signal.board, preference?.phaseFocus ?? 'ambas', calculatedAt).slice(0, 1);
+    })
+    .sort((a, b) => a.date.localeCompare(b.date));
+}
+
 export default function Dashboard() {
   const navigate = useNavigate();
   const { user } = useAuth();
@@ -56,6 +97,7 @@ export default function Dashboard() {
   // effective minutes, the first action, or its scheduled slot.
   const { availability, prioritizedActions, allocatedActions: dailyPlan, loading, warnings, isPersisted } = useDailyPlan(todayInSaoPaulo());
   const { mastery } = useUserMastery();
+  const { goals } = useStudentGoals();
 
   const availableMinutes = availability?.totalMinutes ?? 0;
   const masteryOrigin = deriveMasteryOrigin(mastery, isPersisted);
@@ -75,8 +117,13 @@ export default function Dashboard() {
     return prioritizedActions.filter((action) => !planned.has(action.id));
   }, [prioritizedActions, dailyPlan]);
 
-  const overdueReviews = pendingReviewCount(mastery);
-  const upcomingExams = useMemo(() => nextExams(new Date(), 3), []);
+  const actionExams = useMemo(() => primary ? causalExamsFor(primary, goals) : [], [goals, primary]);
+  const reviewFactor = primary?.reasons.includes('revisao_urgente')
+    ? contributingFactor(primary, 'review_urgency')
+    : undefined;
+  const reviewUrgency = reviewFactor ? Math.round(Math.max(0, Math.min(100, reviewFactor.rawValue))) : undefined;
+  const usedAvailability = primary?.reasons.includes('tempo_disponivel') ?? false;
+  const hasDecisionContext = usedAvailability || reviewUrgency !== undefined || actionExams.length > 0;
   // 'calendar-disconnected' is a normal state (and already covered by the
   // demo-mode notice), not something that went wrong — only real failures
   // are surfaced as a warning line.
@@ -148,30 +195,37 @@ export default function Dashboard() {
               onDisagree={handleDisagree}
             />
 
-            <details className="crivo-day-context">
-              <summary>Contexto que entrou na decisão</summary>
-              <div className="crivo-day-context-grid">
-                <div>
-                  <CalendarClock aria-hidden="true" />
-                  <p><strong>{availableMinutes} min</strong><span>disponíveis hoje</span></p>
+            {hasDecisionContext && (
+              <details className="crivo-day-context">
+                <summary>Contexto que entrou na decisão</summary>
+                <div className="crivo-day-context-grid">
+                  {usedAvailability && (
+                    <div>
+                      <CalendarClock aria-hidden="true" />
+                      <p><strong>{availableMinutes} min</strong><span>disponíveis hoje</span></p>
+                    </div>
+                  )}
+                  {actionExams.map((exam) => {
+                    const remainingDays = daysUntil(exam.date, new Date(primary.snapshot.calculatedAt));
+                    return (
+                      <div key={exam.id}>
+                        <CalendarClock aria-hidden="true" />
+                        <p><strong>{exam.label}</strong><span>{remainingDays === 0 ? 'É hoje' : `Faltam ${remainingDays} dias`}</span></p>
+                      </div>
+                    );
+                  })}
+                  {reviewUrgency !== undefined && (
+                    <div>
+                      <History aria-hidden="true" />
+                      <p>
+                        <strong>Urgência de revisão</strong>
+                        <span>{reviewUrgency}% de urgência neste tópico</span>
+                      </p>
+                    </div>
+                  )}
                 </div>
-                {upcomingExams.map((exam) => (
-                  <div key={exam.id}>
-                    <CalendarClock aria-hidden="true" />
-                    <p><strong>{exam.label}</strong><span>{daysUntil(exam.date) === 0 ? 'É hoje' : `Faltam ${daysUntil(exam.date)} dias`}</span></p>
-                  </div>
-                ))}
-                {overdueReviews > 0 && (
-                  <div>
-                    <History aria-hidden="true" />
-                    <p>
-                      <strong>{overdueReviews} {overdueReviews === 1 ? 'revisão atrasada' : 'revisões atrasadas'}</strong>
-                      <span>Já pesam na ordem de hoje</span>
-                    </p>
-                  </div>
-                )}
-              </div>
-            </details>
+              </details>
+            )}
 
             {(!isPersisted || failureWarnings.length > 0) && (
               <aside className="crivo-today-notices" aria-label="Estado dos dados do plano">

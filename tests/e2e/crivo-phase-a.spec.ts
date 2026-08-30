@@ -21,6 +21,28 @@ test('Hoje is an immersive decision stage, not a metrics dashboard', async ({ pa
   });
 });
 
+test('Hoje keeps its CTA entirely inside the 390x844 first fold above bottom navigation', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  const stage = page.getByTestId('today-decision-stage');
+  await expect(stage).toHaveAttribute('data-phase', 'ready');
+
+  // Longest current production topic: exercises the real upper bound without
+  // introducing a domain fixture or hiding any part of the decision copy.
+  await stage.getByRole('heading', { level: 1 }).evaluate((heading) => {
+    heading.textContent = 'Nietzsche, Existencialismo e Filosofia Contemporânea';
+  });
+
+  const cta = stage.getByRole('button', { name: 'Começar' });
+  const bottomNav = page.getByRole('navigation', { name: 'Navegação principal' });
+  const [ctaBox, navBox] = await Promise.all([cta.boundingBox(), bottomNav.boundingBox()]);
+
+  expect(ctaBox).not.toBeNull();
+  expect(navBox).not.toBeNull();
+  expect(ctaBox!.y).toBeGreaterThanOrEqual(0);
+  expect(ctaBox!.y + ctaBox!.height).toBeLessThanOrEqual(844);
+  expect(ctaBox!.y + ctaBox!.height).toBeLessThanOrEqual(navBox!.y);
+});
+
 test('every production route remains reachable', async ({ page }) => {
   const links = await page.getByRole('link').evaluateAll((nodes) =>
     [...new Set(nodes.map((node) => (node as HTMLAnchorElement).getAttribute('href')).filter(Boolean))],

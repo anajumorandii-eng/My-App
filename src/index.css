@@ -560,6 +560,27 @@ html, body {
   }
 }
 
+/* Keep the complete decision — including its CTA — inside a compact phone's
+   usable first fold without removing any of the evidence hierarchy. */
+@media (max-width: 767px) and (max-height: 900px) {
+  .crivo-decision-hero {
+    gap: 0.25rem;
+    padding-top: 0.5rem;
+  }
+
+  .crivo-core-stage {
+    width: min(56vw, 13rem);
+  }
+
+  .crivo-decision-title {
+    font-size: clamp(2.25rem, 10.5vw, 3rem);
+  }
+
+  .crivo-decision-cta {
+    margin-top: 0.75rem;
+  }
+}
+
 /* ---------------------------------------------------------------------
  * Spotlight — a small, local glow that follows the pointer inside one
  * element (nav items, the primary button, interactive cards). Pairs with
