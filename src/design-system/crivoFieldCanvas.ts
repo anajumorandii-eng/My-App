@@ -191,7 +191,66 @@ const drawPaired: FieldDrawFn = ({ ctx, width: fw, height: fh, time: t, palette,
   invoke(ctx, 'stroke');
 };
 
-/** Inglês/Filosofia/Sociologia — no approved field, just a faint static vignette. */
+/** Inglês — fragments of surrounding context drift into readable semantic lines. */
+const drawSemantic: FieldDrawFn = ({ ctx, width: fw, height: fh, time: t, palette, focus }) => {
+  const rows = 7, fragments = 8;
+  for (let row = 0; row < rows; row++) {
+    const y = ((row + 0.5) / rows) * fh;
+    const centerGap = fw * (0.05 + focus * 0.035);
+    for (let index = 0; index < fragments; index++) {
+      const side = index < fragments / 2 ? -1 : 1;
+      const slot = index < fragments / 2 ? index : fragments - index - 1;
+      const baseX = fw * 0.5 + side * (centerGap + slot * fw * 0.075);
+      const drift = (1 - focus) * Math.sin(t * 0.45 + row * 1.7 + index) * fw * 0.035;
+      const length = fw * (0.018 + ((row + index) % 3) * 0.009);
+      set(ctx, 'strokeStyle', alpha(index % 3 === 0 ? palette.secondary : palette.primary, 0.045 + focus * 0.045));
+      set(ctx, 'lineWidth', 1 + (row % 2) * 0.35);
+      invoke(ctx, 'beginPath'); invoke(ctx, 'moveTo', baseX + drift - length, y); invoke(ctx, 'lineTo', baseX + drift + length, y); invoke(ctx, 'stroke');
+    }
+  }
+};
+
+/** Filosofia — opposed arc fields are held together by a mutable synthesis axis. */
+const drawDialectic: FieldDrawFn = ({ ctx, width: fw, height: fh, time: t, palette, focus }) => {
+  const offset = fw * (0.18 + (1 - focus) * 0.05);
+  for (let ring = 0; ring < 5; ring++) {
+    const radiusX = fw * (0.12 + ring * 0.035);
+    const radiusY = fh * (0.16 + ring * 0.045);
+    set(ctx, 'strokeStyle', alpha(ring % 2 === 0 ? palette.primary : palette.secondary, 0.035 + focus * 0.018));
+    set(ctx, 'lineWidth', 1);
+    invoke(ctx, 'beginPath'); invoke(ctx, 'ellipse', fw * 0.5 - offset, fh * 0.5, radiusX, radiusY, 0, -Math.PI / 2, Math.PI / 2); invoke(ctx, 'stroke');
+    invoke(ctx, 'beginPath'); invoke(ctx, 'ellipse', fw * 0.5 + offset, fh * 0.5, radiusX, radiusY, 0, Math.PI / 2, Math.PI * 1.5); invoke(ctx, 'stroke');
+  }
+  const lean = Math.sin(t * 0.35) * fw * 0.04 * (1 - focus);
+  set(ctx, 'strokeStyle', alpha(palette.emissive, 0.06 + focus * 0.05)); set(ctx, 'lineWidth', 1.4);
+  invoke(ctx, 'beginPath'); invoke(ctx, 'moveTo', fw * 0.5 + lean, fh * 0.08); invoke(ctx, 'lineTo', fw * 0.5 - lean * 0.4, fh * 0.92); invoke(ctx, 'stroke');
+};
+
+/** Sociologia — several social clusters gain local and cross-level density with focus. */
+const drawSocial: FieldDrawFn = ({ ctx, width: fw, height: fh, time: t, palette, focus }) => {
+  const centers: Array<[number, number]> = [[fw * 0.2, fh * 0.3], [fw * 0.52, fh * 0.66], [fw * 0.8, fh * 0.26], [fw * 0.84, fh * 0.76]];
+  centers.forEach(([cx, cy], cluster) => {
+    const count = 4 + (cluster % 2) * 2;
+    for (let index = 0; index < count; index++) {
+      const angle = (index / count) * Math.PI * 2 + cluster * 0.7;
+      const distance = (24 + cluster * 7) * (1.25 - focus * 0.35);
+      const x = cx + Math.cos(angle) * distance + Math.sin(t * 0.25 + index) * (1 - focus) * 6;
+      const y = cy + Math.sin(angle) * distance * 0.72;
+      if (index < 2 || focus > 0.35) {
+        set(ctx, 'strokeStyle', alpha(palette.primary, 0.035 + focus * 0.055)); set(ctx, 'lineWidth', 1);
+        invoke(ctx, 'beginPath'); invoke(ctx, 'moveTo', cx, cy); invoke(ctx, 'lineTo', x, y); invoke(ctx, 'stroke');
+      }
+      set(ctx, 'fillStyle', alpha(index % 3 === 0 ? palette.secondary : palette.primary, 0.07 + focus * 0.05));
+      invoke(ctx, 'beginPath'); invoke(ctx, 'arc', x, y, 2 + (index % 2), 0, 7); invoke(ctx, 'fill');
+    }
+  });
+  set(ctx, 'strokeStyle', alpha(palette.secondary, 0.025 + focus * 0.07)); set(ctx, 'lineWidth', 1.2);
+  for (let index = 0; index < centers.length - 1; index++) {
+    invoke(ctx, 'beginPath'); invoke(ctx, 'moveTo', centers[index][0], centers[index][1]); invoke(ctx, 'lineTo', centers[index + 1][0], centers[index + 1][1]); invoke(ctx, 'stroke');
+  }
+};
+
+/** Unknown-subject fallback: a faint static vignette. */
 const drawNeutralField: FieldDrawFn = ({ ctx, width: fw, height: fh, palette }) => {
   const vignette = call<GradientLike>(ctx, 'createRadialGradient', fw * 0.5, fh * 0.5, 0, fw * 0.5, fh * 0.5, Math.max(fw, fh) * 0.7);
   withStops(vignette, [[0, alpha(palette.primary, 0.03)], [1, 'rgba(0,0,0,0)']]);
@@ -206,5 +265,8 @@ export const FIELD_CANVAS_REGISTRY: Record<FieldType, FieldDrawFn> = {
   syntax: drawSyntax,
   topography: drawTopography,
   paired: drawPaired,
+  semantic: drawSemantic,
+  dialectic: drawDialectic,
+  social: drawSocial,
   neutral: drawNeutralField,
 };

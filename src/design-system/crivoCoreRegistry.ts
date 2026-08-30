@@ -357,7 +357,102 @@ const drawHistory: CoreDrawFn = (input) => withFrame(input, (r, focus) => {
   invoke(ctx, 'setLineDash', []);
 });
 
-// --- Neutro: rede genérica de fallback (Inglês/Filosofia/Sociologia, sem identidade própria ainda) ---
+// --- Inglês: fragmentos semânticos convergem ao redor de uma expressão contextual ---
+const drawEnglish: CoreDrawFn = (input) => withFrame(input, (r, focus) => {
+  const { ctx, palette, time, variantSeed } = input;
+  const targets = [-0.78, -0.49, -0.27, 0.28, 0.51, 0.76];
+  const fragments: Array<[number, number]> = [];
+
+  targets.forEach((target, index) => {
+    const spread = 1 - focus;
+    const x = target * r + Math.sin(index * 2.7 + variantSeed) * r * 0.42 * spread;
+    const y = Math.cos(index * 1.9 + time * 0.7 + variantSeed) * r * 0.52 * spread;
+    const width = r * (0.13 + (index % 3) * 0.025);
+    const height = r * 0.1;
+    fragments.push([x, y]);
+    invoke(ctx, 'beginPath');
+    roundedRect(ctx, x - width / 2, y - height / 2, width, height, height * 0.35);
+    fill(ctx, alpha(index % 2 === 0 ? palette.primary : palette.secondary, 0.2 + focus * 0.32));
+  });
+
+  const phraseW = r * (0.42 + focus * 0.12), phraseH = r * 0.2;
+  const phraseGradient = linearGradient(ctx, -phraseW / 2, 0, phraseW / 2, 0, [
+    [0, alpha(palette.primary, 0.3)], [0.5, alpha(palette.emissive, 0.2 + focus * 0.22)], [1, alpha(palette.secondary, 0.3)],
+  ]);
+  invoke(ctx, 'beginPath'); roundedRect(ctx, -phraseW / 2, -phraseH / 2, phraseW, phraseH, phraseH * 0.42);
+  set(ctx, 'fillStyle', phraseGradient); invoke(ctx, 'fill');
+  stroke(ctx, alpha(palette.emissive, 0.45 + focus * 0.4), 1.2);
+
+  set(ctx, 'strokeStyle', alpha(palette.primary, 0.12 + focus * 0.3)); set(ctx, 'lineWidth', 1);
+  fragments.forEach(([x, y]) => {
+    invoke(ctx, 'beginPath'); invoke(ctx, 'moveTo', x, y);
+    invoke(ctx, 'quadraticCurveTo', x * 0.45, y * 0.35, Math.sign(x) * phraseW * 0.44, 0);
+    invoke(ctx, 'stroke');
+  });
+});
+
+// --- Filosofia: tese e antítese formam arcos opostos ligados por um eixo de síntese ---
+const drawPhilosophy: CoreDrawFn = (input) => withFrame(input, (r, focus) => {
+  const { ctx, palette, time, variantSeed } = input;
+  const tension = (1 - focus) * (0.18 + 0.08 * Math.sin(time * 0.6 + variantSeed));
+  const arcHeight = r * (0.7 - tension);
+
+  ([[-1, palette.primary], [1, palette.secondary]] as const).forEach(([side, color]) => {
+    invoke(ctx, 'beginPath');
+    invoke(ctx, 'moveTo', side * r * 0.78, r * 0.42);
+    invoke(ctx, 'quadraticCurveTo', side * r * (0.88 + tension), -arcHeight, side * r * 0.08, -r * 0.22);
+    stroke(ctx, alpha(color, 0.48 + focus * 0.38), 1.5 + focus * 0.7);
+    invoke(ctx, 'beginPath'); invoke(ctx, 'arc', side * r * 0.78, r * 0.42, r * 0.055, 0, 7);
+    fill(ctx, alpha(color, 0.78));
+  });
+
+  const synthesisLean = Math.sin(time * 0.5 + variantSeed) * (1 - focus) * r * 0.28;
+  const axisTop: [number, number] = [synthesisLean, -r * 0.58];
+  const axisBottom: [number, number] = [-synthesisLean * 0.35, r * 0.58];
+  path(ctx, [axisTop, axisBottom]);
+  stroke(ctx, alpha(palette.emissive, 0.35 + focus * 0.5), 1.2 + focus);
+  invoke(ctx, 'beginPath'); invoke(ctx, 'arc', 0, -r * 0.22, r * (0.045 + focus * 0.025), 0, 7);
+  fill(ctx, alpha(palette.emissive, 0.72 + focus * 0.2));
+});
+
+// --- Sociologia: rede multinível reorganiza clusters e adensa relações com o foco ---
+const drawSociology: CoreDrawFn = (input) => withFrame(input, (r, focus) => {
+  const { ctx, palette, time, variantSeed } = input;
+  const centers: Array<[number, number]> = [[-r * 0.48, -r * 0.24], [r * 0.48, -r * 0.18], [0, r * 0.4]];
+  const clusters: Array<Array<[number, number]>> = [];
+
+  centers.forEach(([cx, cy], clusterIndex) => {
+    const nodes: Array<[number, number]> = [[cx, cy]];
+    for (let level = 0; level < 2; level++) {
+      const count = 3 + level;
+      const distance = r * (0.16 + level * 0.11) * (1.28 - focus * 0.36);
+      for (let index = 0; index < count; index++) {
+        const angle = (index / count) * Math.PI * 2 + clusterIndex * 0.85 + level * 0.38;
+        const drift = (1 - focus) * r * 0.05 * Math.sin(time * 0.8 + index + variantSeed);
+        nodes.push([cx + Math.cos(angle) * (distance + drift), cy + Math.sin(angle) * (distance + drift) * 0.72]);
+      }
+    }
+    clusters.push(nodes);
+    nodes.slice(1).forEach(([x, y], index) => {
+      if (index < 3 || focus > 0.38) {
+        path(ctx, [[cx, cy], [x, y]]);
+        stroke(ctx, alpha(palette.primary, 0.16 + focus * 0.3), 1);
+      }
+    });
+  });
+
+  for (let index = 0; index < centers.length; index++) {
+    const next = centers[(index + 1) % centers.length];
+    path(ctx, [centers[index], next]);
+    stroke(ctx, alpha(palette.secondary, 0.12 + focus * 0.42), 1.2);
+  }
+  clusters.flat().forEach(([x, y], index) => {
+    invoke(ctx, 'beginPath'); invoke(ctx, 'arc', x, y, r * (index % 8 === 0 ? 0.055 : 0.032), 0, 7);
+    fill(ctx, alpha(index % 3 === 0 ? palette.secondary : palette.primary, 0.58 + focus * 0.28));
+  });
+});
+
+// --- Neutro: rede genérica reservada apenas ao fallback desconhecido ---
 const drawNeutral: CoreDrawFn = (input) => withFrame(input, (r, focus) => {
   const { ctx, palette, time, variantSeed } = input;
   const n = 5;
@@ -383,5 +478,8 @@ export const CORE_REGISTRY: Record<CoreType, CoreDrawFn> = {
   portugues_sintaxe: drawPortuguese,
   geografia_fluxos: drawGeography,
   historia_campos: drawHistory,
+  ingles_contexto: drawEnglish,
+  filosofia_dialetica: drawPhilosophy,
+  sociologia_rede: drawSociology,
   default_neutro: drawNeutral,
 };
