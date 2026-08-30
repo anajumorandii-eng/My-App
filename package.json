@@ -13,7 +13,9 @@
     "lint": "node --max-old-space-size=4096 node_modules/typescript/bin/tsc --noEmit",
     "test": "npm run test:node && npm run test:vitest",
     "test:node": "tsx --test server/ai/*.test.ts server/auth/*.test.ts server/podcast/*.test.ts server/literary/*.test.ts src/lib/*.test.ts src/design-system/*.test.ts",
-    "test:vitest": "vitest run serverCalendar.test.ts src/features/availability src/hooks/useDailyPlan.test.tsx src/components src/views"
+    "test:vitest": "vitest run serverCalendar.test.ts src/features/availability src/features/daily-plan src/hooks/useDailyPlan.test.tsx src/components src/views",
+    "test:e2e:crivo": "playwright test tests/e2e/crivo-phase-a.spec.ts",
+    "test:e2e:crivo:update": "playwright test tests/e2e/crivo-phase-a.spec.ts --update-snapshots"
   },
   "dependencies": {
     "@date-fns/tz": "^1.5.0",
@@ -45,6 +47,7 @@
     "web-push": "^3.6.7"
   },
   "devDependencies": {
+    "@playwright/test": "^1.62.1",
     "@testing-library/jest-dom": "^7.0.1",
     "@testing-library/react": "^16.3.2",
     "@testing-library/user-event": "^14.6.6",
