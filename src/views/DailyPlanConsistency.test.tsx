@@ -228,6 +228,21 @@ describe('daily plan consistency across views', () => {
     expect(waitingActions.getAllByText(waitingAction.topicName)).toHaveLength(1);
   });
 
+  it('Dashboard renders one immersive decision and removes generic dashboard blocks', () => {
+    renderView(<Dashboard />);
+    const stage = screen.getByTestId('today-decision-stage');
+    expect(within(stage).getByRole('heading', { name: FIRST_TOPIC })).toBeInTheDocument();
+    expect(within(stage).getByRole('button', { name: 'Começar' })).toBeInTheDocument();
+    expect(within(stage).getByTestId('crivo-core')).toHaveAttribute('data-scale', 'hero');
+    const signals = within(stage).getByLabelText('Sinais usados na decisão');
+    expect(signals.tagName).toBe('DL');
+    for (const label of ['Domínio', 'Confiança', 'Urgência', 'Tempo']) {
+      expect(within(signals).getByText(label)).toBeInTheDocument();
+    }
+    expect(screen.queryByText('Prioridade Máxima')).not.toBeInTheDocument();
+    expect(screen.queryByText('Prioridade Fuvest')).not.toBeInTheDocument();
+  });
+
   it('Plano removes manual and Calendar-primary controls while retaining warnings and unallocated priorities', () => {
     renderView(<Plano />);
 
