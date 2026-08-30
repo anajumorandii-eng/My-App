@@ -232,6 +232,7 @@ export function CrivoCore({
       {...(!decorative && { role: 'img', 'aria-label': ariaLabel })}
       data-testid="crivo-core"
       data-scale={scale}
+      data-motion-active={!reducedMotion && !canvasFailed && canvasReady && canvasSize > 0 && state !== 'ready' ? 'true' : undefined}
       className={cn('relative shrink-0', className)}
       style={size === 'fill'
         ? { width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }

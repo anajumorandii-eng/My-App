@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion, useReducedMotion } from 'motion/react';
 import { PlayCircle, ChevronDown } from 'lucide-react';
 import type { AllocatedStudyAction, StudyAction } from '../../../types';
 import { Panel } from '../../../components/ui/Panel';
 import { IconButton } from '../../../components/ui/IconButton';
 import { listItem, rankedSequence } from '../../../design-system/motion/variants';
-import { MOTION_DURATION, MOTION_EASE } from '../../../design-system/motion/tokens';
+import { MOTION_DURATION, MOTION_EASE, MOTION_STAGGER } from '../../../design-system/motion/tokens';
 import { formatIsoTimeInSaoPaulo } from '../../../features/availability/time';
 
 export interface DecisionSequenceProps {
@@ -50,6 +50,26 @@ function ActionRow({
 export function DecisionSequence({ next, waiting, actionLabels, onStart }: DecisionSequenceProps) {
   const reducedMotion = useReducedMotion();
   const [waitingOpen, setWaitingOpen] = useState(false);
+  const [motionActive, setMotionActive] = useState(!reducedMotion);
+  const sequenceKey = `${next.map((action) => action.id).join(',')}|${waiting.map((action) => action.id).join(',')}`;
+
+  useEffect(() => {
+    if (reducedMotion) {
+      setMotionActive(false);
+      return;
+    }
+
+    setMotionActive(true);
+    const animatedItems = next.length + (waiting.length > 0 ? 1 : 0);
+    const totalDurationMs = (
+      0.04
+      + MOTION_DURATION.micro
+      + Math.max(0, animatedItems - 1) * MOTION_STAGGER.list
+    ) * 1000;
+    const completionTimer = window.setTimeout(() => setMotionActive(false), totalDurationMs);
+    return () => window.clearTimeout(completionTimer);
+  }, [next.length, reducedMotion, sequenceKey, waiting.length]);
+
   if (next.length === 0 && waiting.length === 0) return null;
 
   return (
@@ -60,6 +80,7 @@ export function DecisionSequence({ next, waiting, actionLabels, onStart }: Decis
         initial={reducedMotion ? false : 'hidden'}
         animate="visible"
         variants={rankedSequence}
+        data-motion-active={motionActive && !reducedMotion ? 'true' : undefined}
       >
         {next.length > 0 && (
           <li className="decision-sequence-region">

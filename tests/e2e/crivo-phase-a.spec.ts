@@ -13,6 +13,7 @@ test('Hoje is an immersive decision stage, not a metrics dashboard', async ({ pa
   await expect(stage.getByRole('button', { name: 'Começar' })).toBeVisible();
   await expect(stage.getByTestId('crivo-core')).toHaveAttribute('data-scale', 'hero');
   await expect(stage).toHaveAttribute('data-phase', 'ready');
+  await expect(page.locator('[data-motion-active="true"]')).toHaveCount(0);
   await expect(page.getByText('Prioridade Fuvest')).toHaveCount(0);
   await expect(page.getByText('Prioridade Máxima')).toHaveCount(0);
   await page.screenshot({
@@ -41,6 +42,16 @@ test('Hoje keeps its CTA entirely inside the 390x844 first fold above bottom nav
   expect(ctaBox!.y).toBeGreaterThanOrEqual(0);
   expect(ctaBox!.y + ctaBox!.height).toBeLessThanOrEqual(844);
   expect(ctaBox!.y + ctaBox!.height).toBeLessThanOrEqual(navBox!.y);
+});
+
+test('reduced motion exposes the final decision without animated transforms', async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await page.reload();
+  const stage = page.getByTestId('today-decision-stage');
+  await expect(stage).toBeVisible();
+  await expect(stage.getByRole('button', { name: 'Começar' })).toBeVisible();
+  const animated = await page.locator('[data-motion-active="true"]').count();
+  expect(animated).toBe(0);
 });
 
 test('every production route remains reachable', async ({ page }) => {

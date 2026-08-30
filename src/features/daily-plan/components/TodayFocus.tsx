@@ -51,6 +51,7 @@ export function TodayFocus({ action, actionLabel, mainReason, onStart, showAdapt
       data-testid="today-decision-stage"
       data-phase={phase}
       data-confirmation-key={confirmationKey}
+      data-motion-active={!reducedMotion && (phase === 'forming' || phase === 'recomposing') ? 'true' : undefined}
       aria-labelledby={`decision-${action.id}`}
       className="crivo-decision-hero"
       layout={!reducedMotion}
@@ -114,7 +115,7 @@ export function TodayFocus({ action, actionLabel, mainReason, onStart, showAdapt
             status={feedbackStatus}
             previous={previous}
             onSelect={onDisagree}
-            className="crivo-disagree-control"
+            className="crivo-disagree-control rounded-control focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background-base"
           />
         )}
       </div>

@@ -111,7 +111,10 @@ describe('SubjectAtmosphere', () => {
     useReducedMotionMock.mockReturnValue(false);
   });
 
-  afterEach(() => document.documentElement.classList.remove('dark'));
+  afterEach(() => {
+    document.documentElement.classList.remove('dark');
+    vi.mocked(HTMLCanvasElement.prototype.getContext).mockReturnValue(canvasContext);
+  });
 
   it('keeps the field inside an isolated visible layer', () => {
     render(<SubjectAtmosphere subject="Física"><p>Decisão</p></SubjectAtmosphere>);
@@ -214,6 +217,79 @@ describe('SubjectAtmosphere', () => {
     requestAnimationFrameSpy.mockRestore();
     vi.unstubAllGlobals();
   });
+
+  it('keeps its CSS fallback and decision controls when Canvas 2D is unavailable', async () => {
+    useReducedMotionMock.mockReturnValue(true);
+    vi.mocked(HTMLCanvasElement.prototype.getContext).mockReturnValue(null);
+
+    render(
+      <SubjectAtmosphere subject="Biologia">
+        <TodayFocus
+          action={decisionAction}
+          actionLabel="Estudar teoria"
+          mainReason="A lacuna de domínio tornou este tópico prioritário."
+          onStart={vi.fn()}
+          showAdaptiveUpdate={false}
+          userId={undefined}
+          feedbackStatus="idle"
+          onDisagree={vi.fn()}
+        />
+      </SubjectAtmosphere>,
+    );
+
+    const atmosphere = screen.getByTestId('subject-atmosphere');
+    await waitFor(() => expect(atmosphere).toHaveAttribute('data-canvas-fallback', 'true'));
+    expect(atmosphere.querySelector('canvas')).not.toBeInTheDocument();
+    expect(within(atmosphere).getByTestId('subject-atmosphere-fallback')).toHaveStyle({
+      background: 'var(--subject-field-css)',
+    });
+    expect(screen.getByRole('heading', { name: 'Genética Molecular' })).toBeVisible();
+    expect(screen.getByRole('button', { name: 'Começar' })).toBeVisible();
+
+    vi.mocked(HTMLCanvasElement.prototype.getContext).mockReturnValue(canvasContext);
+  });
+
+  it('cancels queued visual frames when Hoje unmounts', () => {
+    const queuedFrames = new Map<number, FrameRequestCallback>();
+    let nextFrame = 1;
+    const requestAnimationFrameSpy = vi.spyOn(window, 'requestAnimationFrame').mockImplementation((callback) => {
+      const frame = nextFrame++;
+      queuedFrames.set(frame, callback);
+      return frame;
+    });
+    const cancelAnimationFrameSpy = vi.spyOn(window, 'cancelAnimationFrame').mockImplementation((frame) => {
+      queuedFrames.delete(frame);
+    });
+    const boundsSpy = vi.spyOn(HTMLElement.prototype, 'getBoundingClientRect')
+      .mockReturnValue(rectangularBounds(320, 240));
+    const { unmount } = render(
+      <SubjectAtmosphere subject="Biologia">
+        <TodayFocus
+          action={decisionAction}
+          actionLabel="Estudar teoria"
+          mainReason="A lacuna de domínio tornou este tópico prioritário."
+          onStart={vi.fn()}
+          showAdaptiveUpdate={false}
+          userId={undefined}
+          feedbackStatus="idle"
+          onDisagree={vi.fn()}
+        />
+      </SubjectAtmosphere>,
+    );
+
+    expect(queuedFrames.size).toBeGreaterThan(0);
+    const drawCount = vi.mocked(canvasContext.clearRect).mock.calls.length;
+    unmount();
+
+    expect(cancelAnimationFrameSpy).toHaveBeenCalled();
+    expect(queuedFrames.size).toBe(0);
+    for (const callback of queuedFrames.values()) callback(performance.now());
+    expect(canvasContext.clearRect).toHaveBeenCalledTimes(drawCount);
+
+    boundsSpy.mockRestore();
+    cancelAnimationFrameSpy.mockRestore();
+    requestAnimationFrameSpy.mockRestore();
+  });
 });
 
 describe('DecisionSequence motion and disclosure', () => {
@@ -258,7 +334,10 @@ describe('TodayFocus explanation and feedback', () => {
     scrollToSpy = vi.spyOn(window, 'scrollTo').mockImplementation(() => {});
   });
 
-  afterEach(() => scrollToSpy.mockRestore());
+  afterEach(() => {
+    scrollToSpy.mockRestore();
+    vi.useRealTimers();
+  });
 
   it('decomposes the decision into every real factor when Por que isso opens', async () => {
     const user = userEvent.setup();
@@ -294,6 +373,53 @@ describe('TodayFocus explanation and feedback', () => {
     expect(trigger).toHaveFocus();
     expect(trigger).toHaveAttribute('aria-expanded', 'true');
     expect(screen.getByTestId('today-decision-stage')).toHaveAttribute('data-phase', 'decomposed');
+  });
+
+  it('completes Por que isso → Discordo → confirmation using only the keyboard', async () => {
+    const user = userEvent.setup();
+    render(<FeedbackTransitionHarness />);
+
+    await user.tab();
+    expect(screen.getByRole('button', { name: 'Começar' })).toHaveFocus();
+    await user.tab();
+    const explanation = screen.getByRole('button', { name: 'Por que isso?' });
+    expect(explanation).toHaveFocus();
+    expect(explanation).toHaveAttribute('aria-expanded', 'false');
+
+    await user.keyboard('{Enter}');
+    expect(explanation).toHaveFocus();
+    expect(explanation).toHaveAttribute('aria-expanded', 'true');
+    await user.tab();
+    await user.tab();
+    const disagree = screen.getByRole('button', { name: 'Discordo' });
+    expect(disagree).toHaveFocus();
+    await user.keyboard('{Enter}');
+
+    await user.tab();
+    const reason = screen.getByRole('button', { name: 'Já estudei isso' });
+    expect(reason).toHaveFocus();
+    await user.keyboard('{Enter}');
+
+    const confirmation = await screen.findByRole('status');
+    const feedbackGroup = screen.getByRole('group', { name: 'Discordância da recomendação' });
+    expect(confirmation).toHaveTextContent('Registrado');
+    expect(feedbackGroup).toHaveFocus();
+    expect(feedbackGroup).toHaveClass('focus-visible:ring-2');
+    expect(document.body).not.toHaveFocus();
+  });
+
+  it('marks only the non-final visual phase as motion-active', () => {
+    vi.useFakeTimers();
+    renderTodayFocus();
+    const stage = screen.getByTestId('today-decision-stage');
+
+    expect(stage).toHaveAttribute('data-motion-active', 'true');
+    act(() => vi.advanceTimersByTime(900));
+    expect(stage).toHaveAttribute('data-phase', 'ready');
+    expect(stage).not.toHaveAttribute('data-motion-active');
+    expect(stage.querySelector('[data-motion-active="true"]')).toBeNull();
+
+    vi.useRealTimers();
   });
 
   it('announces saved disagreement without claiming the ranking changed', async () => {

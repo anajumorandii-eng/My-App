@@ -88,6 +88,7 @@ export function SubjectAtmosphere({ subject, className, children }: SubjectAtmos
   const ctxRef = useRef<CanvasRenderingContext2D | null>(null);
   const [canvasFailed, setCanvasFailed] = useState(false);
   const [canvasReady, setCanvasReady] = useState(false);
+  const [motionActive, setMotionActive] = useState(false);
   const profile = useMemo(() => getSubjectProfile(subject), [subject]);
 
   const previousProfileRef = useRef(profile);
@@ -173,13 +174,15 @@ export function SubjectAtmosphere({ subject, className, children }: SubjectAtmos
       currentPaletteRef.current = resolved;
       targetPaletteRef.current = resolved;
       tweenFromPaletteRef.current = null;
+      setMotionActive(false);
     } else if (subjectChanged && !palettesMatch(targetPaletteRef.current, resolved)) {
       tweenFromPaletteRef.current = currentPaletteRef.current;
       targetPaletteRef.current = resolved;
       tweenElapsedRef.current = 0;
+      setMotionActive(!canvasFailed);
     }
     previousProfileRef.current = profile;
-  }, [profile, reducedMotion, wrapperNode]);
+  }, [canvasFailed, profile, reducedMotion, wrapperNode]);
 
   useRafLoop(
     (dt) => {
@@ -194,6 +197,7 @@ export function SubjectAtmosphere({ subject, className, children }: SubjectAtmos
         tweenFromPaletteRef.current = currentPaletteRef.current;
         targetPaletteRef.current = resolved;
         tweenElapsedRef.current = 0;
+        setMotionActive(true);
       }
 
       const from = tweenFromPaletteRef.current;
@@ -202,7 +206,10 @@ export function SubjectAtmosphere({ subject, className, children }: SubjectAtmos
         tweenElapsedRef.current += dt;
         const progress = Math.min(1, tweenElapsedRef.current / MOTION_DURATION.subjectTween);
         currentPaletteRef.current = tweenPalette(from, target, progress);
-        if (progress >= 1) tweenFromPaletteRef.current = null;
+        if (progress >= 1) {
+          tweenFromPaletteRef.current = null;
+          setMotionActive(false);
+        }
       } else {
         currentPaletteRef.current = resolved;
       }
@@ -236,12 +243,17 @@ export function SubjectAtmosphere({ subject, className, children }: SubjectAtmos
       ref={setWrapperNode}
       data-testid="subject-atmosphere"
       data-subject={profile.key}
+      data-canvas-fallback={canvasFailed ? 'true' : undefined}
+      data-motion-active={motionActive && !reducedMotion ? 'true' : undefined}
       className={cn('relative isolate overflow-hidden bg-[var(--subject-bg)] text-[var(--subject-text-highlight)]', className)}
       style={{ backgroundColor: 'var(--subject-bg)' }}
     >
-      <canvas aria-hidden="true" ref={canvasRef} className="pointer-events-none absolute inset-0 z-0 h-full w-full" />
+      {!canvasFailed && (
+        <canvas aria-hidden="true" ref={canvasRef} className="pointer-events-none absolute inset-0 z-0 h-full w-full" />
+      )}
       <div
         aria-hidden="true"
+        data-testid="subject-atmosphere-fallback"
         className="pointer-events-none absolute inset-0 z-[1] bg-[var(--subject-field-css)] opacity-30 mix-blend-screen"
         style={{ background: 'var(--subject-field-css)' }}
       />
