@@ -1,5 +1,5 @@
-import React, { useId, useState } from 'react';
-import { motion, useReducedMotion } from 'motion/react';
+import React, { useId } from 'react';
+import { AnimatePresence, motion, useReducedMotion } from 'motion/react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { RecommendationFactor, RecommendationFactorKind, RecommendationSnapshot } from '../../../types';
 import { confidenceFromUncertainty, CONFIDENCE_LABEL } from '../../../lib/confidence';
@@ -7,14 +7,7 @@ import { Button } from '../../../components/ui/Button';
 import { PrecisionMark } from '../../../components/ui/PrecisionMark';
 import { cn } from '../../../lib/cn';
 import { disclosurePanel } from '../../../design-system/motion/variants';
-
-const FACTOR_LABEL: Record<RecommendationFactorKind, string> = {
-  learning_gap: 'Lacuna de aprendizagem',
-  review_urgency: 'Urgência de revisão',
-  recurring_errors: 'Erros recorrentes',
-  energy_adjustment: 'Ajuste de energia',
-  exam_relevance: 'Relevância para a prova',
-};
+import { DECISION_FACTOR_LABELS } from './DecisionFactorField';
 
 // A ranking model isn't the same thing as availability/allocation/
 // interleaving (see efficiencyEngine.ts) — these factors only explain *why
@@ -29,16 +22,17 @@ const FACTOR_HELP: Record<RecommendationFactorKind, string> = {
 
 const CONTRIBUTION_EPSILON = 0.01;
 
-interface DecisionExplanationProps {
+export interface DecisionExplanationProps {
   mainReason: string;
   factors: RecommendationFactor[];
   snapshot: RecommendationSnapshot;
+  open: boolean;
+  onOpenChange: (open: boolean) => void;
   onDisagree: () => void;
   className?: string;
 }
 
-export function DecisionExplanation({ mainReason, factors, snapshot, onDisagree, className }: DecisionExplanationProps) {
-  const [open, setOpen] = useState(false);
+export function DecisionExplanation({ mainReason, factors, snapshot, open, onOpenChange, onDisagree, className }: DecisionExplanationProps) {
   const panelId = useId();
   const reducedMotion = useReducedMotion();
   const confidence = confidenceFromUncertainty(snapshot.uncertainty);
@@ -54,7 +48,7 @@ export function DecisionExplanation({ mainReason, factors, snapshot, onDisagree,
 
       <button
         type="button"
-        onClick={() => setOpen((v) => !v)}
+        onClick={() => onOpenChange(!open)}
         aria-expanded={open}
         aria-controls={panelId}
         className="mt-2 inline-flex items-center gap-1 text-xs font-medium text-text-secondary hover:text-text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus-ring rounded-small px-1 -mx-1 min-h-9"
@@ -63,14 +57,17 @@ export function DecisionExplanation({ mainReason, factors, snapshot, onDisagree,
         {open ? <ChevronUp className="w-3.5 h-3.5" aria-hidden="true" /> : <ChevronDown className="w-3.5 h-3.5" aria-hidden="true" />}
       </button>
 
-      <motion.div
-        id={panelId}
-        initial={false}
-        animate={open ? 'expanded' : 'collapsed'}
-        variants={reducedMotion ? undefined : disclosurePanel}
-        style={reducedMotion ? { height: open ? 'auto' : 0, opacity: open ? 1 : 0 } : undefined}
-        className="overflow-hidden"
-      >
+      <AnimatePresence initial={false}>
+        {open && <motion.div
+          id={panelId}
+          role="region"
+          aria-label="Fatores da recomendação"
+          initial={reducedMotion ? false : 'collapsed'}
+          animate={reducedMotion ? undefined : 'expanded'}
+          exit={reducedMotion ? undefined : 'collapsed'}
+          variants={reducedMotion ? undefined : disclosurePanel}
+          className="overflow-hidden"
+        >
         <div className="pt-3 space-y-4">
           {/* Explicação: os fatores que realmente pesaram, em ordem de peso. */}
           <div className="space-y-2.5">
@@ -79,8 +76,10 @@ export function DecisionExplanation({ mainReason, factors, snapshot, onDisagree,
               return (
                 <div key={factor.kind}>
                   <div className="flex items-baseline justify-between gap-2 text-xs">
-                    <span className="font-medium text-text-primary">{FACTOR_LABEL[factor.kind]}</span>
-                    <span className="text-text-muted shrink-0">{FACTOR_HELP[factor.kind]}</span>
+                    <span className="font-medium text-text-primary">{DECISION_FACTOR_LABELS[factor.kind]}</span>
+                    <span className="text-text-muted shrink-0 tabular-nums">
+                      {FACTOR_HELP[factor.kind]} · {factor.contribution > 0 ? '+' : ''}{factor.contribution.toFixed(2)}
+                    </span>
                   </div>
                   <div className="h-1.5 rounded-full bg-surface-strong overflow-hidden mt-1">
                     <div className="h-full rounded-full bg-action-primary" style={{ width: `${widthPct}%` }} />
@@ -90,7 +89,7 @@ export function DecisionExplanation({ mainReason, factors, snapshot, onDisagree,
             })}
             {inactiveFactors.length > 0 && (
               <p className="text-xs text-text-muted">
-                Sem efeito hoje: {inactiveFactors.map((f) => FACTOR_LABEL[f.kind]).join(', ')}.
+                Sem efeito hoje: {inactiveFactors.map((f) => DECISION_FACTOR_LABELS[f.kind]).join(', ')}.
               </p>
             )}
             <p className="text-xs text-text-muted italic">
@@ -113,7 +112,7 @@ export function DecisionExplanation({ mainReason, factors, snapshot, onDisagree,
           </PrecisionMark>
 
           <div className="flex items-center gap-2">
-            <Button variant="ghost" size="sm" onClick={() => setOpen(false)}>
+            <Button variant="ghost" size="sm" onClick={() => onOpenChange(false)}>
               Entendi
             </Button>
             <Button variant="ghost" size="sm" onClick={onDisagree}>
@@ -121,7 +120,8 @@ export function DecisionExplanation({ mainReason, factors, snapshot, onDisagree,
             </Button>
           </div>
         </div>
-      </motion.div>
+        </motion.div>}
+      </AnimatePresence>
     </div>
   );
 }

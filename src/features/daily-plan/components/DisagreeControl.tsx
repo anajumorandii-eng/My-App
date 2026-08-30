@@ -1,8 +1,10 @@
 import React from 'react';
+import { motion, useReducedMotion } from 'motion/react';
 import { Check, AlertTriangle } from 'lucide-react';
 import { DisagreeReason, PlanFeedback } from '../../../types';
 import { Button } from '../../../components/ui/Button';
 import { cn } from '../../../lib/cn';
+import { confirmation } from '../../../design-system/motion/variants';
 
 const DISAGREE_OPTIONS: { value: DisagreeReason; label: string }[] = [
   { value: 'ja_estudei', label: 'Já estudei isso' },
@@ -24,16 +26,26 @@ interface DisagreeControlProps {
   status: FeedbackStatus;
   previous: PreviousFeedbackState;
   onSelect: (reason: DisagreeReason) => void;
+  confirmationKey: number;
   className?: string;
 }
 
-export function DisagreeControl({ status, previous, onSelect, className }: DisagreeControlProps) {
+export function DisagreeControl({ status, previous, onSelect, confirmationKey, className }: DisagreeControlProps) {
+  const reducedMotion = useReducedMotion();
   if (status === 'saved') {
     return (
-      <p className={cn('flex items-center text-xs font-medium text-status-success', className)}>
+      <motion.p
+        key={confirmationKey}
+        role="status"
+        aria-live="polite"
+        initial={reducedMotion ? false : 'hidden'}
+        animate="visible"
+        variants={reducedMotion ? undefined : confirmation}
+        className={cn('flex items-center text-xs font-medium text-status-success', className)}
+      >
         <Check className="w-3.5 h-3.5 mr-1.5 shrink-0" aria-hidden="true" />
         Registrado — o plano não muda sozinho por causa disso.
-      </p>
+      </motion.p>
     );
   }
 

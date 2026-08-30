@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion } from 'motion/react';
+import { AnimatePresence, motion } from 'motion/react';
 import { PlayCircle } from 'lucide-react';
 import { AllocatedStudyAction, DisagreeReason } from '../../../types';
 import { formatIsoTimeInSaoPaulo } from '../../../features/availability/time';
@@ -11,6 +11,7 @@ import { DecisionExplanation } from './DecisionExplanation';
 import { DisagreeControl, FeedbackStatus } from './DisagreeControl';
 import { AdaptiveUpdate } from './AdaptiveUpdate';
 import { DecisionSignalStrip } from './DecisionSignalStrip';
+import { DecisionFactorField } from './DecisionFactorField';
 import { focusEnter } from '../../../design-system/motion/variants';
 import { usePreviousFeedback } from '../../../hooks/usePreviousFeedback';
 import { useDecisionChoreography } from '../motion/useDecisionChoreography';
@@ -33,6 +34,7 @@ export interface TodayFocusProps {
 
 export function TodayFocus({ action, actionLabel, mainReason, onStart, showAdaptiveUpdate, previousSubject, userId, feedbackStatus, onDisagree }: TodayFocusProps) {
   const [disagreeOpen, setDisagreeOpen] = useState(false);
+  const [explanationOpen, setExplanationOpen] = useState(false);
   const previous = usePreviousFeedback(action.topicId, userId);
   const subjectProfile = getSubjectProfile(action.subject);
   const typographyPreset = TYPOGRAPHY_PRESETS[subjectProfile.tipografia];
@@ -40,10 +42,7 @@ export function TodayFocus({ action, actionLabel, mainReason, onStart, showAdapt
     actionId: action.id,
     rankingChanged: showAdaptiveUpdate,
     feedbackStatus,
-    // Task 7 will connect the decomposition phase when DecisionExplanation
-    // exposes its disclosure state. Keeping the seam explicit prevents this
-    // hero from inferring or inventing ranking changes in the meantime.
-    explanationOpen: false,
+    explanationOpen,
   });
   const reviewUrgency = action.factors.find((factor) => factor.kind === 'review_urgency')?.rawValue ?? 0;
 
@@ -96,12 +95,16 @@ export function TodayFocus({ action, actionLabel, mainReason, onStart, showAdapt
           minutes={action.allocatedMinutes}
         />
 
-        {showAdaptiveUpdate && <AdaptiveUpdate className="crivo-adaptive-update" />}
+        <AnimatePresence initial={false}>
+          {showAdaptiveUpdate && <AdaptiveUpdate key={action.id} className="crivo-adaptive-update" />}
+        </AnimatePresence>
 
         <DecisionExplanation
           mainReason=""
           factors={action.factors}
           snapshot={action.snapshot}
+          open={explanationOpen}
+          onOpenChange={setExplanationOpen}
           onDisagree={() => setDisagreeOpen(true)}
           className="crivo-decision-explanation"
         />
@@ -111,6 +114,7 @@ export function TodayFocus({ action, actionLabel, mainReason, onStart, showAdapt
             status={feedbackStatus}
             previous={previous}
             onSelect={onDisagree}
+            confirmationKey={confirmationKey}
             className="crivo-disagree-control"
           />
         )}
@@ -126,6 +130,7 @@ export function TodayFocus({ action, actionLabel, mainReason, onStart, showAdapt
           previousSubject={previousSubject}
           topicId={action.topicId}
         />
+        <DecisionFactorField factors={action.factors} phase={phase} />
       </div>
     </motion.section>
   );
