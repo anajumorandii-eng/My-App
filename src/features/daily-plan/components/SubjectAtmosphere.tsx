@@ -2,7 +2,15 @@ import React, { useEffect, useLayoutEffect, useMemo, useRef, useState } from 're
 import { useReducedMotion } from 'motion/react';
 import { cn } from '../../../lib/cn';
 import { useRafLoop } from '../../../hooks/useRafLoop';
-import { getSubjectPalette, getSubjectProfile, PALETTE_TOKENS, type CrivoPalette } from '../../../design-system/crivoSubjects';
+import {
+  getSubjectPalette,
+  getSubjectProfile,
+  PALETTE_TOKENS,
+  type CrivoPalette,
+  type PaletteToken,
+  type SubjectProfile,
+  type SubjectTheme,
+} from '../../../design-system/crivoSubjects';
 import { FIELD_REGISTRY } from '../../../design-system/crivoFieldRegistry';
 import { FIELD_CANVAS_REGISTRY } from '../../../design-system/crivoFieldCanvas';
 import type { CanvasContextLike } from '../../../design-system/crivoCoreRegistry';
@@ -22,21 +30,56 @@ export interface SubjectAtmosphereProps {
 // value rather than nothing, matching how the page reads the rest of the day.
 const FIELD_FOCUS = 0.82;
 
-function applyPaletteVars(node: HTMLDivElement, palette: CrivoPalette) {
-  for (const token of PALETTE_TOKENS) node.style.setProperty(`--subject-${token}`, palette[token]);
+const PALETTE_CSS_TOKEN: Record<PaletteToken, string> = {
+  bg: 'bg',
+  surface: 'surface',
+  primary: 'primary',
+  secondary: 'secondary',
+  emissive: 'emissive',
+  textHighlight: 'text-highlight',
+  dataPositive: 'data-positive',
+  dataWarning: 'data-warning',
+  atmoA: 'atmo-a',
+  atmoB: 'atmo-b',
+};
+
+function applyProfileVars(node: HTMLDivElement, profile: SubjectProfile) {
+  for (const theme of ['light', 'dark'] as const satisfies readonly SubjectTheme[]) {
+    const palette = getSubjectPalette(profile, theme);
+    for (const token of PALETTE_TOKENS) {
+      node.style.setProperty(`--subject-${theme}-${PALETTE_CSS_TOKEN[token]}`, palette[token]);
+    }
+    node.style.setProperty(`--subject-${theme}-field-css`, FIELD_REGISTRY[profile.fieldType](palette));
+  }
+}
+
+function resolvedCanvasColor(value: string): string {
+  const color = value.trim();
+  return /^#[\dA-F]{8}$/i.test(color) ? color.slice(0, 7) : color;
+}
+
+function readResolvedPalette(node: HTMLDivElement): CrivoPalette | null {
+  const styles = getComputedStyle(node);
+  const entries = PALETTE_TOKENS.map((token) => [
+    token,
+    resolvedCanvasColor(styles.getPropertyValue(`--subject-${PALETTE_CSS_TOKEN[token]}`)),
+  ] as const);
+  return entries.every(([, value]) => value !== '' && !value.includes('var('))
+    ? Object.fromEntries(entries) as CrivoPalette
+    : null;
+}
+
+function palettesMatch(left: CrivoPalette | null, right: CrivoPalette | null): boolean {
+  return !!left && !!right && PALETTE_TOKENS.every((token) => left[token] === right[token]);
 }
 
 /**
- * Wraps the Hoje screen's own rendered content (header, context chips, empty
- * states, TodayFocus, secondary lists) with a decorative, per-matéria
- * backdrop — the "campo da matéria" — an animated Canvas 2D layer faithfully
- * ported from the approved reference (drifting molecules, a waving vector
- * field, breathing topographic contours...), falling back to a plain CSS
- * gradient if canvas 2D itself is unavailable. The palette is also exposed
- * as CSS custom properties local to this wrapper only (never :root/<html>),
- * so it can't bleed into the nav rail or any other route. Unlike CrivoCore,
- * this component is never remounted by a `key` when the recommendation
- * changes, so it tracks its own previous matéria via a ref and tweens across it.
+ * Wraps the Hoje screen's rendered content with a local, full-bleed
+ * per-matéria field. CSS always paints the static field and selects the
+ * active light/dark translation. Canvas reads those resolved CSS values and
+ * adds the registered geometry and motion without owning a second theme
+ * source. The wrapper stays mounted across recommendation changes, so it can
+ * retain the prior subject palette and tween to the next one.
  */
 export function SubjectAtmosphere({ subject, className, children }: SubjectAtmosphereProps) {
   const reducedMotion = useReducedMotion();
@@ -44,11 +87,15 @@ export function SubjectAtmosphere({ subject, className, children }: SubjectAtmos
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const ctxRef = useRef<CanvasRenderingContext2D | null>(null);
   const [canvasFailed, setCanvasFailed] = useState(false);
+  const [canvasReady, setCanvasReady] = useState(false);
   const profile = useMemo(() => getSubjectProfile(subject), [subject]);
 
   const previousProfileRef = useRef(profile);
   const elapsedRef = useRef(0);
-  const [isTweening, setIsTweening] = useState(false);
+  const tweenElapsedRef = useRef(0);
+  const currentPaletteRef = useRef<CrivoPalette | null>(null);
+  const targetPaletteRef = useRef<CrivoPalette | null>(null);
+  const tweenFromPaletteRef = useRef<CrivoPalette | null>(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -57,12 +104,14 @@ export function SubjectAtmosphere({ subject, className, children }: SubjectAtmos
       const ctx = canvas.getContext('2d');
       if (!ctx) throw new Error('CanvasRenderingContext2D unavailable');
       ctxRef.current = ctx;
+      setCanvasReady(true);
     } catch {
       setCanvasFailed(true);
     }
   }, []);
 
-  // Backing-store resolution tracks the wrapper's own box (full-bleed, not a fixed size like the Núcleo icon).
+  // Backing-store resolution tracks the wrapper's own full-bleed box and is
+  // clamped to DPR 2 so the environmental field cannot grow without bound.
   useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = ctxRef.current;
@@ -85,74 +134,105 @@ export function SubjectAtmosphere({ subject, className, children }: SubjectAtmos
     const canvas = canvasRef.current;
     if (!ctx || !canvas) return;
     const dpr = Math.min(window.devicePixelRatio || 1, 2);
-    const width = canvas.width / dpr, height = canvas.height / dpr;
+    const width = canvas.width / dpr;
+    const height = canvas.height / dpr;
     ctx.clearRect(0, 0, width, height);
     const drawFn = FIELD_CANVAS_REGISTRY[profile.fieldType] ?? FIELD_CANVAS_REGISTRY.neutral;
-    drawFn({ ctx: ctx as unknown as CanvasContextLike, width, height, time, palette, focus: FIELD_FOCUS });
+    drawFn({
+      ctx: ctx as unknown as CanvasContextLike,
+      width,
+      height,
+      time: time * profile.rhythm,
+      palette,
+      focus: FIELD_FOCUS,
+    });
   };
 
-  // First paint: apply directly, no tween — there's no "previous" atmosphere yet.
+  // Both translations live locally. CSS remains the sole theme selector;
+  // Canvas reads the resolved aliases instead of checking a React theme prop.
   useLayoutEffect(() => {
     if (!wrapperNode) return;
-    applyPaletteVars(wrapperNode, getSubjectPalette(profile, 'dark'));
-    wrapperNode.style.setProperty('--subject-field-css', FIELD_REGISTRY[profile.fieldType](getSubjectPalette(profile, 'dark')));
-    // eslint-disable-next-line react-hooks/exhaustive-deps -- mount-only; later subject changes go through the effect below
-  }, [wrapperNode]);
+    const subjectChanged = previousProfileRef.current.key !== profile.key;
+    applyProfileVars(wrapperNode, profile);
+    const resolved = readResolvedPalette(wrapperNode);
+    if (!resolved) return;
 
-  useEffect(() => {
-    if (previousProfileRef.current.key === profile.key) return;
-    if (reducedMotion || !wrapperNode) {
-      previousProfileRef.current = profile;
-      if (wrapperNode) {
-        applyPaletteVars(wrapperNode, getSubjectPalette(profile, 'dark'));
-        wrapperNode.style.setProperty('--subject-field-css', FIELD_REGISTRY[profile.fieldType](getSubjectPalette(profile, 'dark')));
-      }
-      setIsTweening(false);
-      return;
+    if (reducedMotion || !currentPaletteRef.current) {
+      currentPaletteRef.current = resolved;
+      targetPaletteRef.current = resolved;
+      tweenFromPaletteRef.current = null;
+    } else if (subjectChanged && !palettesMatch(targetPaletteRef.current, resolved)) {
+      tweenFromPaletteRef.current = currentPaletteRef.current;
+      targetPaletteRef.current = resolved;
+      tweenElapsedRef.current = 0;
     }
-    elapsedRef.current = 0;
-    setIsTweening(true);
+    previousProfileRef.current = profile;
   }, [profile, reducedMotion, wrapperNode]);
 
   useRafLoop(
     (dt) => {
       elapsedRef.current += dt;
-      let palette = getSubjectPalette(profile, 'dark');
-      if (isTweening) {
-        const progress = Math.min(1, elapsedRef.current / MOTION_DURATION.subjectTween);
-        palette = tweenPalette(getSubjectPalette(previousProfileRef.current, 'dark'), getSubjectPalette(profile, 'dark'), progress);
-        if (wrapperNode) {
-          applyPaletteVars(wrapperNode, palette);
-          wrapperNode.style.setProperty('--subject-field-css', FIELD_REGISTRY[profile.fieldType](palette));
-        }
-        if (progress >= 1) {
-          previousProfileRef.current = profile;
-          setIsTweening(false);
-        }
+      if (!wrapperNode) return;
+      const resolved = readResolvedPalette(wrapperNode);
+      if (!resolved) return;
+
+      if (!currentPaletteRef.current) currentPaletteRef.current = resolved;
+      if (!targetPaletteRef.current) targetPaletteRef.current = resolved;
+      if (!palettesMatch(targetPaletteRef.current, resolved)) {
+        tweenFromPaletteRef.current = currentPaletteRef.current;
+        targetPaletteRef.current = resolved;
+        tweenElapsedRef.current = 0;
       }
-      if (!canvasFailed) drawField(palette, elapsedRef.current);
+
+      const from = tweenFromPaletteRef.current;
+      const target = targetPaletteRef.current;
+      if (from && target) {
+        tweenElapsedRef.current += dt;
+        const progress = Math.min(1, tweenElapsedRef.current / MOTION_DURATION.subjectTween);
+        currentPaletteRef.current = tweenPalette(from, target, progress);
+        if (progress >= 1) tweenFromPaletteRef.current = null;
+      } else {
+        currentPaletteRef.current = resolved;
+      }
+
+      if (!canvasFailed && currentPaletteRef.current) drawField(currentPaletteRef.current, elapsedRef.current);
     },
     { paused: reducedMotion || canvasFailed, target: wrapperNode }
   );
 
-  // Reduced motion: one static field frame, no continuous drift/waving.
+  // Reduced motion keeps no loop. It observes the existing theme class only
+  // to replace the static frame when the resolved CSS palette changes.
   useEffect(() => {
-    if (!reducedMotion || canvasFailed) return;
-    drawField(getSubjectPalette(profile, 'dark'), 0);
-    // eslint-disable-next-line react-hooks/exhaustive-deps -- drawField closes over refs already listed
-  }, [reducedMotion, canvasFailed, profile]);
+    if (!reducedMotion || canvasFailed || !canvasReady || !wrapperNode) return;
+    const drawResolvedField = () => {
+      const resolved = readResolvedPalette(wrapperNode);
+      if (!resolved) return;
+      currentPaletteRef.current = resolved;
+      targetPaletteRef.current = resolved;
+      tweenFromPaletteRef.current = null;
+      drawField(resolved, 0);
+    };
+    drawResolvedField();
+    const observer = new MutationObserver(drawResolvedField);
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+    return () => observer.disconnect();
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- drawField resolves the current profile and Canvas refs
+  }, [reducedMotion, canvasFailed, canvasReady, profile, wrapperNode]);
 
   return (
-    <div ref={setWrapperNode} className={cn('relative', className)}>
-      {canvasFailed ? (
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-0 -z-10"
-          style={{ background: 'var(--subject-field-css)', opacity: 0.16 }}
-        />
-      ) : (
-        <canvas aria-hidden="true" ref={canvasRef} className="pointer-events-none absolute inset-0 -z-10 w-full h-full" />
-      )}
+    <div
+      ref={setWrapperNode}
+      data-testid="subject-atmosphere"
+      data-subject={profile.key}
+      className={cn('relative isolate overflow-hidden bg-[var(--subject-bg)] text-[var(--subject-text-highlight)]', className)}
+      style={{ backgroundColor: 'var(--subject-bg)' }}
+    >
+      <canvas aria-hidden="true" ref={canvasRef} className="pointer-events-none absolute inset-0 z-0 h-full w-full" />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 z-[1] bg-[var(--subject-field-css)] opacity-30 mix-blend-screen"
+        style={{ background: 'var(--subject-field-css)' }}
+      />
       <div className="relative z-10">{children}</div>
     </div>
   );

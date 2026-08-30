@@ -207,6 +207,88 @@ html, body {
 }
 
 /* ---------------------------------------------------------------------
+ * Hoje immersive field
+ *
+ * SubjectAtmosphere owns both palette translations locally. These aliases
+ * are the single theme-selection seam shared by the CSS base field and the
+ * Canvas renderer (which reads their computed values).
+ * ------------------------------------------------------------------- */
+[data-testid="subject-atmosphere"] {
+  --subject-bg: var(--subject-light-bg);
+  --subject-surface: var(--subject-light-surface);
+  --subject-primary: var(--subject-light-primary);
+  --subject-secondary: var(--subject-light-secondary);
+  --subject-emissive: var(--subject-light-emissive);
+  --subject-text-highlight: var(--subject-light-text-highlight);
+  --subject-data-positive: var(--subject-light-data-positive);
+  --subject-data-warning: var(--subject-light-data-warning);
+  --subject-atmo-a: var(--subject-light-atmo-a);
+  --subject-atmo-b: var(--subject-light-atmo-b);
+  --subject-field-css: var(--subject-light-field-css);
+  min-height: 100%;
+  transition: background-color 900ms cubic-bezier(0.4, 0, 0.2, 1), color 900ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark [data-testid="subject-atmosphere"] {
+  --subject-bg: var(--subject-dark-bg);
+  --subject-surface: var(--subject-dark-surface);
+  --subject-primary: var(--subject-dark-primary);
+  --subject-secondary: var(--subject-dark-secondary);
+  --subject-emissive: var(--subject-dark-emissive);
+  --subject-text-highlight: var(--subject-dark-text-highlight);
+  --subject-data-positive: var(--subject-dark-data-positive);
+  --subject-data-warning: var(--subject-dark-data-warning);
+  --subject-atmo-a: var(--subject-dark-atmo-a);
+  --subject-atmo-b: var(--subject-dark-atmo-b);
+  --subject-field-css: var(--subject-dark-field-css);
+}
+
+.crivo-today-stage {
+  position: relative;
+  min-height: 100svh;
+  color: var(--subject-text-highlight);
+  background: var(--subject-bg);
+}
+
+.crivo-decision-hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(20rem, 1fr);
+  align-items: center;
+  gap: clamp(1.5rem, 4vw, 4.5rem);
+  min-height: clamp(36rem, calc(100svh - 4rem), 52rem);
+  padding: clamp(2rem, 5vw, 5rem);
+  border-color: color-mix(in oklab, var(--subject-primary) 24%, transparent);
+}
+
+.crivo-core-stage {
+  position: relative;
+  width: min(42vw, 36rem);
+  max-width: 100%;
+  aspect-ratio: 1;
+  justify-self: end;
+  filter: drop-shadow(0 1.5rem 3.5rem color-mix(in oklab, var(--subject-primary) 22%, transparent));
+}
+
+@media (max-width: 767px) {
+  .crivo-today-stage {
+    min-height: 100svh;
+  }
+
+  .crivo-decision-hero {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.25rem;
+    min-height: auto;
+    padding: 1.25rem 1rem 2rem;
+  }
+
+  .crivo-core-stage {
+    width: min(78vw, 22rem);
+    justify-self: center;
+  }
+}
+
+/* ---------------------------------------------------------------------
  * Spotlight — a small, local glow that follows the pointer inside one
  * element (nav items, the primary button, interactive cards). Pairs with
  * `useSpotlight()`. Deliberately never global: no page-wide cursor tracker.
