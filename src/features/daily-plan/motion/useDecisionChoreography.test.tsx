@@ -62,7 +62,11 @@ describe('useDecisionChoreography', () => {
     expect(result.current.coreState).toBe('analyzing');
     act(() => vi.advanceTimersByTime(201));
     expect(result.current.coreState).toBe('converging');
-    act(() => vi.advanceTimersByTime(550));
+    // The old action's ready callback would fire at 900ms from the first render.
+    // Crossing that deadline must not force the replacement action to ready.
+    act(() => vi.advanceTimersByTime(351));
+    expect(result.current.coreState).toBe('converging');
+    act(() => vi.advanceTimersByTime(199));
     expect(result.current.coreState).toBe('ready');
   });
 
