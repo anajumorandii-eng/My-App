@@ -233,11 +233,13 @@ describe('daily plan consistency across views', () => {
     for (const action of allocatedActions.slice(1)) {
       expect(laterActions.getAllByText(action.topicName)).toHaveLength(1);
     }
-    expect(waitingDisclosure).toHaveAttribute('aria-expanded', 'false');
+    const waitingButton = within(waitingDisclosure).getByRole('button', { name: 'Pode esperar' });
+    expect(waitingDisclosure).not.toHaveAttribute('aria-expanded');
+    expect(waitingButton).toHaveAttribute('aria-expanded', 'false');
     expect(within(waitingDisclosure).queryByText(waitingAction.topicName)).not.toBeInTheDocument();
 
-    fireEvent.click(within(waitingDisclosure).getByRole('button', { name: 'Pode esperar' }));
-    expect(waitingDisclosure).toHaveAttribute('aria-expanded', 'true');
+    fireEvent.click(waitingButton);
+    expect(waitingButton).toHaveAttribute('aria-expanded', 'true');
     expect(within(waitingDisclosure).getAllByText(waitingAction.topicName)).toHaveLength(1);
 
     expect(Array.from(sequence.querySelectorAll<HTMLElement>('[data-action-id]')).map((node) => node.dataset.actionId))

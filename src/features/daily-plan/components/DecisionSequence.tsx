@@ -68,8 +68,8 @@ export function DecisionSequence({ next, waiting, actionLabels, onStart }: Decis
               {next.map((action) => (
                 <motion.li
                   key={action.id}
-                  layout
-                  layoutId={action.id}
+                  layout={!reducedMotion}
+                  layoutId={reducedMotion ? undefined : action.id}
                   data-action-id={action.id}
                   variants={listItem}
                   transition={{ duration: MOTION_DURATION.micro, ease: MOTION_EASE }}
@@ -82,7 +82,7 @@ export function DecisionSequence({ next, waiting, actionLabels, onStart }: Decis
         )}
         {waiting.length > 0 && (
           <motion.li className="decision-sequence-region decision-sequence-waiting" variants={listItem}>
-            <div role="group" aria-label="Pode esperar" aria-expanded={waitingOpen}>
+            <div role="group" aria-label="Pode esperar">
               <button
                 type="button"
                 className="decision-sequence-disclosure"
@@ -98,8 +98,8 @@ export function DecisionSequence({ next, waiting, actionLabels, onStart }: Decis
                   {waiting.map((action) => (
                     <motion.li
                       key={action.id}
-                      layout
-                      layoutId={action.id}
+                      layout={!reducedMotion}
+                      layoutId={reducedMotion ? undefined : action.id}
                       data-action-id={action.id}
                       variants={listItem}
                       transition={{ duration: MOTION_DURATION.micro, ease: MOTION_EASE }}

@@ -3,9 +3,10 @@ import { act, render, screen, waitFor, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { canvasContext } from '../../../testSetup';
-import type { AllocatedStudyAction } from '../../../types';
+import type { AllocatedStudyAction, StudyAction } from '../../../types';
 import { SubjectAtmosphere } from './SubjectAtmosphere';
 import { TodayFocus } from './TodayFocus';
+import { DecisionSequence } from './DecisionSequence';
 
 const useReducedMotionMock = vi.hoisted(() => vi.fn(() => false));
 
@@ -212,6 +213,40 @@ describe('SubjectAtmosphere', () => {
     getComputedStyleSpy.mockRestore();
     requestAnimationFrameSpy.mockRestore();
     vi.unstubAllGlobals();
+  });
+});
+
+describe('DecisionSequence motion and disclosure', () => {
+  const labels = {
+    review: 'Revisar para consolidar',
+    practice: 'Praticar sem apoio',
+    theory: 'Reconstruir a base',
+    error_analysis: 'Analisar erros recorrentes',
+  } as const;
+
+  const waitingAction: StudyAction = { ...decisionAction, id: 'waiting', topicId: 'waiting-topic', topicName: 'Fisiologia Renal' };
+
+  it('renders one ranked motion container with stable action metadata and a closed waiting disclosure', () => {
+    useReducedMotionMock.mockReturnValue(false);
+    render(<DecisionSequence next={[decisionAction]} waiting={[waitingAction]} actionLabels={labels} onStart={vi.fn()} />);
+
+    const sequence = screen.getByRole('region', { name: 'Sequência de decisão' });
+    expect(sequence.querySelectorAll('ol')).toHaveLength(2);
+    expect(sequence.querySelector('ol')?.querySelector('[data-action-id="genetics"]')).toBeInTheDocument();
+    expect(sequence.querySelector('[data-action-id="waiting"]')).not.toBeInTheDocument();
+    const waitingButton = within(screen.getByRole('group', { name: 'Pode esperar' })).getByRole('button');
+    expect(waitingButton).toHaveAttribute('aria-expanded', 'false');
+    expect(waitingButton).toHaveAttribute('aria-controls', 'decision-sequence-waiting-list');
+  });
+
+  it('renders the final frame without layout animation when reduced motion is requested', () => {
+    useReducedMotionMock.mockReturnValue(true);
+    render(<DecisionSequence next={[decisionAction]} waiting={[]} actionLabels={labels} onStart={vi.fn()} />);
+
+    const actionItem = document.querySelector('[data-action-id="genetics"]');
+    expect(actionItem).not.toBeNull();
+    expect(actionItem).not.toHaveStyle({ transform: expect.any(String) });
+    expect(actionItem).not.toHaveStyle({ opacity: '0' });
   });
 });
 
