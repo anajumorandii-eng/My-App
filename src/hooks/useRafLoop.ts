@@ -36,6 +36,7 @@ export function useRafLoop(callback: (dtSeconds: number) => void, { paused, targ
     };
 
     const tick = (time: number) => {
+      if (!running) return;
       if (!shouldRunLoop(false, document.visibilityState, hasSize())) {
         running = false;
         return;

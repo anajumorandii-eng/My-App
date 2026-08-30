@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { AnimatePresence, motion, useReducedMotion } from 'motion/react';
 import type { RecommendationFactor, RecommendationFactorKind } from '../../../types';
 import { factorDecompose } from '../../../design-system/motion/variants';
@@ -32,10 +32,14 @@ function formatContribution(value: number) {
 export function DecisionFactorField({ factors, phase }: DecisionFactorFieldProps) {
   const reducedMotion = useReducedMotion();
   const [motionActive, setMotionActive] = useState(false);
+  const previousPhase = useRef(phase);
 
   useEffect(() => {
-    if (reducedMotion) setMotionActive(false);
-    else if (phase === 'decomposed' && factors.length > 0) setMotionActive(true);
+    const leavingDecomposed = previousPhase.current === 'decomposed' && phase !== 'decomposed';
+    if (reducedMotion || factors.length === 0) setMotionActive(false);
+    else if (phase === 'decomposed' || leavingDecomposed) setMotionActive(true);
+    else setMotionActive(false);
+    previousPhase.current = phase;
   }, [factors.length, phase, reducedMotion]);
 
   return (
@@ -57,8 +61,8 @@ export function DecisionFactorField({ factors, phase }: DecisionFactorFieldProps
               animate="visible"
               exit={reducedMotion ? undefined : 'hidden'}
               variants={reducedMotion ? undefined : factorDecompose}
-              onAnimationComplete={() => {
-                if (phase === 'decomposed') setMotionActive(false);
+              onAnimationComplete={(definition) => {
+                if (definition === 'visible' && phase === 'decomposed') setMotionActive(false);
               }}
             >
               <span className="block text-[0.62rem] font-semibold leading-tight text-text-secondary">

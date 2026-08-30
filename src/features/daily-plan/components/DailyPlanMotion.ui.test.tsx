@@ -7,6 +7,7 @@ import type { AllocatedStudyAction, StudyAction } from '../../../types';
 import { SubjectAtmosphere } from './SubjectAtmosphere';
 import { TodayFocus } from './TodayFocus';
 import { DecisionSequence } from './DecisionSequence';
+import { DecisionFactorField } from './DecisionFactorField';
 
 const useReducedMotionMock = vi.hoisted(() => vi.fn(() => false));
 
@@ -278,17 +279,46 @@ describe('SubjectAtmosphere', () => {
     );
 
     expect(queuedFrames.size).toBeGreaterThan(0);
+    const staleCallbacks = [...queuedFrames.values()];
     const drawCount = vi.mocked(canvasContext.clearRect).mock.calls.length;
+    const requestCount = requestAnimationFrameSpy.mock.calls.length;
     unmount();
 
     expect(cancelAnimationFrameSpy).toHaveBeenCalled();
     expect(queuedFrames.size).toBe(0);
-    for (const callback of queuedFrames.values()) callback(performance.now());
+    for (const callback of staleCallbacks) callback(performance.now());
     expect(canvasContext.clearRect).toHaveBeenCalledTimes(drawCount);
+    expect(requestAnimationFrameSpy).toHaveBeenCalledTimes(requestCount);
+    expect(queuedFrames.size).toBe(0);
 
     boundsSpy.mockRestore();
     cancelAnimationFrameSpy.mockRestore();
     requestAnimationFrameSpy.mockRestore();
+  });
+});
+
+describe('DecisionFactorField motion activity', () => {
+  beforeEach(() => useReducedMotionMock.mockReturnValue(false));
+
+  it('keeps motion activity marked through factor exit completion', async () => {
+    const { rerender } = render(<DecisionFactorField factors={decisionAction.factors} phase="ready" />);
+
+    rerender(<DecisionFactorField factors={decisionAction.factors} phase="decomposed" />);
+    const field = screen.getAllByTestId('decision-factor')[0].parentElement!;
+    expect(field).toHaveAttribute('data-motion-active', 'true');
+    await waitFor(() => expect(field).not.toHaveAttribute('data-motion-active'));
+
+    rerender(<DecisionFactorField factors={decisionAction.factors} phase="ready" />);
+    expect(field).toHaveAttribute('data-motion-active', 'true');
+    await waitFor(() => expect(field).not.toHaveAttribute('data-motion-active'));
+  });
+
+  it('never marks factor motion when reduced motion is requested', () => {
+    useReducedMotionMock.mockReturnValue(true);
+    render(<DecisionFactorField factors={decisionAction.factors} phase="decomposed" />);
+
+    const field = screen.getAllByTestId('decision-factor')[0].parentElement!;
+    expect(field).not.toHaveAttribute('data-motion-active');
   });
 });
 
