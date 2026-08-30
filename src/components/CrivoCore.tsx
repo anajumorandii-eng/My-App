@@ -152,11 +152,17 @@ export function CrivoCore({
     };
 
     resizeCanvas(wrapperNode.getBoundingClientRect());
-    if (size !== 'fill') return;
+    if (size !== 'fill' || typeof ResizeObserver === 'undefined') return;
 
-    const resizeObserver = new ResizeObserver(([entry]) => resizeCanvas(entry.contentRect));
-    resizeObserver.observe(wrapperNode);
-    return () => resizeObserver.disconnect();
+    try {
+      const resizeObserver = new ResizeObserver(([entry]) => resizeCanvas(entry.contentRect));
+      resizeObserver.observe(wrapperNode);
+      return () => resizeObserver.disconnect();
+    } catch {
+      // The initial measurement above remains a usable static surface when
+      // observation is unavailable in an older or constrained browser.
+      return;
+    }
   }, [size, wrapperNode, canvasFailed]);
 
   const drawFrame = (springs: CoreSprings, palette: CrivoPalette, time: number) => {
@@ -227,7 +233,9 @@ export function CrivoCore({
       data-testid="crivo-core"
       data-scale={scale}
       className={cn('relative shrink-0', className)}
-      style={size === 'fill' ? { width: '100%', height: '100%' } : { width: size, height: size }}
+      style={size === 'fill'
+        ? { width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }
+        : { width: size, height: size }}
     >
       {canvasFailed ? (
         <div
@@ -235,7 +243,12 @@ export function CrivoCore({
           style={{ background: `radial-gradient(circle at 35% 30%, ${getSubjectPalette(profile, 'dark').emissive}, ${getSubjectPalette(profile, 'dark').primary} 75%)` }}
         />
       ) : (
-        <canvas ref={canvasRef} style={{ width: '100%', height: '100%', display: 'block' }} />
+        <canvas
+          ref={canvasRef}
+          style={size === 'fill'
+            ? { width: canvasSize, height: canvasSize, display: 'block' }
+            : { width: '100%', height: '100%', display: 'block' }}
+        />
       )}
     </div>
   );

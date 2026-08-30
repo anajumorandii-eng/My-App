@@ -10,6 +10,20 @@ vi.mock('motion/react', async (importOriginal) => {
   return { ...actual, useReducedMotion: useReducedMotionMock };
 });
 
+function rectangularBounds(width: number, height: number): DOMRect {
+  return {
+    width,
+    height,
+    top: 0,
+    right: width,
+    bottom: height,
+    left: 0,
+    x: 0,
+    y: 0,
+    toJSON: () => ({}),
+  } as DOMRect;
+}
+
 describe('CrivoCore hero surface', () => {
   it('exposes hero scale and a decorative canvas without a duplicate accessible image', () => {
     render(<CrivoCore state="ready" subject="Física" topicId="fis-optica" size="fill" scale="hero" decorative />);
@@ -33,5 +47,42 @@ describe('CrivoCore hero surface', () => {
     expect(requestAnimationFrame).not.toHaveBeenCalled();
     expect(HTMLCanvasElement.prototype.getContext).toHaveBeenCalledOnce();
     expect(canvasContext.clearRect).toHaveBeenCalledOnce();
+  });
+
+  it('keeps a fluid hero square and clamps its bitmap at DPR 2 in a rectangular wrapper', () => {
+    const boundsSpy = vi.spyOn(HTMLElement.prototype, 'getBoundingClientRect').mockReturnValue(rectangularBounds(320, 180));
+    Object.defineProperty(window, 'devicePixelRatio', { configurable: true, value: 3 });
+
+    render(<CrivoCore state="ready" subject="Física" size="fill" scale="hero" decorative />);
+
+    const core = screen.getByTestId('crivo-core');
+    const canvas = core.querySelector('canvas');
+    expect(core).toHaveStyle({ width: '100%', height: '100%' });
+    expect(canvas).toHaveStyle({ width: '180px', height: '180px' });
+    expect(canvas).toHaveAttribute('width', '360');
+    expect(canvas).toHaveAttribute('height', '360');
+
+    boundsSpy.mockRestore();
+    Object.defineProperty(window, 'devicePixelRatio', { configurable: true, value: 1 });
+  });
+
+  it.each([
+    ['is unavailable', undefined],
+    ['throws while being created', vi.fn(function () { throw new Error('ResizeObserver unavailable'); })],
+  ])('keeps the initial square canvas when ResizeObserver %s', (_case, ResizeObserverMock) => {
+    useReducedMotionMock.mockReturnValue(true);
+    const boundsSpy = vi.spyOn(HTMLElement.prototype, 'getBoundingClientRect').mockReturnValue(rectangularBounds(200, 120));
+    vi.stubGlobal('ResizeObserver', ResizeObserverMock);
+
+    render(<CrivoCore state="ready" subject="Física" size="fill" scale="hero" decorative />);
+
+    const core = screen.getByTestId('crivo-core');
+    const canvas = core.querySelector('canvas');
+    expect(core).toHaveStyle({ width: '100%', height: '100%' });
+    expect(canvas).toHaveAttribute('width', '120');
+    expect(canvas).toHaveAttribute('height', '120');
+
+    boundsSpy.mockRestore();
+    vi.unstubAllGlobals();
   });
 });
