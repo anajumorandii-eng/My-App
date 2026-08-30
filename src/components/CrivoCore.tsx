@@ -2,7 +2,7 @@ import React, { useEffect, useLayoutEffect, useMemo, useRef, useState } from 're
 import { useReducedMotion } from 'motion/react';
 import { cn } from '../lib/cn';
 import { useRafLoop } from '../hooks/useRafLoop';
-import { getSubjectProfile, type CrivoPalette } from '../design-system/crivoSubjects';
+import { getSubjectPalette, getSubjectProfile, type CrivoPalette } from '../design-system/crivoSubjects';
 import { CORE_REGISTRY, type CanvasContextLike } from '../design-system/crivoCoreRegistry';
 import { drawExternalShell, drawCenterLight, drawScanSweep } from '../design-system/crivoCoreShell';
 import { makeSpring, stepSpring, type Spring } from '../design-system/crivoSpring';
@@ -162,11 +162,11 @@ export function CrivoCore({ state, className, size = 96, subject, previousSubjec
       stepSpring(springs.tiltY, pose.tiltY, dt, 45 * rk, 10 * rd);
       stepSpring(springs.focus, STATE_FOCUS[state], dt, 50 * rk, 11 * rd);
 
-      let palette = profile.palette;
+      let palette = getSubjectPalette(profile, 'dark');
       if (needsMetamorphosis && !metamorphosisDoneRef.current && previousProfile) {
         metamorphosisElapsedRef.current += dt;
         const progress = Math.min(1, metamorphosisElapsedRef.current / MOTION_DURATION.subjectTween);
-        palette = tweenPalette(previousProfile.palette, profile.palette, progress);
+        palette = tweenPalette(getSubjectPalette(previousProfile, 'dark'), getSubjectPalette(profile, 'dark'), progress);
         if (progress >= 1) metamorphosisDoneRef.current = true;
       }
 
@@ -186,7 +186,7 @@ export function CrivoCore({ state, className, size = 96, subject, previousSubjec
       tiltY: makeSpring(pose.tiltY),
       focus: makeSpring(STATE_FOCUS[state]),
     };
-    drawFrame(springs, profile.palette, 0);
+    drawFrame(springs, getSubjectPalette(profile, 'dark'), 0);
     // eslint-disable-next-line react-hooks/exhaustive-deps -- drawFrame closes over refs/size/variantSeed already listed
   }, [reducedMotion, canvasFailed, state, profile, size, variantSeed]);
 
@@ -203,7 +203,7 @@ export function CrivoCore({ state, className, size = 96, subject, previousSubjec
       {canvasFailed ? (
         <div
           className="w-full h-full rounded-full"
-          style={{ background: `radial-gradient(circle at 35% 30%, ${profile.palette.emissive}, ${profile.palette.primary} 75%)` }}
+          style={{ background: `radial-gradient(circle at 35% 30%, ${getSubjectPalette(profile, 'dark').emissive}, ${getSubjectPalette(profile, 'dark').primary} 75%)` }}
         />
       ) : (
         <canvas ref={canvasRef} style={{ width: size, height: size, display: 'block' }} />

@@ -34,11 +34,6 @@ export interface SubjectProfile {
   isFallback?: true;
 }
 
-interface RegisteredSubjectProfile extends SubjectProfile {
-  /** @deprecated Transitional dark-theme alias for consumers migrating to getSubjectPalette. */
-  palette: CrivoPalette;
-}
-
 const neutralPalette: CrivoPalette = {
   bg: '#101112', surface: '#191B1C', primary: '#8E9AA3', secondary: '#B8A778', emissive: '#EFF3F5',
   textHighlight: '#E8EDF0', dataPositive: '#7FBF8F', dataWarning: '#D98B4A', atmoA: '#1A2228', atmoB: '#0A0A0A',
@@ -60,16 +55,16 @@ function makeLightPalette(dark: CrivoPalette): CrivoPalette {
 }
 
 type ProfileInput = Omit<SubjectProfile, 'palettes' | 'isFallback'> & { dark: CrivoPalette };
-function profile({ dark, ...input }: ProfileInput): RegisteredSubjectProfile {
-  return { ...input, palettes: { dark, light: makeLightPalette(dark) }, palette: dark };
+function profile({ dark, ...input }: ProfileInput): SubjectProfile {
+  return { ...input, palettes: { dark, light: makeLightPalette(dark) } };
 }
 
-export const DEFAULT_SUBJECT_PROFILE: RegisteredSubjectProfile = profile({
+export const DEFAULT_SUBJECT_PROFILE: SubjectProfile = profile({
   key: 'default', label: 'Matéria', short: 'CRI', coreType: 'default_neutro', fieldType: 'neutral',
   tipografia: 'neutral', rhythm: 1, damping: 1, dark: neutralPalette,
 });
 
-export const SUBJECT_REGISTRY: Record<string, RegisteredSubjectProfile> = {
+export const SUBJECT_REGISTRY: Record<string, SubjectProfile> = {
   matematica: profile({ key: 'matematica', label: 'Matemática', short: 'MAT', coreType: 'matematica_grid', fieldType: 'grid', tipografia: 'mechanical', rhythm: 1.3, damping: 1.25, dark: { bg:'#12161A', surface:'#1A2126', primary:'#6E93B3', secondary:'#C9A468', emissive:'#F1EFE9', textHighlight:'#D9E4EB', dataPositive:'#7FBF8F', dataWarning:'#D98B4A', atmoA:'#1E2C36', atmoB:'#0B0E11' } }),
   fisica: profile({ key: 'fisica', label: 'Física', short: 'FIS', coreType: 'fisica_lentes', fieldType: 'lenses', tipografia: 'vector', rhythm: 0.9, damping: 0.8, dark: { bg:'#0A0E15', surface:'#121A24', primary:'#4C7FE0', secondary:'#E0B23A', emissive:'#F3F6FF', textHighlight:'#CFE0FF', dataPositive:'#6FCF97', dataWarning:'#E0954C', atmoA:'#16264A', atmoB:'#080A0F' } }),
   quimica: profile({ key: 'quimica', label: 'Química', short: 'QUI', coreType: 'quimica_rede', fieldType: 'chamber', tipografia: 'reactive', rhythm: 1.2, damping: 0.65, dark: { bg:'#0D1714', surface:'#15211D', primary:'#B87545', secondary:'#7C9C74', emissive:'#FBF6EC', textHighlight:'#E8D9C8', dataPositive:'#8FBF7F', dataWarning:'#D9773F', atmoA:'#173029', atmoB:'#080D0B' } }),
@@ -107,7 +102,7 @@ export const TYPOGRAPHY_PRESETS: Record<CrivoTypography, TypographyPreset> = {
 const warnedUnknownSubjects = new Set<string>();
 const normalizeSubject = (subject: string) => subject.trim().normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
 
-export function getSubjectProfile(subject: string | null | undefined): RegisteredSubjectProfile {
+export function getSubjectProfile(subject: string | null | undefined): SubjectProfile {
   const key = normalizeSubject(subject ?? '');
   const known = SUBJECT_REGISTRY[key];
   if (known) return known;

@@ -60,6 +60,11 @@ test('crivo subjects: expõe as traduções clara e escura exatas das novas iden
   assert.equal(getSubjectPalette(SUBJECT_REGISTRY.ingles, 'dark'), SUBJECT_REGISTRY.ingles.palettes.dark);
 });
 
+test('crivo subjects: não expõe o alias legado palette em nenhum perfil público', () => {
+  const profiles = [DEFAULT_SUBJECT_PROFILE, ...Object.values(SUBJECT_REGISTRY), getSubjectProfile('Matemática')];
+  for (const profile of profiles) assert.equal('palette' in profile, false);
+});
+
 test('crivo subjects: normaliza acentos e avisa uma vez para matéria desconhecida', () => {
   const originalWarn = console.warn;
   const warnings: unknown[][] = [];

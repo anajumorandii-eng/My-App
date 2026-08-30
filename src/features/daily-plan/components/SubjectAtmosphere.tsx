@@ -2,7 +2,7 @@ import React, { useEffect, useLayoutEffect, useMemo, useRef, useState } from 're
 import { useReducedMotion } from 'motion/react';
 import { cn } from '../../../lib/cn';
 import { useRafLoop } from '../../../hooks/useRafLoop';
-import { getSubjectProfile, PALETTE_TOKENS, type CrivoPalette } from '../../../design-system/crivoSubjects';
+import { getSubjectPalette, getSubjectProfile, PALETTE_TOKENS, type CrivoPalette } from '../../../design-system/crivoSubjects';
 import { FIELD_REGISTRY } from '../../../design-system/crivoFieldRegistry';
 import { FIELD_CANVAS_REGISTRY } from '../../../design-system/crivoFieldCanvas';
 import type { CanvasContextLike } from '../../../design-system/crivoCoreRegistry';
@@ -94,8 +94,8 @@ export function SubjectAtmosphere({ subject, className, children }: SubjectAtmos
   // First paint: apply directly, no tween — there's no "previous" atmosphere yet.
   useLayoutEffect(() => {
     if (!wrapperNode) return;
-    applyPaletteVars(wrapperNode, profile.palette);
-    wrapperNode.style.setProperty('--subject-field-css', FIELD_REGISTRY[profile.fieldType](profile.palette));
+    applyPaletteVars(wrapperNode, getSubjectPalette(profile, 'dark'));
+    wrapperNode.style.setProperty('--subject-field-css', FIELD_REGISTRY[profile.fieldType](getSubjectPalette(profile, 'dark')));
     // eslint-disable-next-line react-hooks/exhaustive-deps -- mount-only; later subject changes go through the effect below
   }, [wrapperNode]);
 
@@ -104,8 +104,8 @@ export function SubjectAtmosphere({ subject, className, children }: SubjectAtmos
     if (reducedMotion || !wrapperNode) {
       previousProfileRef.current = profile;
       if (wrapperNode) {
-        applyPaletteVars(wrapperNode, profile.palette);
-        wrapperNode.style.setProperty('--subject-field-css', FIELD_REGISTRY[profile.fieldType](profile.palette));
+        applyPaletteVars(wrapperNode, getSubjectPalette(profile, 'dark'));
+        wrapperNode.style.setProperty('--subject-field-css', FIELD_REGISTRY[profile.fieldType](getSubjectPalette(profile, 'dark')));
       }
       setIsTweening(false);
       return;
@@ -117,10 +117,10 @@ export function SubjectAtmosphere({ subject, className, children }: SubjectAtmos
   useRafLoop(
     (dt) => {
       elapsedRef.current += dt;
-      let palette = profile.palette;
+      let palette = getSubjectPalette(profile, 'dark');
       if (isTweening) {
         const progress = Math.min(1, elapsedRef.current / MOTION_DURATION.subjectTween);
-        palette = tweenPalette(previousProfileRef.current.palette, profile.palette, progress);
+        palette = tweenPalette(getSubjectPalette(previousProfileRef.current, 'dark'), getSubjectPalette(profile, 'dark'), progress);
         if (wrapperNode) {
           applyPaletteVars(wrapperNode, palette);
           wrapperNode.style.setProperty('--subject-field-css', FIELD_REGISTRY[profile.fieldType](palette));
@@ -138,7 +138,7 @@ export function SubjectAtmosphere({ subject, className, children }: SubjectAtmos
   // Reduced motion: one static field frame, no continuous drift/waving.
   useEffect(() => {
     if (!reducedMotion || canvasFailed) return;
-    drawField(profile.palette, 0);
+    drawField(getSubjectPalette(profile, 'dark'), 0);
     // eslint-disable-next-line react-hooks/exhaustive-deps -- drawField closes over refs already listed
   }, [reducedMotion, canvasFailed, profile]);
 
