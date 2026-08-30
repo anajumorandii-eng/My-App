@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Velvet Burgundy-to-Forest Dual Gradient -->
+    <linearGradient id="velvetBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6E1B28"/>
+      <stop offset="35%" stop-color="#461019"/>
+      <stop offset="65%" stop-color="#0E231D"/>
+      <stop offset="100%" stop-color="#18332C"/>
+    </linearGradient>
+
+    <!-- Warm Vignette / Diffuse Shadow -->
+    <radialGradient id="vignette" cx="30%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="rgba(255,190,150,0.14)"/>
+      <stop offset="50%" stop-color="rgba(0,0,0,0)"/>
+      <stop offset="100%" stop-color="rgba(0,0,0,0.65)"/>
+    </radialGradient>
+
+    <!-- Gold Brass Instrument Gradient -->
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF2D6"/>
+      <stop offset="25%" stop-color="#E2B774"/>
+      <stop offset="65%" stop-color="#A87A38"/>
+      <stop offset="100%" stop-color="#F5DBA8"/>
+    </linearGradient>
+
+    <!-- Core Amber Glow -->
+    <radialGradient id="amberGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="30%" stop-color="#FFD480"/>
+      <stop offset="65%" stop-color="#E5842E"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
+
+    <!-- Soft Glow Filter -->
+    <filter id="coreGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="9" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <!-- Subtle Bevel Border -->
+    <linearGradient id="bevelBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255,230,200,0.3)"/>
+      <stop offset="50%" stop-color="rgba(255,255,255,0.05)"/>
+      <stop offset="100%" stop-color="rgba(100,200,160,0.2)"/>
+    </linearGradient>
+
+    <!-- Crivo Pattern Lattice -->
+    <pattern id="crivoLattice" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="10" stroke="#E2B774" stroke-width="0.75" opacity="0.45"/>
+      <line x1="0" y1="0" x2="10" y2="0" stroke="#E2B774" stroke-width="0.75" opacity="0.45"/>
+    </pattern>
+  </defs>
+
+  <!-- Base Squircle with Velvet Dual Gradient -->
+  <rect x="16" y="16" width="480" height="480" rx="108" fill="url(#velvetBg)"/>
+  <rect x="16" y="16" width="480" height="480" rx="108" fill="url(#vignette)"/>
+  <rect x="16" y="16" width="480" height="480" rx="108" fill="none" stroke="url(#bevelBorder)" stroke-width="2.5"/>
+
+  <!-- Astrolabe Base Coordinates -->
+  <g transform="translate(256, 256)">
+    <!-- Outer Containment Dial -->
+    <circle cx="0" cy="0" r="162" fill="none" stroke="url(#goldGradient)" stroke-width="1.8" opacity="0.6"/>
+    <circle cx="0" cy="0" r="150" fill="none" stroke="url(#goldGradient)" stroke-width="5.5" opacity="0.85"/>
+    <circle cx="0" cy="0" r="142" fill="none" stroke="url(#goldGradient)" stroke-width="1.2" stroke-dasharray="2 6" opacity="0.5"/>
+
+    <!-- Coordinate Grid Crosshairs -->
+    <line x1="-170" y1="0" x2="170" y2="0" stroke="url(#goldGradient)" stroke-width="1" opacity="0.35"/>
+    <line x1="0" y1="-170" x2="0" y2="170" stroke="url(#goldGradient)" stroke-width="1" opacity="0.35"/>
+
+    <!-- Orbital Astrolabe Ring 1 (tilted) -->
+    <g transform="rotate(-32)">
+      <ellipse cx="0" cy="0" rx="146" ry="74" fill="none" stroke="url(#goldGradient)" stroke-width="7" opacity="0.9"/>
+      <ellipse cx="0" cy="0" rx="146" ry="74" fill="none" stroke="#FFFFFF" stroke-width="1.2" opacity="0.4"/>
+    </g>
+
+    <!-- Orbital Astrolabe Ring 2 (tilted) -->
+    <g transform="rotate(38)">
+      <ellipse cx="0" cy="0" rx="146" ry="74" fill="none" stroke="url(#goldGradient)" stroke-width="8" opacity="0.95"/>
+      <ellipse cx="0" cy="0" rx="146" ry="74" fill="none" stroke="#FFF7E0" stroke-width="1.5" opacity="0.55"/>
+    </g>
+
+    <!-- Central Sieve Chamber: CRIVO -->
+    <circle cx="0" cy="0" r="76" fill="#14171A" stroke="url(#goldGradient)" stroke-width="7"/>
+    <circle cx="0" cy="0" r="70" fill="url(#crivoLattice)"/>
+    <circle cx="0" cy="0" r="70" fill="none" stroke="url(#goldGradient)" stroke-width="2.5" opacity="0.8"/>
+    <circle cx="0" cy="0" r="54" fill="none" stroke="url(#goldGradient)" stroke-width="1.5" stroke-dasharray="4 4" opacity="0.75"/>
+    <circle cx="0" cy="0" r="38" fill="#1A1817" stroke="url(#goldGradient)" stroke-width="3"/>
+
+    <!-- Luminous Core Star of Focus -->
+    <circle cx="0" cy="0" r="24" fill="url(#amberGlow)" filter="url(#coreGlow)"/>
+
+    <!-- 4-point Diamond Spark of Clarity -->
+    <path d="M 0,-34 Q 0,0 -34,0 Q 0,0 0,34 Q 0,0 34,0 Q 0,0 0,-34 Z"
+          fill="#FFF6DF" opacity="0.95" filter="url(#coreGlow)"/>
+
+    <!-- Center Point -->
+    <circle cx="0" cy="0" r="6" fill="#FFFFFF" filter="url(#coreGlow)"/>
+    <circle cx="0" cy="0" r="3" fill="#FFFFFF"/>
+  </g>
+
+  <!-- Top-left Satellite Sphere -->
+  <circle cx="138" cy="128" r="15" fill="url(#goldGradient)"/>
+  <circle cx="134" cy="124" r="4" fill="#FFFFFF" opacity="0.6"/>
+
+  <!-- Guiding Sparkle Star Top -->
+  <path d="M 256,114 Q 256,126 248,126 Q 256,126 256,138 Q 256,126 264,126 Q 256,126 256,114 Z"
+        fill="#FFEBB8" opacity="0.9"/>
+
+  <!-- Guiding Sparkle Star Bottom-right -->
+  <path d="M 324,364 Q 324,374 316,374 Q 324,374 324,384 Q 324,374 332,374 Q 324,374 324,364 Z"
+        fill="#FFEBB8" opacity="0.85"/>
+</svg>
