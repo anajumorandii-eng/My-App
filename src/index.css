@@ -206,6 +206,15 @@ html, body {
   background-color: var(--background-base);
 }
 
+/* Hoje owns the full mobile viewport. Reserve the visible bottom-nav height
+ * plus the device inset so its CTA and first decision item cannot end up
+ * underneath persistent navigation. Desktop has no bottom navigation. */
+@media (max-width: 1023px) {
+  .route-presentation-immersive {
+    padding-bottom: calc(4rem + env(safe-area-inset-bottom));
+  }
+}
+
 /* ---------------------------------------------------------------------
  * Hoje immersive field
  *

@@ -24,7 +24,7 @@ export function BottomNav() {
   return (
     <nav
       aria-label="Navegação principal"
-      className="lg:hidden fixed bottom-0 inset-x-0 z-30 flex items-stretch bg-surface-elevated border-t border-border-subtle pb-[env(safe-area-inset-bottom)]"
+      className="lg:hidden fixed bottom-0 inset-x-0 z-30 flex items-stretch border-t border-border-subtle bg-surface-elevated text-text-primary shadow-[0_-1px_12px_color-mix(in_oklab,var(--background-base)_28%,transparent)] [padding-bottom:env(safe-area-inset-bottom)]"
     >
       {ITEMS.map((item) => {
         const Icon = item.icon;
