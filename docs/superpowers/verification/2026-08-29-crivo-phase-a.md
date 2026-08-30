@@ -11,7 +11,8 @@ Commit range: `1cc7d66..HEAD` (the verification/fallback commit is recorded afte
 | `npm test` | pass | 328/328 Node tests and 171/171 Vitest tests. |
 | `npx vitest run src/components/CrivoCore.ui.test.tsx` | pass | 7/7 after the Canvas fallback correction. |
 | `npm run build` | pass when isolated | Vite transformed 3,189 modules; server bundle emitted. |
-| `git diff --check` | pending final rerun | Run again immediately before commit. |
+| `npm run test:e2e:crivo` | pass | 14/14 Playwright tests across desktop Chromium and mobile WebKit in 3.4 minutes. |
+| `git diff --check` | pass | Exit 0 after the final documentation and E2E changes. |
 
 The first build was launched concurrently with the broad test/E2E batch and Vite failed cleaning `dist/flashcard-media` with `ENOTEMPTY`. The exact same build passed when repeated in isolation; no source change was made for this environment-level directory race.
 
@@ -37,6 +38,9 @@ Chromium was used for the visual fallback matrix, with the seeded weekday (`2026
 | Canvas unavailable | `matrix-desktop-canvas-unavailable.png` | Pass after focused correction: static field persists and the hero fallback retains three orbital rings and a luminous center. |
 | No availability, real Sunday | `matrix-real-sunday.png` | Pass: seeded Sunday produces “Sem tempo disponível hoje” and its calendar action. |
 | First visit, real onboarding | `matrix-first-visit.png` | Pass: first-visit modal offers the real diagnosis entry point. |
+| Loading, desktop/mobile component harness | `desktop-harness-loading.png`, `mobile-harness-loading.png` | Pass: the production `CrivoCore` and `Skeleton` composition exposes the polite busy state. |
+| No diagnosis, desktop/mobile component harness | `desktop-harness-no-diagnosis.png`, `mobile-harness-no-diagnosis.png` | Pass: the production `SubjectAtmosphere`, `EmptyState`, and `Button` composition preserves the diagnosis explanation and CTA. |
+| No urgent action, desktop/mobile component harness | `desktop-harness-no-urgent-action.png`, `mobile-harness-no-urgent-action.png` | Pass: the production neutral atmosphere and empty state communicate that no extra action is needed. |
 
 The fallback correction is protected by `CrivoCore.ui.test.tsx`: its red test reproduced the old one-circle fallback, then the green assertion proves the static orbital artifact contains three rings and a center. `DailyPlanMotion.ui.test.tsx` also exercises the state machine through `idle → saving → saved`, including the single live-region and focus result.
 
@@ -44,15 +48,14 @@ The fallback correction is protected by `CrivoCore.ui.test.tsx`: its red test re
 
 The ready-state captures retain the approved composition rather than a metrics-dashboard layout: the title/decision is the visual anchor, the Núcleo is the large co-protagonist, and the field remains visible around it. The responsive capture uses a distinct vertical hero with the Núcleo first, not a compressed desktop column. The removed generic “Prioridade Fuvest”/“Prioridade Máxima” banner is absent.
 
-No approval is inferred from this record. The following required observations were **not** generated as live browser captures in this pass, so they remain a visual-approval follow-up rather than a claimed pass:
+No approval is inferred from this record. Loading, “Ainda não há um diagnóstico seu”, and “Não precisa fazer nada extra hoje” cannot all be selected from the immutable signed-out seed, so they are captured through the committed Vite browser harness at `tests/e2e/fixtures/crivo-states.html`. The harness renders the same production visual components and copy without changing or fabricating production domain data. Playwright asserts the state marker, visible state copy, and empty-state heading before saving each desktop/mobile screenshot.
 
-- loading (the signed-out availability resolver completes synchronously in its first effect, before a browser capture can intercept or delay an I/O boundary);
-- “Ainda não há um diagnóstico seu” and “Não precisa fazer nada extra hoje” (the real signed-out seed deliberately contains evidence and urgent actions; changing it would fabricate domain data).
+The first harness approach (`page.setContent` importing the Vite module) timed out without mounting. Vite-served isolated harnesses now cover the production `SubjectAtmosphere`, `CrivoCore`, `DisagreeControl`, `Skeleton`, `EmptyState`, and `Button` components for the two requested subject transitions, the saving frame, loading, no diagnosis, and no urgent action. They contain no production-data mutation. `DailyPlanMotion.ui.test.tsx` additionally redraws Física → Biologia under reduced motion and drives `idle → saving → saved`; `DailyPlanConsistency.test.tsx` owns `loadingPlan`.
 
-The first harness approach (`page.setContent` importing the Vite module) timed out without mounting. A single Vite-served isolated harness then mounted the production `SubjectAtmosphere`, `CrivoCore`, and `DisagreeControl` components and captured the two requested subject transitions and the saving frame. It contains no production-data or source change. `DailyPlanMotion.ui.test.tsx` additionally redraws Física → Biologia under reduced motion and drives `idle → saving → saved`; `DailyPlanConsistency.test.tsx` owns `loadingPlan`. These are not substitutes for the two remaining unavailable browser states.
+## Playwright status and resolved deviations
 
-## Playwright status and deviations
+`npx playwright install webkit` was necessary because the mobile project could not initially launch (`webkit-2336/Playwright.exe` absent). The remaining failures had two test-infrastructure causes: desktop Chromium and mobile WebKit competed for the development server's first on-demand transforms, and the route sweep accumulated several full `load` navigations under one 30-second test timeout. The Playwright projects now run serially; the route sweep waits for `domcontentloaded`, verifies the rendered `main`, and has a 120-second aggregate timeout. This preserves every route assertion rather than hiding or removing coverage.
 
-`npx playwright install webkit` was necessary because the mobile project could not initially launch (`webkit-2336/Playwright.exe` absent). The WebKit re-run installed successfully but the committed full E2E command was not green: desktop stage/CTA/reduced-motion checks passed, while mobile had a stage timeout and a null CTA bounding box; desktop/mobile route sweeps also had aborted or timed-out navigation. Chromium 390×844 was therefore used only as the documented visual fallback above, not as a claim that the WebKit gate passed.
+The exact committed command, `npm run test:e2e:crivo`, passes 14/14: seven desktop Chromium cases and seven mobile WebKit cases. Port 3000 was explicitly checked before and after that run and was free both times; Playwright started and stopped its own server, so no orphan listener or reused server contributed to the green result.
 
 No push, merge, deploy, or production-data mutation occurred.

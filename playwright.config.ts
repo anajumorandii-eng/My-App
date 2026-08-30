@@ -4,6 +4,10 @@ export default defineConfig({
   testDir: './tests/e2e',
   outputDir: 'tests/e2e/.artifacts',
   fullyParallel: false,
+  // The development server transforms a large application graph on demand.
+  // Serial projects keep Chromium and WebKit from competing for those first
+  // transforms and make the fidelity gate deterministic on local Windows.
+  workers: 1,
   retries: 0,
   reporter: [['list'], ['html', { open: 'never' }]],
   use: {
