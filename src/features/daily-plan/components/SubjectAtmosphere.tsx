@@ -110,26 +110,7 @@ export function SubjectAtmosphere({ subject, className, children }: SubjectAtmos
     }
   }, []);
 
-  // Backing-store resolution tracks the wrapper's own full-bleed box and is
-  // clamped to DPR 2 so the environmental field cannot grow without bound.
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    const ctx = ctxRef.current;
-    if (!canvas || !ctx || !wrapperNode || canvasFailed) return;
-    const resize = () => {
-      const rect = wrapperNode.getBoundingClientRect();
-      const dpr = Math.min(window.devicePixelRatio || 1, 2);
-      canvas.width = Math.max(1, Math.round(rect.width * dpr));
-      canvas.height = Math.max(1, Math.round(rect.height * dpr));
-      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    };
-    resize();
-    const observer = new ResizeObserver(resize);
-    observer.observe(wrapperNode);
-    return () => observer.disconnect();
-  }, [wrapperNode, canvasFailed]);
-
-  const drawField = (palette: CrivoPalette, time: number) => {
+  function drawField(palette: CrivoPalette, time: number) {
     const ctx = ctxRef.current;
     const canvas = canvasRef.current;
     if (!ctx || !canvas) return;
@@ -146,7 +127,38 @@ export function SubjectAtmosphere({ subject, className, children }: SubjectAtmos
       palette,
       focus: FIELD_FOCUS,
     });
-  };
+  }
+
+  // Backing-store resolution tracks the wrapper's own full-bleed box and is
+  // clamped to DPR 2 so the environmental field cannot grow without bound.
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    const ctx = ctxRef.current;
+    if (!canvas || !ctx || !wrapperNode || canvasFailed) return;
+    const resize = () => {
+      const rect = wrapperNode.getBoundingClientRect();
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      const width = Math.max(1, Math.round(rect.width * dpr));
+      const height = Math.max(1, Math.round(rect.height * dpr));
+      if (canvas.width === width && canvas.height === height) return;
+      canvas.width = width;
+      canvas.height = height;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      if (reducedMotion) {
+        const resolved = readResolvedPalette(wrapperNode);
+        if (!resolved) return;
+        currentPaletteRef.current = resolved;
+        targetPaletteRef.current = resolved;
+        tweenFromPaletteRef.current = null;
+        drawField(resolved, 0);
+      }
+    };
+    resize();
+    const observer = new ResizeObserver(resize);
+    observer.observe(wrapperNode);
+    return () => observer.disconnect();
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- drawField reads the current profile and Canvas refs
+  }, [wrapperNode, canvasFailed, reducedMotion, profile]);
 
   // Both translations live locally. CSS remains the sole theme selector;
   // Canvas reads the resolved aliases instead of checking a React theme prop.

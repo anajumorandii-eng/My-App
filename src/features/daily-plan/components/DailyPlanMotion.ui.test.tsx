@@ -1,4 +1,4 @@
-import { render, screen, waitFor } from '@testing-library/react';
+import { act, render, screen, waitFor } from '@testing-library/react';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { canvasContext } from '../../../testSetup';
 import { SubjectAtmosphere } from './SubjectAtmosphere';
@@ -9,6 +9,20 @@ vi.mock('motion/react', async (importOriginal) => {
   const actual = await importOriginal<typeof import('motion/react')>();
   return { ...actual, useReducedMotion: useReducedMotionMock };
 });
+
+function rectangularBounds(width: number, height: number): DOMRect {
+  return {
+    width,
+    height,
+    top: 0,
+    right: width,
+    bottom: height,
+    left: 0,
+    x: 0,
+    y: 0,
+    toJSON: () => ({}),
+  } as DOMRect;
+}
 
 describe('SubjectAtmosphere', () => {
   beforeEach(() => {
@@ -69,5 +83,54 @@ describe('SubjectAtmosphere', () => {
     expect(requestAnimationFrameSpy).not.toHaveBeenCalled();
     getComputedStyleSpy.mockRestore();
     requestAnimationFrameSpy.mockRestore();
+  });
+
+  it('keeps the reduced-motion final frame after the canvas backing store resizes', async () => {
+    useReducedMotionMock.mockReturnValue(true);
+    let width = 120;
+    let height = 80;
+    let resizeCallback: ResizeObserverCallback | undefined;
+    class ControlledResizeObserver implements ResizeObserver {
+      constructor(callback: ResizeObserverCallback) {
+        resizeCallback = callback;
+      }
+      observe() {}
+      unobserve() {}
+      disconnect() {}
+    }
+    vi.stubGlobal('ResizeObserver', ControlledResizeObserver);
+    const boundsSpy = vi.spyOn(HTMLElement.prototype, 'getBoundingClientRect')
+      .mockImplementation(() => rectangularBounds(width, height));
+    const getComputedStyleSpy = vi.spyOn(window, 'getComputedStyle').mockImplementation((element) => {
+      const node = element as HTMLElement;
+      return {
+        getPropertyValue: (property: string) => {
+          const token = property.replace('--subject-', '');
+          return node.style.getPropertyValue(`--subject-light-${token}`);
+        },
+      } as CSSStyleDeclaration;
+    });
+    const requestAnimationFrameSpy = vi.spyOn(window, 'requestAnimationFrame');
+    const clearRect = vi.mocked(canvasContext.clearRect);
+    const initialDrawCount = clearRect.mock.calls.length;
+    render(<SubjectAtmosphere subject="Física"><p>Decisão</p></SubjectAtmosphere>);
+
+    await waitFor(() => expect(clearRect.mock.calls.length).toBeGreaterThan(initialDrawCount));
+    const firstDrawCount = clearRect.mock.calls.length;
+    const atmosphere = screen.getByTestId('subject-atmosphere');
+    width = 240;
+    height = 160;
+    act(() => resizeCallback?.(
+      [{ target: atmosphere, contentRect: rectangularBounds(width, height) } as unknown as ResizeObserverEntry],
+      {} as ResizeObserver,
+    ));
+
+    expect(atmosphere.querySelector('canvas')).toHaveAttribute('width', '240');
+    expect(clearRect.mock.calls.length).toBeGreaterThan(firstDrawCount);
+    expect(requestAnimationFrameSpy).not.toHaveBeenCalled();
+    boundsSpy.mockRestore();
+    getComputedStyleSpy.mockRestore();
+    requestAnimationFrameSpy.mockRestore();
+    vi.unstubAllGlobals();
   });
 });
