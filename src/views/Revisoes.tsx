@@ -9,6 +9,7 @@ import { applyReviewOutcome, qualityFromSelfRating } from '../lib/spacedRepetiti
 import { Repeat, CheckCircle2, AlertTriangle, CloudOff, Sparkles, Frown, Meh, Smile } from 'lucide-react';
 import { useSummaryProgress } from '../hooks/useSummaryProgress';
 import { interactiveSummaries } from '../data/interactiveSummaries';
+import { getSubjectProfile } from '../design-system/crivoSubjects';
 import SummaryReviewsPanel from '../components/SummaryReviewsPanel';
 
 type SelfRating = 'fraco' | 'mediano' | 'forte';
@@ -113,6 +114,7 @@ export default function Revisoes() {
           return (
             <div
               key={mastery.topicId}
+              data-geometry={topic ? getSubjectProfile(topic.subject).fieldType : undefined}
               className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-5 shadow-sm"
             >
               <div className="flex items-center justify-between">

@@ -55,8 +55,16 @@ export function useRafLoop(callback: (dtSeconds: number) => void, { paused, targ
     };
 
     document.addEventListener('visibilitychange', start);
-    const resizeObserver = new ResizeObserver(start);
-    resizeObserver.observe(target);
+    let resizeObserver: ResizeObserver | undefined;
+    if (typeof ResizeObserver !== 'undefined') {
+      try {
+        resizeObserver = new ResizeObserver(start);
+        resizeObserver.observe(target);
+      } catch {
+        // ResizeObserver unavailable or construction failed — the visibilitychange
+        // listener and the immediate start() call below are still active.
+      }
+    }
 
     start();
 
@@ -64,7 +72,7 @@ export function useRafLoop(callback: (dtSeconds: number) => void, { paused, targ
       running = false;
       window.cancelAnimationFrame(handle);
       document.removeEventListener('visibilitychange', start);
-      resizeObserver.disconnect();
+      resizeObserver?.disconnect();
     };
   }, [paused, target]);
 }

@@ -2,7 +2,7 @@ import React, { useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { useReducedMotion } from 'motion/react';
 import { cn } from '../lib/cn';
 import { useRafLoop } from '../hooks/useRafLoop';
-import { getSubjectPalette, getSubjectProfile, type CrivoPalette } from '../design-system/crivoSubjects';
+import { getSubjectPalette, getSubjectProfile, PALETTE_TOKENS, type CrivoPalette, type PaletteToken } from '../design-system/crivoSubjects';
 import { CORE_REGISTRY, type CanvasContextLike } from '../design-system/crivoCoreRegistry';
 import { drawExternalShell, drawCenterLight, drawScanSweep } from '../design-system/crivoCoreShell';
 import { makeSpring, stepSpring, type Spring } from '../design-system/crivoSpring';
@@ -45,6 +45,23 @@ const STATE_FOCUS: Record<CrivoCoreState, number> = {
   ready: 1.0,
   recalibrating: 0.05,
 };
+
+const PALETTE_CSS_TOKEN: Record<PaletteToken, string> = {
+  bg: 'bg', surface: 'surface', primary: 'primary', secondary: 'secondary', emissive: 'emissive',
+  textHighlight: 'text-highlight', textAccent: 'text-accent', focusAccent: 'focus-accent',
+  dataPositive: 'data-positive', dataWarning: 'data-warning', atmoA: 'atmo-a', atmoB: 'atmo-b',
+};
+
+function readInheritedPalette(node: HTMLElement): CrivoPalette | null {
+  const styles = getComputedStyle(node);
+  const entries = PALETTE_TOKENS.map((token) => [
+    token,
+    styles.getPropertyValue(`--subject-${PALETTE_CSS_TOKEN[token]}`).trim().replace(/^#[\dA-F]{6}([\dA-F]{2})$/i, (value) => value.slice(0, 7)),
+  ] as const);
+  return entries.every(([, value]) => value !== '' && !value.includes('var('))
+    ? Object.fromEntries(entries) as CrivoPalette
+    : null;
+}
 
 interface CoreSprings { spread: Spring; glow: Spring; tiltX: Spring; tiltY: Spring; focus: Spring }
 function makeCoreSprings(state: CrivoCoreState): CoreSprings {
@@ -102,6 +119,7 @@ export function CrivoCore({
   const [canvasFailed, setCanvasFailed] = useState(false);
   const [canvasReady, setCanvasReady] = useState(false);
   const [canvasSize, setCanvasSize] = useState(() => (typeof size === 'number' ? size : 0));
+  const [renderedPrimary, setRenderedPrimary] = useState('');
 
   const profile = useMemo(() => getSubjectProfile(subject), [subject]);
   const previousProfile = useMemo(() => (previousSubject ? getSubjectProfile(previousSubject) : null), [previousSubject]);
@@ -165,7 +183,7 @@ export function CrivoCore({
     }
   }, [size, wrapperNode, canvasFailed]);
 
-  const drawFrame = (springs: CoreSprings, palette: CrivoPalette, time: number) => {
+  const drawFrame = (springs: CoreSprings, palette: CrivoPalette, time: number, morphProgress = 1) => {
     const ctx = ctxRef.current;
     if (!ctx || canvasSize <= 0) return;
     ctx.clearRect(0, 0, canvasSize, canvasSize);
@@ -177,8 +195,20 @@ export function CrivoCore({
     const shellPose = { cx, cy, baseR, spread: springs.spread.x, glow: springs.glow.x, squashY, skewX };
 
     drawExternalShell(shellCtx, shellPose, palette);
-    const drawFn = CORE_REGISTRY[profile.coreType] ?? CORE_REGISTRY.default_neutro;
-    drawFn({ ctx: shellCtx, width: canvasSize, height: canvasSize, state: { focus: springs.focus.x }, palette, variantSeed, time, squashY, skewX });
+    const drawGeometry = (coreType: typeof profile.coreType, opacity: number) => {
+      if (opacity <= 0) return;
+      ctx.save();
+      ctx.globalAlpha = opacity;
+      const drawFn = CORE_REGISTRY[coreType] ?? CORE_REGISTRY.default_neutro;
+      drawFn({ ctx: shellCtx, width: canvasSize, height: canvasSize, state: { focus: springs.focus.x }, palette, variantSeed, time, squashY, skewX });
+      ctx.restore();
+    };
+    if (needsMetamorphosis && previousProfile && morphProgress < 1) {
+      drawGeometry(previousProfile.coreType, 1 - morphProgress);
+      drawGeometry(profile.coreType, morphProgress);
+    } else {
+      drawGeometry(profile.coreType, 1);
+    }
     if (STATE_POSE[state].scan) drawScanSweep(shellCtx, cx, cy, baseR, scanAngleRef.current, palette);
     drawCenterLight(shellCtx, shellPose, palette);
   };
@@ -196,22 +226,27 @@ export function CrivoCore({
       stepSpring(springs.tiltY, pose.tiltY, dt, 45 * rk, 10 * rd);
       stepSpring(springs.focus, STATE_FOCUS[state], dt, 50 * rk, 11 * rd);
 
-      let palette = getSubjectPalette(profile, 'dark');
+      const resolvedPalette = wrapperNode ? readInheritedPalette(wrapperNode) : null;
+      const activeTheme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+      let palette = resolvedPalette ?? getSubjectPalette(profile, activeTheme);
+      let morphProgress = 1;
       if (needsMetamorphosis && !metamorphosisDoneRef.current && previousProfile) {
         metamorphosisElapsedRef.current += dt;
         const progress = Math.min(1, metamorphosisElapsedRef.current / MOTION_DURATION.subjectTween);
-        palette = tweenPalette(getSubjectPalette(previousProfile, 'dark'), getSubjectPalette(profile, 'dark'), progress);
+        palette = tweenPalette(getSubjectPalette(previousProfile, activeTheme), palette, progress);
+        morphProgress = progress;
         if (progress >= 1) metamorphosisDoneRef.current = true;
       }
 
-      drawFrame(springs, palette, elapsedRef.current);
+      setRenderedPrimary((current) => current === palette.primary ? current : palette.primary);
+      drawFrame(springs, palette, elapsedRef.current, morphProgress);
     },
     { paused: reducedMotion || canvasFailed, target: wrapperNode }
   );
 
   // Reduced motion: exactly one frame, at the state's target pose, no tween, no loop.
   useLayoutEffect(() => {
-    if (!reducedMotion || canvasFailed) return;
+    if (!reducedMotion || canvasFailed || !canvasReady || canvasSize <= 0) return;
     const pose = STATE_POSE[state];
     const springs: CoreSprings = {
       spread: makeSpring(pose.spread),
@@ -220,19 +255,28 @@ export function CrivoCore({
       tiltY: makeSpring(pose.tiltY),
       focus: makeSpring(STATE_FOCUS[state]),
     };
-    drawFrame(springs, getSubjectPalette(profile, 'dark'), 0);
+    const drawResolvedCore = () => {
+      const activeTheme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+      const palette = wrapperNode ? readInheritedPalette(wrapperNode) ?? getSubjectPalette(profile, activeTheme) : getSubjectPalette(profile, activeTheme);
+      setRenderedPrimary(palette.primary);
+      drawFrame(springs, palette, 0);
+    };
+    drawResolvedCore();
+    const observer = new MutationObserver(drawResolvedCore);
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+    return () => observer.disconnect();
     // eslint-disable-next-line react-hooks/exhaustive-deps -- drawFrame closes over refs/size/variantSeed already listed
-  }, [reducedMotion, canvasFailed, canvasReady, state, profile, canvasSize, variantSeed]);
+  }, [reducedMotion, canvasFailed, canvasReady, state, profile, canvasSize, variantSeed, wrapperNode]);
 
   const ariaLabel = subject && !profile.isFallback ? `${STATE_LABEL[state]} — ${profile.label}` : STATE_LABEL[state];
-  const fallbackPalette = getSubjectPalette(profile, 'dark');
-
   return (
     <div
       ref={setWrapperNode}
       {...(!decorative && { role: 'img', 'aria-label': ariaLabel })}
       data-testid="crivo-core"
       data-scale={scale}
+      data-morphing={needsMetamorphosis && !metamorphosisDoneRef.current && previousProfile ? `${previousProfile.coreType}→${profile.coreType}` : undefined}
+      data-rendered-primary={renderedPrimary || undefined}
       data-motion-active={!reducedMotion && !canvasFailed && canvasReady && canvasSize > 0 && state !== 'ready' ? 'true' : undefined}
       className={cn('relative shrink-0', className)}
       style={size === 'fill'
@@ -245,7 +289,7 @@ export function CrivoCore({
           data-static-artifact="orbital"
           className="relative w-full h-full overflow-hidden rounded-full"
           style={{
-            background: `radial-gradient(circle at 52% 48%, ${fallbackPalette.emissive} 0 4%, ${fallbackPalette.primary}55 5% 22%, transparent 48%), radial-gradient(ellipse at center, ${fallbackPalette.atmoA}, ${fallbackPalette.atmoB})`,
+            background: 'radial-gradient(circle at 52% 48%, var(--subject-emissive) 0 4%, color-mix(in srgb, var(--subject-primary) 34%, transparent) 5% 22%, transparent 48%), radial-gradient(ellipse at center, var(--subject-atmo-a), var(--subject-atmo-b))',
           }}
         >
           {[
@@ -257,13 +301,13 @@ export function CrivoCore({
               key={transform}
               data-static-ring
               className="absolute rounded-full border"
-              style={{ width: '140%', height: '32%', left: '-20%', top, borderColor: `${fallbackPalette.primary}aa`, transform }}
+              style={{ width: '140%', height: '32%', left: '-20%', top, borderColor: 'var(--subject-primary)', opacity: 0.67, transform }}
             />
           ))}
           <span
             data-static-center
             className="absolute left-1/2 top-1/2 h-[11%] w-[11%] -translate-x-1/2 -translate-y-1/2 rounded-full"
-            style={{ backgroundColor: fallbackPalette.emissive, boxShadow: `0 0 20px ${fallbackPalette.secondary}` }}
+            style={{ backgroundColor: 'var(--subject-emissive)', boxShadow: '0 0 20px var(--subject-secondary)' }}
           />
         </div>
       ) : (

@@ -126,6 +126,21 @@ describe('SubjectAtmosphere', () => {
     expect(atmosphere).toHaveStyle({ backgroundColor: 'var(--subject-bg)' });
   });
 
+  it.each([
+    ['is unavailable', undefined],
+    ['throws during construction', vi.fn(function () { throw new Error('observer failed'); })],
+  ])('keeps initial field measurement and CSS fallback when ResizeObserver %s', async (_label, observer) => {
+    vi.stubGlobal('ResizeObserver', observer);
+    vi.spyOn(HTMLElement.prototype, 'getBoundingClientRect').mockReturnValue(rectangularBounds(320, 180));
+
+    render(<SubjectAtmosphere subject="Física"><p>Decisão</p></SubjectAtmosphere>);
+
+    const atmosphere = screen.getByTestId('subject-atmosphere');
+    await waitFor(() => expect(atmosphere.querySelector('canvas')).toHaveAttribute('width', '320'));
+    expect(screen.getByTestId('subject-atmosphere-fallback')).toHaveStyle({ background: 'var(--subject-field-css)' });
+    vi.unstubAllGlobals();
+  });
+
   it('keeps both theme translations local to the active subject', () => {
     render(<SubjectAtmosphere subject="Física"><p>Decisão</p></SubjectAtmosphere>);
 
@@ -343,6 +358,7 @@ describe('DecisionSequence motion and disclosure', () => {
     const waitingButton = within(screen.getByRole('group', { name: 'Pode esperar' })).getByRole('button');
     expect(waitingButton).toHaveAttribute('aria-expanded', 'false');
     expect(waitingButton).toHaveAttribute('aria-controls', 'decision-sequence-waiting-list');
+    expect(waitingButton).toHaveClass('min-h-11');
   });
 
   it('renders the final frame without layout animation when reduced motion is requested', () => {
@@ -392,6 +408,22 @@ describe('TodayFocus explanation and feedback', () => {
     ]));
   });
 
+  it('offers Por que isso and Discordo together before the explanation opens with 44px targets', async () => {
+    const user = userEvent.setup();
+    renderTodayFocus();
+    const explain = screen.getByRole('button', { name: 'Por que isso?' });
+    const disagree = screen.getByRole('button', { name: 'Discordo' });
+    expect(explain).toHaveAttribute('aria-expanded', 'false');
+    expect(explain).toHaveClass('min-h-11');
+    expect(disagree).toHaveClass('min-h-11');
+
+    await user.click(disagree);
+    expect(screen.getByRole('group', { name: 'Discordância da recomendação' })).toBeVisible();
+    for (const reason of screen.getAllByRole('button').filter((button) => button.closest('[aria-label="Motivo da discordância"]'))) {
+      expect(reason).toHaveClass('min-h-11');
+    }
+  });
+
   it('opens the controlled explanation from the keyboard', async () => {
     const user = userEvent.setup();
     renderTodayFocus();
@@ -420,11 +452,11 @@ describe('TodayFocus explanation and feedback', () => {
     expect(explanation).toHaveFocus();
     expect(explanation).toHaveAttribute('aria-expanded', 'true');
     await user.tab();
-    await user.tab();
     const disagree = screen.getByRole('button', { name: 'Discordo' });
     expect(disagree).toHaveFocus();
     await user.keyboard('{Enter}');
 
+    await user.tab();
     await user.tab();
     const reason = screen.getByRole('button', { name: 'Já estudei isso' });
     expect(reason).toHaveFocus();

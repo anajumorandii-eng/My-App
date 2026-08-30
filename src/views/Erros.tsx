@@ -9,6 +9,7 @@ import { AiText } from '../components/AiText';
 import { BookX, Plus, Sparkles, CloudOff, Stethoscope } from 'lucide-react';
 import { useSummaryProgress } from '../hooks/useSummaryProgress';
 import { interactiveSummaries } from '../data/interactiveSummaries';
+import { getSubjectProfile } from '../design-system/crivoSubjects';
 import SummaryErrorsPanel from '../components/SummaryErrorsPanel';
 
 const OUTCOME_LABELS: Record<NonNullable<ErrorLog['outcomeRating']>, string> = {
@@ -230,7 +231,7 @@ export default function Erros() {
         {filtered.map((log) => {
           const topic = mockTopics.find((t) => t.id === log.topicId);
           return (
-            <div key={log.id} className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-5 shadow-sm">
+            <div key={log.id} data-geometry={topic ? getSubjectProfile(topic.subject).fieldType : undefined} className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-5 shadow-sm">
               <div className="flex items-center justify-between mb-3">
                 <div className="flex items-center gap-3">
                   <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-rose-50 dark:bg-rose-900/20 text-rose-700 dark:text-rose-300">

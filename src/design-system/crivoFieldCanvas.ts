@@ -250,6 +250,56 @@ const drawSocial: FieldDrawFn = ({ ctx, width: fw, height: fh, time: t, palette,
   }
 };
 
+/** Literatura — slow drifting editorial planes, contemplative. */
+const drawFieldLayers: FieldDrawFn = ({ ctx, width: fw, height: fh, time: t, palette }) => {
+  const n = 4;
+  for (let i = 0; i < n; i++) {
+    const speed = 0.05 + i * 0.02;
+    const y = fh * (0.15 + i * 0.22);
+    const drift = Math.sin(t * speed + i * 2) * fw * 0.08;
+    const grad = call<GradientLike>(ctx, 'createLinearGradient', 0, y - fh * 0.09, 0, y + fh * 0.09);
+    withStops(grad, [[0, 'rgba(0,0,0,0)'], [0.5, alpha(palette.primary, 0.045 + 0.01 * i)], [1, 'rgba(0,0,0,0)']]);
+    set(ctx, 'fillStyle', grad);
+    invoke(ctx, 'fillRect', drift - fw * 0.15, y - fh * 0.09, fw * 1.3, fh * 0.18);
+  }
+};
+
+/** Redação — architectural scaffold/truss, structural. */
+const drawFieldTruss: FieldDrawFn = ({ ctx, width: fw, height: fh, palette, focus }) => {
+  const cols = 8, w = fw / cols;
+  set(ctx, 'strokeStyle', alpha(palette.primary, 0.055 + 0.02 * focus));
+  set(ctx, 'lineWidth', 1);
+  for (let i = 0; i <= cols; i++) {
+    const x = i * w;
+    invoke(ctx, 'beginPath'); invoke(ctx, 'moveTo', x, 0); invoke(ctx, 'lineTo', x, fh); invoke(ctx, 'stroke');
+  }
+  for (let i = 0; i < cols; i++) {
+    const x1 = i * w, x2 = (i + 1) * w;
+    invoke(ctx, 'beginPath');
+    if (i % 2 === 0) { invoke(ctx, 'moveTo', x1, 0); invoke(ctx, 'lineTo', x2, fh); }
+    else { invoke(ctx, 'moveTo', x2, 0); invoke(ctx, 'lineTo', x1, fh); }
+    invoke(ctx, 'stroke');
+  }
+};
+
+/** Atualidades — propagating ripples, global signal. */
+const drawFieldPulse: FieldDrawFn = ({ ctx, width: fw, height: fh, time: t, palette }) => {
+  const origins = [[fw * 0.2, fh * 0.3], [fw * 0.75, fh * 0.6], [fw * 0.5, fh * 0.15]];
+  origins.forEach(([ox, oy], i) => {
+    const speed = 55 + i * 10;
+    for (let k = 0; k < 3; k++) {
+      const age = ((t * speed + i * 90 + k * 140) % 420);
+      const r = age;
+      const alphaVal = Math.max(0, 0.12 * (1 - age / 420));
+      set(ctx, 'strokeStyle', alpha(palette.primary, alphaVal));
+      set(ctx, 'lineWidth', 1.2);
+      invoke(ctx, 'beginPath');
+      invoke(ctx, 'arc', ox, oy, r, 0, 7);
+      invoke(ctx, 'stroke');
+    }
+  });
+};
+
 /** Unknown-subject fallback: a faint static vignette. */
 const drawNeutralField: FieldDrawFn = ({ ctx, width: fw, height: fh, palette }) => {
   const vignette = call<GradientLike>(ctx, 'createRadialGradient', fw * 0.5, fh * 0.5, 0, fw * 0.5, fh * 0.5, Math.max(fw, fh) * 0.7);
@@ -265,6 +315,9 @@ export const FIELD_CANVAS_REGISTRY: Record<FieldType, FieldDrawFn> = {
   syntax: drawSyntax,
   topography: drawTopography,
   paired: drawPaired,
+  layer: drawFieldLayers,
+  argument: drawFieldTruss,
+  pulse: drawFieldPulse,
   semantic: drawSemantic,
   dialectic: drawDialectic,
   social: drawSocial,

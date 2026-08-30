@@ -49,17 +49,22 @@ export function DecisionExplanation({ mainReason, factors, snapshot, open, onOpe
     <div className={className}>
       <p className="text-sm text-text-secondary">{mainReason}</p>
 
-      <button
-        ref={triggerRef}
-        type="button"
-        onClick={() => onOpenChange(!open)}
-        aria-expanded={open}
-        aria-controls={panelId}
-        className="mt-2 inline-flex items-center gap-1 text-xs font-medium text-text-secondary hover:text-text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus-ring rounded-small px-1 -mx-1 min-h-9"
-      >
-        Por que isso?
-        {open ? <ChevronUp className="w-3.5 h-3.5" aria-hidden="true" /> : <ChevronDown className="w-3.5 h-3.5" aria-hidden="true" />}
-      </button>
+      <div className="mt-2 flex flex-wrap items-center gap-2">
+        <button
+          ref={triggerRef}
+          type="button"
+          onClick={() => onOpenChange(!open)}
+          aria-expanded={open}
+          aria-controls={panelId}
+          className="inline-flex min-h-11 items-center gap-1 rounded-small px-2 text-xs font-medium text-text-secondary hover:text-text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus-ring"
+        >
+          Por que isso?
+          {open ? <ChevronUp className="w-3.5 h-3.5" aria-hidden="true" /> : <ChevronDown className="w-3.5 h-3.5" aria-hidden="true" />}
+        </button>
+        <Button variant="ghost" size="sm" className="min-h-11" onClick={onDisagree}>
+          Discordo
+        </Button>
+      </div>
 
       <AnimatePresence initial={false}>
         {open && <motion.div
@@ -111,11 +116,8 @@ export function DecisionExplanation({ mainReason, factors, snapshot, open, onOpe
           </PrecisionMark>
 
           <div className="flex items-center gap-2">
-            <Button variant="ghost" size="sm" onClick={() => onOpenChange(false)}>
+            <Button variant="ghost" size="sm" className="min-h-11" onClick={() => onOpenChange(false)}>
               Entendi
-            </Button>
-            <Button variant="ghost" size="sm" onClick={onDisagree}>
-              Discordo
             </Button>
           </div>
         </div>

@@ -6,6 +6,7 @@ import { useStudentGoals } from '../hooks/useStudentGoals';
 import { currentStudyPhase } from '../lib/studyPhase';
 import { upcomingMilestones } from '../lib/studyRoadmap';
 import { daysUntil } from '../data/examCalendar';
+import { getSubjectProfile } from '../design-system/crivoSubjects';
 
 function formatDatePtBr(iso: string): string {
   const [, month, day] = iso.split('-');
@@ -138,6 +139,7 @@ export default function Plano() {
           {allocatedActions.map((action, index) => (
             <div
               key={action.id}
+              data-geometry={getSubjectProfile(action.subject).fieldType}
               className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-5 shadow-sm flex items-center justify-between"
             >
               <div className="flex items-center min-w-0">

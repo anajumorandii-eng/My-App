@@ -10,6 +10,8 @@ import { ERROR_TYPE_LABELS, INTERVENTION_LABELS } from '../lib/errorLabels';
 import { AiText } from '../components/AiText';
 import { TopicMastery, ErrorLog } from '../types';
 import { applyReviewOutcome, qualityFromAnswerCorrectness } from '../lib/spacedRepetition';
+import { SubjectAtmosphere } from '../features/daily-plan/components/SubjectAtmosphere';
+import { getSubjectProfile } from '../design-system/crivoSubjects';
 import { HelpCircle, CheckCircle2, XCircle, RotateCcw, CloudOff, Sparkles, BadgeCheck, ExternalLink, Stethoscope, Check } from 'lucide-react';
 
 export default function Questoes() {
@@ -176,8 +178,11 @@ export default function Questoes() {
     }
   };
 
+  const activeProfile = question ? getSubjectProfile(question.subject) : null;
+
   return (
-    <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
+    <SubjectAtmosphere subject={question?.subject} focus={0.3}>
+      <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500" data-geometry={activeProfile?.fieldType}>
       <header>
         <h1 className="text-3xl font-bold tracking-tight mb-2 flex items-center">
           <HelpCircle className="w-7 h-7 mr-3 text-indigo-500" />
@@ -376,6 +381,7 @@ export default function Questoes() {
         </button>
       </div>
       )}
-    </div>
+      </div>
+    </SubjectAtmosphere>
   );
 }

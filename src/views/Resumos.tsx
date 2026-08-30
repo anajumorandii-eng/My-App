@@ -5,6 +5,8 @@ import { interactiveSummaries } from '../data/interactiveSummaries';
 import { evaluateRetrievalAnswer, filterSummaries, getReadingProgress } from '../lib/summaryEngine';
 import { applySummaryAttempt } from '../lib/summaryStudy';
 import { useSummaryProgress } from '../hooks/useSummaryProgress';
+import { SubjectAtmosphere } from '../features/daily-plan/components/SubjectAtmosphere';
+import { getSubjectProfile } from '../design-system/crivoSubjects';
 import type { StudyStatus, SummaryDepth } from '../types/summary';
 
 const modeLabels: Record<SummaryDepth, string> = { rapida: 'Revisão rápida', aprofundamento: 'Aprofundamento', prova: 'Como cai na prova' };
@@ -47,8 +49,11 @@ export default function Resumos() {
     const itemProgress = progress[summary.id] ?? { readSectionIds: [], status: 'nao-iniciado' as const, important: false, answers: [] };
     const visibleSections = summary.sections.filter((section) => mode === 'aprofundamento' ? true : section.depth === mode || (mode === 'prova' && section.stage === 'exercicio'));
     const markRead = (id: string) => update(summary.id, (current) => ({ ...current, readSectionIds: [...new Set([...current.readSectionIds, id])], status: current.status === 'nao-iniciado' ? 'em-revisao' : current.status, lastOpenedAt: new Date().toISOString() }));
-    return <div className="space-y-6 pb-16">
-      <button onClick={() => { setSearchParams({}); setSelectedId(null); }} className="inline-flex items-center text-sm font-medium text-indigo-700 dark:text-indigo-300 hover:underline"><ArrowLeft className="w-4 h-4 mr-2"/>Voltar à biblioteca</button>
+    const subjectProfile = getSubjectProfile(summary.subject);
+    return (
+      <SubjectAtmosphere subject={summary.subject} focus={0.4}>
+        <div className="space-y-6 pb-16" data-geometry={subjectProfile.fieldType}>
+          <button onClick={() => { setSearchParams({}); setSelectedId(null); }} className="inline-flex items-center text-sm font-medium text-indigo-700 dark:text-indigo-300 hover:underline"><ArrowLeft className="w-4 h-4 mr-2"/>Voltar à biblioteca</button>
       {syncError && <div role="alert" className="rounded-xl border border-amber-200 bg-amber-50 p-3 text-sm text-amber-900">{syncError}</div>}
       {requestedQuestionId && !summary.retrieval.some((item) => item.id === requestedQuestionId) && <div role="alert" className="rounded-xl border border-amber-200 bg-amber-50 dark:border-amber-900 dark:bg-amber-950/20 p-3 text-sm text-amber-900 dark:text-amber-200">A pergunta indicada não está mais disponível. O restante do resumo continua acessível.</div>}
       <header className="rounded-3xl bg-zinc-950 text-white p-6 sm:p-8">
@@ -66,7 +71,9 @@ export default function Resumos() {
           <section className="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-5"><h2 className="font-bold mb-3">Fontes e materiais usados</h2><div className="space-y-2">{summary.sources.map((source) => <div key={source.label} className="text-sm flex items-start justify-between gap-3"><span>{source.label}{source.materialId && <span className="text-zinc-500"> · {source.materialId}</span>}</span>{source.url && <a href={source.url} target="_blank" rel="noreferrer" className="text-indigo-600 inline-flex items-center">Abrir <ExternalLink className="w-3.5 h-3.5 ml-1"/></a>}</div>)}</div></section>
         </main>
       </div>
-    </div>;
+      </div>
+      </SubjectAtmosphere>
+    );
   }
 
   return <div className="space-y-7"><header><p className="text-sm font-bold text-indigo-600 dark:text-indigo-400">ANA JÚLIA · MEDICINA</p><h1 className="text-3xl sm:text-4xl font-bold tracking-tight mt-1">Resumos interativos</h1><p className="text-zinc-500 mt-2 max-w-3xl">Compreender, recuperar da memória e aplicar sob pressão — com prioridade explícita para Fuvest.</p><p className="mt-2 text-xs text-zinc-400 flex items-center">{isCloudSynced ? <Check className="w-3.5 h-3.5 mr-1"/> : <CloudOff className="w-3.5 h-3.5 mr-1"/>}{isCloudSynced ? 'Progresso sincronizado na sua conta' : 'Progresso salvo neste dispositivo'}</p></header>

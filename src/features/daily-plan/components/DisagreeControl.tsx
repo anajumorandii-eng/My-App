@@ -67,7 +67,7 @@ export function DisagreeControl({ status, previous, onSelect, className }: Disag
           )}
           <div className="flex flex-wrap gap-2" role="group" aria-label="Motivo da discordância">
             {DISAGREE_OPTIONS.map(({ value, label }) => (
-              <Button key={value} variant="secondary" size="sm" onClick={() => onSelect(value)} disabled={status === 'saving'}>
+              <Button key={value} variant="secondary" size="sm" className="min-h-11" onClick={() => onSelect(value)} disabled={status === 'saving'}>
                 {label}
               </Button>
             ))}

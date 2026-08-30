@@ -16,6 +16,7 @@ import { Button } from '../components/ui/Button';
 import { EmptyState } from '../components/ui/EmptyState';
 import { CrivoCore, type CrivoCoreState } from '../components/CrivoCore';
 import { SubjectAtmosphere } from '../features/daily-plan/components/SubjectAtmosphere';
+import { getSubjectProfile } from '../design-system/crivoSubjects';
 import { useReducedMotion } from 'motion/react';
 
 function formatTime(totalSeconds: number) {
@@ -333,9 +334,11 @@ export default function Sessao() {
     && !dailyPlanLoading
     && !dailyPlan.some((action) => action.topicId === requestedTopicId);
 
+  const activeProfile = selectedAction ? getSubjectProfile(selectedAction.subject) : null;
+
   return (
-    <SubjectAtmosphere subject={selectedAction?.subject}>
-      <div className="space-y-8">
+    <SubjectAtmosphere subject={selectedAction?.subject} focus={isRunning ? 1 : 0.45}>
+      <div className="space-y-8" data-geometry={activeProfile?.fieldType}>
       <header>
         <h1 className="text-3xl font-display font-semibold tracking-tight text-text-primary mb-2 flex items-center">
           <StartIcon className="w-7 h-7 mr-3 text-action-primary" />

@@ -20,6 +20,7 @@ import { MOTION_DURATION } from '../../../design-system/motion/tokens';
 export interface SubjectAtmosphereProps {
   /** Today's primary recommendation's matéria. Omitted (loading/empty states) renders the neutral default. */
   subject?: string;
+  focus?: number;
   className?: string;
   children: React.ReactNode;
 }
@@ -37,6 +38,8 @@ const PALETTE_CSS_TOKEN: Record<PaletteToken, string> = {
   secondary: 'secondary',
   emissive: 'emissive',
   textHighlight: 'text-highlight',
+  textAccent: 'text-accent',
+  focusAccent: 'focus-accent',
   dataPositive: 'data-positive',
   dataWarning: 'data-warning',
   atmoA: 'atmo-a',
@@ -81,7 +84,7 @@ function palettesMatch(left: CrivoPalette | null, right: CrivoPalette | null): b
  * source. The wrapper stays mounted across recommendation changes, so it can
  * retain the prior subject palette and tween to the next one.
  */
-export function SubjectAtmosphere({ subject, className, children }: SubjectAtmosphereProps) {
+export function SubjectAtmosphere({ subject, focus, className, children }: SubjectAtmosphereProps) {
   const reducedMotion = useReducedMotion();
   const [wrapperNode, setWrapperNode] = useState<HTMLDivElement | null>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -102,8 +105,11 @@ export function SubjectAtmosphere({ subject, className, children }: SubjectAtmos
     const canvas = canvasRef.current;
     if (!canvas) return;
     try {
-      const ctx = canvas.getContext('2d');
-      if (!ctx) throw new Error('CanvasRenderingContext2D unavailable');
+      const ctx = canvas.getContext('2d', { alpha: true });
+      if (!ctx) {
+        setCanvasFailed(true);
+        return;
+      }
       ctxRef.current = ctx;
       setCanvasReady(true);
     } catch {
@@ -126,7 +132,7 @@ export function SubjectAtmosphere({ subject, className, children }: SubjectAtmos
       height,
       time: time * profile.rhythm,
       palette,
-      focus: FIELD_FOCUS,
+      focus: focus ?? FIELD_FOCUS,
     });
   }
 
@@ -155,9 +161,15 @@ export function SubjectAtmosphere({ subject, className, children }: SubjectAtmos
       }
     };
     resize();
-    const observer = new ResizeObserver(resize);
-    observer.observe(wrapperNode);
-    return () => observer.disconnect();
+    if (typeof ResizeObserver === 'undefined') return;
+    try {
+      const observer = new ResizeObserver(resize);
+      observer.observe(wrapperNode);
+      return () => observer.disconnect();
+    } catch {
+      // Initial measurement and the permanent CSS field remain available.
+      return;
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps -- drawField reads the current profile and Canvas refs
   }, [wrapperNode, canvasFailed, reducedMotion, profile]);
 

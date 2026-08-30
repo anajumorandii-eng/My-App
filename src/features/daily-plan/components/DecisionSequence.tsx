@@ -106,7 +106,7 @@ export function DecisionSequence({ next, waiting, actionLabels, onStart }: Decis
             <div role="group" aria-label="Pode esperar">
               <button
                 type="button"
-                className="decision-sequence-disclosure"
+                className="decision-sequence-disclosure min-h-11"
                 aria-expanded={waitingOpen}
                 aria-controls="decision-sequence-waiting-list"
                 onClick={() => setWaitingOpen((open) => !open)}

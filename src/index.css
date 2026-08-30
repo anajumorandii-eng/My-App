@@ -229,6 +229,8 @@ html, body {
   --subject-secondary: var(--subject-light-secondary);
   --subject-emissive: var(--subject-light-emissive);
   --subject-text-highlight: var(--subject-light-text-highlight);
+  --subject-text-accent: var(--subject-light-text-accent);
+  --subject-focus-accent: var(--subject-light-focus-accent);
   --subject-data-positive: var(--subject-light-data-positive);
   --subject-data-warning: var(--subject-light-data-warning);
   --subject-atmo-a: var(--subject-light-atmo-a);
@@ -245,6 +247,8 @@ html, body {
   --subject-secondary: var(--subject-dark-secondary);
   --subject-emissive: var(--subject-dark-emissive);
   --subject-text-highlight: var(--subject-dark-text-highlight);
+  --subject-text-accent: var(--subject-dark-text-accent);
+  --subject-focus-accent: var(--subject-dark-focus-accent);
   --subject-data-positive: var(--subject-dark-data-positive);
   --subject-data-warning: var(--subject-dark-data-warning);
   --subject-atmo-a: var(--subject-dark-atmo-a);
@@ -276,7 +280,7 @@ html, body {
 }
 
 .crivo-decision-eyebrow {
-  color: var(--subject-primary);
+  color: var(--subject-text-accent);
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.18em;
@@ -425,7 +429,7 @@ html, body {
 }
 
 .crivo-day-context summary:focus-visible {
-  outline: 2px solid var(--subject-primary);
+  outline: 2px solid var(--subject-focus-accent);
   outline-offset: 3px;
 }
 
@@ -529,6 +533,11 @@ html, body {
   text-transform: uppercase;
 }
 
+.decision-sequence-disclosure:focus-visible {
+  outline: 2px solid var(--subject-focus-accent);
+  outline-offset: 3px;
+}
+
 .decision-sequence-disclosure svg {
   width: 1rem;
   height: 1rem;
@@ -550,7 +559,7 @@ html, body {
     grid-template-columns: minmax(0, 1fr);
     gap: 0.5rem;
     min-height: auto;
-    padding: 0.85rem 0 1.75rem;
+    padding: 0.85rem 1rem 1.75rem;
   }
 
   .crivo-decision-copy {
@@ -606,7 +615,7 @@ html, body {
   .crivo-today-notices,
   .decision-sequence,
   .crivo-today-empty {
-    margin-inline: 0;
+    margin-inline: 1rem;
   }
 
   .crivo-day-context-grid {
@@ -668,6 +677,44 @@ html, body {
   .spotlight::after {
     display: none;
   }
+}
+
+/* ---------------------------------------------------------------------
+ * Per-subject surface materials — shifts radii and borders with data-geometry
+ * ------------------------------------------------------------------- */
+[data-geometry="grid"] .crivo-decision-signals > div,
+[data-geometry="grid"] .decision-sequence-item {
+  border-radius: 2px;
+}
+[data-geometry="field"] .crivo-decision-signals > div {
+  border-radius: 3px 12px 3px 12px;
+}
+[data-geometry="bond"] .crivo-decision-signals > div {
+  border-radius: 11px;
+}
+[data-geometry="branch"] .crivo-decision-signals > div {
+  border-radius: 18px;
+}
+[data-geometry="type"] .crivo-decision-signals > div {
+  border-radius: 0;
+  border-bottom: 1.5px solid var(--border-subtle);
+}
+[data-geometry="layer"] .crivo-decision-signals > div {
+  border-radius: 2px 14px 2px 14px;
+}
+[data-geometry="argument"] .crivo-decision-signals > div {
+  border-radius: 3px;
+  border-inline-start: 2px solid var(--subject-primary);
+}
+[data-geometry="timeline"] .crivo-decision-signals > div {
+  border-radius: 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+[data-geometry="topo"] .crivo-decision-signals > div {
+  border-radius: 2px 16px;
+}
+[data-geometry="pulse"] .crivo-decision-signals > div {
+  border-radius: 16px 4px 16px 4px;
 }
 
 /* Global safety net: every animated interaction that goes through

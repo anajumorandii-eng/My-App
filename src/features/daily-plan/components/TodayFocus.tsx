@@ -50,6 +50,7 @@ export function TodayFocus({ action, actionLabel, mainReason, onStart, showAdapt
     <motion.section
       data-testid="today-decision-stage"
       data-phase={phase}
+      data-geometry={subjectProfile.fieldType}
       data-confirmation-key={confirmationKey}
       data-motion-active={!reducedMotion && (phase === 'forming' || phase === 'recomposing') ? 'true' : undefined}
       aria-labelledby={`decision-${action.id}`}

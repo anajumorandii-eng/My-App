@@ -2,6 +2,7 @@ import { render, screen } from '@testing-library/react';
 import { describe, expect, it, vi } from 'vitest';
 import { canvasContext } from '../testSetup';
 import { CrivoCore } from './CrivoCore';
+import { CORE_REGISTRY } from '../design-system/crivoCoreRegistry';
 
 const useReducedMotionMock = vi.hoisted(() => vi.fn(() => false));
 
@@ -25,6 +26,25 @@ function rectangularBounds(width: number, height: number): DOMRect {
 }
 
 describe('CrivoCore hero surface', () => {
+  it('draws both subject geometries in an intermediate metamorphosis frame', () => {
+    const frames: FrameRequestCallback[] = [];
+    vi.spyOn(window, 'requestAnimationFrame').mockImplementation((callback) => {
+      frames.push(callback);
+      return frames.length;
+    });
+    vi.spyOn(HTMLElement.prototype, 'getBoundingClientRect').mockReturnValue(rectangularBounds(160, 160));
+    const from = vi.spyOn(CORE_REGISTRY, 'fisica_lentes');
+    const to = vi.spyOn(CORE_REGISTRY, 'biologia_helix');
+
+    render(<CrivoCore state="ready" subject="Biologia" previousSubject="Física" size={160} />);
+    frames.shift()?.(1000);
+    frames.shift()?.(1450);
+
+    expect(from).toHaveBeenCalled();
+    expect(to).toHaveBeenCalled();
+    expect(screen.getByTestId('crivo-core')).toHaveAttribute('data-morphing', 'fisica_lentes→biologia_helix');
+  });
+
   it('exposes hero scale and a decorative canvas without a duplicate accessible image', () => {
     render(<CrivoCore state="ready" subject="Física" topicId="fis-optica" size="fill" scale="hero" decorative />);
 

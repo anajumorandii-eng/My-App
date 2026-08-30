@@ -22,20 +22,10 @@ import { TrendingUp, Trophy, AlertCircle, Gauge, CloudOff, Sparkles, ChevronDown
 import { useSummaryProgress } from '../hooks/useSummaryProgress';
 import { interactiveSummaries } from '../data/interactiveSummaries';
 import { buildSummaryProgressDashboard } from '../lib/summaryProgressDashboard';
+import { getSubjectProfile } from '../design-system/crivoSubjects';
 import SummaryProgressDashboard from '../components/SummaryProgressDashboard';
 
-const SUBJECT_HEX: Record<string, string> = {
-  Biologia: '#10b981',
-  Matemática: '#6366f1',
-  Física: '#f59e0b',
-  Química: '#f43f5e',
-  Geografia: '#14b8a6',
-  História: '#f97316',
-  Português: '#8b5cf6',
-  Inglês: '#0ea5e9',
-  Filosofia: '#78716c',
-  Sociologia: '#a855f7',
-};
+const getSubjectColor = (subject: string) => getSubjectProfile(subject).palettes.dark.primary;
 
 function ChartTooltip({ active, payload }: any) {
   if (!active || !payload?.length) return null;
@@ -194,7 +184,7 @@ export default function Evolucao() {
                 <Tooltip content={<ChartTooltip />} cursor={{ fill: 'rgba(99,102,241,0.08)' }} />
                 <Bar dataKey="level" radius={[0, 6, 6, 0]} barSize={18}>
                   {topicRows.map((row, i) => (
-                    <Cell key={i} fill={SUBJECT_HEX[row.subject] ?? '#a1a1aa'} />
+                    <Cell key={i} fill={getSubjectColor(row.subject)} />
                   ))}
                 </Bar>
               </BarChart>
@@ -210,7 +200,7 @@ export default function Evolucao() {
                 <PolarGrid className="stroke-zinc-200 dark:stroke-zinc-800" />
                 <PolarAngleAxis dataKey="subject" tick={{ fontSize: 12, fill: 'currentColor' }} className="text-zinc-500" />
                 <PolarRadiusAxis domain={[0, 100]} tick={false} axisLine={false} />
-                <Radar dataKey="average" stroke="#6366f1" fill="#6366f1" fillOpacity={0.35} />
+                <Radar dataKey="average" stroke="var(--action-primary, #6366f1)" fill="var(--action-primary, #6366f1)" fillOpacity={0.35} />
                 <Tooltip content={<ChartTooltip />} />
               </RadarChart>
             </ResponsiveContainer>
@@ -222,6 +212,7 @@ export default function Evolucao() {
         {topicRows.map((row) => {
           const isExpanded = expandedTopicId === row.topicId;
           const hasChapters = !!row.chapters?.length;
+          const color = getSubjectColor(row.subject);
           return (
             <div key={row.topicId}>
               <button
@@ -229,7 +220,7 @@ export default function Evolucao() {
                 className="w-full p-4 flex items-center justify-between text-left"
               >
                 <div className="flex items-center min-w-0">
-                  <span className="w-2 h-2 rounded-full mr-3 shrink-0" style={{ backgroundColor: SUBJECT_HEX[row.subject] ?? '#a1a1aa' }} />
+                  <span className="w-2 h-2 rounded-full mr-3 shrink-0" style={{ backgroundColor: color }} />
                   <div className="min-w-0">
                     <p className="font-medium truncate">{row.name}</p>
                     <p className="text-xs text-zinc-500">
@@ -241,7 +232,7 @@ export default function Evolucao() {
                 <div className="flex items-center shrink-0 ml-4">
                   <div className="w-32 flex items-center">
                     <div className="w-full h-1.5 bg-zinc-100 dark:bg-zinc-800 rounded-full overflow-hidden mr-2">
-                      <div className="h-full" style={{ width: `${row.level}%`, backgroundColor: SUBJECT_HEX[row.subject] ?? '#a1a1aa' }} />
+                      <div className="h-full" style={{ width: `${row.level}%`, backgroundColor: color }} />
                     </div>
                     <span className="text-xs text-zinc-500 w-8 text-right">{row.level}%</span>
                   </div>

@@ -3,7 +3,8 @@ import test from 'node:test';
 import { FIELD_CANVAS_REGISTRY } from './crivoFieldCanvas';
 import { SUBJECT_REGISTRY, DEFAULT_SUBJECT_PROFILE } from './crivoSubjects';
 
-const DRAW_PALETTE = { bg:'#12161A', surface:'#1A2126', primary:'#6E93B3', secondary:'#C9A468', emissive:'#F1EFE9', textHighlight:'#D9E4EB', dataPositive:'#7FBF8F', dataWarning:'#D98B4A', atmoA:'#1E2C36', atmoB:'#0B0E11' };
+const DRAW_PALETTE = { bg:'#12161A', surface:'#1A2126', primary:'#6E93B3', secondary:'#C9A468', emissive:'#F1EFE9', textHighlight:'#D9E4EB', textAccent:'#6E93B3', focusAccent:'#6E93B3', dataPositive:'#7FBF8F', dataWarning:'#D98B4A', atmoA:'#1E2C36', atmoB:'#0B0E11' };
+
 
 function fakeContext() {
   const context: Record<string, unknown> = {};

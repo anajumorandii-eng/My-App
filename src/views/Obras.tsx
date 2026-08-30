@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Library, Loader2, Search } from 'lucide-react';
 import { LiteraryWork, ExamBoard, ExamRequirement } from '../types/literaryWorks';
 import { getLiteraryWorks, getAllExamRequirements } from '../lib/literaryCatalog';
+import { SubjectAtmosphere } from '../features/daily-plan/components/SubjectAtmosphere';
 
 type BoardFilter = 'todas' | ExamBoard;
 
@@ -37,7 +38,8 @@ export default function Obras() {
   }, [works, requirementsByWork, boardFilter, search]);
 
   return (
-    <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
+    <SubjectAtmosphere subject="literatura" focus={0.4}>
+      <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500" data-geometry="layer">
       <header>
         <h1 className="text-3xl font-bold tracking-tight mb-2 flex items-center">
           <Library className="w-7 h-7 mr-3 text-indigo-500" />
@@ -118,6 +120,7 @@ export default function Obras() {
           })}
         </div>
       )}
-    </div>
+      </div>
+    </SubjectAtmosphere>
   );
 }
