@@ -40,6 +40,7 @@ import { useTheme } from '../hooks/useTheme';
 import { useSpotlight } from '../hooks/useSpotlight';
 import { MOTION_DURATION, MOTION_EASE } from '../design-system/motion/tokens';
 import { cn } from '../lib/cn';
+import { routePresentationFor } from './layout/routePresentation';
 
 interface NavItem {
   name: string;
@@ -109,9 +110,9 @@ const RAIL_STORAGE_KEY = 'crivo_rail_expanded';
 function getStoredRailExpanded(): boolean {
   try {
     const stored = localStorage.getItem(RAIL_STORAGE_KEY);
-    return stored === null ? true : stored === 'true';
+    return stored === null ? false : stored === 'true';
   } catch {
-    return true;
+    return false;
   }
 }
 
@@ -132,6 +133,7 @@ export default function Layout() {
   const navigate = useNavigate();
   const reducedMotion = useReducedMotion();
   const { onPointerMove } = useSpotlight();
+  const presentation = routePresentationFor(location.pathname);
 
   useEffect(() => {
     setMobileMenuOpen(false);
@@ -290,8 +292,14 @@ export default function Layout() {
       </aside>
 
       {/* Main Content */}
-      <main className="flex-1 overflow-y-auto pt-14 lg:pt-0 pb-16 lg:pb-0">
-        <div className="p-4 sm:p-8 max-w-6xl mx-auto">
+      <main
+        className={cn(
+          'flex-1 overflow-y-auto pt-14 lg:pt-0 pb-16 lg:pb-0',
+          presentation.mainClassName,
+          presentation.immersive && 'route-presentation-immersive'
+        )}
+      >
+        <div className={presentation.contentClassName}>
           <AnimatePresence mode="wait" initial={false}>
             <motion.div
               key={location.pathname}

@@ -20,14 +20,14 @@ const pose = { cx: 40, cy: 40, baseR: 24, spread: 0.5, glow: 0.6, squashY: 0.85,
 test('crivo core shell: casca externa e luz central não lançam para nenhuma matéria', () => {
   const ctx = fakeContext();
   for (const profile of Object.values(SUBJECT_REGISTRY)) {
-    assert.doesNotThrow(() => drawExternalShell(ctx, pose, profile.palette));
-    assert.doesNotThrow(() => drawCenterLight(ctx, pose, profile.palette));
+    assert.doesNotThrow(() => drawExternalShell(ctx, pose, profile.palettes.dark));
+    assert.doesNotThrow(() => drawCenterLight(ctx, pose, profile.palettes.dark));
   }
 });
 
 test('crivo core shell: scan sweep não lança quando createConicGradient existe ou não', () => {
   const ctx = fakeContext();
-  assert.doesNotThrow(() => drawScanSweep(ctx, 40, 40, 24, 1.2, SUBJECT_REGISTRY.matematica.palette));
+  assert.doesNotThrow(() => drawScanSweep(ctx, 40, 40, 24, 1.2, SUBJECT_REGISTRY.matematica.palettes.dark));
   delete (ctx as Record<string, unknown>).createConicGradient;
-  assert.doesNotThrow(() => drawScanSweep(ctx, 40, 40, 24, 1.2, SUBJECT_REGISTRY.matematica.palette));
+  assert.doesNotThrow(() => drawScanSweep(ctx, 40, 40, 24, 1.2, SUBJECT_REGISTRY.matematica.palettes.dark));
 });

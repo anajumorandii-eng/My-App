@@ -1,20 +1,20 @@
-import React, { useEffect, useState } from 'react';
-import { motion, useReducedMotion } from 'motion/react';
+import React, { useState } from 'react';
+import { AnimatePresence, motion } from 'motion/react';
 import { PlayCircle } from 'lucide-react';
 import { AllocatedStudyAction, DisagreeReason } from '../../../types';
 import { formatIsoTimeInSaoPaulo } from '../../../features/availability/time';
-import { Panel } from '../../../components/ui/Panel';
 import { Button } from '../../../components/ui/Button';
 import { KineticText } from '../../../components/ui/KineticText';
-import { CrivoCore, CrivoCoreState } from '../../../components/CrivoCore';
+import { CrivoCore } from '../../../components/CrivoCore';
 import { getSubjectProfile, TYPOGRAPHY_PRESETS } from '../../../design-system/crivoSubjects';
-import { MasteryMeter } from './MasteryMeter';
 import { DecisionExplanation } from './DecisionExplanation';
 import { DisagreeControl, FeedbackStatus } from './DisagreeControl';
 import { AdaptiveUpdate } from './AdaptiveUpdate';
+import { DecisionSignalStrip } from './DecisionSignalStrip';
+import { DecisionFactorField } from './DecisionFactorField';
 import { focusEnter } from '../../../design-system/motion/variants';
-import { MOTION_DURATION } from '../../../design-system/motion/tokens';
 import { usePreviousFeedback } from '../../../hooks/usePreviousFeedback';
+import { useDecisionChoreography } from '../motion/useDecisionChoreography';
 
 export interface TodayFocusProps {
   /** Allocated, not merely ranked: the focus card states *when* today's
@@ -34,96 +34,81 @@ export interface TodayFocusProps {
 
 export function TodayFocus({ action, actionLabel, mainReason, onStart, showAdaptiveUpdate, previousSubject, userId, feedbackStatus, onDisagree }: TodayFocusProps) {
   const [disagreeOpen, setDisagreeOpen] = useState(false);
-  const reducedMotion = useReducedMotion();
+  const [explanationOpen, setExplanationOpen] = useState(false);
   const previous = usePreviousFeedback(action.topicId, userId);
   const subjectProfile = getSubjectProfile(action.subject);
   const typographyPreset = TYPOGRAPHY_PRESETS[subjectProfile.tipografia];
-
-  // The Núcleo do Crivo is Hoje's one protagonist effect: it moves through
-  // the engine's real states once, on arrival of *this specific*
-  // recommendation (the parent remounts this component via `key={action.id}`
-  // whenever the recommendation actually changes) — never a continuous
-  // idle spin. A day-over-day ranking change reads as "recalibrando"
-  // instead of "analisando", since the engine already had a prior answer.
-  const [coreState, setCoreState] = useState<CrivoCoreState>(
-    reducedMotion ? 'ready' : showAdaptiveUpdate ? 'recalibrating' : 'analyzing'
-  );
-
-  useEffect(() => {
-    if (reducedMotion) return;
-    const stepMs = MOTION_DURATION.core * 1000;
-    if (showAdaptiveUpdate) {
-      const t = setTimeout(() => setCoreState('ready'), stepMs);
-      return () => clearTimeout(t);
-    }
-    const t1 = setTimeout(() => setCoreState('converging'), stepMs);
-    const t2 = setTimeout(() => setCoreState('ready'), stepMs * 2);
-    return () => {
-      clearTimeout(t1);
-      clearTimeout(t2);
-    };
-    // eslint-disable-next-line react-hooks/exhaustive-deps -- deliberately once per mount (per recommendation)
-  }, []);
+  const { coreState, phase, confirmationKey, reducedMotion } = useDecisionChoreography({
+    actionId: action.id,
+    rankingChanged: showAdaptiveUpdate,
+    feedbackStatus,
+    explanationOpen,
+  });
+  const reviewUrgency = action.factors.find((factor) => factor.kind === 'review_urgency')?.rawValue ?? 0;
 
   return (
-    <motion.div initial={reducedMotion ? false : 'hidden'} animate="visible" variants={focusEnter}>
-      {showAdaptiveUpdate && <AdaptiveUpdate className="mb-3" />}
+    <motion.section
+      data-testid="today-decision-stage"
+      data-phase={phase}
+      data-geometry={subjectProfile.fieldType}
+      data-confirmation-key={confirmationKey}
+      data-motion-active={!reducedMotion && (phase === 'forming' || phase === 'recomposing') ? 'true' : undefined}
+      aria-labelledby={`decision-${action.id}`}
+      className="crivo-decision-hero"
+      layout={!reducedMotion}
+      initial={reducedMotion ? false : 'hidden'}
+      animate="visible"
+      variants={focusEnter}
+    >
+      <div className="crivo-decision-copy">
+        <p className="crivo-decision-eyebrow">Hoje · decisão principal</p>
+        <h1 id={`decision-${action.id}`} className="crivo-decision-title">
+          <KineticText
+            as="span"
+            runKey={action.id}
+            text={action.topicName}
+            className="block"
+            stagger={typographyPreset.stagger}
+            duration={typographyPreset.duration}
+            ease={typographyPreset.ease}
+          />
+        </h1>
 
-      <Panel elevation="elevated" className="p-6 sm:p-8">
-        <div className="flex items-start justify-between gap-4">
-          <div className="min-w-0">
-            <p className="text-xs font-semibold uppercase tracking-widest text-text-muted">Foco de hoje</p>
-            <KineticText
-              as="h2"
-              runKey={action.id}
-              text={action.topicName}
-              className="font-display text-3xl sm:text-4xl font-semibold text-text-primary mt-1.5 block"
-              stagger={typographyPreset.stagger}
-              duration={typographyPreset.duration}
-              ease={typographyPreset.ease}
-            />
-            <p className="text-text-secondary mt-2">
-              {actionLabel} em {action.subject} · <span className="font-medium text-text-primary">{action.estimatedMinutes} min</span>
-              {' · '}
-              {formatIsoTimeInSaoPaulo(action.intervalStart)}–{formatIsoTimeInSaoPaulo(action.intervalEnd)}
-            </p>
-          </div>
-          <CrivoCore
-            state={coreState}
-            subject={action.subject}
-            previousSubject={previousSubject}
-            topicId={action.topicId}
-            size={48}
-            className="sm:hidden"
-          />
-          <CrivoCore
-            state={coreState}
-            subject={action.subject}
-            previousSubject={previousSubject}
-            topicId={action.topicId}
-            size={72}
-            className="hidden sm:block"
-          />
+        <div className="crivo-decision-intervention">
+          <p>{actionLabel} <span>em {action.subject}</span></p>
+          <p>
+            <strong>{action.allocatedMinutes} min</strong>
+            {' · '}
+            {formatIsoTimeInSaoPaulo(action.intervalStart)}–{formatIsoTimeInSaoPaulo(action.intervalEnd)}
+          </p>
         </div>
 
-        <MasteryMeter
-          level={action.snapshot.masteryLevel}
-          uncertainty={action.snapshot.uncertainty}
-          topicName={action.topicName}
-          className="mt-5 max-w-xs"
-        />
+        <p className="crivo-decision-reason">{mainReason}</p>
 
-        <Button onClick={onStart} className="mt-6 w-full sm:w-auto">
+        <Button onClick={onStart} className="crivo-decision-cta">
           <PlayCircle className="w-4 h-4" aria-hidden="true" />
           Começar
         </Button>
 
+        <DecisionSignalStrip
+          mastery={action.snapshot.masteryLevel}
+          uncertainty={action.snapshot.uncertainty}
+          urgency={reviewUrgency}
+          minutes={action.allocatedMinutes}
+        />
+
+        <AnimatePresence initial={false}>
+          {showAdaptiveUpdate && <AdaptiveUpdate key={action.id} className="crivo-adaptive-update" />}
+        </AnimatePresence>
+
         <DecisionExplanation
-          mainReason={mainReason}
+          mainReason=""
           factors={action.factors}
           snapshot={action.snapshot}
+          open={explanationOpen}
+          onOpenChange={setExplanationOpen}
           onDisagree={() => setDisagreeOpen(true)}
-          className="mt-6 pt-5 border-t border-border-subtle"
+          className="crivo-decision-explanation"
         />
 
         {disagreeOpen && (
@@ -131,10 +116,23 @@ export function TodayFocus({ action, actionLabel, mainReason, onStart, showAdapt
             status={feedbackStatus}
             previous={previous}
             onSelect={onDisagree}
-            className="mt-4"
+            className="crivo-disagree-control rounded-control focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background-base"
           />
         )}
-      </Panel>
-    </motion.div>
+      </div>
+
+      <div className="crivo-core-stage" aria-hidden="true">
+        <CrivoCore
+          size="fill"
+          scale="hero"
+          decorative
+          state={coreState}
+          subject={action.subject}
+          previousSubject={previousSubject}
+          topicId={action.topicId}
+        />
+        <DecisionFactorField factors={action.factors} phase={phase} />
+      </div>
+    </motion.section>
   );
 }

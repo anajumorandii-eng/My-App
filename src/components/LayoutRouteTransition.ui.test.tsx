@@ -60,6 +60,10 @@ describe('Layout route transition', () => {
   it('navigates away from a draft to /sessao without blocking the new route', async () => {
     renderLayoutAt();
     const draft = screen.getByLabelText('Rascunho não salvo');
+    const main = document.querySelector('main');
+
+    expect(main).toHaveClass('bg-transparent');
+    expect(main?.firstElementChild).toHaveClass('max-w-none', 'p-0');
 
     fireEvent.change(draft, { target: { value: 'Minha resposta alterada' } });
     fireEvent.click(screen.getAllByRole('link', { name: 'Sessão de Estudo' })[0]);
@@ -68,6 +72,8 @@ describe('Layout route transition', () => {
       expect(screen.getByRole('heading', { name: 'Sessão de estudo' })).toBeInTheDocument();
     });
     expect(screen.queryByLabelText('Rascunho não salvo')).not.toBeInTheDocument();
+    expect(main).toHaveClass('bg-background-base');
+    expect(main?.firstElementChild).toHaveClass('max-w-6xl', 'p-4');
   });
 
   it('uses AnimatePresence wait lifecycle to keep the outgoing route until its exit completes', async () => {

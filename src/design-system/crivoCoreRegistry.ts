@@ -357,7 +357,102 @@ const drawHistory: CoreDrawFn = (input) => withFrame(input, (r, focus) => {
   invoke(ctx, 'setLineDash', []);
 });
 
-// --- Neutro: rede genérica de fallback (Inglês/Filosofia/Sociologia, sem identidade própria ainda) ---
+// --- Inglês: fragmentos semânticos convergem ao redor de uma expressão contextual ---
+const drawEnglish: CoreDrawFn = (input) => withFrame(input, (r, focus) => {
+  const { ctx, palette, time, variantSeed } = input;
+  const targets = [-0.78, -0.49, -0.27, 0.28, 0.51, 0.76];
+  const fragments: Array<[number, number]> = [];
+
+  targets.forEach((target, index) => {
+    const spread = 1 - focus;
+    const x = target * r + Math.sin(index * 2.7 + variantSeed) * r * 0.42 * spread;
+    const y = Math.cos(index * 1.9 + time * 0.7 + variantSeed) * r * 0.52 * spread;
+    const width = r * (0.13 + (index % 3) * 0.025);
+    const height = r * 0.1;
+    fragments.push([x, y]);
+    invoke(ctx, 'beginPath');
+    roundedRect(ctx, x - width / 2, y - height / 2, width, height, height * 0.35);
+    fill(ctx, alpha(index % 2 === 0 ? palette.primary : palette.secondary, 0.2 + focus * 0.32));
+  });
+
+  const phraseW = r * (0.42 + focus * 0.12), phraseH = r * 0.2;
+  const phraseGradient = linearGradient(ctx, -phraseW / 2, 0, phraseW / 2, 0, [
+    [0, alpha(palette.primary, 0.3)], [0.5, alpha(palette.emissive, 0.2 + focus * 0.22)], [1, alpha(palette.secondary, 0.3)],
+  ]);
+  invoke(ctx, 'beginPath'); roundedRect(ctx, -phraseW / 2, -phraseH / 2, phraseW, phraseH, phraseH * 0.42);
+  set(ctx, 'fillStyle', phraseGradient); invoke(ctx, 'fill');
+  stroke(ctx, alpha(palette.emissive, 0.45 + focus * 0.4), 1.2);
+
+  set(ctx, 'strokeStyle', alpha(palette.primary, 0.12 + focus * 0.3)); set(ctx, 'lineWidth', 1);
+  fragments.forEach(([x, y]) => {
+    invoke(ctx, 'beginPath'); invoke(ctx, 'moveTo', x, y);
+    invoke(ctx, 'quadraticCurveTo', x * 0.45, y * 0.35, Math.sign(x) * phraseW * 0.44, 0);
+    invoke(ctx, 'stroke');
+  });
+});
+
+// --- Filosofia: tese e antítese formam arcos opostos ligados por um eixo de síntese ---
+const drawPhilosophy: CoreDrawFn = (input) => withFrame(input, (r, focus) => {
+  const { ctx, palette, time, variantSeed } = input;
+  const tension = (1 - focus) * (0.18 + 0.08 * Math.sin(time * 0.6 + variantSeed));
+  const arcHeight = r * (0.7 - tension);
+
+  ([[-1, palette.primary], [1, palette.secondary]] as const).forEach(([side, color]) => {
+    invoke(ctx, 'beginPath');
+    invoke(ctx, 'moveTo', side * r * 0.78, r * 0.42);
+    invoke(ctx, 'quadraticCurveTo', side * r * (0.88 + tension), -arcHeight, side * r * 0.08, -r * 0.22);
+    stroke(ctx, alpha(color, 0.48 + focus * 0.38), 1.5 + focus * 0.7);
+    invoke(ctx, 'beginPath'); invoke(ctx, 'arc', side * r * 0.78, r * 0.42, r * 0.055, 0, 7);
+    fill(ctx, alpha(color, 0.78));
+  });
+
+  const synthesisLean = Math.sin(time * 0.5 + variantSeed) * (1 - focus) * r * 0.28;
+  const axisTop: [number, number] = [synthesisLean, -r * 0.58];
+  const axisBottom: [number, number] = [-synthesisLean * 0.35, r * 0.58];
+  path(ctx, [axisTop, axisBottom]);
+  stroke(ctx, alpha(palette.emissive, 0.35 + focus * 0.5), 1.2 + focus);
+  invoke(ctx, 'beginPath'); invoke(ctx, 'arc', 0, -r * 0.22, r * (0.045 + focus * 0.025), 0, 7);
+  fill(ctx, alpha(palette.emissive, 0.72 + focus * 0.2));
+});
+
+// --- Sociologia: rede multinível reorganiza clusters e adensa relações com o foco ---
+const drawSociology: CoreDrawFn = (input) => withFrame(input, (r, focus) => {
+  const { ctx, palette, time, variantSeed } = input;
+  const centers: Array<[number, number]> = [[-r * 0.48, -r * 0.24], [r * 0.48, -r * 0.18], [0, r * 0.4]];
+  const clusters: Array<Array<[number, number]>> = [];
+
+  centers.forEach(([cx, cy], clusterIndex) => {
+    const nodes: Array<[number, number]> = [[cx, cy]];
+    for (let level = 0; level < 2; level++) {
+      const count = 3 + level;
+      const distance = r * (0.16 + level * 0.11) * (1.28 - focus * 0.36);
+      for (let index = 0; index < count; index++) {
+        const angle = (index / count) * Math.PI * 2 + clusterIndex * 0.85 + level * 0.38;
+        const drift = (1 - focus) * r * 0.05 * Math.sin(time * 0.8 + index + variantSeed);
+        nodes.push([cx + Math.cos(angle) * (distance + drift), cy + Math.sin(angle) * (distance + drift) * 0.72]);
+      }
+    }
+    clusters.push(nodes);
+    nodes.slice(1).forEach(([x, y], index) => {
+      if (index < 3 || focus > 0.38) {
+        path(ctx, [[cx, cy], [x, y]]);
+        stroke(ctx, alpha(palette.primary, 0.16 + focus * 0.3), 1);
+      }
+    });
+  });
+
+  for (let index = 0; index < centers.length; index++) {
+    const next = centers[(index + 1) % centers.length];
+    path(ctx, [centers[index], next]);
+    stroke(ctx, alpha(palette.secondary, 0.12 + focus * 0.42), 1.2);
+  }
+  clusters.flat().forEach(([x, y], index) => {
+    invoke(ctx, 'beginPath'); invoke(ctx, 'arc', x, y, r * (index % 8 === 0 ? 0.055 : 0.032), 0, 7);
+    fill(ctx, alpha(index % 3 === 0 ? palette.secondary : palette.primary, 0.58 + focus * 0.28));
+  });
+});
+
+// --- Neutro: rede genérica reservada apenas ao fallback desconhecido ---
 const drawNeutral: CoreDrawFn = (input) => withFrame(input, (r, focus) => {
   const { ctx, palette, time, variantSeed } = input;
   const n = 5;
@@ -375,6 +470,225 @@ const drawNeutral: CoreDrawFn = (input) => withFrame(input, (r, focus) => {
   });
 });
 
+// --- Literatura: livro aberto em leque fragmentando a partir de lombada costurada ---
+const drawLiterature: CoreDrawFn = (input) => withFrame(input, (r, focus) => {
+  const { ctx, palette, time, variantSeed } = input;
+  const hingeY = r * 0.42;
+  const n = 5, pageW = r * 0.58, pageH = r * 0.86;
+  for (let i = 0; i < n; i++) {
+    const p = i - (n - 1) / 2;
+    const restAngle = p * 0.3;
+    const scatterAngle = p * 0.55 + Math.sin(variantSeed + i * 1.9 + time * 0.4) * 0.55;
+    const ang = restAngle * focus + scatterAngle * (1 - focus);
+    const drift = (1 - focus) * r * 0.16 * Math.sin(i * 2.1 + variantSeed);
+    invoke(ctx, 'save');
+    invoke(ctx, 'translate', 0, hingeY);
+    invoke(ctx, 'rotate', ang);
+    invoke(ctx, 'translate', 0, -pageH * 0.52 - drift);
+
+    set(ctx, 'fillStyle', 'rgba(0,0,0,0.22)');
+    invoke(ctx, 'beginPath');
+    invoke(ctx, 'ellipse', 3, pageH * 0.5 + 5, pageW * 0.4, 5, 0, 0, 7);
+    invoke(ctx, 'fill');
+
+    const grad = linearGradient(ctx, -pageW / 2, 0, pageW / 2, 0, [
+      [0, alpha(palette.primary, 0.3 - 0.03 * Math.abs(p))],
+      [1, alpha(palette.secondary, 0.13)],
+    ]);
+    set(ctx, 'fillStyle', grad);
+    invoke(ctx, 'beginPath');
+    invoke(ctx, 'moveTo', -pageW / 2, -pageH / 2);
+    invoke(ctx, 'lineTo', pageW / 2, -pageH / 2);
+    const torn = Math.abs(p) === 2;
+    if (torn) {
+      const steps = 7;
+      for (let s = 1; s <= steps; s++) {
+        const yy = -pageH / 2 + (pageH * s) / steps;
+        const jag = Math.sin(s * 3.3 + variantSeed + i) * pageW * 0.06 * (1 - focus);
+        invoke(ctx, 'lineTo', pageW / 2 + jag, yy);
+      }
+    } else {
+      invoke(ctx, 'lineTo', pageW / 2, pageH / 2);
+    }
+    invoke(ctx, 'lineTo', -pageW / 2, pageH / 2);
+    invoke(ctx, 'closePath');
+    invoke(ctx, 'fill');
+    set(ctx, 'strokeStyle', 'rgba(210,225,218,0.28)');
+    set(ctx, 'lineWidth', 0.9);
+    invoke(ctx, 'stroke');
+
+    set(ctx, 'strokeStyle', 'rgba(210,225,218,0.22)');
+    set(ctx, 'lineWidth', 1.1);
+    for (let li = 0; li < 8; li++) {
+      const ly = -pageH / 2 + pageH * 0.11 + li * pageH * 0.098;
+      const lw = pageW * (0.6 + 0.26 * Math.sin(li * 2.4 + variantSeed + i));
+      invoke(ctx, 'beginPath');
+      invoke(ctx, 'moveTo', -pageW / 2 + pageW * 0.14, ly);
+      invoke(ctx, 'lineTo', -pageW / 2 + pageW * 0.14 + lw, ly);
+      invoke(ctx, 'stroke');
+    }
+    set(ctx, 'strokeStyle', alpha(palette.secondary, 0.3));
+    set(ctx, 'lineWidth', 1);
+    invoke(ctx, 'beginPath');
+    invoke(ctx, 'moveTo', -pageW / 2 + 4, -pageH / 2 + 3);
+    invoke(ctx, 'lineTo', pageW / 2 - 4, -pageH / 2 + 3);
+    invoke(ctx, 'stroke');
+    invoke(ctx, 'restore');
+  }
+  set(ctx, 'strokeStyle', alpha(palette.primary, 0.7));
+  set(ctx, 'lineWidth', 2.2);
+  invoke(ctx, 'beginPath');
+  invoke(ctx, 'moveTo', 0, hingeY - r * 0.05);
+  invoke(ctx, 'lineTo', 0, hingeY + r * 0.05);
+  invoke(ctx, 'stroke');
+  for (let s = -2; s <= 2; s++) {
+    set(ctx, 'fillStyle', alpha(palette.primary, 0.55));
+    invoke(ctx, 'beginPath');
+    invoke(ctx, 'arc', 0, hingeY + s * r * 0.022, 1.4, 0, 7);
+    invoke(ctx, 'fill');
+  }
+});
+
+// --- Redação: coluna de tese com cartões de evidência em treliça e fecho ---
+const drawRedaction: CoreDrawFn = (input) => withFrame(input, (r, focus) => {
+  const { ctx, palette, time, variantSeed } = input;
+  set(ctx, 'fillStyle', 'rgba(0,0,0,0.28)');
+  invoke(ctx, 'beginPath');
+  invoke(ctx, 'ellipse', 0, r * 0.66, r * 0.5, r * 0.09, 0, 0, 7);
+  invoke(ctx, 'fill');
+
+  function beam(x1: number, y1: number, x2: number, y2: number, width: number, color: string, a = 1) {
+    const dx = x2 - x1, dy = y2 - y1, len = Math.hypot(dx, dy) || 1, nx = -dy / len, ny = dx / len;
+    invoke(ctx, 'save');
+    set(ctx, 'globalAlpha', a);
+    const grad = linearGradient(ctx, x1 - nx * width / 2, y1 - ny * width / 2, x1 + nx * width / 2, y1 + ny * width / 2, [
+      [0, alpha(color, 0.9)], [0.5, alpha(color, 0.5)], [1, alpha(color, 0.22)],
+    ]);
+    set(ctx, 'fillStyle', grad);
+    invoke(ctx, 'beginPath');
+    invoke(ctx, 'moveTo', x1 - nx * width / 2, y1 - ny * width / 2);
+    invoke(ctx, 'lineTo', x2 - nx * width * 0.3, y2 - ny * width * 0.3);
+    invoke(ctx, 'lineTo', x2 + nx * width * 0.3, y2 + ny * width * 0.3);
+    invoke(ctx, 'lineTo', x1 + nx * width / 2, y1 + ny * width / 2);
+    invoke(ctx, 'closePath');
+    invoke(ctx, 'fill');
+    set(ctx, 'strokeStyle', 'rgba(255,255,255,0.28)');
+    set(ctx, 'lineWidth', 0.8);
+    invoke(ctx, 'beginPath');
+    invoke(ctx, 'moveTo', x1 - nx * width / 2, y1 - ny * width / 2);
+    invoke(ctx, 'lineTo', x2 - nx * width * 0.3, y2 - ny * width * 0.3);
+    invoke(ctx, 'stroke');
+    invoke(ctx, 'restore');
+  }
+
+  beam(0, -r * 0.72, 0, r * 0.58, r * 0.085, palette.primary);
+  set(ctx, 'strokeStyle', 'rgba(0,0,0,0.32)');
+  set(ctx, 'lineWidth', 1);
+  for (let s = 0; s < 9; s++) {
+    const yy = -r * 0.6 + s * (r * 1.12 / 9);
+    invoke(ctx, 'beginPath');
+    invoke(ctx, 'moveTo', -r * 0.022, yy);
+    invoke(ctx, 'lineTo', r * 0.022, yy);
+    invoke(ctx, 'stroke');
+  }
+  const kg = radialGradient(ctx, 0, -r * 0.72, 0, 0, -r * 0.72, r * 0.1, [
+    [0, 'rgba(255,245,225,0.95)'], [1, alpha(palette.primary, 0.15)],
+  ]);
+  set(ctx, 'fillStyle', kg);
+  invoke(ctx, 'beginPath');
+  invoke(ctx, 'arc', 0, -r * 0.72, r * 0.075, 0, 7);
+  invoke(ctx, 'fill');
+
+  const struts = 4;
+  for (let i = 0; i < struts; i++) {
+    const yy = -r * 0.36 + i * (r * 0.8 / (struts - 1));
+    const side = i % 2 === 0 ? 1 : -1;
+    const disc = (1 - focus) * r * 0.4;
+    const nodeX = side * (r * 0.48 + disc * Math.sin(i + variantSeed + time * 0.5));
+    const nodeY = yy + (1 - focus) * Math.cos(i * 2 + variantSeed) * r * 0.15;
+    const col = i % 2 === 0 ? palette.primary : palette.secondary;
+    beam(0, yy, nodeX, nodeY, r * 0.04, col, 0.35 + 0.55 * focus);
+
+    invoke(ctx, 'save');
+    invoke(ctx, 'translate', nodeX, nodeY);
+    invoke(ctx, 'rotate', side * 0.12 * (1 - focus));
+    const cw = r * 0.17, ch = r * 0.095;
+    set(ctx, 'fillStyle', alpha(col, 0.4));
+    set(ctx, 'strokeStyle', alpha(col, 0.85));
+    set(ctx, 'lineWidth', 1);
+    invoke(ctx, 'beginPath');
+    roundedRect(ctx, -cw / 2, -ch / 2, cw, ch, 3);
+    invoke(ctx, 'fill');
+    invoke(ctx, 'stroke');
+    set(ctx, 'strokeStyle', alpha(col, 0.9));
+    set(ctx, 'lineWidth', ch * 0.22);
+    invoke(ctx, 'beginPath');
+    invoke(ctx, 'moveTo', -cw * 0.3, 0);
+    invoke(ctx, 'lineTo', cw * 0.26, 0);
+    invoke(ctx, 'stroke');
+    invoke(ctx, 'restore');
+  }
+
+  invoke(ctx, 'save');
+  invoke(ctx, 'translate', 0, r * 0.58);
+  invoke(ctx, 'rotate', (1 - focus) * 0.6);
+  set(ctx, 'globalAlpha', 0.35 + 0.65 * focus);
+  const cg = linearGradient(ctx, -r * 0.1, -r * 0.1, r * 0.1, r * 0.1, [
+    [0, 'rgba(232,224,206,0.9)'], [1, alpha(palette.primary, 0.35)],
+  ]);
+  set(ctx, 'fillStyle', cg);
+  invoke(ctx, 'beginPath');
+  invoke(ctx, 'moveTo', 0, -r * 0.09);
+  invoke(ctx, 'lineTo', r * 0.085, r * 0.055);
+  invoke(ctx, 'lineTo', -r * 0.085, r * 0.055);
+  invoke(ctx, 'closePath');
+  invoke(ctx, 'fill');
+  set(ctx, 'strokeStyle', 'rgba(255,255,255,0.3)');
+  set(ctx, 'lineWidth', 0.8);
+  invoke(ctx, 'stroke');
+  invoke(ctx, 'restore');
+});
+
+// --- Atualidades: campo global — centros geopolíticos conectados, ondas contínuas ---
+const drawCurrentAffairs: CoreDrawFn = (input) => withFrame(input, (r, focus) => {
+  const { ctx, palette, time } = input;
+  set(ctx, 'strokeStyle', alpha(palette.primary, 0.14));
+  set(ctx, 'lineWidth', 1);
+  for (let i = 0; i < 3; i++) {
+    invoke(ctx, 'beginPath');
+    invoke(ctx, 'ellipse', 0, 0, r * 0.85, r * (0.25 + i * 0.22), 0, 0, Math.PI * 2);
+    invoke(ctx, 'stroke');
+  }
+  const nodes = [0, 1, 2, 3, 4].map((i) => {
+    const a = (i / 5) * Math.PI * 2 + 0.3;
+    return [Math.cos(a) * r * 0.68, Math.sin(a) * r * 0.42] as [number, number];
+  });
+  for (let i = 0; i < nodes.length; i++) {
+    const [x1, y1] = nodes[i], [x2, y2] = nodes[(i + 2) % nodes.length];
+    const resolved = focus > 0.6;
+    set(ctx, 'strokeStyle', alpha(palette.primary, resolved ? 0.4 : 0.18));
+    set(ctx, 'lineWidth', resolved ? 1.2 : 1);
+    invoke(ctx, 'beginPath');
+    invoke(ctx, 'moveTo', x1, y1);
+    invoke(ctx, 'lineTo', x2, y2);
+    invoke(ctx, 'stroke');
+  }
+  nodes.forEach(([x, y], i) => {
+    const age = ((time * 1.6 + i * 1.3) % 3);
+    const rr = age * r * 0.22;
+    set(ctx, 'strokeStyle', alpha(palette.secondary, Math.max(0, 0.35 * (1 - age / 3))));
+    set(ctx, 'lineWidth', 1);
+    invoke(ctx, 'beginPath');
+    invoke(ctx, 'arc', x, y, rr, 0, 7);
+    invoke(ctx, 'stroke');
+    const isCurrent = i === 0;
+    set(ctx, 'fillStyle', alpha(palette.primary, isCurrent ? 0.55 + 0.35 * focus : 0.6));
+    invoke(ctx, 'beginPath');
+    invoke(ctx, 'arc', x, y, r * (isCurrent ? 0.07 : 0.045), 0, 7);
+    invoke(ctx, 'fill');
+  });
+});
+
 export const CORE_REGISTRY: Record<CoreType, CoreDrawFn> = {
   matematica_grid: drawMathematics,
   fisica_lentes: drawPhysics,
@@ -383,5 +697,11 @@ export const CORE_REGISTRY: Record<CoreType, CoreDrawFn> = {
   portugues_sintaxe: drawPortuguese,
   geografia_fluxos: drawGeography,
   historia_campos: drawHistory,
+  literatura_planos: drawLiterature,
+  redacao_arquitetura: drawRedaction,
+  atualidades_campo: drawCurrentAffairs,
+  ingles_contexto: drawEnglish,
+  filosofia_dialetica: drawPhilosophy,
+  sociologia_rede: drawSociology,
   default_neutro: drawNeutral,
 };

@@ -1,4 +1,4 @@
-import { cleanup, render, screen, within } from '@testing-library/react';
+import { cleanup, fireEvent, render, screen, within } from '@testing-library/react';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { MemoryRouter } from 'react-router-dom';
 import type { DailyStudyAvailability } from '../features/availability/types';
@@ -48,14 +48,20 @@ const allocatedActions: AllocatedStudyAction[] = [
   {
     id: 'genetics',
     type: 'theory',
-    topicId: 'bio-genetics',
+    topicId: 'bio_genetica',
     topicName: FIRST_TOPIC,
     subject: 'Biologia',
     estimatedMinutes: 45,
     priorityScore: 100,
-    reasons: [],
-    factors: [],
-    snapshot: { masteryLevel: 0, uncertainty: 0, calculatedAt: new Date().toISOString() },
+    reasons: ['dominio_insuficiente', 'revisao_urgente', 'proximidade_prova', 'tempo_disponivel'],
+    factors: [
+      { kind: 'learning_gap', rawValue: 65, contribution: 26 },
+      { kind: 'review_urgency', rawValue: 73, contribution: 21.9 },
+      { kind: 'recurring_errors', rawValue: 2, contribution: 12 },
+      { kind: 'energy_adjustment', rawValue: 1, contribution: 0 },
+      { kind: 'exam_relevance', rawValue: 1.08225, contribution: 4.93 },
+    ],
+    snapshot: { masteryLevel: 35, uncertainty: 0.3, calculatedAt: '2026-08-24T12:00:00.000Z' },
     intervalStart: '2026-08-24T14:40:00-03:00',
     intervalEnd: '2026-08-24T15:00:00-03:00',
     allocatedMinutes: 20,
@@ -188,7 +194,11 @@ describe('daily plan consistency across views', () => {
       isPersisted: true,
     });
     goalsHook.mockReturnValue({
-      goals: { primaryGoal: 'Medicina', secondaryGoals: [], boardWeights: [] },
+      goals: {
+        primaryGoal: 'Medicina',
+        secondaryGoals: [],
+        boardWeights: [{ board: 'FUVEST', weight: 1, phaseFocus: 'ambas' }],
+      },
     });
   });
 
@@ -211,21 +221,77 @@ describe('daily plan consistency across views', () => {
     expect(screen.getAllByText(/14:40/).length).toBeGreaterThan(0);
   });
 
-  it('Dashboard mostra cada ação priorizada uma vez entre foco, depois disso e pode esperar', () => {
+  it('Dashboard mostra cada ação priorizada uma vez em uma sequência ranqueada', async () => {
     renderView(<Dashboard />);
 
-    const laterActions = within(screen.getByRole('heading', { name: 'Depois disso' }).closest('section')!);
-    const waitingActions = within(screen.getByRole('heading', { name: 'Pode esperar' }).closest('section')!);
+    const sequence = screen.getByRole('region', { name: 'Sequência de decisão' });
+    const laterActions = within(sequence);
+    const waitingDisclosure = screen.getByRole('group', { name: 'Pode esperar' });
 
     expect(screen.getByRole('heading', { name: FIRST_TOPIC })).toBeInTheDocument();
     expect(laterActions.queryByText(FIRST_TOPIC)).not.toBeInTheDocument();
-    expect(waitingActions.queryByText(FIRST_TOPIC)).not.toBeInTheDocument();
     for (const action of allocatedActions.slice(1)) {
       expect(laterActions.getAllByText(action.topicName)).toHaveLength(1);
-      expect(waitingActions.queryByText(action.topicName)).not.toBeInTheDocument();
     }
-    expect(laterActions.queryByText(waitingAction.topicName)).not.toBeInTheDocument();
-    expect(waitingActions.getAllByText(waitingAction.topicName)).toHaveLength(1);
+    const waitingButton = within(waitingDisclosure).getByRole('button', { name: 'Pode esperar' });
+    expect(waitingDisclosure).not.toHaveAttribute('aria-expanded');
+    expect(waitingButton).toHaveAttribute('aria-expanded', 'false');
+    expect(within(waitingDisclosure).queryByText(waitingAction.topicName)).not.toBeInTheDocument();
+
+    fireEvent.click(waitingButton);
+    expect(waitingButton).toHaveAttribute('aria-expanded', 'true');
+    expect(within(waitingDisclosure).getAllByText(waitingAction.topicName)).toHaveLength(1);
+
+    expect(Array.from(sequence.querySelectorAll<HTMLElement>('[data-action-id]')).map((node) => node.dataset.actionId))
+      .toEqual([...allocatedActions.slice(1), waitingAction].map((action) => action.id));
+  });
+
+  it('Dashboard renders one immersive decision and removes generic dashboard blocks', () => {
+    renderView(<Dashboard />);
+    const stage = screen.getByTestId('today-decision-stage');
+    expect(within(stage).getByRole('heading', { name: FIRST_TOPIC })).toBeInTheDocument();
+    expect(within(stage).getByRole('button', { name: 'Começar' })).toBeInTheDocument();
+    expect(within(stage).getByTestId('crivo-core')).toHaveAttribute('data-scale', 'hero');
+    const signals = within(stage).getByLabelText('Sinais usados na decisão');
+    expect(signals.tagName).toBe('DL');
+    for (const label of ['Domínio', 'Confiança', 'Urgência', 'Tempo']) {
+      expect(within(signals).getByText(label)).toBeInTheDocument();
+    }
+    for (const value of ['35%', '70%', '73%', '20 min']) {
+      expect(within(signals).getByText(value)).toBeInTheDocument();
+    }
+    expect(screen.queryByText('Prioridade Máxima')).not.toBeInTheDocument();
+    expect(screen.queryByText('Prioridade Fuvest')).not.toBeInTheDocument();
+  });
+
+  it('Dashboard discloses only context causally supported by the current action', () => {
+    renderView(<Dashboard />);
+
+    const context = screen.getByText('Contexto que entrou na decisão').closest('details');
+    expect(context).not.toBeNull();
+    expect(within(context!).getByText('250 min')).toBeInTheDocument();
+    expect(within(context!).getByText('73% de urgência neste tópico')).toBeInTheDocument();
+    expect(within(context!).getByText('FUVEST — 1ª fase')).toBeInTheDocument();
+    expect(within(context!).queryByText(/Santa Casa/)).not.toBeInTheDocument();
+  });
+
+  it('Dashboard omits decision context when no current-action signal contributed', () => {
+    currentPlan = {
+      ...sharedPlan,
+      allocatedActions: [{
+        ...allocatedActions[0],
+        reasons: ['dominio_insuficiente'],
+        factors: allocatedActions[0].factors.map((factor) => ({
+          ...factor,
+          rawValue: factor.kind === 'exam_relevance' ? 1 : factor.rawValue,
+          contribution: 0,
+        })),
+      }],
+    };
+
+    renderView(<Dashboard />);
+
+    expect(screen.queryByText('Contexto que entrou na decisão')).not.toBeInTheDocument();
   });
 
   it('Plano removes manual and Calendar-primary controls while retaining warnings and unallocated priorities', () => {

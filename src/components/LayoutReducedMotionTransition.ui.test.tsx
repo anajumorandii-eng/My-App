@@ -65,5 +65,6 @@ describe('Layout reduced-motion route transition', () => {
 
     expect(screen.getByRole('heading', { name: 'Sessão de estudo reduzida' })).toBeInTheDocument();
     expect(screen.queryByLabelText('Rascunho reduzido')).not.toBeInTheDocument();
+    expect(document.querySelector('main')).toHaveClass('bg-background-base');
   });
 });

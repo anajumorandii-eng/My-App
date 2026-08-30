@@ -11,6 +11,7 @@ import { PenLine, ChevronDown, Lightbulb, AlertTriangle, CheckCircle2, XCircle, 
 import { aiErrorMessage, requestAiText } from '../lib/aiClient';
 import { AnswerCorrection, parseAnswerCorrection } from '../lib/tutorContracts';
 import { AiText } from '../components/AiText';
+import { SubjectAtmosphere } from '../features/daily-plan/components/SubjectAtmosphere';
 
 type Tab = 'pratica' | 'estrutura' | 'bancas' | 'erros' | 'checklist';
 
@@ -64,7 +65,8 @@ export default function Redacao() {
   };
 
   return (
-    <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
+    <SubjectAtmosphere subject="redacao" focus={0.4}>
+      <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500" data-geometry="argument">
       <header>
         <h1 className="text-3xl font-bold tracking-tight mb-2 flex items-center">
           <PenLine className="w-7 h-7 mr-3 text-indigo-500" />
@@ -326,6 +328,7 @@ export default function Redacao() {
           </ul>
         </section>
       )}
-    </div>
+      </div>
+    </SubjectAtmosphere>
   );
 }

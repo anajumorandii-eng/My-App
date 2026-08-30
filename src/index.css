@@ -206,6 +206,444 @@ html, body {
   background-color: var(--background-base);
 }
 
+/* Hoje owns the full mobile viewport. Reserve the visible bottom-nav height
+ * plus the device inset so its CTA and first decision item cannot end up
+ * underneath persistent navigation. Desktop has no bottom navigation. */
+@media (max-width: 1023px) {
+  .route-presentation-immersive {
+    padding-bottom: calc(4rem + env(safe-area-inset-bottom));
+  }
+}
+
+/* ---------------------------------------------------------------------
+ * Hoje immersive field
+ *
+ * SubjectAtmosphere owns both palette translations locally. These aliases
+ * are the single theme-selection seam shared by the CSS base field and the
+ * Canvas renderer (which reads their computed values).
+ * ------------------------------------------------------------------- */
+[data-testid="subject-atmosphere"] {
+  --subject-bg: var(--subject-light-bg);
+  --subject-surface: var(--subject-light-surface);
+  --subject-primary: var(--subject-light-primary);
+  --subject-secondary: var(--subject-light-secondary);
+  --subject-emissive: var(--subject-light-emissive);
+  --subject-text-highlight: var(--subject-light-text-highlight);
+  --subject-text-accent: var(--subject-light-text-accent);
+  --subject-focus-accent: var(--subject-light-focus-accent);
+  --subject-data-positive: var(--subject-light-data-positive);
+  --subject-data-warning: var(--subject-light-data-warning);
+  --subject-atmo-a: var(--subject-light-atmo-a);
+  --subject-atmo-b: var(--subject-light-atmo-b);
+  --subject-field-css: var(--subject-light-field-css);
+  min-height: 100%;
+  transition: background-color 900ms cubic-bezier(0.4, 0, 0.2, 1), color 900ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark [data-testid="subject-atmosphere"] {
+  --subject-bg: var(--subject-dark-bg);
+  --subject-surface: var(--subject-dark-surface);
+  --subject-primary: var(--subject-dark-primary);
+  --subject-secondary: var(--subject-dark-secondary);
+  --subject-emissive: var(--subject-dark-emissive);
+  --subject-text-highlight: var(--subject-dark-text-highlight);
+  --subject-text-accent: var(--subject-dark-text-accent);
+  --subject-focus-accent: var(--subject-dark-focus-accent);
+  --subject-data-positive: var(--subject-dark-data-positive);
+  --subject-data-warning: var(--subject-dark-data-warning);
+  --subject-atmo-a: var(--subject-dark-atmo-a);
+  --subject-atmo-b: var(--subject-dark-atmo-b);
+  --subject-field-css: var(--subject-dark-field-css);
+}
+
+.crivo-today-stage {
+  position: relative;
+  min-height: 100svh;
+  color: var(--subject-text-highlight);
+  background: var(--subject-bg);
+}
+
+.crivo-decision-hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(20rem, 0.85fr);
+  align-items: center;
+  gap: clamp(1.5rem, 4vw, 4.5rem);
+  min-height: clamp(36rem, calc(100svh - 4rem), 52rem);
+  padding: clamp(2rem, 4vw, 4.5rem) clamp(1rem, 3.5vw, 3.5rem);
+  isolation: isolate;
+}
+
+.crivo-decision-copy {
+  min-width: 0;
+  max-width: 40rem;
+}
+
+.crivo-decision-eyebrow {
+  color: var(--subject-text-accent);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.crivo-decision-title {
+  max-width: 11ch;
+  margin-top: 0.65rem;
+  color: var(--subject-text-highlight);
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 6vw, 5.75rem);
+  font-weight: 600;
+  letter-spacing: -0.045em;
+  line-height: 0.94;
+  text-wrap: balance;
+}
+
+.crivo-decision-intervention {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem 1rem;
+  margin-top: clamp(1.25rem, 2.5vw, 2rem);
+  color: var(--subject-text-highlight);
+  font-size: clamp(0.95rem, 1.5vw, 1.08rem);
+}
+
+.crivo-decision-intervention p:first-child {
+  font-weight: 650;
+}
+
+.crivo-decision-intervention span,
+.crivo-decision-intervention p:last-child {
+  color: color-mix(in oklab, var(--subject-text-highlight) 70%, var(--subject-bg));
+}
+
+.crivo-decision-intervention strong {
+  color: var(--subject-text-highlight);
+  font-weight: 700;
+}
+
+.crivo-decision-reason {
+  max-width: 42rem;
+  margin-top: 0.8rem;
+  color: color-mix(in oklab, var(--subject-text-highlight) 75%, var(--subject-bg));
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.crivo-decision-cta {
+  margin-top: 1.35rem;
+  min-width: 10rem;
+  box-shadow: 0 0.75rem 2.25rem color-mix(in oklab, var(--subject-primary) 22%, transparent);
+}
+
+.crivo-decision-signals {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  max-width: 38rem;
+  margin-top: 1.5rem;
+  padding-block: 0.8rem;
+  border-block: 1px solid color-mix(in oklab, var(--subject-primary) 22%, transparent);
+}
+
+.crivo-decision-signals > div {
+  min-width: 0;
+  padding-inline: 0.8rem;
+  border-inline-start: 1px solid color-mix(in oklab, var(--subject-primary) 18%, transparent);
+}
+
+.crivo-decision-signals > div:first-child {
+  padding-inline-start: 0;
+  border-inline-start: 0;
+}
+
+.crivo-decision-signals dt {
+  overflow: hidden;
+  color: color-mix(in oklab, var(--subject-text-highlight) 62%, var(--subject-bg));
+  font-size: 0.67rem;
+  font-weight: 650;
+  letter-spacing: 0.08em;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.crivo-decision-signals dd {
+  margin-top: 0.2rem;
+  color: var(--subject-text-highlight);
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 650;
+}
+
+.crivo-adaptive-update,
+.crivo-decision-explanation,
+.crivo-disagree-control {
+  max-width: 38rem;
+  margin-top: 1rem;
+}
+
+/* Task 7 will let DecisionExplanation own the complete deconstruction.
+   Until then the integrated hero owns the one-line reason above the CTA,
+   while the existing disclosure remains the controlled integration point. */
+.crivo-decision-explanation > p:first-child {
+  display: none;
+}
+
+.crivo-core-stage {
+  position: relative;
+  width: min(42vw, 34rem);
+  max-width: 100%;
+  aspect-ratio: 1;
+  justify-self: end;
+  filter: drop-shadow(0 1.5rem 3.5rem color-mix(in oklab, var(--subject-primary) 22%, transparent));
+}
+
+.crivo-day-context {
+  margin-inline: clamp(1rem, 3.5vw, 3.5rem);
+  border-block: 1px solid color-mix(in oklab, var(--subject-primary) 18%, transparent);
+}
+
+.crivo-day-context summary {
+  display: flex;
+  min-height: 2.75rem;
+  cursor: pointer;
+  align-items: center;
+  color: color-mix(in oklab, var(--subject-text-highlight) 72%, var(--subject-bg));
+  font-size: 0.78rem;
+  font-weight: 650;
+  letter-spacing: 0.04em;
+}
+
+.crivo-day-context summary::after {
+  content: '+';
+  margin-left: auto;
+  color: var(--subject-primary);
+  font-size: 1rem;
+}
+
+.crivo-day-context[open] summary::after {
+  content: '−';
+}
+
+.crivo-day-context summary:focus-visible {
+  outline: 2px solid var(--subject-focus-accent);
+  outline-offset: 3px;
+}
+
+.crivo-day-context-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  padding: 0.25rem 0 1rem;
+}
+
+.crivo-day-context-grid > div {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+
+.crivo-day-context-grid svg,
+.crivo-today-notices svg {
+  width: 1rem;
+  height: 1rem;
+  flex: 0 0 auto;
+  margin-top: 0.15rem;
+  color: var(--subject-primary);
+}
+
+.crivo-day-context-grid p {
+  display: grid;
+  gap: 0.15rem;
+  color: var(--subject-text-highlight);
+  font-size: 0.8rem;
+  line-height: 1.35;
+}
+
+.crivo-day-context-grid span {
+  color: color-mix(in oklab, var(--subject-text-highlight) 62%, var(--subject-bg));
+  font-size: 0.72rem;
+}
+
+.crivo-today-notices,
+.crivo-today-empty {
+  margin: 1.5rem clamp(1rem, 3.5vw, 3.5rem) 0;
+}
+
+.crivo-today-notices {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.crivo-today-notices p {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  color: color-mix(in oklab, var(--subject-text-highlight) 68%, var(--subject-bg));
+  font-size: 0.75rem;
+  line-height: 1.45;
+}
+
+.decision-sequence-list,
+.decision-sequence-list ol {
+  display: grid;
+  gap: 0.65rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.decision-sequence {
+  margin: 1.5rem clamp(1rem, 3.5vw, 3.5rem) 0;
+  padding-bottom: 3rem;
+}
+
+.decision-sequence-region {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.decision-sequence-region h3 {
+  margin: 0;
+  color: var(--subject-text-highlight);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.decision-sequence-waiting {
+  margin-top: 0.5rem;
+}
+
+.decision-sequence-disclosure {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.35rem 0;
+  color: color-mix(in oklab, var(--subject-text-highlight) 64%, var(--subject-bg));
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-align: start;
+  text-transform: uppercase;
+}
+
+.decision-sequence-disclosure:focus-visible {
+  outline: 2px solid var(--subject-focus-accent);
+  outline-offset: 3px;
+}
+
+.decision-sequence-disclosure svg {
+  width: 1rem;
+  height: 1rem;
+  transition: transform 160ms ease;
+}
+
+.crivo-today-empty {
+  display: grid;
+  gap: 2rem;
+  padding-block: 2rem 4rem;
+}
+
+@media (max-width: 767px) {
+  .crivo-today-stage {
+    min-height: 100svh;
+  }
+
+  .crivo-decision-hero {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.5rem;
+    min-height: auto;
+    padding: 0.85rem 1rem 1.75rem;
+  }
+
+  .crivo-decision-copy {
+    grid-row: 2;
+    max-width: none;
+  }
+
+  .crivo-decision-title {
+    max-width: 12ch;
+    font-size: clamp(2.35rem, 12vw, 3.45rem);
+    line-height: 0.96;
+  }
+
+  .crivo-decision-intervention {
+    display: grid;
+    gap: 0.2rem;
+    margin-top: 0.9rem;
+  }
+
+  .crivo-decision-reason {
+    margin-top: 0.55rem;
+    font-size: 0.85rem;
+    line-height: 1.42;
+  }
+
+  .crivo-decision-cta {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .crivo-decision-signals {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 0.75rem;
+    margin-top: 1.15rem;
+  }
+
+  .crivo-decision-signals > div:nth-child(3) {
+    padding-inline-start: 0;
+    border-inline-start: 0;
+  }
+
+  .crivo-decision-signals dt {
+    font-size: 0.64rem;
+  }
+
+  .crivo-core-stage {
+    grid-row: 1;
+    width: min(64vw, 15rem);
+    justify-self: center;
+  }
+
+  .crivo-day-context,
+  .crivo-today-notices,
+  .decision-sequence,
+  .crivo-today-empty {
+    margin-inline: 1rem;
+  }
+
+  .crivo-day-context-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Keep the complete decision — including its CTA — inside a compact phone's
+   usable first fold without removing any of the evidence hierarchy. */
+@media (max-width: 767px) and (max-height: 900px) {
+  .crivo-decision-hero {
+    gap: 0.25rem;
+    padding-top: 0.5rem;
+  }
+
+  .crivo-core-stage {
+    width: min(56vw, 13rem);
+  }
+
+  .crivo-decision-title {
+    font-size: clamp(2.25rem, 10.5vw, 3rem);
+  }
+
+  .crivo-decision-cta {
+    margin-top: 0.75rem;
+  }
+}
+
 /* ---------------------------------------------------------------------
  * Spotlight — a small, local glow that follows the pointer inside one
  * element (nav items, the primary button, interactive cards). Pairs with
@@ -239,6 +677,44 @@ html, body {
   .spotlight::after {
     display: none;
   }
+}
+
+/* ---------------------------------------------------------------------
+ * Per-subject surface materials — shifts radii and borders with data-geometry
+ * ------------------------------------------------------------------- */
+[data-geometry="grid"] .crivo-decision-signals > div,
+[data-geometry="grid"] .decision-sequence-item {
+  border-radius: 2px;
+}
+[data-geometry="field"] .crivo-decision-signals > div {
+  border-radius: 3px 12px 3px 12px;
+}
+[data-geometry="bond"] .crivo-decision-signals > div {
+  border-radius: 11px;
+}
+[data-geometry="branch"] .crivo-decision-signals > div {
+  border-radius: 18px;
+}
+[data-geometry="type"] .crivo-decision-signals > div {
+  border-radius: 0;
+  border-bottom: 1.5px solid var(--border-subtle);
+}
+[data-geometry="layer"] .crivo-decision-signals > div {
+  border-radius: 2px 14px 2px 14px;
+}
+[data-geometry="argument"] .crivo-decision-signals > div {
+  border-radius: 3px;
+  border-inline-start: 2px solid var(--subject-primary);
+}
+[data-geometry="timeline"] .crivo-decision-signals > div {
+  border-radius: 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+[data-geometry="topo"] .crivo-decision-signals > div {
+  border-radius: 2px 16px;
+}
+[data-geometry="pulse"] .crivo-decision-signals > div {
+  border-radius: 16px 4px 16px 4px;
 }
 
 /* Global safety net: every animated interaction that goes through

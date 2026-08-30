@@ -1,5 +1,5 @@
 import type { Variants } from 'motion/react';
-import { MOTION_DURATION, MOTION_EASE } from './tokens';
+import { MOTION_DURATION, MOTION_EASE, MOTION_EASE_EMPHASIZED, MOTION_STAGGER } from './tokens';
 
 // A new focus/recommendation entering — component-scale entrance.
 export const focusEnter: Variants = {
@@ -34,4 +34,25 @@ export const listItem: Variants = {
 export const confirmation: Variants = {
   hidden: { opacity: 0, scale: 0.97 },
   visible: { opacity: 1, scale: 1, transition: { duration: MOTION_DURATION.micro, ease: MOTION_EASE } },
+};
+
+export const rankedSequence = {
+  hidden: {},
+  visible: { transition: { staggerChildren: MOTION_STAGGER.list, delayChildren: 0.04 } },
+};
+
+export const factorDecompose = {
+  hidden: { opacity: 0, scale: 0.92, x: 0, y: 0 },
+  visible: (offset: { x: number; y: number }) => ({
+    opacity: 1,
+    scale: 1,
+    x: offset.x,
+    y: offset.y,
+    transition: { duration: MOTION_DURATION.panel, ease: MOTION_EASE_EMPHASIZED },
+  }),
+};
+
+export const decisionRecompose = {
+  initial: { opacity: 0.72, scale: 0.985 },
+  animate: { opacity: 1, scale: 1, transition: { duration: MOTION_DURATION.component, ease: MOTION_EASE } },
 };
