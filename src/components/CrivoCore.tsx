@@ -225,6 +225,7 @@ export function CrivoCore({
   }, [reducedMotion, canvasFailed, canvasReady, state, profile, canvasSize, variantSeed]);
 
   const ariaLabel = subject && !profile.isFallback ? `${STATE_LABEL[state]} — ${profile.label}` : STATE_LABEL[state];
+  const fallbackPalette = getSubjectPalette(profile, 'dark');
 
   return (
     <div
@@ -240,9 +241,31 @@ export function CrivoCore({
     >
       {canvasFailed ? (
         <div
-          className="w-full h-full rounded-full"
-          style={{ background: `radial-gradient(circle at 35% 30%, ${getSubjectPalette(profile, 'dark').emissive}, ${getSubjectPalette(profile, 'dark').primary} 75%)` }}
-        />
+          data-testid="crivo-core-fallback"
+          data-static-artifact="orbital"
+          className="relative w-full h-full overflow-hidden rounded-full"
+          style={{
+            background: `radial-gradient(circle at 52% 48%, ${fallbackPalette.emissive} 0 4%, ${fallbackPalette.primary}55 5% 22%, transparent 48%), radial-gradient(ellipse at center, ${fallbackPalette.atmoA}, ${fallbackPalette.atmoB})`,
+          }}
+        >
+          {[
+            { top: '34%', transform: 'rotate(0deg)' },
+            { top: '34%', transform: 'rotate(24deg)' },
+            { top: '34%', transform: 'rotate(-21deg)' },
+          ].map(({ top, transform }) => (
+            <span
+              key={transform}
+              data-static-ring
+              className="absolute rounded-full border"
+              style={{ width: '140%', height: '32%', left: '-20%', top, borderColor: `${fallbackPalette.primary}aa`, transform }}
+            />
+          ))}
+          <span
+            data-static-center
+            className="absolute left-1/2 top-1/2 h-[11%] w-[11%] -translate-x-1/2 -translate-y-1/2 rounded-full"
+            style={{ backgroundColor: fallbackPalette.emissive, boxShadow: `0 0 20px ${fallbackPalette.secondary}` }}
+          />
+        </div>
       ) : (
         <canvas
           ref={canvasRef}

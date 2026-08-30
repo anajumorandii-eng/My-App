@@ -49,6 +49,17 @@ describe('CrivoCore hero surface', () => {
     expect(canvasContext.clearRect).toHaveBeenCalledOnce();
   });
 
+  it('keeps the Núcleo legible as an orbital instrument when Canvas 2D is unavailable', () => {
+    vi.spyOn(HTMLCanvasElement.prototype, 'getContext').mockReturnValueOnce(null);
+
+    render(<CrivoCore state="ready" subject="Física" size="fill" scale="hero" decorative />);
+
+    const fallback = screen.getByTestId('crivo-core-fallback');
+    expect(fallback).toHaveAttribute('data-static-artifact', 'orbital');
+    expect(fallback.querySelectorAll('[data-static-ring]')).toHaveLength(3);
+    expect(fallback.querySelector('[data-static-center]')).toBeInTheDocument();
+  });
+
   it('keeps a fluid hero square and clamps its bitmap at DPR 2 in a rectangular wrapper', () => {
     const boundsSpy = vi.spyOn(HTMLElement.prototype, 'getBoundingClientRect').mockReturnValue(rectangularBounds(320, 180));
     Object.defineProperty(window, 'devicePixelRatio', { configurable: true, value: 3 });
