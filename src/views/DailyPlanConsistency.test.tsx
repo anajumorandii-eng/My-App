@@ -1,4 +1,4 @@
-import { cleanup, render, screen, within } from '@testing-library/react';
+import { cleanup, fireEvent, render, screen, within } from '@testing-library/react';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { MemoryRouter } from 'react-router-dom';
 import type { DailyStudyAvailability } from '../features/availability/types';
@@ -221,21 +221,27 @@ describe('daily plan consistency across views', () => {
     expect(screen.getAllByText(/14:40/).length).toBeGreaterThan(0);
   });
 
-  it('Dashboard mostra cada ação priorizada uma vez entre foco, depois disso e pode esperar', () => {
+  it('Dashboard mostra cada ação priorizada uma vez em uma sequência ranqueada', async () => {
     renderView(<Dashboard />);
 
-    const laterActions = within(screen.getByRole('heading', { name: 'Depois disso' }).closest('section')!);
-    const waitingActions = within(screen.getByRole('heading', { name: 'Pode esperar' }).closest('section')!);
+    const sequence = screen.getByRole('region', { name: 'Sequência de decisão' });
+    const laterActions = within(sequence);
+    const waitingDisclosure = screen.getByRole('group', { name: 'Pode esperar' });
 
     expect(screen.getByRole('heading', { name: FIRST_TOPIC })).toBeInTheDocument();
     expect(laterActions.queryByText(FIRST_TOPIC)).not.toBeInTheDocument();
-    expect(waitingActions.queryByText(FIRST_TOPIC)).not.toBeInTheDocument();
     for (const action of allocatedActions.slice(1)) {
       expect(laterActions.getAllByText(action.topicName)).toHaveLength(1);
-      expect(waitingActions.queryByText(action.topicName)).not.toBeInTheDocument();
     }
-    expect(laterActions.queryByText(waitingAction.topicName)).not.toBeInTheDocument();
-    expect(waitingActions.getAllByText(waitingAction.topicName)).toHaveLength(1);
+    expect(waitingDisclosure).toHaveAttribute('aria-expanded', 'false');
+    expect(within(waitingDisclosure).queryByText(waitingAction.topicName)).not.toBeInTheDocument();
+
+    fireEvent.click(within(waitingDisclosure).getByRole('button', { name: 'Pode esperar' }));
+    expect(waitingDisclosure).toHaveAttribute('aria-expanded', 'true');
+    expect(within(waitingDisclosure).getAllByText(waitingAction.topicName)).toHaveLength(1);
+
+    expect(Array.from(sequence.querySelectorAll<HTMLElement>('[data-action-id]')).map((node) => node.dataset.actionId))
+      .toEqual([...allocatedActions.slice(1), waitingAction].map((action) => action.id));
   });
 
   it('Dashboard renders one immersive decision and removes generic dashboard blocks', () => {

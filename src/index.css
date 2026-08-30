@@ -456,7 +456,6 @@ html, body {
 }
 
 .crivo-today-notices,
-.crivo-decision-sequence,
 .crivo-today-empty {
   margin: 1.5rem clamp(1rem, 3.5vw, 3.5rem) 0;
 }
@@ -475,10 +474,56 @@ html, body {
   line-height: 1.45;
 }
 
-.crivo-decision-sequence {
+.decision-sequence-list,
+.decision-sequence-list ol {
   display: grid;
-  gap: 1.5rem;
+  gap: 0.65rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.decision-sequence {
+  margin: 1.5rem clamp(1rem, 3.5vw, 3.5rem) 0;
   padding-bottom: 3rem;
+}
+
+.decision-sequence-region {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.decision-sequence-region h3 {
+  margin: 0;
+  color: var(--subject-text-highlight);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.decision-sequence-waiting {
+  margin-top: 0.5rem;
+}
+
+.decision-sequence-disclosure {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.35rem 0;
+  color: color-mix(in oklab, var(--subject-text-highlight) 64%, var(--subject-bg));
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-align: start;
+  text-transform: uppercase;
+}
+
+.decision-sequence-disclosure svg {
+  width: 1rem;
+  height: 1rem;
+  transition: transform 160ms ease;
 }
 
 .crivo-today-empty {
@@ -550,7 +595,7 @@ html, body {
 
   .crivo-day-context,
   .crivo-today-notices,
-  .crivo-decision-sequence,
+  .decision-sequence,
   .crivo-today-empty {
     margin-inline: 0;
   }

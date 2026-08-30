@@ -16,7 +16,7 @@ import { StudyAction, RecommendationReason, DisagreeReason, PlanFeedback, Recomm
 import { CrivoCore } from '../components/CrivoCore';
 import { TodayFocus } from '../features/daily-plan/components/TodayFocus';
 import { SubjectAtmosphere } from '../features/daily-plan/components/SubjectAtmosphere';
-import { SecondaryActionList } from '../features/daily-plan/components/SecondaryActionList';
+import { DecisionSequence } from '../features/daily-plan/components/DecisionSequence';
 import { FeedbackStatus } from '../features/daily-plan/components/DisagreeControl';
 import { EmptyState } from '../components/ui/EmptyState';
 import { Skeleton } from '../components/ui/Skeleton';
@@ -244,10 +244,7 @@ export default function Dashboard() {
               </aside>
             )}
 
-            <div className="crivo-decision-sequence">
-              <SecondaryActionList title="Depois disso" actions={secondary} actionLabels={ACTION_LABELS} onStart={startAction} />
-              <SecondaryActionList title="Pode esperar" actions={canWait} actionLabels={ACTION_LABELS} onStart={startAction} quiet />
-            </div>
+            <DecisionSequence next={secondary} waiting={canWait} actionLabels={ACTION_LABELS} onStart={startAction} />
           </>
         ) : (
           <div className="crivo-today-empty">
