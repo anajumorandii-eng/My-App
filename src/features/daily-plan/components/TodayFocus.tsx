@@ -114,7 +114,6 @@ export function TodayFocus({ action, actionLabel, mainReason, onStart, showAdapt
             status={feedbackStatus}
             previous={previous}
             onSelect={onDisagree}
-            confirmationKey={confirmationKey}
             className="crivo-disagree-control"
           />
         )}

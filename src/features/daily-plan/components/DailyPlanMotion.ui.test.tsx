@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { act, render, screen, waitFor, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
@@ -57,8 +58,36 @@ const factorLabels = [
   'Relevância para a prova',
 ];
 
-function renderTodayFocus(feedbackStatus: 'idle' | 'saving' | 'saved' | 'error' = 'idle') {
+interface TodayFocusTestOptions {
+  action?: AllocatedStudyAction;
+  feedbackStatus?: 'idle' | 'saving' | 'saved' | 'error';
+  onDisagree?: (reason: Parameters<NonNullable<React.ComponentProps<typeof TodayFocus>['onDisagree']>>[0]) => void;
+  showAdaptiveUpdate?: boolean;
+}
+
+function renderTodayFocus({
+  action = decisionAction,
+  feedbackStatus = 'idle',
+  onDisagree = vi.fn(),
+  showAdaptiveUpdate = false,
+}: TodayFocusTestOptions = {}) {
   return render(
+    <TodayFocus
+      action={action}
+      actionLabel="Estudar teoria"
+      mainReason="A lacuna de domínio tornou este tópico prioritário."
+      onStart={vi.fn()}
+      showAdaptiveUpdate={showAdaptiveUpdate}
+      userId={undefined}
+      feedbackStatus={feedbackStatus}
+      onDisagree={onDisagree}
+    />,
+  );
+}
+
+function FeedbackTransitionHarness() {
+  const [feedbackStatus, setFeedbackStatus] = useState<'idle' | 'saving' | 'saved'>('idle');
+  return (
     <TodayFocus
       action={decisionAction}
       actionLabel="Estudar teoria"
@@ -67,8 +96,11 @@ function renderTodayFocus(feedbackStatus: 'idle' | 'saving' | 'saved' | 'error' 
       showAdaptiveUpdate={false}
       userId={undefined}
       feedbackStatus={feedbackStatus}
-      onDisagree={vi.fn()}
-    />,
+      onDisagree={() => {
+        setFeedbackStatus('saving');
+        window.setTimeout(() => setFeedbackStatus('saved'), 0);
+      }}
+    />
   );
 }
 
@@ -231,13 +263,104 @@ describe('TodayFocus explanation and feedback', () => {
 
   it('announces saved disagreement without claiming the ranking changed', async () => {
     const user = userEvent.setup();
-    renderTodayFocus('saved');
+    renderTodayFocus({ feedbackStatus: 'saved' });
 
     await user.click(screen.getByRole('button', { name: 'Por que isso?' }));
     await user.click(screen.getByRole('button', { name: 'Discordo' }));
 
     expect(screen.getByRole('status')).toHaveTextContent('Registrado');
     expect(screen.getByRole('status')).toHaveTextContent('o plano não muda sozinho');
+  });
+
+  it('keeps one live-region mount and a stable focus target through idle, saving, and saved', async () => {
+    const user = userEvent.setup();
+    const { container } = render(<FeedbackTransitionHarness />);
+    const mountedStatuses: Element[] = [];
+    const observer = new MutationObserver((records) => {
+      for (const record of records) {
+        for (const node of record.addedNodes) {
+          if (!(node instanceof Element)) continue;
+          if (node.getAttribute('role') === 'status') mountedStatuses.push(node);
+          mountedStatuses.push(...node.querySelectorAll('[role="status"]'));
+        }
+      }
+    });
+    observer.observe(container, { childList: true, subtree: true });
+
+    await user.click(screen.getByRole('button', { name: 'Por que isso?' }));
+    await user.click(screen.getByRole('button', { name: 'Discordo' }));
+    await user.click(screen.getByRole('button', { name: 'Já estudei isso' }));
+
+    const status = await screen.findByRole('status');
+    await waitFor(() => expect(screen.getByTestId('today-decision-stage')).toHaveAttribute('data-confirmation-key', '1'));
+    observer.disconnect();
+
+    expect(screen.getAllByRole('status')).toHaveLength(1);
+    expect(mountedStatuses).toHaveLength(1);
+    expect(mountedStatuses[0]).toBe(status);
+    expect(screen.getByRole('group', { name: 'Discordância da recomendação' })).toHaveFocus();
+    expect(document.body).not.toHaveFocus();
+  });
+
+  it('shows zero and small negative contributions verbatim in the accessible panel', async () => {
+    const user = userEvent.setup();
+    const smallContributionAction: AllocatedStudyAction = {
+      ...decisionAction,
+      factors: decisionAction.factors.map((factor) => (
+        factor.kind === 'exam_relevance' ? { ...factor, contribution: -0.01 } : factor
+      )),
+    };
+    renderTodayFocus({ action: smallContributionAction });
+
+    const trigger = screen.getByRole('button', { name: 'Por que isso?' });
+    await user.click(trigger);
+    const panel = document.getElementById(trigger.getAttribute('aria-controls')!);
+
+    expect(within(panel!).getByText('Ajuste de energia').parentElement).toHaveTextContent('0.00');
+    expect(within(panel!).getByText('Relevância para a prova').parentElement).toHaveTextContent('-0.01');
+    expect(panel).not.toHaveTextContent('Sem efeito hoje');
+  });
+
+  it('returns focus to Por que isso when the explanation closes', async () => {
+    const user = userEvent.setup();
+    renderTodayFocus();
+    const trigger = screen.getByRole('button', { name: 'Por que isso?' });
+
+    await user.click(trigger);
+    await user.click(screen.getByRole('button', { name: 'Entendi' }));
+
+    expect(trigger).toHaveAttribute('aria-expanded', 'false');
+    expect(trigger).toHaveFocus();
+    expect(document.body).not.toHaveFocus();
+  });
+
+  it('renders real ranking and saved statuses in their final reduced-motion frame', async () => {
+    useReducedMotionMock.mockReturnValue(true);
+    const user = userEvent.setup();
+    const { rerender } = renderTodayFocus({ showAdaptiveUpdate: true });
+    const rankingStatus = screen.getByRole('status');
+    expect(rankingStatus).toHaveTextContent('alterou a ordem recomendada');
+    expect(rankingStatus).not.toHaveStyle({ opacity: '0' });
+    expect(rankingStatus).not.toHaveStyle({ transform: expect.any(String) });
+
+    rerender(
+      <TodayFocus
+        action={decisionAction}
+        actionLabel="Estudar teoria"
+        mainReason="A lacuna de domínio tornou este tópico prioritário."
+        onStart={vi.fn()}
+        showAdaptiveUpdate={false}
+        userId={undefined}
+        feedbackStatus="saved"
+        onDisagree={vi.fn()}
+      />,
+    );
+    await user.click(screen.getByRole('button', { name: 'Por que isso?' }));
+    await user.click(screen.getByRole('button', { name: 'Discordo' }));
+    const savedStatus = screen.getByRole('status');
+    expect(savedStatus).toHaveTextContent('Registrado');
+    expect(savedStatus).not.toHaveStyle({ opacity: '0' });
+    expect(savedStatus).not.toHaveStyle({ transform: expect.any(String) });
   });
 
   it('keeps disclosed evidence visible without initial transforms when motion is reduced', async () => {

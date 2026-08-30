@@ -1,4 +1,4 @@
-import React, { useId } from 'react';
+import React, { useEffect, useId, useRef } from 'react';
 import { AnimatePresence, motion, useReducedMotion } from 'motion/react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { RecommendationFactor, RecommendationFactorKind, RecommendationSnapshot } from '../../../types';
@@ -20,8 +20,6 @@ const FACTOR_HELP: Record<RecommendationFactorKind, string> = {
   exam_relevance: 'proximidade e incidência das provas que você priorizou',
 };
 
-const CONTRIBUTION_EPSILON = 0.01;
-
 export interface DecisionExplanationProps {
   mainReason: string;
   factors: RecommendationFactor[];
@@ -34,19 +32,25 @@ export interface DecisionExplanationProps {
 
 export function DecisionExplanation({ mainReason, factors, snapshot, open, onOpenChange, onDisagree, className }: DecisionExplanationProps) {
   const panelId = useId();
+  const triggerRef = useRef<HTMLButtonElement>(null);
+  const previousOpen = useRef(open);
   const reducedMotion = useReducedMotion();
   const confidence = confidenceFromUncertainty(snapshot.uncertainty);
 
+  useEffect(() => {
+    if (previousOpen.current && !open) triggerRef.current?.focus();
+    previousOpen.current = open;
+  }, [open]);
+
   const ranked = [...factors].sort((a, b) => Math.abs(b.contribution) - Math.abs(a.contribution));
-  const activeFactors = ranked.filter((f) => Math.abs(f.contribution) > CONTRIBUTION_EPSILON);
-  const inactiveFactors = ranked.filter((f) => Math.abs(f.contribution) <= CONTRIBUTION_EPSILON);
-  const totalActive = activeFactors.reduce((sum, f) => sum + Math.abs(f.contribution), 0);
+  const totalContribution = ranked.reduce((sum, factor) => sum + Math.abs(factor.contribution), 0);
 
   return (
     <div className={className}>
       <p className="text-sm text-text-secondary">{mainReason}</p>
 
       <button
+        ref={triggerRef}
         type="button"
         onClick={() => onOpenChange(!open)}
         aria-expanded={open}
@@ -71,8 +75,8 @@ export function DecisionExplanation({ mainReason, factors, snapshot, open, onOpe
         <div className="pt-3 space-y-4">
           {/* Explicação: os fatores que realmente pesaram, em ordem de peso. */}
           <div className="space-y-2.5">
-            {activeFactors.map((factor) => {
-              const widthPct = totalActive > 0 ? (Math.abs(factor.contribution) / totalActive) * 100 : 0;
+            {ranked.map((factor) => {
+              const widthPct = totalContribution > 0 ? (Math.abs(factor.contribution) / totalContribution) * 100 : 0;
               return (
                 <div key={factor.kind}>
                   <div className="flex items-baseline justify-between gap-2 text-xs">
@@ -87,11 +91,6 @@ export function DecisionExplanation({ mainReason, factors, snapshot, open, onOpe
                 </div>
               );
             })}
-            {inactiveFactors.length > 0 && (
-              <p className="text-xs text-text-muted">
-                Sem efeito hoje: {inactiveFactors.map((f) => DECISION_FACTOR_LABELS[f.kind]).join(', ')}.
-              </p>
-            )}
             <p className="text-xs text-text-muted italic">
               Pesos de uma heurística inicial determinística — ainda não validados cientificamente.
             </p>
