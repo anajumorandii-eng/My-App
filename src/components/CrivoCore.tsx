@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
+import React, { useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { useReducedMotion } from 'motion/react';
 import { cn } from '../lib/cn';
 import { useRafLoop } from '../hooks/useRafLoop';
@@ -61,13 +61,16 @@ function makeCoreSprings(state: CrivoCoreState): CoreSprings {
 export interface CrivoCoreProps {
   state: CrivoCoreState;
   className?: string;
-  size?: number;
+  size?: number | 'fill';
+  scale?: 'icon' | 'hero';
   /** The recommendation's matéria — selects the palette, core geometry and law of motion. Omitted (e.g. the loading skeleton, before any recommendation resolves) renders the neutral default profile. */
   subject?: string;
   /** The matéria the *previous* recommendation had, if this is a genuine day-over-day change — drives the metamorphosis tween instead of an instant recolor. */
   previousSubject?: string;
   /** Used to derive a small, deterministic per-topic variation of the matéria's shared core — never randomized, so the same topic always renders the same way. */
   topicId?: string;
+  /** Omits the state label when the Núcleo only provides visual atmosphere. */
+  decorative?: boolean;
 }
 
 /**
@@ -82,12 +85,23 @@ export interface CrivoCoreProps {
  * radial gradient — there is no dependency on 3D of any kind, so both paths
  * are real "no 3D" fallbacks, not just no-WebGL ones.
  */
-export function CrivoCore({ state, className, size = 96, subject, previousSubject, topicId }: CrivoCoreProps) {
+export function CrivoCore({
+  state,
+  className,
+  size = 96,
+  scale = 'icon',
+  subject,
+  previousSubject,
+  topicId,
+  decorative = false,
+}: CrivoCoreProps) {
   const reducedMotion = useReducedMotion();
   const [wrapperNode, setWrapperNode] = useState<HTMLDivElement | null>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const ctxRef = useRef<CanvasRenderingContext2D | null>(null);
   const [canvasFailed, setCanvasFailed] = useState(false);
+  const [canvasReady, setCanvasReady] = useState(false);
+  const [canvasSize, setCanvasSize] = useState(() => (typeof size === 'number' ? size : 0));
 
   const profile = useMemo(() => getSubjectProfile(subject), [subject]);
   const previousProfile = useMemo(() => (previousSubject ? getSubjectProfile(previousSubject) : null), [previousSubject]);
@@ -108,43 +122,57 @@ export function CrivoCore({ state, className, size = 96, subject, previousSubjec
   const metamorphosisElapsedRef = useRef(0);
   const metamorphosisDoneRef = useRef(!needsMetamorphosis);
 
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    try {
-      const ctx = canvas.getContext('2d');
-      if (!ctx) throw new Error('CanvasRenderingContext2D unavailable');
-      ctxRef.current = ctx;
-    } catch {
-      setCanvasFailed(true);
-    }
-  }, []);
-
-  // Backing-store resolution — before paint, so there's no visible flash at the wrong size.
+  // Context and backing-store resolution happen together before paint, so the
+  // first frame never uses a stale canvas size. A fluid Núcleo measures its
+  // wrapper and stays square as the hero surface changes size.
   useLayoutEffect(() => {
     const canvas = canvasRef.current;
-    const ctx = ctxRef.current;
-    if (!canvas || !ctx) return;
-    const dpr = Math.min(window.devicePixelRatio || 1, 2);
-    canvas.width = size * dpr;
-    canvas.height = size * dpr;
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-  }, [size, canvasFailed]);
+    if (!canvas || !wrapperNode || canvasFailed) return;
+
+    let ctx = ctxRef.current;
+    try {
+      if (!ctx) {
+        ctx = canvas.getContext('2d');
+        if (!ctx) throw new Error('CanvasRenderingContext2D unavailable');
+        ctxRef.current = ctx;
+        setCanvasReady(true);
+      }
+    } catch {
+      setCanvasFailed(true);
+      return;
+    }
+
+    const resizeCanvas = (rect: DOMRect | DOMRectReadOnly) => {
+      const nextSize = size === 'fill' ? Math.min(rect.width, rect.height) : size;
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      canvas.width = Math.round(nextSize * dpr);
+      canvas.height = Math.round(nextSize * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      setCanvasSize((currentSize) => (currentSize === nextSize ? currentSize : nextSize));
+    };
+
+    resizeCanvas(wrapperNode.getBoundingClientRect());
+    if (size !== 'fill') return;
+
+    const resizeObserver = new ResizeObserver(([entry]) => resizeCanvas(entry.contentRect));
+    resizeObserver.observe(wrapperNode);
+    return () => resizeObserver.disconnect();
+  }, [size, wrapperNode, canvasFailed]);
 
   const drawFrame = (springs: CoreSprings, palette: CrivoPalette, time: number) => {
     const ctx = ctxRef.current;
-    if (!ctx) return;
-    ctx.clearRect(0, 0, size, size);
+    if (!ctx || canvasSize <= 0) return;
+    ctx.clearRect(0, 0, canvasSize, canvasSize);
     const shellCtx = ctx as unknown as CanvasContextLike;
-    const cx = size / 2, cy = size / 2;
-    const baseR = size * 0.3;
+    const cx = canvasSize / 2, cy = canvasSize / 2;
+    const baseR = canvasSize * 0.3;
     const squashY = 1 - Math.min(0.5, Math.abs(springs.tiltX.x) / 40);
     const skewX = springs.tiltY.x / 90;
     const shellPose = { cx, cy, baseR, spread: springs.spread.x, glow: springs.glow.x, squashY, skewX };
 
     drawExternalShell(shellCtx, shellPose, palette);
     const drawFn = CORE_REGISTRY[profile.coreType] ?? CORE_REGISTRY.default_neutro;
-    drawFn({ ctx: shellCtx, width: size, height: size, state: { focus: springs.focus.x }, palette, variantSeed, time, squashY, skewX });
+    drawFn({ ctx: shellCtx, width: canvasSize, height: canvasSize, state: { focus: springs.focus.x }, palette, variantSeed, time, squashY, skewX });
     if (STATE_POSE[state].scan) drawScanSweep(shellCtx, cx, cy, baseR, scanAngleRef.current, palette);
     drawCenterLight(shellCtx, shellPose, palette);
   };
@@ -176,7 +204,7 @@ export function CrivoCore({ state, className, size = 96, subject, previousSubjec
   );
 
   // Reduced motion: exactly one frame, at the state's target pose, no tween, no loop.
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (!reducedMotion || canvasFailed) return;
     const pose = STATE_POSE[state];
     const springs: CoreSprings = {
@@ -188,17 +216,18 @@ export function CrivoCore({ state, className, size = 96, subject, previousSubjec
     };
     drawFrame(springs, getSubjectPalette(profile, 'dark'), 0);
     // eslint-disable-next-line react-hooks/exhaustive-deps -- drawFrame closes over refs/size/variantSeed already listed
-  }, [reducedMotion, canvasFailed, state, profile, size, variantSeed]);
+  }, [reducedMotion, canvasFailed, canvasReady, state, profile, canvasSize, variantSeed]);
 
   const ariaLabel = subject && !profile.isFallback ? `${STATE_LABEL[state]} — ${profile.label}` : STATE_LABEL[state];
 
   return (
     <div
       ref={setWrapperNode}
-      role="img"
-      aria-label={ariaLabel}
+      {...(!decorative && { role: 'img', 'aria-label': ariaLabel })}
+      data-testid="crivo-core"
+      data-scale={scale}
       className={cn('relative shrink-0', className)}
-      style={{ width: size, height: size }}
+      style={size === 'fill' ? { width: '100%', height: '100%' } : { width: size, height: size }}
     >
       {canvasFailed ? (
         <div
@@ -206,7 +235,7 @@ export function CrivoCore({ state, className, size = 96, subject, previousSubjec
           style={{ background: `radial-gradient(circle at 35% 30%, ${getSubjectPalette(profile, 'dark').emissive}, ${getSubjectPalette(profile, 'dark').primary} 75%)` }}
         />
       ) : (
-        <canvas ref={canvasRef} style={{ width: size, height: size, display: 'block' }} />
+        <canvas ref={canvasRef} style={{ width: '100%', height: '100%', display: 'block' }} />
       )}
     </div>
   );
