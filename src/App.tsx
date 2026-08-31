@@ -36,12 +36,18 @@ import Obras from './views/Obras';
 import ObraDetalhe from './views/ObraDetalhe';
 import AgendaView from './features/availability/AgendaView';
 import Resumos from './views/Resumos';
+import NucleoInstrumentalPrototype from './prototypes/NucleoInstrumentalPrototype';
 
 export default function App() {
   return (
     <AuthProvider>
       <BrowserRouter>
         <Routes>
+          {/* Rota isolada em tela cheia para o Protótipo Núcleo Instrumental */}
+          <Route path="/prototipo" element={<NucleoInstrumentalPrototype />} />
+          <Route path="/nucleo-instrumental" element={<NucleoInstrumentalPrototype />} />
+          <Route path="/prototype/nucleo-instrumental" element={<NucleoInstrumentalPrototype />} />
+          
           <Route path="/" element={<Layout />}>
             <Route index element={<Dashboard />} />
             <Route path="plano" element={<Plano />} />
