@@ -760,7 +760,10 @@ html, body {
   transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease;
 }
 
-:root:not(.dark) .ni-icon-depth {
+/* :not(.ni-prototype *) keeps this light-mode override scoped to the real
+   app shell — the isolated Núcleo Instrumental prototype reuses the .ni-*
+   class names but manages its own always-dark theme independently. */
+:root:not(.dark) .ni-icon-depth:not(.ni-prototype *) {
   background: linear-gradient(145deg, color-mix(in srgb, var(--subject-primary, #6E93B3) 60%, white), color-mix(in srgb, var(--subject-primary, #6E93B3) 30%, #444));
   box-shadow: inset 1.5px 1.5px 2px rgba(255,255,255,.6), inset -2px -2px 4px rgba(0,0,0,.2), 0 3px 8px rgba(0,0,0,.12);
   color: #FFFFFF;
@@ -782,7 +785,7 @@ html, body {
   transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-:root:not(.dark) .ni-panel {
+:root:not(.dark) .ni-panel:not(.ni-prototype *) {
   background: #FFFFFF;
   box-shadow: inset 1px 1px rgba(255,255,255,1), 0 4px 20px rgba(20,30,25,0.06);
 }

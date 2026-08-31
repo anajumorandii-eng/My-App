@@ -1,0 +1,103 @@
+/**
+ * TEMA INSPIRADO NO ÍCONE — deriva os tokens de marca do astrolábio dourado
+ * sobre veludo bordô/verde-floresta (public/app-icon.svg). Estes tokens
+ * alimentam o protótipo Núcleo Instrumental (variáveis --ember/--gold/--wine)
+ * mantendo paridade com a referência aprovada em
+ * .claude/design-reference/nucleo-instrumental/index.html.
+ */
+.ni-prototype {
+  /* O app real alterna --ni-* entre claro/escuro via .dark em <html>
+     (ver src/index.css). Este protótipo é isolado e sempre escuro, e
+     reaproveita os mesmos nomes de classe (.ni-panel, .ni-icon-depth) —
+     então fixamos os tokens --ni-* aqui para não herdar o padrão claro
+     de :root quando a página real está em modo claro. */
+  --ni-ink: #07090a;
+  --ni-surface: #101915;
+  --ni-surface2: #17241e;
+  --ni-line: rgba(224, 237, 228, 0.14);
+  --ni-text: #edf0eb;
+  --ni-dim: #98a69f;
+  --ni-faint: #5d6b63;
+  --ni-glass: rgba(229, 242, 232, 0.075);
+  --ni-glass-strong: rgba(229, 242, 232, 0.12);
+  --ni-wash: rgba(110, 147, 179, 0.28);
+
+  /* veludo bordô → verde-floresta, extraído de velvetBg no app-icon.svg */
+  --brand-velvet-1: #6e1b28;
+  --brand-velvet-2: #461019;
+  --brand-velvet-3: #0e231d;
+  --brand-velvet-4: #18332c;
+
+  /* latão/dourado do astrolábio — fixo, nunca tingido por matéria */
+  --gold: #e7c688;
+  --gold-bright: #fff2d6;
+  --gold-deep: #a87a38;
+  --ember: #d9b583;
+  --ember-2: #c89458;
+
+  /* núcleo âmbar central */
+  --amber-core: #ffd480;
+  --amber-edge: #e5842e;
+
+  --wine: #a1394a;
+  --wine-deep: #6c1c27;
+  --forest: #18332c;
+  --forest-deep: #0e231d;
+}
+
+html[data-theme='light'] .ni-prototype {
+  --gold: #8a6226;
+  --gold-bright: #b7893f;
+  --gold-deep: #6e4c1a;
+  --ember: #95602e;
+  --ember-2: #b77a3e;
+  --wine: #852636;
+  --wine-deep: #6c1c27;
+}
+
+/* marca do app na barra lateral / topo mobile — usa o dourado fixo da marca,
+   não a paleta tingível por matéria (--primary/--secondary) */
+.ni-prototype .ni-mark,
+.ni-prototype .ni-mobile-mark {
+  border-color: var(--gold);
+  color: var(--gold);
+  background: linear-gradient(
+    145deg,
+    color-mix(in srgb, var(--brand-velvet-1) 55%, transparent),
+    color-mix(in srgb, var(--brand-velvet-4) 55%, transparent)
+  );
+}
+
+.ni-prototype .ni-top {
+  background: linear-gradient(
+      120deg,
+      color-mix(in srgb, var(--brand-velvet-2) 22%, transparent),
+      transparent 55%
+    ),
+    rgba(7, 9, 10, 0.32);
+}
+
+/* halo de fundo geral do protótipo herda o veludo da marca antes de cada
+   matéria tingir --wash por cima */
+.ni-prototype {
+  background: radial-gradient(64% 54% at 88% 0%, var(--wash), transparent 60%),
+    radial-gradient(
+      42% 48% at 5% 100%,
+      color-mix(in srgb, var(--primary) 20%, transparent),
+      transparent 65%
+    ),
+    radial-gradient(
+      120% 90% at 50% 100%,
+      color-mix(in srgb, var(--brand-velvet-3) 35%, transparent),
+      transparent 70%
+    ),
+    var(--ink);
+}
+
+.ni-switcher {
+  border-color: color-mix(in srgb, var(--gold) 35%, rgba(227, 240, 231, 0.2));
+}
+
+.ni-switcher span b {
+  color: var(--gold);
+}

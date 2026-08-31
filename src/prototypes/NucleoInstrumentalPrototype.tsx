@@ -14,6 +14,9 @@ import {
 import { useEffect, useMemo, useState } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import './nucleo-instrumental-prototype.css';
+import './nucleo-instrumental-brand.css';
+import './nucleo-instrumental-rail.css';
+import './nucleo-instrumental-cores.css';
 
 type Kind = 'decision' | 'practice' | 'library' | 'analysis' | 'account' | 'admin';
 type Screen = { key: string; label: string; title: string; summary: string; kind: Kind; icon: LucideIcon; subject: string; topic: string; action: string };
@@ -83,7 +86,7 @@ export default function NucleoInstrumentalPrototype() {
   const palette = PALETTES[screen.subject] ?? PALETTES.Matemática;
   const setScreen = (next: number) => { setIndex(next); setParams({ screen: SCREENS[next].key }); setDetails(false); };
   const content = useMemo(() => screen.kind === 'decision' ? <Decision screen={screen} details={details} setDetails={setDetails} /> : screen.kind === 'practice' ? <Practice screen={screen} /> : screen.kind === 'library' ? <LibraryView screen={screen} /> : screen.kind === 'analysis' ? <Analysis screen={screen} /> : screen.kind === 'admin' ? <Admin screen={screen} /> : <Account screen={screen} />, [screen, details]);
-  return <div className="ni-prototype" style={{ '--primary': palette.primary, '--secondary': palette.secondary, '--wash': palette.wash } as React.CSSProperties} data-family={palette.family}>
+  return <div className="ni-prototype" style={{ '--primary': palette.primary, '--secondary': palette.secondary, '--wash': palette.wash } as React.CSSProperties} data-family={palette.family} data-subject={screen.subject}>
     <aside className={`ni-rail ${expanded ? 'is-expanded' : ''}`}><button className="ni-mark" aria-label="Crivo">◉</button><div className="ni-rail-scroll">{SCREENS.map((item, itemIndex) => { const Icon = item.icon; return <button key={item.key} onClick={() => setScreen(itemIndex)} className={item.key === screen.key ? 'active' : ''} title={item.label}><span className="ni-icon-depth"><Icon /></span>{expanded && <b>{item.label}</b>}</button>; })}</div><button onClick={() => setExpanded(!expanded)} className="ni-rail-toggle" aria-label={expanded ? 'Recolher áreas' : 'Expandir áreas'}><Menu /></button></aside>
     <div className="ni-page"><header className="ni-top"><div className="ni-mobile-mark">◉</div><strong>Crivo</strong><nav aria-label="Áreas principais"><span className={screen.kind === 'decision' ? 'active' : ''}>Hoje</span><span>Plano</span><span className={screen.kind === 'practice' ? 'active' : ''}>Estudar</span><span className={screen.kind === 'analysis' ? 'active' : ''}>Análises</span></nav><span className="ni-prototype-badge">PROTÓTIPO · sem dados reais</span><div className="ni-avatar">AJ</div></header>
       <main className="ni-main"><div className="ni-route"><span>{screen.kind.toUpperCase()}</span><i /> <span>{screen.subject}</span><i /> <b>{screen.topic}</b></div><div className="ni-title"><div><h1>{screen.title}</h1><p>{screen.summary}</p></div><div className="ni-state"><i /> perfil {palette.family} · motion ativo</div></div><div className="ni-subjects">{Object.keys(PALETTES).slice(0, 10).map((subject) => <button key={subject} onClick={() => { const next = SCREENS.findIndex((candidate) => candidate.subject === subject); if (next >= 0) setScreen(next); }} className={subject === screen.subject ? 'active' : ''}>{subject}</button>)}</div>
