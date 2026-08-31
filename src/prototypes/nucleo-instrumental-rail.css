@@ -1,108 +1,120 @@
-/**
- * BARRA LATERAL LIQUID GLASS — refina .ni-rail (definida em
- * nucleo-instrumental-prototype.css) com vidro em camadas, reflexo
- * especular sutil e um indicador ativo que "escorre" entre os itens.
- * Carregar depois de nucleo-instrumental-prototype.css e
- * nucleo-instrumental-brand.css.
- */
-.ni-prototype .ni-rail {
-  background: linear-gradient(
-      180deg,
-      rgba(20, 28, 24, 0.62) 0%,
-      rgba(8, 13, 11, 0.86) 45%,
-      rgba(6, 11, 9, 0.92) 100%
-    );
-  backdrop-filter: blur(28px) saturate(150%);
-  -webkit-backdrop-filter: blur(28px) saturate(150%);
-  border-right: 1px solid var(--border-strong, rgba(224, 237, 228, 0.16));
-  box-shadow: inset -1px 0 0 rgba(255, 255, 255, 0.04),
-    inset 1px 0 0 rgba(255, 255, 255, 0.02), 18px 0 48px rgba(0, 0, 0, 0.35);
+/* Navigation is grouped by intent. The soft glass is a surface, not a button skin. */
+.ni-rail {
+  padding: 14px 10px;
+  gap: 10px;
+  background: linear-gradient(180deg, rgba(8, 15, 12, .92), rgba(6, 12, 10, .79));
+}
+
+.ni-rail.is-expanded { width: 238px; }
+
+.ni-rail .ni-rail-scroll { gap: 3px; padding: 3px 0 18px; }
+
+.ni-rail .ni-rail-scroll button {
   position: relative;
-  isolation: isolate;
-  transition: width 0.32s cubic-bezier(0.22, 1, 0.36, 1), background 0.4s ease;
+  width: 50px;
+  min-height: 39px;
+  padding: 5px 8px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  color: rgba(224, 235, 229, .72);
+  transition: background .2s ease, border-color .2s ease, transform .2s ease, color .2s ease;
 }
 
-/* reflexo especular no topo, como vidro curvo pegando luz */
-.ni-prototype .ni-rail::before {
-  content: '';
-  position: absolute;
-  inset: 0 0 auto 0;
-  height: 120px;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.08),
-    transparent
-  );
-  pointer-events: none;
-  z-index: 0;
-}
-
-/* borda interna sutil que dá espessura ao vidro */
-.ni-prototype .ni-rail::after {
-  content: '';
-  position: absolute;
-  inset: 1px;
-  border-radius: inherit;
-  border: 1px solid rgba(255, 255, 255, 0.03);
-  pointer-events: none;
-  z-index: 0;
-}
-
-.ni-prototype .ni-mark,
-.ni-prototype .ni-rail-scroll,
-.ni-prototype .ni-rail-toggle {
-  position: relative;
-  z-index: 1;
-}
-
-.ni-prototype .ni-rail-scroll button {
-  position: relative;
-  overflow: hidden;
-  transition: background 0.22s ease, color 0.22s ease, border-color 0.22s ease,
-    transform 0.18s ease;
-}
-
-.ni-prototype .ni-rail-scroll button:hover {
+.ni-rail .ni-rail-scroll button:hover {
+  background: rgba(210, 240, 224, .075);
+  color: #f4faf5;
   transform: translateX(1px);
 }
 
-/* vidro líquido por trás do item ativo — leve brilho difuso que acompanha
-   a paleta da matéria selecionada */
-.ni-prototype .ni-rail-scroll button.active {
-  background: linear-gradient(
-    120deg,
-    color-mix(in srgb, var(--primary) 22%, rgba(255, 255, 255, 0.05)),
-    color-mix(in srgb, var(--primary) 6%, transparent)
-  );
-  border-color: color-mix(in srgb, var(--primary) 60%, transparent);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12),
-    inset 2px 0 0 var(--primary), 0 6px 18px color-mix(in srgb, var(--primary) 22%, transparent);
-  backdrop-filter: blur(6px);
+.ni-rail .ni-rail-scroll button.active {
+  background: linear-gradient(100deg, color-mix(in srgb, var(--primary) 19%, transparent), rgba(230, 247, 238, .045));
+  border-color: color-mix(in srgb, var(--primary) 52%, rgba(238, 255, 245, .18));
+  box-shadow: inset 2px 0 var(--primary), 0 7px 18px color-mix(in srgb, var(--primary) 12%, transparent);
 }
 
-.ni-prototype .ni-rail-scroll button.active .ni-icon-depth {
-  box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.35),
-    inset -3px -3px 5px rgba(0, 0, 0, 0.35),
-    0 0 16px color-mix(in srgb, var(--primary) 55%, transparent);
+.ni-rail .ni-icon-depth {
+  width: 27px;
+  height: 27px;
+  border: 1px solid rgba(226, 244, 234, .18);
+  border-radius: 8px;
+  background:
+    radial-gradient(circle at 31% 22%, rgba(255, 255, 255, .32), transparent 25%),
+    linear-gradient(145deg, rgba(204, 239, 221, .24), rgba(70, 104, 86, .15) 48%, rgba(4, 10, 7, .28));
+  box-shadow: inset 0 1px rgba(255, 255, 255, .3), inset 0 -1px rgba(0, 0, 0, .28), 0 5px 10px rgba(0, 0, 0, .24);
+  color: #e7f5ec;
 }
 
-.ni-prototype .ni-rail.is-expanded {
-  box-shadow: inset -1px 0 0 rgba(255, 255, 255, 0.05),
-    24px 0 60px rgba(0, 0, 0, 0.4);
+.ni-rail .ni-icon-depth svg { width: 14px; height: 14px; stroke-width: 1.65; }
+.ni-rail .ni-rail-scroll button:nth-child(1) .ni-icon-depth,
+.ni-rail .ni-rail-scroll button:nth-child(2) .ni-icon-depth,
+.ni-rail .ni-rail-scroll button:nth-child(3) .ni-icon-depth,
+.ni-rail .ni-rail-scroll button:nth-child(4) .ni-icon-depth,
+.ni-rail .ni-rail-scroll button:nth-child(5) .ni-icon-depth,
+.ni-rail .ni-rail-scroll button:nth-child(6) .ni-icon-depth { --rail-tint: #87b7ff; }
+.ni-rail .ni-rail-scroll button:nth-child(n + 7):nth-child(-n + 11) .ni-icon-depth { --rail-tint: #83e1ad; }
+.ni-rail .ni-rail-scroll button:nth-child(n + 12):nth-child(-n + 20) .ni-icon-depth { --rail-tint: #d9b583; }
+.ni-rail .ni-rail-scroll button:nth-child(n + 21):nth-child(-n + 22) .ni-icon-depth { --rail-tint: #b59de5; }
+.ni-rail .ni-rail-scroll button:nth-child(n + 23):nth-child(-n + 24) .ni-icon-depth { --rail-tint: #8bc5d4; }
+.ni-rail .ni-rail-scroll button:nth-child(n + 25) .ni-icon-depth { --rail-tint: #ed9f72; }
+.ni-rail .ni-icon-depth { border-color: color-mix(in srgb, var(--rail-tint, #cce4d5) 34%, rgba(255, 255, 255, .16)); color: var(--rail-tint, #e7f5ec); }
+
+.ni-rail.is-expanded .ni-rail-scroll button {
+  width: 216px;
+  min-height: 36px;
+  gap: 10px;
+  padding: 5px 9px;
 }
 
-.ni-prototype .ni-rail-toggle {
+.ni-rail.is-expanded .ni-rail-scroll b { font-size: 11px; font-weight: 560; letter-spacing: -.01em; }
+
+.ni-rail.is-expanded .ni-rail-scroll button:nth-child(1),
+.ni-rail.is-expanded .ni-rail-scroll button:nth-child(7),
+.ni-rail.is-expanded .ni-rail-scroll button:nth-child(12),
+.ni-rail.is-expanded .ni-rail-scroll button:nth-child(21),
+.ni-rail.is-expanded .ni-rail-scroll button:nth-child(23),
+.ni-rail.is-expanded .ni-rail-scroll button:nth-child(25) { margin-top: 18px; }
+
+.ni-rail.is-expanded .ni-rail-scroll button:nth-child(1) { margin-top: 0; }
+
+.ni-rail.is-expanded .ni-rail-scroll button:nth-child(1)::before,
+.ni-rail.is-expanded .ni-rail-scroll button:nth-child(7)::before,
+.ni-rail.is-expanded .ni-rail-scroll button:nth-child(12)::before,
+.ni-rail.is-expanded .ni-rail-scroll button:nth-child(21)::before,
+.ni-rail.is-expanded .ni-rail-scroll button:nth-child(23)::before,
+.ni-rail.is-expanded .ni-rail-scroll button:nth-child(25)::before {
+  position: absolute;
+  top: -14px;
+  left: 9px;
+  color: rgba(178, 202, 188, .48);
+  font: 8px ui-monospace, SFMono-Regular, monospace;
+  letter-spacing: .12em;
+}
+
+.ni-rail.is-expanded .ni-rail-scroll button:nth-child(1)::before { content: 'PLANEJAMENTO'; top: -14px; }
+.ni-rail.is-expanded .ni-rail-scroll button:nth-child(1) { margin-top: 18px; }
+.ni-rail.is-expanded .ni-rail-scroll button:nth-child(7)::before { content: 'PRÁTICA'; }
+.ni-rail.is-expanded .ni-rail-scroll button:nth-child(12)::before { content: 'REPERTÓRIO'; }
+.ni-rail.is-expanded .ni-rail-scroll button:nth-child(21)::before { content: 'ANÁLISES'; }
+.ni-rail.is-expanded .ni-rail-scroll button:nth-child(23)::before { content: 'CONTA E CONEXÕES'; }
+.ni-rail.is-expanded .ni-rail-scroll button:nth-child(25)::before { content: 'OPERAÇÃO'; }
+
+.ni-rail .ni-mark {
   border-radius: 10px;
-  backdrop-filter: blur(4px);
-}
-
-.ni-prototype .ni-rail-toggle:hover {
-  background: rgba(255, 255, 255, 0.06);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  background: radial-gradient(circle at 35% 28%, rgba(255, 255, 255, .25), transparent 27%), rgba(229, 242, 232, .055);
+  box-shadow: inset 0 1px rgba(255, 255, 255, .25);
 }
 
 @media (max-width: 900px) {
-  .ni-prototype .ni-rail {
-    display: none;
-  }
+  .ni-rail { display: none; }
 }
+
+/* Refinement pass: less bezel, more suspended glass. */
+.ni-rail { width: 68px; padding-inline: 12px; background: linear-gradient(180deg, rgba(6, 13, 10, .82), rgba(5, 11, 9, .66)); border-right-color: rgba(218, 242, 226, .08); }
+.ni-rail.is-expanded { width: 234px; }
+.ni-rail .ni-rail-scroll { gap: 5px; }
+.ni-rail .ni-rail-scroll button { width: 44px; min-height: 35px; border-color: transparent; border-radius: 9px; }
+.ni-rail .ni-rail-scroll button.active { border-color: rgba(221, 248, 231, .13); background: linear-gradient(100deg, color-mix(in srgb, var(--primary) 14%, transparent), rgba(238, 252, 244, .025)); box-shadow: inset 2px 0 var(--primary), 0 8px 21px rgba(0, 0, 0, .12); }
+.ni-rail .ni-icon-depth { width: 25px; height: 25px; border-radius: 7px; border-color: color-mix(in srgb, var(--rail-tint, #cce4d5) 20%, transparent); background: linear-gradient(145deg, color-mix(in srgb, var(--rail-tint, #cce4d5) 22%, rgba(235, 255, 244, .14)), rgba(8, 19, 14, .16)); box-shadow: inset 0 1px rgba(255, 255, 255, .18), 0 4px 10px rgba(0, 0, 0, .17); }
+.ni-rail .ni-icon-depth svg { width: 13px; height: 13px; stroke-width: 1.55; }
+.ni-rail.is-expanded .ni-rail-scroll button { width: 210px; min-height: 33px; padding: 4px 9px; }
+.ni-rail.is-expanded .ni-rail-scroll b { color: rgba(234, 244, 238, .78); font-size: 10.5px; font-weight: 520; }

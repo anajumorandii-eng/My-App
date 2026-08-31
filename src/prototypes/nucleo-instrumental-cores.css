@@ -1,111 +1,18 @@
-/**
- * ÍCONES/ARTEFATOS POR MATÉRIA — tokens de cor completos por matéria
- * (fundo, superfície, primária, secundária, emissiva, atmosferas A/B),
- * espelhando a tabela "Paletas aprovadas" de
- * .claude/design-reference/nucleo-instrumental/APPROVED.md. Além de
- * --primary/--secondary/--wash (definidos inline via style no componente),
- * esta folha adiciona os tokens restantes usados pelos ícones da rail
- * (.ni-icon-depth) e pelos artefatos centrais (.ni-artifact) por
- * [data-subject]. Carregar depois de nucleo-instrumental-prototype.css.
- */
-.ni-prototype {
-  --emissive: #f1efe9;
-  --atmo-a: #1e2c36;
-  --atmo-b: #0b0e11;
-}
+.ni-core-ecology .ni-eco-halo { fill: rgba(134, 220, 165, .10); stroke: rgba(183, 255, 207, .24); stroke-width: 1; }
+.ni-core-ecology .ni-eco-world { stroke: rgba(219, 255, 231, .68); stroke-width: 1.2; filter: drop-shadow(0 14px 12px rgba(0, 0, 0, .34)); }
+.ni-core-ecology .ni-eco-contour { fill: none; stroke: rgba(214, 255, 225, .26); stroke-width: 1; }
+.ni-core-ecology .ni-eco-leaf { stroke: rgba(239, 255, 220, .67); stroke-width: 1; }
+.ni-core-ecology .ni-eco-vein { fill: none; stroke: rgba(34, 99, 57, .68); stroke-width: 1.2; stroke-linecap: round; }
+.ni-core-ecology .ni-eco-species { stroke: rgba(249, 255, 242, .72); stroke-width: 1; filter: url(#eco-shadow); }
+.ni-core-ecology .ni-eco-species.one { fill: #d3ffe0; }
+.ni-core-ecology .ni-eco-species.two { fill: var(--secondary); }
+.ni-core-ecology .ni-eco-species.three { fill: var(--primary); }
+.ni-core-ecology .ni-eco-link { fill: none; stroke: rgba(224, 255, 230, .42); stroke-dasharray: 3 3; }
 
-.ni-prototype[data-subject='Matemática'] {
-  --emissive: #f1efe9;
-  --atmo-a: #1e2c36;
-  --atmo-b: #0b0e11;
-}
-.ni-prototype[data-subject='Física'] {
-  --emissive: #f3f6ff;
-  --atmo-a: #16264a;
-  --atmo-b: #080a0f;
-}
-.ni-prototype[data-subject='Química'] {
-  --emissive: #fbf6ec;
-  --atmo-a: #173029;
-  --atmo-b: #080d0b;
-}
-.ni-prototype[data-subject='Biologia'] {
-  --emissive: #f3efe2;
-  --atmo-a: #0f2e1e;
-  --atmo-b: #070c09;
-}
-.ni-prototype[data-subject='Português'] {
-  --emissive: #f4ede6;
-  --atmo-a: #241a1c;
-  --atmo-b: #0c0708;
-}
-.ni-prototype[data-subject='Literatura'] {
-  --emissive: #f0e9dd;
-  --atmo-a: #171c26;
-  --atmo-b: #08060a;
-}
-.ni-prototype[data-subject='Redação'] {
-  --emissive: #f3ece1;
-  --atmo-a: #1d1815;
-  --atmo-b: #0a0706;
-}
-.ni-prototype[data-subject='História'] {
-  --emissive: #ead9a8;
-  --atmo-a: #241a12;
-  --atmo-b: #0a0806;
-}
-.ni-prototype[data-subject='Geografia'] {
-  --emissive: #e9dfc4;
-  --atmo-a: #12262a;
-  --atmo-b: #0a0d08;
-}
-.ni-prototype[data-subject='Atualidades'] {
-  --emissive: #eff3f5;
-  --atmo-a: #241e14;
-  --atmo-b: #0a0a0a;
-}
-/* Filosofia — identidade específica pendente na referência aprovada;
-   perfil neutro explícito (mesmo tratamento de Atualidades/poles). */
-.ni-prototype[data-subject='Filosofia'] {
-  --emissive: #efe9f5;
-  --atmo-a: #1c1424;
-  --atmo-b: #0a0810;
-}
-
-/* ícone da rail ganha o glow emissivo da matéria ativa */
-.ni-prototype .ni-rail-scroll button.active .ni-icon-depth svg {
-  filter: drop-shadow(0 1px color-mix(in srgb, var(--emissive) 70%, white));
-}
-
-/* núcleo do artefato central usa a emissiva da matéria em vez de um branco
-   fixo, para variar sutilmente por identidade */
-.ni-prototype .ni-artifact i {
-  background: radial-gradient(
-    circle at 35% 28%,
-    var(--emissive) 0 6%,
-    var(--p) 7% 57%,
-    transparent 58%
-  );
-}
-
-/* halo geral de fundo por matéria — combina as duas atmosferas aprovadas */
-.ni-prototype {
-  --wash-a: color-mix(in srgb, var(--atmo-a) 55%, transparent);
-  --wash-b: color-mix(in srgb, var(--atmo-b) 50%, transparent);
-}
-
-.ni-prototype .ni-page::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  background: radial-gradient(60% 50% at 84% 6%, var(--wash-a), transparent 62%),
-    radial-gradient(50% 42% at 4% 98%, var(--wash-b), transparent 60%);
-  opacity: 0.55;
-  transition: background 0.6s ease, opacity 0.6s ease;
-}
-
-html[data-theme='light'] .ni-prototype .ni-page::before {
-  opacity: 0.3;
-}
+.ni-core-history .ni-history-pages > path:first-child { fill: rgba(226, 179, 145, .19); stroke: rgba(253, 224, 190, .48); stroke-width: 1; }
+.ni-core-history .ni-history-pages > path:nth-child(2) { fill: rgba(104, 49, 51, .55); stroke: rgba(247, 209, 178, .35); stroke-width: 1; }
+.ni-core-history .ni-history-pages > path:nth-child(3) { stroke: rgba(255, 231, 196, .64); stroke-width: 1.1; }
+.ni-core-history .ni-history-rule { fill: none; stroke: rgba(76, 43, 37, .62); stroke-width: 1.5; stroke-linecap: round; }
+.ni-core-history .ni-history-timeline { fill: none; stroke: var(--secondary); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.ni-core-history .ni-history-seal { fill: var(--primary); stroke: rgba(255, 240, 211, .8); stroke-width: 1.2; }
+.ni-core-history .ni-history-flag { fill: none; stroke: rgba(255, 231, 196, .83); stroke-width: 1.25; stroke-linecap: round; stroke-linejoin: round; }
