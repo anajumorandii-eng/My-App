@@ -10,6 +10,8 @@ import { BookX, Plus, Sparkles, CloudOff, Stethoscope } from 'lucide-react';
 import { useSummaryProgress } from '../hooks/useSummaryProgress';
 import { interactiveSummaries } from '../data/interactiveSummaries';
 import { getSubjectProfile } from '../design-system/crivoSubjects';
+import { getMotionConfigForSubject } from '../design-system/crivoMotionPresets';
+import { motion, AnimatePresence } from 'motion/react';
 import SummaryErrorsPanel from '../components/SummaryErrorsPanel';
 
 const OUTCOME_LABELS: Record<NonNullable<ErrorLog['outcomeRating']>, string> = {
@@ -232,10 +234,19 @@ export default function Erros() {
       </div>
 
       <div className="space-y-4">
-        {filtered.map((log) => {
+        {filtered.map((log, index) => {
           const topic = mockTopics.find((t) => t.id === log.topicId);
+          const mConfig = getMotionConfigForSubject(topic?.subject);
           return (
-            <div key={log.id} data-geometry={topic ? getSubjectProfile(topic.subject).fieldType : undefined} className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-5 shadow-sm">
+            <motion.div
+              key={log.id}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.04, duration: 0.3 }}
+              whileHover={mConfig.hoverProps.whileHover}
+              data-geometry={topic ? getSubjectProfile(topic.subject).fieldType : undefined}
+              className="bg-surface-default border border-border-subtle rounded-xl p-5 shadow-soft-sm transition-colors"
+            >
               <div className="flex items-center justify-between mb-3">
                 <div className="flex items-center gap-3">
                   <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-rose-50 dark:bg-rose-900/20 text-rose-700 dark:text-rose-300">
@@ -315,7 +326,7 @@ export default function Erros() {
                   )}
                 </div>
               )}
-            </div>
+            </motion.div>
           );
         })}
 

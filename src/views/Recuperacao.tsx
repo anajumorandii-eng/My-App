@@ -28,15 +28,21 @@ import {
   ListTodo,
   Plus,
   ChevronDown,
-  CloudOff,
-  CheckCircle2,
-  Trophy,
-  Trash2,
-  Info,
   Sparkles,
-  X,
+  CloudOff,
+  Stethoscope,
+  Trash2,
+  CheckCircle2,
   AlertTriangle,
+  RotateCcw,
+  Check,
+  X,
+  Target,
+  Info,
+  Trophy,
 } from 'lucide-react';
+import { getMotionConfigForSubject } from '../design-system/crivoMotionPresets';
+import { motion, AnimatePresence } from 'motion/react';
 
 const QUEUE_ORDER: BacklogQueue[] = ['A', 'B', 'C', 'D'];
 

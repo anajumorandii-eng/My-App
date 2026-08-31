@@ -7,7 +7,9 @@ import { currentStudyPhase } from '../lib/studyPhase';
 import { upcomingMilestones } from '../lib/studyRoadmap';
 import { daysUntil } from '../data/examCalendar';
 import { getSubjectProfile } from '../design-system/crivoSubjects';
+import { getMotionConfigForSubject } from '../design-system/crivoMotionPresets';
 import { SubjectAtmosphere } from '../features/daily-plan/components/SubjectAtmosphere';
+import { motion } from 'motion/react';
 
 function formatDatePtBr(iso: string): string {
   const [, month, day] = iso.split('-');
@@ -144,36 +146,44 @@ export default function Plano() {
         </div>
 
         <div className="space-y-3">
-          {allocatedActions.map((action, index) => (
-            <div
-              key={action.id}
-              data-geometry={getSubjectProfile(action.subject).fieldType}
-              className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-5 shadow-sm flex items-center justify-between"
-            >
-              <div className="flex items-center min-w-0">
-                <div className="w-9 h-9 rounded-full bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center mr-4 shrink-0 text-zinc-500 font-medium text-sm">
-                  {index + 1}
-                </div>
-                <div className="min-w-0">
-                  <h4 className="font-semibold truncate">{action.topicName}</h4>
-                  <div className="flex items-center text-sm text-zinc-500 mt-1 space-x-3">
-                    <span className="capitalize">{action.type.replace('_', ' ')}</span>
-                    <span>•</span>
-                    <span>{action.subject}</span>
-                    <span>•</span>
-                    <span>{formatIsoTimeInSaoPaulo(action.intervalStart)}–{formatIsoTimeInSaoPaulo(action.intervalEnd)}</span>
+          {allocatedActions.map((action, index) => {
+            const mConfig = getMotionConfigForSubject(action.subject);
+            return (
+              <motion.div
+                key={action.id}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.05, duration: 0.3 }}
+                whileHover={mConfig.hoverProps.whileHover}
+                whileTap={mConfig.hoverProps.whileTap}
+                data-geometry={getSubjectProfile(action.subject).fieldType}
+                className="bg-surface-default border border-border-subtle rounded-xl p-5 shadow-soft-sm flex items-center justify-between transition-colors"
+              >
+                <div className="flex items-center min-w-0">
+                  <div className="w-9 h-9 rounded-full bg-surface-secondary flex items-center justify-center mr-4 shrink-0 text-text-muted font-mono font-medium text-sm">
+                    {index + 1}
+                  </div>
+                  <div className="min-w-0">
+                    <h4 className="font-semibold truncate text-text-primary">{action.topicName}</h4>
+                    <div className="flex items-center text-xs text-text-muted mt-1 space-x-3 font-mono">
+                      <span className="capitalize">{action.type.replace('_', ' ')}</span>
+                      <span>•</span>
+                      <span>{action.subject}</span>
+                      <span>•</span>
+                      <span>{formatIsoTimeInSaoPaulo(action.intervalStart)}–{formatIsoTimeInSaoPaulo(action.intervalEnd)}</span>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <span className="shrink-0 ml-4 text-sm font-medium text-indigo-600 dark:text-indigo-400">
-                {action.allocatedMinutes} min
-              </span>
-            </div>
-          ))}
+                <span className="shrink-0 ml-4 text-sm font-mono font-medium text-ember-600 dark:text-ember-400">
+                  {action.allocatedMinutes} min
+                </span>
+              </motion.div>
+            );
+          })}
 
           {!loading && allocatedActions.length === 0 && (
-            <div className="text-center py-12 bg-zinc-50 dark:bg-zinc-900/50 rounded-xl border border-dashed border-zinc-200 dark:border-zinc-800">
-              <p className="text-zinc-500">Nenhuma ação foi alocada nas janelas disponíveis hoje.</p>
+            <div className="text-center py-12 bg-surface-secondary/40 rounded-xl border border-dashed border-border-subtle">
+              <p className="text-text-muted">Nenhuma ação foi alocada nas janelas disponíveis hoje.</p>
             </div>
           )}
         </div>

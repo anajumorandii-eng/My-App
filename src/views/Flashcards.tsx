@@ -24,6 +24,8 @@ import {
   isCurrentFlashcardLoadRequest,
 } from '../lib/flashcardStudyView';
 import FlashcardSession, { SessionCard } from '../components/FlashcardSession';
+import { getMotionConfigForSubject } from '../design-system/crivoMotionPresets';
+import { motion } from 'motion/react';
 
 // Contagens conhecidas de antemão (conteúdo estático) — evita ter que
 // buscar todo mundo só pra montar a grade de matérias.
@@ -312,17 +314,25 @@ export default function Flashcards() {
       {!dueNavigationBlocked && navigation.step === 'subject' && (
         <div className="space-y-4">
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
-            {SUBJECTS.map(({ name, count, colorClasses }) => (
-              <button
-                key={name}
-                onClick={() => openSubject(name)}
-                disabled={loadingSubject !== null || dueNavigationBlocked}
-                className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-4 text-left shadow-sm hover:shadow-md transition-shadow disabled:opacity-60 disabled:cursor-wait"
-              >
-                <span className={`text-xs font-semibold px-2 py-1 rounded-full ${colorClasses}`}>{name}</span>
-                <p className="text-sm text-zinc-500 mt-2">{count.toLocaleString('pt-BR')} cartões</p>
-              </button>
-            ))}
+            {SUBJECTS.map(({ name, count, colorClasses }, index) => {
+              const mConfig = getMotionConfigForSubject(name);
+              return (
+                <motion.button
+                  key={name}
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: index * 0.03, duration: 0.25 }}
+                  whileHover={mConfig.hoverProps.whileHover}
+                  whileTap={mConfig.hoverProps.whileTap}
+                  onClick={() => openSubject(name)}
+                  disabled={loadingSubject !== null || dueNavigationBlocked}
+                  className="bg-surface-default border border-border-subtle rounded-xl p-4 text-left shadow-soft-sm hover:shadow-md transition-shadow disabled:opacity-60 disabled:cursor-wait"
+                >
+                  <span className={`text-xs font-semibold px-2 py-1 rounded-full ${colorClasses}`}>{name}</span>
+                  <p className="text-sm font-mono text-text-muted mt-2">{count.toLocaleString('pt-BR')} cartões</p>
+                </motion.button>
+              );
+            })}
           </div>
 
           {loadingSubject && (

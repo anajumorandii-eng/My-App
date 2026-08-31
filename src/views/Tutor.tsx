@@ -8,6 +8,7 @@ import { AiText } from '../components/AiText';
 import { Brain, Send, Bot, User, Sparkles, BookOpenText, ClipboardCheck, CalendarClock, PencilLine, Lightbulb, Target, School, AlertTriangle, HelpCircle, RotateCcw } from 'lucide-react';
 import { useUserMastery } from '../hooks/useUserMastery';
 import { applyDiscursiveSelfRatingOutcome } from '../lib/spacedRepetition';
+import { motion, AnimatePresence } from 'motion/react';
 
 const DISCURSIVE_BOARDS = ['Fuvest', 'Unicamp', 'Unesp', 'Famerp', 'Unifesp'];
 
@@ -526,24 +527,33 @@ function DuvidaPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, se
       </div>
 
       <div ref={scrollRef} className="flex-1 overflow-y-auto p-6 space-y-6">
+        <AnimatePresence initial={false}>
         {messages.map((msg) => (
-          <div key={msg.id} className={`flex ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}>
+          <motion.div
+            key={msg.id}
+            initial={{ opacity: 0, y: 12, scale: 0.96 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.9 }}
+            transition={{ type: 'spring', stiffness: 400, damping: 25 }}
+            className={`flex ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}
+          >
             <div className={`flex max-w-[80%] ${msg.sender === 'user' ? 'flex-row-reverse' : 'flex-row'}`}>
               <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 ${
-                msg.sender === 'user' ? 'bg-zinc-800 text-white ml-3' : 'bg-indigo-100 text-indigo-600 dark:bg-indigo-900/30 dark:text-indigo-400 mr-3'
+                msg.sender === 'user' ? 'bg-zinc-800 text-white ml-3' : 'bg-action-primary/15 text-action-primary mr-3'
               }`}>
                 {msg.sender === 'user' ? <User className="w-4 h-4" /> : <Bot className="w-4 h-4" />}
               </div>
-              <div className={`px-5 py-3.5 rounded-2xl ${
+              <div className={`px-5 py-3.5 rounded-2xl shadow-soft-sm ${
                 msg.sender === 'user'
                   ? 'bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-900'
-                  : 'bg-zinc-100 text-zinc-900 dark:bg-zinc-800 dark:text-zinc-100 border border-zinc-200 dark:border-zinc-700'
+                  : 'bg-surface-elevated text-text-primary border border-border-subtle'
               }`}>
                 {msg.sender === 'user' ? <p className="whitespace-pre-wrap leading-relaxed">{msg.text}</p> : <AiText text={msg.text} />}
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
+        </AnimatePresence>
 
         {isLoading && (
           <div className="flex justify-start">

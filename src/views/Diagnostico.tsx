@@ -26,6 +26,8 @@ import { CrivoCore, CrivoCoreState } from '../components/CrivoCore';
 import { SubjectAtmosphere } from '../features/daily-plan/components/SubjectAtmosphere';
 import { MasteryMeter } from '../features/daily-plan/components/MasteryMeter';
 import { getSubjectProfile, TYPOGRAPHY_PRESETS } from '../design-system/crivoSubjects';
+import { getMotionConfigForSubject } from '../design-system/crivoMotionPresets';
+import { motion, AnimatePresence } from 'motion/react';
 import { cn } from '../lib/cn';
 
 const STATE_BASE_LEVEL: Record<number, number> = { 0: 8, 1: 28, 2: 50, 3: 72, 4: 92 };
@@ -509,15 +511,25 @@ export default function Diagnostico() {
           {questionsSyncError && <p id="diagnostico-questions-sync-error" className="text-xs text-status-error mt-2">{questionsSyncError}</p>}
         </header>
 
+        <AnimatePresence initial={false}>
         {phase === 'pick' && (
-          <div className="space-y-4">
+          <motion.div
+            key="phase-pick"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.25 }}
+            className="space-y-4"
+          >
             <div className="flex gap-2 flex-wrap" role="group" aria-label="Filtrar por matéria">
               {subjects.map((s) => {
                 const active = subjectFilter === s;
                 return (
-                  <button
+                  <motion.button
                     key={s}
                     type="button"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
                     onClick={() => setSubjectFilter(s)}
                     className={`px-3 py-1.5 rounded-full text-xs font-mono tracking-wide transition-all ${
                       active
@@ -526,25 +538,32 @@ export default function Diagnostico() {
                     }`}
                   >
                     {s.toUpperCase()}
-                  </button>
+                  </motion.button>
                 );
               })}
             </div>
 
-            <div
+            <motion.div
               className="grid grid-cols-1 sm:grid-cols-2 gap-3"
               role="group"
               aria-label="Tópicos disponíveis"
               aria-describedby={headerErrorDescribedBy}
+              initial="hidden"
+              animate="visible"
+              variants={getMotionConfigForSubject(subjectFilter).containerVariants}
             >
               {mockTopics
                 .filter((t) => t.subject === subjectFilter)
                 .map((t) => {
                   const m = mastery.find((mm) => mm.topicId === t.id);
                   const hasQuiz = mockQuestions.some((q) => q.topicId === t.id) || mockTopicDiscursivePrompts.some((p) => p.topicId === t.id);
+                  const mConfig = getMotionConfigForSubject(t.subject);
                   return (
-                    <button
+                    <motion.button
                       key={t.id}
+                      variants={mConfig.itemVariants}
+                      whileHover={mConfig.hoverProps.whileHover}
+                      whileTap={mConfig.hoverProps.whileTap}
                       onClick={() => startDiagnostic(t.id)}
                       className="text-left rounded-card border border-border-subtle bg-surface-default shadow-soft-sm p-4 hover:border-action-primary/40 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background-base"
                     >
@@ -567,11 +586,11 @@ export default function Diagnostico() {
                           {hasQuiz && <span className="text-ember-600 dark:text-ember-400">• com teste rápido</span>}
                         </p>
                       )}
-                    </button>
+                    </motion.button>
                   );
                 })}
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         )}
 
         {phase === 'selfreport' && topic && (
@@ -855,6 +874,7 @@ export default function Diagnostico() {
             </Button>
           </Panel>
         )}
+        </AnimatePresence>
       </div>
     </SubjectAtmosphere>
   );

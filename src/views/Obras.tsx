@@ -4,6 +4,8 @@ import { Library, Loader2, Search } from 'lucide-react';
 import { LiteraryWork, ExamBoard, ExamRequirement } from '../types/literaryWorks';
 import { getLiteraryWorks, getAllExamRequirements } from '../lib/literaryCatalog';
 import { SubjectAtmosphere } from '../features/daily-plan/components/SubjectAtmosphere';
+import { getMotionConfigForSubject } from '../design-system/crivoMotionPresets';
+import { motion } from 'motion/react';
 
 type BoardFilter = 'todas' | ExamBoard;
 
@@ -102,27 +104,36 @@ export default function Obras() {
 
       {works && filtered.length > 0 && (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {filtered.map((w) => {
+          {filtered.map((w, index) => {
             const reqs = (requirementsByWork[w.id] ?? []).filter((r) => r.active);
+            const mConfig = getMotionConfigForSubject('literatura');
             return (
-              <Link
+              <motion.div
                 key={w.id}
-                to={`/obras/${w.slug}`}
-                className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-5 hover:shadow-md transition-shadow"
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.04, duration: 0.3 }}
+                whileHover={mConfig.hoverProps.whileHover}
+                whileTap={mConfig.hoverProps.whileTap}
               >
-                <p className="font-semibold leading-snug">{w.title}</p>
-                <p className="text-sm text-zinc-500 mt-1">{w.author} · {w.genre}</p>
-                <div className="flex flex-wrap gap-1.5 mt-3">
-                  {reqs.map((r) => (
-                    <span key={r.id} className="text-xs px-2 py-0.5 rounded-full bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300">
-                      {r.board}
-                    </span>
-                  ))}
-                </div>
-                {reqs[0]?.requiredScope && reqs[0].requiredScope !== 'obra completa' && (
-                  <p className="text-xs text-amber-600 dark:text-amber-400 mt-2 line-clamp-2">{reqs[0].requiredScope}</p>
-                )}
-              </Link>
+                <Link
+                  to={`/obras/${w.slug}`}
+                  className="block h-full bg-surface-default border border-border-subtle rounded-xl p-5 shadow-soft-sm hover:border-action-primary/40 transition-colors"
+                >
+                  <p className="font-semibold text-text-primary leading-snug">{w.title}</p>
+                  <p className="text-xs font-mono text-text-muted mt-1">{w.author} · {w.genre}</p>
+                  <div className="flex flex-wrap gap-1.5 mt-3">
+                    {reqs.map((r) => (
+                      <span key={r.id} className="text-xs font-mono px-2 py-0.5 rounded-full bg-surface-secondary text-text-muted">
+                        {r.board}
+                      </span>
+                    ))}
+                  </div>
+                  {reqs[0]?.requiredScope && reqs[0].requiredScope !== 'obra completa' && (
+                    <p className="text-xs text-ember-600 dark:text-ember-400 mt-2 line-clamp-2">{reqs[0].requiredScope}</p>
+                  )}
+                </Link>
+              </motion.div>
             );
           })}
         </div>

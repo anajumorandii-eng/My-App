@@ -18,6 +18,7 @@ import {
   Target,
   X,
 } from 'lucide-react';
+import { motion } from 'motion/react';
 
 const KNOWN_EXAMS = ['ENEM', 'FUVEST', 'UNICAMP', 'UNESP', 'FAMERP', 'UNIFESP'];
 const KNOWN_UNIVERSITIES = ['USP', 'UNICAMP', 'UNESP', 'FAMERP', 'UNIFESP'];

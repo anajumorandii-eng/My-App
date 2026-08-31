@@ -2,6 +2,9 @@ import React, { useMemo, useState } from 'react';
 import { examPriorities, targetExamBoards, extraExamBoards } from '../data/examPriorities';
 import { literaryWorks } from '../data/literaryWorks';
 import { Target, ChevronDown, BookOpen, AlertTriangle } from 'lucide-react';
+import { SubjectAtmosphere } from '../features/daily-plan/components/SubjectAtmosphere';
+import { getMotionConfigForSubject } from '../design-system/crivoMotionPresets';
+import { motion, AnimatePresence } from 'motion/react';
 
 export default function Prioridades() {
   const subjects = useMemo(() => examPriorities.map((s) => s.subject), []);
@@ -33,8 +36,10 @@ export default function Prioridades() {
           {subjects.map((subject) => {
             const active = activeSubject === subject;
             return (
-              <button
+              <motion.button
                 key={subject}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
                 onClick={() => setActiveSubject(subject)}
                 className={`px-3 py-1.5 rounded-full text-xs font-mono tracking-wide transition-all ${
                   active
@@ -43,14 +48,23 @@ export default function Prioridades() {
                 }`}
               >
                 {subject.toUpperCase()}
-              </button>
+              </motion.button>
             );
           })}
         </div>
 
-      <section className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 shadow-sm">
-        <h2 className="text-lg font-semibold mb-1">Resumo da região (todos os vestibulares)</h2>
-        <p className="text-sm text-zinc-500 mb-5">Ranking agregado de temas mais cobrados em {activeSubject} — priorize os do topo primeiro.</p>
+      <AnimatePresence initial={false}>
+      <motion.div
+        key={activeSubject}
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -10 }}
+        transition={{ duration: 0.25 }}
+        className="space-y-6"
+      >
+        <section className="bg-surface-default border border-border-subtle rounded-2xl p-6 shadow-soft-sm">
+          <h2 className="text-lg font-semibold mb-1 text-text-primary">Resumo da região (todos os vestibulares)</h2>
+          <p className="text-sm text-text-muted mb-5">Ranking agregado de temas mais cobrados em {activeSubject} — priorize os do topo primeiro.</p>
         <div className="space-y-3">
           {data.regionalSummary.map((topic, i) => (
             <div key={topic.theme} className="flex items-center">
@@ -171,6 +185,8 @@ export default function Prioridades() {
           </div>
         </section>
       )}
+      </motion.div>
+      </AnimatePresence>
       </div>
     </SubjectAtmosphere>
   );

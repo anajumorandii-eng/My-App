@@ -6,6 +6,8 @@ import { useUserProfile } from '../hooks/useUserProfile';
 import { usePodcastEpisodes } from '../hooks/usePodcastEpisodes';
 import { PodcastEpisode, UserProfile } from '../types';
 import { Headphones, Play, Square, Volume2, Sparkles, Clock, Mic, Loader2 } from 'lucide-react';
+import { getMotionConfigForSubject } from '../design-system/crivoMotionPresets';
+import { motion } from 'motion/react';
 
 const SUBJECT_COLORS: Record<string, string> = {
   Biologia: 'bg-emerald-50 dark:bg-emerald-900/20 text-emerald-700 dark:text-emerald-300',
@@ -255,17 +257,22 @@ export default function Podcast() {
       </div>
 
       <div className="space-y-3">
-        {orderedEpisodes.map((episode) => {
+        {orderedEpisodes.map((episode, index) => {
           const isPlaying = playingId === episode.id;
           const isLoadingAudio = loadingId === episode.id;
           const isGenerating = generatingId === episode.id;
           const aiScript = aiScripts[episode.id];
           const activeScript = aiScript ?? episode.script;
           const matchesPreference = durationPreference !== null && bucketOf(episode.durationMinutes) === durationPreference;
+          const mConfig = getMotionConfigForSubject(episode.subject);
           return (
-            <div
+            <motion.div
               key={episode.id}
-              className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-5 shadow-sm"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.04, duration: 0.3 }}
+              whileHover={mConfig.hoverProps.whileHover}
+              className="bg-surface-default border border-border-subtle rounded-xl p-5 shadow-soft-sm hover:border-action-primary/40 transition-colors"
             >
               <div className="flex items-center justify-between">
                 <div className="flex items-center min-w-0">
@@ -274,8 +281,8 @@ export default function Podcast() {
                     disabled={isLoadingAudio}
                     className={`w-11 h-11 rounded-full flex items-center justify-center mr-4 shrink-0 transition-colors ${
                       isPlaying
-                        ? 'bg-indigo-600 text-white'
-                        : 'bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 hover:bg-indigo-100 dark:hover:bg-indigo-900/50'
+                        ? 'bg-action-primary text-warm-50 shadow-md'
+                        : 'bg-surface-secondary text-text-primary hover:bg-surface-strong'
                     } disabled:opacity-40`}
                   >
                     {isLoadingAudio ? (
@@ -287,12 +294,12 @@ export default function Podcast() {
                     )}
                   </button>
                   <div className="min-w-0">
-                    <h4 className="font-semibold truncate flex items-center">
+                    <h4 className="font-semibold text-text-primary truncate flex items-center">
                       {episode.title}
-                      {isPlaying && <Volume2 className="w-4 h-4 ml-2 text-indigo-500 animate-pulse shrink-0" />}
+                      {isPlaying && <Volume2 className="w-4 h-4 ml-2 text-action-primary animate-pulse shrink-0" />}
                     </h4>
-                    <div className="flex items-center text-sm text-zinc-500 mt-1 space-x-2">
-                      <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${SUBJECT_COLORS[episode.subject] ?? ''}`}>
+                    <div className="flex items-center text-xs text-text-muted mt-1 space-x-2 font-mono">
+                      <span className={`text-[11px] font-medium px-2 py-0.5 rounded-full ${SUBJECT_COLORS[episode.subject] ?? ''}`}>
                         {episode.subject}
                       </span>
                       <span>•</span>
@@ -300,7 +307,7 @@ export default function Podcast() {
                       {matchesPreference && (
                         <>
                           <span>•</span>
-                          <span className="flex items-center text-indigo-500">
+                          <span className="flex items-center text-ember-600 dark:text-ember-400">
                             <Clock className="w-3 h-3 mr-1" />
                             Duração preferida
                           </span>
@@ -309,7 +316,7 @@ export default function Podcast() {
                       {aiScript && (
                         <>
                           <span>•</span>
-                          <span className="flex items-center text-indigo-500">
+                          <span className="flex items-center text-action-primary">
                             <Sparkles className="w-3 h-3 mr-1" />
                             Roteiro gerado por IA
                           </span>
@@ -321,13 +328,13 @@ export default function Podcast() {
                 <button
                   onClick={() => generateScript(episode.id, episode.title, episode.subject, episode.topicId)}
                   disabled={isGenerating}
-                  className="shrink-0 ml-4 flex items-center px-3 py-2 text-xs font-medium text-indigo-600 dark:text-indigo-400 border border-indigo-200 dark:border-indigo-800 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-900/20 disabled:opacity-50 transition-colors"
+                  className="shrink-0 ml-4 flex items-center px-3 py-2 text-xs font-mono font-medium text-action-primary border border-border-subtle rounded-lg hover:bg-surface-secondary disabled:opacity-50 transition-colors"
                 >
                   <Sparkles className={`w-3.5 h-3.5 mr-1.5 ${isGenerating ? 'animate-pulse' : ''}`} />
                   {isGenerating ? 'Gerando...' : aiScript ? 'Gerar novo' : 'Gerar com IA'}
                 </button>
               </div>
-            </div>
+            </motion.div>
           );
         })}
       </div>

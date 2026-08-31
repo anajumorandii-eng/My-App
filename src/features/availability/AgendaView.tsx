@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { CalendarDays, Clock3, Save } from 'lucide-react';
 import { useDailyStudyAvailability } from './useDailyStudyAvailability';
 import { entriesAreSafe } from './scheduleSafety';
+import { motion } from 'motion/react';
 import {
   SAO_PAULO_TIME_ZONE,
   type ScheduleEntry,
@@ -168,15 +169,22 @@ export default function AgendaView() {
           <p className="text-sm text-zinc-500">Compromissos são apenas um resumo; edite as janelas de estudo.</p>
         </div>
         <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
-          {WEEKDAYS.map(({ key, label }) => (
-            <WeekdayCard
+          {WEEKDAYS.map(({ key, label }, index) => (
+            <motion.div
               key={key}
-              label={label}
-              entries={draftSchedule?.days[key] ?? []}
-              onChange={(entryId, field, value) => updateStudyWindow(key, entryId, field, value)}
-              onAdd={() => addStudyWindow(key)}
-              onRemove={(entryId) => removeStudyWindow(key, entryId)}
-            />
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.04, duration: 0.25 }}
+              whileHover={{ y: -2 }}
+            >
+              <WeekdayCard
+                label={label}
+                entries={draftSchedule?.days[key] ?? []}
+                onChange={(entryId, field, value) => updateStudyWindow(key, entryId, field, value)}
+                onAdd={() => addStudyWindow(key)}
+                onRemove={(entryId) => removeStudyWindow(key, entryId)}
+              />
+            </motion.div>
           ))}
         </div>
         <button type="button" onClick={() => void saveWeeklySchedule()} disabled={!draftSchedule} className="inline-flex items-center px-4 py-2 rounded-lg bg-indigo-600 text-white text-sm font-medium disabled:opacity-50">
