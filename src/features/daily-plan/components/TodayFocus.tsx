@@ -15,6 +15,7 @@ import { DecisionFactorField } from './DecisionFactorField';
 import { focusEnter } from '../../../design-system/motion/variants';
 import { usePreviousFeedback } from '../../../hooks/usePreviousFeedback';
 import { useDecisionChoreography } from '../motion/useDecisionChoreography';
+import { cn } from '../../../lib/cn';
 
 export interface TodayFocusProps {
   /** Allocated, not merely ranked: the focus card states *when* today's
@@ -35,6 +36,7 @@ export interface TodayFocusProps {
 export function TodayFocus({ action, actionLabel, mainReason, onStart, showAdaptiveUpdate, previousSubject, userId, feedbackStatus, onDisagree }: TodayFocusProps) {
   const [disagreeOpen, setDisagreeOpen] = useState(false);
   const [explanationOpen, setExplanationOpen] = useState(false);
+  const [isMaximized, setIsMaximized] = useState(false);
   const previous = usePreviousFeedback(action.topicId, userId);
   const subjectProfile = getSubjectProfile(action.subject);
   const typographyPreset = TYPOGRAPHY_PRESETS[subjectProfile.tipografia];
@@ -54,14 +56,26 @@ export function TodayFocus({ action, actionLabel, mainReason, onStart, showAdapt
       data-confirmation-key={confirmationKey}
       data-motion-active={!reducedMotion && (phase === 'forming' || phase === 'recomposing') ? 'true' : undefined}
       aria-labelledby={`decision-${action.id}`}
-      className="crivo-decision-hero"
+      className={cn("crivo-decision-hero transition-all duration-300", isMaximized && "crivo-decision-hero--maximized scale-[1.02] shadow-2xl z-10")}
       layout={!reducedMotion}
       initial={reducedMotion ? false : 'hidden'}
       animate="visible"
       variants={focusEnter}
     >
       <div className="crivo-decision-copy">
-        <p className="crivo-decision-eyebrow">Hoje · decisão principal</p>
+        <div className="flex items-center justify-between mb-1">
+          <p className="crivo-decision-eyebrow">Hoje · decisão principal</p>
+          <button
+            type="button"
+            tabIndex={-1}
+            onClick={() => setIsMaximized((prev) => !prev)}
+            className="text-[11px] font-mono uppercase tracking-wider text-[var(--subject-text-highlight)] hover:text-white transition-opacity opacity-75 hover:opacity-100 flex items-center gap-1 cursor-pointer px-2 py-0.5 rounded bg-white/5 border border-white/10"
+            title={isMaximized ? "Restaurar tamanho normal" : "Maximizar primeira parte"}
+            aria-label={isMaximized ? "Restaurar tamanho normal da primeira parte" : "Maximizar primeira parte"}
+          >
+            {isMaximized ? "🗗 Reduzir" : "🗖 Maximizar"}
+          </button>
+        </div>
         <h1 id={`decision-${action.id}`} className="crivo-decision-title">
           <KineticText
             as="span"
