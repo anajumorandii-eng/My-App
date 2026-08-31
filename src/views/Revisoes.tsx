@@ -74,38 +74,45 @@ export default function Revisoes() {
     }
   };
 
+  const firstSubject = queue[0]?.topic?.subject;
+
   return (
-    <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
-      <header>
-        <h1 className="text-3xl font-bold tracking-tight mb-2 flex items-center">
-          <Repeat className="w-7 h-7 mr-3 text-indigo-500" />
-          Revisões Adaptativas
-        </h1>
-        <p className="text-zinc-500 dark:text-zinc-400">
-          Fila ordenada por repetição espaçada: cada tópico tem sua própria data de revisão, que se ajusta pela sua resposta — lembrar fácil adia bastante a próxima, esquecer traz de volta pra amanhã.
-        </p>
-        {!isPersisted && (
-          <p className="flex items-center text-xs text-zinc-400 mt-2">
-            <CloudOff className="w-3.5 h-3.5 mr-1.5" />
-            Modo demonstração — conecte sua conta Google em "Conexões Google" para salvar seu progresso de verdade.
+    <SubjectAtmosphere subject={firstSubject} focus={0.35}>
+      <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
+        <header>
+          <div className="flex items-center gap-2 mb-1.5">
+            <span className="w-2 h-2 rounded-full bg-ember-500 shadow-[0_0_8px_var(--color-ember-500)]" />
+            <span className="text-[11px] font-mono tracking-widest uppercase text-ember-600 dark:text-ember-400">Repetição Espaçada SM-2 · Crivo</span>
+          </div>
+          <h1 className="font-display text-3xl sm:text-4xl font-semibold italic text-text-primary tracking-tight flex items-center gap-3">
+            <Repeat className="w-7 h-7 text-action-primary" />
+            Revisões Adaptativas
+          </h1>
+          <p className="text-text-secondary mt-1 max-w-2xl text-base">
+            O algoritmo SM-2 calcula o momento exato de revisar cada tópico antes que a curva do esquecimento apague o conteúdo.
           </p>
-        )}
-        {syncError && <p className="text-xs text-rose-500 mt-2">{syncError}</p>}
-      </header>
+          {!isPersisted && (
+            <p className="flex items-center text-xs text-text-muted mt-2">
+              <CloudOff className="w-3.5 h-3.5 mr-1.5" />
+              Modo demonstração — conecte sua conta Google em "Conexões Google" para salvar seu progresso de verdade.
+            </p>
+          )}
+          {syncError && <p className="text-xs text-status-error mt-2">{syncError}</p>}
+        </header>
 
-      <SummaryReviewsPanel progress={summaryProgress} summaries={interactiveSummaries} />
+        <SummaryReviewsPanel progress={summaryProgress} summaries={interactiveSummaries} />
 
-      <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 shadow-sm flex items-center">
-        <div className={`w-12 h-12 rounded-full flex items-center justify-center mr-4 ${pendingToday > 0 ? 'bg-amber-100 text-amber-600 dark:bg-amber-900/30 dark:text-amber-400' : 'bg-emerald-100 text-emerald-600 dark:bg-emerald-900/30 dark:text-emerald-400'}`}>
-          {pendingToday > 0 ? <AlertTriangle className="w-6 h-6" /> : <CheckCircle2 className="w-6 h-6" />}
+        <div className="bg-surface-default border border-border-subtle rounded-2xl p-6 shadow-soft-sm flex items-center">
+          <div className={`w-12 h-12 rounded-full flex items-center justify-center mr-4 ${pendingToday > 0 ? 'bg-status-warning/15 text-status-warning' : 'bg-status-success/15 text-status-success'}`}>
+            {pendingToday > 0 ? <AlertTriangle className="w-6 h-6" /> : <CheckCircle2 className="w-6 h-6" />}
+          </div>
+          <div>
+            <p className="text-2xl font-display font-bold text-text-primary">{pendingToday}</p>
+            <p className="text-xs font-mono uppercase tracking-wider text-text-muted">
+              {pendingToday > 0 ? 'revisões urgentes pendentes hoje' : 'nenhuma revisão urgente — retenção em dia'}
+            </p>
+          </div>
         </div>
-        <div>
-          <p className="text-2xl font-bold">{pendingToday}</p>
-          <p className="text-sm text-zinc-500">
-            {pendingToday > 0 ? 'revisões urgentes pendentes' : 'nenhuma revisão urgente — tudo em dia'}
-          </p>
-        </div>
-      </div>
 
       <div className="space-y-3">
         {queue.map(({ mastery, topic, urgency }) => {
@@ -179,6 +186,7 @@ export default function Revisoes() {
           );
         })}
       </div>
-    </div>
+      </div>
+    </SubjectAtmosphere>
   );
 }

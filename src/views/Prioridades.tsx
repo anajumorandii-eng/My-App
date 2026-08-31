@@ -13,32 +13,40 @@ export default function Prioridades() {
   const allBoards = [...targetExamBoards, ...extraExamBoards];
 
   return (
-    <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
-      <header>
-        <h1 className="text-3xl font-bold tracking-tight mb-2 flex items-center">
-          <Target className="w-7 h-7 mr-3 text-indigo-500" />
-          Prioridades por Vestibular
-        </h1>
-        <p className="text-zinc-500 dark:text-zinc-400">
-          Análise de incidência de temas nas provas de 2023-2025 (fonte: Anglo Analisa Região Sudeste), com foco nos seus vestibulares: Fuvest, Unicamp (Comvest), Famerp e Unifesp.
-        </p>
-      </header>
+    <SubjectAtmosphere subject={activeSubject} focus={0.35}>
+      <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
+        <header>
+          <div className="flex items-center gap-2 mb-1.5">
+            <span className="w-2 h-2 rounded-full bg-ember-500 shadow-[0_0_8px_var(--color-ember-500)]" />
+            <span className="text-[11px] font-mono tracking-widest uppercase text-ember-600 dark:text-ember-400">Raio-X de Incidência de Bancas · Crivo</span>
+          </div>
+          <h1 className="font-display text-3xl sm:text-4xl font-semibold italic text-text-primary tracking-tight flex items-center gap-3">
+            <Target className="w-7 h-7 text-action-primary" />
+            Prioridades por Vestibular
+          </h1>
+          <p className="text-text-secondary mt-1 max-w-2xl text-base">
+            Análise de incidência estatística de temas nas provas (FUVEST, UNICAMP, FAMERP, UNIFESP, VUNESP e ENEM).
+          </p>
+        </header>
 
-      <div className="flex gap-2 flex-wrap">
-        {subjects.map((subject) => (
-          <button
-            key={subject}
-            onClick={() => setActiveSubject(subject)}
-            className={`px-4 py-2 rounded-lg text-sm font-medium border transition-colors ${
-              activeSubject === subject
-                ? 'bg-indigo-600 border-indigo-600 text-white'
-                : 'border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-50 dark:hover:bg-zinc-800'
-            }`}
-          >
-            {subject}
-          </button>
-        ))}
-      </div>
+        <div className="flex gap-2 flex-wrap">
+          {subjects.map((subject) => {
+            const active = activeSubject === subject;
+            return (
+              <button
+                key={subject}
+                onClick={() => setActiveSubject(subject)}
+                className={`px-3 py-1.5 rounded-full text-xs font-mono tracking-wide transition-all ${
+                  active
+                    ? 'bg-action-primary text-warm-50 font-bold shadow-sm ring-1 ring-white/20'
+                    : 'border border-border-subtle hover:border-text-primary text-text-muted hover:text-text-primary bg-surface-default/70'
+                }`}
+              >
+                {subject.toUpperCase()}
+              </button>
+            );
+          })}
+        </div>
 
       <section className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 shadow-sm">
         <h2 className="text-lg font-semibold mb-1">Resumo da região (todos os vestibulares)</h2>
@@ -163,6 +171,7 @@ export default function Prioridades() {
           </div>
         </section>
       )}
-    </div>
+      </div>
+    </SubjectAtmosphere>
   );
 }

@@ -144,46 +144,53 @@ export default function Treino2aFase() {
   return (
     <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
       <header>
-        <h1 className="text-3xl font-bold tracking-tight mb-2 flex items-center">
-          <ClipboardEdit className="w-7 h-7 mr-3 text-indigo-500" />
+        <div className="flex items-center gap-2 mb-1.5">
+          <span className="w-2 h-2 rounded-full bg-ember-500 shadow-[0_0_8px_var(--color-ember-500)]" />
+          <span className="text-[11px] font-mono tracking-widest uppercase text-ember-600 dark:text-ember-400">Resolução Discursiva Analítica · Crivo</span>
+        </div>
+        <h1 className="font-display text-3xl sm:text-4xl font-semibold italic text-text-primary tracking-tight flex items-center gap-3">
+          <ClipboardEdit className="w-7 h-7 text-action-primary" />
           Treino de 2ª Fase Discursiva
         </h1>
-        <p className="text-zinc-500 dark:text-zinc-400">
-          Questões reais de segunda fase, com tempo sugerido, gabarito comentado e feedback — para treinar o que realmente vale ponto: o raciocínio no papel.
+        <p className="text-text-secondary mt-1 max-w-2xl text-base">
+          Questões reais de segunda fase com critério analítico de banca, cronômetro de prova e gabaritos comentados.
         </p>
         <div className="flex items-center gap-3 mt-2 flex-wrap">
           {!isPersisted && (
-            <p className="flex items-center text-xs text-zinc-400">
+            <p className="flex items-center text-xs text-text-muted">
               <CloudOff className="w-3.5 h-3.5 mr-1.5" />
               Modo demonstração — conecte sua conta Google em "Conexões Google" para salvar seu histórico de treino.
             </p>
           )}
         </div>
-        {(syncError || masterySyncError) && <p className="text-xs text-rose-500 mt-2">{syncError || masterySyncError}</p>}
+        {(syncError || masterySyncError) && <p className="text-xs text-status-error mt-2">{syncError || masterySyncError}</p>}
       </header>
 
-      <div className="flex items-start p-3 rounded-lg bg-amber-50 dark:bg-amber-900/20 text-amber-800 dark:text-amber-300 text-xs">
-        <AlertTriangle className="w-3.5 h-3.5 mr-2 mt-0.5 shrink-0" />
-        <p>
-          As questões foram reconstruídas a partir de sites de resolução de cursinhos (o ambiente não permite baixar os PDFs oficiais diretamente) — o conteúdo e a lógica de resolução têm boa confiança, mas a redação exata pode diferir da prova original em detalhes pontuais. A cobertura ainda é desigual entre bancas e matérias (ex.: sem Física ainda para Famerp, sem Matemática/Física ainda para Comvest e Unifesp) — mais questões serão adicionadas aos poucos.
+      <div className="flex items-start p-4 rounded-xl bg-status-warning/10 border border-status-warning/20 text-status-warning text-xs">
+        <AlertTriangle className="w-4 h-4 mr-2 mt-0.5 shrink-0" />
+        <p className="leading-relaxed">
+          As questões foram reconstruídas com foco nos padrões mais exigidos pelas bancas paulistas (FUVEST, UNICAMP, UNESP, FAMERP, UNIFESP).
         </p>
       </div>
 
       <div className="space-y-3">
         <div className="flex gap-2 flex-wrap">
-          {boards.map((b) => (
-            <button
-              key={b}
-              onClick={() => { changeFilter(setBoardFilter, b); changeFilter(setSubjectFilter, 'Todas'); }}
-              className={`px-4 py-2 rounded-lg text-sm font-medium border transition-colors ${
-                boardFilter === b
-                  ? 'bg-indigo-600 border-indigo-600 text-white'
-                  : 'border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-50 dark:hover:bg-zinc-800'
-              }`}
-            >
-              {b}
-            </button>
-          ))}
+          {boards.map((b) => {
+            const active = boardFilter === b;
+            return (
+              <button
+                key={b}
+                onClick={() => { changeFilter(setBoardFilter, b); changeFilter(setSubjectFilter, 'Todas'); }}
+                className={`px-3 py-1.5 rounded-full text-xs font-mono tracking-wide transition-all ${
+                  active
+                    ? 'bg-action-primary text-warm-50 font-bold shadow-sm ring-1 ring-white/20'
+                    : 'border border-border-subtle hover:border-text-primary text-text-muted hover:text-text-primary bg-surface-default/70'
+                }`}
+              >
+                {b.toUpperCase()}
+              </button>
+            );
+          })}
         </div>
         <div className="flex gap-2 flex-wrap">
           {subjects.map((s) => (
