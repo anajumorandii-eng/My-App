@@ -35,14 +35,14 @@ export function DecisionExplanation({ mainReason, factors, snapshot, open, onOpe
   const triggerRef = useRef<HTMLButtonElement>(null);
   const previousOpen = useRef(open);
   const reducedMotion = useReducedMotion();
-  const confidence = confidenceFromUncertainty(snapshot.uncertainty);
+  const confidence = confidenceFromUncertainty(snapshot?.uncertainty ?? 0.5);
 
   useEffect(() => {
     if (previousOpen.current && !open) triggerRef.current?.focus();
     previousOpen.current = open;
   }, [open]);
 
-  const ranked = [...factors].sort((a, b) => Math.abs(b.contribution) - Math.abs(a.contribution));
+  const ranked = [...(factors ?? [])].sort((a, b) => Math.abs(b.contribution) - Math.abs(a.contribution));
   const totalContribution = ranked.reduce((sum, factor) => sum + Math.abs(factor.contribution), 0);
 
   return (
@@ -102,18 +102,20 @@ export function DecisionExplanation({ mainReason, factors, snapshot, open, onOpe
           </div>
 
           {/* Evidência: o snapshot exato usado para gerar esta recomendação. */}
-          <PrecisionMark className="text-xs text-text-secondary border-t border-border-subtle pt-3">
-            <p>
-              Domínio estimado no momento do cálculo: <strong className="text-text-primary">{Math.round(snapshot.masteryLevel)}%</strong>
-              {' '}({CONFIDENCE_LABEL[confidence]}).
-            </p>
-            {confidence === 'insufficient_data' && (
-              <p className="mt-1">Ainda não há evidência suficiente para uma estimativa confiável neste tópico.</p>
-            )}
-            <p className="mt-1 text-text-muted">
-              Calculado em {new Date(snapshot.calculatedAt).toLocaleString('pt-BR', { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' })}.
-            </p>
-          </PrecisionMark>
+          {snapshot && (
+            <PrecisionMark className="text-xs text-text-secondary border-t border-border-subtle pt-3">
+              <p>
+                Domínio estimado no momento do cálculo: <strong className="text-text-primary">{Math.round(snapshot.masteryLevel)}%</strong>
+                {' '}({CONFIDENCE_LABEL[confidence]}).
+              </p>
+              {confidence === 'insufficient_data' && (
+                <p className="mt-1">Ainda não há evidência suficiente para uma estimativa confiável neste tópico.</p>
+              )}
+              <p className="mt-1 text-text-muted">
+                Calculado em {new Date(snapshot.calculatedAt).toLocaleString('pt-BR', { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' })}.
+              </p>
+            </PrecisionMark>
+          )}
 
           <div className="flex items-center gap-2">
             <Button variant="ghost" size="sm" className="min-h-11" onClick={() => onOpenChange(false)}>

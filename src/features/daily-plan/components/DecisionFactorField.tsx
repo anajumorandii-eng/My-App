@@ -29,18 +29,19 @@ function formatContribution(value: number) {
   return `${value > 0 ? '+' : ''}${value.toFixed(2)}`;
 }
 
-export function DecisionFactorField({ factors, phase }: DecisionFactorFieldProps) {
+export function DecisionFactorField({ factors = [], phase }: DecisionFactorFieldProps) {
   const reducedMotion = useReducedMotion();
   const [motionActive, setMotionActive] = useState(false);
   const previousPhase = useRef(phase);
+  const safeFactors = factors ?? [];
 
   useEffect(() => {
     const leavingDecomposed = previousPhase.current === 'decomposed' && phase !== 'decomposed';
-    if (reducedMotion || factors.length === 0) setMotionActive(false);
+    if (reducedMotion || safeFactors.length === 0) setMotionActive(false);
     else if (phase === 'decomposed' || leavingDecomposed) setMotionActive(true);
     else setMotionActive(false);
     previousPhase.current = phase;
-  }, [factors.length, phase, reducedMotion]);
+  }, [safeFactors.length, phase, reducedMotion]);
 
   return (
     <div

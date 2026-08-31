@@ -54,7 +54,7 @@ const CONTRIBUTION_EPSILON = 0.01;
 const EXAM_MULTIPLIER_EPSILON = 0.001;
 
 function contributingFactor(action: StudyAction, kind: RecommendationFactorKind) {
-  const factor = action.factors.find((candidate) => candidate.kind === kind);
+  const factor = action.factors?.find((candidate) => candidate.kind === kind);
   return factor && factor.contribution > CONTRIBUTION_EPSILON ? factor : undefined;
 }
 
@@ -69,9 +69,9 @@ function causalExamsFor(action: StudyAction, goals: StudentGoals): VestibularExa
   );
   const factor = contributingFactor(action, 'exam_relevance');
   const topic = mockTopics.find((candidate) => candidate.id === action.topicId);
-  const calculatedAt = new Date(action.snapshot.calculatedAt);
+  const calculatedAt = action.snapshot?.calculatedAt ? new Date(action.snapshot.calculatedAt) : null;
 
-  if (!hasExamReason || !factor || !topic || Number.isNaN(calculatedAt.getTime())) return [];
+  if (!hasExamReason || !factor || !topic || !calculatedAt || Number.isNaN(calculatedAt.getTime())) return [];
 
   const signals = computeBoardSignals(goals, calculatedAt);
   const aggregate = examFocusFor(topic, signals).multiplier;
@@ -92,10 +92,14 @@ function causalExamsFor(action: StudyAction, goals: StudentGoals): VestibularExa
 export default function Dashboard() {
   const navigate = useNavigate();
   const { user } = useAuth();
-  // One shared source of truth for "what is today's plan" — the same hook
-  // Plano and Sessão read, so the three views can never disagree about the
-  // effective minutes, the first action, or its scheduled slot.
-  const { availability, prioritizedActions, allocatedActions: dailyPlan, loading, warnings, isPersisted } = useDailyPlan(todayInSaoPaulo());
+  const {
+    availability,
+    prioritizedActions = [],
+    allocatedActions: dailyPlan = [],
+    loading = false,
+    warnings = [],
+    isPersisted = false,
+  } = useDailyPlan(todayInSaoPaulo());
   const { mastery } = useUserMastery();
   const { goals } = useStudentGoals();
 
@@ -144,8 +148,8 @@ export default function Dashboard() {
   };
 
   const candidateAction = selectedSubject
-    ? (prioritizedActions.find((a) => a.subject.toLowerCase() === selectedSubject.toLowerCase()) ?? fallbackActionForSubject(selectedSubject))
-    : (dailyPlan[0] ?? prioritizedActions[0] ?? fallbackActionForSubject('Física'));
+    ? ((prioritizedActions ?? []).find((a) => a.subject.toLowerCase() === selectedSubject.toLowerCase()) ?? fallbackActionForSubject(selectedSubject))
+    : (dailyPlan[0] ?? (prioritizedActions ?? [])[0] ?? fallbackActionForSubject('Física'));
 
   const primary = useMemo((): AllocatedStudyAction => {
     return {
@@ -163,7 +167,7 @@ export default function Dashboard() {
   // account for fragmented intervals as well as the total-time budget.
   const canWait = useMemo(() => {
     const planned = new Set(dailyPlan.map((action) => action.id));
-    return prioritizedActions.filter((action) => !planned.has(action.id));
+    return (prioritizedActions ?? []).filter((action) => !planned.has(action.id));
   }, [prioritizedActions, dailyPlan]);
 
   const actionExams = useMemo(() => primary ? causalExamsFor(primary, goals) : [], [goals, primary]);

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title id="title">AJ Intelligence</title>
+  <defs>
+    <linearGradient id="background" x1="64" y1="64" x2="448" y2="448" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#751E2B"/>
+      <stop offset=".52" stop-color="#242422"/>
+      <stop offset="1" stop-color="#12372D"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#background)"/>
+  <path d="M77 418c49-115 83-226 135-310 32 81 53 175 93 249 25 45 59 72 93 49 35-23 36-73 27-125" fill="none" stroke="#FBF8F2" stroke-width="38" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M143 297c84-12 160 17 219-25 46-33 53-93 43-161" fill="none" stroke="#FBF8F2" stroke-width="33" stroke-linecap="round"/>
+  <path d="m376 129 31-23 26 28" fill="none" stroke="#D9B583" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

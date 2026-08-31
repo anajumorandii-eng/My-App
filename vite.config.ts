@@ -56,6 +56,7 @@ export default defineConfig(() => ({
       'src/hooks/useDailyPlan.test.tsx',
       'src/views/DailyPlanConsistency.test.tsx',
     ],
+    exclude: ['**/.worktrees/**', '**/node_modules/**', '**/.git/**'],
   },
 
   server: {

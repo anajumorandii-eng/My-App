@@ -1,0 +1,1516 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src 'unsafe-inline' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Aj Motion Lab</title>
+<style>:root{color-scheme:light dark;background:light-dark(rgb(255 255 255), rgb(24 24 24))}html,body{margin:0}body{box-sizing:border-box;padding:1rem;background:inherit}iframe{display:block;width:100%;height:calc(100vh - 2rem);margin:0 auto;border:0}</style>
+</head>
+<body>
+<iframe sandbox="allow-scripts" referrerpolicy="no-referrer" title="Aj Motion Lab" srcdoc="&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;&gt;
+&lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src &#x27;none&#x27;; script-src &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27; &#x27;wasm-unsafe-eval&#x27; blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src &#x27;unsafe-inline&#x27; blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src &#x27;none&#x27;; object-src &#x27;none&#x27;; base-uri &#x27;none&#x27;; form-action &#x27;none&#x27;&quot;&gt;
+&lt;title&gt;Aj Motion Lab&lt;/title&gt;
+&lt;style&gt;:root {
+  color-scheme: light dark;
+  background-color: var(
+    --background,
+    var(--color-background-primary, light-dark(rgb(255 255 255), rgb(24 24 24)))
+  ) !important;
+
+  /* Agent-facing contract; keep in sync with SKILL.md. */
+  --background: var(
+    --color-background-primary,
+    light-dark(rgb(255 255 255), rgb(24 24 24))
+  );
+  --foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --card: color-mix(in oklab, var(--foreground) 5%, var(--background));
+  --card-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --popover: var(
+    --color-background-secondary,
+    light-dark(rgb(255 255 255), rgb(45 45 45))
+  );
+  --popover-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --primary: var(
+    --color-text-info,
+    light-dark(rgb(51 156 255), rgb(131 195 255))
+  );
+  --primary-foreground: var(
+    --color-text-inverse,
+    light-dark(rgb(255 255 255), rgb(13 13 13))
+  );
+  --secondary: var(
+    --color-background-secondary,
+    light-dark(rgb(255 255 255 / 96%), rgb(54 54 54 / 96%))
+  );
+  --secondary-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --muted: color-mix(in srgb, var(--foreground) 10%, transparent);
+  --muted-foreground: var(
+    --color-text-secondary,
+    light-dark(rgb(26 28 31 / 49.4%), rgb(255 255 255 / 49.8%))
+  );
+  --accent: var(
+    --color-background-info,
+    light-dark(rgb(229 242 255), rgb(13 39 63))
+  );
+  --accent-foreground: var(
+    --color-text-info,
+    light-dark(rgb(51 156 255), rgb(131 195 255))
+  );
+  --destructive: var(
+    --color-text-warning,
+    light-dark(rgb(226 85 7), rgb(255 133 73))
+  );
+  --border: var(
+    --color-border-secondary,
+    light-dark(rgb(26 28 31 / 8%), rgb(255 255 255 / 8.2%))
+  );
+  --input: var(
+    --color-border-primary,
+    light-dark(
+      rgb(26 28 31 / 11.8%),
+      color-mix(in oklab, rgb(0 0 0) 10%, transparent)
+    )
+  );
+  --ring: var(
+    --color-ring-primary,
+    light-dark(rgb(51 156 255), rgb(131 195 255 / 76%))
+  );
+  --font-size-base: var(--font-text-md-size, 14px);
+  --blue: light-dark(rgb(51 156 255), rgb(51 156 255));
+  --orange: light-dark(rgb(226 85 7), rgb(251 106 34));
+  --green: light-dark(rgb(0 162 64), rgb(64 201 119));
+  --red: light-dark(rgb(224 46 42), rgb(255 103 100));
+  --purple: light-dark(rgb(146 79 247), rgb(173 123 249));
+  --yellow: light-dark(rgb(255 195 0), rgb(255 210 64));
+  --viz-series-1: var(--primary);
+  --viz-series-2: light-dark(rgb(243 136 59), rgb(245 154 86));
+  --viz-series-3: light-dark(rgb(93 201 119), rgb(116 213 139));
+  --viz-series-4: light-dark(rgb(235 119 177), rgb(240 143 192));
+  --viz-series-5: light-dark(rgb(155 121 236), rgb(170 145 239));
+  --viz-series-6: light-dark(rgb(58 185 177), rgb(90 203 194));
+
+  /* Internal implementation variables; not part of the agent contract. */
+  --font-sans: -apple-system, system-ui, &quot;Segoe UI&quot;, sans-serif;
+  --font-mono:
+    ui-monospace, SFMono-Regular, &quot;SF Mono&quot;, Menlo, Consolas, &quot;Liberation Mono&quot;,
+    monospace;
+  --font-size-normal: max(11px, var(--font-size-base));
+  --font-size-tooltip: calc(var(--font-size-base) - 1px);
+  --font-size-small: max(11px, calc(var(--font-size-base) - 2px));
+  --font-size-h1: calc(var(--font-size-normal) * 1.7142857143);
+  --font-size-h2: calc(var(--font-size-normal) * 1.4285714286);
+  --font-size-h3: calc(var(--font-size-normal) * 1.2857142857);
+  --font-weight-normal: 430;
+  --font-weight-medium: 500;
+  --line-height-normal: calc(var(--font-size-normal) * 1.5);
+  --line-height-tooltip: calc(var(--font-size-tooltip) * 1.4285714286);
+  --line-height-small: calc(var(--font-size-small) + 4px);
+  --radius: var(--border-radius-lg, 12.5px);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-2xl: calc(var(--radius) * 1.6);
+  --radius-full: 9999px;
+  --shadow-sm: 0 1px 2px -1px rgb(0 0 0 / 8%);
+  --checkmark-image: url(&quot;data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27; viewBox=&#x27;0 0 17 17&#x27;%3E%3Cpath d=&#x27;M12.8961 3.64101C13.1297 3.41418 13.4984 3.37523 13.7779 3.56581C14.0571 3.75635 14.1554 4.11331 14.0299 4.41347L13.9615 4.53847L7.71151 13.7045C7.59411 13.8767 7.4063 13.9877 7.19881 14.0072C6.99136 14.0267 6.78564 13.9533 6.63826 13.806L2.88826 10.056L2.79842 9.9457C2.6192 9.67407 2.64927 9.30496 2.88826 9.06581C3.12738 8.82669 3.49647 8.79676 3.76815 8.97597L3.8785 9.06581L7.03084 12.2182L12.8053 3.74941L12.8961 3.64101Z&#x27;/%3E%3C/svg%3E&quot;);
+
+  /* Legacy aliases; not part of the current agent contract. */
+  --viz-bg: transparent;
+  --viz-panel: var(--card);
+  --viz-border: var(--border);
+  --viz-text: var(--foreground);
+  --viz-muted: var(--muted-foreground);
+  --viz-accent: var(--primary);
+  --viz-accent-text: var(--primary-foreground);
+  --viz-accent-bg: var(--accent);
+  --viz-font-size: var(--font-size-base);
+  --viz-warning: var(--destructive);
+}
+
+:root[data-theme=&quot;light&quot;] {
+  color-scheme: light;
+}
+
+:root[data-theme=&quot;dark&quot;] {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html &gt; body {
+  /* Preserve MCP aliases for older inline renderers without creating :root cycles. */
+  --color-background-primary: var(
+    --background,
+    light-dark(rgb(255 255 255), rgb(24 24 24))
+  );
+  --color-text-primary: var(
+    --foreground,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --color-border-secondary: var(
+    --border,
+    light-dark(rgb(26 28 31 / 8%), rgb(255 255 255 / 8.2%))
+  );
+
+  margin: 0;
+  padding: 5px;
+  color: var(--foreground);
+  background: transparent !important;
+  font-family: var(--font-sans) !important;
+  font-size: var(--font-size-normal);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
+}
+
+a {
+  color: color-mix(in srgb, var(--viz-accent) 80%, var(--viz-text) 20%);
+  cursor: pointer;
+  font-weight: var(--font-weight-medium, 500);
+  text-decoration: none;
+  text-underline-offset: 2px;
+}
+
+a:is(:hover, :focus-visible) {
+  text-decoration-line: underline;
+  text-decoration-style: dashed;
+  text-decoration-thickness: 0.5px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-block: 0;
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.3;
+}
+
+b,
+strong,
+th {
+  font-weight: var(--font-weight-medium);
+}
+
+code:not(pre code) {
+  display: inline;
+  padding: 1px 6px;
+  border-radius: var(--radius-sm);
+  corner-shape: superellipse(1.5);
+  background: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  overflow-wrap: anywhere;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  word-break: break-word;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--foreground);
+  font: inherit;
+  text-align: start;
+}
+
+.table :is(th, td) {
+  padding-block: 10px;
+  padding-inline: 0 24px;
+  overflow-wrap: anywhere;
+  border-bottom: 1px solid var(--border);
+  text-align: start;
+  vertical-align: top;
+}
+
+.table-responsive &gt; .table :is(th, td) {
+  overflow-wrap: break-word;
+}
+
+.table :is(th, td):last-child {
+  padding-inline-end: 0;
+}
+
+.table :is(caption, thead th) {
+  font-weight: 600;
+}
+
+.table thead th {
+  padding-block: 8px;
+  border-bottom-color: color-mix(in srgb, var(--foreground) 16%, transparent);
+}
+
+.table tbody tr:last-child :is(th, td) {
+  border-bottom: 0;
+}
+
+.table.table-sm :is(th, td) {
+  padding-block: 6px;
+}
+
+.table.table-sm :is(th, td):not(:last-child) {
+  padding-inline-end: 16px;
+}
+
+.table :is(.text-end, [align=&quot;right&quot;]) {
+  text-align: end;
+  font-variant-numeric: tabular-nums;
+}
+
+.table :is(.text-center, [align=&quot;center&quot;]) {
+  text-align: center;
+}
+
+.table .text-nowrap {
+  white-space: nowrap;
+}
+
+#widget {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  padding: 0;
+  background: transparent !important;
+}
+
+.card {
+  min-width: 0;
+  padding: 12px;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  border-radius: var(--radius-2xl);
+  corner-shape: superellipse(1.5);
+  color: var(--card-foreground);
+  background: var(--card);
+}
+
+#widget &gt; :not(.card, .progress) {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.tooltip {
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  width: max-content;
+  max-width: min(
+    20rem,
+    var(--tooltip-available-width, calc(100vw - 10px)),
+    calc(100vw - 10px)
+  );
+  max-height: min(
+    var(--tooltip-available-height, calc(100vh - 10px)),
+    calc(100vh - 10px)
+  );
+  padding: 4px 8px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  corner-shape: superellipse(1.5);
+  color: var(--popover-foreground);
+  background: var(--popover);
+  box-shadow: none;
+  font-size: var(--font-size-tooltip);
+  line-height: var(--line-height-tooltip);
+  overflow-wrap: break-word;
+  white-space: normal;
+  pointer-events: none;
+  user-select: none;
+}
+
+.viz-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(max(180px, 24%), 1fr));
+  gap: 10px;
+}
+
+.viz-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.viz-stat-value {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+.viz-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.progress {
+  display: flex;
+  height: 6px;
+  margin-block: calc((var(--line-height-normal, 1.5em) - 6px) / 2);
+  overflow: hidden;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: var(--muted);
+}
+
+.progress-bar {
+  height: 100%;
+  flex-shrink: 0;
+  border: 0;
+  background: var(--viz-series-1);
+}
+
+.viz-badge {
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  color: var(--accent-foreground);
+  background: var(--accent);
+  font-weight: var(--font-weight-medium);
+}
+
+small,
+.text-small,
+.viz-badge {
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
+}
+
+.text-muted {
+  color: var(--muted-foreground);
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.viz-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.viz-controls &gt; .form-label {
+  display: grid;
+  min-width: min(100%, 260px);
+  flex: 1 1 280px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 2px 12px;
+  margin-bottom: 0;
+}
+
+.viz-controls &gt; .form-label &gt; :is(.form-control, .form-range, .form-select) {
+  grid-column: 1 / -1;
+}
+
+.btn,
+.form-check-input,
+.form-control,
+.form-range,
+.form-select {
+  font: inherit;
+}
+
+.btn {
+  appearance: button;
+  display: inline-flex;
+  inline-size: fit-content;
+  max-inline-size: 100%;
+  min-height: 28px;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin: 0;
+  padding: 0 8px;
+  -webkit-app-region: no-drag;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: superellipse(1.5);
+  color: var(--secondary-foreground);
+  background: var(--secondary);
+  cursor: var(--cursor-interaction, pointer);
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+.btn:is(.btn-block, .viz-tile) {
+  inline-size: 100%;
+}
+
+.btn.viz-tile {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+a.btn {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:not(:disabled):hover {
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.btn-primary {
+  border-color: transparent;
+  color: var(--primary-foreground);
+  background: var(--foreground);
+  background-clip: padding-box;
+}
+
+.btn-primary .text-muted {
+  color: color-mix(in srgb, var(--primary-foreground) 50%, transparent);
+}
+
+.btn-primary:not(:disabled):hover {
+  background: color-mix(in srgb, var(--foreground) 80%, transparent);
+  background-clip: padding-box;
+}
+
+.btn-ghost {
+  border-color: transparent;
+  color: var(--muted-foreground);
+  background: transparent;
+}
+
+.btn-ghost:not(:disabled):hover {
+  color: var(--foreground);
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+[data-lucide] {
+  stroke-width: 1.6;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--foreground);
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  padding: 0 8px;
+  outline: none;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: superellipse(1.5);
+  color: var(--foreground);
+  background: var(--secondary);
+}
+
+.form-control::placeholder {
+  color: var(--muted-foreground);
+}
+
+.form-control[type=&quot;file&quot;] {
+  padding: 0;
+  overflow: hidden;
+  cursor: var(--cursor-interaction, pointer);
+}
+
+.form-control[type=&quot;file&quot;]::file-selector-button {
+  min-height: 26px;
+  margin-right: 8px;
+  padding: 0 8px;
+  border: 0;
+  border-right: 1px solid var(--input);
+  color: var(--secondary-foreground);
+  background: var(--secondary);
+  cursor: inherit;
+  font: inherit;
+}
+
+.form-control[type=&quot;file&quot;]:not(:disabled):hover::file-selector-button {
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.form-control-color[type=&quot;color&quot;] {
+  width: 40px;
+  height: 28px;
+  padding: 3px;
+  cursor: var(--cursor-interaction, pointer);
+}
+
+.form-control-color[type=&quot;color&quot;]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+.form-control-color[type=&quot;color&quot;]::-webkit-color-swatch {
+  border: 0;
+  border-radius: calc(var(--radius-lg) - 4px);
+  corner-shape: superellipse(1.5);
+}
+
+textarea.form-control {
+  height: auto;
+  min-height: 72px;
+  padding: 8px 10px;
+  resize: vertical;
+}
+
+.form-control:focus-visible {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-control:disabled,
+.form-select:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.form-select {
+  appearance: none;
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  margin: 0;
+  padding: 0 32px 0 8px;
+  outline: none;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: superellipse(1.5);
+  color: var(--foreground);
+  background-color: var(--secondary);
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--muted-foreground) 50%),
+    linear-gradient(135deg, var(--muted-foreground) 50%, transparent 50%);
+  background-position:
+    calc(100% - 14px) 50%,
+    calc(100% - 10px) 50%;
+  background-repeat: no-repeat;
+  background-size: 4px 4px;
+  cursor: var(--cursor-interaction, default);
+}
+
+.form-select:not(:disabled):hover {
+  background-color: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.form-select:focus-visible {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-check {
+  display: flex;
+  min-height: 20px;
+  align-items: center;
+  gap: 6px;
+}
+
+.form-check-input {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  flex: 0 0 auto;
+  margin: 0;
+  border: 1px solid var(--input);
+  color: var(--primary-foreground);
+  background-color: transparent;
+  cursor: var(--cursor-interaction, default);
+  transition:
+    background-color 150ms,
+    border-color 150ms,
+    box-shadow 150ms;
+}
+
+.form-check:not(.form-switch) .form-check-input[type=&quot;checkbox&quot;] {
+  border-color: var(--input);
+  border-radius: var(--radius-sm);
+  corner-shape: superellipse(1.5);
+  background-color: var(--secondary);
+  box-shadow: var(--shadow-sm);
+}
+
+.form-check:not(.form-switch)
+  .form-check-input:not(:disabled):not(:checked):hover {
+  background-color: var(--card);
+}
+
+.form-check:not(.form-switch) .form-check-input[type=&quot;checkbox&quot;]:checked {
+  border-color: var(--primary);
+  background-color: var(--primary);
+}
+
+.form-check:not(.form-switch)
+  .form-check-input[type=&quot;checkbox&quot;]:checked::before {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--primary-foreground);
+  content: &quot;&quot;;
+  mask: var(--checkmark-image) center / 12px 12px no-repeat;
+}
+
+.form-check-input[type=&quot;radio&quot;] {
+  width: 14px;
+  height: 14px;
+  border-radius: var(--radius-full);
+}
+
+.form-check-input[type=&quot;radio&quot;]:checked {
+  border: 2px solid var(--primary);
+  background:
+    radial-gradient(circle, var(--primary-foreground) 0 2.5px, transparent 3px),
+    var(--primary);
+}
+
+.form-check:not(.form-switch) .form-check-input:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+.form-check:not(.form-switch) .form-check-input:disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.form-check:not(.form-switch) .form-check-input:disabled + .form-check-label {
+  cursor: not-allowed;
+}
+
+.form-switch .form-check-input:disabled,
+.form-switch .form-check-input:disabled + .form-check-label {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.form-check-label {
+  color: var(--foreground);
+  cursor: var(--cursor-interaction, default);
+}
+
+.form-switch .form-check-input {
+  position: relative;
+  width: 32px;
+  height: 20px;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: var(--muted);
+  box-shadow: none;
+  transition: background-color 200ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.form-switch .form-check-input::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  box-sizing: border-box;
+  border: 1px solid light-dark(var(--primary-foreground), var(--foreground));
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+  box-shadow: var(--shadow-sm);
+  content: &quot;&quot;;
+  transform: translate(2px, -50%);
+  transition: transform 200ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.form-switch .form-check-input:checked {
+  background: var(--primary);
+}
+
+.form-switch .form-check-input:checked::before {
+  transform: translate(14px, -50%);
+}
+
+.form-switch .form-check-input:focus-visible {
+  box-shadow: 0 0 0 2px var(--ring);
+}
+
+.form-range {
+  appearance: none;
+  display: block;
+  width: 100%;
+  height: 28px;
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: 0;
+  accent-color: var(--primary);
+  background: linear-gradient(
+      color-mix(in srgb, var(--foreground) 7%, transparent),
+      color-mix(in srgb, var(--foreground) 7%, transparent)
+    )
+    center / 100% 2px no-repeat;
+}
+
+.form-range::-webkit-slider-runnable-track {
+  height: 28px;
+  background: transparent;
+}
+
+.form-range::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  margin-top: 4px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+}
+
+.form-range:focus-visible::-webkit-slider-thumb {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-range::-moz-range-track {
+  height: 28px;
+  background: transparent;
+}
+
+.form-range::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+}
+
+.form-range:focus-visible::-moz-range-thumb {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-range:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.btn:not(.btn-primary, .viz-tile):is(
+  [aria-pressed=&quot;true&quot;],
+  [aria-selected=&quot;true&quot;],
+  .is-selected
+) {
+  border-color: var(--primary);
+  color: var(--primary-foreground);
+  background: var(--primary);
+}
+
+.btn.viz-tile:is([aria-pressed=&quot;true&quot;], [aria-selected=&quot;true&quot;], .is-selected) {
+  border-color: var(--primary);
+  box-shadow: inset 0 0 0 1px var(--primary);
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+@media (pointer: coarse) {
+  .btn,
+  .form-control,
+  .form-select {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .form-control,
+  .form-select {
+    font-size: max(16px, var(--font-size-normal));
+  }
+
+  .form-control[type=&quot;file&quot;]::file-selector-button {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .form-control-color[type=&quot;color&quot;] {
+    width: 44px;
+    height: 44px;
+  }
+
+  .form-control:is(
+    [type=&quot;date&quot;],
+    [type=&quot;datetime-local&quot;],
+    [type=&quot;month&quot;],
+    [type=&quot;time&quot;],
+    [type=&quot;week&quot;]
+  ) {
+    min-width: 0;
+    max-width: 100%;
+    padding-block: 8px;
+  }
+
+  .form-check {
+    min-height: 44px;
+    padding-inline: 15px;
+  }
+
+  .form-check-input {
+    position: relative;
+  }
+
+  .form-check-input::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 44px;
+    height: 44px;
+    content: &quot;&quot;;
+    transform: translate(-50%, -50%);
+  }
+
+  .form-check-label {
+    display: inline-flex;
+    min-width: 44px;
+    min-height: 44px;
+    align-items: center;
+  }
+
+  .form-range {
+    height: 44px;
+    touch-action: pan-y;
+  }
+
+  .form-range::-webkit-slider-runnable-track {
+    height: 44px;
+  }
+
+  .form-range::-moz-range-track {
+    height: 44px;
+  }
+
+  .form-range::-webkit-slider-thumb {
+    margin-top: 12px;
+  }
+}
+
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+#widget &gt; svg {
+  width: 100%;
+}
+
+/* Model-authored chart rules can otherwise stretch icons after these styles load. */
+svg.lucide {
+  display: block;
+  width: 16px !important;
+  height: 16px !important;
+  flex: none;
+  margin: 0 !important;
+  stroke-width: 1.6;
+}
+
+.text-warning,
+.text-destructive {
+  color: var(--destructive);
+}
+
+html&gt;body{padding:0}&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;style&gt;
+  #aj-motion-lab {
+    --aj-bg: light-dark(#eef0f6, #11131b);
+    --aj-ink: light-dark(#171922, #f3f1ed);
+    --aj-muted: light-dark(#656978, #aeb2c0);
+    --aj-panel: light-dark(#ffffff, #1b1e28);
+    --aj-panel-soft: light-dark(#f5f6fa, #242835);
+    --aj-line: light-dark(rgba(23,25,34,.12), rgba(255,255,255,.12));
+    --aj-accent: light-dark(#6757e8, #a79cff);
+    --aj-accent-2: light-dark(#ff6b89, #ff7896);
+    --aj-accent-3: light-dark(#18a486, #43d6b3);
+    color: var(--aj-ink);
+    font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+    width: 100%;
+  }
+  #aj-motion-lab * { box-sizing: border-box; }
+  #aj-motion-lab button, #aj-motion-lab input { font: inherit; }
+  #aj-motion-lab .ajl-shell { min-height: 680px; overflow: hidden; background: var(--aj-bg); border-radius: 18px; transition: background 500ms ease, color 300ms ease; }
+  #aj-motion-lab .ajl-topbar { display:flex; align-items:center; justify-content:space-between; gap:16px; padding:16px 20px; border-bottom:1px solid var(--aj-line); }
+  #aj-motion-lab .ajl-wordmark { font-weight:500; letter-spacing:-.02em; }
+  #aj-motion-lab .ajl-tabs, #aj-motion-lab .ajl-subjects { display:flex; flex-wrap:wrap; gap:6px; }
+  #aj-motion-lab .ajl-tab { min-height:40px; padding:8px 12px; border:0; border-radius:10px; color:var(--aj-muted); background:transparent; cursor:pointer; }
+  #aj-motion-lab .ajl-tab[aria-pressed=&quot;true&quot;] { color:var(--primary-foreground); background:var(--primary); }
+  #aj-motion-lab .ajl-stage { display:grid; grid-template-columns:minmax(190px,.65fr) minmax(0,2fr); min-height:620px; transition:grid-template-columns 500ms cubic-bezier(.2,.8,.2,1); }
+  #aj-motion-lab .ajl-rail { padding:24px 20px; border-right:1px solid var(--aj-line); background:color-mix(in srgb,var(--aj-panel) 74%,transparent); }
+  #aj-motion-lab .ajl-rail h2 { margin:0 0 8px; font-size:calc(var(--font-size-base)*1.35); font-weight:500; }
+  #aj-motion-lab .ajl-rail p { color:var(--aj-muted); margin:0 0 22px; }
+  #aj-motion-lab .ajl-control { display:grid; gap:8px; margin:20px 0; }
+  #aj-motion-lab .ajl-control-header { display:flex; justify-content:space-between; gap:12px; }
+  #aj-motion-lab .ajl-control output { font-variant-numeric:tabular-nums; color:var(--aj-accent); }
+  #aj-motion-lab .ajl-range { width:100%; accent-color:var(--aj-accent); }
+  #aj-motion-lab .ajl-reading { margin-top:24px; padding-top:16px; border-top:1px solid var(--aj-line); }
+  #aj-motion-lab .ajl-reading strong { display:block; margin-bottom:6px; font-weight:500; }
+  #aj-motion-lab .ajl-canvas { position:relative; display:grid; grid-template-rows:auto minmax(330px,1fr) auto; min-width:0; padding:28px; overflow:hidden; }
+  #aj-motion-lab .ajl-heading { display:flex; justify-content:space-between; align-items:end; gap:20px; position:relative; z-index:2; }
+  #aj-motion-lab .ajl-eyebrow { color:var(--aj-accent); font-weight:500; margin:0 0 8px; }
+  #aj-motion-lab h1 { margin:0; font-size:calc(var(--font-size-base)*2.2); line-height:1.05; font-weight:500; letter-spacing:-.04em; }
+  #aj-motion-lab .ajl-status { max-width:240px; color:var(--aj-muted); text-align:right; }
+  #aj-motion-lab .ajl-visual { position:relative; min-height:330px; display:grid; place-items:center; }
+  #aj-motion-lab .ajl-viz { width:100%; height:100%; min-height:330px; overflow:visible; }
+  #aj-motion-lab .ajl-viz text { fill:var(--aj-muted); font:400 12px Inter,system-ui,sans-serif; }
+  #aj-motion-lab .ajl-axis { stroke:var(--aj-line); stroke-width:1; }
+  #aj-motion-lab .ajl-main-path { fill:none; stroke:var(--aj-accent); stroke-width:4; stroke-linecap:round; transition:stroke 350ms ease; }
+  #aj-motion-lab .ajl-area { fill:color-mix(in srgb,var(--aj-accent) 14%,transparent); transition:fill 350ms ease; }
+  #aj-motion-lab .ajl-handle { fill:var(--aj-panel); stroke:var(--aj-accent); stroke-width:4; cursor:grab; transition:transform 180ms ease; }
+  #aj-motion-lab .ajl-handle:hover { transform:scale(1.12); transform-origin:center; }
+  #aj-motion-lab .ajl-particle { transition:transform 600ms cubic-bezier(.2,.8,.2,1), opacity 350ms ease, fill 350ms ease; }
+  #aj-motion-lab .ajl-action { display:flex; align-items:center; justify-content:space-between; gap:18px; padding:18px 20px; background:var(--aj-panel); border-radius:14px; box-shadow:0 12px 34px color-mix(in srgb,var(--aj-ink) 9%,transparent); transition:transform 500ms cubic-bezier(.2,.8,.2,1), background 350ms ease; }
+  #aj-motion-lab .ajl-action strong { display:block; font-weight:500; }
+  #aj-motion-lab .ajl-action span { color:var(--aj-muted); }
+  #aj-motion-lab .ajl-start { min-height:44px; padding:10px 18px; border:0; border-radius:10px; color:var(--primary-foreground); background:var(--primary); cursor:pointer; }
+  #aj-motion-lab .ajl-live { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); }
+
+  #aj-motion-lab[data-variant=&quot;modules&quot;] { --aj-bg:light-dark(#f2efe8,#161813); --aj-panel:light-dark(#fffdf7,#22261d); --aj-accent:light-dark(#e54f25,#ff805c); --aj-accent-2:light-dark(#395ee8,#7893ff); --aj-accent-3:light-dark(#6f9e38,#9acb62); }
+  #aj-motion-lab[data-variant=&quot;modules&quot;] .ajl-stage { grid-template-columns:minmax(250px,.8fr) minmax(0,1.7fr); }
+  #aj-motion-lab[data-variant=&quot;modules&quot;] .ajl-canvas { gap:16px; }
+  #aj-motion-lab[data-variant=&quot;modules&quot;] .ajl-visual { background:var(--aj-panel); border-radius:16px; padding:12px; box-shadow:0 10px 24px color-mix(in srgb,var(--aj-ink) 8%,transparent); }
+  #aj-motion-lab[data-variant=&quot;modules&quot;] .ajl-action { transform:translateX(-12px); border-radius:6px 16px 16px 6px; }
+
+  #aj-motion-lab[data-variant=&quot;field&quot;] { --aj-bg:light-dark(#dff7ff,#101a26); --aj-panel:light-dark(rgba(255,255,255,.88),rgba(22,33,48,.88)); --aj-accent:light-dark(#006cff,#64a7ff); --aj-accent-2:light-dark(#f035a2,#ff74c1); --aj-accent-3:light-dark(#00a99a,#44decd); }
+  #aj-motion-lab[data-variant=&quot;field&quot;] .ajl-shell { background:linear-gradient(145deg,color-mix(in srgb,var(--aj-accent) 18%,var(--aj-bg)),var(--aj-bg) 48%,color-mix(in srgb,var(--aj-accent-2) 12%,var(--aj-bg))); }
+  #aj-motion-lab[data-variant=&quot;field&quot;] .ajl-stage { grid-template-columns:1fr; }
+  #aj-motion-lab[data-variant=&quot;field&quot;] .ajl-rail { position:absolute; z-index:5; top:78px; left:20px; width:min(280px,calc(100% - 40px)); border:1px solid var(--aj-line); border-radius:16px; backdrop-filter:blur(16px); box-shadow:0 12px 40px color-mix(in srgb,var(--aj-ink) 10%,transparent); }
+  #aj-motion-lab[data-variant=&quot;field&quot;] .ajl-canvas { padding-left:min(34vw,340px); }
+  #aj-motion-lab[data-variant=&quot;field&quot;] .ajl-action { backdrop-filter:blur(18px); }
+
+  @media (max-width:700px) {
+    #aj-motion-lab .ajl-topbar { align-items:flex-start; flex-direction:column; }
+    #aj-motion-lab .ajl-stage, #aj-motion-lab[data-variant=&quot;modules&quot;] .ajl-stage { grid-template-columns:1fr; }
+    #aj-motion-lab .ajl-rail { border-right:0; border-bottom:1px solid var(--aj-line); padding:18px; }
+    #aj-motion-lab .ajl-canvas { padding:20px 16px; }
+    #aj-motion-lab .ajl-heading { align-items:start; flex-direction:column; }
+    #aj-motion-lab .ajl-status { text-align:left; }
+    #aj-motion-lab[data-variant=&quot;field&quot;] .ajl-rail { position:relative; top:auto; left:auto; width:auto; margin:16px; }
+    #aj-motion-lab[data-variant=&quot;field&quot;] .ajl-canvas { padding-left:16px; }
+    #aj-motion-lab .ajl-action { align-items:stretch; flex-direction:column; }
+    #aj-motion-lab .ajl-start { width:100%; }
+  }
+  @media (prefers-reduced-motion:reduce) { #aj-motion-lab *, #aj-motion-lab *::before, #aj-motion-lab *::after { transition-duration:.01ms!important; animation-duration:.01ms!important; } }
+&lt;/style&gt;
+
+&lt;div id=&quot;aj-motion-lab&quot; data-variant=&quot;canvas&quot;&gt;
+  &lt;div class=&quot;ajl-shell&quot;&gt;
+    &lt;header class=&quot;ajl-topbar&quot;&gt;
+      &lt;span class=&quot;ajl-wordmark&quot;&gt;AJ Intelligence · Motion Lab&lt;/span&gt;
+      &lt;div class=&quot;ajl-tabs&quot; aria-label=&quot;Direção visual&quot;&gt;
+        &lt;button class=&quot;ajl-tab&quot; data-variant=&quot;canvas&quot; aria-pressed=&quot;true&quot;&gt;Canvas cinético&lt;/button&gt;
+        &lt;button class=&quot;ajl-tab&quot; data-variant=&quot;modules&quot; aria-pressed=&quot;false&quot;&gt;Sistema modular&lt;/button&gt;
+        &lt;button class=&quot;ajl-tab&quot; data-variant=&quot;field&quot; aria-pressed=&quot;false&quot;&gt;Campo cromático&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/header&gt;
+    &lt;div class=&quot;ajl-stage&quot;&gt;
+      &lt;aside class=&quot;ajl-rail&quot;&gt;
+        &lt;div class=&quot;ajl-subjects&quot; aria-label=&quot;Assunto&quot;&gt;
+          &lt;button class=&quot;ajl-tab&quot; data-subject=&quot;math&quot; aria-pressed=&quot;true&quot;&gt;Matemática&lt;/button&gt;
+          &lt;button class=&quot;ajl-tab&quot; data-subject=&quot;bio&quot; aria-pressed=&quot;false&quot;&gt;Biologia&lt;/button&gt;
+          &lt;button class=&quot;ajl-tab&quot; data-subject=&quot;chem&quot; aria-pressed=&quot;false&quot;&gt;Química&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;h2 id=&quot;ajl-control-title&quot;&gt;Base da função&lt;/h2&gt;
+        &lt;p id=&quot;ajl-control-help&quot;&gt;Manipule e observe como o comportamento muda.&lt;/p&gt;
+        &lt;label class=&quot;ajl-control&quot;&gt;
+          &lt;span class=&quot;ajl-control-header&quot;&gt;&lt;span id=&quot;ajl-range-label&quot;&gt;Valor de a&lt;/span&gt;&lt;output id=&quot;ajl-output&quot;&gt;1,8&lt;/output&gt;&lt;/span&gt;
+          &lt;input class=&quot;ajl-range&quot; id=&quot;ajl-range&quot; type=&quot;range&quot; min=&quot;50&quot; max=&quot;300&quot; value=&quot;180&quot; aria-describedby=&quot;ajl-control-help&quot;&gt;
+        &lt;/label&gt;
+        &lt;div class=&quot;ajl-reading&quot;&gt;
+          &lt;strong id=&quot;ajl-reading-title&quot;&gt;Crescimento moderado&lt;/strong&gt;
+          &lt;span id=&quot;ajl-reading-copy&quot;&gt;A curva acelera, mas ainda permite comparar os intervalos.&lt;/span&gt;
+        &lt;/div&gt;
+      &lt;/aside&gt;
+      &lt;main class=&quot;ajl-canvas&quot;&gt;
+        &lt;div class=&quot;ajl-heading&quot;&gt;
+          &lt;div&gt;&lt;p class=&quot;ajl-eyebrow&quot;&gt;Esta é sua prioridade agora&lt;/p&gt;&lt;h1 id=&quot;ajl-topic&quot;&gt;Função exponencial&lt;/h1&gt;&lt;/div&gt;
+          &lt;p class=&quot;ajl-status&quot; id=&quot;ajl-status&quot;&gt;Arraste o controle ou o ponto na visualização.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;ajl-visual&quot;&gt;
+          &lt;svg class=&quot;ajl-viz&quot; id=&quot;ajl-viz&quot; viewBox=&quot;0 0 760 360&quot; role=&quot;img&quot; aria-labelledby=&quot;ajl-svg-title ajl-svg-desc&quot;&gt;
+            &lt;title id=&quot;ajl-svg-title&quot;&gt;Simulação de função exponencial&lt;/title&gt;
+            &lt;desc id=&quot;ajl-svg-desc&quot;&gt;A curva muda de acordo com o parâmetro manipulado.&lt;/desc&gt;
+            &lt;g id=&quot;ajl-svg-content&quot;&gt;&lt;/g&gt;
+          &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;section class=&quot;ajl-action&quot; id=&quot;ajl-action&quot;&gt;
+          &lt;div&gt;&lt;strong id=&quot;ajl-action-title&quot;&gt;Teste o ponto em que o crescimento acelera&lt;/strong&gt;&lt;span id=&quot;ajl-action-copy&quot;&gt;Intervenção curta · 12 minutos&lt;/span&gt;&lt;/div&gt;
+          &lt;button class=&quot;ajl-start&quot; type=&quot;button&quot; id=&quot;ajl-start&quot;&gt;Começar atividade&lt;/button&gt;
+        &lt;/section&gt;
+        &lt;p class=&quot;ajl-live&quot; id=&quot;ajl-live&quot; aria-live=&quot;polite&quot;&gt;&lt;/p&gt;
+      &lt;/main&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+(() =&gt; {
+  const root = document.getElementById(&#x27;aj-motion-lab&#x27;);
+  const range = document.getElementById(&#x27;ajl-range&#x27;);
+  const output = document.getElementById(&#x27;ajl-output&#x27;);
+  const content = document.getElementById(&#x27;ajl-svg-content&#x27;);
+  const topic = document.getElementById(&#x27;ajl-topic&#x27;);
+  const title = document.getElementById(&#x27;ajl-control-title&#x27;);
+  const rangeLabel = document.getElementById(&#x27;ajl-range-label&#x27;);
+  const readingTitle = document.getElementById(&#x27;ajl-reading-title&#x27;);
+  const readingCopy = document.getElementById(&#x27;ajl-reading-copy&#x27;);
+  const actionTitle = document.getElementById(&#x27;ajl-action-title&#x27;);
+  const actionCopy = document.getElementById(&#x27;ajl-action-copy&#x27;);
+  const live = document.getElementById(&#x27;ajl-live&#x27;);
+  let subject = &#x27;math&#x27;;
+  let drag = false;
+
+  const configs = {
+    math:{min:50,max:300,value:180,label:&#x27;Valor de a&#x27;,topic:&#x27;Função exponencial&#x27;,control:&#x27;Base da função&#x27;},
+    bio:{min:0,max:100,value:38,label:&#x27;Nutrientes na água&#x27;,topic:&#x27;Eutrofização&#x27;,control:&#x27;Equilíbrio do ecossistema&#x27;},
+    chem:{min:0,max:100,value:50,label:&#x27;Concentração de reagentes&#x27;,topic:&#x27;Equilíbrio químico&#x27;,control:&#x27;Deslocamento do equilíbrio&#x27;}
+  };
+  const ns = &#x27;http://www.w3.org/2000/svg&#x27;;
+  const el = (name,attrs={}) =&gt; { const n=document.createElementNS(ns,name); Object.entries(attrs).forEach(([k,v])=&gt;n.setAttribute(k,v)); return n; };
+
+  function setText(value) {
+    if(subject===&#x27;math&#x27;) output.textContent=(value/100).toFixed(1).replace(&#x27;.&#x27;,&#x27;,&#x27;);
+    else output.textContent=value+&#x27;%&#x27;;
+  }
+
+  function drawMath(value){
+    const a=value/100, pts=[];
+    for(let i=0;i&lt;=80;i++){const x=i/80*6-3; const y=Math.pow(a,x); const px=70+i/80*620; const py=300-Math.min(y,7)/7*250; pts.push([px,py]);}
+    const d=pts.map((p,i)=&gt;(i?&#x27;L&#x27;:&#x27;M&#x27;)+p[0].toFixed(1)+&#x27; &#x27;+p[1].toFixed(1)).join(&#x27; &#x27;);
+    const area=d+&#x27; L690 300 L70 300 Z&#x27;;
+    content.innerHTML=&#x27;&#x27;;
+    content.append(el(&#x27;line&#x27;,{x1:70,y1:300,x2:710,y2:300,class:&#x27;ajl-axis&#x27;}),el(&#x27;line&#x27;,{x1:70,y1:40,x2:70,y2:300,class:&#x27;ajl-axis&#x27;}));
+    content.append(el(&#x27;path&#x27;,{d:area,class:&#x27;ajl-area&#x27;}),el(&#x27;path&#x27;,{d,class:&#x27;ajl-main-path&#x27;}));
+    const idx=Math.round(80*.62), p=pts[idx];
+    content.append(el(&#x27;circle&#x27;,{cx:p[0],cy:p[1],r:10,class:&#x27;ajl-handle&#x27;,id:&#x27;ajl-handle&#x27;}));
+    readingTitle.textContent=a&lt;1?&#x27;Decaimento exponencial&#x27;:a&lt;2?&#x27;Crescimento moderado&#x27;:&#x27;Crescimento acelerado&#x27;;
+    readingCopy.textContent=a&lt;1?&#x27;A quantidade diminui a cada intervalo.&#x27;:a&lt;2?&#x27;A curva cresce e revela a taxa de variação.&#x27;:&#x27;Pequenas mudanças na base ampliam rapidamente o resultado.&#x27;;
+    actionTitle.textContent=a&lt;1?&#x27;Compare meia-vida e taxa de redução&#x27;:&#x27;Teste o ponto em que o crescimento acelera&#x27;;
+    actionCopy.textContent=a&gt;2.2?&#x27;Prioridade atualizada · 8 minutos&#x27;:&#x27;Intervenção curta · 12 minutos&#x27;;
+  }
+
+  function drawBio(value){
+    content.innerHTML=&#x27;&#x27;;
+    const water=el(&#x27;rect&#x27;,{x:60,y:85,width:640,height:220,rx:28,fill:&#x27;color-mix(in srgb,var(--aj-accent-3) &#x27;+(12+value/4)+&#x27;%,var(--aj-panel))&#x27;});
+    content.append(water);
+    const algae=Math.round(5+value/5), oxygen=Math.max(8,100-value);
+    for(let i=0;i&lt;algae;i++){
+      const c=el(&#x27;circle&#x27;,{cx:90+(i*83)%570,cy:110+((i*47)%90),r:5+(i%3),fill:&#x27;var(--aj-accent-3)&#x27;,opacity:.45+value/200,class:&#x27;ajl-particle&#x27;});
+      c.style.transform=`translateY(${Math.sin((i+value)/8)*8}px)`; content.append(c);
+    }
+    const base=el(&#x27;path&#x27;,{d:&#x27;M60 260 Q210 225 355 270 T700 250 L700 305 L60 305Z&#x27;,fill:&#x27;color-mix(in srgb,var(--aj-accent-2) 18%,var(--aj-panel-soft))&#x27;}); content.append(base);
+    const label=el(&#x27;text&#x27;,{x:86,y:282}); label.textContent=&#x27;Oxigênio disponível: &#x27;+oxygen+&#x27;%&#x27;; content.append(label);
+    readingTitle.textContent=value&lt;35?&#x27;Sistema ainda estável&#x27;:value&lt;70?&#x27;Floração de algas em curso&#x27;:&#x27;Risco de hipóxia&#x27;;
+    readingCopy.textContent=value&lt;35?&#x27;A entrada de nutrientes ainda pode ser absorvida.&#x27;:value&lt;70?&#x27;Mais nutrientes aumentam algas e reduzem a passagem de luz.&#x27;:&#x27;A decomposição consome o oxigênio disponível para outros organismos.&#x27;;
+    actionTitle.textContent=value&gt;65?&#x27;Identifique o primeiro elo que rompe o equilíbrio&#x27;:&#x27;Manipule até localizar o limiar crítico&#x27;;
+    actionCopy.textContent=value&gt;65?&#x27;Prioridade atualizada · 10 minutos&#x27;:&#x27;Exploração guiada · 14 minutos&#x27;;
+  }
+
+  function drawChem(value){
+    content.innerHTML=&#x27;&#x27;;
+    const mid=380, leftCount=Math.round(4+(100-value)/9), rightCount=Math.round(4+value/9);
+    const divider=el(&#x27;line&#x27;,{x1:mid,y1:60,x2:mid,y2:310,class:&#x27;ajl-axis&#x27;}); content.append(divider);
+    for(let i=0;i&lt;leftCount;i++){
+      const c=el(&#x27;circle&#x27;,{cx:95+(i*67)%230,cy:95+((i*61)%175),r:11,fill:&#x27;var(--aj-accent)&#x27;,class:&#x27;ajl-particle&#x27;}); c.style.transform=`translate(${value/18}px,${Math.sin(i+value/20)*7}px)`; content.append(c);
+    }
+    for(let i=0;i&lt;rightCount;i++){
+      const c=el(&#x27;rect&#x27;,{x:430+(i*61)%225,y:85+((i*53)%180),width:20,height:20,rx:5,fill:&#x27;var(--aj-accent-2)&#x27;,class:&#x27;ajl-particle&#x27;}); c.style.transform=`translate(${-value/22}px,${Math.cos(i+value/20)*7}px)`; content.append(c);
+    }
+    const arrow=el(&#x27;text&#x27;,{x:350,y:190}); arrow.textContent=&#x27;⇌&#x27;; arrow.setAttribute(&#x27;style&#x27;,&#x27;font-size:32px;fill:var(--aj-ink)&#x27;); content.append(arrow);
+    readingTitle.textContent=value&lt;40?&#x27;Equilíbrio favorece reagentes&#x27;:value&gt;60?&#x27;Equilíbrio favorece produtos&#x27;:&#x27;Velocidades próximas&#x27;;
+    readingCopy.textContent=&#x27;A composição se reorganiza até as velocidades direta e inversa se compensarem.&#x27;;
+    actionTitle.textContent=Math.abs(value-50)&gt;20?&#x27;Explique por que o sistema se deslocou&#x27;:&#x27;Perturbe o sistema e observe a resposta&#x27;;
+    actionCopy.textContent=&#x27;Experimento interativo · 11 minutos&#x27;;
+  }
+
+  function draw(announce=false){
+    const value=Number(range.value); setText(value);
+    if(subject===&#x27;math&#x27;) drawMath(value); else if(subject===&#x27;bio&#x27;) drawBio(value); else drawChem(value);
+    if(announce) live.textContent=readingTitle.textContent+&#x27;. &#x27;+readingCopy.textContent;
+  }
+
+  function chooseSubject(next){
+    subject=next; const c=configs[next]; range.min=c.min;range.max=c.max;range.value=c.value; rangeLabel.textContent=c.label; topic.textContent=c.topic;title.textContent=c.control;
+    document.querySelectorAll(&#x27;#aj-motion-lab [data-subject]&#x27;).forEach(b=&gt;b.setAttribute(&#x27;aria-pressed&#x27;,String(b.dataset.subject===next)));
+    document.getElementById(&#x27;ajl-svg-title&#x27;).textContent=&#x27;Simulação interativa de &#x27;+c.topic;
+    draw(true);
+  }
+
+  root.querySelectorAll(&#x27;[data-variant]&#x27;).forEach(b=&gt;b.addEventListener(&#x27;click&#x27;,()=&gt;{
+    root.dataset.variant=b.dataset.variant;
+    root.querySelectorAll(&#x27;[data-variant]&#x27;).forEach(x=&gt;x.setAttribute(&#x27;aria-pressed&#x27;,String(x===b)));
+  }));
+  root.querySelectorAll(&#x27;[data-subject]&#x27;).forEach(b=&gt;b.addEventListener(&#x27;click&#x27;,()=&gt;chooseSubject(b.dataset.subject)));
+  range.addEventListener(&#x27;input&#x27;,()=&gt;draw(false)); range.addEventListener(&#x27;change&#x27;,()=&gt;draw(true));
+  document.getElementById(&#x27;ajl-viz&#x27;).addEventListener(&#x27;pointerdown&#x27;,e=&gt;{drag=true;e.currentTarget.setPointerCapture(e.pointerId);});
+  document.getElementById(&#x27;ajl-viz&#x27;).addEventListener(&#x27;pointermove&#x27;,e=&gt;{if(!drag)return;const r=e.currentTarget.getBoundingClientRect();const ratio=Math.max(0,Math.min(1,(e.clientX-r.left)/r.width));range.value=Number(range.min)+ratio*(Number(range.max)-Number(range.min));draw(false);});
+  document.getElementById(&#x27;ajl-viz&#x27;).addEventListener(&#x27;pointerup&#x27;,()=&gt;{drag=false;draw(true);});
+  document.getElementById(&#x27;ajl-start&#x27;).addEventListener(&#x27;click&#x27;,()=&gt;{document.getElementById(&#x27;ajl-action&#x27;).style.transform=&#x27;translateY(-6px)&#x27;;setTimeout(()=&gt;document.getElementById(&#x27;ajl-action&#x27;).style.transform=&#x27;&#x27;,260);live.textContent=&#x27;Atividade iniciada para &#x27;+topic.textContent;});
+  draw();
+})();
+&lt;/script&gt;
+
+&lt;script src=&quot;https://unpkg.com/@floating-ui/core@1.7.3/dist/floating-ui.core.umd.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://unpkg.com/@floating-ui/dom@1.7.4/dist/floating-ui.dom.umd.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+(() =&gt; {
+  if (window.FloatingUIDOM == null) {
+    return;
+  }
+  const { autoUpdate, computePosition, flip, offset, shift, size } =
+    window.FloatingUIDOM;
+  const tooltipPlacements = new Set([&quot;top&quot;, &quot;right&quot;, &quot;bottom&quot;, &quot;left&quot;]);
+  const tooltipId = `codex-visualization-tooltip-${
+    window.crypto?.randomUUID?.() ?? Date.now().toString(36)
+  }`;
+  const tooltipGap = 5;
+  const hoverDelay = 700;
+  const skipDelay = 300;
+  let activeTrigger = null;
+  let pendingTrigger = null;
+  let tooltip = null;
+  let openTimeout = null;
+  let autoUpdateCleanup = null;
+  let positionRequest = 0;
+  let skipDelayUntil = 0;
+  let lastPointerWasTouch = false;
+  let pinnedByTouch = false;
+
+  const getTrigger = (target) =&gt;
+    target?.nodeType === Node.ELEMENT_NODE
+      ? target.closest(&quot;[data-tooltip]&quot;)
+      : null;
+  const containsTarget = (trigger, target) =&gt;
+    target?.nodeType != null &amp;&amp; trigger.contains(target);
+  const getContent = (trigger) =&gt;
+    trigger.getAttribute(&quot;data-tooltip&quot;)?.trim() ?? &quot;&quot;;
+  const getPlacement = (trigger) =&gt; {
+    const placement = trigger.getAttribute(&quot;data-tooltip-placement&quot;);
+    return tooltipPlacements.has(placement) ? placement : &quot;top&quot;;
+  };
+  const getTooltip = () =&gt; {
+    if (tooltip == null) {
+      tooltip = document.createElement(&quot;div&quot;);
+      tooltip.id = tooltipId;
+      tooltip.className = &quot;tooltip&quot;;
+      tooltip.setAttribute(&quot;role&quot;, &quot;tooltip&quot;);
+    }
+    return tooltip;
+  };
+  const setDescribedBy = (trigger, described) =&gt; {
+    const ids = new Set(
+      (trigger.getAttribute(&quot;aria-describedby&quot;) ?? &quot;&quot;)
+        .split(/\s+/)
+        .filter(Boolean),
+    );
+    if (described) {
+      ids.add(tooltipId);
+    } else {
+      ids.delete(tooltipId);
+    }
+    if (ids.size === 0) {
+      trigger.removeAttribute(&quot;aria-describedby&quot;);
+    } else {
+      trigger.setAttribute(&quot;aria-describedby&quot;, [...ids].join(&quot; &quot;));
+    }
+  };
+  const clearOpenTimeout = () =&gt; {
+    if (openTimeout != null) {
+      window.clearTimeout(openTimeout);
+      openTimeout = null;
+    }
+    pendingTrigger = null;
+  };
+  const closeTooltip = (activateSkipDelay = true) =&gt; {
+    clearOpenTimeout();
+    pinnedByTouch = false;
+    positionRequest += 1;
+    autoUpdateCleanup?.();
+    autoUpdateCleanup = null;
+    if (activeTrigger == null) {
+      return;
+    }
+    setDescribedBy(activeTrigger, false);
+    activeTrigger = null;
+    tooltip?.remove();
+    if (activateSkipDelay) {
+      skipDelayUntil = Date.now() + skipDelay;
+    }
+  };
+  const updatePosition = (trigger, floating) =&gt; {
+    const request = ++positionRequest;
+    void computePosition(trigger, floating, {
+      middleware: [
+        offset(tooltipGap),
+        flip({ padding: tooltipGap }),
+        shift({ padding: tooltipGap }),
+        size({
+          padding: tooltipGap,
+          apply({ availableHeight, availableWidth, elements }) {
+            elements.floating.style.setProperty(
+              &quot;--tooltip-available-width&quot;,
+              `${Math.max(0, availableWidth)}px`,
+            );
+            elements.floating.style.setProperty(
+              &quot;--tooltip-available-height&quot;,
+              `${Math.max(0, availableHeight)}px`,
+            );
+          },
+        }),
+      ],
+      placement: getPlacement(trigger),
+      strategy: &quot;fixed&quot;,
+    })
+      .then(({ x, y }) =&gt; {
+        if (activeTrigger !== trigger || request !== positionRequest) {
+          return;
+        }
+        const scale = window.devicePixelRatio || 1;
+        floating.style.transform = `translate(${Math.round(x * scale) / scale}px, ${Math.round(y * scale) / scale}px)`;
+        floating.style.visibility = &quot;visible&quot;;
+      })
+      .catch(() =&gt; {
+        if (activeTrigger === trigger &amp;&amp; request === positionRequest) {
+          closeTooltip(false);
+        }
+      });
+  };
+  const openTooltip = (trigger) =&gt; {
+    const content = getContent(trigger);
+    if (!trigger.isConnected || content.length === 0) {
+      return;
+    }
+    clearOpenTimeout();
+    if (activeTrigger === trigger) {
+      return;
+    }
+    closeTooltip();
+    const floating = getTooltip();
+    floating.textContent = content;
+    floating.style.visibility = &quot;hidden&quot;;
+    floating.style.transform = &quot;translate(0, 0)&quot;;
+    document.body.appendChild(floating);
+    activeTrigger = trigger;
+    setDescribedBy(trigger, true);
+    autoUpdateCleanup = autoUpdate(trigger, floating, () =&gt; {
+      updatePosition(trigger, floating);
+    });
+  };
+  const requestOpen = (trigger, immediate = false) =&gt; {
+    if (
+      getContent(trigger).length === 0 ||
+      activeTrigger === trigger ||
+      pendingTrigger === trigger
+    ) {
+      return;
+    }
+    clearOpenTimeout();
+    pendingTrigger = trigger;
+    const delay =
+      immediate || activeTrigger != null || Date.now() &lt; skipDelayUntil
+        ? 0
+        : hoverDelay;
+    if (delay === 0) {
+      openTooltip(trigger);
+      return;
+    }
+    openTimeout = window.setTimeout(() =&gt; {
+      openTimeout = null;
+      pendingTrigger = null;
+      openTooltip(trigger);
+    }, delay);
+  };
+  const handlePointerOpen = (event) =&gt; {
+    if (event.pointerType === &quot;touch&quot;) {
+      return;
+    }
+    const trigger = getTrigger(event.target);
+    if (trigger == null || containsTarget(trigger, event.relatedTarget)) {
+      return;
+    }
+    requestOpen(trigger);
+  };
+  const handlePointer = (event) =&gt; {
+    lastPointerWasTouch =
+      event.type === &quot;pointerdown&quot; &amp;&amp; event.pointerType === &quot;touch&quot;;
+  };
+  const handleTouchClick = (event) =&gt; {
+    const isTouch = event.pointerType === &quot;touch&quot; || lastPointerWasTouch;
+    lastPointerWasTouch = false;
+    if (!isTouch || event.detail === 0) {
+      return;
+    }
+    const trigger = getTrigger(event.target);
+    if (
+      trigger == null ||
+      !trigger.isConnected ||
+      getContent(trigger).length === 0 ||
+      (pinnedByTouch &amp;&amp; activeTrigger === trigger)
+    ) {
+      if (pinnedByTouch) {
+        closeTooltip();
+      }
+      return;
+    }
+    openTooltip(trigger);
+    pinnedByTouch = activeTrigger === trigger;
+    window.setTimeout(() =&gt; {
+      if (activeTrigger === trigger &amp;&amp; !trigger.isConnected) {
+        closeTooltip(false);
+      }
+    }, 0);
+  };
+  const handleLeave = (event) =&gt; {
+    if (pinnedByTouch) {
+      return;
+    }
+    const trigger = getTrigger(event.target);
+    if (trigger == null || containsTarget(trigger, event.relatedTarget)) {
+      return;
+    }
+    if (activeTrigger === trigger || pendingTrigger === trigger) {
+      closeTooltip();
+    }
+  };
+  const handleFocusIn = (event) =&gt; {
+    const trigger = getTrigger(event.target);
+    if (trigger?.matches(&quot;:focus-visible&quot;)) {
+      requestOpen(trigger, true);
+    }
+  };
+  const handleKeyDown = (event) =&gt; {
+    if (event.key === &quot;Escape&quot;) {
+      closeTooltip();
+    }
+  };
+  const handleContextMenu = (event) =&gt; {
+    lastPointerWasTouch = false;
+    const trigger = getTrigger(event.target);
+    if (activeTrigger === trigger || pendingTrigger === trigger) {
+      closeTooltip();
+    }
+  };
+  const destroy = () =&gt; {
+    closeTooltip(false);
+    lastPointerWasTouch = false;
+    document.removeEventListener(&quot;pointerover&quot;, handlePointerOpen);
+    document.removeEventListener(&quot;pointerdown&quot;, handlePointer);
+    document.removeEventListener(&quot;pointercancel&quot;, handlePointer);
+    document.removeEventListener(&quot;click&quot;, handleTouchClick);
+    document.removeEventListener(&quot;pointerout&quot;, handleLeave);
+    document.removeEventListener(&quot;focusin&quot;, handleFocusIn);
+    document.removeEventListener(&quot;focusout&quot;, handleLeave);
+    document.removeEventListener(&quot;keydown&quot;, handleKeyDown);
+    document.removeEventListener(&quot;contextmenu&quot;, handleContextMenu);
+    tooltip = null;
+  };
+
+  document.addEventListener(&quot;pointerover&quot;, handlePointerOpen);
+  document.addEventListener(&quot;pointerdown&quot;, handlePointer);
+  document.addEventListener(&quot;pointercancel&quot;, handlePointer);
+  document.addEventListener(&quot;click&quot;, handleTouchClick);
+  document.addEventListener(&quot;pointerout&quot;, handleLeave);
+  document.addEventListener(&quot;focusin&quot;, handleFocusIn);
+  document.addEventListener(&quot;focusout&quot;, handleLeave);
+  document.addEventListener(&quot;keydown&quot;, handleKeyDown);
+  document.addEventListener(&quot;contextmenu&quot;, handleContextMenu);
+  window.addEventListener(&quot;pagehide&quot;, destroy, { once: true });
+})();
+&lt;/script&gt;
+&lt;script id=&quot;codex-visualization-lucide&quot; async src=&quot;https://unpkg.com/lucide@1.17.0/dist/umd/lucide.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+(() =&gt; {
+  const initialize = () =&gt; {
+    globalThis.lucide?.createIcons({ attrs: { width: 16, height: 16 } });
+  };
+  if (globalThis.lucide != null) {
+    initialize();
+    return;
+  }
+  document
+    .getElementById(&quot;codex-visualization-lucide&quot;)
+    ?.addEventListener(&quot;load&quot;, initialize, { once: true });
+})();
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+"></iframe>
+</body>
+</html>

@@ -44,7 +44,7 @@ export function TodayFocus({ action, actionLabel, mainReason, onStart, showAdapt
     feedbackStatus,
     explanationOpen,
   });
-  const reviewUrgency = action.factors.find((factor) => factor.kind === 'review_urgency')?.rawValue ?? 0;
+  const reviewUrgency = action.factors?.find((factor) => factor.kind === 'review_urgency')?.rawValue ?? 0;
 
   return (
     <motion.section
@@ -91,8 +91,8 @@ export function TodayFocus({ action, actionLabel, mainReason, onStart, showAdapt
         </Button>
 
         <DecisionSignalStrip
-          mastery={action.snapshot.masteryLevel}
-          uncertainty={action.snapshot.uncertainty}
+          mastery={action.snapshot?.masteryLevel ?? 0}
+          uncertainty={action.snapshot?.uncertainty ?? 0}
           urgency={reviewUrgency}
           minutes={action.allocatedMinutes}
         />
