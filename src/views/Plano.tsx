@@ -7,6 +7,7 @@ import { currentStudyPhase } from '../lib/studyPhase';
 import { upcomingMilestones } from '../lib/studyRoadmap';
 import { daysUntil } from '../data/examCalendar';
 import { getSubjectProfile } from '../design-system/crivoSubjects';
+import { SubjectAtmosphere } from '../features/daily-plan/components/SubjectAtmosphere';
 
 function formatDatePtBr(iso: string): string {
   const [, month, day] = iso.split('-');
