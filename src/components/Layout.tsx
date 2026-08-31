@@ -140,8 +140,6 @@ export default function Layout() {
   }, [location.pathname]);
 
   useEffect(() => {
-    // Internal storage key, not a visible brand string — left as `juju_` on
-    // purpose (see the rebrand's out-of-scope note on internal identifiers).
     const hasSeenOnboarding = localStorage.getItem('juju_onboarding');
     if (!hasSeenOnboarding) {
       setShowOnboarding(true);
@@ -180,7 +178,7 @@ export default function Layout() {
           <Menu className="w-5 h-5" aria-hidden="true" />
         </IconButton>
         <CrivoMark className="w-5 h-5 mx-2 text-action-primary" />
-        <h1 className="font-display text-lg font-semibold tracking-tight">Crivo</h1>
+        <h1 className="font-display text-lg font-semibold tracking-tight">JUJU</h1>
       </div>
 
       {/* Mobile backdrop */}
@@ -188,11 +186,7 @@ export default function Layout() {
         <div className="lg:hidden fixed inset-0 z-40 bg-ink-950/50" onClick={() => setMobileMenuOpen(false)} />
       )}
 
-      {/* Sidebar rail — Forest-toned in both themes; it's structure, not
-          content. Compactable on desktop (icon-only, labels via title/
-          sr-only) but always fully expanded on the mobile drawer, where it's
-          a temporary overlay and legibility matters more than reclaiming
-          width. */}
+      {/* Sidebar rail */}
       <aside
         className={cn(
           'bg-navigation-background flex flex-col shrink-0 fixed inset-y-0 left-0 z-50 transform lg:static lg:translate-x-0 lg:z-auto',
@@ -206,7 +200,7 @@ export default function Layout() {
           <div className={cn('flex items-center gap-2', !railExpanded && 'lg:gap-0')}>
             <CrivoMark className="w-6 h-6 text-ember-500 shrink-0" />
             <h1 className={cn('font-display text-xl font-semibold tracking-tight text-warm-50 whitespace-nowrap', !railExpanded && 'lg:hidden')}>
-              Crivo
+              JUJU
             </h1>
           </div>
           <button
@@ -256,12 +250,6 @@ export default function Layout() {
         </nav>
 
         <div className={cn('p-4 border-t border-warm-50/10 space-y-3', !railExpanded && 'lg:px-2')}>
-          {/* Só existe alguma coisa pra ver aqui se a conta logada estiver em
-              ADMIN_EMAILS no servidor — pra quem não é admin, essas rotas já
-              mostram "Entre na conta administrativa" em vez de quebrar (ver
-              Admin.tsx, AdminObras.tsx, AdminConteudo.tsx). Deixado discreto
-              (texto pequeno, sem ícone grande) pra não competir com o menu
-              de estudo, que é o que a maioria de quem usa o app vai usar. */}
           <div className={cn('flex items-center justify-center gap-3 text-xs text-warm-100/40', !railExpanded && 'lg:hidden')}>
             <NavLink to="/admin" className="hover:text-warm-100/70 hover:underline">Admin</NavLink>
             <span aria-hidden="true">·</span>

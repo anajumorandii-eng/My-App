@@ -12,7 +12,7 @@ import { examsForBoard, daysUntil, sameBoard, VestibularExam } from '../data/exa
 import { mockTopics } from '../data/mockData';
 import { addPlanFeedback } from '../lib/userData';
 import { deriveMasteryOrigin } from '../lib/masteryOrigin';
-import { StudyAction, RecommendationReason, DisagreeReason, PlanFeedback, RecommendationFactorKind, StudentGoals } from '../types';
+import { StudyAction, AllocatedStudyAction, RecommendationReason, DisagreeReason, PlanFeedback, RecommendationFactorKind, StudentGoals } from '../types';
 import { CrivoCore } from '../components/CrivoCore';
 import { TodayFocus } from '../features/daily-plan/components/TodayFocus';
 import { SubjectAtmosphere } from '../features/daily-plan/components/SubjectAtmosphere';
@@ -105,8 +105,57 @@ export default function Dashboard() {
   // not an untouched baseline; only a real account still at the baseline
   // (never diagnosed) counts as 'seed'.
   const hasEvidence = masteryOrigin !== 'seed';
+  const [selectedSubject, setSelectedSubject] = useState<string | null>(null);
 
-  const primary = dailyPlan[0];
+  const SUBJECT_OPTIONS = [
+    'Física',
+    'Matemática',
+    'Biologia',
+    'Química',
+    'História',
+    'Geografia',
+    'Português',
+    'Literatura',
+    'Redação',
+    'Atualidades',
+  ];
+
+  const fallbackActionForSubject = (subj: string): StudyAction => {
+    const topic = mockTopics.find((t) => t.subject.toLowerCase() === subj.toLowerCase()) ?? mockTopics[0];
+    return {
+      id: `preview_${topic.id}`,
+      topicId: topic.id,
+      topicName: topic.name,
+      subject: topic.subject,
+      type: 'practice',
+      estimatedMinutes: 35,
+      priorityScore: 85,
+      reasons: ['dominio_insuficiente'],
+      factors: [
+        { kind: 'learning_gap', rawValue: 40, contribution: 0.42 },
+        { kind: 'exam_relevance', rawValue: 1.25, contribution: 0.35 },
+      ],
+      snapshot: {
+        calculatedAt: new Date().toISOString(),
+        masteryLevel: 42,
+        uncertainty: 0.25,
+      },
+    };
+  };
+
+  const candidateAction = selectedSubject
+    ? (prioritizedActions.find((a) => a.subject.toLowerCase() === selectedSubject.toLowerCase()) ?? fallbackActionForSubject(selectedSubject))
+    : (dailyPlan[0] ?? prioritizedActions[0] ?? fallbackActionForSubject('Física'));
+
+  const primary = useMemo((): AllocatedStudyAction => {
+    return {
+      ...candidateAction,
+      allocatedMinutes: (candidateAction as any).allocatedMinutes ?? candidateAction.estimatedMinutes ?? 35,
+      intervalStart: (candidateAction as any).intervalStart ?? new Date().toISOString(),
+      intervalEnd: (candidateAction as any).intervalEnd ?? new Date(Date.now() + 35 * 60000).toISOString(),
+    };
+  }, [candidateAction]);
+
   const secondary = dailyPlan.slice(1);
 
   // `prioritizedActions` is the complete ranking that the allocator received.
@@ -124,9 +173,6 @@ export default function Dashboard() {
   const reviewUrgency = reviewFactor ? Math.round(Math.max(0, Math.min(100, reviewFactor.rawValue))) : undefined;
   const usedAvailability = primary?.reasons.includes('tempo_disponivel') ?? false;
   const hasDecisionContext = usedAvailability || reviewUrgency !== undefined || actionExams.length > 0;
-  // 'calendar-disconnected' is a normal state (and already covered by the
-  // demo-mode notice), not something that went wrong — only real failures
-  // are surfaced as a warning line.
   const failureWarnings = warnings.filter((warning) => warning.code !== 'calendar-disconnected');
   const { changed: rankingChanged, previousSubject } = useAdaptiveRankingChange(primary?.topicId, primary?.subject);
 
@@ -145,8 +191,6 @@ export default function Dashboard() {
       date: new Date().toISOString(),
     };
     if (!user) {
-      // Demo mode: nothing to persist, but the interaction still confirms —
-      // it just won't survive a reload.
       setFeedbackStatus('saved');
       return;
     }
@@ -180,6 +224,38 @@ export default function Dashboard() {
   return (
     <SubjectAtmosphere subject={primary?.subject}>
       <div className="crivo-today-stage">
+        {/* Subject Navigation Rail from Prototype */}
+        <div className="flex items-center justify-between gap-3 mb-6 pb-2 border-b border-border-subtle/50 flex-wrap">
+          <div className="flex items-center gap-2">
+            <span className="text-[11px] font-mono tracking-widest uppercase text-text-muted">Matéria:</span>
+          </div>
+          <div className="flex items-center gap-1.5 flex-wrap">
+            {SUBJECT_OPTIONS.map((subj) => {
+              const active = (selectedSubject ?? primary?.subject ?? '').toLowerCase() === subj.toLowerCase();
+              return (
+                <button
+                  key={subj}
+                  onClick={() => setSelectedSubject(subj)}
+                  className={`px-3 py-1 rounded-full text-[11px] font-mono tracking-wide transition-all ${
+                    active
+                      ? 'bg-action-primary text-warm-50 font-bold shadow-sm ring-1 ring-white/20'
+                      : 'border border-border-subtle hover:border-text-primary text-text-muted hover:text-text-primary bg-surface-default/60'
+                  }`}
+                >
+                  {subj.toUpperCase()}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+
+        {availableMinutes <= 0 && (
+          <div className="rounded-xl border border-amber-500/30 bg-amber-500/10 px-4 py-2.5 text-xs text-amber-700 dark:text-amber-300 flex items-center justify-between mb-6">
+            <span>Sua agenda semanal não tem janelas configuradas para hoje. Exibindo a prioridade calculada pelo Crivo.</span>
+            <button onClick={() => navigate('/plano')} className="underline font-semibold ml-2 shrink-0">Ajustar agenda</button>
+          </div>
+        )}
+
         {primary ? (
           <>
             <TodayFocus
