@@ -177,42 +177,49 @@ export default function Podcast() {
   return (
     <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
       <header>
-        <h1 className="text-3xl font-bold tracking-tight mb-2 flex items-center">
-          <Headphones className="w-7 h-7 mr-3 text-indigo-500" />
-          Podcast JUJU
+        <div className="flex items-center gap-2 mb-1.5">
+          <span className="w-2 h-2 rounded-full bg-ember-500 shadow-[0_0_8px_var(--color-ember-500)]" />
+          <span className="text-[11px] font-mono tracking-widest uppercase text-ember-600 dark:text-ember-400">Síntese Auditiva & Voz Neural · Crivo</span>
+        </div>
+        <h1 className="font-display text-3xl sm:text-4xl font-semibold italic text-text-primary tracking-tight flex items-center gap-3">
+          <Headphones className="w-7 h-7 text-action-primary" />
+          Podcast Crivo
         </h1>
-        <p className="text-zinc-500 dark:text-zinc-400">
-          Resumos em áudio dos seus tópicos, narrados com voz natural — ótimo para revisar no trajeto.
+        <p className="text-text-secondary mt-1 max-w-2xl text-base">
+          Resumos em áudio dos seus tópicos, narrados com voz neural de alta fidelidade — ótimo para revisar no trajeto.
         </p>
-        {episodesSyncError && <p className="text-xs text-rose-500 mt-2">{episodesSyncError}</p>}
+        {episodesSyncError && <p className="text-xs text-status-error mt-2">{episodesSyncError}</p>}
       </header>
 
       {notice && (
-        <div className="p-4 rounded-xl bg-amber-50 dark:bg-amber-900/20 text-amber-800 dark:text-amber-300 text-sm">
+        <div className="p-4 rounded-xl bg-status-warning/10 text-status-warning border border-status-warning/20 text-sm">
           {notice}
         </div>
       )}
 
-      <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-4 space-y-4">
+      <div className="bg-surface-default border border-border-subtle rounded-2xl p-6 shadow-soft-sm space-y-4">
         <div>
-          <div className="flex items-center text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-2">
-            <Mic className="w-4 h-4 mr-2 text-indigo-500" />
+          <div className="flex items-center text-xs font-mono uppercase tracking-wider text-text-muted mb-2">
+            <Mic className="w-4 h-4 mr-2 text-ember-500" />
             Voz do narrador
           </div>
           <div className="flex flex-wrap gap-2">
-            {VOICE_OPTIONS.map(({ value, label }) => (
-              <button
-                key={value}
-                onClick={() => setVoiceName(value)}
-                className={`px-3 py-1.5 rounded-lg text-xs font-medium border transition-colors ${
-                  voiceName === value
-                    ? 'bg-indigo-600 border-indigo-600 text-white'
-                    : 'border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-50 dark:hover:bg-zinc-800'
-                }`}
-              >
-                {label}
-              </button>
-            ))}
+            {VOICE_OPTIONS.map(({ value, label }) => {
+              const active = voiceName === value;
+              return (
+                <button
+                  key={value}
+                  onClick={() => setVoiceName(value)}
+                  className={`px-3 py-1.5 rounded-full text-xs font-mono tracking-wide transition-all ${
+                    active
+                      ? 'bg-action-primary text-warm-50 font-bold shadow-sm ring-1 ring-white/20'
+                      : 'border border-border-subtle hover:border-text-primary text-text-muted hover:text-text-primary bg-surface-default/70'
+                  }`}
+                >
+                  {label}
+                </button>
+              );
+            })}
           </div>
           <p className="text-xs text-zinc-500 mt-2">
             Episódios já ouvidos com a voz atual tocam na hora; trocar a voz gera um novo áudio na próxima vez que você apertar play.

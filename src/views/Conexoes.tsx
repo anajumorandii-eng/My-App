@@ -92,8 +92,15 @@ export default function Conexoes() {
   return (
     <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
       <header>
-        <h1 className="text-3xl font-bold tracking-tight mb-2">Conexões Google</h1>
-        <p className="text-zinc-500 dark:text-zinc-400">
+        <div className="flex items-center gap-2 mb-1.5">
+          <span className="w-2 h-2 rounded-full bg-ember-500 shadow-[0_0_8px_var(--color-ember-500)]" />
+          <span className="text-[11px] font-mono tracking-widest uppercase text-ember-600 dark:text-ember-400">Integrações em Nuvem · Crivo</span>
+        </div>
+        <h1 className="font-display text-3xl sm:text-4xl font-semibold italic text-text-primary tracking-tight flex items-center gap-3">
+          <Link2 className="w-7 h-7 text-action-primary" />
+          Conexões Google
+        </h1>
+        <p className="text-text-secondary mt-1 max-w-2xl text-base">
           Sincronize sua agenda e seus materiais de estudo (Google Drive) para acesso rápido.
         </p>
       </header>

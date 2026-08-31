@@ -68,29 +68,36 @@ export default function Redacao() {
     <SubjectAtmosphere subject="redacao" focus={0.4}>
       <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500" data-geometry="argument">
       <header>
-        <h1 className="text-3xl font-bold tracking-tight mb-2 flex items-center">
-          <PenLine className="w-7 h-7 mr-3 text-indigo-500" />
+        <div className="flex items-center gap-2 mb-1.5">
+          <span className="w-2 h-2 rounded-full bg-ember-500 shadow-[0_0_8px_var(--color-ember-500)]" />
+          <span className="text-[11px] font-mono tracking-widest uppercase text-ember-600 dark:text-ember-400">Ateliê de Escrita & Correção Analítica · Crivo</span>
+        </div>
+        <h1 className="font-display text-3xl sm:text-4xl font-semibold italic text-text-primary tracking-tight flex items-center gap-3">
+          <PenLine className="w-7 h-7 text-action-primary" />
           Módulo de Redação
         </h1>
-        <p className="text-zinc-500 dark:text-zinc-400">
-          Estrutura de texto, proposta de intervenção, repertório produtivo e o que cada banca cobra para chegar perto da nota máxima.
+        <p className="text-text-secondary mt-1 max-w-2xl text-base">
+          Estrutura de texto, proposta de intervenção, repertório produtivo e análise de critérios específicos por vestibular.
         </p>
       </header>
 
       <div className="flex gap-2 flex-wrap">
-        {TABS.map((t) => (
-          <button
-            key={t.id}
-            onClick={() => setTab(t.id)}
-            className={`px-4 py-2 rounded-lg text-sm font-medium border transition-colors ${
-              tab === t.id
-                ? 'bg-indigo-600 border-indigo-600 text-white'
-                : 'border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-50 dark:hover:bg-zinc-800'
-            }`}
-          >
-            {t.label}
-          </button>
-        ))}
+        {TABS.map((t) => {
+          const active = tab === t.id;
+          return (
+            <button
+              key={t.id}
+              onClick={() => setTab(t.id)}
+              className={`px-3 py-1.5 rounded-full text-xs font-mono tracking-wide transition-all ${
+                active
+                  ? 'bg-action-primary text-warm-50 font-bold shadow-sm ring-1 ring-white/20'
+                  : 'border border-border-subtle hover:border-text-primary text-text-muted hover:text-text-primary bg-surface-default/70'
+              }`}
+            >
+              {t.label.toUpperCase()}
+            </button>
+          );
+        })}
       </div>
 
       {tab === 'pratica' && (

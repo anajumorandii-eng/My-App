@@ -162,16 +162,20 @@ export default function Perfil() {
   return (
     <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
       <header>
-        <h1 className="text-3xl font-bold tracking-tight mb-2 flex items-center">
-          <UserCircle className="w-7 h-7 mr-3 text-indigo-500" />
-          Perfil
+        <div className="flex items-center gap-2 mb-1.5">
+          <span className="w-2 h-2 rounded-full bg-ember-500 shadow-[0_0_8px_var(--color-ember-500)]" />
+          <span className="text-[11px] font-mono tracking-widest uppercase text-ember-600 dark:text-ember-400">Parâmetros & Metas de Estudo · Crivo</span>
+        </div>
+        <h1 className="font-display text-3xl sm:text-4xl font-semibold italic text-text-primary tracking-tight flex items-center gap-3">
+          <UserCircle className="w-7 h-7 text-action-primary" />
+          Perfil do Estudante
         </h1>
-        <p className="text-zinc-500 dark:text-zinc-400">
-          Esses dados moldam como a JUJU prioriza o seu plano — mantenha atualizados.
+        <p className="text-text-secondary mt-1 max-w-2xl text-base">
+          Esses dados moldam como o Crivo calibra e prioriza o seu plano — mantenha sempre atualizados.
         </p>
         <div className="flex items-center gap-3 mt-2">
           {!isPersisted && (
-            <p className="flex items-center text-xs text-zinc-400">
+            <p className="flex items-center text-xs text-text-muted">
               <CloudOff className="w-3.5 h-3.5 mr-1.5" />
               Modo demonstração — conecte sua conta Google em "Conexões Google" para salvar seu perfil de verdade.
             </p>

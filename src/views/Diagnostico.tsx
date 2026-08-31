@@ -512,16 +512,23 @@ export default function Diagnostico() {
         {phase === 'pick' && (
           <div className="space-y-4">
             <div className="flex gap-2 flex-wrap" role="group" aria-label="Filtrar por matéria">
-              {subjects.map((s) => (
-                <Button
-                  key={s}
-                  variant={subjectFilter === s ? 'primary' : 'secondary'}
-                  size="sm"
-                  onClick={() => setSubjectFilter(s)}
-                >
-                  {s}
-                </Button>
-              ))}
+              {subjects.map((s) => {
+                const active = subjectFilter === s;
+                return (
+                  <button
+                    key={s}
+                    type="button"
+                    onClick={() => setSubjectFilter(s)}
+                    className={`px-3 py-1.5 rounded-full text-xs font-mono tracking-wide transition-all ${
+                      active
+                        ? 'bg-action-primary text-warm-50 font-bold shadow-sm ring-1 ring-white/20'
+                        : 'border border-border-subtle hover:border-text-primary text-text-muted hover:text-text-primary bg-surface-default/70'
+                    }`}
+                  >
+                    {s.toUpperCase()}
+                  </button>
+                );
+              })}
             </div>
 
             <div

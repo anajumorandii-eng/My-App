@@ -591,31 +591,41 @@ export default function Tutor() {
   return (
     <div className="flex flex-col h-[calc(100vh-6rem)] animate-in fade-in duration-500">
       <header className="mb-4 shrink-0">
-        <h1 className="text-3xl font-bold tracking-tight mb-2">Tutor</h1>
-        <p className="text-zinc-500 dark:text-zinc-400 flex items-center">
-          <activeMode.icon className="w-4 h-4 mr-2 text-indigo-500 shrink-0" />
+        <div className="flex items-center gap-2 mb-1.5">
+          <span className="w-2 h-2 rounded-full bg-ember-500 shadow-[0_0_8px_var(--color-ember-500)]" />
+          <span className="text-[11px] font-mono tracking-widest uppercase text-ember-600 dark:text-ember-400">Diálogo Socrático & Investigação · Crivo</span>
+        </div>
+        <h1 className="font-display text-3xl sm:text-4xl font-semibold italic text-text-primary tracking-tight flex items-center gap-3">
+          <Brain className="w-7 h-7 text-action-primary" />
+          Tutor Socrático
+        </h1>
+        <p className="text-text-secondary flex items-center mt-1 text-sm">
+          <activeMode.icon className="w-4 h-4 mr-2 text-ember-500 shrink-0" />
           {activeMode.hint}
         </p>
       </header>
 
       <div className="flex gap-2 flex-wrap mb-4 shrink-0">
-        {MODES.map((m) => (
-          <button
-            key={m.value}
-            onClick={() => setMode(m.value)}
-            className={`flex items-center px-4 py-2 rounded-lg text-sm font-medium border transition-colors ${
-              mode === m.value
-                ? 'bg-indigo-600 border-indigo-600 text-white'
-                : 'border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-50 dark:hover:bg-zinc-800'
-            }`}
-          >
-            <m.icon className="w-4 h-4 mr-2" />
-            {m.label}
-          </button>
-        ))}
+        {MODES.map((m) => {
+          const active = mode === m.value;
+          return (
+            <button
+              key={m.value}
+              onClick={() => setMode(m.value)}
+              className={`flex items-center px-3.5 py-1.5 rounded-full text-xs font-mono tracking-wide transition-all ${
+                active
+                  ? 'bg-action-primary text-warm-50 font-bold shadow-sm ring-1 ring-white/20'
+                  : 'border border-border-subtle hover:border-text-primary text-text-muted hover:text-text-primary bg-surface-default/70'
+              }`}
+            >
+              <m.icon className="w-3.5 h-3.5 mr-1.5" />
+              {m.label.toUpperCase()}
+            </button>
+          );
+        })}
       </div>
 
-      <div className="flex-1 flex flex-col bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl overflow-hidden shadow-sm">
+      <div className="flex-1 flex flex-col bg-surface-default border border-border-subtle rounded-2xl overflow-hidden shadow-soft-sm">
         {mode === 'duvida' && <DuvidaPanel {...picker} />}
         {mode === 'explicar' && <ExplicarPanel {...picker} />}
         {mode === 'corrigir' && <CorrigirPanel {...picker} />}

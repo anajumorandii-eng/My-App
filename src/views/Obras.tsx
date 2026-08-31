@@ -41,39 +41,46 @@ export default function Obras() {
     <SubjectAtmosphere subject="literatura" focus={0.4}>
       <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500" data-geometry="layer">
       <header>
-        <h1 className="text-3xl font-bold tracking-tight mb-2 flex items-center">
-          <Library className="w-7 h-7 mr-3 text-indigo-500" />
+        <div className="flex items-center gap-2 mb-1.5">
+          <span className="w-2 h-2 rounded-full bg-ember-500 shadow-[0_0_8px_var(--color-ember-500)]" />
+          <span className="text-[11px] font-mono tracking-widest uppercase text-ember-600 dark:text-ember-400">Dossiês Literários · Crivo</span>
+        </div>
+        <h1 className="font-display text-3xl sm:text-4xl font-semibold italic text-text-primary tracking-tight flex items-center gap-3">
+          <Library className="w-7 h-7 text-action-primary" />
           Obras Obrigatórias — Ciclo 2027
         </h1>
-        <p className="text-zinc-500 dark:text-zinc-400">
-          Leitura guiada, análise e treino de prova para as 18 obras exigidas por FUVEST e Unicamp/Comvest.
+        <p className="text-text-secondary mt-1 max-w-2xl text-base">
+          Leitura guiada, análise analítica e treino de prova para as obras exigidas por FUVEST e Unicamp/Comvest.
         </p>
       </header>
 
       <div className="flex flex-wrap gap-3 items-center">
         <div className="relative flex-1 min-w-[200px]">
-          <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-zinc-400" />
+          <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-text-muted" />
           <input
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Buscar por obra ou autor..."
-            className="w-full pl-9 pr-3 py-2 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-sm"
+            className="w-full pl-9 pr-3 py-2 rounded-xl border border-border-subtle bg-surface-default text-text-primary text-sm focus:outline-none focus:ring-2 focus:ring-focus-ring"
           />
         </div>
         <div className="flex gap-2">
-          {(['todas', 'FUVEST', 'UNICAMP'] as BoardFilter[]).map((b) => (
-            <button
-              key={b}
-              onClick={() => setBoardFilter(b)}
-              className={`px-3 py-1.5 rounded-lg text-sm border ${
-                boardFilter === b
-                  ? 'bg-indigo-600 text-white border-indigo-600'
-                  : 'border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400'
-              }`}
-            >
-              {b === 'todas' ? 'Todas' : b}
-            </button>
-          ))}
+          {(['todas', 'FUVEST', 'UNICAMP'] as const).map((b) => {
+            const active = boardFilter === b;
+            return (
+              <button
+                key={b}
+                onClick={() => setBoardFilter(b)}
+                className={`px-3 py-1.5 rounded-full text-xs font-mono tracking-wide transition-all ${
+                  active
+                    ? 'bg-action-primary text-warm-50 font-bold shadow-sm ring-1 ring-white/20'
+                    : 'border border-border-subtle hover:border-text-primary text-text-muted hover:text-text-primary bg-surface-default/70'
+                }`}
+              >
+                {b.toUpperCase()}
+              </button>
+            );
+          })}
         </div>
       </div>
 
