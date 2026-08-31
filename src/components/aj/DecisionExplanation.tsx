@@ -64,7 +64,7 @@ export function DecisionExplanation({ reasons, confidence, onDisagree }: Decisio
           ) : (
             <div className="aj-decision-explanation__actions">
               <Button variant="secondary" onClick={() => setOpen(false)}>Entendi</Button>
-              <Button variant="tertiary" onClick={() => setShowDisagree(true)}>Discordo</Button>
+              <Button variant="ghost" onClick={() => setShowDisagree(true)}>Discordo</Button>
             </div>
           )}
         </div>
