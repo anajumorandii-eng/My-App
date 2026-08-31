@@ -12,6 +12,8 @@ import { aiErrorMessage, requestAiText } from '../lib/aiClient';
 import { AnswerCorrection, parseAnswerCorrection } from '../lib/tutorContracts';
 import { AiText } from '../components/AiText';
 import { SubjectAtmosphere } from '../features/daily-plan/components/SubjectAtmosphere';
+import { getMotionConfigForSubject } from '../design-system/crivoMotionPresets';
+import { motion, AnimatePresence } from 'motion/react';
 
 type Tab = 'pratica' | 'estrutura' | 'bancas' | 'erros' | 'checklist';
 
@@ -85,8 +87,10 @@ export default function Redacao() {
         {TABS.map((t) => {
           const active = tab === t.id;
           return (
-            <button
+            <motion.button
               key={t.id}
+              whileHover={{ scale: 1.04 }}
+              whileTap={{ scale: 0.96 }}
               onClick={() => setTab(t.id)}
               className={`px-3 py-1.5 rounded-full text-xs font-mono tracking-wide transition-all ${
                 active
@@ -95,13 +99,21 @@ export default function Redacao() {
               }`}
             >
               {t.label.toUpperCase()}
-            </button>
+            </motion.button>
           );
         })}
       </div>
 
+      <AnimatePresence initial={false}>
       {tab === 'pratica' && (
-        <section className="space-y-5">
+        <motion.section
+          key="tab-pratica"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -10 }}
+          transition={{ duration: 0.25 }}
+          className="space-y-5"
+        >
           <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
             <select value={board} onChange={(e) => setBoard(e.target.value)} className="border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 rounded-xl px-4 py-3">
               {['ENEM', 'Fuvest', 'Unicamp', 'Unesp/Vunesp', 'Famerp', 'Unifesp'].map((item) => <option key={item}>{item}</option>)}
@@ -136,7 +148,7 @@ export default function Redacao() {
               </div>
             </div>
           )}
-        </section>
+        </motion.section>
       )}
 
       {tab === 'estrutura' && (
@@ -335,6 +347,7 @@ export default function Redacao() {
           </ul>
         </section>
       )}
+      </AnimatePresence>
       </div>
     </SubjectAtmosphere>
   );

@@ -6,6 +6,7 @@ import {
   secondPhaseProtocols,
 } from '../data/resolutionStrategies';
 import { Compass, ChevronDown, Lightbulb, AlertTriangle } from 'lucide-react';
+import { motion, AnimatePresence } from 'motion/react';
 
 type Tab = 'metodo' | 'materia' | 'banca' | 'segunda-fase';
 
@@ -41,8 +42,10 @@ export default function Estrategias() {
         {TABS.map((t) => {
           const active = tab === t.id;
           return (
-            <button
+            <motion.button
               key={t.id}
+              whileHover={{ scale: 1.04 }}
+              whileTap={{ scale: 0.96 }}
               onClick={() => setTab(t.id)}
               className={`px-3.5 py-1.5 rounded-full text-xs font-mono tracking-wide transition-all ${
                 active
@@ -51,13 +54,21 @@ export default function Estrategias() {
               }`}
             >
               {t.label.toUpperCase()}
-            </button>
+            </motion.button>
           );
         })}
       </div>
 
+      <AnimatePresence initial={false}>
       {tab === 'metodo' && (
-        <section className="space-y-3">
+        <motion.section
+          key="tab-metodo"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -10 }}
+          transition={{ duration: 0.25 }}
+          className="space-y-3"
+        >
           <p className="text-sm text-zinc-500 mb-2">
             Um roteiro de 11 passos para qualquer questão de múltipla escolha — o objetivo não é "chegar na resposta certa", é reconstruir o raciocínio que leva até lá.
           </p>
@@ -72,7 +83,7 @@ export default function Estrategias() {
               </div>
             </div>
           ))}
-        </section>
+        </motion.section>
       )}
 
       {tab === 'materia' && (
@@ -196,6 +207,7 @@ export default function Estrategias() {
           })}
         </section>
       )}
+      </AnimatePresence>
     </div>
   );
 }

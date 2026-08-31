@@ -10,6 +10,9 @@ import { Repeat, CheckCircle2, AlertTriangle, CloudOff, Sparkles, Frown, Meh, Sm
 import { useSummaryProgress } from '../hooks/useSummaryProgress';
 import { interactiveSummaries } from '../data/interactiveSummaries';
 import { getSubjectProfile } from '../design-system/crivoSubjects';
+import { getMotionConfigForSubject } from '../design-system/crivoMotionPresets';
+import { SubjectAtmosphere } from '../features/daily-plan/components/SubjectAtmosphere';
+import { motion } from 'motion/react';
 import SummaryReviewsPanel from '../components/SummaryReviewsPanel';
 
 type SelfRating = 'fraco' | 'mediano' | 'forte';
@@ -115,14 +118,19 @@ export default function Revisoes() {
         </div>
 
       <div className="space-y-3">
-        {queue.map(({ mastery, topic, urgency }) => {
+        {queue.map(({ mastery, topic, urgency }, index) => {
           const tip = tips[mastery.topicId];
           const isLoadingTip = loadingTipFor === mastery.topicId;
+          const mConfig = getMotionConfigForSubject(topic?.subject);
           return (
-            <div
+            <motion.div
               key={mastery.topicId}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.04, duration: 0.3 }}
+              whileHover={mConfig.hoverProps.whileHover}
               data-geometry={topic ? getSubjectProfile(topic.subject).fieldType : undefined}
-              className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-5 shadow-sm"
+              className="bg-surface-default border border-border-subtle rounded-xl p-5 shadow-soft-sm transition-colors"
             >
               <div className="flex items-center justify-between">
                 <div className="flex items-center min-w-0">
@@ -182,7 +190,7 @@ export default function Revisoes() {
                   <AiText text={tip} className="flex-1" />
                 </div>
               )}
-            </div>
+            </motion.div>
           );
         })}
       </div>

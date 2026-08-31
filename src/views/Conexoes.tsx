@@ -3,6 +3,7 @@ import { CalendarEvent, DriveFile } from '../types';
 import { Link2, Unlink, Calendar as CalendarIcon, Clock, AlertTriangle, FileText } from 'lucide-react';
 import { initAuth, googleSignIn, logout, getAccessToken } from '../lib/auth';
 import { isoToLocalDate } from '../features/availability/time';
+import { motion } from 'motion/react';
 
 export default function Conexoes() {
   const [isConnected, setIsConnected] = useState(false);

@@ -21,6 +21,8 @@ import {
   Compass,
   ChevronDown,
 } from 'lucide-react';
+import { getMotionConfigForSubject } from '../design-system/crivoMotionPresets';
+import { motion } from 'motion/react';
 
 function formatTime(totalSeconds: number) {
   const m = Math.floor(totalSeconds / 60).toString().padStart(2, '0');
@@ -213,11 +215,17 @@ export default function Treino2aFase() {
       </div>
 
       {!question ? (
-        <div className="text-center py-16 bg-zinc-50 dark:bg-zinc-900/50 rounded-2xl border border-dashed border-zinc-200 dark:border-zinc-800">
-          <p className="text-zinc-500">Nenhuma questão disponível ainda para esse filtro.</p>
+        <div className="text-center py-16 bg-surface-secondary/40 rounded-2xl border border-dashed border-border-subtle">
+          <p className="text-text-muted">Nenhuma questão disponível ainda para esse filtro.</p>
         </div>
       ) : (
-        <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 sm:p-8 shadow-sm space-y-6">
+        <motion.div
+          key={question.id}
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3 }}
+          className="bg-surface-default border border-border-subtle rounded-2xl p-6 sm:p-8 shadow-soft-sm space-y-6"
+        >
           <div className="flex items-center justify-between flex-wrap gap-3">
             <div className="flex items-center gap-2 flex-wrap">
               <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-indigo-50 dark:bg-indigo-900/20 text-indigo-700 dark:text-indigo-300">
@@ -390,13 +398,13 @@ export default function Treino2aFase() {
 
               <button
                 onClick={() => setIndex((i) => i + 1)}
-                className="w-full py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-medium transition-colors"
+                className="w-full py-3 bg-action-primary hover:bg-action-primary/90 text-warm-50 rounded-xl font-medium transition-colors"
               >
                 Próxima questão
               </button>
             </div>
           )}
-        </div>
+        </motion.div>
       )}
     </div>
   );

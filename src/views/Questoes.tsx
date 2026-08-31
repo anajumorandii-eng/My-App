@@ -12,6 +12,8 @@ import { TopicMastery, ErrorLog } from '../types';
 import { applyReviewOutcome, qualityFromAnswerCorrectness } from '../lib/spacedRepetition';
 import { SubjectAtmosphere } from '../features/daily-plan/components/SubjectAtmosphere';
 import { getSubjectProfile } from '../design-system/crivoSubjects';
+import { getMotionConfigForSubject } from '../design-system/crivoMotionPresets';
+import { motion, AnimatePresence } from 'motion/react';
 import { HelpCircle, CheckCircle2, XCircle, RotateCcw, CloudOff, Sparkles, BadgeCheck, ExternalLink, Stethoscope, Check } from 'lucide-react';
 
 export default function Questoes() {
@@ -277,24 +279,26 @@ export default function Questoes() {
           {question.options.map((option) => {
             const isSelected = selectedOptionId === option.id;
             const isCorrectOption = option.id === question.correctOptionId;
-            let stateClasses = 'border-zinc-200 dark:border-zinc-700 hover:bg-zinc-50 dark:hover:bg-zinc-800';
+            let stateClasses = 'border-border-subtle bg-surface-default hover:border-action-primary/40';
             if (answered && isCorrectOption) {
-              stateClasses = 'border-emerald-500 bg-emerald-50 dark:bg-emerald-900/20';
+              stateClasses = 'border-status-success bg-status-success/15 text-status-success';
             } else if (answered && isSelected && !isCorrectOption) {
-              stateClasses = 'border-rose-500 bg-rose-50 dark:bg-rose-900/20';
+              stateClasses = 'border-status-error bg-status-error/15 text-status-error';
             }
 
             return (
-              <button
+              <motion.button
                 key={option.id}
+                whileHover={!answered ? { scale: 1.01, x: 3 } : undefined}
+                whileTap={!answered ? { scale: 0.99 } : undefined}
                 onClick={() => selectOption(option.id)}
                 disabled={answered}
-                className={`w-full text-left px-5 py-4 rounded-xl border transition-colors flex items-center justify-between ${stateClasses}`}
+                className={`w-full text-left px-5 py-4 rounded-xl border transition-colors flex items-center justify-between shadow-soft-sm ${stateClasses}`}
               >
                 <span>{option.text}</span>
-                {answered && isCorrectOption && <CheckCircle2 className="w-5 h-5 text-emerald-500 shrink-0 ml-3" />}
-                {answered && isSelected && !isCorrectOption && <XCircle className="w-5 h-5 text-rose-500 shrink-0 ml-3" />}
-              </button>
+                {answered && isCorrectOption && <CheckCircle2 className="w-5 h-5 text-status-success shrink-0 ml-3" />}
+                {answered && isSelected && !isCorrectOption && <XCircle className="w-5 h-5 text-status-error shrink-0 ml-3" />}
+              </motion.button>
             );
           })}
         </div>

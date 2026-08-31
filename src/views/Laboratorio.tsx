@@ -6,6 +6,7 @@ import { useStudyMethods } from '../hooks/useStudyMethods';
 import { requestAiText } from '../lib/aiClient';
 import { AiText } from '../components/AiText';
 import { FlaskConical, ChevronDown, Brain, Repeat as RepeatIcon, Target, Zap, Sparkles, CheckCircle2 } from 'lucide-react';
+import { motion, AnimatePresence } from 'motion/react';
 
 // Métodos que não ficam só na teoria: já rodam de verdade no motor do
 // plano (spacedRepetition.ts agenda as revisões; interleaving.ts intercala
@@ -103,14 +104,21 @@ export default function Laboratorio() {
       </div>
 
       <div className="space-y-3">
-        {filtered.map((method) => {
+        {filtered.map((method, index) => {
           const meta = CATEGORY_META[method.category];
           const isExpanded = expandedId === method.id;
           return (
-            <div key={method.id} className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl shadow-sm overflow-hidden">
+            <motion.div
+              key={method.id}
+              layout
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.04, duration: 0.3 }}
+              className="bg-surface-default border border-border-subtle rounded-2xl shadow-soft-sm overflow-hidden"
+            >
               <button
                 onClick={() => setExpandedId(isExpanded ? null : method.id)}
-                className="w-full flex items-center justify-between p-5 text-left"
+                className="w-full flex items-center justify-between p-5 text-left hover:bg-surface-secondary/40 transition-colors"
               >
                 <div className="flex items-center min-w-0">
                   <span className={`w-10 h-10 rounded-xl flex items-center justify-center mr-4 shrink-0 ${meta.color}`}>
@@ -187,7 +195,7 @@ export default function Laboratorio() {
                   </div>
                 </div>
               )}
-            </div>
+            </motion.div>
           );
         })}
       </div>

@@ -23,6 +23,8 @@ import { useSummaryProgress } from '../hooks/useSummaryProgress';
 import { interactiveSummaries } from '../data/interactiveSummaries';
 import { buildSummaryProgressDashboard } from '../lib/summaryProgressDashboard';
 import { getSubjectProfile } from '../design-system/crivoSubjects';
+import { getMotionConfigForSubject } from '../design-system/crivoMotionPresets';
+import { motion } from 'motion/react';
 import SummaryProgressDashboard from '../components/SummaryProgressDashboard';
 
 const getSubjectColor = (subject: string) => getSubjectProfile(subject).palettes.dark.primary;
@@ -151,29 +153,38 @@ export default function Evolucao() {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-        <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 shadow-sm">
-          <div className="flex items-center text-indigo-600 dark:text-indigo-400 mb-3">
+        <motion.div
+          whileHover={{ y: -3, scale: 1.01 }}
+          className="bg-surface-default border border-border-subtle rounded-2xl p-6 shadow-soft-sm"
+        >
+          <div className="flex items-center text-action-primary mb-3">
             <Gauge className="w-5 h-5 mr-2" />
             <h3 className="font-medium text-sm">Domínio médio geral</h3>
           </div>
-          <p className="text-3xl font-bold">{overallAverage}<span className="text-lg font-normal text-zinc-500 ml-1">/100</span></p>
-        </div>
-        <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 shadow-sm">
-          <div className="flex items-center text-emerald-600 dark:text-emerald-400 mb-3">
+          <p className="text-3xl font-bold font-mono">{overallAverage}<span className="text-lg font-normal text-text-muted ml-1">/100</span></p>
+        </motion.div>
+        <motion.div
+          whileHover={{ y: -3, scale: 1.01 }}
+          className="bg-surface-default border border-border-subtle rounded-2xl p-6 shadow-soft-sm"
+        >
+          <div className="flex items-center text-status-success mb-3">
             <Trophy className="w-5 h-5 mr-2" />
             <h3 className="font-medium text-sm">Tópico mais forte</h3>
           </div>
-          <p className="text-lg font-bold truncate">{strongest?.name}</p>
-          <p className="text-sm text-zinc-500">{strongest?.level}% de domínio</p>
-        </div>
-        <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 shadow-sm">
-          <div className="flex items-center text-rose-600 dark:text-rose-400 mb-3">
+          <p className="text-lg font-bold truncate text-text-primary">{strongest?.name}</p>
+          <p className="text-sm font-mono text-text-muted">{strongest?.level}% de domínio</p>
+        </motion.div>
+        <motion.div
+          whileHover={{ y: -3, scale: 1.01 }}
+          className="bg-surface-default border border-border-subtle rounded-2xl p-6 shadow-soft-sm"
+        >
+          <div className="flex items-center text-status-error mb-3">
             <AlertCircle className="w-5 h-5 mr-2" />
             <h3 className="font-medium text-sm">Precisa de mais atenção</h3>
           </div>
-          <p className="text-lg font-bold truncate">{weakest?.name}</p>
-          <p className="text-sm text-zinc-500">{weakest?.level}% de domínio</p>
-        </div>
+          <p className="text-lg font-bold truncate text-text-primary">{weakest?.name}</p>
+          <p className="text-sm font-mono text-text-muted">{weakest?.level}% de domínio</p>
+        </motion.div>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">

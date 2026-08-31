@@ -3,6 +3,7 @@ import { useStudentGoals } from '../hooks/useStudentGoals';
 import { buildRoadmap, upcomingMilestones } from '../lib/studyRoadmap';
 import { daysUntil } from '../data/examCalendar';
 import { Flag, CalendarClock, Clock } from 'lucide-react';
+import { motion } from 'motion/react';
 
 const PHASE_STYLES: Record<string, { badge: string; bar: string }> = {
   consolidacao: {
@@ -66,17 +67,24 @@ export default function RetaFinal() {
 
       {milestones.length > 0 && (
         <section className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-          {milestones.slice(0, 3).map((exam) => (
-            <div key={exam.id} className="bg-surface-default border border-border-subtle rounded-2xl p-5 shadow-soft-sm">
+          {milestones.slice(0, 3).map((exam, index) => (
+            <motion.div
+              key={exam.id}
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: index * 0.05, duration: 0.25 }}
+              whileHover={{ y: -3, scale: 1.015 }}
+              className="bg-surface-default border border-border-subtle rounded-2xl p-5 shadow-soft-sm hover:border-action-primary/40 transition-colors"
+            >
               <div className="flex items-center text-xs font-mono text-text-muted mb-1 uppercase tracking-wider">
                 <CalendarClock className="w-4 h-4 mr-1.5 text-ember-500" />
                 {exam.label}
               </div>
-              <p className="text-2xl font-bold text-indigo-600 dark:text-indigo-400">
+              <p className="text-2xl font-bold font-mono text-action-primary">
                 {daysUntil(exam.date) === 0 ? 'É hoje' : `${daysUntil(exam.date)} dias`}
               </p>
-              <p className="text-xs text-zinc-400 mt-1">{formatDatePtBr(exam.date)}</p>
-            </div>
+              <p className="text-xs font-mono text-text-muted mt-1">{formatDatePtBr(exam.date)}</p>
+            </motion.div>
           ))}
         </section>
       )}
