@@ -57,51 +57,51 @@ export function OnboardingModal({ open, onClose, onStartDiagnostic }: Onboarding
   if (!open) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-ink-950/50 backdrop-blur-sm">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-md">
       <div
         ref={dialogRef}
         role="dialog"
         aria-modal="true"
         aria-labelledby={titleId}
         onKeyDown={handleKeyDown}
-        className="bg-surface-elevated border border-border-subtle rounded-panel shadow-soft-lg max-w-xl w-full overflow-hidden"
+        className="ni-panel border border-[var(--ni-line)] bg-[var(--ni-surface)] rounded-2xl max-w-xl w-full overflow-hidden shadow-2xl"
       >
         <div className="p-8">
           <div className="flex justify-between items-start mb-6">
-            <div className="w-12 h-12 rounded-card bg-surface-secondary text-action-primary flex items-center justify-center">
-              <CrivoMark className="w-6 h-6" />
+            <div className="w-10 h-10 rounded-xl bg-[var(--ni-surface2)] border border-[var(--ni-line)] text-[var(--ember-500)] flex items-center justify-center shadow-inner">
+              <span className="text-base font-bold">◉</span>
             </div>
             <IconButton aria-label="Fechar" onClick={onClose}>
-              <X className="w-5 h-5" aria-hidden="true" />
+              <X className="w-5 h-5 text-[var(--ni-dim)] hover:text-[var(--ni-text)]" aria-hidden="true" />
             </IconButton>
           </div>
 
-          <h2 id={titleId} className="font-display text-2xl font-semibold text-text-primary mb-3">
+          <h2 id={titleId} className="font-display text-2xl font-semibold text-[var(--ni-text)] mb-3">
             Bem-vindo ao Crivo
           </h2>
-          <p className="text-text-secondary mb-8 leading-relaxed">
+          <p className="text-[var(--ni-dim)] mb-8 leading-relaxed text-sm">
             Não é um jogo — não há streaks nem pontos. O objetivo é separar o que você já domina do que ainda tem
-            lacuna, e priorizar sua <strong className="text-text-primary">autonomia</strong> e seu{' '}
-            <strong className="text-text-primary">domínio real</strong> até o dia da prova.
+            lacuna, e priorizar sua <strong className="text-[var(--ni-text)] font-semibold">autonomia</strong> e seu{' '}
+            <strong className="text-[var(--ni-text)] font-semibold">domínio real</strong> até o dia da prova.
           </p>
 
           <div className="space-y-4 mb-8">
             <div className="flex items-start">
-              <div className="w-8 h-8 rounded-full bg-surface-secondary flex items-center justify-center mr-4 shrink-0 font-semibold text-text-muted">
+              <div className="w-7 h-7 rounded-full bg-[var(--ni-surface2)] border border-[var(--ni-line)] flex items-center justify-center mr-3.5 shrink-0 font-mono text-xs text-[var(--ni-faint)]">
                 1
               </div>
               <div>
-                <h3 className="font-semibold text-text-primary">Diagnóstico inicial</h3>
-                <p className="text-sm text-text-secondary mt-1">Definimos de onde você parte para montar o plano de hoje.</p>
+                <h3 className="font-semibold text-sm text-[var(--ni-text)]">Diagnóstico inicial</h3>
+                <p className="text-xs text-[var(--ni-dim)] mt-0.5">Definimos de onde você parte para montar o plano de hoje.</p>
               </div>
             </div>
             <div className="flex items-start">
-              <div className="w-8 h-8 rounded-full bg-surface-secondary flex items-center justify-center mr-4 shrink-0 font-semibold text-text-muted">
+              <div className="w-7 h-7 rounded-full bg-[var(--ni-surface2)] border border-[var(--ni-line)] flex items-center justify-center mr-3.5 shrink-0 font-mono text-xs text-[var(--ni-faint)]">
                 2
               </div>
               <div>
-                <h3 className="font-semibold text-text-primary">Conecte sua agenda</h3>
-                <p className="text-sm text-text-secondary mt-1">O tempo disponível hoje ajusta o plano automaticamente.</p>
+                <h3 className="font-semibold text-sm text-[var(--ni-text)]">Conecte sua agenda</h3>
+                <p className="text-xs text-[var(--ni-dim)] mt-0.5">O tempo disponível hoje ajusta o plano automaticamente.</p>
               </div>
             </div>
           </div>

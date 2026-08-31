@@ -717,6 +717,158 @@ html, body {
   border-radius: 16px 4px 16px 4px;
 }
 
+/* =========================================================================
+ * NÚCLEO INSTRUMENTAL — TOKENS E SISTEMA VISUAL DUAL (ESCURO & CLARO)
+ * ========================================================================= */
+:root {
+  --ni-ink: #F8F6F0;
+  --ni-surface: #FFFFFF;
+  --ni-surface2: #F0ECE2;
+  --ni-line: rgba(20, 30, 25, 0.12);
+  --ni-text: #131715;
+  --ni-dim: #55625B;
+  --ni-faint: #84918A;
+  --ni-glass: rgba(255, 255, 255, 0.85);
+  --ni-glass-strong: rgba(255, 255, 255, 0.95);
+  --ni-wash: rgba(110, 147, 179, 0.15);
+}
+
+:root.dark {
+  --ni-ink: #07090A;
+  --ni-surface: #101915;
+  --ni-surface2: #17241E;
+  --ni-line: rgba(224, 237, 228, 0.14);
+  --ni-text: #EDF0EB;
+  --ni-dim: #98A69F;
+  --ni-faint: #5D6B63;
+  --ni-glass: rgba(229, 242, 232, 0.075);
+  --ni-glass-strong: rgba(229, 242, 232, 0.12);
+  --ni-wash: rgba(110, 147, 179, 0.28);
+}
+
+/* Ícones 3D com Profundidade em Camadas */
+.ni-icon-depth {
+  height: 28px;
+  width: 28px;
+  display: grid;
+  place-items: center;
+  flex: none;
+  border-radius: 8px;
+  background: linear-gradient(145deg, color-mix(in srgb, var(--subject-primary, #6E93B3) 55%, white), color-mix(in srgb, var(--subject-primary, #6E93B3) 25%, black));
+  box-shadow: inset 2px 2px 3px rgba(255,255,255,.3), inset -3px -3px 5px rgba(0,0,0,.35), 0 4px 10px rgba(0,0,0,.25);
+  color: #101311;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease;
+}
+
+:root:not(.dark) .ni-icon-depth {
+  background: linear-gradient(145deg, color-mix(in srgb, var(--subject-primary, #6E93B3) 60%, white), color-mix(in srgb, var(--subject-primary, #6E93B3) 30%, #444));
+  box-shadow: inset 1.5px 1.5px 2px rgba(255,255,255,.6), inset -2px -2px 4px rgba(0,0,0,.2), 0 3px 8px rgba(0,0,0,.12);
+  color: #FFFFFF;
+}
+
+.ni-icon-depth svg {
+  height: 14px;
+  width: 14px;
+  filter: drop-shadow(0 1px rgba(255,255,255,.4));
+}
+
+/* Painéis Minerais Instrumentais */
+.ni-panel {
+  border: 1px solid var(--ni-line);
+  border-radius: 16px;
+  background: var(--ni-glass);
+  backdrop-filter: blur(12px);
+  box-shadow: inset 1px 1px rgba(255,255,255,.05), 0 14px 40px rgba(0,0,0,.12);
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+:root:not(.dark) .ni-panel {
+  background: #FFFFFF;
+  box-shadow: inset 1px 1px rgba(255,255,255,1), 0 4px 20px rgba(20,30,25,0.06);
+}
+
+.ni-panel:hover {
+  border-color: color-mix(in srgb, var(--subject-primary, #6E93B3) 40%, var(--ni-line));
+}
+
+/* Artefato 3D com Órbitas e Halos */
+.ni-artifact {
+  position: absolute;
+  right: 48px;
+  top: 52px;
+  width: 136px;
+  height: 136px;
+  border: 1px solid color-mix(in srgb, var(--p, var(--subject-primary, #6E93B3)) 72%, transparent);
+  border-radius: 50%;
+  box-shadow: 0 0 0 12px color-mix(in srgb, var(--p, var(--subject-primary, #6E93B3)) 7%, transparent), 0 0 50px color-mix(in srgb, var(--p, var(--subject-primary, #6E93B3)) 30%, transparent);
+  display: grid;
+  place-items: center;
+  transition: transform .5s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+.ni-artifact:before, .ni-artifact:after {
+  content: '';
+  position: absolute;
+  border: 1px solid color-mix(in srgb, var(--s, var(--subject-secondary, #C9A468)) 75%, transparent);
+  border-radius: 50%;
+}
+.ni-artifact:before { height: 57%; width: 112%; transform: rotate(-32deg); }
+.ni-artifact:after { height: 82%; width: 30%; transform: rotate(49deg); }
+
+.ni-artifact i {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 28%, #fff 0 6%, var(--p, var(--subject-primary, #6E93B3)) 7% 57%, transparent 58%);
+  box-shadow: 0 0 20px var(--p, var(--subject-primary, #6E93B3));
+  z-index: 1;
+}
+
+.ni-artifact b, .ni-artifact em, .ni-artifact span {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid color-mix(in srgb, var(--p, var(--subject-primary, #6E93B3)) 65%, transparent);
+}
+
+.ni-artifact--grid b {
+  width: 96px;
+  height: 96px;
+  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+}
+
+.ni-artifact--organic {
+  border-radius: 47% 53% 44% 56%;
+  animation: ni-organic-spin 4s ease-in-out infinite;
+}
+
+.ni-artifact--bond b {
+  width: 110px;
+  height: 1px;
+  background: var(--p, var(--subject-primary, #6E93B3));
+  border: 0;
+  transform: rotate(42deg);
+}
+
+.ni-artifact--bond em {
+  width: 16px;
+  height: 16px;
+  transform: translate(46px, -46px);
+  background: var(--s, var(--subject-secondary, #C9A468));
+}
+
+.ni-artifact--signal:before {
+  animation: ni-signal-pulse 2s ease-out infinite;
+}
+
+@keyframes ni-organic-spin {
+  50% { border-radius: 61% 39% 57% 43%; transform: scale(1.06); }
+}
+
+@keyframes ni-signal-pulse {
+  to { transform: scale(1.6); opacity: 0; }
+}
+
 /* Global safety net: every animated interaction that goes through
  * motion/react is already gated per-component via useReducedMotion(), but
  * plain CSS transitions (the nav rail's width toggle, hover color changes)
