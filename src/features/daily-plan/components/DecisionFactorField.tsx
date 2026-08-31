@@ -50,7 +50,7 @@ export function DecisionFactorField({ factors = [], phase }: DecisionFactorField
       data-motion-active={motionActive && !reducedMotion ? 'true' : undefined}
     >
       <AnimatePresence initial={false} onExitComplete={() => setMotionActive(false)}>
-        {phase === 'decomposed' && factors.map((factor) => {
+        {phase === 'decomposed' && safeFactors.map((factor) => {
           const position = FACTOR_POSITION[factor.kind];
           return (
             <motion.div

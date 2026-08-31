@@ -605,4 +605,13 @@ describe('TodayFocus explanation and feedback', () => {
     }
     expect(within(panel!).getByText(/Domínio estimado no momento do cálculo/)).toBeVisible();
   });
+
+  it('renders DecisionFactorField safely without errors when factors is null or undefined in decomposed phase', () => {
+    expect(() => {
+      render(<DecisionFactorField factors={null as any} phase="decomposed" />);
+    }).not.toThrow();
+    expect(() => {
+      render(<DecisionFactorField factors={undefined as any} phase="decomposed" />);
+    }).not.toThrow();
+  });
 });
