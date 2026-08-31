@@ -178,7 +178,7 @@ export default function Layout() {
           <Menu className="w-5 h-5" aria-hidden="true" />
         </IconButton>
         <CrivoMark className="w-5 h-5 mx-2 text-action-primary" />
-        <h1 className="font-display text-lg font-semibold tracking-tight">JUJU</h1>
+        <h1 className="font-display text-lg font-semibold tracking-tight">Crivo</h1>
       </div>
 
       {/* Mobile backdrop */}
@@ -200,7 +200,7 @@ export default function Layout() {
           <div className={cn('flex items-center gap-2', !railExpanded && 'lg:gap-0')}>
             <CrivoMark className="w-6 h-6 text-ember-500 shrink-0" />
             <h1 className={cn('font-display text-xl font-semibold tracking-tight text-warm-50 whitespace-nowrap', !railExpanded && 'lg:hidden')}>
-              JUJU
+              Crivo
             </h1>
           </div>
           <button
