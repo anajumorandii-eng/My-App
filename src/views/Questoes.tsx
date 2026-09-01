@@ -49,6 +49,11 @@ function Metric({
   );
 }
 
+function examSourceLabel(source: { board: string; year: number; sourceUrl: string } | string | undefined) {
+  if (!source) return 'Banco de Questões';
+  return typeof source === 'string' ? source : `${source.board} ${source.year}`;
+}
+
 export default function Questoes() {
   const { user } = useAuth();
   const { updateMastery, isPersisted, syncError } = useUserMastery();
@@ -106,38 +111,34 @@ export default function Questoes() {
     setSelectedOptionId(optionId);
     setHistory((h) => [...h, { questionId: question.id, correct }]);
 
-    updateMastery(question.topicId, (current) => {
+    updateMastery((previous) => {
+      const current = previous.find((item) => item.topicId === question.topicId);
       const existing: TopicMastery = current ?? {
         topicId: question.topicId,
-        masteryLevel: 50,
+        level: 50,
         uncertainty: 0.8,
-        consecutiveCorrect: 0,
-        lastAttemptScore: 0,
-        interval: 1,
-        easeFactor: 2.5,
+        lastReviewed: new Date(0).toISOString(),
+        errorSignals: 0,
       };
 
       const outcome = applyReviewOutcome(existing, qualityFromAnswerCorrectness(correct));
-      return {
+      const updated: TopicMastery = {
         ...existing,
-        masteryLevel: outcome.masteryLevel,
-        uncertainty: outcome.uncertainty,
-        lastAttemptScore: correct ? 100 : 0,
-        consecutiveCorrect: outcome.consecutiveCorrect,
-        interval: outcome.interval,
-        easeFactor: outcome.easeFactor,
-        nextReviewDate: outcome.nextReviewDate,
-        lastReviewedAt: outcome.lastReviewedAt,
+        ...outcome,
+        origin: 'observed',
       };
+      return current
+        ? previous.map((item) => (item.topicId === question.topicId ? updated : item))
+        : [...previous, updated];
     });
 
     if (user) {
       addUserAttempt(user.uid, {
+        id: `attempt_${Date.now()}`,
         questionId: question.id,
-        selectedOptionId: optionId,
-        isCorrect: correct,
-        timestamp: new Date().toISOString(),
-        examSource: question.examSource,
+        topicId: question.topicId,
+        correct,
+        date: new Date().toISOString(),
       });
     }
 
@@ -194,16 +195,13 @@ export default function Questoes() {
       id: `err_${question.id}_${Date.now()}`,
       questionId: question.id,
       topicId: question.topicId,
-      subject: question.subject,
-      prompt: question.prompt,
-      selectedAnswer: selectedOption?.text ?? '',
-      correctAnswer: correctOption?.text ?? '',
-      errorType: diagnosis.errorType,
-      rootCause: diagnosis.rootCause,
-      correction: diagnosis.correction,
-      intervention: diagnosis.intervention,
-      timestamp: new Date().toISOString(),
-      source: question.examSource,
+      date: new Date().toISOString(),
+      type: diagnosis.type,
+      notes: `Resposta marcada: ${selectedOption?.text ?? ''}. Gabarito: ${correctOption?.text ?? ''}.`,
+      breakPoint: diagnosis.breakPoint,
+      evidence: diagnosis.evidence,
+      confidence: diagnosis.confidence,
+      proposedIntervention: diagnosis.intervention,
     };
     if (user) {
       addUserErrorLog(user.uid, log).catch((error) => console.error('Failed to save error log:', error));
@@ -268,7 +266,7 @@ export default function Questoes() {
             </span>
           </>
         )}
-        <i /> <b>{question?.examSource ?? 'Banco de Questões'}</b>
+        <i /> <b>{examSourceLabel(question?.examSource)}</b>
       </div>
 
       {/* Main Title */}
@@ -319,7 +317,7 @@ export default function Questoes() {
           <Panel subject={question.subject} interactive className="ni-panel ni-workspace">
             <div className="flex items-center justify-between gap-4">
               <span className="ni-kicker">
-                Questão {index + 1} de {pool.length} {question.examSource ? `· ${question.examSource}` : ''}
+                Questão {index + 1} de {pool.length} {question.examSource ? `· ${examSourceLabel(question.examSource)}` : ''}
               </span>
               <span className="text-[10px] font-mono text-[var(--dim)]">
                 Acertos: <b className="text-[var(--text)]">{correctCount}</b> / {history.length}
@@ -393,7 +391,7 @@ export default function Questoes() {
                   {diagnosis && !diagnosisDismissed && (
                     <div className="mt-3 p-3 rounded-lg border border-amber-500/30 bg-amber-500/10 text-xs text-amber-300">
                       <div className="flex items-center justify-between mb-1">
-                        <b>Diagnóstico de Erro: {ERROR_TYPE_LABELS[diagnosis.errorType]}</b>
+                        <b>Diagnóstico de Erro: {ERROR_TYPE_LABELS[diagnosis.type]}</b>
                         {!diagnosisSaved ? (
                           <button onClick={saveErrorToLog} className="underline text-amber-200">
                             Salvar no Caderno de Erros
@@ -402,7 +400,7 @@ export default function Questoes() {
                           <span>Salvo ✓</span>
                         )}
                       </div>
-                      <p className="text-[11px] text-amber-200/80">{diagnosis.rootCause}</p>
+                      <p className="text-[11px] text-amber-200/80">{diagnosis.breakPoint}</p>
                     </div>
                   )}
                 </div>
