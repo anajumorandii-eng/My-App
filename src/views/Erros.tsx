@@ -9,16 +9,18 @@ import { AiText } from '../components/AiText';
 import { BookX, Plus, Sparkles, CloudOff, Stethoscope } from 'lucide-react';
 import { useSummaryProgress } from '../hooks/useSummaryProgress';
 import { interactiveSummaries } from '../data/interactiveSummaries';
-import { getSubjectProfile } from '../design-system/crivoSubjects';
-import { getMotionConfigForSubject } from '../design-system/crivoMotionPresets';
-import { motion, AnimatePresence } from 'motion/react';
 import SummaryErrorsPanel from '../components/SummaryErrorsPanel';
+import { Panel } from '../components/ui/Panel';
+import { PALETTES } from '../prototypes/NucleoInstrumentalPrototype';
+import { SUBJECT_ICONS } from './Dashboard';
 
 const OUTCOME_LABELS: Record<NonNullable<ErrorLog['outcomeRating']>, string> = {
   melhorou: 'Melhorou',
   sem_mudanca: 'Sem mudança',
   ainda_dificil: 'Ainda difícil',
 };
+
+const ERROR_PALETTE = PALETTES.História;
 
 export default function Erros() {
   const { user, isConnected } = useAuth();
@@ -124,194 +126,236 @@ export default function Erros() {
     updateLog({ ...log, outcomeRating });
 
   return (
-    <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
-      <header className="flex items-center justify-between flex-wrap gap-4">
+    <div
+      className="ni-main"
+      style={{
+        '--primary': ERROR_PALETTE.primary,
+        '--secondary': ERROR_PALETTE.secondary,
+        '--wash': ERROR_PALETTE.wash,
+      } as React.CSSProperties}
+    >
+      {/* Route Breadcrumb */}
+      <div className="ni-route">
+        <span>ANÁLISE</span>
+        <i />
+        <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
+          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--wash)]">
+            <BookX className="w-3 h-3" />
+          </span>
+          DIAGNÓSTICO
+        </span>
+        <i />
+        <b>CADERNO DE ERROS</b>
+      </div>
+
+      {/* Main Title */}
+      <div className="ni-title">
         <div>
-          <div className="flex items-center gap-2 mb-1.5">
-            <span className="w-2 h-2 rounded-full bg-ember-500 shadow-[0_0_8px_var(--color-ember-500)]" />
-            <span className="text-[11px] font-mono tracking-widest uppercase text-ember-600 dark:text-ember-400">Diagnóstico Cognitivo de Erro · Crivo</span>
-          </div>
-          <h1 className="font-display text-3xl sm:text-4xl font-semibold italic text-text-primary tracking-tight flex items-center gap-3">
-            <BookX className="w-7 h-7 text-action-primary" />
-            Caderno de Erros
-          </h1>
-          <p className="text-text-secondary mt-1 max-w-2xl text-base">Diagnóstico de padrões para atacar a causa raiz, não só o sintoma.</p>
-          {!isConnected && (
-            <p className="flex items-center text-xs text-text-muted mt-2">
-              <CloudOff className="w-3.5 h-3.5 mr-1.5" />
-              Modo demonstração — conecte sua conta Google para salvar seus erros de verdade.
-            </p>
-          )}
-          {syncError && <p className="text-xs text-status-error mt-2">{syncError}</p>}
+          <h1>Transforme erros em acertos estruturados.</h1>
+          <p>Diagnóstico por tipo de erro, causa raiz e intervenção — cada registro vira insumo para o motor de repetição.</p>
         </div>
+        <div className="ni-state">
+          <i /> {logs.length} erros mapeados · Crivo Cognitivo
+        </div>
+      </div>
+
+      {!isConnected && (
+        <p className="flex items-center text-xs text-[var(--dim)] mb-2">
+          <CloudOff className="w-3.5 h-3.5 mr-1.5" />
+          Modo demonstração — conecte sua conta Google para salvar seus erros em nuvem.
+        </p>
+      )}
+      {syncError && <p className="text-xs text-rose-500 mb-2">{syncError}</p>}
+
+      {/* Actions & Filters */}
+      <div className="flex items-center justify-between gap-3 flex-wrap mb-4">
+        <div className="ni-subjects" style={{ margin: 0 }}>
+          <button
+            onClick={() => setTypeFilter('all')}
+            style={
+              typeFilter === 'all'
+                ? { backgroundColor: ERROR_PALETTE.primary, color: ERROR_PALETTE.wash, borderRadius: '4px', padding: '2px 8px' }
+                : undefined
+            }
+          >
+            Todos ({logs.length})
+          </button>
+          {Object.entries(TYPE_LABELS).map(([value, label]) => {
+            const count = countsByType[value as ErrorLog['type']];
+            if (!count) return null;
+            const active = typeFilter === value;
+            return (
+              <button
+                key={value}
+                onClick={() => setTypeFilter(value as ErrorLog['type'])}
+                style={
+                  active
+                    ? { backgroundColor: ERROR_PALETTE.primary, color: ERROR_PALETTE.wash, borderRadius: '4px', padding: '2px 8px' }
+                    : undefined
+                }
+              >
+                {label} ({count})
+              </button>
+            );
+          })}
+        </div>
+
         <button
           onClick={() => setShowForm((s) => !s)}
-          className="flex items-center px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-medium transition-colors"
+          className="inline-flex items-center px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-[var(--primary)] text-[var(--wash)] hover:opacity-90 transition-opacity"
         >
-          <Plus className="w-4 h-4 mr-2" />
+          <Plus className="w-3.5 h-3.5 mr-1.5" />
           Registrar erro
         </button>
-      </header>
+      </div>
 
       <SummaryErrorsPanel progress={summaryProgress} summaries={interactiveSummaries} />
 
+      {/* Manual log form */}
       {showForm && (
-        <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 shadow-sm space-y-4">
+        <Panel subject="História" className="ni-panel p-6 space-y-4 mb-4">
+          <h3 className="font-display font-medium text-base text-[var(--text)]">Novo Registro de Erro</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-              <label className="block text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-1.5">Tópico</label>
+              <label className="block text-xs font-medium text-[var(--dim)] mb-1">Tópico</label>
               <select
                 value={form.topicId}
                 onChange={(e) => setForm((f) => ({ ...f, topicId: e.target.value }))}
-                className="w-full bg-transparent border border-zinc-300 dark:border-zinc-700 rounded-lg px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-indigo-500"
+                className="w-full bg-[var(--surface2)] text-[var(--text)] border border-[var(--line)] rounded-lg px-3 py-2 text-xs outline-none focus:border-[var(--primary)]"
               >
                 {mockTopics.map((t) => (
-                  <option key={t.id} value={t.id}>{t.name}</option>
+                  <option key={t.id} value={t.id} className="text-zinc-900 dark:text-zinc-100 bg-zinc-50 dark:bg-zinc-900">{t.name}</option>
                 ))}
               </select>
             </div>
             <div>
-              <label className="block text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-1.5">Tipo de erro</label>
+              <label className="block text-xs font-medium text-[var(--dim)] mb-1">Tipo de erro</label>
               <select
                 value={form.type}
                 onChange={(e) => setForm((f) => ({ ...f, type: e.target.value as ErrorLog['type'] }))}
-                className="w-full bg-transparent border border-zinc-300 dark:border-zinc-700 rounded-lg px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-indigo-500"
+                className="w-full bg-[var(--surface2)] text-[var(--text)] border border-[var(--line)] rounded-lg px-3 py-2 text-xs outline-none focus:border-[var(--primary)]"
               >
                 {Object.entries(TYPE_LABELS).map(([value, label]) => (
-                  <option key={value} value={value}>{label}</option>
+                  <option key={value} value={value} className="text-zinc-900 dark:text-zinc-100 bg-zinc-50 dark:bg-zinc-900">{label}</option>
                 ))}
               </select>
             </div>
           </div>
           <div>
-            <label className="block text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-1.5">O que aconteceu?</label>
+            <label className="block text-xs font-medium text-[var(--dim)] mb-1">O que aconteceu no raciocínio?</label>
             <textarea
               value={form.notes}
               onChange={(e) => setForm((f) => ({ ...f, notes: e.target.value }))}
               rows={3}
-              placeholder="Descreva o raciocínio que te levou ao erro..."
-              className="w-full bg-transparent border border-zinc-300 dark:border-zinc-700 rounded-lg px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-indigo-500"
+              placeholder="Descreva o passo específico onde o raciocínio divergiu do gabarito..."
+              className="w-full bg-[var(--surface2)] text-[var(--text)] border border-[var(--line)] rounded-lg px-3 py-2 text-xs outline-none focus:border-[var(--primary)]"
             />
           </div>
-          <button
-            onClick={addLog}
-            disabled={!form.notes.trim()}
-            className="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 disabled:bg-zinc-300 dark:disabled:bg-zinc-700 text-white rounded-lg font-medium transition-colors"
-          >
-            Salvar
-          </button>
-        </div>
+          <div className="flex gap-2">
+            <button
+              onClick={addLog}
+              disabled={!form.notes.trim()}
+              className="px-4 py-2 bg-[var(--primary)] text-[var(--wash)] disabled:opacity-50 rounded-lg text-xs font-semibold transition-opacity"
+            >
+              Salvar Registro
+            </button>
+            <button
+              onClick={() => setShowForm(false)}
+              className="px-3 py-2 border border-[var(--line)] rounded-lg text-xs text-[var(--dim)] hover:text-[var(--text)]"
+            >
+              Cancelar
+            </button>
+          </div>
+        </Panel>
       )}
 
-      <div className="flex gap-2 flex-wrap">
-        <button
-          onClick={() => setTypeFilter('all')}
-          className={`px-4 py-2 rounded-lg text-sm font-medium border transition-colors ${
-            typeFilter === 'all'
-              ? 'bg-indigo-600 border-indigo-600 text-white'
-              : 'border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-50 dark:hover:bg-zinc-800'
-          }`}
-        >
-          Todos ({logs.length})
-        </button>
-        {Object.entries(TYPE_LABELS).map(([value, label]) => {
-          const count = countsByType[value as ErrorLog['type']];
-          if (!count) return null;
-          return (
-            <button
-              key={value}
-              onClick={() => setTypeFilter(value as ErrorLog['type'])}
-              className={`px-4 py-2 rounded-lg text-sm font-medium border transition-colors ${
-                typeFilter === value
-                  ? 'bg-indigo-600 border-indigo-600 text-white'
-                  : 'border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-50 dark:hover:bg-zinc-800'
-              }`}
-            >
-              {label} ({count})
-            </button>
-          );
-        })}
-      </div>
-
-      <div className="space-y-4">
-        {filtered.map((log, index) => {
+      {/* List of error logs */}
+      <div className="space-y-3">
+        {filtered.map((log) => {
           const topic = mockTopics.find((t) => t.id === log.topicId);
-          const mConfig = getMotionConfigForSubject(topic?.subject);
+          const subPalette = PALETTES[topic?.subject ?? 'História'] ?? PALETTES.História;
+          const SubjIcon = SUBJECT_ICONS[topic?.subject ?? 'História'] ?? BookX;
+
           return (
-            <motion.div
+            <Panel
               key={log.id}
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.04, duration: 0.3 }}
-              whileHover={mConfig.hoverProps.whileHover}
-              data-geometry={topic ? getSubjectProfile(topic.subject).fieldType : undefined}
-              className="bg-surface-default border border-border-subtle rounded-xl p-5 shadow-soft-sm transition-colors"
+              subject={topic?.subject ?? 'História'}
+              interactive
+              className="ni-panel p-5 transition-colors"
             >
-              <div className="flex items-center justify-between mb-3">
-                <div className="flex items-center gap-3">
-                  <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-rose-50 dark:bg-rose-900/20 text-rose-700 dark:text-rose-300">
+              <div className="flex items-center justify-between mb-2">
+                <div className="flex items-center gap-2.5">
+                  <span
+                    className="text-[10px] font-mono font-semibold px-2 py-0.5 rounded-full flex items-center gap-1"
+                    style={{ backgroundColor: subPalette.primary, color: subPalette.wash }}
+                  >
+                    <SubjIcon className="w-3 h-3" />
                     {TYPE_LABELS[log.type]}
                   </span>
-                  <span className="text-sm font-medium">{topic?.name ?? 'Tópico removido'}</span>
+                  <span className="font-display font-medium text-sm text-[var(--text)]">{topic?.name ?? 'Tópico'}</span>
                 </div>
-                <span className="text-xs text-zinc-400">{new Date(log.date).toLocaleDateString('pt-BR')}</span>
+                <span className="text-[11px] font-mono text-[var(--dim)]">{new Date(log.date).toLocaleDateString('pt-BR')}</span>
               </div>
-              <p className="text-sm text-zinc-600 dark:text-zinc-300 mb-1">{log.breakPoint || log.notes}</p>
+
+              <p className="text-xs text-[var(--text)] leading-relaxed mb-1">{log.breakPoint || log.notes}</p>
               {log.breakPoint && log.notes && (
-                <p className="text-xs text-zinc-400 mb-3">{log.notes}</p>
+                <p className="text-[11px] text-[var(--dim)] mb-2">{log.notes}</p>
               )}
               {log.evidence && (
-                <p className="text-xs text-zinc-500 mb-3">Evidência: {log.evidence}</p>
+                <p className="text-[11px] text-[var(--dim)] mb-2">Evidência: <span className="text-[var(--text)]">{log.evidence}</span></p>
               )}
               {log.confidence && (
-                <p className="text-xs text-zinc-400 mb-3">{CONFIDENCE_LABELS[log.confidence]}</p>
+                <p className="text-[11px] font-mono text-[var(--dim)] mb-2">{CONFIDENCE_LABELS[log.confidence]}</p>
               )}
+
               {log.aiHypothesis && (
-                <div className="flex items-start p-3 rounded-lg bg-indigo-50 dark:bg-indigo-900/20 text-indigo-800 dark:text-indigo-300 text-sm mb-3">
-                  <Sparkles className="w-4 h-4 mr-2 mt-0.5 shrink-0" />
-                  <AiText text={log.aiHypothesis} className="flex-1" />
+                <div className="mt-3 p-3 rounded-lg border border-[var(--primary)]/30 bg-[var(--primary)]/10 text-xs text-[var(--text)]">
+                  <div className="flex items-start gap-2">
+                    <Sparkles className="w-4 h-4 text-[var(--primary)] shrink-0 mt-0.5" />
+                    <AiText text={log.aiHypothesis} className="flex-1" />
+                  </div>
                 </div>
               )}
               {!log.aiHypothesis && generatingHypothesisFor === log.id && (
-                <div className="flex items-center p-3 rounded-lg bg-zinc-50 dark:bg-zinc-800/50 text-zinc-500 text-sm mb-3">
-                  <Sparkles className="w-4 h-4 mr-2 shrink-0 animate-pulse" />
-                  Gerando hipótese com IA...
+                <div className="mt-3 flex items-center p-2.5 rounded-lg bg-[var(--surface2)] text-xs text-[var(--dim)]">
+                  <Sparkles className="w-3.5 h-3.5 mr-2 animate-pulse text-[var(--primary)]" />
+                  Gerando hipótese analítica com IA...
                 </div>
               )}
 
               {log.proposedIntervention && (
-                <div className="p-3 rounded-lg bg-zinc-50 dark:bg-zinc-800/50 text-sm">
-                  <div className="flex items-start mb-2">
-                    <Stethoscope className="w-4 h-4 mr-2 mt-0.5 shrink-0 text-zinc-500" />
+                <div className="mt-3 p-3 rounded-lg bg-[var(--surface2)] border border-[var(--line)] text-xs">
+                  <div className="flex items-start gap-2 mb-2">
+                    <Stethoscope className="w-4 h-4 text-[var(--primary)] shrink-0 mt-0.5" />
                     <div>
-                      <p className="font-medium text-zinc-700 dark:text-zinc-300">{INTERVENTION_LABELS[log.proposedIntervention.type]}</p>
-                      <p className="text-zinc-500">{log.proposedIntervention.description}</p>
+                      <p className="font-semibold text-[var(--text)]">{INTERVENTION_LABELS[log.proposedIntervention.type]}</p>
+                      <p className="text-[var(--dim)] mt-0.5">{log.proposedIntervention.description}</p>
                     </div>
                   </div>
                   {(!log.interventionStatus || log.interventionStatus === 'pendente') && (
                     <div className="flex gap-2 mt-2">
                       <button
                         onClick={() => setInterventionStatus(log, 'concluida')}
-                        className="px-3 py-1.5 rounded-full text-xs font-medium bg-emerald-600 hover:bg-emerald-700 text-white"
+                        className="px-2.5 py-1 rounded text-xs font-semibold bg-emerald-600 text-white hover:bg-emerald-700 transition-colors"
                       >
                         Marcar como feita
                       </button>
                       <button
                         onClick={() => setInterventionStatus(log, 'recusada')}
-                        className="px-3 py-1.5 rounded-full text-xs font-medium border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-800"
+                        className="px-2.5 py-1 rounded text-xs font-medium border border-[var(--line)] text-[var(--dim)] hover:text-[var(--text)]"
                       >
                         Não vou fazer
                       </button>
                     </div>
                   )}
                   {log.interventionStatus === 'concluida' && !log.outcomeRating && (
-                    <div className="flex gap-2 mt-2 flex-wrap">
-                      <span className="text-xs text-zinc-500 self-center mr-1">Como foi?</span>
+                    <div className="flex gap-2 mt-2 flex-wrap items-center">
+                      <span className="text-[11px] text-[var(--dim)] mr-1">Como foi?</span>
                       {(Object.entries(OUTCOME_LABELS) as [NonNullable<ErrorLog['outcomeRating']>, string][]).map(([value, label]) => (
                         <button
                           key={value}
                           onClick={() => setOutcomeRating(log, value)}
-                          className="px-3 py-1.5 rounded-full text-xs font-medium border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-800"
+                          className="px-2 py-0.5 rounded text-xs border border-[var(--line)] text-[var(--dim)] hover:border-[var(--primary)] hover:text-[var(--text)] transition-colors"
                         >
                           {label}
                         </button>
@@ -319,20 +363,20 @@ export default function Erros() {
                     </div>
                   )}
                   {log.interventionStatus === 'concluida' && log.outcomeRating && (
-                    <p className="text-xs text-emerald-600 dark:text-emerald-400 mt-2">Feita — {OUTCOME_LABELS[log.outcomeRating]}</p>
+                    <p className="text-xs text-emerald-500 mt-2 font-medium">Feita — {OUTCOME_LABELS[log.outcomeRating]}</p>
                   )}
                   {log.interventionStatus === 'recusada' && (
-                    <p className="text-xs text-zinc-400 mt-2">Recusada</p>
+                    <p className="text-xs text-[var(--dim)] mt-2">Recusada</p>
                   )}
                 </div>
               )}
-            </motion.div>
+            </Panel>
           );
         })}
 
         {filtered.length === 0 && (
-          <div className="text-center py-12 bg-zinc-50 dark:bg-zinc-900/50 rounded-xl border border-dashed border-zinc-200 dark:border-zinc-800">
-            <p className="text-zinc-500">Nenhum erro registrado nessa categoria.</p>
+          <div className="text-center py-12 border border-dashed border-[var(--line)] rounded-xl text-[var(--dim)] text-xs">
+            Nenhum erro registrado nessa categoria.
           </div>
         )}
       </div>

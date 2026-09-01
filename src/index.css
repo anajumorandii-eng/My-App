@@ -240,6 +240,135 @@ html, body {
   transition: background-color 900ms cubic-bezier(0.4, 0, 0.2, 1), color 900ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* The production route shell is intentionally quieter than Hoje's
+   recommendation field: it brings the subject identity to every screen
+   without turning data tables, editors and long reading views into a hero. */
+.crivo-route-shell {
+  min-height: 100%;
+}
+
+.crivo-route-shell::after {
+  content: '';
+  position: absolute;
+  inset: 0 auto 0 0;
+  z-index: 2;
+  width: 3px;
+  pointer-events: none;
+  background: linear-gradient(to bottom, transparent 2rem, var(--subject-primary) 20%, var(--subject-secondary) 78%, transparent);
+  opacity: .72;
+}
+
+.crivo-route-shell [data-crivo-route-kind='practice'] { --route-accent: var(--subject-primary); }
+.crivo-route-shell [data-crivo-route-kind='library'] { --route-accent: var(--subject-secondary); }
+.crivo-route-shell [data-crivo-route-kind='analysis'] { --route-accent: var(--subject-focus-accent); }
+.crivo-route-shell [data-crivo-route-kind='decision'] { --route-accent: var(--subject-emissive); }
+.crivo-route-shell [data-crivo-route-kind='account'],
+.crivo-route-shell [data-crivo-route-kind='admin'] { --route-accent: var(--subject-primary); }
+
+/* The prototype's quick-action cards are still production-facing through
+   the gallery. Their glyphs need to read as actions, not tiny navigation
+   arrows: reserve a proper optical box and keep the stroke crisp. */
+.ni-card-row .ni-mini .ni-icon-depth {
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+}
+
+.ni-card-row .ni-mini .ni-icon-depth svg {
+  width: 17px;
+  height: 17px;
+  stroke-width: 2.25;
+}
+
+/* ---------------------------------------------------------------------
+ * Application shell — light mode and mobile use the same 1024px seam as
+ * Tailwind's `lg` utilities. The prototype keeps its own layout; only the
+ * production shell receives these overrides.
+ * ------------------------------------------------------------------- */
+.crivo-app-shell {
+  display: flex;
+  grid-template-columns: none;
+  background:
+    radial-gradient(58rem 36rem at 100% -8%, color-mix(in srgb, var(--subject-primary, var(--ember-400)) 13%, transparent), transparent 66%),
+    var(--background-base);
+}
+
+.crivo-app-shell.is-light {
+  --ni-ink: #f7f1e7;
+  --ni-surface: #fffaf2;
+  --ni-surface2: #f2e7d7;
+  --ni-line: rgba(63, 48, 32, .16);
+  --ni-text: #262019;
+  --ni-dim: #665a4c;
+  --ni-faint: #8f8272;
+  background:
+    radial-gradient(48rem 30rem at 6% -6%, rgba(182, 73, 82, .12), transparent 65%),
+    radial-gradient(52rem 34rem at 100% 0%, rgba(46, 124, 94, .12), transparent 68%),
+    #f7f1e7;
+}
+
+.crivo-app-shell.is-light .ni-rail {
+  background: linear-gradient(180deg, rgba(255, 248, 238, .94), rgba(238, 247, 238, .9));
+  border-right-color: rgba(84, 57, 34, .14);
+  box-shadow: 10px 0 30px rgba(75, 52, 32, .05);
+}
+
+.crivo-app-shell.is-light .ni-rail .ni-icon-depth {
+  color: #70451f;
+  filter: none;
+}
+
+.crivo-app-shell.is-light .ni-rail .ni-rail-scroll button {
+  color: #665a4c;
+}
+
+.crivo-app-shell.is-light .ni-rail .ni-rail-scroll button:hover,
+.crivo-app-shell.is-light .ni-rail .ni-rail-scroll button.active {
+  color: #292018;
+  background: linear-gradient(90deg, rgba(167, 84, 55, .13), rgba(50, 126, 95, .10));
+}
+
+.crivo-app-shell.is-light .ni-panel {
+  background:
+    linear-gradient(130deg, rgba(255, 232, 219, .66), transparent 43%),
+    linear-gradient(312deg, rgba(220, 241, 226, .64), transparent 54%),
+    rgba(255, 252, 246, .92);
+  border-color: rgba(100, 67, 39, .17);
+  box-shadow: inset 0 1px rgba(255, 255, 255, .95), 0 12px 32px rgba(62, 45, 28, .07);
+}
+
+@media (max-width: 1023px) {
+  .crivo-app-shell {
+    display: block;
+    min-height: 100dvh;
+  }
+
+  .crivo-app-shell .ni-rail {
+    display: flex;
+    position: fixed;
+    inset: 0 auto 0 0;
+    z-index: 50;
+    width: min(19rem, calc(100vw - 3rem));
+    height: 100dvh;
+    padding-bottom: max(1rem, env(safe-area-inset-bottom));
+  }
+
+  .crivo-main-shell {
+    min-height: 100dvh;
+    overflow-x: clip;
+  }
+
+  .crivo-app-shell .crivo-route-shell {
+    min-height: calc(100dvh - 3.5rem);
+  }
+}
+
+@media (max-width: 420px) {
+  .crivo-app-shell .crivo-route-shell > [data-crivo-route] {
+    min-width: 0;
+  }
+}
+
 .dark [data-testid="subject-atmosphere"] {
   --subject-bg: var(--subject-dark-bg);
   --subject-surface: var(--subject-dark-surface);

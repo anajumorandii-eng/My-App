@@ -1,0 +1,148 @@
+/* Brand shell: derived from the app icon. Subject colors remain inside learning signals only. */
+.ni-prototype {
+  --primary: #d09b5d !important;
+  --secondary: #f2d18a !important;
+  --wash: rgba(104, 19, 36, .38) !important;
+  --ink: #090b0b;
+  --surface: #151211;
+  --surface2: #1c211d;
+  --line: rgba(233, 208, 157, .16);
+  --text: #f5ecdc;
+  --dim: #b8ad9a;
+  --faint: #847968;
+  background:
+    radial-gradient(56% 66% at 7% 2%, rgba(129, 17, 38, .42), transparent 68%),
+    radial-gradient(52% 72% at 94% 87%, rgba(0, 68, 57, .42), transparent 68%),
+    radial-gradient(35% 44% at 63% 42%, rgba(171, 104, 42, .09), transparent 74%),
+    #090b0b;
+}
+
+.ni-top {
+  background: linear-gradient(98deg, rgba(24, 7, 12, .78), rgba(5, 30, 26, .65));
+  border-bottom-color: rgba(235, 210, 163, .14);
+}
+
+.ni-panel {
+  background:
+    linear-gradient(128deg, rgba(122, 20, 38, .17), transparent 38%),
+    linear-gradient(312deg, rgba(2, 74, 61, .18), transparent 48%),
+    rgba(17, 20, 18, .74);
+  border-color: rgba(233, 208, 157, .18);
+  box-shadow: inset 1px 1px rgba(255, 243, 217, .07), inset -1px -1px rgba(0, 26, 22, .24), 0 22px 50px rgba(0, 0, 0, .21);
+  backdrop-filter: blur(18px) saturate(1.15);
+}
+
+.ni-primary {
+  background: linear-gradient(125deg, #e9bc76 0%, #c88b4b 48%, #f0d59a 100%);
+  box-shadow: 0 13px 30px rgba(194, 117, 46, .26), inset 0 1px rgba(255, 249, 224, .52);
+}
+
+.ni-subjects button.active {
+  border-color: rgba(231, 193, 123, .78);
+  background: linear-gradient(110deg, rgba(188, 112, 54, .18), rgba(0, 94, 72, .16));
+}
+
+.ni-chart { background: repeating-linear-gradient(0deg, transparent 0 27px, rgba(238, 213, 168, .075) 28px); }
+.ni-trajectory p span, .ni-settings b { color: #d8bb7b; }
+.ni-switcher { background: linear-gradient(110deg, #1b0d12, #0a2922); border-color: rgba(236, 209, 156, .25); }
+
+/* The rail is a quiet path through the app: no icon containers or per-section rainbow. */
+.ni-rail {
+  background: linear-gradient(180deg, rgba(27, 8, 14, .72), rgba(3, 38, 31, .68));
+  border-right-color: rgba(233, 208, 157, .11);
+}
+
+.ni-rail .ni-icon-depth {
+  --rail-tint: #dcb879 !important;
+  width: 25px;
+  height: 25px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  color: rgba(241, 217, 168, .72);
+}
+
+.ni-rail .ni-icon-depth svg { width: 17px; height: 17px; stroke-width: 1.45; }
+.ni-rail .ni-rail-scroll button:hover .ni-icon-depth { color: #f5d494; filter: drop-shadow(0 0 7px rgba(220, 154, 79, .34)); }
+.ni-rail .ni-rail-scroll button.active { border-color: transparent; background: linear-gradient(90deg, rgba(194, 84, 64, .13), rgba(22, 119, 91, .08)); box-shadow: inset 2px 0 #e0b36d; }
+.ni-rail .ni-rail-scroll button.active .ni-icon-depth { color: #ffe0a0; filter: drop-shadow(0 0 8px rgba(229, 177, 91, .45)); }
+.ni-rail .ni-mark { border-color: rgba(236, 194, 122, .62); background: linear-gradient(145deg, rgba(124, 20, 38, .52), rgba(1, 67, 55, .42)); color: #f0c87e; }
+
+.ni-prototype.is-light {
+  --ink: #f3eadb;
+  --surface: #fff9ee;
+  --surface2: #eee0ca;
+  --line: rgba(89, 56, 34, .18);
+  --text: #281c16;
+  --dim: #6f6255;
+  --faint: #988878;
+  background: radial-gradient(56% 66% at 7% 2%, rgba(149, 45, 56, .19), transparent 68%), radial-gradient(52% 72% at 94% 87%, rgba(16, 104, 82, .18), transparent 68%), #f3eadb;
+}
+.ni-prototype.is-light .ni-top { background: linear-gradient(98deg, rgba(255, 244, 231, .84), rgba(234, 245, 234, .72)); }
+.ni-prototype.is-light .ni-panel { background: linear-gradient(128deg, rgba(255, 230, 221, .78), transparent 45%), linear-gradient(312deg, rgba(213, 241, 226, .76), transparent 52%), rgba(255, 251, 241, .78); border-color: rgba(112, 72, 39, .18); }
+.ni-prototype.is-light .ni-rail { background: linear-gradient(180deg, rgba(255, 239, 229, .82), rgba(224, 240, 229, .77)); }
+.ni-prototype.is-light .ni-rail .ni-icon-depth { color: #8c5b29; }
+
+/* Física troca o mapa abstrato por uma bancada óptica: um único fenômeno, sem competição visual. */
+.ni-analysis-map:has(.ni-core-physics) { min-height: 385px; }
+.ni-analysis-map:has(.ni-core-physics) > h2 { max-width: 360px; }
+.ni-analysis-map:has(.ni-core-physics) .ni-map {
+  max-width: none;
+  height: 218px;
+  margin-top: 7px;
+  border-radius: 12px;
+  background:
+    radial-gradient(ellipse at 76% 48%, rgba(232, 183, 106, .19), transparent 25%),
+    linear-gradient(112deg, transparent 0 43%, rgba(211, 156, 73, .10) 49%, transparent 56%),
+    linear-gradient(90deg, rgba(93, 17, 31, .12), rgba(3, 70, 58, .16));
+  border: 1px solid rgba(232, 204, 147, .10);
+}
+.ni-analysis-map:has(.ni-core-physics) .ni-map i,
+.ni-analysis-map:has(.ni-core-physics) .ni-map b { display: none; }
+.ni-analysis-map:has(.ni-core-physics) > .ni-core-physics {
+  right: 8px;
+  top: 82px;
+  width: 294px;
+  height: 220px;
+  opacity: 1;
+  filter: drop-shadow(0 18px 22px rgba(0, 0, 0, .43));
+}
+.ni-analysis-map:has(.ni-core-physics) > p { position: relative; z-index: 1; max-width: 315px; margin-top: 10px; }
+
+/* Foundation comparison: intentionally different information hierarchies for /?screen=hoje. */
+.ni-foundation { display: grid; gap: 16px; }
+.ni-foundation--trilho { grid-template-columns: minmax(0, 1.25fr) minmax(280px, .75fr); }
+.ni-trilho-lead { position: relative; min-height: 400px; padding: 27px; overflow: hidden; }
+.ni-trilho-lead h2, .ni-foco-stage h2 { max-width: 550px; margin: 14px 0 10px; font: 600 italic clamp(35px, 4vw, 57px)/.96 Newsreader, Georgia, serif; letter-spacing: -.04em; }
+.ni-trilho-lead p { max-width: 450px; color: var(--dim); font-size: 13px; line-height: 1.58; }
+.ni-trilho-lead .ni-artifact { right: 72px; top: 77px; transform: scale(1.28); transform-origin: top right; }
+.ni-trilho-signal { position: absolute; right: 26px; bottom: 24px; left: 26px; display: flex; align-items: center; gap: 9px; color: var(--faint); font: 9px ui-monospace, SFMono-Regular, monospace; text-transform: uppercase; letter-spacing: .08em; }
+.ni-trilho-signal i { height: 1px; flex: 1; background: linear-gradient(90deg, var(--primary), rgba(233,208,157,.08)); }
+.ni-trilho-evidence { padding: 22px; display: flex; flex-direction: column; gap: 12px; }
+.ni-trilho-evidence > div { display: grid; grid-template-columns: 27px 1fr 74px 45px; align-items: center; gap: 8px; padding: 10px 0; border-bottom: 1px solid var(--line); color: var(--dim); font-size: 11px; }
+.ni-trilho-evidence span { color: var(--primary); font: 9px ui-monospace, SFMono-Regular, monospace; }
+.ni-trilho-evidence i { height: 3px; width: var(--size); border-radius: 9px; background: linear-gradient(90deg, var(--primary), var(--secondary)); }
+.ni-trilho-evidence em { color: var(--secondary); font: 9px ui-monospace, SFMono-Regular, monospace; font-style: normal; text-align: right; }
+.ni-trilho-trajectory { grid-column: 1 / -1; padding: 19px 22px; }
+.ni-trilho-trajectory h3 { margin: 6px 0 15px; font: 500 24px Newsreader, Georgia, serif; }
+.ni-track { height: 66px; position: relative; display: flex; align-items: center; gap: 0; border-bottom: 1px solid var(--line); }
+.ni-track:before { content: ''; position: absolute; left: 2%; right: 2%; top: 31px; height: 1px; background: var(--line); }
+.ni-track i, .ni-track b { position: relative; z-index: 1; display: block; height: 14px; width: 14px; border: 2px solid var(--primary); border-radius: 50%; background: var(--surface); box-shadow: 0 0 14px color-mix(in srgb, var(--primary) 45%, transparent); }
+.ni-track i:nth-child(1) { margin-left: 8%; }.ni-track i:nth-child(2) { margin-left: 30%; }.ni-track i:nth-child(3) { margin-left: 27%; }
+.ni-track b { margin-left: auto; margin-right: 8%; border-color: var(--secondary); background: var(--secondary); }
+.ni-trilho-trajectory p { margin: 14px 0 0; color: var(--dim); font-size: 11px; }.ni-trilho-trajectory p b { color: var(--secondary); }
+
+.ni-foundation--foco { grid-template-columns: minmax(0, 1.18fr) minmax(280px, .82fr); align-items: start; }
+.ni-foco-stage { min-height: 500px; padding: 34px; position: relative; overflow: hidden; text-align: center; }
+.ni-foco-stage > .ni-kicker, .ni-foco-stage > p { justify-content: center; margin-left: auto; margin-right: auto; }
+.ni-foco-stage h2 { max-width: 570px; margin-left: auto; margin-right: auto; }.ni-foco-stage p { max-width: 505px; color: var(--dim); font-size: 13px; line-height: 1.58; }
+.ni-foco-stage .ni-artifact { position: relative; top: auto; right: auto; height: 180px; width: 180px; margin: 26px auto 0; transform: none; }
+.ni-foco-stage .ni-primary { position: relative; z-index: 1; }.ni-foco-stage .ni-link { position: relative; z-index: 1; }
+.ni-foco-support { display: grid; gap: 16px; }.ni-foco-support > article { min-height: 242px; padding: 21px; }.ni-foco-support h3 { margin: 7px 0; font: 500 24px Newsreader, Georgia, serif; }.ni-foco-support p { color: var(--dim); font-size: 11px; line-height: 1.45; }
+.ni-foco-orbit { position: relative; height: 86px; margin: 11px 0; border: 1px solid color-mix(in srgb, var(--primary) 42%, transparent); border-radius: 50%; transform: rotate(-9deg); }.ni-foco-orbit:before, .ni-foco-orbit:after { content: ''; position: absolute; inset: 22px 10px; border: 1px solid color-mix(in srgb, var(--secondary) 55%, transparent); border-radius: 50%; }.ni-foco-orbit:after { inset: 34px 22px; }.ni-foco-orbit i, .ni-foco-orbit b { position: absolute; z-index: 1; height: 10px; width: 10px; border-radius: 50%; background: var(--primary); box-shadow: 0 0 14px var(--primary); }.ni-foco-orbit i { left: 18%; top: 24%; }.ni-foco-orbit b { right: 21%; bottom: 22%; background: var(--secondary); box-shadow: 0 0 14px var(--secondary); }
+.ni-foco-support button { width: 100%; display: flex; align-items: center; gap: 9px; padding: 11px 0; border: 0; border-bottom: 1px solid var(--line); background: transparent; color: var(--dim); text-align: left; font-size: 11px; }.ni-foco-support button b { color: var(--primary); font: 9px ui-monospace, SFMono-Regular, monospace; }.ni-foco-support button svg { width: 14px; margin-left: auto; color: var(--secondary); }
+.ni-foco-evidence { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; gap: 0 18px; padding: 20px 23px; }.ni-foco-evidence > .ni-kicker { grid-column: 1 / -1; margin-bottom: 8px; }.ni-foco-evidence > div { display: flex; justify-content: space-between; padding: 11px 0; border-bottom: 1px solid var(--line); color: var(--dim); font-size: 11px; }.ni-foco-evidence b { color: var(--secondary); font: 11px ui-monospace, SFMono-Regular, monospace; }
+
+@media (max-width: 900px) { .ni-foundation--trilho, .ni-foundation--foco { grid-template-columns: 1fr; }.ni-trilho-lead .ni-artifact { right: 45px; transform: scale(.9); opacity: .68; }.ni-trilho-trajectory, .ni-foco-evidence { grid-column: auto; } }
+@media (max-width: 560px) { .ni-trilho-lead { min-height: 440px; padding: 22px; }.ni-trilho-lead .ni-artifact { right: 7px; top: 106px; transform: scale(.62); opacity: .48; }.ni-trilho-evidence > div { grid-template-columns: 22px 1fr 55px 41px; }.ni-foco-stage { min-height: 470px; padding: 25px 18px; }.ni-foco-evidence { grid-template-columns: 1fr; }.ni-foco-stage .ni-artifact { opacity: .78; } }

@@ -1,5 +1,4 @@
 import React, { useMemo, useState } from 'react';
-import { mockTopics } from '../data/mockData';
 import { useAuth } from '../context/AuthContext';
 import { useUserMastery } from '../hooks/useUserMastery';
 import { useQuestions } from '../hooks/useQuestions';
@@ -10,11 +9,45 @@ import { ERROR_TYPE_LABELS, INTERVENTION_LABELS } from '../lib/errorLabels';
 import { AiText } from '../components/AiText';
 import { TopicMastery, ErrorLog } from '../types';
 import { applyReviewOutcome, qualityFromAnswerCorrectness } from '../lib/spacedRepetition';
-import { SubjectAtmosphere } from '../features/daily-plan/components/SubjectAtmosphere';
-import { getSubjectProfile } from '../design-system/crivoSubjects';
-import { getMotionConfigForSubject } from '../design-system/crivoMotionPresets';
 import { motion, AnimatePresence } from 'motion/react';
-import { HelpCircle, CheckCircle2, XCircle, RotateCcw, CloudOff, Sparkles, BadgeCheck, ExternalLink, Stethoscope, Check } from 'lucide-react';
+import {
+  CheckCircle2,
+  XCircle,
+  RotateCcw,
+  Sparkles,
+  BadgeCheck,
+  Stethoscope,
+  ArrowRight,
+  BookOpen,
+} from 'lucide-react';
+import { Panel } from '../components/ui/Panel';
+import { Button } from '../components/ui/Button';
+import { PALETTES } from '../prototypes/NucleoInstrumentalPrototype';
+import { SUBJECT_ICONS } from './Dashboard';
+
+function Metric({
+  label,
+  value,
+  bar = false,
+  warn = false,
+}: {
+  label: string;
+  value: string;
+  bar?: boolean;
+  warn?: boolean;
+}) {
+  return (
+    <div className="ni-metric">
+      <small>{label}</small>
+      <b className={warn ? 'warn' : ''}>{value}</b>
+      {bar && (
+        <i>
+          <span />
+        </i>
+      )}
+    </div>
+  );
+}
 
 export default function Questoes() {
   const { user } = useAuth();
@@ -73,30 +106,48 @@ export default function Questoes() {
     setSelectedOptionId(optionId);
     setHistory((h) => [...h, { questionId: question.id, correct }]);
 
-    // Responder uma questão é uma tentativa de recuperação ativa (retrieval
-    // practice — Roediger & Karpicke, 2006), então também alimenta o
-    // cronograma de repetição espaçada do tópico (spacedRepetition.ts), não
-    // só o nível de domínio: acertar adia a próxima revisão programada,
-    // errar traz ela de volta pra amanhã.
-    updateMastery((prev: TopicMastery[]) =>
-      prev.map((m) =>
-        m.topicId === question.topicId ? { ...m, ...applyReviewOutcome(m, qualityFromAnswerCorrectness(correct)) } : m
-      )
-    );
+    updateMastery(question.topicId, (current) => {
+      const existing: TopicMastery = current ?? {
+        topicId: question.topicId,
+        masteryLevel: 50,
+        uncertainty: 0.8,
+        consecutiveCorrect: 0,
+        lastAttemptScore: 0,
+        interval: 1,
+        easeFactor: 2.5,
+      };
+
+      const outcome = applyReviewOutcome(existing, qualityFromAnswerCorrectness(correct));
+      return {
+        ...existing,
+        masteryLevel: outcome.masteryLevel,
+        uncertainty: outcome.uncertainty,
+        lastAttemptScore: correct ? 100 : 0,
+        consecutiveCorrect: outcome.consecutiveCorrect,
+        interval: outcome.interval,
+        easeFactor: outcome.easeFactor,
+        nextReviewDate: outcome.nextReviewDate,
+        lastReviewedAt: outcome.lastReviewedAt,
+      };
+    });
 
     if (user) {
       addUserAttempt(user.uid, {
-        id: `attempt_${Date.now()}`,
         questionId: question.id,
-        topicId: question.topicId,
-        correct,
-        date: new Date().toISOString(),
-      }).catch((error) => console.error('Failed to save attempt:', error));
+        selectedOptionId: optionId,
+        isCorrect: correct,
+        timestamp: new Date().toISOString(),
+        examSource: question.examSource,
+      });
+    }
+
+    if (!correct) {
+      fetchDiagnosis(optionId);
     }
   };
 
   const nextQuestion = () => {
-    setIndex((i) => i + 1);
+    setIndex((i) => (i + 1) % pool.length);
     setSelectedOptionId(null);
     setDeepExplanation(null);
     resetDiagnosisState();
@@ -110,21 +161,24 @@ export default function Questoes() {
     resetDiagnosisState();
   };
 
-  const runDiagnosis = async () => {
-    if (!question || !selectedOptionId) return;
+  const fetchDiagnosis = async (optionId: string) => {
+    if (!question) return;
     setDiagnosing(true);
+    resetDiagnosisState();
     try {
-      const topic = mockTopics.find((t) => t.id === question.topicId);
-      const selectedOption = question.options.find((o) => o.id === selectedOptionId);
+      const selectedOption = question.options.find((o) => o.id === optionId);
       const correctOption = question.options.find((o) => o.id === question.correctOptionId);
-      const data = await requestAiText('error-hypothesis', {
-        topic: topic?.name ?? question.subject,
+      const data = await requestAiText('error-diagnosis', {
+        prompt: question.prompt,
         subject: question.subject,
-        questionPrompt: question.prompt,
         selectedAnswer: selectedOption?.text ?? '',
         correctAnswer: correctOption?.text ?? '',
+        baseExplanation: question.explanation,
       });
-      setDiagnosis(parseErrorDiagnosis(data.text));
+      const parsed = parseErrorDiagnosis(data.text);
+      if (parsed) {
+        setDiagnosis(parsed);
+      }
     } catch (error) {
       console.error('Failed to diagnose error:', error);
     } finally {
@@ -132,20 +186,24 @@ export default function Questoes() {
     }
   };
 
-  const confirmDiagnosis = () => {
-    if (!diagnosis || !question) return;
+  const saveErrorToLog = () => {
+    if (!question || !diagnosis || !selectedOptionId) return;
+    const selectedOption = question.options.find((o) => o.id === selectedOptionId);
+    const correctOption = question.options.find((o) => o.id === question.correctOptionId);
     const log: ErrorLog = {
-      id: `err_${Date.now()}`,
-      topicId: question.topicId,
+      id: `err_${question.id}_${Date.now()}`,
       questionId: question.id,
-      date: new Date().toISOString(),
-      type: diagnosis.type,
-      notes: 'Diagnosticado a partir de uma questão de prática (JUJU sugeriu, você confirmou).',
-      breakPoint: diagnosis.breakPoint,
-      evidence: diagnosis.evidence,
-      confidence: 'confirmado',
-      proposedIntervention: diagnosis.intervention,
-      interventionStatus: 'pendente',
+      topicId: question.topicId,
+      subject: question.subject,
+      prompt: question.prompt,
+      selectedAnswer: selectedOption?.text ?? '',
+      correctAnswer: correctOption?.text ?? '',
+      errorType: diagnosis.errorType,
+      rootCause: diagnosis.rootCause,
+      correction: diagnosis.correction,
+      intervention: diagnosis.intervention,
+      timestamp: new Date().toISOString(),
+      source: question.examSource,
     };
     if (user) {
       addUserErrorLog(user.uid, log).catch((error) => console.error('Failed to save error log:', error));
@@ -180,219 +238,210 @@ export default function Questoes() {
     }
   };
 
-  const activeProfile = question ? getSubjectProfile(question.subject) : null;
+  const palette = PALETTES[question?.subject ?? 'Matemática'] ?? PALETTES.Matemática;
+  const precisionPercent = history.length > 0 ? `${Math.round((correctCount / history.length) * 100)}%` : '—';
 
   return (
-    <SubjectAtmosphere subject={question?.subject} focus={0.3}>
-      <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500" data-geometry={activeProfile?.fieldType}>
-      <header>
-        <div className="flex items-center gap-2 mb-1.5">
-          <span className="w-2 h-2 rounded-full bg-ember-500 shadow-[0_0_8px_var(--color-ember-500)]" />
-          <span className="text-[11px] font-mono tracking-widest uppercase text-ember-600 dark:text-ember-400">Banco de Treino & Métricas · Crivo</span>
-        </div>
-        <h1 className="font-display text-3xl sm:text-4xl font-semibold italic text-text-primary tracking-tight flex items-center gap-3">
-          <HelpCircle className="w-7 h-7 text-action-primary" />
-          Questões & Tentativas
-        </h1>
-        <p className="text-text-secondary mt-1 max-w-2xl text-base">Pratique com feedback imediato, telemetria de resolução e diagnóstico de causas de erro.</p>
-        {!isPersisted && (
-          <p className="flex items-center text-xs text-text-muted mt-2">
-            <CloudOff className="w-3.5 h-3.5 mr-1.5" />
-            Modo demonstração — conecte sua conta Google em "Conexões Google" para salvar seu progresso de verdade.
-          </p>
+    <div
+      className="ni-main"
+      style={
+        {
+          '--primary': palette.primary,
+          '--secondary': palette.secondary,
+          '--wash': palette.wash,
+        } as React.CSSProperties
+      }
+    >
+      {/* Route Breadcrumb */}
+      <div className="ni-route">
+        <span>PRACTICE</span>
+        <i />
+        <span>QUESTÕES</span>
+        {question && (
+          <>
+            <i />
+            <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
+              <span className="w-6 h-6 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--wash)]">
+                {React.createElement(SUBJECT_ICONS[question.subject] ?? BookOpen, { className: 'w-3 h-3' })}
+              </span>
+              {(question?.subject ?? 'GERAL').toUpperCase()}
+            </span>
+          </>
         )}
-        {syncError && <p className="text-xs text-status-error mt-2">{syncError}</p>}
-        {questionsSyncError && <p className="text-xs text-status-error mt-2">{questionsSyncError}</p>}
-      </header>
+        <i /> <b>{question?.examSource ?? 'Banco de Questões'}</b>
+      </div>
 
-      <div className="flex items-center justify-between flex-wrap gap-4">
-        <div className="flex gap-2 flex-wrap">
-          {subjects.map((subject) => {
-            const active = subjectFilter === subject;
-            return (
-              <button
-                key={subject}
-                onClick={() => changeSubject(subject)}
-                className={`px-3 py-1.5 rounded-full text-xs font-mono tracking-wide transition-all ${
-                  active
-                    ? 'bg-action-primary text-warm-50 font-bold shadow-sm ring-1 ring-white/20'
-                    : 'border border-border-subtle hover:border-text-primary text-text-muted hover:text-text-primary bg-surface-default/70'
-                }`}
-              >
-                {subject.toUpperCase()}
-              </button>
-            );
-          })}
-          <button
-            onClick={toggleRealExams}
-            className={`flex items-center px-3 py-1.5 rounded-full text-xs font-mono tracking-wide transition-all ${
-              onlyRealExams
-                ? 'bg-status-success text-white font-bold shadow-sm ring-1 ring-white/20'
-                : 'border border-border-subtle hover:border-text-primary text-text-muted hover:text-text-primary bg-surface-default/70'
-            }`}
-          >
-            <BadgeCheck className="w-3.5 h-3.5 mr-1.5" />
-            SÓ QUESTÕES REAIS
-          </button>
+      {/* Main Title */}
+      <div className="ni-title">
+        <div>
+          <h1>Transforme tentativa em evidência.</h1>
+          <p>Cada resposta atualiza a leitura do seu domínio e calibra a repetição espaçada.</p>
         </div>
-        <div className="flex items-center gap-3 text-xs font-mono text-text-muted">
-          <span>
-            Acertos: <span className="font-bold text-status-success text-sm">{correctCount}</span> / {history.length}
-          </span>
-          <button onClick={resetSession} className="flex items-center hover:text-zinc-900 dark:hover:text-zinc-100">
-            <RotateCcw className="w-3.5 h-3.5 mr-1" />
-            Reiniciar
-          </button>
+        <div className="ni-state">
+          <i /> perfil {palette.family} · treino ativo
         </div>
       </div>
 
-      {!question ? (
-        <div className="text-center py-16 bg-zinc-50 dark:bg-zinc-900/50 rounded-2xl border border-dashed border-zinc-200 dark:border-zinc-800">
-          <p className="text-zinc-500">Nenhuma questão real disponível ainda para esse filtro. Tente outra matéria ou desligue "Só questões reais".</p>
-        </div>
-      ) : (
-      <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-8 shadow-sm">
-        <div className="flex items-center justify-between mb-6 flex-wrap gap-2">
-          <div className="flex items-center gap-2 flex-wrap">
-            <span className="text-xs font-semibold uppercase tracking-wide text-indigo-600 dark:text-indigo-400">
-              {question.subject} • {question.difficulty === 'easy' ? 'Fácil' : question.difficulty === 'medium' ? 'Médio' : 'Difícil'}
-            </span>
-            {question.examSource && (
-              <a
-                href={question.examSource.sourceUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center text-xs font-semibold px-2 py-0.5 rounded-full bg-emerald-50 dark:bg-emerald-900/20 text-emerald-700 dark:text-emerald-300 hover:underline"
-              >
-                <BadgeCheck className="w-3.5 h-3.5 mr-1" />
-                {question.examSource.board} {question.examSource.year}
-                <ExternalLink className="w-3 h-3 ml-1" />
-              </a>
-            )}
-          </div>
-          <span className="text-sm text-zinc-400">Questão {(index % pool.length) + 1} de {pool.length}</span>
-        </div>
-
-        <p className="text-lg font-medium mb-6 leading-relaxed">{question.prompt}</p>
-
-        <div className="space-y-3 mb-6">
-          {question.options.map((option) => {
-            const isSelected = selectedOptionId === option.id;
-            const isCorrectOption = option.id === question.correctOptionId;
-            let stateClasses = 'border-border-subtle bg-surface-default hover:border-action-primary/40';
-            if (answered && isCorrectOption) {
-              stateClasses = 'border-status-success bg-status-success/15 text-status-success';
-            } else if (answered && isSelected && !isCorrectOption) {
-              stateClasses = 'border-status-error bg-status-error/15 text-status-error';
-            }
-
-            return (
-              <motion.button
-                key={option.id}
-                whileHover={!answered ? { scale: 1.01, x: 3 } : undefined}
-                whileTap={!answered ? { scale: 0.99 } : undefined}
-                onClick={() => selectOption(option.id)}
-                disabled={answered}
-                className={`w-full text-left px-5 py-4 rounded-xl border transition-colors flex items-center justify-between shadow-soft-sm ${stateClasses}`}
-              >
-                <span>{option.text}</span>
-                {answered && isCorrectOption && <CheckCircle2 className="w-5 h-5 text-status-success shrink-0 ml-3" />}
-                {answered && isSelected && !isCorrectOption && <XCircle className="w-5 h-5 text-status-error shrink-0 ml-3" />}
-              </motion.button>
-            );
-          })}
-        </div>
-
-        {answered && (
-          <div
-            className={`p-4 rounded-xl mb-6 text-sm leading-relaxed ${
-              isCorrect
-                ? 'bg-emerald-50 dark:bg-emerald-900/20 text-emerald-800 dark:text-emerald-300'
-                : 'bg-rose-50 dark:bg-rose-900/20 text-rose-800 dark:text-rose-300'
-            }`}
-          >
-            <p className="font-semibold mb-1">{isCorrect ? 'Correto!' : 'Não foi dessa vez.'}</p>
-            <p>{question.explanation}</p>
-          </div>
-        )}
-
-        {answered && !isCorrect && !diagnosis && !diagnosisSaved && !diagnosisDismissed && (
-          <button
-            onClick={runDiagnosis}
-            disabled={diagnosing}
-            className="w-full flex items-center justify-center py-2.5 mb-6 border border-rose-200 dark:border-rose-800 text-rose-600 dark:text-rose-400 rounded-xl font-medium text-sm hover:bg-rose-50 dark:hover:bg-rose-900/20 disabled:opacity-50 transition-colors"
-          >
-            <Stethoscope className={`w-4 h-4 mr-2 ${diagnosing ? 'animate-pulse' : ''}`} />
-            {diagnosing ? 'Diagnosticando...' : 'Diagnosticar esse erro'}
-          </button>
-        )}
-
-        {diagnosis && (
-          <div className="p-4 rounded-xl mb-6 bg-zinc-50 dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700 text-sm">
-            <div className="flex items-center gap-2 mb-2">
-              <Stethoscope className="w-4 h-4 text-rose-500 shrink-0" />
-              <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-rose-100 dark:bg-rose-900/30 text-rose-700 dark:text-rose-300">
-                {ERROR_TYPE_LABELS[diagnosis.type]}
-              </span>
-              <span className="text-xs text-zinc-400">hipótese da IA — ainda não confirmada</span>
-            </div>
-            <p className="text-zinc-700 dark:text-zinc-300 mb-2">{diagnosis.breakPoint}</p>
-            {diagnosis.evidence && <p className="text-xs text-zinc-500 mb-3">Evidência: {diagnosis.evidence}</p>}
-            <p className="text-xs font-medium text-zinc-600 dark:text-zinc-400 mb-3">
-              Próximo passo sugerido ({INTERVENTION_LABELS[diagnosis.intervention.type]}): {diagnosis.intervention.description}
-            </p>
-            <div className="flex gap-2">
-              <button
-                onClick={confirmDiagnosis}
-                className="flex-1 py-2 bg-rose-600 hover:bg-rose-700 text-white rounded-lg text-sm font-medium transition-colors"
-              >
-                Registrar no Caderno de Erros
-              </button>
-              <button
-                onClick={dismissDiagnosis}
-                className="flex-1 py-2 border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 rounded-lg text-sm font-medium hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-colors"
-              >
-                Não foi isso
-              </button>
-            </div>
-          </div>
-        )}
-
-        {diagnosisSaved && (
-          <div className="flex items-center p-3 rounded-xl mb-6 text-sm bg-emerald-50 dark:bg-emerald-900/20 text-emerald-700 dark:text-emerald-300">
-            <Check className="w-4 h-4 mr-2 shrink-0" />
-            Registrado no Caderno de Erros.
-          </div>
-        )}
-
-        {answered && !deepExplanation && (
-          <button
-            onClick={fetchDeepExplanation}
-            disabled={loadingDeepExplanation}
-            className="w-full flex items-center justify-center py-2.5 mb-6 border border-indigo-200 dark:border-indigo-800 text-indigo-600 dark:text-indigo-400 rounded-xl font-medium text-sm hover:bg-indigo-50 dark:hover:bg-indigo-900/20 disabled:opacity-50 transition-colors"
-          >
-            <Sparkles className={`w-4 h-4 mr-2 ${loadingDeepExplanation ? 'animate-pulse' : ''}`} />
-            {loadingDeepExplanation ? 'Gerando explicação com IA...' : 'Aprofundar explicação com IA'}
-          </button>
-        )}
-
-        {deepExplanation && (
-          <div className="flex items-start p-4 rounded-xl mb-6 text-sm leading-relaxed bg-indigo-50 dark:bg-indigo-900/20 text-indigo-800 dark:text-indigo-300">
-            <Sparkles className="w-4 h-4 mr-2 mt-0.5 shrink-0" />
-            <AiText text={deepExplanation} className="flex-1" />
-          </div>
-        )}
-
+      {/* Subject Filter & Real Exams Toggle */}
+      <div className="ni-subjects">
+        {subjects.map((subject) => {
+          const active = subjectFilter === subject;
+          const Icon = SUBJECT_ICONS[subject] ?? BookOpen;
+          const subPalette = PALETTES[subject] ?? PALETTES.Matemática;
+          return (
+            <button
+              key={subject}
+              onClick={() => changeSubject(subject)}
+              style={
+                active
+                  ? { backgroundColor: subPalette.primary, color: subPalette.wash, display: 'inline-flex', alignItems: 'center', gap: '6px', borderRadius: '4px', padding: '2px 6px' }
+                  : { display: 'inline-flex', alignItems: 'center', gap: '6px' }
+              }
+            >
+              {subject !== 'Todas' && <Icon className="w-3 h-3" style={{ color: active ? subPalette.wash : subPalette.primary }} />}
+              <span>{subject}</span>
+            </button>
+          );
+        })}
         <button
-          onClick={nextQuestion}
-          disabled={!answered}
-          className="w-full py-3 bg-indigo-600 hover:bg-indigo-700 disabled:bg-zinc-300 dark:disabled:bg-zinc-700 text-white rounded-xl font-medium transition-colors"
+          onClick={toggleRealExams}
+          className={onlyRealExams ? 'active' : ''}
+          style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}
         >
-          Próxima questão
+          <BadgeCheck className="w-3 h-3" />
+          <span>Só Questões Reais</span>
         </button>
       </div>
+
+      {question ? (
+        <section className="ni-grid ni-grid--practice">
+          {/* Left Workspace Panel */}
+          <Panel subject={question.subject} interactive className="ni-panel ni-workspace">
+            <div className="flex items-center justify-between gap-4">
+              <span className="ni-kicker">
+                Questão {index + 1} de {pool.length} {question.examSource ? `· ${question.examSource}` : ''}
+              </span>
+              <span className="text-[10px] font-mono text-[var(--dim)]">
+                Acertos: <b className="text-[var(--text)]">{correctCount}</b> / {history.length}
+              </span>
+            </div>
+
+            <h2>Qual é o próximo passo do raciocínio?</h2>
+            <p>O feedback e a justificativa só aparecem após a sua tentativa.</p>
+
+            <div className="ni-question">{question.prompt}</div>
+
+            <div className="ni-options" style={{ gridTemplateColumns: '1fr' }}>
+              {question.options.map((option) => {
+                const isSelected = selectedOptionId === option.id;
+                const isCorrectOption = option.id === question.correctOptionId;
+                let styleExtra: React.CSSProperties = { textAlign: 'left', display: 'flex', alignItems: 'center', gap: '10px' };
+                if (answered) {
+                  if (isCorrectOption) {
+                    styleExtra = { ...styleExtra, borderColor: '#86dca5', color: '#86dca5', background: 'rgba(134,220,165,0.1)' };
+                  } else if (isSelected && !isCorrectOption) {
+                    styleExtra = { ...styleExtra, borderColor: '#e08391', color: '#e08391', background: 'rgba(224,131,145,0.1)' };
+                  }
+                }
+                return (
+                  <button
+                    key={option.id}
+                    disabled={answered}
+                    onClick={() => selectOption(option.id)}
+                    style={styleExtra}
+                    className="transition-colors hover:border-[var(--primary)] text-xs"
+                  >
+                    <b style={{ color: 'var(--primary)', font: 'inherit' }}>{option.id.toUpperCase()}</b>
+                    <span>{option.text}</span>
+                    {answered && isCorrectOption && <CheckCircle2 className="w-4 h-4 ml-auto text-status-success shrink-0" />}
+                    {answered && isSelected && !isCorrectOption && <XCircle className="w-4 h-4 ml-auto text-status-error shrink-0" />}
+                  </button>
+                );
+              })}
+            </div>
+
+            {answered && (
+              <div className="mt-6 flex flex-col gap-4">
+                <Button
+                  subject={question.subject}
+                  onClick={nextQuestion}
+                  className="ni-primary w-full"
+                >
+                  <ArrowRight className="w-4 h-4 mr-2" />
+                  Próxima Questão
+                </Button>
+
+                {/* Explanation & Diagnosis */}
+                <div className="p-4 rounded-xl border border-[var(--line)] bg-[var(--surface2)]/40 text-left space-y-3">
+                  <div className="flex items-center justify-between">
+                    <span className="ni-kicker" style={{ margin: 0 }}>Gabarito & Justificativa</span>
+                    {!isCorrect && (
+                      <button onClick={fetchDeepExplanation} className="ni-link text-xs">
+                        <Sparkles className="w-3.5 h-3.5 inline mr-1" />
+                        {loadingDeepExplanation ? 'Analisando...' : 'Explicar com IA'}
+                      </button>
+                    )}
+                  </div>
+                  <p className="text-xs text-[var(--dim)] leading-relaxed">{question.explanation}</p>
+
+                  {deepExplanation && (
+                    <div className="mt-3 p-3 rounded-lg border border-[var(--primary)]/30 bg-[var(--primary)]/10 text-xs">
+                      <AiText text={deepExplanation} />
+                    </div>
+                  )}
+
+                  {diagnosis && !diagnosisDismissed && (
+                    <div className="mt-3 p-3 rounded-lg border border-amber-500/30 bg-amber-500/10 text-xs text-amber-300">
+                      <div className="flex items-center justify-between mb-1">
+                        <b>Diagnóstico de Erro: {ERROR_TYPE_LABELS[diagnosis.errorType]}</b>
+                        {!diagnosisSaved ? (
+                          <button onClick={saveErrorToLog} className="underline text-amber-200">
+                            Salvar no Caderno de Erros
+                          </button>
+                        ) : (
+                          <span>Salvo ✓</span>
+                        )}
+                      </div>
+                      <p className="text-[11px] text-amber-200/80">{diagnosis.rootCause}</p>
+                    </div>
+                  )}
+                </div>
+              </div>
+            )}
+          </Panel>
+
+          {/* Right Session Side Panel */}
+          <Panel subject={question.subject} interactive className="ni-panel ni-session-side">
+            <span className="ni-kicker">Telemetria de Treino</span>
+            <div className="ni-timer" style={{ fontSize: '36px' }}>
+              {correctCount} / {history.length}
+            </div>
+
+            <Metric label="Taxa de Precisão" value={precisionPercent} bar />
+            <Metric label="Filtro Ativo" value={subjectFilter} />
+
+            <div className="ni-stack">
+              <span />
+              <span />
+              <span />
+            </div>
+
+            <p>Cada tentativa bem-sucedida estende o ciclo de revisão deste tópico no motor de eficiência.</p>
+
+            <div className="mt-6 pt-3 border-t border-[var(--line)] flex items-center justify-between text-xs text-[var(--dim)]">
+              <button onClick={resetSession} className="flex items-center gap-1.5 hover:text-[var(--text)]">
+                <RotateCcw className="w-3.5 h-3.5" />
+                Reiniciar Treino
+              </button>
+              <span>{pool.length} questões disponíveis</span>
+            </div>
+          </Panel>
+        </section>
+      ) : (
+        <div className="text-center py-16">
+          <p className="text-[var(--dim)]">Nenhuma questão encontrada para este filtro.</p>
+        </div>
       )}
-      </div>
-    </SubjectAtmosphere>
+    </div>
   );
 }

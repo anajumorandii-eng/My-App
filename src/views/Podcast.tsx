@@ -6,21 +6,9 @@ import { useUserProfile } from '../hooks/useUserProfile';
 import { usePodcastEpisodes } from '../hooks/usePodcastEpisodes';
 import { PodcastEpisode, UserProfile } from '../types';
 import { Headphones, Play, Square, Volume2, Sparkles, Clock, Mic, Loader2 } from 'lucide-react';
-import { getMotionConfigForSubject } from '../design-system/crivoMotionPresets';
-import { motion } from 'motion/react';
-
-const SUBJECT_COLORS: Record<string, string> = {
-  Biologia: 'bg-emerald-50 dark:bg-emerald-900/20 text-emerald-700 dark:text-emerald-300',
-  Matemática: 'bg-indigo-50 dark:bg-indigo-900/20 text-indigo-700 dark:text-indigo-300',
-  Física: 'bg-amber-50 dark:bg-amber-900/20 text-amber-700 dark:text-amber-300',
-  Química: 'bg-rose-50 dark:bg-rose-900/20 text-rose-700 dark:text-rose-300',
-  Geografia: 'bg-teal-50 dark:bg-teal-900/20 text-teal-700 dark:text-teal-300',
-  História: 'bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300',
-  Português: 'bg-violet-50 dark:bg-violet-900/20 text-violet-700 dark:text-violet-300',
-  Inglês: 'bg-sky-50 dark:bg-sky-900/20 text-sky-700 dark:text-sky-300',
-  Filosofia: 'bg-stone-50 dark:bg-stone-900/20 text-stone-700 dark:text-stone-300',
-  Sociologia: 'bg-purple-50 dark:bg-purple-900/20 text-purple-700 dark:text-purple-300',
-};
+import { Panel } from '../components/ui/Panel';
+import { PALETTES } from '../prototypes/NucleoInstrumentalPrototype';
+import { SUBJECT_ICONS } from './Dashboard';
 
 type DurationBucket = 'curto' | 'medio' | 'longo';
 
@@ -44,7 +32,6 @@ function orderByDurationPreference(
   return [...matching, ...rest];
 }
 
-// Curated subset of Gemini's prebuilt voices — matches server/podcast/routes.ts.
 const VOICE_OPTIONS: { value: string; label: string }[] = [
   { value: 'Charon', label: 'Charon (informativa)' },
   { value: 'Kore', label: 'Kore (firme)' },
@@ -54,6 +41,7 @@ const VOICE_OPTIONS: { value: string; label: string }[] = [
 const DEFAULT_VOICE = 'Charon';
 
 const speechSupported = typeof window !== 'undefined' && 'speechSynthesis' in window;
+const PODCAST_PALETTE = PALETTES.História;
 
 export default function Podcast() {
   const { profile, updateProfile } = useUserProfile();
@@ -177,113 +165,134 @@ export default function Podcast() {
   };
 
   return (
-    <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
-      <header>
-        <div className="flex items-center gap-2 mb-1.5">
-          <span className="w-2 h-2 rounded-full bg-ember-500 shadow-[0_0_8px_var(--color-ember-500)]" />
-          <span className="text-[11px] font-mono tracking-widest uppercase text-ember-600 dark:text-ember-400">Síntese Auditiva & Voz Neural · Crivo</span>
+    <div
+      className="ni-main"
+      style={{
+        '--primary': PODCAST_PALETTE.primary,
+        '--secondary': PODCAST_PALETTE.secondary,
+        '--wash': PODCAST_PALETTE.wash,
+      } as React.CSSProperties}
+    >
+      {/* Route Breadcrumb */}
+      <div className="ni-route">
+        <span>LIBRARY</span>
+        <i />
+        <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
+          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--wash)]">
+            <Headphones className="w-3 h-3" />
+          </span>
+          ÁUDIO NEURAL
+        </span>
+        <i />
+        <b>PODCAST CRIVO</b>
+      </div>
+
+      {/* Main Title */}
+      <div className="ni-title">
+        <div>
+          <h1>Atualidades em áudio, no seu ritmo.</h1>
+          <p>Resumos narrados com voz neural de alta fidelidade — perfeito para assimilar e revisar no trajeto.</p>
         </div>
-        <h1 className="font-display text-3xl sm:text-4xl font-semibold italic text-text-primary tracking-tight flex items-center gap-3">
-          <Headphones className="w-7 h-7 text-action-primary" />
-          Podcast Crivo
-        </h1>
-        <p className="text-text-secondary mt-1 max-w-2xl text-base">
-          Resumos em áudio dos seus tópicos, narrados com voz neural de alta fidelidade — ótimo para revisar no trajeto.
-        </p>
-        {episodesSyncError && <p className="text-xs text-status-error mt-2">{episodesSyncError}</p>}
-      </header>
+        <div className="ni-state">
+          <i /> {orderedEpisodes.length} episódios · Crivo Audio
+        </div>
+      </div>
+
+      {episodesSyncError && <p className="text-xs text-rose-500 mb-2">{episodesSyncError}</p>}
 
       {notice && (
-        <div className="p-4 rounded-xl bg-status-warning/10 text-status-warning border border-status-warning/20 text-sm">
+        <div className="p-3 mb-4 rounded-xl bg-amber-500/10 text-amber-300 border border-amber-500/20 text-xs">
           {notice}
         </div>
       )}
 
-      <div className="bg-surface-default border border-border-subtle rounded-2xl p-6 shadow-soft-sm space-y-4">
+      {/* Settings Panel */}
+      <Panel subject="História" className="ni-panel p-5 mb-4 space-y-4">
         <div>
-          <div className="flex items-center text-xs font-mono uppercase tracking-wider text-text-muted mb-2">
-            <Mic className="w-4 h-4 mr-2 text-ember-500" />
+          <div className="flex items-center text-xs font-mono uppercase tracking-wider text-[var(--dim)] mb-2">
+            <Mic className="w-3.5 h-3.5 mr-1.5 text-[var(--primary)]" />
             Voz do narrador
           </div>
-          <div className="flex flex-wrap gap-2">
+          <div className="ni-subjects" style={{ margin: 0 }}>
             {VOICE_OPTIONS.map(({ value, label }) => {
               const active = voiceName === value;
               return (
                 <button
                   key={value}
                   onClick={() => setVoiceName(value)}
-                  className={`px-3 py-1.5 rounded-full text-xs font-mono tracking-wide transition-all ${
+                  style={
                     active
-                      ? 'bg-action-primary text-warm-50 font-bold shadow-sm ring-1 ring-white/20'
-                      : 'border border-border-subtle hover:border-text-primary text-text-muted hover:text-text-primary bg-surface-default/70'
-                  }`}
+                      ? { backgroundColor: PODCAST_PALETTE.primary, color: PODCAST_PALETTE.wash, borderRadius: '4px', padding: '2px 8px' }
+                      : undefined
+                  }
                 >
                   {label}
                 </button>
               );
             })}
           </div>
-          <p className="text-xs text-zinc-500 mt-2">
-            Episódios já ouvidos com a voz atual tocam na hora; trocar a voz gera um novo áudio na próxima vez que você apertar play.
-          </p>
         </div>
 
-        <div className="border-t border-zinc-100 dark:border-zinc-800 pt-4">
-          <div className="flex items-center text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-2">
-            <Clock className="w-4 h-4 mr-2 text-indigo-500" />
+        <div className="border-t border-[var(--line)] pt-3">
+          <div className="flex items-center text-xs font-medium text-[var(--dim)] mb-2">
+            <Clock className="w-3.5 h-3.5 mr-1.5 text-[var(--primary)]" />
             Duração preferida
           </div>
-          <div className="flex flex-wrap gap-2">
-            {DURATION_BUCKETS.map(({ value, label }) => (
-              <button
-                key={value}
-                onClick={() => setDurationPreference(value)}
-                className={`px-3 py-1.5 rounded-lg text-xs font-medium border transition-colors ${
-                  durationPreference === value
-                    ? 'bg-indigo-600 border-indigo-600 text-white'
-                    : 'border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-50 dark:hover:bg-zinc-800'
-                }`}
-              >
-                {label}
-              </button>
-            ))}
+          <div className="ni-subjects" style={{ margin: 0 }}>
+            {DURATION_BUCKETS.map(({ value, label }) => {
+              const active = durationPreference === value;
+              return (
+                <button
+                  key={value}
+                  onClick={() => setDurationPreference(value)}
+                  style={
+                    active
+                      ? { backgroundColor: PODCAST_PALETTE.primary, color: PODCAST_PALETTE.wash, borderRadius: '4px', padding: '2px 8px' }
+                      : undefined
+                  }
+                >
+                  {label}
+                </button>
+              );
+            })}
           </div>
-          <p className="text-xs text-zinc-500 mt-2">
+          <p className="text-[11px] text-[var(--dim)] mt-2">
             {durationPreference
-              ? `Mostrando primeiro os ${matchingCount} de ${mockPodcastEpisodes.length} episódios nessa faixa de duração — os demais continuam logo abaixo, nada fica escondido.`
-              : 'Sem preferência: os episódios aparecem na ordem padrão. Escolha uma faixa para trazer episódios dessa duração para o topo da lista.'}
+              ? `Priorizando ${matchingCount} de ${mockPodcastEpisodes.length} episódios na faixa selecionada.`
+              : 'Mostrando episódios na ordem cronológica.'}
           </p>
         </div>
-      </div>
+      </Panel>
 
+      {/* Episode list */}
       <div className="space-y-3">
-        {orderedEpisodes.map((episode, index) => {
+        {orderedEpisodes.map((episode) => {
           const isPlaying = playingId === episode.id;
           const isLoadingAudio = loadingId === episode.id;
           const isGenerating = generatingId === episode.id;
           const aiScript = aiScripts[episode.id];
           const activeScript = aiScript ?? episode.script;
           const matchesPreference = durationPreference !== null && bucketOf(episode.durationMinutes) === durationPreference;
-          const mConfig = getMotionConfigForSubject(episode.subject);
+          const subPal = PALETTES[episode.subject] ?? PALETTES.Matemática;
+          const SubIcon = SUBJECT_ICONS[episode.subject] ?? Headphones;
+
           return (
-            <motion.div
+            <Panel
               key={episode.id}
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.04, duration: 0.3 }}
-              whileHover={mConfig.hoverProps.whileHover}
-              className="bg-surface-default border border-border-subtle rounded-xl p-5 shadow-soft-sm hover:border-action-primary/40 transition-colors"
+              subject={episode.subject}
+              interactive
+              className="ni-panel p-4 transition-colors"
             >
               <div className="flex items-center justify-between">
                 <div className="flex items-center min-w-0">
                   <button
                     onClick={() => play(episode.id, activeScript)}
                     disabled={isLoadingAudio}
-                    className={`w-11 h-11 rounded-full flex items-center justify-center mr-4 shrink-0 transition-colors ${
-                      isPlaying
-                        ? 'bg-action-primary text-warm-50 shadow-md'
-                        : 'bg-surface-secondary text-text-primary hover:bg-surface-strong'
-                    } disabled:opacity-40`}
+                    className="w-10 h-10 rounded-full flex items-center justify-center mr-3.5 shrink-0 transition-colors"
+                    style={{
+                      backgroundColor: isPlaying ? subPal.primary : 'var(--surface2)',
+                      color: isPlaying ? subPal.wash : 'var(--text)',
+                    }}
                   >
                     {isLoadingAudio ? (
                       <Loader2 className="w-4 h-4 animate-spin" />
@@ -294,12 +303,16 @@ export default function Podcast() {
                     )}
                   </button>
                   <div className="min-w-0">
-                    <h4 className="font-semibold text-text-primary truncate flex items-center">
+                    <h4 className="font-display font-medium text-sm text-[var(--text)] truncate flex items-center">
                       {episode.title}
-                      {isPlaying && <Volume2 className="w-4 h-4 ml-2 text-action-primary animate-pulse shrink-0" />}
+                      {isPlaying && <Volume2 className="w-3.5 h-3.5 ml-2 text-[var(--primary)] animate-pulse shrink-0" />}
                     </h4>
-                    <div className="flex items-center text-xs text-text-muted mt-1 space-x-2 font-mono">
-                      <span className={`text-[11px] font-medium px-2 py-0.5 rounded-full ${SUBJECT_COLORS[episode.subject] ?? ''}`}>
+                    <div className="flex items-center text-[11px] text-[var(--dim)] mt-0.5 space-x-2 font-mono">
+                      <span
+                        className="text-[10px] px-2 py-0.5 rounded-full flex items-center gap-1 font-semibold"
+                        style={{ backgroundColor: subPal.primary, color: subPal.wash }}
+                      >
+                        <SubIcon className="w-2.5 h-2.5" />
                         {episode.subject}
                       </span>
                       <span>•</span>
@@ -307,18 +320,18 @@ export default function Podcast() {
                       {matchesPreference && (
                         <>
                           <span>•</span>
-                          <span className="flex items-center text-ember-600 dark:text-ember-400">
+                          <span className="flex items-center text-[var(--primary)]">
                             <Clock className="w-3 h-3 mr-1" />
-                            Duração preferida
+                            Faixa preferida
                           </span>
                         </>
                       )}
                       {aiScript && (
                         <>
                           <span>•</span>
-                          <span className="flex items-center text-action-primary">
+                          <span className="flex items-center text-[var(--primary)]">
                             <Sparkles className="w-3 h-3 mr-1" />
-                            Roteiro gerado por IA
+                            IA
                           </span>
                         </>
                       )}
@@ -328,13 +341,13 @@ export default function Podcast() {
                 <button
                   onClick={() => generateScript(episode.id, episode.title, episode.subject, episode.topicId)}
                   disabled={isGenerating}
-                  className="shrink-0 ml-4 flex items-center px-3 py-2 text-xs font-mono font-medium text-action-primary border border-border-subtle rounded-lg hover:bg-surface-secondary disabled:opacity-50 transition-colors"
+                  className="shrink-0 ml-3 flex items-center px-2.5 py-1 text-xs font-mono text-[var(--primary)] border border-[var(--line)] rounded-lg hover:bg-[var(--surface2)] disabled:opacity-50 transition-colors"
                 >
-                  <Sparkles className={`w-3.5 h-3.5 mr-1.5 ${isGenerating ? 'animate-pulse' : ''}`} />
-                  {isGenerating ? 'Gerando...' : aiScript ? 'Gerar novo' : 'Gerar com IA'}
+                  <Sparkles className={`w-3 h-3 mr-1 ${isGenerating ? 'animate-pulse' : ''}`} />
+                  {isGenerating ? 'Gerando...' : aiScript ? 'Regerar' : 'Gerar IA'}
                 </button>
               </div>
-            </motion.div>
+            </Panel>
           );
         })}
       </div>

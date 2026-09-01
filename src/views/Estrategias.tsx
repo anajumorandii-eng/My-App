@@ -6,7 +6,9 @@ import {
   secondPhaseProtocols,
 } from '../data/resolutionStrategies';
 import { Compass, ChevronDown, Lightbulb, AlertTriangle } from 'lucide-react';
-import { motion, AnimatePresence } from 'motion/react';
+import { Panel } from '../components/ui/Panel';
+import { PALETTES } from '../prototypes/NucleoInstrumentalPrototype';
+import { SUBJECT_ICONS } from './Dashboard';
 
 type Tab = 'metodo' | 'materia' | 'banca' | 'segunda-fase';
 
@@ -17,184 +19,218 @@ const TABS: { id: Tab; label: string }[] = [
   { id: 'segunda-fase', label: '2ª Fase (Discursiva)' },
 ];
 
+const ESTRATEGIA_PALETTE = PALETTES.Filosofia;
+
 export default function Estrategias() {
   const [tab, setTab] = useState<Tab>('metodo');
   const [expandedSubject, setExpandedSubject] = useState<string | null>(subjectStrategies[0]?.subject ?? null);
   const [expandedProtocol, setExpandedProtocol] = useState<string | null>(null);
 
   return (
-    <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
-      <header>
-        <div className="flex items-center gap-2 mb-1.5">
-          <span className="w-2 h-2 rounded-full bg-ember-500 shadow-[0_0_8px_var(--color-ember-500)]" />
-          <span className="text-[11px] font-mono tracking-widest uppercase text-ember-600 dark:text-ember-400">Heurísticas & Táticas de Prova · Crivo</span>
-        </div>
-        <h1 className="font-display text-3xl sm:text-4xl font-semibold italic text-text-primary tracking-tight flex items-center gap-3">
-          <Compass className="w-7 h-7 text-action-primary" />
-          Estratégias de Resolução
-        </h1>
-        <p className="text-text-secondary mt-1 max-w-2xl text-base">
-          Como pensar diante de uma questão: o método geral, o que muda por matéria, o estilo de cada banca e os protocolos de segunda fase.
-        </p>
-      </header>
+    <div
+      className="ni-main"
+      style={{
+        '--primary': ESTRATEGIA_PALETTE.primary,
+        '--secondary': ESTRATEGIA_PALETTE.secondary,
+        '--wash': ESTRATEGIA_PALETTE.wash,
+      } as React.CSSProperties}
+    >
+      {/* Route Breadcrumb */}
+      <div className="ni-route">
+        <span>ANÁLISE</span>
+        <i />
+        <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
+          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--wash)]">
+            <Compass className="w-3 h-3" />
+          </span>
+          HEURÍSTICAS
+        </span>
+        <i />
+        <b>ESTRATÉGIAS DE RESOLUÇÃO</b>
+      </div>
 
-      <div className="flex gap-2 flex-wrap">
+      {/* Main Title */}
+      <div className="ni-title">
+        <div>
+          <h1>Onde cada ponto da prova mora.</h1>
+          <p>Como pensar diante de uma questão: o método geral, nuances por matéria, estilo de banca e protocolos discursivos.</p>
+        </div>
+        <div className="ni-state">
+          <i /> heurísticas ativas · Crivo Tático
+        </div>
+      </div>
+
+      {/* Tab filter bar */}
+      <div className="ni-subjects">
         {TABS.map((t) => {
           const active = tab === t.id;
           return (
-            <motion.button
+            <button
               key={t.id}
-              whileHover={{ scale: 1.04 }}
-              whileTap={{ scale: 0.96 }}
               onClick={() => setTab(t.id)}
-              className={`px-3.5 py-1.5 rounded-full text-xs font-mono tracking-wide transition-all ${
+              style={
                 active
-                  ? 'bg-action-primary text-warm-50 font-bold shadow-sm ring-1 ring-white/20'
-                  : 'border border-border-subtle hover:border-text-primary text-text-muted hover:text-text-primary bg-surface-default/70'
-              }`}
+                  ? { backgroundColor: ESTRATEGIA_PALETTE.primary, color: ESTRATEGIA_PALETTE.wash, borderRadius: '4px', padding: '2px 8px' }
+                  : undefined
+              }
             >
-              {t.label.toUpperCase()}
-            </motion.button>
+              {t.label}
+            </button>
           );
         })}
       </div>
 
-      <AnimatePresence initial={false}>
+      {/* Method Tab */}
       {tab === 'metodo' && (
-        <motion.section
-          key="tab-metodo"
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -10 }}
-          transition={{ duration: 0.25 }}
-          className="space-y-3"
-        >
-          <p className="text-sm text-zinc-500 mb-2">
-            Um roteiro de 11 passos para qualquer questão de múltipla escolha — o objetivo não é "chegar na resposta certa", é reconstruir o raciocínio que leva até lá.
+        <section className="space-y-3">
+          <p className="text-xs text-[var(--dim)] mb-2">
+            Roteiro de 11 passos para qualquer questão de múltipla escolha — o objetivo é reconstruir o raciocínio rigoroso até o gabarito.
           </p>
-          {generalResolutionMethod.map((s) => (
-            <div key={s.step} className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-4 shadow-sm flex items-start">
-              <span className="w-8 h-8 rounded-full bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 flex items-center justify-center mr-4 shrink-0 font-semibold text-sm">
-                {s.step}
-              </span>
-              <div>
-                <h3 className="font-semibold text-sm">{s.title}</h3>
-                <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-0.5">{s.description}</p>
-              </div>
-            </div>
-          ))}
-        </motion.section>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+            {generalResolutionMethod.map((s) => (
+              <Panel key={s.step} subject="Filosofia" interactive className="ni-panel p-4 flex items-start gap-3">
+                <span
+                  className="w-7 h-7 rounded-full flex items-center justify-center shrink-0 font-bold text-xs font-mono"
+                  style={{ backgroundColor: ESTRATEGIA_PALETTE.primary, color: ESTRATEGIA_PALETTE.wash }}
+                >
+                  {s.step}
+                </span>
+                <div>
+                  <h3 className="font-display font-medium text-xs text-[var(--text)]">{s.title}</h3>
+                  <p className="text-xs text-[var(--dim)] mt-0.5 leading-relaxed">{s.description}</p>
+                </div>
+              </Panel>
+            ))}
+          </div>
+        </section>
       )}
 
+      {/* Subject Tab */}
       {tab === 'materia' && (
         <section className="space-y-3">
           {subjectStrategies.map((s) => {
             const isExpanded = expandedSubject === s.subject;
+            const pal = PALETTES[s.subject] ?? PALETTES.Matemática;
+            const SubIcon = SUBJECT_ICONS[s.subject] ?? Compass;
+
             return (
-              <div key={s.subject} className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl shadow-sm overflow-hidden">
+              <Panel key={s.subject} subject={s.subject} className="ni-panel overflow-hidden">
                 <button
                   onClick={() => setExpandedSubject(isExpanded ? null : s.subject)}
-                  className="w-full flex items-center justify-between p-5 text-left"
+                  className="w-full flex items-center justify-between p-4 text-left hover:bg-[var(--surface2)] transition-colors"
                 >
-                  <h3 className="font-semibold">{s.subject}</h3>
-                  <ChevronDown className={`w-4 h-4 text-zinc-400 shrink-0 ml-3 transition-transform ${isExpanded ? 'rotate-180' : ''}`} />
+                  <div className="flex items-center gap-2.5">
+                    <span
+                      className="w-6 h-6 rounded-full flex items-center justify-center shrink-0"
+                      style={{ backgroundColor: pal.primary, color: pal.wash }}
+                    >
+                      <SubIcon className="w-3.5 h-3.5" />
+                    </span>
+                    <h3 className="font-display font-medium text-sm text-[var(--text)]">{s.subject}</h3>
+                  </div>
+                  <ChevronDown className={`w-4 h-4 text-[var(--dim)] shrink-0 ml-3 transition-transform ${isExpanded ? 'rotate-180' : ''}`} />
                 </button>
                 {isExpanded && (
-                  <div className="px-5 pb-5 pt-1 border-t border-zinc-100 dark:border-zinc-800 space-y-4">
+                  <div className="px-5 pb-5 pt-2 border-t border-[var(--line)] space-y-4">
                     <div>
-                      <p className="text-sm font-semibold text-zinc-700 dark:text-zinc-300 mb-2 flex items-center">
-                        <Lightbulb className="w-4 h-4 mr-1.5 text-indigo-500" />
+                      <p className="text-xs font-semibold text-[var(--text)] mb-2 flex items-center">
+                        <Lightbulb className="w-3.5 h-3.5 mr-1.5 text-[var(--primary)]" />
                         Como resolver
                       </p>
                       <ul className="space-y-1.5">
                         {s.tips.map((tip, i) => (
-                          <li key={i} className="text-sm text-zinc-600 dark:text-zinc-400 flex">
-                            <span className="mr-2 text-indigo-400">•</span>
-                            {tip}
+                          <li key={i} className="text-xs text-[var(--dim)] flex items-start">
+                            <span className="mr-2 text-[var(--primary)]">•</span>
+                            <span>{tip}</span>
                           </li>
                         ))}
                       </ul>
                     </div>
-                    <div>
-                      <p className="text-sm font-semibold text-zinc-700 dark:text-zinc-300 mb-2 flex items-center">
-                        <AlertTriangle className="w-4 h-4 mr-1.5 text-amber-500" />
+                    <div className="pt-2 border-t border-[var(--line)]">
+                      <p className="text-xs font-semibold text-amber-400 mb-2 flex items-center">
+                        <AlertTriangle className="w-3.5 h-3.5 mr-1.5 text-amber-400" />
                         Pegadinhas comuns
                       </p>
                       <ul className="space-y-1.5">
                         {s.pitfalls.map((p, i) => (
-                          <li key={i} className="text-sm text-zinc-600 dark:text-zinc-400 flex">
+                          <li key={i} className="text-xs text-[var(--dim)] flex items-start">
                             <span className="mr-2 text-amber-400">•</span>
-                            {p}
+                            <span>{p}</span>
                           </li>
                         ))}
                       </ul>
                     </div>
                   </div>
                 )}
-              </div>
+              </Panel>
             );
           })}
         </section>
       )}
 
+      {/* Board Tab */}
       {tab === 'banca' && (
-        <section className="space-y-4">
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {bancaStrategies.map((b) => (
-            <div key={b.board} className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 shadow-sm">
-              <h3 className="font-semibold mb-2">{b.board}</h3>
-              <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed mb-3">{b.profile}</p>
-              <div className="flex items-start p-3 rounded-lg bg-indigo-50 dark:bg-indigo-900/20 text-indigo-800 dark:text-indigo-300 text-sm">
-                <Lightbulb className="w-4 h-4 mr-2 mt-0.5 shrink-0" />
-                <p>{b.examStrategy}</p>
+            <Panel key={b.board} subject="Filosofia" interactive className="ni-panel p-5 space-y-3">
+              <h3 className="font-display font-medium text-base text-[var(--text)]">{b.board}</h3>
+              <p className="text-xs text-[var(--dim)] leading-relaxed">{b.profile}</p>
+              <div className="p-3 rounded-lg border border-[var(--primary)]/30 bg-[var(--primary)]/10 text-xs text-[var(--text)] flex items-start gap-2">
+                <Lightbulb className="w-4 h-4 text-[var(--primary)] shrink-0 mt-0.5" />
+                <p className="leading-relaxed">{b.examStrategy}</p>
               </div>
-            </div>
+            </Panel>
           ))}
         </section>
       )}
 
+      {/* Second Phase Tab */}
       {tab === 'segunda-fase' && (
         <section className="space-y-3">
-          <p className="text-sm text-zinc-500 mb-2">
-            Protocolos para estruturar respostas discursivas — o corretor pontua o que ficou demonstrado no papel, não o que você "pensou".
+          <p className="text-xs text-[var(--dim)] mb-2">
+            Protocolos para estruturar respostas discursivas — o examinador pontua o que ficou demonstrado com clareza no papel.
           </p>
           {secondPhaseProtocols.map((p) => {
             const key = `${p.board}_${p.name}`;
             const isExpanded = expandedProtocol === key;
             return (
-              <div key={key} className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl shadow-sm overflow-hidden">
+              <Panel key={key} subject="Filosofia" className="ni-panel overflow-hidden">
                 <button
                   onClick={() => setExpandedProtocol(isExpanded ? null : key)}
-                  className="w-full flex items-center justify-between p-5 text-left"
+                  className="w-full flex items-center justify-between p-4 text-left hover:bg-[var(--surface2)] transition-colors"
                 >
                   <div className="min-w-0">
-                    <h3 className="font-semibold truncate">{p.board} — {p.name}</h3>
-                    <p className="text-xs text-zinc-500 mt-0.5">{p.scope}</p>
+                    <h3 className="font-display font-medium text-sm text-[var(--text)] truncate">{p.board} — {p.name}</h3>
+                    <p className="text-[11px] text-[var(--dim)] mt-0.5">{p.scope}</p>
                   </div>
-                  <ChevronDown className={`w-4 h-4 text-zinc-400 shrink-0 ml-3 transition-transform ${isExpanded ? 'rotate-180' : ''}`} />
+                  <ChevronDown className={`w-4 h-4 text-[var(--dim)] shrink-0 ml-3 transition-transform ${isExpanded ? 'rotate-180' : ''}`} />
                 </button>
                 {isExpanded && (
-                  <div className="px-5 pb-5 pt-1 border-t border-zinc-100 dark:border-zinc-800 space-y-3">
-                    <div className="space-y-2">
+                  <div className="px-5 pb-5 pt-2 border-t border-[var(--line)] space-y-4">
+                    <div className="space-y-2.5">
                       {p.steps.map((step) => (
-                        <div key={step.letter} className="flex items-start">
-                          <span className="w-8 h-8 rounded-full bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 flex items-center justify-center mr-3 shrink-0 font-bold text-xs">
+                        <div key={step.letter} className="flex items-start gap-3">
+                          <span
+                            className="w-6 h-6 rounded-full flex items-center justify-center shrink-0 font-bold text-xs font-mono"
+                            style={{ backgroundColor: ESTRATEGIA_PALETTE.primary, color: ESTRATEGIA_PALETTE.wash }}
+                          >
                             {step.letter}
                           </span>
                           <div>
-                            <p className="text-sm font-semibold">{step.title}</p>
-                            <p className="text-sm text-zinc-600 dark:text-zinc-400">{step.description}</p>
+                            <p className="text-xs font-semibold text-[var(--text)]">{step.title}</p>
+                            <p className="text-xs text-[var(--dim)] mt-0.5 leading-relaxed">{step.description}</p>
                           </div>
                         </div>
                       ))}
                     </div>
                     {p.responseStructure && p.responseStructure.length > 0 && (
-                      <div className="pt-2 border-t border-zinc-100 dark:border-zinc-800">
-                        <p className="text-xs font-semibold text-zinc-500 mb-1.5">Estrutura da resposta</p>
+                      <div className="pt-3 border-t border-[var(--line)]">
+                        <p className="text-xs font-semibold text-[var(--dim)] mb-1.5">Estrutura recomendada de resposta</p>
                         <ul className="space-y-1">
                           {p.responseStructure.map((r, i) => (
-                            <li key={i} className="text-sm text-zinc-600 dark:text-zinc-400 flex">
-                              <span className="mr-2 text-indigo-400">•</span>
-                              {r}
+                            <li key={i} className="text-xs text-[var(--dim)] flex items-start">
+                              <span className="mr-2 text-[var(--primary)]">•</span>
+                              <span>{r}</span>
                             </li>
                           ))}
                         </ul>
@@ -202,12 +238,11 @@ export default function Estrategias() {
                     )}
                   </div>
                 )}
-              </div>
+              </Panel>
             );
           })}
         </section>
       )}
-      </AnimatePresence>
     </div>
   );
 }

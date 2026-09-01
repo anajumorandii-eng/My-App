@@ -24,27 +24,31 @@ export function BottomNav() {
   return (
     <nav
       aria-label="Navegação principal"
-      className="lg:hidden fixed bottom-0 inset-x-0 z-30 flex items-stretch border-t border-border-subtle bg-surface-elevated text-text-primary shadow-[0_-1px_12px_color-mix(in_oklab,var(--background-base)_28%,transparent)] [padding-bottom:env(safe-area-inset-bottom)]"
+      className="lg:hidden pointer-events-none fixed bottom-0 inset-x-0 z-30 px-3 [padding-bottom:calc(env(safe-area-inset-bottom)+0.5rem)]"
     >
-      {ITEMS.map((item) => {
-        const Icon = item.icon;
-        return (
-          <NavLink
-            key={item.path}
-            to={item.path}
-            end={item.path === '/'}
-            className={({ isActive }) =>
-              cn(
-                'flex-1 flex flex-col items-center justify-center gap-1 min-h-11 py-2 text-xs font-medium',
-                isActive ? 'text-action-primary' : 'text-text-muted'
-              )
-            }
-          >
-            <Icon className="w-5 h-5" aria-hidden="true" />
-            {item.name}
-          </NavLink>
-        );
-      })}
+      <div className="pointer-events-auto mx-auto flex w-full max-w-lg items-stretch rounded-[1.35rem] border border-border-subtle/90 bg-surface-elevated/95 p-1 shadow-[0_12px_34px_color-mix(in_oklab,var(--background-base)_58%,transparent)] backdrop-blur-xl">
+        {ITEMS.map((item) => {
+          const Icon = item.icon;
+          return (
+            <NavLink
+              key={item.path}
+              to={item.path}
+              end={item.path === '/'}
+              className={({ isActive }) =>
+                cn(
+                  'flex min-w-0 flex-1 flex-col items-center justify-center gap-1 rounded-xl px-1 py-2 text-[10px] font-semibold leading-none transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus-ring',
+                  isActive
+                    ? 'bg-action-primary text-text-inverse shadow-soft-sm'
+                    : 'text-text-muted hover:bg-surface-secondary hover:text-text-primary'
+                )
+              }
+            >
+              <Icon className="h-[18px] w-[18px]" aria-hidden="true" />
+              <span className="truncate">{item.name}</span>
+            </NavLink>
+          );
+        })}
+      </div>
     </nav>
   );
 }

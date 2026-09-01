@@ -65,13 +65,13 @@ function readInheritedPalette(node: HTMLElement): CrivoPalette | null {
 
 interface CoreSprings { spread: Spring; glow: Spring; tiltX: Spring; tiltY: Spring; focus: Spring }
 function makeCoreSprings(state: CrivoCoreState): CoreSprings {
-  const pose = STATE_POSE[state];
+  const pose = STATE_POSE[state] ?? STATE_POSE.idle;
   return {
     spread: makeSpring(pose.spread),
     glow: makeSpring(pose.glow),
     tiltX: makeSpring(pose.tiltX),
     tiltY: makeSpring(pose.tiltY),
-    focus: makeSpring(STATE_FOCUS[state]),
+    focus: makeSpring(STATE_FOCUS[state] ?? 0.65),
   };
 }
 
