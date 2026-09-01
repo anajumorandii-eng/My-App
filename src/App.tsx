@@ -5,7 +5,7 @@
 
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Layout from './components/Layout';
+import NucleoInstrumentalProductionLayout from './components/NucleoInstrumentalProductionLayout';
 import { LegacyPrototypeRedirect } from './components/LegacyPrototypeRedirect';
 import { AuthProvider } from './context/AuthContext';
 
@@ -56,7 +56,7 @@ export default function App() {
           <Route path="/nucleo-instrumental" element={<LegacyPrototypeRedirect />} />
           <Route path="/prototype/nucleo-instrumental" element={<LegacyPrototypeRedirect />} />
           
-          <Route path="/" element={<Layout />}>
+          <Route path="/" element={<NucleoInstrumentalProductionLayout />}>
             <Route index element={<Dashboard />} />
             <Route path="plano" element={<Plano />} />
             <Route path="agenda" element={<AgendaView />} />

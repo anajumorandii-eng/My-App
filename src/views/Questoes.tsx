@@ -19,6 +19,7 @@ import {
   Stethoscope,
   ArrowRight,
   BookOpen,
+  CloudOff,
 } from 'lucide-react';
 import { Panel } from '../components/ui/Panel';
 import { Button } from '../components/ui/Button';
@@ -139,7 +140,7 @@ export default function Questoes() {
         topicId: question.topicId,
         correct,
         date: new Date().toISOString(),
-      });
+      }).catch((error) => console.error('Failed to save attempt:', error));
     }
 
     if (!correct) {
@@ -197,11 +198,14 @@ export default function Questoes() {
       topicId: question.topicId,
       date: new Date().toISOString(),
       type: diagnosis.type,
-      notes: `Resposta marcada: ${selectedOption?.text ?? ''}. Gabarito: ${correctOption?.text ?? ''}.`,
+      notes: `Diagnosticado a partir de uma questão de prática (JUJU sugeriu, você salvou). Resposta marcada: ${selectedOption?.text ?? ''}. Gabarito: ${correctOption?.text ?? ''}.`,
       breakPoint: diagnosis.breakPoint,
       evidence: diagnosis.evidence,
-      confidence: diagnosis.confidence,
+      // Salvar no caderno é o gesto de validação da estudante — só aqui a
+      // hipótese da IA passa a ser tratada como fato ('confirmado').
+      confidence: 'confirmado',
       proposedIntervention: diagnosis.intervention,
+      interventionStatus: 'pendente',
     };
     if (user) {
       addUserErrorLog(user.uid, log).catch((error) => console.error('Failed to save error log:', error));
@@ -279,6 +283,15 @@ export default function Questoes() {
           <i /> perfil {palette.family} · treino ativo
         </div>
       </div>
+
+      {!isPersisted && (
+        <p className="flex items-center text-xs text-[var(--dim)] mb-2">
+          <CloudOff className="w-3.5 h-3.5 mr-1.5" />
+          Modo demonstração — conecte sua conta Google em "Conexões Google" para salvar seu progresso de verdade.
+        </p>
+      )}
+      {syncError && <p className="text-xs text-rose-500 mb-2">{syncError}</p>}
+      {questionsSyncError && <p className="text-xs text-rose-500 mb-2">{questionsSyncError}</p>}
 
       {/* Subject Filter & Real Exams Toggle */}
       <div className="ni-subjects">
