@@ -298,6 +298,14 @@ export default function Flashcards() {
         </div>
       </div>
 
+      {!isPersisted && (
+        <p className="flex items-center text-xs text-[var(--dim)] mb-2">
+          <CloudOff className="w-3.5 h-3.5 mr-1.5" />
+          Modo demonstração — conecte sua conta Google em "Conexões Google" para salvar seu progresso de verdade.
+        </p>
+      )}
+      {syncError && <p className="text-xs text-rose-500 mb-2">{syncError}</p>}
+
       {dueNavigationBlocked && (!studyOwnerMatches || hydrationStatus !== 'error') && (
         <div className="flex items-center justify-center py-16 text-[var(--dim)]">
           <Loader2 className="w-6 h-6 animate-spin mr-2" /> Carregando seu progresso de flashcards...
