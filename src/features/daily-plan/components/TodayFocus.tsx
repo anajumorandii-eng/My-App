@@ -56,15 +56,15 @@ export function TodayFocus({ action, actionLabel, mainReason, onStart, showAdapt
       data-confirmation-key={confirmationKey}
       data-motion-active={!reducedMotion && (phase === 'forming' || phase === 'recomposing') ? 'true' : undefined}
       aria-labelledby={`decision-${action.id}`}
-      className={cn("crivo-decision-hero transition-all duration-300", isMaximized && "crivo-decision-hero--maximized scale-[1.02] shadow-2xl z-10")}
+      className={cn("ni-grid ni-grid--hero crivo-instrumental-decision transition-all duration-300", isMaximized && "crivo-instrumental-decision--maximized scale-[1.02] shadow-2xl z-10")}
       layout={!reducedMotion}
       initial={reducedMotion ? false : 'hidden'}
       animate="visible"
       variants={focusEnter}
     >
-      <div className="crivo-decision-copy">
+      <div className="ni-panel ni-decision crivo-instrumental-decision-copy">
         <div className="flex items-center justify-between mb-1">
-          <p className="crivo-decision-eyebrow">Hoje · decisão principal</p>
+          <p className="ni-kicker crivo-decision-eyebrow">Hoje · decisão principal</p>
           <button
             type="button"
             tabIndex={-1}
@@ -76,7 +76,7 @@ export function TodayFocus({ action, actionLabel, mainReason, onStart, showAdapt
             {isMaximized ? "🗗 Reduzir" : "🗖 Maximizar"}
           </button>
         </div>
-        <h1 id={`decision-${action.id}`} className="crivo-decision-title">
+        <h1 id={`decision-${action.id}`} className="crivo-instrumental-decision-title">
           <KineticText
             as="span"
             runKey={action.id}
@@ -88,7 +88,7 @@ export function TodayFocus({ action, actionLabel, mainReason, onStart, showAdapt
           />
         </h1>
 
-        <div className="crivo-decision-intervention">
+        <div className="crivo-instrumental-decision-intervention">
           <p>{actionLabel} <span>em {action.subject}</span></p>
           <p>
             <strong>{action.allocatedMinutes} min</strong>
@@ -97,19 +97,21 @@ export function TodayFocus({ action, actionLabel, mainReason, onStart, showAdapt
           </p>
         </div>
 
-        <p className="crivo-decision-reason">{mainReason}</p>
+        <p className="crivo-instrumental-decision-reason">{mainReason}</p>
 
         <Button onClick={onStart} className="crivo-decision-cta">
           <PlayCircle className="w-4 h-4" aria-hidden="true" />
           Começar
         </Button>
 
-        <DecisionSignalStrip
-          mastery={action.snapshot?.masteryLevel ?? 0}
-          uncertainty={action.snapshot?.uncertainty ?? 0}
-          urgency={reviewUrgency}
-          minutes={action.allocatedMinutes}
-        />
+        <div className="crivo-instrumental-signals">
+          <DecisionSignalStrip
+            mastery={action.snapshot?.masteryLevel ?? 0}
+            uncertainty={action.snapshot?.uncertainty ?? 0}
+            urgency={reviewUrgency}
+            minutes={action.allocatedMinutes}
+          />
+        </div>
 
         <AnimatePresence initial={false}>
           {showAdaptiveUpdate && <AdaptiveUpdate key={action.id} className="crivo-adaptive-update" />}
@@ -135,9 +137,12 @@ export function TodayFocus({ action, actionLabel, mainReason, onStart, showAdapt
         )}
       </div>
 
-      <div className="crivo-core-stage" aria-hidden="true">
+      <div className="ni-panel ni-trajectory crivo-instrumental-trajectory" aria-hidden="true">
+        <span className="ni-kicker">Núcleo da decisão</span>
+        <h3>Um sinal por vez.</h3>
+        <p>O campo muda com as evidências que priorizaram este bloco.</p>
         <CrivoCore
-          size="fill"
+          size={190}
           scale="hero"
           decorative
           state={coreState}
