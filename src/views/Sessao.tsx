@@ -349,7 +349,7 @@ export default function Sessao() {
           <h1>Sessão de Estudo</h1>
           <p>Escolha um bloco do seu plano e execute com foco cronometrado.</p>
         </div>
-        <div className="ni-state"><i /> {availability?.totalMinutes ?? 0} min efetivos hoje</div>
+        <div className="ni-state"><span>{`${availability?.totalMinutes ?? 0} min`}</span> efetivos hoje <i aria-hidden="true" /></div>
       </div>
       <div className="ni-subjects" aria-label="Blocos por matéria">
         {[...new Set(dailyPlan.map((action) => action.subject))].map((subject) => (
