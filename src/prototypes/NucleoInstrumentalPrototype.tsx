@@ -11,6 +11,7 @@ import {
   ArrowLeft,
   ArrowRight,
   Atom,
+  BadgeCheck,
   BarChart3,
   BookOpen,
   Brain,
@@ -25,6 +26,7 @@ import {
   Headphones,
   Layers3,
   Library,
+  ListChecks,
   Link2,
   ListTodo,
   Map,
@@ -43,6 +45,7 @@ import {
   type LucideIcon,
   Moon,
   Sun,
+  ChartNoAxesCombined,
 } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
@@ -1677,17 +1680,17 @@ function Decision({
         <Mini
           title={context.cards[0]}
           text={`Prática aplicada a ${screen.topic}.`}
-          icon={Play}
+          icon={ListChecks}
         />
         <Mini
           title={context.cards[1]}
           text={`Instrumentos para ler ${screen.topic}.`}
-          icon={Library}
+          icon={ChartNoAxesCombined}
         />
         <Mini
           title={context.cards[2]}
           text="Proteja a próxima janela de estudo."
-          icon={ArrowRight}
+          icon={BadgeCheck}
         />
       </section>
     </>

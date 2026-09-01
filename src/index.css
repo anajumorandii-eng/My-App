@@ -265,6 +265,21 @@ html, body {
 .crivo-route-shell [data-crivo-route-kind='account'],
 .crivo-route-shell [data-crivo-route-kind='admin'] { --route-accent: var(--subject-primary); }
 
+/* The prototype's quick-action cards are still production-facing through
+   the gallery. Their glyphs need to read as actions, not tiny navigation
+   arrows: reserve a proper optical box and keep the stroke crisp. */
+.ni-card-row .ni-mini .ni-icon-depth {
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+}
+
+.ni-card-row .ni-mini .ni-icon-depth svg {
+  width: 17px;
+  height: 17px;
+  stroke-width: 2.25;
+}
+
 .dark [data-testid="subject-atmosphere"] {
   --subject-bg: var(--subject-dark-bg);
   --subject-surface: var(--subject-dark-surface);
