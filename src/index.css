@@ -875,8 +875,13 @@ html, body {
   --ni-wash: rgba(110, 147, 179, 0.28);
 }
 
-/* Ícones 3D com Profundidade em Camadas */
-.ni-icon-depth {
+/* Ícones 3D com Profundidade em Camadas
+   :not(.ni-prototype *) keeps this scoped to the real app shell — the
+   isolated Núcleo Instrumental prototype reuses the .ni-* class names but
+   manages its own always-dark theme and per-matéria tinting independently
+   (its own rule for the same selector would otherwise tie on specificity
+   and the winner would depend on unrelated load order). */
+.ni-icon-depth:not(.ni-prototype *) {
   height: 28px;
   width: 28px;
   display: grid;
@@ -889,7 +894,10 @@ html, body {
   transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease;
 }
 
-:root:not(.dark) .ni-icon-depth {
+/* :not(.ni-prototype *) keeps this light-mode override scoped to the real
+   app shell — the isolated Núcleo Instrumental prototype reuses the .ni-*
+   class names but manages its own always-dark theme independently. */
+:root:not(.dark) .ni-icon-depth:not(.ni-prototype *) {
   background: linear-gradient(145deg, color-mix(in srgb, var(--subject-primary, #6E93B3) 60%, white), color-mix(in srgb, var(--subject-primary, #6E93B3) 30%, #444));
   box-shadow: inset 1.5px 1.5px 2px rgba(255,255,255,.6), inset -2px -2px 4px rgba(0,0,0,.2), 0 3px 8px rgba(0,0,0,.12);
   color: #FFFFFF;
@@ -901,8 +909,9 @@ html, body {
   filter: drop-shadow(0 1px rgba(255,255,255,.4));
 }
 
-/* Painéis Minerais Instrumentais */
-.ni-panel {
+/* Painéis Minerais Instrumentais — :not(.ni-prototype *) scoping: see the
+   .ni-icon-depth comment above. */
+.ni-panel:not(.ni-prototype *) {
   border: 1px solid var(--ni-line);
   border-radius: 16px;
   background: var(--ni-glass);
@@ -911,12 +920,12 @@ html, body {
   transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-:root:not(.dark) .ni-panel {
+:root:not(.dark) .ni-panel:not(.ni-prototype *) {
   background: #FFFFFF;
   box-shadow: inset 1px 1px rgba(255,255,255,1), 0 4px 20px rgba(20,30,25,0.06);
 }
 
-.ni-panel:hover {
+.ni-panel:hover:not(.ni-prototype *) {
   border-color: color-mix(in srgb, var(--subject-primary, #6E93B3) 40%, var(--ni-line));
 }
 
