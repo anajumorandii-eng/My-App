@@ -187,6 +187,7 @@
 
 @media (max-width: 900px) {
   .ni-production-app { display: block; padding-top: 56px; }
+  .ni-production-app .ni-page > .ni-top { display: none; }
   .ni-production-mobile { height: 56px; padding: 0 13px; display: flex; align-items: center; justify-content: space-between; position: fixed; inset: 0 0 auto; z-index: 30; border-bottom: 1px solid var(--line); background: rgba(12, 14, 13, .88); backdrop-filter: blur(16px); }
   .ni-production-mobile strong { font: 600 21px Newsreader, Georgia, serif; }
   .ni-production-mobile button { min-height: 40px; min-width: 40px; border: 0; background: transparent; color: var(--text); }
@@ -196,6 +197,14 @@
   .ni-production-close { display: grid; place-items: center; position: absolute; top: 12px; right: 8px; height: 38px; width: 38px; border: 0; background: transparent; color: var(--text); }
   .ni-production-backdrop { position: fixed; inset: 0; z-index: 40; border: 0; background: rgba(0, 0, 0, .58); }
   .ni-production-main { padding-bottom: 84px; }
+  .ni-production-app .crivo-observatorio-home { padding-top: 27px; }
+  .ni-production-app .crivo-observatorio-decision-copy { min-height: 400px; }
+  .ni-production-app .crivo-observatorio-decision-copy > h2 { max-width: 260px; font-size: 28px; }
+  .ni-production-app .crivo-observatorio-decision-copy .ni-artifact { right: 16px; top: 84px; opacity: .38; transform: scale(.64); transform-origin: top right; }
+  .ni-production-app .crivo-observatorio-trajectory { min-height: auto; }
+  .ni-production-app .ni-session-plan,
+  .ni-production-app .ni-session-workspace { min-height: auto; }
+  .ni-production-app .ni-session-workspace [data-testid='crivo-core'] { width: 140px !important; height: 140px !important; }
 }
 
 /* Física troca o mapa abstrato por uma bancada óptica: um único fenômeno, sem competição visual. */
