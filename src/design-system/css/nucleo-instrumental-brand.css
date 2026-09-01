@@ -182,6 +182,24 @@
 .ni-production-app .crivo-instrumental-trajectory [data-testid='crivo-core'] { position: absolute; right: 4%; bottom: 4%; width: min(72%, 280px); height: auto; opacity: .92; }
 .ni-production-app .crivo-instrumental-trajectory .decision-factor-field { opacity: .72; }
 
+/* Session keeps the real timer flow inside the same instrumental grid. */
+.ni-session-production .ni-subjects span { padding: 7px 9px; border: 1px solid var(--line); border-radius: 999px; color: var(--dim); font: 9px ui-monospace, SFMono-Regular, monospace; }
+.ni-session-production .ni-subjects span.active { border-color: var(--primary); background: color-mix(in srgb, var(--primary) 15%, transparent); color: var(--text); }
+.ni-session-notices { margin: 0 0 17px; }
+.ni-session-notices p { display: flex; align-items: center; color: var(--dim); font-size: 11px; }
+.ni-session-plan { min-height: 420px; padding: 20px; }
+.ni-session-action-list { display: grid; gap: 7px; margin-top: 14px; }
+.ni-session-action-list > button { min-height: 64px; border-radius: 9px; color: var(--dim); }
+.ni-session-action-list > button:hover { color: var(--text); background: rgba(230, 242, 234, .08); }
+.ni-session-action-list > button.bg-surface-strong { border: 1px solid color-mix(in srgb, var(--primary) 55%, transparent); background: color-mix(in srgb, var(--primary) 15%, transparent); color: var(--text); }
+.ni-session-workspace { min-height: 420px; padding: 22px; }
+.ni-session-workspace .relative.w-56 { width: 12rem; height: 12rem; margin-bottom: 1.5rem; }
+.ni-session-workspace .stroke-surface-strong { stroke: color-mix(in srgb, var(--text) 12%, transparent); }
+.ni-session-workspace .stroke-action-primary { stroke: var(--primary); }
+.ni-session-workspace .text-text-primary { color: var(--text); }
+.ni-session-workspace .text-text-secondary,
+.ni-session-workspace .text-text-muted { color: var(--dim); }
+
 @media (max-width: 900px) {
   .ni-production-app .crivo-instrumental-decision { padding: 25px 19px 18px; }
   .ni-production-app .crivo-instrumental-decision-copy,
