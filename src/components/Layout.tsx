@@ -311,32 +311,32 @@ export default function Layout() {
           presentation.immersive && 'route-presentation-immersive'
         )}
       >
-        <header className="ni-top crivo-production-top hidden lg:flex" aria-label="Navegação principal">
-          <strong>Crivo</strong>
-          <nav>
-            {TOP_LEVEL_NAV.map((item) => {
-              const isActive = item.path === '/' ? location.pathname === '/' : location.pathname.startsWith(item.path);
-              return (
-                <NavLink key={item.path} to={item.path} className={isActive ? 'active' : undefined}>
-                  {item.name}
-                </NavLink>
-              );
-            })}
-          </nav>
-          <span className="ni-prototype-badge">INTERFACE INSTRUMENTAL · DADOS REAIS</span>
-          <button
-            type="button"
-            className="ni-theme-toggle"
-            onClick={toggleTheme}
-            aria-label={isDark ? 'Mudar para modo claro' : 'Mudar para modo escuro'}
-          >
-            {isDark ? <Sun aria-hidden="true" /> : <Moon aria-hidden="true" />}
-            <span>{isDark ? 'claro' : 'escuro'}</span>
-          </button>
-          <div className="ni-avatar" aria-label="Perfil">AJ</div>
-        </header>
         <RouteVisualShell pathname={location.pathname}>
           <div className={presentation.contentClassName}>
+            <header className="ni-top crivo-production-top hidden lg:flex" aria-label="Navegação principal">
+              <strong>Crivo</strong>
+              <nav>
+                {TOP_LEVEL_NAV.map((item) => {
+                  const isActive = item.path === '/' ? location.pathname === '/' : location.pathname.startsWith(item.path);
+                  return (
+                    <NavLink key={item.path} to={item.path} className={isActive ? 'active' : undefined}>
+                      {item.name}
+                    </NavLink>
+                  );
+                })}
+              </nav>
+              <span className="ni-prototype-badge">INTERFACE INSTRUMENTAL · DADOS REAIS</span>
+              <button
+                type="button"
+                className="ni-theme-toggle"
+                onClick={toggleTheme}
+                aria-label={isDark ? 'Mudar para modo claro' : 'Mudar para modo escuro'}
+              >
+                {isDark ? <Sun aria-hidden="true" /> : <Moon aria-hidden="true" />}
+                <span>{isDark ? 'claro' : 'escuro'}</span>
+              </button>
+              <div className="ni-avatar" aria-label="Perfil">AJ</div>
+            </header>
             <AnimatePresence mode="wait" initial={false}>
               <motion.div
                 key={location.pathname}
