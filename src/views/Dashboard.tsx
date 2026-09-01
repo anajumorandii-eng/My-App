@@ -22,6 +22,8 @@ import { EmptyState } from '../components/ui/EmptyState';
 import { Skeleton } from '../components/ui/Skeleton';
 import { Button } from '../components/ui/Button';
 
+export { SUBJECT_ICONS } from '../prototypes/NucleoInstrumentalPrototype';
+
 const REASON_LABELS: Record<RecommendationReason, string> = {
   dominio_insuficiente: 'Domínio ainda insuficiente nesse tópico',
   erro_recorrente: 'Erros recorrentes recentes',

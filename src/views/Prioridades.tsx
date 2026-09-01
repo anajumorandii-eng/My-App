@@ -2,9 +2,9 @@ import React, { useMemo, useState } from 'react';
 import { examPriorities, targetExamBoards, extraExamBoards } from '../data/examPriorities';
 import { literaryWorks } from '../data/literaryWorks';
 import { Target, ChevronDown, BookOpen, AlertTriangle } from 'lucide-react';
-import { SubjectAtmosphere } from '../features/daily-plan/components/SubjectAtmosphere';
-import { getMotionConfigForSubject } from '../design-system/crivoMotionPresets';
-import { motion, AnimatePresence } from 'motion/react';
+import { Panel } from '../components/ui/Panel';
+import { PALETTES } from '../prototypes/NucleoInstrumentalPrototype';
+import { SUBJECT_ICONS } from './Dashboard';
 
 export default function Prioridades() {
   const subjects = useMemo(() => examPriorities.map((s) => s.subject), []);
@@ -15,179 +15,202 @@ export default function Prioridades() {
   const data = examPriorities.find((s) => s.subject === activeSubject)!;
   const allBoards = [...targetExamBoards, ...extraExamBoards];
 
+  // Map subject name to matching palette key
+  const paletteKey = activeSubject === 'Língua Portuguesa' ? 'Português' : activeSubject;
+  const currentPalette = PALETTES[paletteKey] ?? PALETTES.Matemática;
+  const SubjIcon = SUBJECT_ICONS[paletteKey] ?? Target;
+
   return (
-    <SubjectAtmosphere subject={activeSubject} focus={0.35}>
-      <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
-        <header>
-          <div className="flex items-center gap-2 mb-1.5">
-            <span className="w-2 h-2 rounded-full bg-ember-500 shadow-[0_0_8px_var(--color-ember-500)]" />
-            <span className="text-[11px] font-mono tracking-widest uppercase text-ember-600 dark:text-ember-400">Raio-X de Incidência de Bancas · Crivo</span>
-          </div>
-          <h1 className="font-display text-3xl sm:text-4xl font-semibold italic text-text-primary tracking-tight flex items-center gap-3">
-            <Target className="w-7 h-7 text-action-primary" />
-            Prioridades por Vestibular
-          </h1>
-          <p className="text-text-secondary mt-1 max-w-2xl text-base">
-            Análise de incidência estatística de temas nas provas (FUVEST, UNICAMP, FAMERP, UNIFESP, VUNESP e ENEM).
-          </p>
-        </header>
+    <div
+      className="ni-main"
+      style={{
+        '--primary': currentPalette.primary,
+        '--secondary': currentPalette.secondary,
+        '--wash': currentPalette.wash,
+      } as React.CSSProperties}
+    >
+      {/* Route Breadcrumb */}
+      <div className="ni-route">
+        <span>ANÁLISE</span>
+        <i />
+        <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
+          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--wash)]">
+            <SubjIcon className="w-3 h-3" />
+          </span>
+          INCIDÊNCIA
+        </span>
+        <i />
+        <b>PRIORIDADES POR VESTIBULAR</b>
+      </div>
 
-        <div className="flex gap-2 flex-wrap">
-          {subjects.map((subject) => {
-            const active = activeSubject === subject;
-            return (
-              <motion.button
-                key={subject}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={() => setActiveSubject(subject)}
-                className={`px-3 py-1.5 rounded-full text-xs font-mono tracking-wide transition-all ${
-                  active
-                    ? 'bg-action-primary text-warm-50 font-bold shadow-sm ring-1 ring-white/20'
-                    : 'border border-border-subtle hover:border-text-primary text-text-muted hover:text-text-primary bg-surface-default/70'
-                }`}
-              >
-                {subject.toUpperCase()}
-              </motion.button>
-            );
-          })}
+      {/* Main Title */}
+      <div className="ni-title">
+        <div>
+          <h1>Foque onde o retorno é maior.</h1>
+          <p>Análise de incidência estatística de temas nas provas mais concorridas de Medicina.</p>
         </div>
-
-      <AnimatePresence initial={false}>
-      <motion.div
-        key={activeSubject}
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -10 }}
-        transition={{ duration: 0.25 }}
-        className="space-y-6"
-      >
-        <section className="bg-surface-default border border-border-subtle rounded-2xl p-6 shadow-soft-sm">
-          <h2 className="text-lg font-semibold mb-1 text-text-primary">Resumo da região (todos os vestibulares)</h2>
-          <p className="text-sm text-text-muted mb-5">Ranking agregado de temas mais cobrados em {activeSubject} — priorize os do topo primeiro.</p>
-        <div className="space-y-3">
-          {data.regionalSummary.map((topic, i) => (
-            <div key={topic.theme} className="flex items-center">
-              <span className="w-6 text-xs font-semibold text-zinc-400 shrink-0">{i + 1}º</span>
-              <div className="flex-1 min-w-0">
-                <div className="flex items-center justify-between mb-1">
-                  <span className="text-sm font-medium truncate mr-2">{topic.theme}</span>
-                  <span className="text-xs text-zinc-500 shrink-0">{topic.percent}%</span>
-                </div>
-                <div className="w-full h-1.5 bg-zinc-100 dark:bg-zinc-800 rounded-full overflow-hidden">
-                  <div
-                    className="h-full bg-indigo-500"
-                    style={{ width: `${Math.min(100, (topic.percent / data.regionalSummary[0].percent) * 100)}%` }}
-                  />
-                </div>
-              </div>
-            </div>
-          ))}
+        <div className="ni-state">
+          <i /> {activeSubject} · Raio-X de Incidência
         </div>
-      </section>
+      </div>
 
-      <section>
-        <h2 className="text-xl font-semibold mb-4">Por vestibular</h2>
-        <div className="space-y-3">
-          {allBoards.map((board) => {
-            const boardData = data.byBoard.find((b) => b.board === board);
-            if (!boardData) return null;
-            const isTarget = targetExamBoards.includes(board);
-            const isExpanded = expandedBoard === board;
-            return (
-              <div key={board} className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl shadow-sm overflow-hidden">
-                <button
-                  onClick={() => setExpandedBoard(isExpanded ? null : board)}
-                  className="w-full flex items-center justify-between p-5 text-left"
-                >
-                  <div className="flex items-center min-w-0">
-                    <span className={`text-sm font-semibold px-2.5 py-1 rounded-full mr-3 shrink-0 ${
-                      isTarget
-                        ? 'bg-indigo-50 dark:bg-indigo-900/20 text-indigo-700 dark:text-indigo-300'
-                        : 'bg-zinc-100 dark:bg-zinc-800 text-zinc-500'
-                    }`}>
-                      {board}
-                    </span>
-                    <span className="text-sm text-zinc-500 truncate">
-                      {boardData.topics.slice(0, 2).map((t) => t.theme).join(' • ')}
-                    </span>
-                  </div>
-                  <ChevronDown className={`w-4 h-4 text-zinc-400 shrink-0 ml-3 transition-transform ${isExpanded ? 'rotate-180' : ''}`} />
-                </button>
-                {isExpanded && (
-                  <div className="px-5 pb-5 pt-1 border-t border-zinc-100 dark:border-zinc-800 space-y-2">
-                    {boardData.topics.map((topic) => (
-                      <div key={topic.theme} className="flex items-center justify-between text-sm py-1.5">
-                        <span className="text-zinc-700 dark:text-zinc-300">{topic.theme}</span>
-                        <span className="text-zinc-400 font-medium">{topic.percent}%</span>
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </div>
-            );
-          })}
-        </div>
-        {data.byBoard.length === 0 && (
-          <p className="text-sm text-zinc-500 py-4">Sem dados por vestibular para essa matéria neste relatório.</p>
-        )}
-      </section>
+      {/* Subject Filter Bar */}
+      <div className="ni-subjects">
+        {subjects.map((subject) => {
+          const active = activeSubject === subject;
+          const key = subject === 'Língua Portuguesa' ? 'Português' : subject;
+          const subPal = PALETTES[key] ?? PALETTES.Matemática;
+          const Icon = SUBJECT_ICONS[key] ?? Target;
+          return (
+            <button
+              key={subject}
+              onClick={() => setActiveSubject(subject)}
+              style={
+                active
+                  ? { backgroundColor: subPal.primary, color: subPal.wash, borderRadius: '4px', padding: '2px 8px', display: 'inline-flex', alignItems: 'center', gap: '6px' }
+                  : { display: 'inline-flex', alignItems: 'center', gap: '6px' }
+              }
+            >
+              <Icon className="w-3 h-3" style={{ color: active ? subPal.wash : subPal.primary }} />
+              <span>{subject}</span>
+            </button>
+          );
+        })}
+      </div>
 
-      {activeSubject === 'Língua Portuguesa' && (
-        <section>
-          <h2 className="text-xl font-semibold mb-1 flex items-center">
-            <BookOpen className="w-5 h-5 mr-2 text-indigo-500" />
-            Obras de leitura obrigatória
-          </h2>
-          <p className="text-sm text-zinc-500 mb-4">
-            Fuvest e Unicamp são as únicas bancas do relatório onde "obras de leitura obrigatória" pesa de verdade na nota de Português (25% e ~18-22% das questões, respectivamente). Aqui está a lista vigente para o seu vestibular.
-          </p>
-          <div className="space-y-6">
-            {literaryWorks.map((list) => (
-              <div key={list.board}>
-                <div className="flex items-center justify-between mb-1">
-                  <h3 className="font-semibold">{list.board}</h3>
-                  <span className="text-xs text-zinc-500">{list.cycle}</span>
-                </div>
-                {list.note && (
-                  <div className="flex items-start p-3 mb-3 rounded-lg bg-amber-50 dark:bg-amber-900/20 text-amber-800 dark:text-amber-300 text-xs">
-                    <AlertTriangle className="w-3.5 h-3.5 mr-2 mt-0.5 shrink-0" />
-                    <p>{list.note}</p>
+      <div className="space-y-4">
+        {/* Regional Summary Panel */}
+        <Panel subject={paletteKey} className="ni-panel p-5">
+          <h2 className="font-display font-medium text-sm text-[var(--text)] mb-0.5">Resumo da região (todos os vestibulares)</h2>
+          <p className="text-xs text-[var(--dim)] mb-4">Ranking agregado de temas mais cobrados em {activeSubject} — priorize os do topo primeiro.</p>
+          <div className="space-y-3">
+            {data.regionalSummary.map((topic, i) => (
+              <div key={topic.theme} className="flex items-center gap-2">
+                <span className="w-5 text-xs font-mono text-[var(--dim)] shrink-0">{i + 1}º</span>
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center justify-between mb-1">
+                    <span className="text-xs font-medium text-[var(--text)] truncate mr-2">{topic.theme}</span>
+                    <span className="text-[11px] font-mono text-[var(--dim)] shrink-0">{topic.percent}%</span>
                   </div>
-                )}
-                <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl divide-y divide-zinc-100 dark:divide-zinc-800 overflow-hidden">
-                  {list.works.map((work) => {
-                    const key = `${list.board}_${work.title}`;
-                    const isExpanded = expandedWork === key;
-                    return (
-                      <div key={key}>
-                        <button
-                          onClick={() => setExpandedWork(isExpanded ? null : key)}
-                          className="w-full flex items-center justify-between p-4 text-left"
-                        >
-                          <div className="min-w-0">
-                            <p className="font-medium truncate">{work.title}</p>
-                            <p className="text-xs text-zinc-500 mt-0.5">{work.author} • {work.movement}</p>
-                          </div>
-                          <ChevronDown className={`w-4 h-4 text-zinc-400 shrink-0 ml-3 transition-transform ${isExpanded ? 'rotate-180' : ''}`} />
-                        </button>
-                        {isExpanded && (
-                          <div className="px-4 pb-4 -mt-1">
-                            <p className="text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed">{work.examAngle}</p>
-                          </div>
-                        )}
-                      </div>
-                    );
-                  })}
+                  <div className="w-full h-1.5 bg-[var(--surface2)] rounded-full overflow-hidden">
+                    <div
+                      className="h-full rounded-full"
+                      style={{
+                        width: `${Math.min(100, (topic.percent / data.regionalSummary[0].percent) * 100)}%`,
+                        backgroundColor: currentPalette.primary,
+                      }}
+                    />
+                  </div>
                 </div>
               </div>
             ))}
           </div>
+        </Panel>
+
+        {/* Breakdown by board */}
+        <section>
+          <h2 className="font-display font-medium text-sm text-[var(--text)] mb-3">Por vestibular</h2>
+          <div className="space-y-3">
+            {allBoards.map((board) => {
+              const boardData = data.byBoard.find((b) => b.board === board);
+              if (!boardData) return null;
+              const isTarget = targetExamBoards.includes(board);
+              const isExpanded = expandedBoard === board;
+              return (
+                <Panel key={board} subject={paletteKey} className="ni-panel overflow-hidden">
+                  <button
+                    onClick={() => setExpandedBoard(isExpanded ? null : board)}
+                    className="w-full flex items-center justify-between p-4 text-left hover:bg-[var(--surface2)] transition-colors"
+                  >
+                    <div className="flex items-center min-w-0">
+                      <span
+                        className="text-[10px] font-mono font-semibold px-2 py-0.5 rounded-full mr-3 shrink-0"
+                        style={{
+                          backgroundColor: isTarget ? currentPalette.primary : 'var(--surface2)',
+                          color: isTarget ? currentPalette.wash : 'var(--dim)',
+                        }}
+                      >
+                        {board}
+                      </span>
+                      <span className="text-xs text-[var(--dim)] truncate">
+                        {boardData.topics.slice(0, 2).map((t) => t.theme).join(' • ')}
+                      </span>
+                    </div>
+                    <ChevronDown className={`w-3.5 h-3.5 text-[var(--dim)] shrink-0 ml-3 transition-transform ${isExpanded ? 'rotate-180' : ''}`} />
+                  </button>
+                  {isExpanded && (
+                    <div className="px-5 pb-4 pt-1 border-t border-[var(--line)] space-y-2">
+                      {boardData.topics.map((topic) => (
+                        <div key={topic.theme} className="flex items-center justify-between text-xs py-1">
+                          <span className="text-[var(--text)]">{topic.theme}</span>
+                          <span className="text-[var(--dim)] font-mono">{topic.percent}%</span>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </Panel>
+              );
+            })}
+          </div>
+          {data.byBoard.length === 0 && (
+            <p className="text-xs text-[var(--dim)] py-4">Sem dados por vestibular para essa matéria neste relatório.</p>
+          )}
         </section>
-      )}
-      </motion.div>
-      </AnimatePresence>
+
+        {/* Required reading section for Portuguese */}
+        {activeSubject === 'Língua Portuguesa' && (
+          <section className="mt-4">
+            <h2 className="font-display font-medium text-sm text-[var(--text)] mb-1 flex items-center">
+              <BookOpen className="w-4 h-4 mr-2 text-[var(--primary)]" />
+              Obras de leitura obrigatória
+            </h2>
+            <p className="text-xs text-[var(--dim)] mb-3">
+              Fuvest e Unicamp cobram obras literárias com peso decisivo na nota de Português.
+            </p>
+            <div className="space-y-4">
+              {literaryWorks.map((list) => (
+                <div key={list.board}>
+                  <div className="flex items-center justify-between mb-1.5">
+                    <h3 className="font-display font-medium text-xs text-[var(--text)]">{list.board}</h3>
+                    <span className="text-[11px] font-mono text-[var(--dim)]">{list.cycle}</span>
+                  </div>
+                  {list.note && (
+                    <div className="flex items-start p-2.5 mb-2 rounded-lg bg-amber-500/10 border border-amber-500/20 text-amber-300 text-xs">
+                      <AlertTriangle className="w-3.5 h-3.5 mr-1.5 mt-0.5 shrink-0 text-amber-400" />
+                      <p>{list.note}</p>
+                    </div>
+                  )}
+                  <Panel subject="Literatura" className="ni-panel divide-y divide-[var(--line)] overflow-hidden">
+                    {list.works.map((work) => {
+                      const key = `${list.board}_${work.title}`;
+                      const isExpanded = expandedWork === key;
+                      return (
+                        <div key={key}>
+                          <button
+                            onClick={() => setExpandedWork(isExpanded ? null : key)}
+                            className="w-full flex items-center justify-between p-3.5 text-left hover:bg-[var(--surface2)] transition-colors"
+                          >
+                            <div className="min-w-0">
+                              <p className="font-medium text-xs text-[var(--text)] truncate">{work.title}</p>
+                              <p className="text-[11px] text-[var(--dim)] mt-0.5">{work.author} • {work.movement}</p>
+                            </div>
+                            <ChevronDown className={`w-3.5 h-3.5 text-[var(--dim)] shrink-0 ml-3 transition-transform ${isExpanded ? 'rotate-180' : ''}`} />
+                          </button>
+                          {isExpanded && (
+                            <div className="px-4 pb-3 text-xs text-[var(--dim)] leading-relaxed">
+                              {work.examAngle}
+                            </div>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </Panel>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
       </div>
-    </SubjectAtmosphere>
+    </div>
   );
 }

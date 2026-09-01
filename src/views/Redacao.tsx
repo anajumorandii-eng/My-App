@@ -11,9 +11,9 @@ import { PenLine, ChevronDown, Lightbulb, AlertTriangle, CheckCircle2, XCircle, 
 import { aiErrorMessage, requestAiText } from '../lib/aiClient';
 import { AnswerCorrection, parseAnswerCorrection } from '../lib/tutorContracts';
 import { AiText } from '../components/AiText';
-import { SubjectAtmosphere } from '../features/daily-plan/components/SubjectAtmosphere';
-import { getMotionConfigForSubject } from '../design-system/crivoMotionPresets';
-import { motion, AnimatePresence } from 'motion/react';
+import { Panel } from '../components/ui/Panel';
+import { PALETTES } from '../prototypes/NucleoInstrumentalPrototype';
+import { SUBJECT_ICONS } from './Dashboard';
 
 type Tab = 'pratica' | 'estrutura' | 'bancas' | 'erros' | 'checklist';
 
@@ -26,6 +26,7 @@ const TABS: { id: Tab; label: string }[] = [
 ];
 
 const PART_ORDER: Array<'Introdução' | 'Desenvolvimento' | 'Conclusão'> = ['Introdução', 'Desenvolvimento', 'Conclusão'];
+const REDACAO_PALETTE = PALETTES.Português;
 
 export default function Redacao() {
   const [tab, setTab] = useState<Tab>('pratica');
@@ -66,289 +67,370 @@ export default function Redacao() {
     }
   };
 
-  return (
-    <SubjectAtmosphere subject="redacao" focus={0.4}>
-      <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500" data-geometry="argument">
-      <header>
-        <div className="flex items-center gap-2 mb-1.5">
-          <span className="w-2 h-2 rounded-full bg-ember-500 shadow-[0_0_8px_var(--color-ember-500)]" />
-          <span className="text-[11px] font-mono tracking-widest uppercase text-ember-600 dark:text-ember-400">Ateliê de Escrita & Correção Analítica · Crivo</span>
-        </div>
-        <h1 className="font-display text-3xl sm:text-4xl font-semibold italic text-text-primary tracking-tight flex items-center gap-3">
-          <PenLine className="w-7 h-7 text-action-primary" />
-          Módulo de Redação
-        </h1>
-        <p className="text-text-secondary mt-1 max-w-2xl text-base">
-          Estrutura de texto, proposta de intervenção, repertório produtivo e análise de critérios específicos por vestibular.
-        </p>
-      </header>
+  const PenIcon = SUBJECT_ICONS['Português'] ?? PenLine;
 
-      <div className="flex gap-2 flex-wrap">
+  return (
+    <div
+      className="ni-main"
+      style={{
+        '--primary': REDACAO_PALETTE.primary,
+        '--secondary': REDACAO_PALETTE.secondary,
+        '--wash': REDACAO_PALETTE.wash,
+      } as React.CSSProperties}
+    >
+      {/* Route Breadcrumb */}
+      <div className="ni-route">
+        <span>REDAÇÃO</span>
+        <i />
+        <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
+          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--wash)]">
+            <PenIcon className="w-3 h-3" />
+          </span>
+          ATELIÊ DE ESCRITA
+        </span>
+        <i />
+        <b>TREINO DE REDAÇÃO</b>
+      </div>
+
+      {/* Main Title */}
+      <div className="ni-title">
+        <div>
+          <h1>Escreva com estrutura, argumente com evidência.</h1>
+          <p>Estrutura de texto, proposta de intervenção, repertório produtivo e análise de critérios específicos por vestibular.</p>
+        </div>
+        <div className="ni-state">
+          <i /> ateliê de escrita · Crivo Redação
+        </div>
+      </div>
+
+      {/* Tabs */}
+      <div className="ni-subjects">
         {TABS.map((t) => {
           const active = tab === t.id;
           return (
-            <motion.button
+            <button
               key={t.id}
-              whileHover={{ scale: 1.04 }}
-              whileTap={{ scale: 0.96 }}
               onClick={() => setTab(t.id)}
-              className={`px-3 py-1.5 rounded-full text-xs font-mono tracking-wide transition-all ${
+              style={
                 active
-                  ? 'bg-action-primary text-warm-50 font-bold shadow-sm ring-1 ring-white/20'
-                  : 'border border-border-subtle hover:border-text-primary text-text-muted hover:text-text-primary bg-surface-default/70'
-              }`}
+                  ? { backgroundColor: REDACAO_PALETTE.primary, color: REDACAO_PALETTE.wash, borderRadius: '4px', padding: '2px 8px' }
+                  : undefined
+              }
             >
-              {t.label.toUpperCase()}
-            </motion.button>
+              {t.label}
+            </button>
           );
         })}
       </div>
 
-      <AnimatePresence initial={false}>
+      {/* Practice Tab */}
       {tab === 'pratica' && (
-        <motion.section
-          key="tab-pratica"
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -10 }}
-          transition={{ duration: 0.25 }}
-          className="space-y-5"
-        >
+        <div className="space-y-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-            <select value={board} onChange={(e) => setBoard(e.target.value)} className="border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 rounded-xl px-4 py-3">
-              {['ENEM', 'Fuvest', 'Unicamp', 'Unesp/Vunesp', 'Famerp', 'Unifesp'].map((item) => <option key={item}>{item}</option>)}
+            <select
+              value={board}
+              onChange={(e) => setBoard(e.target.value)}
+              className="border border-[var(--line)] bg-[var(--surface2)] text-[var(--text)] rounded-xl px-4 py-2.5 text-xs outline-none focus:border-[var(--primary)]"
+            >
+              {['ENEM', 'Fuvest', 'Unicamp', 'Unesp/Vunesp', 'Famerp', 'Unifesp'].map((item) => (
+                <option key={item} value={item} className="bg-zinc-50 dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100">{item}</option>
+              ))}
             </select>
-            <input value={theme} onChange={(e) => setTheme(e.target.value)} placeholder="Tema ou proposta de redação" className="md:col-span-2 border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 rounded-xl px-4 py-3" />
+            <input
+              value={theme}
+              onChange={(e) => setTheme(e.target.value)}
+              placeholder="Tema ou proposta de redação..."
+              className="md:col-span-2 border border-[var(--line)] bg-[var(--surface2)] text-[var(--text)] rounded-xl px-4 py-2.5 text-xs outline-none focus:border-[var(--primary)]"
+            />
           </div>
-          <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-5">
-            <div className="flex justify-between text-sm mb-2"><span className="font-semibold">Primeira versão</span><span className="text-zinc-500">{draft.trim() ? draft.trim().split(/\s+/).length : 0} palavras</span></div>
-            <textarea value={draft} onChange={(e) => { setDraft(e.target.value); setCorrection(null); }} rows={16} placeholder="Escreva sua redação aqui..." className="w-full bg-zinc-50 dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-700 rounded-xl p-4 leading-7 outline-none focus:ring-2 focus:ring-indigo-500" />
-            <div className="flex flex-wrap gap-2 mt-3">
-              <button onClick={saveDraft} className="flex items-center px-4 py-2 border border-zinc-200 dark:border-zinc-700 rounded-lg"><Save className="w-4 h-4 mr-2" />Salvar rascunho</button>
-              <button onClick={correctEssay} disabled={correcting || !theme.trim() || !draft.trim()} className="flex items-center px-4 py-2 bg-indigo-600 disabled:bg-zinc-300 text-white rounded-lg"><Sparkles className="w-4 h-4 mr-2" />{correcting ? 'Corrigindo...' : 'Corrigir com IA'}</button>
+
+          <Panel subject="Português" className="ni-panel p-5">
+            <div className="flex justify-between items-center text-xs mb-2">
+              <span className="font-semibold text-[var(--text)]">Primeira versão (rascunho)</span>
+              <span className="text-[var(--dim)] font-mono">{draft.trim() ? draft.trim().split(/\s+/).length : 0} palavras</span>
             </div>
-            {practiceError && <p className="text-sm text-rose-500 mt-3">{practiceError}</p>}
-          </div>
+            <textarea
+              value={draft}
+              onChange={(e) => { setDraft(e.target.value); setCorrection(null); }}
+              rows={14}
+              placeholder="Escreva sua redação aqui..."
+              className="w-full bg-[var(--surface2)] border border-[var(--line)] rounded-xl p-4 text-xs text-[var(--text)] leading-relaxed outline-none focus:border-[var(--primary)]"
+            />
+            <div className="flex flex-wrap gap-2 mt-3">
+              <button
+                onClick={saveDraft}
+                className="flex items-center px-3 py-1.5 border border-[var(--line)] rounded-lg text-xs text-[var(--dim)] hover:text-[var(--text)] transition-colors"
+              >
+                <Save className="w-3.5 h-3.5 mr-1.5" />
+                Salvar rascunho
+              </button>
+              <button
+                onClick={correctEssay}
+                disabled={correcting || !theme.trim() || !draft.trim()}
+                className="flex items-center px-3.5 py-1.5 bg-[var(--primary)] text-[var(--wash)] disabled:opacity-50 rounded-lg text-xs font-semibold transition-opacity"
+              >
+                <Sparkles className="w-3.5 h-3.5 mr-1.5" />
+                {correcting ? 'Corrigindo...' : 'Corrigir com IA'}
+              </button>
+            </div>
+            {practiceError && <p className="text-xs text-rose-500 mt-2">{practiceError}</p>}
+          </Panel>
 
           {correction && (
             <div className="space-y-4">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {[
                   ['O que funcionou', correction.acertos],
                   ['Primeiro ponto de ruptura', correction.rupturaPoint],
                   ['Por que compromete o texto', correction.porque],
-                  ['Correção mínima', correction.correcaoMinima],
-                ].map(([title, content]) => <div key={title} className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900 text-sm"><p className="font-semibold mb-1 text-indigo-700 dark:text-indigo-300">{title}</p><AiText text={content} /></div>)}
+                  ['Correção mínima sugerida', correction.correcaoMinima],
+                ].map(([title, content]) => (
+                  <Panel key={title} subject="Português" className="ni-panel p-4 text-xs">
+                    <p className="font-semibold mb-1 text-[var(--primary)]">{title}</p>
+                    <AiText text={content} className="text-[var(--text)] leading-relaxed" />
+                  </Panel>
+                ))}
               </div>
-              <div className="p-4 rounded-xl bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 text-sm"><p className="font-semibold mb-1">Versão-modelo para comparação</p><AiText text={correction.respostaModelo} /></div>
-              <div className="bg-white dark:bg-zinc-900 border border-indigo-200 dark:border-indigo-800 rounded-2xl p-5">
-                <div className="flex justify-between text-sm mb-2"><span className="font-semibold">Reescrita obrigatória</span><span className="text-zinc-500">Corrija primeiro o ponto de ruptura indicado</span></div>
-                <textarea value={rewrite} onChange={(e) => setRewrite(e.target.value)} rows={16} className="w-full bg-zinc-50 dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-700 rounded-xl p-4 leading-7 outline-none focus:ring-2 focus:ring-indigo-500" />
-                <button onClick={saveDraft} disabled={rewrite.trim() === draft.trim()} className="mt-3 flex items-center px-4 py-2 bg-emerald-600 disabled:bg-zinc-300 text-white rounded-lg"><Save className="w-4 h-4 mr-2" />Salvar reescrita</button>
-              </div>
+
+              <Panel subject="Português" className="ni-panel p-5 text-xs">
+                <p className="font-semibold mb-1 text-[var(--text)]">Versão-modelo para comparação</p>
+                <AiText text={correction.respostaModelo} className="text-[var(--dim)] leading-relaxed" />
+              </Panel>
+
+              <Panel subject="Português" className="ni-panel p-5">
+                <div className="flex justify-between items-center text-xs mb-2">
+                  <span className="font-semibold text-[var(--text)]">Reescrita obrigatória</span>
+                  <span className="text-[var(--dim)]">Corrija primeiro o ponto de ruptura indicado</span>
+                </div>
+                <textarea
+                  value={rewrite}
+                  onChange={(e) => setRewrite(e.target.value)}
+                  rows={14}
+                  className="w-full bg-[var(--surface2)] border border-[var(--line)] rounded-xl p-4 text-xs text-[var(--text)] leading-relaxed outline-none focus:border-[var(--primary)]"
+                />
+                <button
+                  onClick={saveDraft}
+                  disabled={rewrite.trim() === draft.trim()}
+                  className="mt-3 flex items-center px-4 py-2 bg-emerald-600 disabled:opacity-50 text-white rounded-lg text-xs font-semibold"
+                >
+                  <Save className="w-3.5 h-3.5 mr-1.5" />
+                  Salvar reescrita
+                </button>
+              </Panel>
             </div>
           )}
-        </motion.section>
+        </div>
       )}
 
+      {/* Structure Guide Tab */}
       {tab === 'estrutura' && (
-        <div className="space-y-8">
+        <div className="space-y-6">
           {PART_ORDER.map((part) => (
             <section key={part} className="space-y-3">
-              <h2 className="text-xl font-semibold">{part}</h2>
-              <div className="space-y-3">
+              <h2 className="font-display font-medium text-sm text-[var(--text)]">{part}</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {essayStructure
                   .filter((s) => s.part === part)
                   .map((s) => (
-                    <div key={s.title} className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-4 shadow-sm">
-                      <h3 className="font-semibold text-sm">{s.title}</h3>
-                      <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-0.5">{s.description}</p>
-                    </div>
+                    <Panel key={s.title} subject="Português" interactive className="ni-panel p-4">
+                      <h3 className="font-semibold text-xs text-[var(--text)]">{s.title}</h3>
+                      <p className="text-xs text-[var(--dim)] mt-0.5 leading-relaxed">{s.description}</p>
+                    </Panel>
                   ))}
               </div>
             </section>
           ))}
 
           <section>
-            <h2 className="text-xl font-semibold mb-1">Fórmula da Proposta de Intervenção</h2>
-            <p className="text-sm text-zinc-500 mb-3">
-              Obrigatória no ENEM, cobrada explicitamente pela Unifesp, e um diferencial forte nas demais mesmo quando não é exigida.
+            <h2 className="font-display font-medium text-sm text-[var(--text)] mb-1">Fórmula da Proposta de Intervenção</h2>
+            <p className="text-xs text-[var(--dim)] mb-3">
+              Obrigatória no ENEM e cobrada explicitamente pela Unifesp.
             </p>
-            <div className="space-y-3">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               {interventionFormula.map((el) => (
-                <div key={el.letter} className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-4 shadow-sm flex items-start">
-                  <span className="w-8 h-8 rounded-full bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 flex items-center justify-center mr-4 shrink-0 font-semibold text-sm">
+                <Panel key={el.letter} subject="Português" interactive className="ni-panel p-4 flex items-start gap-3">
+                  <span
+                    className="w-7 h-7 rounded-full flex items-center justify-center shrink-0 font-bold text-xs font-mono"
+                    style={{ backgroundColor: REDACAO_PALETTE.primary, color: REDACAO_PALETTE.wash }}
+                  >
                     {el.letter}
                   </span>
                   <div>
-                    <h3 className="font-semibold text-sm">{el.title}</h3>
-                    <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-0.5">{el.description}</p>
+                    <h3 className="font-semibold text-xs text-[var(--text)]">{el.title}</h3>
+                    <p className="text-xs text-[var(--dim)] mt-0.5 leading-relaxed">{el.description}</p>
                   </div>
-                </div>
+                </Panel>
               ))}
             </div>
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold mb-1 flex items-center">
-              <MessageSquareQuote className="w-5 h-5 mr-2 text-indigo-500" />
+            <h2 className="font-display font-medium text-sm text-[var(--text)] mb-1 flex items-center">
+              <MessageSquareQuote className="w-4 h-4 mr-2 text-[var(--primary)]" />
               Repertório Sociocultural Produtivo
             </h2>
-            <p className="text-sm text-zinc-500 mb-3">
+            <p className="text-xs text-[var(--dim)] mb-3">
               A diferença entre um repertório que soma pontos e um que só ocupa espaço.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-5 shadow-sm">
-                <p className="text-sm font-semibold text-emerald-600 dark:text-emerald-400 mb-2 flex items-center">
-                  <CheckCircle2 className="w-4 h-4 mr-1.5" />
+              <Panel subject="Biologia" className="ni-panel p-5">
+                <p className="text-xs font-semibold text-emerald-400 mb-2 flex items-center">
+                  <CheckCircle2 className="w-3.5 h-3.5 mr-1.5" />
                   Produtivo
                 </p>
                 <ul className="space-y-1.5">
                   {repertoireGuidance.productive.map((p, i) => (
-                    <li key={i} className="text-sm text-zinc-600 dark:text-zinc-400 flex">
+                    <li key={i} className="text-xs text-[var(--dim)] flex items-start">
                       <span className="mr-2 text-emerald-400">•</span>
-                      {p}
+                      <span>{p}</span>
                     </li>
                   ))}
                 </ul>
-              </div>
-              <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-5 shadow-sm">
-                <p className="text-sm font-semibold text-rose-600 dark:text-rose-400 mb-2 flex items-center">
-                  <XCircle className="w-4 h-4 mr-1.5" />
+              </Panel>
+              <Panel subject="História" className="ni-panel p-5">
+                <p className="text-xs font-semibold text-[#e08391] mb-2 flex items-center">
+                  <XCircle className="w-3.5 h-3.5 mr-1.5" />
                   Não-produtivo
                 </p>
                 <ul className="space-y-1.5">
                   {repertoireGuidance.nonProductive.map((p, i) => (
-                    <li key={i} className="text-sm text-zinc-600 dark:text-zinc-400 flex">
-                      <span className="mr-2 text-rose-400">•</span>
-                      {p}
+                    <li key={i} className="text-xs text-[var(--dim)] flex items-start">
+                      <span className="mr-2 text-[#e08391]">•</span>
+                      <span>{p}</span>
                     </li>
                   ))}
                 </ul>
-              </div>
+              </Panel>
             </div>
-            <div className="mt-4 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-5 shadow-sm">
-              <p className="text-sm font-semibold text-zinc-700 dark:text-zinc-300 mb-2">Frases de conexão prontas para usar</p>
+            <Panel subject="Português" className="ni-panel p-4 mt-3">
+              <p className="text-xs font-semibold text-[var(--text)] mb-2">Conectivos e frases de ligação prontas</p>
               <div className="flex flex-wrap gap-2">
                 {repertoireGuidance.connectivePhrases.map((phrase, i) => (
-                  <span key={i} className="text-xs px-3 py-1.5 rounded-full bg-indigo-50 dark:bg-indigo-900/20 text-indigo-700 dark:text-indigo-300">
+                  <span
+                    key={i}
+                    className="text-[11px] font-mono px-2.5 py-1 rounded-full"
+                    style={{ backgroundColor: REDACAO_PALETTE.primary, color: REDACAO_PALETTE.wash }}
+                  >
                     {phrase}
                   </span>
                 ))}
               </div>
-            </div>
+            </Panel>
           </section>
         </div>
       )}
 
+      {/* Boards Tab */}
       {tab === 'bancas' && (
         <section className="space-y-3">
           {essayBoardProfiles.map((b) => {
             const isExpanded = expandedBoard === b.board;
             return (
-              <div key={b.board} className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl shadow-sm overflow-hidden">
+              <Panel key={b.board} subject="Português" className="ni-panel overflow-hidden">
                 <button
                   onClick={() => setExpandedBoard(isExpanded ? null : b.board)}
-                  className="w-full flex items-center justify-between p-5 text-left"
+                  className="w-full flex items-center justify-between p-4 text-left hover:bg-[var(--surface2)] transition-colors"
                 >
                   <div className="min-w-0 flex items-center">
-                    <h3 className="font-semibold truncate">{b.board}</h3>
-                    {b.uncertain && <AlertTriangle className="w-3.5 h-3.5 ml-2 text-amber-500 shrink-0" />}
+                    <h3 className="font-display font-medium text-sm text-[var(--text)] truncate">{b.board}</h3>
+                    {b.uncertain && <AlertTriangle className="w-3.5 h-3.5 ml-2 text-amber-400 shrink-0" />}
                   </div>
-                  <ChevronDown className={`w-4 h-4 text-zinc-400 shrink-0 ml-3 transition-transform ${isExpanded ? 'rotate-180' : ''}`} />
+                  <ChevronDown className={`w-3.5 h-3.5 text-[var(--dim)] shrink-0 ml-3 transition-transform ${isExpanded ? 'rotate-180' : ''}`} />
                 </button>
                 {isExpanded && (
-                  <div className="px-5 pb-5 pt-1 border-t border-zinc-100 dark:border-zinc-800 space-y-4">
+                  <div className="px-5 pb-5 pt-1 border-t border-[var(--line)] space-y-3">
                     {b.note && (
-                      <div className="flex items-start p-3 rounded-lg bg-amber-50 dark:bg-amber-900/20 text-amber-800 dark:text-amber-300 text-xs">
-                        <AlertTriangle className="w-3.5 h-3.5 mr-2 mt-0.5 shrink-0" />
+                      <div className="flex items-start p-2.5 rounded-lg bg-amber-500/10 border border-amber-500/20 text-amber-300 text-xs">
+                        <AlertTriangle className="w-3.5 h-3.5 mr-1.5 mt-0.5 shrink-0 text-amber-400" />
                         <p>{b.note}</p>
                       </div>
                     )}
 
                     <div>
-                      <p className="text-sm font-semibold text-zinc-700 dark:text-zinc-300 mb-1">Formato</p>
-                      <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">{b.format}</p>
+                      <p className="text-xs font-semibold text-[var(--text)] mb-0.5">Formato</p>
+                      <p className="text-xs text-[var(--dim)] leading-relaxed">{b.format}</p>
                     </div>
 
                     <div>
-                      <p className="text-sm font-semibold text-zinc-700 dark:text-zinc-300 mb-1">Pontuação</p>
-                      <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">{b.scoring}</p>
+                      <p className="text-xs font-semibold text-[var(--text)] mb-0.5">Pontuação</p>
+                      <p className="text-xs text-[var(--dim)] leading-relaxed">{b.scoring}</p>
                     </div>
 
                     <div>
-                      <p className="text-sm font-semibold text-zinc-700 dark:text-zinc-300 mb-2">Critérios de correção</p>
-                      <div className="space-y-2">
+                      <p className="text-xs font-semibold text-[var(--text)] mb-1">Critérios de correção</p>
+                      <div className="space-y-1.5">
                         {b.criteria.map((c) => (
-                          <div key={c.name} className="pl-3 border-l-2 border-indigo-100 dark:border-indigo-900/40">
-                            <p className="text-sm font-medium">{c.name}</p>
-                            <p className="text-sm text-zinc-500">{c.description}</p>
+                          <div key={c.name} className="pl-3 border-l-2 border-[var(--primary)]/40">
+                            <p className="text-xs font-medium text-[var(--text)]">{c.name}</p>
+                            <p className="text-[11px] text-[var(--dim)]">{c.description}</p>
                           </div>
                         ))}
                       </div>
                     </div>
 
                     <div>
-                      <p className="text-sm font-semibold text-zinc-700 dark:text-zinc-300 mb-2 flex items-center">
-                        <XCircle className="w-4 h-4 mr-1.5 text-rose-500" />
+                      <p className="text-xs font-semibold text-[#e08391] mb-1 flex items-center">
+                        <XCircle className="w-3.5 h-3.5 mr-1 text-[#e08391]" />
                         O que zera ou penaliza pesado
                       </p>
-                      <ul className="space-y-1.5">
+                      <ul className="space-y-1">
                         {b.zeroRules.map((r, i) => (
-                          <li key={i} className="text-sm text-zinc-600 dark:text-zinc-400 flex">
-                            <span className="mr-2 text-rose-400">•</span>
-                            {r}
+                          <li key={i} className="text-xs text-[var(--dim)] flex items-start">
+                            <span className="mr-2 text-[#e08391]">•</span>
+                            <span>{r}</span>
                           </li>
                         ))}
                       </ul>
                     </div>
 
-                    <div className="flex items-start p-3 rounded-lg bg-indigo-50 dark:bg-indigo-900/20 text-indigo-800 dark:text-indigo-300 text-sm">
-                      <Lightbulb className="w-4 h-4 mr-2 mt-0.5 shrink-0" />
-                      <p>{b.keyToMaxScore}</p>
+                    <div className="p-3 rounded-lg border border-[var(--primary)]/30 bg-[var(--primary)]/10 text-xs text-[var(--text)] flex items-start gap-2">
+                      <Lightbulb className="w-3.5 h-3.5 text-[var(--primary)] shrink-0 mt-0.5" />
+                      <p className="leading-relaxed">{b.keyToMaxScore}</p>
                     </div>
                   </div>
                 )}
-              </div>
+              </Panel>
             );
           })}
         </section>
       )}
 
+      {/* Common Mistakes Tab */}
       {tab === 'erros' && (
         <section className="space-y-3">
-          <p className="text-sm text-zinc-500 mb-2">
+          <p className="text-xs text-[var(--dim)] mb-2">
             Erros que aparecem de forma consistente em todas as bancas pesquisadas — proteger contra eles vale mais pontos do que qualquer truque isolado.
           </p>
-          {commonMistakes.map((m) => (
-            <div key={m.mistake} className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-4 shadow-sm">
-              <h3 className="font-semibold text-sm flex items-center">
-                <XCircle className="w-4 h-4 mr-2 text-rose-500 shrink-0" />
-                {m.mistake}
-              </h3>
-              <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-1">{m.why}</p>
-            </div>
-          ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+            {commonMistakes.map((m) => (
+              <Panel key={m.mistake} subject="Português" interactive className="ni-panel p-4">
+                <h3 className="font-semibold text-xs text-[#e08391] flex items-center">
+                  <XCircle className="w-3.5 h-3.5 mr-1.5 shrink-0 text-[#e08391]" />
+                  {m.mistake}
+                </h3>
+                <p className="text-xs text-[var(--dim)] mt-1 leading-relaxed">{m.why}</p>
+              </Panel>
+            ))}
+          </div>
         </section>
       )}
 
+      {/* Checklist Tab */}
       {tab === 'checklist' && (
-        <section className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 shadow-sm">
-          <p className="text-sm text-zinc-500 mb-4">
+        <Panel subject="Português" className="ni-panel p-6">
+          <p className="text-xs text-[var(--dim)] mb-4">
             Rode essa lista antes de considerar a redação pronta — no treino e, mentalmente, na prova.
           </p>
           <ul className="space-y-3">
             {revisionChecklist.map((item, i) => (
-              <li key={i} className="flex items-start text-sm text-zinc-700 dark:text-zinc-300">
-                <CheckCircle2 className="w-4 h-4 mr-2.5 mt-0.5 text-indigo-500 shrink-0" />
-                {item}
+              <li key={i} className="flex items-start text-xs text-[var(--text)]">
+                <CheckCircle2 className="w-4 h-4 mr-2.5 mt-0.5 text-emerald-400 shrink-0" />
+                <span>{item}</span>
               </li>
             ))}
           </ul>
-        </section>
+        </Panel>
       )}
-      </AnimatePresence>
-      </div>
-    </SubjectAtmosphere>
+    </div>
   );
 }

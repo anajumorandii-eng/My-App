@@ -6,18 +6,16 @@ import { useStudyMethods } from '../hooks/useStudyMethods';
 import { requestAiText } from '../lib/aiClient';
 import { AiText } from '../components/AiText';
 import { FlaskConical, ChevronDown, Brain, Repeat as RepeatIcon, Target, Zap, Sparkles, CheckCircle2 } from 'lucide-react';
-import { motion, AnimatePresence } from 'motion/react';
+import { Panel } from '../components/ui/Panel';
+import { PALETTES } from '../prototypes/NucleoInstrumentalPrototype';
 
-// Métodos que não ficam só na teoria: já rodam de verdade no motor do
-// plano (spacedRepetition.ts agenda as revisões; interleaving.ts intercala
-// as matérias no plano de hoje) — não apenas descritos aqui como sugestão.
 const ACTIVE_IN_ENGINE = new Set(['method_spaced_repetition', 'method_interleaving']);
 
-const CATEGORY_META: Record<StudyMethod['category'], { label: string; icon: React.ElementType; color: string }> = {
-  aquisicao: { label: 'Aquisição', icon: Brain, color: 'text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-900/20' },
-  retencao: { label: 'Retenção', icon: RepeatIcon, color: 'text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-900/20' },
-  aplicacao: { label: 'Aplicação', icon: Target, color: 'text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-900/20' },
-  foco: { label: 'Foco', icon: Zap, color: 'text-rose-600 dark:text-rose-400 bg-rose-50 dark:bg-rose-900/20' },
+const CATEGORY_META: Record<StudyMethod['category'], { label: string; icon: React.ElementType }> = {
+  aquisicao: { label: 'Aquisição', icon: Brain },
+  retencao: { label: 'Retenção', icon: RepeatIcon },
+  aplicacao: { label: 'Aplicação', icon: Target },
+  foco: { label: 'Foco', icon: Zap },
 };
 
 export default function Laboratorio() {
@@ -56,129 +54,160 @@ export default function Laboratorio() {
     }
   };
 
-  return (
-    <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
-      <header>
-        <div className="flex items-center gap-2 mb-1.5">
-          <span className="w-2 h-2 rounded-full bg-ember-500 shadow-[0_0_8px_var(--color-ember-500)]" />
-          <span className="text-[11px] font-mono tracking-widest uppercase text-ember-600 dark:text-ember-400">Ciência da Aprendizagem · Crivo</span>
-        </div>
-        <h1 className="font-display text-3xl sm:text-4xl font-semibold italic text-text-primary tracking-tight flex items-center gap-3">
-          <FlaskConical className="w-7 h-7 text-action-primary" />
-          Laboratório & Métodos
-        </h1>
-        <p className="text-text-secondary mt-1 max-w-2xl text-base">
-          Técnicas de estudo com evidência científica comprovada, integradas diretamente ao motor adaptativo.
-        </p>
-        {syncError && <p className="text-xs text-status-error mt-2">{syncError}</p>}
-      </header>
+  const currentPalette = PALETTES.Química;
 
-      <div className="flex gap-2 flex-wrap">
+  return (
+    <div
+      className="ni-main"
+      style={{
+        '--primary': currentPalette.primary,
+        '--secondary': currentPalette.secondary,
+        '--wash': currentPalette.wash,
+      } as React.CSSProperties}
+    >
+      {/* Route Breadcrumb */}
+      <div className="ni-route">
+        <span>FERRAMENTAS</span>
+        <i />
+        <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
+          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--wash)]">
+            <FlaskConical className="w-3 h-3" />
+          </span>
+          CIÊNCIA DA APRENDIZAGEM
+        </span>
+        <i />
+        <b>LABORATÓRIO DE MÉTODOS</b>
+      </div>
+
+      {/* Main Title */}
+      <div className="ni-title">
+        <div>
+          <h1>Técnicas com evidência científica.</h1>
+          <p>Metodologias comprovadas de retenção e aplicação integradas diretamente ao motor do plano.</p>
+        </div>
+        <div className="ni-state">
+          <i /> {studyMethods.length} métodos catalogados
+        </div>
+      </div>
+
+      {syncError && <p className="text-xs text-rose-500 mb-2">{syncError}</p>}
+
+      {/* Filter bar */}
+      <div className="ni-subjects">
         <button
           onClick={() => setCategoryFilter('all')}
-          className={`px-3 py-1.5 rounded-full text-xs font-mono tracking-wide transition-all ${
+          style={
             categoryFilter === 'all'
-              ? 'bg-action-primary text-warm-50 font-bold shadow-sm ring-1 ring-white/20'
-              : 'border border-border-subtle hover:border-text-primary text-text-muted hover:text-text-primary bg-surface-default/70'
-          }`}
+              ? { backgroundColor: currentPalette.primary, color: currentPalette.wash, borderRadius: '4px', padding: '2px 8px' }
+              : undefined
+          }
         >
           TODAS
         </button>
         {(Object.entries(CATEGORY_META) as [StudyMethod['category'], typeof CATEGORY_META[StudyMethod['category']]][]).map(([value, meta]) => {
           const active = categoryFilter === value;
+          const Icon = meta.icon;
           return (
             <button
               key={value}
               onClick={() => setCategoryFilter(value)}
-              className={`flex items-center px-3 py-1.5 rounded-full text-xs font-mono tracking-wide transition-all ${
+              style={
                 active
-                  ? 'bg-action-primary text-warm-50 font-bold shadow-sm ring-1 ring-white/20'
-                  : 'border border-border-subtle hover:border-text-primary text-text-muted hover:text-text-primary bg-surface-default/70'
-              }`}
+                  ? { backgroundColor: currentPalette.primary, color: currentPalette.wash, borderRadius: '4px', padding: '2px 8px' }
+                  : undefined
+              }
             >
-              <meta.icon className="w-3.5 h-3.5 mr-1.5" />
+              <Icon className="w-3 h-3 inline mr-1" />
               {meta.label.toUpperCase()}
             </button>
           );
         })}
       </div>
 
+      {/* Methods list */}
       <div className="space-y-3">
-        {filtered.map((method, index) => {
+        {filtered.map((method) => {
           const meta = CATEGORY_META[method.category];
           const isExpanded = expandedId === method.id;
+          const Icon = meta.icon;
+
           return (
-            <motion.div
+            <Panel
               key={method.id}
-              layout
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.04, duration: 0.3 }}
-              className="bg-surface-default border border-border-subtle rounded-2xl shadow-soft-sm overflow-hidden"
+              subject="Química"
+              className="ni-panel overflow-hidden"
             >
               <button
                 onClick={() => setExpandedId(isExpanded ? null : method.id)}
-                className="w-full flex items-center justify-between p-5 text-left hover:bg-surface-secondary/40 transition-colors"
+                className="w-full flex items-center justify-between p-4 text-left hover:bg-[var(--surface2)] transition-colors"
               >
                 <div className="flex items-center min-w-0">
-                  <span className={`w-10 h-10 rounded-xl flex items-center justify-center mr-4 shrink-0 ${meta.color}`}>
-                    <meta.icon className="w-5 h-5" />
+                  <span
+                    className="w-7 h-7 rounded-lg flex items-center justify-center mr-3 shrink-0"
+                    style={{ backgroundColor: 'var(--primary)', color: 'var(--wash)' }}
+                  >
+                    <Icon className="w-4 h-4" />
                   </span>
                   <div className="min-w-0">
-                    <h3 className="font-semibold flex items-center flex-wrap gap-2">
+                    <h3 className="font-display font-medium text-xs text-[var(--text)] flex items-center flex-wrap gap-2">
                       {method.name}
                       {ACTIVE_IN_ENGINE.has(method.id) && (
-                        <span className="inline-flex items-center text-[11px] font-medium px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300">
-                          <CheckCircle2 className="w-3 h-3 mr-1" />
-                          Ativo no seu plano
+                        <span className="inline-flex items-center text-[10px] font-mono font-bold px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                          <CheckCircle2 className="w-2.5 h-2.5 mr-1" />
+                          Ativo no motor
                         </span>
                       )}
                     </h3>
-                    <p className="text-sm text-zinc-500 mt-0.5 truncate">{method.summary}</p>
+                    <p className="text-[11px] text-[var(--dim)] mt-0.5 truncate">{method.summary}</p>
                   </div>
                 </div>
-                <ChevronDown className={`w-5 h-5 text-zinc-400 shrink-0 ml-3 transition-transform ${isExpanded ? 'rotate-180' : ''}`} />
+                <ChevronDown className={`w-3.5 h-3.5 text-[var(--dim)] shrink-0 ml-3 transition-transform ${isExpanded ? 'rotate-180' : ''}`} />
               </button>
 
               {isExpanded && (
-                <div className="px-5 pb-5 pt-1 border-t border-zinc-100 dark:border-zinc-800">
+                <div className="px-5 pb-5 pt-1 border-t border-[var(--line)] space-y-4 text-xs">
                   {method.id === 'method_spaced_repetition' && (
-                    <p className="mt-4 text-xs text-zinc-500 bg-zinc-50 dark:bg-zinc-800/50 rounded-lg p-3">
-                      Isso já roda de verdade: cada tópico tem seu próprio intervalo, recalculado a cada vez que você avalia como lembrou em "Revisões Adaptativas" ou responde uma questão em "Questões & Tentativas".
+                    <p className="p-3 rounded-xl border border-[var(--line)] bg-[var(--surface2)] text-[11px] text-[var(--dim)] leading-relaxed">
+                      Já ativo: cada tópico tem seu próprio intervalo SM-2, recalculado a cada avaliação em Revisões Adaptativas ou resolução de questão.
                     </p>
                   )}
                   {method.id === 'method_interleaving' && (
-                    <p className="mt-4 text-xs text-zinc-500 bg-zinc-50 dark:bg-zinc-800/50 rounded-lg p-3">
-                      Isso já roda de verdade: o plano do dia (em "Plano" e "Hoje") intercala matérias automaticamente, em vez de deixar vários itens seguidos da mesma matéria.
+                    <p className="p-3 rounded-xl border border-[var(--line)] bg-[var(--surface2)] text-[11px] text-[var(--dim)] leading-relaxed">
+                      Já ativo: o motor intercala matérias e frentes cognitivas na rotina diária para evitar fadiga de foco contínuo.
                     </p>
                   )}
-                  <div className="mt-4">
-                    <p className="text-sm font-semibold text-zinc-700 dark:text-zinc-300 mb-2">Como aplicar</p>
-                    <ol className="space-y-2">
+
+                  <div>
+                    <p className="font-semibold text-[var(--text)] mb-2">Protocolo de aplicação</p>
+                    <ol className="space-y-1.5">
                       {method.steps.map((step, i) => (
-                        <li key={i} className="flex text-sm text-zinc-600 dark:text-zinc-400">
-                          <span className="w-5 h-5 rounded-full bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center mr-3 shrink-0 text-xs font-medium text-zinc-500">
+                        <li key={i} className="flex text-xs text-[var(--dim)]">
+                          <span className="w-4 h-4 rounded-full bg-[var(--surface2)] border border-[var(--line)] flex items-center justify-center mr-2 shrink-0 text-[10px] font-mono text-[var(--text)]">
                             {i + 1}
                           </span>
-                          {step}
+                          <span className="text-[var(--text)]">{step}</span>
                         </li>
                       ))}
                     </ol>
                   </div>
-                  <div className="mt-4 flex flex-wrap gap-2">
+
+                  <div className="flex flex-wrap gap-1.5">
                     {method.bestFor.map((tag) => (
-                      <span key={tag} className="text-xs font-medium px-2.5 py-1 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400">
+                      <span
+                        key={tag}
+                        className="text-[11px] font-mono px-2 py-0.5 rounded-full border border-[var(--line)] bg-[var(--surface2)] text-[var(--dim)]"
+                      >
                         {tag}
                       </span>
                     ))}
                   </div>
 
-                  <div className="mt-4">
+                  <div>
                     {!examples[method.id] && (
                       <button
                         onClick={() => fetchExample(method)}
                         disabled={loadingExampleFor === method.id}
-                        className="flex items-center px-3 py-1.5 text-xs font-medium text-indigo-600 dark:text-indigo-400 border border-indigo-200 dark:border-indigo-800 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-900/20 disabled:opacity-50 transition-colors"
+                        className="flex items-center px-3 py-1.5 text-xs font-semibold text-[var(--primary)] border border-[var(--primary)] rounded-lg hover:bg-[var(--surface2)] disabled:opacity-50 transition-colors"
                       >
                         <Sparkles className={`w-3.5 h-3.5 mr-1.5 ${loadingExampleFor === method.id ? 'animate-pulse' : ''}`} />
                         {loadingExampleFor === method.id
@@ -187,15 +216,15 @@ export default function Laboratorio() {
                       </button>
                     )}
                     {examples[method.id] && (
-                      <div className="flex items-start p-3 rounded-lg bg-indigo-50 dark:bg-indigo-900/20 text-indigo-800 dark:text-indigo-300 text-sm">
-                        <Sparkles className="w-4 h-4 mr-2 mt-0.5 shrink-0" />
+                      <div className="p-3 rounded-xl border border-[var(--primary)]/30 bg-[var(--primary)]/10 text-xs text-[var(--text)] leading-relaxed flex items-start gap-2">
+                        <Sparkles className="w-4 h-4 mr-1 text-[var(--primary)] mt-0.5 shrink-0" />
                         <AiText text={examples[method.id]} className="flex-1" />
                       </div>
                     )}
                   </div>
                 </div>
               )}
-            </motion.div>
+            </Panel>
           );
         })}
       </div>

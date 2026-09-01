@@ -30,41 +30,18 @@ import {
   ChevronDown,
   Sparkles,
   CloudOff,
-  Stethoscope,
   Trash2,
   CheckCircle2,
   AlertTriangle,
-  RotateCcw,
-  Check,
   X,
-  Target,
   Info,
   Trophy,
 } from 'lucide-react';
-import { getMotionConfigForSubject } from '../design-system/crivoMotionPresets';
-import { motion, AnimatePresence } from 'motion/react';
+import { Panel } from '../components/ui/Panel';
+import { PALETTES } from '../prototypes/NucleoInstrumentalPrototype';
+import { SUBJECT_ICONS } from './Dashboard';
 
 const QUEUE_ORDER: BacklogQueue[] = ['A', 'B', 'C', 'D'];
-
-const QUEUE_COLORS: Record<BacklogQueue, string> = {
-  A: 'bg-rose-50 dark:bg-rose-900/20 text-rose-700 dark:text-rose-300',
-  B: 'bg-amber-50 dark:bg-amber-900/20 text-amber-700 dark:text-amber-300',
-  C: 'bg-indigo-50 dark:bg-indigo-900/20 text-indigo-700 dark:text-indigo-300',
-  D: 'bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400',
-};
-
-const SUBJECT_COLORS: Record<string, string> = {
-  Biologia: 'bg-emerald-500',
-  Matemática: 'bg-indigo-500',
-  Física: 'bg-amber-500',
-  Química: 'bg-rose-500',
-  Geografia: 'bg-teal-500',
-  História: 'bg-orange-500',
-  Português: 'bg-violet-500',
-  Inglês: 'bg-sky-500',
-  Filosofia: 'bg-stone-500',
-  Sociologia: 'bg-purple-500',
-};
 
 function ScorePicker({
   label,
@@ -82,19 +59,16 @@ function ScorePicker({
   const options = Array.from({ length: max + 1 }, (_, i) => i);
   return (
     <div>
-      <p className="text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-1">{label}</p>
-      <p className="text-xs text-zinc-500 mb-2">{helper}</p>
+      <p className="text-xs font-semibold text-[var(--text)] mb-0.5">{label}</p>
+      <p className="text-[11px] text-[var(--dim)] mb-1.5">{helper}</p>
       <div className="flex gap-1.5">
         {options.map((n) => (
           <button
             key={n}
             type="button"
             onClick={() => onChange(n)}
-            className={`w-9 h-9 rounded-lg text-sm font-medium border transition-colors ${
-              value === n
-                ? 'bg-indigo-600 border-indigo-600 text-white'
-                : 'border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-50 dark:hover:bg-zinc-800'
-            }`}
+            className="w-8 h-8 rounded-lg text-xs font-semibold border border-[var(--line)] bg-[var(--surface2)] text-[var(--text)] transition-colors"
+            style={value === n ? { backgroundColor: 'var(--primary)', color: 'var(--wash)', borderColor: 'var(--primary)' } : undefined}
           >
             {n}
           </button>
@@ -212,33 +186,33 @@ function SupportLevelContent({
         <button
           onClick={fetchExercise}
           disabled={loadingExercise}
-          className="w-full flex items-center justify-center py-2.5 border border-indigo-200 dark:border-indigo-800 text-indigo-600 dark:text-indigo-400 rounded-xl font-medium text-sm hover:bg-indigo-50 dark:hover:bg-indigo-900/20 disabled:opacity-50 transition-colors"
+          className="w-full flex items-center justify-center py-2.5 border border-[var(--primary)] text-[var(--primary)] rounded-xl font-semibold text-xs hover:bg-[var(--surface2)] disabled:opacity-50 transition-colors"
         >
-          <Sparkles className={`w-4 h-4 mr-2 ${loadingExercise ? 'animate-pulse' : ''}`} />
+          <Sparkles className={`w-3.5 h-3.5 mr-1.5 ${loadingExercise ? 'animate-pulse' : ''}`} />
           {loadingExercise ? 'Gerando exercício com IA...' : 'Gerar exercício com IA'}
         </button>
-        {exerciseError && <p className="text-sm text-rose-500">{exerciseError}</p>}
+        {exerciseError && <p className="text-xs text-rose-500">{exerciseError}</p>}
       </div>
     );
   }
 
   return (
     <div className="space-y-3">
-      <div className="p-4 rounded-xl bg-indigo-50 dark:bg-indigo-900/20 text-indigo-900 dark:text-indigo-200 text-sm">
+      <div className="p-3.5 rounded-xl border border-[var(--primary)]/30 bg-[var(--primary)]/10 text-xs text-[var(--text)] leading-relaxed">
         <AiText text={exerciseText} />
       </div>
       <div>
-        <label htmlFor={`answer-${topic.id}-${supportLevel}`} className="text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-1.5 block">
-          Sua resposta
+        <label htmlFor={`answer-${topic.id}-${supportLevel}`} className="text-xs font-medium text-[var(--dim)] mb-1 block">
+          Sua resolução
         </label>
         <textarea
           id={`answer-${topic.id}-${supportLevel}`}
           value={studentAnswer}
           onChange={(e) => setStudentAnswer(e.target.value)}
-          rows={5}
-          placeholder="Escreva sua resposta ou raciocínio de verdade — é isso que a IA vai corrigir."
+          rows={4}
+          placeholder="Demonstre seus passos e raciocínio de verdade."
           disabled={!!correction}
-          className="w-full px-3 py-2.5 rounded-xl border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-800 text-sm leading-relaxed focus:outline-none focus:ring-2 focus:ring-indigo-500 disabled:opacity-60"
+          className="w-full px-3 py-2 rounded-xl border border-[var(--line)] bg-[var(--surface2)] text-xs text-[var(--text)] leading-relaxed outline-none focus:border-[var(--primary)] disabled:opacity-60"
         />
       </div>
       {!correction ? (
@@ -246,20 +220,20 @@ function SupportLevelContent({
           <button
             onClick={fetchCorrection}
             disabled={loadingCorrection || !studentAnswer.trim()}
-            className="w-full flex items-center justify-center py-2.5 bg-indigo-600 hover:bg-indigo-700 disabled:bg-zinc-300 dark:disabled:bg-zinc-700 text-white rounded-xl font-medium text-sm transition-colors"
+            className="w-full flex items-center justify-center py-2 bg-[var(--primary)] text-[var(--wash)] disabled:opacity-50 rounded-xl text-xs font-semibold transition-opacity"
           >
-            <Sparkles className={`w-4 h-4 mr-2 ${loadingCorrection ? 'animate-pulse' : ''}`} />
+            <Sparkles className={`w-3.5 h-3.5 mr-1.5 ${loadingCorrection ? 'animate-pulse' : ''}`} />
             {loadingCorrection ? 'Corrigindo com IA...' : 'Corrigir com IA'}
           </button>
-          {correctionError && <p className="text-sm text-rose-500">{correctionError}</p>}
+          {correctionError && <p className="text-xs text-rose-500">{correctionError}</p>}
         </div>
       ) : (
         <>
-          <div className="p-4 rounded-xl bg-emerald-50 dark:bg-emerald-900/20 text-emerald-900 dark:text-emerald-200 text-sm">
+          <div className="p-3.5 rounded-xl border border-emerald-500/30 bg-emerald-500/10 text-xs text-[var(--text)] leading-relaxed">
             <AiText text={correction} />
           </div>
           <div>
-            <p className="text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-2">Depois da correção, como você resolveu?</p>
+            <p className="text-xs font-semibold text-[var(--dim)] mb-1.5">Após a correção, como foi seu desempenho?</p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
               {([
                 ['ainda_dificil', 'Ainda não consegui'],
@@ -270,14 +244,15 @@ function SupportLevelContent({
                   key={value}
                   disabled={recordedOutcome !== null || savingOutcome || (!!pendingOutcome && pendingOutcome.outcome !== value)}
                   onClick={() => void submitOutcome(value)}
-                  className={`px-3 py-2 rounded-lg border text-sm font-medium disabled:opacity-60 ${recordedOutcome === value ? 'bg-indigo-600 border-indigo-600 text-white' : 'border-zinc-200 dark:border-zinc-700'}`}
+                  className="px-3 py-1.5 rounded-lg border border-[var(--line)] bg-[var(--surface2)] text-xs font-semibold text-[var(--text)] disabled:opacity-60 transition-colors"
+                  style={recordedOutcome === value ? { backgroundColor: 'var(--primary)', color: 'var(--wash)', borderColor: 'var(--primary)' } : undefined}
                 >
                   {label}
                 </button>
               ))}
             </div>
-            {savingOutcome && <p className="text-xs text-zinc-500 mt-2">Salvando evidência...</p>}
-            {outcomeError && <p className="text-xs text-rose-500 mt-2">{outcomeError}</p>}
+            {savingOutcome && <p className="text-[11px] text-[var(--dim)] mt-1.5">Salvando evidência...</p>}
+            {outcomeError && <p className="text-xs text-rose-500 mt-1.5">{outcomeError}</p>}
           </div>
         </>
       )}
@@ -299,15 +274,15 @@ function OrphanedBacklogItem({
   const oldLabel = LEGACY_TOPIC_LABELS[item.topicId];
 
   return (
-    <div className="bg-amber-50 dark:bg-amber-900/10 border border-amber-200 dark:border-amber-900/40 rounded-2xl p-5 space-y-3">
+    <Panel subject="Matemática" className="ni-panel p-4 space-y-3 border-amber-500/40">
       <div className="flex items-start">
-        <AlertTriangle className="w-4 h-4 mr-2.5 mt-0.5 text-amber-500 shrink-0" />
+        <AlertTriangle className="w-4 h-4 mr-2 mt-0.5 text-amber-400 shrink-0" />
         <div>
-          <p className="font-semibold text-amber-800 dark:text-amber-300">
+          <p className="font-semibold text-xs text-amber-300">
             {oldLabel ? `"${oldLabel}"` : `Tópico "${item.topicId}"`} não existe mais no currículo atual
           </p>
-          <p className="text-xs text-amber-700/80 dark:text-amber-400/80 mt-1">
-            O currículo foi atualizado e este item da fila ficou sem um tópico correspondente. Seus dados (estado, dependência, incidência, lacuna, urgência) continuam salvos — escolha o tópico correto abaixo (a troca é imediata) ou remova o item.
+          <p className="text-[11px] text-[var(--dim)] mt-1">
+            O currículo foi atualizado. Seus parâmetros continuam salvos — reatribua ao tópico correspondente ou remova.
           </p>
         </div>
       </div>
@@ -317,11 +292,11 @@ function OrphanedBacklogItem({
           onChange={(e) => {
             if (e.target.value) onReassign(e.target.value);
           }}
-          className="flex-1 px-3 py-2 rounded-lg border border-amber-200 dark:border-amber-800 bg-white dark:bg-zinc-800 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500"
+          className="flex-1 px-3 py-1.5 rounded-lg border border-[var(--line)] bg-[var(--surface2)] text-xs text-[var(--text)] outline-none focus:border-[var(--primary)]"
         >
-          <option value="">Selecione o tópico correto...</option>
+          <option value="" className="bg-zinc-50 dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100">Selecione o tópico correto...</option>
           {allSubjects.map((subject) => (
-            <optgroup key={subject} label={subject}>
+            <optgroup key={subject} label={subject} className="bg-zinc-50 dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100">
               {mockTopics.filter((t) => t.subject === subject).map((t) => (
                 <option key={t.id} value={t.id}>{t.name}</option>
               ))}
@@ -330,13 +305,13 @@ function OrphanedBacklogItem({
         </select>
         <button
           onClick={onRemove}
-          className="flex items-center justify-center px-4 py-2 rounded-lg text-sm font-medium border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-colors shrink-0"
+          className="flex items-center justify-center px-3 py-1.5 rounded-lg text-xs font-semibold border border-[var(--line)] text-[var(--dim)] hover:text-rose-400 transition-colors"
         >
-          <Trash2 className="w-3.5 h-3.5 mr-1.5" />
+          <Trash2 className="w-3 h-3 mr-1" />
           Remover
         </button>
       </div>
-    </div>
+    </Panel>
   );
 }
 
@@ -400,9 +375,6 @@ export default function Recuperacao() {
     const newItem: BacklogItem = {
       id: `backlog_${formTopicId}_${Date.now()}`,
       topicId: formTopicId,
-      // Firestore's setDoc rejects an explicit `undefined` value on a field —
-      // omit the key entirely when no chapter was picked, instead of setting
-      // it to undefined, or every save of a subtopic-less item throws.
       ...(formSubtopic ? { subtopic: formSubtopic } : {}),
       state: formState,
       dependencia: formDependencia,
@@ -487,81 +459,111 @@ export default function Recuperacao() {
     setExpandedId(null);
   };
 
-  return (
-    <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
-      <header>
-        <div className="flex items-center gap-2 mb-1.5">
-          <span className="w-2 h-2 rounded-full bg-ember-500 shadow-[0_0_8px_var(--color-ember-500)]" />
-          <span className="text-[11px] font-mono tracking-widest uppercase text-ember-600 dark:text-ember-400">Triagem e Fila PONTE · Crivo</span>
-        </div>
-        <h1 className="font-display text-3xl sm:text-4xl font-semibold italic text-text-primary tracking-tight flex items-center gap-3">
-          <ListTodo className="w-7 h-7 text-action-primary" />
-          Recuperação de Atrasos
-        </h1>
-        <p className="text-text-secondary mt-1 max-w-2xl text-base">
-          Transforme matéria atrasada numa fila priorizada, sem travar o conteúdo atual: diagnostique, priorize e feche cada tópico com o protocolo PONTE.
-        </p>
-        {!isPersisted && (
-          <p className="flex items-center text-xs text-text-muted mt-2">
-            <CloudOff className="w-3.5 h-3.5 mr-1.5" />
-            Modo demonstração — conecte sua conta Google em "Conexões Google" para salvar sua fila de verdade.
-          </p>
-        )}
-        {(recoverySyncError || syncError || masterySyncError) && (
-          <p className="text-xs text-status-error mt-2">{recoverySyncError || syncError || masterySyncError}</p>
-        )}
-      </header>
+  const basePalette = PALETTES.Matemática;
 
-      <div className="flex gap-2 flex-wrap">
+  return (
+    <div
+      className="ni-main"
+      style={{
+        '--primary': basePalette.primary,
+        '--secondary': basePalette.secondary,
+        '--wash': basePalette.wash,
+      } as React.CSSProperties}
+    >
+      {/* Route Breadcrumb */}
+      <div className="ni-route">
+        <span>DECISÃO</span>
+        <i />
+        <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
+          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--wash)]">
+            <ListTodo className="w-3 h-3" />
+          </span>
+          FILA PONTE
+        </span>
+        <i />
+        <b>RECUPERAÇÃO DE ATRASOS</b>
+      </div>
+
+      {/* Main Title */}
+      <div className="ni-title">
+        <div>
+          <h1>Recalcule a rota sem perder o ritmo.</h1>
+          <p>Atrasos viram insumo ordenado pelo protocolo PONTE — o motor redistribui a carga e protege suas prioridades.</p>
+        </div>
+        <div className="ni-state">
+          <i /> {activeItems.length} tópicos na fila PONTE
+        </div>
+      </div>
+
+      {!isPersisted && (
+        <p className="flex items-center text-xs text-[var(--dim)] mb-2">
+          <CloudOff className="w-3.5 h-3.5 mr-1.5" />
+          Modo demonstração — conecte sua conta Google em "Perfil" para salvar sua fila permanentemente.
+        </p>
+      )}
+      {(recoverySyncError || syncError || masterySyncError) && (
+        <p className="text-xs text-rose-500 mb-2">{recoverySyncError || syncError || masterySyncError}</p>
+      )}
+
+      {/* Actions / Filter bar */}
+      <div className="ni-subjects">
         <button
           onClick={() => setShowAddForm((v) => !v)}
-          className="flex items-center px-4 py-2 rounded-lg text-sm font-medium bg-indigo-600 hover:bg-indigo-700 text-white transition-colors"
+          style={
+            showAddForm
+              ? { backgroundColor: basePalette.primary, color: basePalette.wash, borderRadius: '4px', padding: '2px 8px' }
+              : undefined
+          }
         >
-          <Plus className="w-4 h-4 mr-1.5" />
+          <Plus className="w-3 h-3 inline mr-1" />
           Adicionar tópico atrasado
         </button>
         <button
           onClick={() => setShowTracks((v) => !v)}
-          className="flex items-center px-4 py-2 rounded-lg text-sm font-medium border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-colors"
+          style={
+            showTracks
+              ? { backgroundColor: basePalette.primary, color: basePalette.wash, borderRadius: '4px', padding: '2px 8px' }
+              : undefined
+          }
         >
-          <Info className="w-4 h-4 mr-1.5" />
-          Como encaixar isso na semana
+          <Info className="w-3 h-3 inline mr-1" />
+          Como encaixar na semana
         </button>
       </div>
 
       {showTracks && (
-        <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 shadow-sm space-y-3">
-          <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
-            Mantenha três trilhos rodando ao mesmo tempo, sem deixar o atraso engolir o presente: <strong>Atual</strong> (acompanhar o que está sendo ensinado agora), <strong>Recuperação</strong> (eliminar gargalos antigos prioritários — a fila abaixo) e <strong>Manutenção</strong> (impedir novo esquecimento, via Revisões Adaptativas).
+        <Panel subject="Matemática" className="ni-panel p-5 space-y-2 text-xs leading-relaxed">
+          <p className="text-[var(--text)]">
+            Mantenha três trilhos rodando em paralelo sem deixar o atraso engolir o presente: <strong>Atual</strong> (acompanhar a matéria corrente), <strong>Recuperação</strong> (eliminar gargalos prioritários — Fila A primeiro) e <strong>Manutenção</strong> (revisão espaçada adaptativa).
           </p>
-          <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
-            Em uma semana comum, algo como 55–65% do tempo no conteúdo atual, 25–35% em recuperação (comece pela Fila A) e 10–15% em manutenção costuma funcionar — perto de uma prova, os pesos mudam a favor da recuperação. Se a semana falhar, não tente encaixar tudo no dia seguinte: preserve o conteúdo atual, mantenha a revisão mais importante e recoloque apenas a prioridade máxima da fila.
+          <p className="text-[var(--dim)]">
+            Distribuição recomendada: 55–65% no conteúdo atual, 25–35% em recuperação e 10–15% em manutenção.
           </p>
-        </div>
+        </Panel>
       )}
 
       {showAddForm && (
-        <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 shadow-sm space-y-5">
+        <Panel subject="Matemática" className="ni-panel p-6 space-y-4">
           <div className="flex items-center justify-between">
-            <h3 className="font-semibold">Novo tópico atrasado</h3>
-            <button onClick={() => { setShowAddForm(false); resetForm(); }} className="text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-300">
+            <h3 className="font-display font-medium text-sm text-[var(--text)]">Novo tópico atrasado</h3>
+            <button onClick={() => { setShowAddForm(false); resetForm(); }} className="text-[var(--dim)] hover:text-[var(--text)]">
               <X className="w-4 h-4" />
             </button>
           </div>
 
           <div>
-            <label htmlFor="topic-select" className="text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-2 block">
+            <label htmlFor="topic-select" className="text-xs font-semibold text-[var(--text)] mb-1 block">
               Tópico
             </label>
             <select
               id="topic-select"
               value={formTopicId}
               onChange={(e) => { setFormTopicId(e.target.value); setFormSubtopic(''); }}
-              className="w-full px-3 py-2.5 rounded-lg border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-800 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full px-3 py-2 rounded-xl border border-[var(--line)] bg-[var(--surface2)] text-xs text-[var(--text)] outline-none focus:border-[var(--primary)]"
             >
-              <option value="">Selecione um tópico...</option>
+              <option value="" className="bg-zinc-50 dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100">Selecione um tópico...</option>
               {allSubjects.map((subject) => (
-                <optgroup key={subject} label={subject}>
+                <optgroup key={subject} label={subject} className="bg-zinc-50 dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100">
                   {mockTopics.filter((t) => t.subject === subject).map((t) => (
                     <option key={t.id} value={t.id}>{t.name}</option>
                   ))}
@@ -572,79 +574,80 @@ export default function Recuperacao() {
 
           {!!formTopic?.chapters?.length && (
             <div>
-              <label htmlFor="subtopic-select" className="text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-2 block">
+              <label htmlFor="subtopic-select" className="text-xs font-semibold text-[var(--text)] mb-1 block">
                 Capítulo específico (opcional)
               </label>
-              <p className="text-xs text-zinc-500 mb-2">Deixe em branco se o atraso é na frente inteira, não num capítulo só.</p>
               <select
                 id="subtopic-select"
                 value={formSubtopic}
                 onChange={(e) => setFormSubtopic(e.target.value)}
-                className="w-full px-3 py-2.5 rounded-lg border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-800 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                className="w-full px-3 py-2 rounded-xl border border-[var(--line)] bg-[var(--surface2)] text-xs text-[var(--text)] outline-none focus:border-[var(--primary)]"
               >
-                <option value="">Frente inteira ({formTopic.name})</option>
+                <option value="" className="bg-zinc-50 dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100">Frente inteira ({formTopic.name})</option>
                 {formTopic.chapters!.map((chapter) => (
-                  <option key={chapter} value={chapter}>{chapter}</option>
+                  <option key={chapter} value={chapter} className="bg-zinc-50 dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100">{chapter}</option>
                 ))}
               </select>
             </div>
           )}
 
           <div>
-            <p className="text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-2">Estado atual</p>
-            <div className="flex flex-wrap gap-2">
+            <p className="text-xs font-semibold text-[var(--text)] mb-1.5">Estado atual de domínio</p>
+            <div className="flex flex-wrap gap-1.5">
               {[0, 1, 2, 3, 4].map((n) => (
                 <button
                   key={n}
                   type="button"
                   onClick={() => setFormState(n)}
-                  className={`px-3 py-2 rounded-lg text-xs font-medium border transition-colors text-left ${
-                    formState === n
-                      ? 'bg-indigo-600 border-indigo-600 text-white'
-                      : 'border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-50 dark:hover:bg-zinc-800'
-                  }`}
+                  className="px-2.5 py-1.5 rounded-lg text-xs font-semibold border border-[var(--line)] bg-[var(--surface2)] text-[var(--text)]"
+                  style={formState === n ? { backgroundColor: 'var(--primary)', color: 'var(--wash)', borderColor: 'var(--primary)' } : undefined}
                 >
                   {n} — {STATE_LABELS[n]}
                 </button>
               ))}
             </div>
-            <p className="text-xs text-zinc-500 mt-1.5">{STATE_DESCRIPTIONS[formState]}</p>
+            <p className="text-[11px] text-[var(--dim)] mt-1">{STATE_DESCRIPTIONS[formState]}</p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            <ScorePicker label="Dependência" value={formDependencia} onChange={setFormDependencia} max={3} helper="Este tópico destrava outros?" />
-            <ScorePicker label="Incidência" value={formIncidencia} onChange={setFormIncidencia} max={3} helper="Aparece muito nas suas bancas-alvo?" />
-            <ScorePicker label="Lacuna" value={formLacuna} onChange={setFormLacuna} max={3} helper="O diagnóstico mostra falha real?" />
-            <ScorePicker label="Urgência" value={formUrgencia} onChange={setFormUrgencia} max={3} helper="Há prova, simulado ou aula dependente próxima?" />
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <ScorePicker label="Dependência" value={formDependencia} onChange={setFormDependencia} max={3} helper="Destrava outros conteúdos?" />
+            <ScorePicker label="Incidência" value={formIncidencia} onChange={setFormIncidencia} max={3} helper="Cai com frequência nas suas bancas?" />
+            <ScorePicker label="Lacuna" value={formLacuna} onChange={setFormLacuna} max={3} helper="Gravidade da falha conceitual?" />
+            <ScorePicker label="Urgência" value={formUrgencia} onChange={setFormUrgencia} max={3} helper="Há prova ou simulado próximo?" />
           </div>
-          <ScorePicker label="Custo" value={formCusto} onChange={setFormCusto} max={3} helper="Quantas sessões você estima precisar (1 = poucas, 3 = muitas)?" />
+          <ScorePicker label="Custo estimado" value={formCusto} onChange={setFormCusto} max={3} helper="Sessões estimadas para consolidar (1 = poucas, 3 = muitas)" />
 
           <button
             onClick={addToBacklog}
             disabled={!formTopicId}
-            className="w-full py-3 bg-indigo-600 hover:bg-indigo-700 disabled:bg-zinc-300 dark:disabled:bg-zinc-700 text-white rounded-xl font-medium transition-colors"
+            className="w-full py-2.5 bg-[var(--primary)] text-[var(--wash)] disabled:opacity-50 rounded-xl text-xs font-semibold transition-opacity"
           >
-            Adicionar à fila
+            Adicionar à fila PONTE
           </button>
-        </div>
+        </Panel>
       )}
 
       {activeItems.length === 0 ? (
-        <div className="text-center py-16 bg-zinc-50 dark:bg-zinc-900/50 rounded-2xl border border-dashed border-zinc-200 dark:border-zinc-800">
-          <p className="text-zinc-500">Nenhum tópico atrasado na fila. Adicione um para começar.</p>
+        <div className="text-center py-16 border border-dashed border-[var(--line)] rounded-2xl text-xs text-[var(--dim)]">
+          Nenhum tópico atrasado na fila. Adicione um para calibrar.
         </div>
       ) : (
         QUEUE_ORDER.map((q) => {
           if (grouped[q].length === 0) return null;
           return (
-            <section key={q}>
-              <div className="flex items-center mb-1">
-                <span className={`text-xs font-bold px-2.5 py-1 rounded-full mr-2.5 ${QUEUE_COLORS[q]}`}>Fila {q}</span>
-                <h2 className="text-xl font-semibold">{QUEUE_LABELS[q]}</h2>
+            <section key={q} className="space-y-3">
+              <div className="flex items-center gap-2">
+                <span
+                  className="text-[10px] font-mono font-bold px-2 py-0.5 rounded-full"
+                  style={{ backgroundColor: 'var(--primary)', color: 'var(--wash)' }}
+                >
+                  Fila {q}
+                </span>
+                <h2 className="font-display font-medium text-sm text-[var(--text)]">{QUEUE_LABELS[q]}</h2>
               </div>
-              <p className="text-xs text-zinc-500 mb-3">{QUEUE_CRITERIA[q]} — {QUEUE_TREATMENT[q]}</p>
+              <p className="text-[11px] text-[var(--dim)] -mt-1">{QUEUE_CRITERIA[q]} — {QUEUE_TREATMENT[q]}</p>
 
-              <div className="space-y-3">
+              <div className="space-y-2">
                 {grouped[q].map((item) => {
                   const topic = topicById(item.topicId);
                   if (!topic) {
@@ -662,48 +665,56 @@ export default function Recuperacao() {
                   const ready = isReadyToClose(item);
                   const supportLevel = item.supportLevel ?? 1;
                   const currentSupport = SUPPORT_LEVELS.find((s) => s.level === supportLevel) ?? SUPPORT_LEVELS[0];
+                  const subPal = PALETTES[topic.subject] ?? PALETTES.Matemática;
+                  const SubIcon = SUBJECT_ICONS[topic.subject] ?? ListTodo;
 
                   return (
-                    <div key={item.id} className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl shadow-sm overflow-hidden">
+                    <Panel
+                      key={item.id}
+                      subject={topic.subject}
+                      className="ni-panel overflow-hidden"
+                    >
                       <button
                         onClick={() => setExpandedId(isExpanded ? null : item.id)}
-                        className="w-full flex items-center justify-between p-5 text-left"
+                        className="w-full flex items-center justify-between p-4 text-left hover:bg-[var(--surface2)] transition-colors"
                       >
                         <div className="flex items-center min-w-0">
-                          <span className={`w-2 h-2 rounded-full mr-3 shrink-0 ${SUBJECT_COLORS[topic.subject] ?? 'bg-zinc-400'}`} />
+                          <span
+                            className="w-6 h-6 rounded-full flex items-center justify-center mr-3 shrink-0"
+                            style={{ backgroundColor: subPal.primary, color: subPal.wash }}
+                          >
+                            <SubIcon className="w-3 h-3" />
+                          </span>
                           <div className="min-w-0">
-                            <p className="font-semibold truncate">{topic.name}{item.subtopic ? ` — ${item.subtopic}` : ''}</p>
-                            <p className="text-xs text-zinc-500">{topic.subject} • {STATE_LABELS[item.state]} • score {priorityScore(item).toFixed(1)}</p>
+                            <p className="font-display font-medium text-xs text-[var(--text)] truncate">{topic.name}{item.subtopic ? ` — ${item.subtopic}` : ''}</p>
+                            <p className="text-[11px] text-[var(--dim)] font-mono">{topic.subject} • {STATE_LABELS[item.state]} • score {priorityScore(item).toFixed(1)}</p>
                           </div>
                         </div>
                         <div className="flex items-center gap-2 shrink-0 ml-3">
-                          {ready && <Trophy className="w-4 h-4 text-emerald-500" />}
-                          <ChevronDown className={`w-4 h-4 text-zinc-400 transition-transform ${isExpanded ? 'rotate-180' : ''}`} />
+                          {ready && <Trophy className="w-4 h-4 text-emerald-400" />}
+                          <ChevronDown className={`w-3.5 h-3.5 text-[var(--dim)] transition-transform ${isExpanded ? 'rotate-180' : ''}`} />
                         </div>
                       </button>
 
                       {isExpanded && (
-                        <div className="px-5 pb-5 pt-1 border-t border-zinc-100 dark:border-zinc-800 space-y-5">
+                        <div className="px-5 pb-5 pt-1 border-t border-[var(--line)] space-y-4 text-xs">
                           <div className="flex items-center justify-between">
-                            <p className="text-xs text-zinc-500">Protocolo PONTE — Pré-teste, Objetivo, Núcleo teórico, Treino com retirada de apoio, Evidência.</p>
-                            <button onClick={() => removeItem(item.id)} className="flex items-center text-xs text-zinc-400 hover:text-rose-500 shrink-0 ml-3">
-                              <Trash2 className="w-3.5 h-3.5 mr-1" />
+                            <p className="text-[11px] text-[var(--dim)]">Protocolo PONTE — Retirada progressiva de apoio.</p>
+                            <button onClick={() => removeItem(item.id)} className="flex items-center text-[11px] text-[var(--dim)] hover:text-rose-400 shrink-0 ml-3">
+                              <Trash2 className="w-3 h-3 mr-1" />
                               Remover
                             </button>
                           </div>
 
                           <div>
-                            <p className="text-sm font-semibold text-zinc-700 dark:text-zinc-300 mb-1">Estado atual</p>
-                            <div className="flex flex-wrap gap-2">
+                            <p className="font-semibold text-[var(--text)] mb-1">Estado de domínio</p>
+                            <div className="flex flex-wrap gap-1.5">
                               {[0, 1, 2, 3, 4].map((n) => (
                                 <button
                                   key={n}
                                   onClick={() => patchItem(item.id, { state: n })}
-                                  className={`px-2.5 py-1.5 rounded-lg text-xs font-medium border transition-colors ${
-                                    item.state === n
-                                      ? 'bg-indigo-600 border-indigo-600 text-white'
-                                      : 'border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-50 dark:hover:bg-zinc-800'
-                                  }`}
+                                  className="px-2 py-1 rounded-lg text-xs font-semibold border border-[var(--line)] bg-[var(--surface2)] text-[var(--text)]"
+                                  style={item.state === n ? { backgroundColor: subPal.primary, color: subPal.wash, borderColor: subPal.primary } : undefined}
                                 >
                                   {n} — {STATE_LABELS[n]}
                                 </button>
@@ -712,29 +723,24 @@ export default function Recuperacao() {
                           </div>
 
                           <div>
-                            <label htmlFor={`objective-${item.id}`} className="text-sm font-semibold text-zinc-700 dark:text-zinc-300 mb-1 block">
-                              Objetivo mínimo de domínio
+                            <label htmlFor={`objective-${item.id}`} className="font-semibold text-[var(--text)] mb-1 block">
+                              Objetivo mínimo observável
                             </label>
-                            <p className="text-xs text-zinc-500 mb-2">Uma frase observável — ex.: "resolvo uma questão de função quadrática com gráfico e justifico vértice e raízes".</p>
                             <input
                               id={`objective-${item.id}`}
                               type="text"
                               defaultValue={item.objective ?? ''}
                               onBlur={(e) => patchItem(item.id, { objective: e.target.value })}
-                              placeholder="Escreva seu objetivo mínimo..."
-                              className="w-full px-3 py-2 rounded-lg border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-800 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                              placeholder="Ex: resolvo questão modelo sem consultar gabarito..."
+                              className="w-full px-3 py-2 rounded-xl border border-[var(--line)] bg-[var(--surface2)] text-xs text-[var(--text)] outline-none focus:border-[var(--primary)]"
                             />
                           </div>
 
-                          <div className="p-3 rounded-lg bg-zinc-50 dark:bg-zinc-800/50 text-xs text-zinc-500">
-                            Núcleo teórico: estude só o necessário para atingir o objetivo acima. Antes de ver o próximo passo de um exemplo, tente antecipá-lo.
-                          </div>
-
-                          <div>
-                            <p className="text-sm font-semibold text-zinc-700 dark:text-zinc-300 mb-2">Retirada de apoio — nível {supportLevel}/5</p>
-                            <div className="p-3 rounded-lg bg-indigo-50 dark:bg-indigo-900/20 text-indigo-800 dark:text-indigo-300 text-sm mb-3">
-                              <p className="font-medium">{currentSupport.activity}</p>
-                              <p className="text-xs mt-1">Pronta para avançar quando: {currentSupport.readyToAdvance}</p>
+                          <div className="p-3 rounded-xl bg-[var(--surface2)] border border-[var(--line)] space-y-3">
+                            <p className="font-semibold text-[var(--text)]">Retirada de apoio — Nível {supportLevel}/5</p>
+                            <div className="p-2.5 rounded-lg border border-[var(--primary)]/30 bg-[var(--primary)]/10 text-[var(--text)]">
+                              <p className="font-semibold text-xs">{currentSupport.activity}</p>
+                              <p className="text-[11px] text-[var(--dim)] mt-0.5">Pronta para avançar quando: {currentSupport.readyToAdvance}</p>
                             </div>
                             <SupportLevelContent
                               key={`${user?.uid ?? 'demo'}_${item.id}_${supportLevel}`}
@@ -743,54 +749,50 @@ export default function Recuperacao() {
                               supportLevel={supportLevel}
                               onOutcome={(outcome, evidenceId) => recordRecoveryOutcome(item, outcome, evidenceId)}
                             />
-                            <div className="flex gap-2 mt-3">
+                            <div className="flex gap-2">
                               <button
                                 onClick={() => patchItem(item.id, { supportLevel: Math.max(1, supportLevel - 1) })}
                                 disabled={supportLevel <= 1}
-                                className="px-3 py-1.5 rounded-lg text-xs font-medium border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-50 dark:hover:bg-zinc-800 disabled:opacity-40 transition-colors"
+                                className="px-2.5 py-1 rounded-lg text-xs font-semibold border border-[var(--line)] text-[var(--dim)] hover:text-[var(--text)] disabled:opacity-40"
                               >
                                 Nível anterior
                               </button>
                               <button
                                 onClick={() => patchItem(item.id, { supportLevel: Math.min(5, supportLevel + 1) })}
                                 disabled={supportLevel >= 5}
-                                className="px-3 py-1.5 rounded-lg text-xs font-medium border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-50 dark:hover:bg-zinc-800 disabled:opacity-40 transition-colors"
+                                className="px-2.5 py-1 rounded-lg text-xs font-semibold border border-[var(--line)] text-[var(--dim)] hover:text-[var(--text)] disabled:opacity-40"
                               >
                                 Avançar nível
                               </button>
                             </div>
                           </div>
 
-                          <div className="p-3 rounded-lg bg-zinc-50 dark:bg-zinc-800/50 text-xs text-zinc-500">
-                            Correção produtiva: não copie a resolução inteira. Localize o primeiro ponto de divergência entre seu raciocínio e o correto, classifique o erro, escreva a regra que faltou e refaça sem olhar.
-                          </div>
-
                           <div>
-                            <p className="text-sm font-semibold text-zinc-700 dark:text-zinc-300 mb-2">Checagem de saída</p>
-                            <div className="space-y-1.5">
+                            <p className="font-semibold text-[var(--text)] mb-1.5">Critérios de saída</p>
+                            <div className="space-y-1">
                               {EXIT_CHECKLIST.map((c, i) => (
-                                <label key={i} className="flex items-start text-sm text-zinc-600 dark:text-zinc-400">
+                                <label key={i} className="flex items-start text-xs text-[var(--dim)]">
                                   <input
                                     type="checkbox"
                                     checked={!!checkedExit[i]}
                                     onChange={(e) => setCheckedExit((prev) => ({ ...prev, [i]: e.target.checked }))}
-                                    className="mt-0.5 mr-2.5 accent-indigo-600"
+                                    className="mt-0.5 mr-2 accent-[var(--primary)]"
                                   />
-                                  {c}
+                                  <span>{c}</span>
                                 </label>
                               ))}
                             </div>
                           </div>
 
-                          <div className="flex items-center justify-between p-4 rounded-xl bg-zinc-50 dark:bg-zinc-800/50">
+                          <div className="flex items-center justify-between p-3 rounded-xl bg-[var(--surface2)] border border-[var(--line)]">
                             <div>
-                              <p className="text-sm font-medium">Sucessos independentes: {item.independentSuccesses}</p>
-                              <label className="flex items-center text-xs text-zinc-500 mt-1">
+                              <p className="font-semibold text-xs text-[var(--text)]">Sucessos independentes: {item.independentSuccesses}</p>
+                              <label className="flex items-center text-[11px] text-[var(--dim)] mt-0.5">
                                 <input
                                   type="checkbox"
                                   checked={item.canExplainTypicalError}
                                   onChange={(e) => patchItem(item.id, { canExplainTypicalError: e.target.checked })}
-                                  className="mr-1.5 accent-indigo-600"
+                                  className="mr-1.5 accent-[var(--primary)]"
                                 />
                                 Consigo explicar o erro típico deste tópico
                               </label>
@@ -798,9 +800,9 @@ export default function Recuperacao() {
                             <button
                               onClick={() => void recordManualSuccess(item)}
                               disabled={manualSavingId === item.id}
-                              className="flex items-center px-3 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg text-sm font-medium transition-colors shrink-0 ml-3"
+                              className="px-3 py-1.5 bg-[var(--primary)] text-[var(--wash)] rounded-lg text-xs font-semibold hover:opacity-90 disabled:opacity-50"
                             >
-                              <CheckCircle2 className="w-4 h-4 mr-1.5" />
+                              <CheckCircle2 className="w-3.5 h-3.5 inline mr-1" />
                               {manualSavingId === item.id ? 'Salvando...' : 'Registrar sucesso'}
                             </button>
                           </div>
@@ -808,15 +810,15 @@ export default function Recuperacao() {
                           {ready && (
                             <button
                               onClick={() => closeItem(item)}
-                              className="w-full flex items-center justify-center py-3 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl font-medium transition-colors"
+                              className="w-full py-2.5 bg-emerald-600 text-white rounded-xl font-semibold text-xs hover:opacity-90 transition-opacity flex items-center justify-center gap-1.5"
                             >
-                              <Trophy className="w-4 h-4 mr-2" />
+                              <Trophy className="w-4 h-4" />
                               Marcar tópico como recuperado
                             </button>
                           )}
                         </div>
                       )}
-                    </div>
+                    </Panel>
                   );
                 })}
               </div>
@@ -826,25 +828,29 @@ export default function Recuperacao() {
       )}
 
       {closedItems.length > 0 && (
-        <section>
-          <h2 className="text-xl font-semibold mb-3 flex items-center">
-            <Trophy className="w-5 h-5 mr-2 text-emerald-500" />
-            Recuperados
+        <section className="space-y-3 pt-4">
+          <h2 className="font-display font-medium text-sm text-[var(--text)] flex items-center gap-1.5">
+            <Trophy className="w-4 h-4 text-emerald-400" />
+            Tópicos Recuperados
           </h2>
-          <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl divide-y divide-zinc-100 dark:divide-zinc-800 overflow-hidden">
+          <div className="space-y-2">
             {closedItems.map((item) => {
               const topic = topicById(item.topicId);
               if (!topic) return null;
+              const subPal = PALETTES[topic.subject] ?? PALETTES.Matemática;
               return (
-                <div key={item.id} className="p-4 flex items-center justify-between">
+                <Panel key={item.id} subject={topic.subject} className="ni-panel p-3.5 flex items-center justify-between">
                   <div className="flex items-center min-w-0">
-                    <span className={`w-2 h-2 rounded-full mr-3 shrink-0 ${SUBJECT_COLORS[topic.subject] ?? 'bg-zinc-400'}`} />
-                    <div className="min-w-0">
-                      <p className="font-medium truncate">{topic.name}{item.subtopic ? ` — ${item.subtopic}` : ''}</p>
-                      <p className="text-xs text-zinc-500">{topic.subject} — migrou para manutenção (Revisões Adaptativas)</p>
+                    <span
+                      className="w-2 h-2 rounded-full mr-2.5 shrink-0"
+                      style={{ backgroundColor: subPal.primary }}
+                    />
+                    <div className="min-w-0 text-xs">
+                      <p className="font-medium text-[var(--text)] truncate">{topic.name}{item.subtopic ? ` — ${item.subtopic}` : ''}</p>
+                      <p className="text-[11px] text-[var(--dim)] font-mono">{topic.subject} • Migrou para manutenção</p>
                     </div>
                   </div>
-                </div>
+                </Panel>
               );
             })}
           </div>

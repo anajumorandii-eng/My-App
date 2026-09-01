@@ -8,11 +8,13 @@ import { AiText } from '../components/AiText';
 import { Brain, Send, Bot, User, Sparkles, BookOpenText, ClipboardCheck, CalendarClock, PencilLine, Lightbulb, Target, School, AlertTriangle, HelpCircle, RotateCcw } from 'lucide-react';
 import { useUserMastery } from '../hooks/useUserMastery';
 import { applyDiscursiveSelfRatingOutcome } from '../lib/spacedRepetition';
-import { motion, AnimatePresence } from 'motion/react';
+import { Panel } from '../components/ui/Panel';
+import { PALETTES } from '../prototypes/NucleoInstrumentalPrototype';
+import { SUBJECT_ICONS } from './Dashboard';
 
 const DISCURSIVE_BOARDS = ['Fuvest', 'Unicamp', 'Unesp', 'Famerp', 'Unifesp'];
 
-type Mode = 'duvida' | 'explicar' | 'corrigir' | 'revisao' | 'questao';
+type Mode = 'duvida' | 'explicar' | 'corrigir' | 'questao' | 'revisao';
 
 const MODES: { value: Mode; label: string; hint: string; icon: React.ElementType }[] = [
   { value: 'duvida', label: 'Tirar dúvida', hint: 'A IA não entrega a resposta pronta — te guia até você chegar nela.', icon: Sparkles },
@@ -34,7 +36,6 @@ function useTopicPicker() {
   const [topicId, setTopicIdRaw] = useState(mockTopics[0].id);
   const [subtopic, setSubtopic] = useState('');
   const topic = mockTopics.find((t) => t.id === topicId) ?? mockTopics[0];
-  // Changing the topic invalidates whatever chapter was picked for the previous one.
   const setTopicId = (id: string) => {
     setTopicIdRaw(id);
     setSubtopic('');
@@ -63,10 +64,10 @@ function TopicSelect({
       <select
         value={topicId}
         onChange={(e) => onChange(e.target.value)}
-        className="bg-transparent border border-zinc-300 dark:border-zinc-700 rounded-lg px-3 py-1.5 text-sm outline-none focus:ring-2 focus:ring-indigo-500"
+        className="bg-[var(--surface2)] border border-[var(--line)] text-[var(--text)] rounded-lg px-2.5 py-1 text-xs outline-none focus:border-[var(--primary)]"
       >
         {Object.entries(topicsBySubject).map(([subject, ids]) => (
-          <optgroup key={subject} label={subject}>
+          <optgroup key={subject} label={subject} className="bg-zinc-50 dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100">
             {ids.map((id) => {
               const t = mockTopics.find((topic) => topic.id === id);
               return t ? <option key={id} value={id}>{t.name}</option> : null;
@@ -78,11 +79,11 @@ function TopicSelect({
         <select
           value={subtopic}
           onChange={(e) => setSubtopic(e.target.value)}
-          className="bg-transparent border border-zinc-300 dark:border-zinc-700 rounded-lg px-3 py-1.5 text-sm outline-none focus:ring-2 focus:ring-indigo-500"
+          className="bg-[var(--surface2)] border border-[var(--line)] text-[var(--text)] rounded-lg px-2.5 py-1 text-xs outline-none focus:border-[var(--primary)]"
         >
-          <option value="">Capítulo específico (opcional)</option>
+          <option value="" className="bg-zinc-50 dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100">Capítulo específico (opcional)</option>
           {topic.chapters.map((chapter) => (
-            <option key={chapter} value={chapter}>{chapter}</option>
+            <option key={chapter} value={chapter} className="bg-zinc-50 dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100">{chapter}</option>
           ))}
         </select>
       )}
@@ -92,30 +93,30 @@ function TopicSelect({
 
 function CorrectionCard({ correction }: { correction: AnswerCorrection }) {
   return (
-    <div className="space-y-4">
-      <div className="p-4 rounded-xl bg-emerald-50 dark:bg-emerald-900/20 text-emerald-800 dark:text-emerald-300 text-sm">
-        <p className="font-semibold mb-1 flex items-center"><ClipboardCheck className="w-4 h-4 mr-2" />O que você acertou</p>
+    <div className="space-y-3">
+      <div className="p-3.5 rounded-xl border border-emerald-500/30 bg-emerald-500/10 text-xs text-[var(--text)]">
+        <p className="font-semibold mb-1 flex items-center text-emerald-400"><ClipboardCheck className="w-3.5 h-3.5 mr-1.5" />O que você acertou</p>
         <AiText text={correction.acertos} />
       </div>
-      <div className="p-4 rounded-xl bg-rose-50 dark:bg-rose-900/20 text-rose-800 dark:text-rose-300 text-sm">
-        <p className="font-semibold mb-1 flex items-center"><AlertTriangle className="w-4 h-4 mr-2" />Primeiro ponto de ruptura</p>
+      <div className="p-3.5 rounded-xl border border-rose-500/30 bg-rose-500/10 text-xs text-[var(--text)]">
+        <p className="font-semibold mb-1 flex items-center text-[#e08391]"><AlertTriangle className="w-3.5 h-3.5 mr-1.5" />Primeiro ponto de ruptura</p>
         <AiText text={correction.rupturaPoint} />
       </div>
-      <div className="p-4 rounded-xl bg-zinc-50 dark:bg-zinc-800/50 text-sm">
-        <p className="font-semibold mb-1">Por que isso compromete a resposta</p>
+      <div className="p-3.5 rounded-xl bg-[var(--surface2)] border border-[var(--line)] text-xs text-[var(--text)]">
+        <p className="font-semibold mb-1 text-[var(--dim)]">Por que isso compromete a resposta</p>
         <AiText text={correction.porque} />
       </div>
-      <div className="p-4 rounded-xl bg-indigo-50 dark:bg-indigo-900/20 text-indigo-800 dark:text-indigo-300 text-sm">
-        <p className="font-semibold mb-1">Correção mínima</p>
+      <div className="p-3.5 rounded-xl border border-[var(--primary)]/30 bg-[var(--primary)]/10 text-xs text-[var(--text)]">
+        <p className="font-semibold mb-1 text-[var(--primary)]">Correção mínima</p>
         <AiText text={correction.correcaoMinima} />
       </div>
-      <div className="p-4 rounded-xl bg-zinc-50 dark:bg-zinc-800/50 text-sm">
-        <p className="font-semibold mb-1">Resposta-modelo</p>
+      <div className="p-3.5 rounded-xl bg-[var(--surface2)] border border-[var(--line)] text-xs text-[var(--text)]">
+        <p className="font-semibold mb-1 text-[var(--dim)]">Resposta-modelo</p>
         <AiText text={correction.respostaModelo} />
       </div>
       {correction.padraoRecorrente && (
-        <div className="p-4 rounded-xl bg-amber-50 dark:bg-amber-900/20 text-amber-800 dark:text-amber-300 text-sm">
-          <p className="font-semibold mb-1">Padrão recorrente notado</p>
+        <div className="p-3.5 rounded-xl border border-amber-500/30 bg-amber-500/10 text-xs text-amber-300">
+          <p className="font-semibold mb-1 text-amber-400">Padrão recorrente notado</p>
           <AiText text={correction.padraoRecorrente} />
         </div>
       )}
@@ -186,9 +187,9 @@ function ExplicarPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, 
   };
 
   return (
-    <div className="p-6 space-y-4 overflow-y-auto flex-1">
+    <div className="p-5 sm:p-6 space-y-4 overflow-y-auto flex-1">
       <div className="flex items-center justify-between flex-wrap gap-2">
-        <span className="text-sm font-medium text-zinc-600 dark:text-zinc-400">Tópico</span>
+        <span className="text-xs font-semibold text-[var(--dim)]">Tópico</span>
         <TopicSelect topicsBySubject={topicsBySubject} topicId={topicId} onChange={setTopicId} topic={topic} subtopic={subtopic} setSubtopic={setSubtopic} />
       </div>
       <textarea
@@ -196,50 +197,54 @@ function ExplicarPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, 
         onChange={(e) => setQuestion(e.target.value)}
         rows={2}
         placeholder="Alguma dúvida específica dentro desse tópico? (opcional)"
-        className="w-full bg-white dark:bg-zinc-950 border border-zinc-300 dark:border-zinc-700 rounded-xl px-4 py-3 text-sm outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
+        className="w-full bg-[var(--surface2)] border border-[var(--line)] text-[var(--text)] rounded-xl px-4 py-2.5 text-xs outline-none focus:border-[var(--primary)]"
       />
       <button
         onClick={explain}
         disabled={loading}
-        className="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 disabled:bg-zinc-300 dark:disabled:bg-zinc-700 text-white rounded-lg font-medium transition-colors"
+        className="px-4 py-2 bg-[var(--primary)] text-[var(--wash)] disabled:opacity-50 rounded-lg text-xs font-semibold transition-opacity"
       >
         {loading ? 'Explicando...' : 'Explicar'}
       </button>
-      {error && <p className="text-sm text-rose-500">{error}</p>}
+      {error && <p className="text-xs text-rose-500">{error}</p>}
 
       {explanation && (
-        <div className="space-y-4 pt-2">
-          <div className="p-4 rounded-xl bg-indigo-50 dark:bg-indigo-900/20 text-indigo-800 dark:text-indigo-300 text-sm">
-            <p className="font-semibold mb-1 flex items-center"><Lightbulb className="w-4 h-4 mr-2" />Intuição</p>
+        <div className="space-y-3 pt-2">
+          <div className="p-3.5 rounded-xl border border-[var(--primary)]/30 bg-[var(--primary)]/10 text-xs text-[var(--text)]">
+            <p className="font-semibold mb-1 flex items-center text-[var(--primary)]"><Lightbulb className="w-3.5 h-3.5 mr-1.5" />Intuição</p>
             <AiText text={explanation.intuicao} />
           </div>
-          <div className="p-4 rounded-xl bg-zinc-50 dark:bg-zinc-800/50 text-sm">
-            <p className="font-semibold mb-1">Conceito</p>
+          <div className="p-3.5 rounded-xl bg-[var(--surface2)] border border-[var(--line)] text-xs text-[var(--text)]">
+            <p className="font-semibold mb-1 text-[var(--dim)]">Conceito</p>
             <AiText text={explanation.conceito} />
           </div>
-          <div className="p-4 rounded-xl bg-zinc-50 dark:bg-zinc-800/50 text-sm">
-            <p className="font-semibold mb-1 flex items-center"><Target className="w-4 h-4 mr-2" />Aplicação</p>
+          <div className="p-3.5 rounded-xl bg-[var(--surface2)] border border-[var(--line)] text-xs text-[var(--text)]">
+            <p className="font-semibold mb-1 flex items-center text-[var(--dim)]"><Target className="w-3.5 h-3.5 mr-1.5" />Aplicação</p>
             <AiText text={explanation.aplicacao} />
           </div>
-          <div className="p-4 rounded-xl bg-zinc-50 dark:bg-zinc-800/50 text-sm">
-            <p className="font-semibold mb-1 flex items-center"><School className="w-4 h-4 mr-2" />Como cai na prova</p>
+          <div className="p-3.5 rounded-xl bg-[var(--surface2)] border border-[var(--line)] text-xs text-[var(--text)]">
+            <p className="font-semibold mb-1 flex items-center text-[var(--dim)]"><School className="w-3.5 h-3.5 mr-1.5" />Como cai na prova</p>
             <AiText text={explanation.comoCai} />
           </div>
-          <div className="p-4 rounded-xl bg-amber-50 dark:bg-amber-900/20 text-amber-800 dark:text-amber-300 text-sm">
-            <p className="font-semibold mb-1 flex items-center"><AlertTriangle className="w-4 h-4 mr-2" />Pegadinha comum</p>
+          <div className="p-3.5 rounded-xl border border-amber-500/30 bg-amber-500/10 text-xs text-amber-300">
+            <p className="font-semibold mb-1 flex items-center text-amber-400"><AlertTriangle className="w-3.5 h-3.5 mr-1.5" />Pegadinha comum</p>
             <AiText text={explanation.pegadinha} />
           </div>
-          <div className="p-4 rounded-xl bg-emerald-50 dark:bg-emerald-900/20 text-emerald-800 dark:text-emerald-300 text-sm">
-            <p className="font-semibold mb-1 flex items-center"><HelpCircle className="w-4 h-4 mr-2" />Pergunta de checagem</p>
+          <div className="p-3.5 rounded-xl border border-emerald-500/30 bg-emerald-500/10 text-xs text-[var(--text)]">
+            <p className="font-semibold mb-1 flex items-center text-emerald-400"><HelpCircle className="w-3.5 h-3.5 mr-1.5" />Pergunta de checagem</p>
             <AiText text={explanation.checagem} />
             <textarea
               value={checkAnswer}
               onChange={(e) => { setCheckAnswer(e.target.value); setCheckCorrection(null); setCheckRecorded(false); }}
               rows={3}
               placeholder="Responda sem consultar a explicação..."
-              className="mt-3 w-full bg-white dark:bg-zinc-950 border border-emerald-200 dark:border-emerald-800 rounded-lg px-3 py-2 text-sm text-zinc-900 dark:text-zinc-100 outline-none focus:ring-2 focus:ring-emerald-500"
+              className="mt-3 w-full bg-[var(--surface2)] border border-[var(--line)] rounded-lg px-3 py-2 text-xs text-[var(--text)] outline-none focus:border-[var(--primary)]"
             />
-            <button onClick={correctCheck} disabled={checkLoading || !checkAnswer.trim()} className="mt-2 px-4 py-2 bg-emerald-600 hover:bg-emerald-700 disabled:bg-zinc-300 text-white rounded-lg font-medium">
+            <button
+              onClick={correctCheck}
+              disabled={checkLoading || !checkAnswer.trim()}
+              className="mt-2 px-3.5 py-1.5 bg-emerald-600 disabled:opacity-50 text-white rounded-lg text-xs font-semibold"
+            >
               {checkLoading ? 'Avaliando...' : 'Avaliar minha resposta'}
             </button>
           </div>
@@ -247,16 +252,16 @@ function ExplicarPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, 
             <div className="space-y-3">
               <CorrectionCard correction={checkCorrection} />
               {!checkRecorded ? (
-                <div className="p-4 rounded-xl border border-indigo-200 dark:border-indigo-800">
-                  <p className="text-sm font-semibold mb-2">Comparando com a correção, como foi sua recuperação?</p>
+                <div className="p-4 rounded-xl border border-[var(--primary)]/30 bg-[var(--surface2)]">
+                  <p className="text-xs font-semibold mb-2 text-[var(--text)]">Comparando com a correção, como foi sua recuperação?</p>
                   <div className="flex flex-wrap gap-2">
-                    <button disabled={syncing} onClick={() => recordCheck('fraco')} className="px-3 py-2 border rounded-lg text-sm">Não consegui</button>
-                    <button disabled={syncing} onClick={() => recordCheck('mediano')} className="px-3 py-2 border rounded-lg text-sm">Parcial / com ajuda</button>
-                    <button disabled={syncing} onClick={() => recordCheck('forte')} className="px-3 py-2 border rounded-lg text-sm">Consegui sem apoio</button>
+                    <button disabled={syncing} onClick={() => recordCheck('fraco')} className="px-3 py-1.5 border border-[var(--line)] rounded-lg text-xs hover:border-[var(--primary)]">Não consegui</button>
+                    <button disabled={syncing} onClick={() => recordCheck('mediano')} className="px-3 py-1.5 border border-[var(--line)] rounded-lg text-xs hover:border-[var(--primary)]">Parcial / com ajuda</button>
+                    <button disabled={syncing} onClick={() => recordCheck('forte')} className="px-3 py-1.5 border border-[var(--line)] rounded-lg text-xs hover:border-[var(--primary)]">Consegui sem apoio</button>
                   </div>
-                  <p className="text-xs text-zinc-500 mt-2">A explicação sozinha não altera seu domínio; esta checagem tem peso limitado.</p>
+                  <p className="text-[11px] text-[var(--dim)] mt-2">A explicação sozinha não altera seu domínio; esta checagem tem peso calibrado.</p>
                 </div>
-              ) : <p className="text-sm text-emerald-600">Checagem registrada no domínio e nas próximas revisões.</p>}
+              ) : <p className="text-xs text-emerald-400 font-mono">Checagem registrada no domínio e nas próximas revisões.</p>}
             </div>
           )}
         </div>
@@ -294,48 +299,48 @@ function CorrigirPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, 
   };
 
   return (
-    <div className="p-6 space-y-4 overflow-y-auto flex-1">
+    <div className="p-5 sm:p-6 space-y-4 overflow-y-auto flex-1">
       <div className="flex items-center justify-between flex-wrap gap-2">
-        <span className="text-sm font-medium text-zinc-600 dark:text-zinc-400">Tópico</span>
+        <span className="text-xs font-semibold text-[var(--dim)]">Tópico</span>
         <TopicSelect topicsBySubject={topicsBySubject} topicId={topicId} onChange={setTopicId} topic={topic} subtopic={subtopic} setSubtopic={setSubtopic} />
       </div>
       <div>
-        <label className="text-xs text-zinc-500 mb-1 block">Questão (cole o enunciado)</label>
+        <label className="text-xs text-[var(--dim)] mb-1 block">Questão (cole o enunciado)</label>
         <textarea
           value={question}
           onChange={(e) => setQuestion(e.target.value)}
           rows={2}
-          className="w-full bg-white dark:bg-zinc-950 border border-zinc-300 dark:border-zinc-700 rounded-xl px-4 py-3 text-sm outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
+          className="w-full bg-[var(--surface2)] border border-[var(--line)] text-[var(--text)] rounded-xl px-4 py-2.5 text-xs outline-none focus:border-[var(--primary)]"
         />
       </div>
       <div>
-        <label className="text-xs text-zinc-500 mb-1 block">Sua resposta</label>
+        <label className="text-xs text-[var(--dim)] mb-1 block">Sua resposta</label>
         <textarea
           value={answer}
           onChange={(e) => setAnswer(e.target.value)}
           rows={4}
-          className="w-full bg-white dark:bg-zinc-950 border border-zinc-300 dark:border-zinc-700 rounded-xl px-4 py-3 text-sm outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
+          className="w-full bg-[var(--surface2)] border border-[var(--line)] text-[var(--text)] rounded-xl px-4 py-2.5 text-xs outline-none focus:border-[var(--primary)]"
         />
       </div>
       <div>
-        <label className="text-xs text-zinc-500 mb-1 block">Se for discursiva de 2ª fase, banca (opcional)</label>
+        <label className="text-xs text-[var(--dim)] mb-1 block">Banca para critério analítico (opcional)</label>
         <select
           value={board}
           onChange={(e) => setBoard(e.target.value)}
-          className="bg-transparent border border-zinc-300 dark:border-zinc-700 rounded-lg px-3 py-1.5 text-sm outline-none focus:ring-2 focus:ring-indigo-500"
+          className="bg-[var(--surface2)] border border-[var(--line)] text-[var(--text)] rounded-lg px-2.5 py-1 text-xs outline-none focus:border-[var(--primary)]"
         >
-          <option value="">Objetiva / sem banca específica</option>
-          {DISCURSIVE_BOARDS.map((b) => <option key={b} value={b}>{b}</option>)}
+          <option value="" className="bg-zinc-50 dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100">Objetiva / sem banca específica</option>
+          {DISCURSIVE_BOARDS.map((b) => <option key={b} value={b} className="bg-zinc-50 dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100">{b}</option>)}
         </select>
       </div>
       <button
         onClick={correct}
         disabled={loading || !question.trim() || !answer.trim()}
-        className="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 disabled:bg-zinc-300 dark:disabled:bg-zinc-700 text-white rounded-lg font-medium transition-colors"
+        className="px-4 py-2 bg-[var(--primary)] text-[var(--wash)] disabled:opacity-50 rounded-lg text-xs font-semibold transition-opacity"
       >
         {loading ? 'Corrigindo...' : 'Corrigir resposta'}
       </button>
-      {error && <p className="text-sm text-rose-500">{error}</p>}
+      {error && <p className="text-xs text-rose-500">{error}</p>}
       {correction && <div className="pt-2"><CorrectionCard correction={correction} /></div>}
     </div>
   );
@@ -393,13 +398,13 @@ function QuestaoPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, s
   };
 
   return (
-    <div className="p-6 space-y-4 overflow-y-auto flex-1">
+    <div className="p-5 sm:p-6 space-y-4 overflow-y-auto flex-1">
       <div className="flex items-center justify-between flex-wrap gap-2">
-        <span className="text-sm font-medium text-zinc-600 dark:text-zinc-400">Tópico</span>
+        <span className="text-xs font-semibold text-[var(--dim)]">Tópico</span>
         <TopicSelect topicsBySubject={topicsBySubject} topicId={topicId} onChange={setTopicId} topic={topic} subtopic={subtopic} setSubtopic={setSubtopic} />
       </div>
       <div className="flex items-center gap-3 flex-wrap">
-        <label className="flex items-center text-sm gap-2">
+        <label className="flex items-center text-xs text-[var(--text)] gap-2">
           <input type="checkbox" checked={isDiscursive} onChange={(e) => setIsDiscursive(e.target.checked)} />
           Questão discursiva (2ª fase)
         </label>
@@ -407,39 +412,39 @@ function QuestaoPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, s
           <select
             value={board}
             onChange={(e) => setBoard(e.target.value)}
-            className="bg-transparent border border-zinc-300 dark:border-zinc-700 rounded-lg px-3 py-1.5 text-sm outline-none focus:ring-2 focus:ring-indigo-500"
+            className="bg-[var(--surface2)] border border-[var(--line)] text-[var(--text)] rounded-lg px-2.5 py-1 text-xs outline-none focus:border-[var(--primary)]"
           >
-            {DISCURSIVE_BOARDS.map((b) => <option key={b} value={b}>{b}</option>)}
+            {DISCURSIVE_BOARDS.map((b) => <option key={b} value={b} className="bg-zinc-50 dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100">{b}</option>)}
           </select>
         )}
       </div>
       <button
         onClick={() => generate(false)}
         disabled={generating}
-        className="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 disabled:bg-zinc-300 dark:disabled:bg-zinc-700 text-white rounded-lg font-medium transition-colors"
+        className="px-4 py-2 bg-[var(--primary)] text-[var(--wash)] disabled:opacity-50 rounded-lg text-xs font-semibold transition-opacity"
       >
         {generating ? 'Gerando...' : 'Gerar questão'}
       </button>
-      {error && <p className="text-sm text-rose-500">{error}</p>}
+      {error && <p className="text-xs text-rose-500">{error}</p>}
 
       {exercise && (
-        <div className="space-y-4 pt-2">
-          <div className="p-4 rounded-xl bg-zinc-50 dark:bg-zinc-800/50 text-sm">
+        <div className="space-y-3 pt-2">
+          <div className="p-4 rounded-xl bg-[var(--surface2)] border border-[var(--line)] text-xs text-[var(--text)] leading-relaxed">
             <AiText text={exercise} />
           </div>
           <div>
-            <label className="text-xs text-zinc-500 mb-1 block">Sua resposta</label>
+            <label className="text-xs text-[var(--dim)] mb-1 block">Sua resposta</label>
             <textarea
               value={answer}
               onChange={(e) => setAnswer(e.target.value)}
               rows={4}
-              className="w-full bg-white dark:bg-zinc-950 border border-zinc-300 dark:border-zinc-700 rounded-xl px-4 py-3 text-sm outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
+              className="w-full bg-[var(--surface2)] border border-[var(--line)] text-[var(--text)] rounded-xl px-4 py-2.5 text-xs outline-none focus:border-[var(--primary)]"
             />
           </div>
           <button
             onClick={correct}
             disabled={correcting || !answer.trim()}
-            className="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 disabled:bg-zinc-300 dark:disabled:bg-zinc-700 text-white rounded-lg font-medium transition-colors"
+            className="px-4 py-2 bg-[var(--primary)] text-[var(--wash)] disabled:opacity-50 rounded-lg text-xs font-semibold transition-opacity"
           >
             {correcting ? 'Corrigindo...' : 'Corrigir resposta'}
           </button>
@@ -447,15 +452,15 @@ function QuestaoPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, s
       )}
 
       {correction && (
-        <div className="space-y-4 pt-2">
+        <div className="space-y-3 pt-2">
           <CorrectionCard correction={correction} />
           <button
             onClick={() => generate(true)}
             disabled={generating}
-            className="flex items-center px-5 py-2.5 border border-indigo-200 dark:border-indigo-800 text-indigo-600 dark:text-indigo-400 rounded-lg font-medium hover:bg-indigo-50 dark:hover:bg-indigo-900/20 transition-colors"
+            className="flex items-center px-4 py-2 border border-[var(--primary)] text-[var(--primary)] rounded-lg text-xs font-semibold hover:bg-[var(--surface2)] transition-colors"
           >
-            <RotateCcw className="w-4 h-4 mr-2" />
-            Questão de transferência (mesmo tópico, contexto diferente)
+            <RotateCcw className="w-3.5 h-3.5 mr-1.5" />
+            Questão de transferência (mesmo conceito, novo contexto)
           </button>
         </div>
       )}
@@ -466,14 +471,14 @@ function QuestaoPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, s
 function RevisaoPanel() {
   const navigate = useNavigate();
   return (
-    <div className="p-6 flex-1 flex flex-col items-center justify-center text-center">
-      <CalendarClock className="w-10 h-10 text-indigo-500 mb-4" />
-      <p className="text-zinc-600 dark:text-zinc-400 mb-6 max-w-sm">
-        Revisão ativa já tem uma tela própria, com os tópicos realmente pendentes calculados a partir do seu domínio real — não faz sentido duplicar isso aqui.
+    <div className="p-8 flex-1 flex flex-col items-center justify-center text-center">
+      <CalendarClock className="w-8 h-8 text-[var(--primary)] mb-3" />
+      <p className="text-xs text-[var(--dim)] mb-4 max-w-sm">
+        A fila de repetição espaçada adaptativa gerencia seus prazos reais com base no algoritmo SM-2.
       </p>
       <button
         onClick={() => navigate('/revisoes')}
-        className="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-medium transition-colors"
+        className="px-4 py-2 bg-[var(--primary)] text-[var(--wash)] rounded-lg text-xs font-semibold hover:opacity-90 transition-opacity"
       >
         Ir para Revisões
       </button>
@@ -490,7 +495,7 @@ interface Message {
 function DuvidaPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, setSubtopic, effectiveTopic }: ReturnType<typeof useTopicPicker>) {
   const [input, setInput] = useState('');
   const [messages, setMessages] = useState<Message[]>([
-    { id: '1', sender: 'ai', text: `Olá. Qual dúvida sobre ${topic.name} você quer resolver pensando junto comigo?` },
+    { id: '1', sender: 'ai', text: `Olá! Qual dúvida sobre ${topic.name} você quer destravar pensando junto comigo?` },
   ]);
   const [isLoading, setIsLoading] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -518,74 +523,70 @@ function DuvidaPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, se
 
   return (
     <>
-      <div className="px-6 py-4 border-b border-zinc-200 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-900/50 flex items-center justify-between">
-        <div className="flex items-center">
-          <Brain className="w-5 h-5 mr-3 text-indigo-600 dark:text-indigo-400" />
-          <span className="font-medium">Sessão ativa</span>
+      <div className="px-5 py-3 border-b border-[var(--line)] bg-[var(--surface2)]/50 flex items-center justify-between flex-wrap gap-2">
+        <div className="flex items-center text-xs font-medium text-[var(--text)]">
+          <Brain className="w-4 h-4 mr-2 text-[var(--primary)]" />
+          <span>Sessão ativa</span>
         </div>
         <TopicSelect topicsBySubject={topicsBySubject} topicId={topicId} onChange={setTopicId} topic={topic} subtopic={subtopic} setSubtopic={setSubtopic} />
       </div>
 
-      <div ref={scrollRef} className="flex-1 overflow-y-auto p-6 space-y-6">
-        <AnimatePresence initial={false}>
+      <div ref={scrollRef} className="flex-1 overflow-y-auto p-5 space-y-4">
         {messages.map((msg) => (
-          <motion.div
+          <div
             key={msg.id}
-            initial={{ opacity: 0, y: 12, scale: 0.96 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.9 }}
-            transition={{ type: 'spring', stiffness: 400, damping: 25 }}
             className={`flex ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}
           >
-            <div className={`flex max-w-[80%] ${msg.sender === 'user' ? 'flex-row-reverse' : 'flex-row'}`}>
-              <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 ${
-                msg.sender === 'user' ? 'bg-zinc-800 text-white ml-3' : 'bg-action-primary/15 text-action-primary mr-3'
-              }`}>
-                {msg.sender === 'user' ? <User className="w-4 h-4" /> : <Bot className="w-4 h-4" />}
-              </div>
-              <div className={`px-5 py-3.5 rounded-2xl shadow-soft-sm ${
+            <div className={`flex max-w-[85%] ${msg.sender === 'user' ? 'flex-row-reverse' : 'flex-row'}`}>
+              <div className={`w-7 h-7 rounded-full flex items-center justify-center shrink-0 ${
                 msg.sender === 'user'
-                  ? 'bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-900'
-                  : 'bg-surface-elevated text-text-primary border border-border-subtle'
+                  ? 'bg-[var(--primary)] text-[var(--wash)] ml-2.5'
+                  : 'bg-[var(--surface2)] border border-[var(--line)] text-[var(--primary)] mr-2.5'
               }`}>
-                {msg.sender === 'user' ? <p className="whitespace-pre-wrap leading-relaxed">{msg.text}</p> : <AiText text={msg.text} />}
+                {msg.sender === 'user' ? <User className="w-3.5 h-3.5" /> : <Bot className="w-3.5 h-3.5" />}
+              </div>
+              <div className={`px-4 py-3 rounded-2xl text-xs leading-relaxed ${
+                msg.sender === 'user'
+                  ? 'bg-[var(--primary)] text-[var(--wash)]'
+                  : 'bg-[var(--surface2)] text-[var(--text)] border border-[var(--line)]'
+              }`}>
+                {msg.sender === 'user' ? <p className="whitespace-pre-wrap">{msg.text}</p> : <AiText text={msg.text} />}
               </div>
             </div>
-          </motion.div>
+          </div>
         ))}
-        </AnimatePresence>
 
         {isLoading && (
           <div className="flex justify-start">
-            <div className="flex flex-row max-w-[80%]">
-              <div className="w-8 h-8 rounded-full bg-indigo-100 text-indigo-600 dark:bg-indigo-900/30 dark:text-indigo-400 mr-3 flex items-center justify-center shrink-0">
-                <Bot className="w-4 h-4" />
+            <div className="flex flex-row max-w-[85%]">
+              <div className="w-7 h-7 rounded-full bg-[var(--surface2)] border border-[var(--line)] text-[var(--primary)] mr-2.5 flex items-center justify-center shrink-0">
+                <Bot className="w-3.5 h-3.5" />
               </div>
-              <div className="px-5 py-4 rounded-2xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 flex items-center space-x-2">
-                <div className="w-2 h-2 rounded-full bg-zinc-400 animate-bounce" style={{ animationDelay: '0ms' }} />
-                <div className="w-2 h-2 rounded-full bg-zinc-400 animate-bounce" style={{ animationDelay: '150ms' }} />
-                <div className="w-2 h-2 rounded-full bg-zinc-400 animate-bounce" style={{ animationDelay: '300ms' }} />
+              <div className="px-4 py-3 rounded-2xl bg-[var(--surface2)] border border-[var(--line)] flex items-center space-x-1.5">
+                <div className="w-1.5 h-1.5 rounded-full bg-[var(--primary)] animate-bounce" style={{ animationDelay: '0ms' }} />
+                <div className="w-1.5 h-1.5 rounded-full bg-[var(--primary)] animate-bounce" style={{ animationDelay: '150ms' }} />
+                <div className="w-1.5 h-1.5 rounded-full bg-[var(--primary)] animate-bounce" style={{ animationDelay: '300ms' }} />
               </div>
             </div>
           </div>
         )}
       </div>
 
-      <div className="p-4 border-t border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900">
+      <div className="p-3 border-t border-[var(--line)] bg-[var(--surface2)]/50">
         <form onSubmit={handleSend} className="relative flex items-center">
           <input
             type="text"
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            placeholder="Descreva seu raciocínio atual..."
-            className="w-full bg-white dark:bg-zinc-950 border border-zinc-300 dark:border-zinc-700 rounded-xl pl-5 pr-14 py-4 outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all shadow-sm"
+            placeholder="Descreva seu raciocínio ou responda à pergunta do tutor..."
+            className="w-full bg-[var(--surface)] border border-[var(--line)] text-[var(--text)] rounded-xl pl-4 pr-12 py-3 text-xs outline-none focus:border-[var(--primary)]"
           />
           <button
             type="submit"
             disabled={isLoading || !input.trim()}
-            className="absolute right-2 w-10 h-10 rounded-lg bg-indigo-600 hover:bg-indigo-700 disabled:bg-zinc-300 dark:disabled:bg-zinc-700 text-white flex items-center justify-center transition-colors"
+            className="absolute right-1.5 w-8 h-8 rounded-lg bg-[var(--primary)] text-[var(--wash)] disabled:opacity-50 flex items-center justify-center transition-opacity"
           >
-            <Send className="w-4 h-4" />
+            <Send className="w-3.5 h-3.5" />
           </button>
         </form>
       </div>
@@ -596,52 +597,72 @@ function DuvidaPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, se
 export default function Tutor() {
   const [mode, setMode] = useState<Mode>('duvida');
   const picker = useTopicPicker();
-  const activeMode = MODES.find((m) => m.value === mode)!;
+  const currentPalette = PALETTES[picker.topic.subject] ?? PALETTES.Filosofia;
+  const SubIcon = SUBJECT_ICONS[picker.topic.subject] ?? Brain;
 
   return (
-    <div className="flex flex-col h-[calc(100vh-6rem)] animate-in fade-in duration-500">
-      <header className="mb-4 shrink-0">
-        <div className="flex items-center gap-2 mb-1.5">
-          <span className="w-2 h-2 rounded-full bg-ember-500 shadow-[0_0_8px_var(--color-ember-500)]" />
-          <span className="text-[11px] font-mono tracking-widest uppercase text-ember-600 dark:text-ember-400">Diálogo Socrático & Investigação · Crivo</span>
-        </div>
-        <h1 className="font-display text-3xl sm:text-4xl font-semibold italic text-text-primary tracking-tight flex items-center gap-3">
-          <Brain className="w-7 h-7 text-action-primary" />
-          Tutor Socrático
-        </h1>
-        <p className="text-text-secondary flex items-center mt-1 text-sm">
-          <activeMode.icon className="w-4 h-4 mr-2 text-ember-500 shrink-0" />
-          {activeMode.hint}
-        </p>
-      </header>
+    <div
+      className="ni-main"
+      style={{
+        '--primary': currentPalette.primary,
+        '--secondary': currentPalette.secondary,
+        '--wash': currentPalette.wash,
+      } as React.CSSProperties}
+    >
+      {/* Route Breadcrumb */}
+      <div className="ni-route">
+        <span>LIBRARY</span>
+        <i />
+        <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
+          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--wash)]">
+            <SubIcon className="w-3 h-3" />
+          </span>
+          SOCRÁTICO
+        </span>
+        <i />
+        <b>TUTOR SOCRÁTICO</b>
+      </div>
 
-      <div className="flex gap-2 flex-wrap mb-4 shrink-0">
+      {/* Main Title */}
+      <div className="ni-title">
+        <div>
+          <h1>Destrave o raciocínio com perguntas certas.</h1>
+          <p>IA socrática que guia sem dar a resposta — o entendimento vem do seu próprio percurso.</p>
+        </div>
+        <div className="ni-state">
+          <i /> Crivo Socrático · {picker.topic.subject}
+        </div>
+      </div>
+
+      {/* Mode selectors */}
+      <div className="ni-subjects">
         {MODES.map((m) => {
           const active = mode === m.value;
           return (
             <button
               key={m.value}
               onClick={() => setMode(m.value)}
-              className={`flex items-center px-3.5 py-1.5 rounded-full text-xs font-mono tracking-wide transition-all ${
+              style={
                 active
-                  ? 'bg-action-primary text-warm-50 font-bold shadow-sm ring-1 ring-white/20'
-                  : 'border border-border-subtle hover:border-text-primary text-text-muted hover:text-text-primary bg-surface-default/70'
-              }`}
+                  ? { backgroundColor: currentPalette.primary, color: currentPalette.wash, borderRadius: '4px', padding: '2px 8px' }
+                  : undefined
+              }
             >
-              <m.icon className="w-3.5 h-3.5 mr-1.5" />
-              {m.label.toUpperCase()}
+              <m.icon className="w-3 h-3 inline mr-1" />
+              {m.label}
             </button>
           );
         })}
       </div>
 
-      <div className="flex-1 flex flex-col bg-surface-default border border-border-subtle rounded-2xl overflow-hidden shadow-soft-sm">
+      {/* Panel container */}
+      <Panel subject={picker.topic.subject} className="ni-panel flex flex-col h-[560px] overflow-hidden">
         {mode === 'duvida' && <DuvidaPanel {...picker} />}
         {mode === 'explicar' && <ExplicarPanel {...picker} />}
         {mode === 'corrigir' && <CorrigirPanel {...picker} />}
         {mode === 'questao' && <QuestaoPanel {...picker} />}
         {mode === 'revisao' && <RevisaoPanel />}
-      </div>
+      </Panel>
     </div>
   );
 }

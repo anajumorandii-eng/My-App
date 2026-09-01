@@ -37,6 +37,13 @@ import ObraDetalhe from './views/ObraDetalhe';
 import AgendaView from './features/availability/AgendaView';
 import Resumos from './views/Resumos';
 import NucleoInstrumentalPrototype from './prototypes/NucleoInstrumentalPrototype';
+import CrivoDesignSystemGallery from './prototypes/CrivoDesignSystemGallery';
+
+// Import Crivo Design System Global Styles
+import './design-system/css/nucleo-instrumental-prototype.css';
+import './design-system/css/nucleo-instrumental-rail.css';
+import './design-system/css/nucleo-instrumental-cores.css';
+import './design-system/css/nucleo-instrumental-brand.css';
 
 export default function App() {
   return (
@@ -45,6 +52,7 @@ export default function App() {
         <Routes>
           {/* Rota isolada em tela cheia para o Protótipo Núcleo Instrumental */}
           <Route path="/prototipo" element={<NucleoInstrumentalPrototype />} />
+          <Route path="/crivo-gallery" element={<CrivoDesignSystemGallery />} />
           <Route path="/nucleo-instrumental" element={<NucleoInstrumentalPrototype />} />
           <Route path="/prototype/nucleo-instrumental" element={<NucleoInstrumentalPrototype />} />
           

@@ -26,6 +26,9 @@ import {
 import FlashcardSession, { SessionCard } from '../components/FlashcardSession';
 import { getMotionConfigForSubject } from '../design-system/crivoMotionPresets';
 import { motion } from 'motion/react';
+import { Panel } from '../components/ui/Panel';
+import { PALETTES } from '../prototypes/NucleoInstrumentalPrototype';
+import { SUBJECT_ICONS } from './Dashboard';
 
 // Contagens conhecidas de antemão (conteúdo estático) — evita ter que
 // buscar todo mundo só pra montar a grade de matérias.
@@ -271,30 +274,32 @@ export default function Flashcards() {
   );
 
   return (
-    <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
-      <header>
-        <div className="flex items-center gap-2 mb-1.5">
-          <span className="w-2 h-2 rounded-full bg-ember-500 shadow-[0_0_8px_var(--color-ember-500)]" />
-          <span className="text-[11px] font-mono tracking-widest uppercase text-ember-600 dark:text-ember-400">Baralhos & Repetição Ativa · Crivo</span>
-        </div>
-        <h1 className="font-display text-3xl sm:text-4xl font-semibold italic text-text-primary tracking-tight flex items-center gap-3">
-          <Layers className="w-7 h-7 text-action-primary" />
-          Flashcards
-        </h1>
-        <p className="text-text-secondary mt-1 max-w-2xl text-base">
-          Repetição espaçada por cartão — cada conceito possui seu próprio ritmo de fixação, ajustado em tempo real pela sua resposta.
-        </p>
-        {!isPersisted && (
-          <p className="flex items-center text-xs text-text-muted mt-2">
-            <CloudOff className="w-3.5 h-3.5 mr-1.5" />
-            Modo demonstração — conecte sua conta Google em &quot;Conexões Google&quot; para salvar seu progresso de verdade.
-          </p>
+    <div className="ni-main">
+      {/* Breadcrumb Route */}
+      <div className="ni-route">
+        <span>PRACTICE</span>
+        <i />
+        <span>REPETIÇÃO ESPAÇADA</span>
+        {navigation.subject && (
+          <>
+            <i /> <b>{navigation.subject.toUpperCase()}</b>
+          </>
         )}
-        {syncError && <p className="text-xs text-status-error mt-2">{syncError}</p>}
-      </header>
+      </div>
+
+      {/* Main Title */}
+      <div className="ni-title">
+        <div>
+          <h1>Recuperação ativa com ritmo de fixação.</h1>
+          <p>Repetição espaçada por cartão — cada conceito se ajusta em tempo real pelo seu domínio.</p>
+        </div>
+        <div className="ni-state">
+          <i /> baralhos integrados · Crivo
+        </div>
+      </div>
 
       {dueNavigationBlocked && (!studyOwnerMatches || hydrationStatus !== 'error') && (
-        <div className="flex items-center justify-center py-16 text-zinc-400">
+        <div className="flex items-center justify-center py-16 text-[var(--dim)]">
           <Loader2 className="w-6 h-6 animate-spin mr-2" /> Carregando seu progresso de flashcards...
         </div>
       )}
@@ -312,31 +317,31 @@ export default function Flashcards() {
       )}
 
       {!dueNavigationBlocked && navigation.step === 'subject' && (
-        <div className="space-y-4">
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
-            {SUBJECTS.map(({ name, count, colorClasses }, index) => {
-              const mConfig = getMotionConfigForSubject(name);
+        <div className="space-y-6 mt-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3.5">
+            {SUBJECTS.map(({ name, count }) => {
+              const Icon = SUBJECT_ICONS[name] ?? Layers;
               return (
-                <motion.button
+                <button
+                  type="button"
                   key={name}
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: index * 0.03, duration: 0.25 }}
-                  whileHover={mConfig.hoverProps.whileHover}
-                  whileTap={mConfig.hoverProps.whileTap}
                   onClick={() => openSubject(name)}
-                  disabled={loadingSubject !== null || dueNavigationBlocked}
-                  className="bg-surface-default border border-border-subtle rounded-xl p-4 text-left shadow-soft-sm hover:shadow-md transition-shadow disabled:opacity-60 disabled:cursor-wait"
+                  aria-label={name}
+                  className="rounded-card border border-[var(--line)] bg-[var(--surface)] shadow-soft-sm hover:border-[var(--primary)] ni-panel p-4 text-left cursor-pointer transition-all hover:scale-[1.02] w-full"
                 >
-                  <span className={`text-xs font-semibold px-2 py-1 rounded-full ${colorClasses}`}>{name}</span>
-                  <p className="text-sm font-mono text-text-muted mt-2">{count.toLocaleString('pt-BR')} cartões</p>
-                </motion.button>
+                  <div className="flex items-center justify-between mb-2">
+                    <Icon className="w-4 h-4 text-[var(--primary)]" />
+                    <b className="text-[10px] font-mono text-[var(--dim)]">{count.toLocaleString('pt-BR')}</b>
+                  </div>
+                  <h3 className="font-display text-base font-medium text-[var(--text)]">{name}</h3>
+                  <p className="text-[11px] text-[var(--dim)]">Baralho ativo</p>
+                </button>
               );
             })}
           </div>
 
           {loadingSubject && (
-            <div className="flex items-center justify-center py-4 text-zinc-400">
+            <div className="flex items-center justify-center py-4 text-[var(--dim)]">
               <Loader2 className="w-5 h-5 animate-spin mr-2" /> Carregando flashcards de {loadingSubject}...
             </div>
           )}

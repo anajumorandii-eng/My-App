@@ -240,6 +240,31 @@ html, body {
   transition: background-color 900ms cubic-bezier(0.4, 0, 0.2, 1), color 900ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* The production route shell is intentionally quieter than Hoje's
+   recommendation field: it brings the subject identity to every screen
+   without turning data tables, editors and long reading views into a hero. */
+.crivo-route-shell {
+  min-height: 100%;
+}
+
+.crivo-route-shell::after {
+  content: '';
+  position: absolute;
+  inset: 0 auto 0 0;
+  z-index: 2;
+  width: 3px;
+  pointer-events: none;
+  background: linear-gradient(to bottom, transparent 2rem, var(--subject-primary) 20%, var(--subject-secondary) 78%, transparent);
+  opacity: .72;
+}
+
+.crivo-route-shell [data-crivo-route-kind='practice'] { --route-accent: var(--subject-primary); }
+.crivo-route-shell [data-crivo-route-kind='library'] { --route-accent: var(--subject-secondary); }
+.crivo-route-shell [data-crivo-route-kind='analysis'] { --route-accent: var(--subject-focus-accent); }
+.crivo-route-shell [data-crivo-route-kind='decision'] { --route-accent: var(--subject-emissive); }
+.crivo-route-shell [data-crivo-route-kind='account'],
+.crivo-route-shell [data-crivo-route-kind='admin'] { --route-accent: var(--subject-primary); }
+
 .dark [data-testid="subject-atmosphere"] {
   --subject-bg: var(--subject-dark-bg);
   --subject-surface: var(--subject-dark-surface);

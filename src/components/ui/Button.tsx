@@ -1,14 +1,18 @@
 import React from 'react';
 import { Loader2 } from 'lucide-react';
+import { motion, MotionProps } from 'motion/react';
 import { cn } from '../../lib/cn';
 import { useSpotlight } from '../../hooks/useSpotlight';
+import { getMotionConfigForSubject } from '../../design-system/crivoMotionPresets';
 
-type ButtonVariant = 'primary' | 'secondary' | 'ghost';
+type ButtonVariant = 'primary' | 'secondary' | 'ghost' | 'destructive';
 type ButtonSize = 'md' | 'sm';
 
-export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface ButtonProps extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, keyof MotionProps>, MotionProps {
   variant?: ButtonVariant;
   size?: ButtonSize;
+  subject?: string;
+  children?: React.ReactNode;
   loading?: boolean;
 }
 
@@ -19,6 +23,8 @@ const VARIANT_CLASSES: Record<ButtonVariant, string> = {
     'bg-surface-secondary text-text-primary border border-border-subtle hover:bg-surface-strong active:bg-surface-strong disabled:text-text-muted',
   ghost:
     'bg-transparent text-text-secondary hover:bg-surface-secondary hover:text-text-primary active:bg-surface-strong disabled:text-text-muted',
+  destructive:
+    'bg-red-500/10 text-red-500 hover:bg-red-500/20 active:bg-red-500/30 disabled:text-text-muted border border-red-500/20',
 };
 
 const SIZE_CLASSES: Record<ButtonSize, string> = {
@@ -27,12 +33,14 @@ const SIZE_CLASSES: Record<ButtonSize, string> = {
 };
 
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(function Button(
-  { variant = 'primary', size = 'md', loading = false, disabled, className, children, onPointerMove, ...props },
+  { variant = 'primary', size = 'md', loading = false, disabled, className, children, onPointerMove, subject, ...props },
   ref
 ) {
   const { onPointerMove: spotlightMove } = useSpotlight();
+  const motionConfig = getMotionConfigForSubject(subject);
+
   return (
-    <button
+    <motion.button
       ref={ref}
       onPointerMove={(e) => {
         spotlightMove(e);
@@ -48,10 +56,13 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(function 
       )}
       disabled={disabled || loading}
       aria-busy={loading || undefined}
+      whileHover={!disabled && !loading ? motionConfig.hoverProps.whileHover : undefined}
+      whileTap={!disabled && !loading ? motionConfig.hoverProps.whileTap : undefined}
+      transition={motionConfig.hoverProps.transition}
       {...props}
     >
       {loading && <Loader2 className="w-4 h-4 animate-spin" aria-hidden="true" />}
       {children}
-    </button>
+    </motion.button>
   );
 });

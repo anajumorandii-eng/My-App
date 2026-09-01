@@ -8,6 +8,11 @@ import { useSummaryProgress } from '../hooks/useSummaryProgress';
 import { SubjectAtmosphere } from '../features/daily-plan/components/SubjectAtmosphere';
 import { getSubjectProfile } from '../design-system/crivoSubjects';
 import type { StudyStatus, SummaryDepth } from '../types/summary';
+import { PALETTES } from '../prototypes/NucleoInstrumentalPrototype';
+import { SUBJECT_ICONS } from './Dashboard';
+
+const LIT_PALETTE = PALETTES.Literatura;
+
 
 const modeLabels: Record<SummaryDepth, string> = { rapida: 'Revisão rápida', aprofundamento: 'Aprofundamento', prova: 'Como cai na prova' };
 const stageLabels = { intuicao: 'Intuição', conceito: 'Conceito', aplicacao: 'Aplicação', exercicio: 'Exercício', estrategia: 'Estratégia de prova' };
@@ -76,9 +81,45 @@ export default function Resumos() {
     );
   }
 
-  return <div className="space-y-7"><header><p className="text-sm font-bold text-indigo-600 dark:text-indigo-400">ANA JÚLIA · MEDICINA</p><h1 className="text-3xl sm:text-4xl font-bold tracking-tight mt-1">Resumos interativos</h1><p className="text-zinc-500 mt-2 max-w-3xl">Compreender, recuperar da memória e aplicar sob pressão — com prioridade explícita para Fuvest.</p><p className="mt-2 text-xs text-zinc-400 flex items-center">{isCloudSynced ? <Check className="w-3.5 h-3.5 mr-1"/> : <CloudOff className="w-3.5 h-3.5 mr-1"/>}{isCloudSynced ? 'Progresso sincronizado na sua conta' : 'Progresso salvo neste dispositivo'}</p></header>
-    {syncError && <div role="alert" className="rounded-xl border border-amber-200 bg-amber-50 p-3 text-sm text-amber-900"><AlertTriangle className="inline w-4 h-4 mr-2"/>{syncError}</div>}
-    <section aria-label="Filtros" className="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-4"><div className="relative mb-3"><Search className="absolute left-3 top-3 w-4 h-4 text-zinc-400"/><input value={query} onChange={(e) => setQuery(e.target.value)} aria-label="Buscar nos resumos" placeholder="Buscar conceito, mecanismo ou pegadinha…" className="w-full rounded-xl border border-zinc-300 dark:border-zinc-700 bg-transparent py-2.5 pl-10 pr-3"/></div><div className="grid grid-cols-2 lg:grid-cols-4 gap-2"><select aria-label="Filtrar por disciplina" value={subject} onChange={(e) => setSubject(e.target.value)} className="rounded-lg border border-zinc-300 dark:border-zinc-700 bg-transparent p-2"><option value="">Todas as disciplinas</option>{subjects.map((x) => <option key={x}>{x}</option>)}</select><select aria-label="Filtrar por banca" value={board} onChange={(e) => setBoard(e.target.value)} className="rounded-lg border border-zinc-300 dark:border-zinc-700 bg-transparent p-2"><option value="">Todas as bancas</option>{boards.map((x) => <option key={x}>{x}</option>)}</select><select aria-label="Filtrar por fase" value={phase} onChange={(e) => setPhase(e.target.value)} className="rounded-lg border border-zinc-300 dark:border-zinc-700 bg-transparent p-2"><option value="">Todas as fases</option><option value="primeira">1ª fase</option><option value="segunda">2ª fase</option><option value="unica">Fase única</option></select><select aria-label="Filtrar por domínio" value={status} onChange={(e) => setStatus(e.target.value as StudyStatus | '')} className="rounded-lg border border-zinc-300 dark:border-zinc-700 bg-transparent p-2"><option value="">Todos os estados</option>{Object.entries(statusLabels).map(([key, label]) => <option key={key} value={key}>{label}</option>)}</select></div></section>
-    {filtered.length === 0 ? <div className="rounded-2xl border border-dashed border-zinc-300 dark:border-zinc-700 py-16 text-center"><Search className="w-8 h-8 mx-auto text-zinc-400 mb-3"/><h2 className="font-bold">Nenhum resumo encontrado</h2><p className="text-sm text-zinc-500 mt-1">Remova um filtro ou tente outro termo.</p></div> : <div className="grid grid-cols-1 md:grid-cols-2 gap-4">{filtered.map((item) => { const p = progress[item.id]; return <button key={item.id} onClick={() => { setSelectedId(item.id); setSearchParams({ summary: item.id }); setExpanded(item.sections.filter((s) => s.depth === mode).slice(0, 1).map((s) => s.id)); update(item.id, (current) => ({ ...current, lastOpenedAt: new Date().toISOString() })); }} className="text-left rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-5 hover:border-indigo-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"><div className="flex justify-between gap-3"><span className="text-xs font-bold uppercase tracking-wide text-indigo-600">{item.subject}</span>{p?.important && <Star className="w-4 h-4 fill-amber-400 text-amber-400"/>}</div><h2 className="font-bold text-xl mt-2">{item.title}</h2><p className="text-sm text-zinc-500 mt-2">{item.overview}</p><div className="flex flex-wrap gap-2 mt-4"><span className="rounded-full bg-indigo-50 dark:bg-indigo-950/30 px-2.5 py-1 text-xs font-semibold">Fuvest · 1ª e 2ª fases</span>{item.currentAffairs && <span className="rounded-full bg-emerald-50 dark:bg-emerald-950/30 px-2.5 py-1 text-xs">A.T.U.A.L.</span>}</div><div className="mt-4 flex items-center justify-between text-xs text-zinc-500"><span>{statusLabels[p?.status ?? 'nao-iniciado']}</span><span>{getReadingProgress(item, p)}% lido</span></div></button>; })}</div>}
-  </div>;
+  const LitIcon = SUBJECT_ICONS['Literatura'] ?? BookOpen;
+
+  return (
+    <div
+      className="ni-main"
+      style={{
+        '--primary': LIT_PALETTE.primary,
+        '--secondary': LIT_PALETTE.secondary,
+        '--wash': LIT_PALETTE.wash,
+      } as React.CSSProperties}
+    >
+      {/* Breadcrumb */}
+      <div className="ni-route">
+        <span>LIBRARY</span>
+        <i />
+        <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
+          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--wash)]">
+            <LitIcon className="w-3 h-3" />
+          </span>
+          LITERATURA
+        </span>
+        <i />
+        <b>RESUMOS INTERATIVOS</b>
+      </div>
+
+      {/* Main Title */}
+      <div className="ni-title">
+        <div>
+          <h1>Compreender, recuperar, aplicar.</h1>
+          <p>Resumos com prioridade explícita para Fuvest — recuperação ativa integrada ao motor de repetição espaçada.</p>
+        </div>
+        <div className="ni-state">
+          <i /> perfil {LIT_PALETTE.family} · {isCloudSynced ? 'sincronizado' : 'local'}
+        </div>
+      </div>
+
+      {syncError && <div role="alert" className="rounded-xl border border-amber-200 bg-amber-50 p-3 text-sm text-amber-900"><AlertTriangle className="inline w-4 h-4 mr-2"/>{syncError}</div>}
+      <section aria-label="Filtros" className="rounded-2xl border border-[var(--line)] bg-[var(--surface2)] p-4"><div className="relative mb-3"><Search className="absolute left-3 top-3 w-4 h-4 text-[var(--dim)]"/><input value={query} onChange={(e) => setQuery(e.target.value)} aria-label="Buscar nos resumos" placeholder="Buscar conceito, mecanismo ou pegadinha…" className="w-full rounded-xl border border-[var(--line)] bg-transparent py-2.5 pl-10 pr-3 text-[var(--text)]"/></div><div className="grid grid-cols-2 lg:grid-cols-4 gap-2"><select aria-label="Filtrar por disciplina" value={subject} onChange={(e) => setSubject(e.target.value)} className="rounded-lg border border-[var(--line)] bg-transparent p-2 text-[var(--text)]"><option value="">Todas as disciplinas</option>{subjects.map((x) => <option key={x}>{x}</option>)}</select><select aria-label="Filtrar por banca" value={board} onChange={(e) => setBoard(e.target.value)} className="rounded-lg border border-[var(--line)] bg-transparent p-2 text-[var(--text)]"><option value="">Todas as bancas</option>{boards.map((x) => <option key={x}>{x}</option>)}</select><select aria-label="Filtrar por fase" value={phase} onChange={(e) => setPhase(e.target.value)} className="rounded-lg border border-[var(--line)] bg-transparent p-2 text-[var(--text)]"><option value="">Todas as fases</option><option value="primeira">1ª fase</option><option value="segunda">2ª fase</option><option value="unica">Fase única</option></select><select aria-label="Filtrar por domínio" value={status} onChange={(e) => setStatus(e.target.value as StudyStatus | '')} className="rounded-lg border border-[var(--line)] bg-transparent p-2 text-[var(--text)]"><option value="">Todos os estados</option>{Object.entries(statusLabels).map(([key, label]) => <option key={key} value={key}>{label}</option>)}</select></div></section>
+      {filtered.length === 0 ? <div className="rounded-2xl border border-dashed border-[var(--line)] py-16 text-center"><Search className="w-8 h-8 mx-auto text-[var(--dim)] mb-3"/><h2 className="font-bold text-[var(--text)]">Nenhum resumo encontrado</h2><p className="text-sm text-[var(--dim)] mt-1">Remova um filtro ou tente outro termo.</p></div> : <div className="grid grid-cols-1 md:grid-cols-2 gap-4">{filtered.map((item) => { const p = progress[item.id]; return <button key={item.id} onClick={() => { setSelectedId(item.id); setSearchParams({ summary: item.id }); setExpanded(item.sections.filter((s) => s.depth === mode).slice(0, 1).map((s) => s.id)); update(item.id, (current) => ({ ...current, lastOpenedAt: new Date().toISOString() })); }} className="text-left rounded-2xl border border-[var(--line)] bg-[var(--surface)] p-5 hover:border-[var(--primary)] focus-visible:outline-none focus-visible:ring-2" style={{'--tw-ring-color': LIT_PALETTE.primary} as React.CSSProperties}><div className="flex justify-between gap-3"><span className="text-xs font-bold uppercase tracking-wide" style={{color: LIT_PALETTE.primary}}>{item.subject}</span>{p?.important && <Star className="w-4 h-4 fill-amber-400 text-amber-400"/>}</div><h2 className="font-bold text-xl mt-2 text-[var(--text)]">{item.title}</h2><p className="text-sm text-[var(--dim)] mt-2">{item.overview}</p><div className="flex flex-wrap gap-2 mt-4"><span className="rounded-full px-2.5 py-1 text-[10px] font-mono" style={{backgroundColor: LIT_PALETTE.primary, color: LIT_PALETTE.wash}}>Fuvest · 1ª e 2ª fases</span>{item.currentAffairs && <span className="rounded-full bg-emerald-50 dark:bg-emerald-950/30 px-2.5 py-1 text-xs">A.T.U.A.L.</span>}</div><div className="mt-4 flex items-center justify-between text-xs text-[var(--dim)]"><span>{statusLabels[p?.status ?? 'nao-iniciado']}</span><span>{getReadingProgress(item, p)}% lido</span></div></button>; })}</div>}
+    </div>
+  );
 }
