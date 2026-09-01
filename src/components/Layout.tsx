@@ -106,6 +106,14 @@ const NAV_GROUPS: NavGroup[] = [
   },
 ];
 
+const TOP_LEVEL_NAV: NavItem[] = [
+  { name: 'Hoje', path: '/', icon: Calendar },
+  { name: 'Plano', path: '/plano', icon: Map },
+  { name: 'Estudar', path: '/sessao', icon: PlayCircle },
+  { name: 'Análises', path: '/evolucao', icon: TrendingUp },
+  { name: 'Agenda', path: '/agenda', icon: Calendar },
+];
+
 const RAIL_STORAGE_KEY = 'crivo_rail_expanded';
 
 function getStoredRailExpanded(): boolean {
@@ -272,7 +280,6 @@ export default function Layout() {
             <span aria-hidden="true">·</span>
             <NavLink to="/admin/obras" className="hover:text-[var(--ni-text)] hover:underline">Obras</NavLink>
             <span aria-hidden="true">·</span>
-            <NavLink to="/prototipo" className="text-[var(--ember-400)] hover:underline">Protótipo</NavLink>
           </div>
           <button
             onClick={toggleTheme}
@@ -304,8 +311,32 @@ export default function Layout() {
           presentation.immersive && 'route-presentation-immersive'
         )}
       >
-        <RouteVisualShell pathname={location.pathname}>
-          <div className={presentation.contentClassName}>
+        <div className={presentation.contentClassName}>
+          <header className="ni-top crivo-production-top hidden lg:flex" aria-label="Navegação principal">
+              <strong>Crivo</strong>
+              <nav>
+                {TOP_LEVEL_NAV.map((item) => {
+                  const isActive = item.path === '/' ? location.pathname === '/' : location.pathname.startsWith(item.path);
+                  return (
+                    <NavLink key={item.path} to={item.path} className={isActive ? 'active' : undefined}>
+                      {item.name}
+                    </NavLink>
+                  );
+                })}
+              </nav>
+              <span className="ni-prototype-badge">INTERFACE INSTRUMENTAL · DADOS REAIS</span>
+              <button
+                type="button"
+                className="ni-theme-toggle"
+                onClick={toggleTheme}
+                aria-label={isDark ? 'Mudar para modo claro' : 'Mudar para modo escuro'}
+              >
+                {isDark ? <Sun aria-hidden="true" /> : <Moon aria-hidden="true" />}
+                <span>{isDark ? 'claro' : 'escuro'}</span>
+              </button>
+              <div className="ni-avatar" aria-label="Perfil">AJ</div>
+          </header>
+          <RouteVisualShell pathname={location.pathname}>
             <AnimatePresence mode="wait" initial={false}>
               <motion.div
                 key={location.pathname}
@@ -317,8 +348,8 @@ export default function Layout() {
                 <Outlet />
               </motion.div>
             </AnimatePresence>
-          </div>
-        </RouteVisualShell>
+          </RouteVisualShell>
+        </div>
       </main>
 
       <BottomNav />

@@ -57,3 +57,6 @@ podem desaparecer.
 3. Preservar parâmetros de URL, especialmente tópico de sessão, filtros de resumos e `workSlug`.
 4. Reutilizar `Panel`, `Button`, `CrivoCore` e os tokens por matéria; não introduzir paletas locais sem registrá-las.
 5. Mudanças em uma rota devem atualizar este mapa e o registro em `src/design-system/routeVisuals.ts`.
+6. O Núcleo Instrumental é o shell de produção destas rotas; não publicar uma
+   cópia estática delas como destino de navegação. URLs históricas de
+   `/prototipo` devem redirecionar para a rota funcional equivalente.
