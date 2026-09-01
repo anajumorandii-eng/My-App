@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { CalendarClock, CheckCircle2, CloudOff, History, Stethoscope, WifiOff } from 'lucide-react';
+import { BookOpen, CalendarClock, CheckCircle2, CloudOff, History, Stethoscope, WifiOff } from 'lucide-react';
 import { useDailyPlan } from '../hooks/useDailyPlan';
 import { useUserMastery } from '../hooks/useUserMastery';
 import { useStudentGoals } from '../hooks/useStudentGoals';
@@ -20,8 +20,9 @@ import { FeedbackStatus } from '../features/daily-plan/components/DisagreeContro
 import { EmptyState } from '../components/ui/EmptyState';
 import { Skeleton } from '../components/ui/Skeleton';
 import { Button } from '../components/ui/Button';
+import { PALETTES, SUBJECT_ICONS } from '../prototypes/NucleoInstrumentalPrototype';
 
-export { SUBJECT_ICONS } from '../prototypes/NucleoInstrumentalPrototype';
+export { SUBJECT_ICONS, PALETTES } from '../prototypes/NucleoInstrumentalPrototype';
 
 const REASON_LABELS: Record<RecommendationReason, string> = {
   dominio_insuficiente: 'Domínio ainda insuficiente nesse tópico',
@@ -226,26 +227,56 @@ export default function Dashboard() {
     );
   }
 
+  const palette = PALETTES[primary?.subject ?? 'Matemática'] ?? PALETTES.Matemática;
+  const SubIcon = SUBJECT_ICONS[primary?.subject ?? 'Matemática'] ?? BookOpen;
+
   return (
-      <main className="ni-main crivo-observatorio-home" data-geometry="organic">
-        <div className="ni-route"><span>Decisão</span><i /><span>{primary?.subject}</span><i /><b>{primary?.topicName}</b></div>
+      <main
+        className="ni-main crivo-observatorio-home"
+        data-geometry="organic"
+        style={{
+          '--primary': palette.primary,
+          '--secondary': palette.secondary,
+          '--wash': palette.wash,
+        } as React.CSSProperties}
+      >
+        <div className="ni-route">
+          <span>DECISÃO</span>
+          <i />
+          <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
+            <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--wash)]">
+              <SubIcon className="w-3 h-3" />
+            </span>
+            {(primary?.subject ?? 'MATEMÁTICA').toUpperCase()}
+          </span>
+          <i />
+          <b>{primary?.topicName}</b>
+        </div>
         <div className="ni-title">
           <div>
             <h1>Sua trajetória, em decisões realizáveis.</h1>
             <p>O plano se reorganiza à medida que suas evidências mudam.</p>
           </div>
-          <div className="ni-state"><i /> perfil em movimento</div>
+          <div className="ni-state"><i /> perfil {palette.family} · foco ativo</div>
         </div>
         <div className="ni-subjects" aria-label="Matérias">
             {SUBJECT_OPTIONS.map((subj) => {
               const active = (selectedSubject ?? primary?.subject ?? '').toLowerCase() === subj.toLowerCase();
+              const subPal = PALETTES[subj] ?? PALETTES.Matemática;
+              const Icon = SUBJECT_ICONS[subj] ?? BookOpen;
               return (
                 <button
                   key={subj}
                   onClick={() => setSelectedSubject(subj)}
                   className={active ? 'active' : ''}
+                  style={
+                    active
+                      ? { backgroundColor: subPal.primary, color: subPal.wash, borderRadius: '4px', padding: '2px 8px', display: 'inline-flex', alignItems: 'center', gap: '5px' }
+                      : { display: 'inline-flex', alignItems: 'center', gap: '5px' }
+                  }
                 >
-                  {subj}
+                  <Icon className="w-3 h-3 opacity-80" />
+                  <span>{subj}</span>
                 </button>
               );
             })}
