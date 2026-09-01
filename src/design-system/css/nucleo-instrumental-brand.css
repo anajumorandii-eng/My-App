@@ -137,50 +137,30 @@
 .ni-production-mobile { display: none; }
 .ni-production-close { display: none; }
 
-/* Real dashboard data in the approved decision-panel composition. */
-.ni-production-app .crivo-instrumental-decision {
+/* Real dashboard data in the approved A · Observatório composition. */
+.ni-production-app .crivo-observatorio-home { min-height: 100%; }
+.ni-production-app .crivo-observatorio-decision {
   align-items: stretch;
   min-height: 0;
   margin: 0;
-  padding: 34px 42px 22px;
+  padding: 0;
 }
-.ni-production-app .crivo-instrumental-decision-copy {
-  min-height: 420px;
+.ni-production-app .crivo-observatorio-decision-copy {
+  min-height: 390px;
   max-width: none;
   padding: 22px;
   position: relative;
   overflow: hidden;
 }
-.ni-production-app .crivo-instrumental-decision-title {
-  max-width: 15ch;
-  margin: 13px 0 9px;
-  color: var(--text);
-  font: 600 italic clamp(2rem, 3.4vw, 3rem)/1.02 Newsreader, Georgia, serif;
-  letter-spacing: -.035em;
-}
-.ni-production-app .crivo-instrumental-decision-intervention {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px 12px;
-  margin-top: 16px;
-  color: var(--text);
-  font-size: 13px;
-}
-.ni-production-app .crivo-instrumental-decision-intervention span,
-.ni-production-app .crivo-instrumental-decision-intervention p:last-child,
-.ni-production-app .crivo-instrumental-decision-reason { color: var(--dim); }
-.ni-production-app .crivo-instrumental-decision-reason { max-width: 410px; margin-top: 10px; font-size: 12px; line-height: 1.55; }
-.ni-production-app .crivo-instrumental-decision-copy .crivo-decision-cta { margin-top: 15px; }
-.ni-production-app .crivo-instrumental-signals { margin-top: 22px; }
-.ni-production-app .crivo-instrumental-signals .crivo-decision-signals { max-width: none; border-color: var(--line); }
-.ni-production-app .crivo-instrumental-signals .crivo-decision-signals > div { border-color: var(--line); }
-.ni-production-app .crivo-instrumental-signals .crivo-decision-signals dt { color: var(--faint); }
-.ni-production-app .crivo-instrumental-signals .crivo-decision-signals dd { color: var(--text); font-family: ui-monospace, SFMono-Regular, monospace; }
-.ni-production-app .crivo-instrumental-trajectory { min-height: 420px; padding: 22px; position: relative; overflow: hidden; }
-.ni-production-app .crivo-instrumental-trajectory h3 { margin: 8px 0 4px; color: var(--text); font: 500 24px Newsreader, Georgia, serif; }
-.ni-production-app .crivo-instrumental-trajectory > p { max-width: 250px; margin: 0; color: var(--dim); font-size: 11px; line-height: 1.5; }
-.ni-production-app .crivo-instrumental-trajectory [data-testid='crivo-core'] { position: absolute; right: 4%; bottom: 4%; width: min(72%, 280px); height: auto; opacity: .92; }
-.ni-production-app .crivo-instrumental-trajectory .decision-factor-field { opacity: .72; }
+.ni-production-app .crivo-observatorio-decision-copy > h2 { max-width: 420px; position: relative; z-index: 1; }
+.ni-production-app .crivo-observatorio-decision-copy > p:not(.ni-kicker) { position: relative; z-index: 1; }
+.ni-production-app .crivo-observatorio-cta { position: relative; z-index: 2; }
+.ni-production-app .crivo-observatorio-explanation { position: relative; z-index: 2; display: inline-block; }
+.ni-production-app .crivo-observatorio-explanation .crivo-decision-explanation { margin-top: 0; }
+.ni-production-app .crivo-observatorio-visual-support { display: none; }
+.ni-production-app .crivo-observatorio-trajectory { min-height: 390px; padding: 20px; }
+.ni-production-app .crivo-observatorio-trajectory h3 { margin: 6px 0; color: var(--text); font: 500 22px Newsreader, Georgia, serif; }
+.ni-production-app .crivo-observatorio-trajectory > p { color: var(--dim); font-size: 11px; }
 
 /* Session keeps the real timer flow inside the same instrumental grid. */
 .ni-session-production .ni-subjects span { padding: 7px 9px; border: 1px solid var(--line); border-radius: 999px; color: var(--dim); font: 9px ui-monospace, SFMono-Regular, monospace; }
@@ -201,9 +181,8 @@
 .ni-session-workspace .text-text-muted { color: var(--dim); }
 
 @media (max-width: 900px) {
-  .ni-production-app .crivo-instrumental-decision { padding: 25px 19px 18px; }
-  .ni-production-app .crivo-instrumental-decision-copy,
-  .ni-production-app .crivo-instrumental-trajectory { min-height: 360px; }
+  .ni-production-app .crivo-observatorio-decision-copy,
+  .ni-production-app .crivo-observatorio-trajectory { min-height: 360px; }
 }
 
 @media (max-width: 900px) {

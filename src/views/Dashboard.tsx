@@ -15,7 +15,6 @@ import { deriveMasteryOrigin } from '../lib/masteryOrigin';
 import { StudyAction, AllocatedStudyAction, RecommendationReason, DisagreeReason, PlanFeedback, RecommendationFactorKind, StudentGoals } from '../types';
 import { CrivoCore } from '../components/CrivoCore';
 import { TodayFocus } from '../features/daily-plan/components/TodayFocus';
-import { SubjectAtmosphere } from '../features/daily-plan/components/SubjectAtmosphere';
 import { DecisionSequence } from '../features/daily-plan/components/DecisionSequence';
 import { FeedbackStatus } from '../features/daily-plan/components/DisagreeControl';
 import { EmptyState } from '../components/ui/EmptyState';
@@ -228,31 +227,28 @@ export default function Dashboard() {
   }
 
   return (
-    <SubjectAtmosphere subject={primary?.subject}>
-      <div className="crivo-today-stage">
-        {/* Subject Navigation Rail from Prototype */}
-        <div className="flex items-center justify-between gap-3 mb-6 pb-2 border-b border-border-subtle/50 flex-wrap">
-          <div className="flex items-center gap-2">
-            <span className="text-[11px] font-mono tracking-widest uppercase text-text-muted">Matéria:</span>
+      <main className="ni-main crivo-observatorio-home" data-geometry="organic">
+        <div className="ni-route"><span>Decisão</span><i /><span>{primary?.subject}</span><i /><b>{primary?.topicName}</b></div>
+        <div className="ni-title">
+          <div>
+            <h1>Sua trajetória, em decisões realizáveis.</h1>
+            <p>O plano se reorganiza à medida que suas evidências mudam.</p>
           </div>
-          <div className="flex items-center gap-1.5 flex-wrap">
+          <div className="ni-state"><i /> perfil em movimento</div>
+        </div>
+        <div className="ni-subjects" aria-label="Matérias">
             {SUBJECT_OPTIONS.map((subj) => {
               const active = (selectedSubject ?? primary?.subject ?? '').toLowerCase() === subj.toLowerCase();
               return (
                 <button
                   key={subj}
                   onClick={() => setSelectedSubject(subj)}
-                  className={`px-3 py-1 rounded-full text-[11px] font-mono tracking-wide transition-all ${
-                    active
-                      ? 'bg-action-primary text-warm-50 font-bold shadow-sm ring-1 ring-white/20'
-                      : 'border border-border-subtle hover:border-text-primary text-text-muted hover:text-text-primary bg-surface-default/60'
-                  }`}
+                  className={active ? 'active' : ''}
                 >
-                  {subj.toUpperCase()}
+                  {subj}
                 </button>
               );
             })}
-          </div>
         </div>
 
         {availableMinutes <= 0 && (
@@ -361,7 +357,6 @@ export default function Dashboard() {
             )}
           </div>
         )}
-      </div>
-    </SubjectAtmosphere>
+      </main>
   );
 }
