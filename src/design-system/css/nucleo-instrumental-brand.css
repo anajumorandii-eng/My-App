@@ -137,6 +137,57 @@
 .ni-production-mobile { display: none; }
 .ni-production-close { display: none; }
 
+/* Real dashboard data in the approved decision-panel composition. */
+.ni-production-app .crivo-instrumental-decision {
+  align-items: stretch;
+  min-height: 0;
+  margin: 0;
+  padding: 34px 42px 22px;
+}
+.ni-production-app .crivo-instrumental-decision-copy {
+  min-height: 420px;
+  max-width: none;
+  padding: 22px;
+  position: relative;
+  overflow: hidden;
+}
+.ni-production-app .crivo-instrumental-decision-title {
+  max-width: 15ch;
+  margin: 13px 0 9px;
+  color: var(--text);
+  font: 600 italic clamp(2rem, 3.4vw, 3rem)/1.02 Newsreader, Georgia, serif;
+  letter-spacing: -.035em;
+}
+.ni-production-app .crivo-instrumental-decision-intervention {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+  margin-top: 16px;
+  color: var(--text);
+  font-size: 13px;
+}
+.ni-production-app .crivo-instrumental-decision-intervention span,
+.ni-production-app .crivo-instrumental-decision-intervention p:last-child,
+.ni-production-app .crivo-instrumental-decision-reason { color: var(--dim); }
+.ni-production-app .crivo-instrumental-decision-reason { max-width: 410px; margin-top: 10px; font-size: 12px; line-height: 1.55; }
+.ni-production-app .crivo-instrumental-decision-copy .crivo-decision-cta { margin-top: 15px; }
+.ni-production-app .crivo-instrumental-signals { margin-top: 22px; }
+.ni-production-app .crivo-instrumental-signals .crivo-decision-signals { max-width: none; border-color: var(--line); }
+.ni-production-app .crivo-instrumental-signals .crivo-decision-signals > div { border-color: var(--line); }
+.ni-production-app .crivo-instrumental-signals .crivo-decision-signals dt { color: var(--faint); }
+.ni-production-app .crivo-instrumental-signals .crivo-decision-signals dd { color: var(--text); font-family: ui-monospace, SFMono-Regular, monospace; }
+.ni-production-app .crivo-instrumental-trajectory { min-height: 420px; padding: 22px; position: relative; overflow: hidden; }
+.ni-production-app .crivo-instrumental-trajectory h3 { margin: 8px 0 4px; color: var(--text); font: 500 24px Newsreader, Georgia, serif; }
+.ni-production-app .crivo-instrumental-trajectory > p { max-width: 250px; margin: 0; color: var(--dim); font-size: 11px; line-height: 1.5; }
+.ni-production-app .crivo-instrumental-trajectory [data-testid='crivo-core'] { position: absolute; right: 4%; bottom: 4%; width: min(72%, 280px); height: auto; opacity: .92; }
+.ni-production-app .crivo-instrumental-trajectory .decision-factor-field { opacity: .72; }
+
+@media (max-width: 900px) {
+  .ni-production-app .crivo-instrumental-decision { padding: 25px 19px 18px; }
+  .ni-production-app .crivo-instrumental-decision-copy,
+  .ni-production-app .crivo-instrumental-trajectory { min-height: 360px; }
+}
+
 @media (max-width: 900px) {
   .ni-production-app { display: block; padding-top: 56px; }
   .ni-production-mobile { height: 56px; padding: 0 13px; display: flex; align-items: center; justify-content: space-between; position: fixed; inset: 0 0 auto; z-index: 30; border-bottom: 1px solid var(--line); background: rgba(12, 14, 13, .88); backdrop-filter: blur(16px); }
