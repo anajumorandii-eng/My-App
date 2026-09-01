@@ -5,7 +5,7 @@ import { useQuestions } from '../hooks/useQuestions';
 import { formatIsoTimeInSaoPaulo, todayInSaoPaulo } from '../features/availability/time';
 import { AllocatedStudyAction, Question } from '../types';
 import { StudySessionRecord, StudyVerification } from '../types';
-import { PlayCircle, Pause, RotateCcw, CheckCircle2, XCircle, PlayCircle as StartIcon, CloudOff } from 'lucide-react';
+import { PlayCircle, Pause, RotateCcw, CheckCircle2, XCircle, CloudOff } from 'lucide-react';
 import { useSearchParams } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { addUserAttempt, getUserStudySessionsForDate, saveUserStudySession } from '../lib/userData';
@@ -15,9 +15,9 @@ import { Panel } from '../components/ui/Panel';
 import { Button } from '../components/ui/Button';
 import { EmptyState } from '../components/ui/EmptyState';
 import { CrivoCore, type CrivoCoreState } from '../components/CrivoCore';
-import { SubjectAtmosphere } from '../features/daily-plan/components/SubjectAtmosphere';
 import { getSubjectProfile } from '../design-system/crivoSubjects';
 import { useReducedMotion } from 'motion/react';
+import { PALETTES } from '../prototypes/NucleoInstrumentalPrototype';
 
 function formatTime(totalSeconds: number) {
   const m = Math.floor(totalSeconds / 60).toString().padStart(2, '0');
@@ -335,48 +335,57 @@ export default function Sessao() {
     && !dailyPlan.some((action) => action.topicId === requestedTopicId);
 
   const activeProfile = selectedAction ? getSubjectProfile(selectedAction.subject) : null;
+  const palette = PALETTES[selectedAction?.subject ?? 'Matemática'] ?? PALETTES.Matemática;
 
   return (
-    <SubjectAtmosphere subject={selectedAction?.subject} focus={isRunning ? 1 : 0.45}>
-      <div className="space-y-8" data-geometry={activeProfile?.fieldType}>
-      <header>
-        <h1 className="text-3xl font-display font-semibold tracking-tight text-text-primary mb-2 flex items-center">
-          <StartIcon className="w-7 h-7 mr-3 text-action-primary" />
-          Sessão de Estudo
-        </h1>
-        <p className="text-text-secondary">
-          Escolha um bloco do seu plano e execute com foco cronometrado.
-        </p>
-        <p className="text-sm text-text-secondary mt-2"><span>{availability?.totalMinutes ?? 0} min</span> efetivos hoje</p>
+    <div
+      className="ni-main ni-session-production"
+      data-geometry={activeProfile?.fieldType}
+      style={{ '--primary': palette.primary, '--secondary': palette.secondary, '--wash': palette.wash } as React.CSSProperties}
+    >
+      <div className="ni-route"><span>PRACTICE</span><i /><span>{selectedAction?.subject ?? 'MATEMÁTICA'}</span><i /><b>Sessão em foco</b></div>
+      <div className="ni-title">
+        <div>
+          <h1>Sessão de Estudo</h1>
+          <p>Escolha um bloco do seu plano e execute com foco cronometrado.</p>
+        </div>
+        <div className="ni-state"><span>{`${availability?.totalMinutes ?? 0} min`}</span> efetivos hoje <i aria-hidden="true" /></div>
+      </div>
+      <div className="ni-subjects" aria-label="Blocos por matéria">
+        {[...new Set(dailyPlan.map((action) => action.subject))].map((subject) => (
+          <span key={subject} className={subject === selectedAction?.subject ? 'active' : ''}>{subject}</span>
+        ))}
+      </div>
+      <div className="ni-session-notices">
         {showTopicFallbackWarning && (
-          <p className="text-sm text-status-warning mt-2">{TOPIC_FALLBACK_WARNING}</p>
+          <p className="text-status-warning">{TOPIC_FALLBACK_WARNING}</p>
         )}
         {!isPersisted && (
-          <p className="flex items-center text-xs text-text-muted mt-2">
+          <p>
             <CloudOff className="w-3.5 h-3.5 mr-1.5" />
             Modo demonstração — conecte sua conta Google em "Conexões Google" para salvar seu progresso de verdade.
           </p>
         )}
-      </header>
+      </div>
 
       {sessionReconciliationLoading ? (
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          <Panel elevation="elevated" className="lg:col-span-1 p-4 space-y-3">
+        <div className="ni-grid ni-grid--practice">
+          <Panel elevation="elevated" className="ni-panel ni-session-plan space-y-3">
             <Skeleton className="h-4 w-28" />
             <Skeleton className="h-16 w-full" />
             <Skeleton className="h-16 w-full" />
           </Panel>
-          <Panel elevation="elevated" className="lg:col-span-2 p-8 flex flex-col items-center gap-6">
+          <Panel elevation="elevated" className="ni-panel ni-workspace flex flex-col items-center gap-6">
             <Skeleton className="h-5 w-40" />
             <Skeleton className="h-8 w-64" />
             <Skeleton className="h-56 w-56 rounded-full" />
           </Panel>
         </div>
       ) : (
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        <Panel elevation="elevated" className="lg:col-span-1 p-4">
-          <h3 className="text-sm font-semibold text-text-secondary px-2 mb-2">Blocos de hoje</h3>
-          <div className="space-y-1">
+      <div className="ni-grid ni-grid--practice">
+        <Panel elevation="elevated" className="ni-panel ni-session-plan">
+          <span className="ni-kicker">Blocos de hoje</span>
+          <div className="ni-session-action-list">
             {dailyPlan.map((action) => (
               <Button
                 key={action.id}
@@ -401,7 +410,7 @@ export default function Sessao() {
           </div>
         </Panel>
 
-        <Panel elevation="elevated" className="lg:col-span-2 p-8 flex flex-col items-center justify-center text-center">
+        <Panel elevation="elevated" className="ni-panel ni-workspace ni-session-workspace flex flex-col items-center justify-center text-center">
           {selectedAction ? (
             <>
               <div className="w-full flex items-start justify-between gap-4">
@@ -556,7 +565,6 @@ export default function Sessao() {
         </Panel>
       </div>
       )}
-      </div>
-    </SubjectAtmosphere>
+    </div>
   );
 }
