@@ -311,9 +311,8 @@ export default function Layout() {
           presentation.immersive && 'route-presentation-immersive'
         )}
       >
-        <RouteVisualShell pathname={location.pathname}>
-          <div className={presentation.contentClassName}>
-            <header className="ni-top crivo-production-top hidden lg:flex" aria-label="Navegação principal">
+        <div className={presentation.contentClassName}>
+          <header className="ni-top crivo-production-top hidden lg:flex" aria-label="Navegação principal">
               <strong>Crivo</strong>
               <nav>
                 {TOP_LEVEL_NAV.map((item) => {
@@ -336,7 +335,8 @@ export default function Layout() {
                 <span>{isDark ? 'claro' : 'escuro'}</span>
               </button>
               <div className="ni-avatar" aria-label="Perfil">AJ</div>
-            </header>
+          </header>
+          <RouteVisualShell pathname={location.pathname}>
             <AnimatePresence mode="wait" initial={false}>
               <motion.div
                 key={location.pathname}
@@ -348,8 +348,8 @@ export default function Layout() {
                 <Outlet />
               </motion.div>
             </AnimatePresence>
-          </div>
-        </RouteVisualShell>
+          </RouteVisualShell>
+        </div>
       </main>
 
       <BottomNav />
