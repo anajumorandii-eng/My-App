@@ -418,7 +418,7 @@ export default function Sessao() {
                   <p className="text-sm font-medium text-text-secondary mb-1 capitalize">{selectedAction.type.replace('_', ' ')} • {selectedAction.subject}</p>
                   <h2 className="text-2xl font-display font-semibold text-text-primary mb-4">{selectedAction.topicName}</h2>
                 </div>
-                <CrivoCore state={coreState} subject={selectedAction.subject} topicId={selectedAction.topicId} size={72} />
+                <CrivoCore state={coreState} subject={selectedAction.subject} topicId={selectedAction.topicId} size={140} />
               </div>
 
               {showHonestFocusLabel && (

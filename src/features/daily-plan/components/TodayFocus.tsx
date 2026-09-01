@@ -10,8 +10,8 @@ import { getSubjectProfile, TYPOGRAPHY_PRESETS } from '../../../design-system/cr
 import { DecisionExplanation } from './DecisionExplanation';
 import { DisagreeControl, FeedbackStatus } from './DisagreeControl';
 import { AdaptiveUpdate } from './AdaptiveUpdate';
-import { DecisionSignalStrip } from './DecisionSignalStrip';
 import { DecisionFactorField } from './DecisionFactorField';
+import { DecisionSignalStrip } from './DecisionSignalStrip';
 import { focusEnter } from '../../../design-system/motion/variants';
 import { usePreviousFeedback } from '../../../hooks/usePreviousFeedback';
 import { useDecisionChoreography } from '../motion/useDecisionChoreography';
@@ -47,6 +47,10 @@ export function TodayFocus({ action, actionLabel, mainReason, onStart, showAdapt
     explanationOpen,
   });
   const reviewUrgency = action.factors?.find((factor) => factor.kind === 'review_urgency')?.rawValue ?? 0;
+  const masteryValue = action.snapshot?.masteryLevel ?? 0;
+  const uncertaintyValue = action.snapshot?.uncertainty ?? 0;
+  const masteryPercent = Math.round(Math.min(100, masteryValue <= 1 ? masteryValue * 100 : masteryValue));
+  const confidencePercent = Math.round(Math.min(100, Math.max(0, 100 - (uncertaintyValue <= 1 ? uncertaintyValue * 100 : uncertaintyValue))));
 
   return (
     <motion.section
@@ -56,77 +60,62 @@ export function TodayFocus({ action, actionLabel, mainReason, onStart, showAdapt
       data-confirmation-key={confirmationKey}
       data-motion-active={!reducedMotion && (phase === 'forming' || phase === 'recomposing') ? 'true' : undefined}
       aria-labelledby={`decision-${action.id}`}
-      className={cn("ni-grid ni-grid--hero crivo-instrumental-decision transition-all duration-300", isMaximized && "crivo-instrumental-decision--maximized scale-[1.02] shadow-2xl z-10")}
+      className={cn("ni-grid ni-grid--hero crivo-observatorio-decision transition-all duration-300", isMaximized && "crivo-observatorio-decision--maximized scale-[1.02] shadow-2xl z-10")}
       layout={!reducedMotion}
       initial={reducedMotion ? false : 'hidden'}
       animate="visible"
       variants={focusEnter}
     >
-      <div className="ni-panel ni-decision crivo-instrumental-decision-copy">
-        <div className="flex items-center justify-between mb-1">
-          <p className="ni-kicker crivo-decision-eyebrow">Hoje · decisão principal</p>
-          <button
-            type="button"
-            tabIndex={-1}
-            onClick={() => setIsMaximized((prev) => !prev)}
-            className="text-[11px] font-mono uppercase tracking-wider text-[var(--subject-text-highlight)] hover:text-white transition-opacity opacity-75 hover:opacity-100 flex items-center gap-1 cursor-pointer px-2 py-0.5 rounded bg-white/5 border border-white/10"
-            title={isMaximized ? "Restaurar tamanho normal" : "Maximizar primeira parte"}
-            aria-label={isMaximized ? "Restaurar tamanho normal da primeira parte" : "Maximizar primeira parte"}
-          >
-            {isMaximized ? "🗗 Reduzir" : "🗖 Maximizar"}
-          </button>
-        </div>
-        <h1 id={`decision-${action.id}`} className="crivo-instrumental-decision-title">
+      <div className="ni-panel ni-decision crivo-observatorio-decision-copy">
+        <p className="ni-kicker">Decisão recomendada · 01</p>
+        <p className="sr-only">Hoje · decisão principal</p>
+        <h2 id={`decision-${action.id}`} aria-label={action.topicName}>
           <KineticText
             as="span"
             runKey={action.id}
-            text={action.topicName}
+            text={`${action.topicName} antes da prova.`}
             className="block"
             stagger={typographyPreset.stagger}
             duration={typographyPreset.duration}
             ease={typographyPreset.ease}
           />
-        </h1>
-
-        <div className="crivo-instrumental-decision-intervention">
-          <p>{actionLabel} <span>em {action.subject}</span></p>
-          <p>
-            <strong>{action.allocatedMinutes} min</strong>
-            {' · '}
-            {formatIsoTimeInSaoPaulo(action.intervalStart)}–{formatIsoTimeInSaoPaulo(action.intervalEnd)}
-          </p>
-        </div>
-
-        <p className="crivo-instrumental-decision-reason">{mainReason}</p>
-
-        <Button onClick={onStart} className="crivo-decision-cta">
+        </h2>
+        <p>{mainReason}</p>
+        <Button onClick={onStart} aria-label="Começar" className="ni-primary crivo-observatorio-cta">
           <PlayCircle className="w-4 h-4" aria-hidden="true" />
-          Começar
+          {actionLabel}
         </Button>
-
-        <div className="crivo-instrumental-signals">
+        <div className="crivo-observatorio-explanation">
+          <DecisionExplanation
+            mainReason=""
+            factors={action.factors}
+            snapshot={action.snapshot}
+            open={explanationOpen}
+            onOpenChange={setExplanationOpen}
+            onDisagree={() => setDisagreeOpen(true)}
+            className="crivo-decision-explanation"
+          />
+        </div>
+        <div className={`ni-artifact ni-artifact--${subjectProfile.fieldType}`} aria-hidden="true"><i /><b /><em /></div>
+        <div className="ni-metrics" aria-label="Sinais da decisão">
+          <div className="ni-metric"><small>Domínio</small><b>{masteryPercent}%</b><i><span style={{ width: `${masteryPercent}%` }} /></i></div>
+          <div className="ni-metric"><small>Confiança</small><b>{confidencePercent}%</b></div>
+          <div className="ni-metric"><small>Urgência</small><b className="warn">{Math.round(reviewUrgency)}%</b></div>
+          <div className="ni-metric"><small>Tempo</small><b>{action.allocatedMinutes} min</b></div>
+        </div>
+        <div className="sr-only">
           <DecisionSignalStrip
-            mastery={action.snapshot?.masteryLevel ?? 0}
-            uncertainty={action.snapshot?.uncertainty ?? 0}
-            urgency={reviewUrgency}
+            mastery={masteryPercent}
+            uncertainty={uncertaintyValue <= 1 ? uncertaintyValue : uncertaintyValue / 100}
+            urgency={Math.round(reviewUrgency)}
             minutes={action.allocatedMinutes}
           />
         </div>
-
-        <AnimatePresence initial={false}>
-          {showAdaptiveUpdate && <AdaptiveUpdate key={action.id} className="crivo-adaptive-update" />}
-        </AnimatePresence>
-
-        <DecisionExplanation
-          mainReason=""
-          factors={action.factors}
-          snapshot={action.snapshot}
-          open={explanationOpen}
-          onOpenChange={setExplanationOpen}
-          onDisagree={() => setDisagreeOpen(true)}
-          className="crivo-decision-explanation"
-        />
-
+        <div className="crivo-observatorio-visual-support" aria-hidden="true">
+          <CrivoCore size={190} scale="hero" decorative state={coreState} subject={action.subject} previousSubject={previousSubject} topicId={action.topicId} />
+          <DecisionFactorField factors={action.factors} phase={phase} />
+        </div>
+        <AnimatePresence initial={false}>{showAdaptiveUpdate && <AdaptiveUpdate key={action.id} className="crivo-adaptive-update" />}</AnimatePresence>
         {disagreeOpen && (
           <DisagreeControl
             status={feedbackStatus}
@@ -137,20 +126,18 @@ export function TodayFocus({ action, actionLabel, mainReason, onStart, showAdapt
         )}
       </div>
 
-      <div className="ni-panel ni-trajectory crivo-instrumental-trajectory" aria-hidden="true">
-        <span className="ni-kicker">Núcleo da decisão</span>
-        <h3>Um sinal por vez.</h3>
-        <p>O campo muda com as evidências que priorizaram este bloco.</p>
-        <CrivoCore
-          size={190}
-          scale="hero"
-          decorative
-          state={coreState}
-          subject={action.subject}
-          previousSubject={previousSubject}
-          topicId={action.topicId}
-        />
-        <DecisionFactorField factors={action.factors} phase={phase} />
+      <div className="ni-panel ni-trajectory crivo-observatorio-trajectory">
+        <span className="ni-kicker">Trajetória semanal</span>
+        <h3>Você está em ritmo.</h3>
+        <div className="ni-chart" role="img" aria-label="Trajetória semanal de estudos">
+          <i /><b /><em /><strong />
+        </div>
+        <p><span>Próximo bloco</span> às {formatIsoTimeInSaoPaulo(action.intervalStart)}</p>
+        <ul>
+          <li>Domínio do tópico <b>{masteryPercent}%</b></li>
+          <li>Incerteza atual <b>{100 - confidencePercent}%</b></li>
+          <li>Sessão recomendada <b>{action.allocatedMinutes} min</b></li>
+        </ul>
       </div>
     </motion.section>
   );
