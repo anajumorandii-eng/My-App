@@ -1036,7 +1036,7 @@ function PhysicsCore({ primary, secondary, artifact }: CoreProps) {
   );
 }
 
-function Artifact({
+export function InstrumentalArtifact({
   family,
   primary,
   secondary,
@@ -1438,7 +1438,7 @@ function FoundationPreview({
             <Play />
             {screen.action}
           </Button>
-          <Artifact
+          <InstrumentalArtifact
             family={palette.family}
             primary={palette.primary}
             secondary={palette.secondary}
@@ -1488,7 +1488,7 @@ function FoundationPreview({
         <span className="ni-kicker">Uma decisão de cada vez</span>
         <h2>{screen.topic}</h2>
         <p>{context.rationale}</p>
-        <Artifact
+        <InstrumentalArtifact
           family={palette.family}
           primary={palette.primary}
           secondary={palette.secondary}
@@ -1543,6 +1543,30 @@ function FoundationPreview({
   );
 }
 
+export function ObservatoryTrajectoryChart() {
+  return (
+    <div className="ni-chart">
+      <svg viewBox="0 0 320 108" role="img" aria-label="Consistência cresce de 42 para 74 pontos durante a semana">
+        <defs>
+          <linearGradient id="trajectory-fill" x1="0" y1="0" x2="0" y2="1">
+            <stop stopColor="var(--primary)" stopOpacity=".28" />
+            <stop offset="1" stopColor="var(--primary)" stopOpacity="0" />
+          </linearGradient>
+        </defs>
+        <path d="M10 94 H310 M10 67 H310 M10 40 H310 M10 13 H310" stroke="rgba(224,237,228,.10)" strokeWidth="1" />
+        <path d="M12 81 C48 73 65 58 94 51 S140 39 163 45 S202 66 224 55 S269 27 308 17 L308 94 L12 94Z" fill="url(#trajectory-fill)" />
+        <motion.path d="M12 81 C48 73 65 58 94 51 S140 39 163 45 S202 66 224 55 S269 27 308 17" fill="none" stroke="var(--primary)" strokeWidth="2.4" strokeLinecap="round" initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 1.1, ease: "easeOut" }} />
+        <circle cx="12" cy="81" r="3" fill="var(--primary)" />
+        <circle cx="308" cy="17" r="4.5" fill="var(--secondary)" />
+        <circle cx="308" cy="17" r="8" fill="var(--secondary)" opacity=".18" />
+        <text x="12" y="105" fill="var(--faint)" fontSize="8">SEG</text>
+        <text x="146" y="105" fill="var(--faint)" fontSize="8">QUI</text>
+        <text x="287" y="105" fill="var(--faint)" fontSize="8">HOJE</text>
+      </svg>
+    </div>
+  );
+}
+
 function Decision({
   screen,
   details,
@@ -1568,7 +1592,7 @@ function Decision({
           <button className="ni-link" onClick={() => setDetails(!details)}>
             Por que esta decisão? {details ? "↑" : "↓"}
           </button>
-          <Artifact
+          <InstrumentalArtifact
             family={palette.family}
             primary={palette.primary}
             secondary={palette.secondary}
@@ -1584,63 +1608,7 @@ function Decision({
         <Panel subject={screen.subject} interactive className="ni-panel ni-trajectory">
           <span className="ni-kicker">Trajetória semanal</span>
           <h3>Você está em ritmo.</h3>
-          <div className="ni-chart">
-            <svg
-              viewBox="0 0 320 108"
-              role="img"
-              aria-label="Consistência cresce de 42 para 74 pontos durante a semana"
-            >
-              <defs>
-                <linearGradient
-                  id="trajectory-fill"
-                  x1="0"
-                  y1="0"
-                  x2="0"
-                  y2="1"
-                >
-                  <stop stopColor="var(--primary)" stopOpacity=".28" />
-                  <stop offset="1" stopColor="var(--primary)" stopOpacity="0" />
-                </linearGradient>
-              </defs>
-              <path
-                d="M10 94 H310 M10 67 H310 M10 40 H310 M10 13 H310"
-                stroke="rgba(224,237,228,.10)"
-                strokeWidth="1"
-              />
-              <path
-                d="M12 81 C48 73 65 58 94 51 S140 39 163 45 S202 66 224 55 S269 27 308 17 L308 94 L12 94Z"
-                fill="url(#trajectory-fill)"
-              />
-              <motion.path
-                d="M12 81 C48 73 65 58 94 51 S140 39 163 45 S202 66 224 55 S269 27 308 17"
-                fill="none"
-                stroke="var(--primary)"
-                strokeWidth="2.4"
-                strokeLinecap="round"
-                initial={{ pathLength: 0 }}
-                animate={{ pathLength: 1 }}
-                transition={{ duration: 1.1, ease: "easeOut" }}
-              />
-              <circle cx="12" cy="81" r="3" fill="var(--primary)" />
-              <circle cx="308" cy="17" r="4.5" fill="var(--secondary)" />
-              <circle
-                cx="308"
-                cy="17"
-                r="8"
-                fill="var(--secondary)"
-                opacity=".18"
-              />
-              <text x="12" y="105" fill="var(--faint)" fontSize="8">
-                SEG
-              </text>
-              <text x="146" y="105" fill="var(--faint)" fontSize="8">
-                QUI
-              </text>
-              <text x="287" y="105" fill="var(--faint)" fontSize="8">
-                HOJE
-              </text>
-            </svg>
-          </div>
+          <ObservatoryTrajectoryChart />
           <p>
             <span>+12%</span> de consistência na semana
           </p>
@@ -1785,7 +1753,7 @@ function Analysis({ screen }: { screen: InstrumentalScreen }) {
         >
           <span className="ni-kicker">Mapa de evidências</span>
           <h2>{screen.topic} pede ajuste.</h2>
-          <Artifact
+        <InstrumentalArtifact
             family={palette.family}
             primary={palette.primary}
             secondary={palette.secondary}
@@ -1848,7 +1816,7 @@ function Account({ screen }: { screen: InstrumentalScreen }) {
         </Button>
       </Panel>
       <Panel subject={screen.subject} interactive className="ni-panel ni-account-art">
-        <Artifact family="signal" primary="#81a9ff" secondary="#d9b583" />
+        <InstrumentalArtifact family="signal" primary="#81a9ff" secondary="#d9b583" />
         <p>
           Estados de conexão, edição e confirmação recebem movimento curto e
           explícito.

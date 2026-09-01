@@ -107,6 +107,54 @@
 .ni-prototype.is-light .ni-rail { background: linear-gradient(180deg, rgba(255, 239, 229, .82), rgba(224, 240, 229, .77)); }
 .ni-prototype.is-light .ni-rail .ni-icon-depth { color: #8c5b29; }
 
+/* Production light mode is a full semantic theme, not a faded dark screen.
+   Route content, controls and navigation share the same paper/ink contrast. */
+.ni-production-app.is-light {
+  --ink: #f5f1e9;
+  --surface: #fffdf8;
+  --surface2: #eee8dd;
+  --line: rgba(60, 51, 41, .19);
+  --text: #1d2723;
+  --dim: #5c625c;
+  --faint: #74776f;
+  background:
+    radial-gradient(62% 58% at 0% 0%, rgba(178, 94, 73, .10), transparent 64%),
+    radial-gradient(52% 64% at 100% 100%, rgba(35, 116, 93, .11), transparent 66%),
+    #f5f1e9;
+}
+.ni-production-app.is-light .ni-top {
+  background: rgba(255, 252, 246, .95);
+  border-bottom-color: rgba(60, 51, 41, .15);
+}
+.ni-production-app.is-light .ni-rail {
+  background: #fbf7ef;
+  border-right-color: rgba(60, 51, 41, .15);
+}
+.ni-production-app.is-light .ni-rail .ni-icon-depth { color: #7a5b34; }
+.ni-production-app.is-light .ni-rail-scroll a:hover { background: rgba(104, 84, 54, .08); }
+.ni-production-app.is-light .ni-rail-scroll a.active {
+  background: linear-gradient(90deg, rgba(183, 95, 68, .15), rgba(39, 119, 95, .10));
+  box-shadow: inset 2px 0 #b47639;
+}
+.ni-production-app.is-light .ni-panel,
+.ni-production-app.is-light .rounded-card {
+  background: rgba(255, 253, 248, .94);
+  border-color: rgba(60, 51, 41, .17);
+  box-shadow: 0 13px 30px rgba(64, 48, 28, .08), inset 0 1px rgba(255, 255, 255, .92);
+}
+.ni-production-app.is-light .bg-surface-default,
+.ni-production-app.is-light .bg-surface-secondary,
+.ni-production-app.is-light .bg-surface-elevated,
+.ni-production-app.is-light .bg-surface-strong { background-color: rgba(255, 253, 248, .96); }
+.ni-production-app.is-light .text-text-primary { color: var(--text); }
+.ni-production-app.is-light .text-text-secondary,
+.ni-production-app.is-light .text-text-muted { color: var(--dim); }
+.ni-production-app.is-light input,
+.ni-production-app.is-light textarea,
+.ni-production-app.is-light select { background: #fffdf8; color: var(--text); border-color: var(--line); }
+.ni-production-app.is-light .ni-switcher { background: #fffaf2; border-color: var(--line); }
+.ni-production-app.is-light .ni-primary { box-shadow: 0 10px 22px rgba(182, 113, 54, .22); }
+
 /* The approved prototype composition is now the production route shell. */
 .ni-production-app .ni-rail-scroll a {
   width: 48px;
@@ -163,8 +211,10 @@
 .ni-production-app .crivo-observatorio-trajectory > p { color: var(--dim); font-size: 11px; }
 
 /* Session keeps the real timer flow inside the same instrumental grid. */
-.ni-session-production .ni-subjects span { padding: 7px 9px; border: 1px solid var(--line); border-radius: 999px; color: var(--dim); font: 9px ui-monospace, SFMono-Regular, monospace; }
-.ni-session-production .ni-subjects span.active { border-color: var(--primary); background: color-mix(in srgb, var(--primary) 15%, transparent); color: var(--text); }
+.ni-session-production .ni-subjects { display: flex; flex-wrap: wrap; gap: 7px; }
+.ni-session-production .ni-subjects button { padding: 7px 9px; border: 1px solid var(--line); border-radius: 999px; background: transparent; color: var(--dim); cursor: pointer; font: 9px ui-monospace, SFMono-Regular, monospace; transition: border-color .16s ease, background .16s ease, color .16s ease; }
+.ni-session-production .ni-subjects button:hover { border-color: color-mix(in srgb, var(--primary) 66%, var(--line)); color: var(--text); }
+.ni-session-production .ni-subjects button.active { border-color: var(--primary); background: color-mix(in srgb, var(--primary) 15%, transparent); color: var(--text); }
 .ni-session-notices { margin: 0 0 17px; }
 .ni-session-notices p { display: flex; align-items: center; color: var(--dim); font-size: 11px; }
 .ni-session-plan { min-height: 420px; padding: 20px; }

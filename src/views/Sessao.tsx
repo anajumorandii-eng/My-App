@@ -48,6 +48,10 @@ const MINI_ACTIVITY_TYPES: ReadonlySet<AllocatedStudyAction['type']> = new Set([
 const MINI_ACTIVITY_SIZE = 3;
 const HONEST_FOCUS_LABEL = 'Reconstrua a base sem apoio; ao final, avalie o que conseguiu.';
 const TOPIC_FALLBACK_WARNING = 'O tópico solicitado não está mais no plano de hoje — mostrando sua prioridade atual.';
+const SUBJECT_OPTIONS = [
+  'Física', 'Matemática', 'Biologia', 'Química', 'História',
+  'Geografia', 'Português', 'Literatura', 'Redação', 'Atualidades',
+] as const;
 
 export default function Sessao() {
   const [searchParams] = useSearchParams();
@@ -60,6 +64,7 @@ export default function Sessao() {
   const { questions } = useQuestions();
 
   const [selectedAction, setSelectedAction] = useState<AllocatedStudyAction | null>(null);
+  const [subjectFilter, setSubjectFilter] = useState<string | null>(null);
   const [secondsLeft, setSecondsLeft] = useState((selectedAction?.allocatedMinutes ?? 0) * 60);
   const [isRunning, setIsRunning] = useState(false);
   const [completedIds, setCompletedIds] = useState<string[]>([]);
@@ -302,6 +307,12 @@ export default function Sessao() {
     setTimerAnnouncement('');
   };
 
+  const selectSubject = (subject: string) => {
+    setSubjectFilter(subject);
+    const firstActionForSubject = dailyPlan.find((action) => action.subject === subject);
+    if (firstActionForSubject) selectAction(firstActionForSubject);
+  };
+
   const resetTimer = () => {
     setIsRunning(false);
     setSecondsLeft((selectedAction?.allocatedMinutes ?? 0) * 60);
@@ -336,6 +347,9 @@ export default function Sessao() {
 
   const activeProfile = selectedAction ? getSubjectProfile(selectedAction.subject) : null;
   const palette = PALETTES[selectedAction?.subject ?? 'Matemática'] ?? PALETTES.Matemática;
+  const visiblePlan = subjectFilter
+    ? dailyPlan.filter((action) => action.subject === subjectFilter)
+    : dailyPlan;
 
   return (
     <div
@@ -352,8 +366,16 @@ export default function Sessao() {
         <div className="ni-state"><span>{`${availability?.totalMinutes ?? 0} min`}</span> efetivos hoje <i aria-hidden="true" /></div>
       </div>
       <div className="ni-subjects" aria-label="Blocos por matéria">
-        {[...new Set(dailyPlan.map((action) => action.subject))].map((subject) => (
-          <span key={subject} className={subject === selectedAction?.subject ? 'active' : ''}>{subject}</span>
+        {SUBJECT_OPTIONS.map((subject) => (
+          <button
+            type="button"
+            key={subject}
+            className={subject === (subjectFilter ?? selectedAction?.subject) ? 'active' : ''}
+            aria-pressed={subject === (subjectFilter ?? selectedAction?.subject)}
+            onClick={() => selectSubject(subject)}
+          >
+            {subject}
+          </button>
         ))}
       </div>
       <div className="ni-session-notices">
@@ -386,7 +408,7 @@ export default function Sessao() {
         <Panel elevation="elevated" className="ni-panel ni-session-plan">
           <span className="ni-kicker">Blocos de hoje</span>
           <div className="ni-session-action-list">
-            {dailyPlan.map((action) => (
+            {visiblePlan.map((action) => (
               <Button
                 key={action.id}
                 variant={selectedAction?.id === action.id ? 'secondary' : 'ghost'}
@@ -406,6 +428,9 @@ export default function Sessao() {
             ))}
             {dailyPlan.length === 0 && (
               <EmptyState title="Nenhum bloco planejado para hoje" description="Quando houver disponibilidade, seu plano de estudo aparecerá aqui." className="py-8" />
+            )}
+            {dailyPlan.length > 0 && visiblePlan.length === 0 && subjectFilter && (
+              <EmptyState title={`Sem blocos de ${subjectFilter} hoje`} description="Escolha outra matéria para ver os blocos disponíveis no seu plano." className="py-8" />
             )}
           </div>
         </Panel>

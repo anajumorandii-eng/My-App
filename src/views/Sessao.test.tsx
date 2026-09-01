@@ -127,6 +127,21 @@ describe('Sessao', () => {
     expect(screen.queryByText(/não está mais no plano de hoje/)).not.toBeInTheDocument();
   });
 
+  it('oferece as dez matérias como filtros interativos, inclusive quando não há bloco para a matéria escolhida', async () => {
+    const physicsAction = makeAction({ id: 'optics', subject: 'Física', topicName: 'Óptica Geométrica' });
+    dailyPlanHook.mockReturnValue(planWith([physicsAction]));
+    masteryHook.mockReturnValue({ mastery: [], updateMastery: vi.fn().mockResolvedValue(true), isPersisted: true });
+    questionsHook.mockReturnValue({ questions: [], syncError: null });
+
+    renderSessao();
+
+    expect(screen.getAllByRole('button', { name: /física|matemática|biologia|química|história|geografia|português|literatura|redação|atualidades/i })).toHaveLength(10);
+    const history = screen.getByRole('button', { name: 'História' });
+    expect(history).toBeEnabled();
+    fireEvent.click(history);
+    expect(await screen.findByText('Sem blocos de História hoje')).toBeInTheDocument();
+  });
+
   it('reconcilia um bloco já concluído hoje antes de qualquer interação', async () => {
     const theoryAction = makeAction({ id: 'genetics', type: 'theory', topicId: 'bio-genetics', topicName: 'Genética Molecular' });
     const persistedSession: StudySessionRecord = {
