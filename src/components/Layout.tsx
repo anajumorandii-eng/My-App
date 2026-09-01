@@ -174,7 +174,7 @@ export default function Layout() {
   const railTransitionClass = reducedMotion ? '' : 'transition-[width] duration-[280ms] ease-[cubic-bezier(0.4,0,0.2,1)]';
 
   return (
-    <div className={cn("min-h-screen flex flex-col lg:flex-row font-sans selection:bg-action-primary/20", "ni-prototype", !isDark && "is-light")}>
+    <div className={cn("crivo-app-shell min-h-screen flex flex-col lg:flex-row font-sans selection:bg-action-primary/20", "ni-prototype", !isDark && "is-light")}>
       {/* Mobile top bar */}
       <div className="lg:hidden fixed top-0 inset-x-0 z-30 h-14 flex items-center justify-between px-3 border-b border-[var(--ni-line)] bg-[var(--ni-surface)]/90 backdrop-blur-md">
         <div className="flex items-center gap-2">
@@ -299,7 +299,7 @@ export default function Layout() {
       {/* Main Content */}
       <main
         className={cn(
-          'flex-1 overflow-y-auto pt-14 lg:pt-0 pb-16 lg:pb-0',
+          'crivo-main-shell flex-1 overflow-y-auto pt-14 lg:pt-0 pb-20 lg:pb-0',
           presentation.mainClassName,
           presentation.immersive && 'route-presentation-immersive'
         )}
