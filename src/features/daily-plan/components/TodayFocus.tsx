@@ -16,6 +16,7 @@ import { focusEnter } from '../../../design-system/motion/variants';
 import { usePreviousFeedback } from '../../../hooks/usePreviousFeedback';
 import { useDecisionChoreography } from '../motion/useDecisionChoreography';
 import { cn } from '../../../lib/cn';
+import { InstrumentalArtifact, ObservatoryTrajectoryChart, PALETTES } from '../../../prototypes/NucleoInstrumentalPrototype';
 
 export interface TodayFocusProps {
   /** Allocated, not merely ranked: the focus card states *when* today's
@@ -51,6 +52,7 @@ export function TodayFocus({ action, actionLabel, mainReason, onStart, showAdapt
   const uncertaintyValue = action.snapshot?.uncertainty ?? 0;
   const masteryPercent = Math.round(Math.min(100, masteryValue <= 1 ? masteryValue * 100 : masteryValue));
   const confidencePercent = Math.round(Math.min(100, Math.max(0, 100 - (uncertaintyValue <= 1 ? uncertaintyValue * 100 : uncertaintyValue))));
+  const palette = PALETTES[action.subject] ?? PALETTES.Matemática;
 
   return (
     <motion.section
@@ -96,7 +98,7 @@ export function TodayFocus({ action, actionLabel, mainReason, onStart, showAdapt
             className="crivo-decision-explanation"
           />
         </div>
-        <div className={`ni-artifact ni-artifact--${subjectProfile.fieldType}`} aria-hidden="true"><i /><b /><em /></div>
+        <InstrumentalArtifact family={palette.family} primary={palette.primary} secondary={palette.secondary} topic={action.topicName} />
         <div className="ni-metrics" aria-label="Sinais da decisão">
           <div className="ni-metric"><small>Domínio</small><b>{masteryPercent}%</b><i><span style={{ width: `${masteryPercent}%` }} /></i></div>
           <div className="ni-metric"><small>Confiança</small><b>{confidencePercent}%</b></div>
@@ -129,9 +131,7 @@ export function TodayFocus({ action, actionLabel, mainReason, onStart, showAdapt
       <div className="ni-panel ni-trajectory crivo-observatorio-trajectory">
         <span className="ni-kicker">Trajetória semanal</span>
         <h3>Você está em ritmo.</h3>
-        <div className="ni-chart" role="img" aria-label="Trajetória semanal de estudos">
-          <i /><b /><em /><strong />
-        </div>
+        <ObservatoryTrajectoryChart />
         <p><span>Próximo bloco</span> às {formatIsoTimeInSaoPaulo(action.intervalStart)}</p>
         <ul>
           <li>Domínio do tópico <b>{masteryPercent}%</b></li>
