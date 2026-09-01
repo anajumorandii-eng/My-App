@@ -14,7 +14,7 @@ type TabId = 'comece_aqui' | 'leitura_guiada' | 'analise' | 'passagens_chave' | 
 const TABS: { id: TabId; label: string }[] = [
   { id: 'comece_aqui', label: 'Comece aqui' },
   { id: 'leitura_guiada', label: 'Leitura guiada' },
-  { id: 'analise', label: 'AnÃ¡lise' },
+  { id: 'analise', label: 'Análise' },
   { id: 'passagens_chave', label: 'Passagens-chave' },
   { id: 'fontes', label: 'Fontes' },
 ];
@@ -25,7 +25,7 @@ function ContentPendingState({ label }: { label: string }) {
   return (
     <Panel subject="Literatura" className="ni-panel p-8 text-center text-[var(--dim)]">
       <Construction className="w-6 h-6 mx-auto mb-2 text-[var(--dim)]" />
-      <p className="text-sm">{label} ainda estÃ¡ em elaboraÃ§Ã£o pra esta obra.</p>
+      <p className="text-sm">{label} ainda está em elaboração pra esta obra.</p>
     </Panel>
   );
 }
@@ -59,7 +59,7 @@ export default function ObraDetalhe() {
       })
       .catch((error) => {
         console.error('Failed to load obra detail:', error);
-        setLoadError('NÃ£o foi possÃ­vel carregar essa obra. Tente recarregar a pÃ¡gina.');
+        setLoadError('Não foi possível carregar essa obra. Tente recarregar a página.');
       });
   }, [workSlug, user]);
 
@@ -94,8 +94,8 @@ export default function ObraDetalhe() {
   if (work === null) {
     return (
       <div className="text-center py-16 text-[var(--dim)]">
-        Obra nÃ£o encontrada.{' '}
-        <Link to="/obras" className="text-[var(--primary)] underline">Voltar ao catÃ¡logo</Link>.
+        Obra não encontrada.{' '}
+        <Link to="/obras" className="text-[var(--primary)] underline">Voltar ao catálogo</Link>.
       </div>
     );
   }
@@ -129,11 +129,11 @@ export default function ObraDetalhe() {
       <div className="ni-title">
         <div>
           <h1>{work.title}</h1>
-          <p>{work.author} Â· {work.genre}</p>
+          <p>{work.author} · {work.genre}</p>
         </div>
         <div className="ni-state">
           <i />
-          {requirements.map((r) => r.board).join(' Â· ')} Â· ciclo 2027
+          {requirements.map((r) => r.board).join(' · ')} · ciclo 2027
         </div>
       </div>
 
@@ -175,19 +175,19 @@ export default function ObraDetalhe() {
         <Panel subject="Literatura" className="ni-panel p-6 space-y-3">
           {edition ? (
             <>
-              <p className="text-sm text-[var(--text)]"><b>EdiÃ§Ã£o:</b> {edition.publisher || 'nÃ£o informada'}{edition.year ? `, ${edition.year}` : ''}</p>
-              <p className="text-sm text-[var(--text)]"><b>PÃ¡ginas:</b> {edition.pdfPageCount || 'ainda nÃ£o contadas'}</p>
+              <p className="text-sm text-[var(--text)]"><b>Edição:</b> {edition.publisher || 'não informada'}{edition.year ? `, ${edition.year}` : ''}</p>
+              <p className="text-sm text-[var(--text)]"><b>Páginas:</b> {edition.pdfPageCount || 'ainda não contadas'}</p>
               <p className="text-sm text-[var(--text)]">
                 <b>Status de auditoria:</b>{' '}
-                {edition.integrityStatus === 'verified' ? 'material conferido' : 'em processo de auditoria â€” pode ter ajustes pendentes'}
+                {edition.integrityStatus === 'verified' ? 'material conferido' : 'em processo de auditoria — pode ter ajustes pendentes'}
               </p>
             </>
           ) : (
-            <p className="text-sm text-[var(--dim)]">O material-fonte desta obra ainda estÃ¡ sendo processado.</p>
+            <p className="text-sm text-[var(--dim)]">O material-fonte desta obra ainda está sendo processado.</p>
           )}
           {requirements.some((r) => r.requiredScope !== 'obra completa') && (
             <p className="text-sm" style={{ color: LIT_PALETTE.primary }}>
-              <b>AtenÃ§Ã£o ao recorte exigido:</b> {requirements.find((r) => r.requiredScope !== 'obra completa')?.requiredScope}
+              <b>Atenção ao recorte exigido:</b> {requirements.find((r) => r.requiredScope !== 'obra completa')?.requiredScope}
             </p>
           )}
         </Panel>
@@ -195,11 +195,11 @@ export default function ObraDetalhe() {
 
       {tab === 'leitura_guiada' && (
         units.length === 0 ? (
-          <ContentPendingState label="A divisÃ£o em capÃ­tulos/unidades de leitura" />
+          <ContentPendingState label="A divisão em capítulos/unidades de leitura" />
         ) : (
           <Panel subject="Literatura" className="ni-panel overflow-hidden">
             <div className="p-4 border-b border-[var(--line)] text-sm text-[var(--dim)]">
-              {completedCount} de {units.length} unidades concluÃ­das
+              {completedCount} de {units.length} unidades concluídas
             </div>
             {units.map((u) => {
               const done = progressByUnit.get(u.id)?.status === 'completed';
@@ -216,7 +216,7 @@ export default function ObraDetalhe() {
                       : <Circle className="w-4 h-4 mr-2 text-[var(--dim)] shrink-0" />}
                     {u.order}. {u.title}
                   </span>
-                  <span className="text-xs text-[var(--dim)]">pÃ¡gs. {u.pdfStartPage}â€“{u.pdfEndPage}</span>
+                  <span className="text-xs text-[var(--dim)]">págs. {u.pdfStartPage}–{u.pdfEndPage}</span>
                 </button>
               );
             })}
@@ -224,7 +224,7 @@ export default function ObraDetalhe() {
         )
       )}
 
-      {tab === 'analise' && <ContentPendingState label="A anÃ¡lise integral" />}
+      {tab === 'analise' && <ContentPendingState label="A análise integral" />}
       {tab === 'passagens_chave' && <ContentPendingState label="O mapeamento de passagens-chave" />}
       {tab === 'fontes' && <ContentPendingState label="A bibliografia comentada" />}
     </div>

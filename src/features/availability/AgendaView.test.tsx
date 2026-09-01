@@ -28,7 +28,7 @@ vi.mock('./useDailyStudyAvailability', () => ({
       ],
       totalMinutes: 250,
       status: 'ready',
-      warnings: [{ code: 'calendar-disconnected', message: 'Google Calendar nÃ£o estÃ¡ conectado.' }],
+      warnings: [{ code: 'calendar-disconnected', message: 'Google Calendar não está conectado.' }],
     } satisfies DailyStudyAvailability,
     schedule: availabilityState.schedule,
     exception: undefined,
