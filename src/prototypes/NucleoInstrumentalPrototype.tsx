@@ -56,7 +56,7 @@ import "../design-system/css/nucleo-instrumental-brand.css";
 
 type Kind =
   "decision" | "practice" | "library" | "analysis" | "account" | "admin";
-type Screen = {
+export type InstrumentalScreen = {
   key: string;
   label: string;
   title: string;
@@ -76,7 +76,7 @@ const FOUNDATION_VARIANTS: Record<FoundationVariant, string> = {
   foco: "C · Foco",
 };
 
-const SCREENS: Screen[] = [
+export const SCREENS: InstrumentalScreen[] = [
   {
     key: "hoje",
     label: "Hoje",
@@ -1416,7 +1416,7 @@ function FoundationPreview({
   details,
   setDetails,
 }: {
-  screen: Screen;
+  screen: InstrumentalScreen;
   variant: FoundationVariant;
   details: boolean;
   setDetails: (open: boolean) => void;
@@ -1548,7 +1548,7 @@ function Decision({
   details,
   setDetails,
 }: {
-  screen: Screen;
+  screen: InstrumentalScreen;
   details: boolean;
   setDetails: (open: boolean) => void;
 }) {
@@ -1696,7 +1696,7 @@ function Decision({
     </>
   );
 }
-function Practice({ screen }: { screen: Screen }) {
+function Practice({ screen }: { screen: InstrumentalScreen }) {
   const prompt =
     PRACTICE_PROMPTS[screen.subject] ?? PRACTICE_PROMPTS.Matemática;
   const context = SUBJECT_CONTEXT[screen.subject] ?? SUBJECT_CONTEXT.Matemática;
@@ -1732,7 +1732,7 @@ function Practice({ screen }: { screen: Screen }) {
     </section>
   );
 }
-function LibraryView({ screen }: { screen: Screen }) {
+function LibraryView({ screen }: { screen: InstrumentalScreen }) {
   return (
     <section className="ni-grid ni-grid--library">
       <Panel subject={screen.subject} interactive className="ni-panel ni-library-lead">
@@ -1769,7 +1769,7 @@ function LibraryView({ screen }: { screen: Screen }) {
     </section>
   );
 }
-function Analysis({ screen }: { screen: Screen }) {
+function Analysis({ screen }: { screen: InstrumentalScreen }) {
   const palette = PALETTES[screen.subject] ?? PALETTES.Matemática;
   return (
     <>
@@ -1822,7 +1822,7 @@ function Analysis({ screen }: { screen: Screen }) {
     </>
   );
 }
-function Account({ screen }: { screen: Screen }) {
+function Account({ screen }: { screen: InstrumentalScreen }) {
   return (
     <section className="ni-grid ni-grid--account">
       <Panel subject={screen.subject} interactive className="ni-panel">
@@ -1857,7 +1857,7 @@ function Account({ screen }: { screen: Screen }) {
     </section>
   );
 }
-function Admin({ screen }: { screen: Screen }) {
+function Admin({ screen }: { screen: InstrumentalScreen }) {
   return (
     <>
       <section className="ni-card-row">

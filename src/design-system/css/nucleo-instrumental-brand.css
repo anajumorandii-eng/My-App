@@ -107,6 +107,49 @@
 .ni-prototype.is-light .ni-rail { background: linear-gradient(180deg, rgba(255, 239, 229, .82), rgba(224, 240, 229, .77)); }
 .ni-prototype.is-light .ni-rail .ni-icon-depth { color: #8c5b29; }
 
+/* The approved prototype composition is now the production route shell. */
+.ni-production-app .ni-rail-scroll a {
+  width: 48px;
+  min-height: 38px;
+  padding: 0 9px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  color: var(--dim);
+  text-align: left;
+  text-decoration: none;
+}
+.ni-production-app .ni-rail-scroll a:hover { background: rgba(226, 240, 230, .07); }
+.ni-production-app .ni-rail-scroll a.active {
+  background: linear-gradient(90deg, rgba(194, 84, 64, .13), rgba(22, 119, 91, .08));
+  box-shadow: inset 2px 0 #e0b36d;
+  color: var(--text);
+}
+.ni-production-app .ni-rail.is-expanded .ni-rail-scroll a { width: 210px; min-height: 33px; padding: 4px 9px; }
+.ni-production-app .ni-top nav a { color: var(--dim); text-decoration: none; position: relative; }
+.ni-production-app .ni-top nav a:hover,
+.ni-production-app .ni-top nav a.active { color: var(--text); font-weight: 600; }
+.ni-production-app .ni-top nav a.active::after { content: ''; position: absolute; left: 0; right: 0; bottom: -16px; height: 1px; background: var(--secondary); }
+.ni-production-main { min-width: 0; }
+.ni-production-view { min-height: calc(100vh - 65px); }
+.ni-production-mobile { display: none; }
+.ni-production-close { display: none; }
+
+@media (max-width: 900px) {
+  .ni-production-app { display: block; padding-top: 56px; }
+  .ni-production-mobile { height: 56px; padding: 0 13px; display: flex; align-items: center; justify-content: space-between; position: fixed; inset: 0 0 auto; z-index: 30; border-bottom: 1px solid var(--line); background: rgba(12, 14, 13, .88); backdrop-filter: blur(16px); }
+  .ni-production-mobile strong { font: 600 21px Newsreader, Georgia, serif; }
+  .ni-production-mobile button { min-height: 40px; min-width: 40px; border: 0; background: transparent; color: var(--text); }
+  .ni-production-app.is-light .ni-production-mobile { background: rgba(255, 249, 238, .9); }
+  .ni-production-app .ni-rail { display: flex; position: fixed; inset: 0 auto 0 0; transform: translateX(-110%); z-index: 50; }
+  .ni-production-app .ni-rail.is-open { transform: translateX(0); }
+  .ni-production-close { display: grid; place-items: center; position: absolute; top: 12px; right: 8px; height: 38px; width: 38px; border: 0; background: transparent; color: var(--text); }
+  .ni-production-backdrop { position: fixed; inset: 0; z-index: 40; border: 0; background: rgba(0, 0, 0, .58); }
+  .ni-production-main { padding-bottom: 84px; }
+}
+
 /* Física troca o mapa abstrato por uma bancada óptica: um único fenômeno, sem competição visual. */
 .ni-analysis-map:has(.ni-core-physics) { min-height: 385px; }
 .ni-analysis-map:has(.ni-core-physics) > h2 { max-width: 360px; }
