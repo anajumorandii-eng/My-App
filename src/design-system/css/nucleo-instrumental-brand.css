@@ -22,6 +22,29 @@
   border-bottom-color: rgba(235, 210, 163, .14);
 }
 
+/* Production shell: the original prototype navigation now uses real routes. */
+.crivo-production-top nav a {
+  position: relative;
+  color: var(--dim);
+  text-decoration: none;
+}
+
+.crivo-production-top nav a:hover,
+.crivo-production-top nav a.active {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.crivo-production-top nav a.active::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: -16px;
+  left: 0;
+  height: 1px;
+  background: var(--secondary);
+}
+
 .ni-panel {
   background:
     linear-gradient(128deg, rgba(122, 20, 38, .17), transparent 38%),

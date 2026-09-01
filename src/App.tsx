@@ -6,6 +6,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
+import { LegacyPrototypeRedirect } from './components/LegacyPrototypeRedirect';
 import { AuthProvider } from './context/AuthContext';
 
 import Dashboard from './views/Dashboard';
@@ -36,7 +37,6 @@ import Obras from './views/Obras';
 import ObraDetalhe from './views/ObraDetalhe';
 import AgendaView from './features/availability/AgendaView';
 import Resumos from './views/Resumos';
-import NucleoInstrumentalPrototype from './prototypes/NucleoInstrumentalPrototype';
 import CrivoDesignSystemGallery from './prototypes/CrivoDesignSystemGallery';
 
 // Import Crivo Design System Global Styles
@@ -50,11 +50,11 @@ export default function App() {
     <AuthProvider>
       <BrowserRouter>
         <Routes>
-          {/* Rota isolada em tela cheia para o Protótipo Núcleo Instrumental */}
-          <Route path="/prototipo" element={<NucleoInstrumentalPrototype />} />
+          {/* Links compartilhados do mock agora abrem as telas produtivas. */}
+          <Route path="/prototipo" element={<LegacyPrototypeRedirect />} />
           <Route path="/crivo-gallery" element={<CrivoDesignSystemGallery />} />
-          <Route path="/nucleo-instrumental" element={<NucleoInstrumentalPrototype />} />
-          <Route path="/prototype/nucleo-instrumental" element={<NucleoInstrumentalPrototype />} />
+          <Route path="/nucleo-instrumental" element={<LegacyPrototypeRedirect />} />
+          <Route path="/prototype/nucleo-instrumental" element={<LegacyPrototypeRedirect />} />
           
           <Route path="/" element={<Layout />}>
             <Route index element={<Dashboard />} />
