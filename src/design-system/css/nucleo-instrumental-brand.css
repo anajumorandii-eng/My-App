@@ -206,10 +206,10 @@
 }
 .ni-production-app .crivo-observatorio-decision-copy > h2 { max-width: 360px; position: relative; z-index: 1; font-size: clamp(32px, 3.2vw, 50px); line-height: .98; }
 .ni-production-app .crivo-observatorio-decision-copy > p:not(.ni-kicker) { position: relative; z-index: 1; }
-.ni-production-app .subject-dossier { position: absolute; z-index: 0; top: -18px; right: -84px; bottom: -22px; left: 28%; pointer-events: none; }
+.ni-production-app .subject-dossier { position: absolute; z-index: 0; top: -18px; right: -48px; bottom: -22px; left: 40%; pointer-events: none; }
 .ni-production-app .subject-dossier__figure { height: 100%; margin: 0; display: grid; place-items: center; }
 .ni-production-app .subject-dossier__artifact { position: relative; z-index: 2; display: grid; height: 100%; width: 100%; place-items: center end; transform-origin: 52% 58%; }
-.ni-production-app .subject-dossier__figure img { display: block; width: 164%; max-height: 164%; object-fit: contain; filter: drop-shadow(0 25px 20px rgba(0, 0, 0, .34)); }
+.ni-production-app .subject-dossier__figure img { display: block; width: 150%; max-height: 150%; object-fit: contain; filter: drop-shadow(0 25px 20px rgba(0, 0, 0, .34)); }
 .ni-production-app .subject-dossier__recompose { position: absolute; inset: 7% 4% 4% 11%; z-index: 1; pointer-events: none; }
 .ni-production-app .subject-dossier__recompose i { position: absolute; inset: 13% 8%; border: 1px solid color-mix(in srgb, var(--secondary) 43%, transparent); border-radius: 4px; background: linear-gradient(135deg, rgba(218, 195, 153, .22), rgba(83, 61, 38, .12)); box-shadow: 14px 14px 0 rgba(9, 8, 6, .18); }
 .ni-production-app .subject-dossier__recompose i:nth-child(2) { inset: 8% 15% 10% 3%; }
@@ -296,7 +296,7 @@
   .ni-production-backdrop { position: fixed; inset: 0; z-index: 40; border: 0; background: rgba(0, 0, 0, .58); }
   .ni-production-main { padding-bottom: 84px; }
   .crivo-mobile-toolbar { display: block; }
-  .crivo-mobile-toolbar__surface { min-height: 62px; overflow: hidden; border: 1px solid color-mix(in srgb, var(--secondary) 42%, var(--line)); border-radius: 14px; background: color-mix(in srgb, var(--surface) 94%, var(--background)); box-shadow: 0 15px 32px rgba(0,0,0,.3); backdrop-filter: blur(16px); }
+  .crivo-mobile-toolbar__surface { width: min(calc(100vw - 48px), 680px) !important; max-width: 680px !important; min-height: 62px; overflow: hidden; border: 1px solid color-mix(in srgb, var(--secondary) 42%, var(--line)); border-radius: 14px; background: color-mix(in srgb, var(--surface) 94%, var(--background)); box-shadow: 0 15px 32px rgba(0,0,0,.3); backdrop-filter: blur(16px); }
   .ni-production-app.is-light .crivo-mobile-toolbar__surface { box-shadow: 0 12px 28px color-mix(in srgb, var(--primary) 12%, transparent); }
   .crivo-mobile-toolbar__item { position: relative; color: var(--dim); text-decoration: none; }
   .crivo-mobile-toolbar__item.is-active { color: var(--text); }
@@ -305,18 +305,40 @@
   .crivo-mobile-toolbar__glyph > span { position: relative; z-index: 1; max-width: 100%; font: 9px ui-monospace, SFMono-Regular, monospace; letter-spacing: .035em; }
   .crivo-mobile-toolbar__glyph i { position: absolute; inset: 5px 8px; border: 1px solid color-mix(in srgb, var(--secondary) 72%, var(--line)); border-radius: 9px; background: color-mix(in srgb, var(--primary) 10%, transparent); }
   .ni-production-app .crivo-observatorio-home { padding-top: 27px; }
-  .ni-production-app .ni-subjects { flex-wrap: nowrap; gap: 17px; overflow-x: auto; margin-inline: -3px; padding: 2px 3px 8px; scrollbar-width: none; }
+  .ni-production-app .ni-subjects { position: sticky; top: 56px; z-index: 20; flex-wrap: nowrap; gap: 17px; overflow-x: auto; margin: 0 -18px 16px; padding: 4px 18px 7px; border-bottom: 1px solid var(--line); background: color-mix(in srgb, var(--background) 94%, transparent); box-shadow: 0 10px 20px color-mix(in srgb, var(--background) 72%, transparent); backdrop-filter: blur(15px); scrollbar-width: none; }
   .ni-production-app .ni-subjects button { min-height: 44px; padding: 10px 0; white-space: nowrap; }
   .ni-production-app .ni-subjects button svg { width: 15px; height: 15px; }
-  .ni-production-app .crivo-observatorio-decision-copy { min-height: 510px; padding: 28px 20px 22px; }
-  .ni-production-app .crivo-observatorio-decision-copy > h2 { max-width: 260px; font-size: 28px; }
-  .ni-production-app .subject-dossier { top: 112px; right: -9px; bottom: 100px; left: auto; width: 58%; opacity: .62; }
+  .ni-production-app .crivo-observatorio-decision-copy { min-height: 540px; padding: 28px 22px 22px; }
+  .ni-production-app .crivo-observatorio-decision-copy > h2 { max-width: 43%; font-size: clamp(28px, 4vw, 36px); }
+  .ni-production-app .subject-dossier { top: 42px; right: 4px; bottom: 74px; left: 36%; width: auto; opacity: 1; }
+  .ni-production-app .subject-dossier__figure img { width: 126%; max-height: 126%; transform: translateX(4%); }
   .ni-production-app .subject-dossier__pending { padding: 16px; }
   .ni-production-app .subject-dossier__pending b { font-size: 17px; }
+  .ni-production-app .ni-metrics {
+    position: absolute;
+    right: 22px;
+    bottom: 18px;
+    left: 22px;
+    z-index: 3;
+  }
   .ni-production-app .crivo-observatorio-trajectory { min-height: auto; }
   .ni-production-app .ni-session-plan,
   .ni-production-app .ni-session-workspace { min-height: auto; }
   .ni-production-app .ni-session-workspace [data-testid='crivo-core'] { width: 140px !important; height: 140px !important; }
+}
+
+@media (max-width: 560px) {
+  .ni-production-app .crivo-observatorio-home { padding-top: 18px; }
+  .ni-production-app .ni-subjects { margin-inline: -14px; padding-inline: 14px; }
+  .ni-production-app .crivo-observatorio-decision-copy { min-height: 650px; padding: 24px 18px 20px; }
+  .ni-production-app .crivo-observatorio-decision-copy > h2 { max-width: 100%; font-size: clamp(27px, 9vw, 34px); }
+  .ni-production-app .crivo-observatorio-decision-copy > p:not(.ni-kicker) { max-width: 78%; }
+  .ni-production-app .subject-dossier { top: 208px; right: -16px; bottom: 148px; left: 12%; }
+  .ni-production-app .subject-dossier__figure img { width: 118%; max-height: 118%; transform: none; }
+  .ni-production-app .crivo-observatorio-cta { margin-top: 16px; }
+  .ni-production-app .crivo-observatorio-explanation { margin-left: 8px; }
+  .crivo-mobile-toolbar__surface { width: calc(100vw - 16px) !important; border-radius: 11px; }
+  .crivo-mobile-toolbar__glyph i { inset: 4px; }
 }
 
 /* Física troca o mapa abstrato por uma bancada óptica: um único fenômeno, sem competição visual. */
