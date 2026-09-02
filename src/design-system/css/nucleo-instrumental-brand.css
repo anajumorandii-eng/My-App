@@ -208,12 +208,33 @@
 .ni-production-app .crivo-observatorio-decision-copy > p:not(.ni-kicker) { position: relative; z-index: 1; }
 .ni-production-app .subject-dossier { position: absolute; z-index: 0; top: -18px; right: -84px; bottom: -22px; left: 28%; pointer-events: none; }
 .ni-production-app .subject-dossier__figure { height: 100%; margin: 0; display: grid; place-items: center; }
-.ni-production-app .subject-dossier__artifact { display: grid; height: 100%; width: 100%; place-items: center; transform-origin: 52% 58%; }
+.ni-production-app .subject-dossier__artifact { position: relative; z-index: 2; display: grid; height: 100%; width: 100%; place-items: center end; transform-origin: 52% 58%; }
 .ni-production-app .subject-dossier__figure img { display: block; width: 164%; max-height: 164%; object-fit: contain; filter: drop-shadow(0 25px 20px rgba(0, 0, 0, .34)); }
-.ni-production-app .subject-dossier__pending { width: 72%; min-height: 54%; padding: 28px; border: 1px solid color-mix(in srgb, var(--secondary) 55%, var(--line)); background: linear-gradient(130deg, #e8dcc3, #b99b6f); color: #241d17; box-shadow: 18px 18px 0 rgba(0,0,0,.16), -13px 11px 0 #877058; transform: rotate(-2deg); }
+.ni-production-app .subject-dossier__recompose { position: absolute; inset: 7% 4% 4% 11%; z-index: 1; pointer-events: none; }
+.ni-production-app .subject-dossier__recompose i { position: absolute; inset: 13% 8%; border: 1px solid color-mix(in srgb, var(--secondary) 43%, transparent); border-radius: 4px; background: linear-gradient(135deg, rgba(218, 195, 153, .22), rgba(83, 61, 38, .12)); box-shadow: 14px 14px 0 rgba(9, 8, 6, .18); }
+.ni-production-app .subject-dossier__recompose i:nth-child(2) { inset: 8% 15% 10% 3%; }
+.ni-production-app .subject-dossier__recompose i:nth-child(3) { inset: 18% 3% 4% 17%; }
+.ni-production-app .subject-dossier__pending { position: relative; overflow: hidden; width: 64%; min-height: 54%; margin-right: 2%; padding: 27px 30px; border: 1px solid color-mix(in srgb, var(--secondary) 65%, #b99056); background: linear-gradient(136deg, #e5d3af 0%, #bea071 48%, #e7d9bd 100%); color: #241d17; box-shadow: 20px 18px 0 rgba(0,0,0,.17), -13px 11px 0 #75604a; transform: rotate(-1.4deg); }
+.ni-production-app .subject-dossier__pending::before { content: ''; position: absolute; inset: 16px; border: 1px solid rgba(48, 37, 24, .36); background: repeating-linear-gradient(0deg, transparent 0 26px, rgba(46, 35, 24, .14) 27px 28px); opacity: .65; }
+.ni-production-app .subject-dossier__pending > * { position: relative; z-index: 1; }
+.ni-production-app .subject-dossier__pending > svg { position: absolute; right: 28px; top: 26px; width: 62px; height: 62px; opacity: .75; }
 .ni-production-app .subject-dossier__pending span { display: block; font: 11px ui-monospace, SFMono-Regular, monospace; letter-spacing: .12em; text-transform: uppercase; }
 .ni-production-app .subject-dossier__pending i { display: block; height: 1px; margin: 42px 0 17px; background: currentColor; }
 .ni-production-app .subject-dossier__pending b { font: 600 25px/1.05 Newsreader, Georgia, serif; }
+.ni-production-app .subject-dossier__pending em { position: absolute; display: block; height: 1px; width: 36%; background: rgba(45, 34, 24, .68); transform: rotate(-7deg); }
+.ni-production-app .subject-dossier__pending em:nth-last-child(3) { right: 26px; bottom: 72px; }
+.ni-production-app .subject-dossier__pending em:nth-last-child(2) { right: 50px; bottom: 54px; width: 25%; transform: rotate(8deg); }
+.ni-production-app .subject-dossier__pending em:last-child { right: 25px; bottom: 34px; width: 31%; transform: rotate(-2deg); }
+.ni-production-app .subject-dossier__pending[data-subject='Física']::after { content: '↗  ⟂  ◯'; position: absolute; right: 27px; bottom: 26px; font: 34px/1 Georgia, serif; opacity: .62; }
+.ni-production-app .subject-dossier__pending[data-subject='Química']::after { content: '◯—CH₂—△'; position: absolute; right: 25px; bottom: 28px; font: 19px/1 ui-monospace, monospace; opacity: .72; }
+.ni-production-app .subject-dossier__pending[data-subject='Geografia']::after { content: '↝  ⌁  ↜'; position: absolute; right: 27px; bottom: 27px; font: 30px/1 Georgia, serif; opacity: .72; }
+.ni-production-app .subject-dossier__pending[data-subject='Português']::after { content: '“  —  ”'; position: absolute; right: 30px; bottom: 23px; font: 38px/1 Georgia, serif; opacity: .7; }
+.ni-production-app .subject-dossier__pending[data-subject='Redação']::after { content: 'I  →  II  →  III'; position: absolute; right: 27px; bottom: 30px; font: 15px/1 ui-monospace, monospace; opacity: .76; }
+.ni-production-app .subject-dossier__pending[data-subject='Matemática']::after { content: '∫  f(x)dx   ∿'; position: absolute; right: 27px; bottom: 26px; font: 25px/1 Georgia, serif; opacity: .72; }
+.ni-production-app .subject-dossier__pending[data-subject='Biologia']::after { content: '⌬  ⌘  ❋'; position: absolute; right: 28px; bottom: 25px; font: 28px/1 Georgia, serif; opacity: .7; }
+.ni-production-app .subject-dossier__pending[data-subject='História']::after { content: '1822 ─ 1889 ─ 1930'; position: absolute; right: 26px; bottom: 29px; font: 12px/1 ui-monospace, monospace; opacity: .76; }
+.ni-production-app .subject-dossier__pending[data-subject='Literatura']::after { content: '“  verso  ”'; position: absolute; right: 27px; bottom: 24px; font: 24px/1 Georgia, serif; font-style: italic; opacity: .72; }
+.ni-production-app .subject-dossier__pending[data-subject='Atualidades']::after { content: '•  •  •  agora'; position: absolute; right: 26px; bottom: 28px; font: 14px/1 ui-monospace, monospace; opacity: .76; }
 .ni-production-app .ni-subjects { display: flex; flex-wrap: wrap; gap: 3px 22px; }
 .ni-production-app .ni-subjects button { display: inline-flex; align-items: center; gap: 5px; min-height: 31px; padding: 2px 0; border: 0; border-bottom: 1px solid transparent; border-radius: 0; background: transparent; color: var(--dim); cursor: pointer; font: 12px Newsreader, Georgia, serif; }
 .ni-production-app .ni-subjects button:hover { color: var(--text); }
