@@ -5,6 +5,16 @@ import {
   Aperture, BookText, ChartSpline, Dna, FilePenLine, FlaskConical, Landmark,
   Map, Newspaper, TextQuote, type LucideIcon,
 } from 'lucide-react';
+import physicsDossier from '../../../assets/subject-dossiers/fisica-dossie-v4.webp';
+import mathematicsDossier from '../../../assets/subject-dossiers/matematica-dossie-v4.webp';
+import biologyDossier from '../../../assets/subject-dossiers/biologia-dossie-v4.webp';
+import chemistryDossier from '../../../assets/subject-dossiers/quimica-dossie-v4.webp';
+import historyDossier from '../../../assets/subject-dossiers/historia-dossie-v4.webp';
+import geographyDossier from '../../../assets/subject-dossiers/geografia-dossie-v4.webp';
+import portugueseDossier from '../../../assets/subject-dossiers/portugues-dossie-v4.webp';
+import literatureDossier from '../../../assets/subject-dossiers/literatura-dossie-v4.webp';
+import writingDossier from '../../../assets/subject-dossiers/redacao-dossie-v4.webp';
+import currentAffairsDossier from '../../../assets/subject-dossiers/atualidades-dossie-v4.webp';
 import { MOTION_DURATION, MOTION_EASE_EMPHASIZED } from '../../../design-system/motion/tokens';
 
 type EvidenceDefinition = {
@@ -16,16 +26,16 @@ type EvidenceDefinition = {
 
 /** The selector and evidence stage share a single subject registry. */
 export const SUBJECT_EVIDENCE: Record<string, EvidenceDefinition> = {
-  Física: { icon: Aperture, label: 'Bancada óptica', artifact: 'caderno de experimento óptico' },
-  Matemática: { icon: ChartSpline, label: 'Construção matemática', artifact: 'prancha de demonstração matemática' },
-  Biologia: { icon: Dna, label: 'Mapa biológico', artifact: 'arquivo de espécimes e relações biológicas' },
-  Química: { icon: FlaskConical, label: 'Caderno de reação', artifact: 'caderno de evidências de reação' },
-  História: { icon: Landmark, label: 'Caderno de evidências', artifact: 'dossiê histórico de linha do tempo' },
-  Geografia: { icon: Map, label: 'Leitura de território', artifact: 'dossiê cartográfico de território' },
-  Português: { icon: TextQuote, label: 'Arquitetura da frase', artifact: 'arquivo de construção da frase' },
-  Literatura: { icon: BookText, label: 'Arquivo literário', artifact: 'arquivo de leitura literária' },
-  Redação: { icon: FilePenLine, label: 'Mapa argumentativo', artifact: 'dossiê de construção argumentativa' },
-  Atualidades: { icon: Newspaper, label: 'Linha de contexto', artifact: 'arquivo de evidências contemporâneas' },
+  Física: { icon: Aperture, label: 'Bancada óptica', dossier: physicsDossier, artifact: 'caderno de experimento óptico' },
+  Matemática: { icon: ChartSpline, label: 'Construção matemática', dossier: mathematicsDossier, artifact: 'prancha de demonstração matemática' },
+  Biologia: { icon: Dna, label: 'Mapa biológico', dossier: biologyDossier, artifact: 'arquivo de espécimes e relações biológicas' },
+  Química: { icon: FlaskConical, label: 'Caderno de reação', dossier: chemistryDossier, artifact: 'caderno de evidências de reação' },
+  História: { icon: Landmark, label: 'Caderno de evidências', dossier: historyDossier, artifact: 'dossiê histórico de linha do tempo' },
+  Geografia: { icon: Map, label: 'Leitura de território', dossier: geographyDossier, artifact: 'dossiê cartográfico de território' },
+  Português: { icon: TextQuote, label: 'Arquitetura da frase', dossier: portugueseDossier, artifact: 'arquivo de construção da frase' },
+  Literatura: { icon: BookText, label: 'Arquivo literário', dossier: literatureDossier, artifact: 'arquivo de leitura literária' },
+  Redação: { icon: FilePenLine, label: 'Mapa argumentativo', dossier: writingDossier, artifact: 'dossiê de construção argumentativa' },
+  Atualidades: { icon: Newspaper, label: 'Linha de contexto', dossier: currentAffairsDossier, artifact: 'arquivo de evidências contemporâneas' },
 };
 
 export function subjectEvidenceFor(subject: string): EvidenceDefinition {
@@ -52,9 +62,14 @@ export function SubjectEvidence({ subject, topic }: { subject: string; topic: st
               <motion.i
                 key={layer}
                 initial={reducedMotion ? false : { opacity: 0, x: 42 - layer * 24, y: 34 + layer * 13, rotate: 5 - layer * 4 }}
-                animate={reducedMotion ? { opacity: 0 } : { opacity: 0.72 - layer * 0.14, x: 0, y: 0, rotate: 0 }}
+                animate={reducedMotion ? { opacity: 0 } : {
+                  opacity: [0, 0.72 - layer * 0.14, 0],
+                  x: [42 - layer * 24, 0, -12 + layer * 5],
+                  y: [34 + layer * 13, 0, -8],
+                  rotate: [5 - layer * 4, 0, -1 + layer],
+                }}
                 exit={reducedMotion ? { opacity: 0 } : { opacity: 0, x: -36 + layer * 18, y: -20, rotate: -4 + layer * 2 }}
-                transition={{ duration: 0.48, delay: 0.08 + layer * 0.1, ease: MOTION_EASE_EMPHASIZED }}
+                transition={{ duration: 0.66, delay: 0.04 + layer * 0.08, ease: MOTION_EASE_EMPHASIZED, times: [0, 0.58, 1] }}
               />
             ))}
           </motion.div>
