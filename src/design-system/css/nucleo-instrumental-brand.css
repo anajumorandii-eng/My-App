@@ -250,6 +250,10 @@
 .ni-production-app .crivo-observatorio-cta { position: relative; z-index: 2; margin-top: 20px; }
 .ni-production-app .crivo-observatorio-explanation { position: relative; z-index: 2; display: inline-block; margin-left: 13px; }
 .ni-production-app .crivo-observatorio-explanation .crivo-decision-explanation { margin-top: 0; }
+.ni-production-app .crivo-observatorio-decision-copy--explaining { min-height: auto; overflow: visible; padding-bottom: 26px; }
+.ni-production-app .crivo-observatorio-decision-copy--explaining .subject-dossier { visibility: hidden; opacity: 0; }
+.ni-production-app .crivo-observatorio-decision-copy--explaining .crivo-observatorio-explanation { display: block; max-width: 38rem; margin: 14px 0 0; }
+.ni-production-app .crivo-observatorio-decision-copy--explaining .ni-metrics { position: relative; inset: auto; margin-top: 24px; }
 .ni-production-app .crivo-observatorio-visual-support { display: none; }
 .ni-production-app .crivo-observatorio-trajectory { min-height: 540px; padding: 30px; }
 .ni-production-app .crivo-observatorio-trajectory h3 { margin: 6px 0 21px; color: var(--text); font: 500 27px Newsreader, Georgia, serif; }
