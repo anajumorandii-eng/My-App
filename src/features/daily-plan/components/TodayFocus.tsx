@@ -101,7 +101,7 @@ export function TodayFocus({ action, actionLabel, mainReason, onStart, showAdapt
             className="crivo-decision-explanation"
           />
         </div>
-        <SubjectEvidence subject={action.subject} topic={action.topicName} />
+        <SubjectEvidence subject={action.subject} topic={action.topicName} subdued={explanationOpen} />
         <div className="ni-metrics" aria-label="Sinais da decisão">
           <div className="ni-metric"><small>Domínio</small><b>{masteryPercent}%</b><i><span style={{ width: `${masteryPercent}%` }} /></i></div>
           <div className="ni-metric"><small>Confiança</small><b>{confidencePercent}%</b></div>
