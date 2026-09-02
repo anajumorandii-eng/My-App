@@ -17,7 +17,7 @@ import { EmptyState } from '../components/ui/EmptyState';
 import { CrivoCore, type CrivoCoreState } from '../components/CrivoCore';
 import { getSubjectProfile } from '../design-system/crivoSubjects';
 import { useReducedMotion } from 'motion/react';
-import { PALETTES } from '../prototypes/NucleoInstrumentalPrototype';
+import { PALETTES, SUBJECT_ICONS } from '../prototypes/NucleoInstrumentalPrototype';
 
 function formatTime(totalSeconds: number) {
   const m = Math.floor(totalSeconds / 60).toString().padStart(2, '0');
@@ -347,6 +347,7 @@ export default function Sessao() {
 
   const activeProfile = selectedAction ? getSubjectProfile(selectedAction.subject) : null;
   const palette = PALETTES[selectedAction?.subject ?? 'Matemática'] ?? PALETTES.Matemática;
+  const ActiveSubjectIcon = SUBJECT_ICONS[selectedAction?.subject ?? 'Matemática'];
   const visiblePlan = subjectFilter
     ? dailyPlan.filter((action) => action.subject === subjectFilter)
     : dailyPlan;
@@ -374,6 +375,10 @@ export default function Sessao() {
             aria-pressed={subject === (subjectFilter ?? selectedAction?.subject)}
             onClick={() => selectSubject(subject)}
           >
+            {(() => {
+              const SubjectIcon = SUBJECT_ICONS[subject];
+              return SubjectIcon ? <SubjectIcon aria-hidden="true" /> : null;
+            })()}
             {subject}
           </button>
         ))}
@@ -419,9 +424,15 @@ export default function Sessao() {
                     : ''
                 }`}
               >
-                <div className="min-w-0">
-                  <p className="font-medium truncate">{action.topicName}</p>
-                  <p className="text-xs text-text-secondary">{action.allocatedMinutes} min • {action.subject} • {formatIsoTimeInSaoPaulo(action.intervalStart)}–{formatIsoTimeInSaoPaulo(action.intervalEnd)}</p>
+                <div className="ni-session-action-copy min-w-0">
+                  {(() => {
+                    const SubjectIcon = SUBJECT_ICONS[action.subject];
+                    return SubjectIcon ? <span className="ni-session-action-icon"><SubjectIcon aria-hidden="true" /></span> : null;
+                  })()}
+                  <div className="min-w-0">
+                    <p className="font-medium truncate">{action.topicName}</p>
+                    <p className="text-xs text-text-secondary">{action.allocatedMinutes} min • {action.subject} • {formatIsoTimeInSaoPaulo(action.intervalStart)}–{formatIsoTimeInSaoPaulo(action.intervalEnd)}</p>
+                  </div>
                 </div>
                 {completedIds.includes(action.id) && <CheckCircle2 className="w-4 h-4 text-status-success shrink-0 ml-2" />}
               </Button>
@@ -440,7 +451,10 @@ export default function Sessao() {
             <>
               <div className="w-full flex items-start justify-between gap-4">
                 <div className="min-w-0 text-left">
-                  <p className="text-sm font-medium text-text-secondary mb-1 capitalize">{selectedAction.type.replace('_', ' ')} • {selectedAction.subject}</p>
+                  <p className="ni-session-active-subject text-sm font-medium text-text-secondary mb-1 capitalize">
+                    {ActiveSubjectIcon && <ActiveSubjectIcon aria-hidden="true" />}
+                    {selectedAction.type.replace('_', ' ')} • {selectedAction.subject}
+                  </p>
                   <h2 className="text-2xl font-display font-semibold text-text-primary mb-4">{selectedAction.topicName}</h2>
                 </div>
                 <CrivoCore state={coreState} subject={selectedAction.subject} topicId={selectedAction.topicId} size={140} />
