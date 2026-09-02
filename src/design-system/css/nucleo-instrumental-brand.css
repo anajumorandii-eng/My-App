@@ -93,7 +93,10 @@
 .ni-rail .ni-mark { border: 0; background: transparent; box-shadow: none; color: #f0c87e; }
 .ni-rail .ni-mark img,
 .ni-mobile-mark img { display: block; width: 100%; height: 100%; border-radius: 10px; object-fit: cover; }
-.ni-rail-toggle { display: grid; width: 42px; height: 42px; margin-top: auto; place-items: center; border: 0; border-radius: 10px; background: transparent; color: var(--dim); cursor: pointer; }
+.ni-production-app .ni-rail-scroll { flex: 1 1 auto; min-height: 0; overflow-x: hidden; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: rgba(224, 179, 109, .45) transparent; }
+.ni-production-app .ni-rail-scroll::-webkit-scrollbar { width: 5px; }
+.ni-production-app .ni-rail-scroll::-webkit-scrollbar-thumb { border-radius: 999px; background: rgba(224, 179, 109, .45); }
+.ni-rail-toggle { display: grid; width: 42px; height: 42px; flex: none; margin-top: auto; place-items: center; border: 0; border-radius: 10px; background: transparent; color: var(--dim); cursor: pointer; }
 .ni-rail-toggle:hover { color: var(--text); background: rgba(226, 240, 230, .07); }
 
 .ni-prototype.is-light {

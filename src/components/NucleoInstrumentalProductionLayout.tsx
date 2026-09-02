@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { AnimatePresence, motion, useReducedMotion } from 'motion/react';
-import { Menu, Moon, PanelLeftClose, PanelLeftOpen, Sun, X } from 'lucide-react';
+import { Menu, Moon, Sun, X } from 'lucide-react';
 import { NavLink, Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { BottomNav } from './BottomNav';
 import { OnboardingModal } from './OnboardingModal';
@@ -73,7 +73,7 @@ export default function NucleoInstrumentalProductionLayout() {
           aria-label={railExpanded ? 'Recolher barra lateral' : 'Expandir barra lateral'}
           aria-pressed={railExpanded}
         >
-          {railExpanded ? <PanelLeftClose aria-hidden="true" /> : <PanelLeftOpen aria-hidden="true" />}
+          <Menu aria-hidden="true" />
         </button>
       </aside>
 
