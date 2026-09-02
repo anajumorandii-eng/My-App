@@ -56,14 +56,14 @@ export default function NucleoInstrumentalProductionLayout() {
       </header>
       {menuOpen && <button className="ni-production-backdrop lg:hidden" aria-label="Fechar menu" onClick={() => setMenuOpen(false)} />}
 
-      <aside className={cn('ni-rail', railExpanded && 'is-expanded', menuOpen && 'is-open')}>
+      <aside className={cn('ni-rail', railExpanded && 'is-expanded', menuOpen && 'is-open is-expanded')}>
         <button className="ni-mark" aria-label="Ir para Hoje" onClick={() => navigate('/')}><img src="/app-icon.png" alt="" /></button>
-        <button className="ni-production-close lg:hidden" aria-label="Fechar menu" onClick={() => setMenuOpen(false)}><X aria-hidden="true" /></button>
+        {menuOpen && <button className="ni-production-close" aria-label="Fechar menu" onClick={() => setMenuOpen(false)}><X aria-hidden="true" /></button>}
         <nav className="ni-rail-scroll" aria-label="Todas as telas do app">
           {SCREENS.map((item) => {
             const Icon = item.icon;
             const target = PATH_BY_SCREEN[item.key];
-            return <NavLink key={item.key} to={target} end={target === '/'} className={item.key === screen.key ? 'active' : undefined} title={item.label}><span className="ni-icon-depth"><Icon aria-hidden="true" /></span>{railExpanded && <b>{item.label}</b>}</NavLink>;
+            return <NavLink key={item.key} to={target} end={target === '/'} className={item.key === screen.key ? 'active' : undefined} title={item.label}><span className="ni-icon-depth"><Icon aria-hidden="true" /></span>{(railExpanded || menuOpen) && <b>{item.label}</b>}</NavLink>;
           })}
         </nav>
         <button

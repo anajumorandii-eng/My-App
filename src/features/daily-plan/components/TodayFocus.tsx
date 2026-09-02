@@ -71,7 +71,7 @@ export function TodayFocus({ action, actionLabel, mainReason, onStart, showAdapt
       animate="visible"
       variants={focusEnter}
     >
-      <div className="ni-panel ni-decision crivo-observatorio-decision-copy">
+      <div className={cn('ni-panel ni-decision crivo-observatorio-decision-copy', explanationOpen && 'crivo-observatorio-decision-copy--explaining')}>
         <p className="ni-kicker">Decisão recomendada · 01</p>
         <p className="sr-only">Hoje · decisão principal</p>
         <h2 id={`decision-${action.id}`} aria-label={action.topicName}>
