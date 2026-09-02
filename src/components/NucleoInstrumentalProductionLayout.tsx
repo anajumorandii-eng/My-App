@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { AnimatePresence, motion, useReducedMotion } from 'motion/react';
-import { Menu, Moon, Sun, X } from 'lucide-react';
+import { Menu, Moon, PanelLeftClose, PanelLeftOpen, Sun, X } from 'lucide-react';
 import { NavLink, Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { BottomNav } from './BottomNav';
 import { OnboardingModal } from './OnboardingModal';
@@ -33,7 +33,9 @@ export default function NucleoInstrumentalProductionLayout() {
   const { isDark, toggleTheme } = useTheme();
   const [showOnboarding, setShowOnboarding] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [railExpanded, setRailExpanded] = useState(false);
+  const [railExpanded, setRailExpanded] = useState(() =>
+    typeof window !== 'undefined' && window.localStorage.getItem('crivo_rail_expanded') === 'true',
+  );
   const location = useLocation();
   const navigate = useNavigate();
   const reducedMotion = useReducedMotion();
@@ -42,6 +44,7 @@ export default function NucleoInstrumentalProductionLayout() {
 
   useEffect(() => setMenuOpen(false), [location.pathname]);
   useEffect(() => { if (!localStorage.getItem('juju_onboarding')) setShowOnboarding(true); }, []);
+  useEffect(() => { localStorage.setItem('crivo_rail_expanded', String(railExpanded)); }, [railExpanded]);
   const closeOnboarding = () => { setShowOnboarding(false); localStorage.setItem('juju_onboarding', 'true'); };
 
   return (
@@ -54,7 +57,7 @@ export default function NucleoInstrumentalProductionLayout() {
       {menuOpen && <button className="ni-production-backdrop lg:hidden" aria-label="Fechar menu" onClick={() => setMenuOpen(false)} />}
 
       <aside className={cn('ni-rail', railExpanded && 'is-expanded', menuOpen && 'is-open')}>
-        <button className="ni-mark" aria-label="Crivo" onClick={() => navigate('/')}>◉</button>
+        <button className="ni-mark" aria-label="Ir para Hoje" onClick={() => navigate('/')}><img src="/app-icon.png" alt="" /></button>
         <button className="ni-production-close lg:hidden" aria-label="Fechar menu" onClick={() => setMenuOpen(false)}><X aria-hidden="true" /></button>
         <nav className="ni-rail-scroll" aria-label="Todas as telas do app">
           {SCREENS.map((item) => {
@@ -63,12 +66,20 @@ export default function NucleoInstrumentalProductionLayout() {
             return <NavLink key={item.key} to={target} end={target === '/'} className={item.key === screen.key ? 'active' : undefined} title={item.label}><span className="ni-icon-depth"><Icon aria-hidden="true" /></span>{railExpanded && <b>{item.label}</b>}</NavLink>;
           })}
         </nav>
-        <button className="ni-rail-toggle hidden lg:block" onClick={() => setRailExpanded((expanded) => !expanded)} aria-label={railExpanded ? 'Recolher áreas' : 'Expandir áreas'}><Menu aria-hidden="true" /></button>
+        <button
+          className="ni-rail-toggle"
+          type="button"
+          onClick={() => setRailExpanded((expanded) => !expanded)}
+          aria-label={railExpanded ? 'Recolher barra lateral' : 'Expandir barra lateral'}
+          aria-pressed={railExpanded}
+        >
+          {railExpanded ? <PanelLeftClose aria-hidden="true" /> : <PanelLeftOpen aria-hidden="true" />}
+        </button>
       </aside>
 
       <div className="ni-page">
         <header className="ni-top">
-          <div className="ni-mobile-mark">◉</div><strong>Crivo</strong>
+          <div className="ni-mobile-mark"><img src="/app-icon.png" alt="" /></div><strong>Crivo</strong>
           <nav aria-label="Áreas principais">
             {TOP_LEVEL.map(([key, label]) => {
               const target = PATH_BY_SCREEN[key];
