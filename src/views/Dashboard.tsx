@@ -1,5 +1,6 @@
 import React, { useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { motion, useReducedMotion } from 'motion/react';
 import { BookOpen, CalendarClock, CheckCircle2, CloudOff, History, Stethoscope, WifiOff } from 'lucide-react';
 import { useDailyPlan } from '../hooks/useDailyPlan';
 import { useUserMastery } from '../hooks/useUserMastery';
@@ -20,7 +21,9 @@ import { FeedbackStatus } from '../features/daily-plan/components/DisagreeContro
 import { EmptyState } from '../components/ui/EmptyState';
 import { Skeleton } from '../components/ui/Skeleton';
 import { Button } from '../components/ui/Button';
-import { PALETTES, SUBJECT_ICONS } from '../prototypes/NucleoInstrumentalPrototype';
+import { PALETTES } from '../prototypes/NucleoInstrumentalPrototype';
+import { subjectEvidenceFor } from '../features/daily-plan/components/SubjectEvidence';
+import { MOTION_DURATION, MOTION_EASE } from '../design-system/motion/tokens';
 
 export { SUBJECT_ICONS, PALETTES } from '../prototypes/NucleoInstrumentalPrototype';
 
@@ -112,6 +115,7 @@ export default function Dashboard() {
   // (never diagnosed) counts as 'seed'.
   const hasEvidence = masteryOrigin !== 'seed';
   const [selectedSubject, setSelectedSubject] = useState<string | null>(null);
+  const reducedMotion = useReducedMotion();
 
   const SUBJECT_OPTIONS = [
     'Física',
@@ -126,13 +130,19 @@ export default function Dashboard() {
     'Atualidades',
   ];
 
+  const FALLBACK_TOPICS: Record<string, string> = {
+    Literatura: 'Leitura de obra e repertório',
+    Redação: 'Construção de tese e repertório',
+    Atualidades: 'Conexões entre fatos e contexto',
+  };
+
   const fallbackActionForSubject = (subj: string): StudyAction => {
     const topic = mockTopics.find((t) => t.subject.toLowerCase() === subj.toLowerCase()) ?? mockTopics[0];
     return {
       id: `preview_${topic.id}`,
-      topicId: topic.id,
-      topicName: topic.name,
-      subject: topic.subject,
+      topicId: topic.subject.toLowerCase() === subj.toLowerCase() ? topic.id : `preview_${subj.toLowerCase()}`,
+      topicName: topic.subject.toLowerCase() === subj.toLowerCase() ? topic.name : (FALLBACK_TOPICS[subj] ?? topic.name),
+      subject: subj,
       type: 'practice',
       estimatedMinutes: 35,
       priorityScore: 85,
@@ -228,7 +238,6 @@ export default function Dashboard() {
   }
 
   const palette = PALETTES[primary?.subject ?? 'Matemática'] ?? PALETTES.Matemática;
-  const SubIcon = SUBJECT_ICONS[primary?.subject ?? 'Matemática'] ?? BookOpen;
 
   return (
       <main
@@ -243,12 +252,7 @@ export default function Dashboard() {
         <div className="ni-route">
           <span>DECISÃO</span>
           <i />
-          <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
-            <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--wash)]">
-              <SubIcon className="w-3 h-3" />
-            </span>
-            {(primary?.subject ?? 'MATEMÁTICA').toUpperCase()}
-          </span>
+          <span>{(primary?.subject ?? 'MATEMÁTICA').toUpperCase()}</span>
           <i />
           <b>{primary?.topicName}</b>
         </div>
@@ -262,22 +266,20 @@ export default function Dashboard() {
         <div className="ni-subjects" aria-label="Matérias">
             {SUBJECT_OPTIONS.map((subj) => {
               const active = (selectedSubject ?? primary?.subject ?? '').toLowerCase() === subj.toLowerCase();
-              const subPal = PALETTES[subj] ?? PALETTES.Matemática;
-              const Icon = SUBJECT_ICONS[subj] ?? BookOpen;
+              const Icon = subjectEvidenceFor(subj).icon;
               return (
-                <button
+                <motion.button
                   key={subj}
                   onClick={() => setSelectedSubject(subj)}
                   className={active ? 'active' : ''}
-                  style={
-                    active
-                      ? { backgroundColor: subPal.primary, color: subPal.wash, borderRadius: '4px', padding: '2px 8px', display: 'inline-flex', alignItems: 'center', gap: '5px' }
-                      : { display: 'inline-flex', alignItems: 'center', gap: '5px' }
-                  }
+                  aria-pressed={active}
+                  whileHover={reducedMotion ? undefined : { y: -2 }}
+                  whileTap={reducedMotion ? undefined : { scale: 0.97 }}
+                  transition={{ duration: MOTION_DURATION.micro, ease: MOTION_EASE }}
                 >
-                  <Icon className="w-3 h-3 opacity-80" />
-                  <span>{subj}</span>
-                </button>
+                  <Icon className="w-3 h-3" aria-hidden="true" />
+                  {subj}
+                </motion.button>
               );
             })}
         </div>
@@ -302,6 +304,8 @@ export default function Dashboard() {
               userId={user?.uid}
               feedbackStatus={feedbackStatus}
               onDisagree={handleDisagree}
+              onOpenQuestions={() => navigate('/questoes')}
+              onOpenReview={() => navigate('/revisoes')}
             />
 
             {hasDecisionContext && (

@@ -10,21 +10,27 @@ import {
   Activity,
   ArrowLeft,
   ArrowRight,
+  Aperture,
   Atom,
   BadgeCheck,
   BarChart3,
+  BookText,
   BookOpen,
   Brain,
+  ChartSpline,
   Calendar,
   CheckCircle2,
   ChevronLeft,
   ChevronRight,
   ClipboardCheck,
   Compass,
+  Dna,
   FileText,
+  FilePenLine,
   FlaskConical,
   Headphones,
   Layers3,
+  Landmark,
   Library,
   ListChecks,
   Link2,
@@ -33,6 +39,7 @@ import {
   Menu,
   MessageCircleQuestion,
   NotebookPen,
+  Newspaper,
   PenLine,
   Play,
   Repeat2,
@@ -40,6 +47,7 @@ import {
   Sparkles,
   Stethoscope,
   Target,
+  TextQuote,
   TrendingUp,
   UserRound,
   type LucideIcon,
@@ -462,16 +470,16 @@ export const PALETTES: Record<
 };
 
 export const SUBJECT_ICONS: Record<string, React.ComponentType<{ className?: string; style?: React.CSSProperties }>> = {
-  Matemática: Compass,
-  Física: Atom,
+  Matemática: ChartSpline,
+  Física: Aperture,
   Química: FlaskConical,
-  Biologia: Brain,
-  Português: BookOpen,
-  Literatura: BookOpen,
-  História: Map,
-  Geografia: Compass,
-  Redação: PenLine,
-  Atualidades: Headphones,
+  Biologia: Dna,
+  Português: TextQuote,
+  Literatura: BookText,
+  História: Landmark,
+  Geografia: Map,
+  Redação: FilePenLine,
+  Atualidades: Newspaper,
   Filosofia: Brain,
   Sociologia: UserRound,
   Inglês: Sparkles,
@@ -678,6 +686,23 @@ const TOPIC_ARTIFACTS: Record<string, string> = {
   "Sinais de atividade": "signal-console",
   "Catálogo de obras": "library-stack",
   "Pipeline de conteúdo": "content-pipeline",
+};
+
+// Nem todo tópico real tem uma ilustração editorial própria. Nesses casos a
+// identidade visual continua sendo da disciplina — nunca o mesmo globo
+// genérico para todas as matérias.
+const SUBJECT_ARTIFACTS: Record<string, string> = {
+  Matemática: "coordinate-grid",
+  Física: "refraction",
+  Química: "equilibrium-scale",
+  Biologia: "ecology-web",
+  Português: "text-layers",
+  Literatura: "narrative-layers",
+  História: "bipolar-field",
+  Geografia: "climate-front",
+  Redação: "paragraph-bridge",
+  Atualidades: "signal-console",
+  Filosofia: "dialectic",
 };
 
 type CoreProps = { primary: string; secondary: string; artifact: string };
@@ -1041,14 +1066,22 @@ export function InstrumentalArtifact({
   primary,
   secondary,
   topic,
+  subject,
 }: {
   family: string;
   primary: string;
   secondary: string;
   topic?: string;
+  subject?: string;
 }) {
-  const artifact = topic ? (TOPIC_ARTIFACTS[topic] ?? family) : family;
-  const style = { "--p": primary, "--s": secondary } as React.CSSProperties;
+  // Os dados reais preservam a capitalização editorial do tópico (por
+  // exemplo, "Óptica Geométrica"), enquanto o dicionário do protótipo usa
+  // caixa de frase. A busca normalizada garante que a matéria nunca caia no
+  // artefato genérico por uma diferença apenas tipográfica.
+  const normalizedTopic = topic?.trim().toLocaleLowerCase("pt-BR");
+  const artifact = (topic
+    ? Object.entries(TOPIC_ARTIFACTS).find(([candidate]) => candidate.toLocaleLowerCase("pt-BR") === normalizedTopic)?.[1]
+    : undefined) ?? SUBJECT_ARTIFACTS[subject ?? ""] ?? family;
   if (artifact === "ecology-web")
     return (
       <EcologyCore
@@ -1123,26 +1156,6 @@ export function InstrumentalArtifact({
     return (
       <MathCore primary={primary} secondary={secondary} artifact={artifact} />
     );
-  if (
-    artifact === "narrative-layers" ||
-    artifact === "poetic-orbit" ||
-    artifact === "text-layers" ||
-    artifact === "syntax-align" ||
-    artifact === "paragraph-bridge"
-  )
-    return (
-      <div
-        className={`ni-subject-scene ni-scene-language ${artifact}`}
-        data-topic-artifact={artifact}
-        style={style}
-      >
-        <i />
-        <i />
-        <i />
-        <b />
-        <em />
-      </div>
-    );
   if (artifact === "bipolar-field" || artifact === "timeline-strata")
     return (
       <HistoryCore
@@ -1150,25 +1163,6 @@ export function InstrumentalArtifact({
         secondary={secondary}
         artifact={artifact}
       />
-    );
-  if (
-    artifact === "climate-front" ||
-    artifact === "urban-grid" ||
-    artifact === "network-pulse" ||
-    artifact === "market-flow"
-  )
-    return (
-      <div
-        className={`ni-subject-scene ni-scene-humanities ${artifact}`}
-        data-topic-artifact={artifact}
-        style={style}
-      >
-        <i />
-        <i />
-        <i />
-        <b />
-        <em />
-      </div>
     );
   return (
     <div

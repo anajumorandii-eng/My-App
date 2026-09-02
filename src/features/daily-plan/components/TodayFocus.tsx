@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
-import { PlayCircle } from 'lucide-react';
+import { ArrowRight, Library, Play, PlayCircle } from 'lucide-react';
 import { AllocatedStudyAction, DisagreeReason } from '../../../types';
 import { formatIsoTimeInSaoPaulo } from '../../../features/availability/time';
 import { Button } from '../../../components/ui/Button';
@@ -16,7 +16,8 @@ import { focusEnter } from '../../../design-system/motion/variants';
 import { usePreviousFeedback } from '../../../hooks/usePreviousFeedback';
 import { useDecisionChoreography } from '../motion/useDecisionChoreography';
 import { cn } from '../../../lib/cn';
-import { InstrumentalArtifact, ObservatoryTrajectoryChart, PALETTES } from '../../../prototypes/NucleoInstrumentalPrototype';
+import { ObservatoryTrajectoryChart } from '../../../prototypes/NucleoInstrumentalPrototype';
+import { SubjectEvidence } from './SubjectEvidence';
 
 export interface TodayFocusProps {
   /** Allocated, not merely ranked: the focus card states *when* today's
@@ -32,9 +33,11 @@ export interface TodayFocusProps {
   userId: string | undefined;
   feedbackStatus: FeedbackStatus;
   onDisagree: (reason: DisagreeReason) => void;
+  onOpenQuestions?: () => void;
+  onOpenReview?: () => void;
 }
 
-export function TodayFocus({ action, actionLabel, mainReason, onStart, showAdaptiveUpdate, previousSubject, userId, feedbackStatus, onDisagree }: TodayFocusProps) {
+export function TodayFocus({ action, actionLabel, mainReason, onStart, showAdaptiveUpdate, previousSubject, userId, feedbackStatus, onDisagree, onOpenQuestions, onOpenReview }: TodayFocusProps) {
   const [disagreeOpen, setDisagreeOpen] = useState(false);
   const [explanationOpen, setExplanationOpen] = useState(false);
   const [isMaximized, setIsMaximized] = useState(false);
@@ -52,9 +55,9 @@ export function TodayFocus({ action, actionLabel, mainReason, onStart, showAdapt
   const uncertaintyValue = action.snapshot?.uncertainty ?? 0;
   const masteryPercent = Math.round(Math.min(100, masteryValue <= 1 ? masteryValue * 100 : masteryValue));
   const confidencePercent = Math.round(Math.min(100, Math.max(0, 100 - (uncertaintyValue <= 1 ? uncertaintyValue * 100 : uncertaintyValue))));
-  const palette = PALETTES[action.subject] ?? PALETTES.Matemática;
 
   return (
+    <>
     <motion.section
       data-testid="today-decision-stage"
       data-phase={phase}
@@ -98,7 +101,7 @@ export function TodayFocus({ action, actionLabel, mainReason, onStart, showAdapt
             className="crivo-decision-explanation"
           />
         </div>
-        <InstrumentalArtifact family={palette.family} primary={palette.primary} secondary={palette.secondary} topic={action.topicName} />
+        <SubjectEvidence subject={action.subject} topic={action.topicName} />
         <div className="ni-metrics" aria-label="Sinais da decisão">
           <div className="ni-metric"><small>Domínio</small><b>{masteryPercent}%</b><i><span style={{ width: `${masteryPercent}%` }} /></i></div>
           <div className="ni-metric"><small>Confiança</small><b>{confidencePercent}%</b></div>
@@ -140,5 +143,23 @@ export function TodayFocus({ action, actionLabel, mainReason, onStart, showAdapt
         </ul>
       </div>
     </motion.section>
+    <section className="ni-card-row crivo-observatorio-next-steps" aria-label="Próximos instrumentos">
+      <button type="button" className="ni-panel ni-mini" onClick={onStart}>
+        <span className="ni-icon-depth"><Play aria-hidden="true" /></span>
+        <h3>Resolver por etapas</h3>
+        <p>Prática aplicada a {action.topicName}.</p>
+      </button>
+      <button type="button" className="ni-panel ni-mini" onClick={onOpenQuestions ?? onStart}>
+        <span className="ni-icon-depth"><Library aria-hidden="true" /></span>
+        <h3>Testar representação</h3>
+        <p>Instrumentos para ler {action.topicName}.</p>
+      </button>
+      <button type="button" className="ni-panel ni-mini" onClick={onOpenReview ?? onStart}>
+        <span className="ni-icon-depth"><ArrowRight aria-hidden="true" /></span>
+        <h3>Validar resultado</h3>
+        <p>Proteja a próxima janela de estudo.</p>
+      </button>
+    </section>
+    </>
   );
 }

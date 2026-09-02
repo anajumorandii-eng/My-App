@@ -185,6 +185,9 @@
 .ni-production-mobile { display: none; }
 .ni-production-close { display: none; }
 
+/* Mobile's primary navigation is an instrument rail, not a floating app dock. */
+.crivo-mobile-toolbar { display: none; }
+
 /* Real dashboard data in the approved A · Observatório composition. */
 .ni-production-app .crivo-observatorio-home { min-height: 100%; }
 .ni-production-app .crivo-observatorio-decision {
@@ -194,25 +197,44 @@
   padding: 0;
 }
 .ni-production-app .crivo-observatorio-decision-copy {
-  min-height: 390px;
+  min-height: 540px;
   max-width: none;
-  padding: 22px;
+  padding: 42px 32px 26px;
   position: relative;
   overflow: hidden;
+  background: linear-gradient(113deg, color-mix(in srgb, var(--primary) 13%, transparent), transparent 47%), var(--surface);
 }
-.ni-production-app .crivo-observatorio-decision-copy > h2 { max-width: 420px; position: relative; z-index: 1; }
+.ni-production-app .crivo-observatorio-decision-copy > h2 { max-width: 360px; position: relative; z-index: 1; font-size: clamp(32px, 3.2vw, 50px); line-height: .98; }
 .ni-production-app .crivo-observatorio-decision-copy > p:not(.ni-kicker) { position: relative; z-index: 1; }
-.ni-production-app .crivo-observatorio-cta { position: relative; z-index: 2; }
-.ni-production-app .crivo-observatorio-explanation { position: relative; z-index: 2; display: inline-block; }
+.ni-production-app .subject-dossier { position: absolute; z-index: 0; top: -18px; right: -84px; bottom: -22px; left: 28%; pointer-events: none; }
+.ni-production-app .subject-dossier__figure { height: 100%; margin: 0; display: grid; place-items: center; }
+.ni-production-app .subject-dossier__artifact { display: grid; height: 100%; width: 100%; place-items: center; transform-origin: 52% 58%; }
+.ni-production-app .subject-dossier__figure img { display: block; width: 164%; max-height: 164%; object-fit: contain; filter: drop-shadow(0 25px 20px rgba(0, 0, 0, .34)); }
+.ni-production-app .subject-dossier__pending { width: 72%; min-height: 54%; padding: 28px; border: 1px solid color-mix(in srgb, var(--secondary) 55%, var(--line)); background: linear-gradient(130deg, #e8dcc3, #b99b6f); color: #241d17; box-shadow: 18px 18px 0 rgba(0,0,0,.16), -13px 11px 0 #877058; transform: rotate(-2deg); }
+.ni-production-app .subject-dossier__pending span { display: block; font: 11px ui-monospace, SFMono-Regular, monospace; letter-spacing: .12em; text-transform: uppercase; }
+.ni-production-app .subject-dossier__pending i { display: block; height: 1px; margin: 42px 0 17px; background: currentColor; }
+.ni-production-app .subject-dossier__pending b { font: 600 25px/1.05 Newsreader, Georgia, serif; }
+.ni-production-app .ni-subjects { display: flex; flex-wrap: wrap; gap: 3px 22px; }
+.ni-production-app .ni-subjects button { display: inline-flex; align-items: center; gap: 5px; min-height: 31px; padding: 2px 0; border: 0; border-bottom: 1px solid transparent; border-radius: 0; background: transparent; color: var(--dim); cursor: pointer; font: 12px Newsreader, Georgia, serif; }
+.ni-production-app .ni-subjects button:hover { color: var(--text); }
+.ni-production-app .ni-subjects button.active { color: var(--text); border-color: var(--secondary); background: transparent; }
+.ni-production-app .ni-subjects button svg { width: 13px; height: 13px; stroke-width: 1.45; }
+.ni-production-app .crivo-observatorio-cta { position: relative; z-index: 2; margin-top: 20px; }
+.ni-production-app .crivo-observatorio-explanation { position: relative; z-index: 2; display: inline-block; margin-left: 13px; }
 .ni-production-app .crivo-observatorio-explanation .crivo-decision-explanation { margin-top: 0; }
 .ni-production-app .crivo-observatorio-visual-support { display: none; }
-.ni-production-app .crivo-observatorio-trajectory { min-height: 390px; padding: 20px; }
-.ni-production-app .crivo-observatorio-trajectory h3 { margin: 6px 0; color: var(--text); font: 500 22px Newsreader, Georgia, serif; }
+.ni-production-app .crivo-observatorio-trajectory { min-height: 540px; padding: 30px; }
+.ni-production-app .crivo-observatorio-trajectory h3 { margin: 6px 0 21px; color: var(--text); font: 500 27px Newsreader, Georgia, serif; }
 .ni-production-app .crivo-observatorio-trajectory > p { color: var(--dim); font-size: 11px; }
+.ni-production-app .crivo-observatorio-next-steps { margin-top: 16px; }
+.ni-production-app button.ni-mini { color: var(--text); cursor: pointer; text-align: left; transition: border-color .18s ease, transform .18s ease; }
+.ni-production-app button.ni-mini:hover { border-color: color-mix(in srgb, var(--primary) 54%, var(--line)); transform: translateY(-2px); }
+.ni-production-app button.ni-mini:focus-visible { outline: 2px solid var(--primary); outline-offset: 3px; }
 
 /* Session keeps the real timer flow inside the same instrumental grid. */
 .ni-session-production .ni-subjects { display: flex; flex-wrap: wrap; gap: 7px; }
-.ni-session-production .ni-subjects button { padding: 7px 9px; border: 1px solid var(--line); border-radius: 999px; background: transparent; color: var(--dim); cursor: pointer; font: 9px ui-monospace, SFMono-Regular, monospace; transition: border-color .16s ease, background .16s ease, color .16s ease; }
+.ni-session-production .ni-subjects button { display: inline-flex; align-items: center; gap: 5px; padding: 7px 9px; border: 1px solid var(--line); border-radius: 999px; background: transparent; color: var(--dim); cursor: pointer; font: 9px ui-monospace, SFMono-Regular, monospace; transition: border-color .16s ease, background .16s ease, color .16s ease; }
+.ni-session-production .ni-subjects button svg { width: 12px; height: 12px; stroke-width: 1.55; }
 .ni-session-production .ni-subjects button:hover { border-color: color-mix(in srgb, var(--primary) 66%, var(--line)); color: var(--text); }
 .ni-session-production .ni-subjects button.active { border-color: var(--primary); background: color-mix(in srgb, var(--primary) 15%, transparent); color: var(--text); }
 .ni-session-notices { margin: 0 0 17px; }
@@ -220,6 +242,11 @@
 .ni-session-plan { min-height: 420px; padding: 20px; }
 .ni-session-action-list { display: grid; gap: 7px; margin-top: 14px; }
 .ni-session-action-list > button { min-height: 64px; border-radius: 9px; color: var(--dim); }
+.ni-session-action-copy { display: flex; align-items: center; gap: 10px; }
+.ni-session-action-icon { display: grid; flex: none; height: 28px; width: 28px; place-items: center; border: 1px solid color-mix(in srgb, var(--primary) 35%, var(--line)); border-radius: 8px; color: var(--primary); }
+.ni-session-action-icon svg { width: 15px; height: 15px; stroke-width: 1.55; }
+.ni-session-active-subject { display: inline-flex; align-items: center; gap: 6px; }
+.ni-session-active-subject svg { height: 15px; width: 15px; color: var(--primary); stroke-width: 1.7; }
 .ni-session-action-list > button:hover { color: var(--text); background: rgba(230, 242, 234, .08); }
 .ni-session-action-list > button.bg-surface-strong { border: 1px solid color-mix(in srgb, var(--primary) 55%, transparent); background: color-mix(in srgb, var(--primary) 15%, transparent); color: var(--text); }
 .ni-session-workspace { min-height: 420px; padding: 22px; }
@@ -247,10 +274,24 @@
   .ni-production-close { display: grid; place-items: center; position: absolute; top: 12px; right: 8px; height: 38px; width: 38px; border: 0; background: transparent; color: var(--text); }
   .ni-production-backdrop { position: fixed; inset: 0; z-index: 40; border: 0; background: rgba(0, 0, 0, .58); }
   .ni-production-main { padding-bottom: 84px; }
+  .crivo-mobile-toolbar { display: block; }
+  .crivo-mobile-toolbar__surface { min-height: 62px; overflow: hidden; border: 1px solid color-mix(in srgb, var(--secondary) 42%, var(--line)); border-radius: 14px; background: color-mix(in srgb, var(--surface) 94%, var(--background)); box-shadow: 0 15px 32px rgba(0,0,0,.3); backdrop-filter: blur(16px); }
+  .ni-production-app.is-light .crivo-mobile-toolbar__surface { box-shadow: 0 12px 28px color-mix(in srgb, var(--primary) 12%, transparent); }
+  .crivo-mobile-toolbar__item { position: relative; color: var(--dim); text-decoration: none; }
+  .crivo-mobile-toolbar__item.is-active { color: var(--text); }
+  .crivo-mobile-toolbar__glyph { position: relative; display: flex; min-height: 49px; width: 100%; flex-direction: column; align-items: center; justify-content: center; gap: 4px; overflow: hidden; }
+  .crivo-mobile-toolbar__glyph svg { position: relative; z-index: 1; width: 18px; height: 18px; stroke-width: 1.45; }
+  .crivo-mobile-toolbar__glyph > span { position: relative; z-index: 1; max-width: 100%; font: 9px ui-monospace, SFMono-Regular, monospace; letter-spacing: .035em; }
+  .crivo-mobile-toolbar__glyph i { position: absolute; inset: 5px 8px; border: 1px solid color-mix(in srgb, var(--secondary) 72%, var(--line)); border-radius: 9px; background: color-mix(in srgb, var(--primary) 10%, transparent); }
   .ni-production-app .crivo-observatorio-home { padding-top: 27px; }
-  .ni-production-app .crivo-observatorio-decision-copy { min-height: 400px; }
+  .ni-production-app .ni-subjects { flex-wrap: nowrap; gap: 17px; overflow-x: auto; margin-inline: -3px; padding: 2px 3px 8px; scrollbar-width: none; }
+  .ni-production-app .ni-subjects button { min-height: 44px; padding: 10px 0; white-space: nowrap; }
+  .ni-production-app .ni-subjects button svg { width: 15px; height: 15px; }
+  .ni-production-app .crivo-observatorio-decision-copy { min-height: 510px; padding: 28px 20px 22px; }
   .ni-production-app .crivo-observatorio-decision-copy > h2 { max-width: 260px; font-size: 28px; }
-  .ni-production-app .crivo-observatorio-decision-copy .ni-artifact { right: 16px; top: 84px; opacity: .38; transform: scale(.64); transform-origin: top right; }
+  .ni-production-app .subject-dossier { top: 112px; right: -9px; bottom: 100px; left: auto; width: 58%; opacity: .62; }
+  .ni-production-app .subject-dossier__pending { padding: 16px; }
+  .ni-production-app .subject-dossier__pending b { font-size: 17px; }
   .ni-production-app .crivo-observatorio-trajectory { min-height: auto; }
   .ni-production-app .ni-session-plan,
   .ni-production-app .ni-session-workspace { min-height: auto; }
