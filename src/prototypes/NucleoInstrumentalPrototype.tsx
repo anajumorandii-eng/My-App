@@ -1079,6 +1079,7 @@ export function InstrumentalArtifact({
   // caixa de frase. A busca normalizada garante que a matéria nunca caia no
   // artefato genérico por uma diferença apenas tipográfica.
   const normalizedTopic = topic?.trim().toLocaleLowerCase("pt-BR");
+  const style = { "--primary": primary, "--secondary": secondary } as React.CSSProperties;
   const artifact = (topic
     ? Object.entries(TOPIC_ARTIFACTS).find(([candidate]) => candidate.toLocaleLowerCase("pt-BR") === normalizedTopic)?.[1]
     : undefined) ?? SUBJECT_ARTIFACTS[subject ?? ""] ?? family;
