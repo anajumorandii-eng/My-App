@@ -8,6 +8,23 @@ export const MOTION_DURATION = {
   subjectTween: 0.9, // subject-level metamorphosis and atmosphere transition
 } as const;
 
+/** Shared transform values and spring presets for motion/react components. */
+export const MOTION_DISTANCE = {
+  xs: 8,
+  sm: 18,
+  md: 28,
+  lg: 42,
+} as const;
+
+export const MOTION_SCALE = {
+  dossierEnter: 0.94,
+  dossierExit: 1.035,
+} as const;
+
+export const MOTION_SPRINGS = {
+  gentle: { type: 'spring', stiffness: 120, damping: 14 },
+} as const;
+
 // A single standard ease for interface feedback — deliberately no
 // spring/bounce. A slightly more emphasized curve is reserved for the rare
 // whole-screen entrance and the Núcleo's state changes, so those two read as
