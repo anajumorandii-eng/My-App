@@ -90,7 +90,7 @@
 .ni-rail .ni-rail-scroll button:hover .ni-icon-depth { color: #f5d494; filter: drop-shadow(0 0 7px rgba(220, 154, 79, .34)); }
 .ni-rail .ni-rail-scroll button.active { border-color: transparent; background: linear-gradient(90deg, rgba(194, 84, 64, .13), rgba(22, 119, 91, .08)); box-shadow: inset 2px 0 #e0b36d; }
 .ni-rail .ni-rail-scroll button.active .ni-icon-depth { color: #ffe0a0; filter: drop-shadow(0 0 8px rgba(229, 177, 91, .45)); }
-.ni-rail .ni-mark { border-color: rgba(236, 194, 122, .62); background: linear-gradient(145deg, rgba(124, 20, 38, .52), rgba(1, 67, 55, .42)); color: #f0c87e; }
+.ni-rail .ni-mark { border: 0; background: transparent; box-shadow: none; color: #f0c87e; }
 
 .ni-prototype.is-light {
   --ink: #f3eadb;
