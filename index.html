@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="color-scheme" content="light dark" />
     <meta name="theme-color" content="#FBF8F2" id="theme-color-meta" />
-    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="manifest" href="/manifest.webmanifest?v=2" />
     <!-- Newsreader carries headings, the daily greeting and salient numbers;
          Inter stays the workhorse for navigation, controls and data. -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -36,12 +36,8 @@
     <!-- Light is the fallback for browsers that ignore `media` on these
          link tags; iOS 18+ and current desktop browsers pick the variant
          matching the system theme. -->
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <link rel="apple-touch-icon" media="(prefers-color-scheme: dark)" href="/apple-touch-icon-dark.png" />
-    <link rel="icon" href="/app-icon.svg" type="image/svg+xml" />
-    <link rel="icon" href="/icon-192.png" />
-    <link rel="icon" href="/icon-192.png" media="(prefers-color-scheme: light)" />
-    <link rel="icon" href="/icon-192-dark.png" media="(prefers-color-scheme: dark)" />
+    <link rel="apple-touch-icon" href="/app-icon.png?v=2" />
+    <link rel="icon" href="/app-icon.png?v=2" type="image/png" />
     <!-- Required for iOS to launch as a standalone app and expose the Web
          Push API — Safari only grants push permission to apps added to the
          Home Screen, never to a regular browser tab. -->

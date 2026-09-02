@@ -8,7 +8,7 @@
   "background_color": "#07110d",
   "theme_color": "#07110d",
   "icons": [
-    { "src": "/app-icon-transparent.png", "sizes": "639x639", "type": "image/png", "purpose": "any" },
-    { "src": "/app-icon-transparent.png", "sizes": "639x639", "type": "image/png", "purpose": "maskable" }
+    { "src": "/app-icon.png?v=2", "sizes": "1254x1254", "type": "image/png", "purpose": "any" },
+    { "src": "/app-icon.png?v=2", "sizes": "1254x1254", "type": "image/png", "purpose": "maskable" }
   ]
 }
