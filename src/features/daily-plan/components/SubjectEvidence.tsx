@@ -42,7 +42,7 @@ export function subjectEvidenceFor(subject: string): EvidenceDefinition {
   return SUBJECT_EVIDENCE[subject] ?? SUBJECT_EVIDENCE.Matemática;
 }
 
-export function SubjectEvidence({ subject, topic }: { subject: string; topic: string }) {
+export function SubjectEvidence({ subject, topic, subdued = false }: { subject: string; topic: string; subdued?: boolean }) {
   const reducedMotion = useReducedMotion();
   const evidence = subjectEvidenceFor(subject);
   return (
@@ -52,7 +52,9 @@ export function SubjectEvidence({ subject, topic }: { subject: string; topic: st
           key={`${subject}-${topic}`}
           className="subject-dossier__figure"
           initial={reducedMotion ? false : { opacity: 0, y: 28, scale: 0.94, rotate: -2.5 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
+          animate={reducedMotion || !subdued
+            ? { opacity: 1, x: 0, y: 0, scale: 1 }
+            : { opacity: 0.22, x: 54, y: -72, scale: 0.76 }}
           exit={reducedMotion ? { opacity: 0 } : { opacity: 0, y: -24, scale: 1.035, rotate: 1.5 }}
           transition={{ duration: reducedMotion ? MOTION_DURATION.panel : 0.58, ease: MOTION_EASE_EMPHASIZED }}
         >
@@ -75,7 +77,7 @@ export function SubjectEvidence({ subject, topic }: { subject: string; topic: st
           <motion.div
             className="subject-dossier__artifact"
             initial={reducedMotion ? false : { opacity: 0, x: 42, y: 18, rotate: 3 }}
-            animate={reducedMotion ? { opacity: 1 } : { opacity: 1, x: 0, rotate: 0 }}
+            animate={reducedMotion ? { opacity: subdued ? 0.22 : 1 } : { opacity: 1, x: 0, rotate: 0 }}
             exit={reducedMotion ? { opacity: 0 } : { opacity: 0, x: -34, y: -14, rotate: -2 }}
             transition={{ duration: reducedMotion ? MOTION_DURATION.subjectTween : 0.5, delay: reducedMotion ? 0 : 0.16, ease: MOTION_EASE_EMPHASIZED }}
           >
