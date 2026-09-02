@@ -14,7 +14,6 @@ import { mockTopics } from '../data/mockData';
 import { addPlanFeedback } from '../lib/userData';
 import { deriveMasteryOrigin } from '../lib/masteryOrigin';
 import { StudyAction, AllocatedStudyAction, RecommendationReason, DisagreeReason, PlanFeedback, RecommendationFactorKind, StudentGoals } from '../types';
-import { CrivoCore } from '../components/CrivoCore';
 import { TodayFocus } from '../features/daily-plan/components/TodayFocus';
 import { DecisionSequence } from '../features/daily-plan/components/DecisionSequence';
 import { FeedbackStatus } from '../features/daily-plan/components/DisagreeControl';
@@ -224,7 +223,7 @@ export default function Dashboard() {
       <div className="space-y-6" aria-busy="true" aria-live="polite">
         <span className="sr-only">Lendo seu histórico para montar o plano de hoje…</span>
         <div className="flex items-center gap-4 rounded-card border border-border-subtle bg-surface-elevated p-6 sm:p-8">
-          <CrivoCore state="listening" size={56} />
+          <Skeleton className="h-14 w-14 shrink-0 rounded-full" />
           <div className="flex-1 space-y-2.5">
             <Skeleton className="h-3 w-32" />
             <Skeleton className="h-6 w-56" />
