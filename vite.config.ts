@@ -29,6 +29,36 @@ export default defineConfig(() => ({
             return 'firebase-core';
           }
 
+          // re2js é dependência do @firebase/firestore, mas o teste acima não
+          // a alcança pelo nome — ela caía no vendor, longe do chunk a que
+          // pertence.
+          if (id.includes('re2js')) {
+            return 'firebase-firestore';
+          }
+
+          // Markdown + KaTeX só são usados por src/components/AiText.tsx, que
+          // nenhuma das telas de entrada (Hoje, Plano) importa. Juntos passam
+          // de 350 KB, e no vendor eles eram baixados em toda abertura do app
+          // mesmo sem nenhum texto de IA na tela. Em chunk próprio, só as
+          // telas que renderizam resposta de IA os buscam.
+          if (
+            id.includes('katex') ||
+            id.includes('react-markdown') ||
+            id.includes('remark') ||
+            id.includes('rehype') ||
+            id.includes('micromark') ||
+            id.includes('mdast') ||
+            id.includes('hast') ||
+            id.includes('unified') ||
+            id.includes('vfile') ||
+            id.includes('unist') ||
+            id.includes('property-information') ||
+            id.includes('character-entities') ||
+            id.includes('decode-named-character-reference')
+          ) {
+            return 'markdown';
+          }
+
           if (id.includes('recharts') || id.includes('d3-')) {
             return 'charts';
           }
