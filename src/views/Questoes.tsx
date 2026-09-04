@@ -6,6 +6,7 @@ import { addUserAttempt, addUserErrorLog } from '../lib/userData';
 import { requestAiText } from '../lib/aiClient';
 import { parseErrorDiagnosis, ErrorDiagnosis } from '../lib/errorDiagnosis';
 import { ERROR_TYPE_LABELS, INTERVENTION_LABELS } from '../lib/errorLabels';
+import { Skeleton } from '../components/ui/Skeleton';
 import { AiText } from '../components/AiText';
 import { TopicMastery, ErrorLog } from '../types';
 import { applyReviewOutcome, qualityFromAnswerCorrectness } from '../lib/spacedRepetition';
@@ -58,7 +59,7 @@ function examSourceLabel(source: { board: string; year: number; sourceUrl: strin
 export default function Questoes() {
   const { user } = useAuth();
   const { updateMastery, isPersisted, syncError } = useUserMastery();
-  const { questions: mockQuestions, syncError: questionsSyncError } = useQuestions();
+  const { questions: mockQuestions, loading: questionsLoading, syncError: questionsSyncError } = useQuestions();
   const subjects = useMemo(() => ['Todas', ...new Set(mockQuestions.map((q) => q.subject))], [mockQuestions]);
   const [subjectFilter, setSubjectFilter] = useState('Todas');
   const [onlyRealExams, setOnlyRealExams] = useState(false);
@@ -451,6 +452,15 @@ export default function Questoes() {
             </div>
           </Panel>
         </section>
+      ) : questionsLoading ? (
+        // O banco de questões agora é buscado, não vem no bundle: sem este
+        // estado a tela piscava "nenhuma questão encontrada" antes de carregar.
+        <div className="space-y-4 py-8" aria-busy="true">
+          <Skeleton className="h-6 w-2/3" />
+          <Skeleton className="h-32 w-full" />
+          <Skeleton className="h-12 w-full" />
+          <Skeleton className="h-12 w-full" />
+        </div>
       ) : (
         <div className="text-center py-16">
           <p className="text-[var(--dim)]">Nenhuma questão encontrada para este filtro.</p>

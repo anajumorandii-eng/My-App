@@ -1,8 +1,17 @@
 import { randomUUID } from 'node:crypto';
+import { readFile } from 'node:fs/promises';
+import path from 'node:path';
 import { Router, Request, Response } from 'express';
 import { Firestore } from 'firebase-admin/firestore';
 import { Question, StudyMethod, PodcastEpisode } from '../../src/types';
-import { mockQuestions, mockStudyMethods, mockPodcastEpisodes } from '../../src/data/mockData';
+import { mockStudyMethods, mockPodcastEpisodes } from '../../src/data/mockData';
+
+// O banco de questões não vive mais em mockData.ts (eram 1,5 MB entrando no
+// bundle do cliente); o seed lê o mesmo arquivo estático que o app consome.
+async function readLocalQuestionBank(): Promise<Question[]> {
+  const file = path.join(process.cwd(), 'public', 'questions.json');
+  return JSON.parse(await readFile(file, 'utf8')) as Question[];
+}
 
 // Mesmo motivo de server/literary/literaryAdminRoutes.ts: sem isso, uma
 // rejeição não tratada num handler async derruba o processo Node inteiro e
@@ -48,8 +57,9 @@ export function createContentAdminRouter(db: Firestore): Router {
   // mesmo valor, então rodar de novo não duplica nada) — mesma lógica do
   // /seed de literaryAdminRoutes.ts.
   router.post('/seed', asyncRoute(async (_req, res) => {
+    const questionBank = await readLocalQuestionBank();
     const [questions, studyMethods, podcastEpisodes] = await Promise.all([
-      batchSet(db, 'questions', mockQuestions),
+      batchSet(db, 'questions', questionBank),
       batchSet(db, 'studyMethods', mockStudyMethods),
       batchSet(db, 'podcastEpisodes', mockPodcastEpisodes),
     ]);

@@ -9,6 +9,7 @@ export function useUserProfile() {
   const [profile, setProfile] = useState<UserProfile>(mockProfile);
   const [loading, setLoading] = useState(false);
   const [syncError, setSyncError] = useState<string | null>(null);
+  const [usingFallback, setUsingFallback] = useState(false);
 
   useEffect(() => {
     if (!user) {
@@ -19,10 +20,11 @@ export function useUserProfile() {
     let cancelled = false;
     setLoading(true);
     getUserProfile(user.uid)
-      .then((data) => { if (!cancelled) setProfile(data); })
+      .then((data) => { if (!cancelled) { setProfile(data); setUsingFallback(false); } })
       .catch((error) => {
         console.error('Failed to load user profile:', error);
         if (!cancelled) setSyncError('Não foi possível carregar seu perfil salvo. Mostrando dados de demonstração.');
+        if (!cancelled) setUsingFallback(true);
       })
       .finally(() => { if (!cancelled) setLoading(false); });
     return () => { cancelled = true; };
@@ -46,5 +48,9 @@ export function useUserProfile() {
     [user]
   );
 
-  return { profile, updateProfile, loading, syncError, isPersisted: !!user };
+    // "Dados salvos" e "estou logada" não são a mesma coisa: quando a leitura do
+  // Firestore falha, a tela continua mostrando os dados de demonstração, e com
+  // isPersisted={!!user} o aviso de "Modo demonstração" ficava escondido
+  // justamente aí — a aluna via números inventados sem nada dizendo isso.
+return { profile, updateProfile, loading, syncError, isPersisted: !!user && !usingFallback };
 }

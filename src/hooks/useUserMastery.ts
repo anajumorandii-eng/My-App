@@ -9,6 +9,7 @@ export function useUserMastery() {
   const [mastery, setMastery] = useState<TopicMastery[]>(mockMastery);
   const [loading, setLoading] = useState(false);
   const [syncError, setSyncError] = useState<string | null>(null);
+  const [usingFallback, setUsingFallback] = useState(false);
   const [pendingWrites, setPendingWrites] = useState(0);
   const pendingWritesRef = useRef(0);
   const localRevision = useRef(0);
@@ -34,11 +35,15 @@ export function useUserMastery() {
     setLoading(true);
     getUserMastery(user.uid)
       .then((data) => {
-        if (!cancelled) setMastery(data);
+        if (!cancelled) {
+          setMastery(data);
+          setUsingFallback(false);
+        }
       })
       .catch((error) => {
         console.error('Failed to load user mastery:', error);
         if (!cancelled) setSyncError('Não foi possível carregar seu progresso salvo. Mostrando dados de demonstração.');
+        if (!cancelled) setUsingFallback(true);
       })
       .finally(() => {
         if (!cancelled) setLoading(false);
@@ -107,5 +112,9 @@ export function useUserMastery() {
     return true;
   }, []);
 
-  return { mastery, updateMastery, acceptCommittedMastery, loading, syncError, syncing: pendingWrites > 0, isPersisted: !!user };
+    // "Dados salvos" e "estou logada" não são a mesma coisa: quando a leitura do
+  // Firestore falha, a tela continua mostrando os dados de demonstração, e com
+  // isPersisted={!!user} o aviso de "Modo demonstração" ficava escondido
+  // justamente aí — a aluna via números inventados sem nada dizendo isso.
+return { mastery, updateMastery, acceptCommittedMastery, loading, syncError, syncing: pendingWrites > 0, isPersisted: !!user && !usingFallback };
 }

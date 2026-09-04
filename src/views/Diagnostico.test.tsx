@@ -76,7 +76,7 @@ function setup({
     syncError: null,
     isPersisted: !!user,
   });
-  questionsHook.mockReturnValue({ questions, syncError: null });
+  questionsHook.mockReturnValue({ questions, loading: false, syncError: null });
   const view = render(<Diagnostico />);
   return { updateMastery, unmount: view.unmount };
 }
