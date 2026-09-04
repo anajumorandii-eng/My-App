@@ -8,6 +8,7 @@ export function useDiscursiveAttempts() {
   const [attempts, setAttempts] = useState<DiscursiveAttempt[]>([]);
   const [loading, setLoading] = useState(false);
   const [syncError, setSyncError] = useState<string | null>(null);
+  const [usingFallback, setUsingFallback] = useState(false);
 
   useEffect(() => {
     if (!user) {
@@ -18,10 +19,11 @@ export function useDiscursiveAttempts() {
     let cancelled = false;
     setLoading(true);
     getUserDiscursiveAttempts(user.uid)
-      .then((data) => { if (!cancelled) setAttempts(data); })
+      .then((data) => { if (!cancelled) { setAttempts(data); setUsingFallback(false); } })
       .catch((error) => {
         console.error('Failed to load discursive attempts:', error);
         if (!cancelled) setSyncError('Não foi possível carregar seu histórico de treino. Suas avaliações desta sessão não vão persistir.');
+        if (!cancelled) setUsingFallback(true);
       })
       .finally(() => { if (!cancelled) setLoading(false); });
     return () => { cancelled = true; };
@@ -42,5 +44,9 @@ export function useDiscursiveAttempts() {
     [user]
   );
 
-  return { attempts, addAttempt, loading, syncError, isPersisted: !!user };
+    // "Dados salvos" e "estou logada" não são a mesma coisa: quando a leitura do
+  // Firestore falha, a tela continua mostrando os dados de demonstração, e com
+  // isPersisted={!!user} o aviso de "Modo demonstração" ficava escondido
+  // justamente aí — a aluna via números inventados sem nada dizendo isso.
+return { attempts, addAttempt, loading, syncError, isPersisted: !!user && !usingFallback };
 }

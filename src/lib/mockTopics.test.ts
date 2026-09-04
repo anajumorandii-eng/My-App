@@ -1,8 +1,15 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { mockTopics, mockMastery, mockQuestions, mockPodcastEpisodes, mockBacklog, mockErrorLogs } from '../data/mockData';
+import { readFileSync } from 'node:fs';
+import { mockTopics, mockMastery, mockPodcastEpisodes, mockBacklog, mockErrorLogs } from '../data/mockData';
+import type { Question } from '../types';
 import { mockTopicDiscursivePrompts } from '../data/topicDiscursivePrompts';
 import { SPLIT_TOPIC_PARENTS } from '../data/topicSplits';
+
+// O banco de questões virou arquivo estático (public/questions.json) pra sair
+// do bundle do cliente. A integridade dele contra o catálogo de tópicos
+// continua sendo verificada aqui, lendo do disco.
+const mockQuestions = JSON.parse(readFileSync('public/questions.json', 'utf8')) as Question[];
 
 test('no topic id is duplicated', () => {
   const ids = mockTopics.map((t) => t.id);

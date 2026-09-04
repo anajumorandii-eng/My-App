@@ -76,3 +76,115 @@ test('rejeita erros HTTP e respostas sem conteúdo', async () => {
     AiGenerationError,
   );
 });
+
+function sseResponse(frames: string[]): Response {
+  const body = new ReadableStream<Uint8Array>({
+    start(controller) {
+      const encoder = new TextEncoder();
+      for (const f of frames) controller.enqueue(encoder.encode(f));
+      controller.close();
+    },
+  });
+  return new Response(body, { status: 200, headers: { 'Content-Type': 'text/event-stream' } });
+}
+
+async function collect(stream: AsyncGenerator<string, { text: string; model?: string; usage?: unknown; fallback?: boolean }, void>) {
+  const deltas: string[] = [];
+  let passo = await stream.next();
+  while (passo.done !== true) {
+    deltas.push(passo.value);
+    passo = await stream.next();
+  }
+  return { deltas, result: passo.value };
+}
+
+test('streaming emite os pedaços conforme chegam e devolve o texto completo', async () => {
+  let corpo: any;
+  const provider = new OmniRouteProvider({
+    baseUrl: 'https://omniroute.example/v1',
+    apiKey: 'k',
+    fetch: async (_url, init) => {
+      corpo = JSON.parse(String(init?.body));
+      return sseResponse([
+        'data: {"choices":[{"delta":{"content":"A glic"}}]}\n',
+        'data: {"choices":[{"delta":{"content":"ólise "}}]}\n',
+        'data: {"choices":[{"delta":{"content":"ocorre no citosol."}}]}\n',
+        'data: {"usage":{"prompt_tokens":10,"completion_tokens":7,"total_tokens":17}}\n',
+        'data: [DONE]\n',
+      ]);
+    },
+  });
+
+  const { deltas, result } = await collect(provider.generateStream({ task: 'socratic', prompt: 'p' }));
+
+  assert.deepEqual(deltas, ['A glic', 'ólise ', 'ocorre no citosol.']);
+  assert.equal(result.text, 'A glicólise ocorre no citosol.');
+  assert.equal(result.model, 'juju-deep-v1');
+  assert.deepEqual(result.usage, { promptTokens: 10, completionTokens: 7, totalTokens: 17 });
+  assert.equal(corpo.stream, true, 'a requisição precisa pedir streaming');
+  assert.deepEqual(corpo.stream_options, { include_usage: true });
+});
+
+test('um frame partido entre dois pedaços da rede não perde texto', async () => {
+  const provider = new OmniRouteProvider({
+    baseUrl: 'https://omniroute.example/v1',
+    apiKey: 'k',
+    // O servidor pode cortar em qualquer byte, inclusive no meio do JSON.
+    fetch: async () => sseResponse([
+      'data: {"choices":[{"delta":',
+      '{"content":"inteiro"}}]}\ndata: [DONE]\n',
+    ]),
+  });
+
+  const { deltas, result } = await collect(provider.generateStream({ task: 'review-tip', prompt: 'p' }));
+  assert.deepEqual(deltas, ['inteiro']);
+  assert.equal(result.text, 'inteiro');
+});
+
+test('cai no combo fast quando o deep falha antes do primeiro pedaço', async () => {
+  const modelos: string[] = [];
+  const provider = new OmniRouteProvider({
+    baseUrl: 'https://omniroute.example/v1',
+    apiKey: 'k',
+    fetch: async (_url, init) => {
+      const model = JSON.parse(String(init?.body)).model;
+      modelos.push(model);
+      if (model === 'juju-deep-v1') return new Response('erro', { status: 500 });
+      return sseResponse(['data: {"choices":[{"delta":{"content":"do fast"}}]}\n', 'data: [DONE]\n']);
+    },
+  });
+
+  const { deltas, result } = await collect(provider.generateStream({ task: 'socratic', prompt: 'p' }));
+  assert.deepEqual(modelos, ['juju-deep-v1', 'juju-fast-v1']);
+  assert.deepEqual(deltas, ['do fast']);
+  assert.equal(result.fallback, true);
+});
+
+test('não troca de modelo depois que a aluna já começou a ler', async () => {
+  // Recomeçar aqui substituiria a resposta debaixo dos olhos dela.
+  let chamadas = 0;
+  const provider = new OmniRouteProvider({
+    baseUrl: 'https://omniroute.example/v1',
+    apiKey: 'k',
+    fetch: async () => {
+      chamadas += 1;
+      let primeiro = true;
+      const body = new ReadableStream<Uint8Array>({
+        pull(controller) {
+          if (primeiro) {
+            primeiro = false;
+            controller.enqueue(new TextEncoder().encode('data: {"choices":[{"delta":{"content":"comecei"}}]}\n'));
+            return;
+          }
+          controller.error(new Error('conexão caiu no meio'));
+        },
+      });
+      return new Response(body, { status: 200 });
+    },
+  });
+
+  const stream = provider.generateStream({ task: 'socratic', prompt: 'p' });
+  assert.equal((await stream.next()).value, 'comecei');
+  await assert.rejects(() => stream.next());
+  assert.equal(chamadas, 1, 'não deve tentar o fast depois de já ter emitido');
+});

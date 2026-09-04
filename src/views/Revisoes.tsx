@@ -111,8 +111,8 @@ export default function Revisoes() {
       </div>
 
       {!isPersisted && (
-        <p className="flex items-center text-xs text-[var(--dim)] mb-2">
-          <CloudOff className="w-3.5 h-3.5 mr-1.5" />
+        <p className="flex items-start text-xs text-[var(--dim)] mb-2">
+          <CloudOff className="w-3.5 h-3.5 mr-1.5 mt-0.5 shrink-0" />
           Modo demonstração — conecte sua conta Google em "Perfil" para sincronização em nuvem.
         </p>
       )}

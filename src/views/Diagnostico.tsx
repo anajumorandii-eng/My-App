@@ -146,10 +146,33 @@ function resolveDraftPool(items: QuizPoolItemRef[], mockQuestions: Question[]): 
   return pool;
 }
 
+/**
+ * O banco de questões saiu do bundle e agora é buscado, então na primeira
+ * renderização ele está vazio. A tela precisa esperar: o rascunho salvo de um
+ * diagnóstico em andamento é restaurado pelos inicializadores de useState
+ * abaixo, e com o banco vazio o resolveDraftPool() não acharia as questões e
+ * descartaria o rascunho da aluna em silêncio. Montar o conteúdo só depois do
+ * carregamento garante que os inicializadores vejam o banco completo.
+ */
 export default function Diagnostico() {
+  const { questions, loading, syncError } = useQuestions();
+
+  if (loading) {
+    return (
+      <div className="space-y-4 p-2 py-8" aria-busy="true">
+        <Skeleton className="h-8 w-1/2" />
+        <Skeleton className="h-32 w-full" />
+        <Skeleton className="h-24 w-full" />
+      </div>
+    );
+  }
+
+  return <DiagnosticoContent mockQuestions={questions} questionsSyncError={syncError} />;
+}
+
+function DiagnosticoContent({ mockQuestions, questionsSyncError }: { mockQuestions: Question[]; questionsSyncError: string | null }) {
   const { user } = useAuth();
   const { mastery, updateMastery, isPersisted, syncError, loading: masteryLoading } = useUserMastery();
-  const { questions: mockQuestions, syncError: questionsSyncError } = useQuestions();
 
   const draftKey = `${DIAGNOSTICO_DRAFT_KEY_PREFIX}${user?.uid ?? 'demo'}`;
 
@@ -450,7 +473,7 @@ export default function Diagnostico() {
       </div>
 
       {!isPersisted && (
-        <p className="flex items-center text-xs text-[var(--dim)] mb-2">
+        <p className="flex items-start text-xs text-[var(--dim)] mb-2">
           <CloudOff className="w-3.5 h-3.5 mr-1.5 shrink-0" />
           Modo demonstração — conecte sua conta Google em "Perfil" para salvar seu diagnóstico permanentemente.
         </p>
@@ -668,8 +691,8 @@ export default function Diagnostico() {
 
           {currentItem.kind === 'discursive' && (
             <>
-              <div className="flex items-center text-xs font-medium text-[var(--primary)]">
-                <PenLine className="w-3.5 h-3.5 mr-1.5" />
+              <div className="flex items-start text-xs font-medium text-[var(--primary)]">
+                <PenLine className="w-3.5 h-3.5 mr-1.5 mt-0.5 shrink-0" />
                 Questão discursiva — sem múltipla escolha, você mesma avalia sua resposta
               </div>
               <p className="text-xs font-display text-[var(--text)] leading-relaxed">{currentItem.prompt.prompt}</p>

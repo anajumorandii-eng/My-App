@@ -1,5 +1,5 @@
 import { AiGenerationError, AiTimeoutError, AiUnavailableError } from './errors';
-import { AiGenerationRequest, AiGenerationResult, AiProvider } from './types';
+import { AiGenerationRequest, AiGenerationResult, AiProvider, AiResultStream } from './types';
 import { createHash } from 'node:crypto';
 
 const DEFAULT_TIMEOUT_MS = 150_000;
@@ -52,6 +52,73 @@ export class AiService {
       }
       return result;
     } catch (error) {
+      if (error instanceof AiTimeoutError || error instanceof AiGenerationError) throw error;
+      throw new AiGenerationError(undefined, { cause: error });
+    } finally {
+      if (timeout) clearTimeout(timeout);
+    }
+  }
+
+  /** O provedor sabe emitir aos pedaços? Nem todos sabem. */
+  get supportsStreaming(): boolean {
+    return typeof this.provider.generateStream === 'function';
+  }
+
+  /**
+   * Mesma proteção do generate() — timeout que aborta e cache das tarefas
+   * cacheáveis — só que emitindo texto conforme chega. Uma resposta em cache
+   * sai de uma vez: não há motivo para simular digitação de algo que já está
+   * pronto.
+   */
+  async *generateStream(request: AiGenerationRequest): AiResultStream {
+    if (!this.provider.isConfigured) throw new AiUnavailableError();
+    if (!this.provider.generateStream) throw new AiGenerationError('Este provedor não suporta streaming.');
+
+    const cacheKey = this.cacheKey(request);
+    const cached = cacheKey ? this.cache.get(cacheKey) : undefined;
+    if (cached && cached.expiresAt > Date.now()) {
+      yield cached.result.text;
+      return { ...cached.result, cached: true };
+    }
+
+    let timeout: ReturnType<typeof setTimeout> | undefined;
+    const controller = new AbortController();
+    // Ao contrário do generate(), o relógio aqui não corre contra a resposta
+    // inteira: cada pedaço recebido o reinicia. O que se quer evitar é o fluxo
+    // travar, não uma resposta longa que está chegando normalmente.
+    const rearmar = () => {
+      if (timeout) clearTimeout(timeout);
+      timeout = setTimeout(() => controller.abort(), this.timeoutMs);
+    };
+
+    try {
+      rearmar();
+      const stream = this.provider.generateStream({ ...request, signal: controller.signal });
+
+      for (;;) {
+        const passo = await stream.next();
+        if (passo.done === true) {
+          const detail = passo.value;
+          const normalized = detail.text.trim();
+          if (!normalized) throw new AiGenerationError('O provedor retornou uma resposta vazia.');
+          const result: AiGenerationResult = {
+            text: normalized,
+            provider: this.provider.name,
+            model: detail.model ?? this.provider.modelForTask?.(request.task) ?? this.provider.model,
+            ...(detail.usage ? { usage: detail.usage } : {}),
+            ...(detail.fallback ? { fallback: true } : {}),
+          };
+          if (cacheKey) {
+            if (this.cache.size >= 500) this.cache.delete(this.cache.keys().next().value!);
+            this.cache.set(cacheKey, { result, expiresAt: Date.now() + this.cacheTtlMs });
+          }
+          return result;
+        }
+        rearmar();
+        yield passo.value;
+      }
+    } catch (error) {
+      if (controller.signal.aborted) throw new AiTimeoutError();
       if (error instanceof AiTimeoutError || error instanceof AiGenerationError) throw error;
       throw new AiGenerationError(undefined, { cause: error });
     } finally {

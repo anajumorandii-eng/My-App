@@ -6,6 +6,7 @@ import { addUserAttempt, addUserErrorLog } from '../lib/userData';
 import { requestAiText } from '../lib/aiClient';
 import { parseErrorDiagnosis, ErrorDiagnosis } from '../lib/errorDiagnosis';
 import { ERROR_TYPE_LABELS, INTERVENTION_LABELS } from '../lib/errorLabels';
+import { Skeleton } from '../components/ui/Skeleton';
 import { AiText } from '../components/AiText';
 import { TopicMastery, ErrorLog } from '../types';
 import { applyReviewOutcome, qualityFromAnswerCorrectness } from '../lib/spacedRepetition';
@@ -58,7 +59,7 @@ function examSourceLabel(source: { board: string; year: number; sourceUrl: strin
 export default function Questoes() {
   const { user } = useAuth();
   const { updateMastery, isPersisted, syncError } = useUserMastery();
-  const { questions: mockQuestions, syncError: questionsSyncError } = useQuestions();
+  const { questions: mockQuestions, loading: questionsLoading, syncError: questionsSyncError } = useQuestions();
   const subjects = useMemo(() => ['Todas', ...new Set(mockQuestions.map((q) => q.subject))], [mockQuestions]);
   const [subjectFilter, setSubjectFilter] = useState('Todas');
   const [onlyRealExams, setOnlyRealExams] = useState(false);
@@ -285,8 +286,8 @@ export default function Questoes() {
       </div>
 
       {!isPersisted && (
-        <p className="flex items-center text-xs text-[var(--dim)] mb-2">
-          <CloudOff className="w-3.5 h-3.5 mr-1.5" />
+        <p className="flex items-start text-xs text-[var(--dim)] mb-2">
+          <CloudOff className="w-3.5 h-3.5 mr-1.5 mt-0.5 shrink-0" />
           Modo demonstração — conecte sua conta Google em "Conexões Google" para salvar seu progresso de verdade.
         </p>
       )}
@@ -303,13 +304,16 @@ export default function Questoes() {
             <button
               key={subject}
               onClick={() => changeSubject(subject)}
-              style={
-                active
-                  ? { backgroundColor: subPalette.primary, color: subPalette.wash, display: 'inline-flex', alignItems: 'center', gap: '6px', borderRadius: '4px', padding: '2px 6px' }
-                  : { display: 'inline-flex', alignItems: 'center', gap: '6px' }
-              }
+              // O estado ativo vem do design system (.ni-subjects button.active),
+              // igual ao botão de questões reais logo abaixo. O estilo inline que
+              // ficava aqui pintava o chip com a paleta da matéria e escrevia o
+              // rótulo na cor "wash" dela — em "Todas", que não é matéria nenhuma,
+              // isso caía no fallback de Matemática e dava azul sobre azul, com
+              // contraste de 2,19:1 (o mínimo legível é 4,5:1).
+              className={active ? 'active' : ''}
+              style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}
             >
-              {subject !== 'Todas' && <Icon className="w-3 h-3" style={{ color: active ? subPalette.wash : subPalette.primary }} />}
+              {subject !== 'Todas' && <Icon className="w-3 h-3" style={{ color: subPalette.primary }} />}
               <span>{subject}</span>
             </button>
           );
@@ -448,6 +452,15 @@ export default function Questoes() {
             </div>
           </Panel>
         </section>
+      ) : questionsLoading ? (
+        // O banco de questões agora é buscado, não vem no bundle: sem este
+        // estado a tela piscava "nenhuma questão encontrada" antes de carregar.
+        <div className="space-y-4 py-8" aria-busy="true">
+          <Skeleton className="h-6 w-2/3" />
+          <Skeleton className="h-32 w-full" />
+          <Skeleton className="h-12 w-full" />
+          <Skeleton className="h-12 w-full" />
+        </div>
       ) : (
         <div className="text-center py-16">
           <p className="text-[var(--dim)]">Nenhuma questão encontrada para este filtro.</p>

@@ -1,37 +1,21 @@
-import ReactMarkdown from 'react-markdown';
-import remarkMath from 'remark-math';
-import rehypeKatex from 'rehype-katex';
-import 'katex/dist/katex.min.css';
+import React, { Suspense, lazy } from 'react';
 
-// A IA às vezes usa delimitadores estilo MathJax (\[ \] e \( \)) em vez do
-// $ $ / $$ $$ que o remark-math reconhece. Normalizamos antes de renderizar.
-function normalizeMathDelimiters(text: string): string {
-  return text
-    .replace(/\\\[([\s\S]*?)\\\]/g, (_, expr) => `$$${expr}$$`)
-    .replace(/\\\(([\s\S]*?)\\\)/g, (_, expr) => `$${expr}$`);
-}
+// O renderizador traz react-markdown, remark-math, rehype-katex e o CSS do
+// KaTeX junto — 377 KB, mais que o dobro de qualquer tela do app. Importado
+// direto, ele era baixado só por a tela ter a possibilidade de mostrar
+// resposta de IA, mesmo quando não havia nenhuma. Assim só é buscado quando um
+// texto de IA aparece de verdade.
+const AiTextRenderer = lazy(() => import('./AiTextRenderer'));
 
 export function AiText({ text, className = '' }: { text: string; className?: string }) {
   return (
-    <div className={`space-y-2 ${className}`}>
-      <ReactMarkdown
-        remarkPlugins={[remarkMath]}
-        rehypePlugins={[rehypeKatex]}
-        components={{
-          p: ({ children }) => <p className="leading-relaxed">{children}</p>,
-          strong: ({ children }) => <strong className="font-semibold">{children}</strong>,
-          ul: ({ children }) => <ul className="list-disc pl-5 space-y-1">{children}</ul>,
-          ol: ({ children }) => <ol className="list-decimal pl-5 space-y-1">{children}</ol>,
-          h1: ({ children }) => <h3 className="font-semibold text-base mt-3">{children}</h3>,
-          h2: ({ children }) => <h3 className="font-semibold text-base mt-3">{children}</h3>,
-          h3: ({ children }) => <h4 className="font-semibold mt-2">{children}</h4>,
-          code: ({ children }) => (
-            <code className="px-1 py-0.5 rounded bg-black/5 dark:bg-white/10 text-[0.9em]">{children}</code>
-          ),
-        }}
-      >
-        {normalizeMathDelimiters(text)}
-      </ReactMarkdown>
-    </div>
+    <Suspense
+      // O texto puro enquanto o renderizador carrega: a aluna lê a resposta
+      // imediatamente, e ela só é reformatada (listas, negrito, fórmulas)
+      // quando o chunk chega.
+      fallback={<div className={`space-y-2 whitespace-pre-wrap leading-relaxed ${className}`}>{text}</div>}
+    >
+      <AiTextRenderer text={text} className={className} />
+    </Suspense>
   );
 }
