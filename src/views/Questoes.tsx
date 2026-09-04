@@ -285,8 +285,8 @@ export default function Questoes() {
       </div>
 
       {!isPersisted && (
-        <p className="flex items-center text-xs text-[var(--dim)] mb-2">
-          <CloudOff className="w-3.5 h-3.5 mr-1.5" />
+        <p className="flex items-start text-xs text-[var(--dim)] mb-2">
+          <CloudOff className="w-3.5 h-3.5 mr-1.5 mt-0.5 shrink-0" />
           Modo demonstração — conecte sua conta Google em "Conexões Google" para salvar seu progresso de verdade.
         </p>
       )}
@@ -303,13 +303,16 @@ export default function Questoes() {
             <button
               key={subject}
               onClick={() => changeSubject(subject)}
-              style={
-                active
-                  ? { backgroundColor: subPalette.primary, color: subPalette.wash, display: 'inline-flex', alignItems: 'center', gap: '6px', borderRadius: '4px', padding: '2px 6px' }
-                  : { display: 'inline-flex', alignItems: 'center', gap: '6px' }
-              }
+              // O estado ativo vem do design system (.ni-subjects button.active),
+              // igual ao botão de questões reais logo abaixo. O estilo inline que
+              // ficava aqui pintava o chip com a paleta da matéria e escrevia o
+              // rótulo na cor "wash" dela — em "Todas", que não é matéria nenhuma,
+              // isso caía no fallback de Matemática e dava azul sobre azul, com
+              // contraste de 2,19:1 (o mínimo legível é 4,5:1).
+              className={active ? 'active' : ''}
+              style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}
             >
-              {subject !== 'Todas' && <Icon className="w-3 h-3" style={{ color: active ? subPalette.wash : subPalette.primary }} />}
+              {subject !== 'Todas' && <Icon className="w-3 h-3" style={{ color: subPalette.primary }} />}
               <span>{subject}</span>
             </button>
           );
