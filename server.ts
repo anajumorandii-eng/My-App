@@ -10,6 +10,9 @@ import { createAiDailyLimit, createAiRateLimit } from './server/ai/rateLimit';
 import { createAiRouter } from './server/ai/routes';
 import { AiService, parseAiTimeout } from './server/ai/service';
 import { adminAuthMiddleware, firebaseAuthMiddleware, getFirebaseAdminApp, requireAdmin } from './server/auth/firebaseAuth';
+import { GoogleAccessTokenProvider, GoogleNotConnectedError, OAuthClient } from './server/auth/googleOAuth';
+import { FirestoreGoogleOAuthStore } from './server/auth/googleOAuthStore';
+import { createGoogleOAuthRouter } from './server/auth/googleOAuthRoutes';
 import { getFirestore } from 'firebase-admin/firestore';
 import { FirestoreDailyQuotaStore } from './server/ai/firestoreQuotaStore';
 import { FirestoreAiMetricsRecorder } from './server/ai/metrics';
@@ -90,62 +93,85 @@ if (vapidConfig) configureWebPush(vapidConfig);
 const GOOGLE_CLIENT_ID = process.env.GOOGLE_CLIENT_ID;
 const GOOGLE_CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET;
 const APP_URL = process.env.APP_URL || 'http://localhost:3000';
-const REDIRECT_URI = `${APP_URL}/api/oauth/callback`;
+const REDIRECT_URI = `${APP_URL}/api/oauth/google/callback`;
+const GOOGLE_OAUTH_CONFIGURED = Boolean(GOOGLE_CLIENT_ID && GOOGLE_CLIENT_SECRET);
 
-function getOAuthClient() {
+function getOAuthClient(): OAuthClient {
   return new google.auth.OAuth2(
     GOOGLE_CLIENT_ID,
     GOOGLE_CLIENT_SECRET,
     REDIRECT_URI
-  );
+  ) as unknown as OAuthClient;
 }
+
+const googleOAuthStore = new FirestoreGoogleOAuthStore(getFirestore(getFirebaseAdminApp()));
+const googleTokens = new GoogleAccessTokenProvider(googleOAuthStore, getOAuthClient);
 
 // API routes
 app.get('/api/health', (req, res) => res.json({ status: 'ok' }));
 
-// Duas credenciais distintas viajam nestas rotas: o Authorization carrega o
-// ID token do Firebase (quem é a aluna — validado pelo middleware, igual a
-// todas as outras rotas) e o X-Google-Access-Token carrega o token OAuth do
-// Google (o que ela autorizou o app a ler). Antes só o segundo era enviado,
-// sem Authorization nenhum, o que deixava estas rotas abertas a qualquer um
-// com um token do Google — um proxy grátis pra API do Google.
-function googleAccessToken(req: express.Request): string | null {
-  const header = req.headers['x-google-access-token'];
-  const value = Array.isArray(header) ? header[0] : header;
-  return value?.trim() || null;
+// O cliente manda só o ID token do Firebase; o access token do Google é
+// resolvido aqui, a partir do refresh token guardado no servidor. Antes o
+// navegador guardava esse access token em memória e o mandava junto — ele
+// morria a cada recarga da página, e as rotas nem exigiam autenticação.
+async function respondGoogleAuthError(res: express.Response, error: unknown, context: string): Promise<void> {
+  if (error instanceof GoogleNotConnectedError) {
+    res.status(409).json({ error: error.message, code: error.code });
+    return;
+  }
+  console.error(`${context}:`, error);
+  res.status(500).json({ error: 'Falha ao consultar sua conta Google.', code: 'GOOGLE_REQUEST_FAILED' });
 }
+
+app.use('/api/oauth/google', createGoogleOAuthRouter({
+  store: googleOAuthStore,
+  tokens: googleTokens,
+  createClient: getOAuthClient,
+  isConfigured: GOOGLE_OAUTH_CONFIGURED,
+  requireAuth: firebaseAuthMiddleware(),
+}));
 
 // Fetch events from Calendar
 app.get('/api/calendar/events', firebaseAuthMiddleware(), createAiRateLimit(), async (req, res) => {
-  const token = googleAccessToken(req);
-  if (!token) {
-    return res.status(401).json({ error: 'Conecte sua conta Google novamente.', code: 'GOOGLE_TOKEN_REQUIRED' });
-  }
-  
+  const localDate = typeof req.query.date === 'string' ? req.query.date : '';
+
+  let query: ReturnType<typeof buildCalendarEventsQuery>;
   try {
-    const localDate = typeof req.query.date === 'string' ? req.query.date : '';
-    const query = buildCalendarEventsQuery(localDate);
+    query = buildCalendarEventsQuery(localDate);
+  } catch {
+    return res.status(400).json({ error: 'Invalid date' });
+  }
+
+  let token: string;
+  try {
+    token = await googleTokens.getAccessToken(res.locals.userId as string);
+  } catch (error) {
+    return respondGoogleAuthError(res, error, 'Google token resolution failed');
+  }
+
+  try {
     const oauth2Client = new google.auth.OAuth2();
     oauth2Client.setCredentials({ access_token: token });
-    
+
     const calendar = google.calendar({ version: 'v3', auth: oauth2Client });
     const response = await calendar.events.list(query);
-    
+
     res.json({ events: response.data.items || [] });
   } catch (error) {
     console.error('Calendar Fetch Error:', error);
-    const status = error instanceof Error && error.message === 'Invalid local date' ? 400 : 500;
-    res.status(status).json({ error: status === 400 ? 'Invalid date' : 'Failed to fetch events' });
+    res.status(500).json({ error: 'Failed to fetch events' });
   }
 });
 
 // Fetch files from Drive
-app.get('/api/drive/files', firebaseAuthMiddleware(), createAiRateLimit(), async (req, res) => {
-  const token = googleAccessToken(req);
-  if (!token) {
-    return res.status(401).json({ error: 'Conecte sua conta Google novamente.', code: 'GOOGLE_TOKEN_REQUIRED' });
+app.get('/api/drive/files', firebaseAuthMiddleware(), createAiRateLimit(), async (_req, res) => {
+  let token: string;
+  try {
+    token = await googleTokens.getAccessToken(res.locals.userId as string);
+  } catch (error) {
+    return respondGoogleAuthError(res, error, 'Google token resolution failed');
   }
-  
+
   try {
     const oauth2Client = new google.auth.OAuth2();
     oauth2Client.setCredentials({ access_token: token });

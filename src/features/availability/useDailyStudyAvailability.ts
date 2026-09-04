@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { useAuth } from '../../context/AuthContext';
-import { getAccessToken, googleApiHeaders } from '../../lib/auth';
+import { authHeaders } from '../../lib/auth';
 import { resolveEffectiveStudyAvailability } from './availabilityEngine';
 import { getEffectiveStudyAvailability } from './availabilityService';
 import {
@@ -176,11 +176,13 @@ async function loadCalendarOverlay(localDate: string, isConnected: boolean): Pro
   if (!isConnected) return { status: 'disconnected' };
 
   try {
-    const token = await getAccessToken();
-    if (!token) return { status: 'disconnected' };
     const response = await fetch(`/api/calendar/events?date=${encodeURIComponent(localDate)}`, {
-      headers: await googleApiHeaders(token),
+      headers: await authHeaders(),
     });
+    // 409: a aluna está logada, mas ainda não autorizou (ou revogou) o acesso
+    // à agenda. É "desconectado", não falha — a tela oferece conectar em vez
+    // de avisar que algo deu errado.
+    if (response.status === 409) return { status: 'disconnected' };
     if (!response.ok) throw new Error(`Calendar request failed: ${response.status}`);
     const data: unknown = await response.json();
     if (!isCalendarResponse(data)) throw new Error('Invalid Calendar response');

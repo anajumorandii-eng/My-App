@@ -15,7 +15,7 @@ export function createRequireFirebaseAuth(verifier: TokenVerifier, options?: { c
   return async (req, res, next) => {
     const token = bearerToken(req.headers.authorization);
     if (!token) {
-      return res.status(401).json({ error: 'Entre na sua conta para usar a IA.', code: 'AUTH_REQUIRED' });
+      return res.status(401).json({ error: 'Entre na sua conta para continuar.', code: 'AUTH_REQUIRED' });
     }
 
     try {

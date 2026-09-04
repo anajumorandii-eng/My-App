@@ -8,6 +8,13 @@ service cloud.firestore {
       allow read, write: if request.auth != null && request.auth.uid == uid;
     }
 
+    // As credenciais OAuth do Google (googleOAuthGrants) e os states de uso
+    // único do fluxo de autorização (googleOAuthStates) NÃO aparecem aqui de
+    // propósito: sem regra que as case, o padrão do Firestore nega tudo, e só
+    // o Admin SDK — do servidor — alcança. É por isso que elas moram na raiz e
+    // não em users/{uid}/..., onde a regra acima daria ao próprio navegador da
+    // aluna leitura do refresh token que dá acesso à agenda e ao Drive dela.
+
     // Catálogo de Obras Obrigatórias (Fase 2 do roteiro): metadados
     // estruturais — obra, edição, exigência de banca, unidade de leitura —
     // não carregam camada de evidência (sem editorialStatus), então

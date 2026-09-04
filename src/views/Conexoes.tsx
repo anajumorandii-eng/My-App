@@ -1,27 +1,95 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { CalendarEvent, DriveFile } from '../types';
 import { Link2, Unlink, Calendar as CalendarIcon, Clock, AlertTriangle, FileText } from 'lucide-react';
-import { initAuth, googleSignIn, logout, googleApiHeaders } from '../lib/auth';
+import { initAuth, googleSignIn, authHeaders } from '../lib/auth';
+import {
+  describeGoogleCallback,
+  disconnectGoogle,
+  getGoogleConnectionStatus,
+  startGoogleConnection,
+} from '../lib/googleConnection';
 import { isoToLocalDate } from '../features/availability/time';
 import { Panel } from '../components/ui/Panel';
 import { PALETTES } from '../prototypes/NucleoInstrumentalPrototype';
 
 export default function Conexoes() {
+  // Dois estados diferentes, que antes viviam colapsados num só: estar logada
+  // no app (Firebase) e ter autorizado o app a ler a agenda e o Drive. A
+  // segunda agora mora no servidor e sobrevive à recarga da página.
+  const [signedIn, setSignedIn] = useState(false);
   const [isConnected, setIsConnected] = useState(false);
   const [events, setEvents] = useState<CalendarEvent[]>([]);
   const [files, setFiles] = useState<DriveFile[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
+  const loadGoogleData = useCallback(async () => {
+    setLoading(true);
+    try {
+      const headers = await authHeaders();
+      const localDate = isoToLocalDate(new Date().toISOString());
+      const [eventsRes, filesRes] = await Promise.all([
+        fetch(`/api/calendar/events?date=${encodeURIComponent(localDate)}`, { headers }),
+        fetch('/api/drive/files', { headers }),
+      ]);
+
+      // 409 = a autorização do Google não existe mais (revogada na conta dela,
+      // por exemplo). É reconexão, não erro de rede.
+      if (eventsRes.status === 409 || filesRes.status === 409) {
+        setIsConnected(false);
+        setEvents([]);
+        setFiles([]);
+        return;
+      }
+
+      setEvents(eventsRes.ok ? (await eventsRes.json()).events ?? [] : []);
+      setFiles(filesRes.ok ? (await filesRes.json()).files ?? [] : []);
+    } catch (e) {
+      console.error(e);
+      setError('Não foi possível carregar seus dados do Google. Tente novamente.');
+    } finally {
+      setLoading(false);
+    }
+  }, []);
+
+  const refreshConnection = useCallback(async () => {
+    try {
+      const status = await getGoogleConnectionStatus();
+      setIsConnected(status.connected);
+      if (status.connected) {
+        await loadGoogleData();
+      } else {
+        setEvents([]);
+        setFiles([]);
+        setLoading(false);
+      }
+    } catch (e) {
+      console.error(e);
+      setIsConnected(false);
+      setLoading(false);
+    }
+  }, [loadGoogleData]);
+
+  // O callback do Google devolve a aluna pra cá com ?google=... dizendo como
+  // a autorização terminou.
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const outcome = params.get('google');
+    if (!outcome) return;
+    const message = describeGoogleCallback(outcome);
+    if (message) setError(message);
+    window.history.replaceState({}, '', window.location.pathname);
+  }, []);
+
   useEffect(() => {
     const unsubscribe = initAuth(
-      (user, token) => {
+      () => {
         setError(null);
-        setIsConnected(true);
-        fetchEvents(token);
-        fetchFiles(token);
+        setSignedIn(true);
+        void refreshConnection();
       },
       (message) => {
+        setSignedIn(false);
         setIsConnected(false);
         setLoading(false);
         setEvents([]);
@@ -31,60 +99,35 @@ export default function Conexoes() {
     );
 
     return () => unsubscribe();
-  }, []);
-
-  const fetchEvents = async (token: string) => {
-    try {
-      const localDate = isoToLocalDate(new Date().toISOString());
-      const res = await fetch(`/api/calendar/events?date=${encodeURIComponent(localDate)}`, {
-        headers: await googleApiHeaders(token)
-      });
-      const data = await res.json();
-      setEvents(data.events || []);
-    } catch (e) {
-      console.error(e);
-    }
-  };
-
-  const fetchFiles = async (token: string) => {
-    try {
-      const res = await fetch('/api/drive/files', {
-        headers: await googleApiHeaders(token)
-      });
-      const data = await res.json();
-      setFiles(data.files || []);
-    } catch (e) {
-      console.error(e);
-    } finally {
-      setLoading(false);
-    }
-  };
+  }, [refreshConnection]);
 
   const handleConnect = async () => {
     setError(null);
     try {
-      const result = await googleSignIn();
-      if (result) {
-        setIsConnected(true);
-        setLoading(true);
-        await fetchEvents(result.accessToken);
-        await fetchFiles(result.accessToken);
+      if (!signedIn) {
+        const user = await googleSignIn();
+        // null = o login caiu no fluxo de redirect e a página já está saindo.
+        if (!user) return;
+        setSignedIn(true);
       }
+      // Sai da página rumo ao consentimento do Google e volta pelo callback.
+      await startGoogleConnection('/conexoes');
     } catch (err: any) {
-      console.error('Failed to sign in', err);
+      console.error('Failed to connect Google', err);
       setError(err?.message || 'Não foi possível conectar sua conta Google. Tente novamente.');
     }
   };
 
   const handleDisconnect = async () => {
+    setError(null);
     try {
-      await logout();
+      await disconnectGoogle();
       setIsConnected(false);
       setEvents([]);
       setFiles([]);
-      setError(null);
-    } catch (e) {
-      console.error(e);
+    } catch (err: any) {
+      console.error(err);
+      setError(err?.message || 'Não foi possível desconectar sua conta Google.');
     }
   };
 
