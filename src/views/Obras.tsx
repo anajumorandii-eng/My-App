@@ -4,7 +4,7 @@ import { BookOpen, Loader2, Search } from 'lucide-react';
 import { LiteraryWork, ExamBoard, ExamRequirement } from '../types/literaryWorks';
 import { getLiteraryWorks, getAllExamRequirements } from '../lib/literaryCatalog';
 import { Panel } from '../components/ui/Panel';
-import { PALETTES } from '../prototypes/NucleoInstrumentalPrototype';
+import { PALETTES, PALETTE_INK } from '../prototypes/NucleoInstrumentalPrototype';
 import { SUBJECT_ICONS } from './Dashboard';
 
 type BoardFilter = 'todas' | ExamBoard;
@@ -47,7 +47,7 @@ export default function Obras() {
     <div
       className="ni-main"
       style={{
-        '--primary': LIT_PALETTE.primary,
+        '--primary': LIT_PALETTE.primary, '--primary-ink': LIT_PALETTE.readable,
         '--secondary': LIT_PALETTE.secondary,
         '--wash': LIT_PALETTE.wash,
       } as React.CSSProperties}
@@ -57,7 +57,7 @@ export default function Obras() {
         <span>LIBRARY</span>
         <i />
         <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
-          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--wash)]">
+          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--ink-on-primary)]">
             <LitIcon className="w-3 h-3" />
           </span>
           LITERATURA
@@ -96,7 +96,7 @@ export default function Obras() {
               onClick={() => setBoardFilter(b)}
               style={
                 active
-                  ? { backgroundColor: LIT_PALETTE.primary, color: LIT_PALETTE.wash, borderRadius: '4px', padding: '2px 8px' }
+                  ? { backgroundColor: LIT_PALETTE.primary, color: PALETTE_INK, borderRadius: '4px', padding: '2px 8px' }
                   : { display: 'inline-flex', alignItems: 'center' }
               }
             >
@@ -143,7 +143,7 @@ export default function Obras() {
                         <span
                           key={r.id}
                           className="text-[10px] font-mono px-2 py-0.5 rounded-full"
-                          style={{ backgroundColor: LIT_PALETTE.primary, color: LIT_PALETTE.wash }}
+                          style={{ backgroundColor: LIT_PALETTE.primary, color: PALETTE_INK }}
                         >
                           {r.board}
                         </span>
@@ -152,12 +152,12 @@ export default function Obras() {
                         <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-[var(--surface2)] text-[var(--dim)]">—</span>
                       )}
                     </div>
-                    <LitIcon className="w-4 h-4 text-[var(--primary)] shrink-0" />
+                    <LitIcon className="w-4 h-4 subject-text shrink-0" />
                   </div>
                   <p className="font-display text-base font-semibold text-[var(--text)] leading-snug">{w.title}</p>
                   <p className="text-[11px] font-mono text-[var(--dim)] mt-1">{w.author} · {w.genre}</p>
                   {reqs[0]?.requiredScope && reqs[0].requiredScope !== 'obra completa' && (
-                    <p className="text-[11px] text-[var(--primary)] mt-auto pt-3 border-t border-[var(--line)] line-clamp-2">
+                    <p className="text-[11px] subject-text mt-auto pt-3 border-t border-[var(--line)] line-clamp-2">
                       {reqs[0].requiredScope}
                     </p>
                   )}

@@ -9,7 +9,7 @@ import { Brain, Send, Bot, User, Sparkles, BookOpenText, ClipboardCheck, Calenda
 import { useUserMastery } from '../hooks/useUserMastery';
 import { applyDiscursiveSelfRatingOutcome } from '../lib/spacedRepetition';
 import { Panel } from '../components/ui/Panel';
-import { PALETTES } from '../prototypes/NucleoInstrumentalPrototype';
+import { PALETTES, PALETTE_INK } from '../prototypes/NucleoInstrumentalPrototype';
 import { SUBJECT_ICONS } from './Dashboard';
 
 const DISCURSIVE_BOARDS = ['Fuvest', 'Unicamp', 'Unesp', 'Famerp', 'Unifesp'];
@@ -107,7 +107,7 @@ function CorrectionCard({ correction }: { correction: AnswerCorrection }) {
         <AiText text={correction.porque} />
       </div>
       <div className="p-3.5 rounded-xl border border-[var(--primary)]/30 bg-[var(--primary)]/10 text-xs text-[var(--text)]">
-        <p className="font-semibold mb-1 text-[var(--primary)]">Correção mínima</p>
+        <p className="font-semibold mb-1 subject-text">Correção mínima</p>
         <AiText text={correction.correcaoMinima} />
       </div>
       <div className="p-3.5 rounded-xl bg-[var(--surface2)] border border-[var(--line)] text-xs text-[var(--text)]">
@@ -202,7 +202,7 @@ function ExplicarPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, 
       <button
         onClick={explain}
         disabled={loading}
-        className="px-4 py-2 bg-[var(--primary)] text-[var(--wash)] disabled:opacity-50 rounded-lg text-xs font-semibold transition-opacity"
+        className="px-4 py-2 bg-[var(--primary)] text-[var(--ink-on-primary)] disabled:opacity-50 rounded-lg text-xs font-semibold transition-opacity"
       >
         {loading ? 'Explicando...' : 'Explicar'}
       </button>
@@ -211,7 +211,7 @@ function ExplicarPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, 
       {explanation && (
         <div className="space-y-3 pt-2">
           <div className="p-3.5 rounded-xl border border-[var(--primary)]/30 bg-[var(--primary)]/10 text-xs text-[var(--text)]">
-            <p className="font-semibold mb-1 flex items-center text-[var(--primary)]"><Lightbulb className="w-3.5 h-3.5 mr-1.5" />Intuição</p>
+            <p className="font-semibold mb-1 flex items-center subject-text"><Lightbulb className="w-3.5 h-3.5 mr-1.5" />Intuição</p>
             <AiText text={explanation.intuicao} />
           </div>
           <div className="p-3.5 rounded-xl bg-[var(--surface2)] border border-[var(--line)] text-xs text-[var(--text)]">
@@ -336,7 +336,7 @@ function CorrigirPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, 
       <button
         onClick={correct}
         disabled={loading || !question.trim() || !answer.trim()}
-        className="px-4 py-2 bg-[var(--primary)] text-[var(--wash)] disabled:opacity-50 rounded-lg text-xs font-semibold transition-opacity"
+        className="px-4 py-2 bg-[var(--primary)] text-[var(--ink-on-primary)] disabled:opacity-50 rounded-lg text-xs font-semibold transition-opacity"
       >
         {loading ? 'Corrigindo...' : 'Corrigir resposta'}
       </button>
@@ -362,12 +362,16 @@ function QuestaoPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, s
     setCorrection(null);
     setAnswer('');
     try {
-      const data = await requestAiText('backlog-exercise', {
+      let acumulado = '';
+      const data = await requestAiTextStream('backlog-exercise', {
         topic: effectiveTopic,
         subject: topic.subject,
         mode: isDiscursive ? 'discursive' : 'solve',
         board: isDiscursive ? board : undefined,
         transfer,
+      }, (delta) => {
+        acumulado += delta;
+        setExercise(acumulado);
       });
       setExercise(data.text);
     } catch (err) {
@@ -421,7 +425,7 @@ function QuestaoPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, s
       <button
         onClick={() => generate(false)}
         disabled={generating}
-        className="px-4 py-2 bg-[var(--primary)] text-[var(--wash)] disabled:opacity-50 rounded-lg text-xs font-semibold transition-opacity"
+        className="px-4 py-2 bg-[var(--primary)] text-[var(--ink-on-primary)] disabled:opacity-50 rounded-lg text-xs font-semibold transition-opacity"
       >
         {generating ? 'Gerando...' : 'Gerar questão'}
       </button>
@@ -444,7 +448,7 @@ function QuestaoPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, s
           <button
             onClick={correct}
             disabled={correcting || !answer.trim()}
-            className="px-4 py-2 bg-[var(--primary)] text-[var(--wash)] disabled:opacity-50 rounded-lg text-xs font-semibold transition-opacity"
+            className="px-4 py-2 bg-[var(--primary)] text-[var(--ink-on-primary)] disabled:opacity-50 rounded-lg text-xs font-semibold transition-opacity"
           >
             {correcting ? 'Corrigindo...' : 'Corrigir resposta'}
           </button>
@@ -457,7 +461,7 @@ function QuestaoPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, s
           <button
             onClick={() => generate(true)}
             disabled={generating}
-            className="flex items-center px-4 py-2 border border-[var(--primary)] text-[var(--primary)] rounded-lg text-xs font-semibold hover:bg-[var(--surface2)] transition-colors"
+            className="flex items-center px-4 py-2 border border-[var(--primary)] subject-text rounded-lg text-xs font-semibold hover:bg-[var(--surface2)] transition-colors"
           >
             <RotateCcw className="w-3.5 h-3.5 mr-1.5" />
             Questão de transferência (mesmo conceito, novo contexto)
@@ -472,13 +476,13 @@ function RevisaoPanel() {
   const navigate = useNavigate();
   return (
     <div className="p-8 flex-1 flex flex-col items-center justify-center text-center">
-      <CalendarClock className="w-8 h-8 text-[var(--primary)] mb-3" />
+      <CalendarClock className="w-8 h-8 subject-text mb-3" />
       <p className="text-xs text-[var(--dim)] mb-4 max-w-sm">
         A fila de repetição espaçada adaptativa gerencia seus prazos reais com base no algoritmo SM-2.
       </p>
       <button
         onClick={() => navigate('/revisoes')}
-        className="px-4 py-2 bg-[var(--primary)] text-[var(--wash)] rounded-lg text-xs font-semibold hover:opacity-90 transition-opacity"
+        className="px-4 py-2 bg-[var(--primary)] text-[var(--ink-on-primary)] rounded-lg text-xs font-semibold hover:opacity-90 transition-opacity"
       >
         Ir para Revisões
       </button>
@@ -537,7 +541,7 @@ function DuvidaPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, se
     <>
       <div className="px-5 py-3 border-b border-[var(--line)] bg-[var(--surface2)]/50 flex items-center justify-between flex-wrap gap-2">
         <div className="flex items-center text-xs font-medium text-[var(--text)]">
-          <Brain className="w-4 h-4 mr-2 text-[var(--primary)]" />
+          <Brain className="w-4 h-4 mr-2 subject-text" />
           <span>Sessão ativa</span>
         </div>
         <TopicSelect topicsBySubject={topicsBySubject} topicId={topicId} onChange={setTopicId} topic={topic} subtopic={subtopic} setSubtopic={setSubtopic} />
@@ -552,14 +556,14 @@ function DuvidaPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, se
             <div className={`flex max-w-[85%] ${msg.sender === 'user' ? 'flex-row-reverse' : 'flex-row'}`}>
               <div className={`w-7 h-7 rounded-full flex items-center justify-center shrink-0 ${
                 msg.sender === 'user'
-                  ? 'bg-[var(--primary)] text-[var(--wash)] ml-2.5'
-                  : 'bg-[var(--surface2)] border border-[var(--line)] text-[var(--primary)] mr-2.5'
+                  ? 'bg-[var(--primary)] text-[var(--ink-on-primary)] ml-2.5'
+                  : 'bg-[var(--surface2)] border border-[var(--line)] subject-text mr-2.5'
               }`}>
                 {msg.sender === 'user' ? <User className="w-3.5 h-3.5" /> : <Bot className="w-3.5 h-3.5" />}
               </div>
               <div className={`px-4 py-3 rounded-2xl text-xs leading-relaxed ${
                 msg.sender === 'user'
-                  ? 'bg-[var(--primary)] text-[var(--wash)]'
+                  ? 'bg-[var(--primary)] text-[var(--ink-on-primary)]'
                   : 'bg-[var(--surface2)] text-[var(--text)] border border-[var(--line)]'
               }`}>
                 {msg.sender === 'user' ? <p className="whitespace-pre-wrap">{msg.text}</p> : <AiText text={msg.text} />}
@@ -571,7 +575,7 @@ function DuvidaPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, se
         {isLoading && (
           <div className="flex justify-start">
             <div className="flex flex-row max-w-[85%]">
-              <div className="w-7 h-7 rounded-full bg-[var(--surface2)] border border-[var(--line)] text-[var(--primary)] mr-2.5 flex items-center justify-center shrink-0">
+              <div className="w-7 h-7 rounded-full bg-[var(--surface2)] border border-[var(--line)] subject-text mr-2.5 flex items-center justify-center shrink-0">
                 <Bot className="w-3.5 h-3.5" />
               </div>
               <div className="px-4 py-3 rounded-2xl bg-[var(--surface2)] border border-[var(--line)] flex items-center space-x-1.5">
@@ -596,7 +600,7 @@ function DuvidaPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, se
           <button
             type="submit"
             disabled={isLoading || !input.trim()}
-            className="absolute right-1.5 w-8 h-8 rounded-lg bg-[var(--primary)] text-[var(--wash)] disabled:opacity-50 flex items-center justify-center transition-opacity"
+            className="absolute right-1.5 w-8 h-8 rounded-lg bg-[var(--primary)] text-[var(--ink-on-primary)] disabled:opacity-50 flex items-center justify-center transition-opacity"
           >
             <Send className="w-3.5 h-3.5" />
           </button>
@@ -616,7 +620,7 @@ export default function Tutor() {
     <div
       className="ni-main"
       style={{
-        '--primary': currentPalette.primary,
+        '--primary': currentPalette.primary, '--primary-ink': currentPalette.readable,
         '--secondary': currentPalette.secondary,
         '--wash': currentPalette.wash,
       } as React.CSSProperties}
@@ -626,7 +630,7 @@ export default function Tutor() {
         <span>LIBRARY</span>
         <i />
         <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
-          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--wash)]">
+          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--ink-on-primary)]">
             <SubIcon className="w-3 h-3" />
           </span>
           SOCRÁTICO
@@ -656,7 +660,7 @@ export default function Tutor() {
               onClick={() => setMode(m.value)}
               style={
                 active
-                  ? { backgroundColor: currentPalette.primary, color: currentPalette.wash, borderRadius: '4px', padding: '2px 8px' }
+                  ? { backgroundColor: currentPalette.primary, color: PALETTE_INK, borderRadius: '4px', padding: '2px 8px' }
                   : undefined
               }
             >

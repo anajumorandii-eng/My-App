@@ -1,4 +1,19 @@
 /* Brand shell: derived from the app icon. Subject colors remain inside learning signals only. */
+/* Tinta de texto e ícone POR CIMA de qualquer --primary. Constante, não varia
+   por matéria nem por tema: o --primary é sempre um pastel claro, nos dois
+   temas. Antes esse papel era do --wash, que é uma lavagem de fundo da mesma
+   matiz — dava de 1,3:1 a 1,5:1, quando o mínimo legível é 4,5:1. Espelha o
+   PALETTE_INK de src/prototypes/NucleoInstrumentalPrototype.tsx. */
+:root { --ink-on-primary: #16211c; }
+
+/* A cor da matéria quando ela vira TEXTO. No escuro é o próprio --primary: o
+   pastel contrasta de sobra com o fundo e é ele que dá cor à tela. No claro é o
+   tom `readable` da paleta, porque o pastel sobre o creme fica entre 1,46:1 e
+   2,62:1, abaixo do mínimo legível de 4,5:1. O fallback cobre qualquer tela que
+   ainda não passe o --primary-ink. */
+.ni-prototype .subject-text { color: var(--primary); }
+.ni-prototype.is-light .subject-text { color: var(--primary-ink, var(--primary)); }
+
 .ni-prototype {
   --primary: #d09b5d !important;
   --secondary: #f2d18a !important;

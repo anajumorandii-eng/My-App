@@ -4,7 +4,7 @@ import { buildRoadmap, upcomingMilestones } from '../lib/studyRoadmap';
 import { daysUntil } from '../data/examCalendar';
 import { Flag, CalendarClock, Clock } from 'lucide-react';
 import { Panel } from '../components/ui/Panel';
-import { PALETTES } from '../prototypes/NucleoInstrumentalPrototype';
+import { PALETTES, PALETTE_INK } from '../prototypes/NucleoInstrumentalPrototype';
 import { SUBJECT_ICONS } from './Dashboard';
 
 const RETAFINAL_PALETTE = PALETTES.História;
@@ -42,7 +42,7 @@ export default function RetaFinal() {
     <div
       className="ni-main"
       style={{
-        '--primary': RETAFINAL_PALETTE.primary,
+        '--primary': RETAFINAL_PALETTE.primary, '--primary-ink': RETAFINAL_PALETTE.readable,
         '--secondary': RETAFINAL_PALETTE.secondary,
         '--wash': RETAFINAL_PALETTE.wash,
       } as React.CSSProperties}
@@ -52,7 +52,7 @@ export default function RetaFinal() {
         <span>DECISÃO</span>
         <i />
         <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
-          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--wash)]">
+          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--ink-on-primary)]">
             <Flag className="w-3 h-3" />
           </span>
           HORIZONTE
@@ -83,10 +83,10 @@ export default function RetaFinal() {
               className="ni-panel p-5 transition-colors"
             >
               <div className="flex items-center text-[10px] font-mono text-[var(--dim)] mb-1 uppercase tracking-wider">
-                <CalendarClock className="w-3.5 h-3.5 mr-1.5 text-[var(--primary)]" />
+                <CalendarClock className="w-3.5 h-3.5 mr-1.5 subject-text" />
                 {exam.label}
               </div>
-              <p className="text-2xl font-bold font-mono text-[var(--primary)]">
+              <p className="text-2xl font-bold font-mono subject-text">
                 {daysUntil(exam.date) === 0 ? 'É hoje' : `${daysUntil(exam.date)} dias`}
               </p>
               <p className="text-[11px] font-mono text-[var(--dim)] mt-1">{formatDatePtBr(exam.date)}</p>
@@ -98,7 +98,7 @@ export default function RetaFinal() {
       {/* Summary net hours banner */}
       <Panel subject="História" className="ni-panel p-5 mb-4">
         <div className="flex items-center text-xs text-[var(--dim)]">
-          <Clock className="w-4 h-4 mr-2 text-[var(--primary)] shrink-0" />
+          <Clock className="w-4 h-4 mr-2 subject-text shrink-0" />
           <span>
             Nas próximas {weeks.length} semanas, você tem cerca de <b className="text-[var(--text)] font-mono">{totalNetHours}h</b> de estudo líquido no total (descontados cursinho e pausas obrigatórias).
           </span>
@@ -121,7 +121,7 @@ export default function RetaFinal() {
                   <span className="text-xs font-semibold text-[var(--text)] font-mono">{formatRange(week.weekStart, week.weekEnd)}</span>
                   <span
                     className="text-[10px] font-mono font-medium px-2 py-0.5 rounded-full"
-                    style={{ backgroundColor: RETAFINAL_PALETTE.primary, color: RETAFINAL_PALETTE.wash }}
+                    style={{ backgroundColor: RETAFINAL_PALETTE.primary, color: PALETTE_INK }}
                   >
                     {week.phase.label}
                   </span>

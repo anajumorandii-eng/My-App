@@ -4,7 +4,7 @@ import { secondPhaseProtocols } from '../data/resolutionStrategies';
 import { useDiscursiveAttempts } from '../hooks/useDiscursiveAttempts';
 import { useUserMastery } from '../hooks/useUserMastery';
 import { applyDiscursiveSelfRatingOutcome } from '../lib/spacedRepetition';
-import { requestAiText } from '../lib/aiClient';
+import { requestAiTextStream } from '../lib/aiClient';
 import { AiText } from '../components/AiText';
 import { DiscursiveQuestion } from '../types';
 import {
@@ -22,7 +22,7 @@ import {
   ChevronDown,
 } from 'lucide-react';
 import { Panel } from '../components/ui/Panel';
-import { PALETTES } from '../prototypes/NucleoInstrumentalPrototype';
+import { PALETTES, PALETTE_INK } from '../prototypes/NucleoInstrumentalPrototype';
 import { SUBJECT_ICONS } from './Dashboard';
 
 function formatTime(totalSeconds: number) {
@@ -127,12 +127,16 @@ export default function Treino2aFase() {
     if (!question || !answer.trim()) return;
     setLoadingFeedback(true);
     try {
-      const data = await requestAiText('discursive-feedback', {
+      let acumulado = '';
+      const data = await requestAiTextStream('discursive-feedback', {
         board: question.board,
         subject: question.subject,
         prompt: fullQuestionText(question),
         modelAnswer: question.modelAnswer,
         studentAnswer: answer,
+      }, (delta) => {
+        acumulado += delta;
+        setAiFeedback(acumulado);
       });
       setAiFeedback(data.text);
     } catch (error) {
@@ -150,7 +154,7 @@ export default function Treino2aFase() {
     <div
       className="ni-main"
       style={{
-        '--primary': currentPalette.primary,
+        '--primary': currentPalette.primary, '--primary-ink': currentPalette.readable,
         '--secondary': currentPalette.secondary,
         '--wash': currentPalette.wash,
       } as React.CSSProperties}
@@ -160,7 +164,7 @@ export default function Treino2aFase() {
         <span>PRACTICE</span>
         <i />
         <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
-          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--wash)]">
+          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--ink-on-primary)]">
             <SubjIcon className="w-3 h-3" />
           </span>
           DISCURSIVAS
@@ -199,7 +203,7 @@ export default function Treino2aFase() {
                 onClick={() => { changeFilter(setBoardFilter, b); changeFilter(setSubjectFilter, 'Todas'); }}
                 style={
                   active
-                    ? { backgroundColor: currentPalette.primary, color: currentPalette.wash, borderRadius: '4px', padding: '2px 8px' }
+                    ? { backgroundColor: currentPalette.primary, color: PALETTE_INK, borderRadius: '4px', padding: '2px 8px' }
                     : undefined
                 }
               >
@@ -220,11 +224,11 @@ export default function Treino2aFase() {
                 onClick={() => changeFilter(setSubjectFilter, s)}
                 style={
                   active
-                    ? { backgroundColor: subPal.primary, color: subPal.wash, borderRadius: '4px', padding: '2px 8px', display: 'inline-flex', alignItems: 'center', gap: '5px' }
+                    ? { backgroundColor: subPal.primary, color: PALETTE_INK, borderRadius: '4px', padding: '2px 8px', display: 'inline-flex', alignItems: 'center', gap: '5px' }
                     : { display: 'inline-flex', alignItems: 'center', gap: '5px' }
                 }
               >
-                {s !== 'Todas' && <Icon className="w-3 h-3" style={{ color: active ? subPal.wash : subPal.primary }} />}
+                {s !== 'Todas' && <Icon className="w-3 h-3" style={{ color: active ? PALETTE_INK : subPal.primary }} />}
                 <span>{s}</span>
               </button>
             );
@@ -250,7 +254,7 @@ export default function Treino2aFase() {
             <div className="flex items-center gap-2 flex-wrap">
               <span
                 className="text-[10px] font-mono font-semibold px-2.5 py-1 rounded-full"
-                style={{ backgroundColor: currentPalette.primary, color: currentPalette.wash }}
+                style={{ backgroundColor: currentPalette.primary, color: PALETTE_INK }}
               >
                 {question.board} {question.year}
               </span>
@@ -270,7 +274,7 @@ export default function Treino2aFase() {
               <ul className="mt-3 space-y-2">
                 {question.subItems.map((s) => (
                   <li key={s.letter} className="text-xs text-[var(--text)] flex">
-                    <span className="font-semibold mr-2 shrink-0 text-[var(--primary)]">({s.letter})</span>
+                    <span className="font-semibold mr-2 shrink-0 subject-text">({s.letter})</span>
                     <span>{s.prompt}</span>
                   </li>
                 ))}
@@ -289,7 +293,7 @@ export default function Treino2aFase() {
             <div className="border border-[var(--line)] rounded-xl overflow-hidden bg-[var(--surface2)]/50">
               <button
                 onClick={() => setShowProtocol((v) => !v)}
-                className="w-full flex items-center justify-between px-4 py-2.5 text-left text-xs font-medium text-[var(--primary)]"
+                className="w-full flex items-center justify-between px-4 py-2.5 text-left text-xs font-medium subject-text"
               >
                 <span className="flex items-center">
                   <Compass className="w-3.5 h-3.5 mr-2" />
@@ -303,7 +307,7 @@ export default function Treino2aFase() {
                     <div key={step.letter} className="flex items-start text-xs">
                       <span
                         className="w-5 h-5 rounded-full flex items-center justify-center mr-2 shrink-0 font-bold text-[10px] font-mono"
-                        style={{ backgroundColor: currentPalette.primary, color: currentPalette.wash }}
+                        style={{ backgroundColor: currentPalette.primary, color: PALETTE_INK }}
                       >
                         {step.letter}
                       </span>
@@ -329,7 +333,7 @@ export default function Treino2aFase() {
               <button
                 onClick={() => setIsRunning((r) => !r)}
                 disabled={secondsLeft === 0}
-                className="flex items-center px-3 py-1.5 bg-[var(--primary)] text-[var(--wash)] disabled:opacity-50 rounded-lg text-xs font-semibold transition-opacity"
+                className="flex items-center px-3 py-1.5 bg-[var(--primary)] text-[var(--ink-on-primary)] disabled:opacity-50 rounded-lg text-xs font-semibold transition-opacity"
               >
                 {isRunning ? <Pause className="w-3.5 h-3.5" /> : <Play className="w-3.5 h-3.5" />}
               </button>
@@ -361,7 +365,7 @@ export default function Treino2aFase() {
           {!revealed ? (
             <button
               onClick={() => setRevealed(true)}
-              className="w-full flex items-center justify-center py-2.5 border border-[var(--primary)] text-[var(--primary)] rounded-xl text-xs font-semibold hover:bg-[var(--surface2)] transition-colors"
+              className="w-full flex items-center justify-center py-2.5 border border-[var(--primary)] subject-text rounded-xl text-xs font-semibold hover:bg-[var(--surface2)] transition-colors"
             >
               <Eye className="w-4 h-4 mr-2" />
               Revelar gabarito comentado
@@ -384,7 +388,7 @@ export default function Treino2aFase() {
                 <button
                   onClick={fetchAiFeedback}
                   disabled={loadingFeedback || !answer.trim()}
-                  className="w-full flex items-center justify-center py-2.5 border border-[var(--primary)] text-[var(--primary)] rounded-xl font-semibold text-xs hover:bg-[var(--surface2)] disabled:opacity-50 transition-colors"
+                  className="w-full flex items-center justify-center py-2.5 border border-[var(--primary)] subject-text rounded-xl font-semibold text-xs hover:bg-[var(--surface2)] disabled:opacity-50 transition-colors"
                 >
                   <Sparkles className={`w-3.5 h-3.5 mr-1.5 ${loadingFeedback ? 'animate-pulse' : ''}`} />
                   {loadingFeedback ? 'Corrigindo com IA...' : answer.trim() ? 'Corrigir minha resposta com IA' : 'Escreva sua resposta para pedir correção'}
@@ -394,7 +398,7 @@ export default function Treino2aFase() {
               {aiFeedback && (
                 <div className="p-4 rounded-xl text-xs leading-relaxed border border-[var(--primary)]/30 bg-[var(--primary)]/10 text-[var(--text)]">
                   <div className="flex items-start gap-2">
-                    <Sparkles className="w-4 h-4 text-[var(--primary)] shrink-0 mt-0.5" />
+                    <Sparkles className="w-4 h-4 subject-text shrink-0 mt-0.5" />
                     <AiText text={aiFeedback} className="flex-1" />
                   </div>
                 </div>
@@ -418,7 +422,7 @@ export default function Treino2aFase() {
                       onClick={() => rate(r.value)}
                       disabled={rating !== null}
                       className="px-3 py-2 rounded-lg text-xs font-semibold border border-[var(--line)] bg-[var(--surface2)] hover:border-[var(--primary)] text-[var(--text)] transition-colors disabled:opacity-60"
-                      style={rating === r.value ? { backgroundColor: currentPalette.primary, color: currentPalette.wash } : undefined}
+                      style={rating === r.value ? { backgroundColor: currentPalette.primary, color: PALETTE_INK } : undefined}
                     >
                       {r.label}
                     </button>
@@ -428,7 +432,7 @@ export default function Treino2aFase() {
 
               <button
                 onClick={() => setIndex((i) => i + 1)}
-                className="w-full py-2.5 bg-[var(--primary)] text-[var(--wash)] rounded-xl font-semibold text-xs hover:opacity-90 transition-opacity"
+                className="w-full py-2.5 bg-[var(--primary)] text-[var(--ink-on-primary)] rounded-xl font-semibold text-xs hover:opacity-90 transition-opacity"
               >
                 Próxima questão
               </button>

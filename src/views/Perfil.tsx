@@ -167,7 +167,7 @@ export default function Perfil() {
     <div
       className="ni-main"
       style={{
-        '--primary': currentPalette.primary,
+        '--primary': currentPalette.primary, '--primary-ink': currentPalette.readable,
         '--secondary': currentPalette.secondary,
         '--wash': currentPalette.wash,
       } as React.CSSProperties}
@@ -177,7 +177,7 @@ export default function Perfil() {
         <span>CONTA</span>
         <i />
         <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
-          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--wash)]">
+          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--ink-on-primary)]">
             <UserCircle className="w-3 h-3" />
           </span>
           CONFIGURAÇÕES
@@ -237,7 +237,7 @@ export default function Perfil() {
                   key={exam}
                   onClick={() => toggleExam(exam)}
                   className="px-3 py-1 rounded-full text-xs font-semibold border border-[var(--line)] bg-[var(--surface2)] text-[var(--text)] transition-colors"
-                  style={active ? { backgroundColor: 'var(--primary)', color: 'var(--wash)', borderColor: 'var(--primary)' } : undefined}
+                  style={active ? { backgroundColor: 'var(--primary)', color: 'var(--ink-on-primary)', borderColor: 'var(--primary)' } : undefined}
                 >
                   {exam}
                 </button>
@@ -256,7 +256,7 @@ export default function Perfil() {
                   key={uni}
                   onClick={() => toggleUniversity(uni)}
                   className="px-3 py-1 rounded-full text-xs font-semibold border border-[var(--line)] bg-[var(--surface2)] text-[var(--text)] transition-colors"
-                  style={active ? { backgroundColor: 'var(--primary)', color: 'var(--wash)', borderColor: 'var(--primary)' } : undefined}
+                  style={active ? { backgroundColor: 'var(--primary)', color: 'var(--ink-on-primary)', borderColor: 'var(--primary)' } : undefined}
                 >
                   {uni}
                 </button>
@@ -270,7 +270,7 @@ export default function Perfil() {
             <label htmlFor="hours" className="text-xs font-semibold text-[var(--text)]">
               Horas disponíveis por semana
             </label>
-            <span className="text-xs font-mono font-bold text-[var(--primary)]">{hoursDraft}h/sem</span>
+            <span className="text-xs font-mono font-bold subject-text">{hoursDraft}h/sem</span>
           </div>
           <input
             id="hours"
@@ -297,7 +297,7 @@ export default function Perfil() {
                 key={value}
                 onClick={() => setEnergy(value)}
                 className="flex-1 flex items-center justify-center px-3 py-2 rounded-xl text-xs font-semibold border border-[var(--line)] bg-[var(--surface2)] text-[var(--text)] transition-colors"
-                style={profile.currentEnergyLevel === value ? { backgroundColor: 'var(--primary)', color: 'var(--wash)', borderColor: 'var(--primary)' } : undefined}
+                style={profile.currentEnergyLevel === value ? { backgroundColor: 'var(--primary)', color: 'var(--ink-on-primary)', borderColor: 'var(--primary)' } : undefined}
               >
                 <Icon className="w-3.5 h-3.5 mr-1.5" />
                 {label}
@@ -309,7 +309,7 @@ export default function Perfil() {
 
       {/* Target Goals & Board Weights */}
       <Panel subject="Matemática" className="ni-panel p-6 space-y-5">
-        <div className="flex items-center text-[var(--primary)]">
+        <div className="flex items-center subject-text">
           <Target className="w-4 h-4 mr-2" />
           <h3 className="font-display font-medium text-xs text-[var(--text)]">Objetivos e prioridade por banca</h3>
         </div>
@@ -392,7 +392,7 @@ export default function Perfil() {
                           key={value}
                           onClick={() => setBoardWeight(exam, { phaseFocus: value })}
                           className="flex-1 py-1 rounded-lg text-[11px] font-semibold border border-[var(--line)] bg-[var(--surface)] text-[var(--text)] transition-colors"
-                          style={bw.phaseFocus === value ? { backgroundColor: 'var(--primary)', color: 'var(--wash)', borderColor: 'var(--primary)' } : undefined}
+                          style={bw.phaseFocus === value ? { backgroundColor: 'var(--primary)', color: 'var(--ink-on-primary)', borderColor: 'var(--primary)' } : undefined}
                         >
                           {label}
                         </button>
@@ -426,7 +426,7 @@ export default function Perfil() {
       {/* Push Notifications */}
       <Panel subject="Matemática" className="ni-panel p-6 space-y-3">
         <div className="flex items-center justify-between">
-          <div className="flex items-center text-[var(--primary)]">
+          <div className="flex items-center subject-text">
             {reminderState === 'on' ? <Bell className="w-4 h-4 mr-2" /> : <BellOff className="w-4 h-4 mr-2" />}
             <h3 className="font-display font-medium text-xs text-[var(--text)]">Lembretes de revisão</h3>
           </div>
@@ -434,7 +434,7 @@ export default function Perfil() {
             onClick={toggleReminders}
             disabled={reminderBusy || !isConnected || !isPushSupported()}
             className="px-3 py-1.5 rounded-lg text-xs font-semibold border border-[var(--line)] bg-[var(--surface2)] text-[var(--text)] hover:bg-[var(--surface)] disabled:opacity-50 transition-colors"
-            style={reminderState === 'on' ? { backgroundColor: 'var(--primary)', color: 'var(--wash)', borderColor: 'var(--primary)' } : undefined}
+            style={reminderState === 'on' ? { backgroundColor: 'var(--primary)', color: 'var(--ink-on-primary)', borderColor: 'var(--primary)' } : undefined}
           >
             {reminderBusy ? 'Aguarde...' : reminderState === 'on' ? 'Ativado' : 'Ativar'}
           </button>

@@ -3,7 +3,7 @@ import { mockErrorLogs, mockTopics } from '../data/mockData';
 import { ErrorLog } from '../types';
 import { useAuth } from '../context/AuthContext';
 import { getUserErrorLogs, addUserErrorLog } from '../lib/userData';
-import { requestAiText } from '../lib/aiClient';
+import { requestAiTextStream } from '../lib/aiClient';
 import { ERROR_TYPE_LABELS as TYPE_LABELS, INTERVENTION_LABELS, CONFIDENCE_LABELS } from '../lib/errorLabels';
 import { AiText } from '../components/AiText';
 import { BookX, Plus, Sparkles, CloudOff, Stethoscope } from 'lucide-react';
@@ -11,7 +11,7 @@ import { useSummaryProgress } from '../hooks/useSummaryProgress';
 import { interactiveSummaries } from '../data/interactiveSummaries';
 import SummaryErrorsPanel from '../components/SummaryErrorsPanel';
 import { Panel } from '../components/ui/Panel';
-import { PALETTES } from '../prototypes/NucleoInstrumentalPrototype';
+import { PALETTES, PALETTE_INK } from '../prototypes/NucleoInstrumentalPrototype';
 import { SUBJECT_ICONS } from './Dashboard';
 
 const OUTCOME_LABELS: Record<NonNullable<ErrorLog['outcomeRating']>, string> = {
@@ -89,11 +89,15 @@ export default function Erros() {
 
     setGeneratingHypothesisFor(newLog.id);
     try {
-      const data = await requestAiText('error-hypothesis', {
+      let acumulado = '';
+      const data = await requestAiTextStream('error-hypothesis', {
         topic: topic?.name ?? 'Tópico desconhecido',
         subject: topic?.subject ?? 'Matéria desconhecida',
         errorType: TYPE_LABELS[newLog.type],
         notes: newLog.notes,
+      }, (delta) => {
+        acumulado += delta;
+        setLogs((prev) => prev.map((l) => (l.id === newLog.id ? { ...l, aiHypothesis: acumulado } : l)));
       });
       const withHypothesis: ErrorLog = { ...newLog, aiHypothesis: data.text };
       setLogs((prev) => prev.map((l) => (l.id === newLog.id ? withHypothesis : l)));
@@ -129,7 +133,7 @@ export default function Erros() {
     <div
       className="ni-main"
       style={{
-        '--primary': ERROR_PALETTE.primary,
+        '--primary': ERROR_PALETTE.primary, '--primary-ink': ERROR_PALETTE.readable,
         '--secondary': ERROR_PALETTE.secondary,
         '--wash': ERROR_PALETTE.wash,
       } as React.CSSProperties}
@@ -139,7 +143,7 @@ export default function Erros() {
         <span>ANÁLISE</span>
         <i />
         <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
-          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--wash)]">
+          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--ink-on-primary)]">
             <BookX className="w-3 h-3" />
           </span>
           DIAGNÓSTICO
@@ -174,7 +178,7 @@ export default function Erros() {
             onClick={() => setTypeFilter('all')}
             style={
               typeFilter === 'all'
-                ? { backgroundColor: ERROR_PALETTE.primary, color: ERROR_PALETTE.wash, borderRadius: '4px', padding: '2px 8px' }
+                ? { backgroundColor: ERROR_PALETTE.primary, color: PALETTE_INK, borderRadius: '4px', padding: '2px 8px' }
                 : undefined
             }
           >
@@ -190,7 +194,7 @@ export default function Erros() {
                 onClick={() => setTypeFilter(value as ErrorLog['type'])}
                 style={
                   active
-                    ? { backgroundColor: ERROR_PALETTE.primary, color: ERROR_PALETTE.wash, borderRadius: '4px', padding: '2px 8px' }
+                    ? { backgroundColor: ERROR_PALETTE.primary, color: PALETTE_INK, borderRadius: '4px', padding: '2px 8px' }
                     : undefined
                 }
               >
@@ -202,7 +206,7 @@ export default function Erros() {
 
         <button
           onClick={() => setShowForm((s) => !s)}
-          className="inline-flex items-center px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-[var(--primary)] text-[var(--wash)] hover:opacity-90 transition-opacity"
+          className="inline-flex items-center px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-[var(--primary)] text-[var(--ink-on-primary)] hover:opacity-90 transition-opacity"
         >
           <Plus className="w-3.5 h-3.5 mr-1.5" />
           Registrar erro
@@ -255,7 +259,7 @@ export default function Erros() {
             <button
               onClick={addLog}
               disabled={!form.notes.trim()}
-              className="px-4 py-2 bg-[var(--primary)] text-[var(--wash)] disabled:opacity-50 rounded-lg text-xs font-semibold transition-opacity"
+              className="px-4 py-2 bg-[var(--primary)] text-[var(--ink-on-primary)] disabled:opacity-50 rounded-lg text-xs font-semibold transition-opacity"
             >
               Salvar Registro
             </button>
@@ -287,7 +291,7 @@ export default function Erros() {
                 <div className="flex items-center gap-2.5">
                   <span
                     className="text-[10px] font-mono font-semibold px-2 py-0.5 rounded-full flex items-center gap-1"
-                    style={{ backgroundColor: subPalette.primary, color: subPalette.wash }}
+                    style={{ backgroundColor: subPalette.primary, color: PALETTE_INK }}
                   >
                     <SubjIcon className="w-3 h-3" />
                     {TYPE_LABELS[log.type]}
@@ -311,14 +315,14 @@ export default function Erros() {
               {log.aiHypothesis && (
                 <div className="mt-3 p-3 rounded-lg border border-[var(--primary)]/30 bg-[var(--primary)]/10 text-xs text-[var(--text)]">
                   <div className="flex items-start gap-2">
-                    <Sparkles className="w-4 h-4 text-[var(--primary)] shrink-0 mt-0.5" />
+                    <Sparkles className="w-4 h-4 subject-text shrink-0 mt-0.5" />
                     <AiText text={log.aiHypothesis} className="flex-1" />
                   </div>
                 </div>
               )}
               {!log.aiHypothesis && generatingHypothesisFor === log.id && (
                 <div className="mt-3 flex items-center p-2.5 rounded-lg bg-[var(--surface2)] text-xs text-[var(--dim)]">
-                  <Sparkles className="w-3.5 h-3.5 mr-2 animate-pulse text-[var(--primary)]" />
+                  <Sparkles className="w-3.5 h-3.5 mr-2 animate-pulse subject-text" />
                   Gerando hipótese analítica com IA...
                 </div>
               )}
@@ -326,7 +330,7 @@ export default function Erros() {
               {log.proposedIntervention && (
                 <div className="mt-3 p-3 rounded-lg bg-[var(--surface2)] border border-[var(--line)] text-xs">
                   <div className="flex items-start gap-2 mb-2">
-                    <Stethoscope className="w-4 h-4 text-[var(--primary)] shrink-0 mt-0.5" />
+                    <Stethoscope className="w-4 h-4 subject-text shrink-0 mt-0.5" />
                     <div>
                       <p className="font-semibold text-[var(--text)]">{INTERVENTION_LABELS[log.proposedIntervention.type]}</p>
                       <p className="text-[var(--dim)] mt-0.5">{log.proposedIntervention.description}</p>

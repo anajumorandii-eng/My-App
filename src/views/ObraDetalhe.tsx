@@ -6,7 +6,7 @@ import { LiteraryWork, WorkEdition, ExamRequirement, WorkUnit, ReadingProgress }
 import { getLiteraryWorkBySlug, getEditions, getExamRequirements, getWorkUnits } from '../lib/literaryCatalog';
 import { getReadingProgress, saveReadingProgress } from '../lib/literaryData';
 import { Panel } from '../components/ui/Panel';
-import { PALETTES } from '../prototypes/NucleoInstrumentalPrototype';
+import { PALETTES, PALETTE_INK } from '../prototypes/NucleoInstrumentalPrototype';
 import { SUBJECT_ICONS } from './Dashboard';
 
 type TabId = 'comece_aqui' | 'leitura_guiada' | 'analise' | 'passagens_chave' | 'fontes';
@@ -95,7 +95,7 @@ export default function ObraDetalhe() {
     return (
       <div className="text-center py-16 text-[var(--dim)]">
         Obra não encontrada.{' '}
-        <Link to="/obras" className="text-[var(--primary)] underline">Voltar ao catálogo</Link>.
+        <Link to="/obras" className="subject-text underline">Voltar ao catálogo</Link>.
       </div>
     );
   }
@@ -106,7 +106,7 @@ export default function ObraDetalhe() {
     <div
       className="ni-main"
       style={{
-        '--primary': LIT_PALETTE.primary,
+        '--primary': LIT_PALETTE.primary, '--primary-ink': LIT_PALETTE.readable,
         '--secondary': LIT_PALETTE.secondary,
         '--wash': LIT_PALETTE.wash,
       } as React.CSSProperties}
@@ -116,7 +116,7 @@ export default function ObraDetalhe() {
         <span>LIBRARY</span>
         <i />
         <Link to="/obras" style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
-          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--wash)]">
+          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--ink-on-primary)]">
             <LitIcon className="w-3 h-3" />
           </span>
           OBRAS
@@ -144,7 +144,7 @@ export default function ObraDetalhe() {
             <span
               key={r.id}
               className="text-[10px] font-mono px-2.5 py-1 rounded-full"
-              style={{ backgroundColor: LIT_PALETTE.primary, color: LIT_PALETTE.wash }}
+              style={{ backgroundColor: LIT_PALETTE.primary, color: PALETTE_INK }}
             >
               {r.board} {r.examCycle}
             </span>
@@ -160,8 +160,9 @@ export default function ObraDetalhe() {
             <button
               key={t.id}
               onClick={() => setTab(t.id)}
+              className={active ? 'subject-text' : undefined}
               style={active
-                ? { color: LIT_PALETTE.primary, borderBottom: `2px solid ${LIT_PALETTE.primary}`, paddingBottom: '6px', marginBottom: '-1px' }
+                ? { borderBottom: `2px solid ${LIT_PALETTE.primary}`, paddingBottom: '6px', marginBottom: '-1px' }
                 : { color: 'var(--dim)', paddingBottom: '6px', marginBottom: '-1px', borderBottom: '2px solid transparent' }}
             >
               {t.label}
@@ -186,7 +187,7 @@ export default function ObraDetalhe() {
             <p className="text-sm text-[var(--dim)]">O material-fonte desta obra ainda está sendo processado.</p>
           )}
           {requirements.some((r) => r.requiredScope !== 'obra completa') && (
-            <p className="text-sm" style={{ color: LIT_PALETTE.primary }}>
+            <p className="subject-text text-sm">
               <b>Atenção ao recorte exigido:</b> {requirements.find((r) => r.requiredScope !== 'obra completa')?.requiredScope}
             </p>
           )}
@@ -212,7 +213,7 @@ export default function ObraDetalhe() {
                 >
                   <span className="flex items-center text-sm text-[var(--text)]">
                     {done
-                      ? <CheckCircle2 className="w-4 h-4 mr-2 shrink-0" style={{ color: LIT_PALETTE.primary }} />
+                      ? <CheckCircle2 className="subject-text w-4 h-4 mr-2 shrink-0" />
                       : <Circle className="w-4 h-4 mr-2 text-[var(--dim)] shrink-0" />}
                     {u.order}. {u.title}
                   </span>

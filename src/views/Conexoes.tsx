@@ -137,7 +137,7 @@ export default function Conexoes() {
     <div
       className="ni-main"
       style={{
-        '--primary': currentPalette.primary,
+        '--primary': currentPalette.primary, '--primary-ink': currentPalette.readable,
         '--secondary': currentPalette.secondary,
         '--wash': currentPalette.wash,
       } as React.CSSProperties}
@@ -147,7 +147,7 @@ export default function Conexoes() {
         <span>FERRAMENTAS</span>
         <i />
         <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
-          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--wash)]">
+          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--ink-on-primary)]">
             <Link2 className="w-3 h-3" />
           </span>
           INTEGRAÇÃO
@@ -180,7 +180,7 @@ export default function Conexoes() {
           <div className="flex items-center gap-3">
             <div
               className="w-10 h-10 rounded-full flex items-center justify-center shrink-0"
-              style={{ backgroundColor: 'var(--primary)', color: 'var(--wash)' }}
+              style={{ backgroundColor: 'var(--primary)', color: 'var(--ink-on-primary)' }}
             >
               <CalendarIcon className="w-5 h-5" />
             </div>
@@ -203,7 +203,7 @@ export default function Conexoes() {
           ) : (
             <button
               onClick={handleConnect}
-              className="flex items-center px-3.5 py-1.5 bg-[var(--primary)] text-[var(--wash)] rounded-lg text-xs font-semibold hover:opacity-90 transition-opacity"
+              className="flex items-center px-3.5 py-1.5 bg-[var(--primary)] text-[var(--ink-on-primary)] rounded-lg text-xs font-semibold hover:opacity-90 transition-opacity"
             >
               <Link2 className="w-3.5 h-3.5 mr-1.5" />
               Conectar com Google
@@ -230,7 +230,7 @@ export default function Conexoes() {
                     const startTime = event.start.dateTime ? new Date(event.start.dateTime) : event.start.date ? new Date(event.start.date) : null;
                     return (
                       <div key={event.id} className="p-3 rounded-xl border border-[var(--line)] bg-[var(--surface2)] text-xs flex items-start gap-2.5">
-                        <Clock className="w-3.5 h-3.5 text-[var(--primary)] mt-0.5 shrink-0" />
+                        <Clock className="w-3.5 h-3.5 subject-text mt-0.5 shrink-0" />
                         <div>
                           <p className="font-medium text-[var(--text)]">{event.summary}</p>
                           {startTime && (
@@ -264,7 +264,7 @@ export default function Conexoes() {
                       rel="noreferrer"
                       className="p-3 rounded-xl border border-[var(--line)] bg-[var(--surface2)] text-xs flex items-start gap-2.5 hover:border-[var(--primary)] transition-colors"
                     >
-                      <FileText className="w-3.5 h-3.5 text-[var(--primary)] mt-0.5 shrink-0" />
+                      <FileText className="w-3.5 h-3.5 subject-text mt-0.5 shrink-0" />
                       <div className="min-w-0">
                         <p className="font-medium text-[var(--text)] truncate">{file.name}</p>
                         <p className="text-[11px] text-[var(--dim)] mt-0.5">Abrir no Google Drive</p>

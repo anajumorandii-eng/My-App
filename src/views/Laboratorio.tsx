@@ -3,11 +3,11 @@ import { mockTopics } from '../data/mockData';
 import { StudyMethod } from '../types';
 import { useUserMastery } from '../hooks/useUserMastery';
 import { useStudyMethods } from '../hooks/useStudyMethods';
-import { requestAiText } from '../lib/aiClient';
+import { requestAiTextStream } from '../lib/aiClient';
 import { AiText } from '../components/AiText';
 import { FlaskConical, ChevronDown, Brain, Repeat as RepeatIcon, Target, Zap, Sparkles, CheckCircle2 } from 'lucide-react';
 import { Panel } from '../components/ui/Panel';
-import { PALETTES } from '../prototypes/NucleoInstrumentalPrototype';
+import { PALETTES, PALETTE_INK } from '../prototypes/NucleoInstrumentalPrototype';
 
 const ACTIVE_IN_ENGINE = new Set(['method_spaced_repetition', 'method_interleaving']);
 
@@ -40,11 +40,15 @@ export default function Laboratorio() {
   const fetchExample = async (method: StudyMethod) => {
     setLoadingExampleFor(method.id);
     try {
-      const data = await requestAiText('method-example', {
+      let acumulado = '';
+      const data = await requestAiTextStream('method-example', {
         methodName: method.name,
         methodSummary: method.summary,
         topic: weakestTopic.name,
         subject: weakestTopic.subject,
+      }, (delta) => {
+        acumulado += delta;
+        setExamples((prev) => ({ ...prev, [method.id]: acumulado }));
       });
       setExamples((prev) => ({ ...prev, [method.id]: data.text }));
     } catch (error) {
@@ -60,7 +64,7 @@ export default function Laboratorio() {
     <div
       className="ni-main"
       style={{
-        '--primary': currentPalette.primary,
+        '--primary': currentPalette.primary, '--primary-ink': currentPalette.readable,
         '--secondary': currentPalette.secondary,
         '--wash': currentPalette.wash,
       } as React.CSSProperties}
@@ -70,7 +74,7 @@ export default function Laboratorio() {
         <span>FERRAMENTAS</span>
         <i />
         <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
-          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--wash)]">
+          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--ink-on-primary)]">
             <FlaskConical className="w-3 h-3" />
           </span>
           CIÊNCIA DA APRENDIZAGEM
@@ -98,7 +102,7 @@ export default function Laboratorio() {
           onClick={() => setCategoryFilter('all')}
           style={
             categoryFilter === 'all'
-              ? { backgroundColor: currentPalette.primary, color: currentPalette.wash, borderRadius: '4px', padding: '2px 8px' }
+              ? { backgroundColor: currentPalette.primary, color: PALETTE_INK, borderRadius: '4px', padding: '2px 8px' }
               : undefined
           }
         >
@@ -113,7 +117,7 @@ export default function Laboratorio() {
               onClick={() => setCategoryFilter(value)}
               style={
                 active
-                  ? { backgroundColor: currentPalette.primary, color: currentPalette.wash, borderRadius: '4px', padding: '2px 8px' }
+                  ? { backgroundColor: currentPalette.primary, color: PALETTE_INK, borderRadius: '4px', padding: '2px 8px' }
                   : undefined
               }
             >
@@ -144,7 +148,7 @@ export default function Laboratorio() {
                 <div className="flex items-center min-w-0">
                   <span
                     className="w-7 h-7 rounded-lg flex items-center justify-center mr-3 shrink-0"
-                    style={{ backgroundColor: 'var(--primary)', color: 'var(--wash)' }}
+                    style={{ backgroundColor: 'var(--primary)', color: 'var(--ink-on-primary)' }}
                   >
                     <Icon className="w-4 h-4" />
                   </span>
@@ -207,7 +211,7 @@ export default function Laboratorio() {
                       <button
                         onClick={() => fetchExample(method)}
                         disabled={loadingExampleFor === method.id}
-                        className="flex items-center px-3 py-1.5 text-xs font-semibold text-[var(--primary)] border border-[var(--primary)] rounded-lg hover:bg-[var(--surface2)] disabled:opacity-50 transition-colors"
+                        className="flex items-center px-3 py-1.5 text-xs font-semibold subject-text border border-[var(--primary)] rounded-lg hover:bg-[var(--surface2)] disabled:opacity-50 transition-colors"
                       >
                         <Sparkles className={`w-3.5 h-3.5 mr-1.5 ${loadingExampleFor === method.id ? 'animate-pulse' : ''}`} />
                         {loadingExampleFor === method.id
@@ -217,7 +221,7 @@ export default function Laboratorio() {
                     )}
                     {examples[method.id] && (
                       <div className="p-3 rounded-xl border border-[var(--primary)]/30 bg-[var(--primary)]/10 text-xs text-[var(--text)] leading-relaxed flex items-start gap-2">
-                        <Sparkles className="w-4 h-4 mr-1 text-[var(--primary)] mt-0.5 shrink-0" />
+                        <Sparkles className="w-4 h-4 mr-1 subject-text mt-0.5 shrink-0" />
                         <AiText text={examples[method.id]} className="flex-1" />
                       </div>
                     )}

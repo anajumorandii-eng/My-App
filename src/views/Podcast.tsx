@@ -1,13 +1,13 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { mockTopics } from '../data/mockData';
-import { requestAiText } from '../lib/aiClient';
+import { requestAiTextStream } from '../lib/aiClient';
 import { synthesizePodcastAudio, podcastAudioErrorMessage } from '../lib/podcastAudio';
 import { useUserProfile } from '../hooks/useUserProfile';
 import { usePodcastEpisodes } from '../hooks/usePodcastEpisodes';
 import { PodcastEpisode, UserProfile } from '../types';
 import { Headphones, Play, Square, Volume2, Sparkles, Clock, Mic, Loader2 } from 'lucide-react';
 import { Panel } from '../components/ui/Panel';
-import { PALETTES } from '../prototypes/NucleoInstrumentalPrototype';
+import { PALETTES, PALETTE_INK } from '../prototypes/NucleoInstrumentalPrototype';
 import { SUBJECT_ICONS } from './Dashboard';
 
 type DurationBucket = 'curto' | 'medio' | 'longo';
@@ -155,7 +155,11 @@ export default function Podcast() {
     const topicName = mockTopics.find((t) => t.id === topicId)?.name ?? subject;
     setGeneratingId(episodeId);
     try {
-      const data = await requestAiText('podcast-script', { title, subject, topic: topicName });
+      let acumulado = '';
+      const data = await requestAiTextStream('podcast-script', { title, subject, topic: topicName }, (delta) => {
+        acumulado += delta;
+        setAiScripts((prev) => ({ ...prev, [episodeId]: acumulado }));
+      });
       setAiScripts((prev) => ({ ...prev, [episodeId]: data.text }));
     } catch (error) {
       console.error('Failed to generate podcast script:', error);
@@ -168,7 +172,7 @@ export default function Podcast() {
     <div
       className="ni-main"
       style={{
-        '--primary': PODCAST_PALETTE.primary,
+        '--primary': PODCAST_PALETTE.primary, '--primary-ink': PODCAST_PALETTE.readable,
         '--secondary': PODCAST_PALETTE.secondary,
         '--wash': PODCAST_PALETTE.wash,
       } as React.CSSProperties}
@@ -178,7 +182,7 @@ export default function Podcast() {
         <span>LIBRARY</span>
         <i />
         <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
-          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--wash)]">
+          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--ink-on-primary)]">
             <Headphones className="w-3 h-3" />
           </span>
           ÁUDIO NEURAL
@@ -210,7 +214,7 @@ export default function Podcast() {
       <Panel subject="História" className="ni-panel p-5 mb-4 space-y-4">
         <div>
           <div className="flex items-center text-xs font-mono uppercase tracking-wider text-[var(--dim)] mb-2">
-            <Mic className="w-3.5 h-3.5 mr-1.5 text-[var(--primary)]" />
+            <Mic className="w-3.5 h-3.5 mr-1.5 subject-text" />
             Voz do narrador
           </div>
           <div className="ni-subjects" style={{ margin: 0 }}>
@@ -222,7 +226,7 @@ export default function Podcast() {
                   onClick={() => setVoiceName(value)}
                   style={
                     active
-                      ? { backgroundColor: PODCAST_PALETTE.primary, color: PODCAST_PALETTE.wash, borderRadius: '4px', padding: '2px 8px' }
+                      ? { backgroundColor: PODCAST_PALETTE.primary, color: PALETTE_INK, borderRadius: '4px', padding: '2px 8px' }
                       : undefined
                   }
                 >
@@ -235,7 +239,7 @@ export default function Podcast() {
 
         <div className="border-t border-[var(--line)] pt-3">
           <div className="flex items-center text-xs font-medium text-[var(--dim)] mb-2">
-            <Clock className="w-3.5 h-3.5 mr-1.5 text-[var(--primary)]" />
+            <Clock className="w-3.5 h-3.5 mr-1.5 subject-text" />
             Duração preferida
           </div>
           <div className="ni-subjects" style={{ margin: 0 }}>
@@ -247,7 +251,7 @@ export default function Podcast() {
                   onClick={() => setDurationPreference(value)}
                   style={
                     active
-                      ? { backgroundColor: PODCAST_PALETTE.primary, color: PODCAST_PALETTE.wash, borderRadius: '4px', padding: '2px 8px' }
+                      ? { backgroundColor: PODCAST_PALETTE.primary, color: PALETTE_INK, borderRadius: '4px', padding: '2px 8px' }
                       : undefined
                   }
                 >
@@ -291,7 +295,7 @@ export default function Podcast() {
                     className="w-10 h-10 rounded-full flex items-center justify-center mr-3.5 shrink-0 transition-colors"
                     style={{
                       backgroundColor: isPlaying ? subPal.primary : 'var(--surface2)',
-                      color: isPlaying ? subPal.wash : 'var(--text)',
+                      color: isPlaying ? PALETTE_INK : 'var(--text)',
                     }}
                   >
                     {isLoadingAudio ? (
@@ -305,12 +309,12 @@ export default function Podcast() {
                   <div className="min-w-0">
                     <h4 className="font-display font-medium text-sm text-[var(--text)] truncate flex items-center">
                       {episode.title}
-                      {isPlaying && <Volume2 className="w-3.5 h-3.5 ml-2 text-[var(--primary)] animate-pulse shrink-0" />}
+                      {isPlaying && <Volume2 className="w-3.5 h-3.5 ml-2 subject-text animate-pulse shrink-0" />}
                     </h4>
                     <div className="flex items-center text-[11px] text-[var(--dim)] mt-0.5 space-x-2 font-mono">
                       <span
                         className="text-[10px] px-2 py-0.5 rounded-full flex items-center gap-1 font-semibold"
-                        style={{ backgroundColor: subPal.primary, color: subPal.wash }}
+                        style={{ backgroundColor: subPal.primary, color: PALETTE_INK }}
                       >
                         <SubIcon className="w-2.5 h-2.5" />
                         {episode.subject}
@@ -320,7 +324,7 @@ export default function Podcast() {
                       {matchesPreference && (
                         <>
                           <span>•</span>
-                          <span className="flex items-center text-[var(--primary)]">
+                          <span className="flex items-center subject-text">
                             <Clock className="w-3 h-3 mr-1" />
                             Faixa preferida
                           </span>
@@ -329,7 +333,7 @@ export default function Podcast() {
                       {aiScript && (
                         <>
                           <span>•</span>
-                          <span className="flex items-center text-[var(--primary)]">
+                          <span className="flex items-center subject-text">
                             <Sparkles className="w-3 h-3 mr-1" />
                             IA
                           </span>
@@ -341,7 +345,7 @@ export default function Podcast() {
                 <button
                   onClick={() => generateScript(episode.id, episode.title, episode.subject, episode.topicId)}
                   disabled={isGenerating}
-                  className="shrink-0 ml-3 flex items-center px-2.5 py-1 text-xs font-mono text-[var(--primary)] border border-[var(--line)] rounded-lg hover:bg-[var(--surface2)] disabled:opacity-50 transition-colors"
+                  className="shrink-0 ml-3 flex items-center px-2.5 py-1 text-xs font-mono subject-text border border-[var(--line)] rounded-lg hover:bg-[var(--surface2)] disabled:opacity-50 transition-colors"
                 >
                   <Sparkles className={`w-3 h-3 mr-1 ${isGenerating ? 'animate-pulse' : ''}`} />
                   {isGenerating ? 'Gerando...' : aiScript ? 'Regerar' : 'Gerar IA'}

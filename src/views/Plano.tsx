@@ -7,7 +7,7 @@ import { currentStudyPhase } from '../lib/studyPhase';
 import { upcomingMilestones } from '../lib/studyRoadmap';
 import { daysUntil } from '../data/examCalendar';
 import { Panel } from '../components/ui/Panel';
-import { PALETTES } from '../prototypes/NucleoInstrumentalPrototype';
+import { PALETTES, PALETTE_INK } from '../prototypes/NucleoInstrumentalPrototype';
 import { SUBJECT_ICONS } from './Dashboard';
 
 function formatDatePtBr(iso: string): string {
@@ -39,7 +39,7 @@ export default function Plano() {
     <div
       className="ni-main"
       style={{
-        '--primary': PLANO_PALETTE.primary,
+        '--primary': PLANO_PALETTE.primary, '--primary-ink': PLANO_PALETTE.readable,
         '--secondary': PLANO_PALETTE.secondary,
         '--wash': PLANO_PALETTE.wash,
       } as React.CSSProperties}
@@ -49,7 +49,7 @@ export default function Plano() {
         <span>DECISÃO</span>
         <i />
         <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
-          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--wash)]">
+          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--ink-on-primary)]">
             <Map className="w-3 h-3" />
           </span>
           PLANEJAMENTO
@@ -79,7 +79,7 @@ export default function Plano() {
       {/* Phase banner */}
       <Panel subject="Matemática" className="ni-panel p-5 mb-4">
         <div className="flex items-center min-w-0">
-          <Flag className="w-5 h-5 mr-3 text-[var(--primary)] shrink-0" />
+          <Flag className="w-5 h-5 mr-3 subject-text shrink-0" />
           <div className="min-w-0">
             <p className="font-display font-medium text-sm text-[var(--text)]">
               Fase atual: <b>{phase.label}</b>
@@ -104,7 +104,7 @@ export default function Plano() {
             </p>
             <p className="text-[11px] text-[var(--dim)] mt-0.5">Calculado pela sua agenda semanal</p>
           </div>
-          <span className="text-2xl font-bold font-mono text-[var(--primary)]">
+          <span className="text-2xl font-bold font-mono subject-text">
             {effectiveMinutes} min
           </span>
         </div>
@@ -125,7 +125,7 @@ export default function Plano() {
 
         <div>
           <h2 className="text-xs font-display font-semibold flex items-center mb-2 text-[var(--text)]">
-            <CalendarClock className="w-3.5 h-3.5 mr-1.5 text-[var(--primary)]" />
+            <CalendarClock className="w-3.5 h-3.5 mr-1.5 subject-text" />
             Janelas de estudo
           </h2>
           <div className="flex flex-wrap gap-2">
@@ -169,7 +169,7 @@ export default function Plano() {
                 <div className="flex items-center min-w-0">
                   <div
                     className="w-8 h-8 rounded-full flex items-center justify-center mr-3 shrink-0 text-xs font-mono font-bold"
-                    style={{ backgroundColor: subPalette.primary, color: subPalette.wash }}
+                    style={{ backgroundColor: subPalette.primary, color: PALETTE_INK }}
                   >
                     {index + 1}
                   </div>
@@ -186,7 +186,7 @@ export default function Plano() {
                 </div>
                 <span
                   className="shrink-0 ml-4 text-xs font-mono font-semibold px-2.5 py-1 rounded-full"
-                  style={{ backgroundColor: subPalette.primary, color: subPalette.wash }}
+                  style={{ backgroundColor: subPalette.primary, color: PALETTE_INK }}
                 >
                   {action.allocatedMinutes} min
                 </span>
@@ -215,7 +215,7 @@ export default function Plano() {
                   <div className="flex items-center min-w-0">
                     <span
                       className="w-5 h-5 rounded-full mr-3 shrink-0 flex items-center justify-center"
-                      style={{ backgroundColor: pal.primary, color: pal.wash }}
+                      style={{ backgroundColor: pal.primary, color: PALETTE_INK }}
                     >
                       <SubIcon className="w-3 h-3" />
                     </span>

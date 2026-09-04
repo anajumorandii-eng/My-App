@@ -7,7 +7,7 @@ import {
 } from '../data/resolutionStrategies';
 import { Compass, ChevronDown, Lightbulb, AlertTriangle } from 'lucide-react';
 import { Panel } from '../components/ui/Panel';
-import { PALETTES } from '../prototypes/NucleoInstrumentalPrototype';
+import { PALETTES, PALETTE_INK } from '../prototypes/NucleoInstrumentalPrototype';
 import { SUBJECT_ICONS } from './Dashboard';
 
 type Tab = 'metodo' | 'materia' | 'banca' | 'segunda-fase';
@@ -30,7 +30,7 @@ export default function Estrategias() {
     <div
       className="ni-main"
       style={{
-        '--primary': ESTRATEGIA_PALETTE.primary,
+        '--primary': ESTRATEGIA_PALETTE.primary, '--primary-ink': ESTRATEGIA_PALETTE.readable,
         '--secondary': ESTRATEGIA_PALETTE.secondary,
         '--wash': ESTRATEGIA_PALETTE.wash,
       } as React.CSSProperties}
@@ -40,7 +40,7 @@ export default function Estrategias() {
         <span>ANÁLISE</span>
         <i />
         <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
-          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--wash)]">
+          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--ink-on-primary)]">
             <Compass className="w-3 h-3" />
           </span>
           HEURÍSTICAS
@@ -70,7 +70,7 @@ export default function Estrategias() {
               onClick={() => setTab(t.id)}
               style={
                 active
-                  ? { backgroundColor: ESTRATEGIA_PALETTE.primary, color: ESTRATEGIA_PALETTE.wash, borderRadius: '4px', padding: '2px 8px' }
+                  ? { backgroundColor: ESTRATEGIA_PALETTE.primary, color: PALETTE_INK, borderRadius: '4px', padding: '2px 8px' }
                   : undefined
               }
             >
@@ -91,7 +91,7 @@ export default function Estrategias() {
               <Panel key={s.step} subject="Filosofia" interactive className="ni-panel p-4 flex items-start gap-3">
                 <span
                   className="w-7 h-7 rounded-full flex items-center justify-center shrink-0 font-bold text-xs font-mono"
-                  style={{ backgroundColor: ESTRATEGIA_PALETTE.primary, color: ESTRATEGIA_PALETTE.wash }}
+                  style={{ backgroundColor: ESTRATEGIA_PALETTE.primary, color: PALETTE_INK }}
                 >
                   {s.step}
                 </span>
@@ -122,7 +122,7 @@ export default function Estrategias() {
                   <div className="flex items-center gap-2.5">
                     <span
                       className="w-6 h-6 rounded-full flex items-center justify-center shrink-0"
-                      style={{ backgroundColor: pal.primary, color: pal.wash }}
+                      style={{ backgroundColor: pal.primary, color: PALETTE_INK }}
                     >
                       <SubIcon className="w-3.5 h-3.5" />
                     </span>
@@ -134,13 +134,13 @@ export default function Estrategias() {
                   <div className="px-5 pb-5 pt-2 border-t border-[var(--line)] space-y-4">
                     <div>
                       <p className="text-xs font-semibold text-[var(--text)] mb-2 flex items-center">
-                        <Lightbulb className="w-3.5 h-3.5 mr-1.5 text-[var(--primary)]" />
+                        <Lightbulb className="w-3.5 h-3.5 mr-1.5 subject-text" />
                         Como resolver
                       </p>
                       <ul className="space-y-1.5">
                         {s.tips.map((tip, i) => (
                           <li key={i} className="text-xs text-[var(--dim)] flex items-start">
-                            <span className="mr-2 text-[var(--primary)]">•</span>
+                            <span className="mr-2 subject-text">•</span>
                             <span>{tip}</span>
                           </li>
                         ))}
@@ -176,7 +176,7 @@ export default function Estrategias() {
               <h3 className="font-display font-medium text-base text-[var(--text)]">{b.board}</h3>
               <p className="text-xs text-[var(--dim)] leading-relaxed">{b.profile}</p>
               <div className="p-3 rounded-lg border border-[var(--primary)]/30 bg-[var(--primary)]/10 text-xs text-[var(--text)] flex items-start gap-2">
-                <Lightbulb className="w-4 h-4 text-[var(--primary)] shrink-0 mt-0.5" />
+                <Lightbulb className="w-4 h-4 subject-text shrink-0 mt-0.5" />
                 <p className="leading-relaxed">{b.examStrategy}</p>
               </div>
             </Panel>
@@ -212,7 +212,7 @@ export default function Estrategias() {
                         <div key={step.letter} className="flex items-start gap-3">
                           <span
                             className="w-6 h-6 rounded-full flex items-center justify-center shrink-0 font-bold text-xs font-mono"
-                            style={{ backgroundColor: ESTRATEGIA_PALETTE.primary, color: ESTRATEGIA_PALETTE.wash }}
+                            style={{ backgroundColor: ESTRATEGIA_PALETTE.primary, color: PALETTE_INK }}
                           >
                             {step.letter}
                           </span>
@@ -229,7 +229,7 @@ export default function Estrategias() {
                         <ul className="space-y-1">
                           {p.responseStructure.map((r, i) => (
                             <li key={i} className="text-xs text-[var(--dim)] flex items-start">
-                              <span className="mr-2 text-[var(--primary)]">•</span>
+                              <span className="mr-2 subject-text">•</span>
                               <span>{r}</span>
                             </li>
                           ))}

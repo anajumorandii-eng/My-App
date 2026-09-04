@@ -16,7 +16,7 @@ import {
 } from 'recharts';
 import { mockTopics } from '../data/mockData';
 import { useUserMastery } from '../hooks/useUserMastery';
-import { requestAiText } from '../lib/aiClient';
+import { requestAiTextStream } from '../lib/aiClient';
 import { AiText } from '../components/AiText';
 import { TrendingUp, Trophy, AlertCircle, Gauge, CloudOff, Sparkles, ChevronDown } from 'lucide-react';
 import { useSummaryProgress } from '../hooks/useSummaryProgress';
@@ -24,7 +24,7 @@ import { interactiveSummaries } from '../data/interactiveSummaries';
 import { buildSummaryProgressDashboard } from '../lib/summaryProgressDashboard';
 import SummaryProgressDashboard from '../components/SummaryProgressDashboard';
 import { Panel } from '../components/ui/Panel';
-import { PALETTES } from '../prototypes/NucleoInstrumentalPrototype';
+import { PALETTES, PALETTE_INK } from '../prototypes/NucleoInstrumentalPrototype';
 import { SUBJECT_ICONS } from './Dashboard';
 
 const EVO_PALETTE = PALETTES.Matemática;
@@ -89,11 +89,15 @@ export default function Evolucao() {
     if (!strongest || !weakest) return;
     setLoadingInsight(true);
     try {
-      const data = await requestAiText('progress-insight', {
+      let acumulado = '';
+      const data = await requestAiTextStream('progress-insight', {
         topics: topicRows.map((r) => ({ name: r.name, subject: r.subject, level: r.level })),
         overallAverage,
         strongest: strongest.name,
         weakest: weakest.name,
+      }, (delta) => {
+        acumulado += delta;
+        setInsight(acumulado);
       });
       setInsight(data.text);
     } catch (error) {
@@ -107,7 +111,7 @@ export default function Evolucao() {
     <div
       className="ni-main"
       style={{
-        '--primary': EVO_PALETTE.primary,
+        '--primary': EVO_PALETTE.primary, '--primary-ink': EVO_PALETTE.readable,
         '--secondary': EVO_PALETTE.secondary,
         '--wash': EVO_PALETTE.wash,
       } as React.CSSProperties}
@@ -117,7 +121,7 @@ export default function Evolucao() {
         <span>ANÁLISE</span>
         <i />
         <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
-          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--wash)]">
+          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--ink-on-primary)]">
             <TrendingUp className="w-3 h-3" />
           </span>
           TELEMETRIA
@@ -152,14 +156,14 @@ export default function Evolucao() {
           <Panel subject="Matemática" className="ni-panel p-6 mb-4">
             <div className="flex items-center justify-between flex-wrap gap-3 mb-1">
               <h3 className="font-display font-medium text-base text-[var(--text)] flex items-center">
-                <Sparkles className="w-4 h-4 mr-2 text-[var(--primary)]" />
+                <Sparkles className="w-4 h-4 mr-2 subject-text" />
                 Diagnóstico com IA
               </h3>
               {!insight && (
                 <button
                   onClick={fetchInsight}
                   disabled={loadingInsight}
-                  className="flex items-center px-3 py-1.5 text-xs font-semibold text-[var(--primary)] border border-[var(--line)] rounded-lg hover:bg-[var(--surface2)] disabled:opacity-50 transition-colors"
+                  className="flex items-center px-3 py-1.5 text-xs font-semibold subject-text border border-[var(--line)] rounded-lg hover:bg-[var(--surface2)] disabled:opacity-50 transition-colors"
                 >
                   <Sparkles className={`w-3.5 h-3.5 mr-1.5 ${loadingInsight ? 'animate-pulse' : ''}`} />
                   {loadingInsight ? 'Analisando...' : 'Gerar diagnóstico'}
@@ -180,7 +184,7 @@ export default function Evolucao() {
           {/* Key Stat Cards */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4">
             <Panel subject="Matemática" interactive className="ni-panel p-5">
-              <div className="flex items-center text-[var(--primary)] mb-2">
+              <div className="flex items-center subject-text mb-2">
                 <Gauge className="w-4 h-4 mr-2" />
                 <h3 className="font-medium text-xs text-[var(--dim)]">Domínio médio geral</h3>
               </div>
@@ -264,7 +268,7 @@ export default function Evolucao() {
                     <div className="flex items-center min-w-0">
                       <span
                         className="w-5 h-5 rounded-full mr-3 shrink-0 flex items-center justify-center"
-                        style={{ backgroundColor: pal.primary, color: pal.wash }}
+                        style={{ backgroundColor: pal.primary, color: PALETTE_INK }}
                       >
                         <SubIcon className="w-3 h-3" />
                       </span>
