@@ -3,7 +3,7 @@ import { mockTopics } from '../data/mockData';
 import { StudyMethod } from '../types';
 import { useUserMastery } from '../hooks/useUserMastery';
 import { useStudyMethods } from '../hooks/useStudyMethods';
-import { requestAiText } from '../lib/aiClient';
+import { requestAiTextStream } from '../lib/aiClient';
 import { AiText } from '../components/AiText';
 import { FlaskConical, ChevronDown, Brain, Repeat as RepeatIcon, Target, Zap, Sparkles, CheckCircle2 } from 'lucide-react';
 import { Panel } from '../components/ui/Panel';
@@ -40,11 +40,15 @@ export default function Laboratorio() {
   const fetchExample = async (method: StudyMethod) => {
     setLoadingExampleFor(method.id);
     try {
-      const data = await requestAiText('method-example', {
+      let acumulado = '';
+      const data = await requestAiTextStream('method-example', {
         methodName: method.name,
         methodSummary: method.summary,
         topic: weakestTopic.name,
         subject: weakestTopic.subject,
+      }, (delta) => {
+        acumulado += delta;
+        setExamples((prev) => ({ ...prev, [method.id]: acumulado }));
       });
       setExamples((prev) => ({ ...prev, [method.id]: data.text }));
     } catch (error) {

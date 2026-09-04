@@ -362,12 +362,16 @@ function QuestaoPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, s
     setCorrection(null);
     setAnswer('');
     try {
-      const data = await requestAiText('backlog-exercise', {
+      let acumulado = '';
+      const data = await requestAiTextStream('backlog-exercise', {
         topic: effectiveTopic,
         subject: topic.subject,
         mode: isDiscursive ? 'discursive' : 'solve',
         board: isDiscursive ? board : undefined,
         transfer,
+      }, (delta) => {
+        acumulado += delta;
+        setExercise(acumulado);
       });
       setExercise(data.text);
     } catch (err) {

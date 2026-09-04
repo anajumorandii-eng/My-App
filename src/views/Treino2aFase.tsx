@@ -4,7 +4,7 @@ import { secondPhaseProtocols } from '../data/resolutionStrategies';
 import { useDiscursiveAttempts } from '../hooks/useDiscursiveAttempts';
 import { useUserMastery } from '../hooks/useUserMastery';
 import { applyDiscursiveSelfRatingOutcome } from '../lib/spacedRepetition';
-import { requestAiText } from '../lib/aiClient';
+import { requestAiTextStream } from '../lib/aiClient';
 import { AiText } from '../components/AiText';
 import { DiscursiveQuestion } from '../types';
 import {
@@ -127,12 +127,16 @@ export default function Treino2aFase() {
     if (!question || !answer.trim()) return;
     setLoadingFeedback(true);
     try {
-      const data = await requestAiText('discursive-feedback', {
+      let acumulado = '';
+      const data = await requestAiTextStream('discursive-feedback', {
         board: question.board,
         subject: question.subject,
         prompt: fullQuestionText(question),
         modelAnswer: question.modelAnswer,
         studentAnswer: answer,
+      }, (delta) => {
+        acumulado += delta;
+        setAiFeedback(acumulado);
       });
       setAiFeedback(data.text);
     } catch (error) {

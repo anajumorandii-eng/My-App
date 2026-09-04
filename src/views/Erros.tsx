@@ -3,7 +3,7 @@ import { mockErrorLogs, mockTopics } from '../data/mockData';
 import { ErrorLog } from '../types';
 import { useAuth } from '../context/AuthContext';
 import { getUserErrorLogs, addUserErrorLog } from '../lib/userData';
-import { requestAiText } from '../lib/aiClient';
+import { requestAiTextStream } from '../lib/aiClient';
 import { ERROR_TYPE_LABELS as TYPE_LABELS, INTERVENTION_LABELS, CONFIDENCE_LABELS } from '../lib/errorLabels';
 import { AiText } from '../components/AiText';
 import { BookX, Plus, Sparkles, CloudOff, Stethoscope } from 'lucide-react';
@@ -89,11 +89,15 @@ export default function Erros() {
 
     setGeneratingHypothesisFor(newLog.id);
     try {
-      const data = await requestAiText('error-hypothesis', {
+      let acumulado = '';
+      const data = await requestAiTextStream('error-hypothesis', {
         topic: topic?.name ?? 'Tópico desconhecido',
         subject: topic?.subject ?? 'Matéria desconhecida',
         errorType: TYPE_LABELS[newLog.type],
         notes: newLog.notes,
+      }, (delta) => {
+        acumulado += delta;
+        setLogs((prev) => prev.map((l) => (l.id === newLog.id ? { ...l, aiHypothesis: acumulado } : l)));
       });
       const withHypothesis: ErrorLog = { ...newLog, aiHypothesis: data.text };
       setLogs((prev) => prev.map((l) => (l.id === newLog.id ? withHypothesis : l)));

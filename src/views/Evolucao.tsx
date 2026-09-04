@@ -16,7 +16,7 @@ import {
 } from 'recharts';
 import { mockTopics } from '../data/mockData';
 import { useUserMastery } from '../hooks/useUserMastery';
-import { requestAiText } from '../lib/aiClient';
+import { requestAiTextStream } from '../lib/aiClient';
 import { AiText } from '../components/AiText';
 import { TrendingUp, Trophy, AlertCircle, Gauge, CloudOff, Sparkles, ChevronDown } from 'lucide-react';
 import { useSummaryProgress } from '../hooks/useSummaryProgress';
@@ -89,11 +89,15 @@ export default function Evolucao() {
     if (!strongest || !weakest) return;
     setLoadingInsight(true);
     try {
-      const data = await requestAiText('progress-insight', {
+      let acumulado = '';
+      const data = await requestAiTextStream('progress-insight', {
         topics: topicRows.map((r) => ({ name: r.name, subject: r.subject, level: r.level })),
         overallAverage,
         strongest: strongest.name,
         weakest: weakest.name,
+      }, (delta) => {
+        acumulado += delta;
+        setInsight(acumulado);
       });
       setInsight(data.text);
     } catch (error) {

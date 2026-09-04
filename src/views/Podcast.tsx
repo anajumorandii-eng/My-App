@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { mockTopics } from '../data/mockData';
-import { requestAiText } from '../lib/aiClient';
+import { requestAiTextStream } from '../lib/aiClient';
 import { synthesizePodcastAudio, podcastAudioErrorMessage } from '../lib/podcastAudio';
 import { useUserProfile } from '../hooks/useUserProfile';
 import { usePodcastEpisodes } from '../hooks/usePodcastEpisodes';
@@ -155,7 +155,11 @@ export default function Podcast() {
     const topicName = mockTopics.find((t) => t.id === topicId)?.name ?? subject;
     setGeneratingId(episodeId);
     try {
-      const data = await requestAiText('podcast-script', { title, subject, topic: topicName });
+      let acumulado = '';
+      const data = await requestAiTextStream('podcast-script', { title, subject, topic: topicName }, (delta) => {
+        acumulado += delta;
+        setAiScripts((prev) => ({ ...prev, [episodeId]: acumulado }));
+      });
       setAiScripts((prev) => ({ ...prev, [episodeId]: data.text }));
     } catch (error) {
       console.error('Failed to generate podcast script:', error);

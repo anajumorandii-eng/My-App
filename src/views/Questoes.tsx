@@ -3,7 +3,7 @@ import { useAuth } from '../context/AuthContext';
 import { useUserMastery } from '../hooks/useUserMastery';
 import { useQuestions } from '../hooks/useQuestions';
 import { addUserAttempt, addUserErrorLog } from '../lib/userData';
-import { requestAiText } from '../lib/aiClient';
+import { requestAiText, requestAiTextStream } from '../lib/aiClient';
 import { parseErrorDiagnosis, ErrorDiagnosis } from '../lib/errorDiagnosis';
 import { ERROR_TYPE_LABELS, INTERVENTION_LABELS } from '../lib/errorLabels';
 import { Skeleton } from '../components/ui/Skeleton';
@@ -225,13 +225,17 @@ export default function Questoes() {
     try {
       const selectedOption = question.options.find((o) => o.id === selectedOptionId);
       const correctOption = question.options.find((o) => o.id === question.correctOptionId);
-      const data = await requestAiText('question-explanation', {
+      let acumulado = '';
+      const data = await requestAiTextStream('question-explanation', {
         prompt: question.prompt,
         subject: question.subject,
         selectedAnswer: selectedOption?.text ?? '',
         correctAnswer: correctOption?.text ?? '',
         isCorrect,
         baseExplanation: question.explanation,
+      }, (delta) => {
+        acumulado += delta;
+        setDeepExplanation(acumulado);
       });
       setDeepExplanation(data.text);
     } catch (error) {

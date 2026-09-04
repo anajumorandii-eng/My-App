@@ -2,7 +2,7 @@ import React, { useMemo, useState } from 'react';
 import { mockTopics } from '../data/mockData';
 import { TopicMastery } from '../types';
 import { useUserMastery } from '../hooks/useUserMastery';
-import { requestAiText } from '../lib/aiClient';
+import { requestAiTextStream } from '../lib/aiClient';
 import { AiText } from '../components/AiText';
 import { urgencyOf } from '../lib/reviewUrgency';
 import { applyReviewOutcome, qualityFromSelfRating } from '../lib/spacedRepetition';
@@ -64,7 +64,11 @@ export default function Revisoes() {
     setLoadingTipFor(mastery.topicId);
     try {
       const daysSinceReview = Math.round((Date.now() - new Date(mastery.lastReviewed).getTime()) / 86400000);
-      const data = await requestAiText('review-tip', { topic: topicName, subject, level: mastery.level, daysSinceReview });
+      let acumulado = '';
+      const data = await requestAiTextStream('review-tip', { topic: topicName, subject, level: mastery.level, daysSinceReview }, (delta) => {
+        acumulado += delta;
+        setTips((prev) => ({ ...prev, [mastery.topicId]: acumulado }));
+      });
       setTips((prev) => ({ ...prev, [mastery.topicId]: data.text }));
     } catch (error) {
       console.error('Failed to fetch review tip:', error);

@@ -3,7 +3,7 @@ import { mockTopics } from '../data/mockData';
 import { useUserBacklog } from '../hooks/useUserBacklog';
 import { useUserMastery } from '../hooks/useUserMastery';
 import { useQuestions } from '../hooks/useQuestions';
-import { aiErrorMessage, requestAiText } from '../lib/aiClient';
+import { aiErrorMessage, requestAiText, requestAiTextStream } from '../lib/aiClient';
 import { AiText } from '../components/AiText';
 import {
   priorityScore,
@@ -145,10 +145,14 @@ function SupportLevelContent({
     setLoadingExercise(true);
     setExerciseError(null);
     try {
-      const data = await requestAiText('backlog-exercise', {
+      let acumulado = '';
+      const data = await requestAiTextStream('backlog-exercise', {
         topic: effectiveTopic,
         subject: topic.subject,
         mode: EXERCISE_MODE_BY_LEVEL[supportLevel],
+      }, (delta) => {
+        acumulado += delta;
+        setAiExerciseText(acumulado);
       });
       setAiExerciseText(data.text);
     } catch (error) {
@@ -164,12 +168,16 @@ function SupportLevelContent({
     setLoadingCorrection(true);
     setCorrectionError(null);
     try {
-      const data = await requestAiText('backlog-correction', {
+      let acumulado = '';
+      const data = await requestAiTextStream('backlog-correction', {
         topic: effectiveTopic,
         subject: topic.subject,
         exercise: exerciseText,
         studentAnswer,
         groundingAnswer,
+      }, (delta) => {
+        acumulado += delta;
+        setCorrection(acumulado);
       });
       setCorrection(data.text);
     } catch (error) {
