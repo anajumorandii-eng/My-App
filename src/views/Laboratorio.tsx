@@ -7,7 +7,7 @@ import { requestAiTextStream } from '../lib/aiClient';
 import { AiText } from '../components/AiText';
 import { FlaskConical, ChevronDown, Brain, Repeat as RepeatIcon, Target, Zap, Sparkles, CheckCircle2 } from 'lucide-react';
 import { Panel } from '../components/ui/Panel';
-import { PALETTES } from '../prototypes/NucleoInstrumentalPrototype';
+import { PALETTES, PALETTE_INK } from '../prototypes/NucleoInstrumentalPrototype';
 
 const ACTIVE_IN_ENGINE = new Set(['method_spaced_repetition', 'method_interleaving']);
 
@@ -74,7 +74,7 @@ export default function Laboratorio() {
         <span>FERRAMENTAS</span>
         <i />
         <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
-          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--wash)]">
+          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--ink-on-primary)]">
             <FlaskConical className="w-3 h-3" />
           </span>
           CIÊNCIA DA APRENDIZAGEM
@@ -102,7 +102,7 @@ export default function Laboratorio() {
           onClick={() => setCategoryFilter('all')}
           style={
             categoryFilter === 'all'
-              ? { backgroundColor: currentPalette.primary, color: currentPalette.wash, borderRadius: '4px', padding: '2px 8px' }
+              ? { backgroundColor: currentPalette.primary, color: PALETTE_INK, borderRadius: '4px', padding: '2px 8px' }
               : undefined
           }
         >
@@ -117,7 +117,7 @@ export default function Laboratorio() {
               onClick={() => setCategoryFilter(value)}
               style={
                 active
-                  ? { backgroundColor: currentPalette.primary, color: currentPalette.wash, borderRadius: '4px', padding: '2px 8px' }
+                  ? { backgroundColor: currentPalette.primary, color: PALETTE_INK, borderRadius: '4px', padding: '2px 8px' }
                   : undefined
               }
             >
@@ -148,7 +148,7 @@ export default function Laboratorio() {
                 <div className="flex items-center min-w-0">
                   <span
                     className="w-7 h-7 rounded-lg flex items-center justify-center mr-3 shrink-0"
-                    style={{ backgroundColor: 'var(--primary)', color: 'var(--wash)' }}
+                    style={{ backgroundColor: 'var(--primary)', color: 'var(--ink-on-primary)' }}
                   >
                     <Icon className="w-4 h-4" />
                   </span>

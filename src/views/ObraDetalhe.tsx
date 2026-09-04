@@ -6,7 +6,7 @@ import { LiteraryWork, WorkEdition, ExamRequirement, WorkUnit, ReadingProgress }
 import { getLiteraryWorkBySlug, getEditions, getExamRequirements, getWorkUnits } from '../lib/literaryCatalog';
 import { getReadingProgress, saveReadingProgress } from '../lib/literaryData';
 import { Panel } from '../components/ui/Panel';
-import { PALETTES } from '../prototypes/NucleoInstrumentalPrototype';
+import { PALETTES, PALETTE_INK } from '../prototypes/NucleoInstrumentalPrototype';
 import { SUBJECT_ICONS } from './Dashboard';
 
 type TabId = 'comece_aqui' | 'leitura_guiada' | 'analise' | 'passagens_chave' | 'fontes';
@@ -116,7 +116,7 @@ export default function ObraDetalhe() {
         <span>LIBRARY</span>
         <i />
         <Link to="/obras" style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
-          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--wash)]">
+          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--ink-on-primary)]">
             <LitIcon className="w-3 h-3" />
           </span>
           OBRAS
@@ -144,7 +144,7 @@ export default function ObraDetalhe() {
             <span
               key={r.id}
               className="text-[10px] font-mono px-2.5 py-1 rounded-full"
-              style={{ backgroundColor: LIT_PALETTE.primary, color: LIT_PALETTE.wash }}
+              style={{ backgroundColor: LIT_PALETTE.primary, color: PALETTE_INK }}
             >
               {r.board} {r.examCycle}
             </span>

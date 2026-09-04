@@ -7,7 +7,7 @@ import { usePodcastEpisodes } from '../hooks/usePodcastEpisodes';
 import { PodcastEpisode, UserProfile } from '../types';
 import { Headphones, Play, Square, Volume2, Sparkles, Clock, Mic, Loader2 } from 'lucide-react';
 import { Panel } from '../components/ui/Panel';
-import { PALETTES } from '../prototypes/NucleoInstrumentalPrototype';
+import { PALETTES, PALETTE_INK } from '../prototypes/NucleoInstrumentalPrototype';
 import { SUBJECT_ICONS } from './Dashboard';
 
 type DurationBucket = 'curto' | 'medio' | 'longo';
@@ -182,7 +182,7 @@ export default function Podcast() {
         <span>LIBRARY</span>
         <i />
         <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
-          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--wash)]">
+          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--ink-on-primary)]">
             <Headphones className="w-3 h-3" />
           </span>
           ÁUDIO NEURAL
@@ -226,7 +226,7 @@ export default function Podcast() {
                   onClick={() => setVoiceName(value)}
                   style={
                     active
-                      ? { backgroundColor: PODCAST_PALETTE.primary, color: PODCAST_PALETTE.wash, borderRadius: '4px', padding: '2px 8px' }
+                      ? { backgroundColor: PODCAST_PALETTE.primary, color: PALETTE_INK, borderRadius: '4px', padding: '2px 8px' }
                       : undefined
                   }
                 >
@@ -251,7 +251,7 @@ export default function Podcast() {
                   onClick={() => setDurationPreference(value)}
                   style={
                     active
-                      ? { backgroundColor: PODCAST_PALETTE.primary, color: PODCAST_PALETTE.wash, borderRadius: '4px', padding: '2px 8px' }
+                      ? { backgroundColor: PODCAST_PALETTE.primary, color: PALETTE_INK, borderRadius: '4px', padding: '2px 8px' }
                       : undefined
                   }
                 >
@@ -295,7 +295,7 @@ export default function Podcast() {
                     className="w-10 h-10 rounded-full flex items-center justify-center mr-3.5 shrink-0 transition-colors"
                     style={{
                       backgroundColor: isPlaying ? subPal.primary : 'var(--surface2)',
-                      color: isPlaying ? subPal.wash : 'var(--text)',
+                      color: isPlaying ? PALETTE_INK : 'var(--text)',
                     }}
                   >
                     {isLoadingAudio ? (
@@ -314,7 +314,7 @@ export default function Podcast() {
                     <div className="flex items-center text-[11px] text-[var(--dim)] mt-0.5 space-x-2 font-mono">
                       <span
                         className="text-[10px] px-2 py-0.5 rounded-full flex items-center gap-1 font-semibold"
-                        style={{ backgroundColor: subPal.primary, color: subPal.wash }}
+                        style={{ backgroundColor: subPal.primary, color: PALETTE_INK }}
                       >
                         <SubIcon className="w-2.5 h-2.5" />
                         {episode.subject}

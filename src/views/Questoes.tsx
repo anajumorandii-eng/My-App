@@ -268,7 +268,7 @@ export default function Questoes() {
           <>
             <i />
             <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
-              <span className="w-6 h-6 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--wash)]">
+              <span className="w-6 h-6 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--ink-on-primary)]">
                 {React.createElement(SUBJECT_ICONS[question.subject] ?? BookOpen, { className: 'w-3 h-3' })}
               </span>
               {(question?.subject ?? 'GERAL').toUpperCase()}

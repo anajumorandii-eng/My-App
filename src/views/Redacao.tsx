@@ -12,7 +12,7 @@ import { aiErrorMessage, requestAiText } from '../lib/aiClient';
 import { AnswerCorrection, parseAnswerCorrection } from '../lib/tutorContracts';
 import { AiText } from '../components/AiText';
 import { Panel } from '../components/ui/Panel';
-import { PALETTES } from '../prototypes/NucleoInstrumentalPrototype';
+import { PALETTES, PALETTE_INK } from '../prototypes/NucleoInstrumentalPrototype';
 import { SUBJECT_ICONS } from './Dashboard';
 
 type Tab = 'pratica' | 'estrutura' | 'bancas' | 'erros' | 'checklist';
@@ -83,7 +83,7 @@ export default function Redacao() {
         <span>REDAÇÃO</span>
         <i />
         <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
-          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--wash)]">
+          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--ink-on-primary)]">
             <PenIcon className="w-3 h-3" />
           </span>
           ATELIÊ DE ESCRITA
@@ -113,7 +113,7 @@ export default function Redacao() {
               onClick={() => setTab(t.id)}
               style={
                 active
-                  ? { backgroundColor: REDACAO_PALETTE.primary, color: REDACAO_PALETTE.wash, borderRadius: '4px', padding: '2px 8px' }
+                  ? { backgroundColor: REDACAO_PALETTE.primary, color: PALETTE_INK, borderRadius: '4px', padding: '2px 8px' }
                   : undefined
               }
             >
@@ -167,7 +167,7 @@ export default function Redacao() {
               <button
                 onClick={correctEssay}
                 disabled={correcting || !theme.trim() || !draft.trim()}
-                className="flex items-center px-3.5 py-1.5 bg-[var(--primary)] text-[var(--wash)] disabled:opacity-50 rounded-lg text-xs font-semibold transition-opacity"
+                className="flex items-center px-3.5 py-1.5 bg-[var(--primary)] text-[var(--ink-on-primary)] disabled:opacity-50 rounded-lg text-xs font-semibold transition-opacity"
               >
                 <Sparkles className="w-3.5 h-3.5 mr-1.5" />
                 {correcting ? 'Corrigindo...' : 'Corrigir com IA'}
@@ -251,7 +251,7 @@ export default function Redacao() {
                 <Panel key={el.letter} subject="Português" interactive className="ni-panel p-4 flex items-start gap-3">
                   <span
                     className="w-7 h-7 rounded-full flex items-center justify-center shrink-0 font-bold text-xs font-mono"
-                    style={{ backgroundColor: REDACAO_PALETTE.primary, color: REDACAO_PALETTE.wash }}
+                    style={{ backgroundColor: REDACAO_PALETTE.primary, color: PALETTE_INK }}
                   >
                     {el.letter}
                   </span>
@@ -309,7 +309,7 @@ export default function Redacao() {
                   <span
                     key={i}
                     className="text-[11px] font-mono px-2.5 py-1 rounded-full"
-                    style={{ backgroundColor: REDACAO_PALETTE.primary, color: REDACAO_PALETTE.wash }}
+                    style={{ backgroundColor: REDACAO_PALETTE.primary, color: PALETTE_INK }}
                   >
                     {phrase}
                   </span>

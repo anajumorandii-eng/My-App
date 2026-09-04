@@ -3,7 +3,7 @@ import { examPriorities, targetExamBoards, extraExamBoards } from '../data/examP
 import { literaryWorks } from '../data/literaryWorks';
 import { Target, ChevronDown, BookOpen, AlertTriangle } from 'lucide-react';
 import { Panel } from '../components/ui/Panel';
-import { PALETTES } from '../prototypes/NucleoInstrumentalPrototype';
+import { PALETTES, PALETTE_INK } from '../prototypes/NucleoInstrumentalPrototype';
 import { SUBJECT_ICONS } from './Dashboard';
 
 export default function Prioridades() {
@@ -34,7 +34,7 @@ export default function Prioridades() {
         <span>ANÁLISE</span>
         <i />
         <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
-          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--wash)]">
+          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--ink-on-primary)]">
             <SubjIcon className="w-3 h-3" />
           </span>
           INCIDÊNCIA
@@ -67,11 +67,11 @@ export default function Prioridades() {
               onClick={() => setActiveSubject(subject)}
               style={
                 active
-                  ? { backgroundColor: subPal.primary, color: subPal.wash, borderRadius: '4px', padding: '2px 8px', display: 'inline-flex', alignItems: 'center', gap: '6px' }
+                  ? { backgroundColor: subPal.primary, color: PALETTE_INK, borderRadius: '4px', padding: '2px 8px', display: 'inline-flex', alignItems: 'center', gap: '6px' }
                   : { display: 'inline-flex', alignItems: 'center', gap: '6px' }
               }
             >
-              <Icon className="w-3 h-3" style={{ color: active ? subPal.wash : subPal.primary }} />
+              <Icon className="w-3 h-3" style={{ color: active ? PALETTE_INK : subPal.primary }} />
               <span>{subject}</span>
             </button>
           );
@@ -127,7 +127,7 @@ export default function Prioridades() {
                         className="text-[10px] font-mono font-semibold px-2 py-0.5 rounded-full mr-3 shrink-0"
                         style={{
                           backgroundColor: isTarget ? currentPalette.primary : 'var(--surface2)',
-                          color: isTarget ? currentPalette.wash : 'var(--dim)',
+                          color: isTarget ? PALETTE_INK : 'var(--dim)',
                         }}
                       >
                         {board}

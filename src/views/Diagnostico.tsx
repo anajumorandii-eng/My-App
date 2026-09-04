@@ -23,7 +23,7 @@ import { EmptyState } from '../components/ui/EmptyState';
 import { Skeleton } from '../components/ui/Skeleton';
 import { MasteryMeter } from '../features/daily-plan/components/MasteryMeter';
 import { CrivoCore, CrivoCoreState } from '../components/CrivoCore';
-import { PALETTES } from '../prototypes/NucleoInstrumentalPrototype';
+import { PALETTES, PALETTE_INK } from '../prototypes/NucleoInstrumentalPrototype';
 import { SUBJECT_ICONS } from './Dashboard';
 import { cn } from '../lib/cn';
 
@@ -452,7 +452,7 @@ function DiagnosticoContent({ mockQuestions, questionsSyncError }: { mockQuestio
         <span>DECISÃO</span>
         <i />
         <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
-          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--wash)]">
+          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--ink-on-primary)]">
             <SubIcon className="w-3 h-3" />
           </span>
           AVALIAÇÃO INICIAL
@@ -494,11 +494,11 @@ function DiagnosticoContent({ mockQuestions, questionsSyncError }: { mockQuestio
                   onClick={() => setSubjectFilter(s)}
                   style={
                     active
-                      ? { backgroundColor: subPal.primary, color: subPal.wash, borderRadius: '4px', padding: '2px 8px', display: 'inline-flex', alignItems: 'center', gap: '5px' }
+                      ? { backgroundColor: subPal.primary, color: PALETTE_INK, borderRadius: '4px', padding: '2px 8px', display: 'inline-flex', alignItems: 'center', gap: '5px' }
                       : { display: 'inline-flex', alignItems: 'center', gap: '5px' }
                   }
                 >
-                  <Icon className="w-3 h-3" style={{ color: active ? subPal.wash : subPal.primary }} />
+                  <Icon className="w-3 h-3" style={{ color: active ? PALETTE_INK : subPal.primary }} />
                   <span>{s}</span>
                 </button>
               );
@@ -606,7 +606,7 @@ function DiagnosticoContent({ mockQuestions, questionsSyncError }: { mockQuestio
           <button
             onClick={confirmSelfReport}
             disabled={selfState === null}
-            className="w-full py-2.5 bg-[var(--primary)] text-[var(--wash)] disabled:opacity-50 rounded-xl text-xs font-semibold transition-opacity"
+            className="w-full py-2.5 bg-[var(--primary)] text-[var(--ink-on-primary)] disabled:opacity-50 rounded-xl text-xs font-semibold transition-opacity"
           >
             {quizPool.length > 0 ? 'Continuar para o teste rápido' : 'Ver resultado'}
           </button>
@@ -682,7 +682,7 @@ function DiagnosticoContent({ mockQuestions, questionsSyncError }: { mockQuestio
               <button
                 onClick={nextQuizStep}
                 disabled={!answered}
-                className="w-full py-2.5 bg-[var(--primary)] text-[var(--wash)] disabled:opacity-50 rounded-xl text-xs font-semibold transition-opacity"
+                className="w-full py-2.5 bg-[var(--primary)] text-[var(--ink-on-primary)] disabled:opacity-50 rounded-xl text-xs font-semibold transition-opacity"
               >
                 {quizIndex + 1 < quizPool.length ? 'Próxima questão' : 'Ver resultado'}
               </button>
@@ -799,7 +799,7 @@ function DiagnosticoContent({ mockQuestions, questionsSyncError }: { mockQuestio
               <button
                 onClick={saveDiagnostic}
                 disabled={saving}
-                className="w-full py-2.5 bg-[var(--primary)] text-[var(--wash)] disabled:opacity-50 rounded-xl text-xs font-semibold transition-opacity"
+                className="w-full py-2.5 bg-[var(--primary)] text-[var(--ink-on-primary)] disabled:opacity-50 rounded-xl text-xs font-semibold transition-opacity"
               >
                 {saving ? 'Salvando…' : saveError ? 'Tentar novamente' : 'Salvar diagnóstico'}
               </button>

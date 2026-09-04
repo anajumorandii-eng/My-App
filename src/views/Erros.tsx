@@ -11,7 +11,7 @@ import { useSummaryProgress } from '../hooks/useSummaryProgress';
 import { interactiveSummaries } from '../data/interactiveSummaries';
 import SummaryErrorsPanel from '../components/SummaryErrorsPanel';
 import { Panel } from '../components/ui/Panel';
-import { PALETTES } from '../prototypes/NucleoInstrumentalPrototype';
+import { PALETTES, PALETTE_INK } from '../prototypes/NucleoInstrumentalPrototype';
 import { SUBJECT_ICONS } from './Dashboard';
 
 const OUTCOME_LABELS: Record<NonNullable<ErrorLog['outcomeRating']>, string> = {
@@ -143,7 +143,7 @@ export default function Erros() {
         <span>ANÁLISE</span>
         <i />
         <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
-          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--wash)]">
+          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--ink-on-primary)]">
             <BookX className="w-3 h-3" />
           </span>
           DIAGNÓSTICO
@@ -178,7 +178,7 @@ export default function Erros() {
             onClick={() => setTypeFilter('all')}
             style={
               typeFilter === 'all'
-                ? { backgroundColor: ERROR_PALETTE.primary, color: ERROR_PALETTE.wash, borderRadius: '4px', padding: '2px 8px' }
+                ? { backgroundColor: ERROR_PALETTE.primary, color: PALETTE_INK, borderRadius: '4px', padding: '2px 8px' }
                 : undefined
             }
           >
@@ -194,7 +194,7 @@ export default function Erros() {
                 onClick={() => setTypeFilter(value as ErrorLog['type'])}
                 style={
                   active
-                    ? { backgroundColor: ERROR_PALETTE.primary, color: ERROR_PALETTE.wash, borderRadius: '4px', padding: '2px 8px' }
+                    ? { backgroundColor: ERROR_PALETTE.primary, color: PALETTE_INK, borderRadius: '4px', padding: '2px 8px' }
                     : undefined
                 }
               >
@@ -206,7 +206,7 @@ export default function Erros() {
 
         <button
           onClick={() => setShowForm((s) => !s)}
-          className="inline-flex items-center px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-[var(--primary)] text-[var(--wash)] hover:opacity-90 transition-opacity"
+          className="inline-flex items-center px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-[var(--primary)] text-[var(--ink-on-primary)] hover:opacity-90 transition-opacity"
         >
           <Plus className="w-3.5 h-3.5 mr-1.5" />
           Registrar erro
@@ -259,7 +259,7 @@ export default function Erros() {
             <button
               onClick={addLog}
               disabled={!form.notes.trim()}
-              className="px-4 py-2 bg-[var(--primary)] text-[var(--wash)] disabled:opacity-50 rounded-lg text-xs font-semibold transition-opacity"
+              className="px-4 py-2 bg-[var(--primary)] text-[var(--ink-on-primary)] disabled:opacity-50 rounded-lg text-xs font-semibold transition-opacity"
             >
               Salvar Registro
             </button>
@@ -291,7 +291,7 @@ export default function Erros() {
                 <div className="flex items-center gap-2.5">
                   <span
                     className="text-[10px] font-mono font-semibold px-2 py-0.5 rounded-full flex items-center gap-1"
-                    style={{ backgroundColor: subPalette.primary, color: subPalette.wash }}
+                    style={{ backgroundColor: subPalette.primary, color: PALETTE_INK }}
                   >
                     <SubjIcon className="w-3 h-3" />
                     {TYPE_LABELS[log.type]}

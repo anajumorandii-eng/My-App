@@ -397,6 +397,20 @@ export const SCREENS: InstrumentalScreen[] = [
   },
 ];
 
+/**
+ * Tinta para texto e ícones POR CIMA do `primary` de qualquer paleta.
+ *
+ * O `wash` de cada paleta vinha sendo usado nesse papel, mas ele é uma lavagem
+ * de fundo — a mesma matiz do `primary` com ~35% de opacidade. Como texto sobre
+ * o próprio `primary` dava de 1,30:1 a 1,55:1 nas 11 paletas, quando o mínimo
+ * legível é 4,5:1: a cor sumia dentro do fundo. Com esta tinta o pior caso
+ * (História) fica em 5,60:1 e o melhor (Biologia) em 10,09:1.
+ *
+ * Não depende de tema: o `primary` é o mesmo pastel no claro e no escuro, então
+ * o texto sobre ele também precisa ser sempre escuro.
+ */
+export const PALETTE_INK = '#16211c';
+
 export const PALETTES: Record<
   string,
   { primary: string; secondary: string; wash: string; family: string }

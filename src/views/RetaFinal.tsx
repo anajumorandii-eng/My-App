@@ -4,7 +4,7 @@ import { buildRoadmap, upcomingMilestones } from '../lib/studyRoadmap';
 import { daysUntil } from '../data/examCalendar';
 import { Flag, CalendarClock, Clock } from 'lucide-react';
 import { Panel } from '../components/ui/Panel';
-import { PALETTES } from '../prototypes/NucleoInstrumentalPrototype';
+import { PALETTES, PALETTE_INK } from '../prototypes/NucleoInstrumentalPrototype';
 import { SUBJECT_ICONS } from './Dashboard';
 
 const RETAFINAL_PALETTE = PALETTES.História;
@@ -52,7 +52,7 @@ export default function RetaFinal() {
         <span>DECISÃO</span>
         <i />
         <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
-          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--wash)]">
+          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--ink-on-primary)]">
             <Flag className="w-3 h-3" />
           </span>
           HORIZONTE
@@ -121,7 +121,7 @@ export default function RetaFinal() {
                   <span className="text-xs font-semibold text-[var(--text)] font-mono">{formatRange(week.weekStart, week.weekEnd)}</span>
                   <span
                     className="text-[10px] font-mono font-medium px-2 py-0.5 rounded-full"
-                    style={{ backgroundColor: RETAFINAL_PALETTE.primary, color: RETAFINAL_PALETTE.wash }}
+                    style={{ backgroundColor: RETAFINAL_PALETTE.primary, color: PALETTE_INK }}
                   >
                     {week.phase.label}
                   </span>

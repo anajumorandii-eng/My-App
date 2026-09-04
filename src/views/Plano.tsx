@@ -7,7 +7,7 @@ import { currentStudyPhase } from '../lib/studyPhase';
 import { upcomingMilestones } from '../lib/studyRoadmap';
 import { daysUntil } from '../data/examCalendar';
 import { Panel } from '../components/ui/Panel';
-import { PALETTES } from '../prototypes/NucleoInstrumentalPrototype';
+import { PALETTES, PALETTE_INK } from '../prototypes/NucleoInstrumentalPrototype';
 import { SUBJECT_ICONS } from './Dashboard';
 
 function formatDatePtBr(iso: string): string {
@@ -49,7 +49,7 @@ export default function Plano() {
         <span>DECISÃO</span>
         <i />
         <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
-          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--wash)]">
+          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--ink-on-primary)]">
             <Map className="w-3 h-3" />
           </span>
           PLANEJAMENTO
@@ -169,7 +169,7 @@ export default function Plano() {
                 <div className="flex items-center min-w-0">
                   <div
                     className="w-8 h-8 rounded-full flex items-center justify-center mr-3 shrink-0 text-xs font-mono font-bold"
-                    style={{ backgroundColor: subPalette.primary, color: subPalette.wash }}
+                    style={{ backgroundColor: subPalette.primary, color: PALETTE_INK }}
                   >
                     {index + 1}
                   </div>
@@ -186,7 +186,7 @@ export default function Plano() {
                 </div>
                 <span
                   className="shrink-0 ml-4 text-xs font-mono font-semibold px-2.5 py-1 rounded-full"
-                  style={{ backgroundColor: subPalette.primary, color: subPalette.wash }}
+                  style={{ backgroundColor: subPalette.primary, color: PALETTE_INK }}
                 >
                   {action.allocatedMinutes} min
                 </span>
@@ -215,7 +215,7 @@ export default function Plano() {
                   <div className="flex items-center min-w-0">
                     <span
                       className="w-5 h-5 rounded-full mr-3 shrink-0 flex items-center justify-center"
-                      style={{ backgroundColor: pal.primary, color: pal.wash }}
+                      style={{ backgroundColor: pal.primary, color: PALETTE_INK }}
                     >
                       <SubIcon className="w-3 h-3" />
                     </span>

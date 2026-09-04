@@ -147,7 +147,7 @@ export default function Conexoes() {
         <span>FERRAMENTAS</span>
         <i />
         <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
-          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--wash)]">
+          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--ink-on-primary)]">
             <Link2 className="w-3 h-3" />
           </span>
           INTEGRAÇÃO
@@ -180,7 +180,7 @@ export default function Conexoes() {
           <div className="flex items-center gap-3">
             <div
               className="w-10 h-10 rounded-full flex items-center justify-center shrink-0"
-              style={{ backgroundColor: 'var(--primary)', color: 'var(--wash)' }}
+              style={{ backgroundColor: 'var(--primary)', color: 'var(--ink-on-primary)' }}
             >
               <CalendarIcon className="w-5 h-5" />
             </div>
@@ -203,7 +203,7 @@ export default function Conexoes() {
           ) : (
             <button
               onClick={handleConnect}
-              className="flex items-center px-3.5 py-1.5 bg-[var(--primary)] text-[var(--wash)] rounded-lg text-xs font-semibold hover:opacity-90 transition-opacity"
+              className="flex items-center px-3.5 py-1.5 bg-[var(--primary)] text-[var(--ink-on-primary)] rounded-lg text-xs font-semibold hover:opacity-90 transition-opacity"
             >
               <Link2 className="w-3.5 h-3.5 mr-1.5" />
               Conectar com Google

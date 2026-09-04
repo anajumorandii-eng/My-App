@@ -24,7 +24,7 @@ import { interactiveSummaries } from '../data/interactiveSummaries';
 import { buildSummaryProgressDashboard } from '../lib/summaryProgressDashboard';
 import SummaryProgressDashboard from '../components/SummaryProgressDashboard';
 import { Panel } from '../components/ui/Panel';
-import { PALETTES } from '../prototypes/NucleoInstrumentalPrototype';
+import { PALETTES, PALETTE_INK } from '../prototypes/NucleoInstrumentalPrototype';
 import { SUBJECT_ICONS } from './Dashboard';
 
 const EVO_PALETTE = PALETTES.Matemática;
@@ -121,7 +121,7 @@ export default function Evolucao() {
         <span>ANÁLISE</span>
         <i />
         <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
-          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--wash)]">
+          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--ink-on-primary)]">
             <TrendingUp className="w-3 h-3" />
           </span>
           TELEMETRIA
@@ -268,7 +268,7 @@ export default function Evolucao() {
                     <div className="flex items-center min-w-0">
                       <span
                         className="w-5 h-5 rounded-full mr-3 shrink-0 flex items-center justify-center"
-                        style={{ backgroundColor: pal.primary, color: pal.wash }}
+                        style={{ backgroundColor: pal.primary, color: PALETTE_INK }}
                       >
                         <SubIcon className="w-3 h-3" />
                       </span>

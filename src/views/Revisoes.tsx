@@ -11,7 +11,7 @@ import { useSummaryProgress } from '../hooks/useSummaryProgress';
 import { interactiveSummaries } from '../data/interactiveSummaries';
 import SummaryReviewsPanel from '../components/SummaryReviewsPanel';
 import { Panel } from '../components/ui/Panel';
-import { PALETTES } from '../prototypes/NucleoInstrumentalPrototype';
+import { PALETTES, PALETTE_INK } from '../prototypes/NucleoInstrumentalPrototype';
 import { SUBJECT_ICONS } from './Dashboard';
 
 type SelfRating = 'fraco' | 'mediano' | 'forte';
@@ -94,7 +94,7 @@ export default function Revisoes() {
         <span>PRACTICE</span>
         <i />
         <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
-          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--wash)]">
+          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--ink-on-primary)]">
             <FirstIcon className="w-3 h-3" />
           </span>
           REPETIÇÃO ESPAÇADA
@@ -134,11 +134,11 @@ export default function Revisoes() {
               onClick={() => setSubjectFilter(subj)}
               style={
                 active
-                  ? { backgroundColor: subPalette.primary, color: subPalette.wash, display: 'inline-flex', alignItems: 'center', gap: '6px', borderRadius: '4px', padding: '2px 8px' }
+                  ? { backgroundColor: subPalette.primary, color: PALETTE_INK, display: 'inline-flex', alignItems: 'center', gap: '6px', borderRadius: '4px', padding: '2px 8px' }
                   : { display: 'inline-flex', alignItems: 'center', gap: '6px' }
               }
             >
-              {subj !== 'Todas' && <Icon className="w-3 h-3" style={{ color: active ? subPalette.wash : subPalette.primary }} />}
+              {subj !== 'Todas' && <Icon className="w-3 h-3" style={{ color: active ? PALETTE_INK : subPalette.primary }} />}
               <span>{subj}</span>
             </button>
           );
@@ -185,7 +185,7 @@ export default function Revisoes() {
                 <div className="flex items-center min-w-0">
                   <span
                     className="text-[10px] font-mono font-semibold px-2.5 py-1 rounded-full mr-3 shrink-0 flex items-center gap-1.5"
-                    style={{ backgroundColor: subPalette.primary, color: subPalette.wash }}
+                    style={{ backgroundColor: subPalette.primary, color: PALETTE_INK }}
                   >
                     <SubjIcon className="w-3 h-3" />
                     {topic!.subject}

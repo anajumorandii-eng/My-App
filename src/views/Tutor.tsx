@@ -9,7 +9,7 @@ import { Brain, Send, Bot, User, Sparkles, BookOpenText, ClipboardCheck, Calenda
 import { useUserMastery } from '../hooks/useUserMastery';
 import { applyDiscursiveSelfRatingOutcome } from '../lib/spacedRepetition';
 import { Panel } from '../components/ui/Panel';
-import { PALETTES } from '../prototypes/NucleoInstrumentalPrototype';
+import { PALETTES, PALETTE_INK } from '../prototypes/NucleoInstrumentalPrototype';
 import { SUBJECT_ICONS } from './Dashboard';
 
 const DISCURSIVE_BOARDS = ['Fuvest', 'Unicamp', 'Unesp', 'Famerp', 'Unifesp'];
@@ -202,7 +202,7 @@ function ExplicarPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, 
       <button
         onClick={explain}
         disabled={loading}
-        className="px-4 py-2 bg-[var(--primary)] text-[var(--wash)] disabled:opacity-50 rounded-lg text-xs font-semibold transition-opacity"
+        className="px-4 py-2 bg-[var(--primary)] text-[var(--ink-on-primary)] disabled:opacity-50 rounded-lg text-xs font-semibold transition-opacity"
       >
         {loading ? 'Explicando...' : 'Explicar'}
       </button>
@@ -336,7 +336,7 @@ function CorrigirPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, 
       <button
         onClick={correct}
         disabled={loading || !question.trim() || !answer.trim()}
-        className="px-4 py-2 bg-[var(--primary)] text-[var(--wash)] disabled:opacity-50 rounded-lg text-xs font-semibold transition-opacity"
+        className="px-4 py-2 bg-[var(--primary)] text-[var(--ink-on-primary)] disabled:opacity-50 rounded-lg text-xs font-semibold transition-opacity"
       >
         {loading ? 'Corrigindo...' : 'Corrigir resposta'}
       </button>
@@ -425,7 +425,7 @@ function QuestaoPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, s
       <button
         onClick={() => generate(false)}
         disabled={generating}
-        className="px-4 py-2 bg-[var(--primary)] text-[var(--wash)] disabled:opacity-50 rounded-lg text-xs font-semibold transition-opacity"
+        className="px-4 py-2 bg-[var(--primary)] text-[var(--ink-on-primary)] disabled:opacity-50 rounded-lg text-xs font-semibold transition-opacity"
       >
         {generating ? 'Gerando...' : 'Gerar questão'}
       </button>
@@ -448,7 +448,7 @@ function QuestaoPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, s
           <button
             onClick={correct}
             disabled={correcting || !answer.trim()}
-            className="px-4 py-2 bg-[var(--primary)] text-[var(--wash)] disabled:opacity-50 rounded-lg text-xs font-semibold transition-opacity"
+            className="px-4 py-2 bg-[var(--primary)] text-[var(--ink-on-primary)] disabled:opacity-50 rounded-lg text-xs font-semibold transition-opacity"
           >
             {correcting ? 'Corrigindo...' : 'Corrigir resposta'}
           </button>
@@ -482,7 +482,7 @@ function RevisaoPanel() {
       </p>
       <button
         onClick={() => navigate('/revisoes')}
-        className="px-4 py-2 bg-[var(--primary)] text-[var(--wash)] rounded-lg text-xs font-semibold hover:opacity-90 transition-opacity"
+        className="px-4 py-2 bg-[var(--primary)] text-[var(--ink-on-primary)] rounded-lg text-xs font-semibold hover:opacity-90 transition-opacity"
       >
         Ir para Revisões
       </button>
@@ -556,14 +556,14 @@ function DuvidaPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, se
             <div className={`flex max-w-[85%] ${msg.sender === 'user' ? 'flex-row-reverse' : 'flex-row'}`}>
               <div className={`w-7 h-7 rounded-full flex items-center justify-center shrink-0 ${
                 msg.sender === 'user'
-                  ? 'bg-[var(--primary)] text-[var(--wash)] ml-2.5'
+                  ? 'bg-[var(--primary)] text-[var(--ink-on-primary)] ml-2.5'
                   : 'bg-[var(--surface2)] border border-[var(--line)] text-[var(--primary)] mr-2.5'
               }`}>
                 {msg.sender === 'user' ? <User className="w-3.5 h-3.5" /> : <Bot className="w-3.5 h-3.5" />}
               </div>
               <div className={`px-4 py-3 rounded-2xl text-xs leading-relaxed ${
                 msg.sender === 'user'
-                  ? 'bg-[var(--primary)] text-[var(--wash)]'
+                  ? 'bg-[var(--primary)] text-[var(--ink-on-primary)]'
                   : 'bg-[var(--surface2)] text-[var(--text)] border border-[var(--line)]'
               }`}>
                 {msg.sender === 'user' ? <p className="whitespace-pre-wrap">{msg.text}</p> : <AiText text={msg.text} />}
@@ -600,7 +600,7 @@ function DuvidaPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, se
           <button
             type="submit"
             disabled={isLoading || !input.trim()}
-            className="absolute right-1.5 w-8 h-8 rounded-lg bg-[var(--primary)] text-[var(--wash)] disabled:opacity-50 flex items-center justify-center transition-opacity"
+            className="absolute right-1.5 w-8 h-8 rounded-lg bg-[var(--primary)] text-[var(--ink-on-primary)] disabled:opacity-50 flex items-center justify-center transition-opacity"
           >
             <Send className="w-3.5 h-3.5" />
           </button>
@@ -630,7 +630,7 @@ export default function Tutor() {
         <span>LIBRARY</span>
         <i />
         <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
-          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--wash)]">
+          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--ink-on-primary)]">
             <SubIcon className="w-3 h-3" />
           </span>
           SOCRÁTICO
@@ -660,7 +660,7 @@ export default function Tutor() {
               onClick={() => setMode(m.value)}
               style={
                 active
-                  ? { backgroundColor: currentPalette.primary, color: currentPalette.wash, borderRadius: '4px', padding: '2px 8px' }
+                  ? { backgroundColor: currentPalette.primary, color: PALETTE_INK, borderRadius: '4px', padding: '2px 8px' }
                   : undefined
               }
             >

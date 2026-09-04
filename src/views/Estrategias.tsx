@@ -7,7 +7,7 @@ import {
 } from '../data/resolutionStrategies';
 import { Compass, ChevronDown, Lightbulb, AlertTriangle } from 'lucide-react';
 import { Panel } from '../components/ui/Panel';
-import { PALETTES } from '../prototypes/NucleoInstrumentalPrototype';
+import { PALETTES, PALETTE_INK } from '../prototypes/NucleoInstrumentalPrototype';
 import { SUBJECT_ICONS } from './Dashboard';
 
 type Tab = 'metodo' | 'materia' | 'banca' | 'segunda-fase';
@@ -40,7 +40,7 @@ export default function Estrategias() {
         <span>ANÁLISE</span>
         <i />
         <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
-          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--wash)]">
+          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--ink-on-primary)]">
             <Compass className="w-3 h-3" />
           </span>
           HEURÍSTICAS
@@ -70,7 +70,7 @@ export default function Estrategias() {
               onClick={() => setTab(t.id)}
               style={
                 active
-                  ? { backgroundColor: ESTRATEGIA_PALETTE.primary, color: ESTRATEGIA_PALETTE.wash, borderRadius: '4px', padding: '2px 8px' }
+                  ? { backgroundColor: ESTRATEGIA_PALETTE.primary, color: PALETTE_INK, borderRadius: '4px', padding: '2px 8px' }
                   : undefined
               }
             >
@@ -91,7 +91,7 @@ export default function Estrategias() {
               <Panel key={s.step} subject="Filosofia" interactive className="ni-panel p-4 flex items-start gap-3">
                 <span
                   className="w-7 h-7 rounded-full flex items-center justify-center shrink-0 font-bold text-xs font-mono"
-                  style={{ backgroundColor: ESTRATEGIA_PALETTE.primary, color: ESTRATEGIA_PALETTE.wash }}
+                  style={{ backgroundColor: ESTRATEGIA_PALETTE.primary, color: PALETTE_INK }}
                 >
                   {s.step}
                 </span>
@@ -122,7 +122,7 @@ export default function Estrategias() {
                   <div className="flex items-center gap-2.5">
                     <span
                       className="w-6 h-6 rounded-full flex items-center justify-center shrink-0"
-                      style={{ backgroundColor: pal.primary, color: pal.wash }}
+                      style={{ backgroundColor: pal.primary, color: PALETTE_INK }}
                     >
                       <SubIcon className="w-3.5 h-3.5" />
                     </span>
@@ -212,7 +212,7 @@ export default function Estrategias() {
                         <div key={step.letter} className="flex items-start gap-3">
                           <span
                             className="w-6 h-6 rounded-full flex items-center justify-center shrink-0 font-bold text-xs font-mono"
-                            style={{ backgroundColor: ESTRATEGIA_PALETTE.primary, color: ESTRATEGIA_PALETTE.wash }}
+                            style={{ backgroundColor: ESTRATEGIA_PALETTE.primary, color: PALETTE_INK }}
                           >
                             {step.letter}
                           </span>
