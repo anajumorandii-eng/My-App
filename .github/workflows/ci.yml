@@ -14,11 +14,15 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+          cache: npm
 
-      # Mesmo gerenciador de pacotes do Dockerfile (não há package-lock.json
-      # commitado, só bun.lock — o build de produção também usa npm install).
-      - run: npm install --no-audit --no-fund
+      # npm ci respeita o package-lock.json commitado, então o CI instala
+      # exatamente as mesmas versões que o Dockerfile de produção.
+      - run: npm ci --no-audit --no-fund
 
       - run: npm run lint
 
       - run: npm test
+
+      # Sem este passo uma quebra de build só aparecia no deploy.
+      - run: npm run build

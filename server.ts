@@ -1,5 +1,6 @@
 import 'dotenv/config';
 import express from 'express';
+import compression from 'compression';
 import path from 'path';
 import { createServer as createViteServer } from 'vite';
 import cookieParser from 'cookie-parser';
@@ -8,7 +9,10 @@ import { createAiProvider } from './server/ai/provider';
 import { createAiDailyLimit, createAiRateLimit } from './server/ai/rateLimit';
 import { createAiRouter } from './server/ai/routes';
 import { AiService, parseAiTimeout } from './server/ai/service';
-import { firebaseAuthMiddleware, getFirebaseAdminApp, requireAdmin } from './server/auth/firebaseAuth';
+import { adminAuthMiddleware, firebaseAuthMiddleware, getFirebaseAdminApp, requireAdmin } from './server/auth/firebaseAuth';
+import { GoogleAccessTokenProvider, GoogleNotConnectedError, OAuthClient } from './server/auth/googleOAuth';
+import { FirestoreGoogleOAuthStore } from './server/auth/googleOAuthStore';
+import { createGoogleOAuthRouter } from './server/auth/googleOAuthRoutes';
 import { getFirestore } from 'firebase-admin/firestore';
 import { FirestoreDailyQuotaStore } from './server/ai/firestoreQuotaStore';
 import { FirestoreAiMetricsRecorder } from './server/ai/metrics';
@@ -26,6 +30,14 @@ import { buildCalendarEventsQuery } from './serverCalendar';
 const app = express();
 const PORT = Number(process.env.PORT) || 3000;
 
+// Antes de qualquer rota: sem isso o bundle e os JSON de flashcards viajam
+// sem compressão nenhuma (o de Português sozinho tem 3,8MB).
+app.use(compression());
+
+// Sem login de usuário — protegida só pelo segredo compartilhado
+// (x-ingest-secret), pra permitir subir referências de apostila direto
+// pra produção a partir do pipeline local (scripts/split-chapters.py).
+//
 // Precisa vir ANTES do parser global de 64kb abaixo: como esse último não
 // tem path (roda pra toda rota), ele rejeitaria o corpo grande antes mesmo
 // de chegar no parser de 20mb desta rota se estivesse depois. Montada aqui,
@@ -40,7 +52,7 @@ if (process.env.LITERARY_WORKS_ENABLED === 'true') {
   // Mesmo motivo do /api/internal acima: PDFs de obra em base64 passam
   // longe dos 64kb do parser global — precisa do parser de 50mb próprio,
   // montado antes.
-  app.use('/api/admin/literary', express.json({ limit: '50mb' }), firebaseAuthMiddleware(), requireAdmin, createLiteraryAdminRouter(getFirestore(getFirebaseAdminApp())));
+  app.use('/api/admin/literary', express.json({ limit: '50mb' }), adminAuthMiddleware(), requireAdmin, createLiteraryAdminRouter(getFirestore(getFirebaseAdminApp())));
 }
 
 app.use(express.json({ limit: '64kb' }));
@@ -81,50 +93,85 @@ if (vapidConfig) configureWebPush(vapidConfig);
 const GOOGLE_CLIENT_ID = process.env.GOOGLE_CLIENT_ID;
 const GOOGLE_CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET;
 const APP_URL = process.env.APP_URL || 'http://localhost:3000';
-const REDIRECT_URI = `${APP_URL}/api/oauth/callback`;
+const REDIRECT_URI = `${APP_URL}/api/oauth/google/callback`;
+const GOOGLE_OAUTH_CONFIGURED = Boolean(GOOGLE_CLIENT_ID && GOOGLE_CLIENT_SECRET);
 
-function getOAuthClient() {
+function getOAuthClient(): OAuthClient {
   return new google.auth.OAuth2(
     GOOGLE_CLIENT_ID,
     GOOGLE_CLIENT_SECRET,
     REDIRECT_URI
-  );
+  ) as unknown as OAuthClient;
 }
+
+const googleOAuthStore = new FirestoreGoogleOAuthStore(getFirestore(getFirebaseAdminApp()));
+const googleTokens = new GoogleAccessTokenProvider(googleOAuthStore, getOAuthClient);
 
 // API routes
 app.get('/api/health', (req, res) => res.json({ status: 'ok' }));
 
-// Fetch events from Calendar
-app.get('/api/calendar/events', async (req, res) => {
-  const token = req.headers.authorization?.split(' ')[1];
-  if (!token) {
-    return res.status(401).json({ error: 'No token provided' });
+// O cliente manda só o ID token do Firebase; o access token do Google é
+// resolvido aqui, a partir do refresh token guardado no servidor. Antes o
+// navegador guardava esse access token em memória e o mandava junto — ele
+// morria a cada recarga da página, e as rotas nem exigiam autenticação.
+async function respondGoogleAuthError(res: express.Response, error: unknown, context: string): Promise<void> {
+  if (error instanceof GoogleNotConnectedError) {
+    res.status(409).json({ error: error.message, code: error.code });
+    return;
   }
-  
+  console.error(`${context}:`, error);
+  res.status(500).json({ error: 'Falha ao consultar sua conta Google.', code: 'GOOGLE_REQUEST_FAILED' });
+}
+
+app.use('/api/oauth/google', createGoogleOAuthRouter({
+  store: googleOAuthStore,
+  tokens: googleTokens,
+  createClient: getOAuthClient,
+  isConfigured: GOOGLE_OAUTH_CONFIGURED,
+  requireAuth: firebaseAuthMiddleware(),
+}));
+
+// Fetch events from Calendar
+app.get('/api/calendar/events', firebaseAuthMiddleware(), createAiRateLimit(), async (req, res) => {
+  const localDate = typeof req.query.date === 'string' ? req.query.date : '';
+
+  let query: ReturnType<typeof buildCalendarEventsQuery>;
   try {
-    const localDate = typeof req.query.date === 'string' ? req.query.date : '';
-    const query = buildCalendarEventsQuery(localDate);
+    query = buildCalendarEventsQuery(localDate);
+  } catch {
+    return res.status(400).json({ error: 'Invalid date' });
+  }
+
+  let token: string;
+  try {
+    token = await googleTokens.getAccessToken(res.locals.userId as string);
+  } catch (error) {
+    return respondGoogleAuthError(res, error, 'Google token resolution failed');
+  }
+
+  try {
     const oauth2Client = new google.auth.OAuth2();
     oauth2Client.setCredentials({ access_token: token });
-    
+
     const calendar = google.calendar({ version: 'v3', auth: oauth2Client });
     const response = await calendar.events.list(query);
-    
+
     res.json({ events: response.data.items || [] });
   } catch (error) {
     console.error('Calendar Fetch Error:', error);
-    const status = error instanceof Error && error.message === 'Invalid local date' ? 400 : 500;
-    res.status(status).json({ error: status === 400 ? 'Invalid date' : 'Failed to fetch events' });
+    res.status(500).json({ error: 'Failed to fetch events' });
   }
 });
 
 // Fetch files from Drive
-app.get('/api/drive/files', async (req, res) => {
-  const token = req.headers.authorization?.split(' ')[1];
-  if (!token) {
-    return res.status(401).json({ error: 'No token provided' });
+app.get('/api/drive/files', firebaseAuthMiddleware(), createAiRateLimit(), async (_req, res) => {
+  let token: string;
+  try {
+    token = await googleTokens.getAccessToken(res.locals.userId as string);
+  } catch (error) {
+    return respondGoogleAuthError(res, error, 'Google token resolution failed');
   }
-  
+
   try {
     const oauth2Client = new google.auth.OAuth2();
     oauth2Client.setCredentials({ access_token: token });
@@ -148,17 +195,11 @@ app.use('/api/ai', firebaseAuthMiddleware(), createAiRateLimit(), createAiDailyL
 // Shares the AI rate limit and daily quota store so narrated playback counts
 // against the same per-user budget as every other AI feature in the app.
 app.use('/api/podcast-audio', firebaseAuthMiddleware(), createAiRateLimit(), createAiDailyLimit({ store: dailyQuotaStore }), createPodcastAudioRouter(podcastTtsService));
-app.use('/api/admin', firebaseAuthMiddleware(), requireAdmin, createAdminRouter(getFirestore(getFirebaseAdminApp())));
+app.use('/api/admin', adminAuthMiddleware(), requireAdmin, createAdminRouter(getFirestore(getFirebaseAdminApp())));
 // Painel /admin/conteudo: questões, métodos de estudo e episódios de
 // podcast, antes hardcoded em src/data/mockData.ts, agora administráveis
 // sem deploy (ver server/content/contentAdminRoutes.ts).
-app.use('/api/admin/content', firebaseAuthMiddleware(), requireAdmin, createContentAdminRouter(getFirestore(getFirebaseAdminApp())));
-// Sem login de usuário — protegida só pelo segredo compartilhado
-// (x-ingest-secret), pra permitir subir referências de apostila direto
-// pra produção a partir do pipeline local (scripts/split-chapters.py).
-// Corpo maior que o limite global de 64kb porque o texto extraído de
-// uma matéria inteira passa de 1MB.
-app.use('/api/internal', express.json({ limit: '20mb' }), createApostilaIngestRouter(getFirestore(getFirebaseAdminApp()), process.env.APOSTILA_INGEST_SECRET));
+app.use('/api/admin/content', adminAuthMiddleware(), requireAdmin, createContentAdminRouter(getFirestore(getFirebaseAdminApp())));
 app.use('/api/push', createPushRouter(getFirestore(getFirebaseAdminApp()), vapidConfig?.publicKey, firebaseAuthMiddleware()));
 app.use('/api/push', createReviewReminderRouter(getFirestore(getFirebaseAdminApp()), vapidConfig, process.env.CRON_SECRET));
 
@@ -172,8 +213,26 @@ async function startServer() {
     app.use(vite.middlewares);
   } else {
     const distPath = path.join(process.cwd(), 'dist');
-    app.use(express.static(distPath));
+    // Os assets do Vite têm hash no nome, então nunca mudam de conteúdo sem
+    // mudar de URL — podem ser cacheados pra sempre. O index.html é o oposto:
+    // é o que aponta pros hashes novos, e precisa ser sempre revalidado.
+    app.use(express.static(distPath, {
+      index: false,
+      setHeaders: (res, filePath) => {
+        const immutable = filePath.includes(`${path.sep}assets${path.sep}`);
+        res.setHeader('Cache-Control', immutable
+          ? 'public, max-age=31536000, immutable'
+          : 'public, max-age=3600');
+      },
+    }));
     app.get('*', (req, res) => {
+      // Um arquivo que não existe precisa responder 404, não o index.html:
+      // devolver HTML com status 200 no lugar de um .js ou .json ausente vira
+      // um "Unexpected token <" no navegador, que não aponta pra causa.
+      if (path.extname(req.path)) {
+        return res.status(404).json({ error: 'Not found' });
+      }
+      res.setHeader('Cache-Control', 'no-cache');
       res.sendFile(path.join(distPath, 'index.html'));
     });
   }

@@ -9,7 +9,6 @@ import {
 const auth = vi.hoisted(() => ({
   state: { user: null as { uid: string } | null, isConnected: false },
 }));
-const accessToken = vi.hoisted(() => vi.fn());
 const repository = vi.hoisted(() => ({
   deleteScheduleException: vi.fn(),
   getOrCreateWeeklySchedule: vi.fn(),
@@ -19,7 +18,11 @@ const repository = vi.hoisted(() => ({
 }));
 
 vi.mock('../../context/AuthContext', () => ({ useAuth: () => auth.state }));
-vi.mock('../../lib/auth', () => ({ getAccessToken: accessToken }));
+// O navegador manda só o ID token do Firebase: o access token do Google é
+// resolvido no servidor, a partir do refresh token guardado lá.
+vi.mock('../../lib/auth', () => ({
+  authHeaders: async () => ({ Authorization: 'Bearer firebase-id-token' }),
+}));
 vi.mock('./scheduleRepository', () => repository);
 
 import { useDailyStudyAvailability } from './useDailyStudyAvailability';
@@ -72,7 +75,6 @@ describe('useDailyStudyAvailability', () => {
     repository.saveWeeklySchedule.mockResolvedValue(undefined);
     repository.saveScheduleException.mockResolvedValue(undefined);
     repository.deleteScheduleException.mockResolvedValue(undefined);
-    accessToken.mockResolvedValue('calendar-token');
     vi.stubGlobal('fetch', vi.fn().mockResolvedValue({
       ok: true,
       status: 200,
@@ -117,13 +119,15 @@ describe('useDailyStudyAvailability', () => {
       warnings: [{ code: 'calendar-disconnected' }],
     });
     expect(result.current.availability?.intervals[0]).toMatchObject({ durationMinutes: 50 });
-    expect(accessToken).not.toHaveBeenCalled();
     expect(fetch).not.toHaveBeenCalled();
   });
 
-  it('treats an authenticated reload without a cached Google token as Calendar disconnected', async () => {
+  it('treats a 409 from the server as Calendar disconnected, not as a failure', async () => {
+    // A aluna está logada mas ainda não autorizou (ou revogou) o acesso à
+    // agenda: o servidor responde 409 e a tela oferece conectar, em vez de
+    // avisar que a sincronização falhou.
     auth.state = { user: { uid: 'user-1' }, isConnected: true };
-    accessToken.mockResolvedValue(null);
+    vi.mocked(fetch).mockResolvedValue({ ok: false, status: 409 } as Response);
 
     const { result } = renderHook(() => useDailyStudyAvailability(LOCAL_DATE));
     await waitFor(() => expect(result.current.loading).toBe(false));
@@ -134,7 +138,6 @@ describe('useDailyStudyAvailability', () => {
     });
     expect(result.current.availability?.intervals[0]).toMatchObject({ durationMinutes: 50 });
     expect(result.current.syncError).toBeNull();
-    expect(fetch).not.toHaveBeenCalled();
   });
 
   it('distinguishes a successful connected Calendar response with no events', async () => {
@@ -145,7 +148,7 @@ describe('useDailyStudyAvailability', () => {
 
     expect(result.current.availability).toMatchObject({ status: 'ready', warnings: [] });
     expect(fetch).toHaveBeenCalledWith('/api/calendar/events?date=2026-08-24', {
-      headers: { Authorization: 'Bearer calendar-token' },
+      headers: { Authorization: 'Bearer firebase-id-token' },
     });
   });
 

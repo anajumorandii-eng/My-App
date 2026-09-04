@@ -19,13 +19,27 @@ function positiveInteger(value: string | undefined, fallback: number): number {
   return Number.isInteger(parsed) && parsed > 0 ? parsed : fallback;
 }
 
+// A cota é diária pro dia da aluna, não pro dia UTC: com toISOString() o
+// limite virava às 21h de Brasília, bem no meio da janela de estudo da
+// noite. 'en-CA' formata como YYYY-MM-DD, mesmo formato que o store espera.
+const SAO_PAULO_DATE = new Intl.DateTimeFormat('en-CA', {
+  timeZone: 'America/Sao_Paulo',
+  year: 'numeric',
+  month: '2-digit',
+  day: '2-digit',
+});
+
+export function saoPauloDate(now: Date = new Date()): string {
+  return SAO_PAULO_DATE.format(now);
+}
+
 export function createAiDailyLimit(options?: { maxRequests?: number; store?: DailyQuotaStore }): RequestHandler {
   const maxRequests = options?.maxRequests ?? positiveInteger(process.env.AI_DAILY_LIMIT, DEFAULT_DAILY_MAX_REQUESTS);
   const counters = new Map<string, { date: string; count: number }>();
 
   return async (_req, res, next) => {
     const userId = res.locals.userId as string;
-    const date = new Date().toISOString().slice(0, 10);
+    const date = saoPauloDate();
     let quota: DailyQuotaResult;
     try {
       if (options?.store) {
@@ -36,6 +50,14 @@ export function createAiDailyLimit(options?: { maxRequests?: number; store?: Dai
         counter.count += 1;
         counters.set(userId, counter);
         quota = { allowed: counter.count <= maxRequests, remaining: Math.max(0, maxRequests - counter.count) };
+
+        // Mesma limpeza oportunista do limitador por janela abaixo: sem
+        // ela o mapa guardaria uma entrada por aluna por dia, pra sempre.
+        if (counters.size > 1_000) {
+          for (const [entryKey, value] of counters) {
+            if (value.date !== date) counters.delete(entryKey);
+          }
+        }
       }
     } catch (error) {
       console.error('AI daily quota store failed:', error);

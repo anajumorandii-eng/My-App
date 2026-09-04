@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { Suspense, useEffect, useMemo, useState } from 'react';
 import { AnimatePresence, motion, useReducedMotion } from 'motion/react';
 import { Menu, Moon, Sun, X } from 'lucide-react';
 import { NavLink, Outlet, useLocation, useNavigate } from 'react-router-dom';
@@ -9,6 +9,8 @@ import { useTheme } from '../hooks/useTheme';
 import { MOTION_DURATION, MOTION_EASE } from '../design-system/motion/tokens';
 import { cn } from '../lib/cn';
 import { PALETTES, SCREENS } from '../prototypes/NucleoInstrumentalPrototype';
+import { ErrorBoundary } from './ErrorBoundary';
+import { Skeleton } from './ui/Skeleton';
 
 const PATH_BY_SCREEN: Record<string, string> = {
   hoje: '/', diagnostico: '/diagnostico', plano: '/plano', agenda: '/agenda', 'reta-final': '/reta-final', recuperacao: '/recuperacao',
@@ -29,6 +31,29 @@ function screenForPath(pathname: string) {
 }
 
 /** The approved Núcleo composition, populated by the real route outlet. */
+/**
+ * O boundary fica aqui, em volta do Outlet, e não em volta do app inteiro:
+ * assim uma tela que quebra (ou que ainda está carregando seu chunk) não
+ * leva junto o menu, o cabeçalho e a navegação inferior.
+ */
+function RouteBoundary({ pathname, children }: { pathname: string; children: React.ReactNode }) {
+  return (
+    <ErrorBoundary resetKey={pathname}>
+      <Suspense
+        fallback={
+          <div className="space-y-4" aria-busy="true">
+            <Skeleton className="h-8 w-1/3" />
+            <Skeleton className="h-40 w-full" />
+            <Skeleton className="h-40 w-full" />
+          </div>
+        }
+      >
+        {children}
+      </Suspense>
+    </ErrorBoundary>
+  );
+}
+
 export default function NucleoInstrumentalProductionLayout() {
   const { isDark, toggleTheme } = useTheme();
   const [showOnboarding, setShowOnboarding] = useState(false);
@@ -57,7 +82,7 @@ export default function NucleoInstrumentalProductionLayout() {
       {menuOpen && <button className="ni-production-backdrop lg:hidden" aria-label="Fechar menu" onClick={() => setMenuOpen(false)} />}
 
       <aside className={cn('ni-rail', railExpanded && 'is-expanded', menuOpen && 'is-open is-expanded')}>
-        <button className="ni-mark" aria-label="Ir para Hoje" onClick={() => navigate('/')}><img src="/app-icon.png" alt="" /></button>
+        <button className="ni-mark" aria-label="Ir para Hoje" onClick={() => navigate('/')}><img src="/icon-192.png?v=3" alt="" /></button>
         {menuOpen && <button className="ni-production-close" aria-label="Fechar menu" onClick={() => setMenuOpen(false)}><X aria-hidden="true" /></button>}
         <nav className="ni-rail-scroll" aria-label="Todas as telas do app">
           {SCREENS.map((item) => {
@@ -79,7 +104,7 @@ export default function NucleoInstrumentalProductionLayout() {
 
       <div className="ni-page">
         <header className="ni-top">
-          <div className="ni-mobile-mark"><img src="/app-icon.png" alt="" /></div><strong>Crivo</strong>
+          <div className="ni-mobile-mark"><img src="/icon-192.png?v=3" alt="" /></div><strong>Crivo</strong>
           <nav aria-label="Áreas principais">
             {TOP_LEVEL.map(([key, label]) => {
               const target = PATH_BY_SCREEN[key];
@@ -94,7 +119,9 @@ export default function NucleoInstrumentalProductionLayout() {
         <main className="ni-production-main">
           <AnimatePresence mode="wait" initial={false}>
             <motion.div key={location.pathname} className="ni-production-view" initial={reducedMotion ? false : { opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} exit={reducedMotion ? undefined : { opacity: 0, y: -8 }} transition={{ duration: MOTION_DURATION.micro, ease: MOTION_EASE }}>
-              <Outlet />
+              <RouteBoundary pathname={location.pathname}>
+                <Outlet />
+              </RouteBoundary>
             </motion.div>
           </AnimatePresence>
         </main>

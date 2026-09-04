@@ -16,8 +16,14 @@ function slugify(subject: string): string {
 /**
  * Keeps malformed source records out of the study flow. A card without a
  * prompt or answer cannot be studied and otherwise renders as a blank side.
+ *
+ * Não sanitiza HTML — o nome anterior (sanitizeFlashcards) sugeria que sim, o
+ * que é perigoso porque o conteúdo dos cartões vai pra dangerouslySetInnerHTML
+ * em FlashcardSession. Hoje isso é seguro porque os JSON são estáticos e
+ * versionados no repositório; se algum dia vierem do painel admin ou da IA,
+ * é preciso sanitizar de verdade antes de renderizar.
  */
-export function sanitizeFlashcards(cards: Flashcard[]): Flashcard[] {
+export function dropIncompleteFlashcards(cards: Flashcard[]): Flashcard[] {
   return cards.filter((card) => card.front.trim().length > 0 && card.back.trim().length > 0);
 }
 
@@ -25,7 +31,7 @@ export async function loadFlashcardsForSubject(subject: string): Promise<Flashca
   const res = await fetch(`/flashcards/${slugify(subject)}.json`);
   if (!res.ok) throw new Error(`Não foi possível carregar os flashcards de ${subject}.`);
   const cards = await res.json() as Flashcard[];
-  return sanitizeFlashcards(cards);
+  return dropIncompleteFlashcards(cards);
 }
 
 export async function loadObraFlashcards(): Promise<WorkFlashcard[]> {

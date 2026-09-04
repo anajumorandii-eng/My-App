@@ -21,6 +21,18 @@ export const getFirebaseIdToken = async (): Promise<string | null> => {
   return auth.currentUser?.getIdToken() ?? null;
 };
 
+/**
+ * Cabeçalho de toda rota autenticada. O acesso à agenda e ao Drive não passa
+ * mais por aqui: o servidor resolve o token do Google a partir do refresh
+ * token guardado (ver src/lib/googleConnection.ts), então o navegador nunca
+ * mais precisa segurar essa credencial.
+ */
+export const authHeaders = async (): Promise<Record<string, string>> => {
+  const idToken = await getFirebaseIdToken();
+  if (!idToken) throw new Error('Entre na sua conta para continuar.');
+  return { Authorization: `Bearer ${idToken}` };
+};
+
 // Firebase's default persistence reads/writes IndexedDB, which has a
 // long-standing WebKit/Safari bug that throws "Database is closing/hidden"
 // (common in Safari on iOS/iPadOS, especially in Private Browsing).
@@ -33,17 +45,16 @@ const persistenceReady = setPersistence(auth, browserLocalPersistence).catch((er
   console.error('Failed to set auth persistence:', error);
 });
 
+// Sem escopos de Calendar/Drive: este login é só identidade. A autorização
+// de leitura da agenda e do Drive é pedida à parte, pelo fluxo de código de
+// autorização do servidor (POST /api/oauth/google/start), que é o único jeito
+// de obter acesso offline — e portanto de a conexão sobreviver a uma recarga.
 const provider = new GoogleAuthProvider();
-provider.addScope('https://www.googleapis.com/auth/calendar.readonly');
-provider.addScope('https://www.googleapis.com/auth/drive.readonly');
-
-let isSigningIn = false;
-let cachedAccessToken: string | null = null;
 
 // Single source of truth for "who's connected", updated only at the exact
 // points where a sign-in/sign-out is actually confirmed (not derived from a
 // second, independent onAuthStateChanged subscription, which can miss the
-// event if it fires before cachedAccessToken is assigned). Anything in the
+// event if it fires before the sign-in is confirmed). Anything in the
 // app that needs to know the signed-in user — beyond the Conexoes page
 // itself — should subscribe here instead of listening to Firebase directly.
 type ConnectedUserListener = (user: User | null) => void;
@@ -102,7 +113,7 @@ const describeAuthError = (error: any): string => {
 };
 
 export const initAuth = (
-  onAuthSuccess?: (user: User, token: string) => void,
+  onAuthSuccess?: (user: User) => void,
   onAuthFailure?: (error?: string) => void
 ) => {
   let unsubscribed = false;
@@ -111,45 +122,28 @@ export const initAuth = (
   persistenceReady.then(() => {
     if (unsubscribed) return;
 
-    // Picks up the token when we've just come back from a signInWithRedirect
-    // fallback (the popup path never navigates away, so this is a no-op then).
+    // Conclui o login quando voltamos de um signInWithRedirect (o caminho de
+    // popup nunca sai da página, então aqui vira no-op).
     getRedirectResult(auth)
       .then((result) => {
         if (!result) return;
-        const credential = GoogleAuthProvider.credentialFromResult(result);
-        if (credential?.accessToken) {
-          cachedAccessToken = credential.accessToken;
-          setConnectedUser(result.user);
-          if (onAuthSuccess) onAuthSuccess(result.user, cachedAccessToken);
-        }
+        setConnectedUser(result.user);
+        if (onAuthSuccess) onAuthSuccess(result.user);
       })
       .catch((error) => {
         console.error('Redirect sign-in error:', error);
         if (onAuthFailure) onAuthFailure(describeAuthError(error));
       });
 
-    realUnsubscribe = onAuthStateChanged(auth, async (user: User | null) => {
+    realUnsubscribe = onAuthStateChanged(auth, (user: User | null) => {
+      setConnectedUser(user);
       if (user) {
-        if (cachedAccessToken) {
-          setConnectedUser(user);
-          if (onAuthSuccess) onAuthSuccess(user, cachedAccessToken);
-        } else if (!isSigningIn) {
-          cachedAccessToken = null;
-          // Firebase itself still recognizes this user (their session
-          // survived the reload) even though the Google Calendar/Drive
-          // access token didn't — that token is never persisted by design.
-          // Keep Firestore-backed data (which only needs the uid) working;
-          // only the Calendar/Drive-specific UI needs to prompt a
-          // reconnect.
-          setConnectedUser(user);
-          if (onAuthFailure) {
-            onAuthFailure('Sua sessão de acesso ao Google expirou. Clique em "Conectar com Google" novamente.');
-          }
-        }
-      } else {
-        cachedAccessToken = null;
-        setConnectedUser(null);
-        if (onAuthFailure) onAuthFailure();
+        // A sessão do Firebase sobrevive à recarga, e a autorização do Google
+        // agora também (ela vive no servidor). Não há mais o aviso de "sessão
+        // de acesso ao Google expirou" que aparecia em todo F5.
+        if (onAuthSuccess) onAuthSuccess(user);
+      } else if (onAuthFailure) {
+        onAuthFailure();
       }
     });
   });
@@ -160,19 +154,12 @@ export const initAuth = (
   };
 };
 
-export const googleSignIn = async (): Promise<{ user: User; accessToken: string } | null> => {
+export const googleSignIn = async (): Promise<User | null> => {
   try {
-    isSigningIn = true;
     await persistenceReady;
     const result = await signInWithPopup(auth, provider);
-    const credential = GoogleAuthProvider.credentialFromResult(result);
-    if (!credential?.accessToken) {
-      throw new Error('Failed to get access token from Firebase Auth');
-    }
-
-    cachedAccessToken = credential.accessToken;
     setConnectedUser(result.user);
-    return { user: result.user, accessToken: cachedAccessToken };
+    return result.user;
   } catch (error: any) {
     const code = error?.code as string | undefined;
     if (code && POPUP_FALLBACK_ERROR_CODES.has(code)) {
@@ -184,17 +171,10 @@ export const googleSignIn = async (): Promise<{ user: User; accessToken: string 
     }
     console.error('Sign in error:', error);
     throw new Error(describeAuthError(error));
-  } finally {
-    isSigningIn = false;
   }
-};
-
-export const getAccessToken = async (): Promise<string | null> => {
-  return cachedAccessToken;
 };
 
 export const logout = async () => {
   await signOut(auth);
-  cachedAccessToken = null;
   setConnectedUser(null);
 };

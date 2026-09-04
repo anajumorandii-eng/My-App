@@ -1,4 +1,4 @@
-import { doc, getDoc, setDoc, collection, getDocs, query, orderBy, runTransaction, serverTimestamp } from 'firebase/firestore';
+import { doc, getDoc, setDoc, collection, getDocs, query, orderBy, limit, runTransaction, serverTimestamp } from 'firebase/firestore';
 import { db } from './firestore';
 import { TopicMastery, ErrorLog, UserProfile, DiscursiveAttempt, BacklogItem, StudentGoals, PlanFeedback, StudySessionRecord, RecoveryEvidence } from '../types';
 import type { SummaryProgressMap } from '../types/summary';
@@ -7,6 +7,13 @@ import { remapLegacyTopicId } from '../data/legacyTopics';
 import { SPLIT_TOPIC_PARENTS } from '../data/topicSplits';
 import { applyRecoveryEvidence, preserveLegacyMasteryRows, RecoveryEvidenceResult } from './recoveryEvidence';
 import { isoToLocalDate } from '../features/availability/time';
+
+// Tetos pras coleções de histórico, que crescem a cada sessão de estudo e
+// nunca encolhem: sem limite, cada abertura de tela lia o histórico inteiro
+// da aluna, e o custo e a latência cresciam pra sempre. As telas mostram
+// recortes recentes; quem precisar de mais fundo pagina a partir daqui.
+const HISTORY_PAGE_SIZE = 500;
+const RECENT_SESSIONS_WINDOW = 200;
 
 export interface QuestionAttempt {
   id: string;
@@ -120,7 +127,7 @@ export async function saveUserProfile(uid: string, profile: UserProfile): Promis
 
 export async function getUserErrorLogs(uid: string): Promise<ErrorLog[]> {
   const ref = collection(db, 'users', uid, 'errorLogs');
-  const snap = await getDocs(query(ref, orderBy('date', 'desc')));
+  const snap = await getDocs(query(ref, orderBy('date', 'desc'), limit(HISTORY_PAGE_SIZE)));
   return snap.docs.map((d) => d.data() as ErrorLog);
 }
 
@@ -131,7 +138,7 @@ export async function addUserErrorLog(uid: string, log: ErrorLog): Promise<void>
 
 export async function getUserAttempts(uid: string): Promise<QuestionAttempt[]> {
   const ref = collection(db, 'users', uid, 'attempts');
-  const snap = await getDocs(query(ref, orderBy('date', 'desc')));
+  const snap = await getDocs(query(ref, orderBy('date', 'desc'), limit(HISTORY_PAGE_SIZE)));
   return snap.docs.map((d) => d.data() as QuestionAttempt);
 }
 
@@ -142,7 +149,7 @@ export async function addUserAttempt(uid: string, attempt: QuestionAttempt): Pro
 
 export async function getUserDiscursiveAttempts(uid: string): Promise<DiscursiveAttempt[]> {
   const ref = collection(db, 'users', uid, 'discursiveAttempts');
-  const snap = await getDocs(query(ref, orderBy('date', 'desc')));
+  const snap = await getDocs(query(ref, orderBy('date', 'desc'), limit(HISTORY_PAGE_SIZE)));
   return snap.docs.map((d) => d.data() as DiscursiveAttempt);
 }
 
@@ -273,7 +280,7 @@ export async function saveStudentGoals(uid: string, goals: StudentGoals): Promis
 // plano não muda silenciosamente a partir disso (a estudante decide).
 export async function getPlanFeedback(uid: string): Promise<PlanFeedback[]> {
   const ref = collection(db, 'users', uid, 'planFeedback');
-  const snap = await getDocs(query(ref, orderBy('date', 'desc')));
+  const snap = await getDocs(query(ref, orderBy('date', 'desc'), limit(HISTORY_PAGE_SIZE)));
   return snap.docs.map((d) => d.data() as PlanFeedback);
 }
 
@@ -289,7 +296,10 @@ export async function saveUserStudySession(uid: string, session: StudySessionRec
 
 export async function getUserStudySessionsForDate(uid: string, localDate: string): Promise<StudySessionRecord[]> {
   const ref = collection(db, 'users', uid, 'studySessions');
-  const snap = await getDocs(query(ref, orderBy('completedAt', 'desc')));
+  // Ordenado da mais recente pra mais antiga, então as sessões de um dia
+  // específico estão sempre dentro deste teto — nenhuma aluna registra
+  // RECENT_SESSIONS_WINDOW sessões num dia só.
+  const snap = await getDocs(query(ref, orderBy('completedAt', 'desc'), limit(RECENT_SESSIONS_WINDOW)));
   return snap.docs
     .map((d) => d.data() as StudySessionRecord)
     .filter((session) => isoToLocalDate(session.completedAt) === localDate);
