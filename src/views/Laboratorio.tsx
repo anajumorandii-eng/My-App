@@ -64,7 +64,7 @@ export default function Laboratorio() {
     <div
       className="ni-main"
       style={{
-        '--primary': currentPalette.primary,
+        '--primary': currentPalette.primary, '--primary-ink': currentPalette.readable,
         '--secondary': currentPalette.secondary,
         '--wash': currentPalette.wash,
       } as React.CSSProperties}
@@ -211,7 +211,7 @@ export default function Laboratorio() {
                       <button
                         onClick={() => fetchExample(method)}
                         disabled={loadingExampleFor === method.id}
-                        className="flex items-center px-3 py-1.5 text-xs font-semibold text-[var(--primary)] border border-[var(--primary)] rounded-lg hover:bg-[var(--surface2)] disabled:opacity-50 transition-colors"
+                        className="flex items-center px-3 py-1.5 text-xs font-semibold subject-text border border-[var(--primary)] rounded-lg hover:bg-[var(--surface2)] disabled:opacity-50 transition-colors"
                       >
                         <Sparkles className={`w-3.5 h-3.5 mr-1.5 ${loadingExampleFor === method.id ? 'animate-pulse' : ''}`} />
                         {loadingExampleFor === method.id
@@ -221,7 +221,7 @@ export default function Laboratorio() {
                     )}
                     {examples[method.id] && (
                       <div className="p-3 rounded-xl border border-[var(--primary)]/30 bg-[var(--primary)]/10 text-xs text-[var(--text)] leading-relaxed flex items-start gap-2">
-                        <Sparkles className="w-4 h-4 mr-1 text-[var(--primary)] mt-0.5 shrink-0" />
+                        <Sparkles className="w-4 h-4 mr-1 subject-text mt-0.5 shrink-0" />
                         <AiText text={examples[method.id]} className="flex-1" />
                       </div>
                     )}

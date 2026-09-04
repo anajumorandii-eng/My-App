@@ -81,7 +81,7 @@ export default function ObrasObrigatorias() {
     <div
       className="ni-main"
       style={{
-        '--primary': currentPalette.primary,
+        '--primary': currentPalette.primary, '--primary-ink': currentPalette.readable,
         '--secondary': currentPalette.secondary,
         '--wash': currentPalette.wash,
       } as React.CSSProperties}

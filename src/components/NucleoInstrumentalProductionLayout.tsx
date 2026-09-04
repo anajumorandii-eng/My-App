@@ -73,7 +73,7 @@ export default function NucleoInstrumentalProductionLayout() {
   const closeOnboarding = () => { setShowOnboarding(false); localStorage.setItem('juju_onboarding', 'true'); };
 
   return (
-    <div className={cn('ni-prototype ni-production-app', !isDark && 'is-light')} style={{ '--primary': palette.primary, '--secondary': palette.secondary, '--wash': palette.wash } as React.CSSProperties} data-family={palette.family}>
+    <div className={cn('ni-prototype ni-production-app', !isDark && 'is-light')} style={{ '--primary': palette.primary, '--primary-ink': palette.readable, '--secondary': palette.secondary, '--wash': palette.wash } as React.CSSProperties} data-family={palette.family}>
       <header className="ni-production-mobile lg:hidden">
         <IconButton aria-label="Abrir menu" onClick={() => setMenuOpen(true)}><Menu className="h-5 w-5" aria-hidden="true" /></IconButton>
         <strong>Crivo</strong>

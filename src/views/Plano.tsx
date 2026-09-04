@@ -39,7 +39,7 @@ export default function Plano() {
     <div
       className="ni-main"
       style={{
-        '--primary': PLANO_PALETTE.primary,
+        '--primary': PLANO_PALETTE.primary, '--primary-ink': PLANO_PALETTE.readable,
         '--secondary': PLANO_PALETTE.secondary,
         '--wash': PLANO_PALETTE.wash,
       } as React.CSSProperties}
@@ -79,7 +79,7 @@ export default function Plano() {
       {/* Phase banner */}
       <Panel subject="Matemática" className="ni-panel p-5 mb-4">
         <div className="flex items-center min-w-0">
-          <Flag className="w-5 h-5 mr-3 text-[var(--primary)] shrink-0" />
+          <Flag className="w-5 h-5 mr-3 subject-text shrink-0" />
           <div className="min-w-0">
             <p className="font-display font-medium text-sm text-[var(--text)]">
               Fase atual: <b>{phase.label}</b>
@@ -104,7 +104,7 @@ export default function Plano() {
             </p>
             <p className="text-[11px] text-[var(--dim)] mt-0.5">Calculado pela sua agenda semanal</p>
           </div>
-          <span className="text-2xl font-bold font-mono text-[var(--primary)]">
+          <span className="text-2xl font-bold font-mono subject-text">
             {effectiveMinutes} min
           </span>
         </div>
@@ -125,7 +125,7 @@ export default function Plano() {
 
         <div>
           <h2 className="text-xs font-display font-semibold flex items-center mb-2 text-[var(--text)]">
-            <CalendarClock className="w-3.5 h-3.5 mr-1.5 text-[var(--primary)]" />
+            <CalendarClock className="w-3.5 h-3.5 mr-1.5 subject-text" />
             Janelas de estudo
           </h2>
           <div className="flex flex-wrap gap-2">

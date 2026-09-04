@@ -95,7 +95,7 @@ export default function ObraDetalhe() {
     return (
       <div className="text-center py-16 text-[var(--dim)]">
         Obra não encontrada.{' '}
-        <Link to="/obras" className="text-[var(--primary)] underline">Voltar ao catálogo</Link>.
+        <Link to="/obras" className="subject-text underline">Voltar ao catálogo</Link>.
       </div>
     );
   }
@@ -106,7 +106,7 @@ export default function ObraDetalhe() {
     <div
       className="ni-main"
       style={{
-        '--primary': LIT_PALETTE.primary,
+        '--primary': LIT_PALETTE.primary, '--primary-ink': LIT_PALETTE.readable,
         '--secondary': LIT_PALETTE.secondary,
         '--wash': LIT_PALETTE.wash,
       } as React.CSSProperties}
@@ -160,8 +160,9 @@ export default function ObraDetalhe() {
             <button
               key={t.id}
               onClick={() => setTab(t.id)}
+              className={active ? 'subject-text' : undefined}
               style={active
-                ? { color: LIT_PALETTE.primary, borderBottom: `2px solid ${LIT_PALETTE.primary}`, paddingBottom: '6px', marginBottom: '-1px' }
+                ? { borderBottom: `2px solid ${LIT_PALETTE.primary}`, paddingBottom: '6px', marginBottom: '-1px' }
                 : { color: 'var(--dim)', paddingBottom: '6px', marginBottom: '-1px', borderBottom: '2px solid transparent' }}
             >
               {t.label}
@@ -186,7 +187,7 @@ export default function ObraDetalhe() {
             <p className="text-sm text-[var(--dim)]">O material-fonte desta obra ainda está sendo processado.</p>
           )}
           {requirements.some((r) => r.requiredScope !== 'obra completa') && (
-            <p className="text-sm" style={{ color: LIT_PALETTE.primary }}>
+            <p className="subject-text text-sm">
               <b>Atenção ao recorte exigido:</b> {requirements.find((r) => r.requiredScope !== 'obra completa')?.requiredScope}
             </p>
           )}
@@ -212,7 +213,7 @@ export default function ObraDetalhe() {
                 >
                   <span className="flex items-center text-sm text-[var(--text)]">
                     {done
-                      ? <CheckCircle2 className="w-4 h-4 mr-2 shrink-0" style={{ color: LIT_PALETTE.primary }} />
+                      ? <CheckCircle2 className="subject-text w-4 h-4 mr-2 shrink-0" />
                       : <Circle className="w-4 h-4 mr-2 text-[var(--dim)] shrink-0" />}
                     {u.order}. {u.title}
                   </span>

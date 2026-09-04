@@ -356,7 +356,7 @@ export default function Sessao() {
     <div
       className="ni-main ni-session-production"
       data-geometry={activeProfile?.fieldType}
-      style={{ '--primary': palette.primary, '--secondary': palette.secondary, '--wash': palette.wash } as React.CSSProperties}
+      style={{ '--primary': palette.primary, '--primary-ink': palette.readable, '--secondary': palette.secondary, '--wash': palette.wash } as React.CSSProperties}
     >
       <div className="ni-route"><span>PRACTICE</span><i /><span>{selectedAction?.subject ?? 'MATEMÁTICA'}</span><i /><b>Sessão em foco</b></div>
       <div className="ni-title">

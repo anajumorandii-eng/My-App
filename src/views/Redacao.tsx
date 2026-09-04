@@ -73,7 +73,7 @@ export default function Redacao() {
     <div
       className="ni-main"
       style={{
-        '--primary': REDACAO_PALETTE.primary,
+        '--primary': REDACAO_PALETTE.primary, '--primary-ink': REDACAO_PALETTE.readable,
         '--secondary': REDACAO_PALETTE.secondary,
         '--wash': REDACAO_PALETTE.wash,
       } as React.CSSProperties}
@@ -186,7 +186,7 @@ export default function Redacao() {
                   ['Correção mínima sugerida', correction.correcaoMinima],
                 ].map(([title, content]) => (
                   <Panel key={title} subject="Português" className="ni-panel p-4 text-xs">
-                    <p className="font-semibold mb-1 text-[var(--primary)]">{title}</p>
+                    <p className="font-semibold mb-1 subject-text">{title}</p>
                     <AiText text={content} className="text-[var(--text)] leading-relaxed" />
                   </Panel>
                 ))}
@@ -266,7 +266,7 @@ export default function Redacao() {
 
           <section>
             <h2 className="font-display font-medium text-sm text-[var(--text)] mb-1 flex items-center">
-              <MessageSquareQuote className="w-4 h-4 mr-2 text-[var(--primary)]" />
+              <MessageSquareQuote className="w-4 h-4 mr-2 subject-text" />
               Repertório Sociocultural Produtivo
             </h2>
             <p className="text-xs text-[var(--dim)] mb-3">
@@ -384,7 +384,7 @@ export default function Redacao() {
                     </div>
 
                     <div className="p-3 rounded-lg border border-[var(--primary)]/30 bg-[var(--primary)]/10 text-xs text-[var(--text)] flex items-start gap-2">
-                      <Lightbulb className="w-3.5 h-3.5 text-[var(--primary)] shrink-0 mt-0.5" />
+                      <Lightbulb className="w-3.5 h-3.5 subject-text shrink-0 mt-0.5" />
                       <p className="leading-relaxed">{b.keyToMaxScore}</p>
                     </div>
                   </div>

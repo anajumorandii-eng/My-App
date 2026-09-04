@@ -442,7 +442,7 @@ function DiagnosticoContent({ mockQuestions, questionsSyncError }: { mockQuestio
     <div
       className="ni-main"
       style={{
-        '--primary': currentPalette.primary,
+        '--primary': currentPalette.primary, '--primary-ink': currentPalette.readable,
         '--secondary': currentPalette.secondary,
         '--wash': currentPalette.wash,
       } as React.CSSProperties}
@@ -535,7 +535,7 @@ function DiagnosticoContent({ mockQuestions, questionsSyncError }: { mockQuestio
                         ) : (
                           'Nunca diagnosticado'
                         )}
-                        {hasQuiz && <span className="text-[var(--primary)]">• com teste rápido</span>}
+                        {hasQuiz && <span className="subject-text">• com teste rápido</span>}
                       </p>
                     )}
                   </Panel>
@@ -691,7 +691,7 @@ function DiagnosticoContent({ mockQuestions, questionsSyncError }: { mockQuestio
 
           {currentItem.kind === 'discursive' && (
             <>
-              <div className="flex items-start text-xs font-medium text-[var(--primary)]">
+              <div className="flex items-start text-xs font-medium subject-text">
                 <PenLine className="w-3.5 h-3.5 mr-1.5 mt-0.5 shrink-0" />
                 Questão discursiva — sem múltipla escolha, você mesma avalia sua resposta
               </div>
@@ -699,7 +699,7 @@ function DiagnosticoContent({ mockQuestions, questionsSyncError }: { mockQuestio
               {!discursiveRevealed ? (
                 <button
                   onClick={revealDiscursiveAnswer}
-                  className="w-full py-2.5 border border-[var(--primary)] text-[var(--primary)] rounded-xl text-xs font-semibold hover:bg-[var(--surface2)] transition-colors"
+                  className="w-full py-2.5 border border-[var(--primary)] subject-text rounded-xl text-xs font-semibold hover:bg-[var(--surface2)] transition-colors"
                 >
                   Pensei na resposta — ver o gabarito
                 </button>

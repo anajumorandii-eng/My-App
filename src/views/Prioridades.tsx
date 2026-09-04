@@ -24,7 +24,7 @@ export default function Prioridades() {
     <div
       className="ni-main"
       style={{
-        '--primary': currentPalette.primary,
+        '--primary': currentPalette.primary, '--primary-ink': currentPalette.readable,
         '--secondary': currentPalette.secondary,
         '--wash': currentPalette.wash,
       } as React.CSSProperties}
@@ -161,7 +161,7 @@ export default function Prioridades() {
         {activeSubject === 'Língua Portuguesa' && (
           <section className="mt-4">
             <h2 className="font-display font-medium text-sm text-[var(--text)] mb-1 flex items-center">
-              <BookOpen className="w-4 h-4 mr-2 text-[var(--primary)]" />
+              <BookOpen className="w-4 h-4 mr-2 subject-text" />
               Obras de leitura obrigatória
             </h2>
             <p className="text-xs text-[var(--dim)] mb-3">

@@ -111,7 +111,7 @@ export default function Evolucao() {
     <div
       className="ni-main"
       style={{
-        '--primary': EVO_PALETTE.primary,
+        '--primary': EVO_PALETTE.primary, '--primary-ink': EVO_PALETTE.readable,
         '--secondary': EVO_PALETTE.secondary,
         '--wash': EVO_PALETTE.wash,
       } as React.CSSProperties}
@@ -156,14 +156,14 @@ export default function Evolucao() {
           <Panel subject="Matemática" className="ni-panel p-6 mb-4">
             <div className="flex items-center justify-between flex-wrap gap-3 mb-1">
               <h3 className="font-display font-medium text-base text-[var(--text)] flex items-center">
-                <Sparkles className="w-4 h-4 mr-2 text-[var(--primary)]" />
+                <Sparkles className="w-4 h-4 mr-2 subject-text" />
                 Diagnóstico com IA
               </h3>
               {!insight && (
                 <button
                   onClick={fetchInsight}
                   disabled={loadingInsight}
-                  className="flex items-center px-3 py-1.5 text-xs font-semibold text-[var(--primary)] border border-[var(--line)] rounded-lg hover:bg-[var(--surface2)] disabled:opacity-50 transition-colors"
+                  className="flex items-center px-3 py-1.5 text-xs font-semibold subject-text border border-[var(--line)] rounded-lg hover:bg-[var(--surface2)] disabled:opacity-50 transition-colors"
                 >
                   <Sparkles className={`w-3.5 h-3.5 mr-1.5 ${loadingInsight ? 'animate-pulse' : ''}`} />
                   {loadingInsight ? 'Analisando...' : 'Gerar diagnóstico'}
@@ -184,7 +184,7 @@ export default function Evolucao() {
           {/* Key Stat Cards */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4">
             <Panel subject="Matemática" interactive className="ni-panel p-5">
-              <div className="flex items-center text-[var(--primary)] mb-2">
+              <div className="flex items-center subject-text mb-2">
                 <Gauge className="w-4 h-4 mr-2" />
                 <h3 className="font-medium text-xs text-[var(--dim)]">Domínio médio geral</h3>
               </div>

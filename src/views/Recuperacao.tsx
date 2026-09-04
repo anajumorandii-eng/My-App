@@ -194,7 +194,7 @@ function SupportLevelContent({
         <button
           onClick={fetchExercise}
           disabled={loadingExercise}
-          className="w-full flex items-center justify-center py-2.5 border border-[var(--primary)] text-[var(--primary)] rounded-xl font-semibold text-xs hover:bg-[var(--surface2)] disabled:opacity-50 transition-colors"
+          className="w-full flex items-center justify-center py-2.5 border border-[var(--primary)] subject-text rounded-xl font-semibold text-xs hover:bg-[var(--surface2)] disabled:opacity-50 transition-colors"
         >
           <Sparkles className={`w-3.5 h-3.5 mr-1.5 ${loadingExercise ? 'animate-pulse' : ''}`} />
           {loadingExercise ? 'Gerando exercício com IA...' : 'Gerar exercício com IA'}
@@ -473,7 +473,7 @@ export default function Recuperacao() {
     <div
       className="ni-main"
       style={{
-        '--primary': basePalette.primary,
+        '--primary': basePalette.primary, '--primary-ink': basePalette.readable,
         '--secondary': basePalette.secondary,
         '--wash': basePalette.wash,
       } as React.CSSProperties}

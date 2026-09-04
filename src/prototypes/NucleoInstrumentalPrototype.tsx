@@ -411,74 +411,96 @@ export const SCREENS: InstrumentalScreen[] = [
  */
 export const PALETTE_INK = '#16211c';
 
+/**
+ * `readable` é o tom da matéria para uso COMO TEXTO sobre o papel claro —
+ * breadcrumbs, rótulos em versalete, números pequenos. O `primary` é um pastel
+ * pensado para preenchimento: como texto sobre o creme ele fica entre 1,46:1 e
+ * 2,62:1, e o mínimo legível é 4,5:1. Cada `readable` mantém a matiz do
+ * `primary` com a saturação reduzida, e passa de 4,8:1 no papel.
+ *
+ * Só se aplica ao tema claro: no escuro o pastel tem contraste de sobra contra
+ * o fundo, e é ele que dá a cor à tela.
+ */
+
 export const PALETTES: Record<
   string,
-  { primary: string; secondary: string; wash: string; family: string }
+  { primary: string; secondary: string; wash: string; readable: string; family: string }
 > = {
   Matemática: {
     primary: "#81a9ff",
     secondary: "#d9b583",
     wash: "rgba(57,105,211,.35)",
+    readable: "#2962dc",
     family: "grid",
   },
   Física: {
     primary: "#75a2ff",
     secondary: "#e7c05f",
     wash: "rgba(39,92,200,.37)",
+    readable: "#2762dc",
     family: "wave",
   },
   Química: {
     primary: "#efbf61",
     secondary: "#81b179",
     wash: "rgba(175,110,45,.34)",
+    readable: "#866423",
     family: "bond",
   },
   Biologia: {
     primary: "#86dca5",
     secondary: "#e69172",
     wash: "rgba(38,130,78,.36)",
+    readable: "#33774c",
     family: "organic",
   },
   Português: {
     primary: "#e08391",
     secondary: "#d9b583",
     wash: "rgba(139,47,70,.36)",
+    readable: "#b14656",
     family: "type",
   },
   Literatura: {
     primary: "#d5b184",
     secondary: "#a779ca",
     wash: "rgba(110,55,96,.33)",
+    readable: "#83653f",
     family: "type",
   },
   História: {
     primary: "#df7783",
     secondary: "#9bbce2",
     wash: "rgba(136,55,52,.32)",
+    readable: "#b34551",
     family: "poles",
   },
   Geografia: {
     primary: "#aac86d",
     secondary: "#d89c58",
     wash: "rgba(74,105,57,.36)",
+    readable: "#5e7039",
     family: "topo",
   },
   Redação: {
     primary: "#e69b64",
     secondary: "#d7665d",
     wash: "rgba(130,66,40,.34)",
+    readable: "#975c30",
     family: "type",
   },
   Atualidades: {
     primary: "#e3ad60",
     secondary: "#8abbdc",
     wash: "rgba(45,97,130,.35)",
+    readable: "#89632d",
     family: "signal",
   },
   Filosofia: {
     primary: "#b69bdd",
     secondary: "#d9b583",
     wash: "rgba(88,57,131,.32)",
+    readable: "#7c58af",
     family: "poles",
   },
 };

@@ -84,7 +84,7 @@ export default function Revisoes() {
     <div
       className="ni-main"
       style={{
-        '--primary': currentPalette.primary,
+        '--primary': currentPalette.primary, '--primary-ink': currentPalette.readable,
         '--secondary': currentPalette.secondary,
         '--wash': currentPalette.wash,
       } as React.CSSProperties}
@@ -222,7 +222,7 @@ export default function Revisoes() {
                       onClick={() => rateReview(mastery.topicId, value)}
                       className="flex items-center justify-center px-3 py-2 rounded-lg text-xs font-medium border border-[var(--line)] bg-[var(--surface2)] hover:border-[var(--primary)] text-[var(--text)] transition-colors"
                     >
-                      <Icon className="w-3.5 h-3.5 mr-1.5 text-[var(--primary)]" />
+                      <Icon className="w-3.5 h-3.5 mr-1.5 subject-text" />
                       {label}
                     </button>
                   ))}
@@ -233,7 +233,7 @@ export default function Revisoes() {
                 <button
                   onClick={() => fetchTip(mastery, topic!.name, topic!.subject)}
                   disabled={isLoadingTip}
-                  className="mt-3 inline-flex items-center px-3 py-1 text-xs font-medium text-[var(--primary)] border border-[var(--line)] rounded-lg hover:bg-[var(--surface2)] disabled:opacity-50 transition-colors"
+                  className="mt-3 inline-flex items-center px-3 py-1 text-xs font-medium subject-text border border-[var(--line)] rounded-lg hover:bg-[var(--surface2)] disabled:opacity-50 transition-colors"
                 >
                   <Sparkles className={`w-3.5 h-3.5 mr-1.5 ${isLoadingTip ? 'animate-pulse' : ''}`} />
                   {isLoadingTip ? 'Gerando dica...' : 'Dica rápida com IA'}
@@ -243,7 +243,7 @@ export default function Revisoes() {
               {tip && (
                 <div className="mt-3 p-3 rounded-lg border border-[var(--primary)]/30 bg-[var(--primary)]/10 text-xs text-[var(--text)]">
                   <div className="flex items-start gap-2">
-                    <Sparkles className="w-4 h-4 text-[var(--primary)] shrink-0 mt-0.5" />
+                    <Sparkles className="w-4 h-4 subject-text shrink-0 mt-0.5" />
                     <AiText text={tip} className="flex-1" />
                   </div>
                 </div>

@@ -6,6 +6,14 @@
    PALETTE_INK de src/prototypes/NucleoInstrumentalPrototype.tsx. */
 :root { --ink-on-primary: #16211c; }
 
+/* A cor da matéria quando ela vira TEXTO. No escuro é o próprio --primary: o
+   pastel contrasta de sobra com o fundo e é ele que dá cor à tela. No claro é o
+   tom `readable` da paleta, porque o pastel sobre o creme fica entre 1,46:1 e
+   2,62:1, abaixo do mínimo legível de 4,5:1. O fallback cobre qualquer tela que
+   ainda não passe o --primary-ink. */
+.ni-prototype .subject-text { color: var(--primary); }
+.ni-prototype.is-light .subject-text { color: var(--primary-ink, var(--primary)); }
+
 .ni-prototype {
   --primary: #d09b5d !important;
   --secondary: #f2d18a !important;

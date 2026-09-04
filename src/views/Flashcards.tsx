@@ -338,7 +338,7 @@ export default function Flashcards() {
                   className="rounded-card border border-[var(--line)] bg-[var(--surface)] shadow-soft-sm hover:border-[var(--primary)] ni-panel p-4 text-left cursor-pointer transition-all hover:scale-[1.02] w-full"
                 >
                   <div className="flex items-center justify-between mb-2">
-                    <Icon className="w-4 h-4 text-[var(--primary)]" />
+                    <Icon className="w-4 h-4 subject-text" />
                     <b className="text-[10px] font-mono text-[var(--dim)]">{count.toLocaleString('pt-BR')}</b>
                   </div>
                   <h3 className="font-display text-base font-medium text-[var(--text)]">{name}</h3>

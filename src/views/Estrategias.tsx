@@ -30,7 +30,7 @@ export default function Estrategias() {
     <div
       className="ni-main"
       style={{
-        '--primary': ESTRATEGIA_PALETTE.primary,
+        '--primary': ESTRATEGIA_PALETTE.primary, '--primary-ink': ESTRATEGIA_PALETTE.readable,
         '--secondary': ESTRATEGIA_PALETTE.secondary,
         '--wash': ESTRATEGIA_PALETTE.wash,
       } as React.CSSProperties}
@@ -134,13 +134,13 @@ export default function Estrategias() {
                   <div className="px-5 pb-5 pt-2 border-t border-[var(--line)] space-y-4">
                     <div>
                       <p className="text-xs font-semibold text-[var(--text)] mb-2 flex items-center">
-                        <Lightbulb className="w-3.5 h-3.5 mr-1.5 text-[var(--primary)]" />
+                        <Lightbulb className="w-3.5 h-3.5 mr-1.5 subject-text" />
                         Como resolver
                       </p>
                       <ul className="space-y-1.5">
                         {s.tips.map((tip, i) => (
                           <li key={i} className="text-xs text-[var(--dim)] flex items-start">
-                            <span className="mr-2 text-[var(--primary)]">•</span>
+                            <span className="mr-2 subject-text">•</span>
                             <span>{tip}</span>
                           </li>
                         ))}
@@ -176,7 +176,7 @@ export default function Estrategias() {
               <h3 className="font-display font-medium text-base text-[var(--text)]">{b.board}</h3>
               <p className="text-xs text-[var(--dim)] leading-relaxed">{b.profile}</p>
               <div className="p-3 rounded-lg border border-[var(--primary)]/30 bg-[var(--primary)]/10 text-xs text-[var(--text)] flex items-start gap-2">
-                <Lightbulb className="w-4 h-4 text-[var(--primary)] shrink-0 mt-0.5" />
+                <Lightbulb className="w-4 h-4 subject-text shrink-0 mt-0.5" />
                 <p className="leading-relaxed">{b.examStrategy}</p>
               </div>
             </Panel>
@@ -229,7 +229,7 @@ export default function Estrategias() {
                         <ul className="space-y-1">
                           {p.responseStructure.map((r, i) => (
                             <li key={i} className="text-xs text-[var(--dim)] flex items-start">
-                              <span className="mr-2 text-[var(--primary)]">•</span>
+                              <span className="mr-2 subject-text">•</span>
                               <span>{r}</span>
                             </li>
                           ))}

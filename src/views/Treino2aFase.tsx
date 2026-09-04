@@ -154,7 +154,7 @@ export default function Treino2aFase() {
     <div
       className="ni-main"
       style={{
-        '--primary': currentPalette.primary,
+        '--primary': currentPalette.primary, '--primary-ink': currentPalette.readable,
         '--secondary': currentPalette.secondary,
         '--wash': currentPalette.wash,
       } as React.CSSProperties}
@@ -274,7 +274,7 @@ export default function Treino2aFase() {
               <ul className="mt-3 space-y-2">
                 {question.subItems.map((s) => (
                   <li key={s.letter} className="text-xs text-[var(--text)] flex">
-                    <span className="font-semibold mr-2 shrink-0 text-[var(--primary)]">({s.letter})</span>
+                    <span className="font-semibold mr-2 shrink-0 subject-text">({s.letter})</span>
                     <span>{s.prompt}</span>
                   </li>
                 ))}
@@ -293,7 +293,7 @@ export default function Treino2aFase() {
             <div className="border border-[var(--line)] rounded-xl overflow-hidden bg-[var(--surface2)]/50">
               <button
                 onClick={() => setShowProtocol((v) => !v)}
-                className="w-full flex items-center justify-between px-4 py-2.5 text-left text-xs font-medium text-[var(--primary)]"
+                className="w-full flex items-center justify-between px-4 py-2.5 text-left text-xs font-medium subject-text"
               >
                 <span className="flex items-center">
                   <Compass className="w-3.5 h-3.5 mr-2" />
@@ -365,7 +365,7 @@ export default function Treino2aFase() {
           {!revealed ? (
             <button
               onClick={() => setRevealed(true)}
-              className="w-full flex items-center justify-center py-2.5 border border-[var(--primary)] text-[var(--primary)] rounded-xl text-xs font-semibold hover:bg-[var(--surface2)] transition-colors"
+              className="w-full flex items-center justify-center py-2.5 border border-[var(--primary)] subject-text rounded-xl text-xs font-semibold hover:bg-[var(--surface2)] transition-colors"
             >
               <Eye className="w-4 h-4 mr-2" />
               Revelar gabarito comentado
@@ -388,7 +388,7 @@ export default function Treino2aFase() {
                 <button
                   onClick={fetchAiFeedback}
                   disabled={loadingFeedback || !answer.trim()}
-                  className="w-full flex items-center justify-center py-2.5 border border-[var(--primary)] text-[var(--primary)] rounded-xl font-semibold text-xs hover:bg-[var(--surface2)] disabled:opacity-50 transition-colors"
+                  className="w-full flex items-center justify-center py-2.5 border border-[var(--primary)] subject-text rounded-xl font-semibold text-xs hover:bg-[var(--surface2)] disabled:opacity-50 transition-colors"
                 >
                   <Sparkles className={`w-3.5 h-3.5 mr-1.5 ${loadingFeedback ? 'animate-pulse' : ''}`} />
                   {loadingFeedback ? 'Corrigindo com IA...' : answer.trim() ? 'Corrigir minha resposta com IA' : 'Escreva sua resposta para pedir correção'}
@@ -398,7 +398,7 @@ export default function Treino2aFase() {
               {aiFeedback && (
                 <div className="p-4 rounded-xl text-xs leading-relaxed border border-[var(--primary)]/30 bg-[var(--primary)]/10 text-[var(--text)]">
                   <div className="flex items-start gap-2">
-                    <Sparkles className="w-4 h-4 text-[var(--primary)] shrink-0 mt-0.5" />
+                    <Sparkles className="w-4 h-4 subject-text shrink-0 mt-0.5" />
                     <AiText text={aiFeedback} className="flex-1" />
                   </div>
                 </div>

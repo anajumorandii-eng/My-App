@@ -253,7 +253,7 @@ export default function Questoes() {
       className="ni-main"
       style={
         {
-          '--primary': palette.primary,
+          '--primary': palette.primary, '--primary-ink': palette.readable,
           '--secondary': palette.secondary,
           '--wash': palette.wash,
         } as React.CSSProperties
@@ -370,7 +370,7 @@ export default function Questoes() {
                     style={styleExtra}
                     className="transition-colors hover:border-[var(--primary)] text-xs"
                   >
-                    <b style={{ color: 'var(--primary)', font: 'inherit' }}>{option.id.toUpperCase()}</b>
+                    <b className="subject-text" style={{ font: 'inherit' }}>{option.id.toUpperCase()}</b>
                     <span>{option.text}</span>
                     {answered && isCorrectOption && <CheckCircle2 className="w-4 h-4 ml-auto text-status-success shrink-0" />}
                     {answered && isSelected && !isCorrectOption && <XCircle className="w-4 h-4 ml-auto text-status-error shrink-0" />}

@@ -167,7 +167,7 @@ export default function Perfil() {
     <div
       className="ni-main"
       style={{
-        '--primary': currentPalette.primary,
+        '--primary': currentPalette.primary, '--primary-ink': currentPalette.readable,
         '--secondary': currentPalette.secondary,
         '--wash': currentPalette.wash,
       } as React.CSSProperties}
@@ -270,7 +270,7 @@ export default function Perfil() {
             <label htmlFor="hours" className="text-xs font-semibold text-[var(--text)]">
               Horas disponíveis por semana
             </label>
-            <span className="text-xs font-mono font-bold text-[var(--primary)]">{hoursDraft}h/sem</span>
+            <span className="text-xs font-mono font-bold subject-text">{hoursDraft}h/sem</span>
           </div>
           <input
             id="hours"
@@ -309,7 +309,7 @@ export default function Perfil() {
 
       {/* Target Goals & Board Weights */}
       <Panel subject="Matemática" className="ni-panel p-6 space-y-5">
-        <div className="flex items-center text-[var(--primary)]">
+        <div className="flex items-center subject-text">
           <Target className="w-4 h-4 mr-2" />
           <h3 className="font-display font-medium text-xs text-[var(--text)]">Objetivos e prioridade por banca</h3>
         </div>
@@ -426,7 +426,7 @@ export default function Perfil() {
       {/* Push Notifications */}
       <Panel subject="Matemática" className="ni-panel p-6 space-y-3">
         <div className="flex items-center justify-between">
-          <div className="flex items-center text-[var(--primary)]">
+          <div className="flex items-center subject-text">
             {reminderState === 'on' ? <Bell className="w-4 h-4 mr-2" /> : <BellOff className="w-4 h-4 mr-2" />}
             <h3 className="font-display font-medium text-xs text-[var(--text)]">Lembretes de revisão</h3>
           </div>
