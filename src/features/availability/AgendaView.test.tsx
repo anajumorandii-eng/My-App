@@ -205,9 +205,16 @@ describe('AgendaView', () => {
     agendaLinks.forEach((link) => expect(link).toHaveAttribute('href', '/agenda'));
   });
 
-  it('renders the Agenda at its application route', () => {
+  it('renders the Agenda at its application route', async () => {
     window.history.pushState({}, '', '/agenda');
-    render(<App />);
+
+    // A tela é carregada sob demanda (React.lazy), então o primeiro frame é o
+    // esqueleto do Suspense. Este act assíncrono resolve o import dinâmico e
+    // aplica o resultado — findBy* não serve aqui porque a suíte roda com
+    // timers falsos e o polling dele nunca avançaria.
+    await act(async () => {
+      render(<App />);
+    });
 
     expect(screen.getByRole('heading', { name: 'Agenda' })).toBeInTheDocument();
   });

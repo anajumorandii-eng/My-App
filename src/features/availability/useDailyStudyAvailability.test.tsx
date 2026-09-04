@@ -19,7 +19,15 @@ const repository = vi.hoisted(() => ({
 }));
 
 vi.mock('../../context/AuthContext', () => ({ useAuth: () => auth.state }));
-vi.mock('../../lib/auth', () => ({ getAccessToken: accessToken }));
+vi.mock('../../lib/auth', () => ({
+  getAccessToken: accessToken,
+  // As rotas do Google levam as duas credenciais: o ID token do Firebase
+  // identifica a aluna e o access token diz o que ela autorizou.
+  googleApiHeaders: async (token: string) => ({
+    Authorization: 'Bearer firebase-id-token',
+    'X-Google-Access-Token': token,
+  }),
+}));
 vi.mock('./scheduleRepository', () => repository);
 
 import { useDailyStudyAvailability } from './useDailyStudyAvailability';
@@ -145,7 +153,7 @@ describe('useDailyStudyAvailability', () => {
 
     expect(result.current.availability).toMatchObject({ status: 'ready', warnings: [] });
     expect(fetch).toHaveBeenCalledWith('/api/calendar/events?date=2026-08-24', {
-      headers: { Authorization: 'Bearer calendar-token' },
+      headers: { Authorization: 'Bearer firebase-id-token', 'X-Google-Access-Token': 'calendar-token' },
     });
   });
 

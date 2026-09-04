@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { CalendarEvent, DriveFile } from '../types';
 import { Link2, Unlink, Calendar as CalendarIcon, Clock, AlertTriangle, FileText } from 'lucide-react';
-import { initAuth, googleSignIn, logout } from '../lib/auth';
+import { initAuth, googleSignIn, logout, googleApiHeaders } from '../lib/auth';
 import { isoToLocalDate } from '../features/availability/time';
 import { Panel } from '../components/ui/Panel';
 import { PALETTES } from '../prototypes/NucleoInstrumentalPrototype';
@@ -37,7 +37,7 @@ export default function Conexoes() {
     try {
       const localDate = isoToLocalDate(new Date().toISOString());
       const res = await fetch(`/api/calendar/events?date=${encodeURIComponent(localDate)}`, {
-        headers: { Authorization: `Bearer ${token}` }
+        headers: await googleApiHeaders(token)
       });
       const data = await res.json();
       setEvents(data.events || []);
@@ -49,7 +49,7 @@ export default function Conexoes() {
   const fetchFiles = async (token: string) => {
     try {
       const res = await fetch('/api/drive/files', {
-        headers: { Authorization: `Bearer ${token}` }
+        headers: await googleApiHeaders(token)
       });
       const data = await res.json();
       setFiles(data.files || []);

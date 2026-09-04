@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { useAuth } from '../../context/AuthContext';
-import { getAccessToken } from '../../lib/auth';
+import { getAccessToken, googleApiHeaders } from '../../lib/auth';
 import { resolveEffectiveStudyAvailability } from './availabilityEngine';
 import { getEffectiveStudyAvailability } from './availabilityService';
 import {
@@ -179,7 +179,7 @@ async function loadCalendarOverlay(localDate: string, isConnected: boolean): Pro
     const token = await getAccessToken();
     if (!token) return { status: 'disconnected' };
     const response = await fetch(`/api/calendar/events?date=${encodeURIComponent(localDate)}`, {
-      headers: { Authorization: `Bearer ${token}` },
+      headers: await googleApiHeaders(token),
     });
     if (!response.ok) throw new Error(`Calendar request failed: ${response.status}`);
     const data: unknown = await response.json();

@@ -21,17 +21,52 @@ test('restringe administração aos e-mails configurados', () => {
   const previous = process.env.ADMIN_EMAILS;
   process.env.ADMIN_EMAILS = 'admin@example.com';
   const denied = response();
-  requireAdmin({} as any, Object.assign(denied, { locals: { userEmail: 'student@example.com' } }) as any, () => assert.fail());
+  requireAdmin({} as any, Object.assign(denied, { locals: { userEmail: 'student@example.com', userEmailVerified: true } }) as any, () => assert.fail());
   assert.equal(denied.statusCode, 403);
   process.env.ADMIN_EMAILS = previous;
 });
 
+test('recusa administração quando o e-mail não foi verificado', () => {
+  const previous = process.env.ADMIN_EMAILS;
+  process.env.ADMIN_EMAILS = 'admin@example.com';
+  const denied = response();
+  requireAdmin({} as any, Object.assign(denied, { locals: { userEmail: 'admin@example.com', userEmailVerified: false } }) as any, () => assert.fail('não deve avançar'));
+  assert.equal(denied.statusCode, 403);
+  process.env.ADMIN_EMAILS = previous;
+});
+
+test('libera administração para um e-mail configurado e verificado', () => {
+  const previous = process.env.ADMIN_EMAILS;
+  process.env.ADMIN_EMAILS = 'admin@example.com';
+  const allowed = response();
+  let advanced = false;
+  requireAdmin({} as any, Object.assign(allowed, { locals: { userEmail: 'admin@example.com', userEmailVerified: true } }) as any, () => { advanced = true; });
+  assert.equal(advanced, true);
+  process.env.ADMIN_EMAILS = previous;
+});
+
+test('pede checagem de revogação só quando configurado', async () => {
+  const calls: (boolean | undefined)[] = [];
+  const verifier = {
+    verifyIdToken: async (_token: string, checkRevoked?: boolean) => {
+      calls.push(checkRevoked);
+      return { uid: 'ana', email: 'ana@example.com', email_verified: true };
+    },
+  };
+  const padrao = createRequireFirebaseAuth(verifier);
+  await padrao({ headers: { authorization: 'Bearer valid' } } as any, response() as any, () => {});
+  const admin = createRequireFirebaseAuth(verifier, { checkRevoked: true });
+  await admin({ headers: { authorization: 'Bearer valid' } } as any, response() as any, () => {});
+  assert.deepEqual(calls, [false, true]);
+});
+
 test('identifica o usuário autenticado', async () => {
-  const middleware = createRequireFirebaseAuth({ verifyIdToken: async () => ({ uid: 'ana', email: 'ana@example.com' }) });
+  const middleware = createRequireFirebaseAuth({ verifyIdToken: async () => ({ uid: 'ana', email: 'ana@example.com', email_verified: true }) });
   const res = response();
   let advanced = false;
   await middleware({ headers: { authorization: 'Bearer valid' } } as any, res as any, () => { advanced = true; });
   assert.equal(res.locals.userId, 'ana');
   assert.equal(res.locals.userEmail, 'ana@example.com');
+  assert.equal(res.locals.userEmailVerified, true);
   assert.equal(advanced, true);
 });

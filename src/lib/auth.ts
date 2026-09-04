@@ -21,6 +21,21 @@ export const getFirebaseIdToken = async (): Promise<string | null> => {
   return auth.currentUser?.getIdToken() ?? null;
 };
 
+/**
+ * Cabeçalhos das rotas /api/calendar e /api/drive, que precisam das duas
+ * credenciais: o ID token do Firebase diz quem é a aluna (é o que o servidor
+ * valida, igual em toda rota autenticada) e o access token do Google diz o
+ * que ela autorizou o app a ler na conta dela.
+ */
+export const googleApiHeaders = async (accessToken: string): Promise<Record<string, string>> => {
+  const idToken = await getFirebaseIdToken();
+  if (!idToken) throw new Error('Entre na sua conta para acessar seus dados do Google.');
+  return {
+    Authorization: `Bearer ${idToken}`,
+    'X-Google-Access-Token': accessToken,
+  };
+};
+
 // Firebase's default persistence reads/writes IndexedDB, which has a
 // long-standing WebKit/Safari bug that throws "Database is closing/hidden"
 // (common in Safari on iOS/iPadOS, especially in Private Browsing).

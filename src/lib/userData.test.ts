@@ -9,6 +9,7 @@ type FirestoreMock = {
   getDoc: () => void;
   getDocs: () => Promise<{ docs: { data: () => StudySessionRecord }[] }>;
   orderBy: (field: string, direction: string) => { field: string; direction: string };
+  limit: (count: number) => { limit: number };
   query: (ref: unknown, ...constraints: unknown[]) => { ref: unknown; constraints: unknown[] };
   runTransaction: () => void;
   serverTimestamp: () => void;
@@ -21,6 +22,7 @@ const firestoreMock: FirestoreMock = {
   getDoc: () => undefined,
   getDocs: async () => ({ docs: [] }),
   orderBy: (field, direction) => ({ field, direction }),
+  limit: (count) => ({ limit: count }),
   query: (ref, ...constraints) => ({ ref, constraints }),
   runTransaction: () => undefined,
   serverTimestamp: () => undefined,
@@ -49,6 +51,7 @@ registerHooks({
           export const getDoc = (...args) => mock.getDoc(...args);
           export const getDocs = (...args) => mock.getDocs(...args);
           export const orderBy = (...args) => mock.orderBy(...args);
+          export const limit = (...args) => mock.limit(...args);
           export const query = (...args) => mock.query(...args);
           export const runTransaction = (...args) => mock.runTransaction(...args);
           export const serverTimestamp = (...args) => mock.serverTimestamp(...args);
