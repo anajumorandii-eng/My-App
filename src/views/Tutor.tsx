@@ -2,7 +2,7 @@ import React, { useMemo, useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { mockTopics } from '../data/mockData';
 import { Topic } from '../types';
-import { aiErrorMessage, requestAiText } from '../lib/aiClient';
+import { aiErrorMessage, requestAiText, requestAiTextStream } from '../lib/aiClient';
 import { parseContentExplanation, parseAnswerCorrection, ContentExplanation, AnswerCorrection } from '../lib/tutorContracts';
 import { AiText } from '../components/AiText';
 import { Brain, Send, Bot, User, Sparkles, BookOpenText, ClipboardCheck, CalendarClock, PencilLine, Lightbulb, Target, School, AlertTriangle, HelpCircle, RotateCcw } from 'lucide-react';
@@ -508,14 +508,26 @@ function DuvidaPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, se
     e.preventDefault();
     if (!input.trim()) return;
     const userMessage: Message = { id: Date.now().toString(), sender: 'user', text: input };
-    setMessages((prev) => [...prev, userMessage]);
+    // A bolha da resposta nasce vazia e vai sendo preenchida conforme o texto
+    // chega — antes eram até dois minutos e meio de espera antes de a aluna
+    // ver qualquer coisa.
+    const respostaId = `${Date.now()}-ai`;
+    setMessages((prev) => [...prev, userMessage, { id: respostaId, sender: 'ai', text: '' }]);
     setInput('');
     setIsLoading(true);
+
+    const escreverNaBolha = (texto: string) =>
+      setMessages((prev) => prev.map((m) => (m.id === respostaId ? { ...m, text: texto } : m)));
+
     try {
-      const data = await requestAiText('socratic', { question: userMessage.text, topic: effectiveTopic });
-      setMessages((prev) => [...prev, { id: Date.now().toString(), sender: 'ai', text: data.text || 'Ocorreu um erro ao processar a resposta.' }]);
+      let acumulado = '';
+      const data = await requestAiTextStream('socratic', { question: userMessage.text, topic: effectiveTopic }, (delta) => {
+        acumulado += delta;
+        escreverNaBolha(acumulado);
+      });
+      escreverNaBolha(data.text || acumulado || 'Ocorreu um erro ao processar a resposta.');
     } catch (error) {
-      setMessages((prev) => [...prev, { id: Date.now().toString(), sender: 'ai', text: aiErrorMessage(error) }]);
+      escreverNaBolha(aiErrorMessage(error));
     } finally {
       setIsLoading(false);
     }
