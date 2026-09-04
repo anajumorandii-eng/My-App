@@ -81,6 +81,43 @@ Sem `GOOGLE_CLIENT_ID` e `GOOGLE_CLIENT_SECRET`, as rotas de
 Conexões avisa que a integração não está configurada naquele ambiente — o
 resto do app continua funcionando normalmente.
 
+## Diagnóstico
+
+Antes de investigar qualquer outra coisa, abra:
+
+```
+https://my-app-git-150170824812.southamerica-east1.run.app/api/health
+```
+
+A resposta diz o que a revisão que está no ar realmente enxerga:
+
+```json
+{
+  "status": "ok",
+  "googleOAuth": {
+    "configured": true,
+    "hasClientId": true,
+    "hasClientSecret": true,
+    "redirectUri": "https://.../api/oauth/google/callback"
+  }
+}
+```
+
+Como ler:
+
+- **`configured: false`** — a revisão em tráfego não recebeu as variáveis.
+  `hasClientId` e `hasClientSecret` dizem qual das duas falta. Editar as
+  variáveis no Cloud Run só vale a partir de uma nova revisão implantada.
+- **`redirectUri` diferente do cadastrado no cliente JUJU** — é isso que causa
+  `redirect_uri_mismatch`. O valor tem que bater caractere por caractere,
+  inclusive quanto a barra no final. Ele vem de `APP_URL`.
+- **`configured: true` e o `redirectUri` correto** — a configuração está certa
+  e o problema é outro; procure nos logs do Cloud Run por `Failed to start
+  Google OAuth` ou `Google OAuth callback failed`.
+
+O mesmo diagnóstico sai no log de arranque do serviço, como um evento
+`google_oauth_config` — útil pra comparar revisões no Logs Explorer.
+
 ## 5. Conferir
 
 Depois do deploy, em **Conexões**:

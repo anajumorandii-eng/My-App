@@ -96,6 +96,22 @@ const APP_URL = process.env.APP_URL || 'http://localhost:3000';
 const REDIRECT_URI = `${APP_URL}/api/oauth/google/callback`;
 const GOOGLE_OAUTH_CONFIGURED = Boolean(GOOGLE_CLIENT_ID && GOOGLE_CLIENT_SECRET);
 
+// Diagnóstico de arranque. As duas causas de "não conecta" que não deixam
+// rastro em lugar nenhum são variável faltando na revisão em tráfego e
+// redirect URI diferente do cadastrado no Google — e a segunda depende de
+// APP_URL, que é fácil de configurar com uma barra a mais no fim. Registrar
+// as duas no boot transforma isso numa linha de log em vez de tentativa e
+// erro. Nada aqui é segredo: o redirect URI aparece na barra de endereço
+// durante a própria autorização.
+console.info(JSON.stringify({
+  event: 'google_oauth_config',
+  configured: GOOGLE_OAUTH_CONFIGURED,
+  hasClientId: Boolean(GOOGLE_CLIENT_ID),
+  hasClientSecret: Boolean(GOOGLE_CLIENT_SECRET),
+  appUrl: APP_URL,
+  redirectUri: REDIRECT_URI,
+}));
+
 function getOAuthClient(): OAuthClient {
   return new google.auth.OAuth2(
     GOOGLE_CLIENT_ID,
@@ -108,7 +124,18 @@ const googleOAuthStore = new FirestoreGoogleOAuthStore(getFirestore(getFirebaseA
 const googleTokens = new GoogleAccessTokenProvider(googleOAuthStore, getOAuthClient);
 
 // API routes
-app.get('/api/health', (req, res) => res.json({ status: 'ok' }));
+app.get('/api/health', (req, res) => res.json({
+  status: 'ok',
+  // Mesmo diagnóstico do log de arranque, alcançável sem abrir o console do
+  // Cloud Run: dá pra conferir do celular se a revisão no ar enxerga as
+  // credenciais e qual redirect URI ela vai mandar pro Google.
+  googleOAuth: {
+    configured: GOOGLE_OAUTH_CONFIGURED,
+    hasClientId: Boolean(GOOGLE_CLIENT_ID),
+    hasClientSecret: Boolean(GOOGLE_CLIENT_SECRET),
+    redirectUri: REDIRECT_URI,
+  },
+}));
 
 // O cliente manda só o ID token do Firebase; o access token do Google é
 // resolvido aqui, a partir do refresh token guardado no servidor. Antes o
