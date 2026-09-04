@@ -12,8 +12,15 @@ https://my-app-git-150170824812.southamerica-east1.run.app
 
 ## 1. Google Cloud Console — cliente OAuth
 
-Em **APIs & Services → Credentials → OAuth 2.0 Client IDs**, no cliente do tipo
-*Web application* (o mesmo do `GOOGLE_CLIENT_ID`), cadastre:
+Em **APIs & Services → Credentials → OAuth 2.0 Client IDs**, o cliente a editar
+é o **JUJU** — o criado à mão para o app. NÃO use o "Web client (auto created by
+Google Service)": aquele é do Firebase Authentication, cuida do login, tem os
+redirect URIs dele apontando para `<projeto>.firebaseapp.com/__/auth/handler` e
+pode ser reescrito pelo Firebase sem aviso. Os dois convivem sem conflito — o do
+Firebase responde por quem a aluna é, o JUJU pela autorização de ler agenda e
+Drive.
+
+No **JUJU**, cadastre:
 
 **Authorized redirect URIs** — precisa bater caractere por caractere com o que
 o servidor monta em `${APP_URL}/api/oauth/google/callback`:
@@ -65,8 +72,8 @@ my-app-git-150170824812.southamerica-east1.run.app
 
 ```
 APP_URL=https://my-app-git-150170824812.southamerica-east1.run.app
-GOOGLE_CLIENT_ID=<client id>
-GOOGLE_CLIENT_SECRET=<secret, via Secret Manager>
+GOOGLE_CLIENT_ID=<client id do JUJU>
+GOOGLE_CLIENT_SECRET=<client secret do JUJU, via Secret Manager>
 ```
 
 Sem `GOOGLE_CLIENT_ID` e `GOOGLE_CLIENT_SECRET`, as rotas de
