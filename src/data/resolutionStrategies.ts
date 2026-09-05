@@ -168,6 +168,40 @@ export const subjectStrategies: SubjectStrategy[] = [
       'Confundir fato confirmado com interpretação ou hipótese.',
     ],
   },
+  {
+    subject: 'Filosofia',
+    tips: [
+      'Antes de responder, identifique de que autor ou corrente o comando trata — resposta genérica sobre "o pensamento humano" não pontua em nenhuma banca.',
+      'Defina o conceito com precisão antes de aplicá-lo: nome de filósofo sem conceito explicado vale tanto quanto conceito sem autor.',
+      'Trabalhe por oposições, que é como a banca monta a questão: Platão × Aristóteles, racionalismo × empirismo, Hobbes × Rousseau, Kant × utilitarismo.',
+      'Em texto de apoio, extraia a tese do autor antes de opinar — e depois marque claramente onde começa sua própria avaliação.',
+      'Feche com a consequência filosófica da tese, não com um resumo do que já foi dito.',
+    ],
+    pitfalls: [
+      'Citar o filósofo e parar aí, sem explicar o conceito que a resposta exige.',
+      'Parafrasear o texto de apoio sem nomear nenhuma categoria filosófica.',
+      'Anacronismo: ler o debate medieval entre fé e razão como o embate moderno entre religião e ciência.',
+      'Confundir a dúvida metódica de Descartes com ceticismo, ou o meio-termo de Aristóteles com moderação.',
+      'Tratar as Ideias de Platão como conceitos mentais e a "morte de Deus" de Nietzsche como tese sobre religião.',
+    ],
+  },
+  {
+    subject: 'Sociologia',
+    tips: [
+      'Use o par fonte → conceito → mecanismo: extraia o dado do texto, gráfico ou charge, nomeie a categoria sociológica e explique o processo social que liga um ao outro.',
+      'Desnaturalize antes de explicar: mostre que o fenômeno tem história e produção social, em vez de tratá-lo como decorrência da natureza humana.',
+      'Sustente a análise com dados e mecanismos, não com indignação — denúncia sem categoria não é resposta sociológica.',
+      'Compare os clássicos por critérios explícitos (base da coesão, tipo de direito, critério de classe), em vez de descrever um autor depois do outro.',
+      'Em temas contemporâneos — uberização, algoritmos, desigualdade racial e de gênero —, ancore a atualidade em um conceito clássico.',
+    ],
+    pitfalls: [
+      'Reduzir classe social a faixa de renda, o que apaga o antagonismo estrutural.',
+      'Explicar fenômeno social por escolha ou mérito individual — exatamente o que o método de Durkheim recusa.',
+      'Traduzir anomia como "ausência de leis" ou "caos", quando é desregulação moral.',
+      'Apresentar a tese weberiana da ética protestante como o inverso simétrico de Marx.',
+      'Tratar cultura como bloco homogêneo, ignorando que ela é internamente disputada.',
+    ],
+  },
 ];
 
 export interface BancaStrategy {
