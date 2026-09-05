@@ -43702,5 +43702,905 @@
       "board": "ENEM",
       "collection": "Caderno de Revisão de Inverno 2026 (Curso Anglo)"
     }
+  },
+  {
+    "id": "q_enem_2016_32",
+    "topicId": "soc_durkheim",
+    "subject": "Sociologia",
+    "prompt": "A sociologia ainda não ultrapassou a era das construções e das sínteses filosóficas. Em vez de assumir a tarefa de lançar luz sobre uma parcela restrita do campo social, ela prefere buscar as brilhantes generalidades em que todas as questões são levantadas sem que nenhuma seja expressamente tratada. Não é com exames sumários e por meio de intuições rápidas que se pode chegar a descobrir as leis de uma realidade tão complexa. Sobretudo, generalizações às vezes tão amplas e tão apressadas não são suscetíveis de nenhum tipo de prova.\n\nDURKHEIM, E. **O suicídio**: estudo de sociologia. São Paulo: Martins Fontes, 2000.\n\nO texto expressa o esforço de Émile Durkheim em construir uma sociologia com base na",
+    "options": [
+      {
+        "id": "a",
+        "text": "Vinculação com a filosofia como saber unificado."
+      },
+      {
+        "id": "b",
+        "text": "Reunião de percepções intuitivas para demonstração."
+      },
+      {
+        "id": "c",
+        "text": "Formulação de hipóteses subjetivas sobre a vida social."
+      },
+      {
+        "id": "d",
+        "text": "Adesão aos padrões de investigação típicos das ciências naturais."
+      },
+      {
+        "id": "e",
+        "text": "Incorporação de um conhecimento alimentado pelo engajamento político."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Durkheim está reclamando de uma sociologia que se contenta com \"brilhantes generalidades\" e \"intuições rápidas\". O que ele opõe a isso é o critério que define uma ciência: afirmações que possam ser submetidas a prova, sobre uma parcela delimitada da realidade. É esse o projeto de tratar o fato social \"como coisa\", com um método tão rigoroso quanto o das ciências naturais. A alternativa (a) inverte o texto: ele quer justamente separar a sociologia da filosofia.",
+    "difficulty": "medium",
+    "examSource": {
+      "board": "ENEM",
+      "year": 2016,
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos"
+    }
+  },
+  {
+    "id": "q_enem_2015_34",
+    "topicId": "fil_origem_pre_socraticos",
+    "subject": "Filosofia",
+    "prompt": "A filosofia grega parece começar com uma ideia absurda, com a proposição: a água é a origem e a matriz de todas as coisas. Será mesmo necessário deter-nos nela e levá-la a sério? Sim, e por três razões: em primeiro lugar, porque essa proposição enuncia algo sobre a origem das coisas; em segundo lugar, porque o faz sem imagem e fabulação; e, enfim, em terceiro lugar, porque nela, embora apenas em estado de crisálida, está contido o pensamento: _Tudo é um_.\n\nNIETZSCHE, F. Crítica moderna. In: **Os pré-socráticos**. São Paulo: Nova Cultural, 1999.\n\nO que, de acordo com Nietzsche, caracteriza o surgimento da filosofia entre os gregos?",
+    "options": [
+      {
+        "id": "a",
+        "text": "O impulso para transformar, mediante justificativas, os elementos sensíveis em verdades racionais."
+      },
+      {
+        "id": "b",
+        "text": "O desejo de explicar, usando metáforas, a origem dos seres e das coisas."
+      },
+      {
+        "id": "c",
+        "text": "A necessidade de buscar, de forma racional, a causa primeira das coisas existentes."
+      },
+      {
+        "id": "d",
+        "text": "A ambição de expor, de maneira metódica, as diferenças entre as coisas."
+      },
+      {
+        "id": "e",
+        "text": "A tentativa de justificar, a partir de elementos empíricos, o que existe no real."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "A resposta está nas três razões que Nietzsche lista. A proposição de Tales é filosófica porque fala da origem de todas as coisas, e sobretudo porque o faz \"sem imagem e fabulação\" — isto é, sem mito. Aí está o nascimento da filosofia: a passagem do relato mítico para a busca racional de uma causa primeira, a *arché*. A alternativa (b) descreve exatamente o que o texto nega, o uso de metáforas.",
+    "difficulty": "medium",
+    "examSource": {
+      "board": "ENEM",
+      "year": 2015,
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos"
+    }
+  },
+  {
+    "id": "q_enem_2012_2",
+    "topicId": "fil_kant_idealismo",
+    "subject": "Filosofia",
+    "prompt": "Esclarecimento é a saída do homem de sua menoridade, da qual ele próprio é culpado. A menoridade é a incapacidade de fazer uso de seu entendimento sem a direção de outro indivíduo. O homem é o próprio culpado dessa menoridade se a causa dela não se encontra na falta de entendimento, mas na falta de decisão e coragem de servir-se de si mesmo sem a direção de outrem. Tem coragem de fazer uso de teu próprio entendimento, tal é o lema do esclarecimento. A preguiça e a covardia são as causas pelas quais uma tão grande parte dos homens, depois que a natureza de há muito os libertou de uma condição estranha, continuem, no entanto, de bom grado menores durante toda a vida.\n\n_KANT, I. Resposta à pergunta: o que é esclarecimento? Petrópolis: Vozes, 1985 (adaptado)._\n\nKant destaca no texto o conceito de Esclarecimento, fundamental para a compreensão do contexto filosófico da Modernidade. Esclarecimento, no sentido empregado por Kant, representa",
+    "options": [
+      {
+        "id": "a",
+        "text": "A reivindicação de autonomia da capacidade racional como expressão da maioridade."
+      },
+      {
+        "id": "b",
+        "text": "O exercício da racionalidade como pressuposto menor diante das verdades eternas."
+      },
+      {
+        "id": "c",
+        "text": "A imposição de verdades matemáticas, com caráter objetivo, de forma heterônoma."
+      },
+      {
+        "id": "d",
+        "text": "A compreensão de verdades religiosas que libertam o homem da falta de entendimento."
+      },
+      {
+        "id": "e",
+        "text": "A emancipação da subjetividade humana de ideologias produzidas pela própria razão."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Kant define esclarecimento por oposição à \"menoridade\", que é depender do entendimento de outro. Sair dela é usar a própria razão — autonomia, literalmente dar a si mesmo a própria lei. E ele é duro ao dizer que a culpa é nossa: falta coragem, não capacidade. A alternativa (e) inverte a posição dele: Kant não emancipa o homem da razão, emancipa-o pela razão.",
+    "difficulty": "medium",
+    "examSource": {
+      "board": "ENEM",
+      "year": 2012,
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos"
+    }
+  },
+  {
+    "id": "q_enem_2017_85",
+    "topicId": "fil_kant_idealismo",
+    "subject": "Filosofia",
+    "prompt": "Uma pessoa vê-se forçada pela necessidade a pedir dinheiro emprestado. Sabe muito bem que não poderá pagar, mas vê também que não lhe emprestarão nada se não prometer firmemente pagar em prazo determinado. Sente a tentação de fazer a promessa; mas tem ainda consciência bastante para perguntar a si mesma: não é proibido e contrário ao dever livrar-se de apuros desta maneira? Admitindo que se decida a fazê-lo, a sua máxima de ação seria: quando julgo estar em apuros de dinheiro, vou pedi-lo emprestado e prometo pagá-lo, embora saiba que tal nunca sucederá.\n\nKANT, I. **Fundamentação da metafísica dos costumes**. São Paulo: Abril Cultural, 1980.\n\nDe acordo com a moral kantiana, a “falsa promessa de pagamento” representada no texto",
+    "options": [
+      {
+        "id": "a",
+        "text": "Assegura que a ação seja aceita por todos a partir da livre discussão participativa."
+      },
+      {
+        "id": "b",
+        "text": "Garante que os efeitos das ações não destruam a possibilidade da vida futura na terra."
+      },
+      {
+        "id": "c",
+        "text": "Opõe-se ao princípio de que toda ação do homem possa valer como norma universal."
+      },
+      {
+        "id": "d",
+        "text": "Materializa-se no entendimento de que os fins da ação humana podem justificar os meios."
+      },
+      {
+        "id": "e",
+        "text": "Permite que a ação individual produza a mais ampla felicidade para as pessoas envolvidas."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "O teste kantiano é perguntar se a máxima da minha ação poderia virar lei universal. Aplique-a aqui: se todo mundo em apuros prometesse pagar sabendo que não vai pagar, ninguém mais aceitaria promessa alguma — e a própria promessa deixaria de existir. A máxima se autodestrói quando universalizada; por isso a ação é imoral. A alternativa (d) descreve o oposto do imperativo categórico: para Kant, os fins nunca justificam os meios.",
+    "difficulty": "medium",
+    "examSource": {
+      "board": "ENEM",
+      "year": 2017,
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos"
+    }
+  },
+  {
+    "id": "q_enem_2019_78",
+    "topicId": "fil_kant_idealismo",
+    "subject": "Filosofia",
+    "prompt": "**TEXTO I  \n**\n\nDuas coisas enchem o ânimo de admiração e veneração sempre crescentes: o céu estrelado sobre mim e a lei moral em mim.\n\n**KANT, I. Crítica da razão prática. Lisboa: Edições 70, s/d (adaptado).**\n\n**TEXTO II**\n\nDuas coisas admiro: a dura lei cobrindo-me e o estrelado céu dentro de mim.\n\n**FONTELA, O. Kant (relido). In: Poesia completa. São Paulo: Hedra, 2015.**\n\nA releitura realizada pela poeta inverte as seguintes ideias centrais do pensamento kantiano:",
+    "options": [
+      {
+        "id": "a",
+        "text": "Possibilidade da liberdade e obrigação da ação."
+      },
+      {
+        "id": "b",
+        "text": "Aprioridade do juízo e importância da natureza."
+      },
+      {
+        "id": "c",
+        "text": "Necessidade da boa vontade e crítica da metafísica."
+      },
+      {
+        "id": "d",
+        "text": "Prescindibilidade do empírico e autoridade da razão."
+      },
+      {
+        "id": "e",
+        "text": "Interioridade da norma e fenomenalidade do mundo."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Em Kant, a lei moral é interior (está \"em mim\") e o céu estrelado é o mundo fenomênico, exterior. A poeta troca os lugares: a lei passa a ser dura e externa, \"cobrindo-me\", e o céu vira interioridade. Ou seja, ela inverte precisamente a interioridade da norma e a fenomenalidade do mundo. É uma questão de leitura fina: a resposta está na inversão espacial dos dois textos, não em nenhuma tese kantiana adicional.",
+    "difficulty": "hard",
+    "examSource": {
+      "board": "ENEM",
+      "year": 2019,
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos"
+    }
+  },
+  {
+    "id": "q_enem_2013_15",
+    "topicId": "fil_marx_critica_sociedade",
+    "subject": "Filosofia",
+    "prompt": "Na produção social que os homens realizam, eles entram em determinadas relações indispensáveis e independentes de sua vontade; tais relações de produção correspondem a um estágio definido de desenvolvimento das suas forças materiais de produção. A totalidade dessas relações constitui a estrutura econômica da sociedade — fundamento real, sobre o qual se erguem as superestruturas política e jurídica, e ao qual correspondem determinadas formas de consciência social.\n\n_MARX, K. Prefácio à Crítica da economia política. In: MARX, K.; ENGELS, F. Textos 3. São Paulo: Edições Sociais, 1977 (adaptado)._\n\nPara o autor, a relação entre economia e política estabelecida no sistema capitalista faz com que",
+    "options": [
+      {
+        "id": "a",
+        "text": "O proletariado seja contemplado pelo processo de mais-valia."
+      },
+      {
+        "id": "b",
+        "text": "O trabalho se constitua como o fundamento real da produção material."
+      },
+      {
+        "id": "c",
+        "text": "A consolidação das forças produtivas seja compatível com o progresso humano."
+      },
+      {
+        "id": "d",
+        "text": "A autonomia da sociedade civil seja proporcional ao desenvolvimento econômico."
+      },
+      {
+        "id": "e",
+        "text": "A burguesia revolucione o processo social de formação da consciência de classe."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "O trecho é a formulação clássica da relação entre infraestrutura e superestrutura. Marx diz que as relações de produção formam \"a estrutura econômica da sociedade — fundamento real\" sobre o qual se erguem a política, o direito e as formas de consciência. A alternativa correta apenas reconhece esse fundamento: é o trabalho, a produção material, que sustenta o resto. A (a) é falsa porque a mais-valia é apropriada pelo capitalista, não pelo proletariado.",
+    "difficulty": "hard",
+    "examSource": {
+      "board": "ENEM",
+      "year": 2013,
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos"
+    }
+  },
+  {
+    "id": "q_enem_2021_65",
+    "topicId": "fil_marx_critica_sociedade",
+    "subject": "Filosofia",
+    "prompt": "Ao mesmo tempo, graças às amplas possibilidades que tive de observar a classe média, vossa adversária, rapidamente concluí que vós tendes razão, inteira razão, em não esperar dele qualquer ajuda. Seus interesses são diametralmente opostos aos vossos, mesmo que ela procure incessantemente afirmar o contrário e vos queira persuadir que sente a maior simpatia por vossa sorte. Mas seus atos desmentem suas palavras.\n\nENGELS, F. **A situação da classe trabalhadora na Inglaterra.** São Paulo: Boitempo, 2010.\n\nNo texto, o autor apresenta delineamentos éticos que correspondem ao (s)",
+    "options": [
+      {
+        "id": "a",
+        "text": "Conceito de luta de classes."
+      },
+      {
+        "id": "b",
+        "text": "Alicerce da ideia de mais-valia."
+      },
+      {
+        "id": "c",
+        "text": "Fundamentos do método científico."
+      },
+      {
+        "id": "d",
+        "text": "Paradigmas do processo indagativo."
+      },
+      {
+        "id": "e",
+        "text": "Domínios do fetichismo da mercadoria."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Engels afirma que os interesses da classe média são \"diametralmente opostos\" aos dos trabalhadores, e que suas palavras de simpatia são desmentidas pelos atos. Interesses estruturalmente opostos entre classes é a definição de luta de classes. A mais-valia (b) e o fetichismo (e) são conceitos econômicos de O Capital, que não estão em jogo neste trecho.",
+    "difficulty": "medium",
+    "examSource": {
+      "board": "ENEM",
+      "year": 2021,
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos"
+    }
+  },
+  {
+    "id": "q_enem_2016_6",
+    "topicId": "fil_niilismo_existencialismo",
+    "subject": "Filosofia",
+    "prompt": "Ser ou não ser — eis a questão.  \nMorrer — dormir — Dormir! Talvez sonhar. Aí está o obstáculo!  \nOs sonhos que hão de vir no sono da morte  \nQuando tivermos escapado ao tumulto vital  \nNos obriguam a hesitar: e é essa a reflexão  \nQue dá à desventura uma vida tão longa.\n\nSHAKESPEARE, W. **Hamlet**. Porto Alegre: L&PM, 2007\n\nEste solilóquio pode ser considerado um precursor do existencialismo ao enfatizar a tensão entre",
+    "options": [
+      {
+        "id": "a",
+        "text": "Consciência de si e angústia humana."
+      },
+      {
+        "id": "b",
+        "text": "Inevitabilidade do destino e incerteza moral."
+      },
+      {
+        "id": "c",
+        "text": "Tragicidade da personagem e ordem do mundo."
+      },
+      {
+        "id": "d",
+        "text": "Racionalidade argumentativa e loucura iminente."
+      },
+      {
+        "id": "e",
+        "text": "Dependência paterna e impossibilidade de ação."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Hamlet não está diante de um destino imposto: está diante de uma escolha que só ele pode fazer, e é a consciência dessa escolha — inclusive sobre a própria vida — que o paralisa. Essa é a estrutura que o existencialismo do século XX vai formalizar: consciência de si e angústia caminham juntas, porque ser livre é ter de decidir sem garantias. A alternativa (b) atribui ao texto uma inevitabilidade que ele justamente não tem.",
+    "difficulty": "medium",
+    "examSource": {
+      "board": "ENEM",
+      "year": 2016,
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos"
+    }
+  },
+  {
+    "id": "q_enem_2016_37",
+    "topicId": "fil_niilismo_existencialismo",
+    "subject": "Filosofia",
+    "prompt": "Vi os homens sumirem-se numa grande tristeza. Os melhores cansaram-se das suas obras. Proclamou-se uma doutrina e com ela circulou uma crença: Tudo é oco, tudo é igual, tudo passou! O nosso trabalho foi inútil; o nosso vinho tornou-se veneno; o mau olhado amareleceu-nos os campos e os corações. Secamos de todo, e se caísse fogo em cima de nós, as nossas cinzas voariam em pó. Sim; cansamos o próprio fogo. Todas as fontes secaram para nós, e o mar retirou-se. Todos os solos se querem abrir, mas os abismos não nos querem tragar!\n\nNIETZSCHE, F. **Assim falou Zaratustra**, Rio de Janeiro. Ediouro, 1977.\n\nO texto exprime uma construção alegórica, que traduz um entendimento da doutrina niilista, uma vez que",
+    "options": [
+      {
+        "id": "a",
+        "text": "Reforça a liberdade do cidadão."
+      },
+      {
+        "id": "b",
+        "text": "Desvela os valores do cotidiano."
+      },
+      {
+        "id": "c",
+        "text": "Exorta as relações de produção."
+      },
+      {
+        "id": "d",
+        "text": "Destaca a decadência da cultura."
+      },
+      {
+        "id": "e",
+        "text": "Amplifica o sentimento de ansiedade."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "A alegoria descreve um esgotamento: o trabalho inútil, o vinho virado veneno, as fontes secas. Não é tristeza individual, é uma cultura inteira em que os valores perderam a força — \"tudo é oco, tudo é igual\". É esse o niilismo de Nietzsche: a decadência dos valores que sustentavam o sentido, depois da morte de Deus. A (e) confunde o diagnóstico cultural com um estado psicológico.",
+    "difficulty": "medium",
+    "examSource": {
+      "board": "ENEM",
+      "year": 2016,
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos"
+    }
+  },
+  {
+    "id": "q_enem_2021_87",
+    "topicId": "fil_niilismo_existencialismo",
+    "subject": "Filosofia",
+    "prompt": "Minha fórmula para o que há de grande no individuo é amor fati: nada desejar além daquilo que é, nem diante de si, nem atrás de si, nem nos séculos dos séculos. Não se contentar em suportar o inelutável, e ainda menos dissimula-lo, mas amá-lo.\n\nNIETZSCHE apud FERRY, L. Aprender a viver: filosofia para os novos tempos.  \nRio de Janeiro: Objetiva, 2010 (adaptado).\n\nEssa fórmula indicada por Nietzsche consiste em uma crítica à tradição cristã que",
+    "options": [
+      {
+        "id": "a",
+        "text": "Combate as práticas sociais de cunho afetivo."
+      },
+      {
+        "id": "b",
+        "text": "Impede o avanço científico no contexto moderno."
+      },
+      {
+        "id": "c",
+        "text": "Associa os cultos pagãos à sacralização da natureza."
+      },
+      {
+        "id": "d",
+        "text": "Condena os modelos filosóficos da Antiguidade Clássica."
+      },
+      {
+        "id": "e",
+        "text": "Consagra a realização humana ao campo transcendental."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "*Amor fati* é amar o que é, aqui e agora — inclusive o inelutável. O alvo da crítica fica claro por contraste: a tradição cristã coloca a realização humana num além, no campo transcendental, e por isso desvaloriza esta vida. Nietzsche inverte o eixo e devolve o valor ao mundo sensível. As demais alternativas atribuem à tradição cristã críticas que não estão nesta fórmula.",
+    "difficulty": "medium",
+    "examSource": {
+      "board": "ENEM",
+      "year": 2021,
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos"
+    }
+  },
+  {
+    "id": "q_enem_2023_79",
+    "topicId": "fil_niilismo_existencialismo",
+    "subject": "Filosofia",
+    "prompt": "**TEXTO I**\n\nGerineldo dorme porque já está conformado com o seu mundo. Porque já sabe tudo o que lhe pode acontecer após haver submetido todos os objetos que o rodeiam a um minucioso inventário de possibilidades. Seu apartamento, mais que um apartamento, é uma teoria de sorte e de azar. Melhor que ninguém, Gerineldo conhece o coeficiente da dilatação de suas janelas e mantém marcado no termômetro, com uma linha vermelha, o ponto em que se quebrarão os vidros, despedaçados em estilhaços de morte. Sabe que os arquitetos e os engenheiros já previram tudo, menos o que nunca já aconteceu.\n\nMARQUEZ, G. G. O pessimista. In: Textos do Caribe. Rio de Janeiro: Record, 1981.\n\n**ТЕХТО II**\n\nA situação é o sujeito inteiro (ele não é nada a não ser a sua situação) e é também a coisa inteira (nunca há mais nada senão as coisas). É o sujeito a elucidar as coisas pela sua própria superação, se assim quisermos; ou são as coisas a reenviar ao sujeito a imagem dele. É a total facticidade, a contingência absoluta do mundo, do meu nascimento, do meu lugar, do meu passado, dos meus redores — e é a minha liberdade sem limites que faz com que haja para mim uma facticidade.\n\nSARTRE, J.-P. O ser e o nada: ensaio de ontologia fenomenológica. Petrópolis: Vozes, 1997 (adaptado).\n\nA postura determinista adotada pelo personagem Gerineldo contrasta com a ideia existencialista contida no pensamento filosófico de Sartre porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "Evidencia a manifestação do inconsciente."
+      },
+      {
+        "id": "b",
+        "text": "Nega a possibilidade de transcendência."
+      },
+      {
+        "id": "c",
+        "text": "Contraria o conhecimento difuso."
+      },
+      {
+        "id": "d",
+        "text": "Sustenta a fugacidade da vida."
+      },
+      {
+        "id": "e",
+        "text": "Refuta a evolução biológica."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Gerineldo inventariou todas as possibilidades e dorme: para ele, o futuro já está dado. Em Sartre, ao contrário, a facticidade (o nascimento, o lugar, o passado) é real, mas só existe como facticidade *para* uma liberdade que a supera — o sujeito transcende a situação ao dar sentido a ela. Ao tratar sua situação como cálculo fechado, o personagem nega justamente essa possibilidade de transcendência.",
+    "difficulty": "hard",
+    "examSource": {
+      "board": "ENEM",
+      "year": 2023,
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos"
+    }
+  },
+  {
+    "id": "q_enem_2014_14",
+    "topicId": "fil_etica_politica_contemporanea",
+    "subject": "Filosofia",
+    "prompt": "Uma norma só deve pretender validez quando todos os que possam ser concernidos por ela cheguem (ou possam chegar), enquanto participantes de um discurso prático, a um acordo quanto à validade dessa norma.\n\n_HABERMAS, J. Consciência moral e agir comunicativo. Rio de Janeiro: Tempo Brasileiro, 1989._\n\nSegundo Habermas, a validez de uma norma deve ser estabelecida pelo(a):",
+    "options": [
+      {
+        "id": "a",
+        "text": "Liberdade humana, que consagra a vontade."
+      },
+      {
+        "id": "b",
+        "text": "Razão comunicativa, que requer um consenso."
+      },
+      {
+        "id": "c",
+        "text": "Conhecimento filosófico, que expressa a verdade."
+      },
+      {
+        "id": "d",
+        "text": "Técnica científica, que aumento o poder do homem."
+      },
+      {
+        "id": "e",
+        "text": "Poder político, que se concentra no sistema partidário."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Repare em quem valida a norma no texto: não um princípio dado de antemão, nem uma autoridade, mas os próprios afetados, enquanto participantes de um discurso. Essa é a virada de Habermas — a razão deixa de ser monológica (um sujeito pensando sozinho, como em Kant) e passa a ser comunicativa: a validade nasce do acordo alcançado em argumentação livre.",
+    "difficulty": "medium",
+    "examSource": {
+      "board": "ENEM",
+      "year": 2014,
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos"
+    }
+  },
+  {
+    "id": "q_enem_2017_64",
+    "topicId": "fil_etica_politica_contemporanea",
+    "subject": "Filosofia",
+    "prompt": "Uma sociedade é uma associação mais ou menos autossuficiente de pessoas que em suas relações mútuas reconhecem certas regras de conduto com obrigatórias e que, na maioria das vezes, agem de acordo com elas. Uma sociedade é bom ordenada não apenas quando está planejada para promover o bem de seus membros, mas quando é também efetivamente regulada por uma concepção pública de justiça. Isto é, trata-se de uma sociedade na qual todos aceitam, e sabem que os outros aceitam, o mesmo princípio de justiça.\n\nRAWLS, J. **Uma teoria da justiça**. São Paulo: Martins Fontes, 1997. Adaptado.\n\nA visão expressa nesse texto do século XX remete a qual aspecto do pensamento moderno?",
+    "options": [
+      {
+        "id": "a",
+        "text": "A relação entre liberdade e autonomia do Liberalismo."
+      },
+      {
+        "id": "b",
+        "text": "A independência entre poder e moral do Racionalismo."
+      },
+      {
+        "id": "c",
+        "text": "A convenção entre cidadãos e soberano do Absolutismo."
+      },
+      {
+        "id": "d",
+        "text": "A dialética entre indivíduo e governo autocrata do Idealismo."
+      },
+      {
+        "id": "e",
+        "text": "A contraposição entre bondade e condições selvagem do Naturalismo."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Rawls descreve uma sociedade em que todos aceitam publicamente os mesmos princípios de justiça — a obrigação vale porque foi reconhecida, não porque foi imposta. Isso retoma o eixo liberal moderno: sou obrigado apenas àquilo a que, sendo livre, eu poderia consentir. Daí a ligação entre liberdade e autonomia. A (c) é a armadilha: o pacto de Rawls é entre cidadãos iguais, não a alienação do poder a um soberano absoluto.",
+    "difficulty": "medium",
+    "examSource": {
+      "board": "ENEM",
+      "year": 2017,
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos"
+    }
+  },
+  {
+    "id": "q_enem_2019_76",
+    "topicId": "fil_etica_politica_contemporanea",
+    "subject": "Filosofia",
+    "prompt": "Essa atmosfera de loucura e irrealidade, criada pela aparente ausência de propósitos, é a verdadeira cortina de ferro que esconde dos olhos do mundo todas as formas de campos de concentração. Vistos de fora, os campos e o que neles acontece só podem ser descritos com imagens extraterrenas, como se a vida fosse neles separada das finalidades deste mundo. Mais que o arame farpado, é a irrealidade dos detentos que ele confina que provoca uma crueldade tão incrível que termina levando à aceitação do extermínio como solução perfeitamente normal.\n\n**ARENDT, H. Origens do totalitarismo. São Paulo: Cia. das Letras, 1989 (adaptado).**\n\nA partir da análise da autora, no encontro das temporalidades históricas, evidencia-se uma crítica à naturalização do(a):",
+    "options": [
+      {
+        "id": "a",
+        "text": "Ideário nacional, que legitima as desigualdades sociais."
+      },
+      {
+        "id": "b",
+        "text": "Alienação ideológica, que justifica as ações individuais."
+      },
+      {
+        "id": "c",
+        "text": "Cosmologia religiosa, que sustenta as tradições hierárquicas."
+      },
+      {
+        "id": "d",
+        "text": "Segregação humana, que fundamenta os projetos biopolíticos."
+      },
+      {
+        "id": "e",
+        "text": "Enquadramento cultural, que favorece os comportamentos punitivos."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Arendt descreve como o campo de concentração torna seus detentos irreais, separados \"das finalidades deste mundo\" — e é essa irrealidade, mais do que o arame farpado, que permite aceitar o extermínio \"como solução perfeitamente normal\". O alvo da crítica é a naturalização da separação entre humanos: quando alguns deixam de contar como parte do mundo comum, eliminá-los vira administração.",
+    "difficulty": "hard",
+    "examSource": {
+      "board": "ENEM",
+      "year": 2019,
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos"
+    }
+  },
+  {
+    "id": "q_enem_2022_57",
+    "topicId": "fil_etica_politica_contemporanea",
+    "subject": "Filosofia",
+    "prompt": "O leproso é visto dentro de uma prática de rejeição, ao exílio-cerca; deixa-se que se perca lá dentro como numa massa que não têm muita importância diferenciar; os pestilentos são considerados num policiamento tático meticuloso onde as diferenciações individuais são os efeitos limitantes de um poder que se multiplica, se articula e se subdivide. O grande fechamento por um lado; o bom treinamento por outro. A lepra e a sua divisão; a peste e seus recortes. Uma é marcada; a outra, analisada e repartida. O exílio do leproso e a prisão da peste não trazem consigo o mesmo sonho político.\n\n**FOUCAULT, M. Vigiar e punir: nascimento da prisão. Petrópolis: Vozes, 1987.**\n\nOs modelos autoritários descritos no texto apontam para um sistema de controle que se baseia no(a):",
+    "options": [
+      {
+        "id": "a",
+        "text": "Formação de sociedade disciplinar."
+      },
+      {
+        "id": "b",
+        "text": "Flexibilização do regramento social."
+      },
+      {
+        "id": "c",
+        "text": "Banimento da autoridade repressora."
+      },
+      {
+        "id": "d",
+        "text": "Condenação da degradação humana."
+      },
+      {
+        "id": "e",
+        "text": "Hierarquização da burocracia estatal."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Foucault contrapõe dois modelos de poder. A lepra é o exílio: expulsa-se em massa, sem diferenciar ninguém. A peste é o oposto: cada indivíduo é localizado, examinado, repartido, vigiado — um poder que produz saber sobre cada um. É esse segundo modelo, o \"bom treinamento\", que ele chama de sociedade disciplinar. A (b) inverte: disciplina é mais regramento, não menos.",
+    "difficulty": "hard",
+    "examSource": {
+      "board": "ENEM",
+      "year": 2022,
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos"
+    }
+  },
+  {
+    "id": "q_enem_2016_5",
+    "topicId": "soc_cultura_identidade",
+    "subject": "Sociologia",
+    "prompt": "**TEXTO I**\n\nDocumentos do século XVI algumas vezes se referem aos habitantes indígenas Como “os brasis” ou “gente brasília” e, ocasionalmente no século XVII, o termo “brasileiro” era a eles aplicado, mas as referências ao status econômico e jurídico desses eram muito mais populares. Assim, os termos “negro da terra” e “índios” eram utilizados com mais frequência do que qualquer outro.\n\nSCHWARTZ, S. B. Gente da terra braziliense da nação. Pensando o Brasil a Construção de um povo. In: MOTA, C. G. (Org.) **Viagem incompleta** a experiência brasileira (1500-2000). São Paulo Senac, 2000 (adaptado)\n\n**TEXTO II**\n\nÍndio é um conceito construído no processo de conquista da América pelos europeus. Desinteressados pela diversidade cultural, imbuídos de forte preconceito para com o outro, o indivíduo de outras culturas, espanhóis, portugueses, franceses e anglo-saxões terminaram por denominar da mesma forma povos tão dispares quanto os tupinambas e os astecas.\n\nSILVA, K. W.; SILVA, M. H. **Dicionário de conceitos históricos**, São Paulo: Contexto, 2005\n\nAo comparar os textos, as formas de designação dos grupos nativos pelos europeus, durante o período analisado, são reveladoras da",
+    "options": [
+      {
+        "id": "a",
+        "text": "Concepção idealizada do território, entendido como geograficamente indiferenciado."
+      },
+      {
+        "id": "b",
+        "text": "Percepção corrente de uma ancestralidade comum às populações ameríndias."
+      },
+      {
+        "id": "c",
+        "text": "Compreensão etnocêntrica acerca das populações dos territórios conquistados."
+      },
+      {
+        "id": "d",
+        "text": "Transposição direta das Categorias originadas no imaginário medieval."
+      },
+      {
+        "id": "e",
+        "text": "Visão utópica configurada a partir de fantasias de riqueza."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Os europeus chamaram de \"índios\" povos tão diferentes entre si quanto tupinambás e astecas, e o Texto II explica por quê: desinteresse pela diversidade cultural somado a preconceito para com o outro. Julgar e classificar culturas alheias a partir da própria é a definição de etnocentrismo. O antídoto conceitual, na Antropologia, é o relativismo cultural: entender cada cultura pelos seus próprios termos.",
+    "difficulty": "medium",
+    "examSource": {
+      "board": "ENEM",
+      "year": 2016,
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos"
+    }
+  },
+  {
+    "id": "q_enem_2017_26",
+    "topicId": "soc_cultura_identidade",
+    "subject": "Sociologia",
+    "prompt": "Apesar de muitas crianças e adolescentes terem a Barbie como um exemplo de beleza, um infográfico feito pelo _site_ Rehabs.com comprovou que, caso uma mulher tivesse as medidas da boneca de plástico, ela nem estaria viva.\n\nNão é exatamente uma novidade que as proporções da boneca mais famosa do mundo são absurdas para o mundo real. Ativistas que lutam pela construção de uma autoimagem mais saudável, pesquisadores de distúrbios alimentares e pessoas que se preocupam com o impacto da indústria cultural na psique humana apontam, há anos, a influência de modelos como a Barbie na distorção do corpo feminino.\n\n_Pescoço_  \nCom um pescoço duas vezes mais longo e 15 centímetros mais fino do que o de uma mulher, a Barbie seria incapaz de manter sua cabeça levantada.\n\n_Cintura_  \nCom uma cintura de 40 centímetros (menor do que a sua cabeça), a Barbie da vida real só teria espaço em seu corpo para acomodar metade de um rim e alguns centímetros de intestino.\n\n_Quadril_  \nO índice que mede a relação entre a cintura e o quadril da Barbie é de 0,56, o que significa que a medida da sua cintura representa 56% da circunferência de seu quadril. Esse mesmo índice, em uma mulher americana média, é de 0,8.\n\nDisponivel em: http://oglobo.globo.com. Acesso em: 2 maio 2015.\n\nAo abordar as possíveis influências da indústria de brinquedos sobre a representação do corpo feminino, o texto analisa a",
+    "options": [
+      {
+        "id": "a",
+        "text": "Noção de beleza globalizada veiculada pela indústria cultural."
+      },
+      {
+        "id": "b",
+        "text": "Influência da mídia para a adoção de um estilo de vida salutar pelas mulheres."
+      },
+      {
+        "id": "c",
+        "text": "Relação entre a alimentação saudável e o padrão de corpo instituído pela boneca."
+      },
+      {
+        "id": "d",
+        "text": "Proporcionalidade entre a representação do corpo da boneca e a do corpo humano."
+      },
+      {
+        "id": "e",
+        "text": "Influência mercadológica na construção de uma auto imagem positiva do corpo feminino"
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "O texto não está discutindo saúde nem proporção anatômica por si: está mostrando que um produto industrial difunde um padrão de beleza que o corpo real não alcança. Essa é a lógica da indústria cultural — a mercadoria formata desejos e a autoimagem em escala global. A alternativa (d) é a pegadinha: descreve os dados do infográfico, mas não o que o texto *analisa* com eles.",
+    "difficulty": "medium",
+    "examSource": {
+      "board": "ENEM",
+      "year": 2017,
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos"
+    }
+  },
+  {
+    "id": "q_enem_2021_74",
+    "topicId": "soc_cultura_identidade",
+    "subject": "Sociologia",
+    "prompt": "Eu, Dom João, pela graça de Deus, faço saber a V. Mercê que me aprouve banir para essa cidade vários ciganos – homens, mulheres e crianças –  \ndevido ao seu escandaloso procedimento neste reino. Tiveram ordem de seguir em diversos navios destinados a esse porto, e, tendo eu proibido, por lei recente, o uso da sua língua habitual, ordeno a V. Mercê que cumpra essa lei sob ameaça de penalidades, não permitindo que ensinem dita língua a seus filhos, de maneira que daqui por diante o seu uso desapareça.\n\nTEIXEIRA, R. C. História dos ciganos no Brasil.  \nRecife: Núcleo de Estudos Ciganos, 2008.\n\nA ordem emanada da Coroa portuguesa para sua colônia americana, em 1718, apresentava um tratamento da identidade cultural pautado em",
+    "options": [
+      {
+        "id": "a",
+        "text": "Converter grupos infiéis à religião oficial."
+      },
+      {
+        "id": "b",
+        "text": "Suprimir formas divergentes de interação social."
+      },
+      {
+        "id": "c",
+        "text": "Evitar envolvimento estrangeiro a economia local."
+      },
+      {
+        "id": "d",
+        "text": "Reprimir indivíduos engajados em revoltas nativistas."
+      },
+      {
+        "id": "e",
+        "text": "Controlar manifestações artísticas de comunidades autóctones."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "A ordem proíbe a língua e manda impedir que ela seja ensinada aos filhos, \"de maneira que daqui por diante o seu uso desapareça\". Não se trata de conversão religiosa nem de arte: trata-se de apagar o modo próprio de um grupo se relacionar e se reconhecer, para forçar sua dissolução na sociedade colonial. É a supressão de formas divergentes de interação social — assimilação por eliminação da diferença.",
+    "difficulty": "medium",
+    "examSource": {
+      "board": "ENEM",
+      "year": 2021,
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos"
+    }
+  },
+  {
+    "id": "q_enem_2023_55",
+    "topicId": "soc_cultura_identidade",
+    "subject": "Sociologia",
+    "prompt": "A diversão é o prolongamento do trabalho sob o capitalismo tardio. Ela é procurada por quem quer escapar ao processo de trabalho mecanizado para se pôr de novo em condições de enfrentá-lo. Mas, ao mesmo tempo, a mecanização atingiu um tal poderio sobre a pessoa em seu lazer e sobre a sua felicidade, ela determina tão profundamente a fabricação das mercadorias destinadas à diversão que essa pessoa não pode mais perceber outra coisa senão as cópias que reproduzem o próprio processo de trabalho…\nADORNO, T; HORKHEIMER, M. Dialética do esclarecimento. Rio de Janeiro: Zahar 1997.\nNo texto, o tempo livre é concebido como",
+    "options": [
+      {
+        "id": "a",
+        "text": "Consumo de produtos culturais e elaborados no mesmo sistema produtivo do capitalismo"
+      },
+      {
+        "id": "b",
+        "text": "Forma de realizar as diversas potencialidades da natureza humana."
+      },
+      {
+        "id": "c",
+        "text": "Alternativa para equilibrar tensões psicológicas do dia a dia."
+      },
+      {
+        "id": "d",
+        "text": "Promoção da satisfação de necessidades artificiais."
+      },
+      {
+        "id": "e",
+        "text": "Mecanismo de organização do ócio e do prazer."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Para Adorno e Horkheimer, o tempo livre não é o contrário do trabalho: é o seu prolongamento. A diversão é produzida pela mesma lógica industrial da fábrica, e serve para recompor o trabalhador para a jornada seguinte. Por isso o lazer oferece \"cópias que reproduzem o próprio processo de trabalho\". As alternativas (b), (c) e (e) descrevem o que a indústria cultural promete; a correta descreve o que os autores dizem que ela é.",
+    "difficulty": "hard",
+    "examSource": {
+      "board": "ENEM",
+      "year": 2023,
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos"
+    }
+  },
+  {
+    "id": "q_enem_2018_80",
+    "topicId": "soc_estratificacao_desigualdade",
+    "subject": "Sociologia",
+    "prompt": "Em algumas línguas de Moçambique não existe a palavra “pobre”. O indivíduo é pobre quando não tem parentes. A pobreza é a solidão, a ruptura das relações familiares que, na sociedade rural, servem de apoio à sobrevivência. Os consultores internacionais, especialistas em elaborar relatórios sobre a miséria, talvez não tenham em conta o impacto dramático da destruição dos laços familiares e das relações de entreajuda. Nações inteiras estão tornando-se “órfãs”, e a mendicidade parece ser a única via de uma agonizante sobrevivência.\n\nCOUTO, M. **E se Obama fosse africano?** & outras intervenções. Portugal: Caminho, 2009 (adaptado).\n\nEm uma leitura que extrapola a esfera econômica, o autor associa o acirramento da pobreza à",
+    "options": [
+      {
+        "id": "a",
+        "text": "Afirmação das origens ancestrais."
+      },
+      {
+        "id": "b",
+        "text": "Fragilização das redes de sociabilidade."
+      },
+      {
+        "id": "c",
+        "text": "Padronização das políticas educacionais."
+      },
+      {
+        "id": "d",
+        "text": "Fragmentação das propriedades agrícolas."
+      },
+      {
+        "id": "e",
+        "text": "Globalização das tecnologias de comunicação."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "A chave está na definição que o texto recolhe: \"o indivíduo é pobre quando não tem parentes\". Ler a pobreza só como falta de renda perde o essencial — na sociedade descrita, é a rede de parentesco e entreajuda que sustenta a sobrevivência, e é a ruptura dela que produz a miséria. Daí a resposta falar em fragilização das redes de sociabilidade, e não em nenhum indicador econômico.",
+    "difficulty": "medium",
+    "examSource": {
+      "board": "ENEM",
+      "year": 2018,
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos"
+    }
+  },
+  {
+    "id": "q_enem_2019_66",
+    "topicId": "soc_estratificacao_desigualdade",
+    "subject": "Sociologia",
+    "prompt": "A criação do Sistema Único de Saúde (SUS) como uma política para todos constitui-se uma das mais importantes conquistas da sociedade brasileira no século XX. O SUS deve ser valorizado e defendido como um marco para a cidadania e o avanço civilizatório. A democracia envolve um modelo de Estado no qual políticas protegem os cidadãos e reduzem as desigualdades. O SUS é uma diretriz que fortalece a cidadania e contribui para assegurar o exercício de direitos, o pluralismo político e o bem-estar como valores de uma sociedade fraterna, pluralista e sem preconceitos, conforme prevê a Constituição Federal de 1988.\n\n**RIZZOTO, M. L. F. et at. Justiça social, democracia com direitos sociais e saúde: a luta do Cebes. Revista Saúde em Debate, n. 116, jan.-mar. 2018 (adaptado).**\n\nSegundo o texto, duas características da concepção da política pública analisada são:",
+    "options": [
+      {
+        "id": "a",
+        "text": "Paternalismo e filantropia."
+      },
+      {
+        "id": "b",
+        "text": "Liberalismo e meritocracia."
+      },
+      {
+        "id": "c",
+        "text": "Universalismo e igualitarismo."
+      },
+      {
+        "id": "d",
+        "text": "Nacionalismo e individualismo."
+      },
+      {
+        "id": "e",
+        "text": "Revolucionarismo e coparticipação."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Duas expressões do texto entregam a resposta. \"Política para todos\" é universalismo: o direito não depende de contribuição, renda ou mérito. \"Reduzem as desigualdades\" é igualitarismo: a política existe para diminuir a distância entre os cidadãos. A alternativa (b) é o oposto exato — meritocracia condiciona o acesso ao desempenho individual, e o SUS não condiciona.",
+    "difficulty": "easy",
+    "examSource": {
+      "board": "ENEM",
+      "year": 2019,
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos"
+    }
+  },
+  {
+    "id": "q_enem_2015_42",
+    "topicId": "soc_movimentos_sociais",
+    "subject": "Sociologia",
+    "prompt": "Ninguém nasce mulher: torna-se mulher. Nenhum destino biológico, psíquico, econômico define a forma que a fêmea humana assume no seio da sociedade; é o conjunto da civilização que elabora esse produto intermediário entre o macho e o castrado que qualificam o feminino.\n\nBEAUVOIR, S. **O segundo sexo**. Rio de Janeiro: Nova Fronteira, 1980\n\nNa década de 1960, a proposição de Simone de Beauvoir contribuiu para estruturar um movimento social que teve como marca o(a)",
+    "options": [
+      {
+        "id": "a",
+        "text": "Ação do Poder Judiciário para criminalizar a violência sexual."
+      },
+      {
+        "id": "b",
+        "text": "Pressão do Poder Legislativo para impedir a dupla jornada de trabalho."
+      },
+      {
+        "id": "c",
+        "text": "Organização de protestos púbicos para garantir a igualdade de gênero."
+      },
+      {
+        "id": "d",
+        "text": "Oposição de grupos religiosos para impedir os casamento homoafetivos."
+      },
+      {
+        "id": "e",
+        "text": "Estabelecimento de políticas governamentais para promover ações afirmativas."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "\"Ninguém nasce mulher: torna-se mulher\" separa sexo biológico de gênero — o feminino é construído socialmente, e portanto pode ser transformado. Essa tese deu base teórica à segunda onda do feminismo, que se organizou publicamente em torno da igualdade de gênero. As demais alternativas descrevem conquistas jurídicas e políticas bem posteriores, não a marca do movimento na década de 1960.",
+    "difficulty": "medium",
+    "examSource": {
+      "board": "ENEM",
+      "year": 2015,
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos"
+    }
+  },
+  {
+    "id": "q_enem_2011_18",
+    "topicId": "soc_movimentos_sociais",
+    "subject": "Sociologia",
+    "prompt": "Na década de 1990, os movimentos sociais camponeses e as ONGs tiveram destaque, ao lado de outros sujeitos coletivos. Na sociedade brasileira, a ação dos movimentos sociais vem construindo lentamente um conjunto de práticas democráticas no interior das escolas, das comunidades, dos grupos organizados e na interface da sociedade civil com o Estado. O diálogo, o confronto e o conflito têm sido os motores no processo de construção democrática.\n\nSOUZA, M. A. **Movimentos sociais no Brasil contemporâneo**: participação e possibilidades das práticas democráticas. Disponível em: http://www.ces.uc.pt. Acesso em: 30 abr. 2010 (adaptado).\n\nSegundo o texto, os movimentos sociais contribuem para o processo de construção democrática, porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "Determinam o papel do Estado nas transformações socioeconômicas."
+      },
+      {
+        "id": "b",
+        "text": "Aumentam o clima de tensão social na sociedade civil."
+      },
+      {
+        "id": "c",
+        "text": "Pressionam o Estado para o atendimento das demandas da sociedade."
+      },
+      {
+        "id": "d",
+        "text": "Privilegiam determinadas parcelas da sociedade em detrimento das demais."
+      },
+      {
+        "id": "e",
+        "text": "Propiciam a adoção de valores éticos pelos órgãos do Estado."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Segundo o texto, os movimentos sociais atuam \"na interface da sociedade civil com o Estado\", tendo o diálogo e o conflito como motores. Democratizar, aqui, é conseguir que demandas que não chegariam ao Estado sozinhas passem a ser atendidas. A (b) confunde meio com fim (a tensão é instrumento, não objetivo) e a (a) exagera: os movimentos pressionam o Estado, não determinam o papel dele.",
+    "difficulty": "easy",
+    "examSource": {
+      "board": "ENEM",
+      "year": 2011,
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos"
+    }
+  },
+  {
+    "id": "q_enem_2014_28",
+    "topicId": "soc_movimentos_sociais",
+    "subject": "Sociologia",
+    "prompt": "A Comissão Nacional da Verdade (CNV) reuniu representantes de comissões estaduais e de várias instituições para apresentar um balanço dos trabalhos feitos e assinar termos de cooperação com quatro organizações. O coordenador da CNV estima que, até o momento, a comissão examinou, “por baixo”, cerca de 30 milhões de páginas de documentos e fez centenas de entrevistas.\n\nDisponível em: www.jb.com.br.Acessoem: 2 mar. 2013 (adaptado).\n\nA notícia descreve uma iniciativa do Estado que resultou da ação de diversos movimentos sociais no Brasil diante de eventos ocorridos entre 1964 e 1988. O objetivo dessa iniciativa é",
+    "options": [
+      {
+        "id": "a",
+        "text": "Anular a anistia concedida aos chefes militares."
+      },
+      {
+        "id": "b",
+        "text": "Rever as condenações judiciais aos presos políticos."
+      },
+      {
+        "id": "c",
+        "text": "Perdoar os crimes atribuídos aos militantes esquerdistas."
+      },
+      {
+        "id": "d",
+        "text": "Comprovar o apoio da sociedade aos golpistas anticomunistas."
+      },
+      {
+        "id": "e",
+        "text": "Esclarecer as circunstâncias de violações aos direitos humanos."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "A Comissão Nacional da Verdade examinou documentos e ouviu testemunhas para apurar o que ocorreu entre 1964 e 1988 — é uma comissão de investigação histórica, não um tribunal. Ela não julga, não condena e não anula a Lei da Anistia; seu produto é o esclarecimento das violações de direitos humanos. Por isso (a), (b) e (c), que atribuem a ela efeitos judiciais, estão erradas.",
+    "difficulty": "easy",
+    "examSource": {
+      "board": "ENEM",
+      "year": 2014,
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos"
+    }
+  },
+  {
+    "id": "q_enem_2018_81",
+    "topicId": "soc_globalizacao",
+    "subject": "Sociologia",
+    "prompt": "**TEXTO I**  \nAs fronteiras, ao mesmo tempo que se separam, unem e articulam, por elas passando discursos de legitimação da ordem social tanto quanto do conflito.\n\nCUNHA, L. Terras lusitanas e gentes dos brasis: a nação e o seu retrato literário.  \n**Revista Ciências Sociais**, n. 2, 2009.\n\n**TEXTO II**  \nAs últimas barreiras ao livre movimento do dinheiro e das mercadorias e informação que rendem dinheiro andam de mãos dadas com a pressão para cavar novos fossos e erigir novas muralhas que barrem o movimento daqueles que em consequência perdem, física ou espiritualmente, suas raízes.\n\nBAUMAN, Z. **Globalização**: as consequências humanas. Rio de Janeiro: Jorge Zahar, 1999.\n\nA ressignificação contemporânea da ideia de fronteira compreende a",
+    "options": [
+      {
+        "id": "a",
+        "text": "Liberação da circulação de pessoas."
+      },
+      {
+        "id": "b",
+        "text": "Preponderância dos limites naturais."
+      },
+      {
+        "id": "c",
+        "text": "Supressão dos obstáculos aduaneiros."
+      },
+      {
+        "id": "d",
+        "text": "Desvalorização da noção de nacionalismo."
+      },
+      {
+        "id": "e",
+        "text": "Seletividade dos mecanismos segregadores."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Bauman aponta a assimetria: as fronteiras se abrem para o dinheiro, as mercadorias e a informação, e ao mesmo tempo se erguem \"novas muralhas\" contra as pessoas que perdem suas raízes. A globalização não elimina fronteiras — ela as torna seletivas, permeáveis para uns e intransponíveis para outros. As alternativas (a) e (c) descrevem só a metade favorável do processo.",
+    "difficulty": "hard",
+    "examSource": {
+      "board": "ENEM",
+      "year": 2018,
+      "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos"
+    }
   }
 ]

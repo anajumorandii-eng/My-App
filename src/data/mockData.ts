@@ -671,14 +671,12 @@ export const mockTopics: Topic[] = [
     chapters: [
       'A Crítica da Razão Pura', 'A Ética Kantiana e o Imperativo Categórico', 'Hegel e a Dialética',
     ],
-    contentStatus: 'pending',
   },
   {
     id: 'fil_marx_critica_sociedade', name: 'Marx e a Crítica à Sociedade Capitalista', subject: 'Filosofia', prerequisites: ['fil_kant_idealismo'],
     chapters: [
       'O Materialismo Histórico', 'Alienação e Mais-Valia', 'A Luta de Classes na Filosofia Marxista',
     ],
-    contentStatus: 'pending',
   },
   {
     id: 'fil_niilismo_existencialismo', name: 'Nietzsche, Existencialismo e Filosofia Contemporânea', subject: 'Filosofia', prerequisites: ['fil_marx_critica_sociedade'],
@@ -686,14 +684,12 @@ export const mockTopics: Topic[] = [
       'Nietzsche e a Crítica aos Valores Morais', 'O Existencialismo de Sartre',
       'A Escola de Frankfurt e a Indústria Cultural', 'Foucault e as Relações de Poder',
     ],
-    contentStatus: 'pending',
   },
   {
     id: 'fil_etica_politica_contemporanea', name: 'Ética e Política Contemporâneas', subject: 'Filosofia', prerequisites: ['fil_niilismo_existencialismo'],
     chapters: [
       'Justiça e Direitos Humanos', 'Ética Aplicada e Bioética', 'Filosofia Política Contemporânea',
     ],
-    contentStatus: 'pending',
   },
   // Sociologia
   {
@@ -707,7 +703,6 @@ export const mockTopics: Topic[] = [
     chapters: [
       'Solidariedade Mecânica e Solidariedade Orgânica', 'Anomia e Coesão Social', 'Educação e Socialização em Durkheim',
     ],
-    contentStatus: 'pending',
   },
   {
     id: 'soc_marx_sociologia', name: 'Karl Marx e a Sociologia', subject: 'Sociologia', prerequisites: ['soc_durkheim'],
@@ -726,14 +721,12 @@ export const mockTopics: Topic[] = [
     chapters: [
       'Cultura e Etnocentrismo', 'Identidade e Diferença', 'Multiculturalismo e Relativismo Cultural',
     ],
-    contentStatus: 'pending',
   },
   {
     id: 'soc_estratificacao_desigualdade', name: 'Estratificação Social e Desigualdade', subject: 'Sociologia', prerequisites: ['soc_cultura_identidade'],
     chapters: [
       'Classes Sociais e Mobilidade Social', 'Desigualdade Racial no Brasil', 'Desigualdade de Gênero',
     ],
-    contentStatus: 'pending',
   },
   {
     id: 'soc_trabalho_sociedade', name: 'Trabalho e Sociedade', subject: 'Sociologia', prerequisites: ['soc_estratificacao_desigualdade'],
@@ -746,7 +739,6 @@ export const mockTopics: Topic[] = [
     chapters: [
       'Movimentos Sociais Clássicos e Contemporâneos', 'Cidadania e Direitos', 'Democracia e Participação Política',
     ],
-    contentStatus: 'pending',
   },
   {
     id: 'soc_globalizacao', name: 'Globalização e Sociedade Contemporânea', subject: 'Sociologia', prerequisites: ['soc_movimentos_sociais'],
