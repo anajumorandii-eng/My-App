@@ -51,9 +51,11 @@ function Metric({
   );
 }
 
-function examSourceLabel(source: { board: string; year: number; sourceUrl: string } | string | undefined) {
+function examSourceLabel(source: { board: string; year?: number } | string | undefined) {
   if (!source) return 'Banco de Questões';
-  return typeof source === 'string' ? source : `${source.board} ${source.year}`;
+  if (typeof source === 'string') return source;
+  // Sem ano conhecido, mostra só a banca — melhor do que "UNICAMP undefined".
+  return source.year ? `${source.board} ${source.year}` : source.board;
 }
 
 export default function Questoes() {

@@ -631,7 +631,6 @@ export const mockTopics: Topic[] = [
       'O Nascimento da Filosofia: do Mito ao Logos', 'Os Filósofos da Physis: Tales, Anaximandro e Anaxímenes',
       'Heráclito e Parmênides: o Ser e o Devir', 'Os Sofistas e a Crise da Verdade',
     ],
-    contentStatus: 'pending',
   },
   {
     id: 'fil_socrates_platao', name: 'Sócrates e Platão', subject: 'Filosofia', prerequisites: ['fil_origem_pre_socraticos'],
@@ -639,7 +638,6 @@ export const mockTopics: Topic[] = [
       'O Método Socrático e a Maiêutica', 'A Teoria das Ideias de Platão',
       'O Mito da Caverna', 'A Alegoria da Linha Dividida e o Conhecimento',
     ],
-    contentStatus: 'pending',
   },
   {
     id: 'fil_aristoteles', name: 'Aristóteles', subject: 'Filosofia', prerequisites: ['fil_socrates_platao'],
@@ -647,14 +645,12 @@ export const mockTopics: Topic[] = [
       'Lógica e Metafísica Aristotélicas', 'A Ética a Nicômaco e a Doutrina do Meio-Termo',
       'Política Aristotélica: o Homem como Animal Político',
     ],
-    contentStatus: 'pending',
   },
   {
     id: 'fil_medieval', name: 'Filosofia Medieval', subject: 'Filosofia', prerequisites: ['fil_aristoteles'],
     chapters: [
       'Patrística e Santo Agostinho', 'Escolástica e Santo Tomás de Aquino', 'A Relação entre Fé e Razão',
     ],
-    contentStatus: 'pending',
   },
   {
     id: 'fil_moderna_racionalismo_empirismo', name: 'Filosofia Moderna: Racionalismo e Empirismo', subject: 'Filosofia', prerequisites: ['fil_medieval'],
@@ -662,7 +658,6 @@ export const mockTopics: Topic[] = [
       'Descartes e o Método: a Dúvida Hiperbólica', 'Racionalismo Continental: Espinosa e Leibniz',
       'Empirismo Britânico: Locke, Berkeley e Hume', 'A Crítica de Hume à Causalidade',
     ],
-    contentStatus: 'pending',
   },
   {
     id: 'fil_contratualismo_iluminismo', name: 'Contratualismo Político e Iluminismo', subject: 'Filosofia', prerequisites: ['fil_moderna_racionalismo_empirismo'],
@@ -670,7 +665,6 @@ export const mockTopics: Topic[] = [
       'Hobbes e o Estado de Natureza', 'Locke e os Direitos Naturais',
       'Rousseau e a Vontade Geral', 'O Ideal Iluminista de Razão e Progresso',
     ],
-    contentStatus: 'pending',
   },
   {
     id: 'fil_kant_idealismo', name: 'Kant e o Idealismo Alemão', subject: 'Filosofia', prerequisites: ['fil_contratualismo_iluminismo'],
@@ -707,7 +701,6 @@ export const mockTopics: Topic[] = [
     chapters: [
       'O Contexto Histórico do Surgimento da Sociologia', 'O que é o Fato Social', 'Sociologia e Senso Comum',
     ],
-    contentStatus: 'pending',
   },
   {
     id: 'soc_durkheim', name: 'Émile Durkheim e o Fato Social', subject: 'Sociologia', prerequisites: ['soc_formacao_ciencia'],
@@ -721,14 +714,12 @@ export const mockTopics: Topic[] = [
     chapters: [
       'Modo de Produção e Estrutura Social', 'Ideologia e Alienação', 'A Luta de Classes na Análise Sociológica',
     ],
-    contentStatus: 'pending',
   },
   {
     id: 'soc_weber', name: 'Max Weber e a Ação Social', subject: 'Sociologia', prerequisites: ['soc_marx_sociologia'],
     chapters: [
       'Tipos de Ação Social', 'Dominação e Poder em Weber', 'Ética Protestante e o Espírito do Capitalismo',
     ],
-    contentStatus: 'pending',
   },
   {
     id: 'soc_cultura_identidade', name: 'Cultura, Identidade e Diversidade', subject: 'Sociologia', prerequisites: ['soc_weber'],
@@ -749,7 +740,6 @@ export const mockTopics: Topic[] = [
     chapters: [
       'Divisão Social do Trabalho', 'Transformações no Mundo do Trabalho', 'Precarização e Uberização do Trabalho',
     ],
-    contentStatus: 'pending',
   },
   {
     id: 'soc_movimentos_sociais', name: 'Movimentos Sociais e Cidadania', subject: 'Sociologia', prerequisites: ['soc_trabalho_sociedade'],
@@ -763,7 +753,6 @@ export const mockTopics: Topic[] = [
     chapters: [
       'Globalização Econômica e Cultural', 'O Estado-Nação na Era Global', 'A Sociedade da Informação',
     ],
-    contentStatus: 'pending',
   },
 ];
 

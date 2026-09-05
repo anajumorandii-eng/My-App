@@ -222,10 +222,18 @@ export interface Question {
   // for older questions not yet reclassified; those fall back to the
   // full-topic pool.
   chapter?: string;
+  // Presente = questão de prova real (é o que o filtro "só provas reais" da
+  // tela de Questões usa). Ano e URL são opcionais porque nem toda coletânea
+  // de origem informa os dois: o caderno de revisão do cursinho identifica a
+  // banca de cada questão, mas não o ano nem o link da prova. Registrar a
+  // banca sozinha é honesto; inventar um ano para preencher o campo não é.
   examSource?: {
     board: string; // e.g. 'ENEM', 'FUVEST', 'COMVEST', 'VUNESP', 'FAMERP'
-    year: number;
-    sourceUrl: string;
+    year?: number;
+    sourceUrl?: string;
+    // De onde a questão foi transcrita, quando não veio do caderno oficial
+    // da banca.
+    collection?: string;
   };
 }
 
