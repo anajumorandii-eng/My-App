@@ -44602,5 +44602,514 @@
       "year": 2018,
       "sourceUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos"
     }
+  },
+  {
+    "id": "q_col_ferretto_03",
+    "topicId": "his_brasil_colonia",
+    "subject": "História",
+    "prompt": "Nem existia Brasil no começo dessa história. Existiam o Peru e o México, no contexto pré-colombiano, mas Argentina, Brasil, Chile, Estados Unidos, Canadá, não. No que seria o Brasil, havia gente no Norte, no Rio, depois no Sul, mas toda essa gente tinha pouca relação entre si até meados do século XVIII. E há aí a questão da navegação marítima [...]. Essa compreensão me deu muita liberdade para ver as relações que Rio, Pernambuco e Bahia tinham com Luanda. Depois a Bahia tem muito mais relação com o antigo Daomé, hoje Benin, na Costa da Mina. Isso formava um todo, muito mais do que o Brasil ou a América portuguesa.\n\n*(Luiz Felipe de Alencastro. Entrevista à Revista Pesquisa Fapesp, n. 188, outubro de 2011.)*\n\nO texto estabelece a formação do Brasil a partir da navegação marítima, o que implica reconhecer a importância",
+    "options": [
+      {
+        "id": "a",
+        "text": "da imposição de uma lógica global de comércio e da dissolução das fronteiras entre os territórios colonizados na América."
+      },
+      {
+        "id": "b",
+        "text": "do domínio colonial de Portugal sobre o litoral africano e da intermediação espanhola no tráfico escravagista."
+      },
+      {
+        "id": "c",
+        "text": "do controle das rotas marítimas por navegadores italianos e da conformação do conceito geográfico de Ocidente."
+      },
+      {
+        "id": "d",
+        "text": "da constituição do espaço geográfico do Atlântico Sul e da relação estabelecida entre os continentes americano e africano."
+      },
+      {
+        "id": "e",
+        "text": "do surgimento do tráfico de africanos escravizados e das relações comerciais do Brasil com a América espanhola."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "A tese de Alencastro é que a unidade histórica relevante não era \"o Brasil\", e sim o Atlântico Sul: Rio, Pernambuco e Bahia tinham mais relação com Luanda e a Costa da Mina do que entre si. O eixo é América–África, não uma colônia isolada. A alternativa (e) chega perto, mas erra o destino: o texto fala da África, não da América espanhola.",
+    "difficulty": "hard",
+    "examSource": {
+      "board": "UNESP",
+      "collection": "Lista Brasil Colonial — Prof. Ferretto"
+    }
+  },
+  {
+    "id": "q_col_ferretto_04",
+    "topicId": "his_brasil_colonia",
+    "subject": "História",
+    "prompt": "Na América Portuguesa do século XVI, a política europeia para os indígenas pressupunha também a existência de uma política indígena frente aos europeus, já que os Tamoios e os Tupiniquins tinham seus próprios motivos para se aliarem aos franceses ou aos portugueses.\n\n*(Adaptado de Manuela Carneiro da Cunha, Introdução a uma história indígena. São Paulo: Companhia das Letras/Fapesp, 1992, p. 18.)*\n\nCom base no excerto e nos seus conhecimentos sobre os primeiros contatos entre europeus e indígenas no Brasil, assinale a alternativa correta.",
+    "options": [
+      {
+        "id": "a",
+        "text": "A população ameríndia era heterogênea e os conflitos entre diferentes grupos étnicos ajudaram a definir, de acordo com suas próprias lógicas e interesses, a dinâmica dos seus contatos com os europeus."
+      },
+      {
+        "id": "b",
+        "text": "O fato de Tamoios e Tupiniquins serem grupos aliados contribuiu para neutralizar as disputas entre franceses e portugueses pelo controle do Brasil, pelo papel mediador que os nativos exerciam."
+      },
+      {
+        "id": "c",
+        "text": "Os indígenas, agentes de sua história, desde cedo souberam explorar as rivalidades entre os europeus e mantê-los afastados dos seus conflitos interétnicos, anulando o impacto da presença portuguesa."
+      },
+      {
+        "id": "d",
+        "text": "As etnias indígenas viviam em harmonia umas com as outras e em equilíbrio com a natureza. Esse quadro foi alterado com a chegada dos europeus, que passaram a incentivar os conflitos interétnicos para estabelecer o domínio colonial."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "A expressão \"política indígena frente aos europeus\" é a chave: os nativos não são objeto passivo da colonização, têm projetos próprios. Tamoios e Tupiniquins eram rivais entre si — por isso um se aliou aos franceses e o outro aos portugueses. As alternativas (b) e (d) partem de uma harmonia indígena que não existia, e a (c) exagera na direção oposta, como se a presença portuguesa tivesse sido anulada.",
+    "difficulty": "medium",
+    "examSource": {
+      "board": "UNICAMP",
+      "collection": "Lista Brasil Colonial — Prof. Ferretto"
+    }
+  },
+  {
+    "id": "q_col_ferretto_05",
+    "topicId": "his_brasil_colonia",
+    "subject": "História",
+    "prompt": "O dia em que o capitão-mor Pedro Álvares Cabral levantou a cruz [...] era a 3 de maio, quando se celebra a invenção da Santa Cruz em que Cristo Nosso Redentor morreu por nós, e por esta causa pôs nome à terra que se encontrava descoberta de Santa Cruz e por este nome foi conhecida muitos anos. Porém, como o demônio com o sinal da cruz perdeu todo o domínio que tinha sobre os homens, receando perder também o muito que tinha em os desta terra, trabalhou que se esquecesse o primeiro nome e lhe ficasse o de Brasil, por causa de um pau assim chamado de cor abrasada e vermelha com que tingem panos [...].\n\n*(Frei Vicente do Salvador, 1627. Apud Laura de Mello e Souza. O Diabo e a Terra de Santa Cruz, 1986. Adaptado.)*\n\nO texto revela que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a Igreja católica defendeu a prática do extrativismo durante o processo de conquista e colonização do Brasil."
+      },
+      {
+        "id": "b",
+        "text": "um esforço amplo de salvação dos povos nativos do Brasil orientou as ações dos mercadores portugueses."
+      },
+      {
+        "id": "c",
+        "text": "os nomes atribuídos pelos colonizadores às terras do Novo Mundo sempre respeitaram motivações e princípios religiosos."
+      },
+      {
+        "id": "d",
+        "text": "o objetivo primordial da colonização portuguesa do Brasil foi impedir o avanço do protestantismo nas terras do Novo Mundo."
+      },
+      {
+        "id": "e",
+        "text": "uma visão mística da colonização acompanhou a exploração dos recursos naturais existentes nas terras conquistadas."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "O frade explica um fato econômico — a terra passou a se chamar Brasil por causa do pau-brasil, mercadoria — recorrendo ao demônio. É exatamente isso que a alternativa correta capta: a exploração dos recursos vem acompanhada de uma leitura mística do mundo. A (c) cai na armadilha do \"sempre\": o próprio texto narra um nome religioso sendo derrotado por um nome comercial.",
+    "difficulty": "medium",
+    "examSource": {
+      "board": "UNESP",
+      "collection": "Lista Brasil Colonial — Prof. Ferretto"
+    }
+  },
+  {
+    "id": "q_col_ferretto_06",
+    "topicId": "his_brasil_colonia",
+    "subject": "História",
+    "prompt": "\"(...) Neste dia, a horas de véspera, houvemos vista de terra! Primeiramente dum monte, mui alto e redondo; e doutras serras mais baixas ao sul dele; e de terra chã, com grandes arvoredos: ao monte alto o capitão pôs o nome — o Monte Pascoal, e à terra — a Terra de Vera Cruz.\"\n\n*CAMINHA, Pero Vaz de. Carta a el-rei D. Manuel.*\n\nO texto acima é parte da carta do escrivão Pero Vaz de Caminha, tripulante a bordo da armada de Pedro Álvares Cabral, ao rei português D. Manuel, narrando o descobrimento do Brasil. Essa expedição marítima pode ser entendida, no contexto socioeconômico da época, como uma",
+    "options": [
+      {
+        "id": "a",
+        "text": "tentativa de obtenção de novas terras, no continente europeu, para ceder aos nobres portugueses, empobrecidos pelo declínio do feudalismo."
+      },
+      {
+        "id": "b",
+        "text": "consolidação do poder da Igreja junto às monarquias ibéricas, interessada tanto em reprimir o avanço muçulmano no Mediterrâneo quanto em cristianizar os indígenas do Novo Continente."
+      },
+      {
+        "id": "c",
+        "text": "busca por ouro e prata no litoral americano, para suprir a escassez de metais preciosos na Europa, o que prejudicava a continuidade do comércio com o Oriente."
+      },
+      {
+        "id": "d",
+        "text": "conquista do litoral brasileiro e sua ocupação, garantindo que a coroa portuguesa tomasse posse dos territórios a ela concedidos pelo Tratado de Tordesilhas, em 1494."
+      },
+      {
+        "id": "e",
+        "text": "tomada oficial das terras garantidas a Portugal pelo acordo de Tordesilhas, e o controle exclusivo português da rota atlântica, dando-lhe acesso ao lucrativo comércio de especiarias."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "A viagem de Cabral em 1500 tem duas funções ao mesmo tempo, e a alternativa correta guarda as duas: formalizar a posse das terras que Tordesilhas (1494) já garantia a Portugal, e assegurar a rota atlântica rumo ao Oriente, onde estava o lucro real, o das especiarias. A diferença para a (d) é sutil e decisiva: a (d) fala em ocupação do litoral, que não aconteceu nos trinta anos seguintes.",
+    "difficulty": "hard",
+    "examSource": {
+      "board": "MACKENZIE",
+      "collection": "Lista Brasil Colonial — Prof. Ferretto"
+    }
+  },
+  {
+    "id": "q_col_ferretto_07",
+    "topicId": "his_brasil_colonia",
+    "subject": "História",
+    "prompt": "Os fatos e a história recente dos últimos 500 anos têm indicado que o tempo desse encontro entre as nossas culturas é um tempo que acontece e se repete todo dia. Não houve um encontro entre as culturas dos povos do Ocidente e a cultura do continente americano numa data e num tempo demarcado que pudéssemos chamar de 1500 ou de 1800. Estamos convivendo com esse contato desde sempre.\n\n*KRENAK, Ailton. O eterno retorno do encontro. São Paulo: Funarte/Companhia das Letras, 1999, p. 25.*\n\nConsiderando a história indígena no Brasil, a principal ideia contida no segmento é",
+    "options": [
+      {
+        "id": "a",
+        "text": "negação da conquista europeia na América, em 1500."
+      },
+      {
+        "id": "b",
+        "text": "ausência de transformação social nas sociedades ameríndias."
+      },
+      {
+        "id": "c",
+        "text": "exclusão dos povos americanos da história ocidental."
+      },
+      {
+        "id": "d",
+        "text": "estagnação social do continente sul-americano após a chegada dos europeus."
+      },
+      {
+        "id": "e",
+        "text": "continuidade histórica do contato cultural entre ocidentais e indígenas."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Krenak recusa a ideia de \"descobrimento\" como evento com data: o encontro \"acontece e se repete todo dia\". Ele não nega que a conquista ocorreu (a) — nega que ela tenha terminado. E \"continuidade\" aqui não significa imobilidade, o que descarta (b) e (d).",
+    "difficulty": "easy",
+    "examSource": {
+      "board": "UFRGS",
+      "collection": "Lista Brasil Colonial — Prof. Ferretto"
+    }
+  },
+  {
+    "id": "q_col_ferretto_08",
+    "topicId": "his_brasil_colonia",
+    "subject": "História",
+    "prompt": "Em 1500, fazia oito anos que havia presença europeia no Caribe: uma primeira tentativa de colonização que ninguém na época podia imaginar que seria o prelúdio da conquista e da ocidentalização de todo um continente. A aventura das ilhas foi exemplar para toda a América, pois ali se desenvolveu um roteiro que se reproduziu em várias outras regiões: caos e esbanjamento, incompetência e desperdício, indiferença, massacres e epidemias. A experiência serviu pelo menos de lição à coroa espanhola, que tentou praticar no resto de suas possessões americanas uma política mais racional de dominação: a instalação de uma Igreja poderosa, dominadora e próxima dos autóctones, assim como uma rede administrativa densa.\n\n*(Serge Gruzinski. A passagem do século: 1480-1520, 1999. Adaptado.)*\n\n\"A instalação de uma Igreja poderosa, dominadora e próxima dos autóctones\" contribuiu para a dominação espanhola e portuguesa da América, uma vez que os religiosos",
+    "options": [
+      {
+        "id": "a",
+        "text": "mediaram os conflitos entre grupos indígenas rivais e asseguraram o estabelecimento de relações amistosas destes com os colonizadores."
+      },
+      {
+        "id": "b",
+        "text": "aceitaram a imposição de tributos às comunidades indígenas, mas impediram a utilização de nativos na agricultura e na mineração."
+      },
+      {
+        "id": "c",
+        "text": "toleraram as religiosidades dos povos nativos e assim conseguiram convencê-los a colaborar com o avanço da colonização."
+      },
+      {
+        "id": "d",
+        "text": "rejeitaram os regimes de trabalho compulsório, mas estimularam o emprego de mão de obra indígena em obras públicas."
+      },
+      {
+        "id": "e",
+        "text": "desenvolveram missões de cristianização dos nativos e facilitaram o emprego de mão de obra indígena na empresa colonial."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "A palavra que organiza tudo no texto é \"dominadora\". A catequese não foi um contrapeso à colonização: foi um instrumento dela — ao converter, promovia a aculturação e tornava a população nativa disponível como mão de obra. As alternativas (b), (c) e (d) transformam os religiosos em protetores dos indígenas ou da religiosidade nativa, o que contraria o texto.",
+    "difficulty": "medium",
+    "examSource": {
+      "board": "UNESP",
+      "collection": "Lista Brasil Colonial — Prof. Ferretto"
+    }
+  },
+  {
+    "id": "q_col_ferretto_09",
+    "topicId": "his_brasil_colonia",
+    "subject": "História",
+    "prompt": "O \"coração\" econômico da época, Veneza, tem cada vez mais dificuldades em assegurar a competitividade de seus produtos. Em 1504, os navios venezianos já quase não encontram pimenta em Alexandria. As especiarias desta proveniência se revelam muito mais caras do que as que são encaminhadas da Índia portuguesa: a pimenta embarcada pelos portugueses em Calicute é quarenta vezes menos onerosa do que a que transita por Alexandria.\n\n*(Jacques Attali. 1492, 1991. Adaptado.)*\n\nO início da colonização efetiva do Brasil por Portugal, historicamente condicionado pelos fatos referidos pelo excerto,",
+    "options": [
+      {
+        "id": "a",
+        "text": "teve início assim que os navegadores chegaram às novas terras."
+      },
+      {
+        "id": "b",
+        "text": "projetou a hegemonia portuguesa no comércio atlântico."
+      },
+      {
+        "id": "c",
+        "text": "enriqueceu a Metrópole com a descoberta de metais preciosos."
+      },
+      {
+        "id": "d",
+        "text": "atardou-se devido aos lucros auferidos com o comércio oriental."
+      },
+      {
+        "id": "e",
+        "text": "foi financiado pelos lucros gerados pelo comércio de especiarias."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "O texto mostra o quanto o comércio das especiarias era lucrativo para Portugal — a pimenta de Calicute custava quarenta vezes menos. Com esse retorno no Oriente, não havia motivo para investir numa terra onde nada de valor imediato fora encontrado. Daí os trinta anos de Período Pré-Colonial (1500-1530). A (a) é justamente o contrário do que ocorreu.",
+    "difficulty": "medium",
+    "examSource": {
+      "board": "UEFS",
+      "collection": "Lista Brasil Colonial — Prof. Ferretto"
+    }
+  },
+  {
+    "id": "q_col_ferretto_11",
+    "topicId": "his_brasil_colonia",
+    "subject": "História",
+    "prompt": "Refiro-me à destruição que pudemos fazer da grande e velha maloca taracuá [...]. Sabe V. Rvma. que para o índio a maloca é cozinha, dormitório, refeitório, tenda de trabalho, lugar de reunião na estação de chuvas e sala de dança nas grandes solenidades. [...] A maloca é também, como costumava dizer o zeloso dom Bazola, a \"casa do diabo\", pois que ali se fazem as orgias infernais, maquinam-se as mais atrozes vinganças contra os brancos e contra outros índios...\n\n*Monsenhor Pedro Massa, início do século XX.*\n\nDe acordo com a citação, derrubar a maloca seria uma ação necessária, pois a moradia indígena representava o(a)",
+    "options": [
+      {
+        "id": "a",
+        "text": "tradição da cultura pagã que contrariava os planos de conversão e domínio espiritual."
+      },
+      {
+        "id": "b",
+        "text": "baluarte de expressão da organização tribal, influência do contato com a cultura africana."
+      },
+      {
+        "id": "c",
+        "text": "símbolo de superioridade da cultura indígena, quando comparada à europeia."
+      },
+      {
+        "id": "d",
+        "text": "obstáculo que impedia o trabalho de catequese no espaço conhecido como reduções."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "O missionário chama a maloca de \"casa do diabo\" — e o texto acabou de listar tudo o que ela é para o grupo: cozinha, dormitório, lugar de reunião, sala de dança. Destruí-la é destruir o centro da vida coletiva e, com ele, a cultura que resiste à conversão. Repare que a questão é do século XX: o etnocentrismo do \"descobrimento\" sobreviveu 400 anos.",
+    "difficulty": "medium",
+    "examSource": {
+      "board": "UFU",
+      "collection": "Lista Brasil Colonial — Prof. Ferretto"
+    }
+  },
+  {
+    "id": "q_col_ferretto_12",
+    "topicId": "his_brasil_colonia",
+    "subject": "História",
+    "prompt": "Os cartógrafos portugueses teriam falseado as representações do Brasil nas cartas geográficas, fazendo concordar o meridiano com os acidentes geográficos de forma a ressaltar uma suposta fronteira natural dos domínios lusos. O delineamento de uma grande lagoa que conectava a bacia platina com a amazônica já era visível nas primeiras descrições geográficas e mapas produzidos por Gaspar Viegas, no Atlas de Lopo Homem (1519), nas cartas de Diogo Ribeiro (1525-27), no planisfério de André Homem (1559) e nos mapas de Bartolomeu Velho (1561).\n\n*KANTOR, Í. Usos diplomáticos da ilha-Brasil. Varia Historia, n. 37, 2007 (adaptado).*\n\nDe acordo com a argumentação exposta no texto, um dos objetivos das representações cartográficas mencionadas era",
+    "options": [
+      {
+        "id": "a",
+        "text": "garantir o domínio da Metrópole sobre o território cobiçado."
+      },
+      {
+        "id": "b",
+        "text": "demarcar os limites precisos do Tratado de Tordesilhas."
+      },
+      {
+        "id": "c",
+        "text": "afastar as populações nativas do espaço demarcado."
+      },
+      {
+        "id": "d",
+        "text": "respeitar a conquista espanhola sobre o Império Inca."
+      },
+      {
+        "id": "e",
+        "text": "demonstrar a viabilidade comercial do empreendimento colonial."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "O verbo do texto é \"falsear\". Os cartógrafos deslocavam o meridiano para fazê-lo coincidir com rios e bacias, criando uma \"fronteira natural\" que ampliava o domínio português no papel. Mapa, aqui, é instrumento de posse, não de precisão — o que elimina a (b), que afirma exatamente o oposto do que o texto descreve.",
+    "difficulty": "medium",
+    "examSource": {
+      "board": "ENEM",
+      "collection": "Lista Brasil Colonial — Prof. Ferretto"
+    }
+  },
+  {
+    "id": "q_col_ferretto_13",
+    "topicId": "his_brasil_colonia",
+    "subject": "História",
+    "prompt": "De 1500 a 1530, os portugueses não desenvolveram um grande projeto de colonização para a sua colônia na América. Nesse período, ocorreram as expedições de reconhecimento e as expedições guarda-costas. A economia, nesse período,",
+    "options": [
+      {
+        "id": "a",
+        "text": "deteve-se ao cultivo de café na região do Vale do rio Paraíba."
+      },
+      {
+        "id": "b",
+        "text": "limitou-se ao cultivo de cana-de-açúcar no Nordeste com o trabalho escravo."
+      },
+      {
+        "id": "c",
+        "text": "dedicou-se à extração de metais preciosos, sobretudo prata, nas Gerais."
+      },
+      {
+        "id": "d",
+        "text": "baseou-se na extração do pau-brasil através do escambo com os nativos."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Vale fixar a cronologia, porque as alternativas erradas são todas anacronismos: o açúcar só se estrutura a partir de 1530 com as capitanias hereditárias, a mineração é do século XVIII e o café, do XIX. No Período Pré-Colonial há apenas o extrativismo do pau-brasil, obtido por escambo — trabalho indígena trocado por miçangas, espelhos e ferramentas.",
+    "difficulty": "easy",
+    "examSource": {
+      "board": "IFSUL",
+      "collection": "Lista Brasil Colonial — Prof. Ferretto"
+    }
+  },
+  {
+    "id": "q_col_ferretto_14",
+    "topicId": "his_brasil_colonia",
+    "subject": "História",
+    "prompt": "A compreensão cristã do encontro dos portugueses com os primeiros habitantes da América teve forte conotação maniqueísta: de um lado estava o bem, simbolizado pelos europeus na sua suposta busca pelo paraíso; de outro, o mal, representado pelos indígenas e suas práticas diabólicas.\n\nAnalise as afirmações abaixo acerca dessa compreensão.\n\n**I.** Tal compreensão foi alimentada por considerações imprecisas de alguns viajantes que classificavam de \"demoníacas\" certas práticas culturais dos povos americanos.\n\n**II.** A leitura das práticas dos povos americanos pelos europeus aliou a ideia da conquista de novas terras com o desejo de levar a palavra de Deus àquelas criaturas \"demonizadas\".\n\n**III.** O pensamento cristão português dissociava-se das ideias e políticas expansionistas; desse modo, a propagação da fé era desvinculada da empresa marítima.\n\nÉ correto o que se afirma em",
+    "options": [
+      {
+        "id": "a",
+        "text": "I, II e III."
+      },
+      {
+        "id": "b",
+        "text": "II e III apenas."
+      },
+      {
+        "id": "c",
+        "text": "I e III apenas."
+      },
+      {
+        "id": "d",
+        "text": "I e II apenas."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "I e II descrevem o mesmo movimento: demonizar a cultura do outro e, com isso, justificar conquistá-lo e convertê-lo. III é falsa, e é a afirmação que decide a questão — fé e expansão marítima andavam juntas, a Igreja foi das principais apoiadoras das navegações, e a catequese fazia parte da empresa colonial, não corria por fora dela.",
+    "difficulty": "medium",
+    "examSource": {
+      "board": "UECE",
+      "collection": "Lista Brasil Colonial — Prof. Ferretto"
+    }
+  },
+  {
+    "id": "q_col_ferretto_15",
+    "topicId": "his_brasil_colonia",
+    "subject": "História",
+    "prompt": "\"Os primeiros trinta anos da História do Brasil são conhecidos como período Pré-Colonial. Nesse período, a coroa portuguesa iniciou a dominação das terras brasileiras sem, no entanto, traçar um plano de ocupação efetiva. [...] A atenção da burguesia metropolitana e do governo português estava voltada para o comércio com o Oriente, que desde a viagem de Vasco da Gama havia sido monopolizado pelo Estado português. [...] Como observou o navegante Américo Vespúcio após a exploração do litoral brasileiro, pode-se dizer que não encontramos nada de proveito.\"\n\n*Berutti, 2004.*\n\nSobre o período retratado no texto, pode-se afirmar que o(a)",
+    "options": [
+      {
+        "id": "a",
+        "text": "desinteresse português pelo Brasil deu-se em decorrência dos tratados comerciais assinados com a Espanha, que tinha prioridade pela exploração de terras situadas a oeste de Greenwich."
+      },
+      {
+        "id": "b",
+        "text": "maior distância marítima era a maior desvantagem brasileira em relação ao comércio com as Índias."
+      },
+      {
+        "id": "c",
+        "text": "desinteresse português pode ser melhor explicado pela resistência oferecida pelos indígenas, que dificultavam o desembarque e o reconhecimento das novas terras."
+      },
+      {
+        "id": "d",
+        "text": "abertura de um novo mercado na América do Sul ampliava as possibilidades de lucro da burguesia metropolitana portuguesa."
+      },
+      {
+        "id": "e",
+        "text": "relativo descaso português pelo Brasil, nos primeiros trinta anos, explica-se pela aparente inexistência de produtos que atendessem aos interesses daqueles que patrocinavam as expedições."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "A frase de Vespúcio — \"não encontramos nada de proveito\" — é a resposta. Dentro da lógica mercantilista, uma terra só valia o investimento se rendesse metais preciosos ou especiarias; o Brasil, à primeira vista, não rendia nenhum dos dois, enquanto a Índia de Vasco da Gama rendia muito. Não é distância (b) nem resistência indígena (c): é cálculo de lucro.",
+    "difficulty": "medium",
+    "examSource": {
+      "board": "ESPCEX",
+      "collection": "Lista Brasil Colonial — Prof. Ferretto"
+    }
+  },
+  {
+    "id": "q_col_ferretto_16",
+    "topicId": "his_brasil_colonia",
+    "subject": "História",
+    "prompt": "\"E quando veio ao Evangelho, que nos erguemos todos em pé, com as mãos levantadas, eles [os índios] se levantaram conosco e alçaram as mãos, ficando assim, até ser acabado; e então tornaram-se a assentar como nós. E quando levantaram a Deus, que nos pusemos de joelhos, eles se puseram assim todos, como nós estávamos com as mãos levantadas, e em tal maneira sossegados, que, certifico a Vossa Alteza, nos fez muita devoção.\"\n\n*Pero Vaz de Caminha. In: Crônicas do descobrimento. São Paulo: Ática, 1999, p. 23.*\n\nEm relação à Carta de Caminha para o rei de Portugal, pode-se dizer que é:",
+    "options": [
+      {
+        "id": "a",
+        "text": "uma narrativa que projeta sobre as populações nativas uma visão de mundo cristã, como se o Brasil fosse uma espécie de paraíso edênico."
+      },
+      {
+        "id": "b",
+        "text": "um relato imparcial sobre as populações indígenas, porque o autor narra exatamente o que viu e viveu no Brasil."
+      },
+      {
+        "id": "c",
+        "text": "uma narrativa capaz de identificar a verdadeira essência das populações indígenas brasileiras, que já conheciam o cristianismo."
+      },
+      {
+        "id": "d",
+        "text": "um relato que expressa total ignorância do cronista sobre o caráter dissimulado e estratégico das populações indígenas, que desejavam apenas obter lucros."
+      },
+      {
+        "id": "e",
+        "text": "um relato sem valor histórico, pois está marcado por uma perspectiva eurocêntrica e preconceituosa."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Caminha vê indígenas imitando gestos e lê ali devoção — projeta o próprio mundo cristão sobre o que observa. Duas armadilhas frequentes aparecem aqui: (b) supõe que exista relato \"imparcial\", e (e) confunde perspectiva enviesada com ausência de valor histórico. Um documento eurocêntrico é fonte preciosa justamente por revelar como o europeu enxergava.",
+    "difficulty": "medium",
+    "examSource": {
+      "board": "UDESC",
+      "collection": "Lista Brasil Colonial — Prof. Ferretto"
+    }
+  },
+  {
+    "id": "q_col_ferretto_18",
+    "topicId": "his_brasil_colonia",
+    "subject": "História",
+    "prompt": "De ponta a ponta, é tudo praia-palma, muito chã e muito formosa. Pelo sertão nos pareceu, vista do mar, muito grande, porque, a estender olhos, não podíamos ver senão terra com arvoredos, que nos parecia muito longa. Nela, até agora, não pudemos saber que haja ouro, nem prata, nem coisa alguma de metal ou ferro; nem lho vimos. Porém a terra em si é de muito bons ares [...]. Porém o melhor fruto que dela se pode tirar me parece que será salvar esta gente.\n\n*Carta de Pero Vaz de Caminha.*\n\nA carta de Pero Vaz de Caminha permite entender o projeto colonizador para a nova terra. Nesse trecho, o relato enfatiza o seguinte objetivo:",
+    "options": [
+      {
+        "id": "a",
+        "text": "valorizar a catequese a ser realizada sobre os povos nativos."
+      },
+      {
+        "id": "b",
+        "text": "descrever a cultura local para enaltecer a prosperidade portuguesa."
+      },
+      {
+        "id": "c",
+        "text": "transmitir o conhecimento dos indígenas sobre o potencial econômico existente."
+      },
+      {
+        "id": "d",
+        "text": "realçar a pobreza dos habitantes nativos para demarcar a superioridade europeia."
+      },
+      {
+        "id": "e",
+        "text": "criticar o modo de vida dos povos autóctones para evidenciar a ausência de trabalho."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "A estrutura do trecho é uma troca: não há ouro nem prata, \"porém o melhor fruto que dela se pode tirar me parece que será salvar esta gente\". Na ausência de riqueza mineral, o que se oferece ao rei é a catequese. É a mesma carta da questão anterior — vale notar como uma só fonte pode ser cobrada por ângulos diferentes.",
+    "difficulty": "easy",
+    "examSource": {
+      "board": "ENEM",
+      "collection": "Lista Brasil Colonial — Prof. Ferretto"
+    }
+  },
+  {
+    "id": "q_col_ferretto_21",
+    "topicId": "his_brasil_colonia",
+    "subject": "História",
+    "prompt": "Em geral, os nossos tupinambás ficaram admirados ao ver os franceses e os outros dos países longínquos terem tanto trabalho para buscar o seu arabotã, isto é, pau-brasil. Houve uma vez um ancião da tribo que me fez esta pergunta: \"Por que vindes vós outros, mairs e pêros (franceses e portugueses), buscar lenha de tão longe para vos aquecer? Não tendes madeira em vossa terra?\"\n\n*LÉRY, J. Viagem à Terra do Brasil. In: FERNANDES, F. Mudanças Sociais no Brasil. São Paulo: Difel, 1974.*\n\nO viajante francês Jean de Léry (1534-1611) reproduz um diálogo travado, em 1557, com um ancião tupinambá, o qual demonstra uma diferença entre a sociedade europeia e a indígena no sentido",
+    "options": [
+      {
+        "id": "a",
+        "text": "do destino dado ao produto do trabalho nos seus sistemas culturais."
+      },
+      {
+        "id": "b",
+        "text": "da preocupação com a preservação dos recursos ambientais."
+      },
+      {
+        "id": "c",
+        "text": "do interesse de ambas em uma exploração comercial mais lucrativa do pau-brasil."
+      },
+      {
+        "id": "d",
+        "text": "da curiosidade, reverência e abertura cultural recíprocas."
+      },
+      {
+        "id": "e",
+        "text": "da preocupação com o armazenamento de madeira para os períodos de inverno."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "O ancião supõe que madeira serve para queimar e aquecer — é isso que ela significa no sistema cultural dele. Os europeus a levavam para extrair tintura e vender tecidos. A pergunta ingênua expõe a diferença: o mesmo objeto tem destinos completamente distintos nas duas sociedades. A (b) é a leitura anacrônica que a questão quer testar — não há ambientalismo em 1557.",
+    "difficulty": "medium",
+    "examSource": {
+      "board": "ENEM",
+      "collection": "Lista Brasil Colonial — Prof. Ferretto"
+    }
   }
 ]
