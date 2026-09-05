@@ -1,6 +1,7 @@
 import { biologySummaryMaterials } from './biologyInteractiveSummaries';
 import { physicsSummaryMaterials } from './physicsInteractiveSummaries';
 import { geographySummaryMaterials } from './geographyInteractiveSummaries';
+import { humanitiesSummaryMaterials } from './humanitiesInteractiveSummaries';
 import { remainingSummaryMaterials } from './remainingInteractiveSummaries';
 
 export interface SummaryMaterial {
@@ -41,4 +42,5 @@ export const summaryMaterials: SummaryMaterial[] = [
   ...physicsSummaryMaterials,
   ...geographySummaryMaterials,
   ...remainingSummaryMaterials,
+  ...humanitiesSummaryMaterials,
 ];

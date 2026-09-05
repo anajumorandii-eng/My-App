@@ -15,6 +15,13 @@ export function buildSubjectSummaries(input: {
   sourceFile: string;
   idPrefix: string;
   excludeTopics?: Set<string>;
+  /**
+   * Matérias argumentativas (Filosofia, Sociologia) não têm grandeza, unidade
+   * nem equação: sem estes dois ganchos elas herdariam um texto de prova de
+   * Exatas. Omitir mantém exatamente o texto usado pelas demais matérias.
+   */
+  examStrategy?: (topicTitle: string) => string;
+  relationKeywords?: string[];
 }): { summaries: InteractiveSummary[]; materials: SummaryMaterial[] } {
   const topics = input.topics.filter((topic) => !input.excludeTopics?.has(topic.title));
   const missingNotes = topics.filter((topic) => !input.notes[topic.title]).map((topic) => topic.title);
@@ -53,14 +60,14 @@ export function buildSubjectSummaries(input: {
         { id: `${prefix}-conceito`, title: 'Relações fundamentais', stage: 'conceito', depth: 'aprofundamento', content: `${note.focus} Identifique hipóteses, condições de validade e o que permanece constante antes de aplicar qualquer relação.` },
         { id: `${prefix}-aplicacao`, title: 'Aplicação orientada', stage: 'aplicacao', depth: 'aprofundamento', content: note.application ?? `Relacione ${topic.title} aos dados observáveis, compare casos-limite e verifique se a conclusão é compatível com o mecanismo.` },
         { id: `${prefix}-exercicio`, title: 'Situação de transferência', stage: 'exercicio', depth: 'prova', content: `Uma situação altera uma das condições de ${topic.title}. Preveja o efeito, apresente a relação usada e justifique o sentido da mudança sem consultar o resumo.` },
-        { id: `${prefix}-prova`, title: 'Estratégia de prova', stage: 'estrategia', depth: 'prova', content: `Leia comando, figura e unidades; declare o princípio de ${topic.title}; substitua dados somente depois de montar a relação; e interprete o resultado. Uma equação sem explicação não demonstra domínio.` },
+        { id: `${prefix}-prova`, title: 'Estratégia de prova', stage: 'estrategia', depth: 'prova', content: input.examStrategy?.(topic.title) ?? `Leia comando, figura e unidades; declare o princípio de ${topic.title}; substitua dados somente depois de montar a relação; e interprete o resultado. Uma equação sem explicação não demonstra domínio.` },
       ],
       retrieval: [{
         id: `${prefix}-r1`, sectionId: `${prefix}-exercicio`,
         prompt: `Explique a relação central de ${topic.title}, suas condições de validade e uma consequência observável.`,
         expectedElements: [
           { label: 'conceito ou grandeza central', keywords: titleKeywords.length ? titleKeywords : ['conceito'] },
-          { label: 'relação ou mecanismo', keywords: ['relação', 'relacao', 'mecanismo', 'proporcional', 'conservação', 'conservacao'] },
+          { label: 'relação ou mecanismo', keywords: input.relationKeywords ?? ['relação', 'relacao', 'mecanismo', 'proporcional', 'conservação', 'conservacao'] },
           { label: 'consequência contextualizada', keywords: ['resultado', 'efeito', 'consequência', 'consequencia', 'contexto', 'unidade'] },
         ],
         hint: 'Organize em dados e condições → princípio → consequência.',

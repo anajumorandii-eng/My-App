@@ -16,6 +16,8 @@ const expectedTopicCounts: Record<string, number> = {
   'Entendimento de Texto': 12,
   Matemática: 83,
   Química: 48,
+  Filosofia: 35,
+  Sociologia: 27,
 };
 
 function summary(subject: string, topic: string, id: string): InteractiveSummary {
@@ -38,9 +40,9 @@ function summary(subject: string, topic: string, id: string): InteractiveSummary
   };
 }
 
-test('congela as 11 matérias e os 550 tópicos da grade fornecida', () => {
-  assert.equal(summaryCurriculum.length, 11);
-  assert.equal(summaryCurriculum.flatMap((subject) => subject.topics).length, 550);
+test('congela as 13 matérias e os 612 tópicos da grade fornecida', () => {
+  assert.equal(summaryCurriculum.length, 13);
+  assert.equal(summaryCurriculum.flatMap((subject) => subject.topics).length, 612);
   assert.deepEqual(
     Object.fromEntries(summaryCurriculum.map((subject) => [subject.subject, subject.topics.length])),
     expectedTopicCounts,
@@ -81,7 +83,7 @@ test('não deixa tópicos de Geografia fora do catálogo publicado', async () =>
   assert.deepEqual(audit.missing.filter((item) => item.subject === 'Geografia'), []);
 });
 
-for (const subject of ['História', 'Língua Inglesa', 'Redação', 'Gramática', 'Literatura', 'Entendimento de Texto', 'Matemática', 'Química']) {
+for (const subject of ['História', 'Língua Inglesa', 'Redação', 'Gramática', 'Literatura', 'Entendimento de Texto', 'Matemática', 'Química', 'Filosofia', 'Sociologia']) {
   test(`não deixa tópicos de ${subject} fora do catálogo publicado`, async () => {
     const { interactiveSummaries } = await import('../data/interactiveSummaries');
     const audit = auditSummaryCoverage(summaryCurriculum, interactiveSummaries);
@@ -89,12 +91,12 @@ for (const subject of ['História', 'Língua Inglesa', 'Redação', 'Gramática'
   });
 }
 
-test('publica exatamente uma entrada para cada um dos 550 tópicos curriculares', async () => {
+test('publica exatamente uma entrada para cada um dos 612 tópicos curriculares', async () => {
   const { interactiveSummaries } = await import('../data/interactiveSummaries');
   const curricularSubjects = new Set(summaryCurriculum.map((item) => item.subject));
   const curricularSummaries = interactiveSummaries.filter((item) => curricularSubjects.has(item.subject));
   const audit = auditSummaryCoverage(summaryCurriculum, curricularSummaries);
-  assert.equal(curricularSummaries.length, 550);
+  assert.equal(curricularSummaries.length, 612);
   assert.deepEqual(audit.missing, []);
   assert.deepEqual(audit.duplicates, []);
   assert.deepEqual(audit.extras, []);
