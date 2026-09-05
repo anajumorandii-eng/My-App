@@ -5,12 +5,11 @@ import { AllocatedStudyAction, DisagreeReason } from '../../../types';
 import { formatIsoTimeInSaoPaulo } from '../../../features/availability/time';
 import { Button } from '../../../components/ui/Button';
 import { KineticText } from '../../../components/ui/KineticText';
-import { CrivoCore } from '../../../components/CrivoCore';
 import { getSubjectProfile, TYPOGRAPHY_PRESETS } from '../../../design-system/crivoSubjects';
 import { DecisionExplanation } from './DecisionExplanation';
+import { DecisionFactorField } from './DecisionFactorField';
 import { DisagreeControl, FeedbackStatus } from './DisagreeControl';
 import { AdaptiveUpdate } from './AdaptiveUpdate';
-import { DecisionFactorField } from './DecisionFactorField';
 import { DecisionSignalStrip } from './DecisionSignalStrip';
 import { focusEnter } from '../../../design-system/motion/variants';
 import { usePreviousFeedback } from '../../../hooks/usePreviousFeedback';
@@ -117,7 +116,15 @@ export function TodayFocus({ action, actionLabel, mainReason, onStart, showAdapt
           />
         </div>
         <div className="crivo-observatorio-visual-support" aria-hidden="true">
-          <CrivoCore size={190} scale="hero" decorative state={coreState} subject={action.subject} previousSubject={previousSubject} topicId={action.topicId} />
+          {/* O CrivoCore em escala hero ficava aqui. O desenho aprovado do
+              observatório (commit 5c0ba75) esconde este bloco por CSS
+              (display:none em .ni-production-app), mas ele continuava sendo
+              montado a cada abertura do app: criar o contexto 2D, dimensionar o
+              backing store e resolver a paleta custavam ~150 ms de thread
+              principal para nada que aparecesse na tela. Desenhar ele nem
+              chegava — a trava de tamanho do useRafLoop faz seu trabalho —, mas
+              montar já bastava. Se o núcleo voltar a ser exibido, reintroduza-o
+              junto com a mudança no CSS. */}
           <DecisionFactorField factors={action.factors} phase={phase} />
         </div>
         <AnimatePresence initial={false}>{showAdaptiveUpdate && <AdaptiveUpdate key={action.id} className="crivo-adaptive-update" />}</AnimatePresence>

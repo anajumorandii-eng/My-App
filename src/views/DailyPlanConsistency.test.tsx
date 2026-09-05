@@ -251,7 +251,13 @@ describe('daily plan consistency across views', () => {
     const stage = screen.getByTestId('today-decision-stage');
     expect(within(stage).getByRole('heading', { name: FIRST_TOPIC })).toBeInTheDocument();
     expect(within(stage).getByRole('button', { name: 'Começar' })).toBeInTheDocument();
-    expect(within(stage).getByTestId('crivo-core')).toHaveAttribute('data-scale', 'hero');
+    // O núcleo em canvas saiu da tela Hoje: o desenho aprovado do observatório
+    // (commit 5c0ba75, 01/09) o escondeu por CSS, e esta asserção — escrita dois
+    // dias antes — continuou passando porque o jsdom não aplica a folha de
+    // estilo. Escondido, ele ainda era montado a cada abertura do app e custava
+    // ~150 ms de thread principal. Agora não é mais renderizado, e o teste
+    // guarda essa decisão em vez de contradizê-la.
+    expect(within(stage).queryByTestId('crivo-core')).toBeNull();
     const signals = within(stage).getByLabelText('Sinais usados na decisão');
     expect(signals.tagName).toBe('DL');
     for (const label of ['Domínio', 'Confiança', 'Urgência', 'Tempo']) {
