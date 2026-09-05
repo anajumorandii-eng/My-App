@@ -241,3 +241,20 @@ test('generateDailyPlan não desperdiça orçamento de um balde quando falta ite
   assert.equal(plan.length, 1);
   assert.ok(plan[0].reasons.includes('tempo_disponivel'));
 });
+
+test('tópico sem conteúdo escrito não vira ação de estudo', () => {
+  // Filosofia e Sociologia entraram no catálogo antes das questões; sem esta
+  // regra o plano abria a sessão de "Sócrates e Platão" com zero itens.
+  const topics = [
+    topic({ id: 'vazio', name: 'Sócrates e Platão', contentStatus: 'pending' }),
+    topic({ id: 'cheio', name: 'Cinemática' }),
+  ];
+  const masteryData = [mastery({ topicId: 'vazio', level: 0 }), mastery({ topicId: 'cheio', level: 50 })];
+
+  const ranked = EfficiencyEngine.rankStudyActions(masteryData, topics, profile(), NO_GOALS);
+  assert.deepEqual(ranked.map((a) => a.topicId), ['cheio']);
+
+  // E também não pode reaparecer pela porta dos fundos, como "adiado".
+  const deferred = EfficiencyEngine.generateDeferredActions(masteryData, topics, profile(), 1, NO_GOALS);
+  assert.ok(!deferred.some((a) => a.topicId === 'vazio'));
+});

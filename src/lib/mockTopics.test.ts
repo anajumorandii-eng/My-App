@@ -92,3 +92,35 @@ test('no chapter title is blank', () => {
     }
   }
 });
+
+// contentStatus: 'pending' existe para o motor de eficiência não agendar bloco
+// de estudo em tópico que abriria vazio. A marca só serve se for verdadeira, e
+// ela erra dos dois lados: marcar um tópico que tem conteúdo o esconde do
+// plano sem motivo; deixar de marcar um vazio devolve a sessão vazia. Os dois
+// testes abaixo fecham as duas portas — quando alguém escrever a primeira
+// questão de Sócrates e Platão, o primeiro teste quebra e cobra a remoção da
+// marca.
+test('todo tópico marcado como pending está mesmo sem conteúdo', () => {
+  const comQuestao = new Set(mockQuestions.map((q) => q.topicId));
+  const comDiscursiva = new Set(mockTopicDiscursivePrompts.map((d) => d.topicId));
+  for (const topic of mockTopics) {
+    if (topic.contentStatus !== 'pending') continue;
+    assert.ok(
+      !comQuestao.has(topic.id) && !comDiscursiva.has(topic.id),
+      `${topic.id} já tem conteúdo — tire o contentStatus: 'pending' para ele voltar ao plano diário`,
+    );
+  }
+});
+
+test('todo tópico sem conteúdo está marcado como pending', () => {
+  const comQuestao = new Set(mockQuestions.map((q) => q.topicId));
+  const comDiscursiva = new Set(mockTopicDiscursivePrompts.map((d) => d.topicId));
+  const vaziosNaoMarcados = mockTopics
+    .filter((t) => !comQuestao.has(t.id) && !comDiscursiva.has(t.id) && t.contentStatus !== 'pending')
+    .map((t) => t.id);
+  assert.deepEqual(
+    vaziosNaoMarcados,
+    [],
+    'estes tópicos não têm questão nem proposta discursiva e ainda assim entram no plano diário',
+  );
+});

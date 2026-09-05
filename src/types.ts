@@ -4,6 +4,12 @@ export interface Topic {
   subject: string;
   prerequisites: string[]; // IDs of other topics
   chapters?: string[]; // Real chapter titles from the student's apostila, in study order
+  // 'pending' = o tópico está no catálogo (aparece na trilha, na busca, no
+  // planejamento de longo prazo), mas ainda não tem nenhuma questão nem
+  // proposta discursiva escrita. O motor de eficiência não agenda blocos para
+  // ele: agendar geraria uma sessão que abre vazia. Ver o teste em
+  // src/lib/mockTopics.test.ts, que impede a marca de mentir nos dois sentidos.
+  contentStatus?: 'pending';
 }
 
 // Where a mastery estimate came from — lets the UI tell "haven't been

@@ -100,6 +100,11 @@ export class EfficiencyEngine {
     masteryData.forEach(mastery => {
       const topic = topics.find(t => t.id === mastery.topicId);
       if (!topic) return;
+      // Tópico ainda sem questão nem proposta discursiva escrita: recomendar
+      // um bloco dele entrega uma sessão que abre vazia, o que é pior do que
+      // não recomendar. Ele continua no catálogo e na trilha — só não disputa
+      // as horas do dia enquanto não houver o que estudar.
+      if (topic.contentStatus === 'pending') return;
 
       // 1. Learning Needed (Inverse to mastery level)
       const learningNeeded = 100 - mastery.level;
