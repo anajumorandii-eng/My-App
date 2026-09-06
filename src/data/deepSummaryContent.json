@@ -1,5 +1,161 @@
 [
   {
+    "subject": "Biologia",
+    "topic": "Membranas Celulares",
+    "sections": [
+      {
+        "title": "A fronteira que seleciona",
+        "content": "A membrana plasmática delimita a célula e controla as trocas com o meio. Ela não é uma parede impermeável: seleciona substâncias conforme tamanho, carga, solubilidade e necessidade celular. Essa seletividade mantém concentrações diferentes dentro e fora da célula, condição essencial para impulsos nervosos, absorção intestinal e equilíbrio de água."
+      },
+      {
+        "title": "Modelo e transporte",
+        "content": "O modelo do mosaico fluido reúne bicamada de fosfolipídios, proteínas, colesterol e carboidratos. Moléculas pequenas apolares atravessam por difusão simples; água pode usar osmose e aquaporinas. Difusão facilitada usa proteínas, mas segue o gradiente. Transporte ativo consome energia para mover solutos contra o gradiente, como na bomba de sódio e potássio."
+      },
+      {
+        "title": "Ler tonicidade",
+        "content": "Em meio hipertônico, há maior concentração de solutos fora da célula e a água tende a sair. Uma hemácia murcha; uma célula vegetal sofre plasmólise. Em meio hipotônico, a água entra: a hemácia pode sofrer lise, enquanto a parede celular limita a expansão vegetal e produz turgor. Isotônico significa equilíbrio dinâmico, não ausência de movimento de água."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Não chame osmose de passagem de soluto: é o movimento líquido de água através de membrana semipermeável. Difusão facilitada não exige ATP apenas porque usa proteína. Também não confunda parede celular, presente em plantas, fungos e bactérias, com membrana plasmática, presente em todas as células. O gradiente eletroquímico combina concentração e carga."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Uma hemácia é colocada em solução mais concentrada de sal que seu citoplasma. Preveja a direção da água e o efeito no volume celular antes de responder: a água sai, pois o meio externo é hipertônico, e a célula diminui de volume. Explique por que esse resultado não depende de o sal atravessar diretamente a membrana."
+      }
+    ]
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Introdução à Genética",
+    "sections": [
+      {
+        "title": "Informação e característica",
+        "content": "Genética estuda como a informação hereditária participa da formação de características. Genes são segmentos de DNA que podem influenciar proteínas ou RNAs funcionais; alelos são versões de um mesmo gene. Fenótipo resulta da interação entre genótipo e ambiente, portanto não é seguro tratar toda característica observável como destino fixado apenas pelo DNA."
+      },
+      {
+        "title": "Segregação dos alelos",
+        "content": "Em organismos diploides, cromossomos homólogos carregam pares de alelos. Na meiose, eles se separam e cada gameta recebe apenas um alelo de cada par. Na fecundação, os pares são restabelecidos. Um indivíduo heterozigoto Aa forma gametas A e a em proporções esperadas iguais, desde que não haja distorção de segregação ou seleção."
+      },
+      {
+        "title": "Cruzamento monohíbrido",
+        "content": "No cruzamento Aa × Aa, a combinação de gametas produz genótipos esperados 1 AA : 2 Aa : 1 aa. Se A determina fenótipo dominante completo, a proporção fenotípica esperada é 3 dominante : 1 recessivo. O quadro de Punnett organiza possibilidades; ele não garante que uma prole pequena reproduzirá exatamente a proporção probabilística."
+      },
+      {
+        "title": "Limites do modelo simples",
+        "content": "Dominância não significa que um alelo é mais frequente, melhor ou mais forte. Fenótipos podem envolver codominância, dominância incompleta, múltiplos genes e influência ambiental. Também é errado dizer que genes “pulam” gerações: um alelo recessivo pode não aparecer no fenótipo de heterozigotos, mas continua sendo transmitido em parte dos gametas."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Dois indivíduos com fenótipo dominante têm uma criança de fenótipo recessivo. Qual deve ser o genótipo dos pais no modelo de dominância completa? Ambos precisam ser Aa, pois a criança aa recebeu um alelo recessivo de cada um. Mostre os quatro resultados possíveis do cruzamento para justificar a conclusão."
+      }
+    ]
+  },
+  {
+    "subject": "Química",
+    "topic": "Cálculos Estequiométricos",
+    "sections": [
+      {
+        "title": "Quantidade antes da regra de três",
+        "content": "Estequiometria relaciona quantidades de reagentes e produtos a partir de uma equação balanceada. Os coeficientes indicam proporções em mol, não em massa nem em volume genérico. Antes de qualquer cálculo, confira se a equação respeita conservação dos átomos. Só então converta o dado do enunciado para mol e aplique a razão correta."
+      },
+      {
+        "title": "Roteiro de resolução",
+        "content": "Converta massa em quantidade de matéria por n = m/M. Para gases em condições especificadas, use o volume molar adequado ou a equação dos gases; não aplique 22,4 L/mol fora das condições previstas. Relacione os mols pelos coeficientes balanceados e converta o resultado para a unidade pedida. Identifique o reagente limitante quando há quantidades de mais de um reagente."
+      },
+      {
+        "title": "Reagente limitante",
+        "content": "Na reação 2 H₂ + O₂ → 2 H₂O, 4 mol de H₂ exigem 2 mol de O₂. Se houver 4 mol de H₂ e apenas 1 mol de O₂, o oxigênio limita a reação: formam-se 2 mol de água e sobram 2 mol de H₂. O limitante é o reagente que se esgota primeiro, não necessariamente o de menor massa."
+      },
+      {
+        "title": "Erros que derrubam a conta",
+        "content": "Não use coeficientes de uma equação não balanceada. Não compare diretamente gramas de substâncias diferentes como se fossem mols. Rendimento percentual também não se soma à massa: rendimento é produto real dividido pelo produto teórico vezes 100. Se houver pureza, a massa útil é a massa da amostra multiplicada pela fração de pureza."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "A decomposição de 10 mol de CaCO₃ produz CaO e CO₂ na proporção 1:1. Quantos mols de CO₂ são previstos se o reagente se decompõe completamente? São 10 mol. Se o experimento obtiver 8 mol, o rendimento será 80%. Explique por que o coeficiente 1 não autoriza confundir as massas molares de reagente e produto."
+      }
+    ]
+  },
+  {
+    "subject": "Química",
+    "topic": "Equilíbrios Químicos I",
+    "sections": [
+      {
+        "title": "Equilíbrio é dinâmico",
+        "content": "Em uma reação reversível em sistema fechado, equilíbrio químico ocorre quando as velocidades direta e inversa se igualam. Reagentes e produtos continuam reagindo microscopicamente, mas suas concentrações permanecem constantes no tempo. Constante não significa necessariamente igual: as concentrações podem ser muito diferentes, conforme o valor da constante de equilíbrio e a temperatura."
+      },
+      {
+        "title": "Interpretando Kc",
+        "content": "Para aA + bB ⇌ cC + dD, Kc = [C]^c[D]^d / [A]^a[B]^b. Sólidos puros e líquidos puros não entram na expressão porque sua atividade é tomada como constante. Kc grande favorece produtos no equilíbrio; Kc pequeno favorece reagentes. A expressão precisa usar a equação balanceada e a temperatura para a qual a constante foi fornecida."
+      },
+      {
+        "title": "Quociente e deslocamento",
+        "content": "O quociente reacional Q usa a mesma expressão de K, mas com concentrações de um instante qualquer. Se Q < K, a reação direta tende a formar produtos; se Q > K, a reação inversa tende a formar reagentes. Essa comparação é mais segura que decorar setas. Catalisador acelera os dois sentidos e não altera K nem a composição final."
+      },
+      {
+        "title": "Pressão e temperatura",
+        "content": "Em equilíbrios gasosos, reduzir o volume tende a favorecer o lado com menor número de mols gasosos, quando os números diferem. Aumentar temperatura favorece o sentido endotérmico e muda o valor de K; já alterar concentração ou pressão desloca a composição sem mudar K à mesma temperatura. Não conte sólidos nem líquidos na comparação de mols gasosos."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Para N₂O₄(g) ⇌ 2 NO₂(g), comprimir o recipiente favorece qual lado? Favorece N₂O₄, que possui um mol gasoso contra dois do outro lado. Justifique usando colisões e a comparação de mols, sem dizer que a constante de equilíbrio mudou se a temperatura permaneceu igual."
+      }
+    ]
+  },
+  {
+    "subject": "Língua Inglesa",
+    "topic": "Text Comprehension: Taxonomy and Terminology",
+    "sections": [
+      {
+        "title": "Ler a classificação",
+        "content": "Textos científicos de taxonomia organizam seres em grupos e usam termos técnicos para indicar relações, características e critérios de classificação. A tarefa principal não é traduzir cada palavra isolada, mas recuperar a hierarquia: qual grupo é mais amplo, qual é subconjunto e qual característica separa categorias. Títulos, subtítulos e exemplos fornecem pistas decisivas."
+      },
+      {
+        "title": "Estratégia de leitura",
+        "content": "Localize cognatos confiáveis, mas confirme-os pelo contexto: species, classification e organism ajudam; eventualmente não significa “eventualmente”, e sim “por fim”. Observe conectores como however, therefore, whereas e such as. Eles revelam contraste, consequência, comparação e exemplificação. Em questões, retorne ao trecho que contém a evidência em vez de decidir apenas pela memória do tema."
+      },
+      {
+        "title": "Definição e exemplo",
+        "content": "Quando um texto afirma “Mammals are vertebrates that nurse their young”, a estrutura apresenta categoria geral, vertebrates, e característica definidora, nurse their young. Se ele acrescenta bats as an example, morcegos ilustram o grupo; não transformam a característica de um exemplo em regra exclusiva. Diferencie definição, exceção e aplicação do conceito."
+      },
+      {
+        "title": "Pegadinhas de prova",
+        "content": "Não traduza false friends automaticamente: actually significa “na verdade”, não “atualmente”; pretend significa “fingir”, não “pretender”. Pronomes como it, they e which exigem antecedente no texto. Uma alternativa pode usar palavras presentes no parágrafo e ainda inverter a relação lógica, trocar causa por efeito ou generalizar um caso particular."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Leia: “Reptiles are ectothermic vertebrates; snakes are reptiles.” Qual conclusão é autorizada? Cobras são vertebrados ectotérmicos, pois pertencem ao grupo definido. A frase não permite concluir que todos os vertebrados são répteis. Identifique no período a palavra que marca a inclusão de snakes na categoria maior."
+      }
+    ]
+  },
+  {
+    "subject": "Língua Inglesa",
+    "topic": "Text Comprehension: Novels/Short Stories",
+    "sections": [
+      {
+        "title": "Narrativa como evidência",
+        "content": "Em trechos de romances e contos, a prova costuma cobrar ponto de vista, relação entre personagens, conflito, inferência e efeito de linguagem. Comece distinguindo narrador, personagem e autor: uma opinião expressa pelo narrador não é automaticamente uma tese do autor. Marcas de tempo, lugar e mudança de foco ajudam a reconstruir a situação sem depender de tradução palavra por palavra."
+      },
+      {
+        "title": "Voz, tom e detalhe",
+        "content": "Adjetivos, verbos de fala e imagens recorrentes indicam tom: ironic, uneasy, relieved ou resentful revelam postura do narrador ou personagem. Um detalhe concreto pode ter função simbólica, mas só afirme isso quando o texto cria repetição, contraste ou relação clara. Para inferir, combine pistas explícitas; não invente uma motivação que o trecho não sustenta."
+      },
+      {
+        "title": "Discurso direto e indireto",
+        "content": "Aspas e travessões mostram fala direta; verbos como thought, remembered e seemed podem aproximar o leitor da interioridade. Pergunte quem percebe a cena e o que essa posição deixa de fora. Uma descrição limitada a uma personagem pode ser parcial. Quando a alternativa afirma certeza absoluta, procure no texto modalizadores como may, perhaps, seemed ou apparently."
+      },
+      {
+        "title": "Armadilhas recorrentes",
+        "content": "Não confunda sequência temporal com relação de causa. “After” só estabelece posterioridade; “because” apresenta causa. Evite tratar uma metáfora como acontecimento literal. Também não substitua uma inferência moderada por julgamento moral amplo sobre uma personagem. A resposta correta normalmente preserva o grau de certeza e o recorte do fragmento."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Se o narrador diz “She smiled, but kept her hands clenched under the table”, qual inferência é razoável? O contraste sugere tensão ou desconforto apesar do sorriso. Não é possível concluir a causa exata da tensão. Mostre quais duas pistas — smiled e clenched — precisam ser relacionadas para chegar à resposta."
+      }
+    ]
+  },
+  {
     "subject": "Geografia",
     "topic": "Coordenadas Geográficas",
     "sections": [
@@ -308,6 +464,58 @@
       {
         "title": "Pratique e confira",
         "content": "Como analisar um cartaz que apresenta Vargas como protetor dos trabalhadores? Identifique a personalização dos direitos, a linguagem paternalista e a busca de legitimidade. Em seguida, confronte a imagem com direitos efetivos e mecanismos de controle sindical. A análise deve distinguir propaganda, política social e experiência dos trabalhadores, sem reduzir tudo a “presente do governante” ou a “mera mentira”."
+      }
+    ]
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Função Quadrática",
+    "sections": [
+      {
+        "title": "Forma e significado",
+        "content": "Uma função quadrática tem a forma f(x) = ax² + bx + c, com a diferente de zero. Seu gráfico é uma parábola: se a é positivo, abre para cima e possui mínimo; se a é negativo, abre para baixo e possui máximo. O coeficiente c é f(0), ponto em que o gráfico corta o eixo y."
+      },
+      {
+        "title": "Raízes e vértice",
+        "content": "As raízes são os valores de x para os quais f(x) = 0. Pelo discriminante Δ = b² − 4ac, há duas raízes reais distintas se Δ > 0, uma raiz real dupla se Δ = 0 e nenhuma raiz real se Δ < 0. O x do vértice é −b/(2a); substitua esse valor em f para obter a altura extrema."
+      },
+      {
+        "title": "Exemplo de modelagem",
+        "content": "Se h(t) = −5t² + 20t + 1 descreve uma altura, o instante de altura máxima é t = −20/(2·−5) = 2 s. A altura máxima é h(2) = 21 m. Para saber quando o objeto chega ao chão, resolva h(t) = 0 e descarte tempos negativos, pois podem surgir como solução algébrica sem sentido físico."
+      },
+      {
+        "title": "Armadilhas comuns",
+        "content": "Não troque o sinal de b na fórmula de Bhaskara: x = (−b ± √Δ)/(2a). Não suponha que toda parábola cruza o eixo x. Também não trate o vértice como uma raiz: ele só estará no eixo x quando Δ = 0. Em contexto aplicado, examine domínio, unidade e quais soluções são fisicamente aceitáveis."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Para f(x) = x² − 6x + 5, encontre raízes e vértice. As raízes são 1 e 5; o eixo de simetria é x = 3 e f(3) = −4. Explique por que o gráfico fica negativo entre as raízes, usando o fato de a parábola abrir para cima."
+      }
+    ]
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Introdução às Probabilidades",
+    "sections": [
+      {
+        "title": "Medir chance em um modelo",
+        "content": "Probabilidade quantifica a chance de um evento dentro de um espaço amostral. Quando os resultados elementares são equiprováveis, P(A) = número de casos favoráveis dividido pelo número de casos possíveis. Antes de contar, defina claramente o experimento e o que será considerado resultado. Um modelo ruim produz uma conta correta para a pergunta errada."
+      },
+      {
+        "title": "União, interseção e complemento",
+        "content": "Para eventos A e B, P(A ou B) = P(A) + P(B) − P(A e B). A subtração evita contar duas vezes resultados pertencentes aos dois eventos. O complemento satisfaz P(não A) = 1 − P(A), muito útil quando é mais simples contar o oposto. Eventos mutuamente exclusivos têm interseção vazia, mas não são automaticamente independentes."
+      },
+      {
+        "title": "Condicional e independência",
+        "content": "P(A dado B) = P(A e B)/P(B), desde que P(B) seja diferente de zero. A informação B reduz o universo considerado. Eventos são independentes quando P(A e B) = P(A)P(B), equivalente a P(A dado B) = P(A) quando definido. Retirar cartas sem reposição geralmente cria dependência; com reposição, as chances podem permanecer iguais."
+      },
+      {
+        "title": "Erros recorrentes",
+        "content": "Não some probabilidades de eventos que se sobrepõem sem descontar a interseção. Não use multiplicação apenas porque há duas etapas: multiplique probabilidades condicionais ou independentes de modo justificado. Em problemas de “pelo menos um”, o complemento de “nenhum” costuma evitar casos perdidos. Sempre confira se o resultado está entre zero e um."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Uma moeda honesta é lançada três vezes. A probabilidade de sair pelo menos uma cara é 1 menos a chance de não sair cara: 1 − (1/2)³ = 7/8. Explique por que somar diretamente os casos “uma cara”, “duas caras” e “três caras” exigiria cuidado com a contagem de sequências."
       }
     ]
   },
