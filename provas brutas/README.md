@@ -1,92 +1,106 @@
-# Provas brutas
+# Provas brutas — vestibulares de Medicina
 
-Suba aqui os PDFs das provas oficiais dos vestibulares. É a partir deles que o
-acervo de questões reais do app (`src/data/discursiveQuestions.ts`, para a 2ª
-fase, e `public/questions.json`, para as objetivas) é preenchido **sem
+Acervo de provas anteriores para estudo, priorizando fontes oficiais. É a
+partir daqui que o acervo de questões reais do app é preenchido **sem
 reconstrução** — com enunciado, itens e gabarito conferidos contra o documento
-original.
+original:
 
-Hoje as questões do acervo que não vieram de PDF estão marcadas com
-`uncertain: true` e uma nota explicando o que foi reconstruído. Toda questão
-extraída daqui pode perder essa marca.
+- `src/data/discursiveQuestions.ts` — questões discursivas de 2ª fase, usadas no
+  Treino de 2ª Fase;
+- `public/questions.json` — questões objetivas; as que vêm de prova real levam o
+  campo `examSource` e alimentam o filtro "só provas reais".
 
-## Como subir
+Questões que não vieram de PDF oficial ficam marcadas com `uncertain: true` e
+uma nota explicando o que foi reconstruído. Uma questão extraída daqui pode
+perder essa marca.
 
-Arraste os arquivos para esta pasta pelo GitHub (`Add file → Upload files`) ou
-por `git add`. Os `.pdf` desta pasta já estão configurados para **Git LFS** no
-`.gitattributes`, igual às apostilas — não precisa fazer nada além de subir.
+## Janela adotada
 
-Nada aqui é lido pelo app em tempo de execução: são material de origem, usados
-só para gerar conteúdo.
+- FUVEST, Unicamp, Unesp, Famerp e Unifesp: ciclos 2023, 2024, 2025 e 2026.
+- ENEM: edições completas 2022, 2023, 2024 e 2025 (a edição 2026 ainda não
+  ocorreu em 05/09/2026).
 
-## Como nomear os arquivos
-
-O nome é o que identifica banca, ano e fase — o script de extração lê essa
-informação do nome, então vale seguir o padrão:
-
-```
-<banca> <ano> - <fase> - <complemento>.pdf
-```
-
-Bancas reconhecidas: `Fuvest`, `Unicamp`, `Unesp`, `Famerp`, `Unifesp`, `ENEM`.
-
-Exemplos:
+## Estrutura
 
 ```
 provas brutas/
-├─ Fuvest 2026 - 2a fase - dia 2 - prova.pdf
-├─ Fuvest 2026 - 2a fase - dia 2 - respostas esperadas.pdf
-├─ Fuvest 2026 - 1a fase - prova V1.pdf
-├─ Fuvest 2026 - 1a fase - gabarito.pdf
-├─ Unicamp 2026 - 2a fase - dia 2 - prova.pdf
-├─ Unicamp 2026 - 2a fase - resolucao comentada.pdf
-├─ Famerp 2025 - conhecimentos especificos - prova.pdf
-├─ Unifesp 2025 - prova II - prova.pdf
-├─ ENEM 2024 - dia 2 - caderno amarelo - prova.pdf
-└─ ENEM 2024 - dia 2 - caderno amarelo - gabarito.pdf
+  FUVEST/{2023,2024,2025,2026}/
+  UNICAMP/{2023,2024,2025,2026}/
+  ENEM/{2022,2023,2024,2025}/
+  UNIFESP/{2023,2024,2025,2026}/
+  FAMERP/{2023,2024,2025,2026}/
+  UNESP/{2023,2024,2025,2026}/
 ```
 
-Use `1a`/`2a` sem acento e sem `ª` para o nome do arquivo não quebrar em
-sistemas diferentes. Acento no resto do nome é aceitável, mas evitar é melhor.
+O nome do arquivo identifica banca, ano e fase — o extrator lê essa informação
+do caminho e do nome. Exemplos que seguem o padrão em uso:
 
-## O que vale a pena subir
+```
+FUVEST/2026/FUVEST_2026_2a_fase_2o_dia.pdf
+UNICAMP/2025/UNICAMP_2025_2a_fase_2o_dia_Biologicas_Saude.pdf
+UNIFESP/2026/UNIFESP_2026_prova_discursiva.pdf
+ENEM/2024/ENEM_2024_dia_2_caderno_azul.pdf
+```
 
-Em ordem de utilidade para o acervo:
+## Critério
 
-1. **Prova + gabarito/respostas esperadas do mesmo ano e fase.** Sem o gabarito
-   oficial, a resposta-modelo continua sendo elaborada por mim, e a questão
-   entra com ressalva. Com ele, a correção é a da própria banca.
-2. **2ª fase (discursivas)** de Fuvest, Unicamp, Famerp e Unifesp — é o que
-   alimenta o Treino de 2ª Fase, e é onde o acervo está mais curto.
-3. **1ª fase e ENEM (objetivas)** — alimentam o banco de questões com o campo
-   `examSource`, que hoje tem só 10 itens de 1.652. É o que faz o filtro "só
-   provas reais" da tela de Questões deixar de ser quase vazio.
-4. **Resoluções comentadas de cursinho**, se você já tiver. Não substituem o
-   gabarito oficial, mas ajudam a redigir a explicação.
+- Incluir 1ª e 2ª fase quando o vestibular tiver duas fases.
+- Quando a prova ocorrer em dois dias, manter os dois cadernos/dias.
+- No ENEM, manter 1º e 2º dia.
+- Não usar simulado como prova oficial.
+- Não confundir processo seletivo de transferência, residência ou meio de ano
+  com o vestibular regular.
+- Preferir sempre a fonte oficial da banca/universidade.
+- Para Vunesp (UNESP/FAMERP), a página pública identifica o vestibular, mas o
+  item "Provas e Gabaritos" atualmente redireciona para login; por isso não deve
+  ser substituído silenciosamente por cópia de terceiros.
 
-Provas de anos anteriores também são bem-vindas: repetição de tema entre anos é
-justamente o que o app usa para calcular prioridade de estudo.
+Veja `fontes-oficiais.json` para o inventário das páginas oficiais.
 
-## Depois de subir
+**Suba o gabarito junto com a prova.** Sem o gabarito oficial (ou as "respostas
+esperadas", no caso da FUVEST), a resposta-modelo continua sendo elaborada e a
+questão entra com ressalva. Com ele, a correção passa a ser a da própria banca.
 
-Me avise nesta conversa. O passo seguinte é:
+## Git LFS — obrigatório
+
+Os `.pdf` desta pasta são versionados por **Git LFS**, configurado em
+`.gitattributes` com o padrão `provas brutas/**/*.pdf` (o `**` é necessário
+porque os arquivos ficam em subpastas por banca e ano).
+
+Commitar PDF aqui **sem** LFS incha o histórico do git de forma permanente:
+apagar o arquivo depois não recupera o espaço, porque o blob continua no
+histórico. Antes de commitar, garanta que o git-lfs está instalado e ativo:
 
 ```bash
-npx tsx scripts/extract-provas.ts
+git lfs install
+git lfs track "provas brutas/**/*.pdf"   # já está no .gitattributes
+git lfs status
 ```
 
-Isso gera `provas-extraidas/` (ignorada pelo git, como
-`materiais-extraidos/`) com um `.txt` por PDF, separado por página, que eu uso
-para transcrever as questões com fidelidade.
+Os scripts de sincronização em `scripts/sync_*.py` e seus workflows fazem isso
+automaticamente. Se você subir arquivos pela interface do GitHub, o LFS é
+aplicado pelo `.gitattributes` do servidor.
 
-Se algum PDF for escaneado (imagem, sem camada de texto), o script avisa — esse
-caso precisa de OCR, e aí serve o `scripts/ocr-apostila.sh`, que já existe no
-repo para as apostilas.
+## Como extrair o texto
+
+```bash
+npx tsx scripts/extract-provas.ts            # extrai o que ainda não foi extraído
+npx tsx scripts/extract-provas.ts --force    # reextrai tudo
+npx tsx scripts/extract-provas.ts FUVEST     # só arquivos com "FUVEST" no caminho
+```
+
+Isso gera `provas-extraidas/` (ignorada pelo git, como `materiais-extraidos/`)
+com um `.txt` por PDF, separado por página — o insumo para transcrever as
+questões com fidelidade.
+
+O script avisa quando um PDF é escaneado (sem camada de texto) e quando encontra
+um ponteiro LFS que não foi baixado (`git lfs pull`). Para os escaneados, use o
+`scripts/ocr-apostila.sh`, que já existe no repo para as apostilas.
 
 ## Direitos autorais
 
-Provas oficiais de vestibular são públicas e distribuídas pelas próprias
-bancas, então ficam versionadas aqui. Isso é diferente das apostilas em
+Provas oficiais de vestibular são públicas e distribuídas pelas próprias bancas,
+então ficam versionadas aqui. Isso é diferente das apostilas em
 `materiais brutos/`, cujo texto extraído é mantido fora do git (ver
-`.gitignore`). Se você subir aqui algum material de cursinho que não seja de
-distribuição livre, me diga para eu tratá-lo com a mesma regra das apostilas.
+`.gitignore`). Material de cursinho que não seja de distribuição livre deve
+receber o mesmo tratamento das apostilas.

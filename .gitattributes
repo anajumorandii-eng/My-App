@@ -1,3 +1,4 @@
+"provas brutas/**/*.pdf" filter=lfs diff=lfs merge=lfs -text
 "provas brutas/*.pdf" filter=lfs diff=lfs merge=lfs -text
 "materiais brutos/*.pdf" filter=lfs diff=lfs merge=lfs -text
 "Flashcards Brutos/*.apkg" filter=lfs diff=lfs merge=lfs -text

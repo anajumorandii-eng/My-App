@@ -1,0 +1,56 @@
+name: Sincronizar provas brutas
+
+on:
+  # Gatilho por push desativado: sem Git LFS ativo, cada execução commitava
+  # o PDF como binário cru e inchava o histórico de forma permanente.
+  # Reativar só depois de confirmar que os PDFs entram como ponteiro LFS
+  # (ver "Git LFS" no README de "provas brutas").
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install requests beautifulsoup4
+
+      - name: Baixar PDFs oficiais
+        run: python scripts/sync_provas_brutas.py
+
+      - name: Ativar Git LFS
+        run: git lfs install --local
+
+      - name: Commitar PDFs
+        run: |
+          git config user.name "JUJU Provas Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add "provas brutas"
+          # Aborta se algum PDF entrou como binário cru em vez de ponteiro LFS.
+          # Sem isso, cada execução engorda o histórico de forma permanente:
+          # apagar o arquivo depois não recupera o espaço.
+          # -z porque o caminho tem espaço ("provas brutas").
+          git diff --cached --name-only -z -- "provas brutas" \
+            | while IFS= read -r -d '' f; do
+                case "$f" in *.pdf|*.PDF) ;; *) continue ;; esac
+                if ! git show ":$f" | head -c 20 | grep -q "^version https"; then
+                  echo "ERRO: $f entrou como binário cru, não como ponteiro LFS." >&2
+                  echo "Confira o padrão em .gitattributes e se o git-lfs está ativo." >&2
+                  exit 1
+                fi
+              done || exit 1
+          if git diff --cached --quiet; then
+            echo "Nenhum PDF novo."
+          else
+            git commit -m "Adiciona provas oficiais FUVEST 2023-2026"
+            git push
+          fi
