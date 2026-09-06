@@ -1,5 +1,629 @@
 [
   {
+    "subject": "Biologia",
+    "topic": "Membranas Celulares",
+    "sections": [
+      {
+        "title": "A fronteira que seleciona",
+        "content": "A membrana plasmática delimita a célula e controla as trocas com o meio. Ela não é uma parede impermeável: seleciona substâncias conforme tamanho, carga, solubilidade e necessidade celular. Essa seletividade mantém concentrações diferentes dentro e fora da célula, condição essencial para impulsos nervosos, absorção intestinal e equilíbrio de água."
+      },
+      {
+        "title": "Modelo e transporte",
+        "content": "O modelo do mosaico fluido reúne bicamada de fosfolipídios, proteínas, colesterol e carboidratos. Moléculas pequenas apolares atravessam por difusão simples; água pode usar osmose e aquaporinas. Difusão facilitada usa proteínas, mas segue o gradiente. Transporte ativo consome energia para mover solutos contra o gradiente, como na bomba de sódio e potássio."
+      },
+      {
+        "title": "Ler tonicidade",
+        "content": "Em meio hipertônico, há maior concentração de solutos fora da célula e a água tende a sair. Uma hemácia murcha; uma célula vegetal sofre plasmólise. Em meio hipotônico, a água entra: a hemácia pode sofrer lise, enquanto a parede celular limita a expansão vegetal e produz turgor. Isotônico significa equilíbrio dinâmico, não ausência de movimento de água."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Não chame osmose de passagem de soluto: é o movimento líquido de água através de membrana semipermeável. Difusão facilitada não exige ATP apenas porque usa proteína. Também não confunda parede celular, presente em plantas, fungos e bactérias, com membrana plasmática, presente em todas as células. O gradiente eletroquímico combina concentração e carga."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Uma hemácia é colocada em solução mais concentrada de sal que seu citoplasma. Preveja a direção da água e o efeito no volume celular antes de responder: a água sai, pois o meio externo é hipertônico, e a célula diminui de volume. Explique por que esse resultado não depende de o sal atravessar diretamente a membrana."
+      }
+    ]
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Introdução à Genética",
+    "sections": [
+      {
+        "title": "Informação e característica",
+        "content": "Genética estuda como a informação hereditária participa da formação de características. Genes são segmentos de DNA que podem influenciar proteínas ou RNAs funcionais; alelos são versões de um mesmo gene. Fenótipo resulta da interação entre genótipo e ambiente, portanto não é seguro tratar toda característica observável como destino fixado apenas pelo DNA."
+      },
+      {
+        "title": "Segregação dos alelos",
+        "content": "Em organismos diploides, cromossomos homólogos carregam pares de alelos. Na meiose, eles se separam e cada gameta recebe apenas um alelo de cada par. Na fecundação, os pares são restabelecidos. Um indivíduo heterozigoto Aa forma gametas A e a em proporções esperadas iguais, desde que não haja distorção de segregação ou seleção."
+      },
+      {
+        "title": "Cruzamento monohíbrido",
+        "content": "No cruzamento Aa × Aa, a combinação de gametas produz genótipos esperados 1 AA : 2 Aa : 1 aa. Se A determina fenótipo dominante completo, a proporção fenotípica esperada é 3 dominante : 1 recessivo. O quadro de Punnett organiza possibilidades; ele não garante que uma prole pequena reproduzirá exatamente a proporção probabilística."
+      },
+      {
+        "title": "Limites do modelo simples",
+        "content": "Dominância não significa que um alelo é mais frequente, melhor ou mais forte. Fenótipos podem envolver codominância, dominância incompleta, múltiplos genes e influência ambiental. Também é errado dizer que genes “pulam” gerações: um alelo recessivo pode não aparecer no fenótipo de heterozigotos, mas continua sendo transmitido em parte dos gametas."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Dois indivíduos com fenótipo dominante têm uma criança de fenótipo recessivo. Qual deve ser o genótipo dos pais no modelo de dominância completa? Ambos precisam ser Aa, pois a criança aa recebeu um alelo recessivo de cada um. Mostre os quatro resultados possíveis do cruzamento para justificar a conclusão."
+      }
+    ]
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Proteínas: Enzimas",
+    "sections": [
+      {
+        "title": "Catalisadores biológicos",
+        "content": "Enzimas aceleram reações ao reduzir a energia de ativação, sem alterar a variação de energia global nem o equilíbrio final. Em geral são proteínas com sítio ativo, embora existam RNAs catalíticos. Sua estrutura tridimensional determina quais moléculas conseguem interagir de modo eficiente e específico."
+      },
+      {
+        "title": "Modelo de ação",
+        "content": "O substrato liga-se ao sítio ativo e forma um complexo enzima-substrato. O encaixe induzido descreve ajustes de forma durante a interação, não uma peça rígida perfeita. Após a reação, produtos são liberados e a enzima pode atuar novamente. A velocidade depende também da concentração de substrato até ocorrer saturação."
+      },
+      {
+        "title": "Temperatura e pH",
+        "content": "Cada enzima possui faixa ótima de temperatura e pH. Fora dela, a velocidade pode cair por menor frequência de colisões ou por alteração das interações que sustentam a forma proteica. Desnaturação intensa compromete o sítio ativo e pode ser irreversível. Temperatura ótima não é necessariamente a maior temperatura possível."
+      },
+      {
+        "title": "Inibição e regulação",
+        "content": "Inibidores competitivos disputam o sítio ativo; aumentar substrato pode reduzir seu efeito relativo. Inibidores não competitivos alteram a atividade por ligação em outro local, sem precisar ocupar o sítio ativo. Células regulam enzimas por retroinibição, modificações químicas e compartimentalização, evitando desperdício metabólico."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Em um experimento, uma enzima mantém atividade alta a 37 °C e perde quase toda atividade após aquecimento intenso. Explique por que isso não prova que a reação “acabou por falta de substrato”. A explicação deve relacionar temperatura, conformação proteica e sítio ativo."
+      }
+    ]
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Bioenergética: Fermentação e Respiração",
+    "sections": [
+      {
+        "title": "Obter energia utilizável",
+        "content": "ATP é a moeda imediata de energia celular, mas não é reserva de longo prazo. Na respiração aeróbia, a oxidação gradual da glicose transfere elétrons e permite produzir ATP. A glicólise ocorre no citosol e não exige oxigênio diretamente; seu produto, piruvato, pode seguir destinos diferentes."
+      },
+      {
+        "title": "Respiração aeróbia",
+        "content": "Após a glicólise, o piruvato é transformado e entra em etapas mitocondriais. O ciclo de Krebs produz transportadores reduzidos; a cadeia respiratória usa seus elétrons para bombear prótons. O retorno dos prótons pela ATP sintase produz ATP por fosforilação oxidativa. O oxigênio recebe elétrons ao final e forma água."
+      },
+      {
+        "title": "Fermentação como alternativa",
+        "content": "Sem oxigênio disponível ou em certas condições celulares, a fermentação regenera NAD+ para manter a glicólise ativa. Na fermentação láctica, forma-se lactato; na alcoólica, etanol e dióxido de carbono. O saldo energético por glicose é menor porque não há cadeia respiratória funcionando como na respiração aeróbia."
+      },
+      {
+        "title": "O que não confundir",
+        "content": "Respiração não é sinônimo de ventilação pulmonar: é um conjunto de reações celulares. A glicólise não ocorre na mitocôndria. Também não diga que fermentação produz ATP “sem oxigênio” diretamente: o ATP vem da glicólise; a fermentação permite regenerar a coenzima necessária para a continuidade do processo."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que uma célula muscular pode aumentar a fermentação láctica durante esforço intenso? Relacione oferta de oxigênio, regeneração de NAD+ e manutenção da glicólise. Explique ainda por que essa via entrega menos ATP por molécula de glicose que a respiração aeróbia."
+      }
+    ]
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Mecanismos da Evolução Biológica",
+    "sections": [
+      {
+        "title": "Evolução muda populações",
+        "content": "Evolução biológica é mudança nas frequências de alelos de uma população ao longo de gerações. Indivíduos não evoluem porque precisam; indivíduos com variações herdáveis podem deixar descendentes em proporções diferentes. A seleção natural não cria a variação orientada para uma meta: ela atua sobre variações já existentes."
+      },
+      {
+        "title": "Fontes de variação",
+        "content": "Mutações introduzem novas variantes de DNA; recombinação e segregação independente reorganizam alelos na reprodução sexuada. Fluxo gênico desloca alelos entre populações por migração e reprodução. Deriva genética altera frequências por acaso, sendo particularmente forte em populações pequenas, inclusive após efeito fundador ou gargalo populacional."
+      },
+      {
+        "title": "Seleção e adaptação",
+        "content": "Quando uma característica hereditária aumenta sucesso reprodutivo em certo ambiente, seus alelos tendem a tornar-se mais frequentes. Adaptação é dependente do contexto: uma característica vantajosa em um ambiente pode não ser em outro. Seleção pode estabilizar, deslocar ou favorecer extremos, conforme a relação entre fenótipo e sobrevivência."
+      },
+      {
+        "title": "Evidências e limites",
+        "content": "Homologias anatômicas, fósseis, biogeografia e semelhanças moleculares sustentam parentesco evolutivo. Não confunda homologias com analogias: asas de morcego e braços humanos têm mesma origem estrutural; asas de inseto e ave têm função semelhante, mas origem distinta. Evolução não implica progresso moral ou complexidade crescente obrigatória."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Uma pequena população funda uma ilha e apresenta frequência rara de um alelo maior que a população original. Qual mecanismo explica isso? Identifique o efeito fundador como caso de deriva genética e explique por que não é preciso supor que o alelo seja vantajoso para aumentar inicialmente."
+      }
+    ]
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Divisão Celular",
+    "sections": [
+      {
+        "title": "Continuidade da informação",
+        "content": "Divisão celular distribui material genético e citoplasma entre células-filhas. A mitose conserva, em condições usuais, o número cromossômico e produz células geneticamente semelhantes; a meiose reduz esse número e gera gametas. Antes da divisão, o DNA é duplicado, portanto cromátides-irmãs não são cromossomos homólogos."
+      },
+      {
+        "title": "Mitose e ciclo celular",
+        "content": "Na intérfase, a célula cresce e replica DNA na fase S. Na mitose, cromossomos condensam, alinham-se, cromátides se separam e núcleos se reorganizam. A citocinese divide o citoplasma. Esse processo permite crescimento, reposição de tecidos e reprodução assexuada, mas falhas de controle podem contribuir para proliferação celular desregulada."
+      },
+      {
+        "title": "Meiose e variabilidade",
+        "content": "A meiose possui duas divisões após uma replicação. Na primeira, homólogos se separam; na segunda, cromátides-irmãs separam-se. Crossing-over entre homólogos e segregação independente criam combinações novas. O resultado típico é quatro células haploides, geneticamente distintas, fundamento da reprodução sexuada e da diversidade entre descendentes."
+      },
+      {
+        "title": "Erros de prova",
+        "content": "Não diga que mitose reduz ploidia ou que meiose produz duas células idênticas. Duplicar DNA não duplica necessariamente o número de cromossomos contado por centrômeros. Não confunda cromátides-irmãs, cópias do mesmo cromossomo, com homólogos, que carregam genes correspondentes e podem ter alelos diferentes."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Explique por que uma célula humana com 46 cromossomos, após replicar seu DNA, continua descrita como tendo 46 cromossomos. Relacione centrômero e cromátides. Em seguida, diga em qual divisão meiótica homólogos se separam e por que isso reduz a ploidia."
+      }
+    ]
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Sangue e Imunologia",
+    "sections": [
+      {
+        "title": "Transporte e defesa",
+        "content": "O sangue contém plasma, hemácias, leucócitos e plaquetas. Hemácias transportam gases por hemoglobina; plaquetas participam da coagulação; leucócitos atuam na defesa. Esses componentes têm funções diferentes e não devem ser tratados como “células de imunidade” indistintamente. A composição sanguínea integra transporte, homeostase e proteção."
+      },
+      {
+        "title": "Resposta imune",
+        "content": "A imunidade inata responde rapidamente por barreiras, fagocitose e inflamação, sem alta especificidade. A adaptativa envolve reconhecimento específico por linfócitos B e T. Linfócitos B podem originar plasmócitos produtores de anticorpos; linfócitos T coordenam respostas ou eliminam células infectadas. Memória imunológica torna respostas posteriores mais rápidas e eficientes."
+      },
+      {
+        "title": "Vacina e soro",
+        "content": "Vacinas apresentam antígenos ou instruções para que o organismo desenvolva resposta ativa e memória. Soros fornecem anticorpos prontos, dando proteção passiva imediata e temporária. Após exposição de risco, o tipo de intervenção depende da doença, do tempo e da disponibilidade de imunização prévia. Antibióticos não tratam infecções virais comuns."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Anticorpos não “matam tudo”: ligam-se a antígenos e facilitam neutralização ou ação de outras células. Febre e inflamação são respostas, não sinônimos de doença. Não diga que vacina causa automaticamente a doença completa; formulações são construídas para apresentar estímulo imunológico de maneira controlada."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Compare vacina e soro em início de ação, duração e memória imunológica. Uma resposta correta deve identificar produção própria de anticorpos e memória na vacina, anticorpos prontos e proteção temporária no soro, sem afirmar que ambos funcionam pelo mesmo mecanismo."
+      }
+    ]
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Bioenergética: Fotossíntese e Quimiossíntese",
+    "sections": [
+      {
+        "title": "Converter energia em matéria",
+        "content": "Fotossíntese usa energia luminosa para produzir matéria orgânica a partir de dióxido de carbono e água, liberando oxigênio em organismos oxigênicos. A energia não “cria matéria”: permite reações que armazenam energia química em moléculas orgânicas. Clorofila absorve faixas de luz; folhas parecem verdes porque refletem parte dessa radiação."
+      },
+      {
+        "title": "Duas etapas integradas",
+        "content": "Nas reações dependentes de luz, membranas dos tilacoides capturam energia, movimentam elétrons e produzem ATP e NADPH. No ciclo de Calvin, no estroma, CO₂ é fixado e reduzido usando esses produtos. Chamar essa etapa de “escura” não significa que ocorra apenas à noite; significa que não usa fótons diretamente."
+      },
+      {
+        "title": "Quimiossíntese",
+        "content": "Certas bactérias e arqueias obtêm energia oxidando substâncias inorgânicas, como amônia ou sulfeto, e usam essa energia para fixar carbono. Elas são quimioautotróficas e sustentam processos ecológicos importantes, como nitrificação. Não confunda quimiossíntese com fermentação: ambas não dependem de luz, mas diferem em fonte de energia e organização metabólica."
+      },
+      {
+        "title": "Erros comuns",
+        "content": "Fotossíntese não é o contrário exato de respiração em cada detalhe e etapa. O oxigênio liberado vem da água em fotossíntese oxigênica, não do CO₂. Plantas respiram continuamente; à noite não fazem reações luminosas, mas continuam consumindo oxigênio na respiração celular."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Explique por que aumentar CO₂ não eleva indefinidamente a taxa fotossintética. Identifique outros fatores limitantes, como luz, temperatura, água e capacidade enzimática. Diferencie também o local das reações luminosas do local da fixação de carbono."
+      }
+    ]
+  },
+  {
+    "subject": "Química",
+    "topic": "Cálculos Estequiométricos",
+    "sections": [
+      {
+        "title": "Quantidade antes da regra de três",
+        "content": "Estequiometria relaciona quantidades de reagentes e produtos a partir de uma equação balanceada. Os coeficientes indicam proporções em mol, não em massa nem em volume genérico. Antes de qualquer cálculo, confira se a equação respeita conservação dos átomos. Só então converta o dado do enunciado para mol e aplique a razão correta."
+      },
+      {
+        "title": "Roteiro de resolução",
+        "content": "Converta massa em quantidade de matéria por n = m/M. Para gases em condições especificadas, use o volume molar adequado ou a equação dos gases; não aplique 22,4 L/mol fora das condições previstas. Relacione os mols pelos coeficientes balanceados e converta o resultado para a unidade pedida. Identifique o reagente limitante quando há quantidades de mais de um reagente."
+      },
+      {
+        "title": "Reagente limitante",
+        "content": "Na reação 2 H₂ + O₂ → 2 H₂O, 4 mol de H₂ exigem 2 mol de O₂. Se houver 4 mol de H₂ e apenas 1 mol de O₂, o oxigênio limita a reação: formam-se 2 mol de água e sobram 2 mol de H₂. O limitante é o reagente que se esgota primeiro, não necessariamente o de menor massa."
+      },
+      {
+        "title": "Erros que derrubam a conta",
+        "content": "Não use coeficientes de uma equação não balanceada. Não compare diretamente gramas de substâncias diferentes como se fossem mols. Rendimento percentual também não se soma à massa: rendimento é produto real dividido pelo produto teórico vezes 100. Se houver pureza, a massa útil é a massa da amostra multiplicada pela fração de pureza."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "A decomposição de 10 mol de CaCO₃ produz CaO e CO₂ na proporção 1:1. Quantos mols de CO₂ são previstos se o reagente se decompõe completamente? São 10 mol. Se o experimento obtiver 8 mol, o rendimento será 80%. Explique por que o coeficiente 1 não autoriza confundir as massas molares de reagente e produto."
+      }
+    ]
+  },
+  {
+    "subject": "Química",
+    "topic": "Equilíbrios Químicos I",
+    "sections": [
+      {
+        "title": "Equilíbrio é dinâmico",
+        "content": "Em uma reação reversível em sistema fechado, equilíbrio químico ocorre quando as velocidades direta e inversa se igualam. Reagentes e produtos continuam reagindo microscopicamente, mas suas concentrações permanecem constantes no tempo. Constante não significa necessariamente igual: as concentrações podem ser muito diferentes, conforme o valor da constante de equilíbrio e a temperatura."
+      },
+      {
+        "title": "Interpretando Kc",
+        "content": "Para aA + bB ⇌ cC + dD, Kc = [C]^c[D]^d / [A]^a[B]^b. Sólidos puros e líquidos puros não entram na expressão porque sua atividade é tomada como constante. Kc grande favorece produtos no equilíbrio; Kc pequeno favorece reagentes. A expressão precisa usar a equação balanceada e a temperatura para a qual a constante foi fornecida."
+      },
+      {
+        "title": "Quociente e deslocamento",
+        "content": "O quociente reacional Q usa a mesma expressão de K, mas com concentrações de um instante qualquer. Se Q < K, a reação direta tende a formar produtos; se Q > K, a reação inversa tende a formar reagentes. Essa comparação é mais segura que decorar setas. Catalisador acelera os dois sentidos e não altera K nem a composição final."
+      },
+      {
+        "title": "Pressão e temperatura",
+        "content": "Em equilíbrios gasosos, reduzir o volume tende a favorecer o lado com menor número de mols gasosos, quando os números diferem. Aumentar temperatura favorece o sentido endotérmico e muda o valor de K; já alterar concentração ou pressão desloca a composição sem mudar K à mesma temperatura. Não conte sólidos nem líquidos na comparação de mols gasosos."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Para N₂O₄(g) ⇌ 2 NO₂(g), comprimir o recipiente favorece qual lado? Favorece N₂O₄, que possui um mol gasoso contra dois do outro lado. Justifique usando colisões e a comparação de mols, sem dizer que a constante de equilíbrio mudou se a temperatura permaneceu igual."
+      }
+    ]
+  },
+  {
+    "subject": "Química",
+    "topic": "Evolução dos Modelos Atômicos",
+    "sections": [
+      {
+        "title": "Modelos respondem a evidências",
+        "content": "Modelos atômicos não são desenhos definitivos em escala: são explicações que mudaram quando novos experimentos exigiram novas ideias. Dalton propôs átomos como unidades de elementos; Thomson incorporou elétrons; Rutherford mostrou um núcleo pequeno e positivo; Bohr introduziu níveis de energia para explicar espectros atômicos."
+      },
+      {
+        "title": "Experimentos decisivos",
+        "content": "O tubo de raios catódicos revelou partículas negativas presentes em diferentes materiais, os elétrons. O espalhamento de partículas alfa pela lâmina de ouro mostrou que a maior parte do átomo é espaço vazio e que massa e carga positiva concentram-se no núcleo. Linhas espectrais indicaram emissões de energia discretas, não contínuas."
+      },
+      {
+        "title": "Modelo quântico",
+        "content": "O modelo atual descreve elétrons por orbitais, regiões de maior probabilidade, e não por trajetórias circulares precisas. Números quânticos organizam energia, forma e orientação dos orbitais. A incerteza não é falha instrumental simples: posição e quantidade de movimento não podem ser simultaneamente determinadas com precisão arbitrária nesse modelo."
+      },
+      {
+        "title": "Pegadinhas históricas",
+        "content": "Não atribua nêutrons a Rutherford: Chadwick identificou-os posteriormente. Bohr não descreve adequadamente todos os átomos, embora seja útil para entender hidrogênio e transições de energia. Orbitais não são órbitas. Um elétron não “perde energia” continuamente enquanto permanece em estado estacionário no tratamento de Bohr."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Associe cada achado ao modelo: desvio forte de poucas partículas alfa, linhas espectrais do hidrogênio e descoberta do elétron. Justifique a associação pelo problema resolvido, não apenas pela ordem histórica. Em seguida, explique por que o modelo de Thomson não previa o grande desvio observado."
+      }
+    ]
+  },
+  {
+    "subject": "Química",
+    "topic": "Introdução à Química Orgânica",
+    "sections": [
+      {
+        "title": "Carbono e cadeias",
+        "content": "Química orgânica estuda principalmente compostos de carbono, especialmente aqueles com ligações C–C e C–H. O carbono forma quatro ligações covalentes e constrói cadeias lineares, ramificadas, cíclicas e aromáticas. Nem todo composto com carbono é orgânico no recorte escolar: dióxido de carbono, carbonatos e cianetos aparecem como exceções frequentes."
+      },
+      {
+        "title": "Estrutura determina propriedade",
+        "content": "A fórmula molecular informa quantos átomos existem; a estrutural mostra como se conectam. Isômeros têm mesma fórmula molecular, mas estruturas ou arranjos espaciais distintos e podem ter propriedades diferentes. Saturação refere-se à presença apenas de ligações simples entre carbonos; duplas e triplas tornam a cadeia insaturada e alteram reatividade."
+      },
+      {
+        "title": "Funções orgânicas",
+        "content": "Grupos funcionais organizam reatividade: hidroxila caracteriza álcoois; carbonila aparece em aldeídos e cetonas; carboxila em ácidos carboxílicos; éster resulta da combinação característica entre ácido e álcool. Reconheça primeiro o grupo funcional antes de decorar nomes. Uma molécula pode ter mais de um grupo e exigir classificação prioritária conforme a regra de nomenclatura."
+      },
+      {
+        "title": "Nomenclatura e erros",
+        "content": "Na nomenclatura básica, identifique cadeia principal, número de carbonos, insaturações, função e ramificações. Não escolha necessariamente a cadeia desenhada em linha reta: escolha a que atende aos critérios da função e da maior extensão. Carbono quaternário possui quatro ligações a carbonos, não quatro hidrogênios."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Compare etanol e ácido etanoico: ambos têm dois carbonos, mas quais grupos funcionais os distinguem? Relacione a hidroxila ligada a carbono saturado no álcool e a carboxila no ácido. Explique por que fórmula molecular ou tamanho da cadeia sozinho não basta para prever comportamento químico."
+      }
+    ]
+  },
+  {
+    "subject": "Química",
+    "topic": "Introdução ao Estudo das Pilhas e Baterias",
+    "sections": [
+      {
+        "title": "Reação que produz corrente",
+        "content": "Uma pilha transforma energia química de reação espontânea em energia elétrica. Em uma célula galvânica, oxidação e redução ocorrem em regiões separadas, obrigando elétrons a circular pelo fio externo. Oxidação é perda de elétrons; redução é ganho. A frase “oxida no ânodo, reduz no cátodo” vale tanto para pilhas quanto para eletrólise."
+      },
+      {
+        "title": "Organização da célula",
+        "content": "O ânodo de uma pilha é negativo porque libera elétrons para o circuito; o cátodo é positivo porque recebe elétrons. A ponte salina fecha o circuito interno por migração de íons e preserva eletroneutralidade, mas não transporta elétrons pelo fio. Sem essa compensação de cargas, a reação para rapidamente mesmo com reagentes restantes."
+      },
+      {
+        "title": "Potencial e espontaneidade",
+        "content": "Potenciais-padrão de redução permitem comparar tendência de receber elétrons. Para uma pilha espontânea, E°pilha = E°cátodo − E°ânodo deve ser positivo. Não multiplique potenciais pelo coeficiente estequiométrico ao balancear elétrons: potencial é grandeza intensiva. Já a equação global deve respeitar número de elétrons perdido e ganho."
+      },
+      {
+        "title": "Uso e descarte",
+        "content": "Baterias recarregáveis usam reações que podem ser revertidas com fornecimento externo de energia, mas não são eternas: ciclos alteram materiais e capacidade. Pilhas contêm materiais que exigem descarte adequado. O aparelho não “puxa elétrons do polo positivo”: elétrons percorrem o circuito externo do ânodo para o cátodo."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Em uma pilha Zn|Zn²+ || Cu²+|Cu, indique quem oxida, quem reduz e a direção dos elétrons. Zinco perde elétrons e é ânodo; cobre recebe elétrons e é cátodo. Explique qual é a função da ponte salina sem chamá-la de ponte de elétrons."
+      }
+    ]
+  },
+  {
+    "subject": "Química",
+    "topic": "O Estado Gasoso",
+    "sections": [
+      {
+        "title": "Modelo de partículas",
+        "content": "Gases têm partículas muito separadas, em movimento contínuo e colisões aproximadamente elásticas no modelo ideal. Por isso ocupam todo o recipiente, são compressíveis e exercem pressão nas paredes. Temperatura absoluta mede relação com energia cinética média; em cálculos de gases, use Kelvin, não graus Celsius diretamente."
+      },
+      {
+        "title": "Variáveis de estado",
+        "content": "Pressão, volume, temperatura e quantidade de matéria se relacionam por PV = nRT para gás ideal. Se n é constante, comparar estados exige manter unidades coerentes e identificar o que ficou fixo. Em transformação isotérmica, PV é constante; em isobárica, V/T é constante; em isocórica, P/T é constante."
+      },
+      {
+        "title": "Leitura microscópica",
+        "content": "Aquecer um gás em recipiente rígido aumenta energia cinética média e frequência de colisões, elevando pressão. Com êmbolo móvel sob pressão externa constante, o gás tende a expandir ao aquecer. A explicação microscópica evita decorar leis isoladas e mostra por que condições de contorno definem qual grandeza muda."
+      },
+      {
+        "title": "Limites do ideal",
+        "content": "Gases reais desviam do comportamento ideal em alta pressão e baixa temperatura, quando volume molecular e interações deixam de ser desprezíveis. Condições normais precisam ser especificadas pela convenção usada; não aplique volume molar decorado sem verificar temperatura e pressão do enunciado."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Um gás ideal em recipiente rígido passa de 300 K a 450 K. Como muda a pressão? Ela cresce por fator 450/300 = 1,5. Explique por que o volume não entra no cálculo de razão neste caso e por que Celsius não pode substituir Kelvin."
+      }
+    ]
+  },
+  {
+    "subject": "Química",
+    "topic": "Termoquímica I",
+    "sections": [
+      {
+        "title": "Energia nas reações",
+        "content": "Termoquímica estuda trocas de energia, geralmente como calor, em transformações químicas. Reação exotérmica libera energia e tem ΔH negativo; endotérmica absorve energia e tem ΔH positivo. A entalpia descreve variação entre estados, não uma quantidade de calor “guardada” em uma molécula isolada."
+      },
+      {
+        "title": "Sistema e ambiente",
+        "content": "O sistema é a parte estudada; o ambiente é o restante. Em calorimetria simples, calor perdido por um componente é ganho por outro, então a soma dos calores tende a zero se perdas forem desprezadas. Temperatura subir não basta para classificar reação: é preciso saber se o aquecimento pertence ao sistema ou ao ambiente."
+      },
+      {
+        "title": "Lei de Hess",
+        "content": "Como entalpia é função de estado, a variação total depende apenas de estados inicial e final. Equações intermediárias podem ser somadas, invertidas ou multiplicadas para obter a reação desejada. Ao inverter uma equação, inverta o sinal de ΔH; ao multiplicar coeficientes, multiplique também a variação de entalpia."
+      },
+      {
+        "title": "Erros recorrentes",
+        "content": "Não confunda quebra de ligação, que exige energia, com formação de ligação, que libera energia. Não troque sinal de ΔH por usar a palavra “combustão”: embora combustões comuns sejam exotérmicas, o sinal deve vir dos dados ou do balanço energético. Unidades de kJ e J precisam ser convertidas."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Uma reação libera 250 kJ por mol. Qual é o sinal de ΔH e o que ocorre com o ambiente em condições usuais? ΔH é −250 kJ/mol e o ambiente recebe energia. Explique por que liberar calor não implica que cada reagente tenha temperatura maior que cada produto."
+      }
+    ]
+  },
+  {
+    "subject": "Química",
+    "topic": "Cinética Química",
+    "sections": [
+      {
+        "title": "Velocidade e colisões",
+        "content": "Cinética química investiga a rapidez das reações e seus fatores. Para reagir, partículas devem colidir com orientação adequada e energia suficiente para superar a energia de ativação. Aumentar concentração eleva frequência de colisões; elevar temperatura aumenta tanto frequência quanto fração de partículas energeticamente capazes de reagir."
+      },
+      {
+        "title": "Superfície e catalisador",
+        "content": "Sólidos pulverizados têm maior área exposta e podem reagir mais rapidamente que blocos de mesma massa. Catalisadores oferecem caminho alternativo de menor energia de ativação e aceleram ida e volta de reação reversível. Eles não alteram ΔH, não são consumidos na equação global e não mudam a posição de equilíbrio."
+      },
+      {
+        "title": "Lei de velocidade",
+        "content": "A lei de velocidade é determinada experimentalmente, não apenas pelos coeficientes de uma equação global. Uma etapa lenta pode controlar a rapidez observada. Ao analisar gráfico de concentração por tempo, observe inclinação: quanto mais íngreme a queda de reagente ou subida de produto, maior a velocidade naquele instante."
+      },
+      {
+        "title": "Pegadinhas",
+        "content": "Temperatura não “fornece reagentes”; altera distribuição de energias. Pressão influencia principalmente reações com gases ao mudar concentração efetiva. Catalisador não torna reação não espontânea espontânea de forma permanente; ele reduz barreira cinética, mas não substitui condições termodinâmicas."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que um comprimido efervescente triturado reage mais rápido na água que um inteiro, com mesma massa e temperatura? Relacione área de contato e colisões. Explique por que a quantidade total de gás produzida pode continuar igual quando os reagentes são os mesmos."
+      }
+    ]
+  },
+  {
+    "subject": "Língua Inglesa",
+    "topic": "Text Comprehension: Taxonomy and Terminology",
+    "sections": [
+      {
+        "title": "Ler a classificação",
+        "content": "Textos científicos de taxonomia organizam seres em grupos e usam termos técnicos para indicar relações, características e critérios de classificação. A tarefa principal não é traduzir cada palavra isolada, mas recuperar a hierarquia: qual grupo é mais amplo, qual é subconjunto e qual característica separa categorias. Títulos, subtítulos e exemplos fornecem pistas decisivas."
+      },
+      {
+        "title": "Estratégia de leitura",
+        "content": "Localize cognatos confiáveis, mas confirme-os pelo contexto: species, classification e organism ajudam; eventualmente não significa “eventualmente”, e sim “por fim”. Observe conectores como however, therefore, whereas e such as. Eles revelam contraste, consequência, comparação e exemplificação. Em questões, retorne ao trecho que contém a evidência em vez de decidir apenas pela memória do tema."
+      },
+      {
+        "title": "Definição e exemplo",
+        "content": "Quando um texto afirma “Mammals are vertebrates that nurse their young”, a estrutura apresenta categoria geral, vertebrates, e característica definidora, nurse their young. Se ele acrescenta bats as an example, morcegos ilustram o grupo; não transformam a característica de um exemplo em regra exclusiva. Diferencie definição, exceção e aplicação do conceito."
+      },
+      {
+        "title": "Pegadinhas de prova",
+        "content": "Não traduza false friends automaticamente: actually significa “na verdade”, não “atualmente”; pretend significa “fingir”, não “pretender”. Pronomes como it, they e which exigem antecedente no texto. Uma alternativa pode usar palavras presentes no parágrafo e ainda inverter a relação lógica, trocar causa por efeito ou generalizar um caso particular."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Leia: “Reptiles are ectothermic vertebrates; snakes are reptiles.” Qual conclusão é autorizada? Cobras são vertebrados ectotérmicos, pois pertencem ao grupo definido. A frase não permite concluir que todos os vertebrados são répteis. Identifique no período a palavra que marca a inclusão de snakes na categoria maior."
+      }
+    ]
+  },
+  {
+    "subject": "Língua Inglesa",
+    "topic": "Text Comprehension: Novels/Short Stories",
+    "sections": [
+      {
+        "title": "Narrativa como evidência",
+        "content": "Em trechos de romances e contos, a prova costuma cobrar ponto de vista, relação entre personagens, conflito, inferência e efeito de linguagem. Comece distinguindo narrador, personagem e autor: uma opinião expressa pelo narrador não é automaticamente uma tese do autor. Marcas de tempo, lugar e mudança de foco ajudam a reconstruir a situação sem depender de tradução palavra por palavra."
+      },
+      {
+        "title": "Voz, tom e detalhe",
+        "content": "Adjetivos, verbos de fala e imagens recorrentes indicam tom: ironic, uneasy, relieved ou resentful revelam postura do narrador ou personagem. Um detalhe concreto pode ter função simbólica, mas só afirme isso quando o texto cria repetição, contraste ou relação clara. Para inferir, combine pistas explícitas; não invente uma motivação que o trecho não sustenta."
+      },
+      {
+        "title": "Discurso direto e indireto",
+        "content": "Aspas e travessões mostram fala direta; verbos como thought, remembered e seemed podem aproximar o leitor da interioridade. Pergunte quem percebe a cena e o que essa posição deixa de fora. Uma descrição limitada a uma personagem pode ser parcial. Quando a alternativa afirma certeza absoluta, procure no texto modalizadores como may, perhaps, seemed ou apparently."
+      },
+      {
+        "title": "Armadilhas recorrentes",
+        "content": "Não confunda sequência temporal com relação de causa. “After” só estabelece posterioridade; “because” apresenta causa. Evite tratar uma metáfora como acontecimento literal. Também não substitua uma inferência moderada por julgamento moral amplo sobre uma personagem. A resposta correta normalmente preserva o grau de certeza e o recorte do fragmento."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Se o narrador diz “She smiled, but kept her hands clenched under the table”, qual inferência é razoável? O contraste sugere tensão ou desconforto apesar do sorriso. Não é possível concluir a causa exata da tensão. Mostre quais duas pistas — smiled e clenched — precisam ser relacionadas para chegar à resposta."
+      }
+    ]
+  },
+  {
+    "subject": "Língua Inglesa",
+    "topic": "Text Comprehension: Global Warming",
+    "sections": [
+      {
+        "title": "Organizar causa e evidência",
+        "content": "Textos sobre aquecimento global costumam combinar mecanismo físico, dados observacionais, impactos e propostas de resposta. Ao ler, separe o que o texto apresenta como causa, evidência, projeção e consequência. Palavras como because, leads to, evidence, likely e according to indicam relações diferentes e evitam que hipótese ou previsão seja tratada como fato já ocorrido."
+      },
+      {
+        "title": "Vocabulário em contexto",
+        "content": "Greenhouse gases, emissions, warming, fossil fuels, mitigation e adaptation aparecem com frequência. Mitigation busca reduzir causas, por exemplo cortar emissões; adaptation reduz vulnerabilidade aos efeitos já esperados, por exemplo adaptar cidades a ondas de calor. Use cognatos como emissions com cautela e confirme pelo enunciado a direção da relação apresentada."
+      },
+      {
+        "title": "Ler números sem distorcer",
+        "content": "Percentages, averages e trends precisam de referência: aumento de 2% pode se referir a qual período, local ou medida? Averages não descrevem cada caso individual. Se o texto usa may, could ou projected, a informação é possibilidade ou projeção condicionada. Em alternativa de prova, preserve limites e qualificadores, sem transformar probabilidade em certeza."
+      },
+      {
+        "title": "Armadilhas recorrentes",
+        "content": "Não confunda weather, condição de curto prazo, com climate, padrão de longo prazo. Uma tempestade isolada não prova nem refuta uma tendência climática por si só. Também não conclua que o texto defende uma política específica só porque descreve um impacto; localize verbos de recomendação e quem assume a posição no trecho."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Se um texto diz “Adaptation can reduce harm, but it does not replace emissions cuts”, qual contraste deve aparecer na resposta? Explique que adaptação reduz danos, enquanto redução de emissões enfrenta a causa, e que o conector but impede interpretar as duas estratégias como equivalentes completas."
+      }
+    ]
+  },
+  {
+    "subject": "Língua Inglesa",
+    "topic": "Text Comprehension: Digital Technology",
+    "sections": [
+      {
+        "title": "Tese e recorte",
+        "content": "Textos sobre tecnologia digital frequentemente contrapõem benefício, risco e condições de uso. Identifique a tese central antes de escolher detalhes: o autor pode defender que uma ferramenta amplia acesso, mas também alerta para privacidade, desigualdade ou dependência. Uma resposta correta mantém esse recorte condicional em vez de converter análise equilibrada em elogio ou condenação absoluta."
+      },
+      {
+        "title": "Conectores estruturam argumento",
+        "content": "However, although e despite introduzem contraste; therefore e consequently indicam consequência; whereas estabelece comparação. Pronomes como it, they e this podem retomar uma ideia inteira, não apenas o substantivo mais próximo. Ao responder, localize antecedente e conector: eles mostram a arquitetura do argumento melhor do que listas de vocabulário isolado."
+      },
+      {
+        "title": "Dados e credibilidade",
+        "content": "Claims baseadas em surveys, studies e reports exigem atenção a fonte, população e limite do dado. Correlation não é automaticamente causation. A presença de número ou citação dá evidência à afirmação, mas o texto pode usá-la para ilustrar tendência, não para provar uma causa única. Diferencie relato de dado e interpretação do autor."
+      },
+      {
+        "title": "Falsos amigos e modalizadores",
+        "content": "Eventually significa “por fim”; currently significa “atualmente”; sensible geralmente significa “sensato”, não “sensível”. Modalizadores como may, might, tends to e can reduzem certeza. Alternativas que trocam may por will ou some por all frequentemente distorcem a passagem mesmo quando repetem palavras corretas."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Leia: “Remote work can broaden access to jobs, although it may exclude people without reliable internet.” Resuma sem perder o contraste. A resposta deve mencionar ampliação potencial de acesso e exclusão possível por infraestrutura, sem afirmar que todo trabalho remoto exclui ou inclui as mesmas pessoas."
+      }
+    ]
+  },
+  {
+    "subject": "Língua Inglesa",
+    "topic": "Text Comprehension: Women Empowerment",
+    "sections": [
+      {
+        "title": "Argumento e perspectiva",
+        "content": "Textos sobre participação e autonomia de mulheres podem apresentar dados, relatos e argumentos sobre educação, trabalho, direitos e representação. Pergunte quem fala, qual obstáculo é descrito e que mudança o texto defende ou avalia. Empowerment não significa apenas sucesso individual; pode envolver capacidade de decisão, acesso a recursos e participação coletiva."
+      },
+      {
+        "title": "Relações lógicas",
+        "content": "Termos como inequality, opportunity, leadership, barriers e gender gap ganham sentido pela relação no período. If e unless introduzem condição; while pode marcar simultaneidade ou contraste; because indica justificativa. Em questões de inferência, use a relação expressa no texto e evite acrescentar uma opinião pessoal sobre políticas sem apoio no trecho."
+      },
+      {
+        "title": "Dados, grupos e alcance",
+        "content": "Quando um parágrafo compara taxas de participação, identifique grupos, período e medida antes de concluir. Uma melhoria em indicador não implica igualdade plena; uma diferença média não define todas as pessoas do grupo. Quantificadores como more, fewer, most e a proportion têm alcance específico e costumam aparecer em alternativas que exageram o dado."
+      },
+      {
+        "title": "Linguagem avaliativa",
+        "content": "Palavras como significant, persistent, unequal e progress podem revelar avaliação do autor, mas precisam ser lidas em contexto. Uma narrativa de avanço pode também reconhecer barreiras remanescentes. Não confunda descrição de discriminação com defesa dela: observe verbos, adjetivos e as consequências que o texto associa ao fato."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Se o texto afirma que acesso à educação “is necessary but not sufficient” para igualdade, qual leitura é correta? Educação é condição importante, mas outras barreiras permanecem. Explique por que uma alternativa dizendo que educação sozinha resolve toda desigualdade contradiz diretamente not sufficient."
+      }
+    ]
+  },
+  {
+    "subject": "Língua Inglesa",
+    "topic": "Text Comprehension: Ecology (Greenhouse Gases)",
+    "sections": [
+      {
+        "title": "Relações no texto científico",
+        "content": "Ao ler ecologia em inglês, identifique agente, processo e consequência. Gases como carbon dioxide e methane podem ser apresentados com fonte, mecanismo e efeito. Não basta reconhecer greenhouse effect: localize se o trecho discute aumento de concentração, retenção de calor, evidência observada ou proposta de redução."
+      },
+      {
+        "title": "Conectores e precisão",
+        "content": "Because, due to e as a result of introduzem causa; therefore e consequently introduzem consequência. Terms como increase, decrease, emissions e absorb precisam de sujeito: quem emite, o que aumenta e qual reservatório absorve? Questões frequentemente trocam agente e efeito mantendo vocabulário parecido."
+      },
+      {
+        "title": "Escopo de afirmações",
+        "content": "Words como may, likely, contributes e one of signalizam probabilidade ou participação parcial. Uma alternativa que muda contributes to para causes all distorce o texto. Diferencie texto que descreve correlação, mecanismo físico conhecido e previsão; cada um tem nível próprio de certeza e evidência."
+      },
+      {
+        "title": "Falsos atalhos",
+        "content": "Não traduza preserve como “preservar” sem ver objeto e contexto, embora muitas vezes seja próximo. Natural não significa automaticamente benéfico, e renewable não significa sem impacto. A resposta deve acompanhar a conclusão do autor, não uma opinião geral sobre meio ambiente."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Se o texto diz “Forests absorb carbon, but deforestation releases stored carbon”, explique o contraste. A resposta deve mostrar as duas funções em situações distintas e evitar concluir que toda floresta absorve sempre a mesma quantidade de carbono."
+      }
+    ]
+  },
+  {
+    "subject": "Língua Inglesa",
+    "topic": "Text Comprehension: Health – Probiotics",
+    "sections": [
+      {
+        "title": "Definição pelo contexto",
+        "content": "Textos de saúde costumam definir probiotics como micro-organisms que podem trazer benefício quando consumidos em quantidade adequada. Procure condições e limites da definição: may benefit não é guarantee a cure. Uma boa leitura distingue mecanismo sugerido, resultado de estudo e recomendação prática, sobretudo quando o efeito varia com cepa, dose e população analisada."
+      },
+      {
+        "title": "Estrutura de estudo",
+        "content": "Words como participants, trial, evidence, findings e sample indicam como dados foram obtidos. Pergunte qual população foi estudada, qual comparação foi feita e qual resultado foi medido. Um estudo pequeno pode sugerir associação sem permitir generalização para todas as pessoas, produtos ou situações clínicas, especialmente quando não há grupo de comparação adequado."
+      },
+      {
+        "title": "Vocabulário de cautela",
+        "content": "Potential, preliminary, mixed results e further research is needed reduzem certeza. Contrastadores como however podem introduzir limite após benefício descrito. Em questões, escolha alternativa que mantém essas restrições; respostas absolutas como always, proven for everyone ou no risk geralmente excedem o texto e ignoram a cautela explícita do autor."
+      },
+      {
+        "title": "Inferência responsável",
+        "content": "Não confunda gut microbiome com uma espécie única: é comunidade de microrganismos. Não trate alimento fermentado e suplemento como idênticos sem o texto afirmar concentração e cepa. Recomendações médicas exigem contexto individual; a interpretação escolar deve se limitar à evidência oferecida no fragmento, sem inventar eficácia universal ou indicação clínica."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Se um artigo afirma que resultados são “promising but inconclusive”, qual conclusão cabe? Há sinal de possível benefício, mas a evidência ainda não permite conclusão definitiva. Explique por que promising não equivale a proven e cite o termo que mantém a conclusão em aberto."
+      }
+    ]
+  },
+  {
+    "subject": "Língua Inglesa",
+    "topic": "Text Comprehension: Discrimination Against Women",
+    "sections": [
+      {
+        "title": "Identificar ponto de vista",
+        "content": "Trechos sobre discriminação podem combinar relato individual, dado social e argumento normativo. Diferencie fato relatado, interpretação de uma fonte e posição defendida pelo autor. A pergunta central é qual barreira aparece e como o texto a conecta a oportunidades, direitos ou participação, sem substituir leitura por opinião pessoal."
+      },
+      {
+        "title": "Gramática que muda sentido",
+        "content": "Passive voice pode ocultar ou destacar agente: women were excluded enfatiza quem sofreu exclusão; a frase seguinte pode revelar por quem. Comparatives e quantifiers, como less likely e fewer opportunities, não significam ausência total. Observe também tempos verbais para separar histórico, condição atual e mudança proposta."
+      },
+      {
+        "title": "Evidência e generalização",
+        "content": "Uma estatística pode demonstrar disparidade em um conjunto específico, não definir toda experiência feminina. Words como some, many e in certain contexts delimitam alcance. Alternativas erradas costumam transformar padrão descrito em regra universal ou afirmar causa única onde o texto apresenta fatores combinados."
+      },
+      {
+        "title": "Leitura ética e textual",
+        "content": "Reconhecer injustiça não dispensa evidência textual. Não atribua a uma personagem ou autora uma posição que o trecho não sustenta. Ao resumir, mantenha relação entre obstáculo e efeito: discriminação no acesso pode limitar participação, mas o texto pode discutir resistência, mudança institucional ou ambos."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Em “Women were less likely to be promoted, despite having similar qualifications”, qual é o contraste? Qualificações semelhantes tornam a diferença de promoção relevante. Explique por que despite impede ler a frase como simples consequência de menor qualificação."
+      }
+    ]
+  },
+  {
     "subject": "Geografia",
     "topic": "Coordenadas Geográficas",
     "sections": [
@@ -308,6 +932,214 @@
       {
         "title": "Pratique e confira",
         "content": "Como analisar um cartaz que apresenta Vargas como protetor dos trabalhadores? Identifique a personalização dos direitos, a linguagem paternalista e a busca de legitimidade. Em seguida, confronte a imagem com direitos efetivos e mecanismos de controle sindical. A análise deve distinguir propaganda, política social e experiência dos trabalhadores, sem reduzir tudo a “presente do governante” ou a “mera mentira”."
+      }
+    ]
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Função Quadrática",
+    "sections": [
+      {
+        "title": "Forma e significado",
+        "content": "Uma função quadrática tem a forma f(x) = ax² + bx + c, com a diferente de zero. Seu gráfico é uma parábola: se a é positivo, abre para cima e possui mínimo; se a é negativo, abre para baixo e possui máximo. O coeficiente c é f(0), ponto em que o gráfico corta o eixo y."
+      },
+      {
+        "title": "Raízes e vértice",
+        "content": "As raízes são os valores de x para os quais f(x) = 0. Pelo discriminante Δ = b² − 4ac, há duas raízes reais distintas se Δ > 0, uma raiz real dupla se Δ = 0 e nenhuma raiz real se Δ < 0. O x do vértice é −b/(2a); substitua esse valor em f para obter a altura extrema."
+      },
+      {
+        "title": "Exemplo de modelagem",
+        "content": "Se h(t) = −5t² + 20t + 1 descreve uma altura, o instante de altura máxima é t = −20/(2·−5) = 2 s. A altura máxima é h(2) = 21 m. Para saber quando o objeto chega ao chão, resolva h(t) = 0 e descarte tempos negativos, pois podem surgir como solução algébrica sem sentido físico."
+      },
+      {
+        "title": "Armadilhas comuns",
+        "content": "Não troque o sinal de b na fórmula de Bhaskara: x = (−b ± √Δ)/(2a). Não suponha que toda parábola cruza o eixo x. Também não trate o vértice como uma raiz: ele só estará no eixo x quando Δ = 0. Em contexto aplicado, examine domínio, unidade e quais soluções são fisicamente aceitáveis."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Para f(x) = x² − 6x + 5, encontre raízes e vértice. As raízes são 1 e 5; o eixo de simetria é x = 3 e f(3) = −4. Explique por que o gráfico fica negativo entre as raízes, usando o fato de a parábola abrir para cima."
+      }
+    ]
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Introdução às Probabilidades",
+    "sections": [
+      {
+        "title": "Medir chance em um modelo",
+        "content": "Probabilidade quantifica a chance de um evento dentro de um espaço amostral. Quando os resultados elementares são equiprováveis, P(A) = número de casos favoráveis dividido pelo número de casos possíveis. Antes de contar, defina claramente o experimento e o que será considerado resultado. Um modelo ruim produz uma conta correta para a pergunta errada."
+      },
+      {
+        "title": "União, interseção e complemento",
+        "content": "Para eventos A e B, P(A ou B) = P(A) + P(B) − P(A e B). A subtração evita contar duas vezes resultados pertencentes aos dois eventos. O complemento satisfaz P(não A) = 1 − P(A), muito útil quando é mais simples contar o oposto. Eventos mutuamente exclusivos têm interseção vazia, mas não são automaticamente independentes."
+      },
+      {
+        "title": "Condicional e independência",
+        "content": "P(A dado B) = P(A e B)/P(B), desde que P(B) seja diferente de zero. A informação B reduz o universo considerado. Eventos são independentes quando P(A e B) = P(A)P(B), equivalente a P(A dado B) = P(A) quando definido. Retirar cartas sem reposição geralmente cria dependência; com reposição, as chances podem permanecer iguais."
+      },
+      {
+        "title": "Erros recorrentes",
+        "content": "Não some probabilidades de eventos que se sobrepõem sem descontar a interseção. Não use multiplicação apenas porque há duas etapas: multiplique probabilidades condicionais ou independentes de modo justificado. Em problemas de “pelo menos um”, o complemento de “nenhum” costuma evitar casos perdidos. Sempre confira se o resultado está entre zero e um."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Uma moeda honesta é lançada três vezes. A probabilidade de sair pelo menos uma cara é 1 menos a chance de não sair cara: 1 − (1/2)³ = 7/8. Explique por que somar diretamente os casos “uma cara”, “duas caras” e “três caras” exigiria cuidado com a contagem de sequências."
+      }
+    ]
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Progressão Aritmética",
+    "sections": [
+      {
+        "title": "Variação constante",
+        "content": "Uma progressão aritmética, ou PA, é uma sequência em que a diferença entre termos consecutivos é constante, chamada razão r. Se r é positiva, a sequência cresce; se é negativa, decresce; se é zero, é constante. Identificar a diferença é mais seguro que tentar deduzir a fórmula apenas olhando os primeiros termos."
+      },
+      {
+        "title": "Termo geral e posição",
+        "content": "O termo de posição n é aₙ = a₁ + (n − 1)r. O n − 1 aparece porque o primeiro termo está a zero passos de si mesmo. Em problemas de contagem, deixe claro se a numeração começa em 0 ou 1. A fórmula permite encontrar termos distantes sem listar toda a sequência."
+      },
+      {
+        "title": "Soma de termos",
+        "content": "A soma dos n primeiros termos é Sₙ = n(a₁ + aₙ)/2. Ela pode ser entendida ao parear primeiro e último termos: cada par tem mesma soma. Se não houver termo final conhecido, substitua aₙ pela fórmula do termo geral. Em PA com número ímpar de termos, o termo central é a média do primeiro e do último."
+      },
+      {
+        "title": "Armadilhas de índice",
+        "content": "Não use n no lugar de n − 1 no termo geral. Não confunda razão de PA com razão de PG, onde o fator é multiplicativo. Uma sequência de quadrados, como 1, 4, 9, 16, não é PA porque as diferenças 3, 5 e 7 não são constantes, apesar de seguir um padrão simples."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Numa PA com a₁ = 7 e r = 3, encontre a₍₂₀₎ e S₂₀. O vigésimo termo é 7 + 19·3 = 64; a soma é 20(7 + 64)/2 = 710. Mostre por que usar 20 em vez de 19 no primeiro cálculo produziria o termo seguinte."
+      }
+    ]
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Semelhança de Triângulos",
+    "sections": [
+      {
+        "title": "Mesma forma, outra escala",
+        "content": "Triângulos semelhantes têm ângulos correspondentes iguais e lados correspondentes proporcionais. Eles não precisam ter o mesmo tamanho; a razão de semelhança informa a escala entre medidas lineares. Esse conceito permite calcular alturas inacessíveis, interpretar sombras e relacionar figuras em mapas, desde que as correspondências sejam estabelecidas corretamente."
+      },
+      {
+        "title": "Critérios de semelhança",
+        "content": "Dois ângulos iguais garantem semelhança pelo critério AA, pois o terceiro ângulo fica determinado. Também podem valer LAL, com ângulo compreendido igual e lados proporcionais, e LLL, com três pares de lados proporcionais. Não basta duas medidas de lado isoladas: é preciso verificar o critério completo e a correspondência entre vértices."
+      },
+      {
+        "title": "Escala de grandezas",
+        "content": "Se a razão linear é k, perímetros variam por k, áreas por k² e volumes por k³. Essa distinção é uma fonte clássica de erro. Uma ampliação de lados por fator 3 não triplica a área: multiplica-a por 9. Em problemas de sombras, a luz solar pode ser tratada como raios paralelos, formando triângulos semelhantes."
+      },
+      {
+        "title": "Checagens de coerência",
+        "content": "Não associe lado maior de um triângulo a lado menor do outro sem razão geométrica. Use letras de vértices correspondentes e mantenha a ordem nas proporções. Congruência é caso particular de semelhança com razão 1; semelhança não autoriza concluir igualdade de comprimentos nem de áreas."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Uma haste de 2 m projeta sombra de 1,5 m; no mesmo instante, um prédio projeta sombra de 18 m. Qual é a altura? Pela proporcionalidade, h/18 = 2/1,5, logo h = 24 m. Explique qual hipótese sobre a direção dos raios de luz torna válida a comparação."
+      }
+    ]
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Introdução ao Modelo Exponencial",
+    "sections": [
+      {
+        "title": "Crescimento proporcional",
+        "content": "Em uma função exponencial f(x) = a·bˣ, a variável aparece no expoente e b é positivo, diferente de 1. Se b > 1, há crescimento; se 0 < b < 1, há decaimento. Variações iguais em x multiplicam o valor por um mesmo fator b, ao contrário de uma função afim, em que acrescentam uma diferença constante."
+      },
+      {
+        "title": "Modelagem de taxas",
+        "content": "Juros compostos, crescimento de populações e decaimento radioativo podem ser modelados exponencialmente quando a taxa é proporcional à quantidade presente. A forma Q(t) = Q₀(1 + i)ᵗ usa i em forma decimal. Taxa de 5% significa fator 1,05; redução de 5% significa fator 0,95, não subtração fixa de 5 unidades."
+      },
+      {
+        "title": "Leitura de gráficos",
+        "content": "Com a > 0, o gráfico fica acima do eixo x e aproxima-se de zero em uma direção sem necessariamente alcançá-lo. O coeficiente a ajusta o valor inicial; b controla o fator de mudança. Comparar gráficos exige observar base e multiplicador, não apenas qual parece mais inclinado em uma janela específica."
+      },
+      {
+        "title": "Erros frequentes",
+        "content": "Não use porcentagem como número inteiro dentro do fator: 10% corresponde a 0,10. Não confunda dobrar em cada período com somar a mesma quantidade. Em decaimento, o tempo necessário para reduzir pela metade depende da base e pode ser calculado com logaritmos, não por subtração linear de metade a cada ponto arbitrário."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Uma cultura começa com 500 células e dobra a cada hora. Escreva Q(t) = 500·2ᵗ e calcule após 4 horas: 8.000 células. Explique por que uma previsão linear de “mais 500 por hora” daria resultado diferente já na segunda hora."
+      }
+    ]
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Função Constante e Função Afim",
+    "sections": [
+      {
+        "title": "Taxa de variação",
+        "content": "Uma função afim tem forma f(x)=ax+b. O coeficiente a é taxa de variação: para cada aumento unitário em x, f muda a unidades. O coeficiente b é o valor inicial f(0). Se a é positivo, o gráfico cresce; se é negativo, decresce. Função constante é caso a=0."
+      },
+      {
+        "title": "Reta e interpretação",
+        "content": "O gráfico é uma reta. Dois pontos distintos determinam sua inclinação: a=(y₂−y₁)/(x₂−x₁). Em problemas, unidades importam: uma tarifa pode ter custo fixo b mais valor a por quilômetro. Interpretar a como “valor final” confunde o papel de taxa e condição inicial."
+      },
+      {
+        "title": "Zeros e comparação",
+        "content": "O zero da função resolve ax+b=0, portanto x=−b/a se a não é zero. Duas funções afins podem se encontrar ao igualar seus valores, não seus coeficientes. Paralelas têm mesma inclinação; retas coincidentes também têm mesmo intercepto. A leitura gráfica deve respeitar escala dos eixos."
+      },
+      {
+        "title": "Erros comuns",
+        "content": "Não trate b como ponto no eixo x: ele é corte no eixo y. Uma reta descendente pode ter valores positivos em parte do domínio. Também não extrapole um modelo linear sem verificar se a taxa permanece plausível fora do intervalo descrito pelo problema."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Um serviço cobra 12 reais fixos mais 3 reais por quilômetro. Escreva C(x)=3x+12 e calcule 8 km. Depois encontre a distância para custo 42. Explique o significado de 12 e de 3 sem inverter os dois."
+      }
+    ]
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Sistemas de Equações",
+    "sections": [
+      {
+        "title": "Soluções simultâneas",
+        "content": "Um sistema reúne equações que devem valer ao mesmo tempo. Em duas incógnitas lineares, a solução representa interseção de duas retas. Pode haver uma solução, nenhuma ou infinitas, conforme as retas sejam secantes, paralelas distintas ou coincidentes. Resolver não é escolher uma equação favorita, mas satisfazer todas."
+      },
+      {
+        "title": "Métodos algébricos",
+        "content": "Substituição isola uma incógnita e a coloca na outra equação. Eliminação combina equações para cancelar uma incógnita. Escolha o método que reduz contas, mas preserve igualdade ao multiplicar ou somar membros. Após obter valores, substitua nas equações originais para detectar erro de sinal ou operação."
+      },
+      {
+        "title": "Modelagem",
+        "content": "Problemas de preço, mistura, idade e movimento pedem definição clara das incógnitas antes de montar equações. Cada equação deve expressar uma informação independente. Unidades ajudam: se x é quantidade, não some diretamente com valor monetário. Uma tabela pequena pode revelar relações antes da álgebra."
+      },
+      {
+        "title": "Casos especiais",
+        "content": "Ao eliminar variáveis, chegar a 0=0 indica dependência e infinitas soluções; chegar a número não nulo igual a zero indica incompatibilidade. Não divida por expressão que possa ser zero sem discutir o caso. Em sistemas não lineares, cada solução ainda precisa satisfazer todas as equações e domínio do problema."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Dois ingressos adultos e um estudante custam 70 reais; um adulto e dois estudantes custam 50. Monte o sistema e resolva. O adulto custa 30 e o estudante 10. Mostre como verificar esses valores nas duas compras."
+      }
+    ]
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Trigonometria no Triângulo Retângulo",
+    "sections": [
+      {
+        "title": "Razões de um ângulo",
+        "content": "Em triângulo retângulo, seno, cosseno e tangente relacionam lados a um ângulo agudo. Seno é cateto oposto sobre hipotenusa; cosseno é adjacente sobre hipotenusa; tangente é oposto sobre adjacente. A escolha depende do ângulo indicado, portanto os nomes oposto e adjacente mudam quando o ângulo de referência muda."
+      },
+      {
+        "title": "Pitágoras e coerência",
+        "content": "O teorema de Pitágoras relaciona lados: hipotenusa² = catetos². A hipotenusa é sempre o lado oposto ao ângulo reto e o maior lado. Antes de aplicar uma razão trigonométrica, desenhe e nomeie os lados. Isso reduz inversões frequentes entre seno e cosseno."
+      },
+      {
+        "title": "Problemas de altura",
+        "content": "Ângulo de elevação é medido para cima a partir da horizontal; de depressão, para baixo. Em situações com solo plano, a distância horizontal costuma ser cateto adjacente e altura, oposto. Some altura do observador quando ela existe; a tangente calcula diferença vertical, não altura absoluta automaticamente."
+      },
+      {
+        "title": "Pegadinhas",
+        "content": "Não use tangente com hipotenusa diretamente. Não aplique razões de triângulo retângulo a qualquer triângulo sem construir altura ou usar outra ferramenta. Calculadora deve estar no modo angular correto. Resultado de seno ou cosseno de ângulo agudo fica entre zero e um; valor maior sugere relação invertida."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Uma pessoa vê o topo de uma torre sob ângulo de 30° e está a 20 m da base. Use tan 30°≈0,577 para encontrar a diferença de altura: cerca de 11,5 m. Explique por que 20 m entra como cateto adjacente."
       }
     ]
   },
