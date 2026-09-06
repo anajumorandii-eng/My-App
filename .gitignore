@@ -19,3 +19,6 @@ materiais-extraidos/
 # scripts/extract-provas.ts, insumo de trabalho e não fonte da verdade.
 provas-extraidas/
 .scratch/
+
+# Cache local gerado pela auditoria das apostilas e provas.
+artifacts/content-audit/

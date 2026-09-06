@@ -2,6 +2,7 @@ import React, { useMemo, useState } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { useUserMastery } from '../hooks/useUserMastery';
 import { useQuestions } from '../hooks/useQuestions';
+import { QuestionStatement } from '../components/QuestionStatement';
 import { addUserAttempt, addUserErrorLog } from '../lib/userData';
 import { requestAiText, requestAiTextStream } from '../lib/aiClient';
 import { parseErrorDiagnosis, ErrorDiagnosis } from '../lib/errorDiagnosis';
@@ -53,9 +54,9 @@ function Metric({
   );
 }
 
-function examSourceLabel(source: { board: string; year: number; sourceUrl: string } | string | undefined) {
+function examSourceLabel(source: { board: string; year?: number; sourceUrl: string } | string | undefined) {
   if (!source) return 'Banco de Questões';
-  return typeof source === 'string' ? source : `${source.board} ${source.year}`;
+  return typeof source === 'string' ? source : `${source.board}${source.year ? ` ${source.year}` : ' · reprodução em apostila'}`;
 }
 
 export default function Questoes() {
@@ -221,6 +222,7 @@ export default function Questoes() {
 
   const fetchDiagnosis = async (optionId: string) => {
     if (!question) return;
+    if (question.originalPages?.length) return; // Text-only endpoint cannot inspect the original page.
     setDiagnosing(true);
     resetDiagnosisState();
     try {
@@ -300,6 +302,7 @@ export default function Questoes() {
 
   const fetchDeepExplanation = async () => {
     if (!selectedOptionId || !question) return;
+    if (question.originalPages?.length) return;
     setLoadingDeepExplanation(true);
     try {
       const selectedOption = question.options.find((o) => o.id === selectedOptionId);
@@ -462,7 +465,7 @@ export default function Questoes() {
             <h2>Qual é o próximo passo do raciocínio?</h2>
             <p>O feedback e a justificativa só aparecem após a sua tentativa.</p>
 
-            <div className="ni-question">{question.prompt}</div>
+            <div className="ni-question"><QuestionStatement question={question} /></div>
 
             <div className="ni-options" style={{ gridTemplateColumns: '1fr' }}>
               {question.options.map((option) => {
@@ -508,7 +511,7 @@ export default function Questoes() {
                 <div className="p-4 rounded-xl border border-[var(--line)] bg-[var(--surface2)]/40 text-left space-y-3">
                   <div className="flex items-center justify-between">
                     <span className="ni-kicker" style={{ margin: 0 }}>Gabarito & Justificativa</span>
-                    {!isCorrect && (
+                    {!isCorrect && !question.originalPages?.length && (
                       <button onClick={fetchDeepExplanation} className="ni-link text-xs">
                         <Sparkles className="w-3.5 h-3.5 inline mr-1" />
                         {loadingDeepExplanation ? 'Analisando...' : 'Explicar com IA'}
@@ -516,6 +519,7 @@ export default function Questoes() {
                     )}
                   </div>
                   <p className="text-xs text-[var(--dim)] leading-relaxed">{question.explanation}</p>
+                  {question.examSource?.sourceUrl && <a href={question.examSource.sourceUrl} target="_blank" rel="noreferrer" className="ni-link text-xs">Conferir fonte e gabarito</a>}
 
                   {deepExplanation && (
                     <div className="mt-3 p-3 rounded-lg border border-[var(--primary)]/30 bg-[var(--primary)]/10 text-xs">

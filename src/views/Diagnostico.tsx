@@ -1,3 +1,4 @@
+import { QuestionStatement } from '../components/QuestionStatement';
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { mockTopics } from '../data/mockData';
 import { mockTopicDiscursivePrompts } from '../data/topicDiscursivePrompts';
@@ -647,7 +648,7 @@ function DiagnosticoContent({ mockQuestions, questionsSyncError }: { mockQuestio
 
           {currentItem.kind === 'mc' && (
             <>
-              <p className="text-xs font-display text-[var(--text)] leading-relaxed">{currentItem.question.prompt}</p>
+              <QuestionStatement question={currentItem.question} />
               <div className="space-y-2">
                 {currentItem.question.options.map((option) => {
                   const isSelected = selectedOptionId === option.id;

@@ -1,0 +1,626 @@
+[
+  {
+    "subject": "Geografia",
+    "topic": "Coordenadas Geográficas",
+    "sections": [
+      {
+        "title": "Localizar não é medir distância",
+        "content": "As coordenadas geográficas indicam uma posição na superfície terrestre por dois ângulos. Latitude é medida em relação ao plano do equador, de 0° a 90° norte ou sul. Longitude é medida em relação ao meridiano de Greenwich, de 0° a 180° leste ou oeste. O par precisa de valor e hemisfério: 20° sul e 40° oeste não é o mesmo ponto que 20° norte e 40° oeste."
+      },
+      {
+        "title": "Paralelos, meridianos e hemisférios",
+        "content": "Paralelos são circunferências paralelas ao equador; seus comprimentos diminuem em direção aos polos. Meridianos são semicircunferências que ligam os polos. O equador divide os hemisférios norte e sul; Greenwich e seu antimeridiano delimitam leste e oeste por convenção. Pontos no mesmo paralelo têm igual latitude. Pontos no mesmo meridiano têm igual longitude. Um grau de longitude não corresponde à mesma distância linear em todas as latitudes, porque os paralelos têm tamanhos diferentes."
+      },
+      {
+        "title": "Leitura resolvida",
+        "content": "Considere A em 10° S, 30° O e B em 20° S, 15° O. De A para B, aumenta o afastamento ao sul do equador e diminui o afastamento a oeste de Greenwich. Portanto, B está a sudeste de A. A diferença de longitude é 15°, mas não é possível transformá-la em distância linear precisa sem considerar a latitude e o modelo geométrico empregado."
+      },
+      {
+        "title": "Coordenadas em mapas e aplicativos",
+        "content": "Em uma malha cartográfica, leia primeiro a identificação das linhas e o sentido de crescimento dos valores. Não deduza norte apenas da parte superior da folha: procure a orientação. Sistemas de posicionamento por satélite calculam posições por sinais e medidas de tempo; a coordenada apresentada depende de um sistema de referência geodésico. Latitude geográfica não deve ser confundida com altitude, que é uma medida vertical."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Um ponto de 5° N passa para 5° S mantendo longitude 45° O. Ele cruzou o equador e deslocou-se para o sul, mas não cruzou Greenwich. A variação angular de latitude foi 10°, não zero. Explique por que dois pontos com latitudes de mesmo valor absoluto podem estar em hemisférios diferentes."
+      }
+    ]
+  },
+  {
+    "subject": "Geografia",
+    "topic": "Sistema de Fusos Horários",
+    "sections": [
+      {
+        "title": "Da rotação ao horário",
+        "content": "A Terra gira aproximadamente 360° em 24 horas, o que corresponde a 15° por hora ou 1° a cada quatro minutos. No modelo teórico, localidades a leste apresentam horário adiantado em relação às situadas a oeste. A longitude, e não a latitude, determina essa diferença. Fusos oficiais, porém, seguem decisões políticas e podem ajustar seus limites para evitar que um estado ou cidade seja dividido."
+      },
+      {
+        "title": "Método que evita troca de sinais",
+        "content": "Expresse os horários usando a diferença em relação ao UTC. Para passar de uma origem a um destino, calcule hora destino = hora origem + UTC destino − UTC origem. Se houver viagem, acrescente sua duração antes de normalizar o resultado para o intervalo de 0 a 24 horas. Horário de verão é uma regra adicional do local e da data; use o que o enunciado informa, sem transportar automaticamente regras atuais para provas antigas."
+      },
+      {
+        "title": "Viagem resolvida",
+        "content": "Um voo sai às 22 h de uma localidade UTC−3 e dura oito horas até uma localidade UTC+1. No horário do destino, a partida ocorre às 22 + 1 − (−3) = 26 h, isto é, 2 h do dia seguinte. Somando oito horas de voo, a chegada será às 10 h do dia seguinte. O cálculo pode ser feito de uma só vez: 22 + 8 + 4 = 34; 34 − 24 = 10."
+      },
+      {
+        "title": "Linha Internacional de Data",
+        "content": "Perto do antimeridiano de Greenwich situa-se a Linha Internacional de Data, com desvios convencionais. Ao cruzá-la para oeste, avança-se um dia no calendário; para leste, recua-se um dia. Isso corrige a contagem das datas e não significa uma viagem física no tempo. Nas questões com deslocamentos longos, mantenha separados duração da viagem, diferença de horário e mudança de data."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Tóquio está em UTC+9 e uma cidade brasileira em UTC−3. Se em Tóquio são 9h30 de segunda-feira, na cidade brasileira são 9h30 − 12 h = 21h30 de domingo. A diferença é de 12 horas. A distância entre as cidades, a estação do ano e a latitude não entram nesse cálculo quando os deslocamentos UTC já foram fornecidos."
+      }
+    ]
+  },
+  {
+    "subject": "Geografia",
+    "topic": "Linguagem Cartográfica",
+    "sections": [
+      {
+        "title": "O mapa seleciona a realidade",
+        "content": "Um mapa é uma representação seletiva do espaço, produzida para um objetivo. Título, legenda, orientação, escala, fonte e data ajudam a interpretar o recorte representado. Uma cor não possui significado universal: azul pode representar água, mas também uma classe de renda ou votação em um mapa temático. A legenda define o código. A fonte e a data permitem avaliar se os dados correspondem ao fenômeno e ao período discutidos."
+      },
+      {
+        "title": "Escala numérica e gráfica",
+        "content": "A escala numérica expressa E = d/D, com distância no mapa e distância real na mesma unidade. Em 1:100.000, um centímetro no papel representa 100.000 cm, ou 1 km. Quanto menor o denominador, maior a escala e maior o detalhamento possível de uma área menor. Ao ampliar uma imagem, a escala numérica impressa deixa de corresponder ao novo tamanho, mas a escala gráfica ampliada junto continua utilizável."
+      },
+      {
+        "title": "Cálculo resolvido",
+        "content": "Em um mapa de escala 1:250.000, duas cidades estão separadas por 6 cm. A distância real em linha reta é 6·250.000 = 1.500.000 cm. Dividindo por 100.000, obtêm-se 15 km. A extensão da estrada pode ser maior, porque o traçado não precisa seguir uma linha reta. Não interprete a medida cartográfica como tempo de viagem sem dados de rota e velocidade."
+      },
+      {
+        "title": "Áreas e curvas de nível",
+        "content": "Uma ampliação linear de duas vezes multiplica a área desenhada por quatro. Por isso, a relação entre áreas usa o quadrado do fator de escala. Curvas de nível unem pontos de igual altitude; proximidade entre curvas, para a mesma equidistância, indica maior declividade. Elas não representam cursos d'água. Um mapa hipsométrico diferencia faixas de altitude por cores, enquanto um mapa de declividade representa inclinação."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Compare 1:25.000 e 1:1.000.000. A primeira escala é maior e permite mais detalhes. Um segmento de 2 cm nela equivale a 500 m; na segunda, a 20 km. Explique por que dizer que “um milhão é maior, portanto a escala é maior” inverte a relação matemática: a escala é uma razão, não seu denominador isolado."
+      }
+    ]
+  },
+  {
+    "subject": "Geografia",
+    "topic": "Projeções Cartográficas",
+    "sections": [
+      {
+        "title": "Por que todo mapa distorce",
+        "content": "Representar a superfície curva da Terra em um plano exige deformações. Uma projeção cartográfica estabelece as regras dessa transformação. Não existe projeção plana capaz de conservar simultaneamente, em toda a superfície, áreas, formas, ângulos e distâncias. Avaliar uma projeção significa reconhecer o que ela preserva e para qual finalidade foi escolhida, e não procurar um mapa inteiramente livre de distorção."
+      },
+      {
+        "title": "Propriedades diferentes",
+        "content": "Projeções conformes preservam ângulos localmente e tendem a manter formas em áreas pequenas; não conservam todas as áreas. Projeções equivalentes preservam proporções de área, mas deformam formas. Projeções equidistantes conservam certas distâncias, a partir de pontos ou linhas definidos, e não qualquer distância medida na folha. As famílias cilíndrica, cônica e azimutal descrevem superfícies ou formas de construção, não uma garantia automática de uma dessas propriedades."
+      },
+      {
+        "title": "Mercator e mapas equivalentes",
+        "content": "Na projeção de Mercator, a ampliação aumenta com a latitude e as regiões próximas aos polos aparecem muito aumentadas. Isso explica por que comparar diretamente a área visual da Groenlândia com a da África nesse mapa conduz a erro. Uma projeção equivalente pode servir melhor à comparação de áreas territoriais, embora altere os contornos. Mercator teve utilidade na navegação por representar loxodromias como linhas retas; isso não significa que elas sejam sempre o caminho mais curto."
+      },
+      {
+        "title": "Centro do mapa e interpretação política",
+        "content": "A escolha do centro e do corte do planisfério pode destacar alguns países e separar visualmente outros. Um mapa centrado no Pacífico ajuda a mostrar relações que um recorte centrado no Atlântico oculta. A crítica ao eurocentrismo deve examinar escolhas concretas de representação; não basta chamar qualquer mapa com Europa de ideológico sem identificar seu recorte e sua finalidade."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Para comparar a participação territorial de países em uma área agrícola mundial, prefira uma projeção equivalente. Para representar direções a partir de um ponto central, uma projeção azimutal adequada pode ser útil. Justifique a escolha indicando a propriedade necessária e a distorção aceita. A resposta “é o mapa mais bonito” não estabelece um critério cartográfico."
+      }
+    ]
+  },
+  {
+    "subject": "Geografia",
+    "topic": "Dinâmica Climática",
+    "sections": [
+      {
+        "title": "Tempo e clima",
+        "content": "Tempo atmosférico é o estado da atmosfera em uma localidade e momento. Clima descreve padrões estatísticos, variabilidade e recorrência das condições atmosféricas em períodos longos. Uma tarde fria não invalida uma tendência climática. Temperatura, umidade, pressão, ventos e precipitação são elementos observados; latitude, altitude, relevo, cobertura vegetal, continentalidade e correntes marítimas ajudam a explicar suas diferenças espaciais."
+      },
+      {
+        "title": "Energia, pressão e circulação",
+        "content": "O aquecimento desigual da superfície favorece diferenças de pressão e movimentos do ar. Em termos gerais, o ar aquecido tende a expandir-se e ascender; o resfriamento pode favorecer subsidência. Ventos resultam de gradientes de pressão, com trajetória também afetada pela rotação terrestre e pelo atrito. Massas de ar possuem características relacionadas à área de formação, mas se transformam ao deslocar-se. Uma frente é uma zona de contato entre massas com características distintas."
+      },
+      {
+        "title": "Tipos de chuva",
+        "content": "Chuvas convectivas associam-se à ascensão de ar quente e úmido, comum em tardes de forte aquecimento. Chuvas orográficas ocorrem quando o relevo força a subida do ar: o resfriamento favorece condensação no barlavento e pode deixar o sotavento mais seco. Chuvas frontais relacionam-se ao encontro de massas de ar. São modelos explicativos: episódios reais podem combinar mecanismos."
+      },
+      {
+        "title": "Climograma resolvido",
+        "content": "Um climograma mostra temperatura mensal por linha e precipitação por barras, cada uma com sua unidade. Se o mês mais quente tem 26 °C e o mais frio 18 °C, a amplitude térmica anual é 8 °C. Para estimar a precipitação anual, some os doze totais mensais; não subtraia o mês mais seco do mais chuvoso. A estação seca deve ser identificada pela distribuição da chuva, não pela temperatura mais baixa isolada."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Duas cidades têm latitude semelhante, mas uma fica no litoral e outra no interior. Mantidos os demais fatores comparáveis, a influência marítima tende a reduzir a amplitude térmica porque a água aquece e esfria mais lentamente. Explique por que essa tendência não autoriza concluir que toda cidade litorânea terá necessariamente temperatura média menor: altitude, correntes e circulação também importam."
+      }
+    ]
+  },
+  {
+    "subject": "Geografia",
+    "topic": "Geopolítica dos Recursos Hídricos",
+    "sections": [
+      {
+        "title": "Água disponível e água acessível",
+        "content": "Disponibilidade física de água não equivale a acesso seguro. Uma região pode receber chuvas abundantes e manter populações sem abastecimento por falta de infraestrutura, tratamento e distribuição. A escassez pode resultar de baixa oferta natural, degradação de mananciais, demanda elevada ou desigualdade no acesso. Analise também a qualidade: água contaminada não atende aos mesmos usos que água potável, mesmo que o volume total permaneça grande."
+      },
+      {
+        "title": "Bacia hidrográfica e usos concorrentes",
+        "content": "Uma bacia reúne áreas drenadas para um rio principal e seus afluentes. Seus limites naturais não coincidem necessariamente com fronteiras políticas. Irrigação, indústria, consumo doméstico, geração elétrica e conservação podem disputar o mesmo sistema. A retirada a montante altera condições a jusante. Uma barragem pode regular vazões e produzir energia, mas também reter sedimentos, modificar ecossistemas e deslocar comunidades."
+      },
+      {
+        "title": "Como surge um conflito",
+        "content": "Imagine que um país a montante construa uma barragem em um rio compartilhado. O país a jusante pode temer menor vazão durante o enchimento, mudanças sazonais e dependência de decisões externas. O conflito não decorre apenas da existência da barragem: depende das regras de operação, dos usos, do regime de chuvas e da cooperação institucional. Tratados, dados compartilhados e acordos de vazão podem reduzir tensões."
+      },
+      {
+        "title": "Sustentabilidade e distribuição",
+        "content": "Reduzir vazamentos, proteger áreas de recarga, coletar e tratar esgoto e melhorar a eficiência da irrigação atuam em problemas diferentes. Cobrar pelo uso pode incentivar economia, mas exige considerar acesso básico e desigualdade. A expressão “água virtual” refere-se à água empregada na produção de mercadorias: importar alimentos também pode deslocar, indiretamente, pressão sobre recursos hídricos."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Uma cidade amplia a captação, mas despeja esgoto sem tratamento no mesmo rio. Por que a medida pode ser insuficiente? Porque aumentar oferta bruta não resolve a perda de qualidade e pode transferir custos para usuários a jusante. Uma resposta completa deve ligar abastecimento, saneamento, proteção da bacia e coordenação entre usuários, em vez de apresentar apenas uma obra isolada."
+      }
+    ]
+  },
+  {
+    "subject": "História",
+    "topic": "Antiguidade Clássica: o Mundo Grego",
+    "sections": [
+      {
+        "title": "Uma região de cidades, não um Estado único",
+        "content": "O mundo grego antigo reunia comunidades com língua, práticas religiosas e tradições compartilhadas, mas sem formar um Estado nacional unificado. A pólis articulava território, população e organização política. Atenas e Esparta tiveram instituições diferentes; descrevê-las como exemplos não autoriza atribuir suas características a todas as cidades. A expansão pelo Mediterrâneo envolveu comércio, fundação de cidades e circulação cultural, não uma colonização idêntica à dos impérios europeus modernos."
+      },
+      {
+        "title": "Atenas e a cidadania restrita",
+        "content": "A democracia ateniense consolidou formas de participação direta de cidadãos nas decisões públicas, especialmente na assembleia. A cidadania era restrita: mulheres, estrangeiros residentes e pessoas escravizadas não participavam como os cidadãos homens. Isso permite reconhecer uma ampliação política dentro do grupo cidadão sem confundir o regime com igualdade universal. Reformas e conflitos sociais contribuíram para a formação das instituições; elas não surgiram prontas em um único ato."
+      },
+      {
+        "title": "Esparta e a organização social",
+        "content": "Esparta destacou-se pela formação militar dos cidadãos e por uma sociedade hierarquizada. Espartíatas integravam o corpo cívico; periecos exerciam atividades econômicas sem a mesma condição política; hilotas estavam submetidos à exploração e ao controle espartano. A militarização relacionava-se também à manutenção dessa ordem. Comparar Atenas e Esparta exige separar instituições políticas, trabalho, educação e posição dos diferentes grupos."
+      },
+      {
+        "title": "Como analisar uma fonte",
+        "content": "Um discurso ateniense que elogia a liberdade pode descrever um ideal político dos cidadãos, sem incluir toda a população. Pergunte quem fala, a quem se dirige e quem fica fora da definição de “povo”. A fonte informa tanto sobre práticas quanto sobre justificativas e valores. Não a trate como uma fotografia neutra de toda a sociedade."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Como a democracia ateniense podia coexistir com a escravidão? Porque os direitos políticos eram delimitados pela condição de cidadão, enquanto o trabalho e a subordinação de outros grupos sustentavam a organização social. A coexistência não elimina a relevância histórica da participação direta, mas impede equipará-la à cidadania universal. Compare participação política e extensão dos direitos como duas dimensões distintas."
+      }
+    ]
+  },
+  {
+    "subject": "História",
+    "topic": "Alta Idade Média e Feudalismo",
+    "sections": [
+      {
+        "title": "Formação histórica e diversidade",
+        "content": "O feudalismo não foi implantado em uma data única após a queda de Roma. Na Europa ocidental, relações romanas, germânicas e cristãs foram se reorganizando ao longo de séculos. Ruralização, transformações do poder imperial e vínculos de dependência favoreceram formas locais de autoridade. A expressão “Idade das Trevas” apaga diversidade, produção cultural e mudanças; deve ser reconhecida como uma avaliação histórica carregada de julgamento."
+      },
+      {
+        "title": "Senhorio, trabalho e poder",
+        "content": "No senhorio, camponeses produziam para sua subsistência e entregavam trabalho, produtos ou pagamentos aos senhores. A servidão não era idêntica à escravidão antiga: em muitas situações, o camponês possuía acesso costumeiro à terra e obrigações ligadas à condição servil. Isso não tornava a relação livre ou igualitária. Corveia e entrega de parte da produção são exemplos de obrigações que variaram no espaço e no tempo."
+      },
+      {
+        "title": "Suserania e vassalagem",
+        "content": "Relações de vassalagem articulavam integrantes da aristocracia por compromissos de fidelidade, auxílio e proteção, frequentemente associados à concessão de um benefício. Não confunda vassalo com servo: são vínculos sociais diferentes. A fragmentação do poder não significava ausência completa de reis, leis ou redes de autoridade. A Igreja também exercia poder econômico e político, controlava terras e participava da produção e transmissão de conhecimentos."
+      },
+      {
+        "title": "Comparação resolvida",
+        "content": "Se uma fonte registra um nobre prometendo auxílio militar a outro, ela aponta para relações de fidelidade aristocrática. Se registra camponeses obrigados a trabalhar alguns dias na reserva senhorial, trata de obrigações servis. A palavra “dependência” cabe nos dois casos, mas não basta para identificar a estrutura: observe quem se relaciona, qual obrigação existe e quais recursos estão envolvidos."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que é inadequado afirmar que a economia medieval era totalmente fechada? Porque, embora a produção rural e o autoconsumo fossem importantes, existiam trocas, circuitos comerciais e diferenças regionais. A expansão urbana posterior ampliou redes sem surgir de um vazio absoluto. Uma resposta precisa reconhecer predomínios e transformações, evitando palavras como “sempre”, “nunca” e “todos”."
+      }
+    ]
+  },
+  {
+    "subject": "História",
+    "topic": "Revolução Industrial",
+    "sections": [
+      {
+        "title": "Uma transformação da produção e do trabalho",
+        "content": "A Revolução Industrial envolveu mecanização, uso ampliado de novas fontes de energia e concentração da produção em fábricas. Não foi apenas a invenção de máquinas: reorganizou o controle do tempo, a divisão das tarefas, as relações de propriedade e a vida urbana. O pioneirismo britânico relaciona-se a uma combinação de capitais, mercados, recursos energéticos, mudanças agrárias e condições políticas; nenhuma causa isolada explica todo o processo."
+      },
+      {
+        "title": "Cercamentos e trabalho assalariado",
+        "content": "Transformações na propriedade e no uso das terras inglesas reduziram, em diferentes regiões e momentos, o acesso de parte da população rural a recursos comuns. Isso contribuiu para mudanças na oferta de trabalho e na produção agrícola. Nas fábricas, trabalhadores vendiam sua força de trabalho por salário e se submetiam a ritmos definidos pelo processo produtivo e pela gestão. Mulheres e crianças também foram empregadas, em condições frequentemente precárias."
+      },
+      {
+        "title": "Resistências e direitos",
+        "content": "O ludismo incluiu destruição de máquinas em conflitos contra condições e mudanças nas relações de trabalho; reduzi-lo a ignorância tecnológica é inadequado. O cartismo articulou reivindicações de participação política, como ampliação do voto masculino. Associações, greves e organização sindical pressionaram por mudanças. A legislação trabalhista resultou de conflitos e disputas, não de uma melhoria automática produzida pelo crescimento econômico."
+      },
+      {
+        "title": "Fonte comparada",
+        "content": "Um empresário pode descrever a fábrica como símbolo de progresso, enquanto um depoimento operário destaca jornada excessiva e disciplina. As fontes abordam posições sociais distintas. Para compará-las, identifique o benefício enfatizado, o custo ocultado e o lugar de quem fala. Aumento de produtividade e desigualdade podem ocorrer simultaneamente, portanto não são descrições necessariamente incompatíveis."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Explique por que a industrialização alterou a experiência do tempo. O trabalho fabril passou a depender de horários coordenados, vigilância e continuidade das máquinas, limitando o controle do trabalhador sobre o ritmo da tarefa. A resposta deve ligar técnica e relações sociais: dizer apenas que “as máquinas eram rápidas” não explica a disciplina do trabalho."
+      }
+    ]
+  },
+  {
+    "subject": "História",
+    "topic": "Revolução Francesa",
+    "sections": [
+      {
+        "title": "Crise do Antigo Regime",
+        "content": "A Revolução Francesa começou em uma sociedade marcada por privilégios jurídicos e fiscais, desigualdades e crise das finanças monárquicas. O Terceiro Estado reunia grupos muito diferentes, de burgueses a trabalhadores urbanos e camponeses. Problemas de abastecimento, disputas políticas e ideias de soberania e direitos se combinaram. O Iluminismo forneceu referências, mas não deve ser apresentado como uma causa que, sozinha, produziu a revolução."
+      },
+      {
+        "title": "De 1789 à monarquia constitucional",
+        "content": "A reunião dos Estados Gerais abriu uma disputa sobre representação e votação. A afirmação da Assembleia Nacional Constituinte desafiou o poder absoluto. A tomada da Bastilha e mobilizações camponesas mostraram que as ruas e o campo também interferiam no processo. A abolição de privilégios e a Declaração dos Direitos do Homem e do Cidadão afirmaram igualdade jurídica, sem eliminar todas as desigualdades sociais e exclusões políticas."
+      },
+      {
+        "title": "República, radicalização e conflitos",
+        "content": "A guerra externa e os conflitos internos contribuíram para a radicalização e a queda da monarquia. A Convenção proclamou a República; girondinos, jacobinos e movimentos populares disputaram os rumos políticos. No período associado ao Terror, medidas de defesa revolucionária coexistiram com repressão. A reação termidoriana e o Diretório mudaram a correlação de forças, até a ascensão de Napoleão pelo golpe de 18 Brumário."
+      },
+      {
+        "title": "Direitos proclamados e exclusões",
+        "content": "Textos revolucionários que afirmam liberdade devem ser confrontados com a condição de mulheres, trabalhadores sem propriedade e populações escravizadas nas colônias. A Revolução Haitiana demonstra que sujeitos colonizados também se apropriaram e radicalizaram linguagens de direitos. Não trate a história colonial como simples reflexo passivo de decisões tomadas em Paris."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Qual é a diferença entre igualdade jurídica e igualdade social? A primeira rejeita privilégios legais de nascimento; a segunda diz respeito à distribuição de recursos, oportunidades e condições de vida. A revolução pode ampliar a primeira sem realizar plenamente a segunda. Use essa distinção para interpretar uma fonte que exalta direitos e outra que denuncia pobreza no mesmo período."
+      }
+    ]
+  },
+  {
+    "subject": "História",
+    "topic": "A Mineração no Brasil Colonial",
+    "sections": [
+      {
+        "title": "Uma nova articulação da colônia",
+        "content": "A expansão da mineração, a partir do final do século XVII, estimulou deslocamentos populacionais e redes de abastecimento no interior da América portuguesa. Não eliminou a produção açucareira nem transformou toda a economia em mineração. Alimentos, animais, transporte, comércio e serviços conectaram áreas diferentes. O crescimento de núcleos urbanos ampliou atividades, mas permaneceu ligado à escravidão e a fortes hierarquias sociais."
+      },
+      {
+        "title": "Fiscalidade e controle",
+        "content": "A Coroa buscou controlar a circulação do ouro e arrecadar tributos, entre eles o quinto. As formas de cobrança variaram ao longo do tempo. Casas de fundição e mecanismos de fiscalização expressam tentativas de reduzir contrabando e evasão. A derrama era um mecanismo de cobrança de valores devidos, não o nome de toda tributação colonial. Analise os conflitos considerando interesses locais e metropolitanos, sem supor que todos os colonos tinham a mesma posição."
+      },
+      {
+        "title": "Escravidão e vida social",
+        "content": "Pessoas escravizadas trabalhavam na extração, no transporte, nos serviços e em outras atividades. Alforrias e oportunidades de mobilidade existiam, mas não eliminavam a coerção e a desigualdade. Irmandades religiosas, redes de sociabilidade e práticas culturais participaram da vida urbana. Resistências incluíam fugas, negociação, formação de quilombos e outras estratégias. Evite apresentar os escravizados apenas como mão de obra sem ação histórica."
+      },
+      {
+        "title": "Mineração e contestação",
+        "content": "A Inconfidência Mineira reuniu participantes com projetos e interesses diversos, em um contexto de cobrança fiscal e circulação de ideias políticas. Não foi um movimento nacional unificado, nem propunha consensualmente abolir a escravidão. Compare-a com outras contestações, como a Conjuração Baiana, observando composição social, reivindicações e alcance. A semelhança na crítica à ordem colonial não apaga essas diferenças."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a mineração favoreceu um mercado interno sem encerrar a dependência colonial? Porque a demanda por abastecimento ampliou conexões entre regiões, enquanto a extração, a tributação e o comércio continuavam articulados aos interesses da monarquia e do mundo atlântico. A resposta deve explicar simultaneamente integração interna e subordinação, sem tratá-las como alternativas excludentes."
+      }
+    ]
+  },
+  {
+    "subject": "História",
+    "topic": "A Era Vargas: o Estado Novo",
+    "sections": [
+      {
+        "title": "Ditadura e centralização",
+        "content": "O Estado Novo foi instaurado em 1937 por um golpe que interrompeu o processo político e ampliou a concentração de poder em Getúlio Vargas. A nova ordem fechou o Legislativo, restringiu partidos e direitos políticos e fortaleceu mecanismos de intervenção federal. Não deve ser confundida com todo o período iniciado em 1930: os governos provisório, constitucional e ditatorial tiveram configurações institucionais distintas."
+      },
+      {
+        "title": "Propaganda, censura e nacionalismo",
+        "content": "O regime utilizou rádio, cerimônias, símbolos e propaganda para construir uma imagem de unidade nacional e liderança. O Departamento de Imprensa e Propaganda participou desse esforço e do controle da expressão pública. Nacionalismo cultural e valorização seletiva de elementos populares coexistiram com censura e repressão. Uma peça publicitária do governo é evidência de como ele queria ser percebido, não prova direta de apoio unânime da população."
+      },
+      {
+        "title": "Trabalho e industrialização",
+        "content": "O Estado ampliou sua atuação na economia e em setores estratégicos, em um contexto de industrialização. A legislação trabalhista, consolidada na CLT de 1943, estabeleceu direitos para segmentos do trabalho urbano, mas não alcançou de forma equivalente todos os trabalhadores. O reconhecimento de direitos esteve associado à tutela estatal sobre sindicatos e à limitação da autonomia organizativa. Benefícios sociais e autoritarismo não são elementos mutuamente excludentes."
+      },
+      {
+        "title": "Guerra e crise do regime",
+        "content": "A participação brasileira na Segunda Guerra ao lado dos Aliados tornou mais evidente a contradição entre combater regimes autoritários no exterior e manter uma ditadura internamente. A abertura e o fim do Estado Novo em 1945 envolveram mobilização política e mudanças nas alianças de poder. Não atribua a queda a uma única causa, nem suponha que o fim da ditadura eliminou a influência de Vargas."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Como analisar um cartaz que apresenta Vargas como protetor dos trabalhadores? Identifique a personalização dos direitos, a linguagem paternalista e a busca de legitimidade. Em seguida, confronte a imagem com direitos efetivos e mecanismos de controle sindical. A análise deve distinguir propaganda, política social e experiência dos trabalhadores, sem reduzir tudo a “presente do governante” ou a “mera mentira”."
+      }
+    ]
+  },
+  {
+    "subject": "Física",
+    "topic": "Movimento Uniforme",
+    "sections": [
+      {
+        "title": "O que permanece constante",
+        "content": "No movimento uniforme (MU), o móvel percorre deslocamentos iguais em intervalos de tempo iguais. A velocidade escalar é constante e a aceleração escalar é zero. Isso não significa que a posição seja zero: significa que sua taxa de variação não muda. Antes de calcular, escolha a origem, o sentido positivo e o instante inicial. Um ônibus pode ter velocidade negativa e continuar avançando no sentido em que viaja; o sinal descreve a orientação em relação ao eixo, não a intensidade do movimento."
+      },
+      {
+        "title": "Modelo e gráficos",
+        "content": "A função horária é s = s₀ + vt. A posição inicial s₀ e a posição final s devem usar a mesma origem. No gráfico posição × tempo, a inclinação fornece a velocidade: uma reta descendente indica v < 0. No gráfico velocidade × tempo, a área algébrica fornece o deslocamento. Distância percorrida e módulo do deslocamento só coincidem quando não há inversão de sentido. Para converter km/h em m/s, divida por 3,6; a transformação vem de 1 km = 1.000 m e 1 h = 3.600 s."
+      },
+      {
+        "title": "Exemplo resolvido",
+        "content": "Dois ciclistas partem simultaneamente das posições 0 m e 300 m. O primeiro segue a 5 m/s e o segundo vem em sentido contrário a 10 m/s. Escreva sA = 5t e sB = 300 − 10t. No encontro, sA = sB: 15t = 300, portanto t = 20 s e s = 100 m. A soma das intensidades funciona porque eles se aproximam em sentidos opostos; as equações mostram por que isso é válido."
+      },
+      {
+        "title": "Erros que mudam a resposta",
+        "content": "Não faça a média aritmética de duas velocidades se os tempos de percurso forem diferentes: a velocidade média é o deslocamento total dividido pelo tempo total. Também não iguale posições medidas a partir de origens distintas. Em problemas com atraso na partida, o tempo de movimento de um dos móveis será t − atraso, não t."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Um carro parte de s₀ = 120 m com v = −8 m/s. Onde estará após 10 s e quando passará pela origem? Resolva antes de abrir a resposta: s = 120 − 8·10 = 40 m; para s = 0, t = 15 s. O sinal negativo da velocidade informa o sentido. Ele não produz um intervalo de tempo negativo."
+      }
+    ]
+  },
+  {
+    "subject": "Física",
+    "topic": "Movimento Uniformemente Variado",
+    "sections": [
+      {
+        "title": "Aceleração não é velocidade",
+        "content": "No movimento uniformemente variado, a aceleração escalar permanece constante. A velocidade muda pela mesma quantidade a cada segundo. Aceleração de −2 m/s² significa variação de −2 m/s por segundo; pode indicar frenagem ou aumento da rapidez, dependendo do sinal da velocidade. O movimento é acelerado quando velocidade e aceleração têm o mesmo sinal e retardado quando têm sinais opostos."
+      },
+      {
+        "title": "Equações e condições de uso",
+        "content": "Use v = v₀ + at e Δs = v₀t + at²/2 somente no intervalo em que a aceleração é constante. Eliminando o tempo, obtém-se v² = v₀² + 2aΔs. No gráfico v × t, a inclinação é a aceleração e a área algébrica é o deslocamento. Se a velocidade atravessa o zero, separe as áreas para calcular distância total. A posição em função do tempo é parabólica; o ponto de inversão do sentido corresponde a v = 0, não necessariamente a s = 0."
+      },
+      {
+        "title": "Frenagem resolvida",
+        "content": "Um automóvel a 72 km/h freia com aceleração constante de −4 m/s². Primeiro, 72/3,6 = 20 m/s. Até parar: 0 = 20 − 4t, então t = 5 s. Pela equação de Torricelli, 0 = 400 − 8Δs, logo Δs = 50 m. Se o motorista demorar 1 s para reagir, haverá mais 20 m antes da frenagem: a distância total será 70 m."
+      },
+      {
+        "title": "Cuidado com o intervalo físico",
+        "content": "A equação v = 20 − 4t, prolongada após 5 s, prevê velocidade negativa. Isso não significa que um carro que freou comece automaticamente a andar de ré: o modelo da frenagem deixa de valer no instante da parada. Na queda livre próxima à superfície, desprezando o ar, g pode ser considerado constante; escolha seu sinal conforme o eixo adotado."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Um objeto parte do repouso e percorre 32 m em 4 s com aceleração constante. De Δs = at²/2, resulta 32 = 8a: a = 4 m/s². Ao final, v = 16 m/s. Confira pelo gráfico: a área do triângulo é 4·16/2 = 32 m. Explique por que a rapidez média foi 8 m/s, embora a rapidez final seja o dobro."
+      }
+    ]
+  },
+  {
+    "subject": "Física",
+    "topic": "As Leis de Newton",
+    "sections": [
+      {
+        "title": "Forças explicam mudanças de movimento",
+        "content": "A primeira lei define o comportamento de um corpo com resultante nula em um referencial inercial: repouso ou movimento retilíneo uniforme. Não é necessária uma força resultante para manter velocidade constante. A segunda lei relaciona a soma vetorial das forças externas à aceleração: ΣF = ma, para massa constante. A terceira lei descreve um par de interações simultâneas entre dois corpos, com forças de mesmo módulo, mesma direção e sentidos opostos."
+      },
+      {
+        "title": "Como montar o diagrama",
+        "content": "Isole o corpo e desenhe apenas as forças que atuam nele: peso exercido pela Terra, normal exercida pelo apoio, tração do fio e atrito, quando presentes. Defina eixos e projete cada força. A normal não é sempre igual ao peso: ela depende das demais forças e da aceleração perpendicular ao apoio. Ação e reação nunca se cancelam no diagrama de um único corpo, porque atuam em corpos diferentes. Peso e normal tampouco formam esse par."
+      },
+      {
+        "title": "Elevador resolvido",
+        "content": "Uma pessoa de massa 60 kg está sobre uma balança em um elevador que acelera para cima a 2 m/s². Adotando g = 10 m/s² e o sentido positivo para cima: N − mg = ma. Portanto, N = 60·(10 + 2) = 720 N. Se a aceleração fosse para baixo com módulo 2 m/s², N seria 480 N. A massa permanece 60 kg: a balança responde à força normal."
+      },
+      {
+        "title": "Atrito e sistemas",
+        "content": "O atrito estático ajusta seu módulo até o limite μeN; não vale sempre μeN. O atrito cinético pode ser modelado por μcN. Em um conjunto de blocos, analisar o sistema completo elimina forças internas da soma, mas é necessário isolar um bloco para descobrir a força de contato ou a tração. Declare as hipóteses de fio inextensível, massa desprezível e polia ideal quando usá-las."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Um bloco de 5 kg recebe 20 N para a direita e 5 N para a esquerda, sobre uma superfície horizontal. A resultante horizontal é 15 N e a aceleração é 3 m/s² para a direita. Se ele se deslocava para a esquerda, inicialmente perde rapidez. Explique por que a direção da velocidade não pode ser deduzida apenas da direção da força."
+      }
+    ]
+  },
+  {
+    "subject": "Física",
+    "topic": "Sistemas Conservativos e Sistemas Não Conservativos",
+    "sections": [
+      {
+        "title": "Energia mecânica do sistema",
+        "content": "A energia mecânica soma energia cinética e energias potenciais: Em = Ec + Ep. Para uma partícula, Ec = mv²/2; perto da superfície terrestre, Epg = mgh; para uma mola ideal, Epe = kx²/2. A altura zero da energia potencial é uma escolha de referência. O que tem efeito físico nos cálculos é a variação de energia potencial, não seu valor absoluto."
+      },
+      {
+        "title": "Conservação e dissipação",
+        "content": "Em um sistema submetido apenas ao trabalho de forças conservativas, a energia mecânica permanece constante. O trabalho do peso depende das alturas inicial e final, não do caminho. Quando há atrito, parte da energia mecânica se transforma em energia interna dos corpos e do ambiente. A energia total continua conservada; é a energia mecânica que diminui. Para o modelo usual, Wnão conservativas = Em final − Em inicial."
+      },
+      {
+        "title": "Descida com e sem atrito",
+        "content": "Um carrinho de 2 kg parte do repouso a 5 m de altura. Com g = 10 m/s², possui 100 J de energia potencial gravitacional. Sem dissipação, chega à base com mv²/2 = 100: v = 10 m/s. Se o atrito dissipar 36 J, restam 64 J de energia cinética. Como m/2 = 1, v² = 64 e v = 8 m/s. Subtrair diretamente 36 da velocidade misturaria unidades e seria fisicamente incorreto."
+      },
+      {
+        "title": "Escolha do sistema e das forças",
+        "content": "Uma normal perpendicular ao deslocamento não realiza trabalho, mas isso deve ser verificado na situação. Motores podem fornecer energia e freios podem retirá-la da forma mecânica. Em uma colisão inelástica, a quantidade de movimento do sistema isolado se conserva, porém a energia cinética não. Não confunda as condições de conservação dessas duas grandezas."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Uma mola de constante 200 N/m é comprimida 0,10 m e lança um bloco de 0,5 kg sem atrito. A energia armazenada é 200·0,10²/2 = 1 J. Portanto, 0,5v²/2 = 1 e v = 2 m/s. Se a compressão dobrar, a energia quadruplica e a velocidade dobra. Justifique essa diferença entre dependências quadrática e linear."
+      }
+    ]
+  },
+  {
+    "subject": "Física",
+    "topic": "Calor Sensível e Calor Latente",
+    "sections": [
+      {
+        "title": "Calor é energia em trânsito",
+        "content": "Calor é transferência de energia motivada por diferença de temperatura. Temperatura caracteriza o estado térmico; não é uma quantidade de calor contida no objeto. Durante o aquecimento de uma substância em uma única fase, a energia recebida pode elevar sua temperatura. Durante uma mudança de fase de substância pura, em condições de pressão constante, pode haver transferência de energia sem variação de temperatura."
+      },
+      {
+        "title": "Equações por etapa",
+        "content": "Calor sensível: Q = mcΔT, com calor específico c aproximadamente constante no intervalo. Calor latente: Q = mL, com L correspondente à mudança de fase considerada. Em uma curva de aquecimento, separe os trechos: aquecer sólido, fundir, aquecer líquido, vaporizar. Use unidades coerentes: se c estiver em J/(kg·°C), a massa deve estar em kg. Variações em °C e K têm o mesmo valor numérico, embora as temperaturas absolutas não tenham."
+      },
+      {
+        "title": "Gelo até água líquida",
+        "content": "Quanto calor é necessário para transformar 0,10 kg de gelo a −10 °C em água a 20 °C? Adote c gelo = 2.100 J/(kg·°C), L fusão = 334.000 J/kg e c água = 4.200 J/(kg·°C). Primeiro: Q₁ = 0,10·2.100·10 = 2.100 J. Fusão: Q₂ = 0,10·334.000 = 33.400 J. Água: Q₃ = 0,10·4.200·20 = 8.400 J. Total: 43.900 J. A fusão consome a maior parcela."
+      },
+      {
+        "title": "Misturas e equilíbrio",
+        "content": "Em um sistema termicamente isolado, a soma dos calores trocados é zero. O corpo que esfria tem Q negativo na convenção Q = mc(Tfinal − Tinicial). Inclua a capacidade térmica do recipiente se ela não puder ser desprezada. Quando existe gelo, verifique primeiro se a energia disponível consegue derreter toda a massa antes de supor uma temperatura final acima de 0 °C."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Misturam-se 100 g de água a 80 °C e 300 g a 20 °C, sem perdas e sem considerar o recipiente. Como o calor específico é o mesmo, 100(T − 80) + 300(T − 20) = 0. Resulta T = 35 °C. A média simples de 50 °C seria inadequada porque as massas não são iguais."
+      }
+    ]
+  },
+  {
+    "subject": "Física",
+    "topic": "Equação Fundamental da Ondulatória",
+    "sections": [
+      {
+        "title": "Propagação e oscilação",
+        "content": "Uma onda transporta energia e perturbação, sem transportar necessariamente matéria de um ponto a outro. Em uma onda periódica, o período T é o tempo de uma oscilação completa; a frequência f é o número de oscilações por segundo, com f = 1/T. O comprimento de onda λ é a distância entre dois pontos consecutivos em mesma fase, como duas cristas. Amplitude mede o máximo afastamento em relação ao equilíbrio e não deve ser confundida com λ."
+      },
+      {
+        "title": "Por que v = λf",
+        "content": "Durante um período, uma crista percorre um comprimento de onda. Logo, v = λ/T = λf. A velocidade de propagação depende das propriedades do meio e do tipo de onda. A frequência é determinada pela fonte. Quando uma onda atravessa uma interface estacionária entre meios, sua frequência se mantém, enquanto velocidade e comprimento de onda podem mudar. Ondas mecânicas precisam de meio material; ondas eletromagnéticas podem propagar-se no vácuo."
+      },
+      {
+        "title": "Mudança de meio resolvida",
+        "content": "Uma fonte produz ondas de 5 Hz em uma corda onde a velocidade é 20 m/s. O comprimento de onda é 20/5 = 4 m. Ao passar para outro trecho, a velocidade cai para 10 m/s. A frequência continua 5 Hz e o novo comprimento é 2 m. Não se conserva λ: o encurtamento corresponde à menor distância percorrida em cada período."
+      },
+      {
+        "title": "Ler o gráfico correto",
+        "content": "Um gráfico de elongação × posição, em um instante fixo, permite medir λ. Um gráfico de elongação × tempo, para um ponto fixo, permite medir T. Trocar os eixos produz erros de unidade. A velocidade de oscilação de um ponto do meio não é a velocidade com que a onda se propaga. A polarização caracteriza ondas transversais e não é possível para uma onda longitudinal ideal."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Uma estação emite ondas eletromagnéticas de 100 MHz. No ar, adote v = 3·10⁸ m/s. Converta 100 MHz = 10⁸ Hz: λ = 3 m. Se a frequência fosse 50 MHz, o comprimento seria 6 m. A maior frequência não faria a onda viajar mais rápido nesse modelo: mudaria sua periodicidade espacial."
+      }
+    ]
+  },
+  {
+    "subject": "Gramática",
+    "topic": "Variação Linguística",
+    "sections": [
+      {
+        "title": "Uma língua contém variedades",
+        "content": "A variação linguística é uma característica das línguas vivas. O modo de falar e escrever varia conforme região, grupos sociais, geração, situação comunicativa e meio utilizado. Reconhecer isso não significa afirmar que qualquer construção serve igualmente em todo contexto. Uma entrevista de emprego, uma conversa íntima e um artigo acadêmico estabelecem expectativas diferentes. A análise deve considerar adequação ao gênero, aos interlocutores e à finalidade."
+      },
+      {
+        "title": "Norma-padrão e usos cultos",
+        "content": "Norma-padrão é um modelo codificado que orienta usos formais e prescrições gramaticais. Usos cultos correspondem a práticas reais de falantes escolarizados e também apresentam variação. Não são conceitos idênticos. A escola pode ensinar convenções valorizadas em contextos formais sem tratar variedades populares como sinal de inferioridade intelectual. O prestígio de uma variedade tem relação com poder social e história, não com uma superioridade natural de seus falantes."
+      },
+      {
+        "title": "Exemplo analisado",
+        "content": "Em uma mensagem entre amigos, “A gente chega às oito” pode ser plenamente adequado. O emprego de “a gente” não torna o enunciado automaticamente errado: na concordância usual, essa expressão combina com verbo na terceira pessoa do singular. Em uma reescrita formal, “Nós chegaremos às oito” altera escolhas de pessoa e tempo verbal. A mudança deve preservar o sentido pretendido e considerar se há certeza, promessa ou previsão."
+      },
+      {
+        "title": "Preconceito e representação",
+        "content": "Em literatura, marcas de oralidade podem construir uma personagem, aproximar a narração de um grupo social ou questionar hierarquias culturais. Não as classifique apenas como “erros”. Em uma charge, o humor pode explorar contraste de registros. Pergunte quem é alvo da crítica: a forma linguística, a situação ou o preconceito de outro personagem. Uma variedade não revela, sozinha, a capacidade de raciocínio de quem a utiliza."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Um texto troca “o senhor poderia enviar o arquivo?” por “manda o arquivo aí”. O conteúdo básico do pedido permanece, mas mudam tratamento, polidez e relação entre interlocutores. Explique por que a segunda formulação pode ser adequada entre pessoas próximas e inadequada em outro contexto. O critério central é a situação de uso, não uma oposição absoluta entre “língua certa” e “língua errada”."
+      }
+    ]
+  },
+  {
+    "subject": "Gramática",
+    "topic": "Pontuação I: Princípios para o Uso da Vírgula",
+    "sections": [
+      {
+        "title": "Pontuar é organizar relações",
+        "content": "A vírgula delimita termos e orações e pode alterar relações de sentido. Não é uma simples transcrição de pausas da fala. O primeiro passo é reconhecer a estrutura: sujeito, verbo e complementos normalmente permanecem ligados. Por isso, “Os alunos da turma chegaram cedo” não pede vírgula entre “turma” e “chegaram”, mesmo que o sujeito seja longo."
+      },
+      {
+        "title": "Usos fundamentais",
+        "content": "A vírgula aparece em enumerações, vocativos, apostos explicativos e expressões intercaladas. Compare “Ana trouxe livros, cadernos e canetas” com “Ana, traga os livros”: no segundo caso, Ana é vocativo, a pessoa a quem se dirige a fala. Em “O relatório, segundo a professora, está completo”, a expressão intercalada vem delimitada por duas vírgulas. Retirar apenas uma delas pode quebrar a organização sintática."
+      },
+      {
+        "title": "Restrição e explicação",
+        "content": "Compare “Os alunos que estudaram passaram” e “Os alunos, que estudaram, passaram”. No primeiro, a oração restringe o conjunto: afirma-se a aprovação dos alunos que estudaram. No segundo, a informação é apresentada como explicação referente ao conjunto dos alunos mencionado. As vírgulas não são decorativas: mudam o alcance da afirmação. O contexto define qual leitura é apropriada."
+      },
+      {
+        "title": "Deslocamentos e ambiguidade",
+        "content": "Adjuntos adverbiais deslocados, especialmente longos, costumam ser delimitados: “Depois de uma longa reunião com a equipe, a diretora anunciou a decisão”. Em expressões curtas, o uso pode depender de clareza e ênfase. Não aplique uma regra mecânica de “vírgula depois de toda palavra inicial”. Reconheça a função do trecho e verifique se há risco de leitura equivocada."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Pontue “Vamos comer crianças”. Se “crianças” é o grupo chamado para a refeição, escreva “Vamos comer, crianças”. Sem vírgula, o termo pode ser lido como complemento do verbo “comer”. A explicação adequada identifica a mudança de função sintática, de vocativo para objeto, e o efeito de sentido decorrente; dizer apenas “coloca uma pausa” é insuficiente."
+      }
+    ]
+  },
+  {
+    "subject": "Gramática",
+    "topic": "Mecanismo de Regência",
+    "sections": [
+      {
+        "title": "Quem exige o complemento",
+        "content": "Regência descreve a relação entre um termo regente e seu complemento, incluindo a presença ou ausência de preposição. Pode ser verbal ou nominal: alguém necessita de ajuda e está favorável à proposta. O sentido do termo importa. Não basta decorar uma preposição sem verificar a acepção utilizada e o contexto formal ou informal em que a construção aparece."
+      },
+      {
+        "title": "Mudança de sentido",
+        "content": "Na norma-padrão, “assistir ao filme” emprega assistir no sentido de ver, com preposição a. “Assistir o paciente”, no sentido de prestar assistência, pode ser construído sem essa preposição. Em “aspirar o perfume”, o verbo se refere a inalar; em “aspirar ao cargo”, a desejar. A mudança de regência pode acompanhar uma mudança de significado, e não apenas uma diferença superficial de estilo."
+      },
+      {
+        "title": "Pronomes relativos",
+        "content": "A preposição exigida pelo termo regente permanece diante do pronome relativo: “o livro de que preciso”, pois preciso de algo; “a cidade em que moro”, pois moro em algum lugar. Compare “o assunto que conheço” e “o assunto de que gosto”. Reescrever tudo com “que” sem verificar a regência pode produzir uma construção inadequada à convenção formal cobrada na questão."
+      },
+      {
+        "title": "Exemplo resolvido",
+        "content": "Una “Esta é a proposta” e “A equipe concordou com a proposta”. Retire a repetição e preserve a preposição: “Esta é a proposta com que a equipe concordou” ou “com a qual a equipe concordou”. A escolha não depende de sonoridade. O verbo concordar exige, nesse sentido, um complemento introduzido por com. O artigo de “a qual” concorda com o antecedente feminino."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Complete “Este é o projeto ___ me referi”. Como a construção é “referir-se a algo”, a resposta é “a que” ou “ao qual”. Se o antecedente fosse “proposta”, poderíamos escrever “à qual”: a preposição a se combina com o artigo a presente em a qual. Explique a regência antes de decidir sobre o acento indicativo de crase."
+      }
+    ]
+  },
+  {
+    "subject": "Gramática",
+    "topic": "Crase",
+    "sections": [
+      {
+        "title": "Uma fusão, não qualquer palavra feminina",
+        "content": "Crase é a fusão de dois sons vocálicos iguais. No uso mais frequente cobrado em provas, o acento grave marca a combinação da preposição a com o artigo feminino a ou as. Para decidir, faça duas perguntas: o termo anterior exige a preposição a? O termo seguinte admite o artigo feminino? A presença de uma palavra feminina, sozinha, não basta."
+      },
+      {
+        "title": "Testes e limites",
+        "content": "Em “Entreguei o documento à diretora”, entregar algo a alguém exige a preposição, e diretora admite artigo. A troca por um masculino correspondente ajuda: “ao diretor”. Já em “Encontrei a diretora”, encontrar alguém não exige a preposição a, portanto não há crase. Antes de verbo, como em “começou a estudar”, não existe artigo feminino. Em “a pé”, também não há essa combinação."
+      },
+      {
+        "title": "Demonstrativos e lugares",
+        "content": "Pode haver crase com aquele, aquela e aquilo quando o termo anterior exige a: “Refiro-me àquele episódio”. O teste de substituir por um substantivo feminino não é a única possibilidade. Com nomes de lugar, verifique o artigo: quem vai à Bahia volta da Bahia; quem vai a Brasília volta de Brasília. Um qualificativo pode alterar a construção, como em referências a uma cidade delimitada por determinada caracterização."
+      },
+      {
+        "title": "Horas e locuções",
+        "content": "Indicações determinadas de hora frequentemente empregam crase: “A aula começa às oito”. Isso difere de duração: “Estudei de duas a três horas”. Locuções femininas como “à tarde”, “às vezes” e “à medida que” têm usos convencionais que devem ser reconhecidos pelo sentido. Compare “à medida que” — proporção — com “na medida em que” em usos explicativos ou causais; não substitua uma pela outra sem avaliar a relação."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Compare “Escrevi a professora” e “Escrevi à professora”. Na segunda, professora é destinatária: escrevi algo a ela. A primeira só se sustentaria em uma leitura diferente, na qual “a professora” fosse aquilo que foi escrito, e não quem recebeu a mensagem. Para indicar destinatária na convenção formal, use “à professora”. A análise sintática deve preceder a marcação do acento."
+      }
+    ]
+  },
+  {
+    "subject": "Entendimento de Texto",
+    "topic": "Figuras de Linguagem",
+    "sections": [
+      {
+        "title": "Identificar e explicar o efeito",
+        "content": "Uma figura de linguagem é um procedimento de construção do sentido ou da expressão. Em provas, nomeá-la costuma ser apenas parte da resposta: é preciso mostrar quais elementos do texto a produzem e qual efeito criam. Metáfora, metonímia, ironia, antítese e hipérbole não são etiquetas intercambiáveis para qualquer frase expressiva."
+      },
+      {
+        "title": "Relações semânticas",
+        "content": "A metáfora aproxima campos de sentido sem explicitar uma comparação: “A cidade é um formigueiro” atribui à cidade características associadas à intensa movimentação coletiva. A metonímia opera por uma relação de contiguidade: “Li Machado de Assis” usa o autor por sua obra. A antítese aproxima termos opostos; o paradoxo articula uma contradição aparente que exige interpretação. A hipérbole intensifica por exagero, como em “esperei uma eternidade”."
+      },
+      {
+        "title": "Ironia depende do contexto",
+        "content": "Na ironia, a interpretação pode contrariar a avaliação literal. Dizer “Que pontualidade!” para alguém que chega muito atrasado pode produzir crítica irônica. A mesma frase, diante de uma pessoa que chegou no horário, pode ser um elogio literal. Portanto, não se reconhece ironia apenas pela palavra usada: são necessárias pistas de situação, entonação representada, contraste ou conhecimento partilhado."
+      },
+      {
+        "title": "Som e estrutura",
+        "content": "Aliteração repete sons consonantais; assonância, sons vocálicos. Anáfora, como figura de construção, repete palavras ou expressões no início de segmentos sucessivos. Não confunda essa acepção com a retomada referencial também chamada anáfora na análise textual. Repetições podem sugerir insistência, ritmo, intensidade ou continuidade, mas seu efeito deve ser demonstrado no poema ou trecho particular."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Em “Suas palavras me feriram”, que relação sustenta a expressão? Um efeito emocional é apresentado por meio de uma ação física, produzindo metáfora. Para explicar, relacione palavras a sofrimento e ferimento a dor, sem supor uma agressão material. Se o texto dissesse “suas palavras eram como lâminas”, a comparação estaria explicitada pelo conectivo “como”."
+      }
+    ]
+  },
+  {
+    "subject": "Gramática",
+    "topic": "Ambiguidade: Duplicidade no Léxico e na Sintaxe",
+    "sections": [
+      {
+        "title": "Mais de uma leitura possível",
+        "content": "Ambiguidade ocorre quando uma expressão permite leituras diferentes em um contexto. Pode resultar de uma palavra com mais de um sentido ou da estrutura sintática. Nem toda ambiguidade é um defeito: publicidade, humor e literatura podem explorá-la intencionalmente. Em instruções, contratos ou respostas dissertativas, porém, ela pode prejudicar a precisão."
+      },
+      {
+        "title": "Léxico e estrutura",
+        "content": "Em “O banco estava vazio”, banco pode designar um assento ou uma instituição, se o contexto não resolver a referência. Em “Vi o homem com o telescópio”, a expressão com o telescópio pode indicar o instrumento usado para ver ou caracterizar o homem observado. A segunda ambiguidade não depende de uma palavra isolada: depende de qual termo a expressão preposicionada modifica."
+      },
+      {
+        "title": "Reescrita resolvida",
+        "content": "Para indicar instrumento, escreva “Com o telescópio, observei o homem”. Para indicar posse, escreva “Vi o homem que carregava o telescópio”. As reescritas desfazem a ambiguidade por caminhos diferentes. Não basta trocar palavras aleatoriamente: a correção deve conservar a leitura solicitada pelo enunciado. Uma paráfrase que elimina também uma informação relevante não resolve adequadamente o problema."
+      },
+      {
+        "title": "Referentes e pronomes",
+        "content": "Em “Ana disse a Beatriz que sua apresentação estava pronta”, sua pode remeter a Ana ou a Beatriz. O contexto talvez esclareça, mas a frase isolada deixa duas possibilidades. A retomada nominal — “a apresentação de Beatriz” — pode ser preferível. Em questões sobre humor, identifique qual leitura é inicialmente sugerida e qual surge depois para quebrar a expectativa."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Explique as duas leituras de “O professor falou com o aluno nervoso”. Nervoso pode caracterizar o aluno ou, em determinada interpretação, o professor durante a fala. Para explicitar a segunda, escreva “Nervoso, o professor falou com o aluno”. Para a primeira, “O professor falou com o aluno que estava nervoso”. A pontuação e a oração relativa redistribuem claramente a caracterização."
+      }
+    ]
+  }
+]

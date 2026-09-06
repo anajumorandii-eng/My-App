@@ -39,8 +39,7 @@ export function buildSubjectSummaries(input: {
     format: 'apostila',
     sourceFile: input.sourceFile,
     chapter: topic.title,
-    startPage: 1,
-    endPage: 500,
+    uncertain: true,
   }));
   const summaries: InteractiveSummary[] = topics.map((topic) => {
     const note = input.notes[topic.title];
@@ -48,6 +47,7 @@ export function buildSubjectSummaries(input: {
     const titleKeywords = [...new Set(slug(topic.title).split('-').filter((word) => word.length >= 4))].slice(0, 4);
     return {
       id: `summary-${topic.id}`,
+      contentStatus: 'roteiro',
       title: topic.title,
       subject: input.subject,
       topic: topic.title,
@@ -73,7 +73,7 @@ export function buildSubjectSummaries(input: {
         hint: 'Organize em dados e condições → princípio → consequência.',
         transferPrompt: `Se uma condição relevante em ${topic.title} fosse duplicada, anulada ou invertida, o que mudaria? Justifique.`,
       }],
-      sources: [{ label: `Apostila — ${topic.title}`, kind: 'material-interno', materialId: `material-${topic.id}` }],
+      sources: [{ label: `Apostila indicada — ${topic.title} (volume e páginas pendentes de conferência)`, kind: 'material-interno', materialId: `material-${topic.id}` }],
     };
   });
   return { summaries, materials };
