@@ -1,10 +1,14 @@
 name: Sincronizar ENEM do Drive
 
 on:
-  # Gatilho por push desativado: sem Git LFS ativo, cada execução commitava
-  # o PDF como binário cru e inchava o histórico de forma permanente.
-  # Reativar só depois de confirmar que os PDFs entram como ponteiro LFS
-  # (ver "Git LFS" no README de "provas brutas").
+  # O gatilho por push voltou: a proteção contra inchar o histórico é a
+  # verificação de ponteiro LFS no passo de commit, não o gatilho desligado.
+  # Se um PDF entrar como binário cru, o job falha e nada é commitado.
+  push:
+    branches: [main]
+    paths:
+      - "scripts/sync_enem_drive.py"
+      - ".github/workflows/sync-enem-drive.yml"
   workflow_dispatch:
 
 permissions:
