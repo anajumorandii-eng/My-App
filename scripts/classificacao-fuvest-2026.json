@@ -47,7 +47,8 @@
       "subject": "Sociologia",
       "topicId": "soc_cultura_identidade",
       "chapter": "Identidade e Diferença",
-      "confianca": "alta"
+      "confianca": "baixa",
+      "_nota": "Descartada pelo filtro visual (cita \"figuras\"). Verifiquei que o enunciado e respondivel so com o texto biografico, mas a regra vale sem excecao: abrir precedente para sobrepor o filtro e o que deixa passar a questao ruim."
     },
     "11": {
       "subject": "História",

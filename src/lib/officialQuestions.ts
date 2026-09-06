@@ -33,7 +33,10 @@ export interface Rascunho {
 // Palavras que denunciam dependência de um elemento visual. Ampla de
 // propósito: descartar uma questão boa custa menos que publicar uma
 // impossível de responder.
-const VISUAL = /\b(charge|imagem|figura|gr[áa]fico|mapa|tabela|fotografia|foto|cartum|tirinha|ilustra[çc][ãa]o|esquema|diagrama|pintura|cartaz|infogr[áa]fico|a seguir|abaixo)\b/i;
+// O plural precisa entrar explicitamente: \b(imagem)\b nao casa "imagens", e
+// "Observe as imagens de satelite" passou batido na primeira versao — uma
+// questao impossivel de responder entrando no banco como se fosse boa.
+const VISUAL = /\b(charges?|imagens|imagem|figuras?|gr[áa]ficos?|mapas?|tabelas?|fotografias?|fotos?|foto|cartuns|cartum|tirinhas?|ilustra[çc][õo]es|ilustra[çc][ãa]o|esquemas?|diagramas?|pinturas?|cartazes|cartaz|infogr[áa]ficos?|a seguir|abaixo)\b/i;
 
 // Blocos Unicode que nunca aparecem numa prova em português. Quando surgem, é
 // fórmula desenhada com fonte simbólica que a extração leu como outro alfabeto.

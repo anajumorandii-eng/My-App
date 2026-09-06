@@ -129,3 +129,14 @@ test('montar devolve as questões em ordem numérica mesmo com entrada fora de o
   assert.equal(questoes[0].correctOptionId, 'a');
   assert.equal(questoes[1].correctOptionId, 'b');
 });
+
+test('montar descarta referência visual no plural', () => {
+  // Regressão: \b(imagem)\b não casa "imagens", e "Observe as imagens de
+  // satélite" entrou no banco como se a questão fosse respondível em texto.
+  for (const termo of ['imagens de satélite', 'as figuras a seguir', 'os mapas', 'as tabelas']) {
+    const blocos = new Map([[49, bloco(49, `Observe ${termo} e responda`)]]);
+    const { questoes, descartes } = montar(blocos, new Map([[49, 'a']]), LETRAS, FONTE);
+    assert.equal(questoes.length, 0, `deveria descartar: ${termo}`);
+    assert.equal(descartes[0].motivo, 'depende de imagem');
+  }
+});
