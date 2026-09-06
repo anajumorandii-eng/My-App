@@ -7,36 +7,26 @@ ROOT = Path("provas brutas")
 UA = {"User-Agent": "Mozilla/5.0 JUJU-Provas/1.0"}
 
 DRIVE = [
-    # ENEM
-    ("1n8Oxf_5ppv7zj7qPQqYPQ2S7TC7d_L6M","ENEM/2022/ENEM_2022_dia_1_caderno_azul.pdf"),
-    ("1BPO35YW7Abpiy0dxtGHEuKy3CfHohDZF","ENEM/2022/ENEM_2022_dia_2_caderno_azul.pdf"),
-    ("1AsxF5UK7hi6c2diWC4zHpnm_i9x7DJMK","ENEM/2023/ENEM_2023_dia_1_caderno_azul.pdf"),
-    ("1ZT-f-X-tPGDlFHkow4CSUy0v-LL9jdY-","ENEM/2023/ENEM_2023_dia_2_caderno_azul.pdf"),
-    ("1M5BT1wFB5qje2thfP0tLFnpGaJ6Ottem","ENEM/2024/ENEM_2024_dia_1_caderno_azul.pdf"),
-    ("1PdLH4lpASfaKqzbQ2wcbS9AJ4E9Q440U","ENEM/2024/ENEM_2024_dia_2_caderno_azul.pdf"),
-    ("1bXWLx6rrIOITR_VLahtkyBetHUr-exdp","ENEM/2025/ENEM_2025_dia_1_caderno_azul.pdf"),
-    ("1Y4G-64LLqyM1Yz0TMoC-Idt1Xgjy5XeB","ENEM/2025/ENEM_2025_dia_2_caderno_azul.pdf"),
-
     # FUVEST
     ("1kJWCFrkxlAuBk_-KQFGIbVLRmSc09sYf","FUVEST/2023/FUVEST_2023_1a_fase.pdf"),
-    ("1G4RGvVa3lpdocG6GfBDXc5kCeycEegFZ","FUVEST/2023/FUVEST_2023_2a_fase_dia_1.pdf"),
-    ("1gEvQWT8baFHMOsm2E_HnEq2Ly5f0nOXb","FUVEST/2023/FUVEST_2023_2a_fase_dia_2.pdf"),
+    ("1G4RGvVa3lpdocG6GfBDXc5kCeycEegFZ","FUVEST/2023/FUVEST_2023_2a_fase_1o_dia.pdf"),
+    ("1gEvQWT8baFHMOsm2E_HnEq2Ly5f0nOXb","FUVEST/2023/FUVEST_2023_2a_fase_2o_dia.pdf"),
     ("1gD4a9ZhbhBSvxU8djskK_ilZ-tvNZV4I","FUVEST/2024/FUVEST_2024_1a_fase.pdf"),
-    ("1qQk0vLuE51ZqoGqjMD8YzhVulv7s_PGk","FUVEST/2024/FUVEST_2024_2a_fase_dia_1.pdf"),
-    ("18hDzTuGw9qnSwrGfVPcNrkVVD-ejQFBo","FUVEST/2024/FUVEST_2024_2a_fase_dia_2.pdf"),
+    ("1qQk0vLuE51ZqoGqjMD8YzhVulv7s_PGk","FUVEST/2024/FUVEST_2024_2a_fase_1o_dia.pdf"),
+    ("18hDzTuGw9qnSwrGfVPcNrkVVD-ejQFBo","FUVEST/2024/FUVEST_2024_2a_fase_2o_dia.pdf"),
     ("1jYJ3C5Z7JhV5juqvt3hmSc5Pd0gvUiUg","FUVEST/2025/FUVEST_2025_1a_fase.pdf"),
-    ("1VMKVbnhP-OOGrAXbhlQoK3FFZ8JOmvB2","FUVEST/2025/FUVEST_2025_2a_fase_dia_1.pdf"),
-    ("1N2afc3Fqi_xzeM3CVmPtLjoGAebjDsZ3","FUVEST/2025/FUVEST_2025_2a_fase_dia_2.pdf"),
+    ("1VMKVbnhP-OOGrAXbhlQoK3FFZ8JOmvB2","FUVEST/2025/FUVEST_2025_2a_fase_1o_dia.pdf"),
+    ("1N2afc3Fqi_xzeM3CVmPtLjoGAebjDsZ3","FUVEST/2025/FUVEST_2025_2a_fase_2o_dia.pdf"),
     ("16sr_Dr-z5OHbgJwD9y8qyJxr0H7-rNce","FUVEST/2026/FUVEST_2026_1a_fase.pdf"),
-    ("17z4yLZ3gRyA6Eju6T4UzV2Nx8De5i5to","FUVEST/2026/FUVEST_2026_2a_fase_dia_1_portugues_redacao.pdf"),
-    ("1HJcIsUZyb9JZVr9zdH2H0_0gnrDb5lLo","FUVEST/2026/FUVEST_2026_2a_fase_dia_2_especificas.pdf"),
+    ("17z4yLZ3gRyA6Eju6T4UzV2Nx8De5i5to","FUVEST/2026/FUVEST_2026_2a_fase_1o_dia.pdf"),
+    ("1HJcIsUZyb9JZVr9zdH2H0_0gnrDb5lLo","FUVEST/2026/FUVEST_2026_2a_fase_2o_dia.pdf"),
 
     # UNICAMP (Drive quando presente)
     ("1KDKMFCmaVSRAvfpnbvMAdAjC4z9tikvK","UNICAMP/2023/UNICAMP_2023_1a_fase.pdf"),
     ("1st4DOEVsxGMNF76G08B1T_k1uHX0mZJs","UNICAMP/2024/UNICAMP_2024_1a_fase.pdf"),
     ("1N6sZYctqVdSq1yBPN75h4F3kXPn76MXZ","UNICAMP/2025/UNICAMP_2025_1a_fase.pdf"),
-    ("1OcCcEa-XJThreKgJX-UnoKTrDPyzDDX9","UNICAMP/2025/UNICAMP_2025_2a_fase_dia_1.pdf"),
-    ("1jJ0kXkQDNTTGHzLfRhTZYnAViKxu01Li","UNICAMP/2025/UNICAMP_2025_2a_fase_dia_2_biologicas_saude.pdf"),
+    ("1OcCcEa-XJThreKgJX-UnoKTrDPyzDDX9","UNICAMP/2025/UNICAMP_2025_2a_fase_1o_dia.pdf"),
+    ("1jJ0kXkQDNTTGHzLfRhTZYnAViKxu01Li","UNICAMP/2025/UNICAMP_2025_2a_fase_2o_dia_Biologicas_Saude.pdf"),
     ("1R2tVnBPsy72S4dY0Ec8_4fKpNfbXzBav","UNICAMP/2026/UNICAMP_2026_1a_fase.pdf"),
 
     # UNIFESP
@@ -73,12 +63,12 @@ DRIVE = [
 ]
 
 URLS = [
-    ("https://www.comvest.unicamp.br/vest2023/F2/provas/2023F2redporingcn.pdf","UNICAMP/2023/UNICAMP_2023_2a_fase_dia_1.pdf"),
-    ("https://www.comvest.unicamp.br/vest2023/F2/provas/2023F2CB.pdf","UNICAMP/2023/UNICAMP_2023_2a_fase_dia_2_biologicas_saude.pdf"),
-    ("https://www.comvest.unicamp.br/vest2024/F2/provas/2024F2redporingcn.pdf","UNICAMP/2024/UNICAMP_2024_2a_fase_dia_1.pdf"),
-    ("https://www.comvest.unicamp.br/vest2024/F2/provas/2024F2CB.pdf","UNICAMP/2024/UNICAMP_2024_2a_fase_dia_2_biologicas_saude.pdf"),
-    ("https://www.comvest.unicamp.br/vest2026/F2/provas/2026F2redporingcn.pdf","UNICAMP/2026/UNICAMP_2026_2a_fase_dia_1.pdf"),
-    ("https://www.comvest.unicamp.br/vest2026/F2/provas/2026F2CB.pdf","UNICAMP/2026/UNICAMP_2026_2a_fase_dia_2_biologicas_saude.pdf"),
+    ("https://www.comvest.unicamp.br/vest2023/F2/provas/2023F2redporingcn.pdf","UNICAMP/2023/UNICAMP_2023_2a_fase_1o_dia.pdf"),
+    ("https://www.comvest.unicamp.br/vest2023/F2/provas/2023F2CB.pdf","UNICAMP/2023/UNICAMP_2023_2a_fase_2o_dia_Biologicas_Saude.pdf"),
+    ("https://www.comvest.unicamp.br/vest2024/F2/provas/2024F2redporingcn.pdf","UNICAMP/2024/UNICAMP_2024_2a_fase_1o_dia.pdf"),
+    ("https://www.comvest.unicamp.br/vest2024/F2/provas/2024F2CB.pdf","UNICAMP/2024/UNICAMP_2024_2a_fase_2o_dia_Biologicas_Saude.pdf"),
+    ("https://www.comvest.unicamp.br/vest2026/F2/provas/2026F2redporingcn.pdf","UNICAMP/2026/UNICAMP_2026_2a_fase_1o_dia.pdf"),
+    ("https://www.comvest.unicamp.br/vest2026/F2/provas/2026F2CB.pdf","UNICAMP/2026/UNICAMP_2026_2a_fase_2o_dia_Biologicas_Saude.pdf"),
 ]
 
 def validate_pdf(path: Path):
