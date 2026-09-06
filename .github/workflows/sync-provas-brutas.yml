@@ -28,7 +28,7 @@ jobs:
         with:
           python-version: "3.12"
 
-      - run: pip install requests beautifulsoup4
+      - run: pip install requests gdown
 
       - name: Baixar PDFs oficiais
         run: python scripts/sync_provas_brutas.py
