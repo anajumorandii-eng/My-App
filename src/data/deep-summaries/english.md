@@ -57,3 +57,39 @@ Quando um parágrafo compara taxas de participação, identifique grupos, perío
 Palavras como significant, persistent, unequal e progress podem revelar avaliação do autor, mas precisam ser lidas em contexto. Uma narrativa de avanço pode também reconhecer barreiras remanescentes. Não confunda descrição de discriminação com defesa dela: observe verbos, adjetivos e as consequências que o texto associa ao fato.
 ## Pratique e confira
 Se o texto afirma que acesso à educação “is necessary but not sufficient” para igualdade, qual leitura é correta? Educação é condição importante, mas outras barreiras permanecem. Explique por que uma alternativa dizendo que educação sozinha resolve toda desigualdade contradiz diretamente not sufficient.
+
+# Língua Inglesa | Text Comprehension: Ecology (Greenhouse Gases)
+## Relações no texto científico
+Ao ler ecologia em inglês, identifique agente, processo e consequência. Gases como carbon dioxide e methane podem ser apresentados com fonte, mecanismo e efeito. Não basta reconhecer greenhouse effect: localize se o trecho discute aumento de concentração, retenção de calor, evidência observada ou proposta de redução.
+## Conectores e precisão
+Because, due to e as a result of introduzem causa; therefore e consequently introduzem consequência. Terms como increase, decrease, emissions e absorb precisam de sujeito: quem emite, o que aumenta e qual reservatório absorve? Questões frequentemente trocam agente e efeito mantendo vocabulário parecido.
+## Escopo de afirmações
+Words como may, likely, contributes e one of signalizam probabilidade ou participação parcial. Uma alternativa que muda contributes to para causes all distorce o texto. Diferencie texto que descreve correlação, mecanismo físico conhecido e previsão; cada um tem nível próprio de certeza e evidência.
+## Falsos atalhos
+Não traduza preserve como “preservar” sem ver objeto e contexto, embora muitas vezes seja próximo. Natural não significa automaticamente benéfico, e renewable não significa sem impacto. A resposta deve acompanhar a conclusão do autor, não uma opinião geral sobre meio ambiente.
+## Pratique e confira
+Se o texto diz “Forests absorb carbon, but deforestation releases stored carbon”, explique o contraste. A resposta deve mostrar as duas funções em situações distintas e evitar concluir que toda floresta absorve sempre a mesma quantidade de carbono.
+
+# Língua Inglesa | Text Comprehension: Health – Probiotics
+## Definição pelo contexto
+Textos de saúde costumam definir probiotics como micro-organisms que podem trazer benefício quando consumidos em quantidade adequada. Procure condições e limites da definição: may benefit não é guarantee a cure. Uma boa leitura distingue mecanismo sugerido, resultado de estudo e recomendação prática, sobretudo quando o efeito varia com cepa, dose e população analisada.
+## Estrutura de estudo
+Words como participants, trial, evidence, findings e sample indicam como dados foram obtidos. Pergunte qual população foi estudada, qual comparação foi feita e qual resultado foi medido. Um estudo pequeno pode sugerir associação sem permitir generalização para todas as pessoas, produtos ou situações clínicas, especialmente quando não há grupo de comparação adequado.
+## Vocabulário de cautela
+Potential, preliminary, mixed results e further research is needed reduzem certeza. Contrastadores como however podem introduzir limite após benefício descrito. Em questões, escolha alternativa que mantém essas restrições; respostas absolutas como always, proven for everyone ou no risk geralmente excedem o texto e ignoram a cautela explícita do autor.
+## Inferência responsável
+Não confunda gut microbiome com uma espécie única: é comunidade de microrganismos. Não trate alimento fermentado e suplemento como idênticos sem o texto afirmar concentração e cepa. Recomendações médicas exigem contexto individual; a interpretação escolar deve se limitar à evidência oferecida no fragmento, sem inventar eficácia universal ou indicação clínica.
+## Pratique e confira
+Se um artigo afirma que resultados são “promising but inconclusive”, qual conclusão cabe? Há sinal de possível benefício, mas a evidência ainda não permite conclusão definitiva. Explique por que promising não equivale a proven e cite o termo que mantém a conclusão em aberto.
+
+# Língua Inglesa | Text Comprehension: Discrimination Against Women
+## Identificar ponto de vista
+Trechos sobre discriminação podem combinar relato individual, dado social e argumento normativo. Diferencie fato relatado, interpretação de uma fonte e posição defendida pelo autor. A pergunta central é qual barreira aparece e como o texto a conecta a oportunidades, direitos ou participação, sem substituir leitura por opinião pessoal.
+## Gramática que muda sentido
+Passive voice pode ocultar ou destacar agente: women were excluded enfatiza quem sofreu exclusão; a frase seguinte pode revelar por quem. Comparatives e quantifiers, como less likely e fewer opportunities, não significam ausência total. Observe também tempos verbais para separar histórico, condição atual e mudança proposta.
+## Evidência e generalização
+Uma estatística pode demonstrar disparidade em um conjunto específico, não definir toda experiência feminina. Words como some, many e in certain contexts delimitam alcance. Alternativas erradas costumam transformar padrão descrito em regra universal ou afirmar causa única onde o texto apresenta fatores combinados.
+## Leitura ética e textual
+Reconhecer injustiça não dispensa evidência textual. Não atribua a uma personagem ou autora uma posição que o trecho não sustenta. Ao resumir, mantenha relação entre obstáculo e efeito: discriminação no acesso pode limitar participação, mas o texto pode discutir resistência, mudança institucional ou ambos.
+## Pratique e confira
+Em “Women were less likely to be promoted, despite having similar qualifications”, qual é o contraste? Qualificações semelhantes tornam a diferença de promoção relevante. Explique por que despite impede ler a frase como simples consequência de menor qualificação.

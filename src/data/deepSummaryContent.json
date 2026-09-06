@@ -130,6 +130,84 @@
     ]
   },
   {
+    "subject": "Biologia",
+    "topic": "Divisão Celular",
+    "sections": [
+      {
+        "title": "Continuidade da informação",
+        "content": "Divisão celular distribui material genético e citoplasma entre células-filhas. A mitose conserva, em condições usuais, o número cromossômico e produz células geneticamente semelhantes; a meiose reduz esse número e gera gametas. Antes da divisão, o DNA é duplicado, portanto cromátides-irmãs não são cromossomos homólogos."
+      },
+      {
+        "title": "Mitose e ciclo celular",
+        "content": "Na intérfase, a célula cresce e replica DNA na fase S. Na mitose, cromossomos condensam, alinham-se, cromátides se separam e núcleos se reorganizam. A citocinese divide o citoplasma. Esse processo permite crescimento, reposição de tecidos e reprodução assexuada, mas falhas de controle podem contribuir para proliferação celular desregulada."
+      },
+      {
+        "title": "Meiose e variabilidade",
+        "content": "A meiose possui duas divisões após uma replicação. Na primeira, homólogos se separam; na segunda, cromátides-irmãs separam-se. Crossing-over entre homólogos e segregação independente criam combinações novas. O resultado típico é quatro células haploides, geneticamente distintas, fundamento da reprodução sexuada e da diversidade entre descendentes."
+      },
+      {
+        "title": "Erros de prova",
+        "content": "Não diga que mitose reduz ploidia ou que meiose produz duas células idênticas. Duplicar DNA não duplica necessariamente o número de cromossomos contado por centrômeros. Não confunda cromátides-irmãs, cópias do mesmo cromossomo, com homólogos, que carregam genes correspondentes e podem ter alelos diferentes."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Explique por que uma célula humana com 46 cromossomos, após replicar seu DNA, continua descrita como tendo 46 cromossomos. Relacione centrômero e cromátides. Em seguida, diga em qual divisão meiótica homólogos se separam e por que isso reduz a ploidia."
+      }
+    ]
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Sangue e Imunologia",
+    "sections": [
+      {
+        "title": "Transporte e defesa",
+        "content": "O sangue contém plasma, hemácias, leucócitos e plaquetas. Hemácias transportam gases por hemoglobina; plaquetas participam da coagulação; leucócitos atuam na defesa. Esses componentes têm funções diferentes e não devem ser tratados como “células de imunidade” indistintamente. A composição sanguínea integra transporte, homeostase e proteção."
+      },
+      {
+        "title": "Resposta imune",
+        "content": "A imunidade inata responde rapidamente por barreiras, fagocitose e inflamação, sem alta especificidade. A adaptativa envolve reconhecimento específico por linfócitos B e T. Linfócitos B podem originar plasmócitos produtores de anticorpos; linfócitos T coordenam respostas ou eliminam células infectadas. Memória imunológica torna respostas posteriores mais rápidas e eficientes."
+      },
+      {
+        "title": "Vacina e soro",
+        "content": "Vacinas apresentam antígenos ou instruções para que o organismo desenvolva resposta ativa e memória. Soros fornecem anticorpos prontos, dando proteção passiva imediata e temporária. Após exposição de risco, o tipo de intervenção depende da doença, do tempo e da disponibilidade de imunização prévia. Antibióticos não tratam infecções virais comuns."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Anticorpos não “matam tudo”: ligam-se a antígenos e facilitam neutralização ou ação de outras células. Febre e inflamação são respostas, não sinônimos de doença. Não diga que vacina causa automaticamente a doença completa; formulações são construídas para apresentar estímulo imunológico de maneira controlada."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Compare vacina e soro em início de ação, duração e memória imunológica. Uma resposta correta deve identificar produção própria de anticorpos e memória na vacina, anticorpos prontos e proteção temporária no soro, sem afirmar que ambos funcionam pelo mesmo mecanismo."
+      }
+    ]
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Bioenergética: Fotossíntese e Quimiossíntese",
+    "sections": [
+      {
+        "title": "Converter energia em matéria",
+        "content": "Fotossíntese usa energia luminosa para produzir matéria orgânica a partir de dióxido de carbono e água, liberando oxigênio em organismos oxigênicos. A energia não “cria matéria”: permite reações que armazenam energia química em moléculas orgânicas. Clorofila absorve faixas de luz; folhas parecem verdes porque refletem parte dessa radiação."
+      },
+      {
+        "title": "Duas etapas integradas",
+        "content": "Nas reações dependentes de luz, membranas dos tilacoides capturam energia, movimentam elétrons e produzem ATP e NADPH. No ciclo de Calvin, no estroma, CO₂ é fixado e reduzido usando esses produtos. Chamar essa etapa de “escura” não significa que ocorra apenas à noite; significa que não usa fótons diretamente."
+      },
+      {
+        "title": "Quimiossíntese",
+        "content": "Certas bactérias e arqueias obtêm energia oxidando substâncias inorgânicas, como amônia ou sulfeto, e usam essa energia para fixar carbono. Elas são quimioautotróficas e sustentam processos ecológicos importantes, como nitrificação. Não confunda quimiossíntese com fermentação: ambas não dependem de luz, mas diferem em fonte de energia e organização metabólica."
+      },
+      {
+        "title": "Erros comuns",
+        "content": "Fotossíntese não é o contrário exato de respiração em cada detalhe e etapa. O oxigênio liberado vem da água em fotossíntese oxigênica, não do CO₂. Plantas respiram continuamente; à noite não fazem reações luminosas, mas continuam consumindo oxigênio na respiração celular."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Explique por que aumentar CO₂ não eleva indefinidamente a taxa fotossintética. Identifique outros fatores limitantes, como luz, temperatura, água e capacidade enzimática. Diferencie também o local das reações luminosas do local da fixação de carbono."
+      }
+    ]
+  },
+  {
     "subject": "Química",
     "topic": "Cálculos Estequiométricos",
     "sections": [
@@ -260,6 +338,84 @@
     ]
   },
   {
+    "subject": "Química",
+    "topic": "O Estado Gasoso",
+    "sections": [
+      {
+        "title": "Modelo de partículas",
+        "content": "Gases têm partículas muito separadas, em movimento contínuo e colisões aproximadamente elásticas no modelo ideal. Por isso ocupam todo o recipiente, são compressíveis e exercem pressão nas paredes. Temperatura absoluta mede relação com energia cinética média; em cálculos de gases, use Kelvin, não graus Celsius diretamente."
+      },
+      {
+        "title": "Variáveis de estado",
+        "content": "Pressão, volume, temperatura e quantidade de matéria se relacionam por PV = nRT para gás ideal. Se n é constante, comparar estados exige manter unidades coerentes e identificar o que ficou fixo. Em transformação isotérmica, PV é constante; em isobárica, V/T é constante; em isocórica, P/T é constante."
+      },
+      {
+        "title": "Leitura microscópica",
+        "content": "Aquecer um gás em recipiente rígido aumenta energia cinética média e frequência de colisões, elevando pressão. Com êmbolo móvel sob pressão externa constante, o gás tende a expandir ao aquecer. A explicação microscópica evita decorar leis isoladas e mostra por que condições de contorno definem qual grandeza muda."
+      },
+      {
+        "title": "Limites do ideal",
+        "content": "Gases reais desviam do comportamento ideal em alta pressão e baixa temperatura, quando volume molecular e interações deixam de ser desprezíveis. Condições normais precisam ser especificadas pela convenção usada; não aplique volume molar decorado sem verificar temperatura e pressão do enunciado."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Um gás ideal em recipiente rígido passa de 300 K a 450 K. Como muda a pressão? Ela cresce por fator 450/300 = 1,5. Explique por que o volume não entra no cálculo de razão neste caso e por que Celsius não pode substituir Kelvin."
+      }
+    ]
+  },
+  {
+    "subject": "Química",
+    "topic": "Termoquímica I",
+    "sections": [
+      {
+        "title": "Energia nas reações",
+        "content": "Termoquímica estuda trocas de energia, geralmente como calor, em transformações químicas. Reação exotérmica libera energia e tem ΔH negativo; endotérmica absorve energia e tem ΔH positivo. A entalpia descreve variação entre estados, não uma quantidade de calor “guardada” em uma molécula isolada."
+      },
+      {
+        "title": "Sistema e ambiente",
+        "content": "O sistema é a parte estudada; o ambiente é o restante. Em calorimetria simples, calor perdido por um componente é ganho por outro, então a soma dos calores tende a zero se perdas forem desprezadas. Temperatura subir não basta para classificar reação: é preciso saber se o aquecimento pertence ao sistema ou ao ambiente."
+      },
+      {
+        "title": "Lei de Hess",
+        "content": "Como entalpia é função de estado, a variação total depende apenas de estados inicial e final. Equações intermediárias podem ser somadas, invertidas ou multiplicadas para obter a reação desejada. Ao inverter uma equação, inverta o sinal de ΔH; ao multiplicar coeficientes, multiplique também a variação de entalpia."
+      },
+      {
+        "title": "Erros recorrentes",
+        "content": "Não confunda quebra de ligação, que exige energia, com formação de ligação, que libera energia. Não troque sinal de ΔH por usar a palavra “combustão”: embora combustões comuns sejam exotérmicas, o sinal deve vir dos dados ou do balanço energético. Unidades de kJ e J precisam ser convertidas."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Uma reação libera 250 kJ por mol. Qual é o sinal de ΔH e o que ocorre com o ambiente em condições usuais? ΔH é −250 kJ/mol e o ambiente recebe energia. Explique por que liberar calor não implica que cada reagente tenha temperatura maior que cada produto."
+      }
+    ]
+  },
+  {
+    "subject": "Química",
+    "topic": "Cinética Química",
+    "sections": [
+      {
+        "title": "Velocidade e colisões",
+        "content": "Cinética química investiga a rapidez das reações e seus fatores. Para reagir, partículas devem colidir com orientação adequada e energia suficiente para superar a energia de ativação. Aumentar concentração eleva frequência de colisões; elevar temperatura aumenta tanto frequência quanto fração de partículas energeticamente capazes de reagir."
+      },
+      {
+        "title": "Superfície e catalisador",
+        "content": "Sólidos pulverizados têm maior área exposta e podem reagir mais rapidamente que blocos de mesma massa. Catalisadores oferecem caminho alternativo de menor energia de ativação e aceleram ida e volta de reação reversível. Eles não alteram ΔH, não são consumidos na equação global e não mudam a posição de equilíbrio."
+      },
+      {
+        "title": "Lei de velocidade",
+        "content": "A lei de velocidade é determinada experimentalmente, não apenas pelos coeficientes de uma equação global. Uma etapa lenta pode controlar a rapidez observada. Ao analisar gráfico de concentração por tempo, observe inclinação: quanto mais íngreme a queda de reagente ou subida de produto, maior a velocidade naquele instante."
+      },
+      {
+        "title": "Pegadinhas",
+        "content": "Temperatura não “fornece reagentes”; altera distribuição de energias. Pressão influencia principalmente reações com gases ao mudar concentração efetiva. Catalisador não torna reação não espontânea espontânea de forma permanente; ele reduz barreira cinética, mas não substitui condições termodinâmicas."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que um comprimido efervescente triturado reage mais rápido na água que um inteiro, com mesma massa e temperatura? Relacione área de contato e colisões. Explique por que a quantidade total de gás produzida pode continuar igual quando os reagentes são os mesmos."
+      }
+    ]
+  },
+  {
     "subject": "Língua Inglesa",
     "topic": "Text Comprehension: Taxonomy and Terminology",
     "sections": [
@@ -386,6 +542,84 @@
       {
         "title": "Pratique e confira",
         "content": "Se o texto afirma que acesso à educação “is necessary but not sufficient” para igualdade, qual leitura é correta? Educação é condição importante, mas outras barreiras permanecem. Explique por que uma alternativa dizendo que educação sozinha resolve toda desigualdade contradiz diretamente not sufficient."
+      }
+    ]
+  },
+  {
+    "subject": "Língua Inglesa",
+    "topic": "Text Comprehension: Ecology (Greenhouse Gases)",
+    "sections": [
+      {
+        "title": "Relações no texto científico",
+        "content": "Ao ler ecologia em inglês, identifique agente, processo e consequência. Gases como carbon dioxide e methane podem ser apresentados com fonte, mecanismo e efeito. Não basta reconhecer greenhouse effect: localize se o trecho discute aumento de concentração, retenção de calor, evidência observada ou proposta de redução."
+      },
+      {
+        "title": "Conectores e precisão",
+        "content": "Because, due to e as a result of introduzem causa; therefore e consequently introduzem consequência. Terms como increase, decrease, emissions e absorb precisam de sujeito: quem emite, o que aumenta e qual reservatório absorve? Questões frequentemente trocam agente e efeito mantendo vocabulário parecido."
+      },
+      {
+        "title": "Escopo de afirmações",
+        "content": "Words como may, likely, contributes e one of signalizam probabilidade ou participação parcial. Uma alternativa que muda contributes to para causes all distorce o texto. Diferencie texto que descreve correlação, mecanismo físico conhecido e previsão; cada um tem nível próprio de certeza e evidência."
+      },
+      {
+        "title": "Falsos atalhos",
+        "content": "Não traduza preserve como “preservar” sem ver objeto e contexto, embora muitas vezes seja próximo. Natural não significa automaticamente benéfico, e renewable não significa sem impacto. A resposta deve acompanhar a conclusão do autor, não uma opinião geral sobre meio ambiente."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Se o texto diz “Forests absorb carbon, but deforestation releases stored carbon”, explique o contraste. A resposta deve mostrar as duas funções em situações distintas e evitar concluir que toda floresta absorve sempre a mesma quantidade de carbono."
+      }
+    ]
+  },
+  {
+    "subject": "Língua Inglesa",
+    "topic": "Text Comprehension: Health – Probiotics",
+    "sections": [
+      {
+        "title": "Definição pelo contexto",
+        "content": "Textos de saúde costumam definir probiotics como micro-organisms que podem trazer benefício quando consumidos em quantidade adequada. Procure condições e limites da definição: may benefit não é guarantee a cure. Uma boa leitura distingue mecanismo sugerido, resultado de estudo e recomendação prática, sobretudo quando o efeito varia com cepa, dose e população analisada."
+      },
+      {
+        "title": "Estrutura de estudo",
+        "content": "Words como participants, trial, evidence, findings e sample indicam como dados foram obtidos. Pergunte qual população foi estudada, qual comparação foi feita e qual resultado foi medido. Um estudo pequeno pode sugerir associação sem permitir generalização para todas as pessoas, produtos ou situações clínicas, especialmente quando não há grupo de comparação adequado."
+      },
+      {
+        "title": "Vocabulário de cautela",
+        "content": "Potential, preliminary, mixed results e further research is needed reduzem certeza. Contrastadores como however podem introduzir limite após benefício descrito. Em questões, escolha alternativa que mantém essas restrições; respostas absolutas como always, proven for everyone ou no risk geralmente excedem o texto e ignoram a cautela explícita do autor."
+      },
+      {
+        "title": "Inferência responsável",
+        "content": "Não confunda gut microbiome com uma espécie única: é comunidade de microrganismos. Não trate alimento fermentado e suplemento como idênticos sem o texto afirmar concentração e cepa. Recomendações médicas exigem contexto individual; a interpretação escolar deve se limitar à evidência oferecida no fragmento, sem inventar eficácia universal ou indicação clínica."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Se um artigo afirma que resultados são “promising but inconclusive”, qual conclusão cabe? Há sinal de possível benefício, mas a evidência ainda não permite conclusão definitiva. Explique por que promising não equivale a proven e cite o termo que mantém a conclusão em aberto."
+      }
+    ]
+  },
+  {
+    "subject": "Língua Inglesa",
+    "topic": "Text Comprehension: Discrimination Against Women",
+    "sections": [
+      {
+        "title": "Identificar ponto de vista",
+        "content": "Trechos sobre discriminação podem combinar relato individual, dado social e argumento normativo. Diferencie fato relatado, interpretação de uma fonte e posição defendida pelo autor. A pergunta central é qual barreira aparece e como o texto a conecta a oportunidades, direitos ou participação, sem substituir leitura por opinião pessoal."
+      },
+      {
+        "title": "Gramática que muda sentido",
+        "content": "Passive voice pode ocultar ou destacar agente: women were excluded enfatiza quem sofreu exclusão; a frase seguinte pode revelar por quem. Comparatives e quantifiers, como less likely e fewer opportunities, não significam ausência total. Observe também tempos verbais para separar histórico, condição atual e mudança proposta."
+      },
+      {
+        "title": "Evidência e generalização",
+        "content": "Uma estatística pode demonstrar disparidade em um conjunto específico, não definir toda experiência feminina. Words como some, many e in certain contexts delimitam alcance. Alternativas erradas costumam transformar padrão descrito em regra universal ou afirmar causa única onde o texto apresenta fatores combinados."
+      },
+      {
+        "title": "Leitura ética e textual",
+        "content": "Reconhecer injustiça não dispensa evidência textual. Não atribua a uma personagem ou autora uma posição que o trecho não sustenta. Ao resumir, mantenha relação entre obstáculo e efeito: discriminação no acesso pode limitar participação, mas o texto pode discutir resistência, mudança institucional ou ambos."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Em “Women were less likely to be promoted, despite having similar qualifications”, qual é o contraste? Qualificações semelhantes tornam a diferença de promoção relevante. Explique por que despite impede ler a frase como simples consequência de menor qualificação."
       }
     ]
   },
@@ -828,6 +1062,84 @@
       {
         "title": "Pratique e confira",
         "content": "Uma cultura começa com 500 células e dobra a cada hora. Escreva Q(t) = 500·2ᵗ e calcule após 4 horas: 8.000 células. Explique por que uma previsão linear de “mais 500 por hora” daria resultado diferente já na segunda hora."
+      }
+    ]
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Função Constante e Função Afim",
+    "sections": [
+      {
+        "title": "Taxa de variação",
+        "content": "Uma função afim tem forma f(x)=ax+b. O coeficiente a é taxa de variação: para cada aumento unitário em x, f muda a unidades. O coeficiente b é o valor inicial f(0). Se a é positivo, o gráfico cresce; se é negativo, decresce. Função constante é caso a=0."
+      },
+      {
+        "title": "Reta e interpretação",
+        "content": "O gráfico é uma reta. Dois pontos distintos determinam sua inclinação: a=(y₂−y₁)/(x₂−x₁). Em problemas, unidades importam: uma tarifa pode ter custo fixo b mais valor a por quilômetro. Interpretar a como “valor final” confunde o papel de taxa e condição inicial."
+      },
+      {
+        "title": "Zeros e comparação",
+        "content": "O zero da função resolve ax+b=0, portanto x=−b/a se a não é zero. Duas funções afins podem se encontrar ao igualar seus valores, não seus coeficientes. Paralelas têm mesma inclinação; retas coincidentes também têm mesmo intercepto. A leitura gráfica deve respeitar escala dos eixos."
+      },
+      {
+        "title": "Erros comuns",
+        "content": "Não trate b como ponto no eixo x: ele é corte no eixo y. Uma reta descendente pode ter valores positivos em parte do domínio. Também não extrapole um modelo linear sem verificar se a taxa permanece plausível fora do intervalo descrito pelo problema."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Um serviço cobra 12 reais fixos mais 3 reais por quilômetro. Escreva C(x)=3x+12 e calcule 8 km. Depois encontre a distância para custo 42. Explique o significado de 12 e de 3 sem inverter os dois."
+      }
+    ]
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Sistemas de Equações",
+    "sections": [
+      {
+        "title": "Soluções simultâneas",
+        "content": "Um sistema reúne equações que devem valer ao mesmo tempo. Em duas incógnitas lineares, a solução representa interseção de duas retas. Pode haver uma solução, nenhuma ou infinitas, conforme as retas sejam secantes, paralelas distintas ou coincidentes. Resolver não é escolher uma equação favorita, mas satisfazer todas."
+      },
+      {
+        "title": "Métodos algébricos",
+        "content": "Substituição isola uma incógnita e a coloca na outra equação. Eliminação combina equações para cancelar uma incógnita. Escolha o método que reduz contas, mas preserve igualdade ao multiplicar ou somar membros. Após obter valores, substitua nas equações originais para detectar erro de sinal ou operação."
+      },
+      {
+        "title": "Modelagem",
+        "content": "Problemas de preço, mistura, idade e movimento pedem definição clara das incógnitas antes de montar equações. Cada equação deve expressar uma informação independente. Unidades ajudam: se x é quantidade, não some diretamente com valor monetário. Uma tabela pequena pode revelar relações antes da álgebra."
+      },
+      {
+        "title": "Casos especiais",
+        "content": "Ao eliminar variáveis, chegar a 0=0 indica dependência e infinitas soluções; chegar a número não nulo igual a zero indica incompatibilidade. Não divida por expressão que possa ser zero sem discutir o caso. Em sistemas não lineares, cada solução ainda precisa satisfazer todas as equações e domínio do problema."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Dois ingressos adultos e um estudante custam 70 reais; um adulto e dois estudantes custam 50. Monte o sistema e resolva. O adulto custa 30 e o estudante 10. Mostre como verificar esses valores nas duas compras."
+      }
+    ]
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Trigonometria no Triângulo Retângulo",
+    "sections": [
+      {
+        "title": "Razões de um ângulo",
+        "content": "Em triângulo retângulo, seno, cosseno e tangente relacionam lados a um ângulo agudo. Seno é cateto oposto sobre hipotenusa; cosseno é adjacente sobre hipotenusa; tangente é oposto sobre adjacente. A escolha depende do ângulo indicado, portanto os nomes oposto e adjacente mudam quando o ângulo de referência muda."
+      },
+      {
+        "title": "Pitágoras e coerência",
+        "content": "O teorema de Pitágoras relaciona lados: hipotenusa² = catetos². A hipotenusa é sempre o lado oposto ao ângulo reto e o maior lado. Antes de aplicar uma razão trigonométrica, desenhe e nomeie os lados. Isso reduz inversões frequentes entre seno e cosseno."
+      },
+      {
+        "title": "Problemas de altura",
+        "content": "Ângulo de elevação é medido para cima a partir da horizontal; de depressão, para baixo. Em situações com solo plano, a distância horizontal costuma ser cateto adjacente e altura, oposto. Some altura do observador quando ela existe; a tangente calcula diferença vertical, não altura absoluta automaticamente."
+      },
+      {
+        "title": "Pegadinhas",
+        "content": "Não use tangente com hipotenusa diretamente. Não aplique razões de triângulo retângulo a qualquer triângulo sem construir altura ou usar outra ferramenta. Calculadora deve estar no modo angular correto. Resultado de seno ou cosseno de ângulo agudo fica entre zero e um; valor maior sugere relação invertida."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Uma pessoa vê o topo de uma torre sob ângulo de 30° e está a 20 m da base. Use tan 30°≈0,577 para encontrar a diferença de altura: cerca de 11,5 m. Explique por que 20 m entra como cateto adjacente."
       }
     ]
   },

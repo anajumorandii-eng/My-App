@@ -57,3 +57,39 @@ Potenciais-padrão de redução permitem comparar tendência de receber elétron
 Baterias recarregáveis usam reações que podem ser revertidas com fornecimento externo de energia, mas não são eternas: ciclos alteram materiais e capacidade. Pilhas contêm materiais que exigem descarte adequado. O aparelho não “puxa elétrons do polo positivo”: elétrons percorrem o circuito externo do ânodo para o cátodo.
 ## Pratique e confira
 Em uma pilha Zn|Zn²+ || Cu²+|Cu, indique quem oxida, quem reduz e a direção dos elétrons. Zinco perde elétrons e é ânodo; cobre recebe elétrons e é cátodo. Explique qual é a função da ponte salina sem chamá-la de ponte de elétrons.
+
+# Química | O Estado Gasoso
+## Modelo de partículas
+Gases têm partículas muito separadas, em movimento contínuo e colisões aproximadamente elásticas no modelo ideal. Por isso ocupam todo o recipiente, são compressíveis e exercem pressão nas paredes. Temperatura absoluta mede relação com energia cinética média; em cálculos de gases, use Kelvin, não graus Celsius diretamente.
+## Variáveis de estado
+Pressão, volume, temperatura e quantidade de matéria se relacionam por PV = nRT para gás ideal. Se n é constante, comparar estados exige manter unidades coerentes e identificar o que ficou fixo. Em transformação isotérmica, PV é constante; em isobárica, V/T é constante; em isocórica, P/T é constante.
+## Leitura microscópica
+Aquecer um gás em recipiente rígido aumenta energia cinética média e frequência de colisões, elevando pressão. Com êmbolo móvel sob pressão externa constante, o gás tende a expandir ao aquecer. A explicação microscópica evita decorar leis isoladas e mostra por que condições de contorno definem qual grandeza muda.
+## Limites do ideal
+Gases reais desviam do comportamento ideal em alta pressão e baixa temperatura, quando volume molecular e interações deixam de ser desprezíveis. Condições normais precisam ser especificadas pela convenção usada; não aplique volume molar decorado sem verificar temperatura e pressão do enunciado.
+## Pratique e confira
+Um gás ideal em recipiente rígido passa de 300 K a 450 K. Como muda a pressão? Ela cresce por fator 450/300 = 1,5. Explique por que o volume não entra no cálculo de razão neste caso e por que Celsius não pode substituir Kelvin.
+
+# Química | Termoquímica I
+## Energia nas reações
+Termoquímica estuda trocas de energia, geralmente como calor, em transformações químicas. Reação exotérmica libera energia e tem ΔH negativo; endotérmica absorve energia e tem ΔH positivo. A entalpia descreve variação entre estados, não uma quantidade de calor “guardada” em uma molécula isolada.
+## Sistema e ambiente
+O sistema é a parte estudada; o ambiente é o restante. Em calorimetria simples, calor perdido por um componente é ganho por outro, então a soma dos calores tende a zero se perdas forem desprezadas. Temperatura subir não basta para classificar reação: é preciso saber se o aquecimento pertence ao sistema ou ao ambiente.
+## Lei de Hess
+Como entalpia é função de estado, a variação total depende apenas de estados inicial e final. Equações intermediárias podem ser somadas, invertidas ou multiplicadas para obter a reação desejada. Ao inverter uma equação, inverta o sinal de ΔH; ao multiplicar coeficientes, multiplique também a variação de entalpia.
+## Erros recorrentes
+Não confunda quebra de ligação, que exige energia, com formação de ligação, que libera energia. Não troque sinal de ΔH por usar a palavra “combustão”: embora combustões comuns sejam exotérmicas, o sinal deve vir dos dados ou do balanço energético. Unidades de kJ e J precisam ser convertidas.
+## Pratique e confira
+Uma reação libera 250 kJ por mol. Qual é o sinal de ΔH e o que ocorre com o ambiente em condições usuais? ΔH é −250 kJ/mol e o ambiente recebe energia. Explique por que liberar calor não implica que cada reagente tenha temperatura maior que cada produto.
+
+# Química | Cinética Química
+## Velocidade e colisões
+Cinética química investiga a rapidez das reações e seus fatores. Para reagir, partículas devem colidir com orientação adequada e energia suficiente para superar a energia de ativação. Aumentar concentração eleva frequência de colisões; elevar temperatura aumenta tanto frequência quanto fração de partículas energeticamente capazes de reagir.
+## Superfície e catalisador
+Sólidos pulverizados têm maior área exposta e podem reagir mais rapidamente que blocos de mesma massa. Catalisadores oferecem caminho alternativo de menor energia de ativação e aceleram ida e volta de reação reversível. Eles não alteram ΔH, não são consumidos na equação global e não mudam a posição de equilíbrio.
+## Lei de velocidade
+A lei de velocidade é determinada experimentalmente, não apenas pelos coeficientes de uma equação global. Uma etapa lenta pode controlar a rapidez observada. Ao analisar gráfico de concentração por tempo, observe inclinação: quanto mais íngreme a queda de reagente ou subida de produto, maior a velocidade naquele instante.
+## Pegadinhas
+Temperatura não “fornece reagentes”; altera distribuição de energias. Pressão influencia principalmente reações com gases ao mudar concentração efetiva. Catalisador não torna reação não espontânea espontânea de forma permanente; ele reduz barreira cinética, mas não substitui condições termodinâmicas.
+## Pratique e confira
+Por que um comprimido efervescente triturado reage mais rápido na água que um inteiro, com mesma massa e temperatura? Relacione área de contato e colisões. Explique por que a quantidade total de gás produzida pode continuar igual quando os reagentes são os mesmos.

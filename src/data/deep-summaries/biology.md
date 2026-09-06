@@ -57,3 +57,39 @@ Quando uma característica hereditária aumenta sucesso reprodutivo em certo amb
 Homologias anatômicas, fósseis, biogeografia e semelhanças moleculares sustentam parentesco evolutivo. Não confunda homologias com analogias: asas de morcego e braços humanos têm mesma origem estrutural; asas de inseto e ave têm função semelhante, mas origem distinta. Evolução não implica progresso moral ou complexidade crescente obrigatória.
 ## Pratique e confira
 Uma pequena população funda uma ilha e apresenta frequência rara de um alelo maior que a população original. Qual mecanismo explica isso? Identifique o efeito fundador como caso de deriva genética e explique por que não é preciso supor que o alelo seja vantajoso para aumentar inicialmente.
+
+# Biologia | Divisão Celular
+## Continuidade da informação
+Divisão celular distribui material genético e citoplasma entre células-filhas. A mitose conserva, em condições usuais, o número cromossômico e produz células geneticamente semelhantes; a meiose reduz esse número e gera gametas. Antes da divisão, o DNA é duplicado, portanto cromátides-irmãs não são cromossomos homólogos.
+## Mitose e ciclo celular
+Na intérfase, a célula cresce e replica DNA na fase S. Na mitose, cromossomos condensam, alinham-se, cromátides se separam e núcleos se reorganizam. A citocinese divide o citoplasma. Esse processo permite crescimento, reposição de tecidos e reprodução assexuada, mas falhas de controle podem contribuir para proliferação celular desregulada.
+## Meiose e variabilidade
+A meiose possui duas divisões após uma replicação. Na primeira, homólogos se separam; na segunda, cromátides-irmãs separam-se. Crossing-over entre homólogos e segregação independente criam combinações novas. O resultado típico é quatro células haploides, geneticamente distintas, fundamento da reprodução sexuada e da diversidade entre descendentes.
+## Erros de prova
+Não diga que mitose reduz ploidia ou que meiose produz duas células idênticas. Duplicar DNA não duplica necessariamente o número de cromossomos contado por centrômeros. Não confunda cromátides-irmãs, cópias do mesmo cromossomo, com homólogos, que carregam genes correspondentes e podem ter alelos diferentes.
+## Pratique e confira
+Explique por que uma célula humana com 46 cromossomos, após replicar seu DNA, continua descrita como tendo 46 cromossomos. Relacione centrômero e cromátides. Em seguida, diga em qual divisão meiótica homólogos se separam e por que isso reduz a ploidia.
+
+# Biologia | Sangue e Imunologia
+## Transporte e defesa
+O sangue contém plasma, hemácias, leucócitos e plaquetas. Hemácias transportam gases por hemoglobina; plaquetas participam da coagulação; leucócitos atuam na defesa. Esses componentes têm funções diferentes e não devem ser tratados como “células de imunidade” indistintamente. A composição sanguínea integra transporte, homeostase e proteção.
+## Resposta imune
+A imunidade inata responde rapidamente por barreiras, fagocitose e inflamação, sem alta especificidade. A adaptativa envolve reconhecimento específico por linfócitos B e T. Linfócitos B podem originar plasmócitos produtores de anticorpos; linfócitos T coordenam respostas ou eliminam células infectadas. Memória imunológica torna respostas posteriores mais rápidas e eficientes.
+## Vacina e soro
+Vacinas apresentam antígenos ou instruções para que o organismo desenvolva resposta ativa e memória. Soros fornecem anticorpos prontos, dando proteção passiva imediata e temporária. Após exposição de risco, o tipo de intervenção depende da doença, do tempo e da disponibilidade de imunização prévia. Antibióticos não tratam infecções virais comuns.
+## Pegadinhas frequentes
+Anticorpos não “matam tudo”: ligam-se a antígenos e facilitam neutralização ou ação de outras células. Febre e inflamação são respostas, não sinônimos de doença. Não diga que vacina causa automaticamente a doença completa; formulações são construídas para apresentar estímulo imunológico de maneira controlada.
+## Pratique e confira
+Compare vacina e soro em início de ação, duração e memória imunológica. Uma resposta correta deve identificar produção própria de anticorpos e memória na vacina, anticorpos prontos e proteção temporária no soro, sem afirmar que ambos funcionam pelo mesmo mecanismo.
+
+# Biologia | Bioenergética: Fotossíntese e Quimiossíntese
+## Converter energia em matéria
+Fotossíntese usa energia luminosa para produzir matéria orgânica a partir de dióxido de carbono e água, liberando oxigênio em organismos oxigênicos. A energia não “cria matéria”: permite reações que armazenam energia química em moléculas orgânicas. Clorofila absorve faixas de luz; folhas parecem verdes porque refletem parte dessa radiação.
+## Duas etapas integradas
+Nas reações dependentes de luz, membranas dos tilacoides capturam energia, movimentam elétrons e produzem ATP e NADPH. No ciclo de Calvin, no estroma, CO₂ é fixado e reduzido usando esses produtos. Chamar essa etapa de “escura” não significa que ocorra apenas à noite; significa que não usa fótons diretamente.
+## Quimiossíntese
+Certas bactérias e arqueias obtêm energia oxidando substâncias inorgânicas, como amônia ou sulfeto, e usam essa energia para fixar carbono. Elas são quimioautotróficas e sustentam processos ecológicos importantes, como nitrificação. Não confunda quimiossíntese com fermentação: ambas não dependem de luz, mas diferem em fonte de energia e organização metabólica.
+## Erros comuns
+Fotossíntese não é o contrário exato de respiração em cada detalhe e etapa. O oxigênio liberado vem da água em fotossíntese oxigênica, não do CO₂. Plantas respiram continuamente; à noite não fazem reações luminosas, mas continuam consumindo oxigênio na respiração celular.
+## Pratique e confira
+Explique por que aumentar CO₂ não eleva indefinidamente a taxa fotossintética. Identifique outros fatores limitantes, como luz, temperatura, água e capacidade enzimática. Diferencie também o local das reações luminosas do local da fixação de carbono.

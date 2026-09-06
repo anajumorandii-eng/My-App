@@ -57,3 +57,39 @@ Com a > 0, o gráfico fica acima do eixo x e aproxima-se de zero em uma direçã
 Não use porcentagem como número inteiro dentro do fator: 10% corresponde a 0,10. Não confunda dobrar em cada período com somar a mesma quantidade. Em decaimento, o tempo necessário para reduzir pela metade depende da base e pode ser calculado com logaritmos, não por subtração linear de metade a cada ponto arbitrário.
 ## Pratique e confira
 Uma cultura começa com 500 células e dobra a cada hora. Escreva Q(t) = 500·2ᵗ e calcule após 4 horas: 8.000 células. Explique por que uma previsão linear de “mais 500 por hora” daria resultado diferente já na segunda hora.
+
+# Matemática | Função Constante e Função Afim
+## Taxa de variação
+Uma função afim tem forma f(x)=ax+b. O coeficiente a é taxa de variação: para cada aumento unitário em x, f muda a unidades. O coeficiente b é o valor inicial f(0). Se a é positivo, o gráfico cresce; se é negativo, decresce. Função constante é caso a=0.
+## Reta e interpretação
+O gráfico é uma reta. Dois pontos distintos determinam sua inclinação: a=(y₂−y₁)/(x₂−x₁). Em problemas, unidades importam: uma tarifa pode ter custo fixo b mais valor a por quilômetro. Interpretar a como “valor final” confunde o papel de taxa e condição inicial.
+## Zeros e comparação
+O zero da função resolve ax+b=0, portanto x=−b/a se a não é zero. Duas funções afins podem se encontrar ao igualar seus valores, não seus coeficientes. Paralelas têm mesma inclinação; retas coincidentes também têm mesmo intercepto. A leitura gráfica deve respeitar escala dos eixos.
+## Erros comuns
+Não trate b como ponto no eixo x: ele é corte no eixo y. Uma reta descendente pode ter valores positivos em parte do domínio. Também não extrapole um modelo linear sem verificar se a taxa permanece plausível fora do intervalo descrito pelo problema.
+## Pratique e confira
+Um serviço cobra 12 reais fixos mais 3 reais por quilômetro. Escreva C(x)=3x+12 e calcule 8 km. Depois encontre a distância para custo 42. Explique o significado de 12 e de 3 sem inverter os dois.
+
+# Matemática | Sistemas de Equações
+## Soluções simultâneas
+Um sistema reúne equações que devem valer ao mesmo tempo. Em duas incógnitas lineares, a solução representa interseção de duas retas. Pode haver uma solução, nenhuma ou infinitas, conforme as retas sejam secantes, paralelas distintas ou coincidentes. Resolver não é escolher uma equação favorita, mas satisfazer todas.
+## Métodos algébricos
+Substituição isola uma incógnita e a coloca na outra equação. Eliminação combina equações para cancelar uma incógnita. Escolha o método que reduz contas, mas preserve igualdade ao multiplicar ou somar membros. Após obter valores, substitua nas equações originais para detectar erro de sinal ou operação.
+## Modelagem
+Problemas de preço, mistura, idade e movimento pedem definição clara das incógnitas antes de montar equações. Cada equação deve expressar uma informação independente. Unidades ajudam: se x é quantidade, não some diretamente com valor monetário. Uma tabela pequena pode revelar relações antes da álgebra.
+## Casos especiais
+Ao eliminar variáveis, chegar a 0=0 indica dependência e infinitas soluções; chegar a número não nulo igual a zero indica incompatibilidade. Não divida por expressão que possa ser zero sem discutir o caso. Em sistemas não lineares, cada solução ainda precisa satisfazer todas as equações e domínio do problema.
+## Pratique e confira
+Dois ingressos adultos e um estudante custam 70 reais; um adulto e dois estudantes custam 50. Monte o sistema e resolva. O adulto custa 30 e o estudante 10. Mostre como verificar esses valores nas duas compras.
+
+# Matemática | Trigonometria no Triângulo Retângulo
+## Razões de um ângulo
+Em triângulo retângulo, seno, cosseno e tangente relacionam lados a um ângulo agudo. Seno é cateto oposto sobre hipotenusa; cosseno é adjacente sobre hipotenusa; tangente é oposto sobre adjacente. A escolha depende do ângulo indicado, portanto os nomes oposto e adjacente mudam quando o ângulo de referência muda.
+## Pitágoras e coerência
+O teorema de Pitágoras relaciona lados: hipotenusa² = catetos². A hipotenusa é sempre o lado oposto ao ângulo reto e o maior lado. Antes de aplicar uma razão trigonométrica, desenhe e nomeie os lados. Isso reduz inversões frequentes entre seno e cosseno.
+## Problemas de altura
+Ângulo de elevação é medido para cima a partir da horizontal; de depressão, para baixo. Em situações com solo plano, a distância horizontal costuma ser cateto adjacente e altura, oposto. Some altura do observador quando ela existe; a tangente calcula diferença vertical, não altura absoluta automaticamente.
+## Pegadinhas
+Não use tangente com hipotenusa diretamente. Não aplique razões de triângulo retângulo a qualquer triângulo sem construir altura ou usar outra ferramenta. Calculadora deve estar no modo angular correto. Resultado de seno ou cosseno de ângulo agudo fica entre zero e um; valor maior sugere relação invertida.
+## Pratique e confira
+Uma pessoa vê o topo de uma torre sob ângulo de 30° e está a 20 m da base. Use tan 30°≈0,577 para encontrar a diferença de altura: cerca de 11,5 m. Explique por que 20 m entra como cateto adjacente.
