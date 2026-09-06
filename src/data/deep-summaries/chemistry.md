@@ -93,3 +93,27 @@ A lei de velocidade é determinada experimentalmente, não apenas pelos coeficie
 Temperatura não “fornece reagentes”; altera distribuição de energias. Pressão influencia principalmente reações com gases ao mudar concentração efetiva. Catalisador não torna reação não espontânea espontânea de forma permanente; ele reduz barreira cinética, mas não substitui condições termodinâmicas.
 ## Pratique e confira
 Por que um comprimido efervescente triturado reage mais rápido na água que um inteiro, com mesma massa e temperatura? Relacione área de contato e colisões. Explique por que a quantidade total de gás produzida pode continuar igual quando os reagentes são os mesmos.
+
+# Química | Ligações Químicas e Alotropia
+## Estabilidade por interação
+Ligações químicas resultam de interações elétricas que podem diminuir energia do conjunto. Ligação iônica envolve atração entre íons formados por transferência predominante de elétrons; covalente envolve compartilhamento; metálica envolve cátions em rede e elétrons deslocalizados. A classificação é modelo de ligação predominante, não etiqueta absoluta para toda propriedade.
+## Estrutura e propriedade
+Sólidos iônicos costumam ter altos pontos de fusão e conduzem quando fundidos ou dissolvidos, pois íons ficam móveis. Substâncias moleculares podem ter pontos de fusão menores conforme forças intermoleculares. Metais conduzem no sólido por elétrons deslocalizados. Compare estrutura microscópica antes de memorizar listas de características.
+## Alotropia do carbono
+Alótropos são formas estruturais diferentes de um mesmo elemento. Diamante possui rede covalente tridimensional e é duro; grafite tem camadas com elétrons deslocalizados e conduz ao longo delas. Grafeno e fulerenos mostram que composição idêntica não determina propriedade sozinha: arranjo atômico importa decisivamente.
+## Erros comuns
+Não confunda molécula covalente com rede covalente. Diamante e grafite não são compostos diferentes, pois contêm apenas carbono. Ligação polar não transforma automaticamente a molécula em polar; geometria também importa. Condutividade de solução iônica não vem de elétrons livres como em metal, mas de íons móveis.
+## Pratique e confira
+Explique por que grafite pode conduzir eletricidade e diamante não, embora ambos sejam carbono. A resposta deve relacionar disposição dos átomos, elétrons disponíveis e estrutura, não apenas dizer que um é “mais forte” que o outro.
+
+# Química | Processos de Oxirredução
+## Transferência de elétrons
+Oxirredução envolve variação de números de oxidação e transferência efetiva ou formal de elétrons. Oxidação aumenta número de oxidação e corresponde à perda de elétrons; redução diminui e corresponde ao ganho. As duas ocorrem simultaneamente: elétrons perdidos por uma espécie precisam ser recebidos por outra.
+## Identificar agentes
+Agente oxidante recebe elétrons e é reduzido; agente redutor doa elétrons e é oxidado. Esses nomes descrevem o efeito sobre a outra espécie, fonte clássica de inversão. Acompanhe números de oxidação de elementos que mudam, em vez de decidir apenas por presença de oxigênio, pois há reações redox sem oxigênio.
+## Balanceamento básico
+Em equações, iguale primeiro átomos e depois carga e elétrons conforme o método adequado ao meio. A conservação de carga é tão importante quanto a de massa. Em meio aquoso, H₂O, H+ e OH− podem participar do balanceamento conforme o pH indicado, mas não devem ser introduzidos sem necessidade.
+## Aplicações reais
+Combustão, corrosão, branqueamento e funcionamento de pilhas envolvem redox. Ferrugem é oxidação do ferro em condições que incluem água e oxigênio; proteção por pintura ou galvanização reduz contato ou altera a tendência de oxidação. “Oxidar” não significa simplesmente queimar rapidamente.
+## Pratique e confira
+Na reação Zn + Cu²+ → Zn²+ + Cu, identifique quem oxida, quem reduz e os agentes. Mostre a mudança de números de oxidação e relacione-a à direção de elétrons, evitando usar cor ou estado físico como critério.

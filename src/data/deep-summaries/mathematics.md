@@ -93,3 +93,27 @@ O teorema de Pitágoras relaciona lados: hipotenusa² = catetos². A hipotenusa 
 Não use tangente com hipotenusa diretamente. Não aplique razões de triângulo retângulo a qualquer triângulo sem construir altura ou usar outra ferramenta. Calculadora deve estar no modo angular correto. Resultado de seno ou cosseno de ângulo agudo fica entre zero e um; valor maior sugere relação invertida.
 ## Pratique e confira
 Uma pessoa vê o topo de uma torre sob ângulo de 30° e está a 20 m da base. Use tan 30°≈0,577 para encontrar a diferença de altura: cerca de 11,5 m. Explique por que 20 m entra como cateto adjacente.
+
+# Matemática | Médias
+## Resumo depende do peso
+Média aritmética simples soma valores e divide pela quantidade. Ela representa equilíbrio apenas quando cada observação tem mesmo peso. Média ponderada usa pesos: multiplique cada valor pelo peso, some e divida pela soma dos pesos. Notas com pesos diferentes e velocidades em tempos diferentes exigem atenção ao tipo de média, pois cada observação contribui de modo desigual.
+## Média de velocidades
+Velocidade média é deslocamento total dividido por tempo total. Em dois trechos de mesma distância a velocidades diferentes, não use média aritmética das velocidades sem verificar tempos. Se uma viagem tem ida e volta iguais a 60 km/h e 40 km/h, a média é 48 km/h, não 50, porque o trecho lento consome mais tempo e pesa mais no total.
+## Mediana e moda
+Mediana é valor central após ordenar dados e é menos sensível a extremos; moda é valor mais frequente. Uma distribuição pode não ter moda única. Escolha medida que responde à pergunta: renda com valores muito extremos pode ser melhor descrita por mediana do que por média, pois poucos valores altos deslocam a média e escondem a situação típica.
+## Checagens úteis
+A média deve ficar entre menor e maior valor quando pesos são positivos. Não calcule mediana sem ordenar. Não confunda “mais comum” com “médio”. Em tabela de frequências, cada valor deve ser repetido mentalmente conforme frequência ou multiplicado por ela no cálculo da média ponderada, sempre conferindo a soma total de observações.
+## Pratique e confira
+Calcule média de notas 6, 8 e 10 com pesos 1, 2 e 3. O resultado é (6+16+30)/6=52/6. Explique por que 8 não basta como resposta, embora seja a média simples dos três valores e ignore os pesos informados.
+
+# Matemática | Técnicas de Contagem
+## Contar sem listar tudo
+Princípio multiplicativo diz que escolhas sucessivas com m e n possibilidades formam m·n resultados quando cada opção da primeira pode combinar com cada opção da segunda. Princípio aditivo soma casos mutuamente exclusivos. Antes de calcular, defina o objeto contado e verifique se ordens diferentes representam resultado diferente.
+## Permutação e combinação
+Permutação organiza todos os elementos e considera ordem: n! possibilidades para n distintos. Arranjo escolhe e ordena parte dos elementos. Combinação escolhe sem considerar ordem: escolher Ana e Bia é o mesmo grupo que Bia e Ana. Fórmulas ajudam depois de decidir se a ordem tem significado no enunciado.
+## Separar casos
+Problemas com restrições, como “pelo menos um”, muitas vezes ficam mais simples pelo complemento. Conte total e subtraia casos proibidos, desde que conjuntos não sejam sobrepostos indevidamente. Diagramas de árvore ajudam a visualizar etapas; casos devem ser disjuntos antes de suas quantidades serem somadas.
+## Erros típicos
+Não divida por fatorial sem motivo: isso geralmente corrige ordem repetida em combinações. Não multiplique alternativas que na verdade competem entre si. Repetição permitida ou proibida muda completamente a contagem. Verifique com exemplos pequenos se sua fórmula conta cada resultado exatamente uma vez.
+## Pratique e confira
+De quantas formas escolher uma comissão de 3 entre 8 pessoas? Use combinação, pois ordem não importa: C(8,3)=56. Explique por que 8·7·6 conta o mesmo trio várias vezes e qual fator remove essa repetição.

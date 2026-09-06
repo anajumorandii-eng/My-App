@@ -93,3 +93,27 @@ Uma estatística pode demonstrar disparidade em um conjunto específico, não de
 Reconhecer injustiça não dispensa evidência textual. Não atribua a uma personagem ou autora uma posição que o trecho não sustenta. Ao resumir, mantenha relação entre obstáculo e efeito: discriminação no acesso pode limitar participação, mas o texto pode discutir resistência, mudança institucional ou ambos.
 ## Pratique e confira
 Em “Women were less likely to be promoted, despite having similar qualifications”, qual é o contraste? Qualificações semelhantes tornam a diferença de promoção relevante. Explique por que despite impede ler a frase como simples consequência de menor qualificação.
+
+# Língua Inglesa | Text Comprehension: Hurricanes
+## Sequência causal
+Textos sobre hurricanes apresentam condições de formação, trajetória, risco e resposta. Procure conectores que organizam a cadeia: warm water pode fornecer energia; low pressure e wind patterns influenciam organização e deslocamento. Não transforme uma condição necessária em causa única se o texto descreve vários fatores atuando juntos.
+## Vocabulário funcional
+Storm surge é elevação anormal da água junto à costa; rainfall é chuva; forecast é previsão; evacuation é retirada preventiva. Palavras conhecidas precisam de contexto: warning não é o próprio desastre, mas aviso de risco. Gráficos e mapas podem indicar trajetória provável, categoria ou área afetada.
+## Nível de certeza
+Forecasts usam may, expected to e likely porque trajetória e intensidade possuem incerteza. Uma alternativa correta preserva probabilidade e período indicado. Não confunda alerta antecipado com afirmação de que o evento já atingiu a região; tempos verbais e advérbios mostram se a consequência é presente, passada ou projetada.
+## Leitura de impacto
+Um texto pode diferenciar hazard, fenômeno físico, de disaster, impacto social amplificado por exposição e vulnerabilidade. Duas regiões sob mesma tempestade podem sofrer efeitos distintos por infraestrutura, moradia e preparação. Essa distinção evita concluir que intensidade meteorológica sozinha explica todas as perdas.
+## Pratique e confira
+Se uma notícia afirma que residents are advised to evacuate because storm surge is expected, o que é fato e o que é previsão? Diferencie recomendação atual, risco projetado e causa da recomendação, sem afirmar que a inundação já ocorreu.
+
+# Língua Inglesa | Text Comprehension: Bacteria
+## Ler definição e contraste
+Textos sobre bacteria costumam explicar que são organismos procariontes, sem núcleo delimitado por membrana, e podem ter papéis benéficos ou patogênicos. Não associe bacteria automaticamente a doença: muitas participam de decomposição, microbiota e ciclos biogeoquímicos. Identifique se o texto descreve espécie, grupo ou condição específica.
+## Estrutura da explicação
+Terms como cell wall, reproduce, antibiotic e resistance aparecem ligados a mecanismo. Antibiotics podem afetar alvos bacterianos, mas uso inadequado seleciona bactérias resistentes. O texto pode distinguir resistência da pessoa e resistência da bactéria: quem muda por seleção são populações bacterianas, não o corpo do paciente.
+## Evidência e recomendação
+When, unless e if indicam condição para recomendação. Um artigo pode aconselhar completar tratamento ou evitar automedicação para reduzir seleção de resistentes. Não conclua que todo uso de antibiótico produz resistência imediata; a leitura correta preserva processo probabilístico, pressão seletiva e contexto de uso.
+## Falsas equivalências
+Não trate bacteria e viruses como sinônimos. Nem toda bactéria possui mesma sensibilidade a medicamentos. Um resultado in vitro não garante efeito idêntico em pessoas. Alternativas que usam always ou never costumam ignorar diversidade microbiana e as qualificações presentes no texto.
+## Pratique e confira
+Explique em inglês simples ou português por que antibiotics do not treat viral infections. Inclua diferença de alvo biológico e diga por que isso não significa que toda doença com febre seja automaticamente viral ou bacteriana.

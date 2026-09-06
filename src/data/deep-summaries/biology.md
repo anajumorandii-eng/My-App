@@ -93,3 +93,27 @@ Certas bactérias e arqueias obtêm energia oxidando substâncias inorgânicas, 
 Fotossíntese não é o contrário exato de respiração em cada detalhe e etapa. O oxigênio liberado vem da água em fotossíntese oxigênica, não do CO₂. Plantas respiram continuamente; à noite não fazem reações luminosas, mas continuam consumindo oxigênio na respiração celular.
 ## Pratique e confira
 Explique por que aumentar CO₂ não eleva indefinidamente a taxa fotossintética. Identifique outros fatores limitantes, como luz, temperatura, água e capacidade enzimática. Diferencie também o local das reações luminosas do local da fixação de carbono.
+
+# Biologia | Ciclo do Nitrogênio
+## Um elemento em formas diferentes
+O nitrogênio atmosférico é abundante, mas N₂ não é usado diretamente pela maioria dos seres vivos. Bactérias convertem-no em formas assimiláveis, como amônia e nitrato. Plantas incorporam nitrogênio em aminoácidos e bases nitrogenadas; consumidores o obtêm pela alimentação. O ciclo depende de transformações químicas e de organismos específicos, conectando atmosfera, solo, água e cadeias alimentares.
+## Etapas microbianas
+Fixação transforma N₂ em amônia; nitrificação produz nitrito e nitrato; assimilação incorpora compostos nitrogenados à matéria orgânica. Decomposição devolve amônia ao solo. Desnitrificação reduz nitratos a N₂, retornando-o à atmosfera. Cada etapa não é feita por “qualquer bactéria”, e alterações no solo afetam a disponibilidade para produtores e a produtividade de ecossistemas inteiros.
+## Agricultura e ambiente
+Fertilizantes fornecem nitrogênio e podem elevar produtividade, mas excesso de nitrato pode alcançar corpos d’água. Leguminosas associadas a bactérias fixadoras reduzem necessidade de adubação nitrogenada em certas rotações. A compreensão do ciclo permite explicar por que fertilidade do solo, produção agrícola e poluição aquática se conectam em escalas locais e regionais.
+## Erros recorrentes
+Não diga que plantas absorvem N₂ diretamente do ar pelas folhas como regra geral. Nitrito e nitrato não são sinônimos. Desnitrificação não “cria adubo”: remove formas disponíveis do solo e devolve N₂ à atmosfera. A decomposição participa do ciclo porque matéria orgânica contém nitrogênio, que precisa ser mineralizado e novamente disponibilizado.
+## Pratique e confira
+Explique como fertilizante em excesso pode contribuir para proliferação de algas. Relacione aumento de nutrientes, crescimento de produtores e alterações posteriores na água. Indique também qual etapa do ciclo devolve nitrogênio molecular à atmosfera e por que ela diminui a disponibilidade no solo.
+
+# Biologia | Vírus
+## Entidades acelulares
+Vírus são estruturas acelulares formadas por material genético envolto por cápside e, em alguns casos, envelope. Não possuem metabolismo próprio nem ribossomos para sintetizar proteínas. Por isso dependem da maquinaria de células hospedeiras para replicar seus componentes. Esse fato explica por que não são tratados como células vivas em classificações escolares usuais.
+## Replicação dependente
+Um vírus reconhece receptores, entra ou injeta material genético e usa recursos da célula para produzir cópias. Em ciclo lítico, novas partículas são liberadas com dano celular; em outros ciclos, genoma viral pode permanecer associado ao material da hospedeira. A especificidade de receptor ajuda a explicar por que certos vírus infectam determinados tecidos ou espécies.
+## Prevenção e tratamento
+Vacinas treinam resposta imune contra antígenos virais e reduzem risco de doença ou gravidade, conforme o agente. Antivirais agem em etapas específicas de replicação, mas antibióticos não funcionam contra vírus porque alvos bacterianos, como parede celular e ribossomos próprios, não estão presentes em vírus.
+## Pegadinhas
+Não confunda vírus com bactéria nem diga que todo vírus possui envelope. Resfriado e gripe são doenças virais, mas não são a mesma infecção. Material genético viral pode ser DNA ou RNA, não ambos necessariamente. Contágio não é prova de que toda pessoa exposta desenvolverá sintomas.
+## Pratique e confira
+Justifique por que antibiótico não trata uma infecção viral usando estrutura e metabolismo. Em seguida, explique como uma vacina pode proteger antes do contato com o agente sem ser um medicamento que mata diretamente partículas virais.
