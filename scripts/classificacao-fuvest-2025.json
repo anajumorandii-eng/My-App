@@ -1,0 +1,294 @@
+{
+  "_comentario": [
+    "Classificação por matéria, tópico e subtópico das questões da Fuvest 2025",
+    "(prova V1) aproveitadas por scripts/extrair-questoes-oficiais.ts.",
+    "",
+    "Mesma convenção da classificação de 2026: 'alta' entra no app, 'baixa'",
+    "fica de fora até revisão. O capítulo tem que existir na lista de chapters",
+    "do tópico em mockTopics — há um teste do repositório que cobra isso.",
+    "",
+    "Coluna V1 do gabarito verificada resolvendo a questão 45 à mão: aos 19",
+    "anos, mulheres = 2x58 - 54,7 = 61,3; diferença de 6,6 mantida aos 20 dá",
+    "mulheres = 60,4 e média (53,8+60,4)/2 = 57,1 — alternativa E, que é o que",
+    "o gabarito V1 traz."
+  ],
+  "questoes": {
+    "4": {
+      "subject": "História",
+      "topicId": "his_brasil_colonia",
+      "chapter": "A Interiorização da Colonização",
+      "confianca": "baixa"
+    },
+    "7": {
+      "subject": "Filosofia",
+      "topicId": "fil_aristoteles",
+      "chapter": "",
+      "confianca": "baixa",
+      "_nota": "Falacias/logica nao tem topico proprio no curriculo. fil_aristoteles e o mais proximo, mas a questao nao cobra Aristoteles — cobra identificar falacia numa tira. Alem disso depende da tira. Fora."
+    },
+    "9": {
+      "subject": "Sociologia",
+      "topicId": "soc_globalizacao",
+      "chapter": "A Sociedade da Informação",
+      "confianca": "baixa"
+    },
+    "10": {
+      "subject": "Sociologia",
+      "topicId": "soc_cultura_identidade",
+      "chapter": "Identidade e Diferença",
+      "confianca": "alta"
+    },
+    "11": {
+      "subject": "Português",
+      "topicId": "por_sintaxe",
+      "chapter": "Orações Coordenadas",
+      "confianca": "baixa"
+    },
+    "12": {
+      "subject": "Sociologia",
+      "topicId": "soc_globalizacao",
+      "chapter": "A Sociedade da Informação",
+      "confianca": "alta"
+    },
+    "13": {
+      "subject": "História",
+      "topicId": "his_brasil_colonia",
+      "chapter": "Grandes Navegações e Conquista Colonial",
+      "confianca": "alta"
+    },
+    "14": {
+      "subject": "História",
+      "topicId": "his_brasil_imperio",
+      "chapter": "Brasil Império: Formação do Estado Nacional Brasileiro",
+      "confianca": "alta"
+    },
+    "15": {
+      "subject": "Inglês",
+      "topicId": "ing_01",
+      "chapter": "Text Comprehension: Discrimination Against Women",
+      "confianca": "alta"
+    },
+    "21": {
+      "subject": "Química",
+      "topicId": "qui_eletroquimica",
+      "chapter": "Introdução ao Estudo das Pilhas e Baterias",
+      "confianca": "alta"
+    },
+    "24": {
+      "subject": "Química",
+      "topicId": "qui_inorganica",
+      "chapter": "Química Inorgânica",
+      "confianca": "baixa"
+    },
+    "27": {
+      "subject": "Geografia",
+      "topicId": "geo_climatologia_socioambiental",
+      "chapter": "Desafios Ambientais do Século XXI",
+      "confianca": "alta"
+    },
+    "28": {
+      "subject": "Física",
+      "topicId": "fis_gravitacao_circular",
+      "chapter": "Leis da Gravitação",
+      "confianca": "alta"
+    },
+    "29": {
+      "subject": "Biologia",
+      "topicId": "bio_evolucao",
+      "chapter": "Mecanismos da Evolução Biológica",
+      "confianca": "alta"
+    },
+    "31": {
+      "subject": "Biologia",
+      "topicId": "bio_ecologia",
+      "chapter": "Introdução à Ecologia",
+      "confianca": "alta"
+    },
+    "32": {
+      "subject": "Física",
+      "topicId": "fis_ondulatoria",
+      "chapter": "Fenômenos Ondulatórios: Difração, Polarização e Ressonância",
+      "confianca": "alta"
+    },
+    "33": {
+      "subject": "Física",
+      "topicId": "fis_estatica",
+      "chapter": "Hidrostática: Densidade e Pressão",
+      "confianca": "baixa"
+    },
+    "34": {
+      "subject": "Português",
+      "topicId": "por_lit_modernismo",
+      "chapter": "Graciliano Ramos",
+      "confianca": "baixa"
+    },
+    "35": {
+      "subject": "Português",
+      "topicId": "por_lit_modernismo",
+      "chapter": "Segunda Geração Modernista: Prosa",
+      "confianca": "baixa"
+    },
+    "36": {
+      "subject": "Português",
+      "topicId": "por_lit_contemporanea",
+      "chapter": "Literatura Lusófona Contemporânea",
+      "confianca": "alta"
+    },
+    "37": {
+      "subject": "Português",
+      "topicId": "por_texto",
+      "chapter": "Função Poética e Linguagem Literária",
+      "confianca": "baixa"
+    },
+    "38": {
+      "subject": "Português",
+      "topicId": "por_texto",
+      "chapter": "Figuras de Linguagem",
+      "confianca": "baixa"
+    },
+    "40": {
+      "subject": "Sociologia",
+      "topicId": "soc_movimentos_sociais",
+      "chapter": "Cidadania e Direitos",
+      "confianca": "alta"
+    },
+    "41": {
+      "subject": "Inglês",
+      "topicId": "ing_01",
+      "chapter": "Text Comprehension: Songs and Poems",
+      "confianca": "alta"
+    },
+    "42": {
+      "subject": "Português",
+      "topicId": "por_texto",
+      "chapter": "Função Poética e Linguagem Literária",
+      "confianca": "baixa"
+    },
+    "43": {
+      "subject": "Português",
+      "topicId": "por_lit_modernismo",
+      "chapter": "Carlos Drummond de Andrade",
+      "confianca": "alta"
+    },
+    "45": {
+      "subject": "Matemática",
+      "topicId": "mat_dados_probabilidade",
+      "chapter": "Estatística Descritiva",
+      "confianca": "alta"
+    },
+    "46": {
+      "subject": "Biologia",
+      "topicId": "bio_botanica",
+      "chapter": "Plantas Terrestres II: Gimnospermas e Angiospermas",
+      "confianca": "alta"
+    },
+    "50": {
+      "subject": "Geografia",
+      "topicId": "geo_fisica_brasil",
+      "chapter": "Domínios Morfoclimáticos",
+      "confianca": "alta"
+    },
+    "54": {
+      "subject": "Biologia",
+      "topicId": "bio_ecologia",
+      "chapter": "Dinâmica de Populações",
+      "confianca": "alta"
+    },
+    "55": {
+      "subject": "Biologia",
+      "topicId": "bio_zoologia",
+      "chapter": "Introdução aos Cordados e os Peixes",
+      "confianca": "alta"
+    },
+    "56": {
+      "subject": "Química",
+      "topicId": "qui_inorganica",
+      "chapter": "Química Inorgânica",
+      "confianca": "baixa"
+    },
+    "58": {
+      "subject": "Química",
+      "topicId": "qui_inorganica",
+      "chapter": "Química Inorgânica",
+      "confianca": "baixa"
+    },
+    "62": {
+      "subject": "Física",
+      "topicId": "fis_energia",
+      "chapter": "Sistemas Conservativos e Sistemas Não Conservativos",
+      "confianca": "alta"
+    },
+    "64": {
+      "subject": "Química",
+      "topicId": "qui_termoquimica",
+      "chapter": "Termoquímica I",
+      "confianca": "baixa"
+    },
+    "65": {
+      "subject": "Português",
+      "topicId": "por_texto",
+      "chapter": "Os Dois Níveis da Leitura",
+      "confianca": "baixa"
+    },
+    "66": {
+      "subject": "Português",
+      "topicId": "por_sintaxe",
+      "chapter": "Vozes Verbais",
+      "confianca": "alta"
+    },
+    "73": {
+      "subject": "Química",
+      "topicId": "qui_gases",
+      "chapter": "O Estado Gasoso",
+      "confianca": "alta"
+    },
+    "74": {
+      "subject": "Química",
+      "topicId": "qui_gases",
+      "chapter": "Estudo dos Gases II",
+      "confianca": "baixa"
+    },
+    "81": {
+      "subject": "História",
+      "topicId": "his_brasil_colonia",
+      "chapter": "A Mineração no Brasil Colonial",
+      "confianca": "alta"
+    },
+    "82": {
+      "subject": "Português",
+      "topicId": "por_lit_romantismo_realismo",
+      "chapter": "Realismo Português: Eça de Queirós",
+      "confianca": "alta"
+    },
+    "83": {
+      "subject": "Português",
+      "topicId": "por_lit_modernismo",
+      "chapter": "Segunda Geração Modernista: Prosa",
+      "confianca": "alta"
+    },
+    "84": {
+      "subject": "Português",
+      "topicId": "por_lit_classica_barroca",
+      "chapter": "A Estética Neoclássica",
+      "confianca": "alta"
+    },
+    "88": {
+      "subject": "Geografia",
+      "topicId": "geo_climatologia_socioambiental",
+      "chapter": "Geopolítica Ambiental",
+      "confianca": "alta"
+    },
+    "89": {
+      "subject": "Português",
+      "topicId": "por_lit_contemporanea",
+      "chapter": "Literatura Lusófona Contemporânea",
+      "confianca": "baixa"
+    },
+    "90": {
+      "subject": "Sociologia",
+      "topicId": "soc_cultura_identidade",
+      "chapter": "Identidade e Diferença",
+      "confianca": "baixa"
+    }
+  }
+}
