@@ -1,0 +1,39 @@
+name: Sincronizar provas brutas
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/sync_provas_brutas.py"
+      - ".github/workflows/sync-provas-brutas.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install requests beautifulsoup4
+
+      - name: Baixar PDFs oficiais
+        run: python scripts/sync_provas_brutas.py
+
+      - name: Commitar PDFs
+        run: |
+          git config user.name "JUJU Provas Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add "provas brutas"
+          if git diff --cached --quiet; then
+            echo "Nenhum PDF novo."
+          else
+            git commit -m "Adiciona provas oficiais FUVEST 2023-2026"
+            git push
+          fi
