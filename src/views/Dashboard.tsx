@@ -126,6 +126,8 @@ export default function Dashboard() {
     'Português',
     'Literatura',
     'Redação',
+    'Filosofia',
+    'Sociologia',
     'Atualidades',
   ];
 

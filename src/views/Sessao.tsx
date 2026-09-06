@@ -50,7 +50,7 @@ const HONEST_FOCUS_LABEL = 'Reconstrua a base sem apoio; ao final, avalie o que 
 const TOPIC_FALLBACK_WARNING = 'O tópico solicitado não está mais no plano de hoje — mostrando sua prioridade atual.';
 const SUBJECT_OPTIONS = [
   'Física', 'Matemática', 'Biologia', 'Química', 'História',
-  'Geografia', 'Português', 'Literatura', 'Redação', 'Atualidades',
+  'Geografia', 'Português', 'Literatura', 'Redação', 'Filosofia', 'Sociologia', 'Atualidades',
 ] as const;
 
 export default function Sessao() {

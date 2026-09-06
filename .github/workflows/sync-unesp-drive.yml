@@ -1,11 +1,10 @@
 name: Sincronizar UNESP do Drive
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - "scripts/sync_unesp_drive.py"
-      - ".github/workflows/sync-unesp-drive.yml"
+  # Gatilho por push desativado: sem Git LFS ativo, cada execução commitava
+  # o PDF como binário cru e inchava o histórico de forma permanente.
+  # Reativar só depois de confirmar que os PDFs entram como ponteiro LFS
+  # (ver "Git LFS" no README de "provas brutas").
   workflow_dispatch:
 
 permissions:
@@ -15,16 +14,36 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
+      # Sem lfs: true de propósito — o checkout traria os objetos LFS do
+      # repositório inteiro (hoje ~2,5 GB) a cada execução, consumindo banda
+      # à toa. O job apenas acrescenta PDFs novos, e o filtro do LFS é
+      # aplicado no git add; ponteiros no working tree bastam.
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
       - run: pip install gdown
       - run: python scripts/sync_unesp_drive.py
+
+      - name: Ativar Git LFS
+        run: git lfs install --local
       - run: |
           git config user.name "JUJU Provas Bot"
           git config user.email "actions@users.noreply.github.com"
           git add "provas brutas/UNESP"
+          # Aborta se algum PDF entrou como binário cru em vez de ponteiro LFS.
+          # Sem isso, cada execução engorda o histórico de forma permanente:
+          # apagar o arquivo depois não recupera o espaço.
+          # -z porque o caminho tem espaço ("provas brutas").
+          git diff --cached --name-only -z -- "provas brutas" \
+            | while IFS= read -r -d '' f; do
+                case "$f" in *.pdf|*.PDF) ;; *) continue ;; esac
+                if ! git show ":$f" | head -c 20 | grep -q "^version https"; then
+                  echo "ERRO: $f entrou como binário cru, não como ponteiro LFS." >&2
+                  echo "Confira o padrão em .gitattributes e se o git-lfs está ativo." >&2
+                  exit 1
+                fi
+              done || exit 1
           git diff --cached --quiet || git commit -m "Adiciona provas UNESP 2023-2026"
           for i in 1 2 3 4 5; do
             git pull --rebase origin main

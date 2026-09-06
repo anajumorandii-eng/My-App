@@ -14,3 +14,8 @@ tests/e2e/.artifacts/
 # Texto extraído (OCR) das apostilas — material protegido por direitos
 # autorais da Anglo, não deve ficar no histórico do git.
 materiais-extraidos/
+
+# Texto extraído das provas em "provas brutas/" — gerado por
+# scripts/extract-provas.ts, insumo de trabalho e não fonte da verdade.
+provas-extraidas/
+.scratch/
