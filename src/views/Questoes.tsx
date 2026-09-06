@@ -90,6 +90,16 @@ export default function Questoes() {
     return subjectFilter === 'Todas' ? base : base.filter((q) => q.subject === subjectFilter);
   }, [mockQuestions, subjectFilter, onlyRealExams]);
 
+  // Quantas questões reais existem na matéria selecionada. Vai no rótulo do
+  // botão porque, sem o número, um banco desatualizado e um filtro quebrado
+  // são indistinguíveis: nos dois casos "não acontece nada" ao clicar.
+  const realExamCount = useMemo(() => {
+    const base = subjectFilter === 'Todas'
+      ? mockQuestions
+      : mockQuestions.filter((q) => q.subject === subjectFilter);
+    return base.filter((q) => q.examSource).length;
+  }, [mockQuestions, subjectFilter]);
+
   const topicTree = useMemo(() => buildTopicHierarchy(scoped, mockTopics), [scoped]);
 
   const subtopicOptions = useMemo(
@@ -397,7 +407,7 @@ export default function Questoes() {
           style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}
         >
           <BadgeCheck className="w-3 h-3" />
-          <span>Só Questões Reais</span>
+          <span>Só Questões Reais ({realExamCount})</span>
         </button>
       </div>
 
@@ -638,8 +648,18 @@ export default function Questoes() {
           <Skeleton className="h-12 w-full" />
         </div>
       ) : (
-        <div className="text-center py-16">
+        <div className="text-center py-16 space-y-2">
           <p className="text-[var(--dim)]">Nenhuma questão encontrada para este filtro.</p>
+          {onlyRealExams && realExamCount === 0 && (
+            // Distingue "o filtro não achou nada aqui" de "o banco carregado
+            // não tem questão de prova nenhuma" — o segundo caso costuma ser
+            // Firestore desatualizado, e o caminho é semear em /admin/conteudo.
+            <p className="text-[11px] text-[var(--dim)]">
+              O banco carregado não tem nenhuma questão de prova real
+              {subjectFilter !== 'Todas' ? ` em ${subjectFilter}` : ''}. Se você acabou de
+              adicionar questões ao repositório, semeie o banco em /admin/conteudo.
+            </p>
+          )}
         </div>
       )}
     </div>

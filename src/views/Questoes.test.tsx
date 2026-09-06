@@ -197,3 +197,54 @@ describe('Questoes — navegação por tópico e subtópico', () => {
     expect(screen.queryByRole('button', { name: /Todos os subtópicos/ })).not.toBeInTheDocument();
   });
 });
+
+describe('Questoes — visibilidade do filtro de questões reais', () => {
+  function comFonte(patch: Partial<Question>): Question {
+    return {
+      ...QUESTION,
+      examSource: { board: 'FUVEST', year: 2026, sourceUrl: 'https://exemplo/g.pdf' },
+      ...patch,
+    };
+  }
+
+  it('mostra no botão quantas questões reais o banco carregado tem', () => {
+    questionsHook.mockReturnValue({
+      questions: [QUESTION, comFonte({ id: 'r1' }), comFonte({ id: 'r2' })],
+      syncError: null,
+    });
+    render(<Questoes />);
+    expect(screen.getByRole('button', { name: /Só Questões Reais \(2\)/ })).toBeInTheDocument();
+  });
+
+  it('mostra zero quando o banco carregado não tem nenhuma questão de prova', () => {
+    questionsHook.mockReturnValue({ questions: [QUESTION], syncError: null });
+    render(<Questoes />);
+    expect(screen.getByRole('button', { name: /Só Questões Reais \(0\)/ })).toBeInTheDocument();
+  });
+
+  it('explica o vazio quando o filtro é ligado e não há questão real alguma', async () => {
+    // Sem essa explicação, banco desatualizado e filtro quebrado ficam
+    // indistinguíveis para quem está usando o app.
+    questionsHook.mockReturnValue({ questions: [QUESTION], syncError: null });
+    const user = userEvent.setup();
+    render(<Questoes />);
+
+    await user.click(screen.getByRole('button', { name: /Só Questões Reais/ }));
+
+    expect(screen.getByText(/não tem nenhuma questão de prova real/i)).toBeInTheDocument();
+    expect(screen.getByText(/semeie o banco em \/admin\/conteudo/i)).toBeInTheDocument();
+  });
+
+  it('filtra para as questões reais quando elas existem', async () => {
+    questionsHook.mockReturnValue({
+      questions: [QUESTION, comFonte({ id: 'r1' }), comFonte({ id: 'r2' })],
+      syncError: null,
+    });
+    const user = userEvent.setup();
+    render(<Questoes />);
+
+    await user.click(screen.getByRole('button', { name: /Só Questões Reais/ }));
+
+    await waitFor(() => expect(screen.getByText(/Questão 1 de 2/)).toBeInTheDocument());
+  });
+});
