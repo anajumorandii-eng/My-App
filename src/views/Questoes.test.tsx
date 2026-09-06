@@ -71,7 +71,7 @@ describe('Questoes — diagnóstico de erro salvo no Caderno', () => {
 
     await user.click(screen.getByRole('button', { name: /Mitocôndria/ }));
 
-    const saveButton = await screen.findByRole('button', { name: /Salvar no Caderno de Erros/i });
+    const saveButton = await screen.findByRole('button', { name: /Adicionar ao Caderno de Erros/i });
     await user.click(saveButton);
 
     await waitFor(() => expect(addUserErrorLogMock).toHaveBeenCalled());
@@ -83,6 +83,52 @@ describe('Questoes — diagnóstico de erro salvo no Caderno', () => {
       confidence: 'confirmado',
       interventionStatus: 'pendente',
     });
+  });
+
+  it('permite registrar o erro mesmo quando o diagnóstico da IA falha', async () => {
+    // Regressão: o guard exigia um diagnóstico para salvar, então uma falha de
+    // rede tornava o erro impossível de registrar — justamente quando
+    // registrar importa.
+    requestAiTextMock.mockRejectedValue(new Error('sem rede'));
+    const user = userEvent.setup();
+    render(<Questoes />);
+
+    await user.click(screen.getByRole('button', { name: /Mitocôndria/ }));
+
+    expect(await screen.findByText(/Não consegui diagnosticar agora/i)).toBeInTheDocument();
+    await user.click(screen.getByRole('button', { name: /Adicionar ao Caderno de Erros/i }));
+
+    await waitFor(() => expect(addUserErrorLogMock).toHaveBeenCalled());
+    const [, log] = addUserErrorLogMock.mock.calls[0];
+    expect(log).toMatchObject({ questionId: 'q1', confidence: 'confirmado' });
+    // Sem hipótese da IA, o registro não inventa uma.
+    expect(log.aiHypothesis).toBeUndefined();
+    expect(log.notes).toMatch(/classificado por você/);
+  });
+
+  it('usa o tipo escolhido pela estudante, não o sugerido pela IA', async () => {
+    const user = userEvent.setup();
+    render(<Questoes />);
+
+    await user.click(screen.getByRole('button', { name: /Mitocôndria/ }));
+    const select = await screen.findByLabelText(/Tipo do erro/i);
+    await user.selectOptions(select, 'attention');
+    await user.click(screen.getByRole('button', { name: /Adicionar ao Caderno de Erros/i }));
+
+    await waitFor(() => expect(addUserErrorLogMock).toHaveBeenCalled());
+    const [, log] = addUserErrorLogMock.mock.calls[0];
+    expect(log.type).toBe('attention');
+    // Trocou o tipo: a hipótese descartada da IA não vai junto.
+    expect(log.aiHypothesis).toBeUndefined();
+  });
+
+  it('não mostra o bloco de erro quando a resposta está correta', async () => {
+    const user = userEvent.setup();
+    render(<Questoes />);
+
+    await user.click(screen.getByRole('button', { name: /Citoplasma/ }));
+
+    expect(screen.queryByRole('button', { name: /Adicionar ao Caderno de Erros/i })).not.toBeInTheDocument();
   });
 });
 
