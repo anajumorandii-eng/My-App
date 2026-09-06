@@ -1,0 +1,56 @@
+name: Sincronizar gabaritos oficiais
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/sync_gabaritos.py"
+      - ".github/workflows/sync-gabaritos.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      # Sem lfs: true — o job só grava texto em gabaritos/, e o checkout com LFS
+      # traria os objetos do repositório inteiro a cada execução.
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install requests pypdf
+
+      - name: Baixar gabaritos oficiais
+        run: python scripts/sync_gabaritos.py
+
+      - name: Commitar gabaritos
+        # Roda mesmo se algum ano falhar: um gabarito que não baixou não é
+        # motivo para descartar os que baixaram.
+        if: always()
+        run: |
+          git config user.name "JUJU Provas Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add gabaritos
+          # Só texto entra aqui. Um PDF no diretório significa que o script
+          # mudou de comportamento e passou a guardar o intermediário — isso
+          # engordaria o histórico de forma permanente.
+          if git diff --cached --name-only -z -- gabaritos \
+             | grep -qz '\.pdf$'; then
+            echo "ERRO: PDF em gabaritos/ — só o texto extraído deve ser commitado." >&2
+            exit 1
+          fi
+          if git diff --cached --quiet; then
+            echo "Nenhum gabarito novo."
+          else
+            git commit -m "Adiciona gabaritos oficiais extraidos"
+            for i in 1 2 3 4 5; do
+              git pull --rebase origin main
+              if git push; then exit 0; fi
+              sleep 2
+            done
+            exit 1
+          fi
