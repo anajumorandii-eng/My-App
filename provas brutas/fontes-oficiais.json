@@ -1,0 +1,80 @@
+{
+  "atualizado_em": "2026-09-05",
+  "janela": {
+    "FUVEST": [
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "UNICAMP": [
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "ENEM": [
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "UNIFESP": [
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "FAMERP": [
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "UNESP": [
+      2023,
+      2024,
+      2025,
+      2026
+    ]
+  },
+  "fontes": {
+    "FUVEST": {
+      "2023": "https://www.fuvest.br/acervo-vestibular-2023/",
+      "2024": "https://www.fuvest.br/acervo-vestibular-2024/",
+      "2025": "https://www.fuvest.br/acervo-vestibular-2025",
+      "2026": "https://www.fuvest.br/acervo-vestibular-2026/"
+    },
+    "UNICAMP": {
+      "2023": "https://www.comvest.unicamp.br/ingresso-2023/vestibular-2023/",
+      "2024": "https://www.comvest.unicamp.br/ingresso-2024/vestibular-2024/",
+      "2025": "https://www.comvest.unicamp.br/ingresso-2025/vestibular-2025/",
+      "2026": "https://www.comvest.unicamp.br/ingresso-2026/vestibular-2026/"
+    },
+    "ENEM": {
+      "provas_e_gabaritos": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos",
+      "repositorio": "https://riep.inep.gov.br/collections/22b39e5c-3238-4414-9faf-7db037247175"
+    },
+    "UNIFESP": {
+      "sistema_misto": "https://ingresso.unifesp.br/formas-de-ingresso/misto",
+      "vestibulares_anteriores": "https://ingresso.unifesp.br/vestibulares-anteriores"
+    },
+    "FAMERP": {
+      "2023": "https://www.vunesp.com.br/FMRP2201",
+      "2024": "https://www.vunesp.com.br/FMRP2301",
+      "2025": "https://www.vunesp.com.br/FMRP2401",
+      "2026": "https://www.vunesp.com.br/FMRP2501"
+    },
+    "UNESP": {
+      "2023": "https://www.vunesp.com.br/VNSP2206",
+      "2024": "https://www.vunesp.com.br/VNSP2303",
+      "2025": "https://www.vunesp.com.br/VNSP2404",
+      "2026": "https://www.vunesp.com.br/VNSP2504"
+    }
+  },
+  "observacoes": {
+    "ENEM": "A edição 2026 ainda não havia ocorrido em 05/09/2026; por isso a janela usa 2022–2025.",
+    "UNIFESP": "Medicina usa Sistema Misto: nota do ENEM + dois dias de provas complementares.",
+    "VUNESP": "UNESP e FAMERP exibem a seção Provas e Gabaritos nas páginas públicas, mas o acesso ao arquivo atualmente redireciona para a Área do Candidato."
+  }
+}
