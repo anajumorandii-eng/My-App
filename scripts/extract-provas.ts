@@ -9,13 +9,13 @@
  * Uso:
  *   npx tsx scripts/extract-provas.ts            # extrai o que ainda não foi extraído
  *   npx tsx scripts/extract-provas.ts --force    # reextrai tudo
- *   npx tsx scripts/extract-provas.ts Fuvest     # só arquivos cujo nome contém "Fuvest"
+ *   npx tsx scripts/extract-provas.ts Fuvest     # só arquivos cujo caminho contém "Fuvest"
  *
  * PDF escaneado (sem camada de texto) não é extraível aqui: o script sinaliza
  * e o caminho é o OCR de scripts/ocr-apostila.sh, já usado nas apostilas.
  */
 import { readFile, readdir, mkdir, writeFile, stat } from 'node:fs/promises';
-import { join } from 'node:path';
+import { dirname, join, relative } from 'node:path';
 import { PDFParse } from 'pdf-parse';
 
 const SRC_DIR = 'provas brutas';
@@ -77,7 +77,11 @@ async function main() {
 
   let entries: string[];
   try {
-    entries = await readdir(SRC_DIR);
+    // As provas ficam em subpastas por banca e ano (FUVEST/2026/...), então a
+    // varredura precisa ser recursiva — a lista plana só via a raiz.
+    entries = (await readdir(SRC_DIR, { recursive: true, withFileTypes: true }))
+      .filter((d) => d.isFile())
+      .map((d) => relative(SRC_DIR, join(d.parentPath ?? d.path, d.name)));
   } catch {
     console.error(`Pasta "${SRC_DIR}" não encontrada. Crie-a e suba os PDFs das provas (ver o README dela).`);
     process.exit(1);
@@ -89,7 +93,7 @@ async function main() {
     .sort();
 
   if (!pdfs.length) {
-    console.log(`Nenhum PDF em "${SRC_DIR}"${filter ? ` com "${filter}" no nome` : ''}.`);
+    console.log(`Nenhum PDF em "${SRC_DIR}"${filter ? ` com "${filter}" no caminho` : ''}.`);
     console.log('Suba as provas nessa pasta e rode de novo — o README de lá explica como nomear.');
     return;
   }
@@ -104,6 +108,7 @@ async function main() {
   for (const filename of pdfs) {
     const pdfPath = join(SRC_DIR, filename);
     const outPath = join(OUT_DIR, filename.replace(/\.pdf$/i, '.txt'));
+    await mkdir(dirname(outPath), { recursive: true });
 
     // Ponteiro do Git LFS tem ~130 bytes: o arquivo está versionado, mas o
     // conteúdo não foi baixado nesta cópia do repositório.
