@@ -66,19 +66,37 @@ ALVOS: list[tuple[str, list[str]]] = [
 # PDF num caminho estável — ele fica atrás de uma página de índice cujo padrão
 # muda a cada ano. Varrer o índice resiste a essa troca; adivinhar URL não.
 INDICES: list[tuple[str, str]] = [
-    (
-        "UNICAMP",
-        "https://www.comvest.unicamp.br/ingresso-2026/vestibular-2026/provas-e-gabaritos-vestibular-2026/",
-    ),
-    (
-        "UNIFESP",
-        "https://ingresso.unifesp.br/vestibulares-anteriores/category/32-provas-e-gabaritos",
-    ),
+    # A Comvest publica um índice por ano, com as quatro versões da prova
+    # emparelhadas (Q_X, R_Y, S_Z, T_W). As provas que temos extraídas dizem
+    # "PROVA Q" no cabeçalho, então a que interessa é a Q_X — coluna Q.
+    ("UNICAMP-2026", "https://www.comvest.unicamp.br/ingresso-2026/vestibular-2026/provas-e-gabaritos-vestibular-2026/"),
+    ("UNICAMP-2025", "https://www.comvest.unicamp.br/ingresso-2025/vestibular-2025/provas-e-gabaritos-vestibular-2025/"),
+    ("UNICAMP-2024", "https://www.comvest.unicamp.br/ingresso-2024/vestibular-2024/provas-e-gabaritos-vestibular-2024/"),
+    ("UNICAMP-2023", "https://www.comvest.unicamp.br/ingresso-2023/vestibular-2023/provas-e-gabaritos-vestibular-2023/"),
+    # A Unifesp usa índices numerados por processo seletivo e o número muda;
+    # por isso vários candidatos em vez de um só.
+    ("UNIFESP-a", "https://ingresso.unifesp.br/vestibulares-anteriores/category/32-provas-e-gabaritos"),
+    ("UNIFESP-b", "https://ingresso.unifesp.br/vestibulares-anteriores/category/112-provas-e-gabaritos"),
+    ("UNIFESP-c", "https://ingresso.unifesp.br/vestibulares-anteriores/category/68-provas-e-gabaritos"),
+    ("UNIFESP-d", "https://ingresso.unifesp.br/vestibulares-anteriores"),
 ]
 
 # Aceita "gabarito" no href ou no texto do link. Sem isso viriam também os
 # cadernos de prova, que já temos.
-LINK_PDF = re.compile(r'<a[^>]+href="([^"]+\.pdf)"[^>]*>(.*?)</a>', re.I | re.S)
+#
+# O href nem sempre termina em .pdf: a Unifesp serve o arquivo por
+# "?download=1337:2025-...-gabarito-de-prova", sem extensão nenhuma. Exigir
+# .pdf faria a varredura devolver zero links num índice cheio deles.
+LINK_PDF = re.compile(
+    r'<a[^>]+href="([^"]+(?:\.pdf|[?&]download=)[^"]*)"[^>]*>(.*?)</a>',
+    re.I | re.S,
+)
+
+
+def slug(texto: str) -> str:
+    """Nome de arquivo previsível a partir do rótulo do link."""
+    s = re.sub(r"[^A-Za-z0-9]+", "_", texto).strip("_")
+    return (s or "gabarito")[:60]
 
 
 def varrer_indice(banca: str, url: str) -> list[tuple[str, str]]:
@@ -162,8 +180,22 @@ def main() -> int:
         achados = varrer_indice(banca, url)
         print(f"  {banca}: {len(achados)} link(s) de gabarito em {url}")
         for u, rotulo in achados[:20]:
+            saida = OUT_DIR / banca.split("-")[0] / f"{banca}_{slug(rotulo)}.txt"
             print(f"      {rotulo[:70]!r}")
-            print(f"        {u}")
+            if saida.exists() and saida.stat().st_size > 200:
+                print("        JA EXISTE")
+                continue
+            with tempfile.TemporaryDirectory() as tmp:
+                pdf = Path(tmp) / "g.pdf"
+                if baixar([u], pdf) is None:
+                    continue
+                try:
+                    chars = extrair_texto(pdf, saida, u)
+                except Exception as e:
+                    # Um PDF ilegível de uma banca não deve derrubar as outras.
+                    print(f"        nao foi possivel extrair texto: {e}")
+                    continue
+                print(f"        texto: {chars} caracteres -> {saida}")
 
     if faltando:
         print("\nNão foi possível baixar:")

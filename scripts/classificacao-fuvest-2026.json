@@ -1,0 +1,318 @@
+{
+  "_comentario": [
+    "Classificação por matéria e tópico das questões da Fuvest 2026 (prova V1)",
+    "aproveitadas por scripts/extrair-questoes-oficiais.ts.",
+    "",
+    "'confianca': 'alta' entra no app; 'baixa' fica de fora até revisão humana.",
+    "Classificar errado não corrompe a resposta, mas joga a questão no lugar",
+    "errado do estudo — e o app usa topicId para acompanhar domínio, então uma",
+    "questão mal classificada distorce o diagnóstico de onde a Ana Júlia está",
+    "bem ou mal.",
+    "",
+    "Os 'baixa' são casos em que o conteúdo cruza duas matérias e o recorte da",
+    "banca não deixa claro qual delas a questão cobra."
+  ],
+  "questoes": {
+    "1": {
+      "subject": "Português",
+      "topicId": "por_texto",
+      "chapter": "Os Dois Níveis da Leitura",
+      "confianca": "alta"
+    },
+    "2": {
+      "subject": "Português",
+      "topicId": "por_texto",
+      "chapter": "Fatores de Textualidade",
+      "confianca": "alta"
+    },
+    "6": {
+      "subject": "Matemática",
+      "topicId": "mat_geometria_espacial",
+      "chapter": "Pirâmides",
+      "confianca": "alta"
+    },
+    "8": {
+      "subject": "Português",
+      "topicId": "por_norma_culta",
+      "chapter": "Variação Linguística",
+      "confianca": "alta"
+    },
+    "9": {
+      "subject": "História",
+      "topicId": "his_brasil_imperio",
+      "chapter": "Brasil Império: Segundo Reinado (1840-1889)",
+      "confianca": "alta"
+    },
+    "10": {
+      "subject": "Sociologia",
+      "topicId": "soc_cultura_identidade",
+      "chapter": "Identidade e Diferença",
+      "confianca": "baixa",
+      "_nota": "Descartada pelo filtro visual (cita \"figuras\"). Verifiquei que o enunciado e respondivel so com o texto biografico, mas a regra vale sem excecao: abrir precedente para sobrepor o filtro e o que deixa passar a questao ruim."
+    },
+    "11": {
+      "subject": "História",
+      "topicId": "his_brasil_imperio",
+      "chapter": "Brasil Império: Segundo Reinado (1840-1889)",
+      "confianca": "alta"
+    },
+    "12": {
+      "subject": "História",
+      "topicId": "his_republica_liberal_atual",
+      "chapter": "O Brasil Atual",
+      "confianca": "alta"
+    },
+    "15": {
+      "subject": "Sociologia",
+      "topicId": "soc_trabalho_sociedade",
+      "chapter": "Precarização e Uberização do Trabalho",
+      "confianca": "alta"
+    },
+    "16": {
+      "subject": "Sociologia",
+      "topicId": "soc_trabalho_sociedade",
+      "chapter": "Transformações no Mundo do Trabalho",
+      "confianca": "alta"
+    },
+    "20": {
+      "subject": "História",
+      "topicId": "his_imperialismo_guerras",
+      "chapter": "Europa no Século XIX",
+      "confianca": "baixa"
+    },
+    "26": {
+      "subject": "Inglês",
+      "topicId": "ing_01",
+      "chapter": "Text Comprehension: Taxonomy and Terminology",
+      "confianca": "alta"
+    },
+    "29": {
+      "subject": "Geografia",
+      "topicId": "geo_climatologia_socioambiental",
+      "chapter": "Desafios Ambientais do Século XXI",
+      "confianca": "alta"
+    },
+    "30": {
+      "subject": "Química",
+      "topicId": "qui_oxirreducao",
+      "chapter": "Química Ambiental",
+      "confianca": "baixa"
+    },
+    "31": {
+      "subject": "Química",
+      "topicId": "qui_oxirreducao",
+      "chapter": "Processos de Oxirredução",
+      "confianca": "alta"
+    },
+    "32": {
+      "subject": "Química",
+      "topicId": "qui_inorganica",
+      "chapter": "Química Inorgânica",
+      "confianca": "alta"
+    },
+    "33": {
+      "subject": "Geografia",
+      "topicId": "geo_climatologia_socioambiental",
+      "chapter": "Desafios Ambientais do Século XXI",
+      "confianca": "baixa"
+    },
+    "38": {
+      "subject": "Geografia",
+      "topicId": "geo_populacao_urbana_brasil",
+      "chapter": "O Espaço Urbano I",
+      "confianca": "alta"
+    },
+    "39": {
+      "subject": "Português",
+      "topicId": "por_lit_modernismo",
+      "chapter": "Pré-Modernismo",
+      "confianca": "baixa"
+    },
+    "41": {
+      "subject": "Sociologia",
+      "topicId": "soc_movimentos_sociais",
+      "chapter": "Cidadania e Direitos",
+      "confianca": "alta"
+    },
+    "42": {
+      "subject": "Sociologia",
+      "topicId": "soc_cultura_identidade",
+      "chapter": "Cultura e Etnocentrismo",
+      "confianca": "baixa"
+    },
+    "47": {
+      "subject": "Português",
+      "topicId": "por_lit_contemporanea",
+      "chapter": "Literatura Lusófona Contemporânea",
+      "confianca": "baixa"
+    },
+    "49": {
+      "subject": "História",
+      "topicId": "his_idade_media",
+      "chapter": "A Primeira Globalização",
+      "confianca": "alta"
+    },
+    "50": {
+      "subject": "História",
+      "topicId": "his_idade_media",
+      "chapter": "Baixa Idade Média",
+      "confianca": "alta"
+    },
+    "51": {
+      "subject": "Geografia",
+      "topicId": "geo_geopolitica_regional",
+      "chapter": "Geopolítica e Geoeconomia da Ásia",
+      "confianca": "alta"
+    },
+    "54": {
+      "subject": "História",
+      "topicId": "his_idade_antiga",
+      "chapter": "Antiguidade Clássica: o Mundo Grego",
+      "confianca": "alta"
+    },
+    "56": {
+      "subject": "Biologia",
+      "topicId": "bio_evolucao",
+      "chapter": "Evolução Biológica: Construção Histórica",
+      "confianca": "alta"
+    },
+    "57": {
+      "subject": "Biologia",
+      "topicId": "bio_biotecnologia",
+      "chapter": "Biotecnologia",
+      "confianca": "alta"
+    },
+    "58": {
+      "subject": "Física",
+      "topicId": "fis_fisica_moderna",
+      "chapter": "Noções Básicas de Física Quântica",
+      "confianca": "baixa"
+    },
+    "59": {
+      "subject": "Física",
+      "topicId": "fis_fisica_moderna",
+      "chapter": "Noções Básicas de Física Quântica",
+      "confianca": "baixa"
+    },
+    "62": {
+      "subject": "Química",
+      "topicId": "qui_oxirreducao",
+      "chapter": "Processos de Oxirredução",
+      "confianca": "alta"
+    },
+    "63": {
+      "subject": "Química",
+      "topicId": "qui_estequiometria",
+      "chapter": "Cálculos Estequiométricos",
+      "confianca": "alta"
+    },
+    "64": {
+      "subject": "Biologia",
+      "topicId": "bio_microbiologia",
+      "chapter": "Vírus",
+      "confianca": "alta"
+    },
+    "65": {
+      "subject": "Biologia",
+      "topicId": "bio_microbiologia",
+      "chapter": "Vírus",
+      "confianca": "alta"
+    },
+    "66": {
+      "subject": "Biologia",
+      "topicId": "bio_genetica",
+      "chapter": "Introdução à Genética",
+      "confianca": "alta"
+    },
+    "68": {
+      "subject": "Biologia",
+      "topicId": "bio_fisio_animal",
+      "chapter": "Fisiologia da Digestão",
+      "confianca": "alta"
+    },
+    "69": {
+      "subject": "Biologia",
+      "topicId": "bio_fisio_animal",
+      "chapter": "Fisiologia da Digestão",
+      "confianca": "alta"
+    },
+    "70": {
+      "subject": "Biologia",
+      "topicId": "bio_fisio_animal",
+      "chapter": "Fisiologia da Digestão",
+      "confianca": "alta"
+    },
+    "77": {
+      "subject": "Física",
+      "topicId": "fis_ondulatoria",
+      "chapter": "Ondulatória: Som e suas Propriedades",
+      "confianca": "alta"
+    },
+    "78": {
+      "subject": "Biologia",
+      "topicId": "bio_evolucao",
+      "chapter": "Evolução Biológica: Construção Histórica",
+      "confianca": "alta"
+    },
+    "79": {
+      "subject": "Biologia",
+      "topicId": "bio_botanica",
+      "chapter": "Plantas Terrestres II: Gimnospermas e Angiospermas",
+      "confianca": "alta"
+    },
+    "80": {
+      "subject": "Biologia",
+      "topicId": "bio_botanica",
+      "chapter": "Plantas Terrestres II: Gimnospermas e Angiospermas",
+      "confianca": "alta"
+    },
+    "81": {
+      "subject": "Biologia",
+      "topicId": "bio_fisio_vegetal",
+      "chapter": "Fisiologia Vegetal: Hormônios Vegetais",
+      "confianca": "alta"
+    },
+    "82": {
+      "subject": "Química",
+      "topicId": "qui_solucoes",
+      "chapter": "Dispersões",
+      "confianca": "alta"
+    },
+    "83": {
+      "subject": "Química",
+      "topicId": "qui_estequiometria",
+      "chapter": "Cálculos Estequiométricos",
+      "confianca": "alta"
+    },
+    "86": {
+      "subject": "Português",
+      "topicId": "por_lit_contemporanea",
+      "chapter": "Literatura Lusófona Contemporânea",
+      "confianca": "alta"
+    },
+    "87": {
+      "subject": "Português",
+      "topicId": "por_lit_contemporanea",
+      "chapter": "Literatura Lusófona Contemporânea",
+      "confianca": "alta"
+    },
+    "88": {
+      "subject": "História",
+      "topicId": "his_brasil_imperio",
+      "chapter": "Brasil Império: Segundo Reinado (1840-1889)",
+      "confianca": "alta"
+    },
+    "89": {
+      "subject": "Português",
+      "topicId": "por_lit_contemporanea",
+      "chapter": "Literatura Lusófona Contemporânea",
+      "confianca": "baixa"
+    },
+    "90": {
+      "subject": "Português",
+      "topicId": "por_lit_contemporanea",
+      "chapter": "Literatura Lusófona Contemporânea",
+      "confianca": "alta"
+    }
+  }
+}
