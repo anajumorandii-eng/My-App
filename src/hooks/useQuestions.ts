@@ -10,10 +10,20 @@ export interface UseQuestionsResult {
 }
 
 /**
- * Duas fontes, em ordem de prioridade: o banco local (arquivo estático, chega
- * rápido e funciona offline) e o banco compartilhado do Firestore, que
- * sobrepõe o local quando responde e traz o que foi editado no painel
- * /admin/conteudo.
+ * Duas fontes: o banco local (arquivo estático, chega rápido e funciona
+ * offline) e o banco compartilhado do Firestore, que traz o que foi editado no
+ * painel /admin/conteudo.
+ *
+ * O Firestore SOBREPÕE POR ID, não substitui a lista inteira. Antes ele
+ * trocava tudo, e isso tinha um efeito silencioso e grave: questão nova
+ * adicionada ao repositório ficava invisível no app até alguém lembrar de
+ * apertar "Semear" no painel. Foi assim que 68 questões da Fuvest existiram no
+ * arquivo por horas sem aparecer para ninguém.
+ *
+ * A contrapartida: questão apagada pelo painel volta a aparecer, porque o
+ * arquivo local continua tendo. Trocar conteúdo invisível por conteúdo
+ * ressuscitável é o lado certo do erro — o primeiro não dá sinal nenhum, o
+ * segundo é visível e corrigível apagando também do arquivo.
  *
  * Antes o banco local vinha importado do bundle, o que dava resposta
  * instantânea ao custo de 1,5 MB baixados em toda tela do app — inclusive nas
@@ -27,12 +37,23 @@ export function useQuestions(): UseQuestionsResult {
 
   useEffect(() => {
     let cancelled = false;
-    let hasRemote = false;
+    let local: Question[] = [];
+    let remote: Question[] | null = null;
+
+    // Local como base, Firestore por cima: mesma questão (mesmo id) fica na
+    // versão do Firestore, que é onde as edições do painel vivem; questão que
+    // só existe no arquivo entra assim mesmo.
+    const merge = () => {
+      if (!remote) return local;
+      const porId = new Map(local.map((q) => [q.id, q]));
+      for (const q of remote) porId.set(q.id, q);
+      return [...porId.values()];
+    };
 
     getLocalQuestionBank()
       .then((data) => {
-        // Se o Firestore já respondeu, ele manda: não regredir pro local.
-        if (!cancelled && !hasRemote) setQuestions(data);
+        local = data;
+        if (!cancelled) setQuestions(merge());
       })
       .catch((error) => {
         console.error('Failed to load the local question bank:', error);
@@ -45,8 +66,8 @@ export function useQuestions(): UseQuestionsResult {
     getQuestions()
       .then((data) => {
         if (cancelled || data.length === 0) return;
-        hasRemote = true;
-        setQuestions(data);
+        remote = data;
+        setQuestions(merge());
         setSyncError(null);
         setLoading(false);
       })
