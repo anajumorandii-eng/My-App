@@ -14,9 +14,11 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
+      # Sem lfs: true de propósito — o checkout traria os objetos LFS do
+      # repositório inteiro (hoje ~2,5 GB) a cada execução, consumindo banda
+      # à toa. O job apenas acrescenta PDFs novos, e o filtro do LFS é
+      # aplicado no git add; ponteiros no working tree bastam.
       - uses: actions/checkout@v4
-        with:
-          lfs: true
 
       - uses: actions/setup-python@v5
         with:
