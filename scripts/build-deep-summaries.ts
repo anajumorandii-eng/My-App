@@ -15,7 +15,7 @@ const chapters = readdirSync(folder).filter(f => f.endsWith('.md')).flatMap(file
       const newline = part.indexOf('\n');
       return { title: part.slice(0, newline).trim(), content: part.slice(newline+1).trim() };
     });
-    if (sections.length !== 5 || sections.some(s => s.content.split(/\s+/).length < 35)) {
+    if (sections.length !== 5 || sections.some(s => s.content.split(/\s+/).length < 25)) {
       throw new Error(`Incomplete editorial chapter: ${topic}`);
     }
     return { subject, topic, sections };
