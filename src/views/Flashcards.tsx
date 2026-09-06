@@ -164,16 +164,30 @@ export default function Flashcards() {
     [navigation.topicId, topicIndex],
   );
 
+  const selectedTopicSubtopics = selectedTopic?.subtopics ?? [];
+
+  const selectedSubtopic = useMemo(
+    () => selectedTopicSubtopics.find((sub) => sub.id === navigation.subtopicId),
+    [navigation.subtopicId, selectedTopicSubtopics],
+  );
+
+  // Quantos vencidos o "revisar todos" vai realmente trazer: o subtópico
+  // escolhido, ou o tópico inteiro quando nenhum está escolhido. Sem isso o
+  // botão ficaria habilitado num subtópico sem nada vencido.
+  const dueCountForCurrentScope = selectedSubtopic?.due ?? selectedTopic?.due ?? 0;
+
+  const scopeLabel = selectedSubtopic ? `${selectedTopic?.label} — ${selectedSubtopic.label}` : selectedTopic?.label;
+
   const sessionTitle = useMemo(() => {
     if (navigation.step !== 'session' || !navigation.subject || !selectedTopic) return '';
     if (navigation.allDueForTopic) {
-      return `${navigation.subject} — ${selectedTopic.label} — todos os vencidos`;
+      return `${navigation.subject} — ${scopeLabel} — todos os vencidos`;
     }
     if (!navigation.priority || !navigation.trainingType) {
-      return `${navigation.subject} — ${selectedTopic.label}`;
+      return `${navigation.subject} — ${scopeLabel}`;
     }
-    return `${navigation.subject} — ${selectedTopic.label} — ${PRIORITY_LABELS[navigation.priority]} — ${TRAINING_TYPE_LABELS[navigation.trainingType]}`;
-  }, [navigation, selectedTopic]);
+    return `${navigation.subject} — ${scopeLabel} — ${PRIORITY_LABELS[navigation.priority]} — ${TRAINING_TYPE_LABELS[navigation.trainingType]}`;
+  }, [navigation, scopeLabel, selectedTopic]);
 
   const openSubject = async (name: string) => {
     if (dueNavigationBlocked || loadingSubject !== null) return;
@@ -219,6 +233,12 @@ export default function Flashcards() {
     dispatch({ type: 'back' });
   };
 
+  const chooseSubtopic = (subtopicId?: string) => {
+    if (dueNavigationBlocked) return;
+    dispatch({ type: 'select_subtopic', subtopicId });
+    dispatch({ type: 'back' });
+  };
+
   const reviewAllDueForTopic = () => {
     if (dueNavigationBlocked || !selectedTopic) return;
     if (!cards) return;
@@ -227,7 +247,7 @@ export default function Flashcards() {
       cards,
       subjectTopics,
       reviews,
-      { topicId: selectedTopic.topicId, allDueForTopic: true },
+      { topicId: selectedTopic.topicId, subtopicId: navigation.subtopicId, allDueForTopic: true },
       now,
     );
     setSelectionNow(now);
@@ -245,6 +265,7 @@ export default function Flashcards() {
       reviews,
       {
         topicId: selectedTopic.topicId,
+        subtopicId: navigation.subtopicId,
         priority: navigation.priority,
         trainingType,
         allDueForTopic: false,
@@ -411,10 +432,75 @@ export default function Flashcards() {
                 }}
                 className="flex-1 rounded-lg border border-zinc-300 px-4 py-2.5 text-sm font-medium hover:bg-zinc-50 dark:border-zinc-700 dark:hover:bg-zinc-800"
               >
-                Escolher prioridade
+                Escolher subtópico
               </button>
             </div>
           )}
+        </div>
+      )}
+
+      {!dueNavigationBlocked && navigation.step === 'subtopic' && selectedTopic && (
+        <div className="space-y-4">
+          <BackButton onClick={() => dispatch({ type: 'back' })} />
+          <div>
+            <h2 className="text-xl font-semibold">{navigation.subject} — {selectedTopic.label}</h2>
+            <p className="text-sm text-zinc-500 mt-1">
+              Escolha um subtópico para focar, ou siga com o tópico inteiro.
+            </p>
+          </div>
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            <button
+              onClick={() => chooseSubtopic(undefined)}
+              aria-pressed={navigation.subtopicId === undefined}
+              className={`rounded-xl border p-4 text-left shadow-sm transition-colors ${
+                navigation.subtopicId === undefined
+                  ? 'border-indigo-500 bg-indigo-50 dark:bg-indigo-900/20'
+                  : 'border-zinc-200 bg-white hover:border-indigo-300 dark:border-zinc-800 dark:bg-zinc-900 dark:hover:border-indigo-700'
+              }`}
+            >
+              <span className="font-medium">Tópico inteiro</span>
+              <p className="mt-1 text-sm text-zinc-500">
+                {selectedTopic.total.toLocaleString('pt-BR')} cartões · {selectedTopic.due.toLocaleString('pt-BR')} vencidos
+              </p>
+            </button>
+            {selectedTopicSubtopics.map((sub) => {
+              const isSelected = navigation.subtopicId === sub.id;
+              return (
+                <button
+                  key={sub.id}
+                  onClick={() => chooseSubtopic(sub.id)}
+                  disabled={sub.total === 0}
+                  aria-pressed={isSelected}
+                  className={`rounded-xl border p-4 text-left shadow-sm transition-colors disabled:cursor-not-allowed disabled:opacity-50 ${
+                    isSelected
+                      ? 'border-indigo-500 bg-indigo-50 dark:bg-indigo-900/20'
+                      : 'border-zinc-200 bg-white hover:border-indigo-300 dark:border-zinc-800 dark:bg-zinc-900 dark:hover:border-indigo-700'
+                  }`}
+                >
+                  <span className="font-medium">{sub.label}</span>
+                  <p className="mt-1 text-sm text-zinc-500">
+                    {sub.total.toLocaleString('pt-BR')} cartões · {sub.due.toLocaleString('pt-BR')} vencidos
+                  </p>
+                </button>
+              );
+            })}
+          </div>
+
+          <div className="flex flex-col gap-2 rounded-xl border border-zinc-200 bg-white p-4 sm:flex-row dark:border-zinc-800 dark:bg-zinc-900">
+            <button
+              onClick={reviewAllDueForTopic}
+              disabled={dueCountForCurrentScope === 0}
+              className="flex-1 rounded-lg bg-indigo-600 px-4 py-2.5 text-sm font-medium text-white hover:bg-indigo-700 disabled:cursor-not-allowed disabled:opacity-50"
+            >
+              Revisar todos os vencidos {selectedSubtopic ? 'deste subtópico' : 'deste tópico'}
+            </button>
+            <button
+              onClick={() => dispatch({ type: 'select_subtopic', subtopicId: navigation.subtopicId })}
+              className="flex-1 rounded-lg border border-zinc-300 px-4 py-2.5 text-sm font-medium hover:bg-zinc-50 dark:border-zinc-700 dark:hover:bg-zinc-800"
+            >
+              Escolher prioridade
+            </button>
+          </div>
         </div>
       )}
 
@@ -422,7 +508,7 @@ export default function Flashcards() {
         <div className="space-y-4">
           <BackButton onClick={() => dispatch({ type: 'back' })} />
           <div>
-            <h2 className="text-xl font-semibold">{navigation.subject} — {selectedTopic.label}</h2>
+            <h2 className="text-xl font-semibold">{navigation.subject} — {scopeLabel}</h2>
             <p className="text-sm text-zinc-500 mt-1">Escolha a prioridade dos cartões.</p>
           </div>
           <div className="grid gap-3 sm:grid-cols-3">
@@ -451,7 +537,7 @@ export default function Flashcards() {
           <BackButton onClick={() => dispatch({ type: 'back' })} />
           <div>
             <h2 className="text-xl font-semibold">
-              {navigation.subject} — {selectedTopic.label} — {PRIORITY_LABELS[navigation.priority]}
+              {navigation.subject} — {scopeLabel} — {PRIORITY_LABELS[navigation.priority]}
             </h2>
             <p className="text-sm text-zinc-500 mt-1">Escolha o tipo de treino.</p>
           </div>

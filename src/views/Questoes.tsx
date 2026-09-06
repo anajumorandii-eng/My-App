@@ -26,6 +26,8 @@ import { Panel } from '../components/ui/Panel';
 import { Button } from '../components/ui/Button';
 import { PALETTES } from '../prototypes/NucleoInstrumentalPrototype';
 import { SUBJECT_ICONS } from './Dashboard';
+import { mockTopics } from '../data/mockData';
+import { ALL, buildTopicHierarchy, filterByHierarchy } from '../lib/topicHierarchy';
 
 function Metric({
   label,
@@ -62,6 +64,8 @@ export default function Questoes() {
   const { questions: mockQuestions, loading: questionsLoading, syncError: questionsSyncError } = useQuestions();
   const subjects = useMemo(() => ['Todas', ...new Set(mockQuestions.map((q) => q.subject))], [mockQuestions]);
   const [subjectFilter, setSubjectFilter] = useState('Todas');
+  const [topicFilter, setTopicFilter] = useState<string>(ALL);
+  const [subtopicFilter, setSubtopicFilter] = useState<string>(ALL);
   const [onlyRealExams, setOnlyRealExams] = useState(false);
   const [index, setIndex] = useState(0);
   const [selectedOptionId, setSelectedOptionId] = useState<string | null>(null);
@@ -73,11 +77,25 @@ export default function Questoes() {
   const [diagnosisSaved, setDiagnosisSaved] = useState(false);
   const [diagnosisDismissed, setDiagnosisDismissed] = useState(false);
 
-  const pool = useMemo(() => {
-    let result = subjectFilter === 'Todas' ? mockQuestions : mockQuestions.filter((q) => q.subject === subjectFilter);
-    if (onlyRealExams) result = result.filter((q) => q.examSource);
-    return result;
+  // O "só questões reais" entra antes de montar a árvore para que as contagens
+  // de tópico e subtópico reflitam o que o filtro vai realmente entregar. Se
+  // fosse depois, um tópico apareceria com 40 questões e abriria com zero.
+  const scoped = useMemo(() => {
+    const base = onlyRealExams ? mockQuestions.filter((q) => q.examSource) : mockQuestions;
+    return subjectFilter === 'Todas' ? base : base.filter((q) => q.subject === subjectFilter);
   }, [mockQuestions, subjectFilter, onlyRealExams]);
+
+  const topicTree = useMemo(() => buildTopicHierarchy(scoped, mockTopics), [scoped]);
+
+  const subtopicOptions = useMemo(
+    () => (topicFilter === ALL ? [] : topicTree.find((node) => node.id === topicFilter)?.subtopics ?? []),
+    [topicFilter, topicTree],
+  );
+
+  const pool = useMemo(
+    () => filterByHierarchy(scoped, { topicId: topicFilter, subtopicId: subtopicFilter }, mockTopics),
+    [scoped, topicFilter, subtopicFilter],
+  );
 
   const question = pool.length > 0 ? pool[index % pool.length] : null;
   const answered = selectedOptionId !== null;
@@ -91,20 +109,40 @@ export default function Questoes() {
     setDiagnosisDismissed(false);
   };
 
-  const changeSubject = (subject: string) => {
-    setSubjectFilter(subject);
+  const resetQuestionState = () => {
     setIndex(0);
     setSelectedOptionId(null);
     setDeepExplanation(null);
     resetDiagnosisState();
   };
 
+  const changeSubject = (subject: string) => {
+    setSubjectFilter(subject);
+    // Trocar de matéria invalida o tópico escolhido: ele pertencia à anterior.
+    setTopicFilter(ALL);
+    setSubtopicFilter(ALL);
+    resetQuestionState();
+  };
+
+  const changeTopic = (topicId: string) => {
+    setTopicFilter(topicId);
+    setSubtopicFilter(ALL);
+    resetQuestionState();
+  };
+
+  const changeSubtopic = (subtopicId: string) => {
+    setSubtopicFilter(subtopicId);
+    resetQuestionState();
+  };
+
   const toggleRealExams = () => {
     setOnlyRealExams((v) => !v);
-    setIndex(0);
-    setSelectedOptionId(null);
-    setDeepExplanation(null);
-    resetDiagnosisState();
+    // O recorte de provas reais é bem menor que o banco inteiro, então o tópico
+    // que estava selecionado pode nem existir nele. Voltar ao topo evita a tela
+    // vazia sem explicação.
+    setTopicFilter(ALL);
+    setSubtopicFilter(ALL);
+    resetQuestionState();
   };
 
   const selectOption = (optionId: string) => {
@@ -331,6 +369,41 @@ export default function Questoes() {
           <span>Só Questões Reais</span>
         </button>
       </div>
+
+      {/* Tópico e subtópico. O subtópico só aparece depois que há um tópico
+          escolhido — antes disso ele misturaria capítulos de matérias
+          diferentes, e a lista teria centenas de itens sem sentido. */}
+      <div className="ni-subjects" style={{ marginTop: '8px' }}>
+        <button className={topicFilter === ALL ? 'active' : ''} onClick={() => changeTopic(ALL)}>
+          Todos os tópicos
+        </button>
+        {topicTree.map((node) => (
+          <button
+            key={node.id}
+            className={topicFilter === node.id ? 'active' : ''}
+            onClick={() => changeTopic(node.id)}
+          >
+            {node.label} <span style={{ opacity: 0.6 }}>({node.count})</span>
+          </button>
+        ))}
+      </div>
+
+      {subtopicOptions.length > 0 && (
+        <div className="ni-subjects" style={{ marginTop: '8px' }}>
+          <button className={subtopicFilter === ALL ? 'active' : ''} onClick={() => changeSubtopic(ALL)}>
+            Todos os subtópicos
+          </button>
+          {subtopicOptions.map((sub) => (
+            <button
+              key={sub.id}
+              className={subtopicFilter === sub.id ? 'active' : ''}
+              onClick={() => changeSubtopic(sub.id)}
+            >
+              {sub.label} <span style={{ opacity: 0.6 }}>({sub.count})</span>
+            </button>
+          ))}
+        </div>
+      )}
 
       {question ? (
         <section className="ni-grid ni-grid--practice">

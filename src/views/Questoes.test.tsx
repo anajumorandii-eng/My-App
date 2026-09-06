@@ -85,3 +85,69 @@ describe('Questoes — diagnóstico de erro salvo no Caderno', () => {
     });
   });
 });
+
+describe('Questoes — navegação por tópico e subtópico', () => {
+  // Usa tópicos reais do currículo: a árvore só reconhece topicIds cadastrados
+  // em mockTopics, então ids inventados cairiam todos em "Fora do currículo".
+  const bioCell = 'bio_estrutura_fisio_celular';
+
+  function question(patch: Partial<Question>): Question {
+    return { ...QUESTION, ...patch };
+  }
+
+  const bank: Question[] = [
+    question({ id: 'a', topicId: bioCell, chapter: 'Membranas Celulares', prompt: 'Sobre membranas?' }),
+    question({ id: 'b', topicId: bioCell, chapter: 'Membranas Celulares', prompt: 'Outra de membranas?' }),
+    question({ id: 'c', topicId: bioCell, chapter: 'Núcleo Celular', prompt: 'Sobre o núcleo?' }),
+    question({
+      id: 'd',
+      topicId: 'bio_metabolismo_energetico',
+      chapter: 'Respiração Celular',
+      prompt: 'Sobre respiração?',
+    }),
+  ];
+
+  beforeEach(() => {
+    questionsHook.mockReturnValue({ questions: bank, syncError: null });
+  });
+
+  it('lista os tópicos presentes no banco com a contagem de questões', () => {
+    render(<Questoes />);
+    expect(screen.getByRole('button', { name: /Estrutura e Fisiologia Celular \(3\)/ })).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: /Metabolismo Energético \(1\)/ })).toBeInTheDocument();
+  });
+
+  it('só mostra a faixa de subtópicos depois que um tópico é escolhido', async () => {
+    const user = userEvent.setup();
+    render(<Questoes />);
+    expect(screen.queryByRole('button', { name: /Todos os subtópicos/ })).not.toBeInTheDocument();
+
+    await user.click(screen.getByRole('button', { name: /Estrutura e Fisiologia Celular/ }));
+
+    expect(screen.getByRole('button', { name: /Todos os subtópicos/ })).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: /Membranas Celulares \(2\)/ })).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: /Núcleo Celular \(1\)/ })).toBeInTheDocument();
+  });
+
+  it('restringe o conjunto ao subtópico escolhido', async () => {
+    const user = userEvent.setup();
+    render(<Questoes />);
+    await user.click(screen.getByRole('button', { name: /Estrutura e Fisiologia Celular/ }));
+    await user.click(screen.getByRole('button', { name: /Membranas Celulares \(2\)/ }));
+
+    await waitFor(() => {
+      expect(screen.getByText(/Questão 1 de 2/)).toBeInTheDocument();
+    });
+  });
+
+  it('trocar de matéria limpa o tópico escolhido', async () => {
+    const user = userEvent.setup();
+    render(<Questoes />);
+    await user.click(screen.getByRole('button', { name: /Estrutura e Fisiologia Celular/ }));
+    expect(screen.getByRole('button', { name: /Todos os subtópicos/ })).toBeInTheDocument();
+
+    await user.click(screen.getByRole('button', { name: /^Biologia$/ }));
+
+    expect(screen.queryByRole('button', { name: /Todos os subtópicos/ })).not.toBeInTheDocument();
+  });
+});
