@@ -58,13 +58,29 @@ export default function Treino2aFase() {
     return ['Todas', ...new Set(pool.map((q) => q.subject))];
   }, [boardFilter]);
   const [subjectFilter, setSubjectFilter] = useState('Todas');
+  const [topicFilter, setTopicFilter] = useState('Todos');
   const [index, setIndex] = useState(0);
 
-  const pool = useMemo(() => {
+  // Recorte antes do tópico, para que a lista de tópicos mostre só o que a
+  // banca e a matéria já selecionadas realmente têm.
+  const scoped = useMemo(() => {
     let result = boardFilter === 'Todas' ? discursiveQuestions : discursiveQuestions.filter((q) => q.board === boardFilter);
     if (subjectFilter !== 'Todas') result = result.filter((q) => q.subject === subjectFilter);
     return result;
   }, [boardFilter, subjectFilter]);
+
+  // As discursivas trazem topicId e topic, mas não capítulo — por isso aqui a
+  // navegação para no tópico, sem o nível de subtópico das objetivas.
+  const topicOptions = useMemo(() => {
+    const counts = new Map<string, number>();
+    for (const q of scoped) counts.set(q.topic, (counts.get(q.topic) ?? 0) + 1);
+    return [...counts.entries()].sort((a, b) => a[0].localeCompare(b[0], 'pt-BR'));
+  }, [scoped]);
+
+  const pool = useMemo(
+    () => (topicFilter === 'Todos' ? scoped : scoped.filter((q) => q.topic === topicFilter)),
+    [scoped, topicFilter],
+  );
 
   const question = pool.length > 0 ? pool[index % pool.length] : null;
 
@@ -200,7 +216,11 @@ export default function Treino2aFase() {
             return (
               <button
                 key={b}
-                onClick={() => { changeFilter(setBoardFilter, b); changeFilter(setSubjectFilter, 'Todas'); }}
+                onClick={() => {
+                  changeFilter(setBoardFilter, b);
+                  changeFilter(setSubjectFilter, 'Todas');
+                  changeFilter(setTopicFilter, 'Todos');
+                }}
                 style={
                   active
                     ? { backgroundColor: currentPalette.primary, color: PALETTE_INK, borderRadius: '4px', padding: '2px 8px' }
@@ -221,7 +241,7 @@ export default function Treino2aFase() {
             return (
               <button
                 key={s}
-                onClick={() => changeFilter(setSubjectFilter, s)}
+                onClick={() => { changeFilter(setSubjectFilter, s); changeFilter(setTopicFilter, 'Todos'); }}
                 style={
                   active
                     ? { backgroundColor: subPal.primary, color: PALETTE_INK, borderRadius: '4px', padding: '2px 8px', display: 'inline-flex', alignItems: 'center', gap: '5px' }
@@ -230,6 +250,25 @@ export default function Treino2aFase() {
               >
                 {s !== 'Todas' && <Icon className="w-3 h-3" style={{ color: active ? PALETTE_INK : subPal.primary }} />}
                 <span>{s}</span>
+              </button>
+            );
+          })}
+        </div>
+        <div className="ni-subjects" style={{ margin: 0 }}>
+          {['Todos', ...topicOptions.map(([topic]) => topic)].map((t) => {
+            const active = topicFilter === t;
+            const count = t === 'Todos' ? scoped.length : topicOptions.find(([topic]) => topic === t)?.[1] ?? 0;
+            return (
+              <button
+                key={t}
+                onClick={() => changeFilter(setTopicFilter, t)}
+                style={
+                  active
+                    ? { backgroundColor: currentPalette.primary, color: PALETTE_INK, borderRadius: '4px', padding: '2px 8px' }
+                    : undefined
+                }
+              >
+                {t} <span style={{ opacity: 0.6 }}>({count})</span>
               </button>
             );
           })}

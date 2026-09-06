@@ -127,3 +127,83 @@ test('seleciona o bucket Outros tópicos com cartões sem tópico e de tópico d
   assert.deepEqual(selected.map((item) => item.id), ['unknown-topic', 'missing-topic']);
   assert.equal(selected.find((item) => item.id === 'unknown-topic')?.topicId, 'removed-topic');
 });
+
+test('indexa subtópicos na ordem dos capítulos do currículo', () => {
+  const withChapters: Topic[] = [
+    {
+      id: 'topic-physics',
+      name: 'Física',
+      subject: 'Física',
+      prerequisites: [],
+      chapters: ['Cinemática', 'Dinâmica'],
+    },
+  ];
+  const cards = [
+    card({ id: 'a', chapter: 'Dinâmica' }),
+    card({ id: 'b', chapter: 'Cinemática' }),
+    card({ id: 'c', chapter: 'Cinemática' }),
+    card({ id: 'd', chapter: 'Óptica' }),
+    card({ id: 'e', chapter: '' }),
+  ];
+
+  const [physics] = buildFlashcardTopicIndex(cards, withChapters, {}, now);
+
+  // Declarados no currículo primeiro, depois o extra, "sem subtópico" por último.
+  assert.deepEqual(physics.subtopics.map((sub) => sub.label), [
+    'Cinemática',
+    'Dinâmica',
+    'Óptica',
+    'Sem subtópico',
+  ]);
+  assert.equal(physics.subtopics.find((sub) => sub.label === 'Cinemática')!.total, 2);
+});
+
+test('conta vencidos por subtópico separadamente do total', () => {
+  const withChapters: Topic[] = [
+    { id: 'topic-physics', name: 'Física', subject: 'Física', prerequisites: [], chapters: ['Cinemática'] },
+  ];
+  const cards = [
+    card({ id: 'due', chapter: 'Cinemática' }),
+    card({ id: 'future', chapter: 'Cinemática' }),
+  ];
+  const reviews = {
+    due: review('due', '2026-08-22T12:00:00Z'),
+    future: review('future', '2026-09-30T12:00:00Z'),
+  };
+
+  const [physics] = buildFlashcardTopicIndex(cards, withChapters, reviews, now);
+  const cinematica = physics.subtopics.find((sub) => sub.label === 'Cinemática')!;
+
+  assert.equal(cinematica.total, 2);
+  assert.equal(cinematica.due, 1);
+});
+
+test('selectDueCards restringe ao subtópico quando ele é informado', () => {
+  const cards = [
+    card({ id: 'cinematica', chapter: 'Cinemática' }),
+    card({ id: 'dinamica', chapter: 'Dinâmica' }),
+  ];
+  const reviews = {
+    cinematica: review('cinematica', '2026-08-22T12:00:00Z'),
+    dinamica: review('dinamica', '2026-08-22T12:00:00Z'),
+  };
+
+  const restrito = selectDueCards(
+    cards,
+    topics,
+    { topicId: 'topic-physics', subtopicId: 'Cinemática', allDueForTopic: true },
+    reviews,
+    now,
+  );
+  assert.deepEqual(restrito.map((c) => c.id), ['cinematica']);
+
+  // Sem subtópico o comportamento anterior é preservado: o tópico inteiro.
+  const inteiro = selectDueCards(
+    cards,
+    topics,
+    { topicId: 'topic-physics', allDueForTopic: true },
+    reviews,
+    now,
+  );
+  assert.equal(inteiro.length, 2);
+});
