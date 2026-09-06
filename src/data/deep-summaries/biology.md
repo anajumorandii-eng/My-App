@@ -21,3 +21,39 @@ No cruzamento Aa × Aa, a combinação de gametas produz genótipos esperados 1 
 Dominância não significa que um alelo é mais frequente, melhor ou mais forte. Fenótipos podem envolver codominância, dominância incompleta, múltiplos genes e influência ambiental. Também é errado dizer que genes “pulam” gerações: um alelo recessivo pode não aparecer no fenótipo de heterozigotos, mas continua sendo transmitido em parte dos gametas.
 ## Pratique e confira
 Dois indivíduos com fenótipo dominante têm uma criança de fenótipo recessivo. Qual deve ser o genótipo dos pais no modelo de dominância completa? Ambos precisam ser Aa, pois a criança aa recebeu um alelo recessivo de cada um. Mostre os quatro resultados possíveis do cruzamento para justificar a conclusão.
+
+# Biologia | Proteínas: Enzimas
+## Catalisadores biológicos
+Enzimas aceleram reações ao reduzir a energia de ativação, sem alterar a variação de energia global nem o equilíbrio final. Em geral são proteínas com sítio ativo, embora existam RNAs catalíticos. Sua estrutura tridimensional determina quais moléculas conseguem interagir de modo eficiente e específico.
+## Modelo de ação
+O substrato liga-se ao sítio ativo e forma um complexo enzima-substrato. O encaixe induzido descreve ajustes de forma durante a interação, não uma peça rígida perfeita. Após a reação, produtos são liberados e a enzima pode atuar novamente. A velocidade depende também da concentração de substrato até ocorrer saturação.
+## Temperatura e pH
+Cada enzima possui faixa ótima de temperatura e pH. Fora dela, a velocidade pode cair por menor frequência de colisões ou por alteração das interações que sustentam a forma proteica. Desnaturação intensa compromete o sítio ativo e pode ser irreversível. Temperatura ótima não é necessariamente a maior temperatura possível.
+## Inibição e regulação
+Inibidores competitivos disputam o sítio ativo; aumentar substrato pode reduzir seu efeito relativo. Inibidores não competitivos alteram a atividade por ligação em outro local, sem precisar ocupar o sítio ativo. Células regulam enzimas por retroinibição, modificações químicas e compartimentalização, evitando desperdício metabólico.
+## Pratique e confira
+Em um experimento, uma enzima mantém atividade alta a 37 °C e perde quase toda atividade após aquecimento intenso. Explique por que isso não prova que a reação “acabou por falta de substrato”. A explicação deve relacionar temperatura, conformação proteica e sítio ativo.
+
+# Biologia | Bioenergética: Fermentação e Respiração
+## Obter energia utilizável
+ATP é a moeda imediata de energia celular, mas não é reserva de longo prazo. Na respiração aeróbia, a oxidação gradual da glicose transfere elétrons e permite produzir ATP. A glicólise ocorre no citosol e não exige oxigênio diretamente; seu produto, piruvato, pode seguir destinos diferentes.
+## Respiração aeróbia
+Após a glicólise, o piruvato é transformado e entra em etapas mitocondriais. O ciclo de Krebs produz transportadores reduzidos; a cadeia respiratória usa seus elétrons para bombear prótons. O retorno dos prótons pela ATP sintase produz ATP por fosforilação oxidativa. O oxigênio recebe elétrons ao final e forma água.
+## Fermentação como alternativa
+Sem oxigênio disponível ou em certas condições celulares, a fermentação regenera NAD+ para manter a glicólise ativa. Na fermentação láctica, forma-se lactato; na alcoólica, etanol e dióxido de carbono. O saldo energético por glicose é menor porque não há cadeia respiratória funcionando como na respiração aeróbia.
+## O que não confundir
+Respiração não é sinônimo de ventilação pulmonar: é um conjunto de reações celulares. A glicólise não ocorre na mitocôndria. Também não diga que fermentação produz ATP “sem oxigênio” diretamente: o ATP vem da glicólise; a fermentação permite regenerar a coenzima necessária para a continuidade do processo.
+## Pratique e confira
+Por que uma célula muscular pode aumentar a fermentação láctica durante esforço intenso? Relacione oferta de oxigênio, regeneração de NAD+ e manutenção da glicólise. Explique ainda por que essa via entrega menos ATP por molécula de glicose que a respiração aeróbia.
+
+# Biologia | Mecanismos da Evolução Biológica
+## Evolução muda populações
+Evolução biológica é mudança nas frequências de alelos de uma população ao longo de gerações. Indivíduos não evoluem porque precisam; indivíduos com variações herdáveis podem deixar descendentes em proporções diferentes. A seleção natural não cria a variação orientada para uma meta: ela atua sobre variações já existentes.
+## Fontes de variação
+Mutações introduzem novas variantes de DNA; recombinação e segregação independente reorganizam alelos na reprodução sexuada. Fluxo gênico desloca alelos entre populações por migração e reprodução. Deriva genética altera frequências por acaso, sendo particularmente forte em populações pequenas, inclusive após efeito fundador ou gargalo populacional.
+## Seleção e adaptação
+Quando uma característica hereditária aumenta sucesso reprodutivo em certo ambiente, seus alelos tendem a tornar-se mais frequentes. Adaptação é dependente do contexto: uma característica vantajosa em um ambiente pode não ser em outro. Seleção pode estabilizar, deslocar ou favorecer extremos, conforme a relação entre fenótipo e sobrevivência.
+## Evidências e limites
+Homologias anatômicas, fósseis, biogeografia e semelhanças moleculares sustentam parentesco evolutivo. Não confunda homologias com analogias: asas de morcego e braços humanos têm mesma origem estrutural; asas de inseto e ave têm função semelhante, mas origem distinta. Evolução não implica progresso moral ou complexidade crescente obrigatória.
+## Pratique e confira
+Uma pequena população funda uma ilha e apresenta frequência rara de um alelo maior que a população original. Qual mecanismo explica isso? Identifique o efeito fundador como caso de deriva genética e explique por que não é preciso supor que o alelo seja vantajoso para aumentar inicialmente.

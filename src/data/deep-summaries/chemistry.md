@@ -21,3 +21,39 @@ O quociente reacional Q usa a mesma expressão de K, mas com concentrações de 
 Em equilíbrios gasosos, reduzir o volume tende a favorecer o lado com menor número de mols gasosos, quando os números diferem. Aumentar temperatura favorece o sentido endotérmico e muda o valor de K; já alterar concentração ou pressão desloca a composição sem mudar K à mesma temperatura. Não conte sólidos nem líquidos na comparação de mols gasosos.
 ## Pratique e confira
 Para N₂O₄(g) ⇌ 2 NO₂(g), comprimir o recipiente favorece qual lado? Favorece N₂O₄, que possui um mol gasoso contra dois do outro lado. Justifique usando colisões e a comparação de mols, sem dizer que a constante de equilíbrio mudou se a temperatura permaneceu igual.
+
+# Química | Evolução dos Modelos Atômicos
+## Modelos respondem a evidências
+Modelos atômicos não são desenhos definitivos em escala: são explicações que mudaram quando novos experimentos exigiram novas ideias. Dalton propôs átomos como unidades de elementos; Thomson incorporou elétrons; Rutherford mostrou um núcleo pequeno e positivo; Bohr introduziu níveis de energia para explicar espectros atômicos.
+## Experimentos decisivos
+O tubo de raios catódicos revelou partículas negativas presentes em diferentes materiais, os elétrons. O espalhamento de partículas alfa pela lâmina de ouro mostrou que a maior parte do átomo é espaço vazio e que massa e carga positiva concentram-se no núcleo. Linhas espectrais indicaram emissões de energia discretas, não contínuas.
+## Modelo quântico
+O modelo atual descreve elétrons por orbitais, regiões de maior probabilidade, e não por trajetórias circulares precisas. Números quânticos organizam energia, forma e orientação dos orbitais. A incerteza não é falha instrumental simples: posição e quantidade de movimento não podem ser simultaneamente determinadas com precisão arbitrária nesse modelo.
+## Pegadinhas históricas
+Não atribua nêutrons a Rutherford: Chadwick identificou-os posteriormente. Bohr não descreve adequadamente todos os átomos, embora seja útil para entender hidrogênio e transições de energia. Orbitais não são órbitas. Um elétron não “perde energia” continuamente enquanto permanece em estado estacionário no tratamento de Bohr.
+## Pratique e confira
+Associe cada achado ao modelo: desvio forte de poucas partículas alfa, linhas espectrais do hidrogênio e descoberta do elétron. Justifique a associação pelo problema resolvido, não apenas pela ordem histórica. Em seguida, explique por que o modelo de Thomson não previa o grande desvio observado.
+
+# Química | Introdução à Química Orgânica
+## Carbono e cadeias
+Química orgânica estuda principalmente compostos de carbono, especialmente aqueles com ligações C–C e C–H. O carbono forma quatro ligações covalentes e constrói cadeias lineares, ramificadas, cíclicas e aromáticas. Nem todo composto com carbono é orgânico no recorte escolar: dióxido de carbono, carbonatos e cianetos aparecem como exceções frequentes.
+## Estrutura determina propriedade
+A fórmula molecular informa quantos átomos existem; a estrutural mostra como se conectam. Isômeros têm mesma fórmula molecular, mas estruturas ou arranjos espaciais distintos e podem ter propriedades diferentes. Saturação refere-se à presença apenas de ligações simples entre carbonos; duplas e triplas tornam a cadeia insaturada e alteram reatividade.
+## Funções orgânicas
+Grupos funcionais organizam reatividade: hidroxila caracteriza álcoois; carbonila aparece em aldeídos e cetonas; carboxila em ácidos carboxílicos; éster resulta da combinação característica entre ácido e álcool. Reconheça primeiro o grupo funcional antes de decorar nomes. Uma molécula pode ter mais de um grupo e exigir classificação prioritária conforme a regra de nomenclatura.
+## Nomenclatura e erros
+Na nomenclatura básica, identifique cadeia principal, número de carbonos, insaturações, função e ramificações. Não escolha necessariamente a cadeia desenhada em linha reta: escolha a que atende aos critérios da função e da maior extensão. Carbono quaternário possui quatro ligações a carbonos, não quatro hidrogênios.
+## Pratique e confira
+Compare etanol e ácido etanoico: ambos têm dois carbonos, mas quais grupos funcionais os distinguem? Relacione a hidroxila ligada a carbono saturado no álcool e a carboxila no ácido. Explique por que fórmula molecular ou tamanho da cadeia sozinho não basta para prever comportamento químico.
+
+# Química | Introdução ao Estudo das Pilhas e Baterias
+## Reação que produz corrente
+Uma pilha transforma energia química de reação espontânea em energia elétrica. Em uma célula galvânica, oxidação e redução ocorrem em regiões separadas, obrigando elétrons a circular pelo fio externo. Oxidação é perda de elétrons; redução é ganho. A frase “oxida no ânodo, reduz no cátodo” vale tanto para pilhas quanto para eletrólise.
+## Organização da célula
+O ânodo de uma pilha é negativo porque libera elétrons para o circuito; o cátodo é positivo porque recebe elétrons. A ponte salina fecha o circuito interno por migração de íons e preserva eletroneutralidade, mas não transporta elétrons pelo fio. Sem essa compensação de cargas, a reação para rapidamente mesmo com reagentes restantes.
+## Potencial e espontaneidade
+Potenciais-padrão de redução permitem comparar tendência de receber elétrons. Para uma pilha espontânea, E°pilha = E°cátodo − E°ânodo deve ser positivo. Não multiplique potenciais pelo coeficiente estequiométrico ao balancear elétrons: potencial é grandeza intensiva. Já a equação global deve respeitar número de elétrons perdido e ganho.
+## Uso e descarte
+Baterias recarregáveis usam reações que podem ser revertidas com fornecimento externo de energia, mas não são eternas: ciclos alteram materiais e capacidade. Pilhas contêm materiais que exigem descarte adequado. O aparelho não “puxa elétrons do polo positivo”: elétrons percorrem o circuito externo do ânodo para o cátodo.
+## Pratique e confira
+Em uma pilha Zn|Zn²+ || Cu²+|Cu, indique quem oxida, quem reduz e a direção dos elétrons. Zinco perde elétrons e é ânodo; cobre recebe elétrons e é cátodo. Explique qual é a função da ponte salina sem chamá-la de ponte de elétrons.

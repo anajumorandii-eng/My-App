@@ -52,6 +52,84 @@
     ]
   },
   {
+    "subject": "Biologia",
+    "topic": "Proteínas: Enzimas",
+    "sections": [
+      {
+        "title": "Catalisadores biológicos",
+        "content": "Enzimas aceleram reações ao reduzir a energia de ativação, sem alterar a variação de energia global nem o equilíbrio final. Em geral são proteínas com sítio ativo, embora existam RNAs catalíticos. Sua estrutura tridimensional determina quais moléculas conseguem interagir de modo eficiente e específico."
+      },
+      {
+        "title": "Modelo de ação",
+        "content": "O substrato liga-se ao sítio ativo e forma um complexo enzima-substrato. O encaixe induzido descreve ajustes de forma durante a interação, não uma peça rígida perfeita. Após a reação, produtos são liberados e a enzima pode atuar novamente. A velocidade depende também da concentração de substrato até ocorrer saturação."
+      },
+      {
+        "title": "Temperatura e pH",
+        "content": "Cada enzima possui faixa ótima de temperatura e pH. Fora dela, a velocidade pode cair por menor frequência de colisões ou por alteração das interações que sustentam a forma proteica. Desnaturação intensa compromete o sítio ativo e pode ser irreversível. Temperatura ótima não é necessariamente a maior temperatura possível."
+      },
+      {
+        "title": "Inibição e regulação",
+        "content": "Inibidores competitivos disputam o sítio ativo; aumentar substrato pode reduzir seu efeito relativo. Inibidores não competitivos alteram a atividade por ligação em outro local, sem precisar ocupar o sítio ativo. Células regulam enzimas por retroinibição, modificações químicas e compartimentalização, evitando desperdício metabólico."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Em um experimento, uma enzima mantém atividade alta a 37 °C e perde quase toda atividade após aquecimento intenso. Explique por que isso não prova que a reação “acabou por falta de substrato”. A explicação deve relacionar temperatura, conformação proteica e sítio ativo."
+      }
+    ]
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Bioenergética: Fermentação e Respiração",
+    "sections": [
+      {
+        "title": "Obter energia utilizável",
+        "content": "ATP é a moeda imediata de energia celular, mas não é reserva de longo prazo. Na respiração aeróbia, a oxidação gradual da glicose transfere elétrons e permite produzir ATP. A glicólise ocorre no citosol e não exige oxigênio diretamente; seu produto, piruvato, pode seguir destinos diferentes."
+      },
+      {
+        "title": "Respiração aeróbia",
+        "content": "Após a glicólise, o piruvato é transformado e entra em etapas mitocondriais. O ciclo de Krebs produz transportadores reduzidos; a cadeia respiratória usa seus elétrons para bombear prótons. O retorno dos prótons pela ATP sintase produz ATP por fosforilação oxidativa. O oxigênio recebe elétrons ao final e forma água."
+      },
+      {
+        "title": "Fermentação como alternativa",
+        "content": "Sem oxigênio disponível ou em certas condições celulares, a fermentação regenera NAD+ para manter a glicólise ativa. Na fermentação láctica, forma-se lactato; na alcoólica, etanol e dióxido de carbono. O saldo energético por glicose é menor porque não há cadeia respiratória funcionando como na respiração aeróbia."
+      },
+      {
+        "title": "O que não confundir",
+        "content": "Respiração não é sinônimo de ventilação pulmonar: é um conjunto de reações celulares. A glicólise não ocorre na mitocôndria. Também não diga que fermentação produz ATP “sem oxigênio” diretamente: o ATP vem da glicólise; a fermentação permite regenerar a coenzima necessária para a continuidade do processo."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que uma célula muscular pode aumentar a fermentação láctica durante esforço intenso? Relacione oferta de oxigênio, regeneração de NAD+ e manutenção da glicólise. Explique ainda por que essa via entrega menos ATP por molécula de glicose que a respiração aeróbia."
+      }
+    ]
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Mecanismos da Evolução Biológica",
+    "sections": [
+      {
+        "title": "Evolução muda populações",
+        "content": "Evolução biológica é mudança nas frequências de alelos de uma população ao longo de gerações. Indivíduos não evoluem porque precisam; indivíduos com variações herdáveis podem deixar descendentes em proporções diferentes. A seleção natural não cria a variação orientada para uma meta: ela atua sobre variações já existentes."
+      },
+      {
+        "title": "Fontes de variação",
+        "content": "Mutações introduzem novas variantes de DNA; recombinação e segregação independente reorganizam alelos na reprodução sexuada. Fluxo gênico desloca alelos entre populações por migração e reprodução. Deriva genética altera frequências por acaso, sendo particularmente forte em populações pequenas, inclusive após efeito fundador ou gargalo populacional."
+      },
+      {
+        "title": "Seleção e adaptação",
+        "content": "Quando uma característica hereditária aumenta sucesso reprodutivo em certo ambiente, seus alelos tendem a tornar-se mais frequentes. Adaptação é dependente do contexto: uma característica vantajosa em um ambiente pode não ser em outro. Seleção pode estabilizar, deslocar ou favorecer extremos, conforme a relação entre fenótipo e sobrevivência."
+      },
+      {
+        "title": "Evidências e limites",
+        "content": "Homologias anatômicas, fósseis, biogeografia e semelhanças moleculares sustentam parentesco evolutivo. Não confunda homologias com analogias: asas de morcego e braços humanos têm mesma origem estrutural; asas de inseto e ave têm função semelhante, mas origem distinta. Evolução não implica progresso moral ou complexidade crescente obrigatória."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Uma pequena população funda uma ilha e apresenta frequência rara de um alelo maior que a população original. Qual mecanismo explica isso? Identifique o efeito fundador como caso de deriva genética e explique por que não é preciso supor que o alelo seja vantajoso para aumentar inicialmente."
+      }
+    ]
+  },
+  {
     "subject": "Química",
     "topic": "Cálculos Estequiométricos",
     "sections": [
@@ -104,6 +182,84 @@
     ]
   },
   {
+    "subject": "Química",
+    "topic": "Evolução dos Modelos Atômicos",
+    "sections": [
+      {
+        "title": "Modelos respondem a evidências",
+        "content": "Modelos atômicos não são desenhos definitivos em escala: são explicações que mudaram quando novos experimentos exigiram novas ideias. Dalton propôs átomos como unidades de elementos; Thomson incorporou elétrons; Rutherford mostrou um núcleo pequeno e positivo; Bohr introduziu níveis de energia para explicar espectros atômicos."
+      },
+      {
+        "title": "Experimentos decisivos",
+        "content": "O tubo de raios catódicos revelou partículas negativas presentes em diferentes materiais, os elétrons. O espalhamento de partículas alfa pela lâmina de ouro mostrou que a maior parte do átomo é espaço vazio e que massa e carga positiva concentram-se no núcleo. Linhas espectrais indicaram emissões de energia discretas, não contínuas."
+      },
+      {
+        "title": "Modelo quântico",
+        "content": "O modelo atual descreve elétrons por orbitais, regiões de maior probabilidade, e não por trajetórias circulares precisas. Números quânticos organizam energia, forma e orientação dos orbitais. A incerteza não é falha instrumental simples: posição e quantidade de movimento não podem ser simultaneamente determinadas com precisão arbitrária nesse modelo."
+      },
+      {
+        "title": "Pegadinhas históricas",
+        "content": "Não atribua nêutrons a Rutherford: Chadwick identificou-os posteriormente. Bohr não descreve adequadamente todos os átomos, embora seja útil para entender hidrogênio e transições de energia. Orbitais não são órbitas. Um elétron não “perde energia” continuamente enquanto permanece em estado estacionário no tratamento de Bohr."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Associe cada achado ao modelo: desvio forte de poucas partículas alfa, linhas espectrais do hidrogênio e descoberta do elétron. Justifique a associação pelo problema resolvido, não apenas pela ordem histórica. Em seguida, explique por que o modelo de Thomson não previa o grande desvio observado."
+      }
+    ]
+  },
+  {
+    "subject": "Química",
+    "topic": "Introdução à Química Orgânica",
+    "sections": [
+      {
+        "title": "Carbono e cadeias",
+        "content": "Química orgânica estuda principalmente compostos de carbono, especialmente aqueles com ligações C–C e C–H. O carbono forma quatro ligações covalentes e constrói cadeias lineares, ramificadas, cíclicas e aromáticas. Nem todo composto com carbono é orgânico no recorte escolar: dióxido de carbono, carbonatos e cianetos aparecem como exceções frequentes."
+      },
+      {
+        "title": "Estrutura determina propriedade",
+        "content": "A fórmula molecular informa quantos átomos existem; a estrutural mostra como se conectam. Isômeros têm mesma fórmula molecular, mas estruturas ou arranjos espaciais distintos e podem ter propriedades diferentes. Saturação refere-se à presença apenas de ligações simples entre carbonos; duplas e triplas tornam a cadeia insaturada e alteram reatividade."
+      },
+      {
+        "title": "Funções orgânicas",
+        "content": "Grupos funcionais organizam reatividade: hidroxila caracteriza álcoois; carbonila aparece em aldeídos e cetonas; carboxila em ácidos carboxílicos; éster resulta da combinação característica entre ácido e álcool. Reconheça primeiro o grupo funcional antes de decorar nomes. Uma molécula pode ter mais de um grupo e exigir classificação prioritária conforme a regra de nomenclatura."
+      },
+      {
+        "title": "Nomenclatura e erros",
+        "content": "Na nomenclatura básica, identifique cadeia principal, número de carbonos, insaturações, função e ramificações. Não escolha necessariamente a cadeia desenhada em linha reta: escolha a que atende aos critérios da função e da maior extensão. Carbono quaternário possui quatro ligações a carbonos, não quatro hidrogênios."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Compare etanol e ácido etanoico: ambos têm dois carbonos, mas quais grupos funcionais os distinguem? Relacione a hidroxila ligada a carbono saturado no álcool e a carboxila no ácido. Explique por que fórmula molecular ou tamanho da cadeia sozinho não basta para prever comportamento químico."
+      }
+    ]
+  },
+  {
+    "subject": "Química",
+    "topic": "Introdução ao Estudo das Pilhas e Baterias",
+    "sections": [
+      {
+        "title": "Reação que produz corrente",
+        "content": "Uma pilha transforma energia química de reação espontânea em energia elétrica. Em uma célula galvânica, oxidação e redução ocorrem em regiões separadas, obrigando elétrons a circular pelo fio externo. Oxidação é perda de elétrons; redução é ganho. A frase “oxida no ânodo, reduz no cátodo” vale tanto para pilhas quanto para eletrólise."
+      },
+      {
+        "title": "Organização da célula",
+        "content": "O ânodo de uma pilha é negativo porque libera elétrons para o circuito; o cátodo é positivo porque recebe elétrons. A ponte salina fecha o circuito interno por migração de íons e preserva eletroneutralidade, mas não transporta elétrons pelo fio. Sem essa compensação de cargas, a reação para rapidamente mesmo com reagentes restantes."
+      },
+      {
+        "title": "Potencial e espontaneidade",
+        "content": "Potenciais-padrão de redução permitem comparar tendência de receber elétrons. Para uma pilha espontânea, E°pilha = E°cátodo − E°ânodo deve ser positivo. Não multiplique potenciais pelo coeficiente estequiométrico ao balancear elétrons: potencial é grandeza intensiva. Já a equação global deve respeitar número de elétrons perdido e ganho."
+      },
+      {
+        "title": "Uso e descarte",
+        "content": "Baterias recarregáveis usam reações que podem ser revertidas com fornecimento externo de energia, mas não são eternas: ciclos alteram materiais e capacidade. Pilhas contêm materiais que exigem descarte adequado. O aparelho não “puxa elétrons do polo positivo”: elétrons percorrem o circuito externo do ânodo para o cátodo."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Em uma pilha Zn|Zn²+ || Cu²+|Cu, indique quem oxida, quem reduz e a direção dos elétrons. Zinco perde elétrons e é ânodo; cobre recebe elétrons e é cátodo. Explique qual é a função da ponte salina sem chamá-la de ponte de elétrons."
+      }
+    ]
+  },
+  {
     "subject": "Língua Inglesa",
     "topic": "Text Comprehension: Taxonomy and Terminology",
     "sections": [
@@ -152,6 +308,84 @@
       {
         "title": "Pratique e confira",
         "content": "Se o narrador diz “She smiled, but kept her hands clenched under the table”, qual inferência é razoável? O contraste sugere tensão ou desconforto apesar do sorriso. Não é possível concluir a causa exata da tensão. Mostre quais duas pistas — smiled e clenched — precisam ser relacionadas para chegar à resposta."
+      }
+    ]
+  },
+  {
+    "subject": "Língua Inglesa",
+    "topic": "Text Comprehension: Global Warming",
+    "sections": [
+      {
+        "title": "Organizar causa e evidência",
+        "content": "Textos sobre aquecimento global costumam combinar mecanismo físico, dados observacionais, impactos e propostas de resposta. Ao ler, separe o que o texto apresenta como causa, evidência, projeção e consequência. Palavras como because, leads to, evidence, likely e according to indicam relações diferentes e evitam que hipótese ou previsão seja tratada como fato já ocorrido."
+      },
+      {
+        "title": "Vocabulário em contexto",
+        "content": "Greenhouse gases, emissions, warming, fossil fuels, mitigation e adaptation aparecem com frequência. Mitigation busca reduzir causas, por exemplo cortar emissões; adaptation reduz vulnerabilidade aos efeitos já esperados, por exemplo adaptar cidades a ondas de calor. Use cognatos como emissions com cautela e confirme pelo enunciado a direção da relação apresentada."
+      },
+      {
+        "title": "Ler números sem distorcer",
+        "content": "Percentages, averages e trends precisam de referência: aumento de 2% pode se referir a qual período, local ou medida? Averages não descrevem cada caso individual. Se o texto usa may, could ou projected, a informação é possibilidade ou projeção condicionada. Em alternativa de prova, preserve limites e qualificadores, sem transformar probabilidade em certeza."
+      },
+      {
+        "title": "Armadilhas recorrentes",
+        "content": "Não confunda weather, condição de curto prazo, com climate, padrão de longo prazo. Uma tempestade isolada não prova nem refuta uma tendência climática por si só. Também não conclua que o texto defende uma política específica só porque descreve um impacto; localize verbos de recomendação e quem assume a posição no trecho."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Se um texto diz “Adaptation can reduce harm, but it does not replace emissions cuts”, qual contraste deve aparecer na resposta? Explique que adaptação reduz danos, enquanto redução de emissões enfrenta a causa, e que o conector but impede interpretar as duas estratégias como equivalentes completas."
+      }
+    ]
+  },
+  {
+    "subject": "Língua Inglesa",
+    "topic": "Text Comprehension: Digital Technology",
+    "sections": [
+      {
+        "title": "Tese e recorte",
+        "content": "Textos sobre tecnologia digital frequentemente contrapõem benefício, risco e condições de uso. Identifique a tese central antes de escolher detalhes: o autor pode defender que uma ferramenta amplia acesso, mas também alerta para privacidade, desigualdade ou dependência. Uma resposta correta mantém esse recorte condicional em vez de converter análise equilibrada em elogio ou condenação absoluta."
+      },
+      {
+        "title": "Conectores estruturam argumento",
+        "content": "However, although e despite introduzem contraste; therefore e consequently indicam consequência; whereas estabelece comparação. Pronomes como it, they e this podem retomar uma ideia inteira, não apenas o substantivo mais próximo. Ao responder, localize antecedente e conector: eles mostram a arquitetura do argumento melhor do que listas de vocabulário isolado."
+      },
+      {
+        "title": "Dados e credibilidade",
+        "content": "Claims baseadas em surveys, studies e reports exigem atenção a fonte, população e limite do dado. Correlation não é automaticamente causation. A presença de número ou citação dá evidência à afirmação, mas o texto pode usá-la para ilustrar tendência, não para provar uma causa única. Diferencie relato de dado e interpretação do autor."
+      },
+      {
+        "title": "Falsos amigos e modalizadores",
+        "content": "Eventually significa “por fim”; currently significa “atualmente”; sensible geralmente significa “sensato”, não “sensível”. Modalizadores como may, might, tends to e can reduzem certeza. Alternativas que trocam may por will ou some por all frequentemente distorcem a passagem mesmo quando repetem palavras corretas."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Leia: “Remote work can broaden access to jobs, although it may exclude people without reliable internet.” Resuma sem perder o contraste. A resposta deve mencionar ampliação potencial de acesso e exclusão possível por infraestrutura, sem afirmar que todo trabalho remoto exclui ou inclui as mesmas pessoas."
+      }
+    ]
+  },
+  {
+    "subject": "Língua Inglesa",
+    "topic": "Text Comprehension: Women Empowerment",
+    "sections": [
+      {
+        "title": "Argumento e perspectiva",
+        "content": "Textos sobre participação e autonomia de mulheres podem apresentar dados, relatos e argumentos sobre educação, trabalho, direitos e representação. Pergunte quem fala, qual obstáculo é descrito e que mudança o texto defende ou avalia. Empowerment não significa apenas sucesso individual; pode envolver capacidade de decisão, acesso a recursos e participação coletiva."
+      },
+      {
+        "title": "Relações lógicas",
+        "content": "Termos como inequality, opportunity, leadership, barriers e gender gap ganham sentido pela relação no período. If e unless introduzem condição; while pode marcar simultaneidade ou contraste; because indica justificativa. Em questões de inferência, use a relação expressa no texto e evite acrescentar uma opinião pessoal sobre políticas sem apoio no trecho."
+      },
+      {
+        "title": "Dados, grupos e alcance",
+        "content": "Quando um parágrafo compara taxas de participação, identifique grupos, período e medida antes de concluir. Uma melhoria em indicador não implica igualdade plena; uma diferença média não define todas as pessoas do grupo. Quantificadores como more, fewer, most e a proportion têm alcance específico e costumam aparecer em alternativas que exageram o dado."
+      },
+      {
+        "title": "Linguagem avaliativa",
+        "content": "Palavras como significant, persistent, unequal e progress podem revelar avaliação do autor, mas precisam ser lidas em contexto. Uma narrativa de avanço pode também reconhecer barreiras remanescentes. Não confunda descrição de discriminação com defesa dela: observe verbos, adjetivos e as consequências que o texto associa ao fato."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Se o texto afirma que acesso à educação “is necessary but not sufficient” para igualdade, qual leitura é correta? Educação é condição importante, mas outras barreiras permanecem. Explique por que uma alternativa dizendo que educação sozinha resolve toda desigualdade contradiz diretamente not sufficient."
       }
     ]
   },
@@ -516,6 +750,84 @@
       {
         "title": "Pratique e confira",
         "content": "Uma moeda honesta é lançada três vezes. A probabilidade de sair pelo menos uma cara é 1 menos a chance de não sair cara: 1 − (1/2)³ = 7/8. Explique por que somar diretamente os casos “uma cara”, “duas caras” e “três caras” exigiria cuidado com a contagem de sequências."
+      }
+    ]
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Progressão Aritmética",
+    "sections": [
+      {
+        "title": "Variação constante",
+        "content": "Uma progressão aritmética, ou PA, é uma sequência em que a diferença entre termos consecutivos é constante, chamada razão r. Se r é positiva, a sequência cresce; se é negativa, decresce; se é zero, é constante. Identificar a diferença é mais seguro que tentar deduzir a fórmula apenas olhando os primeiros termos."
+      },
+      {
+        "title": "Termo geral e posição",
+        "content": "O termo de posição n é aₙ = a₁ + (n − 1)r. O n − 1 aparece porque o primeiro termo está a zero passos de si mesmo. Em problemas de contagem, deixe claro se a numeração começa em 0 ou 1. A fórmula permite encontrar termos distantes sem listar toda a sequência."
+      },
+      {
+        "title": "Soma de termos",
+        "content": "A soma dos n primeiros termos é Sₙ = n(a₁ + aₙ)/2. Ela pode ser entendida ao parear primeiro e último termos: cada par tem mesma soma. Se não houver termo final conhecido, substitua aₙ pela fórmula do termo geral. Em PA com número ímpar de termos, o termo central é a média do primeiro e do último."
+      },
+      {
+        "title": "Armadilhas de índice",
+        "content": "Não use n no lugar de n − 1 no termo geral. Não confunda razão de PA com razão de PG, onde o fator é multiplicativo. Uma sequência de quadrados, como 1, 4, 9, 16, não é PA porque as diferenças 3, 5 e 7 não são constantes, apesar de seguir um padrão simples."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Numa PA com a₁ = 7 e r = 3, encontre a₍₂₀₎ e S₂₀. O vigésimo termo é 7 + 19·3 = 64; a soma é 20(7 + 64)/2 = 710. Mostre por que usar 20 em vez de 19 no primeiro cálculo produziria o termo seguinte."
+      }
+    ]
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Semelhança de Triângulos",
+    "sections": [
+      {
+        "title": "Mesma forma, outra escala",
+        "content": "Triângulos semelhantes têm ângulos correspondentes iguais e lados correspondentes proporcionais. Eles não precisam ter o mesmo tamanho; a razão de semelhança informa a escala entre medidas lineares. Esse conceito permite calcular alturas inacessíveis, interpretar sombras e relacionar figuras em mapas, desde que as correspondências sejam estabelecidas corretamente."
+      },
+      {
+        "title": "Critérios de semelhança",
+        "content": "Dois ângulos iguais garantem semelhança pelo critério AA, pois o terceiro ângulo fica determinado. Também podem valer LAL, com ângulo compreendido igual e lados proporcionais, e LLL, com três pares de lados proporcionais. Não basta duas medidas de lado isoladas: é preciso verificar o critério completo e a correspondência entre vértices."
+      },
+      {
+        "title": "Escala de grandezas",
+        "content": "Se a razão linear é k, perímetros variam por k, áreas por k² e volumes por k³. Essa distinção é uma fonte clássica de erro. Uma ampliação de lados por fator 3 não triplica a área: multiplica-a por 9. Em problemas de sombras, a luz solar pode ser tratada como raios paralelos, formando triângulos semelhantes."
+      },
+      {
+        "title": "Checagens de coerência",
+        "content": "Não associe lado maior de um triângulo a lado menor do outro sem razão geométrica. Use letras de vértices correspondentes e mantenha a ordem nas proporções. Congruência é caso particular de semelhança com razão 1; semelhança não autoriza concluir igualdade de comprimentos nem de áreas."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Uma haste de 2 m projeta sombra de 1,5 m; no mesmo instante, um prédio projeta sombra de 18 m. Qual é a altura? Pela proporcionalidade, h/18 = 2/1,5, logo h = 24 m. Explique qual hipótese sobre a direção dos raios de luz torna válida a comparação."
+      }
+    ]
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Introdução ao Modelo Exponencial",
+    "sections": [
+      {
+        "title": "Crescimento proporcional",
+        "content": "Em uma função exponencial f(x) = a·bˣ, a variável aparece no expoente e b é positivo, diferente de 1. Se b > 1, há crescimento; se 0 < b < 1, há decaimento. Variações iguais em x multiplicam o valor por um mesmo fator b, ao contrário de uma função afim, em que acrescentam uma diferença constante."
+      },
+      {
+        "title": "Modelagem de taxas",
+        "content": "Juros compostos, crescimento de populações e decaimento radioativo podem ser modelados exponencialmente quando a taxa é proporcional à quantidade presente. A forma Q(t) = Q₀(1 + i)ᵗ usa i em forma decimal. Taxa de 5% significa fator 1,05; redução de 5% significa fator 0,95, não subtração fixa de 5 unidades."
+      },
+      {
+        "title": "Leitura de gráficos",
+        "content": "Com a > 0, o gráfico fica acima do eixo x e aproxima-se de zero em uma direção sem necessariamente alcançá-lo. O coeficiente a ajusta o valor inicial; b controla o fator de mudança. Comparar gráficos exige observar base e multiplicador, não apenas qual parece mais inclinado em uma janela específica."
+      },
+      {
+        "title": "Erros frequentes",
+        "content": "Não use porcentagem como número inteiro dentro do fator: 10% corresponde a 0,10. Não confunda dobrar em cada período com somar a mesma quantidade. Em decaimento, o tempo necessário para reduzir pela metade depende da base e pode ser calculado com logaritmos, não por subtração linear de metade a cada ponto arbitrário."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Uma cultura começa com 500 células e dobra a cada hora. Escreva Q(t) = 500·2ᵗ e calcule após 4 horas: 8.000 células. Explique por que uma previsão linear de “mais 500 por hora” daria resultado diferente já na segunda hora."
       }
     ]
   },
