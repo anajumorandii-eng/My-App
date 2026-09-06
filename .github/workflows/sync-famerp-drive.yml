@@ -1,0 +1,29 @@
+name: Sincronizar FAMERP do Drive
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/sync_famerp_drive.py"
+      - ".github/workflows/sync-famerp-drive.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install gdown
+      - run: python scripts/sync_famerp_drive.py
+      - run: |
+          git config user.name "JUJU Provas Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add "provas brutas/FAMERP"
+          git diff --cached --quiet || git commit -m "Adiciona provas FAMERP 2023-2026"
+          git push
