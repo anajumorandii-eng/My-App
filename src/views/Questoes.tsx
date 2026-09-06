@@ -74,8 +74,13 @@ export default function Questoes() {
   const [loadingDeepExplanation, setLoadingDeepExplanation] = useState(false);
   const [diagnosis, setDiagnosis] = useState<ErrorDiagnosis | null>(null);
   const [diagnosing, setDiagnosing] = useState(false);
+  const [diagnosisFailed, setDiagnosisFailed] = useState(false);
   const [diagnosisSaved, setDiagnosisSaved] = useState(false);
   const [diagnosisDismissed, setDiagnosisDismissed] = useState(false);
+  // Tipo com que o erro vai para o caderno. A IA preenche quando acerta o
+  // diagnóstico, mas a escolha final é da estudante: ela sabe por que errou
+  // melhor que uma hipótese gerada a partir do enunciado.
+  const [errorType, setErrorType] = useState<ErrorLog['type']>('conceptual');
 
   // O "só questões reais" entra antes de montar a árvore para que as contagens
   // de tópico e subtópico reflitam o que o filtro vai realmente entregar. Se
@@ -105,8 +110,10 @@ export default function Questoes() {
   const resetDiagnosisState = () => {
     setDiagnosis(null);
     setDiagnosing(false);
+    setDiagnosisFailed(false);
     setDiagnosisSaved(false);
     setDiagnosisDismissed(false);
+    setErrorType('conceptual');
   };
 
   const resetQuestionState = () => {
@@ -219,32 +226,56 @@ export default function Questoes() {
       const parsed = parseErrorDiagnosis(data.text);
       if (parsed) {
         setDiagnosis(parsed);
+        setErrorType(parsed.type);
+      } else {
+        // Resposta veio, mas não no formato esperado. Vale avisar: sem isso a
+        // tela fica igual a "nada aconteceu" e a estudante não sabe se deve
+        // esperar mais.
+        setDiagnosisFailed(true);
       }
     } catch (error) {
       console.error('Failed to diagnose error:', error);
+      setDiagnosisFailed(true);
     } finally {
       setDiagnosing(false);
     }
   };
 
+  // Registrar o erro NÃO depende da IA. Antes dependia — o guard exigia um
+  // diagnóstico, então uma falha de rede tornava o erro impossível de
+  // registrar, que é justamente quando registrar importa.
   const saveErrorToLog = () => {
-    if (!question || !diagnosis || !selectedOptionId) return;
+    if (!question || !selectedOptionId) return;
     const selectedOption = question.options.find((o) => o.id === selectedOptionId);
     const correctOption = question.options.find((o) => o.id === question.correctOptionId);
+    // A hipótese só entra no registro se a IA de fato produziu uma E a
+    // estudante manteve o tipo sugerido. Se ela trocou, o diagnóstico dela
+    // substitui o da IA e guardar a hipótese descartada só confundiria a
+    // leitura do caderno depois.
+    const usouHipotese = diagnosis !== null && !diagnosisDismissed && errorType === diagnosis.type;
+    const origem = usouHipotese
+      ? 'JUJU sugeriu o diagnóstico e você confirmou'
+      : 'classificado por você';
     const log: ErrorLog = {
       id: `err_${question.id}_${Date.now()}`,
       questionId: question.id,
       topicId: question.topicId,
       date: new Date().toISOString(),
-      type: diagnosis.type,
-      notes: `Diagnosticado a partir de uma questão de prática (JUJU sugeriu, você salvou). Resposta marcada: ${selectedOption?.text ?? ''}. Gabarito: ${correctOption?.text ?? ''}.`,
-      breakPoint: diagnosis.breakPoint,
-      evidence: diagnosis.evidence,
-      // Salvar no caderno é o gesto de validação da estudante — só aqui a
-      // hipótese da IA passa a ser tratada como fato ('confirmado').
+      type: errorType,
+      notes: `Erro registrado a partir de uma questão de prática (${origem}). Resposta marcada: ${selectedOption?.text ?? ''}. Gabarito: ${correctOption?.text ?? ''}.`,
+      ...(usouHipotese
+        ? {
+          aiHypothesis: diagnosis.breakPoint,
+          breakPoint: diagnosis.breakPoint,
+          evidence: diagnosis.evidence,
+          proposedIntervention: diagnosis.intervention,
+          interventionStatus: 'pendente' as const,
+        }
+        : {}),
+      // Salvar no caderno é o gesto de validação da estudante — só aqui o
+      // registro passa a ser tratado como fato ('confirmado'), venha o tipo
+      // da IA ou dela.
       confidence: 'confirmado',
-      proposedIntervention: diagnosis.intervention,
-      interventionStatus: 'pendente',
     };
     if (user) {
       addUserErrorLog(user.uid, log).catch((error) => console.error('Failed to save error log:', error));
@@ -482,19 +513,87 @@ export default function Questoes() {
                     </div>
                   )}
 
-                  {diagnosis && !diagnosisDismissed && (
-                    <div className="mt-3 p-3 rounded-lg border border-amber-500/30 bg-amber-500/10 text-xs text-amber-300">
-                      <div className="flex items-center justify-between mb-1">
-                        <b>Diagnóstico de Erro: {ERROR_TYPE_LABELS[diagnosis.type]}</b>
-                        {!diagnosisSaved ? (
-                          <button onClick={saveErrorToLog} className="underline text-amber-200">
-                            Salvar no Caderno de Erros
+                  {/* Bloco de erro. Aparece sempre que a resposta está errada —
+                      o registro no caderno não depende de a IA ter respondido. */}
+                  {answered && !isCorrect && (
+                    <div className="mt-3 p-3 rounded-lg border border-amber-500/30 bg-amber-500/10 text-xs text-amber-200 space-y-2">
+                      {diagnosing && (
+                        <div className="flex items-center gap-2 text-amber-300">
+                          <Stethoscope className="w-3.5 h-3.5 animate-pulse" />
+                          <span>Diagnosticando esse erro...</span>
+                        </div>
+                      )}
+
+                      {diagnosis && !diagnosisDismissed && (
+                        <div className="space-y-1.5">
+                          <div className="flex items-center gap-2 flex-wrap">
+                            <Stethoscope className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+                            <b className="text-amber-300">{ERROR_TYPE_LABELS[diagnosis.type]}</b>
+                            <span className="text-[10px] text-amber-200/60">
+                              hipótese da JUJU — confirme ou troque abaixo
+                            </span>
+                          </div>
+                          <p className="text-[11px] text-amber-200/90">{diagnosis.breakPoint}</p>
+                          {diagnosis.evidence && (
+                            <p className="text-[11px] text-amber-200/60">Evidência: {diagnosis.evidence}</p>
+                          )}
+                          <p className="text-[11px] text-amber-200/80">
+                            Próximo passo ({INTERVENTION_LABELS[diagnosis.intervention.type]}):{' '}
+                            {diagnosis.intervention.description}
+                          </p>
+                          {!diagnosisSaved && (
+                            <button
+                              onClick={dismissDiagnosis}
+                              className="text-[11px] underline text-amber-200/70 hover:text-amber-200"
+                            >
+                              Não foi isso
+                            </button>
+                          )}
+                        </div>
+                      )}
+
+                      {diagnosisFailed && !diagnosis && (
+                        <div className="flex items-center gap-2 flex-wrap text-amber-200/80">
+                          <span>Não consegui diagnosticar agora.</span>
+                          <button
+                            onClick={() => selectedOptionId && fetchDiagnosis(selectedOptionId)}
+                            className="underline text-amber-200"
+                          >
+                            Tentar de novo
                           </button>
-                        ) : (
-                          <span>Salvo ✓</span>
-                        )}
-                      </div>
-                      <p className="text-[11px] text-amber-200/80">{diagnosis.breakPoint}</p>
+                          <span className="text-amber-200/60">
+                            Você ainda pode registrar o erro abaixo.
+                          </span>
+                        </div>
+                      )}
+
+                      {diagnosisSaved ? (
+                        <div className="flex items-center gap-1.5 text-emerald-300">
+                          <CheckCircle2 className="w-3.5 h-3.5" />
+                          <span>Registrado no Caderno de Erros.</span>
+                        </div>
+                      ) : (
+                        <div className="flex items-center gap-2 flex-wrap pt-1">
+                          <label className="text-[11px] text-amber-200/70" htmlFor="tipo-erro">
+                            Tipo do erro
+                          </label>
+                          <select
+                            id="tipo-erro"
+                            value={errorType}
+                            onChange={(e) => setErrorType(e.target.value as ErrorLog['type'])}
+                            className="bg-transparent border border-amber-500/40 rounded px-1.5 py-1 text-[11px] text-amber-100"
+                          >
+                            {(Object.keys(ERROR_TYPE_LABELS) as ErrorLog['type'][]).map((t) => (
+                              <option key={t} value={t} className="bg-[var(--bg)] text-[var(--text)]">
+                                {ERROR_TYPE_LABELS[t]}
+                              </option>
+                            ))}
+                          </select>
+                          <Button onClick={saveErrorToLog} className="text-[11px] px-2 py-1">
+                            Adicionar ao Caderno de Erros
+                          </Button>
+                        </div>
+                      )}
                     </div>
                   )}
                 </div>
