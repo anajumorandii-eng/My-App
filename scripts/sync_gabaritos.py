@@ -16,8 +16,10 @@ relata o que faltou e sai com erro só no fim.
 from __future__ import annotations
 
 from pathlib import Path
+import re
 import sys
 import tempfile
+from urllib.parse import urljoin
 
 import requests
 from pypdf import PdfReader
@@ -58,6 +60,42 @@ ALVOS: list[tuple[str, list[str]]] = [
         ],
     ),
 ]
+
+
+# Páginas oficiais que listam os gabaritos. Unicamp e Unifesp não publicam o
+# PDF num caminho estável — ele fica atrás de uma página de índice cujo padrão
+# muda a cada ano. Varrer o índice resiste a essa troca; adivinhar URL não.
+INDICES: list[tuple[str, str]] = [
+    (
+        "UNICAMP",
+        "https://www.comvest.unicamp.br/ingresso-2026/vestibular-2026/provas-e-gabaritos-vestibular-2026/",
+    ),
+    (
+        "UNIFESP",
+        "https://ingresso.unifesp.br/vestibulares-anteriores/category/32-provas-e-gabaritos",
+    ),
+]
+
+# Aceita "gabarito" no href ou no texto do link. Sem isso viriam também os
+# cadernos de prova, que já temos.
+LINK_PDF = re.compile(r'<a[^>]+href="([^"]+\.pdf)"[^>]*>(.*?)</a>', re.I | re.S)
+
+
+def varrer_indice(banca: str, url: str) -> list[tuple[str, str]]:
+    """Devolve [(url_absoluta, rótulo)] dos PDFs de gabarito listados na página."""
+    try:
+        r = requests.get(url, headers=UA, timeout=TIMEOUT)
+        r.raise_for_status()
+    except Exception as e:
+        print(f"  {banca}: nao foi possivel abrir o indice ({e})")
+        return []
+    achados = []
+    for href, texto in LINK_PDF.findall(r.text):
+        rotulo = re.sub(r"<[^>]+>", " ", texto)
+        rotulo = " ".join(rotulo.split())
+        if "gabarito" in href.lower() or "gabarito" in rotulo.lower():
+            achados.append((urljoin(url, href), rotulo))
+    return achados
 
 
 def baixar(urls: list[str], destino: Path) -> str | None:
@@ -118,6 +156,14 @@ def main() -> int:
                 # Gabarito é uma tabela curta, mas 200 caracteres é pouco até
                 # para isso: provavelmente o PDF é digitalizado e precisa de OCR.
                 print("    AVISO: quase sem texto — pode ser PDF digitalizado")
+
+    print("\n--- indices de gabarito (Unicamp / Unifesp) ---")
+    for banca, url in INDICES:
+        achados = varrer_indice(banca, url)
+        print(f"  {banca}: {len(achados)} link(s) de gabarito em {url}")
+        for u, rotulo in achados[:20]:
+            print(f"      {rotulo[:70]!r}")
+            print(f"        {u}")
 
     if faltando:
         print("\nNão foi possível baixar:")
