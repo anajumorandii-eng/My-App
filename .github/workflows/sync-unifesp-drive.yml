@@ -1,0 +1,29 @@
+name: Sincronizar UNIFESP do Drive
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/sync_unifesp_drive.py"
+      - ".github/workflows/sync-unifesp-drive.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install gdown
+      - run: python scripts/sync_unifesp_drive.py
+      - run: |
+          git config user.name "JUJU Provas Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add "provas brutas/UNIFESP"
+          git diff --cached --quiet || git commit -m "Adiciona provas UNIFESP 2023-2026"
+          git push
