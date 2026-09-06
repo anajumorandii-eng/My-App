@@ -40,14 +40,14 @@ DRIVE = [
     ("16jJBtFElo27LFmC-v2hUe6jXXk1rbulu","UNIFESP/2026/UNIFESP_2026_prova_discursiva.pdf"),
 
     # FAMERP
-    ("1VWlLvyRAmWUj5QCNA5-g0AMXsa8rI4MQ","FAMERP/2023/FAMERP_2023_dia_1_conhecimentos_gerais.pdf"),
+    ("1VWlLvyRAmWUj5QCNA5-g0AMXsa8rI4MQ","FAMERP/2023/FAMERP_2023_dia_1.pdf"),
     ("1SWNU2WjaCDenTto3AInQdraVc5UkJaoM","FAMERP/2023/FAMERP_2023_dia_2.pdf"),
-    ("1fyTNxBOj_nsdwJ9PmpyiH3OV_rhdU4qj","FAMERP/2024/FAMERP_2024_dia_1_objetiva.pdf"),
-    ("1RroTSRtcAtndvSpMAwzfNHdFpSY-xJ67","FAMERP/2024/FAMERP_2024_dia_2_discursiva.pdf"),
-    ("1WGFedyBnck7EWXUWWuiojeM6gvn5GtQA","FAMERP/2025/FAMERP_2025_dia_1_objetiva.pdf"),
-    ("1WNRKeoxMf0Y8yQZnU6Wvs18bAyYZs5DB","FAMERP/2025/FAMERP_2025_dia_2_discursiva.pdf"),
-    ("1aL0Lxnytncr15PvoKP5es3E9n8zXoR97","FAMERP/2026/FAMERP_2026_dia_1_objetiva.pdf"),
-    ("1iPDf6UygGzSY6EIng1acQVnyYVCtrP-6","FAMERP/2026/FAMERP_2026_dia_2_discursiva.pdf"),
+    ("1fyTNxBOj_nsdwJ9PmpyiH3OV_rhdU4qj","FAMERP/2024/FAMERP_2024_dia_1.pdf"),
+    ("1RroTSRtcAtndvSpMAwzfNHdFpSY-xJ67","FAMERP/2024/FAMERP_2024_dia_2.pdf"),
+    ("1WGFedyBnck7EWXUWWuiojeM6gvn5GtQA","FAMERP/2025/FAMERP_2025_dia_1.pdf"),
+    ("1WNRKeoxMf0Y8yQZnU6Wvs18bAyYZs5DB","FAMERP/2025/FAMERP_2025_dia_2.pdf"),
+    ("1aL0Lxnytncr15PvoKP5es3E9n8zXoR97","FAMERP/2026/FAMERP_2026_dia_1.pdf"),
+    ("1iPDf6UygGzSY6EIng1acQVnyYVCtrP-6","FAMERP/2026/FAMERP_2026_dia_2.pdf"),
 
     # UNESP
     ("1vkn3Vy_StnanSXBvzrJBwqEW1oCngvDz","UNESP/2023/UNESP_2023_1a_fase.pdf"),
