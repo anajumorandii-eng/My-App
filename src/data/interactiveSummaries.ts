@@ -6,8 +6,9 @@ import { geographyInteractiveSummaries } from './geographyInteractiveSummaries';
 import { humanitiesInteractiveSummaries } from './humanitiesInteractiveSummaries';
 import { physicsInteractiveSummaries } from './physicsInteractiveSummaries';
 import { remainingInteractiveSummaries } from './remainingInteractiveSummaries';
+import { applyDeepSummary } from './applyDeepSummaries';
 
-export const interactiveSummaries: InteractiveSummary[] = [
+const baseSummaries: InteractiveSummary[] = [
   {
     id: 'fis-termologia-calor', title: 'Calor, temperatura e mudanças de estado', subject: 'Física', topic: 'Temperatura, Calor e seus Mecanismos de Transferência', priority: 'muito-alta',
     prerequisites: ['Proporcionalidade', 'Conversão de unidades', 'Energia'],
@@ -72,3 +73,5 @@ export const interactiveSummaries: InteractiveSummary[] = [
   ...expandedInteractiveSummaries,
   ...humanitiesInteractiveSummaries,
 ];
+
+export const interactiveSummaries: InteractiveSummary[] = baseSummaries.map(applyDeepSummary);

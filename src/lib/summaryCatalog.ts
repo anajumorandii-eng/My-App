@@ -40,7 +40,7 @@ export function validateSummaryCatalog(summaries: InteractiveSummary[], material
         issues.push({ code: 'unknown-material', summaryId: summary.id, reference: source.materialId ?? source.label });
       }
       const material = source.materialId ? materialsById.get(source.materialId) : undefined;
-      if (material?.format === 'apostila' && (!material.chapter || !material.startPage || !material.endPage || material.endPage < material.startPage)) {
+      if (material?.format === 'apostila' && !material.uncertain && (!material.chapter || !material.startPage || !material.endPage || material.endPage < material.startPage)) {
         issues.push({ code: 'missing-source-location', summaryId: summary.id, reference: source.materialId ?? source.label });
       }
     }

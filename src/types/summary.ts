@@ -20,6 +20,7 @@ export interface SummarySource {
 export interface RetrievalElement { label: string; keywords: string[]; }
 export interface RetrievalPrompt { id: string; sectionId?: string; prompt: string; expectedElements: RetrievalElement[]; hint: string; transferPrompt: string; board?: string; phase?: ExamPhase; }
 export interface InteractiveSummary {
+  contentStatus?: 'roteiro' | 'aprofundado';
   id: string; title: string; subject: string; topic: string; priority: SummaryPriority; boards: SummaryBoard[];
   prerequisites: string[]; overview: string; sections: SummarySection[]; retrieval: RetrievalPrompt[]; sources: SummarySource[];
   currentAffairs?: { axis: 'geopolitica-relacoes-internacionais' | 'economia-trabalho-desigualdades' | 'saude-publica' | 'ciencia-tecnologia' | 'clima-energia-meio-ambiente' | 'sociedade-direitos-cultura'; verifiedAt: string };

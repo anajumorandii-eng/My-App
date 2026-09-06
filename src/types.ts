@@ -202,6 +202,8 @@ export interface QuizOption {
 }
 
 export interface Question {
+  originalPages?: { url: string; page: number }[];
+  sourceMaterial?: { file: string; page: number; questionNumber: number; answerPage?: number };
   id: string;
   topicId: string;
   subject: string;
@@ -218,7 +220,7 @@ export interface Question {
   chapter?: string;
   examSource?: {
     board: string; // e.g. 'ENEM', 'FUVEST', 'COMVEST', 'VUNESP', 'FAMERP'
-    year: number;
+    year?: number; // Unknown when a workbook reproduces an exam without its year.
     sourceUrl: string;
   };
 }
