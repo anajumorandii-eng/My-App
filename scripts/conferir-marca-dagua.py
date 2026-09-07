@@ -37,11 +37,16 @@ def tem_marca(caminho: str) -> bool:
         with tempfile.NamedTemporaryFile(suffix=".png", delete=False) as tmp:
             faixa.save(tmp.name)
             nome = tmp.name
+    # OMP_THREAD_LIMIT=1 nao e detalhe: sem ele o tesseract abre threads que
+    # brigam entre si quando ja se roda um processo por nucleo, e cada imagem
+    # passa de 0,1 s para 5 s -- a checagem inteira ia de um minuto para duas
+    # horas, e foi assim que ela ficou rodando a tarde toda.
+    ambiente = {**os.environ, "OMP_THREAD_LIMIT": "1"}
     try:
         for psm in ("7", "6", "11"):
             texto = subprocess.run(
                 ["tesseract", nome, "-", "-l", "por", "--psm", psm],
-                capture_output=True, text=True,
+                capture_output=True, text=True, env=ambiente,
             ).stdout.lower()
             if any(m in texto for m in MARCAS):
                 return True
