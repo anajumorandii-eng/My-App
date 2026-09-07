@@ -30,6 +30,8 @@ PARNASIANISMO = re.compile(r"parnasian", re.I)
 
 
 def topico(q: dict) -> str | None:
+    if q["id"] in MAPA["_descartes"]:
+        return None
     refinado = MAPA["_refinamentos"].get(q["id"])
     if refinado:
         return refinado
@@ -62,6 +64,8 @@ def main(entradas: list[str]) -> int:
         for q in json.loads(pathlib.Path(caminho).read_text(encoding="utf-8")):
             alvo = topico(q)
             if not alvo:
+                if q["id"] in MAPA["_descartes"]:
+                    continue
                 chave = f"{q['subject']} / {q['modulo']}"
                 sem_topico[chave] = sem_topico.get(chave, 0) + 1
                 continue
@@ -95,6 +99,18 @@ def main(entradas: list[str]) -> int:
         unicas.append(q)
     novas = unicas
 
+    # Regra de descarte nova significa questao que estava no banco e nao deveria
+    # mais estar. Sem esta poda, apertar o extrator nao limpava nada: as questoes
+    # ruins ficavam la, so paravam de ser atualizadas.
+    prefixos = {q["id"].rsplit("_", 1)[0] for q in novas}
+    ids_novos = {q["id"] for q in novas}
+    podadas = [
+        i for i in por_id
+        if i.rsplit("_", 1)[0] in prefixos and i not in ids_novos
+    ]
+    for i in podadas:
+        del por_id[i]
+
     for q in novas:
         # Comentario escrito a mao sobrevive a uma nova extracao: reprocessar as
         # apostilas nao pode apagar trabalho que nao esta em nenhum outro lugar.
@@ -107,7 +123,8 @@ def main(entradas: list[str]) -> int:
     BANCO.write_text(json.dumps(saida, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
     print(f"banco: {antes} -> {len(saida)} ({len(novas)} vindas das apostilas, "
-          f"{preservados} com comentario preservado, {repetidas} repetidas descartadas)")
+          f"{preservados} com comentario preservado, {repetidas} repetidas, "
+          f"{len(podadas)} podadas por regra nova)")
     for chave, n in sorted(sem_topico.items(), key=lambda kv: -kv[1]):
         print(f"    sem topico no mapa: {chave}: {n}")
     return 0

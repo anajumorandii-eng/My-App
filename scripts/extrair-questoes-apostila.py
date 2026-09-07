@@ -82,11 +82,18 @@ ESCAPE_MD = re.compile(r"\\([\[\]*_#~`.()!<>-])")
 # responder as questoes 11 e 12"). O parser fatia por numero de questao, entao a
 # segunda questao do grupo chega sem o texto de que ela fala.
 REFERE_TEXTO = re.compile(
-    r"\b(?:n?[oa]s?|d[oa]s?|a[oa]?s?|pel[oa]s?)\s+"
+    # O determinante importa tanto quanto o substantivo: "nessa crônica" e
+    # "deste grafite" apontam para algo que deveria estar no enunciado do mesmo
+    # jeito que "no texto", e a primeira versao desta regra so pegava a ultima.
+    r"\b(?:n?[oa]s?|n?est[ae]s?|n?ess[ae]s?|n?aquel[ae]s?|d[oa]s?|a[oa]?s?|pel[oa]s?)\s+"
     r"(texto|trecho|excerto|fragmento|poema|soneto|documento|depoimento|discurso|"
     r"cita[cç][aã]o|passagem|versos|estrofe|carta|manifesto|romance|conto|cr[oô]nica|"
-    r"reportagem|not[ií]cia|entrevista|artigo|letra da can[cç][aã]o)s?\b"
-    r"|\btextos?\s+[IVX]+\b",
+    r"reportagem|not[ií]cia|entrevista|artigo|mat[eé]ria|manchete|post|publica[cç][aã]o|"
+    r"grafite|montagem|slogan|an[uú]ncio|propaganda|di[aá]logo|can[cç][aã]o|can[cç][oõ]es|"
+    r"m[uú]sica|letra da can[cç][aã]o|capa)s?\b"
+    r"|\btextos?\s+[IVX]+\b"
+    # "o autor diz", sem o texto do autor por perto, e a mesma falta.
+    r"|\b[oa]s?\s+autor(?:a|es|as)?\b",
     re.I,
 )
 CITACAO = re.compile(r"[“\"«][^”\"»]{80,}[”\"»]")

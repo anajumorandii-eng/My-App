@@ -53111,40 +53111,6 @@
     ]
   },
   {
-    "id": "ap_bio_fuvest_001",
-    "topicId": "bio_estrutura_fisio_celular",
-    "subject": "Biologia",
-    "prompt": "Canto V Estância 81 E foi que, de doença crua e feia, A mais que eu nunca vi, desampararam Muitos a vida, e em terra estranha e alheia Os ossos para sempre sepultaram. Quem haverá que, sem ver, o creia? Que tão disformemente ali lhe incharam As gengivas na boca, que crescia A carne e juntamente apodrecia? Luis Vaz de Camões, Os Lusíadas. É correto afirmar que Camões, neste trecho, descreveu sintomas de:",
-    "options": [
-      {
-        "id": "a",
-        "text": "peste bubônica, zoonose transmitida por ratos que assolou populações europeias e asiáticas no século XIV, propagada pelas viagens comerciais"
-      },
-      {
-        "id": "b",
-        "text": "escorbuto, deficiência em vitamina C, doença comum nas viagens ultramarinas europeias dos séculos XV e XVI, como a de Vasco da Gama em busca das Índias"
-      },
-      {
-        "id": "c",
-        "text": "malária, doença de ampla ocorrência nas viagens de exploradores para a África e Américas nos séculos XV e XVI"
-      },
-      {
-        "id": "d",
-        "text": "varíola, doença viral disseminada no Velho Mundo e trazida pelos navegantes dos séculos XV e XVI às colônias, onde dizimou populações nativas"
-      },
-      {
-        "id": "e",
-        "text": "leishmaniose, parasitose transmitida por mosquitos e contraída pelos primeiros exploradores da Amazônia e dos Andes durante o século XVI"
-      }
-    ],
-    "correctOptionId": "b",
-    "explanation": "Gabarito oficial da FUVEST: alternativa b) escorbuto, deficiência em vitamina C, doença comum nas viagens ultramarinas europeias dos séculos XV e XVI, como a de Vasco da Gama em busca das Índias. Comentário detalhado ainda não escrito para esta questão.",
-    "difficulty": "medium",
-    "examSource": {
-      "board": "FUVEST"
-    }
-  },
-  {
     "id": "ap_bio_fuvest_016",
     "topicId": "bio_estrutura_fisio_celular",
     "subject": "Biologia",
@@ -53887,40 +53853,6 @@
     ],
     "correctOptionId": "d",
     "explanation": "Gabarito oficial da FUVEST: alternativa d) répteis ovo com casca impermeável. Comentário detalhado ainda não escrito para esta questão.",
-    "difficulty": "medium",
-    "examSource": {
-      "board": "FUVEST"
-    }
-  },
-  {
-    "id": "ap_bio_fuvest_053",
-    "topicId": "bio_evolucao",
-    "subject": "Biologia",
-    "prompt": "O autor expressa preocupação com o fato de que as soluções para o problema apontado passam por um esforço multinacional, em face ao crescente número de governos isolacionistas, porque:",
-    "options": [
-      {
-        "id": "a",
-        "text": "áreas de menor índice de desenvolvimento socioeconômico são as únicas atingidas devido à falta de recursos empregados em saúde e educação"
-      },
-      {
-        "id": "b",
-        "text": "as cepas resistentes surgem exclusivamente nos países que se negam a aderir a acordos sanitários comuns, constituindo ameaças globais"
-      },
-      {
-        "id": "c",
-        "text": "desafios atuais em meio ambiente e saúde são globais e soluções dependem da adesão de cada país aos protocolos internacionais"
-      },
-      {
-        "id": "d",
-        "text": "o comércio internacional é o principal responsável por espalhar doenças nesses países, tornando‐os vulneráveis, apesar de os programas de vacinação terem alcance mundial"
-      },
-      {
-        "id": "e",
-        "text": "a pesquisa nesta área é de âmbito nacional e, portanto, novas drogas não terão alcance mundial, mas apenas regional"
-      }
-    ],
-    "correctOptionId": "c",
-    "explanation": "Gabarito oficial da FUVEST: alternativa c) desafios atuais em meio ambiente e saúde são globais e soluções dependem da adesão de cada país aos protocolos internacionais. Comentário detalhado ainda não escrito para esta questão.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -57417,36 +57349,6 @@
     }
   },
   {
-    "id": "ap_geo_unicamp_066",
-    "topicId": "geo_populacao_urbana_brasil",
-    "subject": "Geografia",
-    "prompt": "O processo contemporâneo de metropolização do espaço e a grande metamorfose que vem ocorrendo em algumas metrópoles têm significado mudanças territoriais expressivas. Há intensificação e multiplicidade de fluxos de pessoas, mercadorias e informações, bem como crescimento do número de cidades conurbadas, onde não se distingue muito bem, na continuidade da imensa área construída, o limite municipal de cada uma delas. Tanto em São Paulo, por exemplo, como na Cidade do México, em Buenos Aires ou em Santiago, vamos encontrar a manifestação desse momento mais avançado da urbanização. (Adaptado de Sandra Lencioni, A metamorfose de São Paulo: o anúncio de um novo mundo de aglomerações difusas. Revista Paranaense de Desenvolvimento, Curitiba, n.120, p. 133-148, jan./jun., 2011.) Tendo em vista a metrópole contemporânea, é correto afirmar que se trata de uma;",
-    "options": [
-      {
-        "id": "a",
-        "text": "única aglomeração, mas dispersa e fragmentada, onde fluxos imateriais regem um conjunto diferenciado de lugares"
-      },
-      {
-        "id": "b",
-        "text": "única aglomeração, pois é compacta e coesa, onde fluxos imateriais regem um conjunto diferenciado de lugares"
-      },
-      {
-        "id": "c",
-        "text": "metrópole compacta e coesa, organizada exclusivamente por uma estrutura hierárquica de fluxos imateriais"
-      },
-      {
-        "id": "d",
-        "text": "metrópole dispersa e fragmentada, organizada exclusivamente por uma estrutura hierárquica de fluxos materiais"
-      }
-    ],
-    "correctOptionId": "a",
-    "explanation": "A metrópole contemporânea não é mais a mancha compacta em torno de um centro: ela é uma aglomeração única do ponto de vista funcional, porém dispersa e fragmentada no território, com vazios, condomínios isolados e subcentros. O que a mantém unida não é a continuidade do construído, mas os fluxos imateriais — informação, capital, decisão —, que articulam lugares muito diferentes entre si. Guarde o par de adjetivos: \"compacta e coesa\" descreve a metrópole industrial do passado; \"dispersa e fragmentada\" descreve a de hoje.",
-    "difficulty": "medium",
-    "examSource": {
-      "board": "UNICAMP"
-    }
-  },
-  {
     "id": "ap_geo_unicamp_068",
     "topicId": "geo_populacao_urbana_brasil",
     "subject": "Geografia",
@@ -57627,36 +57529,6 @@
     }
   },
   {
-    "id": "ap_gram_unicamp_002",
-    "topicId": "por_norma_culta",
-    "subject": "Português",
-    "prompt": "Para se referir a matérias jornalísticas televisivas que informam e, ao mesmo tempo, entretêm os espectadores, o autor cria um neologismo por meio de:",
-    "options": [
-      {
-        "id": "a",
-        "text": "derivação prefixal"
-      },
-      {
-        "id": "b",
-        "text": "composição por justaposição"
-      },
-      {
-        "id": "c",
-        "text": "composição por aglutinação"
-      },
-      {
-        "id": "d",
-        "text": "derivação imprópria"
-      }
-    ],
-    "correctOptionId": "c",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c) composição por aglutinação. Comentário detalhado ainda não escrito para esta questão.",
-    "difficulty": "medium",
-    "examSource": {
-      "board": "UNICAMP"
-    }
-  },
-  {
     "id": "ap_gram_unicamp_003",
     "topicId": "por_norma_culta",
     "subject": "Português",
@@ -57680,7 +57552,7 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d) Tattarrattat (JJ, Ulisses) e inesquecer-se (GR, Ave, Palavra). Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Os dois processos pedidos são onomatopeia e derivação. \"Tattarrattat\", de Joyce, imita o som de uma batida na porta — é onomatopeia (e ainda por cima um palíndromo). \"Inesquecer-se\", de Guimarães Rosa, é derivação: prefixo de negação in- somado ao verbo esquecer. As outras alternativas juntam dois exemplos do mesmo processo: \"quinculinculim\" e \"rtststr\" são ambos onomatopeicos, e \"transtrazer\" e \"monoideal\" são ambos derivados por prefixação — falta sempre uma das duas metades que o enunciado exige.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -57710,7 +57582,7 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a) A expressão “Seguida da resposta certeira” indica a elipse de uma outra expressão. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "\"Seguida da resposta certeira\" é uma oração reduzida de particípio pendurada no ar: falta o termo a que \"seguida\" se refere — algo como \"a pergunta era seguida da resposta certeira\". Essa omissão de um termo recuperável pelo contexto é a elipse. As outras alternativas erram na análise: \"empodimento\" não é sufixação simples, é um cruzamento vocabular a partir de \"pode\"; a repetição em \"Pode, pode tudo\" reproduz a fala espontânea de Tião, não um estilo do texto; e o discurso direto ali dá voz a Tião, não às comunidades.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -57740,37 +57612,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c) “Lugar sertão se divulga: é onde os pastos carecem de fechos; onde um pode torar dez, quinze léguas, sem topar com casa de morador; e onde criminoso vive seu cristo-jesus, arredado do arrocho de autoridade.” (João Guimarães Rosa, Grande sertão: veredas. Rio de Janeiro: José Olympio, 1956, p. 8.). Comentário detalhado ainda não escrito para esta questão.",
-    "difficulty": "medium",
-    "examSource": {
-      "board": "UNICAMP"
-    }
-  },
-  {
-    "id": "ap_gram_unicamp_009",
-    "topicId": "por_sintaxe",
-    "subject": "Português",
-    "prompt": "“Se Cabral tivesse uma vaga noção d’ACAPA de hoje, véspera do 22 de abril de 2020, provavelmente teria desviado o curso de suas caravelas rumo a outras terras.” ACAPA é um perfil de Facebook, que publica capas possíveis de revista. O efeito humorístico na leitura dessa edição de ACAPA decorre mais precisamente do uso:",
-    "options": [
-      {
-        "id": "a",
-        "text": "da expressão “terra à vista”, que remete à época em que a terra ainda era plana"
-      },
-      {
-        "id": "b",
-        "text": "da expressão “abundam birutas”, em referência aos povos originários do Brasil"
-      },
-      {
-        "id": "c",
-        "text": "do pronome relativo “cujo” para indicar o destino traçado para a terra plana há 520 anos"
-      },
-      {
-        "id": "d",
-        "text": "da imagem de uma biruta mostrando a direção do vento, aliada à referência a “birutas” atuais"
-      }
-    ],
-    "correctOptionId": "d",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d) da imagem de uma biruta mostrando a direção do vento, aliada à referência a “birutas” atuais. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Starling define sertão por três traços — espaço interno, ausência de limites e vazio de lei — e o trecho de Guimarães Rosa realiza os três de uma vez: \"onde os pastos carecem de fechos\" é a ausência de cerca e de fronteira, \"quinze léguas sem topar com casa de morador\" é o vazio demográfico, e \"onde criminoso vive seu cristo-jesus\" é a inexistência do Estado. As outras alternativas ficam só na dimensão física ou climática: aridez, terra combusta, vale fértil — a paisagem, mas não a realidade política que o enunciado pede.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -57800,67 +57642,7 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d) menospreza o uso do termo “maratonar” relacionado a um estilo de vida sedentário, antagônico a maratona. Comentário detalhado ainda não escrito para esta questão.",
-    "difficulty": "medium",
-    "examSource": {
-      "board": "UNICAMP"
-    }
-  },
-  {
-    "id": "ap_gram_unicamp_012",
-    "topicId": "por_sintaxe",
-    "subject": "Português",
-    "prompt": "Considerando a matéria apresentada no jornal, o uso da conjunção adversativa seguido da expressão “a boa notícia é que” permite ao jornalista:",
-    "options": [
-      {
-        "id": "a",
-        "text": "apontar a gravidade da notícia e compensá-la"
-      },
-      {
-        "id": "b",
-        "text": "expor a neutralidade da notícia e reforçá-la"
-      },
-      {
-        "id": "c",
-        "text": "minimizar a relevância da notícia e acentuá-la"
-      },
-      {
-        "id": "d",
-        "text": "revelar a importância da notícia e enfatizá-la"
-      }
-    ],
-    "correctOptionId": "a",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a) apontar a gravidade da notícia e compensá-la. Comentário detalhado ainda não escrito para esta questão.",
-    "difficulty": "medium",
-    "examSource": {
-      "board": "UNICAMP"
-    }
-  },
-  {
-    "id": "ap_gram_unicamp_013",
-    "topicId": "por_sintaxe",
-    "subject": "Português",
-    "prompt": "Na década de 1950, quando iniciava seu governo, Juscelino Kubitschek prometeu “50 anos em 5”. Na campanha do atual governo o slogan ficou assim: “O Brasil voltou, 20 anos em dois”. A ‘tradução’ não tinha como dar certo; era como comparar vinho com água. E mais: havia uma vírgula no meio do caminho. Na propaganda, apenas uma vírgula impede que a leitura, ao invés de ser positiva e associada ao progressismo de Juscelino, se transforme numa mensagem de retrocesso: o Brasil de fato ‘voltou’ muito nesses últimos dois anos; para trás. (Adaptado de Lilia Schwarcz, Havia uma vírgula no meio do caminho. Nexo Jornal, 21/05/2018.) Considerando o gênero propaganda institucional e o paralelo histórico traçado pela autora, é correto afirmar que o slogan do atual governo fracassou porque:",
-    "options": [
-      {
-        "id": "a",
-        "text": "o uso da vírgula provocou uma leitura negativa do trecho que alude ao slogan da década de 1950"
-      },
-      {
-        "id": "b",
-        "text": "a mensagem projetada pelo slogan anterior era mais clara, direta, e não exigia o uso da vírgula"
-      },
-      {
-        "id": "c",
-        "text": "a alusão ao slogan anterior afasta o público jovem e provoca a perda de seu poder persuasivo"
-      },
-      {
-        "id": "d",
-        "text": "o duplo sentido do verbo “voltar” gerou uma mensagem que se afasta daquela projetada pelo slogan anterior"
-      }
-    ],
-    "correctOptionId": "d",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d) o duplo sentido do verbo “voltar” gerou uma mensagem que se afasta daquela projetada pelo slogan anterior. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "O texto usa \"maratonar\" para descrever ver série atrás de série sem sair do sofá, e o faz por contraste com o sentido original de maratona: prova de resistência física. Ou seja, o termo é menosprezado por associar-se a um estilo de vida sedentário, antagônico ao esforço que a palavra originalmente nomeia. A letra (a) inverte o sentido do neologismo (ele não significa esforço físico); (b) e (c) deslocam o foco para saúde e exercício, que aparecem só como termo de comparação, não como tema.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -57890,7 +57672,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c) uma metáfora, pois iguala toda a informação genética e os mecanismos moleculares subjacentes ao funcionamento e expressão dos genes com as instruções e os comandos de um programa. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Chamar o genoma de \"programa\" com instruções, à maneira de um software, é metáfora e não analogia: a metáfora identifica os dois termos (o genoma é um programa), enquanto a analogia apenas os aproxima mantendo a distância entre eles. E é justamente essa identificação que o autor critica, porque ela sugere que o organismo executa o DNA como um computador executa código — apagando ambiente, epigenética e acaso. Note que (b) e (d) usam os verbos \"diferencia\" e \"contrasta\", que descrevem o oposto do que a figura faz.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -57920,7 +57702,7 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b) representaram-se o atropelo da lei constitucional, a relativização da liberdade de imprensa e a construção de um inimigo interno que justificasse o arbítrio das decisões do executivo, próprios aos Anos de Chumbo. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Odorico chama a oposição de \"movimento subversivo\" e manda vasculhar o jornal de Neco Pedreira: em duas falas ele fabrica um inimigo interno e ameaça a imprensa, para justificar decisões que toma por conta própria. É a caricatura do arbítrio do executivo, escrita em plena ditadura militar. As outras alternativas invertem o sentido da sátira, atribuindo à peça uma defesa da democracia (que é o alvo da ironia, não a mensagem) ou transformando a crítica numa explicitação neutra das leis.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -57950,67 +57732,7 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a) resgata o antigo ideal da identidade nacional única. Comentário detalhado ainda não escrito para esta questão.",
-    "difficulty": "medium",
-    "examSource": {
-      "board": "UNICAMP"
-    }
-  },
-  {
-    "id": "ap_gram_unicamp_029",
-    "topicId": "por_texto",
-    "subject": "Português",
-    "prompt": "Assinale a alternativa que identifica corretamente recursos linguísticos explorados pelo autor nessa crônica.",
-    "options": [
-      {
-        "id": "a",
-        "text": "Uso de verbos no imperativo, linguagem informal, texto impessoal"
-      },
-      {
-        "id": "b",
-        "text": "Marcas de coloquialidade, uso de primeira pessoa, linguagem objetiva"
-      },
-      {
-        "id": "c",
-        "text": "Marcas de oralidade, uso expressivo de recursos ortográficos, subjetividade do autor"
-      },
-      {
-        "id": "d",
-        "text": "Uso de variação linguística, linguagem neutra, apelo ao tom coloquial"
-      }
-    ],
-    "correctOptionId": "c",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c) Marcas de oralidade, uso expressivo de recursos ortográficos, subjetividade do autor. Comentário detalhado ainda não escrito para esta questão.",
-    "difficulty": "medium",
-    "examSource": {
-      "board": "UNICAMP"
-    }
-  },
-  {
-    "id": "ap_gram_unicamp_031",
-    "topicId": "por_texto",
-    "subject": "Português",
-    "prompt": "As palavras organizadas comunicam sempre alguma coisa, que nos toca porque obedece a certa ordem. Quando recebemos o impacto de uma produção literária, oral ou escrita, ele é devido à fusão inextricável da mensagem com a sua organização. Em palavras usuais: o conteúdo de uma obra literária só atua por causa da forma. (Adaptado de Antonio Candido, “O direito à literatura”, em Vários escritos. São Paulo: Ouro sobre azul e Duas Cidades, 2004, p.178.) A obra Sobrevivendo no inferno do grupo Racionais Mc’s é composta pelas canções e pelo projeto editorial da capa e contracapa do CD. Nesse projeto editorial, encontram-se elementos visuais e verbais que estabelecem um jogo de formas e sentidos. Com base na afirmação de Antonio Candido, é correto afirmar que a organização desses elementos:",
-    "options": [
-      {
-        "id": "a",
-        "text": "produz uma simetria entre som e sentido, sendo que tal simetria indica que os símbolos religiosos são uma resposta à violência"
-      },
-      {
-        "id": "b",
-        "text": "configura um sistema de oposições, uma vez que imagens e palavras estabelecem tensões materiais e espirituais, constitutivas do sentido das canções"
-      },
-      {
-        "id": "c",
-        "text": "configura uma sintaxe poética de ordem espiritual. Essa sintaxe espelha o caos e as injustiças vividos na periferia das grandes cidades"
-      },
-      {
-        "id": "d",
-        "text": "produz uma lógica poética racional. Essa lógica se explicita na vitória do crime sobre a visão de mundo presente nos versículos bíblicos transcritos"
-      }
-    ],
-    "correctOptionId": "b",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b) configura um sistema de oposições, uma vez que imagens e palavras estabelecem tensões materiais e espirituais, constitutivas do sentido das canções. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "O autor do Texto 1 vê na identidade \"mestiça\" única uma versão atualizada do velho projeto de unidade nacional — o mesmo que o branqueamento tentou e não conseguiu —, e por isso a considera uma sutileza ideológica contra as lutas por identidades plurais. Ou seja, a proposta resgata o antigo ideal de identidade nacional única. As demais alternativas dizem o contrário do texto: ele não vê ali possibilidade de identidade múltipla (vê a supressão dela) nem defende que a pluralidade se oponha ao movimento negro.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -58040,37 +57762,7 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b) reconhecer expressões racistas existentes em práticas naturalizadas. Comentário detalhado ainda não escrito para esta questão.",
-    "difficulty": "medium",
-    "examSource": {
-      "board": "UNICAMP"
-    }
-  },
-  {
-    "id": "ap_gram_unicamp_034",
-    "topicId": "por_texto",
-    "subject": "Português",
-    "prompt": "Uma página do Facebook faz humor com montagens que combinam capas de livros já publicados e memes que circulam nas redes sociais. Uma dessas postagens envolve a obra de Henry Thoreau, para quem a desobediência civil é uma forma de protesto legítima contra leis ou atos governamentais considerados injustos pelo cidadão e que ponham em risco a democracia. O efeito de humor aqui se deve ao fato de que a montagem:",
-    "options": [
-      {
-        "id": "a",
-        "text": "refuta as razões para a desobediência civil com base na desculpa apresentada pela criança"
-      },
-      {
-        "id": "b",
-        "text": "antecipa uma possível avaliação negativa da desobediência sustentada pelo livro"
-      },
-      {
-        "id": "c",
-        "text": "equipara as razões da desobediência civil à justificativa apresentada pela criança"
-      },
-      {
-        "id": "d",
-        "text": "contesta a legitimidade da desobediência civil defendida por Thoreau"
-      }
-    ],
-    "correctOptionId": "c",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c) equipara as razões da desobediência civil à justificativa apresentada pela criança. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "O letramento racial parte do reconhecimento do racismo como problema atual, embutido em práticas cotidianas naturalizadas — a piada, o \"cabelo ruim\", o \"não pareço negra\". Reconhecer essas expressões racistas em práticas que ninguém mais estranha é o primeiro passo prático. (a) e (d) transformam o \"ouvir\" numa deferência a especialistas, quando o enunciado fala em escuta de quem sofre racismo. (c) contraria o próprio conceito: o letramento racial não dispensa o legado histórico, ele o articula com o presente.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -58100,7 +57792,7 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b) realiza a aproximação entre a alegria do negro e uma ideia de futuro. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "As duas passagens têm movimento oposto: na primeira, o negro alegra com jazz e lundu a raça que o enforca — a alegria é serventia. Na segunda, o \"dia está nascendo\" e o eu lírico pergunta se não é a gargalhada do negro que vem vindo: a mesma alegria vira anúncio de um tempo novo. É a aproximação entre a alegria do negro e uma ideia de futuro. (c) e (d) leem vingança e lamento, que o texto não sustenta — o amanhecer é imagem de esperança, não de derrota nem de revanche.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -58130,37 +57822,7 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b) investigação e precisão no tratamento do assunto, porque ela vai servir de base a outros artigos, permitindo que o leitor tire suas próprias conclusões. Comentário detalhado ainda não escrito para esta questão.",
-    "difficulty": "medium",
-    "examSource": {
-      "board": "UNICAMP"
-    }
-  },
-  {
-    "id": "ap_gram_unicamp_041",
-    "topicId": "por_texto",
-    "subject": "Português",
-    "prompt": "Em relação ao post adaptado da página do Facebook “Caneta Desmanipuladora”, é correto afirmar que a “desmanipulação” (substituição de “já” por “só” e acréscimo de “até agora”) explicita a tentativa do jornal de levar o leitor a pensar que:",
-    "options": [
-      {
-        "id": "a",
-        "text": "ainda falta muito a ser pago pela mineradora e há atrasos no pagamento"
-      },
-      {
-        "id": "b",
-        "text": "a Samarco teria pago uma grande parte do que devia e o prazo provavelmente está sendo cumprido"
-      },
-      {
-        "id": "c",
-        "text": "a Samarco já quitou o que devia , conforme valor homologado na justiça"
-      },
-      {
-        "id": "d",
-        "text": "a mineradora não deveria arcar sozinha com a despesa da tragédia de Mariana"
-      }
-    ],
-    "correctOptionId": "b",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b) a Samarco teria pago uma grande parte do que devia e o prazo provavelmente está sendo cumprido. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Caco Barcellos separa reportagem de artigo de opinião: o repórter investiga, apura com precisão e entrega os fatos para que o leitor conclua por conta própria; a base que ele produz é que permite a opinião, inclusive a de outros. Todas as alternativas erradas contrabandeiam a persuasão para dentro da reportagem — \"convencer o leitor\", \"conduzindo o leitor a aceitar\", \"levado a crer\" —, que é exatamente o que ele critica.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -58190,7 +57852,7 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a) É preciso promover a inclusão “e fazer com que o conhecimento que essas pessoas trarão à Universidade seja reconhecido e disseminado”. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A festa \"Se nada der certo\" fantasiava alunos de faxineiro e gari, tratando essas profissões como o castigo de quem não passa no vestibular. A resposta que contesta isso é a que afirma o valor do conhecimento que essas pessoas trazem para a universidade — desloca o eixo do desprezo para o reconhecimento. As outras alternativas falam de cotas, de referência internacional e de acesso universal: são defensáveis, mas respondem a outra pergunta, a do ingresso, e não à hierarquia entre trabalhos que a festa encenava.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -58220,7 +57882,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c) uma relação de contraste, pois reivindicam o aumento de um tipo de presos e a redução de outro. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "\"Menos presos políticos\" e \"mais políticos presos\" usam as mesmas duas palavras em ordem invertida, e cada frase pede uma coisa diferente: menos gente presa por razão política e mais políticos corruptos presos. Não é contradição (as duas podem valer ao mesmo tempo), nem consequência (uma não causa a outra), nem complementaridade (não são partes de um mesmo conjunto): é contraste, construído pelo quiasmo. O efeito depende justamente de \"político\" mudar de função — adjetivo na primeira frase, substantivo na segunda.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -58250,7 +57912,7 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b) revela o conflito vivido pela personagem entre o tipo de vida que havia escolhido e as coisas que passou a desejar. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A crise de Ana não é colapso nem libertação: é o choque entre a vida arrumada que ela escolheu — a casa, o marido, os filhos, a ordem das três da tarde — e o mundo que o cego mascando chiclete escancarou, com seu \"prazer intenso\" e seu sofrimento espantado. Daí o conflito entre o tipo de vida escolhido e o que ela passou a desejar. (a) e (c) resolvem esse conflito, uma pela morte, outra pela libertação, quando o conto o mantém aberto; (d) fala em harmonizar, que é o que Ana justamente não consegue.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -58280,7 +57942,7 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a) percepção de que a necessidade de status na vida social e a produção de desejos políticos e religiosos nascem da cópia de um modelo consagrado. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Os dois fragmentos mostram personagens medindo a própria vida por um modelo alheio: Doralice se compara a São Francisco, o aspirante a político é aconselhado a imitar Bismarck. Em Caminhos cruzados, o desejo é sempre desejo copiado — vem de fora, de um padrão consagrado, e não de dentro. É a leitura do desejo mimético que a alternativa (a) formula. As outras deslocam o assunto para técnica narrativa ou para recusa de modelos, quando o romance mostra exatamente a adesão a eles.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -58310,7 +57972,7 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a) O disparo de arma de fogo em direção a Frederico Evandro, realizado por Lisbela, e a descoberta posterior de que as balas do revólver eram de festim. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Peripécia, na definição de Bruner que o enunciado dá, é a reviravolta que transforma uma rotina em história. No terceiro ato de Lisbela e o prisioneiro é o tiro de Lisbela contra Frederico Evandro seguido da revelação de que as balas eram de festim: num golpe, a morte anunciada vira farsa e o desenlace muda de sentido. As outras alternativas descrevem episódios da peça que não invertem a expectativa — e a (d) inventa um Frederico Evandro heroico, que contraria a construção da personagem.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -58340,37 +58002,7 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b) a passagem de uma caracterização da mulher negra como sedutora para uma postura solidária em relação à escrava, que explicita as estratégias compensatórias de que se vale para sobreviver. Comentário detalhado ainda não escrito para esta questão.",
-    "difficulty": "medium",
-    "examSource": {
-      "board": "UNICAMP"
-    }
-  },
-  {
-    "id": "ap_gram_unicamp_050",
-    "topicId": "por_texto",
-    "subject": "Português",
-    "prompt": "Ironia ao natural É natural, é bom e quanto mais melhor, como os cogumelos vermelhos, as rãs azuis ou o suco de serpente... É químico, processado, é mau, como a aspirina, um perfume ou o plástico da válvula cardíaca de um coração... João Paiva, quase poesia quase química. Sociedade Portuguesa de Química, 2012, p. 15. Disponível em www.spq.pt/files/docs/boletim/poesia/quase-poesia-quase-quimica- jpaiva2012.pdf. Acessado em 06/07/2016. Nesse poema, há",
-    "options": [
-      {
-        "id": "a",
-        "text": "inversão dos atributos do que seria bom na natureza e do que seria ruim nos processados, de modo a, ironicamente, ressaltar a importância da química"
-      },
-      {
-        "id": "b",
-        "text": "comparação entre o lado bom dos produtos naturais e o lado ruim dos produtos processados, de modo a ressaltar, efusivamente, o perigo da química"
-      },
-      {
-        "id": "c",
-        "text": "demonstração do lado bom dos produtos naturais e o lado ruim dos produtos processados, sem, contudo, realizar uma crítica em relação à química"
-      },
-      {
-        "id": "d",
-        "text": "elogio aos produtos naturais, reforçando-se a ideia de consumirmos mais desses produtos em detrimento de produtos processados com o auxílio da química"
-      }
-    ],
-    "correctOptionId": "a",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a) inversão dos atributos do que seria bom na natureza e do que seria ruim nos processados, de modo a, ironicamente, ressaltar a importância da química. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Entre a primeira e a segunda passagem o poema muda de lugar de fala. No começo, Fulô aparece pelos olhos do Sinhô, como corpo que seduz — a moldura pitoresca herdada da tradição. Depois, com a Sinhá mandando arrebentar-lhe os dentes, o poema mostra a violência e a estratégia de sobrevivência da escravizada, e o eu lírico se solidariza. É essa passagem de sedutora a sujeito que a alternativa (b) descreve. (a) diz \"reiteração\", quando há mudança; (c) diz que a visão pitoresca permanece, quando ela é rompida.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -58400,7 +58032,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c) Não existe nenhuma justificativa ética, política, pedagógica ou científica para continuar condenando como erros os usos linguísticos que estão firmados no português brasileiro. (BAGNO, Marcos. Nada na língua é por acaso: por uma pedagogia da variação linguística. São Paulo: Editorial, 2007.). Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A tese de Sérgio Rodrigues é que \"Que horas ela volta?\" não é erro, é registro coloquial usado por todo brasileiro, inclusive escolarizado — logo, condenar como erro um uso já firmado na língua não se sustenta. Isso é exatamente a formulação de Marco Bagno na letra (c). As outras citações são verdadeiras, mas respondem a outra coisa: Mattoso Câmara fala da relação entre linguagem e grupo social, Camacho denuncia a origem de classe da norma exigida na escola, e Geraldi trata do papel da reflexão gramatical.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -58430,7 +58062,7 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d) No romance, é das rendas provenientes de propriedades agrícolas em Portugal que provém o sustento da cara e refinada vida de Jacinto em Paris. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Jacinto vive em Paris com todo o luxo do \"Duzentos e Duzentos\", mas o dinheiro que paga isso vem das rendas das propriedades agrícolas de Tormes, em Portugal — e é essa dependência que prepara o retorno à serra e a virada do romance. (a) erra ao dizer \"exclusivamente o submundo\": Eça descreve a Paris elegante. (b) inverte a tese do livro, que critica o excesso de civilização técnica. (c) inverte o papel de Zé Fernandes, que é o narrador desde o início, e é Jacinto quem lhe apresenta Paris, não o contrário.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -58460,7 +58092,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c) Uma avaliação pessimista das vendas no Dia dos Pais é apresentada no segundo título. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Os dois títulos tratam do mesmo Dia dos Pais com sinais opostos: \"cresceu 2%\" enquadra positivamente, \"só 4 em cada 10 compraram\" enquadra negativamente — e o \"só\" é o operador argumentativo que produz o pessimismo. Por isso a resposta é que o segundo título apresenta uma avaliação pessimista. (a) diz que as análises convergem, quando divergem; (b) inverte a relação, porque o crescimento de 2% não confirma o pessimismo; (d) toma 2% como garantia de satisfação, que é justamente a leitura que o segundo título contesta.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -58490,7 +58122,7 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d) sugere que os resultados desse feito científico são muito mais complexos do que as imagens veiculadas pela televisão permitiram ver. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Nicolelis diz que robótica não é filme de Hollywood justamente para separar o espetáculo do experimento: o que a TV mostrou foram poucos segundos de um chute, e o resultado científico — interface cérebro-máquina, recuperação parcial de sensibilidade em pacientes — é muito mais complexo do que a imagem transmitida deixou ver. As alternativas erradas transformam essa ressalva em queixa sobre qualidade de imagem, em elogio à receptividade do público ou em pedido de mais verba para produção audiovisual.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -58735,74 +58367,6 @@
     }
   },
   {
-    "id": "ap_hisbra_fuvest_018",
-    "topicId": "his_brasil_colonia",
-    "subject": "História",
-    "prompt": "Fui à terra fazer compras com Glennie. Há muitas casas inglesas, tais como celeiros e armazéns não diferentes do que chamamos na Inglaterra de armazéns italianos, de secos e molhados, mas, em geral, os ingleses aqui vendem suas mercadorias em grosso a retalhistas nativos ou franceses. (...) As ruas estão, em geral, repletas de mercadorias inglesas. A cada porta as palavras Superfino de Londres saltam aos olhos: algodão estampado, panos largos, louça de barro, mas, acima de tudo, ferragens de Birmingham, podem-se obter um pouco mais caro do que em nossa terra nas lojas do Brasil. Maria Graham. Diário de uma viagem ao Brasil. São Paulo, Edusp, 1990, p. 230 (publicado originalmente em 1824). Adaptado. Esse trecho do diário da inglesa Maria Graham refere-se à sua estada no Rio de Janeiro em 1822 e foi escrito em 21 de janeiro deste mesmo ano. Essas anotações mostram alguns efeitos;",
-    "options": [
-      {
-        "id": "a",
-        "text": "do Ato de Navegação, de 1651, que retirou da Inglaterra o controle militar e comercial dos mares do norte, mas permitiu sua interferência nas colônias ultramarinas do sul"
-      },
-      {
-        "id": "b",
-        "text": "do Tratado de Methuen, de 1703, que estabeleceu a troca regular de produtos portugueses por mercadorias de outros países europeus, que seriam também distribuídas nas colônias"
-      },
-      {
-        "id": "c",
-        "text": "da abertura dos portos do Brasil às nações amigas, decretada por D. João em 1808, após a chegada da família real portuguesa à América"
-      },
-      {
-        "id": "d",
-        "text": "do Tratado de Comércio e Navegação, de 1810, que deu início à exportação de produtos do Brasil para a Inglaterra e eliminou a concorrência hispano- americana"
-      },
-      {
-        "id": "e",
-        "text": "da ação expansionista inglesa sobre a América do Sul, gradualmente anexada ao Império Britânico, após sua vitória sobre as tropas napoleônicas, em 1815"
-      }
-    ],
-    "correctOptionId": "c",
-    "explanation": "Gabarito oficial da FUVEST: alternativa c) da abertura dos portos do Brasil às nações amigas, decretada por D. João em 1808, após a chegada da família real portuguesa à América. Comentário detalhado ainda não escrito para esta questão.",
-    "difficulty": "medium",
-    "examSource": {
-      "board": "FUVEST"
-    }
-  },
-  {
-    "id": "ap_hisbra_fuvest_019",
-    "topicId": "his_brasil_colonia",
-    "subject": "História",
-    "prompt": "É assim extremamente simples a estrutura social da colônia no primeiro século e meio de colonização. Reduz-se em suma a duas classes: de um lado os proprietários rurais, a classe abastada dos senhores de engenho e fazenda; doutro, a massa da população espúria dos trabalhadores do campo, escravos e semilivres. Da simplicidade da infraestrutura econômica – a terra, única força produtiva, absorvida pela grande exploração agrícola – deriva a da estrutura social: a reduzida classe de proprietários e a grande massa, explorada e oprimida. Há naturalmente no seio desta massa gradações, que assinalamos. Mas, elas não são, contudo, bastante profundas para se caracterizarem em situações radicalmente distintas. Caio Prado Jr., Evolução política do Brasil. 20ª ed. São Paulo: Brasiliense, p.28-29, 1993 [1942]. Neste trecho, o autor observa que, na sociedade colonial,",
-    "options": [
-      {
-        "id": "a",
-        "text": "só havia duas classes conhecidas, e que nada é sabido sobre indivíduos que porventura fizessem parte de outras"
-      },
-      {
-        "id": "b",
-        "text": "havia muitas classes diferentes, mas só duas estavam diretamente ligadas a critérios econômicos"
-      },
-      {
-        "id": "c",
-        "text": "todos os membros das classes existentes queriam se transformar em proprietários rurais, exceto os pequenos trabalhadores livres, semilivres ou escravos"
-      },
-      {
-        "id": "d",
-        "text": "diversas classes radicalmente distintas umas das outras compunham um cenário complexo, marcado por conflitos sociais"
-      },
-      {
-        "id": "e",
-        "text": "a população se organizava em duas classes, cujas gradações internas não alteravam a simplicidade da estrutura social"
-      }
-    ],
-    "correctOptionId": "e",
-    "explanation": "Gabarito oficial da FUVEST: alternativa e) a população se organizava em duas classes, cujas gradações internas não alteravam a simplicidade da estrutura social. Comentário detalhado ainda não escrito para esta questão.",
-    "difficulty": "medium",
-    "examSource": {
-      "board": "FUVEST"
-    }
-  },
-  {
     "id": "ap_hisbra_fuvest_020",
     "topicId": "his_brasil_imperio",
     "subject": "História",
@@ -58933,40 +58497,6 @@
     ],
     "correctOptionId": "d",
     "explanation": "Gabarito oficial da FUVEST: alternativa d) ter-se desenvolvido, em função do mercado interno, em diferentes áreas no interior da colônia. Comentário detalhado ainda não escrito para esta questão.",
-    "difficulty": "medium",
-    "examSource": {
-      "board": "FUVEST"
-    }
-  },
-  {
-    "id": "ap_hisbra_fuvest_025",
-    "topicId": "his_brasil_imperio",
-    "subject": "História",
-    "prompt": "Na edição de julho de 1818 do Correio Braziliense, o jornalista Hipólito José da Costa, residente em Londres, publicou a seguinte avaliação sobre os dilemas então enfrentados pelo Império português na América: A presença de S.M. [Sua Majestade Imperial] no Brasil lhe dará ocasião para ter mais ou menos influência naqueles acontecimentos; a independência em que el-rei ali se acha das intrigas europeias o deixa em liberdade para decidir-se nas ocorrências, segundo melhor convier a seus interesses. Se volta para Lisboa, antes daquela crise se decidir, não poderá tomar parte nos arranjamentos que a nova ordem de coisas deve ocasionar na América. Nesse excerto, o autor referia-se;",
-    "options": [
-      {
-        "id": "a",
-        "text": "aos desdobramentos da Revolução Pernambucana do ano anterior, que ameaçara o domínio português sobre o centro-sul do Brasil"
-      },
-      {
-        "id": "b",
-        "text": "às demandas da Revolução Constitucionalista do Porto, exigindo a volta imediata do monarca a Portugal"
-      },
-      {
-        "id": "c",
-        "text": "à posição de independência de D. João VI em relação às pressões da Santa Aliança para que interviesse nas guerras do rio da Prata"
-      },
-      {
-        "id": "d",
-        "text": "às implicações que os movimentos de independência na América espanhola traziam para a dominação portuguesa no Brasil"
-      },
-      {
-        "id": "e",
-        "text": "ao projeto de D. João VI para que seu filho D. Pedro se tornasse imperador do Brasil independente"
-      }
-    ],
-    "correctOptionId": "d",
-    "explanation": "Gabarito oficial da FUVEST: alternativa d) às implicações que os movimentos de independência na América espanhola traziam para a dominação portuguesa no Brasil. Comentário detalhado ainda não escrito para esta questão.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -60837,40 +60367,6 @@
     ],
     "correctOptionId": "c",
     "explanation": "Gabarito oficial da UNESP: alternativa c) a preservação de crenças e rituais religiosos de origem africana, que eram condenados pela Igreja Católica. Comentário detalhado ainda não escrito para esta questão.",
-    "difficulty": "medium",
-    "examSource": {
-      "board": "UNESP"
-    }
-  },
-  {
-    "id": "ap_hisbra_unesp_026",
-    "topicId": "his_brasil_colonia",
-    "subject": "História",
-    "prompt": "Artigo 5.º — O comércio de mercadorias inglesas é proibido, e qualquer mercadoria pertencente à Inglaterra, ou proveniente de suas fábricas e de suas colônias é declarada boa presa. (...) Artigo 7.º — Nenhuma embarcação vinda diretamente da Inglaterra ou das colônias inglesas, ou lá tendo estado, desde a publicação do presente decreto, será recebida em porto algum. Artigo 8.º — Qualquer embarcação que, por meio de uma declaração, transgredir a disposição acima, será apresada e o navio e sua carga serão confiscados como se fossem propriedade inglesa. (Excerto do Bloqueio Continental, Napoleão Bonaparte. Citado por Kátia M. de Queirós Mattoso. Textos e documentos para o estudo da história contemporânea (1789-1963), 1977.) Esses artigos do Bloqueio Continental, decretado pelo Imperador da França em 1806, permitem notar a disposição francesa de;",
-    "options": [
-      {
-        "id": "a",
-        "text": "estimular a autonomia das colônias inglesas na América, que passariam a depender mais de seu comércio interno"
-      },
-      {
-        "id": "b",
-        "text": "impedir a Inglaterra de negociar com a França uma nova legislação para o comércio na Europa e nas áreas coloniais"
-      },
-      {
-        "id": "c",
-        "text": "provocar a transferência da Corte portuguesa para o Brasil, por meio da ocupação militar da Península Ibérica"
-      },
-      {
-        "id": "d",
-        "text": "ampliar a ação de corsários ingleses no norte do Oceano Atlântico e ampliar a hegemonia francesa nos mares europeus"
-      },
-      {
-        "id": "e",
-        "text": "debilitar economicamente a Inglaterra, então em processo de industrialização, limitando seu comércio com o restante da Europa"
-      }
-    ],
-    "correctOptionId": "e",
-    "explanation": "Gabarito oficial da UNESP: alternativa e) debilitar economicamente a Inglaterra, então em processo de industrialização, limitando seu comércio com o restante da Europa. Comentário detalhado ainda não escrito para esta questão.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNESP"
@@ -66419,40 +65915,6 @@
     }
   },
   {
-    "id": "ap_hisger_unesp_085",
-    "topicId": "his_imperialismo_guerras",
-    "subject": "História",
-    "prompt": "A influência e o domínio do povo pelo “partido”, isto é, por alguns recém-chegados (os ideólogos comunistas procedem dos centros urbanos), já destruiu a influência e a energia construtiva desta promissora instituição que eram os sovietes. No momento atual, são os comitês do partido e não os sovietes que governam a Rússia. E sua organização padece de todos os defeitos da organização burocrática. KROPOTKIN, Piotr. “Carta a Lênin (04.03.1920)”. Textos escolhidos, 1987. As críticas do anarquista Kropotkin a Lênin, presentes nessa carta de 1920, indicam a sua;",
-    "options": [
-      {
-        "id": "a",
-        "text": "crença de que o partido bolchevique consiga reconhecer o poder supremo dos sovietes e extinguir a injustiça social, a hegemonia burguesa e o autoritarismo"
-      },
-      {
-        "id": "b",
-        "text": "insatisfação em relação à diminuição da influência das associações de soldados e trabalhadores e ao aumento da influência política das lideranças bolcheviques"
-      },
-      {
-        "id": "c",
-        "text": "disposição de anular a influência dos sovietes, para que o Estado russo seja eliminado e se instale uma nova organização política, baseada na supressão de toda forma de poder"
-      },
-      {
-        "id": "d",
-        "text": "avaliação de que o partido social-democrata se tornou, após a Revolução de Outubro de 1917, o único grupo político capaz de conter as manifestações sociais e reestruturar o Estado russo"
-      },
-      {
-        "id": "e",
-        "text": "discordância diante do esforço organizativo do país, empreendido pelos bolcheviques, e sua aposta no retorno da monarquia parlamentar derrubada pela Revolução de Outubro de 1917"
-      }
-    ],
-    "correctOptionId": "b",
-    "explanation": "Gabarito oficial da UNESP: alternativa b) insatisfação em relação à diminuição da influência das associações de soldados e trabalhadores e ao aumento da influência política das lideranças bolcheviques. Comentário detalhado ainda não escrito para esta questão.",
-    "difficulty": "medium",
-    "examSource": {
-      "board": "UNESP"
-    }
-  },
-  {
     "id": "ap_hisger_unesp_086",
     "topicId": "his_imperialismo_guerras",
     "subject": "História",
@@ -66972,7 +66434,7 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a) A repetição busca sensibilizar os fiéis para o desengano da passagem do tempo. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Vieira empilha as divisões do tempo — idades, anos, meses, dias, horas — e depois as nega em bloco: nenhuma delas garante um só momento. A repetição é recurso retórico para produzir o desengano barroco, isto é, a consciência de que o tempo corrói tudo e nada é seguro. (b) e (d) trocam desengano por temor, que é efeito e não argumento; (c) inverte o sentido, porque Vieira não valoriza cada etapa da vida, ele mostra que todas são igualmente incertas.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -67002,7 +66464,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c) crença na salvação e na danação eternas. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Reboul define verossímil como aquilo cuja confiança é presumida: não precisa ser provado, o ônus da prova cabe a quem duvida. No sermão de Vieira, o que ocupa esse lugar é a crença na salvação e na danação eternas — o pregador não a demonstra, parte dela, e é sobre esse solo presumido que toda a argumentação se ergue. As outras alternativas apontam para meios (habilidade do pregador, atenção dos ouvintes) ou para uma finalidade institucional, não para a premissa aceita de antemão.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -67032,7 +66494,7 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a) Em Ariès, a salvação ou danação ocorre no quarto do moribundo, mas nos sermões de Vieira é a atenção ao momento presente e a decisão correta que importam para o cristão. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Ariès descreve a tradição das artes moriendi: o destino eterno se decide no quarto do moribundo, na última prova, com os seres sobrenaturais reunidos à cabeceira. Pécora mostra que Vieira desloca esse momento: a salvação se joga no hic et nunc, nas escolhas de cada instante da vida. A alternativa (a) põe exatamente esse contraste. (b) restringe a leitura ao primeiro sermão sem base; (c) e (d) atribuem a Vieira, respectivamente, a centralidade do quarto do moribundo e a ênfase na ação futura — as duas coisas que ele recusa.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -67062,7 +66524,7 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b) a necessidade de diversificar a língua segundo outros costumes. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "O antipoema pede para rasurar o cânone, distorcer regras, rimas e métricas, e a norma \"que prende a língua\" — ou seja, defende que a língua se abra a outros usos e outros costumes para que a palavra seja livre. (a) e (d) leem no poema um julgamento negativo (ignorância, ingenuidade) que ele não faz — ele afirma, não lamenta. (c) fala em poetas livres de influências, quando o texto não propõe pureza, e sim disputa contra uma norma que serve a \"os milionários que se beneficiam do nosso silêncio\".",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -67092,7 +66554,7 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b) explicita o preconceito, valendo-se de “amostrado” e “exibido” para distinguir dois grupos de jovens do mesmo bairro. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "O diálogo não combate o preconceito: ele o expõe. O interlocutor defende \"se amostrar\" apelando a um critério de sentido, mas ao explicar a diferença entre \"amostrado\" e \"exibido\" acaba usando as duas palavras para separar dois grupos de jovens — quem se amostra é de um lugar, quem se exibe é de outro. O preconceito muda de forma e continua ali. (c) e (d) atribuem ao texto uma condenação ou uma refutação explícita que ele não faz, e (a) diz \"reforça\", quando o movimento do texto é tornar visível.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -67122,37 +66584,7 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d) Criticam-se os atos de um poder executivo que se orienta por um projeto pessoal de poder. Comentário detalhado ainda não escrito para esta questão.",
-    "difficulty": "medium",
-    "examSource": {
-      "board": "UNICAMP"
-    }
-  },
-  {
-    "id": "ap_lit_unicamp_017",
-    "topicId": "por_lit_contemporanea",
-    "subject": "Português",
-    "prompt": "Para driblar a censura imposta pela ditadura militar, compositores de música popular brasileira (MPB) valiam-se do que Gilberto Vasconcelos chamou de “linguagem da fresta”, expressão inspirada na canção “Festa imodesta”, de Caetano Veloso. (...) Numa festa imodesta como esta Vamos homenagear Todo aquele que nos empresta sua testa Construindo coisas pra se cantar Tudo aquilo que o malandro pronuncia E que o otário silencia Toda festa que se dá ou não se dá Passa pela fresta da cesta e resta a vida. Acima do coração que sofre com razão A razão que volta do coração E acima da razão a rima E acima da rima a nota da canção Bemol natural sustenida no ar Viva aquele que se presta a esta ocupação Salve o compositor popular (Gilberto de Vasconcelos, Música popular: de olho na fresta. Rio de Janeiro: Graal, 1977.) É correto afirmar que, na canção, essa “linguagem da fresta” transparece:",
-    "options": [
-      {
-        "id": "a",
-        "text": "na contradição entre “festa” e “fresta”, que funciona como crítica ao malandro"
-      },
-      {
-        "id": "b",
-        "text": "na repetição de palavras com pronúncia semelhante para louvar a MPB"
-      },
-      {
-        "id": "c",
-        "text": "na referência à “fresta” como forma de o compositor se pronunciar"
-      },
-      {
-        "id": "d",
-        "text": "na incoerência da rima entre “festa” e “imodesta” para prestigiar o compositor"
-      }
-    ],
-    "correctOptionId": "c",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c) na referência à “fresta” como forma de o compositor se pronunciar. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Odorico nomeia o cangaceiro Zeca Diabo delegado e conta com o escândalo na imprensa: cada xingamento serve ao seu cálculo (\"os finalmentes justificam os não obstantes\"). O alvo da sátira é um executivo que governa por projeto pessoal de poder, usando o cargo público como instrumento privado. (a) diz que as personagens desconhecem as práticas políticas, quando Dorotéa e Dulcinéa as reconhecem de imediato; (b) e (c) reduzem a cena à antipatia por Zeca Diabo, que é o pretexto, não o tema.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -67182,7 +66614,7 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b) Os políticos se aproximam do povo e, depois das eleições, se esquecem dos compromissos assumidos. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Carolina compara a eleição a um cavalo de Troia que aparece de quatro em quatro anos: o presente é enganoso, o político chega prometendo e some depois de eleito — daí o desinteresse do povo, que já viu o filme. É a leitura da alternativa (b). (a) e (c) tratam de perpetuação e de persistência dos preteridos, que o trecho menciona de passagem mas não é o argumento; (d) inverte a causa e a consequência, culpando o desinteresse do povo pela apropriação do Estado, quando em Quarto de despejo o desinteresse é resposta, não origem.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -67212,7 +66644,7 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d) constatação de que é preciso reagir com a palavra e mostrar-se nesse lugar marginal como literatura feita por minorias que juntas formam uma maioria. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Ferréz define literatura marginal como feita por minorias — raciais e socioeconômicas — que somadas formam a maioria da população, e afirma que agora se reage com a palavra, ocupando esse lugar em vez de negá-lo. A alternativa (d) reúne as duas ideias. (a) e (b) dissolvem a distinção que o manifesto faz questão de sustentar (ele não quer apagar a diferença entre centro e periferia, quer afirmá-la); (c) atribui um reconhecimento pelos estudiosos que o texto não reivindica — ele reivindica o oposto, o direito de falar sem essa chancela.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -67242,7 +66674,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c) Segundo a personagem Kindzu, a sua terra, sonâmbula como ele, seria um lugar da sobreposição entre sonho e realidade, tal como ocorre na narrativa que registra em seus cadernos, em que é impossível o estabelecimento de uma delimitação entre o onírico e o real. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "O título do romance está explicado na própria fala de Kindzu: a terra é sonâmbula porque anda dormindo, e nela sonho e realidade se sobrepõem sem que se possa separá-los — é assim também na escrita dos cadernos. (d) chega perto, mas põe sonho e guerra como opostos, quando em Mia Couto eles se interpenetram. (a) reduz a leitura a alienação de Muidinga, e (b) trata as duas narrativas como universos incomunicáveis, quando o romance justamente as entrelaça até uma virar a outra.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -67272,7 +66704,7 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a) progressista, porque as ações dramáticas das personagens afrontam a ordem policial e familiar e revelam a inconsistência moral dessa ordem. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "O cômico de Lisbela e o prisioneiro é progressista porque as personagens desrespeitam as duas autoridades que a peça encena — a polícia e a família — e, ao fazê-lo, expõem que essa ordem não se sustenta moralmente: o delegado é ridículo, o casamento arranjado é uma prisão. (b) chama de liberal um cômico que restaura a hierarquia, o que é o contrário do que ocorre; (c) e (d) atribuem a personagens erradas as ações decisivas e chamam de radical ou revolucionária uma comédia que trabalha pela desmoralização, não pela ruptura.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -67302,7 +66734,7 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d) A inauguração do cemitério dá oportunidade a que se reverencie a memória do benfeitor da cidade. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Rosenfeld descreve a inversão: em Sucupira o bem vira mal e o mal vira bem, e por isso a morte de alguém passa a ser desejável — é o que permite inaugurar o cemitério. A alternativa que traduz essa lógica invertida é a (d): o enterro do benfeitor vira homenagem, e o defunto vira solução. As outras oferecem leituras retas e bem-intencionadas — dignidade aos mortos, saúde pública, reinserção social do criminoso —, exatamente o discurso que Odorico usa e que a peça desmonta.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -67332,7 +66764,7 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d) alude a um contraste moral e existencial que provoca na personagem um sentimento de angústia. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "\"Piedade de leão\" é um oximoro: junta compaixão e predação. Ana descobre que sua piedade pelo cego não é caridade, é fome de vida, apetite — e essa descoberta a coloca diante de um contraste moral e existencial que a angustia, porque ela não se reconhece nele. (a) reduz o episódio a repulsa social; (b) traduz para vocabulário cristão um conflito que Clarice mantém sem doutrina; (c) fala em incapacidade de amar, quando o problema de Ana é o excesso do que sente, não a falta.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -67362,7 +66794,7 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d) narrador do romance Memórias póstumas de Brás Cubas. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "O eu lírico drummondiano irônico, cético e de saldo melancólico tem seu parente mais óbvio em Brás Cubas, o defunto autor que narra a própria vida com humor amargo e termina no célebre \"não tive filhos, não transmiti a nenhuma criatura o legado da nossa miséria\" — negativo e definitivo. Leonardo, das Memórias de um sargento de milícias, é personagem de comédia de costumes sem essa dúvida; Carlos, de Viagens na minha terra, é figura secundária de um livro digressivo, porém vitalista; e o narrador de O cortiço é naturalista e impessoal, não irônico.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -67392,7 +66824,7 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b) representação estética que o eu lírico faz do desejo amoroso associado a fenômenos naturais. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "O soneto parnasiano de Raimundo Correia não descreve o mar: usa o mar, as nereidas, o ônix, o alabastro e a opala para figurar o desejo. O procedimento é estético — trabalha o corpo feminino como matéria preciosa e o dissolve na natureza noturna. Por isso (b). As alternativas com \"descrição objetiva\" e \"descrição científica\" contrariam a construção do poema, que é toda metafórica; e (d) chama de \"representação natural\" o que é altamente artificioso, marca do Parnasianismo.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -67422,7 +66854,7 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a) A destruição do espelho a leva a desejar a morte, pois sugere o alívio para a frustração amorosa. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Noca lê o espelho quebrado pela superstição: morte ou ruína. Nina responde \"Morte! Se fosse a minha...\", isto é, transforma o mau agouro em desejo — a morte apareceria como alívio para a frustração amorosa em que vive. (b) atribui a ela temor da ruína financeira, que é a leitura de Noca, não a de Nina; (c) fala em suicídio do ser amado, que o diálogo não sugere; (d) inverte a causa, pondo a catástrofe do casamento como o que o espelho anuncia, quando o desejo de morte é resposta pessoal de Nina, não profecia.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -67452,7 +66884,7 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b) Mário rejeita as reservas maternas com censura moral. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "\"Reputação! Ora, mamãe, e é a senhora quem me fala nisso!\" é uma acusação: Mário devolve à mãe a cobrança usando contra ela o que sabe de sua vida. Ele não se defende com compaixão nem com vergonha — ele julga. Por isso (b): rejeita as reservas maternas com censura moral. A reação de Camila no trecho confirma a leitura: ela \"compreende o alcance das palavras do filho\", fica sem resposta e depois reage ferida — sinal de que foi atingida moralmente, não desdenhada.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -67482,7 +66914,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c) a sonoridade repetitiva do pêndulo intensifica as aflições da alma interior. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "O \"tic-tac, tic-tac\" que fere a alma \"como um piparote contínuo da eternidade\" é som repetido, monótono e insistente: ele não mede o tempo, ele o faz pesar. Sozinho na casa vazia, Jacobina sente a alma interior sendo golpeada por essa repetição — a sonoridade intensifica a aflição. (a) força o pêndulo a simbolizar a duplicidade da alma, leitura engenhosa mas alheia à citação; (b) e (d) leem longevidade e vigor onde o texto constrói desgaste.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -67512,7 +66944,7 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b) relativiza posições dogmáticas sobre a vida social, cultural e política, permitindo vários ângulos de observação. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "O narrador de Viagens na minha terra alterna registros o tempo todo: ironiza os \"ganha-pães\" utilitários, mas também não adota uma doutrina em seu lugar; a digressão permite olhar o mesmo assunto de vários ângulos, sem fechar posição. É o que a alternativa (b) chama de relativizar posições dogmáticas. (a) e (d) transformam Garrett em porta-voz de uma classe; (c) o transforma em panfletário — e o traço do livro é justamente escapar dos dois, mantendo a ironia sobre o progresso sem virar sermão.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -67542,7 +66974,7 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d) O protagonista da narrativa se frustra em sua crença amorosa a cada vez que se apaixona. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A cada paixão o protagonista projeta um ideal amoroso e a cada vez o real desmente: aqui, Leontina jura lembrar dele, descobre em oito dias que mentira sem saber, e acaba casada com o padrinho. O padrão é a frustração recorrente da crença amorosa, alternativa (d). (a) e (b) atribuem à narrativa idealização e solenidade que a ironia do texto desfaz; (c) fixa os papéis em interesse sexual masculino e devoção feminina, quando é exatamente a mulher que aqui muda de rumo e desmonta a expectativa.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -67572,67 +67004,7 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d) Caricatura das questões relacionadas ao espírito e à posição social; elogio irônico das motivações fisiológicas; ridicularização do herói. Comentário detalhado ainda não escrito para esta questão.",
-    "difficulty": "medium",
-    "examSource": {
-      "board": "UNICAMP"
-    }
-  },
-  {
-    "id": "ap_lit_unicamp_053",
-    "topicId": "por_lit_classica_barroca",
-    "subject": "Português",
-    "prompt": "Tradicionalmente, o palco pode apresentar uma variedade de estilos cênicos, entre os quais se destacam o estilo realista (põe em evidência detalhes ambientais para sugerir sensações e emoções vividas pelas personagens), o estilo expressionista (os objetos são distorcidos ou estilizados, com o fim de sugerir, mais que mostrar, o ambiente de atuação das personagens), o estilo simbolista (os objetos concretos sugerem ideias abstratas, segundo associações sinestéticas tradicionais: o verde, vestido pelos mágicos, indica a esperança; o vermelho, a cor do demônio, sugere uma paixão violenta; a veste branca simboliza a candura, a castidade). (Adaptado de Salvatore D'Onofrio, Teoria do texto 2: Teoria da lírica e do drama. São Paulo: Ática, 1995, p. 138.) Sem identidade, hierarquias no chão, estilos misturados, a pós-modernidade é isto e aquilo, num presente aberto pelo e. (Jair Ferreira dos Santos, O que é o pós-moderno. São Paulo: Brasiliense, 2004, p. 110.) Com base nas indicações cênicas (as didascálias) que abrem e fecham a peça O marinheiro, de Fernando Pessoa, é correto afirmar que o seu estilo é:",
-    "options": [
-      {
-        "id": "a",
-        "text": "expressionista, dadas a ausência de ações dramáticas e a presença de sugestões alegóricas como, por exemplo, o canto do galo"
-      },
-      {
-        "id": "b",
-        "text": "simbolista, uma vez que os elementos que compõem a cena dramática sugerem alguns significados de natureza filosófica"
-      },
-      {
-        "id": "c",
-        "text": "realista, porque as imagens da noite, do luar e do alvorecer indicam precisamente a passagem do tempo"
-      },
-      {
-        "id": "d",
-        "text": "pós-modernista, tendo em vista que os objetos descritos criam uma atmosfera mágica, na qual a ilusão não se distingue da realidade"
-      }
-    ],
-    "correctOptionId": "b",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b) simbolista, uma vez que os elementos que compõem a cena dramática sugerem alguns significados de natureza filosófica. Comentário detalhado ainda não escrito para esta questão.",
-    "difficulty": "medium",
-    "examSource": {
-      "board": "UNICAMP"
-    }
-  },
-  {
-    "id": "ap_lit_unicamp_054",
-    "topicId": "por_lit_classica_barroca",
-    "subject": "Português",
-    "prompt": "“Acho que só devemos ler a espécie de livros que nos ferem e trespassam. Um livro tem que ser como um machado para quebrar o mar de gelo do bom senso e do senso comum.\" (Adaptado de “Franz Kafka, carta a Oscar Pollak, 1904.” Disponível em https://laboratoriode sensibilidades.wordpress.com. Acessado em 28/05/2018.) Assinale o excerto que confirma os dois textos anteriores.",
-    "options": [
-      {
-        "id": "a",
-        "text": "A leitura é, fundamentalmente, processo político. Aqueles que formam leitores – professores, bibliotecários – desempenham um papel político. (Marisa Lajolo, A formação do leitor no Brasil. São Paulo: Ática, 1996, p. 28.)"
-      },
-      {
-        "id": "b",
-        "text": "Pelo que sabemos, quando há um esforço real de igualitarização, há aumento sensível do hábito de leitura, e portanto difusão crescente das obras. (Antonio Candido, Vários escritos. São Paulo: Duas cidades, 2004, p.187.)"
-      },
-      {
-        "id": "c",
-        "text": "Ler é abrir janelas, construir pontes que ligam o que somos com o que tantos outros imaginaram, pensaram, escreveram; ler é fazer-nos expandidos. (Gilberto Gil, Discurso no lançamento do Ano Ibero-Americano da Leitura, 2004.)"
-      },
-      {
-        "id": "d",
-        "text": "A leitura é uma forma servil de sonhar. Se tenho de sonhar, por que não sonhar os meus próprios sonhos? (Fernando Pessoa, Páginas íntimas e de Auto- Interpretação. São Paulo: Ática, 1966, p. 23.)"
-      }
-    ],
-    "correctOptionId": "c",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c) Ler é abrir janelas, construir pontes que ligam o que somos com o que tantos outros imaginaram, pensaram, escreveram; ler é fazer-nos expandidos. (Gilberto Gil, Discurso no lançamento do Ano Ibero-Americano da Leitura, 2004.). Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "O que torna Coração, cabeça e estômago atípico em Camilo é a inversão do romantismo que ele mesmo praticava: as questões do espírito e da posição social viram caricatura, as motivações fisiológicas — comer, digerir — recebem elogio irônico, e o herói é ridicularizado em vez de sublimado. As outras alternativas atribuem à obra transformação do herói, espiritualização do corpo ou romance de formação, movimentos que ela justamente parodia.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
