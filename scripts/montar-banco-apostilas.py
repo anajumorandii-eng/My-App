@@ -91,7 +91,10 @@ def main(entradas: list[str]) -> int:
     unicas: list[dict] = []
     repetidas = 0
     for q in novas:
-        chave = " ".join(q["prompt"].split()).lower()
+        # A mesma questao aparece em apostilas de materias diferentes com a
+        # pontuacao final trocada (":" numa, ";" na outra); normalizar so o
+        # espaco em branco deixava as duas passarem.
+        chave = re.sub(r"[^\w ]+", "", " ".join(q["prompt"].split()).lower())
         if chave in ja_visto:
             repetidas += 1
             continue

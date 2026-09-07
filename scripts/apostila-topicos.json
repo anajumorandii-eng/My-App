@@ -84,7 +84,8 @@
     "ap_bio_unicamp_036": "as alternativas sao formulas de frequencia alelica que perderam a barra de fracao",
     "ap_bio_unicamp_049": "as alternativas discutem 'o cranio representado na figura', que nao veio",
     "ap_bio_unicamp_054": "pede os verticilos da flor I e da flor II, mostradas so em diagrama",
-    "ap_hisbra_fuvest_001": "as alternativas sao combinacoes de letras que remetem a um mapa que nao veio"
+    "ap_hisbra_fuvest_001": "as alternativas sao combinacoes de letras que remetem a um mapa que nao veio",
+    "ap_hisger_fuvest_074": "pede a leitura de uma tabela de renda e emprego por setor que nao veio"
   },
   "_refinamentos": {
     "_nota": "topicId decidido lendo a questao, onde o modulo era largo demais.",

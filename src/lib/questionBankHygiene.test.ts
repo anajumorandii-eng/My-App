@@ -44,3 +44,15 @@ test('nenhum id de questão é duplicado', () => {
   const repetidos = ids.filter((id, i) => ids.indexOf(id) !== i);
   assert.deepEqual([...new Set(repetidos)], [], 'ids duplicados no banco de questões');
 });
+
+test('nenhuma questão foi publicada com o comentário em branco', () => {
+  // As questões extraídas das coletâneas entram no banco com um comentário
+  // provisório, que só diz o gabarito. Ele existe para o import poder ser
+  // feito em duas etapas, e não para ficar. Este teste é o que garante que
+  // ninguém — inclusive eu — deixe metade escrita e chame de pronto.
+  const pendentes = questions.filter((q) => /ainda não escrito/i.test(q.explanation ?? ''));
+  assert.deepEqual(pendentes.map((q) => q.id), [], 'questões sem comentário escrito');
+  for (const q of questions) {
+    assert.ok(q.explanation?.trim(), `${q.id} não tem comentário`);
+  }
+});

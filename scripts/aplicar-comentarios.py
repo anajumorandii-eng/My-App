@@ -23,12 +23,14 @@ def main(entradas: list[str]) -> int:
     aplicados = 0
     for caminho in entradas:
         novos = json.loads(pathlib.Path(caminho).read_text(encoding="utf-8"))
-        desconhecidos = [i for i in novos if not i.startswith("_") and i not in por_id]
-        if desconhecidos:
-            print(f"ids que nao existem no banco: {desconhecidos}", file=sys.stderr)
-            return 1
+        # Um id que sumiu do banco quase sempre e uma questao que uma regra de
+        # descarte posterior removeu -- o comentario dela deixou de ter alvo.
+        # Isso e avisado e ignorado; um erro de digitacao aparece do mesmo jeito,
+        # na contagem de questoes que continuam sem comentario no fim.
+        for ident in [i for i in novos if not i.startswith("_") and i not in por_id]:
+            print(f"    id sem alvo no banco, ignorado: {ident}", file=sys.stderr)
         for ident, texto in novos.items():
-            if ident.startswith("_"):
+            if ident.startswith("_") or ident not in por_id:
                 continue
             por_id[ident]["explanation"] = texto.strip()
             aplicados += 1
