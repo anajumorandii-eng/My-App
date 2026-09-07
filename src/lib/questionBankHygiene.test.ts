@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { readFileSync } from 'node:fs';
+import { existsSync, readFileSync, statSync } from 'node:fs';
+import path from 'node:path';
 import type { Question } from '../types';
 
 // Parte do banco vem de coletâneas em PDF que a Ana Júlia comprou, e cada
@@ -54,5 +55,18 @@ test('nenhuma questão foi publicada com o comentário em branco', () => {
   assert.deepEqual(pendentes.map((q) => q.id), [], 'questões sem comentário escrito');
   for (const q of questions) {
     assert.ok(q.explanation?.trim(), `${q.id} não tem comentário`);
+  }
+});
+
+test('toda imagem de página original referenciada existe e não está vazia', () => {
+  // As questões recuperadas das coletâneas dependem inteiramente da imagem:
+  // sem ela, a aluna vê um enunciado que fala de uma figura que não aparece.
+  // Um caminho errado no JSON não quebra build nem lint — só quebra na tela.
+  for (const q of questions) {
+    for (const pagina of q.originalPages ?? []) {
+      const caminho = path.join(process.cwd(), 'public', pagina.url.replace(/^\//, ''));
+      assert.ok(existsSync(caminho), `${q.id} aponta para ${pagina.url}, que não existe`);
+      assert.ok(statSync(caminho).size > 0, `${q.id} aponta para ${pagina.url}, que está vazio`);
+    }
   }
 });

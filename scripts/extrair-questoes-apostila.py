@@ -11,10 +11,16 @@ nome, e-mail e CPF da licenciada em toda pagina. `limpar` remove essas linhas
 antes de qualquer coisa, e `montar` so devolve enunciado, alternativas e letra
 do gabarito -- a resolucao escrita pela apostila fica de fora, porque e texto
 autoral de terceiro e este repositorio e publico.
+
+O que este script recusa nao esta perdido: as questoes descartadas saem num
+arquivo .descartes.json ao lado da saida principal, e scripts/recortar-questoes-
+apostila.py as recupera anexando a imagem da pagina original, onde a figura, a
+formula e o texto-base continuam existindo.
 """
 from __future__ import annotations
 
 import json
+import pathlib
 import re
 import sys
 import unicodedata
@@ -47,14 +53,22 @@ VISUAL = re.compile(
 )
 
 
+# Descartes decididos lendo a questao, quando nenhuma regra automatica dava
+# conta sem derrubar questao boa junto. Ficam num arquivo separado para poderem
+# ser revistos sem mexer no extrator.
+LIDOS_A_MAO = json.loads(
+    (pathlib.Path(__file__).resolve().parent / "apostila-descartes.json").read_text(encoding="utf-8")
+)
+
 # O PDF posiciona expoente, indice, fracao e simbolo matematico como glifos
 # soltos, e a extracao linear devolve "5 × 10 5 km/h" no lugar de 5x10^5 km/h,
 # "P 100 W =" no lugar de P = 100 W, "(x 4x + 1) 2" no lugar de (x-4x+1)^2.
 # Nao da para consertar isso lendo o texto, e nao da para saber quando quebrou:
 # por isso a regra nao tenta reconhecer o estrago, e sim recusar qualquer
-# questao que dependa de notacao. Sobra a questao conceitual, que e prosa e
-# chega inteira. Custa a maior parte de Matematica e Fisica -- e o preco de nao
-# colocar na frente dela uma questao que ninguem consegue resolver.
+# questao que dependa de notacao. Isso pega quase toda a Matematica e a Fisica
+# -- e por isso o descarte nao e o fim da linha: scripts/recortar-questoes-
+# apostila.py recupera essas questoes anexando a imagem da pagina, onde a
+# formula continua legivel.
 NOTACAO = re.compile(
     r"[=×÷√∑∫≅≈≠≤≥∆Δ→↔^]|\b[A-Z]\s+\d|\d\s+\d"
     # expoente de unidade que virou digito solto: "10 km 2" era 10 km2.
@@ -66,6 +80,8 @@ NOTACAO = re.compile(
     # indice de formula quimica que migrou para a frente do simbolo:
     # "2 CO" e "2O" eram CO2 e O2.
     r"|\b\d\s+[A-Z][A-Za-z]?\b"
+    # indice que se soltou de uma variavel: "(x 1 ,y 1 )" era (x1, y1).
+    r"|\d\s+[,)]"
 )
 
 # A apostila emenda o cabecalho do texto-base da questao seguinte no fim da
@@ -75,6 +91,13 @@ PROXIMA_QUESTAO = re.compile(r"TEXTO PARA (?:A|AS) (?:PR[OÓ]XIMA|QUEST)", re.I)
 # "34 da altura do cilindro" era 3/4 da altura: a barra da fracao sumiu e os
 # dois digitos colaram.
 FRACAO_COLADA = re.compile(r"^\d{2}\s+d[aeo]s?\b", re.I)
+# Numa questao de razao ou probabilidade, alternativa que e um inteiro solto
+# quase sempre era uma fracao cuja barra se perdeu: "52" era 5/2, "1781" era
+# 17/81. O par (pergunta por razao, resposta inteira) e o que denuncia.
+PEDE_RAZAO = re.compile(r"\b(raz[aã]o|probabilidade|fra[cç][aã]o|propor[cç][aã]o)\b", re.I)
+SO_NUMERO = re.compile(r"^\d+$")
+# Cabecalho da questao seguinte que escapou do corte por estar no meio da linha.
+QUESTAO_SEGUINTE = re.compile(r"\d+\s*\.\s*\((?:Unicamp|Fuvest|Unesp|Enem)\)", re.I)
 
 
 # A conversao em markdown escapa colchete, asterisco e afins com contrabarra.
@@ -252,6 +275,10 @@ def descartar(enunciado: str, alternativas: list[tuple[str, str]]) -> str | None
         return "alternativas repetidas depois da extracao"
     if any(FRACAO_COLADA.match(t) for _, t in alternativas):
         return "fracao virou numero colado na alternativa"
+    if PEDE_RAZAO.search(enunciado) and all(SO_NUMERO.match(t) for _, t in alternativas):
+        return "fracao virou numero colado na alternativa"
+    if QUESTAO_SEGUINTE.search(enunciado) or any(QUESTAO_SEGUINTE.search(t) for _, t in alternativas):
+        return "cabecalho da questao seguinte grudado no bloco"
     if any(PROXIMA_QUESTAO.search(t) for _, t in alternativas) or PROXIMA_QUESTAO.search(enunciado):
         return "cabecalho da questao seguinte grudado no bloco"
     # Alternativa que comeca com "1," ou "2," esta lendo os numeros de uma legenda
@@ -260,8 +287,11 @@ def descartar(enunciado: str, alternativas: list[tuple[str, str]]) -> str | None
         return "alternativas referenciam uma legenda numerada"
     if REFERE_TEXTO.search(enunciado) and not CITACAO.search(enunciado) and len(enunciado) < 900:
         return "cita um texto-base que ficou fora do enunciado"
-    inteiro = enunciado + " " + " ".join(t for _, t in alternativas)
-    if NOTACAO.search(inteiro):
+    # Uma parte de cada vez: juntar enunciado e alternativas num texto so criava
+    # falso positivo, porque o fim do enunciado colado ao inicio da alternativa
+    # ("igual a: 21 20 15") vira "digito espaco digito" sem que nada tenha
+    # quebrado. Foi assim que questoes intactas viraram descarte.
+    if any(NOTACAO.search(p) for p in [enunciado, *(t for _, t in alternativas)]):
         return "depende de notacao que nao sobrevive a extracao"
     for _, t in alternativas:
         if not t or len(t) > 600:
@@ -293,6 +323,7 @@ def montar(
     blocos = ler_questoes(corpo, modulos)
 
     questoes: list[dict] = []
+    descartadas: list[dict] = []
     motivos: dict[str, int] = {}
     for bloco in blocos:
         letra = respostas.get(bloco.numero)
@@ -300,20 +331,40 @@ def montar(
             motivos["sem gabarito"] = motivos.get("sem gabarito", 0) + 1
             continue
         enunciado, alternativas = separar_alternativas(bloco.texto, letras)
-        enunciado = desescapar(" ".join(enunciado.split()))
+        # Pontuacao solta no comeco sobra quando o enunciado se separa do titulo
+        # do modulo na linha anterior.
+        enunciado = re.sub(r"^[;:,.\s]+", "", desescapar(" ".join(enunciado.split())))
         alternativas = [(l, desescapar(t)) for l, t in alternativas]
-        motivo = descartar(enunciado, alternativas)
+        ident = f"{prefixo}_{bloco.numero:03d}"
+        motivo = LIDOS_A_MAO.get(ident) or descartar(enunciado, alternativas)
         if motivo is None and letra not in {l for l, _ in alternativas}:
             motivo = "gabarito fora das alternativas"
         if motivo:
             motivos[motivo] = motivos.get(motivo, 0) + 1
+            # Boa parte do que sai daqui e questao inteira: so o que estava na
+            # figura, na formula ou no texto-base e que nao sobrevive ao texto.
+            # Guardar o descarte permite recupera-la depois anexando a pagina
+            # original, que e onde essas coisas continuam existindo.
+            descartadas.append(
+                {
+                    "id": ident,
+                    "numero": bloco.numero,
+                    "subject": subject,
+                    "modulo": bloco.modulo,
+                    "motivo": motivo,
+                    "prompt": enunciado,
+                    "options": [{"id": l, "text": t} for l, t in alternativas],
+                    "correctOptionId": letra,
+                    "examSource": {"board": banca},
+                }
+            )
             continue
         if CPF.search(enunciado) or "Licenciado para" in enunciado:
             motivos["marca d'agua no enunciado"] = motivos.get("marca d'agua no enunciado", 0) + 1
             continue
         questoes.append(
             {
-                "id": f"{prefixo}_{bloco.numero:03d}",
+                "id": ident,
                 "subject": subject,
                 "modulo": bloco.modulo,
                 "prompt": enunciado,
@@ -322,15 +373,17 @@ def montar(
                 "examSource": {"board": banca},
             }
         )
-    return questoes, motivos
+    return questoes, descartadas, motivos
 
 
 if __name__ == "__main__":
     caminho, banca, subject, letras, prefixo, saida = sys.argv[1:7]
     caminho_gabarito = sys.argv[7] if len(sys.argv) > 7 else None
-    questoes, motivos = montar(caminho, banca, subject, letras, prefixo, caminho_gabarito)
+    questoes, descartadas, motivos = montar(caminho, banca, subject, letras, prefixo, caminho_gabarito)
     with open(saida, "w", encoding="utf-8") as f:
         json.dump(questoes, f, ensure_ascii=False, indent=2)
+    with open(saida.replace(".json", ".descartes.json"), "w", encoding="utf-8") as f:
+        json.dump(descartadas, f, ensure_ascii=False, indent=2)
     print(f"{prefixo}: {len(questoes)} aproveitadas")
     for motivo, n in sorted(motivos.items(), key=lambda kv: -kv[1]):
         print(f"    descartadas por {motivo}: {n}")

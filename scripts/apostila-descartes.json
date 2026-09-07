@@ -1,0 +1,21 @@
+{
+  "_nota": [
+    "Questoes que passaram por todas as regras automaticas do extrator e que eu li e",
+    "julguei irrespondiveis so com o texto: dependem de uma figura, de uma tabela ou de",
+    "um texto-base que a extracao nao alcanca. Uma regra larga o bastante para pega-las",
+    "derrubaria questoes boas junto, entao a decisao esta aqui, id a id, com o motivo.",
+    "O motivo nao e so documentacao: ele diz ao recortador onde comecar o recorte",
+    "(quem depende do que vem antes ganha a pagina inteira, e a anterior se for o caso)",
+    "e ao montador se o texto extraido ainda presta para ir junto da imagem."
+  ],
+  "ap_gram_unicamp_009": "lido a mao: depende de elemento visual (a capa de revista com a biruta)",
+  "ap_lit_unicamp_053": "lido a mao: depende do texto-base (a cena com o canto do galo) que vem antes",
+  "ap_lit_unicamp_054": "lido a mao: depende do texto-base, sao dois textos anteriores e so um veio",
+  "ap_bio_fuvest_089": "lido a mao: depende de elemento visual (as sequencias de bases)",
+  "ap_bio_unicamp_036": "lido a mao: a notacao das alternativas (formulas de frequencia alelica) nao sobreviveu",
+  "ap_bio_unicamp_049": "lido a mao: depende de elemento visual (o cranio da figura)",
+  "ap_bio_unicamp_054": "lido a mao: depende de elemento visual (o diagrama da flor I e da flor II)",
+  "ap_hisbra_fuvest_001": "lido a mao: depende de elemento visual (o mapa a que as letras se referem)",
+  "ap_hisger_fuvest_074": "lido a mao: depende de elemento visual (a tabela de renda e emprego por setor)",
+  "ap_mat_unicamp_009": "lido a mao: depende do texto-base da cerca, que vem antes da questao"
+}
