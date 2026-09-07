@@ -54644,7 +54644,7 @@
     "id": "ap_bio_fuvest_100",
     "topicId": "bio_botanica",
     "subject": "Biologia",
-    "prompt": "Considere três espécies de plantas (X, Y e Z) e suas características: \\- A planta X não possui flores, mas é polinizada pelo vento. Além disso, não possui frutos, mas suas sementes são dispersas por aves. - A planta Y não possui flores, nem sementes, nem frutos. - A planta Z possui flores e é polinizada por aves. Além disso, possui frutos e suas sementes são dispersas por aves. A que grupos pertencem as plantas X, Y e Z, respectivamente?",
+    "prompt": "Considere três espécies de plantas (X, Y e Z) e suas características: - A planta X não possui flores, mas é polinizada pelo vento. Além disso, não possui frutos, mas suas sementes são dispersas por aves. - A planta Y não possui flores, nem sementes, nem frutos. - A planta Z possui flores e é polinizada por aves. Além disso, possui frutos e suas sementes são dispersas por aves. A que grupos pertencem as plantas X, Y e Z, respectivamente?",
     "options": [
       {
         "id": "a",
@@ -56367,36 +56367,6 @@
     }
   },
   {
-    "id": "ap_bio_unicamp_087",
-    "topicId": "bio_zoologia",
-    "subject": "Biologia",
-    "prompt": "A teníase e a cisticercose são doenças parasitárias que ainda preocupam as entidades sanitaristas. São medidas que controlam a incidência de casos dessas parasitoses: lavar bem os alimentos e tomar água fervida ou filtrada, para evitar a:",
-    "options": [
-      {
-        "id": "a",
-        "text": "ingestão de ovos dos platelmintos causadores dessas doenças; e controlar as populações de caramujos, que são hospedeiros intermediários dos platelmintos"
-      },
-      {
-        "id": "b",
-        "text": "ingestão de ovos dos nematelmintos, além de cozinhar bem as carnes de porco e de boi, ambos portadores desses nematelmintos"
-      },
-      {
-        "id": "c",
-        "text": "ingestão de cisticercos; e controlar a população de insetos vetores, como o barbeiro, que transmite os ovos do parasita ao picar o homem"
-      },
-      {
-        "id": "d",
-        "text": "ingestão de ovos do parasita; e cozinhar adequadamente as carnes de porco e de boi para evitar a ingestão de cisticercos. TEXTO PARA A PRÓXIMA QUESTÃO: O vazamento de petróleo no Golfo do México, em abril de 2010, foi considerado o pior da história dos EUA. O vazamento causou o aparecimento de uma extensa mancha de óleo na superfície do oceano, ameaçando a fauna e a flora da região. Estima-se que o vazamento foi da ordem de 800 milhões de litros de petróleo em cerca de 100 dias"
-      }
-    ],
-    "correctOptionId": "d",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d) ingestão de ovos do parasita; e cozinhar adequadamente as carnes de porco e de boi para evitar a ingestão de cisticercos. TEXTO PARA A PRÓXIMA QUESTÃO: O vazamento de petróleo no Golfo do México, em abril de 2010, foi considerado o pior da história dos EUA. O vazamento causou o aparecimento de uma extensa mancha de óleo na superfície do oceano, ameaçando a fauna e a flora da região. Estima-se que o vazamento foi da ordem de 800 milhões de litros de petróleo em cerca de 100 dias. Comentário detalhado ainda não escrito para esta questão.",
-    "difficulty": "medium",
-    "examSource": {
-      "board": "UNICAMP"
-    }
-  },
-  {
     "id": "ap_bio_unicamp_088",
     "topicId": "bio_zoologia",
     "subject": "Biologia",
@@ -56600,7 +56570,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c) a velocidade da bola de massa m é maior que a velocidade da bola de massa 2m. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A bola tem carga positiva e o campo aponta para baixo, então a força elétrica qE também aponta para baixo, somando-se ao peso: a força resultante é mg + qE e a aceleração vale g + qE/m. Como qE/m é maior para a bola de massa m do que para a de massa 2m, a bola leve acelera mais e chega ao chão mais rápida. A alternativa (a) seria a resposta se só houvesse gravidade — é o caso clássico da queda livre, em que a massa se cancela; aqui ela não se cancela porque a carga é a mesma nas duas bolas, e não proporcional à massa.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -56630,7 +56600,7 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a) Copérnico, Kepler e Galileu fazem parte da chamada Revolução Científica que rompe com leituras especulativas do Universo, baseadas em premissas aristotélicas e tomistas, e propõe análises empiristas do mundo natural. O conceito de órbitas circulares para o movimento dos planetas em torno do Sol, em que a distância entre o planeta e o Sol permanece constante durante o movimento, foi abandonado por Kepler. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Copérnico, Kepler e Galileu integram a Revolução Científica, que troca a especulação aristotélica sobre um cosmo dividido em mundo celeste e mundo terrestre pela análise empírica apoiada em dados — no caso de Kepler, as observações de Tycho Brahe. A primeira lei enterra o axioma platônico do movimento circular: a órbita é uma elipse com o Sol num dos focos, e por isso a distância planeta-Sol varia ao longo do ano. As alternativas erradas embaralham duas coisas diferentes: dizem que era a órbita de distância variável que foi abandonada, quando o que Kepler abandonou foi a órbita circular, justamente a de distância constante.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -56660,7 +56630,7 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d) forneceram subsídios para demonstrar o modelo planetário heliocêntrico e criticar as posições defendidas pela Igreja naquela época. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "As leis de Kepler descrevem o movimento dos planetas em torno do Sol, e por isso são a base quantitativa do heliocentrismo — o modelo que a Igreja combatia, já que o geocentrismo estava associado à leitura teológica então dominante. (a) erra na data: a Revolução Científica é da Idade Moderna, não da Alta Idade Média. (b) e (c) invertem o sentido: Ptolomeu e o geocentrismo são exatamente o que as leis de Kepler ajudaram a derrubar.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -56690,7 +56660,7 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a) 54 km h. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Velocidade escalar média é a distância total dividida pelo tempo total. São 6.480 km em 5 dias, ou seja 1.296 km por dia; dividindo por 24 horas, 54 km/h. Cuidado com a alternativa (c): 1.296 é a velocidade em km por dia, não por hora — é o erro de parar a conta antes de converter o tempo para horas.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -56720,7 +56690,7 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b) Região Nordeste; 1.950 MWh. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A região é o Nordeste, que concentra a geração eólica brasileira (Rio Grande do Norte, Bahia e Ceará), pelos ventos alísios constantes e de baixa turbulência do litoral e do sertão. A energia aproveitada é a energia cinética do vento, proporcional ao quadrado da velocidade; se a velocidade cai pela metade, a energia cai para um quarto: 7.800 ÷ 4 = 1.950 MWh. Quem responde 3.900 dividiu por dois, tratando a relação como se fosse proporcional a v em vez de v².",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -56750,7 +56720,7 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a) A densidade de massa de um corpo humano é aproximadamente igual à da água, e retirar o braço para fora da água reduziria a força de empuxo, contrária ao peso do corpo, contribuindo para seu afundamento. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "O raciocínio de Dupin é hidrostático: dizer que a gravidade específica do corpo é quase igual à da água doce que ele desloca é dizer que a densidade do corpo humano é próxima da densidade da água, e por isso peso e empuxo quase se equilibram. Erguer um braço para fora d'água diminui o volume submerso; como o empuxo é o peso do líquido deslocado, ele diminui junto, e o peso passa a vencer — a cabeça afunda. As alternativas com \"aumentaria a força de empuxo\" invertem essa relação; as que falam em aceleração gravitacional trocam densidade por gravidade, que é a mesma para o corpo e para a água e não explica nada.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -56780,7 +56750,7 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b) ocorre devido à desintegração do núcleo de urânio em núcleos mais leves, a partir do bombardeamento com nêutrons, liberando uma enorme quantidade de energia. Esse ataque é considerado um símbolo do final da II Guerra Mundial. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A bomba de Hiroshima era de fissão: um nêutron atinge o núcleo de urânio-235, que se parte em núcleos mais leves liberando energia e mais nêutrons, o que sustenta a reação em cadeia. (a) erra ao chamar de desintegração espontânea — a fissão aqui é provocada por bombardeamento de nêutrons, não é decaimento radioativo natural. (c) descreve fusão (núcleos que se combinam formando outros mais pesados), que é o processo do Sol e da bomba de hidrogênio, não desta. (d) erra o fato histórico: o Japão não era neutro, era potência do Eixo e havia atacado Pearl Harbor em 1941.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -56810,37 +56780,7 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a) Na miopia, a imagem do ponto remoto se forma antes da retina e a cirurgia visa a aumentar a distância focal da lente efetiva do olho. Comentário detalhado ainda não escrito para esta questão.",
-    "difficulty": "medium",
-    "examSource": {
-      "board": "UNICAMP"
-    }
-  },
-  {
-    "id": "ap_geo_unicamp_001",
-    "topicId": "geo_cartografia",
-    "subject": "Geografia",
-    "prompt": "Dois amigos planejaram assistir à abertura da Copa do Mundo em Moscou. Eles partiram no dia 10 de junho de 2018 do Aeroporto Presidente Juscelino Kubitschek (Brasília), situado a 45° de longitude Oeste, às 16 horas, com destino ao Aeroporto de Heathrow (Londres), situado a 0° de longitude. O voo teve duração de 10 horas. Os dois amigos esperaram por três horas para partirem em direção ao Aeroporto Internacional Domodedovo (Moscou), situado a 60º de longitude Leste, e o segundo voo durou quatro horas. Com base nessas informações e considerando que o continente europeu adota, neste período do ano, o horário de verão, que adianta os relógios em uma hora, indique o dia e a hora em que os dois amigos chegaram ao Aeroporto Internacional Domodedovo em Moscou.",
-    "options": [
-      {
-        "id": "a",
-        "text": "11 de junho, às 13 horas"
-      },
-      {
-        "id": "b",
-        "text": "11 de junho, às 16 horas"
-      },
-      {
-        "id": "c",
-        "text": "11 de junho, às 17 horas"
-      },
-      {
-        "id": "d",
-        "text": "10 de junho, às 16 horas"
-      }
-    ],
-    "correctOptionId": "c",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c) 11 de junho, às 17 horas. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Na miopia o olho converge demais: os raios que vêm do infinito cruzam antes de chegar à retina, e a imagem do ponto remoto se forma na frente dela. Corrigir significa reduzir a convergência, ou seja, aumentar a distância focal da lente efetiva do olho — e é isso que a cirurgia faz ao aplanar a córnea, já que uma superfície menos curva desvia menos a luz. A hipermetropia é o caso oposto (imagem depois da retina, corrigida com lente convergente), e é essa troca que as alternativas erradas exploram.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -56870,7 +56810,7 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d) Planície Russa, Montes Urais, Planalto Central Siberiano e Planalto de Aldan. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A Transiberiana sai de Moscou, no oeste, e vai até Vladivostok, no Pacífico, então as unidades de relevo aparecem nessa ordem, de oeste para leste: Planície Russa (a leste da qual está Moscou), Montes Urais (a fronteira convencional entre Europa e Ásia), Planalto Central Siberiano e, já perto do Pacífico, o Planalto de Aldan. As outras alternativas misturam formas de relevo que não são russas: o Planalto da Anatólia é turco, o Planalto do Decã é indiano e os Bálcãs ficam no sudeste europeu.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -56900,7 +56840,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c) suscetíveis à erosão costeira causada, entre outros fatores, por amplas zonas de transporte de sedimentos, elevação do nível relativo do mar e urbanização acelerada. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A restinga é um depósito arenoso construído pela deriva litorânea, e por isso mesmo é instável: os sedimentos que a formam estão em trânsito permanente. Some a isso a elevação do nível relativo do mar e a ocupação urbana acelerada do litoral, que fixa construções sobre um terreno que precisa se mover, e o resultado é alta suscetibilidade à erosão costeira. As alternativas erradas invertem os fatos: a restinga é dos ecossistemas mais sobrecarregados pela urbanização (não o contrário), tem forte variação fisionômica entre praia, cordão e duna, e seu solo arenoso retém pouquíssima água e nutrientes — é justamente por isso que a vegetação de restinga é adaptada a estresse hídrico.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -56930,7 +56870,7 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d) os desastres estão associados a fenômenos climáticos potencializados pela ação antrópica. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Deslizamentos e enchentes, que respondem pela maioria dos desastres no Brasil, são de origem climática (chuva concentrada), mas a escala do estrago é humana: ocupação de encosta, impermeabilização do solo, canalização de córrego, retirada da mata ciliar. Por isso a resposta fala em fenômenos climáticos potencializados pela ação antrópica — a chuva é o gatilho, a vulnerabilidade é construída. As alternativas com \"origem tectônica\" caem por si: o Brasil está no meio da placa Sul-Americana, longe de bordas ativas, e praticamente não tem terremoto ou vulcanismo.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -56960,7 +56900,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c) De 21 de dezembro a 20 de março; Egito. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "O norte da África fica no Hemisfério Norte, onde o inverno vai de 21 de dezembro a 20 de março — quem marcou junho a setembro aplicou o calendário do Hemisfério Sul, que é o nosso. E entre os países listados, o Egito é o que pertence ao norte da África e foi sacudido pela Primavera Árabe (a queda de Hosni Mubarak, em 2011, na praça Tahrir). Síria e Irã também tiveram convulsões no período, mas ficam no Oriente Médio, não no norte africano.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -56990,7 +56930,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c) da ação dos sistemas de ciclones extratropicais, especialmente no inverno; o deslocamento de grandes volumes de água decorre da diferença de pressão atmosférica, que produz ventos intensos. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Ressaca não é tempestade tropical: no litoral sudeste brasileiro ela vem de ciclones extratropicais que se formam no Atlântico Sul, sobretudo no inverno, quando o contraste térmico entre altas e baixas latitudes é maior. O gradiente de pressão gerado por esses ciclones produz ventos fortes e persistentes que empilham água contra a costa, elevando o nível do mar e aumentando a altura das ondas. A alternativa (d) erra ao chamá-los de ciclones tropicais (que dependem de água quente e são raríssimos no Atlântico Sul) e ao dizer que no inverno as diferenças de temperatura são menores — é o oposto.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -57020,7 +56960,7 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a) locais onde a evapotranspiração potencial é maior que a evapotranspiração real durante praticamente todo o ano, gerando grande deficit hídrico, o que resulta em uma vegetação espinhenta e sem folhas na maior parte do ano. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A caatinga ocupa o semiárido nordestino, onde a evapotranspiração potencial (o quanto evaporaria se houvesse água) supera de longe a evapotranspiração real (o quanto de fato evapora, limitado pela água disponível) quase o ano todo. Esse déficit hídrico crônico explica a fisionomia: caducifólia (perde as folhas para não transpirar), espinhosa e com caules suculentos. A letra (d) inverte a relação — se a precipitação fosse maior que a evapotranspiração potencial, o ambiente seria úmido, não seco. E a caatinga não é um deserto: chove, de 400 a 800 mm concentrados em poucos meses, e nesse período ela reverdece.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -57050,37 +56990,7 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b) As áreas de calmaria correspondiam a porções de alta pressão atmosférica, típicas das latitudes próximas aos trópicos e, consequentemente, as caravelas permaneciam estacionadas, agravando as condições de vida dos marinheiros. Comentário detalhado ainda não escrito para esta questão.",
-    "difficulty": "medium",
-    "examSource": {
-      "board": "UNICAMP"
-    }
-  },
-  {
-    "id": "ap_geo_unicamp_029",
-    "topicId": "geo_hidrogeografia",
-    "subject": "Geografia",
-    "prompt": "Conforme foi noticiado na mídia, no dia 21 de agosto de 2016, a cidade de Santos (SP) foi atingida por uma ressaca que paralisou por 30 horas o principal porto do país, inundou vias e causou transtornos para a mobilidade urbana, o funcionamento de empresas e do comércio. As ressacas resultam;",
-    "options": [
-      {
-        "id": "a",
-        "text": "das dinâmicas das massas de ar formadas nas áreas oceânicas, sempre no verão; são causadas por diferença de pressão atmosférica de áreas de baixa pressão nos oceanos para áreas de alta pressão nos continentes"
-      },
-      {
-        "id": "b",
-        "text": "do contato de massas de ar com características termodinâmicas semelhantes, formando sistemas de circulação frontais; quanto menor a umidade do sistema, maior é a instabilidade atmosférica"
-      },
-      {
-        "id": "c",
-        "text": "da ação dos sistemas de ciclones extratropicais, especialmente no inverno; o deslocamento de grandes volumes de água decorre da diferença de pressão atmosférica, que produz ventos intensos"
-      },
-      {
-        "id": "d",
-        "text": "da ação de ciclones tropicais formados no Atlântico Sul, sempre nos meses de inverno; nesta estação do ano são menores as diferenças de temperatura entre o polo sul e o equador"
-      }
-    ],
-    "correctOptionId": "c",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c) da ação dos sistemas de ciclones extratropicais, especialmente no inverno; o deslocamento de grandes volumes de água decorre da diferença de pressão atmosférica, que produz ventos intensos. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "As calmarias que travavam as caravelas ficam nas zonas de alta pressão subtropical, por volta dos 30° de latitude, onde o ar da célula de Hadley desce. Ar descendente significa vento fraco na superfície — daí a embarcação parada por semanas, com o alimento e a água acabando. A confusão que a questão testa é entre alta e baixa pressão: as áreas de baixa pressão (equador, zona de convergência intertropical) têm ar ascendente e chuva, não calmaria prolongada de superfície do tipo que imobilizava as frotas.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -57110,7 +57020,7 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a) sujeita a inundações periódicas anuais, quando ocorre a deposição de sedimentos finos. Está posicionada entre o terraço e o rio. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A planície de inundação (a várzea) é a faixa plana adjacente ao canal, entre o rio e o terraço fluvial. É ela que alaga todo ano na cheia, e é justamente por isso que os sedimentos ali depositados são finos — silte e argila, que decantam em água parada. Sedimento grosso (areia, cascalho) exige energia alta e fica no leito do rio. O terraço é a várzea antiga, já abandonada pelo rio e alçada acima do nível das cheias comuns; a vertente é a encosta acima dele. Foi essa faixa alagável, barata e vazia, que virou campo de futebol de várzea em São Paulo — e sumiu quando a retificação do Tietê e do Pinheiros a transformou em avenida.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -57140,37 +57050,7 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d) ambientes de transição, ecótonos, entre áreas marinhas e terrestres, ricos em sedimentos constituídos de matéria orgânica e nutrientes; predomina vegetação arbustiva, que sobrevive em ambientes de permanente inundação. Comentário detalhado ainda não escrito para esta questão.",
-    "difficulty": "medium",
-    "examSource": {
-      "board": "UNICAMP"
-    }
-  },
-  {
-    "id": "ap_geo_unicamp_036",
-    "topicId": "geo_fisica_brasil",
-    "subject": "Geografia",
-    "prompt": "“...as caatingas são um aliado incorruptível do sertanejo em revolta. Entram também de certo modo na luta. Armam-se para o combate; agridem. Trançam-se, impenetráveis, ante o forasteiro, mas abrem-se em trilhas multivias, para o matuto que ali nasceu e cresceu...” (Euclides da Cunha, Os Sertões. Rio de Janeiro: FBN, p. 102.) No texto, as caatingas são apresentadas como aliadas do sertanejo. Essa vegetação está associada a;",
-    "options": [
-      {
-        "id": "a",
-        "text": "locais onde a evapotranspiração potencial é maior que a evapotranspiração real durante praticamente todo o ano, gerando grande deficit hídrico, o que resulta em uma vegetação espinhenta e sem folhas na maior parte do ano"
-      },
-      {
-        "id": "b",
-        "text": "locais onde raramente chove, o que determina uma vegetação que em nenhuma época do ano apresenta folhas verdes, e que nasce em solos pouco desenvolvidos e férteis"
-      },
-      {
-        "id": "c",
-        "text": "locais secos durante seis meses por ano, o que permite a presença da vegetação com folhas durante a maior parte do ano, embora todas as folhas caiam no período de seca"
-      },
-      {
-        "id": "d",
-        "text": "locais com precipitação maior que a evapotranspiração potencial, o que determina um ambiente quase que permanentemente seco ao longo do ano, com poucos dias em que a vegetação apresenta folhas verdes"
-      }
-    ],
-    "correctOptionId": "a",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a) locais onde a evapotranspiração potencial é maior que a evapotranspiração real durante praticamente todo o ano, gerando grande deficit hídrico, o que resulta em uma vegetação espinhenta e sem folhas na maior parte do ano. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "O manguezal é um ecótono: fica na transição entre o mar e o continente, no encontro da água doce do rio com a salgada da maré. O sedimento é fino e riquíssimo em matéria orgânica, o que sustenta uma enorme produtividade biológica — é berçário de boa parte da fauna marinha. A vegetação é adaptada ao alagamento permanente e ao sal, com raízes aéreas (pneumatóforos e rizóforos) para respirar num solo sem oxigênio. As outras alternativas descrevem outras feições costeiras: (a) é laguna, (b) é campo de dunas e (c) é restinga.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -57200,7 +57080,7 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b) movimento pendular. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Movimento pendular é o deslocamento diário entre o município onde a pessoa mora e aquele onde estuda ou trabalha, com volta para casa no mesmo dia — exatamente o que fazem os 1,75 milhão de pessoas do arranjo da Grande São Paulo. Não é migração, porque migração pressupõe mudança de residência; não é sazonal, porque não depende de estação ou safra. O conceito é importante porque revela a integração funcional real de uma metrópole, que raramente coincide com os limites administrativos dos municípios.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -57230,7 +57110,7 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b) Afeganistão, Síria, Somália. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Em 2015, os três países que respondiam por mais da metade dos refugiados do mundo eram Síria (guerra civil desde 2011), Afeganistão (décadas de conflito) e Somália (colapso do Estado e Al-Shabaab). Grécia e Macedônia aparecem nas alternativas como armadilha: elas não produzem refugiados, são países de trânsito na rota dos Bálcãs rumo à Europa central. Myanmar entrou no noticiário como origem de refugiados rohingya sobretudo a partir de 2017, depois do período de que a questão trata.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -57260,7 +57140,7 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d) Verifica-se a tendência de reversão da curva demográfica, tendo em vista o crescimento atual da população indígena no país, sendo que a maior parcela desse contingente vive em áreas rurais. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Depois do colapso demográfico da colonização, a população indígena brasileira voltou a crescer a partir dos anos 1990 — é a chamada reversão da curva —, e o Censo mostra que a maior parte dela vive em áreas rurais, dentro ou próximo de terras indígenas. As demais alternativas contrariam os dados: a população atual é uma fração da que existia no século XVI (estimada em milhões), a Amazônia concentra o maior contingente e não perdeu população, e povos isolados vivem em grupos pequenos, não em grandes aldeias com predomínio de idosos.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -57290,7 +57170,7 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d) Assumem distintas direções, sendo que uma das rotas dos imigrantes para a Europa inicia-se em países do Oriente Médio e da costa oriental do norte da África, indo até a Grécia, com travessia pelo mar Mediterrâneo. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Os fluxos migratórios atuais têm direções múltiplas, e a rota mediterrânea oriental é uma das principais: parte da Síria, do Iraque e do Afeganistão, atravessa a Turquia e chega à Grécia pelo mar Egeu, seguindo depois pelos Bálcãs. A alternativa (a) erra o motor econômico — o que atrai hoje é o setor de serviços e o trabalho precarizado, não a indústria fordista, que está em declínio nesses países. (b) apela a uma \"vocação cultural\" para migrar, que é explicação essencialista e falsa. (c) restringe o destino à proximidade linguística, o que a rota síria para a Alemanha desmente sozinha.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -57320,7 +57200,7 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a) Privatização das empresas de telecomunicações; generalização da posse de linhas telefônicas; expansão de serviços de suporte técnico e televendas; insegurança no mercado de trabalho. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Os call centers brasileiros são filhos diretos da privatização do sistema Telebrás (1998), que multiplicou operadoras e, com elas, a demanda por atendimento, suporte técnico e televendas. Ao mesmo tempo, a posse de linha telefônica deixou de ser privilégio e se generalizou, criando a escala necessária. E o trabalho gerado é precário: alta rotatividade, metas, baixos salários — insegurança no mercado de trabalho. As alternativas erradas invertem cada um desses pontos, falando em estatização, em retração dos serviços de atendimento ou em estabilidade no emprego.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -57350,7 +57230,7 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a) Em todo o mundo vêm sendo observadas mudanças em relação ao assalariamento e ao desemprego, como a precarização das relações de trabalho para desoneração da produção, e o crescimento da informalidade. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A marca das últimas décadas é a flexibilização: terceirização, contratos intermitentes, trabalho por plataforma, informalidade crescente — tudo movido pela desoneração do custo da produção. (b) é falsa nos fatos: o Brasil registra e resgata trabalhadores em condição análoga à escravidão todos os anos, inclusive por servidão por dívida. (c) inverte a tendência: o que cresce é o setor terciário, enquanto a indústria perde participação no emprego. (d) contraria o próprio movimento descrito: a organização sindical enfraqueceu, e foi isso que tornou a precarização possível na velocidade em que ocorreu.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -57380,37 +57260,7 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a) O uso de agrotóxicos e sementes transgênicas associa-se à busca de maior produtividade, sobretudo em áreas de fronteira agrícola. Comentário detalhado ainda não escrito para esta questão.",
-    "difficulty": "medium",
-    "examSource": {
-      "board": "UNICAMP"
-    }
-  },
-  {
-    "id": "ap_geo_unicamp_055",
-    "topicId": "geo_economica_brasil",
-    "subject": "Geografia",
-    "prompt": "De acordo com a Organização das Nações Unidas, a população global submetida a deslocamentos forçados cresceu substancialmente durante os últimos decênios, passando de 37,3 milhões para 65,3 milhões em 2015. Desse total, os refugiados representam 16,1 milhões de pessoas, 1,7 milhão a mais que o total registrado 12 meses antes. Mais da metade dos atuais refugiados do mundo (54%) procede de três países afetados por conflitos armados. Adaptado de Agência da ONU para Refugiados – ACNUR – Documento Tendencias Globales, 2015. Indique quais são esses três países.",
-    "options": [
-      {
-        "id": "a",
-        "text": "Myanmar, Síria, Somália"
-      },
-      {
-        "id": "b",
-        "text": "Afeganistão, Síria, Somália"
-      },
-      {
-        "id": "c",
-        "text": "Afeganistão, Grécia, Macedônia"
-      },
-      {
-        "id": "d",
-        "text": "Grécia, Macedônia, Myanmar"
-      }
-    ],
-    "correctOptionId": "b",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b) Afeganistão, Síria, Somália. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Agrotóxico e semente transgênica são as duas pernas do pacote tecnológico do agronegócio, e o objetivo declarado é produtividade — daí a concentração desse uso na fronteira agrícola (Matopiba, Centro-Oeste), onde a expansão é mais recente e mais intensiva. As alternativas erradas afirmam o contrário dos fatos: a União Europeia restringe transgênicos e limita resíduos de agrotóxico, o Brasil aumentou (não reduziu) o consumo de defensivos, e transgênico e agrotóxico não são substitutos — a soja RR, por exemplo, existe justamente para tolerar a aplicação do herbicida.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -57440,7 +57290,7 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a) dedicação à pesca artesanal, agricultura de pousio, espaços destinados a usos comuns e cultivo de gêneros alimentícios voltado para a subsistência e o mercado local. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Caiçaras (litoral sudeste), geraizeiros (Cerrado mineiro), ribeirinhos (Amazônia) e faxinalenses (Paraná) são populações tradicionais, e todas compartilham a mesma lógica produtiva: pesca artesanal, agricultura de pousio (a terra descansa para recuperar fertilidade, sem insumo químico), uso comum de parte do território (o faxinal é o exemplo mais claro, com criadouro coletivo) e produção voltada ao autoconsumo e ao mercado local. As alternativas erradas colam nessas populações traços do agronegócio — pesca predatória, agricultura de precisão, arrendamento, cana para biocombustível —, que são exatamente o oposto do seu modo de vida.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -57470,7 +57320,7 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b) uso de sementes de melhor qualidade, maior utilização de insumos agrícolas e de maquinário, mão de obra predominantemente assalariada e uso intensivo do solo. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Produzir mais numa área menor é, por definição, ganho de produtividade, e no agronegócio brasileiro ele vem de sementes melhoradas, mais insumos (fertilizante e defensivo), mais máquina e uso intensivo do solo, com trabalho assalariado. Repare no par de armadilhas: (a) diz \"baixa utilização de insumos\", que contradiz o aumento de produtividade; (c) e (d) falam em mão de obra familiar, que caracteriza a agricultura familiar, não a lavoura de grãos em escala — e (c) ainda troca uso intensivo por extensivo, que é o modelo oposto, o de ganhar produção abrindo mais área.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -57500,37 +57350,7 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a) ao desmatamento e ao cultivo em áreas de média e alta declividade, o que reduziu a infiltração de água no solo e diminuiu a disponibilidade de água no local, afetando o regime de chuvas; isso levou a uma queda na produtividade, com o endividamento dos fazendeiros da região, superada economicamente por regiões de cultivo cafeeiro mais recente, como o oeste paulista. Comentário detalhado ainda não escrito para esta questão.",
-    "difficulty": "medium",
-    "examSource": {
-      "board": "UNICAMP"
-    }
-  },
-  {
-    "id": "ap_geo_unicamp_060",
-    "topicId": "geo_economica_brasil",
-    "subject": "Geografia",
-    "prompt": "Com relação à fruticultura na região do Vale do São Francisco no Nordeste brasileiro, é correto afirmar que;",
-    "options": [
-      {
-        "id": "a",
-        "text": "a região tem terras férteis e adequadas à fruticultura graças à inserção de projetos irrigáveis, o que compensa o clima seco e o alto índice de insolação durante a maior parte do ano"
-      },
-      {
-        "id": "b",
-        "text": "a região tem clima úmido, com chuvas bem distribuídas ao longo do ano, característica favorável à fruticultura"
-      },
-      {
-        "id": "c",
-        "text": "a região é importante produtora de frutas, mas não foi possível implantar a vitinicultura, apesar de várias tentativas, porque a cultura não se adapta ao clima"
-      },
-      {
-        "id": "d",
-        "text": "os maiores produtores de frutas tropicais da região e do país encontram-se em polos agroindustriais dos municípios pernambucanos de Juazeiro e Petrolina. TEXTO PARA AS PRÓXIMAS 2 QUESTÕES: A soja é a principal cultura agrícola do Brasil em volume e em geração de renda e ocupa hoje uma área de mais de 21 milhões de hectares. Em 2008, foram produzidas 57,2 milhões de toneladas do grão, com valor bruto de R$ 51,5 bilhões. (Focus: Visão do Brasil – Desafios e oportunidades para a produção de soja sustentável no Brasil. www.visaobrasil.org, 04/2010.)"
-      }
-    ],
-    "correctOptionId": "a",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a) a região tem terras férteis e adequadas à fruticultura graças à inserção de projetos irrigáveis, o que compensa o clima seco e o alto índice de insolação durante a maior parte do ano. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "O café do Vale do Paraíba foi plantado morro acima, em média e alta declividade, depois de derrubar e queimar a mata atlântica. Sem cobertura vegetal e sem curva de nível, a chuva escoa em vez de infiltrar: o solo perde matéria orgânica e nutrientes por erosão, o lençol freático não se recarrega e a umidade que a floresta devolvia à atmosfera desaparece, o que altera o regime local de chuvas. Foi esse ciclo, e não o efeito estufa global (que é fenômeno de outra escala e de outro século), que arruinou a produtividade e empurrou o café para o oeste paulista.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -57560,7 +57380,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c) entre os fatores que contribuíram para que a soja ganhasse relevância econômica na agricultura do país estão os incentivos fiscais e a facilidade na mecanização da cultura, que a torna mais produtiva. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A soja se firmou no Brasil a partir dos anos 1960-70 com apoio estatal explícito: crédito rural subsidiado, incentivos fiscais e pesquisa da Embrapa, que adaptou cultivares ao Cerrado. Some a isso o fato de ser uma cultura inteiramente mecanizável, do plantio à colheita, o que permite escala e reduz custo por tonelada. (a) e (b) erram a cronologia. (d) inverte a geografia: a soja se consolidou primeiro no Sul (Rio Grande do Sul e Paraná) e só depois avançou sobre o Centro-Oeste.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -57590,37 +57410,7 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b) O real processo de metropolização em Santa Catarina, dinamizado nas últimas décadas, não abrange a totalidade do Estado, permitindo concluir que a criação das onze RMs obedeceu a critérios mais políticos do que técnicos. Comentário detalhado ainda não escrito para esta questão.",
-    "difficulty": "medium",
-    "examSource": {
-      "board": "UNICAMP"
-    }
-  },
-  {
-    "id": "ap_geo_unicamp_065",
-    "topicId": "geo_populacao_urbana_brasil",
-    "subject": "Geografia",
-    "prompt": "O estudo Arranjos Populacionais e Concentrações Urbanas do Brasil (IBGE, 2015) identificou 294 arranjos populacionais no País, de diferentes escalas e naturezas. O Arranjo Populacional da Região Metropolitana de São Paulo (SP) é caracterizado pela extensão e intensidade de seus fluxos: aproximadamente 1.750.000 pessoas deslocam-se cotidianamente entre os municípios que compõem o Arranjo para estudar e trabalhar. Essa dinâmica espacial é melhor explicada pelo conceito de;",
-    "options": [
-      {
-        "id": "a",
-        "text": "migração interna"
-      },
-      {
-        "id": "b",
-        "text": "movimento pendular"
-      },
-      {
-        "id": "c",
-        "text": "migração urbano-urbano"
-      },
-      {
-        "id": "d",
-        "text": "movimento sazonal"
-      }
-    ],
-    "correctOptionId": "b",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b) movimento pendular. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Santa Catarina criou onze regiões metropolitanas, mas metropolização de verdade — conurbação, fluxos pendulares intensos, integração funcional — só existe em parte do estado, sobretudo em torno de Florianópolis, Joinville e Blumenau. Quando o número de RMs excede o número de metrópoles reais, o instrumento deixou de ser técnico e virou político: criar RM abre acesso a recursos e a arranjos institucionais. É esse descompasso entre o rótulo administrativo e o processo territorial que a questão cobra.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -57650,7 +57440,7 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a) única aglomeração, mas dispersa e fragmentada, onde fluxos imateriais regem um conjunto diferenciado de lugares. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A metrópole contemporânea não é mais a mancha compacta em torno de um centro: ela é uma aglomeração única do ponto de vista funcional, porém dispersa e fragmentada no território, com vazios, condomínios isolados e subcentros. O que a mantém unida não é a continuidade do construído, mas os fluxos imateriais — informação, capital, decisão —, que articulam lugares muito diferentes entre si. Guarde o par de adjetivos: \"compacta e coesa\" descreve a metrópole industrial do passado; \"dispersa e fragmentada\" descreve a de hoje.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -57680,7 +57470,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c) São Paulo, Rio de Janeiro, Brasília. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Segundo as Regiões de Influência das Cidades (REGIC/IBGE), a hierarquia da gestão empresarial é São Paulo, Rio de Janeiro e Brasília, nessa ordem. A pegadinha é confundir gestão empresarial com gestão pública: em gestão do território pelo Estado, Brasília vem na frente, por ser a capital. Mas o comando das grandes empresas — sedes, bancos, bolsa, serviços corporativos — está concentrado em São Paulo, com o Rio em segundo lugar por herança de capital e pelo setor de petróleo.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -57710,7 +57500,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c) a partir da segunda metade do século XX, a industrialização implicou forte articulação inter-regional, gerando uma rede urbana de porte nacional. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Foi a industrialização a partir dos anos 1950, concentrada em São Paulo, que costurou as economias regionais brasileiras num único mercado e produziu uma rede urbana de alcance nacional, hierarquizada e articulada. (a) inverte a origem: a rede nasceu no litoral, voltada para a exportação, e só depois penetrou o interior. (b) erra a data — o padrão dendrítico, em que cada porto drena sua própria região sem ligação entre elas, é justamente o que a economia agroexportadora manteve por todo o século XIX. (d) inverte a tendência: a globalização torna os grandes centros mais multifuncionais, não menos.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -57740,7 +57530,7 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d) a diversificação das atividades comerciais e de serviços na área do perímetro urbano. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Se a fábrica saiu para a periferia e o comando financeiro e político ficou no centro expandido, o que se espalha pelo perímetro urbano é a diversificação de comércio e serviços, que passam a atender os novos subcentros. As outras alternativas descrevem exatamente a metrópole industrial que o enunciado diz ter ficado para trás: concentração da indústria junto à administração, adensamento do centro histórico, poder decisório numa área única.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -57770,97 +57560,7 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d) ascensão do regime de acumulação flexível; liberalização econômica e concorrência com capitais asiáticos; deslocamento de indústrias para outros países. Comentário detalhado ainda não escrito para esta questão.",
-    "difficulty": "medium",
-    "examSource": {
-      "board": "UNICAMP"
-    }
-  },
-  {
-    "id": "ap_geo_unicamp_073",
-    "topicId": "geo_economica_brasil",
-    "subject": "Geografia",
-    "prompt": "O processo contemporâneo de metropolização do espaço e a grande metamorfose que vem ocorrendo em algumas metrópoles têm significado mudanças territoriais expressivas. Há intensificação e multiplicidade de fluxos de pessoas, mercadorias e informações, bem como crescimento do número de cidades conurbadas, onde não se distingue muito bem, na continuidade da imensa área construída, o limite municipal de cada uma delas. Tanto em São Paulo, por exemplo, como na Cidade do México, em Buenos Aires ou em Santiago, vamos encontrar a manifestação desse momento mais avançado da urbanização. (Adaptado de Sandra Lencioni, A metamorfose de São Paulo: o anúncio de um novo mundo de aglomerações difusas. Revista Paranaense de Desenvolvimento, Curitiba, n.120, p. 133-148, jan./jun., 2011.) Tendo em vista a metrópole contemporânea, é correto afirmar que se trata de uma;",
-    "options": [
-      {
-        "id": "a",
-        "text": "única aglomeração, mas dispersa e fragmentada, onde fluxos imateriais regem um conjunto diferenciado de lugares"
-      },
-      {
-        "id": "b",
-        "text": "única aglomeração, pois é compacta e coesa, onde fluxos imateriais regem um conjunto diferenciado de lugares"
-      },
-      {
-        "id": "c",
-        "text": "metrópole compacta e coesa, organizada exclusivamente por uma estrutura hierárquica de fluxos imateriais"
-      },
-      {
-        "id": "d",
-        "text": "metrópole dispersa e fragmentada, organizada exclusivamente por uma estrutura hierárquica de fluxos materiais"
-      }
-    ],
-    "correctOptionId": "a",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a) única aglomeração, mas dispersa e fragmentada, onde fluxos imateriais regem um conjunto diferenciado de lugares. Comentário detalhado ainda não escrito para esta questão.",
-    "difficulty": "medium",
-    "examSource": {
-      "board": "UNICAMP"
-    }
-  },
-  {
-    "id": "ap_geo_unicamp_074",
-    "topicId": "geo_economica_brasil",
-    "subject": "Geografia",
-    "prompt": "A metrópole industrial do passado integrava no espaço urbano diversos processos produtivos, ocorrendo uma concentração espacial das plantas de fábrica, da infraestrutura e dos trabalhadores. Na metrópole contemporânea predomina uma dispersão territorial das atividades econômicas e da força de trabalho. Nesta, a produção fabril tende a se instalar na periferia ou nos arredores do perímetro urbano, enquanto as atividades associadas ao poder financeiro, político e econômico concentram-se na área urbana mais adensada. (Adaptado de Carlos de Matos, “Redes, nodos e cidades: transformação da metrópole latino-americana”, em Luiz Cesar de Queiroz Ribeiro (org.), Metrópoles: entre a coesão e a fragmentação, a cooperação e o conflito. São Paulo: Editora Perseu Abramo; Rio de Janeiro: Fase, 2004, 157-196.) Como principal característica da metrópole contemporânea, destaca-se;",
-    "options": [
-      {
-        "id": "a",
-        "text": "a concentração da atividade industrial e das funções administrativas das empresas no mesmo local"
-      },
-      {
-        "id": "b",
-        "text": "o aumento da densidade demográfica nas áreas do antigo centro histórico da metrópole"
-      },
-      {
-        "id": "c",
-        "text": "a concentração do poder decisório da administração pública e das empresas em uma única área da metrópole"
-      },
-      {
-        "id": "d",
-        "text": "a diversificação das atividades comerciais e de serviços na área do perímetro urbano"
-      }
-    ],
-    "correctOptionId": "d",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d) a diversificação das atividades comerciais e de serviços na área do perímetro urbano. Comentário detalhado ainda não escrito para esta questão.",
-    "difficulty": "medium",
-    "examSource": {
-      "board": "UNICAMP"
-    }
-  },
-  {
-    "id": "ap_geo_unicamp_076",
-    "topicId": "geo_globalizacao_economica",
-    "subject": "Geografia",
-    "prompt": "Detroit foi símbolo mundial da indústria automotiva. Chegou a abrigar quase 2 milhões de habitantes entre as décadas de 1960 e 1970. Em 2010, porém, havia perdido mais de um milhão de habitantes. O espaço urbano entrou em colapso, com fábricas em ruínas, casas abandonadas, supressão de serviços públicos essenciais, crescimento da pobreza e do desemprego. Em 2013, foi decretada a falência da cidade. Essa crise urbana vivida por Detroit resulta dos seguintes processos:",
-    "options": [
-      {
-        "id": "a",
-        "text": "ascensão do taylorismo; protecionismo econômico e concorrência com capitais europeus; deslocamento de indústrias para cidades vizinhas"
-      },
-      {
-        "id": "b",
-        "text": "consolidação do regime de acumulação fordista; protecionismo econômico e concorrência com capitais europeus; deslocamento de indústrias para outros países;"
-      },
-      {
-        "id": "c",
-        "text": "declínio do toyotismo; liberalização econômica e concorrência com capitais asiáticos; deslocamento de indústrias para cidades vizinhas"
-      },
-      {
-        "id": "d",
-        "text": "ascensão do regime de acumulação flexível; liberalização econômica e concorrência com capitais asiáticos; deslocamento de indústrias para outros países"
-      }
-    ],
-    "correctOptionId": "d",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d) ascensão do regime de acumulação flexível; liberalização econômica e concorrência com capitais asiáticos; deslocamento de indústrias para outros países. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Detroit é o caso clássico do rust belt. A crise vem da passagem do fordismo para o regime de acumulação flexível, que dispensa a grande planta concentrada; da liberalização econômica, que expôs a indústria americana à concorrência japonesa e depois coreana; e da transferência de plantas para outros países, atrás de custo menor. Note por que as outras caem: o toyotismo não declinou nesse período, ele ascendeu — e foi ele que venceu a concorrência; e o problema não foi mudança para cidades vizinhas, foi saída do país.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -57890,7 +57590,7 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d) As empresas de tecnologia digital formam verdadeiros oligopólios e controlam diversas redes informacionais; apesar disso, elas ainda dependem das legislações dos Estados nacionais para a atuação nos territórios e comercialização dos seus produtos. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "As gigantes de tecnologia formam oligopólios e controlam infraestrutura informacional inteira, mas continuam dependendo da legislação de cada país para operar e vender ali — é por isso que respondem a multas antitruste, a leis de proteção de dados e a ordens judiciais de bloqueio. A questão testa uma tese comum e exagerada: a de que o Estado nacional teria perdido totalmente o poder de regular a internet. (b) é falsa porque a regulação mais dura veio justamente de países ricos (União Europeia). (c) erra a data: leis antitruste existem desde o fim do século XIX, com o Sherman Act de 1890.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -57920,37 +57620,7 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a) Alguns Estados e um conjunto diminuto de grandes empresas controlam o essencial da revolução tecnológica em curso, atualizando o desenvolvimento geograficamente desigual. Comentário detalhado ainda não escrito para esta questão.",
-    "difficulty": "medium",
-    "examSource": {
-      "board": "UNICAMP"
-    }
-  },
-  {
-    "id": "ap_geo_unicamp_079",
-    "topicId": "geo_globalizacao_economica",
-    "subject": "Geografia",
-    "prompt": "A metrópole industrial do passado integrava no espaço urbano diversos processos produtivos, ocorrendo uma concentração espacial das plantas de fábrica, da infraestrutura e dos trabalhadores. Na metrópole contemporânea predomina uma dispersão territorial das atividades econômicas e da força de trabalho. Nesta, a produção fabril tende a se instalar na periferia ou nos arredores do perímetro urbano, enquanto as atividades associadas ao poder financeiro, político e econômico concentram-se na área urbana mais adensada. (Adaptado de Carlos de Matos, “Redes, nodos e cidades: transformação da metrópole latino-americana”, em Luiz Cesar de Queiroz Ribeiro (org.), Metrópoles: entre a coesão e a fragmentação, a cooperação e o conflito. São Paulo: Editora Perseu Abramo; Rio de Janeiro: Fase, 2004, 157-196.) Como principal característica da metrópole contemporânea, destaca-se;",
-    "options": [
-      {
-        "id": "a",
-        "text": "a concentração da atividade industrial e das funções administrativas das empresas no mesmo local"
-      },
-      {
-        "id": "b",
-        "text": "o aumento da densidade demográfica nas áreas do antigo centro histórico da metrópole"
-      },
-      {
-        "id": "c",
-        "text": "a concentração do poder decisório da administração pública e das empresas em uma única área da metrópole"
-      },
-      {
-        "id": "d",
-        "text": "a diversificação das atividades comerciais e de serviços na área do perímetro urbano"
-      }
-    ],
-    "correctOptionId": "d",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d) a diversificação das atividades comerciais e de serviços na área do perímetro urbano. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A Revolução Informacional não distribuiu poder de forma homogênea: pesquisa, patentes, cabos, satélites, data centers e as empresas que os operam estão concentrados em poucos Estados e poucas corporações. O resultado é que a nova técnica reproduz e atualiza a velha desigualdade geográfica, em vez de dissolvê-la. (b) repete o mito da aldeia global democrática. (c) inverte o processo: a produção se descentraliza, mas a gestão se concentra ainda mais nas metrópoles. (d) exagera outra vez o fim do Estado, que segue regulando, tributando e vigiando o fluxo de dados.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -58260,7 +57930,7 @@
     "id": "ap_gram_unicamp_026",
     "topicId": "por_texto",
     "subject": "Português",
-    "prompt": "Texto 1 “Algumas vozes nacionais estão tentando atualmente encaminhar a discussão em torno da identidade ‘mestiça’, capaz de reunir todos os brasileiros (brancos, negros e mestiços). Vejo nesta proposta uma nova sutileza ideológica para recuperar a ideia da unidade nacional não alcançada pelo fracassado branqueamento físico. Essa proposta de uma nova identidade mestiça, única, vai na contramão dos movimentos negros e de outras chamadas minorias, que lutam pela construção de uma sociedade plural e de identidades múltiplas.” (Kabengele Munanga, Rediscutindo a mestiçagem no Brasil: Identidade Nacional versus Identidade Negra. Petrópolis: Vozes, 1999, p. 16.) Texto 2 “Os meus olhos coloridos/ Me fazem refletir/ Eu estou sempre na minha/ E não posso mais fugir/ Meu cabelo enrolado/ Todos querem imitar/ Eles estão baratinados/ Também querem enrolar/ Você ri da minha roupa/ Você ri do meu cabelo/ Você ri da minha pele/ Você ri do meu sorriso/ A verdade é que você,/ (Todo brasileiro tem\\!)/ Tem sangue crioulo/ Tem cabelo duro/ Sarará crioulo.” (Macau, “Olhos Coloridos”, 1981, gravada por Sandra de Sá. Álbum: “Sandra de Sá”. RCA.) Considerando o alerta de Munanga em relação a algumas “vozes nacionais”, a canção de Macau:",
+    "prompt": "Texto 1 “Algumas vozes nacionais estão tentando atualmente encaminhar a discussão em torno da identidade ‘mestiça’, capaz de reunir todos os brasileiros (brancos, negros e mestiços). Vejo nesta proposta uma nova sutileza ideológica para recuperar a ideia da unidade nacional não alcançada pelo fracassado branqueamento físico. Essa proposta de uma nova identidade mestiça, única, vai na contramão dos movimentos negros e de outras chamadas minorias, que lutam pela construção de uma sociedade plural e de identidades múltiplas.” (Kabengele Munanga, Rediscutindo a mestiçagem no Brasil: Identidade Nacional versus Identidade Negra. Petrópolis: Vozes, 1999, p. 16.) Texto 2 “Os meus olhos coloridos/ Me fazem refletir/ Eu estou sempre na minha/ E não posso mais fugir/ Meu cabelo enrolado/ Todos querem imitar/ Eles estão baratinados/ Também querem enrolar/ Você ri da minha roupa/ Você ri do meu cabelo/ Você ri da minha pele/ Você ri do meu sorriso/ A verdade é que você,/ (Todo brasileiro tem!)/ Tem sangue crioulo/ Tem cabelo duro/ Sarará crioulo.” (Macau, “Olhos Coloridos”, 1981, gravada por Sandra de Sá. Álbum: “Sandra de Sá”. RCA.) Considerando o alerta de Munanga em relação a algumas “vozes nacionais”, a canção de Macau:",
     "options": [
       {
         "id": "a",
@@ -58410,7 +58080,7 @@
     "id": "ap_gram_unicamp_038",
     "topicId": "por_texto",
     "subject": "Português",
-    "prompt": "Leia abaixo duas passagens do poema “Olá\\! Negro”, de Jorge de Lima. “A raça que te enforca, enforca-se de tédio, negro\\! E és tu que a alegras ainda com os teus jazzes. Com os teus songs, com os teus lundus\\!” (...) “Não basta iluminares hoje as noites dos brancos com teus jazzes. Olá, Negro\\! O dia está nascendo\\! O dia está nascendo ou será a tua gargalhada que vem vindo?” (Jorge de Lima, Poesias completas. v. I, Rio de Janeiro / Brasília: J. Aguilar / INL, 1974, p.180-181.) Considerando o livro Poemas negros como um todo e a poética de Jorge de Lima, é correto afirmar que o último verso citado:",
+    "prompt": "Leia abaixo duas passagens do poema “Olá! Negro”, de Jorge de Lima. “A raça que te enforca, enforca-se de tédio, negro! E és tu que a alegras ainda com os teus jazzes. Com os teus songs, com os teus lundus!” (...) “Não basta iluminares hoje as noites dos brancos com teus jazzes. Olá, Negro! O dia está nascendo! O dia está nascendo ou será a tua gargalhada que vem vindo?” (Jorge de Lima, Poesias completas. v. I, Rio de Janeiro / Brasília: J. Aguilar / INL, 1974, p.180-181.) Considerando o livro Poemas negros como um todo e a poética de Jorge de Lima, é correto afirmar que o último verso citado:",
     "options": [
       {
         "id": "a",
@@ -58590,7 +58260,7 @@
     "id": "ap_gram_unicamp_046",
     "topicId": "por_texto",
     "subject": "Português",
-    "prompt": "“São Francisco botava o dedo nas feridas dos leprosos. Mas é que ele era um santo, fazia milagres, e ela é simplesmente Doralice Leitão Leiria, um ser humano como qualquer outro.” Érico Veríssimo, Caminhos cruzados. São Paulo: Companhia de Bolso, 2016, p. 77. “– Queres seguir a política? Então? Procura imitar Bismarck\\! Haverá padrão melhor?” (Idem, p. 290.) Os fragmentos acima captam um dos traços principais de Caminhos cruzados no que diz respeito à identidade narrativa das personagens. Considerando o conjunto do romance, tal traço consiste em uma:",
+    "prompt": "“São Francisco botava o dedo nas feridas dos leprosos. Mas é que ele era um santo, fazia milagres, e ela é simplesmente Doralice Leitão Leiria, um ser humano como qualquer outro.” Érico Veríssimo, Caminhos cruzados. São Paulo: Companhia de Bolso, 2016, p. 77. “– Queres seguir a política? Então? Procura imitar Bismarck! Haverá padrão melhor?” (Idem, p. 290.) Os fragmentos acima captam um dos traços principais de Caminhos cruzados no que diz respeito à identidade narrativa das personagens. Considerando o conjunto do romance, tal traço consiste em uma:",
     "options": [
       {
         "id": "a",
@@ -58650,7 +58320,7 @@
     "id": "ap_gram_unicamp_049",
     "topicId": "por_texto",
     "subject": "Português",
-    "prompt": "“O Sinhô foi açoitar sozinho a negra Fulô. A negra tirou a saia e tirou o cabeção, de dentro dêle pulou nuinha a negra Fulô. Essa negra Fulô\\! Essa negra Fulô\\! Ó Fulô\\! Ó Fulô\\! Cadê, cadê teu Sinhô que Nosso Senhor me mandou? Ah\\! Foi você que roubou, foi você, negra Fulô? Essa negra Fulô\\!” Jorge de Lima, Poesias Completas, v. 1. Rio de Janeiro/Brasília: J. Aguilar e INL, 1974, p. 121. “A Sinhá mandou arrebentar-lhe os dentes: Fute, Cafute, Pé-de-pato, Não-sei-que-diga, avança na branca e me vinga. Exu escangalha ela, amofina ela, amuxila ela que eu não tenho defesa de homem, sou só uma mulher perdida neste mundão. Neste mundão. Louvado seja Oxalá. Para sempre seja louvado.” (Idem, p. 164.) Essas duas cenas de ciúmes concluem dois textos diferentes de Jorge de Lima. A primeira pertence ao conhecido poema modernista “Essa negra Fulô”; a segunda, ao poema “História”, de Poemas Negros (1947). Em relação a “Essa negra Fulô”, o poema “História”, especificamente, representa:",
+    "prompt": "“O Sinhô foi açoitar sozinho a negra Fulô. A negra tirou a saia e tirou o cabeção, de dentro dêle pulou nuinha a negra Fulô. Essa negra Fulô! Essa negra Fulô! Ó Fulô! Ó Fulô! Cadê, cadê teu Sinhô que Nosso Senhor me mandou? Ah! Foi você que roubou, foi você, negra Fulô? Essa negra Fulô!” Jorge de Lima, Poesias Completas, v. 1. Rio de Janeiro/Brasília: J. Aguilar e INL, 1974, p. 121. “A Sinhá mandou arrebentar-lhe os dentes: Fute, Cafute, Pé-de-pato, Não-sei-que-diga, avança na branca e me vinga. Exu escangalha ela, amofina ela, amuxila ela que eu não tenho defesa de homem, sou só uma mulher perdida neste mundão. Neste mundão. Louvado seja Oxalá. Para sempre seja louvado.” (Idem, p. 164.) Essas duas cenas de ciúmes concluem dois textos diferentes de Jorge de Lima. A primeira pertence ao conhecido poema modernista “Essa negra Fulô”; a segunda, ao poema “História”, de Poemas Negros (1947). Em relação a “Essa negra Fulô”, o poema “História”, especificamente, representa:",
     "options": [
       {
         "id": "a",
@@ -60530,7 +60200,7 @@
     "id": "ap_hisbra_fuvest_075",
     "topicId": "his_republica_liberal_atual",
     "subject": "História",
-    "prompt": "Não nos esqueçamos de que este é um tempo de abertura. Vivemos sob o signo da anistia que é esquecimento, ou devia ser. Tempo que pede contenção e paciência. Sofremos todo ímpeto agressivo. Adocemos os gestos. O tempo é de perdão. (...) Esqueçamos tudo isto, mas cuidado\\! Não nos esqueçamos de enfrentar, agora, a tarefa em que fracassamos ontem e que deu lugar a tudo isto. Não nos esqueçamos de organizar a defesa das instituições democráticas contra novos golpistas militares e civis para que em tempo algum do futuro ninguém tenha outra vez de enfrentar e sofrer, e depois esquecer os conspiradores, os torturadores, os censores e todos os culpados e coniventes que beberam nosso sangue e pedem nosso esquecimento. Darcy Ribeiro. “Réquiem”, Ensaios insólitos. Porto Alegre: L\\&PM, 1979. O texto remete à anistia e à reflexão sobre os impasses da abertura política no Brasil, no período final do regime militar, implantado com o golpe de 1964. Com base nessas referências, escolha a alternativa correta.",
+    "prompt": "Não nos esqueçamos de que este é um tempo de abertura. Vivemos sob o signo da anistia que é esquecimento, ou devia ser. Tempo que pede contenção e paciência. Sofremos todo ímpeto agressivo. Adocemos os gestos. O tempo é de perdão. (...) Esqueçamos tudo isto, mas cuidado! Não nos esqueçamos de enfrentar, agora, a tarefa em que fracassamos ontem e que deu lugar a tudo isto. Não nos esqueçamos de organizar a defesa das instituições democráticas contra novos golpistas militares e civis para que em tempo algum do futuro ninguém tenha outra vez de enfrentar e sofrer, e depois esquecer os conspiradores, os torturadores, os censores e todos os culpados e coniventes que beberam nosso sangue e pedem nosso esquecimento. Darcy Ribeiro. “Réquiem”, Ensaios insólitos. Porto Alegre: L\\&PM, 1979. O texto remete à anistia e à reflexão sobre os impasses da abertura política no Brasil, no período final do regime militar, implantado com o golpe de 1964. Com base nessas referências, escolha a alternativa correta.",
     "options": [
       {
         "id": "a",
@@ -61448,7 +61118,7 @@
     "id": "ap_hisbra_unesp_039",
     "topicId": "his_brasil_imperio",
     "subject": "História",
-    "prompt": "Brasileiros do norte\\! Pedro de Alcântara, filho de d. João VI, rei de Portugal, a quem vós por uma estúpida condescendência com os brasileiros do sul aclamastes vosso imperador, quer descaradamente escravizar-nos (...). Não queremos um imperador criminoso, sem fé nem palavras; podemos passar sem ele\\! Viva a Confederação do Equador\\! Viva a constituição que nos deve reger\\! Viva o governo supremo, que há de nascer de nós mesmos\\! (Proclamação de Manuel Paes de Andrade, presidente da Confederação do Equador, 1824.) A proclamação de Manuel Paes de Andrade deve ser entendida;",
+    "prompt": "Brasileiros do norte! Pedro de Alcântara, filho de d. João VI, rei de Portugal, a quem vós por uma estúpida condescendência com os brasileiros do sul aclamastes vosso imperador, quer descaradamente escravizar-nos (...). Não queremos um imperador criminoso, sem fé nem palavras; podemos passar sem ele! Viva a Confederação do Equador! Viva a constituição que nos deve reger! Viva o governo supremo, que há de nascer de nós mesmos! (Proclamação de Manuel Paes de Andrade, presidente da Confederação do Equador, 1824.) A proclamação de Manuel Paes de Andrade deve ser entendida;",
     "options": [
       {
         "id": "a",
@@ -63113,36 +62783,6 @@
     ],
     "correctOptionId": "a",
     "explanation": "Gabarito oficial da UNICAMP: alternativa a) ao trauma coletivo das políticas repressivas e crimes de Estado praticados pelos regimes ditatoriais latino-americanos. Comentário detalhado ainda não escrito para esta questão.",
-    "difficulty": "medium",
-    "examSource": {
-      "board": "UNICAMP"
-    }
-  },
-  {
-    "id": "ap_hisbra_unicamp_026",
-    "topicId": "his_republica_liberal_atual",
-    "subject": "História",
-    "prompt": "“ODORICO Eu sei. É um movimento subversivo procurando me intrigar com a opinião pública e criar problemas à minha administração. Sei, sim. É uma conspiração. Eles não queriam o cemitério. Desde o princípio foram contra. E agora que o cemitério está pronto caem de pau em cima de mim, me chamam de demagogo, de tudo...” (...) “ODORICO Pois eu quero que depois o senhor soletre esta gazeta de ponta a ponta. Neco Pedreira o senhor conhece? ZECA Conheço não sinhô. ODORICO É o dono do jornal. Elemento perigoso. Sua primeira missão como delegado é dar uma batida na redação dessa gazeta subversiva e sacudir a marreta em nome da lei e da democracia...” (Dias Gomes, O bem amado. 12.ed. Rio de Janeiro: Bertrand Brasil, 2014, p. 40 e 68.) A peça de Dias Gomes é uma crítica a um momento histórico e político da sociedade brasileira. Odorico Paraguassu tornou-se um personagem emblemático desse período porque por meio dele:",
-    "options": [
-      {
-        "id": "a",
-        "text": "simbolizou-se a defesa da democracia a qualquer custo. Essa defesa resultou em uma sociedade cindida entre o respeito à lei e o seu uso particular, temas políticos comuns aos países latino-americanos nos anos de 1970"
-      },
-      {
-        "id": "b",
-        "text": "representaram-se o atropelo da lei constitucional, a relativização da liberdade de imprensa e a construção de um inimigo interno que justificasse o arbítrio das decisões do executivo, próprios aos Anos de Chumbo"
-      },
-      {
-        "id": "c",
-        "text": "explicitaram-se as leis que regiam a vida política e social de uma nação subdesenvolvida da América Latina na década de 1970, marcada pela inércia e pela cumplicidade dos cidadãos com a corrupção sistêmica do país"
-      },
-      {
-        "id": "d",
-        "text": "fez-se a defesa da democracia e do respeito irrestrito à lei constitucional para um projeto de nação brasileira da década 1970, que enfrentava o espírito demagógico dos políticos latino-americanos"
-      }
-    ],
-    "correctOptionId": "b",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b) representaram-se o atropelo da lei constitucional, a relativização da liberdade de imprensa e a construção de um inimigo interno que justificasse o arbítrio das decisões do executivo, próprios aos Anos de Chumbo. Comentário detalhado ainda não escrito para esta questão.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -66816,7 +66456,7 @@
     "id": "ap_hisger_unesp_086",
     "topicId": "his_imperialismo_guerras",
     "subject": "História",
-    "prompt": "A viagem levou uns vinte minutos. O caminhão parou; via-se um grande portão e, em cima do portão, uma frase bem iluminada (cuja lembrança ainda hoje me atormenta nos sonhos): ARBEIT MACHT FREI – o trabalho liberta. Descemos, fazem-nos entrar numa sala ampla, nua e fracamente aquecida. Que sede\\! O leve zumbido da água nos canos da calefação nos enlouquece: faz quatro dias que não bebemos nada. Há uma torneira e, acima, um cartaz: proibido beber, água poluída. Besteira: é óbvio que o aviso é um deboche. “Eles” sabem que estamos morrendo de sede [...]. Bebo, e convido os companheiros a beber também, mas logo cuspo fora a água: está morna, adocicada, com cheiro de pântano. Isto é o inferno. Hoje, em nossos dias, o inferno deve ser assim: uma sala grande e vazia, e nós, cansados, de pé, diante de uma torneira gotejante, mas que não tem água potável, esperando algo certamente terrível acontecer, e nada acontece, e continua não acontecendo nada. (Primo Levi. É isto um homem?, 1988.) A descrição, por Primo Levi, de sua chegada a Auschwitz em 1944 revela;",
+    "prompt": "A viagem levou uns vinte minutos. O caminhão parou; via-se um grande portão e, em cima do portão, uma frase bem iluminada (cuja lembrança ainda hoje me atormenta nos sonhos): ARBEIT MACHT FREI – o trabalho liberta. Descemos, fazem-nos entrar numa sala ampla, nua e fracamente aquecida. Que sede! O leve zumbido da água nos canos da calefação nos enlouquece: faz quatro dias que não bebemos nada. Há uma torneira e, acima, um cartaz: proibido beber, água poluída. Besteira: é óbvio que o aviso é um deboche. “Eles” sabem que estamos morrendo de sede [...]. Bebo, e convido os companheiros a beber também, mas logo cuspo fora a água: está morna, adocicada, com cheiro de pântano. Isto é o inferno. Hoje, em nossos dias, o inferno deve ser assim: uma sala grande e vazia, e nós, cansados, de pé, diante de uma torneira gotejante, mas que não tem água potável, esperando algo certamente terrível acontecer, e nada acontece, e continua não acontecendo nada. (Primo Levi. É isto um homem?, 1988.) A descrição, por Primo Levi, de sua chegada a Auschwitz em 1944 revela;",
     "options": [
       {
         "id": "a",
@@ -66841,40 +66481,6 @@
     ],
     "correctOptionId": "e",
     "explanation": "Gabarito oficial da UNESP: alternativa e) a sensação de horror, angústia e submissão que caracterizavam a condição dos prisioneiros nos campos de concentração nazistas. Comentário detalhado ainda não escrito para esta questão.",
-    "difficulty": "medium",
-    "examSource": {
-      "board": "UNESP"
-    }
-  },
-  {
-    "id": "ap_hisger_unesp_090",
-    "topicId": "his_imperialismo_guerras",
-    "subject": "História",
-    "prompt": "Artigo 5.º — O comércio de mercadorias inglesas é proibido, e qualquer mercadoria pertencente à Inglaterra, ou proveniente de suas fábricas e de suas colônias é declarada boa presa. (...) Artigo 7.º — Nenhuma embarcação vinda diretamente da Inglaterra ou das colônias inglesas, ou lá tendo estado, desde a publicação do presente decreto, será recebida em porto algum. Artigo 8.º — Qualquer embarcação que, por meio de uma declaração, transgredir a disposição acima, será apresada e o navio e sua carga serão confiscados como se fossem propriedade inglesa. (Excerto do Bloqueio Continental, Napoleão Bonaparte. Citado por Kátia M. de Queirós Mattoso. Textos e documentos para o estudo da história contemporânea (1789-1963), 1977.) Esses artigos do Bloqueio Continental, decretado pelo Imperador da França em 1806, permitem notar a disposição francesa de;",
-    "options": [
-      {
-        "id": "a",
-        "text": "estimular a autonomia das colônias inglesas na América, que passariam a depender mais de seu comércio interno"
-      },
-      {
-        "id": "b",
-        "text": "impedir a Inglaterra de negociar com a França uma nova legislação para o comércio na Europa e nas áreas coloniais"
-      },
-      {
-        "id": "c",
-        "text": "provocar a transferência da Corte portuguesa para o Brasil, por meio da ocupação militar da Península Ibérica"
-      },
-      {
-        "id": "d",
-        "text": "ampliar a ação de corsários ingleses no norte do Oceano Atlântico e ampliar a hegemonia francesa nos mares europeus"
-      },
-      {
-        "id": "e",
-        "text": "debilitar economicamente a Inglaterra, então em processo de industrialização, limitando seu comércio com o restante da Europa"
-      }
-    ],
-    "correctOptionId": "e",
-    "explanation": "Gabarito oficial da UNESP: alternativa e) debilitar economicamente a Inglaterra, então em processo de industrialização, limitando seu comércio com o restante da Europa. Comentário detalhado ainda não escrito para esta questão.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNESP"
@@ -67466,7 +67072,7 @@
     "id": "ap_lit_unicamp_012",
     "topicId": "por_lit_contemporanea",
     "subject": "Português",
-    "prompt": "- Pela milionésima vez, por favor, “se amostrar” não existe. Não pega bem usar uma expressão incorreta como essa. – Ora veja, incorreto para mim é o que não faz sentido, “se amostrar” faz sentido para boa parte do país. – Por que você não usa um sinônimo mais simples da palavra? Que tal ”exibido”? Todo mundo conhece. – Não dá, porque quem se exibe é exibido, quem se amostra é amostrado. Por exemplo: quando os vendedores de shopping olham com desprezo para os meninos dos rolezinhos e moram no mesmo bairro deles, são exibidos. Eles acham que a roupa de vendedor faz deles seres superiores. Por outro lado, as meninas e os meninos dos rolezinhos vão para os shoppings para se amostrar uns para outros, e são, portanto, amostrados. Percebeu a sutileza da diferença? – Entendo, mas está errado. – Como é que está errado se você entende? Você não aceita a inventividade linguística do povo. “Amostrar” é verbo torto no manual das conjugações e “amostrado” é particípio de amostra grátis\\! Captou? (Adaptado de Cidinha da Silva, Absurdada. Disponível em http://notarodape. blogspot. com/search/label/Cotidiano. Acessado em 22/05/2019.) Considerando que a comparação entre modos de falar pode ser fonte de preconceito, o exemplo citado por uma das personagens da crônica:",
+    "prompt": "- Pela milionésima vez, por favor, “se amostrar” não existe. Não pega bem usar uma expressão incorreta como essa. – Ora veja, incorreto para mim é o que não faz sentido, “se amostrar” faz sentido para boa parte do país. – Por que você não usa um sinônimo mais simples da palavra? Que tal ”exibido”? Todo mundo conhece. – Não dá, porque quem se exibe é exibido, quem se amostra é amostrado. Por exemplo: quando os vendedores de shopping olham com desprezo para os meninos dos rolezinhos e moram no mesmo bairro deles, são exibidos. Eles acham que a roupa de vendedor faz deles seres superiores. Por outro lado, as meninas e os meninos dos rolezinhos vão para os shoppings para se amostrar uns para outros, e são, portanto, amostrados. Percebeu a sutileza da diferença? – Entendo, mas está errado. – Como é que está errado se você entende? Você não aceita a inventividade linguística do povo. “Amostrar” é verbo torto no manual das conjugações e “amostrado” é particípio de amostra grátis! Captou? (Adaptado de Cidinha da Silva, Absurdada. Disponível em http://notarodape. blogspot. com/search/label/Cotidiano. Acessado em 22/05/2019.) Considerando que a comparação entre modos de falar pode ser fonte de preconceito, o exemplo citado por uma das personagens da crônica:",
     "options": [
       {
         "id": "a",
@@ -67496,7 +67102,7 @@
     "id": "ap_lit_unicamp_013",
     "topicId": "por_lit_contemporanea",
     "subject": "Português",
-    "prompt": "“DOROTÉA O senhor perdeu a cabeça? DULCINÉA Fazer de um cangaceiro um delegado\\! DOROTÉA Quando a oposição souber\\! DULCINÉA Que prato pra Neco Pedreira\\! ODORICO E tomara que Neco se sirva bem dele. Tomara que chame Zeca Diabo de cangaceiro, assassino, quanto mais xingar, melhor. DOROTÉA O senhor não acha que se excedeu? ODORICO Em política, dona Dorotéa, os finalmentes justificam os não obstantes.” (Dias Gomes, O bem-amado. Rio de Janeiro: Bertrand Brasil, 2014. p. 69-70.) As personagens femininas do excerto anterior discordam da nomeação de Zeca Diabo feita por Odorico. Assinale a alternativa que indica a razão dessa discordância e a natureza da crítica às práticas políticas brasileiras presente na peça teatral de Dias Gomes.",
+    "prompt": "“DOROTÉA O senhor perdeu a cabeça? DULCINÉA Fazer de um cangaceiro um delegado! DOROTÉA Quando a oposição souber! DULCINÉA Que prato pra Neco Pedreira! ODORICO E tomara que Neco se sirva bem dele. Tomara que chame Zeca Diabo de cangaceiro, assassino, quanto mais xingar, melhor. DOROTÉA O senhor não acha que se excedeu? ODORICO Em política, dona Dorotéa, os finalmentes justificam os não obstantes.” (Dias Gomes, O bem-amado. Rio de Janeiro: Bertrand Brasil, 2014. p. 69-70.) As personagens femininas do excerto anterior discordam da nomeação de Zeca Diabo feita por Odorico. Assinale a alternativa que indica a razão dessa discordância e a natureza da crítica às práticas políticas brasileiras presente na peça teatral de Dias Gomes.",
     "options": [
       {
         "id": "a",
@@ -67706,7 +67312,7 @@
     "id": "ap_lit_unicamp_029",
     "topicId": "por_lit_modernismo",
     "subject": "Português",
-    "prompt": "“Um cego me levou ao pior de mim mesma, pensou espantada. Sentia-se banida porque nenhum pobre beberia água nas suas mãos ardentes. Ah\\! era mais fácil ser um santo que uma pessoa\\! Por Deus, pois não fora verdadeira a piedade que sondara no seu coração as águas mais profundas? Mas era uma piedade de leão.” (Clarice Lispector, “Amor”, em Laços de família. 20ª ed. Rio de Janeiro: Francisco Alves, 1990, p. 39.) Ao caracterizar a personagem Ana, a expressão “piedade de leão” reúne valores opostos, remetendo simultaneamente à compaixão e à ferocidade. É correto afirmar que, no conto “Amor”, essa formulação:",
+    "prompt": "“Um cego me levou ao pior de mim mesma, pensou espantada. Sentia-se banida porque nenhum pobre beberia água nas suas mãos ardentes. Ah! era mais fácil ser um santo que uma pessoa! Por Deus, pois não fora verdadeira a piedade que sondara no seu coração as águas mais profundas? Mas era uma piedade de leão.” (Clarice Lispector, “Amor”, em Laços de família. 20ª ed. Rio de Janeiro: Francisco Alves, 1990, p. 39.) Ao caracterizar a personagem Ana, a expressão “piedade de leão” reúne valores opostos, remetendo simultaneamente à compaixão e à ferocidade. É correto afirmar que, no conto “Amor”, essa formulação:",
     "options": [
       {
         "id": "a",
@@ -67796,7 +67402,7 @@
     "id": "ap_lit_unicamp_042",
     "topicId": "por_lit_romantismo_realismo",
     "subject": "Português",
-    "prompt": "“Era Noca, que vinha toda alterada. – Nossa Senhora\\! Quebrou-se o espelho grande do salão\\! – Quem foi que o quebrou? Perguntou Nina, para dizer alguma coisa. – Ninguém sabe. Veja só, que desgraça estará para acontecer\\! Espelho quebrado: morte ou ruína. – Morte\\! Se fosse a minha...” (Júlia Lopes de Almeida, A Falência. Campinas: Editora da Unicamp, 2018, p. 257.) O diálogo apresenta a reação das personagens femininas ao incidente doméstico com o objeto de decoração no palacete de Botafogo. Assinale a alternativa que justifica a fala final de Nina.",
+    "prompt": "“Era Noca, que vinha toda alterada. – Nossa Senhora! Quebrou-se o espelho grande do salão! – Quem foi que o quebrou? Perguntou Nina, para dizer alguma coisa. – Ninguém sabe. Veja só, que desgraça estará para acontecer! Espelho quebrado: morte ou ruína. – Morte! Se fosse a minha...” (Júlia Lopes de Almeida, A Falência. Campinas: Editora da Unicamp, 2018, p. 257.) O diálogo apresenta a reação das personagens femininas ao incidente doméstico com o objeto de decoração no palacete de Botafogo. Assinale a alternativa que justifica a fala final de Nina.",
     "options": [
       {
         "id": "a",
@@ -67826,7 +67432,7 @@
     "id": "ap_lit_unicamp_043",
     "topicId": "por_lit_romantismo_realismo",
     "subject": "Português",
-    "prompt": "“– Reputação\\! Ora, mamãe, e é a senhora quem me fala nisso\\! Camila estacou, sem atinar com a resposta, compreendendo o alcance das palavras do filho. A surpresa paralisou-lhe a língua; o sangue arrefeceu-se-lhe nas veias; mas, de repente, a reação sacudiu-a e então, num desatino, ferida no coração, ela achou para o Mário admoestações mais ásperas. Percebeu que a língua mais dizia que a sua vontade; mas não poderia contê-la. A dor atirava-a para diante, contra aquele filho, até então poupado.” (Júlia Lopes de Almeida, A falência. Campinas: Editora da Unicamp, 2018, p. 123.) A passagem apresenta a reação de Camila às palavras de seu filho. Assinale a alternativa que explica corretamente o comentário de Mário.",
+    "prompt": "“– Reputação! Ora, mamãe, e é a senhora quem me fala nisso! Camila estacou, sem atinar com a resposta, compreendendo o alcance das palavras do filho. A surpresa paralisou-lhe a língua; o sangue arrefeceu-se-lhe nas veias; mas, de repente, a reação sacudiu-a e então, num desatino, ferida no coração, ela achou para o Mário admoestações mais ásperas. Percebeu que a língua mais dizia que a sua vontade; mas não poderia contê-la. A dor atirava-a para diante, contra aquele filho, até então poupado.” (Júlia Lopes de Almeida, A falência. Campinas: Editora da Unicamp, 2018, p. 123.) A passagem apresenta a reação de Camila às palavras de seu filho. Assinale a alternativa que explica corretamente o comentário de Mário.",
     "options": [
       {
         "id": "a",
@@ -68060,7 +67666,7 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Gabarito oficial da FUVEST: alternativa b) maior que 7%, mas menor que 10%. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "São 20 times jogando dois turnos, então o total de jogos é 20 × 19 = 380 (cada par joga duas vezes, o que equivale a contar todos os pares ordenados). Entre os 6 paulistas, os confrontos são 6 × 5 = 30. A porcentagem é 30/380 ≈ 7,9%, que cai entre 7% e 10%. O deslize comum é dividir por 2 dos dois lados achando que muda a razão — não muda, porque o fator 2 do returno aparece no numerador e no denominador.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -68094,7 +67700,7 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Gabarito oficial da FUVEST: alternativa b) R$ 1,15. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "O saldo depois das recargas tem de ser gasto exatamente, então 12,50 + R precisa ser escrito como 3,00a + 4,65b com a e b inteiros não negativos. Testando de baixo para cima: com R = 1,15 o saldo vira 13,65 = 4,65 + 3 × 3,00 — uma integração e três viagens simples, e o bilhete zera. Com R = 0,85 o saldo seria 13,35, que não se decompõe assim (13,35 não é múltiplo de 3, 13,35 − 4,65 = 8,70 também não, e 13,35 − 9,30 = 4,05 tampouco). Por isso 1,15 é o menor valor possível.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -68128,41 +67734,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da FUVEST: alternativa c) R$ 3.600,00. Comentário detalhado ainda não escrito para esta questão.",
-    "difficulty": "medium",
-    "examSource": {
-      "board": "FUVEST"
-    }
-  },
-  {
-    "id": "ap_mat_fuvest_048",
-    "topicId": "mat_geometria_espacial",
-    "subject": "Matemática",
-    "prompt": "Diz-se que dois pontos da superfície terrestre são antípodas quando o segmento de reta que os une passa pelo centro da Terra. Podem ser encontradas, em sites da internet, representações, como a reproduzida abaixo, em que as áreas escuras identificam os pontos da superfície terrestre que ficam, assim como os seus antípodas, sobre terra firme. Por exemplo, os pontos antípodas de parte do sul da América do Sul estão no leste da Ásia. Se um ponto tem latitude x graus norte e longitude y graus leste, então seu antípoda tem latitude e longitude, respectivamente,",
-    "options": [
-      {
-        "id": "a",
-        "text": "x graus sul e y graus oeste"
-      },
-      {
-        "id": "b",
-        "text": "x graus sul e (180 y) - graus oeste"
-      },
-      {
-        "id": "c",
-        "text": "(90 x) - graus sul e y graus oeste"
-      },
-      {
-        "id": "d",
-        "text": "(90 x) - graus sul e (180 y) - graus oeste"
-      },
-      {
-        "id": "e",
-        "text": "(90 x) - graus sul e (90 y) - graus oeste"
-      }
-    ],
-    "correctOptionId": "b",
-    "explanation": "Gabarito oficial da FUVEST: alternativa b) x graus sul e (180 y) - graus oeste. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Chame de x o número de reais de desconto. O preço vira (10 − x) e a quantidade vendida, (200 + 100x), então a arrecadação é R(x) = (10 − x)(200 + 100x) = −100x² + 800x + 2000. É uma parábola com concavidade para baixo, e o máximo está no vértice: x = −800/(2 × −100) = 4. Com desconto de R$ 4,00, o combo sai a R$ 6,00 e vende 600 unidades: 6 × 600 = R$ 3.600,00. Repare que o máximo não está em nenhum dos extremos — é o ponto em que o ganho de volume ainda compensa a perda de margem.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -68196,7 +67768,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da FUVEST: alternativa c) 25.000 km. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A linha do Equador mede 40.000 km, e um meridiano completo (volta inteira pelos polos) tem o mesmo comprimento, porque a Terra é suposta esférica. O trecho do Polo Norte até o Equador é um quarto dessa volta: 10.000 km. Sobre o Equador, ir de Greenwich até o meridiano 45° L é percorrer 45/360 = 1/8 dos 40.000 km, ou seja 5.000 km. A volta ao polo pelo outro meridiano são mais 10.000 km. Total: 10.000 + 5.000 + 10.000 = 25.000 km.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -68230,7 +67802,7 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Gabarito oficial da FUVEST: alternativa b) 100%. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Aumento nominal de 300% significa que o salário foi multiplicado por 4 (o valor original mais três vezes ele), e inflação de 100% significa que os preços dobraram. O poder de compra é a razão entre os dois: 4 ÷ 2 = 2, ou seja, o salário real dobrou — aumento real de 100%. O erro clássico é subtrair as porcentagens (300% − 100% = 200%); porcentagens de crescimento se compõem por multiplicação, não por soma.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -68264,7 +67836,7 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da FUVEST: alternativa a) R$ 200.000,00. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Seja x a parte na poupança e 1.000.000 − x no fundo. O rendimento total é 0,06x + 0,075(1.000.000 − x) = 75.000 − 0,015x. Para que ele seja pelo menos 72.000, precisamos de 75.000 − 0,015x ≥ 72.000, ou seja 0,015x ≤ 3.000 e x ≤ 200.000. Como a poupança rende menos, quanto mais dinheiro for para lá menor o rendimento — por isso a resposta é o teto de R$ 200.000,00, e não um piso.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -68298,40 +67870,10 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Gabarito oficial da FUVEST: alternativa d) da distância da cidade de São Paulo (SP) à cidade do Rio de Janeiro (RJ). Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A cada operação a pilha dobra, então depois de 33 operações há 2³³ folhas, cerca de 8,6 bilhões. Multiplicando pela espessura de 0,1 mm: 8,6 × 10⁸ mm, ou seja 860 km. Isso é da mesma ordem de grandeza da distância São Paulo–Rio (cerca de 430 km) — a única alternativa na casa das centenas de quilômetros; o diâmetro da Terra é quase 13.000 km, dez vezes maior. A pegadinha é a intuição: crescimento exponencial com 33 duplicações estoura qualquer estimativa feita \"no olho\".",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
-    }
-  },
-  {
-    "id": "ap_mat_unicamp_001",
-    "topicId": "mat_combinatoria",
-    "subject": "Matemática",
-    "prompt": "O número de anagramas da palavra REFLORESTAMENTO que começam com a sequência FLORES é:",
-    "options": [
-      {
-        "id": "a",
-        "text": "9\\!"
-      },
-      {
-        "id": "b",
-        "text": "9\\! 2\\!"
-      },
-      {
-        "id": "c",
-        "text": "9\\! (2\\!2\\!)"
-      },
-      {
-        "id": "d",
-        "text": "9\\! (2\\!2\\!2\\!)"
-      }
-    ],
-    "correctOptionId": "c",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c) 9\\! (2\\!2\\!). Comentário detalhado ainda não escrito para esta questão.",
-    "difficulty": "medium",
-    "examSource": {
-      "board": "UNICAMP"
     }
   },
   {
@@ -68358,7 +67900,7 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a) inferior ao dobro. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Placas atuais: 26³ letras × 10⁴ algarismos = 17.576 × 10.000 ≈ 1,76 × 10⁸. Placas novas: 26⁴ × 10³ = 456.976 × 1.000 ≈ 4,57 × 10⁸. O enunciado pede o aumento, isto é, quanto se ganhou em relação ao que já existia: 4,57 × 10⁸ − 1,76 × 10⁸ ≈ 2,8 × 10⁸, que é cerca de 1,6 vez o total atual — inferior ao dobro. Quem responde (b) comparou o total novo com o antigo (razão 2,6) em vez de calcular o acréscimo, que é o que a pergunta pede.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -68388,37 +67930,7 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a) 124 milhões de litros de refrigerante. Comentário detalhado ainda não escrito para esta questão.",
-    "difficulty": "medium",
-    "examSource": {
-      "board": "UNICAMP"
-    }
-  },
-  {
-    "id": "ap_mat_unicamp_008",
-    "topicId": "mat_aritmetica_proporcionalidade",
-    "subject": "Matemática",
-    "prompt": "Um investidor dispõe de R$ 200,00 por mês para adquirir o maior número possível de ações de certa empresa. No primeiro mês, o preço de cada ação era R$ 9,00. No segundo mês houve uma desvalorização e esse preço caiu para R$ 7,00. No terceiro mês, com o preço unitário das ações a R$ 8,00, o investidor resolveu vender o total de ações que possuía. Sabendo que só é permitida a negociação de um número inteiro de ações, podemos concluir que com a compra e venda de ações o investidor teve:",
-    "options": [
-      {
-        "id": "a",
-        "text": "lucro de R$ 6,00"
-      },
-      {
-        "id": "b",
-        "text": "nem lucro nem prejuízo"
-      },
-      {
-        "id": "c",
-        "text": "prejuízo de R$ 6,00"
-      },
-      {
-        "id": "d",
-        "text": "lucro de R$ 6,50. TEXTO PARA A PRÓXIMA QUESTÃO: Um carpinteiro foi contratado para construir uma cerca formada por ripas de madeira. As figuras abaixo apresentam uma vista parcial da cerca, bem como os detalhes das ligações entre as ripas, nos quais os parafusos são representados por círculos brancos. Note que cada ripa está presa à cerca por dois parafusos em cada extremidade"
-      }
-    ],
-    "correctOptionId": "a",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a) lucro de R$ 6,00. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Regra de três com atenção às unidades. São 13 mil toneladas = 1,3 × 10¹⁰ g de açúcar. Se 21 g de açúcar rendem 200 ml, então 1,3 × 10¹⁰ g rendem 1,3 × 10¹⁰ × (200/21) ml ≈ 1,24 × 10¹¹ ml. Convertendo para litros (dividir por 1.000): ≈ 1,24 × 10⁸ L, ou 124 milhões de litros. Os distratores são o que se obtém errando uma potência de dez na conversão de toneladas para gramas ou de mililitros para litros.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -68448,37 +67960,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c) pelo menos uma pessoa não leu nenhum dos dois livros. Comentário detalhado ainda não escrito para esta questão.",
-    "difficulty": "medium",
-    "examSource": {
-      "board": "UNICAMP"
-    }
-  },
-  {
-    "id": "ap_mat_unicamp_068",
-    "topicId": "mat_geometria_espacial",
-    "subject": "Matemática",
-    "prompt": "Um cilindro circular reto, com raio da base e altura iguais a R, tem a mesma área de superfície total que uma esfera de raio:",
-    "options": [
-      {
-        "id": "a",
-        "text": "2R"
-      },
-      {
-        "id": "b",
-        "text": "3R"
-      },
-      {
-        "id": "c",
-        "text": "2R"
-      },
-      {
-        "id": "d",
-        "text": "R"
-      }
-    ],
-    "correctOptionId": "d",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d) R. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Na situação em que o maior número possível de pessoas leu algum livro, os leitores de A e os de B não se repetem: 5 + 4 = 9 pessoas. Como o grupo tem 10, sobra pelo menos uma que não leu nenhum dos dois — e isso vale em qualquer configuração, porque a união nunca passa de 9. As demais alternativas afirmam coisas que podem ser verdadeiras em algum arranjo, mas não são obrigatórias: pode não haver ninguém que leu os dois (o que derruba a letra a) e pode haver quem leu os dois (o que derruba a letra b).",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -68508,37 +67990,7 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a) é reduzido em 50%. Comentário detalhado ainda não escrito para esta questão.",
-    "difficulty": "medium",
-    "examSource": {
-      "board": "UNICAMP"
-    }
-  },
-  {
-    "id": "ap_mat_unicamp_072",
-    "topicId": "mat_geometria_espacial",
-    "subject": "Matemática",
-    "prompt": "Depois de encher de areia um molde cilíndrico, uma criança virou- o sobre uma superfície horizontal. Após a retirada do molde, a areia escorreu, formando um cone cuja base tinha raio igual ao dobro do raio da base do cilindro. A altura do cone formado pela areia era igual a:",
-    "options": [
-      {
-        "id": "a",
-        "text": "34 da altura do cilindro"
-      },
-      {
-        "id": "b",
-        "text": "12 da altura do cilindro"
-      },
-      {
-        "id": "c",
-        "text": "23 da altura do cilindro"
-      },
-      {
-        "id": "d",
-        "text": "13 da altura do cilindro"
-      }
-    ],
-    "correctOptionId": "a",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a) 34 da altura do cilindro. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "O volume do cilindro é V = πr²h. Com o raio pela metade e a altura dobrada: π(r/2)²(2h) = π(r²/4)(2h) = πr²h/2, isto é, metade do volume original — redução de 50%. O ponto da questão é que o raio entra ao quadrado e a altura entra linearmente: dividir o raio por 2 divide o volume por 4, e dobrar a altura só recupera um fator 2. Quem acha que \"permanece o mesmo\" está tratando as duas dimensões como se pesassem igual.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"

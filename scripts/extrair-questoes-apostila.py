@@ -58,13 +58,25 @@ NOTACAO = re.compile(
     r"[=×÷√∑∫≅≈≠≤≥∆Δ→↔^]|\b[A-Z]\s+\d|\d\s+\d"
     # expoente de unidade que virou digito solto: "10 km 2" era 10 km2.
     r"|\b(?:km|cm|mm|dm|m|kg|mg|g|L|ml|s|h|min)\s+[23]\b"
+    # fatorial e fracao: "9! (2!2!)" era 9!/(2!2!), e a barra nao veio.
+    r"|\d\s*!"
+    # menos orfao depois de parentese: "(180 y) -" era 180 - y.
+    r"|\)\s*-(?:\s|$)"
 )
+
+# A apostila emenda o cabecalho do texto-base da questao seguinte no fim da
+# ultima alternativa.
+PROXIMA_QUESTAO = re.compile(r"TEXTO PARA (?:A|AS) (?:PR[OÓ]XIMA|QUEST)", re.I)
+
+# "34 da altura do cilindro" era 3/4 da altura: a barra da fracao sumiu e os
+# dois digitos colaram.
+FRACAO_COLADA = re.compile(r"^\d{2}\s+d[aeo]s?\b", re.I)
 
 
 # A conversao em markdown escapa colchete, asterisco e afins com contrabarra.
 # Isso so pode sair no fim: e a mesma contrabarra que marca "1\\." como inicio
 # de questao e "\\[C\\]" como gabarito.
-ESCAPE_MD = re.compile(r"\\([\[\]*_#~`.()])")
+ESCAPE_MD = re.compile(r"\\([\[\]*_#~`.()!<>-])")
 
 # A apostila agrupa questoes sob um texto-base comum ("Leia o texto para
 # responder as questoes 11 e 12"). O parser fatia por numero de questao, entao a
@@ -220,6 +232,15 @@ def descartar(enunciado: str, alternativas: list[tuple[str, str]]) -> str | None
         return f"depende de elemento visual ({achado.group(0)})"
     if not alternativas:
         return "alternativas nao identificadas"
+    textos = [t.strip().lower() for _, t in alternativas]
+    if len(set(textos)) != len(textos):
+        # Duas alternativas iguais quer dizer que o que as distinguia (raiz,
+        # expoente, fracao) se perdeu na extracao.
+        return "alternativas repetidas depois da extracao"
+    if any(FRACAO_COLADA.match(t) for _, t in alternativas):
+        return "fracao virou numero colado na alternativa"
+    if any(PROXIMA_QUESTAO.search(t) for _, t in alternativas) or PROXIMA_QUESTAO.search(enunciado):
+        return "cabecalho da questao seguinte grudado no bloco"
     # Alternativa que comeca com "1," ou "2," esta lendo os numeros de uma legenda
     # de mapa ou esquema que ficou no PDF.
     if sum(1 for _, t in alternativas if re.match(r"^\d+\s*[,)]", t)) >= 2:

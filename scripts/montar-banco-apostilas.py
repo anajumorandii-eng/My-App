@@ -79,12 +79,35 @@ def main(entradas: list[str]) -> int:
                 }
             )
 
+    PENDENTE = "Comentário detalhado ainda não escrito"
+    preservados = 0
+    # A mesma questao aparece em mais de um modulo da apostila, com numeros
+    # diferentes. Sem isto ela cairia duas vezes no mesmo simulado.
+    ja_visto: dict[str, str] = {}
+    unicas: list[dict] = []
+    repetidas = 0
     for q in novas:
+        chave = " ".join(q["prompt"].split()).lower()
+        if chave in ja_visto:
+            repetidas += 1
+            continue
+        ja_visto[chave] = q["id"]
+        unicas.append(q)
+    novas = unicas
+
+    for q in novas:
+        # Comentario escrito a mao sobrevive a uma nova extracao: reprocessar as
+        # apostilas nao pode apagar trabalho que nao esta em nenhum outro lugar.
+        anterior = por_id.get(q["id"], {}).get("explanation", "")
+        if anterior and PENDENTE not in anterior:
+            q["explanation"] = anterior
+            preservados += 1
         por_id[q["id"]] = q
     saida = list(por_id.values())
     BANCO.write_text(json.dumps(saida, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
-    print(f"banco: {antes} -> {len(saida)} ({len(novas)} vindas das apostilas)")
+    print(f"banco: {antes} -> {len(saida)} ({len(novas)} vindas das apostilas, "
+          f"{preservados} com comentario preservado, {repetidas} repetidas descartadas)")
     for chave, n in sorted(sem_topico.items(), key=lambda kv: -kv[1]):
         print(f"    sem topico no mapa: {chave}: {n}")
     return 0
