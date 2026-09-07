@@ -79,7 +79,11 @@
     "_nota": "Questoes que passaram por todas as regras mas que eu li e julguei irrespondiveis: dependem de uma imagem ou de um texto que a regra automatica nao pegou, e uma regra larga o bastante para pega-las derrubaria questoes boas junto.",
     "ap_gram_unicamp_009": "o humor depende da capa de revista com a biruta, que nao veio",
     "ap_lit_unicamp_053": "as alternativas discutem uma cena (o canto do galo) que nao veio no enunciado",
-    "ap_lit_unicamp_054": "pede o excerto que confirma 'os dois textos anteriores'; so um veio"
+    "ap_lit_unicamp_054": "pede o excerto que confirma 'os dois textos anteriores'; so um veio",
+    "ap_bio_fuvest_089": "pede o numero de aminoacidos a partir de sequencias de bases que nao vieram",
+    "ap_bio_unicamp_036": "as alternativas sao formulas de frequencia alelica que perderam a barra de fracao",
+    "ap_bio_unicamp_049": "as alternativas discutem 'o cranio representado na figura', que nao veio",
+    "ap_bio_unicamp_054": "pede os verticilos da flor I e da flor II, mostradas so em diagrama"
   },
   "_refinamentos": {
     "_nota": "topicId decidido lendo a questao, onde o modulo era largo demais.",

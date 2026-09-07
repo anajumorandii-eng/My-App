@@ -53138,7 +53138,7 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Gabarito oficial da FUVEST: alternativa b) nos anfíbios, o produto imediato da meiose são os gametas; nas briófitas, a meiose origina um indivíduo haploide que posteriormente produz os gametas. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A diferença está no tipo de ciclo de vida. Nos animais o ciclo é diplobionte: a meiose acontece nas gônadas e produz diretamente os gametas. Nas briófitas o ciclo é haplodiplobionte com predomínio do gametófito: a meiose ocorre no esporófito e produz esporos, que germinam num indivíduo haploide (o gametófito) e é esse indivíduo que depois faz os gametas por mitose. As demais alternativas erram em fatos: os anfíbios têm sistema circulatório fechado e bem desenvolvido, a fecundação dos dois grupos depende de água (não é em meio seco) e briófitas não têm vasos condutores, mas anfíbios têm.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -53172,7 +53172,7 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da FUVEST: alternativa a) recebe proteínas sintetizadas no retículo endoplasmático. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A rota da secreção é retículo endoplasmático rugoso → complexo de Golgi → vesícula → membrana ou lisossomo. Quem sintetiza proteína é o ribossomo aderido ao retículo; o Golgi recebe essa proteína em vesículas de transição, modifica-a (glicosilação, corte, fosforilação), endereça e empacota. Por isso (a). As alternativas que invertem o sentido do fluxo ou que atribuem ao retículo a síntese de polissacarídeos erram nas duas coisas: o sentido é do retículo para o Golgi, e é no Golgi que se montam boa parte dos polissacarídeos.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -53206,7 +53206,7 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Gabarito oficial da FUVEST: alternativa b) II e IV, apenas. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Reparação de tecido é mitose, e a pergunta é qual evento garante a distribuição igual do material genético. São II (o alinhamento dos cromossomos no plano equatorial, que deixa cada cromátide voltada para um polo) e IV (a divisão do centrômero, que separa as cromátides irmãs, mandando uma cópia idêntica para cada célula-filha). I e III — emparelhamento de homólogos e permutação — são exclusivos da prófase I da meiose, e existem justamente para produzir variabilidade, o oposto de distribuição idêntica.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -53240,7 +53240,7 @@
       }
     ],
     "correctOptionId": "e",
-    "explanation": "Gabarito oficial da FUVEST: alternativa e) Condiloma acuminado (crista de galo) HPV (vírus) Verrugas na região genital Sim. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A única linha inteiramente correta é a do HPV: é vírus, causa o condiloma acuminado (verrugas genitais) e tem vacina disponível no SUS. Nas outras, há sempre um erro factual: o HCV da hepatite C é vírus, não bactéria; o Treponema pallidum da sífilis é bactéria (uma espiroqueta), não verme; e não existe vacina contra o HIV. A gonorreia está certa até o sintoma, mas erra no fim — não há vacina para ela.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -53274,7 +53274,7 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Gabarito oficial da FUVEST: alternativa d) descarte de esgoto doméstico e industrial sem tratamento. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Esgoto doméstico e industrial lançado sem tratamento explica os três sintomas de uma vez: traz matéria orgânica, que as bactérias decompõem consumindo o oxigênio dissolvido; traz poluentes químicos; e a soma de anoxia com toxicidade elimina as espécies sensíveis, derrubando a biodiversidade. Plástico, dragagem, ilha de calor e estiagem podem agravar o quadro, mas nenhum deles produz sozinho a queda de oxigênio, que é a assinatura da carga orgânica.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -53308,7 +53308,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da FUVEST: alternativa c) I. Aumento de curto prazo da fertilidade do solo pela deposição de cinzas. II. Perda de biodiversidade devido à remoção da vegetação. III. Aumento temporário da evaporação da água da chuva que atinge o solo exposto. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Logo depois da queimada as cinzas devolvem ao solo os minerais que estavam presos na biomassa, e por isso há um aumento de fertilidade de curto prazo — que se perde rápido, porque sem cobertura vegetal a chuva lixivia tudo. A perda de biodiversidade vem principalmente da remoção do habitat, não do fogo matando animais um a um: sem floresta, não há onde viver. Guarde o par que a questão testa: cinzas (não calor direto) melhoram o solo, e é a supressão da vegetação (não a chama) que extingue as espécies.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -53342,7 +53342,7 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Gabarito oficial da FUVEST: alternativa b) teve sua população reduzida como consequência indireta da diminuição da biomassa no primeiro nível trófico da cadeia. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A cadeia é capim → gafanhoto → passarinho → gavião. A lama tóxica atingiu o capim, isto é, o primeiro nível trófico. Sem capim, menos gafanhotos; sem gafanhotos — e o passarinho come exclusivamente eles —, a população de passarinhos cai. O efeito sobre o passarinho é real, mas indireto: chegou por dois elos abaixo. As alternativas que dizem \"não teve sua população afetada\" confundem ausência de efeito direto com ausência de efeito, que é justamente o erro que a questão quer flagrar.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -53376,7 +53376,7 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da FUVEST: alternativa a) I. A energia solar incide na atmosfera em comprimentos de onda menores e é refletida em comprimentos de onda maiores. II. Destruição de florestas nativas. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "O efeito estufa depende de uma assimetria de comprimento de onda: a radiação solar chega em ondas curtas (luz visível e ultravioleta), que atravessam a atmosfera, e a Terra a devolve em ondas longas (infravermelho), que os gases-estufa absorvem. Toda alternativa que inverte essa ordem já está errada, o que elimina (b), (c) e (d). Entre as duas que acertam a física, a causa direta do aumento dos gases é a destruição de florestas nativas, que libera o carbono estocado e reduz a absorção futura — represar rio e irrigar não têm esse papel.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -53410,7 +53410,7 @@
       }
     ],
     "correctOptionId": "e",
-    "explanation": "Gabarito oficial da FUVEST: alternativa e) reage com a água, produzindo ácido carbônico, que permanece no oceano e corrói os recifes de coral, que são formados por carbonato de cálcio. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "O CO2 que se dissolve na água reage com ela e forma ácido carbônico (H2CO3). Isso baixa o pH do oceano, e água mais ácida dissolve o carbonato de cálcio que forma o esqueleto dos corais — daí a corrosão dos recifes. As alternativas que envolvem fitoplâncton e oxigênio trocam o problema de lugar: a acidificação é química, não passa pela fotossíntese. E (a) inverte a relação básica, dizendo que menos íons de hidrogênio diminuem o pH, quando é exatamente o contrário: mais H+ significa pH menor.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -53444,7 +53444,7 @@
       }
     ],
     "correctOptionId": "e",
-    "explanation": "Gabarito oficial da FUVEST: alternativa e) I, II e III. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "As três afirmações estão corretas. I descreve as duas vias de retorno do carbono à atmosfera, a biológica (respiração) e a antrópica (queima). II resume a ciclagem do nitrogênio na ordem certa: fixadoras transformam N2 em amônia, nitrificantes oxidam amônia a nitrito e depois a nitrato, desnitrificantes devolvem N2 ao ar. III descreve a bomba de água das plantas: a transpiração leva água do solo à atmosfera, e esse vapor alimenta a formação de nuvens — é o mecanismo dos chamados rios voadores da Amazônia.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -53478,7 +53478,7 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Gabarito oficial da FUVEST: alternativa d) formam, com as raízes de plantas, associações chamadas micorrizas, mutuamente benéficas, pela troca de nutrientes. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Micorriza é a associação mutualística entre hifas de fungo e raiz de planta: o fungo amplia enormemente a superfície de absorção de água e de fósforo para a planta, e recebe dela açúcar. É a única alternativa correta. As outras contrariam a biologia do grupo: fungo não é autotrófico (não sintetiza açúcar a partir de CO2), não é procarionte (é eucarionte), não faz fotossíntese, e há fungos comestíveis que formam corpo de frutificação — o cogumelo é exatamente isso.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -53512,7 +53512,7 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da FUVEST: alternativa a) pequenas com estômatos concentrados na parte inferior, muitos tricomas claros, cutícula impermeável e parênquima aquífero. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Xerofitismo é um conjunto de adaptações que reduzem a perda de água e o excesso de luz. Folhas pequenas diminuem a superfície de transpiração; estômatos na face inferior ficam protegidos da radiação direta; tricomas claros refletem luz e criam uma camada de ar úmido junto à epiderme; a cutícula espessa impermeabiliza; e o parênquima aquífero armazena água. Nas alternativas erradas aparecem folhas grandes, estômatos na face superior, ausência de tricomas ou parênquima aerífero — este último é adaptação a ambiente alagado, o oposto do seco.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -53546,7 +53546,7 @@
       }
     ],
     "correctOptionId": "e",
-    "explanation": "Gabarito oficial da FUVEST: alternativa e) é autotrófica e a larva da mosca é heterotrófica; a drósera é um produtor. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A drósera é planta: faz fotossíntese e, portanto, é autotrófica e ocupa o nível de produtor. Capturar insetos não muda isso — ela usa as presas como fonte de nitrogênio, não de carbono, porque o solo onde vive é pobre nesse nutriente. A larva da mosca, que come as presas capturadas, é heterotrófica. O erro mais tentador é (a), que chama a drósera de heterotrófica por causa da captura de insetos; o que define o nível trófico é de onde vem o carbono, e no caso dela vem do CO2.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -53580,7 +53580,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da FUVEST: alternativa c) compartilham o mesmo hábitat. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "As duas cobras vivem no mesmo lugar — a floresta pluvial costeira —, logo compartilham o hábitat. Mas o nicho é diferente: uma é diurna e come cobras, a outra é noturna e come mamíferos, então não disputam o mesmo recurso no mesmo horário. Não formam população, porque população é o conjunto de indivíduos de uma mesma espécie; competição intraespecífica também exigiria a mesma espécie; e comensalismo exigiria que uma se beneficiasse da outra, o que não ocorre. Hábitat é o endereço, nicho é a profissão.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -53614,7 +53614,7 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da FUVEST: alternativa a) é produzido açúcar, que pode ser transformado em várias substâncias orgânicas, armazenado como amido ou, ainda, utilizado na transferência de energia. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A fotossíntese não produz energia — ela converte energia luminosa em energia química armazenada em ligações de glicose. Esse açúcar pode virar outras moléculas orgânicas (aminoácidos, lipídios, celulose), ser estocado como amido, que é a reserva vegetal, ou ser oxidado na respiração para transferir energia. As alternativas (d) e (e) caem no erro de dizer que se \"produz energia\", violando a conservação; (c) troca amido por glicogênio, que é a reserva animal e de fungos, não de planta.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -53648,7 +53648,7 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Gabarito oficial da FUVEST: alternativa d) I e III. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Monte a cadeia: fitoplâncton (produtor) → Artemia (consumidor primário) → Trichocorixa (consumidor secundário). Com a queda da salinidade, o Trichocorixa prolifera e come a Artemia, então os consumidores primários diminuem (III correta) e, sem quem os pastasse, os produtores aumentam (I correta) — é por isso que a água perde a transparência, tomada pelo fitoplâncton. II está errada porque os consumidores secundários são justamente os Trichocorixa, que aumentaram. Este é o efeito em cascata trófica: o predador de topo controla, indiretamente, a alga.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -53682,7 +53682,7 @@
       }
     ],
     "correctOptionId": "e",
-    "explanation": "Gabarito oficial da FUVEST: alternativa e) I, II, III e IV. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "O carbono marcado entra na glicose pela fotossíntese dos produtores (I), passa ao amido, que é glicose polimerizada (III), volta ao ar como CO2 quando os consumidores oxidam essa glicose (II) e chega às moléculas dos decompositores, que consomem restos de todos os níveis (IV). Como matéria circula pelo ecossistema — ao contrário da energia, que flui e se dissipa —, o marcador aparece nas quatro. Qualquer alternativa que exclua um item supõe um ponto do ciclo que o carbono não alcança, e não existe.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -53716,41 +53716,7 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Gabarito oficial da FUVEST: alternativa d) I e II. Comentário detalhado ainda não escrito para esta questão.",
-    "difficulty": "medium",
-    "examSource": {
-      "board": "FUVEST"
-    }
-  },
-  {
-    "id": "ap_bio_fuvest_046",
-    "topicId": "bio_ecologia",
-    "subject": "Biologia",
-    "prompt": "Uma das consequências do “efeito estufa” é o aquecimento dos oceanos. Esse aumento de temperatura provoca:",
-    "options": [
-      {
-        "id": "a",
-        "text": "menor dissolução de 2 CO nas águas oceânicas, o que leva ao consumo de menor quantidade desse gás pelo fitoplâncton, contribuindo, assim, para o aumento do efeito estufa global"
-      },
-      {
-        "id": "b",
-        "text": "menor dissolução de 2O nas águas oceânicas, o que leva ao consumo de maior quantidade de 2 CO pelo fitoplâncton, contribuindo, assim, para a redução do efeito estufa global"
-      },
-      {
-        "id": "c",
-        "text": "menor dissolução de 2 CO e 2O nas águas oceânicas, o que leva ao consumo de maior quantidade de 2O pelo fitoplâncton, contribuindo, assim, para a redução do efeito estufa global"
-      },
-      {
-        "id": "d",
-        "text": "maior dissolução de 2 CO nas águas oceânicas, o que leva ao consumo de maior quantidade desse gás pelo fitoplâncton, contribuindo, assim, para a redução do efeito estufa global"
-      },
-      {
-        "id": "e",
-        "text": "maior dissolução de 2O nas águas oceânicas, o que leva à liberação de maior quantidade de 2 CO pelo fitoplâncton, contribuindo, assim, para o aumento do efeito estufa global"
-      }
-    ],
-    "correctOptionId": "a",
-    "explanation": "Gabarito oficial da FUVEST: alternativa a) menor dissolução de 2 CO nas águas oceânicas, o que leva ao consumo de menor quantidade desse gás pelo fitoplâncton, contribuindo, assim, para o aumento do efeito estufa global. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "I é correta: a comunidade clímax tem muito mais biomassa fotossintetizante, então produz mais matéria orgânica bruta. II também: como a clímax gasta quase toda a produção bruta na própria respiração, sobra pouco líquido, enquanto a pioneira acumula — por isso ela cresce depressa. III é falsa e inverte o resultado da sucessão: quanto mais madura a comunidade, mais estratificada e mais rica em nichos ela fica. O resumo que vale a pena guardar: da pioneira à clímax sobem biomassa, diversidade e produtividade bruta, e desce a produtividade líquida.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -53784,7 +53750,7 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da FUVEST: alternativa a) I e III, apenas. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "I está certa: queimar vegetação transfere para a atmosfera o carbono que estava na biomassa. III também: a fermentação entérica do gado bovino libera metano, gás de efeito estufa muito mais potente que o CO2 por molécula. II está errada porque a laterização é o processo inverso do descrito — ela concentra ferro e alumínio no solo, lixiviando a sílica. IV também está errada: a queima libera cátions na forma de cinzas, o que aumenta a fertilidade num primeiro momento; a perda vem depois, por lixiviação.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -53818,7 +53784,7 @@
       }
     ],
     "correctOptionId": "e",
-    "explanation": "Gabarito oficial da FUVEST: alternativa e) Os dispersantes aumentam a quantidade de petróleo que se mistura com a água, porém não o removem do mar. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Dispersante é tensoativo: tem uma parte apolar que se liga ao óleo e uma parte polar que se liga à água, quebrando a mancha em gotículas que se misturam à coluna d'água. Isso tira o óleo da superfície, mas não o retira do mar — apenas o redistribui, e muitas vezes o torna mais disponível para os organismos. As outras alternativas afirmam coisas falsas: petróleo não se forma em escala humana de tempo, não houve sanções da ONU, e quem faz fotossíntese é o fitoplâncton, não o zooplâncton.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -53852,7 +53818,7 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Gabarito oficial da FUVEST: alternativa d) répteis ovo com casca impermeável. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Os répteis foram os primeiros vertebrados a se libertar completamente da água, e a chave foi o ovo amniótico com casca impermeável: ele carrega o próprio meio aquático dentro de si (o líquido amniótico) e impede a dessecação do embrião. Os anfíbios ainda dependem da água para reprodução, e por isso não são a resposta. A fecundação interna, sozinha, não bastaria: sem casca, o ovo secaria fora da água — é a casca que resolve o problema.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -53886,7 +53852,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da FUVEST: alternativa c) a radiação UV atuou como fator de seleção, de maneira que plantas sem tais substâncias eram mais suscetíveis à morte. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "O enunciado descreve seleção natural, e a formulação correta é sempre a mesma: a variação já existia na população, e o ambiente escolheu. Plantas que por acaso produziam as substâncias fotoprotetoras sobreviviam mais sob a radiação UV intensa, e ao longo das gerações essas se tornaram maioria. As alternativas erradas são todas lamarckistas ou finalistas: dizem que a característica \"surgiu para\" cumprir uma função, que a radiação \"induziu\" a produção, ou que a evolução tem por finalidade produzir indivíduos mais fortes.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -53920,7 +53886,7 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da FUVEST: alternativa a) esporos haploides que germinam e colonizam o ambiente. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Fungos pluricelulares colonizam rápido porque produzem enormes quantidades de esporos haploides, leves, dispersos pelo vento e capazes de germinar direto em novo micélio. É reprodução barata e de altíssimo alcance. As outras alternativas contrariam a biologia do grupo: reprodução assexuada gera descendentes geneticamente iguais, não diferentes; o zigoto dos fungos é diploide e logo sofre meiose; e fungo não é autotrófico em fase nenhuma — é sempre heterotrófico por absorção.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -53954,7 +53920,7 @@
       }
     ],
     "correctOptionId": "e",
-    "explanation": "Gabarito oficial da FUVEST: alternativa e) I, II e III. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "As três estão corretas. I descreve a mecânica da inspiração: o centro respiratório no bulbo dispara impulsos que contraem o diafragma e os intercostais, aumentando o volume da caixa torácica. II aponta o principal regulador químico: são os quimiorreceptores sensíveis ao CO2 (e ao pH que ele altera), não à falta de oxigênio, que ajustam o ritmo. III é a experiência de prender a respiração: dá para controlar voluntariamente por algum tempo, mas o controle automático retoma quando o CO2 sobe.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -53988,7 +53954,7 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da FUVEST: alternativa a) ácido úrico, amônia e ácido úrico. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A excreta nitrogenada depende da disponibilidade de água. A lula é aquática e excreta amônia, que é muito tóxica mas se dilui na hora. A borboleta (inseto terrestre) e o avestruz (ave) excretam ácido úrico, que é praticamente insolúvel, quase não gasta água e por isso serve tanto a quem vive em terra seca quanto a quem se desenvolve dentro de um ovo com casca — o resíduo fica armazenado sólido, sem intoxicar o embrião. Ureia é a solução intermediária, de mamíferos e anfíbios adultos, e não aparece em nenhum dos três.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -54022,7 +53988,7 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Gabarito oficial da FUVEST: alternativa b) I e II, apenas. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Isso é um arco reflexo medular: I e II descrevem o caminho — neurônio sensorial leva a informação à medula, interneurônio faz a conexão, neurônio motor dispara a retirada do pé —, e a resposta sai antes de o córtex processar a dor, que é por isso percebida depois. III está errada porque o arco reflexo aqui é somático, envolvendo músculo esquelético voluntário; o sistema nervoso autônomo comanda a musculatura lisa, o coração e as glândulas, não a retirada do pé.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -54056,7 +54022,7 @@
       }
     ],
     "correctOptionId": "e",
-    "explanation": "Gabarito oficial da FUVEST: alternativa e) arroz e feijão. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Glicose vem da digestão de carboidratos, e entre as opções só arroz e feijão são fonte majoritária de amido. Contrafilé, camarão, ovo e frango são essencialmente proteína e gordura: sua digestão libera aminoácidos e ácidos graxos, não glicose. O organismo até consegue produzir glicose a partir de aminoácidos, pela gliconeogênese, mas isso é síntese posterior no fígado, e a pergunta é sobre o que foi absorvido logo após a digestão.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -54090,7 +54056,7 @@
       }
     ],
     "correctOptionId": "e",
-    "explanation": "Gabarito oficial da FUVEST: alternativa e) arteríolas vênulas vênulas. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Pense no sentido do fluxo. A arteríola traz sangue vindo dos pulmões e do coração, rico em oxigênio, que será consumido pelas células da vilosidade — então o oxigênio é maior na arteríola. Glicose e aminoácidos, ao contrário, acabaram de ser absorvidos do lúmen intestinal e entram no capilar: o sangue sai da vilosidade carregado deles, pela vênula, rumo à veia porta e ao fígado. Daí arteríola para o oxigênio e vênula para os dois nutrientes.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -54124,7 +54090,7 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Gabarito oficial da FUVEST: alternativa d) passa de completamente intracelular a completamente extracelular, a partir dos nematelmintos. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Nos poríferos a digestão é totalmente intracelular, feita pelos coanócitos. Nos cnidários e platelmintos ela já é mista: começa extracelular na cavidade gastrovascular e termina dentro das células. A partir dos nematelmintos, com o aparecimento do tubo digestório completo (boca e ânus, com regiões especializadas), a digestão passa a ser inteiramente extracelular. As alternativas erradas ou invertem o sentido da tendência evolutiva ou fixam o marco no grupo errado.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -54158,7 +54124,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da FUVEST: alternativa c) é válida apenas em parte, pois, no corpo humano, as informações do meio são captadas e transformadas em sinais elétricos transferidos, célula a célula, até uma central de controle. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A analogia funciona em parte. É verdade que o corpo transforma estímulos do meio em sinais elétricos e os envia a uma central de controle, o sistema nervoso central. Mas o celular manda a mensagem direto à central, enquanto no corpo o sinal é passado adiante célula a célula, de neurônio em neurônio, atravessando sinapses em que o impulso elétrico vira sinal químico e volta a ser elétrico. É esse repasse encadeado que a comparação não captura — e por isso ela é válida só em parte, nem completamente certa nem inválida.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -54192,41 +54158,7 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da FUVEST: alternativa a) o vinho se forma somente após o fechamento dos tanques, pois, na fase anterior, os produtos da ação das leveduras são a água e o gás carbônico. Comentário detalhado ainda não escrito para esta questão.",
-    "difficulty": "medium",
-    "examSource": {
-      "board": "FUVEST"
-    }
-  },
-  {
-    "id": "ap_bio_fuvest_076",
-    "topicId": "bio_genetica",
-    "subject": "Biologia",
-    "prompt": "Analise a seguinte genealogia de uma doença: Foi levantada a hipótese de que a doença possui padrão de herança dominante ligada ao cromossomo X. O que levou a tal conclusão foi a:",
-    "options": [
-      {
-        "id": "a",
-        "text": "incidência da doença em mulheres e homens"
-      },
-      {
-        "id": "b",
-        "text": "transmissão do alelo mutante apenas às filhas de um homem afetado"
-      },
-      {
-        "id": "c",
-        "text": "presença de pessoas afetadas em todas as gerações"
-      },
-      {
-        "id": "d",
-        "text": "transmissão do alelo mutante às filhas e aos filhos de uma mulher afetada"
-      },
-      {
-        "id": "e",
-        "text": "presença de pelo menos um dos genitores afetados"
-      }
-    ],
-    "correctOptionId": "b",
-    "explanation": "Gabarito oficial da FUVEST: alternativa b) transmissão do alelo mutante apenas às filhas de um homem afetado. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Levedura é anaeróbia facultativa: com oxigênio disponível ela faz respiração aeróbica, que rende muito mais ATP, e por isso se multiplica depressa — os produtos são gás carbônico e água, sem álcool. É essa a fase de tanque aberto, feita de propósito para aumentar a população de leveduras. Só depois de fechar o tanque e esgotar o oxigênio elas passam à fermentação alcoólica e produzem etanol. Ou seja, o vinho só começa a se formar depois do fechamento.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -54260,7 +54192,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da FUVEST: alternativa c) I. a movimentos antivacinação, que têm se expandido pelo mundo. II. antígenos do agente patogênico, estimulando uma resposta imunológica ativa, em pessoas saudáveis. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A queda da cobertura vacinal recente está ligada à desinformação e aos movimentos antivacina — não a custo, já que as vacinas do calendário são gratuitas no SUS, nem à ausência de risco, já que sarampo e poliomielite voltaram a circular justamente por causa da queda. E a vacina inocula antígenos (o agente inativado, atenuado ou parte dele), que estimulam o próprio organismo a montar a resposta e a memória imunológica: é imunização ativa. Injetar anticorpos prontos é soro, que é imunização passiva, protege na hora e não deixa memória.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -54294,7 +54226,7 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Gabarito oficial da FUVEST: alternativa d) TCATTAGTC. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "O anticódon do RNA transportador é complementar ao códon do RNA mensageiro, e o RNA mensageiro é complementar à fita molde do DNA. Fazendo as duas complementações, a fita molde acaba tendo a mesma sequência do anticódon, só que com T no lugar de U: UCA UUA GUC vira TCA TTA GTC. A alternativa (b), AGTAATCAG, é a fita codificante (a que tem a mesma sequência do mensageiro) — é a pegadinha da questão, e a diferença entre as duas é justamente qual fita se chama \"o gene\" no enunciado da Fuvest, que aqui é a molde.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -54328,7 +54260,7 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Gabarito oficial da FUVEST: alternativa b) mutação. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Recombinação genética embaralha alelos que já existem — ela explica as combinações (larga e carnosa, estreita e fina), não a existência de \"largo\" e \"estreito\" em primeiro lugar. A origem primária de qualquer variante nova é a mutação, a única fonte de alelos inéditos. Seleção natural e adaptação atuam depois, sobre a variação já existente, e isolamento geográfico separa populações — nenhum dos três cria variabilidade.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -54362,41 +54294,7 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da FUVEST: alternativa a) autossômica dominante. Comentário detalhado ainda não escrito para esta questão.",
-    "difficulty": "medium",
-    "examSource": {
-      "board": "FUVEST"
-    }
-  },
-  {
-    "id": "ap_bio_fuvest_087",
-    "topicId": "bio_genetica",
-    "subject": "Biologia",
-    "prompt": "A forma do lobo da orelha, solto ou preso, é determinada geneticamente por um par de alelos. O heredograma mostra que a característica lobo da orelha solto NÃO pode ter herança:",
-    "options": [
-      {
-        "id": "a",
-        "text": "autossômica recessiva, porque o casal I-1 e I-2 tem um filho e uma filha com lobos das orelhas soltos"
-      },
-      {
-        "id": "b",
-        "text": "autossômica recessiva, porque o casal II-4 e II-5 tem uma filha e dois filhos com lobos das orelhas presos"
-      },
-      {
-        "id": "c",
-        "text": "autossômica dominante, porque o casal II-4 e II-5 tem uma filha e dois filhos com lobos das orelhas presos"
-      },
-      {
-        "id": "d",
-        "text": "ligada ao X recessiva, porque o casal II-1 e II-2 tem uma filha com lobo da orelha preso"
-      },
-      {
-        "id": "e",
-        "text": "ligada ao X dominante, porque o casal II-4 e II-5 tem dois filhos homens com lobos das orelhas presos"
-      }
-    ],
-    "correctOptionId": "b",
-    "explanation": "Gabarito oficial da FUVEST: alternativa b) autossômica recessiva, porque o casal II-4 e II-5 tem uma filha e dois filhos com lobos das orelhas presos. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Se basta uma cópia do alelo mutante para a pessoa manifestar o problema, mesmo tendo o alelo normal, a herança é dominante. E se homens e mulheres são afetados do mesmo jeito, o gene não está no cromossomo X — está num autossomo. Logo, autossômica dominante. A doença descrita é a hipercolesterolemia familiar, causada por mutação no receptor de LDL. Recessiva exigiria as duas cópias alteradas; ligada ao X produziria a diferença entre os sexos que o enunciado nega.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -54430,41 +54328,7 @@
       }
     ],
     "correctOptionId": "e",
-    "explanation": "Gabarito oficial da FUVEST: alternativa e) 60; plantas homozigóticas em relação às duas características. Comentário detalhado ainda não escrito para esta questão.",
-    "difficulty": "medium",
-    "examSource": {
-      "board": "FUVEST"
-    }
-  },
-  {
-    "id": "ap_bio_fuvest_089",
-    "topicId": "bio_genetica",
-    "subject": "Biologia",
-    "prompt": "Uma mutação, responsável por uma doença sanguínea, foi identificada numa família. Abaixo estão representadas sequências de bases nitrogenadas, normal e mutante; nelas estão destacados o sítio de início da tradução e a base alterada. O ácido nucleico representado acima e o número de aminoácidos codificados pela sequência de bases, entre o sítio de início da tradução e a mutação, estão corretamente indicados em:",
-    "options": [
-      {
-        "id": "a",
-        "text": "DNA; 8"
-      },
-      {
-        "id": "b",
-        "text": "DNA; 24"
-      },
-      {
-        "id": "c",
-        "text": "DNA; 12"
-      },
-      {
-        "id": "d",
-        "text": "RNA; 8"
-      },
-      {
-        "id": "e",
-        "text": "RNA; 24"
-      }
-    ],
-    "correctOptionId": "d",
-    "explanation": "Gabarito oficial da FUVEST: alternativa d) RNA; 8. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "O cruzamento de duas linhagens puras dá uma F1 toda AaBb (alta, vermelha). Na F2, a proporção clássica de di-híbrido é 9:3:3:1 em 16 partes, e a fração anã com fruto vermelho é 3/16. Como só interessam as anãs vermelhas homozigóticas para as duas características (aaBB), elas são 1/16 do total. O que o agricultor quer é uma linhagem pura, que só se mantém se for homozigótica — plantas heterozigóticas voltariam a segregar na geração seguinte, e é justamente esse o erro que as alternativas (c) e (d) oferecem.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -54498,7 +54362,7 @@
       }
     ],
     "correctOptionId": "e",
-    "explanation": "Gabarito oficial da FUVEST: alternativa e) I - platelminto; II - molusco; III - penetração pela pele. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "O Schistosoma mansoni é um platelminto (verme achatado), o hospedeiro intermediário é o caramujo do gênero Biomphalaria, que é molusco, e a infecção humana ocorre quando a cercária, liberada pelo caramujo, penetra ativamente pela pele em contato com água contaminada. As alternativas erradas trocam por protozoário (que seria doença de Chagas ou malária), por artrópode como vetor, ou por ingestão de carne crua (que é teníase). Guarde a tríade: platelminto, caramujo, penetração cutânea.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -54532,7 +54396,7 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Gabarito oficial da FUVEST: alternativa b) simetria bilateral, esqueleto corporal externo e apêndices articulados. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "As três características que definem o filo Arthropoda e valem para todos os exemplos citados são simetria bilateral, exoesqueleto quitinoso e apêndices articulados — é daí que vem o nome do grupo. As outras alternativas usam traços que não são universais: respiração traqueal é dos terrestres (siri respira por brânquias), túbulos de Malpighi também não existem em crustáceos, cefalotórax não existe em insetos nem em miriápodes, e todo artrópode tem corpo segmentado e sistema digestório completo.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -54566,7 +54430,7 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da FUVEST: alternativa a) I, II e III. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A ordem segue a independência progressiva da água. I, transporte de gases feito só pelo sistema respiratório, sem depender do circulatório, é dos insetos, com suas traqueias que levam ar direto às células. II, respiração cutânea e pulmonar no mesmo indivíduo, é dos anfíbios, que ainda dependem de pele úmida. III, ovo com casca calcária resistente e porosa, é das aves, que resolveram de vez o desenvolvimento fora d'água. A sequência pedida é, portanto, I, II e III.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -54600,7 +54464,7 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Gabarito oficial da FUVEST: alternativa b) Gimnospermas, pteridófitas e angiospermas. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Vá por eliminação a partir do que cada grupo tem. A planta Y não tem flor, semente nem fruto: é pteridófita (samambaia). A planta Z tem flor e fruto: é angiosperma. A planta X tem semente mas não tem flor nem fruto — é gimnosperma, e a semente nua, exposta na pinha, é justamente o que permite que uma ave a disperse sem que haja fruto. Ordem X, Y, Z: gimnospermas, pteridófitas, angiospermas.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -54634,7 +54498,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da FUVEST: alternativa c) pteridófita. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Multicelular e fotossintetizante elimina fungos e bactérias. Ter sistema vascular elimina algas e briófitas, que não têm xilema nem floema — é por isso que a briófita fica pequena e presa a lugar úmido. Não ter semente nem fruto elimina gimnospermas e angiospermas. Sobra a pteridófita: samambaias, avencas e cavalinhas, o primeiro grupo vascular da história das plantas, que ainda se reproduz por esporos e depende de água para a fecundação.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -54668,7 +54532,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da FUVEST: alternativa c) transporte ativo bidirecional ↑↓ em todos os órgãos. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A seiva elaborada corre pelo floema em transporte ativo — as células companheiras gastam ATP para carregar sacarose nos tubos crivados — e é bidirecional: vai da folha para a raiz, mas também para o ápice em crescimento, para o fruto e para a flor. O sentido depende de onde está a fonte e onde está o dreno, e isso muda com a estação. Por isso a reserva é armazenada em todos os órgãos, não só nos subterrâneos: caule, fruto e semente também estocam. Quem é passivo e unidirecional é o xilema, que sobe da raiz à folha.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -54698,11 +54562,11 @@
       },
       {
         "id": "e",
-        "text": "Flor, sistema vascular, semente. [#22](#22) [#42](#42) [#92](#92)"
+        "text": "Flor, sistema vascular, semente"
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da FUVEST: alternativa a) Sistema vascular, semente, flor. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A ordem evolutiva das plantas terrestres é: primeiro o sistema vascular, que aparece nas pteridófitas e permite crescer em altura; depois a semente, nas gimnospermas, que liberta a reprodução da água; e por último a flor, nas angiospermas, junto com o fruto. Uma forma de fixar: briófitas (nada), pteridófitas (vaso), gimnospermas (vaso + semente), angiospermas (vaso + semente + flor e fruto) — cada grupo acrescenta uma novidade sem perder as anteriores.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -54732,7 +54596,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c) Os sais minerais são substâncias inorgânicas essenciais para diversas funções do organismo, como a síntese de glicogênio, de proteínas e de vitaminas. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Sais minerais são substâncias inorgânicas que não fornecem energia, mas são indispensáveis como cofatores e componentes estruturais — magnésio e zinco na síntese de proteínas e de glicogênio, cálcio no osso e na contração, ferro na hemoglobina. As outras alternativas erram nos fatos básicos: carboidrato hidrolisado dá monossacarídeo, não aminoácido; lipídio não contém desoxirribose (isso é DNA); e vitamina não é energética, atua em doses mínimas como coenzima ou antioxidante.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -54762,7 +54626,7 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d) a adesão e a proliferação celular para sustentar o metabolismo e a funcionalidade semelhantes aos das artérias humanas. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Recriar tecido em laboratório significa reproduzir duas coisas: as células precisam aderir à matriz tridimensional e proliferar sobre ela, e o tecido resultante precisa manter metabolismo e função parecidos com os do tecido original. É isso que o experimento confirma. As alternativas erradas se prendem a processos isolados — respiração, síntese e transporte de macromoléculas — ou dizem algo autocontraditório: cromossomo alinhado na placa equatorial é metáfase, e célula em metáfase não está na interfase.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -54792,7 +54656,7 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b) Mitocôndria. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Dupla membrana, sistema interno complexo de endomembranas, material genético próprio e presença abundante em todas as células — o conjunto aponta para a mitocôndria. O cloroplasto também tem dupla membrana e DNA próprio, mas só existe em células vegetais fotossintetizantes, o que a palavra \"todas\" exclui. O núcleo tem dupla membrana e DNA, mas não tem esse sistema interno de cristas nem ocorre em procariontes; o retículo tem membrana simples e nenhum material genético.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -54822,7 +54686,7 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a) fungos e protozoários possuem II e IV. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Fungos e protozoários são eucariontes, logo têm membrana nuclear (II) e DNA (IV). As outras combinações falham: bactérias não têm membrana nuclear, o que derruba (c); animais não têm parede celular, o que derruba (b) e (d). Repare que DNA e membrana plasmática são universais e por isso não discriminam nada — quem separa os grupos é a parede celular (bactéria, fungo e planta têm; animal não) e a carioteca (só eucarionte tem).",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -54852,7 +54716,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c) uma célula desse organismo na fase G2 da interfase apresenta 48 moléculas de DNA de fita dupla. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Cada cromossomo é uma molécula de DNA de fita dupla. Na fase G2, depois da replicação, cada um dos 24 cromossomos tem duas cromátides irmãs, ou seja, duas moléculas: 48 no total. (a) e (b) erram ao falar em fita simples — o DNA nuclear é sempre dupla-hélice. (d) confunde número de cromossomos com número de pares: 24 cromossomos significam 12 pares, não 24 pares. A armadilha da questão é justamente exigir que você conte moléculas, não cromossomos.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -54882,7 +54746,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c) branqueamento dos pólipos de cnidários pela expulsão de suas algas simbiontes; acidificação marinha em virtude dos maiores níveis de CO 2 no ar; e menor taxa fotossintética em razão dos níveis oceânicos elevados. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Coral é cnidário, e o pólipo abriga zooxantelas, algas simbiontes que lhe dão açúcar pela fotossíntese. Com a água mais quente, o pólipo expulsa essas algas e fica branco — daí o nome branqueamento; sem elas, ele perde a principal fonte de energia. Em paralelo, o CO2 atmosférico em excesso se dissolve no mar e o acidifica, dissolvendo o carbonato de cálcio do recife. As alternativas erradas trocam cnidário por esponja calcária, chamam as algas de parasitas ou comensais, e atribuem a acidificação à elevação do nível do mar, que é outro efeito, não a causa química.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -54912,7 +54776,7 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a) a pluviosidade sobre os rios da bacia do rio Paraguai é determinante para as inundações do Pantanal, um bioma com misto de vegetações de floresta, cerrado e campo. A produtividade primária do bioma, devido à conversão de luz solar em energia e biomassa, dá suporte para os demais níveis tróficos. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "O Pantanal é uma planície de inundação alimentada pela bacia do rio Paraguai, que é o coletor de toda a região — o Cuiabá é apenas um de seus afluentes, e por isso não determina o pulso de cheia do bioma inteiro. E o Pantanal não é um bioma homogêneo: é um mosaico de vegetação de Cerrado, floresta amazônica, Chaco e Mata Atlântica, o que explica sua biodiversidade. Sem a inundação anual, a matéria seca acumula e o fogo, uma vez iniciado, se propaga — que é o quadro de 2019-2020 descrito no enunciado.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -54942,7 +54806,7 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b) A espécie com a adaptação seria um agente de seleção de outras espécies pelo uso de um recurso comum, impulsionando a evolução dos concorrentes. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Uma espécie que domina um recurso comum muda a pressão seletiva sobre todas as outras que dependem dele: as concorrentes que conseguem explorar o recurso de outro jeito passam a ser favorecidas. A espécie vira, ela própria, um agente de seleção, e a comunidade inteira evolui em resposta — é a lógica da coevolução e das radiações adaptativas. (a) supõe recursos ilimitados, o que nenhum ambiente oferece; (c) inverte causa e efeito; (d) afirma que a comunidade permaneceria inalterada, exatamente o oposto do que interações bióticas fortes produzem.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -54972,7 +54836,7 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b) está correlacionada com a utilização crescente de carvão mineral (plantas fossilizadas) durante a Revolução Industrial, que propiciou o uso da energia a vapor e o desenvolvimento de máquinas, levando à produção em larga escala. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A curva de Keeling começa a subir com a queima em massa de combustíveis fósseis, e o combustível da Revolução Industrial foi o carvão mineral, que é vegetação fossilizada — as florestas do Carbonífero. O petróleo, que vem de micro-organismos marinhos fossilizados, só se tornaria dominante bem depois, no século XX. As alternativas erradas ou trocam carvão por petróleo (errando também a origem biológica), ou colocam Estados Unidos e China no século XIX como protagonistas, quando a Revolução Industrial começa na Inglaterra.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -55002,7 +54866,7 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d) Metais pesados, como o chumbo, são encontrados em maiores concentrações em predadores longevos ou do topo da teia alimentar, como aves de rapina e peixes predatórios. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "O fenômeno é a biomagnificação: metais pesados não são metabolizados nem excretados com facilidade, então se acumulam no tecido e passam adiante concentrados a cada nível trófico. Quem come muitos organismos já contaminados ao longo de uma vida longa acumula mais — daí os predadores de topo e longevos, como aves de rapina e peixes carnívoros grandes. Chumbo e mercúrio são os exemplos clássicos; o ferro da alternativa (c) é micronutriente essencial e regulado pelo organismo, e não biomagnifica.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -55032,7 +54896,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c) A adoção de medidas que ofereçam condições de vida mais favoráveis a polinizadores pode resultar em aumento de produtividade do feijão. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "O estudo mostrou que o rendimento cresce com a densidade de polinizadores, o que significa que melhorar as condições para eles — corredores de vegetação nativa, redução de pesticida, ninhos — tende a aumentar a produtividade de culturas dependentes de polinização, e o feijão é uma delas. (a) inverte o resultado, tratando inseto como causa da queda de produtividade. (b) é falsa porque pesticida é um dos principais fatores de mortalidade de abelhas. (d) não decorre de nada no enunciado.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -55062,7 +54926,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c) a produtividade primária líquida é representada na base da pirâmide. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A base da pirâmide de energia é ocupada pelos produtores, e o que se representa ali é a produtividade primária líquida — a energia que a planta fixou menos o que ela mesma gastou na respiração; é essa sobra que fica disponível para o nível seguinte. (a) é falsa porque a cada nível cerca de 90% da energia se perde como calor. (b) e (d) invertem a direção do fluxo: respiração e excreção dissipam energia, não a fornecem — só os decompositores aproveitam a matéria, e mesmo assim a energia não volta para cima.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -55092,7 +54956,7 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a) mutualismo. O texto se refere a bactérias do gênero Rhizobium, que produzem amônio. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Planta e bactéria trocam benefícios: a bactéria recebe abrigo e açúcar, a planta recebe nitrogênio fixado. Benefício mútuo é mutualismo — comensalismo seria uma se beneficiar sem afetar a outra. E as bactérias que fazem essa associação nos nódulos das raízes de leguminosas são do gênero Rhizobium, que fixam N2 e produzem amônio. Nitrosomonas são de vida livre no solo e fazem nitrificação (oxidam amônia a nitrito), etapa diferente do ciclo e sem associação com raiz.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -55122,7 +54986,7 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b) abelhas melíferas, formigas, cupins. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Inseto social é aquele que vive em colônia com castas, divisão de trabalho, sobreposição de gerações e cuidado cooperativo com a prole: abelhas melíferas, formigas (todas) e cupins. Borboletas, besouros, moscas, libélulas e cigarras são solitários — podem até se agregar (uma revoada, um enxame de moscas), mas agregação não é sociedade. Note que formigas e abelhas são himenópteros, e cupins são de outra ordem: a eussocialidade surgiu mais de uma vez na evolução dos insetos.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -55152,7 +55016,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c) A diversidade de espécies diminui com o aumento da latitude. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A diversidade de espécies cai à medida que a latitude aumenta: é máxima nos trópicos e mínima nos polos, um dos padrões mais consistentes da ecologia, ligado à energia disponível, à estabilidade climática e ao tempo de acumulação evolutiva. As outras alternativas invertem relações bem estabelecidas: diversidade em geral cresce com a produtividade e com a heterogeneidade espacial (mais tipos de micro-hábitat, mais nichos), e os recifes de coral são o ecossistema marinho mais diverso que existe, não o menos.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -55182,7 +55046,7 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b) fragmentação de hábitat, introdução de espécies exóticas e poluição. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "As principais causas atuais de extinção são a fragmentação e a perda de hábitat, a introdução de espécies exóticas invasoras e a poluição. As outras alternativas incluem itens que são justamente medidas de conservação — caça controlada e reprodução em cativeiro — ou fatores de peso menor, como uso de cobaias em pesquisa. É uma boa questão para separar o que ameaça do que protege: as três respostas certas atuam sobre populações inteiras, não sobre indivíduos.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -55212,37 +55076,7 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d) O DNA codificador da proteína que confere resistência antibiótica à tetraciclina é transferido por conjugação bacteriana. Comentário detalhado ainda não escrito para esta questão.",
-    "difficulty": "medium",
-    "examSource": {
-      "board": "UNICAMP"
-    }
-  },
-  {
-    "id": "ap_bio_unicamp_032",
-    "topicId": "bio_evolucao",
-    "subject": "Biologia",
-    "prompt": "Teorias sobre como o novo coronavírus (SARS-CoV-2) que passou a infectar os humanos surgiram em 2019. Foi aventada a possibilidade de transmissão zoonótica. Um estudo filogenético, com mais de 2 mil genomas únicos de coronavírus, apresentou a provável descendência de alguns coronavírus e alertou sobre a importância de investigar os vírus, como estratégia global de monitoramento de endemias, e não apenas em situações de emergência sanitária. (Adaptado de Denis Jacob Machado e outros. Cladistics, Londres, v. 37, out. 2021, p. 461-488.) O cladograma a seguir apresenta as relações filogenéticas entre os diversos vírus do gênero Betacoronavirus (Beta-CoV), incluindo seus respectivos hospedeiros. A partir do cladograma, é correto afirmar que os betacoronavírus de:",
-    "options": [
-      {
-        "id": "a",
-        "text": "artiodáctilos são os grupos irmãos dos HCoV-4408 e SARS-CoV-2 de humanos, por meio de hospedeiros intermediários"
-      },
-      {
-        "id": "b",
-        "text": "morcegos são os grupos irmãos dos SARS-CoV-2 e HCoV-OC43 de humanos, por meio de hospedeiros intermediários"
-      },
-      {
-        "id": "c",
-        "text": "artiodáctilos são os grupos irmãos dos SARS-CoV, SARS-CoV-2 e MERS-CoV de humanos"
-      },
-      {
-        "id": "d",
-        "text": "morcegos são os grupos irmãos dos SARS-CoV, SARS-CoV-2 e MERS-CoV de humanos"
-      }
-    ],
-    "correctOptionId": "d",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d) morcegos são os grupos irmãos dos SARS-CoV, SARS-CoV-2 e MERS-CoV de humanos. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Na conjugação bacteriana o que passa de uma célula para outra é DNA, geralmente um plasmídeo, através de uma ponte citoplasmática formada pelo pelo sexual. A bactéria receptora passa a ter o gene e, a partir dele, sintetiza ela mesma a proteína de resistência. As alternativas erradas transferem a proteína pronta (b), o que não acontece, ou inventam uma \"fusão transmembrana\" dependente do antibiótico (a e c) — a tetraciclina não causa a transferência, ela apenas seleciona quem já tem o gene.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -55272,7 +55106,7 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d) Endotermia e penas. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Endotermia e penas são as duas heranças dos dinossauros terópodes que a questão pede: penas já existiam em dinossauros não voadores, primeiro para isolamento térmico e exibição, e só depois foram cooptadas para o voo. Viviparidade é de mamíferos, não de aves. Ectotermia é justamente o que as aves não têm. E dentes as aves modernas perderam — o bico córneo é a substituição, e por isso \"bico\" também não é herança direta dos dinossauros, é novidade da linhagem.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -55302,37 +55136,7 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b) Por meio do melhoramento genético, os salmões portadores do alelo de resistência foram selecionados e cruzados entre si, gerando maior proporção de indivíduos resistentes. Comentário detalhado ainda não escrito para esta questão.",
-    "difficulty": "medium",
-    "examSource": {
-      "board": "UNICAMP"
-    }
-  },
-  {
-    "id": "ap_bio_unicamp_036",
-    "topicId": "bio_evolucao",
-    "subject": "Biologia",
-    "prompt": "Uma população de certa espécie é constituída apenas por três tipos de indivíduos diploides, que diferem quanto ao genótipo em um loco. No total, há um número N AA de indivíduos com genótipo AA, N Aa de indivíduos com genótipo Aa, e N aa de indivíduos com genótipo aa. Considerando apenas o loco exposto no enunciado, a frequência do alelo A nessa população é igual a:",
-    "options": [
-      {
-        "id": "a",
-        "text": "N AA N AA N+ Aa"
-      },
-      {
-        "id": "b",
-        "text": "N AA N AA + N + Aa N Aa + N aa"
-      },
-      {
-        "id": "c",
-        "text": "N AA N+ Aa"
-      },
-      {
-        "id": "d",
-        "text": "2N AA + N Aa 2(N AA + N Aa + N aa )"
-      }
-    ],
-    "correctOptionId": "d",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d) 2N AA + N Aa 2(N AA + N Aa + N aa ). Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Selecionar reprodutores portadores do alelo de resistência e cruzá-los entre si é melhoramento genético clássico, ou seleção artificial: quem escolhe é o criador, com base num marcador conhecido, e a proporção do alelo sobe geração após geração. Não é transgenia, porque nenhum gene foi inserido de fora — o alelo já existia na população. Não é seleção natural, porque o agente selecionador é humano, não o ambiente. E mutação aleatória não explica a rapidez do ganho.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -55362,7 +55166,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c) genéticos, pela alta frequência de casamentos entre parentes. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Todas as doenças citadas são raras e de herança recessiva. Numa população pequena e isolada, casamentos entre parentes são frequentes, e parentes têm maior chance de carregar o mesmo alelo recessivo herdado de um ancestral comum — o que multiplica a probabilidade de nascer alguém homozigoto e afetado. É o efeito da endogamia, somado à deriva genética de uma população fundada por poucas famílias. Contaminação ambiental e comportamento não produzem esse padrão de várias doenças monogênicas diferentes concentradas num só lugar.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -55392,7 +55196,7 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d) A perda de pigmentação e a perda de visão nesses animais são características adaptativas selecionadas pelo ambiente escuro das cavernas. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A explicação correta é sempre a seletiva: no escuro absoluto, olho e pigmento são estruturas caras de manter e sem função, então indivíduos que por variação genética investiam menos neles gastavam menos energia e deixavam mais descendentes. (a) diz que o ambiente induz mutação — mutação é aleatória e independente do ambiente. (b) é lamarckismo puro (o desuso atrofia e se transmite). (c) atribui as características a um ancestral comum exclusivo, quando peixes, anfíbios, crustáceos e insetos de caverna são linhagens distintas: é convergência, não parentesco.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -55422,7 +55226,7 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a) (i) final de elétrons; (ii) arqueano. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Os micro-organismos descritos usam o arsênio como aceptor final de elétrons da cadeia respiratória — o papel que o oxigênio cumpre na respiração aeróbica. Isso só faz sentido num mundo sem O2 livre, e é por isso que a origem desse metabolismo é situada no éon Arqueano, antes da Grande Oxidação. O Fanerozoico é o éon atual, iniciado há cerca de 540 milhões de anos, com atmosfera já rica em oxigênio; e aceptor intermediário não encerra a cadeia, portanto não regenera os transportadores.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -55452,37 +55256,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c) aumenta a produção de urina, resultando na diminuição da concentração de medicamentos nas amostras, o que dificulta sua detecção nos testes antidoping. Comentário detalhado ainda não escrito para esta questão.",
-    "difficulty": "medium",
-    "examSource": {
-      "board": "UNICAMP"
-    }
-  },
-  {
-    "id": "ap_bio_unicamp_049",
-    "topicId": "bio_fisio_animal",
-    "subject": "Biologia",
-    "prompt": "Ao longo da evolução, as variações e adaptações nos dentes dos mamíferos são numerosas e surpreendentes. A conformação dos dentes sugere o cardápio possível das espécies, sendo correto afirmar que",
-    "options": [
-      {
-        "id": "a",
-        "text": "dentes de superfície plana revelam uma dieta herbívora composta predominantemente de gramíneas e são típicos de onívoros, cujos crânios são representados nas imagens A e B acima"
-      },
-      {
-        "id": "b",
-        "text": "os incisivos, caninos e molares estreitos têm formas diversas, que podem cortar ou destacar alimentos. O crânio representado na figura A acima sugere que se trata de um carnívoro"
-      },
-      {
-        "id": "c",
-        "text": "os incisivos, caninos e molares estreitos têm formas diversas, que podem cortar ou destacar alimentos. Os caninos para perfurar ou rasgar, como os representados na imagem B acima, são típicos de carnívoros"
-      },
-      {
-        "id": "d",
-        "text": "dentes de superfície plana revelam uma dieta herbívora composta predominantemente de gramíneas e são típicos de onívoros como os felinos, representados na imagem A acima"
-      }
-    ],
-    "correctOptionId": "b",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b) os incisivos, caninos e molares estreitos têm formas diversas, que podem cortar ou destacar alimentos. O crânio representado na figura A acima sugere que se trata de um carnívoro. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Diurético aumenta o volume de urina produzido. Como a quantidade de medicamento excretado não muda na mesma proporção, o resultado é diluição: a substância proibida continua lá, mas em concentração abaixo do limite de detecção do exame. É por isso que diuréticos são eles próprios substâncias banidas, classificadas como agentes mascarantes. (a) inverte o efeito do diurético; (b) e (d) trocam o produto do metabolismo — a diluição vem do aumento de água na urina, não da produção de amônia ou de ureia.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -55512,37 +55286,7 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a) A redução na ingestão de água aumenta a pressão osmótica do sangue. O ADH atua nos rins, aumentando a reabsorção de água e diminuindo a pressão osmótica do sangue. Comentário detalhado ainda não escrito para esta questão.",
-    "difficulty": "medium",
-    "examSource": {
-      "board": "UNICAMP"
-    }
-  },
-  {
-    "id": "ap_bio_unicamp_054",
-    "topicId": "bio_genetica",
-    "subject": "Biologia",
-    "prompt": "Após a transformação do meristema vegetativo em meristema floral, há o surgimento da flor. De forma genérica, uma flor é constituída por verticilos florais, que são: o cálice (constituído pelas sépalas), a corola (constituída pelas pétalas), o androceu e o gineceu. Segundo o modelo de determinação genética ABC, a identidade dos verticilos é definida pela interação de pelo menos três genes. A atividade do gene A é necessária para a formação do perianto (verticilos não reprodutivos). A atividade do gene C é necessária para a formação dos verticilos reprodutivos. A atividade do gene B está envolvida na diferenciação entre pétalas (onde o gene B está ativo) e sépalas (onde o gene B está inativo), assim como na diferenciação entre estames (onde o gene B está ativo) e carpelos (onde o gene B está inativo). Uma flor completa de angiosperma e duas flores hipotéticas (Flor I e Flor II) são apresentadas a seguir. Assinale a alternativa que apresenta os genes ativos nas flores I e II.",
-    "options": [
-      {
-        "id": "a",
-        "text": "flor I: A e B; flor II: B e C"
-      },
-      {
-        "id": "b",
-        "text": "flor I: B e C; flor II: A e B"
-      },
-      {
-        "id": "c",
-        "text": "flor I: A e B; flor II: A e C"
-      },
-      {
-        "id": "d",
-        "text": "flor I: A e C; flor II: B e C"
-      }
-    ],
-    "correctOptionId": "c",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c) flor I: A e B; flor II: A e C. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Beber menos água concentra o sangue, ou seja, aumenta sua pressão osmótica. Osmorreceptores no hipotálamo detectam isso e disparam a liberação de ADH pela neuro-hipófise; o ADH abre aquaporinas nos túbulos coletores do rim, aumentando a reabsorção de água. Consequência: mais água volta ao sangue e o volume de urina diminui — a urina fica escura e concentrada. As outras alternativas quebram algum elo dessa cadeia, geralmente dizendo que o ADH aumenta a reabsorção e ao mesmo tempo aumenta a diurese, o que é contraditório.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -55572,37 +55316,7 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d) O RNAm sintético fornece instruções ao organismo para a produção da proteína spike do SARS-CoV-2, o que estimula a produção de anticorpos pelo sistema imune. Comentário detalhado ainda não escrito para esta questão.",
-    "difficulty": "medium",
-    "examSource": {
-      "board": "UNICAMP"
-    }
-  },
-  {
-    "id": "ap_bio_unicamp_056",
-    "topicId": "bio_genetica",
-    "subject": "Biologia",
-    "prompt": "A doença de Huntington, que é progressiva e degenerativa do sistema nervoso central, compromete significativamente a capacidade motora e cognitiva. O heredograma a seguir representa o padrão de herança entre os indivíduos, sendo os indivíduos doentes representados em preto, e os indivíduos não doentes, em branco. Homens são representados pelos quadrados e mulheres, pelos círculos. Considerando as informações apresentadas, é correto afirmar que a doença de Huntington:",
-    "options": [
-      {
-        "id": "a",
-        "text": "é herdada de forma autossômica dominante"
-      },
-      {
-        "id": "b",
-        "text": "é herdada de forma autossômica recessiva"
-      },
-      {
-        "id": "c",
-        "text": "apresenta herança ligada ao cromossomo X"
-      },
-      {
-        "id": "d",
-        "text": "apresenta herança ligada ao cromossomo Y"
-      }
-    ],
-    "correctOptionId": "a",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a) é herdada de forma autossômica dominante. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A vacina de RNA mensageiro entrega à célula a instrução para fabricar a proteína spike do SARS-CoV-2. A célula produz essa proteína, que funciona como antígeno, e o sistema imune responde produzindo anticorpos e células de memória. Repare na troca que as alternativas erradas fazem o tempo todo: antígeno é o que provoca a resposta, anticorpo é o que o corpo produz — dizer que a spike \"estimula a produção de antígenos\" inverte os papéis. E o vetor viral da AstraZeneca é um adenovírus não replicante, não replicante como diz (b).",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -55632,7 +55346,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c) (i) inseto; (ii) RNAm; (iii) gene. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "O RNAi se liga por complementaridade a um RNA mensageiro específico e o destrói antes que o ribossomo o traduza. O que fica silenciado, na prática, é o gene correspondente — a informação continua no DNA, mas não chega a virar proteína. No uso agrícola descrito, quem entra em contato com o RNAi pulverizado é o inseto-praga: silenciando nele um gene essencial, o organismo morre, sem afetar espécies cujo mensageiro tem outra sequência. É essa especificidade de sequência que torna a técnica atraente frente ao inseticida convencional.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -55662,7 +55376,7 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a) É uma doença viral contagiosa, que pode ser transmitida através da ingestão de água ou alimentos contaminados por fezes de doentes. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A poliomielite é causada por um vírus (o poliovírus) e sua transmissão é fecal-oral: água e alimentos contaminados por fezes de doentes, o que explica por que ela circula onde falta saneamento. Não há vetor artrópode envolvido, o que derruba (b) e (d), e não é bactéria, o que derruba (c) e (d). Vale ligar isso ao enunciado: cobertura vacinal abaixo de 50% em 312 municípios é exatamente a condição para o vírus voltar a circular, já que a proteção depende de imunidade coletiva.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -55692,7 +55406,7 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b) (i) vidarabina; (ii) a replicação do DNA; (iii) nucleotídeo dAMP; (iv) pela polimerase como possível precursor na síntese do DNA. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A vidarabina é um análogo de nucleosídeo: sua estrutura é tão parecida com a do nucleotídeo dAMP que a DNA polimerase a incorpora por engano na fita em formação. Uma vez incorporada, ela trava o alongamento e a replicação do DNA para — é assim que o medicamento age contra vírus, que replicam DNA muito mais rápido que as células do hospedeiro. Tirosina é aminoácido e não teria como enganar uma polimerase; e inibir a síntese de proteínas seria efeito de outro tipo de fármaco, agindo no ribossomo, não na polimerase.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -55722,7 +55436,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c) (i) atingir a medula espinhal e introduzir nos neurônios a cópia normal do gene; (ii) da proteína essencial à função dos neurônios da medula; (iii) os músculos. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A atrofia muscular espinhal atinge os neurônios motores da medula espinhal, que morrem por falta de uma proteína essencial. A terapia gênica usa um vírus não patogênico como vetor para levar uma cópia normal do gene até esses neurônios; restaurada a produção da proteína, os neurônios voltam a funcionar e a controlar a musculatura esquelética. As alternativas erradas mudam o alvo para a medula óssea (que é outro tecido, produtor de células sanguíneas), ou falam em remover o gene defeituoso, o que a técnica não faz — ela acrescenta uma cópia funcional.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -55752,7 +55466,7 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b) (i) Genoma; (ii) Gene; (iii) Genótipo; (iv) Código genético. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Genoma é o conjunto de toda a informação genética; gene é o trecho que codifica um produto; genótipo é a constituição de alelos de um indivíduo; e código genético é a tabela de correspondência entre trincas de bases e aminoácidos. O erro mais comum, que as outras alternativas exploram, é usar \"código genético\" como sinônimo de genoma ou de DNA: código genético não é a informação, é a regra de leitura dela — e é praticamente a mesma em todos os seres vivos, o que o genoma nunca é.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -55782,7 +55496,7 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b) A proteína resultante da tradução desse RNA mensageiro possui 49 aminoácidos. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "O códon de parada não codifica aminoácido nenhum: ele é o sinal para o ribossomo soltar a cadeia. Se o 50º códon é de parada, os aminoácidos vieram dos 49 códons anteriores — e note que o primeiro deles, AUG, além de iniciar a tradução, codifica metionina, então entra na conta. Logo, 49 aminoácidos. (d) erra ao concluir que nenhuma proteína se forma: uma proteína truncada se forma, e é justamente esse tipo de mutação sem sentido que causa doenças por proteína incompleta.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -55812,7 +55526,7 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b) O vírus da dengue e o zika vírus podem ser transmitidos pela picada do mosquito Aedes aegypti. A eliminação do inseto vetor e a eliminação dos focos de criação das larvas são medidas profiláticas. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Dengue, zika, chikungunya e febre amarela urbana têm o mesmo vetor no Brasil: o Aedes aegypti, mosquito de hábito diurno que se reproduz em água limpa e parada. O controle passa por eliminar os criadouros, porque é lá que o ciclo se completa. As alternativas erradas trocam o vetor por Culex (que transmite filariose e febre do Nilo Ocidental, não essas arboviroses) ou afirmam que existe vacina para todas — há vacina consolidada para febre amarela e, mais recentemente, para dengue, mas não para zika nem para chikungunya.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -55842,7 +55556,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c) (i) definitivo; (ii) miracídios; (iii) intermediário; (iv) cercárias. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "O ser humano abriga o verme adulto e é onde ocorre a reprodução sexuada: por definição, é o hospedeiro definitivo. Os ovos saem nas fezes, eclodem na água e liberam miracídios, larvas ciliadas que procuram o caramujo Biomphalaria — hospedeiro intermediário, onde ocorre a multiplicação assexuada. De lá saem as cercárias, que nadam e penetram a pele humana. A regra geral vale para todo parasita: hospedeiro definitivo é o da reprodução sexuada, não o \"mais importante\" nem o maior.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -55872,7 +55586,7 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d) Inibir a multiplicação de merozoítos nos eritrócitos, diminuindo a carga de parasitas circulantes. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "No ciclo do Plasmodium, os esporozoítos injetados pelo mosquito vão ao fígado, multiplicam-se e liberam merozoítos, que invadem as hemácias e ali se multiplicam em ciclos sincronizados — é a ruptura em massa dessas hemácias que produz os acessos de febre. Um antimalárico eficaz atua justamente inibindo essa multiplicação nos eritrócitos, derrubando a parasitemia. As outras alternativas erram o alvo celular (linfócitos, em vez de hemácias), ou propõem promover a multiplicação do parasita, que é o oposto de tratar.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -55902,7 +55616,7 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b) bactérias, que podem se tornar resistentes a antibióticos, se utilizados em excesso ou de forma inapropriada, dificultando o tratamento. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Sífilis (Treponema pallidum), gonorreia (Neisseria gonorrhoeae) e clamidíase (Chlamydia trachomatis) são todas bacterianas, e é por isso que a OMS atualizou as diretrizes: as três vêm desenvolvendo resistência aos antibióticos usados até então, sobretudo a gonorreia. (c) e (d) confundem prevenção com tratamento — o preservativo previne a transmissão, mas não elimina uma infecção já instalada, que exige antibiótico. (a) e (d) ainda erram o agente, chamando-as de vírus ou protozoários.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -55932,7 +55646,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c) O vírus HPV pode permanecer latente por vários anos. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "O HPV pode ficar latente por anos: a pessoa carrega o vírus sem lesão visível e ainda assim pode transmiti-lo, o que explica por que a infecção é tão disseminada e por que o rastreamento periódico importa. As outras alternativas são falsas e vale saber por quê: a transmissão é por contato sexual, não alimentar; o HPV é a causa de praticamente todos os casos de câncer de colo de útero (tipos 16 e 18 em especial); e existe vacina, oferecida pelo SUS a meninas e meninos, além de tratamento para as lesões.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -55962,7 +55676,7 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b) O fato de ser frequentemente transmitida por secreções das vias respiratórias, como gotículas eliminadas pelo espirro ou pela tosse. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "O sarampo se transmite por aerossol e gotículas respiratórias liberadas na fala, na tosse e no espirro, e o vírus permanece suspenso no ar por até duas horas depois de o doente sair do ambiente. É por isso que ele é uma das doenças mais contagiosas conhecidas — um caso infecta de 12 a 18 suscetíveis, o que exige cobertura vacinal acima de 95% para conter surtos. (a) é falsa (a vacina tríplice viral existe), (c) inventa um vetor, e (d) restringe o contágio a grupos vulneráveis, quando a desnutrição agrava a gravidade, não a transmissibilidade.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -55992,7 +55706,7 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b) Bactéria, peste bubônica. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A peste bubônica é causada pela bactéria Yersinia pestis, que circula entre roedores e é transmitida ao ser humano pela picada da pulga do rato. É o caso clássico de zoonose com vetor: a mortandade dos ratos empurra as pulgas para hospedeiros alternativos, e é aí que a epidemia humana explode — a dinâmica da Peste Negra do século XIV. Leptospirose também é bacteriana e ligada a ratos, mas a transmissão é pelo contato com água contaminada por urina, sem pulga envolvida.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -56022,7 +55736,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c) O vetor do vírus da dengue é o Aedes aegypti. Suas fases imaturas desenvolvem-se na água limpa e há diminuição na sua reprodução em temperaturas abaixo de 17°C. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "O vetor da dengue é o Aedes aegypti, cujas larvas se desenvolvem em água limpa e parada — pneu, prato de vaso, calha, caixa d'água destampada —, e não em água suja, que é o criadouro do Culex. A reprodução acelera no calor e diminui em temperaturas baixas, o que explica a sazonalidade das epidemias no verão: o ciclo do ovo ao adulto encurta e o vírus também se replica mais rápido dentro do mosquito. É por isso que a prevenção é doméstica, criadouro a criadouro.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -56052,7 +55766,7 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d) bactéria, capivara e carrapato. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A febre maculosa é causada pela bactéria Rickettsia rickettsii, transmitida pela picada do carrapato-estrela. A capivara entra no ciclo como amplificador: ela hospeda grandes populações de carrapatos e, ao ser infectada, permite que novos carrapatos adquiram a bactéria. É por isso que o fechamento de parques com capivaras é medida de controle. As alternativas com vírus estão erradas quanto ao agente, e mosca não é vetor dessa doença.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -56082,7 +55796,7 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b) São moluscos bivalves – considerados bentônicos filtradores – tolerantes à poluição e capazes de bioacumular elevadas taxas de arsênico e chumbo. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Mexilhões são moluscos bivalves bentônicos e filtradores: presos ao substrato, filtram grandes volumes de água e retêm o que vem nela. Como toleram poluição e não conseguem metabolizar metais pesados, acumulam arsênio e chumbo no tecido em concentrações muito acima das da água — bioacumulação. Foi assim que a artista se intoxicou lixando as conchas. As alternativas erradas ou os chamam de crustáceos, ou de predadores ativos, ou dizem que eles excretam eficientemente os metais, o que é justamente o contrário do que os torna bons bioindicadores.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -56112,7 +55826,7 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d) têm duas superfícies epiteliais, a epiderme, que reveste externamente o animal, e a gastroderme, que delimita a cavidade gastrovascular; entre elas, encontram-se células pertencentes à mesogleia. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Corais são cnidários diblásticos: têm apenas duas camadas epiteliais, a epiderme externa e a gastroderme que reveste a cavidade gastrovascular, separadas pela mesogleia, que é gelatinosa e não é folheto embrionário. Daí (c) estar errada ao chamá-los de triblásticos. (b) erra a função dos cnidoblastos, que são células urticantes de captura e defesa, não de movimentação. E (a) inverte os ciclos: o pólipo é a forma fixa e de reprodução assexuada por brotamento, enquanto a medusa é a forma livre e sexuada.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -56142,37 +55856,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c) Estrela-do-mar e caranguejo. Comentário detalhado ainda não escrito para esta questão.",
-    "difficulty": "medium",
-    "examSource": {
-      "board": "UNICAMP"
-    }
-  },
-  {
-    "id": "ap_bio_unicamp_080",
-    "topicId": "bio_zoologia",
-    "subject": "Biologia",
-    "prompt": "Durante uma visita ao Museu de Zoologia do Instituto de Biologia da UNICAMP, alunos do ensino médio puderam observar a diversidade de formas de vida e a classificação dos vertebrados. Assinale a alternativa que indica corretamente as características (i), (ii), (iii) e (iv) apresentadas no cladograma acima.",
-    "options": [
-      {
-        "id": "a",
-        "text": "(i) fase larval e adulta no meio terrestre; (ii) cório e alantoide; (iii) quatro câmaras cardíacas; (iv) presença de pelos"
-      },
-      {
-        "id": "b",
-        "text": "(i) respiração cutânea; (ii) quatro câmaras cardíacas; (iii) ausência de dentes; (iv) presença de glândulas mamárias"
-      },
-      {
-        "id": "c",
-        "text": "(i) fase larval e adulta no meio aquático; (ii) respiração pulmonar; (iii) ausência de dentes; (iv) presença de pelos"
-      },
-      {
-        "id": "d",
-        "text": "(i) respiração cutânea; (ii) cório e alantoide; (iii) três câmaras cardíacas; (iv) presença de glândulas mamárias"
-      }
-    ],
-    "correctOptionId": "b",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b) (i) respiração cutânea; (ii) quatro câmaras cardíacas; (iii) ausência de dentes; (iv) presença de glândulas mamárias. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Simetria radiada com esqueleto espinhoso e sulco ambulacral é assinatura de equinodermo — daí a estrela-do-mar. Simetria bilateral com exoesqueleto e dois pares de antena é assinatura de crustáceo, e o caranguejo se encaixa. O detalhe decisivo é o número de antenas: crustáceos têm dois pares, insetos têm um, e aracnídeos não têm nenhum. Ouriço e estrela são ambos equinodermos, mas mexilhão é molusco; hidra é cnidário e não tem esqueleto; lampreia é vertebrado.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -56202,7 +55886,7 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d) pele úmida e permeável, que possibilita a respiração cutânea. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A pele do anfíbio é fina, úmida, permeável e ricamente vascularizada, porque ela própria é órgão respiratório — a respiração cutânea complementa (ou substitui) a pulmonar. Essa mesma permeabilidade que deixa o gás passar deixa passar poluentes dissolvidos e permite a instalação do fungo Batrachochytrium, causador da quitridiomicose, que é hoje uma das principais causas do declínio global dos anfíbios. Ou seja, a característica que os torna eficientes é a mesma que os torna vulneráveis.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -56232,7 +55916,7 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d) possuem pé desenvolvido e rádula. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Gastrópodes — caramujos, caracóis, lesmas — têm pé musculoso desenvolvido, usado na locomoção por ondas de contração, e rádula, a fita quitinosa com dentículos que raspa o alimento. As outras alternativas erram por excesso de restrição ou por negar uma característica do grupo: gastrópodes ocupam mar, água doce e ambiente terrestre, e a rádula é justamente uma das sinapomorfias dos moluscos, ausente apenas nos bivalves, que são filtradores.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -56262,7 +55946,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c) Chordata, Arthropoda, Mollusca. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A serapilheira é folha, galho e fruto em decomposição sobre o solo da floresta. Ali vivem artrópodes em enorme quantidade (ácaros, colêmbolos, formigas, besouros, aranhas), moluscos gastrópodes (caracóis e lesmas, que precisam de umidade) e cordados de pequeno porte (anfíbios, lagartos, pequenos roedores). Echinodermata é filo exclusivamente marinho e Cnidaria é aquático — nenhum dos dois ocorre em serapilheira, o que elimina três das quatro alternativas de imediato.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -56292,7 +55976,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c) pele rica em glândulas secretoras de muco e respiração cutânea. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Cecílias são anfíbios, e o que as denuncia é a pele: úmida, sem escamas e cheia de glândulas de muco, o que permite a respiração cutânea. Serpentes são répteis, com pele seca coberta de escamas queratinizadas e respiração exclusivamente pulmonar. As alternativas erradas atribuem às cecílias escamas ou ovo com casca calcária, que são justamente as novidades dos répteis — as adaptações que os libertaram da dependência de ambiente úmido.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -56322,7 +56006,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c) à redução na entrada de luz no oceano, que diminuiria a taxa de fotossíntese de algas, reduzindo a liberação de oxigênio e nutrientes que seriam usados pelos pólipos de corais. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Os corais vivem em simbiose com zooxantelas, algas fotossintetizantes que lhes fornecem boa parte do alimento. A mancha de óleo na superfície bloqueia a luz, a fotossíntese das algas cai e, com ela, a oferta de nutrientes e de oxigênio ao pólipo. A alternativa (a) inverte a cadeia (corais não dependem de peixes para comer), (b) inventa ácido clorídrico no vazamento, e (d) erra a biologia básica: o pólipo é animal cnidário, não colônia de protozoários.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -56352,7 +56036,7 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a) O núcleo triploide (3n) é formado pela junção dos núcleos polares com o núcleo espermático. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Na dupla fecundação um núcleo espermático funde-se com a oosfera e forma o zigoto (2n); o outro funde-se com os dois núcleos polares e forma o núcleo triploide (3n), que origina o endosperma, tecido de reserva da semente. (b) troca as origens do zigoto. (c) confunde carpelo, ovário e cotilédone — o ovário vira fruto, e o cotilédone vem do embrião. (d) erra ao dizer que o endosperma origina os cotilédones: nas eudicotiledôneas o endosperma é absorvido pelos cotilédones durante o desenvolvimento, que são estruturas do embrião, e portanto 2n.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -56382,7 +56066,7 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b) periderme pluriestratificada, capaz de isolar termicamente os feixes vasculares. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Rebrotar depois do fogo depende de proteger as gemas e os vasos condutores do calor. A periderme espessa, com várias camadas de súber — cortiça, cheia de células mortas com ar —, é isolante térmico e preserva o câmbio e os feixes vasculares sob a casca queimada; é a adaptação clássica das árvores de Cerrado. Esclerênquima é tecido de sustentação e não faz fotossíntese; aerênquima serve a plantas alagadas; e cutícula cerosa reduz perda de água, não protege o tronco do fogo.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -56412,7 +56096,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c) respiram o dia todo e fotossintetizam apenas durante o período diurno. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Toda célula viva respira o tempo todo — respiração é a produção de ATP, e a planta não pode desligá-la à noite. O que a planta CAM faz de diferente é separar as etapas da fotossíntese no tempo: abre os estômatos à noite, quando o ar está mais úmido, e fixa o CO2 em ácidos orgânicos; de dia, com os estômatos fechados para não perder água, libera esse CO2 internamente para o ciclo de Calvin, que depende de luz. Fotossíntese, portanto, só de dia; respiração, o dia todo.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -56442,7 +56126,7 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b) amiloplastos – organelas em que ocorre acúmulo de amido. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Plastídios se interconvertem. Quando há muito açúcar produzido e nenhum dreno ativo para consumi-lo — sem flor, sem fruto, sem crescimento —, o excedente é polimerizado em amido e o cloroplasto se converte em amiloplasto, que é justamente a organela de armazenamento de amido. Cromoplasto acumula carotenoides e aparece na maturação de fruto e de pétala; proplasto é a forma imatura, que dá origem aos demais; e protoplasto nem é plastídio, é a célula vegetal sem parede.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
@@ -56472,7 +56156,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c) presença de sementes e ausência de frutos. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "O pinheiro-do-paraná (Araucaria angustifolia) é gimnosperma: tem semente — o pinhão — mas não tem fruto, porque a semente fica exposta na pinha, sem ovário que a envolva. O jequitibá é angiosperma: tem flor, ovário e, portanto, fruto. Guarde o critério: a diferença entre os dois grupos não é ter semente (ambos têm), é ter ou não o fruto, que é o ovário desenvolvido protegendo a semente.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"

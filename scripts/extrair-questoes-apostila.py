@@ -41,7 +41,8 @@ VISUAL = re.compile(
     r"charges?|tirinhas?|cartuns?|cartoons?|fotografias?|fotos?|ilustra[cç][aã]o|"
     r"ilustra[cç][oõ]es|desenhos?|diagramas?|infogr[aá]ficos?|cartazes?|telas?|"
     r"pinturas?|gravuras?|litografias?|caricaturas?|quadrinhos?|mapa-m[uú]ndi|"
-    r"planta baixa|croquis?|organogramas?|fluxogramas?|histogramas?|pir[aâ]mide et[aá]ria)\b",
+    r"planta baixa|croquis?|organogramas?|fluxogramas?|histogramas?|pir[aâ]mide et[aá]ria|"
+    r"genealogias?|heredogramas?|pedigrees?|cari[oó]tipos?|cladogramas?|[aá]rvore genealogica|[aá]rvore filogen[eé]tica)\b",
     re.I,
 )
 
@@ -62,6 +63,9 @@ NOTACAO = re.compile(
     r"|\d\s*!"
     # menos orfao depois de parentese: "(180 y) -" era 180 - y.
     r"|\)\s*-(?:\s|$)"
+    # indice de formula quimica que migrou para a frente do simbolo:
+    # "2 CO" e "2O" eram CO2 e O2.
+    r"|\b\d\s+[A-Z][A-Za-z]?\b"
 )
 
 # A apostila emenda o cabecalho do texto-base da questao seguinte no fim da
@@ -108,6 +112,8 @@ def limpar(texto: str) -> str:
     # da pagina seguinte, o que faz o inicio de linha sumir para as ancoras.
     texto = texto.replace("\f", "\n")
     texto = MARCA.sub("", texto)
+    # Indice de paginas que a conversao deixa como link de markdown solto.
+    texto = re.sub(r"\[\\?#\d+\\?\]\(#\d+\)", "", texto)
     texto = RODAPE.sub("", texto)
     texto = RODAPE_INLINE.sub(" ", texto)
     texto = re.sub(r"\n{3,}", "\n\n", texto)
