@@ -1,0 +1,88 @@
+{
+  "_nota": [
+    "De que topico do catalogo cada modulo das apostilas de 'ultimos 10 anos' faz parte.",
+    "O modulo e a unica pista de assunto que a apostila da: ela nao diz o ano nem o capitulo.",
+    "Por isso a questao entra com topicId e sem chapter -- o campo chapter e opcional e exige",
+    "bater exatamente com um capitulo do topico, o que so daria para saber lendo questao a questao.",
+    "Errar o topico distorce o diagnostico de dominio, entao modulo largo demais para caber num",
+    "topico so (MECANICA, IDADE CONTEMPORANEA) vai em 'refinamentos', decidido questao a questao."
+  ],
+  "Geografia": {
+    "CARTOGRAFIA": "geo_cartografia",
+    "GEOLOGIA – RELEVO/SOLOS": "geo_fisica_brasil",
+    "CLIMA": "geo_climatologia_socioambiental",
+    "HIDROGRAFIA": "geo_hidrogeografia",
+    "BIOMAS": "geo_fisica_brasil",
+    "POPULAÇÃO": "geo_populacao_urbana_brasil",
+    "AGRICULTURA": "geo_economica_brasil",
+    "URBANIZAÇÃO": "geo_populacao_urbana_brasil",
+    "INDUSTRIALIZAÇÃO": "geo_economica_brasil",
+    "GLOBALIZAÇÃO": "geo_globalizacao_economica"
+  },
+  "Biologia": {
+    "CITOLOGIA": "bio_estrutura_fisio_celular",
+    "ECOLOGIA": "bio_ecologia",
+    "EMBRIOLOGIA": "bio_fisio_animal",
+    "EVOLUÇÃO BIOLÓGICA": "bio_evolucao",
+    "FISIOLOGIA ANIMAL E HUMANA": "bio_fisio_animal",
+    "GENÉTICA": "bio_genetica",
+    "PARASITOLOGIA": "bio_zoologia",
+    "REINO ANIMAL/PROTOCTISTAS": "bio_zoologia",
+    "REINO VEGETAL/FUNGOS/MONERA": "bio_botanica"
+  },
+  "Matemática": {
+    "ANÁLISE COMBINATÓRIA": "mat_combinatoria",
+    "ARITMÉTICA": "mat_aritmetica_proporcionalidade",
+    "CONJUNTOS NUMÉRICOS": "mat_teoria_numeros",
+    "EQUAÇÕES": "mat_equacoes",
+    "FUNÇÕES": "mat_funcoes",
+    "GEOMETRIA ANALÍTICA": "mat_geometria_analitica",
+    "GEOMETRIA ESPACIAL": "mat_geometria_espacial",
+    "GEOMETRIA PLANA": "mat_geometria_plana",
+    "GRANDEZAS PROPORCIONAIS": "mat_aritmetica_proporcionalidade",
+    "INEQUAÇÕES": "mat_equacoes",
+    "MÉDIAS": "mat_dados_probabilidade",
+    "TRIGONOMETRIA": "mat_trigonometria"
+  },
+  "Português": {
+    "FIGURAS DE LINGUAGEM": "por_texto",
+    "MORFOLOGIA": "por_norma_culta",
+    "MORFOSSINTAXE": "por_sintaxe",
+    "TEORIA LITERÁRIA": "por_lit_classica_barroca",
+    "CLASSICISMO/QUINHENTISMO": "por_lit_classica_barroca",
+    "BARROCO": "por_lit_classica_barroca",
+    "ROMANTISMO": "por_lit_romantismo_realismo",
+    "REALISMO/NATURALISMO/PARNASIANISMO": "por_lit_romantismo_realismo",
+    "MODERNISMO": "por_lit_modernismo",
+    "CONTEMPORÂNEA": "por_lit_contemporanea"
+  },
+  "História": {
+    "IDADE ANTIGA": "his_idade_antiga",
+    "IDADE MÉDIA": "his_idade_media",
+    "IDADE MODERNA": "his_moderna_iluminismo",
+    "BRASIL COLÔNIA": "his_brasil_colonia",
+    "PRIMEIRO REINADO": "his_brasil_imperio",
+    "SEGUNDO REINADO": "his_brasil_imperio",
+    "REPÚBLICA VELHA": "his_primeira_republica_vargas",
+    "ERA VARGAS": "his_primeira_republica_vargas",
+    "PERÍODO DEMOCRÁTICO": "his_republica_liberal_atual",
+    "PERÍODO MILITAR": "his_republica_liberal_atual",
+    "NOVA REPÚBLICA": "his_republica_liberal_atual"
+  },
+  "Física": {
+    "MODERNA": "fis_fisica_moderna",
+    "ONDULATÓRIA": "fis_ondulatoria",
+    "TERMOLOGIA": "fis_calorimetria",
+    "ÓPTICA": "fis_optica_geometrica"
+  },
+  "_refinamentos": {
+    "_nota": "topicId decidido lendo a questao, onde o modulo era largo demais.",
+    "ap_fis_unicamp_007": "fis_eletrostatica",
+    "ap_fis_unicamp_026": "fis_gravitacao_circular",
+    "ap_fis_unicamp_027": "fis_gravitacao_circular",
+    "ap_fis_unicamp_057": "fis_cinematica",
+    "ap_fis_unicamp_060": "fis_energia",
+    "ap_fis_unicamp_061": "fis_estatica",
+    "ap_fis_unicamp_097": "fis_optica_instrumental"
+  }
+}

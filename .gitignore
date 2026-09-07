@@ -22,3 +22,4 @@ provas-extraidas/
 
 # Cache local gerado pela auditoria das apostilas e provas.
 artifacts/content-audit/
+scripts/__pycache__/

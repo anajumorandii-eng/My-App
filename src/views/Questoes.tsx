@@ -54,7 +54,7 @@ function Metric({
   );
 }
 
-function examSourceLabel(source: { board: string; year?: number; sourceUrl: string } | string | undefined) {
+function examSourceLabel(source: { board: string; year?: number; sourceUrl?: string } | string | undefined) {
   if (!source) return 'Banco de Questões';
   return typeof source === 'string' ? source : `${source.board}${source.year ? ` ${source.year}` : ' · reprodução em apostila'}`;
 }
