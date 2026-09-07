@@ -57813,40 +57813,6 @@
     }
   },
   {
-    "id": "ap_hisbra_fuvest_001",
-    "topicId": "his_brasil_colonia",
-    "subject": "História",
-    "prompt": "Após o Tratado de Tordesilhas (1494), por meio do qual Portugal e Espanha dividiram as terras emersas com uma linha imaginária, verifica-se um “descobrimento gradual” do atual território brasileiro. Tendo em vista o processo da formação territorial do País, considere as ocorrências e as representações abaixo: Ocorrências: I. Tratado de Madrid (1750); II. Tratado de Petrópolis (1903); III. Constituição da República Federativa do Brasil (1988)/consolidação da atual divisão dos Estados. Representações: Associe a ocorrência com sua correta representação: I II III",
-    "options": [
-      {
-        "id": "a",
-        "text": "A C E"
-      },
-      {
-        "id": "b",
-        "text": "B C E"
-      },
-      {
-        "id": "c",
-        "text": "C B E"
-      },
-      {
-        "id": "d",
-        "text": "A B D"
-      },
-      {
-        "id": "e",
-        "text": "C A D"
-      }
-    ],
-    "correctOptionId": "a",
-    "explanation": "Gabarito oficial da FUVEST: alternativa a) A C E. Comentário detalhado ainda não escrito para esta questão.",
-    "difficulty": "medium",
-    "examSource": {
-      "board": "FUVEST"
-    }
-  },
-  {
     "id": "ap_hisbra_fuvest_005",
     "topicId": "his_brasil_colonia",
     "subject": "História",
@@ -57874,7 +57840,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da FUVEST: alternativa c) Independência do Brasil e formação de seu Estado nacional. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Memórias de um sargento de milícias se passa no \"tempo do rei\", isto é, no Rio de Janeiro de D. João VI (1808-1821), e foi publicado em folhetim entre 1852 e 1853. O intervalo entre esses dois momentos cobre exatamente a Independência (1822) e a montagem do Estado nacional — Constituição de 1824, Primeiro Reinado, Regências e a consolidação no Segundo Reinado. (a) fica antes desse intervalo, e (e) fica depois, já em 1889.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -57908,7 +57874,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da FUVEST: alternativa c) valorização da cultura nacional. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "\"Revolução Caraíba\" e a afirmação de que sem os povos originários a Europa não teria a Declaração dos Direitos do Homem invertem a hierarquia habitual: é o índio brasileiro que aparece como fonte de liberdade, e a Europa como devedora. Isso é valorização da cultura nacional pela antropofagia — devorar o que vem de fora e devolver algo próprio. Não é crítica à Revolução Francesa (o texto reivindica os direitos do homem para si), nem adesão ao socialismo ou aos Estados Unidos.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -57942,7 +57908,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da FUVEST: alternativa c) O custo relativo do frete dos metais preciosos viabilizou a interiorização da colonização portuguesa. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Ouro tem valor altíssimo por unidade de peso, então o custo do transporte é irrelevante diante do que a carga vale — e por isso compensava minerar a centenas de quilômetros do litoral, coisa que o açúcar, volumoso e barato, jamais permitiria. Foi essa aritmética que puxou a colonização para o interior e criou Vila Rica, Sabará, Diamantina. (b) inverte o efeito urbano: foi a mineração, não o açúcar, que produziu uma rede de vilas densa; e (e) ignora que só a mineração criou mercado interno relevante, movimentando gado, mulas e alimentos.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -57976,7 +57942,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da FUVEST: alternativa c) a Igreja Católica apoiava, com a maioria de seus membros, a escravidão dos africanos, tratando, portanto, de justificá-la com base na Bíblia. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "O sermão de Vieira compara o sofrimento do escravizado à Paixão de Cristo — e ao fazer isso oferece consolo, não libertação: quem sofre como Cristo será salvo, logo pode continuar sofrendo. É a justificativa religiosa da escravidão, e a Igreja, majoritariamente, a sustentou. (a) inverte o sentido do texto, que não incita revolta nenhuma; (b) transforma a retórica em realidade material; (d) atribui a Vieira uma indecisão que o próprio sermão desmente.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -58010,7 +57976,7 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da FUVEST: alternativa a) tabaco, algodão e derivados da pecuária. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Além do açúcar e do ouro, a colônia exportou tabaco (moeda de troca no comércio de escravizados na costa africana), algodão (que ganhou força com a Revolução Industrial inglesa) e derivados da pecuária, sobretudo o couro. As outras alternativas listam produtos que Portugal exportava para o Brasil, não o contrário (ferro, sal, tecidos), ou itens de peso desprezível na balança colonial. Um teste rápido: a mercadoria colonial tinha que valer o frete transatlântico.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -58044,7 +58010,7 @@
       }
     ],
     "correctOptionId": "e",
-    "explanation": "Gabarito oficial da FUVEST: alternativa e) o principal motivo da adoção da mão de obra de origem africana era o fato de que esta precisava ser transportada de outro continente, o que implicava a abertura de um rentável comércio para a metrópole, que se articulava perfeitamente às estruturas do sistema de colonização. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "O argumento do texto é econômico, não moral: o africano tinha de ser comprado e transportado de outro continente, e essa cadeia — captura, travessia, venda — gerava lucro para traficantes e para a Coroa em cada etapa. O escravizado indígena, obtido no próprio território, não alimentava esse comércio. Some a isso a queda demográfica indígena e a resistência jesuítica. As alternativas erradas apelam a \"aptidão\" ou \"aceitação\" do africano ao trabalho pesado, que é exatamente o racismo que o texto está desmontando.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -58078,7 +58044,7 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Gabarito oficial da FUVEST: alternativa b) invasão holandesa de Pernambuco, a fundação de Nova Amsterdã (futura Nova York) pelos holandeses e a perda das Molucas pelos portugueses. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "O trecho descreve o momento em que a Holanda, em guerra contra a Espanha e portanto contra Portugal (unidos pela União Ibérica desde 1580), ataca o império português no mundo todo. Os três fatos contemporâneos são a invasão de Pernambuco (1630), a fundação de Nova Amsterdã na América do Norte (1625) e a tomada das Molucas, no Sudeste Asiático, aos portugueses. As outras alternativas juntam eventos de séculos diferentes ou inventam episódios, como a colonização espanhola do Japão.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -58112,7 +58078,7 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Gabarito oficial da FUVEST: alternativa b) foram utilizadas, em grande parte, para o cumprimento do Tratado de Methuen entre Portugal e Inglaterra. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Antonil descreve o ouro escapando de Portugal, e o destino principal era a Inglaterra. O Tratado de Methuen (1703) trocava vinho português por tecidos ingleses em condições que davam déficit crônico a Portugal — e o saldo era pago em ouro brasileiro, que acabou financiando a industrialização inglesa. A alternativa (c) erra ao dizer \"exclusivamente\" e ao listar países errados; (d) troca o canal legal pelo contrabando do Prata, que existiu mas era secundário.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -58146,7 +58112,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da FUVEST: alternativa c) foram responsáveis pela educação dos filhos dos colonos, por meio da criação de colégios secundários e escolas de “ler e escrever”. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A ação mais duradoura dos jesuítas no Brasil foi educacional: eles montaram a única rede de ensino da colônia, com escolas de ler e escrever e colégios que formavam os filhos da elite colonial. (b) e (d) idealizam a atuação indígena: os jesuítas se opunham à escravização dos índios, mas para catequizá-los e aldeá-los, não para preservar suas culturas nem por direitos civis. (a) erra o crédito do barroco mineiro, que é do século XVIII e de artistas leigos.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -58180,7 +58146,7 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Gabarito oficial da FUVEST: alternativa d) ter-se desenvolvido, em função do mercado interno, em diferentes áreas no interior da colônia. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A pecuária colonial foi a atividade voltada para dentro: fornecia carne, couro, tração e transporte para os engenhos e depois para as minas, e por isso avançou pelo sertão nordestino e pelo Sul, sem exportar quase nada. É o que a alternativa (d) diz. (a) a torna independente das demais, quando ela é subsidiária delas; (c) inventa exportação de carne para Portugal; e (e) atribui à Coroa um projeto de povoamento que na prática foi consequência espontânea da atividade.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -58214,7 +58180,7 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da FUVEST: alternativa a) foram protagonistas de diversas rebeliões. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Escravizados foram sujeitos, não apenas vítimas: os quilombos, a Revolta dos Malês (1835), a Balaiada, a Cabanagem e incontáveis fugas e negociações cotidianas mostram protagonismo político. As outras alternativas repetem mitos já desmontados pela historiografia: havia casamento e famílias escravizadas (registradas em batismos), a cultura africana se recriou aqui (candomblé, capoeira, jongo), havia escravidão urbana intensa (os negros de ganho) e a alforria existia legalmente, inclusive por compra.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -58248,7 +58214,7 @@
       }
     ],
     "correctOptionId": "e",
-    "explanation": "Gabarito oficial da FUVEST: alternativa e) houve tentativas de separação das províncias que puseram em perigo a unidade nacional. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Do Primeiro Reinado ao fim das Regências, o Império quase se desfez: Confederação do Equador (1824), Cabanagem no Pará, Sabinada na Bahia, Balaiada no Maranhão e Farroupilha no Rio Grande do Sul. Todas colocaram em risco a unidade territorial. (a) erra porque as reformas do período, como o Ato Adicional, descentralizavam sem democratizar; (c) exagera ao falar em partido republicano, que só surge em 1870; (d) ignora a criação de todo o aparato imperial, inexistente na colônia.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -58282,7 +58248,7 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Gabarito oficial da FUVEST: alternativa d) pela produção destinada ao mercado externo e pela busca de investimentos internacionais. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A economia imperial continuou sendo o que era na colônia: monocultura de exportação — açúcar, algodão e sobretudo café — dependente do mercado externo e de capital estrangeiro, principalmente inglês, que financiou ferrovias, bancos e a dívida pública. (a) e (c) atribuem ao Império uma diversificação e uma revolução bancária que não houve. (b) coloca a imigração e a indústria como marcas do período, quando ambas só ganham peso no fim do século, já na transição para a República.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -58316,7 +58282,7 @@
       }
     ],
     "correctOptionId": "e",
-    "explanation": "Gabarito oficial da FUVEST: alternativa e) da oposição do Estado inglês ao tráfico negreiro que o governo brasileiro, depois de resistir, proibiu, em 1850. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A pressão britânica sobre o Brasil no século XIX teve um alvo central: o tráfico atlântico de escravizados. A Inglaterra, já industrializada, queria mercados consumidores e mão de obra assalariada, e vinha impondo o fim do tráfico desde 1826; em 1845 aprovou o Bill Aberdeen, autorizando a Marinha britânica a apreender navios negreiros. O Brasil resistiu até ceder com a Lei Eusébio de Queirós, em 1850. As demais alternativas tratam de atritos menores ou inventam causas.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -58350,7 +58316,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da FUVEST: alternativa c) Moderador e Executivo. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A Constituição de 1824 criou quatro poderes, e o Imperador chefiava dois. Como \"Chefe Supremo da Nação\", exercia privativamente o Poder Moderador, criado para \"velar sobre o equilíbrio e harmonia dos demais\" — podia dissolver a Câmara, nomear senadores e suspender magistrados. Como \"Chefe\" do Executivo, governava por meio de seus ministros, que é a delegação mencionada no enunciado. A ordem, portanto, é Moderador e depois Executivo.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -58384,7 +58350,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da FUVEST: alternativa c) a proposta de uma república era acompanhada de um forte sentimento antilusitano. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "1817 e 1824 são movimentos pernambucanos separados por sete anos e unidos pelo mesmo par de bandeiras: proclamar a república e romper com o domínio português, sentimento antilusitano que atingia comerciantes e autoridades vindas do reino. (b) inverte as lideranças, que vinham de setores médios urbanos, clero e militares, não dos grandes proprietários e monopolistas. (d) atribui a eles o abolicionismo imediato, que não era pauta; (e) os restringe ao Recife, quando se espalharam por outras províncias.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -58418,7 +58384,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da FUVEST: alternativa c) logo após a Independência, destinando-se o primeiro empréstimo a indenizar Portugal pela perda da colônia. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A dívida externa brasileira nasce junto com o país. Para que Portugal reconhecesse a Independência, em 1825, o Brasil aceitou pagar dois milhões de libras de indenização, e tomou esse dinheiro emprestado em Londres — ou seja, o primeiro empréstimo serviu para comprar a própria independência. As outras alternativas deslocam o início para a Guerra do Paraguai, para a República ou para 1930, todos momentos em que a dívida cresceu, mas nenhum em que ela começou.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -58452,7 +58418,7 @@
       }
     ],
     "correctOptionId": "e",
-    "explanation": "Gabarito oficial da FUVEST: alternativa e) regrediu consideravelmente devido à concorrência antilhana e à introdução de açúcar de beterraba na Europa. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "O açúcar brasileiro do século XIX perdeu mercado por duas frentes simultâneas: a concorrência do açúcar antilhano, produzido em terras mais férteis e com técnicas melhores (Cuba principalmente), e a difusão na Europa do açúcar de beterraba, incentivado desde o bloqueio napoleônico. A alternativa (b) acerta o mecanismo mas erra o concorrente ao dizer \"norte-americana\"; e (a) exagera ao dizer que a produção praticamente desapareceu — ela regrediu em participação, mas continuou existindo no Nordeste.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -58486,7 +58452,7 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da FUVEST: alternativa a) liberal-conservador, que defendia a monarquia constitucional, a integridade territorial e o regime centralizado. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Quem venceu a disputa pela forma do Estado pós-Independência foi o grupo liberal-conservador ligado a José Bonifácio e à elite agrária: monarquia constitucional (não república), unidade territorial (não fragmentação como na América espanhola) e centralização do poder (não federalismo). A Constituição de 1824, outorgada depois da dissolução da Constituinte, é a expressão desse projeto. Os liberais radicais defendiam justamente o contrário, e perderam.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -58520,7 +58486,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da FUVEST: alternativa c) como consequência do processo político desencadeado pela instalação da corte portuguesa na colônia. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A diferença entre o Brasil e a América espanhola começa em 1808: aqui a corte veio, o centro do império mudou de lado do Atlântico e o Rio virou capital de um reino. Quando a Independência veio, ela foi feita por um príncipe da mesma dinastia, com a elite agrária ao lado, garantindo continuidade da ordem escravista. Ou seja, a monarquia foi consequência direta da instalação da corte, não escolha popular nem fascínio pela pompa. Note que (b) inverte a história dos Estados Unidos, que se tornaram república mantendo a escravidão.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -58554,7 +58520,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da FUVEST: alternativa c) Chave de toda a organização política. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Pela Constituição de 1824 o Imperador é a peça central de todo o sistema: chefia o Executivo, exerce o Poder Moderador, nomeia e demite ministros, nomeia senadores vitalícios de listas tríplices, dissolve a Câmara e sanciona ou veta leis. Nada se move sem ele — daí ser \"a chave de toda a organização política\". As demais alternativas invertem essa posição (subordinação ao Legislativo) ou atribuem ao Imperador papéis que a Constituição não lhe deu, como descentralizar ou extinguir o Padroado, que ela justamente mantém.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -58588,7 +58554,7 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Gabarito oficial da FUVEST: alternativa d) à mediação da Inglaterra e à transferência para o Brasil de dívida em libras contraída por Portugal no Reino Unido. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Portugal reconheceu a Independência em 1825 sob mediação inglesa — a Inglaterra tinha interesse direto em estabilizar o comércio no Atlântico Sul e cobrou por isso. O preço foi o Brasil assumir uma dívida de dois milhões de libras que Portugal devia a bancos ingleses, além de renovar as vantagens comerciais britânicas. Ou seja, o país nasceu independente e endividado, com a Inglaterra na posição de credora e árbitra. As outras alternativas atribuem a mediação a potências que não tinham nem interesse nem peso no caso.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -58622,7 +58588,7 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da FUVEST: alternativa a) eleitoral, que, ao instituir o voto direto para os cargos eletivos do Império, ao mesmo tempo em que proibiu o voto dos analfabetos, reduziu notavelmente a participação eleitoral dos setores populares. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A grande reforma das décadas de 1870-80 foi eleitoral: a Lei Saraiva, de 1881, instituiu o voto direto e o título de eleitor, mas ao mesmo tempo exigiu comprovação de renda e excluiu os analfabetos — resultado, o eleitorado encolheu drasticamente. É o retrato do liberalismo brasileiro do período: moderniza a forma e restringe a participação. (b) inverte o desfecho da Questão Religiosa, que afastou Igreja e Estado; (d) supõe um fim do patronato que não ocorreu.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -58656,7 +58622,7 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da FUVEST: alternativa a) uma política nacional de atração de mão de obra para a lavoura e às transformações sociais provocadas pelo capitalismo na Itália e no Japão. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A imigração em massa tem duas pontas. No Brasil, uma política deliberada de atrair mão de obra para a lavoura de café diante do fim do tráfico e da abolição, com subsídio de passagem pelo governo paulista. Na Itália e no Japão, as transformações capitalistas — unificação e crise agrária italiana, fim do feudalismo e êxodo rural na era Meiji — expulsavam camponeses. (c) erra o destino (era lavoura, não indústria) e (e) reduz tudo ao branqueamento, que foi motivação real de parte da elite mas não explica a vinda dos japoneses.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -58690,7 +58656,7 @@
       }
     ],
     "correctOptionId": "e",
-    "explanation": "Gabarito oficial da FUVEST: alternativa e) promovia o desenvolvimento de uma cultura brasileira autêntica pelo retorno a seu passado e a suas tradições e riquezas locais. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "O texto é do Manifesto Regionalista atribuído a Gilberto Freyre (1926), e sua ironia contra \"a Civilização e o Progresso\" defende exatamente o oposto do que finge criticar: preservar a cozinha, os hábitos e as tradições regionais como base de uma cultura brasileira autêntica. (a) reduz a proposta à comida e à oposição ao modernismo, quando a disputa é sobre o que funda a nação; (c) atribui a ele valores utilitaristas industriais, que são o alvo do sarcasmo; (d) importa a democracia racial, tese posterior e de outro livro.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -58724,7 +58690,7 @@
       }
     ],
     "correctOptionId": "e",
-    "explanation": "Gabarito oficial da FUVEST: alternativa e) as primeiras participações eleitorais de candidatos trabalhadores ganharam importância histórica, uma vez que a política partidária brasileira da chamada Primeira República era dominada por grupos oriundos de grandes elites econômicas. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A questão trata de um marco pouco lembrado: as primeiras candidaturas de trabalhadores nas décadas de 1910 e 1920 tiveram importância histórica não pelo número de eleitos — foram pouquíssimos —, mas por inaugurarem a disputa eleitoral como terreno legítimo da luta operária, o que exigiu do PCB romper com a recusa anarquista de participar de eleições. As alternativas erradas ou afirmam frequência e domínio inexistentes, ou dizem que a participação era formalmente proibida, o que não era o caso.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -58758,7 +58724,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da FUVEST: alternativa c) a imposição da vacina somou-se a insatisfações populares geradas pela remodelação das áreas portuária e central da cidade, contribuindo para a eclosão da Revolta da Vacina. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A Revolta da Vacina (1904) não foi motivada por ignorância científica: a vacinação obrigatória, com brigadas entrando à força nas casas, somou-se à revolta acumulada contra o \"bota-abaixo\" de Pereira Passos, que demoliu cortiços e expulsou a população pobre do centro para os morros, sem oferecer moradia. A vacina foi o estopim de uma insatisfação urbana e social maior. (a) e (d) trocam os modos de transmissão das duas doenças, e (e) inventa uma reforma habitacional que não existiu.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -58792,7 +58758,7 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Gabarito oficial da FUVEST: alternativa d) critica o poder oligárquico. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "\"Caprichos de um número limitado de indivíduos\" sob cuja proteção se conseguem cadeiras nas assembleias é a definição do coronelismo e da política dos governadores: o voto existia, mas era controlado de cima, pelo curral eleitoral e pela comissão de verificação de poderes. Júlio de Mesquita Filho está criticando o poder oligárquico da Primeira República — não o Legislativo em si, nem o federalismo, e certamente não defendendo a supremacia do Sul.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -58826,7 +58792,7 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Gabarito oficial da FUVEST: alternativa b) A Constituição de 1934 garantiu o direito à organização sindical e abriu espaço para a proteção dos direitos dos trabalhadores. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A Constituição de 1934, escrita sob Vargas e influenciada pela de Weimar, foi a primeira a incluir direitos sociais no texto constitucional: pluralidade sindical, jornada de oito horas, salário mínimo, férias e proteção ao trabalho da mulher e do menor. (a) erra a data e o sentido do liberalismo oligárquico, que se recusava a tratar a questão social como assunto de Estado. (c) atribui à CLT (1943) o direito de greve, que o Estado Novo justamente proibia. (d) e (e) descrevem o sindicato único e a carteira como instrumentos apenas de controle, ignorando que eles também garantiram direitos.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -58860,7 +58826,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da FUVEST: alternativa c) tinha como principais marcas o nacionalismo, a base sindical corporativa e a supremacia do Estado. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "O integralismo de Plínio Salgado combinava nacionalismo exacerbado, organização corporativa da sociedade (sindicatos por categoria, subordinados ao Estado) e a supremacia do Estado sobre o indivíduo — \"Deus, Pátria e Família\" era o lema. (a) erra ao chamá-lo de cópia fiel: as camisas verdes e o sigma o distinguem do fascismo italiano, e havia forte componente católico próprio. (b) é falsa: a AIB teve centenas de milhares de filiados. (e) inverte a relação com Vargas, que usou os integralistas e depois os proibiu, em 1937.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -58894,7 +58860,7 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da FUVEST: alternativa a) as mudanças visíveis nos conteúdos dos sambas sugerem adesão à ideologia do Estado Novo. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "As duas letras são de Wilson Batista e marcam a virada da malandragem para o elogio do trabalho — \"o bonde de São Januário leva mais um operário\" é praticamente um jingle do projeto varguista, que via no samba um veículo para a ideologia do trabalhador. O DIP censurava e premiava letras exatamente por isso. (c) chama de coincidência o que é resposta a uma política cultural explícita; (d) nega uma diferença que está no centro da comparação; (e) supõe um Estado Novo indiferente à propaganda, quando ele a institucionalizou.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -58928,7 +58894,7 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Gabarito oficial da FUVEST: alternativa d) corporativistas e anticomunistas;. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "O integralismo era corporativista — queria a sociedade organizada em corporações profissionais subordinadas ao Estado, e não em partidos ou classes em conflito — e anticomunista até a raiz, tanto que sua principal ação armada foi o levante contra a Intentona de 1935 e a perseguição à esquerda. (a) erra em \"materialistas\": o integralismo era espiritualista e católico. (b) erra em \"internacionalistas\": era ultranacionalista. (e) erra em \"anticristãs\": \"Deus, Pátria e Família\" era o lema.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -58962,7 +58928,7 @@
       }
     ],
     "correctOptionId": "e",
-    "explanation": "Gabarito oficial da FUVEST: alternativa e) oscilação entre a Alemanha e as nações democráticas até optar pelas últimas. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Vargas praticou o que se chama de equidistância pragmática: negociou com a Alemanha, que era o segundo parceiro comercial do Brasil e forneceu o financiamento e a tecnologia da usina de Volta Redonda, e ao mesmo tempo com os Estados Unidos, leiloando o apoio brasileiro. Só em 1942, depois dos torpedeamentos de navios brasileiros, o país declarou guerra ao Eixo e enviou a FEB. Ou seja, oscilação e depois opção pelas democracias — nem alinhamento ideológico com o nazismo, nem desinteresse.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -58996,7 +58962,7 @@
       }
     ],
     "correctOptionId": "e",
-    "explanation": "Gabarito oficial da FUVEST: alternativa e) por uma política seletiva através da qual só os adversários frontais do regime foram reprimidos. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "O Estado Novo não reprimiu os intelectuais em bloco: cooptou a maioria. O DIP e o Ministério da Educação de Gustavo Capanema deram cargos, encomendas e prestígio a Villa-Lobos, Portinari, Carlos Drummond, Mário de Andrade e Cecília Meireles, enquanto reprimia quem se opunha frontalmente, como Graciliano Ramos, preso em 1936. É política seletiva: cooptação de um lado, prisão e censura de outro. (a) e (b) tomam só uma metade dessa política pelo todo.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -59030,7 +58996,7 @@
       }
     ],
     "correctOptionId": "e",
-    "explanation": "Gabarito oficial da FUVEST: alternativa e) um efeito combinado positivo resultou da diversificação das exportações e do crescimento industrial. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A recuperação brasileira veio de um efeito combinado. Com o café desvalorizado e as importações caras, sobrou capital e demanda internos para a indústria nacional, que passou a produzir o que antes se comprava fora — é a substituição de importações. Ao mesmo tempo, a pauta de exportações se diversificou (algodão, cacau, carne), reduzindo a dependência de um produto só. (a) erra porque não havia crédito externo disponível na crise; (d) atribui à recuperação um acordo internacional de preço mínimo do café que não existiu — o que houve foi a queima de estoques pelo governo.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -59064,7 +59030,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da FUVEST: alternativa c) o período de 1937 a 1945, em que Getúlio Vargas fechou o Poder Legislativo, suspendeu as liberdades civis e governou por meio de decretos-leis. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Estado Novo é o período de 1937 a 1945: Vargas fecha o Congresso, revoga a Constituição de 1934, outorga a \"Polaca\" (inspirada na Constituição polonesa autoritária), cancela as eleições, censura pelo DIP e governa por decreto-lei. Não confundir com a Era Vargas inteira (1930-1945), que inclui o Governo Provisório e o Governo Constitucional — só a última fase é ditatorial no sentido pleno, que é o que a expressão nomeia.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -59098,7 +59064,7 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Gabarito oficial da FUVEST: alternativa b) incentivo à integração econômica nacional e aumento da inflação. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Brasília deslocou o eixo político para o Planalto Central e, com as rodovias que a ligaram ao resto do país (Belém-Brasília, Brasília-Acre), puxou a integração econômica nacional e a ocupação do interior. O outro desdobramento foi a inflação: a obra e todo o Plano de Metas foram financiados em boa parte por emissão de moeda e endividamento, e a inflação, que estava em torno de 10% ao ano, passou de 30% no fim do governo JK. (c) erra ao falar em ferrovias — o modelo de JK foi rodoviário.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -59132,7 +59098,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da FUVEST: alternativa c) justificavam uma possibilidade de intervenção armada em regime democrático. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "O Manifesto dos Ministros Militares, de 1961, declara que a posse de Jango levaria o país ao caos e à luta civil — isto é, constrói a justificativa para impedir por força a posse de um vice legalmente eleito. Nomear antecipadamente a catástrofe é o modo clássico de legitimar a intervenção armada dentro de um regime democrático, e foi assim que se chegou ao arranjo parlamentarista de 1961 e, três anos depois, ao golpe. (e) erra o fato: Goulart não implantou socialismo nenhum, e nem sequer havia tomado posse.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -59166,7 +59132,7 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Gabarito oficial da FUVEST: alternativa b) propôs as chamadas \"reformas de base\" que pretendiam promover, entre outras, as reformas agrária e urbana;. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "As reformas de base eram o programa de Jango: reforma agrária, urbana, bancária, fiscal, universitária e eleitoral, anunciadas no comício da Central do Brasil em março de 1964. Eram reformas capitalistas de redistribuição, não implantação do socialismo — e mesmo assim bastaram para unir contra ele a elite agrária, os militares e o governo americano. (d) e (e) atribuem a Jango rupturas com os Estados Unidos e nacionalizações que não ocorreram nesses termos.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -59200,7 +59166,7 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da FUVEST: alternativa a) pela bipartição do mundo em blocos antagônicos, consequência da guerra fria. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A cassação do registro do PCB em 1947 e o rompimento de relações com a URSS no mesmo ano seguem a lógica da Guerra Fria: o mundo se dividiu em blocos e o Brasil de Dutra alinhou-se aos Estados Unidos, alinhamento que exigia expurgar o comunismo interno. O detalhe que desmente (c) é que o PCB acabava de eleger 14 deputados, um senador (Prestes) e ter Prestes como o senador mais votado — foi ilegalizado justamente por ser forte, não por ser fraco.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -59234,7 +59200,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da FUVEST: alternativa c) pelo nacionalismo, e intervenção do Estado na economia, priorizando o setor industrial. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "O populismo latino-americano do período tem uma receita comum: nacionalismo (Cárdenas nacionaliza o petróleo em 1938, Vargas cria a Petrobras em 1953), Estado intervindo diretamente na economia e prioridade à industrialização, apoiada numa aliança com o operariado urbano contra as oligarquias agrárias. (a) e (b) invertem essa aliança. (d) exagera: era reformismo dentro do capitalismo, não oposição a ele. (e) contraria o nacionalismo, que restringia justamente as multinacionais em setores estratégicos.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -59268,7 +59234,7 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da FUVEST: alternativa a) pela criação de uma política desenvolvimentista baseada em um processo de industrialização associado aos capitais estrangeiros. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Entre 1945 e 1960 o Cone Sul viveu o desenvolvimentismo: o Estado planeja (Plano de Metas), investe em infraestrutura e energia, e abre a porta ao capital estrangeiro para instalar a indústria pesada — no Brasil, a indústria automobilística montada com capital alemão e americano no ABC paulista. Ou seja, industrialização associada, não autônoma nem socialista. (d) erra a cronologia: as ditaduras do Cone Sul vêm depois de 1960, e (c) atribui ao período uma reforma agrária intensa que nunca houve.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -59302,7 +59268,7 @@
       }
     ],
     "correctOptionId": "e",
-    "explanation": "Gabarito oficial da FUVEST: alternativa e) trata do populismo no Brasil. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Urbanização acelerada, São Paulo como centro industrial e o Estado se apresentando diretamente às massas, por cima dos partidos e dos sindicatos autônomos: esses são os traços com que a historiografia definiu o populismo brasileiro do período 1930-1964. Coronelismo e oligarquia (alternativas a e d) são fenômenos rurais e da Primeira República, com lógica oposta — mediação pelo chefe local, não apelo direto do líder nacional ao povo urbano.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -59336,7 +59302,7 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da FUVEST: alternativa a) se todas as proposições forem verdadeiras. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "As três proposições são verdadeiras. I: com o café em crise e as importações caras, a crise de 1929 empurrou a indústria nacional a produzir internamente o que se importava. II: encerrada a guerra, a indústria já era o setor mais dinâmico, e a economia brasileira deixou de ser primário-exportadora em sua dinâmica interna. III: o desenvolvimentismo financiou investimento direto com emissão monetária, e o resultado foi inflação crescente — o problema que JK deixou de herança e que Jango e os militares tentariam depois enfrentar.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -59370,7 +59336,7 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Gabarito oficial da FUVEST: alternativa d) Queremismo e Getúlio Vargas. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "\"Bota o retrato do velho outra vez\" é o hino do queremismo, o movimento popular de 1945 que pedia \"Queremos Getúlio\" e defendia a permanência de Vargas no poder ou seu retorno pelas urnas. O \"velhinho\" cujo sorriso \"faz a gente trabalhar\" é o próprio Getúlio, associado à legislação trabalhista. É um bom exemplo de como a cultura popular foi terreno de disputa política no fim do Estado Novo — e Vargas voltaria eleito em 1950.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -59404,7 +59370,7 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da FUVEST: alternativa a) utilização do Estado como instrumento coordenador do desenvolvimento. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "O desenvolvimentismo de JK usa o Estado como coordenador: o Plano de Metas define prioridades (energia, transporte, indústria de base, alimentação e educação), o BNDE financia e o Estado cria as condições para que o capital privado, nacional e estrangeiro, invista. (b) inverte a política, que atraiu capital estrangeiro em vez de eliminá-lo. (d) erra as datas — Vale do Rio Doce é de 1942 e Petrobras é de 1953, ambas anteriores a JK. (e) inverte o resultado: a inflação aumentou.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -59438,7 +59404,7 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Gabarito oficial da FUVEST: alternativa d) A lei de anistia aprovada pelo Congresso beneficiou presos políticos e exilados, e também agentes da repressão. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A Lei da Anistia de 1979 foi \"ampla, geral e irrestrita\" nos dois sentidos: beneficiou presos políticos e exilados, mas também os agentes do Estado responsáveis por tortura, desaparecimentos e execuções, por meio da fórmula dos \"crimes conexos\". É por isso que o texto ironiza o \"esquecimento\" — a anistia foi negociada pela ditadura, não conquistada contra ela. (b) inverte a origem da proposta, que veio dos movimentos de familiares e do Comitê Brasileiro pela Anistia; (c) erra ao atribuir à transição o bipartidarismo, que era imposição do regime desde 1965.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -59472,7 +59438,7 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Gabarito oficial da FUVEST: alternativa b) um esforço de ampliar as áreas de ocupação na Amazônia e de construir a ideia de que se vivia um período de avanço, integração e crescimento nacional. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A Transamazônica e os projetos do INCRA cumpriam duas funções ao mesmo tempo: ocupar a Amazônia (\"integrar para não entregar\") e produzir a imagem do Brasil Grande, de um país que avançava sobre a floresta com obras faraônicas — propaganda essencial num regime que precisava de legitimidade. Na prática, as agrovilas fracassaram, o solo não sustentou a agricultura e a estrada nunca foi concluída. (a) inverte o projeto, que era estatal e nacionalista; (d) erra o ciclo econômico, que já se encerrara.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -59506,7 +59472,7 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da FUVEST: alternativa a) abertura política democrática no Brasil e de crescente insatisfação com as políticas agrárias nacionais então vigentes. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "O MST nasce em 1984, no fim da ditadura, quando a abertura política permite de novo a organização de movimentos sociais de massa — no mesmo ano das Diretas Já. E nasce contra o modelo agrário do regime, que privilegiou a modernização conservadora: crédito para o latifúndio, mecanização e expulsão do trabalhador do campo, sem redistribuição de terra. (b) erra a conjuntura, (c) inverte o sentido da migração, que era do campo para a cidade, e (e) supõe progressos na distribuição de terra que não houve.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -59540,7 +59506,7 @@
       }
     ],
     "correctOptionId": "e",
-    "explanation": "Gabarito oficial da FUVEST: alternativa e) pela decretação do Ato Institucional nº 5, que limitou drasticamente a liberdade de expressão e instituiu medidas que ampliaram a repressão aos opositores do regime. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "O quadro descrito — repressão endurecida, greves suspensas, movimento estudantil refluindo, imprensa amordaçada — é o efeito do AI-5, decretado em dezembro de 1968. Ele fechou o Congresso, suspendeu o habeas corpus para crimes políticos, autorizou cassações e institucionalizou a censura prévia, abrindo o período mais duro da ditadura. (b) atribui ao AI-2 o que foi do AI-5; e (c) inverte o que aconteceu com o movimento estudantil, que foi combativo até 1968 e só refluiu depois.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -59574,7 +59540,7 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Gabarito oficial da FUVEST: alternativa b) crescente concentração de poderes para o Executivo com os Atos Institucionais legitimando a manutenção de um Estado forte. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A engenharia institucional do regime militar concentrou poder no Executivo por meio dos Atos Institucionais: o AI-1 cassou mandatos, o AI-2 extinguiu os partidos e tornou a eleição presidencial indireta, o AI-5 fechou o Congresso. O Legislativo continuou funcionando como fachada, sem autonomia — o oposto do que diz (c). E (e) descreve a abertura de Geisel e Figueiredo, que é a fase final do regime, não a caracterização de sua organização política.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -59608,7 +59574,7 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Gabarito oficial da FUVEST: alternativa d) lenta e gradual, como desejavam setores das forças armadas. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A transição brasileira foi \"lenta, gradual e segura\", nas palavras do próprio general Geisel — conduzida de dentro do regime, com a distensão a partir de 1974, a revogação do AI-5 em 1978, a anistia em 1979 e a eleição indireta de Tancredo em 1985. Isso a distingue da Argentina, onde a derrota nas Malvinas provocou colapso abrupto e julgamento dos militares, e do Chile, onde houve plebiscito. Aqui, os militares saíram sem serem julgados, o que é consequência direta desse formato.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -59642,7 +59608,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da FUVEST: alternativa c) todos os deputados federais e senadores e uma representação de seis deputados estaduais de cada Assembleia Legislativa. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "O Colégio Eleitoral de 1985 reunia os membros do Congresso Nacional — deputados federais e senadores — mais seis delegados indicados por cada Assembleia Legislativa estadual. Era um mecanismo desenhado pelo regime para garantir a eleição indireta de seu candidato, e foi contra ele que a campanha das Diretas Já se levantou em 1984. Como a emenda Dante de Oliveira não passou, a oposição decidiu disputar dentro do próprio Colégio — e venceu, elegendo Tancredo Neves.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -59676,7 +59642,7 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da FUVEST: alternativa a) de grande impacto na história recente do Brasil e teve efeitos negativos na trajetória política de Fernando Collor, o que faz com que seus atuais aliados se empenhem em desmerecer este episódio, tentando diminuir a importância que realmente teve. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Chamar o impeachment de Collor de \"acidente\" é minimizar um episódio central da história recente: foi o primeiro impedimento de um presidente eleito diretamente na América Latina, mobilizou os caras-pintadas nas ruas e teve efeitos duradouros sobre a trajetória de Collor, que teve os direitos políticos cassados por oito anos. A questão pede que você identifique a discordância com a fala de Sarney; (c) erra o fato, porque o STF não anulou o impeachment, e (b) e (d) inventam uma censura historiográfica inexistente.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -59710,7 +59676,7 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Gabarito oficial da FUVEST: alternativa b) privatização de empresas estatais em diversos setores como os de comunicação e de mineração. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A grande mudança econômica do Brasil pós-1985, e sobretudo nos anos 1990, foi a privatização: telecomunicações (o sistema Telebrás, em 1998), mineração (a Vale, em 1997), siderurgia e energia elétrica. Vem acompanhada de abertura comercial, ou seja, redução — e não ampliação — das tarifas de importação, o que derruba (c). (a) é falsa porque o agronegócio ganhou peso na pauta exportadora; (e) inverte a geografia do comércio, que se voltou primeiro aos Estados Unidos e à Europa e depois à China.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -59744,7 +59710,7 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da FUVEST: alternativa a) a produtividade agrícola avançou, mas não eliminou os movimentos sociais no campo. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A produtividade agrícola brasileira cresceu enormemente nas últimas décadas, com mecanização, transgênicos e ganho por hectare — e ainda assim MST, conflitos de terra e movimentos indígenas e quilombolas seguem ativos, porque produtividade não resolve concentração fundiária. É essa tensão que a alternativa (a) capta. As demais fazem afirmações fortes demais para serem verdadeiras: autonomia tecnológica industrial, PIB em crescimento contínuo, metas ambientais cumpridas, desemprego plenamente compensado.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST"
@@ -59778,7 +59744,7 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da UNESP: alternativa a) representa, de maneira satírica, os governantes e a desonestidade na Bahia colonial. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Gregório de Matos é o Boca do Inferno do Barroco baiano, e o poema é sátira: enumera conselheiros que não sabem governar a própria cozinha, usura nos mercados e uma cidade em que só não é pobre quem furta. Isso é crítica moral e social à administração colonial, não projeto de independência — nativismo e ideia de nação são de outro século. (c), (d) e (e) erram a escola literária: neoclássico, modernista e parnasiano são estilos posteriores ao Barroco.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNESP"
@@ -59812,7 +59778,7 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Gabarito oficial da UNESP: alternativa b) o temor, nos indígenas, diante da ambição europeia e a percepção, pelos europeus, da dificuldade de estruturar o empreendimento colonial e manter o controle de terras e povos tão distantes. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "O Caribe foi o laboratório da conquista: ali os europeus perceberam que faltava mão de obra (os taínos foram dizimados em poucas décadas por doença e trabalho forçado) e que extrair riqueza exigiria estruturar uma empresa colonial — o que levaria à escravidão africana e à plantation. Do lado indígena, restou o temor diante de uma ambição sem limite. É esse duplo aprendizado que torna o caso \"exemplar para toda a América\". (a) inventa uma tolerância que não existiu, e (d) atribui às elites coloniais uma autonomia plena que só apareceria três séculos depois.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNESP"
@@ -59846,7 +59812,7 @@
       }
     ],
     "correctOptionId": "e",
-    "explanation": "Gabarito oficial da UNESP: alternativa e) desenvolveram missões de cristianização dos nativos e facilitaram o emprego de mão de obra indígena na empresa colonial. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A Igreja foi peça da máquina colonial: as missões e reduções catequizavam, mas ao concentrar populações dispersas em aldeamentos também as tornavam disponíveis como mão de obra para a empresa colonial e mais fáceis de controlar. Não houve rejeição ao trabalho compulsório nem tolerância às religiões nativas — houve substituição, com destruição de ídolos e proibição de rituais, ainda que na prática surgissem sincretismos. As alternativas (b), (c) e (d) atribuem ao clero uma resistência ao sistema que só apareceu em vozes isoladas.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNESP"
@@ -59880,7 +59846,7 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Gabarito oficial da UNESP: alternativa b) representaram uma espécie de guerra biológica que afetou, ainda que de forma desigual, conquistadores e conquistados. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A varíola, o sarampo e a gripe chegaram com os europeus a populações sem qualquer imunidade prévia, e mataram entre 50% e 90% dos povos originários — mortandade sem paralelo na história. O efeito foi desigual, mas não unilateral: os europeus também adoeceram no novo ambiente, com malária e febre amarela, e há forte evidência de que a sífilis fez o caminho inverso, da América para a Europa. Daí a formulação \"guerra biológica\" que afetou os dois lados de forma desigual.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNESP"
@@ -59914,7 +59880,7 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da UNESP: alternativa a) justificar a captura, o aprisionamento e a escravização de indígenas. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "\"Guerra justa\" era a doutrina que permitia escravizar legalmente o indígena: bastava declarar que determinado grupo era hostil, antropófago ou que havia recusado a fé, e a captura passava a ser lícita aos olhos da Coroa e da Igreja. Na prática, era o mecanismo jurídico que legitimava a escravidão indígena que as leis de proteção supostamente proibiam. Todas as alternativas com \"impedir\" invertem a função do conceito, que servia para autorizar, não para restringir.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNESP"
@@ -59948,7 +59914,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da UNESP: alternativa c) envolveu tanto a cessão vitalícia do usufruto de terras que continuavam a ser propriedades da Coroa, quanto a orientação principal do uso da terra para a monocultura exportadora. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A sesmaria é o exemplo perfeito da mistura entre feudal e mercantil: a terra continuava sendo propriedade da Coroa, que cedia apenas o usufruto — lógica de vassalagem, com obrigação de cultivar sob pena de perda —, mas essa cessão se destinava à produção de gêneros para o mercado europeu, lógica plenamente mercantil. (a) e (e) inventam pequena propriedade e minifúndio, quando a sesmaria era enorme por definição. (d) atribui à política de terras a prevalência da subsistência, que era exatamente o oposto do que a Coroa queria.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNESP"
@@ -59982,7 +59948,7 @@
       }
     ],
     "correctOptionId": "e",
-    "explanation": "Gabarito oficial da UNESP: alternativa e) a fundação de vilas e cidades e a cobrança de impostos. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "O donatário recebia poderes quase soberanos dentro de sua capitania: fundar vilas, distribuir sesmarias, aplicar justiça, alistar tropas e cobrar tributos — sem custo para a Coroa, que assim delegava a colonização à iniciativa privada. Nomear funcionários régios e representar diplomaticamente Portugal continuavam sendo prerrogativas da Coroa, o que derruba (a). E (c) e (d) atribuem aos donatários posições sobre indígenas e escravidão que não faziam parte da carta de doação.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNESP"
@@ -60016,7 +59982,7 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da UNESP: alternativa a) maior mobilidade social que no restante da colônia. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "As Minas do século XVIII foram a região mais urbana, mais monetizada e mais móvel da colônia: a mineração podia ser feita por poucos, o ouro circulava como dinheiro, e havia trabalho remunerado, ofícios, comércio e escravos de ganho que compravam a própria alforria. Daí a mobilidade social maior. Todas as outras alternativas invertem os fatos: o Barroco mineiro é o auge artístico da colônia, o meio urbano predominou, o comércio interno foi intenso e as irmandades religiosas — inclusive de pretos e pardos — proliferaram como em nenhum outro lugar.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNESP"
@@ -60050,7 +60016,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da UNESP: alternativa c) a preservação de crenças e rituais religiosos de origem africana, que eram condenados pela Igreja Católica. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Resistência escrava não foi só o quilombo: manter candomblé, calundu, tambores e rituais de matriz africana, sob perseguição da Igreja, era preservar identidade e criar laços de solidariedade — resistência cultural cotidiana. As outras alternativas descrevem coisas que não existiram: quilombo supervisionado por brancos, sabotagem com pragas africanas, embarque clandestino de volta à África em massa, alforria automática por batismo. O batismo era obrigatório e não libertava ninguém.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNESP"
@@ -60084,7 +60050,7 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Gabarito oficial da UNESP: alternativa b) as chamadas “guerras justas” dos portugueses contra tribos rebeldes legitimavam a escravização de índios. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A escravidão indígena existiu e era legalizada pelo mecanismo da guerra justa: declarada a hostilidade ou a recusa da fé, a captura passava a ser lícita. Ela predominou no primeiro século e continuou em São Paulo e na Amazônia por muito tempo, convivendo com a escravidão africana. (a) e (d) apagam essa realidade; (e) inverte a distribuição regional; e (c) atribui aos holandeses um controle do tráfico que só existiu no período em que ocuparam Pernambuco e Angola, entre 1630 e 1654.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNESP"
@@ -60118,7 +60084,7 @@
       }
     ],
     "correctOptionId": "e",
-    "explanation": "Gabarito oficial da UNESP: alternativa e) o sistema de exclusivo metropolitano, orientado pela política mercantilista. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "O que a Independência rompeu foi o exclusivo metropolitano — o monopólio que obrigava a colônia a comerciar apenas com Portugal, pedra angular do mercantilismo. Tudo o mais permaneceu: monocultura de exportação, latifúndio e escravidão, que só acabaria 66 anos depois. É por isso que a historiografia fala em independência conservadora: mudou o vínculo político-comercial, não a estrutura social. Repare que a abertura dos portos, em 1808, já havia dado o primeiro golpe nesse exclusivo.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNESP"
@@ -60152,7 +60118,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da UNESP: alternativa c) o combate violento à organização quilombola era uma prioridade, por esta representar a negação da estrutura social e produtiva escravista. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Quilombos como o de Quariterê tinham lavoura, produção de algodão e trocas com a vizinhança — eram sociedades alternativas funcionando dentro da colônia, e é exatamente por isso que a repressão era prioritária: a existência de negros livres, produzindo e comerciando, negava na prática a tese de que a escravidão era condição natural. As alternativas erradas ou minimizam a ameaça, ou pintam o quilombo como acampamento militar efêmero e hostil, quando o próprio enunciado descreve produção e comércio.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNESP"
@@ -60186,7 +60152,7 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da UNESP: alternativa a) os colonos de várias regiões do Brasil e os representantes das ordens religiosas, especialmente os jesuítas, entraram em conflitos, pois defendiam formas diversas nas relações com as sociedades indígenas. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Colonos e jesuítas disputaram o indígena durante toda a colônia: os primeiros o queriam como escravo nas lavouras e nas entradas, os segundos o queriam aldeado sob tutela missionária, como mão de obra da própria ordem e como alma a converter. O conflito chegou a expulsões de jesuítas de São Paulo e do Maranhão, e terminou com a expulsão da Companhia em 1759. As outras alternativas apagam esse conflito, atribuindo à Igreja e aos senhores uma posição comum que eles não tinham.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNESP"
@@ -60220,7 +60186,7 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Gabarito oficial da UNESP: alternativa b) ao esforço do imperador para impor seu poder às províncias que não haviam aderido à Independência. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A Independência não foi aceita em todo o território: Bahia, Maranhão, Pará, Piauí e a Cisplatina tinham guarnições portuguesas e resistiram. Entre o fim de 1822 e 1823, o governo do Rio teve de fazer guerra para impor sua autoridade, contratando mercenários e a esquadra de Lord Cochrane. Por isso (b), e por isso (d) é falsa: a unificação não foi pacífica. O reconhecimento internacional (a) só viria a partir de 1825.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNESP"
@@ -60254,7 +60220,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da UNESP: alternativa c) representou a centralização do regime monárquico e provocou reações separatistas. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Ao dissolver a Constituinte com tropas e outorgar a Constituição de 1824, D. Pedro I deixou claro quem mandava: o texto criou o Poder Moderador e concentrou o poder na Coroa. A reação veio de imediato no Nordeste, com a Confederação do Equador (1824), que proclamou uma república separatista. (b) erra o prazo — o Primeiro Reinado ainda duraria sete anos; (d) e (e) invertem o resultado, que foi centralizador e antifederalista.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNESP"
@@ -60288,7 +60254,7 @@
       }
     ],
     "correctOptionId": "e",
-    "explanation": "Gabarito oficial da UNESP: alternativa e) uma disputa sobre a distribuição dos poderes políticos no novo Estado. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "As duas frases parecem cordiais, mas dizem coisas opostas: o Imperador espera uma Constituição \"digna dele e do Brasil\" (isto é, submetida a ele), e a Assembleia promete uma Constituição digna \"da nação, de si e do Imperador\" — nessa ordem, com a soberania na nação e o Imperador em último lugar. O impasse é sobre quem é a fonte do poder, e terminaria com a dissolução da Constituinte em novembro de 1823. (b) erra ao chamar os constituintes de republicanos, e (d) inverte sua posição, que era liberal.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNESP"
@@ -60322,7 +60288,7 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da UNESP: alternativa a) no contexto dos protestos desencadeados pelo fechamento da Assembleia Constituinte e da outorga, por D. Pedro I, da Carta Constitucional. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "O tom violento contra \"Pedro de Alcântara\", chamado de imperador criminoso que quer escravizar o Norte, situa o texto em 1824: é a Confederação do Equador reagindo ao fechamento da Constituinte e à outorga da Constituição pelo imperador. O manifesto conjuga separatismo, republicanismo e antilusitanismo — os três traços do movimento pernambucano. As demais alternativas deslocam o texto para conflitos anteriores ou para instituições, como o Conselho de Estado, criadas depois.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNESP"
@@ -60356,7 +60322,7 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da UNESP: alternativa a) Confederação do Equador. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A Confederação do Equador (1824) é o movimento pedido: separatista, republicano e ocorrido no Império. Beckman (1684), Inconfidência Mineira (1789) e Conjuração Baiana (1798) são coloniais, anteriores à Independência. Canudos (1896-97) é da República e não era separatista nem republicano — era uma comunidade messiânica acusada, injustamente, de restauração monárquica.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNESP"
@@ -60390,7 +60356,7 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da UNESP: alternativa a) ao tráfico negreiro. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "O tratado de 1826 com a Inglaterra determinava o fim do tráfico negreiro em três anos, e foi o preço político do reconhecimento britânico da Independência. Note a distinção que a questão cobra: acabar com o tráfico não é acabar com a escravidão — o comércio transatlântico seria proibido (na letra da lei em 1831, na prática em 1850), enquanto a escravidão continuaria até 1888. É por isso que (c) está errada.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNESP"
@@ -60424,7 +60390,7 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Gabarito oficial da UNESP: alternativa b) o surto da cafeicultura. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "O café foi o que tirou o Império da crise fiscal herdada do Primeiro Reinado. A partir da década de 1830 a lavoura avança pelo Vale do Paraíba, e as exportações passam a gerar as receitas alfandegárias que sustentavam o Estado — o Segundo Reinado inteiro se apoia nisso. Mineração já estava em declínio havia meio século, e o açúcar de beterraba é concorrente do produto brasileiro, não solução para o Brasil.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNESP"
@@ -60458,7 +60424,7 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da UNESP: alternativa a) menor isolamento dessas fazendas em relação aos meios urbanos. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "O Oeste Paulista de 1840 se distingue da fazenda colonial isolada porque nasce articulado a vilas, estradas, e depois ferrovias e a Santos — a produção depende do escoamento, e por isso a fazenda vive perto do meio urbano e dele depende. (b) antecipa o trabalho livre, que só se generaliza a partir de 1870; (c) supõe o fim do mandonismo, que na verdade se reproduz no coronelismo; e (e) inverte o destino da produção, que era o mercado externo.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNESP"
@@ -60492,7 +60458,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da UNESP: alternativa c) a garantia de livre trânsito nas vias de acesso a províncias do interior do país. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "O artigo trata de navegação: garantir aos navios da Tríplice Aliança a livre circulação pelo Alto Paraná e pelo rio Paraguai. Esse era um interesse brasileiro central no conflito, porque a única via de acesso ao Mato Grosso passava por águas paraguaias — sem livre navegação, a província ficava isolada do resto do país. É por isso que a questão da navegação aparece já no tratado de 1865 e reaparece no acordo de paz.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNESP"
@@ -60526,7 +60492,7 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da UNESP: alternativa a) ao aumento das fugas e rebeliões escravas e ao crescimento das correntes migratórias em direção ao Brasil. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Até 1870 o escravismo seguia firme, e o que abalou o sistema depois foram, de um lado, a resistência dos próprios escravizados — fugas em massa, quilombos como o de Jabaquara, recusa ao trabalho — e, de outro, a chegada de imigrantes europeus, que ofereciam uma alternativa de mão de obra ao café paulista. Sem essas duas pressões simultâneas, as leis graduais (Ventre Livre, Sexagenários) não teriam desembocado em 1888. (b) inverte o interesse dos fazendeiros do Vale, que resistiram até o fim.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNESP"
@@ -60560,7 +60526,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da UNESP: alternativa c) alheamento de parte da sociedade brasileira diante do conteúdo ideológico da mudança política. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A crônica descreve uma confeitaria que atravessou a mudança de regime sem que nada acontecesse com ela, porque seu nome não dizia nada a ninguém — imagem do alheamento popular diante da Proclamação. A frase de Aristides Lobo, \"o povo assistiu àquilo bestializado\", resume o mesmo diagnóstico. (b) chama a República de revolução social, que ela não foi; (d) e (e) atribuem à população uma adesão e uma ampliação de direitos que não ocorreram — o eleitorado seguiu minúsculo, com analfabetos excluídos.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNESP"
@@ -60594,7 +60560,7 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Gabarito oficial da UNESP: alternativa d) ajudou a profissionalizar e politizar o Exército brasileiro, mas contribuiu na difusão, entre suas lideranças, do abolicionismo. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A guerra criou o Exército como instituição nacional: profissionalizou os quadros, deu-lhes prestígio e coesão, e ao mesmo tempo os aproximou do positivismo e do republicanismo, que ganhariam força na Escola Militar. Ou seja, o mesmo conflito que mostrou a força do Império formou o grupo que o derrubaria vinte anos depois — daí a leitura de apogeu e de declínio ao mesmo tempo. As outras alternativas apontam efeitos reais, mas nenhum deles explica essa ambivalência interna ao próprio Império.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNESP"
@@ -60628,7 +60594,7 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Gabarito oficial da UNESP: alternativa b) a diversificação econômica e o avanço do processo de urbanização. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "O café do Oeste Paulista trouxe ferrovias, bancos, casas comerciais, serviços e uma população imigrante que se fixou nas cidades — resultado: diversificação econômica e urbanização, com São Paulo saltando de vila a metrópole. (a) contraria os fatos, porque a economia se voltou ao mercado e a escravidão entrou em colapso; (c) inverte o que houve no Vale do Paraíba, que empobreceu sem se dividir; (d) e (e) deslocam para o período fenômenos posteriores.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNESP"
@@ -60662,7 +60628,7 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da UNESP: alternativa a) a grande seca de 1877-1879 no Ceará provocou um fluxo migratório para a região, o que transformou retirantes em seringueiros durante o período áureo de extração da borracha. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A grande seca de 1877-1879 matou centenas de milhares no Ceará e empurrou uma multidão de retirantes para a Amazônia, onde viraram seringueiros no auge da borracha. Foi essa migração forçada, e não um projeto estatal, que ocupou de fato a floresta no fim do século XIX. (c) inverte a cronologia da questão do Acre, que é consequência dessa ocupação; e (d) atribui a Transamazônica a Juscelino, quando ela é de 1970, no governo Médici.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNESP"
@@ -60696,7 +60662,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da UNESP: alternativa c) a liderança do Padre Cícero, vinculada à dinâmica política tradicional da região, e o movimento de Canudos, com características de contestação social. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Padre Cícero e Antônio Conselheiro são os dois casos clássicos, e a questão pede que você perceba a diferença política entre eles: o padre de Juazeiro se integrou à estrutura oligárquica, virou prefeito e aliado de coronéis, enquanto Canudos constituiu uma comunidade autônoma, fora do controle do Estado e da Igreja, e por isso foi destruída. (a) atribui a Ibiapina a defesa do protestantismo, e (b) confunde cangaço e coronelismo com misticismo.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNESP"
@@ -60730,7 +60696,7 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Gabarito oficial da UNESP: alternativa d) a política dos governadores, que articulava a ação do governo federal aos interesses das oligarquias locais. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A política dos governadores, montada por Campos Sales, é o eixo do sistema: o governo federal apoiava a oligarquia dominante em cada estado, e essa oligarquia garantia no Congresso a base do presidente, com a Comissão de Verificação de Poderes barrando eleitos da oposição. (c) confunde com a política do café com leite, que é a alternância SP-MG na presidência e não proibia candidatura de ninguém; e (e) inverte a legislação eleitoral, que manteve o voto aberto e excluiu analfabetos.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNESP"
@@ -60764,7 +60730,7 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Gabarito oficial da UNESP: alternativa d) a melhoria da higiene e do saneamento urbanos, com a vacinação obrigatória e a erradicação de epidemias. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A reforma de Pereira Passos e a campanha de Oswaldo Cruz tinham como bandeira o saneamento: erradicar febre amarela, peste e varíola numa cidade que perdia navios e imigrantes por causa das epidemias. Vacinação obrigatória, brigadas mata-mosquitos e demolição de cortiços faziam parte do mesmo pacote higienista. (a) e (c) invertem o efeito social, que foi expulsar a população pobre do centro para os morros — a favela é subproduto direto dessa reforma.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNESP"
@@ -60798,7 +60764,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da UNESP: alternativa c) ao movimento tenentista, do qual foi oriunda, e à tentativa de derrubar o presidente Artur Bernardes. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A Coluna Prestes é tenentismo em marcha: nasce da junção dos revoltosos de São Paulo (1924) com os do Rio Grande do Sul, e seu objetivo declarado era derrubar o governo de Artur Bernardes, que governava sob estado de sítio quase permanente. Prestes só se tornaria comunista depois, em 1930, o que derruba (b). E (d) erra ao dizer que apoiava Vargas: a Coluna se dissolveu em 1927, e em 1930 Prestes recusou aderir à Aliança Liberal.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNESP"
@@ -60832,7 +60798,7 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Gabarito oficial da UNESP: alternativa d) levou o governo federal a negociar com a oligarquia paulista e a fazer concessões a seus interesses. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Militarmente São Paulo perdeu em 1932, mas politicamente obteve o que pedia: Vargas nomeou um interventor paulista, convocou a Constituinte e promulgou a Constituição de 1934 — negociou com a oligarquia cafeeira em vez de esmagá-la. (b) inverte o efeito, já que o movimento acelerou a constitucionalização; (c) erra o objetivo, que era constitucionalista e não separatista; e (e) inventa uma vitória militar que não houve.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNESP"
@@ -60866,7 +60832,7 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Gabarito oficial da UNESP: alternativa b) os paulistas e os habitantes do estado de São Paulo à luta pela constitucionalização do país. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "\"Você tem um dever a cumprir\" é cartaz de recrutamento da Revolução Constitucionalista de 1932, dirigido aos paulistas e chamando à luta pela convocação de uma Assembleia Constituinte — Vargas governava desde 1930 sem Constituição, por decreto. As outras alternativas deslocam o cartaz para a FEB (1944), para a legislação trabalhista ou para a Aliança Liberal, todos de contexto e de data diferentes.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNESP"
@@ -60900,7 +60866,7 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Gabarito oficial da UNESP: alternativa a) Departamento de Imprensa e Propaganda (DIP). Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "O órgão é o DIP, Departamento de Imprensa e Propaganda, criado em 1939 e subordinado diretamente a Vargas. Ele censurava jornal, rádio, cinema e teatro, produzia a Hora do Brasil, controlava a entrada de publicações estrangeiras e fabricava a imagem do presidente como \"pai dos pobres\". O DASP, que aparece como distrator, existiu de verdade, mas cuidava de administração pública e concursos, não de propaganda.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNESP"
@@ -60934,7 +60900,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da UNESP: alternativa c) a política econômica adotada, de cunho nacionalista, da qual um dos marcos foi a criação da Petrobrás, em 1953. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "O nacionalismo econômico do segundo governo Vargas — Petrobras em 1953, com o monopólio estatal do petróleo, projeto da Eletrobras, restrição à remessa de lucros — mobilizou contra ele o capital estrangeiro, a UDN e parte dos militares, e é a raiz da crise que terminou no suicídio de agosto de 1954. (a) é falsa: o Congresso funcionou; (b) inverte a posição da UDN, que era oposição ferrenha; e (e) erra o desfecho do atentado da rua Tonelero, em que Lacerda sobreviveu e morreu o major Rubens Vaz.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNESP"
@@ -60968,7 +60934,7 @@
       }
     ],
     "correctOptionId": "e",
-    "explanation": "Gabarito oficial da UNESP: alternativa e) o estabelecimento de forte intervenção do Estado na economia e ampla mobilização das classes populares urbanas. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Vargas e Perón compartilham a fórmula: Estado forte intervindo na economia (estatais, planejamento, substituição de importações) e mobilização direta das massas urbanas, com legislação trabalhista, sindicato atrelado ao Estado e apelo pessoal do líder ao povo. (a) erra ao falar em reforma agrária, que nenhum dos dois fez; (b) e (c) atribuem a eles autonomia sindical e legalização de partidos de esquerda, quando ambos controlavam os sindicatos e reprimiam comunistas.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNESP"
@@ -61002,7 +60968,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da UNESP: alternativa c) Revolução de 1930. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "Prestes recusou a Aliança Liberal em 1930 chamando-a de campanha \"aparentemente democrática\" que na verdade sacrificava os interesses populares — para ele, era disputa entre frações da mesma oligarquia, com os dissidentes de Minas, Rio Grande e Paraíba tomando o lugar dos paulistas. O movimento contestatório a que ele se refere é, portanto, a Revolução de 1930. É essa leitura que o levaria, em seguida, a aderir ao Partido Comunista.",
     "difficulty": "medium",
     "examSource": {
       "board": "UNESP"
@@ -61036,7 +61002,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da UNESP: alternativa c) na década de 30 e antecederam o golpe de Estado de 1937. Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A Aliança Nacional Libertadora foi lançada em 1935, reunindo comunistas, socialistas e tenentes de esquerda em torno do fim das dívidas imperialistas, da nacionalização das empresas estrangeiras e da reforma agrária. Foi posta na ilegalidade meses depois e seu fracasso na Intentona de novembro deu a Vargas o pretexto do perigo comunista — usado até 1937 para justificar o golpe do Estado Novo, com o falso Plano Cohen. Daí a alternativa (c).",
     "difficulty": "medium",
     "examSource": {
       "board": "UNESP"
@@ -61070,7 +61036,7 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Gabarito oficial da UNESP: alternativa c) no Governo Provisório de Vargas (1930-1934). Comentário detalhado ainda não escrito para esta questão.",
+    "explanation": "A legalização e regulamentação dos sindicatos vem no Governo Provisório de Vargas, com a criação do Ministério do Trabalho em 1930 e a lei de sindicalização de 1931. Mas há um preço embutido, que a questão não menciona e vale saber: o modelo era de sindicato único por categoria, reconhecido e tutelado pelo Ministério — direitos em troca de controle. Antes disso, na República Oligárquica, a questão social era \"caso de polícia\".",
     "difficulty": "medium",
     "examSource": {
       "board": "UNESP"
