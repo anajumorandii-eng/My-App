@@ -221,7 +221,7 @@ export interface Question {
   examSource?: {
     board: string; // e.g. 'ENEM', 'FUVEST', 'COMVEST', 'VUNESP', 'FAMERP'
     year?: number; // Unknown when a workbook reproduces an exam without its year.
-    sourceUrl: string;
+    sourceUrl?: string; // Idem: a coletânea por assunto não traz o link da prova.
   };
 }
 

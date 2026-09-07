@@ -24,3 +24,12 @@ it('incorpora o local mesmo quando ele chega depois do remoto e preserva a ediç
   expect(result.current.questions).toHaveLength(2);
   expect(result.current.questions.find(q => q.id === 'fis')?.explanation).toBe('Edição revisada');
 });
+
+it('mostra o banco local e avisa quando o remoto falha', async () => {
+  vi.mocked(getLocalQuestionBank).mockResolvedValue([question('fis'), question('geo', 'Geografia')]);
+  vi.mocked(getQuestions).mockRejectedValue(new Error('firestore fora do ar'));
+  const { result } = renderHook(() => useQuestions());
+  await waitFor(() => expect(result.current.loading).toBe(false));
+  expect(result.current.questions).toHaveLength(2);
+  expect(result.current.syncError).toContain('Mostrando o banco local');
+});
