@@ -67408,7 +67408,7 @@
         "text": "leishmaniose, parasitose transmitida por mosquitos e contraída pelos primeiros exploradores da Amazônia e dos Andes durante o século XVI"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. Camões descreve a doença que dizimou a tripulação de Vasco da Gama: gengivas que incham desmesuradamente, carne que cresce e ao mesmo tempo apodrece. Esse quadro gengival é o marcador clássico do escorbuto, causado pela falta de vitamina C — indispensável à síntese de colágeno e, portanto, à integridade dos vasos e das gengivas. Nas longas travessias não havia frutas nem verduras frescas, e a doença se tornou o flagelo das navegações. Peste bubônica, malária, varíola e leishmaniose têm outros sinais e nenhuma delas produz esse comprometimento característico da boca.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_001-p4.webp",
@@ -67452,7 +67452,7 @@
         "text": "A atividade da aromatase depende da quantidade de estradiol disponível"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. O gráfico mostra a atividade da aromatase subindo rapidamente entre 28 e 30 °C, faixa em que o esquema ao lado indica transcrição ativa do gene. Mais aromatase significa mais conversão de testosterona em estradiol, e é o estradiol que direciona a diferenciação para fêmea — daí a alternativa c e a queda da a. Abaixo de 28 °C a transcrição está bloqueada e a atividade é mínima, o que elimina a b, que inverte a relação, e a d, já que a 26 °C não há equilíbrio e sim predomínio de machos. A e inverte causa e efeito: o estradiol é produto da enzima, não a condição para sua atividade.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_003-p7.webp",
@@ -67492,7 +67492,7 @@
         "text": "glicídeo, proteína, ácido nucleico e água"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. O esquema é de uma célula vegetal adulta, e as quatro estruturas apontadas são camadas e compartimentos conhecidos. I é a parede celular, feita de celulose, um glicídeo. II é a membrana plasmática, cuja base é a bicamada de fosfolipídios, portanto lipídeo. III é o grande vacúolo central, que ocupa a maior parte do volume e é essencialmente água com solutos. IV é o núcleo, onde está o DNA, um ácido nucleico. A ordem glicídeo, lipídeo, água e ácido nucleico corresponde à alternativa a; as demais trocam parede e membrana ou deslocam a água para o núcleo.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_004-p8.webp",
@@ -67532,7 +67532,7 @@
         "text": "18, 32, 18"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. Na dupla-hélice, adenina pareia sempre com timina e citosina sempre com guanina. O segmento tem 100 pares de bases; se 32 desses pares são A-T, os 68 restantes são C-G. Daí saem 68 citosinas, 68 guaninas e, pelo pareamento com as 32 timinas, 32 adeninas — a ordem pedida no enunciado. O deslize mais comum é tratar o comprimento como 100 bases avulsas, e não como 100 pares, o que produz os números pequenos das alternativas d e e.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_005-p9.webp",
@@ -67572,7 +67572,7 @@
         "text": "pâncreas e no fígado"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. A célula 1 aparece lotada de mitocôndrias e sem vesículas: é o perfil de uma célula que gasta muita energia continuamente, como a fibra do músculo esquelético. A célula 2 tem mitocôndrias em número modesto e está cheia de vesículas secretoras, o perfil de uma célula que fabrica e exporta proteínas — a célula acinosa do pâncreas, produtora de enzimas digestivas. A associação correta é músculo esquelético e pâncreas. Hemácias não têm mitocôndrias nem vesículas, e osteócitos, presos na matriz óssea, não têm essa maquinaria de secreção proteica em massa.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_006-p9.webp",
@@ -67589,30 +67589,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Biologia · questão 7 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Células de embrião de drosófila (2n = 8), que estavam em divisão, foram tratadas com uma substância que inibe a formação do fuso, impedindo que a divisão celular prossiga. Após esse tratamento, quantos cromossomos e quantas cromátides, respectivamente, cada célula terá?",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "4 e 4"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "4 e 8"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "8 e 8"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "8 e 16"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "16 e 16"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. A substância bloqueia o fuso, então a divisão trava antes da separação das cromátides-irmãs — o DNA já foi duplicado na interfase, mas nada é repartido. A célula continua com os 8 cromossomos da espécie (2n = 8), cada um formado por duas cromátides presas pelo centrômero: 8 cromossomos e 16 cromátides. O erro comum é contar cada cromátide como um cromossomo, o que levaria a 16 e 16 (alternativa e); enquanto as cromátides estiverem unidas pelo mesmo centrômero, elas são um cromossomo só.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_007-p10.webp",
@@ -67652,7 +67652,7 @@
         "text": "4"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. Na herança mitocondrial, as mitocôndrias do zigoto vêm todas do óvulo: uma mãe afetada transmite a todos os filhos e um pai afetado não transmite a nenhum. Basta procurar o heredograma que quebra essa regra. Na família 3 o pai é surdo, a mãe é ouvinte e os dois filhos são surdos — impossível por via materna, o que afasta a hipótese. Nas famílias 2 e 4 a mãe afetada tem filhos afetados, e na família 1 o pai afetado não transmite: todas compatíveis. Por isso apenas a família 3 permite descartar a herança mitocondrial.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_008-p10.webp",
@@ -67692,7 +67692,7 @@
         "text": "mitocôndrias e plastos mitocrôndias mitocrôndias"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa e). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: e. DNA fora do núcleo existe apenas nas organelas de origem endossimbiótica: mitocôndrias e plastídios. Ribossomos não têm DNA — são feitos de RNA e proteínas —, o que já elimina as alternativas a, b e c. Uma planta tem mitocôndrias e plastos, logo DNA nos dois. Fungos e animais não têm plastos, então em ambos o DNA extranuclear vem só das mitocôndrias. A combinação mitocôndrias e plastos, mitocôndrias, mitocôndrias é a da alternativa e; a d erra ao atribuir plastos também ao fungo.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_009-p11.webp",
@@ -67709,30 +67709,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Biologia · questão 10 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Considere o processo de divisão meiótica em um homem heterozigótico quanto a uma característica de herança autossômica recessiva (Hh). O número de cópias do alelo h nas células que estão no início da interfase (A), nas células que estão em metáfase I (B) e naquelas que resultam da segunda divisão meiótica (C) é, respectivamente:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "A: 1; B: 1; C: 1 ou 0"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "A: 1; B: 2; C: 1 ou 0"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "A: 1; B: 2; C: 1"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "A: 2; B: 2; C: 1"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "A: 2; B: 1; C: 1"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. No início da interfase o DNA ainda não foi duplicado: o indivíduo Hh tem uma única cópia de h. Depois da duplicação, cada cromossomo passa a ter duas cromátides idênticas, de modo que na metáfase I existem 2 cópias de h. Ao final da segunda divisão meiótica, as quatro células resultantes são haploides e com uma cromátide cada: duas receberam o cromossomo com h e duas receberam o com H, ou seja, 1 ou 0 cópias. Confundir o número de cópias com o de alelos do genótipo é o que leva às alternativas d e e.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_010-p11.webp",
@@ -67772,7 +67772,7 @@
         "text": "III, II e I"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. As setas dizem o essencial. Em I, entrada e saída de água têm a mesma espessura: a célula está em equilíbrio, meio isotônico. Em II a seta de saída é a mais grossa e a célula aparece murcha, sinal de meio hipertônico. Em III a seta de entrada predomina e a célula está inchada, quase esférica, sinal de meio hipotônico. Ordenando da solução menos concentrada para a mais concentrada, vai-se do meio hipotônico ao hipertônico: III, I e II. Trocar a ordem para I, II e III é seguir a numeração das figuras em vez do que as setas mostram.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_012-p13.webp",
@@ -67812,7 +67812,7 @@
         "text": "espermatócitos e ovócitos primários originam o mesmo número de gametas, no final da segunda divisão meiótica"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. Ao final da primeira divisão meiótica, cada célula-filha recebeu metade dos cromossomos, mas cada cromossomo ainda tem duas cromátides — logo espermatócitos e ovócitos secundários têm a mesma quantidade de DNA das gônias diploides não duplicadas. A b erra ao inventar mitose no amadurecimento das espermátides, que passam por diferenciação, não por divisão. A c e a d erram o momento: a meiose feminina começa ainda na vida intrauterina, e não após o nascimento. A e ignora a assimetria da ovogênese, em que um ovócito primário rende um óvulo e corpúsculos polares, enquanto o espermatócito primário rende quatro espermatozoides.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_013-p13.webp",
@@ -67852,7 +67852,7 @@
         "text": "possuem citoplasma, que não contém organelas"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. Os retrovírus, como o HIV, carregam a transcriptase reversa, enzima que sintetiza DNA a partir do molde de RNA — o caminho inverso do fluxo habitual da informação genética. É esse DNA que se integra ao genoma da célula hospedeira. As demais alternativas atribuem aos vírus propriedades de célula que eles não têm: dependem sempre da maquinaria de uma célula para se reproduzir (a), possuem apenas um tipo de ácido nucleico, DNA ou RNA (b), não realizam respiração nem qualquer metabolismo próprio (d) e não têm citoplasma (e).",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_014-p13.webp",
@@ -67896,7 +67896,7 @@
         "text": "2N, 4N, 2N e 2N"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. A célula 1 está em interfase, antes da duplicação, com a quantidade diploide de DNA: 2N. A célula 2 já tem os cromossomos condensados no início da mitose, depois da duplicação da fase S, portanto 4N. A célula 3 está em anáfase: as cromátides já se separaram, mas continuam dentro de uma única célula, que ainda contém 4N. Só com a citocinese o material se reparte, e cada célula-filha, como a 4, volta a 2N. A sequência é 2N, 4N, 4N e 2N. O erro típico é reduzir a quantidade já na anáfase, o que leva às alternativas c e e.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_015-p14.webp",
@@ -67936,7 +67936,7 @@
         "text": "Exclusivamente RNA Ligação iônica"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. A figura mostra adenina emparelhada com timina, e a timina é base exclusiva do DNA — no RNA ela é substituída pela uracila. Isso já descarta todas as opções que falam em RNA. A seta aponta para uma das linhas pontilhadas entre as duas bases, e linha pontilhada em esquemas de ácidos nucleicos representa ligação de hidrogênio: uma atração fraca entre um hidrogênio ligado a nitrogênio e um par de elétrons de outro nitrogênio ou oxigênio. São essas ligações fracas, e não ligações covalentes, que permitem à dupla-hélice abrir-se para replicação e transcrição.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_017-p16.webp",
@@ -67976,7 +67976,7 @@
         "text": "III e II"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. Em solução hipertônica a célula vegetal perde água, o vacúolo encolhe e a membrana plasmática se descola da parede celular: é a plasmólise, retratada na figura III, em que o conteúdo aparece retraído dentro de uma parede que mantém a forma. Em solução hipotônica a água entra, o vacúolo se enche e empurra o citoplasma contra a parede, deixando a célula túrgida e arredondada, como em I. A resposta é, portanto, III e I. A figura II é a célula em estado intermediário, semelhante à do esquema inicial, e não representa nenhuma das duas situações extremas.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_018-p17.webp",
@@ -68016,7 +68016,7 @@
         "text": "2, 2 e 1"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa e). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: e. Em G1 a célula ainda não duplicou o DNA: há um alelo B e um alelo b, ou seja, um representante de cada. Na fase S cada cromossomo passa a ter duas cromátides idênticas, e o número de representantes de cada alelo vai a 2; em G2 nada muda, porque não há nova síntese, então continua 2. Na mitose as cromátides-irmãs se separam e cada célula-filha C recebe uma de cada, voltando a 1 representante de cada alelo. A sequência é 2, 2 e 1. Quem conta cromátides como se cada cromossomo duplicasse duas vezes chega aos quatro das primeiras alternativas.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_019-p18.webp",
@@ -68056,7 +68056,7 @@
         "text": "ao que acontece com as células-guarda e resulta na abertura dos estômatos"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa e). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: e. O nível sobe dentro do tubo porque a água atravessa a membrana semipermeável do meio menos concentrado para o mais concentrado: a solução A é hipertônica em relação a B, e a entrada de água aumenta o volume e a pressão internos. O mesmo acontece na abertura estomática — as células-guarda acumulam solutos, sobretudo íons potássio, ficam hipertônicas, absorvem água, tornam-se túrgidas e se curvam, escancarando o ostíolo. As alternativas b e d descrevem perda de água em meio hipertônico, o oposto do observado, e a c troca osmose por pinocitose, que é transporte em vesículas.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_022-p20.webp",
@@ -68096,7 +68096,7 @@
         "text": "a quantidade de DNA das células filhas permaneceu igual à da célula mãe"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. A figura mostra uma célula diploide originando quatro células com metade dos cromossomos: é meiose. E a meiose tem uma única fase S, na interfase que a precede, seguida de duas divisões sucessivas — a primeira separa os homólogos e reduz o número cromossômico, a segunda separa as cromátides-irmãs. Daí a alternativa b. A a descreve mitose; a c inventa uma segunda duplicação que não existe; a d nega a permutação, que é justamente característica da prófase I; e a e afirma quantidade de DNA igual à da célula-mãe, quando as filhas são haploides.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_023-p21.webp",
@@ -68140,7 +68140,7 @@
         "text": "O tratamento de esgoto existente concentra-se na eliminação dos fungos lançados no mar, principalmente aqueles gerados pelos dejetos de origem industrial"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. A alternativa correta é a que define poluição da água com rigor: a introdução de substâncias estranhas ou o aumento da concentração de substâncias já presentes a ponto de comprometer o ambiente — e é isso que o tratamento de esgoto procura reduzir. As demais afirmam o que os dados não sustentam ou contrariam conceitos básicos: as ETEs não se limitam a reciclar lodo (c); eutrofização é causada pelo excesso de nutrientes, sobretudo nitrogênio e fósforo, e não por plásticos e latas (d); e o tratamento de esgoto não se dirige a fungos de origem industrial (e).",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_024-p22.webp",
@@ -68180,7 +68180,7 @@
         "text": "aumentar nos 5 primeiros anos e diminuir no restante do período considerado"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. O tamanho de uma população varia pelo balanço entre entradas — natalidade e imigração — e saídas — mortalidade e emigração. Nos gráficos, a emigração e a natalidade permanecem constantes em 200 indivíduos por ano e se anulam; a imigração e a mortalidade crescem exatamente do mesmo modo, de 100 para 300, e também se anulam a cada instante. Com entradas e saídas iguais ao longo de todo o período, a população se mantém constante. Quem olha só o gráfico da mortalidade crescente conclui, erradamente, que a população diminui.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_025-p23.webp",
@@ -68220,7 +68220,7 @@
         "text": "garrafas de vidro fazem parte do grupo X, e sua destinação recomendada é a incineração"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. No gráfico, o grupo X reúne resíduos que se decompõem em menos de cem anos e o grupo Y, os que levam de cerca de 200 a mais de 500 anos. A garrafa PET, feita de plástico, está entre os materiais mais duradouros, portanto no grupo Y, e a destinação adequada para ela é o reuso e a reciclagem, que a retiram do ambiente e reaproveitam o material. As embalagens de papel se decompõem em poucos meses e pertencem ao grupo X, o que elimina b e d; a c coloca a PET no grupo errado; e a incineração, sugerida em b e e, gera poluentes e desperdiça material reciclável.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_026-p24.webp",
@@ -68260,7 +68260,7 @@
         "text": "I - Pampas; II - Mata Atlântica; III - Cerrado; IV - Floresta Amazônica"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. A pista decisiva está na linha II: vegetação herbácea em zona temperada só cabe nos Pampas, o campo sulino — o Cerrado é tropical e tem estrato arbustivo-arbóreo. Isso já elimina as alternativas a e c. A linha III, com vegetação arbórea, chuvas abundantes e clima equatorial a tropical, é a Floresta Amazônica, e a linha I, arbórea com chuvas de moderadas a grandes em faixa tropical e subtropical, é a Mata Atlântica, que se estende do Nordeste ao Sul. Resta a linha IV, com os três estratos e chuvas moderadas em clima tropical e subtropical: o Cerrado.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_033-p30.webp",
@@ -68300,7 +68300,7 @@
         "text": "C, A, B"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. Numa pirâmide etária de plantas, a base larga significa reposição garantida e o topo largo, população envelhecida. A população B tem quase tudo concentrado em adultos velhos e senescentes, com pouquíssimas plântulas: sem reposição, é a de maior risco de extinção. A população C mantém barras que diminuem gradualmente da base ao topo, o padrão de uma população que repõe o que perde — está em equilíbrio. Já a A tem base enorme de plântulas e juvenis e quase nada acima, o retrato de uma população que acabou de se instalar e começa a se expandir.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_038-p33.webp",
@@ -68317,30 +68317,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Biologia · questão 39 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Em relação ao fluxo de energia na biosfera, considere que A representa a energia captada pelos produtores; B representa a energia liberada (perdida) pelos seres vivos; C representa a energia retida (incorporada) pelos seres vivos. A relação entre A, B e C na biosfera está representada em:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "A < B < C"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "A < C < B"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "A = B = C"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "A = B + C"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "A + C = B"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. Toda a energia que circula na biosfera entra pela fotossíntese: é A, captada pelos produtores. A partir daí ela só tem dois destinos possíveis — parte é dissipada como calor na respiração e nas transferências entre níveis tróficos, que é B, e parte fica incorporada na biomassa dos organismos, que é C. Como não há criação nem desaparecimento de energia, A = B + C, o que é apenas a primeira lei da termodinâmica aplicada aos ecossistemas. As alternativas que põem A menor que B ou que C violam essa conservação, já que nada pode ser perdido ou retido além do que entrou.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_039-p34.webp",
@@ -68380,7 +68380,7 @@
         "text": "II e III"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. Só a afirmativa I resiste ao gráfico: a curva do número de espécies marinhas apresenta quedas abruptas, como a do final do Permiano, por volta de 250 milhões de anos, em que mais da metade das espécies desaparece. A II atribui às extinções uma causa, a queda da fotossíntese, que o gráfico não permite estabelecer — ele mostra oxigênio e diversidade lado a lado, e correlação não é causa; além disso, algumas quedas ocorrem sem queda correspondente de O2. A III erra ao eleger a extinção do Cretáceo como a maior em termos percentuais: esse posto é da extinção permiana, bem mais profunda no gráfico.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_045-p37.webp",
@@ -68420,7 +68420,7 @@
         "text": "maior dissolução de 2O nas águas oceânicas, o que leva à liberação de maior quantidade de 2 CO pelo fitoplâncton, contribuindo, assim, para o aumento do efeito estufa global"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. A solubilidade dos gases na água diminui quando a temperatura aumenta — por isso um refrigerante quente perde o gás depressa. Com o oceano mais quente, menos CO2 se dissolve, o fitoplâncton dispõe de menos carbono para fixar na fotossíntese e o gás que deixa de ser absorvido permanece na atmosfera, realimentando o efeito estufa. É um ciclo de retroalimentação positiva. As alternativas d e e invertem o efeito da temperatura sobre a solubilidade, e as que falam em consumo de O2 pelo fitoplâncton confundem o gás absorvido na fotossíntese, que é o CO2, com o gás liberado.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_046-p38.webp",
@@ -68460,7 +68460,7 @@
         "text": "no período de 1910 a 1950, o número de nascimentos mais o de imigrantes superou o número de mortes mais o de emigrantes"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. O tamanho de uma população cresce quando as entradas — nascimentos e imigrantes — superam as saídas — mortes e emigrantes. No gráfico, entre 1935 e 1940 a curva sobe verticalmente até o pico de 2.000 indivíduos, e esse crescimento só pode significar entradas maiores que saídas. As demais leituras não se sustentam: entre 1920 e 1930 a curva sobe, e não fica estável (c); depois de 1938 ela despenca, o que indica saídas maiores que entradas, sem que o gráfico diga se por morte ou emigração (b); e no conjunto de 1910 a 1950 a população termina praticamente onde começou, o que elimina a e, assim como a queda final elimina a a.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_049-p41.webp",
@@ -68504,7 +68504,7 @@
         "text": "2, 2, 2 e 5"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. Na árvore, cada retângulo marca a novidade evolutiva compartilhada por tudo o que está acima dele. O retângulo 1 vem antes do anfioxo, e o anfioxo já tem notocorda e tubo nervoso dorsal: as duas características entram juntas nesse mesmo ponto, o que explica o 1 repetido. As vértebras aparecem só a partir do tubarão, ou seja, no retângulo 2, deixando o anfioxo de fora. O ovo amniótico é a inovação que reúne jacaré, urubu, canguru e cavalo e exclui o sapo: retângulo 5. Daí a sequência 1, 1, 2 e 5.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_051-p43.webp",
@@ -68525,30 +68525,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Biologia · questão 52 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Uma variedade de milho (Milho Bt) foi modificada com a inserção de genes da bactéria Bacillus thuringiensis, que produzem proteínas Cry, tóxicas para insetos como as lagartas que atacam suas lavouras. Essas proteínas bloqueiam o trato digestório dos insetos, levando-os à morte. Em aves e mamíferos que também se alimentam de milho, as proteínas Cry são inativadas durante a digestão ácida, perdendo sua ação sobre esses animais. A alternativa que indica corretamente um aspecto positivo e um negativo dos efeitos desta modificação genética do milho para o ser humano é:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "Positivo: aumento do valor nutricional do milho. Negativo: possibilidade de desenvolvimento de alergia à proteína Cry em pessoas vulneráveis"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "Positivo: menor tempo de maturação dos grãos. Negativo: possibilidade de invasão da vegetação nativa pela planta transgênica"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "Positivo: facilitação da polinização das plantas. Negativo: risco de extinção local de aves e mamíferos insetívoros"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "Positivo: economia de água pela redução da irrigação. Negativo: maior exposição dos agricultores a agrotóxicos"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "Positivo: maior produtividade das lavouras de milho. Negativo: possibilidade de surgimento de lagartas resistentes à proteína Cry"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa e). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: e. O gene inserido protege a planta das lagartas, o que reduz as perdas e aumenta a produtividade — esse é o ganho. O custo é evolutivo: a lavoura passa a exercer forte pressão seletiva sobre a população de lagartas, e as poucas que já carregam alguma variante capaz de tolerar a proteína Cry sobrevivem e se reproduzem, de modo que em poucas gerações a resistência se espalha e o milho Bt perde eficácia. As outras alternativas atribuem à modificação efeitos que ela não tem: nada no gene Cry altera o valor nutricional, o tempo de maturação, a polinização ou a necessidade de irrigação.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_052-p43.webp",
@@ -68592,7 +68592,7 @@
         "text": "a pesquisa nesta área é de âmbito nacional e, portanto, novas drogas não terão alcance mundial, mas apenas regional"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. A resistência a antibióticos não respeita fronteira: uma cepa selecionada em qualquer país viaja com pessoas, animais e alimentos, e por isso o texto insiste que qualquer solução passa por ação multinacional coordenada. O receio do autor diante dos governos isolacionistas é justamente esse — problemas globais de saúde e ambiente dependem da adesão de cada país aos protocolos comuns, e um país fora do acordo compromete o esforço de todos. A alternativa b erra ao localizar o surgimento das cepas apenas nos países refratários, a a limita o problema aos países pobres, e a d e a e deslocam a discussão para comércio e pesquisa nacional.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_053-p45.webp",
@@ -68632,7 +68632,7 @@
         "text": "reprodução sofreu algumas mudanças relacionadas com a conquista do ambiente terrestre. Assim, todos os vertebrados, com exceção dos peixes, independem da água para se reproduzir"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. A respiração celular — a oxidação de moléculas orgânicas nas mitocôndrias para produzir ATP — é praticamente a mesma em todos os vertebrados, do peixe ao mamífero. O que mudou ao longo da evolução foram os órgãos de troca gasosa com o ambiente: brânquias nos peixes, pulmões associados à pele úmida nos anfíbios, pulmões cada vez mais compartimentados nos amniotas. As demais alternativas contêm erros factuais: boca, estômago e intestino não são exclusividade do grupo mais recente (a); a separação das circulações mudou muito e não é completa em todos (b); o excreta nitrogenado varia com o ambiente (d); e aves e répteis não são os únicos independentes da água, mas anfíbios seguem dependendo dela (e).",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_054-p45.webp",
@@ -68676,7 +68676,7 @@
         "text": "a chamada Revolução Neolítica permitiu o desenvolvimento da agricultura e do pastoreio, garantindo a eliminação progressiva de relações sociais escravistas"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. A domesticação foi seleção artificial: geração após geração, os agricultores guardaram para plantio as sementes das plantas com as características que lhes interessavam — grãos maiores, espigas que não se desfazem, frutos menos amargos — e assim aumentaram a frequência dessas variantes, que já existiam na população. A alternativa a atribui aos primeiros agricultores a capacidade de induzir mutações, algo que só a genética do século XX tornou possível; a b e a c invertem o que aconteceu, já que o excedente agrícola intensificou o trabalho e favoreceu a fixação das populações; e a e associa a Revolução Neolítica ao fim da escravidão, quando o excedente é justamente uma das condições que a tornaram possível.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_055-p46.webp",
