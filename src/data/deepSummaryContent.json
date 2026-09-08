@@ -3903,6 +3903,1931 @@
     ]
   },
   {
+    "subject": "Filosofia",
+    "topic": "A Alegoria da Linha Dividida e o Conhecimento",
+    "sections": [
+      {
+        "title": "A linha e seus segmentos",
+        "content": "Platão divide uma linha em dois segmentos desiguais, um para o sensível e outro para o inteligível, e subdivide cada um. No sensível, há a eikasia, conhecimento por imagens e sombras, e a pistis, crença nos objetos concretos. No inteligível, a dianoia, raciocínio matemático que parte de hipóteses, e a noesis, intuição das Formas."
+      },
+      {
+        "title": "Doxa e episteme",
+        "content": "Os dois segmentos inferiores compõem a doxa, opinião, e os dois superiores a episteme, conhecimento verdadeiro. A distinção não é de grau de certeza subjetiva, mas de objeto: opinar é ter por objeto o que muda; conhecer é ter por objeto o que permanece idêntico, as Formas."
+      },
+      {
+        "title": "A matemática como passagem",
+        "content": "A dianoia ocupa posição intermediária: opera com raciocínio rigoroso, mas depende de hipóteses não justificadas e recorre a figuras sensíveis. Por isso a matemática é propedêutica na formação do filósofo: exercita a razão e afasta dos sentidos, mas só a dialética alcança o princípio não hipotético, a Ideia de Bem."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Tratar a linha como escala de certeza psicológica ignora que a distinção é entre tipos de objeto. Outro deslize é confundir dianoia com noesis. E supor que a matemática, para Platão, é o conhecimento mais alto, quando ela é etapa preparatória para a dialética."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a matemática não é o saber supremo para Platão? Responda antes de conferir: ela raciocina a partir de hipóteses que não justifica e se apoia em figuras sensíveis, enquanto a dialética ascende ao princípio não hipotético, a Ideia de Bem. Agora diferencie doxa de episteme pelo objeto: a opinião versa sobre o mutável, o conhecimento sobre as Formas imutáveis."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a matemática não é o saber supremo para Platão? Diferencie doxa de episteme.",
+      "elements": [
+        [
+          "a matematica parte de hipoteses nao justificadas",
+          [
+            "hipotese",
+            "nao justifica",
+            "figura"
+          ]
+        ],
+        [
+          "so a dialetica alcanca o principio",
+          [
+            "dialetica",
+            "principio",
+            "bem"
+          ]
+        ],
+        [
+          "doxa versa sobre o mutavel e episteme sobre as Formas",
+          [
+            "doxa",
+            "episteme",
+            "forma"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Filosofia",
+    "topic": "A Crítica da Razão Pura",
+    "sections": [
+      {
+        "title": "A revolução copernicana",
+        "content": "Kant propõe inverter a relação entre sujeito e objeto: não é o conhecimento que se molda aos objetos, mas os objetos que se conformam às estruturas do sujeito. Espaço e tempo são formas puras da sensibilidade, e as categorias, como causalidade e substância, são estruturas do entendimento que organizam o dado sensível."
+      },
+      {
+        "title": "Fenômeno e coisa em si",
+        "content": "Conhecemos os fenômenos, isto é, os objetos tais como aparecem sob nossas formas e categorias, e não a coisa em si, o númeno, tal como seria independentemente delas. Isso delimita o alcance do conhecimento: a ciência é possível e necessária no âmbito dos fenômenos, mas não alcança o que está além da experiência possível."
+      },
+      {
+        "title": "Síntese entre racionalismo e empirismo",
+        "content": "Kant responde a Hume sem abandonar a ciência: a causalidade não vem da experiência, mas é condição para que a experiência se organize. Daí a fórmula de que conceitos sem intuições são vazios e intuições sem conceitos são cegas: conhecimento exige a colaboração entre sensibilidade e entendimento."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Ler a coisa em si como um objeto oculto em outro lugar é impreciso: é o que o objeto seria fora das condições do conhecimento. Outro deslize é dizer que Kant nega a existência do mundo externo. E confundir juízos sintéticos a priori, centrais em sua proposta, com juízos analíticos."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "O que Kant quer dizer com revolução copernicana no conhecimento? Responda antes de conferir: em vez de supor que o sujeito se molda ao objeto, propõe que o objeto conhecido se conforma às formas da sensibilidade e às categorias do entendimento do sujeito. Agora explique a distinção fenômeno e coisa em si: conhecemos o objeto como aparece, não como é independentemente de nós."
+      }
+    ],
+    "recall": {
+      "prompt": "Explique a revolução copernicana de Kant e a distinção entre fenômeno e coisa em si.",
+      "elements": [
+        [
+          "o objeto se conforma as estruturas do sujeito",
+          [
+            "sujeito",
+            "estrutura",
+            "conforma"
+          ]
+        ],
+        [
+          "espaco, tempo e categorias organizam a experiencia",
+          [
+            "espaco",
+            "tempo",
+            "categoria"
+          ]
+        ],
+        [
+          "conhecemos o fenomeno e nao a coisa em si",
+          [
+            "fenomeno",
+            "coisa em si",
+            "numeno"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Filosofia",
+    "topic": "A Crítica de Hume à Causalidade",
+    "sections": [
+      {
+        "title": "O problema",
+        "content": "Ao observar uma bola atingir outra, vemos duas coisas: a primeira se move, depois a segunda se move. O que não vemos é a conexão necessária entre elas. Hume pergunta de qual impressão viria a ideia de causa, e conclui que não há impressão do vínculo necessário, apenas da sucessão e da contiguidade."
+      },
+      {
+        "title": "Hábito e expectativa",
+        "content": "O que produz a ideia de causalidade é a conjunção constante: como sempre observamos B após A, o hábito nos leva a esperar B quando ocorre A. A necessidade que atribuímos ao mundo é, portanto, uma projeção de nossa expectativa psicológica, e não algo demonstrado pela razão ou dado na experiência."
+      },
+      {
+        "title": "O problema da indução",
+        "content": "Segue-se a crítica à indução: inferir que o futuro será como o passado pressupõe justamente a regularidade que se quer provar, o que torna o argumento circular. A ciência não fica destruída, mas perde a pretensão de necessidade absoluta, tese que despertou Kant de seu sono dogmático."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que Hume nega a existência de causas no mundo é impreciso: ele nega que a conexão necessária seja percebida ou demonstrada. Outro deslize é confundir hábito com preguiça mental, quando é mecanismo psicológico regular. E supor que a crítica invalida a ciência, quando apenas reposiciona seu estatuto."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que, para Hume, a causalidade não é demonstrável? Responda antes de conferir: não há impressão sensível da conexão necessária, apenas de sucessão e contiguidade, e nenhuma dedução racional garante que o futuro repetirá o passado. Agora explique o papel do hábito: a conjunção constante gera expectativa, que projetamos no mundo como necessidade."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que Hume nega demonstração para a causalidade? Qual o papel do hábito?",
+      "elements": [
+        [
+          "nao ha impressao da conexao necessaria",
+          [
+            "conexao",
+            "necessaria",
+            "impressao"
+          ]
+        ],
+        [
+          "so observamos sucessao e contiguidade",
+          [
+            "sucessao",
+            "contiguidade",
+            "observa"
+          ]
+        ],
+        [
+          "o habito gera expectativa projetada como necessidade",
+          [
+            "habito",
+            "expectativa",
+            "projeta"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Filosofia",
+    "topic": "A Escola de Frankfurt e a Indústria Cultural",
+    "sections": [
+      {
+        "title": "Teoria crítica",
+        "content": "A Escola de Frankfurt reuniu pensadores como Adorno, Horkheimer, Marcuse e Benjamin, que buscaram uma teoria crítica da sociedade, capaz não apenas de descrever, mas de apontar as condições de emancipação. Diante do nazismo e do stalinismo, questionaram por que a razão moderna, que prometia liberdade, produziu novas formas de dominação."
+      },
+      {
+        "title": "Razão instrumental",
+        "content": "Adorno e Horkheimer distinguem a razão que reflete sobre fins da razão instrumental, que calcula apenas meios eficazes. Quando a segunda predomina, a eficiência técnica pode servir a qualquer finalidade, inclusive à barbárie, o que explica a tese de que o esclarecimento se converte em novo mito e em dominação."
+      },
+      {
+        "title": "Indústria cultural",
+        "content": "O conceito nomeia a produção de bens culturais em escala industrial, padronizados e voltados ao consumo. Ela promove entretenimento que aparenta diversidade mas repete fórmulas, transforma arte em mercadoria, forma consumidores em vez de sujeitos críticos e favorece a acomodação, funcionando como instrumento de conformismo social."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Confundir indústria cultural com cultura popular é o erro central: a primeira é produzida de cima para baixo para consumo massivo, a segunda emerge das próprias comunidades. Outro deslize é tratar a crítica como simples elitismo. E supor que a teoria crítica rejeita a razão, quando critica sua redução ao cálculo instrumental."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a indústria cultural produz pseudoindividualização? Responda antes de conferir: oferece variações superficiais de produtos padronizados, criando a impressão de escolha pessoal enquanto a estrutura permanece a mesma. Agora explique a razão instrumental: aquela que se ocupa apenas da eficácia dos meios, sem examinar a legitimidade dos fins."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a indústria cultural gera pseudoindividualização? O que é razão instrumental?",
+      "elements": [
+        [
+          "variacoes superficiais de produtos padronizados",
+          [
+            "padronizado",
+            "variacao",
+            "superficial"
+          ]
+        ],
+        [
+          "cria impressao de escolha sem mudar a estrutura",
+          [
+            "escolha",
+            "impressao",
+            "estrutura"
+          ]
+        ],
+        [
+          "a razao instrumental so calcula meios",
+          [
+            "meio",
+            "eficacia",
+            "fim"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Filosofia",
+    "topic": "A Luta de Classes na Filosofia Marxista",
+    "sections": [
+      {
+        "title": "A tese central",
+        "content": "O Manifesto Comunista abre afirmando que a história de todas as sociedades até hoje é a história da luta de classes. Classe se define pela posição nas relações de produção, isto é, por possuir ou não os meios de produção, e não simplesmente pelo nível de renda ou pelo estilo de vida."
+      },
+      {
+        "title": "Classe em si e para si",
+        "content": "Uma classe existe objetivamente pela posição comum na produção, mas só se torna sujeito político quando adquire consciência dessa condição e se organiza. A passagem da classe em si para a classe para si é o processo de formação da consciência de classe, dificultado pela ideologia dominante."
+      },
+      {
+        "title": "Ideologia e Estado",
+        "content": "Para Marx, as ideias dominantes de cada época são as ideias da classe dominante, que apresenta interesses particulares como universais. O Estado, nessa leitura, não é árbitro neutro, mas expressão da correlação de forças. A superação da divisão de classes exigiria transformar as próprias relações de produção."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Definir classe apenas por renda é o erro conceitual mais frequente: o critério é a posição nas relações de produção. Outro deslize é supor que luta de classes significa confronto violento permanente e explícito. E entender ideologia apenas como mentira, quando é forma de consciência socialmente condicionada."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que classe não se define por renda? Responda antes de conferir: o critério é a posição nas relações de produção, ou seja, possuir ou não os meios de produção, de modo que um assalariado de renda alta continua vendendo sua força de trabalho. Agora explique a passagem de classe em si para classe para si: da condição objetiva comum à consciência organizada dessa condição."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que classe não se define por renda? O que é a passagem de classe em si para classe para si?",
+      "elements": [
+        [
+          "o criterio e a posicao nas relacoes de producao",
+          [
+            "relacoes",
+            "meios de producao",
+            "posicao"
+          ]
+        ],
+        [
+          "renda alta nao muda a venda da forca de trabalho",
+          [
+            "forca de trabalho",
+            "assalariado",
+            "vende"
+          ]
+        ],
+        [
+          "da condicao objetiva a consciencia organizada",
+          [
+            "consciencia",
+            "organiza",
+            "politica"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Filosofia",
+    "topic": "A Relação entre Fé e Razão",
+    "sections": [
+      {
+        "title": "As posições possíveis",
+        "content": "O debate admite três posições típicas: a primazia da fé, em que a razão serve à crença; a primazia da razão, em que a crença deve submeter-se ao exame racional; e a separação de domínios, em que fé e razão respondem a perguntas de naturezas distintas e não competem entre si."
+      },
+      {
+        "title": "Trajetória histórica",
+        "content": "Na Idade Média, predominou a articulação entre as duas, com variações entre Agostinho e Tomás. Na modernidade, a razão autônoma se afirma com Descartes e o Iluminismo, e o conflito se acirra em episódios como o caso Galileu. No século XIX e XX, o positivismo e a crítica religiosa aprofundam a separação."
+      },
+      {
+        "title": "O debate contemporâneo",
+        "content": "Hoje a discussão se desloca para os limites da ciência e da religião: a ciência descreve como o mundo funciona, mas não decide sozinha questões de valor; a religião oferece sentido e orientação moral, mas não substitui explicação empírica. Estados laicos buscam garantir liberdade religiosa sem impor crença."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Apresentar fé e razão como necessariamente inimigas ignora séculos de tentativas de articulação. Outro deslize é confundir laicidade com ateísmo de Estado. E supor que a ciência responde a questões de valor, quando ela descreve fatos e depende de decisões éticas para orientar aplicações."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que dizer que a ciência refuta ou comprova a religião é problemático? Responda antes de conferir: as duas respondem a tipos distintos de pergunta, uma sobre o funcionamento empírico do mundo e outra sobre sentido e valores, de modo que a comparação direta confunde os domínios. Agora diferencie Estado laico de Estado ateu: o laico garante liberdade religiosa sem adotar religião oficial."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que ciência e religião não se refutam diretamente? Diferencie Estado laico de Estado ateu.",
+      "elements": [
+        [
+          "respondem a perguntas de naturezas distintas",
+          [
+            "natureza",
+            "pergunta",
+            "dominio"
+          ]
+        ],
+        [
+          "uma descreve fatos e a outra trata de sentido",
+          [
+            "fato",
+            "sentido",
+            "valor"
+          ]
+        ],
+        [
+          "o Estado laico garante liberdade sem religiao oficial",
+          [
+            "laico",
+            "liberdade",
+            "oficial"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Filosofia",
+    "topic": "A Teoria das Ideias de Platão",
+    "sections": [
+      {
+        "title": "Dois mundos",
+        "content": "Platão distingue o mundo sensível, das coisas particulares, mutáveis e conhecidas pelos sentidos, e o mundo inteligível, das Ideias ou Formas, universais, imutáveis e apreendidas pela razão. As coisas sensíveis são cópias imperfeitas das Ideias, e é a participação nelas que faz um objeto ser o que é."
+      },
+      {
+        "title": "Solução ao problema herdado",
+        "content": "A teoria responde ao impasse entre Heráclito e Parmênides: o mundo sensível é fluxo, como queria Heráclito, mas há um domínio estável e uno, como exigia Parmênides. Assim se explica como o conhecimento é possível: ele não incide sobre o que muda, mas sobre as Formas, que permanecem idênticas."
+      },
+      {
+        "title": "Conhecimento como reminiscência",
+        "content": "Para Platão, aprender é lembrar: a alma, antes de encarnar, contemplou as Ideias, e o processo de conhecimento é reminiscência dessa contemplação. Isso explica por que o interlocutor de um diálogo pode chegar sozinho a verdades matemáticas, guiado apenas por perguntas, como no episódio do escravo no Mênon."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Imaginar o mundo das Ideias como lugar físico distante é erro: trata-se de um domínio ontológico, não geográfico. Outro deslize é dizer que Platão nega a existência do mundo sensível, quando ele o considera menos real, não inexistente. E confundir Ideia platônica com ideia no sentido de pensamento subjetivo."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que, para Platão, não pode haver ciência do sensível? Responda antes de conferir: o sensível muda constantemente, e o que muda não pode ser objeto de conhecimento estável, apenas de opinião; a ciência incide sobre as Formas imutáveis. Agora explique a reminiscência: conhecer é recordar as Ideias contempladas pela alma antes do nascimento."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que Platão nega ciência do mundo sensível? O que é a reminiscência?",
+      "elements": [
+        [
+          "o sensivel muda e so gera opiniao",
+          [
+            "muda",
+            "opiniao",
+            "doxa"
+          ]
+        ],
+        [
+          "a ciencia incide sobre as Formas imutaveis",
+          [
+            "forma",
+            "ideia",
+            "imutavel"
+          ]
+        ],
+        [
+          "conhecer e recordar o que a alma contemplou",
+          [
+            "recordar",
+            "alma",
+            "reminiscencia"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Filosofia",
+    "topic": "A Ética Kantiana e o Imperativo Categórico",
+    "sections": [
+      {
+        "title": "Dever e boa vontade",
+        "content": "Para Kant, o valor moral de uma ação não está em suas consequências, mas na intenção de agir por dever. A boa vontade é boa em si mesma, e agir conforme o dever não basta: é preciso agir por dever, isto é, por respeito à lei moral, e não por interesse, inclinação ou medo de punição."
+      },
+      {
+        "title": "O imperativo categórico",
+        "content": "O imperativo hipotético é condicional, do tipo se queres X, faça Y. O categórico vale incondicionalmente. Sua primeira formulação manda agir apenas segundo a máxima que se possa querer como lei universal. A segunda manda tratar a humanidade, em si e nos outros, sempre também como fim, nunca apenas como meio."
+      },
+      {
+        "title": "Autonomia",
+        "content": "A lei moral não é imposta de fora: é a razão que se dá a si mesma a lei, o que Kant chama de autonomia. Agir por inclinação ou por imposição externa é heteronomia. A dignidade decorre daí: o ser racional tem valor absoluto, não preço, e por isso não pode ser tratado como simples instrumento."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Confundir imperativo categórico com a regra de ouro empobrece a formulação, pois Kant exige universalidade racional, e não reciprocidade de desejos. Outro deslize é avaliar a ética kantiana pelas consequências, quando ela é deontológica. E supor que agir conforme o dever já garante valor moral."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que mentir é proibido em Kant mesmo com boa intenção? Responda antes de conferir: a máxima de mentir não pode ser universalizada sem se autodestruir, já que, se todos mentissem, a própria confiança que torna a mentira eficaz desapareceria. Agora explique a diferença entre agir conforme o dever e agir por dever."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que Kant proíbe a mentira? Diferencie agir conforme o dever de agir por dever.",
+      "elements": [
+        [
+          "a maxima de mentir nao se universaliza",
+          [
+            "universal",
+            "maxima",
+            "contradicao"
+          ]
+        ],
+        [
+          "a confianca seria destruida",
+          [
+            "confianca",
+            "destroi",
+            "ninguem"
+          ]
+        ],
+        [
+          "agir por dever e agir por respeito a lei moral",
+          [
+            "por dever",
+            "respeito",
+            "intencao"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Filosofia",
+    "topic": "A Ética a Nicômaco e a Doutrina do Meio-Termo",
+    "sections": [
+      {
+        "title": "A finalidade da ação",
+        "content": "Aristóteles parte da constatação de que toda ação visa a algum bem, e pergunta qual é o bem supremo. Responde: a eudaimonia, felicidade entendida como vida realizada, buscada por si mesma e não como meio para outra coisa. Ela não é prazer momentâneo nem honra, mas atividade da alma conforme a virtude ao longo da vida."
+      },
+      {
+        "title": "Virtude como hábito",
+        "content": "As virtudes morais não são inatas nem se aprendem apenas por teoria: adquirem-se pelo hábito, repetindo ações justas até tornar-se justo. Por isso a educação e o ambiente da cidade importam. As virtudes intelectuais, essas sim, dependem do ensino, e entre elas está a prudência, capacidade de deliberar bem sobre a ação."
+      },
+      {
+        "title": "O meio-termo",
+        "content": "A virtude é o justo meio entre dois vícios, o excesso e a falta: a coragem está entre a temeridade e a covardia, a generosidade entre a prodigalidade e a avareza. O meio não é aritmético e igual para todos, mas relativo a cada pessoa e situação, determinado pela prudência de quem delibera."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Entender o meio-termo como mediocridade ou média matemática é o erro mais comum: trata-se do ponto adequado à situação, e algumas ações não admitem meio, porque são más em si. Outro deslize é confundir eudaimonia com prazer. E supor que virtude se ensina apenas por teoria, sem prática."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que o meio-termo não é uma média aritmética? Responda antes de conferir: ele é relativo à pessoa e às circunstâncias, e cabe à prudência determinar o quanto, quando e como agir em cada situação concreta. Agora explique por que a virtude é hábito: adquire-se pela repetição de ações, tornando-se disposição estável de caráter."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que o meio-termo não é média aritmética? Por que a virtude é hábito?",
+      "elements": [
+        [
+          "e relativo a pessoa e a situacao",
+          [
+            "relativo",
+            "situacao",
+            "circunstancia"
+          ]
+        ],
+        [
+          "a prudencia determina o quanto e o quando",
+          [
+            "prudencia",
+            "deliberar",
+            "adequado"
+          ]
+        ],
+        [
+          "a virtude se adquire pela repeticao de acoes",
+          [
+            "habito",
+            "repeticao",
+            "pratica"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Filosofia",
+    "topic": "Alienação e Mais-Valia",
+    "sections": [
+      {
+        "title": "As formas de alienação",
+        "content": "Marx descreve a alienação do trabalhador em quatro dimensões: em relação ao produto, que lhe é estranho e pertence a outro; ao processo de trabalho, sobre o qual não decide; à sua própria essência criativa, reduzida a meio de sobrevivência; e aos outros seres humanos, transformados em concorrentes."
+      },
+      {
+        "title": "A mais-valia",
+        "content": "No capitalismo, o trabalhador vende sua força de trabalho por um salário. Durante parte da jornada, produz valor equivalente ao próprio salário; no restante, produz valor excedente apropriado pelo capitalista. Essa mais-valia é a fonte do lucro, e sua extração ocorre dentro de uma troca formalmente livre e legal."
+      },
+      {
+        "title": "Absoluta e relativa",
+        "content": "A mais-valia absoluta se amplia prolongando a jornada de trabalho. A relativa se amplia aumentando a produtividade, de modo que o tempo necessário para produzir o valor do salário diminui e cresce a parcela excedente. Tecnologia e organização do trabalho, nesse quadro, servem também ao aumento da exploração."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Confundir mais-valia com lucro ou com preço de venda é o erro mais comum: a mais-valia é o valor excedente produzido pelo trabalho não pago. Outro deslize é entender alienação apenas como sentimento de insatisfação, quando é relação objetiva. E supor que Marx considera a troca salarial uma fraude, quando ela é formalmente legal."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Como a mais-valia surge numa troca formalmente justa? Responda antes de conferir: o trabalhador recebe o valor de sua força de trabalho, mas produz, durante a jornada, valor maior do que esse, e a diferença é apropriada pelo capitalista. Agora diferencie mais-valia absoluta de relativa: uma amplia a jornada, a outra aumenta a produtividade."
+      }
+    ],
+    "recall": {
+      "prompt": "Como surge a mais-valia numa troca formalmente justa? Diferencie mais-valia absoluta de relativa.",
+      "elements": [
+        [
+          "o trabalhador produz mais valor do que recebe",
+          [
+            "valor",
+            "salario",
+            "excedente"
+          ]
+        ],
+        [
+          "a diferenca e apropriada pelo capitalista",
+          [
+            "apropriada",
+            "capitalista",
+            "lucro"
+          ]
+        ],
+        [
+          "absoluta amplia a jornada e relativa aumenta a produtividade",
+          [
+            "jornada",
+            "produtividade",
+            "tecnologia"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Filosofia",
+    "topic": "Descartes e o Método: a Dúvida Hiperbólica",
+    "sections": [
+      {
+        "title": "A busca de um fundamento",
+        "content": "Descartes quer refundar o conhecimento sobre base absolutamente segura. Para isso, adota a dúvida metódica: rejeitar provisoriamente como falso tudo o que admita a menor dúvida. Não é ceticismo, e sim instrumento: duvida-se para encontrar algo indubitável que sirva de alicerce ao edifício do saber."
+      },
+      {
+        "title": "Os graus da dúvida",
+        "content": "Primeiro, os sentidos enganam, logo o testemunho sensível é duvidoso. Depois, o argumento do sonho mostra que não há critério seguro para distinguir vigília e sonho. Por fim, a hipótese do gênio maligno estende a dúvida até às verdades matemáticas, radicalizando-a ao máximo, o que a torna hiperbólica."
+      },
+      {
+        "title": "O cogito e o método",
+        "content": "Mesmo enganado em tudo, é preciso existir para ser enganado: penso, logo existo. O cogito é a primeira certeza, e a partir dele Descartes reconstrói o conhecimento com as regras do método, especialmente a evidência, a análise, a síntese e a enumeração, tomando a matemática como modelo de rigor."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Confundir dúvida metódica com ceticismo é o erro central: o cético duvida por princípio, Descartes duvida como estratégia para alcançar certeza. Outro deslize é ler o cogito como prova da existência do corpo. E supor que o gênio maligno é uma crença de Descartes, quando é hipótese metodológica."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a dúvida cartesiana não é ceticismo? Responda antes de conferir: é método provisório, adotado para encontrar um fundamento indubitável, e não posição definitiva sobre a impossibilidade do conhecimento. Agora explique por que o cogito resiste ao gênio maligno: ainda que tudo seja ilusão, é preciso existir enquanto ser pensante para ser enganado."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a dúvida cartesiana não é ceticismo? Por que o cogito resiste ao gênio maligno?",
+      "elements": [
+        [
+          "a duvida e metodo provisorio para achar certeza",
+          [
+            "metodo",
+            "provisorio",
+            "fundamento"
+          ]
+        ],
+        [
+          "o cetico duvida por principio",
+          [
+            "cetico",
+            "principio",
+            "definitivo"
+          ]
+        ],
+        [
+          "e preciso existir para ser enganado",
+          [
+            "existir",
+            "pensar",
+            "enganado"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Filosofia",
+    "topic": "Empirismo Britânico: Locke, Berkeley e Hume",
+    "sections": [
+      {
+        "title": "A tese central",
+        "content": "O empirismo sustenta que todo conhecimento deriva da experiência. Locke recusa as ideias inatas e compara a mente a uma tábula rasa, preenchida por sensação e reflexão. Não há, portanto, conteúdo mental anterior à experiência, e as ideias complexas se formam pela combinação de ideias simples recebidas dos sentidos."
+      },
+      {
+        "title": "Berkeley",
+        "content": "Berkeley radicaliza: ser é ser percebido. Se só conhecemos ideias, não faz sentido afirmar a existência de matéria independente da percepção. Para evitar que as coisas desapareçam quando ninguém as observa, sustenta que Deus as percebe continuamente, posição conhecida como imaterialismo ou idealismo subjetivo."
+      },
+      {
+        "title": "Hume",
+        "content": "Hume distingue impressões, vivas e diretas, de ideias, suas cópias mais fracas, e propõe um critério: toda ideia legítima deve remontar a alguma impressão. Com isso, submete a exame noções como substância, eu e causalidade, e conclui que muitas delas resultam de hábito, e não de demonstração racional."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que empiristas negam a razão é erro: eles negam que a razão produza conteúdo sem experiência. Outro deslize é ler Berkeley como negando a existência do mundo, quando ele nega a matéria independente da percepção. E confundir impressão com ideia na terminologia de Hume."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Qual o critério de Hume para avaliar um conceito? Responda antes de conferir: perguntar de qual impressão ele deriva; sem impressão correspondente, a ideia é suspeita de ser palavra vazia. Agora explique a tese de Berkeley: ser é ser percebido, de modo que não há matéria existindo independentemente de alguma percepção."
+      }
+    ],
+    "recall": {
+      "prompt": "Qual o critério de Hume para avaliar conceitos? Explique a tese de Berkeley.",
+      "elements": [
+        [
+          "toda ideia deve remontar a uma impressao",
+          [
+            "impressao",
+            "ideia",
+            "deriva"
+          ]
+        ],
+        [
+          "sem impressao a ideia e suspeita",
+          [
+            "vazia",
+            "suspeita",
+            "sem"
+          ]
+        ],
+        [
+          "ser e ser percebido",
+          [
+            "percebido",
+            "materia",
+            "percepcao"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Filosofia",
+    "topic": "Escolástica e Santo Tomás de Aquino",
+    "sections": [
+      {
+        "title": "O contexto escolástico",
+        "content": "A escolástica é a filosofia produzida nas escolas e universidades medievais, com método próprio de disputa, no qual se expõem objeções, respostas e argumentos contrários. Seu problema central é a relação entre fé e razão, e sua grande virada intelectual foi a recuperação de Aristóteles, transmitido em boa parte por filósofos árabes."
+      },
+      {
+        "title": "Tomás e a síntese",
+        "content": "Tomás de Aquino articula fé e razão como caminhos distintos e não conflitantes: a razão alcança verdades naturais, e a revelação, verdades sobrenaturais que a excedem sem contradizê-la. Adotando o aristotelismo, sustenta que o conhecimento parte dos sentidos, o que aproxima teologia e investigação do mundo natural."
+      },
+      {
+        "title": "As cinco vias",
+        "content": "Tomás propõe cinco provas racionais da existência de Deus, entre elas o argumento do primeiro motor, o da causa primeira, o da contingência e o da finalidade. Todas partem de aspectos observáveis do mundo e concluem pela necessidade de um princípio, mostrando o esforço de fundamentar a fé com argumentos filosóficos."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Apresentar a escolástica como pensamento acrítico e dogmático ignora seu método de disputa e sua sofisticação argumentativa. Outro deslize é confundir Tomás com Agostinho quanto à base filosófica: aristotélica no primeiro, platônica no segundo. E supor que as cinco vias partem da revelação, quando partem da observação do mundo."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Qual a diferença de base filosófica entre Agostinho e Tomás? Responda antes de conferir: Agostinho apoia-se no platonismo, com ênfase na interioridade e na iluminação divina; Tomás apoia-se em Aristóteles, com o conhecimento partindo dos sentidos. Agora explique como Tomás compatibiliza fé e razão: são vias distintas que não se contradizem, pois a verdade é uma só."
+      }
+    ],
+    "recall": {
+      "prompt": "Compare a base filosófica de Agostinho e de Tomás e explique como Tomás concilia fé e razão.",
+      "elements": [
+        [
+          "Agostinho e platonico e Tomas e aristotelico",
+          [
+            "platao",
+            "aristoteles",
+            "base"
+          ]
+        ],
+        [
+          "em Tomas o conhecimento parte dos sentidos",
+          [
+            "sentidos",
+            "experiencia",
+            "natural"
+          ]
+        ],
+        [
+          "fe e razao sao vias distintas sem contradicao",
+          [
+            "distintas",
+            "nao se contradizem",
+            "verdade"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Filosofia",
+    "topic": "Filosofia Política Contemporânea",
+    "sections": [
+      {
+        "title": "Liberalismo e suas críticas",
+        "content": "O liberalismo político defende direitos individuais, pluralismo e neutralidade do Estado quanto a concepções de vida boa. Comunitaristas objetam que o indivíduo é constituído por comunidades e tradições, e que a neutralidade é impossível. Republicanos, por sua vez, enfatizam liberdade como não dominação e virtude cívica."
+      },
+      {
+        "title": "Democracia em disputa",
+        "content": "Discute-se se a democracia se reduz a procedimentos eleitorais ou exige condições substantivas, como igualdade material, informação e participação. Modelos deliberativos, ligados a Habermas, propõem que a legitimidade nasce da discussão pública racional entre cidadãos livres, com regras que garantam acesso equitativo à palavra."
+      },
+      {
+        "title": "Novos temas",
+        "content": "O campo incorporou questões de reconhecimento e identidade, com autores como Honneth e Fraser discutindo redistribuição e reconhecimento; teorias feministas e decoloniais que criticam os pressupostos do cânone; e debates sobre democracia digital, desinformação, poder das plataformas e crise ambiental como questão política."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Reduzir democracia a eleições periódicas ignora as condições que tornam a participação efetiva. Outro deslize é opor redistribuição e reconhecimento como se fossem excludentes, quando muitas propostas os articulam. E tratar neutralidade estatal como ausência total de valores, quando ela pressupõe compromissos com liberdade e igualdade."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a democracia não se reduz a eleições? Responda antes de conferir: sem igualdade mínima de condições, acesso à informação e liberdade de organização, o voto perde efetividade, e decisões podem ser capturadas por poder econômico ou por desinformação. Agora explique a proposta deliberativa: a legitimidade das decisões vem da discussão pública entre cidadãos em condições equitativas."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a democracia não se reduz a eleições? O que propõe o modelo deliberativo?",
+      "elements": [
+        [
+          "sem igualdade e informacao o voto perde efetividade",
+          [
+            "igualdade",
+            "informacao",
+            "efetivo"
+          ]
+        ],
+        [
+          "risco de captura por poder economico",
+          [
+            "poder economico",
+            "captura",
+            "desinformacao"
+          ]
+        ],
+        [
+          "a legitimidade vem da discussao publica",
+          [
+            "deliberacao",
+            "discussao",
+            "publica"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Filosofia",
+    "topic": "Foucault e as Relações de Poder",
+    "sections": [
+      {
+        "title": "Poder como relação",
+        "content": "Foucault desloca a análise do poder: ele não é uma coisa que se possui nem se concentra apenas no Estado, mas uma relação que atravessa toda a sociedade, em escolas, hospitais, prisões, fábricas e famílias. O poder é produtivo: não apenas reprime, mas produz saberes, subjetividades e formas de comportamento."
+      },
+      {
+        "title": "Disciplina e biopoder",
+        "content": "O poder disciplinar age sobre corpos individuais, por vigilância, exame, distribuição do espaço e do tempo, tendo o panóptico como modelo: a possibilidade permanente de ser observado leva o indivíduo a vigiar a si mesmo. O biopoder age sobre populações, gerindo natalidade, saúde, higiene e riscos por meio de estatísticas e políticas."
+      },
+      {
+        "title": "Saber e verdade",
+        "content": "Saber e poder são inseparáveis: cada época produz seus regimes de verdade, com critérios sobre o que pode ser dito, por quem e em que condições. Foucault mostra como categorias que parecem naturais, como loucura, delinquência e sexualidade, foram historicamente constituídas por discursos e instituições."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Ler o poder foucaultiano como propriedade de um grupo ignora sua tese de que ele é relacional e capilar. Outro deslize é entender disciplina apenas como repressão, quando ela produz corpos úteis e comportamentos. E confundir poder disciplinar, sobre indivíduos, com biopoder, sobre populações."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que o panóptico é modelo do poder disciplinar? Responda antes de conferir: sua arquitetura torna a vigilância possível a qualquer momento e invisível, de modo que o vigiado internaliza o controle e passa a se autodisciplinar sem necessidade de coerção constante. Agora explique por que o poder, para Foucault, é produtivo: ele fabrica saberes, normas e sujeitos, não apenas proíbe."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que o panóptico é modelo do poder disciplinar? Em que sentido o poder é produtivo?",
+      "elements": [
+        [
+          "a vigilancia possivel e invisivel gera autocontrole",
+          [
+            "vigilancia",
+            "invisivel",
+            "autocontrole"
+          ]
+        ],
+        [
+          "o individuo se disciplina sozinho",
+          [
+            "disciplina",
+            "internaliza",
+            "sozinho"
+          ]
+        ],
+        [
+          "o poder produz saberes, normas e sujeitos",
+          [
+            "produz",
+            "saber",
+            "sujeito"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Filosofia",
+    "topic": "Hegel e a Dialética",
+    "sections": [
+      {
+        "title": "O movimento dialético",
+        "content": "Hegel concebe a realidade e o pensamento como processo. A dialética costuma ser apresentada como tese, antítese e síntese: uma posição gera sua contradição, e o conflito se resolve num momento superior que conserva e supera os anteriores, movimento que Hegel chama de suprassunção, ou Aufhebung."
+      },
+      {
+        "title": "Espírito e história",
+        "content": "A história é o processo de realização do Espírito, que se torna consciente de si e efetiva a liberdade. Cada época e cultura é momento necessário desse desenvolvimento. Por isso Hegel afirma que a filosofia é seu tempo apreendido em pensamento: não há verdade fora do processo histórico que a produz."
+      },
+      {
+        "title": "Dialética do senhor e do escravo",
+        "content": "Na Fenomenologia do Espírito, duas consciências disputam reconhecimento; uma arrisca a vida e domina, a outra recua e serve. Mas o senhor depende do escravo, e é o escravo que, ao transformar a natureza pelo trabalho, desenvolve consciência de si, invertendo a relação inicial e antecipando temas do pensamento de Marx."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Reduzir a dialética à fórmula escolar tese-antítese-síntese, que Hegel não usa nesses termos, empobrece o conceito. Outro deslize é entender a síntese como simples meio-termo, quando ela supera conservando. E supor que a história hegeliana é progresso linear sem conflito, quando o conflito é seu motor."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "O que significa suprassunção na dialética hegeliana? Responda antes de conferir: o momento superior nega o anterior, conserva o que nele havia de verdadeiro e o eleva a outro patamar, tudo ao mesmo tempo. Agora explique a inversão na dialética do senhor e do escravo: o senhor torna-se dependente, e o escravo desenvolve consciência de si pelo trabalho."
+      }
+    ],
+    "recall": {
+      "prompt": "O que é a suprassunção em Hegel? Explique a inversão na dialética do senhor e do escravo.",
+      "elements": [
+        [
+          "nega, conserva e eleva ao mesmo tempo",
+          [
+            "nega",
+            "conserva",
+            "supera"
+          ]
+        ],
+        [
+          "o senhor depende do escravo",
+          [
+            "depende",
+            "senhor",
+            "escravo"
+          ]
+        ],
+        [
+          "o trabalho forma a consciencia de si",
+          [
+            "trabalho",
+            "consciencia",
+            "transforma"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Filosofia",
+    "topic": "Heráclito e Parmênides: o Ser e o Devir",
+    "sections": [
+      {
+        "title": "Heráclito e o devir",
+        "content": "Para Heráclito, tudo flui: a realidade é mudança permanente, e a imagem do rio em que não se entra duas vezes expressa isso. A unidade do mundo se dá pela tensão entre opostos, e o logos é a lei racional que rege esse fluxo. O fogo simboliza a transformação contínua, princípio e imagem da realidade."
+      },
+      {
+        "title": "Parmênides e o ser",
+        "content": "Parmênides sustenta o oposto: o ser é, o não ser não é. Se o movimento exige que algo passe a ser o que não era, ele seria contradição, e portanto ilusão dos sentidos. Só o pensamento alcança a verdade, e a razão revela um ser uno, imóvel, eterno e indivisível, contra a aparência de mudança."
+      },
+      {
+        "title": "A herança do problema",
+        "content": "A oposição entre permanência e mudança organiza boa parte da filosofia posterior. Platão responde separando o mundo sensível, mutável, do inteligível, imutável. Aristóteles resolve a questão com a distinção entre potência e ato, permitindo pensar mudança sem contradição. Os atomistas propõem átomos permanentes em movimento no vazio."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Reduzir Heráclito à frase sobre o rio, ignorando o logos e a unidade dos opostos, empobrece sua posição. Outro deslize é ler Parmênides como negando a existência do mundo, quando ele nega que a mudança seja verdadeira do ponto de vista do ser. E supor que os dois discutiam sobre fatos empíricos, e não sobre o estatuto do ser."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que Parmênides considera o movimento impossível? Responda antes de conferir: o movimento exigiria que algo passasse do não ser ao ser, mas o não ser não é, de modo que a mudança seria contradição e, portanto, ilusão dos sentidos. Agora diga como Aristóteles resolve o impasse: com potência e ato, o que muda já era em potência aquilo que se torna em ato."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que Parmênides nega o movimento? Como Aristóteles resolve o impasse entre ser e devir?",
+      "elements": [
+        [
+          "o movimento exigiria passar do nao ser ao ser",
+          [
+            "nao ser",
+            "contradicao",
+            "movimento"
+          ]
+        ],
+        [
+          "a mudanca seria ilusao dos sentidos",
+          [
+            "ilusao",
+            "sentidos",
+            "aparencia"
+          ]
+        ],
+        [
+          "Aristoteles distingue potencia e ato",
+          [
+            "potencia",
+            "ato",
+            "aristoteles"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Filosofia",
+    "topic": "Hobbes e o Estado de Natureza",
+    "sections": [
+      {
+        "title": "O estado de natureza",
+        "content": "Hobbes imagina uma condição pré-política em que não há autoridade comum. Como os seres humanos são aproximadamente iguais em capacidades e desejam os mesmos bens escassos, instala-se a desconfiança generalizada e a guerra de todos contra todos, em que a vida é solitária, pobre, sórdida, brutal e curta."
+      },
+      {
+        "title": "O contrato",
+        "content": "Movidos pelo medo da morte violenta e pelo desejo de conservação, os indivíduos transferem seus direitos a um soberano, criando o Estado, o Leviatã. O soberano não é parte do contrato, e seu poder deve ser absoluto e indivisível, pois qualquer divisão reabriria o conflito que o contrato pretendia encerrar."
+      },
+      {
+        "title": "Consequências políticas",
+        "content": "A legitimidade do poder, em Hobbes, não vem de Deus nem da tradição, mas do consentimento racional dos indivíduos, o que é moderno. Mas o resultado é a defesa do poder absoluto, com o único limite do direito à autopreservação: se o soberano ameaça a vida do súdito, cessa a obrigação de obedecer."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Ler o estado de natureza como fato histórico é impreciso: trata-se de hipótese teórica para justificar o Estado. Outro deslize é confundir absolutismo hobbesiano com direito divino dos reis, pois a fundamentação é contratual. E supor que Hobbes considera os humanos maus por essência, quando o problema é a escassez e a insegurança."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que, em Hobbes, o poder soberano precisa ser absoluto? Responda antes de conferir: qualquer divisão ou limitação reintroduziria disputas e reabriria a insegurança que justificou a criação do Estado. Agora diga qual o único limite à obediência: o soberano não pode exigir que o súdito renuncie à própria vida, já que a autopreservação motivou o contrato."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que o soberano de Hobbes deve ter poder absoluto? Qual o único limite à obediência?",
+      "elements": [
+        [
+          "a divisao do poder reabriria o conflito",
+          [
+            "divisao",
+            "conflito",
+            "inseguranca"
+          ]
+        ],
+        [
+          "o contrato existe para garantir a paz",
+          [
+            "contrato",
+            "paz",
+            "medo"
+          ]
+        ],
+        [
+          "o limite e o direito a propria vida",
+          [
+            "vida",
+            "autopreservacao",
+            "limite"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Filosofia",
+    "topic": "Justiça e Direitos Humanos",
+    "sections": [
+      {
+        "title": "Concepções de justiça",
+        "content": "A tradição distingue a justiça distributiva, que trata da repartição de bens e encargos, da justiça retributiva, que trata da punição, e da justiça comutativa, que trata das trocas. A pergunta central é qual critério adotar na distribuição: mérito, necessidade, igualdade estrita ou liberdade de contrato."
+      },
+      {
+        "title": "Rawls e a posição original",
+        "content": "Rawls propõe imaginar princípios de justiça escolhidos sob um véu de ignorância, em que ninguém sabe qual posição ocupará na sociedade. Dessa situação sairiam dois princípios: liberdades básicas iguais para todos e a admissão de desigualdades apenas se beneficiarem os menos favorecidos e houver igualdade de oportunidades."
+      },
+      {
+        "title": "Direitos humanos",
+        "content": "A Declaração Universal de 1948 afirma direitos inerentes a todo ser humano, independentemente de nacionalidade, origem ou credo. Críticas apontam seu caráter historicamente ocidental e a distância entre proclamação e efetivação, enquanto defensores destacam sua função como parâmetro universal de crítica a abusos."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Tratar igualdade como identidade de tratamento em toda situação ignora a diferença entre igualdade formal e material, base das políticas de equidade. Outro deslize é supor que o véu de ignorância descreve uma situação real. E confundir crítica ao universalismo abstrato com defesa do relativismo que legitima violações."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Para que serve o véu de ignorância em Rawls? Responda antes de conferir: é um recurso teórico que garante imparcialidade, pois ninguém escolheria princípios que prejudicassem determinada posição sem saber se ocupará justamente essa posição. Agora diferencie igualdade formal de material: a primeira trata todos igualmente perante a lei, a segunda considera desigualdades concretas para promover equidade."
+      }
+    ],
+    "recall": {
+      "prompt": "Para que serve o véu de ignorância? Diferencie igualdade formal de material.",
+      "elements": [
+        [
+          "garante imparcialidade na escolha dos principios",
+          [
+            "imparcial",
+            "posicao",
+            "desconhece"
+          ]
+        ],
+        [
+          "ninguem escolhe regras que o prejudiquem sem saber onde estara",
+          [
+            "prejudicar",
+            "posicao",
+            "risco"
+          ]
+        ],
+        [
+          "a igualdade material considera desigualdades concretas",
+          [
+            "material",
+            "equidade",
+            "desigualdade"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Filosofia",
+    "topic": "Locke e os Direitos Naturais",
+    "sections": [
+      {
+        "title": "Estado de natureza segundo Locke",
+        "content": "Diferente de Hobbes, Locke descreve um estado de natureza regido pela lei natural, acessível à razão, em que os indivíduos já possuem direitos à vida, à liberdade e à propriedade. Não é guerra, mas tem inconvenientes: falta juiz imparcial, lei escrita e poder capaz de executar decisões em disputas."
+      },
+      {
+        "title": "O contrato e o governo limitado",
+        "content": "Para superar esses inconvenientes, os indivíduos consentem em formar uma sociedade política que preserve os direitos que já tinham. O poder é, portanto, limitado e fiduciário: exerce-se como confiança depositada pelos governados. Locke defende a separação de poderes e a supremacia do legislativo eleito."
+      },
+      {
+        "title": "Direito de resistência",
+        "content": "Se o governo viola sistematicamente os direitos que deveria proteger, rompe a confiança e o povo tem direito de resistir e destituí-lo. Essa tese fundamentou revoluções liberais e declarações de direitos. A propriedade, em Locke, origina-se do trabalho aplicado ao que a natureza oferece em comum."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Confundir Locke com Hobbes quanto ao estado de natureza é o erro mais comum: em Locke ele não é guerra generalizada. Outro deslize é supor que Locke defende democracia ampla, quando restringe a cidadania política aos proprietários. E esquecer que a propriedade se funda no trabalho."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que, em Locke, o governo pode ser destituído? Responda antes de conferir: o poder é confiança depositada para proteger direitos preexistentes; violá-los rompe o pacto e devolve ao povo o direito de resistir. Agora explique a origem da propriedade em Locke: o trabalho aplicado ao que era comum torna a coisa própria de quem trabalhou."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que o governo pode ser destituído segundo Locke? Qual a origem da propriedade?",
+      "elements": [
+        [
+          "o poder e confianca para proteger direitos",
+          [
+            "confianca",
+            "direitos",
+            "protecao"
+          ]
+        ],
+        [
+          "violar direitos rompe o pacto e legitima a resistencia",
+          [
+            "resistencia",
+            "rompe",
+            "destituir"
+          ]
+        ],
+        [
+          "a propriedade nasce do trabalho",
+          [
+            "trabalho",
+            "comum",
+            "apropriacao"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Filosofia",
+    "topic": "Lógica e Metafísica Aristotélicas",
+    "sections": [
+      {
+        "title": "Substância, matéria e forma",
+        "content": "Aristóteles recusa a separação entre dois mundos: as Formas estão nas próprias coisas. Cada ente concreto, a substância, é composto de matéria, aquilo de que é feito, e forma, aquilo que o faz ser o que é. Conhecer é apreender a forma presente no sensível, e não contemplar um domínio separado."
+      },
+      {
+        "title": "Potência, ato e as quatro causas",
+        "content": "A mudança se explica pela passagem de potência a ato: a semente é árvore em potência. Toda mudança envolve quatro causas: material, aquilo de que algo é feito; formal, sua essência; eficiente, o agente que produz; e final, o fim para o qual tende. A causa final é central na teleologia aristotélica."
+      },
+      {
+        "title": "Lógica e silogismo",
+        "content": "Aristóteles sistematizou a lógica formal, com o silogismo, raciocínio em que de duas premissas se extrai necessariamente uma conclusão. Distinguiu validade, que depende da forma do argumento, de verdade, que depende do conteúdo das premissas, distinção que continua sendo o núcleo do estudo da argumentação."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Confundir validade com verdade é o erro central: um argumento pode ser válido com premissas falsas, e um argumento inválido pode ter conclusão verdadeira. Outro deslize é dizer que Aristóteles nega as Formas, quando ele nega apenas sua existência separada. E esquecer a causa final ao listar as quatro causas."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Um argumento válido pode ter conclusão falsa? Responda antes de conferir: sim, se alguma premissa for falsa, porque a validade diz respeito apenas à forma da inferência; a conclusão só é garantidamente verdadeira se o argumento for válido e as premissas verdadeiras. Agora explique potência e ato com um exemplo: a semente é árvore em potência e árvore em ato quando se desenvolve."
+      }
+    ],
+    "recall": {
+      "prompt": "Um argumento válido pode ter conclusão falsa? Explique potência e ato.",
+      "elements": [
+        [
+          "sim se as premissas forem falsas",
+          [
+            "premissa",
+            "falsa",
+            "sim"
+          ]
+        ],
+        [
+          "validade diz respeito a forma da inferencia",
+          [
+            "forma",
+            "validade",
+            "inferencia"
+          ]
+        ],
+        [
+          "a semente e arvore em potencia",
+          [
+            "potencia",
+            "ato",
+            "semente"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Filosofia",
+    "topic": "Nietzsche e a Crítica aos Valores Morais",
+    "sections": [
+      {
+        "title": "Genealogia da moral",
+        "content": "Nietzsche propõe investigar a origem histórica dos valores em vez de aceitá-los como eternos. Distingue a moral dos senhores, que chama de bom o que é forte, afirmativo e nobre, da moral dos escravos, que inverte a avaliação e chama de bom o fraco, o humilde e o resignado, num movimento que ele nomeia ressentimento."
+      },
+      {
+        "title": "Crítica à metafísica e à religião",
+        "content": "A afirmação de que Deus está morto não é constatação teológica, e sim diagnóstico cultural: os fundamentos absolutos que sustentavam valores perderam credibilidade, abrindo o risco do niilismo, a desvalorização de todos os valores. Nietzsche critica também a oposição platônica entre mundo verdadeiro e aparente."
+      },
+      {
+        "title": "Vontade de potência e além-do-homem",
+        "content": "A vontade de potência não é desejo de dominar os outros, mas impulso de expansão, criação e superação de si. O além-do-homem é a figura de quem cria seus próprios valores após a queda dos absolutos, e o eterno retorno funciona como prova ética: viver de modo a querer repetir infinitamente a própria vida."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Ler a vontade de potência como apologia da força bruta é distorção historicamente associada a apropriações indevidas de sua obra. Outro deslize é entender Deus está morto como afirmação triunfal do ateísmo, quando é diagnóstico de crise. E confundir além-do-homem com superioridade biológica."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "O que significa dizer que Deus está morto? Responda antes de conferir: os fundamentos absolutos que davam sustentação aos valores perderam credibilidade na cultura ocidental, o que gera o risco do niilismo e a tarefa de criar novos valores. Agora explique a moral do ressentimento: a inversão que transforma fraqueza em virtude a partir da impotência diante do forte."
+      }
+    ],
+    "recall": {
+      "prompt": "O que significa Deus está morto em Nietzsche? Explique a moral do ressentimento.",
+      "elements": [
+        [
+          "os fundamentos absolutos perderam credibilidade",
+          [
+            "fundamento",
+            "absoluto",
+            "credibilidade"
+          ]
+        ],
+        [
+          "abre-se o risco do niilismo",
+          [
+            "niilismo",
+            "valores",
+            "crise"
+          ]
+        ],
+        [
+          "o ressentimento inverte valores transformando fraqueza em virtude",
+          [
+            "ressentimento",
+            "inverte",
+            "fraqueza"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Filosofia",
+    "topic": "O Existencialismo de Sartre",
+    "sections": [
+      {
+        "title": "A existência precede a essência",
+        "content": "Para Sartre, não há natureza humana prévia que determine o que cada um deve ser: primeiro o ser humano existe, e só depois se define pelas escolhas que faz. Essa inversão em relação à tradição significa que não há álibi: somos o que fazemos com o que fizeram de nós."
+      },
+      {
+        "title": "Liberdade e responsabilidade",
+        "content": "Estamos condenados a ser livres: mesmo não escolher é uma escolha. Como cada escolha projeta uma imagem do que consideramos que o ser humano deve ser, ela implica responsabilidade por todos, o que gera angústia. A má-fé é a fuga dessa responsabilidade, atribuindo a um papel social ou a uma essência aquilo que é escolha."
+      },
+      {
+        "title": "Engajamento",
+        "content": "O existencialismo sartriano é humanismo no sentido de que devolve ao ser humano a autoria de sua vida e recusa determinismos consoladores. Daí a defesa do engajamento: como toda escolha tem alcance coletivo, a omissão política também é posição, e a liberdade individual implica compromisso com a liberdade dos outros."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Ler liberdade absoluta como ausência de condicionamentos é impreciso: há situação, e a liberdade é o modo de assumi-la. Outro deslize é confundir angústia com medo, quando ela decorre do peso da responsabilidade. E entender má-fé como mentira aos outros, quando é autoengano sobre a própria liberdade."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "O que significa a existência preceder a essência? Responda antes de conferir: não há definição prévia do que o ser humano deve ser; ele se constitui pelas escolhas que faz, e por isso é integralmente responsável por elas. Agora explique a má-fé com um exemplo: alguém que justifica sua conduta dizendo que é assim mesmo, como se não pudesse escolher diferente."
+      }
+    ],
+    "recall": {
+      "prompt": "O que significa a existência preceder a essência? Explique a má-fé em Sartre.",
+      "elements": [
+        [
+          "nao ha natureza humana previa",
+          [
+            "natureza",
+            "previa",
+            "definicao"
+          ]
+        ],
+        [
+          "o ser humano se define pelas escolhas",
+          [
+            "escolha",
+            "define",
+            "responsavel"
+          ]
+        ],
+        [
+          "a ma-fe nega a propria liberdade",
+          [
+            "ma-fe",
+            "nega",
+            "liberdade"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Filosofia",
+    "topic": "O Ideal Iluminista de Razão e Progresso",
+    "sections": [
+      {
+        "title": "Saída da menoridade",
+        "content": "Kant define o Iluminismo como a saída do homem de sua menoridade, da qual ele próprio é culpado, isto é, a incapacidade de usar o entendimento sem a direção de outro. O lema é atreva-se a saber, e a condição para isso é a liberdade de fazer uso público da razão em todas as matérias."
+      },
+      {
+        "title": "Razão, crítica e progresso",
+        "content": "O programa iluminista submete tradição, autoridade e instituições ao tribunal da razão, defende tolerância religiosa, liberdade de expressão e educação, e associa o avanço do conhecimento à melhoria das condições de vida. A Enciclopédia é o símbolo desse projeto de reunir e difundir o saber disponível."
+      },
+      {
+        "title": "Críticas ao Iluminismo",
+        "content": "O projeto foi criticado por suas exclusões, já que a proclamação de direitos universais conviveu com escravidão e com a exclusão política de mulheres e não proprietários. No século XX, a Escola de Frankfurt apontou que a razão instrumental, voltada apenas a meios eficazes, pode servir à dominação e à barbárie."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Tratar o Iluminismo como bloco homogêneo ignora divergências internas relevantes. Outro deslize é supor que criticar o Iluminismo equivale a defender obscurantismo, quando as críticas apontam contradições internas do próprio projeto. E confundir uso público da razão com opinião privada em Kant."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "O que Kant entende por menoridade? Responda antes de conferir: a incapacidade de usar o próprio entendimento sem a tutela de outra pessoa, condição da qual o indivíduo é culpado quando lhe falta decisão e coragem, e não capacidade. Agora cite uma crítica ao Iluminismo: sua universalidade conviveu com escravidão e exclusão política de mulheres e não proprietários."
+      }
+    ],
+    "recall": {
+      "prompt": "O que Kant entende por menoridade? Cite uma crítica ao projeto iluminista.",
+      "elements": [
+        [
+          "incapacidade de usar o proprio entendimento",
+          [
+            "entendimento",
+            "tutela",
+            "proprio"
+          ]
+        ],
+        [
+          "falta coragem e decisao, nao capacidade",
+          [
+            "coragem",
+            "decisao",
+            "culpa"
+          ]
+        ],
+        [
+          "universalidade conviveu com escravidao e exclusao",
+          [
+            "escravidao",
+            "exclusao",
+            "mulher"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Filosofia",
+    "topic": "O Materialismo Histórico",
+    "sections": [
+      {
+        "title": "Inversão da dialética",
+        "content": "Marx assume a dialética hegeliana, mas a inverte: não é a consciência que determina a existência, e sim a existência social que determina a consciência. O ponto de partida não são as ideias, e sim o modo como os seres humanos produzem sua vida material, com determinadas forças produtivas e relações de produção."
+      },
+      {
+        "title": "Infraestrutura e superestrutura",
+        "content": "A base econômica condiciona a superestrutura jurídica, política e ideológica. Não se trata de determinismo mecânico: a superestrutura reage sobre a base, mas as transformações históricas decisivas remetem a contradições entre o desenvolvimento das forças produtivas e as relações de produção existentes."
+      },
+      {
+        "title": "Modos de produção",
+        "content": "A história é lida como sucessão de modos de produção, cada um com sua forma característica de exploração: comunismo primitivo, escravista, feudal, capitalista. Quando as relações de produção se tornam entrave ao desenvolvimento das forças produtivas, abre-se uma época de revolução social."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Reduzir o materialismo histórico à afirmação de que tudo é economia é caricatura: a determinação é em última instância, com autonomia relativa das outras esferas. Outro deslize é confundir materialismo histórico com determinismo inevitável. E tratar ideologia apenas como mentira consciente, quando é forma socialmente produzida de consciência."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "O que significa dizer que a existência determina a consciência? Responda antes de conferir: as ideias, valores e formas de pensar de uma época se explicam a partir das condições materiais e das relações sociais de produção em que as pessoas vivem, e não o contrário. Agora explique quando ocorre uma revolução social em Marx: quando as relações de produção se tornam entrave às forças produtivas."
+      }
+    ],
+    "recall": {
+      "prompt": "O que significa que a existência determina a consciência? Quando ocorre revolução social em Marx?",
+      "elements": [
+        [
+          "as ideias se explicam pelas condicoes materiais",
+          [
+            "material",
+            "condicao",
+            "producao"
+          ]
+        ],
+        [
+          "nao sao as ideias que fundam a sociedade",
+          [
+            "ideia",
+            "inverte",
+            "hegel"
+          ]
+        ],
+        [
+          "quando as relacoes de producao entravam as forcas produtivas",
+          [
+            "entrave",
+            "forcas produtivas",
+            "relacoes"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Filosofia",
+    "topic": "O Mito da Caverna",
+    "sections": [
+      {
+        "title": "A alegoria",
+        "content": "Prisioneiros acorrentados desde o nascimento veem apenas sombras projetadas na parede por objetos carregados diante de uma fogueira. Tomam essas sombras pela realidade. Um deles é libertado, percebe o fogo, sai da caverna, sofre com a luz, adapta-se e por fim contempla o sol, símbolo da Ideia de Bem."
+      },
+      {
+        "title": "O que cada elemento representa",
+        "content": "A caverna é o mundo sensível; as sombras, as aparências e opiniões; as correntes, os preconceitos e a ignorância; a saída dolorosa, o processo educativo; o sol, a Ideia de Bem, princípio de inteligibilidade de tudo. O retorno do libertado à caverna representa o dever político do filósofo de educar os demais."
+      },
+      {
+        "title": "Educação e política",
+        "content": "A alegoria é também uma tese sobre educação: educar não é despejar conteúdo em quem não tem, mas converter o olhar, orientar a alma para o que é real. E é uma tese política: quem retorna para libertar os outros é rejeitado e ameaçado, referência transparente à condenação de Sócrates."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Ler a alegoria apenas como crítica à ignorância perde as dimensões educativa e política. Outro deslize é imaginar que a saída é instantânea, quando Platão insiste no processo gradual e doloroso. E identificar o sol com o conhecimento em geral, quando ele representa especificamente a Ideia de Bem."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que o prisioneiro libertado sofre ao sair? Responda antes de conferir: a passagem da sombra à luz é gradual e dolorosa, porque exige abandonar certezas confortáveis e reeducar o olhar para o que antes era invisível. Agora explique por que ele retorna: o filósofo tem o dever político de conduzir os outros ao conhecimento, ainda que seja rejeitado."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a saída da caverna é dolorosa e por que o libertado retorna?",
+      "elements": [
+        [
+          "a passagem a luz e gradual e desconfortavel",
+          [
+            "gradual",
+            "dor",
+            "luz"
+          ]
+        ],
+        [
+          "exige abandonar certezas e reeducar o olhar",
+          [
+            "certeza",
+            "olhar",
+            "educacao"
+          ]
+        ],
+        [
+          "o filosofo tem dever politico de ensinar",
+          [
+            "retorno",
+            "dever",
+            "politico"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Filosofia",
+    "topic": "O Método Socrático e a Maiêutica",
+    "sections": [
+      {
+        "title": "Ironia e maiêutica",
+        "content": "O método socrático tem duas etapas. Na ironia, Sócrates finge ignorância e questiona o interlocutor até revelar as contradições de suas certezas, produzindo o reconhecimento da própria ignorância. Na maiêutica, arte de partejar herdada da mãe, ajuda o interlocutor a dar à luz um conhecimento que ele constrói por si mesmo."
+      },
+      {
+        "title": "Só sei que nada sei",
+        "content": "A célebre frase não é ceticismo nem falsa modéstia: é reconhecimento de que o primeiro passo do conhecimento é abandonar a certeza ilusória. A vantagem de Sócrates sobre os outros é saber que não sabe, o que o mantém em busca. O oráculo de Delfos e o preceito conhece-te a ti mesmo orientam essa investigação."
+      },
+      {
+        "title": "Ética e julgamento",
+        "content": "Sócrates ligou conhecimento e virtude: quem realmente conhece o bem age bem, e o erro moral decorre da ignorância. Sua atuação incomodou a cidade, e ele foi condenado à morte sob acusações de corromper a juventude e não reconhecer os deuses da pólis, recusando-se a fugir para não desrespeitar as leis."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Ler a ironia socrática como zombaria perde sua função filosófica de expor contradições. Outro deslize é entender a frase sobre nada saber como negação da possibilidade de conhecimento. E confundir maiêutica com transmissão de conteúdo, quando ela consiste em conduzir o outro a formular o que já pode encontrar por si."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a ironia precede a maiêutica? Responda antes de conferir: é preciso primeiro desfazer as falsas certezas para abrir espaço à investigação; sem reconhecer a própria ignorância, o interlocutor não busca nada. Agora explique o intelectualismo moral socrático: quem conhece verdadeiramente o bem age de acordo com ele, e o mal decorre de ignorância."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a ironia precede a maiêutica? Explique o intelectualismo moral socrático.",
+      "elements": [
+        [
+          "primeiro e preciso desfazer as falsas certezas",
+          [
+            "falsa",
+            "certeza",
+            "ignorancia"
+          ]
+        ],
+        [
+          "so entao o interlocutor busca conhecer",
+          [
+            "busca",
+            "investigacao",
+            "abre"
+          ]
+        ],
+        [
+          "conhecer o bem leva a agir bem",
+          [
+            "bem",
+            "virtude",
+            "ignorancia"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Filosofia",
+    "topic": "O Nascimento da Filosofia: do Mito ao Logos",
+    "sections": [
+      {
+        "title": "Duas formas de explicar",
+        "content": "O mito explica o mundo por narrativas sobre deuses e forças personificadas, transmitidas pela tradição e aceitas pela autoridade de quem conta. O logos busca explicação racional, com argumentos que podem ser examinados e contestados por qualquer um. A passagem de um a outro não é abandono do mito, mas o surgimento de outro modo de justificar o que se afirma."
+      },
+      {
+        "title": "Condições históricas",
+        "content": "A filosofia nasce nas colônias gregas da Jônia, no século VI a.C., em cidades comerciais e portuárias, com contato entre culturas, uso da escrita alfabética, moeda e vida política na pólis. A prática da assembleia, em que decisões eram tomadas por argumentação pública, criou o hábito de justificar posições diante de iguais."
+      },
+      {
+        "title": "O que caracteriza o discurso filosófico",
+        "content": "O logos filosófico é argumentativo, busca princípios universais, admite contestação e exige coerência interna. Por isso a filosofia nasce como pergunta pela arché, o princípio de todas as coisas, e se distingue tanto do mito quanto de saberes puramente técnicos, que se ocupam de aplicações particulares."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que o mito é falso e a filosofia é verdadeira simplifica: mito e logos são formas distintas de explicação, com funções sociais próprias. Outro deslize é imaginar ruptura abrupta, quando muitos filósofos usaram imagens míticas. E supor que a filosofia surge por gênio individual, ignorando as condições sociais da pólis."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a pólis é condição para o surgimento da filosofia? Responda antes de conferir: nela as decisões eram tomadas em assembleia, exigindo argumentos públicos submetidos à contestação de iguais, hábito que se transfere para a explicação do mundo. Agora diferencie mito e logos quanto ao critério de aceitação: o mito se apoia na tradição e na autoridade, o logos na força do argumento."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a pólis é condição para o surgimento da filosofia? Diferencie mito e logos quanto ao critério de aceitação.",
+      "elements": [
+        [
+          "decisoes por argumentacao publica na assembleia",
+          [
+            "assembleia",
+            "publico",
+            "argumento"
+          ]
+        ],
+        [
+          "o mito se apoia na tradicao e na autoridade",
+          [
+            "tradicao",
+            "autoridade",
+            "narrativa"
+          ]
+        ],
+        [
+          "o logos se apoia na razao e admite contestacao",
+          [
+            "razao",
+            "contestacao",
+            "justificar"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Filosofia",
+    "topic": "Os Filósofos da Physis: Tales, Anaximandro e Anaxímenes",
+    "sections": [
+      {
+        "title": "A pergunta pela arché",
+        "content": "Os primeiros filósofos, chamados de físicos ou naturalistas, perguntaram qual é o princípio, a arché, do qual tudo se origina e ao qual tudo retorna. A novidade não está na resposta, mas na pergunta: buscar um princípio único e natural, e não uma vontade divina, para explicar a multiplicidade do mundo."
+      },
+      {
+        "title": "As três respostas",
+        "content": "Tales afirmou que o princípio é a água, presente em tudo o que vive e capaz de assumir vários estados. Anaximandro propôs o ápeiron, o indeterminado e ilimitado, evitando identificar a arché com um elemento particular. Anaxímenes escolheu o ar, explicando as transformações por rarefação e condensação, o que introduz um mecanismo."
+      },
+      {
+        "title": "O legado",
+        "content": "O valor dessas respostas está no método: explicar a natureza pela própria natureza, com princípios acessíveis à razão. Anaximandro dá um passo abstrato ao propor um princípio indeterminado, e Anaxímenes acrescenta um mecanismo de transformação, antecipando a busca por leis que expliquem mudanças observáveis."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Julgar essas teses pelo padrão da ciência atual e chamá-las de ingênuas perde o ponto: o que importa é a mudança no tipo de explicação. Outro deslize é atribuir a Tales a afirmação de que tudo é feito de água no sentido químico moderno. E confundir ápeiron com o vazio ou com o nada."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a escolha do ápeiron por Anaximandro é filosoficamente relevante? Responda antes de conferir: ao propor um princípio indeterminado, ele evita privilegiar um elemento particular do mundo e sustenta melhor a origem de todos os opostos. Agora explique a contribuição de Anaxímenes: introduziu rarefação e condensação como mecanismo de transformação do princípio nas coisas."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que o ápeiron de Anaximandro é relevante? Qual a contribuição de Anaxímenes?",
+      "elements": [
+        [
+          "principio indeterminado evita privilegiar um elemento",
+          [
+            "indeterminado",
+            "apeiron",
+            "ilimitado"
+          ]
+        ],
+        [
+          "explica melhor a origem dos opostos",
+          [
+            "opostos",
+            "origem",
+            "todas as coisas"
+          ]
+        ],
+        [
+          "rarefacao e condensacao como mecanismo",
+          [
+            "rarefacao",
+            "condensacao",
+            "ar"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Filosofia",
+    "topic": "Os Sofistas e a Crise da Verdade",
+    "sections": [
+      {
+        "title": "Quem eram",
+        "content": "Os sofistas foram mestres itinerantes que ensinavam retórica e argumentação mediante pagamento, num contexto em que falar bem na assembleia era caminho para o sucesso político. Deslocaram o foco da natureza para o ser humano, a linguagem e as convenções sociais, inaugurando um período antropológico na filosofia."
+      },
+      {
+        "title": "Relativismo",
+        "content": "Protágoras afirmou que o homem é a medida de todas as coisas, sustentando que a verdade depende de quem percebe e do contexto. Górgias radicalizou: nada existe; se existisse, não poderia ser conhecido; e se pudesse, não poderia ser comunicado. A distinção entre physis, natureza, e nomos, convenção, tornou-se central."
+      },
+      {
+        "title": "Crítica e reabilitação",
+        "content": "Platão os acusou de vender aparência de sabedoria e de ensinar a fazer o argumento mais fraco parecer o mais forte. Leituras contemporâneas destacam sua contribuição: a atenção à linguagem, à persuasão e ao caráter convencional de normas sociais, questões que reaparecem em debates atuais sobre discurso e poder."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Usar sofista apenas como insulto, sinônimo de enganador, reproduz a crítica platônica sem análise. Outro deslize é confundir relativismo com afirmação de que tudo é falso. E supor que a distinção entre physis e nomos é irrelevante, quando ela sustenta debates sobre o que é natural e o que é construído socialmente."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "O que significa a tese de Protágoras de que o homem é a medida de todas as coisas? Responda antes de conferir: o critério de verdade e valor não é absoluto, mas depende do sujeito que percebe e julga, variando com contexto e cultura. Agora explique a distinção physis-nomos: uma coisa é o que existe por natureza, outra é o que existe por convenção humana."
+      }
+    ],
+    "recall": {
+      "prompt": "O que significa a tese de Protágoras? Explique a distinção entre physis e nomos.",
+      "elements": [
+        [
+          "o criterio de verdade depende do sujeito",
+          [
+            "sujeito",
+            "depende",
+            "relativo"
+          ]
+        ],
+        [
+          "a verdade varia com contexto e cultura",
+          [
+            "contexto",
+            "cultura",
+            "variavel"
+          ]
+        ],
+        [
+          "physis e natureza e nomos e convencao",
+          [
+            "physis",
+            "nomos",
+            "convencao"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Filosofia",
+    "topic": "Patrística e Santo Agostinho",
+    "sections": [
+      {
+        "title": "Conciliar fé e filosofia",
+        "content": "A patrística é o esforço dos primeiros pensadores cristãos para articular a fé com a herança filosófica grega, sobretudo o platonismo. Agostinho é seu maior representante, e sua fórmula creio para compreender indica que a fé precede e orienta a razão, mas não a dispensa, já que compreender aprofunda o que se crê."
+      },
+      {
+        "title": "O problema do mal",
+        "content": "Se Deus é bom e onipotente, de onde vem o mal? Agostinho responde que o mal não é substância criada, mas privação de bem, ausência de perfeição. E que o mal moral resulta do livre-arbítrio: Deus criou o homem livre, e é o mau uso da liberdade que produz o pecado, preservando a bondade divina."
+      },
+      {
+        "title": "Interioridade e tempo",
+        "content": "Agostinho desloca a busca da verdade para a interioridade: é dentro de si que o homem encontra a verdade, iluminada por Deus. Nas Confissões, analisa o tempo como distensão da alma, com passado na memória, presente na atenção e futuro na expectativa, análise que influenciou a filosofia moderna e contemporânea."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que Agostinho opõe fé e razão inverte sua posição: ele as articula, com primazia da fé. Outro deslize é entender o mal como coisa criada, quando é privação. E confundir a solução agostiniana com determinismo, quando o livre-arbítrio é justamente o que responsabiliza o ser humano."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Como Agostinho resolve o problema do mal sem comprometer a bondade divina? Responda antes de conferir: o mal não é substância criada, e sim privação de bem, e o mal moral resulta do uso livre e desordenado da vontade humana. Agora explique a fórmula creio para compreender: a fé é ponto de partida que orienta a razão, que por sua vez aprofunda o compreendido."
+      }
+    ],
+    "recall": {
+      "prompt": "Como Agostinho explica a origem do mal? O que significa creio para compreender?",
+      "elements": [
+        [
+          "o mal e privacao de bem e nao substancia",
+          [
+            "privacao",
+            "ausencia",
+            "nao substancia"
+          ]
+        ],
+        [
+          "o mal moral vem do livre-arbitrio",
+          [
+            "livre-arbitrio",
+            "vontade",
+            "liberdade"
+          ]
+        ],
+        [
+          "a fe orienta a razao que aprofunda o crido",
+          [
+            "fe",
+            "razao",
+            "compreender"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Filosofia",
+    "topic": "Política Aristotélica: o Homem como Animal Político",
+    "sections": [
+      {
+        "title": "Zoon politikon",
+        "content": "Aristóteles afirma que o ser humano é, por natureza, um animal político, isto é, um ser que se realiza na convivência na pólis. Não se trata apenas de viver em grupo, o que outros animais fazem, mas de ser dotado de linguagem capaz de discutir o justo e o injusto, o útil e o nocivo, fundamento da vida em comum."
+      },
+      {
+        "title": "Formas de governo",
+        "content": "Ele classifica os regimes pelo número de governantes e pela finalidade: monarquia, aristocracia e politeia visam ao bem comum; tirania, oligarquia e democracia, em sua leitura, degeneram-se ao servir ao interesse particular de quem governa. A politeia, governo da maioria voltado ao bem comum, é a forma mais estável e viável."
+      },
+      {
+        "title": "Cidadania e limites",
+        "content": "O cidadão é quem participa das decisões e da administração da justiça, o que exclui, na Grécia antiga, mulheres, escravizados e estrangeiros. Aristóteles justificou a escravidão como natural, tese profundamente criticada, e defendeu que uma classe média ampla dá estabilidade ao regime, evitando extremos de riqueza e pobreza."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Ler democracia em Aristóteles com o sentido atual é erro: para ele, é forma degenerada do governo da maioria. Outro deslize é tomar sua defesa da escravidão como detalhe menor, quando é limite estrutural de seu pensamento. E entender animal político apenas como sociável, perdendo o vínculo com a linguagem e a deliberação."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a linguagem é central na definição de animal político? Responda antes de conferir: outros animais emitem sinais de dor e prazer, mas só o humano tem discurso capaz de discutir justo e injusto, e é essa deliberação que constitui a comunidade política. Agora explique a diferença entre politeia e democracia em Aristóteles: a primeira visa ao bem comum, a segunda é sua forma degenerada."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a linguagem define o animal político? Diferencie politeia e democracia em Aristóteles.",
+      "elements": [
+        [
+          "so o humano discute justo e injusto",
+          [
+            "justo",
+            "discurso",
+            "linguagem"
+          ]
+        ],
+        [
+          "a deliberacao constitui a comunidade politica",
+          [
+            "deliberacao",
+            "polis",
+            "comunidade"
+          ]
+        ],
+        [
+          "a politeia visa ao bem comum e a democracia e sua degeneracao",
+          [
+            "bem comum",
+            "degenerada",
+            "politeia"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Filosofia",
+    "topic": "Racionalismo Continental: Espinosa e Leibniz",
+    "sections": [
+      {
+        "title": "O programa racionalista",
+        "content": "O racionalismo sustenta que a razão é a fonte principal do conhecimento verdadeiro e que existem ideias inatas, não derivadas da experiência. O modelo é a matemática: a partir de princípios evidentes, deduzem-se consequências necessárias, e a experiência serve mais para ilustrar do que para fundar o saber."
+      },
+      {
+        "title": "Espinosa",
+        "content": "Espinosa propõe que existe uma única substância infinita, Deus ou Natureza, da qual tudo é modo ou expressão, posição chamada de panteísmo. Rejeita o dualismo cartesiano entre alma e corpo, tratando pensamento e extensão como atributos da mesma substância, e defende que a liberdade consiste em compreender a necessidade."
+      },
+      {
+        "title": "Leibniz",
+        "content": "Leibniz sustenta que a realidade é composta de mônadas, substâncias simples e sem partes, cada uma refletindo o universo inteiro segundo seu ponto de vista. A harmonia entre elas foi preestabelecida por Deus, que, entre os mundos possíveis, teria criado o melhor, tese satirizada por Voltaire em Cândido."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Confundir o panteísmo de Espinosa com ateísmo ou com o Deus pessoal das religiões monoteístas. Outro deslize é ler o melhor dos mundos possíveis como afirmação de que não há mal, quando Leibniz sustenta que o mal é compatível com a melhor combinação global. E supor que racionalistas negam qualquer papel à experiência."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "O que caracteriza o racionalismo diante do empirismo? Responda antes de conferir: a defesa de que a razão e ideias inatas fundamentam o conhecimento verdadeiro, tomando a dedução matemática como modelo, contra a tese de que todo conhecimento vem da experiência. Agora explique a substância única de Espinosa: só existe uma substância infinita, e tudo o mais são seus modos."
+      }
+    ],
+    "recall": {
+      "prompt": "O que caracteriza o racionalismo? Explique a substância única de Espinosa.",
+      "elements": [
+        [
+          "a razao e ideias inatas fundam o conhecimento",
+          [
+            "razao",
+            "inata",
+            "deducao"
+          ]
+        ],
+        [
+          "o modelo e a matematica",
+          [
+            "matematica",
+            "dedutivo",
+            "evidente"
+          ]
+        ],
+        [
+          "so ha uma substancia infinita e tudo e modo dela",
+          [
+            "substancia",
+            "unica",
+            "modo"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Filosofia",
+    "topic": "Rousseau e a Vontade Geral",
+    "sections": [
+      {
+        "title": "O homem natural",
+        "content": "Rousseau descreve o ser humano no estado de natureza como bom, guiado pelo amor de si e pela piedade, e não corrompido. O que o degrada é a vida social organizada em torno da propriedade privada: quando alguém cercou um terreno e disse isto é meu, nasceram desigualdade, dependência e conflito."
+      },
+      {
+        "title": "O contrato e a vontade geral",
+        "content": "O contrato social legítimo não transfere direitos a um soberano externo, e sim constitui um corpo político em que cada um se une a todos e obedece somente a si mesmo. A vontade geral é a vontade do corpo político voltada ao bem comum, distinta da vontade de todos, que é a mera soma de interesses particulares."
+      },
+      {
+        "title": "Liberdade e educação",
+        "content": "Obedecer à lei que se ajudou a estabelecer é ser livre, o que Rousseau chama de liberdade civil. Daí sua defesa da soberania popular inalienável e da participação direta. No Emílio, propõe uma educação que respeite as etapas do desenvolvimento e preserve a autonomia, em vez de moldar o indivíduo desde fora."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Ler o bom selvagem como afirmação de que os humanos primitivos eram moralmente virtuosos é impreciso: eles são pré-morais, sem vícios sociais. Outro deslize é confundir vontade geral com vontade da maioria. E supor que Rousseau propõe retorno à natureza, quando propõe outra forma de organização social."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Qual a diferença entre vontade geral e vontade de todos? Responda antes de conferir: a vontade geral visa ao bem comum do corpo político, enquanto a vontade de todos é a soma de vontades particulares, que pode divergir do interesse coletivo. Agora explique por que, para Rousseau, obedecer à lei é ser livre: a lei foi estabelecida por quem a obedece."
+      }
+    ],
+    "recall": {
+      "prompt": "Diferencie vontade geral de vontade de todos e explique a liberdade civil em Rousseau.",
+      "elements": [
+        [
+          "a vontade geral visa ao bem comum",
+          [
+            "bem comum",
+            "geral",
+            "corpo politico"
+          ]
+        ],
+        [
+          "a vontade de todos e soma de interesses particulares",
+          [
+            "soma",
+            "particular",
+            "interesse"
+          ]
+        ],
+        [
+          "obedecer a lei que se ajudou a fazer e ser livre",
+          [
+            "lei",
+            "livre",
+            "autonomia"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Filosofia",
+    "topic": "Ética Aplicada e Bioética",
+    "sections": [
+      {
+        "title": "O campo da ética aplicada",
+        "content": "A ética aplicada examina problemas morais concretos em áreas específicas: saúde, ambiente, tecnologia, negócios, pesquisa. Não substitui as teorias éticas, mas as põe em uso, mostrando que deontologia, utilitarismo e ética das virtudes levam a análises distintas de um mesmo caso, o que exige explicitar o critério adotado."
+      },
+      {
+        "title": "Princípios da bioética",
+        "content": "A bioética costuma trabalhar com quatro princípios: autonomia, respeito às decisões informadas do paciente; beneficência, agir em seu benefício; não maleficência, evitar dano; e justiça, distribuir recursos e riscos de forma equitativa. Casos difíceis surgem quando os princípios entram em conflito e é preciso ponderar."
+      },
+      {
+        "title": "Temas controversos",
+        "content": "Eutanásia, aborto, testes em animais e humanos, edição genética, transplantes e alocação de recursos escassos são os temas típicos. O debate exige distinguir argumentos morais de crenças privadas, considerar consequências e princípios, e reconhecer que a legislação e a moralidade pessoal não coincidem necessariamente."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Confundir legalidade com moralidade é o erro mais frequente: algo pode ser legal e moralmente questionável, e vice-versa. Outro deslize é aplicar autonomia sem verificar se houve informação adequada e capacidade de decisão. E tratar o consenso científico como se resolvesse sozinho questões de valor."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que os quatro princípios da bioética podem entrar em conflito? Responda antes de conferir: a decisão autônoma do paciente pode contrariar o que o profissional considera benéfico, e a justiça na alocação de recursos escassos pode limitar o que seria melhor para um indivíduo. Agora explique por que legalidade não equivale a moralidade: a lei expressa decisões políticas historicamente situadas, sujeitas a crítica moral."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que os princípios da bioética entram em conflito? Por que legalidade não equivale a moralidade?",
+      "elements": [
+        [
+          "autonomia pode contrariar a beneficencia",
+          [
+            "autonomia",
+            "beneficencia",
+            "conflito"
+          ]
+        ],
+        [
+          "a justica limita recursos para um individuo",
+          [
+            "justica",
+            "recurso",
+            "escasso"
+          ]
+        ],
+        [
+          "a lei e decisao politica sujeita a critica moral",
+          [
+            "lei",
+            "politica",
+            "critica"
+          ]
+        ]
+      ]
+    }
+  },
+  {
     "subject": "Física",
     "topic": "A Força de Contato",
     "sections": [
