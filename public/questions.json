@@ -89621,30 +89621,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Matemática · questão 75 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "O mapa de uma região utiliza a escala de 1:200.000. A porção desse mapa, contendo uma Área de Preservação Permanente (APP), está representada na figura, na qual AF e DF são segmentos de reta, o ponto G está no segmento AF, o ponto E está no segmento DF, ABEG é um retângulo e BCDE é um trapézio. Se AF = 15, AG = 12, AB = 6, CD = 3 e DF = 5√5 indicam valores em centímetros no mapa, então a área da APP é:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "100 km²"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "108 km²"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "210 km²"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "240 km²"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "444 km²"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa e). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: e. Ponha A na origem, com G = (12, 0), B = (0, −6) e E = (12, −6); como A, G e F são colineares e AF = 15, tem-se F = (15, 0). A distância de F a E é √(9 + 36) = 3√5, e como DF = 5√5, o ponto D fica 2√5 além de E na mesma direção, em (10, −10); daí C = (7, −10). A região é formada por três pedaços: o retângulo ABEG, com 12 × 6 = 72; o trapézio BCDE, de bases 12 e 3 e altura 4, com (12 + 3)·4/2 = 30; e o triângulo GEF, de catetos 6 e 3, com 9. Somam 111 cm². Na escala 1:200.000, 1 cm vale 2 km e 1 cm² vale 4 km², de modo que a área real é 111 × 4 = 444 km².",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_075-p52.webp",
@@ -89661,30 +89661,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Matemática · questão 76 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "O segmento AB é lado de um hexágono regular de área √3. O ponto P pertence à mediatriz de AB de tal modo que a área do triângulo PAB vale √2. Então, a distância de P ao segmento AB é igual a:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "√2"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "2√2"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "3√2"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "√3"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "2√3"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa e). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: e. Comece achando o lado. A área de um hexágono regular de lado L é (3√3/2)L², e igualando a √3 vem L² = 2/3, ou seja, L = √(2/3). Esse é o comprimento de AB. Como P está na mediatriz, a altura do triângulo PAB relativa a AB é exatamente a distância d procurada, e a área vale (1/2)·L·d = √2. Substituindo, d = 2√2/√(2/3) = 2√2·√(3/2) = 2√3. O passo que costuma travar é lembrar a fórmula da área do hexágono, que equivale a seis triângulos equiláteros de lado L.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_076-p53.webp",
@@ -89724,7 +89724,7 @@
         "text": "Augusto dos Anjos e Manuel Bandeira são representantes do concretismo poético, que utiliza proporções geométricas em suas composições. No poema ZEN, por exemplo, a razão entre as áreas do triângulo DHG e do retângulo ADHE é 1/6"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. O poema ZEN, de Pedro Xisto, é construído com a palavra disposta de modo simétrico, e o diagrama que o acompanha mostra que essa simetria é geométrica: o arranjo das letras forma uma figura equilibrada em torno de um eixo. O ponto da questão é que equilíbrio e harmonia aparecem nos dois planos ao mesmo tempo — no sentido da palavra zen, que remete a serenidade, e na forma visual, que é o que caracteriza a poesia concreta. As alternativas que atribuem o concretismo a Augusto dos Anjos e Manuel Bandeira erram os autores, e as que reduzem o poema apenas às proporções geométricas deixam de fora a dimensão semântica.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_077-p54.webp",
@@ -89741,30 +89741,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Matemática · questão 79 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Um comerciante adotou como forma de pagamento uma máquina de cartões, cuja operadora cobra uma taxa de 6% em cada venda. Para continuar recebendo exatamente o mesmo valor por cada produto, ele resolveu aplicar um reajuste nos preços de todos os produtos da loja. Se P era o valor de uma mercadoria antes da adoção da máquina, o novo valor V deve ser calculado por:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "V = P + 0,06"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "V = 0,94 · 1,06 · P"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "V = 1,6 · P"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "V = P/0,94"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "V = 0,94 · P"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. A taxa incide sobre o novo preço, não sobre o antigo. Se o produto é vendido por V, a operadora retém 6% de V e o comerciante recebe V − 0,06V = 0,94V. Para que esse valor líquido seja igual a P, é preciso 0,94V = P, ou seja, V = P/0,94, o que corresponde a um reajuste de cerca de 6,4%. A alternativa e comete o erro oposto, aplicando o desconto ao preço antigo, e a b multiplica os dois fatores, obtendo 0,9964·P, menos do que o original — sinal de que aumentar 6% não compensa um desconto de 6%.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_079-p56.webp",
@@ -89804,7 +89804,7 @@
         "text": "42,5"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. Velocidade média é distância total dividida por tempo total, e não a média das velocidades. Chamando de d o comprimento total, cada terço mede d/3 e os tempos são d/180, d/120 e d/60. Somando, o tempo total é d(1/180 + 1/120 + 1/60) = d(2 + 3 + 6)/360 = 11d/360. A velocidade média é d dividido por isso, ou seja, 360/11 ≈ 32,7 km/h — mais próximo de 32,5. Quem calcula a média aritmética das três velocidades obtém 40 km/h, que é a alternativa d e superestima o resultado, porque o veículo passa mais tempo nos trechos lentos.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_083-p58.webp",
@@ -89821,30 +89821,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Matemática · questão 84 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Quando a Lua está em quarto crescente ou quarto minguante, o triângulo formado pela Terra, pelo Sol e pela Lua é retângulo, com a Lua no vértice do ângulo reto. O astrônomo grego Aristarco, do século III a.C., usou este fato para obter um valor aproximado da razão entre as distâncias da Terra à Lua, dL, e da Terra ao Sol, dS. É possível estimar a medida do ângulo α, relativo ao vértice da Terra, nessas duas fases, a partir da observação de que o tempo t1, decorrido de uma lua quarto crescente a uma lua quarto minguante, é um pouco maior do que o tempo t2, decorrido de uma lua quarto minguante a uma lua quarto crescente. Supondo que a Lua descreva em torno da Terra um movimento circular uniforme, tomando t1 = 14,9 dias e t2 = 14,8 dias, conclui-se que a razão dL/dS seria aproximadamente dada por:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "cos 77,7°"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "cos 80,7°"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "cos 83,7°"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "cos 86,7°"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "cos 89,7°"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa e). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: e. No triângulo retângulo com ângulo reto na Lua, o cateto adjacente ao ângulo α é dL e a hipotenusa é dS, de modo que dL/dS = cos α. Falta estimar α. O intervalo t2, mais curto, corresponde ao arco de 2α descrito pela Lua, e o período completo é t1 + t2 = 29,7 dias, associado a 360°. Por proporção, 2α = 360° × 14,8/29,7 ≈ 179,4°, logo α ≈ 89,7°. É por isso que a razão é minúscula: o cosseno de um ângulo tão próximo de 90° vale cerca de 0,005, indicando que o Sol está centenas de vezes mais longe que a Lua.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_084-p58.webp",
@@ -89861,30 +89861,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Matemática · questão 86 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "A tabela informa a extensão territorial e a população de cada uma das regiões do Brasil, segundo o IBGE. Centro-Oeste: 1.606.371 km² e 14.058.094 habitantes; Nordeste: 1.554.257 km² e 53.081.950; Norte: 3.853.327 km² e 15.864.454; Sudeste: 924.511 km² e 80.364.410; Sul: 576.409 km² e 27.386.891. (IBGE: Sinopse do Censo Demográfico 2010 e Brasil em números, 2011.) Sabendo que a extensão territorial do Brasil é de, aproximadamente, 8,5 milhões de km², é correto afirmar que a:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "densidade demográfica da região sudeste é de, aproximadamente, 87 habitantes por km²"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "região norte corresponde a cerca de 30% do território nacional"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "região sul é a que tem a maior densidade demográfica"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "região centro-oeste corresponde a cerca de 40% do território nacional"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "densidade demográfica da região nordeste é de, aproximadamente, 20 habitantes por km²"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. Densidade é população dividida por área: no Sudeste, 80.364.410/924.511 ≈ 87 hab/km². As demais não resistem à conta. O Norte ocupa 3.853.327/8.500.000 ≈ 45% do território, e não 30% (b). O Centro-Oeste ocupa cerca de 19%, e não 40% (d). O Sul tem densidade de aproximadamente 47 hab/km², abaixo do Sudeste, que é a região mais densa (c). E o Nordeste tem cerca de 34 hab/km², não 20 (e).",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_086-p59.webp",
@@ -89905,30 +89905,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Matemática · questão 87 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Se log na base 2 de y = −1/2 + (2/3)·log na base 2 de x, para x > 0, então:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "y = ∛(x²)/√2"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "y = √(x³/2)"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "y = −1/√2 + ∛(x²)"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "y = √2 · ∛(x²)"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "y = √(2x³)"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. Use as propriedades no sentido inverso. O termo (2/3)·log2 x é log2 de x^(2/3), e a constante −1/2 é log2 de 2^(−1/2). Somando, log2 y = log2 (2^(−1/2) · x^(2/3)), e como a função logarítmica é injetora, y = x^(2/3)/√2, isto é, a raiz cúbica de x² dividida por √2. O erro da alternativa c é tratar a soma dos logaritmos como soma dos números, e o da d é trocar o sinal do expoente de 2, colocando √2 no numerador.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_087-p59.webp",
@@ -89949,30 +89949,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Matemática · questão 90 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "De 1869 até hoje, ocorreram as seguintes mudanças de moeda no Brasil: em 1942, foi criado o cruzeiro, cada cruzeiro valendo mil réis; em 1967, foi criado o cruzeiro novo, cada cruzeiro novo valendo mil cruzeiros; em 1986, foi criado o cruzado, cada cruzado valendo mil cruzeiros; em 1989, foi criado o cruzado novo, cada um valendo mil cruzados; em 1993, foi criado o cruzeiro real, cada um valendo mil cruzeiros; em 1994, foi criado o real, cada um valendo 2.750 cruzeiros reais. Quando morreu, em 1869, Brás Cubas possuía 300 contos. Se esse valor tivesse ficado até hoje em uma conta bancária, sem receber juros e sem pagar taxas, e se, a cada mudança de moeda, o depósito tivesse sido normalmente convertido para a nova moeda, o saldo hipotético dessa conta seria, aproximadamente, de um décimo de: Dados: um conto equivalia a um milhão de réis; um bilhão é igual a 10^9 e um trilhão é igual a 10^12.",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "real"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "milésimo de real"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "milionésimo de real"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "bilionésimo de real"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "trilionésimo de real"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. Comece convertendo: 300 contos são 300 × 10^6 = 3 × 10^8 réis. Depois basta acompanhar os cortes de zeros. São cinco divisões por mil — réis para cruzeiro, cruzeiro para cruzeiro novo, cruzeiro para cruzado, cruzado para cruzado novo e cruzeiro para cruzeiro real —, o que retira 10^15 e deixa 3 × 10^(-7). A última conversão divide por 2.750, resultando em cerca de 1,09 × 10^(-10) reais. Como 10^(-10) é um décimo de 10^(-9), o saldo equivale a um décimo de bilionésimo de real.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_090-p62.webp",
@@ -89989,30 +89989,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Matemática · questão 91 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Sejam α e β números reais com −π/2 < α < π/2 e 0 < β < π. Se o sistema de equações, dado em notação matricial, 3·tg α + 6·cos β = 0 e 6·tg α + 8·cos β = −2√3 for satisfeito, então α + β é igual a:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "−π/3"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "−π/6"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "0"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "π/6"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "π/3"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. Trate tg α e cos β como incógnitas de um sistema linear. Da primeira equação, tg α = −2·cos β; substituindo na segunda, −12·cos β + 8·cos β = −2√3, ou −4·cos β = −2√3, de onde cos β = √3/2. No intervalo 0 < β < π isso dá β = π/6. Voltando, tg α = −2·(√3/2) = −√3, e no intervalo −π/2 < α < π/2 tem-se α = −π/3. Somando, α + β = −π/3 + π/6 = −π/6. Os intervalos dados no enunciado são o que garante unicidade das duas soluções.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_091-p62.webp",
