@@ -90033,30 +90033,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Matemática · questão 94 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Seja x > 0 tal que a sequência a1 = log na base 2 de x, a2 = log na base 4 de (4x), a3 = log na base 8 de (8x) forme, nessa ordem, uma progressão aritmética. Então, a1 + a2 + a3 é igual a:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "13/2"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "15/2"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "17/2"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "19/2"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "21/2"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. Chame t = log2 x e escreva tudo na base 2. Como log4 (4x) = log2 (4x)/2 = (2 + t)/2 = 1 + t/2 e log8 (8x) = log2 (8x)/3 = (3 + t)/3 = 1 + t/3, a condição de progressão aritmética 2a2 = a1 + a3 vira 2 + t = t + 1 + t/3, de onde t = 3. Substituindo, a1 = 3, a2 = 1 + 3/2 = 5/2 e a3 = 1 + 1 = 2, cuja soma é 15/2. A mudança de base é o passo que destrava a questão: sem ela, os três termos parecem não se comunicar.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_094-p64.webp",
@@ -90077,30 +90077,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Matemática · questão 95 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Francisco deve elaborar uma pesquisa sobre dois artrópodes distintos. Eles serão selecionados, ao acaso, da seguinte relação: aranha, besouro, barata, lagosta, camarão, formiga, ácaro, caranguejo, abelha, carrapato, escorpião e gafanhoto. Qual é a probabilidade de que ambos os artrópodes escolhidos para a pesquisa de Francisco não sejam insetos?",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "49/144"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "14/33"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "7/22"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "5/22"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "15/144"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. Separe a lista: insetos têm três pares de patas e corpo em cabeça, tórax e abdome — besouro, barata, formiga, abelha e gafanhoto, cinco no total. Os outros sete não são insetos: aranha, ácaro, carrapato e escorpião são aracnídeos, e lagosta, camarão e caranguejo são crustáceos. A escolha é de dois entre doze, sem ordem, logo há C(12,2) = 66 duplas possíveis e C(7,2) = 21 formadas só por não insetos. A probabilidade é 21/66 = 7/22. Quem trata as retiradas como independentes, calculando (7/12)², chega a 49/144, a armadilha da alternativa a.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_095-p65.webp",
@@ -90117,30 +90117,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Matemática · questão 96 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "O cilindro de papelão central de uma fita crepe tem raio externo de 3 cm. A fita tem espessura de 0,01 cm e dá 100 voltas completas. Considerando que, a cada volta, o raio externo do rolo é aumentado no valor da espessura da fita, o comprimento total da fita é de, aproximadamente: Note e adote: π ≅ 3,14.",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "9,4 m"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "11,0 m"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "18,8 m"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "22,0 m"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "25,1 m"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. Cada volta é uma circunferência, e os raios formam uma progressão aritmética: 3,01, 3,02, …, até 4,00 cm na centésima volta. O comprimento total é 2π vezes a soma desses raios, e a soma de uma progressão aritmética é a média dos extremos vezes o número de termos: (3,01 + 4,00)/2 × 100 = 350,5. Assim o comprimento vale 2 × 3,14 × 350,5 ≈ 2.201 cm, ou aproximadamente 22,0 m. Usar apenas o raio inicial daria cerca de 18,8 m, e usar o final, 25,1 m — as duas armadilhas presentes nas alternativas.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_096-p66.webp",
@@ -90180,7 +90180,7 @@
         "text": "0,384"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa e). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: e. Liste todos os caminhos que terminam em F e some as probabilidades, multiplicando ao longo de cada trajeto. Há três: A → C → F, com 0,2 × 0,6 = 0,12; A → B → C → F, com 0,8 × 0,1 × 0,6 = 0,048; e A → B → D → F, com 0,8 × 0,9 × 0,3 = 0,216. Somando, 0,12 + 0,048 + 0,216 = 0,384. O erro mais comum é considerar apenas o caminho direto por C ou apenas o mais provável, esquecendo que os percursos são mutuamente exclusivos e por isso se somam.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_098-p67.webp",
@@ -90197,30 +90197,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Matemática · questão 99 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Se 3x² − 9x + 7 = (x − a)³ − (x − b)³, para todo número real x, o valor de a + b é:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "3"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "5"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "6"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "9"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "12"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. Desenvolva o lado direito: (x − a)³ − (x − b)³ = 3(b − a)x² + 3(a² − b²)x + (b³ − a³). Como a igualdade vale para todo x, os coeficientes correspondentes devem coincidir. Do termo em x²: 3(b − a) = 3, logo b − a = 1. Do termo em x: 3(a² − b²) = −9, isto é, (a − b)(a + b) = −3; como a − b = −1, vem a + b = 3. Conferindo com o termo independente, a = 1 e b = 2 dão b³ − a³ = 8 − 1 = 7, exatamente o valor pedido.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_099-p67.webp",
@@ -90237,30 +90237,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Matemática · questão 100 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Uma cidade é dividida em dois Setores: o Setor Sul, com área de 10 km², e o Setor Norte, com área de 30 km². Após um final de semana, foram divulgados os seguintes totais pluviométricos: no sábado, 7 mm no Sul e 11 mm no Norte; no domingo, 9 mm no Sul e 17 mm no Norte. É correto afirmar que o total pluviométrico desse final de semana na cidade inteira foi de:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "15 mm"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "17 mm"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "22 mm"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "25 mm"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "28 mm"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. O índice pluviométrico da cidade é a média dos setores ponderada pelas áreas, porque o que se soma é o volume de água, não a altura. No fim de semana o Setor Sul acumulou 7 + 9 = 16 mm e o Norte, 11 + 17 = 28 mm. Ponderando, (16 × 10 + 28 × 30)/(10 + 30) = (160 + 840)/40 = 1.000/40 = 25 mm. A média aritmética simples entre 16 e 28 daria 22 mm, a alternativa c — armadilha que ignora o fato de o Setor Norte, mais chuvoso, ser três vezes maior.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_100-p68.webp",
@@ -90277,30 +90277,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Matemática · questão 102 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Uma seta aponta para a posição zero no instante inicial. A cada rodada, ela poderá ficar no mesmo lugar ou mover-se uma unidade para a direita ou mover-se uma unidade para a esquerda, cada uma dessas três possibilidades com igual probabilidade. Qual é a probabilidade de que, após 5 rodadas, a seta volte à posição inicial?",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "1/9"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "17/81"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "1/3"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "51/125"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "125/243"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. São 3^5 = 243 sequências possíveis, todas igualmente prováveis. Voltar ao zero exige que os passos à direita e à esquerda se cancelem, ou seja, que haja k passos de +1, k de −1 e 5 − 2k paradas. Com k = 0 há 1 sequência; com k = 1, são 5!/(1!·1!·3!) = 20; com k = 2, são 5!/(2!·2!·1!) = 30. O total é 51, e a probabilidade vale 51/243, que simplificada dá 17/81. A alternativa d traz o numerador correto sobre um denominador errado, 125, que seria 5³.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_102-p69.webp",
@@ -90340,7 +90340,7 @@
         "text": "7581"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. Cada rodada tem três resultados igualmente prováveis, então em quatro rodadas há 3^4 = 81 sequências. Voltar ao ponto de partida exige que os deslocamentos se cancelem: k passos para a direita, k para a esquerda e 4 − 2k paradas. Com k = 0 há uma única sequência, a de quatro paradas; com k = 1, são 4!/(1!·1!·2!) = 12; com k = 2, são 4!/(2!·2!) = 6. Somando, 19 sequências favoráveis, e a probabilidade é 19/81.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_103-p70.webp",
@@ -90357,30 +90357,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Matemática · questão 104 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Em uma urna, há bolas amarelas, brancas e vermelhas. Sabe-se que: I. A probabilidade de retirar uma bola vermelha dessa urna é o dobro da probabilidade de retirar uma bola amarela. II. Se forem retiradas 4 bolas amarelas dessa urna, a probabilidade de retirar uma bola vermelha passa a ser 1/2. III. Se forem retiradas 12 bolas vermelhas dessa urna, a probabilidade de retirar uma bola branca passa a ser 1/2. A quantidade de bolas brancas na urna é:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "8"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "10"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "12"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "14"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "16"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. Chame de a, b e v as quantidades de amarelas, brancas e vermelhas, e de T o total. A condição I dá v = 2a. A II diz que v = (T − 4)/2, ou T = 2v + 4. A III diz que b = (T − 12)/2, ou T = 2b + 12. Como T = a + b + v = v/2 + b + v, substituir T = 2v + 4 leva a b = v/2 + 4, e substituir T = 2b + 12 leva a b = v − 4. Igualando, v = 16, e então b = 12 e a = 8, com T = 36. Vale conferir: 16/32 = 1/2 e 12/24 = 1/2, como o enunciado exige.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_104-p70.webp",
@@ -90397,30 +90397,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Matemática · questão 105 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Cláudia, Paulo, Rodrigo e Ana brincam entre si de amigo-secreto (ou amigo-oculto). Cada nome é escrito em um pedaço de papel, que é colocado em uma urna, e cada participante retira um deles ao acaso. A probabilidade de que nenhum participante retire seu próprio nome é:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "1/4"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "7/24"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "1/3"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "3/8"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "5/12"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. As retiradas formam uma permutação dos quatro nomes, e há 4! = 24 resultados igualmente prováveis. Interessam as permutações em que ninguém fica com o próprio nome, chamadas de desarranjos. Pelo princípio da inclusão e exclusão, D4 = 24 − 4·6 + 6·2 − 4·1 + 1 = 9; alternativamente, a fórmula recursiva Dn = (n − 1)(Dn−1 + Dn−2) dá D4 = 3(2 + 1) = 9. A probabilidade é, portanto, 9/24 = 3/8.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_105-p70.webp",
