@@ -87521,30 +87521,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Matemática · questão 1 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Um aplicativo de videoconferências estabelece, para cada reunião, um código de 10 letras, usando um alfabeto completo de 26 letras. A quantidade de códigos distintos possíveis está entre. Note e adote: log10 13 ≅ 1,114; 1 bilhão = 10^9.",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "10 bilhões e 100 bilhões"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "100 bilhões e 1 trilhão"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "1 trilhão e 10 trilhões"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "10 trilhões e 100 trilhões"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "100 trilhões e 1 quatrilhão"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa e). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: e. Cada uma das 10 posições admite qualquer das 26 letras, então há 26^10 códigos. Para saber a ordem de grandeza, tome o logaritmo: log 26^10 = 10·log 26 = 10·(log 2 + log 13) ≈ 10·(0,301 + 1,114) = 14,15. Logo 26^10 ≈ 10^14,15, número entre 10^14 e 10^15 — ou seja, entre 100 trilhões e 1 quatrilhão. O dado do enunciado sobre log 13 existe justamente para permitir decompor 26 como 2 × 13.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_001-p5.webp",
@@ -87584,7 +87584,7 @@
         "text": "220"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. Comece pelo total: escolher 3 dos 12 pontos dá C(12,3) = 220 escolhas. Mas nem toda escolha forma triângulo — três pontos alinhados no mesmo segmento são degenerados e precisam ser descontados. Na figura, os segmentos têm 4, 4, 2 e 2 pontos. Cada segmento com 4 pontos gera C(4,3) = 4 trios colineares, e os de 2 pontos não geram nenhum, pois nem chegam a três. São 4 + 4 = 8 trios a eliminar, e 220 − 8 = 212 triângulos. Quem esquece o desconto marca 220.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_002-p5.webp",
@@ -87601,30 +87601,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Matemática · questão 4 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "A função E de Euler determina, para cada número natural n, a quantidade de números naturais menores do que n cujo máximo divisor comum com n é igual a 1. Por exemplo, E(6) = 2, pois os números menores do que 6 com tal propriedade são 1 e 5. Qual o valor máximo de E(n), para n de 20 a 25?",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "19"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "20"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "22"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "24"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "25"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. E(n) conta os naturais menores que n e primos com n. Quando n é primo, todos os n − 1 anteriores servem, e esse é o melhor caso possível. Entre 20 e 25 o único primo é 23, e E(23) = 22. Basta conferir que os demais ficam abaixo: E(20) = 8, E(21) = 12, E(22) = 10, E(24) = 8 e E(25) = 20, pois entre os menores que 25 só se excluem os cinco múltiplos de 5. O máximo é, portanto, 22. Note que E(n) nunca chega a n, o que já elimina as alternativas d e e.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_004-p7.webp",
@@ -87641,30 +87641,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Matemática · questão 7 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "No quadrinho de Calvin e Haroldo, Calvin lê o seguinte problema: “O ponto A está duas vezes mais distante do ponto C do que o ponto B está de A. Se a distância do ponto B ao ponto C é de 5 polegadas, qual a distância de A a C?” As possíveis soluções, em polegadas, para o problema matemático proposto no quadrinho, no caso em que os pontos A, B e C estão em uma mesma reta, são:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "10/3 e 10"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "10/3, 5 e 10"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "5/3, 10/3 e 10"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "5/3 e 10"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "10/3 e 5"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. Ponha C na origem e B em 5, já que BC = 5, e chame de a a coordenada de A. A condição AC = 2·AB vira |a| = 2·|a − 5|. Se A estiver além de B, com a ≥ 5, tem-se a = 2(a − 5), logo a = 10 e AC = 10. Se A estiver entre C e B, com 0 ≤ a < 5, tem-se a = 2(5 − a), logo a = 10/3 e AC = 10/3. E se A estiver do outro lado de C, a equação leva a a = 10, que contradiz a hipótese. Restam, portanto, exatamente dois valores: 10/3 e 10.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_007-p8.webp",
@@ -87704,7 +87704,7 @@
         "text": "O número do quadrinho, 143, é um número primo"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. Entre 24 e 36 os primos são apenas 29 e 31 — os demais números do intervalo são pares ou múltiplos de 3 ou de 5. As outras afirmações são falsas: 2 é primo e é par, o que derruba a alternativa a; Euclides já provara que os primos são infinitos, o que derruba a b; a forma 2^n + 1 falha, por exemplo, em n = 3, pois 9 = 3², derrubando a c; e o número do quadrinho, 143, é 11 × 13, portanto composto, derrubando a e.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_008-p9.webp",
@@ -87721,30 +87721,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Matemática · questão 10 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "O polinômio P(x) = x³ − 3x² + 7x − 5 possui uma raiz complexa ξ cuja parte imaginária é positiva. A parte real de ξ³ é igual a:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "−11"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "−7"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "9"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "10"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "12"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. Teste primeiro as raízes racionais possíveis: P(1) = 1 − 3 + 7 − 5 = 0, então (x − 1) é fator e a divisão dá P(x) = (x − 1)(x² − 2x + 5). O fator quadrático tem discriminante −16 e raízes 1 ± 2i; a de parte imaginária positiva é ξ = 1 + 2i. Agora eleve ao cubo em duas etapas: ξ² = 1 + 4i + 4i² = −3 + 4i, e ξ³ = (−3 + 4i)(1 + 2i) = −3 − 6i + 4i + 8i² = −11 − 2i. A parte real é −11.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_010-p10.webp",
@@ -87761,30 +87761,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Matemática · questão 11 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "O número real x, que satisfaz 3 < x < 4, tem uma expansão decimal na qual os 999.999 primeiros dígitos à direita da vírgula são iguais a 3. Os 1.000.001 dígitos seguintes são iguais a 2 e os restantes são iguais a zero. Considere as seguintes afirmações: I. x é irracional. II. x ≥ 10/3. III. x·10^2.000.000 é um inteiro par. Então,",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "nenhuma das três afirmações é verdadeira"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "apenas as afirmações I e II são verdadeiras"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "apenas a afirmação I é verdadeira"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "apenas a afirmação II é verdadeira"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "apenas a afirmação III é verdadeira"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa e). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: e. Depois do último 2 só vêm zeros, então a expansão decimal de x é finita — e todo decimal finito é racional, o que derruba a afirmação I. Para comparar com 10/3 = 3,3333… , observe que os dois números coincidem nas primeiras 999.999 casas e que, na casa seguinte, x traz 2 enquanto 10/3 traz 3; logo x < 10/3 e a afirmação II é falsa. Já a III é verdadeira: há exatamente 999.999 + 1.000.001 = 2.000.000 casas decimais não nulas, de modo que multiplicar por 10^2.000.000 desloca a vírgula até o fim e produz um inteiro terminado em 2, portanto par.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_011-p11.webp",
@@ -87801,30 +87801,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Matemática · questão 12 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "As propriedades aritméticas e as relativas à noção de ordem desempenham um importante papel no estudo dos números reais. Nesse contexto, qual das afirmações abaixo é correta?",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "Quaisquer que sejam os números reais positivos a e b, é verdadeiro que √(a+b) = √a + √b"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "Quaisquer que sejam os números reais a e b tais que a² − b² = 0, é verdadeiro que a = b"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "Qualquer que seja o número real a, é verdadeiro que √(a²) = a"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "Quaisquer que sejam os números reais a e b não nulos tais que a < b, é verdadeiro que 1/b < 1/a"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "Qualquer que seja o número real a, com 0 < a < 1, é verdadeiro que a² < √a"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa e). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: e. Para 0 < a < 1, elevar ao quadrado diminui o número e extrair a raiz o aumenta, de modo que a² < a < √a — basta testar com a = 1/4, em que a² = 1/16 e √a = 1/2. As demais falham com um contraexemplo cada: em a, com a = b = 1, o lado esquerdo vale √2 e o direito, 2; em b, a = 1 e b = −1 satisfazem a² − b² = 0 sem que a = b; em c, com a = −3 tem-se √9 = 3 ≠ a, pois a raiz devolve o módulo; e em d, a = −1 e b = 1 dão 1/b = 1 e 1/a = −1, invertendo a desigualdade, que só se preserva quando a e b têm o mesmo sinal.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_012-p11.webp",
@@ -87868,7 +87868,7 @@
         "text": "média das mães das crianças nascidas em 1999 foi menor que 21 anos"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. Para a média de 2004, faça uma estimativa por baixo, atribuindo a cada faixa o seu menor valor: 19,9% × 15 + 30,7% × 20 + 23,7% × 25 + 14,8% × 30 + 7,3% × 35 + 2,1% × 40, o que já soma cerca de 22,9 anos, mesmo desprezando as faixas de menos de 15 anos e de idade ignorada. Como essa é a estimativa mínima, a média real é maior que 22. Para as medianas, some as frequências até passar de 50%: em 2009 isso ocorre na faixa de 25 a 29 anos, o que torna b falsa e a incerta; em 1999, na faixa de 20 a 24, o que torna c falsa.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_017-p14.webp",
@@ -87885,30 +87885,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Matemática · questão 18 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Sobre a equação (x + 3)·2^(x² − 9)·log|x² + x − 1| = 0, é correto afirmar que:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "ela não possui raízes reais"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "sua única raiz real é −3"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "duas de suas raízes reais são 3 e −3"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "suas únicas raízes reais são −3, 0 e 1"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "ela possui cinco raízes reais distintas"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa e). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: e. Um produto se anula quando um dos fatores se anula, e a potência 2^(x² − 9) nunca é zero — ela só entra para confundir. Sobram duas condições. De x + 3 = 0 vem x = −3. De log|x² + x − 1| = 0 vem |x² + x − 1| = 1, que se desdobra em x² + x − 2 = 0, com raízes 1 e −2, e x² + x = 0, com raízes 0 e −1. Reunindo tudo: −3, −2, −1, 0 e 1, cinco valores distintos, todos no domínio, já que em nenhum deles x² + x − 1 se anula.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_018-p14.webp",
@@ -87948,7 +87948,7 @@
         "text": "5,5,10,10,10,10"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. Em listas com seis notas, a mediana é a média das duas centrais. Na lista 5, 5, 5, 7, 7, 9, as centrais são 5 e 7, e a mediana vale 6; a soma é 38, e a média, 38/6 ≈ 6,33 — maior que a mediana. Nas outras listas isso não acontece: em 5, 5, 7, 8, 9, 10 a média é 7,33 e a mediana, 7,5; em 4, 5, 6, 7, 8, 8 a média é 6,33 e a mediana, 6,5; em 4, 5, 6, 7, 8, 9 as duas valem 6,5; e em 5, 5, 10, 10, 10, 10 a média é 8,33 contra mediana 10. A média supera a mediana quando os valores altos se afastam mais do centro do que os baixos.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_019-p15.webp",
@@ -87965,30 +87965,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Matemática · questão 20 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Quando se divide o Produto Interno Bruto (PIB) de um país pela sua população, obtém-se a renda per capita desse país. Suponha que a população de um país cresça à taxa constante de 2% ao ano. Para que sua renda per capita dobre em 20 anos, o PIB deve crescer anualmente à taxa constante de, aproximadamente: (Dado: raiz vigésima de 2 ≅ 1,035.)",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "4,2%"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "5,6%"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "6,4%"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "7,5%"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "8,9%"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. Depois de 20 anos o PIB terá sido multiplicado por (1 + i)^20 e a população, por 1,02^20. A renda per capita é a razão entre os dois, e dobrar significa (1 + i)^20 / 1,02^20 = 2. Extraindo a raiz vigésima dos dois lados, (1 + i)/1,02 = 1,035, de onde 1 + i = 1,035 × 1,02 ≈ 1,0557, ou seja, i ≈ 5,6%. O erro comum é somar as taxas, 3,5% + 2% = 5,5%, que dá um valor próximo por acaso, mas o raciocínio correto é multiplicativo.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_020-p15.webp",
@@ -88005,30 +88005,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Matemática · questão 21 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Uma substância radioativa sofre desintegração ao longo do tempo, de acordo com a relação m(t) = c·a^(−kt), em que a é um número real positivo, t é dado em anos, m(t) a massa da substância em gramas e c, k são constantes positivas. Sabe-se que m0 gramas dessa substância foram reduzidos a 20% em 10 anos. A que porcentagem de m0 ficará reduzida a massa da substância, em 20 anos?",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "10%"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "5%"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "4%"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "3%"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "2%"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. Em t = 0 tem-se m(0) = c, logo c = m0. A informação dos 10 anos diz que m0·a^(−10k) = 0,2·m0, ou seja, o fator de decaimento em uma década é a^(−10k) = 0,2. Como o decaimento é exponencial, cada nova década multiplica a massa por esse mesmo fator: em 20 anos, m(20) = m0·(a^(−10k))² = m0·0,2² = 0,04·m0, isto é, 4%. O erro típico é raciocinar de forma aditiva e responder 10%, metade dos 20%, quando o processo é multiplicativo.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_021-p16.webp",
@@ -88049,30 +88049,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Matemática · questão 25 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Considere a função polinomial f: R → R definida por f(x) = ax² + bx + c, em que a, b, c são reais e a ≠ 0. No plano cartesiano xy, a única intersecção da reta y = 2 com o gráfico de f é o ponto (2; 2) e a intersecção da reta x = 0 com o gráfico de f é o ponto (0; −6). O valor de a + b + c é:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "−2"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "0"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "2"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "4"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "6"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. Uma reta horizontal corta a parábola em dois pontos, um ponto ou nenhum; se a intersecção com y = 2 é única, ela ocorre no vértice, que é portanto (2; 2). Escrevendo na forma canônica, f(x) = a(x − 2)² + 2, e usando f(0) = −6 vem 4a + 2 = −6, logo a = −2. Expandindo, f(x) = −2x² + 8x − 6, de modo que b = 8 e c = −6. Um atalho útil: a + b + c é exatamente f(1), e f(1) = −2(1 − 2)² + 2 = 0.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_025-p19.webp",
@@ -88089,30 +88089,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Matemática · questão 27 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Um dono de restaurante assim descreveu a evolução do faturamento quinzenal de seu negócio, ao longo dos dez primeiros meses após a inauguração: “Até o final dos três primeiros meses, tivemos uma velocidade de crescimento mais ou menos constante, quando então sofremos uma queda abrupta, com o faturamento caindo à metade do que tinha sido atingido. Em seguida, voltamos a crescer, igualando, um mês e meio depois dessa queda, o faturamento obtido ao final do terceiro mês. Agora, ao final do décimo mês, estamos estabilizando o faturamento em um patamar 50% acima do faturamento obtido ao final do terceiro mês.” Considerando que, na ordenada, o faturamento quinzenal está representado em unidades desconhecidas, porém uniformemente espaçadas, qual dos gráficos é compatível com a descrição do comerciante?",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "Um gráfico com dois picos altos e uma queda a zero por volta do quarto mês, estabilizando num patamar baixo"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "Um gráfico que cresce até o terceiro mês, cai pouco, volta a subir e depois decresce até o décimo mês"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "Um gráfico que cresce continuamente, com uma pequena queda entre o terceiro e o quarto mês, e segue subindo sem estabilizar"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "Um gráfico que sobe abruptamente no início, fica constante, cai por volta do quarto mês e depois cresce até o fim"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "Um gráfico que cresce de forma aproximadamente linear até o terceiro mês, cai à metade, volta ao valor anterior por volta do quarto mês e meio e estabiliza, a partir do décimo mês, num patamar 50% acima daquele valor"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa e). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: e. A descrição impõe quatro exigências e só um gráfico atende a todas. Primeiro, crescimento aproximadamente retilíneo nos três meses iniciais. Segundo, uma queda que leva o faturamento exatamente à metade do valor atingido, e não a zero nem a um valor qualquer. Terceiro, a recuperação até o mesmo patamar anterior um mês e meio depois, ou seja, por volta do quarto mês e meio. Quarto, a estabilização no décimo mês num nível 50% acima do valor do terceiro mês, o que exige um trecho final horizontal. Os demais gráficos falham em pelo menos uma dessas condições — em geral na profundidade da queda ou na ausência do patamar final.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_027-p20.webp",
@@ -88129,30 +88129,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Matemática · questão 30 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Considere as funções f(x) = x² + 4 e g(x) = 1 + log na base 1/2 de x, em que o domínio de f é o conjunto dos números reais e o domínio de g é o conjunto dos números reais maiores do que 0. Seja h(x) = 3f(g(x)) + 2g(f(x)), em que x > 0. Então, h(2) é igual a:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "4"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "8"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "12"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "16"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "20"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. Calcule as duas composições separadamente. Como log na base 1/2 de 2 vale −1, tem-se g(2) = 1 − 1 = 0, e daí f(g(2)) = f(0) = 4, cujo triplo é 12. Do outro lado, f(2) = 4 + 4 = 8, e como log na base 1/2 de 8 vale −3, vem g(8) = 1 − 3 = −2, cujo dobro é −4. Somando, h(2) = 12 − 4 = 8. O ponto delicado é lembrar que, em base menor que 1, o logaritmo de um número maior que 1 é negativo.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_030-p22.webp",
@@ -88169,30 +88169,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Matemática · questão 31 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "O retângulo ABCD, representado na figura, tem lados de comprimento AB = 3 e BC = 4. O ponto P pertence ao lado BC e BP = 1. Os pontos R, S e T pertencem aos lados AB, CD e AD, respectivamente. O segmento RS é paralelo a AD e intercepta DP no ponto Q. O segmento TQ é paralelo a AB. Sendo x o comprimento de AR, o maior valor da soma das áreas do retângulo ARQT, do triângulo CQP e do triângulo DQS, para x variando no intervalo aberto ]0, 3[, é:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "61/8"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "33/4"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "17/2"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "35/4"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "73/8"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. Ponha A na origem, com B = (3, 0), C = (3, 4), D = (0, 4) e P = (3, 1). A reta DP tem equação y = 4 − x, de modo que R = (x, 0), Q = (x, 4 − x), T = (0, 4 − x) e S = (x, 4). O retângulo ARQT tem área x(4 − x); o triângulo DQS é retângulo de catetos x e x, com área x²/2; e o triângulo CQP tem base CP = 3 sobre a reta x = 3 e altura 3 − x, com área 3(3 − x)/2. Somando, obtém-se −x²/2 + 5x/2 + 9/2, parábola de concavidade para baixo cujo vértice está em x = 5/2. Substituindo, o máximo vale 61/8.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_031-p23.webp",
@@ -88232,7 +88232,7 @@
         "text": "180"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. Use o ponto onde a altura é máxima como vértice da parábola. Medindo o eixo horizontal a partir do lançamento, o vértice está em x = 10, com y = 200, e o projétil toca o solo em x = 30, com y = 0. Escrevendo y = a(x − 10)² + 200 e impondo a segunda condição, 400a + 200 = 0, obtém-se a = −1/2. A altura de lançamento é o valor em x = 0: y = −(1/2)(100) + 200 = 150 metros. Note que a resposta não é 100, como se poderia supor por uma falsa simetria, porque o ponto de lançamento e o de queda estão a distâncias diferentes do vértice.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_032-p24.webp",
@@ -88249,30 +88249,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Matemática · questão 33 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Seja f uma função a valores reais, com domínio D contido em R, tal que f(x) = log na base 10 de (log na base 1/3 de (x² − x + 1)), para todo x em D. O conjunto que pode ser o domínio D é:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "{x real; 0 < x < 1}"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "{x real; x ≤ 0 ou x ≥ 1}"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "{x real; 1/3 < x < 10}"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "{x real; x ≤ 1/3 ou x ≥ 10}"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "{x real; 1/9 < x < 10/3}"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. O logaritmo externo exige que seu argumento seja positivo: log na base 1/3 de (x² − x + 1) > 0. Como a base 1/3 é menor que 1, a função logarítmica é decrescente, e o logaritmo só é positivo quando o argumento está entre 0 e 1. Então é preciso ter 0 < x² − x + 1 < 1. A primeira desigualdade vale sempre, pois o discriminante de x² − x + 1 é −3 e a parábola não corta o eixo. A segunda vira x² − x < 0, ou x(x − 1) < 0, satisfeita exatamente para 0 < x < 1.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_033-p25.webp",
@@ -88312,7 +88312,7 @@
         "text": "R$600,00"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. A base de cálculo de João, R$ 43.800,00, está entre R$ 37.500,00 e R$ 47.000,00, ou seja, no segmento CD do gráfico. O que importa nesse trecho é a inclinação da reta, que dá quanto de imposto se paga por real adicional de base: (4.237,50 − 2.100,00)/(47.000 − 37.500) = 2.137,50/9.500 = 0,225, isto é, a alíquota de 22,5%. Acrescentar R$ 1.000,00 à base, sem sair do mesmo segmento, aumenta o imposto em 0,225 × 1.000 = R$ 225,00. O erro comum é aplicar a alíquota ao total da base, e não apenas ao acréscimo.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_034-p26.webp",
@@ -88329,30 +88329,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Matemática · questão 35 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Considere a função f(x) = 1 − 4x/(x + 1)², a qual está definida para x ≠ −1. Então, para todo x ≠ 1 e x ≠ −1, o produto f(x)·f(−x) é igual a:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "−1"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "1"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "x + 1"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "x² + 1"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "(x − 1)²"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. Reduza tudo a uma fração só: f(x) = [(x + 1)² − 4x]/(x + 1)² = (x² − 2x + 1)/(x + 1)² = (x − 1)²/(x + 1)². Trocando x por −x, o numerador vira (−x − 1)² = (x + 1)² e o denominador vira (−x + 1)² = (x − 1)², ou seja, f(−x) é o inverso de f(x). O produto, portanto, vale 1 para todo x em que as duas expressões estão definidas — daí as restrições x ≠ 1 e x ≠ −1.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_035-p26.webp",
@@ -88369,30 +88369,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Matemática · questão 37 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Seja f(x) = a + 2^(bx + c), em que a, b e c são números reais. A imagem de f é a semirreta ]−1, +∞[ e o gráfico de f intercepta os eixos coordenados nos pontos (1, 0) e (0, −3/4). Então, o produto abc vale:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "4"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "2"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "0"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "−2"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "−4"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. A potência 2^(bx + c) assume todos os valores positivos e nenhum outro, de modo que a imagem de f é o intervalo ]a, +∞[. Comparando com ]−1, +∞[, vem a = −1. De f(1) = 0 tira-se 2^(b + c) = 1, ou seja, b + c = 0. De f(0) = −3/4 tira-se 2^c = 1/4, logo c = −2 e, portanto, b = 2. O produto é abc = (−1)·2·(−2) = 4.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_037-p27.webp",
