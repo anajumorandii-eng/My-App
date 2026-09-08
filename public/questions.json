@@ -74244,7 +74244,7 @@
         "text": "10 de junho, às 16 horas"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. Some os fusos passo a passo. Brasília está a 45°O, ou seja, UTC−3; às 16h de lá são 19h em Londres (UTC+0), mais 1h de horário de verão, 20h. O voo de 10h leva a chegada em Londres às 6h do dia 11 (horário local de verão). Três horas de espera: partida às 9h. Quatro horas de voo e chegada às 13h no horário de Londres. Moscou, a 60°L, está 4 fusos à frente de Londres em horário normal, e com o horário de verão europeu aplicado a ambos a diferença se mantém: 13h + 4h = 17h do dia 11. O erro típico é esquecer o horário de verão ou somar a diferença de fuso na origem em vez do destino.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_geo_unicamp/ap_geo_unicamp_001-p5.webp",
@@ -74280,7 +74280,7 @@
         "text": "as longitudes 50° e 52° Oeste"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. O enunciado dá as bordas do estado: latitudes de 20° a 25°S e longitudes de 44° a 54°O. Como as linhas pontilhadas dividem esses intervalos em partes iguais, cada faixa vale 1° de latitude e 2° de longitude. Contando as faixas até o ponto que marca Campinas, ele cai entre 46° e 48° de longitude oeste. As alternativas de latitude erram porque Campinas está por volta de 22°53'S, e a alternativa d desloca a cidade para o oeste do estado. A lição é usar as bordas informadas para calibrar o valor de cada intervalo antes de contar.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_geo_unicamp/ap_geo_unicamp_002-p6.webp",
@@ -74316,7 +74316,7 @@
         "text": "O rio corre em direção sudoeste, sendo sua margem esquerda a de maior declividade. Apresenta um comprimento total de 175 metros"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. São duas leituras combinadas. A distância: 3,5 cm numa escala 1:50.000 correspondem a 3,5 × 50.000 = 175.000 cm, ou seja, 1.750 metros — daí caírem b (que troca a unidade para quilômetros) e d (que erra a potência de dez). O sentido do escoamento é dado pelas curvas de nível, que apontam para montante, e a margem de maior declividade é a que tem curvas mais próximas entre si. Conferir primeiro a conta de escala já elimina metade das alternativas.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_geo_unicamp/ap_geo_unicamp_003-p7.webp",
@@ -74352,7 +74352,7 @@
         "text": "A, cilíndrica; B, azimutal; C, cônica"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. Cada projeção tem uma assinatura visual. Na cilíndrica, meridianos e paralelos formam uma grade retangular, com linhas retas que se cruzam em ângulo reto e forte exagero das áreas polares. Na cônica, os paralelos aparecem como arcos concêntricos e os meridianos convergem em leque, forma adequada a países de grande extensão em longitude nas latitudes médias. Na azimutal, o mapa é circular, com um ponto central de tangência a partir do qual as direções são verdadeiras — é a projeção usada nos mapas polares. Reconhecer o formato da malha resolve a questão sem decorar a lista.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_geo_unicamp/ap_geo_unicamp_004-p8.webp",
@@ -74388,7 +74388,7 @@
         "text": "No início do verão (21 ou 22 de dezembro), as noites têm a mesma duração que os dias no Trópico de Capricórnio"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. O Trópico de Capricórnio é o paralelo de 23°27' de latitude sul, e a incidência perpendicular dos raios solares ali ocorre em um único dia do ano, o solstício de dezembro, que marca o início do verão no hemisfério sul. Em b o erro é dobrar a frequência e chamar de inverno; em c, a perpendicularidade nos equinócios ocorre no Equador, não nos trópicos; em d, dia e noite de igual duração são característica dos equinócios, e não do solstício. Guardar a associação trópicos-solstícios e Equador-equinócios resolve toda a família dessas questões.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_geo_unicamp/ap_geo_unicamp_005-p9.webp",
@@ -74424,7 +74424,7 @@
         "text": "11 mm"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. Converta antes de dividir: 4,5 km são 450.000 cm. Numa escala 1:50.000, cada centímetro do mapa vale 50.000 cm reais, então 450.000 ÷ 50.000 = 9 cm. As alternativas erradas nascem de erro de potência de dez (90 cm) ou de conversão de unidade (225 mm e 11 mm). O procedimento seguro é sempre levar a medida real para a mesma unidade do mapa, em centímetros, antes de aplicar a escala.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_geo_unicamp/ap_geo_unicamp_006-p9.webp",
@@ -74460,7 +74460,7 @@
         "text": "os meridianos e paralelos se cruzam formando ângulos perfeitos de 90°, o que possibilita a representação da Terra sem deformações"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. Mercator é projeção cilíndrica conforme: meridianos e paralelos são retas que se cruzam em ângulo reto, o que preserva os ângulos e por isso a tornou útil à navegação, permitindo traçar rotas de rumo constante. O preço dessa conformidade é a distorção crescente das áreas com a latitude: perto do Equador a deformação é pequena, e perto dos polos ela é enorme, o que faz a Groenlândia parecer do tamanho da África. Por isso a e d estão erradas ao negar a ortogonalidade ou a distorção, e c erra ao afirmar ausência de deformação.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_geo_unicamp/ap_geo_unicamp_007-p10.webp",
@@ -74500,7 +74500,7 @@
         "text": "Relevo de Terras Baixas; solos de tipo gleissolos; grande concentração da população nas áreas inundáveis sazonalmente"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. O domínio destacado é o das depressões semiáridas do Nordeste, o domínio da Caatinga. Nele predomina o relevo residual de colinas com afloramentos rochosos, os inselbergs, e os solos são rasos e pedregosos, do tipo litólico, formados sobre embasamento cristalino com pouca profundidade de alteração. A escassez e a irregularidade da água dispersam a ocupação humana pelo espaço regional, em vez de concentrá-la. As demais alternativas descrevem outros domínios: mares de morros com latossolos, altiplanos basálticos do sul e terras baixas amazônicas com gleissolos.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_geo_unicamp/ap_geo_unicamp_009-p12.webp",
@@ -74517,26 +74517,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Geografia · questão 11 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "“Um poeta chamado Zhu Xi escreveu o seguinte há cerca de 1.200 anos: ‘No topo das altas montanhas vejo conchas que me dizem que antigos lugares de baixa altitude se elevaram para os céus e moram agora nos mais elevados picos. Estas conchas dizem-me também que materiais vivos de animais se converteram nas mais duras e inertes rochas.’ Essas palavras foram durante séculos lidas como se fossem versos. Mas Zhu Xi não era apenas um poeta: era um cientista, aquilo que, até há pouco, se chamava um naturalista.” (Mia Couto, “Rios, Cobras e Camisas de Dormir”, em E se Obama fosse africano? E outras intervenções.) O poema citado por Mia Couto faz referência",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "ao processo de migração de moluscos marinhos para topos de montanhas e a sua posterior fossilização"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "ao processo de decomposição de materiais vivos que ocorre nas rochas duras e inertes presentes nos topos das montanhas"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "à presença de fósseis de moluscos em montanhas que se formaram em regiões antes cobertas por água"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "à existência de fósseis de moluscos que habitavam topos de montanhas e hoje estão extintos"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. As conchas no alto da montanha são fósseis de organismos marinhos, e sua presença ali não se explica por deslocamento dos animais, mas por deslocamento do próprio terreno: sedimentos depositados no fundo do mar foram soerguidos pela tectônica ao longo de milhões de anos, formando cadeias montanhosas. É o que se observa no Himalaia, cujas rochas guardam fósseis marinhos. A alternativa a inverte a explicação ao fazer os moluscos subirem; b confunde fossilização com decomposição; e d supõe moluscos que viveriam em montanhas, o que contraria o ambiente marinho desses organismos.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_geo_unicamp/ap_geo_unicamp_011-p14.webp",
@@ -74576,7 +74576,7 @@
         "text": "1, Cerrado, com vegetação do tipo savana; 2, Caatinga, com clima semiárido; 3, Mares de Morros, com mata atlântica"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. A chave é ligar cada domínio a seu par de características. O Cerrado ocupa o Brasil central, com vegetação de savana, árvores tortuosas de casca grossa e raízes profundas adaptadas ao fogo e ao solo ácido. A Caatinga é o sertão semiárido, com chuvas escassas e irregulares e rios em boa parte intermitentes. Os Mares de Morros correspondem à faixa atlântica úmida, de relevo mamelonar e mata atlântica. As demais alternativas trocam esses pares, atribuindo clima subtropical ao Cerrado, rios perenes à Caatinga ou mata de araucária ao Cerrado.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_geo_unicamp/ap_geo_unicamp_014-p17.webp",
@@ -74612,7 +74612,7 @@
         "text": "Os rios apresentam regimes fluviais diferentes: o rio A corresponde ao Regime Pluvial Tropical e o rio B representa o Regime Pluvial Semiárido"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. Os dois gráficos mostram regimes distintos. O rio A tem vazão elevada no verão e redução no inverno, sem chegar a secar: é o regime pluvial tropical, típico do Brasil central, em que a estação chuvosa concentra a recarga. O rio B apresenta vazão nula ou próxima de zero durante boa parte do ano, comportamento de rio intermitente do semiárido. Isso derruba a e c, que supõem volumes semelhantes ou captação garantida o ano todo, e b, que atribui aos dois rios os mesmos usos, quando um deles nem sequer mantém curso permanente.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_geo_unicamp/ap_geo_unicamp_017-p19.webp",
@@ -74648,7 +74648,7 @@
         "text": "As savanas e as florestas de monções dependem da sazonalidade climática: invernos frios e chuvosos, verões quentes e secos"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. A figura relaciona latitude, temperatura, precipitação e tipo de bioma. A taiga ocupa as altas latitudes do hemisfério norte e é a floresta de coníferas: em comparação com a tundra, que fica além dela, apresenta porte arbóreo justamente porque recebe a umidade associada às baixas pressões de médias e altas latitudes, o que sustenta a floresta onde o frio ainda permite crescimento arbóreo. As demais alternativas invertem relações: b generaliza a ocorrência de savanas a todos os continentes, e d atribui às savanas e florestas de monções invernos frios e chuvosos, quando a sazonalidade dessas áreas é tropical, com verão chuvoso.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_geo_unicamp/ap_geo_unicamp_018-p20.webp",
@@ -74684,7 +74684,7 @@
         "text": "temperada, onde as temperaturas médias mantêm-se ao longo de todo o ano e as precipitações estão concentradas no inverno"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. Num climograma, leia primeiro a curva de temperatura e depois as barras de chuva. Temperaturas altas e com pouca variação ao longo do ano, somadas a chuvas concentradas em uma estação quente, caracterizam o clima tropical. A alternativa a exige chuvas de outono, b exige temperaturas polares, e d descreve o mediterrâneo, com chuvas no inverno. O procedimento que evita erro é anotar a amplitude térmica anual e o mês mais chuvoso antes de olhar as alternativas.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_geo_unicamp/ap_geo_unicamp_019-p20.webp",
@@ -74724,7 +74724,7 @@
         "text": "ocorreu no Hemisfério Sul e corresponde a uma área de baixa pressão atmosférica"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. Ciclone é sempre um centro de baixa pressão: o ar converge e ascende, o que forma nuvens e precipitação. O que a imagem informa é o hemisfério, dado pelo sentido de rotação das nuvens: no hemisfério sul o giro em torno da baixa é anti-horário e no hemisfério norte é horário, por efeito da força de Coriolis. Logo, a alternativa a erra ao chamar de alta pressão, b erra ao dizer que a pressão é indiferente, e c erra o hemisfério. Anticiclones, ao contrário, são áreas de alta pressão com ar descendente e tempo estável.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_geo_unicamp/ap_geo_unicamp_021-p22.webp",
@@ -74741,26 +74741,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Geografia · questão 22 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Em algumas localidades do Estado de Santa Catarina, costuma-se registrar neve durante o período de inverno, caso de São Joaquim e de outros municípios da região serrana. Qual das alternativas abaixo associa corretamente dois fatores geográficos que favorecem a ocorrência do fenômeno na região indicada?",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "Altitudes acima de 1.000 metros; latitude entre 23° S e 66° S"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "Altitudes abaixo de 1.000 metros; latitude entre 66° S e 90° S"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "Altitudes acima de 1.000 metros; latitude entre 23° N e 66° N"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "Altitudes abaixo de 1.000 metros; latitude entre 66° N e 90° N"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. Dois fatores climáticos se somam. A latitude coloca a serra catarinense na zona temperada do hemisfério sul, entre o Trópico de Capricórnio, a 23°S, e o Círculo Polar Antártico, a 66°S, onde a incidência solar mais inclinada no inverno permite temperaturas baixas. A altitude reforça o efeito: acima de 1.000 metros, a temperatura cai cerca de 6 °C a cada quilômetro, o que leva o ar abaixo de zero quando entra uma massa polar. As alternativas com latitudes norte deslocam a região para o outro hemisfério, e as de altitude baixa eliminam justamente o fator que torna a neve possível nessa latitude.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_geo_unicamp/ap_geo_unicamp_022-p22.webp",
@@ -74800,7 +74800,7 @@
         "text": "As precipitações de tipo convectivas ocorrem especialmente nos meses de verão, sendo comum a ocorrência de chuvas de granizo no final da tarde"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. A frente fria é o contato entre uma massa fria, mais densa, e uma massa quente: a massa fria avança por baixo e força o ar quente a subir, o que provoca a chuva na passagem da frente. Depois que ela passa, a massa polar domina, e o tempo fica mais frio e seco, com pressão em elevação. Esse é o padrão típico de inverno no Sul e no Sudeste. As demais alternativas descrevem outras situações: chegada de massa quente, chuva orográfica estacionária e chuva convectiva de verão.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_geo_unicamp/ap_geo_unicamp_024-p24.webp",
@@ -74836,7 +74836,7 @@
         "text": "Os ventos contra-alísios dirigem-se da área tropical em direção aos polos, provocando quedas bruscas de temperatura e eventualmente queda de neve, movimentando-se em sentido anti-horário no hemisfério sul e em sentido horário no hemisfério norte"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. Os alísios sopram das faixas de alta pressão subtropicais, em torno de 30° de latitude, em direção à baixa pressão equatorial, onde o ar aquecido ascende e forma a zona de convergência intertropical. Por causa da força de Coriolis, eles não seguem em linha reta: no hemisfério norte sopram de nordeste e no sul, de sudeste. Os contra-alísios são o retorno em altitude, no sentido oposto, o que elimina as alternativas c e d, que os fazem soprar dos trópicos ao equador ou associam sua ação a nevascas.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_geo_unicamp/ap_geo_unicamp_026-p26.webp",
@@ -74872,7 +74872,7 @@
         "text": "apesar de estarem em latitudes similares, Yakutsk apresenta uma amplitude térmica muito maior que Hamburgo, pois em Yakutsk o efeito da continentalidade é mais pronunciado que em Hamburgo, onde predomina a ação da maritimidade"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. A comparação pedida é entre duas cidades de latitude parecida e amplitudes térmicas muito diferentes. Yakutsk fica no interior da Sibéria, longe de qualquer oceano, e por isso sofre continentalidade acentuada: o solo aquece e resfria rapidamente, produzindo verões quentes e invernos rigorosos. Hamburgo é costeira e recebe influência oceânica, com o alto calor específico da água amortecendo as variações. A alternativa a erra a causa, atribuindo a diferença à radiação anual, quando latitudes semelhantes recebem radiação semelhante.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_geo_unicamp/ap_geo_unicamp_028-p28.webp",
@@ -74912,7 +74912,7 @@
         "text": "médio baixo São Francisco, a salinidade da água próxima ao Rio Apodi será maior do que em Cabrobó e a salinização do solo se deverá à evaporação da água"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. Tomando Petrolina e Juazeiro como referência do médio curso, o ponto de captação fica a jusante desse trecho, no médio baixo São Francisco. A água transposta percorre canais abertos e reservatórios sob forte insolação no semiárido, e a evaporação, ao retirar apenas água e deixar os sais, aumenta a concentração salina ao longo do percurso: por isso a salinidade tende a ser maior no trecho mais distante da captação, próximo ao Rio Apodi, e não em Cabrobó. As alternativas que falam em condensação invertem o processo físico responsável pela concentração de sais.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_geo_unicamp/ap_geo_unicamp_030-p30.webp",
@@ -74948,7 +74948,7 @@
         "text": "As áreas que hoje correspondem aos países da Península Ibérica, ao Reino Unido e à Irlanda foram as pioneiras no desenvolvimento de práticas agrícolas sedentarizadas"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. O mapa mostra a substituição progressiva de florestas e outros domínios naturais por áreas agrícolas ao longo de dez mil anos, começando pelo Oriente Próximo e pelo Mediterrâneo e avançando para o norte e o oeste do continente. A conclusão que o documento sustenta é histórica: a supressão de vegetação para lavoura acompanha a sedentarização desde o Neolítico, o que desfaz a ideia de que o desmatamento seria fenômeno exclusivamente contemporâneo. As alternativas a e d afirmam pioneirismos e devastações que o mapa não sustenta, e b nega a transformação que o próprio mapa registra.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_geo_unicamp/ap_geo_unicamp_032-p32.webp",
@@ -74984,7 +74984,7 @@
         "text": "Até 2000m, floresta tropical; de 2000 a 3000m, floresta temperada; de 3000 a 5000m, floresta de coníferas; de 5000 a 6000m, gramíneas; acima de 6000m, terreno coberto por gelo"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. Em montanha, a vegetação se organiza em andares que reproduzem, na vertical, a sequência que a latitude produz na horizontal: quanto mais alto, mais frio. Na base do Himalaia, em clima quente e úmido, há floresta tropical; acima dela vem a floresta temperada; depois as coníferas, adaptadas ao frio; em seguida apenas gramíneas e arbustos, onde a árvore já não se sustenta; e acima do limite das neves permanentes, rocha e gelo. As demais alternativas embaralham essa ordem, colocando floresta tropical acima das coníferas ou gramíneas na base.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_geo_unicamp/ap_geo_unicamp_035-p35.webp",
@@ -75020,7 +75020,7 @@
         "text": "I-Floresta Temperada; II-Savana; III-Tundra e Taiga"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. O fluxo de absorção de carbono acompanha a produtividade primária da vegetação. As florestas tropicais úmidas, com calor, umidade e biomassa elevados o ano todo, formam as áreas de maior absorção. As savanas, com estação seca marcada, ocupam posição intermediária. Tundra e taiga, limitadas pelo frio e pelo curto período de crescimento, apresentam absorção baixa. A alternativa d erra ao colocar a floresta temperada como a de maior absorção, e c coloca deserto e floresta temperada em posições incompatíveis com o gradiente do mapa.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_geo_unicamp/ap_geo_unicamp_037-p37.webp",
@@ -75056,7 +75056,7 @@
         "text": "pela vegetação de gramíneas, em área de clima temperado, sujeita a processos de voçorocamento decorrente da eliminação da cobertura vegetal"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. Os Pampas ocupam a metade sul do Rio Grande do Sul, em clima subtropical, e sua vegetação característica é a de campos, formada por gramíneas, e não arbórea — o que já elimina a e b. O processo de degradação típico da região é a arenização: em solos arenosos originados de arenitos, a retirada da cobertura vegetal por pastoreio excessivo ou lavoura expõe a areia, que o vento e a água retrabalham formando areais. Arenização não se confunde com desertificação, que envolve clima árido, nem com voçorocamento, típico de outros contextos.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_geo_unicamp/ap_geo_unicamp_038-p38.webp",
@@ -75096,7 +75096,7 @@
         "text": "China; hindu e budista"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. Os rohingyas são uma minoria muçulmana de Mianmar, país de maioria budista, e não têm cidadania reconhecida pelo Estado birmanês, o que os deixa sem proteção jurídica. Com a escalada da violência em 2017, o deslocamento forçado se dirigiu principalmente a Bangladesh, país vizinho a oeste, onde se formou um dos maiores campos de refugiados do mundo em Cox's Bazar. As demais alternativas erram tanto o destino quanto as religiões envolvidas, atribuindo catolicismo ou hinduísmo a grupos que não os professam nesse conflito.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_geo_unicamp/ap_geo_unicamp_039-p39.webp",
@@ -75113,26 +75113,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Geografia · questão 41 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "A tabela apresenta a distribuição da população pelas regiões brasileiras, em porcentagem, segundo os censos de 1950 a 2010: Centro-Oeste 3,0 / 3,8 / 4,9 / 5,8 / 6,4 / 6,9 / 7,4; Norte 3,9 / 4,1 / 4,4 / 5,6 / 7,0 / 7,6 / 8,3; Sul 15,1 / 16,8 / 17,7 / 16,0 / 15,1 / 14,8 / 14,4; Nordeste 34,6 / 31,6 / 30,3 / 29,2 / 28,8 / 28,1 / 27,8; Sudeste 43,4 / 43,7 / 42,7 / 43,4 / 42,7 / 42,6 / 42,1 (Fonte: IBGE). Considerando os dados da tabela, assinale a alternativa correta.",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "As regiões Norte e Centro-Oeste foram as únicas com acréscimos contínuos na participação regional desde 1950, fenômeno associado aos fluxos migratórios nacionais incentivados por políticas governamentais de ocupação do território"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "A região Nordeste foi a única que apresentou redução contínua de participação regional, fenômeno associado às grandes secas do sertão, responsáveis pela migração da população para as outras regiões do país ao longo de todo o século XX"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "A região Sudeste tem maior participação regional na população do país, apresentando redução a partir de 1991, fenômeno associado ao decréscimo, em números absolutos, de sua população pela elevada queda da taxa de fecundidade"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "A região Sul apresentou acréscimo de participação regional até 1991, ocorrendo queda nas décadas seguintes, fenômeno associado ao regresso dos filhos de imigrantes europeus em busca de trabalho nos países de origem de seus pais"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. Percorra cada linha da tabela verificando se ela sobe em todos os censos. Norte, de 3,9% para 8,3%, e Centro-Oeste, de 3,0% para 7,4%, crescem sem interrupção, resultado da ocupação das fronteiras agrícolas e de políticas de integração territorial, como a construção de Brasília e as rodovias amazônicas. A alternativa b erra ao dizer que o Nordeste foi a única em queda contínua, já que o Sudeste também recua a partir de 1960. A c confunde perda de participação relativa com queda absoluta de população, que não ocorreu. E a d contraria a tabela, em que o Sul já recua desde 1970.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_geo_unicamp/ap_geo_unicamp_041-p41.webp",
@@ -75168,7 +75168,7 @@
         "text": "está em queda"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. Distinga população total de incremento populacional. O incremento é quanto a população cresce por período; a partir de 1990 o gráfico mostra que ele começa a diminuir, ou seja, o crescimento desacelera. Mas desacelerar não é diminuir: enquanto o incremento permanece positivo, cada década acrescenta pessoas e a população total continua subindo, apenas em ritmo menor. A população só passaria a cair se o incremento se tornasse negativo, o que o gráfico não mostra no período. É o mesmo raciocínio de velocidade e aceleração na física.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_geo_unicamp/ap_geo_unicamp_045-p44.webp",
@@ -75185,26 +75185,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Geografia · questão 46 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "A tabela apresenta a população urbana e rural, em milhões de habitantes, das macrorregiões brasileiras nos censos de 1991, 2000 e 2010: Brasil, urbano 110,9 / 137,7 / 160,9 e rural 36,0 / 31,8 / 29,8; Região 1, urbano 5,9 / 9,0 / 11,6 e rural 4,3 / 3,8 / 4,1; Região 2, urbano 25,7 / 32,9 / 38,8 e rural 16,7 / 14,7 / 14,2; Região 3, urbano 16,3 / 20,3 / 23,2 e rural 5,7 / 4,7 / 4,1; Região Sudeste, urbano 55,1 / 65,4 / 74,6 e rural 7,5 / 6,8 / 5,6; Região Centro-Oeste, urbano 7,6 / 10,0 / 12,4 e rural 1,7 / 1,5 / 1,5 (Fonte: Sinopse do Censo do IBGE de 2010). Assinale a alternativa que indica corretamente as regiões identificadas pelos números 1, 2 e 3.",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "Sul; Norte; Nordeste"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "Norte; Nordeste; Sul"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "Nordeste; Sul; Norte"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "Norte; Sul; Nordeste"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. Some urbano e rural de cada região em 2010 e compare com o que se sabe do país. A Região 1 totaliza cerca de 15,7 milhões, compatível com o Norte, a menos populosa depois do Centro-Oeste. A Região 2 chega a cerca de 53 milhões e tem a maior população rural do conjunto, marca do Nordeste. A Região 3 soma cerca de 27,3 milhões, o que corresponde ao Sul. O detalhe decisivo é o volume rural: 14,2 milhões na Região 2 contra 4,1 milhões na Região 3, diferença que só se explica pelo Nordeste, e que derruba as alternativas que trocam essas duas posições.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_geo_unicamp/ap_geo_unicamp_046-p45.webp",
@@ -75221,26 +75221,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Geografia · questão 48 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "A tabela traz a percentagem de pessoas residentes não naturais da Unidade da Federação de residência, segundo a PNAD 2001/2007 do IBGE: Centro-Oeste 37,4 / 36,3 / 36,5 / 35,2; Norte 22,8 / 23,1 / 23,1 / 22,5; Nordeste 7,5 / 7,8 / 7,9 / 7,5; Sul 12,1 / 12,2 / 12,2 / 12,2; Sudeste 18,9 / 18,7 / 18,6 / 17,8 (anos de 2001, 2003, 2005 e 2007). Com base nas informações da tabela sobre a dinâmica migratória da população brasileira, é possível afirmar que:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "Os Estados da região Nordeste do Brasil apresentaram, no período, a menor percentagem de população nascida em outras Unidades da Federação. Isso ocorre porque os Estados dessa região sempre apresentaram uma elevada taxa de imigração de sua população para outras unidades da federação"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "Os Estados da região Centro-Oeste apresentaram, no período, a maior percentagem de pessoas residentes oriundas de outras Unidades da Federação. Isso ocorre porque esses Estados receberam, nas últimas décadas, elevados fluxos migratórios de população brasileira para a ocupação da fronteira agrícola"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "Nos Estados da região Sudeste houve um decréscimo da percentagem de pessoas residentes nascidas em outras Unidades da Federação. Isso ocorre porque todos os Estados dessa região sempre tiveram importantes fluxos emigratórios de população direcionados para a ocupação de outras regiões do país"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "Os Estados da região Sul têm o segundo menor índice de pessoas residentes não naturais dessas Unidades da Federação. Isso ocorre porque esses Estados, historicamente, apresentam baixos fluxos emigratórios de sua população com destino a outras unidades da federação"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. A tabela mede quanto da população de cada região nasceu em outro estado, ou seja, o peso da imigração interna. O Centro-Oeste lidera com folga, acima de 35% em todos os anos, resultado da ocupação da fronteira agrícola a partir dos anos 1970, que atraiu migrantes do Sul, do Sudeste e do Nordeste, e também da construção de Brasília. A alternativa a usa imigração onde deveria dizer emigração e, além disso, explica o baixo índice nordestino de modo invertido. A c generaliza para todos os estados do Sudeste um comportamento que não se sustenta, e a d confunde o índice de não naturais com fluxo emigratório, que é medida diferente.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_geo_unicamp/ap_geo_unicamp_048-p47.webp",
@@ -75276,7 +75276,7 @@
         "text": "A queda menos acentuada na proporção de indigentes no Brasil, no período, ocorreu nas áreas urbanas"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. A leitura pedida é de estabilidade, não de tendência. Os gráficos mostram que, entre 1995 e 2004, as proporções de pobres e de indigentes no Brasil oscilaram pouco, mantendo-se aproximadamente no mesmo patamar, com a queda expressiva ocorrendo em outro momento da série. As demais alternativas afirmam comparações entre áreas metropolitanas, urbanas e rurais que os dados apresentados não sustentam. Em questões com séries temporais, convém comparar sempre os pontos extremos do intervalo citado antes de aceitar a descrição da alternativa.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_geo_unicamp/ap_geo_unicamp_050-p49.webp",
@@ -75316,7 +75316,7 @@
         "text": "A disputa pela terra envolvendo grileiros contra posseiros em áreas de expansão de monocultivos e de projetos de exploração mineral e madeireira tem gerado violência; região Norte"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. A violência no campo brasileiro concentra-se na fronteira de expansão agrícola e mineral, sobretudo na Amazônia Legal, onde a indefinição fundiária permite a grilagem: a apropriação de terras públicas por meio de documentos falsos. O conflito opõe grileiros e empresas a posseiros, ribeirinhos, indígenas e quilombolas que ocupam a área. As alternativas a, b e c deslocam o fenômeno para outras regiões e outros conflitos, ligando-o à cana e ao algodão no Sudeste, à partilha de herança ou à pecuária no Pantanal, quadros que não correspondem à concentração registrada nos dados.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_geo_unicamp/ap_geo_unicamp_051-p50.webp",
@@ -75352,7 +75352,7 @@
         "text": "Na região Norte há poucas usinas, situadas apenas nas Terras Altas amazônicas; a vinhaça é rica em matéria orgânica, mas o processo de destilação elimina seus nutrientes"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. A expansão sucroenergética no Centro-Oeste ocupou áreas antes cobertas pelo Cerrado, aproveitando relevo plano, mecanização e proximidade de novas usinas. Quanto ao resíduo, a vinhaça é riquíssima em matéria orgânica: quando lançada em rios, essa carga orgânica alimenta micro-organismos decompositores, que consomem o oxigênio dissolvido e provocam mortandade de peixes — o mesmo mecanismo da eutrofização. Por isso b erra ao dizer que ela não serve como fertilizante, e d erra ao afirmar que a destilação elimina seus nutrientes: aplicada ao solo de forma controlada, a vinhaça é usada na fertirrigação.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_geo_unicamp/ap_geo_unicamp_053-p52.webp",
@@ -75388,7 +75388,7 @@
         "text": "1 Centro-Oeste; 2 Sudeste; 3 Norte; 4 Nordeste; 5 Sul"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. Num gráfico triangular, cada ponto é lido pelas três proporções que somam 100%. A identificação sai do que se sabe de cada região: o Norte tem a maior participação de matas e florestas nos estabelecimentos; o Nordeste combina lavouras e pastagens com forte presença da agricultura familiar; o Sudeste e o Sul têm predomínio de pastagens e lavouras, com o Sul mais voltado à lavoura; e o Centro-Oeste concentra a maior proporção de pastagens. Ler primeiro o eixo mais discriminante, o de matas, já separa o Norte dos demais e organiza a sequência.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_geo_unicamp/ap_geo_unicamp_054-p53.webp",
@@ -75424,7 +75424,7 @@
         "text": "Os trabalhadores são migrantes sazonais que se deslocam para o trabalho manual nos canaviais e retornam para suas antigas regiões após a colheita, dedicando-se a atividades de subsistência"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. O texto de Maria Aparecida de Moraes Silva trata das relações de trabalho por trás da aparência homogênea do canavial. O corte manual da cana é atividade sazonal, e por isso mobiliza migrantes temporários, sobretudo do Nordeste e do norte de Minas, que se deslocam para a safra e retornam depois dela. As demais alternativas afirmam o contrário do que a bibliografia registra: emprego durante todo o ano, absorção dos cortadores pelas usinas ou fim do pagamento por produtividade, que é justamente o mecanismo que intensifica o ritmo de trabalho.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_geo_unicamp/ap_geo_unicamp_056-p54.webp",
@@ -75441,26 +75441,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Geografia · questão 60 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Com relação à fruticultura na região do Vale do São Francisco no Nordeste brasileiro, é correto afirmar que",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "a região tem terras férteis e adequadas à fruticultura graças à inserção de projetos irrigáveis, o que compensa o clima seco e o alto índice de insolação durante a maior parte do ano"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "a região tem clima úmido, com chuvas bem distribuídas ao longo do ano, característica favorável à fruticultura"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "a região é importante produtora de frutas, mas não foi possível implantar a vitinicultura, apesar de várias tentativas, porque a cultura não se adapta ao clima"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "os maiores produtores de frutas tropicais da região e do país encontram-se em polos agroindustriais dos municípios pernambucanos de Juazeiro e Petrolina"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. O polo de fruticultura do Vale do São Francisco se explica pela combinação entre semiaridez e irrigação: o clima seco, com poucas chuvas e insolação intensa quase o ano todo, seria limitante sem água, mas os projetos públicos de irrigação a partir do rio tornaram possível produzir manga, uva e outras frutas com alta produtividade e baixo risco de doenças fúngicas. A alternativa b descreve clima que não é o da região; a c erra ao negar a vitivinicultura, que ali é justamente um destaque, inclusive na produção de vinhos; e a d erra a divisão política, pois Juazeiro fica na Bahia e apenas Petrolina é pernambucana.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_geo_unicamp/ap_geo_unicamp_060-p56.webp",
@@ -75540,7 +75540,7 @@
         "text": "A favela é um espaço monofuncional, exclusivamente residencial, desprovido de serviços urbanos básicos como energia elétrica, água, saneamento, limpeza e, portanto, equilibradamente coeso à malha urbana"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. A imagem contrapõe, lado a lado, condomínio fechado e favela, e a leitura correta é a da segregação socioespacial: a concentração de renda permite que uma parcela reduzida da população viva em enclaves murados, com aparato de segurança que reforça o isolamento e a distância social. A alternativa a inverte o processo ao falar em homogeneização das formas de habitar; b supõe convivência que a própria muralha impede; e d descreve a favela como espaço sem serviços e monofuncional, o que ignora o comércio, os serviços e as redes de sociabilidade existentes nesses territórios.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_geo_unicamp/ap_geo_unicamp_067-p61.webp",
@@ -75580,7 +75580,7 @@
         "text": "Com a crise de 1929, o Brasil voltou-se para o desenvolvimento do mercado interno através de uma industrialização por substituição de importações, o que demandou mão de obra urbana numerosa"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. A urbanização brasileira acelerou-se a partir dos anos 1930 pela industrialização por substituição de importações, estimulada pela crise de 1929, que reduziu a capacidade de importar e voltou a economia para o mercado interno. A demanda por mão de obra nas cidades, somada à estrutura fundiária concentrada e à mecanização no campo, produziu o êxodo rural que transformou o país em urbano em poucas décadas. As demais alternativas atribuem o processo à ocupação de fronteiras agrícolas ou descrevem uma distribuição urbana equilibrada que não corresponde à concentração metropolitana ocorrida.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_geo_unicamp/ap_geo_unicamp_071-p64.webp",
@@ -75624,7 +75624,7 @@
         "text": "Com a crise de 1929, o Brasil voltou-se para o desenvolvimento do mercado interno através de uma industrialização por substituição de importações, o que demandou mão de obra urbana numerosa"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. A questão repete o excerto sobre a transição urbana brasileira e cobra sua causa central: a industrialização por substituição de importações, impulsionada após a crise de 1929, concentrou empregos nas cidades e atraiu população do campo, produzindo em poucas décadas a inversão entre população rural e urbana. As alternativas a e b deslocam a explicação para as fronteiras agrícolas e para uma distribuição equilibrada entre cidades de vários portes, e c contraria a tendência recente, em que as cidades médias vêm crescendo relativamente mais que as maiores.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_geo_unicamp/ap_geo_unicamp_075-p68.webp",
