@@ -1,6 +1,335 @@
 [
   {
     "subject": "Biologia",
+    "topic": "Alelos Múltiplos e Herança dos Grupos Sanguíneos",
+    "sections": [
+      {
+        "title": "Mais de dois alelos na população",
+        "content": "Alelos múltiplos ocorrem quando um gene tem mais de duas versões na população, embora cada indivíduo continue tendo apenas duas. O sistema ABO é o exemplo clássico, com os alelos I^A, I^B e i. Os dois primeiros são codominantes entre si e ambos dominam o i, o que produz quatro fenótipos a partir de seis genótipos possíveis."
+      },
+      {
+        "title": "O sistema ABO",
+        "content": "O tipo A pode ser I^AI^A ou I^Ai; o B, I^BI^B ou I^Bi; o AB é necessariamente I^AI^B; e o O é obrigatoriamente ii. Os antígenos estão nas hemácias e os anticorpos no plasma: quem é A tem anti-B, quem é B tem anti-A, quem é AB não tem nenhum e quem é O tem os dois, o que define quem doa e recebe de quem."
+      },
+      {
+        "title": "Fator Rh e eritroblastose",
+        "content": "O fator Rh é determinado por outro gene, com Rh positivo dominante. A doença hemolítica do recém-nascido ocorre quando mãe Rh negativa sensibilizada gera filho Rh positivo: os anticorpos maternos atravessam a placenta e destroem as hemácias fetais. A prevenção é a aplicação de imunoglobulina anti-Rh após o primeiro parto."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que uma pessoa tem três alelos é o erro conceitual central: a população tem, o indivíduo tem dois. Outro deslize é trocar antígeno com anticorpo ao decidir compatibilidade. E supor que a eritroblastose atinge o primeiro filho, quando em geral a sensibilização ocorre no primeiro parto e afeta gestações seguintes."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Um casal com sangue A e B pode ter filho O? Responda antes de conferir: pode, se ambos forem heterozigotos, I^Ai e I^Bi, resultando em ii com probabilidade de 25%. Agora explique por que o tipo O é doador universal de hemácias: suas hemácias não têm antígenos A nem B, então não são atacadas pelos anticorpos do receptor."
+      }
+    ],
+    "recall": {
+      "prompt": "Um casal A e B pode ter filho O? E por que o tipo O é doador universal de hemácias?",
+      "elements": [
+        [
+          "pode se ambos forem heterozigotos",
+          [
+            "heterozigoto",
+            "pode",
+            "25"
+          ]
+        ],
+        [
+          "genotipo ii no filho",
+          [
+            "ii",
+            "recessivo"
+          ]
+        ],
+        [
+          "hemacias O nao tem antigenos A nem B",
+          [
+            "antigeno",
+            "sem",
+            "hemacia"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Algas",
+    "sections": [
+      {
+        "title": "O que são e onde estão",
+        "content": "Algas são organismos autotróficos fotossintetizantes, aquáticos ou de ambientes úmidos, sem tecidos verdadeiros diferenciados. Incluem formas unicelulares, coloniais e pluricelulares, e não constituem um grupo natural único: as verdes são aparentadas das plantas terrestres, enquanto as pardas e vermelhas pertencem a linhagens distintas."
+      },
+      {
+        "title": "Pigmentos e profundidade",
+        "content": "Todas têm clorofila, mas pigmentos acessórios definem a cor e a profundidade em que vivem. As algas verdes ocupam águas rasas; as pardas, com fucoxantina, ficam em profundidade intermediária; as vermelhas, com ficoeritrina, aproveitam a luz azul que penetra mais fundo. Essa distribuição vertical é a questão mais recorrente do tópico."
+      },
+      {
+        "title": "Importância ecológica e econômica",
+        "content": "O fitoplâncton marinho responde por grande parte da produção de oxigênio do planeta e é a base das cadeias alimentares oceânicas. Economicamente, as algas fornecem ágar, usado em meios de cultura, alginatos para indústria alimentícia e cosmética, e servem de alimento humano. Também participam de liquens e do processo de eutrofização quando proliferam em excesso."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Chamar alga de planta ignora a ausência de tecidos verdadeiros, raízes, caule e folhas. Outro erro é dizer que só as algas verdes fazem fotossíntese, quando todas fazem. E supor que as algas vermelhas vivem no fundo por falta de luz, quando é justamente sua capacidade de aproveitar a luz azul que permite essa profundidade."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que as algas vermelhas vivem em maior profundidade? Responda antes de conferir: a ficoeritrina absorve a luz azul, que penetra mais na coluna d'água, permitindo fotossíntese onde outras algas não conseguiriam. Agora diga por que o fitoplâncton é essencial: produz grande parte do oxigênio atmosférico e sustenta a base das cadeias marinhas."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que as algas vermelhas vivem em maior profundidade? E qual a importância do fitoplâncton?",
+      "elements": [
+        [
+          "a ficoeritrina absorve a luz azul",
+          [
+            "ficoeritrina",
+            "azul",
+            "pigmento"
+          ]
+        ],
+        [
+          "a luz azul penetra mais fundo",
+          [
+            "penetra",
+            "profundidade",
+            "fundo"
+          ]
+        ],
+        [
+          "o fitoplancton produz oxigenio e sustenta a cadeia",
+          [
+            "oxigenio",
+            "cadeia",
+            "base"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Anelídeos",
+    "sections": [
+      {
+        "title": "Metameria e organização",
+        "content": "Anelídeos são vermes de corpo segmentado em anéis, ou metâmeros, com celoma verdadeiro. A segmentação permite especialização regional e movimentação eficiente, com musculatura circular e longitudinal atuando junto às cerdas. Têm sistema digestório completo, circulatório fechado e excreção por nefrídios em cada segmento."
+      },
+      {
+        "title": "Os três grupos",
+        "content": "Oligoquetos, como a minhoca, têm poucas cerdas e vivem no solo. Poliquetos são majoritariamente marinhos, com parapódios e muitas cerdas. Hirudíneos, como a sanguessuga, não têm cerdas e possuem ventosas; algumas espécies são hematófagas e produzem hirudina, substância anticoagulante de interesse médico."
+      },
+      {
+        "title": "Papel ecológico",
+        "content": "A minhoca é engenheira do solo: ao escavar galerias, aumenta a aeração e a infiltração de água, e ao ingerir matéria orgânica, produz húmus rico em nutrientes. Por isso a abundância de minhocas é indicador de solo saudável, e a minhocultura é usada na produção de adubo orgânico de alta qualidade."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Chamar minhoca de organismo simples ignora que ela tem celoma verdadeiro, circulação fechada e sistema digestório completo. Outro erro é dizer que anelídeos respiram por pulmões, quando a respiração é cutânea ou branquial. E supor que a segmentação é apenas externa, quando ela se reflete na organização interna."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a minhoca morre se a pele secar? Responda antes de conferir: a respiração é cutânea e depende de superfície úmida para a difusão dos gases. Agora explique como a minhoca melhora o solo: escava galerias que aeram e drenam, e transforma matéria orgânica em húmus rico em nutrientes."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a minhoca precisa de pele úmida? E como ela melhora o solo?",
+      "elements": [
+        [
+          "respiracao cutanea exige umidade",
+          [
+            "cutanea",
+            "pele",
+            "umida"
+          ]
+        ],
+        [
+          "a difusao dos gases depende disso",
+          [
+            "difusao",
+            "gases",
+            "oxigenio"
+          ]
+        ],
+        [
+          "galerias e humus melhoram o solo",
+          [
+            "galeria",
+            "humus",
+            "aeracao"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Arquitetura Corporal dos Animais e o Filo dos Platelmintos e dos Nematódeos",
+    "sections": [
+      {
+        "title": "Padrões de arquitetura",
+        "content": "A anatomia animal se organiza por critérios comparáveis: simetria radial ou bilateral; número de folhetos embrionários, com diblásticos e triblásticos; e presença de celoma, dividindo os animais em acelomados, pseudocelomados e celomados. Também importa o tipo de trato digestório: incompleto, com abertura única, ou completo, com boca e ânus."
+      },
+      {
+        "title": "Platelmintos",
+        "content": "Os platelmintos são achatados, triblásticos e acelomados, com sistema digestório incompleto ou ausente. A planária é de vida livre e tem grande poder de regeneração. Já a Taenia e o Schistosoma são parasitas: a teníase vem do consumo de carne crua com cisticercos, e a esquistossomose depende do caramujo Biomphalaria como hospedeiro intermediário."
+      },
+      {
+        "title": "Nematódeos",
+        "content": "Os nematódeos são cilíndricos, pseudocelomados e têm sistema digestório completo, o que representa avanço em relação aos platelmintos. Incluem a lombriga Ascaris, o ancilóstomo do amarelão, que penetra pela pele dos pés, e a Wuchereria da elefantíase, transmitida por mosquito. Saneamento e calçados são medidas preventivas centrais."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Trocar o hospedeiro intermediário da esquistossomose por outro molusco é erro comum: é o caramujo do gênero Biomphalaria. Outro deslize é dizer que platelmintos têm ânus. E confundir cisticercose, adquirida pela ingestão de ovos, com teníase, adquirida pela ingestão de carne com cisticerco — a diferença muda a prevenção."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Diferencie teníase de cisticercose antes de conferir: na teníase, a pessoa ingere carne crua com cisticerco e abriga o verme adulto no intestino; na cisticercose, ingere ovos por água ou alimento contaminado e os cisticercos se alojam em tecidos, inclusive no cérebro. Agora diga por que andar descalço transmite amarelão: a larva penetra ativamente pela pele."
+      }
+    ],
+    "recall": {
+      "prompt": "Diferencie teníase de cisticercose e explique como se adquire o amarelão.",
+      "elements": [
+        [
+          "teniase vem da carne com cisticerco",
+          [
+            "carne",
+            "cisticerco",
+            "adulto"
+          ]
+        ],
+        [
+          "cisticercose vem da ingestao de ovos",
+          [
+            "ovos",
+            "agua",
+            "tecido"
+          ]
+        ],
+        [
+          "a larva do ancilostomo penetra pela pele",
+          [
+            "pele",
+            "descalco",
+            "larva"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Artrópodes: Aracnídeos",
+    "sections": [
+      {
+        "title": "Características do grupo",
+        "content": "Aracnídeos têm corpo dividido em cefalotórax e abdome, quatro pares de patas locomotoras, ausência de antenas e presença de quelíceras e pedipalpos. Respiram por filotraqueias, estruturas em folhas empilhadas, ou por traqueias. O grupo inclui aranhas, escorpiões, ácaros e carrapatos."
+      },
+      {
+        "title": "Importância médica",
+        "content": "Aranhas do gênero Loxosceles causam lesão necrótica; Phoneutria provoca dor intensa; escorpiões do gênero Tityus causam acidentes graves sobretudo em crianças. Carrapatos transmitem a febre maculosa, e ácaros da poeira estão associados a alergias respiratórias. O tratamento dos acidentes graves envolve soro antiaracnídeo ou antiescorpiônico específico."
+      },
+      {
+        "title": "Papel ecológico",
+        "content": "Apesar da fama, a maioria dos aracnídeos é benéfica: aranhas são predadoras importantes de insetos, incluindo vetores de doenças, e ácaros do solo participam da decomposição. O desequilíbrio urbano, com acúmulo de lixo e entulho, favorece presas como baratas e explica o aumento de escorpiões nas cidades."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Atribuir antenas aos aracnídeos é erro de identificação. Outro é dizer que aranhas têm três partes corporais, quando são duas. E supor que todo aracnídeo é peçonhento, quando apenas alguns gêneros têm importância médica, e a maior parte é inofensiva e ecologicamente útil."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Como diferenciar rapidamente um inseto de um aracnídeo? Responda antes de conferir: o inseto tem seis patas, antenas e corpo em três partes; o aracnídeo tem oito patas, não tem antenas e o corpo tem duas partes. Agora explique o aumento de escorpiões nas cidades: acúmulo de entulho e lixo favorece baratas, sua principal presa."
+      }
+    ],
+    "recall": {
+      "prompt": "Como diferenciar inseto de aracnídeo? E por que os escorpiões aumentaram nas cidades?",
+      "elements": [
+        [
+          "inseto tem seis patas e antenas",
+          [
+            "seis",
+            "antena",
+            "tres partes"
+          ]
+        ],
+        [
+          "aracnideo tem oito patas e nao tem antena",
+          [
+            "oito",
+            "sem antena",
+            "duas partes"
+          ]
+        ],
+        [
+          "entulho e lixo favorecem as baratas",
+          [
+            "barata",
+            "entulho",
+            "lixo"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Artrópodes: Insetos, Crustáceos e Miriápodes",
+    "sections": [
+      {
+        "title": "O filo de maior sucesso",
+        "content": "Artrópodes têm exoesqueleto de quitina, patas articuladas e corpo segmentado. O exoesqueleto protege e reduz a perda de água, mas não cresce junto com o animal, o que exige mudas periódicas, ou ecdise. Essa combinação explica a conquista dos ambientes terrestres e a enorme diversidade do grupo."
+      },
+      {
+        "title": "Insetos",
+        "content": "Insetos têm corpo em cabeça, tórax e abdome, três pares de patas, geralmente asas, respiração traqueal e excreção por túbulos de Malpighi, que economizam água ao excretar ácido úrico. Muitos apresentam metamorfose completa, com larva e pupa, o que reduz a competição entre jovens e adultos por explorarem nichos diferentes."
+      },
+      {
+        "title": "Crustáceos e miriápodes",
+        "content": "Crustáceos, como caranguejos e camarões, são majoritariamente aquáticos, com respiração branquial, dois pares de antenas e cefalotórax. Miriápodes incluem centopeias, carnívoras e com um par de patas por segmento, e piolhos-de-cobra, detritívoros e com dois pares por segmento. O número de antenas e de patas é o critério de identificação mais direto."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Contar aranha como inseto é o erro clássico, e a chave está nas patas: inseto tem seis, aracnídeo tem oito. Outro deslize é dizer que o exoesqueleto cresce com o animal. E confundir respiração traqueal dos insetos com pulmonar, quando as traqueias levam ar diretamente aos tecidos, sem depender do sangue."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que insetos precisam trocar de exoesqueleto? Responda antes de conferir: o exoesqueleto é rígido e não cresce, então o animal precisa rompê-lo e produzir outro maior. Agora explique a vantagem da metamorfose completa: larva e adulto exploram alimentos e ambientes diferentes, reduzindo a competição interna da espécie."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que os insetos fazem muda? E qual a vantagem ecológica da metamorfose completa?",
+      "elements": [
+        [
+          "o exoesqueleto rigido nao cresce",
+          [
+            "rigido",
+            "nao cresce",
+            "ecdise"
+          ]
+        ],
+        [
+          "e preciso substitui-lo periodicamente",
+          [
+            "muda",
+            "troca",
+            "novo"
+          ]
+        ],
+        [
+          "larva e adulto ocupam nichos diferentes",
+          [
+            "nicho",
+            "competicao",
+            "diferente"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Biologia",
     "topic": "Bioenergética: Fermentação e Respiração",
     "sections": [
       {
@@ -108,6 +437,226 @@
   },
   {
     "subject": "Biologia",
+    "topic": "Biomagnificação",
+    "sections": [
+      {
+        "title": "O que é",
+        "content": "Biomagnificação é o aumento da concentração de uma substância nos tecidos ao longo dos níveis tróficos. Ela exige que o poluente seja persistente, ou seja, não degradado rapidamente, e lipossolúvel, acumulando-se na gordura em vez de ser excretado. Mercúrio, DDT e outros poluentes orgânicos persistentes são os exemplos clássicos."
+      },
+      {
+        "title": "Como o processo funciona",
+        "content": "Cada predador consome muitos indivíduos do nível anterior e incorpora o poluente de todos eles, sem conseguir eliminá-lo na mesma velocidade. Assim, a concentração multiplica-se a cada nível, e os predadores de topo — grandes peixes, aves de rapina e o próprio ser humano — recebem as maiores doses, mesmo que a água esteja pouco contaminada."
+      },
+      {
+        "title": "Casos conhecidos",
+        "content": "O caso de Minamata, no Japão, envolveu mercúrio despejado no mar e concentrado em peixes consumidos pela população, causando graves danos neurológicos. O DDT afinou a casca dos ovos de aves de rapina, reduzindo populações inteiras. No Brasil, o mercúrio do garimpo contamina peixes e comunidades ribeirinhas da Amazônia."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Confundir bioacumulação com biomagnificação: a primeira é o acúmulo dentro de um organismo ao longo da vida, a segunda é o aumento entre níveis tróficos. Outro erro é supor que qualquer poluente se biomagnifica, quando é preciso ser persistente e lipossolúvel. E imaginar que a água muito contaminada é condição necessária."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Se a água tem 0,001 ppm de um poluente persistente, por que o peixe predador pode ter 10 ppm? Responda antes de conferir: cada nível trófico concentra o que veio de muitos indivíduos do nível anterior, e o poluente não é excretado, multiplicando a concentração ao longo da cadeia. Agora diga qual grupo corre maior risco: os consumidores de topo, incluindo o ser humano."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que um predador de topo pode ter concentração muito maior de poluente que a água? Diferencie bioacumulação de biomagnificação.",
+      "elements": [
+        [
+          "cada nivel concentra o do anterior",
+          [
+            "nivel",
+            "concentra",
+            "cadeia"
+          ]
+        ],
+        [
+          "poluente persistente e lipossoluvel",
+          [
+            "persistente",
+            "gordura",
+            "lipossoluvel"
+          ]
+        ],
+        [
+          "bioacumulacao ocorre dentro de um individuo",
+          [
+            "individuo",
+            "vida",
+            "dentro"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Biomas Brasileiros",
+    "sections": [
+      {
+        "title": "Os grandes biomas",
+        "content": "O Brasil abriga seis biomas continentais. A Amazônia é floresta equatorial úmida de altíssima biodiversidade e solo pobre, com nutrientes concentrados na biomassa. O Cerrado é savana com árvores de casca grossa e raízes profundas, adaptadas ao fogo e ao solo ácido. A Mata Atlântica é floresta tropical úmida, a mais devastada e com altíssimo endemismo."
+      },
+      {
+        "title": "Caatinga, Pampa e Pantanal",
+        "content": "A Caatinga é o único bioma exclusivamente brasileiro, semiárido, com plantas caducifólias, suculentas e espinhosas adaptadas à seca. O Pampa é campo de gramíneas no extremo sul, com clima subtropical. O Pantanal é a maior planície alagável do mundo, com pulso de inundação anual que determina toda a dinâmica ecológica local."
+      },
+      {
+        "title": "Adaptações e pressões",
+        "content": "Cada bioma tem adaptações características: raízes profundas e cascas grossas no Cerrado, caducifolia na Caatinga, epifitismo na Mata Atlântica. As pressões também variam: expansão agrícola no Cerrado, urbanização e fragmentação na Mata Atlântica, desmatamento e garimpo na Amazônia, desertificação na Caatinga."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Chamar a Amazônia de solo fértil por causa da floresta exuberante é o erro clássico: o solo é pobre, e os nutrientes estão na biomassa e na serapilheira. Outro é tratar o Pantanal como bioma de mata fechada. E dizer que a Caatinga é desértica, quando é semiárida e apresenta grande diversidade adaptada."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a floresta amazônica é exuberante mesmo com solo pobre? Responda antes de conferir: os nutrientes estão retidos na biomassa e são reciclados rapidamente pela decomposição da serapilheira, num ciclo quase fechado. Agora explique a caducifolia da Caatinga: perder as folhas na seca reduz a transpiração e economiza água."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a Amazônia é exuberante com solo pobre? E por que as plantas da Caatinga perdem folhas na seca?",
+      "elements": [
+        [
+          "nutrientes estao na biomassa",
+          [
+            "biomassa",
+            "serapilheira",
+            "ciclagem"
+          ]
+        ],
+        [
+          "reciclagem rapida pela decomposicao",
+          [
+            "decomposicao",
+            "reciclagem",
+            "rapida"
+          ]
+        ],
+        [
+          "perder folhas reduz a transpiracao",
+          [
+            "transpiracao",
+            "agua",
+            "economiza"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Biotecnologia",
+    "sections": [
+      {
+        "title": "Ferramentas do DNA recombinante",
+        "content": "A tecnologia do DNA recombinante usa enzimas de restrição, que cortam o DNA em sequências específicas, e ligases, que unem fragmentos. Vetores como plasmídeos carregam o gene de interesse para dentro de bactérias, que passam a produzir a proteína desejada — foi assim que a insulina humana deixou de ser extraída de pâncreas animal."
+      },
+      {
+        "title": "PCR, sequenciamento e identificação",
+        "content": "A PCR amplifica trechos específicos de DNA por ciclos de aquecimento e resfriamento, permitindo trabalhar com amostras mínimas. O teste de paternidade e a identificação criminal comparam padrões de regiões variáveis do genoma. O sequenciamento lê a ordem das bases e tornou possível projetos como o do genoma humano."
+      },
+      {
+        "title": "Transgênicos, clonagem e edição gênica",
+        "content": "Organismos transgênicos recebem gene de outra espécie, como o milho resistente a insetos. A clonagem por transferência nuclear, que gerou a ovelha Dolly, produz indivíduo geneticamente idêntico ao doador do núcleo. A edição por CRISPR permite alterar sequências com precisão, o que abre debate ético sobre aplicação em embriões humanos."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Confundir transgênico com organismo geneticamente modificado em geral: todo transgênico é modificado, mas nem toda modificação insere gene de outra espécie. Outro erro é dizer que clone é idêntico em tudo, ignorando o DNA mitocondrial da célula receptora e as influências ambientais. E atribuir à PCR a leitura do DNA, que é função do sequenciamento."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Explique como bactérias produzem insulina humana antes de conferir: o gene humano é inserido num plasmídeo com auxílio de enzimas de restrição e ligase, e a bactéria transformada passa a expressar a proteína. Agora diga por que a PCR é essencial em perícia: ela amplifica quantidades mínimas de DNA até um volume analisável."
+      }
+    ],
+    "recall": {
+      "prompt": "Como bactérias passam a produzir insulina humana? E para que serve a PCR numa perícia?",
+      "elements": [
+        [
+          "gene humano inserido em plasmideo",
+          [
+            "plasmideo",
+            "gene",
+            "vetor"
+          ]
+        ],
+        [
+          "enzimas de restricao e ligase",
+          [
+            "restricao",
+            "ligase",
+            "corta"
+          ]
+        ],
+        [
+          "a PCR amplifica pouco DNA",
+          [
+            "amplifica",
+            "copias",
+            "pequena"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Ciclo Hidrológico e Poluição da Água",
+    "sections": [
+      {
+        "title": "O ciclo da água",
+        "content": "A água circula por evaporação, transpiração, condensação, precipitação, infiltração e escoamento. A energia que move o ciclo vem do Sol, e a vegetação participa ativamente pela evapotranspiração, que devolve grande volume de água à atmosfera — é o mecanismo por trás dos chamados rios voadores que abastecem de chuva outras regiões do continente."
+      },
+      {
+        "title": "Poluição e seus tipos",
+        "content": "A poluição da água pode ser orgânica, por esgoto doméstico; química, por metais pesados e agrotóxicos; térmica, por efluentes quentes de indústrias; e biológica, por micro-organismos patogênicos. Cada tipo tem indicador próprio: coliformes fecais apontam contaminação por esgoto e a demanda bioquímica de oxigênio mede a carga orgânica."
+      },
+      {
+        "title": "Consequências e tratamento",
+        "content": "O excesso de matéria orgânica reduz o oxigênio dissolvido e mata peixes; metais pesados se acumulam ao longo da cadeia; a contaminação biológica causa cólera, hepatite A e verminoses. O tratamento de esgoto e o saneamento básico são as medidas de maior impacto na saúde pública, mais eficazes que qualquer intervenção posterior."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Confundir água limpa com água potável: água cristalina pode conter patógenos invisíveis. Outro erro é dizer que a poluição térmica não é poluição, quando o aumento de temperatura reduz a solubilidade do oxigênio e prejudica a vida aquática. E tratar o desmatamento como assunto separado do ciclo da água."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que o despejo de esgoto mata peixes mesmo sem ser tóxico? Responda antes de conferir: a decomposição da matéria orgânica consome o oxigênio dissolvido, e os peixes morrem por asfixia. Agora explique como o desmatamento altera o regime de chuvas: reduz a evapotranspiração e o transporte de umidade para o interior do continente."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que o esgoto mata peixes mesmo sem ser tóxico? E como o desmatamento altera o regime de chuvas?",
+      "elements": [
+        [
+          "a decomposicao consome oxigenio dissolvido",
+          [
+            "oxigenio",
+            "decomposicao",
+            "consome"
+          ]
+        ],
+        [
+          "os peixes morrem por asfixia",
+          [
+            "asfixia",
+            "morrem",
+            "falta"
+          ]
+        ],
+        [
+          "menos evapotranspiracao reduz a chuva",
+          [
+            "evapotranspiracao",
+            "umidade",
+            "chuva"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Biologia",
     "topic": "Ciclo do Nitrogênio",
     "sections": [
       {
@@ -155,6 +704,774 @@
             "tripla",
             "estavel",
             "inerte"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Ciclos Biogeoquímicos – Ciclo do Carbono",
+    "sections": [
+      {
+        "title": "Reservatórios e fluxos",
+        "content": "O carbono circula entre atmosfera, oceanos, seres vivos, solo e rochas. A fotossíntese retira CO₂ do ar e o incorpora à matéria orgânica; a respiração e a decomposição o devolvem. Os oceanos são o maior reservatório móvel, dissolvendo CO₂ e formando carbonatos, e as rochas calcárias e os combustíveis fósseis guardam carbono por milhões de anos."
+      },
+      {
+        "title": "Interferência humana",
+        "content": "A queima de combustíveis fósseis transfere para a atmosfera, em décadas, carbono que levou eras para ser estocado. O desmatamento agrava o quadro duas vezes: libera carbono da biomassa queimada e elimina a vegetação que retiraria CO₂. O resultado é o aumento da concentração atmosférica e a intensificação do efeito estufa."
+      },
+      {
+        "title": "Consequências e mitigação",
+        "content": "Além do aquecimento, o excesso de CO₂ dissolvido acidifica os oceanos, prejudicando organismos de esqueleto calcário como corais e moluscos. As estratégias de mitigação envolvem reduzir emissões, ampliar fontes renováveis, conservar e restaurar florestas, que funcionam como sumidouros ao acumular carbono na biomassa."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que uma floresta madura retira grandes quantidades líquidas de CO₂ merece cuidado: no clímax, fotossíntese e respiração quase se equilibram, e o ganho líquido é maior em florestas em crescimento. Outro erro é ignorar o oceano como reservatório. E confundir efeito estufa, que é natural e necessário, com sua intensificação, que é o problema."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Explique por que o desmatamento com queimada afeta duplamente o ciclo antes de conferir: libera de imediato o carbono estocado na biomassa e suprime a absorção futura pela fotossíntese. Agora diga o que é acidificação dos oceanos: o CO₂ dissolvido forma ácido carbônico, reduzindo o pH e dificultando a formação de conchas e recifes."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que o desmatamento com queimada afeta duas vezes o ciclo do carbono? O que é acidificação dos oceanos?",
+      "elements": [
+        [
+          "libera carbono da biomassa",
+          [
+            "libera",
+            "queima",
+            "biomassa"
+          ]
+        ],
+        [
+          "elimina a absorcao pela fotossintese",
+          [
+            "fotossintese",
+            "absorcao",
+            "sumidouro"
+          ]
+        ],
+        [
+          "o CO2 dissolvido reduz o pH",
+          [
+            "ph",
+            "acido",
+            "carbonico"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Ciclos de Vida",
+    "sections": [
+      {
+        "title": "Os três padrões",
+        "content": "Há três ciclos de vida: haplonte, em que o organismo adulto é haploide e o zigoto sofre meiose logo após a fecundação; diplonte, em que o adulto é diploide e a meiose produz gametas, como nos animais; e haplodiplonte, com alternância de gerações entre um gametófito haploide e um esporófito diploide, típico das plantas."
+      },
+      {
+        "title": "Alternância de gerações",
+        "content": "No ciclo haplodiplonte, o esporófito produz esporos por meiose, e esses esporos germinam formando o gametófito, que produz gametas por mitose. A fecundação restaura o esporófito. Ao longo da evolução das plantas terrestres, o gametófito foi se reduzindo e o esporófito se tornou dominante — tendência clara de briófitas a angiospermas."
+      },
+      {
+        "title": "Onde a meiose acontece",
+        "content": "A pergunta-chave de qualquer ciclo é onde ocorre a meiose. No haplonte é zigótica, logo após a fecundação; no diplonte é gamética, produzindo gametas; no haplodiplonte é espórica, produzindo esporos. Identificar isso permite classificar o ciclo mesmo sem conhecer o organismo apresentado no enunciado."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que gametas são sempre produzidos por meiose é erro grave: nas plantas, o gametófito é haploide e produz gametas por mitose. Outro deslize é confundir esporo com gameta — o esporo germina sozinho, o gameta precisa de fecundação. E supor que o esporófito é dominante em briófitas, quando ali o gametófito é a fase visível."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Num organismo cuja meiose produz esporos, qual é o ciclo? Responda antes de conferir: é haplodiplonte, com meiose espórica e alternância de gerações. Agora diga como os gametas se formam no gametófito de um musgo: por mitose, porque o gametófito já é haploide."
+      }
+    ],
+    "recall": {
+      "prompt": "Num ciclo em que a meiose produz esporos, qual é o tipo de ciclo? Como o gametófito produz gametas?",
+      "elements": [
+        [
+          "ciclo haplodiplonte",
+          [
+            "haplodiplonte",
+            "alternancia"
+          ]
+        ],
+        [
+          "meiose esporica",
+          [
+            "esporica",
+            "esporo"
+          ]
+        ],
+        [
+          "o gametofito produz gametas por mitose",
+          [
+            "mitose",
+            "haploide",
+            "gametofito"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Citoplasma: Estrutura e Componentes I",
+    "sections": [
+      {
+        "title": "Membrana plasmática e transporte",
+        "content": "A membrana é uma bicamada de fosfolipídios com proteínas embebidas, descrita pelo modelo do mosaico fluido. Ela é seletivamente permeável: difusão simples e osmose ocorrem sem gasto de energia e a favor do gradiente; difusão facilitada usa proteínas transportadoras; o transporte ativo, como a bomba de sódio e potássio, gasta ATP e vai contra o gradiente."
+      },
+      {
+        "title": "Osmose e meios",
+        "content": "Em meio hipotônico, a célula ganha água e incha, podendo sofrer lise se for animal; a vegetal fica túrgida por causa da parede celular. Em meio hipertônico, perde água: a animal murcha e a vegetal sofre plasmólise. Em meio isotônico, as trocas se equilibram. Esse conjunto de casos é dos mais cobrados em prova."
+      },
+      {
+        "title": "Citoplasma e organelas de síntese",
+        "content": "O citosol abriga o citoesqueleto, que sustenta e movimenta a célula. O retículo endoplasmático rugoso, com ribossomos, sintetiza proteínas para exportação; o liso produz lipídios e faz desintoxicação. O complexo golgiense modifica, empacota e endereça essas moléculas, e origina os lisossomos."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que a osmose é o movimento do soluto inverte o conceito: é o solvente que se move, através de membrana semipermeável. Outro erro é atribuir gasto de energia à difusão facilitada. E confundir o retículo rugoso com o liso quanto à função, ou esquecer que a parede celular impede a lise da célula vegetal."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "O que acontece com uma hemácia em água destilada? Responda antes de conferir: o meio é hipotônico, a célula absorve água e sofre lise, porque não tem parede celular. Agora, o que ocorre com uma célula vegetal na mesma água? Ela fica túrgida, e a parede impede o rompimento."
+      }
+    ],
+    "recall": {
+      "prompt": "O que acontece com uma hemácia e com uma célula vegetal em água destilada? Explique pela osmose.",
+      "elements": [
+        [
+          "a hemacia sofre lise",
+          [
+            "lise",
+            "rompe",
+            "estoura"
+          ]
+        ],
+        [
+          "a celula vegetal fica turgida",
+          [
+            "turgida",
+            "parede",
+            "nao rompe"
+          ]
+        ],
+        [
+          "a agua entra por ser meio hipotonico",
+          [
+            "hipotonico",
+            "agua",
+            "entra"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Citoplasma: Estrutura e Componentes II",
+    "sections": [
+      {
+        "title": "Mitocôndrias e cloroplastos",
+        "content": "As mitocôndrias realizam a respiração celular, produzindo ATP, e os cloroplastos realizam a fotossíntese. Ambas têm DNA próprio, ribossomos e dupla membrana, o que sustenta a teoria endossimbiótica: elas seriam procariontes ancestrais incorporados por uma célula maior, hipótese que também explica sua divisão independente."
+      },
+      {
+        "title": "Lisossomos e peroxissomos",
+        "content": "Lisossomos contêm enzimas digestivas e realizam digestão intracelular, atuando na heterofagia, quando digerem material vindo de fora, e na autofagia, quando reciclam organelas próprias. Peroxissomos degradam peróxido de hidrogênio pela catalase e participam da oxidação de ácidos graxos, funções distintas que costumam ser confundidas."
+      },
+      {
+        "title": "Estruturas de movimento e sustentação",
+        "content": "Centríolos organizam o fuso durante a divisão e originam cílios e flagelos, cuja estrutura interna segue o padrão de nove pares mais dois microtúbulos. O citoesqueleto, feito de microfilamentos, filamentos intermediários e microtúbulos, dá forma à célula, ancora organelas e permite o transporte interno de vesículas."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que a mitocôndria produz energia é impreciso: ela converte energia química do alimento em ATP. Outro erro é atribuir cloroplastos a células animais. E confundir a função dos lisossomos com a dos peroxissomos, ou supor que células vegetais não têm mitocôndrias, quando têm as duas organelas."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Que evidências sustentam a teoria endossimbiótica? Responda antes de conferir: DNA circular próprio, ribossomos semelhantes aos bacterianos, dupla membrana e divisão independente da célula. Agora explique o que acontece se os lisossomos se romperem: as enzimas digestivas extravasam e digerem a própria célula, processo chamado autólise."
+      }
+    ],
+    "recall": {
+      "prompt": "Cite evidências da teoria endossimbiótica e diga o que ocorre quando lisossomos se rompem.",
+      "elements": [
+        [
+          "DNA proprio e ribossomos",
+          [
+            "dna",
+            "ribossomo",
+            "proprio"
+          ]
+        ],
+        [
+          "dupla membrana e divisao independente",
+          [
+            "dupla membrana",
+            "divide",
+            "independente"
+          ]
+        ],
+        [
+          "autolise pela liberacao de enzimas",
+          [
+            "autolise",
+            "enzimas",
+            "digere"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Classificação Biológica, Nomenclatura Científica e Noções de Sistemática Filogenética",
+    "sections": [
+      {
+        "title": "Categorias e nomenclatura",
+        "content": "A classificação organiza os seres vivos em categorias hierárquicas: domínio, reino, filo, classe, ordem, família, gênero e espécie. A nomenclatura binomial de Lineu combina gênero, com inicial maiúscula, e epíteto específico, em minúscula, ambos em itálico ou sublinhados, como em Homo sapiens. Quanto mais próxima a categoria da espécie, mais semelhantes os organismos."
+      },
+      {
+        "title": "Sistemática filogenética",
+        "content": "A sistemática moderna agrupa organismos por ancestralidade comum, e não por semelhança aparente. Os cladogramas representam essas relações, e cada nó é um ancestral comum. Um grupo é monofilético quando inclui o ancestral e todos os seus descendentes — o único tipo aceito na classificação atual, ao contrário dos grupos parafiléticos e polifiléticos."
+      },
+      {
+        "title": "Homologia e analogia",
+        "content": "Estruturas homólogas têm mesma origem embrionária e indicam parentesco, ainda que exerçam funções diferentes, como o braço humano e a asa do morcego. Estruturas análogas têm mesma função e origens distintas, resultado de convergência adaptativa, como a asa do inseto e a da ave. Só a homologia serve para reconstruir filogenias."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Usar analogia como evidência de parentesco é o erro conceitual central do tópico. Outro é escrever o nome científico sem itálico ou com o epíteto específico em maiúscula. E chamar de monofilético um grupo que exclui parte dos descendentes, como répteis sem as aves, que é parafilético."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "A asa do morcego e a asa da ave são homólogas ou análogas? Responda antes de conferir: como membros anteriores de vertebrados, são homólogas quanto à origem; como asas, a estrutura de voo é análoga, porque o voo evoluiu de forma independente. Agora escreva corretamente o nome da onça-pintada: Panthera onca, em itálico, com gênero em maiúscula."
+      }
+    ],
+    "recall": {
+      "prompt": "A asa do morcego e a da ave são homólogas ou análogas? E como se escreve corretamente um nome científico?",
+      "elements": [
+        [
+          "homologas como membros anteriores",
+          [
+            "homologa",
+            "membro",
+            "origem"
+          ]
+        ],
+        [
+          "analogas como estruturas de voo",
+          [
+            "analoga",
+            "voo",
+            "convergencia"
+          ]
+        ],
+        [
+          "genero em maiuscula e epiteto em minuscula em italico",
+          [
+            "italico",
+            "maiuscula",
+            "binomial"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Composição Química Celular: Carboidratos e Lipídios",
+    "sections": [
+      {
+        "title": "Carboidratos",
+        "content": "Carboidratos são a principal fonte imediata de energia. Monossacarídeos como glicose, frutose e galactose são as unidades; dissacarídeos como sacarose, lactose e maltose resultam da união de dois deles por ligação glicosídica, com saída de água; polissacarídeos como amido, glicogênio, celulose e quitina exercem papel de reserva ou de estrutura."
+      },
+      {
+        "title": "Reserva e estrutura",
+        "content": "Amido é a reserva vegetal e glicogênio a animal, ambos formados por glicose e facilmente mobilizáveis. Celulose forma a parede das células vegetais e quitina o exoesqueleto de artrópodes e a parede de fungos: são estruturais e resistentes à digestão humana, o que explica a celulose funcionar como fibra alimentar sem valor calórico."
+      },
+      {
+        "title": "Lipídios",
+        "content": "Lipídios são insolúveis em água e solúveis em solventes orgânicos. Os triglicerídeos armazenam energia com densidade maior que a dos carboidratos e isolam termicamente; os fosfolipídios, por serem anfipáticos, formam a bicamada das membranas; os esteroides incluem colesterol e hormônios sexuais; as ceras impermeabilizam superfícies como folhas e penas."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Chamar todo lipídio de gordura ignora fosfolipídios, esteroides e ceras. Outro erro é dizer que celulose alimenta o ser humano: não temos enzima para digeri-la. E confundir amido com glicogênio quanto ao organismo em que ocorrem, ou esquecer que ambos são polímeros de glicose."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Explique por que gordura é melhor reserva de energia que carboidrato antes de conferir: os lipídios liberam mais energia por grama e são armazenados praticamente sem água, ocupando menos volume. Agora diga qual lipídio forma a membrana e por quê: o fosfolipídio, porque tem cabeça polar e caudas apolares, organizando-se em bicamada na água."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a gordura é melhor reserva energética que o carboidrato? E qual lipídio forma a membrana celular?",
+      "elements": [
+        [
+          "libera mais energia por grama",
+          [
+            "mais energia",
+            "grama",
+            "densidade"
+          ]
+        ],
+        [
+          "armazenada sem agua",
+          [
+            "agua",
+            "anidra",
+            "volume"
+          ]
+        ],
+        [
+          "fosfolipidio por ser anfipatico",
+          [
+            "fosfolipidio",
+            "bicamada",
+            "polar"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Composição Química Celular: Compostos Inorgânicos",
+    "sections": [
+      {
+        "title": "A água e suas propriedades",
+        "content": "A água é o composto mais abundante nos seres vivos e suas propriedades vêm da polaridade e das pontes de hidrogênio: alto calor específico, que estabiliza a temperatura corporal; alto calor de vaporização, que torna a transpiração eficiente; coesão e tensão superficial, que sustentam a subida da seiva; e capacidade de dissolver substâncias polares, atuando como solvente universal."
+      },
+      {
+        "title": "Sais minerais e suas funções",
+        "content": "Os sais minerais atuam como constituintes estruturais e como reguladores. Cálcio e fósforo formam ossos e dentes; ferro compõe a hemoglobina; iodo entra nos hormônios da tireoide; magnésio faz parte da clorofila; sódio e potássio mantêm o potencial elétrico das membranas. Cada carência produz um quadro característico, ponto frequentemente cobrado em prova."
+      },
+      {
+        "title": "Teor de água e metabolismo",
+        "content": "O teor de água varia com a espécie, o tecido e a idade: é maior em tecidos com metabolismo intenso, como o sangue e o cérebro, e menor em tecidos como o ósseo e o adiposo. Também diminui com o envelhecimento. Como quase toda reação celular ocorre em meio aquoso, o teor de água acompanha a atividade metabólica."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que o tecido adiposo é rico em água inverte a relação. Outro erro é atribuir ao cálcio funções da hemoglobina ou trocar os sais minerais entre suas carências. E confundir calor específico com calor de vaporização, que explicam fenômenos diferentes: estabilidade térmica e resfriamento por suor."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Explique por que suar resfria o corpo antes de conferir: evaporar água exige muita energia, por causa do alto calor de vaporização, e essa energia é retirada da superfície corporal. Agora relacione carências: falta de ferro leva à anemia, falta de iodo ao bócio e falta de cálcio compromete ossos e a contração muscular."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que o suor resfria o corpo? Relacione ferro, iodo e cálcio às suas funções.",
+      "elements": [
+        [
+          "alto calor de vaporizacao",
+          [
+            "vaporizacao",
+            "calor",
+            "energia"
+          ]
+        ],
+        [
+          "ferro na hemoglobina",
+          [
+            "ferro",
+            "hemoglobina",
+            "anemia"
+          ]
+        ],
+        [
+          "iodo nos hormonios da tireoide",
+          [
+            "iodo",
+            "tireoide",
+            "bocio"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Composição Química Celular: Proteínas e sua Função Estrutural",
+    "sections": [
+      {
+        "title": "Aminoácidos e ligação peptídica",
+        "content": "Proteínas são polímeros de aminoácidos unidos por ligações peptídicas, formadas com saída de água. Existem vinte aminoácidos, e a sequência deles é determinada pelo gene. Alguns são essenciais, isto é, precisam vir da dieta porque o organismo não os sintetiza, e essa é a razão de se falar em qualidade proteica dos alimentos."
+      },
+      {
+        "title": "Os quatro níveis de estrutura",
+        "content": "A estrutura primária é a sequência de aminoácidos; a secundária são dobras locais em hélice ou folha; a terciária é o enovelamento tridimensional completo; a quaternária reúne mais de uma cadeia, como na hemoglobina. A função depende da forma, e a forma depende, em última instância, da sequência definida pelo DNA."
+      },
+      {
+        "title": "Funções das proteínas",
+        "content": "Além de enzimas, as proteínas exercem função estrutural, como o colágeno da pele e a queratina de unhas e cabelos; de transporte, como a hemoglobina; de defesa, como os anticorpos; de movimento, como actina e miosina; e hormonal, como a insulina. É a classe de moléculas com maior diversidade funcional na célula."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que a desnaturação quebra ligações peptídicas é erro: ela desfaz a forma tridimensional, mantendo a estrutura primária. Outro deslize é achar que toda proteína é enzima. E confundir aminoácido essencial com aminoácido importante: todos são necessários, mas só alguns precisam vir prontos da dieta."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Explique por que ferver um ovo endurece a clara antes de conferir: o calor desnatura as proteínas, desfazendo a estrutura tridimensional e formando uma rede insolúvel, sem romper as ligações peptídicas. Agora diga por que uma troca de um único aminoácido pode causar doença: na anemia falciforme, a substituição altera a forma da hemoglobina e deforma a hemácia."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que ferver um ovo endurece a clara? E por que trocar um único aminoácido pode causar doença?",
+      "elements": [
+        [
+          "o calor desnatura as proteinas",
+          [
+            "desnatura",
+            "calor",
+            "forma"
+          ]
+        ],
+        [
+          "a estrutura primaria permanece",
+          [
+            "primaria",
+            "ligacao peptidica",
+            "sequencia"
+          ]
+        ],
+        [
+          "a funcao depende da forma tridimensional",
+          [
+            "forma",
+            "funcao",
+            "falciforme"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Coordenação Endócrina I",
+    "sections": [
+      {
+        "title": "Hormônios e glândulas",
+        "content": "Hormônios são mensageiros químicos produzidos por glândulas endócrinas e lançados no sangue, atuando apenas em células que têm o receptor correspondente. A resposta é mais lenta que a nervosa, porém mais duradoura e difusa. A hipófise é chamada de glândula-mestra por controlar várias outras, sob comando do hipotálamo."
+      },
+      {
+        "title": "Tireoide e paratireoides",
+        "content": "A tireoide produz tiroxina, que regula o metabolismo basal, e calcitonina, que reduz o cálcio no sangue depositando-o nos ossos. As paratireoides produzem paratormônio, de efeito oposto. A carência de iodo impede a síntese de tiroxina e provoca bócio, com aumento da glândula por estímulo contínuo da hipófise."
+      },
+      {
+        "title": "Pâncreas endócrino",
+        "content": "As ilhotas pancreáticas produzem insulina, que reduz a glicemia facilitando a entrada de glicose nas células, e glucagon, que a eleva mobilizando o glicogênio hepático. O diabetes tipo 1 decorre da destruição autoimune das células produtoras de insulina; o tipo 2, da resistência periférica ao hormônio."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que a insulina quebra a glicose é impreciso: ela promove a entrada da glicose nas células e o armazenamento como glicogênio. Outro deslize é confundir calcitonina com paratormônio, que têm efeitos opostos sobre o cálcio. E imaginar que o hormônio age em qualquer célula, ignorando a especificidade dos receptores."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a falta de iodo aumenta a tireoide? Responda antes de conferir: sem iodo não se produz tiroxina, a hipófise continua estimulando a glândula com TSH e o estímulo constante provoca hipertrofia, o bócio. Agora explique o papel oposto de insulina e glucagon: uma reduz e o outro eleva a glicemia."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a falta de iodo causa bócio? Qual a diferença entre insulina e glucagon?",
+      "elements": [
+        [
+          "sem iodo nao ha tiroxina",
+          [
+            "iodo",
+            "tiroxina",
+            "sintese"
+          ]
+        ],
+        [
+          "o estimulo continuo da hipofise causa hipertrofia",
+          [
+            "tsh",
+            "hipofise",
+            "aumento"
+          ]
+        ],
+        [
+          "insulina reduz e glucagon eleva a glicemia",
+          [
+            "insulina",
+            "glucagon",
+            "glicemia"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Coordenação Endócrina II",
+    "sections": [
+      {
+        "title": "Adrenais e resposta ao estresse",
+        "content": "A medula da adrenal libera adrenalina e noradrenalina na resposta rápida ao estresse, aumentando frequência cardíaca, pressão e glicemia. O córtex produz cortisol, de ação mais lenta e prolongada, que eleva a glicose e modula a inflamação, e aldosterona, que retém sódio e água, elevando a pressão arterial."
+      },
+      {
+        "title": "Feedback negativo",
+        "content": "A maioria dos eixos hormonais é regulada por retroalimentação negativa: o produto final inibe as etapas anteriores, mantendo a concentração dentro de uma faixa. É assim que funciona o eixo hipotálamo-hipófise-tireoide, e é por isso que o uso prolongado de hormônio exógeno pode suprimir a produção natural."
+      },
+      {
+        "title": "Hormônios sexuais",
+        "content": "Testosterona, estrogênio e progesterona controlam caracteres sexuais secundários e o ciclo reprodutivo, sob comando de FSH e LH hipofisários. O ciclo menstrual integra as fases folicular, ovulatória e lútea, com picos hormonais definidos, e é o exemplo mais completo de regulação por feedback estudado no ensino médio."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Chamar de feedback positivo o mecanismo que estabiliza níveis hormonais é troca de conceito: o que estabiliza é o negativo. Outro deslize é confundir adrenalina com cortisol quanto à velocidade de ação. E supor que hormônios sexuais existem exclusivamente em um dos sexos, quando ambos os produzem em proporções diferentes."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que interromper de repente um corticoide usado por muito tempo é perigoso? Responda antes de conferir: o feedback negativo suprimiu a produção natural de cortisol, e a suspensão brusca deixa o organismo sem o hormônio até a recuperação do eixo. Agora diferencie adrenalina e cortisol: a primeira age em segundos, o segundo sustenta a resposta prolongada."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que interromper bruscamente um corticoide é perigoso? Diferencie adrenalina de cortisol.",
+      "elements": [
+        [
+          "o feedback negativo suprimiu a producao natural",
+          [
+            "feedback",
+            "suprime",
+            "natural"
+          ]
+        ],
+        [
+          "o organismo fica sem cortisol",
+          [
+            "cortisol",
+            "falta",
+            "recuperacao"
+          ]
+        ],
+        [
+          "adrenalina age rapido e cortisol e prolongado",
+          [
+            "rapida",
+            "prolongado",
+            "segundos"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Coordenação Nervosa II",
+    "sections": [
+      {
+        "title": "Divisões do sistema nervoso",
+        "content": "O sistema nervoso central é formado por encéfalo e medula espinhal; o periférico, por nervos e gânglios. O periférico se divide em somático, que controla a musculatura esquelética voluntariamente, e autônomo, involuntário, subdividido em simpático e parassimpático, que atuam de forma antagônica sobre os mesmos órgãos."
+      },
+      {
+        "title": "Encéfalo e medula",
+        "content": "O cérebro comanda funções conscientes, memória e linguagem; o cerebelo coordena equilíbrio e movimentos finos; o bulbo controla funções vitais como respiração e batimentos; o hipotálamo regula temperatura, fome e sede e faz a ponte com o sistema endócrino. A medula conduz impulsos e coordena os atos reflexos."
+      },
+      {
+        "title": "Arco reflexo",
+        "content": "No arco reflexo, o estímulo é captado por um receptor, o neurônio sensitivo leva a informação à medula, onde há sinapse direta ou por interneurônio com o neurônio motor, que aciona o efetor. A resposta ocorre antes de o cérebro processar conscientemente a informação, o que explica a rapidez do movimento de retirada."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que o cérebro comanda o reflexo de retirada é erro: a resposta é medular, e o cérebro só toma conhecimento depois. Outro deslize é atribuir ao simpático funções do parassimpático, trocando 'lutar ou fugir' por 'repouso e digestão'. E confundir cerebelo com cérebro nas funções de equilíbrio."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Ao tocar algo muito quente, por que a mão se afasta antes de você sentir dor? Responda antes de conferir: o arco reflexo é processado na medula, com resposta motora imediata, enquanto a sensação consciente exige que o sinal suba até o cérebro. Agora diga o que o simpático faz com a frequência cardíaca e com a digestão: acelera o coração e reduz a atividade digestiva."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a mão se afasta do quente antes de você sentir dor? E o que o simpático faz com coração e digestão?",
+      "elements": [
+        [
+          "o arco reflexo e processado na medula",
+          [
+            "medula",
+            "reflexo",
+            "arco"
+          ]
+        ],
+        [
+          "a dor consciente exige chegar ao cerebro",
+          [
+            "cerebro",
+            "consciente",
+            "depois"
+          ]
+        ],
+        [
+          "o simpatico acelera o coracao e reduz a digestao",
+          [
+            "acelera",
+            "digestao",
+            "reduz"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Coração e Vasos Sanguíneos",
+    "sections": [
+      {
+        "title": "Circulação humana",
+        "content": "O coração humano tem quatro cavidades e a circulação é dupla e completa: dupla porque o sangue passa duas vezes pelo coração a cada volta, e completa porque não há mistura entre sangue arterial e venoso. A pequena circulação leva sangue do ventrículo direito aos pulmões; a grande leva do ventrículo esquerdo ao corpo."
+      },
+      {
+        "title": "Vasos e pressão",
+        "content": "Artérias levam sangue do coração aos tecidos e têm paredes espessas e elásticas para suportar a pressão; veias trazem o sangue de volta, com paredes finas e válvulas que impedem o refluxo; capilares, de parede unicelular, são o local das trocas. A pressão cai progressivamente do sistema arterial ao venoso."
+      },
+      {
+        "title": "Ciclo cardíaco e controle",
+        "content": "A sístole é a contração e a diástole o relaxamento. O nó sinoatrial gera o impulso que se propaga pelo sistema de condução, e por isso o coração é miogênico: o batimento nasce nele mesmo. O sistema nervoso autônomo apenas modula a frequência, acelerando pelo simpático e desacelerando pelo parassimpático."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que artéria sempre leva sangue oxigenado é erro: a artéria pulmonar leva sangue venoso. Outro deslize é definir artéria e veia pelo teor de oxigênio, quando a definição correta é o sentido em relação ao coração. E supor que o coração precisa de comando nervoso para bater."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a artéria pulmonar contraria a ideia de que artérias levam sangue oxigenado? Responda antes de conferir: ela sai do ventrículo direito levando sangue pobre em oxigênio aos pulmões, mostrando que a definição de artéria é sair do coração. Agora explique por que as veias das pernas têm válvulas: para impedir o refluxo do sangue que sobe contra a gravidade."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a artéria pulmonar leva sangue venoso? E por que as veias das pernas têm válvulas?",
+      "elements": [
+        [
+          "arteria se define por sair do coracao",
+          [
+            "sai",
+            "coracao",
+            "sentido"
+          ]
+        ],
+        [
+          "a pulmonar leva sangue pobre em oxigenio aos pulmoes",
+          [
+            "pobre",
+            "pulmao",
+            "venoso"
+          ]
+        ],
+        [
+          "as valvulas impedem o refluxo",
+          [
+            "valvula",
+            "refluxo",
+            "gravidade"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Cordados Tetrápodes",
+    "sections": [
+      {
+        "title": "Anfíbios",
+        "content": "Anfíbios dependem de água para a reprodução, com ovos sem casca e desenvolvimento indireto, incluindo fase larval aquática. A pele é úmida e participa da respiração cutânea, o que os torna especialmente sensíveis à poluição e à desidratação — por isso são considerados bons bioindicadores da qualidade ambiental."
+      },
+      {
+        "title": "Répteis e aves",
+        "content": "Répteis conquistaram o ambiente terrestre com o ovo amniótico, pele queratinizada impermeável e excreção de ácido úrico, que economiza água. Aves compartilham essas características e acrescentam endotermia, penas, ossos pneumáticos e sacos aéreos, que tornam a respiração muito eficiente para o voo. Filogeneticamente, as aves são répteis."
+      },
+      {
+        "title": "Mamíferos",
+        "content": "Mamíferos têm glândulas mamárias, pelos, diafragma, endotermia e, na maioria, placenta. Dividem-se em monotremados, que põem ovos; marsupiais, com desenvolvimento em bolsa; e placentários. O coração com quatro cavidades, presente também nas aves, separa completamente o sangue arterial do venoso e sustenta o alto metabolismo."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que répteis são animais de sangue frio no sentido de terem sangue gelado é impreciso: eles são ectotérmicos, dependendo do ambiente para regular a temperatura. Outro erro é excluir aves do grupo dos répteis na classificação filogenética. E atribuir placenta a todos os mamíferos, esquecendo monotremados e marsupiais."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Que novidade evolutiva permitiu aos répteis a independência da água? Responda antes de conferir: o ovo amniótico, com casca e anexos embrionários que protegem contra a dessecação, somado à pele impermeável e à excreção de ácido úrico. Agora diga por que anfíbios são bioindicadores: a pele permeável os expõe diretamente a poluentes e à desidratação."
+      }
+    ],
+    "recall": {
+      "prompt": "Que novidade permitiu aos répteis independência da água? E por que anfíbios são bioindicadores?",
+      "elements": [
+        [
+          "o ovo amniotico com casca",
+          [
+            "ovo",
+            "amniotico",
+            "casca"
+          ]
+        ],
+        [
+          "pele impermeavel e acido urico",
+          [
+            "impermeavel",
+            "acido urico",
+            "agua"
+          ]
+        ],
+        [
+          "a pele permeavel expoe o anfibio a poluentes",
+          [
+            "permeavel",
+            "poluente",
+            "sensivel"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Dinâmica de Populações",
+    "sections": [
+      {
+        "title": "Fatores que alteram a densidade",
+        "content": "A densidade populacional aumenta por natalidade e imigração e diminui por mortalidade e emigração. O potencial biótico é a capacidade máxima teórica de crescimento; a resistência do meio reúne os fatores que o limitam, como alimento, espaço, predadores e doenças. O equilíbrio entre eles determina o tamanho real da população."
+      },
+      {
+        "title": "Curvas de crescimento",
+        "content": "A curva em J descreve crescimento exponencial, possível apenas quando os recursos são ilimitados, situação temporária. A curva em S, ou logística, mostra crescimento inicial rápido que desacelera até estabilizar na capacidade de suporte do ambiente. Reconhecer qual curva o gráfico apresenta é a leitura mais cobrada do tópico."
+      },
+      {
+        "title": "Densidade-dependência",
+        "content": "Fatores densidade-dependentes intensificam seu efeito quando a população cresce, como competição, predação e disseminação de doenças. Fatores densidade-independentes, como secas e incêndios, atuam com a mesma intensidade qualquer que seja o número de indivíduos. Distinguir os dois explica por que algumas populações oscilam regularmente e outras não."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que a capacidade de suporte é fixa ignora que ela muda com as condições ambientais. Outro erro é tratar a curva em J como situação normal e duradoura. E confundir crescimento populacional com aumento de natalidade: a população pode crescer com natalidade estável se a mortalidade cair."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Uma população de insetos cresce rapidamente e depois estabiliza. Identifique a curva e explique antes de conferir: é a curva em S, e a estabilização ocorre porque a resistência do meio aumenta até igualar o potencial biótico, na capacidade de suporte. Agora classifique uma seca prolongada: fator densidade-independente, porque afeta igualmente populações grandes e pequenas."
+      }
+    ],
+    "recall": {
+      "prompt": "Uma população cresce e depois estabiliza: que curva é essa e por que ela estabiliza? Classifique uma seca prolongada.",
+      "elements": [
+        [
+          "curva em S ou logistica",
+          [
+            "s",
+            "logistica",
+            "sigmoide"
+          ]
+        ],
+        [
+          "estabiliza na capacidade de suporte",
+          [
+            "capacidade de suporte",
+            "resistencia",
+            "meio"
+          ]
+        ],
+        [
+          "a seca e densidade-independente",
+          [
+            "independente",
+            "seca",
+            "densidade"
           ]
         ]
       ]
@@ -216,6 +1533,936 @@
   },
   {
     "subject": "Biologia",
+    "topic": "Embriologia Animal",
+    "sections": [
+      {
+        "title": "Da fecundação à gástrula",
+        "content": "Após a fecundação, o zigoto sofre clivagens sucessivas, formando a mórula, uma massa compacta de células, e depois a blástula, com cavidade interna. Na gastrulação surgem os folhetos embrionários e o arquêntero, futuro tubo digestório. É nessa etapa que se define o plano corporal básico do animal."
+      },
+      {
+        "title": "Folhetos embrionários",
+        "content": "A ectoderme origina epiderme e sistema nervoso; a mesoderme forma músculos, esqueleto, sistema circulatório, gônadas e rins; a endoderme dá origem ao revestimento do tubo digestório e a glândulas anexas, como fígado e pâncreas, além do epitélio respiratório. Saber essa correspondência resolve boa parte das questões do tópico."
+      },
+      {
+        "title": "Anexos embrionários",
+        "content": "Âmnio protege o embrião em meio líquido; cório faz trocas e, nos mamíferos, contribui para a placenta; saco vitelínico armazena reservas ou participa da formação de células sanguíneas; alantoide acumula excretas e auxilia trocas gasosas. Sua presença é o que permitiu a reprodução independente da água nos amniotas."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Trocar a origem dos órgãos entre folhetos é o erro mais frequente, especialmente colocar o sistema nervoso na mesoderme, quando ele vem da ectoderme. Outro deslize é confundir mórula com blástula, distinguidas pela presença da cavidade. E supor que todos os animais têm três folhetos, quando cnidários são diblásticos."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "De qual folheto embrionário vêm o cérebro, o coração e o fígado? Responda antes de conferir: cérebro da ectoderme, coração da mesoderme e fígado da endoderme. Agora diga qual anexo permite acumular excretas no ovo dos répteis e aves: o alantoide."
+      }
+    ],
+    "recall": {
+      "prompt": "Diga a origem embrionária do cérebro, do coração e do fígado, e a função do âmnio.",
+      "elements": [
+        [
+          "cerebro da ectoderme",
+          [
+            "ectoderme",
+            "nervoso"
+          ]
+        ],
+        [
+          "coracao da mesoderme",
+          [
+            "mesoderme",
+            "circulatorio"
+          ]
+        ],
+        [
+          "figado da endoderme e amnio protege em meio liquido",
+          [
+            "endoderme",
+            "amnio",
+            "liquido"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Equinodermos",
+    "sections": [
+      {
+        "title": "Características exclusivas",
+        "content": "Equinodermos são marinhos e apresentam simetria radial pentarradiada no adulto, mas simetria bilateral na larva, o que revela seu parentesco com os cordados. Têm endoesqueleto calcário sob a epiderme e, exclusivamente, o sistema ambulacrário, ou hidrovascular, que movimenta os pés ambulacrais por pressão de água."
+      },
+      {
+        "title": "Sistema ambulacrário",
+        "content": "A água entra pela placa madrepórica, percorre canais e chega às ampolas, que ao se contrair estendem os pés ambulacrais. Esse sistema hidráulico serve para locomoção, fixação e captura de alimento, e é a característica mais cobrada do filo por não existir em nenhum outro grupo animal."
+      },
+      {
+        "title": "Diversidade e regeneração",
+        "content": "O filo inclui estrelas-do-mar, ouriços, pepinos-do-mar, ofiúros e lírios-do-mar. A capacidade de regeneração é notável: uma estrela pode reconstituir braços perdidos e, em alguns casos, um braço com parte do disco central regenera o animal inteiro. Ouriços têm papel ecológico importante no controle de algas em recifes."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Classificar equinodermos como invertebrados distantes dos vertebrados ignora que são deuterostômios, aparentados dos cordados. Outro erro é dizer que a simetria radial vale para todas as fases, quando a larva é bilateral. E confundir endoesqueleto calcário com exoesqueleto, já que ele fica sob a epiderme."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a larva bilateral dos equinodermos é relevante para a classificação? Responda antes de conferir: ela indica ancestralidade comum com os cordados, e o desenvolvimento deuterostômio confirma esse parentesco. Agora explique como a estrela-do-mar se move: por pressão hidráulica no sistema ambulacrário, que estende e retrai os pés ambulacrais."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a larva bilateral dos equinodermos importa para a classificação? Como funciona o sistema ambulacrário?",
+      "elements": [
+        [
+          "indica parentesco com os cordados",
+          [
+            "cordado",
+            "deuterostomio",
+            "parentesco"
+          ]
+        ],
+        [
+          "adulto radial e larva bilateral",
+          [
+            "radial",
+            "bilateral",
+            "larva"
+          ]
+        ],
+        [
+          "pressao de agua move os pes ambulacrais",
+          [
+            "hidraulico",
+            "agua",
+            "pes"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Espécies Invasoras e Controle Biológico",
+    "sections": [
+      {
+        "title": "Por que uma espécie exótica se torna invasora",
+        "content": "Uma espécie introduzida fora de sua área natural pode encontrar ausência de predadores, parasitas e competidores que a controlavam na origem. Livre desses fatores, sua população cresce sem freio e desloca espécies nativas por competição ou predação, alterando a estrutura da comunidade e podendo levar a extinções locais."
+      },
+      {
+        "title": "Impactos e exemplos",
+        "content": "No Brasil, o caramujo-africano, o mexilhão-dourado e o capim-gordura são casos conhecidos, com prejuízos ecológicos e econômicos. Além de deslocar nativas, invasoras podem transmitir doenças, alterar ciclos de nutrientes e mudar o regime de fogo, como ocorre com gramíneas africanas no Cerrado, que aumentam a frequência de incêndios."
+      },
+      {
+        "title": "Controle biológico",
+        "content": "O controle biológico usa inimigos naturais — predadores, parasitoides ou patógenos — para reduzir populações de pragas, diminuindo o uso de agrotóxicos. Ele exige estudo prévio rigoroso, porque o agente introduzido pode se tornar invasor: o sapo-cururu na Austrália, trazido para controlar besouros, virou praga de impacto maior que a original."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Chamar toda espécie exótica de invasora é impreciso: só é invasora aquela que se estabelece e causa dano. Outro erro é apresentar o controle biológico como solução isenta de risco. E supor que a invasora é sempre mais forte, quando na verdade ela é apenas liberada dos controles naturais que enfrentava na origem."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Explique por que uma espécie pode ser inofensiva na sua região e devastadora em outra antes de conferir: na origem, predadores e competidores limitam sua população; no novo ambiente, esses controles não existem e o crescimento é livre. Agora diga um risco do controle biológico: o agente introduzido pode atacar espécies nativas e virar praga."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que uma espécie inofensiva na origem pode devastar outro ecossistema? E qual o risco do controle biológico?",
+      "elements": [
+        [
+          "ausencia de predadores e competidores",
+          [
+            "predador",
+            "competidor",
+            "controle natural"
+          ]
+        ],
+        [
+          "crescimento populacional sem freio",
+          [
+            "cresce",
+            "populacao",
+            "sem"
+          ]
+        ],
+        [
+          "o agente introduzido pode virar praga",
+          [
+            "praga",
+            "nativa",
+            "risco"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Eutrofização",
+    "sections": [
+      {
+        "title": "O processo",
+        "content": "Eutrofização é o enriquecimento excessivo de um corpo d'água por nutrientes, especialmente nitrogênio e fósforo, vindos de esgoto doméstico, fertilizantes agrícolas e detergentes. O excesso de nutrientes provoca a proliferação explosiva de algas e cianobactérias, formando uma camada superficial densa conhecida como floração."
+      },
+      {
+        "title": "A cadeia de consequências",
+        "content": "A camada de algas bloqueia a luz e mata as plantas submersas. Quando as algas morrem, a decomposição pelas bactérias aeróbias consome o oxigênio dissolvido, levando à mortandade de peixes. Em anaerobiose, a decomposição libera gás sulfídrico e metano, com mau cheiro característico, e o corpo d'água perde quase toda a biodiversidade."
+      },
+      {
+        "title": "Prevenção e recuperação",
+        "content": "Prevenir exige tratar esgoto com remoção de nutrientes, controlar o uso de fertilizantes, manter matas ciliares que retêm o escoamento e limitar fosfato em detergentes. A recuperação é lenta e cara, porque o fósforo acumulado no sedimento continua alimentando o processo mesmo depois de cessada a entrada externa."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que a eutrofização aumenta a produtividade e por isso é benéfica ignora o colapso posterior do oxigênio. Outro erro frequente é afirmar que as algas consomem o oxigênio: elas produzem oxigênio enquanto vivas, e são as bactérias decompositoras que o consomem depois. E confundir eutrofização natural, lentíssima, com a artificial, acelerada."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Explique por que a mortandade de peixes ocorre depois da floração, e não durante, antes de conferir: enquanto vivas, as algas produzem oxigênio; quando morrem em massa, a decomposição bacteriana consome todo o oxigênio dissolvido. Agora cite duas medidas preventivas: tratamento de esgoto com remoção de nutrientes e manutenção de mata ciliar."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a mortandade de peixes ocorre depois da floração de algas, e não durante?",
+      "elements": [
+        [
+          "as algas vivas produzem oxigenio",
+          [
+            "produzem",
+            "vivas",
+            "fotossintese"
+          ]
+        ],
+        [
+          "a decomposicao bacteriana consome o oxigenio",
+          [
+            "decomposicao",
+            "bacteria",
+            "consome"
+          ]
+        ],
+        [
+          "excesso de nitrogenio e fosforo inicia o processo",
+          [
+            "fosforo",
+            "nitrogenio",
+            "nutriente"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Evolução Biológica: Construção Histórica",
+    "sections": [
+      {
+        "title": "Lamarck e a primeira teoria",
+        "content": "Lamarck propôs a primeira explicação sistemática para a transformação das espécies, com dois princípios: o uso e desuso, segundo o qual órgãos usados se desenvolvem, e a transmissão dos caracteres adquiridos. A segunda ideia foi refutada, mas o mérito histórico permanece: ele afirmou que as espécies mudam, contra o fixismo dominante."
+      },
+      {
+        "title": "Darwin e a seleção natural",
+        "content": "Darwin, apoiado nas observações da viagem do Beagle e na leitura de Malthus, propôs que nascem mais indivíduos do que o ambiente comporta, que existe variação entre eles e que os mais adaptados deixam mais descendentes. A variação existe antes da pressão ambiental: o ambiente seleciona, não induz. Wallace chegou a conclusão semelhante de forma independente."
+      },
+      {
+        "title": "A teoria sintética",
+        "content": "No século XX, a genética mendeliana e a genética de populações se uniram ao darwinismo, formando a teoria sintética ou neodarwinismo. Ela identifica as fontes de variabilidade — mutação e recombinação — e os mecanismos que alteram frequências gênicas: seleção natural, deriva genética, migração e isolamento reprodutivo."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que a girafa esticou o pescoço e transmitiu isso aos filhotes é a explicação lamarckista, e usá-la como se fosse darwinista é o erro mais frequente. Outro é falar em 'necessidade' ou 'intenção' da espécie. E atribuir à mutação um direcionamento adaptativo, quando ela é aleatória em relação à necessidade."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Explique o pescoço da girafa segundo Lamarck e segundo Darwin antes de conferir: para Lamarck, o esforço alongou o pescoço e a característica foi transmitida; para Darwin, já havia variação de comprimento e os de pescoço maior sobreviveram e reproduziram mais. Agora diga por que bactérias resistentes surgem: a variação já existia, e o antibiótico selecionou quem a possuía."
+      }
+    ],
+    "recall": {
+      "prompt": "Compare a explicação de Lamarck e a de Darwin para o pescoço da girafa e aplique o raciocínio à resistência bacteriana.",
+      "elements": [
+        [
+          "Lamarck usa uso e desuso e caracteres adquiridos",
+          [
+            "uso",
+            "adquirido",
+            "lamarck"
+          ]
+        ],
+        [
+          "Darwin parte de variacao previa",
+          [
+            "variacao",
+            "previa",
+            "antes"
+          ]
+        ],
+        [
+          "o antibiotico seleciona quem ja era resistente",
+          [
+            "seleciona",
+            "ja existia",
+            "resistente"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Fisiologia Vegetal: Hormônios Vegetais",
+    "sections": [
+      {
+        "title": "Auxinas",
+        "content": "As auxinas promovem alongamento celular e são responsáveis pelo fototropismo e pelo geotropismo: elas migram para o lado sombreado, que cresce mais e curva o caule na direção da luz. Também produzem a dominância apical, em que a gema apical inibe as laterais — razão pela qual podar a ponta estimula a ramificação."
+      },
+      {
+        "title": "Giberelinas e citocininas",
+        "content": "Giberelinas promovem alongamento do caule, quebra de dormência de sementes e germinação, e são usadas comercialmente para produzir uvas maiores. Citocininas estimulam a divisão celular, retardam o envelhecimento das folhas e, em equilíbrio com as auxinas, determinam se um tecido em cultura formará raiz ou parte aérea."
+      },
+      {
+        "title": "Etileno e ácido abscísico",
+        "content": "O etileno é gasoso e promove o amadurecimento dos frutos e a abscisão de folhas; por ser volátil, um fruto maduro acelera o amadurecimento dos vizinhos. O ácido abscísico induz dormência e fecha os estômatos em déficit hídrico, atuando como hormônio de resposta ao estresse e contrapondo-se às giberelinas."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que a auxina se acumula no lado iluminado inverte o mecanismo do fototropismo. Outro erro é chamar o etileno de líquido ou atribuir a ele a germinação, que é papel das giberelinas. E supor que hormônio vegetal age como hormônio animal, com glândula específica: nas plantas não há glândulas endócrinas."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que podar a ponta de uma planta a deixa mais ramificada? Responda antes de conferir: a poda remove a gema apical e a fonte de auxina que inibia as gemas laterais, liberando-as para brotar. Agora explique por que uma maçã madura amadurece as bananas próximas: ela libera etileno, hormônio gasoso que difunde e acelera o amadurecimento."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que podar a ponta deixa a planta mais ramificada? E por que um fruto maduro amadurece os vizinhos?",
+      "elements": [
+        [
+          "a poda remove a dominancia apical",
+          [
+            "apical",
+            "dominancia",
+            "gema"
+          ]
+        ],
+        [
+          "a auxina deixa de inibir as gemas laterais",
+          [
+            "auxina",
+            "lateral",
+            "inibia"
+          ]
+        ],
+        [
+          "o etileno gasoso acelera o amadurecimento",
+          [
+            "etileno",
+            "gas",
+            "amadurecimento"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Fisiologia Vegetal: Transporte no Floema",
+    "sections": [
+      {
+        "title": "A hipótese do fluxo por pressão",
+        "content": "O transporte no floema é explicado pela hipótese de Münch: nas fontes, como folhas fotossintetizantes, açúcares são carregados ativamente nos tubos crivados; isso reduz o potencial hídrico e puxa água do xilema, gerando pressão. Nos drenos, os açúcares são descarregados, a água sai e a pressão cai, estabelecendo o fluxo."
+      },
+      {
+        "title": "Fontes e drenos",
+        "content": "Fonte é qualquer órgão que exporta açúcar, tipicamente folhas maduras e órgãos de reserva em mobilização. Dreno é qualquer órgão que consome ou armazena, como frutos, raízes em crescimento e brotos jovens. Como fontes e drenos mudam ao longo do ciclo, o mesmo órgão pode inverter o papel, e o fluxo pode mudar de sentido."
+      },
+      {
+        "title": "Diferenças em relação ao xilema",
+        "content": "O xilema transporta água e sais em fluxo unidirecional, por células mortas e sob tensão, sem gasto direto de energia. O floema transporta seiva orgânica em ambos os sentidos, por células vivas e sob pressão positiva, com gasto de ATP no carregamento. Essa comparação é a mais cobrada do tópico."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que o floema conduz sempre para baixo é o erro clássico: o sentido é da fonte para o dreno, e um fruto no alto da planta é dreno. Outro deslize é atribuir tensão ao floema, quando ele funciona sob pressão positiva. E esquecer que o carregamento é ativo e consome energia."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que anelar o caule, removendo um anel de casca, mata a árvore lentamente? Responda antes de conferir: o anelamento retira o floema, interrompendo o envio de açúcares às raízes, que acabam morrendo por falta de nutrientes, enquanto o xilema ainda leva água por algum tempo. Agora diga o que é fonte e o que é dreno num pé de tomate frutificando: as folhas são fonte e os frutos são dreno."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que anelar o caule mata a árvore lentamente? Explique fonte e dreno.",
+      "elements": [
+        [
+          "o anelamento remove o floema",
+          [
+            "floema",
+            "casca",
+            "remove"
+          ]
+        ],
+        [
+          "as raizes ficam sem acucar",
+          [
+            "raiz",
+            "acucar",
+            "nutriente"
+          ]
+        ],
+        [
+          "fonte exporta e dreno consome ou armazena",
+          [
+            "fonte",
+            "dreno",
+            "folha"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Fisiologia da Coordenação Nervosa I",
+    "sections": [
+      {
+        "title": "Neurônio e impulso",
+        "content": "O neurônio tem dendritos, que recebem estímulos, corpo celular e axônio, que conduz o impulso. O potencial de repouso é mantido pela bomba de sódio e potássio, com interior negativo. O estímulo suficiente abre canais de sódio, gerando o potencial de ação, que se propaga ao longo da membrana obedecendo à lei do tudo ou nada."
+      },
+      {
+        "title": "Bainha de mielina",
+        "content": "A bainha de mielina, produzida por células da glia, isola o axônio e deixa espaços chamados nódulos de Ranvier. O impulso salta de nódulo em nódulo, na condução saltatória, o que aumenta muito a velocidade. Doenças desmielinizantes, como a esclerose múltipla, comprometem justamente essa condução rápida."
+      },
+      {
+        "title": "Sinapse",
+        "content": "Na sinapse química, o impulso chega ao terminal, o cálcio entra e vesículas liberam neurotransmissores na fenda, que se ligam a receptores do neurônio seguinte. O sinal é unidirecional, e a resposta pode ser excitatória ou inibitória. Muitos fármacos e drogas agem exatamente nessa etapa, alterando liberação ou recaptação."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que estímulo mais forte gera impulso mais forte contraria a lei do tudo ou nada: o que muda é a frequência dos impulsos, não a amplitude. Outro deslize é imaginar que o impulso atravessa a fenda sináptica eletricamente na maioria dos casos. E confundir a direção da sinapse, que é sempre do axônio para o neurônio seguinte."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Como o corpo distingue um toque leve de um toque intenso, se vale a lei do tudo ou nada? Responda antes de conferir: pela frequência dos potenciais de ação e pelo número de neurônios recrutados, não pela intensidade de cada impulso. Agora explique a função da mielina: acelerar a condução por meio da propagação saltatória entre os nódulos."
+      }
+    ],
+    "recall": {
+      "prompt": "Se vale a lei do tudo ou nada, como se distingue um estímulo intenso de um leve? Qual a função da mielina?",
+      "elements": [
+        [
+          "pela frequencia dos impulsos",
+          [
+            "frequencia",
+            "numero",
+            "mais impulsos"
+          ]
+        ],
+        [
+          "e pelo numero de neuronios recrutados",
+          [
+            "neuronios",
+            "recrutados",
+            "quantidade"
+          ]
+        ],
+        [
+          "a mielina acelera a conducao saltatoria",
+          [
+            "mielina",
+            "saltatoria",
+            "velocidade"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Fisiologia da Digestão",
+    "sections": [
+      {
+        "title": "O trajeto e as enzimas",
+        "content": "A digestão começa na boca, com a amilase salivar agindo sobre o amido; segue no estômago, onde a pepsina, ativada pelo pH ácido, digere proteínas; e se completa no intestino delgado, com enzimas pancreáticas e intestinais atuando em pH alcalino sobre carboidratos, proteínas e lipídios. Cada enzima tem pH ótimo específico."
+      },
+      {
+        "title": "Bile e absorção",
+        "content": "A bile, produzida no fígado e armazenada na vesícula, não contém enzimas: ela emulsifica as gorduras, quebrando-as em gotículas menores e aumentando a superfície de ação da lipase. A absorção ocorre principalmente no intestino delgado, cujas vilosidades e microvilosidades ampliam enormemente a área de contato."
+      },
+      {
+        "title": "Intestino grosso e regulação",
+        "content": "No intestino grosso ocorre a absorção de água e sais e a ação da microbiota, que produz vitaminas K e do complexo B. A regulação é hormonal e nervosa: gastrina estimula a secreção ácida, secretina estimula a liberação de bicarbonato e colecistocinina provoca a contração da vesícula biliar e a liberação de enzimas pancreáticas."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que a bile digere gordura é o erro mais comum: ela apenas emulsifica, e quem digere é a lipase. Outro deslize é imaginar que a pepsina age no intestino, quando ela é inativada pelo pH alcalino. E atribuir ao intestino grosso a absorção de nutrientes, que ocorre sobretudo no delgado."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a retirada da vesícula biliar dificulta digerir refeições gordurosas? Responda antes de conferir: sem o reservatório, a bile chega ao intestino de forma contínua e em menor quantidade por refeição, reduzindo a emulsificação das gorduras. Agora diga por que a amilase salivar para de agir no estômago: o pH ácido a inativa."
+      }
+    ],
+    "recall": {
+      "prompt": "Qual a função da bile e por que a amilase salivar para de agir no estômago?",
+      "elements": [
+        [
+          "a bile emulsifica as gorduras",
+          [
+            "emulsifica",
+            "gordura",
+            "goticulas"
+          ]
+        ],
+        [
+          "a bile nao tem enzimas",
+          [
+            "sem enzima",
+            "lipase",
+            "nao digere"
+          ]
+        ],
+        [
+          "o pH acido inativa a amilase",
+          [
+            "ph",
+            "acido",
+            "inativa"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Fisiologia da Excreção",
+    "sections": [
+      {
+        "title": "Néfron e formação da urina",
+        "content": "O rim é formado por néfrons, e a urina se forma em três etapas: filtração glomerular, que separa do sangue água e pequenas moléculas; reabsorção tubular, que devolve ao sangue glicose, aminoácidos, sais e a maior parte da água; e secreção tubular, que lança nos túbulos substâncias que ainda restavam no sangue."
+      },
+      {
+        "title": "Controle hormonal",
+        "content": "O hormônio antidiurético aumenta a reabsorção de água nos túbulos coletores, concentrando a urina; a aldosterona aumenta a reabsorção de sódio, e com ele a de água, elevando a pressão arterial. Beber muita água inibe o ADH e produz urina abundante e diluída; a desidratação faz o oposto."
+      },
+      {
+        "title": "Excretas nitrogenadas",
+        "content": "Amônia é muito tóxica e exige muita água, sendo eliminada por animais aquáticos. Ureia é menos tóxica e exige água moderada, típica de mamíferos. Ácido úrico é pouco tóxico e quase insolúvel, eliminado em forma pastosa por aves e répteis, o que economiza água e viabiliza o ovo com casca."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que a glicose aparece normalmente na urina é erro: ela é totalmente reabsorvida, e sua presença indica diabetes. Outro deslize é confundir filtração com reabsorção quanto ao sentido do transporte. E trocar a excreta característica de cada grupo, ligando ácido úrico a mamíferos."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que aves excretam ácido úrico? Responda antes de conferir: sendo pouco solúvel e pouco tóxico, ele pode ser acumulado no ovo sem intoxicar o embrião e é eliminado com pouquíssima água, vantagem em ambiente terrestre. Agora explique o efeito de beber muita água: o ADH é inibido, a reabsorção diminui e a urina fica abundante e diluída."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que aves excretam ácido úrico? E o que acontece com a urina quando se bebe muita água?",
+      "elements": [
+        [
+          "acido urico e pouco toxico e economiza agua",
+          [
+            "pouco toxico",
+            "agua",
+            "economia"
+          ]
+        ],
+        [
+          "compativel com o ovo com casca",
+          [
+            "ovo",
+            "casca",
+            "embriao"
+          ]
+        ],
+        [
+          "o ADH e inibido e a urina fica diluida",
+          [
+            "adh",
+            "diluida",
+            "abundante"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Fisiologia da Respiração",
+    "sections": [
+      {
+        "title": "Ventilação e trocas",
+        "content": "A ventilação pulmonar depende do diafragma e dos músculos intercostais: ao contraírem, aumentam o volume torácico, a pressão interna cai e o ar entra. A expiração normal é passiva, por relaxamento. As trocas gasosas ocorrem nos alvéolos por difusão simples, seguindo as diferenças de pressão parcial de oxigênio e gás carbônico."
+      },
+      {
+        "title": "Transporte dos gases",
+        "content": "O oxigênio é transportado sobretudo ligado à hemoglobina, formando oxi-hemoglobina. O gás carbônico é transportado principalmente como bicarbonato dissolvido no plasma, e em menor parte ligado à hemoglobina e dissolvido. Essa diferença explica por que o CO₂ influencia diretamente o pH sanguíneo."
+      },
+      {
+        "title": "Controle respiratório",
+        "content": "O centro respiratório no bulbo monitora principalmente a concentração de CO₂ e o pH do sangue, e não a de oxigênio. É por isso que prender a respiração gera urgência crescente de respirar: o acúmulo de CO₂ acidifica o sangue e dispara o estímulo, mesmo que ainda haja oxigênio disponível."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que a respiração é controlada pela falta de oxigênio é o erro conceitual mais comum: o estímulo principal é o excesso de CO₂. Outro deslize é confundir ventilação, que é mecânica, com respiração celular, que ocorre na mitocôndria. E dizer que os pulmões têm músculos próprios que os expandem."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que hiperventilar antes de mergulhar é perigoso? Responda antes de conferir: reduz o CO₂ e atrasa o estímulo para respirar, de modo que a pessoa pode desmaiar por falta de oxigênio antes de sentir vontade de voltar à superfície. Agora diga em que forma o CO₂ é principalmente transportado: como bicarbonato no plasma."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que hiperventilar antes de mergulhar é perigoso? E como o CO₂ é transportado no sangue?",
+      "elements": [
+        [
+          "reduz o CO2 e atrasa o estimulo",
+          [
+            "co2",
+            "estimulo",
+            "atrasa"
+          ]
+        ],
+        [
+          "risco de desmaio por falta de oxigenio",
+          [
+            "desmaio",
+            "oxigenio",
+            "perde"
+          ]
+        ],
+        [
+          "transportado como bicarbonato",
+          [
+            "bicarbonato",
+            "plasma"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Fisiologia da Sustentação e da Locomoção",
+    "sections": [
+      {
+        "title": "Tipos de esqueleto",
+        "content": "Existem três soluções: esqueleto hidrostático, como em minhocas e cnidários, baseado em fluido sob pressão; exoesqueleto, como em artrópodes, rígido e externo, que exige mudas; e endoesqueleto, interno, como em equinodermos e vertebrados, que cresce com o animal e permite grande porte sem trocas periódicas."
+      },
+      {
+        "title": "Músculos e articulações",
+        "content": "O movimento resulta da contração muscular puxando ossos que funcionam como alavancas, articulados entre si. Os músculos trabalham em pares antagônicos, como bíceps e tríceps, porque só produzem força ao contrair, nunca ao empurrar. Tendões ligam músculo a osso e ligamentos ligam osso a osso."
+      },
+      {
+        "title": "Contração muscular",
+        "content": "A contração ocorre pelo deslizamento dos filamentos de actina sobre os de miosina, num processo que depende de cálcio e consome ATP. O impulso nervoso libera cálcio do retículo sarcoplasmático, expondo os sítios de ligação. A rigidez cadavérica se explica pela falta de ATP para desfazer as pontes formadas."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que o músculo empurra o osso é erro: ele apenas traciona ao encurtar. Outro deslize é confundir tendão com ligamento. E imaginar que o exoesqueleto é vantajoso em todos os aspectos, quando ele limita o tamanho e exige mudas que deixam o animal vulnerável."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que músculos trabalham em pares antagônicos? Responda antes de conferir: como só geram força ao contrair, é preciso um músculo para flexionar e outro para estender a mesma articulação. Agora explique a rigidez cadavérica: sem ATP, as pontes entre actina e miosina não se desfazem e o músculo permanece contraído."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que os músculos funcionam em pares antagônicos? E o que explica a rigidez cadavérica?",
+      "elements": [
+        [
+          "o musculo so traciona ao contrair",
+          [
+            "contrai",
+            "traciona",
+            "puxa"
+          ]
+        ],
+        [
+          "e preciso um flexor e um extensor",
+          [
+            "flexor",
+            "extensor",
+            "antagonista"
+          ]
+        ],
+        [
+          "falta de ATP mantem as pontes de actina e miosina",
+          [
+            "atp",
+            "actina",
+            "miosina"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Fungos",
+    "sections": [
+      {
+        "title": "Características gerais",
+        "content": "Fungos são eucariontes heterotróficos com parede celular de quitina e nutrição por absorção: liberam enzimas no substrato e absorvem os nutrientes digeridos externamente. O corpo é formado por hifas que constituem o micélio, e a reserva energética é glicogênio, como nos animais, e não amido, como nos vegetais."
+      },
+      {
+        "title": "Reprodução e diversidade",
+        "content": "Reproduzem-se de forma assexuada por esporos, brotamento e fragmentação, e sexuadamente com fusão de hifas. O grupo inclui leveduras unicelulares, bolores e cogumelos. As leveduras realizam fermentação alcoólica, base da produção de pão, cerveja e vinho, e são modelo clássico de estudo em biologia celular."
+      },
+      {
+        "title": "Relações ecológicas",
+        "content": "Fungos são decompositores essenciais, reciclando matéria orgânica junto com as bactérias. Formam micorrizas com raízes de plantas, ampliando muito a absorção de água e minerais em troca de açúcares, e liquens com algas ou cianobactérias, associação pioneira em ambientes hostis. Alguns são parasitas, causando micoses e doenças em lavouras."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Classificar fungo como vegetal por ser fixo e ter parede celular é o erro conceitual mais comum: ele não faz fotossíntese e sua parede é de quitina. Outro deslize é dizer que fungos digerem internamente. E confundir micorriza, que é mutualismo com raiz, com micose, que é parasitismo em animais."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que os fungos não são classificados como plantas? Responda antes de conferir: são heterotróficos, têm parede de quitina e armazenam glicogênio, enquanto plantas são autotróficas, com parede de celulose e reserva de amido. Agora explique a vantagem da micorriza para a planta: aumenta a superfície de absorção de água e nutrientes minerais."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que fungos não são plantas? E qual a vantagem da micorriza para a planta?",
+      "elements": [
+        [
+          "sao heterotrofos por absorcao",
+          [
+            "heterotrofo",
+            "absorcao",
+            "fotossintese"
+          ]
+        ],
+        [
+          "parede de quitina e reserva de glicogenio",
+          [
+            "quitina",
+            "glicogenio"
+          ]
+        ],
+        [
+          "a micorriza amplia a absorcao de agua e minerais",
+          [
+            "absorcao",
+            "agua",
+            "mineral"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Herança Sexual",
+    "sections": [
+      {
+        "title": "Determinação do sexo e herança ligada ao X",
+        "content": "Na espécie humana, o sistema é XY: mulheres XX e homens XY. Como o cromossomo Y é pequeno, muitos genes do X não têm par no homem, que é hemizigoto. Por isso características recessivas ligadas ao X, como daltonismo e hemofilia, se manifestam muito mais em homens, bastando um único alelo alterado."
+      },
+      {
+        "title": "Padrão nos heredogramas",
+        "content": "Numa herança recessiva ligada ao X, homens afetados costumam ter mãe portadora, e todas as filhas de um homem afetado são portadoras obrigatórias, pois recebem dele o único X. A doença raramente aparece em mulheres, exigindo pai afetado e mãe ao menos portadora. Reconhecer esse padrão é o que identifica o tipo de herança no heredograma."
+      },
+      {
+        "title": "Herança restrita e influenciada pelo sexo",
+        "content": "A herança restrita ao sexo envolve genes do Y, transmitidos apenas de pai para filho, como a hipertricose auricular. A herança influenciada pelo sexo ocorre em autossomos, mas o mesmo genótipo se expressa de forma diferente em cada sexo, como na calvície hereditária, dominante em homens e recessiva em mulheres."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Chamar toda herança que difere entre os sexos de ligada ao sexo confunde três categorias distintas. Outro erro é dizer que o pai transmite o daltonismo ao filho homem: ele transmite o Y ao filho, então o X vem sempre da mãe. E esquecer que a mulher precisa de dois alelos para manifestar a condição recessiva."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Um homem daltônico e uma mulher normal não portadora terão filhos daltônicos? Responda antes de conferir: nenhum filho será daltônico, mas todas as filhas serão portadoras, porque recebem o X alterado do pai. Agora explique por que o daltonismo é mais comum em homens: eles têm um único X, e um só alelo alterado já manifesta a condição."
+      }
+    ],
+    "recall": {
+      "prompt": "Um homem daltônico com mulher normal não portadora: como ficam filhos e filhas? Por que a condição é mais comum em homens?",
+      "elements": [
+        [
+          "nenhum filho afetado",
+          [
+            "nenhum",
+            "filhos",
+            "normais"
+          ]
+        ],
+        [
+          "todas as filhas portadoras",
+          [
+            "filhas",
+            "portadoras",
+            "todas"
+          ]
+        ],
+        [
+          "o homem tem um unico X",
+          [
+            "um X",
+            "hemizigoto",
+            "unico"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Histologia e Morfologia Vegetal",
+    "sections": [
+      {
+        "title": "Tecidos meristemáticos",
+        "content": "Os meristemas são formados por células indiferenciadas capazes de se dividir. Os apicais promovem o crescimento em comprimento, na ponta de raízes e caules; os laterais, câmbio e felogênio, promovem o crescimento em espessura, presente sobretudo em eudicotiledôneas e gimnospermas, o que explica os anéis de crescimento das árvores."
+      },
+      {
+        "title": "Tecidos de revestimento e sustentação",
+        "content": "A epiderme reveste os órgãos jovens e apresenta estômatos, tricomas e cutícula; a periderme a substitui nos órgãos que engrossam. A sustentação vem do colênquima, formado por células vivas e flexíveis em partes jovens, e do esclerênquima, com células mortas e paredes lignificadas, que dá rigidez definitiva."
+      },
+      {
+        "title": "Tecidos condutores",
+        "content": "O xilema conduz água e sais minerais da raiz às folhas, é formado por células mortas e resiste a grandes tensões. O floema conduz a seiva elaborada, rica em açúcares, em ambos os sentidos, e é formado por células vivas, os elementos de tubo crivado, auxiliadas pelas células companheiras."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que o floema conduz apenas de cima para baixo é impreciso: o transporte vai das fontes para os drenos, e um dreno pode ser uma raiz ou um fruto em qualquer posição. Outro erro é atribuir células vivas ao xilema maduro. E confundir colênquima com esclerênquima quanto à flexibilidade."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que o xilema pode ser formado por células mortas e o floema não? Responda antes de conferir: o xilema é um sistema passivo de tubos sob tensão, enquanto o floema exige gasto de energia para carregar açúcares, o que requer células vivas. Agora diga qual tecido produz os anéis de crescimento: o câmbio, meristema lateral."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que o xilema pode ter células mortas e o floema não? Que tecido forma os anéis de crescimento?",
+      "elements": [
+        [
+          "o xilema e um sistema passivo sob tensao",
+          [
+            "passivo",
+            "tensao",
+            "tubo"
+          ]
+        ],
+        [
+          "o floema exige energia e celulas vivas",
+          [
+            "energia",
+            "vivas",
+            "carregamento"
+          ]
+        ],
+        [
+          "o cambio produz os aneis de crescimento",
+          [
+            "cambio",
+            "lateral",
+            "aneis"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Introdução aos Cordados e os Peixes",
+    "sections": [
+      {
+        "title": "Características dos cordados",
+        "content": "Todo cordado apresenta, em alguma fase da vida, quatro características: notocorda, tubo nervoso dorsal oco, fendas faringianas e cauda pós-anal. Nos vertebrados, a notocorda é substituída pela coluna vertebral, e as fendas faringianas dão origem a brânquias ou, nos tetrápodes, a estruturas da região da cabeça e do pescoço."
+      },
+      {
+        "title": "Peixes cartilaginosos e ósseos",
+        "content": "Os condrictes, como tubarões e raias, têm esqueleto cartilaginoso, escamas placoides, ausência de bexiga natatória e fendas branquiais expostas. Os osteíctes têm esqueleto ósseo, opérculo cobrindo as brânquias e bexiga natatória, que ajusta a flutuabilidade. Ambos são pecilotérmicos e têm circulação simples e completa."
+      },
+      {
+        "title": "Osmorregulação",
+        "content": "Peixes marinhos ósseos perdem água por osmose e bebem água do mar, excretando sal pelas brânquias e produzindo pouca urina concentrada. Os de água doce ganham água e produzem muita urina diluída, absorvendo sais ativamente. Os tubarões retêm ureia para elevar a concentração interna e reduzir a perda de água."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que o tubarão tem opérculo é erro: as fendas branquiais são expostas. Outro deslize é chamar a circulação dos peixes de dupla, quando é simples: o sangue passa uma única vez pelo coração a cada volta completa. E confundir as estratégias osmorregulatórias de água doce e marinha."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que um peixe de água doce produz muita urina diluída? Responda antes de conferir: o meio é hipotônico em relação ao corpo, então ele ganha água por osmose e precisa eliminá-la, retendo sais. Agora cite duas características que todo cordado apresenta em alguma fase: notocorda e tubo nervoso dorsal oco."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que peixes de água doce produzem urina abundante e diluída? Cite duas características exclusivas dos cordados.",
+      "elements": [
+        [
+          "o meio e hipotonico e a agua entra",
+          [
+            "hipotonico",
+            "entra",
+            "osmose"
+          ]
+        ],
+        [
+          "urina abundante com retencao de sais",
+          [
+            "urina",
+            "sais",
+            "diluida"
+          ]
+        ],
+        [
+          "notocorda e tubo nervoso dorsal",
+          [
+            "notocorda",
+            "tubo nervoso",
+            "fendas"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Introdução à Ecologia",
+    "sections": [
+      {
+        "title": "Níveis de organização",
+        "content": "A ecologia estuda as relações entre os seres vivos e o ambiente, organizadas em níveis: população reúne indivíduos da mesma espécie numa área; comunidade reúne populações diferentes; ecossistema soma a comunidade ao meio físico; e biosfera engloba todos os ecossistemas. Nomear corretamente o nível é o primeiro passo em qualquer questão."
+      },
+      {
+        "title": "Cadeias e teias alimentares",
+        "content": "Produtores fixam energia por fotossíntese ou quimiossíntese; consumidores obtêm energia de outros organismos; decompositores reciclam a matéria orgânica. Cadeia é uma sequência linear, teia é o conjunto de cadeias interligadas. Nível trófico é a posição na cadeia, e o mesmo organismo pode ocupar níveis diferentes em cadeias distintas."
+      },
+      {
+        "title": "Fluxo de energia e pirâmides",
+        "content": "A energia entra pelos produtores e se dissipa ao longo dos níveis, com cerca de 10% de transferência entre um nível e o seguinte, o que limita o comprimento das cadeias. O fluxo de energia é unidirecional, enquanto a matéria é reciclada. As pirâmides de energia nunca se invertem, mas as de número e de biomassa podem."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Chamar decompositores de consumidores primários é erro de nível trófico. Outro é dizer que a energia é reciclada no ecossistema, quando ela se dissipa como calor e precisa ser reposta pelo Sol. E confundir hábitat, que é o endereço, com nicho ecológico, que é o conjunto de papéis e exigências da espécie."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Numa cadeia com 10.000 kcal nos produtores, estime a energia disponível ao consumidor terciário antes de conferir: cerca de 10 kcal, após três transferências de aproximadamente 10% cada. Agora explique por que a pirâmide de energia não se inverte: cada nível recebe menos energia do que o anterior, sem exceção."
+      }
+    ],
+    "recall": {
+      "prompt": "Com 10.000 kcal nos produtores, quanta energia chega ao consumidor terciário? Por que a pirâmide de energia não se inverte?",
+      "elements": [
+        [
+          "cerca de 10 quilocalorias",
+          [
+            "10",
+            "dez"
+          ]
+        ],
+        [
+          "cerca de 10 por cento por nivel",
+          [
+            "10",
+            "transferencia",
+            "nivel"
+          ]
+        ],
+        [
+          "a energia se dissipa e nao e reciclada",
+          [
+            "dissipa",
+            "calor",
+            "unidirecional"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Biologia",
     "topic": "Introdução à Genética",
     "sections": [
       {
@@ -239,6 +2486,61 @@
         "content": "Dois indivíduos com fenótipo dominante têm uma criança de fenótipo recessivo. Qual deve ser o genótipo dos pais no modelo de dominância completa? Ambos precisam ser Aa, pois a criança aa recebeu um alelo recessivo de cada um. Mostre os quatro resultados possíveis do cruzamento para justificar a conclusão."
       }
     ]
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Ligação Gênica",
+    "sections": [
+      {
+        "title": "Genes no mesmo cromossomo",
+        "content": "Quando dois genes estão no mesmo cromossomo, eles tendem a ser herdados juntos, violando a segregação independente. Esse conjunto é chamado de linkage. A consequência prática é que o di-híbrido não produz quatro tipos de gametas em igual proporção: os gametas parentais aparecem em maior número que os recombinantes."
+      },
+      {
+        "title": "Permutação e recombinantes",
+        "content": "O crossing-over na prófase I troca trechos entre cromossomos homólogos e gera os gametas recombinantes. Quanto maior a distância entre dois genes, maior a chance de ocorrer permutação entre eles, e portanto maior a taxa de recombinação. Essa relação é a base para construir mapas genéticos."
+      },
+      {
+        "title": "Mapeamento",
+        "content": "A taxa de recombinação, expressa em porcentagem, é usada como medida de distância: 1% de recombinantes equivale a uma unidade de mapa, ou centimorgan. Com três genes, comparam-se as taxas duas a duas para determinar a ordem no cromossomo, técnica que reconstrói a posição relativa dos genes sem observá-los diretamente."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Somar todos os descendentes em vez de apenas os recombinantes ao calcular a taxa é o erro numérico mais comum: divide-se recombinantes pelo total. Outro é supor que genes ligados nunca se separam, quando a permutação os separa com frequência proporcional à distância. E confundir arranjo cis com trans ao montar o cruzamento."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Num cruzamento-teste, de 1000 descendentes, 100 foram recombinantes. Calcule a distância entre os genes antes de conferir: 100/1000 = 10%, ou seja, 10 centimorgans. Agora diga o que significaria uma taxa de 50%: os genes se comportam como se estivessem em cromossomos diferentes, por estarem muito distantes."
+      }
+    ],
+    "recall": {
+      "prompt": "De 1000 descendentes, 100 são recombinantes: qual a distância entre os genes? O que significa 50% de recombinação?",
+      "elements": [
+        [
+          "distancia de 10 centimorgans",
+          [
+            "10",
+            "cm",
+            "por cento"
+          ]
+        ],
+        [
+          "a taxa mede a distancia",
+          [
+            "distancia",
+            "mapa",
+            "proporcional"
+          ]
+        ],
+        [
+          "50 por cento equivale a segregacao independente",
+          [
+            "50",
+            "independente",
+            "cromossomos diferentes"
+          ]
+        ]
+      ]
+    }
   },
   {
     "subject": "Biologia",
@@ -321,6 +2623,665 @@
   },
   {
     "subject": "Biologia",
+    "topic": "Moluscos",
+    "sections": [
+      {
+        "title": "Características gerais",
+        "content": "Moluscos têm corpo mole, geralmente dividido em cabeça, pé e massa visceral, envolvido pelo manto, que secreta a concha calcária quando presente. São celomados, com celoma reduzido, e a maioria tem sistema circulatório aberto, exceto os cefalópodes, cuja circulação fechada sustenta o metabolismo mais ativo do grupo."
+      },
+      {
+        "title": "As três classes principais",
+        "content": "Gastrópodes incluem caramujos e lesmas, com pé ventral e rádula para raspar alimento. Bivalves, como ostras e mexilhões, são filtradores, sem cabeça diferenciada nem rádula. Cefalópodes, como polvos e lulas, têm pé transformado em tentáculos, sistema nervoso complexo e o comportamento mais elaborado entre os invertebrados."
+      },
+      {
+        "title": "Importância ecológica e econômica",
+        "content": "Moluscos são recurso alimentar importante e indicadores de qualidade ambiental, já que os bivalves filtradores acumulam poluentes. Alguns são hospedeiros intermediários de parasitas, como o caramujo da esquistossomose. E o mexilhão-dourado é exemplo notório de espécie invasora que entope tubulações e desloca espécies nativas."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que todo molusco tem concha ignora lesmas e polvos. Outro erro é atribuir rádula aos bivalves, que são filtradores e não a possuem. E generalizar a circulação aberta para todo o filo, esquecendo os cefalópodes, cuja circulação fechada é justamente o que sustenta seu nível de atividade."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que o polvo é o molusco de circulação fechada? Responda antes de conferir: seu estilo de vida ativo, com natação rápida e caça, exige transporte eficiente de oxigênio, o que a circulação fechada proporciona. Agora explique por que ostras acumulam poluentes: como filtradoras, processam grandes volumes de água e retêm partículas e contaminantes."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que os cefalópodes têm circulação fechada? E por que bivalves acumulam poluentes?",
+      "elements": [
+        [
+          "vida ativa exige transporte eficiente",
+          [
+            "ativo",
+            "oxigenio",
+            "eficiente"
+          ]
+        ],
+        [
+          "circulacao fechada nos cefalopodes",
+          [
+            "fechada",
+            "polvo",
+            "lula"
+          ]
+        ],
+        [
+          "os bivalves sao filtradores",
+          [
+            "filtra",
+            "agua",
+            "retem"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Morfofisiologia Vegetal: Caules e Folhas",
+    "sections": [
+      {
+        "title": "Funções e tipos de caule",
+        "content": "O caule sustenta folhas, flores e frutos e conduz as seivas. Além do tipo aéreo comum, há caules subterrâneos como o rizoma da bananeira, o tubérculo da batata-inglesa e o bulbo da cebola, todos com função de reserva. Reconhecer que a batata-inglesa é caule e a batata-doce é raiz é distinção clássica de prova."
+      },
+      {
+        "title": "A folha e seus tecidos",
+        "content": "A folha é o principal órgão fotossintetizante. Sua estrutura inclui epiderme com cutícula, parênquima paliçádico rico em cloroplastos, parênquima lacunoso com espaços para circulação de gases, e nervuras com xilema e floema. Os estômatos, em geral mais numerosos na face inferior, regulam trocas gasosas e transpiração."
+      },
+      {
+        "title": "Adaptações",
+        "content": "Folhas modificadas cumprem funções diversas: espinhos de cacto reduzem a perda de água, gavinhas permitem fixação, brácteas coloridas atraem polinizadores. Plantas de ambiente seco têm cutícula espessa e estômatos protegidos em criptas; plantas aquáticas flutuantes têm estômatos na face superior, exceção que costuma ser cobrada."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que o espinho do cacto é folha e o da roseira também é erro: o do cacto é folha modificada, o da roseira é acúleo, projeção da epiderme. Outro deslize é situar os estômatos na face superior em plantas terrestres comuns. E classificar a batata-inglesa como raiz."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a maioria das plantas terrestres tem mais estômatos na face inferior? Responda antes de conferir: assim reduz a exposição direta ao sol e a perda de água por transpiração, mantendo as trocas gasosas. Agora diga qual é a exceção e por quê: plantas flutuantes, cuja face inferior está na água, têm estômatos na face superior."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que os estômatos ficam na face inferior das folhas? Qual a exceção conhecida?",
+      "elements": [
+        [
+          "reduz a perda de agua por transpiracao",
+          [
+            "agua",
+            "transpiracao",
+            "sol"
+          ]
+        ],
+        [
+          "mantendo as trocas gasosas",
+          [
+            "trocas",
+            "gases",
+            "co2"
+          ]
+        ],
+        [
+          "plantas flutuantes tem estomatos na face superior",
+          [
+            "flutuante",
+            "superior",
+            "aquatica"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Mutações Cromossômicas e Gametogênese",
+    "sections": [
+      {
+        "title": "Tipos de mutação cromossômica",
+        "content": "As alterações podem ser estruturais — deleção, duplicação, inversão e translocação — ou numéricas. As numéricas se dividem em euploidias, que alteram conjuntos inteiros, como a triploidia, e aneuploidias, que alteram cromossomos isolados, como a trissomia do 21, resultante de não disjunção durante a meiose."
+      },
+      {
+        "title": "Gametogênese",
+        "content": "Na espermatogênese, cada célula precursora origina quatro espermatozoides funcionais, e o processo é contínuo a partir da puberdade. Na ovulogênese, cada precursora origina um único óvulo funcional e corpúsculos polares, e o processo começa na vida intrauterina, ficando interrompido até a ovulação. Essa diferença explica a relação entre idade materna e aneuploidias."
+      },
+      {
+        "title": "Síndromes e cariótipo",
+        "content": "O cariótipo permite diagnosticar aneuploidias: 47,XX+21 na síndrome de Down, 45,X na de Turner e 47,XXY na de Klinefelter. Ler o cariótipo é contar o total de cromossomos e identificar os sexuais, informação suficiente para nomear a síndrome e explicar sua origem na não disjunção meiótica."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Chamar a síndrome de Down de doença hereditária é impreciso: na maior parte dos casos ela resulta de não disjunção, não de herança. Outro erro é confundir euploidia com aneuploidia. E supor que a espermatogênese e a ovulogênese produzem o mesmo número de gametas funcionais."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Explique a origem cromossômica da síndrome de Down antes de conferir: uma não disjunção na meiose gera gameta com dois cromossomos 21, e a fecundação resulta em três cópias, totalizando 47 cromossomos. Agora diga quantos gametas funcionais saem de uma célula na espermatogênese e na ovulogênese: quatro e um, respectivamente."
+      }
+    ],
+    "recall": {
+      "prompt": "Explique a origem cromossômica da síndrome de Down e compare o número de gametas funcionais na espermatogênese e na ovulogênese.",
+      "elements": [
+        [
+          "nao disjuncao na meiose",
+          [
+            "nao disjuncao",
+            "meiose",
+            "separacao"
+          ]
+        ],
+        [
+          "trissomia do 21 com 47 cromossomos",
+          [
+            "47",
+            "21",
+            "trissomia"
+          ]
+        ],
+        [
+          "quatro espermatozoides e um ovulo",
+          [
+            "quatro",
+            "um",
+            "funcionais"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Mutações Gênicas",
+    "sections": [
+      {
+        "title": "Alterações na sequência",
+        "content": "Mutações gênicas são alterações na sequência de bases do DNA. A substituição troca uma base por outra e pode ser silenciosa, quando o aminoácido não muda por causa da degeneração do código; de sentido trocado, quando altera o aminoácido; ou sem sentido, quando cria um códon de parada e interrompe a proteína."
+      },
+      {
+        "title": "Inserções e deleções",
+        "content": "Inserir ou remover bases em número não múltiplo de três desloca a janela de leitura, alterando todos os códons seguintes. Essas mutações de mudança de matriz costumam ter efeito muito mais grave que substituições, porque a proteína resultante é completamente diferente a partir do ponto da alteração."
+      },
+      {
+        "title": "Causas e consequências",
+        "content": "Mutações ocorrem espontaneamente por erro de replicação e são aumentadas por agentes mutagênicos como radiação ultravioleta, raios X e certas substâncias químicas. Em células somáticas podem originar câncer, mas não são transmitidas; apenas as que ocorrem em células germinativas passam aos descendentes e alimentam a variabilidade da evolução."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que toda mutação é prejudicial é erro: muitas são neutras e algumas são vantajosas, e é justamente isso que permite a seleção natural atuar. Outro deslize é achar que mutação somática é hereditária. E confundir mutação gênica com cromossômica, que altera estrutura ou número de cromossomos."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a inserção de uma base costuma ser mais grave que a substituição de uma base? Responda antes de conferir: ela desloca a janela de leitura e altera todos os códons seguintes, enquanto a substituição afeta no máximo um aminoácido. Agora explique por que uma substituição pode não ter efeito algum: o código é degenerado, e vários códons codificam o mesmo aminoácido."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que uma inserção costuma ser mais grave que uma substituição? E por que uma substituição pode não ter efeito?",
+      "elements": [
+        [
+          "a insercao desloca a janela de leitura",
+          [
+            "janela",
+            "matriz",
+            "desloca"
+          ]
+        ],
+        [
+          "altera todos os codons seguintes",
+          [
+            "codons",
+            "seguintes",
+            "todos"
+          ]
+        ],
+        [
+          "o codigo e degenerado",
+          [
+            "degenerado",
+            "mesmo aminoacido",
+            "silenciosa"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Núcleo Celular",
+    "sections": [
+      {
+        "title": "Envoltório e conteúdo",
+        "content": "O núcleo é delimitado pela carioteca, uma dupla membrana com poros que controlam o trânsito de moléculas entre núcleo e citoplasma. Dentro há o nucleoplasma, a cromatina — DNA associado a proteínas histonas — e o nucléolo, região onde se produzem os RNAs ribossômicos e se montam as subunidades dos ribossomos."
+      },
+      {
+        "title": "Cromatina e cromossomos",
+        "content": "A cromatina se apresenta como eucromatina, mais descondensada e ativa na transcrição, e heterocromatina, condensada e pouco ativa. Durante a divisão, a cromatina se condensa em cromossomos visíveis, cada um com centrômero e braços. O cariótipo é o conjunto de cromossomos da espécie, com 46 na espécie humana."
+      },
+      {
+        "title": "O núcleo como centro de controle",
+        "content": "É no núcleo que ocorre a replicação do DNA e a transcrição em RNA, que depois migra para o citoplasma. Experimentos clássicos com a alga Acetabularia mostraram que o núcleo determina a forma do organismo, e a enucleação de células demonstra que elas perdem a capacidade de renovar suas proteínas e morrem."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que o nucléolo produz proteínas confunde: ele produz RNA ribossômico e monta subunidades, e a síntese proteica ocorre no citoplasma. Outro erro é falar em cromossomos em células que não estão se dividindo, quando o correto é cromatina. E supor que procariontes têm núcleo, quando têm apenas nucleoide."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que uma hemácia madura humana não sintetiza novas proteínas? Responda antes de conferir: ela perde o núcleo durante a maturação, e sem núcleo não há transcrição de novos RNAs mensageiros. Agora diga onde se formam os ribossomos e onde eles atuam: são montados no nucléolo e atuam no citoplasma."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a hemácia madura humana não sintetiza novas proteínas? E qual a função do nucléolo?",
+      "elements": [
+        [
+          "a hemacia perde o nucleo",
+          [
+            "nucleo",
+            "perde",
+            "anucleada"
+          ]
+        ],
+        [
+          "sem nucleo nao ha transcricao",
+          [
+            "transcricao",
+            "rna",
+            "mensageiro"
+          ]
+        ],
+        [
+          "o nucleolo monta ribossomos",
+          [
+            "nucleolo",
+            "ribossomo",
+            "rrna"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Origem da Vida e as Primeiras Células",
+    "sections": [
+      {
+        "title": "Das ideias antigas à hipótese atual",
+        "content": "A abiogênese, que supunha vida surgindo espontaneamente da matéria bruta, foi derrubada por Redi e definitivamente por Pasteur, com os frascos de pescoço de cisne: o caldo fervido só era contaminado quando exposto ao ar com micro-organismos. Ficou estabelecida a biogênese, mas ela apenas empurra a pergunta: como surgiu a primeira célula?"
+      },
+      {
+        "title": "A hipótese de Oparin e Haldane",
+        "content": "A hipótese mais aceita propõe que a atmosfera primitiva, sem oxigênio livre e rica em metano, amônia, hidrogênio e vapor d'água, permitiu a formação de moléculas orgânicas simples sob descargas elétricas e radiação. Miller e Urey reproduziram essas condições em laboratório e obtiveram aminoácidos, mostrando que a etapa química é plausível."
+      },
+      {
+        "title": "Dos coacervados às primeiras células",
+        "content": "Moléculas orgânicas teriam se agregado em coacervados ou microesferas, delimitando um meio interno. A hipótese do mundo do RNA sugere que essa molécula, capaz de armazenar informação e catalisar reações, veio antes do DNA. As primeiras células seriam procariontes anaeróbias heterotróficas, e a fotossíntese posterior liberou o oxigênio que mudou a atmosfera."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que Pasteur provou como a vida surgiu é erro: ele mostrou que ela não surge espontaneamente hoje, o que é diferente. Outro deslize é imaginar oxigênio na atmosfera primitiva, quando ele destruiria as moléculas orgânicas formadas. E confundir a hipótese heterotrófica com a autotrófica, que propõe quimiossíntese como primeira via."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Explique por que o experimento de Miller é considerado apoio à hipótese de Oparin antes de conferir: ele reproduziu a atmosfera primitiva suposta e obteve aminoácidos a partir de compostos inorgânicos, mostrando viabilidade da etapa química. Agora diga por que a ausência de O₂ era necessária: o oxigênio é altamente reativo e oxidaria as moléculas orgânicas recém-formadas."
+      }
+    ],
+    "recall": {
+      "prompt": "Explique o que o experimento de Miller demonstrou e por que a atmosfera primitiva não podia ter oxigênio livre.",
+      "elements": [
+        [
+          "obteve moleculas organicas de inorganicas",
+          [
+            "aminoacido",
+            "organica",
+            "obteve"
+          ]
+        ],
+        [
+          "reproduziu a atmosfera primitiva suposta",
+          [
+            "atmosfera",
+            "primitiva",
+            "descarga"
+          ]
+        ],
+        [
+          "o oxigenio oxidaria as moleculas formadas",
+          [
+            "oxida",
+            "reativo",
+            "destruiria"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Plantas Terrestres I: Briófitas e Pteridófitas",
+    "sections": [
+      {
+        "title": "Briófitas",
+        "content": "Briófitas, como os musgos, são plantas avasculares: não têm xilema nem floema, o que limita seu tamanho e as prende a ambientes úmidos e sombreados. Absorvem água por difusão em toda a superfície, e os rizoides servem apenas para fixação. A fase dominante é o gametófito, e o esporófito vive dependente dele."
+      },
+      {
+        "title": "Pteridófitas",
+        "content": "Pteridófitas, como samambaias e avencas, foram as primeiras plantas vasculares: possuem xilema e floema, o que permitiu maior porte e melhor distribuição de água. A fase dominante passa a ser o esporófito, e o gametófito, chamado protalo, é pequeno, independente e de vida curta."
+      },
+      {
+        "title": "A dependência da água",
+        "content": "Nos dois grupos, a fecundação depende de água: o anterozoide precisa nadar até a oosfera. É esse traço que os mantém restritos a ambientes úmidos, mesmo com a conquista dos vasos condutores. A independência da água só será alcançada nas gimnospermas, com o tubo polínico."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que os rizoides das briófitas absorvem água como raízes é impreciso: a absorção é por toda a superfície. Outro erro é atribuir sementes às pteridófitas, que se reproduzem por esporos. E inverter a fase dominante, que é o gametófito nas briófitas e o esporófito nas pteridófitas."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que musgos são pequenos e vivem em locais úmidos? Responda antes de conferir: por não terem vasos condutores, dependem de difusão para transportar água, o que limita o porte, e a fecundação exige água para o deslocamento do anterozoide. Agora diga qual é a novidade evolutiva das pteridófitas: os vasos condutores."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que musgos são pequenos e restritos a locais úmidos? Qual a novidade evolutiva das pteridófitas?",
+      "elements": [
+        [
+          "ausencia de vasos condutores",
+          [
+            "vaso",
+            "avascular",
+            "difusao"
+          ]
+        ],
+        [
+          "a fecundacao depende de agua",
+          [
+            "agua",
+            "anterozoide",
+            "nada"
+          ]
+        ],
+        [
+          "as pteridofitas tem xilema e floema",
+          [
+            "xilema",
+            "floema",
+            "vascular"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Plantas Terrestres II: Gimnospermas e Angiospermas",
+    "sections": [
+      {
+        "title": "Gimnospermas",
+        "content": "Gimnospermas, como pinheiros e araucárias, produzem sementes nuas, sem fruto, geralmente em estróbilos. A grande novidade é o tubo polínico, que conduz os gametas masculinos até a oosfera sem necessidade de água, e a semente, que protege o embrião e armazena reservas, permitindo dispersão e dormência."
+      },
+      {
+        "title": "Angiospermas",
+        "content": "Angiospermas têm flor e fruto, além de semente. A flor favorece a polinização por animais, aumentando a eficiência reprodutiva, e o fruto protege a semente e auxilia sua dispersão. Apresentam ainda dupla fecundação: um núcleo espermático forma o zigoto e o outro origina o endosperma triploide, tecido de reserva do embrião."
+      },
+      {
+        "title": "Monocotiledôneas e eudicotiledôneas",
+        "content": "As angiospermas se dividem em dois grandes grupos. Monocotiledôneas têm um cotilédone, folhas com nervuras paralelas, feixes vasculares dispersos e flores com peças em múltiplos de três. Eudicotiledôneas têm dois cotilédones, nervuras reticuladas, feixes organizados em anel e peças florais em múltiplos de quatro ou cinco."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que gimnospermas não têm sementes é erro: elas têm sementes, mas não têm frutos. Outro deslize é confundir fruto com pseudofruto, como no caju, em que a parte carnosa vem do pedúnculo. E atribuir a dupla fecundação às gimnospermas, quando ela é exclusiva das angiospermas."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Qual a diferença essencial entre gimnospermas e angiospermas? Responda antes de conferir: as angiospermas têm flor e fruto, e a semente fica protegida no interior do fruto, enquanto nas gimnospermas a semente é nua. Agora explique a dupla fecundação: um gameta forma o zigoto diploide e o outro origina o endosperma triploide."
+      }
+    ],
+    "recall": {
+      "prompt": "Qual a diferença essencial entre gimnospermas e angiospermas? Explique a dupla fecundação.",
+      "elements": [
+        [
+          "angiospermas tem flor e fruto",
+          [
+            "flor",
+            "fruto"
+          ]
+        ],
+        [
+          "gimnospermas tem semente nua",
+          [
+            "nua",
+            "sem fruto",
+            "semente"
+          ]
+        ],
+        [
+          "um gameta forma o zigoto e outro o endosperma",
+          [
+            "zigoto",
+            "endosperma",
+            "triploide"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Poluição do Ar",
+    "sections": [
+      {
+        "title": "Principais poluentes e fontes",
+        "content": "Os poluentes atmosféricos mais relevantes são o material particulado, os óxidos de nitrogênio e de enxofre, o monóxido de carbono, os compostos orgânicos voláteis e o ozônio troposférico. As fontes principais são a queima de combustíveis fósseis em veículos e indústrias, as queimadas e certos processos industriais específicos."
+      },
+      {
+        "title": "Chuva ácida e inversão térmica",
+        "content": "Óxidos de enxofre e nitrogênio reagem com a água atmosférica e formam ácidos sulfúrico e nítrico, produzindo a chuva ácida, que corrói monumentos, acidifica solos e lagos e prejudica florestas. A inversão térmica ocorre quando uma camada de ar quente aprisiona o ar frio junto ao solo, impedindo a dispersão dos poluentes e agravando a poluição em dias frios e secos."
+      },
+      {
+        "title": "Camada de ozônio e ozônio troposférico",
+        "content": "O ozônio estratosférico protege a superfície da radiação ultravioleta e foi destruído por clorofluorcarbonos, cujo uso foi reduzido pelo Protocolo de Montreal. Já o ozônio troposférico, formado por reações entre poluentes sob luz solar, é irritante respiratório. É o mesmo gás com papéis opostos conforme a altitude em que se encontra."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Confundir buraco na camada de ozônio com efeito estufa é o erro mais frequente: são fenômenos distintos, com causas e consequências diferentes. Outro é tratar o ozônio como sempre benéfico. E supor que a inversão térmica produz poluentes, quando ela apenas impede a dispersão dos que já existem."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Explique por que a poluição piora em São Paulo no inverno antes de conferir: a inversão térmica é mais frequente, e a camada de ar quente acima impede a dispersão vertical dos poluentes emitidos junto ao solo. Agora diferencie os dois ozônios: o estratosférico protege da radiação, o troposférico é poluente e irrita as vias respiratórias."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a inversão térmica agrava a poluição? E qual a diferença entre ozônio estratosférico e troposférico?",
+      "elements": [
+        [
+          "o ar quente impede a dispersao",
+          [
+            "dispersao",
+            "quente",
+            "impede"
+          ]
+        ],
+        [
+          "os poluentes se concentram junto ao solo",
+          [
+            "solo",
+            "concentra",
+            "acumula"
+          ]
+        ],
+        [
+          "um protege da radiacao e o outro e poluente",
+          [
+            "estratosferico",
+            "troposferico",
+            "radiacao"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Poluição: Aquecimento Global, POPs e Biorremediação",
+    "sections": [
+      {
+        "title": "Efeito estufa e aquecimento",
+        "content": "O efeito estufa é natural: gases como vapor d'água, CO₂, metano e óxido nitroso retêm parte da radiação infravermelha e mantêm a Terra habitável. O problema é sua intensificação pelas emissões humanas, que eleva a temperatura média, altera regimes de chuva, eleva o nível do mar e aumenta a frequência de eventos extremos."
+      },
+      {
+        "title": "Poluentes orgânicos persistentes",
+        "content": "Os POPs são compostos que resistem à degradação, viajam longas distâncias pela atmosfera e se acumulam em tecidos gordurosos. Incluem agrotóxicos organoclorados, dioxinas e bifenilas policloradas. Foram alvo da Convenção de Estocolmo, que restringiu produção e uso, mas persistem no ambiente por décadas após o banimento."
+      },
+      {
+        "title": "Biorremediação",
+        "content": "Biorremediação é o uso de organismos para degradar ou imobilizar poluentes: bactérias que consomem hidrocarbonetos em vazamentos de petróleo, fungos que degradam compostos aromáticos e plantas que absorvem metais pesados do solo, técnica chamada fitorremediação. É mais barata que métodos físico-químicos, mas exige tempo e condições adequadas."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que o efeito estufa deve ser eliminado é erro: sem ele a temperatura média seria muito abaixo de zero. Outro deslize é apresentar a biorremediação como solução imediata e universal. E confundir aquecimento global com destruição da camada de ozônio, que têm causas químicas distintas."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Explique por que combater o efeito estufa é uma formulação imprecisa antes de conferir: o efeito estufa é natural e necessário; o que se combate é sua intensificação por emissões humanas. Agora cite uma vantagem e uma limitação da biorremediação: é de baixo custo e pouco invasiva, mas é lenta e depende de condições ambientais favoráveis."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que dizer que se deve combater o efeito estufa é impreciso? Cite uma vantagem e uma limitação da biorremediação.",
+      "elements": [
+        [
+          "o efeito estufa e natural e necessario",
+          [
+            "natural",
+            "necessario",
+            "habitavel"
+          ]
+        ],
+        [
+          "o problema e a intensificacao",
+          [
+            "intensificacao",
+            "emissoes",
+            "aumento"
+          ]
+        ],
+        [
+          "biorremediacao e barata mas lenta",
+          [
+            "barata",
+            "lenta",
+            "tempo"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Poríferos e Cnidários",
+    "sections": [
+      {
+        "title": "Poríferos",
+        "content": "As esponjas são os animais mais simples: não têm tecidos verdadeiros, órgãos nem sistema nervoso. A água entra pelos poros, circula pelo átrio impulsionada pelos coanócitos flagelados e sai pelo ósculo, num sistema de filtração. A digestão é exclusivamente intracelular, e a regeneração é notável, permitindo reconstituição a partir de fragmentos."
+      },
+      {
+        "title": "Cnidários",
+        "content": "Os cnidários já têm tecidos verdadeiros, simetria radial e duas camadas embrionárias, sendo diblásticos. Possuem células urticantes, os cnidócitos, com o nematocisto que injeta toxina para captura e defesa. A digestão é extra e intracelular na cavidade gastrovascular, que tem abertura única servindo de boca e ânus."
+      },
+      {
+        "title": "Formas e ciclos",
+        "content": "Cnidários apresentam duas formas corporais: o pólipo, fixo, e a medusa, livre-natante. Muitas espécies alternam as duas no ciclo, com fase assexuada e fase sexuada, fenômeno chamado metagênese. Os corais são pólipos coloniais que constroem esqueleto calcário e mantêm algas simbiontes, as zooxantelas, das quais dependem para se nutrir."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que a esponja tem digestão extracelular é erro: nela a digestão é apenas intracelular. Outro deslize é atribuir sistema nervoso aos poríferos, quando ele aparece só a partir dos cnidários, em rede difusa. E confundir cnidócito, a célula, com nematocisto, a organela urticante dentro dela."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que o branqueamento de corais os leva à morte? Responda antes de conferir: o aquecimento expulsa as zooxantelas simbiontes, e sem elas o coral perde a principal fonte de nutrientes. Agora explique a função dos coanócitos: seus flagelos criam a corrente de água e eles capturam as partículas alimentares por fagocitose."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que o branqueamento mata os corais? E qual a função dos coanócitos nas esponjas?",
+      "elements": [
+        [
+          "a perda das zooxantelas simbiontes",
+          [
+            "zooxantela",
+            "simbionte",
+            "alga"
+          ]
+        ],
+        [
+          "o coral perde a fonte de nutrientes",
+          [
+            "nutriente",
+            "alimento",
+            "fome"
+          ]
+        ],
+        [
+          "os coanocitos geram a corrente e capturam alimento",
+          [
+            "coanocito",
+            "flagelo",
+            "filtra"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Procariotos",
+    "sections": [
+      {
+        "title": "Organização celular",
+        "content": "Procariontes não têm núcleo delimitado nem organelas membranosas: o material genético é um DNA circular no nucleoide, e podem existir plasmídeos com genes acessórios. Têm ribossomos menores que os eucarióticos, parede celular de peptidoglicano nas bactérias e, em muitas espécies, cápsula, flagelos e fímbrias."
+      },
+      {
+        "title": "Diversidade metabólica",
+        "content": "O grupo é metabolicamente o mais versátil: há autótrofos fotossintetizantes, como as cianobactérias, e quimiossintetizantes, que oxidam compostos inorgânicos; heterótrofos decompositores e parasitas; aeróbios estritos, anaeróbios estritos e facultativos. Essa versatilidade explica sua presença em praticamente todos os ambientes da Terra."
+      },
+      {
+        "title": "Reprodução e variabilidade",
+        "content": "A reprodução é assexuada por bipartição, rápida e sem variabilidade. A variação vem da mutação e de três processos de recombinação: transformação, com captação de DNA do meio; conjugação, com transferência por ponte citoplasmática; e transdução, mediada por bacteriófagos. É assim que a resistência a antibióticos se dissemina."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que bactérias não têm ribossomos é erro: têm, e justamente por serem diferentes dos nossos servem de alvo a antibióticos. Outro deslize é chamar conjugação de reprodução sexuada, quando ela apenas transfere material genético sem gerar novo indivíduo. E confundir cianobactéria com alga, quando é procarionte."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que alguns antibióticos matam bactérias sem afetar nossas células? Responda antes de conferir: eles atacam estruturas exclusivas dos procariontes, como a parede de peptidoglicano e os ribossomos bacterianos, ausentes ou diferentes nas células humanas. Agora explique como a resistência se espalha rapidamente: por mutação somada à conjugação e transferência de plasmídeos."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que antibióticos atacam bactérias sem destruir nossas células? Como a resistência se dissemina?",
+      "elements": [
+        [
+          "atacam estruturas exclusivas dos procariontes",
+          [
+            "parede",
+            "ribossomo",
+            "peptidoglicano"
+          ]
+        ],
+        [
+          "nossas celulas nao tem essas estruturas",
+          [
+            "humana",
+            "ausente",
+            "diferente"
+          ]
+        ],
+        [
+          "mutacao e transferencia de plasmideos",
+          [
+            "plasmideo",
+            "conjugacao",
+            "mutacao"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Biologia",
     "topic": "Proteínas: Enzimas",
     "sections": [
       {
@@ -368,6 +3329,116 @@
           [
             "especifico",
             "substrato"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Protozoários e Protozooses",
+    "sections": [
+      {
+        "title": "Diversidade dos protozoários",
+        "content": "Protozoários são eucariontes unicelulares heterotróficos, tradicionalmente agrupados pelo tipo de locomoção: rizópodes com pseudópodes, flagelados com flagelos, ciliados com cílios e esporozoários sem estrutura locomotora na fase adulta. Essa classificação é prática, mas não reflete integralmente as relações filogenéticas atuais."
+      },
+      {
+        "title": "Doenças e transmissão",
+        "content": "Doença de Chagas, causada por Trypanosoma cruzi, é transmitida pelas fezes do barbeiro; a malária, por Plasmodium, pela picada do mosquito Anopheles; a leishmaniose, pelo flebotomíneo; a amebíase e a giardíase, por água e alimentos contaminados; e a toxoplasmose, por carne malcozida e fezes de gato."
+      },
+      {
+        "title": "Prevenção",
+        "content": "Como as vias de transmissão são diferentes, as medidas também são: melhoria de habitação e combate ao barbeiro na Chagas; telas, repelentes e controle de criadouros na malária; saneamento e higiene alimentar na amebíase e na giardíase. Identificar o vetor ou a via é o passo que define a prevenção correta em qualquer questão."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que o barbeiro transmite pela picada é impreciso: a transmissão ocorre pelas fezes depositadas junto à picada, que entram ao coçar. Outro erro é confundir o vetor da malária com o da dengue, ambos mosquitos mas de gêneros diferentes. E tratar protozoário como bactéria, esquecendo que são eucariontes."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Explique a transmissão da doença de Chagas antes de conferir: o barbeiro pica e defeca próximo à lesão; ao coçar, a pessoa introduz o protozoário presente nas fezes. Agora diga por que o combate à malária foca no mosquito: o Anopheles é o vetor obrigatório, e sem ele o ciclo do Plasmodium não se completa."
+      }
+    ],
+    "recall": {
+      "prompt": "Explique a transmissão da doença de Chagas e diga por que o combate à malária foca no mosquito.",
+      "elements": [
+        [
+          "as fezes do barbeiro transmitem",
+          [
+            "fezes",
+            "barbeiro",
+            "cocar"
+          ]
+        ],
+        [
+          "nao e a picada em si",
+          [
+            "picada",
+            "nao",
+            "lesao"
+          ]
+        ],
+        [
+          "o Anopheles e vetor obrigatorio da malaria",
+          [
+            "anopheles",
+            "vetor",
+            "ciclo"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Reprodução Humana e Métodos Contraceptivos",
+    "sections": [
+      {
+        "title": "Anatomia e gametogênese",
+        "content": "Nos testículos, a espermatogênese ocorre nos túbulos seminíferos, e as células de Leydig produzem testosterona. Nos ovários, os folículos abrigam os ovócitos, e a ovulação libera um deles por ciclo. A fecundação ocorre na tuba uterina, e o embrião se implanta no endométrio, previamente preparado pelos hormônios."
+      },
+      {
+        "title": "Ciclo menstrual",
+        "content": "O ciclo tem fase folicular, com FSH estimulando o folículo e elevando o estrogênio; ovulação, disparada pelo pico de LH; e fase lútea, com o corpo lúteo produzindo progesterona, que mantém o endométrio. Sem fecundação, o corpo lúteo regride, os hormônios caem e ocorre a menstruação, reiniciando o ciclo."
+      },
+      {
+        "title": "Métodos contraceptivos",
+        "content": "Os métodos se agrupam por mecanismo: de barreira, como camisinha e diafragma; hormonais, como pílula e implante, que inibem a ovulação; intrauterinos, como o DIU, que dificultam a fecundação e a implantação; comportamentais, de baixa eficácia; e cirúrgicos, como laqueadura e vasectomia. Apenas os de barreira previnem infecções sexualmente transmissíveis."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que a pílula protege contra ISTs é o erro de saúde mais grave do tópico: só o preservativo protege. Outro deslize é situar a fecundação no útero, quando ela ocorre na tuba uterina. E confundir o pico de LH, que dispara a ovulação, com o de progesterona, que vem depois."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a pílula anticoncepcional impede a gravidez? Responda antes de conferir: os hormônios mantêm níveis que inibem FSH e LH por feedback negativo, impedindo a ovulação. Agora diga qual método é o único que também previne infecções sexualmente transmissíveis: o preservativo, por ser barreira física."
+      }
+    ],
+    "recall": {
+      "prompt": "Como a pílula impede a gravidez e qual método também previne ISTs?",
+      "elements": [
+        [
+          "inibe a ovulacao por feedback negativo",
+          [
+            "ovulacao",
+            "feedback",
+            "inibe"
+          ]
+        ],
+        [
+          "age sobre FSH e LH",
+          [
+            "fsh",
+            "lh",
+            "hipofise"
+          ]
+        ],
+        [
+          "so o preservativo previne ISTs",
+          [
+            "preservativo",
+            "camisinha",
+            "barreira"
           ]
         ]
       ]
@@ -430,6 +3501,275 @@
   },
   {
     "subject": "Biologia",
+    "topic": "Segunda Lei de Mendel",
+    "sections": [
+      {
+        "title": "Segregação independente",
+        "content": "A segunda lei afirma que os fatores de duas ou mais características se separam independentemente na formação dos gametas, desde que estejam em cromossomos diferentes ou muito distantes no mesmo cromossomo. É por isso que um di-híbrido AaBb produz quatro tipos de gametas em igual proporção: AB, Ab, aB e ab."
+      },
+      {
+        "title": "A proporção 9:3:3:1",
+        "content": "O cruzamento entre dois di-híbridos gera a clássica proporção fenotípica 9:3:3:1. Ela pode ser obtida sem quadro de Punnett, aplicando a regra do produto: a chance de ser dominante para as duas características é 3/4 vezes 3/4, igual a 9/16. Esse caminho é mais rápido e menos sujeito a erro que montar dezesseis casas."
+      },
+      {
+        "title": "Cálculo de gametas e genótipos",
+        "content": "O número de tipos de gametas de um indivíduo é 2 elevado ao número de pares heterozigotos: AaBbCc produz oito tipos. Para calcular a probabilidade de um genótipo específico na prole, multiplique as probabilidades de cada característica isoladamente. Essa decomposição transforma cruzamentos complexos numa sequência de problemas simples."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Aplicar a segunda lei a genes no mesmo cromossomo, sem verificar se há ligação, é o erro conceitual central. Outro é somar probabilidades quando o correto é multiplicar, porque os eventos são independentes e simultâneos. E confundir proporção fenotípica com genotípica, que no di-híbrido é bem mais fragmentada."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "No cruzamento AaBb × AaBb, calcule a probabilidade de descendente com os dois fenótipos recessivos antes de conferir: 1/4 vezes 1/4, igual a 1/16. Agora quantos tipos de gametas produz AaBbCC? Apenas dois pares são heterozigotos, então 2² = 4 tipos. Por fim, a proporção fenotípica esperada em AaBb × AaBb é 9:3:3:1."
+      }
+    ],
+    "recall": {
+      "prompt": "No cruzamento AaBb × AaBb, qual a chance de descendente duplo recessivo? Quantos tipos de gametas produz AaBbCC?",
+      "elements": [
+        [
+          "um dezesseis avos",
+          [
+            "1/16",
+            "16"
+          ]
+        ],
+        [
+          "quatro tipos de gametas",
+          [
+            "4",
+            "quatro"
+          ]
+        ],
+        [
+          "multiplicar probabilidades independentes",
+          [
+            "multiplicar",
+            "independente",
+            "produto"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Segunda Lei de Mendel e Interação Gênica",
+    "sections": [
+      {
+        "title": "Quando dois genes afetam a mesma característica",
+        "content": "Interação gênica ocorre quando genes de locos diferentes atuam sobre o mesmo caráter, alterando as proporções esperadas. A crista de galinhas é o exemplo clássico, com quatro fenótipos numa proporção 9:3:3:1 que já não corresponde a duas características separadas, mas a combinações de dois genes sobre uma só."
+      },
+      {
+        "title": "Epistasia",
+        "content": "Na epistasia, um gene inibe a expressão de outro. Na epistasia dominante, basta um alelo dominante do gene epistático para mascarar o outro, gerando proporção 12:3:1; na recessiva, é preciso o par recessivo, e a proporção vira 9:3:4. Reconhecer a proporção alterada é o caminho para identificar o tipo de interação."
+      },
+      {
+        "title": "Herança quantitativa",
+        "content": "Na herança poligênica, vários genes de efeito aditivo determinam características contínuas como cor da pele e altura. Cada alelo aditivo soma um pouco ao fenótipo, e o resultado é uma distribuição em curva, com poucos indivíduos nos extremos. O número de fenótipos é o número de alelos aditivos mais um."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Interpretar toda proporção diferente de 9:3:3:1 como erro de cálculo, em vez de sinal de interação, é o deslize mais comum. Outro é confundir epistasia com dominância, que ocorre entre alelos do mesmo loco. E esquecer que na herança quantitativa o ambiente também influencia o fenótipo final."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Um cruzamento di-híbrido resultou em proporção 9:3:4. Identifique o fenômeno antes de conferir: é epistasia recessiva, em que o par recessivo de um gene mascara a expressão do outro, fundindo duas classes fenotípicas. Agora, numa herança com três pares de genes aditivos, quantos fenótipos existem? Sete, porque há seis alelos aditivos possíveis mais um."
+      }
+    ],
+    "recall": {
+      "prompt": "Um cruzamento di-híbrido deu proporção 9:3:4: que fenômeno explica isso? E quantos fenótipos há com três pares aditivos?",
+      "elements": [
+        [
+          "epistasia recessiva",
+          [
+            "epistasia",
+            "recessiva"
+          ]
+        ],
+        [
+          "um gene mascara o outro",
+          [
+            "mascara",
+            "inibe",
+            "expressao"
+          ]
+        ],
+        [
+          "sete fenotipos",
+          [
+            "sete",
+            "7"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Sistemas Sensoriais: Visão e Audição",
+    "sections": [
+      {
+        "title": "O olho e a formação da imagem",
+        "content": "A luz atravessa a córnea, a pupila e o cristalino, que ajusta o foco pela acomodação, e forma na retina uma imagem real, invertida e menor. Na retina, os cones respondem à cor e exigem boa luminosidade, enquanto os bastonetes captam baixa luminosidade em tons de cinza. O nervo óptico leva o sinal ao cérebro, que interpreta a imagem."
+      },
+      {
+        "title": "Defeitos e correções",
+        "content": "Na miopia, a imagem se forma antes da retina, e a correção é com lente divergente; na hipermetropia, depois da retina, corrigida por lente convergente; no astigmatismo, a curvatura irregular da córnea exige lente cilíndrica; na presbiopia, o cristalino perde elasticidade com a idade e dificulta a visão de perto."
+      },
+      {
+        "title": "A audição",
+        "content": "O som é captado pelo pavilhão, faz vibrar a membrana timpânica e os ossículos martelo, bigorna e estribo, que amplificam a vibração até a cóclea. Ali, células ciliadas convertem a vibração em impulso nervoso. Os canais semicirculares, também no ouvido interno, são responsáveis pelo equilíbrio, e não pela audição."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que a imagem chega ao cérebro invertida e é desvirada por um espelho é impreciso: a inversão é óptica na retina e a interpretação é feita pelo processamento cerebral. Outro deslize é trocar cones com bastonetes. E atribuir o equilíbrio à cóclea, quando ele depende dos canais semicirculares."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que se enxerga em preto e branco no escuro? Responda antes de conferir: em baixa luminosidade só os bastonetes são ativados, e eles não distinguem cores, função que cabe aos cones. Agora diga qual lente corrige a miopia e por quê: a divergente, porque a imagem se forma antes da retina e é preciso afastá-la."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que enxergamos em preto e branco no escuro? Qual lente corrige a miopia?",
+      "elements": [
+        [
+          "so os bastonetes atuam em baixa luz",
+          [
+            "bastonete",
+            "pouca luz",
+            "escuro"
+          ]
+        ],
+        [
+          "os cones distinguem cor e exigem luz",
+          [
+            "cone",
+            "cor",
+            "luminosidade"
+          ]
+        ],
+        [
+          "a miopia se corrige com lente divergente",
+          [
+            "divergente",
+            "miopia",
+            "negativa"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Sucessão Ecológica",
+    "sections": [
+      {
+        "title": "Primária e secundária",
+        "content": "Sucessão ecológica é a substituição gradual de comunidades num mesmo local. A primária ocorre em ambiente sem vida prévia e sem solo, como rocha nua ou dunas recém-formadas, e é lenta porque o solo precisa se formar. A secundária ocorre onde havia comunidade que foi perturbada, como uma área agrícola abandonada, e é mais rápida por já existir solo e banco de sementes."
+      },
+      {
+        "title": "Comunidade pioneira e clímax",
+        "content": "Os primeiros colonizadores, como liquens e musgos, resistem a condições extremas e alteram o ambiente, acumulando matéria orgânica. Seguem-se espécies cada vez mais exigentes até a comunidade clímax, mais estável e diversificada. O clímax não é um estado eterno, e sim um equilíbrio dinâmico, sujeito a novas perturbações."
+      },
+      {
+        "title": "O que muda ao longo do processo",
+        "content": "Ao longo da sucessão, aumentam a biomassa, a diversidade de espécies, a complexidade das teias alimentares e a estabilidade. A produtividade primária bruta cresce, mas a produtividade líquida diminui, porque a respiração da comunidade consome quase toda a produção. No clímax, produção e respiração praticamente se igualam."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que a produtividade líquida é máxima no clímax é o erro clássico: ela é máxima nos estágios intermediários. Outro deslize é chamar de sucessão primária a recuperação de uma área queimada que ainda tem solo. E supor que o clímax é permanente e imutável."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Uma pastagem é abandonada e volta a virar mata. Classifique o processo e descreva as mudanças antes de conferir: é sucessão secundária, e ao longo dela crescem biomassa, diversidade e estabilidade, enquanto a produtividade líquida diminui. Agora diga por que a sucessão sobre rocha nua é mais lenta: é preciso formar solo antes que plantas maiores se estabeleçam."
+      }
+    ],
+    "recall": {
+      "prompt": "Uma pastagem abandonada volta a virar mata: que sucessão é essa e o que acontece com biomassa e produtividade líquida?",
+      "elements": [
+        [
+          "sucessao secundaria",
+          [
+            "secundaria"
+          ]
+        ],
+        [
+          "biomassa e diversidade aumentam",
+          [
+            "biomassa",
+            "diversidade",
+            "aumenta"
+          ]
+        ],
+        [
+          "a produtividade liquida diminui no climax",
+          [
+            "liquida",
+            "diminui",
+            "respiracao"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Traqueófitas: Transpiração e Reposição Rápida de Água",
+    "sections": [
+      {
+        "title": "A teoria da tensão-coesão",
+        "content": "A água sobe da raiz às folhas puxada pela transpiração: a saída de vapor pelos estômatos cria tensão, e a coesão entre moléculas de água, garantida pelas pontes de hidrogênio, transmite essa tensão como uma corda contínua até a raiz. A adesão às paredes do xilema ajuda a sustentar a coluna."
+      },
+      {
+        "title": "Controle estomático",
+        "content": "Os estômatos abrem quando as células-guarda absorvem água e ficam túrgidas, e fecham quando perdem turgor. O fechamento é induzido pelo ácido abscísico em situações de déficit hídrico. Há, portanto, um compromisso permanente: estômato aberto permite entrada de CO₂ para a fotossíntese, mas também perda de água."
+      },
+      {
+        "title": "Pressão radicular e gutação",
+        "content": "Além da transpiração, a raiz gera pressão positiva ao absorver sais ativamente, o que traz água por osmose. Essa pressão radicular é responsável pela gutação, a eliminação de gotas de água líquida pelas bordas das folhas em manhãs úmidas, fenômeno que não deve ser confundido com orvalho, que vem da condensação do ar."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que a planta empurra a água até o topo por pressão radicular é insuficiente para árvores altas: o mecanismo principal é a tensão gerada pela transpiração. Outro deslize é confundir gutação com orvalho. E supor que fechar os estômatos é sempre vantajoso, ignorando que isso interrompe a entrada de CO₂."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que uma planta murcha em dia quente mesmo com solo úmido? Responda antes de conferir: a transpiração supera a absorção, e a perda de água excede a reposição, reduzindo o turgor. Agora explique o custo de fechar os estômatos: economiza água, mas bloqueia a entrada de CO₂ e reduz a fotossíntese."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que uma planta murcha em dia quente mesmo com solo úmido? Qual o custo de fechar os estômatos?",
+      "elements": [
+        [
+          "a transpiracao supera a absorcao",
+          [
+            "transpiracao",
+            "supera",
+            "absorcao"
+          ]
+        ],
+        [
+          "a perda de agua reduz o turgor",
+          [
+            "turgor",
+            "murcha",
+            "agua"
+          ]
+        ],
+        [
+          "fechar reduz a entrada de CO2 e a fotossintese",
+          [
+            "co2",
+            "fotossintese",
+            "reduz"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Biologia",
     "topic": "Vírus",
     "sections": [
       {
@@ -478,6 +3818,59 @@
             "bacteria",
             "parede",
             "ribossomo"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Biologia",
+    "topic": "Ácidos Nucleicos",
+    "sections": [
+      {
+        "title": "DNA e RNA",
+        "content": "Ácidos nucleicos são polímeros de nucleotídeos, cada um com fosfato, açúcar e base nitrogenada. No DNA o açúcar é a desoxirribose, a fita é dupla e as bases são adenina, timina, citosina e guanina. No RNA o açúcar é a ribose, a fita é simples e a timina é substituída pela uracila. O pareamento é sempre A com T ou U, e C com G."
+      },
+      {
+        "title": "Replicação",
+        "content": "A replicação do DNA é semiconservativa: cada fita serve de molde e a molécula-filha conserva uma fita antiga e uma nova, como demonstraram Meselson e Stahl. A DNA polimerase adiciona nucleotídeos e também corrige erros, o que mantém a taxa de mutação baixa. A replicação ocorre antes da divisão celular, na fase S da interfase."
+      },
+      {
+        "title": "Transcrição e tradução",
+        "content": "Na transcrição, o DNA serve de molde para o RNA mensageiro; nos eucariontes, íntrons são removidos por splicing antes de o mensageiro sair do núcleo. Na tradução, o ribossomo lê o mensageiro em códons de três bases, e o RNA transportador traz o aminoácido correspondente. O código genético é degenerado e praticamente universal."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que o RNA tem timina é o erro mais direto do tópico. Outro é chamar a replicação de conservativa, quando é semiconservativa. E confundir transcrição com tradução: a primeira produz RNA no núcleo, a segunda produz proteína no citoplasma, com participação dos três tipos de RNA."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Se uma fita de DNA tem a sequência TAC GGA, escreva a fita complementar e o RNA mensageiro correspondente antes de conferir: a complementar é ATG CCT e o mensageiro transcrito a partir da primeira é AUG CCU. Agora diga quantos aminoácidos esse trecho codifica: dois, porque cada códon tem três bases."
+      }
+    ],
+    "recall": {
+      "prompt": "Da fita de DNA TAC GGA, escreva a fita complementar e o RNA mensageiro, e diga quantos aminoácidos são codificados.",
+      "elements": [
+        [
+          "complementar ATG CCT",
+          [
+            "atg",
+            "cct"
+          ]
+        ],
+        [
+          "mensageiro AUG CCU",
+          [
+            "aug",
+            "ccu"
+          ]
+        ],
+        [
+          "dois aminoacidos porque o codon tem tres bases",
+          [
+            "dois",
+            "codon",
+            "tres"
           ]
         ]
       ]
