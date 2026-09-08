@@ -13530,6 +13530,115 @@
   },
   {
     "subject": "Química",
+    "topic": "Acidez e Basicidade (pKa)",
+    "sections": [
+      {
+        "title": "Força de ácidos e bases",
+        "content": "Quanto mais forte o ácido, mais ele se ioniza e menor é seu pKa. A escala é logarítmica: uma diferença de uma unidade de pKa corresponde a um fator dez na constante de ionização. Comparar pKa é o modo direto de ordenar acidez, e o mesmo raciocínio vale para bases pelo pKb."
+      },
+      {
+        "title": "O que estabiliza a base conjugada",
+        "content": "Um ácido é mais forte quando sua base conjugada é mais estável. A estabilidade aumenta com a eletronegatividade do átomo que carrega a carga, com o tamanho do átomo, com a deslocalização por ressonância e com a presença de grupos retiradores de elétrons próximos. É por isso que o ácido carboxílico é bem mais ácido que o álcool."
+      },
+      {
+        "title": "Comparações em orgânica",
+        "content": "Ácidos carboxílicos são mais ácidos que fenóis, que por sua vez são mais ácidos que álcoois: a carboxila estabiliza a carga por ressonância entre dois oxigênios, o fenol por ressonância no anel e o álcool não tem estabilização. Adicionar cloro na cadeia aumenta a acidez, e o efeito diminui quanto mais distante o cloro estiver."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Achar que pKa maior significa ácido mais forte inverte a escala. Outro deslize é comparar acidez apenas pela presença de hidroxila, sem analisar a estabilização da base conjugada. E esquecer que o efeito indutivo dos grupos retiradores enfraquece com a distância ao grupo ácido."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Ordene etanol, fenol e ácido etanoico por acidez antes de conferir: ácido etanoico é o mais ácido, seguido do fenol, e o etanol é o menos ácido. Agora diga qual é mais ácido, o ácido cloroetanoico ou o etanoico: o clorado, porque o cloro retira densidade eletrônica e estabiliza a base conjugada."
+      }
+    ],
+    "recall": {
+      "prompt": "Ordene etanol, fenol e ácido etanoico por acidez e explique o efeito do cloro na cadeia.",
+      "elements": [
+        [
+          "o acido etanoico e o mais acido",
+          [
+            "acido etanoico",
+            "carboxilico",
+            "mais"
+          ]
+        ],
+        [
+          "o etanol e o menos acido",
+          [
+            "etanol",
+            "menos",
+            "alcool"
+          ]
+        ],
+        [
+          "o cloro retira eletrons e estabiliza a base conjugada",
+          [
+            "cloro",
+            "indutivo",
+            "estabiliza"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Química",
+    "topic": "Aspectos Quantitativos da Eletroquímica e Metalurgia",
+    "sections": [
+      {
+        "title": "As leis de Faraday",
+        "content": "A massa depositada num eletrodo é proporcional à carga que atravessa a célula. A carga é o produto da corrente pelo tempo, e um mol de elétrons corresponde a 96500 coulombs, a constante de Faraday. Com a carga do íon, calcula-se quantos mols de elétrons são necessários por mol de substância depositada."
+      },
+      {
+        "title": "O roteiro de cálculo",
+        "content": "Multiplique corrente por tempo para obter a carga; divida por 96500 para obter mols de elétrons; use a semirreação para converter em mols da substância; e multiplique pela massa molar para obter a massa. Cada etapa tem uma unidade clara, e escrever a semirreação antes de calcular evita o erro mais comum."
+      },
+      {
+        "title": "Metalurgia",
+        "content": "Metais pouco reativos, como ouro e prata, aparecem nativos. Metais intermediários, como ferro e cobre, são obtidos por redução química: no alto-forno, o minério de ferro é reduzido pelo monóxido de carbono gerado a partir do coque. Metais muito reativos exigem eletrólise, como alumínio, sódio e magnésio."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Esquecer a carga do íon na conversão é o erro numérico mais frequente: depositar um mol de cobre a partir de Cu²⁺ exige dois mols de elétrons. Outro deslize é usar tempo em minutos onde a fórmula pede segundos. E supor que todo metal pode ser obtido por redução com carvão."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Uma corrente de 9,65 A passa por 1000 s numa solução de Cu²⁺. Calcule a massa depositada antes de conferir: a carga é 9650 C, ou 0,1 mol de elétrons; como são dois elétrons por cobre, deposita-se 0,05 mol, ou seja, cerca de 3,2 g. Agora diga por que o ferro é obtido no alto-forno e o alumínio não."
+      }
+    ],
+    "recall": {
+      "prompt": "Com 9,65 A por 1000 s numa solução de Cu²⁺, quanta massa se deposita? Por que o alumínio não é obtido em alto-forno?",
+      "elements": [
+        [
+          "cerca de 3,2 gramas",
+          [
+            "3,2",
+            "3.2"
+          ]
+        ],
+        [
+          "dois eletrons por cobre depositado",
+          [
+            "dois",
+            "cu2",
+            "eletrons"
+          ]
+        ],
+        [
+          "o aluminio exige eletrolise por ser muito reativo",
+          [
+            "eletrolise",
+            "reativo",
+            "aluminio"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Química",
     "topic": "Cinética Química",
     "sections": [
       {
@@ -13585,6 +13694,115 @@
   },
   {
     "subject": "Química",
+    "topic": "Combustíveis Fósseis",
+    "sections": [
+      {
+        "title": "Origem e composição",
+        "content": "Petróleo, carvão mineral e gás natural se formaram pela decomposição de matéria orgânica soterrada por milhões de anos, sob pressão e temperatura elevadas e na ausência de oxigênio. São basicamente misturas de hidrocarbonetos, e por isso sua queima produz gás carbônico e água, além de poluentes conforme as impurezas presentes."
+      },
+      {
+        "title": "Refino do petróleo",
+        "content": "O petróleo bruto é separado por destilação fracionada, aproveitando as diferenças de ponto de ebulição: as frações mais leves, como gases e gasolina, saem no topo da torre, e as mais pesadas, como óleos e asfalto, na base. O craqueamento quebra moléculas grandes em menores, aumentando o rendimento em frações mais valiosas."
+      },
+      {
+        "title": "Combustão e impactos",
+        "content": "A combustão completa produz CO₂ e água; a incompleta, por falta de oxigênio, gera monóxido de carbono e fuligem, ambos nocivos. Impurezas de enxofre geram SO₂ e chuva ácida. O caráter não renovável e a emissão de gases de efeito estufa motivam a transição para fontes alternativas, tema recorrente nas provas."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que a combustão incompleta produz apenas menos energia ignora o produto mais perigoso: o monóxido de carbono, inodoro e letal. Outro deslize é confundir craqueamento com destilação. E chamar o gás natural de renovável por ser mais limpo, quando ele continua sendo fóssil."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Escreva a combustão completa do octano e diga o que muda na incompleta antes de conferir: a completa produz CO₂ e H₂O; a incompleta produz CO ou carbono na forma de fuligem, com liberação menor de energia. Agora explique por que a fração de gasolina sai no meio da torre: seu ponto de ebulição é intermediário entre gases e óleos pesados."
+      }
+    ],
+    "recall": {
+      "prompt": "O que diferencia combustão completa de incompleta? E por que a gasolina sai no meio da torre de destilação?",
+      "elements": [
+        [
+          "a completa produz CO2 e agua",
+          [
+            "co2",
+            "agua",
+            "completa"
+          ]
+        ],
+        [
+          "a incompleta produz CO e fuligem",
+          [
+            "co",
+            "fuligem",
+            "monoxido"
+          ]
+        ],
+        [
+          "a separacao segue o ponto de ebulicao",
+          [
+            "ebulicao",
+            "fracionada",
+            "intermediario"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Química",
+    "topic": "Composição da Matéria: Estados Físicos",
+    "sections": [
+      {
+        "title": "Estados e mudanças",
+        "content": "Sólido, líquido e gasoso diferem pela intensidade das interações e pela liberdade das partículas. As mudanças de estado recebem nomes específicos: fusão, vaporização, condensação, solidificação e sublimação. Durante uma mudança de estado em substância pura, a temperatura permanece constante, porque a energia é usada para vencer interações."
+      },
+      {
+        "title": "Substância pura e mistura",
+        "content": "Substância pura tem composição definida e mudanças de estado em temperatura constante. Misturas homogêneas apresentam uma única fase e composição uniforme; heterogêneas, mais de uma fase. Nas misturas comuns, a temperatura varia durante a mudança de estado, o que permite distinguir substância pura de mistura por gráficos de aquecimento."
+      },
+      {
+        "title": "Misturas eutéticas e azeotrópicas",
+        "content": "Há exceções importantes: misturas eutéticas fundem em temperatura constante, como certas ligas metálicas, e misturas azeotrópicas fervem em temperatura constante, como álcool e água a 96%. Reconhecer essas exceções é essencial, porque elas quebram a regra usada para identificar substância pura por gráfico."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Concluir que toda substância que ferve em temperatura constante é pura ignora os azeótropos. Outro deslize é dizer que o calor fornecido durante a fusão aumenta a temperatura, quando ele apenas rompe as interações. E confundir fase com componente: água e gelo são um componente em duas fases."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Uma amostra apresenta patamar durante a fusão mas variação de temperatura durante a ebulição. Classifique antes de conferir: é uma mistura eutética, pura no comportamento de fusão mas mistura de fato. Agora diga quantas fases e quantos componentes há num copo com água e gelo: duas fases e um componente."
+      }
+    ],
+    "recall": {
+      "prompt": "Uma amostra funde em temperatura constante mas ferve com variação: o que é? Quantas fases e componentes há em água com gelo?",
+      "elements": [
+        [
+          "mistura eutetica",
+          [
+            "eutetica",
+            "mistura"
+          ]
+        ],
+        [
+          "patamar na fusao nao garante substancia pura",
+          [
+            "pura",
+            "patamar",
+            "nao garante"
+          ]
+        ],
+        [
+          "duas fases e um componente",
+          [
+            "duas fases",
+            "um componente",
+            "1"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Química",
     "topic": "Cálculos Estequiométricos",
     "sections": [
       {
@@ -13611,6 +13829,494 @@
   },
   {
     "subject": "Química",
+    "topic": "Deslocamento de Equilíbrio",
+    "sections": [
+      {
+        "title": "O princípio de Le Chatelier",
+        "content": "Quando um sistema em equilíbrio sofre uma perturbação, ele se desloca no sentido que minimiza essa perturbação. Aumentar a concentração de um participante desloca o equilíbrio no sentido de consumi-lo; retirar um produto desloca no sentido de repô-lo. É o princípio que organiza todas as previsões do tópico."
+      },
+      {
+        "title": "Pressão e temperatura",
+        "content": "Aumentar a pressão desloca o equilíbrio para o lado com menor número de mols de gás; diminuir, para o lado com mais mols. A temperatura é o único fator que altera a constante de equilíbrio: aquecer favorece o sentido endotérmico e resfriar favorece o exotérmico, o que muda o valor de K."
+      },
+      {
+        "title": "Catalisador e inertes",
+        "content": "O catalisador acelera igualmente os dois sentidos e faz o equilíbrio ser atingido mais rápido, sem deslocá-lo nem mudar K. Gás inerte adicionado a volume constante também não desloca o equilíbrio, porque não altera as pressões parciais dos participantes — dois casos clássicos de pergunta com resposta contraintuitiva."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que o catalisador aumenta o rendimento é o erro mais comum: ele apenas acelera. Outro deslize é aplicar o efeito da pressão a equilíbrios com igual número de mols gasosos dos dois lados, em que não há deslocamento. E supor que qualquer perturbação muda o valor de K, quando só a temperatura o faz."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "No equilíbrio N₂ + 3 H₂ ⇌ 2 NH₃, exotérmico, o que favorece a amônia? Responda antes de conferir: aumentar a pressão, porque o lado dos produtos tem menos mols de gás, e baixar a temperatura, porque a reação direta é exotérmica. Agora diga o efeito de adicionar catalisador: nenhum sobre o rendimento, apenas maior rapidez."
+      }
+    ],
+    "recall": {
+      "prompt": "No equilíbrio N₂ + 3 H₂ ⇌ 2 NH₃ exotérmico, o que aumenta o rendimento de amônia? E o que faz o catalisador?",
+      "elements": [
+        [
+          "aumentar a pressao favorece a amonia",
+          [
+            "pressao",
+            "menos mols",
+            "aumentar"
+          ]
+        ],
+        [
+          "baixar a temperatura favorece o exotermico",
+          [
+            "temperatura",
+            "baixa",
+            "exotermico"
+          ]
+        ],
+        [
+          "o catalisador nao desloca o equilibrio",
+          [
+            "catalisador",
+            "nao desloca",
+            "rapidez"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Química",
+    "topic": "Determinação de Fórmulas Químicas",
+    "sections": [
+      {
+        "title": "Fórmula percentual, mínima e molecular",
+        "content": "A fórmula percentual indica a porcentagem em massa de cada elemento. A fórmula mínima, ou empírica, dá a menor proporção inteira entre os átomos. A molecular indica o número real de átomos e é sempre um múltiplo inteiro da mínima. Conhecer a massa molar é o que permite passar da mínima para a molecular."
+      },
+      {
+        "title": "O roteiro de cálculo",
+        "content": "Partindo das porcentagens, suponha 100 g de amostra, divida a massa de cada elemento pela sua massa molar para obter mols, divida todos pelo menor valor encontrado e, se necessário, multiplique para obter números inteiros. O resultado é a fórmula mínima, e o fator entre a massa molar real e a da mínima dá a molecular."
+      },
+      {
+        "title": "Casos com dados de combustão",
+        "content": "Muitas questões fornecem as massas de CO₂ e H₂O obtidas na combustão. O carbono todo do CO₂ vinha da amostra e o hidrogênio todo da H₂O; o oxigênio da amostra se obtém por diferença entre a massa total e a soma de carbono e hidrogênio. Esse é o roteiro clássico da análise elementar."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Parar na fórmula mínima quando a questão pede a molecular é o erro mais frequente. Outro deslize é arredondar cedo demais e perder a proporção correta. E, na combustão, contar o oxigênio do CO₂ como se viesse da amostra, quando parte dele veio do gás oxigênio usado na queima."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Um composto tem 40% de carbono, 6,7% de hidrogênio e 53,3% de oxigênio, com massa molar 180 g/mol. Determine as fórmulas antes de conferir: em 100 g há 3,33 mol de C, 6,7 de H e 3,33 de O, proporção 1:2:1, logo a mínima é CH₂O, de massa 30. Como 180/30 = 6, a molecular é C₆H₁₂O₆, a glicose."
+      }
+    ],
+    "recall": {
+      "prompt": "De um composto com 40% C, 6,7% H e 53,3% O e massa molar 180, determine a fórmula mínima e a molecular.",
+      "elements": [
+        [
+          "formula minima CH2O",
+          [
+            "ch2o",
+            "1:2:1"
+          ]
+        ],
+        [
+          "formula molecular C6H12O6",
+          [
+            "c6h12o6",
+            "glicose"
+          ]
+        ],
+        [
+          "dividir as massas pelas massas molares",
+          [
+            "mol",
+            "dividir",
+            "proporcao"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Química",
+    "topic": "Dispersões",
+    "sections": [
+      {
+        "title": "Classificação por tamanho",
+        "content": "Dispersões são misturas de uma substância dispersa em outra, classificadas pelo tamanho das partículas. Soluções verdadeiras têm partículas menores que 1 nanômetro e são homogêneas; coloides ficam entre 1 e 1000 nanômetros, com aparência homogênea mas espalhamento de luz; suspensões têm partículas maiores e sedimentam com o tempo."
+      },
+      {
+        "title": "Coloides e efeito Tyndall",
+        "content": "Coloides como leite, gelatina, neblina e maionese espalham a luz que os atravessa, tornando o feixe visível — o efeito Tyndall, que os distingue das soluções verdadeiras. Classificam-se conforme os estados das fases: aerossol, emulsão, espuma, gel e sol, e são estabilizados por agentes emulsificantes."
+      },
+      {
+        "title": "Concentração das soluções",
+        "content": "As formas mais usadas são concentração comum, em gramas por litro; concentração em quantidade de matéria, em mols por litro; título em massa; e partes por milhão para soluções muito diluídas. Na diluição, a quantidade de soluto não muda, o que justifica a relação C₁V₁ = C₂V₂, e na mistura de soluções somam-se as quantidades de soluto."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Confundir diluição com adição de soluto é o erro mais comum: diluir é acrescentar solvente, mantendo a massa do soluto. Outro deslize é aplicar C₁V₁ = C₂V₂ em mistura de soluções diferentes, quando ali se somam soluto e volume separadamente. E classificar leite como solução verdadeira."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Quantos mols de soluto há em 250 mL de solução 0,4 mol/L? Calcule antes de conferir: 0,4·0,25 = 0,1 mol. Agora, ao diluir essa solução para 1 L, qual a nova concentração? Pela relação C₁V₁ = C₂V₂, obtém-se 0,1 mol/L, com a mesma quantidade de soluto num volume maior."
+      }
+    ],
+    "recall": {
+      "prompt": "Quantos mols há em 250 mL de solução 0,4 mol/L e qual a concentração após diluir a 1 L?",
+      "elements": [
+        [
+          "0,1 mol de soluto",
+          [
+            "0,1",
+            "0.1"
+          ]
+        ],
+        [
+          "nova concentracao de 0,1 mol/L",
+          [
+            "0,1",
+            "mol/l"
+          ]
+        ],
+        [
+          "a quantidade de soluto nao muda na diluicao",
+          [
+            "soluto",
+            "nao muda",
+            "diluicao"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Química",
+    "topic": "Efeitos Coligativos",
+    "sections": [
+      {
+        "title": "O que são",
+        "content": "Efeitos coligativos são alterações nas propriedades físicas de um solvente causadas pela presença de soluto não volátil, e dependem apenas do número de partículas dissolvidas, não da natureza delas. São quatro: tonoscopia, ebulioscopia, crioscopia e osmoscopia, todos explicados pela redução da tendência de escape do solvente."
+      },
+      {
+        "title": "Os quatro efeitos",
+        "content": "A tonoscopia é a redução da pressão de vapor; a ebulioscopia é o aumento da temperatura de ebulição; a crioscopia é a diminuição da temperatura de congelamento; e a osmoscopia é o surgimento de pressão osmótica. Adicionar sal à água eleva seu ponto de ebulição e abaixa o de congelamento, ambos por efeito coligativo."
+      },
+      {
+        "title": "Eletrólitos e o fator de van't Hoff",
+        "content": "Solutos iônicos se dissociam e liberam mais partículas que solutos moleculares de mesma quantidade. Um mol de NaCl produz dois mols de íons e o efeito é aproximadamente dobrado; um mol de CaCl₂ produz três. Esse ajuste é feito pelo fator de van't Hoff, e ignorá-lo é o erro mais comum em comparações."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Comparar soluções pela massa de soluto, e não pelo número de partículas, é o erro estrutural do tópico: é a quantidade de partículas que importa. Outro deslize é dizer que o sal faz a água ferver mais rápido, quando ele eleva a temperatura de ebulição. E esquecer a dissociação dos eletrólitos."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Qual solução tem maior temperatura de ebulição: 1 mol de glicose ou 1 mol de NaCl em um litro de água? Responda antes de conferir: a de NaCl, porque se dissocia em dois íons e produz o dobro de partículas. Agora explique por que se espalha sal na neve: ele abaixa a temperatura de congelamento e derrete o gelo."
+      }
+    ],
+    "recall": {
+      "prompt": "Qual eleva mais o ponto de ebulição, 1 mol de glicose ou 1 mol de NaCl? E por que se espalha sal na neve?",
+      "elements": [
+        [
+          "a solucao de NaCl",
+          [
+            "nacl",
+            "sal",
+            "cloreto"
+          ]
+        ],
+        [
+          "porque se dissocia em duas particulas",
+          [
+            "dissocia",
+            "dois",
+            "particulas"
+          ]
+        ],
+        [
+          "o sal abaixa a temperatura de congelamento",
+          [
+            "congelamento",
+            "crioscopia",
+            "abaixa"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Química",
+    "topic": "Eletroquímica de Processos Espontâneos",
+    "sections": [
+      {
+        "title": "A pilha",
+        "content": "Numa pilha, a reação de oxirredução espontânea gera corrente elétrica. O ânodo é onde ocorre oxidação e é o polo negativo; o cátodo é onde ocorre redução e é o polo positivo. Os elétrons percorrem o fio externo do ânodo ao cátodo, e a ponte salina fecha o circuito mantendo a neutralidade das soluções."
+      },
+      {
+        "title": "Potenciais e força eletromotriz",
+        "content": "Cada semirreação tem um potencial padrão de redução tabelado. A ddp da pilha é a diferença entre o potencial do cátodo e o do ânodo, e um valor positivo confirma a espontaneidade. Quem tem maior potencial de redução sofre redução; quem tem menor, oxida — critério que decide os papéis dos eletrodos."
+      },
+      {
+        "title": "Corrosão e proteção",
+        "content": "A corrosão do ferro é uma pilha espontânea em que o metal oxida na presença de oxigênio e umidade. A proteção catódica usa um metal mais facilmente oxidável, como zinco ou magnésio, ligado à peça: ele funciona como ânodo de sacrifício e oxida no lugar do ferro. É o princípio da galvanização."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Associar o ânodo ao polo positivo é o erro mais frequente: na pilha, ele é o polo negativo. Outro deslize é somar potenciais em vez de subtrair. E supor que o metal usado na proteção catódica deve ser mais nobre, quando ele precisa ser justamente menos nobre para oxidar primeiro."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Numa pilha de zinco e cobre, com potenciais de redução −0,76 V e +0,34 V, indique os eletrodos e a ddp antes de conferir: o zinco, de menor potencial, oxida no ânodo; o cobre reduz no cátodo; e a ddp é 0,34 − (−0,76) = 1,10 V. Agora diga por que o zinco protege o ferro galvanizado: ele oxida preferencialmente, como ânodo de sacrifício."
+      }
+    ],
+    "recall": {
+      "prompt": "Numa pilha de zinco e cobre, quem oxida e qual a ddp? Por que o zinco protege o ferro?",
+      "elements": [
+        [
+          "o zinco oxida no anodo",
+          [
+            "zinco",
+            "anodo",
+            "oxida"
+          ]
+        ],
+        [
+          "ddp de 1,10 V",
+          [
+            "1,10",
+            "1,1"
+          ]
+        ],
+        [
+          "o zinco e anodo de sacrificio",
+          [
+            "sacrificio",
+            "protecao",
+            "oxida antes"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Química",
+    "topic": "Eletroquímica de Processos não Espontâneos",
+    "sections": [
+      {
+        "title": "Eletrólise",
+        "content": "Na eletrólise, uma fonte externa força uma reação não espontânea. Os polos se mantêm com os mesmos processos químicos — oxidação no ânodo e redução no cátodo —, mas a polaridade se inverte em relação à pilha: o ânodo é o polo positivo e o cátodo, o negativo, porque é a fonte que impõe as cargas."
+      },
+      {
+        "title": "Ígnea e aquosa",
+        "content": "Na eletrólise ígnea, a substância fundida é o único material presente, e os íons do próprio composto sofrem descarga: é assim que se obtém alumínio e sódio metálicos. Na eletrólise aquosa, a água compete com os íons, e existem filas de descarga que indicam quais espécies reagem preferencialmente em cada eletrodo."
+      },
+      {
+        "title": "Aplicações industriais",
+        "content": "A eletrólise produz metais reativos que não podem ser obtidos por redução química simples, refina cobre a alto grau de pureza, produz cloro e soda cáustica a partir de salmoura e faz galvanoplastia, recobrindo peças com camadas metálicas finas para proteção ou acabamento estético."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Trocar a polaridade dos eletrodos entre pilha e eletrólise é o erro central: em ambas o ânodo oxida, mas o sinal do polo se inverte. Outro deslize é ignorar a competição da água na eletrólise aquosa. E supor que a eletrólise ocorre espontaneamente, quando ela exige fornecimento contínuo de energia."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que o alumínio é obtido por eletrólise ígnea e não por redução com carvão? Responda antes de conferir: ele tem alta afinidade pelo oxigênio e potencial de redução muito baixo, de modo que a redução química convencional não é viável. Agora diga qual polo é o cátodo na eletrólise: o negativo, onde ocorre a redução."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que o alumínio é obtido por eletrólise ígnea? E qual a polaridade do cátodo na eletrólise?",
+      "elements": [
+        [
+          "potencial de reducao muito baixo",
+          [
+            "potencial",
+            "baixo",
+            "reativo"
+          ]
+        ],
+        [
+          "a reducao quimica comum nao e viavel",
+          [
+            "carvao",
+            "nao",
+            "viavel"
+          ]
+        ],
+        [
+          "o catodo e o polo negativo na eletrolise",
+          [
+            "negativo",
+            "catodo",
+            "reducao"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Química",
+    "topic": "Equações Iônicas e outras Teorias para Ácidos e Bases",
+    "sections": [
+      {
+        "title": "Equação iônica",
+        "content": "Em solução aquosa, eletrólitos fortes estão dissociados, e escrever a equação iônica evidencia quais espécies realmente participam. Removendo os íons espectadores, que aparecem iguais dos dois lados, chega-se à equação iônica simplificada, que mostra a transformação essencial — na neutralização forte, apenas H⁺ + OH⁻ → H₂O."
+      },
+      {
+        "title": "Brønsted-Lowry",
+        "content": "Nessa teoria, ácido é doador de próton e base é receptora, o que amplia o conceito para além das soluções aquosas. Surge a noção de pares conjugados: ao doar o próton, o ácido vira sua base conjugada. A água é anfótera, comportando-se como ácido ou base conforme o parceiro da reação."
+      },
+      {
+        "title": "Lewis",
+        "content": "A teoria de Lewis é a mais abrangente: ácido é receptor de par eletrônico e base é doador. Ela explica reações sem transferência de próton, como a do BF₃ com a amônia, e é a base para entender complexos e muitos mecanismos da química orgânica, em que nucleófilos e eletrófilos correspondem a bases e ácidos de Lewis."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Confundir base de Arrhenius com base de Brønsted é comum: a amônia não tem OH⁻ na fórmula, mas recebe próton e é base. Outro deslize é esquecer de cancelar os íons espectadores. E supor que as teorias se excluem, quando cada uma amplia a anterior."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Escreva a equação iônica simplificada da reação entre HCl e NaOH antes de conferir: H⁺ + OH⁻ → H₂O, com Na⁺ e Cl⁻ como espectadores. Agora identifique o par conjugado quando a amônia recebe um próton: NH₃ é a base e NH₄⁺ é seu ácido conjugado."
+      }
+    ],
+    "recall": {
+      "prompt": "Escreva a equação iônica simplificada de HCl com NaOH e identifique o par conjugado da amônia.",
+      "elements": [
+        [
+          "H+ mais OH- formam agua",
+          [
+            "h+",
+            "oh",
+            "agua"
+          ]
+        ],
+        [
+          "os ions espectadores sao cancelados",
+          [
+            "espectador",
+            "cancelado",
+            "na+"
+          ]
+        ],
+        [
+          "NH3 e base e NH4+ e o acido conjugado",
+          [
+            "nh3",
+            "nh4",
+            "conjugado"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Química",
+    "topic": "Equilíbrios Iônicos",
+    "sections": [
+      {
+        "title": "Ionização e constante",
+        "content": "Ácidos e bases fracos se ionizam parcialmente, estabelecendo equilíbrio com constante Ka ou Kb. Quanto maior a constante, mais forte o eletrólito. O grau de ionização indica a fração ionizada e aumenta com a diluição, conforme a lei da diluição de Ostwald, que relaciona constante, concentração e grau."
+      },
+      {
+        "title": "pH e pOH",
+        "content": "O produto iônico da água vale 10⁻¹⁴ a 25 °C, de modo que pH + pOH = 14. Solução neutra tem pH 7 nessa temperatura, ácida abaixo e básica acima. Como a escala é logarítmica, cada unidade de pH corresponde a um fator dez na concentração de íons H⁺, o que é decisivo ao comparar soluções."
+      },
+      {
+        "title": "Efeito do íon comum",
+        "content": "Adicionar a uma solução um íon que já participa do equilíbrio desloca-o no sentido de consumir esse íon, reduzindo a ionização do eletrólito fraco. É o princípio das soluções-tampão, formadas por um ácido fraco e seu sal, que resistem a variações de pH e são essenciais em sistemas biológicos como o sangue."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que pH 7 é sempre neutro ignora a dependência da temperatura, já que o produto iônico da água muda com ela. Outro deslize é somar concentrações de H⁺ ao misturar soluções, em vez de recalcular. E confundir ácido forte diluído com ácido fraco: o primeiro se ioniza totalmente, apenas em concentração menor."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Qual o pH de uma solução 0,01 mol/L de HCl? Responda antes de conferir: sendo ácido forte, a concentração de H⁺ é 10⁻², logo o pH é 2, e o pOH é 12. Agora, diluindo essa solução dez vezes, o pH passa a 3. Por fim, explique por que um tampão resiste à adição de pequenas quantidades de ácido: o par ácido-base conjugado consome o H⁺ adicionado."
+      }
+    ],
+    "recall": {
+      "prompt": "Qual o pH de HCl 0,01 mol/L e o que acontece ao diluir dez vezes? Como um tampão resiste a variações de pH?",
+      "elements": [
+        [
+          "pH igual a 2",
+          [
+            "2",
+            "ph 2"
+          ]
+        ],
+        [
+          "ao diluir o pH passa a 3",
+          [
+            "3",
+            "aumenta",
+            "diluir"
+          ]
+        ],
+        [
+          "o par conjugado consome o acido adicionado",
+          [
+            "tampao",
+            "conjugado",
+            "consome"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Química",
+    "topic": "Equilíbrios Iônicos II",
+    "sections": [
+      {
+        "title": "Hidrólise salina",
+        "content": "Sais podem alterar o pH da água ao se dissolver. Sal de ácido forte com base forte dá solução neutra; de ácido fraco com base forte dá solução básica, porque o ânion sofre hidrólise; de ácido forte com base fraca dá solução ácida. Reconhecer a origem do sal permite prever o caráter da solução sem cálculo."
+      },
+      {
+        "title": "Produto de solubilidade",
+        "content": "Para sais pouco solúveis, o equilíbrio entre o sólido e seus íons é descrito pelo Kps, o produto das concentrações dos íons elevadas aos seus coeficientes. Comparando o produto iônico com o Kps, prevê-se se haverá precipitação: quando o produto excede o Kps, o sólido se forma até restabelecer o equilíbrio."
+      },
+      {
+        "title": "Íon comum e precipitação seletiva",
+        "content": "Adicionar um íon comum reduz a solubilidade do sal, deslocando o equilíbrio para o sólido. Explorando diferenças de Kps, é possível precipitar seletivamente um íon de uma mistura, técnica usada em análise química e em tratamento de efluentes para remover metais pesados ajustando o pH."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Esquecer os expoentes ao montar a expressão do Kps é o erro numérico mais comum, sobretudo em sais do tipo AB₂. Outro deslize é dizer que todo sal produz solução neutra. E confundir solubilidade, expressa em mol por litro, com o próprio Kps, que é uma constante derivada dela."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "O acetato de sódio dissolvido em água produz solução ácida, neutra ou básica? Responda antes de conferir: básica, porque vem de ácido fraco e base forte, e o íon acetato sofre hidrólise consumindo H⁺. Agora, para um sal AB de solubilidade 10⁻⁵ mol/L, o Kps é 10⁻¹⁰, produto das concentrações dos dois íons."
+      }
+    ],
+    "recall": {
+      "prompt": "O acetato de sódio deixa a água ácida ou básica? E qual o Kps de um sal AB com solubilidade 10⁻⁵ mol/L?",
+      "elements": [
+        [
+          "solucao basica",
+          [
+            "basica",
+            "alcalina"
+          ]
+        ],
+        [
+          "o anion de acido fraco sofre hidrolise",
+          [
+            "hidrolise",
+            "anion",
+            "fraco"
+          ]
+        ],
+        [
+          "Kps igual a 10 elevado a -10",
+          [
+            "10^-10",
+            "-10",
+            "10-10"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Química",
     "topic": "Equilíbrios Químicos I",
     "sections": [
       {
@@ -13634,6 +14340,114 @@
         "content": "Para N₂O₄(g) ⇌ 2 NO₂(g), comprimir o recipiente favorece qual lado? Favorece N₂O₄, que possui um mol gasoso contra dois do outro lado. Justifique usando colisões e a comparação de mols, sem dizer que a constante de equilíbrio mudou se a temperatura permaneceu igual."
       }
     ]
+  },
+  {
+    "subject": "Química",
+    "topic": "Estequiometria: Leis Ponderais",
+    "sections": [
+      {
+        "title": "Da equação à quantidade",
+        "content": "Os coeficientes da equação balanceada indicam a proporção em mols entre reagentes e produtos. O roteiro é sempre o mesmo: balancear a equação, converter os dados para mols, aplicar a proporção estequiométrica e converter o resultado para a unidade pedida, seja massa, volume de gás ou número de partículas."
+      },
+      {
+        "title": "Reagente limitante e excesso",
+        "content": "Quando as quantidades de dois reagentes são dadas, é preciso descobrir qual acaba primeiro: divide-se a quantidade de cada um pelo seu coeficiente, e o menor resultado indica o limitante. Só ele determina a quantidade de produto formada, e o outro sobra como excesso, que pode ser calculado por diferença."
+      },
+      {
+        "title": "Pureza e rendimento",
+        "content": "Se o reagente tem pureza inferior a 100%, apenas a fração pura participa da reação. Se o rendimento é inferior ao teórico, o produto obtido é a fração correspondente do calculado. Quando os dois aparecem juntos, aplique a pureza no início, sobre o reagente, e o rendimento no final, sobre o produto."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Aplicar a proporção diretamente sobre massas, sem converter para mols, é o erro estrutural do assunto: a proporção dos coeficientes é em quantidade de matéria. Outro deslize é escolher como limitante o reagente de menor massa, sem dividir pelo coeficiente. E aplicar o rendimento sobre o reagente em vez do produto."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Na reação N₂ + 3 H₂ → 2 NH₃, partindo de 1 mol de N₂ e 2 mols de H₂, calcule a amônia formada antes de conferir: dividindo pelos coeficientes, 1/1 = 1 e 2/3 ≈ 0,67, então o hidrogênio é limitante e formam-se 2/3·2 ≈ 1,33 mol de NH₃. Agora, se o rendimento é 75%, o resultado real é cerca de 1 mol."
+      }
+    ],
+    "recall": {
+      "prompt": "Com 1 mol de N₂ e 2 mols de H₂, quanto de NH₃ se forma? E o que muda com rendimento de 75%?",
+      "elements": [
+        [
+          "o hidrogenio e o limitante",
+          [
+            "hidrogenio",
+            "limitante",
+            "h2"
+          ]
+        ],
+        [
+          "cerca de 1,33 mol de amonia",
+          [
+            "1,33",
+            "1,3",
+            "2/3"
+          ]
+        ],
+        [
+          "o rendimento se aplica ao produto",
+          [
+            "rendimento",
+            "produto",
+            "75"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Química",
+    "topic": "Estudo dos Gases II",
+    "sections": [
+      {
+        "title": "A equação geral e a de Clapeyron",
+        "content": "A equação geral dos gases relaciona dois estados: P₁V₁/T₁ = P₂V₂/T₂, com temperatura sempre em kelvin. A equação de Clapeyron, PV = nRT, relaciona as variáveis a uma quantidade de matéria, permitindo calcular massa molar e densidade de gases. R vale 0,082 atm·L/(mol·K) ou 8,31 J/(mol·K), conforme as unidades."
+      },
+      {
+        "title": "Misturas gasosas",
+        "content": "Numa mistura, cada gás exerce a pressão que teria sozinho, sua pressão parcial, e a pressão total é a soma delas, segundo a lei de Dalton. A pressão parcial de um componente é o produto da pressão total pela fração em quantidade de matéria, relação que resolve a maioria das questões sobre ar atmosférico."
+      },
+      {
+        "title": "Difusão e efusão",
+        "content": "A lei de Graham diz que a velocidade de difusão de um gás é inversamente proporcional à raiz quadrada de sua massa molar: gases leves se espalham mais rápido. É por isso que o cheiro de amônia se propaga mais depressa que o de substâncias mais pesadas, em condições iguais."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Usar temperatura em graus Celsius nas equações é o erro numérico mais frequente. Outro deslize é confundir fração em quantidade de matéria com fração em massa ao calcular pressão parcial. E aplicar a lei de Graham comparando volumes, quando ela compara velocidades."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Um gás ocupa 5 L a 2 atm e 300 K. Qual o volume a 1 atm e 600 K? Calcule antes de conferir: pela equação geral, V₂ = 5·2·600/(300·1) = 20 L. Agora, numa mistura com 80% de N₂ em quantidade de matéria sob 2 atm totais, a pressão parcial do nitrogênio é 0,8·2 = 1,6 atm. Por fim, compare a difusão de hélio e oxigênio: o hélio, muito mais leve, se espalha cerca de 2,8 vezes mais rápido, pela raiz da razão entre as massas molares."
+      }
+    ],
+    "recall": {
+      "prompt": "Um gás ocupa 5 L a 2 atm e 300 K: qual o volume a 1 atm e 600 K? E como se calcula a pressão parcial?",
+      "elements": [
+        [
+          "volume de 20 litros",
+          [
+            "20"
+          ]
+        ],
+        [
+          "usar temperatura em kelvin",
+          [
+            "kelvin",
+            "absoluta",
+            "300"
+          ]
+        ],
+        [
+          "pressao parcial e a fracao vezes a total",
+          [
+            "fracao",
+            "total",
+            "parcial"
+          ]
+        ]
+      ]
+    }
   },
   {
     "subject": "Química",
@@ -13684,6 +14498,168 @@
             "nucleo",
             "positivo",
             "denso"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Química",
+    "topic": "Geometria Molecular",
+    "sections": [
+      {
+        "title": "A teoria da repulsão dos pares",
+        "content": "A geometria de uma molécula é determinada pela repulsão entre os pares eletrônicos ao redor do átomo central, que se afastam ao máximo. Contam tanto os pares ligantes quanto os não ligantes, e são justamente os pares isolados, que ocupam mais espaço, que distorcem os ângulos em relação ao caso ideal."
+      },
+      {
+        "title": "As geometrias mais comuns",
+        "content": "Com dois pares e nenhum isolado, a molécula é linear, como o CO₂. Com três pares, é trigonal plana, como o BF₃; com um par isolado, vira angular, como no SO₂. Com quatro pares, é tetraédrica, como o CH₄; com um isolado, piramidal, como a NH₃; com dois isolados, angular, como a H₂O."
+      },
+      {
+        "title": "Por que isso importa",
+        "content": "A geometria determina a polaridade da molécula e, por consequência, suas interações intermoleculares, solubilidade e ponto de ebulição. O CO₂ e a H₂O ilustram bem: ambas têm ligações polares, mas o CO₂ é linear e simétrico, com momentos que se cancelam, enquanto a água é angular e resulta polar."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Contar apenas os pares ligantes ao prever a geometria é o erro mais comum, e é ele que faz alguém classificar a água como linear. Outro deslize é confundir geometria eletrônica com molecular: na amônia, a eletrônica é tetraédrica e a molecular é piramidal. E supor que ligação polar implica molécula polar."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Determine a geometria da água e do gás carbônico antes de conferir: a água é angular, porque o oxigênio tem dois pares isolados; o CO₂ é linear, porque o carbono não tem pares isolados. Agora explique a consequência: a água é polar e o CO₂ é apolar, apesar de ambas terem ligações polares."
+      }
+    ],
+    "recall": {
+      "prompt": "Determine a geometria da água e do CO₂ e explique por que uma é polar e a outra não.",
+      "elements": [
+        [
+          "a agua e angular",
+          [
+            "angular",
+            "agua"
+          ]
+        ],
+        [
+          "o CO2 e linear",
+          [
+            "linear",
+            "co2"
+          ]
+        ],
+        [
+          "os pares isolados definem a geometria",
+          [
+            "pares isolados",
+            "nao ligantes",
+            "repulsao"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Química",
+    "topic": "Interações Intermoleculares",
+    "sections": [
+      {
+        "title": "Os três tipos",
+        "content": "As forças de dispersão de London existem entre todas as moléculas e são as únicas entre apolares, crescendo com o tamanho e a massa molecular. O dipolo permanente atua entre moléculas polares. A ligação de hidrogênio, mais intensa, ocorre quando o hidrogênio está ligado a flúor, oxigênio ou nitrogênio."
+      },
+      {
+        "title": "Efeito sobre as propriedades",
+        "content": "Quanto mais intensas as interações, maiores o ponto de fusão e de ebulição, a viscosidade e a tensão superficial, porque é preciso mais energia para separar as moléculas. É isso que explica a água ser líquida à temperatura ambiente enquanto o sulfeto de hidrogênio, mais pesado, é gasoso."
+      },
+      {
+        "title": "Comparações típicas",
+        "content": "Ao comparar substâncias, verifique primeiro o tipo de interação e só depois o tamanho: entre moléculas de mesma classe, a maior massa molar tem maior ponto de ebulição, por causa das dispersões mais intensas. Cadeias ramificadas fervem em temperatura menor que as lineares, porque a área de contato é menor."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Chamar a ligação de hidrogênio de ligação química propriamente dita é impreciso: é uma interação entre moléculas, muito mais fraca que a ligação covalente interna. Outro deslize é comparar pontos de ebulição só pela massa, ignorando o tipo de interação. E supor que moléculas apolares não têm interação alguma."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a água ferve a 100 °C e o metano a −161 °C? Responda antes de conferir: a água forma ligações de hidrogênio, muito intensas, enquanto o metano é apolar e conta apenas com forças de dispersão fracas. Agora compare pentano linear e neopentano: o linear ferve a temperatura maior, por ter maior área de contato."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a água ferve a 100 °C e o metano a −161 °C? E por que um alcano ramificado ferve a temperatura menor?",
+      "elements": [
+        [
+          "a agua faz ligacoes de hidrogenio",
+          [
+            "ligacao de hidrogenio",
+            "ponte",
+            "hidrogenio"
+          ]
+        ],
+        [
+          "o metano so tem forcas de dispersao",
+          [
+            "dispersao",
+            "london",
+            "apolar"
+          ]
+        ],
+        [
+          "ramificado tem menor area de contato",
+          [
+            "area",
+            "contato",
+            "ramificado"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Química",
+    "topic": "Interpretando Reações Orgânicas",
+    "sections": [
+      {
+        "title": "Como ler um mecanismo",
+        "content": "Toda reação orgânica pode ser lida como um encontro entre uma espécie rica em elétrons, o nucleófilo, e uma espécie pobre em elétrons, o eletrófilo. As setas curvas representam movimento de pares eletrônicos, sempre partindo de onde há elétrons disponíveis para onde há deficiência. Ler nessa chave organiza qualquer mecanismo."
+      },
+      {
+        "title": "Os grandes tipos",
+        "content": "As reações orgânicas se agrupam em substituição, quando um grupo troca de lugar com outro; adição, quando uma insaturação é desfeita e dois grupos entram; eliminação, o inverso da adição, formando insaturação; e oxirredução, quando muda o número de oxidação do carbono. Identificar o tipo já indica o produto esperado."
+      },
+      {
+        "title": "Intermediários",
+        "content": "Carbocátions, carbânions e radicais livres são os intermediários mais frequentes. A estabilidade dos carbocátions cresce de primário para terciário, porque os grupos alquila doam densidade eletrônica. Essa ordem explica por que certas reações formam preferencialmente um produto e não outro, e é a base da regra de Markovnikov."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Desenhar setas partindo do eletrófilo é inverter o mecanismo: elas sempre saem de onde há elétrons. Outro deslize é ignorar a estabilidade dos intermediários ao prever o produto majoritário. E classificar como substituição uma reação que desfaz uma dupla ligação, quando ela é de adição."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Classifique a transformação de um alceno em haleto de alquila pela reação com HCl antes de conferir: é uma adição, porque a dupla é desfeita e H e Cl entram na molécula. Agora diga por que o produto majoritário coloca o cloro no carbono mais substituído: porque o carbocátion intermediário mais estável é o mais substituído."
+      }
+    ],
+    "recall": {
+      "prompt": "Classifique a reação de um alceno com HCl e explique o produto majoritário pela estabilidade do carbocátion.",
+      "elements": [
+        [
+          "reacao de adicao",
+          [
+            "adicao",
+            "dupla"
+          ]
+        ],
+        [
+          "o carbocation terciario e mais estavel",
+          [
+            "carbocation",
+            "terciario",
+            "estavel"
+          ]
+        ],
+        [
+          "o halogenio vai ao carbono mais substituido",
+          [
+            "markovnikov",
+            "substituido",
+            "majoritario"
           ]
         ]
       ]
@@ -13798,6 +14774,60 @@
   },
   {
     "subject": "Química",
+    "topic": "Isomeria",
+    "sections": [
+      {
+        "title": "Isomeria plana",
+        "content": "Isômeros têm mesma fórmula molecular e estruturas diferentes. Na isomeria plana, distinguem-se cadeia, quando muda a estrutura do esqueleto; posição, quando muda o lugar do grupo funcional ou da insaturação; função, quando os compostos pertencem a funções diferentes; compensação, quando muda a posição do heteroátomo; e tautomeria, um equilíbrio dinâmico entre duas formas."
+      },
+      {
+        "title": "Isomeria geométrica",
+        "content": "A isomeria cis-trans ocorre quando há impedimento de rotação, em ligação dupla ou em ciclo, e cada carbono envolvido tem dois ligantes diferentes entre si. Na forma cis, os grupos semelhantes ficam do mesmo lado; na trans, em lados opostos. As duas formas têm propriedades físicas distintas, como ponto de fusão."
+      },
+      {
+        "title": "Isomeria óptica",
+        "content": "Ocorre quando a molécula é quiral, isto é, não coincide com sua imagem no espelho, o que geralmente decorre da presença de carbono assimétrico, ligado a quatro grupos diferentes. Os enantiômeros desviam o plano da luz polarizada em sentidos opostos, e o número de isômeros ópticos é 2 elevado ao número de carbonos assimétricos."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Procurar isomeria geométrica em dupla ligação com dois ligantes iguais no mesmo carbono é erro: nesse caso ela não existe. Outro deslize é contar como assimétrico um carbono com dois grupos iguais. E confundir isomeria de função com isomeria de cadeia, que mantém a mesma função."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "O butano e o metilpropano são isômeros de quê? Responda antes de conferir: de cadeia, porque a fórmula é a mesma, C₄H₁₀, e o esqueleto muda. Agora diga quantos isômeros ópticos tem uma molécula com dois carbonos assimétricos: quatro, ou seja, 2². Por fim, o etanol e o metoximetano são isômeros de função."
+      }
+    ],
+    "recall": {
+      "prompt": "Butano e metilpropano são isômeros de quê? Quantos isômeros ópticos tem uma molécula com dois carbonos assimétricos?",
+      "elements": [
+        [
+          "isomeria de cadeia",
+          [
+            "cadeia",
+            "esqueleto"
+          ]
+        ],
+        [
+          "quatro isomeros opticos",
+          [
+            "quatro",
+            "4",
+            "2 elevado"
+          ]
+        ],
+        [
+          "carbono assimetrico tem quatro ligantes diferentes",
+          [
+            "assimetrico",
+            "quatro",
+            "diferentes"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Química",
     "topic": "Ligações Químicas e Alotropia",
     "sections": [
       {
@@ -13847,6 +14877,165 @@
             "formas",
             "grafite",
             "diamante"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Química",
+    "topic": "Massa Atômica, Mol e Massa Molar",
+    "sections": [
+      {
+        "title": "Do átomo à balança",
+        "content": "Massa atômica é medida em unidades de massa atômica, tomando como referência o carbono-12. Como átomos individuais são pequenos demais para pesar, define-se o mol: a quantidade que contém 6,02·10²³ entidades, o número de Avogadro. A massa molar, em gramas por mol, tem valor numérico igual ao da massa atômica ou molecular."
+      },
+      {
+        "title": "Convertendo entre grandezas",
+        "content": "O mol é o centro de todas as conversões: de massa para quantidade de matéria divide-se pela massa molar; de quantidade para número de entidades multiplica-se por Avogadro; e, para gases nas CNTP, um mol ocupa 22,4 L. Montar essas três pontes resolve praticamente qualquer cálculo de química quantitativa."
+      },
+      {
+        "title": "Massa molecular e fórmulas",
+        "content": "A massa molecular é a soma das massas atômicas dos átomos da fórmula, considerando os índices. Em compostos iônicos, fala-se em massa fórmula. Atenção às fórmulas com água de cristalização, como CuSO₄·5H₂O, em que a água entra no cálculo da massa molar e é frequentemente esquecida."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Confundir mol com massa é o erro conceitual central: mol é quantidade de entidades, não uma unidade de massa. Outro deslize é usar 22,4 L fora das CNTP. E esquecer os índices ao somar massas atômicas, calculando H₂O como se fosse um hidrogênio e um oxigênio."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Quantos mols há em 90 g de água? Calcule antes de conferir: a massa molar é 18 g/mol, logo são 5 mols. Quantas moléculas isso representa? 5·6,02·10²³, ou cerca de 3,01·10²⁴. E qual volume esses 5 mols ocupariam como gás nas CNTP? 5·22,4 = 112 L."
+      }
+    ],
+    "recall": {
+      "prompt": "Quantos mols há em 90 g de água, quantas moléculas e que volume ocupariam nas CNTP?",
+      "elements": [
+        [
+          "5 mols",
+          [
+            "5"
+          ]
+        ],
+        [
+          "cerca de 3 vezes 10 elevado a 24 moleculas",
+          [
+            "3,01",
+            "6,02",
+            "avogadro"
+          ]
+        ],
+        [
+          "112 litros nas CNTP",
+          [
+            "112",
+            "22,4"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Química",
+    "topic": "Nomenclatura de Compostos Orgânicos",
+    "sections": [
+      {
+        "title": "A estrutura do nome",
+        "content": "O nome de um composto orgânico tem três partes: prefixo, que indica o número de carbonos da cadeia principal; infixo, que indica o tipo de ligação entre carbonos, com an para simples, en para dupla e in para tripla; e sufixo, que indica a função química, com o para hidrocarbonetos."
+      },
+      {
+        "title": "Cadeia principal e ramificações",
+        "content": "A cadeia principal é a mais longa que contém o grupo funcional, e a numeração começa pela extremidade que der os menores números aos grupos prioritários. Ramificações são citadas em ordem alfabética, com prefixos di, tri e tetra para repetições, e os números indicam suas posições."
+      },
+      {
+        "title": "Classificação de cadeias",
+        "content": "As cadeias podem ser abertas ou fechadas, saturadas ou insaturadas, homogêneas ou heterogêneas conforme haja heteroátomo entre carbonos, e normais ou ramificadas. Os carbonos se classificam em primário, secundário, terciário e quaternário pelo número de carbonos aos quais estão ligados, classificação que importa nas reações."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Numerar a cadeia pelo lado errado é o erro mais frequente e muda o nome inteiro. Outro deslize é escolher como principal a cadeia mais horizontal do desenho, e não a mais longa. E confundir cadeia heterogênea, com heteroátomo entre carbonos, com cadeia que apenas contém oxigênio na extremidade."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Nomeie a cadeia CH₃–CH(CH₃)–CH₂–CH₃ antes de conferir: a cadeia principal tem quatro carbonos, com uma metila no carbono 2, resultando 2-metilbutano. Agora classifique o carbono que carrega a metila: é terciário, ligado a três outros carbonos."
+      }
+    ],
+    "recall": {
+      "prompt": "Nomeie CH₃–CH(CH₃)–CH₂–CH₃ e classifique o carbono que carrega a ramificação.",
+      "elements": [
+        [
+          "2-metilbutano",
+          [
+            "2-metilbutano",
+            "metilbutano"
+          ]
+        ],
+        [
+          "cadeia principal com quatro carbonos",
+          [
+            "quatro",
+            "butano",
+            "principal"
+          ]
+        ],
+        [
+          "carbono terciario",
+          [
+            "terciario",
+            "tres carbonos"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Química",
+    "topic": "Nomenclatura de Compostos Orgânicos Oxigenados e Nitrogenados",
+    "sections": [
+      {
+        "title": "Funções oxigenadas",
+        "content": "Álcool termina em ol, com hidroxila ligada a carbono saturado; aldeído termina em al, com carbonila na extremidade; cetona termina em ona, com carbonila no meio da cadeia; ácido carboxílico termina em oico; éster tem o padrão oato de ila; e éter usa o prefixo oxi entre os dois grupos."
+      },
+      {
+        "title": "Funções nitrogenadas",
+        "content": "Aminas terminam em amina e derivam da amônia por substituição de hidrogênios; amidas terminam em amida e têm nitrogênio ligado à carbonila; nitrilas terminam em nitrila, com tripla ligação entre carbono e nitrogênio; nitrocompostos trazem o grupo nitro como prefixo. As aminas têm caráter básico, herdado da amônia."
+      },
+      {
+        "title": "Ordem de prioridade",
+        "content": "Quando há mais de uma função, uma delas define o sufixo e as demais viram prefixos, seguindo a ordem de prioridade: ácido carboxílico, éster, amida, aldeído, cetona, álcool, amina. Essa hierarquia decide o sufixo do nome e a numeração da cadeia, e é o que organiza os casos mais complexos."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Confundir aldeído com cetona é o erro mais comum, e a diferença está na posição da carbonila: extremidade ou meio da cadeia. Outro deslize é trocar éster com éter, que têm estruturas bem distintas. E ignorar a ordem de prioridade quando há duas funções, escolhendo o sufixo errado."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Identifique a função de CH₃–CO–CH₃ e de CH₃–CH₂–COOH antes de conferir: a primeira é uma cetona, a propanona, com carbonila no meio; a segunda é um ácido carboxílico, o ácido propanoico. Agora diga qual função tem prioridade num composto que é ao mesmo tempo álcool e ácido carboxílico: o ácido define o sufixo."
+      }
+    ],
+    "recall": {
+      "prompt": "Identifique as funções de CH₃–CO–CH₃ e CH₃–CH₂–COOH e diga qual função tem prioridade sobre a outra.",
+      "elements": [
+        [
+          "cetona propanona",
+          [
+            "cetona",
+            "propanona"
+          ]
+        ],
+        [
+          "acido carboxilico propanoico",
+          [
+            "acido",
+            "propanoico",
+            "carboxilico"
+          ]
+        ],
+        [
+          "o acido carboxilico tem prioridade",
+          [
+            "prioridade",
+            "acido",
+            "sufixo"
           ]
         ]
       ]
@@ -13907,6 +15096,170 @@
   },
   {
     "subject": "Química",
+    "topic": "Organização da Tabela Periódica dos Elementos",
+    "sections": [
+      {
+        "title": "A lógica da tabela",
+        "content": "Os elementos estão ordenados por número atômico crescente, e a organização em períodos e grupos reflete a distribuição eletrônica. O número do período indica a última camada ocupada; o grupo indica quantos elétrons há na camada de valência. Por isso elementos do mesmo grupo têm propriedades químicas semelhantes: eles têm a mesma configuração externa."
+      },
+      {
+        "title": "Propriedades periódicas",
+        "content": "O raio atômico cresce da direita para a esquerda e de cima para baixo, porque camadas novas afastam os elétrons e a carga nuclear efetiva menor os prende menos. A energia de ionização e a eletronegatividade seguem o caminho inverso, crescendo para a direita e para cima, com o flúor como elemento mais eletronegativo."
+      },
+      {
+        "title": "Famílias e comportamento",
+        "content": "Metais alcalinos têm um elétron de valência e formam cátions com facilidade; halogênios têm sete e formam ânions; gases nobres têm a camada completa e são pouco reativos. Metais tendem a perder elétrons e ametais a ganhar, e essa tendência explica o tipo de ligação que se forma entre eles."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que o raio do cátion é igual ao do átomo neutro é erro: o cátion é sempre menor, e o ânion, sempre maior. Outro deslize é incluir o hidrogênio entre os metais alcalinos por causa da posição. E confundir energia de ionização, que é para retirar elétron, com afinidade eletrônica, que é para receber."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Compare o raio do sódio e do íon Na⁺ antes de conferir: o íon é menor, porque perde a camada externa inteira e a carga nuclear atrai mais fortemente os elétrons restantes. Agora diga qual tem maior energia de ionização, sódio ou cloro: o cloro, porque está mais à direita no mesmo período e segura seus elétrons com mais força."
+      }
+    ],
+    "recall": {
+      "prompt": "Compare o raio do sódio com o do íon Na⁺ e diga qual tem maior energia de ionização, sódio ou cloro.",
+      "elements": [
+        [
+          "o cation e menor que o atomo neutro",
+          [
+            "menor",
+            "cation",
+            "perde"
+          ]
+        ],
+        [
+          "a carga nuclear atrai mais os eletrons restantes",
+          [
+            "nuclear",
+            "atrai",
+            "efetiva"
+          ]
+        ],
+        [
+          "o cloro tem maior energia de ionizacao",
+          [
+            "cloro",
+            "direita",
+            "maior"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Química",
+    "topic": "Polaridade das Ligações e das Moléculas",
+    "sections": [
+      {
+        "title": "Ligação polar e apolar",
+        "content": "Uma ligação é apolar quando une átomos de mesma eletronegatividade, e polar quando as eletronegatividades diferem, criando um dipolo com carga parcial negativa no átomo mais eletronegativo. Quanto maior a diferença, mais polar a ligação, até o limite em que ela passa a ser considerada iônica."
+      },
+      {
+        "title": "Da ligação para a molécula",
+        "content": "A polaridade da molécula depende da soma vetorial dos dipolos, e por isso depende da geometria. Moléculas simétricas com ligantes iguais tendem a ter dipolos que se cancelam, resultando apolares, mesmo com ligações polares. Já geometrias assimétricas, ou com pares isolados, costumam resultar em molécula polar."
+      },
+      {
+        "title": "Consequências práticas",
+        "content": "A regra prática 'semelhante dissolve semelhante' segue daí: solventes polares dissolvem solutos polares e iônicos, enquanto solventes apolares dissolvem substâncias apolares. É por isso que sal e açúcar dissolvem em água e óleo não, e por que se usa solvente orgânico para remover gordura."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Concluir que a molécula é polar só porque tem ligação polar é o erro estrutural do tópico: o CO₂ é o contraexemplo. Outro deslize é ignorar os pares isolados ao avaliar a simetria. E supor que toda molécula com átomos diferentes é polar, sem analisar a geometria e o cancelamento dos vetores."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Classifique CCl₄ e CHCl₃ quanto à polaridade antes de conferir: o CCl₄ é tetraédrico e simétrico, com dipolos que se cancelam, logo apolar; o CHCl₃ tem um ligante diferente, quebrando a simetria, logo polar. Agora explique por que óleo não se dissolve em água: o óleo é apolar e a água é polar."
+      }
+    ],
+    "recall": {
+      "prompt": "Classifique CCl₄ e CHCl₃ quanto à polaridade e explique por que óleo não dissolve em água.",
+      "elements": [
+        [
+          "CCl4 e apolar por simetria",
+          [
+            "ccl4",
+            "apolar",
+            "simetria"
+          ]
+        ],
+        [
+          "CHCl3 e polar por assimetria",
+          [
+            "chcl3",
+            "polar",
+            "assimetria"
+          ]
+        ],
+        [
+          "semelhante dissolve semelhante",
+          [
+            "semelhante",
+            "polar",
+            "apolar"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Química",
+    "topic": "Polímeros",
+    "sections": [
+      {
+        "title": "Conceito e classificação",
+        "content": "Polímeros são macromoléculas formadas pela repetição de unidades menores, os monômeros. Classificam-se quanto à origem em naturais, como celulose e proteínas, e sintéticos, como polietileno e náilon; e quanto ao comportamento térmico em termoplásticos, que amolecem e podem ser remoldados, e termofixos, que não amolecem após a cura."
+      },
+      {
+        "title": "Polimerização por adição",
+        "content": "Na adição, monômeros com dupla ligação se unem sem eliminar nada, e a fórmula do polímero é múltiplo exata do monômero. É o caso do polietileno, do PVC, do poliestireno e do politetrafluoretileno. Identificar o monômero é desfazer mentalmente a cadeia, reconstituindo as duplas entre os carbonos que se ligaram."
+      },
+      {
+        "title": "Polimerização por condensação",
+        "content": "Na condensação, cada ligação entre monômeros elimina uma molécula pequena, geralmente água. É o caso dos poliésteres, como o PET, formado por ácido e diálcool, e das poliamidas, como o náilon, formada por ácido e diamina. Proteínas e polissacarídeos naturais também se formam por condensação."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que toda polimerização elimina água confunde os dois tipos: a adição não elimina nada. Outro deslize é confundir termoplástico com termofixo ao discutir reciclagem, já que apenas os termoplásticos podem ser refundidos. E supor que polímero natural não é polímero, quando celulose e proteínas são exemplos clássicos."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Qual é o monômero do polietileno e que tipo de polimerização o forma? Responda antes de conferir: o eteno, por adição, sem eliminação de subproduto. Agora, o PET é formado por condensação entre um diácido e um diálcool, com eliminação de água, e é termoplástico, o que permite sua reciclagem por refusão."
+      }
+    ],
+    "recall": {
+      "prompt": "Qual o monômero do polietileno e o tipo de polimerização? E por que o PET pode ser reciclado por refusão?",
+      "elements": [
+        [
+          "o monomero e o eteno",
+          [
+            "eteno",
+            "etileno"
+          ]
+        ],
+        [
+          "polimerizacao por adicao sem subproduto",
+          [
+            "adicao",
+            "sem",
+            "subproduto"
+          ]
+        ],
+        [
+          "o PET e termoplastico e amolece com o calor",
+          [
+            "termoplastico",
+            "amolece",
+            "refusao"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Química",
     "topic": "Processos de Oxirredução",
     "sections": [
       {
@@ -13953,6 +15306,443 @@
           "atua como agente redutor",
           [
             "redutor"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Química",
+    "topic": "Química Ambiental",
+    "sections": [
+      {
+        "title": "Poluentes e seus efeitos",
+        "content": "Os principais problemas ambientais estudados em química são a chuva ácida, causada por óxidos de enxofre e nitrogênio; a intensificação do efeito estufa, associada a CO₂ e metano; a destruição da camada de ozônio, causada por clorofluorcarbonos; e a contaminação da água por metais pesados e compostos orgânicos persistentes."
+      },
+      {
+        "title": "Química das soluções ambientais",
+        "content": "O tratamento de água envolve floculação, decantação, filtração e desinfecção com cloro ou ozônio. O tratamento de efluentes industriais frequentemente precipita metais pesados ajustando o pH. Catalisadores automotivos convertem CO, NOₓ e hidrocarbonetos em CO₂, N₂ e água, reduzindo a emissão de poluentes na fonte."
+      },
+      {
+        "title": "Química verde",
+        "content": "A química verde propõe princípios como prevenir a formação de resíduos em vez de tratá-los, maximizar a economia de átomos, usar solventes menos tóxicos, empregar matérias-primas renováveis e projetar produtos degradáveis. É um deslocamento do foco do tratamento para o desenho do processo."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Confundir chuva ácida com efeito estufa é o erro mais frequente: têm causas químicas e consequências diferentes. Outro deslize é dizer que a chuva normal tem pH 7, quando ela já é levemente ácida, próxima de 5,6, pelo CO₂ dissolvido. E tratar o ozônio como sempre nocivo, ignorando seu papel protetor na estratosfera."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a chuva é naturalmente ácida mesmo sem poluição? Responda antes de conferir: o CO₂ atmosférico dissolve na água formando ácido carbônico, o que leva o pH a cerca de 5,6. Agora diga o que faz o catalisador automotivo: converte monóxido de carbono, óxidos de nitrogênio e hidrocarbonetos em gás carbônico, nitrogênio e água."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a chuva é naturalmente ácida? E qual a função do catalisador automotivo?",
+      "elements": [
+        [
+          "o CO2 forma acido carbonico",
+          [
+            "co2",
+            "carbonico",
+            "dissolve"
+          ]
+        ],
+        [
+          "pH em torno de 5,6",
+          [
+            "5,6",
+            "5,5",
+            "acida"
+          ]
+        ],
+        [
+          "converte CO e NOx em gases menos nocivos",
+          [
+            "converte",
+            "co",
+            "nox"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Química",
+    "topic": "Química Inorgânica",
+    "sections": [
+      {
+        "title": "As quatro funções",
+        "content": "Ácidos liberam H⁺ em água, segundo Arrhenius; bases liberam OH⁻; sais resultam da neutralização entre ácido e base, com cátion da base e ânion do ácido; óxidos são compostos binários com oxigênio como elemento mais eletronegativo. Reconhecer a função pela fórmula é o primeiro passo em qualquer questão."
+      },
+      {
+        "title": "Nomenclatura",
+        "content": "Ácidos sem oxigênio recebem o sufixo ídrico, como o ácido clorídrico; com oxigênio, ico ou oso conforme o número de oxigênios. Bases seguem o padrão hidróxido de mais o nome do cátion. Sais têm o nome do ânion, com sufixos derivados do ácido de origem, seguido do nome do cátion, como cloreto de sódio."
+      },
+      {
+        "title": "Reações e óxidos",
+        "content": "A neutralização produz sal e água. Óxidos ácidos, formados por ametais, reagem com água formando ácidos, o que explica a chuva ácida a partir de SO₂ e NO₂. Óxidos básicos, formados por metais, reagem com água formando bases, como o CaO da cal, que ao reagir com água forma Ca(OH)₂ e libera calor."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Classificar todo composto com oxigênio como óxido é erro: o ácido sulfúrico tem oxigênio e é ácido. Outro deslize é trocar os sufixos ico e oso na nomenclatura de ácidos oxigenados. E supor que toda base é solúvel, quando muitos hidróxidos de metais de transição são pouco solúveis."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Escreva a reação entre ácido clorídrico e hidróxido de sódio antes de conferir: HCl + NaOH → NaCl + H₂O, uma neutralização que forma cloreto de sódio e água. Agora explique a formação da chuva ácida a partir do SO₂: ele reage com a água atmosférica formando ácido sulfuroso, que oxidado gera ácido sulfúrico."
+      }
+    ],
+    "recall": {
+      "prompt": "Escreva a neutralização entre HCl e NaOH e explique a formação da chuva ácida a partir do SO₂.",
+      "elements": [
+        [
+          "produz cloreto de sodio e agua",
+          [
+            "nacl",
+            "agua",
+            "sal"
+          ]
+        ],
+        [
+          "neutralizacao entre acido e base",
+          [
+            "neutralizacao",
+            "acido",
+            "base"
+          ]
+        ],
+        [
+          "o SO2 forma acido com a agua da atmosfera",
+          [
+            "so2",
+            "acido",
+            "chuva"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Química",
+    "topic": "Radioatividade: o Estudo das Radiações",
+    "sections": [
+      {
+        "title": "As emissões",
+        "content": "A radiação alfa é um núcleo de hélio, com dois prótons e dois nêutrons, e tem baixo poder de penetração. A beta é um elétron emitido quando um nêutron se converte em próton, com penetração intermediária. A gama é radiação eletromagnética, sem massa nem carga, e é a mais penetrante, exigindo blindagem de chumbo ou concreto."
+      },
+      {
+        "title": "As leis de Soddy",
+        "content": "Na emissão alfa, o número atômico cai duas unidades e o de massa cai quatro. Na emissão beta, o número atômico aumenta uma unidade e a massa permanece. A emissão gama não altera nem número atômico nem massa, apenas libera energia. Aplicar essas regras resolve qualquer questão de transmutação nuclear."
+      },
+      {
+        "title": "Meia-vida e aplicações",
+        "content": "Meia-vida é o tempo para metade dos núcleos de uma amostra decair, e é característica de cada isótopo, sem depender de temperatura, pressão ou estado químico. As aplicações incluem datação por carbono-14 em material orgânico, urânio-chumbo em rochas, radioterapia, traçadores médicos e geração de energia por fissão."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que a partícula beta vem da eletrosfera é erro: ela se origina no núcleo, pela conversão de um nêutron. Outro deslize é achar que a meia-vida muda com a temperatura. E confundir fissão, que quebra núcleos pesados, com fusão, que une núcleos leves e ocorre nas estrelas."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Um isótopo com meia-vida de 20 anos tem 80 g. Quanto resta após 60 anos? Calcule antes de conferir: são três meias-vidas, logo 80 → 40 → 20 → 10 g. Agora, o urânio-238 emite uma partícula alfa: escreva o novo núcleo, com número atômico 90 e massa 234, que corresponde ao tório."
+      }
+    ],
+    "recall": {
+      "prompt": "Após três meias-vidas, quanto resta de 80 g? E o que acontece ao emitir uma partícula alfa?",
+      "elements": [
+        [
+          "restam 10 gramas",
+          [
+            "10"
+          ]
+        ],
+        [
+          "cada meia-vida reduz a metade",
+          [
+            "metade",
+            "meia-vida",
+            "divide"
+          ]
+        ],
+        [
+          "o numero atomico cai dois e a massa cai quatro",
+          [
+            "dois",
+            "quatro",
+            "alfa"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Química",
+    "topic": "Reações de Adição",
+    "sections": [
+      {
+        "title": "Adição a alcenos e alcinos",
+        "content": "A dupla ou tripla ligação é rica em elétrons e atrai eletrófilos. Na hidrogenação, entra H₂ com catalisador metálico; na halogenação, entra X₂; na hidro-halogenação, entra HX; na hidratação, entra água em meio ácido, formando álcool. Em todos os casos a insaturação é desfeita e a molécula fica saturada."
+      },
+      {
+        "title": "Regra de Markovnikov",
+        "content": "Na adição de HX a alcenos assimétricos, o hidrogênio se liga ao carbono que já tem mais hidrogênios, e o halogênio ao mais substituído. A explicação está na estabilidade do carbocátion intermediário: quanto mais substituído, mais estável, e é ele que se forma preferencialmente na etapa determinante."
+      },
+      {
+        "title": "Adição a compostos carbonílicos",
+        "content": "Aldeídos e cetonas sofrem adição nucleofílica à carbonila, cujo carbono é deficiente de elétrons pela ligação com o oxigênio. É por essa via que se formam cianidrinas e, com reagentes de Grignard, álcoois de cadeia maior. Aldeídos são mais reativos que cetonas, por menor impedimento e menor efeito doador."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Aplicar Markovnikov a alceno simétrico é desnecessário e confunde: com os dois carbonos equivalentes, não há produto preferencial. Outro deslize é esquecer que a adição de H₂ exige catalisador. E supor que a carbonila sofre adição eletrofílica, quando o ataque inicial é nucleofílico ao carbono."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Qual o produto principal da reação entre propeno e HBr? Responda antes de conferir: o 2-bromopropano, porque o bromo entra no carbono mais substituído, via carbocátion secundário mais estável. Agora diga o produto da hidrogenação catalítica do eteno: o etano, com a dupla desfeita."
+      }
+    ],
+    "recall": {
+      "prompt": "Qual o produto principal de propeno com HBr e por quê? E o produto da hidrogenação do eteno?",
+      "elements": [
+        [
+          "2-bromopropano",
+          [
+            "2-bromopropano",
+            "bromopropano"
+          ]
+        ],
+        [
+          "regra de Markovnikov pela estabilidade do carbocation",
+          [
+            "markovnikov",
+            "carbocation",
+            "estavel"
+          ]
+        ],
+        [
+          "a hidrogenacao do eteno produz etano",
+          [
+            "etano",
+            "saturado",
+            "h2"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Química",
+    "topic": "Reações de Oxidação em Hidrocarbonetos",
+    "sections": [
+      {
+        "title": "Combustão",
+        "content": "A oxidação mais completa é a combustão, que com oxigênio suficiente converte o hidrocarboneto em CO₂ e água, liberando energia. Com oxigênio insuficiente, forma-se monóxido de carbono e, em casos extremos, carbono na forma de fuligem. Balancear a combustão é habilidade recorrente e se faz ajustando C, H e por último O."
+      },
+      {
+        "title": "Oxidação branda",
+        "content": "A oxidação branda de alcenos, com permanganato diluído a frio, forma diol vicinal, ou seja, duas hidroxilas em carbonos vizinhos. A reação descora a solução de permanganato, e por isso serve como teste de insaturação. É a via clássica para introduzir dois grupos hidroxila numa cadeia carbônica."
+      },
+      {
+        "title": "Oxidação enérgica",
+        "content": "Com permanganato concentrado a quente, a dupla é rompida e cada carbono da antiga insaturação vira um produto oxigenado: carbono com dois hidrogênios vira CO₂ e água; com um hidrogênio vira ácido carboxílico; sem hidrogênio vira cetona. Analisar os substituintes de cada carbono da dupla permite prever exatamente os produtos."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Esperar diol na oxidação enérgica é confusão de condições: o diol é produto da oxidação branda. Outro deslize é balancear a combustão começando pelo oxigênio. E supor que qualquer oxidação de alceno rompe a cadeia, quando a branda apenas adiciona hidroxilas sem quebrar ligações entre carbonos."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Que produto se forma na oxidação branda do eteno? Responda antes de conferir: o etano-1,2-diol, o etilenoglicol. Agora, na oxidação enérgica do 2-buteno, cada carbono da dupla tem um hidrogênio e uma metila, então ambos viram ácido etanoico. Por fim, balanceie a combustão do propano: C₃H₈ + 5 O₂ → 3 CO₂ + 4 H₂O."
+      }
+    ],
+    "recall": {
+      "prompt": "Qual o produto da oxidação branda do eteno? E o da oxidação enérgica do 2-buteno?",
+      "elements": [
+        [
+          "etilenoglicol ou etano-1,2-diol",
+          [
+            "diol",
+            "glicol",
+            "etilenoglicol"
+          ]
+        ],
+        [
+          "a branda adiciona duas hidroxilas",
+          [
+            "branda",
+            "hidroxila",
+            "frio"
+          ]
+        ],
+        [
+          "a energica rompe a dupla e forma acidos",
+          [
+            "energica",
+            "acido",
+            "rompe"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Química",
+    "topic": "Reações de Substituição",
+    "sections": [
+      {
+        "title": "Em alcanos",
+        "content": "Alcanos são pouco reativos e sofrem substituição por radicais livres, iniciada por luz ou calor. Na halogenação, um hidrogênio é trocado por halogênio, e a reação prossegue em etapas de iniciação, propagação e terminação. A substituição ocorre preferencialmente no carbono mais substituído, porque o radical formado ali é mais estável."
+      },
+      {
+        "title": "Em aromáticos",
+        "content": "O benzeno sofre substituição eletrofílica, e não adição, porque isso preserva a aromaticidade. As principais são nitração, sulfonação, halogenação e alquilação de Friedel-Crafts. Grupos já presentes no anel orientam a entrada do novo substituinte: ativantes dirigem para orto e para, e desativantes, em geral, para meta."
+      },
+      {
+        "title": "Em haletos",
+        "content": "Haletos de alquila sofrem substituição nucleofílica, em que o nucleófilo troca de lugar com o halogênio. Os mecanismos SN1 e SN2 diferem na etapa determinante: o SN1 passa por carbocátion e é favorecido em haletos terciários, enquanto o SN2 é concertado e favorecido em haletos primários, com menos impedimento estérico."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Prever adição no benzeno é o erro conceitual central: a aromaticidade favorece a substituição. Outro deslize é trocar a orientação dos grupos ativantes e desativantes. E supor que a halogenação de alcanos gera produto único, quando resulta em mistura de isômeros com predominância do mais estável."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que o benzeno sofre substituição e não adição? Responda antes de conferir: a adição destruiria a aromaticidade e o ganho energético de manter o anel aromático torna a substituição preferencial. Agora diga qual haleto favorece SN2 e por quê: o primário, porque tem menor impedimento estérico ao ataque do nucleófilo."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que o benzeno sofre substituição e não adição? E qual haleto favorece o mecanismo SN2?",
+      "elements": [
+        [
+          "a substituicao preserva a aromaticidade",
+          [
+            "aromaticidade",
+            "preserva",
+            "anel"
+          ]
+        ],
+        [
+          "a adicao destruiria o anel aromatico",
+          [
+            "destruiria",
+            "adicao",
+            "estabilidade"
+          ]
+        ],
+        [
+          "o haleto primario favorece SN2",
+          [
+            "primario",
+            "sn2",
+            "estérico"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Química",
+    "topic": "Reconhecimento de Funções Orgânicas e Algumas de suas Propriedades",
+    "sections": [
+      {
+        "title": "Identificar pelo grupo funcional",
+        "content": "Reconhecer a função é localizar o grupo característico na estrutura: hidroxila em carbono saturado indica álcool; hidroxila em anel aromático indica fenol; carbonila na ponta indica aldeído; carboxila indica ácido. Fazer essa leitura antes de qualquer outra coisa organiza toda a resolução da questão."
+      },
+      {
+        "title": "Propriedades físicas",
+        "content": "O ponto de ebulição depende das interações intermoleculares: ácidos carboxílicos e álcoois fazem ligações de hidrogênio e fervem em temperaturas altas; aldeídos e cetonas têm dipolo permanente e valores intermediários; hidrocarbonetos, apolares, têm os menores. A solubilidade em água cai à medida que a cadeia carbônica aumenta."
+      },
+      {
+        "title": "Propriedades químicas",
+        "content": "Ácidos carboxílicos reagem com bases formando sais; álcoois sofrem oxidação a aldeídos e depois a ácidos; aminas se comportam como bases; ésteres sofrem hidrólise. Relacionar função e reatividade é o que permite prever produtos e é o alicerce das reações orgânicas estudadas em seguida."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Classificar fenol como álcool é o erro clássico: o fenol tem a hidroxila ligada ao anel aromático e é mais ácido. Outro deslize é comparar pontos de ebulição só pela massa molar, ignorando as interações. E supor que compostos orgânicos são sempre insolúveis em água, quando cadeias curtas com grupos polares são solúveis."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Ordene etano, etanol e ácido etanoico por ponto de ebulição antes de conferir: etano é o menor, por ser apolar; etanol vem depois, com ligações de hidrogênio; e o ácido etanoico é o maior, porque forma duas ligações de hidrogênio por molécula, associando-se em pares. Agora diga por que o etanol dissolve em água e o hexano não."
+      }
+    ],
+    "recall": {
+      "prompt": "Ordene etano, etanol e ácido etanoico por ponto de ebulição e explique por que o etanol dissolve em água.",
+      "elements": [
+        [
+          "etano tem o menor ponto de ebulicao",
+          [
+            "etano",
+            "menor",
+            "apolar"
+          ]
+        ],
+        [
+          "o acido etanoico tem o maior",
+          [
+            "acido",
+            "maior",
+            "dimero"
+          ]
+        ],
+        [
+          "a hidroxila faz ligacao de hidrogenio com a agua",
+          [
+            "hidroxila",
+            "hidrogenio",
+            "polar"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Química",
+    "topic": "Separação de Misturas",
+    "sections": [
+      {
+        "title": "Misturas heterogêneas",
+        "content": "Para sólido e líquido, usa-se filtração, decantação ou centrifugação; para sólidos com propriedades diferentes, catação, ventilação, levigação, separação magnética ou peneiração. A escolha depende da propriedade que difere entre os componentes — densidade, tamanho, magnetismo — e é sempre isso que a questão está testando."
+      },
+      {
+        "title": "Misturas homogêneas",
+        "content": "Para separar sólido dissolvido em líquido, usa-se evaporação ou destilação simples, que recupera também o solvente. Para dois líquidos miscíveis com pontos de ebulição diferentes, usa-se destilação fracionada, o método do refino de petróleo e da produção de bebidas destiladas. Gases são separados por liquefação e destilação fracionada do ar."
+      },
+      {
+        "title": "Casos especiais",
+        "content": "Funil de separação resolve líquidos imiscíveis de densidades diferentes, como água e óleo. A cromatografia separa componentes pela diferença de afinidade entre fase móvel e fase estacionária, e é usada em análise química e forense. A sublimação separa componentes que passam direto de sólido a gás, como iodo e naftalina."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Propor filtração para separar sal dissolvido em água é o erro clássico: o sal atravessa o filtro por estar dissolvido. Outro deslize é confundir destilação simples com fracionada. E usar funil de separação para líquidos miscíveis, o que não funciona porque não há duas fases."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Como separar álcool e água? Responda antes de conferir: por destilação fracionada, aproveitando a diferença de ponto de ebulição, com a ressalva de que a mistura forma azeótropo a 96%. Agora, como separar areia e sal de uma mistura? Dissolve-se o sal em água, filtra-se a areia e evapora-se a água para recuperar o sal."
+      }
+    ],
+    "recall": {
+      "prompt": "Como separar álcool e água? E como separar areia de sal?",
+      "elements": [
+        [
+          "destilacao fracionada para alcool e agua",
+          [
+            "fracionada",
+            "destilacao",
+            "ebulicao"
+          ]
+        ],
+        [
+          "dissolver o sal e filtrar a areia",
+          [
+            "dissolver",
+            "filtrar",
+            "areia"
+          ]
+        ],
+        [
+          "evaporar a agua para recuperar o sal",
+          [
+            "evaporar",
+            "sal",
+            "recuperar"
           ]
         ]
       ]
@@ -14009,6 +15799,281 @@
             "caminho",
             "soma",
             "etapas"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Química",
+    "topic": "Termoquímica II",
+    "sections": [
+      {
+        "title": "Entalpia e entropia",
+        "content": "A entalpia mede o calor trocado a pressão constante, e reações exotérmicas têm ΔH negativo. A entropia mede o grau de dispersão de energia e de desordem, aumentando quando há passagem a estados mais desorganizados, como sólido para gás, ou quando o número de mols gasosos cresce numa reação."
+      },
+      {
+        "title": "Energia livre de Gibbs",
+        "content": "A espontaneidade é decidida pela combinação das duas grandezas: ΔG = ΔH − TΔS. Quando ΔG é negativo, o processo é espontâneo. Reações exotérmicas com aumento de entropia são sempre espontâneas; endotérmicas com queda de entropia nunca são; nos demais casos, a temperatura decide qual termo domina."
+      },
+      {
+        "title": "Entalpias de formação e ligação",
+        "content": "O ΔH de uma reação pode ser calculado pela diferença entre as entalpias de formação dos produtos e dos reagentes, lembrando que substâncias simples no estado padrão têm entalpia de formação nula. Pelas energias de ligação, o cálculo soma a energia gasta para romper as ligações dos reagentes e subtrai a liberada ao formar as dos produtos."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que toda reação exotérmica é espontânea ignora o termo entrópico. Outro deslize é atribuir entalpia de formação não nula ao O₂ gasoso, quando ela é zero por definição. E trocar o sinal ao usar energias de ligação, esquecendo que romper consome e formar libera energia."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Uma reação tem ΔH positivo e ΔS positivo. Quando ela é espontânea? Responda antes de conferir: em temperaturas altas, quando o termo TΔS supera o ΔH. Agora, para a reação inversa, com ΔH e ΔS negativos, a espontaneidade ocorre em temperaturas baixas, quando o termo entálpico domina."
+      }
+    ],
+    "recall": {
+      "prompt": "Uma reação com ΔH e ΔS positivos é espontânea em que condição? Explique pela equação de Gibbs.",
+      "elements": [
+        [
+          "espontanea em temperatura alta",
+          [
+            "alta",
+            "temperatura",
+            "quente"
+          ]
+        ],
+        [
+          "quando T vezes delta S supera delta H",
+          [
+            "tds",
+            "supera",
+            "entropia"
+          ]
+        ],
+        [
+          "delta G negativo indica espontaneidade",
+          [
+            "negativo",
+            "gibbs",
+            "espontaneo"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Química",
+    "topic": "Transesterificação (Alcoólise)",
+    "sections": [
+      {
+        "title": "A reação",
+        "content": "Transesterificação é a troca do grupo alcoólico de um éster por outro álcool, em presença de catalisador ácido ou básico. O produto é um novo éster e um novo álcool. Industrialmente, é a rota de produção do biodiesel, em que triglicerídeos reagem com metanol ou etanol formando ésteres metílicos ou etílicos."
+      },
+      {
+        "title": "Biodiesel",
+        "content": "No processo, óleo vegetal ou gordura animal reage com álcool de cadeia curta, geralmente na presença de hidróxido de sódio ou de potássio. Os produtos são o biodiesel e a glicerina, que é coproduto de valor comercial. O biodiesel é renovável, biodegradável e emite menos enxofre e material particulado que o diesel fóssil."
+      },
+      {
+        "title": "Vantagens e limites",
+        "content": "Como o carbono do biodiesel vem de plantas que fixaram CO₂ recentemente, o balanço de emissões é mais favorável que o do diesel fóssil. As limitações envolvem concorrência por área agrícola com a produção de alimentos, uso de insumos e água no cultivo, e o destino do excedente de glicerina gerado."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Chamar o biodiesel de combustível que não emite CO₂ é impreciso: ele emite, mas o carbono foi fixado recentemente pela planta, o que muda o balanço, não a emissão. Outro deslize é confundir transesterificação com saponificação. E esquecer que a glicerina é coproduto obrigatório da reação."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Quais são os produtos da transesterificação de um triglicerídeo com metanol? Responda antes de conferir: ésteres metílicos, que constituem o biodiesel, e glicerol. Agora explique em que sentido o biodiesel é mais neutro em carbono: o CO₂ liberado na queima corresponde ao que a planta fixou pouco tempo antes."
+      }
+    ],
+    "recall": {
+      "prompt": "Quais os produtos da transesterificação de um triglicerídeo com metanol? Por que o biodiesel é considerado mais neutro em carbono?",
+      "elements": [
+        [
+          "esteres que formam o biodiesel",
+          [
+            "ester",
+            "biodiesel",
+            "metilico"
+          ]
+        ],
+        [
+          "glicerol como coproduto",
+          [
+            "glicerol",
+            "glicerina",
+            "coproduto"
+          ]
+        ],
+        [
+          "o carbono foi fixado recentemente pela planta",
+          [
+            "fixado",
+            "planta",
+            "ciclo"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Química",
+    "topic": "Transformações Físicas e Químicas e Balanceamento de Equações",
+    "sections": [
+      {
+        "title": "Distinguir os dois tipos",
+        "content": "Na transformação física, a substância continua a mesma, mudando apenas estado, forma ou aparência: gelo derretendo, papel rasgado. Na química, formam-se substâncias novas, com evidências como mudança de cor, liberação de gás, formação de precipitado ou variação de temperatura não explicável por aquecimento externo."
+      },
+      {
+        "title": "Leis ponderais",
+        "content": "A lei de Lavoisier estabelece que a massa total se conserva num sistema fechado, e a de Proust, que uma substância tem sempre a mesma proporção em massa entre seus elementos. São essas leis que justificam o balanceamento: a equação química precisa ter o mesmo número de átomos de cada elemento nos dois lados."
+      },
+      {
+        "title": "Balanceamento",
+        "content": "O método das tentativas segue uma ordem prática: comece pelos elementos que aparecem em menos substâncias, deixe hidrogênio e oxigênio para o fim e ajuste os coeficientes, nunca os índices. Em reações de oxirredução mais complexas, usa-se o método da variação do número de oxidação, comparando elétrons perdidos e ganhos."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Alterar índices em vez de coeficientes é o erro que descaracteriza a substância: mudar H₂O para H₂O₂ cria outra substância. Outro deslize é achar que a massa aumenta numa combustão em sistema aberto, quando na verdade entra oxigênio do ar. E classificar a dissolução do sal como transformação química."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Balanceie a combustão do metano antes de conferir: CH₄ + 2 O₂ → CO₂ + 2 H₂O, com um carbono, quatro hidrogênios e quatro oxigênios de cada lado. Agora explique por que a palha de aço enferrujada fica mais pesada: ela incorpora oxigênio do ar, e a massa total do sistema fechado se conserva."
+      }
+    ],
+    "recall": {
+      "prompt": "Balanceie a combustão do metano e explique por que a palha de aço enferrujada fica mais pesada.",
+      "elements": [
+        [
+          "coeficientes 1, 2, 1 e 2",
+          [
+            "2 o2",
+            "2 h2o",
+            "2"
+          ]
+        ],
+        [
+          "ajustar coeficientes e nao indices",
+          [
+            "coeficiente",
+            "indice",
+            "nao alterar"
+          ]
+        ],
+        [
+          "o ferro incorpora oxigenio do ar",
+          [
+            "oxigenio",
+            "ar",
+            "incorpora"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Química",
+    "topic": "Ácidos Graxos e Esterificação",
+    "sections": [
+      {
+        "title": "Ácidos graxos",
+        "content": "São ácidos carboxílicos de cadeia longa, saturados ou insaturados. Os saturados, como o esteárico, têm cadeias retas que se empacotam bem e são sólidos à temperatura ambiente, típicos de gorduras animais. Os insaturados, com duplas em configuração cis, têm cadeias dobradas que se empacotam mal e são líquidos, típicos de óleos vegetais."
+      },
+      {
+        "title": "Esterificação",
+        "content": "A reação entre ácido carboxílico e álcool, catalisada por ácido, forma éster e água. É reversível, e o processo inverso é a hidrólise. Ésteres de cadeia curta têm aromas agradáveis e são usados como essências; os de cadeia longa, formados com glicerol, são os triglicerídeos que constituem óleos e gorduras."
+      },
+      {
+        "title": "Saponificação",
+        "content": "A hidrólise básica de um triglicerídeo, feita com hidróxido de sódio ou potássio, produz glicerol e sais de ácidos graxos, que são o sabão. A molécula de sabão tem cauda apolar, que envolve a gordura, e cabeça iônica, que interage com a água, formando micelas — mecanismo que explica a ação de limpeza."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Chamar a saponificação de esterificação inverte a reação: ela é hidrólise em meio básico. Outro deslize é dizer que gordura trans é natural das plantas, quando ela resulta da hidrogenação parcial industrial. E confundir a cabeça do sabão, iônica e hidrofílica, com a cauda, apolar."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que óleos vegetais são líquidos e gorduras animais são sólidas? Responda antes de conferir: os óleos têm insaturações cis que dobram a cadeia e dificultam o empacotamento, reduzindo as interações e o ponto de fusão. Agora explique como o sabão remove gordura: a cauda apolar envolve a gordura e a cabeça iônica permite que a micela seja arrastada pela água."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que óleos são líquidos e gorduras sólidas? Como o sabão remove gordura?",
+      "elements": [
+        [
+          "as insaturacoes cis dobram a cadeia",
+          [
+            "insaturacao",
+            "cis",
+            "dobra"
+          ]
+        ],
+        [
+          "o empacotamento pior reduz o ponto de fusao",
+          [
+            "empacotamento",
+            "fusao",
+            "interacao"
+          ]
+        ],
+        [
+          "a micela tem cauda apolar e cabeca ionica",
+          [
+            "micela",
+            "apolar",
+            "ionica"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Química",
+    "topic": "Álcoois",
+    "sections": [
+      {
+        "title": "Estrutura e classificação",
+        "content": "Álcool é o composto com hidroxila ligada a carbono saturado. Classificam-se em primário, secundário ou terciário conforme o carbono que carrega a hidroxila, e essa classificação decide o comportamento na oxidação. Também se classificam pelo número de hidroxilas, em monoálcool, diol e triol, como o glicerol."
+      },
+      {
+        "title": "Propriedades",
+        "content": "A hidroxila permite ligações de hidrogênio, e por isso os álcoois têm pontos de ebulição bem mais altos que os hidrocarbonetos de massa semelhante. A solubilidade em água é alta em cadeias curtas e cai à medida que a parte apolar cresce: metanol e etanol são totalmente miscíveis, enquanto álcoois de cadeia longa praticamente não dissolvem."
+      },
+      {
+        "title": "Reações",
+        "content": "A oxidação de álcool primário produz aldeído e, prosseguindo, ácido carboxílico; a de álcool secundário produz cetona; o terciário não sofre oxidação nessas condições, por não ter hidrogênio no carbono da hidroxila. Álcoois também sofrem desidratação, formando alceno com ácido concentrado a temperatura alta ou éter a temperatura menor."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que álcool terciário oxida a cetona é o erro mais comum: ele não oxida em condições brandas. Outro deslize é confundir a desidratação intramolecular, que dá alceno, com a intermolecular, que dá éter, sendo a temperatura o fator que decide. E classificar fenol como álcool."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Qual o produto da oxidação do propan-2-ol? Responda antes de conferir: é secundário, então forma propanona, uma cetona. Agora, e o do propan-1-ol? Sendo primário, forma primeiro o propanal e depois o ácido propanoico. Por fim, diga por que o etanol dissolve tanto em água quanto em gasolina: tem parte polar e parte apolar."
+      }
+    ],
+    "recall": {
+      "prompt": "Qual o produto da oxidação do propan-2-ol e do propan-1-ol? Por que o álcool terciário não oxida?",
+      "elements": [
+        [
+          "propanona a partir do secundario",
+          [
+            "propanona",
+            "cetona",
+            "secundario"
+          ]
+        ],
+        [
+          "aldeido e depois acido a partir do primario",
+          [
+            "propanal",
+            "acido",
+            "primario"
+          ]
+        ],
+        [
+          "o terciario nao tem hidrogenio no carbono da hidroxila",
+          [
+            "terciario",
+            "hidrogenio",
+            "nao oxida"
           ]
         ]
       ]
