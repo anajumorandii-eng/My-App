@@ -75649,26 +75649,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Português · questão 1 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Leia o título e o subtítulo de uma reportagem: “Roça-office: dobra procura por imóveis no interior baiano durante pandemia — Reflexão sobre vivência urbana tem causado um novo êxodo urbano; conheça histórias e veja quando vale a pena se mudar” (Correio 24horas, 21/06/2021). Ao longo da pandemia da Covid-19 tornou-se cada vez mais recorrente o uso da expressão de língua inglesa home office (em tradução literal, “escritório em casa”) para se referir a trabalho a distância ou a teletrabalho. Indique a alternativa que descreve o processo de composição do neologismo “roça-office”, conforme empregado no título da reportagem.",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "A substituição do vocábulo em inglês “home” por “roça” torna o uso desse estrangeirismo mais adequado à grafia do português."
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "A justaposição de “roça” e “office” produz um efeito cômico pelo contraste entre os meios rural e urbano na formação do neologismo."
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "A justaposição de “roça” e do neologismo “office” baseia-se na similaridade fonético-fonológica entre os vocábulos “home” e “roça”."
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "A aglutinação dos radicais “roça” e “office” adapta o neologismo aos imóveis brasileiros e produz o efeito de humor na manchete."
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. Os dois radicais entram inteiros no neologismo, sem perda de som na junção, e ficam ligados por hífen: isso é justaposição, não aglutinação — daí a d cair. O efeito cômico vem do choque entre os dois mundos que as palavras trazem: a roça, rural, e o office, urbano e corporativo. A alternativa a inventa uma adequação gráfica que não existe, já que office continua em inglês, e a c apela a uma semelhança sonora entre home e roça que simplesmente não há.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_gram_unicamp/ap_gram_unicamp_001-p4.webp",
@@ -75725,26 +75725,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Português · questão 4 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Leia o cartaz: “COISAR é um verbo universal que substitui qualquer outro verbo que num seja lembrado no momento.” (Signos Nordestinos, disponível em www.facebook.com/SignosNordestinos, acessado em 26/07/2016.) Do ponto de vista da norma culta, é correto afirmar que “coisar” é:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "uma palavra resultante da atribuição do sentido conotativo de um verbo qualquer ao substantivo “coisa”."
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "uma palavra resultante do processo de sufixação que transforma o substantivo “coisa” no verbo “coisar”."
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "uma palavra que, graças a seu sentido universal, pode ser usada em substituição a todo e qualquer verbo não lembrado."
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "uma palavra que resulta da transformação do substantivo “coisa” em verbo “coisar”, reiterando um esquecimento."
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. A pergunta pede a descrição do processo de formação, e ele é morfológico: ao substantivo coisa acrescenta-se a vogal temática e a desinência de infinitivo, formando o verbo coisar. Isso é sufixação, ou derivação sufixal — o mesmo mecanismo de martelo/martelar e de agulha/agulhar. As alternativas c e d parafraseiam a piada do cartaz em vez de nomear o processo, e a a fala em sentido conotativo, que é questão de significado, não de formação de palavra.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_gram_unicamp/ap_gram_unicamp_004-p7.webp",
@@ -75809,26 +75809,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Português · questão 7 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Leia a postagem do linguista Sírio Possenti: “Dizer que Caetano falou ‘X’ porque ‘é um leonino vaidoso’ quer dizer que: a) todo leonino é vaidoso (se leonino, vaidoso), ou b) que ele pertence a um subconjunto de leoninos, os vaidosos? (o que dá, no primeiro caso, ‘leonino, que é vaidoso’ e no segundo, ‘leonino que é vaidoso’).” (Sírio Possenti, postagem na rede social Facebook, 8 de agosto de 2020.) Entre os comentários à postagem, qual deles responde corretamente à pergunta do autor?",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "“Em um determinado universo de crenças, leoninos são vaidosos. Isso é um clichê, um senso comum.”"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "“‘É um leonino vaidoso’ = é como qualquer leonino, no caso, vaidoso. É vaidoso porque é vaidoso. Alternativa a.”"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "“Entendo como a opção 2. Para que eu entendesse como opção 1, deveria ser: ‘como todo leonino, é vaidoso’, ou algo do tipo.”"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "“Fico com a restritiva ‘leonino que é vaidoso’. Entendo que, ao trazer vaidoso a leonino, acentua o vaidoso já implicado em leonino.”"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. Possenti pergunta qual das duas leituras a frase permite, e a resposta que enfrenta a pergunta é a que escolhe uma delas e diz o que seria preciso mudar para obter a outra: o comentário c opta pela leitura restritiva e observa que a explicativa exigiria outra formulação, como “como todo leonino, é vaidoso”. A alternativa a comenta o estereótipo, não a estrutura; a b escolhe uma opção mas justifica com uma tautologia; e a d escolhe a restritiva e em seguida a descreve como se fosse explicativa, contradizendo-se.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_gram_unicamp/ap_gram_unicamp_007-p12.webp",
@@ -75881,26 +75881,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Português · questão 11 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Leia: “(...) as palavras tomam significados distintos daqueles utilizados no cotidiano. Por exemplo, utiliza-se, com frequência, nas aulas sobre frações, a frase reduzir ao mesmo denominador.” (Edi Jussara Candido Lorensatti, Linguagem matemática e Língua Portuguesa: diálogo necessário na resolução de problemas matemáticos. Conjectura: Filosofia e Educação, Caxias do Sul, v. 14, n. 2, p. 91, maio/ago. 2009.) Cada ciência usa uma linguagem própria e com um grau de precisão terminológica necessário para o seu exercício. Tendo em vista os significados distintos que as palavras assumem nas situações concretas em que são empregadas, o verbo “reduzir”, no uso cotidiano, significa:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "limitar alguma coisa, ao passo que na linguagem matemática é sinônimo de restringir."
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "moderar alguma coisa, ao passo que na linguagem matemática implica aumentar as relações entre os números."
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "eliminar alguma coisa, ao passo que na linguagem matemática implica reverter as relações entre os números."
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "diminuir alguma coisa, ao passo que na linguagem matemática é sinônimo de converter."
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. No uso cotidiano, reduzir é diminuir: reduzir o preço, reduzir a velocidade. Na aula de frações, porém, reduzir ao mesmo denominador não diminui nada — os denominadores em geral aumentam; o que se faz é converter as frações a uma forma equivalente e comparável. É exatamente esse deslocamento que o texto quer mostrar. As demais alternativas ou trocam o sentido cotidiano (limitar, moderar, eliminar) ou descrevem mal a operação matemática.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_gram_unicamp/ap_gram_unicamp_011-p15.webp",
@@ -75997,26 +75997,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Português · questão 14 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Estrangeirismos são palavras e expressões de outras línguas usadas correntemente em nosso cotidiano. Sobre o emprego de palavras estrangeiras no português, o linguista Sírio Possenti comenta: “Tomamos alguns verbos do inglês e os adaptamos a nosso sistema verbal exclusivamente segundo regras do português. Se adotarmos start, logo teremos estartar (e todas as suas flexões), pois nossa língua não tem sílabas iniciais como st-, que imediatamente se tornam est-. A forma nunca será startar, nem ostartar ou ustartar, nem estarter ou estartir, nem printer ou printir, nem atacher ou atachir etc.” (Adaptado de Sírio Possenti, “A questão dos estrangeirismos”, em Carlos Alberto Faraco, Estrangeirismos: guerras em torno da língua. São Paulo: Parábola, 2001, p. 173-174.) As alternativas abaixo reproduzem trechos de um fórum de discussão na Internet sobre um jogo eletrônico, em que um jogador se queixa por não ter conseguido se conectar a uma partida e ter perdido pontos. Escolha a alternativa que contém um exemplo do processo de adaptação de verbos do inglês para o sistema verbal do português, como descreve Sírio Possenti. Glossário: bug, falha no funcionamento de um programa; computar, contar, incluir; dar load, carregar; lolking, site sobre o jogo; ranked, partida que dá pontos ao jogador; server, servidor; upar, subir de nível, recarregar.",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "“Aconteceu logo na manhã deste domingo, quando iniciei uma ranked.”"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "“Ela não deu load e pensei que era um bug no site.”"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "“Entrei no lolking para ver se a partida estava sendo computada.”"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "“Nem upei meu personagem de tanto problema no server.”"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. O processo descrito por Possenti é o do verbo emprestado que passa a flexionar segundo as regras do português. Só a alternativa d traz isso: de up formou-se upar, que recebe a desinência de primeira pessoa do pretérito perfeito em upei. Nas outras, as palavras inglesas entram como substantivos — uma ranked, load, bug, lolking, server — sem nenhuma flexão verbal portuguesa; em c o verbo flexionado, computar, já é português.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_gram_unicamp/ap_gram_unicamp_014-p19.webp",
@@ -76033,26 +76033,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Português · questão 15 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Leia: “Em sua versão benigna, a valorização da malandragem corresponde ao elogio da criatividade adaptativa e da predominância da especificidade das circunstâncias e das relações pessoais sobre a frieza reducionista e generalizante da lei. Em sua versão maximalista e maligna, porém, a valorização da malandragem equivale à negação dos princípios elementares de justiça, como a igualdade perante a lei, e ao descrédito das instituições democráticas.” (Adaptado de Luiz Eduardo Soares, Uma interpretação do Brasil para contextualizar a violência, em C. A. Messeder Pereira, Linguagens da violência. Rio de Janeiro: Rocco, 2000, p. 23-46.) Considerando as posições expressas no texto em relação à valorização da malandragem, é correto afirmar que:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "O verbo “equivale” relaciona a valorização da malandragem à negação da justiça, da igualdade perante a lei e das instituições democráticas."
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "Entre os pares de termos “benigna/maligna” e “maximalista/reducionista” estabelece-se no texto uma relação semântica de equivalência."
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "O elogio da malandragem reside na valorização da criatividade adaptativa e da sensibilidade em contraposição à fria aplicação da lei."
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "O articulador discursivo “porém” introduz um argumento que se contrapõe à proposta de valorização da malandragem."
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. O texto se organiza em duas partes: primeiro a versão benigna da malandragem, depois, aberta por porém, a versão maligna. O conector marca justamente a virada argumentativa, opondo à valorização inicial um argumento que a contraria. A alternativa a descreve corretamente o segundo período, mas ignora que ele vale apenas para a versão maligna, e não para a valorização em geral; a c faz o mesmo com o primeiro; e a b confunde pares de antônimos, benigna/maligna e maximalista/reducionista, com equivalência semântica.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_gram_unicamp/ap_gram_unicamp_015-p19.webp",
@@ -76161,26 +76161,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Português · questão 18 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Entre os versos de Gilberto Gil transcritos a seguir, podemos identificar uma relação paradoxal em:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "“Sou viramundo virado / pelo mundo do sertão.”"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "“Louvo a luta repetida / da vida pra não morrer.”"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "“De dia, Diadorim, / de noite, estrela sem fim.”"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "“Toda saudade é presença / da ausência de alguém.”"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. Paradoxo é a formulação que aproxima ideias contraditórias numa mesma afirmação e ainda assim faz sentido. É o caso de “toda saudade é presença da ausência de alguém”: presença e ausência se excluem, e é exatamente da junção das duas que nasce a definição de saudade. Em a há jogo de palavras com viramundo e virado; em b, a repetição de vida e luta; em c, a paronomásia entre dia e Diadorim — recursos sonoros, não contradição de sentido.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_gram_unicamp/ap_gram_unicamp_018-p23.webp",
@@ -76277,26 +76277,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Português · questão 23 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Leia: “No conjunto de seus diferentes usos, a palavra ‘cultura’ pode significar um valor individual do sujeito que ‘tem cultura’; um valor coletivo de povos, etnias e grupos sociais que produzem bens culturais que podem tornar-se propriedade de alguns; um valor de produto comercializado, como um livro, um quadro, uma peça teatral. O controle da circulação de bens começa com a invenção da imprensa no século XV, seguida da regulação dos direitos autorais e de reprodução. Hoje, a expansão da tecnologia digital, o compartilhamento nas redes e seu monopólio resultam em condições ainda mais complexas de produção, circulação e comercialização de bens culturais. Além disso, tradições milenares no Extremo Oriente e em alguns povos originários da América Latina mostram que o mundo não é só o que chamamos de Ocidente e que as noções de cópia, original, livre e coletivo diferem entre culturas diversas. Nesse contexto, pergunta o autor, como defender uma cultura livre?” (Adaptado de Leonardo Foleto, Introdução ao livro A cultura é livre: uma história da resistência antipropriedade.) Com base no que afirma o autor, a defesa de uma cultura livre dependeria:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "da produção e circulação de bens culturais por grupos sociais."
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "da atenção dada aos valores individuais e aos direitos autorais."
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "da consideração de experiências e valores de outras culturas."
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "do compartilhamento de bens culturais via tecnologia digital."
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. O texto encerra o raciocínio observando que o mundo não se resume ao Ocidente e que noções como cópia, original, livre e coletivo variam entre culturas — é dessa observação que a pergunta final decorre. Pensar cultura livre exige, portanto, considerar experiências e valores de outras tradições. As alternativas b e d retomam justamente o que o texto apresenta como parte do problema, os direitos autorais e o monopólio das redes digitais, e a a recupera um dos sentidos listados de cultura sem responder à pergunta.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_gram_unicamp/ap_gram_unicamp_023-p29.webp",
@@ -76353,26 +76353,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Português · questão 25 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Leia: “Num mundo dominado por homens, a mulher é tratada como um ser diferenciado, que merece uma designação especial. Enquanto a expressão ‘o homem’ pode equivaler a ‘o ser humano’, como na frase ‘O homem é mortal’, a expressão ‘a mulher’ só se refere aos seres humanos do gênero feminino. A língua também revela um tratamento diferente dado à mulher na sociedade ao conter designações específicas para ela, inexistentes para o homem. Assim, a mulher de um chefe de governo é chamada de ‘primeira-dama’, mas o marido de uma mulher que desempenha aquele cargo não é chamado de ‘primeiro-cavalheiro’. Conta-se que Cecília Meireles recusava a designação de ‘poetisa’, por achar que esse termo não tinha a mesma conotação de ‘poeta’ (usado para os homens), ao contrário, soava até pejorativo. Por outro lado, Dilma Rousseff exigia que a tratassem por ‘presidenta’ para enfatizar que quem ocupava o cargo de chefe da nação brasileira era finalmente uma mulher.” (Adaptado de Francisco Jardes Nobre de Araújo, O machismo na linguagem.) Segundo o autor de “O machismo na linguagem”,",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "o hábito de usar “o homem” para representar a humanidade faz com que o feminino se torne um gênero subalterno."
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "a prática da designação do gênero feminino na língua portuguesa leva ao fim do privilégio do masculino na linguagem."
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "o emprego de palavras no feminino evita o viés machista e incentiva uma menor diferenciação entre os gêneros."
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "a escolha de algumas palavras para marcar o gênero feminino pode se relacionar com a valorização social da mulher."
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. Os dois exemplos finais mostram que marcar o feminino não tem sentido fixo: Cecília Meireles recusava poetisa por soar pejorativo, e Dilma Rousseff exigia presidenta justamente para tornar visível que uma mulher ocupava o cargo. A mesma marca de gênero, portanto, pode desvalorizar ou valorizar, conforme o caso — é o que diz o poder se relacionar da alternativa d. As alternativas b e c transformam essa observação em solução automática do machismo linguístico, o que o texto não afirma, e a a generaliza para além do que ele sustenta.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_gram_unicamp/ap_gram_unicamp_025-p32.webp",
@@ -76389,26 +76389,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Português · questão 27 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "A Equipe AzMina fez um experimento buscando no Google “frases para o Dia das Mães”. E o resultado foi um festival de frases que romantizam a maternidade. Ativaram, então, “sua caneta desromantizadora” para “corrigir” essas frases que estamos tão acostumados a ouvir, e muitas vezes reproduzir. Nas imagens, as frases originais aparecem riscadas e substituídas: “Mãe, o trabalho mais difícil do mundo” vira “Mãe, um trabalho não remunerado e muito explorado”; “Ser mãe é padecer no paraíso” vira “Mãe também quer curtir o paraíso”; “Natural, profundo e eterno só existe o amor materno” vira “Construído e social, bora desconstruir o amor maternal”. (Adaptado de Equipe AzMina, Caneta desromantizadora de mensagens de dia das mães, acessado em 09/05/2020.) As frases são “desromantizadas” porque a Equipe AzMina reconhece:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "o sofrimento como condição para a vocação materna e para a realização feminina."
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "o amor materno como herança familiar, mesmo quando ele é remunerado."
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "a sobrecarga das mães na criação dos filhos, considerando também outras formas de maternidade."
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "a maternidade como sendo difícil, trabalhosa e ainda assim heroica e instintiva."
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. As três correções vão na mesma direção: transformam a maternidade de vocação natural em trabalho — não remunerado e explorado —, recusam o padecimento como destino e negam que o amor materno seja natural e eterno, chamando-o de construído e social. Reconhecer que ele é construído é abrir espaço para outras formas de maternidade além da biológica. As alternativas a e d repetem justamente os clichês que a caneta risca, e a b inverte a frase original ao falar em amor remunerado.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_gram_unicamp/ap_gram_unicamp_027-p33.webp",
@@ -76429,26 +76429,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Português · questão 28 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Leia o texto: “A Amazônia em chamas, a censura voltando, a economia estagnada, e a pessoa quer falar de quê? Dos cafonas. Do império da cafonice que nos domina. O cafona fala alto e se orgulha de ser grosseiro e sem compostura. Acha que pode tudo. Não há ética que caiba a ele. Enganar é ok. Agredir é ok. Gentileza, educação, delicadeza, para um convicto e ruidoso cafona, é tudo coisa de maricas. O cafona fura filas, canta pneus e passa sermões. Despreza a ciência, porque ninguém pode ser mais sabido que ele. O cafona quer ser autoridade, para poder dar carteiradas. Quer bajular o poderoso e debochar do necessitado. Quer andar armado. Quer tirar vantagem em tudo. Unidos, os cafonas fazem passeatas de apoio e protestos a favor. Atacam como hienas e se escondem como ratos. Existe algo mais brega do que um rico roubando? Algo mais chique do que um pobre honesto? É sobre isso que a pessoa quer falar, apesar de tudo que está acontecendo. Porque só o bom gosto pode salvar este país.” (Adaptado de Fernanda Young, Bando de cafonas, O Globo.) *cafona: quem tem ou revela mau gosto; que revela gosto ou atitude vulgares. Em relação aos recursos de coesão usados na construção do texto, é correto afirmar que:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "a “economia estagnada” é retomada no uso da expressão “dar carteiradas”."
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "o uso de “isso”, no final do texto, retoma as ideias de cafonice e honestidade."
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "“apesar de tudo”, na penúltima linha, retoma o que a autora denomina “império da cafonice”."
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "o “porque”, na última linha, explica que o país precisa do bom gosto dos cafonas."
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. O pronome isso é catafórico e anafórico ao mesmo tempo: retoma o que acabou de ser dito, as duas perguntas retóricas sobre o rico que rouba e o pobre honesto, isto é, a oposição entre cafonice e honestidade que organiza o texto inteiro. A alternativa a liga duas expressões sem relação de retomada; a c erra o referente, pois apesar de tudo remete às calamidades listadas na abertura, não ao império da cafonice; e a d inverte o sentido da conclusão, que opõe o bom gosto aos cafonas em vez de atribuí-lo a eles.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_gram_unicamp/ap_gram_unicamp_028-p35.webp",
@@ -77081,26 +77081,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Português · questão 58 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "O cartaz a seguir foi usado em uma campanha pública para doação de sangue. Nele lê-se, acima de três figuras humanas estilizadas ligadas a uma bolsa de sangue, “UMA DOAÇÃO PODE SALVAR ATÉ 3 PESSOAS”, e, em destaque, “ROLEZINHO NO HEMORIO — A meta: 1.000 doações em 1 dia. Sábado 1.fev · 9h. Hemorio, R. Frei Caneca 9. Anonymous Riot”. Glossário: rolezinho, diminutivo de rolê ou rolé, em linguagem informal significa “pequeno passeio”; recentemente tem designado encontros simultâneos de centenas de pessoas em locais como praças, parques públicos e shopping centers, organizados via internet. Anonymous riot: rebelião anônima. Considerando como os sentidos são produzidos no cartaz e o seu caráter persuasivo, pode-se afirmar que:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "As figuras humanas estilizadas, semelhantes umas às outras, remetem ao grupo homogêneo das pessoas que podem ajudar e ser ajudadas."
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "A expressão “rolezinho” remete à meta de se reunir muitas pessoas, em um só dia, para doar sangue."
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "O termo “até” indica o limite mínimo de pessoas a serem beneficiadas a partir da ação de um só indivíduo."
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "O destaque visual dado à expressão “ROLEZINHO NO HEMORIO” tem a função de enfatizar a participação individual na campanha."
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. O cartaz empresta o rolezinho, que naquele momento designava encontros de centenas de pessoas marcados pela internet, para convocar uma multidão ao hemocentro num único dia — e a meta impressa, mil doações em um dia, confirma a leitura. A alternativa c inverte o sentido de até, que marca limite máximo; a d atribui ao destaque uma ênfase individual, quando o apelo é coletivo; e a a lê as figuras estilizadas como grupo homogêneo, mas elas se distinguem por cabelo e gravata justamente para sugerir pessoas diferentes.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_gram_unicamp/ap_gram_unicamp_058-p65.webp",
@@ -77157,26 +77157,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Português · questão 60 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Leia o trecho, retirado da apresentação da obra Pioneiras da ciência no Brasil: “Cabe uma reflexão sobre a divisão dos papéis masculino e feminino dentro da família, para tentar melhor entender por que a presença feminina no mundo científico mantém-se minoritária. Constata-se que, no Brasil, ainda cabem às mulheres, fortemente, as responsabilidades domésticas e de socialização das crianças, além dos cuidados com os velhos. Assim, ainda que dividindo o espaço doméstico com companheiros, as mulheres têm, na maioria dos lares, maior necessidade de articular os papéis familiares e profissionais.” (Adaptado de Hildete P. de Melo e Lígia Rodrigues, Pioneiras da ciência no Brasil. Rio de Janeiro: SBPC, 2006, p. 3-4.) Releia o período: “Assim, ainda que dividindo o espaço doméstico com companheiros, as mulheres têm, na maioria dos lares, maior necessidade de articular os papéis familiares e profissionais.” A expressão sublinhada, “na maioria dos lares”:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "delimita a amostra de lares em que a mulher precisa articular tarefas profissionais e domésticas."
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "restringe o universo das mulheres mencionadas no trecho ao das que se dedicam à vida doméstica."
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "informa o local social em que circulavam as mulheres referidas no trecho."
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "destaca o fato de que a maioria das mulheres vive com companheiros."
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. A expressão é um adjunto que quantifica: ela não fala de todos os lares, mas da maior parte deles, delimitando o conjunto em que a sobrecarga descrita se verifica. É uma ressalva de alcance, e não uma afirmação sobre as mulheres em si. A alternativa b restringe o grupo de mulheres, quando o que se restringe são os lares; a c lê a expressão como indicação de lugar social; e a d transforma o quantificador em estatística sobre companheiros, tema que a frase apenas concede na oração anterior.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_gram_unicamp/ap_gram_unicamp_060-p67.webp",
@@ -77241,26 +77241,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Português · questão 62 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Leia o texto “A busca por vida fora da Terra”: “Um sinal eletrônico é emitido pelo Laboratório de Propulsão a Jato (JPL, sigla em inglês) da NASA, em Pasadena, Califórnia, e viaja até um robô fixado na parte inferior da camada de gelo de 30 centímetros de espessura em um lago do extremo norte do Alasca. O holofote do robô começa a brilhar. ‘Funcionou!’, exclama John Leichty, um jovem engenheiro do JPL, que está em uma barraca perto do lago congelado. Embora não pareça uma grande façanha tecnológica, esse talvez seja o primeiro passo para a exploração de uma lua distante. Mais de sete mil quilômetros ao sul do Alasca, no México, a geomicrobióloga Penelope Boston caminha por uma água turva que bate em seus tornozelos, em uma gruta, cerca de 15 metros abaixo da superfície. Como os outros cientistas que a acompanham, Penelope carrega um respirador pesado, além do tanque adicional de ar, de modo que possa sobreviver em meio ao sulfeto de hidrogênio, monóxido de carbono e outros gases venenosos da caverna. Esses dois locais (um lago congelado no ártico e uma gruta nos trópicos) talvez possam fornecer pistas para um dos mistérios mais antigos e instigantes: existe vida fora do nosso planeta? (...) Portanto, se for possível determinar um procedimento para isolar e identificar formas de vida em ambientes igualmente extremos aqui na Terra, então estaremos mais preparados para empreender a busca pela vida em outras partes do Universo.” (Michael D. Lemonick, “A busca por vida fora da Terra”. National Geographic, jul. 2014, p. 38-40.) A partir da leitura do texto, pode-se afirmar que:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "O robô está presente tanto no lago congelado no ártico como na gruta nos trópicos."
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "O jovem engenheiro do JLP e a geomicrobióloga carregam respiradores para ajudá-los a respirar."
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "O jovem engenheiro do JLP e a geomicrobióloga estão executando suas pesquisas sozinhos."
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "O holofote do robô é ligado a partir de um sinal emitido pelo laboratório JPL."
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. O primeiro parágrafo descreve exatamente essa cadeia: o sinal eletrônico parte do Laboratório de Propulsão a Jato, em Pasadena, viaja até o robô preso sob o gelo no Alasca e o holofote começa a brilhar. As outras afirmações contrariam o texto: o robô só aparece no lago congelado (a); quem carrega respirador é Penelope Boston, na caverna de gases venenosos, e não o engenheiro (b); e nenhum dos dois está sozinho, já que Leichty tem colegas na barraca e Penelope caminha com outros cientistas (c).",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_gram_unicamp/ap_gram_unicamp_062-p69.webp",
@@ -77317,26 +77317,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Português · questão 64 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "No romance Vidas secas, de Graciliano Ramos, a alteridade é construída ficcionalmente. Isso porque o narrador:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "impõe seu ponto de vista sobre a miséria social das personagens, desconsiderando a luta dessas personagens por uma vida mais digna."
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "permite conhecer o ponto de vista de cada uma das personagens e manifesta um juízo crítico sobre o drama da miséria social e econômica."
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "relativiza o universo social das personagens, uma vez que elas estão privadas da capacidade de comunicação."
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "analisa os dilemas de todas as personagens e propõe, ao final da narrativa, uma solução para o drama da miséria social e econômica."
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. Em Vidas secas o narrador em terceira pessoa empresta sua linguagem a personagens que quase não falam: cada capítulo se aproxima de uma consciência — Fabiano, sinhá Vitória, o menino mais novo, até a cadela Baleia — e diz por elas o que elas não conseguem formular. É assim que a alteridade se constrói, e o juízo crítico sobre a miséria vem junto, na própria escolha de dar voz a quem não a tem. A alternativa a nega esse acesso; a c toma a dificuldade de expressão como incapacidade total de comunicação; e a d atribui ao romance uma solução final que ele não oferece, já que o desfecho é nova fuga.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_gram_unicamp/ap_gram_unicamp_064-p70.webp",
@@ -87013,26 +87013,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Português · questão 35 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Quanto ao conto “Negrinha”, de Monteiro Lobato, é correto afirmar que:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "O narrador adere à perspectiva de dona Inácia, fazendo com que o leitor enxergue a história guiado pela ótica dessa personagem e se torne cúmplice dos valores éticos apresentados no conto."
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "O modo como o narrador caracteriza o contexto histórico no conto permite concluir que Negrinha é escrava de dona Inácia e, portanto, está fadada a uma vida de humilhações."
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "A maneira como o narrador comenta as características atribuídas às personagens contrasta com as falas e as ações realizadas por elas, o que caracteriza um modo irônico de apresentação."
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "O narrador apresenta as falas e os pensamentos das personagens de modo objetivo; assim, o leitor fica dispensado de elaborar um juízo crítico sobre as relações de poder entre as personagens."
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. O conto chama dona Inácia de excelente senhora, boa como todas as sinhás, e em seguida mostra o que essa excelente senhora faz: a menina apanha, fica de castigo, vive de sobras. O contraste entre o que o narrador diz das personagens e o que elas efetivamente praticam é a chave irônica do texto — a bondade anunciada serve para desmascarar a crueldade. A alternativa a toma a ironia como adesão; a b confunde época, pois a história se passa após a Abolição e Negrinha é órfã tutelada, não escravizada; e a d supõe uma neutralidade que o conto não tem.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_lit_unicamp/ap_lit_unicamp_035-p33.webp",
