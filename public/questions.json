@@ -92309,23 +92309,23 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Matemática · questão 59 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Considere o mapa quadriculado da região central da cidade, reproduzido na imagem da página original, em que estão assinaladas a catedral, a prefeitura e a câmara de vereadores. Sabendo que a distância real entre a catedral e a prefeitura é de 500 m, podemos concluir que a distância real, em linha reta, entre a catedral e a câmara de vereadores é de:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "1500 m"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "500√5 m"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "1000√2 m"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "500 + 500√2 m"
       }
     ],
     "explanation": "Gabarito: b. O mapa é quadriculado, e a informação de que catedral e prefeitura estão a 500 m fixa a escala: cada quadra vale 500 m. Basta então contar quantas quadras separam a catedral da câmara de vereadores nas duas direções — uma na horizontal e duas na vertical — e aplicar Pitágoras: a distância em linha reta é 500·√(1² + 2²) = 500√5 metros. O erro comum é somar as quadras percorridas pelas ruas, 500 + 1000 = 1500 m, que é a distância andando, não em linha reta.",
@@ -92345,23 +92345,23 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Matemática · questão 60 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Considere o mapa quadriculado da cidade, reproduzido na imagem da página original, em que as avenidas Brasil e Juscelino Kubitschek se cruzam num ponto cujas coordenadas podem ser lidas na malha. O ponto de interseção das avenidas Brasil e Juscelino Kubitschek pertence à região definida por:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "(x − 2)² + (y − 6)² ≤ 1"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "(x − 1)² + (y − 5)² ≤ 2"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "x ∈ ]1, 3[ , y ∈ ]4, 6["
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "x = 2, y ∈ [5, 7]"
       }
     ],
     "explanation": "Gabarito: b. Localize no mapa o cruzamento das duas avenidas e leia suas coordenadas; depois teste esse par em cada alternativa, uma a uma. As alternativas a e b descrevem discos, e a diferença entre elas é o centro e o raio: o ponto do cruzamento fica a distância √2 do centro (1, 5), o que satisfaz a segunda desigualdade e não a primeira. As alternativas c e d descrevem faixas retangulares que não contêm o ponto. Substituir as coordenadas em cada expressão, em vez de tentar desenhar as regiões, é o caminho mais seguro.",
@@ -93073,26 +93073,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Matemática · questão 85 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "O segmento AB é o diâmetro de um semicírculo e a base de um triângulo isósceles ABC, com o vértice C do lado oposto ao semicírculo e o ângulo em C medindo φ. Denotando as áreas das regiões semicircular e triangular, respectivamente, por S(φ) e T(φ), podemos afirmar que a razão S(φ)/T(φ), quando φ = π/2 radianos, é:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "π/2"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "2π"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "π"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "π/4"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. Chame de r o raio, de modo que AB = 2r e o semicírculo tem área πr²/2. No triângulo isósceles, a altura traçada de C até AB divide o ângulo φ ao meio e forma dois triângulos retângulos com cateto oposto r; logo a altura vale r/tg(φ/2). Com φ = π/2, tem-se tg(π/4) = 1 e a altura é r, o que dá área T = (1/2)(2r)(r) = r². A razão S/T = (πr²/2)/r² = π/2, e não depende do raio.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_085-p53.webp",
@@ -93149,26 +93149,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Matemática · questão 88 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Dados preliminares da pandemia do Covid-19 indicam que, no início da disseminação, em determinada região, o número de pessoas contaminadas dobrava a cada 3 dias. Usando que log na base 10 de 2 ≈ 0,3 e log na base 10 de 5 ≈ 0,7, após o primeiro contágio, o número de infectados atingirá a marca de 4 mil entre:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "o 18º dia e o 24º dia"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "o 25º dia e o 31º dia"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "o 32º dia e o 38º dia"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "o 39º dia e o 45º dia"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. Partindo de um contaminado e dobrando a cada 3 dias, o número após t dias é 2^(t/3). Impondo 2^(t/3) = 4.000 e aplicando logaritmo decimal, (t/3)·log 2 = log 4.000. Como 4.000 = 4 × 1.000, tem-se log 4.000 = 2·log 2 + 3 ≈ 0,6 + 3 = 3,6. Então t/3 = 3,6/0,3 = 12 e t = 36 dias, valor que cai no intervalo entre o 32º e o 38º dia. Note que o crescimento exponencial faz a marca de 4 mil ser atingida em pouco mais de um mês, ainda que o número dobre lentamente no começo.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_088-p55.webp",
@@ -93185,26 +93185,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Matemática · questão 89 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Sabendo que 10^0,3 < 2 < 10^0,31 e que x é tal que a raiz de índice 2021 de 10^(3x+5) é igual a 20, então:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "855 ≤ x < 870"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "870 ≤ x < 885"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "885 ≤ x < 900"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "900 ≤ x < 1005"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. A raiz de índice 2021 de 10^(3x+5) é 10^((3x+5)/2021), e igualando a 20 obtém-se (3x + 5)/2021 = log 20. Como 20 = 2 × 10, vale log 20 = 1 + log 2, e a estimativa do enunciado dá 1,3 < log 20 < 1,31. Multiplicando por 2021, 2.627 < 3x + 5 < 2.647, de onde 2.622 < 3x < 2.642 e 874 < x < 881. Esse intervalo está inteiramente contido em 870 ≤ x < 885, o que identifica a resposta sem precisar de valor exato.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_089-p54.webp",
@@ -93225,26 +93225,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Matemática · questão 90 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Seja x a concentração de substância B no meio extracelular e y a velocidade de transporte. Observando-se o formato da curva B, que parte da origem, cresce rapidamente no início e depois se aproxima de um valor máximo constante, e os valores de x e y em determinados pontos, podemos concluir que a função que melhor relaciona essas duas grandezas é:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "y = (4 + log na base 2 de x)/2"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "y = 1 − log na base 2 de (x + 1)"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "y = (8/3)·(1 − 2^(−2x))"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "y = 3^x − 1"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. A curva descreve um transporte que satura: começa em zero, cresce depressa e se estabiliza num patamar, porque os transportadores da membrana são em número finito. A função que reproduz esse comportamento é a da alternativa c: em x = 0 ela vale zero, cresce de forma decrescente e tende a 8/3 quando x aumenta, já que 2^(−2x) se aproxima de zero. As demais não servem: a exponencial da alternativa d cresce sem limite, e as logarítmicas nem sequer estão definidas em x = 0 ou decrescem, contrariando o formato observado.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_090-p56.webp",
@@ -93265,26 +93265,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Matemática · questão 91 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Dados os números reais positivos a1, a2, …, an, a média geométrica M destes termos é calculada pela raiz de índice n do produto a1·a2·…·an. A média geométrica de 1, 10, 100, …, 10²² é:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "10^11"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "10^12"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "10^13"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "10^14"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. Os termos vão de 10⁰ a 10²², portanto são 23 números. O produto de todos é 10 elevado à soma dos expoentes, e essa soma é a dos 22 primeiros naturais mais zero: 22 × 23/2 = 253. A média geométrica é a raiz de índice 23 de 10²⁵³, isto é, 10^(253/23) = 10¹¹. Repare que, para potências de mesma base, a média geométrica corresponde à média aritmética dos expoentes — e a média de 0 a 22 é 11.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_091-p57.webp",
@@ -93301,26 +93301,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Matemática · questão 93 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "No dia 23 de março de 2021, um navio encalhou no canal de Suez, no Egito. A embarcação tinha 400 metros de comprimento e 60 metros de largura, e ficou atravessada formando com a margem um ângulo α de 67,5°, com dois trechos de 30 m indicados na figura. A largura L do canal, medida em metros, é: Dados: cos(2θ) = 2cos²(θ) − 1 e sen(2θ) = 2·sen(θ)·cos(θ).",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "400√(2 − √2) − 60√(2 + √2) ≈ 195,3"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "200√(2 − √2) − 15√(2 + √2) ≈ 125,4"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "200√(2 − √2) + 15√(2 + √2) ≈ 180,8"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "200√(3 − √3) − 15√(3 + √3) ≈ 192,6"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. A largura do canal é a soma de duas projeções: a do comprimento do navio e a da sua meia-largura. Usando as fórmulas do arco metade com 2θ = 135°, obtém-se cos 67,5° = √(2 − √2)/2 e sen 67,5° = √(2 + √2)/2. A projeção do comprimento é 400·cos 67,5° = 200√(2 − √2), e a dos 30 m indicados na figura é 30·sen 67,5° = 15√(2 + √2). Como as duas contribuições se somam, L = 200√(2 − √2) + 15√(2 + √2) ≈ 180,8 m — valor coerente com um canal que ali não passa de 200 m.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_093-p58.webp",
@@ -93373,26 +93373,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Matemática · questão 95 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Considere que os ângulos internos de um triângulo formam uma progressão aritmética. Dado que a, b, c são as medidas dos lados do triângulo, sendo a < b < c, é correto afirmar que:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "b² + ac = a² + c²"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "a² + bc = b² + c²"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "a² − bc = b² + c²"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "b² − ac = a² + c²"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. Se os três ângulos estão em progressão aritmética e somam 180°, o do meio é necessariamente 60°, pois ele é a média dos três. Como a < b < c, o lado b é o do meio e se opõe justamente a esse ângulo de 60°. Aplicando a lei dos cossenos a esse lado, b² = a² + c² − 2ac·cos 60°, e como cos 60° = 1/2 vem b² = a² + c² − ac. Passando o termo ac para o outro lado, b² + ac = a² + c².",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_095-p59.webp",
@@ -93413,26 +93413,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Matemática · questão 97 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Sabendo que 0° < θ ≤ 90° e que 2·cos(2θ) + 5·cos(θ) = 4, é correto afirmar que:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "0° < θ ≤ 30°"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "30° < θ ≤ 45°"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "45° < θ ≤ 60°"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "60° < θ ≤ 90°"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. Reduza tudo a uma incógnita usando cos(2θ) = 2cos²θ − 1. A equação vira 2(2cos²θ − 1) + 5cos θ = 4, ou 4cos²θ + 5cos θ − 6 = 0. Chamando c = cos θ e resolvendo, c = (−5 ± 11)/8, o que dá c = 3/4 ou c = −2; a segunda raiz é impossível, pois o cosseno não sai do intervalo de −1 a 1. Resta cos θ = 0,75, e como cos 45° ≈ 0,707 e cos 30° ≈ 0,866, o ângulo fica entre 30° e 45° — mais precisamente, cerca de 41,4°.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_097-p59.webp",
@@ -93453,26 +93453,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Matemática · questão 99 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Sejam k e θ números reais tais que sen θ e cos θ são soluções da equação quadrática 2x² + x + k = 0. Então, k é um número:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "irracional"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "racional não inteiro"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "inteiro positivo"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "inteiro negativo"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. Pelas relações de Girard, a soma das raízes é −1/2 e o produto é k/2, ou seja, sen θ + cos θ = −1/2 e sen θ·cos θ = k/2. Elevando a soma ao quadrado, (sen θ + cos θ)² = 1 + 2·sen θ·cos θ, o que dá 1/4 = 1 + 2·(k/2), isto é, 1/4 = 1 + k. Logo k = −3/4, um número racional que não é inteiro. A identidade fundamental é o que fecha a conta: sem ela o sistema teria duas incógnitas e uma equação.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_099-p61.webp",
@@ -93489,26 +93489,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Matemática · questão 100 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Seja x um número real tal que sen x + cos x = 0,2. Logo, |sen x − cos x| é igual a:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "0,5"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "0,8"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "1,1"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "1,4"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. As duas expressões se ligam pela identidade fundamental. Elevando a soma ao quadrado, (sen x + cos x)² = 1 + 2·sen x·cos x = 0,04, de onde 2·sen x·cos x = −0,96. Elevando a diferença ao quadrado, (sen x − cos x)² = 1 − 2·sen x·cos x = 1 + 0,96 = 1,96. Extraindo a raiz, o módulo da diferença vale 1,4. O truque é notar que os dois quadrados diferem apenas no sinal do termo cruzado, de modo que a soma deles é sempre 2.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_100-p61.webp",
@@ -93561,26 +93561,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Matemática · questão 102 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Seja x um número real, 0 < x < π/2, tal que a sequência (tg x, sec x, 2) é uma progressão aritmética. Então, a razão dessa PA é igual a:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "1"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "5/4"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "4/3"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "1/3"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. Numa progressão aritmética o termo do meio é a média dos vizinhos: 2·sec x = tg x + 2. Chamando t = tg x, isso dá sec x = (t + 2)/2. Use agora a relação sec²x = 1 + tg²x: ((t + 2)/2)² = 1 + t², ou t² + 4t + 4 = 4 + 4t², o que leva a 3t² − 4t = 0 e t = 4/3, já que no primeiro quadrante a tangente é positiva. Então sec x = 5/3 e a razão é 5/3 − 4/3 = 1/3.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_102-p62.webp",
@@ -93597,26 +93597,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Matemática · questão 103 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Seja x real tal que cos x = tg x. O valor de sen x é:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "(√3 − 1)/2"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "(1 − √3)/2"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "(√5 − 1)/2"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "(1 − √5)/2"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. Escreva a tangente como razão: cos x = sen x/cos x, o que dá cos²x = sen x. Substituindo cos²x = 1 − sen²x, chega-se a sen²x + sen x − 1 = 0, equação do segundo grau em sen x. As raízes são (−1 ± √5)/2, e a negativa vale cerca de −1,62, fora do intervalo possível para o seno. Resta sen x = (√5 − 1)/2 ≈ 0,618 — curiosamente, o inverso do número de ouro.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_103-p62.webp",
@@ -93633,26 +93633,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Matemática · questão 105 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Na figura, ABC e BDE são triângulos isósceles semelhantes de bases 2a e a, respectivamente, apoiados sobre a mesma reta, com B entre A e D, e o ângulo CÂB = 30°. Portanto, o comprimento do segmento CE é:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "a·√(5/3)"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "a·√(8/3)"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "a·√(7/3)"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "a·√2"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. Ponha A na origem e a reta sobre o eixo x, com B = (2a, 0) e D = (3a, 0). Num triângulo isósceles de base 2a e ângulos de base 30°, o vértice fica sobre o ponto médio da base, à altura a·tg 30° = a/√3, logo C = (a; a/√3). O triângulo menor tem base a, de modo que E fica sobre o ponto médio de BD, em x = 2,5a, à altura (a/2)·tg 30° = a/(2√3). A distância é CE² = (1,5a)² + (a/(2√3))² = 2,25a² + a²/12 = (7/3)a², e portanto CE = a·√(7/3).",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_105-p63.webp",
