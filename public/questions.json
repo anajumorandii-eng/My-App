@@ -92328,7 +92328,7 @@
         "text": "Alternativa D da prova"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. O mapa é quadriculado, e a informação de que catedral e prefeitura estão a 500 m fixa a escala: cada quadra vale 500 m. Basta então contar quantas quadras separam a catedral da câmara de vereadores nas duas direções — uma na horizontal e duas na vertical — e aplicar Pitágoras: a distância em linha reta é 500·√(1² + 2²) = 500√5 metros. O erro comum é somar as quadras percorridas pelas ruas, 500 + 1000 = 1500 m, que é a distância andando, não em linha reta.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_059-p39.webp",
@@ -92364,7 +92364,7 @@
         "text": "Alternativa D da prova"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. Localize no mapa o cruzamento das duas avenidas e leia suas coordenadas; depois teste esse par em cada alternativa, uma a uma. As alternativas a e b descrevem discos, e a diferença entre elas é o centro e o raio: o ponto do cruzamento fica a distância √2 do centro (1, 5), o que satisfaz a segunda desigualdade e não a primeira. As alternativas c e d descrevem faixas retangulares que não contêm o ponto. Substituir as coordenadas em cada expressão, em vez de tentar desenhar as regiões, é o caminho mais seguro.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_060-p39.webp",
