@@ -5803,6 +5803,961 @@
   },
   {
     "subject": "Matemática",
+    "topic": "A Geometria Métrica Plana",
+    "sections": [
+      {
+        "title": "Medir comprimentos",
+        "content": "Perímetro é a soma dos lados, e no círculo o comprimento é C = 2πr. A ideia de π como razão constante entre comprimento e diâmetro é o que unifica o tópico. Em figuras compostas, o perímetro segue apenas o contorno externo: trechos internos, mesmo desenhados, não entram, e essa leitura é a que mais separa acertos de erros."
+      },
+      {
+        "title": "Comprimento de arco e setor",
+        "content": "Um arco é uma fração da circunferência, proporcional ao ângulo central: para α em graus, o comprimento é (α/360)·2πr. O mesmo raciocínio de fração vale para o setor circular, cuja área é (α/360)·πr². Pensar por proporção evita decorar fórmulas separadas e funciona igualmente com ângulos em radianos."
+      },
+      {
+        "title": "Unidades e conversões",
+        "content": "Comprimento em metro, área em metro quadrado, volume em metro cúbico: ao converter, o fator se eleva ao mesmo expoente. Assim 1 m = 100 cm, mas 1 m² = 10 000 cm² e 1 m³ = 1 000 000 cm³. Um hectare é 10 000 m², medida frequente em questões de área rural, e 1 litro equivale a 1 dm³."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Converter área multiplicando por 100 em vez de 10 000 é o erro mais caro do tópico. Outro é somar trechos internos ao perímetro de figuras compostas. E confundir raio com diâmetro no cálculo do comprimento da circunferência dobra ou reduz pela metade todo o resultado."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Calcule o comprimento de uma circunferência de raio 5 cm antes de conferir: 2π·5 = 10π ≈ 31,4 cm. Agora o comprimento de um arco de 72° nessa circunferência: (72/360)·10π = 2π ≈ 6,28 cm. Por fim, converta 2,5 m² para centímetros quadrados: 2,5·10 000 = 25 000 cm²."
+      }
+    ],
+    "recall": {
+      "prompt": "Calcule o comprimento de uma circunferência de raio 5 cm e de um arco de 72°, e converta 2,5 m² para cm².",
+      "elements": [
+        [
+          "comprimento 10 pi",
+          [
+            "10",
+            "31,4"
+          ]
+        ],
+        [
+          "arco de 2 pi",
+          [
+            "2",
+            "6,28"
+          ]
+        ],
+        [
+          "25000 centimetros quadrados",
+          [
+            "25000",
+            "25 000",
+            "10000"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
+    "topic": "A Geometria da Proporcionalidade",
+    "sections": [
+      {
+        "title": "O teorema de Tales",
+        "content": "Um feixe de retas paralelas cortado por duas transversais determina segmentos proporcionais. Escrito como razão, se as paralelas cortam a primeira transversal em segmentos a e b e a segunda em c e d, então a/b = c/d. É o resultado que sustenta semelhança de triângulos, divisão de segmentos e boa parte das construções com régua e compasso."
+      },
+      {
+        "title": "Semelhança e razão de semelhança",
+        "content": "Duas figuras são semelhantes quando têm ângulos iguais e lados proporcionais. A razão k entre lados correspondentes se propaga: perímetros também ficam na razão k, áreas na razão k² e volumes na razão k³. Essa escada de expoentes é a informação mais cobrada e a mais esquecida do assunto."
+      },
+      {
+        "title": "Aplicações métricas",
+        "content": "A proporcionalidade resolve altura de prédios por sombras, escalas de mapas e maquetes, e as relações métricas do triângulo retângulo, que saem da semelhança entre o triângulo todo e os dois em que a altura o divide. Nas plantas e mapas, a escala 1:200 significa que cada unidade no desenho vale 200 na realidade."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Aplicar a razão k às áreas, em vez de k², é o erro que mais aparece: dobrar os lados quadruplica a área. Outro é montar a proporção com lados que não são correspondentes, o que exige identificar os ângulos iguais primeiro. E em escala, confundir a razão de redução com a de ampliação inverte o resultado."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Dois triângulos semelhantes têm lados na razão 2:5. Calcule a razão entre suas áreas antes de conferir: 4:25. Agora, um poste projeta sombra de 6 m enquanto uma vara de 2 m projeta 1,5 m: por proporção, o poste mede 2·6/1,5 = 8 m. Por fim, numa escala 1:200, um comprimento de 3 cm na planta corresponde a 6 m reais."
+      }
+    ],
+    "recall": {
+      "prompt": "Dois triângulos semelhantes têm lados na razão 2:5. Qual a razão entre as áreas? E como calcular a altura de um poste pela sombra?",
+      "elements": [
+        [
+          "areas na razao 4 para 25",
+          [
+            "4",
+            "25"
+          ]
+        ],
+        [
+          "a area varia com o quadrado da razao",
+          [
+            "quadrado",
+            "area"
+          ]
+        ],
+        [
+          "montar proporcao entre altura e sombra",
+          [
+            "proporcao",
+            "sombra",
+            "tales"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
+    "topic": "A Geometria dos Números Complexos",
+    "sections": [
+      {
+        "title": "O plano de Argand-Gauss",
+        "content": "Todo complexo z = a + bi corresponde ao ponto (a, b) do plano, com a parte real no eixo horizontal e a imaginária no vertical. Essa representação transforma operações algébricas em movimentos geométricos: somar complexos é somar vetores, e o módulo |z| = √(a² + b²) é a distância do ponto à origem."
+      },
+      {
+        "title": "Forma trigonométrica",
+        "content": "Escrevendo z = |z|(cos θ + i·sen θ), com θ o argumento, a multiplicação ganha significado geométrico: multiplicar dois complexos multiplica os módulos e soma os argumentos, ou seja, é uma rotação combinada com uma ampliação. Dividir subtrai argumentos, e essa leitura simplifica contas que seriam longas na forma algébrica."
+      },
+      {
+        "title": "Potências e raízes",
+        "content": "A fórmula de De Moivre dá zⁿ = |z|ⁿ(cos nθ + i·sen nθ). Para as raízes n-ésimas, os módulos são a raiz n-ésima de |z| e os argumentos se distribuem igualmente, formando um polígono regular de n vértices inscrito numa circunferência — o resultado geométrico mais bonito e mais cobrado do tópico."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Confundir módulo com parte real é frequente: o módulo é a distância à origem e envolve as duas partes. Outro erro é somar módulos na multiplicação, quando o correto é multiplicá-los e somar os argumentos. E ao extrair raízes n-ésimas, esquecer que existem n raízes distintas, e não apenas uma: elas se distribuem igualmente na circunferência, formando um polígono regular de n vértices."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Calcule o módulo e o argumento de z = 1 + i antes de conferir: |z| = √2 e θ = 45°. Agora calcule z⁸ por De Moivre: módulo (√2)⁸ = 16 e argumento 8·45° = 360°, logo z⁸ = 16. Por fim, diga quantas raízes cúbicas tem o número 8 e como elas se dispõem: três, nos vértices de um triângulo equilátero inscrito na circunferência de raio 2."
+      }
+    ],
+    "recall": {
+      "prompt": "Calcule módulo e argumento de 1 + i e use De Moivre para obter (1 + i)⁸.",
+      "elements": [
+        [
+          "modulo raiz de 2 e argumento 45 graus",
+          [
+            "45",
+            "raiz de 2",
+            "√2"
+          ]
+        ],
+        [
+          "resultado 16",
+          [
+            "16"
+          ]
+        ],
+        [
+          "multiplicar modulos e somar argumentos",
+          [
+            "modulo",
+            "argumento",
+            "soma"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
+    "topic": "A Relação Fundamental da Trigonometria",
+    "sections": [
+      {
+        "title": "De onde ela vem",
+        "content": "A relação sen²x + cos²x = 1 é o teorema de Pitágoras aplicado ao ciclo trigonométrico: o ponto do ciclo tem coordenadas (cos x, sen x) e está a distância 1 da origem. Por isso ela vale para qualquer número real x, e não apenas para ângulos agudos, e é a identidade da qual todas as outras derivam."
+      },
+      {
+        "title": "Como usar em exercícios",
+        "content": "Conhecido o seno, o cosseno sai da relação a menos do sinal, que o quadrante decide. É o procedimento padrão: substituir, isolar, extrair a raiz e escolher o sinal. Também é o caminho para transformar expressões, substituindo 1 por sen²x + cos²x quando isso permite fatorar ou simplificar."
+      },
+      {
+        "title": "Simplificações típicas",
+        "content": "Expressões como (1 − cos²x)/sen x simplificam para sen x; sec²x − 1 vira tg²x; e sen⁴x − cos⁴x fatora como (sen²x + cos²x)(sen²x − cos²x), reduzindo-se a sen²x − cos²x. Reconhecer diferença de quadrados e trinômio quadrado perfeito é tão importante aqui quanto conhecer as identidades."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Escrever sen²x como sen x² é erro de notação com consequência real: o quadrado é do seno, não do ângulo. Outro é extrair a raiz esquecendo o duplo sinal e o quadrante. E aplicar a relação a ângulos diferentes, como sen²x + cos²y, que não simplifica para 1."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Se sen x = 3/5 e x está no segundo quadrante, calcule cos x antes de conferir: cos²x = 1 − 9/25 = 16/25, logo cos x = ±4/5, e no segundo quadrante o cosseno é negativo, dando −4/5. Agora simplifique (1 − sen²x)/cos x: o numerador é cos²x, então a expressão vale cos x."
+      }
+    ],
+    "recall": {
+      "prompt": "Se sen x = 3/5 e x está no segundo quadrante, calcule cos x e simplifique (1 − sen²x)/cos x.",
+      "elements": [
+        [
+          "cosseno igual a menos 4/5",
+          [
+            "-4/5",
+            "4/5",
+            "negativo"
+          ]
+        ],
+        [
+          "a relacao vem de Pitagoras no ciclo",
+          [
+            "pitagoras",
+            "ciclo",
+            "1"
+          ]
+        ],
+        [
+          "a expressao simplifica para cos x",
+          [
+            "cos x",
+            "cosseno"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
+    "topic": "A Trigonometria dos Números Reais",
+    "sections": [
+      {
+        "title": "Do triângulo ao círculo",
+        "content": "Para ângulos maiores que 90°, as razões do triângulo retângulo não bastam, e a trigonometria passa a ser definida no ciclo trigonométrico: uma circunferência de raio 1, com o ângulo medido a partir do eixo x. O cosseno é a abscissa do ponto e o seno é a ordenada, definição que estende as razões a qualquer número real."
+      },
+      {
+        "title": "Radianos e voltas",
+        "content": "Medir ângulos em radianos é medir o arco correspondente numa circunferência de raio 1, de modo que a volta completa é 2π. Assim 180° é π, 90° é π/2 e 60° é π/3. Como o ciclo se repete a cada volta, ângulos que diferem de múltiplos de 2π têm os mesmos seno e cosseno, o que define a periodicidade."
+      },
+      {
+        "title": "Sinais por quadrante",
+        "content": "No primeiro quadrante, seno e cosseno são positivos. No segundo, só o seno; no terceiro, nenhum dos dois; no quarto, só o cosseno. Os arcos côngruos e a redução ao primeiro quadrante permitem calcular o seno de 150° a partir do de 30°, mudando apenas o que os sinais determinam."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Trabalhar em graus com a calculadora em radianos, ou o contrário, é o erro prático mais frequente. Outro é esquecer o sinal ao reduzir ao primeiro quadrante: sen 150° é +1/2, mas cos 150° é −√3/2. E confundir 2π com 360° na hora de somar voltas leva a arcos côngruos errados."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Converta 210° para radianos antes de conferir: 210·π/180 = 7π/6. Agora calcule sen 210° e cos 210°: o arco está no terceiro quadrante, onde ambos são negativos, e o ângulo de referência é 30°, logo sen = −1/2 e cos = −√3/2. Por fim, diga um arco côngruo a 30°: 390°, ou 30° + 2π em radianos."
+      }
+    ],
+    "recall": {
+      "prompt": "Converta 210° para radianos e calcule seno e cosseno, justificando os sinais pelo quadrante.",
+      "elements": [
+        [
+          "7 pi sobre 6",
+          [
+            "7",
+            "6",
+            "7π/6"
+          ]
+        ],
+        [
+          "seno igual a menos um meio",
+          [
+            "-1/2",
+            "menos",
+            "negativo"
+          ]
+        ],
+        [
+          "terceiro quadrante tem seno e cosseno negativos",
+          [
+            "terceiro",
+            "negativo",
+            "quadrante"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Composição de Funções",
+    "sections": [
+      {
+        "title": "Aplicar uma depois da outra",
+        "content": "A função composta (f∘g)(x) significa aplicar g primeiro e depois f ao resultado: f(g(x)). A ordem importa, e em geral f∘g é diferente de g∘f. Pensar em máquinas encadeadas ajuda: a saída de uma é a entrada da outra, e por isso a imagem de g precisa estar contida no domínio de f."
+      },
+      {
+        "title": "Domínio da composta",
+        "content": "O domínio de f∘g é formado pelos x do domínio de g cujas imagens g(x) pertencem ao domínio de f. Essa dupla condição costuma ser esquecida, e é ela que explica restrições que parecem surgir do nada, como no caso de compor uma raiz quadrada com uma função que assume valores negativos."
+      },
+      {
+        "title": "Decompor e aplicar",
+        "content": "Muitas questões pedem o caminho inverso: escrever uma função complicada como composta de duas simples. Em h(x) = √(3x + 1), tomamos g(x) = 3x + 1 e f(u) = √u. Essa decomposição é a base do cálculo de derivadas mais adiante e, no ensino médio, aparece em problemas de custo, taxa e conversão de unidades encadeadas."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Trocar a ordem da composição é o erro mais frequente: em f∘g, quem age primeiro é g. Outro é multiplicar as funções em vez de compô-las. E calcular o domínio da composta apenas pela fórmula final, sem considerar as restrições da função interna."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Com f(x) = 2x + 1 e g(x) = x², calcule f(g(3)) e g(f(3)) antes de conferir: f(g(3)) = f(9) = 19, e g(f(3)) = g(7) = 49, valores diferentes que mostram a não comutatividade. Agora escreva (f∘g)(x) em geral: 2x² + 1, enquanto (g∘f)(x) = (2x + 1)²."
+      }
+    ],
+    "recall": {
+      "prompt": "Com f(x) = 2x + 1 e g(x) = x², calcule f(g(3)) e g(f(3)) e diga o que isso mostra sobre a composição.",
+      "elements": [
+        [
+          "f(g(3)) igual a 19",
+          [
+            "19"
+          ]
+        ],
+        [
+          "g(f(3)) igual a 49",
+          [
+            "49"
+          ]
+        ],
+        [
+          "a composicao nao e comutativa",
+          [
+            "nao comutativa",
+            "ordem",
+            "diferente"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Cubos e Paralelepípedos",
+    "sections": [
+      {
+        "title": "Área e volume",
+        "content": "O paralelepípedo reto-retângulo de arestas a, b e c tem volume V = a·b·c e área total 2(ab + ac + bc), soma das seis faces duas a duas iguais. No cubo, todas as arestas são iguais: V = a³ e área total 6a². Ver a área total como soma das faces evita decorar fórmula e funciona também quando falta uma face, como em caixas sem tampa."
+      },
+      {
+        "title": "Diagonais",
+        "content": "A diagonal de uma face do paralelepípedo sai de Pitágoras no plano da face; a diagonal do sólido usa essa diagonal e a terceira aresta, resultando D = √(a² + b² + c²). No cubo, isso vira a√3. Essa fórmula é o caminho mais rápido em questões sobre a maior vareta que cabe numa caixa."
+      },
+      {
+        "title": "Relações entre medidas",
+        "content": "Como o volume depende do produto das três arestas, dobrar apenas uma dobra o volume, mas dobrar todas o multiplica por oito. A área, por depender de produtos dois a dois, quadruplica quando todas as arestas dobram. Essa diferença entre os expoentes 2 e 3 é o que sustenta as questões de ampliação e de embalagem."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Somar todas as seis faces com medidas diferentes, sem dobrar as três distintas, é erro corriqueiro na área total. Outro é confundir a diagonal da face com a do sólido. E em capacidade, lembrar que 1 dm³ é 1 litro: um cubo de 10 cm de aresta comporta exatamente 1 litro."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Uma caixa mede 6 cm por 4 cm por 3 cm. Calcule volume, área total e diagonal antes de conferir: V = 72 cm³; A = 2(24 + 18 + 12) = 108 cm²; D = √(36 + 16 + 9) = √61 ≈ 7,8 cm. Agora, quantos litros cabem numa caixa cúbica de 20 cm de aresta? 8000 cm³ = 8 litros."
+      }
+    ],
+    "recall": {
+      "prompt": "Numa caixa de 6 cm × 4 cm × 3 cm, calcule volume, área total e diagonal do sólido.",
+      "elements": [
+        [
+          "volume 72",
+          [
+            "72"
+          ]
+        ],
+        [
+          "area total 108",
+          [
+            "108"
+          ]
+        ],
+        [
+          "diagonal raiz de 61",
+          [
+            "61",
+            "7,8"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Desigualdades",
+    "sections": [
+      {
+        "title": "As regras que mudam",
+        "content": "Inequações se resolvem como equações, com uma diferença decisiva: multiplicar ou dividir os dois lados por um número negativo inverte o sinal da desigualdade. Somar o mesmo número a ambos os lados não muda nada. Essa única regra explica a maioria dos erros do tópico e precisa ser aplicada conscientemente a cada passo."
+      },
+      {
+        "title": "Inequação produto e quociente",
+        "content": "Para resolver produtos e quocientes, estuda-se o sinal de cada fator separadamente e monta-se o quadro de sinais, multiplicando os sinais em cada intervalo. No quociente, os valores que anulam o denominador ficam sempre fora da solução, mesmo quando a desigualdade não é estrita."
+      },
+      {
+        "title": "Escrever a solução",
+        "content": "A resposta de uma inequação é um conjunto, e escrevê-lo corretamente faz parte da questão: use intervalos, com colchete fechado onde a igualdade vale e aberto onde não vale. União de intervalos aparece com frequência em inequações produto, e é comum a solução ser toda a reta menos alguns pontos."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Esquecer de inverter o sinal ao multiplicar por negativo é o erro dominante. Outro é multiplicar em cruz numa inequação fracionária, o que só é válido se o sinal do denominador for conhecido. E incluir no conjunto solução um valor que anula o denominador."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Resolva −2x + 6 > 0 antes de conferir: −2x > −6, e dividindo por −2 inverte-se o sinal, dando x < 3. Agora resolva (x − 1)(x + 2) ≥ 0: as raízes são 1 e −2, e o produto é positivo fora delas, logo x ≤ −2 ou x ≥ 1. Por fim, em 1/(x − 2) > 0, a solução é x > 2, com x = 2 excluído sempre."
+      }
+    ],
+    "recall": {
+      "prompt": "Resolva −2x + 6 > 0 e (x − 1)(x + 2) ≥ 0, explicando quando o sinal da desigualdade se inverte.",
+      "elements": [
+        [
+          "x menor que 3",
+          [
+            "x < 3",
+            "3"
+          ]
+        ],
+        [
+          "x menor ou igual a -2 ou maior ou igual a 1",
+          [
+            "-2",
+            "1",
+            "ou"
+          ]
+        ],
+        [
+          "dividir por negativo inverte o sinal",
+          [
+            "negativo",
+            "inverte",
+            "sinal"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Determinantes",
+    "sections": [
+      {
+        "title": "Um número associado à matriz quadrada",
+        "content": "Determinante é um número que só existe para matrizes quadradas e que resume informações sobre elas. Em ordem 2, é o produto da diagonal principal menos o da secundária: para linhas (a, b) e (c, d), vale ad − bc. Em ordem 3, a regra de Sarrus repete as duas primeiras colunas e soma as três diagonais descendentes, subtraindo as ascendentes."
+      },
+      {
+        "title": "Propriedades que poupam conta",
+        "content": "Trocar duas linhas troca o sinal do determinante; multiplicar uma linha por k multiplica o determinante por k; somar a uma linha um múltiplo de outra não altera nada. Se houver linha nula, ou duas linhas iguais ou proporcionais, o determinante é zero. Essas propriedades permitem simplificar uma matriz antes de calcular, em vez de aplicar a fórmula de cara."
+      },
+      {
+        "title": "O que o determinante informa",
+        "content": "Determinante nulo significa que a matriz não é invertível e que o sistema associado não tem solução única. Geometricamente, o módulo do determinante de ordem 2 é a área do paralelogramo formado pelos vetores das linhas, e em ordem 3 é o volume do paralelepípedo — daí sair a fórmula da área de um triângulo por coordenadas."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Sarrus só vale para ordem 3: aplicá-la em ordem 4 é erro garantido, e ali é preciso usar Laplace. Outro deslize é esquecer o sinal negativo da diagonal secundária. E determinante de uma soma não é a soma dos determinantes, embora det(A·B) = det(A)·det(B) seja verdadeira."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Calcule o determinante da matriz de linhas (3, 1) e (2, 4) antes de conferir: 3·4 − 1·2 = 10. Agora, se você multiplicar a primeira linha por 5, o determinante passa a 50. Por fim, diga sem calcular o determinante da matriz de linhas (2, 3) e (4, 6): as linhas são proporcionais, então vale zero, e o sistema correspondente não tem solução única."
+      }
+    ],
+    "recall": {
+      "prompt": "Calcule o determinante da matriz de linhas (3, 1) e (2, 4) e diga o que significa um determinante nulo.",
+      "elements": [
+        [
+          "determinante 10",
+          [
+            "10"
+          ]
+        ],
+        [
+          "produto das diagonais com sinal",
+          [
+            "diagonal",
+            "ad - bc",
+            "principal"
+          ]
+        ],
+        [
+          "matriz nao invertivel e sem solucao unica",
+          [
+            "nao invertivel",
+            "solucao unica",
+            "nulo"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Discussão de Sistemas Lineares",
+    "sections": [
+      {
+        "title": "Três desfechos possíveis",
+        "content": "Um sistema linear pode ser possível e determinado, com solução única; possível e indeterminado, com infinitas soluções; ou impossível, sem solução. Em duas variáveis, isso corresponde a retas concorrentes, coincidentes ou paralelas. Discutir um sistema é dizer em qual caso ele cai, muitas vezes em função de um parâmetro presente nos coeficientes."
+      },
+      {
+        "title": "O critério do determinante",
+        "content": "Para sistemas quadrados, se o determinante da matriz dos coeficientes é diferente de zero, o sistema é possível e determinado. Se é zero, o sistema é indeterminado ou impossível, e é preciso analisar as equações: proporcionalidade completa entre elas indica infinitas soluções, enquanto proporção nos coeficientes mas não nos termos independentes indica impossibilidade."
+      },
+      {
+        "title": "Escalonamento",
+        "content": "Escalonar é transformar o sistema em um equivalente mais simples, usando as operações que não mudam a solução: trocar equações de lugar, multiplicar uma por constante não nula e somar a uma equação um múltiplo de outra. Ao final, uma linha do tipo 0 = 0 revela indeterminação e uma linha do tipo 0 = 5 revela impossibilidade, sem precisar de determinantes."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Determinante nulo não significa 'sem solução': significa 'sem solução única', e os dois casos restantes precisam ser separados. Outro erro é discutir apenas o determinante quando o sistema não é quadrado, situação em que só o escalonamento decide. E ao isolar o parâmetro, lembre de testar cada valor encontrado no sistema original."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Discuta o sistema x + y = 3 e 2x + 2y = 6 antes de conferir: a segunda equação é o dobro da primeira, logo há infinitas soluções e o sistema é possível e indeterminado. Agora troque a segunda por 2x + 2y = 7: os coeficientes continuam proporcionais mas os termos independentes não, então o sistema é impossível. Por fim, x + y = 3 e x − y = 1 dá solução única, x = 2 e y = 1."
+      }
+    ],
+    "recall": {
+      "prompt": "Diga o que significa determinante nulo na discussão de um sistema e classifique x + y = 3 com 2x + 2y = 7.",
+      "elements": [
+        [
+          "sistema impossivel",
+          [
+            "impossivel",
+            "sem solucao"
+          ]
+        ],
+        [
+          "nulo indica ausencia de solucao unica",
+          [
+            "unica",
+            "nulo",
+            "nao garante"
+          ]
+        ],
+        [
+          "coeficientes proporcionais e termos nao",
+          [
+            "proporcionais",
+            "termo independente",
+            "independentes"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Distância entre um Ponto e uma Reta",
+    "sections": [
+      {
+        "title": "A fórmula e o que ela mede",
+        "content": "A distância de um ponto P(x₀, y₀) à reta ax + by + c = 0 é |ax₀ + by₀ + c|/√(a² + b²). Ela mede o segmento perpendicular do ponto à reta, que é o menor de todos os segmentos possíveis. O módulo no numerador garante resultado positivo, e o denominador normaliza os coeficientes."
+      },
+      {
+        "title": "Aplicações diretas",
+        "content": "A fórmula dá a altura de um triângulo quando se conhece a equação de um lado, permite calcular a distância entre retas paralelas — basta tomar um ponto de uma e medir até a outra — e decide a posição relativa entre reta e circunferência, comparando a distância do centro à reta com o raio."
+      },
+      {
+        "title": "Interpretação do sinal",
+        "content": "Sem o módulo, o sinal da expressão ax₀ + by₀ + c indica de que lado da reta o ponto está. Pontos com sinais opostos ficam em semiplanos diferentes, o que é a base da representação de inequações no plano e da programação linear, em que se testa um ponto para saber qual região sombrear."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Aplicar a fórmula com a reta na forma reduzida, sem passar para a forma geral, é o erro mais comum: é preciso levar tudo para um lado da igualdade. Outro é esquecer a raiz no denominador. E ao calcular distância entre paralelas, escolher um ponto que não pertence a nenhuma delas."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Calcule a distância de (3, 4) à reta 3x + 4y − 10 = 0 antes de conferir: |9 + 16 − 10|/√(9 + 16) = 15/5 = 3. Agora diga a posição da reta em relação à circunferência de centro (3, 4) e raio 2: como a distância 3 é maior que o raio, a reta é externa e não intercepta a circunferência."
+      }
+    ],
+    "recall": {
+      "prompt": "Calcule a distância de (3,4) à reta 3x + 4y − 10 = 0 e diga como isso decide a posição de uma reta em relação a uma circunferência.",
+      "elements": [
+        [
+          "distancia 3",
+          [
+            "3"
+          ]
+        ],
+        [
+          "usar a forma geral da reta",
+          [
+            "geral",
+            "ax + by",
+            "forma"
+          ]
+        ],
+        [
+          "comparar a distancia do centro com o raio",
+          [
+            "raio",
+            "centro",
+            "comparar"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Equações Polinomiais",
+    "sections": [
+      {
+        "title": "Resolver por fatoração",
+        "content": "Uma equação polinomial se resolve encontrando as raízes do polinômio. O caminho geral é achar uma raiz por inspeção entre os divisores do termo independente, dividir por Briot-Ruffini para baixar o grau e repetir até chegar a uma equação de segundo grau, que se resolve pela fórmula."
+      },
+      {
+        "title": "Relações de Girard",
+        "content": "Para o polinômio de grau n, a soma das raízes é −aₙ₋₁/aₙ e o produto é (−1)ⁿ·a₀/aₙ. No terceiro grau, há ainda a soma dos produtos dois a dois. Essas relações permitem resolver questões que dão informações sobre as raízes sem pedir que elas sejam calculadas, situação comum em prova."
+      },
+      {
+        "title": "Multiplicidade e raízes complexas",
+        "content": "Uma raiz de multiplicidade m conta m vezes no total de n raízes. Em polinômios de coeficientes reais, raízes complexas aparecem sempre em pares conjugados, o que garante que todo polinômio de grau ímpar tem ao menos uma raiz real — resultado que responde diretamente a várias questões objetivas."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Contar raízes distintas em vez de contar com multiplicidade leva a conclusões erradas sobre o grau. Outro erro é aplicar Girard com sinal trocado, esquecendo o −1 na soma. E supor que um polinômio de coeficientes reais pode ter uma única raiz complexa, quando elas vêm sempre aos pares."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Resolva x³ − 6x² + 11x − 6 = 0 antes de conferir: x = 1 é raiz, e dividindo obtém-se x² − 5x + 6, cujas raízes são 2 e 3; as três raízes são 1, 2 e 3. Confira com Girard: a soma é 6, igual a −(−6)/1, e o produto é 6, igual a −(−6)/1 para grau ímpar."
+      }
+    ],
+    "recall": {
+      "prompt": "Resolva x³ − 6x² + 11x − 6 = 0 e confira o resultado pelas relações de Girard.",
+      "elements": [
+        [
+          "raizes 1, 2 e 3",
+          [
+            "1",
+            "2",
+            "3"
+          ]
+        ],
+        [
+          "soma das raizes igual a 6",
+          [
+            "6",
+            "soma"
+          ]
+        ],
+        [
+          "achar uma raiz e baixar o grau",
+          [
+            "briot",
+            "dividir",
+            "raiz"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Equações do 2º Grau",
+    "sections": [
+      {
+        "title": "Resolver e interpretar",
+        "content": "A equação ax² + bx + c = 0, com a ≠ 0, resolve-se pela fórmula com Δ = b² − 4ac. O discriminante informa antes da conta: Δ > 0 dá duas raízes reais distintas, Δ = 0 dá uma raiz dupla e Δ < 0 não dá raiz real. Em muitos casos, fatorar ou completar quadrado é mais rápido do que aplicar a fórmula."
+      },
+      {
+        "title": "Soma e produto",
+        "content": "As relações de Girard dizem que a soma das raízes é −b/a e o produto é c/a. Elas permitem encontrar raízes inteiras por tentativa, montar a equação a partir das raízes e resolver questões que pedem expressões simétricas das raízes sem calculá-las, como a soma dos quadrados, que é (soma)² − 2·produto."
+      },
+      {
+        "title": "A parábola associada",
+        "content": "O gráfico de y = ax² + bx + c é uma parábola com concavidade para cima se a > 0 e para baixo se a < 0. As raízes são os pontos de corte no eixo x, o vértice tem abscissa −b/2a, e a ordenada do vértice é o valor máximo ou mínimo da função — o que resolve problemas de otimização de área e de lucro."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Esquecer o sinal negativo em −b na fórmula é o erro mais frequente. Outro é dividir apenas uma parcela do numerador por 2a, em vez de dividir a expressão inteira. E em problemas de contexto, aceitar raiz negativa para comprimento, quantidade de pessoas ou preço, quando o próprio contexto a exclui: a equação tem duas raízes, mas o problema pode ter uma só resposta válida."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Resolva x² − 5x + 6 = 0 antes de conferir: Δ = 1, raízes 3 e 2, e note que somam 5 e multiplicam 6, como previsto por Girard. Agora encontre o valor máximo de y = −x² + 4x: a abscissa do vértice é 2 e o valor máximo é 4. Por fim, uma equação de raízes 1 e 4 é x² − 5x + 4 = 0."
+      }
+    ],
+    "recall": {
+      "prompt": "Resolva x² − 5x + 6 = 0 e encontre o valor máximo de y = −x² + 4x, citando soma e produto das raízes.",
+      "elements": [
+        [
+          "raizes 2 e 3",
+          [
+            "2",
+            "3"
+          ]
+        ],
+        [
+          "soma 5 e produto 6",
+          [
+            "5",
+            "6",
+            "girard"
+          ]
+        ],
+        [
+          "valor maximo 4 no vertice",
+          [
+            "4",
+            "vertice",
+            "maximo"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Equações e Funções Logarítmicas",
+    "sections": [
+      {
+        "title": "Resolver equações logarítmicas",
+        "content": "O método é reduzir os dois lados a logaritmos de mesma base e igualar os logaritmandos, ou converter para a forma exponencial. Em qualquer caminho, é obrigatório impor as condições de existência antes de resolver e verificar as soluções ao final, porque manipular logaritmos pode introduzir raízes que não pertencem ao domínio."
+      },
+      {
+        "title": "A função logarítmica",
+        "content": "A função f(x) = log_a x tem domínio nos reais positivos e imagem em todos os reais. Ela é crescente quando a > 1 e decrescente quando 0 < a < 1. Seu gráfico corta o eixo x em 1, aproxima-se do eixo y sem tocá-lo, e é a reflexão do gráfico da exponencial de mesma base em relação à reta y = x."
+      },
+      {
+        "title": "Inequações logarítmicas",
+        "content": "Ao comparar logaritmos de mesma base, o sentido da desigualdade se mantém se a base é maior que 1 e se inverte se a base está entre 0 e 1. Além disso, as condições de existência precisam entrar na solução final por interseção — esquecê-las é o erro que mais custa pontos em questões discursivas."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Resolver a inequação sem inverter o sinal quando a base é menor que 1 é o erro específico do tópico. Outro é aceitar solução que anula ou torna negativo o logaritmando. E confundir o gráfico da logarítmica com o da exponencial, trocando domínio por imagem."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Resolva log₂(x + 3) = 4 antes de conferir: x + 3 = 16, logo x = 13, que satisfaz x + 3 > 0. Agora resolva log₂ x < 3: a base é maior que 1, então x < 8, e junto com a condição x > 0 a solução é 0 < x < 8. Por fim, diga onde o gráfico de y = log₃ x corta o eixo x: em x = 1."
+      }
+    ],
+    "recall": {
+      "prompt": "Resolva log₂(x + 3) = 4 e a inequação log₂ x < 3, incluindo as condições de existência.",
+      "elements": [
+        [
+          "x igual a 13",
+          [
+            "13"
+          ]
+        ],
+        [
+          "solucao entre 0 e 8",
+          [
+            "8",
+            "0",
+            "intervalo"
+          ]
+        ],
+        [
+          "condicao de existencia do logaritmando",
+          [
+            "existencia",
+            "positivo",
+            "condicao"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Estatística Descritiva",
+    "sections": [
+      {
+        "title": "Organizar antes de resumir",
+        "content": "Estatística descritiva organiza dados em tabelas de frequência e gráficos antes de resumi-los em números. Frequência absoluta é a contagem; relativa é a proporção do total, útil para comparar conjuntos de tamanhos diferentes. A escolha do gráfico depende do dado: barras para categorias, histograma para dados contínuos agrupados, linha para evolução no tempo."
+      },
+      {
+        "title": "Medidas de tendência central",
+        "content": "Média soma tudo e divide pela quantidade, sendo sensível a valores extremos. Mediana é o valor central da lista ordenada, e por isso resiste a extremos — é a medida preferida para renda. Moda é o valor mais frequente, e pode não existir ou haver mais de uma. Comparar média e mediana revela a assimetria da distribuição."
+      },
+      {
+        "title": "Medidas de dispersão",
+        "content": "Duas turmas podem ter a mesma média e realidades muito diferentes; quem mostra isso é a dispersão. Amplitude é a diferença entre maior e menor valor. O desvio padrão mede o afastamento típico em relação à média: quanto maior, mais espalhados os dados. Em prova, quase sempre basta comparar dispersões qualitativamente, sem calcular."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Usar média onde há valores extremos distorce a leitura, e é exatamente isso que gráficos enganosos exploram. Outro erro é calcular a mediana sem ordenar os dados. E em tabela de frequência, a média deve ser ponderada pelas frequências, não a média simples dos valores da coluna."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Nos dados 2, 3, 3, 4, 8, calcule média, mediana e moda antes de conferir: média 4, mediana 3, moda 3. Note que o valor 8 puxa a média acima da mediana, sinal de assimetria à direita. Agora troque o 8 por 20: a média sobe para 6,4 e a mediana continua 3, o que mostra qual das duas resiste a valores extremos."
+      }
+    ],
+    "recall": {
+      "prompt": "Nos dados 2, 3, 3, 4, 8, calcule média, mediana e moda e explique qual medida resiste a valores extremos.",
+      "elements": [
+        [
+          "media 4",
+          [
+            "4"
+          ]
+        ],
+        [
+          "mediana 3 e moda 3",
+          [
+            "3"
+          ]
+        ],
+        [
+          "a mediana resiste aos extremos",
+          [
+            "mediana",
+            "extremo",
+            "resiste"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Estudo Analítico da Reta",
+    "sections": [
+      {
+        "title": "Coeficiente angular",
+        "content": "O coeficiente angular de uma reta é m = (y₂ − y₁)/(x₂ − x₁), a taxa de variação de y em relação a x, e é igual à tangente do ângulo que a reta forma com o eixo x. Reta crescente tem m positivo, decrescente tem m negativo, horizontal tem m = 0 e vertical não tem coeficiente angular definido."
+      },
+      {
+        "title": "As formas da equação",
+        "content": "A equação fundamental y − y₀ = m(x − x₀) é a mais prática, pois usa um ponto e a inclinação. Dela saem a forma reduzida y = mx + n, em que n é o ponto de corte no eixo y, e a forma geral ax + by + c = 0, em que m = −a/b. Saber transitar entre as três formas é o que agiliza a resolução."
+      },
+      {
+        "title": "Construir a equação a partir de dados",
+        "content": "Com dois pontos, calcule m e use a fundamental. Com um ponto e a condição de paralelismo, copie o m da reta dada. Com perpendicularidade, use o oposto do inverso. Em problemas de mediana, altura ou mediatriz de um triângulo, o roteiro é sempre o mesmo: identificar um ponto e uma inclinação."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Inverter numerador e denominador no cálculo de m é o erro mais comum. Outro é tentar escrever a reduzida de uma reta vertical, que só admite a forma x = k. E ao usar a forma geral, lembrar que m = −a/b, com o sinal negativo que costuma ser esquecido."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Encontre a equação da reta por (1, 2) e (3, 8) antes de conferir: m = 6/2 = 3, e y − 2 = 3(x − 1), ou seja, y = 3x − 1. Agora escreva a reta paralela a essa que passa por (0, 5): mesma inclinação, logo y = 3x + 5. Por fim, a perpendicular por (0, 5) tem m = −1/3: y = −x/3 + 5."
+      }
+    ],
+    "recall": {
+      "prompt": "Encontre a equação da reta por (1,2) e (3,8) e a da paralela por (0,5).",
+      "elements": [
+        [
+          "coeficiente angular 3",
+          [
+            "3"
+          ]
+        ],
+        [
+          "equacao y = 3x - 1",
+          [
+            "3x",
+            "-1"
+          ]
+        ],
+        [
+          "paralela mantem a mesma inclinacao",
+          [
+            "mesma",
+            "paralela",
+            "inclinacao"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Estudo do Sinal de Funções",
+    "sections": [
+      {
+        "title": "Onde a função é positiva ou negativa",
+        "content": "Estudar o sinal é determinar em quais intervalos f(x) > 0, f(x) < 0 e f(x) = 0. Graficamente, é ver onde o gráfico está acima, abaixo ou sobre o eixo x. Os zeros da função são as fronteiras entre os intervalos, e por isso o estudo começa sempre por encontrá-los."
+      },
+      {
+        "title": "Função afim e quadrática",
+        "content": "Na função afim, o sinal muda apenas na raiz, e o sentido da mudança depende do coeficiente angular: com a > 0, ela é negativa antes e positiva depois. Na quadrática, com duas raízes, o sinal é o de a fora das raízes e o oposto entre elas; com raiz dupla, a função não muda de sinal; sem raízes, mantém o sinal de a em toda a reta."
+      },
+      {
+        "title": "Quadro de sinais",
+        "content": "Para produtos e quocientes de funções, monta-se o quadro: uma linha por fator, marcando os intervalos, e uma linha final multiplicando os sinais. É o método que resolve inequações complicadas de forma organizada, e ele exige atenção às raízes do denominador, que ficam sempre excluídas da solução."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Assumir que toda parábola muda de sinal nas raízes ignora os casos de Δ = 0 e Δ < 0. Outro erro é incluir no conjunto solução as raízes do denominador. E trocar o sinal de a ao decidir o comportamento fora das raízes, o que inverte toda a resposta."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Estude o sinal de f(x) = x² − 4 antes de conferir: as raízes são −2 e 2, e como a > 0, a função é positiva para x < −2 ou x > 2, negativa entre −2 e 2, e nula nas raízes. Agora estude o sinal de g(x) = −2x + 6: raiz em 3, positiva antes e negativa depois, porque o coeficiente angular é negativo."
+      }
+    ],
+    "recall": {
+      "prompt": "Estude o sinal de f(x) = x² − 4 e de g(x) = −2x + 6, indicando onde cada uma é positiva.",
+      "elements": [
+        [
+          "positiva fora do intervalo de -2 a 2",
+          [
+            "-2",
+            "2",
+            "fora"
+          ]
+        ],
+        [
+          "negativa entre as raizes",
+          [
+            "entre",
+            "negativa"
+          ]
+        ],
+        [
+          "g e positiva antes de 3",
+          [
+            "3",
+            "antes",
+            "positiva"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Eventos Disjuntos e Eventos Independentes",
+    "sections": [
+      {
+        "title": "Duas ideias que não se confundem",
+        "content": "Eventos disjuntos, ou mutuamente exclusivos, não podem ocorrer ao mesmo tempo: a interseção é vazia. Eventos independentes são aqueles em que a ocorrência de um não altera a probabilidade do outro. São conceitos diferentes e, na prática, quase opostos: dois eventos disjuntos com probabilidade não nula nunca são independentes, porque saber que um ocorreu zera a chance do outro."
+      },
+      {
+        "title": "As fórmulas correspondentes",
+        "content": "Para disjuntos, P(A ou B) = P(A) + P(B), sem termo de interseção porque ela é vazia. Para independentes, P(A e B) = P(A)·P(B), e a condicional se simplifica: P(A|B) = P(A). Antes de aplicar qualquer uma delas, verifique a hipótese; usar a fórmula errada é o erro estrutural do tópico."
+      },
+      {
+        "title": "Como identificar na prática",
+        "content": "Lançamentos sucessivos de moeda ou dado, e retiradas com reposição, são independentes. Retiradas sem reposição não são. Resultados de um mesmo lançamento, como 'sair 2' e 'sair 5' num único dado, são disjuntos. Enunciados com 'ou' pedem soma; com 'e' pedem produto, desde que a hipótese correspondente esteja verificada."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Multiplicar probabilidades de eventos dependentes é o erro mais frequente em urnas sem reposição, onde o denominador diminui a cada retirada. Outro é somar sem verificar se os eventos podem ocorrer juntos. E chamar de independentes eventos que apenas parecem não relacionados, sem testar P(A e B) = P(A)·P(B)."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Uma urna tem 5 bolas brancas e 3 pretas. Qual a chance de tirar duas brancas sem reposição? Calcule antes de conferir: (5/8)·(4/7) = 20/56 = 5/14. Com reposição, seria (5/8)² = 25/64. Agora diga se 'sair cara' e 'sair coroa' num mesmo lançamento são disjuntos ou independentes: disjuntos, porque não podem ocorrer juntos."
+      }
+    ],
+    "recall": {
+      "prompt": "Numa urna com 5 brancas e 3 pretas, calcule a chance de duas brancas sem reposição e explique a diferença entre disjuntos e independentes.",
+      "elements": [
+        [
+          "probabilidade 5/14",
+          [
+            "5/14",
+            "20/56"
+          ]
+        ],
+        [
+          "sem reposicao o denominador muda",
+          [
+            "reposicao",
+            "denominador",
+            "depende"
+          ]
+        ],
+        [
+          "disjuntos nao ocorrem juntos e independentes nao se influenciam",
+          [
+            "juntos",
+            "influencia",
+            "interseccao"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
     "topic": "Função Constante e Função Afim",
     "sections": [
       {
@@ -5882,6 +6837,329 @@
   },
   {
     "subject": "Matemática",
+    "topic": "Funções Bijetoras",
+    "sections": [
+      {
+        "title": "Injetora, sobrejetora e bijetora",
+        "content": "Uma função é injetora quando elementos distintos do domínio têm imagens distintas; sobrejetora quando a imagem é todo o contradomínio; e bijetora quando é as duas coisas. A bijeção estabelece uma correspondência um a um perfeita entre domínio e contradomínio, e é a condição para existir inversa."
+      },
+      {
+        "title": "Testes gráficos",
+        "content": "Injetividade se verifica pelo teste da reta horizontal: se alguma horizontal corta o gráfico em mais de um ponto, a função não é injetora. Sobrejetividade depende do contradomínio declarado: a mesma fórmula pode ser sobrejetora ou não conforme o conjunto de chegada escolhido, o que mostra que essas propriedades não são só da fórmula."
+      },
+      {
+        "title": "Restringir para conseguir bijeção",
+        "content": "Quando a função não é bijetora, restringe-se domínio ou contradomínio até que seja. É o que se faz com y = x², restringindo o domínio aos não negativos, e com as funções trigonométricas, restringidas para definir arco-seno e arco-cosseno. Reconhecer essa prática explica por que arcsen tem imagem limitada."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Afirmar que uma função é sobrejetora sem olhar o contradomínio é o erro conceitual central. Outro é usar o teste da reta vertical, que serve para verificar se é função, no lugar do teste da horizontal, que verifica injetividade. E supor que toda função crescente é bijetora, ignorando o contradomínio."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "A função f(x) = x², dos reais nos reais, é injetora? Responda antes de conferir: não, porque f(2) = f(−2) = 4. E sobrejetora? Também não, porque nenhum valor negativo é atingido. Agora restrinja domínio e contradomínio aos não negativos: aí ela é bijetora e admite inversa, que é a raiz quadrada."
+      }
+    ],
+    "recall": {
+      "prompt": "A função f(x) = x² dos reais nos reais é injetora ou sobrejetora? Como torná-la bijetora?",
+      "elements": [
+        [
+          "nao e injetora porque f(2) = f(-2)",
+          [
+            "nao",
+            "2",
+            "-2"
+          ]
+        ],
+        [
+          "nao e sobrejetora porque nao atinge negativos",
+          [
+            "negativo",
+            "nao atinge",
+            "imagem"
+          ]
+        ],
+        [
+          "restringir dominio e contradominio aos nao negativos",
+          [
+            "restringir",
+            "nao negativos",
+            "positivos"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Funções Trigonométricas",
+    "sections": [
+      {
+        "title": "Gráficos de seno e cosseno",
+        "content": "As funções y = sen x e y = cos x têm domínio real, imagem no intervalo de −1 a 1 e período 2π. Os gráficos são a mesma onda deslocada: o cosseno é o seno adiantado em π/2. A tangente tem período π, imagem real e assíntotas verticais nos pontos em que o cosseno se anula."
+      },
+      {
+        "title": "Parâmetros da função geral",
+        "content": "Em y = a + b·sen(cx + d), cada parâmetro tem papel claro: b altera a amplitude, e a imagem passa a variar entre a − |b| e a + |b|; a desloca verticalmente; c altera o período, que passa a ser 2π/|c|; e d desloca horizontalmente. Ler esses quatro parâmetros resolve diretamente questões de gráfico e de modelagem."
+      },
+      {
+        "title": "Modelagem de fenômenos periódicos",
+        "content": "Marés, temperatura ao longo do ano, ciclos respiratórios e movimento de uma roda-gigante são modelados por funções trigonométricas. Nessas questões, o valor médio é a, a metade da diferença entre máximo e mínimo é |b|, e o tempo de um ciclo completo determina c. Identificar esses três dados no enunciado é praticamente resolver a questão."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Calcular o período como 2π·c, em vez de 2π/c, é o erro mais comum. Outro é confundir amplitude com valor máximo: a amplitude é |b|, e o máximo é a + |b|. E ao ler um gráfico, verifique se o eixo horizontal está em graus ou radianos antes de extrair o período."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Na função y = 3 + 2·sen(2x), determine imagem e período antes de conferir: a imagem vai de 1 a 5 e o período é 2π/2 = π. Agora, numa roda-gigante cuja altura varia entre 2 m e 22 m em ciclos de 40 s, escreva os parâmetros: valor médio 12, amplitude 10 e período 40, logo c = 2π/40 = π/20."
+      }
+    ],
+    "recall": {
+      "prompt": "Na função y = 3 + 2·sen(2x), determine imagem e período; diga como obter amplitude e valor médio de um fenômeno periódico.",
+      "elements": [
+        [
+          "imagem de 1 a 5",
+          [
+            "1",
+            "5"
+          ]
+        ],
+        [
+          "periodo igual a pi",
+          [
+            "pi",
+            "π",
+            "2π/2"
+          ]
+        ],
+        [
+          "amplitude e metade da diferenca entre maximo e minimo",
+          [
+            "amplitude",
+            "metade",
+            "medio"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Identificação de Simetrias I",
+    "sections": [
+      {
+        "title": "Simetria axial",
+        "content": "A reflexão em relação a um eixo leva cada ponto ao ponto do outro lado, à mesma distância e sobre a perpendicular ao eixo. Identificar um eixo de simetria numa figura é verificar se dobrar o desenho por aquela reta faz as metades coincidirem. Letras como A, M e T têm eixo vertical; B, C e D têm eixo horizontal."
+      },
+      {
+        "title": "Simetria central e de rotação",
+        "content": "A simetria central é a rotação de 180° em torno de um ponto: cada ponto vai para o lado oposto, à mesma distância do centro. Figuras como o paralelogramo têm simetria central sem ter eixo de simetria, o que mostra que os dois tipos são independentes. A ordem da simetria de rotação é o número de posições em que a figura coincide consigo mesma numa volta completa."
+      },
+      {
+        "title": "Como testar numa figura",
+        "content": "O procedimento é sistemático: para eixos, teste as retas por vértices opostos, por pontos médios de lados opostos e por combinações; para rotação, verifique se girar por 360°/n reproduz a figura. Em polígonos regulares de n lados, sempre há n eixos e simetria de rotação de ordem n, resultado que resolve boa parte das questões diretamente."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Achar que toda figura simétrica tem eixo é o erro central: o paralelogramo é o contraexemplo padrão. Outro é contar eixos repetidos, como no quadrado, em que a mesma reta pode ser descrita de duas maneiras. E cuidado com figuras coloridas ou com marcações: um padrão interno pode quebrar a simetria do contorno."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Um paralelogramo não retângulo tem eixo de simetria? Responda antes de conferir: não tem nenhum, mas tem simetria central de 180° no encontro das diagonais. Agora, quantos eixos tem um hexágono regular? Seis, e simetria de rotação de ordem 6, ou seja, de 60° em 60°."
+      }
+    ],
+    "recall": {
+      "prompt": "Um paralelogramo não retângulo tem eixo de simetria? E quantos eixos tem um hexágono regular?",
+      "elements": [
+        [
+          "o paralelogramo nao tem eixo",
+          [
+            "nao tem",
+            "nenhum"
+          ]
+        ],
+        [
+          "tem simetria central de 180 graus",
+          [
+            "central",
+            "180",
+            "rotacao"
+          ]
+        ],
+        [
+          "hexagono regular tem seis eixos",
+          [
+            "seis",
+            "6"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Identificação de Simetrias II",
+    "sections": [
+      {
+        "title": "Composição de movimentos",
+        "content": "Compor duas simetrias produz um terceiro movimento rígido. Duas reflexões em eixos paralelos, distantes d, equivalem a uma translação de 2d. Duas reflexões em eixos concorrentes, formando ângulo α, equivalem a uma rotação de 2α em torno do ponto de encontro. Esses resultados explicam padrões repetidos em mosaicos e faixas decorativas."
+      },
+      {
+        "title": "Padrões e ladrilhamentos",
+        "content": "Um ladrilhamento cobre o plano sem falhas nem sobreposições. Só três polígonos regulares ladrilham sozinhos: triângulo equilátero, quadrado e hexágono regular, porque seus ângulos internos, 60°, 90° e 120°, dividem 360° exatamente. Reconhecer a simetria de um mosaico é identificar quais translações, rotações e reflexões o preservam."
+      },
+      {
+        "title": "Simetria em coordenadas",
+        "content": "No plano cartesiano, a reflexão no eixo x leva (x, y) a (x, −y); no eixo y, a (−x, y); na origem, a (−x, −y); e na reta y = x, a (y, x). Ter essas quatro regras na ponta da língua transforma questões de simetria em substituição direta, sem desenho, o que é especialmente útil em geometria analítica."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Trocar as coordenadas da reflexão nos eixos é o erro mais frequente: reflexão no eixo x muda o sinal de y, não de x. Outro é supor que qualquer polígono regular ladrilha o plano — o pentágono regular não ladrilha. E ao compor movimentos, a ordem pode importar, então verifique antes de afirmar equivalência."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Reflita o ponto (3, −2) no eixo y antes de conferir: (−3, −2). Agora reflita-o na reta y = x: (−2, 3). Por fim, diga por que o hexágono regular ladrilha o plano: seu ângulo interno é 120°, e três hexágonos em torno de um vértice completam exatamente 360°."
+      }
+    ],
+    "recall": {
+      "prompt": "Reflita (3, −2) no eixo y e na reta y = x, e explique por que o hexágono regular ladrilha o plano.",
+      "elements": [
+        [
+          "reflexao no eixo y da (-3, -2)",
+          [
+            "-3",
+            "3, -2"
+          ]
+        ],
+        [
+          "reflexao em y = x da (-2, 3)",
+          [
+            "-2, 3",
+            "troca"
+          ]
+        ],
+        [
+          "tres angulos de 120 graus completam 360",
+          [
+            "120",
+            "360",
+            "tres"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Igualdades",
+    "sections": [
+      {
+        "title": "Equivalência entre equações",
+        "content": "Resolver uma equação é substituí-la por outras equivalentes, isto é, com o mesmo conjunto solução. Somar o mesmo número aos dois lados e multiplicar ambos por um número não nulo preservam a equivalência. Multiplicar por uma expressão que pode ser zero, ou elevar ao quadrado, não preserva — e é aí que aparecem raízes estranhas."
+      },
+      {
+        "title": "Equações com radicais e frações",
+        "content": "Em equação com raiz, isola-se o radical antes de elevar ao quadrado, e toda solução obtida deve ser testada na equação original. Em equação fracionária, determina-se primeiro a condição de existência, multiplica-se pelo MMC dos denominadores e resolve-se a equação polinomial resultante, descartando as raízes proibidas."
+      },
+      {
+        "title": "Sistemas e modelagem",
+        "content": "Muitas igualdades vêm de problemas de texto. O roteiro é nomear as incógnitas com clareza, escrever uma equação para cada informação e conferir se o número de equações basta. Ao final, volte ao enunciado: a resposta pedida pode ser uma combinação das incógnitas, e não uma delas isoladamente."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Aceitar raiz estranha depois de elevar ao quadrado é o erro mais comum das equações irracionais. Outro é cancelar uma incógnita dos dois lados dividindo por ela, o que perde a solução zero. E responder a incógnita em vez do que a questão pediu, como dar a idade do filho quando se pediu a do pai."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Resolva √(x + 6) = x antes de conferir: elevando ao quadrado, x² − x − 6 = 0, com raízes 3 e −2; testando na equação original, apenas x = 3 serve, porque a raiz quadrada não devolve valor negativo. Agora resolva 2/x + 1 = 3/2 com a condição x ≠ 0: 2/x = 1/2, logo x = 4. Por fim, verifique por que elevar ao quadrado pode criar raiz nova: a operação iguala números de sinais opostos."
+      }
+    ],
+    "recall": {
+      "prompt": "Resolva √(x + 6) = x e explique por que uma das raízes precisa ser descartada.",
+      "elements": [
+        [
+          "solucao x = 3",
+          [
+            "3"
+          ]
+        ],
+        [
+          "a raiz -2 e estranha",
+          [
+            "-2",
+            "descartada",
+            "estranha"
+          ]
+        ],
+        [
+          "elevar ao quadrado nao preserva equivalencia",
+          [
+            "quadrado",
+            "verificar",
+            "testar"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Introdução ao Estudo Analítico das Cônicas",
+    "sections": [
+      {
+        "title": "As três cônicas",
+        "content": "Elipse, parábola e hipérbole são as curvas obtidas cortando um cone duplo por planos em inclinações diferentes. Cada uma tem uma definição por distâncias: a elipse é o lugar dos pontos cuja soma das distâncias a dois focos é constante; a hipérbole, cuja diferença é constante; e a parábola, os equidistantes de um foco e de uma reta diretriz."
+      },
+      {
+        "title": "Equações reduzidas",
+        "content": "Com centro na origem, a elipse é x²/a² + y²/b² = 1 e a hipérbole é x²/a² − y²/b² = 1; o sinal é a única diferença estrutural, e é ele que decide a curva. A parábola com vértice na origem é y² = 4px ou x² = 4py, conforme o eixo. Reconhecer a equação já responde a boa parte das questões objetivas."
+      },
+      {
+        "title": "Elementos e aplicações",
+        "content": "Na elipse, a² = b² + c², com c a distância do centro ao foco, e a excentricidade c/a mede o achatamento. Órbitas planetárias são elipses com o Sol num foco; antenas parabólicas concentram sinais no foco da parábola; e a hipérbole aparece em sistemas de localização por diferença de tempo de sinal."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Trocar a² e b² na elipse leva a inverter o eixo maior: o maior denominador está sob a variável do eixo maior. Outro erro é usar a² = b² + c² na hipérbole, onde a relação correta é c² = a² + b². E confundir excentricidade com distância focal."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Identifique a curva de equação x²/25 + y²/9 = 1 antes de conferir: é uma elipse de eixo maior horizontal, com a = 5 e b = 3, logo c = 4 e excentricidade 0,8. Agora identifique x²/25 − y²/9 = 1: é uma hipérbole, e nela a relação é c² = a² + b², dando c² = 34. Por fim, na parábola y² = 8x, compare com y² = 4px para obter p = 2, de modo que o foco está em (2, 0) e a diretriz é a reta x = −2."
+      }
+    ],
+    "recall": {
+      "prompt": "Identifique a curva x²/25 + y²/9 = 1, seus semieixos e a excentricidade; diga o que muda se o sinal for negativo.",
+      "elements": [
+        [
+          "elipse com a = 5 e b = 3",
+          [
+            "elipse",
+            "5",
+            "3"
+          ]
+        ],
+        [
+          "excentricidade 0,8",
+          [
+            "0,8",
+            "4/5",
+            "c = 4"
+          ]
+        ],
+        [
+          "sinal negativo indica hiperbole",
+          [
+            "hiperbole",
+            "negativo",
+            "menos"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
     "topic": "Introdução ao Modelo Exponencial",
     "sections": [
       {
@@ -5935,6 +7213,272 @@
   },
   {
     "subject": "Matemática",
+    "topic": "Introdução aos Logaritmos",
+    "sections": [
+      {
+        "title": "Logaritmo é expoente",
+        "content": "O logaritmo de b na base a é o expoente ao qual se eleva a para obter b: log_a b = x significa aˣ = b. Toda a teoria decorre dessa definição, incluindo as condições de existência: a base precisa ser positiva e diferente de 1, e o logaritmando precisa ser estritamente positivo."
+      },
+      {
+        "title": "As propriedades operatórias",
+        "content": "O logaritmo transforma produto em soma, quociente em diferença e potência em produto: log(xy) = log x + log y, log(x/y) = log x − log y e log xⁿ = n·log x. Essas propriedades são a razão histórica da invenção dos logaritmos e continuam sendo a razão de sua utilidade em escalas como pH, Richter e decibel."
+      },
+      {
+        "title": "Mudança de base",
+        "content": "Para calcular um logaritmo em base qualquer com uma tabela ou calculadora de base 10, usa-se log_a b = log b/log a. A mesma fórmula permite comparar logaritmos de bases diferentes e resolver equações em que a incógnita aparece na base. As bases mais frequentes são 10, escrita sem índice, e o número e, escrita como ln."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Escrever log(x + y) como log x + log y é o erro mais grave: a propriedade vale para produto, não para soma. Outro é ignorar a condição de existência e aceitar solução que torna o logaritmando negativo ou nulo. E confundir log x² com (log x)², que são diferentes."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Calcule log₂ 32 antes de conferir: 2⁵ = 32, logo o resultado é 5. Agora use as propriedades para calcular log 200 sabendo que log 2 ≈ 0,30: log 200 = log 2 + log 100 = 0,30 + 2 = 2,30. Por fim, resolva log₃(x − 1) = 2: x − 1 = 9, logo x = 10, valor que respeita a condição de existência."
+      }
+    ],
+    "recall": {
+      "prompt": "Calcule log₂ 32 e log 200 sabendo que log 2 ≈ 0,30, e diga as condições de existência de um logaritmo.",
+      "elements": [
+        [
+          "log de 32 na base 2 e 5",
+          [
+            "5"
+          ]
+        ],
+        [
+          "log de 200 vale 2,30",
+          [
+            "2,30",
+            "2,3"
+          ]
+        ],
+        [
+          "base positiva diferente de 1 e logaritmando positivo",
+          [
+            "positivo",
+            "base",
+            "1"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Introdução à Geometria Analítica",
+    "sections": [
+      {
+        "title": "Pontos no plano cartesiano",
+        "content": "A geometria analítica traduz figuras em equações usando coordenadas. A distância entre A(x₁, y₁) e B(x₂, y₂) é √((x₂ − x₁)² + (y₂ − y₁)²), que é Pitágoras aplicado ao triângulo formado com os catetos paralelos aos eixos. O ponto médio tem coordenadas iguais às médias das coordenadas dos extremos."
+      },
+      {
+        "title": "Alinhamento e área",
+        "content": "Três pontos estão alinhados quando o determinante formado por suas coordenadas, com uma coluna de 1, é zero. Quando não é zero, seu módulo dividido por dois dá a área do triângulo. Essa dupla utilidade do mesmo determinante é um dos atalhos mais rentáveis do assunto."
+      },
+      {
+        "title": "Quadrantes e simetrias",
+        "content": "O sinal das coordenadas define o quadrante, e as simetrias em relação aos eixos e à origem trocam sinais de maneira previsível. Saber que a reflexão no eixo x muda o sinal de y, e que a reflexão na reta y = x troca as coordenadas, resolve questões de transformação sem nenhum desenho."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Subtrair coordenadas na ordem trocada não afeta a distância, porque elas são elevadas ao quadrado, mas afeta outras fórmulas, como a do coeficiente angular. Outro erro é esquecer de dividir por dois na área. E confundir o par ordenado, lendo (3, 5) como se fosse (5, 3), inverte tudo."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Calcule a distância entre (1, 2) e (4, 6) antes de conferir: √(9 + 16) = 5. Agora o ponto médio: (2,5; 4). Por fim, verifique se (0,0), (2,2) e (5,5) estão alinhados: todos satisfazem y = x, logo estão alinhados, e o determinante correspondente é zero."
+      }
+    ],
+    "recall": {
+      "prompt": "Calcule a distância entre (1,2) e (4,6), o ponto médio, e diga como verificar alinhamento de três pontos.",
+      "elements": [
+        [
+          "distancia 5",
+          [
+            "5"
+          ]
+        ],
+        [
+          "ponto medio (2,5; 4)",
+          [
+            "2,5",
+            "4"
+          ]
+        ],
+        [
+          "determinante nulo indica alinhamento",
+          [
+            "determinante",
+            "zero",
+            "alinhados"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Introdução à Geometria Plana",
+    "sections": [
+      {
+        "title": "Os objetos primitivos",
+        "content": "Ponto, reta e plano não são definidos: são aceitos como noções primitivas, e tudo o mais se constrói a partir deles. Segmento é o trecho de reta entre dois pontos; semirreta tem origem e segue indefinidamente. Duas retas no plano são paralelas quando não têm ponto comum e concorrentes quando se cruzam em exatamente um ponto."
+      },
+      {
+        "title": "Ângulos e suas relações",
+        "content": "Dois ângulos são complementares quando somam 90° e suplementares quando somam 180°. Ângulos opostos pelo vértice são iguais. Quando uma transversal corta duas paralelas, ângulos correspondentes e alternos são iguais, e colaterais são suplementares — o conjunto de relações que resolve praticamente toda questão de figura com paralelas."
+      },
+      {
+        "title": "Do axioma à demonstração",
+        "content": "A geometria plana é organizada dedutivamente: poucos postulados, muitos teoremas. Saber que a soma dos ângulos internos de um triângulo é 180° não é fato isolado, é consequência do postulado das paralelas. Em prova, justificar cada passo com o nome da propriedade usada é o que separa uma resposta completa de uma resposta certa por acaso."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Confiar no desenho é o erro mais perigoso: figuras de prova raramente estão em escala, e ângulos que parecem retos podem não ser. Outro deslize é aplicar relações de paralelas sem que o enunciado garanta o paralelismo. E confundir complementar com suplementar troca 90° por 180° e derruba a questão."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Duas retas paralelas são cortadas por uma transversal e um dos ângulos mede 130°. Determine os demais antes de conferir: o oposto pelo vértice também mede 130°, os colaterais medem 50°, e os correspondentes repetem 130° e 50° na outra reta. Agora calcule o complemento de 35°: 55°; e o suplemento de 35°: 145°."
+      }
+    ],
+    "recall": {
+      "prompt": "Uma transversal corta duas paralelas e um ângulo mede 130°. Determine os demais e diga qual propriedade justifica cada um.",
+      "elements": [
+        [
+          "angulos de 130 e 50 graus",
+          [
+            "130",
+            "50"
+          ]
+        ],
+        [
+          "opostos pelo vertice sao iguais",
+          [
+            "oposto",
+            "vertice",
+            "iguais"
+          ]
+        ],
+        [
+          "colaterais sao suplementares",
+          [
+            "colateral",
+            "suplementar",
+            "180"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Introdução à Teoria dos Números Inteiros",
+    "sections": [
+      {
+        "title": "Divisibilidade e o algoritmo da divisão",
+        "content": "Dizer que b divide a é dizer que existe inteiro k com a = b·k, ou seja, que o resto é zero. Quando o resto não é zero, vale o algoritmo da divisão: a = b·q + r, com 0 ≤ r < b. Essa igualdade é a base de quase toda questão de restos, calendário e sequências periódicas, porque permite trocar um número enorme pelo seu resto."
+      },
+      {
+        "title": "Primos, fatoração e o teorema fundamental",
+        "content": "Todo inteiro maior que 1 se escreve, de maneira única, como produto de primos. Fatorar é a chave de MDC e MMC: o MDC toma os primos comuns com o menor expoente e o MMC toma todos os primos com o maior expoente. Uma consequência prática é que o número de divisores de n sai dos expoentes da fatoração, somando um a cada e multiplicando."
+      },
+      {
+        "title": "MDC, MMC e onde eles aparecem",
+        "content": "O MDC responde a perguntas de repartir em grupos iguais do maior tamanho possível; o MMC responde a perguntas de encontro, ciclos e coincidência de eventos. Vale sempre a relação MDC(a,b)·MMC(a,b) = a·b, útil quando o enunciado dá um e pede o outro. Reconhecer qual dos dois o problema pede é metade do trabalho."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Trocar MDC por MMC é o erro mais frequente: 'ao mesmo tempo' e 'de novo juntos' pedem MMC; 'maior pedaço igual' e 'dividir sem sobra' pedem MDC. Outro deslize é esquecer que 1 não é primo e que 2 é o único primo par. E o resto de uma divisão nunca pode ser maior ou igual ao divisor."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Dois ônibus partem juntos, um a cada 12 minutos e outro a cada 18. Calcule quando voltam a partir juntos antes de conferir: MMC(12,18) = 36 minutos. Agora, qual o maior tamanho de pedaços iguais para cortar barras de 24 cm e 36 cm sem sobra? MDC(24,36) = 12 cm. Por fim, qual o resto de 2¹⁰⁰ por 3? Como 2 deixa resto 2 e 2² deixa 1, o expoente par dá resto 1."
+      }
+    ],
+    "recall": {
+      "prompt": "Dois ônibus saem a cada 12 e 18 minutos. Quando partem juntos de novo? E qual o maior pedaço igual em barras de 24 e 36 cm?",
+      "elements": [
+        [
+          "36 minutos pelo MMC",
+          [
+            "36",
+            "mmc"
+          ]
+        ],
+        [
+          "12 centimetros pelo MDC",
+          [
+            "12",
+            "mdc"
+          ]
+        ],
+        [
+          "juntos pede MMC e repartir pede MDC",
+          [
+            "juntos",
+            "repartir",
+            "distinguir"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Introdução às Funções",
+    "sections": [
+      {
+        "title": "Relação com regra única",
+        "content": "Função é uma relação que associa a cada elemento do domínio exatamente um elemento do contradomínio. É essa unicidade que distingue função de relação qualquer, e ela tem tradução gráfica direta: qualquer reta vertical corta o gráfico de uma função em no máximo um ponto. Testar isso num gráfico responde de imediato se ele representa função."
+      },
+      {
+        "title": "Domínio, contradomínio e imagem",
+        "content": "O domínio é o conjunto onde a função está definida; o contradomínio é o conjunto de chegada declarado; a imagem é o subconjunto do contradomínio efetivamente atingido. Determinar o domínio de uma função dada por fórmula é listar as restrições: denominador diferente de zero, radicando de índice par não negativo e logaritmando positivo."
+      },
+      {
+        "title": "Ler um gráfico",
+        "content": "O gráfico concentra quase tudo o que se pergunta: onde a função cresce ou decresce, onde ela é positiva ou negativa, onde estão os zeros, quais são os valores máximo e mínimo. Zeros são os pontos de corte no eixo x; o valor em x = 0 é o corte no eixo y. Traduzir uma pergunta verbal nessa leitura gráfica é a habilidade mais cobrada."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Confundir imagem com contradomínio é o erro conceitual mais comum, e ele reaparece no estudo de funções sobrejetoras. Outro é esquecer as restrições de domínio ao trabalhar com frações e raízes. E ler no gráfico o valor de x quando a pergunta pedia o de y, ou o contrário."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Determine o domínio de f(x) = √(x − 2)/(x − 5) antes de conferir: o radicando exige x ≥ 2 e o denominador exige x ≠ 5, logo o domínio é [2, 5) unido a (5, +∞). Agora, dada f(x) = 2x − 6, encontre o zero e o corte no eixo y: o zero é x = 3 e o corte em y é −6."
+      }
+    ],
+    "recall": {
+      "prompt": "Determine o domínio de f(x) = √(x − 2)/(x − 5) e explique a diferença entre imagem e contradomínio.",
+      "elements": [
+        [
+          "dominio x maior ou igual a 2 e diferente de 5",
+          [
+            "2",
+            "5",
+            "≥"
+          ]
+        ],
+        [
+          "radicando nao negativo e denominador nao nulo",
+          [
+            "radicando",
+            "denominador",
+            "zero"
+          ]
+        ],
+        [
+          "imagem e o que a funcao realmente atinge",
+          [
+            "imagem",
+            "atingido",
+            "subconjunto"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
     "topic": "Introdução às Probabilidades",
     "sections": [
       {
@@ -5958,6 +7502,428 @@
         "content": "Uma moeda honesta é lançada três vezes. A probabilidade de sair pelo menos uma cara é 1 menos a chance de não sair cara: 1 − (1/2)³ = 7/8. Explique por que somar diretamente os casos “uma cara”, “duas caras” e “três caras” exigiria cuidado com a contagem de sequências."
       }
     ]
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Introdução às Sequências",
+    "sections": [
+      {
+        "title": "O que é uma sequência",
+        "content": "Sequência é uma lista ordenada de números em que a posição importa: o primeiro termo é a₁, o enésimo é aₙ. Ela pode ser dada pela lei de formação, que calcula aₙ diretamente a partir de n, ou pela recorrência, que ensina a obter cada termo a partir do anterior. Ver os dois formatos como descrições da mesma lista é o que destrava os exercícios."
+      },
+      {
+        "title": "Ler o padrão",
+        "content": "Diante de uma lista, teste primeiro as diferenças entre termos consecutivos: se forem constantes, a sequência é aritmética. Se não, teste os quocientes: se forem constantes, é geométrica. Se nenhum dos dois, procure padrões de segunda diferença, alternância de sinais ou dependência dos dois termos anteriores, como em Fibonacci."
+      },
+      {
+        "title": "Sequências e problemas reais",
+        "content": "Sequências modelam parcelamentos, empilhamentos, populações e figuras que crescem por etapas. Nas questões com figuras, conte os elementos das primeiras três ou quatro etapas, escreva a lista, encontre a lei e só depois responda ao que foi pedido — normalmente uma etapa distante, que ninguém desenharia à mão."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Confundir o número da posição com o valor do termo é o erro que mais aparece: na sequência 5, 8, 11, o termo de posição 2 vale 8. Outro tropeço é achar que três termos bastam para garantir o padrão; confira sempre com um quarto. E em questão de figura, verifique se a primeira etapa é n = 0 ou n = 1, porque isso desloca a lei inteira."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Na sequência 3, 7, 11, 15, encontre a lei de formação antes de conferir: as diferenças são 4, então aₙ = 3 + 4(n − 1) = 4n − 1. Verifique com n = 4: 15, correto. Agora diga o vigésimo termo: 4·20 − 1 = 79. Por fim, na sequência definida por a₁ = 2 e aₙ = 2aₙ₋₁ + 1, escreva os quatro primeiros: 2, 5, 11, 23."
+      }
+    ],
+    "recall": {
+      "prompt": "Na sequência 3, 7, 11, 15, escreva a lei de formação e calcule o vigésimo termo, dizendo como você identificou o padrão.",
+      "elements": [
+        [
+          "lei 4n - 1",
+          [
+            "4n",
+            "4 n"
+          ]
+        ],
+        [
+          "vigesimo termo 79",
+          [
+            "79"
+          ]
+        ],
+        [
+          "diferencas constantes",
+          [
+            "diferenca",
+            "constante",
+            "4"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Introdução às Técnicas de Contagem",
+    "sections": [
+      {
+        "title": "O princípio multiplicativo",
+        "content": "Se uma escolha pode ser feita de m maneiras e, em seguida, outra de n maneiras, o total de sequências de escolhas é m·n. Esse princípio fundamental da contagem se estende a quantas etapas houver e resolve a maioria dos problemas sem fórmula nenhuma: basta desenhar as etapas e multiplicar as possibilidades de cada uma."
+      },
+      {
+        "title": "Quando somar em vez de multiplicar",
+        "content": "Multiplica-se quando as escolhas são etapas de uma mesma construção; soma-se quando os casos são alternativas excludentes. Ir de A a B de ônibus ou de trem soma; ir de A a B e depois a C multiplica. Reconhecer o 'e' e o 'ou' do enunciado, e verificar se os casos se sobrepõem, é o que decide a operação."
+      },
+      {
+        "title": "Restrições primeiro",
+        "content": "Quando há restrições — um lugar fixo, dois que não podem ficar juntos, um algarismo que não pode ser zero —, resolva a etapa restrita antes das livres. Alternativamente, conte tudo e subtraia os casos proibidos, estratégia do complementar, que costuma ser mais rápida quando a restrição é do tipo 'pelo menos um'."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Esquecer que um número não começa com zero é o erro clássico das questões de senhas e placas. Outro é multiplicar quando os casos são excludentes, inflando o total. E ao usar o complementar, cuidado para subtrair do total correto, e não de um total parcial já restrito."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Quantos números de três algarismos distintos existem? Calcule antes de conferir: 9 opções para o primeiro (sem zero), 9 para o segundo e 8 para o terceiro, dando 648. Agora, quantas senhas de quatro dígitos com repetição permitida? São 10⁴ = 10000. Por fim, quantas dessas senhas têm pelo menos um dígito repetido? Total menos as de dígitos distintos: 10000 − 5040 = 4960."
+      }
+    ],
+    "recall": {
+      "prompt": "Quantos números de três algarismos distintos existem? Explique por que o primeiro algarismo tem apenas 9 opções.",
+      "elements": [
+        [
+          "total de 648",
+          [
+            "648"
+          ]
+        ],
+        [
+          "principio multiplicativo por etapas",
+          [
+            "multiplica",
+            "etapas",
+            "principio"
+          ]
+        ],
+        [
+          "o numero nao comeca com zero",
+          [
+            "zero",
+            "primeiro",
+            "nao pode"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Inversão de Funções",
+    "sections": [
+      {
+        "title": "Desfazer a operação",
+        "content": "A função inversa desfaz o que a função fez: se f leva a em b, f⁻¹ leva b em a. Consequentemente, f(f⁻¹(x)) = x e f⁻¹(f(x)) = x. Encontrar a inversa é trocar x por y na equação e isolar y, procedimento que corresponde exatamente a inverter os papéis de entrada e saída."
+      },
+      {
+        "title": "Quando existe",
+        "content": "Só funções bijetoras admitem inversa: se dois valores diferentes do domínio dão a mesma imagem, não há como desfazer sem ambiguidade. Por isso é comum restringir o domínio para tornar a função invertível, como acontece com y = x² restrita aos não negativos, cuja inversa é a raiz quadrada."
+      },
+      {
+        "title": "Simetria dos gráficos",
+        "content": "Os gráficos de f e f⁻¹ são simétricos em relação à reta y = x, porque trocar x por y é exatamente refletir nessa reta. Esse fato permite esboçar o gráfico da inversa sem calculá-la e explica visualmente a relação entre exponencial e logaritmo, que são inversas uma da outra."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Confundir f⁻¹(x) com 1/f(x) é o erro de notação mais grave do tópico: o expoente −1 indica inversa, não recíproco. Outro é esquecer de verificar a bijetividade antes de inverter. E trocar domínio com imagem: o domínio da inversa é a imagem da original."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Encontre a inversa de f(x) = 3x − 6 antes de conferir: trocando e isolando, y = (x + 6)/3, logo f⁻¹(x) = (x + 6)/3. Confira compondo: f(f⁻¹(x)) = 3·(x + 6)/3 − 6 = x. Agora diga qual é a inversa de f(x) = x² com domínio nos reais não negativos: f⁻¹(x) = √x."
+      }
+    ],
+    "recall": {
+      "prompt": "Encontre a inversa de f(x) = 3x − 6, verifique compondo e diga que condição a função precisa cumprir para ter inversa.",
+      "elements": [
+        [
+          "inversa (x + 6)/3",
+          [
+            "x + 6",
+            "3"
+          ]
+        ],
+        [
+          "a composicao devolve x",
+          [
+            "x",
+            "verifica",
+            "compor"
+          ]
+        ],
+        [
+          "a funcao precisa ser bijetora",
+          [
+            "bijetora",
+            "injetora",
+            "unica"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Lugar Geométrico e Equação da Circunferência",
+    "sections": [
+      {
+        "title": "Lugar geométrico",
+        "content": "Um lugar geométrico é o conjunto dos pontos que satisfazem uma condição. A circunferência é o lugar dos pontos que distam r de um centro fixo; a mediatriz é o lugar dos pontos equidistantes de dois pontos; a bissetriz, dos equidistantes de duas retas. Traduzir a condição em equação com a fórmula da distância é o método geral."
+      },
+      {
+        "title": "A equação reduzida e a geral",
+        "content": "Da definição sai (x − a)² + (y − b)² = r², com centro (a, b) e raio r. Desenvolvendo os quadrados chega-se à forma geral x² + y² + Dx + Ey + F = 0. Para voltar da geral à reduzida, completa-se quadrado em x e em y, procedimento que também revela se a equação representa mesmo uma circunferência."
+      },
+      {
+        "title": "Quando não é circunferência",
+        "content": "Ao completar quadrados, o número do lado direito precisa ser positivo para haver raio real. Se der zero, o lugar é um único ponto; se der negativo, não há ponto algum. Além disso, os coeficientes de x² e y² precisam ser iguais e não pode haver termo em xy, senão a curva é outra cônica."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Ler o centro com os sinais da equação, tomando (x − 3)² como centro −3, é o erro mais frequente: o centro é +3. Outro é esquecer que o lado direito é r², e não r. E ao completar quadrados, somar o termo em apenas um lado da igualdade desequilibra a equação."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Identifique centro e raio de x² + y² − 6x + 4y − 12 = 0 antes de conferir: completando quadrados, (x − 3)² + (y + 2)² = 25, logo centro (3, −2) e raio 5. Agora escreva a equação da circunferência de centro (1, 0) e raio 3: (x − 1)² + y² = 9."
+      }
+    ],
+    "recall": {
+      "prompt": "Identifique centro e raio de x² + y² − 6x + 4y − 12 = 0 e explique o método usado.",
+      "elements": [
+        [
+          "centro em (3, -2)",
+          [
+            "3",
+            "-2"
+          ]
+        ],
+        [
+          "raio 5",
+          [
+            "5"
+          ]
+        ],
+        [
+          "completar quadrados",
+          [
+            "completar",
+            "quadrado",
+            "reduzida"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Modelagem Algébrica de Problemas I",
+    "sections": [
+      {
+        "title": "Traduzir o enunciado",
+        "content": "Modelar é transformar texto em equação. O procedimento é sempre o mesmo: identificar a pergunta, nomear a incógnita com uma frase completa — 'seja x o número de canetas' —, traduzir cada informação numa igualdade e só então resolver. Nomear mal a incógnita é a origem da maioria dos erros, não a álgebra em si."
+      },
+      {
+        "title": "Padrões recorrentes",
+        "content": "Problemas de idade relacionam valores no presente e no futuro somando o mesmo número a todas as idades. Problemas de mistura igualam a quantidade de soluto antes e depois. Problemas de velocidade usam distância igual a velocidade vezes tempo, e problemas de trabalho somam as frações da tarefa feitas por unidade de tempo."
+      },
+      {
+        "title": "Conferir a resposta",
+        "content": "Toda modelagem termina com verificação: substitua o valor encontrado no enunciado original, não na equação, porque um erro de tradução não aparece na conferência algébrica. Verifique também se a resposta faz sentido no contexto — número de pessoas é inteiro e positivo, idade não é negativa."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Responder o valor da incógnita quando a questão pedia outra coisa é o erro mais frequente. Outro é misturar unidades, como somar minutos com horas. E traduzir 'a mais que' invertendo a ordem, escrevendo x = y + 5 quando o enunciado dizia o contrário."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Um pai tem 40 anos e o filho, 10. Em quantos anos a idade do pai será o dobro da do filho? Monte antes de conferir: 40 + x = 2(10 + x), logo 40 + x = 20 + 2x e x = 20. Verifique: em 20 anos, o pai terá 60 e o filho 30, e 60 é o dobro de 30."
+      }
+    ],
+    "recall": {
+      "prompt": "Um pai tem 40 anos e o filho 10: em quantos anos a idade do pai será o dobro da do filho? Mostre a equação e a verificação.",
+      "elements": [
+        [
+          "resposta 20 anos",
+          [
+            "20"
+          ]
+        ],
+        [
+          "equacao 40 + x = 2(10 + x)",
+          [
+            "40 + x",
+            "2(10",
+            "dobro"
+          ]
+        ],
+        [
+          "conferir substituindo no enunciado",
+          [
+            "verificar",
+            "60",
+            "30"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Modelagem Algébrica de Problemas II",
+    "sections": [
+      {
+        "title": "Quando o modelo é quadrático",
+        "content": "Situações em que uma grandeza aparece multiplicada por outra que depende dela geram equações do segundo grau: área de terrenos com perímetro fixo, receita como preço vezes quantidade demandada, e movimentos com aceleração constante. Reconhecer esse produto no enunciado é o que indica que o modelo será quadrático."
+      },
+      {
+        "title": "Otimização pelo vértice",
+        "content": "Quando o modelo é quadrático, o vértice da parábola dá o valor ótimo. Em problemas de área com perímetro fixo, o máximo ocorre no quadrado; em receita, no ponto médio entre os preços que zeram a demanda. Basta escrever a função, achar −b/2a e substituir para obter o valor ótimo correspondente."
+      },
+      {
+        "title": "Validar o resultado",
+        "content": "Nem toda raiz encontrada serve: comprimentos são positivos, quantidades de pessoas são inteiras e preços não podem ser negativos. Além disso, o domínio do problema pode ser um intervalo, e nesse caso o máximo pode estar numa extremidade e não no vértice — verificação que muitas resoluções esquecem."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Adotar o vértice como resposta sem verificar se ele pertence ao domínio do problema é o erro mais sutil do tópico. Outro é confundir a abscissa do vértice, que diz onde ocorre o ótimo, com a ordenada, que diz qual é o valor ótimo. E esquecer de descartar a raiz negativa em contexto geométrico."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Com 40 m de cerca, qual o maior terreno retangular que se pode cercar? Monte antes de conferir: se um lado é x, o outro é 20 − x, e a área é A = 20x − x², cujo vértice está em x = 10, dando área máxima de 100 m² num quadrado de lado 10. Agora, se o terreno precisa ter no máximo 6 m de frente, o máximo passa a ser em x = 6, com área 84 m²."
+      }
+    ],
+    "recall": {
+      "prompt": "Com 40 m de cerca, qual o maior terreno retangular possível? E o que muda se a frente for limitada a 6 m?",
+      "elements": [
+        [
+          "area maxima de 100 metros quadrados",
+          [
+            "100"
+          ]
+        ],
+        [
+          "o otimo ocorre no quadrado de lado 10",
+          [
+            "10",
+            "quadrado",
+            "vertice"
+          ]
+        ],
+        [
+          "com restricao o maximo vai para a extremidade",
+          [
+            "6",
+            "84",
+            "restricao"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Modelagem Exponencial de Problemas",
+    "sections": [
+      {
+        "title": "Quando o modelo é exponencial",
+        "content": "O modelo exponencial descreve grandezas que variam por fator constante em intervalos iguais: juros compostos, crescimento populacional, decaimento radioativo e depreciação. A forma geral é y = y₀·aᵗ, com a > 1 para crescimento e 0 < a < 1 para decrescimento. Identificar o fator constante no enunciado é o que revela o modelo."
+      },
+      {
+        "title": "Meia-vida e tempo de duplicação",
+        "content": "Quando a grandeza cai pela metade a cada período T, escreve-se y = y₀·(1/2)^(t/T); quando dobra a cada período, troca-se 1/2 por 2. Essa forma evita calcular a base, porque o próprio enunciado dá o período característico. É o formato preferível em questões de carbono-14, medicamentos e culturas de bactérias."
+      },
+      {
+        "title": "Resolver com logaritmo",
+        "content": "Quando a incógnita está no expoente, aplica-se logaritmo aos dois lados e usa-se a propriedade da potência para trazê-la para baixo. É o único caminho quando o valor pedido não é múltiplo simples do período característico, e é o motivo pelo qual logaritmo e exponencial sempre aparecem juntos em prova."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Tratar crescimento exponencial como linear, somando a mesma quantidade em vez de multiplicar pelo mesmo fator, é o erro conceitual central. Outro é confundir taxa com fator: uma taxa de 20% corresponde ao fator 1,20. E esquecer de dividir o expoente pelo período característico nas fórmulas de meia-vida."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Uma substância tem meia-vida de 8 anos. Que fração resta após 24 anos? Calcule antes de conferir: 24/8 = 3 meias-vidas, logo resta (1/2)³ = 1/8. Agora, um capital de R$ 1.000 rende 10% ao ano em juros compostos: após 3 anos, o montante é 1000·1,1³ = 1331 reais."
+      }
+    ],
+    "recall": {
+      "prompt": "Uma substância tem meia-vida de 8 anos: que fração resta após 24 anos? E qual o montante de R$ 1.000 a 10% ao ano por 3 anos?",
+      "elements": [
+        [
+          "resta um oitavo",
+          [
+            "1/8",
+            "oitavo"
+          ]
+        ],
+        [
+          "montante de 1331 reais",
+          [
+            "1331"
+          ]
+        ],
+        [
+          "o modelo multiplica por fator constante",
+          [
+            "fator",
+            "multiplica",
+            "exponencial"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Multiplicação de Matrizes",
+    "sections": [
+      {
+        "title": "Linha por coluna",
+        "content": "O produto A·B só existe quando o número de colunas de A é igual ao número de linhas de B, e o resultado tem as linhas de A e as colunas de B. Cada elemento cᵢⱼ é a soma dos produtos da linha i de A pelos elementos correspondentes da coluna j de B. É a única operação do assunto que não é feita elemento a elemento, e por isso a que mais confunde."
+      },
+      {
+        "title": "Propriedades que mudam",
+        "content": "O produto de matrizes é associativo e distributivo, mas não é comutativo: em geral A·B ≠ B·A, e às vezes um dos produtos nem existe. Também é possível ter A·B igual à matriz nula sem que A ou B sejam nulas, o que não acontece com números reais. A identidade é o elemento neutro: A·I = I·A = A quando as ordens permitem."
+      },
+      {
+        "title": "Para que serve",
+        "content": "A multiplicação de matrizes representa composição de transformações: aplicar uma rotação e depois uma reflexão a um ponto é multiplicar as matrizes correspondentes. Ela também resolve sistemas lineares escritos na forma A·X = B, modela consumo de insumos na produção e é a operação central da computação gráfica e das redes neurais."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Multiplicar elemento a elemento é o erro mais comum e não corresponde a nada do assunto. Outro é inverter a ordem dos fatores, que muda o resultado. E antes de começar a conta, confira a compatibilidade das ordens: uma 2×3 multiplica uma 3×4 e dá uma 2×4, mas o produto na ordem contrária simplesmente não existe."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Multiplique a matriz linha [1 2] pela matriz coluna com 3 e 4 antes de conferir: 1·3 + 2·4 = 11, uma matriz 1×1. Agora multiplique a matriz 2×2 com linhas (1, 2) e (0, 1) por ela mesma: o resultado tem linhas (1, 4) e (0, 1). Por fim, verifique que trocar a ordem em A·B, com A de ordem 2×3 e B de ordem 3×2, dá matrizes de ordens diferentes: 2×2 e 3×3."
+      }
+    ],
+    "recall": {
+      "prompt": "Explique quando o produto A·B existe e por que ele não é comutativo; multiplique [1 2] pela coluna (3, 4).",
+      "elements": [
+        [
+          "resultado 11",
+          [
+            "11"
+          ]
+        ],
+        [
+          "colunas de A iguais as linhas de B",
+          [
+            "colunas",
+            "linhas",
+            "compativel"
+          ]
+        ],
+        [
+          "a ordem dos fatores altera o produto",
+          [
+            "nao comutativo",
+            "ordem",
+            "diferente"
+          ]
+        ]
+      ]
+    }
   },
   {
     "subject": "Matemática",
@@ -6014,6 +7980,849 @@
   },
   {
     "subject": "Matemática",
+    "topic": "Módulo de um Número Real",
+    "sections": [
+      {
+        "title": "Distância até a origem",
+        "content": "O módulo de x é a distância de x até zero na reta real, e por isso nunca é negativo: |x| vale x se x ≥ 0 e −x se x < 0. Essa definição por partes é o que permite resolver qualquer equação ou inequação modular, e é preferível a decorar regras separadas para cada caso."
+      },
+      {
+        "title": "Equações modulares",
+        "content": "A equação |x| = k tem duas soluções quando k > 0, uma quando k = 0 e nenhuma quando k < 0. Em |f(x)| = k, resolve-se f(x) = k e f(x) = −k. Quando aparece módulo dos dois lados, iguala-se f(x) = g(x) e f(x) = −g(x), sempre verificando as soluções na equação original."
+      },
+      {
+        "title": "Inequações modulares",
+        "content": "|x| < k, com k > 0, significa que x está entre −k e k; |x| > k significa que x está fora desse intervalo. A leitura por distância torna as duas regras naturais: a primeira pede pontos próximos da origem e a segunda, pontos afastados. O mesmo vale com centro deslocado: |x − 3| < 2 são os pontos a menos de 2 de distância de 3."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Escrever |x| = −5 como se tivesse solução é o erro de conceito mais direto. Outro é resolver |x| > k mantendo a solução como intervalo único, quando ela é a união de dois. E esquecer de verificar as raízes quando o módulo é eliminado, já que o processo pode gerar soluções estranhas."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Resolva |x − 3| = 5 antes de conferir: x − 3 = 5 ou x − 3 = −5, dando x = 8 ou x = −2, os dois pontos que distam 5 de 3. Agora resolva |x − 3| < 2: são os pontos a menos de duas unidades de 3, ou seja, 1 < x < 5. Por fim, resolva |2x| ≥ 6: obtém-se x ≥ 3 ou x ≤ −3, união de dois intervalos e não um único, porque a condição pede pontos afastados da origem."
+      }
+    ],
+    "recall": {
+      "prompt": "Resolva |x − 3| = 5 e |x − 3| < 2, explicando o significado de módulo como distância.",
+      "elements": [
+        [
+          "solucoes 8 e -2",
+          [
+            "8",
+            "-2"
+          ]
+        ],
+        [
+          "intervalo entre 1 e 5",
+          [
+            "1",
+            "5",
+            "entre"
+          ]
+        ],
+        [
+          "modulo e distancia ate a origem",
+          [
+            "distancia",
+            "origem",
+            "nao negativo"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Números Complexos",
+    "sections": [
+      {
+        "title": "A unidade imaginária",
+        "content": "O número i é definido por i² = −1, o que permite dar solução a equações como x² + 1 = 0, sem raiz real. Um complexo se escreve como z = a + bi, com a a parte real e b a parte imaginária. As potências de i são cíclicas de período quatro: i, −1, −i, 1, e basta olhar o resto da divisão do expoente por 4."
+      },
+      {
+        "title": "Operações",
+        "content": "Soma e subtração operam parte a parte. A multiplicação usa a distributiva com i² = −1. A divisão multiplica numerador e denominador pelo conjugado do denominador, que é a − bi, transformando o denominador no número real a² + b². O conjugado é também o reflexo do ponto no eixo real do plano complexo."
+      },
+      {
+        "title": "Igualdade e raízes",
+        "content": "Dois complexos são iguais quando as partes reais e as imaginárias coincidem, o que transforma uma igualdade complexa num sistema de duas equações reais. Numa equação quadrática de coeficientes reais com Δ < 0, as raízes são complexas conjugadas, e por isso aparecem sempre aos pares."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Escrever √(−4) como −2 é erro: o resultado é 2i. Outro é esquecer que i² = −1 ao multiplicar, tratando i como variável comum. E ao dividir, multiplicar pelo próprio denominador em vez do conjugado, o que não elimina a parte imaginária de baixo."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Calcule (2 + 3i)(1 − i) antes de conferir: 2 − 2i + 3i − 3i² = 2 + i + 3 = 5 + i. Agora calcule i²⁰²⁶: o resto da divisão de 2026 por 4 é 2, logo o resultado é i² = −1. Por fim, divida 1/(1 + i): multiplicando numerador e denominador pelo conjugado 1 − i, o denominador vira 2 e o resultado é (1 − i)/2, ou seja, 0,5 − 0,5i."
+      }
+    ],
+    "recall": {
+      "prompt": "Calcule (2 + 3i)(1 − i), i²⁰²⁶ e 1/(1 + i), explicando o papel do conjugado.",
+      "elements": [
+        [
+          "produto igual a 5 + i",
+          [
+            "5 + i",
+            "5"
+          ]
+        ],
+        [
+          "i elevado a 2026 vale -1",
+          [
+            "-1"
+          ]
+        ],
+        [
+          "o conjugado torna o denominador real",
+          [
+            "conjugado",
+            "real",
+            "denominador"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
+    "topic": "O Ponto Médio e o Baricentro de um Triângulo",
+    "sections": [
+      {
+        "title": "Ponto médio em coordenadas",
+        "content": "O ponto médio de um segmento de extremos A(x₁, y₁) e B(x₂, y₂) tem coordenadas dadas pelas médias: ((x₁ + x₂)/2, (y₁ + y₂)/2). A fórmula é apenas a média aritmética aplicada a cada coordenada, e por isso se estende naturalmente ao espaço, com uma terceira coordenada seguindo a mesma regra."
+      },
+      {
+        "title": "Mediana e baricentro",
+        "content": "Mediana é o segmento que liga um vértice ao ponto médio do lado oposto. As três medianas de um triângulo se encontram num único ponto, o baricentro, que é o centro de massa da figura. O baricentro divide cada mediana na razão 2:1, ficando duas vezes mais perto do vértice do que do ponto médio do lado."
+      },
+      {
+        "title": "O baricentro em coordenadas",
+        "content": "As coordenadas do baricentro são as médias das coordenadas dos três vértices: G = ((x₁ + x₂ + x₃)/3, (y₁ + y₂ + y₃)/3). É um dos resultados mais econômicos da geometria analítica, porque dispensa encontrar as equações das medianas. Base média, por sua vez, liga pontos médios de dois lados e mede metade do terceiro, sendo paralela a ele."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Confundir baricentro com incentro, circuncentro e ortocentro é o erro mais comum: cada um vem de cevianas diferentes — medianas, bissetrizes, mediatrizes e alturas, respectivamente. Outro deslize é inverter a razão 2:1, colocando o baricentro mais perto do lado. E dividir por 2 em vez de 3 na fórmula das coordenadas."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Calcule o baricentro do triângulo de vértices (0, 0), (6, 0) e (3, 9) antes de conferir: ((0 + 6 + 3)/3, (0 + 0 + 9)/3) = (3, 3). Agora encontre o ponto médio entre (0, 0) e (6, 0): (3, 0). Note que o baricentro fica sobre a mediana traçada de (3, 9) até (3, 0), a dois terços do vértice."
+      }
+    ],
+    "recall": {
+      "prompt": "Calcule o baricentro do triângulo de vértices (0,0), (6,0) e (3,9) e diga em que razão ele divide cada mediana.",
+      "elements": [
+        [
+          "baricentro em (3, 3)",
+          [
+            "3, 3",
+            "(3,3)"
+          ]
+        ],
+        [
+          "media das coordenadas dos vertices",
+          [
+            "media",
+            "tres",
+            "dividir por 3"
+          ]
+        ],
+        [
+          "divide na razao 2 para 1",
+          [
+            "2:1",
+            "dois",
+            "razao"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
+    "topic": "O Problema da Fila",
+    "sections": [
+      {
+        "title": "Quando a ordem importa",
+        "content": "Problemas de fila, fotografia, pódio e senha compartilham a mesma estrutura: a ordem dos elementos escolhidos muda o resultado. Isso caracteriza permutações e arranjos. Permutar n elementos distintos dá n! maneiras, porque há n escolhas para a primeira posição, n − 1 para a segunda e assim por diante até sobrar uma."
+      },
+      {
+        "title": "Arranjo: escolher e ordenar",
+        "content": "Quando se escolhem apenas p entre n elementos e a ordem importa, o total é o arranjo A(n,p) = n!/(n − p)!. Pódio de três lugares entre dez atletas é A(10,3) = 720. Na prática, basta multiplicar as p primeiras opções decrescentes: 10·9·8, o que dispensa a fórmula e reduz o risco de erro."
+      },
+      {
+        "title": "Permutação com repetição e elementos juntos",
+        "content": "Se houver elementos repetidos, divida n! pelos fatoriais das repetições: os anagramas de ARARA são 5!/(3!·2!) = 10. Quando o enunciado exige que dois elementos fiquem juntos, trate o par como um bloco único, permute os blocos e depois permute internamente o par, multiplicando os resultados."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Usar combinação num problema de ordem é o erro estrutural mais comum: fila, senha e pódio são arranjo ou permutação. Outro deslize é esquecer de multiplicar pelas permutações internas do bloco quando dois elementos ficam juntos. E em anagramas, ignorar as letras repetidas multiplica o resultado indevidamente."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "De quantas maneiras cinco pessoas formam uma fila? Calcule antes de conferir: 5! = 120. Agora, quantas filas há se duas pessoas específicas ficam sempre juntas? Trate-as como bloco: 4! · 2! = 48. Por fim, quantos anagramas tem a palavra BANANA? São 6!/(3!·2!) = 60, porque há três A e dois N."
+      }
+    ],
+    "recall": {
+      "prompt": "Cinco pessoas formam uma fila; quantas filas existem, e quantas com duas pessoas específicas sempre juntas?",
+      "elements": [
+        [
+          "120 filas",
+          [
+            "120"
+          ]
+        ],
+        [
+          "48 com o bloco",
+          [
+            "48"
+          ]
+        ],
+        [
+          "tratar as duas como bloco e permutar dentro",
+          [
+            "bloco",
+            "juntas",
+            "interna"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
+    "topic": "O Problema do Grupo",
+    "sections": [
+      {
+        "title": "Quando a ordem não importa",
+        "content": "Formar comissões, equipes e conjuntos são problemas em que trocar a ordem dos escolhidos não gera um caso novo. Aí vale a combinação: C(n,p) = n!/(p!·(n − p)!). O fatorial de p no denominador é exatamente o que elimina as p! ordenações de cada grupo, que o arranjo contaria separadamente."
+      },
+      {
+        "title": "Como distinguir do arranjo",
+        "content": "O teste prático é perguntar se trocar dois elementos de posição muda o resultado. Presidente e vice: muda, é arranjo. Dois membros de uma comissão sem cargos: não muda, é combinação. Enunciados que citam cargos, ordem de chegada ou posições distintas pedem arranjo; os que falam em grupo, equipe ou conjunto pedem combinação."
+      },
+      {
+        "title": "Combinações com restrições",
+        "content": "Quando o grupo precisa ter composição específica — dois homens e três mulheres, por exemplo —, conte cada subgrupo separadamente e multiplique. Quando o enunciado pede 'pelo menos', normalmente é mais rápido calcular o total e subtrair os casos que não satisfazem, em vez de somar todos os casos favoráveis um a um."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Aplicar arranjo a comissões multiplica o resultado por p! e é o erro mais frequente. Outro é somar quando deveria multiplicar ao combinar subgrupos independentes. E em problemas de 'pelo menos um', conte o complementar: contar caso a caso costuma esquecer alguma configuração."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "De quantas formas se escolhem 3 pessoas entre 8 para uma comissão sem cargos? Calcule antes de conferir: C(8,3) = 56. Agora, e se houvesse presidente, secretário e tesoureiro? Aí a ordem importa: 8·7·6 = 336, exatamente 56·3!. Por fim, de um grupo com 5 homens e 4 mulheres, quantas comissões de 2 homens e 2 mulheres existem? C(5,2)·C(4,2) = 10·6 = 60."
+      }
+    ],
+    "recall": {
+      "prompt": "Escolher 3 pessoas entre 8 para uma comissão sem cargos: quantas formas? E com três cargos distintos?",
+      "elements": [
+        [
+          "56 comissoes",
+          [
+            "56"
+          ]
+        ],
+        [
+          "336 com cargos",
+          [
+            "336"
+          ]
+        ],
+        [
+          "a ordem distingue combinacao de arranjo",
+          [
+            "ordem",
+            "combinacao",
+            "arranjo"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
+    "topic": "O Sistema de Numeração Decimal",
+    "sections": [
+      {
+        "title": "Valor posicional",
+        "content": "No sistema decimal, o mesmo algarismo vale diferente conforme a posição: em 352, o 3 vale 300, o 5 vale 50 e o 2 vale 2. Isso é a decomposição polinomial 3·10² + 5·10¹ + 2·10⁰, e é ela que explica os algoritmos de soma e multiplicação que aprendemos na escola, incluindo o 'vai um' quando a soma de uma coluna passa de nove."
+      },
+      {
+        "title": "Base dez e outras bases",
+        "content": "A base dez usa dez símbolos, de 0 a 9, e agrupa de dez em dez. Nada obriga a base a ser dez: na base dois, usada por computadores, só existem 0 e 1, e 1011 significa 1·2³ + 0·2² + 1·2¹ + 1·2⁰ = 11. Converter para a base dez é aplicar a decomposição; converter da base dez é dividir sucessivamente pela nova base e ler os restos de baixo para cima."
+      },
+      {
+        "title": "Notação científica e ordem de grandeza",
+        "content": "Números muito grandes ou muito pequenos ficam mais legíveis como a·10ⁿ com 1 ≤ a < 10. Assim 0,00042 vira 4,2·10⁻⁴ e 350000 vira 3,5·10⁵. A ordem de grandeza é a potência de dez mais próxima, e serve para estimar rapidamente: comparar 10⁸ com 10⁵ diz de imediato que um é mil vezes o outro, sem calcular nada."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Confundir algarismo com número é o começo dos problemas: 25 tem dois algarismos, mas é um número só. Outro tropeço é a notação científica com o coeficiente fora do intervalo, como 12·10³, que ainda precisa virar 1,2·10⁴. E em conversão de bases, ler os restos na ordem errada inverte o resultado inteiro."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Escreva 1011 na base dois em base decimal antes de conferir: 8 + 0 + 2 + 1 = 11. Agora converta 25 para a base dois: 25÷2 dá 12 resto 1, 12÷2 dá 6 resto 0, 6÷2 dá 3 resto 0, 3÷2 dá 1 resto 1, e sobra 1, então 11001. Por fim, escreva 0,00056 em notação científica: 5,6·10⁻⁴."
+      }
+    ],
+    "recall": {
+      "prompt": "Converta 1011 da base dois para a decimal e escreva 0,00056 em notação científica, explicando o papel do valor posicional.",
+      "elements": [
+        [
+          "resultado 11",
+          [
+            "11"
+          ]
+        ],
+        [
+          "notacao 5,6 vezes 10 elevado a -4",
+          [
+            "5,6",
+            "10^-4",
+            "-4"
+          ]
+        ],
+        [
+          "cada posicao vale uma potencia da base",
+          [
+            "posicao",
+            "potencia",
+            "base"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
+    "topic": "O Universo Tridimensional",
+    "sections": [
+      {
+        "title": "Posições relativas no espaço",
+        "content": "No espaço, duas retas podem ser concorrentes, paralelas ou reversas — estas últimas não se cruzam nem são paralelas, porque não estão no mesmo plano, situação que não existe no plano. Reta e plano podem ser paralelos, secantes ou a reta contida no plano; dois planos podem ser paralelos ou secantes segundo uma reta."
+      },
+      {
+        "title": "Perpendicularismo e projeções",
+        "content": "Uma reta é perpendicular a um plano quando é perpendicular a todas as retas do plano que passam pelo pé da perpendicular; na prática, basta ser perpendicular a duas concorrentes. A projeção ortogonal de um ponto no plano é o pé dessa perpendicular, e a distância de um ponto ao plano é medida por ela — não por qualquer segmento oblíquo."
+      },
+      {
+        "title": "Enxergar sólidos em perspectiva",
+        "content": "Ler um desenho em perspectiva exige identificar o que está no mesmo plano e o que não está. As diagonais de face e a diagonal do sólido são o exemplo clássico: num cubo de aresta a, a diagonal da face mede a√2 e a do cubo mede a√3, resultado que sai de aplicar Pitágoras duas vezes, uma no plano da face e outra no triângulo que usa essa diagonal."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Tratar retas reversas como concorrentes porque o desenho as faz cruzar é o erro típico de perspectiva. Outro é medir distância de ponto a plano por um segmento inclinado. E confundir diagonal da face com diagonal do sólido troca √2 por √3 em toda a questão."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Num cubo de aresta 3, calcule a diagonal da face e a diagonal do cubo antes de conferir: 3√2 ≈ 4,24 e 3√3 ≈ 5,20. Agora diga a posição relativa entre uma aresta da base e uma aresta vertical que não a toca: são reversas, porque não se cruzam e não estão no mesmo plano."
+      }
+    ],
+    "recall": {
+      "prompt": "Num cubo de aresta 3, calcule a diagonal da face e a do cubo; explique o que são retas reversas.",
+      "elements": [
+        [
+          "diagonal da face 3 raiz de 2",
+          [
+            "3",
+            "2",
+            "4,24"
+          ]
+        ],
+        [
+          "diagonal do cubo 3 raiz de 3",
+          [
+            "3",
+            "5,19",
+            "5,2"
+          ]
+        ],
+        [
+          "reversas nao se cruzam e nao sao coplanares",
+          [
+            "reversas",
+            "coplanares",
+            "mesmo plano"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Operações com Probabilidades",
+    "sections": [
+      {
+        "title": "Probabilidade como razão",
+        "content": "Num espaço amostral finito e equiprovável, a probabilidade de um evento é o número de casos favoráveis dividido pelo número de casos possíveis. O resultado está sempre entre 0 e 1, e a soma das probabilidades de todos os resultados possíveis é 1. Por isso, contar corretamente é a maior parte do trabalho de probabilidade."
+      },
+      {
+        "title": "União e complementar",
+        "content": "A probabilidade de A ou B é P(A) + P(B) − P(A e B), e o termo subtraído evita contar duas vezes os casos comuns. A probabilidade do complementar é 1 − P(A), atalho essencial em problemas de 'pelo menos um', em que contar diretamente exigiria somar muitos casos. Reconhecer 'pelo menos' como pedido de complementar poupa metade da conta."
+      },
+      {
+        "title": "Probabilidade condicional",
+        "content": "P(A|B) é a probabilidade de A sabendo que B ocorreu, e vale P(A e B)/P(B): a informação nova reduz o espaço amostral. É o que muda tudo em problemas de sorteio sem reposição, teste médico e urnas com retiradas sucessivas. Nesses casos, a segunda retirada é calculada sobre o que sobrou, não sobre o total inicial."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Somar probabilidades de eventos que podem ocorrer juntos, sem descontar a interseção, é o erro mais comum. Outro é tratar retiradas sem reposição como independentes. E cuidado com a leitura de 'pelo menos um': o complementar é 'nenhum', não 'exatamente um'."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Num dado honesto, qual a probabilidade de sair par ou maior que 3? Calcule antes de conferir: pares são 3 casos, maiores que 3 são 3 casos, e a interseção (4 e 6) tem 2, então 3/6 + 3/6 − 2/6 = 4/6 = 2/3. Agora, jogando duas moedas, a chance de pelo menos uma cara é 1 − 1/4 = 3/4."
+      }
+    ],
+    "recall": {
+      "prompt": "Num dado honesto, qual a probabilidade de sair par ou maior que 3? E de sair pelo menos uma cara em duas moedas?",
+      "elements": [
+        [
+          "dois tercos no dado",
+          [
+            "2/3",
+            "0,66",
+            "4/6"
+          ]
+        ],
+        [
+          "tres quartos nas moedas",
+          [
+            "3/4",
+            "0,75"
+          ]
+        ],
+        [
+          "descontar a interseccao e usar o complementar",
+          [
+            "interseccao",
+            "complementar",
+            "subtrair"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Outras Razões Trigonométricas",
+    "sections": [
+      {
+        "title": "Tangente, cotangente, secante e cossecante",
+        "content": "Além de seno e cosseno, definem-se tg x = sen x/cos x, cotg x = cos x/sen x, sec x = 1/cos x e cossec x = 1/sen x. Cada uma tem domínio restrito pelos valores que anulam o denominador: a tangente não existe em 90° e 270°, e a cossecante não existe em 0° e 180°."
+      },
+      {
+        "title": "Leitura no ciclo",
+        "content": "No ciclo trigonométrico, a tangente é lida no eixo vertical tangente ao círculo em (1, 0), o que explica por que ela cresce sem limite ao se aproximar de 90°. Essa leitura geométrica mostra também que a tangente tem período π, e não 2π como seno e cosseno, resultado frequentemente cobrado em gráficos."
+      },
+      {
+        "title": "Relações derivadas",
+        "content": "Dividindo a relação fundamental por cos²x obtém-se 1 + tg²x = sec²x, e dividindo por sen²x obtém-se 1 + cotg²x = cossec²x. Essas duas identidades resolvem a maioria das simplificações pedidas em prova, e ambas são consequências diretas da relação fundamental, não fórmulas independentes para decorar."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Inverter seno e cosseno na definição de secante é o erro mais comum: secante é o inverso do cosseno, e não do seno. Outro é esquecer as restrições de domínio ao resolver equações, aceitando raízes onde a função não existe. E supor que a tangente tem período 2π leva a soluções sobrando."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Calcule tg 45°, sec 60° e cossec 30° antes de conferir: 1, 2 e 2. Agora simplifique sec²x − tg²x: pela identidade derivada, vale 1 para todo x em que as funções existem. Por fim, diga onde a tangente não está definida entre 0° e 360°: em 90° e 270°, onde o cosseno se anula."
+      }
+    ],
+    "recall": {
+      "prompt": "Calcule tg 45°, sec 60° e cossec 30°, e diga onde a tangente não está definida.",
+      "elements": [
+        [
+          "tangente de 45 vale 1",
+          [
+            "1"
+          ]
+        ],
+        [
+          "secante de 60 vale 2",
+          [
+            "2"
+          ]
+        ],
+        [
+          "nao definida onde o cosseno e zero",
+          [
+            "90",
+            "270",
+            "cosseno"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Pirâmides",
+    "sections": [
+      {
+        "title": "Volume: um terço do prisma",
+        "content": "A pirâmide tem uma base poligonal e um vértice fora do plano da base, com faces laterais triangulares. Seu volume é um terço do produto da área da base pela altura, e o fator 1/3 vale para qualquer base. Comparar com o prisma de mesma base e altura é a maneira mais rápida de lembrar disso."
+      },
+      {
+        "title": "Apótema e área lateral",
+        "content": "Na pirâmide regular, o apótema da pirâmide é a altura de uma face lateral, e ela se relaciona com a altura do sólido e o apótema da base por Pitágoras. A área lateral é a soma dos triângulos, ou o semiperímetro da base vezes o apótema da pirâmide. Distinguir os dois apótemas é o principal cuidado do tópico."
+      },
+      {
+        "title": "Tronco de pirâmide",
+        "content": "Cortando uma pirâmide por um plano paralelo à base, obtém-se uma pirâmide menor semelhante à original e um tronco. As medidas lineares da pirâmide menor ficam na razão k da original, as áreas em k² e os volumes em k³. O volume do tronco é a diferença entre os dois volumes."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Trocar altura da pirâmide por apótema é o erro mais frequente e muda todo o resultado: a altura vai do vértice ao centro da base, o apótema vai do vértice ao meio de uma aresta da base. Outro deslize é esquecer o fator 1/3 no volume, tratando a pirâmide como prisma. E ao trabalhar com tronco, aplicar a razão k diretamente aos volumes, em vez de k³, é recorrente: um corte na metade da altura deixa em cima apenas um oitavo do volume."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Uma pirâmide de base quadrada de lado 6 tem altura 4. Calcule o volume antes de conferir: (1/3)·36·4 = 48. Agora o apótema da pirâmide: o apótema da base é 3, então a = √(4² + 3²) = 5, e a área lateral é (24/2)·5 = 60. Por fim, se um corte na metade da altura gera uma pirâmide semelhante, seu volume é 1/8 do original, ou seja, 6."
+      }
+    ],
+    "recall": {
+      "prompt": "Numa pirâmide de base quadrada de lado 6 e altura 4, calcule volume e área lateral; diga a razão dos volumes num corte na metade da altura.",
+      "elements": [
+        [
+          "volume 48",
+          [
+            "48"
+          ]
+        ],
+        [
+          "area lateral 60",
+          [
+            "60"
+          ]
+        ],
+        [
+          "volumes na razao um oitavo",
+          [
+            "1/8",
+            "oitavo",
+            "cubo"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Polinômios",
+    "sections": [
+      {
+        "title": "Grau e valor numérico",
+        "content": "Um polinômio é uma soma de termos da forma aₙxⁿ, e seu grau é o maior expoente com coeficiente não nulo. O valor numérico é o resultado de substituir x por um número, e P(0) é sempre o termo independente, enquanto P(1) é a soma de todos os coeficientes — dois atalhos muito usados em prova."
+      },
+      {
+        "title": "Divisão de polinômios",
+        "content": "Dividir P(x) por D(x) produz quociente e resto, com o grau do resto menor que o do divisor. O teorema do resto diz que o resto da divisão por (x − a) é P(a), e o teorema de D'Alembert acrescenta que P(x) é divisível por (x − a) exatamente quando P(a) = 0. O dispositivo de Briot-Ruffini agiliza essa divisão."
+      },
+      {
+        "title": "Raízes e fatoração",
+        "content": "Se a é raiz de P, então (x − a) é fator de P. Um polinômio de grau n tem exatamente n raízes complexas contadas com multiplicidade, e pode ser escrito como produto de fatores lineares. Nas raízes racionais, o numerador divide o termo independente e o denominador divide o coeficiente líder, o que reduz muito a busca por tentativa."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Confundir grau com número de termos é frequente. Outro erro é aplicar o teorema do resto com o sinal trocado: na divisão por (x + 2), o valor a testar é −2. E esquecer a multiplicidade ao contar raízes, tratando uma raiz dupla como se fossem duas raízes distintas."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Determine o resto da divisão de P(x) = x³ − 2x + 1 por (x − 2) antes de conferir: P(2) = 8 − 4 + 1 = 5. Agora verifique se x = 1 é raiz: P(1) = 1 − 2 + 1 = 0, logo é raiz e (x − 1) é fator. Por fim, some os coeficientes de P: basta calcular P(1), que vale 0."
+      }
+    ],
+    "recall": {
+      "prompt": "Determine o resto da divisão de x³ − 2x + 1 por (x − 2) e verifique se 1 é raiz.",
+      "elements": [
+        [
+          "resto igual a 5",
+          [
+            "5"
+          ]
+        ],
+        [
+          "um e raiz porque P(1) = 0",
+          [
+            "0",
+            "raiz",
+            "1"
+          ]
+        ],
+        [
+          "teorema do resto usa P(a)",
+          [
+            "resto",
+            "p(a)",
+            "teorema"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Porcentagem",
+    "sections": [
+      {
+        "title": "Porcentagem é razão de denominador cem",
+        "content": "Dizer 30% é dizer 30/100, ou seja, 0,3. Trabalhar com a forma decimal simplifica tudo: calcular 30% de 250 é multiplicar 250 por 0,3, o que dá 75. Essa tradução imediata entre porcentagem, fração e decimal é a habilidade central do tópico, e ela dispensa regra de três na maior parte das situações de prova."
+      },
+      {
+        "title": "Aumentos e descontos por fator",
+        "content": "Um aumento de 20% multiplica o valor por 1,20; um desconto de 20% multiplica por 0,80. Pensar por fator é o que permite encadear variações: um aumento de 20% seguido de desconto de 20% dá 1,20·0,80 = 0,96, isto é, uma perda de 4%, e não a volta ao valor original. Dois aumentos sucessivos de 10% dão 1,21, ou seja, 21%."
+      },
+      {
+        "title": "Variação percentual e ponto percentual",
+        "content": "A variação percentual compara a diferença com o valor inicial: (final − inicial)/inicial. Se um preço passa de 80 para 100, o aumento é 25%; se volta de 100 para 80, a queda é 20% — as porcentagens não são simétricas porque a base muda. Quando a própria grandeza já é uma taxa, a diferença se expressa em pontos percentuais: de 5% para 8% são 3 pontos, não 3%."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Somar porcentagens sucessivas é o erro campeão: 10% e depois 10% não dão 20%. Trocar a base de comparação é o segundo: aumento e desconto do mesmo percentual não se cancelam. E confundir ponto percentual com porcentagem muda completamente a leitura de um gráfico de juros ou de desemprego, tema recorrente em prova de interpretação."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Um produto de R$ 200 sofre aumento de 25% e depois desconto de 20%. Calcule antes de conferir: 200·1,25·0,80 = 200, exatamente o preço inicial. Agora um salário sobe de R$ 2.000 para R$ 2.300: a variação é 300/2000 = 0,15, ou 15%. Por fim, se a inflação passou de 4% para 6%, diga corretamente: aumento de 2 pontos percentuais, equivalente a 50% de alta na taxa."
+      }
+    ],
+    "recall": {
+      "prompt": "Um produto de R$ 200 sobe 25% e depois cai 20%. Calcule o preço final e explique por que aumento e desconto iguais não se cancelam.",
+      "elements": [
+        [
+          "preco final de 200 reais",
+          [
+            "200"
+          ]
+        ],
+        [
+          "a base de calculo muda",
+          [
+            "base",
+            "valor inicial",
+            "muda"
+          ]
+        ],
+        [
+          "variacoes se multiplicam por fatores",
+          [
+            "fator",
+            "multiplica",
+            "1,25"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Posições Relativas entre Duas Retas",
+    "sections": [
+      {
+        "title": "Paralelas, concorrentes e coincidentes",
+        "content": "Duas retas do plano são paralelas se têm o mesmo coeficiente angular e coeficientes lineares diferentes; coincidentes se as duas equações são proporcionais; e concorrentes se os coeficientes angulares diferem. No caso concorrente, o ponto de encontro é a solução do sistema formado pelas duas equações."
+      },
+      {
+        "title": "Perpendicularidade",
+        "content": "Duas retas não verticais são perpendiculares quando o produto dos coeficientes angulares é −1, ou seja, m₂ = −1/m₁. Retas horizontal e vertical também são perpendiculares, embora uma delas não tenha coeficiente angular definido — exceção que precisa ser tratada separadamente."
+      },
+      {
+        "title": "Ângulo entre retas",
+        "content": "O ângulo agudo θ entre duas retas satisfaz tg θ = |(m₁ − m₂)/(1 + m₁m₂)|. Quando o denominador se anula, o ângulo é reto, o que reencontra a condição de perpendicularidade. A fórmula é útil em questões que pedem inclinação de trajetórias ou ângulo de incidência em reflexão."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Confundir paralelas com coincidentes é frequente: coeficientes angulares iguais não bastam, é preciso checar o coeficiente linear. Outro erro é usar m₂ = −m₁ para perpendicularidade, esquecendo o inverso. E resolver o sistema e esquecer de verificar se ele é impossível, o que indicaria retas paralelas."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Determine a posição relativa entre y = 2x + 1 e y = 2x − 3 antes de conferir: mesmo m e n diferente, logo paralelas distintas. Agora entre y = 2x + 1 e y = −x/2 + 4: o produto dos coeficientes é −1, logo perpendiculares. Por fim, encontre o ponto de encontro dessas duas: igualando, 2x + 1 = −x/2 + 4 dá x = 1,2 e y = 3,4."
+      }
+    ],
+    "recall": {
+      "prompt": "Classifique a posição entre y = 2x + 1 e y = 2x − 3, e entre y = 2x + 1 e y = −x/2 + 4.",
+      "elements": [
+        [
+          "paralelas distintas",
+          [
+            "paralelas",
+            "distintas",
+            "nao coincidentes"
+          ]
+        ],
+        [
+          "perpendiculares",
+          [
+            "perpendiculares",
+            "-1",
+            "produto"
+          ]
+        ],
+        [
+          "mesmo coeficiente angular com linear diferente",
+          [
+            "coeficiente",
+            "angular",
+            "linear"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Posições Relativas entre uma Reta e uma Circunferência",
+    "sections": [
+      {
+        "title": "Três casos possíveis",
+        "content": "Uma reta pode ser secante à circunferência, cortando-a em dois pontos; tangente, tocando em um único ponto; ou externa, sem pontos comuns. O critério mais rápido compara a distância d do centro à reta com o raio r: d < r indica secante, d = r indica tangente e d > r indica externa, sem resolver sistema nenhum."
+      },
+      {
+        "title": "O caminho algébrico",
+        "content": "Substituindo a equação da reta na da circunferência obtém-se uma equação do segundo grau em uma variável. O discriminante decide: positivo dá dois pontos, nulo dá um e negativo não dá nenhum. Esse caminho é mais longo, mas é o que fornece as coordenadas dos pontos de interseção quando a questão as pede."
+      },
+      {
+        "title": "Tangência e perpendicularidade",
+        "content": "No ponto de tangência, o raio é perpendicular à reta tangente. Essa propriedade permite escrever a equação da tangente por um ponto da circunferência: calcula-se o coeficiente angular do raio e toma-se o oposto do inverso. Para tangentes traçadas de um ponto externo, existem duas, e a condição d = r determina os coeficientes."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Concluir que a reta é secante porque o desenho sugere, sem calcular d, é o erro típico. Outro é comparar d com r², misturando distância e quadrado do raio. E ao usar o discriminante, lembrar que ele decide o número de pontos, não a posição do centro."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "A circunferência tem centro (0, 0) e raio 5, e a reta é 3x + 4y − 25 = 0. Calcule a posição antes de conferir: d = |−25|/5 = 5, igual ao raio, logo a reta é tangente. Agora, para a reta 3x + 4y − 10 = 0, d = 2 < 5, então ela é secante e corta a circunferência em dois pontos."
+      }
+    ],
+    "recall": {
+      "prompt": "Compare a distância do centro à reta com o raio para classificar a posição, e aplique isso à reta 3x + 4y − 25 = 0 com a circunferência de centro (0,0) e raio 5.",
+      "elements": [
+        [
+          "a reta e tangente",
+          [
+            "tangente"
+          ]
+        ],
+        [
+          "distancia igual ao raio",
+          [
+            "igual",
+            "5",
+            "d = r"
+          ]
+        ],
+        [
+          "d menor indica secante e maior indica externa",
+          [
+            "secante",
+            "externa",
+            "menor"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Potências e Radicais",
+    "sections": [
+      {
+        "title": "As propriedades que você usa sem perceber",
+        "content": "Potência é multiplicação repetida, e todas as propriedades saem daí: aⁿ·aᵐ = aⁿ⁺ᵐ porque você junta os fatores, aⁿ/aᵐ = aⁿ⁻ᵐ porque você cancela, e (aⁿ)ᵐ = aⁿ·ᵐ porque você repete a repetição. Expoente zero dá 1 pela divisão de potências iguais, e expoente negativo é o inverso: a⁻ⁿ = 1/aⁿ. Nada aí é convenção arbitrária, é consequência."
+      },
+      {
+        "title": "Radicais são potências de expoente fracionário",
+        "content": "Escrever a raiz como potência resolve quase todo problema: ⁿ√aᵐ = a^(m/n). Assim √a = a^(1/2) e ³√a² = a^(2/3), e as propriedades de potência passam a valer para raízes sem regra nova. Simplificar um radical é fatorar o radicando e tirar do radical o que estiver elevado ao índice: √72 = √(36·2) = 6√2."
+      },
+      {
+        "title": "Racionalizar e comparar",
+        "content": "Racionalizar o denominador é multiplicar numerador e denominador pelo mesmo fator para tirar a raiz de baixo: 1/√2 vira √2/2. Com soma no denominador, use o conjugado: 1/(√3 + 1) multiplica por (√3 − 1)/(√3 − 1) e dá (√3 − 1)/2. Para comparar radicais de índices diferentes, escreva os dois como potências e iguale os denominadores dos expoentes."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "√(a² ) é |a|, não a: se a for negativo, a raiz devolve o valor positivo. Outro erro clássico é distribuir a raiz sobre a soma — √(9 + 16) é 5, não 3 + 4. E potência de expoente negativo não torna o número negativo: 2⁻³ vale 1/8, um número positivo. Cuidado também com (−2)² = 4 contra −2² = −4, onde o expoente age só no 2."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Simplifique (2³·2⁵)/2⁶ antes de conferir: 2⁸/2⁶ = 2² = 4. Agora simplifique √50 + √8: 5√2 + 2√2 = 7√2. Por fim, racionalize 6/√3: multiplicando por √3/√3 dá 6√3/3 = 2√3. Se em algum passo você somou expoentes numa multiplicação de bases diferentes, volte: a propriedade só vale com a mesma base."
+      }
+    ],
+    "recall": {
+      "prompt": "Simplifique 2³·2⁵/2⁶ e √50 + √8, e diga por que √(a²) é |a| e não a.",
+      "elements": [
+        [
+          "resultado 4",
+          [
+            "4"
+          ]
+        ],
+        [
+          "resultado 7 raiz de 2",
+          [
+            "7"
+          ]
+        ],
+        [
+          "a raiz devolve valor nao negativo",
+          [
+            "modulo",
+            "positivo",
+            "negativo"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Prismas",
+    "sections": [
+      {
+        "title": "O que define um prisma",
+        "content": "Prisma é o sólido com duas bases poligonais congruentes e paralelas, ligadas por faces laterais que são paralelogramos. Se as arestas laterais são perpendiculares às bases, o prisma é reto e as faces laterais são retângulos. O nome vem da base: prisma triangular, quadrangular, hexagonal."
+      },
+      {
+        "title": "Volume e áreas",
+        "content": "O volume de qualquer prisma é área da base vezes altura, e a altura é a distância entre os planos das bases, não a aresta lateral inclinada. A área lateral do prisma reto é o perímetro da base vezes a altura, o que corresponde a planificar a superfície lateral num único retângulo. A área total soma as duas bases."
+      },
+      {
+        "title": "Planificação e seções",
+        "content": "Planificar um prisma reto dá duas cópias da base e um retângulo de comprimento igual ao perímetro. Seções paralelas à base são congruentes a ela, e uma seção que passa por duas arestas laterais opostas costuma ser retângulo, figura que aparece em questões sobre o caminho mais curto na superfície do sólido."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Usar a aresta lateral como altura em prisma oblíquo é o erro estrutural do tópico. Outro é esquecer de somar as duas bases na área total. E em prisma hexagonal, é preciso lembrar que a base se decompõe em seis triângulos equiláteros, cuja área envolve √3."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Um prisma reto tem base triangular equilátera de lado 4 e altura 10. Calcule o volume antes de conferir: a área da base é 4²√3/4 = 4√3, então V = 40√3 ≈ 69,3. Agora a área lateral: perímetro 12 vezes altura 10, igual a 120. Por fim, a área total: 120 + 2·4√3 ≈ 133,9."
+      }
+    ],
+    "recall": {
+      "prompt": "Num prisma reto de base triangular equilátera de lado 4 e altura 10, calcule volume e área lateral.",
+      "elements": [
+        [
+          "volume 40 raiz de 3",
+          [
+            "40",
+            "69"
+          ]
+        ],
+        [
+          "area lateral 120",
+          [
+            "120"
+          ]
+        ],
+        [
+          "volume e area da base vezes altura",
+          [
+            "base",
+            "altura",
+            "produto"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
     "topic": "Progressão Aritmética",
     "sections": [
       {
@@ -6058,6 +8867,324 @@
             "n-1",
             "termo geral",
             "razao"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Progressão Geométrica",
+    "sections": [
+      {
+        "title": "Razão constante por multiplicação",
+        "content": "Numa PG, cada termo é o anterior multiplicado por uma razão q constante: 2, 6, 18, 54 tem q = 3. O termo geral é aₙ = a₁·q^(n−1), e o expoente é n − 1 porque o primeiro termo ainda não foi multiplicado por nada. Se q > 1 a PG cresce, se 0 < q < 1 ela decresce, e se q é negativa os sinais alternam."
+      },
+      {
+        "title": "Soma dos termos",
+        "content": "A soma dos n primeiros termos é Sₙ = a₁·(qⁿ − 1)/(q − 1), válida para q ≠ 1. Quando |q| < 1 e a PG é infinita, as parcelas ficam cada vez menores e a soma converge para S = a₁/(1 − q). É essa fórmula que transforma a dízima 0,333… na fração 1/3 e que aparece em questões de área de figuras que se subdividem infinitamente."
+      },
+      {
+        "title": "Onde a PG aparece",
+        "content": "Juros compostos são uma PG: o montante é multiplicado por (1 + i) a cada período. Crescimento populacional, decaimento radioativo com meia-vida e depreciação de bens também são PGs, com razão maior ou menor que 1 conforme o fenômeno cresça ou diminua. Reconhecer o multiplicador constante é o que identifica o modelo."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Usar expoente n em vez de n − 1 no termo geral desloca toda a sequência. Outro erro é aplicar a soma infinita quando |q| ≥ 1, caso em que ela não converge. E em juros compostos, lembre que a taxa entra como fator (1 + i), não como parcela somada ao final, diferença que separa juros compostos de simples."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Numa PG de a₁ = 5 e q = 2, calcule o sexto termo antes de conferir: 5·2⁵ = 160. Agora a soma dos seis primeiros: 5·(2⁶ − 1)/(2 − 1) = 5·63 = 315. Por fim, calcule a soma infinita de 8, 4, 2, 1, …: q = 1/2, logo S = 8/(1 − 1/2) = 16, valor do qual a sequência se aproxima sem nunca ultrapassar."
+      }
+    ],
+    "recall": {
+      "prompt": "Numa PG de primeiro termo 5 e razão 2, calcule o sexto termo e a soma dos seis primeiros; diga quando existe soma infinita.",
+      "elements": [
+        [
+          "sexto termo 160",
+          [
+            "160"
+          ]
+        ],
+        [
+          "soma 315",
+          [
+            "315"
+          ]
+        ],
+        [
+          "soma infinita exige razao entre -1 e 1",
+          [
+            "menor que 1",
+            "modulo",
+            "converge"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Razão e Proporção",
+    "sections": [
+      {
+        "title": "Comparar por divisão",
+        "content": "Razão é a comparação de duas grandezas por divisão, e o resultado é um número puro quando as unidades são iguais. Proporção é a igualdade entre duas razões: a/b = c/d. Dessa igualdade sai a propriedade fundamental, a·d = b·c, que é o famoso 'meios pelos extremos' e resolve a maior parte dos exercícios de escala, receita e mapa."
+      },
+      {
+        "title": "Grandezas diretas e inversas",
+        "content": "Duas grandezas são diretamente proporcionais quando o quociente entre elas é constante: dobrar uma dobra a outra. São inversamente proporcionais quando o produto é constante: dobrar uma reduz a outra à metade. Reconhecer qual é o caso antes de montar a regra de três evita o erro mais caro do assunto, porque a montagem muda: na inversa você inverte uma das razões."
+      },
+      {
+        "title": "Regra de três composta e divisão proporcional",
+        "content": "Quando há mais de duas grandezas, analise uma por vez em relação à que você procura, decidindo se cada uma é direta ou inversa, e só então monte a proporção. Na divisão proporcional, reparte-se um total em partes proporcionais a números dados: some os números, encontre o valor de cada parte unitária e multiplique. É o modelo de sociedade, herança e mistura."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "O erro mais comum é montar toda regra de três como direta. Mais operários fazem a obra em menos tempo: é inversa. Outro deslize é comparar grandezas em unidades diferentes sem converter, como km com metro. E atenção ao enunciado que pede a razão de A para B, que é A/B: inverter a ordem troca 3/5 por 5/3 e derruba a questão inteira."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Se 4 torneiras enchem um tanque em 6 horas, quanto tempo levam 3 torneiras? Calcule antes de conferir: menos torneiras, mais tempo, então é inversa: 4·6 = 3·t, logo t = 8 horas. Agora divida R$ 900 entre duas pessoas na razão 2:3. A soma das partes é 5, cada parte vale 180, então cabem R$ 360 e R$ 540. Confira somando: 900."
+      }
+    ],
+    "recall": {
+      "prompt": "Se 4 torneiras enchem um tanque em 6 horas, quanto tempo levam 3 torneiras? Diga também como reconhecer que a proporção é inversa.",
+      "elements": [
+        [
+          "resposta 8 horas",
+          [
+            "8"
+          ]
+        ],
+        [
+          "produto constante nas inversas",
+          [
+            "produto",
+            "constante",
+            "inversa"
+          ]
+        ],
+        [
+          "menos torneiras exige mais tempo",
+          [
+            "mais tempo",
+            "menos",
+            "aumenta"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Razões entre Volumes de Sólidos",
+    "sections": [
+      {
+        "title": "O expoente três",
+        "content": "Em sólidos semelhantes de razão k, comprimentos ficam na razão k, áreas em k² e volumes em k³. Dobrar todas as dimensões de uma caixa multiplica seu volume por oito, e é por isso que embalagens maiores costumam ser proporcionalmente mais econômicas. Essa escada de expoentes é o núcleo do tópico."
+      },
+      {
+        "title": "Comparações clássicas",
+        "content": "Cone, esfera e cilindro de mesmo raio, com o cilindro de altura igual ao diâmetro, têm volumes na razão 1:2:3 — resultado de Arquimedes que aparece com frequência em prova. Um cone e um cilindro de mesma base e altura estão na razão 1:3, e o mesmo vale para pirâmide e prisma."
+      },
+      {
+        "title": "Sólidos truncados e partes",
+        "content": "Ao cortar um cone ou pirâmide por plano paralelo à base, a parte de cima é semelhante ao original. Se o corte está a uma fração h da altura, o volume da parte superior é h³ do total, e o tronco fica com o restante. Reconhecer isso evita cálculos longos e é a chave das questões de recipiente parcialmente cheio."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Aplicar a razão k aos volumes é o erro dominante do tópico. Outro é supor que metade da altura significa metade do volume num cone, quando na verdade é um oitavo. E ao comparar sólidos, verifique se eles são de fato semelhantes: dois cilindros só são semelhantes se raio e altura estiverem na mesma razão."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Duas esferas têm raios 2 e 6. Calcule a razão entre os volumes antes de conferir: a razão dos raios é 1:3, então a dos volumes é 1:27. Agora, num cone cheio até metade da altura, que fração do volume total está ocupada pela parte de cima vazia? Um oitavo, restando sete oitavos para a parte cheia."
+      }
+    ],
+    "recall": {
+      "prompt": "Duas esferas têm raios 2 e 6: qual a razão entre os volumes? E que fração de um cone está acima da metade da altura?",
+      "elements": [
+        [
+          "volumes na razao 1 para 27",
+          [
+            "27",
+            "1:27"
+          ]
+        ],
+        [
+          "volume varia com o cubo da razao",
+          [
+            "cubo",
+            "k3",
+            "tres"
+          ]
+        ],
+        [
+          "um oitavo acima da metade",
+          [
+            "1/8",
+            "oitavo"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Razões entre Áreas de Figuras Planas",
+    "sections": [
+      {
+        "title": "A razão dos quadrados",
+        "content": "Em figuras semelhantes de razão k, as áreas ficam na razão k². Isso vale para qualquer par de figuras semelhantes, não só triângulos: se um mapa está na escala 1:1000, cada centímetro quadrado do papel representa 1 000 000 de centímetros quadrados reais, e não mil. Essa é a ideia central de todo o tópico."
+      },
+      {
+        "title": "Triângulos com elementos comuns",
+        "content": "Dois triângulos de mesma altura têm áreas na razão das bases; de mesma base, na razão das alturas. Uma mediana divide o triângulo em duas partes de áreas iguais, e as três medianas o dividem em seis triângulos de mesma área. Esses fatos resolvem questões de área sem calcular nenhuma medida absoluta."
+      },
+      {
+        "title": "Comparações em figuras compostas",
+        "content": "Muitas questões pedem a fração da figura que está sombreada, e não a área em si. Nesses casos, atribua área 1 ao total ou uma medida conveniente ao lado, calcule as partes e responda em fração. Escolher um valor conveniente para o lado, como 2 ou 6, elimina frações no meio do caminho."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Aplicar a razão k às áreas em vez de k² é o erro dominante. Outro é comparar triângulos supondo alturas iguais quando o enunciado não garante. E ao trabalhar com escalas, lembrar que a conversão de área eleva o fator ao quadrado, e a de volume, ao cubo."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Dois quadrados têm lados 3 e 12. Calcule a razão entre suas áreas antes de conferir: a razão dos lados é 1:4, então a das áreas é 1:16. Agora, num triângulo de área 60, qual a área de cada um dos seis triângulos formados pelas medianas? Todos têm área 10. Por fim, se a escala é 1:50, uma sala de 20 cm² na planta tem 20·2500 = 50 000 cm² reais, ou 5 m²."
+      }
+    ],
+    "recall": {
+      "prompt": "Dois quadrados têm lados 3 e 12: qual a razão entre as áreas? E em que a escala 1:50 afeta a conversão de áreas?",
+      "elements": [
+        [
+          "razao 1 para 16",
+          [
+            "16",
+            "1:16"
+          ]
+        ],
+        [
+          "areas variam com o quadrado da razao",
+          [
+            "quadrado",
+            "razao"
+          ]
+        ],
+        [
+          "a escala se eleva ao quadrado nas areas",
+          [
+            "2500",
+            "quadrado",
+            "escala"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Relações Trigonométricas em Polígonos",
+    "sections": [
+      {
+        "title": "Lei dos senos",
+        "content": "Em qualquer triângulo, a razão entre um lado e o seno do ângulo oposto é constante e igual ao diâmetro da circunferência circunscrita: a/sen A = b/sen B = c/sen C = 2R. Use-a quando o enunciado dá dois ângulos e um lado, ou dois lados e o ângulo oposto a um deles, situação em que Pitágoras não se aplica."
+      },
+      {
+        "title": "Lei dos cossenos",
+        "content": "A lei dos cossenos generaliza Pitágoras: a² = b² + c² − 2bc·cos A. Quando A é reto, o cosseno zera e volta o teorema de Pitágoras. Use-a quando o enunciado dá dois lados e o ângulo entre eles, ou os três lados e pede um ângulo — os dois casos em que a lei dos senos não resolve sozinha."
+      },
+      {
+        "title": "Áreas e polígonos",
+        "content": "A área de um triângulo com dois lados e o ângulo entre eles é (1/2)·b·c·sen A, fórmula que dispensa a altura. Em polígonos regulares, decompor em triângulos isósceles com ângulo central 360°/n permite calcular área e apótema por trigonometria, o que resolve questões sobre pentágonos e octógonos, onde não há fórmula elementar."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Usar lei dos senos com dois lados e o ângulo entre eles não funciona, porque o ângulo dado não é oposto a nenhum lado conhecido. Outro erro é esquecer o sinal negativo na lei dos cossenos. E lembre que, com ângulo obtuso, o cosseno é negativo e o termo passa a somar."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Num triângulo de lados 5 e 8 com ângulo de 60° entre eles, calcule o terceiro lado antes de conferir: a² = 25 + 64 − 2·5·8·0,5 = 49, logo a = 7. Agora calcule a área desse triângulo pela fórmula com o seno: (1/2)·5·8·sen 60° = 20·(√3/2) ≈ 17,3. Por fim, num triângulo com ângulos de 30° e 45° e lado 10 oposto ao de 30°, use a lei dos senos para achar o lado oposto ao de 45°: 10·sen 45°/sen 30° = 10√2 ≈ 14,1."
+      }
+    ],
+    "recall": {
+      "prompt": "Num triângulo de lados 5 e 8 com 60° entre eles, calcule o terceiro lado e a área, dizendo qual lei se aplica.",
+      "elements": [
+        [
+          "terceiro lado 7",
+          [
+            "7"
+          ]
+        ],
+        [
+          "area de aproximadamente 17,3",
+          [
+            "17,3",
+            "10",
+            "raiz"
+          ]
+        ],
+        [
+          "lei dos cossenos com dois lados e o angulo entre eles",
+          [
+            "cosseno",
+            "entre eles",
+            "cossenos"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Representação Geométrica de Inequações",
+    "sections": [
+      {
+        "title": "Semiplanos",
+        "content": "Uma inequação do primeiro grau em duas variáveis representa um semiplano: a reta correspondente à igualdade divide o plano em dois lados, e a desigualdade seleciona um deles. O teste é substituir um ponto que não esteja na reta, normalmente a origem, e verificar se a desigualdade se mantém — se sim, o semiplano é o que contém esse ponto."
+      },
+      {
+        "title": "Sistemas de inequações",
+        "content": "Um sistema de inequações representa a interseção dos semiplanos, geralmente uma região poligonal. Desenhar cada reta, sombrear o semiplano correto e tomar a área comum é o procedimento completo. Desigualdades estritas deixam a fronteira de fora, o que se indica com linha tracejada."
+      },
+      {
+        "title": "Regiões com curvas",
+        "content": "A mesma lógica vale para curvas: x² + y² < 9 é o interior do círculo de raio 3; y > x² é a região acima da parábola. Nesses casos, o teste de um ponto continua sendo o método mais seguro, e vale escolher um ponto claramente dentro ou fora para não haver dúvida."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Multiplicar ou dividir a inequação por número negativo sem inverter o sinal da desigualdade é o erro clássico. Outro é sombrear o semiplano errado por não testar ponto. E usar linha cheia em desigualdade estrita, incluindo indevidamente a fronteira."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Represente x + y ≤ 4 antes de conferir: trace a reta x + y = 4, teste a origem, onde 0 ≤ 4 é verdadeiro, e sombreie o lado que contém a origem, com linha cheia. Agora represente y > 2x: a reta é tracejada e o teste em (0, 1) dá 1 > 0, verdadeiro, então a região é a que contém esse ponto."
+      }
+    ],
+    "recall": {
+      "prompt": "Explique como decidir qual semiplano representa x + y ≤ 4 e quando a fronteira entra na região.",
+      "elements": [
+        [
+          "testar um ponto como a origem",
+          [
+            "origem",
+            "testar",
+            "ponto"
+          ]
+        ],
+        [
+          "a origem satisfaz a desigualdade",
+          [
+            "verdadeiro",
+            "satisfaz",
+            "0"
+          ]
+        ],
+        [
+          "desigualdade estrita exclui a fronteira",
+          [
+            "estrita",
+            "tracejada",
+            "exclui"
           ]
         ]
       ]
@@ -6117,6 +9244,112 @@
   },
   {
     "subject": "Matemática",
+    "topic": "Sequências",
+    "sections": [
+      {
+        "title": "Recorrência e lei explícita",
+        "content": "Uma sequência pode ser descrita de duas formas equivalentes: por recorrência, que dá o próximo termo a partir dos anteriores, ou por lei explícita, que dá o termo diretamente a partir da posição. A recorrência é fácil de escrever a partir do enunciado, a explícita é a que responde perguntas sobre termos distantes sem calcular todos os anteriores."
+      },
+      {
+        "title": "Somas e séries",
+        "content": "Somar os termos de uma sequência é uma operação frequente: PA e PG têm fórmulas fechadas, e outras somas conhecidas ajudam, como a soma dos n primeiros naturais, n(n+1)/2. Quando a sequência não tem fórmula pronta, procure telescopagem, isto é, escrever cada termo como uma diferença que cancela com a seguinte, deixando só as pontas."
+      },
+      {
+        "title": "Comportamento e limite intuitivo",
+        "content": "Perguntar para onde a sequência caminha é perguntar o que acontece quando n cresce muito. Uma sequência pode crescer sem limite, oscilar ou se aproximar de um valor. Em PG com |q| < 1 os termos tendem a zero; em modelos de juros, o montante cresce indefinidamente. Essa leitura qualitativa costuma valer alternativas inteiras em prova."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Aplicar fórmula de PA a uma sequência que não tem diferença constante é o erro mais caro; confira sempre o padrão com quatro termos. Outro deslize é confundir o índice inicial: se a sequência começa em n = 0, todas as fórmulas se deslocam. E somar termos até n esquecendo se o enunciado inclui ou exclui o último."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Some os cem primeiros números naturais antes de conferir: 100·101/2 = 5050. Agora, na sequência definida por a₁ = 1 e aₙ = aₙ₋₁ + 2n, escreva os quatro primeiros termos: 1, 5, 11, 19. Por fim, diga para onde tende a sequência 1, 1/2, 1/4, 1/8, …: os termos se aproximam de zero, embora nunca o atinjam."
+      }
+    ],
+    "recall": {
+      "prompt": "Some os cem primeiros números naturais e diga para onde tende a sequência 1, 1/2, 1/4, 1/8, …",
+      "elements": [
+        [
+          "soma 5050",
+          [
+            "5050"
+          ]
+        ],
+        [
+          "formula n(n+1)/2",
+          [
+            "n+1",
+            "n(n",
+            "2"
+          ]
+        ],
+        [
+          "os termos tendem a zero",
+          [
+            "zero",
+            "tende",
+            "aproxima"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Simetrias e Congruências",
+    "sections": [
+      {
+        "title": "Congruência é igualdade de forma e tamanho",
+        "content": "Duas figuras são congruentes quando é possível sobrepor uma à outra por movimentos rígidos: translação, rotação e reflexão. Nada de esticar ou encolher — isso seria semelhança. Em triângulos, a congruência é garantida pelos casos LAL, ALA, LLL e LAAo, e é com eles que se demonstram propriedades de paralelogramos e de figuras compostas."
+      },
+      {
+        "title": "Os movimentos que preservam",
+        "content": "A translação desloca a figura sem girar; a rotação gira em torno de um centro por um ângulo; a reflexão espelha em relação a um eixo. Todos preservam distâncias e ângulos, e por isso levam qualquer figura numa figura congruente. A composição de duas reflexões em eixos paralelos equivale a uma translação, e em eixos concorrentes, a uma rotação."
+      },
+      {
+        "title": "Simetria de uma figura",
+        "content": "Uma figura tem simetria quando algum desses movimentos a leva nela mesma. O quadrado tem quatro eixos de simetria e simetria de rotação de 90°; o retângulo não quadrado tem dois eixos e rotação de 180°. Contar eixos exige testar: nem toda diagonal é eixo, como mostram o retângulo e o losango, que têm eixos diferentes entre si."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Assumir que as diagonais de qualquer paralelogramo são eixos de simetria é falso: só valem no losango e no quadrado. Outro erro é aplicar casos de congruência inexistentes, como LLA, que não garante congruência. E confundir congruência com semelhança troca igualdade por proporcionalidade."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Quantos eixos de simetria tem um retângulo não quadrado? Responda antes de conferir: dois, as retas que passam pelos pontos médios dos lados opostos, e não as diagonais. Agora, quantos tem um triângulo equilátero? Três, e ele tem ainda simetria de rotação de 120°. Por fim, diga qual caso garante congruência entre triângulos com dois lados e o ângulo entre eles iguais: LAL."
+      }
+    ],
+    "recall": {
+      "prompt": "Quantos eixos de simetria tem um retângulo não quadrado e um triângulo equilátero? Cite um caso de congruência de triângulos.",
+      "elements": [
+        [
+          "retangulo tem dois eixos",
+          [
+            "dois",
+            "2"
+          ]
+        ],
+        [
+          "equilatero tem tres eixos",
+          [
+            "tres",
+            "3"
+          ]
+        ],
+        [
+          "caso LAL ou equivalente",
+          [
+            "lal",
+            "ala",
+            "lll"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
     "topic": "Sistemas de Equações",
     "sections": [
       {
@@ -6161,6 +9394,219 @@
             "interseccao",
             "cruzam",
             "ponto"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Sólidos de Revolução",
+    "sections": [
+      {
+        "title": "Como nascem",
+        "content": "Sólidos de revolução são gerados girando uma figura plana em torno de um eixo. Um retângulo gira e gera um cilindro; um triângulo retângulo girando em torno de um cateto gera um cone; um semicírculo girando em torno do diâmetro gera uma esfera. Identificar a figura geratriz é o primeiro passo em qualquer questão do tipo."
+      },
+      {
+        "title": "Cilindro e cone",
+        "content": "O cilindro tem volume πr²h e área lateral 2πrh, que é a planificação num retângulo. O cone tem volume (1/3)πr²h — de novo o terço, como na pirâmide — e área lateral πrg, onde g é a geratriz, ligada a r e h por g² = r² + h². A planificação lateral do cone é um setor circular."
+      },
+      {
+        "title": "Esfera",
+        "content": "A esfera tem volume (4/3)πR³ e área 4πR². Diferente dos outros sólidos, ela não tem planificação, e suas seções por planos são círculos, com raio máximo no plano que passa pelo centro. Questões costumam combinar esfera inscrita em cilindro ou cubo, situação em que o diâmetro coincide com a altura ou com a aresta."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Usar a altura no lugar da geratriz na área lateral do cone é o erro mais comum: a geratriz é a hipotenusa do triângulo formado por raio e altura, sempre maior que os dois. Outro deslize é esquecer o fator 1/3 no volume do cone. E em problemas de revolução, girar em torno do cateto errado troca raio por altura e muda completamente o volume, porque o raio entra ao quadrado e a altura entra linearmente."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Um cone tem raio 3 e altura 4. Calcule volume, geratriz e área lateral antes de conferir: V = (1/3)π·9·4 = 12π; g = √(9 + 16) = 5; área lateral = π·3·5 = 15π. Agora, uma esfera de raio 3: volume 36π e área 36π, coincidência numérica que só ocorre nesse raio."
+      }
+    ],
+    "recall": {
+      "prompt": "Num cone de raio 3 e altura 4, calcule volume, geratriz e área lateral.",
+      "elements": [
+        [
+          "volume 12 pi",
+          [
+            "12"
+          ]
+        ],
+        [
+          "geratriz 5",
+          [
+            "5"
+          ]
+        ],
+        [
+          "area lateral 15 pi",
+          [
+            "15"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Tabelas e Matrizes",
+    "sections": [
+      {
+        "title": "Uma tabela com regras",
+        "content": "Matriz é uma tabela de números organizada em linhas e colunas, e cada elemento é identificado por dois índices: aᵢⱼ está na linha i e na coluna j. A ordem de uma matriz é m×n, com m linhas e n colunas. Muitas questões só pedem leitura correta desses índices, e trocar linha por coluna já é suficiente para errar tudo o que vem depois."
+      },
+      {
+        "title": "Matrizes especiais",
+        "content": "Vale conhecer as principais: a quadrada tem m = n; a identidade tem 1 na diagonal principal e 0 no resto, e funciona como o número 1 da multiplicação; a transposta troca linhas por colunas; a simétrica é igual à sua transposta. A diagonal principal é a dos elementos com i = j, e a secundária é a que vai do canto superior direito ao inferior esquerdo."
+      },
+      {
+        "title": "Soma, subtração e multiplicação por escalar",
+        "content": "Somar duas matrizes só é possível quando elas têm a mesma ordem, e o resultado é elemento a elemento. Multiplicar por um número real multiplica todos os elementos. Essas operações herdam as propriedades dos números reais: são comutativas, associativas e distributivas, o que não vale para o produto entre matrizes, tratado à parte."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Somar matrizes de ordens diferentes é impossível, e o exercício às vezes existe só para testar isso. Outro erro é trocar a ordem dos índices ao construir a matriz a partir de uma lei como aᵢⱼ = i + 2j. E lembre que a matriz identidade só existe para matrizes quadradas, e que transposta de transposta devolve a matriz original."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Construa a matriz 2×2 com aᵢⱼ = i + 2j antes de conferir: a₁₁ = 3, a₁₂ = 5, a₂₁ = 4, a₂₂ = 6. Agora some essa matriz com a identidade de ordem 2: os elementos da diagonal ganham 1, resultando 4, 5, 4, 7. Por fim, escreva a transposta da primeira: as linhas viram colunas, dando 3, 4 na primeira linha e 5, 6 na segunda."
+      }
+    ],
+    "recall": {
+      "prompt": "Construa a matriz 2×2 com aᵢⱼ = i + 2j e escreva sua transposta, dizendo quando duas matrizes podem ser somadas.",
+      "elements": [
+        [
+          "elementos 3, 5, 4 e 6",
+          [
+            "3",
+            "5",
+            "4",
+            "6"
+          ]
+        ],
+        [
+          "transposta troca linhas por colunas",
+          [
+            "transposta",
+            "linhas",
+            "colunas"
+          ]
+        ],
+        [
+          "soma exige mesma ordem",
+          [
+            "mesma ordem",
+            "ordem",
+            "igual"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Transformações Trigonométricas",
+    "sections": [
+      {
+        "title": "Soma e diferença de arcos",
+        "content": "As fórmulas sen(a ± b) = sen a·cos b ± sen b·cos a e cos(a ± b) = cos a·cos b ∓ sen a·sen b permitem calcular valores que não estão na tabela, como sen 75° = sen(45° + 30°). Note a inversão de sinal no cosseno: a soma de arcos produz diferença de produtos, detalhe responsável por boa parte dos erros."
+      },
+      {
+        "title": "Arco duplo e arco metade",
+        "content": "Fazendo b = a nas fórmulas de soma, saem sen 2a = 2·sen a·cos a e cos 2a = cos²a − sen²a, que ainda pode ser escrita como 1 − 2sen²a ou 2cos²a − 1. Essas três formas do cosseno do arco duplo são úteis conforme o dado do problema, e delas se obtêm as fórmulas do arco metade."
+      },
+      {
+        "title": "Onde isso é cobrado",
+        "content": "Transformações aparecem em simplificação de expressões, resolução de equações trigonométricas e em questões que pedem valores exatos de ângulos não notáveis. A estratégia é escrever o ângulo pedido como soma, diferença, dobro ou metade de ângulos conhecidos, e só depois aplicar a fórmula correspondente."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Distribuir a função sobre a soma, escrevendo sen(a + b) como sen a + sen b, é o erro estrutural do tópico e está errado. Outro é trocar os sinais na fórmula do cosseno. E ao usar arco duplo, lembre de escolher a forma que combina com o dado disponível, para não introduzir uma incógnita nova."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Calcule sen 75° antes de conferir: sen(45° + 30°) = (√2/2)(√3/2) + (√2/2)(1/2) = (√6 + √2)/4. Agora, se sen a = 3/5 com a no primeiro quadrante, calcule sen 2a: como cos a = 4/5, vem sen 2a = 2·(3/5)·(4/5) = 24/25. Por fim, calcule cos 2a pelas três formas e verifique que todas dão o mesmo: 16/25 − 9/25 = 7/25."
+      }
+    ],
+    "recall": {
+      "prompt": "Calcule sen 75° por soma de arcos e, se sen a = 3/5 no primeiro quadrante, calcule sen 2a.",
+      "elements": [
+        [
+          "resultado (raiz de 6 mais raiz de 2) sobre 4",
+          [
+            "6",
+            "2",
+            "4"
+          ]
+        ],
+        [
+          "seno do arco duplo igual a 24/25",
+          [
+            "24/25",
+            "24"
+          ]
+        ],
+        [
+          "a funcao nao se distribui sobre a soma",
+          [
+            "nao distribui",
+            "nao e igual",
+            "soma"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Transformações em Gráficos de Funções",
+    "sections": [
+      {
+        "title": "Translações",
+        "content": "Somar uma constante fora da função desloca o gráfico verticalmente: y = f(x) + k sobe k unidades se k > 0. Somar dentro desloca horizontalmente, e no sentido contrário ao que a intuição sugere: y = f(x + k) desloca k unidades para a esquerda. Essa inversão é a fonte de erro número um do tópico."
+      },
+      {
+        "title": "Reflexões",
+        "content": "Multiplicar a função por −1 reflete o gráfico no eixo x: y = −f(x) vira a figura de cabeça para baixo. Trocar x por −x reflete no eixo y: y = f(−x) espelha lateralmente. Combinando as duas obtém-se a simetria em relação à origem, que é a rotação de 180° do gráfico original."
+      },
+      {
+        "title": "Dilatações e módulo",
+        "content": "Multiplicar por a fora estica verticalmente por fator a; multiplicar x por a dentro comprime horizontalmente por fator a, de novo com efeito inverso ao esperado. Já y = |f(x)| rebate para cima tudo o que estava abaixo do eixo x, enquanto y = f(|x|) copia para a esquerda o que existe à direita do eixo y."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Deslocar para a direita quando a fórmula é f(x + 2) é o erro clássico: o deslocamento é para a esquerda. Outro é confundir |f(x)| com f(|x|), que produzem gráficos diferentes. E aplicar as transformações fora de ordem, quando há várias combinadas, muda o resultado final."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "A partir de y = x², descreva o gráfico de y = (x − 3)² + 2 antes de conferir: a parábola desloca-se três unidades para a direita e duas para cima, com vértice em (3, 2). Agora descreva y = −x² + 1: reflete no eixo x e sobe uma unidade, com concavidade para baixo e vértice em (0, 1)."
+      }
+    ],
+    "recall": {
+      "prompt": "A partir de y = x², descreva os gráficos de y = (x − 3)² + 2 e de y = −x² + 1.",
+      "elements": [
+        [
+          "vertice em (3, 2)",
+          [
+            "3",
+            "2"
+          ]
+        ],
+        [
+          "deslocamento para a direita e para cima",
+          [
+            "direita",
+            "cima",
+            "desloca"
+          ]
+        ],
+        [
+          "reflexao no eixo x com vertice em (0,1)",
+          [
+            "reflete",
+            "baixo",
+            "1"
           ]
         ]
       ]
@@ -6223,6 +9669,113 @@
   },
   {
     "subject": "Matemática",
+    "topic": "Triângulo Retângulo",
+    "sections": [
+      {
+        "title": "Pitágoras e as relações métricas",
+        "content": "No triângulo retângulo, o quadrado da hipotenusa é a soma dos quadrados dos catetos. Traçando a altura relativa à hipotenusa, surgem três triângulos semelhantes, e daí as relações métricas: cada cateto ao quadrado é o produto da hipotenusa pela projeção correspondente, a altura ao quadrado é o produto das projeções, e o produto dos catetos é o da hipotenusa pela altura."
+      },
+      {
+        "title": "Razões trigonométricas",
+        "content": "Seno é cateto oposto sobre hipotenusa, cosseno é cateto adjacente sobre hipotenusa e tangente é oposto sobre adjacente. Os valores de 30°, 45° e 60° saem do quadrado e do triângulo equilátero, e vale a pena reconstruí-los em vez de decorar: no equilátero de lado 2, a altura é √3, o que dá sen 60° = √3/2 imediatamente."
+      },
+      {
+        "title": "Onde isso resolve problemas",
+        "content": "Altura de prédios, rampas de acessibilidade, distâncias inacessíveis e diagonais de retângulos e blocos são o repertório clássico. Em problemas com dois ângulos de observação, monte um sistema com as duas tangentes. E lembre que a diagonal de um quadrado de lado a mede a√2, enquanto a de um cubo mede a√3."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Aplicar Pitágoras em triângulo não retângulo é o erro estrutural do tópico. Outro é trocar cateto oposto por adjacente ao montar a razão, o que exige olhar sempre a partir do ângulo em questão. E cuidado com a hipotenusa: ela é sempre o maior lado e fica oposta ao ângulo reto."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Num triângulo retângulo de catetos 6 e 8, calcule a hipotenusa e a altura relativa a ela antes de conferir: hipotenusa 10, e altura igual a 6·8/10 = 4,8. Agora, num triângulo retângulo com um ângulo de 30° e hipotenusa 10, o cateto oposto mede 10·sen 30° = 5 e o adjacente mede 10·(√3/2) ≈ 8,7."
+      }
+    ],
+    "recall": {
+      "prompt": "Num triângulo retângulo de catetos 6 e 8, calcule a hipotenusa e a altura relativa a ela.",
+      "elements": [
+        [
+          "hipotenusa 10",
+          [
+            "10"
+          ]
+        ],
+        [
+          "altura 4,8",
+          [
+            "4,8",
+            "4.8"
+          ]
+        ],
+        [
+          "produto dos catetos igual a hipotenusa vezes altura",
+          [
+            "produto",
+            "catetos",
+            "altura"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Técnicas Algébricas",
+    "sections": [
+      {
+        "title": "Fatorar é reescrever como produto",
+        "content": "As fatorações que resolvem quase tudo são poucas: fator comum, agrupamento, diferença de quadrados a² − b² = (a + b)(a − b), trinômio quadrado perfeito e soma e diferença de cubos. Reconhecê-las em expressões disfarçadas é a habilidade central, porque fatorar transforma soma em produto e permite simplificar frações e resolver equações."
+      },
+      {
+        "title": "Produtos notáveis",
+        "content": "(a + b)² = a² + 2ab + b², (a − b)² = a² − 2ab + b² e (a + b)(a − b) = a² − b² são as identidades mais usadas. O termo do meio, 2ab, é justamente o que se esquece com mais frequência. Elas servem tanto para expandir quanto para fatorar, e é no sentido inverso que costumam aparecer em prova."
+      },
+      {
+        "title": "Frações algébricas",
+        "content": "Simplificar uma fração algébrica exige fatorar numerador e denominador e cancelar fatores comuns — nunca parcelas soltas. Somar frações exige denominador comum, obtido pelo MMC dos denominadores fatorados. E toda simplificação carrega uma condição de existência: os valores que anulam o denominador ficam excluídos."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Cancelar parcelas em vez de fatores é o erro mais grave do assunto: em (x + 3)/3 não se pode cortar o 3. Outro é escrever (a + b)² como a² + b², esquecendo o termo do meio. E resolver equação fracionária sem verificar as condições de existência aceita raízes que anulam o denominador."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Fatore x² − 9 e x² + 6x + 9 antes de conferir: (x + 3)(x − 3) e (x + 3)². Agora simplifique (x² − 9)/(x² + 6x + 9): cancela-se o fator (x + 3), restando (x − 3)/(x + 3), válido para x ≠ −3. Por fim, expanda (2x − 5)²: 4x² − 20x + 25, e confira o termo do meio, 2·2x·5 = 20x, que é justamente o que se costuma perder."
+      }
+    ],
+    "recall": {
+      "prompt": "Fatore x² − 9 e x² + 6x + 9, simplifique a fração entre elas e indique a condição de existência.",
+      "elements": [
+        [
+          "fatoracoes (x+3)(x-3) e (x+3) ao quadrado",
+          [
+            "x + 3",
+            "x - 3",
+            "(x+3)"
+          ]
+        ],
+        [
+          "fracao simplifica para (x-3)/(x+3)",
+          [
+            "x - 3",
+            "x + 3",
+            "simplifica"
+          ]
+        ],
+        [
+          "x diferente de -3",
+          [
+            "-3",
+            "diferente",
+            "condicao"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
     "topic": "Técnicas de Contagem",
     "sections": [
       {
@@ -6269,6 +9822,314 @@
             "ordem",
             "arranjo",
             "permutacao"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Área do Círculo e de suas Partes",
+    "sections": [
+      {
+        "title": "A área do círculo",
+        "content": "A área do círculo de raio r é πr². Uma forma de enxergar a fórmula é recortar o círculo em muitos setores finos e reorganizá-los alternadamente: a figura obtida se aproxima de um retângulo de base igual a metade do comprimento, πr, e altura r. Como a área depende do quadrado do raio, dobrar o raio quadruplica a área."
+      },
+      {
+        "title": "Setor e segmento circular",
+        "content": "O setor circular é a fatia entre dois raios, e sua área é a fração do círculo correspondente ao ângulo: (α/360)·πr². O segmento circular é a região entre uma corda e o arco, e sua área é a do setor menos a do triângulo formado pelos dois raios e a corda. Separar essas duas figuras é o que resolve as questões de área sombreada."
+      },
+      {
+        "title": "Coroa e figuras compostas",
+        "content": "A coroa circular, região entre dois círculos concêntricos, tem área π(R² − r²) — e não π(R − r)². Em figuras compostas com círculos inscritos ou circunscritos em quadrados, o caminho é relacionar raio e lado: no círculo inscrito, o diâmetro é o lado; no circunscrito, o diâmetro é a diagonal, que vale lado vezes √2."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Elevar a diferença ao quadrado na coroa é o erro mais frequente. Outro é usar o diâmetro no lugar do raio, o que quadruplica a área. E ao calcular região sombreada, verifique se o que se subtrai é setor, triângulo ou círculo inteiro — trocar um pelo outro é o deslize típico dessas questões."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Calcule a área de um círculo de raio 6 antes de conferir: 36π. Agora a área de um setor de 60° nesse círculo: (60/360)·36π = 6π. Por fim, a área da coroa entre círculos de raios 5 e 3: π(25 − 9) = 16π, e não π·4, que seria o resultado do erro comum."
+      }
+    ],
+    "recall": {
+      "prompt": "Calcule a área de um setor de 60° num círculo de raio 6 e a área da coroa entre raios 5 e 3.",
+      "elements": [
+        [
+          "setor de 6 pi",
+          [
+            "6"
+          ]
+        ],
+        [
+          "coroa de 16 pi",
+          [
+            "16"
+          ]
+        ],
+        [
+          "coroa e a diferenca dos quadrados dos raios",
+          [
+            "diferenca",
+            "quadrado",
+            "r2"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Áreas de Figuras Planas",
+    "sections": [
+      {
+        "title": "Escolher a decomposição",
+        "content": "Diante de uma figura irregular, o método é sempre o mesmo: decompor em figuras conhecidas ou completar para uma figura conhecida e subtrair o excedente. Retângulo envolvente costuma ser o caminho mais rápido, porque as partes retiradas são triângulos retângulos de medidas fáceis de ler no desenho."
+      },
+      {
+        "title": "Áreas em contextos reais",
+        "content": "Questões de vestibular costumam vestir área de terreno, piso, pintura de parede e cobertura de embalagem. O trabalho matemático é o mesmo, mas atenção às unidades e ao que se pede: quantidade de latas de tinta, número de ladrilhos ou custo total exigem dividir a área por um rendimento e arredondar sempre para cima."
+      },
+      {
+        "title": "Áreas de regiões sombreadas",
+        "content": "Nessas questões, escreva a área sombreada como diferença ou soma de áreas conhecidas antes de calcular qualquer número. Escrever primeiro a expressão e só depois substituir evita o erro de calcular uma parte e esquecer de subtrair a outra, e permite ver simplificações que anulam termos com π."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Arredondar para baixo o número de latas ou ladrilhos leva a resposta errada em contexto: material que falta não termina o serviço. Outro erro é somar áreas de peças que se sobrepõem. E converter unidades ao final, sem cuidado com o expoente, é o deslize que aparece em quase toda questão de terreno."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Um terreno retangular de 20 m por 15 m tem uma piscina circular de raio 3 m. Calcule a área gramada antes de conferir: 300 − 9π ≈ 300 − 28,3 = 271,7 m². Agora, se cada lata de tinta cobre 40 m² e a parede tem 150 m², são necessárias 4 latas, porque 3,75 arredonda para cima."
+      }
+    ],
+    "recall": {
+      "prompt": "Num terreno de 20 m por 15 m há uma piscina circular de raio 3 m: calcule a área gramada e diga como arredondar material.",
+      "elements": [
+        [
+          "area de 300 menos 9 pi",
+          [
+            "300",
+            "9",
+            "271"
+          ]
+        ],
+        [
+          "escrever a diferenca antes de calcular",
+          [
+            "diferenca",
+            "subtrair",
+            "expressao"
+          ]
+        ],
+        [
+          "arredondar material sempre para cima",
+          [
+            "para cima",
+            "cima",
+            "inteiro"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Áreas de Polígonos",
+    "sections": [
+      {
+        "title": "As fórmulas e sua origem",
+        "content": "Área do retângulo é base vezes altura, e todas as outras derivam dela: o paralelogramo vira retângulo ao recortar e transladar um triângulo; o triângulo é metade do paralelogramo, base vezes altura sobre dois; o trapézio é a média das bases vezes a altura. Reconstruir essas relações é mais seguro do que memorizar uma lista."
+      },
+      {
+        "title": "Polígonos regulares e decomposição",
+        "content": "Um polígono regular de n lados se decompõe em n triângulos isósceles com vértice no centro, de modo que a área é o semiperímetro vezes o apótema. Para figuras irregulares, decomponha em triângulos e retângulos, ou calcule a área de um retângulo envolvente e subtraia as partes que sobram — estratégia que resolve quase toda figura de prova."
+      },
+      {
+        "title": "Áreas por coordenadas",
+        "content": "Com os vértices em coordenadas, a área de um triângulo é metade do módulo do determinante formado pelas coordenadas dos vértices com uma coluna de 1. É o caminho mais rápido em geometria analítica e dispensa achar base e altura. Para polígonos maiores, divida em triângulos e some."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Usar como altura um lado inclinado, em vez da distância perpendicular à base, é o erro mais comum no paralelogramo e no triângulo. Outro é esquecer a divisão por 2 no triângulo e no trapézio. E em figuras compostas, somar áreas de partes que se sobrepõem inflaciona o resultado."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Calcule a área de um trapézio de bases 8 e 12 e altura 5 antes de conferir: (8 + 12)/2 · 5 = 50. Agora a área de um hexágono regular de lado 4, sabendo que ele é formado por seis triângulos equiláteros de lado 4: 6·(4²√3/4) = 24√3 ≈ 41,6. Por fim, a área do triângulo de vértices (0,0), (4,0) e (0,3) é 4·3/2 = 6."
+      }
+    ],
+    "recall": {
+      "prompt": "Calcule a área de um trapézio de bases 8 e 12 e altura 5, e a do triângulo de vértices (0,0), (4,0) e (0,3).",
+      "elements": [
+        [
+          "area do trapezio 50",
+          [
+            "50"
+          ]
+        ],
+        [
+          "area do triangulo 6",
+          [
+            "6"
+          ]
+        ],
+        [
+          "media das bases vezes a altura",
+          [
+            "media",
+            "bases",
+            "altura"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Ângulos e Circunferências",
+    "sections": [
+      {
+        "title": "Ângulo central e ângulo inscrito",
+        "content": "O ângulo central tem vértice no centro e mede exatamente o arco correspondente. O ângulo inscrito tem vértice na circunferência e mede metade do arco que enxerga. Dessa relação sai o resultado mais usado do tópico: todo ângulo inscrito num semicírculo é reto, porque enxerga um arco de 180°."
+      },
+      {
+        "title": "Outros ângulos na circunferência",
+        "content": "O ângulo de segmento, formado por uma corda e a tangente no ponto de contato, também mede metade do arco. O ângulo com vértice interno vale a semissoma dos arcos opostos, e o com vértice externo, a semidiferença. Saber de qual tipo é o ângulo da figura antes de escrever qualquer equação é o passo que organiza a resolução."
+      },
+      {
+        "title": "Quadriláteros inscritíveis",
+        "content": "Um quadrilátero pode ser inscrito numa circunferência exatamente quando seus ângulos opostos são suplementares. É um critério prático que resolve questões que pareciam pedir muitas contas: basta verificar a soma de dois ângulos opostos. A tangente, por sua vez, é sempre perpendicular ao raio no ponto de contato."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Aplicar a metade do arco ao ângulo central, quando ele mede o arco inteiro, é o erro mais frequente. Outro é confundir arco com corda. E ao trabalhar com vértice externo, lembre que é semidiferença: usar a semissoma inverte completamente o resultado."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Um ângulo inscrito enxerga um arco de 80°. Calcule sua medida antes de conferir: 40°. Agora, se o ângulo central é 110°, o inscrito que enxerga o mesmo arco mede 55°. Por fim, num quadrilátero inscrito, se um ângulo mede 70°, seu oposto mede 110°, porque a soma dos opostos é 180°."
+      }
+    ],
+    "recall": {
+      "prompt": "Um ângulo inscrito enxerga um arco de 80°: quanto ele mede? E qual o ângulo oposto a 70° num quadrilátero inscrito?",
+      "elements": [
+        [
+          "inscrito mede 40 graus",
+          [
+            "40"
+          ]
+        ],
+        [
+          "oposto mede 110 graus",
+          [
+            "110"
+          ]
+        ],
+        [
+          "inscrito e metade do arco e opostos sao suplementares",
+          [
+            "metade",
+            "arco",
+            "suplementar"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Ângulos em Polígonos",
+    "sections": [
+      {
+        "title": "Somar dividindo em triângulos",
+        "content": "Um polígono convexo de n lados pode ser dividido em n − 2 triângulos traçando diagonais a partir de um único vértice. Como cada triângulo contribui com 180°, a soma dos ângulos internos é Si = (n − 2)·180°. Não é fórmula para decorar: é contagem de triângulos, e reconstruí-la em prova leva dez segundos e evita erro de memória."
+      },
+      {
+        "title": "Polígonos regulares",
+        "content": "Num polígono regular, todos os lados e ângulos são iguais, então cada ângulo interno vale (n − 2)·180°/n. A soma dos externos é sempre 360°, qualquer que seja n, e portanto cada externo de um regular mede 360°/n. Como interno e externo são suplementares, conhecer um dá o outro imediatamente, e o caminho pelo externo costuma ser mais curto."
+      },
+      {
+        "title": "Diagonais",
+        "content": "De cada vértice partem n − 3 diagonais, porque não há diagonal para o próprio vértice nem para os dois vizinhos. Contando todos os vértices e dividindo por dois, para não contar cada diagonal duas vezes, chega-se a d = n(n − 3)/2. Esse raciocínio de contagem também aparece em problemas de apertos de mão e de partidas em campeonato."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Usar Si = n·180° em vez de (n − 2)·180° é o erro mais comum. Outro é esquecer a divisão por dois no número de diagonais. E cuidado ao ler o enunciado: ele pode dar o ângulo externo, e não o interno, ou pedir a soma quando você calculou apenas um ângulo."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Calcule a soma dos ângulos internos de um octógono antes de conferir: (8 − 2)·180° = 1080°, e cada interno do regular mede 135°. Agora, quantas diagonais tem esse octógono? 8·5/2 = 20. Por fim, um polígono regular tem ângulo externo de 24°: como 360/24 = 15, ele tem 15 lados."
+      }
+    ],
+    "recall": {
+      "prompt": "Calcule a soma dos ângulos internos de um octógono, cada ângulo interno do regular e o número de diagonais.",
+      "elements": [
+        [
+          "soma de 1080 graus",
+          [
+            "1080"
+          ]
+        ],
+        [
+          "cada interno mede 135 graus",
+          [
+            "135"
+          ]
+        ],
+        [
+          "20 diagonais",
+          [
+            "20"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Matemática",
+    "topic": "Ângulos em Triângulos",
+    "sections": [
+      {
+        "title": "A soma dos internos",
+        "content": "Em qualquer triângulo, os ângulos internos somam 180°. A demonstração usa uma paralela a um dos lados passando pelo vértice oposto, e as relações entre paralelas transformam os três ângulos em um ângulo raso. Desse fato saem quase todos os resultados do tópico, incluindo os ângulos de triângulos equiláteros, que medem 60° cada."
+      },
+      {
+        "title": "Ângulo externo",
+        "content": "Cada ângulo externo é igual à soma dos dois internos não adjacentes, resultado que evita passar pelo cálculo do interno correspondente. Como consequência, a soma dos ângulos externos de qualquer triângulo é 360°, valendo o mesmo para qualquer polígono convexo, o que costuma surpreender e é frequentemente cobrado."
+      },
+      {
+        "title": "Classificação e condição de existência",
+        "content": "Pelos lados, o triângulo é equilátero, isósceles ou escaleno; pelos ângulos, acutângulo, retângulo ou obtusângulo. No isósceles, os ângulos da base são iguais, e essa é a propriedade mais usada em prova. Vale ainda a desigualdade triangular: cada lado é menor que a soma dos outros dois, condição para o triângulo existir."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Aplicar o teorema do ângulo externo somando os três internos, e não os dois não adjacentes, é erro corriqueiro. Outro é assumir que um triângulo é isósceles porque parece; só a marcação da figura ou o enunciado garante. E esquecer a desigualdade triangular leva a aceitar medidas impossíveis, como 2, 3 e 7."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Num triângulo, dois ângulos medem 50° e 60°. Calcule o terceiro e o externo adjacente a ele antes de conferir: o terceiro mede 70°, e o externo correspondente mede 110°, igual a 50° + 60°. Agora diga se existe triângulo de lados 2, 3 e 7: não existe, porque 2 + 3 é menor que 7."
+      }
+    ],
+    "recall": {
+      "prompt": "Num triângulo dois ângulos medem 50° e 60°: calcule o terceiro e o externo adjacente, e diga se existe triângulo de lados 2, 3 e 7.",
+      "elements": [
+        [
+          "terceiro angulo 70 graus",
+          [
+            "70"
+          ]
+        ],
+        [
+          "externo de 110 graus",
+          [
+            "110"
+          ]
+        ],
+        [
+          "nao existe pela desigualdade triangular",
+          [
+            "nao existe",
+            "desigualdade",
+            "soma"
           ]
         ]
       ]
