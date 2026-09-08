@@ -3878,6 +3878,61 @@
   },
   {
     "subject": "Entendimento de Texto",
+    "topic": "Fatores de Textualidade",
+    "sections": [
+      {
+        "title": "Coesão e coerência",
+        "content": "Coesão é a articulação explícita entre as partes do texto, feita por conectivos, pronomes, sinônimos, elipses e concordância. Coerência é a unidade de sentido: o texto faz sentido como um todo, sem contradições internas e com progressão adequada. Um texto pode ser coeso e incoerente, e o inverso também ocorre em conversas informais."
+      },
+      {
+        "title": "Os demais fatores",
+        "content": "Além desses dois, a textualidade envolve intencionalidade, o propósito de quem escreve; aceitabilidade, a disposição do leitor de tratar aquilo como texto; situacionalidade, a adequação ao contexto; informatividade, o equilíbrio entre o previsível e o novo; e intertextualidade, a relação com outros textos."
+      },
+      {
+        "title": "Progressão e continuidade",
+        "content": "Um texto precisa manter o tema, garantindo continuidade, e ao mesmo tempo acrescentar informação, garantindo progressão. Excesso de repetição gera redundância; excesso de novidade sem retomada gera desconexão. Analisar como o texto retoma e avança é a chave de muitas questões de interpretação em prova."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Confundir coesão com coerência é o erro central do tópico. Outro deslize é achar que texto coeso é automaticamente bom, quando conectivos mal empregados quebram o sentido. E supor que informatividade significa quantidade de informação, quando se refere ao grau de previsibilidade do que é dito."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Analise a frase: choveu muito, portanto a rua ficou seca. Responda antes de conferir: há coesão, pois o conectivo articula as orações, mas não há coerência, porque a relação de causa contraria o conhecimento de mundo. Agora explique a diferença entre continuidade e progressão: uma mantém o tema, a outra acrescenta informação nova."
+      }
+    ],
+    "recall": {
+      "prompt": "Um texto pode ser coeso e incoerente? Diferencie continuidade de progressão.",
+      "elements": [
+        [
+          "sim, os conectivos podem articular sem produzir sentido",
+          [
+            "sim",
+            "conectivo",
+            "sentido"
+          ]
+        ],
+        [
+          "a coerencia depende da unidade de sentido",
+          [
+            "coerencia",
+            "unidade",
+            "contradicao"
+          ]
+        ],
+        [
+          "continuidade mantem o tema e progressao acrescenta informacao",
+          [
+            "tema",
+            "informacao",
+            "avanca"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Entendimento de Texto",
     "topic": "Figuras de Linguagem",
     "sections": [
       {
@@ -3901,6 +3956,555 @@
         "content": "Em “Suas palavras me feriram”, que relação sustenta a expressão? Um efeito emocional é apresentado por meio de uma ação física, produzindo metáfora. Para explicar, relacione palavras a sofrimento e ferimento a dor, sem supor uma agressão material. Se o texto dissesse “suas palavras eram como lâminas”, a comparação estaria explicitada pelo conectivo “como”."
       }
     ]
+  },
+  {
+    "subject": "Entendimento de Texto",
+    "topic": "Função Poética e Linguagem Literária",
+    "sections": [
+      {
+        "title": "O foco na mensagem",
+        "content": "A função poética coloca em evidência a própria forma da mensagem: sonoridade, ritmo, escolha lexical, disposição gráfica. Não é exclusiva da poesia: aparece em slogans, manchetes e provérbios. O que a caracteriza é que a maneira de dizer se torna parte do que é dito, não apenas veículo."
+      },
+      {
+        "title": "Recursos",
+        "content": "Entre os recursos mais cobrados estão as figuras de som, como aliteração e assonância; de construção, como anáfora, hipérbato e elipse; e de palavra, como metáfora, metonímia, sinestesia e antítese. Em prova, é preciso nomear o recurso e explicar seu efeito de sentido, e não apenas identificá-lo."
+      },
+      {
+        "title": "Denotação e conotação",
+        "content": "A linguagem literária explora a conotação, sentidos figurados que se somam ao valor de dicionário. A ambiguidade, defeito em textos técnicos, torna-se recurso expressivo. A leitura literária, portanto, pede atenção às camadas de sentido e à forma, sem transformar o poema em mensagem única e fechada."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Reduzir o poema a uma mensagem moral é o erro mais comum. Outro deslize é confundir metáfora, comparação implícita, com metonímia, substituição por relação de contiguidade. E identificar recursos sem explicar efeito, o que não pontua em questões discursivas."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Em bebi o copo inteiro, que figura aparece? Responda antes de conferir: metonímia, pois o recipiente substitui o conteúdo, numa relação de contiguidade e não de semelhança. Agora explique por que a ambiguidade é recurso na literatura: ela amplia camadas de sentido e convida à leitura ativa, enquanto num texto técnico prejudicaria a clareza."
+      }
+    ],
+    "recall": {
+      "prompt": "Que figura aparece em bebi o copo inteiro? Por que a ambiguidade é recurso na literatura?",
+      "elements": [
+        [
+          "metonimia por contiguidade",
+          [
+            "metonimia",
+            "contiguidade",
+            "recipiente"
+          ]
+        ],
+        [
+          "nao e semelhanca como na metafora",
+          [
+            "metafora",
+            "semelhanca",
+            "diferenca"
+          ]
+        ],
+        [
+          "a ambiguidade amplia camadas de sentido",
+          [
+            "camada",
+            "sentido",
+            "leitura"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Entendimento de Texto",
+    "topic": "Funções da Linguagem",
+    "sections": [
+      {
+        "title": "As seis funções",
+        "content": "Jakobson associa cada função a um elemento da comunicação: referencial ao contexto, com foco na informação; emotiva ao emissor, com marcas de subjetividade; conativa ao receptor, com apelo e imperativo; fática ao canal, testando ou mantendo o contato; metalinguística ao código, quando a linguagem fala de si; e poética à mensagem, com foco em sua própria elaboração."
+      },
+      {
+        "title": "Como identificar",
+        "content": "O critério é a ênfase, não a exclusividade: um texto tem várias funções, e a questão pergunta pela predominante. Verbos em primeira pessoa e adjetivos avaliativos indicam emotiva; imperativos e vocativos indicam conativa; definições e explicações sobre a própria língua indicam metalinguística; jogos sonoros indicam poética."
+      },
+      {
+        "title": "Gêneros típicos",
+        "content": "Notícias e verbetes tendem à referencial; propagandas, à conativa; diários e poemas líricos, à emotiva; dicionários e gramáticas, à metalinguística; conversas telefônicas com alô, você está me ouvindo, à fática; e poemas com rimas, aliterações e construções elaboradas, à poética."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Escolher a função pelo gênero, sem analisar o texto, é o erro mais frequente: um anúncio pode ser predominantemente poético. Outro deslize é confundir metalinguística com poética. E supor que a presença de um traço isolado, como um imperativo, define sozinha a função predominante."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Um poema que fala sobre o próprio ato de escrever poesia predomina em qual função? Responda antes de conferir: metalinguística, porque o código, aqui a própria linguagem poética, é o tema do texto, ainda que a função poética também esteja presente. Agora identifique a função em um cartaz que diz compre agora: conativa, pelo apelo direto ao receptor."
+      }
+    ],
+    "recall": {
+      "prompt": "Um poema sobre o ato de escrever predomina em que função? E um cartaz que diz compre agora?",
+      "elements": [
+        [
+          "metalinguistica porque fala do proprio codigo",
+          [
+            "metalinguistica",
+            "codigo",
+            "propria"
+          ]
+        ],
+        [
+          "a funcao poetica tambem esta presente",
+          [
+            "poetica",
+            "mensagem",
+            "elaboracao"
+          ]
+        ],
+        [
+          "o cartaz e conativa pelo apelo ao receptor",
+          [
+            "conativa",
+            "apelo",
+            "receptor"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Entendimento de Texto",
+    "topic": "Gêneros Narrativos e Níveis de Compreensão",
+    "sections": [
+      {
+        "title": "Elementos da narrativa",
+        "content": "Toda narrativa articula enredo, personagens, tempo, espaço e narrador. O enredo se organiza em situação inicial, complicação, clímax e desfecho, ainda que muitos textos subvertam essa ordem. Identificar esses elementos é o primeiro nível de leitura de contos, crônicas, romances e também de notícias e relatos."
+      },
+      {
+        "title": "Foco narrativo",
+        "content": "O narrador pode ser de primeira pessoa, participando da história como protagonista ou testemunha, ou de terceira pessoa, podendo ser observador, limitado ao que se vê, ou onisciente, com acesso ao interior das personagens. A escolha do foco determina o que o leitor sabe e cria efeitos de aproximação, suspense ou ironia."
+      },
+      {
+        "title": "Tempo e discurso",
+        "content": "Distingue-se o tempo da história, ordem cronológica dos fatos, do tempo do discurso, ordem em que são narrados. Recursos como flashback, prolepse e elipse manipulam essa relação. O discurso das personagens pode ser direto, indireto ou indireto livre, este último misturando as vozes de narrador e personagem."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Confundir narrador com autor é o erro conceitual mais frequente: o narrador é entidade do texto. Outro deslize é supor que narrador em primeira pessoa é sempre confiável. E confundir discurso indireto livre com direto, quando o primeiro dispensa marcas como travessão e verbo de elocução."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Um trecho apresenta os pensamentos da personagem sem aspas, travessão ou verbo introdutório, misturando-se à voz do narrador. Classifique antes de conferir: é discurso indireto livre. Agora explique por que narrador não é autor: o narrador é construção do texto, e o autor é a pessoa que escreveu, podendo criar narradores com visões que não são as suas."
+      }
+    ],
+    "recall": {
+      "prompt": "Classifique o discurso que mistura voz do narrador e da personagem sem marcas. Por que narrador não é autor?",
+      "elements": [
+        [
+          "discurso indireto livre",
+          [
+            "indireto livre",
+            "livre"
+          ]
+        ],
+        [
+          "dispensa aspas, travessao e verbo de elocucao",
+          [
+            "aspas",
+            "travessao",
+            "marca"
+          ]
+        ],
+        [
+          "o narrador e construcao do texto",
+          [
+            "construcao",
+            "texto",
+            "autor"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Entendimento de Texto",
+    "topic": "Gêneros Textuais",
+    "sections": [
+      {
+        "title": "O que é gênero",
+        "content": "Gêneros textuais são formas relativamente estáveis de texto associadas a práticas sociais: notícia, editorial, carta, receita, bula, verbete, artigo de opinião, meme, e-mail. Cada gênero tem propósito, público, estrutura, registro e suporte típicos, e é o reconhecimento desses traços que orienta a leitura."
+      },
+      {
+        "title": "Tipos e gêneros",
+        "content": "Não confundir gênero com tipo textual. Os tipos são sequências: narração, descrição, exposição, argumentação e injunção. Um mesmo gênero combina tipos: uma notícia pode narrar e descrever; um editorial argumenta, mas pode narrar um episódio. Em prova, a pergunta pelo tipo predominante é diferente da pergunta pelo gênero."
+      },
+      {
+        "title": "Gênero e leitura",
+        "content": "Identificar o gênero antecipa expectativas: numa bula, procura-se dosagem e contraindicação; num editorial, a posição do jornal; num anúncio, a estratégia de persuasão. Também orienta a avaliação: informalidade é adequada num aplicativo de mensagens e inadequada num ofício, e não há registro certo fora da situação."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Confundir gênero com tipo textual é o erro mais frequente. Outro deslize é supor que gêneros são fixos, quando se transformam e surgem novos com novas tecnologias. E avaliar a adequação da linguagem sem considerar o gênero e a situação de comunicação."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Uma receita culinária pertence a que tipo textual predominante? Responda antes de conferir: injuntivo, porque orienta a ação do leitor com verbos no imperativo ou no infinitivo, ainda que possa conter descrição dos ingredientes. Agora explique por que informalidade não é erro em si: a adequação depende do gênero, do interlocutor e da situação."
+      }
+    ],
+    "recall": {
+      "prompt": "Qual o tipo textual predominante numa receita? Por que informalidade não é erro em si?",
+      "elements": [
+        [
+          "tipo injuntivo que orienta a acao",
+          [
+            "injuntivo",
+            "instrucional",
+            "acao"
+          ]
+        ],
+        [
+          "verbos no imperativo ou infinitivo",
+          [
+            "imperativo",
+            "infinitivo",
+            "verbo"
+          ]
+        ],
+        [
+          "a adequacao depende do genero e da situacao",
+          [
+            "adequacao",
+            "situacao",
+            "genero"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Entendimento de Texto",
+    "topic": "Gêneros não Verbais: Fundamentos de Leitura",
+    "sections": [
+      {
+        "title": "Ler imagens",
+        "content": "Textos não verbais também se leem: charges, tirinhas, fotografias, infográficos, pinturas e propagandas organizam sentido por meio de cores, enquadramento, proporção, direção do olhar, gestos e disposição dos elementos. O que está em primeiro plano, o que é maior e o que aparece no centro recebem mais atenção."
+      },
+      {
+        "title": "Charge e cartum",
+        "content": "A charge trata de um fato específico e datado, exigindo conhecimento do contexto para ser compreendida; o cartum aborda situações mais gerais e atemporais. Ambos costumam usar exagero, caricatura e contraste entre expectativa e realidade, e frequentemente dependem de intertextualidade com imagens amplamente conhecidas."
+      },
+      {
+        "title": "Multimodalidade",
+        "content": "Muitos textos combinam palavra e imagem, e o sentido nasce dessa articulação: numa propaganda, o texto verbal pode confirmar, complementar ou contradizer a imagem, e a contradição costuma ser o recurso de humor ou de crítica. Analisar separadamente cada linguagem e depois sua relação organiza a resposta."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Descrever a imagem em vez de interpretá-la é o erro mais comum em prova: a questão pede o sentido produzido, não o inventário do que aparece. Outro deslize é confundir charge, ligada a um fato datado, com cartum, de alcance atemporal. E ignorar elementos como cor, tamanho, enquadramento e posição, que carregam sentido tanto quanto as figuras representadas e frequentemente são a chave da resposta."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Numa charge, uma figura enorme pisa em figuras minúsculas. O que a proporção sugere? Responda antes de conferir: relação de poder e opressão, pois o tamanho relativo indica hierarquia entre os elementos representados. Agora diferencie charge de cartum: a charge trata de fato datado e específico, o cartum de situações gerais e atemporais."
+      }
+    ],
+    "recall": {
+      "prompt": "O que a proporção entre figuras sugere numa charge? Diferencie charge de cartum.",
+      "elements": [
+        [
+          "o tamanho indica hierarquia e poder",
+          [
+            "tamanho",
+            "poder",
+            "hierarquia"
+          ]
+        ],
+        [
+          "elementos maiores dominam a leitura",
+          [
+            "maior",
+            "destaque",
+            "plano"
+          ]
+        ],
+        [
+          "a charge trata de fato datado e o cartum e atemporal",
+          [
+            "datado",
+            "atemporal",
+            "contexto"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Entendimento de Texto",
+    "topic": "Intertextualidade e Interdiscursividade",
+    "sections": [
+      {
+        "title": "Intertextualidade",
+        "content": "Intertextualidade é a relação explícita ou implícita entre textos. Suas formas mais cobradas são a citação, que reproduz com atribuição; a alusão, que evoca sem citar; a paráfrase, que reformula mantendo o sentido; a paródia, que reformula subvertendo o sentido; e a epígrafe, que abre um texto com outro."
+      },
+      {
+        "title": "Interdiscursividade",
+        "content": "A interdiscursividade opera em nível mais amplo: não é a relação com um texto específico, mas com discursos socialmente circulantes, como o discurso religioso, o jurídico, o publicitário ou o científico. Um texto pode mobilizar a autoridade de um discurso sem citar nenhum texto em particular."
+      },
+      {
+        "title": "Efeitos de sentido",
+        "content": "Reconhecer a relação intertextual muda a leitura: a paródia produz humor ou crítica ao inverter o texto de origem, a alusão cria cumplicidade com quem reconhece a referência, e a citação empresta autoridade. Em provas, charges, propagandas e poemas costumam depender dessa identificação para serem compreendidos."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Confundir paráfrase com paródia é o erro clássico: uma mantém, a outra subverte o sentido. Outro deslize é tratar toda semelhança temática como intertextualidade. E supor que a intertextualidade exige citação explícita, quando a alusão é implícita por definição."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Um anúncio reescreve um provérbio conhecido invertendo seu final para vender um produto. Classifique antes de conferir: é paródia, porque retoma o texto de origem subvertendo seu sentido, e conta com o reconhecimento do original pelo leitor. Agora diferencie intertextualidade de interdiscursividade: uma relaciona textos, a outra mobiliza discursos socialmente circulantes."
+      }
+    ],
+    "recall": {
+      "prompt": "Classifique a reescrita de um provérbio com final invertido e diferencie intertextualidade de interdiscursividade.",
+      "elements": [
+        [
+          "e parodia porque subverte o sentido",
+          [
+            "parodia",
+            "subverte",
+            "inverte"
+          ]
+        ],
+        [
+          "depende do reconhecimento do texto de origem",
+          [
+            "reconhecimento",
+            "origem",
+            "original"
+          ]
+        ],
+        [
+          "a interdiscursividade mobiliza discursos e nao textos",
+          [
+            "discurso",
+            "circulante",
+            "amplo"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Entendimento de Texto",
+    "topic": "Leitura de Textos Cômicos",
+    "sections": [
+      {
+        "title": "Mecanismos do humor",
+        "content": "O humor costuma operar por quebra de expectativa: o texto constrói uma previsão e a frustra no fecho. Outros mecanismos são a ambiguidade explorada, o duplo sentido, o exagero, a inversão de papéis, o anacronismo e a incongruência entre registro e situação, como usar linguagem formal num contexto trivial."
+      },
+      {
+        "title": "Ambiguidade e polissemia",
+        "content": "Muitas piadas dependem de uma palavra ou construção com mais de um sentido: o leitor ativa um sentido e o texto revela o outro. Identificar exatamente o termo ambíguo e os dois sentidos em jogo é o procedimento que responde à maioria das questões sobre humor em provas de interpretação."
+      },
+      {
+        "title": "Humor e crítica",
+        "content": "O cômico frequentemente carrega crítica social: charges, tirinhas e crônicas usam o riso para expor contradições, hierarquias e comportamentos. Nesses casos, compreender a piada exige reconhecer o alvo da crítica e o contexto compartilhado entre autor e leitor, sem o qual o efeito se perde."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Explicar que o texto é engraçado sem apontar o mecanismo não responde à questão. Outro deslize é ignorar o elemento visual em tirinhas, onde a expressão de uma personagem no último quadro pode ser o próprio fecho. E confundir ironia, que diz o contrário do que significa, com humor em geral."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Numa tirinha, a personagem pede um copo de água e recebe um copo cheio de gelo, e o último quadro mostra sua expressão. Qual o mecanismo? Responda antes de conferir: quebra de expectativa, com o efeito concluído pela imagem, e não pelo texto verbal. Agora explique como identificar humor por ambiguidade: localize a palavra com dois sentidos e mostre qual foi ativado primeiro e qual é revelado no fecho."
+      }
+    ],
+    "recall": {
+      "prompt": "Qual o mecanismo do humor por quebra de expectativa? Como identificar humor por ambiguidade?",
+      "elements": [
+        [
+          "o texto cria uma previsao e a frustra",
+          [
+            "expectativa",
+            "quebra",
+            "frustra"
+          ]
+        ],
+        [
+          "o fecho pode estar na imagem",
+          [
+            "imagem",
+            "quadro",
+            "visual"
+          ]
+        ],
+        [
+          "localizar a palavra com dois sentidos",
+          [
+            "ambiguidade",
+            "dois sentidos",
+            "polissemia"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Entendimento de Texto",
+    "topic": "Modelos de Leitura e Distorções Interpretativas",
+    "sections": [
+      {
+        "title": "Modelos de leitura",
+        "content": "O modelo ascendente parte do texto para o leitor, tratando a leitura como decodificação. O descendente parte do leitor, valorizando conhecimento prévio e expectativas. O interacional, hoje predominante, entende a leitura como construção de sentido na interação entre texto, leitor e contexto, com limites dados pelas marcas textuais."
+      },
+      {
+        "title": "Distorções típicas",
+        "content": "As distorções mais comuns em prova são a extrapolação, que acrescenta o que o texto não autoriza; a redução, que empobrece a tese; a contradição, que afirma o oposto; e a generalização indevida, que amplia o alcance de uma afirmação particular. Reconhecê-las é a chave para eliminar alternativas."
+      },
+      {
+        "title": "Estratégias de leitura",
+        "content": "Ler o enunciado antes do texto, localizar tese e argumentos, marcar conectivos de oposição e conclusão, observar quem fala e em que gênero, e voltar ao texto para confirmar cada alternativa são procedimentos que reduzem erros. Em textos longos, identificar a função de cada parágrafo organiza a compreensão."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Escolher a alternativa que parece mais correta segundo a própria opinião, e não segundo o texto, é o erro dominante. Outro deslize é aceitar alternativas com termos absolutos como sempre e nunca sem verificar. E confundir o que o autor cita com o que o autor defende, sobretudo quando ele apresenta a posição contrária."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Um texto afirma que parte dos estudantes melhorou o desempenho. A alternativa diz que os estudantes melhoraram o desempenho. Classifique a distorção antes de conferir: generalização indevida, pois o texto restringe a afirmação a uma parte. Agora explique o modelo interacional de leitura: o sentido se constrói entre texto, leitor e contexto, com limites dados pelas marcas textuais."
+      }
+    ],
+    "recall": {
+      "prompt": "Classifique a distorção que transforma parte dos estudantes em os estudantes. Explique o modelo interacional.",
+      "elements": [
+        [
+          "generalizacao indevida",
+          [
+            "generalizacao",
+            "indevida",
+            "amplia"
+          ]
+        ],
+        [
+          "o texto restringia a afirmacao a uma parte",
+          [
+            "parte",
+            "restringe",
+            "alcance"
+          ]
+        ],
+        [
+          "o sentido se constroi entre texto, leitor e contexto",
+          [
+            "interacao",
+            "leitor",
+            "contexto"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Entendimento de Texto",
+    "topic": "Os Dois Níveis da Leitura",
+    "sections": [
+      {
+        "title": "Compreensão",
+        "content": "O primeiro nível é a compreensão: identificar o que o texto diz explicitamente, localizar informações, reconhecer o tema, a tese e a estrutura argumentativa. Nesse nível, a resposta está no texto, e o critério de correção é objetivo: uma leitura é errada quando afirma o que o texto não diz."
+      },
+      {
+        "title": "Interpretação",
+        "content": "O segundo nível é a interpretação: inferir o que o texto sugere, identificar pressupostos e subentendidos, relacionar com contexto e com outros textos, e avaliar intenção e efeito. Aqui há margem para leituras distintas, mas não para qualquer leitura: a inferência precisa estar ancorada em marcas textuais."
+      },
+      {
+        "title": "Pressuposto e subentendido",
+        "content": "O pressuposto está marcado na própria linguagem e não pode ser negado sem contradizer a frase, como em deixou de fumar, que pressupõe que fumava. O subentendido depende do contexto e pode ser negado por quem falou, como em está calor aqui, que pode sugerir um pedido sem afirmá-lo."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Confundir interpretar com opinar livremente é o erro mais frequente em prova: a inferência precisa de ancoragem textual. Outro deslize é confundir pressuposto com subentendido. E responder pela experiência pessoal quando a questão pede o que o texto afirma."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Na frase Maria voltou a estudar, qual o pressuposto? Responda antes de conferir: que Maria estudava antes e havia interrompido, informação marcada pelo verbo voltar e que não pode ser negada sem contradição. Agora diferencie compreensão de interpretação: a primeira recupera o que está dito, a segunda infere a partir de marcas do texto."
+      }
+    ],
+    "recall": {
+      "prompt": "Na frase Maria voltou a estudar, qual o pressuposto? Diferencie compreensão de interpretação.",
+      "elements": [
+        [
+          "ela estudava antes e interrompeu",
+          [
+            "antes",
+            "interrompeu",
+            "estudava"
+          ]
+        ],
+        [
+          "o pressuposto esta marcado na linguagem",
+          [
+            "marcado",
+            "verbo",
+            "nao pode negar"
+          ]
+        ],
+        [
+          "compreensao recupera o dito e interpretacao infere",
+          [
+            "compreensao",
+            "interpretacao",
+            "infere"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Entendimento de Texto",
+    "topic": "Tecnologias Digitais da Informação e Comunicação (TDIC): Impactos Sociais",
+    "sections": [
+      {
+        "title": "Novos gêneros e práticas",
+        "content": "As tecnologias digitais criaram gêneros próprios, como post, meme, thread, stories e vídeo curto, com linguagem multimodal, brevidade e alta circulação. Alteraram também práticas de leitura e escrita: leitura fragmentada, hipertextual e não linear, e produção de texto por qualquer usuário, sem os filtros editoriais tradicionais."
+      },
+      {
+        "title": "Desinformação",
+        "content": "A velocidade de circulação e a lógica de engajamento favorecem conteúdos emocionais e sensacionalistas, independentemente de sua veracidade. Combater a desinformação exige verificação de fonte, data, autoria e contexto, atenção a manchetes descoladas do conteúdo e desconfiança diante de textos que pedem compartilhamento imediato."
+      },
+      {
+        "title": "Bolhas e algoritmos",
+        "content": "Algoritmos organizam o que cada usuário vê com base em comportamento anterior, o que tende a reforçar visões já sustentadas, fenômeno descrito como bolha ou câmara de eco. O efeito é a impressão de consenso e a redução da exposição a argumentos divergentes, com consequências para o debate público."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Supor que checar se um texto tem erros de português basta para avaliar veracidade é ingênuo. Outro deslize é tratar toda informação de rede social como falsa e toda de veículo tradicional como verdadeira, sem verificação. E confundir opinião divergente com desinformação, que envolve conteúdo factualmente falso."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Que perguntas fazer antes de compartilhar uma notícia? Responda antes de conferir: quem publicou, quando, com base em qual fonte, o conteúdo confirma a manchete e outros veículos confiáveis reportam o mesmo. Agora explique o efeito bolha: o algoritmo prioriza conteúdos alinhados ao comportamento anterior, reduzindo a exposição a visões divergentes."
+      }
+    ],
+    "recall": {
+      "prompt": "Que perguntas fazer antes de compartilhar uma notícia? Explique o efeito bolha.",
+      "elements": [
+        [
+          "verificar autoria, data e fonte",
+          [
+            "autoria",
+            "data",
+            "fonte"
+          ]
+        ],
+        [
+          "conferir se o conteudo confirma a manchete",
+          [
+            "manchete",
+            "conteudo",
+            "confere"
+          ]
+        ],
+        [
+          "o algoritmo reduz a exposicao ao divergente",
+          [
+            "algoritmo",
+            "divergente",
+            "bolha"
+          ]
+        ]
+      ]
+    }
   },
   {
     "subject": "Filosofia",
@@ -13477,6 +14081,61 @@
   },
   {
     "subject": "Gramática",
+    "topic": "Advérbio e Locuções Adverbiais: Circunstanciadores",
+    "sections": [
+      {
+        "title": "Função e classificação",
+        "content": "Advérbios modificam verbos, adjetivos ou outros advérbios, indicando circunstâncias de tempo, lugar, modo, intensidade, negação, afirmação e dúvida. Locuções adverbiais cumprem a mesma função com duas ou mais palavras, como de repente, às pressas e com cuidado, e são muito mais frequentes na escrita real."
+      },
+      {
+        "title": "Efeitos argumentativos",
+        "content": "Advérbios modalizadores revelam o grau de comprometimento do enunciador: certamente e sem dúvida reforçam; talvez e possivelmente atenuam; infelizmente e felizmente avaliam. Em textos argumentativos, essas escolhas indicam posicionamento e são cobradas em questões sobre a atitude do autor diante do que afirma."
+      },
+      {
+        "title": "Posição e escopo",
+        "content": "A posição do advérbio pode mudar o alcance da modificação: apenas ele falou, ele apenas falou e ele falou apenas isso alteram o que está sendo restringido. Em redação, colocar o advérbio no lugar errado gera ambiguidade, e em interpretação a posição costuma ser a chave da resposta."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Confundir advérbio de intensidade com adjetivo em frases como ela está meio cansada, em que meio é advérbio e não varia. Outro deslize é ignorar o escopo de apenas e só. E tratar modalizadores como palavras neutras, quando eles marcam avaliação e grau de certeza."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Compare apenas Maria trouxe o livro e Maria trouxe apenas o livro. Responda antes de conferir: no primeiro caso, restringe-se quem trouxe; no segundo, restringe-se o que foi trazido. Agora explique o efeito de talvez numa afirmação: reduz o comprometimento do enunciador, apresentando o conteúdo como possibilidade."
+      }
+    ],
+    "recall": {
+      "prompt": "Compare apenas Maria trouxe o livro e Maria trouxe apenas o livro. Qual o efeito de talvez?",
+      "elements": [
+        [
+          "a posicao muda o escopo da restricao",
+          [
+            "escopo",
+            "posicao",
+            "restringe"
+          ]
+        ],
+        [
+          "no primeiro caso restringe quem e no segundo o que",
+          [
+            "quem",
+            "que",
+            "trouxe"
+          ]
+        ],
+        [
+          "talvez atenua o comprometimento",
+          [
+            "atenua",
+            "possibilidade",
+            "comprometimento"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Gramática",
     "topic": "Ambiguidade: Duplicidade no Léxico e na Sintaxe",
     "sections": [
       {
@@ -13500,6 +14159,116 @@
         "content": "Explique as duas leituras de “O professor falou com o aluno nervoso”. Nervoso pode caracterizar o aluno ou, em determinada interpretação, o professor durante a fala. Para explicitar a segunda, escreva “Nervoso, o professor falou com o aluno”. Para a primeira, “O professor falou com o aluno que estava nervoso”. A pontuação e a oração relativa redistribuem claramente a caracterização."
       }
     ]
+  },
+  {
+    "subject": "Gramática",
+    "topic": "Artigo, Numeral e Adjetivo no Sintagma Nominal",
+    "sections": [
+      {
+        "title": "O sintagma nominal",
+        "content": "O sintagma nominal organiza-se em torno de um substantivo, acompanhado por determinantes, como artigos e numerais, e por modificadores, como adjetivos e locuções adjetivas. A ordem e a presença desses elementos alteram o sentido e revelam pressupostos do enunciador, o que é frequentemente cobrado em interpretação."
+      },
+      {
+        "title": "Artigo definido e indefinido",
+        "content": "O artigo definido pressupõe que o referente é conhecido ou único no contexto: o problema sugere que o leitor sabe qual é. O indefinido apresenta o referente como novo: um problema. Em manchetes e argumentos, essa escolha define se algo é tratado como pressuposto compartilhado ou como informação nova."
+      },
+      {
+        "title": "Adjetivo e posição",
+        "content": "O adjetivo pode restringir ou explicar. Antes do substantivo, tende a valor subjetivo e avaliativo, como em grande homem; depois, tende a valor objetivo, como em homem grande. Locuções adjetivas, do tipo de ferro ou de mãe, cumprem função equivalente e frequentemente têm adjetivo correspondente, como férreo e materno."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Ignorar o efeito do artigo é o deslize mais comum em interpretação: trocar um pelo o muda o pressuposto. Outro erro é achar que a posição do adjetivo nunca altera o sentido. E confundir locução adjetiva com adjunto adverbial, quando a primeira modifica um substantivo."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Compare o candidato foi criticado e um candidato foi criticado. Responda antes de conferir: a primeira pressupõe que o leitor identifica de quem se trata; a segunda apresenta a informação como nova e indeterminada. Agora compare grande homem e homem grande: valor moral no primeiro caso, dimensão física no segundo."
+      }
+    ],
+    "recall": {
+      "prompt": "Compare o candidato e um candidato; compare grande homem e homem grande.",
+      "elements": [
+        [
+          "o definido pressupoe referente conhecido",
+          [
+            "definido",
+            "conhecido",
+            "pressupoe"
+          ]
+        ],
+        [
+          "o indefinido apresenta informacao nova",
+          [
+            "indefinido",
+            "nova",
+            "indeterminado"
+          ]
+        ],
+        [
+          "a posicao do adjetivo muda o sentido",
+          [
+            "posicao",
+            "subjetivo",
+            "fisico"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Gramática",
+    "topic": "Concordância",
+    "sections": [
+      {
+        "title": "Concordância verbal",
+        "content": "O verbo concorda com o sujeito em número e pessoa. Os casos cobrados envolvem sujeito composto, que leva o verbo ao plural; sujeito posposto, que exige atenção; expressões partitivas como a maioria de, que admitem singular ou plural; e verbos impessoais como haver no sentido de existir, que ficam no singular."
+      },
+      {
+        "title": "Concordância nominal",
+        "content": "Adjetivos e determinantes concordam com o substantivo a que se referem. Casos especiais incluem é proibido entrada, sem determinante, e é proibida a entrada, com determinante; anexo e obrigado, que variam; e menos e alerta, que são invariáveis, itens recorrentes em provas objetivas."
+      },
+      {
+        "title": "Casos de atenção",
+        "content": "Merecem cuidado o verbo ser em construções com tudo e o resto, que costuma concordar com o predicativo; a partícula se como índice de indeterminação, que mantém o verbo no singular, e como partícula apassivadora, que exige concordância com o sujeito paciente, como em vendem-se casas."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Escrever haviam muitas pessoas é o desvio mais cobrado: haver no sentido de existir é impessoal e fica no singular. Outro deslize é usar menos flexionado, como em menas gente. E confundir vende-se casas com vendem-se casas, quando a segunda forma é a de acordo com a norma-padrão."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Corrija: haviam muitos alunos na sala e vende-se casas. Responda antes de conferir: havia muitos alunos, porque haver como existir é impessoal; e vendem-se casas, porque casas é sujeito da voz passiva sintética. Agora explique a concordância com a maioria dos alunos: admite-se singular, concordando com maioria, e plural, concordando com alunos."
+      }
+    ],
+    "recall": {
+      "prompt": "Corrija haviam muitos alunos e vende-se casas; explique a concordância com a maioria dos alunos.",
+      "elements": [
+        [
+          "havia no singular porque haver e impessoal",
+          [
+            "havia",
+            "impessoal",
+            "singular"
+          ]
+        ],
+        [
+          "vendem-se casas na voz passiva sintetica",
+          [
+            "vendem",
+            "passiva",
+            "sujeito"
+          ]
+        ],
+        [
+          "a maioria admite singular ou plural",
+          [
+            "maioria",
+            "singular",
+            "plural"
+          ]
+        ]
+      ]
+    }
   },
   {
     "subject": "Gramática",
@@ -13529,6 +14298,116 @@
   },
   {
     "subject": "Gramática",
+    "topic": "Funções Sintáticas Nominais e Vocativo",
+    "sections": [
+      {
+        "title": "Adjuntos e complementos nominais",
+        "content": "O adjunto adnominal modifica um substantivo e pode ser artigo, adjetivo, locução adjetiva, pronome adjetivo ou numeral. O complemento nominal completa o sentido de um nome que exige complemento, sempre com preposição, e costuma ocorrer com substantivos abstratos derivados de verbos ou adjetivos."
+      },
+      {
+        "title": "Como distinguir",
+        "content": "O teste mais confiável é o de agente e paciente: em a construção da casa, casa é paciente, sofre a ação, e o termo é complemento nominal; em a construção dos pedreiros, pedreiros é agente, e o termo é adjunto adnominal. Substituir mentalmente por uma oração equivalente ajuda a decidir."
+      },
+      {
+        "title": "Aposto e vocativo",
+        "content": "O aposto explica, especifica, enumera ou resume um termo anterior e é isolado por vírgula, dois-pontos ou travessão. O vocativo, ao contrário, não se relaciona sintaticamente com nenhum termo: é o chamamento do interlocutor, sempre isolado por vírgula, e pode aparecer no início, no meio ou no fim da frase."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Confundir aposto com vocativo é o erro mais frequente: o aposto se refere a um termo da oração, o vocativo chama alguém. Outro deslize é classificar todo termo preposicionado ligado a substantivo como complemento nominal. E esquecer que o predicativo do objeto também é função nominal."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Classifique o termo destacado em o medo da morte paralisa. Responda antes de conferir: da morte é complemento nominal, porque completa o sentido de medo, e morte é o alvo do sentimento, não o agente. Agora diferencie aposto e vocativo em: Maria, minha amiga, chegou; e Maria, chegue mais cedo. No primeiro, aposto; no segundo, vocativo."
+      }
+    ],
+    "recall": {
+      "prompt": "Classifique da morte em o medo da morte paralisa e diferencie aposto de vocativo.",
+      "elements": [
+        [
+          "complemento nominal porque completa um nome",
+          [
+            "complemento nominal",
+            "completa",
+            "nome"
+          ]
+        ],
+        [
+          "morte e alvo e nao agente",
+          [
+            "alvo",
+            "paciente",
+            "agente"
+          ]
+        ],
+        [
+          "o vocativo chama e nao se liga sintaticamente",
+          [
+            "vocativo",
+            "chamamento",
+            "aposto"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Gramática",
+    "topic": "Língua: um Sistema Complexo",
+    "sections": [
+      {
+        "title": "Língua, fala e norma",
+        "content": "A língua é o sistema compartilhado por uma comunidade; a fala é a realização individual desse sistema; e a norma é o conjunto de usos considerados adequados em determinada situação. A norma-padrão, prestigiada e ensinada na escola, é uma variedade entre outras, e não a língua em si."
+      },
+      {
+        "title": "Variação linguística",
+        "content": "A variação ocorre em vários eixos: regional, com diferenças de pronúncia e léxico entre regiões; social, ligada a escolaridade e grupo; etária, entre gerações; e estilística, conforme o grau de formalidade da situação. Nenhuma variedade é linguisticamente inferior, embora sofram avaliações sociais desiguais."
+      },
+      {
+        "title": "Preconceito linguístico",
+        "content": "Julgar variedades como erradas e seus falantes como incapazes é preconceito linguístico, que confunde diferença com deficiência. O ensino produtivo é o que amplia o repertório do estudante, acrescentando a norma-padrão às variedades que já domina, sem desqualificar sua forma de falar."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Confundir norma-padrão com língua portuguesa é o erro conceitual central. Outro deslize é achar que reconhecer a variação implica abandonar o ensino da norma. E supor que a escrita é a forma correta e a fala uma versão degradada, quando são modalidades com regras próprias."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que dizer que uma variedade é errada é impreciso do ponto de vista linguístico? Responda antes de conferir: toda variedade tem regras sistemáticas e permite comunicação plena; a avaliação negativa é social, não estrutural. Agora explique por que ensinar a norma-padrão continua sendo necessário: ela é exigida em situações formais e no acesso a bens sociais, e ampliar o repertório é diferente de substituir a variedade de origem."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que nenhuma variedade é linguisticamente errada? Por que ainda se ensina a norma-padrão?",
+      "elements": [
+        [
+          "toda variedade tem regras sistematicas",
+          [
+            "regra",
+            "sistematica",
+            "funciona"
+          ]
+        ],
+        [
+          "a avaliacao negativa e social e nao estrutural",
+          [
+            "social",
+            "preconceito",
+            "estrutural"
+          ]
+        ],
+        [
+          "a norma e exigida em situacoes formais e amplia o repertorio",
+          [
+            "formal",
+            "repertorio",
+            "amplia"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Gramática",
     "topic": "Mecanismo de Regência",
     "sections": [
       {
@@ -13552,6 +14431,281 @@
         "content": "Complete “Este é o projeto ___ me referi”. Como a construção é “referir-se a algo”, a resposta é “a que” ou “ao qual”. Se o antecedente fosse “proposta”, poderíamos escrever “à qual”: a preposição a se combina com o artigo a presente em a qual. Explique a regência antes de decidir sobre o acento indicativo de crase."
       }
     ]
+  },
+  {
+    "subject": "Gramática",
+    "topic": "O Léxico em Contexto: Variadas Possibilidades Semânticas",
+    "sections": [
+      {
+        "title": "Sentido no contexto",
+        "content": "O significado de uma palavra não está apenas no dicionário: realiza-se no contexto. Polissemia é a propriedade de uma mesma palavra ter vários sentidos relacionados, como em banco de praça, banco de dados e banco financeiro. Homonímia envolve palavras distintas com forma igual, como manga de fruta e manga de camisa."
+      },
+      {
+        "title": "Relações de sentido",
+        "content": "Sinonímia é a proximidade de sentido, nunca total, já que sinônimos diferem em registro e conotação. Antonímia é a oposição. Hiperonímia e hiponímia organizam a relação entre o geral e o específico, como flor e rosa, e são recurso importante de coesão textual por substituição."
+      },
+      {
+        "title": "Conotação e denotação",
+        "content": "O sentido denotativo é o literal; o conotativo agrega valores afetivos e culturais. Uma mesma palavra pode ser neutra num contexto e carregada em outro. Reconhecer essa camada é essencial na leitura de textos literários, publicitários e jornalísticos, em que a escolha lexical orienta a interpretação."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Tratar sinônimos como intercambiáveis em qualquer contexto é o erro mais comum, e ele aparece em redações que trocam termos precisos por aproximados. Outro deslize é confundir polissemia com homonímia. E ignorar o contexto ao definir uma palavra, respondendo pelo sentido de dicionário."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Explique a diferença entre polissemia e homonímia com exemplos. Responda antes de conferir: na polissemia, um mesmo item lexical tem sentidos relacionados, como cabeça do corpo e cabeça de um grupo; na homonímia, formas iguais pertencem a palavras diferentes, como manga de fruta e manga de camisa. Agora explique por que sinônimos não são perfeitos: diferem em registro, conotação e uso."
+      }
+    ],
+    "recall": {
+      "prompt": "Diferencie polissemia de homonímia e explique por que sinônimos não são perfeitos.",
+      "elements": [
+        [
+          "na polissemia os sentidos sao relacionados",
+          [
+            "polissemia",
+            "relacionado",
+            "mesmo"
+          ]
+        ],
+        [
+          "na homonimia sao palavras diferentes com forma igual",
+          [
+            "homonimia",
+            "forma",
+            "diferente"
+          ]
+        ],
+        [
+          "sinonimos diferem em registro e conotacao",
+          [
+            "registro",
+            "conotacao",
+            "uso"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Gramática",
+    "topic": "Orações Adjetivas",
+    "sections": [
+      {
+        "title": "Função e pronome relativo",
+        "content": "As orações subordinadas adjetivas funcionam como adjunto adnominal, modificando um substantivo antecedente, e são introduzidas por pronomes relativos: que, quem, o qual, cujo, onde, quanto. O pronome relativo retoma o antecedente e exerce função sintática dentro da própria oração adjetiva."
+      },
+      {
+        "title": "Restritiva e explicativa",
+        "content": "A restritiva delimita o antecedente, não usa vírgula e é essencial ao sentido; a explicativa acrescenta informação sobre a totalidade do antecedente e vem entre vírgulas. A troca altera o sentido de forma decisiva, e essa distinção é uma das mais cobradas em provas de interpretação e de norma."
+      },
+      {
+        "title": "O uso de cujo e onde",
+        "content": "Cujo é pronome relativo possessivo, concorda com o termo seguinte e nunca é acompanhado de artigo: o autor cujas obras admiro. Onde só se usa para lugar físico; para situações e contextos, empregam-se em que ou no qual, desvio muito frequente em redações escolares."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Escrever cujo o é erro clássico. Outro deslize é usar onde para retomar situações abstratas, como em uma época onde. E colocar vírgula em adjetiva restritiva, o que transforma o sentido, sugerindo que a informação vale para todo o conjunto."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Corrija: o livro cujo o autor é famoso; e vivemos uma época onde tudo muda. Responda antes de conferir: o livro cujo autor é famoso, sem artigo após cujo; e uma época em que tudo muda, porque época não é lugar físico. Agora explique o efeito de colocar vírgulas numa adjetiva restritiva: ela passa a valer para todo o conjunto."
+      }
+    ],
+    "recall": {
+      "prompt": "Corrija cujo o autor e época onde; explique o efeito de virgular uma adjetiva restritiva.",
+      "elements": [
+        [
+          "cujo nao admite artigo depois",
+          [
+            "cujo",
+            "artigo",
+            "sem"
+          ]
+        ],
+        [
+          "onde so para lugar fisico, use em que",
+          [
+            "em que",
+            "lugar",
+            "onde"
+          ]
+        ],
+        [
+          "com virgulas a informacao passa a valer para todos",
+          [
+            "virgula",
+            "explicativa",
+            "todos"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Gramática",
+    "topic": "Orações Adverbiais",
+    "sections": [
+      {
+        "title": "Função e classificação",
+        "content": "As orações subordinadas adverbiais funcionam como adjunto adverbial da principal, indicando circunstância. São nove tipos: causal, consecutiva, condicional, concessiva, comparativa, conformativa, final, proporcional e temporal. Cada uma é introduzida por conjunções características, e reconhecê-las é o caminho mais rápido para classificar."
+      },
+      {
+        "title": "Conjunções típicas",
+        "content": "Causal: porque, já que, uma vez que. Consecutiva: tão que, tanto que. Condicional: se, caso, contanto que. Concessiva: embora, ainda que, apesar de que. Comparativa: como, do que. Conformativa: conforme, segundo. Final: para que, a fim de que. Proporcional: à medida que. Temporal: quando, enquanto, assim que."
+      },
+      {
+        "title": "Causa, consequência e concessão",
+        "content": "Três relações costumam se confundir. A causal apresenta o motivo; a consecutiva, o resultado, geralmente com intensificador na principal; a concessiva apresenta um obstáculo que não impede o fato, e é a mais valorizada em redação, porque permite reconhecer o argumento contrário sem abandonar a própria tese."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Confundir concessiva com adversativa é o erro mais frequente: embora introduz oração subordinada, mas introduz coordenada. Outro deslize é tomar toda oração com se como condicional, quando pode ser integrante em oração substantiva. E classificar comparativa sem notar o termo de comparação."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Classifique: embora tenha estudado, não passou. Responda antes de conferir: é concessiva, porque apresenta um fato que contraria a expectativa sem impedir o resultado. Agora reescreva com relação causal e com relação consecutiva: como não estudou, não passou; e estudou tão pouco que não passou."
+      }
+    ],
+    "recall": {
+      "prompt": "Classifique embora tenha estudado, não passou; diferencie concessiva de causal e de consecutiva.",
+      "elements": [
+        [
+          "e concessiva porque contraria a expectativa",
+          [
+            "concessiva",
+            "expectativa",
+            "embora"
+          ]
+        ],
+        [
+          "a causal apresenta o motivo",
+          [
+            "causal",
+            "motivo",
+            "porque"
+          ]
+        ],
+        [
+          "a consecutiva apresenta o resultado com intensificador",
+          [
+            "consecutiva",
+            "resultado",
+            "tao"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Gramática",
+    "topic": "Orações Coordenadas",
+    "sections": [
+      {
+        "title": "Coordenação e subordinação",
+        "content": "Orações coordenadas são sintaticamente independentes entre si, ligadas por justaposição ou por conjunções coordenativas. Diferem das subordinadas, que exercem função dentro de outra oração. Um período pode combinar os dois processos, o que caracteriza o período composto por coordenação e subordinação."
+      },
+      {
+        "title": "Os cinco tipos sindéticos",
+        "content": "Aditiva: e, nem, não só mas também. Adversativa: mas, porém, contudo, todavia, entretanto, no entanto. Alternativa: ou, ora ora, quer quer. Conclusiva: logo, portanto, por isso, pois posposto ao verbo. Explicativa: pois anteposto ao verbo, porque, que, geralmente justificando uma afirmação ou uma ordem anterior."
+      },
+      {
+        "title": "Pois: dois valores",
+        "content": "A conjunção pois é explicativa quando vem antes do verbo, justificando o que se disse: entre, pois está frio. É conclusiva quando vem depois do verbo, indicando consequência: está frio, entre, pois. Reconhecer a posição é o critério prático que resolve as questões sobre esse conectivo."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Confundir explicativa com causal é o erro conceitual mais comum: a explicativa é coordenada e justifica uma afirmação, a causal é subordinada e indica o motivo do fato. Outro deslize é classificar mas como conjunção subordinativa. E ignorar que a conclusiva costuma exigir vírgula antes."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Classifique as orações em não estudou, portanto não passou. Responda antes de conferir: a segunda é coordenada sindética conclusiva, introduzida por portanto. Agora compare com como não estudou, não passou: aqui a primeira é subordinada adverbial causal, e a diferença está na dependência sintática entre as orações."
+      }
+    ],
+    "recall": {
+      "prompt": "Classifique não estudou, portanto não passou e compare com como não estudou, não passou.",
+      "elements": [
+        [
+          "a primeira e coordenada conclusiva",
+          [
+            "conclusiva",
+            "coordenada",
+            "portanto"
+          ]
+        ],
+        [
+          "a segunda e subordinada adverbial causal",
+          [
+            "causal",
+            "subordinada",
+            "como"
+          ]
+        ],
+        [
+          "a diferenca esta na dependencia sintatica",
+          [
+            "dependencia",
+            "independente",
+            "funcao"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Gramática",
+    "topic": "Orações Substantivas",
+    "sections": [
+      {
+        "title": "Função e conectivo",
+        "content": "As orações subordinadas substantivas exercem, dentro do período, funções próprias do substantivo. São introduzidas geralmente pelas conjunções integrantes que e se, e podem aparecer também na forma reduzida de infinitivo, sem conectivo, o que exige atenção redobrada na análise."
+      },
+      {
+        "title": "Os seis tipos",
+        "content": "São subjetiva, quando funciona como sujeito da principal; objetiva direta e objetiva indireta, quando completam o verbo; completiva nominal, quando completam um nome; predicativa, quando exercem a função de predicativo após verbo de ligação; e apositiva, quando explicam um termo anterior, normalmente após dois-pontos."
+      },
+      {
+        "title": "Como identificar",
+        "content": "O procedimento é substituir a oração por isso e verificar a função resultante. Se isso for o sujeito da principal, a oração é subjetiva; se completar um verbo transitivo direto, é objetiva direta; e assim por diante. Esse teste evita a confusão entre completiva nominal e objetiva indireta."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Confundir subjetiva com objetiva direta em construções com verbos como convém, é necessário e importa é o erro mais frequente, já que essas estruturas pedem subjetiva. Outro deslize é ignorar as reduzidas de infinitivo. E confundir o que integrante com o pronome relativo, que introduz adjetivas."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Classifique a oração destacada em é necessário que todos participem. Responda antes de conferir: substituindo por isso, obtém-se isso é necessário, logo a oração é subjetiva. Agora classifique em preciso de que me ajudem: substituindo, preciso disso, o que revela objetiva indireta, exigida pela regência do verbo precisar."
+      }
+    ],
+    "recall": {
+      "prompt": "Classifique as orações em é necessário que todos participem e em preciso de que me ajudem.",
+      "elements": [
+        [
+          "a primeira e subjetiva",
+          [
+            "subjetiva",
+            "sujeito",
+            "necessario"
+          ]
+        ],
+        [
+          "a segunda e objetiva indireta",
+          [
+            "objetiva indireta",
+            "preposicao",
+            "regencia"
+          ]
+        ],
+        [
+          "o teste e substituir por isso",
+          [
+            "isso",
+            "substituir",
+            "teste"
+          ]
+        ]
+      ]
+    }
   },
   {
     "subject": "Gramática",
@@ -13581,6 +14735,446 @@
   },
   {
     "subject": "Gramática",
+    "topic": "Pontuação II: Vírgula entre Orações e Outros Sinais de Pontuação",
+    "sections": [
+      {
+        "title": "Vírgula entre orações",
+        "content": "Separam-se por vírgula as orações coordenadas assindéticas e as sindéticas, exceto, em geral, as aditivas com e quando os sujeitos são iguais. As orações subordinadas adverbiais são separadas obrigatoriamente quando antecedem a principal, e facultativamente quando a seguem, o que orienta boa parte das questões."
+      },
+      {
+        "title": "Adjetivas restritivas e explicativas",
+        "content": "A oração adjetiva restritiva não leva vírgula e delimita o antecedente; a explicativa vem entre vírgulas e acrescenta informação sobre a totalidade. Os alunos que estudaram passaram indica que apenas parte passou; os alunos, que estudaram, passaram indica que todos estudaram e todos passaram."
+      },
+      {
+        "title": "Outros sinais",
+        "content": "Ponto e vírgula separa orações longas ou itens de enumeração já pontuados internamente. Dois-pontos anunciam explicação, enumeração ou fala. Travessão marca fala ou isola comentário com maior ênfase que a vírgula. Parênteses inserem informação acessória, e reticências sugerem interrupção ou suspensão do pensamento."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Separar sujeito de predicado por vírgula é o desvio mais grave e frequente. Outro deslize é usar vírgula antes de que em oração restritiva, mudando o sentido. E empregar dois-pontos onde caberia vírgula, quebrando desnecessariamente a estrutura da frase."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Compare os candidatos que se inscreveram receberão o material e os candidatos, que se inscreveram, receberão o material. Responda antes de conferir: na primeira, só os inscritos receberão; na segunda, todos se inscreveram e todos receberão. Agora explique quando a adverbial exige vírgula: obrigatoriamente quando vem antes da oração principal."
+      }
+    ],
+    "recall": {
+      "prompt": "Compare a adjetiva restritiva e a explicativa e diga quando a adverbial exige vírgula.",
+      "elements": [
+        [
+          "a restritiva delimita e nao leva virgula",
+          [
+            "restritiva",
+            "delimita",
+            "sem virgula"
+          ]
+        ],
+        [
+          "a explicativa vem entre virgulas e vale para todos",
+          [
+            "explicativa",
+            "virgula",
+            "todos"
+          ]
+        ],
+        [
+          "a adverbial anteposta exige virgula",
+          [
+            "anteposta",
+            "antes",
+            "obrigatoria"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Gramática",
+    "topic": "Processos de Formação de Palavras",
+    "sections": [
+      {
+        "title": "Derivação",
+        "content": "A derivação parte de uma palavra primitiva e acrescenta afixos: prefixal, como em desfazer; sufixal, como em felizmente; prefixal e sufixal, como em infelizmente; parassintética, quando prefixo e sufixo entram ao mesmo tempo e a palavra não existe sem um deles, como em entardecer; regressiva, que reduz, como em o combate."
+      },
+      {
+        "title": "Composição",
+        "content": "A composição une dois radicais. Por justaposição, sem alteração, como em guarda-chuva e passatempo; por aglutinação, com perda de elementos, como em planalto, de plano e alto, e aguardente, de água e ardente. Reconhecer a perda fonética é o critério que distingue os dois processos."
+      },
+      {
+        "title": "Outros processos",
+        "content": "Há ainda a hibridismo, que junta radicais de línguas diferentes, como automóvel; a onomatopeia; a sigla e o acrônimo; o empréstimo, com estrangeirismos adaptados ou não; e a abreviação, como foto por fotografia. Esses processos mostram a língua como sistema em transformação permanente."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Classificar como derivação prefixal e sufixal o que é parassíntese é o erro mais cobrado: o teste é retirar um afixo por vez e ver se a palavra existe. Outro deslize é confundir justaposição com aglutinação. E tratar derivação regressiva como se fosse simples encurtamento."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Classifique entardecer e infelizmente. Responda antes de conferir: entardecer é parassíntese, porque nem entarde nem tardecer existem; infelizmente é derivação prefixal e sufixal, porque infeliz e felizmente existem separadamente. Agora classifique planalto: composição por aglutinação, com perda fonética na junção de plano e alto."
+      }
+    ],
+    "recall": {
+      "prompt": "Classifique entardecer, infelizmente e planalto quanto ao processo de formação.",
+      "elements": [
+        [
+          "entardecer e parassintese",
+          [
+            "parassintese",
+            "entardecer",
+            "ao mesmo tempo"
+          ]
+        ],
+        [
+          "infelizmente e prefixal e sufixal",
+          [
+            "prefixal",
+            "sufixal",
+            "existe"
+          ]
+        ],
+        [
+          "planalto e composicao por aglutinacao",
+          [
+            "aglutinacao",
+            "composicao",
+            "perda"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Gramática",
+    "topic": "Pronomes",
+    "sections": [
+      {
+        "title": "Função referencial",
+        "content": "Pronomes substituem ou acompanham nomes, e sua função textual é garantir coesão por retomada, chamada anáfora, ou por antecipação, chamada catáfora. Em questões de interpretação, identificar corretamente o referente de um pronome é um dos itens mais recorrentes, sobretudo em períodos longos."
+      },
+      {
+        "title": "Classes e usos",
+        "content": "Há pronomes pessoais, retos e oblíquos; possessivos; demonstrativos, que situam no espaço, no tempo e no texto; indefinidos; interrogativos; e relativos, que introduzem orações adjetivas retomando um antecedente. Os demonstrativos este, esse e aquele organizam também a referência ao que será dito e ao que já foi dito."
+      },
+      {
+        "title": "Colocação pronominal",
+        "content": "A próclise é exigida por palavras atrativas, como advérbios de negação, pronomes relativos e conjunções subordinativas; a ênclise é a forma padrão em início de oração; a mesóclise ocorre com futuro do presente e do pretérito sem palavra atrativa. Na fala brasileira, a próclise predomina, inclusive em início de frase."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Usar mim como sujeito de infinitivo, em construções como para mim fazer, é o desvio mais cobrado. Outro deslize é confundir este e esse na referência textual. E deixar o referente do pronome ambíguo, erro grave em redação, quando duas possibilidades de retomada permanecem abertas."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Qual a diferença entre este e esse na referência textual? Responda antes de conferir: este aponta para o que será dito ou está mais próximo; esse retoma o que já foi mencionado ou está mais distante do enunciador. Agora corrija: para mim fazer o trabalho. O correto é para eu fazer o trabalho, porque o pronome é sujeito do infinitivo."
+      }
+    ],
+    "recall": {
+      "prompt": "Diferencie este e esse na referência textual e corrija para mim fazer.",
+      "elements": [
+        [
+          "este aponta para o que sera dito",
+          [
+            "este",
+            "seguir",
+            "proximo"
+          ]
+        ],
+        [
+          "esse retoma o que ja foi mencionado",
+          [
+            "esse",
+            "ja",
+            "anterior"
+          ]
+        ],
+        [
+          "o correto e para eu fazer",
+          [
+            "para eu",
+            "sujeito",
+            "infinitivo"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Gramática",
+    "topic": "Significados Implícitos",
+    "sections": [
+      {
+        "title": "Pressuposto",
+        "content": "O pressuposto é a informação que a própria estrutura linguística dá como certa, e por isso não pode ser negada sem contradição. Verbos como parar de, continuar e voltar a, adjetivos como outro e advérbios como ainda e já são marcas típicas, e o pressuposto permanece mesmo quando a frase é negada."
+      },
+      {
+        "title": "Subentendido",
+        "content": "O subentendido é insinuado pelo contexto e não está marcado na estrutura, de modo que quem falou pode negá-lo sem contradição. Dizer você chegou cedo hoje pode sugerir que a pessoa costuma atrasar, mas essa leitura depende do contexto e pode ser rejeitada por quem enunciou."
+      },
+      {
+        "title": "Uso argumentativo",
+        "content": "Textos usam implícitos para afirmar sem se responsabilizar: manchetes que pressupõem culpa, perguntas que embutem acusações e propagandas que insinuam superioridade. Reconhecer o implícito e explicitá-lo é uma das operações mais valorizadas em questões discursivas de interpretação."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Tratar todo implícito como subentendido é o deslize mais comum: o pressuposto tem marca linguística. Outro erro é confundir inferência autorizada pelo texto com suposição pessoal. E responder que o texto afirma algo que ele apenas insinua, o que costuma invalidar a alternativa."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Na frase o governo continua ignorando o problema, qual o pressuposto? Responda antes de conferir: que o governo já ignorava o problema antes, informação marcada pelo verbo continuar e mantida mesmo se a frase for negada. Agora explique o teste de negação: se a informação sobrevive à negação da frase, é pressuposto."
+      }
+    ],
+    "recall": {
+      "prompt": "Qual o pressuposto em o governo continua ignorando o problema? Explique o teste da negação.",
+      "elements": [
+        [
+          "o governo ja ignorava antes",
+          [
+            "antes",
+            "ja",
+            "continuava"
+          ]
+        ],
+        [
+          "a marca esta no verbo continuar",
+          [
+            "continuar",
+            "verbo",
+            "marca"
+          ]
+        ],
+        [
+          "o pressuposto sobrevive a negacao da frase",
+          [
+            "negacao",
+            "sobrevive",
+            "teste"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Gramática",
+    "topic": "Substantivo: os Nomes e a Visão do Enunciador",
+    "sections": [
+      {
+        "title": "Classificação",
+        "content": "Substantivos podem ser comuns ou próprios, concretos ou abstratos, primitivos ou derivados, simples ou compostos, e coletivos. As classificações importam menos por si do que pelo efeito: escolher entre morte e falecimento, ou entre manifestante e baderneiro, revela o posicionamento de quem escreve."
+      },
+      {
+        "title": "Escolha lexical e ponto de vista",
+        "content": "Nomear é interpretar. Chamar um mesmo grupo de invasores ou de sem-teto, um mesmo fato de acidente ou de tragédia, orienta a leitura antes de qualquer argumento explícito. Em provas de interpretação, questões sobre ponto de vista frequentemente se resolvem observando os substantivos escolhidos."
+      },
+      {
+        "title": "Flexões e nuances",
+        "content": "Gênero e número às vezes distinguem sentidos: o cabeça e a cabeça, o capital e a capital. Os aumentativos e diminutivos podem carregar valor afetivo ou pejorativo, como em livreco e casinha. Reconhecer essas nuances é parte da leitura atenta e aparece com frequência em questões de efeito de sentido."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Classificar substantivos abstratos apenas como aquilo que não se toca é impreciso: o critério é a dependência de outro ser para existir, como beleza e viagem. Outro deslize é achar que diminutivo indica sempre tamanho reduzido. E ignorar que a escolha do nome carrega avaliação."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Compare protesto e baderna referindo-se ao mesmo evento. Responda antes de conferir: os dois substantivos designam o mesmo fato, mas o segundo o desqualifica, revelando avaliação negativa do enunciador. Agora explique o critério para substantivo abstrato: designa ações, estados ou qualidades que dependem de outro ser para existir."
+      }
+    ],
+    "recall": {
+      "prompt": "Compare protesto e baderna quanto ao ponto de vista e explique o critério do substantivo abstrato.",
+      "elements": [
+        [
+          "designam o mesmo fato com avaliacao diferente",
+          [
+            "mesmo",
+            "avaliacao",
+            "desqualifica"
+          ]
+        ],
+        [
+          "a escolha lexical revela o posicionamento",
+          [
+            "escolha",
+            "posicionamento",
+            "ponto de vista"
+          ]
+        ],
+        [
+          "o abstrato depende de outro ser para existir",
+          [
+            "depende",
+            "acao",
+            "qualidade"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Gramática",
+    "topic": "Tipos de Discurso",
+    "sections": [
+      {
+        "title": "Discurso direto",
+        "content": "No discurso direto, a fala da personagem é reproduzida com suas próprias palavras, marcada por travessão ou aspas e introduzida por verbo de elocução, como disse, perguntou e respondeu. O efeito é de vivacidade e autenticidade, aproximando o leitor da cena e preservando marcas de oralidade e de subjetividade."
+      },
+      {
+        "title": "Discurso indireto",
+        "content": "No indireto, o narrador reporta a fala com suas próprias palavras, subordinando-a por conjunção integrante. Isso implica ajustes: mudam pronomes, tempos verbais e advérbios de tempo e lugar. Amanhã vira no dia seguinte, aqui vira ali, e o presente costuma migrar para o pretérito imperfeito."
+      },
+      {
+        "title": "Discurso indireto livre",
+        "content": "O indireto livre mistura as duas vozes: sem verbo de elocução nem travessão, o pensamento da personagem invade a narração em terceira pessoa. É recurso muito usado por Machado de Assis e por autores modernos, e produz proximidade com a subjetividade da personagem sem que ela assuma a palavra explicitamente."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Converter direto em indireto sem ajustar advérbios e tempos verbais é o erro mais cobrado. Outro deslize é confundir indireto livre com direto por causa da presença de marcas de oralidade. E supor que o indireto livre exige primeira pessoa, quando ele ocorre justamente na narração em terceira."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Converta para o indireto: ele disse: eu voltarei amanhã. Responda antes de conferir: ele disse que voltaria no dia seguinte, com mudança de pessoa, tempo verbal e advérbio. Agora identifique o discurso em: ela olhou o relógio. Estava atrasada de novo, sempre a mesma coisa. É indireto livre, com o pensamento da personagem na voz do narrador."
+      }
+    ],
+    "recall": {
+      "prompt": "Converta ele disse: eu voltarei amanhã para o discurso indireto e identifique o indireto livre.",
+      "elements": [
+        [
+          "ele disse que voltaria no dia seguinte",
+          [
+            "voltaria",
+            "dia seguinte",
+            "que"
+          ]
+        ],
+        [
+          "mudam pessoa, tempo verbal e adverbio",
+          [
+            "pessoa",
+            "tempo",
+            "adverbio"
+          ]
+        ],
+        [
+          "o indireto livre mistura as vozes sem marcas",
+          [
+            "indireto livre",
+            "voz",
+            "sem marca"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Gramática",
+    "topic": "Tipos de Sujeito",
+    "sections": [
+      {
+        "title": "Sujeito determinado",
+        "content": "Pode ser simples, com um só núcleo; composto, com dois ou mais; e oculto, elíptico ou desinencial, identificável pela desinência verbal. A ordem inversa é frequente em português e não altera a função: em chegaram os convidados, o sujeito é os convidados, ainda que venha depois do verbo."
+      },
+      {
+        "title": "Sujeito indeterminado",
+        "content": "Ocorre quando não se quer ou não se pode identificar quem pratica a ação. Marca-se de duas formas: verbo na terceira pessoa do plural sem referente explícito, como em bateram na porta; ou verbo na terceira pessoa do singular com a partícula se, índice de indeterminação, como em precisa-se de vendedores."
+      },
+      {
+        "title": "Oração sem sujeito",
+        "content": "Alguns verbos são impessoais e a oração não tem sujeito: fenômenos da natureza, como chover e nevar; haver no sentido de existir ou indicando tempo decorrido; fazer indicando tempo; e ser em indicações de tempo e distância. Nesses casos, o verbo fica na terceira pessoa do singular."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Chamar de sujeito indeterminado a oração com haver no sentido de existir é o erro mais cobrado: ali não há sujeito. Outro deslize é considerar oculto o sujeito indeterminado. E identificar como sujeito o termo que aparece antes do verbo sem verificar a concordância, sobretudo com verbos impessoais."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Classifique o sujeito em havia muitos livros na estante e em precisa-se de professores. Responda antes de conferir: a primeira é oração sem sujeito, porque haver no sentido de existir é impessoal; a segunda tem sujeito indeterminado, marcado pelo índice de indeterminação se. Agora explique por que chegaram os convidados tem sujeito simples posposto."
+      }
+    ],
+    "recall": {
+      "prompt": "Classifique o sujeito em havia muitos livros e em precisa-se de professores.",
+      "elements": [
+        [
+          "a primeira e oracao sem sujeito",
+          [
+            "sem sujeito",
+            "impessoal",
+            "haver"
+          ]
+        ],
+        [
+          "a segunda tem sujeito indeterminado",
+          [
+            "indeterminado",
+            "se",
+            "indice"
+          ]
+        ],
+        [
+          "a ordem inversa nao muda a funcao",
+          [
+            "posposto",
+            "inversa",
+            "funcao"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Gramática",
+    "topic": "Tipos de Texto: Explorando Elementos Concretos e Conceitos Abstratos",
+    "sections": [
+      {
+        "title": "Concreto e abstrato no texto",
+        "content": "Textos descritivos e narrativos tendem a mobilizar elementos concretos, com detalhes sensoriais e ações situadas; textos dissertativos operam com conceitos abstratos, como liberdade, desigualdade e sustentabilidade. Boa argumentação, porém, articula os dois: o conceito ganha força quando ancorado em exemplo concreto."
+      },
+      {
+        "title": "Do exemplo ao conceito",
+        "content": "Uma operação central da escrita acadêmica e de vestibular é a generalização controlada: partir de um caso concreto e nomear o processo que ele exemplifica. O caminho inverso também vale: enunciar o conceito e ilustrá-lo. O erro comum é ficar só num dos polos, seja acumulando exemplos, seja repetindo abstrações."
+      },
+      {
+        "title": "Precisão vocabular",
+        "content": "Conceitos exigem termos precisos: desigualdade não é o mesmo que diferença; pobreza não é o mesmo que miséria; violência urbana não é o mesmo que criminalidade. Usar o termo exato mostra domínio do repertório, e trocá-lo por um sinônimo aproximado costuma custar pontos em correções de redação."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Confundir concreto com palpável é impreciso: um processo social é abstrato mesmo tendo efeitos visíveis. Outro deslize é acumular exemplos sem nomear o que eles demonstram. E usar conceitos amplos sem defini-los, o que produz argumentação vaga e genérica."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Como transformar um exemplo em argumento? Responda antes de conferir: apresente o caso concreto, nomeie o processo que ele exemplifica e explicite a relação entre o caso e a tese defendida, evitando que o exemplo fique solto. Agora diferencie diferença de desigualdade: a primeira é distinção sem hierarquia; a segunda envolve acesso desigual a bens, direitos e oportunidades."
+      }
+    ],
+    "recall": {
+      "prompt": "Como transformar um exemplo em argumento? Diferencie diferença de desigualdade.",
+      "elements": [
+        [
+          "apresentar o caso e nomear o processo",
+          [
+            "caso",
+            "processo",
+            "nomear"
+          ]
+        ],
+        [
+          "explicitar a relacao com a tese",
+          [
+            "tese",
+            "relacao",
+            "explicitar"
+          ]
+        ],
+        [
+          "desigualdade envolve acesso desigual a direitos",
+          [
+            "acesso",
+            "hierarquia",
+            "direito"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Gramática",
     "topic": "Variação Linguística",
     "sections": [
       {
@@ -13604,6 +15198,171 @@
         "content": "Um texto troca “o senhor poderia enviar o arquivo?” por “manda o arquivo aí”. O conteúdo básico do pedido permanece, mas mudam tratamento, polidez e relação entre interlocutores. Explique por que a segunda formulação pode ser adequada entre pessoas próximas e inadequada em outro contexto. O critério central é a situação de uso, não uma oposição absoluta entre “língua certa” e “língua errada”."
       }
     ]
+  },
+  {
+    "subject": "Gramática",
+    "topic": "Verbo",
+    "sections": [
+      {
+        "title": "Tempo, modo e aspecto",
+        "content": "O verbo situa a ação no tempo, indica a atitude do falante pelo modo e apresenta o desenvolvimento da ação pelo aspecto. O indicativo apresenta como fato, o subjuntivo como hipótese ou desejo, e o imperativo como ordem ou pedido. O aspecto distingue ação concluída, em curso ou habitual."
+      },
+      {
+        "title": "Efeitos de sentido",
+        "content": "A escolha verbal orienta a leitura: o pretérito perfeito fecha o fato, o imperfeito o mantém em curso e cria clima narrativo, e o futuro do pretérito atenua afirmações, sendo usado por jornais para indicar informação não confirmada, como em o suspeito teria fugido."
+      },
+      {
+        "title": "Formas nominais e regência",
+        "content": "Infinitivo, gerúndio e particípio funcionam também como substantivo, advérbio e adjetivo. O infinitivo pode ser flexionado quando há sujeito próprio. A regência define a preposição exigida por cada verbo, e trocá-la altera o sentido: assistir a um filme é diferente de assistir um doente."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Usar o futuro do pretérito sem perceber seu valor de não confirmação leva a erros de interpretação em notícias. Outro deslize é confundir tempo com aspecto. E ignorar a regência ao usar verbos como implicar, visar, aspirar e preferir, que mudam de sentido conforme a preposição."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "O que indica a manchete o ministro teria autorizado o pagamento? Responda antes de conferir: o futuro do pretérito marca informação não confirmada, atribuída a terceiros, e não afirmação do fato pelo veículo. Agora diferencie assistir a e assistir: ver um espetáculo, no primeiro caso, e prestar assistência, no segundo."
+      }
+    ],
+    "recall": {
+      "prompt": "O que indica teria autorizado numa manchete? Diferencie assistir a e assistir.",
+      "elements": [
+        [
+          "futuro do preterito marca informacao nao confirmada",
+          [
+            "nao confirmada",
+            "atribuida",
+            "futuro do preterito"
+          ]
+        ],
+        [
+          "nao e afirmacao do fato pelo veiculo",
+          [
+            "afirmacao",
+            "veiculo",
+            "fato"
+          ]
+        ],
+        [
+          "assistir a e ver e assistir e prestar assistencia",
+          [
+            "assistir a",
+            "ver",
+            "assistencia"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Gramática",
+    "topic": "Verbo e Sintaxe da Oração",
+    "sections": [
+      {
+        "title": "Predicação verbal",
+        "content": "Os verbos se classificam pela predicação: intransitivos não pedem complemento; transitivos diretos pedem objeto sem preposição; transitivos indiretos pedem objeto preposicionado; bitransitivos pedem os dois; e de ligação não indicam ação, ligando sujeito e predicativo, como ser, estar, parecer e permanecer."
+      },
+      {
+        "title": "Tipos de predicado",
+        "content": "Predicado verbal tem como núcleo um verbo significativo; predicado nominal tem verbo de ligação e núcleo no predicativo do sujeito; predicado verbo-nominal tem dois núcleos, um verbo significativo e um predicativo. Identificar o núcleo é o passo que organiza toda a análise sintática da oração."
+      },
+      {
+        "title": "Análise na prática",
+        "content": "O método consiste em localizar o verbo, verificar se ele exige complemento e qual, identificar o sujeito perguntando quem pratica ou de quem se declara algo, e então classificar os termos restantes. Fazer nessa ordem evita o erro comum de identificar o sujeito antes de compreender a estrutura do verbo."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Classificar como sujeito o termo que vem antes do verbo, sem verificar, é o erro mais frequente, sobretudo em ordem inversa. Outro deslize é confundir predicativo com objeto. E tratar verbos como parecer sempre como de ligação, quando podem ter outros usos conforme o contexto."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Analise a frase os alunos chegaram cansados. Responda antes de conferir: chegar é verbo intransitivo, cansados é predicativo do sujeito, e o predicado é verbo-nominal, com dois núcleos. Agora explique como identificar o sujeito com segurança: pergunte de quem se declara algo, e confira a concordância verbal."
+      }
+    ],
+    "recall": {
+      "prompt": "Analise os alunos chegaram cansados e diga como identificar o sujeito com segurança.",
+      "elements": [
+        [
+          "predicado verbo-nominal com dois nucleos",
+          [
+            "verbo-nominal",
+            "dois nucleos",
+            "predicativo"
+          ]
+        ],
+        [
+          "chegar e intransitivo e cansados e predicativo",
+          [
+            "intransitivo",
+            "predicativo",
+            "sujeito"
+          ]
+        ],
+        [
+          "identificar pela concordancia e por quem se declara algo",
+          [
+            "concordancia",
+            "declara",
+            "pergunta"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Gramática",
+    "topic": "Vozes Verbais",
+    "sections": [
+      {
+        "title": "As três vozes",
+        "content": "Na voz ativa, o sujeito pratica a ação. Na passiva, o sujeito sofre a ação, sendo chamado de sujeito paciente. Na reflexiva, o sujeito pratica e recebe a ação, como em ele se feriu. A escolha da voz altera o foco da frase e o grau de explicitação do agente."
+      },
+      {
+        "title": "Passiva analítica e sintética",
+        "content": "A passiva analítica usa verbo auxiliar ser mais particípio, com agente da passiva opcional: a casa foi vendida pelo corretor. A sintética usa o verbo na terceira pessoa com a partícula apassivadora se, e exige concordância com o sujeito paciente: vendem-se casas, e não vende-se casas."
+      },
+      {
+        "title": "Efeito de sentido",
+        "content": "A voz passiva permite omitir o agente, o que tem efeito argumentativo: foram cometidos erros oculta quem os cometeu. Textos oficiais e jornalísticos usam esse recurso com frequência, e identificar a supressão do agente é uma das análises mais cobradas em interpretação crítica de textos."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Confundir partícula apassivadora com índice de indeterminação do sujeito é o erro central: com verbo transitivo direto e sujeito paciente, é apassivadora e exige concordância. Outro deslize é converter voz sem ajustar o tempo verbal. E esquecer que o agente da passiva é opcional."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Converta para a voz passiva: o professor corrigiu as provas. Responda antes de conferir: as provas foram corrigidas pelo professor, com o objeto direto virando sujeito paciente e o sujeito virando agente da passiva. Agora explique o efeito de foram cometidos erros: a omissão do agente impede identificar o responsável."
+      }
+    ],
+    "recall": {
+      "prompt": "Converta o professor corrigiu as provas para a passiva e explique o efeito de omitir o agente.",
+      "elements": [
+        [
+          "as provas foram corrigidas pelo professor",
+          [
+            "foram corrigidas",
+            "provas",
+            "professor"
+          ]
+        ],
+        [
+          "o objeto direto vira sujeito paciente",
+          [
+            "objeto",
+            "sujeito paciente",
+            "vira"
+          ]
+        ],
+        [
+          "omitir o agente oculta o responsavel",
+          [
+            "agente",
+            "oculta",
+            "responsavel"
+          ]
+        ]
+      ]
+    }
   },
   {
     "subject": "História",
@@ -16182,6 +17941,61 @@
   },
   {
     "subject": "Língua Inglesa",
+    "topic": "Text Comprehension: Calories and Energy",
+    "sections": [
+      {
+        "title": "Vocabulário do campo",
+        "content": "Textos sobre alimentação e energia trazem termos recorrentes: intake, consumo; burn, queimar; nutrient, nutriente; intake versus expenditure, consumo e gasto; balanced diet, dieta equilibrada; e diversas unidades. Reconhecer esse campo semântico acelera muito a leitura e reduz a dependência de tradução integral."
+      },
+      {
+        "title": "Estrutura típica",
+        "content": "Esses textos costumam apresentar um dado ou problema, explicar um mecanismo e concluir com recomendação ou ressalva. Conectores como however, therefore, in addition e although marcam as viradas do raciocínio, e são eles que indicam onde está a informação que a questão normalmente cobra."
+      },
+      {
+        "title": "Números e comparações",
+        "content": "Preste atenção a comparativos e superlativos, a percentuais e à base de comparação. More than, twice as much, at least e up to mudam completamente o sentido de um dado. Uma alternativa pode reproduzir o número correto e errar a relação, e é justamente aí que a questão costuma ser decidida."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Confundir intake com output, ou seja, consumo com gasto, é o erro mais direto. Outro deslize é ler up to 30% como exatamente 30%. E aceitar alternativas com termos absolutos como always e never quando o texto usa modalizadores como may e can."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "O que diferencia intake de expenditure num texto sobre energia? Responda antes de conferir: intake é a energia consumida pela alimentação e expenditure é a energia gasta pelo organismo, e o balanço entre elas explica ganho ou perda de peso. Agora explique o efeito de up to numa afirmação numérica: indica um teto, e não um valor exato."
+      }
+    ],
+    "recall": {
+      "prompt": "Diferencie intake de expenditure e explique o efeito de up to numa afirmação numérica.",
+      "elements": [
+        [
+          "intake e o consumo de energia",
+          [
+            "intake",
+            "consumo",
+            "ingestao"
+          ]
+        ],
+        [
+          "expenditure e o gasto do organismo",
+          [
+            "expenditure",
+            "gasto",
+            "queima"
+          ]
+        ],
+        [
+          "up to indica um teto e nao valor exato",
+          [
+            "teto",
+            "maximo",
+            "ate"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Língua Inglesa",
     "topic": "Text Comprehension: Digital Technology",
     "sections": [
       {
@@ -16285,6 +18099,61 @@
             "may",
             "should",
             "possibilidade"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Língua Inglesa",
+    "topic": "Text Comprehension: Earthquakes",
+    "sections": [
+      {
+        "title": "Vocabulário do campo",
+        "content": "Textos sobre terremotos trazem termos recorrentes: earthquake, terremoto; fault, falha geológica; magnitude e scale; aftershock, tremor secundário; damage, dano; casualties, vítimas; e warning system, sistema de alerta. Reconhecer esse conjunto permite localizar informação sem traduzir o texto inteiro."
+      },
+      {
+        "title": "Sequência causal",
+        "content": "Esses textos costumam explicar causa e consequência: o movimento de placas gera acúmulo de tensão, a liberação produz o tremor, e daí decorrem danos e riscos secundários, como tsunamis. Conectores como because, due to, as a result e therefore marcam essas relações e orientam as questões sobre causalidade."
+      },
+      {
+        "title": "Grau de certeza",
+        "content": "Textos científicos distinguem o que ocorreu do que pode ocorrer. Verbos modais como may, might e could indicam possibilidade; will indica previsão; e expressões como scientists believe e evidence suggests sinalizam interpretação, não fato consumado. Confundir esses níveis é a fonte mais frequente de erro."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Ler predict como constatação de um evento futuro certo é erro: previsão de terremotos, em particular, é apresentada como limitada. Outro deslize é confundir aftershock com um segundo terremoto independente. E aceitar alternativas com always ou never quando o texto usa modalizadores."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Um texto diz que scientists cannot predict exactly when an earthquake will occur, but they can identify high-risk areas. O que se pode afirmar? Responda antes de conferir: é possível mapear áreas de risco, mas não determinar o momento exato, distinção que separa previsão de localização. Agora diga o que indica may num texto científico: possibilidade, e não fato estabelecido."
+      }
+    ],
+    "recall": {
+      "prompt": "Diferencie prever o momento e mapear áreas de risco num texto sobre terremotos; o que indica may?",
+      "elements": [
+        [
+          "nao se preve o momento exato",
+          [
+            "exato",
+            "momento",
+            "nao"
+          ]
+        ],
+        [
+          "e possivel identificar areas de risco",
+          [
+            "area",
+            "risco",
+            "identificar"
+          ]
+        ],
+        [
+          "may indica possibilidade e nao fato",
+          [
+            "may",
+            "possibilidade",
+            "modal"
           ]
         ]
       ]
@@ -16538,6 +18407,171 @@
   },
   {
     "subject": "Língua Inglesa",
+    "topic": "Text Comprehension: Pollution",
+    "sections": [
+      {
+        "title": "Vocabulário e tipos",
+        "content": "O campo traz air, water e soil pollution; pollutant, poluente; emissions, emissões; waste, resíduo; landfill, aterro; greenhouse gases; e fossil fuels. Também aparecem verbos como release, liberar; reduce, reduzir; e harm, prejudicar, além de adjetivos como harmful e hazardous."
+      },
+      {
+        "title": "Causa, efeito e solução",
+        "content": "A estrutura típica apresenta o problema, suas causas, os efeitos sobre saúde e ambiente e possíveis soluções. Marque os conectores que separam essas partes e observe se a solução é apresentada como medida efetiva ou como proposta em avaliação, distinção frequentemente cobrada nas alternativas."
+      },
+      {
+        "title": "Dados e escopo",
+        "content": "Números aparecem para dimensionar o problema, e é preciso ler com atenção a base: por país, por pessoa, por ano. Quantificadores como most, some, a few e nearly delimitam o escopo, e trocar most por all num resumo do texto é a distorção mais comum nas alternativas erradas."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Confundir global warming com air pollution, fenômenos relacionados mas distintos, é frequente. Outro deslize é ler a proposta de uma solução como afirmação de que ela já foi adotada. E ignorar quantificadores, generalizando afirmações que o texto restringe a parte dos casos."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Um texto afirma que most plastic waste is not recycled. A alternativa diz que plastic waste is never recycled. Classifique antes de conferir: a alternativa distorce por generalização, trocando a maior parte por nenhuma. Agora diferencie pollution e global warming: uma é a presença de substâncias nocivas no ambiente, a outra é o aumento da temperatura média associado a gases de efeito estufa."
+      }
+    ],
+    "recall": {
+      "prompt": "Classifique a troca de most por never numa alternativa e diferencie pollution de global warming.",
+      "elements": [
+        [
+          "distorcao por generalizacao indevida",
+          [
+            "generalizacao",
+            "distorce",
+            "most"
+          ]
+        ],
+        [
+          "o texto restringe a parte dos casos",
+          [
+            "parte",
+            "maioria",
+            "restringe"
+          ]
+        ],
+        [
+          "poluicao e substancias nocivas e aquecimento e temperatura media",
+          [
+            "poluicao",
+            "aquecimento",
+            "temperatura"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Língua Inglesa",
+    "topic": "Text Comprehension: Songs and Poems",
+    "sections": [
+      {
+        "title": "Ler texto poético em inglês",
+        "content": "Letras de música e poemas exigem atenção ao sentido figurado, ao ritmo e à repetição. Traduzir palavra por palavra costuma falhar, porque expressões idiomáticas e metáforas não se transferem literalmente. O procedimento é identificar o tema, o eu lírico, a quem ele se dirige e qual sentimento ou posição sustenta."
+      },
+      {
+        "title": "Recursos frequentes",
+        "content": "Aparecem repetições em refrões, que reforçam a ideia central; contrastes entre estrofes; perguntas retóricas; e imagens sensoriais. Também são comuns contrações e formas coloquiais como gonna, wanna e ain't, além de omissões próprias da oralidade, que precisam ser reconhecidas para não travar a leitura."
+      },
+      {
+        "title": "Estratégias de prova",
+        "content": "Antes de traduzir tudo, localize palavras cognatas e o campo semântico dominante, identifique verbos e conectores e observe o tempo verbal predominante, que indica se o texto narra, descreve ou projeta. Depois, verifique cada alternativa contra o texto, evitando escolher pela impressão geral do sentimento."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Aceitar falsos cognatos é o erro campeão, como traduzir eventually por eventualmente, quando significa por fim. Outro deslize é ler linguagem figurada literalmente. E escolher a alternativa que combina com o clima da música em vez da que se sustenta em trechos específicos."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "O que significa eventually, actually e pretend? Responda antes de conferir: por fim, na verdade e fingir, e não eventualmente, atualmente e pretender. Agora explique por que o refrão importa na interpretação: sua repetição concentra a ideia central e frequentemente responde à pergunta sobre o tema do texto."
+      }
+    ],
+    "recall": {
+      "prompt": "Traduza eventually, actually e pretend; explique por que o refrão importa na interpretação.",
+      "elements": [
+        [
+          "eventually significa por fim",
+          [
+            "por fim",
+            "finalmente",
+            "eventually"
+          ]
+        ],
+        [
+          "actually significa na verdade e pretend significa fingir",
+          [
+            "na verdade",
+            "fingir",
+            "actually"
+          ]
+        ],
+        [
+          "o refrao concentra a ideia central",
+          [
+            "refrao",
+            "repeticao",
+            "central"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Língua Inglesa",
+    "topic": "Text Comprehension: Stem Cells",
+    "sections": [
+      {
+        "title": "Vocabulário do campo",
+        "content": "Textos sobre células-tronco trazem stem cells, embryonic e adult stem cells, differentiate, diferenciar-se; tissue, tecido; therapy, terapia; trial, ensaio clínico; e ethical concerns. Verbos frequentes são replace, substituir; repair, reparar; e regenerate."
+      },
+      {
+        "title": "Conteúdo típico",
+        "content": "Explicam o que torna essas células especiais, a capacidade de se diferenciar em vários tipos celulares e de se autorrenovar, apresentam aplicações potenciais no tratamento de doenças degenerativas e lesões, e discutem os limites atuais das terapias, muitas ainda em fase de pesquisa."
+      },
+      {
+        "title": "Debate ético",
+        "content": "O uso de células embrionárias envolve controvérsia sobre o estatuto do embrião, o que aparece nos textos como ethical debate. A alternativa das células de adulto e das induzidas reduz parte dessas objeções. Textos bem construídos apresentam posições distintas, e as questões costumam pedir a identificação de cada uma."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Ler promising results como comprovação de cura disponível é o erro mais comum. Outro deslize é confundir células embrionárias com adultas quanto à capacidade de diferenciação. E tratar a menção a um debate ético como se fosse a posição do autor."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Um texto diz que stem cell therapies show promising results in early trials. É correto afirmar que a cura já está disponível? Responda antes de conferir: não, porque resultados promissores em ensaios iniciais indicam potencial em investigação, e não tratamento aprovado e disponível. Agora explique o que torna as células-tronco especiais: podem se autorrenovar e se diferenciar em vários tipos celulares."
+      }
+    ],
+    "recall": {
+      "prompt": "Resultados promissores em ensaios iniciais equivalem a cura disponível? O que torna as células-tronco especiais?",
+      "elements": [
+        [
+          "nao, sao resultados em investigacao",
+          [
+            "nao",
+            "ensaio",
+            "investigacao"
+          ]
+        ],
+        [
+          "promissor nao significa aprovado",
+          [
+            "promissor",
+            "aprovado",
+            "disponivel"
+          ]
+        ],
+        [
+          "autorrenovacao e diferenciacao em varios tipos",
+          [
+            "diferenciar",
+            "autorrenovar",
+            "tipos"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Língua Inglesa",
     "topic": "Text Comprehension: Taxonomy and Terminology",
     "sections": [
       {
@@ -16561,6 +18595,116 @@
         "content": "Leia: “Reptiles are ectothermic vertebrates; snakes are reptiles.” Qual conclusão é autorizada? Cobras são vertebrados ectotérmicos, pois pertencem ao grupo definido. A frase não permite concluir que todos os vertebrados são répteis. Identifique no período a palavra que marca a inclusão de snakes na categoria maior."
       }
     ]
+  },
+  {
+    "subject": "Língua Inglesa",
+    "topic": "Text Comprehension: The Human Brain",
+    "sections": [
+      {
+        "title": "Vocabulário do campo",
+        "content": "Textos sobre o cérebro trazem brain, neuron, memory, behavior, sleep, learning, attention e mental health, além de verbos como store, armazenar; process, processar; e affect, afetar. Cuidado com o falso cognato actually, que significa na verdade, e com sensible, que significa sensato."
+      },
+      {
+        "title": "Estrutura de estudo científico",
+        "content": "Muitos desses textos relatam pesquisas: apresentam o objetivo, os participantes, o procedimento e os resultados, terminando com limitações. As questões costumam cobrar exatamente o que o estudo mostrou e o que ele não permite concluir, o que exige ler com atenção os trechos de ressalva."
+      },
+      {
+        "title": "Correlação e causa",
+        "content": "O texto pode afirmar que dois fenômenos estão associados sem estabelecer que um causa o outro. Expressões como is linked to, is associated with e is correlated with indicam associação; cause e lead to indicam causalidade. Confundir os dois é o erro mais cobrado nesse tipo de texto."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Ler associated with como causa direta é o deslize central desse tipo de texto, e é justamente o que as alternativas erradas exploram. Outro erro é generalizar resultados obtidos em amostra pequena, em condições controladas ou em animais, estendendo-os a toda a população humana. E aceitar afirmações absolutas quando o texto usa suggest, may e appear to, verbos que marcam interpretação provisória e não conclusão definitiva."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Um estudo afirma que poor sleep is associated with memory problems. Pode-se concluir que dormir mal causa perda de memória? Responda antes de conferir: não necessariamente, porque associação não estabelece direção nem exclusividade da causa, e outros fatores podem explicar a relação. Agora traduza actually e sensible: na verdade e sensato."
+      }
+    ],
+    "recall": {
+      "prompt": "Associação implica causa? Traduza actually e sensible.",
+      "elements": [
+        [
+          "associacao nao estabelece causalidade",
+          [
+            "associacao",
+            "causa",
+            "nao"
+          ]
+        ],
+        [
+          "outros fatores podem explicar a relacao",
+          [
+            "fator",
+            "direcao",
+            "explicar"
+          ]
+        ],
+        [
+          "actually e na verdade e sensible e sensato",
+          [
+            "na verdade",
+            "sensato",
+            "cognato"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Língua Inglesa",
+    "topic": "Text Comprehension: Viruses",
+    "sections": [
+      {
+        "title": "Vocabulário do campo",
+        "content": "Aparecem virus, host, spread, infection, outbreak, surto; vaccine e vaccination; immune system; symptoms; e mutation. Verbos frequentes incluem prevent, prevenir; transmit, transmitir; e develop, desenvolver. Atenção ao plural viruses e ao falso cognato injury, que significa lesão."
+      },
+      {
+        "title": "Estrutura explicativa",
+        "content": "Textos sobre vírus costumam definir o agente, explicar como se replica dependendo de células hospedeiras, descrever formas de transmissão e apresentar medidas de prevenção. Perguntas comuns pedem a diferença entre vírus e bactéria e a razão pela qual antibióticos não funcionam contra vírus."
+      },
+      {
+        "title": "Prevenção e evidência",
+        "content": "Ao tratar de vacinas e medidas de contenção, o texto distingue o que a evidência sustenta do que ainda é investigado. Expressões como studies show, preliminary results e further research is needed sinalizam esses graus, e as alternativas costumam testar se o leitor respeitou essa gradação."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Tratar vírus e bactéria como equivalentes é o erro conceitual mais frequente, e ele leva a aceitar alternativas sobre antibióticos que o texto não sustenta. Outro deslize é ler preliminary results como conclusão estabelecida, quando o próprio texto costuma pedir mais pesquisa. E confundir outbreak, surto localizado, com epidemic e pandemic, que indicam alcances geográficos progressivamente maiores."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que antibiotics do not work against viruses? Responda antes de conferir: antibióticos atuam sobre estruturas bacterianas, como parede celular e ribossomos próprios, ausentes nos vírus, que dependem da maquinaria da célula hospedeira. Agora diferencie outbreak, epidemic e pandemic quanto ao alcance geográfico."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que antibióticos não agem contra vírus? Diferencie outbreak e pandemic.",
+      "elements": [
+        [
+          "os antibioticos atuam em estruturas bacterianas",
+          [
+            "bacteria",
+            "parede",
+            "ribossomo"
+          ]
+        ],
+        [
+          "o virus depende da celula hospedeira",
+          [
+            "hospedeira",
+            "celula",
+            "maquinaria"
+          ]
+        ],
+        [
+          "outbreak e localizado e pandemic e global",
+          [
+            "outbreak",
+            "pandemic",
+            "global"
+          ]
+        ]
+      ]
+    }
   },
   {
     "subject": "Língua Inglesa",
