@@ -19,8 +19,12 @@ describe('erros derivados dos resumos', () => {
     expect(screen.getByText('Resposta parcial')).toBeInTheDocument();
     expect(screen.getByText(/Física · Temperatura, Calor e seus Mecanismos de Transferência/)).toBeInTheDocument();
     expect(screen.getByText(/Fuvest/)).toBeInTheDocument();
-    expect(screen.getByText(/pod_fis_04/)).toBeInTheDocument();
-    expect(screen.getByRole('link', { name: /Retomar pergunta/ })).toHaveAttribute('href', expect.stringContaining('question=calor-r1'));
+    // Com resumo profundo aplicado, a fonte do capitulo e a sintese editorial,
+    // que nao tem material interno associado: o campo mostra a ausencia em vez
+    // de repetir o material do texto antigo, que nao originou este conteudo.
+    expect(screen.getByText('Materiais de origem')).toBeInTheDocument();
+    expect(screen.getByText('Não disponível')).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /Retomar pergunta/ })).toHaveAttribute('href', expect.stringContaining(`question=${question.id}`));
     expect(screen.getByText(/1 tentativa/)).toBeInTheDocument();
   });
 
