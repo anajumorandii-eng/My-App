@@ -71477,26 +71477,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Física · questão 1 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "As máscaras de proteção N95 e PFF2 possuem fibras compostas de um material com campo elétrico permanente e são capazes de realizar uma filtragem eletrostática das partículas ou gotículas dispersas no ar. Considere um campo elétrico uniforme de módulo E₀ = 4,0×10⁻² V/m em uma região do espaço. A diferença de potencial elétrico entre duas linhas tracejadas paralelas entre si e perpendiculares à direção desse campo elétrico, separadas por uma distância d = 5,0×10⁻⁶ m, é igual a",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "1,6×10⁻¹⁰ V"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "2,0×10⁻⁷ V"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "0,8×10⁻⁶ V"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "1,2×10⁻⁴ V"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. Num campo elétrico uniforme, a diferença de potencial entre duas superfícies equipotenciais perpendiculares ao campo é U = E·d. Substituindo, U = 4,0×10⁻² × 5,0×10⁻⁶ = 20×10⁻⁸ = 2,0×10⁻⁷ V. O cuidado está na notação científica: multiplicam-se os coeficientes e somam-se os expoentes, e o resultado precisa ser reescrito com um único algarismo antes da vírgula. As demais alternativas correspondem a erros de soma de expoentes ou à multiplicação por valores que não aparecem no enunciado.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_001-p5.webp",
@@ -71513,26 +71513,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Física · questão 2 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "A autoclave, equipamento de esterilização por vapor de água em alta temperatura e pressão, opera segundo a curva de pressão máxima de vapor da água em função da temperatura. À esquerda da curva a água está na fase líquida; à direita, na fase de vapor; sobre a curva, as duas fases coexistem. A pressão de funcionamento de determinada autoclave é p = 3,0 atm. Se toda a água está na fase de vapor, o que se pode dizer sobre a sua temperatura θ? (Dado: 1,0 atm = 100 kPa.)",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "θ pode ter qualquer valor maior que 100 °C"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "θ pode ter qualquer valor maior que 100 °C e menor que 133 °C"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "θ pode ter qualquer valor menor que 100 °C ou maior que 133 °C"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "θ pode ter qualquer valor maior que 133 °C"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. Primeiro converta a pressão: 3,0 atm equivalem a 300 kPa. Depois localize no gráfico a temperatura em que a curva atinge 300 kPa, que é aproximadamente 133 °C. Esse é o ponto de coexistência das fases nessa pressão. Como o enunciado afirma que toda a água está na fase de vapor, e a região de vapor fica à direita da curva, a temperatura precisa ser maior que 133 °C. A alternativa a usa os 100 °C da ebulição a 1 atm, valor que não vale nessa pressão, e b inverte a região do diagrama.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_002-p6.webp",
@@ -71549,26 +71549,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Física · questão 3 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "A figura mostra a temperatura da tigela de uma panela de arroz elétrica em função do tempo de cozimento. Ligando-se a panela, uma resistência elétrica aumenta a temperatura da tigela contendo arroz e água até que a água entre em ebulição; depois que toda a água é consumida, a temperatura volta a subir e a panela é desligada. A potência elétrica dissipada pela resistência é P = 400 W, constante durante todo o cozimento. Quanto vale a energia elétrica dissipada desde o início do processo até que toda a água seja consumida?",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "13,3 kJ"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "240 kJ"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "720 kJ"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "2000 kJ"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. A energia dissipada é E = P·Δt, e todo o cuidado está em ler o intervalo certo e converter unidades. Pelo gráfico, a água acaba quando a temperatura deixa o patamar de 100 °C e volta a subir, o que ocorre aos 30 minutos. Convertendo, 30 min = 1.800 s. Então E = 400 × 1.800 = 720.000 J = 720 kJ. A alternativa b resulta de usar apenas os 10 minutos de aquecimento inicial, e a a vem de usar o tempo em minutos sem converter para segundos.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_003-p7.webp",
@@ -71585,26 +71585,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Física · questão 5 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Uma lâmpada UV de potência P = 60 W funciona sob uma diferença de potencial elétrico U = 100 V. A potência elétrica pode ser expressa também em kVA, sendo 1 kVA = 1000 V × 1 A = 1000 W. A corrente elétrica i do circuito que alimenta a lâmpada é igual a",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "0,36 A"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "0,60 A"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "1,6 A"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "3,6 A"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. A relação é direta: P = U·i, logo i = P/U = 60/100 = 0,60 A. A menção ao kVA no enunciado serve apenas para lembrar que, no caso considerado, a potência aparente e a potência real coincidem, e não altera a conta. O erro que produz 3,6 A ou 0,36 A é confundir a divisão com a conversão de 3,6 usada em velocidade, e o valor 1,6 A viria de trocar os papéis de tensão e corrente na fórmula.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_005-p9.webp",
@@ -71621,26 +71621,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Física · questão 6 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Considere uma lâmpada UV de potência P = 100 W que funcione por Δt = 15 minutos durante o processo de esterilização de um objeto. A energia elétrica consumida pela lâmpada nesse processo é igual a",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "0,0066 kWh"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "0,015 kWh"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "0,025 kWh"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "1,5 kWh"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. O quilowatt-hora é o produto da potência em quilowatts pelo tempo em horas. Convertendo, 100 W = 0,1 kW e 15 min = 0,25 h. Então E = 0,1 × 0,25 = 0,025 kWh. A alternativa d resulta de multiplicar 0,1 kW por 15, isto é, de esquecer a conversão de minutos para horas, e a b vem de usar 0,1 kW com 0,15 h. Fixar as duas conversões antes de multiplicar é o que resolve com segurança qualquer questão de consumo elétrico.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_006-p9.webp",
@@ -71657,26 +71657,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Física · questão 8 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Em analogia com um circuito elétrico, a transpiração foliar é regulada por resistências medidas em segundos por metro: a dos espaços intercelulares de ar (r_eia) e a induzida pelos estômatos (r_est), em série entre si, o conjunto em paralelo com a resistência da cutícula (r_cut), e tudo em série com a resistência da camada de ar próxima à superfície da folha (r_cl). Os valores são, para a espécie 1: r_eia = 10, r_est = 30, r_cut = 120 e r_cl = 50; para a espécie 2: r_eia = 30, r_est = 10, r_cut = 280 e r_cl = 15. Considerando que a condutância é o inverso da resistência, assinale a alternativa que indica a espécie com menor transpiração e sua respectiva condutância total à difusão do vapor d'água.",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "espécie 1; 48×10⁻⁴ m/s"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "espécie 1; 125×10⁻⁴ m/s"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "espécie 2; 30×10⁻⁴ m/s"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "espécie 2; 200×10⁻⁴ m/s"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. Resolva como circuito. Na espécie 1, r_eia e r_est em série dão 40; esse ramo em paralelo com r_cut = 120 resulta em (40×120)/160 = 30; somando r_cl = 50 em série, a resistência total é 80 s/m, e a condutância é 1/80 = 0,0125 m/s, ou 125×10⁻⁴ m/s. Na espécie 2, o mesmo caminho dá 40 em série, paralelo com 280 resultando 35, mais 15, total de 50 s/m e condutância de 200×10⁻⁴ m/s. Maior resistência significa menor fluxo, logo a espécie 1 transpira menos. O erro típico é somar todas as resistências em série, ignorando o ramo em paralelo da cutícula.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_008-p11.webp",
@@ -71693,26 +71693,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Física · questão 9 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Um drone mede a temperatura da água (T) em função da profundidade (d) a partir da superfície, conforme o gráfico, em que T = 19,30 °C na superfície e cai até 19,00 °C a 7 m de profundidade. Considere que a densidade da água é ρ = 1.000 kg/m³ e constante para todas as profundidades medidas. Qual é a diferença de pressão hidrostática entre a superfície e uma profundidade para a qual a temperatura da água é T = 19 °C? (Use g = 10 m/s².)",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "1,4×10³ Pa"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "2,0×10⁴ Pa"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "4,0×10⁴ Pa"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "7,0×10⁴ Pa"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. A questão tem duas etapas. Primeiro, leia no gráfico a profundidade em que T = 19,00 °C: o último ponto da série, a 7 m. Depois aplique a lei de Stevin, que dá a variação de pressão com a profundidade: Δp = ρ·g·h = 1.000 × 10 × 7 = 70.000 Pa, ou 7,0×10⁴ Pa. As demais alternativas correspondem a leituras erradas do gráfico, tomando 2 m ou 4 m, profundidades em que a temperatura ainda não chegou a 19 °C. Note que a pressão atmosférica não entra, porque se pede a diferença entre dois pontos da coluna d'água.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_009-p12.webp",
@@ -71729,26 +71729,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Física · questão 11 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Considere um volume cilíndrico de água cuja base tem área A = 2 m², com a face superior na superfície à temperatura T_A e a face inferior a uma profundidade d à temperatura T_B. Na situação estacionária, a temperatura decai linearmente com d, e a taxa de transferência de calor por condução é Φ = kA(T_A − T_B)/d, com k = 0,6 W/(m·°C). Usando as temperaturas da superfície e da profundidade d lidas no gráfico, na região de queda linear da temperatura da água em função de d, Φ é igual a",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "0,03 W"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "0,05 W"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "0,40 W"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "1,20 W"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. O que a fórmula pede é o gradiente térmico, isto é, a razão (T_A − T_B)/d, que é constante justamente na parte retilínea do gráfico. Lendo esse trecho, a temperatura cai de 19,30 °C na superfície para cerca de 19,20 °C a 4 m, o que dá 0,10/4 = 0,025 °C/m. Substituindo, Φ = 0,6 × 2 × 0,025 = 0,03 W. Os erros comuns são usar pontos fora do trecho linear, onde a relação já não vale, e esquecer de dividir a diferença de temperatura pela profundidade, tomando apenas o ΔT.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_011-p14.webp",
@@ -71765,26 +71765,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Física · questão 12 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Isolantes topológicos são materiais isolantes no interior e condutores na superfície. Submetido a uma diferença de potencial U, o material equivale ao circuito em que a resistência da superfície R_s = 0,2 Ω está em paralelo com a resistência do volume R_v = 100 Ω. Nessa situação, a razão F = i_s/i_v entre a corrente que atravessa a porção condutora na superfície e a corrente que atravessa a porção isolante no interior do material vale",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "0,002"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "0,2"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "100,2"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "500"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. Em paralelo, os dois ramos estão submetidos à mesma diferença de potencial U. Logo i_s = U/R_s e i_v = U/R_v, e a razão entre elas é F = (U/R_s)/(U/R_v) = R_v/R_s = 100/0,2 = 500. Note que a razão das correntes é o inverso da razão das resistências: o caminho de menor resistência conduz mais corrente, e é por isso que o resultado é maior que 1. A alternativa a apresenta exatamente a razão invertida, e a c soma as resistências em vez de dividi-las.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_012-p15.webp",
@@ -71801,26 +71801,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Física · questão 13 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "A capacidade de conversão de calor em eletricidade de um material termoelétrico é quantificada pela grandeza adimensional F = (S²/ρκ)·T, com resistividade elétrica ρ, condutividade térmica κ e coeficiente Seebeck S. O gráfico mostra ρ, em Ω·cm, em função da temperatura para certo material. Considerando κ = 2,0 W/(m·K) e S = 300 μV/K, a uma temperatura T = 300 K, conclui-se que a grandeza F desse material a essa temperatura vale",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "0,003"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "0,6"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "0,9"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "90"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. O ponto crítico é a unidade da resistividade: o gráfico está em Ω·cm, e a fórmula exige o Sistema Internacional. Em T = 300 K, lê-se ρ ≈ 1,5×10⁻³ Ω·cm, que equivale a 1,5×10⁻⁵ Ω·m. O coeficiente Seebeck é 300 μV/K = 3×10⁻⁴ V/K, então S² = 9×10⁻⁸. Substituindo, F = (9×10⁻⁸ / (1,5×10⁻⁵ × 2,0)) × 300 = 3×10⁻³ × 300 = 0,9. Quem esquece a conversão de centímetro para metro erra por duas ordens de grandeza, e é daí que saem as alternativas 0,003 e 90.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_013-p16.webp",
@@ -71856,7 +71856,7 @@
         "text": "3.300 C"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. Num gráfico de corrente por tempo, a carga é a área sob a curva, porque Q = i·t. Some as áreas das figuras que compõem a curva de recarga, atentando às unidades: se o tempo está em minutos ou horas, converta para segundos antes de multiplicar, já que 1 C = 1 A·s. Feita a conversão, a área total corresponde a 11.880 C. As alternativas menores nascem de dois erros clássicos: usar o tempo em horas sem converter e ler apenas o patamar de corrente constante, esquecendo o trecho em que ela decai.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_014-p17.webp",
@@ -71892,7 +71892,7 @@
         "text": "8 V e 400 Hz"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. São duas leituras independentes na tela do osciloscópio. A amplitude é a distância do eixo até o pico da onda, e não a distância entre pico e vale, que é o dobro: por isso a leitura correta é 8 V, e quem toma a metade cai nas alternativas com 4 V. A frequência sai do período: mede-se na horizontal o tempo de um ciclo completo e aplica-se f = 1/T. Com o período em milissegundos, o valor obtido é 400 Hz. Confundir o eixo do tempo em milissegundos com segundos é o que produz o valor de 2,5 Hz.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_016-p19.webp",
@@ -71909,26 +71909,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Física · questão 17 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Após uma fonte de tensão contínua ser desligada em t = 0 s, um estudante acompanha com um amperímetro o decréscimo da corrente no circuito, formado pela fonte e por um resistor R = 0,5 kΩ. As leituras do amperímetro, em miliampères, são de cerca de 38 mA em t = 0,200 s e de cerca de 12 mA em t = 0,400 s. A diferença de potencial sobre o resistor R para t = 400 ms é igual a",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "6 V"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "12 V"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "20 V"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "40 V"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. É aplicação direta da lei de Ohm, com atenção redobrada às unidades. Em t = 400 ms o ponteiro marca cerca de 12 mA, ou seja, 12×10⁻³ A, e a resistência é 0,5 kΩ = 500 Ω. Então U = R·i = 500 × 0,012 = 6 V. A alternativa b resulta de ler a corrente e apresentá-la como tensão, e as demais vêm de usar a leitura de t = 0,200 s ou de esquecer a conversão do quilo-ohm. Em questões com instrumento analógico, o primeiro passo é sempre converter a escala lida para unidades do SI.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_017-p20.webp",
@@ -71945,26 +71945,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Física · questão 18 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "A figura 1 apresenta a potência elétrica dissipada pelo filamento de tungstênio de uma lâmpada incandescente em função da sua resistência elétrica, e a figura 2 apresenta a temperatura de operação do filamento em função da mesma resistência. Se uma lâmpada em funcionamento dissipa 150 W de potência elétrica, a temperatura do filamento da lâmpada é mais próxima de",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "325 °C"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "1.250 °C"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "3.000 °C"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "3.750 °C"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. A resistência é a grandeza que liga os dois gráficos, e é por ela que se faz a ponte. Entre na figura 1 com P = 150 W e leia a resistência correspondente, aproximadamente 325 Ω. Leve esse valor à figura 2 e leia a temperatura associada, próxima de 3.000 °C. A alternativa a é a armadilha da questão: apresenta como temperatura justamente o valor da resistência lido no caminho, e quem pula a segunda leitura acaba marcando esse número.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_018-p21.webp",
@@ -71981,26 +71981,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Física · questão 21 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "O carro elétrico é uma alternativa aos veículos com motor a combustão interna. Qual é a autonomia de um carro elétrico que se desloca a 60 km/h, se a corrente elétrica empregada nesta velocidade é igual a 50 A e a carga máxima armazenada em suas baterias é q = 75 Ah?",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "40,0 km"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "62,5 km"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "90,0 km"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "160,0 km"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. A carga em ampère-hora informa por quanto tempo a bateria sustenta determinada corrente: como q = i·t, o tempo de funcionamento é t = 75 Ah ÷ 50 A = 1,5 h. Com o carro a 60 km/h durante esse tempo, a distância é d = v·t = 60 × 1,5 = 90 km. A alternativa d resulta de multiplicar a velocidade pela carga sem dividir pela corrente, e a b vem de inverter a divisão. O ampère-hora não é unidade de energia, e sim de carga: essa distinção é o que organiza a resolução.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_021-p22.webp",
@@ -72021,26 +72021,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Física · questão 22 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Considere que uma bateria de íon-lítio, inicialmente descarregada, é carregada com uma corrente média i_m = 3,2 A até atingir sua carga máxima de Q = 0,8 Ah. O tempo gasto para carregar a bateria é de",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "240 minutos"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "90 minutos"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "15 minutos"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "4 minutos"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. De Q = i·t vem t = Q/i = 0,8 Ah ÷ 3,2 A = 0,25 h. Convertendo, 0,25 hora são 15 minutos. O erro mais comum é esquecer que a carga está em ampère-hora e tratar o resultado como se já estivesse em minutos, o que leva à alternativa d, ou inverter a divisão, o que produz valores muito maiores. Sempre que a carga vier em Ah, o tempo sai diretamente em horas.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_022-p23.webp",
@@ -72080,7 +72080,7 @@
         "text": "a privação da liberdade do ser humano, e o uso da independência do período do pêndulo simples com a massa do corpo suspenso, feito por Umberto Eco, está correto"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. A questão pede duas leituras. Na primeira, o texto de Mecke afirma que a fórmula funciona como metáfora da violência e do calculismo desumano, e o exemplo do pêndulo em Umberto Eco corresponde ao estrangulamento de uma pessoa, isto é, à privação da liberdade do ser humano. Na segunda, a física invocada é correta: o período do pêndulo simples, T = 2π√(L/g), depende apenas do comprimento e da gravidade, e não da massa suspensa, o que Eco usa com precisão. As alternativas erradas trocam a leitura literária, falando em revogação das leis naturais ou em concordância sobre a representação da natureza.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_023-p24.webp",
@@ -72116,7 +72116,7 @@
         "text": "nos Andes (Chile), e as ondas transversais são aquelas em que a oscilação se dá na direção de propagação"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. A figura representa um contato transformante, em que duas placas deslizam lateralmente uma em relação à outra: é o caso da falha de San Andreas, na Califórnia, associada a sismos frequentes sem vulcanismo. Nos Andes o contato é convergente, com subducção da placa de Nazca, o que exclui as alternativas que citam o Chile. Quanto às ondas, a definição é direta: nas longitudinais a oscilação das partículas ocorre na mesma direção da propagação, como no som; nas transversais, perpendicularmente a ela. Trocar essas definições é o erro das alternativas c e d.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_024-p25.webp",
@@ -72133,26 +72133,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Física · questão 25 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Sobre a segunda lei de Newton, o texto de George Smith registra que a forma moderna F = ma não aparece nas edições do Principia. A formulação original é: “A change in _1_ is proportional to the motive _2_ impressed and takes place along the _3_ line in which that force is _4_. In the body of the Principia this law is applied both to _5_ cases, in which an instantaneous impulse such as from impact is effecting the change in motion, and to cases of _6_ action, such as the change in motion in the continuous deceleration of a body moving in a resisting medium.” Assinale a alternativa que apresenta a sequência adequada de palavras que preenchem as lacunas do texto acima, para que os conceitos utilizados estejam corretos.",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "Motion, force, straight, impressed, discrete, continuous"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "Force, motion, impressed, straight, discrete, continuous"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "Motion, force, impressed, straight, continuous, discrete"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "Force, motion, straight, impressed, continuous, discrete"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. Newton enuncia que a mudança no movimento, isto é, na quantidade de movimento, é proporcional à força motriz impressa, e ocorre segundo a linha reta em que essa força é impressa. Daí as quatro primeiras lacunas: motion, force, straight e impressed. As duas últimas seguem a própria descrição do texto: o caso do impulso instantâneo por impacto é o caso discreto, e a desaceleração contínua em meio resistente é o caso continuous. Trocar motion por force na primeira lacuna é o erro central, porque inverte a relação entre causa e efeito na lei.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_025-p26.webp",
@@ -72169,26 +72169,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Física · questão 28 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "A figura exibe, em porcentagem, a previsão da oferta de energia no Brasil em 2030, segundo o Plano Nacional de Energia: gás natural 15,5; petróleo e derivados 28; urânio 3; carvão mineral 6,9; lenha e carvão vegetal 5,5; produtos de cana 18,5; hidráulica 13,5; outras fontes renováveis 9,1. Segundo o plano, em 2030 a oferta total de energia do país irá atingir 557 milhões de tep (toneladas equivalentes de petróleo). Nesse caso, podemos prever que a parcela oriunda de fontes renováveis, indicada em cinza na figura, equivalerá a",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "178,240 milhões de tep"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "297,995 milhões de tep"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "353,138 milhões de tep"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "259,562 milhões de tep"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. Primeiro identifique quais fatias são renováveis: lenha e carvão vegetal, 5,5; produtos de cana, 18,5; hidráulica, 13,5; e outras fontes renováveis, 9,1. A soma dá 46,6% da oferta. Aplicando ao total, 0,466 × 557 = 259,562 milhões de tep. Os erros típicos são deixar de fora a lenha e o carvão vegetal, que são biomassa e, portanto, renováveis, ou incluir o carvão mineral, que é fóssil. Ler a legenda antes de somar é o que evita as duas armadilhas.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_028-p29.webp",
@@ -72205,26 +72205,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Física · questão 29 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Uma sonda viaja a uma velocidade de módulo constante igual a v = 5×10⁵ km/h, tangenciando a superfície da Terra ao longo da Linha do Equador. Em uma hora, aproximadamente quantas voltas a sonda dá em torno da Terra? (Dado: raio da Terra R = 6,0×10³ km; aproxime π = 3,0.)",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "83"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "30"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "14"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "0,5"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. Uma volta corresponde ao comprimento da circunferência equatorial: C = 2πR = 2 × 3,0 × 6,0×10³ = 3,6×10⁴ km. Em uma hora a sonda percorre 5×10⁵ km, então o número de voltas é 5×10⁵ ÷ 3,6×10⁴ ≈ 13,9, ou seja, cerca de 14. O erro mais frequente é usar o raio no lugar do comprimento da circunferência, o que produz um número muito maior de voltas, ou esquecer o fator 2 e dividir por πR.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_029-p30.webp",
@@ -72241,26 +72241,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Física · questão 30 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "A força gravitacional exercida pelo Sol sobre a sonda Solar Parker tem módulo dado por F = GMm/r², sendo G ≈ 6,7×10⁻¹¹ N·m²/kg² a constante gravitacional universal, M = 2,0×10³⁰ kg a massa do Sol, m a massa da sonda e r a distância entre a sonda e o centro do Sol. Sendo r = 1,0×10⁷ km, qual é o módulo da aceleração gravitacional do Sol na referida posição?",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "6,7×10⁻²⁹ m/s²"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "1,34 m/s²"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "9,8 m/s²"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "2,0×10¹⁰ m/s²"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. A aceleração é a força por unidade de massa da sonda, de modo que m se cancela: g = GM/r². O cuidado está na unidade da distância: 1,0×10⁷ km equivalem a 1,0×10¹⁰ m. Substituindo, g = (6,7×10⁻¹¹ × 2,0×10³⁰) / (1,0×10¹⁰)² = 1,34×10²⁰ / 1,0×10²⁰ = 1,34 m/s². A alternativa c é a armadilha de responder com a gravidade da superfície terrestre, e as demais nascem de esquecer a conversão de quilômetro para metro ou de não elevar a distância ao quadrado.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_030-p30.webp",
@@ -72277,26 +72277,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Física · questão 33 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "A força de atrito cinético entre a agulha e um disco de vinil tem módulo |F_at| = 8,0×10⁻³ N. Sendo o módulo da força normal |N| = 2,0×10⁻² N, o coeficiente de atrito cinético, μ_c, entre a agulha e o disco é igual a",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "1,6×10⁻⁵"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "5,0×10⁻²"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "4,0×10⁻¹"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "2,5×10⁰"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. Por definição, F_at = μ·N, logo μ = F_at/N = 8,0×10⁻³ ÷ 2,0×10⁻² = 4,0×10⁻¹, ou 0,40. O coeficiente de atrito é adimensional, porque é razão entre duas forças, e isso serve de conferência: se aparecer unidade no resultado, houve erro de montagem. A alternativa a resulta de multiplicar em vez de dividir, e a d de inverter a razão, tomando a normal sobre o atrito.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_033-p32.webp",
@@ -72313,26 +72313,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Física · questão 34 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Uma cápsula destinada a levar astronautas à Estação Espacial Internacional tem massa m = 7500 kg. O aumento da energia potencial gravitacional devido ao deslocamento da cápsula desde a superfície da Terra até a aproximação com a ISS é ΔU = 3,0×10¹⁰ J. A velocidade da ISS é v = 8000 m/s, e a velocidade inicial da cápsula pode ser desprezada. Sem levar em conta a energia perdida pelo atrito com o ar, pode-se dizer que o trabalho realizado pelo foguete e pelos propulsores sobre a cápsula é de",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "2,1×10¹¹ J"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "2,4×10¹¹ J"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "2,7×10¹¹ J"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "5,1×10¹¹ J"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. O trabalho externo cobre as duas variações de energia: a potencial gravitacional e a cinética. A energia cinética final é E_c = ½·m·v² = 0,5 × 7500 × 8000² = 2,4×10¹¹ J, e a inicial é desprezível. Somando a variação de energia potencial, W = 2,4×10¹¹ + 3,0×10¹⁰ = 2,7×10¹¹ J. A alternativa b é a armadilha de responder apenas com a energia cinética, esquecendo que a cápsula também subiu, e a a corresponde a subtrair em vez de somar as duas parcelas.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_034-p32.webp",
@@ -72348,31 +72348,31 @@
     "id": "ap_fis_unicamp_038",
     "topicId": "fis_cinematica",
     "subject": "Física",
-    "correctOptionId": "b",
+    "correctOptionId": "d",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Física · questão 38 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "A supernova SN2016aps dista da Terra 4,0 bilhões de anos-luz, enquanto a supernova DES16C2nm, localizada a 10,5 bilhões de anos-luz de distância da Terra, é a mais distante já descoberta. Considere que uma explosão das duas supernovas ocorra simultaneamente. Quando o sinal luminoso da explosão da supernova mais próxima for detectado na Terra, a radiação luminosa da supernova DES16C2nm estará a uma distância da Terra aproximadamente igual a (dados: 1 ano ≈ 3,0×10⁷ s; velocidade da luz c = 3,0×10⁸ m/s)",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "6,5×10⁹ km"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "9,0×10¹⁵ km"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "3,6×10¹⁶ km"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "5,9×10²² km"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. Como as duas explosões são simultâneas e a luz viaja com a mesma velocidade, quando o sinal da supernova a 4,0 bilhões de anos-luz chega à Terra a luz da outra também já percorreu 4,0 bilhões de anos-luz. Falta a ela, portanto, 10,5 − 4,0 = 6,5 bilhões de anos-luz. Converta a unidade: um ano-luz é c × 1 ano = 3,0×10⁸ × 3,0×10⁷ = 9,0×10¹⁵ m, ou seja, 9,0×10¹² km. Multiplicando, 6,5×10⁹ × 9,0×10¹² ≈ 5,9×10²² km. A alternativa b é a armadilha: apresenta o valor de um ano-luz em metros, trocado para quilômetros. A chave impressa na coletânea aponta essa alternativa b, mas a conversão de unidades mostra que a resposta correta é a d.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_038-p34.webp",
@@ -72388,31 +72388,31 @@
     "id": "ap_fis_unicamp_040",
     "topicId": "fis_estatica",
     "subject": "Física",
-    "correctOptionId": "a",
+    "correctOptionId": "b",
     "difficulty": "medium",
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Física · questão 40 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "A pressão exercida na base de certo tanque do Fermilab pela coluna de argônio líquido no seu interior é P = 5,6×10⁴ N/m². A densidade do argônio líquido no tanque é d = 1400 kg/m³. Assim, a altura do tanque será de",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "2,0 m"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "4,0 m"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "7,8 m"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "25,0 m"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. Pela lei de Stevin, a pressão da coluna de líquido é P = d·g·h, logo h = P/(d·g) = 5,6×10⁴ / (1400 × 10) = 4,0 m. Com g = 9,8 m/s² o resultado praticamente não muda, ficando em 4,1 m. A alternativa d resulta de esquecer a gravidade na conta e dividir apenas pela densidade. Atenção: a chave impressa na coletânea aponta a alternativa a, mas a substituição na fórmula da hidrostática leva de forma inequívoca a 4,0 m.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_040-p36.webp",
@@ -72429,26 +72429,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Física · questão 42 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Escadas flutuantes em cascata são apoiadas somente na extremidade superior, numa parede, e no chão. O esquema mostra as forças aplicadas na escada pela parede (F_P, formando ângulo θ_P com a horizontal) e pelo chão (F_C, formando ângulo θ_C com a horizontal), além da força peso (mg) aplicada pela Terra, todas pertencentes a um plano vertical. Com base nesse esquema, é correto afirmar que",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "F_P·cosθ_P = F_C·cosθ_C e F_P·senθ_P + F_C·senθ_C = mg"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "F_P·senθ_P = F_C·senθ_C e F_P·cosθ_P + F_C·cosθ_C = mg"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "F_P·cosθ_P = F_C·cosθ_C e F_P + F_C = mg"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "F_P = F_C e F_P·senθ_P + F_C·senθ_C = mg"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. A escada está em equilíbrio, então a resultante é nula em cada direção. Na horizontal só há as componentes horizontais das duas forças de apoio, que apontam em sentidos opostos e precisam ter módulos iguais: F_P·cosθ_P = F_C·cosθ_C. Na vertical, as componentes verticais das duas forças sustentam o peso: F_P·senθ_P + F_C·senθ_C = mg. A alternativa c soma os módulos das forças em vez de suas componentes verticais, erro que ignora a decomposição, e a d supõe módulos iguais sem justificativa.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_042-p38.webp",
@@ -72465,26 +72465,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Física · questão 44 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "O asteroide satélite Didymoon descreve uma órbita circular em torno do asteroide principal Didymos. O raio da órbita é r = 1,6 km e o período é T = 12 h. A aceleração centrípeta do satélite vale (aproxime π = 3,0)",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "8,0×10⁻¹ km/h²"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "4,0×10⁻¹ km/h²"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "3,125×10⁻¹ km/h²"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "6,667×10⁻² km/h²"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. No movimento circular uniforme, a aceleração centrípeta pode ser escrita em função do período: a = 4π²r/T². Substituindo com π = 3,0, a = 4 × 9 × 1,6 / 12² = 57,6/144 = 0,4 km/h², ou seja, 4,0×10⁻¹ km/h². Como as unidades do enunciado já estão em quilômetro e hora, não é preciso converter. O erro típico é usar a = v²/r sem antes calcular a velocidade a partir do período, o que costuma introduzir engano na conta.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_044-p38.webp",
@@ -72505,26 +72505,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Física · questão 47 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Considere um ônibus espacial atual que viaja a uma velocidade média v = 2,0×10⁴ km/s. O tempo que esse ônibus levaria para chegar a um planeta a uma distância de 100 anos-luz é igual a (dado: velocidade da luz c = 3,0×10⁸ m/s)",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "66 anos"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "100 anos"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "600 anos"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "1.500 anos"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. O caminho mais curto é comparar velocidades em vez de calcular distâncias. A velocidade da nave é 2,0×10⁴ km/s, isto é, 2,0×10⁷ m/s, e a luz viaja a 3,0×10⁸ m/s: a razão c/v é 15, ou seja, a luz é quinze vezes mais rápida. Se a luz leva 100 anos para percorrer o trajeto, a nave leva 15 vezes mais: 1.500 anos. A alternativa b desconsidera a diferença de velocidades, e a c corresponde a usar uma razão de 6, obtida ao esquecer a conversão de quilômetro para metro.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_047-p40.webp",
@@ -72541,26 +72541,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Física · questão 48 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Em uma pescaria é utilizada uma linha com boia e anzol. Na posição de espera, a linha acima da boia mantém-se frouxa e a boia flutua com 1/3 do seu volume submerso. Quando o peixe é fisgado, a boia é puxada, ficando totalmente submersa e momentaneamente parada; simultaneamente, a linha que a une ao anzol fica esticada verticalmente, e a parte superior da linha permanece frouxa. Nessa situação, quanto vale o módulo da tensão da linha que une a boia ao anzol? Despreze as massas da linha e do anzol e o atrito viscoso com a água.",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "O peso da boia"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "O dobro do peso da boia"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "O peso do peixe menos o peso da boia"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "O peso do peixe menos o dobro do peso da boia"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. Comece pela situação de flutuação: com um terço do volume submerso, o empuxo equivale ao peso da boia, ou seja, E₁ = P. Como o empuxo é proporcional ao volume submerso, ao ficar inteiramente submersa a boia recebe o triplo, E₂ = 3P. Na segunda situação, a boia está momentaneamente em repouso sob três forças verticais: o empuxo 3P para cima, o peso P para baixo e a tração T da linha para baixo. Do equilíbrio, T = 3P − P = 2P, o dobro do peso da boia. Note que o peso do peixe não entra: ele age no outro extremo da linha.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_048-p41.webp",
@@ -72577,26 +72577,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Física · questão 49 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Em uma sessão de depilação a laser, a luz incide perpendicularmente em uma área A = 2 mm² com uma intensidade média igual a I = 2,0×10⁴ W/m². A energia luminosa que incide nessa área durante um intervalo de tempo Δt = 3 ms é igual a",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "1,3×10⁻¹ J"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "1,2×10⁻⁴ J"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "3,0×10⁷ J"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "3,0×10⁻¹³ J"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. Intensidade é potência por unidade de área, então a potência que chega à região é P = I·A. A conversão da área é o passo decisivo: 2 mm² = 2×10⁻⁶ m², porque o fator entre milímetro e metro, 10⁻³, entra ao quadrado. Assim P = 2,0×10⁴ × 2×10⁻⁶ = 4,0×10⁻² W. Com Δt = 3×10⁻³ s, a energia é E = P·Δt = 1,2×10⁻⁴ J. Quem converte a área usando 10⁻³ em vez de 10⁻⁶ erra por três ordens de grandeza.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_049-p42.webp",
@@ -72632,7 +72632,7 @@
         "text": "50 m dia"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. O raciocínio é de proporção. Entre 21 de dezembro e 21 de junho, o ponto do nascer do Sol percorre todo o conjunto das treze torres, ou seja, a distância entre a primeira e a última, e faz isso em cerca de meio ano, aproximadamente 182 dias. Dividindo a extensão total do alinhamento pelo número de dias, obtém-se o deslocamento diário aparente, de cerca de 1,6 metro por dia. Os valores de 25 e 50 metros confundem a distância entre torres com o avanço diário, e 0,8 m resulta de tomar o ano inteiro em vez do meio ano entre os solstícios.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_050-p43.webp",
@@ -72649,26 +72649,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Física · questão 51 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "O primeiro satélite geoestacionário brasileiro tem massa constante desde o lançamento até a entrada em órbita e vale m = 6,0×10³ kg. O módulo de sua velocidade orbital é igual a v_or = 3,0×10³ m/s. Desprezando a velocidade inicial do satélite em razão do movimento de rotação da Terra, o trabalho da força resultante sobre o satélite para levá-lo até a sua órbita é igual a",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "2 MJ"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "18 MJ"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "27 GJ"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "54 GJ"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. Pelo teorema da energia cinética, o trabalho da resultante é igual à variação da energia cinética. Como a velocidade inicial é desprezada, W = ½·m·v² = 0,5 × 6,0×10³ × (3,0×10³)² = 2,7×10¹⁰ J. Convertendo, isso é 27 GJ, já que 1 GJ = 10⁹ J. A alternativa d resulta de esquecer o fator ½, e as expressas em megajoules erram a ordem de grandeza do prefixo por um fator mil.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_051-p44.webp",
@@ -72685,26 +72685,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Física · questão 52 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Considerando que a combustão completa de certa massa de gelo combustível libera uma quantidade de energia igual a E = 7,2 MJ, é correto afirmar que essa energia é capaz de manter aceso um painel de LEDs de potência P = 2 kW por um intervalo de tempo igual a",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "1 minuto"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "144 s"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "1 hora"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "1 dia"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. De E = P·t vem t = E/P. Convertendo tudo para o SI, 7,2 MJ = 7,2×10⁶ J e 2 kW = 2×10³ W, então t = 7,2×10⁶ / 2×10³ = 3,6×10³ s. Como uma hora tem 3.600 s, o resultado é exatamente uma hora. A alternativa b vem de dividir 7,2 por 0,05 ou de trocar os prefixos, e a d exigiria energia 24 vezes maior. Vale memorizar que 3.600 s equivalem a uma hora, número que aparece com frequência nessas conversões.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_052-p44.webp",
@@ -72721,26 +72721,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Física · questão 53 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "A força de sustentação de uma aeronave, vertical de baixo para cima, está associada à diferença de pressão ΔP entre as partes inferior e superior do avião. Considere um avião de massa total m = 3×10⁵ kg em voo horizontal. Sendo a área efetiva de sustentação do avião A = 500 m², na situação de voo horizontal ΔP vale (use g = 10 m/s²)",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "5×10³ N/m²"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "6×10³ N/m²"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "1,5×10⁶ N/m²"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "1,5×10⁸ N/m²"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. Em voo horizontal com velocidade constante, a sustentação equilibra o peso: F = mg = 3×10⁵ × 10 = 3×10⁶ N. Como a sustentação resulta da diferença de pressão aplicada à área efetiva, F = ΔP·A, logo ΔP = 3×10⁶ / 500 = 6×10³ N/m². A alternativa c apresenta justamente a força dividida por 2 ou multiplicada pela área, erro de quem inverte a relação entre pressão, força e área.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_053-p44.webp",
@@ -72761,26 +72761,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Física · questão 55 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Considere um planeta esférico com raio igual a R_P = 2R_T e massa M_P = 8M_T, em que R_T e M_T são o raio e a massa da Terra. Para planetas esféricos de massa M e raio R, a aceleração da gravidade na superfície é dada por g = GM/R², em que G é uma constante universal. Assim, considerando a Terra esférica e usando a aceleração da gravidade na sua superfície, o valor da aceleração da gravidade na superfície do novo planeta será de",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "5 m/s²"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "20 m/s²"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "40 m/s²"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "80 m/s²"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. Compare as duas expressões em vez de calcular valores absolutos: g_P/g_T = (M_P/M_T) ÷ (R_P/R_T)² = 8 ÷ 2² = 8/4 = 2. Logo a gravidade do novo planeta é o dobro da terrestre, isto é, cerca de 20 m/s² tomando g_T = 10 m/s². O erro que produz 80 m/s² é multiplicar pela razão das massas sem dividir pelo quadrado da razão dos raios, e o que produz 40 é esquecer de elevar o raio ao quadrado.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_055-p46.webp",
@@ -72797,26 +72797,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Física · questão 56 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Um conjunto de placas de aquecimento solar eleva a temperatura da água de um reservatório de 500 litros de 20 °C para 47 °C em algumas horas. Se no lugar das placas solares fosse usada uma resistência elétrica, quanta energia elétrica seria consumida para produzir o mesmo aquecimento? Adote 1,0 kg/litro para a densidade e 4,0 kJ/(kg·°C) para o calor específico da água, e use 1 kWh = 3,6×10⁶ J.",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "15 kWh"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "26 kWh"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "40.000 kWh"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "54.000 kWh"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. Calcule primeiro o calor sensível: Q = m·c·ΔT, com m = 500 kg, c = 4,0 kJ/(kg·°C) e ΔT = 47 − 20 = 27 °C, o que dá Q = 54.000 kJ, ou 5,4×10⁷ J. Depois converta para quilowatt-hora dividindo por 3,6×10⁶: 5,4×10⁷ / 3,6×10⁶ = 15 kWh. A alternativa d é exatamente o resultado em quilojoules, apresentado como se já estivesse em kWh — é a armadilha da questão, e ela pune quem para antes da conversão final.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_056-p46.webp",
@@ -72852,7 +72852,7 @@
         "text": "180 m"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. Num gráfico de velocidade por tempo, a distância percorrida é a área sob a curva. O trajeto entre o primeiro e o terceiro semáforo corresponde a dois trechos de aceleração, deslocamento com velocidade constante e frenagem, e a soma das áreas desses trapézios dá 330 metros. Os erros típicos são calcular apenas um dos trechos, obtendo cerca de metade do valor, ou multiplicar a velocidade máxima pelo tempo total, o que superestima o resultado por ignorar que o carro parte do repouso e volta a parar.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_058-p47.webp",
@@ -72869,26 +72869,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Física · questão 59 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Considere que um Pulsar foi detectado, e que o total de energia cinética relacionada com seu movimento de rotação equivale a 2×10⁴² J. Notou-se que, após um ano, o Pulsar perdeu 0,1% de sua energia cinética, principalmente em forma de radiação eletromagnética. A potência irradiada pelo Pulsar vale (use 1 ano ≈ 3,6×10⁷ s)",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "7,2×10⁴⁶ W"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "2,0×10³⁹ W"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "5,6×10³¹ W"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "1,8×10⁴² W"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. A energia perdida é 0,1% do total, isto é, 0,001 × 2×10⁴² = 2×10³⁹ J. A potência média é essa energia dividida pelo tempo em que foi irradiada: P = 2×10³⁹ / 3,6×10⁷ ≈ 5,6×10³¹ W. A alternativa b é a armadilha de responder com a energia em vez da potência, e a a resulta de multiplicar em vez de dividir pelo intervalo de tempo. Sempre confira a unidade da resposta: joule e watt não se confundem.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_059-p48.webp",
@@ -72905,26 +72905,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Física · questão 62 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Considere o esquema em que uma pessoa de massa m = 65 kg está parada e com a perna esticada em um equipamento de ginástica de praça, em que a haste que sustenta o assento forma 30° com a vertical. O módulo da força F exercida pela perna da pessoa em razão de sua massa é (use g = 10 m/s²)",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "1.300 N"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "750 N"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "325 N"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "560 N"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. O peso da pessoa é P = mg = 650 N, dirigido verticalmente para baixo. Como o equipamento restringe o movimento à direção definida pela haste, apenas a componente do peso ao longo dessa direção precisa ser equilibrada pela perna, e essa componente vale P·sen30° = 650 × 0,5 = 325 N. A alternativa a corresponde a dobrar o peso, e a b a usar o peso inteiro sem decompor. Decompor a força na direção do vínculo é o passo que resolve todo problema de plano inclinado ou de haste.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_062-p51.webp",
@@ -72941,26 +72941,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Física · questão 63 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Considere que uma seringa com êmbolo cilíndrico de diâmetro D = 4 mm seja usada para injetar um líquido em um microcanal cilíndrico com diâmetro de d = 500 μm. Se o êmbolo for movido com uma velocidade de V = 4 mm/s, a velocidade v do líquido no microcanal será de",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "256,0 mm/s"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "32,0 mm/s"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "62,5 μm/s"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "500,0 μm/s"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. Vale a equação da continuidade: a vazão é a mesma nos dois trechos, então A₁V₁ = A₂V₂. Como a área de um círculo é proporcional ao quadrado do diâmetro, a razão das velocidades é o quadrado da razão dos diâmetros. Com D = 4 mm e d = 500 μm = 0,5 mm, a razão é 8, e o quadrado é 64. Logo v = 4 × 64 = 256 mm/s. O erro mais comum é usar a razão simples dos diâmetros, sem elevar ao quadrado, o que leva a 32 mm/s.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_063-p51.webp",
@@ -72981,26 +72981,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Física · questão 65 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Considere que, em uma viagem de trem de alta velocidade, a aceleração experimentada pelos passageiros foi limitada a a_max = 0,09g, onde g = 10 m/s². Se o trem acelera a partir do repouso com aceleração constante igual a a_max, a distância mínima percorrida pelo trem para atingir uma velocidade de 1080 km/h corresponde a",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "10 km"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "20 km"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "50 km"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "100 km"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. Converta primeiro a velocidade: 1080 ÷ 3,6 = 300 m/s. A aceleração é 0,09 × 10 = 0,9 m/s². Use a equação de Torricelli, que dispensa o tempo: v² = v₀² + 2aΔs, com v₀ = 0, logo Δs = v²/(2a) = 90.000 / 1,8 = 50.000 m, ou 50 km. Esquecer a divisão por 3,6 na conversão da velocidade é o erro que mais aparece, e ele altera o resultado por um fator maior que dez.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_065-p53.webp",
@@ -73017,26 +73017,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Física · questão 66 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Em um anemômetro de Robinson ideal, a velocidade do vento é dada pela velocidade linear das conchas. Um anemômetro em que a distância entre as conchas e o centro de rotação é r = 25 cm, em um dia cuja velocidade do vento é v = 18 km/h, teria uma frequência de rotação de (considere π ≈ 3)",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "3 rpm"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "200 rpm"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "720 rpm"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "1200 rpm"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. Converta as unidades: 18 km/h ÷ 3,6 = 5 m/s e 25 cm = 0,25 m. Na relação entre velocidade linear e frequência, v = 2πrf, isolando f obtém-se f = 5 / (2 × 3 × 0,25) = 5/1,5 ≈ 3,33 Hz. Como a resposta é pedida em rotações por minuto, multiplique por 60: cerca de 200 rpm. O deslize típico é parar em hertz e marcar a alternativa 3 rpm, confundindo as duas unidades de frequência.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_066-p53.webp",
@@ -73072,7 +73072,7 @@
         "text": "11,3 N"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. Aplique o teorema do impulso: F·Δt = Δ(mv). Primeiro converta a velocidade, 162 km/h ÷ 3,6 = 45 m/s. A variação da quantidade de movimento é 0,14 kg × 45 m/s = 6,3 kg·m/s. Dividindo pelo tempo de contato, F = 6,3 / 0,07 = 90 N. A alternativa a resulta de esquecer a divisão por 3,6 na conversão da velocidade, e a alternativa c apresenta justamente o valor do impulso, 6,3, sem dividir pelo intervalo de tempo — confundir impulso com força é o deslize mais comum nessa questão.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_067-p54.webp",
@@ -73089,26 +73089,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Física · questão 68 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Considere uma fibra de músculo artificial de 1 mm de comprimento, suspensa verticalmente por uma de suas extremidades e com uma massa de 50 gramas pendurada, em repouso, em sua outra extremidade. O trabalho realizado pela fibra sobre a massa, ao se contrair 10%, erguendo a massa até uma nova posição de repouso, é (use g = 10 m/s²)",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "5×10⁻³ J"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "5×10⁻⁴ J"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "5×10⁻⁵ J"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "5×10⁻⁶ J"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. O deslocamento é 10% de 1 mm, isto é, 0,1 mm = 1×10⁻⁴ m. A massa é 50 g = 0,05 kg, e como ela sobe em repouso, o trabalho da fibra iguala o ganho de energia potencial: W = mgh = 0,05 × 10 × 1×10⁻⁴ = 5×10⁻⁵ J. As alternativas vizinhas correspondem a errar uma potência de dez na conversão do milímetro ou do grama, e é por isso que convém converter as duas grandezas antes de multiplicar.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_068-p54.webp",
@@ -73125,26 +73125,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Física · questão 69 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Considere que, em uma erupção solar, um conjunto de partículas de massa total m_p = 5 kg, deslocando-se com velocidade de módulo v_p = 2×10⁵ m/s, choca-se com um satélite de massa M_s = 95 kg que se desloca com velocidade de módulo igual a V_s = 4×10³ m/s na mesma direção e em sentido contrário ao das partículas. Se a massa de partículas adere ao satélite após a colisão, o módulo da velocidade final do conjunto será de",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "102.000 m/s"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "14.000 m/s"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "6.200 m/s"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "3.900 m/s"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. A colisão é perfeitamente inelástica, e a quantidade de movimento total se conserva. Adotando como positivo o sentido das partículas, p = 5 × 2×10⁵ − 95 × 4×10³ = 1,0×10⁶ − 3,8×10⁵ = 6,2×10⁵ kg·m/s. Após a colisão os corpos seguem juntos, com massa total de 100 kg, então v = 6,2×10⁵ / 100 = 6.200 m/s. O erro central é somar as quantidades de movimento sem atribuir sinais opostos aos sentidos contrários, o que leva à alternativa b.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_069-p55.webp",
@@ -73161,26 +73161,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Física · questão 70 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Considere um computador que armazena informações em um disco rígido que gira a uma frequência de 120 Hz. Cada unidade de informação ocupa um comprimento físico de 0,2 μm na direção do movimento de rotação do disco. Quantas informações magnéticas passam, por segundo, pela cabeça de leitura, se ela estiver posicionada a 3 cm do centro de seu eixo? (Considere π ≈ 3.)",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "1,62×10⁶"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "1,8×10⁶"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "64,8×10⁸"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "1,08×10⁸"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. Primeiro calcule a velocidade linear do ponto onde está a cabeça: v = 2πrf = 2 × 3 × 0,03 × 120 = 21,6 m/s. Depois divida pelo comprimento que cada informação ocupa: 0,2 μm = 2×10⁻⁷ m. O número de informações por segundo é 21,6 / 2×10⁻⁷ = 1,08×10⁸. Os dois cuidados são converter o raio de centímetro para metro e o micrômetro para metro; falhar em qualquer um dos dois desloca o resultado em várias ordens de grandeza.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_070-p55.webp",
@@ -73197,26 +73197,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Física · questão 71 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Qual o trabalho executado pela força de atrito entre o pneu e o solo para parar um carro de massa m = 1.000 kg, inicialmente a v = 72 km/h, sabendo que os pneus travam no instante da frenagem, deixando de girar, e o carro desliza durante todo o tempo de frenagem?",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "3,6×10⁴ J"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "2,0×10⁵ J"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "4,0×10⁵ J"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "2,6×10⁶ J"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. Pelo teorema da energia cinética, o trabalho da força resultante é a variação da energia cinética, e como o atrito é a única força que atua na direção do movimento, ele é responsável por toda ela. Convertendo, 72 km/h ÷ 3,6 = 20 m/s, então W = 0 − ½ × 1.000 × 20² = −2,0×10⁵ J, cujo módulo é 2,0×10⁵ J. O sinal negativo indica que o atrito é força dissipativa, contrária ao deslocamento. A alternativa a resulta de usar a velocidade em quilômetros por hora sem converter.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_071-p56.webp",
@@ -73233,26 +73233,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Física · questão 72 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "No sistema de freios a disco, o pedal empurra o êmbolo de um primeiro pistão de diâmetro d₁ que, através do óleo do circuito hidráulico, empurra um segundo pistão de diâmetro d₂. Considerando o diâmetro d₂ do segundo pistão duas vezes maior que o diâmetro d₁ do primeiro, qual a razão entre a força aplicada ao pedal de freio pelo pé do motorista e a força aplicada à pastilha de freio?",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "1/4"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "1/2"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "2"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "4"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. Pelo princípio de Pascal, a pressão transmitida pelo fluido é a mesma nos dois pistões, logo F₁/A₁ = F₂/A₂ e F₁/F₂ = A₁/A₂. Como a área é proporcional ao quadrado do diâmetro, e d₂ = 2d₁, a razão das áreas é 1/4. Assim a força no pedal é um quarto da força aplicada à pastilha: o sistema hidráulico multiplica a força por quatro. As alternativas 2 e 1/2 resultam de usar a razão dos diâmetros sem elevá-la ao quadrado.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_072-p56.webp",
@@ -73269,26 +73269,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Física · questão 73 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Os astrônomos estimam que a estrela estaria situada a uma distância d = 9,0×10¹⁸ m da Terra. Considerando um foguete que se desloca a uma velocidade v = 1,5×10⁴ m/s, o tempo de viagem do foguete da Terra até essa estrela seria de (1 ano ≈ 3,0×10⁷ s)",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "2.000 anos"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "300.000 anos"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "6.000.000 anos"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "20.000.000 anos"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. Calcule primeiro o tempo em segundos: t = d/v = 9,0×10¹⁸ / 1,5×10⁴ = 6,0×10¹⁴ s. Depois converta para anos dividindo pelo número de segundos de um ano: 6,0×10¹⁴ / 3,0×10⁷ = 2,0×10⁷, isto é, 20 milhões de anos. A alternativa c corresponde a parar na divisão sem converter corretamente a ordem de grandeza. O roteiro seguro é sempre resolver no SI e só depois trocar de unidade.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_073-p57.webp",
@@ -73305,26 +73305,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Física · questão 74 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Considerando que a massa e as dimensões dessa estrela são comparáveis às da Terra, espera-se que a aceleração da gravidade próxima à superfície seja constante. Suponha que um corpo abandonado, a partir do repouso, de uma altura h = 54 m da superfície da estrela, apresente um tempo de queda t = 3,0 s. Desta forma, pode-se afirmar que a aceleração da gravidade na estrela é de",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "8,0 m/s²"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "10 m/s²"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "12 m/s²"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "18 m/s²"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. Na queda livre a partir do repouso vale h = ½·g·t², logo g = 2h/t² = (2 × 54) / 3,0² = 108/9 = 12 m/s². A alternativa d resulta de dividir a altura pelo tempo, o que daria velocidade média e não aceleração, e a b é a armadilha de responder com a gravidade da Terra sem fazer a conta. Vale notar que a resposta é maior que 10, o que é coerente com uma estrela de massa comparável à terrestre porém mais compacta.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_074-p57.webp",
@@ -73341,26 +73341,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Física · questão 75 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "A pá cortadeira de uma colheitadeira de cana gira em movimento circular uniforme a uma frequência de 300 rpm, e o ponto extremo P da pá está a R = 60 cm do eixo. A velocidade desse ponto vale (considere π ≈ 3)",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "9 m/s"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "15 m/s"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "18 m/s"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "60 m/s"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. Converta a frequência: 300 rotações por minuto equivalem a 300/60 = 5 Hz. O raio é 60 cm = 0,6 m. Na velocidade linear, v = 2πrf = 2 × 3 × 0,6 × 5 = 18 m/s. Os dois erros que produzem as demais alternativas são não converter rpm em hertz, o que multiplica o resultado por sessenta, e usar o raio em centímetros. A relação v = 2πrf é a mesma que v = ωr, com ω = 2πf.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_075-p58.webp",
@@ -73377,26 +73377,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Física · questão 76 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Uma boia de sinalização marítima é construída unindo-se dois cilindros de mesmas dimensões e de densidades diferentes, sendo um de densidade menor e outro de densidade maior que a da água. Na figura, o ponto A está no cilindro menos denso, B é o ponto de junção entre os dois cilindros e C está no cilindro mais denso. Submergindo-se totalmente esta boia de sinalização na água, quais serão os pontos efetivos mais prováveis de aplicação das forças Peso e Empuxo?",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "Peso em C e Empuxo em B"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "Peso em B e Empuxo em B"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "Peso em C e Empuxo em A"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "Peso em B e Empuxo em C"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. As duas forças têm pontos de aplicação distintos e é isso que a questão explora. O peso se aplica no centro de massa, que, por a boia ter um cilindro mais denso que o outro, fica deslocado para o lado pesado, isto é, no ponto C. O empuxo se aplica no centro de carena, que é o centro geométrico do volume submerso; como os cilindros têm as mesmas dimensões e a boia está totalmente submersa, esse ponto é o centro geométrico do conjunto, o ponto B. A separação entre esses dois pontos é justamente o que cria o torque que endireita a boia na água.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_076-p58.webp",
@@ -73413,26 +73413,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Física · questão 78 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "A altura do Morro da Urca é de 220 m e a altura do Pão de Açúcar é de cerca de 400 m, ambas em relação ao solo. A variação da energia potencial gravitacional do bondinho com passageiros de massa total M = 5.000 kg, no segundo trecho do passeio, é (use g = 10 m/s²)",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "11×10⁶ J"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "20×10⁶ J"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "31×10⁶ J"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "9×10⁶ J"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. O segundo trecho vai do Morro da Urca ao Pão de Açúcar, então o desnível é Δh = 400 − 220 = 180 m, e não a altura total de 400 m. A variação de energia potencial é ΔU = M·g·Δh = 5.000 × 10 × 180 = 9×10⁶ J. A alternativa b é exatamente o resultado de usar os 400 m, esquecendo que o bondinho já partia de 220 m de altura. Em questões de energia potencial, o que importa sempre é a diferença de altura entre os dois pontos.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_078-p59.webp",
@@ -73449,26 +73449,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Física · questão 80 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Um aerogerador tem massa do sistema que gira M = 50 toneladas e raio de giração R = 10 m, isto é, a distância do eixo ao ponto P. A energia cinética do gerador com a hélice em movimento é dada por E = ½·M·v_P², sendo v_P o módulo da velocidade do ponto P. Se o período de rotação da hélice é igual a 2 s, qual é a energia cinética do gerador? (Considere π = 3.)",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "6,250×10⁵ J"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "2,250×10⁷ J"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "5,625×10⁷ J"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "9,000×10⁷ J"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. Primeiro obtenha a velocidade do ponto P a partir do período: v = 2πR/T = (2 × 3 × 10)/2 = 30 m/s. Depois converta a massa: 50 toneladas são 5,0×10⁴ kg. Então E = ½ × 5,0×10⁴ × 30² = 2,25×10⁷ J. O erro mais comum é esquecer a conversão de tonelada para quilograma, o que reduz o resultado em mil vezes, ou usar a frequência no lugar do período na fórmula da velocidade.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_080-p60.webp",
@@ -73485,26 +73485,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Física · questão 82 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Uma embarcação navega a uma velocidade de 26 nós, medida em relação à água do rio (use 1 nó = 0,5 m/s). A correnteza do rio tem velocidade aproximadamente constante de 5,0 m/s em relação às margens. Qual é o tempo aproximado de viagem entre duas cidades separadas por uma extensão de 40 km de rio, se o barco navega rio acima, ou seja, contra a correnteza?",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "2 horas e 13 minutos"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "1 hora e 23 minutos"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "51 minutos"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "37 minutos"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. A velocidade do barco em relação à água é 26 × 0,5 = 13 m/s. Navegando contra a correnteza, a velocidade em relação às margens é a diferença: 13 − 5 = 8 m/s. O tempo é t = 40.000 / 8 = 5.000 s, que correspondem a 83 minutos, ou 1 hora e 23 minutos. A alternativa c resulta de usar os 13 m/s sem descontar a correnteza. Em composição de movimentos, o que vale para o deslocamento em relação à margem é sempre a velocidade resultante.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_082-p61.webp",
@@ -73540,7 +73540,7 @@
         "text": "3,5 e 3,8 m"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. No lançamento oblíquo a trajetória é uma parábola simétrica, e o alcance total é 40 m, de modo que o ponto mais alto está a 20 m da origem. A informação de que a bola passa a 3 m de altura sobre a linha do gol, a 30 m do chute, permite ajustar a parábola: escrevendo y em função de x com raízes em 0 e 40 e impondo y(30) = 3, obtém-se a altura máxima em x = 20, um valor entre 3,8 e 4,1 m. O caminho mais rápido é usar a forma fatorada y = k·x·(40 − x), determinar k pela condição dada e depois calcular y(20).",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_083-p62.webp",
@@ -73557,26 +73557,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Física · questão 84 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "As eclusas permitem que as embarcações façam a transposição dos desníveis causados pelas barragens. A eclusa de Barra Bonita, no rio Tietê, tem um desnível de aproximadamente 25 m. Qual é o aumento da energia potencial gravitacional quando uma embarcação de massa m = 1,2·10⁴ kg é elevada na eclusa? (Use g = 10 m/s².)",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "4,8·10² J"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "1,2·10⁵ J"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "3,0·10⁵ J"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "3,0·10⁶ J"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. Aplicação direta de ΔU = m·g·h = 1,2×10⁴ × 10 × 25 = 3,0×10⁶ J. O cuidado é apenas com a ordem de grandeza: multiplicar 1,2 por 10 e por 25 dá 300, e os expoentes somam 10⁴, resultando 3,0×10⁶. A alternativa c erra por uma potência de dez, provavelmente por esquecer a gravidade, e a b resulta de multiplicar a massa apenas pela gravidade, sem a altura.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_084-p62.webp",
@@ -73593,26 +73593,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Física · questão 85 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Considerando as órbitas circulares da Terra, de raio R_T, e de Júpiter, de raio R_J, quando o segmento de reta que liga Júpiter ao Sol faz um ângulo de 120° com o segmento de reta que liga a Terra ao Sol, a distância entre os dois planetas é de",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "√(R_J² + R_T² − R_J·R_T·√3)"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "√(R_J² + R_T² + R_J·R_T·√3)"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "√(R_J² + R_T² − R_J·R_T)"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "√(R_J² + R_T² + R_J·R_T)"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. Os dois raios e a distância entre os planetas formam um triângulo com ângulo de 120° entre os lados conhecidos, situação em que se aplica a lei dos cossenos: d² = R_J² + R_T² − 2·R_J·R_T·cos120°. Como cos120° = −1/2, o termo −2·(−1/2) vira +1, e resulta d² = R_J² + R_T² + R_J·R_T. O sinal positivo é o ponto decisivo: com ângulo obtuso, o cosseno é negativo e o último termo soma. As alternativas com √3 usariam cosseno de 30° ou 150°.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_085-p63.webp",
@@ -73629,26 +73629,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Física · questão 87 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "A força gravitacional entre dois corpos de massa m₁ e m₂ tem módulo F = G·m₁m₂/r², com G = 6,7·10⁻¹¹ N·m²/kg². Sabendo que a massa de Júpiter é m_J = 2,0·10²⁷ kg, que a massa da Terra é m_T = 6,0·10²⁴ kg, e que os raios das órbitas valem R_J = 7,5·10¹¹ m e R_T = 1,5·10¹¹ m, o módulo da força gravitacional entre Júpiter e a Terra no momento de maior proximidade é",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "1,4·10¹⁸ N"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "2,2·10¹⁸ N"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "3,5·10¹⁹ N"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "1,3·10³⁰ N"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. Na maior aproximação os dois planetas estão alinhados do mesmo lado do Sol, então a distância entre eles é a diferença dos raios das órbitas: r = 7,5×10¹¹ − 1,5×10¹¹ = 6,0×10¹¹ m. Substituindo, F = 6,7×10⁻¹¹ × (2,0×10²⁷ × 6,0×10²⁴) / (6,0×10¹¹)² = 8,04×10⁴¹ / 3,6×10²³ ≈ 2,2×10¹⁸ N. O erro mais comum é somar os raios em vez de subtrair, o que corresponde à situação de maior afastamento, ou esquecer de elevar a distância ao quadrado.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_087-p64.webp",
@@ -73669,26 +73669,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Física · questão 89 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "O diâmetro d do feixe laser no ponto de leitura do disco é diretamente proporcional ao comprimento de onda λ. No Blu-Ray, d_BR = 480 nm e vale a relação d_BR ≈ 1,2·λ_BR. A partir dessas informações, conclui-se que a frequência do laser usado no leitor Blu-Ray é (use c = 3,0×10⁸ m/s)",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "3,2×10¹⁴ Hz"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "5,2×10¹⁴ Hz"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "6,2×10¹⁴ Hz"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "7,5×10¹⁴ Hz"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. Primeiro obtenha o comprimento de onda a partir do diâmetro: λ = d/1,2 = 480/1,2 = 400 nm, ou 4,0×10⁻⁷ m. Depois use a equação fundamental da ondulatória, c = λf, isolando a frequência: f = 3,0×10⁸ / 4,0×10⁻⁷ = 7,5×10¹⁴ Hz. O erro típico é usar diretamente os 480 nm como comprimento de onda, sem dividir por 1,2, o que produz um valor próximo de 6,2×10¹⁴ Hz e explica a alternativa c.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_089-p66.webp",
@@ -73705,26 +73705,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Física · questão 90 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "O gráfico mostra a eficiência germicida da luz UV em função do comprimento de onda λ, com máximo de 100% em 270 nm. Pode-se afirmar que a frequência da luz UV que gera eficiência germicida máxima neste caso é (dado: c = 3,0×10⁸ m/s)",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "0,9×10⁶ Hz"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "8,1×10¹⁰ Hz"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "5,4×10¹² Hz"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "1,1×10¹⁵ Hz"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. A leitura do gráfico dá o comprimento de onda de eficiência máxima: 270 nm, isto é, 2,7×10⁻⁷ m. Aplicando c = λf, f = 3,0×10⁸ / 2,7×10⁻⁷ ≈ 1,1×10¹⁵ Hz. O ponto crítico é converter nanômetro para metro, lembrando que 1 nm = 10⁻⁹ m; quem usa 270 sem converter erra por várias ordens de grandeza, e é daí que vêm as demais alternativas. O valor obtido é coerente com o ultravioleta, cuja frequência é maior que a da luz visível.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_090-p67.webp",
@@ -73741,26 +73741,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Física · questão 92 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Três tipos de laser comumente utilizados para depilação têm comprimentos de onda λ₁ ≈ 760 nm, λ₂ ≈ 800 nm e λ₃ ≈ 1.060 nm, respectivamente. Se a velocidade da luz vale c = 3,0×10⁸ m/s, o laser de maior frequência tem uma frequência de aproximadamente",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "3,9×10¹⁴ Hz"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "2,8×10⁵ Hz"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "2,5×10¹⁵ Hz"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "3,7×10¹² Hz"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. Frequência e comprimento de onda são inversamente proporcionais, já que c = λf com c fixo. Logo o laser de maior frequência é o de menor comprimento de onda, isto é, o de 760 nm. Convertendo, λ = 7,6×10⁻⁷ m, e f = 3,0×10⁸ / 7,6×10⁻⁷ ≈ 3,9×10¹⁴ Hz. Quem escolhe o maior comprimento de onda por engano obtém um valor menor, e quem erra a conversão do nanômetro cai nas alternativas de ordem de grandeza incompatível com a luz.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_092-p68.webp",
@@ -73777,26 +73777,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Física · questão 94 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Algumas operadoras inauguraram serviços de telefonia com ondas eletromagnéticas na frequência de 40 MHz. Sendo a velocidade da luz no vácuo c = 3,0×10⁸ m/s, o comprimento de onda dessas ondas eletromagnéticas é",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "1,2 m"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "7,5 m"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "5,0 m"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "12,0 m"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. Da equação fundamental da ondulatória, λ = c/f. Convertendo a frequência, 40 MHz = 4,0×10⁷ Hz. Assim λ = 3,0×10⁸ / 4,0×10⁷ = 7,5 m. O erro que mais aparece é esquecer o prefixo mega e usar 40 Hz, o que daria milhões de metros, ou inverter a divisão. Como referência, comprimentos de onda de metros são típicos de radiofrequência, o que confere com o contexto da questão.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_094-p69.webp",
@@ -73836,7 +73836,7 @@
         "text": "o índice de refração da água para as diferentes cores da luz branca é maior do que o do ar; assim, os raios de luz das diferentes cores, no interior das gotículas, se afastam mais da reta normal à interface entre os meios de refração, quanto maior for o índice de refração corresponde àquela cor, na água"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. A água é opticamente mais refringente que o ar, ou seja, seu índice de refração é maior, o que já elimina as duas primeiras alternativas. Ao entrar na gotícula, a luz branca se decompõe porque o índice de refração varia com o comprimento de onda: o violeta desvia mais e o vermelho menos, fenômeno chamado dispersão. Dentro da gota ocorre ainda uma reflexão interna, e na saída há nova refração, o que separa definitivamente as cores e produz o arco visível. Sem essa dependência do índice com a cor, haveria desvio, mas não haveria arco-íris.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_095-p70.webp",
@@ -73853,26 +73853,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Física · questão 98 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "O diagrama mostra um raio luminoso que passa por um dos anéis de uma lente de Fresnel de acrílico e sai paralelamente ao seu eixo, com ângulo θ₁ no interior do acrílico e θ₂ no ar, ambos medidos em relação à normal. Se sen(θ₁) = 0,5 e sen(θ₂) = 0,75, o valor do índice de refração do acrílico é de",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "1,50"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "1,41"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "1,25"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "0,66"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. Aplique a lei de Snell na saída do acrílico para o ar: n_acrílico·sen θ₁ = n_ar·sen θ₂, com n_ar = 1. Logo n = sen θ₂ / sen θ₁ = 0,75 / 0,5 = 1,50. A alternativa d é exatamente a razão invertida, erro de quem monta a proporção sem observar em qual meio está cada ângulo. Repare que o resultado maior que 1 é coerente: o raio se afasta da normal ao sair para o ar, o que exige meio de origem mais refringente.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_098-p73.webp",
@@ -73908,7 +73908,7 @@
         "text": "real reduzida"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. A superfície externa de uma bola de Natal funciona como espelho convexo, e espelhos convexos formam sempre imagens virtuais, direitas e menores que o objeto, qualquer que seja a posição em que o objeto esteja. É por isso que eles são usados em retrovisores e em corredores de supermercado: ampliam o campo visual à custa da redução da imagem. Na animação, Jerry se assusta com uma imagem ampliada, efeito impossível nesse tipo de espelho — a ampliação exigiria espelho côncavo com o objeto entre o foco e o vértice.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_099-p74.webp",
@@ -73944,7 +73944,7 @@
         "text": "totalmente negra"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. A cor de um corpo é o comprimento de onda que ele reflete predominantemente; os demais são absorvidos. Sob luz monocromática, um corpo só pode aparecer com a cor da luz incidente, se a refletir, ou preto, se a absorver. A parte branca do quadro reflete todos os comprimentos de onda e, portanto, devolve a luz amarela e aparece amarela. A parte azul absorve o amarelo, não tem o que refletir e aparece negra. Por isso a combinação correta é negra e amarela, e não azul, que exigiria a presença de luz azul na iluminação.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_100-p74.webp",
@@ -73980,7 +73980,7 @@
         "text": "se encontra entre F e C e aponta na direção oposta à imagem"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. A questão é resolvida por raios notáveis. A imagem mostrada é do mesmo lado e maior que o objeto, configuração que, em espelho côncavo, só ocorre quando o objeto está entre o foco e o vértice: nesse caso a imagem é virtual, direita e ampliada, que é exatamente o uso odontológico do espelho. Como a imagem é direita, a seta do objeto aponta no mesmo sentido da seta da imagem. Se o objeto estivesse entre foco e centro de curvatura, a imagem seria real, invertida e ampliada, o que corresponderia às alternativas descartadas.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_101-p75.webp",
@@ -74016,7 +74016,7 @@
         "text": "é real, invertida e fica a 3 cm da lente"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. Com o objeto além do foco de uma lente convergente, a imagem é sempre real e invertida, o que já derruba as alternativas que a descrevem como virtual ou direita. Para os valores, use a equação dos pontos conjugados, 1/f = 1/p + 1/p', e a equação do aumento, A = −p'/p = i/o. Com a posição indicada na figura, o cálculo leva a uma imagem de 4 cm. O procedimento seguro é sempre determinar primeiro a natureza da imagem pela posição do objeto em relação ao foco e só depois entrar nas equações.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_102-p76.webp",
@@ -74052,7 +74052,7 @@
         "text": "2, 5, 6 e 9"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. Em espelho plano, o campo visual é delimitado pelas retas que ligam o olho do observador às bordas do espelho, prolongadas para além dele: só é visto o ponto que estiver dentro dessa região angular. Traçando essas duas retas a partir dos olhos do motorista pelas extremidades do retrovisor, os pontos 1, 2, 5 e 9 caem dentro do campo, e os demais ficam fora, na região conhecida como ponto cego. O erro comum é supor que o campo visual depende do tamanho do espelho apenas, sem considerar a posição do observador, que é o que define a abertura das retas.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_103-p76.webp",
@@ -74073,26 +74073,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Física · questão 104 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "O volume de gás no pescoço de uma garrafa com bebida carbonatada a 7 °C é igual a 24 mL, e a pressão no interior da garrafa é de 2,8×10⁵ Pa. Trate o gás como perfeito, com constante universal dos gases de aproximadamente 8 J/(mol·K) e T(K) = θ(°C) + 273. O número de mols de gás no pescoço da garrafa é igual a",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "1,2×10⁵"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "3,0×10³"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "1,2×10⁻¹"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "3,0×10⁻³"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. Use a equação de Clapeyron, PV = nRT, isolando n = PV/(RT). As conversões são o ponto central: 24 mL = 24×10⁻⁶ m³ e T = 7 + 273 = 280 K. Substituindo, n = (2,8×10⁵ × 2,4×10⁻⁵) / (8 × 280) = 6,72 / 2.240 = 3,0×10⁻³ mol. Usar o volume em mililitros ou a temperatura em graus Celsius são os dois erros que produzem as alternativas restantes, ambos com desvio de várias ordens de grandeza.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_104-p76.webp",
@@ -74113,26 +74113,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Física · questão 106 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "A temperatura do argônio nos tanques é T_Ar = −184 °C. Sabendo-se que as temperaturas aproximadas do ponto de ebulição (T_E) e do ponto de solidificação (T_S) da água à pressão atmosférica são, respectivamente, T_E ≈ 373 K e T_S ≈ 273 K, a temperatura do argônio nos tanques será igual a",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "20 K"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "89 K"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "189 K"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "457 K"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. As duas referências dadas mostram que a escala Kelvin tem a mesma amplitude de grau da Celsius, deslocada em 273 unidades: a água congela a 0 °C, ou 273 K, e ferve a 100 °C, ou 373 K. Basta então somar: T = −184 + 273 = 89 K. A alternativa c corresponde a subtrair em vez de somar o deslocamento, e a d a somar o valor absoluto de 184. O resultado positivo é obrigatório, já que não existe temperatura negativa na escala Kelvin.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_106-p77.webp",
@@ -74153,26 +74153,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Física · questão 107 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Considere uma raiz de pelo de massa m = 2,0×10⁻¹⁰ kg inicialmente a uma temperatura T_i = 36 °C que é aquecida pelo laser a uma temperatura final T_f = 46 °C. Se o calor específico da raiz é igual a c = 3.000 J/(kg·°C), o calor absorvido pela raiz do pelo durante o aquecimento é igual a",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "6,0×10⁻⁶ J"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "6,0×10⁻⁸ J"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "1,3×10⁻¹² J"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "6,0×10⁻¹³ J"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. É calor sensível puro: Q = m·c·ΔT, com ΔT = 46 − 36 = 10 °C. Substituindo, Q = 2,0×10⁻¹⁰ × 3.000 × 10 = 6,0×10⁻⁶ J. Note que a diferença de temperatura em graus Celsius e em kelvin é a mesma, de modo que não é preciso converter a escala aqui. As demais alternativas correspondem a errar a soma dos expoentes na multiplicação em notação científica.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_107-p79.webp",
@@ -74189,26 +74189,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Física · questão 108 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Um pistão é usado para fazer vácuo em uma câmara de volume constante V_C = 2,0 litros. O pistão, ligado à câmara por uma válvula A, aumenta o volume que pode ser ocupado pelo ar em V_P = 0,2 litro. Em seguida, a válvula A é fechada e o ar dentro do pistão é expulso por uma válvula B ligada à atmosfera, completando um ciclo de bombeamento. Considere que o ar se comporte como gás ideal e que a temperatura não varie. Se a pressão inicial na câmara é de P_i = 33 Pa, a pressão final na câmara após um ciclo de bombeamento será de",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "30,0 Pa"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "330,0 Pa"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "36,3 Pa"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "3,3 Pa"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. A etapa que importa é a expansão isotérmica: com a válvula A aberta, o mesmo gás passa a ocupar o volume da câmara mais o do pistão. Pela lei de Boyle, P_i·V_C = P_f·(V_C + V_P), logo P_f = 33 × 2,0 / 2,2 = 30,0 Pa. Depois disso a válvula A fecha e o ar do pistão é expulso, mas isso não altera a pressão que ficou na câmara. A alternativa b inverte a razão dos volumes, resultado que aumentaria a pressão em vez de reduzi-la, o que contraria o próprio objetivo de fazer vácuo.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_108-p80.webp",

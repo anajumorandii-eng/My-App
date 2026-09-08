@@ -6,9 +6,14 @@ com um enunciado provisorio que apenas remete a imagem da pagina. Este script
 recebe um JSON {id: {"prompt": ..., "options": {"a": ...}, "explanation": ...}}
 com o texto lido da propria imagem e grava no banco.
 
-Mantem originalPages e correctOptionId como estao: o objetivo e devolver o
-texto, nao reclassificar a questao. Recusa id inexistente e alternativa que nao
-existe na questao, para que um engano apareca agora e nao vire questao quebrada.
+Mantem originalPages como esta: o objetivo e devolver o texto, nao reclassificar
+a questao. O campo "correct" e aceito, mas so deve ser usado quando a resolucao
+e inequivoca e a chave impressa na coletanea diverge dela -- acontece, e deixar
+a chave errada faria o app corrigir a aluna ao contrario. Toda troca de chave e
+listada na saida, para que a decisao fique visivel em vez de silenciosa.
+
+Recusa id inexistente e alternativa que nao existe na questao, para que um
+engano apareca agora e nao vire questao quebrada.
 """
 from __future__ import annotations
 
@@ -25,6 +30,7 @@ def main(entradas: list[str]) -> int:
     por_id = {q["id"]: q for q in banco}
 
     problemas: list[str] = []
+    trocas: list[str] = []
     aplicados = 0
     for caminho in entradas:
         for ident, dados in json.loads(pathlib.Path(caminho).read_text(encoding="utf-8")).items():
@@ -45,6 +51,12 @@ def main(entradas: list[str]) -> int:
                 for opcao in questao["options"]:
                     if opcao["id"] == letra:
                         opcao["text"] = texto.strip()
+            if "correct" in dados and dados["correct"] != questao["correctOptionId"]:
+                if dados["correct"] not in existentes:
+                    problemas.append(f"{ident}: chave {dados['correct']} nao existe")
+                    continue
+                trocas.append(f"{ident}: chave {questao['correctOptionId']} -> {dados['correct']}")
+                questao["correctOptionId"] = dados["correct"]
             if "explanation" in dados:
                 questao["explanation"] = dados["explanation"].strip()
             aplicados += 1
@@ -56,6 +68,8 @@ def main(entradas: list[str]) -> int:
         return 1
 
     BANCO.write_text(json.dumps(banco, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    for t in trocas:
+        print(f"    chave corrigida -- {t}")
     print(f"enunciado recuperado em {aplicados} questoes")
     return 0
 
