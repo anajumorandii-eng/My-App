@@ -92404,7 +92404,7 @@
         "text": "20 de março"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. A base do frasco tem raio 3 cm, logo área π·3² = 9π ≈ 28,3 cm². Uma queda de 5 cm na coluna corresponde a um consumo diário de 5 × 9π = 45π ≈ 141 cm³. Dividindo os 500 cm³ do frasco por esse consumo, obtêm-se cerca de 3,5 dias de uso. O primeiro dia foi 16 de março, o segundo 17, o terceiro 18, e no quarto dia, 19 de março, o álcool acaba antes do fim do expediente. O deslize comum é usar o diâmetro 6 no lugar do raio 3, o que quadruplicaria o consumo.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_062-p40.webp",
@@ -92656,7 +92656,7 @@
         "text": "13 da altura do cilindro"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. A areia não muda de volume ao mudar de forma. O molde cilíndrico tem volume πr²h, e o monte cônico, com raio da base 2r e altura H, tem volume (1/3)π(2r)²H = (4/3)πr²H. Igualando, πr²h = (4/3)πr²H, e cancelando πr² sobra h = 4H/3, ou seja, H = 3h/4. O cone é mais baixo que o cilindro porque, além de espalhar a base, a forma cônica ocupa apenas um terço do cilindro de mesma base e altura.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_072-p46.webp",
@@ -92696,7 +92696,7 @@
         "text": "3, 4, 5"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. Todo quadrilátero que admite círculo inscrito satisfaz o teorema de Pitot: a soma de dois lados opostos é igual à soma dos outros dois, isto é, AB + CD = BC + DA. Como AB, BC e CD estão em progressão aritmética, BC é a média de AB e CD, ou seja, AB + CD = 2·BC. Substituindo, 2·BC = BC + 3 e BC = 3. Falta a razão da progressão: escrevendo AB = 3 − d e CD = 3 + d e usando os comprimentos das tangentes, a exigência de TA ser inteiro só se cumpre com d = 1, o que dá 2, 3 e 4. Com d = 2, o comprimento TA cairia entre dois inteiros.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_073-p47.webp",
@@ -92713,26 +92713,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Matemática · questão 74 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "A figura exibe três círculos tangentes dois a dois e os três tangentes a uma mesma reta. Os raios dos círculos maiores têm comprimento R e o círculo menor, encaixado entre eles, tem raio de comprimento r. A razão R/r é igual a:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "3"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "√10"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "4"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "2√5"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. Como todos tangenciam a mesma reta, cada centro fica à altura do próprio raio. Tomando a reta como eixo x e o círculo pequeno centrado em (0, r), os grandes ficam em (−R, R) e (R, R). Dois círculos tangentes externamente têm distância entre centros igual à soma dos raios, então √(R² + (R − r)²) = R + r. Elevando ao quadrado, R² + R² − 2Rr + r² = R² + 2Rr + r², o que simplifica para R² = 4Rr e, dividindo por R, R = 4r. A razão é 4.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_074-p47.webp",
@@ -92749,26 +92749,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Matemática · questão 75 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "A figura exibe o triângulo ABC, em que AB = BC, o ângulo em B mede 30° e AD é uma altura de comprimento h, traçada de A perpendicularmente ao lado BC, com D sobre BC. A área do triângulo ABC é igual a:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "h²"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "√2·h²"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "√3·h²"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "2h²"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. No triângulo retângulo ABD, com ângulo reto em D, o cateto AD é oposto ao ângulo de 30° em B, de modo que h = AB·sen 30° = AB/2, ou seja, AB = 2h. Como o triângulo é isósceles com AB = BC, também BC = 2h. A área do triângulo ABC vale metade da base pela altura relativa a ela: (1/2)·BC·AD = (1/2)·2h·h = h². Note que a altura foi traçada sobre o lado BC, e não sobre AC — usar o lado errado como base é o erro que leva às outras alternativas.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_075-p48.webp",
@@ -92785,26 +92785,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Matemática · questão 76 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "No triângulo ABC exibido na figura, o ângulo interno em C mede 60°, AD é a bissetriz do ângulo interno em A, com D sobre o lado CB, e AD = DB. O ângulo interno em A é igual a:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "60°"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "70°"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "80°"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "90°"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. Chame o ângulo A de 2α, de modo que a bissetriz o divide em dois ângulos de medida α. Como AD = DB, o triângulo ADB é isósceles e os ângulos da base são iguais: o ângulo DBA, que é o próprio ângulo B do triângulo grande, também mede α. Somando os ângulos internos de ABC: 2α + α + 60° = 180°, de onde 3α = 120° e α = 40°. O ângulo em A vale, portanto, 2α = 80°.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_076-p48.webp",
@@ -92821,26 +92821,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Matemática · questão 77 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "No triângulo ABC exibido na figura, M é o ponto médio do lado AB, e N é o ponto médio do lado AC. Se a área do triângulo MBN é igual a t, então a área do triângulo ABC é igual a:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "3t"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "2√3·t"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "4t"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "3√2·t"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. Compare por partes. O segmento MN é base média, paralelo a BC e igual à metade dele, e o triângulo AMN é semelhante a ABC na razão 1/2, ocupando portanto 1/4 da área. Os triângulos MBN e MNC completam a figura e têm a mesma área entre si, pois MN é base comum e B e C estão à mesma distância dessa reta. Sobra 3/4 da área para dividir entre esses dois, o que daria 3/8 para cada — mas o triângulo MBN, com base MB igual a metade de AB e altura relativa à metade, mede exatamente 1/4 da área total. Logo ABC = 4t.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_077-p49.webp",
@@ -92876,7 +92876,7 @@
         "text": "2"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. Chame de a o raio do setor interno, mais escuro, e note que b é a largura da faixa externa, de modo que o raio total é a + b. A área de um setor é proporcional ao quadrado do raio, então a condição de áreas iguais é a² = (a + b)² − a², ou seja, 2a² = (a + b)². Extraindo a raiz, a√2 = a + b, de onde b = a(√2 − 1) e a/b = 1/(√2 − 1). Racionalizando, multiplica-se por (√2 + 1) em cima e embaixo e obtém-se √2 + 1. Quem toma b como o raio externo, e não como a largura da faixa, chega a √2, a alternativa d.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_078-p49.webp",
@@ -92893,26 +92893,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Matemática · questão 79 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Considere o triângulo retângulo ABD exibido na figura, com ângulo reto em B, em que AB = 2 cm, BC = 1 cm e CD = 5 cm, estando os pontos B, C e D alinhados nessa ordem. Então, o ângulo θ, que é o ângulo CAD, é igual a:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "15°"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "30°"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "45°"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "60°"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. Ponha B na origem, com A = (0, 2), C = (1, 0) e D = (6, 0), já que BC = 1 e CD = 5. O ângulo θ é a diferença entre o ângulo BAD e o ângulo BAC. Suas tangentes saem direto dos catetos: tg(BAD) = 6/2 = 3 e tg(BAC) = 1/2. Pela fórmula da tangente da diferença, tg θ = (3 − 1/2)/(1 + 3·1/2) = (5/2)/(5/2) = 1, o que dá θ = 45°.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_079-p50.webp",
@@ -92929,26 +92929,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Matemática · questão 80 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "A figura exibe um quadrilátero ABCD, onde AB = AD, BC = CD = 2 cm, o ângulo interno em A é reto e o ângulo interno em C mede 45°. A área do quadrilátero ABCD é igual a:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "√2 cm²"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "2 cm²"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "2√2 cm²"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "3 cm²"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. Trace a diagonal BD, que divide o quadrilátero em dois triângulos. No triângulo BCD, com BC = CD = 2 e ângulo de 45° entre eles, a área é (1/2)·2·2·sen 45° = √2, e a lei dos cossenos dá BD² = 4 + 4 − 8·cos 45° = 8 − 4√2. No triângulo ABD, retângulo em A e isósceles com AB = AD = a, vale BD² = 2a², logo a² = 4 − 2√2 e a área é a²/2 = 2 − √2. Somando as duas partes, (2 − √2) + √2 = 2 cm² — os radicais se cancelam.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_080-p50.webp",
@@ -92965,26 +92965,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Matemática · questão 81 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "A figura exibe um retângulo ABCD decomposto em quatro quadrados: um quadrado grande ocupando a parte esquerda, um quadrado médio no canto superior direito e dois quadrados pequenos, lado a lado, no canto inferior direito. O valor da razão AB/BC é igual a:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "5/3"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "5/2"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "4/3"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "3/2"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. Chame de s o lado do quadrado médio. Os dois quadrados pequenos, encaixados sob ele e lado a lado, têm lado s/2 cada. A altura do retângulo é a soma do quadrado médio com um pequeno: BC = s + s/2 = 3s/2. O quadrado grande ocupa toda essa altura, então seu lado também é 3s/2, e a largura do retângulo é AB = 3s/2 + s = 5s/2. A razão AB/BC = (5s/2)/(3s/2) = 5/3, independente do valor de s.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_081-p51.webp",
@@ -93020,7 +93020,7 @@
         "text": "3,5 m2"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. Escreva os lados como x − r, x e x + r. O perímetro dá 3x = 6, logo x = 2. Pelo teorema de Pitágoras, com a hipotenusa sendo o maior lado, (x − r)² + x² = (x + r)², o que simplifica para x² = 4xr e, dividindo por x, x = 4r; com x = 2 vem r = 0,5. Os lados são 1,5, 2 e 2,5 metros — o triângulo 3-4-5 reduzido à metade. A área é (1/2)·1,5·2 = 1,5 m², usando os dois catetos como base e altura.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_083-p52.webp",
@@ -93056,7 +93056,7 @@
         "text": "18 cm"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. Em problemas de reflexão, o caminho mais curto é desdobrar o retângulo em vez de calcular segmento por segmento. Como os ângulos de incidência e reflexão são iguais, todos os trechos têm a mesma inclinação, e a soma dos deslocamentos horizontais e verticais pode ser contada de uma vez: horizontalmente o feixe percorre o equivalente a 12 cm, ida e volta ao longo dos 6 cm do lado BP, e verticalmente a 9 cm, correspondentes a três travessias dos 3 cm de AB. O comprimento total é a hipotenusa desse triângulo desdobrado: √(12² + 9²) = √225 = 15 cm.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_084-p52.webp",
@@ -93128,7 +93128,7 @@
         "text": "712,5 m de ripas"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. Cada módulo de 2 m da cerca leva duas ripas horizontais de 2 m, uma vertical de 1,5 m e uma diagonal que fecha o retângulo de 2 m por 1,5 m, medindo √(2² + 1,5²) = 2,5 m. São 4 + 1,5 + 2,5 = 8 m de ripas por módulo. Em 300 m há 150 módulos, o que dá 1.200 m, aos quais se soma a vertical extra que fecha a última extremidade, 1,5 m. O total é 1.201,5 m de ripas.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_087-p54.webp",
@@ -93356,7 +93356,7 @@
         "text": "4"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. Tome o quadrado de lado 2, com A = (0, 0), B = (2, 0), C = (2, 2) e D = (0, 2), de modo que M = (1, 2). O ângulo α é o ângulo CMB, formado no ponto M entre o lado MC, horizontal e de comprimento 1, e o segmento MB; como o triângulo MCB é retângulo em C com catetos 1 e 2, tem-se tg α = 2. O ângulo θ é o formado, também a partir de M, entre MB e a diagonal AC; usando as direções (1, −2) e (1, 1), a tangente do ângulo entre elas vale 3. A soma é 2 + 3 = 5.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_094-p59.webp",
@@ -93544,7 +93544,7 @@
         "text": "6 cm"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. Ponha o quadrado com A = (0, 0), B = (1, 0), C = (1, 1) e D = (0, 1). Dizer que C é o ponto médio de AE significa que E é o simétrico de A em relação a C, ou seja, E = 2C − A = (2, 2). A distância de D = (0, 1) até E = (2, 2) sai do teorema de Pitágoras: √((2 − 0)² + (2 − 1)²) = √(4 + 1) = √5 cm. O ponto que mais confunde é localizar E: ele está fora do quadrado, no prolongamento da diagonal AC, ao dobro da distância.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_101-p62.webp",
