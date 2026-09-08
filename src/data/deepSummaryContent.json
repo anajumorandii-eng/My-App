@@ -23501,5 +23501,1490 @@
         ]
       ]
     }
+  },
+  {
+    "subject": "Sociologia",
+    "topic": "A Luta de Classes na Análise Sociológica",
+    "sections": [
+      {
+        "title": "Classe e posição estrutural",
+        "content": "Classe social, na análise marxista, define-se pela posição nas relações de produção: possuir ou não meios de produção e comprar ou vender força de trabalho. Esse critério explica interesses estruturalmente opostos, ainda que muitas pessoas não se reconheçam como membros de uma classe."
+      },
+      {
+        "title": "Consciência e organização",
+        "content": "A passagem da classe em si à classe para si depende de experiência compartilhada, organização e formação política. Sindicatos, partidos e movimentos operam nessa construção, enquanto a ideologia dominante, a fragmentação do trabalho e a concorrência entre trabalhadores atuam no sentido contrário."
+      },
+      {
+        "title": "Leituras contemporâneas",
+        "content": "Autores posteriores refinaram a análise: Weber acrescentou status e poder como dimensões distintas da classe; Bourdieu propôs capitais econômico, cultural e social, mostrando que a posição depende de múltiplos recursos; e estudos atuais discutem a interseção entre classe, raça e gênero na explicação das desigualdades."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Definir classe por faixa de renda, e não por posição na produção, é o erro mais frequente. Outro deslize é supor que a ausência de consciência de classe refuta sua existência objetiva. E tratar as contribuições de Weber e Bourdieu como simples correções, quando propõem quadros teóricos próprios."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Como Weber amplia a análise de estratificação em relação a Marx? Responda antes de conferir: mantém a dimensão econômica de classe, mas acrescenta o status, ligado a prestígio e estilo de vida, e o partido, ligado ao poder, tratando-as como dimensões que podem não coincidir. Agora explique o conceito de capital cultural em Bourdieu: recursos como escolaridade, repertório e domínio de códigos valorizados, que se convertem em vantagem social."
+      }
+    ],
+    "recall": {
+      "prompt": "Como Weber amplia a análise de classe? O que é capital cultural em Bourdieu?",
+      "elements": [
+        [
+          "acrescenta status e poder as dimensoes",
+          [
+            "status",
+            "partido",
+            "poder"
+          ]
+        ],
+        [
+          "as dimensoes podem nao coincidir",
+          [
+            "nao coincidem",
+            "independente",
+            "distinta"
+          ]
+        ],
+        [
+          "capital cultural sao repertorios e codigos valorizados",
+          [
+            "cultural",
+            "escolaridade",
+            "codigo"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Sociologia",
+    "topic": "A Sociedade da Informação",
+    "sections": [
+      {
+        "title": "Características",
+        "content": "A sociedade da informação organiza-se em torno da produção, circulação e processamento de dados. Informação e conhecimento tornam-se recursos econômicos centrais, redes digitais estruturam trabalho, consumo e sociabilidade, e a velocidade de circulação altera a experiência de tempo e espaço descrita por autores como Castells."
+      },
+      {
+        "title": "Desigualdade digital",
+        "content": "O acesso é desigual em várias camadas: disponibilidade de conexão e dispositivos, qualidade do acesso e capacidade de uso crítico. A exclusão digital reproduz e amplia desigualdades preexistentes, afetando escolarização, acesso a serviços públicos e oportunidades de trabalho, tema evidenciado durante o ensino remoto na pandemia."
+      },
+      {
+        "title": "Dados, algoritmos e poder",
+        "content": "Plataformas coletam dados em escala e organizam a visibilidade por algoritmos, com efeitos sobre consumo, opinião pública e processos eleitorais. Surgem questões sobre privacidade, transparência de critérios, moderação de conteúdo, desinformação e concentração de poder em poucas empresas, com regulação ainda em construção."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Supor que acesso à internet resolve a exclusão digital ignora as camadas de qualidade e de uso crítico. Outro deslize é tratar algoritmos como neutros, quando incorporam critérios e vieses. E confundir informação com conhecimento, já que o volume de dados não produz automaticamente compreensão."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a exclusão digital não se resolve apenas com acesso? Responda antes de conferir: além de conexão e dispositivo, é preciso qualidade de acesso e competências para buscar, avaliar e usar informação criticamente, o que depende de escolarização e apoio. Agora explique por que algoritmos não são neutros: eles embutem critérios de seleção definidos por quem os projeta e pelos dados que os treinam."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a exclusão digital não se resolve só com acesso? Por que algoritmos não são neutros?",
+      "elements": [
+        [
+          "e preciso qualidade de acesso e competencias de uso",
+          [
+            "qualidade",
+            "competencia",
+            "uso critico"
+          ]
+        ],
+        [
+          "depende de escolarizacao e apoio",
+          [
+            "escolarizacao",
+            "apoio",
+            "formacao"
+          ]
+        ],
+        [
+          "os algoritmos embutem criterios e vieses",
+          [
+            "criterio",
+            "vies",
+            "dados"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Sociologia",
+    "topic": "Anomia e Coesão Social",
+    "sections": [
+      {
+        "title": "O conceito de anomia",
+        "content": "Anomia é a ausência ou o enfraquecimento das normas capazes de orientar a conduta. Ocorre sobretudo em períodos de transformação rápida, quando as regras antigas perdem eficácia e as novas ainda não se consolidaram, deixando indivíduos sem referências para regular desejos e expectativas."
+      },
+      {
+        "title": "O estudo sobre o suicídio",
+        "content": "Durkheim mostra que o suicídio, aparentemente ato individual, varia sistematicamente conforme o grau de integração e regulação social. Distingue o egoísta, por integração insuficiente; o altruísta, por integração excessiva; o anômico, por falta de regulação; e o fatalista, por regulação opressiva, provando a existência de causas sociais."
+      },
+      {
+        "title": "Coesão e instituições",
+        "content": "A coesão depende de instituições capazes de integrar e regular: família, escola, associações profissionais, religião e Estado. Durkheim atribui à educação papel central na formação moral e propunha corporações profissionais como instância intermediária entre indivíduo e Estado nas sociedades industriais."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Confundir anomia com desordem generalizada ou caos é impreciso: trata-se especificamente da falta de normas reguladoras eficazes. Outro deslize é reduzir o estudo do suicídio a estatísticas, ignorando sua função de provar a existência de fatos sociais. E supor que integração excessiva seria sempre positiva."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que o estudo do suicídio é decisivo na obra de Durkheim? Responda antes de conferir: ao mostrar que um ato aparentemente íntimo varia conforme integração e regulação sociais, ele demonstra que existem causas propriamente sociais, sustentando a autonomia da sociologia. Agora explique a anomia: enfraquecimento das normas capazes de orientar e limitar condutas e expectativas."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que o estudo do suicídio é decisivo em Durkheim? O que é anomia?",
+      "elements": [
+        [
+          "um ato individual varia conforme fatores sociais",
+          [
+            "variacao",
+            "social",
+            "causa"
+          ]
+        ],
+        [
+          "prova a existencia de causas sociais",
+          [
+            "prova",
+            "autonomia",
+            "sociologia"
+          ]
+        ],
+        [
+          "anomia e enfraquecimento das normas reguladoras",
+          [
+            "norma",
+            "regulacao",
+            "ausencia"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Sociologia",
+    "topic": "Cidadania e Direitos",
+    "sections": [
+      {
+        "title": "As três gerações",
+        "content": "Marshall distingue direitos civis, ligados à liberdade individual e à propriedade; políticos, ligados à participação e ao voto; e sociais, ligados a educação, saúde, trabalho e previdência. Acrescentam-se depois direitos difusos, como ambiente e patrimônio, e direitos ligados a tecnologia e informação."
+      },
+      {
+        "title": "O caso brasileiro",
+        "content": "No Brasil, a sequência foi distinta da inglesa: direitos sociais foram concedidos antes da ampliação plena dos direitos políticos, sobretudo na Era Vargas, o que Carvalho descreveu como cidadania regulada, vinculada à carteira de trabalho e à profissão reconhecida, e não à condição de cidadão."
+      },
+      {
+        "title": "Efetivação",
+        "content": "Ter direitos previstos em lei não garante acesso: dependem de instituições, orçamento, informação e capacidade de reivindicação. Por isso o estudo da cidadania distingue direito formal de direito efetivo, e examina como desigualdades de classe, raça, gênero e território afetam quem consegue de fato exercer o que a lei assegura."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Tratar cidadania apenas como direito de votar reduz o conceito à dimensão política. Outro deslize é supor que a ordem de conquista dos direitos foi a mesma em todos os países. E confundir cidadania com nacionalidade, quando a primeira envolve o conjunto de direitos e deveres exercidos na vida pública."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "O que significa cidadania regulada no Brasil? Responda antes de conferir: os direitos sociais eram vinculados à ocupação formal reconhecida pelo Estado, de modo que era cidadão pleno quem tinha carteira assinada em profissão regulamentada, e não todo habitante. Agora diferencie direito formal de efetivo: um está previsto em lei, o outro é efetivamente acessível na prática."
+      }
+    ],
+    "recall": {
+      "prompt": "O que é cidadania regulada? Diferencie direito formal de direito efetivo.",
+      "elements": [
+        [
+          "direitos vinculados a ocupacao formal reconhecida",
+          [
+            "carteira",
+            "profissao",
+            "ocupacao"
+          ]
+        ],
+        [
+          "nao alcancava todos os habitantes",
+          [
+            "todos",
+            "excluia",
+            "informal"
+          ]
+        ],
+        [
+          "o formal esta na lei e o efetivo e acessivel na pratica",
+          [
+            "lei",
+            "pratica",
+            "acesso"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Sociologia",
+    "topic": "Classes Sociais e Mobilidade Social",
+    "sections": [
+      {
+        "title": "Estratificação",
+        "content": "Estratificação social é a distribuição desigual de recursos, prestígio e poder entre posições sociais. As principais abordagens são a marxista, centrada na posição nas relações de produção; a weberiana, que soma classe, status e partido; e a de Bourdieu, que trabalha com capitais econômico, cultural, social e simbólico."
+      },
+      {
+        "title": "Tipos de mobilidade",
+        "content": "A mobilidade pode ser vertical, quando há mudança de posição na hierarquia, ou horizontal, quando se muda de ocupação sem alterar o estrato. Pode ser intrageracional, ao longo da vida de uma pessoa, ou intergeracional, comparando a posição de filhos e pais, medida mais usada para avaliar abertura de uma sociedade."
+      },
+      {
+        "title": "Barreiras à mobilidade",
+        "content": "No Brasil, a mobilidade é limitada por desigualdade de renda, qualidade desigual da educação, redes de contato desiguais e discriminação racial e de gênero. A herança de capital cultural e econômico faz com que a origem familiar continue sendo forte preditor do destino social, mesmo com expansão da escolaridade."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Supor que casos individuais de ascensão provam que a sociedade é aberta é generalização indevida: mobilidade se mede por padrões estatísticos, não por exceções. Outro deslize é confundir mobilidade horizontal com ascensão. E ignorar que expansão da escolaridade sem redução de desigualdade pode manter as distâncias relativas."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que histórias individuais de ascensão não provam que a sociedade é meritocrática? Responda antes de conferir: a avaliação exige dados sobre padrões de mobilidade da população, e exceções podem coexistir com forte reprodução das posições de origem. Agora diferencie mobilidade intergeracional de intrageracional: uma compara filhos e pais, a outra acompanha a trajetória de uma mesma pessoa."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que casos individuais de ascensão não provam meritocracia? Diferencie mobilidade inter e intrageracional.",
+      "elements": [
+        [
+          "a avaliacao exige dados de padroes populacionais",
+          [
+            "dados",
+            "padrao",
+            "estatistica"
+          ]
+        ],
+        [
+          "excecoes convivem com forte reproducao social",
+          [
+            "excecao",
+            "reproducao",
+            "origem"
+          ]
+        ],
+        [
+          "intergeracional compara pais e filhos",
+          [
+            "pais",
+            "filhos",
+            "trajetoria"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Sociologia",
+    "topic": "Cultura e Etnocentrismo",
+    "sections": [
+      {
+        "title": "O conceito de cultura",
+        "content": "Na antropologia, cultura é o conjunto de significados, práticas, saberes, valores e formas de organização aprendidos e compartilhados socialmente. Não é sinônimo de erudição nem se distribui em graus de superioridade: toda sociedade humana tem cultura, e todas são igualmente complexas em seus próprios termos."
+      },
+      {
+        "title": "Etnocentrismo",
+        "content": "Etnocentrismo é julgar outras culturas a partir dos valores da própria, tomando os próprios costumes como padrão do que é natural e correto. Suas manifestações vão de reações espontâneas de estranhamento a justificativas de colonização, racismo e violência, quando a diferença é convertida em inferioridade."
+      },
+      {
+        "title": "Estranhamento e desnaturalização",
+        "content": "O antídoto metodológico é o exercício de estranhar o familiar e familiarizar o estranho: perceber que os próprios costumes também são arbitrários e que os alheios têm lógica interna. Isso não obriga a aceitar qualquer prática, mas exige compreender antes de julgar, distinguindo descrição e avaliação."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Confundir cultura com refinamento artístico é o erro mais frequente. Outro deslize é supor que reconhecer etnocentrismo obriga a suspender qualquer juízo moral. E tratar as culturas como blocos fechados e homogêneos, ignorando conflitos internos e mudanças ao longo do tempo."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que dizer que um povo não tem cultura é erro conceitual? Responda antes de conferir: toda sociedade humana produz significados, normas e práticas compartilhadas, de modo que a ausência de cultura é impossível; o que existe é diferença cultural. Agora explique o exercício de estranhar o familiar: perceber a arbitrariedade dos próprios costumes, que parecem naturais apenas por serem habituais."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que dizer que um povo não tem cultura é erro? Em que consiste estranhar o familiar?",
+      "elements": [
+        [
+          "toda sociedade produz significados compartilhados",
+          [
+            "toda",
+            "significado",
+            "compartilhado"
+          ]
+        ],
+        [
+          "o que existe e diferenca e nao ausencia",
+          [
+            "diferenca",
+            "ausencia",
+            "nao existe"
+          ]
+        ],
+        [
+          "perceber a arbitrariedade dos proprios costumes",
+          [
+            "arbitrario",
+            "proprio",
+            "natural"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Sociologia",
+    "topic": "Democracia e Participação Política",
+    "sections": [
+      {
+        "title": "Formas de democracia",
+        "content": "A democracia direta, exercida em assembleia, foi possível em comunidades pequenas. A representativa delega a decisão a eleitos. A participativa combina representação com instrumentos de intervenção direta, como plebiscito, referendo, iniciativa popular, conselhos setoriais, conferências e orçamento participativo."
+      },
+      {
+        "title": "Condições de efetividade",
+        "content": "Eleições regulares são necessárias mas insuficientes: a democracia exige liberdade de expressão e organização, pluralismo de informação, igualdade mínima de condições e instituições que limitem o poder. Sem isso, o processo eleitoral pode conviver com concentração de poder e com decisões capturadas por interesses particulares."
+      },
+      {
+        "title": "Desafios contemporâneos",
+        "content": "A desinformação em escala, o financiamento de campanhas, a personalização da política, a desconfiança nas instituições e o poder das plataformas digitais afetam o funcionamento democrático. Ao mesmo tempo, novas formas de mobilização ampliaram canais de participação, com efeitos ambivalentes sobre a qualidade do debate público."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Identificar democracia apenas com regra da maioria ignora os direitos das minorias e os limites constitucionais ao poder. Outro deslize é confundir plebiscito, consulta prévia, com referendo, consulta posterior a uma medida. E supor que participação digital equivale automaticamente a participação política efetiva."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a regra da maioria não define sozinha a democracia? Responda antes de conferir: sem proteção de direitos das minorias e limites ao poder, a maioria pode suprimir liberdades, o que descaracteriza o regime democrático. Agora diferencie plebiscito e referendo: o primeiro consulta antes da adoção da medida, o segundo submete à aprovação uma norma já editada."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a regra da maioria não define a democracia sozinha? Diferencie plebiscito de referendo.",
+      "elements": [
+        [
+          "e preciso proteger direitos das minorias",
+          [
+            "minoria",
+            "direitos",
+            "protecao"
+          ]
+        ],
+        [
+          "deve haver limites ao poder e liberdades garantidas",
+          [
+            "limite",
+            "liberdade",
+            "instituicao"
+          ]
+        ],
+        [
+          "plebiscito consulta antes e referendo depois",
+          [
+            "plebiscito",
+            "referendo",
+            "antes"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Sociologia",
+    "topic": "Desigualdade Racial no Brasil",
+    "sections": [
+      {
+        "title": "Herança histórica",
+        "content": "O Brasil foi o último país das Américas a abolir a escravidão, em 1888, sem nenhuma política de reparação, acesso à terra, educação ou emprego para os libertos. Somaram-se políticas de branqueamento e incentivo à imigração europeia, que estruturaram desvantagens duradouras para a população negra."
+      },
+      {
+        "title": "O mito da democracia racial",
+        "content": "A ideia de que o Brasil teria harmonia racial por causa da miscigenação foi difundida como identidade nacional, mas encobre desigualdades sistemáticas. Pesquisas de Florestan Fernandes, Clóvis Moura, Lélia Gonzalez e outros mostraram que o racismo brasileiro opera de forma difusa, sem leis segregacionistas explícitas, mas com efeitos concretos."
+      },
+      {
+        "title": "Indicadores e políticas",
+        "content": "Dados oficiais mostram diferenças persistentes entre negros e brancos em renda, escolaridade, moradia, saúde, exposição à violência letal e ocupação de cargos de decisão. Entre as respostas estão as cotas raciais em universidades e concursos, a criminalização do racismo e políticas de promoção da igualdade racial."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Confundir ausência de leis segregacionistas com ausência de racismo é o erro central do tópico. Outro deslize é tratar desigualdade racial como consequência apenas de desigualdade de classe, ignorando dados que mostram diferenças entre pessoas de mesma faixa de renda. E confundir racismo estrutural com intenção individual."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que se fala em racismo estrutural? Responda antes de conferir: porque as desvantagens se reproduzem por meio de instituições, práticas e mecanismos sociais, independentemente da intenção consciente de cada indivíduo, aparecendo sistematicamente nos indicadores. Agora explique por que a abolição não reduziu a desigualdade: não houve reparação, acesso à terra, educação nem inserção no mercado de trabalho."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que se fala em racismo estrutural? Por que a abolição não reduziu a desigualdade racial?",
+      "elements": [
+        [
+          "as desvantagens se reproduzem por instituicoes e praticas",
+          [
+            "instituicao",
+            "pratica",
+            "reproduz"
+          ]
+        ],
+        [
+          "independe da intencao individual",
+          [
+            "intencao",
+            "individual",
+            "sistematico"
+          ]
+        ],
+        [
+          "nao houve reparacao, terra nem educacao",
+          [
+            "reparacao",
+            "terra",
+            "educacao"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Sociologia",
+    "topic": "Desigualdade de Gênero",
+    "sections": [
+      {
+        "title": "Sexo e gênero",
+        "content": "A distinção entre sexo, referido a características biológicas, e gênero, referido a construções sociais de masculinidade e feminilidade, é o ponto de partida do campo. Ela permite mostrar que papéis considerados naturais variam entre sociedades e ao longo da história, o que os revela como socialmente produzidos."
+      },
+      {
+        "title": "Divisão sexual do trabalho",
+        "content": "Historicamente, atribuiu-se às mulheres o trabalho reprodutivo e de cuidado, não remunerado e invisibilizado, e aos homens o trabalho produtivo remunerado. Essa divisão persiste em formas atualizadas: dupla jornada, concentração de mulheres em ocupações menos valorizadas e diferença salarial em funções equivalentes."
+      },
+      {
+        "title": "Indicadores e conquistas",
+        "content": "Mulheres são maioria entre concluintes do ensino superior no Brasil e ainda assim recebem menos e ocupam menos cargos de direção, e mulheres negras acumulam desvantagens. Entre as conquistas estão o voto feminino, a Lei Maria da Penha, a tipificação do feminicídio e políticas de licença e cuidado, com efetivação desigual."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Tratar diferenças salariais como resultado apenas de escolhas individuais ignora estruturas de discriminação e distribuição desigual do cuidado. Outro deslize é confundir gênero com sexo. E supor que maior escolaridade feminina resolve automaticamente a desigualdade, quando os dados mostram persistência das diferenças."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a distinção entre sexo e gênero é central na sociologia? Responda antes de conferir: ela permite mostrar que papéis atribuídos a homens e mulheres variam entre culturas e épocas, portanto são construções sociais e podem ser transformados. Agora explique a dupla jornada: mulheres acumulam trabalho remunerado e a maior parte do trabalho doméstico e de cuidado não remunerado."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a distinção sexo e gênero é central? O que é a dupla jornada?",
+      "elements": [
+        [
+          "os papeis variam entre culturas e epocas",
+          [
+            "varia",
+            "cultura",
+            "epoca"
+          ]
+        ],
+        [
+          "mostra que sao construcoes sociais transformaveis",
+          [
+            "construcao",
+            "social",
+            "transformar"
+          ]
+        ],
+        [
+          "acumulo de trabalho remunerado e cuidado nao remunerado",
+          [
+            "cuidado",
+            "domestico",
+            "nao remunerado"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Sociologia",
+    "topic": "Divisão Social do Trabalho",
+    "sections": [
+      {
+        "title": "Do artesanato à manufatura",
+        "content": "A divisão do trabalho separa tarefas antes reunidas num mesmo trabalhador. Na manufatura, o processo é fragmentado, aumentando a produtividade e reduzindo a autonomia de quem executa. Adam Smith celebrou o ganho de produtividade com o exemplo da fábrica de alfinetes; Marx apontou o efeito de esvaziamento do trabalho."
+      },
+      {
+        "title": "Taylorismo e fordismo",
+        "content": "O taylorismo introduziu o estudo de tempos e movimentos, separando concepção e execução e retirando do trabalhador o controle do próprio ritmo. O fordismo acrescentou a linha de montagem, a padronização e a produção em massa, com salários que permitiam consumir o que se produzia, articulando produção e mercado consumidor."
+      },
+      {
+        "title": "Duas leituras",
+        "content": "Durkheim vê na divisão do trabalho a fonte da solidariedade orgânica e da coesão nas sociedades modernas, com a anomia como patologia possível. Marx vê nela, sob o capitalismo, um mecanismo de alienação e de aumento da exploração. As duas leituras descrevem o mesmo processo com avaliações opostas."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Confundir divisão social do trabalho, entre grupos e funções na sociedade, com divisão técnica, dentro de um processo produtivo. Outro deslize é atribuir a Durkheim a crítica marxista da alienação. E supor que taylorismo e fordismo são a mesma coisa, quando o segundo acrescenta linha de montagem e política salarial."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que taylorismo e fordismo reduzem a autonomia do trabalhador? Responda antes de conferir: separam concepção e execução, padronizam tarefas e definem externamente o ritmo, transferindo o controle do processo para a gerência. Agora compare Durkheim e Marx quanto à divisão do trabalho: coesão pela interdependência num, alienação e exploração no outro."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que taylorismo e fordismo reduzem a autonomia? Compare Durkheim e Marx quanto à divisão do trabalho.",
+      "elements": [
+        [
+          "separam concepcao e execucao",
+          [
+            "concepcao",
+            "execucao",
+            "separa"
+          ]
+        ],
+        [
+          "o ritmo passa a ser definido pela gerencia",
+          [
+            "ritmo",
+            "gerencia",
+            "controle"
+          ]
+        ],
+        [
+          "Durkheim ve coesao e Marx ve alienacao",
+          [
+            "coesao",
+            "alienacao",
+            "solidariedade"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Sociologia",
+    "topic": "Dominação e Poder em Weber",
+    "sections": [
+      {
+        "title": "Poder e dominação",
+        "content": "Weber define poder como a probabilidade de impor a própria vontade numa relação social, mesmo contra resistência. Dominação é o caso específico em que existe probabilidade de obediência a um comando, o que supõe legitimidade: quem obedece reconhece, por alguma razão, que aquela ordem deve ser obedecida."
+      },
+      {
+        "title": "Os três tipos de dominação legítima",
+        "content": "A tradicional funda-se no costume e na santidade das tradições, como na autoridade patriarcal. A carismática funda-se em qualidades extraordinárias atribuídas ao líder, sendo instável e dependente do reconhecimento contínuo. A racional-legal funda-se em regras impessoais e no cargo, e não na pessoa que o ocupa."
+      },
+      {
+        "title": "Burocracia e racionalização",
+        "content": "A dominação racional-legal se expressa na burocracia, com hierarquia, competências definidas, regras escritas, impessoalidade e seleção por qualificação. Weber a considera tecnicamente superior, mas alerta para a jaula de ferro: a racionalização crescente pode aprisionar a vida em cálculo e procedimento, esvaziando sentido."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Confundir dominação carismática com popularidade é impreciso: ela exige atribuição de qualidades extraordinárias e obediência pessoal ao líder. Outro deslize é entender burocracia apenas como sinônimo de lentidão. E supor que os tipos aparecem puros na realidade, quando se combinam em casos concretos."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a dominação racional-legal obedece ao cargo e não à pessoa? Responda antes de conferir: a legitimidade vem de regras impessoais que definem competências, de modo que a obediência se dirige à função e cessa quando a pessoa deixa o cargo. Agora explique a instabilidade da dominação carismática: depende do reconhecimento contínuo de qualidades extraordinárias, que pode cessar."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que na dominação racional-legal se obedece ao cargo? Por que a carismática é instável?",
+      "elements": [
+        [
+          "a legitimidade vem de regras impessoais",
+          [
+            "regra",
+            "impessoal",
+            "cargo"
+          ]
+        ],
+        [
+          "a obediencia cessa quando a pessoa deixa o cargo",
+          [
+            "cessa",
+            "funcao",
+            "deixa"
+          ]
+        ],
+        [
+          "o carisma depende de reconhecimento continuo",
+          [
+            "carisma",
+            "reconhecimento",
+            "extraordinaria"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Sociologia",
+    "topic": "Educação e Socialização em Durkheim",
+    "sections": [
+      {
+        "title": "A função da educação",
+        "content": "Para Durkheim, a educação é a ação exercida pelas gerações adultas sobre as que ainda não estão preparadas para a vida social. Sua função é formar o ser social no indivíduo, transmitindo normas, valores e conhecimentos necessários à vida coletiva e produzindo a homogeneidade mínima sem a qual a sociedade não se sustenta."
+      },
+      {
+        "title": "Socialização primária e secundária",
+        "content": "A socialização primária ocorre na infância, sobretudo na família, e constitui as bases da personalidade social. A secundária ocorre em instituições como escola, trabalho, igrejas e grupos de convívio, e é permanente. Em ambas, o indivíduo internaliza papéis, expectativas e formas de conduta consideradas legítimas no grupo."
+      },
+      {
+        "title": "Escola e sociedade",
+        "content": "A escola tem papel específico: ao reunir crianças de origens distintas sob regras impessoais, ela ensina a disciplina, a autonomia moral e o vínculo com grupos mais amplos que a família. Autores posteriores, como Bourdieu, criticaram essa visão ao mostrar como a escola também reproduz desigualdades de origem social."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Entender socialização como simples imposição passiva ignora a atividade do indivíduo no processo. Outro deslize é supor que Durkheim descreve a escola como neutra e sempre integradora, sem considerar as críticas posteriores. E confundir educação, no sentido durkheimiano, com escolarização formal apenas."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Qual a função social da educação segundo Durkheim? Responda antes de conferir: formar o ser social no indivíduo, transmitindo normas e valores que garantem a coesão e permitem a vida coletiva, além de preparar para funções específicas. Agora diga uma crítica posterior a essa visão: a escola também reproduz desigualdades, favorecendo quem já traz capital cultural de casa."
+      }
+    ],
+    "recall": {
+      "prompt": "Qual a função da educação segundo Durkheim? Qual a crítica posterior a essa visão?",
+      "elements": [
+        [
+          "formar o ser social e transmitir normas",
+          [
+            "ser social",
+            "normas",
+            "valores"
+          ]
+        ],
+        [
+          "garantir a coesao e preparar para a vida coletiva",
+          [
+            "coesao",
+            "coletiva",
+            "integracao"
+          ]
+        ],
+        [
+          "a escola tambem reproduz desigualdades",
+          [
+            "reproduz",
+            "desigualdade",
+            "capital cultural"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Sociologia",
+    "topic": "Globalização Econômica e Cultural",
+    "sections": [
+      {
+        "title": "Dimensão econômica",
+        "content": "A globalização intensificou fluxos de mercadorias, capitais e informações, com cadeias produtivas fragmentadas entre países e forte mobilidade financeira. Ela ampliou o comércio e reduziu preços de bens industriais, ao mesmo tempo em que aumentou a vulnerabilidade a crises e a concorrência entre territórios por investimentos."
+      },
+      {
+        "title": "Dimensão cultural",
+        "content": "No plano cultural, houve difusão global de produtos e referências, com forte peso de indústrias culturais de alguns países. As respostas variam: homogeneização em certos consumos, hibridismo com reelaboração local de elementos externos e reforço de identidades locais como reação, fenômeno visível em música, culinária e religiosidade."
+      },
+      {
+        "title": "Assimetrias",
+        "content": "Os fluxos não são simétricos: capitais e mercadorias circulam mais livremente que pessoas, e a capacidade de produzir e exportar cultura é desigual. Por isso a globalização é descrita como processo que integra e exclui ao mesmo tempo, ampliando conexões e mantendo ou aprofundando desigualdades entre regiões e grupos."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Tratar globalização como homogeneização cultural completa ignora hibridismo e resistências locais. Outro deslize é supor que ela beneficia igualmente todos os países. E confundir globalização com internacionalização, processo anterior e de menor integração produtiva e financeira."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a globalização integra e exclui ao mesmo tempo? Responda antes de conferir: amplia conexões e fluxos para quem está inserido nas redes globais e deixa à margem regiões, setores e grupos sem acesso a infraestrutura, capital e qualificação. Agora explique hibridismo cultural: elementos globais são reapropriados e recombinados com repertórios locais, gerando formas novas."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a globalização integra e exclui ao mesmo tempo? O que é hibridismo cultural?",
+      "elements": [
+        [
+          "amplia conexoes para quem esta nas redes globais",
+          [
+            "conexao",
+            "rede",
+            "insercao"
+          ]
+        ],
+        [
+          "deixa a margem regioes e grupos sem acesso",
+          [
+            "margem",
+            "exclusao",
+            "acesso"
+          ]
+        ],
+        [
+          "elementos globais sao recombinados com repertorios locais",
+          [
+            "local",
+            "recombina",
+            "hibrido"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Sociologia",
+    "topic": "Identidade e Diferença",
+    "sections": [
+      {
+        "title": "Identidade como construção",
+        "content": "Identidade não é essência fixa herdada, mas construção social e relacional: define-se em relação ao que se considera diferente. Ela é múltipla, já que a mesma pessoa é atravessada por marcadores de classe, gênero, raça, geração e território, e é dinâmica, transformando-se ao longo da vida e da história."
+      },
+      {
+        "title": "Identidades coletivas",
+        "content": "Grupos constroem identidades a partir de memória, língua, território, religião ou experiência de discriminação compartilhada. Essas identidades podem ser mobilizadas politicamente para reivindicar direitos e reconhecimento, e são frequentemente disputadas: quem define quem pertence ao grupo é, em si, uma questão de poder."
+      },
+      {
+        "title": "Diferença e desigualdade",
+        "content": "Diferença não implica desigualdade, mas frequentemente é convertida nela quando marcadores identitários são usados para justificar hierarquias e exclusão. Por isso o debate sobre reconhecimento se articula ao de redistribuição: reconhecer identidades sem enfrentar desigualdades materiais deixa a questão pela metade."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Tratar identidade como característica natural e imutável ignora seu caráter histórico e relacional. Outro deslize é reduzir identidade a escolha individual livre, quando ela é constrangida por classificações sociais. E confundir defesa da diferença com relativismo que legitima violações de direitos."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a identidade é relacional? Responda antes de conferir: ela se constitui na comparação com o outro, marcando o que se é a partir do que não se é, o que faz da diferença um componente interno da própria identidade. Agora explique a relação entre reconhecimento e redistribuição: reconhecer identidades é insuficiente se as desigualdades materiais permanecem intocadas."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a identidade é relacional? Qual a relação entre reconhecimento e redistribuição?",
+      "elements": [
+        [
+          "ela se constitui na relacao com o outro",
+          [
+            "outro",
+            "relacao",
+            "comparacao"
+          ]
+        ],
+        [
+          "a diferenca e componente da propria identidade",
+          [
+            "diferenca",
+            "componente",
+            "define"
+          ]
+        ],
+        [
+          "reconhecimento sem redistribuicao e insuficiente",
+          [
+            "redistribuicao",
+            "material",
+            "insuficiente"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Sociologia",
+    "topic": "Ideologia e Alienação",
+    "sections": [
+      {
+        "title": "Ideologia",
+        "content": "Na tradição marxista, ideologia designa o conjunto de representações que apresentam interesses particulares de uma classe como se fossem universais e naturais. Ela não é simples mentira deliberada: é forma de consciência socialmente produzida, que naturaliza a ordem existente e dificulta a percepção das relações de exploração."
+      },
+      {
+        "title": "Alienação",
+        "content": "A alienação descreve a separação entre o trabalhador e as condições e resultados de sua atividade: o produto lhe é estranho, o processo não lhe pertence, sua capacidade criativa vira mercadoria e os outros se tornam concorrentes. O trabalho, que deveria ser realização humana, converte-se em meio de sobrevivência."
+      },
+      {
+        "title": "Fetichismo da mercadoria",
+        "content": "Marx descreve como as relações entre pessoas aparecem como relações entre coisas: a mercadoria parece ter valor por si mesma, ocultando o trabalho social que a produziu. O consumo passa a organizar identidades, e a origem do valor desaparece da percepção cotidiana, reforçando a naturalização da ordem econômica."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Definir ideologia apenas como propaganda enganosa perde o sentido de forma de consciência socialmente condicionada. Outro deslize é reduzir alienação a sentimento subjetivo de insatisfação. E confundir fetichismo da mercadoria com consumismo, que é fenômeno relacionado, mas distinto do conceito."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a ideologia não se reduz a mentira consciente? Responda antes de conferir: ela é produzida socialmente e organiza a percepção de todos, inclusive de quem a difunde, apresentando como natural e universal aquilo que é histórico e particular. Agora explique o fetichismo da mercadoria: as relações sociais de trabalho aparecem como propriedades das próprias coisas."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que ideologia não é mentira consciente? Explique o fetichismo da mercadoria.",
+      "elements": [
+        [
+          "e forma de consciencia produzida socialmente",
+          [
+            "consciencia",
+            "social",
+            "produzida"
+          ]
+        ],
+        [
+          "apresenta o particular como universal e natural",
+          [
+            "universal",
+            "natural",
+            "particular"
+          ]
+        ],
+        [
+          "as relacoes entre pessoas aparecem como relacoes entre coisas",
+          [
+            "coisa",
+            "mercadoria",
+            "oculta"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Sociologia",
+    "topic": "Modo de Produção e Estrutura Social",
+    "sections": [
+      {
+        "title": "O conceito",
+        "content": "Modo de produção é a combinação entre forças produtivas, que incluem meios de produção, técnica e trabalho, e relações de produção, que definem quem controla o quê e como se reparte o produzido. Para Marx, é essa combinação que estrutura a sociedade e explica suas instituições e formas de consciência."
+      },
+      {
+        "title": "Base e superestrutura",
+        "content": "A base econômica condiciona a superestrutura jurídica, política e ideológica, que por sua vez atua sobre a base. A leitura mais cuidadosa evita o determinismo simples: a determinação é em última instância, e as demais esferas têm autonomia relativa, com efeitos próprios sobre o processo histórico."
+      },
+      {
+        "title": "Sucessão histórica",
+        "content": "Cada modo de produção tem sua forma específica de extração do excedente: escravidão direta, servidão feudal, trabalho assalariado no capitalismo. A transição ocorre quando as relações de produção se tornam obstáculo ao desenvolvimento das forças produtivas, abrindo um período de conflito e reorganização social."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Reduzir o marxismo à ideia de que tudo é economia caricatura a proposta. Outro deslize é confundir forças produtivas com relações de produção. E supor que a sucessão de modos de produção é linear e obrigatória em todas as sociedades, leitura contestada até dentro da própria tradição marxista."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Diferencie forças produtivas de relações de produção antes de conferir: as forças são os meios, as técnicas e a capacidade de trabalho disponíveis; as relações são as formas sociais de propriedade e controle que determinam quem manda, quem trabalha e como se divide o produto. Agora explique o que caracteriza a exploração no capitalismo: a apropriação do valor excedente produzido por trabalho assalariado."
+      }
+    ],
+    "recall": {
+      "prompt": "Diferencie forças produtivas de relações de produção e diga o que caracteriza a exploração capitalista.",
+      "elements": [
+        [
+          "forcas produtivas sao meios, tecnica e trabalho",
+          [
+            "meio",
+            "tecnica",
+            "trabalho"
+          ]
+        ],
+        [
+          "relacoes de producao definem propriedade e controle",
+          [
+            "propriedade",
+            "controle",
+            "relacao"
+          ]
+        ],
+        [
+          "apropriacao do excedente do trabalho assalariado",
+          [
+            "excedente",
+            "assalariado",
+            "mais-valia"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Sociologia",
+    "topic": "Movimentos Sociais Clássicos e Contemporâneos",
+    "sections": [
+      {
+        "title": "Definição",
+        "content": "Movimentos sociais são ações coletivas organizadas e duradouras que buscam transformar ou preservar aspectos da ordem social. Distinguem-se de manifestações pontuais por terem identidade coletiva, alguma organização e um projeto, e atuam pressionando o Estado, disputando a opinião pública e criando formas próprias de sociabilidade."
+      },
+      {
+        "title": "Movimentos clássicos e novos",
+        "content": "Os clássicos, sobretudo operários, organizavam-se em torno de trabalho, salário e condições de produção, com sindicatos e partidos como forma. Os chamados novos movimentos sociais, a partir dos anos 1960, articulam-se em torno de identidade, reconhecimento e qualidade de vida: feminismo, movimento negro, LGBTQIA+, ambientalismo e movimentos urbanos."
+      },
+      {
+        "title": "No Brasil",
+        "content": "O país tem tradição relevante: movimento operário do início do século XX, movimentos de bairro e Comunidades Eclesiais de Base na resistência à ditadura, MST na luta pela terra, movimentos indígenas e quilombolas por território, e mobilizações recentes organizadas também por redes digitais, com formatos menos centralizados."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Confundir movimento social com partido político ou com manifestação isolada é o deslize mais comum. Outro é supor que os novos movimentos substituíram os clássicos, quando coexistem e frequentemente se articulam. E tratar mobilizações digitais como movimentos plenamente constituídos, sem verificar organização e continuidade."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "O que distingue movimento social de manifestação pontual? Responda antes de conferir: o movimento tem identidade coletiva, alguma organização, continuidade no tempo e um projeto de transformação, enquanto a manifestação é episódica. Agora diferencie a pauta dos movimentos clássicos e a dos novos: condições de trabalho e distribuição, de um lado; identidade, reconhecimento e qualidade de vida, de outro."
+      }
+    ],
+    "recall": {
+      "prompt": "O que distingue movimento social de manifestação pontual? Diferencie pautas clássicas e novas.",
+      "elements": [
+        [
+          "identidade coletiva, organizacao e continuidade",
+          [
+            "identidade",
+            "organizacao",
+            "continuidade"
+          ]
+        ],
+        [
+          "a manifestacao e episodica",
+          [
+            "episodica",
+            "pontual",
+            "isolada"
+          ]
+        ],
+        [
+          "classicos tratam de trabalho e novos de reconhecimento",
+          [
+            "trabalho",
+            "reconhecimento",
+            "identidade"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Sociologia",
+    "topic": "Multiculturalismo e Relativismo Cultural",
+    "sections": [
+      {
+        "title": "Relativismo cultural",
+        "content": "O relativismo metodológico propõe compreender práticas culturais a partir da lógica interna de cada sociedade, e não pelos padrões do observador. É ferramenta de pesquisa que combate o etnocentrismo. Distingue-se do relativismo moral radical, que sustenta que nenhum juízo entre culturas é possível, posição criticada por inviabilizar a defesa de direitos."
+      },
+      {
+        "title": "Multiculturalismo",
+        "content": "O multiculturalismo é um conjunto de políticas e concepções que reconhecem a pluralidade cultural dentro de um mesmo Estado, com medidas de valorização de línguas, memórias e direitos de grupos minorizados. É criticado tanto por quem o considera insuficiente diante das desigualdades materiais quanto por quem teme fragmentação social."
+      },
+      {
+        "title": "O debate brasileiro",
+        "content": "No Brasil, o tema aparece em políticas de cotas, na Lei 10.639 sobre ensino de história e cultura afro-brasileira e africana, na demarcação de terras indígenas e quilombolas e no reconhecimento de patrimônios imateriais. O debate opõe a crítica ao mito da democracia racial e as leituras que resistem a políticas específicas."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Confundir relativismo metodológico com aceitação de qualquer prática é o deslize mais comum. Outro é tratar multiculturalismo como simples tolerância passiva, quando envolve políticas ativas. E supor que reconhecer diversidade cultural elimina a necessidade de políticas de redistribuição econômica."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Como o relativismo metodológico difere do relativismo moral radical? Responda antes de conferir: o primeiro é ferramenta de compreensão que suspende o juízo prévio para entender a lógica interna de uma prática; o segundo afirma que nenhum juízo é possível, o que impede sustentar direitos universais. Agora cite uma política multicultural brasileira: a lei que torna obrigatório o ensino de história e cultura afro-brasileira e africana."
+      }
+    ],
+    "recall": {
+      "prompt": "Diferencie relativismo metodológico de relativismo moral radical e cite uma política multicultural brasileira.",
+      "elements": [
+        [
+          "o metodologico suspende o juizo para compreender",
+          [
+            "metodologico",
+            "compreender",
+            "suspende"
+          ]
+        ],
+        [
+          "o radical impede sustentar direitos universais",
+          [
+            "radical",
+            "juizo",
+            "direitos"
+          ]
+        ],
+        [
+          "a lei sobre ensino de historia e cultura afro-brasileira",
+          [
+            "10.639",
+            "afro",
+            "ensino"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Sociologia",
+    "topic": "O Contexto Histórico do Surgimento da Sociologia",
+    "sections": [
+      {
+        "title": "Duas revoluções",
+        "content": "A sociologia nasce no século XIX como resposta às transformações provocadas pela Revolução Industrial e pela Revolução Francesa. A primeira criou fábricas, cidades inchadas, proletariado e novas formas de miséria; a segunda dissolveu a ordem estamental e colocou em questão a legitimidade do poder, obrigando a pensar a sociedade como objeto próprio."
+      },
+      {
+        "title": "Positivismo e ordem",
+        "content": "Comte cunhou o termo sociologia e propôs a física social, aplicando à sociedade o método das ciências naturais, com observação e busca de leis. Sua lei dos três estados descreve a passagem do teológico ao metafísico e ao positivo, e sua preocupação central é conciliar ordem e progresso diante da instabilidade pós-revolucionária."
+      },
+      {
+        "title": "Os clássicos",
+        "content": "Durkheim, Marx e Weber deram à disciplina três matrizes distintas: o fato social e a coesão, em Durkheim; as relações de produção e a luta de classes, em Marx; e a ação social dotada de sentido e os processos de racionalização, em Weber. As três continuam sendo o eixo do ensino de sociologia no Brasil."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que a sociologia surgiu para resolver problemas sociais confunde ciência com intervenção: ela busca explicá-los, e o uso prático é outra questão. Outro deslize é tratar Comte como equivalente aos três clássicos. E supor que os clássicos concordavam entre si, quando divergem quanto ao objeto e ao método."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que as duas revoluções são condição do surgimento da sociologia? Responda antes de conferir: elas desorganizaram a ordem tradicional e criaram fenômenos novos, como o proletariado urbano e a legitimidade fundada no povo, exigindo uma explicação própria da vida social. Agora diga qual o objeto de estudo de cada clássico: fato social, relações de produção e ação social dotada de sentido."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que as revoluções industrial e francesa explicam o surgimento da sociologia? Qual o objeto de cada clássico?",
+      "elements": [
+        [
+          "desorganizaram a ordem tradicional",
+          [
+            "ordem",
+            "tradicional",
+            "transformacao"
+          ]
+        ],
+        [
+          "criaram fenomenos novos como o proletariado urbano",
+          [
+            "proletariado",
+            "cidade",
+            "industrial"
+          ]
+        ],
+        [
+          "fato social, relacoes de producao e acao social",
+          [
+            "fato social",
+            "producao",
+            "acao social"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Sociologia",
+    "topic": "O Estado-Nação na Era Global",
+    "sections": [
+      {
+        "title": "Soberania em questão",
+        "content": "A soberania estatal é relativizada por fluxos financeiros que ultrapassam fronteiras, acordos internacionais que limitam decisões nacionais, empresas transnacionais com poder econômico superior ao de muitos países e organismos multilaterais com regras vinculantes em comércio, propriedade intelectual e finanças."
+      },
+      {
+        "title": "Persistência do Estado",
+        "content": "Apesar disso, o Estado não desapareceu: é ele que assegura contratos, regula mercados, tributa, controla fronteiras, presta serviços e responde a crises, como ficou evidente em crises financeiras e na pandemia. Sua atuação é condição para o funcionamento dos próprios mercados globalizados."
+      },
+      {
+        "title": "Nacionalismos e tensões",
+        "content": "A percepção de perda de controle alimentou reações nacionalistas, protecionismo e políticas migratórias restritivas em vários países. Ao mesmo tempo, problemas como clima, pandemias e regulação digital são transnacionais por natureza e exigem cooperação, criando uma tensão permanente entre soberania e interdependência."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Afirmar que a globalização tornou o Estado irrelevante contraria a evidência de sua atuação decisiva em crises. Outro deslize é confundir Estado, nação e país, termos com significados distintos. E supor que nacionalismo e globalização são fenômenos sucessivos, quando coexistem e se alimentam mutuamente."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que dizer que o Estado perdeu relevância é impreciso? Responda antes de conferir: ele continua garantindo contratos, regulando, tributando e respondendo a crises, funções sem as quais os mercados globais não operariam. Agora explique a tensão entre soberania e interdependência: problemas transnacionais exigem cooperação que limita decisões estritamente nacionais."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que é impreciso dizer que o Estado perdeu relevância? Explique a tensão entre soberania e interdependência.",
+      "elements": [
+        [
+          "o Estado garante contratos e regula mercados",
+          [
+            "contrato",
+            "regula",
+            "tributa"
+          ]
+        ],
+        [
+          "atuou de forma decisiva em crises",
+          [
+            "crise",
+            "pandemia",
+            "resposta"
+          ]
+        ],
+        [
+          "problemas transnacionais exigem cooperacao",
+          [
+            "transnacional",
+            "cooperacao",
+            "clima"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Sociologia",
+    "topic": "O que é o Fato Social",
+    "sections": [
+      {
+        "title": "As três características",
+        "content": "Durkheim define fato social por três traços: exterioridade, pois existe antes e independentemente do indivíduo; coercitividade, pois se impõe e a transgressão gera sanção; e generalidade, pois é comum ao grupo. Língua, moeda, moda, leis e formas de cumprimentar são exemplos típicos desse tipo de fenômeno."
+      },
+      {
+        "title": "Tratar como coisa",
+        "content": "A regra metodológica central é tratar os fatos sociais como coisas, isto é, estudá-los com objetividade, sem partir de noções prévias e sem reduzi-los a motivações individuais. O sociólogo deve afastar as pré-noções do senso comum e explicar o social pelo social, e não por causas psicológicas ou biológicas."
+      },
+      {
+        "title": "Normal e patológico",
+        "content": "Durkheim distingue o normal, o que é generalizado em determinado tipo de sociedade, do patológico, que é a exceção ou o excesso. Nessa chave, mesmo o crime é normal, por existir em todas as sociedades, e cumpre a função de reafirmar a consciência coletiva quando é punido; patológica seria sua ausência ou seu excesso extremo."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Entender exterioridade como algo que existe fora das pessoas em sentido físico é impreciso: significa que independe da vontade individual. Outro deslize é ler a tese sobre o crime como aprovação moral, quando é análise funcional. E confundir tratar como coisa com desumanizar o objeto de estudo."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a língua é um fato social exemplar? Responda antes de conferir: existe antes de o indivíduo nascer, impõe-se a ele com regras que não escolheu, e é compartilhada por todo o grupo, reunindo exterioridade, coerção e generalidade. Agora explique por que Durkheim considera o crime um fenômeno normal: ele existe em todas as sociedades e reforça a consciência coletiva ao ser punido."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a língua é fato social? Por que Durkheim considera o crime normal?",
+      "elements": [
+        [
+          "existe antes do individuo e independe dele",
+          [
+            "exterioridade",
+            "antes",
+            "independe"
+          ]
+        ],
+        [
+          "impoe-se com coercao e e geral no grupo",
+          [
+            "coercao",
+            "geral",
+            "regra"
+          ]
+        ],
+        [
+          "o crime existe em toda sociedade e reforca a consciencia coletiva",
+          [
+            "todas",
+            "consciencia coletiva",
+            "punicao"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Sociologia",
+    "topic": "Precarização e Uberização do Trabalho",
+    "sections": [
+      {
+        "title": "O que é precarização",
+        "content": "Precarização designa a perda de estabilidade, proteção e previsibilidade no trabalho. Manifesta-se em contratos temporários, intermitentes, terceirização em cadeia, informalidade, ausência de férias e décimo terceiro, e transferência ao trabalhador de custos antes assumidos pela empresa, como equipamentos e manutenção."
+      },
+      {
+        "title": "Uberização",
+        "content": "A uberização é uma forma específica em que plataformas digitais organizam o trabalho por algoritmos, sem reconhecer vínculo empregatício. O trabalhador é classificado como parceiro autônomo, mas tem seu ritmo, preço e avaliação definidos pela plataforma, o que caracteriza controle sem os direitos correspondentes ao emprego."
+      },
+      {
+        "title": "Debates e respostas",
+        "content": "Discute-se se essas relações configuram vínculo empregatício, como regular algoritmos, garantir transparência de critérios e assegurar proteção social. Diferentes países adotaram soluções distintas, de reconhecimento de vínculo à criação de categorias intermediárias, e a discussão brasileira segue em disputa nos tribunais e no Legislativo."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Confundir autonomia formal com autonomia real é o erro central: quem escolhe o horário mas não o preço, nem a rota, nem os critérios de avaliação, tem liberdade limitada. Outro deslize é tratar uberização como sinônimo de qualquer trabalho informal. E supor que flexibilidade e proteção sejam necessariamente incompatíveis."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que se questiona a classificação do entregador como autônomo? Responda antes de conferir: o algoritmo define preço, distribuição de tarefas, avaliação e possibilidade de bloqueio, o que configura subordinação, ainda que o horário seja escolhido pelo trabalhador. Agora cite dois custos transferidos ao trabalhador: veículo e manutenção, além de combustível, equipamentos e ausência de proteção em caso de acidente."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que se questiona a classificação do entregador como autônomo? Cite custos transferidos ao trabalhador.",
+      "elements": [
+        [
+          "o algoritmo define preco e distribuicao",
+          [
+            "algoritmo",
+            "preco",
+            "distribuicao"
+          ]
+        ],
+        [
+          "ha subordinacao apesar do horario flexivel",
+          [
+            "subordinacao",
+            "horario",
+            "controle"
+          ]
+        ],
+        [
+          "veiculo, manutencao e ausencia de protecao",
+          [
+            "veiculo",
+            "manutencao",
+            "protecao"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Sociologia",
+    "topic": "Sociologia e Senso Comum",
+    "sections": [
+      {
+        "title": "O que é senso comum",
+        "content": "O senso comum é o conjunto de explicações espontâneas sobre a vida social, aprendidas na convivência e aceitas sem exame. Não é ignorância nem falsidade automática: orienta a vida cotidiana e frequentemente funciona. O problema surge quando é tomado como explicação suficiente, sem verificação e sem exame das próprias premissas."
+      },
+      {
+        "title": "A ruptura epistemológica",
+        "content": "A sociologia se constitui pela ruptura com as pré-noções: exige definir conceitos com rigor, formular hipóteses, coletar dados e submeter conclusões à crítica. Onde o senso comum generaliza a partir de casos próximos, a pesquisa busca representatividade, controla vieses e explicita o método, permitindo que outros contestem os resultados."
+      },
+      {
+        "title": "Estranhar o familiar",
+        "content": "Uma das operações centrais da disciplina é desnaturalizar o que parece óbvio, perguntando por que determinada prática existe e a quem beneficia. Isso vale para desigualdades tratadas como naturais, papéis de gênero, hierarquias raciais e formas de organização do trabalho apresentadas como se fossem inevitáveis."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Tratar o senso comum como simples erro a ser descartado ignora que ele é objeto legítimo de estudo e faz parte da vida social. Outro deslize é supor que a sociologia produz certezas definitivas. E confundir opinião pessoal fundamentada em experiência com conhecimento sistemático baseado em pesquisa."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que o senso comum não é simplesmente falso? Responda antes de conferir: ele organiza a experiência cotidiana e frequentemente funciona na prática; a diferença está no modo de produção e validação do conhecimento, não necessariamente no conteúdo de cada afirmação. Agora explique o que significa desnaturalizar: mostrar que o que parece natural e inevitável é construção social e histórica."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que o senso comum não é simplesmente falso? O que significa desnaturalizar um fenômeno?",
+      "elements": [
+        [
+          "ele organiza a experiencia cotidiana",
+          [
+            "cotidiano",
+            "organiza",
+            "funciona"
+          ]
+        ],
+        [
+          "a diferenca esta no metodo de producao do conhecimento",
+          [
+            "metodo",
+            "validacao",
+            "sistematico"
+          ]
+        ],
+        [
+          "mostrar que o natural e construcao social e historica",
+          [
+            "construcao",
+            "historica",
+            "social"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Sociologia",
+    "topic": "Solidariedade Mecânica e Solidariedade Orgânica",
+    "sections": [
+      {
+        "title": "Duas formas de coesão",
+        "content": "Durkheim distingue dois tipos de solidariedade. A mecânica predomina em sociedades simples, com pouca divisão do trabalho: os indivíduos se parecem, compartilham crenças e a consciência coletiva é forte. A orgânica predomina em sociedades complexas: os indivíduos se diferenciam e se tornam interdependentes justamente por serem distintos."
+      },
+      {
+        "title": "Divisão do trabalho",
+        "content": "A passagem de um tipo a outro é explicada pelo aumento da densidade social e da divisão do trabalho. Quanto mais especializadas as funções, maior a interdependência: ninguém produz sozinho o que consome. A divisão do trabalho, para Durkheim, tem função moral, pois é ela que produz a coesão nas sociedades modernas."
+      },
+      {
+        "title": "Direito como indicador",
+        "content": "O tipo de direito revela o tipo de solidariedade. Na mecânica predomina o direito repressivo, voltado à punição de quem ofende a consciência coletiva. Na orgânica predomina o direito restitutivo, voltado a restabelecer relações e reparar danos, como nos contratos, o que evidencia a mudança no modo de manter a coesão."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Associar mecânica a máquina e moderno é o erro mais comum: mecânica é a das sociedades tradicionais e orgânica a das modernas. Outro deslize é supor que a solidariedade orgânica elimina conflitos. E esquecer que, para Durkheim, a divisão do trabalho tem função moral, e não apenas econômica."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a solidariedade orgânica nasce da diferença? Responda antes de conferir: com a especialização, cada um depende do trabalho dos outros para sobreviver, e é essa complementaridade, e não a semelhança, que mantém a coesão. Agora relacione tipo de direito e tipo de solidariedade: repressivo na mecânica, restitutivo na orgânica."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a solidariedade orgânica nasce da diferença? Relacione tipo de direito e tipo de solidariedade.",
+      "elements": [
+        [
+          "a especializacao gera interdependencia",
+          [
+            "especializacao",
+            "interdependencia",
+            "divisao"
+          ]
+        ],
+        [
+          "a coesao vem da complementaridade e nao da semelhanca",
+          [
+            "complementar",
+            "diferenca",
+            "semelhanca"
+          ]
+        ],
+        [
+          "direito repressivo na mecanica e restitutivo na organica",
+          [
+            "repressivo",
+            "restitutivo",
+            "direito"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Sociologia",
+    "topic": "Tipos de Ação Social",
+    "sections": [
+      {
+        "title": "A sociologia compreensiva",
+        "content": "Weber define a sociologia como ciência que busca compreender a ação social, isto é, a conduta dotada de sentido subjetivo e orientada pela conduta de outros. O objetivo é compreender esse sentido e explicar suas consequências, o que desloca o foco das estruturas para os sujeitos e suas motivações."
+      },
+      {
+        "title": "Os quatro tipos",
+        "content": "A ação racional com relação a fins calcula meios adequados para objetivos escolhidos. A racional com relação a valores age por convicção, independentemente das consequências. A afetiva é movida por emoções. A tradicional é guiada pelo costume. São tipos ideais: na realidade, as ações costumam combinar mais de um tipo."
+      },
+      {
+        "title": "Tipo ideal",
+        "content": "O tipo ideal é um instrumento metodológico: construção conceitual acentuada que não descreve nenhum caso real, mas serve de régua para comparar casos concretos. Compreender isso evita a confusão de procurar exemplos puros e permite usar os conceitos weberianos com o rigor que ele mesmo propunha."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Ler tipo ideal como modelo desejável ou como descrição fiel da realidade é o erro central: ideal aqui significa construído no plano das ideias. Outro deslize é confundir ação racional com relação a valores com irracionalidade. E supor que uma ação concreta pertence a um único tipo puro."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Classifique quem enfrenta risco para defender uma convicção mesmo sabendo que fracassará. Responda antes de conferir: é ação racional com relação a valores, porque a orientação é pela convicção, e não pelo cálculo de eficácia. Agora explique o que é um tipo ideal: construção conceitual acentuada usada como parâmetro de comparação, não como descrição de casos reais."
+      }
+    ],
+    "recall": {
+      "prompt": "Classifique uma ação movida por convicção apesar do fracasso previsto e explique o que é tipo ideal.",
+      "elements": [
+        [
+          "acao racional com relacao a valores",
+          [
+            "valores",
+            "conviccao",
+            "racional"
+          ]
+        ],
+        [
+          "a orientacao nao e pelo calculo de eficacia",
+          [
+            "eficacia",
+            "consequencia",
+            "calculo"
+          ]
+        ],
+        [
+          "tipo ideal e construcao conceitual de comparacao",
+          [
+            "construcao",
+            "comparacao",
+            "nao descreve"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Sociologia",
+    "topic": "Transformações no Mundo do Trabalho",
+    "sections": [
+      {
+        "title": "Do fordismo à acumulação flexível",
+        "content": "A crise dos anos 1970 levou à reorganização produtiva: produção flexível, just in time, terceirização, subcontratação e deslocamento de plantas para regiões de menor custo. O trabalhador polivalente substitui o especializado em tarefa única, e a estabilidade do emprego cede lugar a vínculos mais instáveis."
+      },
+      {
+        "title": "Reestruturação e desemprego",
+        "content": "A automação, a informatização e depois a robótica e a inteligência artificial alteraram a composição do emprego, eliminando postos repetitivos e criando outros que exigem qualificações distintas. O debate opõe quem prevê desemprego tecnológico massivo e quem aponta a criação de novas ocupações e a mudança de perfil."
+      },
+      {
+        "title": "Novas formas de vínculo",
+        "content": "Cresceram o trabalho por projeto, o home office, o empreendedorismo por necessidade e o trabalho mediado por plataformas digitais. A distinção entre tempo de trabalho e tempo livre se dissolve, e a proteção social construída em torno do emprego formal perde alcance, exigindo repensar direitos e financiamento da seguridade."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Tratar flexibilidade como sinônimo automático de liberdade ignora que ela frequentemente transfere riscos ao trabalhador. Outro deslize é supor que tecnologia por si só determina o desemprego, sem considerar decisões econômicas e políticas. E confundir terceirização com informalidade, que são fenômenos distintos."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a acumulação flexível transfere riscos ao trabalhador? Responda antes de conferir: com vínculos instáveis, terceirização e remuneração variável, oscilações da demanda deixam de ser absorvidas pela empresa e passam a recair sobre a renda e a segurança de quem trabalha. Agora explique por que a proteção social perde alcance: ela foi construída em torno do emprego formal estável, que deixou de ser a norma."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a flexibilização transfere riscos ao trabalhador? Por que a proteção social perde alcance?",
+      "elements": [
+        [
+          "vinculos instaveis e remuneracao variavel",
+          [
+            "instavel",
+            "variavel",
+            "terceirizacao"
+          ]
+        ],
+        [
+          "as oscilacoes recaem sobre o trabalhador",
+          [
+            "oscilacao",
+            "risco",
+            "renda"
+          ]
+        ],
+        [
+          "a protecao foi construida sobre o emprego formal",
+          [
+            "formal",
+            "seguridade",
+            "carteira"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Sociologia",
+    "topic": "Ética Protestante e o Espírito do Capitalismo",
+    "sections": [
+      {
+        "title": "A tese",
+        "content": "Weber investiga por que o capitalismo moderno se desenvolveu primeiro em regiões protestantes. Sua resposta é que certos elementos da ética puritana, sobretudo calvinista, produziram uma disposição favorável ao trabalho metódico, à poupança e ao reinvestimento, criando o que chama de espírito do capitalismo."
+      },
+      {
+        "title": "O mecanismo",
+        "content": "A doutrina da predestinação gerava angústia sobre a salvação. O êxito no trabalho, entendido como vocação, passou a ser lido como possível sinal de graça, e a ascese intramundana desestimulava o consumo ostentatório. O resultado prático foi acumulação sistemática, reinvestimento e disciplina, favoráveis ao desenvolvimento capitalista."
+      },
+      {
+        "title": "O alcance do argumento",
+        "content": "Weber não afirma que a religião causou sozinha o capitalismo, nem inverte o argumento marxista para dizer que as ideias determinam a economia. Ele mostra uma afinidade eletiva entre ética religiosa e conduta econômica, e observa que, uma vez consolidado, o capitalismo dispensa a motivação religiosa original."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Ler a obra como afirmação de que o protestantismo criou o capitalismo é a distorção mais comum. Outro deslize é supor que Weber refuta Marx, quando propõe outro ângulo de análise. E entender ascese como negação do trabalho, quando é disciplina rigorosa dentro do mundo, e não fora dele."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a predestinação favoreceu a acumulação? Responda antes de conferir: a incerteza sobre a salvação levou os fiéis a buscar sinais de graça, e o êxito no trabalho, somado à recusa do consumo ostentatório, produziu poupança e reinvestimento sistemáticos. Agora explique o que é afinidade eletiva: relação de reforço mútuo entre ética religiosa e conduta econômica, sem relação de causa única."
+      }
+    ],
+    "recall": {
+      "prompt": "Como a predestinação favoreceu a acumulação? O que significa afinidade eletiva?",
+      "elements": [
+        [
+          "a incerteza levou a buscar sinais de graca no trabalho",
+          [
+            "predestinacao",
+            "sinal",
+            "trabalho"
+          ]
+        ],
+        [
+          "a recusa do consumo gerou poupanca e reinvestimento",
+          [
+            "poupanca",
+            "reinvestimento",
+            "consumo"
+          ]
+        ],
+        [
+          "afinidade eletiva e reforco mutuo sem causa unica",
+          [
+            "afinidade",
+            "mutuo",
+            "nao causou"
+          ]
+        ]
+      ]
+    }
   }
 ]
