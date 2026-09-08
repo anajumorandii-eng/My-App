@@ -88413,30 +88413,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Matemática · questão 38 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "A região hachurada do plano cartesiano xOy, contida no círculo de centro na origem O e raio 1, é a porção do segundo quadrante limitada pelo arco da circunferência e pela corda que une os pontos (−1, 0) e (0, 1). Note e adote: o círculo de centro O e raio 1 é o conjunto de todos os pontos do plano que estão a uma distância de O menor do que ou igual a 1. Essa região pode ser descrita por:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "{(x, y); x² + y² ≤ 1 e y − x ≤ 1}"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "{(x, y); x² + y² ≥ 1 e y + x ≥ 1}"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "{(x, y); x² + y² ≤ 1 e y − x ≥ 1}"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "{(x, y); x² + y² ≤ 1 e y + x ≥ 1}"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "{(x, y); x² + y² ≥ 1 e y + x ≤ 1}"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. São duas condições. A região está dentro do círculo, o que dá x² + y² ≤ 1 e já elimina as alternativas b e e. A corda passa por (−1, 0) e (0, 1), de modo que sua reta é y = x + 1, ou y − x = 1; note que a reta correta envolve a diferença, e não a soma, o que descarta a alternativa d. Falta decidir de que lado fica a região: testando um ponto dela, como (−0,5; 0,8), obtém-se y − x = 1,3, maior que 1. Logo a condição é y − x ≥ 1.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_038-p28.webp",
@@ -88453,30 +88453,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Matemática · questão 39 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Um ponto (x, y) do plano cartesiano pertence ao conjunto F se é equidistante dos eixos Ox e Oy e pertence ao círculo de equação x² + y² − 2x − 6y + 2 = 0. É correto afirmar que F:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "é um conjunto vazio"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "tem exatamente 2 pontos, um no primeiro quadrante e outro no segundo quadrante"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "tem exatamente 2 pontos, ambos no primeiro quadrante"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "tem exatamente 3 pontos, sendo dois no primeiro quadrante e outro no segundo quadrante"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "tem exatamente 4 pontos, sendo dois no primeiro quadrante e dois no segundo quadrante"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. Ser equidistante dos eixos significa |x| = |y|, o que dá duas retas: y = x e y = −x. Substituindo y = x na equação da circunferência vem 2x² − 8x + 2 = 0, ou x² − 4x + 1 = 0, com raízes 2 ± √3, ambas positivas — dois pontos no primeiro quadrante. Substituindo y = −x vem 2x² + 4x + 2 = 0, ou (x + 1)² = 0, com raiz dupla x = −1, o que corresponde ao único ponto (−1, 1), no segundo quadrante, onde a reta tangencia a circunferência. São, ao todo, três pontos.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_039-p29.webp",
@@ -88493,30 +88493,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Matemática · questão 41 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Duas circunferências com raios 1 e 2 têm centros no primeiro quadrante do plano cartesiano e ambas tangenciam os dois eixos coordenados. Essas circunferências se interceptam em dois pontos distintos de coordenadas (x1, y1) e (x2, y2). O valor de (x1 + y1)² + (x2 + y2)² é igual a:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "5/2"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "7/2"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "9/2"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "11/2"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "13/2"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. Uma circunferência de raio r que tangencia os dois eixos no primeiro quadrante tem centro em (r, r), então as equações são (x − 1)² + (y − 1)² = 1 e (x − 2)² + (y − 2)² = 4. Expandindo as duas e subtraindo uma da outra, os termos quadráticos se cancelam e sobra 2x + 2y − 3 = 0, ou seja, x + y = 3/2 — a reta que contém os dois pontos de intersecção. Como ambos satisfazem essa relação, cada parcela vale (3/2)² = 9/4, e a soma é 9/2. Não é preciso encontrar as coordenadas.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_041-p31.webp",
@@ -88533,30 +88533,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Matemática · questão 42 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "No plano cartesiano, um círculo de centro P = (a, b) tangencia as retas de equações y = x e x = 0. Se P pertence à parábola de equação y = x² e a > 0, a ordenada b do ponto P é igual a:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "2 + 2√2"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "3 + 2√2"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "4 + 2√2"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "5 + 2√2"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "6 + 2√2"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. Se o círculo tangencia as duas retas, o centro está à mesma distância delas. A distância de P ao eixo y é a, e a distância à reta y = x, cuja equação geral é x − y = 0, é |a − b|/√2. Igualando, |a − b| = a√2. Como P está na parábola, b = a², e para a > 0 o ponto fica acima da reta, de modo que b − a = a√2, isto é, a² − a = a√2. Dividindo por a, que é positivo, vem a = 1 + √2, e portanto b = a² = 3 + 2√2.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_042-p31.webp",
@@ -88573,30 +88573,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Matemática · questão 44 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Considere o triângulo ABC no plano cartesiano com vértices A = (0, 0), B = (3, 4) e C = (8, 0). O retângulo MNPQ tem os vértices M e N sobre o eixo das abscissas, o vértice Q sobre o lado AB e o vértice P sobre o lado BC. Dentre todos os retângulos construídos desse modo, o que tem área máxima é aquele em que o ponto P é:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "(4; 16/5)"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "(17/4; 3)"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "(5; 12/5)"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "(11/2; 2)"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "(6; 8/5)"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. Chame de h a altura do retângulo. O lado AB está sobre a reta y = 4x/3, logo o vértice Q tem abscissa 3h/4; o lado BC está sobre a reta y = 4(8 − x)/5, logo P tem abscissa 8 − 5h/4. A largura é a diferença, 8 − 2h, e a área vale h(8 − 2h) = 8h − 2h², parábola de concavidade para baixo com vértice em h = 2. Com h = 2, a abscissa de P é 8 − 5/2 = 11/2, de modo que P = (11/2; 2). Repare que todas as alternativas trazem pontos do lado BC; o que decide é a altura ótima.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_044-p32.webp",
@@ -88613,30 +88613,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Matemática · questão 45 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "São dados, no plano cartesiano, o ponto P de coordenadas (3, 6) e a circunferência C de equação (x − 1)² + (y − 2)² = 1. Uma reta t passa por P e é tangente a C em um ponto Q. Então a distância de P a Q é:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "√15"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "√17"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "√18"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "√19"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "√20"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. O raio traçado até o ponto de tangência é perpendicular à tangente, de modo que o centro O = (1, 2), o ponto de tangência Q e o ponto externo P formam um triângulo retângulo com o ângulo reto em Q. Pelo teorema de Pitágoras, PQ² = OP² − r². Aqui OP² = (3 − 1)² + (6 − 2)² = 4 + 16 = 20 e r = 1, logo PQ² = 19 e PQ = √19. Quem esquece de descontar o raio responde √20.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_045-p32.webp",
@@ -88653,30 +88653,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Matemática · questão 46 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "No plano cartesiano Oxy, a circunferência C é tangente ao eixo Ox no ponto de abscissa 5 e contém o ponto (1, 2). Nessas condições, o raio de C vale:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "√5"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "2√5"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "5"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "3√5"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "10"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. Se a circunferência tangencia o eixo Ox em (5, 0), o raio nesse ponto é vertical e o centro está diretamente acima, em (5, r). Impondo que (1, 2) esteja na circunferência: (1 − 5)² + (2 − r)² = r². Desenvolvendo, 16 + 4 − 4r + r² = r², os termos em r² se cancelam e sobra 20 = 4r, isto é, r = 5. O cancelamento do r² é o que torna a equação simples: sempre que se impõe tangência a um eixo, vale a pena escrever o centro já com o raio como coordenada.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_046-p33.webp",
@@ -88693,30 +88693,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Matemática · questão 47 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "No plano cartesiano, os pontos (0, 3) e (−1, 0) pertencem à circunferência C. Uma outra circunferência, de centro em (−1/2, 4), é tangente a C no ponto (0, 3). Então, o raio de C vale:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "√5/8"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "√5/4"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "√5/2"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "3√5/4"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "√5"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa e). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: e. Quando duas circunferências são tangentes, os dois centros e o ponto de tangência estão alinhados. A reta que une (−1/2, 4) a (0, 3) tem vetor diretor (1, −2), então o centro de C é da forma (t, 3 − 2t). Impondo que ele esteja à mesma distância de (0, 3) e de (−1, 0), ambos em C, vem 5t² = 5t² − 10t + 10, o que dá t = 1 e centro (1, 1). O raio é a distância desse centro a (0, 3), isto é, √(1 + 4) = √5.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_047-p33.webp",
@@ -88760,7 +88760,7 @@
         "text": "(90 x) - graus sul e (90 y) - graus oeste"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. O antípoda de um ponto é obtido atravessando o centro da Terra, e isso muda as duas coordenadas de maneiras diferentes. A latitude apenas troca de hemisfério, mantendo o mesmo valor: x graus norte vira x graus sul. Já a longitude gira meia volta, e como ela é medida de 0 a 180 graus para cada lado, y graus leste vira (180 − y) graus oeste. Por isso a resposta combina as duas transformações. As alternativas que subtraem a latitude de 90 confundem latitude com colatitude, e a que mantém a longitude esquece a meia volta em torno do eixo.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_048-p34.webp",
@@ -88777,30 +88777,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Matemática · questão 49 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Alice quer construir um paralelepípedo reto retângulo de medidas 60 cm × 24 cm × 18 cm, com a menor quantidade possível de cubos idênticos cujas medidas das arestas são números naturais. Quantos cubos serão necessários para construir esse paralelepípedo?",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "60"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "72"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "80"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "96"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "120"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa e). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: e. Para usar o menor número de cubos é preciso que eles sejam os maiores possíveis, e a aresta tem de dividir exatamente as três dimensões: o maior valor com essa propriedade é o máximo divisor comum de 60, 24 e 18, que vale 6. Com cubos de 6 cm de aresta cabem 60/6 = 10 ao longo do comprimento, 24/6 = 4 na largura e 18/6 = 3 na altura, num total de 10 × 4 × 3 = 120 cubos. Conferindo pelo volume: 60 × 24 × 18 = 25.920 cm³, dividido por 6³ = 216, dá exatamente 120.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_049-p35.webp",
@@ -88817,30 +88817,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Matemática · questão 51 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "A menor esfera na qual um paralelepípedo reto-retângulo de medidas 7 cm × 4 cm × 4 cm está inscrito tem diâmetro de:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "9 cm"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "10 cm"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "11 cm"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "12 cm"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "15 cm"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. A menor esfera que contém o paralelepípedo é aquela em que todos os oito vértices ficam sobre a superfície, e nesse caso o diâmetro coincide com a diagonal do sólido. A diagonal vale √(7² + 4² + 4²) = √(49 + 16 + 16) = √81 = 9 cm. O erro comum é usar a diagonal de uma face, ou somar as arestas; a diagonal do paralelepípedo é a maior distância entre dois pontos do sólido, e por isso é ela que fixa o tamanho mínimo da esfera.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_051-p35.webp",
@@ -88857,30 +88857,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Matemática · questão 52 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Uma empresa estuda cobrir um vão entre dois prédios (com formato de paralelepípedos reto-retângulos) que têm paredes laterais paralelas, instalando uma lona na forma de um quadrilátero, com pontas presas nos pontos A, B, C e D, sendo A e B as extremidades da aresta superior da parede de um prédio e C e D as da aresta superior da parede do outro. Sabendo que a lateral de um prédio tem 80 m de altura e 28 m de largura, que a lateral do outro prédio tem 60 m de altura e 20 m de largura e que essas duas paredes laterais distam 15 m uma da outra, a área total dessa lona seria de:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "300 m²"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "360 m²"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "600 m²"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "720 m²"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "1.200 m²"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. As duas arestas superiores são horizontais e paralelas entre si, de modo que a lona é um trapézio de bases 28 m e 20 m. Falta a altura do trapézio, que é a distância entre essas duas retas: os prédios estão a 15 m um do outro na horizontal e há 80 − 60 = 20 m de desnível, logo a distância vale √(15² + 20²) = 25 m. A área é, então, (28 + 20)/2 × 25 = 24 × 25 = 600 m². Quem esquece o desnível e usa 15 m como altura obtém 360 m².",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_052-p36.webp",
@@ -88897,30 +88897,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Matemática · questão 53 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "A figura mostra uma escada maciça de quatro degraus, todos eles com formato de um paralelepípedo reto-retângulo. A base de cada degrau é um retângulo de dimensões 20 cm por 50 cm, e a diferença de altura entre o piso e o primeiro degrau e entre os degraus consecutivos é de 10 cm. Se essa escada for prolongada para ter 20 degraus, mantendo o mesmo padrão, seu volume será igual a:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "2,1 m³"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "2,3 m³"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "3,0 m³"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "4,2 m³"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "6,0 m³"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. Decomponha a escada em blocos verticais: o primeiro degrau é um paralelepípedo de 20 × 50 × 10 cm, o segundo tem altura 20 cm, o terceiro 30 cm, e assim por diante até o vigésimo, com 200 cm. Todos têm a mesma base de 20 × 50 = 1.000 cm², de modo que o volume total é 1.000 × 10 × (1 + 2 + … + 20). A soma dos vinte primeiros naturais é 20 × 21/2 = 210, o que dá 10.000 × 210 = 2.100.000 cm³. Como 1 m³ equivale a 1.000.000 cm³, o resultado é 2,1 m³.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_053-p37.webp",
@@ -88937,30 +88937,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Matemática · questão 54 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "O paralelepípedo reto-retângulo ABCDEFGH, representado na figura, tem medida dos lados AB = 4, BC = 2 e BF = 2, com ABCD como face inferior e EFGH como face superior, sendo E acima de A, F acima de B, G acima de C e H acima de D. O seno do ângulo HAF é igual a:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "1/(2√5)"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "1/√5"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "2/√10"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "2/√5"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "3/√10"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa e). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: e. Ponha A na origem, com B = (4, 0, 0), D = (0, 2, 0) e E = (0, 0, 2). Então F = (4, 0, 2) e H = (0, 2, 2). Os vetores do ângulo são AH = (0, 2, 2), de módulo 2√2, e AF = (4, 0, 2), de módulo 2√5. O produto escalar vale 0 + 0 + 4 = 4, logo cos do ângulo é 4/(2√2 · 2√5) = 1/√10. Como o ângulo é agudo, o seno é positivo e vale √(1 − 1/10) = 3/√10. Quem calcula o cosseno e para por aí marca a alternativa que traz 1/√10 disfarçado.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_054-p38.webp",
@@ -88977,30 +88977,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Matemática · questão 55 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Um reservatório de água tem o formato de um cone circular reto. O diâmetro de sua base (que está apoiada sobre o chão horizontal) é igual a 8 m. Sua altura é igual a 12 m. A partir de um instante em que o reservatório está completamente vazio, inicia-se seu enchimento com água a uma vazão constante de 500 litros por minuto. O tempo gasto para que o nível de água atinja metade da altura do reservatório é de, aproximadamente: Dados: π é aproximadamente 3,14; o volume V do cone circular reto de altura h e raio da base r é V = (1/3)πr²h.",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "4 horas e 50 minutos"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "5 horas e 20 minutos"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "5 horas e 50 minutos"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "6 horas e 20 minutos"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "6 horas e 50 minutos"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. Com a base apoiada no chão, a água ocupa um tronco de cone, e o jeito mais rápido de calcular é subtrair. O cone inteiro tem raio 4 e altura 12, com volume (1/3)π·16·12 = 64π m³. A parte vazia, acima do nível, é um cone semelhante de altura 6 e raio 2, com volume (1/3)π·4·6 = 8π m³. A água ocupa 56π ≈ 175,8 m³, ou 175.800 litros. Dividindo pela vazão de 500 L/min, obtêm-se cerca de 352 minutos, isto é, aproximadamente 5 horas e 50 minutos. Tratar a água como um cone de altura 6 levaria a um valor bem menor.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_055-p39.webp",
@@ -89017,30 +89017,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Matemática · questão 56 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Cada aresta do tetraedro regular ABCD mede 10. Por um ponto P na aresta AC, passa o plano α paralelo às arestas AB e CD. Dado que AP = 3, o quadrilátero determinado pelas interseções de α com as arestas do tetraedro tem área igual a:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "21"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "21√2/2"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "30"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "30/2"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "30√3/2"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. Um plano paralelo a duas arestas opostas de um tetraedro corta as outras quatro arestas e determina um paralelogramo, cujos lados são paralelos justamente a essas duas arestas. Num tetraedro regular, arestas opostas são perpendiculares entre si, de modo que o paralelogramo é um retângulo. Por semelhança, o lado paralelo a AB mede 10 × PC/AC = 10 × 7/10 = 7, e o lado paralelo a CD mede 10 × AP/AC = 10 × 3/10 = 3. A área é 7 × 3 = 21. Note que a soma dos dois lados é sempre 10, e o produto é máximo quando P é o ponto médio.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_056-p39.webp",
@@ -89057,30 +89057,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Matemática · questão 57 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "O sólido da figura é formado pela pirâmide SABCD sobre o paralelepípedo reto ABCDEFGH. Sabe-se que S pertence à reta determinada por A e E e que AE = 2 cm, AD = 4 cm e AB = 5 cm. A medida do segmento SA que faz com que o volume do sólido seja igual a 4/3 do volume da pirâmide SEFGH é:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "2 cm"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "4 cm"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "6 cm"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "8 cm"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "10 cm"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa e). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: e. Chame SA de h. O paralelepípedo tem volume 5 × 4 × 2 = 40 e a pirâmide SABCD, de base 20 e altura h, tem volume 20h/3, de modo que o sólido mede 40 + 20h/3. A pirâmide SEFGH tem a mesma base de área 20, mas altura h + 2, já que S, A e E são colineares e E está 2 cm abaixo de A; seu volume é 20(h + 2)/3. Impondo 40 + 20h/3 = (4/3)·20(h + 2)/3 e multiplicando tudo por 9, vem 360 + 60h = 80h + 160, logo h = 10 cm.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_057-p40.webp",
@@ -89120,7 +89120,7 @@
         "text": "180 ρ-"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. A haste do relógio solar, chamada gnômon, é montada paralela ao eixo de rotação da Terra para que sua sombra gire uniformemente ao longo do dia. Uma reta paralela ao eixo terrestre forma, com o plano horizontal do lugar, um ângulo igual à latitude — no equador ela ficaria deitada, e nos polos, vertical. Portanto o ângulo pedido é μ, a latitude. A longitude ρ não entra na conta: ela determina a diferença de horário em relação a outros meridianos, mas não a inclinação da haste.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_058-p41.webp",
@@ -89160,7 +89160,7 @@
         "text": "13"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. Tome o cubo de aresta a com um vértice na origem e as três arestas que partem dele sobre os eixos. O tetraedro é a pirâmide cuja base é o triângulo retângulo de catetos a e a, com área a²/2, e cuja altura é a terceira aresta, também a. Seu volume vale (1/3)·(a²/2)·a = a³/6, enquanto o cubo tem volume a³. A razão é, portanto, 1/6, e não depende do tamanho da aresta. Quem confunde a área da base com a face inteira do cubo obtém 1/3.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_059-p42.webp",
@@ -89177,30 +89177,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Matemática · questão 60 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Os vértices de um tetraedro regular são também vértices de um cubo de aresta 2. A área de uma face desse tetraedro é:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "2√3"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "4"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "3√2"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "3√3"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "6"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. Um tetraedro regular cabe dentro de um cubo tomando quatro vértices alternados: cada par deles está nas extremidades de uma diagonal de face, de modo que a aresta do tetraedro é a diagonal da face do cubo, isto é, 2√2. Cada face é um triângulo equilátero de lado 2√2, e sua área vale (√3/4)·(2√2)² = (√3/4)·8 = 2√3. O erro frequente é usar a aresta do cubo, 2, como aresta do tetraedro, o que daria √3.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_060-p42.webp",
