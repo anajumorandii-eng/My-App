@@ -82264,7 +82264,7 @@
         "text": "escapou do desaparecimento graças à preservação fortuita de textos antigos"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. O saber greco-romano sobreviveu porque a Igreja o incorporou: os mosteiros copiaram e conservaram manuscritos, o latim permaneceu como língua da liturgia e da administração, e a filosofia antiga foi absorvida pela teologia, primeiro com Agostinho e Platão, depois com Tomás de Aquino e Aristóteles. Foi seleção e adaptação, não preservação neutra, mas foi o canal que garantiu a continuidade. As alternativas b e c invertem esse papel, atribuindo à Igreja ou aos povos germânicos a rejeição do patrimônio antigo; a a credita a sobrevivência aos chefes bárbaros; e a e a atribui ao acaso.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_hisger_fuvest/ap_hisger_fuvest_050-p28.webp",
@@ -82308,7 +82308,7 @@
         "text": "foi um modo de produção inferior ao escravista romano, pois, se este produziu a riqueza do Império, aquele muito pouco teve a ver com a riqueza das cidades da Baixa Idade Média"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. O feudalismo não tem data de nascimento nem de morte: forma-se lentamente entre os séculos IV e VIII, na desagregação do Império Romano e na fusão com estruturas germânicas, e se dissolve com igual lentidão entre os séculos XIV e XVI, com o renascimento urbano, a crise do século XIV e a formação dos Estados modernos. Os períodos de incubação e de decadência são, de fato, longos e comparáveis. A alternativa a fala em difusão do feudalismo pelas Américas, que foram colonizadas sob lógica mercantil; a c o faz depender da expansão árabe; a d nega originalidade sem sustentação; e a e o hierarquiza como inferior ao escravismo romano.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_hisger_fuvest/ap_hisger_fuvest_051-p29.webp",
@@ -82352,7 +82352,7 @@
         "text": "III e IV"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa e). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: e. A citação de Kuhn associa revolução à percepção de que o modelo vigente já não funciona. As afirmações III e IV se sustentam nesse quadro. A I falha ao apresentar o heliocentrismo de Copérnico como sustentado por evidências que só viriam depois, com Galileu e Kepler, e ao ignorar que sua obra circulou inicialmente como hipótese matemática; a II também não se sustenta nos termos em que é formulada. Restam III e IV, que descrevem corretamente a relação entre crise, ruptura de paradigma e transformação política na Época Moderna.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_hisger_fuvest/ap_hisger_fuvest_053-p30.webp",
@@ -82373,30 +82373,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · História · questão 54 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Níveis per capita de industrialização, 1750-1913 (Reino Unido em 1900 = 100), nos anos 1750, 1800, 1860 e 1913. Alemanha: 8, 8, 15, 85. Bélgica: 9, 10, 28, 88. China: 8, 6, 4, 3. Espanha: 7, 7, 11, 22. EUA: 4, 9, 21, 126. França: 9, 9, 20, 59. Índia: 7, 6, 3, 2. Itália: 8, 8, 10, 26. Japão: 7, 7, 7, 20. Reino Unido: 10, 16, 64, 115. Rússia: 6, 6, 8, 20. (Ronald Findlay e Kevin O'Rourke. Power and Plenty: Trade, War, and the World Economy in the Second Millennium. Princeton University Press, 2007. Adaptado.) Com base na tabela, é correto afirmar:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "A industrialização acelerada da Alemanha e dos Estados Unidos ocorreu durante a Primeira Revolução Industrial, mantendo-se relativamente inalterada durante a Segunda Revolução Industrial"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "Os países do Sul e do Leste da Europa apresentaram níveis de industrialização equivalentes aos dos países do Norte da Europa e dos Estados Unidos durante a Segunda Revolução Industrial"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "A Primeira Revolução Industrial teve por epicentro o Reino Unido, acompanhado em menor grau pela Bélgica, ambos mantendo níveis elevados durante a Segunda Revolução Industrial"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "Os níveis de industrialização verificados na Ásia em meados do século XVIII acompanharam o movimento geral de industrialização do Atlântico Norte ocorrido na segunda metade do século XIX"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "O Japão se destacou como o país asiático de mais rápida industrialização no curso da Primeira Revolução Industrial, perdendo força, no entanto, durante a Segunda Revolução Industrial"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. Entre 1750 e 1860, período da Primeira Revolução Industrial, só dois países saem claramente do patamar comum: o Reino Unido, que salta de 10 para 64, e a Bélgica, que vai de 9 para 28 — bem à frente dos demais, mas atrás do britânico. Em 1913 ambos seguem no topo, com 115 e 88. A alternativa a inverte a cronologia, pois Alemanha e EUA disparam depois de 1860; a b afirma equivalência entre Sul e Leste europeus e o Norte, quando Espanha, Itália e Rússia ficam entre 20 e 26 contra 85 e mais; a d ignora a queda da China e da Índia; e a e situa o avanço japonês na Primeira Revolução, quando ele ocorre depois de 1860.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_hisger_fuvest/ap_hisger_fuvest_054-p31.webp",
@@ -82440,7 +82440,7 @@
         "text": "propaganda de setores comerciais ingleses, defensores dos monopólios comerciais e contrários ao livre-cambismo que, à época, ganhava força no país"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. A caricatura inglesa do período revolucionário francês trabalha por inversão: em vez de retratar a França como ameaça, apresenta a própria monarquia britânica como opressora de seus súditos, num momento em que os ideais franceses inspiravam reformistas e radicais na Inglaterra. É crítica interna, não propaganda patriótica. As alternativas a, d e e leem a imagem como defesa do mercantilismo, da monarquia ou dos monopólios comerciais, invertendo seu alvo; e a c a transforma em alegoria das pretensões francesas sobre a Inglaterra, quando o adversário retratado está dentro de casa.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_hisger_fuvest/ap_hisger_fuvest_055-p31.webp",
@@ -82484,7 +82484,7 @@
         "text": "adesão a ideias e formulações humanistas de igualdade social"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. Frankenstein, publicado em 1818, nasce no auge da confiança na ciência e a coloca em xeque: um cientista cria vida em laboratório e produz uma criatura que sofre, é rejeitada e se volta contra o criador. O monólogo do monstro é a voz de quem foi feito pelo progresso e abandonado por ele — leitura sombria da condição humana numa sociedade que se industrializava e acreditava que todo avanço técnico era bom. As alternativas a e e transformam o romance em apologia da guerra ou em manifesto de igualdade; a c o converte em defesa do clericalismo; e a d o opõe ao evolucionismo, que só ganharia forma décadas depois.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_hisger_fuvest/ap_hisger_fuvest_060-p34.webp",
@@ -82528,7 +82528,7 @@
         "text": "a manutenção dos níveis de renda do setor primário, ao longo do século XIX, como resultado da política mercantilista do Estado inglês"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. As três séries mostram a mesma coisa por ângulos diferentes: ao longo do século XIX a indústria britânica passa a gerar parcela crescente da renda nacional e a empregar parcela crescente da população ativa, enquanto a agricultura recua em termos relativos. É o efeito acumulado da Revolução Industrial. A alternativa a fala em colapso agrícola por formas feudais, inexistentes na Inglaterra do período; a c antecipa em dois séculos o capitalismo financeiro como sustentáculo dos serviços; a d nega o peso econômico da indústria; e a e afirma manutenção da renda do setor primário, contrariada pelos dados.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_hisger_fuvest/ap_hisger_fuvest_074-p41.webp",
@@ -82568,7 +82568,7 @@
         "text": "A revolução norte-americana repercutiu não só na Ilustração europeia e na Revolução Francesa, como demonstrou de modo teórico e prático a viabilidade de um grande Estado republicano e democrático"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa e). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: e. Palmer argumenta que as duas revoluções pertencem à mesma era democrática: a independência americana ofereceu à Europa o exemplo concreto de um povo que derrubou a monarquia, escreveu uma constituição e declarou direitos, e essa experiência circulou pela Ilustração e chegou à França, inclusive pelos oficiais que lá combateram, como Lafayette. As alternativas a e d minimizam a repercussão americana e negam radicalismo ao processo; a b afirma ausência de divisões internas entre os colonos, quando havia patriotas e legalistas; e a c reduz a independência à redação da Constituição, posterior à guerra.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_hisger_fuvest/ap_hisger_fuvest_082-p44.webp",
@@ -82612,7 +82612,7 @@
         "text": "à desesperança do povo hindu, que deveria, não obstante as dificuldades pelas quais passara durante anos de dominação britânica, ser mais otimista"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. A charge de 1946 retrata a Índia às vésperas da independência e da Partição, com a liderança política absorvida em disputas — entre Congresso e Liga Muçulmana, entre projetos de Estado — enquanto a maioria da população enfrentava fome, miséria e violência comunal. A crítica é ao distanciamento dos políticos em relação aos problemas reais. As alternativas a e c deslocam o alvo para a ONU ou para o colonialismo britânico; a b defende a oficialização de uma religião; e a e transforma a crítica em apelo à esperança do povo, o que a imagem não faz.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_hisger_fuvest/ap_hisger_fuvest_085-p47.webp",
@@ -82652,7 +82652,7 @@
         "text": "aceita os meios de tortura empregados pelos revolucionários e os considera uma novidade na história francesa"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. O autor está dividido: aprova que o povo tome a justiça em suas mãos e ao mesmo tempo se horroriza com a crueldade. E explica essa crueldade pelo que veio antes — a lista de suplícios do Antigo Regime, com arrastamentos, esquartejamentos, roda, cavalete e fogueira, formou uma sociedade acostumada à violência pública. A violência revolucionária aparece, portanto, como reação e herança. A alternativa a o coloca ao lado do Antigo Regime; a b afirma apoio incondicional; a c inventa uma proposta institucional ausente; e a e apresenta a tortura revolucionária como novidade, quando o texto mostra o contrário.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_hisger_fuvest/ap_hisger_fuvest_087-p48.webp",
@@ -82692,7 +82692,7 @@
         "text": "da União Soviética e Cuba nas guerras civis de Angola e Moçambique, na década de 1970, motivada pelas rivalidades e interesses geopolíticos característicos da Guerra Fria"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa e). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: e. Angola e Moçambique tornaram-se independentes de Portugal em 1975 e mergulharam em guerras civis que se prolongaram por décadas: em Angola, o MPLA recebeu apoio soviético e o envio de tropas cubanas, enquanto UNITA e FNLA contavam com Estados Unidos e África do Sul. As guerras africanas viraram, assim, palco da Guerra Fria. As demais alternativas trocam países, potências e décadas: Holanda e Itália no Zaire (a), Estados Unidos implantando o apartheid (b), a França apoiando a independência argelina, que na verdade combateu (c), e a China estabilizando Sudão e Etiópia (d).",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_hisger_fuvest/ap_hisger_fuvest_088-p48.webp",
@@ -82736,7 +82736,7 @@
         "text": "o tifo, principalmente na Primeira Guerra Mundial, foi utilizado como arma letal contra exércitos inimigos no leste europeu, que eram propositadamente contaminados com o vírus da doença"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. O tifo é transmitido pelo piolho e prospera onde há aglomeração, frio, roupa suja e falta de água — exatamente as condições das trincheiras, dos campos de prisioneiros e das populações deslocadas na frente oriental. Por isso a doença explodiu ali e não na frente ocidental, mais bem abastecida. O problema não era falta de conhecimento médico, mas a precariedade sanitária criada pela guerra. A alternativa a atribui a ameaça ao desconhecimento científico; a b fala em abandono da pesquisa biológica; a c isenta os países ricos; e a e transforma o tifo em arma biológica deliberada.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_hisger_fuvest/ap_hisger_fuvest_089-p49.webp",
@@ -82780,7 +82780,7 @@
         "text": "defesa da indústria bélica, considerada força motriz do desenvolvimento econômico dos Estados nacionais do século XIX"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. A cena é de uma guerra travada em escala industrial, com armamento produzido em série e destruição impessoal e massiva — a experiência que a Primeira Guerra impôs a uma Europa que acreditava no progresso técnico como sinônimo de civilização. O que o quadro registra é o assombro diante disso. As alternativas b e d leem a imagem como triunfo da Razão ou afirmação do Estado nacional; a c a converte em cena de fé católica; e a e faz dela apologia da indústria bélica, invertendo completamente o sentido do horror representado.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_hisger_fuvest/ap_hisger_fuvest_090-p50.webp",
@@ -82824,7 +82824,7 @@
         "text": "os homens dedicavam-se ao comércio, o que incluía deslocamentos para regiões afastadas de casa, e as mulheres incumbiam-se do trabalho nas lavouras e, ocasionalmente, na forja de metais"
       }
     ],
-    "explanation": "Gabarito oficial da UNESP: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. Duby descreve a sociedade feudal do século XII como um mundo repartido: aos homens cabiam a guerra, a defesa da fortaleza, a justiça e a representação da linhagem — tudo o que se fazia em público; às damas, a vida da casa, a gestão doméstica, a criação dos filhos e a memória familiar. Reconstruir a história delas é justamente recuperar o que ficou registrado à margem. As demais alternativas invertem essa divisão, atribuindo aos homens a instrução dos filhos ou o comércio como atividade definidora, ou colocam as mulheres na igreja em tempo integral e sob tributação específica.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_hisger_unesp/ap_hisger_unesp_001-p4.webp",
