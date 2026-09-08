@@ -69540,7 +69540,7 @@
         "text": "não ingere carne bovina ou suína contaminada pelos ovos da lombriga e da ameba"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. Ascaris lumbricoides e Entamoeba histolytica compartilham a mesma porta de entrada: a boca. Seus ovos e cistos saem nas fezes, contaminam água e solo e chegam às hortaliças e frutas — por isso lavar bem os vegetais antes de comê-los crus previne as duas parasitoses de uma só vez. As demais alternativas descrevem prevenções de outras doenças: caramujos em lagos remetem à esquistossomose (a), andar descalço em solo contaminado à ancilostomose (c), picadas de artrópodes a doenças como malária e dengue (d), e carne malcozida à teníase (e).",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_093-p72.webp",
@@ -69584,7 +69584,7 @@
         "text": "no nematelminto causador da doença, pode ser utilizada na produção de uma vacina capaz de imunizar o ser humano contra infecções por esses organismos"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. A esquistossomose é causada pelo Schistosoma mansoni, um platelminto; o caramujo é apenas hospedeiro intermediário, o que já elimina as alternativas que atribuem a doença ao molusco ou a um nematelminto. A notícia descreve o princípio de qualquer vacina: uma proteína do parasita, introduzida no organismo, é reconhecida como antígeno e desencadeia a resposta imunológica, deixando linfócitos de memória capazes de reconhecer o parasita depressa numa infecção futura. A alternativa b inverte o processo ao supor que a proteína se autorreplica no hospedeiro, e a d confunde antígeno com anticorpo.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_094-p73.webp",
@@ -69632,7 +69632,7 @@
         "text": "I - âmnio; II - pulmão; III - mandíbula; IV - ventrículo subdividido em 2 câmaras; V - escama"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. Cada ponto de ramificação marca uma novidade compartilhada por tudo o que está acima. O ponto I separa a estrela-do-mar dos demais: a característica é a notocorda, que define os cordados. O II deixa a tainha de fora e reúne sapo, tamanduá, crocodilo e tico-tico: é o pulmão. O III exclui o sapo e agrupa os amniotas: o âmnio. O IV marca só o tamanduá, com o pelo dos mamíferos, e o V reúne crocodilo e tico-tico pelo ovo com casca. As outras alternativas colocam características em níveis errados, como escamas ou mandíbula na base, ou pena num ramo que inclui o crocodilo.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_096-p76.webp",
@@ -69649,30 +69649,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Biologia · questão 99 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Chumaços de algodão embebidos em uma solução de vermelho de cresol, de cor rosa, foram colocados em três recipientes de vidro, I, II e III, idênticos e transparentes. Em I e II, havia plantas e, em III, rãs. Os recipientes foram vedados e iluminados durante um mesmo intervalo de tempo com luz de mesma intensidade, sendo que I e III foram iluminados com luz de frequência igual a 7,0×10^14 Hz, e II, com luz de frequência igual a 5,0×10^14 Hz. O gráfico mostra a taxa de fotossíntese das clorofilas a e b em função do comprimento de onda: há picos de absorção acima de 40% perto de 430-450 nm e de 640-660 nm, e absorção próxima de 10% na faixa de 500 a 620 nm. Considere que, para essas plantas, o ponto de compensação fótico corresponde a 20% do percentual de absorção. É correto afirmar que, após o período de iluminação, as cores dos chumaços de algodão embebidos em solução de cresol dos recipientes I, II e III ficaram, respectivamente: Note e adote: as plantas e as rãs permaneceram vivas durante o experimento; as cores da solução de cresol em ambientes com dióxido de carbono com concentração menor, igual e maior que a da atmosfera são, respectivamente, roxa, rosa e amarela; velocidade da luz = 3×10^8 m/s; 1 nm = 10^-9 m.",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "roxa, amarela e amarela"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "roxa, rosa e amarela"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "rosa, roxa e amarela"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "amarela, amarela e roxa"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "roxa, roxa e rosa"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. Comece convertendo frequência em comprimento de onda com λ = c/f. Para 7,0×10^14 Hz, λ ≈ 430 nm, faixa em que a absorção passa de 20% e a fotossíntese supera a respiração; para 5,0×10^14 Hz, λ = 600 nm, onde a absorção é de cerca de 10%, abaixo do ponto de compensação. No recipiente I a planta consome mais CO2 do que libera, a concentração cai e a solução fica roxa. No II a planta libera mais CO2 do que consome, e o cresol fica amarelo. No III as rãs apenas respiram, seja qual for a luz, e o CO2 também aumenta: amarelo. Daí roxa, amarela e amarela.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_099-p78.webp",
@@ -69708,7 +69708,7 @@
         "text": "As organelas, constituídas por lipídios, carboidratos e proteínas, em contato com sabão e água, são clivadas e perdem a capacidade de produzir moléculas essenciais ao metabolismo viral"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. O envelope do SARS-CoV-2 é uma bicamada lipídica herdada das membranas da célula infectada, e é justamente o ponto frágil do vírion. O sabão é formado por moléculas anfipáticas: a cauda apolar se insere entre os lipídios do envelope e a cabeça polar interage com a água, desorganizando a bicamada e desmontando a partícula viral. Sem envelope, o vírus não consegue mais se ligar à célula nem fundir-se a ela. As alternativas a e c atribuem o efeito às proteínas do capsídeo ou ao RNA, que estão protegidos no interior, e a d confunde o envelope de origem celular com organelas dentro do vírus, que não existem.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_002-p5.webp",
@@ -69748,7 +69748,7 @@
         "text": "(i) retículo endoplasmático granular; (ii) complexo de Golgi; (iii) síntese proteica; (iv) adição de açúcares"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. A célula caliciforme produz e exporta muco, uma secreção rica em glicoproteínas, e a figura acompanha esse caminho. A organela (i), coberta de ribossomos e ligada ao envoltório nuclear, é o retículo endoplasmático granular, onde as cadeias proteicas são sintetizadas. Delas partem vesículas para a organela (ii), o complexo de Golgi, empilhado em cisternas, onde as proteínas recebem cadeias de açúcares e são empacotadas nos grânulos de muco que seguem para a membrana plasmática. As alternativas com mitocôndria e retículo agranular trocam as funções de síntese de ATP e detoxificação pelas de produção e glicosilação de proteínas.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_003-p7.webp",
@@ -69784,7 +69784,7 @@
         "text": "B, C, D e I são haploides"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. Na meiose, a redução do número de cromossomos acontece na primeira divisão: a célula A é diploide e, ao final da meiose I, origina B e C, já haploides. Tudo o que vem depois delas — D e E, e as quatro células finais F, G, H e I — continua haploide, porque a segunda divisão apenas separa as cromátides-irmãs, sem reduzir o número de cromossomos. Por isso B, C, D e I são haploides. A alternativa a chama de diploides células que já passaram pela meiose I; a b confunde as etapas; e a c afirma identidade genética entre células que a permutação e a segregação independente tornaram diferentes.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_006-p9.webp",
@@ -69801,26 +69801,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Biologia · questão 8 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Considere um indivíduo heterozigoto para dois locos gênicos que estão em linkage, ou seja, não apresentam segregação independente. A representação esquemática dos cromossomos presentes em uma de suas células somáticas em divisão mitótica é:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "Um par de homólogos duplicados em que um cromossomo traz A e B nas duas cromátides e o outro traz a e b nas duas cromátides, mais outro par de cromossomos sem os locos marcados"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "Um par de homólogos duplicados em que cada cromossomo traz A numa cromátide e a na outra, e B numa cromátide e b na outra, mais outro par sem os locos marcados"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "Um par de homólogos duplicados com A numa cromátide e a na outra, e um segundo par de homólogos com B numa cromátide e b na outra"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "Um par de homólogos duplicados em que um cromossomo traz A nas duas cromátides e o outro traz a nas duas, e um segundo par em que um cromossomo traz B nas duas cromátides e o outro traz b nas duas"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. Duas exigências precisam ser atendidas ao mesmo tempo. Linkage significa que os dois locos estão no mesmo cromossomo, o que descarta de imediato as representações que os colocam em pares diferentes — nessas, a segregação seria independente. E, numa célula em mitose, cada cromossomo já duplicado é formado por duas cromátides-irmãs idênticas, cópias fiéis produzidas na fase S; por isso a mesma cromátide não pode trazer A e a sua irmã trazer a. Sobra a representação em que um homólogo carrega A e B nas duas cromátides e o outro carrega a e b nas duas.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_008-p10.webp",
@@ -69837,7 +69837,7 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "Assinale a alternativa correta.",
+    "prompt": "Hemácias de um animal foram colocadas em meio de cultura em vários frascos com diferentes concentrações das substâncias A e B, marcadas com isótopo de hidrogênio. Dessa forma os pesquisadores puderam acompanhar a entrada dessas substâncias nas hemácias. No gráfico da velocidade de transporte em função da concentração no meio extracelular, a substância A é representada por uma reta que cresce continuamente com a concentração, enquanto a substância B forma uma curva que sobe rapidamente e depois estabiliza num patamar próximo de 2,6. Assinale a alternativa correta.",
     "options": [
       {
         "id": "a",
@@ -69845,7 +69845,7 @@
       },
       {
         "id": "b",
-        "text": "As substâncias A e B atravessam a membrana da mesma forma, porém a substância B deixa de entrar na célula a partir da concentração de 2mg/mL"
+        "text": "As substâncias A e B atravessam a membrana da mesma forma, porém a substância B deixa de entrar na célula a partir da concentração de 2 mg/mL"
       },
       {
         "id": "c",
@@ -69856,7 +69856,7 @@
         "text": "As duas substâncias penetram na célula livremente, por um mecanismo de difusão facilitada, porém a entrada da substância A ocorre por transporte ativo, como indica sua representação linear no gráfico"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. A forma da curva revela o mecanismo. A substância A entra numa velocidade sempre proporcional à concentração externa, sem limite à vista: é difusão simples, que depende apenas do gradiente. A substância B começa entrando rápido, mas a velocidade estabiliza num patamar — sinal de que existe um número finito de proteínas transportadoras na membrana e, uma vez todas ocupadas, aumentar a concentração externa não acelera mais nada. Esse patamar é a saturação, marca registrada da difusão facilitada. A alternativa b confunde saturação com interrupção da entrada, e a d chama o transporte de A de ativo, quando ele é passivo.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_010-p11.webp",
@@ -69892,7 +69892,7 @@
         "text": "substratos, processos, biológicos, termoquímicos, inorgânicos e orgânicos"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. A tabela cruza duas classificações que o próprio texto anuncia. Nas linhas, aquilo de que o metano se forma — o número 1 é substratos, subdividido em orgânicos (5), como acetato, álcool e metilaminas, e inorgânicos (6), como CO2, H2 e CO. Nas colunas, o modo como ele se forma — o número 2 é processos, subdividido em biológicos (3), representados pela metanogênese microbiana, e termoquímicos (4), representados pela pirólise e pela síntese. Basta ler o conteúdo de cada célula para confirmar: onde aparece metanogênese, a coluna é biológica; onde aparecem pirólise e síntese, é termoquímica.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_012-p12.webp",
@@ -69928,7 +69928,7 @@
         "text": "a caça dos grandes mamíferos altera a renovação da floresta, pois eles desempenham um papel fundamental na dispersão de sementes grandes"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. Grandes mamíferos frugívoros, como antas e queixadas, engolem frutos inteiros e depositam as sementes longe da planta-mãe — são os únicos capazes de dispersar sementes grandes, que animais menores não conseguem transportar. Retirá-los da floresta empobrece a regeneração e altera a composição da mata ao longo das décadas, mesmo que a vegetação pareça intacta. É o fenômeno da floresta vazia. As alternativas a e c supõem que carnívoros e herbívoros sejam intercambiáveis no fluxo de energia, e a b afirma que animais pequenos substituem a função ecológica dos grandes, o que a dispersão de sementes grandes desmente.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_015-p15.webp",
@@ -69964,7 +69964,7 @@
         "text": "Dois terços da área desmatada representam o bioma com grande reserva de madeira tropical, vegetação rica em espécies de plantas suculentas e com espinhos, e fonte de riqueza natural"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. O bioma característico de savana no Brasil é o Cerrado, que combina formações florestais estacionais, campos e cerrado propriamente dito, e abriga as nascentes de três grandes bacias hidrográficas, o que explica seu elevado potencial aquífero. Em 2019 ele respondeu por cerca de um terço da área desmatada, ficando atrás apenas da Amazônia. A alternativa c atribui à Amazônia a exclusividade brasileira, quando ela se estende por vários países — exclusivamente brasileiros são o Cerrado e a Caatinga; e a d descreve vegetação de suculentas e espinhos, que é a Caatinga, não o bioma de maior desmatamento.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_016-p16.webp",
@@ -70004,7 +70004,7 @@
         "text": "A amostra D contém espécies encontradas no declive continental, que se fixam no substrato dos ecossistemas aquáticos"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. Bentos é o conjunto de organismos que vivem fixos ao fundo ou associados ao substrato — corais, esponjas, algas fixas, moluscos bivalves —, e é isso que caracteriza a amostra D, coletada no declive continental. As demais alternativas erram na definição dos grupos ou dos ambientes: foraminíferos, algas e dinoflagelados da amostra A são organismos de águas iluminadas e salinas, não da região abissal (a); a região abissal tem, sim, seres vivos, e a amostra B, com pólen e sem organismos marinhos, é continental (b); e o plâncton da amostra C é justamente o conjunto de organismos que não nadam ativamente, mas se deixam levar pelas correntes (c).",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_018-p18.webp",
@@ -70040,7 +70040,7 @@
         "text": "A radiação tem impactos negativos sobre animais e plantas, porém a ausência de atividade humana no ambiente contaminado por radiação favorece o crescimento das populações desses organismos"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. As duas coisas são verdadeiras ao mesmo tempo: a radiação é prejudicial a plantas e animais, aumentando mutações e reduzindo a sobrevivência dos indivíduos expostos, e ainda assim a fauna prosperou em Chernobyl. O que explica o aparente paradoxo é a comparação: a pressão que a presença humana exercia — caça, agricultura, estradas, ocupação do território — foi retirada de uma vez, e o saldo líquido para as populações acabou positivo. A alternativa a atribui o retorno à descontaminação, que não ocorreu na escala necessária, e as alternativas b e c inventam efeitos benéficos da radiação que a biologia não sustenta.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_020-p20.webp",
@@ -70076,7 +70076,7 @@
         "text": "ambientes hostis são mais limitantes para a diversidade que ambientes hospitaleiros"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. O gráfico e o texto descrevem a mesma curva em forma de sino: a diversidade cresce enquanto os recursos saem da escassez extrema, atinge um máximo em condições intermediárias e volta a cair quando há fartura. A queda final é o ponto que a questão cobra — com nutrientes abundantes, as espécies mais eficientes na captação de recursos crescem depressa, sombreiam e excluem as demais, e a comunidade se empobrece. A alternativa b descreve apenas o trecho ascendente, ignorando a reversão; a c confunde biomassa com diversidade; e a d supõe uma assimetria entre ambientes hostis e hospitaleiros que a curva simétrica não autoriza.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_024-p23.webp",
@@ -70112,7 +70112,7 @@
         "text": "Trata-se de um caso de repulsa mútua entre as duas espécies, sendo mais perceptível nas ilhas Daphne e Los Hermanos"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. Nas ilhas em que cada espécie vive sozinha, as duas apresentam bicos de profundidade intermediária e semelhante. Onde convivem, em simpatria, as distribuições se afastam: uma passa a ter bicos menores e a outra, maiores. Esse afastamento é o deslocamento de caracteres, resultado da competição por sementes — indivíduos com bicos diferentes exploram sementes de tamanhos diferentes, sofrem menos concorrência e deixam mais descendentes. Não há cooperação (a), nem predação entre as espécies (c), e falar em repulsa mútua (d) descreve o resultado sem nomear o mecanismo evolutivo que o produz.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_027-p25.webp",
@@ -70148,7 +70148,7 @@
         "text": "O animal B apresenta simetria bilateral e é acelomado"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. A água-viva do desenho A é um cnidário: seu corpo se organiza em torno de um eixo central, com partes dispostas ao redor dele, o que caracteriza a simetria radial, e ela não possui celoma — é acelomada. A tartaruga do desenho B é um cordado, com simetria bilateral, um plano que divide o corpo em metades espelhadas, e possui celoma bem desenvolvido. As demais alternativas trocam simetria ou condição celomática entre os dois animais.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_030-p27.webp",
@@ -70188,7 +70188,7 @@
         "text": "morcegos são os grupos irmãos dos SARS-CoV, SARS-CoV-2 e MERS-CoV de humanos"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. No cladograma, os betacoronavírus isolados de morcegos aparecem como grupo irmão dos ramos que incluem SARS-CoV, SARS-CoV-2 e MERS-CoV humanos — ou seja, esses três compartilham com os vírus de morcego um ancestral comum mais recente do que com qualquer outro grupo da árvore. É a evidência filogenética que sustenta a hipótese zoonótica com morcegos como reservatório natural, ainda que hospedeiros intermediários possam ter participado da passagem para o ser humano. As alternativas que colocam os artiodáctilos nessa posição confundem a origem dos coronavírus humanos mais brandos, como o HCoV-OC43, com a dos três agentes graves.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_032-p29.webp",
@@ -70228,7 +70228,7 @@
         "text": "pode ser um fóssil de transição, pois os ancestrais das serpentes que não utilizavam seus membros com tanta frequência sofreram atrofia desses membros, deixando de transferir tal característica para seus descendentes"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. O fóssil combina traços de serpente, como o corpo alongado com muitas vértebras e costelas, com membros ainda presentes, embora reduzidos — exatamente o que se espera de uma forma próxima da base da linhagem das serpentes. Nada nisso contraria a evolução: o ancestral comum de lagartos e serpentes tinha membros, e a redução progressiva ocorreu por seleção natural ao longo de muitas gerações, favorecendo formas mais eficientes em ambientes de vegetação densa ou de escavação. As alternativas a e b negam a possibilidade sem fundamento, e a d recorre à ideia lamarckista de atrofia por desuso, que não é o mecanismo aceito.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_035-p32.webp",
@@ -70264,7 +70264,7 @@
         "text": "2N AA + N Aa 2(N AA + N Aa + N aa )"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. Cada indivíduo diploide tem dois alelos nesse loco, de modo que o total de alelos na população é 2(N_AA + N_Aa + N_aa). Os alelos A vêm de duas fontes: cada homozigoto AA contribui com dois, somando 2N_AA, e cada heterozigoto Aa contribui com um, somando N_Aa. A frequência é a razão entre essas duas contagens: (2N_AA + N_Aa) dividido por 2(N_AA + N_Aa + N_aa). As demais alternativas contam indivíduos em vez de alelos, ou esquecem que o heterozigoto entra com apenas metade de sua contribuição para o alelo A.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_036-p33.webp",
@@ -70300,7 +70300,7 @@
         "text": "simetria pentarradial, com eixo dorsoventral bem definido, características não encontradas em cnidários, cordados e equinodermos"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. A Spriggina tem um corpo alongado com segmentos dispostos em torno de um eixo longitudinal e uma extremidade anterior distinta da posterior — isto é, simetria bilateral com eixo ântero-posterior definido, o plano corporal da grande maioria dos animais atuais. Poríferos não têm simetria definida, cnidários têm simetria radial, e equinodermos adultos têm simetria pentarradial, embora suas larvas sejam bilaterais. Por isso a combinação da alternativa a. As outras opções atribuem ao fóssil simetria radial, dorsoventral ou pentarradial, ou excluem grupos que de fato são bilaterais, como moluscos e cordados.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_037-p33.webp",
@@ -70317,26 +70317,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Biologia · questão 38 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "O mapa mostra a região do istmo do Panamá, com a localidade A no oceano Atlântico (mar do Caribe) e a localidade B no oceano Pacífico, separadas pela faixa de terra que une as Américas. Um estudo mostrou que na localidade A são encontradas sete espécies de camarões-pistola. Na localidade B são encontradas outras sete espécies, sendo que cada espécie do local A tem uma espécie-irmã correspondente no local B (espécies-irmãs são espécies originadas de um mesmo ancestral comum recente). É correto afirmar que:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "o canal do Panamá permitiu que camarões-pistola migrassem de A para B, adaptando-se ao novo ambiente, diferenciando-se e originando novas espécies semelhantes às do lado A"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "vulcões expeliram substâncias mutagênicas durante o Terciário, o que aumentou a variabilidade genética dos camarões-pistola, originando espécies-irmãs nas áreas oceânicas A e B"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "o istmo do Panamá interpôs uma barreira geográfica, formando dois grupos isolados para cada espécie ancestral, que puderam então se diferenciar, originando espécies-irmãs nos oceanos A e B"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "o impacto de um asteroide no final do Cretáceo levou a uma extinção em massa, fornecendo as condições para a radiação adaptativa dos camarões-pistola, com consequente formação de espécies-irmãs"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. O emparelhamento é a pista decisiva: sete espécies de um lado, sete do outro, cada uma com sua irmã do lado oposto. Esse padrão só se explica se uma população ancestral única foi cortada ao meio e cada metade seguiu seu próprio caminho evolutivo. Foi o que fez o soerguimento do istmo do Panamá, há cerca de três milhões de anos, ao separar Atlântico e Pacífico: é o modelo clássico de especiação alopátrica, por barreira geográfica. A alternativa a inverte a cronologia, já que o canal é obra recente do século XX, e as alternativas b e d apelam a eventos que não produziriam pares de espécies-irmãs tão simétricos.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_038-p34.webp",
@@ -70376,7 +70376,7 @@
         "text": "As espécies 2 e 4 são mais próximas entre si do que as espécies 1 e 2"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. Quanto menos diferenças entre duas sequências, mais recente o ancestral comum. Comparando as espécies 1 e 3, há uma única troca de base; entre 3 e 4, as diferenças são muitas, espalhadas por toda a sequência. Logo 1 e 3 são mais próximas entre si do que 3 e 4. A alternativa a coloca a espécie 4, a mais divergente de todas, como próxima da 1; a b afirma que 2 e 3 são mais próximas que 1 e 3, quando o número de diferenças é igual ou maior; e a d compara 2 com 4, novamente escolhendo a sequência mais destoante.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_040-p35.webp",
@@ -70412,7 +70412,7 @@
         "text": "(i) nervoso; (ii) ocitocina; (iii) do ciclo circadiano; (iv) da reprodução"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. A pineal é uma glândula endócrina, e não parte do sistema nervoso, ainda que esteja alojada no encéfalo: ela lança seu produto diretamente no sangue. Esse produto é a melatonina, secretada sobretudo no escuro, e é ela que sincroniza o ciclo circadiano, o relógio interno de cerca de 24 horas que organiza sono e vigília. A melatonina também participa da regulação da maturação sexual e da reprodução. A ocitocina, citada nas outras alternativas, é produzida no hipotálamo e liberada pela neuro-hipófise, e a secreção da tireoide é comandada pelo TSH da adeno-hipófise.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_044-p37.webp",
@@ -70452,7 +70452,7 @@
         "text": "III-C"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. O enunciado diz que o grupo do cigarro eletrônico foi o mais afetado nos dois indicadores: maior aumento do espaço aéreo alveolar e maior redução do número de capilares. Basta procurar a fotomicrografia com os alvéolos mais dilatados e as paredes mais rarefeitas, com o menor número de setas apontando capilares — é o painel II —, e associá-la à coluna do gráfico com a maior área de espaço aéreo e a menor contagem de capilares, o grupo C. Os painéis com alvéolos pequenos e numerosos capilares correspondem ao ar ambiente, e o intermediário, à nicotina isolada.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_045-p39.webp",
@@ -70492,7 +70492,7 @@
         "text": "a curva B, sendo que o eixo horizontal representa a temperatura interna e o eixo vertical, a liberação de 2 CO"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. O ser humano é endotérmico: mantém a temperatura interna praticamente fixa, e para isso precisa gastar mais energia quando o ambiente esfria. Assim, a curva que se aplica a nós relaciona a temperatura externa, no eixo horizontal, ao consumo de oxigênio, no eixo vertical, e sobe à medida que a temperatura externa cai — é a curva A. Nos ectotérmicos o padrão é o oposto: o metabolismo acompanha a temperatura ambiente e o consumo de oxigênio cresce com o aquecimento. Colocar a temperatura interna no eixo horizontal, como fazem as alternativas b e d, não faz sentido para um endotérmico, que a mantém constante.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_047-p41.webp",
@@ -70528,7 +70528,7 @@
         "text": "O alimento A estimula a liberação de insulina na circulação sanguínea"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. O alimento A provoca elevação acentuada da glicemia, e é justamente essa elevação que o pâncreas detecta: as células beta das ilhotas liberam insulina, que promove a captação de glicose pelas células e faz a curva voltar ao valor basal. O alimento B eleva a glicemia de forma bem mais discreta, mas eleva — o que derruba a alternativa a, e também a b, já que um alimento capaz de alterar a glicemia contém carboidratos. A alternativa c inventa um efeito emagrecedor mediado por adrenalina, hormônio que faz o contrário da insulina, aumentando a glicose disponível no sangue.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_048-p42.webp",
@@ -70564,7 +70564,7 @@
         "text": "dentes de superfície plana revelam uma dieta herbívora composta predominantemente de gramíneas e são típicos de onívoros como os felinos, representados na imagem A acima"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. Dentes de formatos variados — incisivos para cortar, caninos longos e pontiagudos para perfurar e rasgar, molares estreitos e cortantes — compõem a dentição típica de um carnívoro, e é essa a dentição do crânio A, com caninos proeminentes e molares em lâmina. O crânio B, com molares largos de superfície plana e caninos discretos, é o de um herbívoro adaptado a triturar vegetais fibrosos. As alternativas a e d confundem os dois padrões e ainda chamam de onívoros animais que são herbívoros ou felinos, e a c localiza os caninos de carnívoro na imagem errada.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_049-p43.webp",
@@ -70581,26 +70581,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Biologia · questão 50 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Em relação à forma predominante de excreção dos animais, é correto afirmar que:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "peixes são animais amoniotélicos, aves e répteis são ureotélicos e mamíferos são uricotélicos"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "a ureia é altamente tóxica e insolúvel em água, sendo a principal excreta das aves"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "peixes, exceto os condrictes, são amoniotélicos e aves e répteis adultos são ureotélicos"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "a amônia é altamente tóxica e necessita de um grande volume de água para ser eliminada"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. A amônia é o produto direto da degradação de aminoácidos e é muito tóxica, mas também muito solúvel; por isso só pode ser eliminada por animais que dispõem de água em abundância para diluí-la, como os peixes ósseos, que a difundem pelas brânquias. Mamíferos convertem a amônia em ureia, menos tóxica e eliminável com volume moderado de água, e aves e répteis produzem ácido úrico, praticamente insolúvel, que sai em pasta e quase não gasta água. A alternativa a inverte mamíferos e aves, a b atribui à ureia a toxicidade da amônia, e a c chama aves e répteis de ureotélicos.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_050-p43.webp",
@@ -70617,26 +70617,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Biologia · questão 52 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "A pressão parcial do gás O2 (pO2) e a do gás CO2 (pCO2) foram medidas em duas amostras (I e II) de sangue colhidas simultaneamente de um homem normal. A amostra I teve pO2 = 104 mm Hg e pCO2 = 40 mm Hg, enquanto a amostra II teve pO2 = 40 mm Hg e pCO2 = 45 mm Hg. Em relação ao caso em análise, é correto afirmar que:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "A amostra I corresponde a sangue arterial, que pode ter sido obtido de artéria pulmonar, que cede O2 para as células corporais com baixa concentração desse gás"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "A amostra II corresponde a sangue venoso, que pode ter sido obtido de veias pulmonares, que levam sangue do pulmão ao coração"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "A amostra II pode ter sido obtida de uma artéria pulmonar, que leva sangue do coração ao pulmão, onde a pO2 do ar é menor que a do sangue que chega a esse órgão"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "A amostra I pode ter sido obtida de veias pulmonares, que chegam ao coração trazendo sangue oxigenado, que será usado para irrigar o próprio coração e outros órgãos"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. A amostra I, com pO2 alta e pCO2 baixa, é sangue arterial recém-oxigenado; ele deixa os pulmões pelas veias pulmonares e chega ao átrio esquerdo, de onde segue para irrigar o corpo, incluindo o próprio músculo cardíaco pelas coronárias. A questão explora um ponto que confunde: nem toda veia carrega sangue venoso — as veias pulmonares são a exceção. A alternativa a coloca sangue arterial na artéria pulmonar, que na verdade leva sangue venoso; a b faz o inverso com as veias pulmonares; e a c inverte o gradiente de oxigênio, que no pulmão vai do ar alveolar para o sangue.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_052-p45.webp",
@@ -70676,7 +70676,7 @@
         "text": "(4)"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. Mendel trabalhou fazendo polinizações controladas entre ervilhas de características contrastantes e acompanhando estatisticamente a descendência ao longo das gerações — exatamente o que o infográfico chama de traditional breeding, cruzar plantas e selecionar a prole. As demais técnicas surgiram muito depois: a mutagênese por agentes químicos ou radiação é do século XX, a interferência por RNA foi descrita nos anos 1990, e a transgenia por DNA recombinante depende de ferramentas de biologia molecular que sequer existiam no tempo de Mendel, que nem conhecia a existência do DNA.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_053-p46.webp",
@@ -70712,7 +70712,7 @@
         "text": "flor I: A e C; flor II: B e C"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. Basta ler cada flor pelos verticilos presentes. A flor I tem sépalas e pétalas, mas nenhuma estrutura reprodutiva: o perianto exige o gene A, a diferenciação de pétalas exige o B, e a ausência de estames e carpelos indica que o C não está ativo — logo, A e B. A flor II tem sépalas e um carpelo central, sem pétalas nem estames: o perianto pede o A, os verticilos reprodutivos pedem o C, e a ausência de pétalas e de estames indica que o B está inativo — logo, A e C. As demais combinações previam pétalas ou órgãos reprodutivos que as figuras não mostram.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_054-p47.webp",
@@ -70748,7 +70748,7 @@
         "text": "apresenta herança ligada ao cromossomo Y"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. No heredograma, indivíduos afetados aparecem em todas as gerações, sempre com pelo menos um dos pais também afetado, e a doença atinge homens e mulheres em proporções semelhantes — a assinatura da herança autossômica dominante. Se fosse recessiva, seria comum ver filhos afetados de pais normais, o que não ocorre. Herança ligada ao X mostraria excesso de homens afetados e transmissão característica de mãe para filho, e herança ligada ao Y afetaria exclusivamente homens, passando de pai para todos os filhos homens — nada disso se verifica.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_056-p49.webp",
@@ -70765,26 +70765,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Biologia · questão 57 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "A anemia falciforme é uma doença hereditária que se caracteriza pelo formato de foice adquirido pelas hemácias depois que o oxigênio é liberado, resultando em anemia crônica. Apresenta-se a seguir parte do RNA mensageiro, com o códon de iniciação, da subunidade β da hemoglobina humana normal (Hbb) e da hemoglobina mutada na anemia falciforme (HbS). Hbb: caa aca gac acc aug gug cau cug acu ccu gag gag aag ucu. HbS: caa aca gac acc aug gug cau cug acu ccu gug gag aag ucu. Considere a sequência de trincas apresentadas e o código genético, em que GAG codifica ácido glutâmico e GUG codifica valina. É correto afirmar que a mutação genética da doença:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "altera a 11ª posição de aminoácidos, trocando leucina por histidina"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "altera a 7ª posição de aminoácidos, trocando ácido glutâmico por valina"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "altera a 11ª posição de aminoácidos, trocando ácido glutâmico por valina"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "altera a 7ª posição de aminoácidos, trocando leucina por histidina"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. A contagem dos aminoácidos começa no códon de iniciação, e não no começo da sequência transcrita: o AUG é o aminoácido 1. Contando a partir dele — aug, gug, cau, cug, acu, ccu, gag — a trinca alterada é a sétima. No RNA normal ela é GAG, ácido glutâmico; no HbS é GUG, valina. Trocar um aminoácido de cadeia lateral carregada por outro apolar altera a superfície da hemoglobina e permite que as moléculas se agreguem quando desoxigenadas, o que deforma a hemácia em foice. Quem conta a partir da primeira trinca da sequência, ignorando o sítio de início, chega à 11ª posição.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_057-p50.webp",
@@ -70824,7 +70824,7 @@
         "text": "apenas plantas com ramos de folhas verde-escuro"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. Os cloroplastos são herdados apenas pelo citoplasma do óvulo, de modo que o fenótipo da prole depende só do ramo materno que produziu a flor. Se a flor está num ramo variegado de uma planta mesclada, os óvulos recebem uma mistura aleatória de cloroplastos: alguns só normais, outros só mutantes, outros de ambos os tipos. O resultado são plantas verde-escuras, brancas e mescladas — os três fenótipos. Sementes de flores em ramos exclusivamente verdes dariam só plantas verdes, e de ramos brancos, só plantas brancas, que não sobrevivem por não fazerem fotossíntese.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_060-p53.webp",
@@ -70841,26 +70841,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Biologia · questão 64 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Para um determinado caráter, fenótipo é o conjunto de características que o organismo exibe como fruto de seu genótipo. No entanto, no molusco hermafrodita Lymnaea peregra, ocorre algo diferente. Neste animal, há dois tipos de fenótipo da concha, dextrógira e levógira, que não são determinados pelo genótipo do próprio indivíduo. A prole formada pela fertilização de óvulos vindos de um parental com genótipos AA ou Aa tem conchas dextrógiras; já a prole formada pela fertilização de óvulos vindos de um parental aa tem conchas levógiras. Se óvulos de um molusco Aa forem fertilizados por espermatozoides de um molusco aa, as probabilidades de ocorrência de indivíduos Aa dextrógiros, Aa levógiros, aa dextrógiros e aa levógiros na prole resultante são, respectivamente:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "1/4, 1/4, 1/4 e 1/4"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "1/2, 0, 0 e 1/2"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "1/2, 0, 1/2 e 0"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "1, 0, 0 e 0"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. Este é um caso de efeito materno: quem determina o sentido do enrolamento da concha é o genótipo da mãe, não o do próprio indivíduo. Como a mãe é Aa, todos os filhotes serão dextrógiros, seja qual for o genótipo que herdarem — logo as duas probabilidades de levógiros são zero. Os genótipos, por sua vez, seguem a genética comum: do cruzamento Aa × aa saem metade Aa e metade aa. Combinando as duas coisas, tem-se 1/2 de Aa dextrógiros e 1/2 de aa dextrógiros, e nenhum levógiro.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_064-p56.webp",
@@ -70877,26 +70877,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Biologia · questão 65 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Em certa espécie animal a proporção de nucleotídeos Timina na molécula de DNA é igual a t > 0. Então, a proporção de nucleotídeos Citosina nesse mesmo DNA é igual a:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "1 − t"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "t/2"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "1 − t/2"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "1/2 − t"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. Pela regra de Chargaff, no DNA de fita dupla A = T e C = G. Se a timina representa a fração t do total de nucleotídeos, a adenina também representa t, e juntas somam 2t. O que sobra, 1 − 2t, é dividido igualmente entre citosina e guanina, de modo que cada uma vale (1 − 2t)/2, ou seja, 1/2 − t. As demais alternativas ou esquecem que a adenina acompanha a timina, ou dividem o total errado entre as quatro bases.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_065-p56.webp",
@@ -70936,7 +70936,7 @@
         "text": "(i) respiração cutânea; (ii) cório e alantoide; (iii) três câmaras cardíacas; (iv) presença de glândulas mamárias"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. Cada marca no cladograma é a novidade do ramo que ela precede. A marca (i) fica no ramo do sapo: a respiração cutânea, que complementa a pulmonar nos anfíbios. A (ii) está no nó que reúne tucano e mico, e a característica compartilhada por aves e mamíferos, ausente nos anfíbios, é o coração com quatro câmaras completamente separadas. A (iii) aparece só no ramo do tucano: a ausência de dentes, substituídos pelo bico córneo. E a (iv), no ramo do mico, são as glândulas mamárias. As demais alternativas colocam pelos e cório no lugar errado ou atribuem três câmaras a aves e mamíferos.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_080-p65.webp",
@@ -70972,7 +70972,7 @@
         "text": "As minhocas são invertebrados do filo dos anelídeos, possuem pseudoceloma e reprodução assexuada, são predadoras de pragas agrícolas e melhoram o arejamento do solo"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. O animal é a minhoca, invertebrado do filo dos anelídeos: corpo dividido em anéis, ou metâmeros, e cavidade corporal revestida por mesoderme, isto é, celomado. Sua importância ecológica está na decomposição — ela ingere restos vegetais e solo, devolve matéria orgânica processada em forma de húmus e, ao escavar galerias, areja o solo e melhora a infiltração de água. As alternativas b e c confundem a minhoca com a cobra-cega e trocam o filo; a d acerta o grupo mas erra a anatomia, chamando-a de pseudocelomada, e a biologia, chamando-a de predadora com reprodução assexuada.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_081-p66.webp",
@@ -71008,7 +71008,7 @@
         "text": "Diferentemente dos mamíferos placentários, os ornitorrincos apresentam autofecundação e produzem ovos"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. O ornitorrinco é um mamífero monotremado, e é justamente aí que está a curiosidade: ele põe ovos, como os répteis e as aves, e ainda assim alimenta os filhotes com leite, como todo mamífero — só que sem mamilos, secretando o leite por poros da pele que os filhotes lambem. A alternativa b nega a produção de leite, que é a característica definidora do grupo; a c afirma que o embrião se nutre exclusivamente do vitelo à semelhança dos placentários, quando são justamente os placentários que se nutrem pela placenta; e a d inventa autofecundação, inexistente em mamíferos.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_083-p67.webp",
@@ -71044,7 +71044,7 @@
         "text": "ingestão de ovos do parasita; e cozinhar adequadamente as carnes de porco e de boi para evitar a ingestão de cisticercos."
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. As duas doenças têm o mesmo agente, a Taenia, mas caminhos distintos. A teníase vem da ingestão de cisticercos presentes na carne crua ou malcozida de porco ou de boi, e por isso se previne cozinhando bem a carne. A cisticercose humana vem da ingestão dos ovos do parasita, eliminados nas fezes de quem tem teníase, que contaminam água e alimentos — daí lavar bem os alimentos e beber água filtrada ou fervida. As demais alternativas trocam ovos por cisticercos no mecanismo, chamam a tênia de nematelminto ou introduzem hospedeiros que não participam do ciclo, como caramujos e barbeiros.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_087-p68.webp",
@@ -71065,26 +71065,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Biologia · questão 89 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Dezenas de espécies de fungos bioluminescentes já foram descritas, sendo 12 encontradas no Brasil. As estruturas fúngicas são capazes de bioluminescer, capacidade que tem significância ecológica uma vez que pode atrair dispersores de esporos, repelir fungívoros fotofóbicos ou indicar toxicidade do fungo. O processo de emissão de luz envolve as enzimas redutase e luciferase, e a emissão depende da presença das duas proteínas: L + NAD(P)H + H+ → LH2 + NAD(P)+ (redutase, enzima solúvel) e LH2 + O2 → LO + H2O + luz (luciferase, enzima insolúvel), em que L é luciferina, LH2 é luciferina reduzida e LO é oxiluciferina. Considerando as estruturas dos fungos e o processo de emissão de luz descrito, assinale a alternativa correta.",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "Corpos de frutificação são estruturas de fixação do fungo ao substrato; a emissão de luz nessas estruturas depende da presença de oxigênio"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "Micélios são as estruturas reprodutivas dos fungos; a emissão de luz nessas estruturas dá-se no momento em que a luciferina é reduzida"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "Hifas são filamentos ricos em quitina que permitem aos fungos obterem nutrientes; a emissão de luz nessas estruturas depende da presença de luciferina reduzida"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "Esporos diploides são produzidos pelos gametângios; a emissão de luz nessas estruturas dá-se com a oxidação da oxiluciferina"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. As hifas são os filamentos que formam o corpo do fungo; sua parede é rica em quitina e é através delas que ocorre a absorção de nutrientes do substrato. Quanto à bioluminescência, a leitura das equações mostra que a luz aparece apenas na segunda reação, catalisada pela luciferase, que oxida a luciferina reduzida (LH2) na presença de O2 — sem LH2 produzido antes pela redutase, não há emissão. A alternativa a inverte a função dos corpos de frutificação, que são reprodutivos; a b chama o micélio de estrutura reprodutiva e associa a luz à redução; e a d atribui a emissão à oxidação da oxiluciferina, que já é o produto final.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_089-p70.webp",
@@ -71101,26 +71101,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Biologia · questão 91 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Plantas são organismos que interferem na composição da atmosfera e regulam o ciclo de carbono em nosso planeta. Enquanto a parte aérea das plantas está exposta a variações de intensidade luminosa, as raízes têm íntimo contato com o solo, fonte de nutrientes essenciais ao seu desenvolvimento. Na figura, uma seta (1) aponta para dentro de uma folha, uma seta (2) aponta para fora de outra folha, uma seta (3) desce ao longo do caule e uma seta (4) entra pela raiz. Considerando a figura e a biologia de uma planta terrestre mesófita na ausência de luz, assinale a alternativa que identifica corretamente as moléculas nas posições numeradas.",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "(1) O2; (2) CO2; (3) amido; (4) sacarose"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "(1) CO2; (2) O2; (3) sacarose; (4) nitrogênio"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "(1) O2; (2) CO2; (3) sacarose; (4) nitrogênio"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "(1) CO2; (2) O2; (3) amido; (4) sacarose"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. A condição decisiva é a ausência de luz: sem fotossíntese, a planta apenas respira, consumindo O2 (seta 1, que entra) e liberando CO2 (seta 2, que sai). A seta 3, descendo pelo caule, representa a seiva elaborada conduzida pelo floema, cujo açúcar de transporte é a sacarose — o amido é forma de reserva, insolúvel, e não circula. E a seta 4, entrando pela raiz, corresponde à absorção de nutrientes minerais do solo, entre eles o nitrogênio. Quem esquece a ausência de luz inverte as setas 1 e 2, como nas alternativas b e d.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_091-p71.webp",
@@ -71156,7 +71156,7 @@
         "text": "por pequenos mamíferos que transportam o pólen da antera para o estigma nas monocotiledôneas mencionadas"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. A polinização é o transporte do pólen da antera, parte masculina do estame, até o estigma, extremidade receptiva do gineceu — nunca o contrário, o que já elimina as alternativas b e c, que invertem o sentido. Os principais polinizadores das culturas citadas são insetos, sobretudo abelhas: o maracujá depende das mamangavas, e a castanha-do-brasil, de abelhas de grande porte capazes de abrir suas flores. Maracujá, maçã, acerola e castanha-do-brasil são eudicotiledôneas, o que descarta as alternativas que as classificam como monocotiledôneas.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_092-p71.webp",
@@ -71196,7 +71196,7 @@
         "text": "Subtipo IIb"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. A escolha industrial ideal reúne duas vantagens: muita celulose por volume de madeira, para render mais polpa por área plantada, e pouca lignina, para reduzir a quantidade de reagente poluente gasto na digestão química. Nas microscopias, o tipo II apresenta paredes celulares mais espessas em relação ao lume, ou seja, mais material de parede por volume de tecido; entre os seus dois subtipos, o subtipo a é o que combina esse ganho com o menor teor de lignina. Por isso o subtipo IIa é o mais desejável tanto do ponto de vista industrial quanto do ambiental.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_094-p73.webp",
@@ -71236,7 +71236,7 @@
         "text": "Na ausência de genes na região A, a flor será menos visitada por polinizadores"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. A região A é a que especifica os verticilos externos, sépalas e pétalas. Sem ela, restam apenas as regiões B e C, e a flor perde justamente as pétalas — as estruturas coloridas e vistosas que atraem os polinizadores. Uma flor sem corola é, portanto, muito menos visitada. As demais alternativas contrariam o modelo: sem a região B a flor tem só sépalas e carpelo, sem estames, logo não produz pólen nem pode se autofecundar, o que derruba a a e a c; e com apenas A e B não há carpelo, sem o qual não se forma fruto, o que derruba a b.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_097-p75.webp",
@@ -71272,7 +71272,7 @@
         "text": "as plantas fazem mais fotossíntese e respiram menos na estação chuvosa"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. À noite, quando não há fotossíntese, o fluxo de CO2 é inteiramente respiratório, e o gráfico mostra que nesse período a curva da estação chuvosa se mantém acima da curva da estação seca — mais CO2 liberado significa mais respiração. Com água disponível a floresta está metabolicamente mais ativa, e tanto a fotossíntese quanto a respiração aumentam, o que também derruba a alternativa d, que afirma respiração menor na estação chuvosa. A alternativa a inverte a curva diurna, cujo pico de absorção ocorre por volta do meio-dia, e a c chama de pico de respiração o momento de maior fotossíntese.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_098-p76.webp",
@@ -71308,7 +71308,7 @@
         "text": "B é Briófita, D é Traqueófita e E possui sementes"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. No cladograma, cada característica marca o ramo a partir do qual ela aparece. A clorofila a e b reúne todo o grupo, inclusive A, que são as algas verdes. O embrião surge em B: são as briófitas, que ainda não têm vasos. Os vasos condutores aparecem em C, as pteridófitas, que se reproduzem por esporos. As sementes surgem em D, as gimnospermas — que, por já terem vasos, são traqueófitas. E a flor e o fruto definem E, as angiospermas, que naturalmente também possuem sementes. A alternativa a chama A de briófita, e as b e c colocam C entre as plantas com semente.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_099-p76.webp",
@@ -71344,7 +71344,7 @@
         "text": "dendrito, cloroplasto, DNA, endométrio, estômato"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. Todas as cinco estruturas listadas existem em vegetais: mitocôndria, presente em qualquer célula eucariótica; vacúolo, que ocupa grande parte do volume da célula vegetal adulta; tilacoide, a membrana interna do cloroplasto onde ocorre a fase fotoquímica; vasos, do xilema e do floema; e cromossomo, no núcleo. As outras opções incluem estruturas exclusivamente animais: arquêntero é a cavidade do embrião animal na gastrulação, axônio é prolongamento de neurônio, e dendrito e endométrio pertencem, respectivamente, ao sistema nervoso e ao útero.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_100-p76.webp",
@@ -71365,26 +71365,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Biologia · questão 101 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "O crescimento das plantas é afetado pelo balanço entre a fotossíntese e a respiração. Nos gráficos, referentes a duas espécies de plantas, a espécie X tem fotossíntese que sobe de 5 a 20 µmol m⁻² s⁻¹ entre 15 e 30 °C e depois cai a 5 aos 45 °C, com respiração subindo de 1 a 8 no mesmo intervalo; a espécie Y tem fotossíntese que sobe de 3 a 20 µmol m⁻² s⁻¹ entre 15 e 35 °C e cai a 15 aos 45 °C, com respiração também subindo de 1 a 8. Sobre as espécies X e Y, é correto afirmar:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "A espécie Y não apresenta ganho líquido de carbono a 15 °C"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "As duas espécies têm perda líquida de carbono a 45 °C"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "A espécie Y crescerá menos do que a espécie X a 25 °C"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "As duas espécies têm ganho líquido de carbono a 45 °C"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. O que determina o crescimento é a diferença entre fotossíntese e respiração, e não a fotossíntese sozinha. A 25 °C, a espécie X fotossintetiza cerca de 15 e respira cerca de 2, com saldo próximo de 13; a espécie Y fotossintetiza cerca de 10 e respira o mesmo tanto, com saldo próximo de 8. Logo Y cresce menos que X nessa temperatura. A alternativa a erra porque a 15 °C a espécie Y ainda fotossintetiza mais do que respira; e a 45 °C só a espécie X fica no vermelho, com fotossíntese de 5 contra respiração de 8, enquanto Y mantém saldo positivo — o que derruba tanto a b quanto a d.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_101-p77.webp",
@@ -71420,7 +71420,7 @@
         "text": "xilemáticos e a transpiração ocorre pelos estômatos"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. A água absorvida pelas raízes sobe pelo xilema, formado por células mortas e ocas que constituem um encanamento contínuo até as folhas; o floema faz o caminho da seiva elaborada, com açúcares produzidos na fotossíntese, e não o transporte de água das raízes. Nas folhas, a água sai na forma de vapor pelos estômatos, poros regulados por células-guarda que abrem e fecham conforme a disponibilidade hídrica — são eles que fazem a floresta funcionar como bomba de vapor para a atmosfera. Tricomas são pelos epidérmicos que, ao contrário, costumam reduzir a perda de água.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_102-p77.webp",
@@ -71460,7 +71460,7 @@
         "text": "gimnospermas e angiospermas"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. Cada marca no cladograma indica a novidade compartilhada por tudo o que vem depois dela. O grupo 1, que se separa antes dos vasos condutores, são as briófitas; o grupo 2, que já tem vasos mas ainda não tem sementes, são as pteridófitas; o grupo 3 aparece depois da marca sementes e antes de flores e frutos, sendo portanto as gimnospermas; e o grupo 4, que reúne sementes com flor e fruto, são as angiospermas. Por isso 3 e 4 correspondem, nessa ordem, a gimnospermas e angiospermas — a alternativa a inverte os dois, e as demais deslocam pteridófitas e briófitas para posições que o diagrama não permite.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_103-p79.webp",
