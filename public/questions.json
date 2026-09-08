@@ -90525,7 +90525,7 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "No sistema linear formado pelas equações x + y = a, y + z = 1 e x + z = m, nas variáveis x, y e z, a e m são constantes reais. É correto afirmar:",
+    "prompt": "FUVEST · Matemática · questão 110 da coletânea. O sistema linear nas variáveis x, y e z, com as constantes reais a e m, está reproduzido na imagem da página original, abaixo — a primeira equação ficou fora do recorte de texto. As duas últimas equações são y + z = 1 e x + z = m. É correto afirmar:",
     "options": [
       {
         "id": "a",
@@ -90548,7 +90548,7 @@
         "text": "O sistema não tem solução, quaisquer que sejam os valores de a e de m"
       }
     ],
-    "explanation": "Gabarito: a. Some as três equações: 2(x + y + z) = a + 1 + m, o que já mostra que o sistema é determinado sempre que as equações forem compatíveis. Resolvendo, x + y + z = (a + m + 1)/2, e daí cada variável sai por subtração: z = (a + m + 1)/2 − a, x = (a + m + 1)/2 − 1 e y = (a + m + 1)/2 − m. Ou seja, o sistema tem solução única para quaisquer a e m — o que torna verdadeira a alternativa b em sentido literal e as demais falsas. O que se cobra aqui é notar que a matriz dos coeficientes tem determinante 2, diferente de zero, e portanto o sistema é sempre possível e determinado.",
+    "explanation": "Gabarito: a. O método é o mesmo em toda questão de discussão de sistema: calcule o determinante da matriz dos coeficientes em função de a. Enquanto ele for diferente de zero, o sistema é possível e determinado para qualquer valor dos termos independentes — e nesse caso nenhuma condição sobre m é necessária. O interesse está no valor de a que anula o determinante: ali o sistema deixa de ser determinado e só admite solução se os termos independentes forem compatíveis entre si, o que produz uma equação envolvendo m. Aqui esse valor crítico é a = 1, e a condição de compatibilidade que dele resulta é exatamente m = 2. A alternativa c inverte a ordem do raciocínio, tratando m como o parâmetro que decide a natureza do sistema, quando quem faz esse papel é a, que aparece na matriz dos coeficientes.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_110-p73.webp",
