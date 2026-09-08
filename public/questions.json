@@ -91717,26 +91717,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Matemática · questão 42 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Seja a um número real. Considere as parábolas de equações cartesianas y = x² + 2x + 2 e y = 2x² + ax + 3. Essas parábolas não se interceptam se e somente se:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "|a| = 2"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "|a| < 2"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "|a − 2| < 2"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "|a − 2| ≥ 2"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. Duas curvas se interceptam onde suas ordenadas coincidem, então iguale as expressões: x² + 2x + 2 = 2x² + ax + 3, o que leva a x² + (a − 2)x + 1 = 0. Não haver intersecção significa que essa equação do segundo grau não tem raiz real, isto é, discriminante negativo: (a − 2)² − 4 < 0, ou (a − 2)² < 4. Extraindo a raiz dos dois lados, |a − 2| < 2. A alternativa d descreve exatamente o caso oposto, em que as parábolas se tocam ou se cruzam.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_042-p28.webp",
@@ -91776,7 +91776,7 @@
         "text": "1"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. Resolva cada composta de dentro para fora, lendo no gráfico certo. A curva tracejada é g: ela cruza o eixo x em x = 1, logo g(1) = 0. Levando esse valor à reta quebrada de f, obtém-se f(0) = 1. Do outro lado, f(1) é o ponto mais baixo da reta quebrada, que vale −1; levando −1 ao gráfico de g, a curva tracejada também cruza o eixo ali, de modo que g(−1) = 0. A diferença é 1 − 0 = 1. O erro comum é trocar as funções e ler f onde se deveria ler g.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_044-p30.webp",
@@ -91793,26 +91793,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Matemática · questão 45 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "O gráfico exibe a curva de potencial biótico q(t) para uma população de micro-organismos, ao longo do tempo t: a curva parte de 1000 em t = 0 e cresce cada vez mais rápido, atingindo cerca de 2000 em t = 2, 4000 em t = 3,5 e mais de 7000 em t = 5. Sendo a e b constantes reais, a função que pode representar esse potencial é:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "q(t) = at + b"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "q(t) = a·b^t"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "q(t) = at² + bt"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "q(t) = a + log na base b de t"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. O traço característico do gráfico é que a população dobra em intervalos de tempo aproximadamente iguais: sai de 1000, chega a 2000 e depois a 4000 em passos comparáveis. Crescimento com taxa proporcional ao valor atual é exatamente o comportamento de uma exponencial da forma a·b^t. Uma função afim cresceria em linha reta, com acréscimos constantes; a logarítmica cresceria cada vez mais devagar, o contrário do observado; e a quadrática, embora acelere, não reproduz a duplicação em intervalos regulares.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_045-p31.webp",
@@ -91848,7 +91848,7 @@
         "text": "10 dias"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. A pergunta se resume a contar quantas barras do gráfico ultrapassam a linha dos 30 mm. Traçando mentalmente uma horizontal nessa altura, apenas quatro colunas a cruzam ao longo de todo o verão: as duas mais altas de janeiro, próximas de 71 mm e de 56 mm, e outras duas que passam pouco acima de 30 mm, uma ainda em janeiro e outra no início de fevereiro. Todas as demais, mesmo as visualmente destacadas, ficam abaixo de 30 mm. Contar todas as barras altas sem conferir a escala leva às alternativas c e d.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_046-p32.webp",
@@ -91884,7 +91884,7 @@
         "text": "13,89 ºC"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. Tendência linear significa acréscimo constante por ano. Entre 1995 e 2010 passaram-se 15 anos e a temperatura subiu 13,8 − 13,35 = 0,45 °C, o que dá 0,45/15 = 0,03 °C por ano. De 2010 a 2012 são mais 2 anos, ou 0,06 °C, e a previsão é 13,8 + 0,06 = 13,86 °C. O deslize frequente é contar os anos a partir de 1995 em vez de 2010, ou arredondar a taxa anual antes da multiplicação.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_047-p32.webp",
@@ -91901,26 +91901,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Matemática · questão 48 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Em uma xícara que já contém certa quantidade de açúcar, despeja-se café. A curva representa a função exponencial M(t), que fornece a quantidade de açúcar não dissolvido (em gramas), t minutos após o café ser despejado. O gráfico parte de M(0) = 16 g e decresce, passando por M(150) = 4 g. Pelo gráfico, podemos concluir que:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "M(t) = 2^(4 − t/75)"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "M(t) = 2^(4 − t/50)"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "M(t) = 2^(5 − t/50)"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "M(t) = 2^(5 − t/150)"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. Use os dois pontos que o gráfico fornece. Em t = 0 a massa é 16 = 2⁴, o que fixa o expoente constante em 4 e elimina as alternativas c e d, que começariam em 2⁵ = 32. Em t = 150 a massa é 4 = 2², de modo que 4 − 150/k = 2, ou 150/k = 2, e portanto k = 75. A função é M(t) = 2^(4 − t/75), o que significa que a quantidade de açúcar não dissolvido cai pela metade a cada 75 minutos.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_048-p33.webp",
@@ -91941,26 +91941,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Matemática · questão 49 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "A parábola y = −x² + bx + c intercepta o eixo x nos pontos (p, 0) e (q, 0). Sabe-se que ela intercepta uma única vez cada uma das retas dadas pelas equações y = 2x + 1 e y = 1 − x/2. O valor de p + q é:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "2/3"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "3/4"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "4/3"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "3/2"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. Interceptar uma reta uma única vez significa tangenciá-la, isto é, a equação resultante deve ter discriminante nulo. Com a primeira reta, −x² + bx + c = 2x + 1 dá x² − (b − 2)x + (1 − c) = 0 e a condição (b − 2)² = 4(1 − c). Com a segunda, −x² + bx + c = 1 − x/2 dá a condição (b + 1/2)² = 4(1 − c). Igualando os dois lados esquerdos, (b − 2)² = (b + 1/2)², de onde −4b + 4 = b + 1/4 e b = 3/4. Por fim, p + q é a soma das raízes de −x² + bx + c = 0, que vale b — ou seja, 3/4.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_049-p34.webp",
@@ -91977,26 +91977,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Matemática · questão 50 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "No plano cartesiano, considere a reta de equação x + 2y = 4, sendo A e B os pontos de interseção dessa reta com os eixos coordenados. A equação da reta mediatriz do segmento de reta AB é dada por:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "2x − y = 3"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "2x − y = 5"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "2x + y = 3"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "2x + y = 5"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. Fazendo y = 0 obtém-se A = (4, 0); fazendo x = 0 obtém-se B = (0, 2). O ponto médio de AB é (2, 1), por onde a mediatriz passa. O coeficiente angular de AB é (2 − 0)/(0 − 4) = −1/2, e a mediatriz é perpendicular, logo tem coeficiente 2, o inverso com sinal trocado. A reta é y − 1 = 2(x − 2), ou y = 2x − 3, que reorganizada dá 2x − y = 3. Conferir se o ponto médio satisfaz a equação escolhida é a maneira mais rápida de eliminar as demais.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_050-p34.webp",
@@ -92013,26 +92013,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Matemática · questão 51 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Sabendo que c é um número real, considere, no plano cartesiano, a circunferência de equação x² + y² = 2cx. Se o centro dessa circunferência pertence à reta de equação x + 2y = 3, então seu raio é igual a:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "√2"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "√3"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "2"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "3"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. Reescreva a equação completando o quadrado: x² − 2cx + y² = 0 vira (x − c)² + y² = c². O centro é (c, 0) e o raio é |c|. Como o centro está na reta x + 2y = 3 e sua ordenada é zero, tem-se c + 0 = 3, ou seja, c = 3. O raio vale, portanto, 3. Repare que o centro está sempre sobre o eixo x, e é isso que torna a condição da reta imediata.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_051-p35.webp",
@@ -92049,26 +92049,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Matemática · questão 52 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "No plano cartesiano, considere a circunferência de equação x² + y² − 4y + 3 = 0 e a parábola de equação 3x² − y + 1 = 0. Essas duas curvas se interceptam em:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "um ponto"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "dois pontos"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "três pontos"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "quatro pontos"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. Da parábola tire x² = (y − 1)/3 e leve à equação da circunferência: (y − 1)/3 + y² − 4y + 3 = 0. Multiplicando por 3, y − 1 + 3y² − 12y + 9 = 0, ou 3y² − 11y + 8 = 0, cujas raízes são y = 1 e y = 8/3. Para y = 1 vem x² = 0, um único ponto, (0, 1), que é o vértice da parábola. Para y = 8/3 vem x² = 5/9, dando dois pontos simétricos. São três pontos ao todo — e a contagem só sai certa porque um dos valores de y produz raiz dupla em x.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_052-p35.webp",
@@ -92085,26 +92085,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Matemática · questão 53 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "No plano cartesiano, sejam C a circunferência de centro na origem e raio r > 0 e s a reta de equação x + 3y = 10. A reta s intercepta a circunferência C em dois pontos distintos se e somente se:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "r > 2"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "r > √5"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "r > 3"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "r > √10"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. Uma reta corta uma circunferência em dois pontos quando a distância do centro à reta é menor que o raio. A distância da origem à reta x + 3y − 10 = 0 é |0 + 0 − 10| dividido por √(1² + 3²), isto é, 10/√10 = √10. Logo a condição é r > √10. Se r fosse igual a √10 a reta seria tangente, e se fosse menor não haveria intersecção alguma.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_053-p36.webp",
@@ -92121,26 +92121,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Matemática · questão 54 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Considere a circunferência de equação cartesiana x² + y² = x − y. Qual das equações a seguir representa uma reta que divide essa circunferência em duas partes iguais?",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "x + y = −1"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "x − y = −1"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "x − y = 1"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "x + y = 1"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. Uma reta divide um círculo em duas partes de mesma área exatamente quando passa pelo centro. Escreva a equação na forma x² − x + y² + y = 0 e complete os quadrados: (x − 1/2)² + (y + 1/2)² = 1/2, de modo que o centro é (1/2, −1/2). Basta agora testar as alternativas: 1/2 − (−1/2) = 1, o que satisfaz x − y = 1. As demais retas não passam pelo centro e por isso separam o disco em partes desiguais.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_054-p36.webp",
@@ -92157,26 +92157,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Matemática · questão 55 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Considere o círculo de equação cartesiana x² + y² = ax + by, onde a e b são números reais não nulos. O número de pontos em que esse círculo intercepta os eixos coordenados é igual a:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "1"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "2"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "3"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "4"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. Analise um eixo de cada vez. Fazendo y = 0, resta x² = ax, ou x(x − a) = 0, com soluções x = 0 e x = a: os pontos (0, 0) e (a, 0). Fazendo x = 0, resta y² = by, com soluções y = 0 e y = b: os pontos (0, 0) e (0, b). A origem aparece nas duas listas, então não deve ser contada duas vezes. Como a e b são não nulos, os três pontos (0, 0), (a, 0) e (0, b) são distintos, e a resposta é 3.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_055-p36.webp",
@@ -92193,26 +92193,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Matemática · questão 56 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "No plano cartesiano, a equação |x − y| = |x + y| representa:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "um ponto"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "uma reta"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "um par de retas paralelas"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "um par de retas concorrentes"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. Como os dois lados são não negativos, elevar ao quadrado é uma operação equivalente: x² − 2xy + y² = x² + 2xy + y². Cancelando os termos comuns sobra 4xy = 0, isto é, xy = 0, o que ocorre quando x = 0 ou y = 0. São exatamente os dois eixos coordenados — duas retas que se cruzam na origem, portanto concorrentes. Uma leitura geométrica alternativa: a condição diz que o ponto é equidistante das retas y = x e y = −x, e o lugar geométrico disso são as bissetrizes dessas duas, que são os próprios eixos.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_056-p36.webp",
