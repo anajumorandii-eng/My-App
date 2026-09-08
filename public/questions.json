@@ -68693,30 +68693,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Biologia · questão 57 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Uma dieta de emagrecimento atribui a cada alimento um certo número de pontos, que equivale ao valor calórico do alimento ao ser ingerido. Assim, por exemplo, as combinações abaixo somam, cada uma, 85 pontos: 4 colheres de arroz + 2 colheres de azeite + 1 fatia de queijo branco; 1 colher de arroz + 1 bife + 2 fatias de queijo branco; 4 colheres de arroz + 1 colher de azeite + 2 fatias de queijo branco; 4 colheres de arroz + 1 bife. Note e adote: 1 colher de arroz tem 20 g, sendo 75% de umidade, macronutriente minoritário e micronutrientes, e 25% de macronutriente majoritário; 1 colher de azeite tem 5 g, sendo 0% de umidade e 100% de macronutriente majoritário; 1 bife tem 100 g, sendo 60% de umidade e outros e 40% de macronutriente majoritário. São macronutrientes as proteínas, os carboidratos e os lipídeos. Com base nas informações fornecidas e na composição nutricional dos alimentos, considere as seguintes afirmações: I. A pontuação de um bife de 100 g é 45. II. O macronutriente presente em maior quantidade no arroz é o carboidrato. III. Para uma mesma massa de lipídeo de origem vegetal e de carboidrato, a razão entre o número de pontos do lipídeo e o número de pontos do carboidrato é 1,5. É correto o que se afirma em:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "I, apenas"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "II, apenas"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "I e II, apenas"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "II e III, apenas"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "I, II e III"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa e). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: e. Chamando de a, z, q e b os pontos de uma colher de arroz, uma de azeite, uma fatia de queijo e um bife, as combinações dão 4a + 2z + q = 85, a + b + 2q = 85, 4a + z + 2q = 85 e 4a + b = 85. Comparando a primeira com a terceira sai z = q; substituindo b = 85 − 4a na segunda vem q = 1,5a; e a primeira fecha 8,5a = 85, logo a = 10, q = z = 15 e b = 45 — a afirmação I está certa. O macronutriente majoritário do arroz é o carboidrato, o que confirma II. Quanto a III, 5 g de azeite valem 15 pontos, ou 3 pontos por grama de lipídeo, enquanto uma colher de arroz traz 5 g de carboidrato por 10 pontos, ou 2 pontos por grama: a razão é 1,5, como afirma o enunciado — e reflete a maior densidade energética das gorduras.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_057-p48.webp",
@@ -68733,30 +68733,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Biologia · questão 58 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Num ambiente iluminado, ao focalizar um objeto distante, o olho humano se ajusta a essa situação. Se a pessoa passa, em seguida, para um ambiente de penumbra, ao focalizar um objeto próximo, a íris:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "aumenta, diminuindo a abertura da pupila, e os músculos ciliares se contraem, aumentando o poder refrativo do cristalino"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "diminui, aumentando a abertura da pupila, e os músculos ciliares se contraem, aumentando o poder refrativo do cristalino"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "diminui, aumentando a abertura da pupila, e os músculos ciliares se relaxam, aumentando o poder refrativo do cristalino"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "aumenta, diminuindo a abertura da pupila, e os músculos ciliares se relaxam, diminuindo o poder refrativo do cristalino"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "diminui, aumentando a abertura da pupila, e os músculos ciliares se relaxam, diminuindo o poder refrativo do cristalino"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. São dois ajustes independentes acontecendo ao mesmo tempo. Com menos luz, a íris se contrai e a pupila dilata para deixar entrar mais luz — daí íris que diminui e abertura que aumenta. Para focalizar algo próximo, entra a acomodação visual: os músculos ciliares se contraem, afrouxam as fibras que tracionam o cristalino e a lente fica mais convexa, aumentando o poder refrativo necessário para convergir raios que chegam divergentes. A alternativa e acerta a pupila mas descreve a acomodação para longe; as alternativas a e d invertem o comportamento da íris na penumbra.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_058-p48.webp",
@@ -68800,7 +68800,7 @@
         "text": "FHS progesterona início lactação da"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. Depois do pico inicial de gonadotrofina coriônica, que sustenta o corpo lúteo nas primeiras semanas, as duas curvas que sobem continuamente ao longo da gestação são as de estrógeno e progesterona, ambas produzidas pela placenta. A progesterona mantém o endométrio e inibe as contrações uterinas; o estrógeno prepara o útero e as mamas. Quando a placenta é expelida no parto, a fonte desses hormônios desaparece e as concentrações despencam — é essa queda que libera a prolactina e desencadeia a lactação. FSH e LH, citados nas outras alternativas, ficam suprimidos durante toda a gravidez.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_060-p50.webp",
@@ -68817,30 +68817,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Biologia · questão 61 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "A levedura Saccharomyces cerevisiae pode obter energia na ausência de oxigênio, de acordo com a equação C6H12O6 → 2 CO2 + 2 CH3CH2OH + 2 ATP. Produtos desse processo são utilizados na indústria de alimentos e bebidas. Esse processo ocorre __________ da levedura e seus produtos são utilizados na produção de __________. As lacunas dessa frase devem ser preenchidas por:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "nas mitocôndrias; cerveja e vinagre"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "nas mitocôndrias; cerveja e pão"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "no citosol; cerveja e pão"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "no citosol; iogurte e vinagre"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "no citosol e nas mitocôndrias; cerveja e iogurte"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. A equação descreve a fermentação alcoólica, que produz gás carbônico e etanol e rende apenas 2 ATP por glicose. Ela ocorre inteiramente no citosol: as mitocôndrias entram em cena na respiração aeróbia, que exige oxigênio e rende muito mais ATP. Os dois produtos têm uso industrial distinto — o etanol dá o álcool da cerveja e o CO2 faz a massa do pão crescer. O iogurte vem da fermentação láctica feita por bactérias, e o vinagre resulta da oxidação aeróbia do etanol por acetobactérias, o que descarta as demais alternativas.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_061-p51.webp",
@@ -68880,7 +68880,7 @@
         "text": "a artéria aorta transporta sangue rico em oxigênio para o corpo, por meio da circulação sistêmica, e sai do ventrículo direito do coração"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. O trajeto do sangue venoso é conhecido: a veia cava inferior recolhe o sangue pobre em oxigênio da metade inferior do corpo e desemboca no átrio direito, de onde ele segue para o ventrículo direito e para os pulmões. As demais alternativas trocam câmaras ou tipo de sangue: a cava superior também chega ao átrio direito, e não ao esquerdo (a); a artéria pulmonar leva sangue pobre em oxigênio para os pulmões (c); as veias pulmonares trazem sangue rico em oxigênio ao átrio esquerdo (d); e a aorta sai do ventrículo esquerdo (e).",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_063-p51.webp",
@@ -68924,7 +68924,7 @@
         "text": "o sistema circulatório é aberto, pois o sangue tem contato direto com as brânquias"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. Nos peixes a circulação é simples e completa: o sangue passa uma única vez pelo coração a cada volta. Ele chega ao átrio vindo do corpo, já desoxigenado, segue para o ventrículo e é bombeado às brânquias, onde se oxigena; das brânquias vai direto para os tecidos, sem retornar ao coração. Por isso o coração recebe apenas sangue pobre em oxigênio. Não há mistura como nos répteis (b), a concentração de gases varia muito ao longo do percurso (c), a circulação dupla é dos vertebrados de respiração pulmonar (d) e o sistema circulatório dos peixes é fechado (e).",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_065-p53.webp",
@@ -68964,7 +68964,7 @@
         "text": "I e III"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. A reabsorção tubular recupera a glicose que foi filtrada no glomérulo e a devolve ao sangue, evitando que um nutriente essencial se perca na urina — é o que diz a afirmação III. A I atribui à reabsorção um papel que não é dela: manter a glicemia estável é tarefa dos hormônios pancreáticos, insulina e glucagon; o rim apenas recupera o que foi filtrado. A II inverte o processo: a reabsorção retira glicose do filtrado, logo faz sua concentração diminuir ao longo do túbulo, e não impede que ela diminua. A comparação com a esteira explica por que, no diabetes, o excesso ultrapassa a capacidade de transporte e a glicose aparece na urina.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_070-p55.webp",
@@ -68985,30 +68985,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Biologia · questão 73 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Nos mamíferos, o tamanho do coração é proporcional ao tamanho do corpo e corresponde a aproximadamente 0,6% da massa corporal. O gráfico mostra a relação entre a frequência cardíaca e a massa corporal de vários mamíferos: a frequência diminui à medida que a massa aumenta. O quadro abaixo traz uma relação de mamíferos e o resultado da pesagem de indivíduos adultos: cuíca, 30 g; sagui, 276 g; gambá, 1.420 g; bugio, 5.180 g; capivara, 37.300 g. Considerando esse conjunto de informações, analise as afirmações seguintes: I. No intervalo de um minuto, a cuíca tem mais batimentos cardíacos do que a capivara. II. A frequência cardíaca do gambá é maior do que a do bugio e menor do que a do sagui. III. Animais com coração maior têm frequência cardíaca maior. Está correto apenas o que se afirma em:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "I"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "II"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "III"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "I e II"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "II e III"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. O gráfico mostra uma relação inversa: quanto maior a massa corporal, menor a frequência cardíaca. Como a cuíca pesa 30 g e a capivara 37.300 g, a cuíca bate muito mais vezes por minuto, e a afirmação I está correta. Ordenando sagui (276 g), gambá (1.420 g) e bugio (5.180 g), a frequência do gambá fica entre a do sagui e a do bugio, exatamente como diz II. A afirmação III inverte a relação: como o coração corresponde sempre a cerca de 0,6% da massa, coração maior significa animal maior e, portanto, frequência menor.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_073-p58.webp",
@@ -69048,7 +69048,7 @@
         "text": "nos dois casos, o sangue venoso chega ao coração por dois vasos, um que se abre no átrio direito e o outro, no átrio esquerdo"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. O coração do sapo tem três câmaras: dois átrios e um único ventrículo, onde o sangue venoso que chega do corpo se mistura ao sangue arterial que volta dos pulmões e da pele. No coração humano, com quatro câmaras, os dois lados são completamente separados: pelo átrio e ventrículo esquerdos passa apenas sangue arterial, e pelos direitos, apenas venoso. É exatamente essa a diferença apontada na alternativa d. As alternativas a e b negam ou distorcem a estrutura das câmaras, e as c e e descrevem trajetos que não correspondem nem ao sapo nem ao ser humano.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_074-p59.webp",
@@ -69069,30 +69069,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Biologia · questão 75 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "A genealogia a seguir representa uma família em que aparecem pessoas afetadas por adrenoleucodistrofia. Na geração I, o casal I.1 (homem não afetado) e I.2 (mulher não afetada) teve dois filhos: II.1, homem afetado, e II.2, mulher não afetada. II.2 casou-se com II.3, homem não afetado, e o casal teve dois filhos: III.1, homem afetado, e III.2, mulher não afetada. III.2 casou-se com III.3, homem não afetado. A mulher III.2 está grávida e ainda não sabe o sexo do bebê. A relação correta entre o padrão de herança desta forma de adrenoleucodistrofia e a probabilidade de que a criança seja afetada é:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "Ligado ao X recessivo; 50% caso seja menino"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "Ligado ao X recessivo; 25% caso seja menino"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "Ligado ao Y; 100% caso seja menino"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "Autossômico recessivo; 75% em qualquer caso"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "Autossômico recessivo; 12,5% em qualquer caso"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. Só homens são afetados, e eles nascem de mães não afetadas, com os pais também sem a doença: é o retrato da herança recessiva ligada ao X. Herança ligada ao Y ficaria descartada porque o pai afetado teria de transmitir a todos os filhos homens, o que não ocorre. Para calcular a probabilidade, note que II.2 é obrigatoriamente portadora, já que teve o filho afetado III.1. Sua filha III.2 tem, então, 1/2 de chance de ter recebido o alelo; se for portadora, cada filho homem tem 1/2 de chance de recebê-lo. Multiplicando, 1/2 × 1/2 = 1/4, ou 25%, caso o bebê seja menino.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_075-p60.webp",
@@ -69132,7 +69132,7 @@
         "text": "presença de pelo menos um dos genitores afetados"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. Na herança dominante ligada ao X, o homem afetado tem um único X, e é justamente esse X que ele transmite a todas as filhas e a nenhum dos filhos homens, que recebem dele o Y. Por isso o padrão diagnóstico é o dos homens afetados que geram filhas afetadas e filhos sadios — exatamente o que se vê nas duas famílias do heredograma. As demais alternativas descrevem observações compatíveis com esse padrão, mas que não o distinguem de outros: doença em ambos os sexos, presença em todas as gerações e pelo menos um genitor afetado também ocorrem na herança autossômica dominante.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_076-p61.webp",
@@ -69172,7 +69172,7 @@
         "text": "confirma que o alelo mutante que confere resistência à infecção pelo HIV é dominante sobre o alelo selvagem do gene CCR5"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. O transplante substituiu a medula do paciente pela do doador, e é a medula que origina todas as células sanguíneas. As novas células passaram a expressar o gene CCR5 do doador, que carrega as duas cópias mutadas, produzindo um receptor alterado ao qual o HIV não consegue se ligar — sem porta de entrada, o vírus não infecta essas células. A alternativa c erra ao supor que o transplante provocou mutações nas células do paciente; a d inventa interação entre alelos de células diferentes; a a esquece que as células germinativas do paciente não foram alteradas; e a e afirma dominância, quando a resistência exige as duas cópias mutadas, ou seja, é recessiva.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_077-p61.webp",
@@ -69193,30 +69193,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Biologia · questão 78 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Uma alteração genética é determinada por um gene com herança autossômica recessiva. O heredograma mostra famílias em que essa condição está presente. Na geração I, a mulher I-1 é afetada e casou-se com I-2, não afetado; outro casal, I-3 e I-4, ambos não afetados, também teve filhos. Na geração II, o casal I-1 e I-2 teve II-1 (mulher não afetada) e II-2 (homem não afetado); o casal I-3 e I-4 teve II-3 (mulher afetada) e II-4 (homem não afetado). II-2 casou-se com II-3 e o casal teve III-1 (homem não afetado) e III-2 (mulher não afetada). O casal III-2 e III-3, este último vindo de fora da família e não afetado, está esperando um menino. Considerando que, nessa população, uma em cada 50 pessoas é heterozigótica para essa alteração, a probabilidade de que esse menino seja afetado é:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "1/100"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "1/200"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "1/1.000"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "1/25.000"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "1/40.000"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. Como I-1 é afetada, ela é aa e todos os seus filhos recebem obrigatoriamente um alelo mutante: II-2 é Aa com certeza. Sua esposa II-3 é afetada, portanto aa. Do cruzamento Aa × aa nascem metade Aa e metade aa; como III-2 é clinicamente normal, ela é necessariamente Aa — probabilidade 1. Já III-3 vem da população geral, onde 1 em 50 é heterozigoto. Multiplicando as três condições necessárias — III-2 portadora (1), III-3 portador (1/50) e a criança receber o alelo dos dois (1/4) —, chega-se a 1/200, e o sexo não altera o cálculo por ser herança autossômica.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_078-p63.webp",
@@ -69233,30 +69233,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Biologia · questão 80 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Nos cães labradores, a cor da pelagem preta, chocolate ou dourada depende da interação entre dois genes, um localizado no cromossomo 11 (alelos B e b) e o outro, no cromossomo 5 (alelos E e e). O alelo dominante B é responsável pela síntese do pigmento preto e o alelo recessivo b, pela produção do pigmento chocolate. O alelo dominante E determina a deposição do pigmento preto ou chocolate nos pelos; e o alelo e impede a deposição de pigmento no pelo. Dentre 36 cães resultantes de cruzamentos de cães heterozigóticos nos dois lócus com cães duplo-homozigóticos recessivos, quantos com pelagem preta, chocolate e dourada, respectivamente, são esperados?",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "0, 0 e 36"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "9, 9 e 18"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "18, 9 e 9"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "18, 0 e 18"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "18, 18 e 0"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. O cruzamento BbEe × bbee é um cruzamento-teste, e por isso as quatro combinações saem em proporções iguais, 1:1:1:1 — nove cães em cada grupo de 36. BbEe tem pigmento preto e o deposita: preto, 9 cães. bbEe tem pigmento chocolate e o deposita: chocolate, 9 cães. Bbee e bbee produzem pigmento, mas o genótipo ee impede a deposição, e o pelo fica dourado: 9 + 9 = 18 cães. Esse é o caso clássico de epistasia recessiva, em que o par ee mascara o efeito do outro gene, seja ele B ou b.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_080-p65.webp",
@@ -69273,30 +69273,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Biologia · questão 82 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "No heredograma, o casal I-1 (homem não afetado) e I-2 (mulher não afetada) teve dois filhos: II-1, menina afetada, e II-2, menino clinicamente normal. A menina II-1 tem uma doença determinada pela homozigose quanto a um alelo mutante de gene localizado num autossomo. A probabilidade de que seu irmão II-2, clinicamente normal, possua esse alelo mutante é:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "0"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "1/4"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "1/3"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "1/2"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "2/3"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa e). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: e. Como a filha afetada é aa e os pais são normais, ambos são obrigatoriamente Aa. Do cruzamento Aa × Aa espera-se 1 AA : 2 Aa : 1 aa. A informação decisiva é que o irmão é clinicamente normal: isso elimina a possibilidade aa e reduz o espaço amostral a três casos igualmente prováveis, 1 AA e 2 Aa. A chance de ele carregar o alelo mutante é, portanto, 2/3. Quem esquece de descartar o caso aa responde 1/2, e quem usa a proporção original sem condicionar responde 1/4.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_082-p66.webp",
@@ -69336,7 +69336,7 @@
         "text": "B, o fornecimento do substrato 2 pode restabelecer a síntese do produto final"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. Numa via linear, cada enzima catalisa um passo e o produto de um passo alimenta o seguinte. Se a enzima A não funciona, a conversão do substrato 1 em substrato 2 não acontece, e como nada mais adiante recebe matéria-prima, o produto final não é sintetizado. A alternativa a erra ao prever acúmulo do substrato 2, que é justamente o que deixa de ser formado — o que se acumula é o substrato 1. A d nega o que a via garante: fornecer o substrato 2 pronto contorna o bloqueio, já que as enzimas B e C continuam funcionando. E a b troca o efeito da falha em C, que interrompe apenas o último passo, sem impedir a formação dos substratos 2 e 3.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_083-p67.webp",
@@ -69353,7 +69353,7 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "A forma do lobo da orelha, solto ou preso, é determinada geneticamente por um par de alelos. O heredograma mostra que a característica lobo da orelha solto NÃO pode ter herança:",
+    "prompt": "A forma do lobo da orelha, solto ou preso, é determinada geneticamente por um par de alelos. No heredograma, o casal I-1 (homem, lobo preso) e I-2 (mulher, lobo solto) teve quatro filhos: II-2 (homem, lobo solto), II-3 (mulher, lobo preso), II-4 (mulher, lobo solto) e outros. II-2 casou-se com II-1 (mulher, lobo preso) e teve III-1 (mulher, lobo preso), III-2 e III-3 (homens, lobo preso). II-4 casou-se com II-5 (homem, lobo solto) e teve cinco filhos: III-4 (mulher, lobo solto), III-5 (homem, lobo solto), III-6 (mulher, lobo preso), III-7 e III-8 (homens, lobo preso). O heredograma mostra que a característica lobo da orelha solto NÃO pode ter herança:",
     "options": [
       {
         "id": "a",
@@ -69376,7 +69376,7 @@
         "text": "ligada ao X dominante, porque o casal II-4 e II-5 tem dois filhos homens com lobos das orelhas presos"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. O raciocínio decisivo está no casal II-4 e II-5: os dois têm lobo solto e mesmo assim geraram filhos com lobo preso. Se solto fosse recessivo, ambos seriam homozigotos recessivos e todos os filhos teriam necessariamente lobo solto — o que o heredograma desmente. Logo, a herança autossômica recessiva para o lobo solto está descartada. A hipótese dominante, ao contrário, é compatível: dois heterozigotos podem ter filhos homozigotos recessivos de lobo preso, o que torna a alternativa c incorreta como justificativa de impossibilidade.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_087-p69.webp",
@@ -69393,7 +69393,7 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "Uma mutação, responsável por uma doença sanguínea, foi identificada numa família. Abaixo estão representadas sequências de bases nitrogenadas, normal e mutante; nelas estão destacados o sítio de início da tradução e a base alterada. O ácido nucleico representado acima e o número de aminoácidos codificados pela sequência de bases, entre o sítio de início da tradução e a mutação, estão corretamente indicados em:",
+    "prompt": "Uma mutação, responsável por uma doença sanguínea, foi identificada numa família. As sequências de bases nitrogenadas normal e mutante estão representadas abaixo, com o sítio de início da tradução e a base alterada em destaque. Sequência normal: ...AUGACGGGCGACACACAGAGCGACUGGGACUGC... Sequência mutante: ...AUGACGGGCGACACACAGAGCGACUGGAACUGC... O ácido nucleico representado acima e o número de aminoácidos codificados pela sequência de bases, entre o sítio de início da tradução e a mutação, estão corretamente indicados em:",
     "options": [
       {
         "id": "a",
@@ -69416,7 +69416,7 @@
         "text": "RNA; 24"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. A presença de uracila no lugar da timina identifica a molécula como RNA, e o códon AUG confirma: no DNA o sítio correspondente seria ATG. Para contar os aminoácidos, basta agrupar as bases de três em três a partir do AUG: ACG, GGC, GAC, ACA, CAG, AGC, GAC, UGG — oito códons completos até a base alterada. São, portanto, 8 aminoácidos entre o início da tradução e a mutação. Quem responde 24 está contando bases em vez de códons, e quem responde DNA se esquece de olhar para a uracila.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_089-p70.webp",
@@ -69433,7 +69433,7 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "Um camundongo recebeu uma injeção de proteína A e, quatro semanas depois, outra injeção de igual dose da proteína A, juntamente com uma dose da proteína B. No gráfico abaixo, as curvas X, Y e Z mostram as concentrações de anticorpos contra essas proteínas, medidas no plasma sanguíneo, durante oito semanas. As curvas:",
+    "prompt": "Um camundongo recebeu uma injeção de proteína A e, quatro semanas depois, outra injeção de igual dose da proteína A, juntamente com uma dose da proteína B. No gráfico, as curvas X, Y e Z mostram as concentrações de anticorpos medidas no plasma sanguíneo durante oito semanas: a curva X sobe até cerca de 10 unidades logo após a primeira injeção e depois cai; a partir da quarta semana, a curva Z sobe até quase 10.000 unidades e a curva Y sobe até cerca de 20 unidades. As curvas:",
     "options": [
       {
         "id": "a",
@@ -69456,7 +69456,7 @@
         "text": "Y e Z representam as concentrações de anticorpos contra a proteína B, produzidos pelos macrófagos, respectivamente, nas respostas imunológicas primária e secundária"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. O que distingue a resposta secundária da primária é a magnitude: graças aos linfócitos de memória, o segundo contato com o mesmo antígeno gera muito mais anticorpos e mais depressa. No gráfico, X é a resposta primária à proteína A, modesta, e Z é a resposta secundária à mesma proteína A, cerca de mil vezes maior — daí X e Z formarem o par. A curva Y, semelhante em altura à X, é a resposta primária à proteína B, apresentada pela primeira vez na quarta semana. Os anticorpos são produzidos por linfócitos B diferenciados em plasmócitos, e não por macrófagos, o que elimina as alternativas c e e.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_090-p71.webp",
@@ -69473,7 +69473,7 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "No heredograma abaixo, o símbolo representa um homem afetado por uma doença genética rara, causada por mutação num gene localizado no cromossomo X. Os demais indivíduos são clinicamente normais. As probabilidades de os indivíduos 7, 12 e 13 serem portadores do alelo mutante são, respectivamente,",
+    "prompt": "No heredograma, o símbolo preenchido representa um homem afetado por uma doença genética rara, causada por mutação num gene localizado no cromossomo X; os demais indivíduos são clinicamente normais. O homem afetado 1 casou-se com a mulher 2 e o casal teve três filhas: 5, 6 e 7. A filha 7 casou-se com o homem 8, filho do casal 3 e 4, e teve dois filhos: 12, mulher, e 13, homem, ambos clinicamente normais. As probabilidades de os indivíduos 7, 12 e 13 serem portadores do alelo mutante são, respectivamente:",
     "options": [
       {
         "id": "a",
@@ -69496,7 +69496,7 @@
         "text": "0; 0 e 0"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. Um homem afetado tem um único cromossomo X, e é esse X que ele passa a todas as filhas: a indivíduo 7 é portadora com certeza, probabilidade 1. Sua filha 12 recebe da mãe um dos dois X ao acaso, o normal ou o mutante, logo 0,5. Já o filho 13 recebe da mãe o único X que terá, e como ele é clinicamente normal esse X não pode ser o mutante — num homem, um X com o alelo mutante significaria doença, não estado de portador. A probabilidade dele é 0.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_091-p72.webp",
