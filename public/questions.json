@@ -89217,30 +89217,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Matemática · questão 61 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Em um tetraedro regular de lado a, a distância entre os pontos médios de duas arestas não adjacentes é igual a:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "a√3"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "a√2"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "a√3/2"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "a√2/2"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "a√2/4"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. Chame de M e N os pontos médios de duas arestas opostas, por exemplo AB e CD. O segmento MN é a mediana dos dois triângulos isósceles AMD e BMC, e uma forma rápida de calcular é usar coordenadas: num tetraedro regular de aresta a, os pontos médios de arestas opostas ficam a uma distância a/√2. Outro caminho é notar que M é vértice de um triângulo retângulo cujo cateto é a metade da aresta e cuja hipotenusa é a altura de uma face, a√3/2; então MN² = 3a²/4 − a²/4 = a²/2, e MN = a√2/2. Esse segmento é ainda a menor distância entre as duas retas suportes das arestas opostas.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_061-p42.webp",
@@ -89261,30 +89261,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Matemática · questão 63 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "A figura ilustra graficamente uma região de um bairro, com ruas ortogonais entre si. O ponto X indica um condomínio residencial, e o ponto Y indica a entrada de um parque. Três moradores realizam caminhos diferentes para chegar ao ponto Y, partindo do ponto X, ilustrados com cores diferentes: o caminho a sobe primeiro e contorna a região por cima antes de descer até Y; os caminhos b e c avançam sempre para a direita ou para baixo, em zigue-zague, até Y. Se a, b e c representam as distâncias percorridas por esses moradores nesses caminhos, é correto afirmar que:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "a = b = c"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "b = c < a"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "c < b < a"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "b < c = a"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "c < a = b"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. Num traçado ortogonal, qualquer caminho que só avance nos dois sentidos que aproximam do destino tem sempre o mesmo comprimento: a soma dos deslocamentos horizontais é fixa e a dos verticais também, independentemente da ordem em que os trechos se alternam. É o caso dos caminhos b e c, que por isso são iguais. O caminho a, ao contrário, sobe antes de descer, e cada quadra percorrida no sentido contrário precisa ser desfeita depois, acrescentando o dobro dessa distância ao total. Logo b = c e ambos são menores que a.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_063-p44.webp",
@@ -89324,7 +89324,7 @@
         "text": "10 cm"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. Ponha o vértice do ângulo reto na origem, com os catetos sobre os eixos: a hipotenusa liga (35, 0) a (0, 12) e sua equação é x/35 + y/12 = 1. O canto do quadrado oposto à origem é o ponto (L, L), e o maior quadrado é aquele em que esse canto encosta na hipotenusa: L/35 + L/12 = 1. Somando as frações, L(12 + 35)/420 = 1, de onde L = 420/47 ≈ 8,94 cm — mais próximo de 9 cm. Vale guardar a fórmula geral: para catetos a e b, o lado é ab/(a + b).",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_064-p45.webp",
@@ -89341,30 +89341,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Matemática · questão 65 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Três triângulos equiláteros e dois quadrados formam uma figura plana, dispostos em torno de um ponto comum. Seus centros são os vértices de um pentágono irregular, que está destacado na figura. Se T é a área de cada um dos triângulos e Q a área de cada um dos quadrados, a área desse pentágono é:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "T + Q"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "T/2 + Q/2"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "T + Q/2"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "T/3 + Q/4"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "T/3 + Q/2"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. Os cinco polígonos se encontram num mesmo ponto interior, e o pentágono dos centros pode ser recortado em cinco pedaços, um dentro de cada peça. Em cada triângulo equilátero, o pedaço é o setor determinado pelo centro e por dois raios que separam a peça em três partes iguais, com área T/3; nos três triângulos isso soma 3 × T/3 = T. Em cada quadrado, o pedaço corresponde a um quarto da figura, com área Q/4; nos dois quadrados isso soma 2 × Q/4 = Q/2. A área total é, portanto, T + Q/2.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_065-p45.webp",
@@ -89404,7 +89404,7 @@
         "text": "900 .°"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. Percorra o contorno da estrela como um caminho fechado. A cada ponta você gira um ângulo externo de 180° − αi, e ao completar o percurso a direção volta ao ponto de partida depois de dar três voltas completas, ou 1080°, porque cada lado prolongado alcança o terceiro lado adiante. Somando os oito giros: 8 × 180° − (α1 + … + α8) = 1080°, isto é, 1440° − Σαi = 1080°, de onde Σαi = 360°. O mesmo raciocínio aplicado ao pentagrama, em que há duas voltas, dá a conhecida soma de 180°.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_067-p47.webp",
@@ -89444,7 +89444,7 @@
         "text": "sen (2x) sen (2y) 2 π + -"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. A diagonal traçada é um diâmetro, então ela divide o quadrilátero em dois triângulos, cada um inscrito numa semicircunferência e portanto retângulo, com hipotenusa igual ao diâmetro 2. Num deles, com ângulo agudo x, os catetos medem 2·cos x e 2·sen x, e a área é (1/2)(2 cos x)(2 sen x) = sen(2x); no outro, do mesmo modo, a área é sen(2y). O círculo tem área π·1² = π, e a região cinza é o que sobra depois de retirar o quadrilátero: π − sen(2x) − sen(2y).",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_068-p48.webp",
@@ -89461,30 +89461,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Matemática · questão 70 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Os pontos A, B e C são colineares, AB = 5, BC = 2 e B está entre A e C. Os pontos C e D pertencem a uma circunferência com centro em A. Traça-se uma reta r perpendicular ao segmento BD passando pelo seu ponto médio. Chama-se de P a interseção de r com AD. Então, AP + BP vale:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "4"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "5"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "6"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "7"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "8"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. A reta r é a mediatriz de BD, e todo ponto da mediatriz é equidistante das extremidades do segmento; logo PB = PD. Como P está sobre AD, vale AP + PD = AD. Substituindo, AP + PB = AP + PD = AD. Falta o valor de AD: como C e D estão na circunferência de centro A, tem-se AD = AC, e AC = AB + BC = 5 + 2 = 7, já que B está entre A e C. Portanto AP + BP = 7 — resultado que não depende de onde exatamente D esteja na circunferência.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_070-p49.webp",
@@ -89501,30 +89501,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Matemática · questão 71 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "No triângulo retângulo ABC, com o ângulo reto em B, a hipotenusa AC mede 12 cm e o cateto BC mede 6 cm. Se M é o ponto médio de BC, então a tangente do ângulo MAC é igual a:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "√2/7"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "√3/7"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "2/7"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "2√2/7"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "2√3/7"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. Pelo teorema de Pitágoras, AB = √(144 − 36) = 6√3. Trabalhe com os dois ângulos que partem de A: tg(BAC) = BC/AB = 6/(6√3) = 1/√3, e tg(BAM) = BM/AB = 3/(6√3) = 1/(2√3). O ângulo pedido é a diferença, MAC = BAC − BAM, e pela fórmula da tangente da diferença tem-se (1/√3 − 1/(2√3)) dividido por (1 + 1/6), isto é, (1/(2√3))/(7/6) = 6/(14√3) = √3/7. Note que BC = 6 é metade da hipotenusa, de modo que BAC mede 30°.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_071-p50.webp",
@@ -89541,30 +89541,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Matemática · questão 73 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "O triângulo AOB é isósceles, com OA = OB, e ABCD é um quadrado construído sobre o lado AB. Sendo θ a medida do ângulo AÔB, pode-se garantir que a área do quadrado é maior do que a área do triângulo se: Dados os valores aproximados: tg 14° ≅ 0,2493; tg 15° ≅ 0,2679; tg 20° ≅ 0,3640; tg 28° ≅ 0,5317.",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "14° < θ < 28°"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "15° < θ < 60°"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "20° < θ < 90°"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "25° < θ < 120°"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "30° < θ < 150°"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa e). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: e. Chame AB de b. A área do quadrado é b². Para o triângulo isósceles, a altura relativa a AB divide θ ao meio e forma um triângulo retângulo em que b/2 = h·tg(θ/2), de onde h = b/(2·tg(θ/2)) e a área vale b²/(4·tg(θ/2)). A condição pedida, quadrado maior que triângulo, vira 4·tg(θ/2) > 1, ou tg(θ/2) > 0,25. Como tg 14° ≅ 0,2493 ainda é menor que 0,25 e tg 15° ≅ 0,2679 já é maior, o limite está pouco acima de 14°, ou seja, θ deve superar cerca de 28°. Entre as opções, a única em que todo o intervalo garante a desigualdade é 30° < θ < 150°.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_073-p51.webp",
@@ -89604,7 +89604,7 @@
         "text": "2.400 m2"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. Num hexágono regular, a distância entre lados paralelos é o dobro do apótema, então o apótema vale 12,5 m. Como o apótema se relaciona ao lado por a = L√3/2, o lado é L = 25/√3 e L² = 625/3. A área de um hexágono regular é (3√3/2)L², o que dá (3√3/2)(625/3) = 625√3/2 ≈ 541 m². Os três hexágonos são congruentes e apenas se justapõem, sem sobreposição, de modo que a área total é cerca de 1.624 m² — aproximadamente 1.600 m².",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_074-p51.webp",
