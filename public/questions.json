@@ -77496,7 +77496,7 @@
         "text": "C A D"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. A associação segue a cronologia da expansão territorial. O Tratado de Madrid, de 1750, consagrou o princípio do uti possidetis e reconheceu a Portugal as terras efetivamente ocupadas muito além da linha de Tordesilhas, mas o país ainda não tinha o Acre — corresponde ao mapa A. O Tratado de Petrópolis, de 1903, resolveu a questão acreana com a Bolívia e completou a fronteira ocidental: é o mapa C. E a Constituição de 1988 consolidou a divisão interna atual, com a criação de Tocantins e a transformação de Roraima e Amapá em estados: mapa E. Daí a sequência A, C, E.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_hisbra_fuvest/ap_hisbra_fuvest_001-p5.webp",
@@ -77540,7 +77540,7 @@
         "text": "As bandeiras que partiam da Capitania da Bahia de Todos os Santos para a Capitania de São Paulo e Minas de Ouro propiciaram o surgimento de localidades com economia baseada na agricultura monocultora de exportação"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. O mapa mostra o sertão que liga a Bahia às Minas, e a ocupação dessa área seguiu dois eixos naturais: o vale do rio São Francisco, caminho de penetração e de abastecimento das minas com gado, e a serra do Espinhaço, onde estavam as jazidas auríferas e diamantíferas. Foi a combinação desses dois elementos geomorfológicos que definiu onde surgiram currais e arraiais. A alternativa a leva cana e algodão da Zona da Mata para o interior, o que a geografia da época não comporta; a c inverte a cronologia, pois a mineração declinou no século XIX; e as alternativas d e e atribuem às bandeiras paulistas rotas e resultados que não correspondem ao mapa.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_hisbra_fuvest/ap_hisbra_fuvest_002-p6.webp",
@@ -77561,30 +77561,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · História · questão 3 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "“Se o açúcar do Brasil o tem dado a conhecer a todos os reinos e províncias da Europa, o tabaco o tem feito muito afamado em todas as quatro partes do mundo, em as quais hoje tanto se deseja e com tantas diligências e por qualquer via se procura. Há pouco mais de cem anos que esta folha se começou a plantar e beneficiar na Bahia [...] e, desta sorte, uma folha antes desprezada e quase desconhecida tem dado e dá atualmente grandes cabedais aos moradores do Brasil e incríveis emolumentos aos Erários dos príncipes.” (ANTONIL, André João. Cultura e opulência do Brasil por suas drogas e minas. São Paulo: EDUSP, 2007. Adaptado.) O texto acima, escrito por um padre italiano em 1711, revela que:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "o ciclo econômico do tabaco, que foi anterior ao do ouro, sucedeu o da cana-de-açúcar"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "todo o rendimento do tabaco, a exemplo do que ocorria com outros produtos, era direcionado à metrópole"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "não se pode exagerar quanto à lucratividade propiciada pela cana-de-açúcar, já que a do tabaco, desde seu início, era maior"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "os europeus, naquele ano, já conheciam plenamente o potencial econômico de suas colônias americanas"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "a economia colonial foi marcada pela simultaneidade de produtos, cuja lucratividade se relacionava com sua inserção em mercados internacionais"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa e). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: e. Antonil fala de açúcar e tabaco no presente, lado a lado, e mede o valor de cada um pela procura que têm nos mercados europeus e mundiais — é a imagem de uma economia colonial com vários produtos rentáveis ao mesmo tempo, não de ciclos que se sucedem em fila. Essa noção de ciclos, que a alternativa a supõe, é uma simplificação didática que a historiografia atual rejeita. A alternativa b contraria o próprio texto, que menciona os cabedais dos moradores do Brasil; a c inverte a comparação, já que o açúcar seguia sendo o principal produto; e a d afirma um conhecimento pleno que o texto apresenta como recente descoberta.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_hisbra_fuvest/ap_hisbra_fuvest_003-p7.webp",
@@ -77628,7 +77628,7 @@
         "text": "foi a generalização, entre eles, do alcoolismo, que tornou antieconômica a exploração da mão de obra escrava nos cafezais paulistas"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. As festas e batuques dos escravizados não desmentem a violência do cativeiro: eram concessões calculadas, permitidas em datas específicas e sempre sob vigilância dos senhores, que viam nelas uma válvula de escape capaz de reduzir tensões e o risco de fuga ou revolta. Aceitar essa leitura é diferente de imaginar uma escravidão branda, como propõe a alternativa a — tese há muito descartada pela historiografia. A alternativa c inventa uma origem cafeeira para o sincretismo, bem anterior; a d transforma a dança em ritual disfarçado sem apoio no texto; e a e cria uma explicação econômica desvinculada da cena descrita.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_hisbra_fuvest/ap_hisbra_fuvest_004-p8.webp",
@@ -77672,7 +77672,7 @@
         "text": "da Coluna Prestes, encabeçado por Luís Carlos Prestes"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. A revolta de Fabiano é individual, difusa e sem projeto: ele odeia ao mesmo tempo a seca, o patrão, os soldados e o fiscal da prefeitura, e o que lhe ocorre é que um dia um homem faz besteira e se desgraça. Essa violência espontânea de quem não tem nada a perder é a que alimentou o cangaço, banditismo social do sertão que respondia à opressão dos coronéis pela força, sem programa político. O movimento das Ligas Camponesas era organizado e reivindicava reforma agrária; Juazeiro e Canudos tinham base religiosa e comunitária; e a Coluna Prestes foi um movimento militar tenentista.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_hisbra_fuvest/ap_hisbra_fuvest_006-p9.webp",
@@ -77712,7 +77712,7 @@
         "text": "concepção de inferioridade civilizacional dos nativos brasileiros em relação aos indígenas da América Espanhola"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. Moema, de Victor Meirelles, é de 1866 e pertence ao Romantismo brasileiro do Segundo Reinado, momento em que se construía uma imagem nacional a partir de um passado indígena idealizado. A personagem, tirada do poema Caramuru, aparece como uma figura nobre e bela, mais próxima da estatuária clássica do que de qualquer registro etnográfico — é a idealização que interessa ao projeto de nacionalidade patrocinado pelo Império. As alternativas c e e supõem crítica republicana ou tese de inferioridade racial, que só ganhariam força depois; a a e a d atribuem ao quadro intenções documentais ou catequéticas que ele não tem.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_hisbra_fuvest/ap_hisbra_fuvest_007-p10.webp",
@@ -77752,7 +77752,7 @@
         "text": "em 1789 e 1798, seus líderes projetaram a possibilidade de rompimento definitivo das relações políticas com a metrópole, diferentemente do que ocorrera com as sedições anteriores"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa e). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: e. As duas conjurações do fim do século XVIII marcam uma ruptura de horizonte: pela primeira vez, os conspiradores de Minas em 1789 e da Bahia em 1798 formularam o projeto de romper de vez com Portugal e instituir uma república. As revoltas anteriores — Guerra dos Emboabas, dos Mascates, Beckman, Filipe dos Santos — protestavam contra impostos, monopólios ou autoridades específicas, sem questionar o vínculo colonial. As demais alternativas atribuem às conjurações objetivos que não tiveram, como abolir o tráfico em ambas ou contar com apoio francês efetivo, ou as equiparam a conflitos entre grupos de colonos.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_hisbra_fuvest/ap_hisbra_fuvest_010-p10.webp",
@@ -77796,7 +77796,7 @@
         "text": "a manifestação de um conflito entre a recém-criada ordem jesuíta e a Coroa portuguesa em torno do combate à pirataria francesa"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. A carta jesuítica alerta o rei para o dano de deixar que essa gente entre nas navegações portuguesas: os franceses, que desde as primeiras décadas do século XVI vinham traficando pau-brasil na costa e se aliando a povos indígenas, ameaçavam o domínio português justamente quando Portugal passava a colonizar de fato, com capitanias e governo-geral. A alternativa b inverte a relação, transformando rivalidade em aliança; a c desloca o conflito para dentro da Companhia de Jesus; a d o transporta para a Europa; e a e opõe jesuítas e Coroa, quando a carta é escrita em apoio ao rei.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_hisbra_fuvest/ap_hisbra_fuvest_011-p11.webp",
@@ -77840,7 +77840,7 @@
         "text": "Rapidamente, o Brasil aderiu à agenda antiescravista britânica formulada no final do século XVIII, firmando tratados de diminuição e extinção do tráfico negreiro e acatando as imposições favoráveis ao trabalho livre"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. O gráfico mostra que o tráfico para o Brasil não recuou diante da pressão inglesa da primeira metade do século XIX — ao contrário, atingiu seus maiores volumes justamente nas décadas que antecedem 1850, quando a lavoura cafeeira do Vale do Paraíba se expandia. Foi essa entrada maciça de africanos escravizados que sustentou a ordem escravista do Império até a Lei Eusébio de Queirós. As alternativas a e b subestimam ou invertem os números do gráfico, e as d e e supõem uma adesão brasileira à agenda antiescravista britânica que só se converteu em política efetiva sob ameaça naval, em 1850.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_hisbra_fuvest/ap_hisbra_fuvest_012-p13.webp",
@@ -77880,7 +77880,7 @@
         "text": "não há relação direta entre, de um lado, o processo colonizador europeu e, de outro, a mortalidade indígena e a perda de sua identidade cultural"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. O texto recusa duas leituras opostas e igualmente equivocadas: nem a colonização foi branda, nem os povos indígenas foram apenas vítimas passivas de uma sucessão de perdas. O caso xinguano é o exemplo — a cultura que nos anos 1940 passou a ser exibida como tradição intocada resultou, na verdade, de séculos de contatos, deslocamentos e recomposições. Resistir, ali, incluiu mudar. As alternativas a e e minimizam a violência colonial, a c decreta a extinção das culturas indígenas, e a d isola o Xingu do contato, exatamente o oposto do que o texto argumenta.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_hisbra_fuvest/ap_hisbra_fuvest_013-p13.webp",
@@ -77924,7 +77924,7 @@
         "text": "dependeu, desde o seu início, diretamente do bom sucesso das capitanias hereditárias, e, por isso, esteve concentrado nas capitanias de Pernambuco e de São Vicente, até o século XVIII"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. O tráfico transatlântico para o Brasil começou por volta de 1550, acompanhando a implantação dos engenhos de açúcar no Nordeste, e se manteve de forma regular por três séculos, até a Lei Eusébio de Queirós, de 1850, extingui-lo efetivamente. As demais alternativas erram a cronologia: o tráfico é muito anterior à descoberta do ouro (a); o século XVII foi período de intenso tráfico para a economia açucareira (b); a Independência, em 1822, não o extinguiu, e a pressão pela continuidade vinha justamente das áreas cafeeiras (d); e ele nunca dependeu do sucesso das capitanias hereditárias, em boa parte fracassadas (e).",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_hisbra_fuvest/ap_hisbra_fuvest_014-p14.webp",
@@ -77964,7 +77964,7 @@
         "text": "da ação expansionista inglesa sobre a América do Sul, gradualmente anexada ao Império Britânico, após sua vitória sobre as tropas napoleônicas, em 1815"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. O relato descreve ruas repletas de mercadorias inglesas e casas comerciais britânicas instaladas no Brasil, cena impossível antes de 1808: até então o pacto colonial reservava a Portugal o comércio com a colônia. A abertura dos portos às nações amigas, decretada por D. João logo após a chegada ao Brasil, é o marco que explica a inundação de produtos ingleses. A alternativa d cita o tratado de 1810, que ampliou e consolidou esse privilégio, mas não iniciou o processo nem eliminou a concorrência; a b e a a remetem a acordos europeus dos séculos XVII e XVIII; e a e supõe uma anexação britânica que nunca ocorreu.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_hisbra_fuvest/ap_hisbra_fuvest_018-p16.webp",
@@ -78008,7 +78008,7 @@
         "text": "a população se organizava em duas classes, cujas gradações internas não alteravam a simplicidade da estrutura social"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa e). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: e. Caio Prado Júnior descreve uma sociedade colonial polarizada entre proprietários e trabalhadores do campo, escravos e semilivres, e argumenta que a simplicidade da base econômica — a terra concentrada na grande lavoura de exportação — produz uma estrutura social igualmente simples. Ele não nega que existissem gradações dentro de cada polo, apenas sustenta que elas não alteram esse desenho fundamental. As alternativas a e d exageram em direções opostas, negando qualquer diferenciação interna ou afirmando um cenário de muitas classes em conflito, e a c inventa uma aspiração universal à propriedade que o excerto não menciona.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_hisbra_fuvest/ap_hisbra_fuvest_019-p17.webp",
@@ -78056,7 +78056,7 @@
         "text": "implantaram um governo de terror, ameaçando o direito dos pequenos proprietários à livre exploração da terra"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. A Revolução Pernambucana de 1817 foi a mais ambiciosa das rebeliões do período joanino: proclamou a república, redigiu uma lei orgânica provisória e chegou a governar Pernambuco por cerca de setenta dias, reunindo senhores de engenho, comerciantes, padres, militares e gente das camadas populares. Foi justamente essa amplitude social que tanto incomodou Varnhagen. A alternativa a reduz o movimento a separatismo antilusitano; a b superestima a participação negra e a ameaça à escravidão, que os líderes tomaram o cuidado de preservar; a c confunde com a Revolta de Beckman; e a e inventa um governo de terror.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_hisbra_fuvest/ap_hisbra_fuvest_023-p21.webp",
@@ -78096,7 +78096,7 @@
         "text": "ao projeto de D. João VI para que seu filho D. Pedro se tornasse imperador do Brasil independente"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. Em 1818 as colônias espanholas já estavam em guerra aberta contra Madri, e Hipólito da Costa observa que a presença do rei no Rio dá a Portugal uma posição singular diante desses acontecimentos: livre das intrigas europeias, D. João pode decidir conforme lhe convenha. O dilema, portanto, é o das repercussões da independência hispano-americana sobre o domínio português na América. A alternativa b antecipa a Revolução do Porto, que só ocorreria em 1820; a a exagera o alcance geográfico da revolta pernambucana; a c inverte a relação com a Santa Aliança; e a e atribui a D. João um projeto que só se desenhou depois de 1821.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_hisbra_fuvest/ap_hisbra_fuvest_025-p21.webp",
@@ -78140,7 +78140,7 @@
         "text": "Fixa atributos de barbárie ao ditador Solano López; sublinha a incompatibilidade entre o Exército e o exercício da cidadania"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. As duas charges de Angelo Agostini fazem trabalhos distintos. A primeira concentra em Solano López, retratado como um novo Nero, toda a responsabilidade pela destruição do povo paraguaio — é a personificação do culpado, recurso comum na propaganda de guerra brasileira. A segunda mostra o soldado negro que volta do front e reencontra o cativeiro, imagem que alimentou o debate abolicionista: quem lutou pela pátria não podia continuar escravizado. A alternativa e capta o tom da primeira mas erra o alvo da segunda, e as alternativas a e c invertem o julgamento sobre López.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_hisbra_fuvest/ap_hisbra_fuvest_038-p27.webp",
@@ -78180,7 +78180,7 @@
         "text": "o desejo de retornar ao período anterior à chegada dos europeus e de recuperar padrões culturais e cotidianos indígenas"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. As respostas à pergunta sobre quem era o brasileiro vieram, na virada do século XIX para o XX, do repertório científico então dominante: o positivismo, o evolucionismo e as teorias raciais europeias, que tratavam a mistura de raças ora como degeneração, ora como caminho para o branqueamento. Nina Rodrigues, Sílvio Romero e Euclides da Cunha operam dentro desse quadro. As alternativas c e e invertem o sinal ao supor celebração da origem africana ou indígena, que só viria depois; a b antecipa a indústria cultural norte-americana; e a d atribui ao período uma autoimagem de potência que ele não tinha.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_hisbra_fuvest/ap_hisbra_fuvest_040-p28.webp",
@@ -78201,30 +78201,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · História · questão 41 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Observe a tabela: Imigração no Brasil, 1881-1930 (em milhares de chegadas). 1881-1885: 133,4; 1886-1890: 391,6; 1891-1895: 659,7; 1896-1900: 470,3; 1901-1905: 279,7; 1906-1910: 391,6; 1911-1915: 611,4; 1916-1920: 186,4; 1921-1925: 368,6; 1926-1930: 453,6; total: 3.964,3. (Leslie Bethell (ed.), The Cambridge History of Latin America, vol. IV. Adaptado.) Os dados apresentados na tabela se explicam, dentre outros fatores,",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "pela industrialização significativa em estados do Nordeste do Brasil, sobretudo aquela ligada a bens de consumo"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "pela forte demanda por força de trabalho criada pela expansão cafeeira nos estados do Sudeste do Brasil"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "pela democracia racial brasileira, a favorecer a convivência pacífica entre culturas que, nos seus continentes de origem, poderiam até mesmo ser rivais"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "pelos expurgos em massa promovidos em países que viviam sob regimes fascistas, como Itália, Alemanha e Japão"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "pela supervalorização do trabalho assalariado nas cidades, já que no campo prevalecia a mão de obra de origem escrava, mais barata"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. O salto da imigração a partir dos anos 1880 acompanha dois processos simultâneos: a expansão das lavouras de café no oeste paulista e o fim iminente da escravidão. Os fazendeiros precisavam substituir o braço cativo e passaram a financiar, com apoio do governo paulista, a vinda em massa de famílias europeias para o sistema de colonato. A alternativa a inverte a geografia, pois o destino era o Sudeste, não o Nordeste; a d erra a cronologia, já que o fluxo antecede em décadas os regimes fascistas; a c apela a um mito, o da democracia racial; e a e supõe trabalho escravo predominante no campo depois de 1888.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_hisbra_fuvest/ap_hisbra_fuvest_041-p30.webp",
@@ -78241,30 +78241,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · História · questão 42 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Examine a seguinte tabela, com o número de escravos que entraram no Brasil: 1845, 19.453; 1846, 50.325; 1847, 56.172; 1848, 60.000. (Dados extraídos de Emília Viotti da Costa. Da senzala à colônia. São Paulo: Unesp, 1998.) A tabela apresenta dados que podem ser explicados:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "pela lei de 1831, que reduziu os impostos sobre os escravos importados da África para o Brasil"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "pelo descontentamento dos grandes proprietários de terras em meio ao auge da campanha abolicionista no Brasil"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "pela renovação, em 1844, do Tratado de 1826 com a Inglaterra, que abriu nova rota de tráfico de escravos entre Brasil e Moçambique"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "pelo aumento da demanda por escravos no Brasil, em função da expansão cafeeira, a despeito da promulgação da Lei Aberdeen, em 1845"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "pela aplicação da Lei Eusébio de Queirós, que ampliou a entrada de escravos no Brasil e tributou o tráfico interno"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. Os números triplicam justamente no ano em que a Inglaterra aprova a Lei Aberdeen, autorizando sua marinha a apreender navios negreiros em alto-mar. O aparente paradoxo se explica pela força da demanda interna: o café avançava pelo Vale do Paraíba e exigia braços, e os traficantes seguiram operando apesar do risco e do encarecimento. A alternativa a inverte o sentido da lei de 1831, que proibia o tráfico, ainda que sem eficácia; a b confunde o período, pois a campanha abolicionista só ganharia força nos anos 1870 e 1880; e a e atribui à Lei Eusébio de Queirós, de 1850, o efeito contrário ao que ela teve.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_hisbra_fuvest/ap_hisbra_fuvest_042-p31.webp",
@@ -78308,7 +78308,7 @@
         "text": "é expressão artística do projeto positivista de divulgar uma concepção da sociedade brasileira sintonizada com os ideais de eugenia"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. As alegorias republicanas do início do regime retratavam a liberdade e a pátria como figuras femininas monumentais, herdeiras da iconografia da Revolução Francesa. O contraste é justamente esse: enquanto a imagem promete liberdade universal, a República real excluía do voto analfabetos, mulheres, soldados e mendigos, isto é, a imensa maioria da população. A alternativa a toma a promessa pela realidade; a b transforma a alegoria em manifesto feminista; a d confunde a figura clássica com símbolo católico; e a e reduz a imagem a propaganda positivista, quando a alegoria da liberdade é anterior e mais ampla.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_hisbra_fuvest/ap_hisbra_fuvest_044-p32.webp",
@@ -78348,7 +78348,7 @@
         "text": "ampliação do direito de voto trazida pela República, que passou a incluir os analfabetos e facilitou sua manipulação por políticos inescrupulosos"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. A charge satiriza o voto de cabresto: em regime de voto aberto, sem urna secreta, o coronel levava seus dependentes às urnas com a cédula já preenchida e conferia o resultado depois. O eleitor não tinha autonomia, e a fidelidade ao chefe local era garantida por dívida, emprego ou coerção — mecanismo que, junto com a comissão de verificação de poderes, sustentava a política dos governadores. A alternativa c descreve o voto censitário, que era do Império e foi abolido em 1891; a e inverte os fatos, pois a República manteve a exclusão dos analfabetos; e as alternativas a e d atribuem ao eleitorado ignorância ou informação que não estão em questão.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_hisbra_fuvest/ap_hisbra_fuvest_046-p34.webp",
@@ -78388,7 +78388,7 @@
         "text": "apresenta a imigração como a principal origem dos males sociais por que o país passava, pois os novos empregados assalariados tiraram o trabalho dos escravos e os marginalizaram"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. O cortiço é de 1890 e retrata o Rio de Janeiro do fim do Império e início da República, quando a cidade recebia libertos vindos do campo, imigrantes portugueses e trabalhadores pobres que se amontoavam em habitações coletivas. A cena da resistência à polícia mostra o conflito entre essa população e a ordem urbana que as elites e o Estado queriam impor — conflito que culminaria nas reformas de Pereira Passos. As demais alternativas atribuem ao romance posições que ele não assume: defesa da monarquia, denúncia da falta de policiamento, exaltação das lutas sociais ou culpabilização dos imigrantes.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_hisbra_fuvest/ap_hisbra_fuvest_048-p35.webp",
@@ -78432,7 +78432,7 @@
         "text": "à ampla democratização nas relações políticas, trabalhistas e sociais"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. Boris Fausto chama de Estado de compromisso o arranjo pós-1930, em que nenhuma fração da classe dominante impõe sua hegemonia e o Estado ganha autonomia para arbitrar entre elas. O traço central dessa novidade é econômico: centralização administrativa e intervenção estatal que deixa de se limitar à defesa do café para alcançar outras áreas, com a criação de institutos, conselhos e, mais tarde, empresas estatais. A alternativa a inverte o resultado de 1930; a b erra ao chamá-la de primeira intervenção, pois os planos de valorização do café já eram intervenção; e a e supõe uma democratização que o período não trouxe.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_hisbra_fuvest/ap_hisbra_fuvest_052-p38.webp",
@@ -78476,7 +78476,7 @@
         "text": "as dificuldades de extração de petróleo pela Petrobrás que foi obrigada a recorrer ao capital e a técnicos estrangeiros"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. A charge é do debate que antecedeu a criação da Petrobras, quando a campanha O petróleo é nosso mobilizou a opinião pública e as grandes companhias internacionais, as chamadas sete irmãs, atuaram para impedir o monopólio estatal. O alvo da sátira é, portanto, a pressão externa contra a nacionalização, que se intensificou no segundo pós-guerra. A alternativa d inverte a posição das empresas, que eram contrárias ao monopólio; a c inventa uma crise de produção; a e antecipa dificuldades técnicas posteriores; e a a desloca o episódio para um conflito exclusivo com companhias norte-americanas.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_hisbra_fuvest/ap_hisbra_fuvest_054-p39.webp",
@@ -78520,7 +78520,7 @@
         "text": "Vargas estabelece uma oposição entre o patriotismo dos brasileiros e a ação da forças armadas"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. O discurso é construído de modo que Vargas nunca apareça como sujeito das decisões: quem se vê obrigada a lançar mão de medidas excepcionais é a Nação, personificada, e ele se apresenta apenas como quem traduz a vontade dela. É o gesto retórico típico do líder autoritário que se declara intérprete do povo para dispensar as instituições. As demais alternativas leem mal o texto: as forças armadas aparecem como amparo, não como detentoras exclusivas da defesa (b) nem como delegatárias do poder (c); a d inverte o argumento, que denuncia partidos agressivos e não a falta deles; e a e cria uma oposição entre povo e militares que o discurso não faz.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_hisbra_fuvest/ap_hisbra_fuvest_057-p42.webp",
@@ -78537,30 +78537,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · História · questão 69 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Com base nos documentos assinale a alternativa correta. I) Carta de Auro de Moura Andrade, Presidente do Congresso Nacional, em 03/09/1961, ao Deputado Ranieri Mazzilli, Presidente da República em exercício: “Em face da próxima chegada do Sr. Doutor João Belchior Marques Goulart a Brasília, com o fito de prestar compromisso perante o Congresso Nacional e indicar à aprovação dele o nome do Presidente do Conselho e a composição do Primeiro Conselho de Ministros, bem como para receber em sessão do Congresso Nacional posse, juntamente com aquele Conselho e o seu Presidente, tudo nos termos do Artigo 21, parágrafo único da Emenda Constitucional nº 4 (Ato Adicional de 02/09/1961), venho solicitar de Vossa Excelência as indispensáveis garantias ao desembarque, permanência em Brasília e investidura na Presidência da República do Senhor Doutor João Goulart.” II) Mensagem de João Goulart, Presidente da República, em 08/09/1961, ao Senador Auro de Moura Andrade: “Nos termos e para os efeitos do Ato Adicional, tenho a honra de comunicar a Vossa Excelência e ao Congresso Nacional que indico para o Cargo de Primeiro-Ministro o Senhor Tancredo de Almeida Neves, que, por meu intermédio, submete à patriótica consideração desse plenário o seguinte Gabinete.”",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "Os dois documentos contêm indícios que revelam ser presidencialista o sistema de governo na ocasião"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "Estes documentos não contêm informações que permitam saber se o sistema de governo, na ocasião, era o presidencialismo ou o parlamentarismo"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "O primeiro documento — e somente ele — revela que era parlamentarista o sistema de governo na ocasião"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "Os dois documentos contêm informações que revelam ser parlamentarista o sistema de governo na ocasião"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "O segundo documento — e somente ele — revela que era parlamentarista o sistema de governo na ocasião"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. Ambos os documentos trazem a marca do parlamentarismo instituído às pressas pelo Ato Adicional de 1961 para permitir a posse de Jango depois da renúncia de Jânio Quadros. O primeiro menciona a indicação do Presidente do Conselho e a composição do Conselho de Ministros submetidos à aprovação do Congresso; o segundo é o próprio ato de indicar Tancredo Neves para primeiro-ministro, com o gabinete levado ao plenário. Cargo de primeiro-ministro e gabinete dependente da confiança do Legislativo são traços que não existem em regime presidencialista, o que descarta a alternativa a, e ambos os textos os exibem, o que descarta as demais.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_hisbra_fuvest/ap_hisbra_fuvest_069-p47.webp",
@@ -78604,7 +78604,7 @@
         "text": "Limitou‐se à troca de informações sobre os opositores políticos que buscaram exílio em cada um desses países"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. A notícia mostra que, mesmo unidas pelo objetivo comum de perseguir opositores para além das fronteiras, as ditaduras do Cone Sul disputavam entre si a liderança da Operação Condor — o Brasil pretendeu comandá-la e encontrou resistência dos demais. Cooperação repressiva, portanto, não significou alinhamento automático nem hierarquia pacífica. A alternativa b inventa uma crítica pública brasileira; a c afirma oposição norte-americana, quando a documentação aponta conhecimento e tolerância dos Estados Unidos; a d atribui ao Paraguai uma liderança que não teve; e a e reduz a operação à troca de informações, quando houve sequestros e assassinatos coordenados.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_hisbra_fuvest/ap_hisbra_fuvest_073-p50.webp",
@@ -78625,30 +78625,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · História · questão 74 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Examine a tabela com a porcentagem da variação do desempenho econômico do Brasil (PIB, indústria e agricultura) entre 1971 e 1984. O PIB cresce acima de 9% até 1974, desacelera na segunda metade da década, e registra −1,6% em 1981, 0,9% em 1982, −3,2% em 1983 e 4,5% em 1984; a indústria acompanha esse movimento, com −5,5% em 1981 e −6,8% em 1983. (FISHLOW, A., Uma história de dois presidentes: a economia política da gestão da crise. In: STEPHAN, A. (org), Democratizando o Brasil. Rio de Janeiro: Paz e Terra, 1988, p. 144.) Os dados da tabela referem-se a anos transcorridos durante a Ditadura Militar no Brasil. O desempenho econômico nesse período entrelaçou-se ao panorama político do país. Nesse sentido, é correto afirmar:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "Os sinais de esgotamento do “milagre brasileiro”, associados à crise internacional do petróleo entre 1973 e 1974, foram os responsáveis pelo recrudescimento da política repressiva dos governos militares"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "As eleições pluripartidárias de 1982 ocorreram em meio à recessão de 1981 e 1983, no governo de João Baptista Figueiredo, e caracterizaram-se como um passo importante no processo de democratização do país"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "A crise internacional do petróleo de 1979 e seus efeitos na economia brasileira provocaram uma queda abrupta no PIB nacional e o fim imediato do regime, por falta de sustentação política"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "As oscilações do PIB brasileiro, registradas na tabela, correspondem igualmente às variações das taxas de crescimento e retração na indústria e na agricultura e aos processos de intensificação da repressão política e da censura"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "A crise internacional do petróleo de 1979 não afetou a agricultura brasileira, mas coincidiu com as primeiras eleições pluripartidárias desde 1966, marcadas pela estrondosa vitória dos partidos de oposição"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. A tabela mostra PIB negativo em 1981 e 1983, com a indústria em queda ainda mais forte; foi nesse cenário de recessão, sob Figueiredo, que ocorreram as eleições de 1982 — as primeiras diretas para governador desde 1965 e já sob pluripartidarismo, com vitórias importantes da oposição em São Paulo, Minas e Rio. Elas são um marco da abertura. A alternativa c erra ao falar em fim imediato do regime, que ainda duraria até 1985; a a inverte a cronologia da repressão, cujo auge é anterior; a d supõe paralelismo entre indústria e agricultura que a tabela desmente; e a e data as eleições em 1979.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_hisbra_fuvest/ap_hisbra_fuvest_074-p52.webp",
