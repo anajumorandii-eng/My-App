@@ -11682,6 +11682,116 @@
   },
   {
     "subject": "História",
+    "topic": "A Crise do Antigo Sistema Colonial",
+    "sections": [
+      {
+        "title": "Tensões do pacto colonial",
+        "content": "O exclusivo comercial, a tributação pesada e a proibição de manufaturas geraram descontentamento entre elites coloniais, sobretudo com a queda da produção aurífera e o aumento da pressão fiscal. As ideias iluministas e os exemplos das independências americana e do Haiti circularam entre setores letrados da colônia."
+      },
+      {
+        "title": "Revoltas coloniais",
+        "content": "A Inconfidência Mineira, de 1789, articulou membros da elite letrada contra a derrama, com projeto restrito e sem participação popular ampla. A Conjuração Baiana, de 1798, teve caráter mais popular, com participação de artesãos, soldados e pessoas negras, e defendeu abolição da escravidão e igualdade, sendo duramente reprimida."
+      },
+      {
+        "title": "Transferência da Corte",
+        "content": "Em 1808, a família real portuguesa transferiu-se para o Brasil fugindo das tropas napoleônicas. A abertura dos portos às nações amigas rompeu o exclusivo comercial, e a elevação a Reino Unido em 1815 mudou o estatuto da colônia, criando condições que tornariam a independência quase inevitável poucos anos depois."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Tratar a Inconfidência e a Conjuração como movimentos equivalentes ignora diferenças sociais e de programa. Outro deslize é dizer que a abertura dos portos beneficiou igualmente todos, quando favoreceu sobretudo a Inglaterra. E supor que a vinda da Corte foi decisão autônoma, sem a pressão napoleônica e o interesse britânico."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a abertura dos portos em 1808 é considerada ruptura do sistema colonial? Responda antes de conferir: acabou com o exclusivo comercial que obrigava a colônia a negociar apenas com a metrópole, permitindo comércio direto com outras nações, sobretudo a Inglaterra. Agora compare Inconfidência e Conjuração Baiana quanto à base social: a primeira foi elitista e letrada, a segunda teve participação popular e defendeu o fim da escravidão."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a abertura dos portos rompe o sistema colonial? Compare Inconfidência e Conjuração Baiana.",
+      "elements": [
+        [
+          "fim do exclusivo comercial",
+          [
+            "exclusivo",
+            "monopolio",
+            "comercio direto"
+          ]
+        ],
+        [
+          "beneficio principal a Inglaterra",
+          [
+            "inglaterra",
+            "britanico",
+            "favoreceu"
+          ]
+        ],
+        [
+          "a Conjuracao teve base popular e defendeu a abolicao",
+          [
+            "popular",
+            "abolicao",
+            "baiana"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "História",
+    "topic": "A Era Vargas",
+    "sections": [
+      {
+        "title": "Governo Provisório",
+        "content": "Vargas assumiu em 1930 com poderes ampliados, dissolveu o Congresso e nomeou interventores nos estados. Criou os ministérios do Trabalho e da Educação e Saúde, iniciou a legislação trabalhista e enfrentou a Revolução Constitucionalista de 1932, em São Paulo, que exigia nova constituição e eleições."
+      },
+      {
+        "title": "Constituição de 1934",
+        "content": "Resultado da pressão de 1932, a Constituição de 1934 incorporou direitos trabalhistas, voto feminino, voto secreto e a representação classista. Foi a mais avançada até então em matéria social, mas teve vida curta diante da radicalização política dos anos seguintes e da escalada autoritária do próprio governo."
+      },
+      {
+        "title": "Trabalhismo e Estado",
+        "content": "O varguismo articulou industrialização, nacionalismo econômico com criação de estatais e concessão de direitos trabalhistas de cima para baixo, mantendo sindicatos atrelados ao Ministério do Trabalho. Esse modelo criou vínculo duradouro entre trabalhadores urbanos e o Estado, base do trabalhismo brasileiro."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que os direitos trabalhistas foram simples doação ignora décadas de luta operária que os precederam. Outro deslize é chamar 1932 de movimento pela democracia sem notar seus interesses regionais e de elite. E confundir a Constituição de 1934 com a Carta de 1937, esta autoritária e outorgada."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que se diz que os direitos trabalhistas vieram atrelados ao controle estatal? Responda antes de conferir: a legislação foi concedida ao mesmo tempo em que os sindicatos ficaram subordinados ao Ministério do Trabalho, com imposto sindical e reconhecimento oficial obrigatório. Agora diga duas conquistas da Constituição de 1934: voto feminino e voto secreto."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que os direitos trabalhistas vieram com controle estatal? Cite conquistas da Constituição de 1934.",
+      "elements": [
+        [
+          "sindicatos subordinados ao Ministerio do Trabalho",
+          [
+            "sindicato",
+            "ministerio",
+            "atrelado"
+          ]
+        ],
+        [
+          "direitos concedidos de cima para baixo",
+          [
+            "concedido",
+            "cima",
+            "estado"
+          ]
+        ],
+        [
+          "voto feminino e voto secreto em 1934",
+          [
+            "feminino",
+            "secreto",
+            "1934"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "História",
     "topic": "A Era Vargas: o Estado Novo",
     "sections": [
       {
@@ -11705,6 +11815,226 @@
         "content": "Como analisar um cartaz que apresenta Vargas como protetor dos trabalhadores? Identifique a personalização dos direitos, a linguagem paternalista e a busca de legitimidade. Em seguida, confronte a imagem com direitos efetivos e mecanismos de controle sindical. A análise deve distinguir propaganda, política social e experiência dos trabalhadores, sem reduzir tudo a “presente do governante” ou a “mera mentira”."
       }
     ]
+  },
+  {
+    "subject": "História",
+    "topic": "A Era Vargas: o Governo Constitucional (1934-1937)",
+    "sections": [
+      {
+        "title": "Radicalização política",
+        "content": "O período foi marcado pelo confronto entre a Ação Integralista Brasileira, de orientação fascista, liderada por Plínio Salgado, e a Aliança Nacional Libertadora, de frente ampla antifascista com participação comunista, liderada simbolicamente por Luís Carlos Prestes. A polarização criou clima de exceção permanente."
+      },
+      {
+        "title": "Intentona e repressão",
+        "content": "A tentativa de levante comunista em 1935, chamada de Intentona pela versão oficial, foi derrotada e serviu de justificativa para estado de sítio, prisões, tortura e deportações, incluindo a de Olga Benário. O anticomunismo tornou-se instrumento central de legitimação de medidas de exceção."
+      },
+      {
+        "title": "Golpe do Estado Novo",
+        "content": "Em 1937, o governo divulgou o Plano Cohen, documento forjado que anunciava suposto levante comunista, e Vargas deu o golpe que instaurou o Estado Novo, com Carta outorgada, fechamento do Congresso, censura pelo DIP e repressão política, encerrando o período constitucional."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Tratar o Plano Cohen como documento autêntico é erro factual: era forjado e serviu de pretexto. Outro deslize é confundir integralismo, de extrema direita, com a Aliança Nacional Libertadora, antifascista. E supor que o Estado Novo rompeu com a política trabalhista, quando ele a expandiu sob controle rígido."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Qual foi o papel do Plano Cohen? Responda antes de conferir: era um documento forjado que simulava um plano comunista de tomada do poder e serviu de pretexto para o golpe de 1937 e a instauração do Estado Novo. Agora identifique os dois polos da radicalização dos anos 1930: integralistas de extrema direita e a Aliança Nacional Libertadora antifascista."
+      }
+    ],
+    "recall": {
+      "prompt": "Qual o papel do Plano Cohen? Quais eram os polos da radicalização dos anos 1930?",
+      "elements": [
+        [
+          "documento forjado usado como pretexto",
+          [
+            "forjado",
+            "falso",
+            "pretexto"
+          ]
+        ],
+        [
+          "justificou o golpe de 1937",
+          [
+            "1937",
+            "golpe",
+            "estado novo"
+          ]
+        ],
+        [
+          "integralistas e Alianca Nacional Libertadora",
+          [
+            "integralista",
+            "anl",
+            "antifascista"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "História",
+    "topic": "A História e o Brasil",
+    "sections": [
+      {
+        "title": "Povos originários",
+        "content": "Antes da chegada europeia, o território era ocupado por centenas de povos com línguas, organizações sociais e formas de manejo do ambiente distintas, dos grupos tupi-guarani do litoral aos povos do cerrado e da Amazônia. A arqueologia tem revelado sociedades complexas, com manejo de florestas, terra preta e grandes aldeamentos."
+      },
+      {
+        "title": "Fontes e narrativas",
+        "content": "A história do Brasil foi por muito tempo escrita a partir de fontes europeias, o que produziu narrativas centradas no colonizador. A historiografia recente incorpora arqueologia, história oral, documentos de povos indígenas e africanos e novas leituras, deslocando a ideia de povos passivos diante da colonização."
+      },
+      {
+        "title": "Debates historiográficos",
+        "content": "Questões como o caráter do sistema colonial, a natureza da escravidão, o papel da resistência e a interpretação da independência dividem historiadores. Reconhecer que existem interpretações concorrentes, e que elas mudam com o tempo, é parte do que a prova cobra ao pedir análise de documentos e de textos historiográficos."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Falar em descobrimento do Brasil reproduz o ponto de vista europeu e ignora a ocupação prévia. Outro deslize é tratar os povos indígenas como um bloco homogêneo. E supor que documento histórico é registro neutro dos fatos, quando toda fonte carrega intenção e ponto de vista."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a expressão descobrimento é criticada? Responda antes de conferir: o território já era ocupado por centenas de povos, e o termo adota o ponto de vista europeu como se a existência dessas sociedades não contasse. Agora diga por que toda fonte histórica exige crítica: ela foi produzida por alguém, num contexto e com uma intenção, e não é registro neutro."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a expressão descobrimento é criticada? Por que toda fonte histórica exige crítica?",
+      "elements": [
+        [
+          "o territorio ja era ocupado por muitos povos",
+          [
+            "ocupado",
+            "povos",
+            "indigena"
+          ]
+        ],
+        [
+          "o termo adota o ponto de vista europeu",
+          [
+            "europeu",
+            "ponto de vista",
+            "eurocentrico"
+          ]
+        ],
+        [
+          "a fonte tem autor, contexto e intencao",
+          [
+            "intencao",
+            "contexto",
+            "autor"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "História",
+    "topic": "A Independência do Brasil",
+    "sections": [
+      {
+        "title": "Contexto e processo",
+        "content": "Com o retorno de D. João VI a Portugal e as pressões recolonizadoras das Cortes de Lisboa, as elites brasileiras temeram perder as conquistas de 1808. D. Pedro permaneceu no Dia do Fica, e a ruptura foi consumada em 1822, num processo conduzido pelo próprio herdeiro do trono português, o que marcou seu caráter conservador."
+      },
+      {
+        "title": "Guerras de independência",
+        "content": "A independência não foi pacífica em todo o território: houve combates na Bahia, no Maranhão, no Piauí, no Pará e na Cisplatina, com resistência de tropas leais a Portugal. O reconhecimento internacional envolveu indenização a Portugal e acordos comerciais desvantajosos com a Inglaterra, que também exigiu o fim do tráfico."
+      },
+      {
+        "title": "Continuidades",
+        "content": "A ruptura política preservou a monarquia, a escravidão, a grande propriedade e a estrutura agroexportadora. Por isso, a independência brasileira costuma ser caracterizada como transição conservadora, feita pelo alto, sem participação popular ampla e sem alteração da ordem social interna."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Reduzir a independência ao grito do Ipiranga ignora o processo político anterior e os conflitos armados regionais. Outro deslize é supor que houve ruptura social, quando escravidão e latifúndio permaneceram. E esquecer os custos do reconhecimento internacional, incluindo indenização e concessões comerciais."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a independência brasileira é chamada de conservadora? Responda antes de conferir: manteve a monarquia, a escravidão e a grande propriedade, foi conduzida pelo herdeiro do trono e não contou com participação popular ampla nem alterou a ordem social. Agora diga um custo do reconhecimento internacional: indenização a Portugal e tratados comerciais favoráveis à Inglaterra."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a independência brasileira é considerada conservadora? Qual o custo do reconhecimento internacional?",
+      "elements": [
+        [
+          "manteve monarquia, escravidao e latifundio",
+          [
+            "monarquia",
+            "escravidao",
+            "latifundio"
+          ]
+        ],
+        [
+          "foi conduzida pelo alto sem participacao popular",
+          [
+            "alto",
+            "popular",
+            "elite"
+          ]
+        ],
+        [
+          "indenizacao a Portugal e acordos com a Inglaterra",
+          [
+            "indenizacao",
+            "inglaterra",
+            "tratado"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "História",
+    "topic": "A Interiorização da Colonização",
+    "sections": [
+      {
+        "title": "Bandeiras e sertanismo",
+        "content": "As bandeiras paulistas partiram em busca de indígenas para escravizar, de metais preciosos e do combate a quilombos, e avançaram muito além da linha de Tordesilhas. Somaram-se as entradas oficiais e as missões jesuíticas, que também organizaram povoamentos no interior, com conflitos frequentes entre esses projetos."
+      },
+      {
+        "title": "Mineração",
+        "content": "A descoberta de ouro em Minas Gerais no fim do século XVII deslocou o eixo econômico e populacional para o centro-sul, provocou migração intensa, urbanização e a transferência da capital para o Rio de Janeiro em 1763. A Coroa criou mecanismos rígidos de arrecadação, como o quinto, as casas de fundição e, em crise, a derrama."
+      },
+      {
+        "title": "Pecuária e drogas do sertão",
+        "content": "A pecuária ocupou o sertão nordestino e os campos do sul, e a coleta das drogas do sertão levou à ocupação da Amazônia, com participação de missões religiosas e de mão de obra indígena. Esses movimentos consolidaram territorialmente a colônia e embasaram o princípio do uso efetivo no Tratado de Madri."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Idealizar os bandeirantes como desbravadores heroicos omite a escravização indígena e a destruição de missões e quilombos. Outro deslize é supor que a mineração enriqueceu a colônia, quando grande parte do ouro financiou a dívida portuguesa e a economia inglesa. E confundir quinto com derrama."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a mineração deslocou o eixo da colônia? Responda antes de conferir: atraiu grande migração, criou cidades no interior, intensificou a circulação interna e levou à transferência da capital para o Rio de Janeiro, mais próximo da região das minas. Agora diferencie quinto de derrama: o quinto é o imposto de 20% sobre o ouro; a derrama é a cobrança forçada do que faltava para atingir a cota estipulada."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a mineração deslocou o eixo da colônia? Diferencie quinto de derrama.",
+      "elements": [
+        [
+          "migracao intensa e urbanizacao no interior",
+          [
+            "migracao",
+            "cidade",
+            "interior"
+          ]
+        ],
+        [
+          "transferencia da capital para o Rio",
+          [
+            "rio de janeiro",
+            "capital",
+            "1763"
+          ]
+        ],
+        [
+          "o quinto e imposto e a derrama e cobranca forcada",
+          [
+            "quinto",
+            "derrama",
+            "cota"
+          ]
+        ]
+      ]
+    }
   },
   {
     "subject": "História",
@@ -11734,6 +12064,281 @@
   },
   {
     "subject": "História",
+    "topic": "A Montagem da Colonização",
+    "sections": [
+      {
+        "title": "Capitanias e governo-geral",
+        "content": "Diante da ameaça estrangeira, a Coroa dividiu o território em capitanias hereditárias, transferindo custos a donatários. Apenas Pernambuco e São Vicente prosperaram, e em 1549 criou-se o governo-geral, com Tomé de Sousa, para centralizar a administração, articular defesa, justiça e arrecadação e apoiar a empresa açucareira."
+      },
+      {
+        "title": "Economia açucareira",
+        "content": "O açúcar organizou a colônia: latifúndio, monocultura de exportação, trabalho escravizado e engenho como unidade produtiva e social. A produção concentrou-se na Zona da Mata nordestina, favorecida pelo massapê e pela proximidade da Europa, e articulou-se ao capital e à comercialização holandeses no primeiro período."
+      },
+      {
+        "title": "Escravidão indígena e africana",
+        "content": "Inicialmente, os colonos escravizaram indígenas, prática combatida em parte pelos jesuítas e limitada por epidemias, resistência e fugas. Consolidou-se então o tráfico atlântico de africanos, que se tornou negócio central do sistema colonial, sustentando a produção açucareira e, mais tarde, a mineração e o café."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que as capitanias fracassaram por completo ignora Pernambuco e São Vicente. Outro deslize é atribuir o fim da escravidão indígena apenas à ação jesuítica, sem considerar epidemias, resistência e a lucratividade do tráfico. E confundir engenho, unidade produtiva completa, com a simples moenda."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a Coroa criou o governo-geral? Responda antes de conferir: as capitanias hereditárias fracassaram na maioria dos casos, e era preciso centralizar a defesa contra estrangeiros, organizar a justiça e a arrecadação e dar suporte à empresa açucareira. Agora explique por que o açúcar exigiu grande escala: o alto investimento em engenho e mão de obra só se pagava com produção volumosa para exportação."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a Coroa criou o governo-geral? Por que a empresa açucareira exigia grande escala?",
+      "elements": [
+        [
+          "as capitanias fracassaram na maioria",
+          [
+            "capitania",
+            "fracasso",
+            "hereditaria"
+          ]
+        ],
+        [
+          "centralizar defesa, justica e arrecadacao",
+          [
+            "defesa",
+            "justica",
+            "centralizar"
+          ]
+        ],
+        [
+          "o alto investimento exigia producao para exportacao",
+          [
+            "investimento",
+            "exportacao",
+            "engenho"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "História",
+    "topic": "A Primeira Globalização",
+    "sections": [
+      {
+        "title": "Expansão marítima",
+        "content": "Portugal e Espanha lideraram a expansão marítima dos séculos XV e XVI, apoiados em Estados centralizados, técnicas de navegação, capital mercantil e motivação religiosa. A conexão entre Europa, África, Ásia e América inaugurou circuitos comerciais de escala mundial e uma nova divisão do trabalho entre continentes."
+      },
+      {
+        "title": "Intercâmbio colombiano",
+        "content": "A ligação entre continentes provocou intercâmbio de plantas, animais e doenças. Milho, batata e mandioca transformaram dietas europeias, africanas e asiáticas; cavalos e gado alteraram sociedades americanas; e varíola, sarampo e gripe dizimaram populações indígenas sem imunidade, num colapso demográfico de proporções enormes."
+      },
+      {
+        "title": "Mercantilismo e trabalho compulsório",
+        "content": "O mercantilismo orientou as políticas econômicas com metalismo, balança comercial favorável e pacto colonial. A produção nas colônias apoiou-se em trabalho compulsório: encomienda e mita na América espanhola, escravidão africana nas plantations. O tráfico atlântico deslocou milhões de pessoas e estruturou economias dos dois lados do oceano."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Chamar o processo de descobrimento, do ponto de vista europeu, ignora as sociedades já existentes e é criticado historiograficamente. Outro deslize é atribuir o colapso demográfico indígena apenas à violência direta, quando as doenças tiveram papel decisivo. E confundir mercantilismo com liberalismo econômico."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que o colapso demográfico indígena foi tão acentuado? Responda antes de conferir: doenças europeias encontraram populações sem imunidade prévia, somando-se à violência da conquista, ao trabalho compulsório e à desestruturação social. Agora explique o pacto colonial: a colônia deveria comerciar exclusivamente com a metrópole, em condições favoráveis a esta."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que o colapso demográfico indígena foi tão grande? Explique o pacto colonial.",
+      "elements": [
+        [
+          "doencas encontraram populacoes sem imunidade",
+          [
+            "doenca",
+            "imunidade",
+            "variola"
+          ]
+        ],
+        [
+          "soma-se violencia e trabalho compulsorio",
+          [
+            "violencia",
+            "trabalho",
+            "compulsorio"
+          ]
+        ],
+        [
+          "comercio exclusivo com a metropole",
+          [
+            "exclusivo",
+            "metropole",
+            "monopolio"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "História",
+    "topic": "A Primeira República: o Declínio Oligárquico (1889-1930)",
+    "sections": [
+      {
+        "title": "Movimentos de contestação",
+        "content": "O período viu revoltas de naturezas distintas: Canudos e Contestado, com fundo social e messiânico no interior; Revolta da Vacina e Revolta da Chibata, urbanas e ligadas a condições de vida e disciplina; e o tenentismo, movimento de jovens oficiais que criticava a corrupção eleitoral e defendia reformas e voto secreto."
+      },
+      {
+        "title": "Movimento operário e cultura",
+        "content": "A imigração trouxe trabalhadores europeus com experiência sindical, e o anarcossindicalismo organizou greves gerais em 1917. Na cultura, a Semana de Arte Moderna de 1922 propôs ruptura estética e busca de identidade nacional, enquanto o Partido Comunista foi fundado no mesmo ano, sinalizando a diversificação do campo político."
+      },
+      {
+        "title": "Crise de 1930",
+        "content": "A crise de 1929 derrubou o preço do café e abalou a base econômica da República Oligárquica. A ruptura do acordo café com leite, com a indicação de Júlio Prestes por Washington Luís, levou à formação da Aliança Liberal em torno de Getúlio Vargas e, após sua derrota eleitoral e o assassinato de João Pessoa, ao movimento de 1930."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Tratar Canudos como movimento monarquista reproduz a versão da propaganda oficial da época. Outro deslize é considerar o tenentismo um movimento de esquerda organizado, quando era heterogêneo e reformista. E supor que 1930 foi revolução social, quando manteve estruturas agrárias e recompôs elites no poder."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a crise de 1929 desestabilizou a República Oligárquica? Responda antes de conferir: derrubou o preço do café, principal base econômica das elites que sustentavam o sistema, reduzindo a capacidade do Estado de manter a valorização e enfraquecendo o pacto entre oligarquias. Agora diga o que reivindicava o tenentismo: moralização política, voto secreto e reformas, com forte crítica às fraudes eleitorais."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a crise de 1929 desestabilizou a República Oligárquica? O que reivindicava o tenentismo?",
+      "elements": [
+        [
+          "queda do preco do cafe",
+          [
+            "cafe",
+            "preco",
+            "queda"
+          ]
+        ],
+        [
+          "enfraquecimento do pacto entre oligarquias",
+          [
+            "pacto",
+            "oligarquia",
+            "crise"
+          ]
+        ],
+        [
+          "voto secreto e moralizacao politica",
+          [
+            "voto secreto",
+            "moralizacao",
+            "fraude"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "História",
+    "topic": "A República da Espada",
+    "sections": [
+      {
+        "title": "Governos militares iniciais",
+        "content": "Os primeiros anos republicanos foram marcados pelos governos de Deodoro da Fonseca e Floriano Peixoto. A Constituição de 1891 instituiu o presidencialismo, o federalismo, a separação entre Igreja e Estado, o voto aberto e masculino, com exclusão de analfabetos, mulheres, soldados rasos e religiosos regulares."
+      },
+      {
+        "title": "Crises do período",
+        "content": "O Encilhamento, política de emissão de moeda e crédito fácil, gerou especulação e inflação. Seguiram-se a dissolução do Congresso por Deodoro, sua renúncia, e a Revolta da Armada e a Revolução Federalista sob Floriano, reprimidas com dureza que rendeu ao presidente o apelido de Marechal de Ferro."
+      },
+      {
+        "title": "Transição para os civis",
+        "content": "Com a eleição de Prudente de Morais, em 1894, iniciou-se a chamada República Oligárquica, com predomínio de presidentes civis ligados às elites agrárias, sobretudo de São Paulo e Minas Gerais. O Exército recuou da linha de frente política, mantendo-se como ator relevante nos bastidores."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Supor que a República ampliou de imediato a cidadania é erro: a exclusão de analfabetos e mulheres manteve o eleitorado muito restrito. Outro deslize é confundir Revolta da Armada, da Marinha, com Revolução Federalista, no Rio Grande do Sul. E tratar o Encilhamento como política bem-sucedida de industrialização."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a Constituição de 1891 manteve o eleitorado restrito? Responda antes de conferir: excluiu analfabetos, mulheres, soldados rasos e religiosos, o que, num país majoritariamente analfabeto, reduziu drasticamente a parcela votante. Agora explique o Encilhamento: emissão de moeda e crédito facilitado que geraram especulação, empresas fictícias e inflação."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que o eleitorado da República era restrito? O que foi o Encilhamento?",
+      "elements": [
+        [
+          "exclusao de analfabetos e mulheres",
+          [
+            "analfabeto",
+            "mulher",
+            "exclusao"
+          ]
+        ],
+        [
+          "a maioria da populacao nao votava",
+          [
+            "maioria",
+            "restrito",
+            "eleitorado"
+          ]
+        ],
+        [
+          "emissao e credito geraram especulacao e inflacao",
+          [
+            "emissao",
+            "especulacao",
+            "inflacao"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "História",
+    "topic": "Absolutismo",
+    "sections": [
+      {
+        "title": "Formação do Estado absolutista",
+        "content": "O absolutismo consolidou o poder do rei sobre a nobreza feudal, com exército permanente, burocracia, tributação centralizada e território unificado. Foi produto de uma acomodação: a nobreza manteve privilégios sociais e a burguesia obteve ordem e regras para o comércio, enquanto o rei concentrou a decisão política."
+      },
+      {
+        "title": "Justificativas teóricas",
+        "content": "Bossuet defendeu o direito divino dos reis, apresentando o soberano como escolhido por Deus. Hobbes, partindo de premissas distintas, justificou o poder absoluto como saída racional do estado de natureza, por meio de um contrato em que os indivíduos abrem mão da liberdade em troca de segurança."
+      },
+      {
+        "title": "Exemplos e limites",
+        "content": "Luís XIV, na França, é o modelo clássico, com a corte de Versalhes usada para controlar a nobreza. Na Inglaterra, porém, o absolutismo encontrou limites: a Revolução Puritana e a Revolução Gloriosa impuseram a supremacia do Parlamento e a Declaração de Direitos, inaugurando a monarquia parlamentar."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que o rei absoluto tinha poder ilimitado sobre tudo é exagero: ele dependia de nobreza, burocracia e recursos, e enfrentava costumes e resistências locais. Outro deslize é tratar Hobbes como defensor do direito divino. E supor que o absolutismo foi igual em todos os países, ignorando o caso inglês."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a burguesia apoiou monarquias absolutistas? Responda antes de conferir: o Estado centralizado unificava moedas, pesos e medidas, garantia segurança nas rotas e protegia o comércio, condições favoráveis à acumulação mercantil. Agora explique por que a Inglaterra é exceção: as revoluções do século XVII impuseram o Parlamento acima do rei."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a burguesia apoiou o absolutismo? Por que a Inglaterra é exceção no quadro absolutista?",
+      "elements": [
+        [
+          "o Estado centralizado favorecia o comercio",
+          [
+            "unificacao",
+            "seguranca",
+            "comercio"
+          ]
+        ],
+        [
+          "moedas, pesos e medidas unificados",
+          [
+            "moeda",
+            "medida",
+            "padrao"
+          ]
+        ],
+        [
+          "na Inglaterra o Parlamento se impos ao rei",
+          [
+            "parlamento",
+            "gloriosa",
+            "monarquia parlamentar"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "História",
     "topic": "Alta Idade Média e Feudalismo",
     "sections": [
       {
@@ -11760,6 +12365,171 @@
   },
   {
     "subject": "História",
+    "topic": "América Espanhola",
+    "sections": [
+      {
+        "title": "Conquista e administração",
+        "content": "A conquista dos impérios asteca e inca, por Cortés e Pizarro, apoiou-se em superioridade bélica, alianças com povos submetidos e no impacto das epidemias. A administração se organizou em vice-reinos, com Conselho das Índias e Casa de Contratação controlando comércio e decisões a partir da Espanha."
+      },
+      {
+        "title": "Trabalho e mineração",
+        "content": "A economia girou em torno da prata, com destaque para Potosí. O trabalho indígena foi mobilizado pela encomienda, que concedia direito ao trabalho em troca de catequese, e pela mita, sistema de rodízio compulsório herdado e reconfigurado a partir da tradição andina, com condições que provocaram elevada mortalidade."
+      },
+      {
+        "title": "Sociedade colonial",
+        "content": "A sociedade foi estratificada por origem e nascimento: chapetones nascidos na Espanha ocupavam os cargos mais altos; criollos, descendentes nascidos na América, eram excluídos do topo, tensão que alimentaria as independências; abaixo, mestiços, indígenas e africanos escravizados, com forte hierarquização e mestiçagem intensa."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Explicar a conquista apenas pela superioridade militar ignora epidemias e alianças com povos que resistiam ao domínio asteca e inca. Outro deslize é confundir encomienda com mita. E supor que criollos e chapetones tinham os mesmos direitos, quando a exclusão dos criollos foi motor das independências."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a distinção entre criollos e chapetones importa para entender as independências? Responda antes de conferir: os criollos concentravam riqueza mas eram excluídos dos altos cargos, o que gerou o descontentamento das elites locais que lideraram os processos de independência. Agora diferencie encomienda de mita: a primeira concedia direito ao trabalho indígena em troca de catequese; a segunda era rodízio compulsório, sobretudo nas minas."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a distinção entre criollos e chapetones importa? Diferencie encomienda de mita.",
+      "elements": [
+        [
+          "os criollos eram excluidos dos altos cargos",
+          [
+            "criollo",
+            "excluido",
+            "cargo"
+          ]
+        ],
+        [
+          "esse descontentamento alimentou as independencias",
+          [
+            "independencia",
+            "elite",
+            "descontentamento"
+          ]
+        ],
+        [
+          "a mita era rodizio compulsorio nas minas",
+          [
+            "mita",
+            "rodizio",
+            "mina"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "História",
+    "topic": "América Latina no Século XX",
+    "sections": [
+      {
+        "title": "Populismos e desenvolvimentismo",
+        "content": "Entre os anos 1930 e 1960, governos como os de Vargas no Brasil, Perón na Argentina e Cárdenas no México combinaram industrialização por substituição de importações, legislação trabalhista e forte apelo às massas urbanas. Ampliaram direitos sociais ao mesmo tempo em que controlaram sindicatos e concentraram poder no Executivo."
+      },
+      {
+        "title": "Ditaduras militares",
+        "content": "A partir dos anos 1960, ditaduras militares se instalaram em vários países, com apoio ou tolerância dos Estados Unidos no contexto da Guerra Fria e da Doutrina de Segurança Nacional. Combinaram repressão política, censura, tortura e desaparecimentos com projetos econômicos de abertura ou de modernização conservadora."
+      },
+      {
+        "title": "Redemocratização e depois",
+        "content": "As transições dos anos 1980 devolveram eleições e liberdades, mas em contexto de crise da dívida e inflação, seguido de reformas de orientação liberal nos anos 1990. Desde então, a região alternou governos de orientações distintas, com avanços sociais, instabilidade política e persistência da desigualdade."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Usar populismo apenas como termo pejorativo esvazia a análise histórica de governos com bases sociais e políticas específicas. Outro deslize é supor que todas as ditaduras latino-americanas foram idênticas. E confundir a Operação Condor, de cooperação repressiva entre ditaduras, com a Aliança para o Progresso, de ajuda econômica."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que os governos populistas ampliaram direitos e ao mesmo tempo controlaram sindicatos? Responda antes de conferir: buscavam apoio das massas urbanas ao mesmo tempo em que evitavam organização autônoma dos trabalhadores, mantendo o vínculo político sob controle do Estado. Agora diga o que foi a Operação Condor: coordenação entre ditaduras do Cone Sul para perseguir opositores além das fronteiras."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que governos populistas ampliavam direitos e controlavam sindicatos? O que foi a Operação Condor?",
+      "elements": [
+        [
+          "buscavam apoio das massas urbanas",
+          [
+            "massa",
+            "apoio",
+            "urbana"
+          ]
+        ],
+        [
+          "evitavam organizacao autonoma dos trabalhadores",
+          [
+            "autonoma",
+            "controle",
+            "sindicato"
+          ]
+        ],
+        [
+          "Condor coordenou a repressao entre ditaduras",
+          [
+            "condor",
+            "repressao",
+            "cone sul"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "História",
+    "topic": "América no Século XIX",
+    "sections": [
+      {
+        "title": "Independências latino-americanas",
+        "content": "As independências hispano-americanas, lideradas por criollos como Bolívar e San Martín, aproveitaram a crise da monarquia espanhola durante as invasões napoleônicas. Resultaram em muitos Estados, e não numa unidade continental, por diferenças regionais, interesses de elites locais e dificuldades geográficas e econômicas."
+      },
+      {
+        "title": "Estados Unidos",
+        "content": "Os Estados Unidos consolidaram-se com expansão territorial para o oeste, sustentada pela Doutrina do Destino Manifesto e pela expulsão de povos indígenas. A tensão entre norte industrial e sul escravista culminou na Guerra de Secessão, vencida pelo norte, com abolição da escravidão seguida de segregação racial institucionalizada."
+      },
+      {
+        "title": "Neocolonialismo e dependência",
+        "content": "Após as independências, a América Latina manteve economias primário-exportadoras e forte dependência de capitais e mercados britânicos, e depois norte-americanos. A Doutrina Monroe e, mais tarde, intervenções diretas expressaram a crescente influência dos Estados Unidos sobre a região."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Supor que a independência trouxe autonomia econômica é erro: a dependência apenas mudou de metrópole para credores e parceiros comerciais. Outro deslize é tratar a abolição nos Estados Unidos como fim da desigualdade racial, ignorando as leis segregacionistas. E confundir Doutrina Monroe com Destino Manifesto."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a América espanhola se fragmentou em vários países? Responda antes de conferir: interesses distintos das elites regionais, dificuldades geográficas de comunicação e ausência de integração econômica prévia inviabilizaram o projeto de unidade continental. Agora diferencie Doutrina Monroe de Destino Manifesto: a primeira opõe-se à intervenção europeia nas Américas, a segunda justifica a expansão territorial dos Estados Unidos."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a América espanhola se fragmentou? Diferencie Doutrina Monroe de Destino Manifesto.",
+      "elements": [
+        [
+          "interesses distintos das elites regionais",
+          [
+            "elite",
+            "regional",
+            "interesse"
+          ]
+        ],
+        [
+          "dificuldades geograficas e economicas",
+          [
+            "geografia",
+            "comunicacao",
+            "integracao"
+          ]
+        ],
+        [
+          "Monroe barra a Europa e Destino Manifesto justifica a expansao",
+          [
+            "monroe",
+            "europa",
+            "expansao"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "História",
     "topic": "Antiguidade Clássica: o Mundo Grego",
     "sections": [
       {
@@ -11783,6 +12553,1491 @@
         "content": "Como a democracia ateniense podia coexistir com a escravidão? Porque os direitos políticos eram delimitados pela condição de cidadão, enquanto o trabalho e a subordinação de outros grupos sustentavam a organização social. A coexistência não elimina a relevância histórica da participação direta, mas impede equipará-la à cidadania universal. Compare participação política e extensão dos direitos como duas dimensões distintas."
       }
     ]
+  },
+  {
+    "subject": "História",
+    "topic": "Antiguidade Clássica: o Mundo Romano",
+    "sections": [
+      {
+        "title": "Da República ao Império",
+        "content": "Roma passou de monarquia a república, governada por magistrados e pelo Senado, com tensões entre patrícios e plebeus que produziram conquistas como o tribunato da plebe e as Leis das Doze Tábuas. A expansão territorial trouxe riqueza, escravizados e crises sociais que culminaram nas guerras civis e no principado de Otávio Augusto."
+      },
+      {
+        "title": "Escravidão e economia",
+        "content": "A economia romana dependia do trabalho escravo, alimentado pelas guerras de conquista. A concentração de terras em grandes propriedades arruinou pequenos camponeses, que migraram para Roma, formando uma população urbana pobre atendida por distribuições de alimentos e espetáculos, política resumida na expressão pão e circo."
+      },
+      {
+        "title": "Crise e legado",
+        "content": "A crise do século III, a pressão dos povos germânicos, a dificuldade de manter as fronteiras sem novas conquistas e a divisão do Império precederam a queda do Império Romano do Ocidente em 476. O legado inclui o direito romano, o latim como base das línguas neolatinas, a arquitetura e a difusão do cristianismo, oficializado no século IV."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Chamar a república romana de democracia é erro: o poder era concentrado no Senado e nas magistraturas, com participação restrita. Outro deslize é datar a queda de Roma como colapso súbito, quando foi processo longo. E confundir Império Romano do Oriente, que perdurou como Império Bizantino, com o do Ocidente."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a expansão territorial gerou crise social em Roma? Responda antes de conferir: trouxe escravizados e concentrou terras em grandes propriedades, arruinando pequenos proprietários que migraram para a cidade, ampliando a massa urbana pobre. Agora explique a política de pão e circo: distribuição de alimentos e espetáculos para conter a insatisfação dessa população."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a expansão gerou crise social em Roma? Explique a política de pão e circo.",
+      "elements": [
+        [
+          "escravizados e concentracao de terras",
+          [
+            "escravo",
+            "terra",
+            "latifundio"
+          ]
+        ],
+        [
+          "pequenos camponeses arruinados migram para a cidade",
+          [
+            "campones",
+            "migra",
+            "urbana"
+          ]
+        ],
+        [
+          "alimentos e espetaculos contem a insatisfacao",
+          [
+            "alimento",
+            "espetaculo",
+            "conter"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "História",
+    "topic": "Ascensão e Domínio das Oligarquias",
+    "sections": [
+      {
+        "title": "Política dos governadores",
+        "content": "Campos Sales estruturou a política dos governadores, um acordo em que o presidente apoiava as oligarquias estaduais e recebia delas apoio no Congresso, com a Comissão de Verificação de Poderes controlando quem tomava posse. O arranjo garantiu estabilidade ao custo de fechar o sistema à oposição."
+      },
+      {
+        "title": "Coronelismo e voto de cabresto",
+        "content": "Nos municípios, o coronel controlava terra, emprego e favores, e assegurava votos por meio de dependência, troca de favores e coerção. O voto aberto tornava o controle possível, e as fraudes eleitorais eram sistemáticas, o que explica a expressão eleição a bico de pena para atas manipuladas."
+      },
+      {
+        "title": "Café com leite e economia",
+        "content": "A alternância entre presidentes paulistas e mineiros, chamada política do café com leite, refletia o peso econômico do café e da pecuária leiteira. O Convênio de Taubaté, de 1906, criou a valorização do café com compra de excedentes pelo Estado, socializando prejuízos e mantendo os preços em favor dos produtores."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Confundir coronelismo, relação local de poder, com clientelismo em geral ou com o cargo militar de coronel. Outro deslize é supor que a política do café com leite era regra rígida e sem exceções. E tratar o Convênio de Taubaté como política de mercado, quando foi intervenção estatal em favor dos cafeicultores."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Como a política dos governadores fechava o sistema? Responda antes de conferir: o presidente apoiava as oligarquias estaduais e a Comissão de Verificação de Poderes impedia a posse de opositores eleitos, de modo que a competição real desaparecia. Agora explique o Convênio de Taubaté: o Estado comprava o excedente de café para sustentar os preços, transferindo o custo para a sociedade."
+      }
+    ],
+    "recall": {
+      "prompt": "Como a política dos governadores fechava o sistema político? O que foi o Convênio de Taubaté?",
+      "elements": [
+        [
+          "apoio mutuo entre presidente e oligarquias",
+          [
+            "oligarquia",
+            "apoio",
+            "governadores"
+          ]
+        ],
+        [
+          "a verificacao de poderes barrava opositores",
+          [
+            "verificacao",
+            "posse",
+            "opositor"
+          ]
+        ],
+        [
+          "o Estado comprava o excedente de cafe",
+          [
+            "cafe",
+            "excedente",
+            "valorizacao"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "História",
+    "topic": "Baixa Idade Média",
+    "sections": [
+      {
+        "title": "Renascimento comercial e urbano",
+        "content": "A partir do século XI, o aumento da produção agrícola, o crescimento populacional e a maior segurança impulsionaram feiras, rotas comerciais e o ressurgimento das cidades. Surgiram burgos, corporações de ofício e uma nova camada social, a burguesia, cuja lógica mercantil tensionava a ordem feudal baseada na terra."
+      },
+      {
+        "title": "Cruzadas e circulação",
+        "content": "As Cruzadas, motivadas por religiosidade, interesses territoriais e comerciais, reabriram o Mediterrâneo ao comércio europeu, ampliaram o contato com o mundo islâmico e bizantino e favoreceram cidades italianas como Veneza e Gênova. Também difundiram técnicas, produtos e conhecimentos que alimentaram transformações posteriores."
+      },
+      {
+        "title": "Crise do século XIV",
+        "content": "Fome, peste negra e a Guerra dos Cem Anos reduziram drasticamente a população europeia. A escassez de mão de obra alterou relações de trabalho, favoreceu revoltas camponesas e enfraqueceu a estrutura feudal, ao mesmo tempo em que reis se fortaleceram em aliança com a burguesia, abrindo caminho para os Estados nacionais."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Tratar a Idade Média como período uniforme e estagnado é o erro mais comum: houve intensa transformação, sobretudo a partir do século XI. Outro deslize é apresentar as Cruzadas como movimento exclusivamente religioso. E supor que a peste negra apenas reduziu população, ignorando seus efeitos sociais e econômicos duradouros."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a peste negra contribuiu para enfraquecer o feudalismo? Responda antes de conferir: a queda populacional tornou a mão de obra escassa e mais valorizada, permitindo aos camponeses negociar melhores condições e estimulando revoltas contra as obrigações senhoriais. Agora diga um efeito econômico das Cruzadas: a reativação do comércio mediterrâneo e o fortalecimento das cidades italianas."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a peste negra enfraqueceu o feudalismo? Cite um efeito econômico das Cruzadas.",
+      "elements": [
+        [
+          "a mao de obra ficou escassa e valorizada",
+          [
+            "escassa",
+            "mao de obra",
+            "valorizada"
+          ]
+        ],
+        [
+          "camponeses negociam e se revoltam",
+          [
+            "revolta",
+            "camponeses",
+            "negociar"
+          ]
+        ],
+        [
+          "reativacao do comercio mediterraneo",
+          [
+            "comercio",
+            "mediterraneo",
+            "italianas"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "História",
+    "topic": "Brasil Império: Formação do Estado Nacional Brasileiro",
+    "sections": [
+      {
+        "title": "A Constituição de 1824",
+        "content": "Após dissolver a Assembleia Constituinte, D. Pedro I outorgou a Constituição de 1824, que criou o Poder Moderador, exclusivo do imperador, além dos três poderes clássicos. O voto era censitário, baseado em renda, e a religião católica foi mantida como oficial, com liberdade limitada para outros cultos."
+      },
+      {
+        "title": "Confederação do Equador",
+        "content": "A outorga e o centralismo provocaram reação em Pernambuco, com a Confederação do Equador, em 1824, de caráter republicano e separatista, influenciada por ideias liberais. Foi duramente reprimida, com execuções de líderes, evidenciando os limites da tolerância imperial diante de projetos alternativos de organização política."
+      },
+      {
+        "title": "Crise do Primeiro Reinado",
+        "content": "A guerra da Cisplatina, cara e mal sucedida, o autoritarismo, a crise financeira, a pressão inglesa pelo fim do tráfico e o descontentamento das elites levaram à abdicação de D. Pedro I em 1831. Como o herdeiro era criança, iniciou-se o período regencial, o mais instável da história política do Império."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que a Constituição de 1824 foi promulgada por uma assembleia é erro: ela foi outorgada após a dissolução da Constituinte. Outro deslize é ignorar o caráter censitário do voto ao falar em representação. E confundir Poder Moderador com Poder Executivo, ambos nas mãos do imperador, mas com funções distintas."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "O que era o Poder Moderador? Responda antes de conferir: um quarto poder, exclusivo do imperador, que lhe permitia intervir sobre os demais, dissolver a Câmara, nomear senadores e suspender decisões, concentrando poder no monarca. Agora explique o voto censitário: o direito de votar e ser votado dependia de comprovação de renda mínima."
+      }
+    ],
+    "recall": {
+      "prompt": "O que era o Poder Moderador e o que significa voto censitário?",
+      "elements": [
+        [
+          "quarto poder exclusivo do imperador",
+          [
+            "quarto",
+            "imperador",
+            "moderador"
+          ]
+        ],
+        [
+          "permitia dissolver a Camara e intervir nos poderes",
+          [
+            "dissolver",
+            "camara",
+            "intervir"
+          ]
+        ],
+        [
+          "o voto dependia de renda minima",
+          [
+            "renda",
+            "censitario",
+            "comprovacao"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "História",
+    "topic": "Brasil Império: Segundo Reinado (1840-1889)",
+    "sections": [
+      {
+        "title": "Estabilidade e café",
+        "content": "O Segundo Reinado consolidou o Estado imperial, com o parlamentarismo às avessas, em que o imperador escolhia o gabinete e este organizava a eleição, invertendo a lógica parlamentar. A economia girou em torno do café, que se expandiu do Vale do Paraíba para o oeste paulista, financiando infraestrutura e urbanização."
+      },
+      {
+        "title": "Fim do tráfico e trabalho",
+        "content": "A pressão inglesa culminou na Lei Eusébio de Queirós, de 1850, que extinguiu o tráfico atlântico. O capital antes empregado nele migrou para infraestrutura, bancos e ferrovias. Ainda em 1850, a Lei de Terras condicionou o acesso à compra, dificultando que ex-escravizados e imigrantes pobres se tornassem proprietários."
+      },
+      {
+        "title": "Guerra do Paraguai",
+        "content": "O conflito, entre 1864 e 1870, foi o maior da América do Sul, com enormes perdas humanas e materiais, sobretudo para o Paraguai. Fortaleceu o Exército como instituição e como ator político, endividou o Império e aprofundou tensões sobre escravidão, já que escravizados foram recrutados com promessa de alforria."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Chamar o sistema político do Segundo Reinado de parlamentarismo pleno ignora a inversão promovida pelo Poder Moderador. Outro deslize é supor que a Lei de 1850 aboliu a escravidão, quando apenas encerrou o tráfico atlântico. E ignorar a Lei de Terras ao discutir a estrutura fundiária brasileira."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que se fala em parlamentarismo às avessas? Responda antes de conferir: em vez de o parlamento eleito sustentar o gabinete, o imperador nomeava o gabinete, que então organizava eleições para obter maioria, invertendo a relação. Agora explique o efeito da Lei de Terras de 1850: ao exigir compra, dificultou o acesso à terra por pobres livres, ex-escravizados e imigrantes."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que se fala em parlamentarismo às avessas? Qual o efeito da Lei de Terras de 1850?",
+      "elements": [
+        [
+          "o imperador nomeava o gabinete",
+          [
+            "imperador",
+            "gabinete",
+            "moderador"
+          ]
+        ],
+        [
+          "o gabinete organizava as eleicoes",
+          [
+            "eleicao",
+            "maioria",
+            "invertida"
+          ]
+        ],
+        [
+          "a terra so por compra excluiu os pobres",
+          [
+            "compra",
+            "terra",
+            "exclusao"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "História",
+    "topic": "Brasil Império: o Declínio do Segundo Reinado",
+    "sections": [
+      {
+        "title": "Abolição gradual",
+        "content": "A abolição avançou por etapas: Lei do Ventre Livre em 1871, Lei dos Sexagenários em 1885 e Lei Áurea em 1888. A gradualidade atendia aos interesses dos proprietários, e as leis intermediárias tiveram efeito prático limitado. A pressão abolicionista, as fugas em massa e a resistência das pessoas escravizadas foram decisivas."
+      },
+      {
+        "title": "Questões que corroem o Império",
+        "content": "A questão religiosa opôs o Estado a bispos que seguiram orientações papais; a questão militar afastou o Exército, fortalecido após o Paraguai; e a questão abolicionista rompeu com a base escravista após 1888. O regime perdeu, em poucos anos, apoio da Igreja, do Exército e dos grandes proprietários."
+      },
+      {
+        "title": "Proclamação da República",
+        "content": "Em novembro de 1889, um golpe militar liderado por Deodoro da Fonseca depôs a monarquia, com apoio de setores republicanos e cafeicultores paulistas. A participação popular foi mínima, situação sintetizada na expressão de que o povo assistiu bestializado, atribuída a Aristides Lobo."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Apresentar a Lei Áurea como concessão generosa da princesa ignora décadas de luta abolicionista e a resistência dos escravizados. Outro deslize é supor que a abolição veio acompanhada de política de inclusão, quando não houve reparação, terra ou acesso à educação. E tratar a Proclamação como movimento popular."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que o Império perdeu sustentação em poucos anos? Responda antes de conferir: as questões religiosa, militar e abolicionista afastaram sucessivamente Igreja, Exército e grandes proprietários, deixando a monarquia sem base de apoio. Agora explique por que a abolição não significou inclusão: não houve terra, reparação, emprego garantido nem acesso à educação para os libertos."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que o Império perdeu sustentação? Por que a abolição não significou inclusão?",
+      "elements": [
+        [
+          "as questoes religiosa, militar e abolicionista",
+          [
+            "religiosa",
+            "militar",
+            "abolicionista"
+          ]
+        ],
+        [
+          "perda de apoio de Igreja, Exercito e proprietarios",
+          [
+            "igreja",
+            "exercito",
+            "proprietario"
+          ]
+        ],
+        [
+          "nao houve terra, reparacao nem educacao",
+          [
+            "terra",
+            "reparacao",
+            "educacao"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "História",
+    "topic": "Brasil Império: o Período Regencial (1831-1840)",
+    "sections": [
+      {
+        "title": "Instabilidade e disputas",
+        "content": "Com D. Pedro II ainda criança, o país foi governado por regências, num período de forte disputa entre grupos políticos: liberais moderados, exaltados e restauradores. A instabilidade produziu experiências institucionais importantes, como a criação da Guarda Nacional e a descentralização promovida pelo Ato Adicional de 1834."
+      },
+      {
+        "title": "Revoltas regenciais",
+        "content": "Cabanagem no Pará, Balaiada no Maranhão, Sabinada na Bahia, Revolução Farroupilha no sul e a Revolta dos Malês em Salvador expressaram tensões sociais, regionais e étnicas distintas. Algumas tiveram forte participação popular, indígena e de pessoas escravizadas, e a repressão foi violenta, com milhares de mortes."
+      },
+      {
+        "title": "Golpe da maioridade",
+        "content": "O temor de fragmentação territorial e a percepção de que a descentralização alimentava as revoltas levaram à reação conservadora, com a Lei Interpretativa do Ato Adicional e a recentralização. Em 1840, o golpe da maioridade antecipou a coroação de D. Pedro II, aos 14 anos, buscando restaurar a autoridade central."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Tratar todas as revoltas regenciais como movimentos separatistas é erro: muitas reivindicavam autonomia, direitos ou melhores condições, e não a ruptura. Outro deslize é ignorar a participação popular. E confundir o Ato Adicional, descentralizador, com a Lei Interpretativa, que reverteu parte dessa descentralização."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que o período regencial foi tão instável? Responda antes de conferir: a ausência do imperador enfraqueceu o eixo de autoridade, as disputas entre grupos políticos se acirraram e a descentralização de 1834 ampliou o espaço para conflitos regionais e revoltas populares. Agora explique o golpe da maioridade: antecipação da coroação de D. Pedro II para restaurar a autoridade central."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que o período regencial foi instável? Explique o golpe da maioridade.",
+      "elements": [
+        [
+          "ausencia do imperador e disputas politicas",
+          [
+            "imperador",
+            "disputa",
+            "regencia"
+          ]
+        ],
+        [
+          "descentralizacao ampliou conflitos regionais",
+          [
+            "descentralizacao",
+            "ato adicional",
+            "revolta"
+          ]
+        ],
+        [
+          "antecipacao da coroacao de D. Pedro II",
+          [
+            "maioridade",
+            "1840",
+            "coroacao"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "História",
+    "topic": "Descolonização Afro-Asiática",
+    "sections": [
+      {
+        "title": "Contexto do pós-guerra",
+        "content": "A Segunda Guerra enfraqueceu as metrópoles europeias, e a participação de colonizados no esforço de guerra reforçou reivindicações de autodeterminação, princípio incorporado à Carta da ONU. A Conferência de Bandung, em 1955, articulou países africanos e asiáticos em torno de independência, não alinhamento e cooperação."
+      },
+      {
+        "title": "Trajetórias diversas",
+        "content": "A Índia conquistou a independência em 1947 pela via da desobediência civil liderada por Gandhi, com a dolorosa partição entre Índia e Paquistão. A Argélia enfrentou guerra prolongada contra a França. Em outros casos, a transição foi negociada. As trajetórias variaram conforme o tipo de colonização e a presença de colonos europeus."
+      },
+      {
+        "title": "Heranças",
+        "content": "As fronteiras herdadas, traçadas sem considerar territórios de povos, produziram conflitos duradouros. Economias voltadas à exportação de poucos produtos, dependência tecnológica e financeira, e disputas da Guerra Fria dentro dos novos Estados dificultaram a consolidação política, tema que se conecta diretamente à África contemporânea."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Tratar a descolonização como concessão generosa das metrópoles ignora as lutas e guerras que a produziram. Outro deslize é supor que a independência formal encerrou a dependência econômica. E confundir apartheid, regime segregacionista sul-africano, com o processo geral de descolonização."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a independência não encerrou a dependência? Responda antes de conferir: as economias seguiram voltadas à exportação de poucos produtos, com dependência de capitais, tecnologia e mercados externos, configurando o que se chamou de neocolonialismo. Agora diga o que foi a Conferência de Bandung: encontro de países afro-asiáticos que afirmou autodeterminação, não alinhamento e cooperação."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a independência não encerrou a dependência? O que foi a Conferência de Bandung?",
+      "elements": [
+        [
+          "economias primario-exportadoras permaneceram",
+          [
+            "exportacao",
+            "primario",
+            "economia"
+          ]
+        ],
+        [
+          "dependencia de capitais e tecnologia",
+          [
+            "capital",
+            "tecnologia",
+            "externo"
+          ]
+        ],
+        [
+          "Bandung reuniu paises afro-asiaticos pelo nao alinhamento",
+          [
+            "bandung",
+            "nao alinhamento",
+            "afro-asiatico"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "História",
+    "topic": "Dinâmica Interna da Colonização",
+    "sections": [
+      {
+        "title": "Sociedade do açúcar",
+        "content": "A sociedade açucareira era hierarquizada e patriarcal, com o senhor de engenho no topo, seguido por lavradores de cana, artesãos, feitores e, na base, a maioria escravizada. A mobilidade era mínima, e o poder privado do senhor se estendia à política local, configurando o que se chamou de mandonismo."
+      },
+      {
+        "title": "Resistência escrava",
+        "content": "A resistência assumiu formas variadas: fugas, formação de quilombos, como Palmares, sabotagem, redução do ritmo de trabalho, preservação de práticas culturais e religiosas, revoltas e alforrias negociadas. Reconhecer essa agência é essencial para não tratar as pessoas escravizadas como sujeitos passivos da história."
+      },
+      {
+        "title": "Atividades subsidiárias",
+        "content": "A pecuária avançou pelo sertão fornecendo carne, couro e animais de tração aos engenhos, e serviu de vetor de interiorização. O tabaco articulou-se ao tráfico africano, e a produção de alimentos ocupou pequenas roças. Essas atividades sustentavam a economia central e criaram dinâmicas regionais próprias."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Descrever a colônia apenas pelo engenho ignora pecuária, tabaco, drogas do sertão e produção de alimentos. Outro deslize é tratar o quilombo como isolamento total, quando havia trocas com povoados vizinhos. E supor que a alforria era comum e generosa, quando era exceção e frequentemente onerosa."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a pecuária foi importante além do fornecimento de carne? Responda antes de conferir: fornecia couro e animais de tração aos engenhos e, por exigir grandes áreas, impulsionou a ocupação do sertão, funcionando como vetor de interiorização. Agora cite três formas de resistência escrava: fugas e quilombos, sabotagem do trabalho e preservação cultural e religiosa."
+      }
+    ],
+    "recall": {
+      "prompt": "Qual a importância da pecuária além da carne? Cite formas de resistência escrava.",
+      "elements": [
+        [
+          "fornecia couro e animais de tracao",
+          [
+            "couro",
+            "tracao",
+            "engenho"
+          ]
+        ],
+        [
+          "impulsionou a interiorizacao",
+          [
+            "sertao",
+            "interiorizacao",
+            "ocupacao"
+          ]
+        ],
+        [
+          "fugas, quilombos e sabotagem",
+          [
+            "quilombo",
+            "fuga",
+            "sabotagem"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "História",
+    "topic": "Disputas Europeias no Brasil Colonial",
+    "sections": [
+      {
+        "title": "Franceses e a França Antártica",
+        "content": "Franceses estabeleceram-se no Rio de Janeiro em 1555, na França Antártica, e depois no Maranhão, na França Equinocial, aliando-se a povos indígenas rivais dos aliados dos portugueses. Foram expulsos após confrontos, e a fundação de cidades como Rio de Janeiro e São Luís está ligada a essas disputas territoriais."
+      },
+      {
+        "title": "Invasões holandesas",
+        "content": "Com a União Ibérica, Portugal e suas colônias passaram a ser alvo dos inimigos da Espanha. Os holandeses, expulsos do circuito do açúcar, ocuparam Salvador e depois Pernambuco, onde o governo de Maurício de Nassau promoveu obras urbanas, tolerância religiosa e incentivo à produção, financiando senhores locais."
+      },
+      {
+        "title": "Expulsão e consequências",
+        "content": "A guerra de restauração pernambucana, com participação de forças locais, expulsou os holandeses em 1654. Estes passaram a produzir açúcar nas Antilhas, com tecnologia aprendida no Nordeste, aumentando a concorrência e derrubando os preços, o que abalou a economia açucareira brasileira de forma duradoura."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Tratar as invasões apenas como episódios militares ignora seus efeitos econômicos de longo prazo, especialmente a concorrência antilhana. Outro deslize é apresentar Nassau apenas como administrador benevolente, sem considerar os interesses da Companhia das Índias Ocidentais. E confundir França Antártica com França Equinocial."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a expulsão dos holandeses prejudicou a economia açucareira brasileira? Responda antes de conferir: eles levaram a técnica para as Antilhas, ampliaram a oferta mundial de açúcar e derrubaram os preços, reduzindo a rentabilidade da produção no Nordeste. Agora explique a relação entre União Ibérica e invasões: as colônias portuguesas viraram alvo dos inimigos da Espanha."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a expulsão dos holandeses prejudicou o açúcar brasileiro? Qual a relação entre União Ibérica e as invasões?",
+      "elements": [
+        [
+          "levaram a tecnica para as Antilhas",
+          [
+            "antilhas",
+            "tecnica",
+            "caribe"
+          ]
+        ],
+        [
+          "aumento da oferta derrubou os precos",
+          [
+            "preco",
+            "oferta",
+            "concorrencia"
+          ]
+        ],
+        [
+          "a Uniao Iberica tornou as colonias alvo dos inimigos da Espanha",
+          [
+            "uniao iberica",
+            "espanha",
+            "inimigo"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "História",
+    "topic": "Europa no Século XIX",
+    "sections": [
+      {
+        "title": "Congresso de Viena e restauração",
+        "content": "Após a derrota de Napoleão, o Congresso de Viena tentou restaurar dinastias e o equilíbrio entre potências, apoiado nos princípios da legitimidade e da intervenção contra revoluções. A Santa Aliança buscou conter movimentos liberais e nacionais, mas as ondas revolucionárias de 1830 e 1848 mostraram os limites dessa restauração."
+      },
+      {
+        "title": "Nacionalismos e unificações",
+        "content": "O nacionalismo mobilizou a ideia de que povos com língua e cultura comuns deveriam formar Estados próprios. Itália e Alemanha se unificaram na segunda metade do século, com papel decisivo de Cavour e Bismarck, este último combinando diplomacia e guerras. A unificação alemã alterou o equilíbrio europeu e alimentou rivalidades futuras."
+      },
+      {
+        "title": "Movimento operário",
+        "content": "A industrialização produziu jornadas extenuantes, trabalho infantil e concentração urbana precária, gerando resistência: ludismo, cartismo, sindicatos e partidos operários. O socialismo utópico, o marxismo e o anarquismo ofereceram diagnósticos e projetos distintos, e as Internacionais buscaram articular trabalhadores além das fronteiras."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Tratar 1848 como fracasso completo ignora conquistas duradouras, como a ampliação do sufrágio e o fim da servidão em algumas regiões. Outro deslize é confundir socialismo utópico com científico. E supor que o nacionalismo foi sempre progressista, quando também serviu a projetos expansionistas e excludentes."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a unificação alemã alterou o equilíbrio europeu? Responda antes de conferir: criou no centro do continente uma potência industrial e militar unificada, deslocando a hegemonia francesa e alimentando rivalidades que desembocariam na Primeira Guerra. Agora diferencie ludismo de cartismo: o primeiro destruía máquinas, o segundo reivindicava direitos políticos por meio de petições."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a unificação alemã alterou o equilíbrio europeu? Diferencie ludismo de cartismo.",
+      "elements": [
+        [
+          "surge uma potencia industrial e militar no centro",
+          [
+            "potencia",
+            "centro",
+            "industrial"
+          ]
+        ],
+        [
+          "desloca a hegemonia francesa e cria rivalidades",
+          [
+            "franca",
+            "rivalidade",
+            "equilibrio"
+          ]
+        ],
+        [
+          "ludismo quebra maquinas e cartismo pede direitos politicos",
+          [
+            "ludismo",
+            "cartismo",
+            "politico"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "História",
+    "topic": "Grandes Navegações e Conquista Colonial",
+    "sections": [
+      {
+        "title": "Pioneirismo português",
+        "content": "Portugal saiu à frente por sua centralização política precoce, posição atlântica, experiência mercantil, apoio da burguesia comercial e investimento em técnicas de navegação. Contornou a África, chegou às Índias com Vasco da Gama e estabeleceu feitorias, priorizando o comércio de especiarias antes da ocupação territorial americana."
+      },
+      {
+        "title": "Tratados e partilha",
+        "content": "O Tratado de Tordesilhas, de 1494, dividiu as terras a serem encontradas entre Portugal e Espanha, redesenhando previamente a partilha do mundo entre duas potências católicas. Na prática, a expansão portuguesa no Brasil ultrapassou largamente a linha, situação depois reconhecida pelo Tratado de Madri, com o princípio do uso efetivo da terra."
+      },
+      {
+        "title": "Primeiras décadas no Brasil",
+        "content": "Nos primeiros trinta anos, a presença portuguesa concentrou-se na extração do pau-brasil por meio do escambo com indígenas e de feitorias no litoral. A ameaça de ocupação por franceses e a queda da rentabilidade do comércio oriental levaram à decisão de colonizar efetivamente, a partir de 1530."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Supor que Portugal colonizou o Brasil imediatamente após 1500 ignora as três décadas de exploração pontual do pau-brasil. Outro deslize é apresentar o escambo como troca equilibrada, quando envolvia assimetria e reorganização violenta das relações indígenas. E confundir Tordesilhas com Madri quanto a datas e princípios."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que Portugal demorou a colonizar o Brasil? Responda antes de conferir: o comércio com o Oriente era mais lucrativo, e a extração de pau-brasil por escambo exigia pouco investimento; a colonização veio com a queda dessa rentabilidade e a ameaça estrangeira. Agora diga o princípio adotado no Tratado de Madri: o uso efetivo da terra, ou uti possidetis."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que Portugal demorou a colonizar o Brasil? Qual princípio orientou o Tratado de Madri?",
+      "elements": [
+        [
+          "o comercio oriental era mais lucrativo",
+          [
+            "oriente",
+            "especiaria",
+            "lucrativo"
+          ]
+        ],
+        [
+          "o pau-brasil exigia pouco investimento",
+          [
+            "pau-brasil",
+            "escambo",
+            "feitoria"
+          ]
+        ],
+        [
+          "Madri adotou o uso efetivo da terra",
+          [
+            "uti possidetis",
+            "uso efetivo",
+            "madri"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "História",
+    "topic": "Grandes Revoluções do Século XX",
+    "sections": [
+      {
+        "title": "Revolução Russa",
+        "content": "Em 1917, a Revolução de Fevereiro derrubou o czarismo e instalou um governo provisório, que manteve a Rússia na guerra. Em Outubro, os bolcheviques, liderados por Lênin, tomaram o poder com as palavras de ordem de paz, terra e pão. Seguiram-se guerra civil, comunismo de guerra, a NEP e a formação da URSS."
+      },
+      {
+        "title": "Revolução Mexicana",
+        "content": "Iniciada em 1910 contra a ditadura de Porfírio Díaz, mobilizou camponeses liderados por Zapata e Villa em torno da reforma agrária. A Constituição de 1917 incorporou direitos trabalhistas, previu a reforma agrária e afirmou a propriedade nacional do subsolo, tornando-se referência para o constitucionalismo social."
+      },
+      {
+        "title": "Revolução Chinesa",
+        "content": "Após décadas de guerra civil e resistência à ocupação japonesa, os comunistas liderados por Mao venceram em 1949, apoiando-se sobretudo no campesinato, e não no operariado urbano, o que a distingue do modelo russo. Seguiram-se o Grande Salto Adiante, a Revolução Cultural e, mais tarde, as reformas de abertura econômica."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Tratar as revoluções do século XX como versões da mesma experiência ignora bases sociais e trajetórias distintas. Outro deslize é confundir a Revolução de Fevereiro com a de Outubro. E supor que a Revolução Mexicana foi socialista, quando resultou em Estado nacionalista com reformas sociais dentro do capitalismo."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "O que distingue a Revolução Chinesa da Russa quanto à base social? Responda antes de conferir: a chinesa apoiou-se principalmente no campesinato e numa longa guerra revolucionária no campo, enquanto a russa teve o operariado urbano e os sovietes como base decisiva. Agora diga uma inovação da Constituição mexicana de 1917: direitos trabalhistas e propriedade nacional do subsolo."
+      }
+    ],
+    "recall": {
+      "prompt": "Diferencie a base social das revoluções Russa e Chinesa e cite uma inovação da Constituição mexicana de 1917.",
+      "elements": [
+        [
+          "a russa se apoiou no operariado urbano",
+          [
+            "operario",
+            "urbano",
+            "sovietes"
+          ]
+        ],
+        [
+          "a chinesa se apoiou no campesinato",
+          [
+            "campones",
+            "campo",
+            "mao"
+          ]
+        ],
+        [
+          "direitos trabalhistas e subsolo nacional",
+          [
+            "trabalhista",
+            "subsolo",
+            "1917"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "História",
+    "topic": "Guerra Fria",
+    "sections": [
+      {
+        "title": "Bipolaridade",
+        "content": "Após 1945, o mundo se dividiu entre o bloco capitalista liderado pelos Estados Unidos e o socialista liderado pela URSS, com a OTAN e o Pacto de Varsóvia como alianças militares. A Doutrina Truman definiu a política de contenção, e a Cortina de Ferro simbolizou a divisão da Europa, materializada no Muro de Berlim."
+      },
+      {
+        "title": "Conflitos e corridas",
+        "content": "O confronto direto foi evitado pelo equilíbrio do terror nuclear, mas houve guerras localizadas na Coreia, no Vietnã e no Afeganistão, além da crise dos mísseis em Cuba, o momento de maior risco de guerra nuclear. Somaram-se a corrida armamentista, a corrida espacial e a disputa ideológica e cultural em escala mundial."
+      },
+      {
+        "title": "Terceiro Mundo e não alinhamento",
+        "content": "Países recém-independentes buscaram alternativas ao alinhamento automático, articulando-se na Conferência de Bandung e no Movimento dos Não Alinhados. Ainda assim, muitos foram palco de intervenções e de apoio a governos autoritários por parte das superpotências, o que marcou trajetórias políticas na América Latina, na África e na Ásia."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que não houve guerras na Guerra Fria ignora os conflitos periféricos. Outro deslize é tratar o Movimento dos Não Alinhados como bloco militar. E confundir Doutrina Truman, de contenção política e econômica, com Plano Marshall, que foi seu instrumento de reconstrução econômica na Europa."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a crise dos mísseis de Cuba é considerada o auge da tensão? Responda antes de conferir: a instalação de mísseis soviéticos a poucos quilômetros do território norte-americano criou risco imediato de confronto nuclear direto entre as superpotências. Agora explique a política de contenção: impedir a expansão da influência soviética por meio de apoio econômico e militar a países aliados."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a crise dos mísseis foi o auge da tensão? Em que consistia a política de contenção?",
+      "elements": [
+        [
+          "misseis sovieticos proximos ao territorio americano",
+          [
+            "misseis",
+            "cuba",
+            "proximo"
+          ]
+        ],
+        [
+          "risco de confronto nuclear direto",
+          [
+            "nuclear",
+            "direto",
+            "confronto"
+          ]
+        ],
+        [
+          "conter a expansao sovietica com apoio a aliados",
+          [
+            "conter",
+            "expansao",
+            "apoio"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "História",
+    "topic": "Iluminismo",
+    "sections": [
+      {
+        "title": "Princípios",
+        "content": "O Iluminismo defendeu a razão como critério de verdade e crítica, a liberdade individual, a tolerância religiosa e a ideia de progresso. Criticou o absolutismo, os privilégios de nascimento e a interferência da Igreja no conhecimento, propondo que instituições fossem julgadas por sua utilidade e racionalidade."
+      },
+      {
+        "title": "Pensadores e propostas",
+        "content": "Montesquieu propôs a separação dos poderes; Voltaire, a liberdade de expressão e a crítica ao fanatismo; Rousseau, a soberania popular e a vontade geral; Locke, os direitos naturais à vida, liberdade e propriedade; Adam Smith, o liberalismo econômico com a crítica ao mercantilismo e a defesa da livre iniciativa."
+      },
+      {
+        "title": "Efeitos históricos",
+        "content": "As ideias iluministas embasaram a Independência dos Estados Unidos, a Revolução Francesa e movimentos de independência na América Latina, incluindo a Inconfidência Mineira. Ao mesmo tempo, seus limites ficaram evidentes na convivência com a escravidão e na exclusão de mulheres e não proprietários da cidadania plena."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Tratar o Iluminismo como bloco homogêneo ignora divergências fortes, como entre Voltaire e Rousseau. Outro deslize é supor que todos defendiam democracia ampla, quando muitos preferiam monarquias reformadas e cidadania restrita. E ignorar as contradições entre discurso universal e manutenção da escravidão."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que se diz que o Iluminismo tem limites em sua universalidade? Responda antes de conferir: proclamava direitos universais enquanto convivia com a escravidão colonial e excluía mulheres e não proprietários da cidadania política. Agora relacione Montesquieu às constituições modernas: a separação dos poderes tornou-se princípio estruturante dos Estados contemporâneos."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a universalidade iluminista tem limites? Qual a contribuição de Montesquieu?",
+      "elements": [
+        [
+          "convivia com a escravidao colonial",
+          [
+            "escravidao",
+            "colonia",
+            "contradicao"
+          ]
+        ],
+        [
+          "excluia mulheres e nao proprietarios",
+          [
+            "mulher",
+            "proprietario",
+            "cidadania"
+          ]
+        ],
+        [
+          "Montesquieu propos a separacao dos poderes",
+          [
+            "separacao",
+            "poderes",
+            "montesquieu"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "História",
+    "topic": "Imperialismo e Belle Époque",
+    "sections": [
+      {
+        "title": "Causas do imperialismo",
+        "content": "A expansão imperialista do fim do século XIX foi movida pela busca de matérias-primas, mercados consumidores, áreas de investimento e prestígio geopolítico, e legitimada por doutrinas racistas como o darwinismo social e pela ideia de missão civilizadora. A Conferência de Berlim, em 1884-85, organizou a partilha da África entre potências europeias."
+      },
+      {
+        "title": "Formas de dominação",
+        "content": "A dominação assumiu formas variadas: colônias de exploração, protetorados, concessões e áreas de influência. Na Ásia, a China foi fragmentada em zonas de influência após as Guerras do Ópio, e a Índia tornou-se colônia britânica. O Japão, ao contrário, industrializou-se na Era Meiji e passou a atuar como potência imperialista."
+      },
+      {
+        "title": "Belle Époque e contradições",
+        "content": "Na Europa, o período foi de otimismo, avanços científicos, eletricidade, cinema, moda e reformas urbanas, celebrado como Belle Époque. Essa prosperidade apoiava-se na exploração colonial e convivia com desigualdade interna, tensões nacionalistas e corrida armamentista, elementos que preparariam a guerra de 1914."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Apresentar o imperialismo como missão civilizadora reproduz o discurso da época em vez de analisá-lo. Outro deslize é supor que a resistência africana e asiática foi inexistente, quando houve inúmeras revoltas. E confundir colonialismo mercantil dos séculos XVI a XVIII com o imperialismo industrial do XIX."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que o imperialismo do século XIX difere do colonialismo anterior? Responda antes de conferir: era movido pela necessidade industrial de matérias-primas, mercados e investimento de capital excedente, com dominação administrativa direta, e não apenas por trocas mercantis. Agora diga o que decidiu a Conferência de Berlim: as regras de partilha da África entre potências, sem participação africana."
+      }
+    ],
+    "recall": {
+      "prompt": "O que diferencia o imperialismo do século XIX do colonialismo anterior? O que decidiu a Conferência de Berlim?",
+      "elements": [
+        [
+          "necessidade industrial de materias-primas e mercados",
+          [
+            "industrial",
+            "materia-prima",
+            "mercado"
+          ]
+        ],
+        [
+          "investimento de capital excedente",
+          [
+            "capital",
+            "investimento",
+            "excedente"
+          ]
+        ],
+        [
+          "Berlim organizou a partilha da Africa",
+          [
+            "partilha",
+            "africa",
+            "berlim"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "História",
+    "topic": "Introdução à História e Primeiras Civilizações",
+    "sections": [
+      {
+        "title": "O ofício do historiador",
+        "content": "História é a ciência que estuda as sociedades no tempo a partir de fontes, que podem ser escritas, materiais, orais ou visuais. Nenhuma fonte fala por si: ela é produzida por alguém, em um contexto e com uma intenção, e por isso exige crítica. A periodização tradicional em Idade Antiga, Média, Moderna e Contemporânea é eurocêntrica e convencional."
+      },
+      {
+        "title": "Revolução Agrícola e as primeiras cidades",
+        "content": "A domesticação de plantas e animais permitiu a fixação de grupos humanos, o crescimento populacional e o surgimento de excedentes. Com o excedente vieram a especialização do trabalho, a hierarquia social, a propriedade e o Estado. As primeiras cidades surgiram em vales de rios férteis, onde a irrigação exigia organização coletiva."
+      },
+      {
+        "title": "Mesopotâmia e Egito",
+        "content": "Na Mesopotâmia, cidades-Estado sumérias, a escrita cuneiforme e o Código de Hamurabi, com penas diferenciadas por posição social. No Egito, o Nilo estruturou a agricultura e o poder do faraó, considerado divino, com uma burocracia de escribas e templos. Ambas foram sociedades hidráulicas, teocráticas e profundamente hierarquizadas."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Chamar de pré-história o período anterior à escrita e tratá-lo como ausência de história é impreciso: há história sem documento escrito, reconstruída por vestígios materiais. Outro deslize é supor que o Código de Hamurabi tratava todos igualmente, quando as penas variavam por condição social. E confundir teocracia com monoteísmo."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que o excedente agrícola é considerado condição para o Estado? Responda antes de conferir: ele permite que parte da população deixe de produzir alimentos e se dedique a funções especializadas, como sacerdócio, guerra e administração, sustentando hierarquia e poder centralizado. Agora explique por que o Código de Hamurabi não é igualitário: as penas dependiam da posição social de agressor e vítima."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que o excedente agrícola é condição para o surgimento do Estado? Por que o Código de Hamurabi não é igualitário?",
+      "elements": [
+        [
+          "o excedente libera parte da populacao do cultivo",
+          [
+            "excedente",
+            "especializacao",
+            "liberar"
+          ]
+        ],
+        [
+          "surgem hierarquia e poder centralizado",
+          [
+            "hierarquia",
+            "estado",
+            "poder"
+          ]
+        ],
+        [
+          "as penas variavam pela posicao social",
+          [
+            "pena",
+            "posicao",
+            "social"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "História",
+    "topic": "O Brasil Atual",
+    "sections": [
+      {
+        "title": "Constituição de 1988",
+        "content": "A Constituição Cidadã ampliou direitos sociais e políticos: voto facultativo aos 16 anos, voto do analfabeto, direitos trabalhistas, criação do SUS, proteção a povos indígenas e quilombolas, meio ambiente como direito difuso e instrumentos de participação. Também redesenhou o federalismo e reforçou o papel do Ministério Público."
+      },
+      {
+        "title": "Estabilização e políticas sociais",
+        "content": "O Plano Real, em 1994, conteve a hiperinflação com âncora cambial e nova moeda. Nas décadas seguintes, políticas de transferência de renda, valorização do salário mínimo e expansão do acesso ao ensino superior reduziram a pobreza e a desigualdade, em contexto favorável de preços de commodities."
+      },
+      {
+        "title": "Crises e desafios",
+        "content": "Desde os anos 2010, o país atravessou crise econômica, o impeachment de 2016, forte polarização política, a pandemia e debates sobre desmatamento, reformas e desigualdade. Permanecem como desafios estruturais a produtividade, a educação, a violência, o racismo e a sustentabilidade do modelo de desenvolvimento."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Tratar a Constituição de 1988 como texto apenas simbólico ignora políticas concretas dela derivadas, como o SUS. Outro deslize é atribuir a queda da pobreza a um único fator, sem considerar crescimento, emprego e políticas sociais combinados. E confundir impeachment com golpe militar em análises apressadas do período recente."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a Constituição de 1988 é chamada de Cidadã? Responda antes de conferir: ampliou direitos civis, políticos e sociais, criou o SUS, reconheceu direitos de povos indígenas e quilombolas e instituiu mecanismos de participação, após duas décadas de regime autoritário. Agora explique o Plano Real: estabilizou a economia com nova moeda e âncora cambial, encerrando a hiperinflação."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a Constituição de 1988 é chamada de Cidadã? O que foi o Plano Real?",
+      "elements": [
+        [
+          "ampliou direitos sociais e politicos",
+          [
+            "direitos",
+            "social",
+            "politico"
+          ]
+        ],
+        [
+          "criou o SUS e reconheceu povos indigenas",
+          [
+            "sus",
+            "indigena",
+            "quilombola"
+          ]
+        ],
+        [
+          "o Plano Real conteve a hiperinflacao com nova moeda",
+          [
+            "real",
+            "inflacao",
+            "moeda"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "História",
+    "topic": "O Fim da Guerra Fria",
+    "sections": [
+      {
+        "title": "Crise soviética",
+        "content": "A URSS acumulou estagnação econômica, gastos militares elevados, atraso tecnológico e desgaste com a guerra no Afeganistão. Gorbachev respondeu com a perestroika, reestruturação econômica, e a glasnost, abertura política e maior liberdade de informação, reformas que reduziram o controle do partido e aceleraram a crise que pretendiam conter."
+      },
+      {
+        "title": "1989 e a dissolução",
+        "content": "A retirada do apoio soviético aos regimes do Leste Europeu levou a transições rápidas ao longo de 1989, simbolizadas pela queda do Muro de Berlim e seguidas pela reunificação alemã. Em 1991, tentativas de golpe, o avanço das repúblicas rumo à independência e a crise final levaram à dissolução da União Soviética."
+      },
+      {
+        "title": "Nova ordem",
+        "content": "Seguiu-se uma década de hegemonia norte-americana, expansão da globalização liberal e ampliação da OTAN e da União Europeia para o leste. Ao mesmo tempo, surgiram conflitos étnicos e nacionais, como a guerra na Iugoslávia, mostrando que o fim da bipolaridade não trouxe a paz anunciada por leituras otimistas do período."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que a queda do Muro encerrou a URSS confunde datas: o Muro caiu em 1989 e a URSS se dissolveu em 1991. Outro deslize é atribuir o fim do bloco soviético apenas à pressão externa, ignorando a crise interna. E supor que o fim da Guerra Fria significou fim dos conflitos armados no mundo."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que as reformas de Gorbachev aceleraram a crise? Responda antes de conferir: a abertura política revelou problemas e ampliou demandas, enquanto a reestruturação econômica desorganizou o sistema sem produzir alternativa funcional, enfraquecendo o controle central. Agora corrija a confusão frequente: o Muro caiu em 1989 e a URSS foi dissolvida em 1991."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que as reformas de Gorbachev aceleraram a crise soviética? Diferencie 1989 de 1991.",
+      "elements": [
+        [
+          "a abertura ampliou demandas e criticas",
+          [
+            "glasnost",
+            "abertura",
+            "demanda"
+          ]
+        ],
+        [
+          "a reestruturacao desorganizou a economia",
+          [
+            "perestroika",
+            "economia",
+            "desorganizou"
+          ]
+        ],
+        [
+          "o Muro caiu em 1989 e a URSS acabou em 1991",
+          [
+            "1989",
+            "1991",
+            "muro"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "História",
+    "topic": "O Nazismo na Alemanha",
+    "sections": [
+      {
+        "title": "Bases da ascensão",
+        "content": "A República de Weimar enfrentou hiperinflação, instabilidade política e o peso das reparações de Versalhes. A crise de 1929 agravou o desemprego, e o partido nazista cresceu explorando o ressentimento nacional, o anticomunismo, o antissemitismo e a promessa de restaurar a grandeza alemã. Hitler chegou ao poder por via legal, em 1933, e rapidamente desmontou a democracia."
+      },
+      {
+        "title": "Ideologia e Estado",
+        "content": "O nazismo articulou nacionalismo extremo, racismo biológico com a ideia de raça ariana superior, antissemitismo, anticomunismo, expansionismo com a noção de espaço vital e culto ao líder. O Estado suprimiu partidos e sindicatos, controlou a imprensa e a educação, e organizou a repressão pela Gestapo e pelos campos de concentração."
+      },
+      {
+        "title": "Holocausto",
+        "content": "A perseguição avançou das Leis de Nuremberg, que retiraram direitos civis dos judeus, aos guetos e à chamada solução final, com o extermínio sistemático em campos como Auschwitz. Foram assassinados cerca de seis milhões de judeus, além de ciganos, pessoas com deficiência, homossexuais, opositores políticos e outros grupos."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que Hitler tomou o poder por golpe armado é impreciso: ele foi nomeado chanceler dentro das regras, e o regime se consolidou em seguida por medidas de exceção. Outro deslize é reduzir o Holocausto a consequência da guerra. E confundir campo de concentração com campo de extermínio."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que se diz que o nazismo chegou ao poder pela via legal? Responda antes de conferir: o partido cresceu eleitoralmente e Hitler foi nomeado chanceler conforme as regras de Weimar; a ditadura veio depois, com poderes de exceção e supressão das liberdades. Agora explique as Leis de Nuremberg: retiraram direitos civis e cidadania dos judeus, institucionalizando a perseguição."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que se diz que o nazismo chegou ao poder pela via legal? O que foram as Leis de Nuremberg?",
+      "elements": [
+        [
+          "crescimento eleitoral e nomeacao como chanceler",
+          [
+            "eleitoral",
+            "chanceler",
+            "nomeado"
+          ]
+        ],
+        [
+          "a ditadura veio depois com poderes de excecao",
+          [
+            "excecao",
+            "ditadura",
+            "suprimiu"
+          ]
+        ],
+        [
+          "Nuremberg retirou direitos civis dos judeus",
+          [
+            "nuremberg",
+            "direitos",
+            "judeus"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "História",
+    "topic": "O Período Entreguerras (1918-1939)",
+    "sections": [
+      {
+        "title": "Crise de 1929",
+        "content": "A economia norte-americana do pós-guerra combinou expansão do crédito, especulação e superprodução. A quebra da Bolsa de Nova York, em 1929, desencadeou falências, desemprego em massa e retração do comércio mundial. O New Deal respondeu com investimento público, obras, regulação financeira e políticas sociais, ampliando o papel do Estado."
+      },
+      {
+        "title": "Ascensão dos totalitarismos",
+        "content": "A crise econômica, o desemprego, o medo do comunismo e o ressentimento nacionalista favoreceram regimes totalitários: fascismo na Itália, nazismo na Alemanha e franquismo na Espanha. Esses regimes combinaram partido único, culto ao líder, propaganda massiva, repressão política e supressão de liberdades."
+      },
+      {
+        "title": "Ordem internacional fragilizada",
+        "content": "A Liga das Nações não conteve a invasão da Etiópia pela Itália, a remilitarização alemã ou a expansão japonesa na Ásia. A política de apaziguamento diante das anexações de Hitler e o Pacto Germano-Soviético prepararam o terreno para a guerra iniciada com a invasão da Polônia em 1939."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Explicar o nazismo apenas pela crise de 1929 ignora Versalhes, o antissemitismo prévio e a fragilidade da República de Weimar. Outro deslize é tratar fascismo e nazismo como idênticos, quando o racismo biológico é central apenas no segundo. E supor que o New Deal encerrou a crise de imediato."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a crise de 1929 favoreceu regimes autoritários? Responda antes de conferir: desemprego em massa, desespero social e descrédito das instituições liberais abriram espaço a discursos que prometiam ordem, emprego e grandeza nacional. Agora explique o New Deal: intervenção estatal com obras públicas, regulação e políticas sociais para reativar a economia."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a crise de 1929 favoreceu regimes autoritários? Em que consistiu o New Deal?",
+      "elements": [
+        [
+          "desemprego em massa e desespero social",
+          [
+            "desemprego",
+            "crise",
+            "miseria"
+          ]
+        ],
+        [
+          "descredito das instituicoes liberais",
+          [
+            "descredito",
+            "liberal",
+            "democracia"
+          ]
+        ],
+        [
+          "intervencao estatal com obras e regulacao",
+          [
+            "obras",
+            "estado",
+            "regulacao"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "História",
+    "topic": "Primeira Guerra Mundial (1914-1918)",
+    "sections": [
+      {
+        "title": "Causas",
+        "content": "A guerra resultou de rivalidades imperialistas por colônias e mercados, corrida armamentista, nacionalismos exacerbados e um sistema de alianças que transformou conflito local em guerra continental. O assassinato do arquiduque Francisco Ferdinando em Sarajevo foi o estopim que acionou o mecanismo das alianças."
+      },
+      {
+        "title": "Etapas e características",
+        "content": "O conflito opôs a Tríplice Entente à Tríplice Aliança, evoluiu de guerra de movimento para guerra de trincheiras e mobilizou economias inteiras, caracterizando a guerra total. Novas tecnologias, como metralhadoras, gases, tanques e aviões, produziram mortalidade sem precedentes e sofrimento prolongado nas frentes."
+      },
+      {
+        "title": "Consequências",
+        "content": "O Tratado de Versalhes impôs à Alemanha perdas territoriais, limitações militares e pesadas reparações, alimentando ressentimento. Impérios ruíram, mapas foram redesenhados, a Liga das Nações foi criada sem eficácia real, os Estados Unidos emergiram como credores e a Rússia passou pela Revolução de 1917 em meio à guerra."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Apontar o atentado de Sarajevo como causa da guerra confunde estopim com causas estruturais. Outro deslize é supor que a Liga das Nações tinha poder de sanção efetivo. E tratar Versalhes como acordo equilibrado, quando suas cláusulas contribuíram para a instabilidade dos anos seguintes."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que o atentado de Sarajevo não é a causa da guerra? Responda antes de conferir: ele foi o estopim, mas as causas estão nas rivalidades imperialistas, no nacionalismo, na corrida armamentista e no sistema de alianças. Agora explique por que Versalhes contribuiu para a Segunda Guerra: as imposições humilhantes e as reparações alimentaram ressentimento e crise na Alemanha."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que Sarajevo é estopim e não causa? Como Versalhes contribuiu para a Segunda Guerra?",
+      "elements": [
+        [
+          "as causas sao imperialismo e alianças",
+          [
+            "imperialismo",
+            "alianca",
+            "nacionalismo"
+          ]
+        ],
+        [
+          "Sarajevo apenas acionou o mecanismo",
+          [
+            "estopim",
+            "aciona",
+            "pretexto"
+          ]
+        ],
+        [
+          "as reparacoes alimentaram ressentimento na Alemanha",
+          [
+            "reparacao",
+            "ressentimento",
+            "humilhacao"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "História",
+    "topic": "Reforma Religiosa",
+    "sections": [
+      {
+        "title": "Causas e Lutero",
+        "content": "A Reforma articulou críticas à venda de indulgências e à mundanização do clero, o desejo de príncipes alemães de controlar bens eclesiásticos e a afinidade de setores burgueses com uma ética do trabalho. Lutero afirmou a salvação pela fé, a autoridade exclusiva das Escrituras e a leitura direta da Bíblia, traduzida ao alemão."
+      },
+      {
+        "title": "Calvinismo e anglicanismo",
+        "content": "Calvino desenvolveu a doutrina da predestinação e organizou Genebra segundo princípios religiosos rígidos; sua leitura do sucesso material como possível sinal de graça foi associada por Weber ao espírito do capitalismo. Na Inglaterra, a ruptura de Henrique VIII com Roma teve motivação política e dinástica, criando a Igreja Anglicana."
+      },
+      {
+        "title": "Contrarreforma",
+        "content": "A Igreja Católica respondeu com o Concílio de Trento, que reafirmou dogmas e disciplinou o clero, com a criação da Companhia de Jesus, atuante na educação e nas missões, com o Índice de livros proibidos e com o reforço da Inquisição. O resultado foi a fragmentação religiosa da Europa e décadas de guerras."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Reduzir a Reforma às indulgências ignora suas causas políticas e econômicas. Outro deslize é tratar a Contrarreforma apenas como repressão, sem considerar sua dimensão de reforma interna. E confundir anglicanismo, de origem política, com luteranismo e calvinismo, de origem doutrinária."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que príncipes alemães apoiaram Lutero? Responda antes de conferir: a ruptura permitia confiscar bens da Igreja e reduzir a interferência papal e imperial em seus territórios, somando interesse político à adesão religiosa. Agora cite duas medidas da Contrarreforma: Concílio de Trento e criação da Companhia de Jesus."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que príncipes alemães apoiaram Lutero? Cite duas medidas da Contrarreforma.",
+      "elements": [
+        [
+          "confisco de bens da Igreja",
+          [
+            "bens",
+            "confisco",
+            "terra"
+          ]
+        ],
+        [
+          "reducao da interferencia papal",
+          [
+            "papa",
+            "autonomia",
+            "imperial"
+          ]
+        ],
+        [
+          "Concilio de Trento e Companhia de Jesus",
+          [
+            "trento",
+            "jesuitas",
+            "companhia"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "História",
+    "topic": "Regime Militar (1964-1985) I",
+    "sections": [
+      {
+        "title": "Instalação do regime",
+        "content": "Após o golpe de 1964, os Atos Institucionais reorganizaram o poder: o AI-1 cassou mandatos e suspendeu direitos políticos; o AI-2 extinguiu os partidos e criou o bipartidarismo entre Arena e MDB, além de tornar indireta a eleição presidencial. A Doutrina de Segurança Nacional justificou a repressão em nome do combate ao inimigo interno."
+      },
+      {
+        "title": "Anos de chumbo",
+        "content": "O AI-5, de 1968, fechou o Congresso, suspendeu o habeas corpus para crimes políticos e instituiu a censura prévia, inaugurando o período mais repressivo. Órgãos como o DOI-CODI praticaram prisões arbitrárias, tortura, assassinatos e desaparecimentos forçados, enquanto a resistência armada e os movimentos sociais eram desarticulados."
+      },
+      {
+        "title": "Milagre econômico",
+        "content": "Entre 1969 e 1973, o país cresceu a taxas elevadas, com grandes obras, expansão do crédito e entrada de capital externo. O crescimento apoiou-se em arrocho salarial e endividamento, e concentrou renda, situação sintetizada na fórmula de que o bolo cresceu sem ser dividido, e ruiu com a crise do petróleo."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Chamar o período de ditabranda ou de simples governo autoritário ignora tortura sistemática, desaparecimentos e censura. Outro deslize é atribuir o milagre apenas à competência técnica, sem considerar o contexto internacional favorável e o endividamento. E confundir Arena, partido do governo, com MDB, oposição consentida."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que o AI-5 é considerado o marco mais duro do regime? Responda antes de conferir: fechou o Congresso, suspendeu o habeas corpus em crimes políticos, autorizou cassações sem limite e instituiu censura prévia, removendo qualquer freio institucional à repressão. Agora explique a expressão sobre o bolo: o crescimento econômico ocorreu com concentração de renda e arrocho salarial."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que o AI-5 é o marco mais duro do regime? O que a metáfora do bolo revela sobre o milagre?",
+      "elements": [
+        [
+          "fechou o Congresso e suspendeu o habeas corpus",
+          [
+            "congresso",
+            "habeas corpus",
+            "fechou"
+          ]
+        ],
+        [
+          "instituiu censura previa e cassacoes",
+          [
+            "censura",
+            "cassacao",
+            "repressao"
+          ]
+        ],
+        [
+          "crescimento com concentracao de renda",
+          [
+            "concentracao",
+            "renda",
+            "arrocho"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "História",
+    "topic": "Regime Militar (1964-1985) II",
+    "sections": [
+      {
+        "title": "Distensão e abertura",
+        "content": "A partir de Geisel, o regime iniciou a distensão lenta, gradual e segura, com o objetivo de controlar a transição. Foram revogados o AI-5, restabelecido o habeas corpus e aprovada a Lei da Anistia em 1979, ampla e recíproca, que também beneficiou agentes da repressão, ponto de disputa jurídica e política até hoje."
+      },
+      {
+        "title": "Crise econômica",
+        "content": "A crise do petróleo, o aumento dos juros internacionais e o endividamento levaram à recessão, à inflação alta e à crise da dívida externa nos anos 1980, retirando do regime o principal argumento de legitimação. O desgaste econômico somou-se ao político e acelerou a transição."
+      },
+      {
+        "title": "Diretas Já e transição",
+        "content": "A campanha das Diretas Já mobilizou multidões em 1984, mas a emenda Dante de Oliveira foi rejeitada. A sucessão ocorreu por via indireta, com a eleição de Tancredo Neves no Colégio Eleitoral e a posse de José Sarney após sua morte, iniciando a Nova República por uma transição negociada e conservadora."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que as Diretas Já conquistaram eleições diretas imediatas é erro: a emenda foi rejeitada e a eleição de 1985 foi indireta. Outro deslize é apresentar a anistia como conquista sem controvérsias. E supor que a transição rompeu com todas as estruturas do regime, quando foi negociada e preservou continuidades."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a transição brasileira é chamada de negociada? Responda antes de conferir: foi conduzida a partir do próprio regime, com abertura controlada, anistia recíproca e eleição indireta, sem ruptura abrupta nem responsabilização dos agentes da repressão. Agora explique o desfecho das Diretas Já: a emenda foi rejeitada e a escolha se deu no Colégio Eleitoral."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a transição brasileira é chamada de negociada? Qual foi o desfecho das Diretas Já?",
+      "elements": [
+        [
+          "abertura controlada pelo proprio regime",
+          [
+            "controlada",
+            "lenta",
+            "gradual"
+          ]
+        ],
+        [
+          "anistia reciproca sem responsabilizacao",
+          [
+            "anistia",
+            "reciproca",
+            "agentes"
+          ]
+        ],
+        [
+          "a emenda foi rejeitada e a eleicao foi indireta",
+          [
+            "rejeitada",
+            "indireta",
+            "colegio"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "História",
+    "topic": "República Liberal (1945-1964): Democracia em Tempos de Guerra Fria",
+    "sections": [
+      {
+        "title": "Redemocratização",
+        "content": "Com a queda de Vargas em 1945, o país retomou eleições e aprovou a Constituição de 1946, que restabeleceu liberdades e a separação de poderes, mantendo a exclusão dos analfabetos do voto. Formou-se um sistema partidário com PSD, UDN e PTB, os dois primeiros ligados a heranças distintas do varguismo e da oposição."
+      },
+      {
+        "title": "Anticomunismo e limites",
+        "content": "No contexto da Guerra Fria, o Partido Comunista, legalizado em 1945, teve o registro cassado em 1947, e seus parlamentares perderam os mandatos. O alinhamento aos Estados Unidos e o anticomunismo estruturaram o debate político, limitando a experiência democrática e criminalizando parte da oposição."
+      },
+      {
+        "title": "Crises institucionais",
+        "content": "O período foi atravessado por crises: o retorno e o suicídio de Vargas em 1954, a tentativa de impedir a posse de Juscelino, a renúncia de Jânio Quadros em 1961 e a campanha contra a posse de João Goulart, resolvida provisoriamente pelo parlamentarismo. A instabilidade preparou o terreno para o golpe de 1964."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Chamar o período de plenamente democrático ignora a exclusão dos analfabetos e a cassação do Partido Comunista. Outro deslize é tratar a renúncia de Jânio como episódio isolado, sem relação com a crise institucional. E confundir a Constituição de 1946 com a de 1934 quanto ao contexto e ao conteúdo."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que o período 1945-1964 é chamado de democracia limitada? Responda antes de conferir: houve eleições e liberdades, mas analfabetos não votavam, o Partido Comunista foi cassado e crises sucessivas ameaçaram posses e mandatos. Agora explique a solução parlamentarista de 1961: foi o arranjo que permitiu a posse de João Goulart reduzindo seus poderes."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que o período 1945-1964 é chamado de democracia limitada? O que foi o parlamentarismo de 1961?",
+      "elements": [
+        [
+          "analfabetos excluidos do voto",
+          [
+            "analfabeto",
+            "voto",
+            "exclusao"
+          ]
+        ],
+        [
+          "cassacao do Partido Comunista",
+          [
+            "comunista",
+            "cassado",
+            "registro"
+          ]
+        ],
+        [
+          "arranjo que permitiu a posse de Jango com poderes reduzidos",
+          [
+            "jango",
+            "posse",
+            "poderes"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "História",
+    "topic": "República Liberal (1945-1964): Desenvolvimentismo e Populismo",
+    "sections": [
+      {
+        "title": "Plano de Metas",
+        "content": "O governo Juscelino Kubitschek propôs crescer cinquenta anos em cinco, com o Plano de Metas voltado a energia, transporte, indústria de base e alimentação, além da construção de Brasília. Atraiu capital estrangeiro, sobretudo montadoras, e acelerou a industrialização, ao custo de inflação e endividamento externo."
+      },
+      {
+        "title": "Nacionalismo e capital estrangeiro",
+        "content": "O debate econômico opôs correntes nacionalistas, que defendiam controle estatal de setores estratégicos, como na criação da Petrobras sob o lema o petróleo é nosso, e correntes entreguistas ou liberais, favoráveis à abertura ao capital externo. O desenvolvimentismo combinou elementos dos dois lados."
+      },
+      {
+        "title": "Crise de 1961-1964",
+        "content": "João Goulart propôs as reformas de base, incluindo reforma agrária, urbana, bancária e educacional, mobilizando setores populares e alarmando proprietários, setores médios, militares e os Estados Unidos. A polarização, a inflação e a crise institucional culminaram no golpe civil-militar de 1964."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Usar populismo como rótulo pejorativo sem análise das bases sociais e da política concreta empobrece a interpretação. Outro deslize é apresentar o Plano de Metas como êxito sem custos, ignorando inflação e dívida. E supor que o golpe de 1964 foi exclusivamente militar, quando teve amplo apoio civil."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que se fala em golpe civil-militar em 1964? Responda antes de conferir: além dos militares, participaram e apoiaram setores empresariais, parte da imprensa, igrejas, entidades civis e classes médias mobilizadas, com apoio externo. Agora diga o que eram as reformas de base: conjunto de reformas agrária, urbana, bancária e educacional propostas por João Goulart."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que se fala em golpe civil-militar em 1964? O que eram as reformas de base?",
+      "elements": [
+        [
+          "houve apoio empresarial e de setores civis",
+          [
+            "empresarial",
+            "imprensa",
+            "civil"
+          ]
+        ],
+        [
+          "classes medias e igrejas apoiaram",
+          [
+            "classe media",
+            "igreja",
+            "marcha"
+          ]
+        ],
+        [
+          "reformas agraria, urbana e bancaria de Jango",
+          [
+            "agraria",
+            "urbana",
+            "bancaria"
+          ]
+        ]
+      ]
+    }
   },
   {
     "subject": "História",
@@ -11835,6 +14090,116 @@
         "content": "Explique por que a industrialização alterou a experiência do tempo. O trabalho fabril passou a depender de horários coordenados, vigilância e continuidade das máquinas, limitando o controle do trabalhador sobre o ritmo da tarefa. A resposta deve ligar técnica e relações sociais: dizer apenas que “as máquinas eram rápidas” não explica a disciplina do trabalho."
       }
     ]
+  },
+  {
+    "subject": "História",
+    "topic": "Segunda Guerra Mundial (1939-1945)",
+    "sections": [
+      {
+        "title": "Desenvolvimento do conflito",
+        "content": "A guerra começou com a invasão da Polônia em 1939 e a estratégia alemã de guerra relâmpago. A entrada da URSS após a Operação Barbarossa e dos Estados Unidos após Pearl Harbor alterou o equilíbrio. Stalingrado, o Dia D e o avanço soviético a leste levaram à rendição alemã em maio de 1945."
+      },
+      {
+        "title": "Frente do Pacífico e bombas atômicas",
+        "content": "No Pacífico, o Japão expandiu-se e foi contido em batalhas como Midway. Em agosto de 1945, os Estados Unidos lançaram bombas atômicas sobre Hiroshima e Nagasaki, provocando a rendição japonesa e inaugurando a era nuclear, com implicações diretas para a Guerra Fria que se iniciava."
+      },
+      {
+        "title": "Consequências",
+        "content": "O conflito deixou dezenas de milhões de mortos, a Europa devastada, Estados Unidos e URSS como superpotências e a Europa dividida. Surgiram a ONU, a Declaração Universal dos Direitos Humanos, os Tribunais de Nuremberg e o conceito de crime contra a humanidade, além do Plano Marshall para reconstrução da Europa Ocidental."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Atribuir a vitória aliada exclusivamente ao desembarque na Normandia subestima o peso da frente oriental, onde ocorreram as maiores perdas alemãs. Outro deslize é datar o início da guerra pelo ataque a Pearl Harbor. E confundir Plano Marshall, econômico e ocidental, com a criação da OTAN, militar."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a frente oriental é decisiva para entender a derrota alemã? Responda antes de conferir: ali se concentraram as maiores perdas humanas e materiais da Alemanha, com Stalingrado como ponto de inflexão e o avanço soviético empurrando a guerra até Berlim. Agora explique o objetivo do Plano Marshall: reconstruir economias da Europa Ocidental e conter a influência soviética."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a frente oriental foi decisiva? Qual o objetivo do Plano Marshall?",
+      "elements": [
+        [
+          "ali estavam as maiores perdas alemas",
+          [
+            "perdas",
+            "alema",
+            "oriental"
+          ]
+        ],
+        [
+          "Stalingrado foi ponto de inflexao",
+          [
+            "stalingrado",
+            "inflexao",
+            "virada"
+          ]
+        ],
+        [
+          "reconstruir a Europa Ocidental e conter a URSS",
+          [
+            "reconstrucao",
+            "conter",
+            "sovietica"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "História",
+    "topic": "Vida Urbana e Renascimento Cultural",
+    "sections": [
+      {
+        "title": "Contexto do Renascimento",
+        "content": "O Renascimento floresceu nas cidades italianas enriquecidas pelo comércio, com mecenato de famílias como os Médici. Combinou retomada da cultura greco-romana, valorização do ser humano e novas técnicas artísticas, como a perspectiva. Não foi ruptura total com a religiosidade, mas deslocamento do olhar para o humano e a natureza."
+      },
+      {
+        "title": "Humanismo e ciência",
+        "content": "O humanismo valorizou o estudo dos clássicos, a filologia e a educação, e propôs o ser humano como centro da reflexão. No campo científico, Copérnico, Galileu e Kepler desafiaram o geocentrismo, defendendo a observação e a matematização da natureza, o que colidiu com autoridades religiosas e abriu caminho para a ciência moderna."
+      },
+      {
+        "title": "Arte e sociedade",
+        "content": "Leonardo, Michelangelo e Rafael produziram sob encomenda de mecenas, papas e cidades, o que mostra a ligação entre arte, poder e riqueza. A imprensa de Gutenberg ampliou a circulação de ideias, barateou livros e foi decisiva na difusão tanto do humanismo quanto, pouco depois, das teses da Reforma religiosa."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Descrever o Renascimento como abandono da religião é erro: a maior parte da produção era religiosa em tema e patrocínio. Outro deslize é tratá-lo como movimento popular, quando foi elitizado e urbano. E supor que o heliocentrismo foi aceito de imediato, quando enfrentou resistência por décadas."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que o Renascimento surgiu nas cidades italianas? Responda antes de conferir: elas concentravam riqueza comercial, contato com a herança clássica e bizantina, e mecenas dispostos a financiar artistas e estudiosos. Agora explique a importância da imprensa: ampliou e barateou a circulação de textos, acelerando a difusão de ideias humanistas e depois reformistas."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que o Renascimento surgiu nas cidades italianas? Qual a importância da imprensa?",
+      "elements": [
+        [
+          "riqueza comercial e mecenato",
+          [
+            "comercio",
+            "mecenas",
+            "riqueza"
+          ]
+        ],
+        [
+          "contato com a heranca classica",
+          [
+            "classica",
+            "greco-romana",
+            "antiguidade"
+          ]
+        ],
+        [
+          "a imprensa barateou e difundiu textos",
+          [
+            "imprensa",
+            "difusao",
+            "livro"
+          ]
+        ]
+      ]
+    }
   },
   {
     "subject": "Língua Inglesa",
