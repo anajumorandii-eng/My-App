@@ -2,11 +2,22 @@ import chapters from './deepSummaryContent.json';
 import { deepSummaryRetrieval } from './deepSummaryRetrieval';
 import type { InteractiveSummary, SummarySection } from '../types/summary';
 
-const editorial = new Map(chapters.map(c => [`${c.subject}|${c.topic}`, c]));
+// O JSON e escrito a mao; declarar o formato aqui evita que o TypeScript
+// deduza uma uniao de formatos quando so parte dos capitulos traz recall.
+type DeepChapter = {
+  subject: string; topic: string;
+  sections: { title: string; content: string }[];
+  recall?: { prompt: string; elements: [string, string[]][] };
+};
+
+const editorial = new Map((chapters as DeepChapter[]).map(c => [`${c.subject}|${c.topic}`, c]));
 export function applyDeepSummary(summary: InteractiveSummary): InteractiveSummary {
   const chapter = editorial.get(`${summary.subject}|${summary.topic}`);
   if (!chapter) return summary;
-  const recall = deepSummaryRetrieval[chapter.topic];
+  // A pergunta de recuperacao vem junto com o capitulo; deepSummaryRetrieval
+  // guarda as escritas antes deste formato existir. Sem uma das duas o resumo
+  // perde o ciclo de estudo, e foi assim que 111 resumos ficaram sem pergunta.
+  const recall = chapter.recall ?? deepSummaryRetrieval[chapter.topic];
   const stages: SummarySection['stage'][] = ['intuicao', 'conceito', 'aplicacao', 'estrategia', 'exercicio'];
   const depths: SummarySection['depth'][] = ['rapida', 'aprofundamento', 'aprofundamento', 'prova', 'prova'];
   return {

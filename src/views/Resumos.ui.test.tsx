@@ -7,6 +7,12 @@ import { deriveSummaryErrorEntries } from '../lib/summaryStudy';
 import type { SummaryProgress } from '../types/summary';
 import Resumos from './Resumos';
 
+// O id da pergunta muda quando o capitulo ganha resumo profundo; fixar o id
+// antigo fazia o teste falhar por conteudo novo, e nao por regressao.
+const calor = interactiveSummaries.find((s) => s.id === 'fis-termologia-calor')!;
+const perguntaCalor = calor.retrieval[0].id;
+const rotaCalor = `/resumos?summary=fis-termologia-calor&question=${perguntaCalor}`;
+
 const update = vi.fn();
 vi.mock('../hooks/useSummaryProgress', () => ({
   useSummaryProgress: () => ({ progress: {}, update, loading: false, syncError: null, isCloudSynced: false }),
@@ -16,10 +22,10 @@ describe('restauração do contexto do resumo', () => {
   beforeEach(() => update.mockClear());
 
   it('abre diretamente a pergunta indicada na URL após recarregar', () => {
-    render(<MemoryRouter initialEntries={['/resumos?summary=fis-termologia-calor&question=calor-r1']}><Resumos/></MemoryRouter>);
+    render(<MemoryRouter initialEntries={[rotaCalor]}><Resumos/></MemoryRouter>);
     expect(screen.getByRole('heading', { name: /Calor, temperatura/ })).toBeInTheDocument();
     expect(screen.getByText(/por que a temperatura não aumenta/i)).toBeInTheDocument();
-    expect(screen.getByLabelText('Sua resposta')).toHaveAttribute('data-question-id', 'calor-r1');
+    expect(screen.getByLabelText('Sua resposta')).toHaveAttribute('data-question-id', perguntaCalor);
   });
 
   it('mostra referência indisponível para URL antiga em vez de quebrar', () => {
@@ -54,7 +60,7 @@ describe('restauração do contexto do resumo', () => {
 
   it('submete resposta parcial e produz a entrada derivada no caderno', async () => {
     const user = userEvent.setup();
-    render(<MemoryRouter initialEntries={['/resumos?summary=fis-termologia-calor&question=calor-r1']}><Resumos/></MemoryRouter>);
+    render(<MemoryRouter initialEntries={[rotaCalor]}><Resumos/></MemoryRouter>);
     await user.type(screen.getByLabelText('Sua resposta'), 'A temperatura fica constante.');
     await user.click(screen.getByRole('button', { name: 'Enviar para correção' }));
     const updater = update.mock.calls.at(-1)?.[1] as (progress: SummaryProgress) => SummaryProgress;
@@ -66,8 +72,8 @@ describe('restauração do contexto do resumo', () => {
 
   it('não cria erro quando a primeira resposta contém todos os mecanismos', async () => {
     const user = userEvent.setup();
-    render(<MemoryRouter initialEntries={['/resumos?summary=fis-termologia-calor&question=calor-r1']}><Resumos/></MemoryRouter>);
-    await user.type(screen.getByLabelText('Sua resposta'), 'A temperatura constante caracteriza a mudança de fase, enquanto a energia reorganiza as interações.');
+    render(<MemoryRouter initialEntries={[rotaCalor]}><Resumos/></MemoryRouter>);
+    await user.type(screen.getByLabelText('Sua resposta'), 'A temperatura constante caracteriza a mudança de fase, a energia reorganiza as interações e no vácuo a transferência ocorre por irradiação.');
     await user.click(screen.getByRole('button', { name: 'Enviar para correção' }));
     const updater = update.mock.calls.at(-1)?.[1] as (progress: SummaryProgress) => SummaryProgress;
     const created = updater({ readSectionIds: [], status: 'nao-iniciado', important: false, answers: [] });

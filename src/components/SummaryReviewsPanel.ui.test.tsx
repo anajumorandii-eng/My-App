@@ -13,7 +13,7 @@ it('mostra revisão automática vencida com retorno à pergunta', () => {
   render(<MemoryRouter><SummaryReviewsPanel progress={progress} summaries={interactiveSummaries} now={new Date('2026-08-24T12:00:00.000Z')}/></MemoryRouter>);
   expect(screen.getByRole('heading', { name: 'Revisões de resumos' })).toBeInTheDocument();
   expect(screen.getByText('Revisão vencida')).toBeInTheDocument();
-  expect(screen.getByRole('link', { name: /Responder novamente/ })).toHaveAttribute('href', expect.stringContaining('question=calor-r1'));
+  expect(screen.getByRole('link', { name: /Responder novamente/ })).toHaveAttribute('href', expect.stringContaining(`question=${question.id}`));
 });
 
 it('expõe estado vazio quando ainda não há revisão programada', () => {
