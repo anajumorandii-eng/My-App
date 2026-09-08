@@ -90828,7 +90828,7 @@
         "text": "9! (2!2!2!)"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. Fixando FLORES nas seis primeiras posições, restam nove letras para permutar: as de REFLORESTAMENTO menos F, L, O, R, E e S, isto é, R, E, T, A, M, E, N, T, O. Entre elas há duas letras E e duas letras T, e todas as demais aparecem uma única vez. O número de anagramas de nove letras com essas duas repetições é 9! dividido por 2!·2!. Ignorar as repetições daria 9!, e considerar uma repetição a mais levaria ao denominador 2!·2!·2! das outras alternativas.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_001-p5.webp",
@@ -90864,7 +90864,7 @@
         "text": "120"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. É mais rápido contar o complementar. Sem restrição alguma, cinco pessoas se organizam de 5! = 120 maneiras. Para contar as posições proibidas, trate as duas pessoas que se recusam a ficar lado a lado como um bloco único: sobram quatro elementos para ordenar, o que dá 4! = 24 arranjos, e dentro do bloco elas podem trocar de lugar de 2 formas, totalizando 48 posições indesejadas. Subtraindo, 120 − 48 = 72.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_002-p5.webp",
@@ -90881,26 +90881,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Matemática · questão 8 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Um investidor dispõe de R$ 200,00 por mês para adquirir o maior número possível de ações de certa empresa. No primeiro mês, o preço de cada ação era R$ 9,00. No segundo mês houve uma desvalorização e esse preço caiu para R$ 7,00. No terceiro mês, com o preço unitário das ações a R$ 8,00, o investidor resolveu vender o total de ações que possuía. Sabendo que só é permitida a negociação de um número inteiro de ações, podemos concluir que com a compra e venda de ações o investidor teve:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "lucro de R$ 6,00"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "nem lucro nem prejuízo"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "prejuízo de R$ 6,00"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "lucro de R$ 6,50"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. A exigência de comprar números inteiros de ações é o que faz a questão. No primeiro mês, 200 ÷ 9 dá 22 ações por R$ 198,00, sobrando R$ 2,00. No segundo mês há R$ 202,00 disponíveis e o preço é R$ 7,00: 202 ÷ 7 dá 28 ações por R$ 196,00, sobrando R$ 6,00. O investidor tem 50 ações, que vendidas a R$ 8,00 rendem R$ 400,00. Como ele desembolsou R$ 400,00 no total, o lucro é justamente o troco acumulado, R$ 6,00. Sem a restrição de números inteiros, ele terminaria empatado.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_008-p7.webp",
@@ -90917,7 +90917,7 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "Os parafusos usados na cerca são vendidos em caixas com 60 unidades. O número mínimo de caixas necessárias para construir uma cerca com 100 m de comprimento é:",
+    "prompt": "Um carpinteiro foi contratado para construir uma cerca formada por ripas de madeira. As figuras mostram uma vista parcial da cerca e os detalhes das ligações entre as ripas, nos quais os parafusos são representados por círculos brancos. Cada ripa está presa à cerca por dois parafusos em cada extremidade. A cerca tem 1,5 m de altura e se repete em módulos de 2 m, cada módulo formado por uma ripa horizontal superior, uma horizontal inferior, uma vertical e uma diagonal. Os parafusos usados na cerca são vendidos em caixas com 60 unidades. O número mínimo de caixas necessárias para construir uma cerca com 100 m de comprimento é:",
     "options": [
       {
         "id": "a",
@@ -90936,7 +90936,7 @@
         "text": "14"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. Cada ripa leva dois parafusos em cada extremidade, ou seja, 4 parafusos por ripa. Em 100 m há 50 módulos de 2 m, e cada módulo traz uma ripa horizontal superior, uma inferior e uma diagonal, num total de 150 ripas; as verticais são 51, porque há uma a mais no fim da cerca. São 201 ripas, o que dá 201 × 4 = 804 parafusos. Dividindo por 60, obtêm-se 13,4 caixas, e como não se compra fração de caixa é preciso levar 14. Arredondar para baixo, esquecendo que 13 caixas dão apenas 780 parafusos, é o erro que a alternativa a explora.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_009-p8.webp",
@@ -90957,26 +90957,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Matemática · questão 10 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Considere a, b, c, d termos consecutivos de uma progressão aritmética de números reais com razão r ≠ 0. Denote por D o determinante da matriz de linhas (a b) e (c d). É correto afirmar que D/r² vale:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "−1"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "−2"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "−3"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "−4"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. Escreva os quatro termos a partir do primeiro: a, a + r, a + 2r e a + 3r. O determinante da matriz é ad − bc, isto é, a(a + 3r) − (a + r)(a + 2r). Desenvolvendo, a² + 3ar − (a² + 3ar + 2r²) = −2r². Como r é diferente de zero, D/r² = −2, valor que não depende do primeiro termo. Essa independência é o ponto da questão: qualquer progressão aritmética de razão não nula produz o mesmo resultado.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_010-p8.webp",
@@ -90997,26 +90997,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Matemática · questão 12 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Sabendo que a e b são números reais, considere a matriz quadrada de ordem 3 cujas linhas são (1, a, 1), (b, 1, a) e (2, b, 2). Se a soma dos elementos em cada linha da matriz A tem sempre o mesmo valor, então o determinante de A é igual a:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "0"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "2"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "5"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "10"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. As somas das linhas são a + 2, a + b + 1 e b + 4. Igualando a primeira à segunda, obtém-se b = 1; igualando a primeira à terceira, a + 2 = 5, logo a = 3. A matriz fica com linhas (1, 3, 1), (1, 1, 3) e (2, 1, 2), todas somando 5. Calculando o determinante pela regra de Sarrus ou por cofatores: 1(1·2 − 3·1) − 3(1·2 − 3·2) + 1(1·1 − 1·2) = −1 + 12 − 1 = 10.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_012-p10.webp",
@@ -91033,26 +91033,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Matemática · questão 14 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Sejam a e b números reais não nulos. Se o número complexo z = a + bi é uma raiz da equação quadrática x² + bx + a = 0, então:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "|z| = 1/√3"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "|z| = 1/√5"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "|z| = √3"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "|z| = √5"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. Como os coeficientes são reais, se a + bi é raiz, seu conjugado a − bi também é. Pelas relações de Girard, a soma das raízes vale 2a e deve ser igual a −b, de onde b = −2a; e o produto das raízes vale a² + b², que é exatamente |z|², e deve ser igual ao termo independente a. Substituindo b, a² + 4a² = a, ou 5a² = a, e como a não é nulo, a = 1/5. Logo |z|² = a = 1/5 e |z| = 1/√5. Note que o produto de um complexo pelo seu conjugado ser o módulo ao quadrado é o que dá o atalho.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_014-p11.webp",
@@ -91069,26 +91069,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Matemática · questão 16 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Seja i a unidade imaginária, isto é, i² = −1. O lugar geométrico dos pontos do plano cartesiano com coordenadas reais (x, y) tais que (2x + yi)(y + 2xi) = i é uma:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "elipse"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "hipérbole"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "parábola"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "reta"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. Multiplique os dois fatores: (2x + yi)(y + 2xi) = 2xy + 4x²i + y²i + 2xy·i². Como i² = −1, os termos reais 2xy e −2xy se cancelam, e sobra apenas a parte imaginária (4x² + y²)i. Igualando a i, a condição vira 4x² + y² = 1. Essa é a equação de uma elipse centrada na origem, com semieixos 1/2 na horizontal e 1 na vertical. O cancelamento da parte real é a chave: sem ele, restaria uma condição adicional impossível de satisfazer.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_016-p12.webp",
@@ -91105,26 +91105,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Matemática · questão 17 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Considere o número complexo z = (1 + ai)/(a − i), onde a é um número real e i é a unidade imaginária, isto é, i² = −1. O valor de z elevado a 2016 é igual a:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "a^2016"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "1"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "1 + 2016i"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "i"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. Repare que i(a − i) = ai − i² = ai + 1, que é exatamente o numerador. Logo z = i(a − i)/(a − i) = i, qualquer que seja o valor real de a — desde que o denominador não se anule, o que nunca acontece, pois a − i tem parte imaginária não nula. Como as potências de i se repetem em ciclos de quatro e 2016 é múltiplo de 4, tem-se z elevado a 2016 igual a 1. O truque de reconhecer o fator i no numerador dispensa racionalizar a fração.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_017-p11.webp",
@@ -91149,26 +91149,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Matemática · questão 19 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Sejam x e y números reais tais que x + yi = √(3 + 4i), onde i é a unidade imaginária. O valor de xy é igual a:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "−2"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "−1"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "1"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "2"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. Elevando os dois lados ao quadrado, (x + yi)² = 3 + 4i. Desenvolvendo o lado esquerdo, x² − y² + 2xy·i. Igualando parte real com parte real e parte imaginária com parte imaginária, obtêm-se x² − y² = 3 e 2xy = 4. A segunda equação já responde à pergunta: xy = 2. Não é preciso resolver o sistema para achar x e y separadamente — embora, se quisesse, se encontraria x = 2 e y = 1.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_019-p12.webp",
@@ -91193,26 +91193,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Matemática · questão 21 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "O módulo do número complexo z = i^2014 − i^1987 é igual a:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "√2"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "0"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "√3"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "1"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. As potências de i se repetem de quatro em quatro, então basta olhar o resto da divisão do expoente por 4. Como 2014 deixa resto 2, tem-se i^2014 = i² = −1; como 1987 deixa resto 3, tem-se i^1987 = i³ = −i. Assim z = −1 − (−i) = −1 + i, cujo módulo é √(1 + 1) = √2. O sinal de menos diante da segunda potência é o detalhe que costuma escapar e que transforma −i em +i.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_021-p13.webp",
@@ -91233,26 +91233,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Matemática · questão 22 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Chamamos de unidade imaginária e denotamos por i o número complexo tal que i² = −1. Então i^0 + i^1 + i^2 + i^3 + … + i^2013 vale:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "0"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "1"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "i"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "1 + i"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. Quatro potências consecutivas de i somam zero, pois 1 + i − 1 − i = 0. A soma vai de i^0 a i^2013, ou seja, tem 2014 parcelas. Dividindo 2014 por 4 obtêm-se 503 grupos completos, que se anulam, e resto 2 — sobram as duas últimas parcelas, i^2012 e i^2013. Como 2012 é múltiplo de 4, essas potências valem 1 e i, e a soma total é 1 + i. O cuidado necessário é contar as parcelas, e não parar no expoente: de 0 a 2013 há 2014 termos.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_022-p14.webp",
