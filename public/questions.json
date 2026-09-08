@@ -90464,7 +90464,7 @@
         "text": "10"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. Chame de v o número de bolas vermelhas acrescentadas; o total passa a ser 6 + v. Retirando duas bolas sem reposição, a probabilidade de ambas serem azuis é C(6,2)/C(6+v,2) = 15/C(6+v,2). Igualando a 1/3, vem C(6+v,2) = 45, isto é, (6+v)(5+v)/2 = 45, ou (6+v)(5+v) = 90. Como 10 × 9 = 90, tem-se 6 + v = 10 e v = 4. Repare que o total tinha de ser 10, e não o número de vermelhas — confundir os dois leva direto à alternativa e.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_107-p72.webp",
@@ -90481,30 +90481,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Matemática · questão 108 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Em uma classe com 14 alunos, 8 são mulheres e 6 são homens. A média das notas das mulheres no final do semestre ficou 1 ponto acima da média da classe. A soma das notas dos homens foi metade da soma das notas das mulheres. Então, a média das notas dos homens ficou mais próxima de:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "4,3"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "4,5"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "4,7"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "4,9"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "5,1"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. Chame de S a soma das notas das mulheres; a dos homens é S/2 e a soma da classe é 3S/2. A média da classe vale 3S/28 e a das mulheres, S/8, e o enunciado diz que a segunda supera a primeira em 1 ponto: S/8 − 3S/28 = 1. Reduzindo ao denominador 56, tem-se 7S/56 − 6S/56 = S/56 = 1, logo S = 56. A soma dos homens é 28 e a média deles, 28/6 ≈ 4,67 — mais próxima de 4,7. Vale conferir: a média da classe é 84/14 = 6 e a das mulheres, 56/8 = 7, exatamente um ponto acima.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_108-p71.webp",
@@ -90525,30 +90525,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Matemática · questão 110 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "No sistema linear formado pelas equações x + y = a, y + z = 1 e x + z = m, nas variáveis x, y e z, a e m são constantes reais. É correto afirmar:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "No caso em que a = 1, o sistema tem solução se, e somente se, m = 2"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "O sistema tem solução, quaisquer que sejam os valores de a e de m"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "No caso em que m = 2, o sistema tem solução se, e somente se, a = 1"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "O sistema só tem solução se a = m = 1"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "O sistema não tem solução, quaisquer que sejam os valores de a e de m"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. Some as três equações: 2(x + y + z) = a + 1 + m, o que já mostra que o sistema é determinado sempre que as equações forem compatíveis. Resolvendo, x + y + z = (a + m + 1)/2, e daí cada variável sai por subtração: z = (a + m + 1)/2 − a, x = (a + m + 1)/2 − 1 e y = (a + m + 1)/2 − m. Ou seja, o sistema tem solução única para quaisquer a e m — o que torna verdadeira a alternativa b em sentido literal e as demais falsas. O que se cobra aqui é notar que a matriz dos coeficientes tem determinante 2, diferente de zero, e portanto o sistema é sempre possível e determinado.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_110-p73.webp",
@@ -90588,7 +90588,7 @@
         "text": "135"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. Chame de h e m os números iniciais de homens e mulheres. Depois que 31 mulheres saem, a razão de 2 homens por mulher dá h = 2(m − 31). Depois que 55 homens saem, restam h − 55 homens e as mesmas m − 31 mulheres, agora na razão de 3 mulheres por homem: m − 31 = 3(h − 55). Substituindo a primeira na segunda, m − 31 = 6(m − 31) − 165, de onde 5(m − 31) = 165 e m − 31 = 33, ou seja, m = 64 e h = 66. O total inicial é n = 130.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_113-p75.webp",
@@ -90605,30 +90605,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Matemática · questão 114 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Considere todos os pares ordenados de números naturais (a, b), em que 11 ≤ a ≤ 22 e 43 ≤ b ≤ 51. Cada um desses pares ordenados está escrito em um cartão diferente. Sorteando-se um desses cartões ao acaso, qual é a probabilidade de que se obtenha um par ordenado (a, b) de tal forma que a fração a/b seja irredutível e com denominador par?",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "7/27"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "13/54"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "6/27"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "11/54"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "5/27"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa e). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: e. Há 12 valores de a e 9 de b, logo 108 cartões. Para o denominador ser par, b deve estar em {44, 46, 48, 50}, e para a fração ser irredutível a precisa ser ímpar — restam seis candidatos: 11, 13, 15, 17, 19 e 21. Agora exclua os que compartilham outro fator com b: com b = 44 = 4·11, cai o 11, sobrando 5; com b = 46 = 2·23, nenhum cai, sobrando 6; com b = 48 = 16·3, caem 15 e 21, sobrando 4; com b = 50 = 2·25, cai o 15, sobrando 5. São 20 casos favoráveis, e 20/108 = 5/27.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_114-p74.webp",
@@ -90649,30 +90649,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Matemática · questão 116 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Uma das primeiras estimativas do raio da Terra é atribuída a Eratóstenes, estudioso grego que viveu, aproximadamente, entre 275 a.C. e 195 a.C. Sabendo que em Assuã, cidade localizada no sul do Egito, ao meio dia do solstício de verão, um bastão vertical não apresentava sombra, Eratóstenes decidiu investigar o que ocorreria, nas mesmas condições, em Alexandria, cidade no norte do Egito. O estudioso observou que, em Alexandria, ao meio dia do solstício de verão, um bastão vertical apresentava sombra e determinou o ângulo θ entre as direções do bastão e de incidência dos raios de sol. O valor do raio da Terra, obtido a partir de θ e da distância entre Alexandria e Assuã, foi de, aproximadamente, 7500 km. O mês em que foram realizadas as observações e o valor aproximado de θ são: Note e adote: distância estimada por Eratóstenes entre Assuã e Alexandria ≈ 900 km; π = 3.",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "junho; 7°"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "dezembro; 7°"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "junho; 23°"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "dezembro; 23°"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "junho; 0,3°"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. O ângulo θ medido em Alexandria é igual ao ângulo central entre as duas cidades, porque os raios solares chegam praticamente paralelos. Com raio 7.500 km e π = 3, a circunferência da Terra vale 2 × 3 × 7.500 = 45.000 km, e a razão entre o arco e a volta completa é 900/45.000 = 1/50, o que dá θ = 360°/50 = 7,2°, aproximadamente 7°. Quanto ao mês, o solstício de verão do hemisfério norte, onde fica o Egito, ocorre em junho — é quando o Sol passa a pino sobre o Trópico de Câncer, próximo a Assuã.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_116-p77.webp",
@@ -90712,7 +90712,7 @@
         "text": "18"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. Como ABE é equilátero e AE = 6, todos os lados medem 6, e F, ponto médio de AB, fica a 3 de A. Ponha A na origem: B = (6, 0), C = (16, 0), já que BC = 10, e F = (3, 0). O vértice E é o topo do triângulo equilátero, em (3, 3√3), pois a altura de um equilátero de lado 6 é 6√3/2 = 3√3. Como DE é paralelo a AC e CD é perpendicular a ambos, D fica na vertical de C e na horizontal de E: D = (16, 3√3). Então DF² = (16 − 3)² + (3√3)² = 169 + 27 = 196, e DF = 14.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_117-p78.webp",
@@ -90729,30 +90729,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Matemática · questão 118 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Um triângulo retângulo com vértices denominados A, B e C apoia-se sobre uma linha horizontal, que corresponde ao solo, e gira sem escorregar no sentido horário. Isto é, se a posição inicial é aquela mostrada na figura, com o lado BC apoiado no solo e o ângulo reto em A, o movimento começa com uma rotação em torno do vértice C até o vértice A tocar o solo, após o que passa a ser uma rotação em torno de A, até o vértice B tocar o solo, e assim por diante. Usando as dimensões indicadas na figura (AB = 1 e BC = 2), qual é o comprimento da trajetória percorrida pelo vértice B, desde a posição mostrada, até a aresta BC apoiar-se no solo novamente?",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "3π/2"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "(3 + √3)π/3"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "13π/6"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "(3 + √3)π/2"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "(8 + 2√3)π/3"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. Como o ângulo reto está em A e a hipotenusa BC vale 2 com cateto AB igual a 1, o ângulo em B mede 60° e o ângulo em C, 30°. São três tombos até BC voltar ao chão. No primeiro, o giro é em torno de C e B descreve um arco de raio BC = 2 e ângulo 180° − 30° = 150°, cujo comprimento é 2·(5π/6) = 5π/3. No segundo, o giro é em torno de A e B percorre um arco de raio AB = 1 e ângulo 180° − 90° = 90°, ou seja, π/2. No terceiro, o pivô é o próprio B, que não se desloca. Somando, 5π/3 + π/2 = 13π/6.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_118-p79.webp",
@@ -90769,30 +90769,30 @@
     "examSource": {
       "board": "FUVEST"
     },
-    "prompt": "FUVEST · Matemática · questão 119 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "O gráfico apresenta duas curvas senoidais: a linha pontilhada oscila entre −1 e 1 e completa cerca de quatro ciclos no intervalo mostrado, enquanto a linha contínua tem amplitude visivelmente menor e completa aproximadamente dois ciclos no mesmo intervalo. Admitindo que a linha pontilhada represente o gráfico da função f(x) = sen(x) e que a linha contínua represente o gráfico da função g(x) = α·sen(βx), segue que:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "0 < α < 1 e 0 < β < 1"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "α > 1 e 0 < β < 1"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "α = 1 e β > 1"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "0 < α < 1 e β > 1"
       },
       {
         "id": "e",
-        "text": "Alternativa E da prova"
+        "text": "0 < α < 1 e β = 1"
       }
     ],
-    "explanation": "Gabarito oficial da FUVEST: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. Em g(x) = α·sen(βx), o parâmetro α controla a amplitude e β controla a frequência. A curva contínua sobe e desce menos que a pontilhada, o que significa amplitude menor que 1 e portanto 0 < α < 1. E ela completa menos ciclos no mesmo intervalo, ou seja, tem período maior; como o período é 2π/β, um período maior corresponde a β menor que 1. Logo os dois parâmetros ficam entre 0 e 1. Quem associa β maior a ondas mais largas inverte a relação e cai na alternativa d.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_119-p80.webp",
