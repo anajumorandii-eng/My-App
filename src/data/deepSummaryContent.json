@@ -17886,6 +17886,2041 @@
     }
   },
   {
+    "subject": "Literatura",
+    "topic": "A Arte e suas Linguagens",
+    "sections": [
+      {
+        "title": "O que é arte",
+        "content": "Arte é produção humana que organiza materiais e linguagens para produzir experiência estética e sentido. Não se define por beleza nem por utilidade, e seus critérios variam historicamente: o que uma época recusa como arte, outra consagra, como mostram o impressionismo e as vanguardas do século XX."
+      },
+      {
+        "title": "As linguagens artísticas",
+        "content": "Cada linguagem tem materialidade própria: a literatura trabalha com a palavra; as artes visuais, com forma, cor e espaço; a música, com som e tempo; a dança, com o corpo em movimento; o teatro, com a presença cênica; e o cinema, com imagem em movimento e montagem. Muitas obras cruzam linguagens."
+      },
+      {
+        "title": "Função social",
+        "content": "A arte informa, emociona, questiona, celebra e também critica. Pode servir ao poder, como na arte de corte, ou contestá-lo, como em obras engajadas. Reconhecer a função pretendida e o contexto de produção evita leituras anacrônicas, erro comum ao julgar obras antigas por valores contemporâneos."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Definir arte por beleza exclui boa parte da produção moderna e contemporânea, que busca choque, estranhamento ou reflexão. Outro deslize é supor que arte é sempre expressão espontânea do artista, ignorando técnica, tradição e mercado. E julgar obras do passado por critérios atuais, sem considerar seu contexto."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que definir arte como o belo é insuficiente? Responda antes de conferir: muitas obras buscam desconforto, denúncia ou provocação, e os critérios de beleza variam entre épocas e culturas, de modo que a definição deixaria de fora produções centrais da história da arte. Agora explique o que é leitura anacrônica: julgar uma obra por valores de outro tempo, ignorando seu contexto."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que definir arte pela beleza é insuficiente? O que é leitura anacrônica?",
+      "elements": [
+        [
+          "muitas obras buscam estranhamento e critica",
+          [
+            "estranhamento",
+            "critica",
+            "provocacao"
+          ]
+        ],
+        [
+          "os criterios de beleza variam historicamente",
+          [
+            "varia",
+            "epoca",
+            "criterio"
+          ]
+        ],
+        [
+          "anacronismo e julgar por valores de outro tempo",
+          [
+            "anacronico",
+            "contexto",
+            "valores"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Literatura",
+    "topic": "A Estética Barroca",
+    "sections": [
+      {
+        "title": "Contexto e tensão",
+        "content": "O Barroco surge no contexto da Contrarreforma e da crise entre valores medievais e renascentistas. Sua marca é o conflito: fé e razão, corpo e alma, pecado e perdão, efêmero e eterno. Essa tensão se traduz em linguagem carregada, com antíteses, paradoxos, hipérboles e forte apelo sensorial."
+      },
+      {
+        "title": "Cultismo e conceptismo",
+        "content": "O cultismo, ou gongorismo, investe no jogo de palavras, nas inversões sintáticas e nas imagens sensoriais elaboradas. O conceptismo, ou quevedismo, organiza o texto pelo jogo de ideias e pelo raciocínio argumentativo, sendo típico dos sermões, em que a construção lógica conduz à persuasão do ouvinte."
+      },
+      {
+        "title": "No Brasil",
+        "content": "Gregório de Matos produziu poesia lírica, religiosa e satírica, esta última voltada à sociedade baiana, com crítica mordaz que lhe rendeu o apelido de Boca do Inferno. Padre Antônio Vieira destacou-se nos sermões, com domínio do conceptismo, como no Sermão de Santo Antônio aos Peixes, alegoria de crítica social."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Confundir cultismo com conceptismo é o erro mais cobrado: jogo de palavras num, jogo de ideias no outro. Outro deslize é ler a poesia religiosa barroca como serena, quando ela é marcada pela angústia da culpa. E tratar Gregório de Matos apenas como poeta satírico, ignorando sua produção religiosa e lírica."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Diferencie cultismo e conceptismo com exemplos de gênero. Responda antes de conferir: o cultismo predomina na poesia, com imagens sensoriais e inversões; o conceptismo predomina nos sermões, com raciocínio e argumentação encadeada. Agora explique a tensão barroca: o conflito entre valores opostos, como pecado e salvação, corpo e alma, efêmero e eterno."
+      }
+    ],
+    "recall": {
+      "prompt": "Diferencie cultismo e conceptismo e explique a tensão barroca.",
+      "elements": [
+        [
+          "cultismo e jogo de palavras e imagens",
+          [
+            "cultismo",
+            "palavra",
+            "imagem"
+          ]
+        ],
+        [
+          "conceptismo e jogo de ideias e argumentacao",
+          [
+            "conceptismo",
+            "ideia",
+            "sermao"
+          ]
+        ],
+        [
+          "a tensao opoe fe e razao, corpo e alma",
+          [
+            "conflito",
+            "fe",
+            "alma"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Literatura",
+    "topic": "A Estética Neoclássica",
+    "sections": [
+      {
+        "title": "Arcadismo",
+        "content": "O Neoclassicismo, ou Arcadismo, reage ao exagero barroco propondo simplicidade, clareza e equilíbrio, com retorno aos modelos clássicos. Seus lemas são inutilia truncat, cortar o inútil; fugere urbem, fugir da cidade; locus amoenus, o lugar ameno; carpe diem, aproveitar o dia; e aurea mediocritas, a vida simples."
+      },
+      {
+        "title": "Convenções pastoris",
+        "content": "Os poetas adotam pseudônimos pastoris e constroem um cenário bucólico idealizado, com pastores, rebanhos e natureza serena. Trata-se de convenção literária, e não de descrição da vida real do campo, o que costuma ser cobrado em questões que pedem a diferença entre o campo idealizado e o campo concreto."
+      },
+      {
+        "title": "No Brasil",
+        "content": "Cláudio Manuel da Costa, Tomás Antônio Gonzaga e Basílio da Gama são os nomes centrais. Marília de Dirceu, de Gonzaga, articula a convenção pastoril com a experiência de prisão do autor. Vários árcades participaram da Inconfidência Mineira, o que conecta a produção literária ao contexto político da colônia."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Ler o bucolismo árcade como descrição realista do campo é o erro central. Outro deslize é confundir carpe diem com hedonismo irrestrito, quando ele se articula à consciência da brevidade da vida. E tratar o Arcadismo como estética sem relação com a política, apesar da Inconfidência."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que o campo árcade é convenção e não descrição? Responda antes de conferir: o cenário pastoril segue modelos clássicos e serve para expressar equilíbrio e simplicidade, sem correspondência com o trabalho rural concreto da época. Agora explique inutilia truncat: cortar o supérfluo, em oposição direta ao acúmulo de recursos do Barroco."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que o bucolismo árcade é convenção? Explique inutilia truncat.",
+      "elements": [
+        [
+          "o cenario pastoril segue modelos classicos",
+          [
+            "convencao",
+            "classico",
+            "pastoril"
+          ]
+        ],
+        [
+          "nao descreve o trabalho rural concreto",
+          [
+            "real",
+            "concreto",
+            "campo"
+          ]
+        ],
+        [
+          "inutilia truncat e cortar o superfluo",
+          [
+            "cortar",
+            "superfluo",
+            "simplicidade"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Literatura",
+    "topic": "A Estética Realista",
+    "sections": [
+      {
+        "title": "Contexto e princípios",
+        "content": "O Realismo surge na segunda metade do século XIX, associado ao positivismo, ao evolucionismo e à crítica social. Opõe-se à idealização romântica: privilegia a observação, a análise psicológica, a crítica às instituições, sobretudo o casamento e a Igreja, e a construção de personagens complexas e contraditórias."
+      },
+      {
+        "title": "Procedimentos",
+        "content": "A narrativa realista trabalha com objetividade aparente, ironia, digressão, detalhamento de ambientes e análise das motivações. O adultério burguês é tema recorrente, funcionando como lente para expor a hipocrisia social. O tempo narrativo é mais lento, e o enredo cede espaço à investigação de caracteres."
+      },
+      {
+        "title": "Realismo e Naturalismo",
+        "content": "Embora contemporâneos, distinguem-se: o Realismo enfatiza a análise psicológica e social, com personagens que deliberam; o Naturalismo aplica um modelo determinista, em que meio, raça e momento condicionam a conduta, aproximando o romance de um experimento científico e tratando personagens como casos patológicos."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Tratar Realismo e Naturalismo como sinônimos é o erro mais frequente. Outro deslize é supor que a objetividade realista significa ausência de posição do narrador, quando a ironia é justamente sua marca crítica. E ler a crítica ao casamento como moralismo, quando é análise das convenções sociais."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "O que distingue Realismo de Naturalismo? Responda antes de conferir: o Realismo investiga a psicologia e as convenções sociais com personagens que deliberam; o Naturalismo aplica determinismo de meio, raça e momento, tratando a conduta como resultado quase biológico. Agora explique por que o adultério é tema recorrente: serve para expor a hipocrisia das convenções burguesas."
+      }
+    ],
+    "recall": {
+      "prompt": "Distinga Realismo de Naturalismo e explique por que o adultério é tema recorrente.",
+      "elements": [
+        [
+          "o Realismo investiga psicologia e convencoes",
+          [
+            "psicologia",
+            "convencao",
+            "analise"
+          ]
+        ],
+        [
+          "o Naturalismo aplica determinismo de meio e raca",
+          [
+            "determinismo",
+            "meio",
+            "raca"
+          ]
+        ],
+        [
+          "o adulterio expoe a hipocrisia burguesa",
+          [
+            "adulterio",
+            "hipocrisia",
+            "burguesa"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Literatura",
+    "topic": "A Estética Romântica: Poesia",
+    "sections": [
+      {
+        "title": "As três gerações",
+        "content": "A poesia romântica brasileira costuma ser dividida em três gerações. A primeira, indianista e nacionalista, tem Gonçalves Dias como nome central. A segunda, ultrarromântica ou byroniana, marca-se pelo pessimismo, com Álvares de Azevedo. A terceira, condoreira e social, tem Castro Alves e a poesia abolicionista."
+      },
+      {
+        "title": "Traços gerais",
+        "content": "O Romantismo valoriza a subjetividade, a emoção, a liberdade formal, a idealização do amor e da mulher, o nacionalismo e a natureza como espelho dos sentimentos. Opõe-se à contenção clássica e adota o eu lírico como centro, com forte presença da saudade, do sonho e da morte."
+      },
+      {
+        "title": "Da idealização à denúncia",
+        "content": "A trajetória vai da construção de símbolos nacionais, com o índio como herói fundador, ao mal do século e ao escapismo da segunda geração, e chega à poesia de intervenção da terceira, em que Castro Alves denuncia a escravidão em textos como O Navio Negreiro, com forte apelo retórico e imagens de sofrimento."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Atribuir a Gonçalves Dias o tom pessimista da segunda geração é confusão frequente. Outro deslize é tratar o indianismo como retrato fiel dos povos indígenas, quando é construção idealizada com moldes europeus. E ler a terceira geração como continuidade do escapismo, quando ela é engajada."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que o indianismo romântico não é retrato realista? Responda antes de conferir: o índio é idealizado como herói nobre segundo modelos europeus de cavalaria, servindo à construção de uma identidade nacional, e não à descrição das sociedades indígenas concretas. Agora caracterize a segunda geração: pessimismo, morte, tédio, idealização amorosa e escapismo, o chamado mal do século."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que o indianismo não é retrato realista? Caracterize a segunda geração romântica.",
+      "elements": [
+        [
+          "o indio e idealizado como heroi nacional",
+          [
+            "idealizado",
+            "heroi",
+            "nacional"
+          ]
+        ],
+        [
+          "segue moldes europeus de cavalaria",
+          [
+            "europeu",
+            "cavalaria",
+            "modelo"
+          ]
+        ],
+        [
+          "a segunda geracao e pessimista e escapista",
+          [
+            "pessimismo",
+            "morte",
+            "mal do seculo"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Literatura",
+    "topic": "A Estética Romântica: Prosa",
+    "sections": [
+      {
+        "title": "Romance urbano e indianista",
+        "content": "A prosa romântica brasileira divide-se em vertentes. O romance urbano retrata a vida da corte e os costumes da elite carioca, como em Senhora e Lucíola, de José de Alencar. O indianista constrói o mito de origem nacional, como em Iracema e O Guarani, com casais interétnicos como alegoria de fundação."
+      },
+      {
+        "title": "Regionalista e histórico",
+        "content": "O romance regionalista descreve tipos e paisagens do interior, como em O Sertanejo e O Gaúcho, e o histórico recria episódios do passado colonial, como em As Minas de Prata. Em todas as vertentes, o projeto é o mesmo: construir uma literatura nacional com temas e cenários brasileiros."
+      },
+      {
+        "title": "Convenções e crítica",
+        "content": "A prosa romântica trabalha com idealização amorosa, finais que restauram a ordem moral, personagens definidas por virtude ou vício e forte apelo emocional. Alencar, porém, incorpora crítica social em obras como Senhora, ao expor o casamento como transação econômica na sociedade burguesa do Segundo Reinado."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Ler o indianismo como registro etnográfico ignora sua função simbólica de fundação nacional. Outro deslize é supor que a prosa romântica não faz crítica social, quando Senhora expõe o casamento como negócio. E confundir as vertentes ao classificar obras de Alencar, que produziu em todas elas."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Que crítica social aparece em Senhora, de José de Alencar? Responda antes de conferir: o romance expõe o casamento como transação financeira, com a compra do noivo pela protagonista, revelando a lógica mercantil das relações na sociedade da corte. Agora explique a função dos casais interétnicos nos romances indianistas: alegoria da fundação do povo brasileiro."
+      }
+    ],
+    "recall": {
+      "prompt": "Que crítica social há em Senhora? Qual a função dos casais interétnicos no indianismo?",
+      "elements": [
+        [
+          "o casamento aparece como transacao financeira",
+          [
+            "casamento",
+            "dinheiro",
+            "transacao"
+          ]
+        ],
+        [
+          "expoe a logica mercantil das relacoes",
+          [
+            "mercantil",
+            "interesse",
+            "sociedade"
+          ]
+        ],
+        [
+          "os casais alegorizam a fundacao nacional",
+          [
+            "alegoria",
+            "fundacao",
+            "nacional"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Literatura",
+    "topic": "Artes Plásticas Brasileiras",
+    "sections": [
+      {
+        "title": "Do século XIX ao modernismo",
+        "content": "A produção oitocentista foi marcada pela Missão Artística Francesa e pela pintura acadêmica, com temas históricos e retratos oficiais. O modernismo rompeu com esse padrão: Anita Malfatti, Tarsila do Amaral, Di Cavalcanti e Portinari construíram uma linguagem que articula vanguardas europeias e temas brasileiros."
+      },
+      {
+        "title": "Tarsila e Portinari",
+        "content": "Tarsila do Amaral produziu obras centrais da identidade visual modernista, como Abaporu, ligada ao Manifesto Antropófago, e Operários, com o mosaico de rostos da industrialização. Portinari trabalhou temas sociais, como os retirantes e o café, com grande alcance público e presença em painéis e murais."
+      },
+      {
+        "title": "Neoconcretismo e contemporâneo",
+        "content": "Nos anos 1950 e 1960, o neoconcretismo, com Lygia Clark e Hélio Oiticica, incorporou a participação do público e o corpo à obra, com bichos manipuláveis e parangolés vestíveis. A produção contemporânea amplia suportes, com instalação, performance, vídeo e arte digital, e discute memória, território e identidade."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Ler Abaporu apenas como figura curiosa ignora sua ligação com o projeto antropofágico. Outro deslize é confundir concretismo e neoconcretismo, este último com ênfase na participação e na subjetividade. E supor que a arte contemporânea abandonou completamente pintura e escultura, quando elas convivem com novos meios."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "O que o neoconcretismo acrescentou ao concretismo? Responda antes de conferir: a participação do espectador, o corpo e a subjetividade, com obras manipuláveis e vestíveis que só se completam na experiência de quem interage. Agora explique a relação entre Abaporu e a Antropofagia: a tela inspirou o manifesto e sintetiza a proposta de devorar e reelaborar influências."
+      }
+    ],
+    "recall": {
+      "prompt": "O que o neoconcretismo acrescentou ao concretismo? Qual a relação entre Abaporu e a Antropofagia?",
+      "elements": [
+        [
+          "participacao do espectador e do corpo",
+          [
+            "participacao",
+            "corpo",
+            "interacao"
+          ]
+        ],
+        [
+          "obras manipulaveis e vestiveis",
+          [
+            "parangole",
+            "bicho",
+            "vestivel"
+          ]
+        ],
+        [
+          "a tela inspirou o manifesto antropofago",
+          [
+            "abaporu",
+            "manifesto",
+            "antropofagia"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Literatura",
+    "topic": "Brasil: Primeiros Registros",
+    "sections": [
+      {
+        "title": "Literatura de informação",
+        "content": "Os primeiros textos escritos sobre o território são relatos de viajantes e cronistas, com destaque para a Carta de Pero Vaz de Caminha, de 1500. Não são literatura no sentido moderno, mas documentos que registram, do ponto de vista europeu, a paisagem, os povos e as possibilidades de exploração."
+      },
+      {
+        "title": "O olhar do colonizador",
+        "content": "Esses textos descrevem os povos originários a partir de categorias europeias, oscilando entre o encantamento com a inocência e o julgamento da diferença como falta. A ênfase na nudez, na ausência de metais preciosos visíveis e na disposição para a catequese revela a intenção prática dos relatos."
+      },
+      {
+        "title": "Literatura jesuítica",
+        "content": "José de Anchieta produziu poesia, teatro e cartas com finalidade catequética, escrevendo em português, latim, espanhol e tupi. Seus autos usam alegorias e adaptação a elementos locais para transmitir doutrina, e constituem o primeiro teatro produzido no território, com clara função pedagógica e religiosa."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Chamar a Carta de Caminha de obra literária brasileira ignora que é documento oficial escrito por um português para o rei. Outro deslize é ler os relatos como descrição neutra dos povos indígenas. E supor que Anchieta escrevia por interesse estético, quando a finalidade é catequética."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a Carta de Caminha não é obra literária no sentido moderno? Responda antes de conferir: é documento oficial com função informativa e administrativa, escrito para relatar ao rei o que se encontrou, sem projeto estético autônomo. Agora explique a finalidade dos autos de Anchieta: catequizar, usando alegoria, teatro e adaptação a elementos locais."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a Carta de Caminha não é literatura no sentido moderno? Qual a finalidade dos autos de Anchieta?",
+      "elements": [
+        [
+          "e documento oficial com funcao informativa",
+          [
+            "documento",
+            "oficial",
+            "rei"
+          ]
+        ],
+        [
+          "nao tem projeto estetico autonomo",
+          [
+            "estetico",
+            "projeto",
+            "funcao"
+          ]
+        ],
+        [
+          "os autos tem finalidade catequetica",
+          [
+            "catequese",
+            "doutrina",
+            "jesuita"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Literatura",
+    "topic": "Cancioneiro Popular Brasileiro",
+    "sections": [
+      {
+        "title": "Canção como texto",
+        "content": "A canção popular brasileira é objeto legítimo de análise literária: articula letra e melodia, e o sentido nasce dessa relação. Em provas, é comum pedir análise de figuras de linguagem, intertextualidade e contexto histórico de letras, tratando-as com o mesmo rigor aplicado a poemas."
+      },
+      {
+        "title": "Momentos e nomes",
+        "content": "Do samba de Noel Rosa e Cartola à Bossa Nova de Tom Jobim e Vinicius, da Tropicália de Caetano Veloso e Gilberto Gil às canções de protesto de Chico Buarque e Geraldo Vandré, e depois ao rap e ao funk, a canção acompanha e comenta a história brasileira, funcionando como registro e crítica."
+      },
+      {
+        "title": "Canção e censura",
+        "content": "Durante o regime militar, a canção foi veículo central de crítica, o que gerou censura e exigiu metáforas e duplos sentidos. Cálice, de Chico Buarque e Gilberto Gil, explora a homofonia entre cálice e cale-se, exemplo clássico de como a forma resolve o problema imposto pela repressão."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Analisar a letra ignorando melodia, ritmo e interpretação empobrece a leitura da canção. Outro deslize é tratar o rap e o funk como não pertencentes ao cancioneiro. E ler metáforas de canções do período militar sem considerar o contexto de censura, o que faz perder o sentido político."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Explique o recurso central de Cálice. Responda antes de conferir: a homofonia entre cálice e cale-se permite dizer, sob aparência religiosa, a denúncia da censura, driblando a repressão pela ambiguidade sonora. Agora diga por que a canção é objeto legítimo de análise literária: articula letra e música, e sua letra emprega os mesmos recursos poéticos estudados na poesia."
+      }
+    ],
+    "recall": {
+      "prompt": "Explique o recurso central de Cálice e diga por que a canção é objeto de análise literária.",
+      "elements": [
+        [
+          "homofonia entre calice e cale-se",
+          [
+            "homofonia",
+            "cale-se",
+            "calice"
+          ]
+        ],
+        [
+          "permite driblar a censura pela ambiguidade",
+          [
+            "censura",
+            "ambiguidade",
+            "driblar"
+          ]
+        ],
+        [
+          "a letra usa os mesmos recursos poeticos",
+          [
+            "recurso",
+            "poetico",
+            "letra"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Literatura",
+    "topic": "Carlos Drummond de Andrade",
+    "sections": [
+      {
+        "title": "Fases da obra",
+        "content": "A trajetória de Drummond costuma ser lida em fases: o gauchismo irônico e a poesia do eu em conflito com o mundo, em Alguma Poesia; a fase social e participante, em A Rosa do Povo, marcada pela guerra e pelo compromisso histórico; e uma fase mais metafísica e memorialista na produção posterior."
+      },
+      {
+        "title": "Temas centrais",
+        "content": "Atravessam sua obra a gauchice e o sentimento de deslocamento, o mundo caduco, a família e Itabira, o tempo, a memória, o amor e a própria poesia como problema. O poema No meio do caminho tornou-se símbolo da recepção escandalizada da poesia modernista pela crítica tradicional."
+      },
+      {
+        "title": "Linguagem",
+        "content": "Drummond combina coloquialidade e precisão, ironia e gravidade, prosaísmo e densidade. Usa a repetição como recurso estruturante, constrói imagens de forte impacto a partir de elementos banais e trabalha o verso livre com rigor rítmico, o que faz sua aparente simplicidade ser altamente elaborada."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Ler a fase social como abandono da subjetividade é impreciso: o eu permanece, tensionado pela história. Outro deslize é tratar a ironia drummondiana como simples humor. E supor que a repetição em seus poemas é falha estilística, quando é procedimento deliberado de construção."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "O que caracteriza A Rosa do Povo na trajetória do poeta? Responda antes de conferir: é a fase de maior compromisso histórico e social, escrita no contexto da Segunda Guerra e do Estado Novo, em que a poesia se pergunta pelo seu papel diante da barbárie. Agora explique por que No meio do caminho causou escândalo: o prosaísmo e a repetição contrariavam o padrão poético consagrado."
+      }
+    ],
+    "recall": {
+      "prompt": "O que caracteriza A Rosa do Povo? Por que No meio do caminho causou escândalo?",
+      "elements": [
+        [
+          "fase de compromisso historico e social",
+          [
+            "social",
+            "historico",
+            "guerra"
+          ]
+        ],
+        [
+          "a poesia questiona seu papel diante da barbarie",
+          [
+            "papel",
+            "barbarie",
+            "poesia"
+          ]
+        ],
+        [
+          "o prosaismo e a repeticao contrariavam o padrao",
+          [
+            "prosaismo",
+            "repeticao",
+            "padrao"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Literatura",
+    "topic": "Clarice Lispector",
+    "sections": [
+      {
+        "title": "Uma prosa introspectiva",
+        "content": "Clarice desloca o foco do enredo para a consciência: pouco acontece exteriormente, e muito ocorre na percepção das personagens. A narrativa se organiza em torno de instantes de revelação, as epifanias, em que um detalhe banal desencadeia uma reordenação do modo como a personagem vê a si e ao mundo."
+      },
+      {
+        "title": "Obras",
+        "content": "Perto do Coração Selvagem estreia sua prosa fluxo de consciência. A Paixão segundo G.H. leva o experimento ao extremo com um monólogo desencadeado pelo encontro com uma barata. Laços de Família reúne contos de epifania, e A Hora da Estrela apresenta Macabéa, com narrador que reflete sobre o próprio ato de narrar."
+      },
+      {
+        "title": "Linguagem",
+        "content": "Sua escrita rompe a sintaxe convencional, usa repetição, paradoxo e interrogação, e frequentemente tematiza a insuficiência da linguagem para dizer a experiência. Isso faz do texto um exercício em que a forma encena a dificuldade que a personagem tem de nomear aquilo que a atravessa."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Buscar enredo tradicional em seus contos e concluir que nada acontece é o erro mais comum: o acontecimento é interno. Outro deslize é confundir epifania com desfecho feliz. E ler A Hora da Estrela ignorando o narrador Rodrigo S. M., cuja presença é parte central do sentido da obra."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "O que é epifania na narrativa de Clarice? Responda antes de conferir: um instante em que um detalhe corriqueiro desencadeia uma percepção súbita que reorganiza a relação da personagem consigo e com o mundo, sem exigir grande acontecimento externo. Agora explique a importância do narrador em A Hora da Estrela: ele problematiza a possibilidade de narrar a vida de Macabéa."
+      }
+    ],
+    "recall": {
+      "prompt": "O que é epifania em Clarice? Qual a função do narrador em A Hora da Estrela?",
+      "elements": [
+        [
+          "um instante banal desencadeia percepcao subita",
+          [
+            "instante",
+            "banal",
+            "subita"
+          ]
+        ],
+        [
+          "reorganiza a relacao da personagem com o mundo",
+          [
+            "reorganiza",
+            "percepcao",
+            "mundo"
+          ]
+        ],
+        [
+          "o narrador problematiza o proprio ato de narrar",
+          [
+            "narrador",
+            "narrar",
+            "rodrigo"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Literatura",
+    "topic": "Elementos da Narrativa",
+    "sections": [
+      {
+        "title": "Enredo e conflito",
+        "content": "O enredo é a sequência de acontecimentos organizada em torno de um conflito. A estrutura tradicional apresenta situação inicial, desenvolvimento com complicações, clímax e desfecho, mas muitos textos modernos rompem essa ordem, com finais abertos, ausência de clímax ou circularidade."
+      },
+      {
+        "title": "Personagens",
+        "content": "As personagens podem ser planas, definidas por poucos traços fixos, ou redondas, complexas e capazes de mudar. Podem ser protagonistas, antagonistas ou secundárias. A caracterização pode ser direta, quando o narrador descreve, ou indireta, quando as ações e falas revelam o caráter."
+      },
+      {
+        "title": "Tempo, espaço e narrador",
+        "content": "O tempo pode ser cronológico ou psicológico, este último medido pela percepção da personagem. O espaço pode ser cenário físico ou ambiente social e psicológico. O narrador, distinto do autor, pode ser de primeira ou terceira pessoa, observador ou onisciente, e sua escolha determina o que o leitor acessa."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Confundir narrador e autor é o erro conceitual mais frequente. Outro deslize é chamar de personagem plana toda personagem secundária, quando os critérios são distintos. E confundir tempo psicológico com flashback, que é recurso de organização temporal do discurso."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "O que caracteriza o tempo psicológico? Responda antes de conferir: a duração é medida pela percepção da personagem, e não pelo relógio, de modo que um instante pode ocupar páginas e anos podem passar numa frase. Agora diferencie caracterização direta e indireta: na direta o narrador afirma como a personagem é; na indireta, o leitor infere pelas ações e falas."
+      }
+    ],
+    "recall": {
+      "prompt": "O que caracteriza o tempo psicológico? Diferencie caracterização direta de indireta.",
+      "elements": [
+        [
+          "a duracao e medida pela percepcao da personagem",
+          [
+            "percepcao",
+            "personagem",
+            "relogio"
+          ]
+        ],
+        [
+          "um instante pode ocupar muitas paginas",
+          [
+            "instante",
+            "dura",
+            "subjetivo"
+          ]
+        ],
+        [
+          "na indireta o leitor infere pelas acoes",
+          [
+            "infere",
+            "acao",
+            "fala"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Literatura",
+    "topic": "Fernando Pessoa",
+    "sections": [
+      {
+        "title": "Ortônimo e heterônimos",
+        "content": "Pessoa criou heterônimos, personalidades poéticas com biografia, estilo e visão de mundo próprios. O ortônimo, o próprio Pessoa, é reflexivo, melancólico e marcado pela dor de pensar, com poemas como Autopsicografia, em que define o poeta como fingidor, e pela vertente nacionalista de Mensagem."
+      },
+      {
+        "title": "Os três principais",
+        "content": "Alberto Caeiro é o mestre bucólico do olhar sem metafísica: ver as coisas como são, sem interpretar. Ricardo Reis é o clássico epicurista e estoico, com odes de métrica contida sobre a aceitação do destino. Álvaro de Campos passa da exaltação futurista da máquina ao tédio e à desilusão."
+      },
+      {
+        "title": "A dor de pensar",
+        "content": "Em toda a obra, atravessa o tema da consciência excessiva, do fingimento poético e da fragmentação do eu. A frase o poeta é um fingidor não indica mentira, mas elaboração estética da experiência: o sentimento vivido é transformado em objeto de linguagem, acessível ao leitor como emoção reconstruída."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Tratar heterônimo como pseudônimo é o erro central: o heterônimo tem obra e visão próprias, distintas do autor. Outro deslize é atribuir a Caeiro versos de Campos, dada a diferença de tom. E ler o fingimento como falsidade, quando é elaboração artística do sentimento."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "O que diferencia heterônimo de pseudônimo? Responda antes de conferir: o pseudônimo é apenas outro nome para o mesmo autor; o heterônimo tem biografia, estilo, temas e concepção de mundo próprios, funcionando como outro poeta. Agora explique o poeta é um fingidor: a emoção é elaborada esteticamente, e não simplesmente expressa."
+      }
+    ],
+    "recall": {
+      "prompt": "Diferencie heterônimo de pseudônimo e explique o poeta é um fingidor.",
+      "elements": [
+        [
+          "o heteronimo tem biografia e estilo proprios",
+          [
+            "biografia",
+            "estilo",
+            "proprio"
+          ]
+        ],
+        [
+          "o pseudonimo e apenas outro nome",
+          [
+            "pseudonimo",
+            "nome",
+            "mesmo"
+          ]
+        ],
+        [
+          "o fingimento e elaboracao estetica da emocao",
+          [
+            "elaboracao",
+            "estetica",
+            "emocao"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Literatura",
+    "topic": "Graciliano Ramos",
+    "sections": [
+      {
+        "title": "A secura da linguagem",
+        "content": "Graciliano é conhecido pela prosa enxuta, sem adjetivação supérflua, com frases curtas e precisão vocabular. Essa economia formal não é apenas estilo: corresponde à dureza do mundo narrado e à impossibilidade de expressão das personagens, o que faz forma e tema convergirem de modo raro na literatura brasileira."
+      },
+      {
+        "title": "Vidas Secas",
+        "content": "O romance acompanha uma família de retirantes em capítulos autônomos e ordem quase circular, começando e terminando em fuga. O narrador em terceira pessoa acessa o pensamento de personagens que não dominam a palavra, inclusive a cachorra Baleia, cuja morte é um dos episódios mais estudados da literatura brasileira."
+      },
+      {
+        "title": "Outras obras",
+        "content": "São Bernardo é narrado por Paulo Honório, proprietário rude que reconstrói sua trajetória e sua incapacidade de amar, num exercício de introspecção tardia. Angústia aprofunda a análise psicológica e o delírio, e Memórias do Cárcere relata a prisão do autor durante o Estado Novo, unindo testemunho e literatura."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Ler a secura da linguagem como pobreza estilística inverte o efeito buscado. Outro deslize é atribuir a Fabiano a articulação verbal que o narrador fornece: é o narrador quem dá forma ao que a personagem não consegue dizer. E confundir São Bernardo com Vidas Secas quanto ao foco narrativo."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que o narrador de Vidas Secas acessa pensamentos de quem quase não fala? Responda antes de conferir: a narração em terceira pessoa empresta linguagem a personagens sem domínio da palavra, tornando visível a privação que também é linguística. Agora explique a estrutura do romance: capítulos autônomos e composição circular, que começa e termina com a família em retirada."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que o narrador empresta linguagem às personagens de Vidas Secas? Qual a estrutura do romance?",
+      "elements": [
+        [
+          "as personagens nao dominam a palavra",
+          [
+            "nao falam",
+            "palavra",
+            "privacao"
+          ]
+        ],
+        [
+          "o narrador da forma ao pensamento delas",
+          [
+            "narrador",
+            "terceira pessoa",
+            "pensamento"
+          ]
+        ],
+        [
+          "capitulos autonomos e composicao circular",
+          [
+            "circular",
+            "autonomo",
+            "retirada"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Literatura",
+    "topic": "Guimarães Rosa",
+    "sections": [
+      {
+        "title": "Invenção da linguagem",
+        "content": "Rosa reelabora a linguagem literária a partir do falar sertanejo, criando neologismos, recuperando arcaísmos, incorporando termos regionais e alterando a sintaxe. O resultado não é transcrição do falar do interior, mas uma língua literária inventada, que soa oral e é altamente elaborada."
+      },
+      {
+        "title": "Grande Sertão: Veredas",
+        "content": "O romance é um monólogo de Riobaldo dirigido a um interlocutor mudo, que rememora sua vida como jagunço, o pacto possível com o demônio e o amor por Diadorim, cuja identidade só se revela ao final. Sertão e vida se confundem, e a dúvida sobre o pacto permanece sem resposta definitiva."
+      },
+      {
+        "title": "Contos e temas",
+        "content": "Em Sagarana e Primeiras Estórias, o sertão aparece como espaço físico e metafísico, com travessias, encontros e crianças que percebem o mundo de modo próprio. Os temas centrais são a travessia, o destino, o bem e o mal, e a impossibilidade de decidir de forma definitiva sobre eles."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Tratar a linguagem rosiana como registro fiel do falar sertanejo é o erro conceitual central. Outro deslize é afirmar que o pacto ocorreu, quando o texto mantém a ambiguidade. E reduzir Grande Sertão a romance regionalista, ignorando sua dimensão filosófica e sua construção formal."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a linguagem de Guimarães Rosa não é transcrição do falar sertanejo? Responda antes de conferir: ele inventa palavras, recupera formas antigas e altera a sintaxe, criando uma língua literária própria que evoca a oralidade sem reproduzi-la. Agora explique a ambiguidade do pacto em Grande Sertão: o texto não confirma nem nega, mantendo a dúvida como tema central."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a linguagem de Rosa não é transcrição do falar sertanejo? Qual a ambiguidade central de Grande Sertão?",
+      "elements": [
+        [
+          "ele inventa neologismos e altera a sintaxe",
+          [
+            "neologismo",
+            "sintaxe",
+            "inventa"
+          ]
+        ],
+        [
+          "cria uma lingua literaria propria",
+          [
+            "lingua",
+            "literaria",
+            "elaborada"
+          ]
+        ],
+        [
+          "o pacto nao e confirmado nem negado",
+          [
+            "pacto",
+            "duvida",
+            "ambiguidade"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Literatura",
+    "topic": "João Cabral de Melo Neto",
+    "sections": [
+      {
+        "title": "O poeta engenheiro",
+        "content": "João Cabral recusa a inspiração e o derramamento sentimental, defendendo a poesia como construção racional e trabalho com a palavra. Sua linguagem é seca, concreta, avessa ao ornamento, com predomínio de imagens minerais e vegetais do Nordeste e uma disciplina formal que lhe rendeu o apelido de poeta engenheiro."
+      },
+      {
+        "title": "Morte e Vida Severina",
+        "content": "O auto de Natal pernambucano acompanha a retirada de Severino do sertão ao litoral, encontrando a morte em cada etapa do caminho. A estrutura em redondilha maior remete à tradição popular do cordel e do romanceiro, e o final, com o nascimento de uma criança, propõe uma afirmação mínima da vida."
+      },
+      {
+        "title": "Outras obras",
+        "content": "O Cão sem Plumas e O Rio tratam do Capibaribe como fio condutor da paisagem e da miséria pernambucana. Educação pela Pedra sistematiza sua poética: aprender com a pedra é aprender a concisão, a resistência e a impessoalidade, ou seja, o próprio método de composição que o autor defende."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Ler a secura cabralina como falta de emoção confunde procedimento com ausência de tema humano. Outro deslize é classificar Morte e Vida Severina como romance, quando é poema dramático em forma de auto. E supor que a redondilha maior é escolha aleatória, quando remete à tradição popular nordestina."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que João Cabral é chamado de poeta engenheiro? Responda antes de conferir: rejeita a inspiração e trata o poema como construção planejada, com rigor formal, precisão vocabular e recusa do sentimentalismo. Agora explique a escolha da redondilha maior em Morte e Vida Severina: aproxima o poema da tradição oral do cordel e do romanceiro popular."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que João Cabral é o poeta engenheiro? Por que Morte e Vida Severina usa redondilha maior?",
+      "elements": [
+        [
+          "rejeita a inspiracao e planeja a construcao",
+          [
+            "inspiracao",
+            "construcao",
+            "rigor"
+          ]
+        ],
+        [
+          "linguagem seca e precisa sem ornamento",
+          [
+            "seca",
+            "precisa",
+            "ornamento"
+          ]
+        ],
+        [
+          "a redondilha remete ao cordel e ao romanceiro",
+          [
+            "redondilha",
+            "cordel",
+            "popular"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Literatura",
+    "topic": "Literatura Lusófona Contemporânea",
+    "sections": [
+      {
+        "title": "Um campo plural",
+        "content": "A literatura em língua portuguesa contemporânea reúne produções de Portugal, Brasil, Angola, Moçambique, Cabo Verde, Guiné-Bissau, São Tomé e Príncipe e Timor-Leste. Cada contexto tem sua história, e o que as aproxima é a língua compartilhada, reelaborada de modos distintos em cada território."
+      },
+      {
+        "title": "África de língua portuguesa",
+        "content": "Mia Couto, em Moçambique, cria uma linguagem própria com neologismos e oralidade, aproximando-se do procedimento de Guimarães Rosa. José Eduardo Agualusa e Pepetela, em Angola, tratam de guerra civil, memória, identidade e reconstrução nacional. Os temas comuns incluem colonialismo, independência e tradição oral."
+      },
+      {
+        "title": "Portugal contemporâneo",
+        "content": "José Saramago, Nobel de literatura, trabalha com alegorias e prosa de longos períodos, como em Ensaio sobre a Cegueira, e António Lobo Antunes explora a memória, a guerra colonial e o fluxo de consciência. As duas obras dialogam criticamente com a história portuguesa recente e com o legado colonial."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Tratar a lusofonia como bloco cultural homogêneo apaga histórias e projetos literários distintos. Outro deslize é ler a literatura africana de língua portuguesa apenas como documento sobre a guerra. E supor que a proximidade linguística implica proximidade estética entre autores de países diferentes."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "O que aproxima Mia Couto de Guimarães Rosa? Responda antes de conferir: ambos inventam linguagem literária a partir da oralidade, com neologismos e reelaboração da sintaxe, sem transcrever a fala real. Agora explique por que a lusofonia não é bloco homogêneo: cada país tem história, tradição e projetos literários próprios, apesar da língua compartilhada."
+      }
+    ],
+    "recall": {
+      "prompt": "O que aproxima Mia Couto de Guimarães Rosa? Por que a lusofonia não é homogênea?",
+      "elements": [
+        [
+          "ambos inventam linguagem a partir da oralidade",
+          [
+            "oralidade",
+            "neologismo",
+            "inventa"
+          ]
+        ],
+        [
+          "nao transcrevem a fala real",
+          [
+            "transcricao",
+            "real",
+            "elabora"
+          ]
+        ],
+        [
+          "cada pais tem historia e projeto proprios",
+          [
+            "historia",
+            "pais",
+            "distinto"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Literatura",
+    "topic": "Machado de Assis",
+    "sections": [
+      {
+        "title": "As duas fases",
+        "content": "A obra machadiana costuma ser dividida entre a fase romântica, com romances como A Mão e a Luva e Iaiá Garcia, e a fase realista, iniciada em 1881 com Memórias Póstumas de Brás Cubas, que rompe convenções narrativas e inaugura outra forma de tratar personagem, narrador e leitor."
+      },
+      {
+        "title": "O narrador machadiano",
+        "content": "Em Memórias Póstumas, o narrador é defunto autor, o que lhe permite total liberdade e ironia. Em Dom Casmurro, Bento Santiago narra em causa própria, e a suspeita sobre a traição de Capitu depende inteiramente de sua versão, o que faz do narrador não confiável o centro da leitura crítica da obra."
+      },
+      {
+        "title": "Temas e procedimentos",
+        "content": "Machado trabalha com ironia, digressão, diálogo com o leitor, capítulos curtos, teoria do humanitismo como paródia de sistemas filosóficos e análise cética da natureza humana, do interesse social e das aparências. A crítica à sociedade escravista e às elites do Segundo Reinado atravessa toda a obra."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Afirmar que Capitu traiu como se fosse fato do enredo é o erro mais comum: a obra não confirma, e a questão é justamente a construção da suspeita por um narrador interessado. Outro deslize é ler o humanitismo como filosofia séria. E ignorar a crítica social por trás da ironia."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que Dom Casmurro não permite afirmar a traição de Capitu? Responda antes de conferir: toda a narrativa é feita por Bentinho, parte interessada e ciumenta, sem prova externa, de modo que o leitor tem acesso apenas à sua versão. Agora explique a função do narrador defunto em Memórias Póstumas: liberdade total para ironizar, digredir e expor sem pudor a hipocrisia social."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que não se pode afirmar a traição de Capitu? Qual a função do narrador defunto em Brás Cubas?",
+      "elements": [
+        [
+          "a narrativa e feita pelo marido ciumento",
+          [
+            "bentinho",
+            "ciume",
+            "versao"
+          ]
+        ],
+        [
+          "nao ha prova externa no romance",
+          [
+            "prova",
+            "confirma",
+            "narrador"
+          ]
+        ],
+        [
+          "o defunto autor tem liberdade para ironizar",
+          [
+            "defunto",
+            "ironia",
+            "liberdade"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Literatura",
+    "topic": "Modernismo no Brasil: Primeira Geração",
+    "sections": [
+      {
+        "title": "A fase heroica",
+        "content": "A primeira geração modernista, de 1922 a 1930, é a fase de ruptura e experimentação. Caracteriza-se pelo verso livre, pela linguagem coloquial brasileira, pelo humor e pela paródia, pela recusa do academicismo e pela busca de uma identidade nacional que incorpore o popular, o indígena e o afro-brasileiro."
+      },
+      {
+        "title": "Manifestos e grupos",
+        "content": "O Manifesto da Poesia Pau-Brasil, de 1924, propõe uma poesia de exportação, sintética e brasileira. O Manifesto Antropófago, de 1928, propõe deglutir a cultura estrangeira e reelaborá-la. Em contraponto, grupos como Verde-Amarelo e Anta defendem um nacionalismo mais conservador, com forte carga ufanista."
+      },
+      {
+        "title": "Obras centrais",
+        "content": "Macunaíma, de Mário de Andrade, rapsódia que reúne lendas e falares de várias regiões, cria o herói sem nenhum caráter como síntese contraditória do brasileiro. Oswald de Andrade renova a prosa com Memórias Sentimentais de João Miramar e a poesia com poemas-piada e a técnica de montagem cinematográfica."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Confundir Pau-Brasil e Antropofagia quanto a data e proposta é frequente. Outro deslize é ler Macunaíma como afirmação simples de identidade nacional, quando a obra é irônica e contraditória. E supor que todo o modernismo de 22 era progressista, ignorando as vertentes nacionalistas conservadoras."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "O que significa a antropofagia cultural de Oswald? Responda antes de conferir: em vez de imitar ou recusar a cultura estrangeira, propõe devorá-la e transformá-la, produzindo algo novo e brasileiro a partir dessa digestão crítica. Agora explique por que Macunaíma é chamado de herói sem nenhum caráter: reúne traços contraditórios, sem identidade fixa, como alegoria do país."
+      }
+    ],
+    "recall": {
+      "prompt": "O que é a antropofagia cultural? Por que Macunaíma é o herói sem nenhum caráter?",
+      "elements": [
+        [
+          "devorar e transformar a cultura estrangeira",
+          [
+            "devorar",
+            "transformar",
+            "estrangeira"
+          ]
+        ],
+        [
+          "produzir algo novo e brasileiro",
+          [
+            "novo",
+            "brasileiro",
+            "digestao"
+          ]
+        ],
+        [
+          "reune tracos contraditorios sem identidade fixa",
+          [
+            "contraditorio",
+            "sem carater",
+            "alegoria"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Literatura",
+    "topic": "Naturalismo",
+    "sections": [
+      {
+        "title": "Determinismo",
+        "content": "O Naturalismo aplica à literatura o modelo científico do século XIX: as personagens seriam determinadas por meio, raça e momento histórico. O romance funciona como experimento, e a conduta humana é explicada por instintos, hereditariedade e influência do ambiente, com forte presença de patologias e impulsos."
+      },
+      {
+        "title": "Procedimentos",
+        "content": "Predominam a descrição minuciosa, a linguagem crua, a atenção ao corpo, à sexualidade e à doença, e a construção de personagens coletivas, como o cortiço em O Cortiço, de Aluísio Azevedo, em que o ambiente ganha vida própria e determina o destino de quem nele vive."
+      },
+      {
+        "title": "Limites e crítica",
+        "content": "O modelo naturalista incorporou teorias racistas de sua época, e muitas obras reproduzem estereótipos de raça, gênero e sexualidade que hoje se leem criticamente. Reconhecer esse traço faz parte da leitura histórica, sem anular o valor documental e estético dos romances nem naturalizar suas premissas."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Ler as teses deterministas como verdades científicas defendidas pelo texto sem crítica é o principal risco. Outro deslize é confundir a descrição naturalista com realismo psicológico machadiano. E supor que o Naturalismo é apenas exagero descritivo, ignorando seu projeto teórico explícito."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que se diz que o cortiço é personagem em O Cortiço? Responda antes de conferir: o ambiente ganha descrição orgânica, cresce, respira e determina o comportamento dos moradores, o que expressa a tese naturalista de que o meio condiciona a conduta. Agora explique o tripé determinista: meio, raça e momento histórico."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que o cortiço funciona como personagem? Explique o tripé determinista.",
+      "elements": [
+        [
+          "o ambiente ganha vida e determina condutas",
+          [
+            "ambiente",
+            "determina",
+            "organico"
+          ]
+        ],
+        [
+          "expressa a tese de que o meio condiciona",
+          [
+            "meio",
+            "condiciona",
+            "tese"
+          ]
+        ],
+        [
+          "o tripe e meio, raca e momento",
+          [
+            "meio",
+            "raca",
+            "momento"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Literatura",
+    "topic": "Parnasianismo",
+    "sections": [
+      {
+        "title": "Arte pela arte",
+        "content": "O Parnasianismo reage ao subjetivismo romântico com a defesa da arte pela arte: o valor está na perfeição formal, não na expressão do sentimento. O poeta é apresentado como artesão que trabalha a palavra com rigor, buscando objetividade, impessoalidade e contenção emocional."
+      },
+      {
+        "title": "Rigor formal",
+        "content": "O soneto é a forma preferida, com metrificação rigorosa, rimas raras e ricas, vocabulário culto e sintaxe elaborada. Temas greco-latinos e a descrição de objetos de arte são recorrentes, como no célebre poema em que Olavo Bilac compara o trabalho do poeta ao do ourives que lapida joias."
+      },
+      {
+        "title": "Nomes e recepção",
+        "content": "Olavo Bilac, Alberto de Oliveira e Raimundo Correia formam a tríade parnasiana brasileira. A escola teve enorme prestígio até as primeiras décadas do século XX, tornando-se justamente por isso o alvo preferencial das paródias e ataques dos modernistas de 1922, que a acusavam de artificialismo."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Supor que o Parnasianismo não trata de emoção é impreciso: ele evita o derramamento, mas há lirismo contido. Outro deslize é confundir a impessoalidade parnasiana com a objetividade realista da prosa. E ignorar que o prestígio parnasiano explica a virulência das paródias modernistas."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que os modernistas atacaram tanto os parnasianos? Responda antes de conferir: eram a escola dominante e prestigiada, associada ao academicismo e ao rigor formal, exatamente o que o modernismo queria romper em favor da liberdade formal e da língua brasileira falada. Agora explique a metáfora do ourives: o poeta como artesão que lapida a palavra com precisão."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que os modernistas atacaram os parnasianos? Explique a metáfora do ourives.",
+      "elements": [
+        [
+          "eram a escola dominante e prestigiada",
+          [
+            "dominante",
+            "prestigio",
+            "academico"
+          ]
+        ],
+        [
+          "representavam o rigor formal a ser rompido",
+          [
+            "rigor",
+            "formal",
+            "romper"
+          ]
+        ],
+        [
+          "o poeta e artesao que lapida a palavra",
+          [
+            "ourives",
+            "artesao",
+            "lapida"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Literatura",
+    "topic": "Poesia Brasileira Contemporânea",
+    "sections": [
+      {
+        "title": "Pluralidade",
+        "content": "A poesia brasileira das últimas décadas não se organiza em torno de um movimento dominante. Convivem vertentes formalistas, poesia do cotidiano, poesia visual e digital, spoken word e slam, além da presença crescente de vozes indígenas, negras e periféricas que ampliam o repertório de temas e formas."
+      },
+      {
+        "title": "Slam e oralidade",
+        "content": "As batalhas de poesia falada, ou slams, recolocaram a performance no centro: o poema é escrito para ser dito, com atenção ao ritmo, à respiração e à interação com o público. Isso reaproxima a poesia de sua origem oral e amplia o acesso, com forte presença de temas ligados a racismo, gênero e periferia."
+      },
+      {
+        "title": "Circulação",
+        "content": "A internet alterou a circulação: redes sociais, blogs e plataformas permitem publicação sem intermediários, ampliando o alcance de autores fora do circuito editorial. Isso gera debate sobre critérios de qualidade e curadoria, e ao mesmo tempo torna visível uma produção antes restrita a pequenos círculos."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Buscar uma escola dominante para o período é o erro conceitual central: a pluralidade é a característica. Outro deslize é tratar o slam como manifestação sem elaboração formal. E supor que a publicação digital dispensa qualquer critério estético, quando ela apenas desloca as instâncias de legitimação."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "O que caracteriza a poesia contemporânea brasileira? Responda antes de conferir: a ausência de movimento dominante, a convivência de vertentes diversas, a presença de vozes antes ausentes do cânone e a circulação ampliada por meios digitais e pela performance. Agora explique o que o slam recoloca em cena: a dimensão oral e performática do poema."
+      }
+    ],
+    "recall": {
+      "prompt": "O que caracteriza a poesia brasileira contemporânea? O que o slam recoloca em cena?",
+      "elements": [
+        [
+          "ausencia de movimento dominante e pluralidade",
+          [
+            "plural",
+            "sem escola",
+            "diversas"
+          ]
+        ],
+        [
+          "presenca de vozes antes ausentes do canone",
+          [
+            "periferia",
+            "negra",
+            "indigena"
+          ]
+        ],
+        [
+          "o slam recoloca a oralidade e a performance",
+          [
+            "slam",
+            "performance",
+            "oral"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Literatura",
+    "topic": "Poesia Brasileira: 1960-1980",
+    "sections": [
+      {
+        "title": "Contexto de censura",
+        "content": "O período é atravessado pelo regime militar, pela censura e pela repressão, o que produz poesia de resistência, uso de metáforas para driblar a vigilância e circulação alternativa de textos. A canção popular assume papel central como veículo de crítica, aproximando poesia e música de forma inédita."
+      },
+      {
+        "title": "Poesia marginal",
+        "content": "Nos anos 1970, a chamada geração mimeógrafo produz poemas curtos, coloquiais, irônicos e cotidianos, distribuídos de mão em mão fora do circuito editorial. Ana Cristina Cesar, Cacaso, Chacal e Paulo Leminski são nomes associados a essa produção, que recusa a solenidade e valoriza o registro do dia a dia."
+      },
+      {
+        "title": "Outras vertentes",
+        "content": "Convivem no período o desdobramento do concretismo, o poema-processo, a poesia práxis, a produção de Ferreira Gullar, que passa do concretismo ao Poema Sujo, escrito no exílio, e a obra de Adélia Prado, com lirismo do cotidiano e do corpo, ampliando as vozes reconhecidas na poesia brasileira."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Chamar toda a poesia do período de marginal é impreciso: a marginal é uma vertente específica dos anos 1970. Outro deslize é ignorar o peso da canção popular como poesia no período. E supor que a poesia marginal era descuidada, quando a aparente simplicidade envolve elaboração e escolha estética."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "O que caracteriza a poesia marginal dos anos 1970? Responda antes de conferir: poemas curtos, coloquiais e irônicos, com temas do cotidiano, produzidos em mimeógrafo e distribuídos fora do circuito editorial, recusando a solenidade literária. Agora explique o papel da canção no período: tornou-se veículo central de poesia e crítica em contexto de censura."
+      }
+    ],
+    "recall": {
+      "prompt": "O que caracteriza a poesia marginal dos anos 1970? Qual o papel da canção no período?",
+      "elements": [
+        [
+          "poemas curtos, coloquiais e cotidianos",
+          [
+            "curto",
+            "coloquial",
+            "cotidiano"
+          ]
+        ],
+        [
+          "circulacao em mimeografo fora do circuito editorial",
+          [
+            "mimeografo",
+            "circulacao",
+            "editorial"
+          ]
+        ],
+        [
+          "a cancao foi veiculo de poesia e critica",
+          [
+            "cancao",
+            "critica",
+            "censura"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Literatura",
+    "topic": "Poesia Concreta",
+    "sections": [
+      {
+        "title": "O projeto",
+        "content": "A poesia concreta surge em São Paulo nos anos 1950, com Augusto e Haroldo de Campos e Décio Pignatari. Propõe o fim do verso e a exploração do poema como objeto visual e sonoro, com uso do espaço da página, tipografia, cor e estrutura matemática, aproximando poesia, design e comunicação."
+      },
+      {
+        "title": "Procedimentos",
+        "content": "O poema concreto trabalha com a materialidade da palavra: sua forma gráfica, sua sonoridade e sua decomposição em partes significativas. Palavras podem ser fragmentadas para revelar outras, dispostas em grades ou repetidas com variação mínima, de modo que o sentido nasce da relação visual entre os elementos."
+      },
+      {
+        "title": "Contexto e desdobramentos",
+        "content": "O movimento dialoga com o desenvolvimentismo, o design moderno e a construção de Brasília, e teve desdobramentos na publicidade, na música popular e na tipografia. Foi criticado por excesso de formalismo, e parte de seus integrantes desenvolveu depois vertentes mais engajadas politicamente."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Ler o poema concreto buscando apenas o significado das palavras, sem considerar a disposição na página, é o erro central. Outro deslize é tratá-lo como brincadeira gráfica sem projeto teórico. E supor que a poesia concreta rompeu com toda a tradição, quando dialoga com Mallarmé, Pound e o próprio João Cabral."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que o poema concreto exige leitura visual? Responda antes de conferir: a disposição na página, o espaço em branco, a tipografia e a repetição são parte do sentido, e ignorá-los reduz o poema a uma lista de palavras. Agora diga o que substitui o verso na proposta concretista: a estrutura visual e sonora organizada no espaço da página."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que o poema concreto exige leitura visual? O que substitui o verso na proposta concretista?",
+      "elements": [
+        [
+          "a disposicao na pagina faz parte do sentido",
+          [
+            "disposicao",
+            "pagina",
+            "espaco"
+          ]
+        ],
+        [
+          "tipografia e repeticao sao significativas",
+          [
+            "tipografia",
+            "repeticao",
+            "visual"
+          ]
+        ],
+        [
+          "a estrutura visual e sonora substitui o verso",
+          [
+            "estrutura",
+            "sonora",
+            "verso"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Literatura",
+    "topic": "Prosa Brasileira Contemporânea",
+    "sections": [
+      {
+        "title": "Novas vozes e temas",
+        "content": "A prosa recente amplia quem narra e o que se narra: autores da periferia, escritoras, autores negros e indígenas trazem experiências antes ausentes do cânone. Temas como violência urbana, racismo, memória familiar, migração, gênero e trabalho ganham tratamento literário a partir de perspectivas internas."
+      },
+      {
+        "title": "Autores e obras",
+        "content": "Conceição Evaristo elabora a escrevivência, articulando memória, experiência coletiva e ficção. Ferréz e Paulo Lins tratam da periferia paulistana e carioca a partir de dentro. Milton Hatoum trabalha memória familiar e Amazônia, e Itamar Vieira Junior, em Torto Arado, recupera a vida no campo e a herança da escravidão."
+      },
+      {
+        "title": "Formas",
+        "content": "Convivem o realismo, a autoficção, a fragmentação, a hibridação com jornalismo e ensaio e a incorporação de linguagens digitais. Muitos textos discutem o próprio ato de narrar e a legitimidade de quem fala sobre quem, o que transforma a questão da voz num tema literário e não apenas político."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Tratar literatura periférica como documento sociológico sem valor estético é o erro mais grave. Outro deslize é confundir autoficção com autobiografia, quando a primeira assume o pacto ficcional. E supor que a ampliação do cânone é apenas questão temática, quando envolve também forma e ponto de vista."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "O que significa escrevivência em Conceição Evaristo? Responda antes de conferir: a escrita que articula experiência vivida, memória coletiva de mulheres negras e elaboração literária, recusando a separação entre vida e escrita. Agora diferencie autoficção de autobiografia: a primeira assume o pacto ficcional, a segunda o pacto de veracidade."
+      }
+    ],
+    "recall": {
+      "prompt": "O que é escrevivência? Diferencie autoficção de autobiografia.",
+      "elements": [
+        [
+          "escrita que articula experiencia e memoria coletiva",
+          [
+            "experiencia",
+            "memoria",
+            "coletiva"
+          ]
+        ],
+        [
+          "recusa a separacao entre vida e escrita",
+          [
+            "vida",
+            "escrita",
+            "negra"
+          ]
+        ],
+        [
+          "a autoficcao assume o pacto ficcional",
+          [
+            "ficcional",
+            "pacto",
+            "autobiografia"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Literatura",
+    "topic": "Prosa Brasileira: 1960-1980",
+    "sections": [
+      {
+        "title": "Ficção e ditadura",
+        "content": "A prosa do período responde à censura e à repressão com estratégias variadas: alegoria, fantástico, fragmentação e narrativas urbanas de violência. Obras como Incidente em Antares, de Erico Verissimo, e Zero, de Ignácio de Loyola Brandão, usam o insólito e a fragmentação para tratar do autoritarismo."
+      },
+      {
+        "title": "Conto urbano e violência",
+        "content": "Rubem Fonseca renova o conto brasileiro com narrativas urbanas, linguagem direta, personagens marginais e violência explícita, em livros como Feliz Ano Novo, censurado na época. A cidade aparece como espaço de desigualdade e brutalidade, e o narrador frequentemente é o próprio agente da violência."
+      },
+      {
+        "title": "Memória e testemunho",
+        "content": "Ao lado da ficção, cresce a literatura de testemunho e memória, com relatos de prisão, exílio e resistência. Também se destacam autores que exploram a memória familiar e a experiência subjetiva, e a crônica se consolida como gênero que capta o cotidiano com humor e crítica, alcançando grande público."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Supor que toda a prosa do período tratava diretamente da ditadura ignora a diversidade temática. Outro deslize é ler o realismo violento de Rubem Fonseca como celebração da violência, quando é diagnóstico. E confundir literatura de testemunho com autobiografia, que tem outro pacto de leitura."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que muitos autores recorreram à alegoria e ao fantástico? Responda antes de conferir: a censura impedia a crítica direta, e o insólito permitia tratar do autoritarismo de forma que escapasse à repressão, exigindo do leitor a decifração. Agora explique o papel da cidade nos contos de Rubem Fonseca: espaço de desigualdade e violência, retratado sem idealização."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a alegoria e o fantástico foram recursos frequentes? Qual o papel da cidade em Rubem Fonseca?",
+      "elements": [
+        [
+          "a censura impedia a critica direta",
+          [
+            "censura",
+            "direta",
+            "repressao"
+          ]
+        ],
+        [
+          "o insolito permitia tratar do autoritarismo",
+          [
+            "insolito",
+            "alegoria",
+            "autoritarismo"
+          ]
+        ],
+        [
+          "a cidade e espaco de desigualdade e violencia",
+          [
+            "cidade",
+            "violencia",
+            "desigualdade"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Literatura",
+    "topic": "Pré-Modernismo",
+    "sections": [
+      {
+        "title": "Um período, não uma escola",
+        "content": "O Pré-Modernismo não é uma estética unificada, e sim o conjunto da produção entre 1902 e 1922, marcado pela convivência de tendências. O traço comum é a atenção à realidade brasileira, sobretudo às regiões e populações excluídas do projeto oficial de nação, com denúncia das contradições sociais."
+      },
+      {
+        "title": "Autores e obras",
+        "content": "Euclides da Cunha, em Os Sertões, combina ciência, história e literatura para narrar a Guerra de Canudos. Lima Barreto retrata o subúrbio carioca e a exclusão em Triste Fim de Policarpo Quaresma. Monteiro Lobato cria Jeca Tatu, e Graça Aranha, em Canaã, discute imigração e formação nacional."
+      },
+      {
+        "title": "Traços de linguagem",
+        "content": "Convivem a linguagem ainda marcada pelo academicismo, como em Euclides, e a busca de coloquialidade e ironia, como em Lima Barreto, que critica o bacharelismo e o culto à forma. Essa tensão entre herança e ruptura é o que faz o período funcionar como ponte para o Modernismo."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Chamar o Pré-Modernismo de escola literária com programa é o erro conceitual central. Outro deslize é ler Os Sertões apenas como obra literária, ignorando sua dimensão de reportagem e ensaio científico. E supor que Jeca Tatu foi criado como elogio, quando é crítica, depois reinterpretada pelo próprio autor."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que o Pré-Modernismo não é uma escola? Responda antes de conferir: não há programa estético comum nem manifesto; o que une os autores é o momento histórico e a atenção crítica à realidade brasileira. Agora explique a natureza híbrida de Os Sertões: combina relato histórico, análise científica do meio e construção literária."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que o Pré-Modernismo não é escola? Qual a natureza híbrida de Os Sertões?",
+      "elements": [
+        [
+          "nao ha programa estetico nem manifesto",
+          [
+            "programa",
+            "manifesto",
+            "escola"
+          ]
+        ],
+        [
+          "une-os a atencao critica a realidade brasileira",
+          [
+            "realidade",
+            "critica",
+            "brasil"
+          ]
+        ],
+        [
+          "Os Sertoes combina ciencia, historia e literatura",
+          [
+            "ciencia",
+            "historia",
+            "literatura"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Literatura",
+    "topic": "Realismo Português: Eça de Queirós",
+    "sections": [
+      {
+        "title": "Contexto",
+        "content": "Eça de Queirós integra a Geração de 70, grupo que promoveu as Conferências do Casino Lisbonense e propôs renovar a cultura portuguesa, criticando o atraso, o clericalismo e a mediocridade da vida burguesa. Sua obra combina crítica social ácida com ironia refinada e apurada construção de ambientes."
+      },
+      {
+        "title": "Obras centrais",
+        "content": "O Crime do Padre Amaro critica o celibato e a hipocrisia clerical numa cidade provinciana. O Primo Basílio trata do adultério e da fragilidade moral da burguesia lisboeta. Os Maias, obra mais ampla, acompanha três gerações de uma família e diagnostica a decadência da elite portuguesa do século XIX."
+      },
+      {
+        "title": "Procedimentos",
+        "content": "Eça usa ironia, descrição de interiores como índice de caráter, diálogos que expõem vaidade e superficialidade, e um narrador que observa com distância crítica. A crítica não poupa nenhum grupo: atinge clero, aristocracia, burguesia, imprensa e a própria intelectualidade que pretendia reformar o país."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Ler Eça como simples anticlerical ignora que sua crítica alcança toda a sociedade portuguesa. Outro deslize é confundir suas obras entre si quanto a enredo e tema. E supor que o Realismo português repete o brasileiro, quando os contextos sociais e as tradições literárias são distintos."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Qual a crítica central de O Crime do Padre Amaro? Responda antes de conferir: expõe a hipocrisia do clero e os efeitos do celibato imposto, ao mesmo tempo em que retrata a mediocridade e a fofoca da vida provinciana portuguesa. Agora diga o diagnóstico de Os Maias: a decadência da elite portuguesa, incapaz de realizar seus próprios projetos."
+      }
+    ],
+    "recall": {
+      "prompt": "Qual a crítica de O Crime do Padre Amaro? Qual o diagnóstico de Os Maias?",
+      "elements": [
+        [
+          "hipocrisia do clero e efeitos do celibato",
+          [
+            "clero",
+            "celibato",
+            "hipocrisia"
+          ]
+        ],
+        [
+          "mediocridade da vida provinciana",
+          [
+            "provincia",
+            "mediocridade",
+            "fofoca"
+          ]
+        ],
+        [
+          "Os Maias diagnostica a decadencia da elite",
+          [
+            "decadencia",
+            "elite",
+            "portuguesa"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Literatura",
+    "topic": "Renascimento e Camões",
+    "sections": [
+      {
+        "title": "Classicismo",
+        "content": "O Renascimento retoma valores da Antiguidade clássica: equilíbrio, harmonia, racionalidade, mitologia greco-latina e antropocentrismo. Na forma, difunde-se o soneto decassílabo, com o modelo italiano de Petrarca, e a poesia passa a explorar o conflito entre razão e sentimento, entre ideal e experiência."
+      },
+      {
+        "title": "Lírica camoniana",
+        "content": "Camões trabalha temas como o amor platônico e o amor sensual, a mudança e a transitoriedade, o desconcerto do mundo e a distância entre o ideal e o real. Sonetos como Amor é fogo que arde sem se ver constroem definições por antíteses e paradoxos, procedimento característico de sua lírica."
+      },
+      {
+        "title": "Os Lusíadas",
+        "content": "A epopeia narra a viagem de Vasco da Gama e celebra os feitos portugueses, organizando-se em proposição, invocação, dedicatória, narração e epílogo. Combina mitologia pagã e cristianismo, e episódios como o Velho do Restelo e o Gigante Adamastor introduzem a crítica e o custo humano da expansão marítima."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Ler Os Lusíadas apenas como exaltação sem contradições ignora o Velho do Restelo, voz crítica dentro do poema. Outro deslize é confundir a lírica com a épica de Camões quanto a temas e formas. E tratar o classicismo como ausência de conflito, quando a tensão entre razão e paixão é central."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Qual a função do episódio do Velho do Restelo? Responda antes de conferir: introduz a crítica à empresa marítima, questionando a ambição, a glória vã e o custo humano das navegações, e mostra que a epopeia não é celebração sem contraponto. Agora explique o procedimento de Amor é fogo que arde sem se ver: definir o amor por antíteses e paradoxos sucessivos."
+      }
+    ],
+    "recall": {
+      "prompt": "Qual a função do Velho do Restelo? Que procedimento estrutura Amor é fogo que arde sem se ver?",
+      "elements": [
+        [
+          "introduz a critica a empresa maritima",
+          [
+            "critica",
+            "ambicao",
+            "navegacao"
+          ]
+        ],
+        [
+          "mostra o custo humano da expansao",
+          [
+            "custo",
+            "humano",
+            "gloria"
+          ]
+        ],
+        [
+          "o soneto define o amor por antiteses e paradoxos",
+          [
+            "antitese",
+            "paradoxo",
+            "contradicao"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Literatura",
+    "topic": "Segunda Geração Modernista: Poesia",
+    "sections": [
+      {
+        "title": "Amadurecimento",
+        "content": "A poesia dos anos 1930 e 1940 mantém a liberdade formal conquistada em 22, mas abandona a irreverência sistemática em favor de maior densidade reflexiva. Temas como o social, a angústia existencial, o tempo, a memória e a relação entre indivíduo e mundo ganham centralidade, com linguagem depurada."
+      },
+      {
+        "title": "Nomes centrais",
+        "content": "Carlos Drummond de Andrade, Cecília Meireles, Murilo Mendes, Jorge de Lima e Vinicius de Moraes formam o núcleo do período. Cecília trabalha temas como transitoriedade, memória e efemeridade com musicalidade herdada da tradição; Murilo e Jorge de Lima aproximam-se do surrealismo e da poesia de inspiração religiosa."
+      },
+      {
+        "title": "Poesia e mundo",
+        "content": "O contexto de guerras, autoritarismo e crise social atravessa a produção, e a pergunta pelo papel do poeta se torna tema explícito. Isso aparece em poemas que questionam o valor da poesia diante da barbárie e em obras que buscam conciliar experimentação formal e responsabilidade histórica."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Supor que a segunda geração abandonou as conquistas formais de 22 é impreciso: ela as incorpora com outro tom. Outro deslize é reduzir Cecília Meireles ao lirismo puro, ignorando sua obra histórica, como o Romanceiro da Inconfidência. E tratar toda poesia do período como engajada."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "O que a segunda geração mantém e o que muda em relação a 22? Responda antes de conferir: mantém o verso livre e a liberdade formal, e muda o tom, substituindo a irreverência pela densidade reflexiva e pela preocupação existencial e social. Agora cite uma obra de Cecília Meireles que foge do lirismo intimista: o Romanceiro da Inconfidência, de tema histórico."
+      }
+    ],
+    "recall": {
+      "prompt": "O que a segunda geração mantém e o que muda em relação a 22? Cite uma obra histórica de Cecília Meireles.",
+      "elements": [
+        [
+          "mantem o verso livre e a liberdade formal",
+          [
+            "verso livre",
+            "liberdade",
+            "forma"
+          ]
+        ],
+        [
+          "muda o tom para reflexao e densidade",
+          [
+            "reflexao",
+            "densidade",
+            "tom"
+          ]
+        ],
+        [
+          "o Romanceiro da Inconfidencia e obra historica",
+          [
+            "romanceiro",
+            "inconfidencia",
+            "historico"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Literatura",
+    "topic": "Segunda Geração Modernista: Prosa",
+    "sections": [
+      {
+        "title": "Romance de 30",
+        "content": "A prosa dos anos 1930 volta-se à denúncia social, com foco no Nordeste, na seca, no coronelismo, na decadência dos engenhos e na migração. Substitui a experimentação formal da primeira geração por uma narrativa mais convencional na forma e mais contundente no conteúdo, com forte compromisso político."
+      },
+      {
+        "title": "Autores e obras",
+        "content": "Rachel de Queiroz estreia com O Quinze, sobre a seca; José Lins do Rego escreve o ciclo da cana-de-açúcar, com Menino de Engenho; Jorge Amado retrata trabalhadores do cacau e a vida baiana; e Graciliano Ramos leva a análise psicológica e a secura da linguagem ao ponto mais alto do período."
+      },
+      {
+        "title": "Regionalismo crítico",
+        "content": "Diferente do regionalismo romântico, que idealizava o interior, o romance de 30 expõe a exploração, a fome e a violência estrutural. A paisagem não é cenário pitoresco, mas condição que determina a vida das personagens, e a linguagem incorpora falares regionais sem tratá-los como curiosidade."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Tratar o romance de 30 como continuação formal do experimentalismo de 22 é erro: houve retorno a formas mais convencionais. Outro deslize é confundir o regionalismo crítico com o romântico. E supor que todos os autores do período tinham a mesma orientação política e o mesmo projeto estético."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "O que distingue o regionalismo de 30 do romântico? Responda antes de conferir: o de 30 denuncia exploração, fome e violência estrutural, tratando o meio como condição determinante, enquanto o romântico idealiza o interior e o tipo regional. Agora explique a mudança formal em relação a 1922: menos experimentação e mais construção narrativa voltada à denúncia."
+      }
+    ],
+    "recall": {
+      "prompt": "Distinga o regionalismo de 30 do romântico e explique a mudança formal em relação a 1922.",
+      "elements": [
+        [
+          "o de 30 denuncia exploracao e fome",
+          [
+            "denuncia",
+            "exploracao",
+            "fome"
+          ]
+        ],
+        [
+          "o romantico idealiza o interior",
+          [
+            "idealiza",
+            "pitoresco",
+            "romantico"
+          ]
+        ],
+        [
+          "houve retorno a formas mais convencionais",
+          [
+            "convencional",
+            "menos experimentacao",
+            "forma"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Literatura",
+    "topic": "Semana de Arte Moderna",
+    "sections": [
+      {
+        "title": "O evento",
+        "content": "Realizada em fevereiro de 1922, no Theatro Municipal de São Paulo, reuniu escritores, artistas plásticos e músicos em três noites de apresentações. Provocou vaias e escândalo, e seu objetivo era romper com o academicismo, atualizar a arte brasileira em relação às vanguardas e afirmar uma expressão nacional."
+      },
+      {
+        "title": "Participantes e obras",
+        "content": "Mário de Andrade, Oswald de Andrade, Menotti del Picchia, Graça Aranha, Villa-Lobos, Anita Malfatti e Di Cavalcanti estiveram entre os nomes centrais. O contexto do centenário da Independência e a São Paulo enriquecida pelo café e transformada pela imigração ajudam a explicar o momento e o lugar do evento."
+      },
+      {
+        "title": "Legado",
+        "content": "A Semana não produziu de imediato as grandes obras do modernismo, que viriam nos anos seguintes, mas funcionou como marco simbólico e catalisador. Dela decorrem manifestos e revistas que organizaram o movimento, como o Manifesto da Poesia Pau-Brasil e o Manifesto Antropófago, ambos de Oswald de Andrade."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Supor que a Semana criou o modernismo do zero ignora obras e debates anteriores, como a exposição de Anita Malfatti em 1917. Outro deslize é imaginar que houve programa único, quando o grupo era heterogêneo. E confundir os manifestos de 1924 e 1928 quanto a datas e propostas."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a Semana de 22 é considerada marco e não origem do modernismo? Responda antes de conferir: obras e polêmicas anteriores já anunciavam a ruptura, e as principais realizações modernistas vieram nos anos seguintes; a Semana funcionou como evento catalisador e símbolo. Agora explique a proposta antropofágica: deglutir a cultura estrangeira e reelaborá-la em chave brasileira."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a Semana de 22 é marco e não origem? Explique a proposta antropofágica.",
+      "elements": [
+        [
+          "ja havia obras e polemicas anteriores",
+          [
+            "anterior",
+            "malfatti",
+            "1917"
+          ]
+        ],
+        [
+          "as grandes obras vieram depois",
+          [
+            "depois",
+            "anos seguintes",
+            "catalisador"
+          ]
+        ],
+        [
+          "a antropofagia degluti a cultura estrangeira",
+          [
+            "antropofagia",
+            "deglutir",
+            "reelabora"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Literatura",
+    "topic": "Simbolismo",
+    "sections": [
+      {
+        "title": "Reação ao materialismo",
+        "content": "O Simbolismo reage ao cientificismo realista e ao formalismo parnasiano, voltando-se ao subjetivo, ao inconsciente, ao místico e ao inefável. A poesia busca sugerir mais do que nomear, e a palavra vale menos pelo significado preciso do que pelo efeito de sugestão que produz no leitor."
+      },
+      {
+        "title": "Recursos",
+        "content": "Predominam a musicalidade, com aliterações e assonâncias; a sinestesia, que cruza sensações de sentidos diferentes; o uso de maiúsculas alegóricas; e um vocabulário de brumas, luares, cristais e neve. A imprecisão é buscada como recurso, e não evitada como defeito, ao contrário do que ocorre no Parnasianismo."
+      },
+      {
+        "title": "Cruz e Sousa e Alphonsus",
+        "content": "No Brasil, Cruz e Sousa é o nome maior, com poesia marcada pela angústia, pela busca de transcendência e pela experiência da discriminação racial, e Alphonsus de Guimaraens, com forte religiosidade e o tema da morte da amada. O Simbolismo brasileiro conviveu com o auge parnasiano, sem o mesmo prestígio imediato."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Confundir Simbolismo com Romantismo pelo subjetivismo ignora a diferença de procedimentos: sugestão e musicalidade contra expressão direta do sentimento. Outro deslize é tratar a imprecisão simbolista como falha. E esquecer que Simbolismo e Parnasianismo são contemporâneos, e não sucessivos."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que o Simbolismo prefere sugerir a nomear? Responda antes de conferir: porque busca captar estados subjetivos, o inconsciente e o inefável, que a nomeação direta empobreceria, e por isso investe em musicalidade, sinestesia e imagens vagas. Agora explique a sinestesia com exemplo: cruzamento de sensações, como em um som áspero ou uma cor quente."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que o Simbolismo prefere sugerir a nomear? Explique a sinestesia.",
+      "elements": [
+        [
+          "busca captar o subjetivo e o inefavel",
+          [
+            "subjetivo",
+            "inconsciente",
+            "inefavel"
+          ]
+        ],
+        [
+          "investe em musicalidade e imagens vagas",
+          [
+            "musicalidade",
+            "vaga",
+            "sugestao"
+          ]
+        ],
+        [
+          "a sinestesia cruza sensacoes de sentidos diferentes",
+          [
+            "sinestesia",
+            "sensacao",
+            "cruza"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Literatura",
+    "topic": "Teatro Brasileiro",
+    "sections": [
+      {
+        "title": "Formação",
+        "content": "O teatro brasileiro tem marcos no teatro de anchietano com função catequética, na comédia de costumes de Martins Pena no século XIX e no teatro de revista, popular e musical. A modernização começa com Vestido de Noiva, de Nelson Rodrigues, encenado em 1943, que rompe com o realismo cênico dominante."
+      },
+      {
+        "title": "Nelson Rodrigues",
+        "content": "Sua dramaturgia trabalha com três planos simultâneos, alucinação, memória e realidade, e com temas de desejo, culpa, moral hipócrita e tragédia familiar. Peças como Vestido de Noiva e Álbum de Família chocaram por expor tabus da família burguesa carioca e por sua linguagem direta e violenta."
+      },
+      {
+        "title": "Teatro e política",
+        "content": "Nos anos 1960, o Teatro de Arena e o Teatro Oficina fizeram do palco espaço de crítica social e política, com Gianfrancesco Guarnieri, Augusto Boal e José Celso Martinez Corrêa. Boal desenvolveu o Teatro do Oprimido, que transforma o espectador em participante, com alcance internacional na educação popular."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Reduzir Nelson Rodrigues a autor de escândalo ignora sua inovação formal com planos simultâneos. Outro deslize é confundir Teatro de Arena e Teatro Oficina, com projetos e estéticas distintos. E supor que o Teatro do Oprimido é apenas técnica de encenação, quando é método de intervenção social e educativa."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que Vestido de Noiva é marco do teatro moderno brasileiro? Responda antes de conferir: rompe com o realismo cênico ao articular três planos simultâneos, alucinação, memória e realidade, exigindo nova concepção de cenário, iluminação e interpretação. Agora explique o Teatro do Oprimido: método que transforma o espectador em participante ativo da cena."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que Vestido de Noiva é marco do teatro moderno? O que é o Teatro do Oprimido?",
+      "elements": [
+        [
+          "articula tres planos simultaneos",
+          [
+            "planos",
+            "alucinacao",
+            "memoria"
+          ]
+        ],
+        [
+          "rompe com o realismo cenico",
+          [
+            "realismo",
+            "rompe",
+            "cenico"
+          ]
+        ],
+        [
+          "o espectador se torna participante ativo",
+          [
+            "espectador",
+            "participante",
+            "boal"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Literatura",
+    "topic": "Texto Literário x Texto não Literário",
+    "sections": [
+      {
+        "title": "Função poética e plurissignificação",
+        "content": "O texto literário caracteriza-se pelo foco na própria linguagem: a forma importa tanto quanto o conteúdo. Predomina a conotação, e o sentido é plurissignificativo, admitindo mais de uma leitura sustentada. O texto não literário privilegia a clareza, a objetividade e a univocidade, para evitar ambiguidade."
+      },
+      {
+        "title": "Ficcionalidade",
+        "content": "O literário cria um mundo ficcional que não se avalia por verdadeiro ou falso, mas por coerência interna e força expressiva. O não literário assume compromisso referencial: uma notícia falsa é defeituosa como notícia, enquanto um romance não é defeituoso por narrar fatos que não ocorreram."
+      },
+      {
+        "title": "Fronteiras móveis",
+        "content": "A distinção não é absoluta. Crônicas jornalísticas, relatos de viagem, diários e reportagens literárias transitam entre os dois campos, e textos publicitários usam intensamente recursos poéticos. O critério é o predomínio, e não a exclusividade, e a análise deve mostrar quais marcas sustentam a classificação."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Classificar um texto como literário apenas por ser bonito ou emocionante é impreciso: o critério é o trabalho com a linguagem e a plurissignificação. Outro deslize é supor que texto literário não informa. E tratar a fronteira como rígida, ignorando gêneros híbridos como a crônica."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a ambiguidade é qualidade no literário e defeito no técnico? Responda antes de conferir: no literário ela amplia sentidos e convida à interpretação; no técnico compromete a função de informar com precisão, podendo gerar erro de compreensão. Agora explique por que um romance não é avaliado por veracidade: ele constrói um mundo ficcional, julgado por coerência e expressividade."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a ambiguidade é qualidade no literário e defeito no técnico? Por que um romance não se avalia por veracidade?",
+      "elements": [
+        [
+          "no literario amplia sentidos",
+          [
+            "amplia",
+            "sentido",
+            "interpretacao"
+          ]
+        ],
+        [
+          "no tecnico compromete a precisao",
+          [
+            "precisao",
+            "clareza",
+            "informar"
+          ]
+        ],
+        [
+          "o romance constroi um mundo ficcional",
+          [
+            "ficcional",
+            "coerencia",
+            "mundo"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Literatura",
+    "topic": "Trovadorismo e Humanismo",
+    "sections": [
+      {
+        "title": "Trovadorismo",
+        "content": "Primeira manifestação literária em língua portuguesa, no contexto medieval e feudal, com produção em cantigas destinadas ao canto. As líricas dividem-se em cantiga de amor, com eu lírico masculino em vassalagem amorosa à dama inacessível, e cantiga de amigo, com eu lírico feminino, ambiente rural e tom popular."
+      },
+      {
+        "title": "Cantigas satíricas",
+        "content": "As satíricas dividem-se em cantiga de escárnio, com crítica indireta e ironia, sem identificar o alvo, e cantiga de maldizer, com crítica direta, nome explícito e linguagem agressiva. Elas revelam tensões sociais da época e são fonte importante para entender o cotidiano medieval português."
+      },
+      {
+        "title": "Humanismo",
+        "content": "No período de transição, destacam-se a prosa historiográfica de Fernão Lopes, com atenção aos acontecimentos e ao povo, e o teatro de Gil Vicente, que satiriza tipos sociais e o clero, com forte função moralizante e alegórica, como no Auto da Barca do Inferno, obra recorrente em vestibulares."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Trocar cantiga de amor e de amigo pelo gênero do eu lírico é o erro mais frequente: na de amigo, quem fala é a mulher. Outro deslize é confundir escárnio com maldizer. E ler o teatro vicentino como comédia sem função crítica, quando a sátira tem finalidade moral e social."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Numa cantiga em que uma jovem lamenta a ausência do amado à beira de um rio, qual o tipo? Responda antes de conferir: cantiga de amigo, pelo eu lírico feminino e pelo ambiente natural popular. Agora diferencie escárnio de maldizer: crítica indireta e velada no primeiro, direta e nominal no segundo."
+      }
+    ],
+    "recall": {
+      "prompt": "Identifique o tipo de cantiga com eu lírico feminino e diferencie escárnio de maldizer.",
+      "elements": [
+        [
+          "cantiga de amigo pelo eu lirico feminino",
+          [
+            "amigo",
+            "feminino",
+            "mulher"
+          ]
+        ],
+        [
+          "ambiente natural e tom popular",
+          [
+            "natureza",
+            "rio",
+            "popular"
+          ]
+        ],
+        [
+          "escarnio e indireto e maldizer e direto",
+          [
+            "escarnio",
+            "maldizer",
+            "direto"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Literatura",
+    "topic": "Vanguardas Artísticas",
+    "sections": [
+      {
+        "title": "Ruptura e manifestos",
+        "content": "As vanguardas europeias do início do século XX romperam com a representação tradicional e se organizaram em torno de manifestos. Compartilham a recusa do passado, a experimentação formal, o gosto pela provocação e a aproximação entre arte e vida moderna, marcada por velocidade, máquina e cidade."
+      },
+      {
+        "title": "As principais correntes",
+        "content": "O Futurismo exalta a máquina, a velocidade e a guerra, com Marinetti. O Cubismo decompõe o objeto em planos simultâneos, com Picasso. O Expressionismo deforma para expressar angústia. O Dadaísmo nega a própria arte com o acaso e o absurdo. O Surrealismo explora o inconsciente, o sonho e a escrita automática."
+      },
+      {
+        "title": "Impacto no Brasil",
+        "content": "As vanguardas chegaram ao Brasil por artistas que estudaram na Europa, como Anita Malfatti, cuja exposição de 1917 provocou a crítica de Monteiro Lobato e mobilizou o grupo que faria a Semana de 22. Seus procedimentos foram apropriados e reelaborados em chave nacional, o que caracteriza o modernismo brasileiro."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Confundir Dadaísmo com Surrealismo é frequente: um nega a arte pelo absurdo, o outro investiga o inconsciente com método. Outro deslize é supor que o modernismo brasileiro apenas copiou as vanguardas. E tratar o Futurismo como neutro, ignorando sua adesão à violência e sua proximidade com o fascismo."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Diferencie Dadaísmo e Surrealismo. Responda antes de conferir: o Dadaísmo nega a arte e a lógica, valendo-se do acaso e do nonsense; o Surrealismo busca o inconsciente e o sonho como fonte de criação, com procedimentos como a escrita automática. Agora explique o papel da exposição de Anita Malfatti: provocou reação e catalisou o grupo que organizou a Semana de 22."
+      }
+    ],
+    "recall": {
+      "prompt": "Diferencie Dadaísmo de Surrealismo e explique o papel da exposição de Anita Malfatti.",
+      "elements": [
+        [
+          "o dadaismo nega a arte pelo acaso e absurdo",
+          [
+            "dada",
+            "acaso",
+            "absurdo"
+          ]
+        ],
+        [
+          "o surrealismo investiga o inconsciente e o sonho",
+          [
+            "surrealismo",
+            "inconsciente",
+            "sonho"
+          ]
+        ],
+        [
+          "a exposicao catalisou o grupo da Semana de 22",
+          [
+            "malfatti",
+            "1917",
+            "semana"
+          ]
+        ]
+      ]
+    }
+  },
+  {
     "subject": "Língua Inglesa",
     "topic": "Text Comprehension: Bacteria",
     "sections": [
