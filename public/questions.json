@@ -92233,26 +92233,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Matemática · questão 57 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "No plano cartesiano, a reta de equação 2x − 3y = 12 intercepta os eixos coordenados nos pontos A e B. O ponto médio do segmento AB tem coordenadas:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "(4; 4/3)"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "(3; 2)"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "(4; −4/3)"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "(3; −2)"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. Para achar os pontos de corte, anule uma coordenada de cada vez. Com y = 0, tem-se 2x = 12 e x = 6, logo A = (6, 0). Com x = 0, tem-se −3y = 12 e y = −4, logo B = (0, −4). O ponto médio é a média das coordenadas: ((6 + 0)/2; (0 − 4)/2) = (3; −2). O sinal negativo é o detalhe que separa a resposta da alternativa b — a reta cruza o eixo y abaixo da origem.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_057-p37.webp",
@@ -92269,26 +92269,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Matemática · questão 58 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "A área do triângulo OAB esboçado na figura é: O é a origem, A está sobre o eixo x, B está sobre o eixo y, e a reta AB é perpendicular ao segmento que liga a origem ao ponto (1, 2), o qual pertence a AB.",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "21/4"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "23/4"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "25/4"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "27/4"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. O ângulo reto na figura indica que o segmento da origem até (1, 2) é perpendicular à reta AB. Como esse segmento tem coeficiente angular 2, a reta AB tem coeficiente −1/2. Passando por (1, 2): y − 2 = −(x − 1)/2, ou y = −x/2 + 5/2. Daí B = (0; 5/2) e, fazendo y = 0, A = (5, 0). O triângulo é retângulo em O, com catetos sobre os eixos, de modo que a área é (1/2)·5·(5/2) = 25/4.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_058-p37.webp",
@@ -92421,26 +92421,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Matemática · questão 63 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "A figura exibe a planificação de um poliedro convexo, com quatro faces triangulares congruentes e quatro faces retangulares, mais uma face quadrada na base, em que são indicados os comprimentos a, b e c. A soma do número de vértices e de arestas desse poliedro é:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "28"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "25"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "20"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "16"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa b). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: b. A planificação descreve um prisma de base quadrada encimado por uma pirâmide, também de base quadrada — quatro retângulos formam o corpo, quatro triângulos formam o telhado e o quadrado fecha o fundo. Os vértices são os 4 da base, os 4 do topo do prisma e o ápice, num total de 9. As arestas são as 4 do quadrado da base, as 4 verticais, as 4 do quadrado superior e as 4 que sobem até o ápice, num total de 16. A soma é 25. Confira pela relação de Euler: 9 − 16 + 9 = 2, com as 9 faces da planificação.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_063-p41.webp",
@@ -92457,26 +92457,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Matemática · questão 64 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Se um tetraedro regular e um cubo têm áreas de superfície iguais, a razão entre o comprimento das arestas do tetraedro e o comprimento das arestas do cubo é igual a:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "√2 · √3"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "raiz quarta de 2 · √3"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "√2 · raiz quarta de 3"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "raiz quarta de 2 · raiz quarta de 3"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. O tetraedro regular de aresta a tem quatro faces triangulares equiláteras, com área total 4·(√3/4)a² = √3·a². O cubo de aresta L tem seis faces quadradas, com área 6L². Igualando, √3·a² = 6L², de onde a²/L² = 6/√3 = 2√3. Extraindo a raiz quadrada, a/L = √(2√3) = √2 · raiz quarta de 3. O passo delicado é a raiz de uma raiz: √(√3) é a raiz quarta de 3.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_064-p41.webp",
@@ -92493,26 +92493,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Matemática · questão 65 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Considere um paralelepípedo retângulo, cujas arestas têm comprimento 6 cm, 8 cm e 10 cm, e um triângulo cujos vértices são os centros (intersecção das diagonais) de três faces de dimensões distintas, duas a duas adjacentes. O perímetro P desse triângulo é tal que:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "P < 14 cm"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "14 cm < P < 16 cm"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "16 cm < P < 18 cm"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "P > 18 cm"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. Ponha o paralelepípedo com um vértice na origem e arestas 6, 8 e 10 sobre os eixos. Os centros de três faces duas a duas adjacentes ficam, por exemplo, em (3; 4; 10), (3; 0; 5) e (6; 4; 5). As distâncias entre eles saem do teorema de Pitágoras no espaço: √(16 + 25) = √41 ≈ 6,4; √(9 + 25) = √34 ≈ 5,8; e √(9 + 16) = 5. O perímetro é aproximadamente 17,2 cm, portanto entre 16 e 18. Repare que cada lado do triângulo é metade de uma diagonal de face, o que explica os valores relativamente pequenos.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_065-p42.webp",
@@ -92529,26 +92529,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Matemática · questão 67 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Um cilindro circular reto, cuja altura é igual ao diâmetro da base, está inscrito numa esfera. A razão entre os volumes da esfera e do cilindro é igual a:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "4√2/3"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "4/3"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "3√2/4"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "√2"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa a). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: a. Chame de r o raio da base; a altura é 2r. Num cilindro inscrito, o diâmetro da esfera é a diagonal do retângulo que gera o cilindro, de lados 2r e 2r, logo 2R = 2r√2 e R = r√2. O volume da esfera é (4/3)πR³ = (4/3)π·2√2·r³ = (8√2/3)πr³, e o do cilindro é πr²·2r = 2πr³. A razão vale (8√2/3)/2 = 4√2/3, valor que não depende de r — como sempre acontece quando os dois sólidos são semelhantes entre si.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_067-p43.webp",
@@ -92565,26 +92565,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Matemática · questão 68 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "Um cilindro circular reto, com raio da base e altura iguais a R, tem a mesma área de superfície total que uma esfera de raio:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "2R"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "√3·R"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "√2·R"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "R"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa d). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: d. A área total do cilindro é a soma das duas bases com a lateral: 2πR² + 2πR·R = 4πR², já que a altura também vale R. A área da esfera de raio r é 4πr². Igualando, 4πr² = 4πR², de onde r = R. É uma coincidência numérica elegante: um cilindro cuja altura iguala o raio tem exatamente a mesma superfície que a esfera de mesmo raio, embora os volumes sejam diferentes.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_068-p43.webp",
@@ -92601,26 +92601,26 @@
     "examSource": {
       "board": "UNICAMP"
     },
-    "prompt": "UNICAMP · Matemática · questão 70 da coletânea. O enunciado, os dados e as alternativas estão na imagem da página original, abaixo.",
+    "prompt": "A embalagem de certo produto alimentício, em formato de cilindro circular, será alterada para acomodar um novo rótulo com informações nutricionais mais completas. Mantendo o mesmo volume da embalagem, a sua área lateral precisa ser aumentada. Porém, por restrições de custo do material utilizado, este aumento da área lateral não deve ultrapassar 25%. Sejam r e h o raio e a altura da embalagem original, e R e H o raio e a altura da embalagem alterada. Nessas condições podemos afirmar que:",
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A da prova"
+        "text": "R/r ≥ 3/4 e H/h ≤ 16/9"
       },
       {
         "id": "b",
-        "text": "Alternativa B da prova"
+        "text": "R/r ≥ 9/16 e H/h ≤ 4/3"
       },
       {
         "id": "c",
-        "text": "Alternativa C da prova"
+        "text": "R/r ≥ 4/5 e H/h ≤ 25/16"
       },
       {
         "id": "d",
-        "text": "Alternativa D da prova"
+        "text": "R/r ≥ 16/25 e H/h ≤ 5/4"
       }
     ],
-    "explanation": "Gabarito oficial da UNICAMP: alternativa c). Esta questão depende da figura, da fórmula ou do texto-base que só existem na página original — por isso ela vem com a imagem da página, e não só com o texto.",
+    "explanation": "Gabarito: c. O volume constante dá πR²H = πr²h, isto é, H/h = r²/R². A restrição de custo dá 2πRH ≤ 1,25·2πrh, ou RH ≤ 1,25·rh. Substituindo H = h·r²/R² na desigualdade, obtém-se r²h/R ≤ 1,25·rh, de onde r/R ≤ 1,25 e portanto R/r ≥ 4/5. Elevando ao quadrado a relação entre alturas, H/h = (r/R)² ≤ (5/4)² = 25/16. As duas condições andam juntas: a embalagem pode afinar até quatro quintos do raio original, e nesse caso ela estica no máximo 25/16 da altura.",
     "originalPages": [
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_070-p44.webp",
