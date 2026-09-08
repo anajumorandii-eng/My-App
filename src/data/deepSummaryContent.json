@@ -27682,6 +27682,3196 @@
     }
   },
   {
+    "subject": "Redação",
+    "topic": "A Dissertação no Vestibular: Mitos e Verdades",
+    "sections": [
+      {
+        "title": "O que a banca pede",
+        "content": "A dissertação de vestibular é um texto argumentativo que defende um ponto de vista sobre um tema proposto, com base em argumentos consistentes e organização clara. Não é redação livre nem exercício de erudição: é resposta a uma proposta específica, avaliada por critérios divulgados previamente pela banca."
+      },
+      {
+        "title": "Mitos comuns",
+        "content": "Não é verdade que exista um número mágico de linhas por parágrafo, que seja proibido usar primeira pessoa em toda banca, que a citação de autor garanta nota alta ou que a introdução precise sempre começar por contexto histórico. Cada exigência precisa ser verificada no edital e na proposta de cada instituição."
+      },
+      {
+        "title": "Diferenças entre bancas",
+        "content": "O Enem avalia cinco competências e exige proposta de intervenção. A Fuvest cobra dissertação a partir de uma coletânea e valoriza a leitura dos textos motivadores. Unicamp propõe gêneros variados, com interlocutor e finalidade definidos. Escrever bem sem considerar essas diferenças custa pontos evitáveis."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Aplicar o modelo do Enem em prova que pede outro gênero é o erro estrutural mais caro. Outro deslize é decorar fórmulas de introdução sem adaptá-las ao tema. E confundir repertório com citação decorativa, colada ao texto sem relação com o argumento que se está desenvolvendo."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que estudar a banca é parte da preparação? Responda antes de conferir: cada instituição define gênero, extensão, critérios e exigências específicas, e escrever bem fora do que foi pedido gera perda de pontos independentemente da qualidade do texto. Agora diga uma diferença entre Enem e Unicamp: a proposta de intervenção obrigatória no primeiro e a definição de gênero e interlocutor no segundo."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que estudar a banca faz parte da preparação? Cite uma diferença entre Enem e Unicamp.",
+      "elements": [
+        [
+          "cada banca define genero e criterios proprios",
+          [
+            "banca",
+            "criterio",
+            "genero"
+          ]
+        ],
+        [
+          "escrever fora do pedido custa pontos",
+          [
+            "fora",
+            "perde",
+            "pontos"
+          ]
+        ],
+        [
+          "o Enem exige proposta de intervencao",
+          [
+            "intervencao",
+            "enem",
+            "unicamp"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Redação",
+    "topic": "Analisando Tema Abstrato de Redação",
+    "sections": [
+      {
+        "title": "Lendo a proposta",
+        "content": "Em temas abstratos, o enunciado costuma trazer um conceito e um verbo que orienta a discussão, como analisar os limites, discutir a importância, avaliar os desafios. Esse verbo define a operação exigida, e ignorá-lo produz texto que trata do conceito sem responder ao que foi pedido."
+      },
+      {
+        "title": "Estruturando",
+        "content": "Uma organização eficiente define o conceito na introdução com a tese; usa o primeiro parágrafo para mostrar como o conceito se manifesta socialmente, com exemplo; e o segundo para apontar tensão, limite ou contradição, com repertório filosófico ou sociológico que aprofunde a análise."
+      },
+      {
+        "title": "Conclusão",
+        "content": "Quando a proposta pede intervenção, ela precisa se ligar ao conceito discutido, propondo ação sobre suas manifestações concretas: educação, política pública, regulação, cultura. Quando não pede, a conclusão sintetiza a tensão analisada e afirma a posição, sem introduzir elemento novo."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Tratar o conceito apenas em sentido pessoal, como reflexão íntima, sem dimensão social, costuma reduzir a nota em compreensão. Outro deslize é ignorar o verbo do enunciado. E oferecer definição vaga na introdução, o que compromete todo o desenvolvimento subsequente."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que o verbo do enunciado importa em tema abstrato? Responda antes de conferir: ele define a operação exigida, como discutir limites ou avaliar desafios, e o texto precisa executar essa operação, não apenas comentar o conceito. Agora diga como conectar conceito abstrato e intervenção: propor ação sobre suas manifestações concretas na vida social."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que o verbo do enunciado importa? Como conectar conceito abstrato e intervenção?",
+      "elements": [
+        [
+          "o verbo define a operacao exigida",
+          [
+            "verbo",
+            "operacao",
+            "exigida"
+          ]
+        ],
+        [
+          "discutir limites e diferente de defender importancia",
+          [
+            "limite",
+            "importancia",
+            "discutir"
+          ]
+        ],
+        [
+          "propor acao sobre manifestacoes concretas",
+          [
+            "concreta",
+            "manifestacao",
+            "politica"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Redação",
+    "topic": "Analisando Tema de Redação: Cidadania e Poder",
+    "sections": [
+      {
+        "title": "Delimitação",
+        "content": "Num tema sobre participação política juvenil, o recorte pode estar no desinteresse, na desinformação, na ausência de canais acessíveis ou na descrença nas instituições. Identificar o fator central orienta a escolha dos argumentos e evita que o texto trate genericamente de política."
+      },
+      {
+        "title": "Argumentos possíveis",
+        "content": "Um argumento pode tratar da formação escolar insuficiente em educação política e da distância entre linguagem institucional e vocabulário cotidiano; outro pode tratar da concentração de canais de participação em formatos pouco acessíveis, com horários e locais que dificultam a presença de trabalhadores e estudantes."
+      },
+      {
+        "title": "Intervenção",
+        "content": "Agentes possíveis incluem Ministério da Educação, câmaras municipais, tribunais eleitorais e organizações da sociedade civil. Ações plausíveis vão de programas de educação política nas escolas a audiências públicas em horários alternativos, plataformas digitais de consulta e conselhos com assento juvenil."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Propor apenas que os jovens se interessem mais por política ignora as barreiras institucionais apontadas. Outro deslize é confundir participação com militância partidária. E apresentar solução que depende exclusivamente de mudança de mentalidade, sem intervenção institucional concreta."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Como tornar concreta uma proposta sobre participação juvenil? Responda antes de conferir: nomeie o agente, como a câmara municipal, a ação, como criar assentos juvenis em conselhos, o meio, como edital de seleção em escolas, a finalidade e um detalhamento, como periodicidade das reuniões. Agora diga por que apelar apenas ao interesse individual é frágil: ignora as barreiras institucionais identificadas nos argumentos."
+      }
+    ],
+    "recall": {
+      "prompt": "Como concretizar uma proposta sobre participação juvenil? Por que apelar ao interesse individual é frágil?",
+      "elements": [
+        [
+          "nomear agente, acao, meio e finalidade",
+          [
+            "agente",
+            "acao",
+            "meio"
+          ]
+        ],
+        [
+          "detalhar com periodicidade ou criterio",
+          [
+            "detalhamento",
+            "periodicidade",
+            "criterio"
+          ]
+        ],
+        [
+          "ignora as barreiras institucionais apontadas",
+          [
+            "barreira",
+            "institucional",
+            "estrutural"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Redação",
+    "topic": "Analisando Tema de Redação: Corpo, Saúde e Sexualidade",
+    "sections": [
+      {
+        "title": "Delimitação sensível",
+        "content": "Temas dessa área exigem cuidado com generalizações e com afirmações que possam ferir direitos. O texto deve tratar de estruturas sociais, políticas públicas e representações culturais, evitando julgamento moral de indivíduos e evitando qualquer proposta que viole os direitos humanos, o que anula a competência da intervenção."
+      },
+      {
+        "title": "Argumentos possíveis",
+        "content": "Numa proposta sobre saúde mental de jovens, um argumento pode tratar da pressão por desempenho e do uso intensivo de redes, e outro da insuficiência da rede pública de atendimento e da falta de profissionais nas escolas, articulando dimensão cultural e dimensão institucional do problema."
+      },
+      {
+        "title": "Intervenção",
+        "content": "Agentes úteis incluem Ministério da Saúde, secretarias, escolas, unidades básicas, conselhos profissionais e mídia. Ações incluem ampliação de atendimento psicológico na atenção básica, formação de professores para acolhimento, campanhas informativas e programas de educação em saúde, sempre com meio e finalidade."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Propor medidas que restrinjam direitos individuais, ainda que com boa intenção, invalida a proposta. Outro deslize é reduzir o problema ao uso de celular, sem considerar fatores estruturais. E adotar tom moralizante, que costuma ser lido como desrespeito à diversidade e à autonomia."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que uma proposta que restringe direitos zera a competência 5? Responda antes de conferir: a exigência de respeito aos direitos humanos é critério explícito, e propostas que violem dignidade, liberdade ou igualdade são desconsideradas mesmo quando bem estruturadas. Agora estruture dois argumentos para saúde mental juvenil: pressão por desempenho e insuficiência da rede de atendimento."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que uma proposta que restringe direitos zera a competência 5? Estruture dois argumentos sobre saúde mental juvenil.",
+      "elements": [
+        [
+          "o respeito aos direitos humanos e criterio explicito",
+          [
+            "direitos humanos",
+            "criterio",
+            "respeito"
+          ]
+        ],
+        [
+          "propostas que violam dignidade sao desconsideradas",
+          [
+            "dignidade",
+            "viola",
+            "desconsiderada"
+          ]
+        ],
+        [
+          "pressao por desempenho e rede de atendimento insuficiente",
+          [
+            "pressao",
+            "rede",
+            "atendimento"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Redação",
+    "topic": "Analisando Tema de Redação: Educação e Trabalho",
+    "sections": [
+      {
+        "title": "Delimitando o problema",
+        "content": "Num tema sobre evasão escolar, o problema não é a escola em geral, e sim os fatores que levam à saída antes da conclusão: necessidade de trabalhar, gravidez, distância, violência, desinteresse ligado a currículo, e falhas na permanência. Nomear o fator escolhido é o que dá foco ao argumento."
+      },
+      {
+        "title": "Estrutura de argumentos",
+        "content": "Uma combinação eficiente articula um argumento socioeconômico, mostrando como a necessidade de renda antecipa a entrada no trabalho, e um argumento institucional, sobre a incapacidade da escola de reter, com currículo e acolhimento inadequados. Cada um sustentado por conceito ou dado explicado."
+      },
+      {
+        "title": "Intervenção",
+        "content": "Agentes possíveis incluem Ministério da Educação, secretarias estaduais, escolas e conselhos tutelares. Ações plausíveis vão de programas de bolsa-permanência a contraturno, busca ativa de estudantes faltosos, flexibilização de horários e formação continuada de professores, sempre com meio e finalidade explícitos."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Propor conscientizar os alunos sobre a importância do estudo ignora as causas estruturais identificadas nos próprios argumentos, gerando incoerência entre desenvolvimento e conclusão. Outro deslize é culpar exclusivamente as famílias. E propor ação sem indicar quem executa e com que recurso."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que uma proposta de conscientização pode gerar incoerência? Responda antes de conferir: se o texto argumentou que a evasão decorre da necessidade de renda e de falhas institucionais, a solução precisa atuar sobre esses fatores, e não sobre a disposição individual do estudante. Agora cite dois agentes possíveis: secretarias estaduais de educação e conselhos tutelares."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que uma proposta de conscientização pode ser incoerente? Cite dois agentes possíveis.",
+      "elements": [
+        [
+          "a solucao deve atuar sobre as causas argumentadas",
+          [
+            "causa",
+            "coerencia",
+            "argumento"
+          ]
+        ],
+        [
+          "renda e falhas institucionais exigem outra medida",
+          [
+            "renda",
+            "institucional",
+            "estrutural"
+          ]
+        ],
+        [
+          "secretarias de educacao e conselhos tutelares",
+          [
+            "secretaria",
+            "conselho",
+            "ministerio"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Redação",
+    "topic": "Analisando Tema de Redação: Meio Ambiente",
+    "sections": [
+      {
+        "title": "Lendo a proposta",
+        "content": "Diante de uma proposta ambiental, identifique se o recorte é o problema, a solução ou o conflito entre interesses. Um tema sobre descarte de eletrônicos pede análise de consumo, obsolescência e logística reversa; um tema sobre crise hídrica pede gestão, desigualdade de acesso e uso agrícola."
+      },
+      {
+        "title": "Montando os argumentos",
+        "content": "Uma estrutura eficiente combina um argumento de causa estrutural, como o modelo de produção e consumo, e um argumento de consequência desigual, mostrando quem é mais afetado. Cada um recebe um repertório: um conceito para o primeiro, um dado ou caso brasileiro concreto para o segundo."
+      },
+      {
+        "title": "Intervenção",
+        "content": "A proposta de intervenção deve nomear agente compatível, como ministério, órgão ambiental, prefeitura, escola ou setor produtivo; ação específica; meio viável, como fiscalização, incentivo fiscal, campanha ou programa; finalidade ligada ao problema; e detalhamento concreto de um dos elementos."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Propor que a população se conscientize, sem agente nem meio, é a intervenção mais genérica e menos pontuada. Outro deslize é escolher agente incompatível com a ação proposta. E terminar o texto sem retomar o recorte específico, propondo solução para o eixo temático geral."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Monte a intervenção para o tema do descarte de resíduos eletrônicos. Responda antes de conferir: o Ministério do Meio Ambiente, em parceria com fabricantes, deve ampliar a logística reversa por meio de pontos de coleta obrigatórios em lojas, a fim de reduzir a contaminação do solo, com fiscalização e metas anuais de recolhimento. Agora identifique os cinco elementos nessa proposta."
+      }
+    ],
+    "recall": {
+      "prompt": "Monte uma proposta de intervenção ambiental e identifique seus cinco elementos.",
+      "elements": [
+        [
+          "agente compativel com a acao",
+          [
+            "agente",
+            "ministerio",
+            "orgao"
+          ]
+        ],
+        [
+          "acao, meio e finalidade explicitos",
+          [
+            "acao",
+            "meio",
+            "finalidade"
+          ]
+        ],
+        [
+          "detalhamento concreto de um elemento",
+          [
+            "detalhamento",
+            "meta",
+            "fiscalizacao"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Redação",
+    "topic": "Analisando Tema de Redação: Mídia e Sociedade",
+    "sections": [
+      {
+        "title": "Delimitação",
+        "content": "Num tema sobre desinformação, o recorte pode estar na velocidade de circulação, na ausência de educação midiática, no modelo de negócio das plataformas ou nos efeitos sobre saúde e eleições. Definir o eixo permite argumentar com profundidade em vez de listar problemas."
+      },
+      {
+        "title": "Argumentos possíveis",
+        "content": "Um argumento pode tratar da economia da atenção, mostrando como o modelo de negócio favorece conteúdo emocional e sensacionalista; outro pode tratar da formação escolar insuficiente para leitura crítica, mobilizando a competência de verificar fonte, data, autoria e contexto antes de compartilhar."
+      },
+      {
+        "title": "Intervenção",
+        "content": "Agentes possíveis são Ministério da Educação, escolas, agências de checagem, plataformas e órgãos reguladores. Ações incluem inclusão de educação midiática no currículo, formação de professores, rotulagem de conteúdo verificado e transparência de critérios algorítmicos, com meio e finalidade explícitos."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Propor remoção ampla de conteúdo sem critério esbarra em liberdade de expressão. Outro deslize é atribuir o problema apenas à ingenuidade dos usuários, ignorando o desenho das plataformas. E propor educação midiática sem indicar como ela entra no currículo e quem forma os professores."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Como estruturar uma intervenção sobre desinformação sem violar direitos? Responda antes de conferir: foque em educação midiática, transparência algorítmica e checagem, com agentes definidos e meios concretos, em vez de propor censura ou remoção indiscriminada de conteúdo. Agora cite quatro perguntas de verificação: quem publicou, quando, com base em qual fonte e se outros veículos confirmam."
+      }
+    ],
+    "recall": {
+      "prompt": "Como estruturar intervenção sobre desinformação sem violar direitos? Cite perguntas de verificação.",
+      "elements": [
+        [
+          "educacao midiatica e transparencia algoritmica",
+          [
+            "midiatica",
+            "transparencia",
+            "algoritmo"
+          ]
+        ],
+        [
+          "evitar censura e remocao indiscriminada",
+          [
+            "censura",
+            "remocao",
+            "liberdade"
+          ]
+        ],
+        [
+          "quem publicou, quando, com que fonte e se ha confirmacao",
+          [
+            "autoria",
+            "data",
+            "fonte"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Redação",
+    "topic": "Analisando Tema de Redação: Violência, Leis e Punição",
+    "sections": [
+      {
+        "title": "Delimitação",
+        "content": "Num tema sobre violência contra a mulher, o recorte pode estar na subnotificação, na rede de atendimento, na cultura machista ou na efetividade das medidas protetivas. Escolher um eixo e sustentá-lo é mais produtivo que tentar cobrir todos, o que produz texto superficial e repetitivo."
+      },
+      {
+        "title": "Argumentos possíveis",
+        "content": "Um argumento cultural pode tratar da naturalização da violência e do papel da socialização de gênero; um argumento institucional pode tratar da insuficiência de delegacias especializadas, do despreparo no atendimento e da demora processual, mostrando que a lei existe mas encontra obstáculos na aplicação."
+      },
+      {
+        "title": "Intervenção",
+        "content": "Agentes possíveis são o Poder Judiciário, secretarias de segurança e de direitos humanos, escolas e mídia. Ações incluem ampliação de delegacias especializadas, formação continuada de agentes, campanhas educativas e programas escolares de educação para relações de gênero, com meio e finalidade explicitados."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Propor endurecimento penal como única solução ignora a análise feita nos argumentos e frequentemente entra em conflito com o critério de direitos humanos. Outro deslize é atribuir a responsabilidade às vítimas. E propor solução que já existe sem indicar o que deve mudar em sua aplicação."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que propor apenas o aumento de penas costuma ser insuficiente? Responda antes de conferir: se os argumentos apontaram causas culturais e falhas de aplicação, a solução precisa atuar sobre educação, atendimento e efetividade processual, e não apenas sobre a duração da pena. Agora cite dois agentes possíveis: secretarias de segurança e escolas."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que aumentar penas costuma ser solução insuficiente? Cite dois agentes possíveis.",
+      "elements": [
+        [
+          "as causas apontadas sao culturais e institucionais",
+          [
+            "cultural",
+            "institucional",
+            "causa"
+          ]
+        ],
+        [
+          "a solucao deve atuar sobre educacao e aplicacao",
+          [
+            "educacao",
+            "aplicacao",
+            "atendimento"
+          ]
+        ],
+        [
+          "secretarias de seguranca e escolas",
+          [
+            "secretaria",
+            "escola",
+            "judiciario"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Redação",
+    "topic": "Analisando o Tema de Redação: Arte, Cultura e Relações Sociais",
+    "sections": [
+      {
+        "title": "Delimitação",
+        "content": "Num tema sobre acesso a bens culturais, o recorte pode estar na distribuição desigual de equipamentos, no custo, na formação escolar, no transporte ou na representatividade dos acervos. Escolher um eixo e sustentá-lo com dados e conceitos evita o texto genérico sobre a importância da cultura."
+      },
+      {
+        "title": "Argumentos possíveis",
+        "content": "Um argumento pode tratar da concentração geográfica de museus, teatros e bibliotecas em centros urbanos e bairros de renda alta; outro pode tratar da formação escolar, que raramente cria familiaridade com esses espaços, mobilizando capital cultural de Bourdieu para explicar a barreira simbólica de acesso."
+      },
+      {
+        "title": "Intervenção",
+        "content": "Agentes possíveis são Ministério da Cultura, secretarias municipais, escolas e pontos de cultura. Ações incluem programas de circulação cultural em periferias, gratuidade em dias específicos, transporte escolar para visitas, editais para artistas locais e formação de professores para mediação cultural."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Afirmar que basta querer para ter acesso ignora barreiras materiais e simbólicas. Outro deslize é propor apenas construção de equipamentos, sem tratar de manutenção, programação e formação de público. E tratar cultura como entretenimento, perdendo a dimensão de direito e de formação."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que construir um teatro pode não ampliar o acesso? Responda antes de conferir: sem programação adequada, transporte, gratuidade e formação de público, o equipamento pode permanecer subutilizado, já que a barreira é também simbólica e econômica, e não apenas de existência física. Agora explique a barreira simbólica com Bourdieu: falta de familiaridade com os códigos valorizados nesses espaços."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que construir um equipamento cultural pode não ampliar o acesso? Explique a barreira simbólica.",
+      "elements": [
+        [
+          "faltam programacao, transporte e formacao de publico",
+          [
+            "programacao",
+            "transporte",
+            "publico"
+          ]
+        ],
+        [
+          "a barreira e tambem simbolica e economica",
+          [
+            "simbolica",
+            "economica",
+            "barreira"
+          ]
+        ],
+        [
+          "falta familiaridade com os codigos valorizados",
+          [
+            "codigo",
+            "familiaridade",
+            "capital cultural"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Redação",
+    "topic": "Argumentação Quase-Lógica e Efeito de Verdade",
+    "sections": [
+      {
+        "title": "O que são argumentos quase-lógicos",
+        "content": "São argumentos que emprestam a aparência do raciocínio formal sem serem demonstrações lógicas: definição, comparação, relação de causa, reciprocidade, regra de justiça, transitividade. Produzem forte efeito de verdade porque parecem seguir necessariamente, mas dependem de premissas discutíveis."
+      },
+      {
+        "title": "Exemplos",
+        "content": "Se dois casos são semelhantes, devem receber o mesmo tratamento, aplicando a regra de justiça. Se a política A causou o efeito B em outro país, causará aqui, aplicando causalidade por analogia. Ambos são persuasivos, e ambos podem ser contestados apontando diferenças relevantes entre as situações."
+      },
+      {
+        "title": "Uso responsável",
+        "content": "O bom uso desses argumentos exige explicitar a premissa e reconhecer seus limites. Comparar países, por exemplo, é legítimo desde que se considerem diferenças de contexto. Argumentar assim aumenta a força persuasiva sem incorrer em falácia, e demonstra domínio do raciocínio argumentativo ao avaliador."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Tratar analogia como prova é a falha típica: a semelhança sugere, não demonstra. Outro deslize é generalizar a partir de um caso único. E usar relação de causa sem evidência, afirmando que um fenômeno causa outro apenas porque ocorrem juntos, o que confunde correlação com causalidade."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a analogia entre países precisa de cuidado? Responda antes de conferir: a semelhança em um aspecto não garante semelhança nos demais, e diferenças de contexto econômico, institucional e cultural podem inviabilizar a transposição da política comparada. Agora explique a regra de justiça: casos essencialmente semelhantes devem receber tratamento semelhante."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que comparar países exige cuidado? Explique a regra de justiça na argumentação.",
+      "elements": [
+        [
+          "a semelhanca em um aspecto nao garante nos demais",
+          [
+            "semelhanca",
+            "aspecto",
+            "garante"
+          ]
+        ],
+        [
+          "diferencas de contexto podem inviabilizar a transposicao",
+          [
+            "contexto",
+            "diferenca",
+            "transposicao"
+          ]
+        ],
+        [
+          "casos semelhantes devem ter tratamento semelhante",
+          [
+            "semelhante",
+            "tratamento",
+            "justica"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Redação",
+    "topic": "Argumentação e Coerência Externa",
+    "sections": [
+      {
+        "title": "O que é coerência externa",
+        "content": "Coerência externa é a compatibilidade entre o que o texto afirma e o conhecimento de mundo compartilhado. Erros factuais, dados inventados, atribuições incorretas e afirmações historicamente falsas comprometem a credibilidade do argumento, ainda que a estrutura interna do raciocínio esteja correta."
+      },
+      {
+        "title": "Precisão de repertório",
+        "content": "Atribuir uma obra ao autor errado, citar uma lei inexistente ou apresentar dado sem base compromete a competência que avalia a aplicação de conhecimento. Na dúvida, é preferível formular de modo mais geral e correto do que arriscar precisão falsa, que a banca identifica com facilidade."
+      },
+      {
+        "title": "Plausibilidade da proposta",
+        "content": "A intervenção também é avaliada por sua plausibilidade: propor ação fora da competência do agente indicado, ou medida inviável em qualquer cenário realista, reduz a nota. Conhecer minimamente quem faz o quê no Estado brasileiro é, portanto, parte da preparação para a redação."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Inventar dados percentuais para dar aparência de rigor é o erro mais arriscado. Outro deslize é atribuir a um autor uma frase que ele não escreveu. E propor que um agente municipal legisle sobre matéria federal, o que revela desconhecimento da estrutura institucional."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que é melhor citar sem número do que inventar um percentual? Responda antes de conferir: o dado falso compromete a credibilidade e pode ser identificado, enquanto a formulação geral e correta preserva o argumento sem risco factual. Agora explique por que a competência do agente importa: propor ação fora de suas atribuições torna a intervenção inviável."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que evitar dados inventados? Por que a competência do agente importa na intervenção?",
+      "elements": [
+        [
+          "o dado falso compromete a credibilidade",
+          [
+            "falso",
+            "credibilidade",
+            "identificado"
+          ]
+        ],
+        [
+          "e preferivel formulacao geral e correta",
+          [
+            "geral",
+            "correta",
+            "risco"
+          ]
+        ],
+        [
+          "acao fora das atribuicoes torna a proposta inviavel",
+          [
+            "atribuicao",
+            "inviavel",
+            "competencia"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Redação",
+    "topic": "Argumentação e Coerência Interna",
+    "sections": [
+      {
+        "title": "O que é coerência interna",
+        "content": "Coerência interna é a ausência de contradição entre as partes do próprio texto. Se a tese afirma que o problema é estrutural, os argumentos não podem tratá-lo como falha individual, e a conclusão não pode propor solução que ignore a estrutura apontada. O texto precisa sustentar uma linha única."
+      },
+      {
+        "title": "Onde a incoerência aparece",
+        "content": "Os pontos mais frequentes são a relação entre argumentos e tese, a relação entre desenvolvimento e proposta de intervenção, e a compatibilidade entre agentes e ações propostas. Uma proposta que atribui a solução ao indivíduo depois de argumentar sobre causas institucionais é o caso clássico."
+      },
+      {
+        "title": "Como controlar",
+        "content": "Ao terminar o texto, reler perguntando se cada parágrafo sustenta a mesma posição, se a conclusão decorre do que foi argumentado e se não há afirmação que contradiga outra. Esse controle final custa poucos minutos e evita perdas expressivas nas competências de argumentação e de intervenção."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Mudar de posição no meio do texto ao apresentar o argumento contrário, sem refutá-lo, gera contradição. Outro deslize é usar repertório que sustenta o oposto da tese. E propor intervenção que resolveria outro problema, distinto do que foi analisado nos parágrafos de desenvolvimento."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Como testar a coerência interna do seu texto? Responda antes de conferir: verifique se cada parágrafo sustenta a mesma tese, se a proposta decorre das causas apontadas e se nenhum trecho afirma o contrário de outro. Agora identifique a incoerência típica: argumentar causas estruturais e concluir com apelo à conscientização individual."
+      }
+    ],
+    "recall": {
+      "prompt": "Como testar a coerência interna? Qual a incoerência típica entre desenvolvimento e conclusão?",
+      "elements": [
+        [
+          "verificar se cada paragrafo sustenta a mesma tese",
+          [
+            "tese",
+            "sustenta",
+            "paragrafo"
+          ]
+        ],
+        [
+          "a proposta deve decorrer das causas apontadas",
+          [
+            "proposta",
+            "causa",
+            "decorre"
+          ]
+        ],
+        [
+          "argumentar estrutura e concluir com conscientizacao",
+          [
+            "estrutural",
+            "conscientizacao",
+            "individual"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Redação",
+    "topic": "Argumentação: Auditório Particular e Universal",
+    "sections": [
+      {
+        "title": "A noção de auditório",
+        "content": "Perelman distingue o auditório particular, formado por um grupo com valores compartilhados específicos, do auditório universal, composto por todos os seres racionais dispostos a examinar argumentos. Escrever para o auditório universal significa buscar razões que qualquer leitor razoável possa aceitar."
+      },
+      {
+        "title": "Efeitos na escrita",
+        "content": "Argumentar para o auditório universal implica evitar premissas que só um grupo aceita, explicitar o raciocínio em vez de supor consenso, e apoiar-se em dados verificáveis e valores amplamente compartilhados, como dignidade, igualdade e justiça. É o modo de argumentar esperado na redação de vestibular."
+      },
+      {
+        "title": "Adaptação ao gênero",
+        "content": "Quando a proposta define um interlocutor específico, como uma carta a uma autoridade, o auditório é particular, e a argumentação deve considerar seus valores, competências e possibilidades de ação. Reconhecer quem lê é parte da adequação ao gênero, e não concessão à retórica vazia."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Supor que o leitor compartilha sua premissa sem enunciá-la é a falha argumentativa mais comum. Outro deslize é apelar a valores de grupo restrito como se fossem universais. E confundir adaptação ao auditório com abandono da própria posição, quando se trata de escolher as razões mais aceitáveis."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que argumentar para o auditório universal exige explicitar premissas? Responda antes de conferir: sem compartilhar previamente os valores do autor, o leitor precisa acompanhar cada passo do raciocínio, o que obriga a enunciar aquilo que se está pressupondo. Agora diga quando o auditório é particular: quando a proposta define interlocutor específico, como em carta a uma autoridade."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que o auditório universal exige explicitar premissas? Quando o auditório é particular?",
+      "elements": [
+        [
+          "o leitor nao compartilha previamente os valores",
+          [
+            "compartilha",
+            "valores",
+            "previamente"
+          ]
+        ],
+        [
+          "e preciso enunciar o que se pressupoe",
+          [
+            "premissa",
+            "enunciar",
+            "pressuposto"
+          ]
+        ],
+        [
+          "quando a proposta define interlocutor especifico",
+          [
+            "interlocutor",
+            "carta",
+            "especifico"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Redação",
+    "topic": "Coesão no Texto Dissertativo: Análise de Problemas",
+    "sections": [
+      {
+        "title": "Problemas frequentes",
+        "content": "Os defeitos de coesão mais comuns são a repetição excessiva de termos, o uso de pronome sem referente claro, o conectivo inadequado à relação, a ausência de articulação entre parágrafos e o encadeamento de frases curtas sem ligação, que produz texto entrecortado."
+      },
+      {
+        "title": "Diagnóstico",
+        "content": "Um teste eficiente é ler apenas a primeira frase de cada parágrafo: se elas não se articulam, falta coesão entre parágrafos. Outro é procurar todos os pronomes e verificar seus referentes. E um terceiro é contar quantas vezes o mesmo conectivo aparece, sinal de pobreza de recursos."
+      },
+      {
+        "title": "Correção",
+        "content": "A correção passa por substituir repetições por sinônimos ou expressões nominais, ajustar conectivos à relação real, acrescentar articulação no início dos parágrafos e unir frases curtas por subordinação quando elas expressam relação lógica que a justaposição não deixa clara."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Acrescentar conectivos aleatoriamente para parecer coeso produz relações falsas e piora o texto. Outro deslize é substituir termos por sinônimos imprecisos, alterando o sentido. E confundir coesão com quantidade de conectivos, quando o critério é adequação e variedade em relação ao que o texto articula."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Como diagnosticar falta de coesão entre parágrafos? Responda antes de conferir: leia apenas a primeira frase de cada parágrafo em sequência e verifique se elas formam um encadeamento compreensível; se parecerem independentes, falta articulação. Agora diga por que acrescentar conectivos ao acaso piora o texto: cria relações lógicas que não correspondem ao conteúdo."
+      }
+    ],
+    "recall": {
+      "prompt": "Como diagnosticar falta de coesão entre parágrafos? Por que acrescentar conectivos ao acaso piora o texto?",
+      "elements": [
+        [
+          "ler a primeira frase de cada paragrafo em sequencia",
+          [
+            "primeira frase",
+            "sequencia",
+            "paragrafo"
+          ]
+        ],
+        [
+          "se parecerem independentes falta articulacao",
+          [
+            "independente",
+            "articulacao",
+            "encadeamento"
+          ]
+        ],
+        [
+          "cria relacoes logicas falsas",
+          [
+            "falsa",
+            "relacao",
+            "corresponde"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Redação",
+    "topic": "Conclusão por Síntese ou Retomada da Tese",
+    "sections": [
+      {
+        "title": "Função da conclusão",
+        "content": "A conclusão fecha o raciocínio, retomando a tese e mostrando aonde a argumentação chegou. Não é resumo mecânico nem repetição da introdução: é a formulação da tese enriquecida pelo percurso, agora sustentada pelos argumentos desenvolvidos ao longo do texto."
+      },
+      {
+        "title": "Síntese",
+        "content": "A síntese recupera brevemente os eixos discutidos, articulando-os, e não apenas listando-os. Uma frase que mostre a relação entre os dois argumentos costuma ser mais eficaz que duas frases repetindo cada um deles separadamente, porque demonstra compreensão do conjunto e não apenas memória do que foi escrito."
+      },
+      {
+        "title": "Retomada da tese",
+        "content": "A retomada reafirma a posição com formulação diferente da usada na introdução, evitando repetição literal. É o momento de dar à tese sua versão mais precisa, agora que os argumentos já a sustentaram, o que produz sensação de fechamento e de percurso concluído."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Introduzir argumento novo na conclusão quebra a estrutura e deixa a ideia sem desenvolvimento. Outro deslize é repetir a introdução com sinônimos. E terminar com frase de efeito genérica, do tipo cabe a todos refletir, que enfraquece o fechamento e não acrescenta nada ao raciocínio."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Qual a diferença entre síntese e repetição na conclusão? Responda antes de conferir: a síntese articula os argumentos mostrando sua relação e reformula a tese com precisão; a repetição apenas reenuncia o que já foi dito, sem acrescentar articulação. Agora diga o que a conclusão nunca deve fazer: introduzir argumento novo ou copiar a introdução."
+      }
+    ],
+    "recall": {
+      "prompt": "Diferencie síntese de repetição na conclusão e diga o que ela nunca deve fazer.",
+      "elements": [
+        [
+          "a sintese articula os argumentos e reformula a tese",
+          [
+            "articula",
+            "reformula",
+            "relacao"
+          ]
+        ],
+        [
+          "a repeticao apenas reenuncia o dito",
+          [
+            "repete",
+            "reenuncia",
+            "sinonimo"
+          ]
+        ],
+        [
+          "nao introduzir argumento novo nem copiar a introducao",
+          [
+            "novo",
+            "introducao",
+            "copiar"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Redação",
+    "topic": "Conclusão: Sumarização, Focalização e Expressividade",
+    "sections": [
+      {
+        "title": "Três estratégias",
+        "content": "A sumarização recupera os pontos discutidos de forma articulada. A focalização escolhe um aspecto e o destaca como o mais decisivo, dando ênfase. A expressividade fecha com formulação marcante, sem apelar a frases feitas, usando recursos como paralelismo, contraste ou imagem construída ao longo do texto."
+      },
+      {
+        "title": "Combinando",
+        "content": "As três podem ser combinadas: uma frase que sintetiza, outra que destaca o aspecto central e uma terceira que fecha com precisão. Quando há proposta de intervenção, ela ocupa o espaço maior do parágrafo, e a expressividade se concentra na frase final, sem prejudicar o detalhamento exigido."
+      },
+      {
+        "title": "Cuidados com o efeito",
+        "content": "Expressividade não é ornamento: deve reforçar o argumento. Uma imagem construída ao longo do texto e retomada no fechamento produz efeito de coerência; uma frase de efeito importada de outro contexto soa artificial. O critério é sempre se a formulação acrescenta sentido ao que foi defendido."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Sacrificar o detalhamento da intervenção para caber uma frase de efeito custa mais pontos do que ganha. Outro deslize é usar clichês como reflexão de todos nós. E terminar com pergunta, que enfraquece o fechamento e deixa a impressão de que a posição não foi assumida até o fim."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Como equilibrar expressividade e proposta de intervenção? Responda antes de conferir: garanta primeiro os cinco elementos da proposta com detalhamento e reserve apenas a frase final para o fechamento expressivo, sem comprometer a completude da intervenção. Agora diga por que terminar com pergunta enfraquece: sugere que a posição não foi assumida com firmeza."
+      }
+    ],
+    "recall": {
+      "prompt": "Como equilibrar expressividade e proposta de intervenção? Por que terminar com pergunta enfraquece?",
+      "elements": [
+        [
+          "garantir primeiro os elementos da proposta",
+          [
+            "elementos",
+            "proposta",
+            "detalhamento"
+          ]
+        ],
+        [
+          "reservar a frase final para o fechamento",
+          [
+            "frase final",
+            "fechamento",
+            "expressividade"
+          ]
+        ],
+        [
+          "a pergunta sugere posicao nao assumida",
+          [
+            "pergunta",
+            "posicao",
+            "enfraquece"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Redação",
+    "topic": "Diferentes Graus de Adequação à Proposta",
+    "sections": [
+      {
+        "title": "Os três níveis",
+        "content": "Diante de uma proposta, o texto pode estar plenamente adequado, quando desenvolve exatamente o recorte pedido; tangenciar, quando trata do eixo mais amplo sem enfrentar o recorte; ou fugir ao tema, quando trata de assunto distinto. As consequências vão da perda parcial de pontos à nota zero."
+      },
+      {
+        "title": "O que garante adequação",
+        "content": "A adequação se constrói em três momentos: na introdução, ao delimitar o tema com as palavras-chave do enunciado; nos parágrafos de desenvolvimento, ao manter cada argumento vinculado ao recorte; e na conclusão, ao propor intervenção sobre o problema específico e não sobre o tema geral."
+      },
+      {
+        "title": "Sinais de risco",
+        "content": "Se o texto poderia ter sido escrito para outro tema com pequenas trocas de palavras, há risco de tangenciamento. Se o recorte aparece apenas na introdução e desaparece nos demais parágrafos, também. Reler o texto perguntando onde está o recorte em cada parágrafo é um bom controle final."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Repetir as palavras do tema sem desenvolvê-las cria aparência de adequação sem substância. Outro deslize é tratar apenas uma parte do recorte quando o enunciado apresenta dois elementos articulados. E generalizar tanto o argumento que ele se aplicaria a qualquer tema social."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Como testar se seu texto tangencia o tema? Responda antes de conferir: verifique se cada parágrafo trata do recorte específico e se o texto continuaria válido caso o recorte fosse trocado; se continuar, houve tangenciamento. Agora diga o que fazer quando o tema tem dois elementos articulados: desenvolver a relação entre eles, e não apenas um deles."
+      }
+    ],
+    "recall": {
+      "prompt": "Como testar se o texto tangencia o tema? O que fazer quando o recorte articula dois elementos?",
+      "elements": [
+        [
+          "verificar se cada paragrafo trata do recorte",
+          [
+            "paragrafo",
+            "recorte",
+            "trata"
+          ]
+        ],
+        [
+          "se o texto serviria a outro tema houve tangenciamento",
+          [
+            "outro tema",
+            "serviria",
+            "tangenciamento"
+          ]
+        ],
+        [
+          "desenvolver a relacao entre os dois elementos",
+          [
+            "relacao",
+            "dois",
+            "articula"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Redação",
+    "topic": "Estrutura Clássica do Texto Dissertativo",
+    "sections": [
+      {
+        "title": "Introdução",
+        "content": "A introdução apresenta o tema, delimita o recorte e enuncia a tese, que é a posição que será defendida. Pode incluir uma contextualização breve, mas o essencial é que o leitor termine o parágrafo sabendo do que se trata e o que será sustentado. Introduções longas roubam espaço do desenvolvimento."
+      },
+      {
+        "title": "Desenvolvimento",
+        "content": "Cada parágrafo de desenvolvimento sustenta um argumento. A estrutura mais segura é tópico frasal com a ideia central, apresentação do repertório ou do dado, explicação da relação entre o repertório e o argumento, e fechamento retomando a tese. Dois parágrafos bem construídos bastam na maioria das propostas."
+      },
+      {
+        "title": "Conclusão",
+        "content": "A conclusão retoma a tese, sintetiza o percurso e, quando exigido, apresenta a proposta de intervenção com agente, ação, meio, finalidade e detalhamento. Não deve introduzir argumento novo nem repetir a introdução com outras palavras: sua função é fechar o raciocínio, mostrando aonde ele chegou."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Deixar a tese implícita, esperando que o leitor a deduza, custa pontos em compreensão e argumentação. Outro deslize é usar o parágrafo de desenvolvimento para acumular exemplos sem tópico frasal. E terminar com pergunta retórica, que enfraquece o fechamento em vez de reforçá-lo."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Qual a estrutura interna recomendada para um parágrafo de desenvolvimento? Responda antes de conferir: tópico frasal com a ideia central, repertório ou dado, explicação da relação com o argumento e fechamento que retoma a tese. Agora diga o que a conclusão não deve fazer: introduzir argumento novo ou apenas repetir a introdução."
+      }
+    ],
+    "recall": {
+      "prompt": "Qual a estrutura de um parágrafo de desenvolvimento? O que a conclusão não deve fazer?",
+      "elements": [
+        [
+          "topico frasal com a ideia central",
+          [
+            "topico frasal",
+            "ideia",
+            "central"
+          ]
+        ],
+        [
+          "repertorio explicado e fechamento com a tese",
+          [
+            "repertorio",
+            "explicacao",
+            "tese"
+          ]
+        ],
+        [
+          "a conclusao nao introduz argumento novo",
+          [
+            "novo",
+            "repetir",
+            "introducao"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Redação",
+    "topic": "Gêneros e sua Relação com a Estrutura do Texto",
+    "sections": [
+      {
+        "title": "Gênero determina estrutura",
+        "content": "Cada gênero tem estrutura, registro e interlocutor próprios. Uma carta aberta exige destinatário explícito, vocativo e apelo; um artigo de opinião pressupõe leitor de jornal e assinatura; um manifesto usa primeira pessoa do plural e tom de convocação; a dissertação escolar mantém impessoalidade e estrutura argumentativa clássica."
+      },
+      {
+        "title": "Bancas que variam o gênero",
+        "content": "A Unicamp é a banca mais associada à variação de gêneros, propondo cartas, relatos, artigos, discursos e textos com finalidade e público definidos. Nesses casos, ignorar o gênero é erro estrutural que não se compensa com boa argumentação, porque a proposta pede outra coisa."
+      },
+      {
+        "title": "Adaptação",
+        "content": "Argumentar bem é competência transferível: o que muda é a embalagem. Ao mudar de gênero, ajuste pessoa do discurso, grau de formalidade, presença de vocativo e despedida, e o modo de apresentar o repertório. A tese e os argumentos podem ser os mesmos; a forma de dirigir-se ao leitor, não."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Escrever dissertação padrão quando a proposta pede carta é o erro mais caro. Outro deslize é adotar o gênero na forma, com vocativo e despedida, mas manter linguagem inteiramente impessoal, sem construir interlocução. E esquecer a assinatura ou identificação exigida, quando prevista."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "O que muda ao converter uma dissertação em carta aberta? Responda antes de conferir: acrescentam-se vocativo, interlocução explícita e despedida, ajusta-se a pessoa do discurso e o tom passa a incluir apelo direto ao destinatário. Agora diga o que permanece: a tese, os argumentos e a organização lógica do raciocínio."
+      }
+    ],
+    "recall": {
+      "prompt": "O que muda ao converter uma dissertação em carta aberta? O que permanece?",
+      "elements": [
+        [
+          "acrescentam-se vocativo e interlocucao",
+          [
+            "vocativo",
+            "interlocucao",
+            "destinatario"
+          ]
+        ],
+        [
+          "ajusta-se pessoa do discurso e tom",
+          [
+            "pessoa",
+            "tom",
+            "formalidade"
+          ]
+        ],
+        [
+          "a tese e os argumentos permanecem",
+          [
+            "tese",
+            "argumento",
+            "logica"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Redação",
+    "topic": "Incrementando o Repertório: Arte, Cultura e Relações Sociais",
+    "sections": [
+      {
+        "title": "Conceitos-chave",
+        "content": "São produtivos indústria cultural de Adorno e Horkheimer, capital cultural de Bourdieu, patrimônio material e imaterial, apropriação cultural, hibridismo, memória e esquecimento, e a distinção entre cultura erudita, popular e de massa, que costuma ser cobrada em recortes sobre acesso e valorização."
+      },
+      {
+        "title": "Marcos e políticas",
+        "content": "Vale conhecer a Lei Rouanet e o financiamento da cultura, o Iphan e o tombamento, a Lei 10.639 sobre ensino de história e cultura afro-brasileira e africana, os pontos de cultura, o Sistema Nacional de Cultura e o debate sobre acesso a museus, bibliotecas e equipamentos culturais no país."
+      },
+      {
+        "title": "Recortes prováveis",
+        "content": "Aparecem valorização de manifestações populares, acesso a bens culturais, preservação do patrimônio, apagamento de memórias, papel da arte na educação, invisibilidade de artistas periféricos e o impacto das plataformas digitais sobre produção e circulação cultural."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Hierarquizar cultura erudita e popular reproduz o preconceito que o tema costuma pedir para problematizar. Outro deslize é confundir apropriação cultural com intercâmbio, sem considerar relações de poder. E tratar cultura como supérfluo, o que contraria seu estatuto de direito constitucional."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que hierarquizar cultura erudita e popular é problemático? Responda antes de conferir: as duas são produções legítimas de sentido, e a hierarquia reflete a valorização social desigual dos grupos que as produzem, não uma diferença intrínseca de valor estético. Agora diferencie patrimônio material e imaterial: bens físicos, num caso; saberes, festas, ofícios e formas de expressão, no outro."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que hierarquizar cultura erudita e popular é problemático? Diferencie patrimônio material e imaterial.",
+      "elements": [
+        [
+          "as duas sao producoes legitimas de sentido",
+          [
+            "legitima",
+            "producao",
+            "sentido"
+          ]
+        ],
+        [
+          "a hierarquia reflete valorizacao social desigual",
+          [
+            "desigual",
+            "social",
+            "valorizacao"
+          ]
+        ],
+        [
+          "o imaterial reune saberes, festas e oficios",
+          [
+            "imaterial",
+            "saber",
+            "festa"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Redação",
+    "topic": "Incrementando o Repertório: Cidadania e Poder",
+    "sections": [
+      {
+        "title": "Conceitos-chave",
+        "content": "São úteis as gerações de direitos de Marshall, cidadania regulada de José Murilo de Carvalho, esfera pública de Habermas, democracia representativa e participativa, contrato social em Rousseau e Locke, e a distinção entre igualdade formal e material, essencial para discutir políticas de equidade."
+      },
+      {
+        "title": "Marcos institucionais",
+        "content": "Vale conhecer a Constituição de 1988, os instrumentos de participação como plebiscito, referendo, iniciativa popular, conselhos e conferências, o Estatuto da Cidade, a Lei de Acesso à Informação e a estrutura federativa brasileira, que distribui competências entre União, estados e municípios."
+      },
+      {
+        "title": "Recortes prováveis",
+        "content": "Aparecem participação política de jovens, acesso à informação pública, representatividade e sub-representação de mulheres e pessoas negras na política, invisibilidade de grupos sociais, direito à cidade, e o papel das instituições na garantia de direitos, além de temas ligados à democracia e à desinformação."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Reduzir cidadania ao ato de votar empobrece a análise. Outro deslize é confundir Estado, governo e nação. E propor participação popular sem indicar canais institucionais concretos, o que torna a intervenção vaga e não pontuável no detalhamento."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "O que é cidadania regulada? Responda antes de conferir: modelo em que os direitos sociais foram vinculados à ocupação formal reconhecida pelo Estado, de modo que era plenamente cidadão quem tinha carteira assinada em profissão regulamentada. Agora cite três canais institucionais de participação: conselhos setoriais, conferências e iniciativa popular."
+      }
+    ],
+    "recall": {
+      "prompt": "O que é cidadania regulada? Cite canais institucionais de participação.",
+      "elements": [
+        [
+          "direitos vinculados a ocupacao formal",
+          [
+            "carteira",
+            "ocupacao",
+            "formal"
+          ]
+        ],
+        [
+          "nao alcancava toda a populacao",
+          [
+            "excluia",
+            "informal",
+            "todos"
+          ]
+        ],
+        [
+          "conselhos, conferencias e iniciativa popular",
+          [
+            "conselho",
+            "conferencia",
+            "iniciativa"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Redação",
+    "topic": "Incrementando o Repertório: Corpo, Saúde e Sexualidade",
+    "sections": [
+      {
+        "title": "Conceitos-chave",
+        "content": "Rendem bem os conceitos de determinantes sociais da saúde, biopoder e disciplina em Foucault, padrão estético e indústria cultural, saúde como direito na Constituição de 1988, integralidade do SUS, tabu e silenciamento, e a distinção entre sexo, gênero e orientação sexual, frequentemente exigida nesses recortes."
+      },
+      {
+        "title": "Dados e marcos",
+        "content": "São referências úteis a criação do SUS, a Lei Maria da Penha, a tipificação do feminicídio, políticas de saúde mental e a Reforma Psiquiátrica, campanhas de vacinação e seus índices, dados sobre transtornos de ansiedade e depressão, e a legislação sobre educação sexual e saúde na escola."
+      },
+      {
+        "title": "Recortes prováveis",
+        "content": "Aparecem saúde mental de jovens, padrões de beleza e imagem corporal, invisibilidade de doenças, tabu sobre sexualidade e educação sexual, acesso desigual à saúde, saúde da população negra e indígena, e o impacto das redes sociais sobre autoimagem e comportamento alimentar."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Tratar saúde apenas como responsabilidade individual ignora determinantes sociais como renda, moradia e acesso a serviços. Outro deslize é confundir gênero com orientação sexual. E abordar saúde mental como fraqueza pessoal, o que reproduz o estigma que o texto deveria problematizar."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "O que são determinantes sociais da saúde? Responda antes de conferir: condições de vida que afetam o estado de saúde, como renda, escolaridade, moradia, saneamento, alimentação e acesso a serviços, mostrando que adoecer não é apenas questão biológica ou de escolha individual. Agora diferencie gênero e orientação sexual: construção social de papéis, num caso; direção do desejo afetivo e sexual, no outro."
+      }
+    ],
+    "recall": {
+      "prompt": "O que são determinantes sociais da saúde? Diferencie gênero de orientação sexual.",
+      "elements": [
+        [
+          "condicoes de vida que afetam a saude",
+          [
+            "renda",
+            "moradia",
+            "saneamento"
+          ]
+        ],
+        [
+          "adoecer nao e so questao individual",
+          [
+            "individual",
+            "biologico",
+            "estrutural"
+          ]
+        ],
+        [
+          "genero e papel social e orientacao e direcao do desejo",
+          [
+            "genero",
+            "orientacao",
+            "desejo"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Redação",
+    "topic": "Incrementando o Repertório: Educação e Trabalho",
+    "sections": [
+      {
+        "title": "Conceitos-chave",
+        "content": "São úteis capital cultural de Bourdieu, para explicar como a origem social afeta o desempenho escolar; meritocracia e sua crítica; educação bancária e educação libertadora, de Paulo Freire; qualificação e requalificação profissional; e informalidade e precarização, para conectar escola e mercado de trabalho."
+      },
+      {
+        "title": "Dados e marcos",
+        "content": "Vale conhecer a Constituição de 1988 e a educação como direito, a LDB, o Fundeb, dados de evasão no ensino médio, indicadores de aprendizagem, a Lei do Estágio, e discussões sobre automação e futuro do trabalho, que conectam formação escolar às transformações produtivas."
+      },
+      {
+        "title": "Recortes prováveis",
+        "content": "Aparecem com frequência evasão escolar, desigualdade educacional, valorização docente, educação a distância, formação técnica, primeiro emprego, desemprego juvenil, informalidade e impacto da tecnologia sobre ocupações. Um conceito de Bourdieu e um de Freire, bem explicados, atendem à maioria desses recortes."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Explicar a desigualdade educacional apenas por esforço individual reproduz a crítica que a banca costuma esperar que se problematize. Outro deslize é citar Paulo Freire como slogan, sem explicar o conceito. E tratar educação e trabalho como temas independentes quando o recorte pede a articulação."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "O que é capital cultural e como ele explica desigualdade escolar? Responda antes de conferir: são recursos como repertório, domínio de códigos e familiaridade com a cultura valorizada, transmitidos pela família, que fazem estudantes chegarem à escola em condições desiguais. Agora diferencie educação bancária de libertadora em Paulo Freire: depósito de conteúdo contra construção dialógica do conhecimento."
+      }
+    ],
+    "recall": {
+      "prompt": "O que é capital cultural? Diferencie educação bancária e libertadora.",
+      "elements": [
+        [
+          "recursos culturais transmitidos pela familia",
+          [
+            "familia",
+            "repertorio",
+            "codigo"
+          ]
+        ],
+        [
+          "estudantes chegam a escola em condicoes desiguais",
+          [
+            "desigual",
+            "condicao",
+            "escola"
+          ]
+        ],
+        [
+          "a bancaria deposita conteudo e a libertadora dialoga",
+          [
+            "bancaria",
+            "dialogo",
+            "freire"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Redação",
+    "topic": "Incrementando o Repertório: Meio Ambiente",
+    "sections": [
+      {
+        "title": "Conceitos-chave",
+        "content": "Para temas ambientais, valem conceitos como desenvolvimento sustentável, externalidade negativa, tragédia dos comuns, justiça ambiental, pegada ecológica, responsabilidades comuns porém diferenciadas e economia circular. Cada um permite analisar o problema por um ângulo distinto e sustentar argumentos diferentes."
+      },
+      {
+        "title": "Marcos e dados",
+        "content": "São referências úteis o Acordo de Paris, os Objetivos de Desenvolvimento Sustentável, a Política Nacional de Resíduos Sólidos, o Código Florestal, os dados de desmatamento monitorados por satélite e os desastres de Mariana e Brumadinho, que articulam dimensão ambiental, social e de responsabilidade empresarial."
+      },
+      {
+        "title": "Recortes prováveis",
+        "content": "Os recortes costumam envolver resíduos e consumo, crise hídrica, desmatamento e fronteira agrícola, transição energética, poluição urbana, mudanças climáticas e populações atingidas. Preparar-se com dois conceitos e dois exemplos brasileiros cobre a maior parte desses recortes com margem de adaptação."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Reduzir a questão ambiental à responsabilidade individual, ignorando dimensões estruturais e empresariais, empobrece o argumento. Outro deslize é apresentar sustentabilidade como sinônimo de preservação intocada. E usar dados desatualizados ou imprecisos, o que fragiliza o texto perante a banca."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "O que significa justiça ambiental? Responda antes de conferir: o reconhecimento de que os danos ambientais atingem de forma desigual grupos sociais, recaindo mais sobre populações pobres, negras, indígenas e periféricas, o que exige políticas que considerem essa distribuição. Agora explique externalidade negativa: custo gerado por uma atividade e transferido à sociedade sem ser pago por quem o produz."
+      }
+    ],
+    "recall": {
+      "prompt": "O que é justiça ambiental? Explique externalidade negativa.",
+      "elements": [
+        [
+          "os danos atingem grupos de forma desigual",
+          [
+            "desigual",
+            "grupos",
+            "atinge"
+          ]
+        ],
+        [
+          "populacoes vulneraveis sao mais afetadas",
+          [
+            "pobre",
+            "periferica",
+            "indigena"
+          ]
+        ],
+        [
+          "externalidade e custo transferido a sociedade",
+          [
+            "custo",
+            "transferido",
+            "sociedade"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Redação",
+    "topic": "Incrementando o Repertório: Mídia e Sociedade",
+    "sections": [
+      {
+        "title": "Conceitos-chave",
+        "content": "Rendem indústria cultural, esfera pública, agenda-setting, bolha e câmara de eco, economia da atenção, desinformação e pós-verdade, além da distinção entre liberdade de expressão e responsabilidade sobre conteúdo, tema central nos debates sobre regulação de plataformas."
+      },
+      {
+        "title": "Marcos e dados",
+        "content": "São úteis o Marco Civil da Internet, a Lei Geral de Proteção de Dados, o debate sobre regulação de plataformas no Brasil e no exterior, dados de consumo de notícias por redes sociais, e casos de desinformação com efeitos em saúde pública e em processos eleitorais."
+      },
+      {
+        "title": "Recortes prováveis",
+        "content": "Aparecem desinformação e checagem, algoritmos e formação de opinião, privacidade e uso de dados, discurso de ódio, publicidade infantil, saúde mental e redes, e o papel da escola na formação para leitura crítica de mídias, tema que conecta este eixo ao de educação."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Confundir opinião divergente com desinformação é erro conceitual e político. Outro deslize é propor censura, o que conflita com direitos fundamentais. E tratar algoritmos como neutros, ignorando que embutem critérios definidos por quem os projeta e pelos dados que os alimentam."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Qual a diferença entre desinformação e opinião divergente? Responda antes de conferir: desinformação envolve conteúdo factualmente falso divulgado, muitas vezes deliberadamente; opinião divergente é interpretação distinta de fatos, protegida pela liberdade de expressão. Agora explique economia da atenção: modelo em que a receita depende do tempo de permanência, favorecendo conteúdos emocionalmente intensos."
+      }
+    ],
+    "recall": {
+      "prompt": "Diferencie desinformação de opinião divergente e explique a economia da atenção.",
+      "elements": [
+        [
+          "desinformacao envolve conteudo factualmente falso",
+          [
+            "falso",
+            "fato",
+            "desinformacao"
+          ]
+        ],
+        [
+          "opiniao divergente e interpretacao protegida",
+          [
+            "opiniao",
+            "interpretacao",
+            "liberdade"
+          ]
+        ],
+        [
+          "a receita depende do tempo de permanencia",
+          [
+            "atencao",
+            "engajamento",
+            "tempo"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Redação",
+    "topic": "Incrementando o Repertório: Temas Abstratos",
+    "sections": [
+      {
+        "title": "O que são temas abstratos",
+        "content": "São propostas centradas em conceitos, e não em problemas concretos imediatos: o valor do tempo, os limites da liberdade, o sentido do trabalho, a busca pela felicidade, o papel do erro. Exigem definição conceitual e uso de exemplos concretos para ancorar a discussão sem perder a densidade."
+      },
+      {
+        "title": "Repertório filosófico e literário",
+        "content": "Aqui rendem conceitos como liberdade positiva e negativa, autonomia kantiana, a caverna de Platão, o existencialismo sartriano, a sociedade do cansaço de Byung-Chul Han, a modernidade líquida de Bauman, além de obras literárias que tematizem a questão, desde que explicadas em sua relação com o argumento."
+      },
+      {
+        "title": "Como concretizar",
+        "content": "O risco do tema abstrato é o texto girar em torno de generalidades. O antídoto é ancorar: para cada afirmação conceitual, apresentar uma situação concreta que a ilustre, como um dado social, uma prática cotidiana ou um caso público, mostrando o conceito em funcionamento na experiência."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Encher o texto de frases de efeito sem desenvolvimento é o erro característico desses temas. Outro deslize é definir o conceito de dicionário e não avançar. E abandonar o conceito no meio do texto, tratando apenas de um exemplo concreto sem retomar a discussão proposta."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Como evitar que um tema abstrato produza texto vago? Responda antes de conferir: defina o conceito com precisão, sustente a definição com repertório e ancore cada afirmação num exemplo concreto, retomando em seguida a discussão conceitual. Agora diferencie liberdade negativa e positiva: ausência de impedimentos, num caso; condições efetivas de agir, no outro."
+      }
+    ],
+    "recall": {
+      "prompt": "Como evitar texto vago em tema abstrato? Diferencie liberdade negativa e positiva.",
+      "elements": [
+        [
+          "definir o conceito e ancorar em exemplos",
+          [
+            "definir",
+            "exemplo",
+            "ancorar"
+          ]
+        ],
+        [
+          "retomar a discussao conceitual apos o exemplo",
+          [
+            "retomar",
+            "conceito",
+            "discussao"
+          ]
+        ],
+        [
+          "negativa e ausencia de impedimento e positiva e condicao de agir",
+          [
+            "impedimento",
+            "condicao",
+            "agir"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Redação",
+    "topic": "Incrementando o Repertório: Violência, Leis e Punição",
+    "sections": [
+      {
+        "title": "Conceitos-chave",
+        "content": "São produtivos os conceitos de violência estrutural, seletividade penal, encarceramento em massa, função da pena entre retribuição e ressocialização, cultura da violência, e a distinção entre segurança pública e política de segurança, que separa reação imediata de estratégia de longo prazo."
+      },
+      {
+        "title": "Dados e marcos",
+        "content": "Referências úteis incluem o Estatuto da Criança e do Adolescente, a Lei Maria da Penha, a Lei de Execução Penal, dados do Anuário Brasileiro de Segurança Pública, o perfil da população carcerária brasileira, a terceira maior do mundo, e o debate sobre redução da maioridade penal."
+      },
+      {
+        "title": "Recortes prováveis",
+        "content": "Aparecem violência contra a mulher, violência urbana, letalidade policial, sistema prisional e reincidência, violência nas escolas, bullying e cyberbullying, e violência contra grupos específicos, como pessoas LGBTQIA+, população negra, indígenas, idosos e pessoas com deficiência."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Defender soluções punitivistas extremas costuma esbarrar no critério de direitos humanos. Outro deslize é confundir dado de criminalidade com dado de encarceramento. E tratar a violência como fenômeno sem causas sociais, o que impede a construção de argumento consistente e de intervenção coerente."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "O que é seletividade penal? Responda antes de conferir: a tendência do sistema de justiça a incidir de forma desigual sobre determinados grupos sociais, sobretudo jovens negros e pobres, tanto na abordagem policial quanto na condenação. Agora explique a tensão entre retribuição e ressocialização: punir pelo que se fez, num caso; preparar para o retorno à sociedade, no outro."
+      }
+    ],
+    "recall": {
+      "prompt": "O que é seletividade penal? Explique a tensão entre retribuição e ressocialização.",
+      "elements": [
+        [
+          "o sistema incide de forma desigual sobre grupos",
+          [
+            "desigual",
+            "grupo",
+            "seletividade"
+          ]
+        ],
+        [
+          "jovens negros e pobres sao mais atingidos",
+          [
+            "negro",
+            "pobre",
+            "jovem"
+          ]
+        ],
+        [
+          "retribuicao pune e ressocializacao prepara o retorno",
+          [
+            "retribuicao",
+            "ressocializacao",
+            "pena"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Redação",
+    "topic": "Lendo a Coletânea: a Apreensão de Sentidos I",
+    "sections": [
+      {
+        "title": "Para que serve a coletânea",
+        "content": "Os textos motivadores delimitam o recorte, oferecem dados e apresentam pontos de vista sobre o tema. Servem para orientar a compreensão, não para serem copiados. A leitura deve identificar o que cada texto afirma, sob que perspectiva e qual aspecto do problema ele ilumina."
+      },
+      {
+        "title": "Leitura ativa",
+        "content": "O procedimento eficiente é ler cada texto perguntando: qual é o assunto, qual a posição do autor, que dado ou conceito ele traz e como se relaciona com os demais textos. Anotar palavras-chave à margem cria um repertório imediato e evita que a leitura seja apenas passiva."
+      },
+      {
+        "title": "Convergência e divergência",
+        "content": "Os textos raramente dizem a mesma coisa. Identificar convergências ajuda a delimitar o consenso; identificar divergências revela o ponto em disputa, que costuma ser justamente onde a tese pode se posicionar. Perceber essa tensão é o que transforma a coletânea em ferramenta argumentativa."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Copiar trechos da coletânea é penalizado como cópia e reduz o texto autoral. Outro deslize é ignorar completamente os textos e escrever a partir de conhecimento prévio, perdendo a delimitação do recorte. E supor que a coletânea contém a tese que a banca espera, quando ela apresenta perspectivas."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Que perguntas fazer diante de cada texto motivador? Responda antes de conferir: qual é o assunto, qual a posição, que dado ou conceito traz e como dialoga com os outros textos. Agora explique por que copiar a coletânea prejudica: trechos copiados são desconsiderados e revelam ausência de elaboração autoral."
+      }
+    ],
+    "recall": {
+      "prompt": "Que perguntas fazer diante de cada texto motivador? Por que copiar a coletânea prejudica?",
+      "elements": [
+        [
+          "assunto, posicao e dado de cada texto",
+          [
+            "assunto",
+            "posicao",
+            "dado"
+          ]
+        ],
+        [
+          "como cada texto dialoga com os outros",
+          [
+            "dialoga",
+            "relacao",
+            "conjunto"
+          ]
+        ],
+        [
+          "copia e desconsiderada e indica falta de autoria",
+          [
+            "copia",
+            "desconsiderada",
+            "autoral"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Redação",
+    "topic": "Lendo a Coletânea: a Apreensão de Sentidos II",
+    "sections": [
+      {
+        "title": "Textos não verbais na coletânea",
+        "content": "Gráficos, tabelas, charges e fotografias exigem leitura específica. No gráfico, identifique o que está em cada eixo, a unidade, o período e a tendência. Na charge, o alvo da crítica e o recurso de humor. Na fotografia, o enquadramento e o que ele destaca ou omite."
+      },
+      {
+        "title": "Dados sem distorção",
+        "content": "Ao usar um dado da coletânea, cite a grandeza correta e a base de comparação. Confundir porcentagem com número absoluto, ou tomar variação como valor total, produz erro factual dentro do argumento. Também é preciso indicar a fonte de forma breve, sem transcrever o texto motivador integralmente."
+      },
+      {
+        "title": "Da coletânea ao argumento",
+        "content": "A coletânea fornece matéria-prima; o argumento é seu. O caminho é extrair o dado ou a ideia, formulá-lo com palavras próprias e explicitar o que ele demonstra em relação à tese. Assim o texto usa a coletânea sem depender dela nem se limitar ao que ela já diz."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Ler o gráfico apenas pelo título, sem observar eixos e período, leva a afirmações erradas. Outro deslize é interpretar charge como se fosse a posição da banca. E parafrasear a coletânea inteira, transformando a redação em resumo dos textos motivadores em vez de argumentação própria."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Como usar corretamente um dado da coletânea? Responda antes de conferir: reformule com palavras próprias, mantenha a grandeza e a base de comparação corretas, indique brevemente a fonte e explique o que aquele dado demonstra em relação ao seu argumento. Agora diga o que observar num gráfico: eixos, unidade, período e tendência."
+      }
+    ],
+    "recall": {
+      "prompt": "Como usar corretamente um dado da coletânea? O que observar num gráfico?",
+      "elements": [
+        [
+          "reformular com palavras proprias e manter a grandeza",
+          [
+            "reformular",
+            "grandeza",
+            "propria"
+          ]
+        ],
+        [
+          "explicar o que o dado demonstra",
+          [
+            "demonstra",
+            "argumento",
+            "relacao"
+          ]
+        ],
+        [
+          "eixos, unidade, periodo e tendencia",
+          [
+            "eixo",
+            "unidade",
+            "periodo"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Redação",
+    "topic": "Lendo a Coletânea: a Compreensão e o Texto Autoral I",
+    "sections": [
+      {
+        "title": "O limite entre uso e cópia",
+        "content": "Usar a coletânea é reformular ideias e dados, integrando-os ao próprio raciocínio. Copiar é transcrever trechos, ainda que com pequenas alterações. A avaliação desconta os trechos copiados na contagem do texto e penaliza a competência de compreensão, além de reduzir o espaço da argumentação própria."
+      },
+      {
+        "title": "Como reformular",
+        "content": "Reformular exige compreender antes de escrever: leia, feche o texto e escreva a ideia com suas palavras, mudando a estrutura da frase e não apenas os sinônimos. Se a formulação original for imprescindível, use aspas e atribua a fonte, mas com parcimônia e sempre acompanhada de comentário próprio."
+      },
+      {
+        "title": "Autoria e posicionamento",
+        "content": "Texto autoral não significa opinião sem base: significa que a seleção, a organização e a interpretação são do candidato. A autoria aparece na tese assumida, na escolha dos argumentos, na articulação entre repertório e problema, e no modo como o texto conduz o leitor de um ponto a outro."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Trocar apenas algumas palavras do texto motivador continua sendo cópia. Outro deslize é escrever texto inteiramente genérico para evitar a coletânea, o que enfraquece a adequação ao recorte. E confundir autoria com informalidade ou com uso de primeira pessoa, que são questões de registro."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Como saber se você reformulou ou copiou? Responda antes de conferir: se a estrutura da frase original permanece e apenas palavras foram trocadas, é cópia; a reformulação parte da compreensão e reconstrói a formulação. Agora explique onde aparece a autoria num texto dissertativo: na tese, na seleção dos argumentos e na articulação entre eles."
+      }
+    ],
+    "recall": {
+      "prompt": "Como distinguir reformulação de cópia? Onde aparece a autoria num texto dissertativo?",
+      "elements": [
+        [
+          "se a estrutura da frase permanece e cópia",
+          [
+            "estrutura",
+            "frase",
+            "sinonimo"
+          ]
+        ],
+        [
+          "reformular parte da compreensao",
+          [
+            "compreensao",
+            "reconstruir",
+            "proprias"
+          ]
+        ],
+        [
+          "a autoria esta na tese e na articulacao dos argumentos",
+          [
+            "tese",
+            "selecao",
+            "articulacao"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Redação",
+    "topic": "Lendo a Coletânea: a Compreensão e o Texto Autoral II",
+    "sections": [
+      {
+        "title": "Diálogo crítico com a coletânea",
+        "content": "Um texto maduro não apenas usa a coletânea: dialoga com ela. É possível concordar com um texto motivador e apontar seu limite, contrapor dois deles, ou usar um dado para sustentar leitura diferente da sugerida. Esse movimento demonstra compreensão e produz autoria evidente."
+      },
+      {
+        "title": "Repertório externo",
+        "content": "A coletânea não esgota o que pode ser mobilizado. Trazer repertório externo pertinente, de outras áreas do conhecimento, amplia a análise e é valorizado. O cuidado é que o repertório externo se articule ao recorte, e não substitua a discussão do tema por exposição de conteúdo."
+      },
+      {
+        "title": "Equilíbrio",
+        "content": "O texto ideal combina compreensão da proposta, uso pertinente da coletânea e repertório próprio, sem depender exclusivamente de nenhum deles. Na prática, isso significa que cada parágrafo de desenvolvimento tenha ao menos um elemento externo bem explicado e mantenha o vínculo com o recorte proposto."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Contrapor textos motivadores sem compreendê-los gera contradição interna. Outro deslize é usar repertório externo de área distante sem construir a ponte com o tema. E acreditar que quantidade de repertório equivale a qualidade, quando a explicação da relação é o que efetivamente pontua."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Como dialogar criticamente com a coletânea? Responda antes de conferir: apresente a ideia do texto motivador, aponte seu alcance ou limite e mostre como sua tese se posiciona diante dela, em vez de apenas reproduzir a informação. Agora explique o cuidado com repertório externo: ele precisa ser articulado ao recorte, e não exposto isoladamente."
+      }
+    ],
+    "recall": {
+      "prompt": "Como dialogar criticamente com a coletânea? Qual o cuidado com repertório externo?",
+      "elements": [
+        [
+          "apresentar a ideia e apontar alcance ou limite",
+          [
+            "limite",
+            "alcance",
+            "apontar"
+          ]
+        ],
+        [
+          "mostrar como a tese se posiciona diante dela",
+          [
+            "tese",
+            "posiciona",
+            "diante"
+          ]
+        ],
+        [
+          "o repertorio externo precisa ser articulado ao recorte",
+          [
+            "articular",
+            "recorte",
+            "ponte"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Redação",
+    "topic": "O que se Avalia na Dissertação: Competências e Habilidades",
+    "sections": [
+      {
+        "title": "As cinco competências do Enem",
+        "content": "A primeira avalia o domínio da norma-padrão; a segunda, a compreensão da proposta e a aplicação de conhecimentos de várias áreas dentro do gênero dissertativo-argumentativo; a terceira, a seleção e organização de argumentos em defesa de um ponto de vista; a quarta, os mecanismos de coesão; e a quinta, a proposta de intervenção."
+      },
+      {
+        "title": "Como as notas se compõem",
+        "content": "Cada competência vale de 0 a 200, totalizando 1000. Os níveis são definidos por descritores, e a diferença entre 120 e 160 numa competência costuma estar em detalhes concretos: articulação explícita entre argumento e tese, variedade de conectivos, ou detalhamento da proposta de intervenção."
+      },
+      {
+        "title": "O que separa as notas altas",
+        "content": "Textos de nota máxima não são os mais bonitos, e sim os mais consistentes: tese clara, dois argumentos desenvolvidos com repertório pertinente e explicado, progressão sem repetição, coesão variada e proposta completa. A regularidade entre as competências importa mais que o brilho num único trecho."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Concentrar esforço apenas na gramática, ignorando argumentação e coesão, limita a nota. Outro deslize é apresentar repertório sem explicar sua relação com o argumento, o que não conta como aplicação de conhecimento. E deixar a proposta de intervenção genérica, sem agente, ação, meio, finalidade e detalhamento."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Quais são os cinco elementos de uma proposta de intervenção completa no Enem? Responda antes de conferir: agente, ação, meio ou modo, finalidade e detalhamento de um desses elementos. Agora explique por que citar um autor sem explicar não garante pontos: a competência avalia a aplicação do conhecimento ao argumento, e não a menção isolada."
+      }
+    ],
+    "recall": {
+      "prompt": "Quais são os elementos da proposta de intervenção? Por que citar um autor sem explicar não pontua?",
+      "elements": [
+        [
+          "agente, acao, meio, finalidade e detalhamento",
+          [
+            "agente",
+            "acao",
+            "finalidade"
+          ]
+        ],
+        [
+          "o detalhamento e obrigatorio em um dos elementos",
+          [
+            "detalhamento",
+            "um",
+            "elemento"
+          ]
+        ],
+        [
+          "o repertorio precisa ser aplicado ao argumento",
+          [
+            "aplicar",
+            "relacao",
+            "argumento"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Redação",
+    "topic": "Organizando as Ideias: Brainstorm e Mind Maps",
+    "sections": [
+      {
+        "title": "Antes de escrever",
+        "content": "Começar a redação sem planejamento é a principal causa de textos que se repetem ou perdem o rumo. A etapa de organização deve consumir alguns minutos e produzir três decisões: qual é a tese, quais são os dois ou três argumentos e em que ordem eles serão apresentados."
+      },
+      {
+        "title": "Brainstorm dirigido",
+        "content": "O brainstorm funciona melhor quando orientado por perguntas: quais causas explicam o problema, quais consequências ele produz, quem são os atores envolvidos, que exemplos concretos existem e que áreas do conhecimento ajudam a analisá-lo. Listar respostas rápidas gera material a ser selecionado depois."
+      },
+      {
+        "title": "Mapa mental e seleção",
+        "content": "O mapa mental organiza o material em torno do tema central, com ramificações por eixo de análise. Feito isso, selecione: nem tudo o que veio à mente entra no texto. Escolha os dois argumentos mais fortes, aqueles para os quais você tem repertório e conseguirá desenvolver com profundidade."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Tentar usar todas as ideias produz parágrafos superficiais. Outro deslize é planejar apenas os argumentos e esquecer a conclusão, o que gera desfecho apressado. E confundir planejar com escrever um rascunho completo, que consome tempo demais numa prova cronometrada."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Que perguntas orientam um bom brainstorm? Responda antes de conferir: causas, consequências, atores envolvidos, exemplos concretos e áreas do conhecimento capazes de iluminar o tema. Agora explique por que selecionar é tão importante quanto gerar ideias: dois argumentos bem desenvolvidos valem mais que quatro apenas mencionados."
+      }
+    ],
+    "recall": {
+      "prompt": "Que perguntas orientam o brainstorm? Por que selecionar importa tanto quanto gerar ideias?",
+      "elements": [
+        [
+          "causas, consequencias e atores envolvidos",
+          [
+            "causa",
+            "consequencia",
+            "ator"
+          ]
+        ],
+        [
+          "exemplos concretos e areas do conhecimento",
+          [
+            "exemplo",
+            "area",
+            "conhecimento"
+          ]
+        ],
+        [
+          "dois argumentos desenvolvidos valem mais que quatro citados",
+          [
+            "dois",
+            "desenvolvido",
+            "profundidade"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Redação",
+    "topic": "Os Direitos Humanos de 1ª Geração: Direitos Individuais",
+    "sections": [
+      {
+        "title": "O que são",
+        "content": "Os direitos de primeira geração são os civis e políticos, afirmados sobretudo a partir das revoluções liberais dos séculos XVIII e XIX. Incluem vida, liberdade, propriedade, igualdade perante a lei, liberdade de expressão, de religião, de reunião, devido processo legal e participação política."
+      },
+      {
+        "title": "Caráter negativo",
+        "content": "São chamados de direitos de defesa porque exigem sobretudo abstenção do Estado: não prender arbitrariamente, não censurar, não interferir na consciência. Isso não significa que sejam gratuitos: garantir devido processo e eleições exige estrutura, orçamento e instituições funcionando."
+      },
+      {
+        "title": "Uso em redação",
+        "content": "Servem para fundamentar argumentos sobre liberdade de expressão, privacidade, censura, prisões, direito de manifestação e igualdade formal. Também sustentam a crítica a propostas de intervenção que violem garantias individuais, ponto essencial para não perder a competência da proposta."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Tratar direitos de primeira geração como absolutos e ilimitados ignora que eles se limitam mutuamente, como liberdade de expressão e dignidade. Outro deslize é confundi-los com os sociais. E supor que direitos de defesa não custam nada ao Estado, quando sua garantia exige instituições."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que os direitos de primeira geração são chamados de negativos? Responda antes de conferir: porque exigem principalmente que o Estado se abstenha de agir contra o indivíduo, garantindo liberdades por não interferência, embora sua efetivação demande instituições e recursos. Agora cite três exemplos: liberdade de expressão, devido processo legal e liberdade de religião."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que os direitos de primeira geração são chamados de negativos? Cite três exemplos.",
+      "elements": [
+        [
+          "exigem abstencao do Estado",
+          [
+            "abstencao",
+            "nao interferir",
+            "defesa"
+          ]
+        ],
+        [
+          "garantem liberdades por nao interferencia",
+          [
+            "liberdade",
+            "interferencia",
+            "individual"
+          ]
+        ],
+        [
+          "expressao, devido processo e religiao",
+          [
+            "expressao",
+            "processo",
+            "religiao"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Redação",
+    "topic": "Os Direitos Humanos de 2ª e 3ª Geração: Direitos Sociais, Coletivos e Difusos",
+    "sections": [
+      {
+        "title": "Segunda geração",
+        "content": "São os direitos sociais, econômicos e culturais, afirmados a partir do século XX com as constituições mexicana de 1917 e de Weimar de 1919. Incluem educação, saúde, trabalho, moradia, previdência e cultura, e exigem prestação positiva do Estado, com políticas públicas e orçamento."
+      },
+      {
+        "title": "Terceira geração",
+        "content": "São os direitos coletivos e difusos, cujo titular não é o indivíduo isolado, mas a coletividade: meio ambiente equilibrado, paz, desenvolvimento, autodeterminação dos povos e patrimônio comum da humanidade. Sua defesa exige instrumentos coletivos, como ação civil pública e políticas internacionais."
+      },
+      {
+        "title": "Uso em redação",
+        "content": "Direitos de segunda geração fundamentam argumentos e propostas sobre acesso a serviços públicos; os de terceira, sobre meio ambiente, patrimônio e questões globais. Invocá-los com precisão, indicando o marco constitucional correspondente, fortalece a fundamentação e a plausibilidade da intervenção proposta."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Confundir as gerações é o erro mais frequente: saúde e educação são de segunda, meio ambiente é de terceira. Outro deslize é apresentar as gerações como substituições sucessivas, quando são acumulativas. E tratar direitos sociais como favores do Estado, quando são obrigações constitucionais."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Diferencie as três gerações pelo tipo de exigência que fazem ao Estado. Responda antes de conferir: a primeira exige abstenção, a segunda exige prestação positiva por meio de políticas públicas, e a terceira exige ação coletiva e cooperação, com titularidade difusa. Agora classifique o direito ao meio ambiente equilibrado: terceira geração."
+      }
+    ],
+    "recall": {
+      "prompt": "Diferencie as três gerações de direitos e classifique o direito ao meio ambiente equilibrado.",
+      "elements": [
+        [
+          "a primeira exige abstencao do Estado",
+          [
+            "abstencao",
+            "primeira",
+            "negativo"
+          ]
+        ],
+        [
+          "a segunda exige prestacao e politicas publicas",
+          [
+            "prestacao",
+            "politica",
+            "social"
+          ]
+        ],
+        [
+          "o meio ambiente e direito de terceira geracao",
+          [
+            "terceira",
+            "difuso",
+            "ambiente"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Redação",
+    "topic": "Parágrafo de Introdução: Delimitando a Opinião",
+    "sections": [
+      {
+        "title": "A função da introdução",
+        "content": "A introdução apresenta o tema, delimita o recorte e enuncia a tese. É nela que o leitor descobre qual posição será defendida, e a clareza desse enunciado orienta toda a leitura seguinte. Uma introdução que descreve o tema sem posicionar-se compromete a avaliação da argumentação."
+      },
+      {
+        "title": "Como formular a tese",
+        "content": "A tese deve ser uma afirmação, não uma pergunta nem uma constatação genérica. Precisa ser específica o suficiente para ser defendida em dois parágrafos e ampla o suficiente para comportar dois argumentos distintos. Uma fórmula útil é enunciar o problema e afirmar sua causa ou sua consequência central."
+      },
+      {
+        "title": "Anunciar os argumentos",
+        "content": "Muitos textos ganham clareza ao indicar, ao final da introdução, os eixos que serão desenvolvidos. Isso cria expectativa e facilita a percepção de projeto de texto pelo avaliador. O cuidado é cumprir o que foi anunciado, na ordem prometida, sob pena de quebrar a coerência entre plano e execução."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Terminar a introdução com pergunta retórica costuma enfraquecer a tese, deixando-a implícita. Outro deslize é escrever introdução longa, com contextualização histórica extensa, que rouba espaço do desenvolvimento. E enunciar tese tão ampla que qualquer argumento a sustentaria, o que dificulta a progressão."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Como saber se sua tese está bem formulada? Responda antes de conferir: ela deve ser uma afirmação clara, específica ao recorte e sustentável por dois argumentos distintos; se qualquer texto poderia defendê-la, ela é genérica demais. Agora explique o risco de anunciar argumentos: é preciso desenvolvê-los na ordem prometida, sob pena de incoerência."
+      }
+    ],
+    "recall": {
+      "prompt": "Como saber se a tese está bem formulada? Qual o risco de anunciar os argumentos?",
+      "elements": [
+        [
+          "deve ser afirmacao clara e especifica",
+          [
+            "afirmacao",
+            "clara",
+            "especifica"
+          ]
+        ],
+        [
+          "sustentavel por dois argumentos distintos",
+          [
+            "dois",
+            "argumentos",
+            "distintos"
+          ]
+        ],
+        [
+          "e preciso cumprir o que foi anunciado",
+          [
+            "cumprir",
+            "ordem",
+            "coerencia"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Redação",
+    "topic": "Parágrafo de Introdução: como Contextualizar",
+    "sections": [
+      {
+        "title": "Tipos de contextualização",
+        "content": "A contextualização pode ser histórica, apresentando o processo que originou o problema; conceitual, definindo um termo central; comparativa, contrastando situações ou países; factual, partindo de um dado ou acontecimento; ou alusiva, mobilizando obra, autor ou referência cultural pertinente ao recorte."
+      },
+      {
+        "title": "Proporção",
+        "content": "A contextualização deve ocupar no máximo metade do parágrafo, deixando espaço para o recorte e a tese. Duas ou três linhas bastam. O erro de proporção é comum: textos que dedicam quase toda a introdução à contextualização chegam à tese sem espaço e a enunciam de forma apressada e vaga."
+      },
+      {
+        "title": "Pertinência",
+        "content": "Toda contextualização precisa conduzir ao recorte. Um dado sobre desigualdade só serve se o tema tratar de desigualdade em algum aspecto; uma referência filosófica só funciona se o conceito iluminar o problema. Contextualização genérica, do tipo desde os tempos antigos, não cumpre função e ocupa espaço."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Começar por afirmações universais e vagas é o vício mais frequente das introduções. Outro deslize é usar contextualização histórica imprecisa, com datas ou fatos errados. E escolher referência prestigiada mas sem relação com o tema, o que evidencia repertório decorativo já no primeiro parágrafo."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Como testar a pertinência da sua contextualização? Responda antes de conferir: verifique se ela conduz naturalmente ao recorte e se seria descartável caso o tema fosse outro; se serviria a qualquer tema, é genérica. Agora diga a proporção recomendada: no máximo metade do parágrafo, reservando o restante para recorte e tese."
+      }
+    ],
+    "recall": {
+      "prompt": "Como testar a pertinência da contextualização? Qual a proporção recomendada na introdução?",
+      "elements": [
+        [
+          "deve conduzir naturalmente ao recorte",
+          [
+            "conduz",
+            "recorte",
+            "pertinente"
+          ]
+        ],
+        [
+          "se serviria a qualquer tema e generica",
+          [
+            "generica",
+            "qualquer",
+            "universal"
+          ]
+        ],
+        [
+          "no maximo metade do paragrafo",
+          [
+            "metade",
+            "espaco",
+            "tese"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Redação",
+    "topic": "Projeto de Texto em Favor da Progressão Textual",
+    "sections": [
+      {
+        "title": "O que é projeto de texto",
+        "content": "Projeto de texto é o plano que define o que cada parágrafo fará: onde a tese aparece, qual argumento vem primeiro, como cada um se liga ao anterior e o que a conclusão retoma. Ele é avaliado indiretamente, porque um texto com projeto claro progride sem repetições nem saltos."
+      },
+      {
+        "title": "Progressão e repetição",
+        "content": "Progredir é acrescentar informação a cada parágrafo, mantendo o tema. O erro típico é a repetição disfarçada: dizer o mesmo com outras palavras, o que gera sensação de estagnação. Cada parágrafo deve responder à pergunta e daí, avançando na análise em vez de reafirmar o já dito."
+      },
+      {
+        "title": "Ordem dos argumentos",
+        "content": "A ordem não é indiferente. Pode-se ir do mais imediato ao mais estrutural, do local ao global, da causa à consequência, ou reservar o argumento mais forte para o segundo parágrafo, aproveitando o efeito de fechamento antes da conclusão. O importante é que a sequência seja justificável."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Escrever dois parágrafos que defendem a mesma ideia com exemplos diferentes é repetição, não progressão. Outro deslize é anunciar na introdução argumentos que o texto não desenvolve. E deixar a conclusão introduzir tema novo, quebrando o projeto anunciado no início."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Como testar se há progressão no seu texto? Responda antes de conferir: resuma cada parágrafo em uma frase e verifique se elas dizem coisas diferentes e encadeadas; se duas frases forem equivalentes, há repetição. Agora explique o efeito de anunciar argumentos que não serão desenvolvidos: quebra a coerência entre projeto e execução."
+      }
+    ],
+    "recall": {
+      "prompt": "Como testar a progressão do texto? Qual o efeito de anunciar argumentos não desenvolvidos?",
+      "elements": [
+        [
+          "resumir cada paragrafo em uma frase",
+          [
+            "resumir",
+            "frase",
+            "paragrafo"
+          ]
+        ],
+        [
+          "frases equivalentes indicam repeticao",
+          [
+            "repeticao",
+            "equivalente",
+            "estagnacao"
+          ]
+        ],
+        [
+          "anunciar e nao desenvolver quebra a coerencia",
+          [
+            "coerencia",
+            "anuncia",
+            "desenvolve"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Redação",
+    "topic": "Proposta de Intervenção: Atores Sociais e Cidadania",
+    "sections": [
+      {
+        "title": "Quem pode agir",
+        "content": "Os agentes possíveis incluem o poder público em suas esferas e órgãos, o setor privado, a escola, a mídia, organizações da sociedade civil, universidades, conselhos profissionais e a própria família. A escolha deve ser compatível com a ação proposta e com as competências reais do agente."
+      },
+      {
+        "title": "Compatibilidade",
+        "content": "Um município não legisla sobre matéria federal; uma escola não fiscaliza empresas; a mídia não executa política pública. Verificar essa compatibilidade evita o erro mais comum de plausibilidade e demonstra conhecimento sobre o funcionamento das instituições, o que é valorizado na avaliação."
+      },
+      {
+        "title": "Cidadania e corresponsabilidade",
+        "content": "Propostas mais consistentes costumam articular mais de um agente, mostrando divisão de responsabilidades: o poder público regula e financia, a escola forma, a mídia informa, a sociedade civil fiscaliza e participa. Essa articulação evita a solução isolada e reflete melhor a complexidade do problema."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Indicar a sociedade de forma genérica, sem especificar quem faz o quê, produz proposta vaga. Outro deslize é atribuir tudo ao governo, sem detalhar órgão nem instrumento. E escolher agente incompatível com a ação, o que compromete a plausibilidade mesmo com boa redação."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Como verificar se o agente escolhido é compatível? Responda antes de conferir: pergunte se aquele órgão ou grupo tem, na prática, competência legal e capacidade operacional para executar a ação proposta, e ajuste o agente ou a ação em caso negativo. Agora cite três agentes possíveis além do governo federal: escolas, organizações da sociedade civil e conselhos profissionais."
+      }
+    ],
+    "recall": {
+      "prompt": "Como verificar a compatibilidade do agente? Cite agentes possíveis além do governo federal.",
+      "elements": [
+        [
+          "verificar competencia legal e capacidade operacional",
+          [
+            "competencia",
+            "legal",
+            "capacidade"
+          ]
+        ],
+        [
+          "ajustar agente ou acao se nao houver compatibilidade",
+          [
+            "ajustar",
+            "incompativel",
+            "acao"
+          ]
+        ],
+        [
+          "escolas, sociedade civil e conselhos",
+          [
+            "escola",
+            "sociedade civil",
+            "conselho"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Redação",
+    "topic": "Proposta de Intervenção: Coerência Argumentativa",
+    "sections": [
+      {
+        "title": "Ligação com o desenvolvimento",
+        "content": "A proposta deve resolver o problema que os argumentos identificaram. Se o texto apontou causas estruturais, a intervenção precisa atuar sobre estruturas; se apontou desinformação, deve atuar sobre informação e educação. Essa correspondência é avaliada e distingue propostas fortes de propostas genéricas."
+      },
+      {
+        "title": "Como garantir",
+        "content": "Ao terminar os parágrafos de desenvolvimento, escreva mentalmente o problema central em uma frase e formule a proposta como resposta direta a ele. Se a proposta poderia encerrar qualquer redação sobre qualquer tema, ela não está articulada ao que o texto argumentou."
+      },
+      {
+        "title": "Mais de uma proposta",
+        "content": "É possível apresentar duas propostas, uma para cada causa apontada, desde que ambas sejam completas. O risco é sacrificar o detalhamento pela quantidade. Em geral, uma proposta completa e bem detalhada pontua mais que duas incompletas, e o critério de decisão é o espaço disponível."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Apresentar proposta que ignora os argumentos é a incoerência mais penalizada. Outro deslize é propor solução para causa não discutida no texto. E encerrar com proposta genérica após desenvolvimento consistente, o que desperdiça a base construída nos parágrafos anteriores."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Como testar se a proposta está articulada ao texto? Responda antes de conferir: formule o problema central em uma frase e verifique se a proposta responde diretamente a ele; se ela serviria a qualquer redação, falta articulação. Agora decida entre uma proposta completa e duas incompletas: a completa e detalhada pontua mais."
+      }
+    ],
+    "recall": {
+      "prompt": "Como testar a articulação entre proposta e argumentos? Uma proposta completa ou duas incompletas?",
+      "elements": [
+        [
+          "formular o problema e verificar se a proposta responde",
+          [
+            "problema",
+            "responde",
+            "direta"
+          ]
+        ],
+        [
+          "se serviria a qualquer redacao falta articulacao",
+          [
+            "qualquer",
+            "generica",
+            "articulacao"
+          ]
+        ],
+        [
+          "uma completa e detalhada vale mais",
+          [
+            "completa",
+            "detalhada",
+            "duas"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Redação",
+    "topic": "Proposta de Intervenção: Respeito aos Direitos Humanos",
+    "sections": [
+      {
+        "title": "O critério",
+        "content": "A competência que avalia a intervenção exige respeito aos direitos humanos. Propostas que violem dignidade, igualdade, liberdade, integridade física ou que promovam discriminação são desconsideradas, ainda que estruturalmente completas. Esse critério é explícito e não admite exceções na correção."
+      },
+      {
+        "title": "O que costuma violar",
+        "content": "Entram nessa categoria propostas de punição sem processo legal, castigos físicos, restrição de direitos de grupos específicos, esterilização compulsória, internação forçada indiscriminada, censura ampla, e qualquer medida que trate um grupo social como problema a ser eliminado em vez de sujeito de direitos."
+      },
+      {
+        "title": "Como formular com segurança",
+        "content": "O caminho seguro é propor medidas que ampliem acesso, informação, atendimento, fiscalização de agentes com poder, participação e responsabilização institucional. Quando a proposta envolve punição, ela deve respeitar o devido processo legal e ser proporcional, sem exclusão de direitos fundamentais."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Propor solução punitiva radical com boa intenção é a violação mais comum. Outro deslize é generalizar restrições sobre um grupo inteiro por conta de comportamentos individuais. E confundir firmeza argumentativa com proposta autoritária, quando a força do texto vem da consistência, não da severidade."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a boa intenção não protege uma proposta que viola direitos? Responda antes de conferir: o critério avalia o conteúdo da medida, e não a intenção declarada, de modo que qualquer proposta que restrinja direitos fundamentais é desconsiderada. Agora cite três tipos de medida seguros: ampliação de acesso, formação e fiscalização institucional."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a boa intenção não protege uma proposta que viola direitos? Cite medidas seguras.",
+      "elements": [
+        [
+          "o criterio avalia o conteudo da medida",
+          [
+            "conteudo",
+            "medida",
+            "intencao"
+          ]
+        ],
+        [
+          "propostas que restringem direitos sao desconsideradas",
+          [
+            "restringe",
+            "desconsiderada",
+            "fundamental"
+          ]
+        ],
+        [
+          "ampliar acesso, formar e fiscalizar",
+          [
+            "acesso",
+            "formacao",
+            "fiscalizacao"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Redação",
+    "topic": "Proposta de Intervenção: Viabilização e Inovação",
+    "sections": [
+      {
+        "title": "Os cinco elementos",
+        "content": "A proposta completa apresenta agente, quem executa; ação, o que será feito; meio ou modo, como será feito; finalidade, para que; e detalhamento, que aprofunda um desses elementos com informação concreta, como periodicidade, público-alvo, recurso, critério ou indicador de resultado."
+      },
+      {
+        "title": "Viabilidade",
+        "content": "Uma proposta viável considera recursos, competências e prazo. Isso não exige realismo orçamentário detalhado, mas afasta soluções impossíveis. Medidas já existentes podem ser propostas desde que se indique o que precisa mudar: ampliação, fiscalização, financiamento ou revisão de critérios."
+      },
+      {
+        "title": "Inovação",
+        "content": "Inovar não significa inventar solução inédita, e sim propor arranjo específico e bem pensado para o recorte. Combinar agentes, indicar meio pouco óbvio ou detalhar um mecanismo de acompanhamento costuma diferenciar propostas em relação às fórmulas genéricas mais repetidas nas correções."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Deixar o detalhamento de fora é a falha mais frequente e custa nível na competência. Outro deslize é detalhar elemento diferente do que se pretendia, sem clareza. E propor campanha de conscientização como único meio, fórmula tão repetida que raramente demonstra elaboração própria."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "O que caracteriza um bom detalhamento? Responda antes de conferir: acrescentar informação concreta a um dos elementos, como periodicidade, público-alvo, recurso, critério de seleção ou forma de acompanhamento, e não apenas repetir a ação com outras palavras. Agora diga como propor medida já existente sem parecer redundante: indicando o que deve ser ampliado, fiscalizado ou revisto."
+      }
+    ],
+    "recall": {
+      "prompt": "O que caracteriza um bom detalhamento? Como propor medida já existente?",
+      "elements": [
+        [
+          "acrescentar informacao concreta a um elemento",
+          [
+            "concreta",
+            "periodicidade",
+            "publico"
+          ]
+        ],
+        [
+          "nao repetir a acao com outras palavras",
+          [
+            "repetir",
+            "outras palavras",
+            "vago"
+          ]
+        ],
+        [
+          "indicar o que ampliar, fiscalizar ou revisar",
+          [
+            "ampliar",
+            "fiscalizar",
+            "revisar"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Redação",
+    "topic": "Qual Será o Tema deste Ano: Grandes Eixos Temáticos",
+    "sections": [
+      {
+        "title": "Os eixos recorrentes",
+        "content": "As propostas costumam circular por eixos previsíveis: educação e trabalho; saúde e corpo; meio ambiente e sustentabilidade; violência, direitos e legislação; cidadania e participação; mídia, tecnologia e informação; cultura, arte e memória; e desigualdades de classe, gênero e raça. Preparar-se por eixo é mais eficiente que tentar adivinhar o tema."
+      },
+      {
+        "title": "Como preparar por eixo",
+        "content": "Para cada eixo, reúna dois ou três repertórios de áreas distintas, um dado ou fato verificável, um exemplo brasileiro concreto e uma referência legal ou institucional. Esse conjunto costuma ser suficiente para sustentar dois argumentos em qualquer recorte específico dentro do eixo."
+      },
+      {
+        "title": "Recorte é diferente de eixo",
+        "content": "O tema nunca é o eixo inteiro: é um recorte. Não se escreve sobre educação, mas sobre a evasão escolar no ensino médio, ou sobre a formação de professores. Ler o recorte com atenção e escrever sobre ele, e não sobre o eixo, é o que separa o texto adequado do tangenciamento."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Preparar redações prontas para temas prováveis leva a forçar conteúdo que não se encaixa no recorte. Outro deslize é confundir o eixo com o tema. E supor que temas recentes na mídia serão automaticamente cobrados, ignorando que as bancas costumam preferir recortes com alguma distância do noticiário imediato."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que se prepara por eixo e não por tema? Responda antes de conferir: o recorte específico é imprevisível, mas o repertório organizado por eixo se aplica a diferentes recortes dentro do mesmo campo. Agora diferencie eixo e recorte com exemplo: meio ambiente é eixo; o descarte de resíduos eletrônicos no Brasil é recorte."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que se prepara por eixo e não por tema? Diferencie eixo de recorte.",
+      "elements": [
+        [
+          "o recorte especifico e imprevisivel",
+          [
+            "recorte",
+            "imprevisivel",
+            "especifico"
+          ]
+        ],
+        [
+          "o repertorio por eixo se aplica a varios recortes",
+          [
+            "eixo",
+            "aplica",
+            "varios"
+          ]
+        ],
+        [
+          "escrever sobre o recorte evita tangenciamento",
+          [
+            "tangenciamento",
+            "recorte",
+            "tema"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Redação",
+    "topic": "Recursos Argumentativos: Dados Numéricos e Exemplos",
+    "sections": [
+      {
+        "title": "Quando o dado funciona",
+        "content": "Um dado numérico fortalece o argumento quando dimensiona o problema, contrasta situações ou comprova uma tendência. Para funcionar, precisa vir com fonte identificada, ainda que de forma breve, com a grandeza correta e, sobretudo, com uma frase que explique o que ele demonstra no contexto do argumento."
+      },
+      {
+        "title": "Exemplos concretos",
+        "content": "Exemplos aproximam o argumento da experiência do leitor e tornam visível o processo descrito. Podem ser casos públicos, situações cotidianas ou episódios históricos. O risco é o exemplo substituir o argumento: ele ilustra, mas não prova sozinho, e por isso precisa ser seguido de generalização controlada."
+      },
+      {
+        "title": "Articulação",
+        "content": "A sequência mais eficiente é afirmar a ideia, apresentar o dado ou exemplo, e explicar o que ele demonstra em relação à tese. Inverter essa ordem, começando pelo exemplo sem enunciar a ideia, costuma produzir parágrafos narrativos que perdem a força argumentativa esperada no gênero dissertativo."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Apresentar dado sem explicá-lo é o erro mais comum: o número não fala por si. Outro deslize é generalizar a partir de um único exemplo. E usar exemplo pessoal sem transformá-lo em análise, o que costuma soar como relato e não como argumento em texto dissertativo."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Qual a sequência recomendada num parágrafo com dado? Responda antes de conferir: enunciar a ideia central, apresentar o dado com fonte e grandeza corretas, e explicar o que ele demonstra em relação à tese. Agora diga o limite do exemplo: ele ilustra e concretiza, mas não prova sozinho, exigindo generalização controlada."
+      }
+    ],
+    "recall": {
+      "prompt": "Qual a sequência de um parágrafo com dado numérico? Qual o limite do exemplo?",
+      "elements": [
+        [
+          "enunciar a ideia antes de apresentar o dado",
+          [
+            "ideia",
+            "topico",
+            "antes"
+          ]
+        ],
+        [
+          "explicar o que o dado demonstra",
+          [
+            "explicar",
+            "demonstra",
+            "tese"
+          ]
+        ],
+        [
+          "o exemplo ilustra mas nao prova sozinho",
+          [
+            "ilustra",
+            "nao prova",
+            "generalizacao"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Redação",
+    "topic": "Recursos Argumentativos: Fatos da Atualidade",
+    "sections": [
+      {
+        "title": "Atualidade como repertório",
+        "content": "Fatos recentes conferem concretude e demonstram atenção ao mundo. Funcionam melhor quando ilustram um processo, e não quando aparecem como notícia isolada. O ideal é conectar o fato a um conceito, mostrando que ele é caso particular de um fenômeno mais amplo já reconhecido."
+      },
+      {
+        "title": "Precisão",
+        "content": "Fatos exigem exatidão de data, local, atores e desfecho. Como as provas ocorrem meses após os acontecimentos, é prudente usar formulações que não dependam de detalhes voláteis: descrever o processo em vez do desdobramento mais recente, que pode ter mudado entre o estudo e a prova."
+      },
+      {
+        "title": "Como se manter atualizado",
+        "content": "Acompanhar poucos veículos de forma regular, com atenção a análises e não apenas a manchetes, produz repertório mais sólido do que consumir grande volume de informação fragmentada. Anotar, para cada tema, o fato, o conceito associado e o argumento possível organiza o material para uso na prova."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Usar fato atual sem conectá-lo a conceito produz repertório meramente ilustrativo. Outro deslize é errar dados do acontecimento, o que compromete a credibilidade. E depender de um único fato recente para sustentar todo o texto, o que fragiliza a argumentação caso a relação não fique clara."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Como usar um fato da atualidade de modo produtivo? Responda antes de conferir: apresente o fato com precisão, conecte-o a um conceito que explique o processo do qual ele é caso e mostre como isso sustenta a tese. Agora explique por que descrever o processo é mais seguro que o desdobramento recente: detalhes podem mudar entre o estudo e a prova."
+      }
+    ],
+    "recall": {
+      "prompt": "Como usar um fato da atualidade produtivamente? Por que descrever o processo é mais seguro?",
+      "elements": [
+        [
+          "apresentar com precisao e conectar a um conceito",
+          [
+            "precisao",
+            "conceito",
+            "conecta"
+          ]
+        ],
+        [
+          "mostrar como sustenta a tese",
+          [
+            "sustenta",
+            "tese",
+            "argumento"
+          ]
+        ],
+        [
+          "detalhes recentes podem mudar ate a prova",
+          [
+            "muda",
+            "desdobramento",
+            "volatil"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Redação",
+    "topic": "Recursos Argumentativos: Interdiscursividade e Intertextualidade",
+    "sections": [
+      {
+        "title": "Dialogar com outros textos",
+        "content": "Mobilizar obras literárias, filmes, músicas, séries e obras de arte enriquece o argumento quando a referência ilumina o problema. O critério é o mesmo do repertório em geral: apresentar a referência, explicitar o aspecto relevante e mostrar como ele sustenta o ponto defendido no parágrafo."
+      },
+      {
+        "title": "Interdiscursividade",
+        "content": "Além de citar textos específicos, é possível mobilizar discursos socialmente circulantes: o discurso jurídico, ao invocar princípios constitucionais; o científico, ao recorrer a evidências; o dos direitos humanos, ao apoiar-se em valores compartilhados. Esses discursos emprestam autoridade sem exigir citação nominal."
+      },
+      {
+        "title": "Uso econômico",
+        "content": "Uma referência bem explorada vale mais que três mencionadas. Em geral, uma por parágrafo de desenvolvimento é suficiente, com duas ou três linhas de explicação. O excesso transforma a redação em vitrine de repertório e reduz o espaço da análise, que é o que efetivamente sustenta a nota."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Citar obra que não se conhece bem gera erro factual. Outro deslize é usar referência apenas para abrir o parágrafo, sem retomá-la. E escolher referências pelo prestígio, e não pela pertinência, o que produz relação forçada entre a obra citada e o recorte discutido."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Como transformar uma referência cultural em argumento? Responda antes de conferir: apresente o aspecto específico da obra que interessa, relacione-o ao problema discutido e explique o que essa relação demonstra sobre a tese. Agora explique a diferença entre citar um texto e mobilizar um discurso: o primeiro é intertextualidade, o segundo é interdiscursividade."
+      }
+    ],
+    "recall": {
+      "prompt": "Como transformar referência cultural em argumento? Diferencie intertextualidade de interdiscursividade.",
+      "elements": [
+        [
+          "apresentar o aspecto relevante da obra",
+          [
+            "aspecto",
+            "obra",
+            "relevante"
+          ]
+        ],
+        [
+          "explicar o que a relacao demonstra",
+          [
+            "demonstra",
+            "relacao",
+            "tese"
+          ]
+        ],
+        [
+          "citar texto e intertextualidade e mobilizar discurso e interdiscursividade",
+          [
+            "texto",
+            "discurso",
+            "juridico"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Redação",
+    "topic": "Recursos Argumentativos: Múltiplos Domínios do Saber",
+    "sections": [
+      {
+        "title": "Interdisciplinaridade",
+        "content": "A competência que avalia o uso de conhecimento valoriza a articulação entre áreas: um argumento sobre desigualdade pode combinar dado demográfico, conceito sociológico e princípio constitucional. Essa combinação demonstra repertório organizado e evita a repetição de referências de um único campo."
+      },
+      {
+        "title": "Como combinar",
+        "content": "O mais eficiente é atribuir um domínio distinto a cada parágrafo de desenvolvimento: no primeiro, um conceito das ciências humanas; no segundo, um dado quantitativo ou uma referência legal. Assim o texto mostra amplitude sem sobrecarregar nenhum parágrafo com excesso de informação."
+      },
+      {
+        "title": "Áreas que rendem",
+        "content": "Sociologia e filosofia fornecem conceitos; história fornece processos; geografia fornece dados territoriais e ambientais; biologia e química, base para temas de saúde e ambiente; matemática, leitura de dados; literatura e artes, referências culturais; direito, marcos legais e princípios constitucionais."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Empilhar referências de áreas diferentes num único parágrafo produz acúmulo sem análise. Outro deslize é usar conceito de área que não se domina, com definição imprecisa. E supor que interdisciplinaridade significa citar muitas áreas, quando significa articulá-las em função do argumento."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Como distribuir repertório de áreas distintas? Responda antes de conferir: atribua um domínio principal a cada parágrafo de desenvolvimento, explicando bem uma referência por parágrafo, em vez de acumular várias em um só. Agora explique o que é interdisciplinaridade produtiva: articular conhecimentos de áreas distintas em função do argumento, e não apenas mencioná-las."
+      }
+    ],
+    "recall": {
+      "prompt": "Como distribuir repertório de áreas distintas? O que é interdisciplinaridade produtiva?",
+      "elements": [
+        [
+          "um dominio principal por paragrafo",
+          [
+            "dominio",
+            "paragrafo",
+            "principal"
+          ]
+        ],
+        [
+          "explicar bem uma referencia por vez",
+          [
+            "uma",
+            "explicar",
+            "acumulo"
+          ]
+        ],
+        [
+          "articular areas em funcao do argumento",
+          [
+            "articular",
+            "funcao",
+            "argumento"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Redação",
+    "topic": "Recursos Argumentativos: Temas de Redação já Analisados",
+    "sections": [
+      {
+        "title": "Aproveitar o já estudado",
+        "content": "Temas anteriores de vestibular são fonte valiosa: cada um deixa um conjunto de conceitos, dados e estruturas argumentativas que podem ser reaproveitados em recortes próximos. Estudar propostas passadas não é decorar respostas, e sim acumular repertório organizado e treinar a leitura de enunciados."
+      },
+      {
+        "title": "Transferência entre temas",
+        "content": "Um conceito estudado para um tema de educação frequentemente serve para um de trabalho; um dado ambiental pode sustentar argumento sobre saúde. Reconhecer essas pontes multiplica o repertório disponível sem exigir novo estudo, e é o que permite responder bem a recortes inesperados."
+      },
+      {
+        "title": "Treino com propostas reais",
+        "content": "O exercício mais produtivo é escrever com tempo cronometrado a partir de propostas reais, seguido de correção pelos critérios oficiais. Reescrever o mesmo texto após a correção consolida mais aprendizado do que produzir muitos textos sem retorno, porque força a identificar e corrigir padrões de erro."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Memorizar textos prontos para adaptar é arriscado: a adaptação forçada tangencia o recorte. Outro deslize é estudar apenas o tema, sem analisar a estrutura das redações bem avaliadas. E treinar sem cronômetro, o que deixa o candidato despreparado para a gestão do tempo real da prova."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que reescrever após correção vale mais que escrever muitos textos? Responda antes de conferir: a reescrita força a identificar o padrão de erro e a construir a alternativa correta, consolidando aprendizado que a simples repetição não produz. Agora explique a transferência entre temas: conceitos e dados de um eixo frequentemente sustentam argumentos em outro."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que reescrever após correção vale mais que escrever muito? O que é transferência entre temas?",
+      "elements": [
+        [
+          "a reescrita obriga a corrigir o padrao de erro",
+          [
+            "reescrita",
+            "erro",
+            "padrao"
+          ]
+        ],
+        [
+          "escrever sem retorno nao consolida aprendizado",
+          [
+            "retorno",
+            "correcao",
+            "aprendizado"
+          ]
+        ],
+        [
+          "conceitos de um eixo sustentam argumentos em outro",
+          [
+            "conceito",
+            "eixo",
+            "transferencia"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Redação",
+    "topic": "Recursos Argumentativos: Vozes Prestigiadas",
+    "sections": [
+      {
+        "title": "Argumento de autoridade",
+        "content": "Consiste em apoiar-se em quem tem competência reconhecida no assunto: pesquisadores, instituições, órgãos oficiais, autores clássicos. Sua força depende de dois fatores: a pertinência da autoridade em relação ao tema e a explicação de como aquela contribuição sustenta o argumento defendido."
+      },
+      {
+        "title": "Uso adequado",
+        "content": "Cite o autor ou instituição, apresente a ideia de forma reformulada e explique sua relação com o ponto em discussão. Duas linhas costumam bastar. Não é necessário citação literal, e frequentemente a paráfrase precisa é mais segura, evitando erros de atribuição e transcrição em prova sem consulta."
+      },
+      {
+        "title": "Limites",
+        "content": "A autoridade não substitui o raciocínio: mesmo com respaldo, é preciso mostrar por que aquela contribuição se aplica ao caso. Também é preciso escolher autoridades pertinentes: um filósofo pode iluminar um conceito, mas não substitui um dado sobre saúde pública, e vice-versa."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Citar autoridade fora de sua área compromete a pertinência. Outro deslize é atribuir frase inventada, erro grave e facilmente percebido. E usar a citação como abertura decorativa do parágrafo, sem retomá-la ao longo do desenvolvimento, o que a torna repertório não produtivo."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Como usar uma autoridade de forma produtiva? Responda antes de conferir: apresente a ideia reformulada, identifique brevemente o autor ou a instituição e escreva uma frase mostrando como aquilo sustenta seu argumento no recorte discutido. Agora diga por que a paráfrase precisa costuma ser mais segura que a citação literal em prova."
+      }
+    ],
+    "recall": {
+      "prompt": "Como usar uma autoridade de forma produtiva? Por que a paráfrase costuma ser mais segura?",
+      "elements": [
+        [
+          "reformular a ideia e identificar o autor",
+          [
+            "reformular",
+            "autor",
+            "instituicao"
+          ]
+        ],
+        [
+          "explicar como sustenta o argumento",
+          [
+            "sustenta",
+            "argumento",
+            "relacao"
+          ]
+        ],
+        [
+          "evita erro de transcricao e atribuicao",
+          [
+            "transcricao",
+            "atribuicao",
+            "erro"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Redação",
+    "topic": "Recursos Linguísticos: Norma, Clareza e Expressividade",
+    "sections": [
+      {
+        "title": "Norma-padrão",
+        "content": "A primeira competência avalia o domínio da modalidade escrita formal: ortografia, acentuação, pontuação, concordância, regência, colocação e crase. Erros isolados não impedem nota alta, mas desvios recorrentes ou que prejudicam a compreensão reduzem o nível, sobretudo quando afetam a clareza do argumento."
+      },
+      {
+        "title": "Clareza",
+        "content": "Períodos muito longos, com subordinações encaixadas, dificultam a leitura. Alternar períodos curtos e médios, colocar o sujeito perto do verbo, evitar acúmulo de orações intercaladas e preferir a ordem direta quando não houver razão para inverter melhoram a compreensão sem empobrecer o texto."
+      },
+      {
+        "title": "Expressividade sem rebuscamento",
+        "content": "Vocabulário preciso vale mais que vocabulário raro. Usar palavra difícil com sentido impreciso é pior que usar palavra comum com precisão. A expressividade vem de construções bem articuladas, escolhas lexicais exatas e ritmo, e não de arcaísmos ou de conectivos pouco usuais empregados fora de contexto."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Usar termos como outrossim e destarte sem domínio do sentido produz efeito contrário ao pretendido. Outro deslize é escrever períodos de cinco linhas sem pontuação adequada. E confundir formalidade com impessoalidade absoluta, evitando qualquer marca de posicionamento, o que enfraquece a argumentação."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que vocabulário preciso vale mais que vocabulário raro? Responda antes de conferir: a palavra rara usada com sentido impreciso gera erro perceptível e prejudica a clareza, enquanto o termo comum bem empregado sustenta o argumento sem risco. Agora cite duas estratégias de clareza: alternar a extensão dos períodos e manter o sujeito próximo do verbo."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que vocabulário preciso vale mais que raro? Cite estratégias de clareza.",
+      "elements": [
+        [
+          "a palavra rara mal empregada gera erro",
+          [
+            "rara",
+            "impreciso",
+            "erro"
+          ]
+        ],
+        [
+          "o termo comum bem usado sustenta o argumento",
+          [
+            "comum",
+            "preciso",
+            "sustenta"
+          ]
+        ],
+        [
+          "alternar periodos e manter sujeito perto do verbo",
+          [
+            "periodo",
+            "sujeito",
+            "ordem direta"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Redação",
+    "topic": "Recursos de Coesão Referencial no Texto Dissertativo",
+    "sections": [
+      {
+        "title": "O que é coesão referencial",
+        "content": "É a retomada de elementos já mencionados por meio de pronomes, sinônimos, hiperônimos, elipses e expressões nominais. Ela evita repetição e mantém a unidade do texto, e sua ausência produz parágrafos que parecem começar do zero, prejudicando a percepção de continuidade pelo avaliador."
+      },
+      {
+        "title": "Recursos disponíveis",
+        "content": "Além dos pronomes, funcionam bem as substituições lexicais: trocar desmatamento por o processo de supressão vegetal, ou trocar a lei por a norma, o dispositivo. Hiperônimos permitem retomar por categoria, como o fenômeno ou a prática, e expressões nominais podem retomar avaliando, como esse equívoco."
+      },
+      {
+        "title": "Clareza da referência",
+        "content": "Toda retomada precisa ter referente identificável. Pronomes ambíguos, com dois antecedentes possíveis, geram falha de coesão. Quando o período é longo ou há dois substantivos do mesmo gênero, é mais seguro repetir o termo ou usar expressão nominal específica em vez do pronome."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Usar o mesmo pronome para referentes diferentes ao longo do parágrafo é a falha mais comum. Outro deslize é repetir o substantivo em todas as frases, o que empobrece. E usar sinônimo impreciso na retomada, alterando o sentido do que se pretendia retomar."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Como retomar sem repetir e sem gerar ambiguidade? Responda antes de conferir: alterne pronomes, sinônimos precisos e expressões nominais, e verifique se cada retomada tem apenas um antecedente possível, preferindo repetir o termo quando houver risco de ambiguidade. Agora cite um recurso de retomada que também avalia: a expressão nominal do tipo esse equívoco ou tal medida."
+      }
+    ],
+    "recall": {
+      "prompt": "Como retomar sem repetir nem gerar ambiguidade? Cite um recurso que retoma avaliando.",
+      "elements": [
+        [
+          "alternar pronomes, sinonimos e expressoes nominais",
+          [
+            "pronome",
+            "sinonimo",
+            "expressao"
+          ]
+        ],
+        [
+          "garantir um unico antecedente possivel",
+          [
+            "antecedente",
+            "ambiguidade",
+            "claro"
+          ]
+        ],
+        [
+          "a expressao nominal avaliativa retoma e avalia",
+          [
+            "expressao nominal",
+            "avalia",
+            "esse"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Redação",
+    "topic": "Recursos de Coesão Sequencial no Texto Dissertativo",
+    "sections": [
+      {
+        "title": "Conectivos e relações",
+        "content": "A coesão sequencial articula ideias por meio de conectivos que expressam relações lógicas: adição, oposição, causa, consequência, conclusão, condição, concessão, finalidade, comparação e exemplificação. Usar o conectivo correto é o que torna explícita a relação que o autor pretende estabelecer."
+      },
+      {
+        "title": "Variedade",
+        "content": "A competência que avalia coesão observa a diversidade de recursos. Repetir além disso e portanto ao longo de todo o texto limita a nota. Vale ter à disposição alternativas para cada relação: ademais, outrossim, por conseguinte, logo, dessarte, conquanto, à medida que, uma vez que, com o intuito de."
+      },
+      {
+        "title": "Posição e pontuação",
+        "content": "Conectivos podem abrir o parágrafo, articulando-o ao anterior, ou operar dentro do período. A pontuação acompanha: conclusivos costumam vir entre vírgulas ou após ponto e vírgula, e conjunções subordinativas antepostas exigem vírgula. Erros de pontuação com conectivos afetam tanto coesão quanto norma."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Usar conectivo que não corresponde à relação estabelecida, como portanto onde há oposição, é erro grave de coesão. Outro deslize é iniciar todos os parágrafos com conectivo, criando artificialidade. E acumular conectivos na mesma frase, o que produz encadeamento confuso."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Como aumentar a variedade sem forçar? Responda antes de conferir: mapeie as relações que seu texto estabelece e escolha, para cada uma, um conectivo diferente dos já usados, verificando se ele expressa exatamente aquela relação. Agora identifique o erro em: o problema é grave, portanto poucas medidas foram tomadas. O correto seria uma conjunção adversativa, como no entanto."
+      }
+    ],
+    "recall": {
+      "prompt": "Como variar conectivos sem forçar? Corrija: o problema é grave, portanto poucas medidas foram tomadas.",
+      "elements": [
+        [
+          "mapear as relacoes e escolher conectivos distintos",
+          [
+            "relacao",
+            "conectivo",
+            "distinto"
+          ]
+        ],
+        [
+          "verificar se expressa exatamente a relacao",
+          [
+            "expressa",
+            "exata",
+            "sentido"
+          ]
+        ],
+        [
+          "a relacao e de oposicao e pede no entanto",
+          [
+            "oposicao",
+            "no entanto",
+            "adversativa"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Redação",
+    "topic": "Redações Nota 1000: Trunfos a Inspirar",
+    "sections": [
+      {
+        "title": "O que elas têm em comum",
+        "content": "Textos de nota máxima costumam apresentar tese explícita e específica, dois argumentos bem desenvolvidos com repertório aplicado, progressão sem repetição, coesão variada e proposta de intervenção completa e articulada. A regularidade entre as competências é mais decisiva que qualquer brilho isolado."
+      },
+      {
+        "title": "Como estudá-las",
+        "content": "O aproveitamento vem da leitura analítica, e não da imitação. Vale marcar onde está a tese, identificar a estrutura de cada parágrafo, listar os conectivos usados e verificar como o repertório se conecta ao argumento. Esse mapeamento revela procedimentos transferíveis para qualquer tema."
+      },
+      {
+        "title": "O que não copiar",
+        "content": "Frases de efeito, contextualizações específicas e repertórios de um texto premiado não se transferem bem. Reproduzi-los produz textos artificiais e, quando muito repetidos, deixam de causar boa impressão. O que se aprende é o método de construção, não o conteúdo particular daquela redação."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Decorar estruturas de introdução de textos nota mil e aplicá-las sem adaptação é o erro mais comum. Outro deslize é acreditar que existe uma fórmula única, quando textos premiados variam bastante entre si. E ignorar que o mesmo texto poderia receber notas diferentes conforme o recorte do tema."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Como estudar uma redação nota mil de forma produtiva? Responda antes de conferir: mapeie a tese, a estrutura de cada parágrafo, os conectivos e a articulação entre repertório e argumento, extraindo procedimentos, e não frases. Agora diga o que não se deve copiar: frases de efeito e repertórios específicos, que soam artificiais fora do contexto original."
+      }
+    ],
+    "recall": {
+      "prompt": "Como estudar uma redação nota mil de forma produtiva? O que não se deve copiar?",
+      "elements": [
+        [
+          "mapear tese, estrutura e conectivos",
+          [
+            "tese",
+            "estrutura",
+            "conectivo"
+          ]
+        ],
+        [
+          "extrair procedimentos e nao frases",
+          [
+            "procedimento",
+            "metodo",
+            "frase"
+          ]
+        ],
+        [
+          "nao copiar frases de efeito nem repertorios especificos",
+          [
+            "efeito",
+            "artificial",
+            "especifico"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Redação",
+    "topic": "Redações na Mídia: como Aprimorar",
+    "sections": [
+      {
+        "title": "Ler comentários de correção",
+        "content": "Análises de redações publicadas por bancas e veículos mostram o raciocínio dos avaliadores: por que um trecho tangencia, onde falta detalhamento, que tipo de repertório conta. Acompanhar essas leituras treina o olhar crítico sobre o próprio texto e antecipa os critérios da correção."
+      },
+      {
+        "title": "Autoavaliação",
+        "content": "Depois de escrever, corrija com a grade oficial em mãos, atribuindo nota a cada competência e justificando. Esse exercício obriga a converter impressões em critérios e revela padrões pessoais de erro, que costumam se repetir e podem ser corrigidos com treino dirigido a cada competência."
+      },
+      {
+        "title": "Rotina de treino",
+        "content": "Uma rotina eficiente combina uma redação semanal cronometrada, correção com a grade, reescrita do mesmo texto e leitura de análises. Somar isso ao acúmulo organizado de repertório por eixo temático produz progresso mais consistente do que escrever muitos textos sem retorno e sem revisão."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Corrigir apenas gramática ao reler é o hábito que mais limita evolução. Outro deslize é escrever sem cronômetro, o que deixa a gestão do tempo despreparada. E acumular textos sem reescrever, perdendo justamente a etapa em que o aprendizado se consolida."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Qual rotina de treino é mais eficiente? Responda antes de conferir: uma redação semanal cronometrada, corrigida pela grade oficial, seguida de reescrita do mesmo texto e leitura de análises de correção. Agora explique por que corrigir apenas gramática limita a evolução: as competências de argumentação, coesão e intervenção respondem pela maior parte da nota."
+      }
+    ],
+    "recall": {
+      "prompt": "Qual rotina de treino é mais eficiente? Por que corrigir apenas gramática limita a evolução?",
+      "elements": [
+        [
+          "redacao cronometrada corrigida pela grade",
+          [
+            "cronometrada",
+            "grade",
+            "semanal"
+          ]
+        ],
+        [
+          "reescrita do mesmo texto consolida o aprendizado",
+          [
+            "reescrita",
+            "consolida",
+            "mesmo texto"
+          ]
+        ],
+        [
+          "argumentacao, coesao e intervencao pesam mais",
+          [
+            "argumentacao",
+            "coesao",
+            "intervencao"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Redação",
+    "topic": "Refutando o Ponto Contrário",
+    "sections": [
+      {
+        "title": "O que é refutar",
+        "content": "Refutar é mostrar por que o argumento contrário não se sustenta. Diferente da concessão, que reconhece parte de sua validade, a refutação aponta erro de premissa, insuficiência de evidência, generalização indevida ou consequência inaceitável da posição adversária, sempre com fundamentação explícita."
+      },
+      {
+        "title": "Estratégias",
+        "content": "As mais úteis são atacar a premissa, mostrando que ela é falsa ou discutível; atacar a inferência, mostrando que a conclusão não decorre; apresentar contraexemplo; ou mostrar que a posição contrária, levada às últimas consequências, produz resultado que seus próprios defensores rejeitariam."
+      },
+      {
+        "title": "Como incorporar",
+        "content": "A refutação pode ocupar parte de um parágrafo de desenvolvimento ou um parágrafo próprio, quando o debate for central. Deve ser apresentada com precisão: reconstruir corretamente o argumento contrário antes de refutá-lo é condição para que a refutação seja legítima e convincente."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Refutar uma versão caricata do argumento contrário, o chamado espantalho, invalida o movimento. Outro deslize é refutar sem fundamentar, apenas declarando que a posição está errada. E dedicar tanto espaço à refutação que o texto deixa de desenvolver a própria tese."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "O que é o argumento espantalho? Responda antes de conferir: é a falácia de atribuir ao adversário uma versão enfraquecida ou distorcida de sua posição para refutá-la com facilidade, o que não constitui refutação legítima. Agora cite duas estratégias válidas: atacar a premissa e apresentar contraexemplo."
+      }
+    ],
+    "recall": {
+      "prompt": "O que é o argumento espantalho? Cite estratégias válidas de refutação.",
+      "elements": [
+        [
+          "distorcer a posicao adversaria para refuta-la",
+          [
+            "distorce",
+            "caricatura",
+            "espantalho"
+          ]
+        ],
+        [
+          "nao constitui refutacao legitima",
+          [
+            "legitima",
+            "invalida",
+            "falacia"
+          ]
+        ],
+        [
+          "atacar a premissa ou apresentar contraexemplo",
+          [
+            "premissa",
+            "contraexemplo",
+            "inferencia"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Redação",
+    "topic": "Repertório: o Diferencial de Redações de Sucesso",
+    "sections": [
+      {
+        "title": "O que conta como repertório",
+        "content": "Repertório é o conhecimento externo mobilizado para sustentar o argumento: dados, fatos históricos, conceitos de sociologia, filosofia, geografia, obras literárias, filmes, legislação e pesquisas. O que o torna produtivo não é a origem, mas a pertinência e a explicação de sua relação com o ponto defendido."
+      },
+      {
+        "title": "Repertório produtivo x decorativo",
+        "content": "O repertório é produtivo quando funciona como parte do raciocínio, sustentando ou iluminando o argumento. É decorativo quando aparece como enfeite, geralmente numa frase isolada no início do parágrafo, sem retomada. A diferença aparece na presença ou ausência de uma frase que explica a relação."
+      },
+      {
+        "title": "Como construir",
+        "content": "Vale organizar um banco pessoal por eixos temáticos, com poucos itens bem dominados em vez de muitos superficiais. Para cada item, saiba o que é, quem propôs, em que contexto e a que tipo de problema se aplica. Um mesmo conceito costuma servir a vários temas quando bem compreendido."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Citar autor com atribuição errada ou frase inventada é falha grave, e a banca percebe. Outro deslize é acumular citações sem desenvolvimento. E usar repertório genérico, do tipo desde os primórdios da humanidade, que não constitui conhecimento aplicado e ocupa espaço útil do parágrafo."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Como transformar repertório decorativo em produtivo? Responda antes de conferir: depois de apresentá-lo, escreva uma frase explicando o que ele demonstra e como se liga ao argumento e à tese, em vez de passar direto ao próximo assunto. Agora explique por que é melhor dominar poucos repertórios: usá-los com precisão vale mais que mencionar muitos sem controle."
+      }
+    ],
+    "recall": {
+      "prompt": "Como transformar repertório decorativo em produtivo? Por que dominar poucos é melhor?",
+      "elements": [
+        [
+          "explicar a relacao com o argumento",
+          [
+            "explicar",
+            "relacao",
+            "argumento"
+          ]
+        ],
+        [
+          "nao basta citar e seguir adiante",
+          [
+            "citar",
+            "isolada",
+            "enfeite"
+          ]
+        ],
+        [
+          "poucos itens bem dominados evitam erro de atribuicao",
+          [
+            "dominado",
+            "preciso",
+            "erro"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Redação",
+    "topic": "Ressalvando o Ponto de Vista Contrário",
+    "sections": [
+      {
+        "title": "Concessão",
+        "content": "Reconhecer parte da razão do ponto de vista contrário fortalece o texto: demonstra compreensão do debate e evita a impressão de simplificação. A estrutura típica usa conjunções concessivas, como embora, ainda que e apesar de, seguidas da reafirmação da própria tese, que permanece intacta."
+      },
+      {
+        "title": "Como fazer sem enfraquecer",
+        "content": "O movimento tem duas partes obrigatórias: a concessão, breve, e a reafirmação, mais desenvolvida. Se a concessão ocupar mais espaço que a tese ou vier sem contraponto, o leitor perde a posição do autor. A ordem importa: concede-se primeiro, afirma-se depois, deixando a própria posição em destaque."
+      },
+      {
+        "title": "Efeito argumentativo",
+        "content": "A concessão antecipa a objeção do leitor e a neutraliza antes que ela se forme, além de projetar imagem de quem examina o problema com honestidade. É recurso valorizado por bancas que avaliam a capacidade de lidar com a complexidade em vez de reduzir o debate a uma única perspectiva."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Conceder sem retomar a própria tese deixa o texto ambíguo quanto à posição defendida. Outro deslize é usar mas em vez de embora, transformando concessão em simples adversidade coordenada. E conceder pontos centrais da própria tese, o que a esvazia em vez de fortalecê-la."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Qual a estrutura de uma boa concessão? Responda antes de conferir: reconhecer brevemente o que há de válido na posição contrária, com conjunção concessiva, e reafirmar a própria tese em seguida, com desenvolvimento maior. Agora diga o risco de conceder demais: o texto perde a posição e passa a parecer indeciso."
+      }
+    ],
+    "recall": {
+      "prompt": "Qual a estrutura de uma boa concessão? Qual o risco de conceder demais?",
+      "elements": [
+        [
+          "reconhecer brevemente o que ha de valido",
+          [
+            "reconhecer",
+            "breve",
+            "valido"
+          ]
+        ],
+        [
+          "reafirmar a tese com desenvolvimento maior",
+          [
+            "reafirmar",
+            "tese",
+            "desenvolvimento"
+          ]
+        ],
+        [
+          "conceder demais faz perder a posicao",
+          [
+            "perde",
+            "indeciso",
+            "posicao"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Redação",
+    "topic": "Tangenciamento e Fuga: a Fronteira do Tema",
+    "sections": [
+      {
+        "title": "Definindo a fronteira",
+        "content": "Tangenciar é escrever sobre o entorno do recorte sem enfrentá-lo; fugir é escrever sobre outro assunto. A diferença é de grau e de consequência: o tangenciamento reduz a nota nas competências de compreensão e argumentação, enquanto a fuga total costuma zerar a redação."
+      },
+      {
+        "title": "Como o tangenciamento acontece",
+        "content": "Ele costuma surgir de dois movimentos: subir ao eixo, tratando de educação em geral quando o recorte é a permanência escolar; ou descer a um exemplo, discutindo um caso particular sem voltar ao problema proposto. Em ambos, o texto perde o alvo sem que o autor perceba durante a escrita."
+      },
+      {
+        "title": "Como evitar",
+        "content": "Escreva o recorte em poucas palavras no rascunho e mantenha-o à vista. Ao terminar cada parágrafo, pergunte se ele responde a esse recorte. Retome termos do enunciado ao longo do texto, não como repetição mecânica, mas como âncora que mantém a discussão no ponto pedido."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Considerar que citar o tema na introdução basta para garantir adequação é o erro mais frequente. Outro deslize é confundir aprofundar com desviar: aprofundar mantém o recorte e aumenta a análise. E tratar exemplos longos como argumento, deixando de retomar o problema central."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Qual a diferença prática entre tangenciamento e fuga? Responda antes de conferir: o tangenciamento trata do eixo temático sem enfrentar o recorte, com perda parcial de pontos; a fuga trata de outro assunto e leva à anulação da redação. Agora cite uma estratégia para não tangenciar: manter o recorte anotado e testar cada parágrafo contra ele."
+      }
+    ],
+    "recall": {
+      "prompt": "Diferencie tangenciamento de fuga e cite uma estratégia para evitá-los.",
+      "elements": [
+        [
+          "tangenciar trata do eixo sem enfrentar o recorte",
+          [
+            "eixo",
+            "recorte",
+            "sem"
+          ]
+        ],
+        [
+          "a fuga trata de outro assunto e zera",
+          [
+            "fuga",
+            "zero",
+            "outro"
+          ]
+        ],
+        [
+          "manter o recorte anotado e testar cada paragrafo",
+          [
+            "anotar",
+            "testar",
+            "paragrafo"
+          ]
+        ]
+      ]
+    }
+  },
+  {
     "subject": "Sociologia",
     "topic": "A Luta de Classes na Análise Sociológica",
     "sections": [
