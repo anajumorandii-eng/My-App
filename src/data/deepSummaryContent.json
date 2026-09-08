@@ -8263,6 +8263,555 @@
   },
   {
     "subject": "Geografia",
+    "topic": "As Redes de Transportes",
+    "sections": [
+      {
+        "title": "Matriz de transportes brasileira",
+        "content": "O Brasil tem matriz de transportes fortemente rodoviária, resultado de escolhas políticas a partir de meados do século XX, com destaque para o Plano de Metas e a indústria automobilística. O modal rodoviário é flexível, porém mais caro por tonelada-quilômetro em longas distâncias e mais intensivo em emissões."
+      },
+      {
+        "title": "Modais e vocações",
+        "content": "Ferrovias são vantajosas para grandes volumes em longas distâncias, como minério e grãos; hidrovias são as mais baratas, mas exigem rios navegáveis e infraestrutura portuária; o aéreo serve a cargas de alto valor e a passageiros; e os dutos transportam petróleo, derivados e gás com baixo custo operacional."
+      },
+      {
+        "title": "Logística e gargalos",
+        "content": "O escoamento da produção agrícola depende de corredores que combinam rodovias, ferrovias, hidrovias e portos. Gargalos logísticos elevam o chamado custo Brasil, reduzindo a competitividade das exportações. Projetos como ferrovias de integração e a melhoria de portos buscam reequilibrar a matriz, com avanços lentos."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que o modal rodoviário é sempre o mais barato é erro: ele é competitivo em curtas distâncias e cargas fracionadas, mas caro em longas distâncias. Outro deslize é supor que o Brasil não tem potencial hidroviário, quando ele é grande mas subutilizado. E confundir intermodalidade com multimodalidade nos contratos de transporte."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a matriz rodoviária encarece a exportação de grãos? Responda antes de conferir: as distâncias entre as áreas produtoras do Centro-Oeste e os portos são muito longas, e o custo por tonelada-quilômetro do modal rodoviário é elevado nesse trecho. Agora diga qual modal seria mais adequado e por quê: ferroviário ou hidroviário, por serem mais baratos para grandes volumes em longas distâncias."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a matriz rodoviária encarece a exportação de grãos? Qual modal seria mais adequado?",
+      "elements": [
+        [
+          "as distancias ate os portos sao longas",
+          [
+            "distancia",
+            "porto",
+            "centro-oeste"
+          ]
+        ],
+        [
+          "o custo rodoviario por tonelada-quilometro e alto",
+          [
+            "custo",
+            "tonelada",
+            "caro"
+          ]
+        ],
+        [
+          "ferrovia ou hidrovia para grandes volumes",
+          [
+            "ferrovia",
+            "hidrovia",
+            "volume"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Geografia",
+    "topic": "Biogeografia Mundial",
+    "sections": [
+      {
+        "title": "Os grandes biomas",
+        "content": "A distribuição da vegetação acompanha o clima. Florestas equatoriais ocorrem onde há calor e umidade o ano todo; savanas, onde há estação seca marcada; desertos, onde a precipitação é mínima; florestas temperadas e taiga, em latitudes médias e altas; tundra, próximo aos polos, com solo congelado boa parte do ano."
+      },
+      {
+        "title": "Adaptações",
+        "content": "Cada formação apresenta adaptações típicas: árvores altas com folhas largas e epífitas na floresta equatorial; gramíneas e árvores de casca grossa resistentes ao fogo nas savanas; plantas suculentas e espinhosas nos desertos; coníferas com folhas em agulha na taiga, que reduzem a perda de água em ambiente frio e seco."
+      },
+      {
+        "title": "Pressões e conservação",
+        "content": "As florestas tropicais concentram a maior biodiversidade do planeta e sofrem as maiores taxas de desmatamento, movidas por pecuária, agricultura e extração de madeira. Corredores ecológicos, unidades de conservação e acordos internacionais são as principais estratégias de proteção, com resultados desiguais entre países."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Associar solo fértil a floresta densa é erro clássico: nas florestas tropicais o solo costuma ser pobre e os nutrientes ficam na biomassa. Outro deslize é confundir taiga com tundra. E supor que a vegetação depende apenas do clima, ignorando solo, relevo e ação humana."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que as coníferas da taiga têm folhas em agulha? Responda antes de conferir: reduzem a perda de água num ambiente frio, em que a água está congelada boa parte do ano e é fisiologicamente pouco disponível. Agora diga que formação ocorre onde há estação seca marcada nos trópicos: a savana."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que as coníferas têm folhas em agulha? Que formação ocorre nos trópicos com estação seca marcada?",
+      "elements": [
+        [
+          "reduzem a perda de agua",
+          [
+            "perda",
+            "agua",
+            "transpiracao"
+          ]
+        ],
+        [
+          "a agua congelada e pouco disponivel",
+          [
+            "congelada",
+            "frio",
+            "disponivel"
+          ]
+        ],
+        [
+          "a savana ocorre com estacao seca",
+          [
+            "savana",
+            "seca",
+            "cerrado"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Geografia",
+    "topic": "Biogeografia do Brasil I",
+    "sections": [
+      {
+        "title": "Amazônia e Mata Atlântica",
+        "content": "A Floresta Amazônica é equatorial, latifoliada, densa e higrófila, com altíssima biodiversidade e solo pobre cujos nutrientes se concentram na biomassa. A Mata Atlântica, tropical úmida, apresenta grande endemismo e é o bioma mais devastado, reduzido a fragmentos, por coincidir com as áreas de ocupação mais antiga e densa do país."
+      },
+      {
+        "title": "Cerrado e Caatinga",
+        "content": "O Cerrado é savana com árvores tortuosas de casca grossa e raízes profundas, adaptadas ao fogo e ao solo ácido, e funciona como caixa d'água por abrigar nascentes de grandes bacias. A Caatinga é semiárida, com vegetação caducifólia, espinhosa e suculenta, exclusiva do Brasil e historicamente subestimada em biodiversidade."
+      },
+      {
+        "title": "Pressões atuais",
+        "content": "O Cerrado tornou-se a principal fronteira agrícola e concentra hoje taxas elevadas de supressão de vegetação; a Amazônia sofre desmatamento associado a pecuária, grilagem e garimpo; a Mata Atlântica enfrenta pressão urbana; e a Caatinga sofre com desmatamento para lenha e processos de desertificação em áreas degradadas."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Chamar o Cerrado de vegetação pobre confunde aparência com diversidade: é uma das savanas mais ricas do mundo. Outro deslize é supor que a Amazônia tem solo fértil. E tratar a Caatinga como área sem vida no período seco, quando as adaptações permitem rápida rebrota após as chuvas."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que o Cerrado é chamado de caixa d'água do Brasil? Responda antes de conferir: nele nascem rios de grandes bacias, como a do São Francisco, do Tocantins e do Paraná, e sua vegetação favorece a infiltração e a recarga de aquíferos. Agora diga por que a Mata Atlântica é o bioma mais devastado: coincide com a faixa de ocupação mais antiga e populosa do país."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que o Cerrado é chamado de caixa d'água do Brasil? Por que a Mata Atlântica é o bioma mais devastado?",
+      "elements": [
+        [
+          "nele nascem rios de grandes bacias",
+          [
+            "nascente",
+            "bacia",
+            "sao francisco"
+          ]
+        ],
+        [
+          "favorece a infiltracao e a recarga",
+          [
+            "infiltracao",
+            "aquifero",
+            "recarga"
+          ]
+        ],
+        [
+          "coincide com a area de ocupacao mais antiga",
+          [
+            "ocupacao",
+            "litoral",
+            "populosa"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Geografia",
+    "topic": "Biogeografia do Brasil II",
+    "sections": [
+      {
+        "title": "Pantanal, Pampa e transições",
+        "content": "O Pantanal é planície alagável cuja dinâmica depende do pulso de inundação anual, com vegetação de transição entre biomas vizinhos. O Pampa é campo de gramíneas no sul, associado à pecuária extensiva e ameaçado pela conversão em lavouras e silvicultura. Áreas de transição, como Mata dos Cocais e Zona dos Cocais, reúnem elementos de biomas contíguos."
+      },
+      {
+        "title": "Formações litorâneas",
+        "content": "Manguezais ocorrem em áreas de encontro entre água doce e salgada, com raízes adaptadas ao solo lodoso e pobre em oxigênio, e funcionam como berçário de espécies marinhas. Restingas ocupam solos arenosos costeiros. Ambos são protegidos como áreas de preservação permanente e sofrem forte pressão imobiliária e turística."
+      },
+      {
+        "title": "Conservação",
+        "content": "As unidades de conservação se dividem em proteção integral, que admite apenas uso indireto, e uso sustentável, que permite exploração regulada. Somam-se terras indígenas e quilombolas, que apresentam taxas de conservação elevadas, evidência de que a presença de povos tradicionais é compatível com a manutenção da floresta."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Chamar o Pantanal de bioma florestal é impreciso: é planície alagável com vegetação de transição. Outro deslize é confundir manguezal com restinga. E supor que unidade de conservação proíbe qualquer uso, quando as de uso sustentável admitem exploração regulada e presença de populações tradicionais."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que o manguezal é considerado berçário marinho? Responda antes de conferir: suas raízes oferecem abrigo e alimento a larvas e juvenis de peixes e crustáceos, sustentando estoques pesqueiros costeiros. Agora diferencie unidade de proteção integral de uso sustentável: a primeira admite apenas uso indireto, a segunda permite exploração regulada."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que o manguezal é berçário marinho? Diferencie proteção integral de uso sustentável.",
+      "elements": [
+        [
+          "as raizes abrigam larvas e juvenis",
+          [
+            "raiz",
+            "abrigo",
+            "larva"
+          ]
+        ],
+        [
+          "sustenta os estoques pesqueiros",
+          [
+            "pesca",
+            "estoque",
+            "peixe"
+          ]
+        ],
+        [
+          "protecao integral admite so uso indireto",
+          [
+            "integral",
+            "indireto",
+            "sustentavel"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Geografia",
+    "topic": "Blocos Econômicos",
+    "sections": [
+      {
+        "title": "Graus de integração",
+        "content": "A integração econômica tem níveis crescentes: zona de livre-comércio elimina tarifas entre membros; união aduaneira acrescenta tarifa externa comum; mercado comum permite livre circulação de bens, serviços, capitais e pessoas; união econômica e monetária adota política econômica e moeda comuns, como no caso do euro."
+      },
+      {
+        "title": "Os principais blocos",
+        "content": "A União Europeia é o caso mais avançado, com moeda única em parte dos membros. O Mercosul é união aduaneira imperfeita, com exceções à tarifa externa comum. O antigo Nafta foi substituído pelo USMCA, uma zona de livre-comércio. Na Ásia, destacam-se a Asean e a RCEP, além de acordos bilaterais numerosos."
+      },
+      {
+        "title": "Vantagens e tensões",
+        "content": "Blocos ampliam mercados, atraem investimentos e aumentam poder de negociação. Em contrapartida, exigem cessão de autonomia, expõem setores frágeis à concorrência e podem aprofundar assimetrias internas, com regiões e países ganhando ou perdendo de forma desigual — tensão evidente nas crises europeias e nas disputas comerciais do Mercosul."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Classificar a União Europeia apenas como bloco econômico ignora sua dimensão política e institucional. Outro deslize é chamar o Mercosul de mercado comum pleno, quando a livre circulação de pessoas e a tarifa comum têm exceções. E confundir zona de livre-comércio com união aduaneira, distinguidas pela tarifa externa comum."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Qual a diferença entre zona de livre-comércio e união aduaneira? Responda antes de conferir: a primeira elimina tarifas entre os membros; a segunda acrescenta uma tarifa externa comum diante de terceiros. Agora classifique o Mercosul: união aduaneira imperfeita, porque mantém exceções à tarifa externa comum."
+      }
+    ],
+    "recall": {
+      "prompt": "Diferencie zona de livre-comércio de união aduaneira e classifique o Mercosul.",
+      "elements": [
+        [
+          "a zona elimina tarifas internas",
+          [
+            "tarifa",
+            "interna",
+            "livre-comercio"
+          ]
+        ],
+        [
+          "a uniao aduaneira tem tarifa externa comum",
+          [
+            "externa comum",
+            "tec",
+            "aduaneira"
+          ]
+        ],
+        [
+          "o Mercosul e uniao aduaneira imperfeita",
+          [
+            "mercosul",
+            "imperfeita",
+            "excecao"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Geografia",
+    "topic": "Cartografia Digital",
+    "sections": [
+      {
+        "title": "Novas tecnologias de mapeamento",
+        "content": "O sensoriamento remoto capta informações da superfície por satélites e aeronaves, sem contato direto, registrando faixas do espectro que o olho não vê e revelando desmatamento, queimadas, umidade do solo e expansão urbana. O GPS fornece posicionamento preciso por triangulação de sinais de satélites, e o GNSS reúne os diferentes sistemas existentes."
+      },
+      {
+        "title": "Sistemas de Informação Geográfica",
+        "content": "Os SIGs armazenam, cruzam e analisam dados georreferenciados em camadas: relevo, hidrografia, uso do solo, população, infraestrutura. Sobrepor camadas permite responder perguntas espaciais complexas, como identificar áreas de risco de deslizamento combinando declividade, tipo de solo, chuva e ocupação urbana."
+      },
+      {
+        "title": "Usos e implicações",
+        "content": "A cartografia digital é usada em planejamento urbano, monitoramento ambiental, agricultura de precisão, logística e defesa civil. Também levanta questões sobre privacidade e sobre quem controla os dados, já que mapas e imagens de alta resolução são produzidos e distribuídos por poucos atores estatais e empresariais."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Tratar imagem de satélite como fotografia comum ignora que muitas usam faixas do espectro invisíveis e cores falsas atribuídas na interpretação. Outro deslize é confundir GPS, que localiza, com SIG, que analisa. E supor que o mapa digital é neutro, quando as escolhas de recorte e de dados carregam intenções."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Como um SIG identifica áreas de risco de deslizamento? Responda antes de conferir: sobrepondo camadas de declividade, tipo de solo, precipitação e ocupação urbana, e cruzando-as para localizar onde os fatores coincidem. Agora diga a diferença entre GPS e sensoriamento remoto: um fornece posição, o outro capta informações da superfície a distância."
+      }
+    ],
+    "recall": {
+      "prompt": "Como um SIG identifica áreas de risco? E qual a diferença entre GPS e sensoriamento remoto?",
+      "elements": [
+        [
+          "sobreposicao de camadas de dados",
+          [
+            "camada",
+            "sobrepor",
+            "cruzar"
+          ]
+        ],
+        [
+          "declividade, solo e ocupacao",
+          [
+            "declividade",
+            "solo",
+            "ocupacao"
+          ]
+        ],
+        [
+          "o GPS localiza e o sensoriamento capta a superficie",
+          [
+            "gps",
+            "posicao",
+            "satelite"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Geografia",
+    "topic": "Clima Mundial",
+    "sections": [
+      {
+        "title": "Fatores climáticos",
+        "content": "O clima de um lugar resulta da combinação de latitude, altitude, maritimidade e continentalidade, correntes marítimas, relevo e massas de ar. A latitude determina a incidência solar; a altitude reduz a temperatura cerca de 6 °C por quilômetro; e a proximidade do mar suaviza as amplitudes térmicas por causa do alto calor específico da água."
+      },
+      {
+        "title": "Tipos climáticos",
+        "content": "Os grandes tipos vão do equatorial, quente e úmido o ano todo, ao tropical com estação seca, ao desértico, ao mediterrâneo com verão seco, ao temperado, ao frio e ao polar. Os climas de montanha e o semiárido completam o quadro. Cada tipo se associa a uma formação vegetal característica, ligação frequentemente cobrada."
+      },
+      {
+        "title": "Circulação atmosférica",
+        "content": "O aquecimento desigual gera células de circulação: ar quente sobe no equador, gerando baixa pressão e chuvas; desce por volta dos 30° de latitude, criando zonas de alta pressão e os grandes desertos. Correntes marítimas frias, ao longo de costas ocidentais, reforçam a aridez, como no Atacama e no Namibe."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Explicar os desertos apenas pela alta temperatura ignora que a causa direta é a pouca precipitação, ligada à circulação atmosférica e às correntes. Outro deslize é confundir tempo, que é o estado momentâneo, com clima, que é o padrão de longo período. E esquecer o efeito da altitude ao comparar cidades de mesma latitude."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que existem desertos em torno de 30° de latitude nos dois hemisférios? Responda antes de conferir: ali o ar descende após ter perdido umidade no equador, formando zonas de alta pressão com pouca formação de nuvens. Agora explique por que Quito, na linha do Equador, é fria: está a grande altitude nos Andes."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que há desertos em torno de 30° de latitude? E por que Quito é fria estando no Equador?",
+      "elements": [
+        [
+          "ar descendente forma alta pressao",
+          [
+            "descende",
+            "alta pressao",
+            "seco"
+          ]
+        ],
+        [
+          "pouca formacao de nuvens e chuva",
+          [
+            "nuvem",
+            "chuva",
+            "umidade"
+          ]
+        ],
+        [
+          "a altitude reduz a temperatura",
+          [
+            "altitude",
+            "andes",
+            "alta"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Geografia",
+    "topic": "Climatologia do Brasil",
+    "sections": [
+      {
+        "title": "Fatores e massas de ar",
+        "content": "O clima brasileiro é definido pela posição majoritariamente tropical, pela extensão latitudinal, pela maritimidade e pelo relevo, e é comandado pela atuação de massas de ar: equatorial continental e atlântica, tropical continental e atlântica, e polar atlântica, cujo avanço provoca as friagens no sul e no centro-oeste."
+      },
+      {
+        "title": "Os tipos climáticos",
+        "content": "Predominam o equatorial na Amazônia, quente e úmido o ano todo; o tropical no Brasil central, com verão chuvoso e inverno seco; o tropical de altitude no sudeste, com temperaturas mais amenas; o tropical atlântico no litoral; o semiárido no sertão nordestino; e o subtropical no sul, com quatro estações e chuvas bem distribuídas."
+      },
+      {
+        "title": "Fenômenos e variabilidade",
+        "content": "O El Niño e a La Niña alteram o regime de chuvas, tipicamente com seca no Nordeste e chuvas intensas no Sul durante o El Niño. A Zona de Convergência do Atlântico Sul concentra chuvas no verão do sudeste e centro-oeste, e os rios voadores transportam umidade amazônica para o centro-sul do país."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Explicar a seca do sertão pela ausência de rios ignora que a causa é climática, ligada à circulação atmosférica e à irregularidade das chuvas. Outro deslize é chamar o semiárido de deserto. E confundir tropical de altitude com subtropical ao interpretar dados de temperatura de cidades como São Paulo e Curitiba."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que São Paulo é mais fria que o esperado para sua latitude? Responda antes de conferir: está em planalto, e a altitude reduz a temperatura média, caracterizando o clima tropical de altitude. Agora diga o efeito típico do El Niño no Brasil: seca no Nordeste e chuvas acima da média no Sul."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que São Paulo é mais fria que o esperado para sua latitude? Qual o efeito típico do El Niño no Brasil?",
+      "elements": [
+        [
+          "a altitude reduz a temperatura",
+          [
+            "altitude",
+            "planalto",
+            "tropical de altitude"
+          ]
+        ],
+        [
+          "clima tropical de altitude",
+          [
+            "altitude",
+            "tropical"
+          ]
+        ],
+        [
+          "seca no Nordeste e chuva no Sul",
+          [
+            "nordeste",
+            "sul",
+            "seca"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Geografia",
+    "topic": "Combustíveis Fósseis e Biocombustíveis no Brasil",
+    "sections": [
+      {
+        "title": "Petróleo e pré-sal",
+        "content": "A produção brasileira cresceu fortemente com o pré-sal, camada de reservatórios sob espessa camada de sal na costa sudeste, o que exigiu tecnologia de exploração em águas ultraprofundas. O país passou a exportador líquido de petróleo bruto, embora ainda importe derivados por limitações de capacidade de refino."
+      },
+      {
+        "title": "Gás natural e carvão",
+        "content": "O gás natural é usado em indústria, geração térmica e transporte, com produção associada ao petróleo e importações históricas da Bolívia. O carvão mineral brasileiro é de baixa qualidade, concentrado no sul, e tem papel modesto, sendo usado sobretudo em usinas termelétricas próximas às jazidas."
+      },
+      {
+        "title": "Biocombustíveis",
+        "content": "O etanol de cana consolidou-se desde o Proálcool, favorecido pela alta produtividade da cana e pelos motores flex, e o biodiesel é produzido a partir de soja e outras oleaginosas. As vantagens envolvem menor emissão líquida e geração de empregos; as críticas envolvem uso de terra, mecanização e concentração fundiária."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que o Brasil é autossuficiente em combustíveis é impreciso: exporta petróleo bruto e importa derivados, como diesel. Outro deslize é tratar o etanol como isento de impacto ambiental. E confundir pré-sal, que é uma camada geológica de reservatórios, com um campo específico de petróleo."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que o Brasil exporta petróleo e ainda importa diesel? Responda antes de conferir: a produção de óleo cru cresceu mais que a capacidade de refino, de modo que parte do bruto é exportada e derivados são importados. Agora diga por que o motor flex foi decisivo para o etanol: permitiu ao consumidor escolher o combustível conforme o preço, dando escala e estabilidade ao mercado."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que o Brasil exporta petróleo e importa diesel? Qual o papel do motor flex no etanol?",
+      "elements": [
+        [
+          "a producao de cru superou a capacidade de refino",
+          [
+            "refino",
+            "cru",
+            "capacidade"
+          ]
+        ],
+        [
+          "parte dos derivados e importada",
+          [
+            "derivado",
+            "importa",
+            "diesel"
+          ]
+        ],
+        [
+          "o flex permite escolher pelo preco",
+          [
+            "flex",
+            "preco",
+            "escolha"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Geografia",
+    "topic": "Conflitos no Mundo Árabe",
+    "sections": [
+      {
+        "title": "Primavera Árabe",
+        "content": "A partir de 2010, protestos contra desemprego, carestia e autoritarismo se espalharam pela Tunísia, Egito, Líbia, Síria, Iêmen e outros países. Os desfechos foram muito distintos: transição institucional na Tunísia, restauração autoritária no Egito, e guerras prolongadas na Líbia, na Síria e no Iêmen, com forte envolvimento externo."
+      },
+      {
+        "title": "Guerras e atores externos",
+        "content": "Os conflitos sírio, líbio e iemenita se internacionalizaram, com potências regionais e globais apoiando lados distintos. Isso prolongou as guerras e agravou crises humanitárias, com milhões de deslocados internos e refugiados, pressionando países vizinhos como Líbano, Jordânia e Turquia e alimentando a crise migratória europeia."
+      },
+      {
+        "title": "Fatores estruturais",
+        "content": "Além do autoritarismo, pesam a dependência de hidrocarbonetos, a desigualdade, o desemprego jovem em populações majoritariamente jovens, a escassez hídrica e fronteiras herdadas do período colonial. A combinação desses fatores explica a persistência da instabilidade mesmo após mudanças de governo."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Chamar a Primavera Árabe de fracasso generalizado ignora as diferenças de trajetória entre os países. Outro deslize é ler os conflitos apenas pela clivagem entre sunitas e xiitas, sem considerar interesses geopolíticos e econômicos. E tratar o mundo árabe como bloco político unificado, quando há rivalidades profundas entre seus Estados."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que os desfechos da Primavera Árabe foram tão distintos? Responda antes de conferir: as trajetórias dependeram da força das instituições, do papel dos militares, da coesão das oposições e do envolvimento de potências externas em cada país. Agora explique por que as guerras se prolongaram: o apoio externo a lados opostos manteve a capacidade de combate das partes."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a Primavera Árabe teve desfechos diferentes? E por que essas guerras se prolongaram?",
+      "elements": [
+        [
+          "instituicoes e papel dos militares variaram",
+          [
+            "instituicao",
+            "militar",
+            "oposicao"
+          ]
+        ],
+        [
+          "cada pais teve trajetoria propria",
+          [
+            "tunisia",
+            "egito",
+            "siria"
+          ]
+        ],
+        [
+          "o apoio externo a lados opostos prolongou os conflitos",
+          [
+            "externo",
+            "potencia",
+            "apoio"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Geografia",
     "topic": "Coordenadas Geográficas",
     "sections": [
       {
@@ -8286,6 +8835,116 @@
         "content": "Um ponto de 5° N passa para 5° S mantendo longitude 45° O. Ele cruzou o equador e deslocou-se para o sul, mas não cruzou Greenwich. A variação angular de latitude foi 10°, não zero. Explique por que dois pontos com latitudes de mesmo valor absoluto podem estar em hemisférios diferentes."
       }
     ]
+  },
+  {
+    "subject": "Geografia",
+    "topic": "Desafios Ambientais do Século XXI",
+    "sections": [
+      {
+        "title": "Mudanças climáticas",
+        "content": "O aumento da concentração de gases de efeito estufa eleva a temperatura média global, altera regimes de chuva, intensifica eventos extremos e eleva o nível do mar. Os impactos são desiguais: países com menor responsabilidade histórica nas emissões tendem a sofrer os efeitos mais graves e a ter menos recursos para se adaptar."
+      },
+      {
+        "title": "Perda de biodiversidade e recursos",
+        "content": "A destruição de habitats, a poluição, a introdução de espécies exóticas e a sobre-exploração provocam extinções em ritmo muito superior ao natural. Somam-se a degradação dos solos, a escassez hídrica e a crise dos resíduos, com destaque para os plásticos, cuja presença nos oceanos se tornou marcador da era atual."
+      },
+      {
+        "title": "Governança e respostas",
+        "content": "As respostas se organizam em acordos multilaterais, como o Acordo de Paris e os Objetivos de Desenvolvimento Sustentável, e em políticas nacionais de transição energética, conservação e economia circular. A tensão central está entre a urgência ambiental e os interesses econômicos de curto prazo, tema recorrente em redação e questões discursivas."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Tratar desenvolvimento sustentável como sinônimo de preservação intocada é impreciso: o conceito articula dimensões ambiental, social e econômica. Outro deslize é atribuir responsabilidade igual a todos os países, ignorando o princípio das responsabilidades comuns porém diferenciadas. E confundir mitigação, que reduz causas, com adaptação, que reduz impactos."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Diferencie mitigação de adaptação antes de conferir: mitigar é reduzir emissões e conter a causa do aquecimento; adaptar é preparar territórios e populações para impactos já inevitáveis, como obras de contenção e sistemas de alerta. Agora explique o princípio das responsabilidades comuns porém diferenciadas: todos têm dever, mas as obrigações variam conforme a responsabilidade histórica e a capacidade."
+      }
+    ],
+    "recall": {
+      "prompt": "Diferencie mitigação de adaptação e explique o princípio das responsabilidades comuns porém diferenciadas.",
+      "elements": [
+        [
+          "mitigar reduz as emissoes",
+          [
+            "mitigacao",
+            "emissao",
+            "causa"
+          ]
+        ],
+        [
+          "adaptar prepara para impactos inevitaveis",
+          [
+            "adaptacao",
+            "impacto",
+            "preparar"
+          ]
+        ],
+        [
+          "obrigacoes variam pela responsabilidade historica",
+          [
+            "historica",
+            "diferenciada",
+            "capacidade"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Geografia",
+    "topic": "Desigualdades Globais",
+    "sections": [
+      {
+        "title": "Medindo desigualdade",
+        "content": "O PIB per capita mede a média da renda, mas esconde a distribuição. O IDH combina renda, educação e longevidade, e o Índice de Gini mede concentração de renda, variando de 0 a 1. Comparar esses indicadores revela que crescimento econômico não implica automaticamente melhora nas condições de vida da maioria."
+      },
+      {
+        "title": "Centro e periferia",
+        "content": "A divisão internacional do trabalho reserva às economias centrais as etapas de maior valor e às periféricas a exportação de bens primários e a montagem industrial. Termos como Norte e Sul globais, países desenvolvidos e em desenvolvimento tentam nomear essa hierarquia, todos com limitações, já que os grupos são internamente heterogêneos."
+      },
+      {
+        "title": "Desigualdades dentro dos países",
+        "content": "A desigualdade não é apenas entre países: cresceu dentro deles, inclusive nos mais ricos, com concentração de renda no topo e estagnação das faixas médias. Isso alimenta tensões políticas e migrações internas, e explica por que médias nacionais são insuficientes para descrever condições de vida."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Usar PIB total para avaliar qualidade de vida é erro clássico: um país populoso pode ter PIB alto e renda média baixa. Outro deslize é ler o Gini invertido, achando que valor maior significa mais igualdade. E tratar países em desenvolvimento como grupo homogêneo, ignorando diferenças enormes entre eles."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Dois países têm o mesmo PIB per capita, mas Gini muito diferente. O que isso indica? Responda antes de conferir: a renda média é a mesma, mas sua distribuição é muito mais concentrada no país de Gini maior, com implicações diretas em pobreza e acesso a serviços. Agora diga o que o IDH acrescenta ao PIB: incorpora educação e longevidade, indo além da renda."
+      }
+    ],
+    "recall": {
+      "prompt": "Dois países com mesmo PIB per capita e Gini distintos: o que isso indica? O que o IDH acrescenta?",
+      "elements": [
+        [
+          "a renda media e igual mas a distribuicao difere",
+          [
+            "distribuicao",
+            "concentracao",
+            "media"
+          ]
+        ],
+        [
+          "Gini maior indica mais desigualdade",
+          [
+            "gini",
+            "maior",
+            "desigual"
+          ]
+        ],
+        [
+          "o IDH inclui educacao e longevidade",
+          [
+            "idh",
+            "educacao",
+            "longevidade"
+          ]
+        ]
+      ]
+    }
   },
   {
     "subject": "Geografia",
@@ -8315,6 +8974,831 @@
   },
   {
     "subject": "Geografia",
+    "topic": "Dinâmica Demográfica",
+    "sections": [
+      {
+        "title": "Transição demográfica",
+        "content": "A teoria da transição demográfica descreve a passagem de altas taxas de natalidade e mortalidade para taxas baixas. Na fase intermediária, a mortalidade cai antes da natalidade e a população cresce rapidamente. O Brasil atravessou essa transição em ritmo acelerado, e hoje apresenta fecundidade abaixo do nível de reposição."
+      },
+      {
+        "title": "Estrutura etária",
+        "content": "A pirâmide etária brasileira estreitou a base e alargou o topo, indicando envelhecimento. O país vive o bônus demográfico, período em que a população em idade ativa é proporcionalmente maior que a dependente, janela que se fecha à medida que a proporção de idosos cresce e exige adaptação da previdência e da saúde."
+      },
+      {
+        "title": "Indicadores",
+        "content": "Taxa de natalidade e mortalidade medem nascimentos e óbitos por mil habitantes; crescimento vegetativo é a diferença entre elas; fecundidade indica filhos por mulher; expectativa de vida resume as condições de saúde. Comparar esses indicadores entre países e regiões é a habilidade mais cobrada em questões demográficas."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Confundir crescimento vegetativo com crescimento total é erro comum: o total inclui saldo migratório. Outro deslize é ler pirâmide etária invertendo os sexos ou as faixas. E supor que queda da natalidade decorre apenas de políticas de controle, ignorando urbanização, escolaridade feminina e acesso a métodos contraceptivos."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a pirâmide etária brasileira mudou de forma? Responda antes de conferir: a queda da fecundidade estreitou a base e o aumento da expectativa de vida alargou o topo, resultado da urbanização, da escolaridade e do acesso à saúde. Agora explique o bônus demográfico: proporção maior de população em idade ativa em relação à dependente, com potencial de crescimento econômico se houver emprego e educação."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a pirâmide etária brasileira mudou de forma? O que é o bônus demográfico?",
+      "elements": [
+        [
+          "queda da fecundidade estreitou a base",
+          [
+            "fecundidade",
+            "base",
+            "queda"
+          ]
+        ],
+        [
+          "aumento da expectativa alargou o topo",
+          [
+            "expectativa",
+            "topo",
+            "idoso"
+          ]
+        ],
+        [
+          "mais populacao em idade ativa que dependente",
+          [
+            "ativa",
+            "dependente",
+            "bonus"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Geografia",
+    "topic": "Do Mundo Bipolar ao Multipolar",
+    "sections": [
+      {
+        "title": "A ordem bipolar",
+        "content": "Depois de 1945, o mundo se organizou em torno de dois blocos: Estados Unidos, capitalista, e União Soviética, socialista, cada um com sua aliança militar, a OTAN e o Pacto de Varsóvia. A disputa não se deu por confronto direto entre as superpotências, mas por corrida armamentista, espacial, ideológica e por conflitos periféricos."
+      },
+      {
+        "title": "A transição",
+        "content": "A crise econômica soviética, as reformas de Gorbachev e a queda do Muro de Berlim, em 1989, levaram à dissolução da URSS em 1991. O momento seguinte foi lido como unipolaridade norte-americana, com hegemonia militar, econômica e cultural, e como avanço da globalização liberal em escala planetária."
+      },
+      {
+        "title": "A multipolaridade atual",
+        "content": "A ascensão da China, a recuperação estratégica da Rússia, o peso da União Europeia e a emergência de países como Índia e Brasil reconfiguraram o cenário. O poder hoje é distribuído de forma desigual entre várias dimensões: os Estados Unidos seguem à frente militarmente, mas a economia e a tecnologia são disputadas por múltiplos polos."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Chamar a Guerra Fria de conflito sem guerras ignora os conflitos periféricos como Coreia, Vietnã e Afeganistão. Outro deslize é tratar a multipolaridade como equilíbrio entre iguais, quando as assimetrias permanecem grandes. E confundir fim da URSS com fim do socialismo no mundo, já que China, Cuba e Vietnã seguiram trajetórias próprias."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a Guerra Fria é chamada assim se houve guerras? Responda antes de conferir: não houve confronto militar direto entre as superpotências, mas houve conflitos armados em terceiros países, financiados e apoiados pelos dois blocos. Agora explique por que a ordem atual é chamada multipolar: o poder está distribuído entre vários centros, em dimensões econômicas, militares e tecnológicas distintas."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a Guerra Fria recebe esse nome se houve guerras? E o que caracteriza a ordem multipolar atual?",
+      "elements": [
+        [
+          "nao houve confronto direto entre as superpotencias",
+          [
+            "direto",
+            "superpotencia",
+            "confronto"
+          ]
+        ],
+        [
+          "houve conflitos periféricos como Coreia e Vietna",
+          [
+            "coreia",
+            "vietna",
+            "periferico"
+          ]
+        ],
+        [
+          "o poder se distribui entre varios centros",
+          [
+            "varios",
+            "centros",
+            "polos"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Geografia",
+    "topic": "Domínios Morfoclimáticos",
+    "sections": [
+      {
+        "title": "A proposta de Ab'Sáber",
+        "content": "Aziz Ab'Sáber propôs a divisão do território em domínios morfoclimáticos, que integram clima, relevo, solo, vegetação e hidrografia numa mesma unidade de paisagem. São seis domínios: amazônico, cerrado, caatinga, mares de morros, araucárias e pradarias, além das faixas de transição entre eles."
+      },
+      {
+        "title": "Características de cada domínio",
+        "content": "O domínio amazônico reúne clima equatorial, terras baixas e floresta densa; o cerrado, planaltos e chapadas com savana; a caatinga, depressões semiáridas com vegetação xerófila; os mares de morros, relevo mamelonar úmido do sudeste com solos profundos; as araucárias, planaltos subtropicais; e as pradarias, coxilhas gaúchas."
+      },
+      {
+        "title": "Faixas de transição",
+        "content": "Entre os domínios existem áreas de transição de grande extensão, como a Mata dos Cocais, o Agreste, o Pantanal e o Meio-Norte, que combinam elementos dos domínios vizinhos. Reconhecê-las evita leituras rígidas do território e explica por que limites nos mapas são zonas, e não linhas."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Tratar domínio morfoclimático como sinônimo de bioma é impreciso: o domínio integra também relevo, solo e hidrografia, não apenas vegetação. Outro deslize é ignorar as faixas de transição. E confundir mares de morros, que é relevo mamelonar, com formação vegetal específica."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "O que distingue domínio morfoclimático de bioma? Responda antes de conferir: o domínio é uma unidade de paisagem que integra clima, relevo, solos, vegetação e hidrografia, enquanto o bioma se define principalmente pela vegetação e pela fauna associadas ao clima. Agora cite duas faixas de transição: a Mata dos Cocais e o Agreste."
+      }
+    ],
+    "recall": {
+      "prompt": "O que distingue domínio morfoclimático de bioma? Cite duas faixas de transição.",
+      "elements": [
+        [
+          "o dominio integra relevo, solo e hidrografia",
+          [
+            "relevo",
+            "solo",
+            "hidrografia"
+          ]
+        ],
+        [
+          "o bioma se define sobretudo pela vegetacao",
+          [
+            "vegetacao",
+            "bioma",
+            "fauna"
+          ]
+        ],
+        [
+          "Mata dos Cocais e Agreste sao transicoes",
+          [
+            "cocais",
+            "agreste",
+            "transicao"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Geografia",
+    "topic": "Energia Elétrica no Brasil",
+    "sections": [
+      {
+        "title": "Predomínio hidrelétrico",
+        "content": "A geração brasileira é historicamente dominada por hidrelétricas, favorecidas pelo potencial dos rios de planalto. Isso dá ao país uma matriz elétrica de baixa emissão, mas com dependência do regime de chuvas: em anos secos, o nível dos reservatórios cai e é preciso acionar termelétricas mais caras e poluentes."
+      },
+      {
+        "title": "Expansão de eólica e solar",
+        "content": "O Nordeste tornou-se polo eólico, com ventos constantes e de boa qualidade, e a geração solar cresceu rapidamente, incluindo a geração distribuída em telhados. Essas fontes complementam bem o regime hídrico, mas exigem investimento em transmissão para levar energia das áreas de geração aos centros de consumo."
+      },
+      {
+        "title": "Desafios do sistema",
+        "content": "O sistema interligado nacional permite transferir energia entre regiões, aproveitando a diversidade de regimes. Os desafios incluem perdas e custos de transmissão, impactos socioambientais de novas usinas, sobretudo na Amazônia, e a necessidade de armazenamento e flexibilidade para lidar com a variabilidade das renováveis."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que a energia hidrelétrica não tem impacto ambiental ignora alagamento de áreas, alteração de ecossistemas fluviais e deslocamento de populações. Outro deslize é atribuir apagões apenas à falta de geração, quando falhas de transmissão também os causam. E confundir geração distribuída com geração centralizada."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a expansão eólica no Nordeste combina bem com as hidrelétricas? Responda antes de conferir: os ventos são mais intensos justamente no período seco, quando os reservatórios estão mais baixos, o que permite complementaridade sazonal. Agora explique por que a transmissão é gargalo: as áreas de maior geração renovável ficam distantes dos principais centros de consumo."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a eólica do Nordeste complementa as hidrelétricas? E por que a transmissão é um gargalo?",
+      "elements": [
+        [
+          "os ventos sao mais fortes no periodo seco",
+          [
+            "seco",
+            "vento",
+            "complementar"
+          ]
+        ],
+        [
+          "os reservatorios estao baixos nesse periodo",
+          [
+            "reservatorio",
+            "baixo",
+            "chuva"
+          ]
+        ],
+        [
+          "a geracao esta distante dos centros de consumo",
+          [
+            "transmissao",
+            "distancia",
+            "consumo"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Geografia",
+    "topic": "Energia Elétrica no Mundo",
+    "sections": [
+      {
+        "title": "Fontes da geração mundial",
+        "content": "A geração elétrica mundial ainda depende fortemente de carvão e gás natural, com participação crescente de renováveis. A nuclear tem peso relevante em países como França e Coreia do Sul, e a hidráulica é decisiva onde há potencial hídrico, como Brasil, Canadá e Noruega. Cada matriz reflete recursos disponíveis e escolhas políticas."
+      },
+      {
+        "title": "Renováveis e seus desafios",
+        "content": "Solar e eólica tiveram queda acentuada de custo e crescimento rápido, mas são intermitentes, o que exige armazenamento, redes flexíveis e fontes complementares. Isso torna as baterias, e portanto o lítio, o cobalto e o níquel, insumos estratégicos, e faz da expansão de linhas de transmissão uma condição da transição."
+      },
+      {
+        "title": "Nuclear e o debate",
+        "content": "A energia nuclear não emite gases de efeito estufa na operação e oferece geração estável, mas envolve custos elevados, risco de acidentes, como Chernobyl e Fukushima, e a questão do destino dos rejeitos radioativos. O debate sobre seu papel na descarbonização voltou à agenda com a urgência climática."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Supor que o mundo já gera a maior parte da eletricidade por renováveis é erro factual: fósseis ainda respondem por parcela majoritária. Outro deslize é ignorar a intermitência ao comparar fontes. E tratar a energia nuclear como renovável, quando o urânio é recurso finito."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a intermitência limita solar e eólica? Responda antes de conferir: a geração varia com sol e vento e nem sempre coincide com a demanda, exigindo armazenamento, fontes complementares e redes capazes de equilibrar oferta e consumo. Agora classifique a energia nuclear: não renovável, porque o urânio é finito, ainda que não emita gases de efeito estufa na operação."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a intermitência limita solar e eólica? A energia nuclear é renovável?",
+      "elements": [
+        [
+          "a geracao varia com sol e vento",
+          [
+            "sol",
+            "vento",
+            "varia"
+          ]
+        ],
+        [
+          "exige armazenamento e fontes complementares",
+          [
+            "armazenamento",
+            "bateria",
+            "complementar"
+          ]
+        ],
+        [
+          "a nuclear nao e renovavel porque o uranio e finito",
+          [
+            "uranio",
+            "finito",
+            "nao renovavel"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Geografia",
+    "topic": "Estrutura Ativa da População",
+    "sections": [
+      {
+        "title": "População economicamente ativa",
+        "content": "A população em idade ativa compreende as faixas etárias aptas ao trabalho; a população economicamente ativa reúne ocupados e desempregados que procuram trabalho. Quem não procura emprego está fora da força de trabalho, o que explica por que a taxa de desemprego pode cair sem que o emprego cresça, quando pessoas desistem de procurar."
+      },
+      {
+        "title": "Setores da economia",
+        "content": "O setor primário reúne agropecuária e extrativismo; o secundário, indústria e construção; o terciário, comércio e serviços. Com o desenvolvimento, o emprego migra do primário para o secundário e depois para o terciário. No Brasil, o terciário concentra a maior parte dos ocupados, com forte presença de informalidade."
+      },
+      {
+        "title": "Trabalho e desigualdade",
+        "content": "Informalidade, subutilização, desalento e disparidades por gênero, raça e região marcam o mercado de trabalho brasileiro. Mulheres e pessoas negras recebem em média menos que homens e brancos em ocupações equivalentes, e as plataformas digitais criaram novas formas de trabalho com proteção social reduzida."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Interpretar queda do desemprego como melhora automática ignora o desalento, que retira pessoas da força de trabalho. Outro deslize é classificar a indústria de alimentos como setor primário, quando o processamento é secundário. E confundir população em idade ativa com população economicamente ativa."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Como a taxa de desemprego pode cair sem aumento de empregos? Responda antes de conferir: se pessoas desistem de procurar trabalho, deixam de ser contadas como desempregadas e saem da população economicamente ativa, reduzindo a taxa sem melhora real. Agora classifique uma usina de açúcar: setor secundário, porque processa a matéria-prima agrícola."
+      }
+    ],
+    "recall": {
+      "prompt": "Como a taxa de desemprego pode cair sem novos empregos? Em que setor está uma usina de açúcar?",
+      "elements": [
+        [
+          "pessoas desistem de procurar trabalho",
+          [
+            "desalento",
+            "desiste",
+            "procura"
+          ]
+        ],
+        [
+          "saem da populacao economicamente ativa",
+          [
+            "pea",
+            "forca de trabalho",
+            "contagem"
+          ]
+        ],
+        [
+          "a usina e do setor secundario",
+          [
+            "secundario",
+            "processa",
+            "industria"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Geografia",
+    "topic": "Estrutura Étnica e Fluxos Migratórios",
+    "sections": [
+      {
+        "title": "Formação da população brasileira",
+        "content": "A população brasileira resulta do encontro, marcado por violência e desigualdade, entre povos indígenas originários, africanos escravizados e imigrantes europeus e asiáticos. Cada componente deixou marcas na cultura, na língua, na religiosidade e na distribuição espacial, e o mito da democracia racial encobriu por muito tempo o racismo estrutural."
+      },
+      {
+        "title": "Imigração histórica",
+        "content": "A partir do século XIX, chegaram italianos, portugueses, espanhóis, alemães, japoneses e sírio-libaneses, atraídos pelo café e pela colonização do sul. A imigração japonesa a partir de 1908 fez do Brasil o país com a maior população de origem japonesa fora do Japão, concentrada sobretudo em São Paulo e no Paraná."
+      },
+      {
+        "title": "Migrações internas e recentes",
+        "content": "O êxodo rural e as migrações nordestinas para o Sudeste marcaram o século XX, seguidas por fluxos para a fronteira agrícola no Centro-Oeste e no Norte. Recentemente, cresceram os fluxos de haitianos, venezuelanos e africanos para o Brasil, além do movimento de retorno de migrantes ao Nordeste em períodos de crescimento regional."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Tratar o Brasil como país sem racismo por causa da miscigenação é o erro mais grave do tópico. Outro deslize é confundir migração de retorno com imigração internacional. E supor que a imigração japonesa se concentrou no Norte, quando o destino principal foi o interior paulista e o norte do Paraná."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que o fluxo nordestino para o Sudeste foi tão intenso no século XX? Responda antes de conferir: a concentração industrial no Sudeste oferecia emprego enquanto a estrutura fundiária, a seca e a falta de oportunidades pressionavam a saída. Agora cite um fluxo imigratório recente para o Brasil: haitianos e venezuelanos, ligados a crises políticas e econômicas nos países de origem."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que houve intensa migração nordestina para o Sudeste? Cite um fluxo imigratório recente.",
+      "elements": [
+        [
+          "a industria concentrada oferecia emprego",
+          [
+            "industria",
+            "emprego",
+            "sudeste"
+          ]
+        ],
+        [
+          "seca e estrutura fundiaria pressionavam a saida",
+          [
+            "seca",
+            "fundiaria",
+            "expulsao"
+          ]
+        ],
+        [
+          "haitianos e venezuelanos chegaram recentemente",
+          [
+            "haitiano",
+            "venezuelano",
+            "recente"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Geografia",
+    "topic": "Gedeconomia Mundial",
+    "sections": [
+      {
+        "title": "Economia e poder",
+        "content": "Geoeconomia é o uso de instrumentos econômicos — comércio, investimento, moeda, tecnologia, sanções — como meios de projeção de poder. A interdependência criada pela globalização virou também um instrumento de pressão, já que interromper fluxos essenciais tornou-se forma de coerção sem uso de força militar."
+      },
+      {
+        "title": "Instrumentos",
+        "content": "Sanções financeiras, controles de exportação de tecnologia, tarifas, subsídios industriais e restrições a investimentos estrangeiros compõem o repertório atual. A disputa em semicondutores é o exemplo mais nítido: poucos países dominam etapas críticas da cadeia, e o acesso a elas se tornou questão estratégica de primeira ordem."
+      },
+      {
+        "title": "Moeda e finanças",
+        "content": "O dólar concentra reservas internacionais, faturamento de commodities e sistemas de pagamento, o que dá aos Estados Unidos capacidade única de aplicar sanções financeiras. Iniciativas de comércio em moedas locais e sistemas alternativos de pagamento buscam reduzir essa dependência, com avanços ainda limitados diante da escala do sistema atual."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Supor que interdependência econômica impede conflitos ignora que ela também cria vulnerabilidades exploráveis. Outro deslize é tratar sanções como sempre eficazes, quando frequentemente geram desvios de comércio e custos para quem as aplica. E confundir geoeconomia com simples comércio internacional."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que o controle de semicondutores virou questão estratégica? Responda antes de conferir: eles são insumo essencial de praticamente todos os setores, e poucas empresas e países dominam etapas críticas da cadeia, o que transforma o acesso em instrumento de poder. Agora explique por que o dólar amplia a capacidade de sanção dos Estados Unidos: a maior parte das transações internacionais passa pelo sistema financeiro em dólar."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que os semicondutores viraram questão estratégica? E por que o dólar amplia a capacidade de sanções dos EUA?",
+      "elements": [
+        [
+          "poucos paises dominam etapas criticas",
+          [
+            "poucos",
+            "cadeia",
+            "critica"
+          ]
+        ],
+        [
+          "sao insumo essencial de todos os setores",
+          [
+            "insumo",
+            "essencial",
+            "tecnologia"
+          ]
+        ],
+        [
+          "as transacoes internacionais passam pelo dolar",
+          [
+            "dolar",
+            "transacao",
+            "sistema financeiro"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Geografia",
+    "topic": "Geografia das Redes Mundiais",
+    "sections": [
+      {
+        "title": "Redes e fluxos",
+        "content": "O espaço geográfico contemporâneo é organizado por redes: de transporte, energia, telecomunicações e finanças. Elas conectam pontos distantes com intensidade maior do que áreas vizinhas, criando uma geografia de nós e conexões que não coincide com a contiguidade territorial — daí se falar em espaço de fluxos além do espaço de lugares."
+      },
+      {
+        "title": "Cidades globais",
+        "content": "Alguns centros concentram sedes de empresas, bolsas, serviços especializados e infraestrutura de conexão: Nova York, Londres, Tóquio, e cada vez mais Xangai, Singapura e Dubai. São nós de comando das redes mundiais, e a hierarquia entre cidades passa a depender mais da conectividade que do tamanho populacional."
+      },
+      {
+        "title": "Infraestrutura digital",
+        "content": "Cabos submarinos, data centers e satélites formam a base física da internet, e sua distribuição é desigual, concentrada em poucas rotas e países. O controle dessa infraestrutura é questão geopolítica, porque define capacidade de vigilância, resiliência e autonomia digital, tema central em disputas envolvendo redes de telecomunicação."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Imaginar a internet como algo imaterial ignora sua base física de cabos e data centers, com localização estratégica. Outro deslize é supor que a rede conecta todos igualmente, quando a exclusão digital é acentuada. E confundir cidade global com capital política ou com a maior cidade de um país."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que São Paulo é mais conectada a Nova York do que a cidades vizinhas do interior? Responda antes de conferir: as redes financeiras, aéreas e de serviços especializados ligam nós de comando entre si, e essa conectividade não depende de proximidade física. Agora explique por que cabos submarinos são questão geopolítica: eles concentram o tráfego mundial de dados e seu controle define autonomia e vigilância."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que uma metrópole pode ser mais conectada a outro país que ao seu interior? E por que cabos submarinos são geopolíticos?",
+      "elements": [
+        [
+          "as redes ligam nos de comando entre si",
+          [
+            "no",
+            "rede",
+            "conectividade"
+          ]
+        ],
+        [
+          "a conectividade nao depende da proximidade",
+          [
+            "proximidade",
+            "distancia",
+            "fluxo"
+          ]
+        ],
+        [
+          "os cabos concentram o trafego de dados",
+          [
+            "cabo",
+            "dados",
+            "controle"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Geografia",
+    "topic": "Geografia das Religiões",
+    "sections": [
+      {
+        "title": "Distribuição espacial",
+        "content": "As grandes religiões têm distribuição espacial reconhecível: cristianismo predominante nas Américas, Europa e África subsaariana; islamismo no norte da África, Oriente Médio e sul e sudeste asiático; hinduísmo na Índia; budismo no leste e sudeste asiáticos. Migrações e conversões tornam esse mapa mais fluido do que aparenta."
+      },
+      {
+        "title": "Religião e território",
+        "content": "A religião marca o espaço em paisagens, calendários, legislações e destinos de peregrinação, como Meca, Jerusalém, Varanasi e Roma. Também define territórios simbólicos e às vezes fronteiras políticas, como na partição da Índia e do Paquistão, em que a distribuição religiosa foi critério de divisão territorial."
+      },
+      {
+        "title": "Laicidade e conflitos",
+        "content": "Estados laicos separam religião e governo, mas o grau de separação varia bastante. Conflitos frequentemente atribuídos à religião envolvem, na maior parte dos casos, disputas por território, recursos e poder político, com a identidade religiosa funcionando como marcador de mobilização mais do que como causa isolada."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Explicar conflitos apenas pela diferença religiosa é simplificação: território, recursos e história colonial costumam ser determinantes. Outro deslize é confundir Estado laico com Estado ateu. E supor que cada país tem uma só religião, ignorando a diversidade interna e o crescimento dos sem religião."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que atribuir um conflito exclusivamente à religião costuma ser insuficiente? Responda antes de conferir: disputas por terra, recursos, poder e heranças coloniais em geral estruturam o conflito, e a identidade religiosa serve de marcador de mobilização. Agora diferencie Estado laico de Estado confessional: o laico separa religião e governo; o confessional adota uma religião oficial."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que explicar um conflito só pela religião é insuficiente? Diferencie Estado laico de confessional.",
+      "elements": [
+        [
+          "territorio e recursos estruturam o conflito",
+          [
+            "territorio",
+            "recurso",
+            "poder"
+          ]
+        ],
+        [
+          "a religiao funciona como marcador de mobilizacao",
+          [
+            "identidade",
+            "mobilizacao",
+            "marcador"
+          ]
+        ],
+        [
+          "o Estado laico separa religiao e governo",
+          [
+            "laico",
+            "separa",
+            "oficial"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Geografia",
+    "topic": "Geografia do Oriente Médio",
+    "sections": [
+      {
+        "title": "Posição e recursos",
+        "content": "O Oriente Médio ocupa posição de articulação entre três continentes e controla passagens estratégicas como os estreitos de Ormuz e de Bab el-Mandeb e o Canal de Suez. Concentra grande parte das reservas mundiais de petróleo, o que fez da região um centro permanente de interesse das potências desde o século XX."
+      },
+      {
+        "title": "Diversidade e clivagens",
+        "content": "A região reúne árabes, persas, turcos, curdos e outros povos, além de divisões religiosas entre sunitas e xiitas e a presença de minorias cristãs e outras. Rivalidades como a de Arábia Saudita e Irã combinam disputas por influência regional, diferenças religiosas e interesses no mercado de petróleo."
+      },
+      {
+        "title": "Conflitos e água",
+        "content": "Além do conflito israelo-palestino, guerras no Iraque, na Síria e no Iêmen deixaram milhões de deslocados. A escassez hídrica é fator estrutural: rios compartilhados, aquíferos superexplorados e dessalinização cara tornam a água tema de segurança nacional em vários países da região."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Tratar o Oriente Médio como um bloco árabe homogêneo é erro: Irã, Turquia e Israel não são países árabes. Outro deslize é explicar todos os conflitos pela religião, ignorando petróleo, água, fronteiras coloniais e disputas de poder. E supor que todo país da região é grande produtor de petróleo."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que o Estreito de Ormuz é estratégico? Responda antes de conferir: por ele passa parcela expressiva do petróleo comercializado por via marítima, de modo que qualquer bloqueio afeta imediatamente os preços mundiais. Agora corrija a afirmação de que a região é toda árabe: Irã é persa, Turquia é turca e Israel tem composição própria."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que o Estreito de Ormuz é estratégico? E por que dizer que o Oriente Médio é todo árabe está errado?",
+      "elements": [
+        [
+          "passa grande parte do petroleo maritimo",
+          [
+            "petroleo",
+            "passagem",
+            "maritimo"
+          ]
+        ],
+        [
+          "um bloqueio afeta os precos mundiais",
+          [
+            "bloqueio",
+            "preco",
+            "mundial"
+          ]
+        ],
+        [
+          "Ira e persa e Turquia e turca",
+          [
+            "ira",
+            "persa",
+            "turquia"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Geografia",
+    "topic": "Geografia do Turismo",
+    "sections": [
+      {
+        "title": "Turismo como atividade econômica",
+        "content": "O turismo movimenta transporte, hospedagem, alimentação, comércio e serviços, e responde por parcela relevante do PIB e do emprego em muitos países. Depende fortemente de infraestrutura e de estabilidade, o que o torna vulnerável a crises econômicas, sanitárias e a conflitos, como mostrou a retração durante a pandemia."
+      },
+      {
+        "title": "Tipos e territórios",
+        "content": "Há turismo de sol e praia, ecoturismo, turismo cultural e histórico, religioso, de negócios, de aventura e rural. Cada modalidade valoriza atributos distintos do território e produz efeitos próprios sobre a paisagem, do litoral verticalizado às cidades históricas tombadas e às áreas naturais com fluxo controlado."
+      },
+      {
+        "title": "Impactos e sustentabilidade",
+        "content": "O turismo gera renda e pode financiar conservação, mas também produz especulação imobiliária, expulsão de moradores, sobrecarga de infraestrutura, geração de resíduos e descaracterização cultural. O debate sobre turismo excessivo em cidades como Veneza e Barcelona e sobre capacidade de carga em áreas naturais tornou-se central."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Tratar o turismo como atividade sempre benéfica ignora a especulação imobiliária e a pressão sobre moradores e recursos locais. Outro deslize é confundir ecoturismo, que pressupõe baixo impacto e educação ambiental, com qualquer turismo em área natural. E supor que o turista internacional é sempre mais importante que o doméstico."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que cidades históricas discutem limitar o número de visitantes? Responda antes de conferir: o excesso de turistas sobrecarrega infraestrutura, encarece moradia, expulsa residentes e degrada o patrimônio, comprometendo o próprio atrativo. Agora diga o que caracteriza o ecoturismo: baixo impacto ambiental, valorização da conservação e envolvimento das comunidades locais."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que cidades históricas limitam visitantes? O que caracteriza o ecoturismo?",
+      "elements": [
+        [
+          "sobrecarga de infraestrutura e do patrimonio",
+          [
+            "infraestrutura",
+            "patrimonio",
+            "sobrecarga"
+          ]
+        ],
+        [
+          "encarecimento e expulsao de moradores",
+          [
+            "moradia",
+            "expulsa",
+            "especulacao"
+          ]
+        ],
+        [
+          "ecoturismo tem baixo impacto e envolve comunidades",
+          [
+            "baixo impacto",
+            "conservacao",
+            "comunidade"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Geografia",
+    "topic": "Geologia e Geomorfologia",
+    "sections": [
+      {
+        "title": "Estrutura da Terra e tempo geológico",
+        "content": "A Terra é formada por crosta, manto e núcleo, e o relevo se apoia na crosta continental e oceânica. O tempo geológico é medido em milhões de anos e organizado em eras: as estruturas cristalinas datam do Pré-Cambriano, as grandes bacias sedimentares se formaram sobretudo no Paleozoico e Mesozoico, e os dobramentos modernos, no Cenozoico."
+      },
+      {
+        "title": "Rochas e ciclo",
+        "content": "Rochas magmáticas resultam do resfriamento do magma; sedimentares, do acúmulo e da compactação de sedimentos; metamórficas, da transformação de outras rochas por pressão e temperatura. O ciclo das rochas mostra que qualquer tipo pode originar outro, e é ele que sustenta a formação de solos e de recursos minerais."
+      },
+      {
+        "title": "Agentes modeladores",
+        "content": "Intemperismo físico e químico decompõe as rochas; erosão transporta o material; sedimentação o deposita. Água corrente, vento, gelo e ondas atuam como agentes externos, e a vegetação protege o solo. A retirada da cobertura vegetal acelera a erosão, provocando ravinas, voçorocas e assoreamento de rios."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Confundir intemperismo com erosão é o erro mais comum: o primeiro decompõe, a segunda transporta. Outro deslize é associar rochas sedimentares apenas a áreas planas. E supor que o relevo é resultado só de agentes internos, esquecendo o desgaste contínuo pelos agentes externos."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que o desmatamento acelera a formação de voçorocas? Responda antes de conferir: sem cobertura vegetal, a água da chuva escoa com maior velocidade e volume, arrastando o solo e aprofundando sulcos até formar grandes cavidades erosivas. Agora diferencie intemperismo de erosão: um decompõe a rocha no lugar, a outra transporta o material resultante."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que o desmatamento acelera a erosão? Diferencie intemperismo de erosão.",
+      "elements": [
+        [
+          "sem vegetacao o escoamento aumenta",
+          [
+            "vegetacao",
+            "escoamento",
+            "chuva"
+          ]
+        ],
+        [
+          "o solo e arrastado formando vocorocas",
+          [
+            "vocoroca",
+            "solo",
+            "arrasta"
+          ]
+        ],
+        [
+          "intemperismo decompoe e erosao transporta",
+          [
+            "decompoe",
+            "transporta",
+            "local"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Geografia",
+    "topic": "Geomorfologia Mundial",
+    "sections": [
+      {
+        "title": "Estruturas geológicas",
+        "content": "O relevo se assenta em três grandes estruturas: os crátons ou escudos cristalinos, muito antigos e desgastados; as bacias sedimentares, formadas pelo acúmulo de sedimentos; e os dobramentos modernos, resultantes de colisões recentes de placas e responsáveis pelas maiores cadeias montanhosas, como Andes e Himalaia."
+      },
+      {
+        "title": "Agentes internos e externos",
+        "content": "Os agentes internos, como tectonismo, vulcanismo e abalos sísmicos, constroem o relevo e são movidos pela energia interna do planeta. Os externos, como intemperismo, erosão e sedimentação, desgastam e reconstroem formas, movidos pela energia solar. O relevo atual é sempre o resultado da disputa entre essas duas forças."
+      },
+      {
+        "title": "Tectônica de placas",
+        "content": "A litosfera é fragmentada em placas que se movem sobre a astenosfera. Limites divergentes criam nova crosta nas dorsais oceânicas; convergentes geram subducção, fossas, cadeias montanhosas e vulcanismo; transformantes produzem falhas com forte sismicidade, como a de San Andreas. O Círculo de Fogo do Pacífico concentra vulcões e terremotos."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que montanhas altas são sempre antigas inverte a lógica: as mais altas costumam ser as mais recentes, ainda pouco desgastadas. Outro deslize é confundir tsunami com maremoto de origem meteorológica. E atribuir todo terremoto a vulcanismo, quando a maioria decorre de movimentação de falhas."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que o Himalaia continua crescendo? Responda antes de conferir: a placa indiana ainda colide com a euroasiática, num limite convergente entre crostas continentais, o que segue elevando a cadeia. Agora diga por que o Japão sofre tantos terremotos: situa-se num encontro de placas com subducção, no Círculo de Fogo do Pacífico."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que o Himalaia continua crescendo? E por que o Japão tem tantos terremotos?",
+      "elements": [
+        [
+          "colisao entre placas convergentes",
+          [
+            "colisao",
+            "convergente",
+            "placa"
+          ]
+        ],
+        [
+          "a placa indiana empurra a euroasiatica",
+          [
+            "indiana",
+            "euroasiatica",
+            "india"
+          ]
+        ],
+        [
+          "o Japao fica em zona de subduccao no Circulo de Fogo",
+          [
+            "subduccao",
+            "circulo de fogo",
+            "pacifico"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Geografia",
+    "topic": "Geopolítica Ambiental",
+    "sections": [
+      {
+        "title": "Meio ambiente como questão de poder",
+        "content": "Recursos naturais, fronteiras ecológicas e acordos climáticos são objetos de disputa política internacional. Quem define metas, quem financia a transição e quem controla tecnologias limpas são perguntas de poder, e não apenas técnicas. O debate sobre soberania na Amazônia é o exemplo brasileiro mais recorrente em prova."
+      },
+      {
+        "title": "Conferências e acordos",
+        "content": "A trajetória vai de Estocolmo, em 1972, à Rio-92, que produziu a Agenda 21 e as convenções do clima e da biodiversidade, ao Protocolo de Kyoto, com metas para países desenvolvidos, e ao Acordo de Paris, com compromissos voluntários de todos os países. Cada etapa reflete o equilíbrio de forças de seu tempo."
+      },
+      {
+        "title": "Conflitos por recursos",
+        "content": "Água compartilhada por vários países, como nas bacias do Nilo e do Tigre-Eufrates, minerais estratégicos para eletrônicos e baterias, e o degelo do Ártico abrindo rotas e reservas são focos de tensão. A transição energética redesenha essas disputas, valorizando lítio, cobalto e terras raras."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Tratar acordos ambientais como decisões puramente técnicas ignora as assimetrias de poder que os moldam. Outro deslize é confundir Protocolo de Kyoto, com metas obrigatórias para parte dos países, com o Acordo de Paris, de compromissos definidos por cada país. E supor que a transição energética elimina disputas por recursos."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a transição energética não elimina conflitos por recursos? Responda antes de conferir: ela desloca a demanda dos combustíveis fósseis para minerais como lítio, cobalto e terras raras, concentrados em poucos países, criando novas dependências. Agora diferencie Kyoto de Paris quanto às metas: obrigatórias para países desenvolvidos em Kyoto, definidas por cada país em Paris."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a transição energética não elimina disputas por recursos? Diferencie Kyoto e Paris quanto às metas.",
+      "elements": [
+        [
+          "a demanda se desloca para minerais estrategicos",
+          [
+            "litio",
+            "cobalto",
+            "mineral"
+          ]
+        ],
+        [
+          "esses recursos estao concentrados em poucos paises",
+          [
+            "concentrado",
+            "dependencia",
+            "poucos"
+          ]
+        ],
+        [
+          "Kyoto tinha metas obrigatorias e Paris tem metas nacionais",
+          [
+            "kyoto",
+            "paris",
+            "voluntaria"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Geografia",
     "topic": "Geopolítica dos Recursos Hídricos",
     "sections": [
       {
@@ -8338,6 +9822,391 @@
         "content": "Uma cidade amplia a captação, mas despeja esgoto sem tratamento no mesmo rio. Por que a medida pode ser insuficiente? Porque aumentar oferta bruta não resolve a perda de qualidade e pode transferir custos para usuários a jusante. Uma resposta completa deve ligar abastecimento, saneamento, proteção da bacia e coordenação entre usuários, em vez de apresentar apenas uma obra isolada."
       }
     ]
+  },
+  {
+    "subject": "Geografia",
+    "topic": "Geopolítica e Geoeconomia da América Latina",
+    "sections": [
+      {
+        "title": "Formação e dependência",
+        "content": "A região foi integrada ao mercado mundial como fornecedora de metais e produtos agrícolas, padrão que se reproduziu ao longo do tempo. A dependência de commodities torna as economias sensíveis a variações de preços internacionais, gerando ciclos de bonança e crise associados às cotações e aos fluxos de capital."
+      },
+      {
+        "title": "Integração regional",
+        "content": "Mercosul, Aliança do Pacífico, Celac e Unasul expressam tentativas de integração com orientações distintas, umas mais voltadas ao comércio, outras à coordenação política. As oscilações políticas nacionais afetam diretamente a continuidade desses arranjos, que avançam e recuam conforme mudam os governos."
+      },
+      {
+        "title": "Desafios contemporâneos",
+        "content": "A região combina desigualdade elevada, urbanização acelerada, violência urbana, informalidade no trabalho e pressões ambientais sobre florestas e recursos hídricos. Ao mesmo tempo, concentra reservas estratégicas para a transição energética, como o lítio do triângulo entre Argentina, Bolívia e Chile, o que redefine seu papel geoeconômico."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Tratar a América Latina como bloco homogêneo ignora diferenças enormes de estrutura econômica, demografia e trajetória política. Outro deslize é supor que exportar commodities é sempre desvantajoso, sem analisar preços, encadeamentos e política industrial. E confundir Mercosul com Unasul quanto à natureza e aos objetivos."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a dependência de commodities gera instabilidade? Responda antes de conferir: os preços são definidos internacionalmente e oscilam muito, de modo que receitas de exportação, câmbio e arrecadação variam bruscamente sem que o país controle a causa. Agora diga por que o lítio ganhou importância geoeconômica: é insumo essencial de baterias na transição energética."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a dependência de commodities gera instabilidade? E por que o lítio ganhou peso geoeconômico?",
+      "elements": [
+        [
+          "os precos sao definidos internacionalmente e oscilam",
+          [
+            "preco",
+            "oscila",
+            "internacional"
+          ]
+        ],
+        [
+          "receitas e cambio variam bruscamente",
+          [
+            "receita",
+            "cambio",
+            "ciclo"
+          ]
+        ],
+        [
+          "o litio e essencial para baterias",
+          [
+            "litio",
+            "bateria",
+            "transicao"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Geografia",
+    "topic": "Geopolítica e Geoeconomia da Ásia",
+    "sections": [
+      {
+        "title": "Ascensão chinesa",
+        "content": "A China combinou abertura econômica gradual com forte direção estatal, tornando-se a maior indústria do mundo e, em seguida, avançando em tecnologia. A Nova Rota da Seda articula investimentos em portos, ferrovias e energia em dezenas de países, ampliando influência e criando debates sobre dependência financeira dos parceiros."
+      },
+      {
+        "title": "Rivalidades regionais",
+        "content": "O continente concentra rivalidades de alto risco: Estados Unidos e China no Indo-Pacífico, disputas no Mar do Sul da China, tensão entre Índia e Paquistão e entre Índia e China, além da questão coreana e do estatuto de Taiwan, cuja indústria de semicondutores dá ao tema alcance econômico mundial."
+      },
+      {
+        "title": "Diversidade asiática",
+        "content": "A Ásia reúne desde economias de alta renda, como Japão, Coreia do Sul e Cingapura, até países de baixa renda no sul e no sudeste. Tigres asiáticos apostaram em industrialização voltada à exportação e educação; outros países se inseriram como fornecedores de mão de obra barata em cadeias industriais."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Reduzir a Ásia à China é o erro mais frequente, ignorando Índia, Japão, Sudeste Asiático e Ásia Central. Outro deslize é tratar a Nova Rota da Seda apenas como projeto comercial, sem sua dimensão geopolítica. E confundir Taiwan, China continental e Hong Kong quanto ao estatuto político."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que Taiwan tem peso econômico mundial além de sua dimensão territorial? Responda antes de conferir: concentra a fabricação dos semicondutores mais avançados, insumo indispensável a praticamente todos os setores. Agora explique o objetivo geopolítico da Nova Rota da Seda: ampliar conexões, mercados e influência chinesa por meio de infraestrutura financiada em dezenas de países."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que Taiwan tem peso econômico global? Qual o objetivo geopolítico da Nova Rota da Seda?",
+      "elements": [
+        [
+          "concentra a fabricacao de semicondutores avancados",
+          [
+            "semicondutor",
+            "chip",
+            "fabricacao"
+          ]
+        ],
+        [
+          "insumo indispensavel a todos os setores",
+          [
+            "insumo",
+            "essencial",
+            "industria"
+          ]
+        ],
+        [
+          "ampliar influencia chinesa por infraestrutura",
+          [
+            "influencia",
+            "infraestrutura",
+            "china"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Geografia",
+    "topic": "Globalização e Processos Econômicos Atuais",
+    "sections": [
+      {
+        "title": "O que é globalização",
+        "content": "Globalização é a intensificação dos fluxos de mercadorias, capitais, pessoas e informações em escala mundial, apoiada em transporte barato, telecomunicações e liberalização comercial. Ela não homogeneíza o mundo: aprofunda a divisão internacional do trabalho, concentrando decisões e tecnologia em poucos centros e distribuindo etapas produtivas conforme custos."
+      },
+      {
+        "title": "Cadeias globais de valor",
+        "content": "A produção se fragmenta em etapas realizadas em países diferentes: projeto e marca em economias centrais, montagem em economias com mão de obra barata, extração de matéria-prima em economias periféricas. O valor se concentra nas pontas — pesquisa e marca —, e não na montagem, o que explica a persistência das desigualdades."
+      },
+      {
+        "title": "Críticas e reações",
+        "content": "A globalização gerou reações: protecionismo, guerras comerciais, renegociação de acordos e políticas de reindustrialização. A pandemia e conflitos recentes expuseram a fragilidade de cadeias longas e estimularam estratégias de aproximação da produção, discutidas como nearshoring e friendshoring, que redesenham fluxos sem desfazer a interdependência."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que a globalização eliminou fronteiras é impreciso: mercadorias e capitais circulam com muito mais liberdade que pessoas, e barreiras migratórias se tornaram mais rígidas. Outro deslize é tratá-la como processo homogêneo e inevitável. E confundir globalização com internacionalização, que é anterior e menos integrada."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que um smartphone montado na Ásia gera mais valor para a empresa que o projeta? Responda antes de conferir: o valor se concentra em projeto, marca, software e patentes, enquanto a montagem, intensiva em mão de obra, remunera muito menos. Agora explique por que a globalização não vale igualmente para pessoas: capitais circulam livremente, mas migrantes enfrentam barreiras crescentes."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a montagem gera menos valor que o projeto? E por que a globalização não vale igualmente para pessoas?",
+      "elements": [
+        [
+          "o valor se concentra em marca e tecnologia",
+          [
+            "marca",
+            "projeto",
+            "patente"
+          ]
+        ],
+        [
+          "a montagem remunera pouco a mao de obra",
+          [
+            "montagem",
+            "mao de obra",
+            "barata"
+          ]
+        ],
+        [
+          "pessoas enfrentam barreiras que os capitais nao enfrentam",
+          [
+            "barreira",
+            "migrante",
+            "fronteira"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Geografia",
+    "topic": "Hidrogeografia Mundial",
+    "sections": [
+      {
+        "title": "Os grandes rios e bacias",
+        "content": "As maiores bacias do mundo — Amazonas, Congo, Mississipi, Nilo, Yang-Tsé, Ganges — cumprem papéis distintos: transporte, geração de energia, irrigação, abastecimento e pesca. O regime dos rios depende do clima da bacia: rios de regime pluvial dependem das chuvas, nivais do degelo e mistos da combinação dos dois."
+      },
+      {
+        "title": "Usos e conflitos",
+        "content": "Rios transfronteiriços geram disputas quando o país a montante constrói barragens ou desvia água, afetando os de jusante. A Grande Barragem da Renascença no Nilo, envolvendo Etiópia, Sudão e Egito, e os projetos turcos no Tigre-Eufrates são os casos mais citados de tensão hidropolítica contemporânea."
+      },
+      {
+        "title": "Disponibilidade e estresse hídrico",
+        "content": "O estresse hídrico ocorre quando a demanda supera a oferta disponível, e atinge regiões áridas mas também áreas populosas com má gestão. A agricultura responde pela maior parte do consumo mundial de água doce, o que faz da eficiência da irrigação um ponto central de qualquer política hídrica."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Supor que país com grande rio não tem problema hídrico ignora distribuição interna, qualidade e infraestrutura. Outro deslize é confundir vazão com extensão do rio ao comparar importância. E atribuir ao consumo doméstico a maior fatia do uso de água, quando a agricultura é a principal consumidora."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a barragem etíope no Nilo gera tensão com o Egito? Responda antes de conferir: o Egito depende quase inteiramente do rio, situado a jusante, e o enchimento do reservatório reduz temporariamente a vazão que chega ao país. Agora diga qual setor mais consome água doce no mundo: a agricultura, sobretudo pela irrigação."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a barragem etíope no Nilo gera tensão com o Egito? Qual setor mais consome água doce?",
+      "elements": [
+        [
+          "o Egito esta a jusante e depende do rio",
+          [
+            "jusante",
+            "egito",
+            "depende"
+          ]
+        ],
+        [
+          "o enchimento do reservatorio reduz a vazao",
+          [
+            "vazao",
+            "reservatorio",
+            "reduz"
+          ]
+        ],
+        [
+          "a agricultura e a maior consumidora",
+          [
+            "agricultura",
+            "irrigacao",
+            "maior"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Geografia",
+    "topic": "Hidrogeografia do Brasil",
+    "sections": [
+      {
+        "title": "As grandes bacias",
+        "content": "O Brasil concentra cerca de 12% da água doce superficial do planeta, distribuída de forma muito desigual: a bacia Amazônica responde pela maior parte da vazão e concentra pouca população, enquanto o Nordeste e o Sudeste, mais povoados, dispõem de menos água por habitante. As demais bacias principais são Tocantins-Araguaia, São Francisco, Paraná, Paraguai, Parnaíba e Uruguai."
+      },
+      {
+        "title": "Usos dos rios",
+        "content": "Os rios brasileiros são majoritariamente de planalto, com desníveis que favorecem a geração hidrelétrica e dificultam a navegação, ao contrário dos de planície, como o Amazonas e o Paraguai, que são excelentes vias navegáveis. Somam-se usos de abastecimento urbano, irrigação, pesca e diluição de efluentes, com conflitos frequentes entre eles."
+      },
+      {
+        "title": "Aquíferos e transposição",
+        "content": "O Aquífero Guarani e o Alter do Chão constituem reservas subterrâneas estratégicas. A transposição do São Francisco é o projeto mais debatido de redistribuição hídrica, defendido como garantia de abastecimento no semiárido e criticado por custos, impactos e por não resolver sozinho a questão do acesso à água no sertão."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que o Brasil não tem problema hídrico por ter muita água ignora a distribuição desigual entre regiões e a questão da qualidade. Outro deslize é confundir rio de planalto com rio de planície quanto à navegabilidade. E supor que a transposição cria água nova, quando ela apenas redistribui vazão já existente."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que os rios brasileiros geram muita energia e navegam pouco? Responda antes de conferir: predominam rios de planalto, com desníveis e corredeiras que favorecem a geração hidrelétrica e dificultam a navegação contínua. Agora explique o principal paradoxo hídrico do país: a maior disponibilidade está na região menos povoada, e as regiões mais populosas dispõem de menos água por habitante."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que os rios brasileiros geram muita energia e navegam pouco? Qual o paradoxo hídrico do país?",
+      "elements": [
+        [
+          "predominam rios de planalto",
+          [
+            "planalto",
+            "desnivel",
+            "corredeira"
+          ]
+        ],
+        [
+          "desniveis favorecem hidreletricas",
+          [
+            "hidreletrica",
+            "energia",
+            "queda"
+          ]
+        ],
+        [
+          "a agua esta onde ha menos populacao",
+          [
+            "amazonia",
+            "populacao",
+            "desigual"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Geografia",
+    "topic": "Indústria I",
+    "sections": [
+      {
+        "title": "As revoluções industriais",
+        "content": "A primeira revolução industrial, do final do século XVIII, apoiou-se no carvão, na máquina a vapor e no têxtil. A segunda, a partir do fim do século XIX, no petróleo, na eletricidade, no aço e na química. A terceira, desde meados do século XX, na eletrônica, na informática e na automação, e a quarta, em curso, na digitalização, robótica e inteligência artificial."
+      },
+      {
+        "title": "Fatores locacionais",
+        "content": "A localização industrial depende de proximidade de matéria-prima, energia, mão de obra, mercado consumidor, transporte e incentivos fiscais. O peso de cada fator mudou ao longo do tempo: indústrias pesadas tendiam a se instalar junto às fontes de matéria-prima e energia, enquanto as de alta tecnologia se aproximam de centros de pesquisa e de mão de obra qualificada."
+      },
+      {
+        "title": "Modelos produtivos",
+        "content": "O fordismo baseou-se em produção em massa, linha de montagem, estoques elevados e trabalho fragmentado. O toyotismo, ou produção flexível, adota just in time, estoques mínimos, trabalhador polivalente e controle de qualidade integrado ao processo. A mudança de um para outro reorganizou tanto o chão de fábrica quanto a geografia da produção."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Datar as revoluções industriais como substituições abruptas ignora que as tecnologias coexistem e se sobrepõem. Outro deslize é supor que o toyotismo eliminou o trabalho repetitivo. E tratar fatores locacionais como fixos, quando eles se alteram com transporte barato, comunicação e políticas públicas."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que indústrias de alta tecnologia se instalam perto de universidades? Responda antes de conferir: dependem de mão de obra qualificada, pesquisa e inovação, fatores locacionais mais decisivos que a proximidade da matéria-prima. Agora diferencie fordismo e toyotismo quanto aos estoques: o primeiro trabalha com estoques altos, o segundo com produção sob demanda e estoques mínimos."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a indústria de alta tecnologia se instala perto de universidades? Diferencie fordismo e toyotismo quanto a estoques.",
+      "elements": [
+        [
+          "depende de mao de obra qualificada e pesquisa",
+          [
+            "qualificada",
+            "pesquisa",
+            "inovacao"
+          ]
+        ],
+        [
+          "a materia-prima deixa de ser o fator principal",
+          [
+            "materia-prima",
+            "menos",
+            "fator"
+          ]
+        ],
+        [
+          "fordismo estoca e toyotismo usa just in time",
+          [
+            "just in time",
+            "estoque",
+            "flexivel"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Geografia",
+    "topic": "Indústria II",
+    "sections": [
+      {
+        "title": "Nova geografia industrial",
+        "content": "A desconcentração industrial deslocou etapas produtivas de países centrais para economias com custos menores, criando novas regiões industriais na Ásia e transformando antigas áreas fabris em regiões de declínio, os chamados cinturões da ferrugem. O processo é seletivo: pesquisa, design e marca permanecem concentrados."
+      },
+      {
+        "title": "Tecnopolos e clusters",
+        "content": "Tecnopolos reúnem empresas de alta tecnologia, universidades e centros de pesquisa, como o Vale do Silício e Bangalore. Clusters industriais concentram empresas de um mesmo setor numa região, gerando ganhos de aglomeração: fornecedores próximos, mão de obra especializada e circulação de conhecimento entre firmas."
+      },
+      {
+        "title": "Indústria e ambiente",
+        "content": "A atividade industrial gera emissões, efluentes e resíduos, e sua regulação varia entre países, o que pode incentivar a transferência de atividades poluentes para onde a legislação é mais frouxa. A pressão por descarbonização, economia circular e eficiência energética redesenha processos produtivos e cria novas vantagens competitivas."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Tratar a desindustrialização como fim da indústria é impreciso: a produção não desaparece, ela se desloca e se reorganiza. Outro deslize é confundir cluster, que é concentração setorial, com tecnopolo, ligado a pesquisa e alta tecnologia. E supor que legislação ambiental frouxa é o único fator de atração industrial."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "O que caracteriza um cinturão da ferrugem? Responda antes de conferir: antigas regiões industriais que perderam atividade e emprego com a desconcentração produtiva, deixando instalações ociosas e problemas sociais. Agora explique a vantagem de um cluster: fornecedores próximos, mão de obra especializada e circulação de conhecimento reduzem custos e aceleram inovação."
+      }
+    ],
+    "recall": {
+      "prompt": "O que é um cinturão da ferrugem? E qual a vantagem de um cluster industrial?",
+      "elements": [
+        [
+          "antigas regioes industriais em declinio",
+          [
+            "declinio",
+            "antiga",
+            "desindustrializacao"
+          ]
+        ],
+        [
+          "perda de empregos e instalacoes ociosas",
+          [
+            "emprego",
+            "ociosa",
+            "fechamento"
+          ]
+        ],
+        [
+          "ganhos de aglomeracao com fornecedores e mao de obra",
+          [
+            "fornecedor",
+            "especializada",
+            "aglomeracao"
+          ]
+        ]
+      ]
+    }
   },
   {
     "subject": "Geografia",
@@ -8367,6 +10236,776 @@
   },
   {
     "subject": "Geografia",
+    "topic": "Matriz Energética",
+    "sections": [
+      {
+        "title": "Conceito e composição",
+        "content": "Matriz energética é o conjunto de fontes usadas por um país para atender toda a demanda de energia, incluindo transporte, indústria e residências, enquanto a matriz elétrica considera apenas a geração de eletricidade. A distinção é essencial: o Brasil tem matriz elétrica bastante renovável, mas matriz energética ainda dependente de derivados de petróleo."
+      },
+      {
+        "title": "Fontes e classificação",
+        "content": "As fontes se dividem em renováveis, como hidráulica, solar, eólica e biomassa, e não renováveis, como petróleo, carvão, gás natural e urânio. Renovável não é sinônimo de limpo: a queima de biomassa emite poluentes, e grandes hidrelétricas geram impactos socioambientais expressivos, com alagamento de áreas e deslocamento de populações."
+      },
+      {
+        "title": "Transição energética",
+        "content": "A transição busca reduzir a participação de fósseis, ampliando renováveis, eficiência energética e eletrificação de usos. Os desafios envolvem armazenamento, intermitência de solar e eólica, necessidade de redes de transmissão e disputas por minerais críticos, além dos custos sociais para regiões dependentes de combustíveis fósseis."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Confundir matriz energética com matriz elétrica é o erro mais frequente do tópico e leva a conclusões erradas sobre o Brasil. Outro deslize é tratar renovável e limpa como sinônimos. E supor que a transição é apenas questão tecnológica, ignorando dimensões sociais, econômicas e geopolíticas."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que o Brasil pode ter matriz elétrica muito renovável e matriz energética menos? Responda antes de conferir: a eletricidade vem majoritariamente de hidrelétricas, eólicas e solares, mas o transporte, que pesa muito no consumo total de energia, ainda depende de derivados de petróleo. Agora explique por que renovável não significa limpa: a biomassa queimada emite poluentes e grandes hidrelétricas causam impactos socioambientais."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a matriz elétrica brasileira é mais renovável que a energética? Por que renovável não é sinônimo de limpa?",
+      "elements": [
+        [
+          "a eletricidade vem de fontes renovaveis",
+          [
+            "hidreletrica",
+            "eolica",
+            "eletrica"
+          ]
+        ],
+        [
+          "o transporte depende de derivados de petroleo",
+          [
+            "transporte",
+            "petroleo",
+            "combustivel"
+          ]
+        ],
+        [
+          "biomassa emite e hidreletricas impactam",
+          [
+            "biomassa",
+            "impacto",
+            "alagamento"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Geografia",
+    "topic": "Mobilidade Populacional",
+    "sections": [
+      {
+        "title": "Tipos de migração",
+        "content": "As migrações se classificam por escala, em internas e internacionais; por duração, em definitivas, temporárias e pendulares; e por motivação, em econômicas, ambientais e forçadas. Refugiados têm estatuto jurídico próprio, previsto em convenção internacional, distinto do migrante econômico, que não conta com a mesma proteção."
+      },
+      {
+        "title": "Fatores de expulsão e atração",
+        "content": "Os fluxos resultam da combinação de fatores de repulsão na origem — desemprego, conflitos, perseguição, degradação ambiental — e de atração no destino — oportunidades, segurança, redes familiares já estabelecidas. As redes sociais preexistentes explicam por que os fluxos se concentram em determinados destinos e não se distribuem uniformemente."
+      },
+      {
+        "title": "Impactos",
+        "content": "Nas áreas de origem, a emigração alivia pressão sobre o mercado de trabalho e gera remessas, mas pode provocar perda de população jovem e qualificada. Nos destinos, os imigrantes suprem demandas de mão de obra e rejuvenescem populações envelhecidas, ao mesmo tempo em que se tornam alvo de tensões políticas e xenofobia."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Chamar todo deslocado de refugiado é impreciso juridicamente: o estatuto exige fundado temor de perseguição ou situações previstas em convenção. Outro deslize é supor que a maioria dos refugiados vai para países ricos, quando a maior parte é acolhida por países vizinhos em desenvolvimento. E ignorar as migrações internas, numericamente maiores."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a maioria dos refugiados está em países em desenvolvimento? Responda antes de conferir: as pessoas fogem para os países mais próximos, geralmente vizinhos da área em conflito, e não para destinos distantes e de acesso restrito. Agora diferencie migrante econômico de refugiado: o segundo tem proteção jurídica internacional específica por fundado temor de perseguição."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a maioria dos refugiados está em países em desenvolvimento? Diferencie refugiado de migrante econômico.",
+      "elements": [
+        [
+          "fogem para paises vizinhos",
+          [
+            "vizinho",
+            "proximo",
+            "fronteira"
+          ]
+        ],
+        [
+          "destinos ricos tem acesso restrito",
+          [
+            "restrito",
+            "barreira",
+            "distante"
+          ]
+        ],
+        [
+          "o refugiado tem protecao juridica por perseguicao",
+          [
+            "protecao",
+            "perseguicao",
+            "convencao"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Geografia",
+    "topic": "Movimentos da Terra",
+    "sections": [
+      {
+        "title": "Rotação e translação",
+        "content": "A rotação é o giro em torno do próprio eixo, com duração aproximada de 24 horas, e explica a sucessão de dias e noites e a divisão em fusos horários. A translação é a volta em torno do Sol, com duração de 365 dias e 6 horas — sobra que justifica o ano bissexto — e, combinada à inclinação do eixo, produz as estações."
+      },
+      {
+        "title": "A inclinação e as estações",
+        "content": "O eixo terrestre é inclinado cerca de 23°27' em relação à perpendicular do plano orbital. É essa inclinação, e não a distância ao Sol, que faz a incidência dos raios variar ao longo do ano em cada hemisfério. Nos solstícios, um hemisfério recebe luz mais direta; nos equinócios, os dois recebem igualmente e dia e noite se equivalem."
+      },
+      {
+        "title": "Zonas de iluminação",
+        "content": "A combinação de inclinação e translação define as zonas térmicas: a intertropical, entre os trópicos, recebe raios mais verticais e tem pequena variação sazonal; as temperadas apresentam as quatro estações bem marcadas; e as polares recebem raios muito inclinados, com períodos de sol da meia-noite e noite polar."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Explicar as estações pela distância ao Sol é o erro mais comum: a Terra está mais próxima do Sol em janeiro, em pleno verão do hemisfério sul e inverno do norte. Outro deslize é situar o solstício de verão do hemisfério sul em junho. E confundir equinócio com solstício ao ler gráficos de duração do dia."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que não são as estações causadas pela distância ao Sol? Responda antes de conferir: os hemisférios têm estações opostas ao mesmo tempo, o que seria impossível se a causa fosse a distância, igual para os dois. Agora diga o que ocorre em 21 de dezembro no hemisfério sul: solstício de verão, com o dia mais longo do ano."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que as estações não são causadas pela distância ao Sol? O que ocorre em 21 de dezembro no hemisfério sul?",
+      "elements": [
+        [
+          "os hemisferios tem estacoes opostas ao mesmo tempo",
+          [
+            "oposta",
+            "hemisferio",
+            "mesmo tempo"
+          ]
+        ],
+        [
+          "a causa e a inclinacao do eixo",
+          [
+            "inclinacao",
+            "eixo",
+            "23"
+          ]
+        ],
+        [
+          "solsticio de verao no hemisferio sul",
+          [
+            "solsticio",
+            "verao",
+            "dezembro"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Geografia",
+    "topic": "O Espaço Agrário Brasileiro",
+    "sections": [
+      {
+        "title": "Estrutura fundiária",
+        "content": "A estrutura fundiária brasileira é historicamente concentrada, herança do sistema de sesmarias e da Lei de Terras de 1850, que condicionou o acesso à compra. Grandes propriedades ocupam a maior parte da área agrícola, enquanto a agricultura familiar, com área bem menor, responde por parcela expressiva dos alimentos consumidos internamente."
+      },
+      {
+        "title": "Modernização e fronteira agrícola",
+        "content": "A modernização conservadora, a partir dos anos 1960 e 1970, difundiu mecanização, insumos e crédito sem alterar a estrutura fundiária. A fronteira agrícola avançou sobre o Cerrado e, depois, sobre a região conhecida como Matopiba, ampliando a produção de soja, milho e algodão e pressionando ecossistemas e comunidades tradicionais."
+      },
+      {
+        "title": "Conflitos e políticas",
+        "content": "Conflitos por terra envolvem movimentos sociais, grilagem, trabalho análogo à escravidão e disputas com povos indígenas e quilombolas. Políticas como o Pronaf, a assistência técnica e programas de compras públicas apoiam a agricultura familiar, enquanto o crédito rural e a infraestrutura logística beneficiam sobretudo o agronegócio exportador."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Opor agricultura familiar e agronegócio como se a primeira fosse necessariamente atrasada é simplificação: a familiar usa tecnologia e responde por parte relevante da produção de alimentos. Outro deslize é confundir reforma agrária com colonização de novas áreas. E supor que aumento de produção implica redução da concentração fundiária."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que se fala em modernização conservadora do campo brasileiro? Responda antes de conferir: houve modernização técnica, com máquinas, insumos e crédito, sem redistribuição de terras, de modo que a concentração fundiária permaneceu. Agora diga o papel da agricultura familiar: responde por parcela importante dos alimentos consumidos no mercado interno."
+      }
+    ],
+    "recall": {
+      "prompt": "O que significa modernização conservadora no campo? Qual o papel da agricultura familiar?",
+      "elements": [
+        [
+          "modernizacao tecnica sem reforma agraria",
+          [
+            "tecnica",
+            "sem",
+            "reforma"
+          ]
+        ],
+        [
+          "a concentracao fundiaria permaneceu",
+          [
+            "concentracao",
+            "fundiaria",
+            "terra"
+          ]
+        ],
+        [
+          "a agricultura familiar produz alimentos para o mercado interno",
+          [
+            "familiar",
+            "alimento",
+            "interno"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Geografia",
+    "topic": "O Espaço Industrial Brasileiro I",
+    "sections": [
+      {
+        "title": "Formação industrial",
+        "content": "A industrialização brasileira ganhou impulso com a substituição de importações a partir dos anos 1930, apoiada em investimento estatal em siderurgia, petróleo e energia. O Plano de Metas, no fim dos anos 1950, atraiu montadoras e consolidou a indústria automobilística, concentrando produção no eixo São Paulo-Rio de Janeiro."
+      },
+      {
+        "title": "Concentração no Sudeste",
+        "content": "O Sudeste reuniu capital acumulado pelo café, infraestrutura de transporte, energia, mercado consumidor e mão de obra, tornando-se o núcleo industrial do país. A concentração produziu forte migração inter-regional, sobretudo do Nordeste, e ampliou as desigualdades regionais ao longo do século XX."
+      },
+      {
+        "title": "Papel do Estado",
+        "content": "O Estado atuou como investidor direto, por meio de estatais, e como indutor, com crédito, tarifas e infraestrutura. Instituições como o BNDES financiaram setores estratégicos. Esse papel foi reduzido nas privatizações dos anos 1990, período em que a abertura comercial expôs a indústria nacional à concorrência internacional."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Datar o início da indústria brasileira em 1930 de forma absoluta ignora manufaturas anteriores, ligadas ao café e ao mercado interno. Outro deslize é atribuir a industrialização apenas ao Estado, sem considerar capital privado nacional e estrangeiro. E confundir substituição de importações com autossuficiência completa."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a indústria se concentrou no Sudeste? Responda antes de conferir: capital acumulado pelo café, infraestrutura de transporte e energia, maior mercado consumidor e disponibilidade de mão de obra reforçaram-se mutuamente. Agora diga o que foi a substituição de importações: produzir internamente bens antes importados, com apoio de tarifas, crédito e investimento estatal."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a indústria se concentrou no Sudeste? O que foi a substituição de importações?",
+      "elements": [
+        [
+          "capital do cafe e infraestrutura",
+          [
+            "cafe",
+            "capital",
+            "infraestrutura"
+          ]
+        ],
+        [
+          "mercado consumidor e mao de obra",
+          [
+            "mercado",
+            "consumidor",
+            "mao de obra"
+          ]
+        ],
+        [
+          "produzir internamente o que era importado",
+          [
+            "importado",
+            "internamente",
+            "tarifa"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Geografia",
+    "topic": "O Espaço Industrial Brasileiro II",
+    "sections": [
+      {
+        "title": "Desconcentração industrial",
+        "content": "A partir dos anos 1980 e 1990, parte da indústria se deslocou do núcleo metropolitano de São Paulo para o interior paulista, para o Sul e para outras regiões, atraída por incentivos fiscais, terrenos mais baratos, menor custo de mão de obra e melhor infraestrutura rodoviária. É uma desconcentração relativa: o Sudeste segue liderando."
+      },
+      {
+        "title": "Guerra fiscal e polos",
+        "content": "Estados e municípios disputaram investimentos com isenções tributárias, prática conhecida como guerra fiscal, que gerou polos industriais fora do eixo tradicional, como no Nordeste e no Centro-Oeste. A Zona Franca de Manaus é caso particular, sustentada por incentivos federais e por um modelo específico de industrialização na Amazônia."
+      },
+      {
+        "title": "Desindustrialização",
+        "content": "A participação da indústria no PIB caiu ao longo das últimas décadas, fenômeno discutido como desindustrialização. Entre as causas apontadas estão câmbio valorizado em certos períodos, custo de produção, concorrência internacional, carga tributária e infraestrutura logística deficiente, com efeitos sobre emprego e tecnologia."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Ler a desconcentração como perda de importância do Sudeste é exagero: a região segue concentrando a maior parte do valor industrial. Outro deslize é tratar a guerra fiscal como política industrial coordenada, quando é disputa entre entes federativos. E confundir desindustrialização com fechamento generalizado de fábricas."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "O que motivou a desconcentração industrial? Responda antes de conferir: incentivos fiscais, terrenos e mão de obra mais baratos, melhoria da infraestrutura rodoviária e saturação da metrópole paulista. Agora explique o que sustenta a Zona Franca de Manaus: incentivos fiscais federais que compensam a distância dos mercados consumidores."
+      }
+    ],
+    "recall": {
+      "prompt": "O que motivou a desconcentração industrial brasileira? O que sustenta a Zona Franca de Manaus?",
+      "elements": [
+        [
+          "incentivos fiscais e custos menores",
+          [
+            "incentivo",
+            "fiscal",
+            "custo"
+          ]
+        ],
+        [
+          "melhoria da infraestrutura rodoviaria",
+          [
+            "rodovia",
+            "infraestrutura",
+            "transporte"
+          ]
+        ],
+        [
+          "a Zona Franca depende de incentivos federais",
+          [
+            "zona franca",
+            "incentivo",
+            "distancia"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Geografia",
+    "topic": "O Espaço Urbano I",
+    "sections": [
+      {
+        "title": "Urbanização brasileira",
+        "content": "A urbanização brasileira foi tardia e acelerada: em poucas décadas, o país passou de majoritariamente rural para mais de 80% urbano. O ritmo superou a capacidade de oferta de moradia, saneamento e transporte, produzindo periferização, favelização e crescimento de assentamentos precários nas franjas das cidades."
+      },
+      {
+        "title": "Hierarquia urbana",
+        "content": "As cidades se organizam em rede hierárquica, com metrópoles nacionais, regionais, capitais regionais e centros locais, cada nível oferecendo bens e serviços de alcance distinto. São Paulo e Rio de Janeiro concentram funções de comando; a rede urbana articula fluxos de pessoas, mercadorias, capitais e informações."
+      },
+      {
+        "title": "Conurbação e metropolização",
+        "content": "Quando o crescimento faz cidades vizinhas se unirem fisicamente, ocorre conurbação, e a gestão passa a exigir coordenação metropolitana, já que problemas de transporte, água e resíduos ultrapassam limites municipais. As regiões metropolitanas concentram população, empregos e também os maiores contrastes socioespaciais."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Confundir crescimento urbano, que é aumento da população das cidades, com urbanização, que é o aumento da proporção de população urbana, é erro conceitual frequente. Outro deslize é tratar metrópole e capital como sinônimos. E supor que conurbação implica fusão administrativa dos municípios."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a urbanização brasileira produziu tanta precariedade? Responda antes de conferir: foi rápida e concentrada, e a oferta de moradia, saneamento e transporte não acompanhou o ritmo, empurrando a população de menor renda para periferias e áreas de risco. Agora diferencie conurbação de região metropolitana: a primeira é fusão física do tecido urbano, a segunda é recorte institucional de gestão."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a urbanização brasileira gerou precariedade? Diferencie conurbação de região metropolitana.",
+      "elements": [
+        [
+          "foi rapida e a infraestrutura nao acompanhou",
+          [
+            "rapida",
+            "infraestrutura",
+            "saneamento"
+          ]
+        ],
+        [
+          "periferizacao e areas de risco",
+          [
+            "periferia",
+            "risco",
+            "favela"
+          ]
+        ],
+        [
+          "conurbacao e fusao fisica e regiao metropolitana e institucional",
+          [
+            "conurbacao",
+            "fisica",
+            "institucional"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Geografia",
+    "topic": "O Espaço Urbano II",
+    "sections": [
+      {
+        "title": "Problemas urbanos",
+        "content": "As grandes cidades enfrentam déficit habitacional, mobilidade precária, poluição, enchentes, ilhas de calor e violência. Muitos desses problemas têm raiz na forma de ocupação: impermeabilização do solo, ocupação de várzeas e encostas, e dispersão urbana que alonga deslocamentos e encarece a oferta de infraestrutura."
+      },
+      {
+        "title": "Segregação socioespacial",
+        "content": "O espaço urbano é desigual: o preço da terra organiza quem mora onde, empurrando a população de menor renda para áreas distantes e mal servidas. Condomínios fechados, gentrificação e remoções recompõem continuamente essa geografia, e o acesso a serviços públicos varia enormemente dentro de uma mesma cidade."
+      },
+      {
+        "title": "Políticas urbanas",
+        "content": "O Estatuto da Cidade estabeleceu instrumentos como plano diretor, IPTU progressivo no tempo e usucapião especial urbana, buscando cumprir a função social da propriedade. Programas habitacionais, urbanização de favelas e políticas de mobilidade ativa e transporte público são as principais frentes de intervenção."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Atribuir enchentes apenas ao volume de chuva ignora impermeabilização, ocupação de várzeas e falhas de drenagem. Outro deslize é tratar gentrificação como simples melhoria de bairro, sem considerar a expulsão de moradores antigos. E supor que plano diretor é documento técnico neutro, quando envolve disputa política sobre o uso do solo."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a impermeabilização do solo agrava enchentes? Responda antes de conferir: reduz a infiltração e aumenta o escoamento superficial, elevando a vazão que chega rapidamente aos córregos canalizados. Agora explique a gentrificação: a valorização de uma área expulsa moradores de menor renda, substituídos por população de maior poder aquisitivo."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a impermeabilização agrava enchentes? O que é gentrificação?",
+      "elements": [
+        [
+          "reduz a infiltracao e aumenta o escoamento",
+          [
+            "infiltracao",
+            "escoamento",
+            "asfalto"
+          ]
+        ],
+        [
+          "o pico de vazao chega mais rapido",
+          [
+            "vazao",
+            "rapido",
+            "corrego"
+          ]
+        ],
+        [
+          "valorizacao que expulsa moradores de menor renda",
+          [
+            "valorizacao",
+            "expulsa",
+            "renda"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Geografia",
+    "topic": "Os Fluxos do Comércio Externo",
+    "sections": [
+      {
+        "title": "Pauta de exportações",
+        "content": "A pauta brasileira é concentrada em produtos primários e semimanufaturados: soja, minério de ferro, petróleo, carne e açúcar respondem por parcela expressiva das exportações. Já as importações incluem bens de capital, produtos químicos, eletrônicos e combustíveis refinados, padrão que caracteriza a inserção do país no comércio mundial."
+      },
+      {
+        "title": "Parceiros comerciais",
+        "content": "A China se tornou o principal parceiro comercial brasileiro, absorvendo grande parte das exportações de soja, minério e petróleo. Estados Unidos, União Europeia e Argentina seguem relevantes, sendo que a pauta com a Argentina e com os vizinhos tem maior participação de manufaturados, o que a torna estrategicamente distinta."
+      },
+      {
+        "title": "Balança e vulnerabilidades",
+        "content": "O saldo comercial depende de preços internacionais de commodities e do câmbio, o que torna as receitas voláteis. A concentração em poucos produtos e poucos destinos aumenta a vulnerabilidade a choques externos, e é por isso que o debate sobre agregação de valor e diversificação da pauta é recorrente."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Confundir balança comercial, que compara exportações e importações de bens, com balanço de pagamentos, que inclui serviços, rendas e capitais, é o erro mais frequente. Outro deslize é supor que superávit comercial significa necessariamente economia saudável. E ignorar que a pauta com países vizinhos é mais industrializada que a média."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a concentração da pauta exportadora é um risco? Responda antes de conferir: poucos produtos e poucos destinos deixam a receita sujeita a oscilações de preço e a decisões de um número reduzido de parceiros, ampliando a vulnerabilidade a choques externos. Agora diga por que a pauta com a Argentina é estratégica: nela predominam manufaturados, com maior valor agregado e mais empregos industriais."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a concentração da pauta exportadora é um risco? Por que a pauta com a Argentina é estratégica?",
+      "elements": [
+        [
+          "poucos produtos e poucos destinos",
+          [
+            "concentracao",
+            "produtos",
+            "destino"
+          ]
+        ],
+        [
+          "receita sujeita a oscilacao de precos",
+          [
+            "preco",
+            "oscilacao",
+            "commodity"
+          ]
+        ],
+        [
+          "com a Argentina predominam manufaturados",
+          [
+            "manufaturado",
+            "argentina",
+            "valor agregado"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Geografia",
+    "topic": "Paisagem, Espaço Geográfico e Ciência Geográfica",
+    "sections": [
+      {
+        "title": "Os conceitos-chave",
+        "content": "A geografia opera com categorias próprias. Paisagem é o que se apreende pelos sentidos num dado momento; lugar é o espaço dotado de significado e vivência; território é o espaço definido por relações de poder; região é o recorte definido por critérios de semelhança ou de articulação; e espaço geográfico é a totalidade construída socialmente."
+      },
+      {
+        "title": "Espaço como produção social",
+        "content": "O espaço geográfico não é palco neutro: é produzido historicamente pelo trabalho e pelas relações sociais. Milton Santos o define como conjunto indissociável de sistemas de objetos e sistemas de ações, o que ajuda a ler uma cidade não como soma de construções, mas como resultado de decisões, conflitos e usos."
+      },
+      {
+        "title": "Correntes do pensamento geográfico",
+        "content": "A geografia tradicional descrevia e classificava; a quantitativa, no século XX, buscou modelos e formalização matemática; a geografia crítica introduziu o conflito social e as relações de poder na análise; e as abordagens humanistas e culturais valorizaram percepção, subjetividade e identidade na relação com o espaço."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Usar paisagem e espaço geográfico como sinônimos é o erro conceitual mais comum: a paisagem é uma dimensão perceptível do espaço, não o todo. Outro deslize é definir território sem mencionar poder. E supor que região é apenas divisão administrativa, quando é recorte analítico que depende dos critérios adotados."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Diferencie lugar e território antes de conferir: lugar remete a vivência, afeto e identidade; território remete ao controle e às relações de poder sobre uma porção do espaço. Agora explique por que uma favela e um bairro nobre podem estar na mesma paisagem urbana e revelar espaços distintos: os sistemas de objetos e ações que os produzem são diferentes."
+      }
+    ],
+    "recall": {
+      "prompt": "Diferencie lugar de território e explique o que a geografia crítica acrescentou à análise do espaço.",
+      "elements": [
+        [
+          "lugar envolve vivencia e identidade",
+          [
+            "vivencia",
+            "afeto",
+            "identidade"
+          ]
+        ],
+        [
+          "territorio envolve poder e controle",
+          [
+            "poder",
+            "controle",
+            "dominio"
+          ]
+        ],
+        [
+          "a geografia critica trouxe o conflito social",
+          [
+            "critica",
+            "conflito",
+            "social"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Geografia",
+    "topic": "Pedologia",
+    "sections": [
+      {
+        "title": "Formação do solo",
+        "content": "O solo resulta da ação combinada de rocha-matriz, clima, relevo, organismos e tempo. O intemperismo decompõe a rocha e a matéria orgânica se incorpora, formando horizontes: o superficial, rico em húmus; o de acumulação; e o de transição para a rocha. Em regiões tropicais úmidas, a intensa lixiviação empobrece o solo em nutrientes."
+      },
+      {
+        "title": "Tipos de solo no Brasil",
+        "content": "Latossolos são profundos, muito intemperizados e ácidos, dominantes no Cerrado e corrigidos por calagem; a terra roxa, de origem basáltica, é fértil e sustentou a cafeicultura paulista e paranaense; o massapê, argiloso, foi base da cana no litoral nordestino; e solos aluviais ocorrem em planícies de inundação."
+      },
+      {
+        "title": "Degradação e conservação",
+        "content": "Erosão, compactação, salinização, perda de matéria orgânica e desertificação degradam solos. As práticas conservacionistas incluem plantio direto, curvas de nível, terraceamento, rotação de culturas e manutenção de cobertura vegetal. O manejo adequado é decisivo para a produtividade agrícola e para a redução do assoreamento de rios."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Confundir solo com rocha ou com relevo é erro básico: o solo é a camada superficial resultante da alteração da rocha com participação orgânica. Outro deslize é supor que solo de floresta é sempre fértil. E tratar a fertilidade como característica fixa, ignorando o efeito de correção, adubação e manejo."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que o solo do Cerrado é ácido e ainda assim produtivo? Responda antes de conferir: é naturalmente pobre e ácido pela lixiviação intensa, mas a calagem e a adubação corrigem o pH e repõem nutrientes, viabilizando alta produtividade. Agora cite duas práticas conservacionistas: plantio direto e curvas de nível, que reduzem a erosão."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que o solo do Cerrado, ácido e pobre, tornou-se produtivo? Cite práticas conservacionistas.",
+      "elements": [
+        [
+          "a lixiviacao empobrece o solo tropical",
+          [
+            "lixiviacao",
+            "pobre",
+            "acido"
+          ]
+        ],
+        [
+          "calagem e adubacao corrigem o solo",
+          [
+            "calagem",
+            "adubacao",
+            "correcao"
+          ]
+        ],
+        [
+          "plantio direto e curvas de nivel reduzem a erosao",
+          [
+            "plantio direto",
+            "curva de nivel",
+            "terraceamento"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Geografia",
+    "topic": "Políticas Ambientais Brasileiras",
+    "sections": [
+      {
+        "title": "Marcos legais",
+        "content": "O Brasil dispõe de um conjunto normativo relevante: a Política Nacional do Meio Ambiente, de 1981, que criou o Sisnama e o licenciamento; a Constituição de 1988, com capítulo próprio sobre meio ambiente; o Sistema Nacional de Unidades de Conservação, de 2000; a Lei de Crimes Ambientais; e o Código Florestal, revisado em 2012."
+      },
+      {
+        "title": "Instrumentos",
+        "content": "O licenciamento ambiental condiciona empreendimentos a estudos de impacto e medidas mitigadoras. Reserva legal e área de preservação permanente impõem limites ao uso de imóveis rurais. O Cadastro Ambiental Rural mapeia propriedades, e sistemas de monitoramento por satélite, como os do Inpe, tornaram o desmatamento mensurável em tempo quase real."
+      },
+      {
+        "title": "Tensões e efetividade",
+        "content": "A efetividade depende de fiscalização, orçamento e vontade política, e oscila conforme os governos. O debate central opõe expansão agropecuária e mineral à conservação, e envolve ainda direitos de povos indígenas e comunidades tradicionais, cuja demarcação territorial funciona na prática como política ambiental de grande alcance."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Confundir reserva legal, que é percentual da propriedade a ser mantido com vegetação nativa, com área de preservação permanente, definida por características do terreno como margens de rios e topos de morro. Outro deslize é supor que existir lei significa cumprimento efetivo. E atribuir ao Inpe função de fiscalização, quando ele monitora e produz dados."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Diferencie reserva legal de área de preservação permanente antes de conferir: a reserva legal é um percentual da propriedade que varia por bioma e deve manter vegetação nativa; a APP protege áreas sensíveis como margens de rios, encostas íngremes e topos de morro, independentemente do percentual. Agora diga o papel do monitoramento por satélite: fornecer dados de desmatamento que embasam fiscalização e políticas."
+      }
+    ],
+    "recall": {
+      "prompt": "Diferencie reserva legal de APP e explique o papel do monitoramento por satélite.",
+      "elements": [
+        [
+          "reserva legal e percentual da propriedade",
+          [
+            "percentual",
+            "propriedade",
+            "bioma"
+          ]
+        ],
+        [
+          "APP protege areas sensiveis como margens de rios",
+          [
+            "app",
+            "margem",
+            "encosta"
+          ]
+        ],
+        [
+          "o satelite fornece dados para fiscalizacao",
+          [
+            "satelite",
+            "dados",
+            "inpe"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Geografia",
+    "topic": "Produção Agrícola Mundial",
+    "sections": [
+      {
+        "title": "Sistemas agrícolas",
+        "content": "A agricultura mundial vai da produção de subsistência, voltada ao consumo próprio e com baixa tecnificação, à agricultura comercial de larga escala, mecanizada e integrada a cadeias globais. A Revolução Verde difundiu sementes selecionadas, fertilizantes e agrotóxicos, aumentando produtividade e também dependência de insumos."
+      },
+      {
+        "title": "Comércio e preços",
+        "content": "Commodities agrícolas são negociadas em bolsas internacionais, e seus preços dependem de clima, estoques, câmbio e especulação. Subsídios agrícolas em países ricos distorcem a concorrência, tema recorrente em disputas na OMC, e afetam produtores de países que não têm capacidade de sustentar apoio equivalente."
+      },
+      {
+        "title": "Segurança alimentar",
+        "content": "A produção mundial de alimentos é suficiente em volume, mas a fome persiste por problemas de acesso, renda, conflitos e logística. Somam-se desafios como desperdício ao longo da cadeia, mudança de dietas, uso de terras para biocombustíveis e efeitos das mudanças climáticas sobre a produtividade agrícola."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Atribuir a fome à insuficiência de produção é o erro conceitual central: o problema é sobretudo de acesso e distribuição. Outro deslize é tratar a Revolução Verde apenas como avanço, ignorando impactos ambientais e a concentração fundiária associada. E confundir agricultura familiar com agricultura de subsistência."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que existe fome num mundo que produz alimentos suficientes? Responda antes de conferir: o problema é de acesso — renda insuficiente, conflitos, falhas logísticas e desigualdade — e não de volume produzido. Agora diga um efeito ambiental da Revolução Verde: uso intensivo de agrotóxicos e fertilizantes, com contaminação de solo e água e perda de diversidade de cultivares."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que há fome num mundo que produz alimentos suficientes? Cite um efeito ambiental da Revolução Verde.",
+      "elements": [
+        [
+          "o problema e de acesso e distribuicao",
+          [
+            "acesso",
+            "distribuicao",
+            "renda"
+          ]
+        ],
+        [
+          "conflitos e logistica agravam a fome",
+          [
+            "conflito",
+            "logistica",
+            "pobreza"
+          ]
+        ],
+        [
+          "uso intensivo de agrotoxicos e fertilizantes",
+          [
+            "agrotoxico",
+            "fertilizante",
+            "contaminacao"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Geografia",
+    "topic": "Produção Mineral",
+    "sections": [
+      {
+        "title": "Recursos e regiões",
+        "content": "O Brasil é grande produtor de minério de ferro, com destaque para Carajás, no Pará, e para o Quadrilátero Ferrífero, em Minas Gerais, além de bauxita, nióbio, manganês e ouro. A produção é fortemente voltada à exportação de bens de baixo valor agregado, o que reforça o padrão primário-exportador."
+      },
+      {
+        "title": "Impactos socioambientais",
+        "content": "A mineração gera supressão de vegetação, poluição de rios, poeira, e produz enormes volumes de rejeitos armazenados em barragens. Os desastres de Mariana, em 2015, e Brumadinho, em 2019, expuseram falhas de fiscalização e de gestão de risco, com mortes e contaminação de bacias inteiras."
+      },
+      {
+        "title": "Garimpo e conflitos",
+        "content": "O garimpo ilegal, sobretudo de ouro, avança sobre terras indígenas e unidades de conservação na Amazônia, contaminando rios com mercúrio e provocando crises sanitárias entre populações ribeirinhas e indígenas. É um dos temas com maior recorrência recente em provas, ligado a saúde, ambiente e direitos territoriais."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Tratar mineração e garimpo como sinônimos é impreciso: o garimpo é atividade de menor escala e, quando ilegal, opera sem licenciamento nem controle. Outro deslize é supor que barragem de rejeitos é reservatório de água. E ignorar que o minério exportado bruto agrega pouco valor à economia nacional."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que os desastres de Mariana e Brumadinho foram tão graves? Responda antes de conferir: o rompimento de barragens liberou grandes volumes de rejeitos, provocando mortes, destruição de comunidades e contaminação de bacias inteiras. Agora explique o impacto sanitário do garimpo ilegal: o mercúrio usado contamina rios e peixes e chega às populações pela alimentação."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que os rompimentos de barragens de rejeitos foram tão graves? Qual o impacto sanitário do garimpo ilegal?",
+      "elements": [
+        [
+          "liberacao de grande volume de rejeitos",
+          [
+            "rejeito",
+            "barragem",
+            "rompimento"
+          ]
+        ],
+        [
+          "mortes e contaminacao de bacias",
+          [
+            "contaminacao",
+            "bacia",
+            "destruicao"
+          ]
+        ],
+        [
+          "o mercurio contamina rios e peixes",
+          [
+            "mercurio",
+            "rio",
+            "peixe"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Geografia",
     "topic": "Projeções Cartográficas",
     "sections": [
       {
@@ -8393,6 +11032,170 @@
   },
   {
     "subject": "Geografia",
+    "topic": "Questão Palestina",
+    "sections": [
+      {
+        "title": "Origens",
+        "content": "O sionismo político surgiu no fim do século XIX propondo um Estado judaico na Palestina, então sob domínio otomano e depois sob mandato britânico. A Declaração Balfour, de 1917, e a imigração crescente, intensificada pela perseguição nazista, aumentaram a tensão com a população árabe local, que também reivindicava autodeterminação."
+      },
+      {
+        "title": "Da partilha às guerras",
+        "content": "Em 1947, a ONU aprovou a partilha do território em dois Estados, aceita pela liderança judaica e rejeitada pelos países árabes. A criação de Israel em 1948 foi seguida de guerra e do deslocamento de centenas de milhares de palestinos, a Nakba. Em 1967, Israel ocupou Cisjordânia, Gaza, Jerusalém Oriental, Sinai e Colinas de Golã."
+      },
+      {
+        "title": "Impasses atuais",
+        "content": "Os pontos centrais de disputa são as fronteiras e os assentamentos na Cisjordânia, o estatuto de Jerusalém, o direito de retorno dos refugiados, a segurança e o controle sobre a Faixa de Gaza. Os acordos de Oslo criaram a Autoridade Palestina, mas a solução de dois Estados permanece bloqueada e a violência se repete em ciclos."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Tratar o conflito como disputa exclusivamente religiosa ignora que se trata de disputa territorial e nacional, com dimensão religiosa associada. Outro deslize é confundir Autoridade Palestina, Hamas e OLP. E supor que Gaza e Cisjordânia são contíguas, quando são áreas separadas com situações políticas distintas."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Quais são os principais pontos de impasse nas negociações? Responda antes de conferir: fronteiras e assentamentos, estatuto de Jerusalém, refugiados e direito de retorno, segurança e controle de Gaza. Agora explique por que 1948 e 1967 são datas centrais: a primeira marca a criação de Israel e o deslocamento palestino; a segunda, a ocupação dos territórios em disputa até hoje."
+      }
+    ],
+    "recall": {
+      "prompt": "Cite os principais pontos de impasse na questão palestina e explique a importância de 1948 e 1967.",
+      "elements": [
+        [
+          "fronteiras, assentamentos e Jerusalem",
+          [
+            "fronteira",
+            "assentamento",
+            "jerusalem"
+          ]
+        ],
+        [
+          "refugiados e direito de retorno",
+          [
+            "refugiado",
+            "retorno"
+          ]
+        ],
+        [
+          "1948 cria Israel e 1967 marca a ocupacao",
+          [
+            "1948",
+            "1967",
+            "ocupacao"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Geografia",
+    "topic": "Relevo Brasileiro",
+    "sections": [
+      {
+        "title": "Estruturas e classificações",
+        "content": "O Brasil não tem dobramentos modernos, o que explica a ausência de vulcanismo ativo, terremotos intensos e montanhas muito elevadas. O território se assenta sobre escudos cristalinos antigos e bacias sedimentares. Entre as classificações do relevo, a de Aroldo de Azevedo destaca planaltos e planícies, e a de Jurandyr Ross acrescenta as depressões."
+      },
+      {
+        "title": "Principais unidades",
+        "content": "Predominam planaltos, com destaque para o Planalto Central e a Serra do Mar, formada por escarpas que dificultaram historicamente a ligação entre litoral e interior. As planícies mais extensas são a Amazônica, a do Pantanal e a costeira. As depressões periféricas e interplanálticas ocupam áreas expressivas do território."
+      },
+      {
+        "title": "Relevo e ocupação",
+        "content": "O relevo condicionou a ocupação: as escarpas da Serra do Mar concentraram esforços de engenharia para ligar portos ao interior; os planaltos com relevo suave favoreceram a mecanização agrícola no Centro-Oeste; e as áreas de encosta em regiões metropolitanas, ocupadas de forma precária, concentram risco de deslizamento."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que o Brasil não tem terremotos é impreciso: ocorrem abalos de baixa magnitude, ainda que raros e pouco destrutivos, por o país estar em área intraplaca. Outro deslize é confundir a classificação de Ross com a de Azevedo. E chamar de planície toda área plana, quando a definição envolve predomínio de sedimentação sobre erosão."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que o Brasil não tem vulcões ativos nem montanhas muito altas? Responda antes de conferir: o território está em área intraplaca, longe de limites de placas, e não possui dobramentos modernos. Agora explique por que o relevo do Centro-Oeste favoreceu o agronegócio: planaltos de topo aplainado facilitam a mecanização em grandes áreas."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que o Brasil não tem vulcões ativos? E por que o relevo do Centro-Oeste favoreceu a mecanização?",
+      "elements": [
+        [
+          "o pais esta em area intraplaca",
+          [
+            "intraplaca",
+            "placa",
+            "limite"
+          ]
+        ],
+        [
+          "nao ha dobramentos modernos",
+          [
+            "dobramento",
+            "moderno",
+            "antigo"
+          ]
+        ],
+        [
+          "planaltos aplainados facilitam a mecanizacao",
+          [
+            "planalto",
+            "aplainado",
+            "mecanizacao"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Geografia",
+    "topic": "Representações Gráficas e Cartográficas",
+    "sections": [
+      {
+        "title": "Elementos do mapa",
+        "content": "Todo mapa traz título, legenda, escala, orientação e fonte. A legenda traduz os símbolos, a escala informa a relação com a realidade e a orientação indica os pontos cardeais. Sem esses elementos, a leitura fica comprometida, e questões de prova frequentemente pedem exatamente a identificação de um deles."
+      },
+      {
+        "title": "Escala e generalização",
+        "content": "Escala grande, como 1:1000, mostra área pequena com muito detalhe; escala pequena, como 1:1.000.000, mostra área ampla com pouco detalhe. Ao reduzir a escala, é preciso generalizar, eliminando informações. Perceber que isso é uma escolha, e não uma limitação técnica neutra, é parte da leitura crítica de mapas."
+      },
+      {
+        "title": "Gráficos e anamorfoses",
+        "content": "Gráficos de barras comparam quantidades; de linha mostram evolução; de setores mostram participação no todo; pirâmides etárias mostram estrutura por sexo e idade. A anamorfose deforma o território proporcionalmente a uma variável, como PIB ou população, permitindo ver desigualdades que o mapa convencional esconde."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Confundir escala grande com área grande é o erro mais frequente: escala grande mostra área pequena. Outro deslize é ler um gráfico de setores como se mostrasse valores absolutos, quando ele mostra proporções. E interpretar anamorfose como erro cartográfico, quando a distorção é intencional e informativa."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Numa escala 1:50.000, 4 cm no mapa correspondem a quanto no terreno? Calcule antes de conferir: 4·50.000 = 200.000 cm, ou seja, 2 km. Agora diga qual gráfico usar para mostrar a estrutura etária de um país: a pirâmide etária, que apresenta faixas de idade por sexo."
+      }
+    ],
+    "recall": {
+      "prompt": "Em escala 1:50.000, a quanto correspondem 4 cm? E o que é uma anamorfose?",
+      "elements": [
+        [
+          "dois quilometros",
+          [
+            "2 km",
+            "2",
+            "200000"
+          ]
+        ],
+        [
+          "escala grande mostra area pequena com detalhe",
+          [
+            "grande",
+            "detalhe",
+            "pequena"
+          ]
+        ],
+        [
+          "a anamorfose deforma o territorio por uma variavel",
+          [
+            "anamorfose",
+            "deforma",
+            "variavel"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Geografia",
     "topic": "Sistema de Fusos Horários",
     "sections": [
       {
@@ -8416,6 +11219,336 @@
         "content": "Tóquio está em UTC+9 e uma cidade brasileira em UTC−3. Se em Tóquio são 9h30 de segunda-feira, na cidade brasileira são 9h30 − 12 h = 21h30 de domingo. A diferença é de 12 horas. A distância entre as cidades, a estação do ano e a latitude não entram nesse cálculo quando os deslocamentos UTC já foram fornecidos."
       }
     ]
+  },
+  {
+    "subject": "Geografia",
+    "topic": "Tensões Geopolíticas na Europa",
+    "sections": [
+      {
+        "title": "Heranças e fronteiras",
+        "content": "A Europa contemporânea carrega fronteiras redesenhadas por duas guerras mundiais e pela dissolução da URSS e da Iugoslávia. Minorias nacionais espalhadas por vários Estados, como russos em países bálticos e na Ucrânia, são elemento recorrente de tensão e foram usadas como justificativa em conflitos recentes."
+      },
+      {
+        "title": "Guerra na Ucrânia",
+        "content": "A anexação da Crimeia em 2014 e a invasão em larga escala em 2022 reorganizaram a segurança europeia: ampliaram a OTAN com Finlândia e Suécia, aceleraram a busca de alternativas ao gás russo, elevaram gastos militares e produziram o maior fluxo de refugiados no continente desde a Segunda Guerra."
+      },
+      {
+        "title": "Separatismos e integração",
+        "content": "Movimentos separatistas na Catalunha, na Escócia e em outras regiões colocam em questão a coincidência entre nação e Estado. Ao mesmo tempo, a União Europeia enfrenta tensões internas sobre migração, Estado de direito e distribuição de custos, num equilíbrio permanente entre integração e reafirmação de soberanias nacionais."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Tratar a OTAN e a União Europeia como a mesma organização é erro frequente: uma é aliança militar com participação dos Estados Unidos, a outra é bloco de integração econômica e política. Outro deslize é reduzir a guerra na Ucrânia a disputa energética. E confundir Estado, nação e país no vocabulário geopolítico."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a guerra na Ucrânia alterou a matriz energética europeia? Responda antes de conferir: a dependência do gás russo se tornou vulnerabilidade estratégica, levando à busca de outros fornecedores, ao aumento do gás liquefeito importado e à aceleração de renováveis. Agora diferencie OTAN e União Europeia: aliança militar transatlântica e bloco de integração europeu."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a guerra na Ucrânia mudou a matriz energética europeia? Diferencie OTAN e União Europeia.",
+      "elements": [
+        [
+          "a dependencia do gas russo virou vulnerabilidade",
+          [
+            "gas",
+            "russo",
+            "dependencia"
+          ]
+        ],
+        [
+          "busca de novos fornecedores e renovaveis",
+          [
+            "fornecedor",
+            "renovavel",
+            "gnl"
+          ]
+        ],
+        [
+          "OTAN e alianca militar e UE e bloco de integracao",
+          [
+            "otan",
+            "militar",
+            "integracao"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Geografia",
+    "topic": "Terrorismo Internacional",
+    "sections": [
+      {
+        "title": "Definição e disputa do termo",
+        "content": "Terrorismo é o uso de violência contra civis para produzir medo e alcançar objetivos políticos. A definição é disputada politicamente, e o mesmo grupo pode ser chamado de terrorista ou de resistência conforme o ator que classifica, o que exige atenção crítica à fonte em qualquer texto sobre o tema."
+      },
+      {
+        "title": "Trajetória recente",
+        "content": "Os atentados de 11 de setembro de 2001 marcaram a entrada do tema no centro da agenda internacional, motivando a chamada guerra ao terror, as intervenções no Afeganistão e no Iraque e um conjunto de medidas de segurança e vigilância que alteraram legislações e o cotidiano em muitos países."
+      },
+      {
+        "title": "Causas e consequências",
+        "content": "Entre os fatores associados estão conflitos prolongados, ocupações, autoritarismo, exclusão social, radicalização identitária e uso de redes digitais para recrutamento. As respostas puramente militares mostraram limites, produzindo deslocamentos, instabilidade e, em vários casos, o surgimento de novos grupos armados."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Associar terrorismo a uma religião específica é generalização incorreta e historicamente falsa, já que grupos de motivações variadas praticaram atentados. Outro deslize é tratar o tema apenas como questão de segurança, ignorando causas políticas e sociais. E confundir terrorismo com guerrilha ou com crime organizado."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a definição de terrorismo é politicamente disputada? Responda antes de conferir: classificar um grupo como terrorista legitima medidas excepcionais contra ele e deslegitima suas reivindicações, de modo que o rótulo é ele próprio instrumento político. Agora diga um limite das respostas exclusivamente militares: elas não atuam sobre as causas sociais e políticas e podem gerar novos ciclos de violência."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a definição de terrorismo é politicamente disputada? Qual o limite das respostas militares?",
+      "elements": [
+        [
+          "o rotulo legitima medidas excepcionais",
+          [
+            "rotulo",
+            "legitima",
+            "excepcional"
+          ]
+        ],
+        [
+          "deslegitima as reivindicacoes do grupo",
+          [
+            "deslegitima",
+            "reivindicacao",
+            "politico"
+          ]
+        ],
+        [
+          "a resposta militar nao trata as causas",
+          [
+            "causa",
+            "social",
+            "novos grupos"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Geografia",
+    "topic": "Unilateralismo e Multilateralismo",
+    "sections": [
+      {
+        "title": "Dois modos de agir",
+        "content": "Unilateralismo é a atuação de um Estado por conta própria, sem submeter decisões a acordos ou instâncias coletivas. Multilateralismo é a coordenação entre vários Estados em fóruns e tratados, aceitando regras comuns. A escolha entre um e outro revela concepções distintas de soberania e de ordem internacional."
+      },
+      {
+        "title": "As instituições multilaterais",
+        "content": "ONU, OMC, FMI, Banco Mundial e OMS estruturam a governança global desde o pós-guerra. Elas enfrentam críticas por refletirem a correlação de forças de 1945, especialmente o Conselho de Segurança, com cinco membros permanentes e poder de veto, cuja reforma é reivindicada por países como Brasil, Índia, Alemanha e Japão."
+      },
+      {
+        "title": "Tensões contemporâneas",
+        "content": "Saídas de acordos, sanções aplicadas fora do quadro multilateral e paralisia decisória por veto alimentam a percepção de crise do multilateralismo. Ao mesmo tempo, temas como clima, pandemias e regulação digital não têm solução puramente nacional, o que mantém a demanda por coordenação internacional mesmo em ambiente de rivalidade."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Tratar a ONU como governo mundial é erro: ela não tem poder coercitivo próprio sobre Estados soberanos. Outro deslize é supor que multilateralismo significa igualdade entre os países, quando as assimetrias se reproduzem dentro das instituições. E confundir bilateralismo, entre dois países, com multilateralismo."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que o Conselho de Segurança é alvo de propostas de reforma? Responda antes de conferir: sua composição reflete o mundo de 1945 e o poder de veto de cinco membros permanentes pode paralisar decisões, deixando de fora potências emergentes. Agora diga por que temas climáticos exigem multilateralismo: as emissões e seus efeitos ultrapassam fronteiras e nenhuma ação nacional isolada resolve o problema."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que o Conselho de Segurança da ONU é criticado? E por que a questão climática exige multilateralismo?",
+      "elements": [
+        [
+          "composicao reflete o pos-guerra de 1945",
+          [
+            "1945",
+            "permanente",
+            "pos-guerra"
+          ]
+        ],
+        [
+          "o poder de veto paralisa decisoes",
+          [
+            "veto",
+            "paralisa",
+            "cinco"
+          ]
+        ],
+        [
+          "as emissoes ultrapassam fronteiras",
+          [
+            "fronteira",
+            "global",
+            "nenhum pais"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Geografia",
+    "topic": "União Europeia",
+    "sections": [
+      {
+        "title": "Formação e ampliação",
+        "content": "A integração começou com a Comunidade Europeia do Carvão e do Aço, em 1951, com objetivo econômico e também de pacificação após duas guerras. Sucessivos tratados, com destaque para Maastricht, em 1992, criaram a União Europeia, a cidadania europeia e as bases do euro, e o bloco se ampliou sobretudo para o leste após 1989."
+      },
+      {
+        "title": "Instituições e moeda",
+        "content": "O bloco tem Parlamento eleito, Comissão executiva, Conselho de ministros e Banco Central Europeu. O euro é adotado por parte dos membros, e sua criação transferiu a política monetária para o nível supranacional, mantendo a política fiscal nacional — descompasso que esteve no centro da crise das dívidas soberanas."
+      },
+      {
+        "title": "Tensões atuais",
+        "content": "O Brexit mostrou a reversibilidade da integração. Somam-se tensões sobre migração, distribuição de refugiados, diferenças entre economias do norte e do sul, questões de Estado de direito em alguns membros e o desafio energético após a redução da dependência do gás russo, que reorganizou a matriz e as alianças do bloco."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Confundir União Europeia com zona do euro é o erro mais comum: nem todos os membros adotam a moeda. Outro deslize é achar que o espaço Schengen coincide com o bloco, quando inclui países de fora e exclui alguns membros. E tratar o Brexit como saída da Europa, e não da União Europeia."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que a crise das dívidas soberanas atingiu duramente países como a Grécia? Responda antes de conferir: com moeda comum, esses países não podiam desvalorizar a própria moeda para recuperar competitividade, e a política fiscal seguia nacional, sem mecanismo de transferência equivalente ao de uma federação. Agora diga se todo membro da União Europeia usa o euro: não, a adoção é parcial."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que a moeda comum agravou a crise em países como a Grécia? Todo membro da União Europeia usa o euro?",
+      "elements": [
+        [
+          "nao podiam desvalorizar a moeda",
+          [
+            "desvalorizar",
+            "moeda",
+            "competitividade"
+          ]
+        ],
+        [
+          "politica monetaria comum com politica fiscal nacional",
+          [
+            "fiscal",
+            "monetaria",
+            "nacional"
+          ]
+        ],
+        [
+          "nem todos os membros adotam o euro",
+          [
+            "nem todos",
+            "parcial",
+            "nao"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Geografia",
+    "topic": "África no Mundo Atual",
+    "sections": [
+      {
+        "title": "Herança colonial",
+        "content": "A partilha do continente na Conferência de Berlim traçou fronteiras sem correspondência com territórios de povos e reinos existentes, agrupando grupos rivais e dividindo grupos coesos. Essa herança, somada a economias montadas para exportar poucos produtos, condiciona conflitos e vulnerabilidades até hoje."
+      },
+      {
+        "title": "Diversidade e dinamismo",
+        "content": "O continente reúne enorme diversidade: da Nigéria populosa e petrolífera à África do Sul industrializada, do Magreb mediterrâneo ao Sahel. A população é a mais jovem do mundo, a urbanização é acelerada e setores como telefonia móvel e pagamentos digitais avançaram rapidamente, superando etapas tecnológicas."
+      },
+      {
+        "title": "Recursos e disputas externas",
+        "content": "A África concentra reservas de minerais críticos para a transição energética, como cobalto e terras raras, além de petróleo e terras agricultáveis. Isso atrai investimentos e disputas de influência entre potências, com destaque para a presença chinesa em infraestrutura, o que gera debate sobre endividamento e soberania."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Tratar a África como país ou como realidade única é o erro mais comum e ignora mais de cinquenta Estados muito distintos. Outro deslize é atribuir todos os problemas exclusivamente ao colonialismo, sem considerar trajetórias internas. E supor que o continente está fora dos fluxos globais, quando é central em minerais estratégicos."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que as fronteiras africanas contribuem para conflitos? Responda antes de conferir: foram traçadas por potências europeias sem considerar territórios de povos existentes, agrupando grupos rivais e dividindo grupos coesos entre Estados diferentes. Agora diga por que o continente é estratégico na transição energética: concentra minerais críticos como cobalto e terras raras."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que as fronteiras africanas contribuem para conflitos? Por que o continente é estratégico na transição energética?",
+      "elements": [
+        [
+          "fronteiras tracadas na partilha colonial",
+          [
+            "berlim",
+            "colonial",
+            "partilha"
+          ]
+        ],
+        [
+          "agrupam grupos rivais e dividem povos",
+          [
+            "rivais",
+            "dividem",
+            "povos"
+          ]
+        ],
+        [
+          "concentra minerais criticos como cobalto",
+          [
+            "cobalto",
+            "mineral",
+            "terras raras"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "subject": "Geografia",
+    "topic": "Água na Superfície Terrestre",
+    "sections": [
+      {
+        "title": "Distribuição da água",
+        "content": "Cerca de 97% da água do planeta é salgada, e da parcela doce a maior parte está em geleiras e nas águas subterrâneas, restando pouquíssimo em rios e lagos de acesso direto. Essa distribuição explica por que a disponibilidade hídrica é um problema mesmo num planeta cuja superfície é majoritariamente coberta de água."
+      },
+      {
+        "title": "Bacias hidrográficas",
+        "content": "Bacia hidrográfica é a área drenada por um rio principal e seus afluentes, delimitada por divisores de água. É a unidade de planejamento adotada na gestão de recursos hídricos, porque o que ocorre a montante afeta quem está a jusante, o que exige gestão integrada entre municípios e até países."
+      },
+      {
+        "title": "Águas subterrâneas",
+        "content": "Aquíferos armazenam água em rochas porosas e representam reserva estratégica, como o Guarani na América do Sul. A recarga depende da infiltração, prejudicada pela impermeabilização urbana e pelo desmatamento. A superexploração pode causar rebaixamento do lençol, salinização e até subsidência do terreno."
+      },
+      {
+        "title": "Pegadinhas frequentes",
+        "content": "Dizer que a água é recurso infinito porque o ciclo é fechado ignora a questão da disponibilidade em qualidade, tempo e lugar adequados. Outro deslize é confundir bacia hidrográfica com rio. E supor que água subterrânea é sempre potável, quando pode estar contaminada ou naturalmente salinizada."
+      },
+      {
+        "title": "Pratique e confira",
+        "content": "Por que o planeta tem escassez de água mesmo com 71% da superfície coberta por ela? Responda antes de conferir: quase toda é salgada, e a doce está majoritariamente em geleiras e no subsolo, restando pouca água superficial acessível e bem distribuída. Agora diga por que a bacia é a unidade de gestão: o uso a montante afeta diretamente quem está a jusante."
+      }
+    ],
+    "recall": {
+      "prompt": "Por que há escassez de água num planeta majoritariamente coberto por ela? Por que a bacia é a unidade de gestão hídrica?",
+      "elements": [
+        [
+          "quase toda a agua e salgada",
+          [
+            "salgada",
+            "97",
+            "oceano"
+          ]
+        ],
+        [
+          "a doce esta em geleiras e no subsolo",
+          [
+            "geleira",
+            "subterranea",
+            "subsolo"
+          ]
+        ],
+        [
+          "o uso a montante afeta a jusante",
+          [
+            "montante",
+            "jusante",
+            "integrada"
+          ]
+        ]
+      ]
+    }
   },
   {
     "subject": "Gramática",
