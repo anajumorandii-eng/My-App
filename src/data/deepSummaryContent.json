@@ -5,23 +5,23 @@
     "sections": [
       {
         "title": "Mais de dois alelos na população",
-        "content": "Alelos múltiplos ocorrem quando um gene tem mais de duas versões na população, embora cada indivíduo continue tendo apenas duas. O sistema ABO é o exemplo clássico, com os alelos I^A, I^B e i. Os dois primeiros são codominantes entre si e ambos dominam o i, o que produz quatro fenótipos a partir de seis genótipos possíveis."
+        "content": "Fala-se em alelos múltiplos, ou polialelia, quando um mesmo locus gênico tem mais de duas versões circulando na população. A distinção que a banca cobra é aritmética e não conceitual: a população pode ter três, quatro ou dez alelos daquele gene, mas cada indivíduo diploide continua carregando exatamente dois, um em cada cromossomo homólogo. O efeito da polialelia é multiplicar os genótipos possíveis: com n alelos, o número de genótipos é n(n+1)/2 — com dois alelos são 3, com três alelos são 6, com quatro alelos são 10. Esse crescimento explica por que sistemas polialélicos geram tanta variabilidade fenotípica a partir de um único gene. O sistema ABO humano é o exemplo canônico, com os alelos I^A, I^B e i, mas não é o único: a cor da pelagem em coelhos (série C, c^ch, c^h, c^a, do selvagem ao albino) aparece com frequência em Fuvest e Unicamp justamente porque envolve uma hierarquia de dominância em série, em que cada alelo domina todos os que vêm depois dele na fila."
       },
       {
         "title": "O sistema ABO",
-        "content": "O tipo A pode ser I^AI^A ou I^Ai; o B, I^BI^B ou I^Bi; o AB é necessariamente I^AI^B; e o O é obrigatoriamente ii. Os antígenos estão nas hemácias e os anticorpos no plasma: quem é A tem anti-B, quem é B tem anti-A, quem é AB não tem nenhum e quem é O tem os dois, o que define quem doa e recebe de quem."
+        "content": "No sistema ABO, I^A e I^B são codominantes entre si e ambos dominam i. Daí os seis genótipos e quatro fenótipos: tipo A é I^AI^A ou I^Ai; tipo B é I^BI^B ou I^Bi; tipo AB é obrigatoriamente I^AI^B; tipo O é obrigatoriamente ii. O que cada alelo codifica é uma enzima glicosiltransferase que acrescenta um açúcar terminal à substância H da membrana da hemácia: I^A adiciona N-acetilgalactosamina, I^B adiciona galactose, e i produz uma enzima não funcional, de modo que o tipo O expõe a substância H sem modificação. Antígenos ficam na hemácia; anticorpos, no plasma, e são naturais, ou seja, existem sem exposição prévia. Quem é A tem anti-B, quem é B tem anti-A, quem é AB não tem nenhum dos dois e quem é O tem os dois. Daí decorre a lógica da transfusão: O é doador universal de hemácias porque não expõe A nem B, e AB é receptor universal de hemácias porque não tem anticorpos para atacá-las. Para plasma a lógica se inverte — AB é doador universal de plasma, O é receptor universal."
       },
       {
         "title": "Fator Rh e eritroblastose",
-        "content": "O fator Rh é determinado por outro gene, com Rh positivo dominante. A doença hemolítica do recém-nascido ocorre quando mãe Rh negativa sensibilizada gera filho Rh positivo: os anticorpos maternos atravessam a placenta e destroem as hemácias fetais. A prevenção é a aplicação de imunoglobulina anti-Rh após o primeiro parto."
+        "content": "O fator Rh é determinado por outro gene, em outro locus, com Rh+ (presença do antígeno D) dominante sobre Rh−. Como são genes independentes, os fenótipos se combinam livremente: um indivíduo pode ser A+, A−, O+ e assim por diante. A doença hemolítica do recém-nascido, ou eritroblastose fetal, depende de uma sequência precisa que a banca gosta de embaralhar. Mãe Rh− gera um primeiro filho Rh+; no parto, quando há mistura de sangue materno e fetal, a mãe é sensibilizada e produz anticorpos anti-Rh da classe IgG. Numa gestação seguinte de feto Rh+, esses IgG atravessam a placenta — e é justamente por serem IgG, e não IgM, que atravessam — e destroem as hemácias fetais, causando anemia, icterícia grave e liberação de eritroblastos, hemácias imaturas, na circulação, o que dá nome à doença. A prevenção é a aplicação de imunoglobulina anti-Rh na mãe logo após o primeiro parto: os anticorpos aplicados destroem as hemácias fetais antes que o sistema imune materno se sensibilize e crie memória."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Dizer que uma pessoa tem três alelos é o erro conceitual central: a população tem, o indivíduo tem dois. Outro deslize é trocar antígeno com anticorpo ao decidir compatibilidade. E supor que a eritroblastose atinge o primeiro filho, quando em geral a sensibilização ocorre no primeiro parto e afeta gestações seguintes."
+        "content": "O erro conceitual central é dizer que uma pessoa tem três alelos do sistema ABO: a população tem três, o indivíduo tem dois. O segundo deslize mais frequente é trocar antígeno com anticorpo ao decidir compatibilidade — vale fixar que o antígeno está na hemácia doada e o anticorpo está no plasma de quem recebe, então o que importa é se o plasma do receptor reconhece o que veio na hemácia. O terceiro é supor que a eritroblastose atinge o primeiro filho: em geral a sensibilização ocorre no parto do primeiro, e o risco recai sobre as gestações seguintes. Um quarto erro é imaginar que mãe Rh+ com filho Rh− pode desenvolver o quadro: não pode, porque a mãe já tem o antígeno D e não produz anticorpos contra ele. Ainda há um erro de sinal em problemas de paternidade: um casal AB × O nunca gera filho AB nem filho O, porque todo filho recebe I^A ou I^B de um lado e i do outro, resultando sempre em A ou B — esse é um dos cruzamentos favoritos da Fuvest."
       },
       {
         "title": "Pratique e confira",
-        "content": "Um casal com sangue A e B pode ter filho O? Responda antes de conferir: pode, se ambos forem heterozigotos, I^Ai e I^Bi, resultando em ii com probabilidade de 25%. Agora explique por que o tipo O é doador universal de hemácias: suas hemácias não têm antígenos A nem B, então não são atacadas pelos anticorpos do receptor."
+        "content": "Um casal com sangue A e B pode ter filho O? Responda antes de conferir. Pode, desde que ambos sejam heterozigotos, I^Ai × I^Bi: o quadro de cruzamento dá 1 I^AI^B (AB), 1 I^Ai (A), 1 I^Bi (B) e 1 ii (O), ou seja, 25% de chance para cada um dos quatro tipos sanguíneos — é o único cruzamento capaz de produzir os quatro fenótipos do sistema. Agora um segundo: mulher O− teve o primeiro filho A+ sem intercorrências e está grávida do segundo, do mesmo pai, A+ heterozigoto para ambos os genes. Qual a probabilidade de o segundo filho estar sob risco de eritroblastose? O risco exige feto Rh+, e como o pai é Rh+ heterozigoto e a mãe é Rh−, a chance é de 1/2 — o tipo ABO não entra na conta, porque a doença depende do fator Rh. Conclua explicando por que a imunoglobulina anti-Rh precisa ser dada depois de cada parto de filho Rh+, e não uma única vez na vida: cada gestação nova é uma nova oportunidade de sensibilização."
       }
     ],
     "recall": {
@@ -51,7 +51,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Biologia",
@@ -59,23 +60,23 @@
     "sections": [
       {
         "title": "O que são e onde estão",
-        "content": "Algas são organismos autotróficos fotossintetizantes, aquáticos ou de ambientes úmidos, sem tecidos verdadeiros diferenciados. Incluem formas unicelulares, coloniais e pluricelulares, e não constituem um grupo natural único: as verdes são aparentadas das plantas terrestres, enquanto as pardas e vermelhas pertencem a linhagens distintas."
+        "content": "Algas são organismos autotróficos fotossintetizantes, aquáticos ou de ambientes muito úmidos, cujo corpo é um talo — não há raiz, caule nem folha verdadeiros, e não há tecidos condutores diferenciados. Essa ausência é o critério que as separa das plantas e o ponto que a banca cobra. Em termos de classificação, o grupo é artificial: reúne organismos que a filogenia moderna distribui em ramos distintos. As cianobactérias, antigamente chamadas de algas azuis, são procariontes do domínio Bacteria e não pertencem ao mesmo grupo das demais. As euglenófitas, dinoflagelados, diatomáceas, algas pardas, vermelhas e verdes são eucariontes protistas. A forma varia de unicelular isolada (Chlamydomonas), a colonial (Volvox), a filamentosa (Spirogyra) e a pluricelular de grande porte (as laminárias, algas pardas que chegam a dezenas de metros). As algas verdes são o grupo do qual derivaram as plantas terrestres, o que se apoia em três evidências: clorofilas a e b, amido como reserva e parede de celulose."
       },
       {
         "title": "Pigmentos e profundidade",
-        "content": "Todas têm clorofila, mas pigmentos acessórios definem a cor e a profundidade em que vivem. As algas verdes ocupam águas rasas; as pardas, com fucoxantina, ficam em profundidade intermediária; as vermelhas, com ficoeritrina, aproveitam a luz azul que penetra mais fundo. Essa distribuição vertical é a questão mais recorrente do tópico."
+        "content": "Todas as algas têm clorofila a, mas os pigmentos acessórios definem a cor do grupo e, sobretudo, a profundidade em que cada um consegue viver. A explicação é física: a água absorve preferencialmente os comprimentos de onda longos, de modo que a luz vermelha se extingue nos primeiros metros e a luz azul-verde é a que penetra mais fundo. As algas verdes, com clorofilas a e b, absorvem bem no vermelho e por isso ocupam águas rasas. As pardas, com fucoxantina, ocupam profundidade intermediária. As vermelhas, com ficoeritrina, absorvem justamente a faixa azul-verde e por isso conseguem viver mais fundo do que qualquer outro grupo fotossintetizante — o fenômeno é chamado de adaptação cromática complementar, e a ideia central é que o pigmento absorve a cor complementar àquela que reflete. As reservas também variam e servem de critério: amido nas verdes, laminarina nas pardas, amido das florídeas nas vermelhas, paramilo nas euglenófitas."
       },
       {
         "title": "Importância ecológica e econômica",
-        "content": "O fitoplâncton marinho responde por grande parte da produção de oxigênio do planeta e é a base das cadeias alimentares oceânicas. Economicamente, as algas fornecem ágar, usado em meios de cultura, alginatos para indústria alimentícia e cosmética, e servem de alimento humano. Também participam de liquens e do processo de eutrofização quando proliferam em excesso."
+        "content": "O fitoplâncton marinho — sobretudo diatomáceas e dinoflagelados — responde por cerca de metade da produção primária do planeta e por parcela equivalente do oxigênio atmosférico, além de sustentar a base de praticamente todas as cadeias alimentares oceânicas. É também um sumidouro de carbono relevante: ao morrer, as células afundam e levam carbono para o fundo, no que se chama bomba biológica de carbono. Economicamente, das algas pardas extrai-se o algin, ou alginato, espessante usado em sorvetes e cosméticos; das vermelhas vêm o ágar, base de meios de cultura em microbiologia, e a carragenina, estabilizante alimentar; as diatomáceas deixam frústulas de sílica que formam a diatomita, usada como abrasivo e filtro. Do lado negativo, o excesso de nutrientes na água — eutrofização por esgoto e fertilizantes — provoca florações: a maré vermelha, causada por dinoflagelados que liberam neurotoxinas acumuladas em moluscos filtradores, e as florações de cianobactérias, que produzem hepatotoxinas e microcistinas."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Chamar alga de planta ignora a ausência de tecidos verdadeiros, raízes, caule e folhas. Outro erro é dizer que só as algas verdes fazem fotossíntese, quando todas fazem. E supor que as algas vermelhas vivem no fundo por falta de luz, quando é justamente sua capacidade de aproveitar a luz azul que permite essa profundidade."
+        "content": "Chamar alga de planta é o erro de partida: falta a ela tecido condutor, raiz, caule e folha verdadeiros, e a reprodução não envolve embrião protegido pela planta-mãe. O segundo erro é supor que só as algas verdes fazem fotossíntese, quando todas fazem — o que muda é o conjunto de pigmentos acessórios. O terceiro é dizer que a alga vermelha vive no fundo porque precisa de pouca luz: ela não precisa de menos luz, ela absorve uma faixa de luz diferente, a azul-verde, que é a única que chega até lá. O quarto é tratar cianobactéria como alga verdadeira: é procarionte, sem núcleo nem cloroplasto, com a fotossíntese ocorrendo em lamelas dispersas no citoplasma. Um quinto deslize aparece em questões de ecologia: atribuir a maré vermelha à alga vermelha, quando ela é causada por dinoflagelados. E cuidado com o ágar — é produto de alga vermelha, não de fungo, embora seja usado para cultivar fungos e bactérias."
       },
       {
         "title": "Pratique e confira",
-        "content": "Por que as algas vermelhas vivem em maior profundidade? Responda antes de conferir: a ficoeritrina absorve a luz azul, que penetra mais na coluna d'água, permitindo fotossíntese onde outras algas não conseguiriam. Agora diga por que o fitoplâncton é essencial: produz grande parte do oxigênio atmosférico e sustenta a base das cadeias marinhas."
+        "content": "Por que as algas vermelhas vivem em maior profundidade que as verdes? Responda antes de conferir. Porque a água absorve seletivamente a luz: os comprimentos de onda longos, do vermelho, são extintos nos primeiros metros, e apenas a faixa azul-verde penetra fundo. A ficoeritrina das algas vermelhas absorve exatamente essa faixa e transfere a energia para a clorofila a, o que torna a fotossíntese viável em profundidade onde a clorofila sozinha seria ineficiente. Agora um segundo problema, do tipo que a Unicamp costuma montar: um lago recebe descarga contínua de esgoto rico em fósforo e nitrogênio e, semanas depois, aparecem peixes mortos em grande número. Explique a sequência. A resposta encadeia eutrofização, floração de algas e cianobactérias, formação de uma camada superficial densa que bloqueia a luz para as camadas inferiores, morte das produtoras de baixo, decomposição aeróbia intensa que consome o oxigênio dissolvido e, por fim, anoxia que mata os peixes — sem contar as toxinas liberadas pelas cianobactérias."
       }
     ],
     "recall": {
@@ -106,7 +107,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Biologia",
@@ -114,23 +116,23 @@
     "sections": [
       {
         "title": "Metameria e organização",
-        "content": "Anelídeos são vermes de corpo segmentado em anéis, ou metâmeros, com celoma verdadeiro. A segmentação permite especialização regional e movimentação eficiente, com musculatura circular e longitudinal atuando junto às cerdas. Têm sistema digestório completo, circulatório fechado e excreção por nefrídios em cada segmento."
+        "content": "Anelídeos são vermes triblásticos, celomados e de simetria bilateral cujo corpo é dividido em anéis, ou metâmeros, repetidos ao longo do eixo — a chamada metameria. A segmentação não é apenas externa: septos internos separam as câmaras celomáticas, e cada metâmero repete estruturas como nefrídios, gânglios nervosos e vasos. Essa repetição traz duas vantagens que a banca costuma pedir. A primeira é a locomoção: o celoma cheio de líquido funciona como esqueleto hidrostático, e como os septos isolam as câmaras, a musculatura circular e a longitudinal podem se contrair em segmentos diferentes ao mesmo tempo, produzindo a onda peristáltica que faz a minhoca avançar. A segunda é a possibilidade de especialização regional: metâmeros equivalentes podem se diferenciar para funções distintas, e é desse princípio que derivam a cefalização e a especialização corporal vista em artrópodes e cordados. Os anelídeos têm ainda sistema digestório completo, circulação fechada e excreção por metanefrídios."
       },
       {
         "title": "Os três grupos",
-        "content": "Oligoquetos, como a minhoca, têm poucas cerdas e vivem no solo. Poliquetos são majoritariamente marinhos, com parapódios e muitas cerdas. Hirudíneos, como a sanguessuga, não têm cerdas e possuem ventosas; algumas espécies são hematófagas e produzem hirudina, substância anticoagulante de interesse médico."
+        "content": "A classificação tradicional reconhece três grupos. Oligoquetos, como a minhoca (Lumbricus), têm poucas cerdas por segmento, vivem no solo ou em água doce, são hermafroditas e apresentam clitelo, região glandular espessada que secreta o casulo onde os ovos se desenvolvem. Poliquetos são majoritariamente marinhos, têm muitas cerdas inseridas em parapódios — expansões laterais que funcionam em locomoção e trocas gasosas —, apresentam cabeça diferenciada com cirros e palpos, e em geral têm sexos separados com fecundação externa e larva trocófora, a mesma larva encontrada em moluscos, o que sustenta o parentesco entre os dois filos. Hirudíneos, os sanguessugas, não têm cerdas nem parapódios, têm ventosas nas extremidades, número fixo de segmentos e são hermafroditas; muitos são ectoparasitas hematófagos e secretam hirudina, um anticoagulante que impede a coagulação do sangue enquanto se alimentam — substância aproveitada na medicina para tratar problemas de circulação em reimplantes."
       },
       {
         "title": "Papel ecológico",
-        "content": "A minhoca é engenheira do solo: ao escavar galerias, aumenta a aeração e a infiltração de água, e ao ingerir matéria orgânica, produz húmus rico em nutrientes. Por isso a abundância de minhocas é indicador de solo saudável, e a minhocultura é usada na produção de adubo orgânico de alta qualidade."
+        "content": "A minhoca é o exemplo clássico de engenheira de ecossistema. Ao escavar galerias, ela aumenta a aeração e a porosidade do solo, o que melhora a infiltração de água e reduz o escoamento superficial e a erosão. Ao ingerir solo com matéria orgânica, tritura o material no papo e na moela, digere-o e elimina coprólitos ricos em nitrogênio, fósforo e potássio em formas assimiláveis pelas plantas — o húmus. Esse trabalho é a base da vermicompostagem, técnica agrícola de baixo custo para transformar resíduo orgânico em adubo. A abundância de minhocas serve ainda como bioindicador: solo compactado, contaminado por agrotóxicos ou muito ácido tem população reduzida. Os poliquetos, por sua vez, integram a fauna bentônica e são item alimentar importante para peixes e aves limícolas; alguns são usados como indicadores de poluição orgânica em sedimentos marinhos, já que poucos gêneros tolerantes dominam onde o oxigênio é escasso. Os hirudíneos, além do uso médico, atuam como predadores e parasitas em água doce."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Chamar minhoca de organismo simples ignora que ela tem celoma verdadeiro, circulação fechada e sistema digestório completo. Outro erro é dizer que anelídeos respiram por pulmões, quando a respiração é cutânea ou branquial. E supor que a segmentação é apenas externa, quando ela se reflete na organização interna."
+        "content": "Chamar a minhoca de animal simples ignora que ela tem celoma verdadeiro, sistema circulatório fechado com vasos dorsal e ventral e cinco pares de corações laterais, sistema digestório completo com boca, faringe, esôfago, papo, moela, intestino e ânus, e sistema nervoso ganglionar com cordão ventral. O segundo erro é dizer que todo anelídeo é terrestre: a maioria das espécies é marinha, e são os poliquetos. O terceiro é atribuir cerdas ao sanguessuga, que não as tem. O quarto é confundir hermafroditismo com autofecundação: a minhoca é hermafrodita, mas a fecundação é cruzada, com dois indivíduos trocando espermatozoides — a autofecundação é evitada e isso preserva a variabilidade genética. Um quinto deslize é dizer que a minhoca respira por traqueias ou brânquias: a respiração é cutânea, feita por difusão através da pele úmida e vascularizada, e é justamente por isso que ela sobe à superfície quando o solo encharca e o oxigênio disponível cai."
       },
       {
         "title": "Pratique e confira",
-        "content": "Por que a minhoca morre se a pele secar? Responda antes de conferir: a respiração é cutânea e depende de superfície úmida para a difusão dos gases. Agora explique como a minhoca melhora o solo: escava galerias que aeram e drenam, e transforma matéria orgânica em húmus rico em nutrientes."
+        "content": "Por que a minhoca morre se a pele secar, e por que ela aparece na superfície depois da chuva forte? Responda antes de conferir. A respiração é cutânea: os gases atravessam a pele por difusão, e a difusão só ocorre se os gases estiverem dissolvidos, o que exige superfície úmida. Pele seca interrompe a troca gasosa e o animal asfixia. Depois da chuva, o encharcamento preenche as galerias com água pobre em oxigênio dissolvido, e a minhoca sobe para não asfixiar no subsolo — o que a expõe à dessecação e à predação assim que o sol volta. Agora um segundo, mais analítico: explique como a metameria com septos permite locomoção mais eficiente do que a de um verme acelomado, como a planária. A resposta liga o celoma septado à existência de compartimentos hidrostáticos independentes, o que permite que a musculatura circular contraia num grupo de segmentos, alongando-o e fixando as cerdas, enquanto a longitudinal contrai em outro grupo, encurtando-o e puxando o corpo — coordenação impossível num corpo maciço e sem cavidade."
       }
     ],
     "recall": {
@@ -161,7 +163,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Biologia",
@@ -169,23 +172,23 @@
     "sections": [
       {
         "title": "Padrões de arquitetura",
-        "content": "A anatomia animal se organiza por critérios comparáveis: simetria radial ou bilateral; número de folhetos embrionários, com diblásticos e triblásticos; e presença de celoma, dividindo os animais em acelomados, pseudocelomados e celomados. Também importa o tipo de trato digestório: incompleto, com abertura única, ou completo, com boca e ânus."
+        "content": "A anatomia comparada dos animais se organiza por três critérios que a banca combina em quase toda questão. O primeiro é a simetria: assimétricos (poríferos), radiais (cnidários e ctenóforos, ligados a vida séssil ou flutuante) e bilaterais (todos os demais, associados a deslocamento dirigido e cefalização — concentração de órgãos sensoriais e gânglios na extremidade anterior). O segundo é o número de folhetos embrionários: diblásticos, com ectoderme e endoderme apenas (cnidários), e triblásticos, que acrescentam a mesoderme e com ela musculatura, órgãos excretores e cavidades. O terceiro é a presença e a origem da cavidade corporal: acelomados, com o espaço entre o tubo digestório e a parede preenchido por mesênquima maciço (platelmintos); pseudocelomados, com cavidade derivada da blastocele e não totalmente revestida por mesoderme (nematódeos); e celomados, com cavidade inteiramente revestida por mesoderme, o que permite suspender os órgãos, isolá-los da parede e formar um esqueleto hidrostático eficiente."
       },
       {
         "title": "Platelmintos",
-        "content": "Os platelmintos são achatados, triblásticos e acelomados, com sistema digestório incompleto ou ausente. A planária é de vida livre e tem grande poder de regeneração. Já a Taenia e o Schistosoma são parasitas: a teníase vem do consumo de carne crua com cisticercos, e a esquistossomose depende do caramujo Biomphalaria como hospedeiro intermediário."
+        "content": "Os platelmintos são achatados dorsoventralmente, triblásticos e acelomados. O achatamento não é detalhe estético: sem sistema circulatório e sem sistema respiratório, o animal depende de difusão direta, e o corpo achatado garante que nenhuma célula fique longe demais da superfície. O sistema digestório é incompleto, com uma única abertura que serve de boca e ânus, ou ausente nas formas parasitas que absorvem nutrientes já digeridos pelo hospedeiro. A excreção é feita por células-flama, ou protonefrídios. A planária é de vida livre, tem grande poder de regeneração e olhos simples em forma de taça, chamados ocelos, que detectam intensidade e direção da luz sem formar imagem. Entre os parasitas estão a Taenia solium e a Taenia saginata, causadoras da teníase, e o Schistosoma mansoni, causador da esquistossomose, cujo ciclo passa obrigatoriamente pelo caramujo do gênero Biomphalaria e cuja larva infectante, a cercária, penetra ativamente pela pele de quem entra em água contaminada."
       },
       {
         "title": "Nematódeos",
-        "content": "Os nematódeos são cilíndricos, pseudocelomados e têm sistema digestório completo, o que representa avanço em relação aos platelmintos. Incluem a lombriga Ascaris, o ancilóstomo do amarelão, que penetra pela pele dos pés, e a Wuchereria da elefantíase, transmitida por mosquito. Saneamento e calçados são medidas preventivas centrais."
+        "content": "Os nematódeos são cilíndricos, afilados nas pontas, pseudocelomados e revestidos por uma cutícula resistente que precisa ser trocada por muda. Trazem dois avanços claros: o sistema digestório completo, com boca e ânus separados, o que permite fluxo unidirecional do alimento e digestão em etapas especializadas, e o pseudoceloma preenchido por líquido sob pressão, que funciona como esqueleto hidrostático. Como só possuem musculatura longitudinal, sem camada circular, o movimento é a característica ondulação em chicote no plano dorsoventral. Os sexos são separados e há dimorfismo sexual, com a fêmea maior. O grupo reúne parasitas de importância médica direta: Ascaris lumbricoides, a lombriga, cujo ciclo inclui uma passagem pelos pulmões, o ciclo de Loss; Ancylostoma e Necator, causadores do amarelão, cuja larva penetra pela pele dos pés descalços e provoca anemia por hematofagia; Wuchereria bancrofti, transmitida pelo mosquito Culex e causadora da elefantíase; e Enterobius vermicularis, o oxiúro."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Trocar o hospedeiro intermediário da esquistossomose por outro molusco é erro comum: é o caramujo do gênero Biomphalaria. Outro deslize é dizer que platelmintos têm ânus. E confundir cisticercose, adquirida pela ingestão de ovos, com teníase, adquirida pela ingestão de carne com cisticerco — a diferença muda a prevenção."
+        "content": "Trocar o hospedeiro intermediário da esquistossomose é o erro mais frequente: é o caramujo Biomphalaria, e não o Achatina nem o mosquito. O segundo erro é dizer que platelminto tem sistema digestório completo — não tem, e é isso que o separa do nematódeo. O terceiro é confundir teníase com cisticercose, e vale fixar pela via de entrada: quem come carne crua com cisticerco desenvolve teníase, com o verme adulto no intestino; quem ingere ovos do parasita, por água ou alimento contaminado com fezes humanas, desenvolve cisticercose, com larvas encistadas em músculos, olhos e sistema nervoso — a forma grave. Só a T. solium, a do porco, causa cisticercose humana. O quarto erro é dizer que pseudoceloma é ausência de cavidade: é cavidade sim, mas com revestimento mesodérmico incompleto. E um quinto, de prevenção: tratar o amarelão como doença de água contaminada ingerida, quando a via é a penetração ativa da larva pela pele."
       },
       {
         "title": "Pratique e confira",
-        "content": "Diferencie teníase de cisticercose antes de conferir: na teníase, a pessoa ingere carne crua com cisticerco e abriga o verme adulto no intestino; na cisticercose, ingere ovos por água ou alimento contaminado e os cisticercos se alojam em tecidos, inclusive no cérebro. Agora diga por que andar descalço transmite amarelão: a larva penetra ativamente pela pele."
+        "content": "Diferencie teníase de cisticercose antes de conferir, apontando a via de infecção, a forma do parasita presente e a gravidade. Na teníase, a pessoa ingere carne de porco ou boi crua ou malpassada contendo cisticerco; o escólex se fixa na parede intestinal e desenvolve o verme adulto, que causa desconforto abdominal e emagrecimento. Na cisticercose, a pessoa ingere ovos eliminados nas fezes humanas; as larvas atravessam a parede intestinal, caem na circulação e se encistam em tecidos — quando alcançam o sistema nervoso central, causam neurocisticercose, com convulsões, e o quadro pode ser fatal. Note a inversão que a banca explora: na cisticercose o ser humano ocupa o papel de hospedeiro intermediário, que normalmente é do porco. Agora um segundo problema: explique por que o saneamento básico interrompe simultaneamente os ciclos da esquistossomose, da ascaridíase e da ancilostomose. A resposta comum a todos é a interrupção do contato entre fezes humanas e água ou solo, que é o elo obrigatório dos três ciclos."
       }
     ],
     "recall": {
@@ -216,7 +219,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Biologia",
@@ -224,23 +228,23 @@
     "sections": [
       {
         "title": "Características do grupo",
-        "content": "Aracnídeos têm corpo dividido em cefalotórax e abdome, quatro pares de patas locomotoras, ausência de antenas e presença de quelíceras e pedipalpos. Respiram por filotraqueias, estruturas em folhas empilhadas, ou por traqueias. O grupo inclui aranhas, escorpiões, ácaros e carrapatos."
+        "content": "Aracnídeos são quelicerados: o corpo se divide em cefalotórax, ou prossoma, e abdome, ou opistossoma; não há antenas nem mandíbulas; o primeiro par de apêndices são as quelíceras, usadas para perfurar e inocular, e o segundo são os pedipalpos, com função sensorial, de manipulação do alimento ou, nos escorpiões, transformados em pinças. Há quatro pares de patas locomotoras, o que fecha em oito e é o critério mais rápido de identificação. A respiração se faz por filotraqueias, também chamadas pulmões foliáceos, estruturas laminares empilhadas como páginas de livro, e em alguns grupos também por traqueias. A excreção ocorre por túbulos de Malpighi e glândulas coxais, com eliminação de guanina, um composto pouco solúvel que economiza água. A digestão é em grande parte extracorpórea: enzimas são injetadas na presa e o conteúdo liquefeito é sugado, arranjo compatível com a boca estreita do grupo. Aranhas, escorpiões, ácaros e carrapatos compõem os principais representantes."
       },
       {
         "title": "Importância médica",
-        "content": "Aranhas do gênero Loxosceles causam lesão necrótica; Phoneutria provoca dor intensa; escorpiões do gênero Tityus causam acidentes graves sobretudo em crianças. Carrapatos transmitem a febre maculosa, e ácaros da poeira estão associados a alergias respiratórias. O tratamento dos acidentes graves envolve soro antiaracnídeo ou antiescorpiônico específico."
+        "content": "Três gêneros de aranha concentram os acidentes graves no Brasil. Loxosceles, a aranha-marrom, tem veneno com esfingomielinase D e causa lesão necrótica de evolução lenta, muitas vezes indolor no início, o que atrasa o atendimento; pode evoluir com hemólise. Phoneutria, a armadeira, tem veneno neurotóxico que atua nos canais de sódio, provocando dor intensa e imediata, sudorese e, em crianças, quadros sistêmicos. Latrodectus, a viúva-negra, causa dor e contraturas musculares. Entre os escorpiões, o gênero Tityus, sobretudo T. serrulatus, o escorpião-amarelo, é responsável pelos acidentes mais graves, especialmente em crianças, e sua expansão urbana é favorecida pela reprodução por partenogênese e pela abundância de baratas em áreas com lixo acumulado. Carrapatos são vetores: o Amblyomma transmite a febre maculosa, causada pela bactéria Rickettsia rickettsii. Ácaros da poeira doméstica, do gênero Dermatophagoides, desencadeiam asma e rinite alérgica, e o Sarcoptes scabiei causa a escabiose, a sarna."
       },
       {
         "title": "Papel ecológico",
-        "content": "Apesar da fama, a maioria dos aracnídeos é benéfica: aranhas são predadoras importantes de insetos, incluindo vetores de doenças, e ácaros do solo participam da decomposição. O desequilíbrio urbano, com acúmulo de lixo e entulho, favorece presas como baratas e explica o aumento de escorpiões nas cidades."
+        "content": "Apesar da fama, a maior parte dos aracnídeos é benéfica ou neutra. Aranhas estão entre os predadores mais numerosos de artrópodes terrestres e exercem controle biológico relevante sobre insetos, incluindo vetores de doenças e pragas agrícolas; estimativas de biologia da conservação atribuem a elas o consumo anual de centenas de milhões de toneladas de presas no mundo. Ácaros do solo participam da fragmentação da serapilheira e da ciclagem de nutrientes, atuando ao lado de fungos e bactérias na decomposição. Alguns ácaros predadores, do gênero Phytoseiulus, são criados e liberados comercialmente para controlar ácaros-praga em cultivos protegidos, um exemplo direto de controle biológico aplicado. A seda das aranhas é objeto de pesquisa em biomateriais por combinar resistência à tração comparável à do aço com elasticidade muito superior. Do ponto de vista ecológico, a redução das populações de aracnídeos por uso intensivo de agrotóxicos costuma ser seguida de surtos de pragas antes controladas."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Atribuir antenas aos aracnídeos é erro de identificação. Outro é dizer que aranhas têm três partes corporais, quando são duas. E supor que todo aracnídeo é peçonhento, quando apenas alguns gêneros têm importância médica, e a maior parte é inofensiva e ecologicamente útil."
+        "content": "Atribuir antenas a um aracnídeo é o erro de identificação mais direto: quem tem antenas é inseto, crustáceo ou miriápode. O segundo é dizer que aranha tem três partes corporais, quando tem duas — cabeça e tórax estão fundidos no cefalotórax. O terceiro é supor que todo aracnídeo é peçonhento: ácaros e opiliões, os populares bode-cheiroso, não inoculam veneno, e a maioria das aranhas não tem quelíceras capazes de perfurar a pele humana. O quarto é confundir peçonhento com venenoso: peçonhento inocula ativamente por uma estrutura própria, como o ferrão do escorpião; venenoso causa dano quando ingerido ou tocado. Um quinto erro aparece em questões de saúde pública: dizer que a febre maculosa é causada pelo carrapato, quando o carrapato é o vetor e o agente é uma bactéria. E cuidado com a contagem de patas do carrapato: a larva tem seis, e só a ninfa e o adulto têm oito — detalhe que já apareceu em prova."
       },
       {
         "title": "Pratique e confira",
-        "content": "Como diferenciar rapidamente um inseto de um aracnídeo? Responda antes de conferir: o inseto tem seis patas, antenas e corpo em três partes; o aracnídeo tem oito patas, não tem antenas e o corpo tem duas partes. Agora explique o aumento de escorpiões nas cidades: acúmulo de entulho e lixo favorece baratas, sua principal presa."
+        "content": "Como diferenciar rapidamente um inseto de um aracnídeo? Responda antes de conferir. O inseto tem seis patas, um par de antenas, corpo em três partes (cabeça, tórax e abdome) e frequentemente asas; o aracnídeo tem oito patas, nenhuma antena, corpo em duas partes e nunca tem asas. Agora um segundo, do tipo que a Unesp gosta: explique por que a expansão urbana do escorpião-amarelo é particularmente difícil de conter. A resposta reúne a partenogênese, que dispensa macho e permite que um único indivíduo funde uma população; o hábito de se abrigar em entulho, tijolos e ralos; a alimentação baseada em baratas, abundantes onde há lixo e esgoto a céu aberto; e a resistência prolongada ao jejum, que dificulta o controle por remoção de alimento em curto prazo. Conclua indicando a medida de controle mais eficaz: eliminar abrigos e fontes de alimento, ou seja, limpeza urbana e vedação de ralos, em vez de aplicação isolada de inseticida, que dispersa os animais e pode aumentar os acidentes."
       }
     ],
     "recall": {
@@ -271,7 +275,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Biologia",
@@ -279,23 +284,23 @@
     "sections": [
       {
         "title": "O filo de maior sucesso",
-        "content": "Artrópodes têm exoesqueleto de quitina, patas articuladas e corpo segmentado. O exoesqueleto protege e reduz a perda de água, mas não cresce junto com o animal, o que exige mudas periódicas, ou ecdise. Essa combinação explica a conquista dos ambientes terrestres e a enorme diversidade do grupo."
+        "content": "Artrópodes formam o filo mais diverso do planeta, com mais de um milhão de espécies descritas, e devem esse sucesso a três características associadas. O exoesqueleto de quitina, reforçado por proteínas e, nos crustáceos, por carbonato de cálcio, protege contra predadores, sustenta o corpo e reduz a perda de água por evaporação — foi a impermeabilização que viabilizou a conquista definitiva do ambiente terrestre. Os apêndices articulados dão precisão de movimento e, por serem seriados, puderam se especializar em peças bucais, patas, antenas e órgãos copuladores. A segmentação corporal, herdada de um ancestral metamerizado, permitiu a fusão de segmentos em tagmas com funções distintas. O custo do exoesqueleto é que ele não cresce junto com o animal: o crescimento é descontínuo e exige mudas, ou ecdises, controladas pelo hormônio ecdisona. Durante e logo após a muda o animal fica com o tegumento mole, vulnerável à predação e à dessecação, o que impõe limite ao tamanho corporal, sobretudo em terra."
       },
       {
         "title": "Insetos",
-        "content": "Insetos têm corpo em cabeça, tórax e abdome, três pares de patas, geralmente asas, respiração traqueal e excreção por túbulos de Malpighi, que economizam água ao excretar ácido úrico. Muitos apresentam metamorfose completa, com larva e pupa, o que reduz a competição entre jovens e adultos por explorarem nichos diferentes."
+        "content": "Insetos têm corpo em cabeça, tórax e abdome, três pares de patas torácicas, um par de antenas e, em geral, um ou dois pares de asas — são os únicos invertebrados que voam, e o voo explica boa parte de sua dispersão e sucesso. A respiração é traqueal: um sistema de tubos ramificados leva ar diretamente às células a partir de aberturas laterais, os espiráculos, o que dispensa o sangue como transportador de gases; a hemolinfa circula em sistema aberto e transporta nutrientes, não oxigênio. A excreção se faz por túbulos de Malpighi, que eliminam ácido úrico, composto insolúvel que economiza água — adaptação decisiva em terra. As peças bucais são altamente modificadas conforme a dieta: mastigadora no gafanhoto, sugadora no pernilongo, sifonadora na borboleta, lambedora na mosca. O desenvolvimento pode ser ametábolo, sem metamorfose, hemimetábolo, com ninfa parecida com o adulto, ou holometábolo, com larva, pupa e adulto — este último reduz a competição entre jovens e adultos, que exploram nichos diferentes."
       },
       {
         "title": "Crustáceos e miriápodes",
-        "content": "Crustáceos, como caranguejos e camarões, são majoritariamente aquáticos, com respiração branquial, dois pares de antenas e cefalotórax. Miriápodes incluem centopeias, carnívoras e com um par de patas por segmento, e piolhos-de-cobra, detritívoros e com dois pares por segmento. O número de antenas e de patas é o critério de identificação mais direto."
+        "content": "Crustáceos, como caranguejos, camarões, lagostas, siris e tatuzinhos-de-jardim, são majoritariamente aquáticos, têm respiração branquial, dois pares de antenas — característica exclusiva do grupo entre os artrópodes — e o corpo dividido em cefalotórax e abdome, muitas vezes protegido por uma carapaça. A excreção se faz por glândulas antenais, ou glândulas verdes, e a maioria elimina amônia, o que é viável em meio aquático abundante. Miriápodes reúnem quilópodes e diplópodes, ambos com corpo alongado, cabeça e tronco com muitos segmentos, e um par de antenas. Os quilópodes, as lacraias, têm um par de patas por segmento, corpo achatado, são predadores ágeis e carregam forcípulas, primeiro par de patas transformado em garras inoculadoras de veneno. Os diplópodes, os piolhos-de-cobra, têm dois pares de patas por segmento, corpo cilíndrico, são detritívoros lentos e se defendem enrolando-se e liberando substâncias repugnantes, sem inocular veneno."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Contar aranha como inseto é o erro clássico, e a chave está nas patas: inseto tem seis, aracnídeo tem oito. Outro deslize é dizer que o exoesqueleto cresce com o animal. E confundir respiração traqueal dos insetos com pulmonar, quando as traqueias levam ar diretamente aos tecidos, sem depender do sangue."
+        "content": "Contar aranha como inseto é o erro clássico, e a chave está nas patas e nas antenas: inseto tem seis patas e antenas, aracnídeo tem oito e nenhuma. O segundo erro é dizer que o exoesqueleto cresce com o animal — ele não cresce, e a necessidade de mudas é justamente a consequência. O terceiro é atribuir transporte de oxigênio à hemolinfa dos insetos: quem entrega o gás é a traqueia, diretamente à célula, e é por isso que o sistema circulatório aberto não limita a atividade do animal. O quarto é trocar quilópode com diplópode; guarde pelo número de patas por segmento, um contra dois, e pela ecologia, predador venenoso contra detritívoro inofensivo. O quinto é dizer que crustáceo tem um par de antenas: são dois, e esse é o traço diagnóstico. E há um erro fino que aparece em prova: dizer que a metamorfose completa é vantagem por acelerar o crescimento, quando a vantagem central é separar os nichos de larva e adulto, eliminando a competição intraespecífica por recurso."
       },
       {
         "title": "Pratique e confira",
-        "content": "Por que insetos precisam trocar de exoesqueleto? Responda antes de conferir: o exoesqueleto é rígido e não cresce, então o animal precisa rompê-lo e produzir outro maior. Agora explique a vantagem da metamorfose completa: larva e adulto exploram alimentos e ambientes diferentes, reduzindo a competição interna da espécie."
+        "content": "Por que insetos precisam trocar de exoesqueleto, e por que essa exigência limita o tamanho que podem atingir? Responda antes de conferir. O exoesqueleto é rígido e acelular, não acompanha o crescimento dos tecidos internos, então o animal precisa secretar um novo revestimento por baixo, romper o antigo e expandir o corpo antes que o novo endureça. Enquanto o tegumento está mole, o animal não se sustenta bem nem se protege, e quanto maior o corpo, mais grave é o problema — em terra, sem o empuxo da água, um inseto muito grande colapsaria sob o próprio peso durante a muda. Some-se a isso o limite da respiração traqueal, que depende de difusão passiva ao longo dos tubos e perde eficiência com a distância. Agora um segundo: explique por que borboletas e suas lagartas raramente competem entre si. A resposta é o desenvolvimento holometábolo: a lagarta é mastigadora e come folhas, a borboleta é sifonadora e se alimenta de néctar, de modo que ocupam nichos alimentares distintos apesar de serem a mesma espécie."
       }
     ],
     "recall": {
@@ -326,7 +331,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Biologia",
@@ -334,23 +340,23 @@
     "sections": [
       {
         "title": "Obter energia utilizável",
-        "content": "ATP é a moeda imediata de energia celular, mas não é reserva de longo prazo. Na respiração aeróbia, a oxidação gradual da glicose transfere elétrons e permite produzir ATP. A glicólise ocorre no citosol e não exige oxigênio diretamente; seu produto, piruvato, pode seguir destinos diferentes."
+        "content": "O ATP é a moeda energética imediata da célula, mas não é reserva: a quantidade presente numa célula dura poucos segundos de atividade e precisa ser regenerada continuamente a partir de ADP e fosfato inorgânico. Reserva é outra coisa — glicogênio, amido, lipídios —, e a confusão entre moeda e reserva é fonte constante de erro. A lógica da respiração celular é oxidar a glicose de forma gradual, em muitas etapas, em vez de queimá-la de uma vez: a combustão direta liberaria toda a energia como calor, ao passo que a oxidação escalonada permite capturar parte dela em ligações químicas úteis. O que acontece em cada etapa é transferência de elétrons de alta energia, carregados por NAD+ e FAD, que se reduzem a NADH e FADH2 e os entregam à cadeia respiratória. O rendimento global aproximado da respiração aeróbia é de 30 a 38 ATP por glicose, contra 2 ATP na fermentação, e essa diferença de mais de uma ordem de grandeza é o argumento central de quase toda questão sobre o tema."
       },
       {
         "title": "Respiração aeróbia",
-        "content": "Após a glicólise, o piruvato é transformado e entra em etapas mitocondriais. O ciclo de Krebs produz transportadores reduzidos; a cadeia respiratória usa seus elétrons para bombear prótons. O retorno dos prótons pela ATP sintase produz ATP por fosforilação oxidativa. O oxigênio recebe elétrons ao final e forma água."
+        "content": "A glicólise ocorre no citosol, não na mitocôndria, e converte uma glicose em duas moléculas de piruvato, com saldo líquido de 2 ATP e 2 NADH — gasta 2 ATP na fase de ativação e produz 4 na fase de pagamento. Havendo oxigênio, o piruvato entra na mitocôndria e passa pela descarboxilação oxidativa, que libera CO2 e forma acetil-CoA, com mais 1 NADH por piruvato. O acetil-CoA entra no ciclo de Krebs, na matriz mitocondrial, onde cada volta libera 2 CO2 e rende 3 NADH, 1 FADH2 e 1 ATP (ou GTP); como são duas voltas por glicose, dobram-se esses valores. Na cadeia respiratória, na membrana interna da mitocôndria, os elétrons do NADH e do FADH2 percorrem complexos proteicos e o gradiente de prótons formado no espaço intermembranar move a ATP-sintase, num processo chamado fosforilação oxidativa e explicado pela hipótese quimiosmótica de Mitchell. O aceptor final dos elétrons é o oxigênio, que ao recebê-los e se combinar com prótons forma água — daí o oxigênio virar água, e não CO2."
       },
       {
         "title": "Fermentação como alternativa",
-        "content": "Sem oxigênio disponível ou em certas condições celulares, a fermentação regenera NAD+ para manter a glicólise ativa. Na fermentação láctica, forma-se lactato; na alcoólica, etanol e dióxido de carbono. O saldo energético por glicose é menor porque não há cadeia respiratória funcionando como na respiração aeróbia."
+        "content": "Quando falta oxigênio, ou quando a demanda energética supera a capacidade de entrega de oxigênio, a cadeia respiratória para e o NADH deixa de ser reoxidado. Sem NAD+ disponível, a glicólise também travaria, e é exatamente esse o problema que a fermentação resolve: ela não produz ATP adicional, ela regenera NAD+ para que a glicólise continue rendendo seus 2 ATP por glicose. Na fermentação láctica, o piruvato é reduzido diretamente a lactato, com reoxidação do NADH; ocorre no músculo esquelético em esforço intenso e em bactérias como as do gênero Lactobacillus, aproveitadas na produção de iogurte e queijo, em que a acidificação coagula a caseína. Na fermentação alcoólica, típica de leveduras como Saccharomyces cerevisiae, o piruvato é descarboxilado a acetaldeído, liberando CO2, e depois reduzido a etanol; é a base da produção de pão, em que o CO2 faz a massa crescer, de bebidas alcoólicas e do etanol combustível. A fermentação acética, por sua vez, é oxidação aeróbia do etanol, e não fermentação em sentido estrito."
       },
       {
         "title": "O que não confundir",
-        "content": "Respiração não é sinônimo de ventilação pulmonar: é um conjunto de reações celulares. A glicólise não ocorre na mitocôndria. Também não diga que fermentação produz ATP “sem oxigênio” diretamente: o ATP vem da glicólise; a fermentação permite regenerar a coenzima necessária para a continuidade do processo."
+        "content": "Respiração celular não é sinônimo de ventilação pulmonar: uma é conjunto de reações bioquímicas em toda célula viva, a outra é o movimento mecânico de ar. O segundo erro é localizar a glicólise na mitocôndria, quando ela é citosólica — e é por isso que procariontes, sem mitocôndria, também a realizam. O terceiro é dizer que a fermentação produz ATP a partir do piruvato: as etapas fermentativas propriamente ditas não geram ATP algum, apenas regeneram NAD+; o ATP da via toda vem da glicólise. O quarto é afirmar que o oxigênio se transforma em gás carbônico: o CO2 vem da descarboxilação do piruvato e do ciclo de Krebs, e o oxigênio vira água. O quinto é atribuir a dor muscular tardia ao ácido láctico, explicação já superada — o lactato é removido em cerca de uma hora, e a dor de 24 a 48 horas depois decorre de microlesões nas fibras. Um sexto, mais fino: dizer que a fermentação é exclusiva de organismos anaeróbios, quando células humanas e leveduras, aeróbias, a realizam conforme a condição."
       },
       {
         "title": "Pratique e confira",
-        "content": "Por que uma célula muscular pode aumentar a fermentação láctica durante esforço intenso? Relacione oferta de oxigênio, regeneração de NAD+ e manutenção da glicólise. Explique ainda por que essa via entrega menos ATP por molécula de glicose que a respiração aeróbia."
+        "content": "Por que uma célula muscular aumenta a fermentação láctica durante esforço intenso, mesmo havendo oxigênio no sangue? Relacione oferta de oxigênio, regeneração de NAD+ e manutenção da glicólise antes de conferir. Em esforço de alta intensidade, a taxa de consumo de ATP supera a velocidade com que o sistema cardiorrespiratório entrega oxigênio à fibra; a cadeia respiratória satura e o NADH acumula. A célula então reduz piruvato a lactato para reoxidar o NADH e manter a glicólise funcionando, porque 2 ATP por glicose obtidos rapidamente valem mais, naquele instante, do que 30 ATP que não podem ser produzidos por falta de oxigênio. O lactato é exportado para o sangue, captado pelo fígado e reconvertido a glicose no ciclo de Cori, o que explica o consumo elevado de oxigênio que persiste após o exercício. Agora um segundo: uma levedura cresce muito mais em cultura arejada do que em frasco fechado, consumindo menos açúcar por célula produzida. Explique — a resposta compara os rendimentos de 30 a 38 ATP contra 2 ATP por glicose."
       }
     ],
     "recall": {
@@ -379,7 +385,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Biologia",
@@ -387,23 +394,23 @@
     "sections": [
       {
         "title": "Converter energia em matéria",
-        "content": "Fotossíntese usa energia luminosa para produzir matéria orgânica a partir de dióxido de carbono e água, liberando oxigênio em organismos oxigênicos. A energia não “cria matéria”: permite reações que armazenam energia química em moléculas orgânicas. Clorofila absorve faixas de luz; folhas parecem verdes porque refletem parte dessa radiação."
+        "content": "A fotossíntese converte energia luminosa em energia química estável, produzindo matéria orgânica a partir de CO2 e água e liberando O2 nos organismos oxigênicos. A equação global, 6 CO2 + 12 H2O, com luz e clorofila, produzindo C6H12O6 + 6 O2 + 6 H2O, é escrita com doze moléculas de água à esquerda justamente para explicitar que a água é a fonte dos elétrons e do oxigênio liberado — fato demonstrado por experimentos com isótopo pesado O-18, que apareceu no gás liberado apenas quando marcava a água, não quando marcava o CO2. Os organismos que realizam o processo são autótrofos e ocupam a base das cadeias alimentares, sustentando toda a produtividade primária. É útil distinguir três medidas que a banca cobra: produtividade primária bruta, o total fixado; respiração da própria produtora; e produtividade primária líquida, a diferença entre as duas, que é o que efetivamente fica disponível para os consumidores. O ponto de compensação fótico é a intensidade luminosa em que fotossíntese e respiração se igualam e o saldo é zero."
       },
       {
         "title": "Duas etapas integradas",
-        "content": "Nas reações dependentes de luz, membranas dos tilacoides capturam energia, movimentam elétrons e produzem ATP e NADPH. No ciclo de Calvin, no estroma, CO₂ é fixado e reduzido usando esses produtos. Chamar essa etapa de “escura” não significa que ocorra apenas à noite; significa que não usa fótons diretamente."
+        "content": "A etapa fotoquímica ocorre nas membranas dos tilacoides. A clorofila dos fotossistemas II e I absorve luz, excita elétrons e os transfere por uma cadeia transportadora; o fotossistema II repõe seus elétrons pela fotólise da água, que quebra a molécula e libera O2 e prótons. O bombeamento de prótons para o interior do tilacoide cria o gradiente que aciona a ATP-sintase, num processo chamado fotofosforilação, e ao final o fotossistema I reduz o NADP+ a NADPH. O produto da etapa clara é, portanto, ATP e NADPH — mais o oxigênio, que é subproduto. A etapa química, o ciclo de Calvin, ocorre no estroma e não depende diretamente da luz, embora dependa dos produtos dela; por isso a expressão fase escura é enganosa e a banca prefere reações independentes de luz. Nela, a enzima rubisco fixa o CO2 sobre a ribulose bifosfato, e as moléculas resultantes são reduzidas com o ATP e o NADPH da etapa anterior, formando gliceraldeído-3-fosfato, precursor de glicose, amido, aminoácidos e lipídios."
       },
       {
         "title": "Quimiossíntese",
-        "content": "Certas bactérias e arqueias obtêm energia oxidando substâncias inorgânicas, como amônia ou sulfeto, e usam essa energia para fixar carbono. Elas são quimioautotróficas e sustentam processos ecológicos importantes, como nitrificação. Não confunda quimiossíntese com fermentação: ambas não dependem de luz, mas diferem em fonte de energia e organização metabólica."
+        "content": "Quimiossíntese é a produção de matéria orgânica usando energia liberada pela oxidação de compostos inorgânicos, sem qualquer participação da luz. Bactérias nitrificantes ilustram bem: as do gênero Nitrosomonas oxidam amônia a nitrito, e as do gênero Nitrobacter oxidam nitrito a nitrato, usando a energia liberada para fixar CO2 — e é por isso que essas bactérias são peça central do ciclo do nitrogênio, tornando disponível às plantas a forma que suas raízes absorvem. Outras oxidam sulfeto de hidrogênio, ferro ferroso ou hidrogênio molecular. A relevância ecológica maior aparece nas fontes hidrotermais do assoalho oceânico, a milhares de metros de profundidade, onde não chega luz alguma: ali, bactérias quimiossintetizantes que oxidam sulfeto sustentam comunidades inteiras de vermes tubícolas, moluscos e crustáceos, muitas vezes como endossimbiontes dentro dos próprios animais. Essas comunidades são o argumento clássico contra a afirmação de que toda cadeia alimentar começa na fotossíntese."
       },
       {
         "title": "Erros comuns",
-        "content": "Fotossíntese não é o contrário exato de respiração em cada detalhe e etapa. O oxigênio liberado vem da água em fotossíntese oxigênica, não do CO₂. Plantas respiram continuamente; à noite não fazem reações luminosas, mas continuam consumindo oxigênio na respiração celular."
+        "content": "Fotossíntese não é o inverso exato da respiração: os locais, as enzimas, os transportadores e as etapas são diferentes, e escrever uma como o reverso da outra é simplificação que a banca pune. O segundo erro é dizer que o oxigênio liberado vem do CO2, quando vem da água, conforme demonstrado com O-18. O terceiro é afirmar que a planta só faz fotossíntese e não respira: ela respira o tempo todo, inclusive de dia, e o que se observa durante o dia é o saldo entre os dois processos. O quarto é chamar o ciclo de Calvin de fase escura no sentido de exigir escuridão — ele funciona à luz do dia, e para se apoiar em ATP e NADPH depende da etapa fotoquímica ativa. O quinto é supor que aumentar CO2 eleva a taxa fotossintética indefinidamente. O sexto é confundir quimiossíntese com quimioheterotrofia: o organismo quimiossintetizante é autótrofo, monta a própria matéria orgânica, e não apenas consome a de outro."
       },
       {
         "title": "Pratique e confira",
-        "content": "Explique por que aumentar CO₂ não eleva indefinidamente a taxa fotossintética. Identifique outros fatores limitantes, como luz, temperatura, água e capacidade enzimática. Diferencie também o local das reações luminosas do local da fixação de carbono."
+        "content": "Explique por que aumentar o CO2 não eleva indefinidamente a taxa fotossintética, antes de conferir. A resposta é a lei dos fatores limitantes: a taxa é determinada pelo fator que estiver em menor disponibilidade relativa, de modo que a curva de resposta ao CO2 sobe, depois se achata num platô, quando outro fator passa a limitar — luz, temperatura, água disponível, concentração de clorofila ou a própria quantidade de rubisco. Elevar o CO2 a partir do platô não produz ganho, porque o gargalo se deslocou. Agora um segundo, do tipo que a Fuvest monta com gráfico: uma planta é mantida sob intensidade luminosa crescente e mede-se a troca de gases. Por que abaixo de certa intensidade ela libera CO2 e acima dele passa a absorver? Porque abaixo do ponto de compensação fótico a respiração supera a fotossíntese e o saldo é liberação; no ponto exato os dois se igualam e não há troca líquida; acima dele a fotossíntese supera a respiração, o saldo é absorção de CO2 e liberação de O2, e só nessa faixa a planta acumula biomassa e cresce."
       }
     ],
     "recall": {
@@ -433,7 +440,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Biologia",
