@@ -17,7 +17,7 @@ const ERROR_TYPE_ORDER: ErrorLog['type'][] = [
 import { Skeleton } from '../components/ui/Skeleton';
 import { AiText } from '../components/AiText';
 import { TopicMastery, ErrorLog } from '../types';
-import { applyReviewOutcome, qualityFromAnswerCorrectness } from '../lib/spacedRepetition';
+import { applyReviewOutcome, qualityFromAnswerCorrectness, intervalDaysOf, nextReviewDate } from '../lib/spacedRepetition';
 import { motion, AnimatePresence } from 'motion/react';
 import {
   CheckCircle2,
@@ -41,11 +41,16 @@ function Metric({
   label,
   value,
   bar = false,
+  fill,
   warn = false,
 }: {
   label: string;
   value: string;
   bar?: boolean;
+  // Quanto da barra preencher, de 0 a 1. Sem isto a barra vinha com 62% fixos
+  // no CSS: ela aparecia cheia pela metade num treino 0/0 e nunca se mexia,
+  // o que fazia o painel mostrar um número e desenhar outro.
+  fill?: number;
   warn?: boolean;
 }) {
   return (
@@ -54,7 +59,9 @@ function Metric({
       <b className={warn ? 'warn' : ''}>{value}</b>
       {bar && (
         <i>
-          <span />
+          <span
+            style={{ '--bar-fill': `${Math.round(Math.min(1, Math.max(0, fill ?? 0)) * 100)}%` } as React.CSSProperties}
+          />
         </i>
       )}
     </div>
@@ -68,7 +75,7 @@ function examSourceLabel(source: { board: string; year?: number; sourceUrl?: str
 
 export default function Questoes() {
   const { user } = useAuth();
-  const { updateMastery, isPersisted, syncError } = useUserMastery();
+  const { mastery, updateMastery, isPersisted, syncError } = useUserMastery();
   const { questions: mockQuestions, loading: questionsLoading, syncError: questionsSyncError } = useQuestions();
   const subjects = useMemo(() => ['Todas', ...new Set(mockQuestions.map((q) => q.subject))], [mockQuestions]);
   const [subjectFilter, setSubjectFilter] = useState('Todas');
@@ -117,6 +124,22 @@ export default function Questoes() {
   }, [mockQuestions, subjectFilter]);
 
   const topicTree = useMemo(() => buildTopicHierarchy(scoped, mockTopics), [scoped]);
+
+  // Em "Todas" os tópicos de todas as matérias vinham numa lista só. Agrupar
+  // pela matéria devolve o nível que a hierarquia já tinha nos dados e que a
+  // tela estava jogando fora. Com uma matéria filtrada não há o que agrupar,
+  // então vira um grupo único e sem cabeçalho.
+  const topicGroups = useMemo(() => {
+    if (subjectFilter !== 'Todas') return [{ subject: null as string | null, nodes: topicTree }];
+    const porMateria = new Map<string, typeof topicTree>();
+    for (const node of topicTree) {
+      const chave = node.subject ?? 'Fora do currículo';
+      const atual = porMateria.get(chave);
+      if (atual) atual.push(node);
+      else porMateria.set(chave, [node]);
+    }
+    return [...porMateria].map(([subject, nodes]) => ({ subject, nodes }));
+  }, [topicTree, subjectFilter]);
 
   const subtopicOptions = useMemo(
     () => (topicFilter === ALL ? [] : topicTree.find((node) => node.id === topicFilter)?.subtopics ?? []),
@@ -365,6 +388,20 @@ export default function Questoes() {
   const palette = PALETTES[question?.subject ?? 'Matemática'] ?? PALETTES.Matemática;
   const precisionPercent = history.length > 0 ? `${Math.round((correctCount / history.length) * 100)}%` : '—';
 
+  // O painel afirma que cada acerto estende o ciclo de revisão do tópico. Isso
+  // é verdade — applyReviewOutcome roda a cada resposta —, mas nada disso
+  // aparecia na tela, então a frase era indistinguível de enfeite. Estes dois
+  // números são lidos do mesmo registro que o motor grava.
+  const topicMastery = question ? mastery.find((item) => item.topicId === question.topicId) : undefined;
+  const masteryPercent = topicMastery ? `${Math.round(topicMastery.level)}%` : '—';
+  const nextReviewLabel = (() => {
+    if (!topicMastery) return 'após a 1ª resposta';
+    const dias = Math.round((nextReviewDate(topicMastery).getTime() - Date.now()) / 86400000);
+    if (dias <= 0) return 'hoje';
+    if (dias === 1) return 'amanhã';
+    return `em ${dias} dias`;
+  })();
+
   return (
     <div
       className="ni-main"
@@ -449,40 +486,48 @@ export default function Questoes() {
         </button>
       </div>
 
-      {/* Tópico e subtópico. O subtópico só aparece depois que há um tópico
-          escolhido — antes disso ele misturaria capítulos de matérias
-          diferentes, e a lista teria centenas de itens sem sentido. */}
-      <div className="ni-subjects" style={{ marginTop: '8px' }}>
-        <button className={topicFilter === ALL ? 'active' : ''} onClick={() => changeTopic(ALL)}>
-          Todos os tópicos
-        </button>
-        {topicTree.map((node) => (
-          <button
-            key={node.id}
-            className={topicFilter === node.id ? 'active' : ''}
-            onClick={() => changeTopic(node.id)}
-          >
-            {node.label} <span style={{ opacity: 0.6 }}>({node.count})</span>
-          </button>
-        ))}
-      </div>
+      {/* Tópico e subtópico. Antes eram duas fileiras de chips: em "Todas" isso
+          desenhava mais de sessenta tópicos de todas as matérias de uma vez,
+          uma parede de texto que estourava a largura da tela no retrato. Agora
+          são dois campos, e em "Todas" os tópicos vêm agrupados pela matéria a
+          que pertencem, então a hierarquia fica visível em vez de achatada. */}
+      <div className="crivo-topic-filters">
+        <label className="crivo-topic-filter">
+          <span>Tópico</span>
+          <select value={topicFilter} onChange={(e) => changeTopic(e.target.value)}>
+            <option value={ALL}>Todos os tópicos ({pool.length === 0 && topicFilter === ALL ? 0 : scoped.length})</option>
+            {topicGroups.map((grupo) => (
+              grupo.subject === null ? (
+                grupo.nodes.map((node) => (
+                  <option key={node.id} value={node.id}>{node.label} ({node.count})</option>
+                ))
+              ) : (
+                <optgroup key={grupo.subject} label={grupo.subject}>
+                  {grupo.nodes.map((node) => (
+                    <option key={node.id} value={node.id}>{node.label} ({node.count})</option>
+                  ))}
+                </optgroup>
+              )
+            ))}
+          </select>
+        </label>
 
-      {subtopicOptions.length > 0 && (
-        <div className="ni-subjects" style={{ marginTop: '8px' }}>
-          <button className={subtopicFilter === ALL ? 'active' : ''} onClick={() => changeSubtopic(ALL)}>
-            Todos os subtópicos
-          </button>
-          {subtopicOptions.map((sub) => (
-            <button
-              key={sub.id}
-              className={subtopicFilter === sub.id ? 'active' : ''}
-              onClick={() => changeSubtopic(sub.id)}
-            >
-              {sub.label} <span style={{ opacity: 0.6 }}>({sub.count})</span>
-            </button>
-          ))}
-        </div>
-      )}
+        <label className="crivo-topic-filter" data-disabled={subtopicOptions.length === 0 ? 'true' : undefined}>
+          <span>Subtópico</span>
+          <select
+            value={subtopicFilter}
+            onChange={(e) => changeSubtopic(e.target.value)}
+            disabled={subtopicOptions.length === 0}
+          >
+            <option value={ALL}>
+              {subtopicOptions.length === 0 ? 'Escolha um tópico primeiro' : 'Todos os subtópicos'}
+            </option>
+            {subtopicOptions.map((sub) => (
+              <option key={sub.id} value={sub.id}>{sub.label} ({sub.count})</option>
+            ))}
+          </select>
+        </label>
+      </div>
 
       {question ? (
         <section className="ni-grid ni-grid--practice">
@@ -690,8 +735,20 @@ export default function Questoes() {
               {correctCount} / {history.length}
             </div>
 
-            <Metric label="Taxa de Precisão" value={precisionPercent} bar />
+            <Metric
+              label="Taxa de Precisão"
+              value={precisionPercent}
+              bar
+              fill={history.length > 0 ? correctCount / history.length : 0}
+            />
             <Metric label="Filtro Ativo" value={subjectFilter} />
+            <Metric
+              label="Domínio deste tópico"
+              value={masteryPercent}
+              bar
+              fill={topicMastery ? topicMastery.level / 100 : 0}
+            />
+            <Metric label="Próxima revisão" value={nextReviewLabel} />
 
             <div className="ni-stack">
               <span />
@@ -699,7 +756,10 @@ export default function Questoes() {
               <span />
             </div>
 
-            <p>Cada tentativa bem-sucedida estende o ciclo de revisão deste tópico no motor de eficiência.</p>
+            <p>
+              Cada resposta recalcula o domínio e o intervalo acima: acerto empurra a próxima revisão para mais
+              longe, erro traz de volta para perto.
+            </p>
 
             <div className="mt-6 pt-3 border-t border-[var(--line)] flex items-center justify-between text-xs text-[var(--dim)]">
               <button onClick={resetSession} className="flex items-center gap-1.5 hover:text-[var(--text)]">
