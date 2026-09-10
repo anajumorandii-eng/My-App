@@ -45,7 +45,8 @@ const PODCAST_PALETTE = PALETTES.História;
 
 export default function Podcast() {
   const { profile, updateProfile } = useUserProfile();
-  const { episodes: mockPodcastEpisodes, syncError: episodesSyncError } = usePodcastEpisodes();
+  // Vem do Firestore, com o conjunto local como fallback — ver usePodcastEpisodes.
+  const { episodes, syncError: episodesSyncError } = usePodcastEpisodes();
   const [playingId, setPlayingId] = useState<string | null>(null);
   const [loadingId, setLoadingId] = useState<string | null>(null);
   const [notice, setNotice] = useState<string | null>(null);
@@ -59,13 +60,13 @@ export default function Podcast() {
   const voiceName = profile.podcastVoiceName || DEFAULT_VOICE;
 
   const orderedEpisodes = useMemo(
-    () => orderByDurationPreference(mockPodcastEpisodes, durationPreference),
-    [mockPodcastEpisodes, durationPreference]
+    () => orderByDurationPreference(episodes, durationPreference),
+    [episodes, durationPreference]
   );
 
   const matchingCount = useMemo(
-    () => (durationPreference ? mockPodcastEpisodes.filter((e) => bucketOf(e.durationMinutes) === durationPreference).length : 0),
-    [mockPodcastEpisodes, durationPreference]
+    () => (durationPreference ? episodes.filter((e) => bucketOf(e.durationMinutes) === durationPreference).length : 0),
+    [episodes, durationPreference]
   );
 
   const setDurationPreference = (value: DurationBucket | null) => {
@@ -262,7 +263,7 @@ export default function Podcast() {
           </div>
           <p className="text-[11px] text-[var(--dim)] mt-2">
             {durationPreference
-              ? `Priorizando ${matchingCount} de ${mockPodcastEpisodes.length} episódios na faixa selecionada.`
+              ? `Priorizando ${matchingCount} de ${episodes.length} episódios na faixa selecionada.`
               : 'Mostrando episódios na ordem cronológica.'}
           </p>
         </div>

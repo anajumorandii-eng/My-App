@@ -11,7 +11,23 @@ const DEFAULT_TTS_MODEL = 'gemini-2.5-flash-preview-tts';
 const SAMPLE_RATE = 24000;
 const CHANNELS = 1;
 const BIT_DEPTH = 16;
-const MAX_CACHE_ENTRIES = 200;
+// O cache em memória é limitado por BYTES, não por número de entradas. Um
+// roteiro de 2.000 caracteres — o teto que routes.ts aceita — vira cerca de
+// dois minutos de fala, e a 24 kHz/16 bits/mono isso dá ~6 MB de WAV. Com o
+// limite antigo de 200 entradas, o cache sozinho passava de 1 GB, contra os
+// 512 MiB que o Cloud Run dá por padrão (o Dockerfile não pede outro valor).
+// E como há 87 episódios × 4 vozes, ele enchia mesmo em uso normal.
+const MAX_CACHE_BYTES = 64 * 1024 * 1024;
+
+// A Gemini devolve o PCM com a taxa declarada no mimeType
+// (audio/L16;codec=pcm;rate=24000). Ler dali, em vez de assumir 24 kHz, evita
+// que uma mudança de taxa no modelo produza um cabeçalho WAV errado — o áudio
+// não falharia, tocaria acelerado ou arrastado, que é bem pior de diagnosticar.
+export function sampleRateFromMimeType(mimeType: string | undefined): number {
+  const match = /rate=(\d+)/.exec(mimeType ?? '');
+  const rate = match ? Number(match[1]) : NaN;
+  return Number.isFinite(rate) && rate > 0 ? rate : SAMPLE_RATE;
+}
 
 // Gemini TTS returns raw 16-bit PCM (audio/L16;codec=pcm;rate=24000), which
 // browsers can't play directly — it needs a standard 44-byte RIFF/WAVE header
@@ -41,6 +57,7 @@ export class GeminiTtsService {
   private readonly client: GoogleGenAI | null;
   private readonly model: string;
   private readonly cache = new Map<string, Buffer>();
+  private cacheBytes = 0;
 
   constructor(apiKey: string | undefined, model = DEFAULT_TTS_MODEL) {
     this.isConfigured = Boolean(apiKey);
@@ -77,7 +94,7 @@ export class GeminiTtsService {
     const base64Data = part?.inlineData?.data;
     if (!base64Data) throw new Error('Gemini TTS returned no audio data.');
 
-    const wav = pcmToWav(Buffer.from(base64Data, 'base64'));
+    const wav = pcmToWav(Buffer.from(base64Data, 'base64'), sampleRateFromMimeType(part?.inlineData?.mimeType));
     this.rememberInMemory(cacheKey, wav);
     // Não bloqueia a resposta pro usuário — o upload falhando (ou demorando)
     // só significa que a próxima chamada regenera, igual a hoje.
@@ -86,14 +103,25 @@ export class GeminiTtsService {
     return { buffer: wav, mimeType: 'audio/wav' };
   }
 
-  // Cache em memória com limite: mesmo episódio/voz nunca precisa ser
-  // regenerado duas vezes na mesma instância, mantendo replays instantâneos
-  // e gratuitos. Entrada mais antiga é descartada quando o limite é atingido.
+  // Cache em memória: mesmo episódio/voz não precisa ser regenerado duas vezes
+  // na mesma instância, mantendo replays instantâneos e gratuitos. As entradas
+  // mais antigas são descartadas até o total caber em MAX_CACHE_BYTES. Perder
+  // uma entrada aqui não custa uma nova síntese: o áudio continua no Storage,
+  // e readCachedAudio o traz de volta.
   private rememberInMemory(cacheKey: string, buffer: Buffer): void {
-    if (this.cache.size >= MAX_CACHE_ENTRIES) {
-      const oldestKey = this.cache.keys().next().value;
-      if (oldestKey) this.cache.delete(oldestKey);
-    }
+    const existing = this.cache.get(cacheKey);
+    if (existing) this.cacheBytes -= existing.length;
     this.cache.set(cacheKey, buffer);
+    this.cacheBytes += buffer.length;
+
+    for (const oldestKey of this.cache.keys()) {
+      if (this.cacheBytes <= MAX_CACHE_BYTES) break;
+      // Nunca descarta o que acabou de entrar, mesmo que ele sozinho estoure o
+      // limite: sem isso um áudio grande seria gravado e removido no mesmo
+      // passo, e o cache nunca serviria para nada.
+      if (oldestKey === cacheKey) continue;
+      this.cacheBytes -= this.cache.get(oldestKey)!.length;
+      this.cache.delete(oldestKey);
+    }
   }
 }
