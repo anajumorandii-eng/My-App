@@ -1843,23 +1843,23 @@
     "sections": [
       {
         "title": "Auxinas",
-        "content": "As auxinas promovem alongamento celular e são responsáveis pelo fototropismo e pelo geotropismo: elas migram para o lado sombreado, que cresce mais e curva o caule na direção da luz. Também produzem a dominância apical, em que a gema apical inibe as laterais — razão pela qual podar a ponta estimula a ramificação."
+        "content": "As auxinas, cujo representante principal é o ácido indolacético, são produzidas nas gemas apicais, nas folhas jovens e nas sementes em desenvolvimento, e transportadas de forma polar, sempre do ápice para a base. Sua ação característica é o alongamento celular, e ela é dose-dependente e diferente conforme o órgão — detalhe que resolve a maioria das questões. Concentrações que estimulam o caule inibem a raiz, porque a raiz é muito mais sensível e satura antes. Daí decorrem os tropismos. No fototropismo, a luz unilateral faz a auxina migrar para o lado sombreado; ali as células se alongam mais, e o caule curva-se em direção à luz — o crescimento é positivo no lado escuro, e a planta não \"busca\" a luz, ela cresce assimetricamente. No gravitropismo de um caule deitado, a auxina se acumula na face inferior: no caule isso alonga essa face e ele curva-se para cima, gravitropismo negativo; na raiz, a mesma concentração inibe a face inferior, que cresce menos, e a raiz curva-se para baixo, gravitropismo positivo. A dominância apical é o mesmo princípio: a auxina do ápice inibe as gemas laterais, e podar o ápice remove a inibição e faz a planta ramificar."
       },
       {
         "title": "Giberelinas e citocininas",
-        "content": "Giberelinas promovem alongamento do caule, quebra de dormência de sementes e germinação, e são usadas comercialmente para produzir uvas maiores. Citocininas estimulam a divisão celular, retardam o envelhecimento das folhas e, em equilíbrio com as auxinas, determinam se um tecido em cultura formará raiz ou parte aérea."
+        "content": "As giberelinas têm como efeito mais visível o alongamento do caule por estímulo simultâneo à divisão e ao alongamento celular, e sua aplicação em plantas anãs pode restaurar o porte normal — evidência clássica de que o nanismo, nesses casos, é deficiência hormonal. Elas também quebram a dormência de sementes e gemas e ativam a produção de amilase na camada de aleurona durante a germinação, mobilizando o amido do endosperma; na uva sem semente, a aplicação aumenta o tamanho do fruto e o comprimento do cacho, uso comercial corriqueiro. As citocininas, produzidas sobretudo na raiz e transportadas pelo xilema, estimulam a divisão celular — daí o nome — e retardam a senescência foliar, mantendo a folha verde por mais tempo. A relação entre auxina e citocinina, e não a quantidade absoluta de cada uma, determina o destino de um tecido em cultura: proporção maior de auxina induz formação de raízes, maior de citocinina induz formação de caule e gemas, e proporções equilibradas mantêm o calo indiferenciado — princípio que sustenta a micropropagação in vitro."
       },
       {
         "title": "Etileno e ácido abscísico",
-        "content": "O etileno é gasoso e promove o amadurecimento dos frutos e a abscisão de folhas; por ser volátil, um fruto maduro acelera o amadurecimento dos vizinhos. O ácido abscísico induz dormência e fecha os estômatos em déficit hídrico, atuando como hormônio de resposta ao estresse e contrapondo-se às giberelinas."
+        "content": "O etileno é o único hormônio vegetal gasoso, o que lhe dá uma propriedade peculiar: difunde-se pelo ar e age em plantas vizinhas. Ele promove o amadurecimento dos frutos, aumentando a respiração, convertendo amido em açúcar, degradando a clorofila e amolecendo a parede pela ação de pectinases; e promove a abscisão de folhas, flores e frutos. Como o próprio fruto maduro produz etileno, o processo é autocatalítico — o que explica o ditado sobre uma fruta podre estragar o cesto, e a prática de embrulhar frutas verdes com uma madura para acelerar o amadurecimento. Comercialmente, a banana é colhida verde, transportada em atmosfera com etileno controlado e amadurecida no destino. O ácido abscísico é o hormônio do estresse hídrico e da dormência: acumula-se na falta de água e provoca o fechamento dos estômatos, reduzindo a transpiração, além de manter a dormência de sementes e gemas — e é justamente o antagonismo entre ele e as giberelinas que determina se a semente germina ou espera, mecanismo que impede a germinação fora de época."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Dizer que a auxina se acumula no lado iluminado inverte o mecanismo do fototropismo. Outro erro é chamar o etileno de líquido ou atribuir a ele a germinação, que é papel das giberelinas. E supor que hormônio vegetal age como hormônio animal, com glândula específica: nas plantas não há glândulas endócrinas."
+        "content": "Dizer que a planta cresce em direção à luz porque a luz atrai o caule é a formulação errada: o que ocorre é maior alongamento das células do lado sombreado, para onde a auxina migrou. O segundo erro é aplicar à raiz a mesma resposta do caule: a mesma concentração de auxina que alonga o caule inibe a raiz, e é por isso que os gravitropismos são opostos. O terceiro é dizer que hormônio vegetal age em glândula, quando plantas não têm glândulas endócrinas e a produção é difusa em tecidos meristemáticos. O quarto é achar que o etileno só age no fruto onde foi produzido, esquecendo que ele é gasoso. O quinto é dizer que a citocinina sozinha forma raiz — é a proporção com a auxina que decide, e o excesso de citocinina forma parte aérea. O sexto é confundir ácido abscísico com abscisão: apesar do nome histórico, quem promove a queda de folhas é principalmente o etileno. E cuidado com a dominância apical: podar o ápice não fornece hormônio, ele remove a fonte de inibição."
       },
       {
         "title": "Pratique e confira",
-        "content": "Por que podar a ponta de uma planta a deixa mais ramificada? Responda antes de conferir: a poda remove a gema apical e a fonte de auxina que inibia as gemas laterais, liberando-as para brotar. Agora explique por que uma maçã madura amadurece as bananas próximas: ela libera etileno, hormônio gasoso que difunde e acelera o amadurecimento."
+        "content": "Por que podar o ápice de uma planta a deixa mais ramificada e mais cheia? Responda antes de conferir. Porque a gema apical é a principal fonte de auxina, e essa auxina, transportada em sentido descendente, inibe o desenvolvimento das gemas laterais — é a dominância apical. Removido o ápice, cessa a fonte de inibição, a concentração de auxina cai ao longo do caule e as gemas laterais, liberadas, brotam e formam ramos. É o princípio da poda de formação em jardinagem e cafeicultura. Agora um segundo, integrando dois hormônios: explique por que uma semente pode permanecer anos no solo sem germinar e, então, germinar após um período de chuvas. A resposta é o antagonismo entre ácido abscísico e giberelinas: enquanto o ácido abscísico predomina, a dormência é mantida e o metabolismo permanece suspenso; a embebição em água lixivia e degrada o ácido abscísico e favorece a síntese de giberelinas, que induzem a produção de amilase na camada de aleurona, mobilizando o amido do endosperma em açúcares que abastecem o embrião — e a germinação começa."
       }
     ],
     "recall": {
@@ -1890,7 +1890,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Biologia",
@@ -1898,23 +1899,23 @@
     "sections": [
       {
         "title": "A hipótese do fluxo por pressão",
-        "content": "O transporte no floema é explicado pela hipótese de Münch: nas fontes, como folhas fotossintetizantes, açúcares são carregados ativamente nos tubos crivados; isso reduz o potencial hídrico e puxa água do xilema, gerando pressão. Nos drenos, os açúcares são descarregados, a água sai e a pressão cai, estabelecendo o fluxo."
+        "content": "O transporte de seiva elaborada pelo floema é explicado pela hipótese do fluxo por pressão, ou hipótese de Münch, e o mecanismo precisa ser reconstruído por inteiro. Na fonte, tipicamente uma folha fotossintetizante, a sacarose produzida é carregada ativamente, com gasto de ATP, para dentro dos elementos de tubo crivado — é o carregamento do floema. Essa entrada de soluto reduz o potencial hídrico do interior do tubo, e a água do xilema vizinho entra por osmose, elevando a pressão de turgor naquele ponto. No dreno, um órgão que consome ou armazena, a sacarose é descarregada e retirada, o potencial hídrico interno sobe, a água sai de volta para o xilema e a pressão cai. Estabelece-se assim um gradiente de pressão entre fonte e dreno, e a seiva flui em massa da região de alta para a de baixa pressão, arrastando os solutos. Note o ponto que a banca cobra: o gasto de energia está no carregamento e no descarregamento, e não no deslocamento em si, que é passivo e movido por diferença de pressão."
       },
       {
         "title": "Fontes e drenos",
-        "content": "Fonte é qualquer órgão que exporta açúcar, tipicamente folhas maduras e órgãos de reserva em mobilização. Dreno é qualquer órgão que consome ou armazena, como frutos, raízes em crescimento e brotos jovens. Como fontes e drenos mudam ao longo do ciclo, o mesmo órgão pode inverter o papel, e o fluxo pode mudar de sentido."
+        "content": "Fonte é qualquer órgão que produz ou libera açúcar, e dreno qualquer órgão que o consome ou armazena — e a mesma estrutura pode trocar de papel conforme a estação, o que explica a bidirecionalidade do floema. Uma folha madura é fonte; uma folha jovem em crescimento é dreno. Uma raiz tuberosa, como a da mandioca, é dreno durante o período de acúmulo, recebendo açúcar das folhas; na brotação seguinte, ela mobiliza a reserva e vira fonte, enviando açúcar para as gemas em crescimento. O mesmo vale para o bulbo da cebola e para o caule tuberoso da batata. Frutos em formação, sementes, meristemas e raízes em crescimento são drenos fortes. Essa dinâmica tem consequência agrícola direta: a competição entre drenos determina para onde o açúcar vai, e práticas como o raleio de frutos concentram o carboidrato em menos unidades, aumentando o tamanho de cada uma. Os elementos de tubo crivado são células vivas, anucleadas na maturidade, e dependem das células companheiras adjacentes, que mantêm seu metabolismo e realizam o carregamento."
       },
       {
         "title": "Diferenças em relação ao xilema",
-        "content": "O xilema transporta água e sais em fluxo unidirecional, por células mortas e sob tensão, sem gasto direto de energia. O floema transporta seiva orgânica em ambos os sentidos, por células vivas e sob pressão positiva, com gasto de ATP no carregamento. Essa comparação é a mais cobrada do tópico."
+        "content": "A comparação entre floema e xilema é o formato mais frequente da questão. O xilema conduz seiva bruta, água e sais minerais, da raiz para as folhas, em sentido único e ascendente; suas células condutoras, os elementos de vaso e as traqueídes, são mortas na maturidade e com parede lignificada, formando tubos ocos; o transporte é passivo, movido pela transpiração foliar, que gera tensão transmitida pela coluna contínua de água graças à coesão entre moléculas e à adesão às paredes — é a teoria da coesão-tensão de Dixon. O floema conduz seiva elaborada, rica em sacarose, em sentido bidirecional, de fonte para dreno; suas células são vivas, e o transporte depende de energia nas extremidades. O anelamento de Malpighi é o experimento que separa os dois: removendo-se um anel de casca, que contém o floema, ao redor do tronco, a seiva bruta continua subindo pelo xilema, que está mais interno e intacto, mas a seiva elaborada não desce — forma-se um intumescimento acima do corte, as raízes se esgotam e a planta morre."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Dizer que o floema conduz sempre para baixo é o erro clássico: o sentido é da fonte para o dreno, e um fruto no alto da planta é dreno. Outro deslize é atribuir tensão ao floema, quando ele funciona sob pressão positiva. E esquecer que o carregamento é ativo e consome energia."
+        "content": "Dizer que o floema transporta apenas para baixo é o erro mais comum: ele transporta de fonte para dreno, e a folha alimenta tanto a raiz quanto o fruto e a gema acima dela. O segundo é afirmar que as células do floema são mortas como as do xilema — os elementos de tubo crivado são vivos, embora anucleados. O terceiro é dizer que o fluxo no floema é ativo em todo o percurso: o gasto de ATP ocorre no carregamento e no descarregamento, e o deslocamento é passivo. O quarto é atribuir a subida da seiva bruta à pressão da raiz como mecanismo principal, quando a explicação central é a tensão gerada pela transpiração. O quinto é inverter o anelamento de Malpighi, dizendo que a planta murcha imediatamente por falta de água — ela continua recebendo água, e morre pelo esgotamento da raiz. O sexto é confundir seiva bruta com elaborada. E cuidado com a lógica da fonte: um órgão de reserva não é fonte nem dreno por natureza, e sim conforme o momento do ciclo."
       },
       {
         "title": "Pratique e confira",
-        "content": "Por que anelar o caule, removendo um anel de casca, mata a árvore lentamente? Responda antes de conferir: o anelamento retira o floema, interrompendo o envio de açúcares às raízes, que acabam morrendo por falta de nutrientes, enquanto o xilema ainda leva água por algum tempo. Agora diga o que é fonte e o que é dreno num pé de tomate frutificando: as folhas são fonte e os frutos são dreno."
+        "content": "Por que uma árvore anelada — com um anel de casca removido em volta do tronco — continua com folhas verdes por semanas antes de morrer? Responda antes de conferir. Porque o anelamento remove o floema, que está na casca, mas não atinge o xilema, mais interno e lenhoso. A seiva bruta continua subindo normalmente e abastecendo as folhas de água e sais, que seguem fotossintetizando — daí a copa aparentemente saudável. O que se interrompe é a descida da seiva elaborada: o açúcar produzido nas folhas se acumula acima do corte, causando o intumescimento característico, e não chega às raízes, que não fotossintetizam e dependem inteiramente desse aporte. Sem açúcar, as raízes esgotam suas reservas, param de respirar e morrem, e só então a absorção de água cessa e a parte aérea murcha. Agora um segundo: por que a batata é dreno em uma estação e fonte em outra, e o que isso demonstra sobre o floema? A resposta é que, durante o crescimento vegetativo, o tubérculo recebe sacarose das folhas e a estoca como amido, sendo dreno; na brotação, hidrolisa esse amido e exporta açúcar para as gemas, virando fonte — o que demonstra que o floema é bidirecional e que o sentido do fluxo é definido pelo gradiente de pressão entre fonte e dreno."
       }
     ],
     "recall": {
@@ -1945,7 +1946,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Biologia",
@@ -1953,23 +1955,23 @@
     "sections": [
       {
         "title": "Neurônio e impulso",
-        "content": "O neurônio tem dendritos, que recebem estímulos, corpo celular e axônio, que conduz o impulso. O potencial de repouso é mantido pela bomba de sódio e potássio, com interior negativo. O estímulo suficiente abre canais de sódio, gerando o potencial de ação, que se propaga ao longo da membrana obedecendo à lei do tudo ou nada."
+        "content": "O neurônio tem três regiões com funções distintas: os dendritos, prolongamentos ramificados que recebem estímulos; o corpo celular, ou pericário, que abriga o núcleo e a maquinaria metabólica; e o axônio, prolongamento único e geralmente longo que conduz o impulso até as terminações. Em repouso, a membrana está polarizada, com o interior negativo em relação ao exterior — cerca de −70 mV —, e essa diferença é mantida pela bomba de sódio e potássio, que expulsa três Na+ e importa dois K+ por ATP, e pela permeabilidade diferencial da membrana. Um estímulo suficiente para atingir o limiar abre canais de sódio dependentes de voltagem: o Na+ entra rapidamente e inverte a polaridade, despolarizando a membrana até cerca de +35 mV. Em seguida, canais de potássio se abrem e o K+ sai, repolarizando a região, enquanto a bomba restabelece as concentrações originais. O impulso obedece à lei do tudo ou nada: ou o estímulo atinge o limiar e o potencial de ação se propaga com amplitude fixa, ou não há impulso — a intensidade do estímulo é codificada pela frequência de disparos, não pelo tamanho de cada um."
       },
       {
         "title": "Bainha de mielina",
-        "content": "A bainha de mielina, produzida por células da glia, isola o axônio e deixa espaços chamados nódulos de Ranvier. O impulso salta de nódulo em nódulo, na condução saltatória, o que aumenta muito a velocidade. Doenças desmielinizantes, como a esclerose múltipla, comprometem justamente essa condução rápida."
+        "content": "A bainha de mielina é formada por células da glia — células de Schwann no sistema nervoso periférico e oligodendrócitos no central — que se enrolam em torno do axônio depositando camadas de membrana rica em lipídios. Como lipídio é isolante elétrico, a mielina impede a troca iônica ao longo do trecho revestido, e a despolarização só pode ocorrer nos nódulos de Ranvier, os intervalos entre células vizinhas. O impulso, então, não percorre a membrana continuamente: ele salta de nódulo em nódulo, no que se chama condução saltatória, e isso multiplica a velocidade por um fator enorme — um axônio mielinizado de grande calibre conduz a mais de cem metros por segundo, contra poucos metros por segundo num amielínico. Além da velocidade, a condução saltatória economiza energia, porque a bomba de sódio e potássio precisa restaurar o gradiente apenas nos nódulos. A esclerose múltipla é uma doença autoimune de desmielinização: o ataque à bainha lentifica ou bloqueia a condução, com sintomas motores, sensitivos e visuais que refletem os feixes atingidos."
       },
       {
         "title": "Sinapse",
-        "content": "Na sinapse química, o impulso chega ao terminal, o cálcio entra e vesículas liberam neurotransmissores na fenda, que se ligam a receptores do neurônio seguinte. O sinal é unidirecional, e a resposta pode ser excitatória ou inibitória. Muitos fármacos e drogas agem exatamente nessa etapa, alterando liberação ou recaptação."
+        "content": "A sinapse é a região de comunicação entre um neurônio e a célula seguinte. A grande maioria é química: o potencial de ação chega ao terminal axônico e abre canais de cálcio; o influxo de Ca2+ faz as vesículas sinápticas se fundirem à membrana e liberarem neurotransmissor na fenda sináptica, espaço de poucos nanômetros; o neurotransmissor difunde-se e se liga a receptores específicos na membrana pós-sináptica, abrindo canais iônicos e gerando um novo potencial — excitatório, se despolariza, ou inibitório, se hiperpolariza. Em seguida ele é removido, por recaptação, por degradação enzimática ou por difusão, o que encerra o sinal e evita estimulação contínua. Essa arquitetura explica a unidirecionalidade do impulso: só o lado pré-sináptico tem vesículas, e só o pós-sináptico tem receptores. Explica também a ação de muitas drogas: a acetilcolinesterase degrada a acetilcolina na junção neuromuscular, e inibidores dessa enzima — inseticidas organofosforados e gases neurotóxicos — provocam estimulação contínua, com contração sustentada e paralisia respiratória."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Dizer que estímulo mais forte gera impulso mais forte contraria a lei do tudo ou nada: o que muda é a frequência dos impulsos, não a amplitude. Outro deslize é imaginar que o impulso atravessa a fenda sináptica eletricamente na maioria dos casos. E confundir a direção da sinapse, que é sempre do axônio para o neurônio seguinte."
+        "content": "Dizer que o impulso nervoso é uma corrente elétrica que corre pelo axônio como num fio é a analogia que derruba a questão: trata-se de uma onda de despolarização, produzida por movimento de íons através da membrana. O segundo erro é achar que um estímulo mais forte gera um impulso maior — pela lei do tudo ou nada, a amplitude é fixa, e o que aumenta é a frequência. O terceiro é dizer que a mielina acelera o impulso por conduzir melhor, quando ela isola e obriga o impulso a saltar. O quarto é situar a bomba de sódio e potássio como responsável pela despolarização, quando ela mantém o repouso e restaura o gradiente. O quinto é dizer que o neurotransmissor atravessa a membrana pós-sináptica — ele se liga a receptores na superfície. O sexto é imaginar que a sinapse é bidirecional. E cuidado com a inversão de sinal: durante o potencial de ação o interior fica positivo, e não mais negativo."
       },
       {
         "title": "Pratique e confira",
-        "content": "Como o corpo distingue um toque leve de um toque intenso, se vale a lei do tudo ou nada? Responda antes de conferir: pela frequência dos potenciais de ação e pelo número de neurônios recrutados, não pela intensidade de cada impulso. Agora explique a função da mielina: acelerar a condução por meio da propagação saltatória entre os nódulos."
+        "content": "Por que uma pessoa distingue um toque leve de uma pressão forte, se todos os impulsos nervosos têm a mesma amplitude? Responda antes de conferir. Porque a informação sobre intensidade não está no tamanho do potencial de ação, que é fixo pela lei do tudo ou nada, e sim em dois códigos: a frequência de disparos, que aumenta com a intensidade do estímulo, e o número de fibras recrutadas, já que receptores com limiares diferentes vão sendo ativados conforme a pressão cresce. O sistema nervoso central lê frequência e recrutamento, não amplitude. Agora um segundo, aplicado: explique por que um inseticida organofosforado pode matar por parada respiratória. A resposta segue a sinapse: esses compostos inibem a acetilcolinesterase, enzima que degrada a acetilcolina na fenda sináptica; sem degradação, o neurotransmissor permanece ligado aos receptores e estimula a fibra muscular continuamente, o que leva à contração sustentada seguida de bloqueio da transmissão — e, atingindo o diafragma e os músculos intercostais, impede os movimentos ventilatórios."
       }
     ],
     "recall": {
@@ -2000,7 +2002,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Biologia",
@@ -2008,23 +2011,23 @@
     "sections": [
       {
         "title": "O trajeto e as enzimas",
-        "content": "A digestão começa na boca, com a amilase salivar agindo sobre o amido; segue no estômago, onde a pepsina, ativada pelo pH ácido, digere proteínas; e se completa no intestino delgado, com enzimas pancreáticas e intestinais atuando em pH alcalino sobre carboidratos, proteínas e lipídios. Cada enzima tem pH ótimo específico."
+        "content": "A digestão transforma macromoléculas em unidades absorvíveis, e o trajeto tem etapas com enzimas e pH próprios — trocar um pelo outro é o erro que mais custa ponto. Na boca, a digestão mecânica pela mastigação aumenta a superfície de contato e a amilase salivar, ou ptialina, inicia a quebra do amido em maltose, em pH levemente alcalino. No estômago, o suco gástrico tem ácido clorídrico produzido pelas células parietais, que mantém o pH em torno de 2, desnatura proteínas e ativa o pepsinogênio em pepsina; a pepsina quebra proteínas em peptídeos menores, e a acidez também tem função antisséptica. Note que a amilase salivar é inativada nesse pH — a digestão do amido se interrompe no estômago e só recomeça no intestino. O muco protege a mucosa gástrica da autodigestão, e sua falha, muitas vezes associada à bactéria Helicobacter pylori, produz gastrite e úlcera. No intestino delgado, o suco pancreático traz amilase, lipase, tripsina e quimotripsina, e o suco entérico completa a quebra até glicose, aminoácidos, ácidos graxos e glicerol."
       },
       {
         "title": "Bile e absorção",
-        "content": "A bile, produzida no fígado e armazenada na vesícula, não contém enzimas: ela emulsifica as gorduras, quebrando-as em gotículas menores e aumentando a superfície de ação da lipase. A absorção ocorre principalmente no intestino delgado, cujas vilosidades e microvilosidades ampliam enormemente a área de contato."
+        "content": "A bile é produzida pelo fígado, armazenada e concentrada na vesícula biliar e lançada no duodeno, e o ponto que a banca cobra é que ela não contém enzima alguma. Sua ação é física: os sais biliares são anfipáticos e emulsificam a gordura, quebrando as grandes gotas em milhares de gotículas minúsculas. Isso não digere nada, mas multiplica a área de superfície disponível para a lipase pancreática atuar, aumentando enormemente a velocidade da digestão de lipídios. A bile também neutraliza parcialmente a acidez do quimo e serve de via de excreção da bilirrubina, pigmento derivado da degradação da hemoglobina — cuja retenção causa icterícia. A absorção ocorre sobretudo no intestino delgado, cuja superfície é ampliada por três níveis sucessivos de dobramento: as pregas circulares, as vilosidades e as microvilosidades das células, chegando a centenas de metros quadrados. Dentro de cada vilosidade há capilares sanguíneos, que recebem glicose e aminoácidos e os levam ao fígado pela veia porta, e um vaso quilífero linfático, que recebe os lipídios reconstituídos."
       },
       {
         "title": "Intestino grosso e regulação",
-        "content": "No intestino grosso ocorre a absorção de água e sais e a ação da microbiota, que produz vitaminas K e do complexo B. A regulação é hormonal e nervosa: gastrina estimula a secreção ácida, secretina estimula a liberação de bicarbonato e colecistocinina provoca a contração da vesícula biliar e a liberação de enzimas pancreáticas."
+        "content": "No intestino grosso não há digestão enzimática significativa; suas funções são a absorção de água e de sais, o que dá consistência às fezes, e a absorção de vitaminas produzidas pela microbiota, notadamente a vitamina K, essencial à coagulação, e vitaminas do complexo B. A microbiota intestinal também fermenta fibras não digeríveis, produz ácidos graxos de cadeia curta que nutrem as células do cólon e compete com patógenos — motivo pelo qual antibióticos de largo espectro podem causar diarreia e deficiência de vitamina K. A regulação da digestão é nervosa e hormonal. A visão e o cheiro do alimento já disparam secreção salivar e gástrica por via nervosa. No estômago, a gastrina estimula a produção de suco gástrico. No duodeno, a chegada do quimo ácido estimula a secretina, que faz o pâncreas liberar bicarbonato para neutralizar o pH, e a colecistocinina, que provoca a contração da vesícula biliar e a liberação de enzimas pancreáticas. O sistema nervoso parassimpático favorece a digestão, e o simpático a inibe."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Dizer que a bile digere gordura é o erro mais comum: ela apenas emulsifica, e quem digere é a lipase. Outro deslize é imaginar que a pepsina age no intestino, quando ela é inativada pelo pH alcalino. E atribuir ao intestino grosso a absorção de nutrientes, que ocorre sobretudo no delgado."
+        "content": "Dizer que a bile digere gorduras é o erro mais frequente: ela emulsifica, e quem digere é a lipase. O segundo é afirmar que a digestão do amido continua no estômago, quando o pH ácido inativa a amilase salivar. O trocar a ordem enzima-pH é o terceiro: pepsina age em pH ácido, tripsina em pH alcalino, e a inversão invalida a resposta. O quarto é dizer que a maior parte da absorção ocorre no intestino grosso, quando ocorre no delgado. O quinto é imaginar que as enzimas são secretadas já ativas: pepsinogênio e tripsinogênio são zimogênios, ativados apenas no lúmen, o que protege as próprias glândulas da autodigestão. O sexto é dizer que a vesícula produz a bile, quando quem produz é o fígado e ela apenas armazena e concentra. E cuidado com a via dos lipídios: eles não entram no capilar sanguíneo da vilosidade como a glicose, e sim no vaso quilífero linfático, alcançando a circulação sanguínea só depois, o que explica por que não passam primeiro pelo fígado."
       },
       {
         "title": "Pratique e confira",
-        "content": "Por que a retirada da vesícula biliar dificulta digerir refeições gordurosas? Responda antes de conferir: sem o reservatório, a bile chega ao intestino de forma contínua e em menor quantidade por refeição, reduzindo a emulsificação das gorduras. Agora diga por que a amilase salivar para de agir no estômago: o pH ácido a inativa."
+        "content": "Por que uma pessoa que teve a vesícula biliar removida costuma ser orientada a evitar refeições muito gordurosas de uma só vez? Responda antes de conferir. Porque a vesícula não produz a bile, mas a armazena e concentra, liberando-a em jato quando a colecistocinina sinaliza a chegada de gordura ao duodeno. Sem ela, o fígado continua produzindo bile, porém ela chega ao intestino de modo contínuo e diluído, sem o pico concentrado no momento certo. A emulsificação de uma grande carga de gordura fica insuficiente, a lipase encontra área de superfície reduzida, parte do lipídio não é digerida e segue adiante, causando desconforto e esteatorreia. Agora um segundo: explique por que o estômago não se digere, sendo capaz de digerir proteínas em pH 2. A resposta tem três partes — a enzima é secretada como pepsinogênio inativo, e só se converte em pepsina no lúmen, longe do interior da célula que a produziu; a mucosa é recoberta por uma camada espessa de muco alcalino que impede o contato direto do ácido e da enzima com o epitélio; e as células dessa mucosa têm renovação muito rápida, de poucos dias, substituindo continuamente as que são danificadas."
       }
     ],
     "recall": {
@@ -2055,7 +2058,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Biologia",
@@ -2063,23 +2067,23 @@
     "sections": [
       {
         "title": "Néfron e formação da urina",
-        "content": "O rim é formado por néfrons, e a urina se forma em três etapas: filtração glomerular, que separa do sangue água e pequenas moléculas; reabsorção tubular, que devolve ao sangue glicose, aminoácidos, sais e a maior parte da água; e secreção tubular, que lança nos túbulos substâncias que ainda restavam no sangue."
+        "content": "O rim humano tem cerca de um milhão de néfrons, e cada um é composto por corpúsculo renal — glomérulo mais cápsula de Bowman — e um túbulo que se divide em contorcido proximal, alça de Henle, contorcido distal e coletor. A formação da urina tem três etapas, e distingui-las é o núcleo do tema. A filtração glomerular ocorre por pressão: o sangue chega pela arteríola aferente, mais calibrosa, e sai pela eferente, mais estreita, o que gera pressão suficiente para forçar água e pequenas moléculas através da parede capilar para a cápsula. Passam água, glicose, aminoácidos, sais, ureia e vitaminas; não passam células sanguíneas nem proteínas plasmáticas, retidas pelo tamanho — encontrá-las na urina indica lesão glomerular. Formam-se cerca de 180 litros de filtrado por dia. A reabsorção tubular devolve ao sangue o que é útil: praticamente toda a glicose e os aminoácidos, no túbulo proximal, e a maior parte da água e dos sais. A secreção tubular acrescenta ativamente ao túbulo substâncias como H+, K+ e certos medicamentos. Restam cerca de 1,5 litro de urina."
       },
       {
         "title": "Controle hormonal",
-        "content": "O hormônio antidiurético aumenta a reabsorção de água nos túbulos coletores, concentrando a urina; a aldosterona aumenta a reabsorção de sódio, e com ele a de água, elevando a pressão arterial. Beber muita água inibe o ADH e produz urina abundante e diluída; a desidratação faz o oposto."
+        "content": "O controle é hormonal e ajusta o volume e a composição finais. O ADH, ou hormônio antidiurético, é produzido no hipotálamo e liberado pela neuro-hipófise quando a osmolaridade do sangue sobe ou o volume cai; ele aumenta a permeabilidade do túbulo distal e do ducto coletor à água, que é reabsorvida, resultando em urina concentrada e em pequeno volume. Sua falta causa o diabetes insipidus, com poliúria de urina diluída. O álcool inibe a liberação de ADH, o que explica a diurese aumentada e a desidratação subsequente ao consumo. A aldosterona, do córtex adrenal, atua no túbulo distal reabsorvendo sódio e excretando potássio; como a água acompanha o sódio, o efeito é aumento do volume sanguíneo e da pressão arterial — e é nesse eixo que agem muitos anti-hipertensivos. O peptídeo natriurético atrial, liberado pelo coração quando o átrio se distende por excesso de volume, faz o oposto: aumenta a excreção de sódio e água. A alça de Henle cria o gradiente de concentração na medula renal que torna essa concentração da urina possível, e alças longas permitem urina mais concentrada."
       },
       {
         "title": "Excretas nitrogenadas",
-        "content": "Amônia é muito tóxica e exige muita água, sendo eliminada por animais aquáticos. Ureia é menos tóxica e exige água moderada, típica de mamíferos. Ácido úrico é pouco tóxico e quase insolúvel, eliminado em forma pastosa por aves e répteis, o que economiza água e viabiliza o ovo com casca."
+        "content": "A excreta nitrogenada resulta da degradação de aminoácidos e bases nitrogenadas, e a forma eliminada é uma adaptação ao ambiente que a banca cobra em comparação. A amônia é altamente tóxica e muito solúvel, exigindo grande volume de água para diluição; é excretada por animais aquáticos de água doce, como peixes ósseos e larvas de anfíbios, que têm água à disposição — são amoniotélicos. A ureia é bem menos tóxica e moderadamente solúvel, exige menos água e é produzida no fígado, no ciclo da ureia, a partir da amônia; é a excreta de mamíferos, anfíbios adultos e peixes cartilaginosos — ureotélicos. O ácido úrico é praticamente atóxico e insolúvel, eliminado como pasta ou cristais com pouquíssima água; é a excreta de aves, répteis e insetos — uricotélicos —, e é justamente essa economia hídrica que viabiliza o desenvolvimento dentro de um ovo fechado, onde a excreta se acumula no alantoide sem intoxicar o embrião. O custo é energético: converter amônia em ureia e em ácido úrico consome ATP crescente."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Dizer que a glicose aparece normalmente na urina é erro: ela é totalmente reabsorvida, e sua presença indica diabetes. Outro deslize é confundir filtração com reabsorção quanto ao sentido do transporte. E trocar a excreta característica de cada grupo, ligando ácido úrico a mamíferos."
+        "content": "Dizer que a urina se forma apenas por filtração é o erro mais comum: se assim fosse, perderíamos 180 litros por dia e toda a glicose; a reabsorção é o que define o produto final. O segundo é afirmar que a presença de glicose na urina significa que o rim está doente — em geral significa glicemia acima do limiar de reabsorção, como no diabetes mellitus. O terceiro é confundir ADH com aldosterona: um regula diretamente a água, o outro o sódio, com a água vindo junto. O quarto é dizer que o ácido úrico é excretado por ser mais tóxico, quando é o menos tóxico dos três e o mais econômico em água. O quinto é situar a produção da ureia no rim, quando ela é hepática e o rim apenas a excreta. O sexto é confundir diabetes insipidus com mellitus: um é falta de ADH, com urina abundante e sem açúcar; o outro é problema de insulina, com glicose na urina. E cuidado com a lógica dos vasos: é a diferença de calibre entre arteríola aferente e eferente que gera a pressão de filtração."
       },
       {
         "title": "Pratique e confira",
-        "content": "Por que aves excretam ácido úrico? Responda antes de conferir: sendo pouco solúvel e pouco tóxico, ele pode ser acumulado no ovo sem intoxicar o embrião e é eliminado com pouquíssima água, vantagem em ambiente terrestre. Agora explique o efeito de beber muita água: o ADH é inibido, a reabsorção diminui e a urina fica abundante e diluída."
+        "content": "Por que aves e répteis excretam ácido úrico, se produzi-lo custa mais energia que produzir ureia? Responda antes de conferir. Porque o embrião se desenvolve dentro de um ovo com casca, um sistema fechado do qual nada pode ser eliminado durante semanas. Amônia intoxicaria rapidamente e ureia, sendo solúvel, se acumularia dissolvida na água do ovo, elevando a osmolaridade e sendo tóxica em concentração. O ácido úrico é insolúvel e praticamente atóxico: precipita em cristais e fica armazenado no alantoide, isolado do embrião, sem consumir água nem intoxicar. O gasto energético extra é o preço da independência da água — o mesmo que se paga no adulto, que elimina excreta pastosa e economiza água em ambiente seco. Agora um segundo: por que beber muita cerveja desidrata, apesar de se estar ingerindo líquido? A resposta é a inibição do ADH pelo álcool: sem esse hormônio, o túbulo distal e o ducto coletor ficam pouco permeáveis à água, a reabsorção cai e o volume urinário excede o volume ingerido, resultando em balanço hídrico negativo."
       }
     ],
     "recall": {
@@ -2110,7 +2114,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Biologia",
@@ -2118,23 +2123,23 @@
     "sections": [
       {
         "title": "Ventilação e trocas",
-        "content": "A ventilação pulmonar depende do diafragma e dos músculos intercostais: ao contraírem, aumentam o volume torácico, a pressão interna cai e o ar entra. A expiração normal é passiva, por relaxamento. As trocas gasosas ocorrem nos alvéolos por difusão simples, seguindo as diferenças de pressão parcial de oxigênio e gás carbônico."
+        "content": "A ventilação pulmonar é o movimento mecânico de ar, e não deve ser confundida com respiração celular. Na inspiração, o diafragma contrai e desce e os músculos intercostais externos elevam as costelas: o volume da caixa torácica aumenta, a pressão intrapulmonar cai abaixo da atmosférica e o ar entra — é, portanto, um processo ativo, movido por diferença de pressão, e não por sucção do pulmão, que não tem musculatura própria. Na expiração em repouso, os músculos relaxam, o volume diminui, a pressão sobe e o ar sai passivamente, auxiliado pela retração elástica pulmonar. A pleura, com sua fina película de líquido, faz o pulmão acompanhar a caixa torácica; a entrada de ar no espaço pleural, o pneumotórax, desfaz essa aderência e colapsa o pulmão. As trocas gasosas ocorrem nos alvéolos, por difusão simples, sempre a favor do gradiente de pressão parcial: o oxigênio passa do alvéolo, onde sua pressão parcial é alta, para o sangue do capilar, e o gás carbônico faz o caminho inverso. A superfície alveolar total chega a dezenas de metros quadrados."
       },
       {
         "title": "Transporte dos gases",
-        "content": "O oxigênio é transportado sobretudo ligado à hemoglobina, formando oxi-hemoglobina. O gás carbônico é transportado principalmente como bicarbonato dissolvido no plasma, e em menor parte ligado à hemoglobina e dissolvido. Essa diferença explica por que o CO₂ influencia diretamente o pH sanguíneo."
+        "content": "O transporte dos gases se faz de formas diferentes. Cerca de 97% do oxigênio é levado ligado ao ferro do grupo heme da hemoglobina, formando oxi-hemoglobina; cada molécula, com quatro cadeias e quatro grupos heme, transporta até quatro moléculas de O2. A ligação é cooperativa e reversível, o que produz a curva de dissociação em S: nos pulmões, com pressão parcial alta de O2, a hemoglobina satura; nos tecidos, com pressão baixa, ela libera. Três fatores deslocam a curva para a direita, aumentando a liberação onde ela é mais necessária: queda de pH, aumento de CO2 e aumento de temperatura — exatamente as condições de um músculo em atividade intensa, no chamado efeito Bohr. O gás carbônico é transportado majoritariamente, cerca de 70%, como íon bicarbonato dissolvido no plasma, formado a partir de CO2 e água pela anidrase carbônica dentro da hemácia; cerca de 23% liga-se à porção proteica da hemoglobina, formando carbaminoemoglobina, e o restante vai dissolvido. O monóxido de carbono é perigoso por ter afinidade muito maior que o O2 pelo mesmo sítio."
       },
       {
         "title": "Controle respiratório",
-        "content": "O centro respiratório no bulbo monitora principalmente a concentração de CO₂ e o pH do sangue, e não a de oxigênio. É por isso que prender a respiração gera urgência crescente de respirar: o acúmulo de CO₂ acidifica o sangue e dispara o estímulo, mesmo que ainda haja oxigênio disponível."
+        "content": "O controle respiratório é involuntário e reside no bulbo, no tronco encefálico, com participação da ponte. O detalhe decisivo, e a pergunta mais frequente do tema, é qual estímulo comanda: os quimiorreceptores centrais no bulbo respondem primariamente ao aumento de CO2 — mais precisamente à queda de pH do líquido cefalorraquidiano provocada por ele —, e não à queda de oxigênio. Quimiorreceptores periféricos, nos corpos carotídeos e aórticos, respondem à hipóxia, mas só de forma significativa em quedas acentuadas. É por isso que a hiperventilação voluntária, ao eliminar CO2 em excesso, permite prender a respiração por mais tempo — e é justamente por isso que é perigosa em mergulho: sem o acúmulo de CO2 que dispara a vontade de respirar, o mergulhador pode perder a consciência por falta de oxigênio antes de sentir qualquer urgência. Na altitude, a pressão parcial de oxigênio no ar é menor, o que reduz a saturação da hemoglobina; a aclimatação envolve aumento da ventilação e, ao longo de semanas, produção de mais hemácias estimulada pela eritropoetina renal."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Dizer que a respiração é controlada pela falta de oxigênio é o erro conceitual mais comum: o estímulo principal é o excesso de CO₂. Outro deslize é confundir ventilação, que é mecânica, com respiração celular, que ocorre na mitocôndria. E dizer que os pulmões têm músculos próprios que os expandem."
+        "content": "Chamar a ventilação pulmonar de respiração sem ressalva é o erro conceitual de base: respiração é o processo celular de oxidação, e ventilação é o movimento de ar. O segundo erro é dizer que respiramos por precisar eliminar oxigênio velho — eliminamos CO2, produto do metabolismo. O terceiro, e o mais cobrado, é afirmar que o estímulo respiratório é a falta de oxigênio, quando é primariamente o excesso de CO2. O quarto é dizer que o pulmão se expande sozinho e puxa o ar: quem expande a caixa é a musculatura, e o ar entra pela diferença de pressão. O quinto é atribuir todo o transporte de CO2 à hemoglobina, quando a maior parte viaja como bicarbonato no plasma. O sexto é dizer que o ar que expiramos não tem oxigênio — tem cerca de 16%, contra 21% do ar inspirado, o que é justamente o que torna possível a respiração boca a boca. E cuidado com a expiração: em repouso ela é passiva, e só se torna ativa no esforço, com os intercostais internos e a musculatura abdominal."
       },
       {
         "title": "Pratique e confira",
-        "content": "Por que hiperventilar antes de mergulhar é perigoso? Responda antes de conferir: reduz o CO₂ e atrasa o estímulo para respirar, de modo que a pessoa pode desmaiar por falta de oxigênio antes de sentir vontade de voltar à superfície. Agora diga em que forma o CO₂ é principalmente transportado: como bicarbonato no plasma."
+        "content": "Por que a hiperventilação antes de um mergulho em apneia é considerada perigosa, se ela parece dar mais fôlego? Responda antes de conferir. Porque ela não aumenta significativamente o estoque de oxigênio — a hemoglobina já está praticamente saturada em condições normais —, mas reduz muito a concentração de CO2 no sangue. Como é o acúmulo de CO2, e não a queda de O2, que estimula os quimiorreceptores bulbares e produz a vontade irresistível de respirar, o alarme fisiológico é adiado artificialmente. O mergulhador continua consumindo oxigênio sem sentir urgência alguma, e pode atingir hipóxia cerebral e desmaiar dentro da água antes que o CO2 se acumule o bastante para avisá-lo. Agora um segundo: explique por que um músculo em esforço intenso recebe mais oxigênio da mesma hemoglobina que passa por outros tecidos. A resposta é o efeito Bohr: o músculo ativo produz CO2, ácido láctico e calor; a queda de pH, o aumento de CO2 e a elevação da temperatura reduzem a afinidade da hemoglobina pelo oxigênio, deslocando a curva de dissociação para a direita, de modo que ela libera uma fração maior de sua carga exatamente onde a demanda é maior."
       }
     ],
     "recall": {
@@ -2164,7 +2169,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Biologia",
