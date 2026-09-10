@@ -79,10 +79,26 @@ const apostilaReferences = process.env.AI_APOSTILA_REFERENCES === 'firestore'
   ? new FirestoreApostilaReferenceStore(getFirestore(getFirebaseAdminApp()))
   : undefined;
 
-// Natural-voice podcast narration. Reuses the same GEMINI_API_KEY already
-// configured for text generation — Gemini's TTS models bill separately but
-// through the same account, and the daily AI quota below caps the cost.
+// Narração do podcast com voz natural. Depende de GEMINI_API_KEY
+// ESPECIFICAMENTE, e não da chave que a camada de texto estiver usando: a
+// camada de texto é neutra de provedor (AI_PROVIDER=omniroute usa
+// OMNIROUTE_API_KEY), enquanto a síntese de voz é ligada direto na Gemini.
+// Nessa combinação o "Gerar IA" funciona e a narração não, o que parecia
+// contradição sem explicação.
 const podcastTtsService = new GeminiTtsService(process.env.GEMINI_API_KEY, process.env.GEMINI_TTS_MODEL);
+// Registrado no arranque, junto dos outros diagnósticos de configuração.
+// Antes, a única pista de que a chave faltava era a estudante apertar play e
+// ouvir a voz do navegador — o log de boot torna isso visível sem depender de
+// alguém reproduzir o problema.
+console.info(JSON.stringify({
+  event: 'podcast_tts_config',
+  configured: podcastTtsService.isConfigured,
+  model: process.env.GEMINI_TTS_MODEL || 'padrão do código',
+  aiProvider: process.env.AI_PROVIDER?.trim().toLowerCase() || 'gemini',
+  ...(podcastTtsService.isConfigured ? {} : {
+    reason: 'GEMINI_API_KEY ausente — a narração vai responder 503 e o app cai na voz do navegador',
+  }),
+}));
 
 // Web Push for review reminders. Both routers still mount even when VAPID
 // isn't configured yet; they just respond 503 until the keys are set.
