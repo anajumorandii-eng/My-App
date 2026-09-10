@@ -100,10 +100,44 @@ describe('Questoes — diagnóstico de erro salvo no Caderno', () => {
 
     await waitFor(() => expect(addUserErrorLogMock).toHaveBeenCalled());
     const [, log] = addUserErrorLogMock.mock.calls[0];
-    expect(log).toMatchObject({ questionId: 'q1', confidence: 'confirmado' });
+    // Sem diagnóstico e sem escolha dela, o erro entra como 'unknown' com
+    // confiança baixa. Antes entrava como 'conceptual' e 'confirmado', o que
+    // fabricava uma categoria que ninguém tinha afirmado.
+    expect(log).toMatchObject({ questionId: 'q1', type: 'unknown', confidence: 'baixa' });
     // Sem hipótese da IA, o registro não inventa uma.
     expect(log.aiHypothesis).toBeUndefined();
-    expect(log.notes).toMatch(/classificado por você/);
+    expect(log.notes).toMatch(/motivo ainda não identificado/);
+  });
+
+  it('pede o diagnóstico com o relato dela quando ela não sabe por que errou', async () => {
+    requestAiTextMock.mockRejectedValueOnce(new Error('sem rede'));
+    const user = userEvent.setup();
+    render(<Questoes />);
+
+    await user.click(screen.getByRole('button', { name: /Mitocôndria/ }));
+    expect(await screen.findByText(/Não consegui diagnosticar agora/i)).toBeInTheDocument();
+
+    // O campo de relato só existe porque a alternativa marcada, sozinha, não
+    // distingue um erro de conta de um conceito trocado.
+    const relato = await screen.findByLabelText(/o que passou pela sua cabeça/i);
+    await user.type(relato, 'confundi a organela com o cloroplasto');
+
+    requestAiTextMock.mockResolvedValueOnce({
+      text: JSON.stringify({
+        type: 'concept_confusion',
+        breakPoint: 'trocou a organela da respiração pela da fotossíntese',
+        evidence: 'o relato nomeia o cloroplasto',
+        confidence: 'media',
+        intervention: { type: 'comparacao_conceitos', description: 'compare as duas organelas lado a lado' },
+      }),
+    });
+    await user.click(screen.getByRole('button', { name: /Diagnosticar de novo/i }));
+
+    await waitFor(() => {
+      const [, payload] = requestAiTextMock.mock.calls[requestAiTextMock.mock.calls.length - 1];
+      expect(payload).toMatchObject({ studentAccount: 'confundi a organela com o cloroplasto' });
+    });
+    expect(await screen.findByText(/trocou a organela da respiração/i)).toBeInTheDocument();
   });
 
   it('usa o tipo escolhido pela estudante, não o sugerido pela IA', async () => {

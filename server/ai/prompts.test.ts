@@ -166,3 +166,42 @@ test('correção de resposta discursiva da Unesp aplica a estrutura da banca', (
   assert.match(prompt, /Resposta direta → Conceito\/cálculo → Explicação → Aplicação/);
 });
 
+
+test('toda tarefa chamada pelo cliente tem rota, validação e prompt', async () => {
+  // Regressão: o cliente chamava /api/ai/error-diagnosis, que nunca existiu no
+  // servidor. O diagnóstico de erro do fluxo de questões falhava sempre, e a
+  // tela só dizia "não consegui diagnosticar agora" — parecia instabilidade da
+  // IA, não uma rota ausente. Este teste amarra as duas pontas.
+  const fs = await import('node:fs/promises');
+  const cliente = await fs.readFile(new URL('../../src/views/Questoes.tsx', import.meta.url), 'utf-8');
+  const rotas = await fs.readFile(new URL('./routes.ts', import.meta.url), 'utf-8');
+
+  const chamadas = [...cliente.matchAll(/requestAiText(?:Stream)?\('([a-z-]+)'/g)].map((m) => m[1]);
+  assert.ok(chamadas.includes('error-diagnosis'), 'o fluxo de questões deve pedir o diagnóstico de erro');
+  for (const tarefa of new Set(chamadas)) {
+    assert.match(rotas, new RegExp(`path: '/${tarefa}'`), `falta a rota /${tarefa} no servidor`);
+  }
+});
+
+test('diagnóstico da questão prioriza o relato da estudante quando ele existe', () => {
+  const comRelato = buildAiPrompt('error-diagnosis', validateAiPayload('error-diagnosis', {
+    prompt: 'Qual organela realiza a respiração celular?',
+    subject: 'Biologia',
+    selectedAnswer: 'Cloroplasto',
+    correctAnswer: 'Mitocôndria',
+    studentAccount: 'confundi com a organela da fotossíntese',
+  }));
+  assert.match(comRelato, /priorize isto/);
+  assert.match(comRelato, /confundi com a organela da fotossíntese/);
+
+  const semRelato = buildAiPrompt('error-diagnosis', validateAiPayload('error-diagnosis', {
+    prompt: 'Qual organela realiza a respiração celular?',
+    subject: 'Biologia',
+    selectedAnswer: 'Cloroplasto',
+    correctAnswer: 'Mitocôndria',
+  }));
+  // Sem relato, o modelo tem de reconstruir o caminho a partir da alternativa
+  // marcada, e é avisado de que a hipótese vale menos.
+  assert.match(semRelato, /Ela não soube dizer por que errou/);
+  assert.match(semRelato, /Sem relato, use "baixa"/);
+});

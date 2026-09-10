@@ -3,6 +3,7 @@ export type AiTask =
   | 'content-explanation'
   | 'answer-correction'
   | 'error-hypothesis'
+  | 'error-diagnosis'
   | 'question-explanation'
   | 'backlog-exercise'
   | 'backlog-correction'

@@ -32,6 +32,7 @@ const ROUTES: Array<{ path: string; task: AiTask }> = [
   { path: '/content-explanation', task: 'content-explanation' },
   { path: '/answer-correction', task: 'answer-correction' },
   { path: '/error-hypothesis', task: 'error-hypothesis' },
+  { path: '/error-diagnosis', task: 'error-diagnosis' },
   { path: '/question-explanation', task: 'question-explanation' },
   { path: '/backlog-exercise', task: 'backlog-exercise' },
   { path: '/backlog-correction', task: 'backlog-correction' },

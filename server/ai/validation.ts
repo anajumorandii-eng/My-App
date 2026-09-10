@@ -125,6 +125,18 @@ export function validateAiPayload(task: AiTask, body: unknown): Payload {
         correctAnswer: optionalString(payload, 'correctAnswer', MAX_SHORT_TEXT),
       };
     }
+    case 'error-diagnosis':
+      return {
+        prompt: requiredString(payload, 'prompt', MAX_LONG_TEXT),
+        subject: requiredString(payload, 'subject'),
+        selectedAnswer: requiredString(payload, 'selectedAnswer', MAX_LONG_TEXT),
+        correctAnswer: requiredString(payload, 'correctAnswer', MAX_LONG_TEXT),
+        baseExplanation: optionalString(payload, 'baseExplanation', MAX_LONG_TEXT),
+        // O que a estudante diz ter pensado. E a evidencia mais forte que o
+        // diagnostico pode ter, e nao existe em nenhum outro campo: sem ela o
+        // modelo so consegue inferir a partir da alternativa marcada.
+        studentAccount: optionalString(payload, 'studentAccount', MAX_LONG_TEXT),
+      };
     case 'question-explanation':
       return {
         prompt: requiredString(payload, 'prompt', MAX_LONG_TEXT),

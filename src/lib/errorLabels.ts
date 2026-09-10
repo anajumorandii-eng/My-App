@@ -11,6 +11,7 @@ export const ERROR_TYPE_LABELS: Record<ErrorLog['type'], string> = {
   insufficient_justification: 'Justificativa insuficiente',
   time: 'Falta de tempo',
   attention: 'Distração',
+  unknown: 'Não sei o motivo do meu erro',
 };
 
 export const INTERVENTION_LABELS: Record<InterventionType, string> = {

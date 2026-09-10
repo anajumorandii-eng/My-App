@@ -80,7 +80,12 @@ export interface ErrorLog {
     | 'prerequisite'
     | 'insufficient_justification'
     | 'time'
-    | 'attention';
+    | 'attention'
+    // Registrado sem que ela soubesse dizer o motivo, e sem diagnóstico da IA
+    // que ela tenha confirmado. Existe para não travar o registro nem forçar
+    // uma categoria falsa: um erro guardado como 'não sei' é dado honesto, um
+    // erro guardado como 'conceito' sem ser é dado que polui a estatística.
+    | 'unknown';
   notes: string;
   aiHypothesis?: string;
   // Ponto específico onde o raciocínio quebrou — não "errou o tópico" (ex:
