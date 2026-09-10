@@ -7,6 +7,13 @@ import { addUserAttempt, addUserErrorLog } from '../lib/userData';
 import { requestAiText, requestAiTextStream } from '../lib/aiClient';
 import { parseErrorDiagnosis, ErrorDiagnosis } from '../lib/errorDiagnosis';
 import { ERROR_TYPE_LABELS, INTERVENTION_LABELS } from '../lib/errorLabels';
+
+// 'unknown' vem primeiro porque e o estado real de quem acabou de errar: a
+// categoria certa costuma aparecer depois do diagnostico, nao antes dele.
+const ERROR_TYPE_ORDER: ErrorLog['type'][] = [
+  'unknown', 'conceptual', 'concept_confusion', 'interpretation', 'data_selection',
+  'strategy', 'calculation', 'prerequisite', 'insufficient_justification', 'time', 'attention',
+];
 import { Skeleton } from '../components/ui/Skeleton';
 import { AiText } from '../components/AiText';
 import { TopicMastery, ErrorLog } from '../types';
@@ -81,7 +88,15 @@ export default function Questoes() {
   // Tipo com que o erro vai para o caderno. A IA preenche quando acerta o
   // diagnóstico, mas a escolha final é da estudante: ela sabe por que errou
   // melhor que uma hipótese gerada a partir do enunciado.
-  const [errorType, setErrorType] = useState<ErrorLog['type']>('conceptual');
+  // Comeca em 'unknown' de proposito. Antes comecava em 'conceptual', e quem
+  // clicasse direto em "Adicionar" gravava um erro de conceito que talvez
+  // fosse de conta ou de leitura — a estatistica do caderno herdava o padrao,
+  // nao a realidade.
+  const [errorType, setErrorType] = useState<ErrorLog['type']>('unknown');
+  // O que ela lembra ter pensado ao resolver. E a unica evidencia que separa
+  // um erro de conta de um conceito trocado quando a alternativa marcada e a
+  // mesma, entao vale pedir antes de diagnosticar.
+  const [studentAccount, setStudentAccount] = useState('');
 
   // O "só questões reais" entra antes de montar a árvore para que as contagens
   // de tópico e subtópico reflitam o que o filtro vai realmente entregar. Se
@@ -124,7 +139,7 @@ export default function Questoes() {
     setDiagnosisFailed(false);
     setDiagnosisSaved(false);
     setDiagnosisDismissed(false);
-    setErrorType('conceptual');
+    setErrorType('unknown');
   };
 
   const resetQuestionState = () => {
@@ -209,6 +224,8 @@ export default function Questoes() {
     setIndex((i) => (i + 1) % pool.length);
     setSelectedOptionId(null);
     setDeepExplanation(null);
+    setErrorType('unknown');
+    setStudentAccount('');
     resetDiagnosisState();
   };
 
@@ -217,10 +234,12 @@ export default function Questoes() {
     setSelectedOptionId(null);
     setHistory([]);
     setDeepExplanation(null);
+    setErrorType('unknown');
+    setStudentAccount('');
     resetDiagnosisState();
   };
 
-  const fetchDiagnosis = async (optionId: string) => {
+  const fetchDiagnosis = async (optionId: string, account?: string) => {
     if (!question) return;
     if (question.originalPages?.length) return; // Text-only endpoint cannot inspect the original page.
     setDiagnosing(true);
@@ -234,6 +253,7 @@ export default function Questoes() {
         selectedAnswer: selectedOption?.text ?? '',
         correctAnswer: correctOption?.text ?? '',
         baseExplanation: question.explanation,
+        ...(account?.trim() ? { studentAccount: account.trim() } : {}),
       });
       const parsed = parseErrorDiagnosis(data.text);
       if (parsed) {
@@ -266,15 +286,22 @@ export default function Questoes() {
     // leitura do caderno depois.
     const usouHipotese = diagnosis !== null && !diagnosisDismissed && errorType === diagnosis.type;
     const origem = usouHipotese
-      ? 'JUJU sugeriu o diagnóstico e você confirmou'
-      : 'classificado por você';
+      ? 'CRIVO sugeriu o diagnóstico e você confirmou'
+      : errorType === 'unknown'
+        ? 'motivo ainda não identificado'
+        : 'classificado por você';
     const log: ErrorLog = {
       id: `err_${question.id}_${Date.now()}`,
       questionId: question.id,
       topicId: question.topicId,
       date: new Date().toISOString(),
       type: errorType,
-      notes: `Erro registrado a partir de uma questão de prática (${origem}). Resposta marcada: ${selectedOption?.text ?? ''}. Gabarito: ${correctOption?.text ?? ''}.`,
+      notes: [
+        `Erro registrado a partir de uma questão de prática (${origem}).`,
+        errorType === 'unknown' ? 'Ela não soube identificar o motivo — o caderno guardou assim em vez de chutar uma categoria.' : '',
+        studentAccount.trim() ? `O que ela lembra ter pensado: ${studentAccount.trim()}` : '',
+        `Resposta marcada: ${selectedOption?.text ?? ''}. Gabarito: ${correctOption?.text ?? ''}.`,
+      ].filter(Boolean).join(' '),
       ...(usouHipotese
         ? {
           aiHypothesis: diagnosis.breakPoint,
@@ -287,7 +314,10 @@ export default function Questoes() {
       // Salvar no caderno é o gesto de validação da estudante — só aqui o
       // registro passa a ser tratado como fato ('confirmado'), venha o tipo
       // da IA ou dela.
-      confidence: 'confirmado',
+      // 'confirmado' significa que ela validou uma explicacao. Guardar um
+      // 'nao sei' como confirmado seria dizer que ela confirmou nao saber, e
+      // o caderno deixaria de mostrar que esse erro ainda pede diagnostico.
+      confidence: errorType === 'unknown' ? 'baixa' : 'confirmado',
     };
     if (user) {
       addUserErrorLog(user.uid, log).catch((error) => console.error('Failed to save error log:', error));
@@ -298,6 +328,11 @@ export default function Questoes() {
   const dismissDiagnosis = () => {
     setDiagnosis(null);
     setDiagnosisDismissed(true);
+    // Recusar a hipotese devolve o tipo para 'unknown'. Deixar o palpite
+    // recusado selecionado gravaria no caderno exatamente a categoria que ela
+    // acabou de dizer estar errada, e reabre o campo de relato para uma
+    // segunda tentativa com mais evidencia.
+    setErrorType('unknown');
   };
 
   const fetchDeepExplanation = async () => {
@@ -544,7 +579,7 @@ export default function Questoes() {
                             <Stethoscope className="w-3.5 h-3.5 text-amber-400 shrink-0" />
                             <b className="text-amber-300">{ERROR_TYPE_LABELS[diagnosis.type]}</b>
                             <span className="text-[10px] text-amber-200/60">
-                              hipótese da JUJU — confirme ou troque abaixo
+                              hipótese do CRIVO — confirme ou troque abaixo
                             </span>
                           </div>
                           <p className="text-[11px] text-amber-200/90">{diagnosis.breakPoint}</p>
@@ -587,25 +622,58 @@ export default function Questoes() {
                           <span>Registrado no Caderno de Erros.</span>
                         </div>
                       ) : (
-                        <div className="flex items-center gap-2 flex-wrap pt-1">
-                          <label className="text-[11px] text-amber-200/70" htmlFor="tipo-erro">
-                            Tipo do erro
-                          </label>
-                          <select
-                            id="tipo-erro"
-                            value={errorType}
-                            onChange={(e) => setErrorType(e.target.value as ErrorLog['type'])}
-                            className="bg-transparent border border-amber-500/40 rounded px-1.5 py-1 text-[11px] text-amber-100"
-                          >
-                            {(Object.keys(ERROR_TYPE_LABELS) as ErrorLog['type'][]).map((t) => (
-                              <option key={t} value={t} className="bg-[var(--bg)] text-[var(--text)]">
-                                {ERROR_TYPE_LABELS[t]}
-                              </option>
-                            ))}
-                          </select>
-                          <Button onClick={saveErrorToLog} className="text-[11px] px-2 py-1">
-                            Adicionar ao Caderno de Erros
-                          </Button>
+                        <div className="space-y-2 pt-1">
+                          <div className="flex items-center gap-2 flex-wrap">
+                            <label className="text-[11px] text-amber-200/70" htmlFor="tipo-erro">
+                              Tipo do erro
+                            </label>
+                            <select
+                              id="tipo-erro"
+                              value={errorType}
+                              onChange={(e) => setErrorType(e.target.value as ErrorLog['type'])}
+                              className="bg-transparent border border-amber-500/40 rounded px-1.5 py-1 text-[11px] text-amber-100"
+                            >
+                              {ERROR_TYPE_ORDER.map((t) => (
+                                <option key={t} value={t} className="bg-[var(--bg)] text-[var(--text)]">
+                                  {ERROR_TYPE_LABELS[t]}
+                                </option>
+                              ))}
+                            </select>
+                            <Button onClick={saveErrorToLog} className="text-[11px] px-2 py-1">
+                              Adicionar ao Caderno de Erros
+                            </Button>
+                          </div>
+
+                          {/* Nao saber o motivo e o caso mais comum e o mais
+                              util de diagnosticar. Em vez de obrigar a escolher
+                              uma categoria no chute, abre o caminho de descobrir
+                              — e o relato dela e o que torna o diagnostico
+                              especifico em vez de generico. */}
+                          {errorType === 'unknown' && !diagnosing && (
+                            <div className="space-y-1.5 rounded-lg border border-amber-500/30 bg-amber-500/5 p-2">
+                              <label className="block text-[11px] text-amber-200/80" htmlFor="relato-erro">
+                                Se lembrar, escreva o que passou pela sua cabeça ao resolver. É opcional, mas é o que
+                                separa um erro de conta de um conceito trocado.
+                              </label>
+                              <textarea
+                                id="relato-erro"
+                                rows={2}
+                                value={studentAccount}
+                                onChange={(e) => setStudentAccount(e.target.value)}
+                                placeholder="Ex.: achei que dava pra usar a fórmula direto, sem checar qual reagente acabava primeiro"
+                                className="w-full rounded border border-amber-500/40 bg-transparent px-2 py-1.5 text-[11px] text-amber-100 placeholder:text-amber-200/35"
+                              />
+                              <button
+                                onClick={() => selectedOptionId && fetchDiagnosis(selectedOptionId, studentAccount)}
+                                className="inline-flex items-center gap-1.5 rounded border border-amber-500/50 px-2 py-1 text-[11px] font-semibold text-amber-100 hover:bg-amber-500/15"
+                              >
+                                <Stethoscope className="w-3.5 h-3.5" />
+                                {diagnosisFailed || diagnosisDismissed
+                                  ? 'Diagnosticar de novo'
+                                  : 'Descobrir o motivo com o CRIVO'}
+                              </button>
+                            </div>
+                          )}
                         </div>
                       )}
                     </div>
