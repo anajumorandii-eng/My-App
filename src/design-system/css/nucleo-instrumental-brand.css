@@ -328,7 +328,11 @@
   .ni-production-app .ni-rail.is-open .ni-rail-scroll a { width: 210px; min-height: 44px; padding: 7px 10px; }
   .ni-production-close { display: grid; place-items: center; position: absolute; top: 12px; right: 8px; height: 38px; width: 38px; border: 0; background: transparent; color: var(--text); }
   .ni-production-backdrop { position: fixed; inset: 0; z-index: 40; border: 0; background: rgba(0, 0, 0, .58); }
-  .ni-production-main { padding-bottom: 84px; }
+  /* A barra inferior é fixa e mede 62px de superfície mais o respiro e a área
+     segura do aparelho. Com 84px de folga o conteúdo terminava encostado nela
+     e o último cartão ficava por baixo — no iPad em retrato a linha "Filtro
+     ativo" sumia atrás da barra. A conta agora acompanha a barra real. */
+  .ni-production-main { padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 118px); }
   .crivo-mobile-toolbar { display: block; }
   .crivo-mobile-toolbar__surface { width: min(calc(100vw - 48px), 680px) !important; max-width: 680px !important; min-height: 62px; overflow: hidden; border: 1px solid color-mix(in srgb, var(--secondary) 42%, var(--line)); border-radius: 14px; background: color-mix(in srgb, var(--surface) 94%, var(--background)); box-shadow: 0 15px 32px rgba(0,0,0,.3); backdrop-filter: blur(16px); }
   .ni-production-app.is-light .crivo-mobile-toolbar__surface { box-shadow: 0 12px 28px color-mix(in srgb, var(--primary) 12%, transparent); }
@@ -339,6 +343,14 @@
   .crivo-mobile-toolbar__glyph > span { position: relative; z-index: 1; max-width: 100%; font: 9px ui-monospace, SFMono-Regular, monospace; letter-spacing: .035em; }
   .crivo-mobile-toolbar__glyph i { position: absolute; inset: 5px 8px; border: 1px solid color-mix(in srgb, var(--secondary) 72%, var(--line)); border-radius: 9px; background: color-mix(in srgb, var(--primary) 10%, transparent); }
   .ni-production-app .crivo-observatorio-home { padding-top: 27px; }
+  /* A tira rola na horizontal, mas terminava cortando a matéria no meio sem
+     nenhum sinal de que havia mais adiante. O esmaecimento na borda direita
+     mostra que a lista continua. */
+  .ni-production-app .ni-subjects {
+    scroll-padding-inline: 18px;
+    -webkit-mask-image: linear-gradient(90deg, #000 0, #000 calc(100% - 34px), transparent 100%);
+    mask-image: linear-gradient(90deg, #000 0, #000 calc(100% - 34px), transparent 100%);
+  }
   .ni-production-app .ni-subjects { position: sticky; top: 56px; z-index: 20; flex-wrap: nowrap; gap: 17px; overflow-x: auto; margin: 0 -18px 16px; padding: 4px 18px 7px; border-bottom: 1px solid var(--line); background: color-mix(in srgb, var(--background) 94%, transparent); box-shadow: 0 10px 20px color-mix(in srgb, var(--background) 72%, transparent); backdrop-filter: blur(15px); scrollbar-width: none; }
   .ni-production-app .ni-subjects button { min-height: 44px; padding: 10px 0; white-space: nowrap; }
   .ni-production-app .ni-subjects button svg { width: 15px; height: 15px; }
@@ -437,3 +449,19 @@
 
 @media (max-width: 900px) { .ni-foundation--trilho, .ni-foundation--foco { grid-template-columns: 1fr; }.ni-trilho-lead .ni-artifact { right: 45px; transform: scale(.9); opacity: .68; }.ni-trilho-trajectory, .ni-foco-evidence { grid-column: auto; } }
 @media (max-width: 560px) { .ni-trilho-lead { min-height: 440px; padding: 22px; }.ni-trilho-lead .ni-artifact { right: 7px; top: 106px; transform: scale(.62); opacity: .48; }.ni-trilho-evidence > div { grid-template-columns: 22px 1fr 55px 41px; }.ni-foco-stage { min-height: 470px; padding: 25px 18px; }.ni-foco-evidence { grid-template-columns: 1fr; }.ni-foco-stage .ni-artifact { opacity: .78; } }
+
+/* Filtros de tópico e subtópico da tela de questões. Substituem as duas
+   fileiras de chips que, em "Todas", desenhavam mais de sessenta tópicos de
+   todas as matérias e transbordavam a tela no retrato. */
+.crivo-topic-filters { display: flex; flex-wrap: wrap; gap: 10px; margin: 8px 0 17px; }
+.crivo-topic-filter { display: flex; min-width: 0; flex: 1 1 260px; flex-direction: column; gap: 5px; }
+.crivo-topic-filter > span { color: var(--faint); font: 9px ui-monospace, SFMono-Regular, monospace; letter-spacing: .14em; text-transform: uppercase; }
+.crivo-topic-filter select {
+  width: 100%; min-height: 42px; padding: 9px 11px;
+  border: 1px solid var(--line); border-radius: 10px;
+  background: color-mix(in srgb, var(--surface) 82%, transparent);
+  color: var(--text); font-size: 12px;
+}
+.crivo-topic-filter select:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+.crivo-topic-filter select:disabled { color: var(--dim); opacity: .65; }
+.crivo-topic-filter option, .crivo-topic-filter optgroup { background: var(--surface); color: var(--text); }

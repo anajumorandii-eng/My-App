@@ -37,7 +37,7 @@ const QUESTION: Question = {
 beforeEach(() => {
   vi.clearAllMocks();
   authHook.mockReturnValue({ user: { uid: 'user-1' } });
-  masteryHook.mockReturnValue({ updateMastery: vi.fn(), isPersisted: true, syncError: null });
+  masteryHook.mockReturnValue({ mastery: [], updateMastery: vi.fn(), isPersisted: true, syncError: null });
   questionsHook.mockReturnValue({ questions: [QUESTION], syncError: null });
   requestAiTextMock.mockResolvedValue({
     text: JSON.stringify({
@@ -52,7 +52,7 @@ beforeEach(() => {
 
 describe('Questoes — estados de persistência (regressão da migração instrumental)', () => {
   it('mostra o aviso de modo demonstração quando o domínio não está sendo persistido', () => {
-    masteryHook.mockReturnValue({ updateMastery: vi.fn(), isPersisted: false, syncError: null });
+    masteryHook.mockReturnValue({ mastery: [], updateMastery: vi.fn(), isPersisted: false, syncError: null });
     render(<Questoes />);
     expect(screen.getByText(/Modo demonstração/i)).toBeInTheDocument();
   });
@@ -191,29 +191,43 @@ describe('Questoes — navegação por tópico e subtópico', () => {
     questionsHook.mockReturnValue({ questions: bank, syncError: null });
   });
 
+  const seletorTopico = () => screen.getByLabelText(/^Tópico$/) as HTMLSelectElement;
+  const escolherTopico = async (user: ReturnType<typeof userEvent.setup>, prefixo: string) => {
+    const alvo = [...seletorTopico().querySelectorAll('option')]
+      .find((o) => o.textContent?.startsWith(prefixo));
+    await user.selectOptions(seletorTopico(), alvo!.value);
+  };
+  const seletorSubtopico = () => screen.getByLabelText(/^Subtópico$/) as HTMLSelectElement;
+
   it('lista os tópicos presentes no banco com a contagem de questões', () => {
     render(<Questoes />);
-    expect(screen.getByRole('button', { name: /Estrutura e Fisiologia Celular \(3\)/ })).toBeInTheDocument();
-    expect(screen.getByRole('button', { name: /Metabolismo Energético \(1\)/ })).toBeInTheDocument();
+    const rotulos = [...seletorTopico().querySelectorAll('option')].map((o) => o.textContent);
+    expect(rotulos).toContain('Estrutura e Fisiologia Celular (3)');
+    expect(rotulos).toContain('Metabolismo Energético (1)');
   });
 
-  it('só mostra a faixa de subtópicos depois que um tópico é escolhido', async () => {
+  it('só oferece subtópicos depois que um tópico é escolhido', async () => {
     const user = userEvent.setup();
     render(<Questoes />);
-    expect(screen.queryByRole('button', { name: /Todos os subtópicos/ })).not.toBeInTheDocument();
+    // Desabilitado, e não escondido: um campo que some quando o de cima muda
+    // faz a linha inteira pular. Desabilitado, o lugar dele continua visível.
+    expect(seletorSubtopico()).toBeDisabled();
 
-    await user.click(screen.getByRole('button', { name: /Estrutura e Fisiologia Celular/ }));
+    await escolherTopico(user, 'Estrutura e Fisiologia Celular');
 
-    expect(screen.getByRole('button', { name: /Todos os subtópicos/ })).toBeInTheDocument();
-    expect(screen.getByRole('button', { name: /Membranas Celulares \(2\)/ })).toBeInTheDocument();
-    expect(screen.getByRole('button', { name: /Núcleo Celular \(1\)/ })).toBeInTheDocument();
+    expect(seletorSubtopico()).toBeEnabled();
+    const rotulos = [...seletorSubtopico().querySelectorAll('option')].map((o) => o.textContent);
+    expect(rotulos).toContain('Membranas Celulares (2)');
+    expect(rotulos).toContain('Núcleo Celular (1)');
   });
 
   it('restringe o conjunto ao subtópico escolhido', async () => {
     const user = userEvent.setup();
     render(<Questoes />);
-    await user.click(screen.getByRole('button', { name: /Estrutura e Fisiologia Celular/ }));
-    await user.click(screen.getByRole('button', { name: /Membranas Celulares \(2\)/ }));
+    await escolherTopico(user, 'Estrutura e Fisiologia Celular');
+    const membranas = [...seletorSubtopico().querySelectorAll('option')]
+      .find((o) => o.textContent?.startsWith('Membranas Celulares'))!;
+    await user.selectOptions(seletorSubtopico(), membranas.value);
 
     await waitFor(() => {
       expect(screen.getByText(/Questão 1 de 2/)).toBeInTheDocument();
@@ -223,12 +237,13 @@ describe('Questoes — navegação por tópico e subtópico', () => {
   it('trocar de matéria limpa o tópico escolhido', async () => {
     const user = userEvent.setup();
     render(<Questoes />);
-    await user.click(screen.getByRole('button', { name: /Estrutura e Fisiologia Celular/ }));
-    expect(screen.getByRole('button', { name: /Todos os subtópicos/ })).toBeInTheDocument();
+    await escolherTopico(user, 'Estrutura e Fisiologia Celular');
+    expect(seletorSubtopico()).toBeEnabled();
 
     await user.click(screen.getByRole('button', { name: /^Biologia$/ }));
 
-    expect(screen.queryByRole('button', { name: /Todos os subtópicos/ })).not.toBeInTheDocument();
+    expect(seletorTopico().value).toBe('Todas');
+    expect(seletorSubtopico()).toBeDisabled();
   });
 });
 
@@ -280,5 +295,28 @@ describe('Questoes — visibilidade do filtro de questões reais', () => {
     await user.click(screen.getByRole('button', { name: /Só Questões Reais/ }));
 
     await waitFor(() => expect(screen.getByText(/Questão 1 de 2/)).toBeInTheDocument());
+  });
+
+  it('a barra de precisão acompanha o valor em vez de ficar cheia por padrão', async () => {
+    // Regressão: .ni-metric>i span tinha width:62% fixo no CSS, então a barra
+    // aparecia mais da metade cheia num treino 0/0, ao lado de um valor "—".
+    const user = userEvent.setup();
+    const { container } = render(<Questoes />);
+
+    const barra = () => container.querySelector('.ni-metric > i > span') as HTMLElement;
+    expect(barra().style.getPropertyValue('--bar-fill')).toBe('0%');
+
+    await user.click(screen.getByRole('button', { name: /Mitocôndria/ }));
+    await waitFor(() => expect(barra().style.getPropertyValue('--bar-fill')).toBe('0%'));
+  });
+
+  it('agrupa os tópicos por matéria em vez de listar todos de uma vez', async () => {
+    render(<Questoes />);
+    const seletor = (await screen.findByLabelText(/Tópico/)) as HTMLSelectElement;
+    // Com "Todas" selecionado, o primeiro nível do seletor são as matérias:
+    // antes eram mais de sessenta tópicos numa fileira única de chips.
+    const grupos = [...seletor.children].filter((filho) => filho.tagName === 'OPTGROUP');
+    expect(grupos.length).toBeGreaterThan(0);
+    expect(grupos.every((grupo) => (grupo as HTMLOptGroupElement).children.length > 0)).toBe(true);
   });
 });
