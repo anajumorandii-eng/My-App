@@ -1006,23 +1006,23 @@
     "sections": [
       {
         "title": "Carboidratos",
-        "content": "Carboidratos são a principal fonte imediata de energia. Monossacarídeos como glicose, frutose e galactose são as unidades; dissacarídeos como sacarose, lactose e maltose resultam da união de dois deles por ligação glicosídica, com saída de água; polissacarídeos como amido, glicogênio, celulose e quitina exercem papel de reserva ou de estrutura."
+        "content": "Carboidratos, ou glicídios, têm fórmula geral aproximada Cn(H2O)n e são a fonte energética preferencial da célula, rendendo cerca de 4 kcal por grama. Classificam-se pelo número de unidades. Monossacarídeos são as unidades básicas e não sofrem hidrólise: glicose, o combustível universal e a molécula que a respiração celular oxida; frutose, o açúcar das frutas; galactose, componente do leite; e as pentoses ribose e desoxirribose, que compõem RNA e DNA. Dissacarídeos resultam da união de dois monossacarídeos por ligação glicosídica, com liberação de uma molécula de água — reação de síntese por desidratação, e a quebra é hidrólise. Os três obrigatórios são sacarose (glicose + frutose), o açúcar de cana; lactose (glicose + galactose), o do leite, cuja digestão depende da enzima lactase, ausente em parte dos adultos e causa da intolerância; e maltose (glicose + glicose), do malte. Polissacarídeos são polímeros de centenas ou milhares de unidades, insolúveis e sem sabor doce."
       },
       {
         "title": "Reserva e estrutura",
-        "content": "Amido é a reserva vegetal e glicogênio a animal, ambos formados por glicose e facilmente mobilizáveis. Celulose forma a parede das células vegetais e quitina o exoesqueleto de artrópodes e a parede de fungos: são estruturais e resistentes à digestão humana, o que explica a celulose funcionar como fibra alimentar sem valor calórico."
+        "content": "Os polissacarídeos se dividem por função, e a distinção é o alvo mais frequente das questões. Como reserva energética, o amido é o polissacarídeo das plantas, armazenado em amiloplastos de raízes, caules e sementes, e o glicogênio é o dos animais e fungos, estocado sobretudo no fígado e no músculo esquelético; ambos são polímeros de glicose, e a diferença está no grau de ramificação, maior no glicogênio, o que permite mobilização mais rápida. Como função estrutural, a celulose forma a parede das células vegetais e é o composto orgânico mais abundante da biosfera; a quitina forma o exoesqueleto dos artrópodes e a parede celular dos fungos. O detalhe que decide a questão é que celulose e amido são ambos polímeros de glicose, e o que os separa é o tipo de ligação glicosídica: no amido é alfa, digerível pela amilase humana; na celulose é beta, que nossas enzimas não quebram. Por isso a celulose é fibra alimentar — atravessa o tubo digestório sem ser absorvida, regula o trânsito intestinal, e só ruminantes e cupins a aproveitam, graças a microrganismos simbiontes."
       },
       {
         "title": "Lipídios",
-        "content": "Lipídios são insolúveis em água e solúveis em solventes orgânicos. Os triglicerídeos armazenam energia com densidade maior que a dos carboidratos e isolam termicamente; os fosfolipídios, por serem anfipáticos, formam a bicamada das membranas; os esteroides incluem colesterol e hormônios sexuais; as ceras impermeabilizam superfícies como folhas e penas."
+        "content": "Lipídios não formam polímeros e são definidos por uma propriedade física, a insolubilidade em água e a solubilidade em solventes orgânicos. Rendem cerca de 9 kcal por grama, mais que o dobro dos carboidratos, o que os torna a reserva energética de longo prazo — vantajosa por ser leve e compacta, e é por isso que aves migratórias estocam gordura e não glicogênio. Os glicerídeos, formados por glicerol e ácidos graxos, incluem óleos, líquidos à temperatura ambiente por terem ácidos graxos insaturados com duplas ligações que dobram a cadeia e impedem o empacotamento, e gorduras, sólidas por terem ácidos graxos saturados. Os fosfolipídios, anfipáticos, compõem todas as membranas biológicas. Os esteroides têm quatro anéis carbônicos fundidos: o colesterol modula a fluidez da membrana animal e é precursor dos hormônios sexuais, dos corticoides e da vitamina D. As ceras impermeabilizam superfícies, como a cutícula da folha e a pena da ave. Os lipídios ainda isolam termicamente e protegem mecanicamente órgãos."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Chamar todo lipídio de gordura ignora fosfolipídios, esteroides e ceras. Outro erro é dizer que celulose alimenta o ser humano: não temos enzima para digeri-la. E confundir amido com glicogênio quanto ao organismo em que ocorrem, ou esquecer que ambos são polímeros de glicose."
+        "content": "Dizer que celulose e amido são substâncias quimicamente diferentes por não serem digeríveis do mesmo jeito é o erro central: os dois são polímeros de glicose, e o que muda é o tipo de ligação, alfa contra beta. O segundo erro é chamar o glicogênio de \"amido animal\" e parar aí, ignorando que a ramificação maior serve à mobilização rápida. O terceiro é dizer que a vaca digere celulose: quem digere são as bactérias e protozoários do rúmen, e ela aproveita os produtos. O quarto é afirmar que lipídio não tem função além da reserva, esquecendo membrana, hormônio, isolamento e impermeabilização. O quinto é confundir insaturado com saudável por definição: a gordura trans é insaturada e é a mais associada a doença cardiovascular, porque a hidrogenação industrial muda a geometria da dupla ligação. O sexto é dizer que o colesterol é apenas nocivo, quando é componente estrutural de membrana e precursor de hormônios. E cuidado com a conta: lipídio rende mais por grama, mas é mobilizado mais lentamente que o glicogênio."
       },
       {
         "title": "Pratique e confira",
-        "content": "Explique por que gordura é melhor reserva de energia que carboidrato antes de conferir: os lipídios liberam mais energia por grama e são armazenados praticamente sem água, ocupando menos volume. Agora diga qual lipídio forma a membrana e por quê: o fosfolipídio, porque tem cabeça polar e caudas apolares, organizando-se em bicamada na água."
+        "content": "Por que uma ave migratória estoca gordura, e não glicogênio, antes de uma travessia longa? Responda antes de conferir. Porque o rendimento energético do lipídio é de cerca de 9 kcal por grama contra 4 do carboidrato, e porque o glicogênio é hidrofílico e se armazena hidratado, arrastando cerca de duas a três vezes o próprio peso em água — de modo que a mesma energia em glicogênio pesaria várias vezes mais. Para um animal que precisa voar, peso é o fator limitante, e a gordura é a reserva mais densa em energia por unidade de massa. Agora um segundo: explique por que uma pessoa com intolerância à lactose sente desconforto abdominal e diarreia após tomar leite, relacionando enzima, absorção e microbiota. A resposta é que, sem lactase suficiente, a lactose não é hidrolisada em glicose e galactose e não pode ser absorvida; ela permanece no lúmen intestinal, onde aumenta a osmolaridade e retém água, causando diarreia osmótica, e é fermentada por bactérias do cólon, que produzem gases responsáveis pela distensão e pelas cólicas."
       }
     ],
     "recall": {
@@ -1053,7 +1053,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Biologia",
@@ -1061,23 +1062,23 @@
     "sections": [
       {
         "title": "A água e suas propriedades",
-        "content": "A água é o composto mais abundante nos seres vivos e suas propriedades vêm da polaridade e das pontes de hidrogênio: alto calor específico, que estabiliza a temperatura corporal; alto calor de vaporização, que torna a transpiração eficiente; coesão e tensão superficial, que sustentam a subida da seiva; e capacidade de dissolver substâncias polares, atuando como solvente universal."
+        "content": "A água é o composto mais abundante da matéria viva e responde por 60 a 70% da massa de um ser humano adulto, e suas funções derivam todas de uma característica estrutural: a molécula é angular e a diferença de eletronegatividade entre oxigênio e hidrogênio a torna polar, um dipolo permanente. Daí vêm as pontes de hidrogênio entre moléculas vizinhas, e delas decorrem as propriedades que a banca cobra. A polaridade faz da água o solvente universal das substâncias polares e iônicas, o que a torna o meio de todas as reações metabólicas e o veículo de transporte no sangue e na seiva. O alto calor específico — é preciso muita energia para elevar sua temperatura — faz dela um estabilizador térmico, tanto do corpo quanto do clima costeiro. O alto calor latente de vaporização explica a eficiência do suor e da transpiração vegetal no resfriamento. A coesão entre moléculas e a adesão à parede dos vasos sustentam a coluna de água que sobe da raiz à folha, e geram a tensão superficial. A água ainda participa como reagente na hidrólise e como produto na síntese por desidratação."
       },
       {
         "title": "Sais minerais e suas funções",
-        "content": "Os sais minerais atuam como constituintes estruturais e como reguladores. Cálcio e fósforo formam ossos e dentes; ferro compõe a hemoglobina; iodo entra nos hormônios da tireoide; magnésio faz parte da clorofila; sódio e potássio mantêm o potencial elétrico das membranas. Cada carência produz um quadro característico, ponto frequentemente cobrado em prova."
+        "content": "Os sais minerais aparecem sob duas formas. Imobilizados, insolúveis, cumprem função estrutural: o fosfato de cálcio dá rigidez a ossos e dentes, e o carbonato de cálcio forma conchas de moluscos e o exoesqueleto de corais e crustáceos. Dissolvidos, dissociam-se em íons com funções específicas que precisam ser sabidas nominalmente. Sódio e potássio mantêm o equilíbrio osmótico e são a base do potencial de membrana e da condução do impulso nervoso, pelo trabalho da bomba de sódio e potássio. O cálcio, além da função estrutural, dispara a contração muscular e participa da cascata de coagulação e da liberação de neurotransmissores. O ferro é o centro do grupo heme da hemoglobina, e sua falta causa anemia ferropriva. O iodo é indispensável à síntese de tiroxina, e sua carência causa bócio — motivo pelo qual o sal de cozinha é iodado por lei no Brasil. O magnésio é o átomo central da clorofila e cofator de muitas enzimas. O fósforo entra no ATP, nos ácidos nucleicos e nos fosfolipídios. O flúor endurece o esmalte dentário."
       },
       {
         "title": "Teor de água e metabolismo",
-        "content": "O teor de água varia com a espécie, o tecido e a idade: é maior em tecidos com metabolismo intenso, como o sangue e o cérebro, e menor em tecidos como o ósseo e o adiposo. Também diminui com o envelhecimento. Como quase toda reação celular ocorre em meio aquoso, o teor de água acompanha a atividade metabólica."
+        "content": "O teor de água num organismo não é fixo e varia segundo três critérios que costumam aparecer juntos numa questão. Varia com a espécie: uma água-viva chega a 98% de água, enquanto uma semente seca fica abaixo de 15%. Varia com o tecido: o sangue e o tecido nervoso são muito hidratados, o tecido adiposo e o ósseo bem menos, e o esmalte dentário é o tecido menos hidratado do corpo. E varia com a idade: um embrião e uma criança têm proporção maior de água que um idoso, e essa queda progressiva é uma das razões da fragilidade tecidual no envelhecimento. A relação com o metabolismo é direta e explica dois fenômenos importantes: quanto maior a atividade metabólica de um tecido, maior seu teor de água, porque as reações ocorrem em meio aquoso. Por isso a semente sobrevive desidratada em estado de dormência, com metabolismo praticamente suspenso, e retoma a atividade ao ser embebida — a germinação começa justamente pela absorção de água, que reidrata o tecido e reativa as enzimas."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Dizer que o tecido adiposo é rico em água inverte a relação. Outro erro é atribuir ao cálcio funções da hemoglobina ou trocar os sais minerais entre suas carências. E confundir calor específico com calor de vaporização, que explicam fenômenos diferentes: estabilidade térmica e resfriamento por suor."
+        "content": "Chamar a água de solvente universal sem ressalva é impreciso: ela dissolve substâncias polares e iônicas, e não dissolve lipídios e outras apolares — é justamente isso que permite a existência de membranas. O segundo erro é dizer que a água estabiliza a temperatura por ser líquida, quando a causa é o alto calor específico, ligado às pontes de hidrogênio. O terceiro é atribuir a subida da seiva apenas à pressão da raiz, ignorando a coesão e a tensão geradas pela transpiração foliar. O quarto é confundir sal mineral com sal de cozinha: sais minerais são um conjunto amplo de íons, e o cloreto de sódio é apenas um deles. O quinto é dizer que o teor de água é o mesmo em qualquer tecido, quando varia de forma marcante. O sexto é ligar bócio a excesso de sal, quando a causa clássica é a carência de iodo. E há um erro conceitual fino: dizer que a semente está morta por ter pouca água — ela está viva, em dormência, com metabolismo reduzido ao mínimo."
       },
       {
         "title": "Pratique e confira",
-        "content": "Explique por que suar resfria o corpo antes de conferir: evaporar água exige muita energia, por causa do alto calor de vaporização, e essa energia é retirada da superfície corporal. Agora relacione carências: falta de ferro leva à anemia, falta de iodo ao bócio e falta de cálcio compromete ossos e a contração muscular."
+        "content": "Por que uma semente pode passar anos desidratada e voltar a viver, enquanto uma célula do seu corpo morre com desidratação muito menor? Responda antes de conferir. Porque a semente entra em dormência: com o teor de água abaixo de cerca de 15%, o metabolismo praticamente cessa, as enzimas ficam inativas mas não desnaturadas, e as estruturas celulares são protegidas por açúcares e proteínas específicas que substituem a água na estabilização das membranas. Não há reação em curso a interromper. Uma célula somática ativa, ao contrário, depende de reações contínuas em meio aquoso; perder água concentra solutos, altera pH, desnatura proteínas e interrompe processos que não podem parar sem dano. Agora um segundo: explique por que o suor resfria o corpo e por que ele resfria muito menos num dia úmido. A resposta usa o alto calor latente de vaporização — cada grama de água que evapora retira muita energia da pele — e a dependência da evaporação em relação ao gradiente de umidade: com o ar já saturado, a água escorre em vez de evaporar, e sem mudança de estado não há retirada de calor."
       }
     ],
     "recall": {
@@ -1108,7 +1109,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Biologia",
@@ -1116,23 +1118,23 @@
     "sections": [
       {
         "title": "Aminoácidos e ligação peptídica",
-        "content": "Proteínas são polímeros de aminoácidos unidos por ligações peptídicas, formadas com saída de água. Existem vinte aminoácidos, e a sequência deles é determinada pelo gene. Alguns são essenciais, isto é, precisam vir da dieta porque o organismo não os sintetiza, e essa é a razão de se falar em qualidade proteica dos alimentos."
+        "content": "Proteínas são polímeros de aminoácidos, e todo aminoácido tem a mesma arquitetura: um carbono central ligado a um grupo amina, um grupo carboxila, um hidrogênio e um radical R, que é o que diferencia os vinte aminoácidos existentes. A união se faz por ligação peptídica, entre a carboxila de um e a amina do seguinte, com liberação de uma molécula de água — de modo que um peptídeo de n aminoácidos se formou com n−1 ligações e n−1 moléculas de água liberadas, conta que aparece direto em prova. Dos vinte aminoácidos, nove são essenciais para o ser humano: o organismo não os sintetiza e precisa obtê-los da dieta. Proteínas de origem animal costumam ter todos eles em proporção adequada, enquanto proteínas vegetais individuais costumam ser deficientes em algum — o que explica a combinação tradicional de arroz com feijão, em que o feijão fornece a lisina escassa no arroz e o arroz fornece a metionina escassa no feijão, resultando num conjunto completo."
       },
       {
         "title": "Os quatro níveis de estrutura",
-        "content": "A estrutura primária é a sequência de aminoácidos; a secundária são dobras locais em hélice ou folha; a terciária é o enovelamento tridimensional completo; a quaternária reúne mais de uma cadeia, como na hemoglobina. A função depende da forma, e a forma depende, em última instância, da sequência definida pelo DNA."
+        "content": "A estrutura proteica se organiza em quatro níveis, e a função depende do formato final. A estrutura primária é a sequência linear de aminoácidos, determinada pelo gene; é o nível que define todos os outros, porque as interações entre os radicais decorrem de quais radicais estão presentes e em que ordem. A secundária é o enrolamento local em alfa-hélice ou folha beta pregueada, mantido por pontes de hidrogênio entre grupos da cadeia principal. A terciária é o dobramento tridimensional global, estabilizado por interações entre os radicais — pontes dissulfeto entre cisteínas, interações hidrofóbicas, iônicas e pontes de hidrogênio — e é nela que se forma o sítio ativo das enzimas. A quaternária existe apenas nas proteínas formadas por mais de uma cadeia polipeptídica, e o exemplo obrigatório é a hemoglobina, com quatro cadeias, cada uma com um grupo heme contendo ferro. A desnaturação, provocada por calor, pH extremo ou agentes químicos, desfaz as estruturas espacial mas preserva a primária, e por isso costuma ser irreversível na prática sem que a sequência tenha mudado."
       },
       {
         "title": "Funções das proteínas",
-        "content": "Além de enzimas, as proteínas exercem função estrutural, como o colágeno da pele e a queratina de unhas e cabelos; de transporte, como a hemoglobina; de defesa, como os anticorpos; de movimento, como actina e miosina; e hormonal, como a insulina. É a classe de moléculas com maior diversidade funcional na célula."
+        "content": "As funções das proteínas cobrem quase toda a atividade celular, e a banca gosta de pedir exemplos nomeados. Estrutural: colágeno, o mais abundante do corpo, que dá resistência a pele, tendões e ossos; queratina, de pelos e unhas; elastina, que confere elasticidade. Enzimática: catalisadores biológicos que reduzem a energia de ativação, com especificidade explicada pelo modelo do encaixe induzido — o sítio ativo se ajusta ao substrato — e atividade dependente de temperatura e pH ótimos, como a pepsina, que age em pH 2 no estômago, e a tripsina, em pH alcalino no intestino. Transporte: hemoglobina para oxigênio, albumina para diversas substâncias no plasma. Defesa: anticorpos, ou imunoglobulinas. Contração: actina e miosina. Hormonal: insulina e glucagon são proteicos, e é por isso que a insulina precisa ser injetada e não pode ser tomada por via oral — seria digerida. Reserva: ovoalbumina e caseína. Coagulação: fibrinogênio e trombina. Vale fixar que enzima é sempre proteína, mas proteína não é sempre enzima."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Dizer que a desnaturação quebra ligações peptídicas é erro: ela desfaz a forma tridimensional, mantendo a estrutura primária. Outro deslize é achar que toda proteína é enzima. E confundir aminoácido essencial com aminoácido importante: todos são necessários, mas só alguns precisam vir prontos da dieta."
+        "content": "Dizer que a desnaturação quebra ligações peptídicas é o erro conceitual mais frequente: ela desfaz a estrutura espacial, mantendo a sequência primária intacta. O segundo é achar que toda proteína tem estrutura quaternária, quando só as de múltiplas cadeias têm. O terceiro é dizer que enzima é consumida na reação: ela é recuperada íntegra e reutilizada, e é por isso que pequenas quantidades bastam. O quarto é afirmar que aumentar a temperatura sempre acelera a reação enzimática — acelera até o ótimo, e acima dele a enzima desnatura e a atividade despenca, o que dá a curva em sino característica. O quinto é confundir aminoácido essencial com aminoácido importante: essencial quer dizer que o corpo não sintetiza, não que os outros sejam dispensáveis. O sexto é errar a contagem das ligações peptídicas, usando n em vez de n−1. E cuidado com a insulina: ela é hormônio e proteína ao mesmo tempo, o que não é contradição — hormônio é classificação funcional, proteína é química."
       },
       {
         "title": "Pratique e confira",
-        "content": "Explique por que ferver um ovo endurece a clara antes de conferir: o calor desnatura as proteínas, desfazendo a estrutura tridimensional e formando uma rede insolúvel, sem romper as ligações peptídicas. Agora diga por que uma troca de um único aminoácido pode causar doença: na anemia falciforme, a substituição altera a forma da hemoglobina e deforma a hemácia."
+        "content": "Por que a insulina precisa ser injetada, enquanto um hormônio esteroide pode ser tomado em comprimido? Responda antes de conferir. Porque a insulina é proteica: ingerida, seria atacada pela pepsina no estômago e pelas proteases pancreáticas no intestino, hidrolisada em aminoácidos e absorvida como nutriente, sem chegar íntegra à corrente sanguínea nem exercer efeito hormonal. Os esteroides, derivados do colesterol e lipossolúveis, resistem à digestão e atravessam as membranas do epitélio intestinal, chegando ativos à circulação. Agora um segundo, quantitativo e conceitual: um peptídeo é formado por 148 aminoácidos. Quantas ligações peptídicas ele possui e quantas moléculas de água foram liberadas na sua síntese? E se um único aminoácido dessa sequência for trocado, o que pode acontecer com a proteína? São 147 ligações e 147 moléculas de água. A troca de um único aminoácido altera a estrutura primária e pode mudar o dobramento e, com ele, a função — é exatamente o que ocorre na anemia falciforme, em que a substituição de um ácido glutâmico por uma valina na cadeia beta da hemoglobina deforma a hemácia."
       }
     ],
     "recall": {
@@ -1163,7 +1165,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Biologia",
@@ -1171,23 +1174,23 @@
     "sections": [
       {
         "title": "Hormônios e glândulas",
-        "content": "Hormônios são mensageiros químicos produzidos por glândulas endócrinas e lançados no sangue, atuando apenas em células que têm o receptor correspondente. A resposta é mais lenta que a nervosa, porém mais duradoura e difusa. A hipófise é chamada de glândula-mestra por controlar várias outras, sob comando do hipotálamo."
+        "content": "O sistema endócrino coordena o organismo por mensageiros químicos lançados na corrente sanguínea, e a comparação com o sistema nervoso é o enquadramento que a banca costuma pedir: o nervoso é rápido, de ação localizada e efeito breve; o endócrino é lento, de ação difusa e efeito prolongado. Hormônio é a substância produzida por uma glândula endócrina, sem duto, que atinge todas as células mas só age nas que possuem o receptor específico — daí a especificidade sem endereçamento. Glândulas exócrinas, ao contrário, lançam a secreção por dutos para fora ou em cavidades, como as sudoríparas e as salivares; o pâncreas é misto, com porção exócrina que secreta suco pancreático no duodeno e porção endócrina que lança hormônios no sangue. A hipófise, ou pituitária, é chamada de glândula-mestra por controlar outras: a adeno-hipófise produz hormônio do crescimento, TSH, ACTH, FSH, LH e prolactina; a neuro-hipófise armazena e libera ADH e ocitocina, produzidos no hipotálamo — detalhe que a prova cobra, porque ela libera mas não sintetiza."
       },
       {
         "title": "Tireoide e paratireoides",
-        "content": "A tireoide produz tiroxina, que regula o metabolismo basal, e calcitonina, que reduz o cálcio no sangue depositando-o nos ossos. As paratireoides produzem paratormônio, de efeito oposto. A carência de iodo impede a síntese de tiroxina e provoca bócio, com aumento da glândula por estímulo contínuo da hipófise."
+        "content": "A tireoide produz tiroxina (T4) e tri-iodotironina (T3), hormônios que exigem iodo em sua molécula e cuja função é elevar a taxa de metabolismo basal, aumentando o consumo de oxigênio e a produção de calor. O hipotireoidismo cursa com metabolismo lento, ganho de peso, intolerância ao frio, sonolência e bradicardia; na criança, a carência causa cretinismo, com déficit de crescimento e de desenvolvimento neurológico. O hipertireoidismo dá o quadro oposto: emagrecimento com apetite aumentado, taquicardia, intolerância ao calor, agitação e exoftalmia na doença de Graves. O bócio é o aumento da glândula e pode ocorrer nas duas condições — no caso da carência de iodo, a tireoide não consegue produzir o hormônio, o TSH hipofisário sobe tentando estimulá-la e o estímulo crônico a faz crescer. A tireoide produz ainda a calcitonina, que baixa o cálcio sanguíneo depositando-o nos ossos. As paratireoides produzem o paratormônio, com ação oposta: retira cálcio do osso, aumenta a reabsorção renal e a absorção intestinal, elevando a calcemia."
       },
       {
         "title": "Pâncreas endócrino",
-        "content": "As ilhotas pancreáticas produzem insulina, que reduz a glicemia facilitando a entrada de glicose nas células, e glucagon, que a eleva mobilizando o glicogênio hepático. O diabetes tipo 1 decorre da destruição autoimune das células produtoras de insulina; o tipo 2, da resistência periférica ao hormônio."
+        "content": "O pâncreas endócrino, nas ilhotas de Langerhans, secreta dois hormônios antagônicos que mantêm a glicemia em torno de 70 a 110 mg/dL. As células beta produzem insulina quando a glicemia sobe, tipicamente após uma refeição: ela promove a captação de glicose pelas células, sobretudo musculares e adiposas, estimula a glicogênese no fígado e no músculo e a lipogênese, baixando a glicemia. As células alfa produzem glucagon quando a glicemia cai, no jejum: ele estimula a glicogenólise, quebrando o glicogênio hepático, e a gliconeogênese, produzindo glicose a partir de aminoácidos e glicerol, elevando a glicemia. O diabetes mellitus tipo 1 é autoimune, com destruição das células beta e ausência de insulina, exigindo aplicação do hormônio; costuma se manifestar na infância ou adolescência. O tipo 2, muito mais frequente, decorre de resistência periférica à insulina, associada a obesidade e sedentarismo. Em ambos, a glicose não entra nas células e se acumula no sangue; ultrapassado o limiar renal, aparece na urina — daí a glicosúria, a poliúria por arraste osmótico e a polidipsia."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Dizer que a insulina quebra a glicose é impreciso: ela promove a entrada da glicose nas células e o armazenamento como glicogênio. Outro deslize é confundir calcitonina com paratormônio, que têm efeitos opostos sobre o cálcio. E imaginar que o hormônio age em qualquer célula, ignorando a especificidade dos receptores."
+        "content": "Dizer que a neuro-hipófise produz ADH e ocitocina é o erro mais cobrado: quem os sintetiza é o hipotálamo, e ela apenas armazena e libera. O segundo é confundir calcitonina com paratormônio; guarde pelo nome, calcitonina \"guarda\" cálcio no osso e o paratormônio o retira. O terceiro é dizer que o bócio indica sempre hipotireoidismo, quando é apenas o aumento da glândula e ocorre também no hipertireoidismo. O quarto é afirmar que a insulina \"quebra\" a glicose: ela promove a entrada da glicose na célula e o armazenamento como glicogênio, não a degrada. O quinto é tratar diabetes tipo 1 e tipo 2 como o mesmo problema com gravidades diferentes — um é falta de produção, o outro é resistência ao hormônio. O sexto é confundir diabetes mellitus com diabetes insipidus, que é falta de ADH e cursa com poliúria sem glicose na urina. E cuidado: hormônio atinge todas as células pelo sangue, mas só age onde há receptor — dizer que ele \"procura\" o órgão-alvo é impreciso."
       },
       {
         "title": "Pratique e confira",
-        "content": "Por que a falta de iodo aumenta a tireoide? Responda antes de conferir: sem iodo não se produz tiroxina, a hipófise continua estimulando a glândula com TSH e o estímulo constante provoca hipertrofia, o bócio. Agora explique o papel oposto de insulina e glucagon: uma reduz e o outro eleva a glicemia."
+        "content": "Por que uma pessoa com diabetes mellitus não tratada urina muito, sente muita sede e emagrece mesmo comendo bem? Responda antes de conferir. Sem insulina eficaz, a glicose não entra nas células e se acumula no sangue; ao ultrapassar o limiar de reabsorção renal, ela passa para a urina e, sendo osmoticamente ativa, arrasta água consigo — daí a poliúria, e a desidratação resultante dispara a sede intensa. O emagrecimento vem de as células estarem em jejum apesar da glicose abundante no sangue: sem poder usá-la, o organismo mobiliza gordura e proteína muscular como fonte de energia, o que explica a perda de massa e, no tipo 1, a produção de corpos cetônicos. Agora um segundo: explique por que a carência de iodo aumenta o tamanho da tireoide. A resposta usa o feedback negativo — sem iodo, a glândula não sintetiza T3 e T4; a queda desses hormônios deixa de inibir a hipófise, que libera TSH em excesso; o TSH elevado estimula cronicamente a tireoide, que hipertrofia sem conseguir produzir o hormônio, resultando no bócio."
       }
     ],
     "recall": {
@@ -1218,7 +1221,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Biologia",
@@ -1226,23 +1230,23 @@
     "sections": [
       {
         "title": "Adrenais e resposta ao estresse",
-        "content": "A medula da adrenal libera adrenalina e noradrenalina na resposta rápida ao estresse, aumentando frequência cardíaca, pressão e glicemia. O córtex produz cortisol, de ação mais lenta e prolongada, que eleva a glicose e modula a inflamação, e aldosterona, que retém sódio e água, elevando a pressão arterial."
+        "content": "As glândulas adrenais, ou suprarrenais, têm duas porções com origens embrionárias e produtos distintos. A medula adrenal, de origem neural, produz adrenalina e noradrenalina, catecolaminas liberadas em segundos sob estímulo do sistema nervoso simpático — é a resposta aguda de luta ou fuga: aumento da frequência cardíaca e da pressão arterial, broncodilatação, midríase, desvio do sangue das vísceras para os músculos esqueléticos e glicogenólise hepática, que eleva rapidamente a glicemia para abastecer o esforço. O córtex adrenal produz corticosteroides a partir do colesterol: os glicocorticoides, sobretudo o cortisol, ligados à resposta crônica ao estresse, que estimulam a gliconeogênese, mobilizam proteína e gordura e têm efeito anti-inflamatório e imunossupressor — base do uso medicamentoso de corticoides; e os mineralocorticoides, sobretudo a aldosterona, que atua nos rins retendo sódio e água e excretando potássio, elevando o volume e a pressão arterial. A distinção entre resposta em segundos e resposta em horas é o eixo da comparação que a prova pede."
       },
       {
         "title": "Feedback negativo",
-        "content": "A maioria dos eixos hormonais é regulada por retroalimentação negativa: o produto final inibe as etapas anteriores, mantendo a concentração dentro de uma faixa. É assim que funciona o eixo hipotálamo-hipófise-tireoide, e é por isso que o uso prolongado de hormônio exógeno pode suprimir a produção natural."
+        "content": "O feedback negativo, ou retroalimentação negativa, é o mecanismo central de regulação endócrina: o produto final de uma via inibe as etapas que o produziram, mantendo o sistema em torno de um valor de referência. O eixo hipotálamo-hipófise-glândula é o modelo. O hipotálamo libera um hormônio liberador; a adeno-hipófise responde com o hormônio trófico, como TSH ou ACTH; a glândula-alvo produz o hormônio final, como tiroxina ou cortisol; e esse hormônio final inibe tanto o hipotálamo quanto a hipófise, fechando o circuito. É por isso que o uso prolongado de corticoide suprime a produção própria — o cortisol de fora inibe o eixo, e a suspensão abrupta deixa o organismo sem hormônio até o eixo se recuperar, o que obriga à retirada gradual. O feedback positivo é raro e sempre pontual, amplificando o processo até um desfecho: é o caso da ocitocina no parto, em que a distensão do colo uterino estimula a liberação do hormônio, que aumenta as contrações, que distendem mais o colo, num ciclo que só termina com o nascimento."
       },
       {
         "title": "Hormônios sexuais",
-        "content": "Testosterona, estrogênio e progesterona controlam caracteres sexuais secundários e o ciclo reprodutivo, sob comando de FSH e LH hipofisários. O ciclo menstrual integra as fases folicular, ovulatória e lútea, com picos hormonais definidos, e é o exemplo mais completo de regulação por feedback estudado no ensino médio."
+        "content": "Os hormônios sexuais são esteroides derivados do colesterol e estão sob comando das gonadotrofinas hipofisárias, FSH e LH. No homem, o FSH estimula a espermatogênese nos túbulos seminíferos e o LH estimula as células intersticiais a produzirem testosterona, responsável pelos caracteres sexuais secundários e pela manutenção da espermatogênese. Na mulher, o ciclo menstrual de cerca de 28 dias tem duas fases separadas pela ovulação, por volta do 14º dia. Na fase folicular, o FSH faz amadurecer o folículo, que produz estrógeno; o estrógeno espessa o endométrio e, em concentração alta, dispara por feedback positivo o pico de LH, que provoca a ovulação. Na fase lútea, o folículo rompido vira corpo lúteo e produz progesterona, que mantém o endométrio preparado. Não havendo fecundação, o corpo lúteo regride, estrógeno e progesterona caem e o endométrio descama — a menstruação. Havendo fecundação, o embrião produz HCG, que mantém o corpo lúteo e a progesterona; é esse HCG que os testes de gravidez detectam."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Chamar de feedback positivo o mecanismo que estabiliza níveis hormonais é troca de conceito: o que estabiliza é o negativo. Outro deslize é confundir adrenalina com cortisol quanto à velocidade de ação. E supor que hormônios sexuais existem exclusivamente em um dos sexos, quando ambos os produzem em proporções diferentes."
+        "content": "Dizer que a adrenalina e o cortisol fazem a mesma coisa é achatar a distinção que a prova cobra: a adrenalina é a resposta em segundos e a de curta duração, o cortisol é a resposta sustentada, de horas a dias. O segundo erro é chamar o feedback negativo de mecanismo que desliga o sistema — ele o estabiliza em torno de um valor, oscilando. O terceiro é dizer que a pílula anticoncepcional impede a fecundação diretamente: ela fornece hormônios que, por feedback negativo, inibem FSH e LH e impedem a ovulação. O quarto é confundir o pico de LH, que causa a ovulação, com a progesterona, que só sobe depois dela. O quinto é dizer que a menstruação é a eliminação do óvulo — é a descamação do endométrio, e o óvulo não fecundado se desfaz muito antes. O sexto é afirmar que a interrupção abrupta do corticoide é inofensiva. E cuidado com a ordem no ciclo: estrógeno predomina antes da ovulação, progesterona depois; inverter isso derruba a questão inteira."
       },
       {
         "title": "Pratique e confira",
-        "content": "Por que interromper de repente um corticoide usado por muito tempo é perigoso? Responda antes de conferir: o feedback negativo suprimiu a produção natural de cortisol, e a suspensão brusca deixa o organismo sem o hormônio até a recuperação do eixo. Agora diferencie adrenalina e cortisol: a primeira age em segundos, o segundo sustenta a resposta prolongada."
+        "content": "Por que a pílula anticoncepcional impede a gravidez, se ela contém justamente hormônios femininos? Responda antes de conferir. Porque ela fornece estrógeno e progestágeno em nível constante, e esse nível externo age por feedback negativo sobre o hipotálamo e a hipófise, suprimindo a liberação de FSH e LH. Sem FSH não há maturação folicular adequada, e sem o pico de LH não há ovulação — não havendo óvulo liberado, não há o que fecundar. Somam-se efeitos secundários, como o espessamento do muco cervical, que dificulta a passagem dos espermatozoides. Agora um segundo, integrador: explique por que uma pessoa que usou corticoide em dose alta por meses não pode simplesmente parar o remédio de um dia para o outro. A resposta usa o eixo hipotálamo-hipófise-adrenal: o cortisol do medicamento inibiu cronicamente a liberação de CRH e ACTH, e o córtex adrenal, sem estímulo, atrofiou; suspender de repente deixa o organismo sem cortisol de nenhuma fonte, com risco de insuficiência adrenal aguda — daí a retirada gradual, que dá tempo ao eixo de retomar a produção própria."
       }
     ],
     "recall": {
@@ -1273,7 +1277,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Biologia",
@@ -1281,23 +1286,23 @@
     "sections": [
       {
         "title": "Divisões do sistema nervoso",
-        "content": "O sistema nervoso central é formado por encéfalo e medula espinhal; o periférico, por nervos e gânglios. O periférico se divide em somático, que controla a musculatura esquelética voluntariamente, e autônomo, involuntário, subdividido em simpático e parassimpático, que atuam de forma antagônica sobre os mesmos órgãos."
+        "content": "O sistema nervoso se divide em central e periférico. O central reúne encéfalo e medula espinhal, protegidos por ossos — crânio e coluna vertebral —, por três meninges (dura-máter, aracnoide e pia-máter) e pelo líquido cefalorraquidiano, que amortece e nutre. O periférico reúne nervos e gânglios e se subdivide em somático, que controla a musculatura esquelética de forma voluntária, e autônomo ou visceral, que controla músculo liso, músculo cardíaco e glândulas de forma involuntária. O autônomo, por sua vez, tem duas divisões antagônicas e complementares. O simpático prepara para gasto de energia: acelera o coração, dilata brônquios e pupilas, inibe a digestão e mobiliza glicose — é a resposta de luta ou fuga, com neurotransmissor noradrenalina. O parassimpático favorece o repouso e a digestão: desacelera o coração, contrai as pupilas, estimula o peristaltismo e as secreções digestivas, com neurotransmissor acetilcolina. Note que não são \"ligado\" e \"desligado\": os dois atuam continuamente, e o que muda é o predomínio."
       },
       {
         "title": "Encéfalo e medula",
-        "content": "O cérebro comanda funções conscientes, memória e linguagem; o cerebelo coordena equilíbrio e movimentos finos; o bulbo controla funções vitais como respiração e batimentos; o hipotálamo regula temperatura, fome e sede e faz a ponte com o sistema endócrino. A medula conduz impulsos e coordena os atos reflexos."
+        "content": "O encéfalo tem três regiões principais, e cada uma responde por funções que a banca cobra nominalmente. O cérebro, dividido em dois hemisférios com córtex de substância cinzenta muito dobrado, é a sede das funções superiores: sensações conscientes, movimentos voluntários, memória, linguagem, raciocínio e emoção. O cerebelo coordena os movimentos, mantém o equilíbrio e o tônus muscular, e é ele que torna automático um gesto aprendido — lesões produzem falta de coordenação, não paralisia. O tronco encefálico, que reúne bulbo, ponte e mesencéfalo, controla funções vitais involuntárias: o bulbo abriga os centros respiratório, cardíaco e vasomotor, o que explica a gravidade de qualquer lesão nessa região. O hipotálamo, no diencéfalo, é a ponte entre o nervoso e o endócrino, regulando temperatura, fome, sede, sono e o eixo hipofisário. A medula espinhal conduz impulsos entre corpo e encéfalo e coordena os reflexos; nela a substância cinzenta é interna e em forma de H, e a branca externa — arranjo invertido em relação ao cérebro, detalhe frequentemente pedido."
       },
       {
         "title": "Arco reflexo",
-        "content": "No arco reflexo, o estímulo é captado por um receptor, o neurônio sensitivo leva a informação à medula, onde há sinapse direta ou por interneurônio com o neurônio motor, que aciona o efetor. A resposta ocorre antes de o cérebro processar conscientemente a informação, o que explica a rapidez do movimento de retirada."
+        "content": "O arco reflexo é a via mais curta de resposta a um estímulo e o exemplo clássico de integração medular sem participação do encéfalo. O percurso tem cinco elementos, e a ordem precisa ser dita corretamente: receptor sensorial na pele ou no músculo; neurônio sensitivo, ou aferente, que conduz o impulso pela raiz dorsal até a medula; centro integrador na substância cinzenta medular, muitas vezes com um interneurônio; neurônio motor, ou eferente, que sai pela raiz ventral; e efetor, o músculo ou a glândula que responde. A vantagem é a velocidade: como a resposta é decidida na medula, a retirada da mão de uma superfície quente ocorre antes de o encéfalo processar a dor — a pessoa percebe que se queimou depois de já ter tirado a mão, porque a informação segue em paralelo para o córtex. O reflexo patelar é o exemplo monossináptico, sem interneurônio. Já um ato voluntário exige que o impulso suba até o córtex motor e desça, o que é mais lento porém deliberado e modulável."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Dizer que o cérebro comanda o reflexo de retirada é erro: a resposta é medular, e o cérebro só toma conhecimento depois. Outro deslize é atribuir ao simpático funções do parassimpático, trocando 'lutar ou fugir' por 'repouso e digestão'. E confundir cerebelo com cérebro nas funções de equilíbrio."
+        "content": "Dizer que o cerebelo comanda o movimento é impreciso: quem comanda é o córtex motor do cérebro, e o cerebelo coordena, ajusta e mantém o equilíbrio. O segundo erro é achar que simpático e parassimpático se alternam como interruptores, quando atuam simultaneamente com predomínio variável. O terceiro é dizer que o reflexo passa pelo encéfalo — o arco reflexo se fecha na medula, e é justamente isso que o torna rápido. O quarto é inverter a substância cinzenta e a branca na medula: na medula a cinzenta é central, no cérebro é periférica. O quinto é trocar as raízes: a dorsal é sensitiva, a ventral é motora. O sexto é confundir nervo com neurônio — nervo é um feixe de axônios envolto em tecido conjuntivo, neurônio é a célula. E cuidado com o hipotálamo: ele é estrutura nervosa que comanda o sistema endócrino, e chamá-lo de glândula, ou situá-lo fora do encéfalo, invalida a resposta."
       },
       {
         "title": "Pratique e confira",
-        "content": "Ao tocar algo muito quente, por que a mão se afasta antes de você sentir dor? Responda antes de conferir: o arco reflexo é processado na medula, com resposta motora imediata, enquanto a sensação consciente exige que o sinal suba até o cérebro. Agora diga o que o simpático faz com a frequência cardíaca e com a digestão: acelera o coração e reduz a atividade digestiva."
+        "content": "Por que você tira a mão de uma panela quente antes de sentir a dor? Responda antes de conferir. Porque a retirada é um arco reflexo cujo centro integrador está na medula espinhal: o impulso do receptor térmico sobe pelo neurônio sensitivo até a medula, passa por um interneurônio e desce imediatamente pelo neurônio motor até o músculo flexor, num percurso curto que leva milésimos de segundo. Ao mesmo tempo, e em paralelo, a informação segue pelas vias ascendentes até o córtex somatossensorial, onde se torna a sensação consciente de dor — trajeto mais longo e, portanto, mais lento. A ordem que você percebe é a ordem em que os dois circuitos terminam. Agora um segundo: explique por que uma lesão no bulbo é muito mais grave que uma lesão de área equivalente no córtex cerebral. A resposta é a concentração de funções vitais: o bulbo abriga os centros respiratório, cardíaco e vasomotor num volume pequeno, de modo que a lesão compromete de imediato a respiração e o batimento cardíaco, enquanto o córtex tem funções mais distribuídas e alguma plasticidade de reorganização."
       }
     ],
     "recall": {
@@ -1328,7 +1333,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Biologia",
@@ -1336,23 +1342,23 @@
     "sections": [
       {
         "title": "Circulação humana",
-        "content": "O coração humano tem quatro cavidades e a circulação é dupla e completa: dupla porque o sangue passa duas vezes pelo coração a cada volta, e completa porque não há mistura entre sangue arterial e venoso. A pequena circulação leva sangue do ventrículo direito aos pulmões; a grande leva do ventrículo esquerdo ao corpo."
+        "content": "A circulação humana é fechada, dupla e completa, e os três adjetivos precisam ser justificados. Fechada porque o sangue permanece sempre dentro de vasos, nunca banhando diretamente os tecidos. Dupla porque o sangue passa duas vezes pelo coração a cada volta completa, em dois circuitos: a pequena circulação, ou pulmonar, leva sangue venoso do ventrículo direito pela artéria pulmonar até os pulmões e traz sangue arterial de volta pelas veias pulmonares ao átrio esquerdo; a grande circulação, ou sistêmica, leva sangue arterial do ventrículo esquerdo pela aorta a todo o corpo e traz sangue venoso de volta pelas veias cavas ao átrio direito. Completa porque não há mistura entre sangue arterial e venoso, graças ao septo interventricular íntegro — em anfíbios e na maioria dos répteis, o coração tem três cavidades e a circulação é incompleta. Vale fixar a definição correta: artéria é o vaso que sai do coração e veia o que chega a ele, independentemente do tipo de sangue que carregam."
       },
       {
         "title": "Vasos e pressão",
-        "content": "Artérias levam sangue do coração aos tecidos e têm paredes espessas e elásticas para suportar a pressão; veias trazem o sangue de volta, com paredes finas e válvulas que impedem o refluxo; capilares, de parede unicelular, são o local das trocas. A pressão cai progressivamente do sistema arterial ao venoso."
+        "content": "As paredes dos vasos correspondem à função. As artérias têm parede espessa, com muita fibra elástica e músculo liso, para suportar a pressão alta e pulsátil ejetada pelo ventrículo; a elasticidade amortece o pico sistólico e mantém o fluxo durante a diástole. As veias têm parede mais fina, calibre maior e pressão baixa, e por isso contam com dois auxílios ao retorno venoso: válvulas semilunares em seu interior, que impedem o refluxo, e a compressão pela musculatura esquelética durante o movimento — é por isso que ficar muito tempo parado em pé favorece o edema e as varizes, e por que a panturrilha é chamada de coração periférico. Os capilares têm parede de uma única camada de células endoteliais, o que permite as trocas por difusão entre sangue e tecido; sua enorme área total faz a velocidade do sangue cair ao mínimo justamente ali, o que dá tempo para as trocas — a velocidade é inversamente proporcional à área de secção transversal total, relação que costuma aparecer em gráfico."
       },
       {
         "title": "Ciclo cardíaco e controle",
-        "content": "A sístole é a contração e a diástole o relaxamento. O nó sinoatrial gera o impulso que se propaga pelo sistema de condução, e por isso o coração é miogênico: o batimento nasce nele mesmo. O sistema nervoso autônomo apenas modula a frequência, acelerando pelo simpático e desacelerando pelo parassimpático."
+        "content": "O ciclo cardíaco alterna sístole e diástole. Na sístole atrial, os átrios contraem e completam o enchimento ventricular; na sístole ventricular, os ventrículos contraem, as valvas atrioventriculares — tricúspide à direita, bicúspide ou mitral à esquerda — se fecham produzindo a primeira bulha, e o sangue é ejetado pelas valvas semilunares aórtica e pulmonar; na diástole, os ventrículos relaxam, as semilunares se fecham gerando a segunda bulha, e o enchimento recomeça. O ventrículo esquerdo tem parede muito mais espessa que o direito porque precisa vencer a resistência de todo o corpo, e não apenas a do circuito pulmonar. O batimento é miogênico: origina-se no próprio coração, no nó sinoatrial, o marca-passo natural, de onde o estímulo segue ao nó atrioventricular e ao feixe de His. O sistema nervoso autônomo apenas modula essa frequência — o simpático a acelera, o parassimpático, pelo nervo vago, a desacelera —, mas não a inicia, e é por isso que um coração isolado continua batendo."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Dizer que artéria sempre leva sangue oxigenado é erro: a artéria pulmonar leva sangue venoso. Outro deslize é definir artéria e veia pelo teor de oxigênio, quando a definição correta é o sentido em relação ao coração. E supor que o coração precisa de comando nervoso para bater."
+        "content": "Dizer que artéria é o vaso que leva sangue arterial é o erro mais recorrente: a artéria pulmonar leva sangue venoso, e as veias pulmonares levam sangue arterial. O segundo é afirmar que o lado esquerdo do coração é mais forte por ser mais importante, quando a espessura decorre da resistência que ele precisa vencer. O terceiro é dizer que o coração bate porque o cérebro manda: o batimento é miogênico e o sistema nervoso apenas ajusta a frequência. O quarto é situar as trocas gasosas nas artérias ou veias, quando ocorrem exclusivamente nos capilares. O quinto é confundir circulação dupla com circulação incompleta — o ser humano tem dupla e completa; o anfíbio tem dupla e incompleta. O sexto é dizer que o sangue corre mais rápido nos capilares por serem estreitos, quando ocorre o contrário: a área total somada é imensa e a velocidade cai. E cuidado com as válvulas: as valvas cardíacas separam câmaras e saídas, as válvulas venosas ficam dentro das veias e impedem refluxo — não são a mesma estrutura."
       },
       {
         "title": "Pratique e confira",
-        "content": "Por que a artéria pulmonar contraria a ideia de que artérias levam sangue oxigenado? Responda antes de conferir: ela sai do ventrículo direito levando sangue pobre em oxigênio aos pulmões, mostrando que a definição de artéria é sair do coração. Agora explique por que as veias das pernas têm válvulas: para impedir o refluxo do sangue que sobe contra a gravidade."
+        "content": "Por que a artéria pulmonar, apesar do nome, carrega sangue pobre em oxigênio? Responda antes de conferir. Porque a classificação do vaso é anatômica e funcional quanto ao sentido do fluxo, não quanto ao conteúdo: artéria é todo vaso que sai do coração, e veia todo vaso que chega a ele. A artéria pulmonar sai do ventrículo direito levando sangue venoso justamente para ser oxigenado nos pulmões, e as veias pulmonares trazem de volta ao átrio esquerdo o sangue já oxigenado. É o único par de vasos em que conteúdo e nome parecem contraditórios, e é por isso que ele é tão cobrado. Agora um segundo, com gráfico: por que a velocidade do sangue é mínima nos capilares e volta a subir nas veias? A resposta é a relação inversa entre velocidade e área de secção transversal total: um capilar é estreitíssimo, mas há bilhões deles em paralelo, e a soma das secções é muito maior que a da aorta — o mesmo volume por unidade de tempo passa mais devagar, o que garante tempo para as trocas; ao convergirem em vênulas e veias, a área total diminui e a velocidade torna a aumentar."
       }
     ],
     "recall": {
@@ -1383,7 +1389,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Biologia",
@@ -1391,23 +1398,23 @@
     "sections": [
       {
         "title": "Anfíbios",
-        "content": "Anfíbios dependem de água para a reprodução, com ovos sem casca e desenvolvimento indireto, incluindo fase larval aquática. A pele é úmida e participa da respiração cutânea, o que os torna especialmente sensíveis à poluição e à desidratação — por isso são considerados bons bioindicadores da qualidade ambiental."
+        "content": "Os anfíbios são os tetrápodes que ainda não se libertaram da água, e cada característica do grupo remete a essa dependência. A pele é fina, úmida, glandular e altamente vascularizada, o que permite a respiração cutânea — em muitas espécies ela responde por parcela maior das trocas gasosas que os pulmões, que são simples e pouco compartimentados. A mesma permeabilidade que viabiliza a respiração cutânea impede a vida em ambientes secos e torna os anfíbios bioindicadores sensíveis à poluição e à radiação ultravioleta, o que explica seu declínio global. São pecilotérmicos, com temperatura corporal dependente do ambiente. A fecundação é geralmente externa e os ovos, sem casca e com pouco vitelo, precisam de água; o desenvolvimento é indireto, com metamorfose — o girino é aquático, herbívoro, respira por brânquias e tem cauda; o adulto é pulmonado e carnívoro. A circulação é dupla e incompleta, com coração de três cavidades, e a excreção do adulto é de ureia, menos tóxica que a amônia excretada pelo girino aquático."
       },
       {
         "title": "Répteis e aves",
-        "content": "Répteis conquistaram o ambiente terrestre com o ovo amniótico, pele queratinizada impermeável e excreção de ácido úrico, que economiza água. Aves compartilham essas características e acrescentam endotermia, penas, ossos pneumáticos e sacos aéreos, que tornam a respiração muito eficiente para o voo. Filogeneticamente, as aves são répteis."
+        "content": "Répteis e aves formam, na filogenia atual, um único grupo: as aves descendem de dinossauros terópodes e estão dentro de Reptilia, de modo que \"répteis\" no sentido tradicional é grupo parafilético. As adaptações que libertaram esse conjunto da água são três e devem ser citadas juntas. A pele é seca e queratinizada, com escamas, o que reduz drasticamente a perda de água mas impede a respiração cutânea — a respiração é exclusivamente pulmonar, com pulmões bem mais compartimentados. A fecundação é interna, condição necessária num ovo que será revestido. E o ovo é amniótico, com casca e quatro anexos embrionários, permitindo o desenvolvimento fora d'água. Répteis excretam ácido úrico, insolúvel e pastoso, o que economiza água. As aves acrescentam a endotermia, penas derivadas de escamas, ossos pneumáticos, sacos aéreos que fazem a ventilação ser unidirecional e muito eficiente, ausência de dentes e bexiga urinária — reduções ligadas à economia de peso para o voo — e coração com quatro cavidades e circulação completa."
       },
       {
         "title": "Mamíferos",
-        "content": "Mamíferos têm glândulas mamárias, pelos, diafragma, endotermia e, na maioria, placenta. Dividem-se em monotremados, que põem ovos; marsupiais, com desenvolvimento em bolsa; e placentários. O coração com quatro cavidades, presente também nas aves, separa completamente o sangue arterial do venoso e sustenta o alto metabolismo."
+        "content": "Os mamíferos se definem por dois caracteres exclusivos: glândulas mamárias, que produzem leite, e pelos. Somam-se a endotermia, o diafragma muscular separando as cavidades torácica e abdominal e responsável pela ventilação, as hemácias anucleadas, o coração de quatro cavidades e a heterodontia — dentes diferenciados em incisivos, caninos, pré-molares e molares, cuja proporção reflete a dieta e permite identificar o hábito alimentar a partir do crânio. Os três grupos aparecem em prova pela reprodução. Os monotremados, como o ornitorrinco e a equidna, são ovíparos e mantêm cloaca, mas amamentam. Os marsupiais, como o canguru e o gambá, têm placenta rudimentar e gestação muito curta, com o filhote completando o desenvolvimento no marsúpio, preso à mama. Os placentários têm placenta desenvolvida, com trocas prolongadas entre mãe e feto, e gestação longa. A excreção mamífera é de ureia, e o rim com alça de Henle permite concentrar a urina — quanto mais longa a alça, maior a economia de água, o que se observa em roedores de deserto."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Dizer que répteis são animais de sangue frio no sentido de terem sangue gelado é impreciso: eles são ectotérmicos, dependendo do ambiente para regular a temperatura. Outro erro é excluir aves do grupo dos répteis na classificação filogenética. E atribuir placenta a todos os mamíferos, esquecendo monotremados e marsupiais."
+        "content": "Dizer que anfíbio é o animal que vive na água e na terra e parar aí perde o ponto: o que se cobra é a dependência da água para a reprodução e para a respiração cutânea. O segundo erro é afirmar que ave não é réptil — na sistemática filogenética ela está dentro do grupo. O terceiro é dizer que o ovo com casca é impermeável: ele é poroso e permite trocas gasosas; o que ele impede é a perda excessiva de água. O quarto é atribuir a excreção de ácido úrico aos mamíferos, quando é de répteis e aves; mamífero excreta ureia. O quinto é dizer que marsupial não tem placenta — tem, rudimentar e de curta duração. O sexto é afirmar que o ornitorrinco não é mamífero por botar ovos: ele tem pelos e glândulas mamárias, que são os critérios. E há um erro fino: dizer que a endotermia é exclusividade de aves e mamíferos como se fosse herança comum — os dois grupos a desenvolveram independentemente, em convergência adaptativa."
       },
       {
         "title": "Pratique e confira",
-        "content": "Que novidade evolutiva permitiu aos répteis a independência da água? Responda antes de conferir: o ovo amniótico, com casca e anexos embrionários que protegem contra a dessecação, somado à pele impermeável e à excreção de ácido úrico. Agora diga por que anfíbios são bioindicadores: a pele permeável os expõe diretamente a poluentes e à desidratação."
+        "content": "Por que os anfíbios não conquistaram plenamente o ambiente terrestre, se já possuem pulmões e quatro patas? Responda antes de conferir. Porque duas dependências permaneceram. A pele fina e permeável, necessária à respiração cutânea que complementa pulmões pouco eficientes, não impede a perda de água por evaporação, o que restringe o animal a ambientes úmidos. E a reprodução exige água: a fecundação é externa e o ovo, sem casca e com pouco vitelo, desidrataria fora dela, além de o girino ser aquático. Foi o conjunto ovo amniótico, fecundação interna e pele queratinizada que libertou o grupo dos répteis. Agora um segundo: explique como os sacos aéreos tornam a respiração das aves mais eficiente que a dos mamíferos. A resposta é o fluxo unidirecional: nos mamíferos o ar entra e sai pelo mesmo caminho e sempre resta ar residual, misturando ar novo com usado; nas aves, os sacos aéreos funcionam como foles que empurram ar fresco pelos parabrônquios tanto na inspiração quanto na expiração, de modo que o pulmão recebe ar oxigenado continuamente — vantagem decisiva no voo e em grandes altitudes."
       }
     ],
     "recall": {
@@ -1438,7 +1445,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Biologia",
@@ -1446,23 +1454,23 @@
     "sections": [
       {
         "title": "Fatores que alteram a densidade",
-        "content": "A densidade populacional aumenta por natalidade e imigração e diminui por mortalidade e emigração. O potencial biótico é a capacidade máxima teórica de crescimento; a resistência do meio reúne os fatores que o limitam, como alimento, espaço, predadores e doenças. O equilíbrio entre eles determina o tamanho real da população."
+        "content": "População é o conjunto de indivíduos da mesma espécie que ocupa uma área num dado momento, e sua densidade é o número de indivíduos por unidade de área ou volume. Quatro fatores alteram essa densidade, e a banca pede a equação conceitual: a densidade cresce por natalidade e imigração e diminui por mortalidade e emigração. Quando natalidade mais imigração superam mortalidade mais emigração, a população cresce; quando se igualam, ela se estabiliza. Duas medidas costumam aparecer juntas: o potencial biótico é a capacidade máxima teórica de reprodução da espécie em condições ideais, sem qualquer limitação; a resistência do meio é o conjunto de fatores que impedem esse máximo — falta de alimento, espaço, água, predação, parasitismo, competição e doenças. A capacidade de suporte, ou capacidade limite, simbolizada por K, é o tamanho populacional máximo que o ambiente sustenta de forma duradoura, e é o resultado do encontro entre potencial biótico e resistência do meio. Distribuição espacial e estrutura etária completam a caracterização."
       },
       {
         "title": "Curvas de crescimento",
-        "content": "A curva em J descreve crescimento exponencial, possível apenas quando os recursos são ilimitados, situação temporária. A curva em S, ou logística, mostra crescimento inicial rápido que desacelera até estabilizar na capacidade de suporte do ambiente. Reconhecer qual curva o gráfico apresenta é a leitura mais cobrada do tópico."
+        "content": "Duas curvas de crescimento resumem os padrões. A curva em J, ou exponencial, descreve crescimento sem limitação: a população cresce cada vez mais rápido, porque a taxa se aplica a um número sempre maior de indivíduos. Ela é típica de espécies que colonizam um ambiente novo ou de populações liberadas de sua resistência do meio, e não se sustenta: termina em colapso abrupto quando um recurso se esgota. A curva em S, ou sigmoide, ou logística, é a realista: começa lenta na fase de adaptação, acelera na fase exponencial, desacelera quando a resistência do meio se faz sentir e estabiliza oscilando em torno da capacidade de suporte K. Interpretar o gráfico é o que a prova cobra: o ponto de inflexão, onde a curvatura muda, é o momento de maior taxa de crescimento absoluto; a partir dele a população continua crescendo, porém cada vez mais devagar. Dizer que a população para de crescer no ponto de inflexão é o erro mais frequente de leitura. Após K, a curva oscila levemente acima e abaixo, e não se torna uma reta perfeita."
       },
       {
         "title": "Densidade-dependência",
-        "content": "Fatores densidade-dependentes intensificam seu efeito quando a população cresce, como competição, predação e disseminação de doenças. Fatores densidade-independentes, como secas e incêndios, atuam com a mesma intensidade qualquer que seja o número de indivíduos. Distinguir os dois explica por que algumas populações oscilam regularmente e outras não."
+        "content": "Os fatores que regulam a população dividem-se por sua relação com a densidade. Os densidade-dependentes intensificam-se conforme a população cresce e são o mecanismo da regulação: competição intraespecífica por alimento, água, espaço e parceiros; predação, que se torna mais eficiente quando a presa é abundante; e transmissão de doenças e parasitas, facilitada pela aglomeração. Eles funcionam como feedback negativo, empurrando a população de volta em direção a K. Os densidade-independentes atuam com a mesma intensidade qualquer que seja o tamanho da população: secas, geadas, incêndios, furacões e a aplicação de um agrotóxico. As estratégias reprodutivas também se opõem: espécies r-estrategistas produzem muitos descendentes pequenos, com pouco ou nenhum cuidado parental, maturação rápida e alta mortalidade juvenil — insetos e muitos peixes; espécies K-estrategistas produzem poucos descendentes, com longo cuidado parental e maturação lenta, e vivem perto de K — elefantes, primatas, aves de grande porte. As primeiras se recuperam rápido de catástrofes; as segundas são muito mais vulneráveis à extinção."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Dizer que a capacidade de suporte é fixa ignora que ela muda com as condições ambientais. Outro erro é tratar a curva em J como situação normal e duradoura. E confundir crescimento populacional com aumento de natalidade: a população pode crescer com natalidade estável se a mortalidade cair."
+        "content": "Dizer que a curva em J é o crescimento normal das populações é o erro de partida: ela é transitória e insustentável, e o padrão real é o sigmoide. O segundo é ler o ponto de inflexão como o fim do crescimento, quando é o momento de crescimento mais rápido. O terceiro é confundir capacidade de suporte com potencial biótico: um é o teto imposto pelo ambiente, o outro é o máximo teórico da espécie. O quarto é classificar a seca como fator densidade-dependente — ela atinge a população com a mesma intensidade seja ela grande ou pequena. O quinto é dizer que a competição intraespecífica é menos importante que a interespecífica: a intraespecífica é mais intensa, porque os indivíduos disputam exatamente os mesmos recursos. O sexto é imaginar que uma população em K está parada; ela oscila. E cuidado com o vocabulário: densidade é indivíduos por área, e não o número total — uma população grande espalhada pode ter densidade menor que uma pequena e concentrada."
       },
       {
         "title": "Pratique e confira",
-        "content": "Uma população de insetos cresce rapidamente e depois estabiliza. Identifique a curva e explique antes de conferir: é a curva em S, e a estabilização ocorre porque a resistência do meio aumenta até igualar o potencial biótico, na capacidade de suporte. Agora classifique uma seca prolongada: fator densidade-independente, porque afeta igualmente populações grandes e pequenas."
+        "content": "Numa curva sigmoide, o que exatamente acontece no ponto de inflexão, e por que a população continua crescendo depois dele? Responda antes de conferir. O ponto de inflexão é onde a taxa de crescimento absoluto é máxima: até ali o crescimento vinha acelerando, e a partir dali começa a desacelerar, porque a resistência do meio passa a se fazer sentir com força crescente. Mas desacelerar não é parar — o número de indivíduos continua aumentando, apenas em ritmo cada vez menor, até se aproximar assintoticamente da capacidade de suporte. Agora um segundo, aplicado: uma espécie de inseto-praga e uma população de onças são atingidas por um incêndio que elimina 80% de cada uma. Qual se recupera mais rápido e por quê? A resposta usa as estratégias reprodutivas: o inseto é r-estrategista, com ciclo de vida curto, maturação rápida e enorme número de descendentes por geração, e retoma o tamanho anterior em poucas gerações; a onça é K-estrategista, com gestação longa, um ou dois filhotes por ninhada e maturação de anos, de modo que a recuperação leva décadas — e pode não ocorrer, se a população cair abaixo do mínimo viável."
       }
     ],
     "recall": {
@@ -1493,7 +1501,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Biologia",
@@ -1501,23 +1510,23 @@
     "sections": [
       {
         "title": "Continuidade da informação",
-        "content": "Divisão celular distribui material genético e citoplasma entre células-filhas. A mitose conserva, em condições usuais, o número cromossômico e produz células geneticamente semelhantes; a meiose reduz esse número e gera gametas. Antes da divisão, o DNA é duplicado, portanto cromátides-irmãs não são cromossomos homólogos."
+        "content": "A divisão celular resolve dois problemas distintos, e confundi-los é a origem de quase todo erro no tema. O primeiro é a continuidade: uma célula precisa transmitir à filha uma cópia fiel de todo o seu material genético, e isso exige duplicação prévia seguida de repartição exata — é a mitose, que produz duas células idênticas à mãe e entre si, com o mesmo número de cromossomos. O segundo é a variabilidade e a redução: um organismo diploide precisa produzir gametas haploides, para que a fecundação restaure 2n sem duplicar o número a cada geração — é a meiose, que produz quatro células com metade dos cromossomos e geneticamente distintas. Vale fixar a duplicação: ela ocorre uma única vez, na fase S da interfase, antes de qualquer uma das duas divisões. Na mitose seguem-se uma duplicação e uma divisão; na meiose, uma duplicação e duas divisões — e é exatamente essa assimetria que produz a redução do número cromossômico, e não uma segunda meia-duplicação."
       },
       {
         "title": "Mitose e ciclo celular",
-        "content": "Na intérfase, a célula cresce e replica DNA na fase S. Na mitose, cromossomos condensam, alinham-se, cromátides se separam e núcleos se reorganizam. A citocinese divide o citoplasma. Esse processo permite crescimento, reposição de tecidos e reprodução assexuada, mas falhas de controle podem contribuir para proliferação celular desregulada."
+        "content": "O ciclo celular tem interfase e divisão. A interfase, longa e metabolicamente intensa, divide-se em G1, período de crescimento e síntese de proteínas; S, em que o DNA é duplicado e cada cromossomo passa a ter duas cromátides irmãs unidas pelo centrômero; e G2, de preparação final. Células que param de se dividir entram em G0. A mitose tem quatro fases. Na prófase, a cromatina se condensa em cromossomos visíveis, o nucléolo desaparece, a carioteca se desfaz e o fuso se organiza. Na metáfase, os cromossomos, no grau máximo de condensação, alinham-se na placa equatorial — é a fase usada para montar cariótipos, justamente pela condensação máxima. Na anáfase, os centrômeros se dividem e as cromátides irmãs migram para polos opostos, momento em que, transitoriamente, o número de cromossomos da célula dobra. Na telófase, a carioteca se refaz e os cromossomos se descondensam. A citocinese separa os citoplasmas: por estrangulamento centrípeto na célula animal, e por formação de uma placa celular do centro para a periferia, centrífuga, na vegetal."
       },
       {
         "title": "Meiose e variabilidade",
-        "content": "A meiose possui duas divisões após uma replicação. Na primeira, homólogos se separam; na segunda, cromátides-irmãs separam-se. Crossing-over entre homólogos e segregação independente criam combinações novas. O resultado típico é quatro células haploides, geneticamente distintas, fundamento da reprodução sexuada e da diversidade entre descendentes."
+        "content": "A meiose gera variabilidade por dois mecanismos independentes, e ambos precisam ser citados. O primeiro é a permutação, ou crossing-over, que ocorre na prófase I, no subestágio paquíteno, quando os cromossomos homólogos pareados em bivalentes trocam pedaços de cromátides — recombinando alelos que estavam no mesmo cromossomo e quebrando a ligação gênica. O segundo é a segregação independente dos homólogos na anáfase I: cada par se orienta ao acaso na placa, de modo que, para n pares, há 2^n combinações possíveis de gametas apenas por esse mecanismo — no ser humano, com 23 pares, mais de oito milhões, antes mesmo de contar a permutação. A redução ocorre na anáfase I, quando os homólogos se separam inteiros, com suas duas cromátides — por isso a meiose I é chamada de reducional. A meiose II é equacional e se parece com uma mitose: as cromátides irmãs é que se separam. Erros de separação, a não disjunção, geram gametas com cromossomos a mais ou a menos e originam aneuploidias como a síndrome de Down, trissomia do 21."
       },
       {
         "title": "Erros de prova",
-        "content": "Não diga que mitose reduz ploidia ou que meiose produz duas células idênticas. Duplicar DNA não duplica necessariamente o número de cromossomos contado por centrômeros. Não confunda cromátides-irmãs, cópias do mesmo cromossomo, com homólogos, que carregam genes correspondentes e podem ter alelos diferentes."
+        "content": "Dizer que na meiose o DNA se duplica duas vezes é o erro mais grave: a duplicação é única, e o que há são duas divisões. O segundo é afirmar que a mitose gera variabilidade — ela gera cópias idênticas, salvo mutação. O terceiro é situar o crossing-over na meiose II, quando ele ocorre na prófase I entre homólogos pareados; na meiose II não há homólogos para parear. O quarto é dizer que na anáfase I separam-se as cromátides irmãs, quando separam-se os homólogos inteiros. O quinto é confundir cromátides irmãs com cromossomos homólogos: irmãs são cópias idênticas ligadas pelo centrômero e vieram da duplicação; homólogos são um de origem paterna e outro materna, com os mesmos genes em alelos possivelmente diferentes. O sexto é dizer que a citocinese vegetal é por estrangulamento — a parede rígida impede, e a separação se faz por placa celular. E cuidado: durante a anáfase mitótica o número de cromossomos dobra momentaneamente, o que não significa que a célula ficou tetraploide."
       },
       {
         "title": "Pratique e confira",
-        "content": "Explique por que uma célula humana com 46 cromossomos, após replicar seu DNA, continua descrita como tendo 46 cromossomos. Relacione centrômero e cromátides. Em seguida, diga em qual divisão meiótica homólogos se separam e por que isso reduz a ploidia."
+        "content": "Um organismo tem 2n = 8. Quantos cromossomos e quantas cromátides existem numa célula sua no fim de G2, na metáfase da mitose e na metáfase II da meiose? Responda antes de conferir. No fim de G2 há 8 cromossomos, cada um com duas cromátides, logo 16 cromátides. Na metáfase mitótica a situação é a mesma, 8 cromossomos e 16 cromátides, porque o centrômero ainda não se dividiu. Na metáfase II há 4 cromossomos, cada um ainda com duas cromátides, logo 8 cromátides — a redução já ocorreu na anáfase I. O que muda a contagem de cromossomos é sempre a divisão do centrômero ou a separação dos homólogos, nunca a duplicação em si. Agora um segundo: explique por que dois irmãos, filhos do mesmo casal, podem ser geneticamente muito diferentes, e por que gêmeos univitelinos não são. A resposta reúne a segregação independente, com mais de oito milhões de combinações por gameta, a permutação, que multiplica isso, e a fecundação aleatória entre dois gametas quaisquer; gêmeos univitelinos vêm de um único zigoto que se dividiu por mitose, e são clones naturais."
       }
     ],
     "recall": {
@@ -1547,7 +1556,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Biologia",
@@ -1555,23 +1565,23 @@
     "sections": [
       {
         "title": "Da fecundação à gástrula",
-        "content": "Após a fecundação, o zigoto sofre clivagens sucessivas, formando a mórula, uma massa compacta de células, e depois a blástula, com cavidade interna. Na gastrulação surgem os folhetos embrionários e o arquêntero, futuro tubo digestório. É nessa etapa que se define o plano corporal básico do animal."
+        "content": "O desenvolvimento embrionário começa na fecundação, quando o espermatozoide e o óvulo se fundem e restauram a diploidia no zigoto. Segue-se a segmentação, ou clivagem: mitoses sucessivas e rápidas, sem crescimento entre elas, de modo que as células resultantes, os blastômeros, ficam progressivamente menores e o volume total do embrião quase não muda. Da segmentação resulta a mórula, maciça, com cerca de dezesseis células, e depois a blástula, esférica e oca, com uma cavidade central chamada blastocele. O tipo de segmentação depende da quantidade e da distribuição do vitelo: em ovos oligolécitos, com pouco vitelo e distribuído uniformemente, como o dos mamíferos placentários e do anfioxo, a segmentação é holoblástica e igual; em heterolécitos, como o dos anfíbios, é holoblástica desigual; em telolécitos, com muito vitelo concentrado, como o das aves e répteis, é meroblástica discoidal, atingindo só o disco germinativo. Na gastrulação, a blástula sofre invaginação, forma o arquêntero — intestino primitivo — e o blastóporo, e passa a ter dois e depois três folhetos."
       },
       {
         "title": "Folhetos embrionários",
-        "content": "A ectoderme origina epiderme e sistema nervoso; a mesoderme forma músculos, esqueleto, sistema circulatório, gônadas e rins; a endoderme dá origem ao revestimento do tubo digestório e a glândulas anexas, como fígado e pâncreas, além do epitélio respiratório. Saber essa correspondência resolve boa parte das questões do tópico."
+        "content": "Os três folhetos embrionários dão origem a todo o organismo, e a distribuição é cobrada diretamente. A ectoderme origina a epiderme e seus anexos — pelos, unhas, glândulas sudoríparas — e todo o sistema nervoso, incluindo encéfalo, medula e retina, além do esmalte dentário. A mesoderme origina músculos, ossos e cartilagens, o sistema circulatório com coração e vasos, o sangue, os rins, as gônadas e a derme. A endoderme origina o revestimento do tubo digestório e do sistema respiratório, além de fígado, pâncreas, tireoide e bexiga. O macete que resolve a maior parte das questões é o critério de contato: o que reveste o exterior e o que capta informação do exterior vem da ectoderme; o que reveste as cavidades internas comunicantes com o meio vem da endoderme; o que fica entre os dois vem da mesoderme. O destino do blastóporo separa dois grandes grupos: nos protostômios, como anelídeos, moluscos e artrópodes, ele origina a boca; nos deuterostômios, como equinodermos e cordados, origina o ânus, e a boca se forma depois, em nova abertura."
       },
       {
         "title": "Anexos embrionários",
-        "content": "Âmnio protege o embrião em meio líquido; cório faz trocas e, nos mamíferos, contribui para a placenta; saco vitelínico armazena reservas ou participa da formação de células sanguíneas; alantoide acumula excretas e auxilia trocas gasosas. Sua presença é o que permitiu a reprodução independente da água nos amniotas."
+        "content": "Os anexos embrionários são quatro estruturas que não formam o corpo do embrião mas garantem sua sobrevivência, e sua presença define os amniotas. O âmnio é uma membrana que envolve o embrião e delimita a cavidade amniótica, cheia de líquido: protege contra choques e dessecação e é a inovação que permitiu a reprodução fora d'água — o embrião passa a carregar o próprio ambiente aquático. O saco vitelínico armazena o vitelo, que nutre o embrião; é volumoso em aves e répteis e reduzido nos mamíferos placentários, cuja nutrição vem da mãe. O alantoide acumula excretas nitrogenadas, na forma de ácido úrico, insolúvel e inofensivo, dentro do ovo fechado; nos mamíferos participa da formação do cordão umbilical. O córion é a membrana mais externa, envolve tudo e faz trocas gasosas; nos mamíferos, associado à mucosa uterina, forma a placenta, órgão de trocas em que os sangues materno e fetal se aproximam sem se misturar, garantindo nutrição, oxigenação, remoção de excretas e produção hormonal."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Trocar a origem dos órgãos entre folhetos é o erro mais frequente, especialmente colocar o sistema nervoso na mesoderme, quando ele vem da ectoderme. Outro deslize é confundir mórula com blástula, distinguidas pela presença da cavidade. E supor que todos os animais têm três folhetos, quando cnidários são diblásticos."
+        "content": "Dizer que o embrião cresce durante a segmentação é o erro conceitual clássico: as divisões são rápidas e sem crescimento intermediário, e o volume total permanece praticamente o mesmo enquanto o número de células aumenta. O segundo é atribuir o sistema nervoso à mesoderme, quando ele é ectodérmico — o mesmo folheto da pele, o que faz sentido pela origem comum na captação de estímulos externos. O terceiro é dizer que a placenta permite mistura dos sangues materno e fetal: as trocas são por difusão através de membranas, e os sangues não se misturam. O quarto é achar que o âmnio nutre o embrião, quando quem nutre é o saco vitelínico ou a placenta. O quinto é confundir mórula com blástula: a mórula é maciça, a blástula é oca. O sexto é dizer que o blastóporo sempre vira boca. E cuidado com a lógica dos anexos: eles são chamados anexos justamente por não integrarem o corpo do embrião, ainda que sejam formados pelas mesmas células."
       },
       {
         "title": "Pratique e confira",
-        "content": "De qual folheto embrionário vêm o cérebro, o coração e o fígado? Responda antes de conferir: cérebro da ectoderme, coração da mesoderme e fígado da endoderme. Agora diga qual anexo permite acumular excretas no ovo dos répteis e aves: o alantoide."
+        "content": "Por que o âmnio é considerado a inovação decisiva para a conquista definitiva do ambiente terrestre? Responda antes de conferir. Porque ele delimita uma cavidade cheia de líquido amniótico em torno do embrião: o desenvolvimento passa a ocorrer num meio aquático próprio, transportado dentro do ovo ou do útero, o que elimina a dependência de um corpo d'água externo para a reprodução. Some-se a isso o alantoide, que confina as excretas na forma insolúvel de ácido úrico dentro do ovo fechado, e o córion, que permite as trocas gasosas através da casca porosa. É o conjunto que liberta répteis, aves e mamíferos da água, e é por isso que eles são reunidos como amniotas, em oposição a peixes e anfíbios. Agora um segundo: explique por que a segmentação do ovo de uma galinha é diferente da do ovo de um mamífero placentário. A resposta é a quantidade e a distribuição do vitelo: o ovo da galinha é telolécito, com enorme massa de vitelo que os sulcos de clivagem não conseguem atravessar, de modo que a divisão fica restrita ao disco germinativo; o do mamífero é oligolécito, porque a nutrição virá da placenta, e a clivagem atinge a célula inteira."
       }
     ],
     "recall": {
@@ -1600,7 +1610,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Biologia",
@@ -1608,23 +1619,23 @@
     "sections": [
       {
         "title": "Características exclusivas",
-        "content": "Equinodermos são marinhos e apresentam simetria radial pentarradiada no adulto, mas simetria bilateral na larva, o que revela seu parentesco com os cordados. Têm endoesqueleto calcário sob a epiderme e, exclusivamente, o sistema ambulacrário, ou hidrovascular, que movimenta os pés ambulacrais por pressão de água."
+        "content": "Equinodermos reúnem estrelas-do-mar, ouriços, pepinos-do-mar, lírios-do-mar e serpentes-do-mar, e o nome significa pele espinhosa. São exclusivamente marinhos — não há equinodermo de água doce nem terrestre, e essa exclusividade é um dado que a banca cobra. Três características os identificam. A primeira é o endoesqueleto calcário de origem mesodérmica, formado por placas ou ossículos sob a epiderme, muitas vezes com espinhos; ser endoesqueleto, e não exoesqueleto, é o que os aproxima dos cordados. A segunda é a simetria pentarradial no adulto, com o corpo organizado em cinco partes em torno de um eixo — mas a larva é de simetria bilateral, o que revela que a radial é secundária, derivada de um ancestral bilateral. A terceira é o sistema ambulacrário, ou aquífero, exclusivo do grupo. Somam-se a ausência de cabeça e de cérebro centralizado, com um anel nervoso em torno da boca, e a excreção e a respiração feitas por difusão, através de brânquias dérmicas e da própria parede dos pés."
       },
       {
         "title": "Sistema ambulacrário",
-        "content": "A água entra pela placa madrepórica, percorre canais e chega às ampolas, que ao se contrair estendem os pés ambulacrais. Esse sistema hidráulico serve para locomoção, fixação e captura de alimento, e é a característica mais cobrada do filo por não existir em nenhum outro grupo animal."
+        "content": "O sistema ambulacrário é uma rede de canais preenchidos por água do mar que funciona por pressão hidráulica. A água entra pelo madreporito, uma placa perfurada na face aboral, desce pelo canal pétreo até o canal circular em torno da boca e daí segue por cinco canais radiais, um por braço, dos quais partem centenas de pequenas ramificações terminadas nos pés ambulacrários. Cada pé tem uma ampola muscular na base: quando ela se contrai, empurra água para o pé, que se estende; a ventosa da ponta adere ao substrato; a contração do próprio pé então traciona o corpo. Coordenados, os pés produzem uma locomoção lenta porém firme, e a força somada é suficiente para a estrela-do-mar abrir as valvas de um mexilhão — ela faz isso mantendo tração constante até a musculatura adutora do molusco fadigar, e então everte o estômago para dentro da concha e digere a presa no local, um caso notável de digestão extracorpórea. O mesmo sistema participa das trocas gasosas e da captação de partículas alimentares."
       },
       {
         "title": "Diversidade e regeneração",
-        "content": "O filo inclui estrelas-do-mar, ouriços, pepinos-do-mar, ofiúros e lírios-do-mar. A capacidade de regeneração é notável: uma estrela pode reconstituir braços perdidos e, em alguns casos, um braço com parte do disco central regenera o animal inteiro. Ouriços têm papel ecológico importante no controle de algas em recifes."
+        "content": "A diversidade do grupo se organiza em cinco classes com hábitos distintos. Asteroides são as estrelas-do-mar, predadoras de moluscos. Equinoides são os ouriços e as bolachas-da-praia, com esqueleto rígido em carapaça e um aparelho mastigador de cinco dentes chamado lanterna de Aristóteles, usado para raspar algas — o ouriço é herbívoro e controla a expansão das algas sobre os recifes. Holoturoides são os pepinos-do-mar, de corpo alongado e esqueleto reduzido, detritívoros que revolvem o sedimento; alguns expelem parte das vísceras como defesa, e as regeneram. Ofiuroides são as serpentes-do-mar, de braços finos e móveis. Crinoides são os lírios-do-mar, os mais primitivos, filtradores e frequentemente fixos. A capacidade de regeneração é notável em todo o grupo: uma estrela reconstitui braços perdidos e, em algumas espécies, um braço com parte do disco central regenera o animal inteiro. Ecologicamente, o ouriço é peça-chave nos recifes, e a perda de seus predadores provoca superpopulação e erosão do coral."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Classificar equinodermos como invertebrados distantes dos vertebrados ignora que são deuterostômios, aparentados dos cordados. Outro erro é dizer que a simetria radial vale para todas as fases, quando a larva é bilateral. E confundir endoesqueleto calcário com exoesqueleto, já que ele fica sob a epiderme."
+        "content": "Dizer que o esqueleto do equinodermo é externo é o erro mais comum: os espinhos projetam-se para fora, mas as placas calcárias estão sob a epiderme, e o esqueleto é interno e mesodérmico. O segundo é afirmar que a simetria radial os aproxima dos cnidários — nos equinodermos ela é secundária, e a larva bilateral prova a ancestralidade bilateral. O terceiro é dizer que a estrela-do-mar engole o mexilhão: ela everte o estômago e digere a presa dentro da concha. O quarto é atribuir a locomoção a musculatura corporal, quando ela é hidráulica, movida pela água do sistema ambulacrário. O quinto é imaginar equinodermos de água doce, que não existem — a osmorregulação dependente da água do mar circulante o impede. O sexto é agrupá-los com os artrópodes por causa dos espinhos e da rigidez, quando a filogenia os coloca entre os deuterostômios, ao lado dos cordados. E cuidado com o madreporito: ele é a entrada de água do sistema ambulacrário, não um órgão excretor."
       },
       {
         "title": "Pratique e confira",
-        "content": "Por que a larva bilateral dos equinodermos é relevante para a classificação? Responda antes de conferir: ela indica ancestralidade comum com os cordados, e o desenvolvimento deuterostômio confirma esse parentesco. Agora explique como a estrela-do-mar se move: por pressão hidráulica no sistema ambulacrário, que estende e retrai os pés ambulacrais."
+        "content": "Por que os equinodermos, apesar da aparência tão distante da nossa, são considerados parentes próximos dos cordados? Responda antes de conferir. Por três evidências embriológicas e estruturais. Primeiro, são deuterostômios: o blastóporo origina o ânus, e a boca se forma em abertura posterior — o mesmo padrão dos cordados e oposto ao de anelídeos, moluscos e artrópodes. Segundo, o celoma é enterocélico, formado por evaginações do arquêntero, como nos cordados. Terceiro, o esqueleto é interno e de origem mesodérmica, e não uma cutícula externa. A simetria radial do adulto é secundária e não desfaz esse parentesco, como mostra a larva bilateral. Agora um segundo, ecológico: explique por que a redução da população de ouriços-do-mar num recife pode levar ao sufocamento dos corais. A resposta é o papel do ouriço como herbívoro: ele raspa continuamente as algas que crescem sobre o substrato; sem essa herbivoria, as macroalgas proliferam, cobrem o coral, bloqueiam a luz que as zooxantelas simbiontes precisam e competem por espaço, levando à morte da colônia."
       }
     ],
     "recall": {
@@ -1655,7 +1666,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Biologia",
@@ -1663,23 +1675,23 @@
     "sections": [
       {
         "title": "Por que uma espécie exótica se torna invasora",
-        "content": "Uma espécie introduzida fora de sua área natural pode encontrar ausência de predadores, parasitas e competidores que a controlavam na origem. Livre desses fatores, sua população cresce sem freio e desloca espécies nativas por competição ou predação, alterando a estrutura da comunidade e podendo levar a extinções locais."
+        "content": "Espécie exótica é a introduzida fora de sua área de distribuição natural, por ação humana intencional ou acidental. Nem toda exótica se torna invasora: a maioria não sobrevive ou permanece restrita. Torna-se invasora aquela que consegue se estabelecer, reproduzir e dispersar causando dano ambiental, econômico ou sanitário — e o que faz a diferença é a ausência dos controles que a limitavam em casa. No ambiente de origem, cada população é contida por predadores, parasitas, competidores e patógenos coevoluídos com ela; transplantada, ela chega sem essa comitiva, o que se chama hipótese da liberação de inimigos naturais. Somam-se características que aumentam a probabilidade de invasão: alta taxa reprodutiva, ciclo de vida curto, generalismo alimentar, ampla tolerância a variações ambientais e capacidade de dispersão eficiente — o perfil de um r-estrategista. Ambientes já perturbados, com nichos vagos e vegetação nativa fragmentada, são muito mais suscetíveis, e ilhas, com biota pouco diversa e espécies sem defesas contra novos predadores, são os casos mais dramáticos."
       },
       {
         "title": "Impactos e exemplos",
-        "content": "No Brasil, o caramujo-africano, o mexilhão-dourado e o capim-gordura são casos conhecidos, com prejuízos ecológicos e econômicos. Além de deslocar nativas, invasoras podem transmitir doenças, alterar ciclos de nutrientes e mudar o regime de fogo, como ocorre com gramíneas africanas no Cerrado, que aumentam a frequência de incêndios."
+        "content": "Os impactos operam por vários mecanismos, e a prova costuma pedir que se identifique qual está em jogo. A predação direta sobre espécies sem defesa evolutiva é a mais destrutiva em ilhas. A competição por recurso e espaço desloca nativas. A transmissão de patógenos novos dizima populações imunologicamente ingênuas. A hibridação com espécies próximas dilui o patrimônio genético nativo. E há a alteração do próprio ambiente físico. No Brasil, o caramujo-africano Achatina fulica, trazido para substituir o escargot, competiu com moluscos nativos e virou hospedeiro de vermes causadores de meningite eosinofílica. O mexilhão-dourado, vindo em água de lastro de navios, incrusta-se em tubulações e turbinas de hidrelétricas, com prejuízo econômico enorme. O capim-braquiária, introduzido como forrageira, domina o Cerrado e altera o regime de fogo. O javali destrói lavouras e vegetação nativa. Fora do país, o exemplo canônico é o coelho na Austrália, cujas dezenas de indivíduos soltos em 1859 chegaram a centenas de milhões, devastando a vegetação e a fauna nativa."
       },
       {
         "title": "Controle biológico",
-        "content": "O controle biológico usa inimigos naturais — predadores, parasitoides ou patógenos — para reduzir populações de pragas, diminuindo o uso de agrotóxicos. Ele exige estudo prévio rigoroso, porque o agente introduzido pode se tornar invasor: o sapo-cururu na Austrália, trazido para controlar besouros, virou praga de impacto maior que a original."
+        "content": "Controle biológico é o uso de um inimigo natural — predador, parasitoide, patógeno ou competidor — para reduzir a população de uma praga, em alternativa ao agrotóxico. As vantagens são a especificidade, que poupa espécies não-alvo, a ausência de resíduo químico no alimento e na água, e a não seleção de resistência do modo como ocorre com pesticidas. Exemplos consagrados incluem a joaninha contra pulgões, a vespa Cotesia flavipes contra a broca-da-cana, o fungo Metarhizium contra a cigarrinha-das-pastagens e o Bacillus thuringiensis, cuja toxina é usada tanto em pulverização quanto expressa no milho transgênico. O risco, porém, é exatamente o tema anterior: o agente de controle é ele próprio uma espécie exótica, e se for generalista pode virar invasor. O caso clássico é o sapo-cururu introduzido na Austrália em 1935 para controlar um besouro da cana: ele não comeu o besouro, que voa alto demais, espalhou-se pelo continente e envenena com sua secreção qualquer predador nativo que tente comê-lo. Daí a exigência de testes de especificidade antes de qualquer liberação."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Chamar toda espécie exótica de invasora é impreciso: só é invasora aquela que se estabelece e causa dano. Outro erro é apresentar o controle biológico como solução isenta de risco. E supor que a invasora é sempre mais forte, quando na verdade ela é apenas liberada dos controles naturais que enfrentava na origem."
+        "content": "Confundir exótica com invasora é o erro de partida: toda invasora é exótica, mas a maioria das exóticas não se torna invasora. O segundo é dizer que a espécie invasora é \"mais forte\" ou \"mais evoluída\" que as nativas — ela apenas chegou sem seus inimigos naturais, num ambiente onde as nativas não têm defesa coevoluída. O terceiro é tratar o controle biológico como isento de risco, quando a introdução de um agente generalista pode criar uma invasão nova. O quarto é dizer que o controle biológico extermina a praga: ele a reduz a um nível economicamente tolerável, e a permanência de alguma praga é necessária para sustentar o próprio agente. O quinto é confundir predador com parasitoide: o parasitoide se desenvolve dentro do hospedeiro e o mata ao final, e é ele que sustenta boa parte do controle biológico aplicado. O sexto é atribuir a introdução do caramujo-africano a um acidente, quando foi intencional e comercial. E cuidado com a escala: espécies invasoras são apontadas como uma das principais causas de extinção no mundo, atrás apenas da perda de habitat."
       },
       {
         "title": "Pratique e confira",
-        "content": "Explique por que uma espécie pode ser inofensiva na sua região e devastadora em outra antes de conferir: na origem, predadores e competidores limitam sua população; no novo ambiente, esses controles não existem e o crescimento é livre. Agora diga um risco do controle biológico: o agente introduzido pode atacar espécies nativas e virar praga."
+        "content": "Por que uma espécie que é apenas mais uma no seu ambiente de origem pode se tornar devastadora ao ser introduzida em outro lugar? Responda antes de conferir. Porque no ambiente natal sua população é mantida em torno da capacidade de suporte por um conjunto de fatores densidade-dependentes coevoluídos: predadores que a reconhecem como presa, parasitas e patógenos adaptados a ela, e competidores que disputam os mesmos recursos. Ao ser transportada, ela deixa esse conjunto para trás e encontra um ambiente onde nenhuma espécie tem história evolutiva com ela — as presas locais não a reconhecem como ameaça e não têm defesas, e nenhum predador local a explora com eficiência. Sem resistência do meio, o crescimento se aproxima do potencial biótico e a curva vira J. Agora um segundo: por que o sapo-cururu é citado como o exemplo mais didático do que pode dar errado no controle biológico? Porque falhou nas duas pontas — não controlou a praga-alvo, que ocupa um estrato que ele não alcança, e virou invasor generalista, tóxico para os predadores nativos que tentam predá-lo, o que reduziu populações de serpentes e marsupiais australianos."
       }
     ],
     "recall": {
@@ -1710,7 +1722,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Biologia",
@@ -1718,23 +1731,23 @@
     "sections": [
       {
         "title": "O processo",
-        "content": "Eutrofização é o enriquecimento excessivo de um corpo d'água por nutrientes, especialmente nitrogênio e fósforo, vindos de esgoto doméstico, fertilizantes agrícolas e detergentes. O excesso de nutrientes provoca a proliferação explosiva de algas e cianobactérias, formando uma camada superficial densa conhecida como floração."
+        "content": "Eutrofização é o enriquecimento de um corpo d'água por nutrientes, sobretudo nitrogênio e fósforo, com consequente aumento da produtividade primária e degradação da qualidade da água. Existe uma versão natural e lenta, em que um lago acumula sedimento e matéria orgânica ao longo de milhares de anos, e uma versão artificial e rápida, a que interessa em prova, provocada por esgoto doméstico não tratado, efluentes agroindustriais e escoamento de fertilizantes agrícolas. O fósforo costuma ser o nutriente limitante em ambientes de água doce, e é por isso que a redução de fosfato em detergentes e o tratamento terciário de esgoto, que remove nutrientes, são medidas tão eficazes. Corpos d'água parados ou de baixa renovação — lagos, represas e reservatórios — são muito mais suscetíveis que rios de correnteza, porque os nutrientes se acumulam em vez de serem exportados, e a estratificação térmica da coluna d'água dificulta a mistura com a camada superficial oxigenada. Águas rasas e quentes agravam o quadro, por favorecerem a proliferação e reduzirem a solubilidade do oxigênio."
       },
       {
         "title": "A cadeia de consequências",
-        "content": "A camada de algas bloqueia a luz e mata as plantas submersas. Quando as algas morrem, a decomposição pelas bactérias aeróbias consome o oxigênio dissolvido, levando à mortandade de peixes. Em anaerobiose, a decomposição libera gás sulfídrico e metano, com mau cheiro característico, e o corpo d'água perde quase toda a biodiversidade."
+        "content": "A cadeia de consequências deve ser dita em ordem, porque a banca costuma pedir exatamente o encadeamento. O aporte de nutrientes provoca a floração — proliferação explosiva de algas e cianobactérias na superfície, o chamado bloom. Essa camada densa bloqueia a penetração da luz, e as produtoras submersas, plantas aquáticas e algas de profundidade, morrem por falta de luz. A morte dessa biomassa, somada à das próprias algas superficiais quando o nutriente se esgota, entrega uma carga enorme de matéria orgânica aos decompositores aeróbios, cuja atividade intensa consome o oxigênio dissolvido. Instala-se a hipóxia e depois a anoxia, matando peixes e invertebrados por asfixia — e a morte deles acrescenta ainda mais matéria orgânica, num ciclo que se retroalimenta. No fundo anóxico passam a predominar bactérias anaeróbias, cuja fermentação e respiração anaeróbia produzem gás sulfídrico, com cheiro de ovo podre, metano e amônia. Some-se que muitas cianobactérias liberam hepatotoxinas e neurotoxinas, como as microcistinas, perigosas para quem consome a água."
       },
       {
         "title": "Prevenção e recuperação",
-        "content": "Prevenir exige tratar esgoto com remoção de nutrientes, controlar o uso de fertilizantes, manter matas ciliares que retêm o escoamento e limitar fosfato em detergentes. A recuperação é lenta e cara, porque o fósforo acumulado no sedimento continua alimentando o processo mesmo depois de cessada a entrada externa."
+        "content": "A prevenção é mais barata e mais eficaz que a recuperação, e atua sobre a fonte. O tratamento de esgoto até o nível terciário remove nutrientes, e não apenas matéria orgânica — o secundário derruba a DBO mas devolve nitrogênio e fósforo ao corpo d'água. Na agricultura, a adubação em dose e época corretas, o plantio direto, o terraceamento e sobretudo as matas ciliares reduzem o escoamento: a vegetação ribeirinha funciona como filtro, retendo sedimento e absorvendo nutrientes antes que cheguem ao curso d'água, o que dá base ecológica à exigência legal de áreas de preservação permanente. A restrição de fosfato em detergentes atacou uma fonte doméstica importante. Já a recuperação de um corpo eutrofizado é lenta e cara: exige interromper o aporte, e ainda assim o fósforo acumulado no sedimento continua sendo liberado por anos, no que se chama carga interna. Técnicas de recuperação incluem dragagem do sedimento, aeração artificial e biomanipulação da cadeia alimentar, com resultados variáveis e custo alto."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Dizer que a eutrofização aumenta a produtividade e por isso é benéfica ignora o colapso posterior do oxigênio. Outro erro frequente é afirmar que as algas consomem o oxigênio: elas produzem oxigênio enquanto vivas, e são as bactérias decompositoras que o consomem depois. E confundir eutrofização natural, lentíssima, com a artificial, acelerada."
+        "content": "Dizer que os peixes morrem envenenados pelas algas é o erro mais frequente: a causa principal é a anoxia provocada pela decomposição, e a toxina, quando existe, é um agravante adicional. O segundo é afirmar que a floração de algas aumenta o oxigênio da água por serem fotossintetizantes — durante o dia a camada superficial até produz oxigênio, mas ele escapa para a atmosfera, enquanto o fundo permanece sem luz, e o balanço da decomposição noturna e de fundo é fortemente negativo. O terceiro é confundir eutrofização com poluição por metais ou agrotóxicos: aqui o poluente é nutriente, e o dano é indireto. O quarto é dizer que o tratamento secundário de esgoto resolve a eutrofização, quando ele remove matéria orgânica mas devolve os nutrientes. O quinto é imaginar que o problema se resolve assim que a fonte é cortada, ignorando a carga interna do sedimento. O sexto é tratar cianobactéria como alga verdadeira, quando é procarionte. E cuidado com o vocabulário: água eutrófica é rica em nutrientes, e oligotrófica é pobre — rica em nutriente aqui não significa boa."
       },
       {
         "title": "Pratique e confira",
-        "content": "Explique por que a mortandade de peixes ocorre depois da floração, e não durante, antes de conferir: enquanto vivas, as algas produzem oxigênio; quando morrem em massa, a decomposição bacteriana consome todo o oxigênio dissolvido. Agora cite duas medidas preventivas: tratamento de esgoto com remoção de nutrientes e manutenção de mata ciliar."
+        "content": "Por que a mata ciliar é considerada a defesa mais eficiente contra a eutrofização de um rio? Responda antes de conferir. Porque ela age antes de o nutriente chegar à água, e por três vias simultâneas. A vegetação e a serapilheira reduzem a velocidade do escoamento superficial, favorecendo a infiltração em vez do carreamento; as raízes retêm o solo e o sedimento, que é o principal veículo do fósforo, fortemente adsorvido às partículas; e as plantas absorvem nitrogênio e fósforo dissolvidos, incorporando-os à própria biomassa. É uma barreira física, hidrológica e biológica ao mesmo tempo, e por isso sua remoção nas margens costuma ser seguida, em poucos anos, de assoreamento e floração no curso d'água. Agora um segundo: um reservatório eutrofizado teve todo o esgoto que o alimentava desviado para uma estação de tratamento, e ainda assim continuou apresentando florações por vários anos. Explique. A resposta é a carga interna: o fósforo acumulado no sedimento ao longo de décadas continua sendo liberado para a coluna d'água, sobretudo em condições anóxicas de fundo, que solubilizam compostos de fósforo antes retidos."
       }
     ],
     "recall": {
@@ -1765,7 +1778,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Biologia",
@@ -1773,23 +1787,23 @@
     "sections": [
       {
         "title": "Lamarck e a primeira teoria",
-        "content": "Lamarck propôs a primeira explicação sistemática para a transformação das espécies, com dois princípios: o uso e desuso, segundo o qual órgãos usados se desenvolvem, e a transmissão dos caracteres adquiridos. A segunda ideia foi refutada, mas o mérito histórico permanece: ele afirmou que as espécies mudam, contra o fixismo dominante."
+        "content": "Antes do século XIX predominava o fixismo, a ideia de que as espécies foram criadas como são e não mudam, sustentada por Lineu e por Cuvier — este último, ao explicar o registro fóssil, propôs o catastrofismo, segundo o qual catástrofes sucessivas extinguiam faunas depois repovoadas. Lamarck, em 1809, formulou a primeira teoria evolutiva articulada, e o mérito histórico precisa ser reconhecido junto com o erro do mecanismo. Ele propôs duas leis. A do uso e desuso: o órgão mais usado se desenvolve, o pouco usado atrofia. E a da transmissão dos caracteres adquiridos: as modificações obtidas em vida seriam passadas aos descendentes. Aplicado à girafa, o raciocínio é que o esforço de alcançar folhas altas alongaria o pescoço, e o pescoço alongado seria herdado. O erro está aí: características adquiridas por uso não alteram o material genético das células germinativas e não se transmitem. O acerto, e é grande, foi afirmar que as espécies se transformam ao longo do tempo e que há relação entre organismo e ambiente."
       },
       {
         "title": "Darwin e a seleção natural",
-        "content": "Darwin, apoiado nas observações da viagem do Beagle e na leitura de Malthus, propôs que nascem mais indivíduos do que o ambiente comporta, que existe variação entre eles e que os mais adaptados deixam mais descendentes. A variação existe antes da pressão ambiental: o ambiente seleciona, não induz. Wallace chegou a conclusão semelhante de forma independente."
+        "content": "Darwin publicou A Origem das Espécies em 1859, apoiado nas observações da viagem do Beagle, sobretudo nos tentilhões de Galápagos, cujos bicos variavam conforme o alimento disponível em cada ilha. Wallace chegou às mesmas conclusões de forma independente, e os dois apresentaram o trabalho conjuntamente em 1858. O mecanismo proposto é a seleção natural, e seu raciocínio tem quatro etapas encadeadas, influenciadas pelo ensaio de Malthus sobre população: os organismos produzem mais descendentes do que o ambiente pode sustentar; existe variação entre os indivíduos de uma população; essa variação afeta a sobrevivência e a reprodução, de modo que os mais aptos àquele ambiente deixam mais descendentes; e, como parte da variação é herdável, a composição da população muda ao longo das gerações. Aplicado à girafa, a explicação se inverte em relação a Lamarck: já havia variação de comprimento de pescoço na população; em ambiente de folhas altas, os de pescoço mais longo se alimentavam melhor e deixavam mais descendentes; a frequência desse traço aumentou ao longo das gerações."
       },
       {
         "title": "A teoria sintética",
-        "content": "No século XX, a genética mendeliana e a genética de populações se uniram ao darwinismo, formando a teoria sintética ou neodarwinismo. Ela identifica as fontes de variabilidade — mutação e recombinação — e os mecanismos que alteram frequências gênicas: seleção natural, deriva genética, migração e isolamento reprodutivo."
+        "content": "O ponto fraco de Darwin era não saber a origem da variação nem como a herança funcionava — as leis de Mendel, publicadas em 1866, só foram redescobertas em 1900. A teoria sintética da evolução, ou neodarwinismo, formulada entre as décadas de 1930 e 1940 por Fisher, Haldane, Dobzhansky, Mayr e Huxley, uniu a seleção natural darwiniana à genética mendeliana e à genética de populações. Ela identifica as fontes de variabilidade: mutação gênica e cromossômica, a única fonte de alelos genuinamente novos, e recombinação, por permutação, segregação independente e fecundação aleatória, que rearranja o que já existe. E identifica os fatores que alteram frequências alélicas: seleção natural, deriva genética — variação aleatória, importante em populações pequenas, com casos particulares como o efeito do fundador e o efeito gargalo — e migração, ou fluxo gênico. Somam-se o isolamento reprodutivo e a especiação. O ponto central é que a mutação é aleatória e não dirigida pela necessidade: o ambiente seleciona o que já existe, não encomenda a novidade."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Dizer que a girafa esticou o pescoço e transmitiu isso aos filhotes é a explicação lamarckista, e usá-la como se fosse darwinista é o erro mais frequente. Outro é falar em 'necessidade' ou 'intenção' da espécie. E atribuir à mutação um direcionamento adaptativo, quando ela é aleatória em relação à necessidade."
+        "content": "Dizer que a girafa esticou o pescoço para alcançar as folhas é a formulação lamarckista, e continua sendo o erro mais penalizado. O segundo, mais sutil, é dizer que a bactéria \"criou\" resistência porque o antibiótico apareceu: as mutações de resistência já existiam na população antes da exposição, e o antibiótico apenas eliminou as sensíveis, selecionando as resistentes. O terceiro é falar em \"mais forte\" no lugar de \"mais apto\": aptidão é sucesso reprodutivo naquele ambiente, e pode significar ser menor, mais discreto ou mais colaborativo. O quarto é dizer que a evolução tem finalidade ou progride rumo à perfeição — não há direção nem meta. O quinto é afirmar que o indivíduo evolui: quem evolui é a população, pela mudança nas frequências alélicas ao longo das gerações. O sexto é chamar Lamarck de simplesmente errado, ignorando que ele foi o primeiro a propor transformação das espécies. E cuidado com o uso e desuso: o músculo hipertrofiado pelo treino não é herdado."
       },
       {
         "title": "Pratique e confira",
-        "content": "Explique o pescoço da girafa segundo Lamarck e segundo Darwin antes de conferir: para Lamarck, o esforço alongou o pescoço e a característica foi transmitida; para Darwin, já havia variação de comprimento e os de pescoço maior sobreviveram e reproduziram mais. Agora diga por que bactérias resistentes surgem: a variação já existia, e o antibiótico selecionou quem a possuía."
+        "content": "Explique o surgimento de uma população de bactérias resistentes a um antibiótico segundo Lamarck e segundo Darwin, e diga qual das duas é sustentada por evidência. Responda antes de conferir. Pela lógica lamarckista, a exposição ao antibiótico induziria as bactérias a desenvolver resistência, que seria então transmitida. Pela lógica darwinista, a população já continha, por mutação aleatória prévia, alguns indivíduos resistentes; o antibiótico eliminou os sensíveis e apenas os resistentes sobreviveram e se multiplicaram, de modo que a frequência do alelo de resistência aumentou. A segunda é a sustentada por evidência — o experimento de réplica em placas de Lederberg mostrou que colônias resistentes podiam ser identificadas em placas que nunca haviam tido contato com o antibiótico. Agora um segundo: por que dizer que \"a evolução tornou os organismos mais complexos\" é uma leitura equivocada? Porque a seleção natural favorece o que aumenta o sucesso reprodutivo naquele ambiente, e isso frequentemente significa simplificação — parasitas perderam órgãos inteiros, e as espécies mais numerosas e duradouras do planeta são procariontes unicelulares."
       }
     ],
     "recall": {
@@ -1820,7 +1834,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Biologia",
