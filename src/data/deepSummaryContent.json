@@ -449,23 +449,23 @@
     "sections": [
       {
         "title": "O que é",
-        "content": "Biomagnificação é o aumento da concentração de uma substância nos tecidos ao longo dos níveis tróficos. Ela exige que o poluente seja persistente, ou seja, não degradado rapidamente, e lipossolúvel, acumulando-se na gordura em vez de ser excretado. Mercúrio, DDT e outros poluentes orgânicos persistentes são os exemplos clássicos."
+        "content": "Biomagnificação é o aumento progressivo da concentração de uma substância nos tecidos dos organismos à medida que se sobe na cadeia alimentar. Não confunda com bioacumulação: bioacumulação é o acúmulo dentro de um único indivíduo ao longo da vida, porque a taxa de absorção supera a de excreção; biomagnificação é a comparação entre níveis tróficos, e só aparece quando se olha a cadeia inteira. Para uma substância biomagnificar, ela precisa reunir três propriedades. Primeiro, ser lipossolúvel, o que a faz se dissolver no tecido adiposo em vez de circular no meio aquoso e ser eliminada pela urina. Segundo, ser persistente, isto é, resistir à degradação química e ao metabolismo, permanecendo íntegra por anos. Terceiro, ter baixa taxa de excreção. Substâncias hidrossolúveis, como a maioria dos sais, não biomagnificam: são filtradas pelos rins e eliminadas. Os casos clássicos são o DDT e outros organoclorados, o mercúrio na forma de metilmercúrio, os PCBs e os metais pesados como chumbo e cádmio."
       },
       {
         "title": "Como o processo funciona",
-        "content": "Cada predador consome muitos indivíduos do nível anterior e incorpora o poluente de todos eles, sem conseguir eliminá-lo na mesma velocidade. Assim, a concentração multiplica-se a cada nível, e os predadores de topo — grandes peixes, aves de rapina e o próprio ser humano — recebem as maiores doses, mesmo que a água esteja pouco contaminada."
+        "content": "O mecanismo se explica por um raciocínio quantitativo simples, e é assim que a banca costuma cobrar. A transferência de energia entre níveis tróficos é de cerca de 10%: para formar 1 kg de tecido, um consumidor precisa comer aproximadamente 10 kg do nível anterior. O poluente lipossolúvel, porém, não se perde nessa transferência — ele é retido. Então esse 1 kg de consumidor concentra o poluente que estava distribuído nos 10 kg que ele comeu, o que multiplica a concentração por dez a cada degrau. Se o fitoplâncton tem 0,01 ppm, o zooplâncton chega a 0,1, o peixe pequeno a 1, o peixe grande a 10 e a ave predadora ou o ser humano a 100 ppm — dez mil vezes a concentração da água. Note a assimetria que dá nome ao fenômeno: a energia diminui de nível para nível, o poluente aumenta. A pirâmide de energia é sempre estreitando para cima; a de concentração do poluente é invertida, alargando para cima."
       },
       {
         "title": "Casos conhecidos",
-        "content": "O caso de Minamata, no Japão, envolveu mercúrio despejado no mar e concentrado em peixes consumidos pela população, causando graves danos neurológicos. O DDT afinou a casca dos ovos de aves de rapina, reduzindo populações inteiras. No Brasil, o mercúrio do garimpo contamina peixes e comunidades ribeirinhas da Amazônia."
+        "content": "O caso do DDT é o mais citado. Inseticida organoclorado usado em massa a partir dos anos 1940, ele biomagnificou até aves de rapina como a águia-careca e o falcão-peregrino, onde interferia no metabolismo do cálcio e produzia cascas de ovo finas demais, que se quebravam sob o peso da mãe chocando — as populações despencaram, e a denúncia veio no livro Primavera Silenciosa, de Rachel Carson, em 1962, marco da consciência ambiental moderna. O segundo caso obrigatório é a doença de Minamata, no Japão: a partir dos anos 1930 uma indústria química lançou mercúrio na baía; bactérias do sedimento o converteram em metilmercúrio, forma orgânica e lipossolúvel, que biomagnificou nos peixes; a população ribeirinha, que se alimentava deles, desenvolveu lesões neurológicas graves, malformações congênitas e mortes. No Brasil, o garimpo de ouro na Amazônia usa mercúrio para amalgamar o metal e reproduz o mesmo ciclo em populações indígenas e ribeirinhas do rio Tapajós e do rio Negro."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Confundir bioacumulação com biomagnificação: a primeira é o acúmulo dentro de um organismo ao longo da vida, a segunda é o aumento entre níveis tróficos. Outro erro é supor que qualquer poluente se biomagnifica, quando é preciso ser persistente e lipossolúvel. E imaginar que a água muito contaminada é condição necessária."
+        "content": "Confundir bioacumulação com biomagnificação é o erro mais frequente: a primeira olha um indivíduo ao longo do tempo, a segunda compara níveis tróficos. O segundo erro é dizer que qualquer poluente biomagnifica — só o faz o que é lipossolúvel e persistente; nitrato e fosfato, por exemplo, causam eutrofização, mas não biomagnificam, porque são hidrossolúveis e rapidamente assimilados. O terceiro é afirmar que a concentração cresce porque o predador come mais: ela cresce porque ele retém o que estava diluído em muita biomassa e quase nada é excretado. O quarto é dizer que o topo da cadeia é o mais afetado por ser o mais forte — é o mais afetado justamente por estar no fim de uma soma. O quinto é tratar o mercúrio metálico e o metilmercúrio como equivalentes: é a conversão microbiana à forma orgânica que torna o metal lipossolúvel e capaz de biomagnificar. E cuidado: o ser humano, quando come peixe grande, ocupa um nível trófico alto e recebe a concentração máxima."
       },
       {
         "title": "Pratique e confira",
-        "content": "Se a água tem 0,001 ppm de um poluente persistente, por que o peixe predador pode ter 10 ppm? Responda antes de conferir: cada nível trófico concentra o que veio de muitos indivíduos do nível anterior, e o poluente não é excretado, multiplicando a concentração ao longo da cadeia. Agora diga qual grupo corre maior risco: os consumidores de topo, incluindo o ser humano."
+        "content": "Por que o ser humano costuma ser um dos mais afetados pela biomagnificação, mesmo não sendo o predador mais poderoso do ecossistema? Responda antes de conferir. Porque a posição na cadeia é definida pelo que se come, não pela força: quem se alimenta de atum, tubarão ou peixe-espada está consumindo um consumidor terciário e recebe a concentração acumulada de todos os níveis abaixo. É também por isso que as recomendações de saúde pública limitam o consumo desses peixes por gestantes, cujo feto é sensível ao metilmercúrio. Agora um segundo, quantitativo, no formato que a Fuvest usa com tabela: a água de um lago tem 0,003 ppm de um organoclorado; medindo-se o tecido de organismos, encontra-se 0,04 no fitoplâncton, 0,5 no zooplâncton, 2 no peixe herbívoro e 25 na ave piscívora. Quantas vezes a concentração na ave supera a da água, e o que isso permite concluir sobre a substância? A razão é de cerca de 8.300 vezes, e o crescimento monotônico ao longo dos níveis mostra que ela é lipossolúvel, persistente e mal excretada."
       }
     ],
     "recall": {
@@ -496,7 +496,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Biologia",
@@ -504,23 +505,23 @@
     "sections": [
       {
         "title": "Os grandes biomas",
-        "content": "O Brasil abriga seis biomas continentais. A Amazônia é floresta equatorial úmida de altíssima biodiversidade e solo pobre, com nutrientes concentrados na biomassa. O Cerrado é savana com árvores de casca grossa e raízes profundas, adaptadas ao fogo e ao solo ácido. A Mata Atlântica é floresta tropical úmida, a mais devastada e com altíssimo endemismo."
+        "content": "O Brasil abriga seis biomas continentais reconhecidos pelo IBGE, e a banca cobra tanto a identificação quanto os números. A Amazônia é o maior, com cerca de 49% do território, floresta ombrófila densa, latifoliada e perene, de altíssima biodiversidade e solo pobre — a fertilidade está na própria biomassa e na serapilheira, ciclada rapidamente por decompositores, e é por isso que o desmatamento seguido de cultivo esgota o solo em poucos anos. O Cerrado, com cerca de 24%, é a savana mais rica do mundo em espécies vegetais: árvores tortuosas de casca grossa e súber espesso, raízes profundas que alcançam o lençol freático e solo ácido com alumínio tóxico. A Mata Atlântica, que cobria a faixa litorânea, está reduzida a cerca de 12% da área original e é um hotspot de biodiversidade, com altíssimo endemismo. Caatinga, Pampa e Pantanal completam o conjunto. Vale lembrar que a Amazônia e a Mata Atlântica são florestas, o Cerrado e a Caatinga são formações savânicas e semiáridas, e o Pantanal é definido pelo regime de inundação."
       },
       {
         "title": "Caatinga, Pampa e Pantanal",
-        "content": "A Caatinga é o único bioma exclusivamente brasileiro, semiárido, com plantas caducifólias, suculentas e espinhosas adaptadas à seca. O Pampa é campo de gramíneas no extremo sul, com clima subtropical. O Pantanal é a maior planície alagável do mundo, com pulso de inundação anual que determina toda a dinâmica ecológica local."
+        "content": "A Caatinga é o único bioma exclusivamente brasileiro e ocupa o semiárido nordestino, com chuvas escassas e irregulares concentradas em poucos meses. Sua vegetação é caducifólia — perde as folhas na seca para reduzir a transpiração —, espinhosa, com cactáceas suculentas que armazenam água no caule, como o mandacaru e o xique-xique, e árvores de raízes tuberosas. O Pampa, ou Campos Sulinos, ocupa a metade sul do Rio Grande do Sul: gramíneas rasteiras, clima subtropical com estações bem marcadas e ocupação histórica pela pecuária extensiva, que é ao mesmo tempo a atividade tradicional e a fonte de pressão pela conversão em lavoura de soja e pela invasão de espécies exóticas. O Pantanal é a maior planície alagável do mundo, e sua identidade não é uma vegetação própria mas um regime hidrológico: a cheia sazonal, alimentada pelas chuvas do planalto que escoam lentamente pela baixa declividade, cria um pulso de inundação que sustenta uma fauna abundante — ali se encontram elementos de Cerrado, Amazônia e Chaco."
       },
       {
         "title": "Adaptações e pressões",
-        "content": "Cada bioma tem adaptações características: raízes profundas e cascas grossas no Cerrado, caducifolia na Caatinga, epifitismo na Mata Atlântica. As pressões também variam: expansão agrícola no Cerrado, urbanização e fragmentação na Mata Atlântica, desmatamento e garimpo na Amazônia, desertificação na Caatinga."
+        "content": "As adaptações vegetais respondem diretamente ao fator limitante de cada bioma. No Cerrado, a casca suberosa e as gemas subterrâneas conferem resistência ao fogo, que é um fator ecológico natural e não apenas uma ameaça: várias espécies dependem dele para germinar. As raízes profundas, que chegam a mais de dez metros, buscam água no lençol e explicam por que a vegetação permanece verde na seca — o aspecto ressecado é da camada herbácea, não das árvores. Na Caatinga, a caducifolia e a suculência atacam o mesmo problema pela via oposta: reduzir a perda ou estocar a água. As pressões atuais também são específicas. A Amazônia sofre com o desmatamento para pecuária e soja e com a hipótese do ponto de não retorno, em que a perda de floresta reduziria a evapotranspiração — a floresta bombeia umidade para os rios voadores que abastecem o Centro-Sul — a ponto de savanizar o bioma. O Cerrado, berço das águas por abrigar nascentes de grandes bacias, é hoje a fronteira agrícola mais desmatada. A Mata Atlântica sofre com a fragmentação urbana."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Chamar a Amazônia de solo fértil por causa da floresta exuberante é o erro clássico: o solo é pobre, e os nutrientes estão na biomassa e na serapilheira. Outro é tratar o Pantanal como bioma de mata fechada. E dizer que a Caatinga é desértica, quando é semiárida e apresenta grande diversidade adaptada."
+        "content": "Dizer que o solo da Amazônia é fértil por sustentar uma floresta exuberante é o erro mais clássico: o solo é pobre e lixiviado, e o que sustenta a floresta é a ciclagem rápida de nutrientes na serapilheira. O segundo é tratar o fogo no Cerrado apenas como destruição, ignorando que é um fator natural ao qual a vegetação está adaptada — o problema é a frequência e a época alteradas pela ação humana. O terceiro é chamar a Caatinga de deserto: há estação chuvosa, solo com matéria orgânica e biodiversidade alta, com muitos endemismos. O quarto é dizer que o Pantanal é um bioma de vegetação própria, quando é definido pelo pulso de inundação e reúne elementos de outros biomas. O quinto é confundir Pampa com Cerrado por ambos terem gramíneas: o Pampa é subtropical e sem estrato arbóreo típico; o Cerrado é tropical e tem árvores tortuosas. E não diga que a Mata Atlântica é a maior em área — é a mais devastada, com cerca de 12% de remanescentes, e a que concentra a maior parte da população brasileira."
       },
       {
         "title": "Pratique e confira",
-        "content": "Por que a floresta amazônica é exuberante mesmo com solo pobre? Responda antes de conferir: os nutrientes estão retidos na biomassa e são reciclados rapidamente pela decomposição da serapilheira, num ciclo quase fechado. Agora explique a caducifolia da Caatinga: perder as folhas na seca reduz a transpiração e economiza água."
+        "content": "Por que o solo da Amazônia é pobre, se a floresta é a mais exuberante do país? Responda antes de conferir. Porque a chuva intensa lixivia os nutrientes minerais para camadas profundas, e o calor e a umidade aceleram a decomposição a tal ponto que a matéria orgânica praticamente não se acumula no solo: os nutrientes liberados são reabsorvidos quase imediatamente pelas raízes superficiais e por fungos micorrízicos associados a elas. O estoque de nutrientes está, portanto, na biomassa viva e na serapilheira, não no solo — e é por isso que, derrubada e queimada a floresta, a cinza fertiliza por dois ou três anos e depois o terreno se esgota. Agora um segundo, do tipo que a Unicamp monta com mapa: explique como o desmatamento na Amazônia pode reduzir a chuva em São Paulo. A resposta encadeia evapotranspiração da floresta, formação dos rios voadores — massas de ar úmido que se deslocam para o Sudeste barradas pelos Andes — e a redução dessa umidade transportada conforme a área florestada diminui."
       }
     ],
     "recall": {
@@ -551,7 +552,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Biologia",
@@ -559,23 +561,23 @@
     "sections": [
       {
         "title": "Ferramentas do DNA recombinante",
-        "content": "A tecnologia do DNA recombinante usa enzimas de restrição, que cortam o DNA em sequências específicas, e ligases, que unem fragmentos. Vetores como plasmídeos carregam o gene de interesse para dentro de bactérias, que passam a produzir a proteína desejada — foi assim que a insulina humana deixou de ser extraída de pâncreas animal."
+        "content": "A biotecnologia moderna se apoia na tecnologia do DNA recombinante: cortar, colar e transferir sequências entre organismos. As enzimas de restrição, isoladas de bactérias, funcionam como tesouras que reconhecem sequências específicas de poucos pares de base e cortam ali; muitas produzem cortes desencontrados que deixam extremidades coesivas, pontas de fita simples capazes de parear com qualquer fragmento cortado pela mesma enzima — é isso que permite unir DNA de espécies diferentes. A DNA ligase faz a colagem, restabelecendo as ligações fosfodiéster. O fragmento é inserido num vetor, em geral um plasmídeo bacteriano, molécula circular de DNA que se replica independentemente do cromossomo, ou um vírus modificado. O vetor entra numa bactéria, que ao se multiplicar produz milhões de cópias — clonagem molecular. O exemplo obrigatório é a insulina humana: desde 1982 ela é produzida por bactérias que receberam o gene humano, o que substituiu a extração de pâncreas de porco e boi e eliminou as reações alérgicas à proteína animal."
       },
       {
         "title": "PCR, sequenciamento e identificação",
-        "content": "A PCR amplifica trechos específicos de DNA por ciclos de aquecimento e resfriamento, permitindo trabalhar com amostras mínimas. O teste de paternidade e a identificação criminal comparam padrões de regiões variáveis do genoma. O sequenciamento lê a ordem das bases e tornou possível projetos como o do genoma humano."
+        "content": "A PCR, reação em cadeia da polimerase, amplifica uma região específica do DNA em escala exponencial. Cada ciclo tem três etapas de temperatura: desnaturação a cerca de 95 °C, que separa as fitas; anelamento entre 50 e 65 °C, quando os primers, pequenas sequências sintéticas que delimitam a região, pareiam com o molde; e extensão a 72 °C, quando a Taq polimerase — enzima de uma bactéria termófila, e é essa termorresistência que torna a técnica automatizável — sintetiza a fita nova. Trinta ciclos multiplicam o alvo por cerca de um bilhão. É a base do diagnóstico molecular de infecções, incluindo o teste padrão-ouro de covid-19, do teste de paternidade e da identificação criminal. A eletroforese em gel separa fragmentos por tamanho: como o DNA é negativo por causa dos grupos fosfato, ele migra para o polo positivo, e os fragmentos menores atravessam mais rápido a malha do gel. O perfil de bandas de um filho tem de ser explicável pela soma das bandas dos pais — nenhuma banda pode aparecer no filho sem existir em pelo menos um deles."
       },
       {
         "title": "Transgênicos, clonagem e edição gênica",
-        "content": "Organismos transgênicos recebem gene de outra espécie, como o milho resistente a insetos. A clonagem por transferência nuclear, que gerou a ovelha Dolly, produz indivíduo geneticamente idêntico ao doador do núcleo. A edição por CRISPR permite alterar sequências com precisão, o que abre debate ético sobre aplicação em embriões humanos."
+        "content": "Transgênico, ou organismo geneticamente modificado, é aquele que recebeu gene de outra espécie: a soja resistente ao herbicida glifosato, o milho Bt, que expressa uma toxina da bactéria Bacillus thuringiensis contra lagartas, e o arroz dourado, enriquecido em betacaroteno para combater a deficiência de vitamina A. Clonagem reprodutiva é outra coisa: a transferência do núcleo de uma célula somática para um óvulo enucleado, técnica que gerou a ovelha Dolly em 1996 e provou que o núcleo de uma célula diferenciada mantém todo o genoma e pode ser reprogramado. Já a clonagem terapêutica visa produzir células-tronco compatíveis, não um indivíduo. A edição gênica com CRISPR-Cas9 é a fronteira atual: um RNA-guia leva a enzima Cas9 até uma sequência escolhida, onde ela corta as duas fitas; o reparo da célula permite desativar o gene ou inserir uma sequência corrigida. A precisão e o baixo custo abriram terapias para anemia falciforme e beta-talassemia, e trouxeram junto o debate bioético sobre edição em células germinativas, que se transmite às gerações seguintes."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Confundir transgênico com organismo geneticamente modificado em geral: todo transgênico é modificado, mas nem toda modificação insere gene de outra espécie. Outro erro é dizer que clone é idêntico em tudo, ignorando o DNA mitocondrial da célula receptora e as influências ambientais. E atribuir à PCR a leitura do DNA, que é função do sequenciamento."
+        "content": "Confundir transgênico com clone é o erro mais comum: o transgênico recebeu gene de outra espécie, o clone é geneticamente idêntico a um único indivíduo doador e não tem gene estranho. O segundo é dizer que a PCR sequencia o DNA — ela amplifica; sequenciar é ler a ordem das bases, outra técnica. O terceiro é inverter a eletroforese: o DNA migra para o polo positivo por ser negativo, e os fragmentos menores correm mais. O quarto é afirmar que gêmeos univitelinos não são clones — são clones naturais, geneticamente idênticos. O quinto é supor que todo alimento com DNA modificado transmite esse DNA a quem come: o DNA ingerido é digerido a nucleotídeos como qualquer outro. O sexto é tratar CRISPR como transgenia obrigatória: a edição pode apenas desativar ou corrigir um gene próprio, sem inserir material de outra espécie. E há um erro fino de leitura de teste de paternidade: a presença de uma banda compartilhada não prova parentesco isoladamente; o que exclui a paternidade é uma banda do filho ausente na mãe e no suposto pai."
       },
       {
         "title": "Pratique e confira",
-        "content": "Explique como bactérias produzem insulina humana antes de conferir: o gene humano é inserido num plasmídeo com auxílio de enzimas de restrição e ligase, e a bactéria transformada passa a expressar a proteína. Agora diga por que a PCR é essencial em perícia: ela amplifica quantidades mínimas de DNA até um volume analisável."
+        "content": "Num teste de paternidade por eletroforese, o filho apresenta seis bandas; quatro coincidem com bandas da mãe e duas não aparecem nem na mãe nem no suposto pai. O que se conclui? Responda antes de conferir. Conclui-se a exclusão da paternidade: todo fragmento do filho tem de ter vindo de um dos genitores, então bandas presentes no filho e ausentes em ambos são incompatíveis com esse par — o suposto pai não é o pai biológico. Note que a lógica do exame é assimétrica: ele exclui com certeza e confirma apenas por probabilidade acumulada. Agora um segundo: explique por que a produção de insulina humana em bactérias foi um avanço médico, e não apenas econômico. A resposta reúne três pontos — a insulina bovina e suína difere da humana em alguns aminoácidos e provocava reações imunológicas em parte dos pacientes; a extração dependia de pâncreas de animais abatidos, com oferta limitada e escala insuficiente para a população diabética; e a bactéria, tendo o gene humano, produz a proteína idêntica à nossa, em fermentadores, de forma contínua e purificável."
       }
     ],
     "recall": {
@@ -606,7 +608,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Biologia",
@@ -614,23 +617,23 @@
     "sections": [
       {
         "title": "O ciclo da água",
-        "content": "A água circula por evaporação, transpiração, condensação, precipitação, infiltração e escoamento. A energia que move o ciclo vem do Sol, e a vegetação participa ativamente pela evapotranspiração, que devolve grande volume de água à atmosfera — é o mecanismo por trás dos chamados rios voadores que abastecem de chuva outras regiões do continente."
+        "content": "O ciclo hidrológico é movido pela energia solar e pela gravidade. A radiação promove a evaporação de oceanos, rios e lagos e a evapotranspiração dos seres vivos — nas florestas, a transpiração vegetal responde por parcela enorme da umidade lançada à atmosfera. O vapor sobe, resfria com a altitude, condensa em torno de núcleos de condensação e forma nuvens; a precipitação devolve a água à superfície, onde ela se divide entre infiltração, que recarrega o lençol freático e os aquíferos, e escoamento superficial, que alimenta rios e retorna ao mar. Os números pesam na argumentação: cerca de 97% da água do planeta é salgada; dos 3% de água doce, a maior parte está em geleiras e calotas polares, e menos de 1% do total é doce e de acesso relativamente fácil, em rios, lagos e aquíferos. A impermeabilização urbana quebra o ciclo num ponto específico: sem solo exposto, a infiltração despenca, o escoamento superficial dispara e o resultado são enchentes na chuva e lençol freático empobrecido no resto do ano."
       },
       {
         "title": "Poluição e seus tipos",
-        "content": "A poluição da água pode ser orgânica, por esgoto doméstico; química, por metais pesados e agrotóxicos; térmica, por efluentes quentes de indústrias; e biológica, por micro-organismos patogênicos. Cada tipo tem indicador próprio: coliformes fecais apontam contaminação por esgoto e a demanda bioquímica de oxigênio mede a carga orgânica."
+        "content": "A poluição da água se classifica pelo agente e pelo efeito. A poluição orgânica, de esgoto doméstico e resíduos agroindustriais, introduz matéria orgânica que os decompositores aeróbios oxidam, consumindo oxigênio dissolvido; mede-se pela DBO, demanda bioquímica de oxigênio, e quanto maior a DBO, mais poluído o corpo d'água. A poluição por nutrientes, de fertilizantes e detergentes ricos em fósforo, provoca eutrofização. A poluição térmica, de água de refrigeração industrial, eleva a temperatura e reduz a solubilidade dos gases, diminuindo o oxigênio disponível justamente quando o metabolismo dos organismos acelera. A poluição química inclui metais pesados e agrotóxicos, que biomagnificam. A poluição biológica é a contaminação por microrganismos patogênicos de origem fecal, medida pelo índice de coliformes, e responde por cólera, febre tifoide, hepatite A, amebíase e giardíase. A poluição por plásticos, incluindo microplásticos, é a preocupação mais recente, com ingestão por organismos filtradores e entrada na cadeia alimentar."
       },
       {
         "title": "Consequências e tratamento",
-        "content": "O excesso de matéria orgânica reduz o oxigênio dissolvido e mata peixes; metais pesados se acumulam ao longo da cadeia; a contaminação biológica causa cólera, hepatite A e verminoses. O tratamento de esgoto e o saneamento básico são as medidas de maior impacto na saúde pública, mais eficazes que qualquer intervenção posterior."
+        "content": "A eutrofização é o processo que a banca mais cobra, e o encadeamento precisa ser dito na ordem certa: excesso de nitrogênio e fósforo, floração de algas e cianobactérias na superfície, bloqueio da luz para as camadas inferiores, morte das produtoras submersas, decomposição aeróbia intensa dessa biomassa, queda do oxigênio dissolvido e mortandade de peixes por anoxia — com o agravante das toxinas liberadas por cianobactérias. O tratamento de esgoto ocorre em etapas: a preliminar retém sólidos grosseiros e areia por gradeamento; a primária remove sólidos sedimentáveis por decantação; a secundária é biológica, com bactérias aeróbias degradando a matéria orgânica em lodos ativados ou lagoas de estabilização, e é a etapa que efetivamente derruba a DBO; a terciária remove nutrientes e patógenos, por desinfecção com cloro ou ultravioleta. Já o tratamento de água para consumo segue outro caminho — floculação, decantação, filtração, cloração e fluoretação — e não deve ser confundido com o de esgoto."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Confundir água limpa com água potável: água cristalina pode conter patógenos invisíveis. Outro erro é dizer que a poluição térmica não é poluição, quando o aumento de temperatura reduz a solubilidade do oxigênio e prejudica a vida aquática. E tratar o desmatamento como assunto separado do ciclo da água."
+        "content": "Trocar tratamento de água com tratamento de esgoto é erro frequente: um prepara água para beber, o outro devolve efluente ao ambiente com carga orgânica reduzida. O segundo erro é dizer que DBO alta significa muito oxigênio na água — significa o contrário: é a quantidade de oxigênio que os decompositores vão demandar, então DBO alta indica água com muita matéria orgânica e oxigênio em queda. O terceiro é atribuir a mortandade de peixes na eutrofização ao envenenamento direto pelas algas, quando a causa principal é a anoxia provocada pela decomposição. O quarto é dizer que a água evaporada do mar leva sal para a chuva: a evaporação deixa os sais para trás, e é por isso que a chuva é doce. O quinto é afirmar que a poluição térmica não é poluição por não acrescentar substância — ela altera a solubilidade do oxigênio e a fisiologia dos organismos, e é poluição por definição. E cuidado com a escala: dizer que \"falta água no planeta\" é impreciso; o que falta é água doce acessível e de qualidade, distribuída de forma muito desigual."
       },
       {
         "title": "Pratique e confira",
-        "content": "Por que o despejo de esgoto mata peixes mesmo sem ser tóxico? Responda antes de conferir: a decomposição da matéria orgânica consome o oxigênio dissolvido, e os peixes morrem por asfixia. Agora explique como o desmatamento altera o regime de chuvas: reduz a evapotranspiração e o transporte de umidade para o interior do continente."
+        "content": "Um lago recebe esgoto sem tratamento e, semanas depois, aparecem peixes mortos em grande número, embora a análise não encontre substância tóxica alguma. Explique antes de conferir. A sequência é a eutrofização: o esgoto traz matéria orgânica e nutrientes; as algas e cianobactérias proliferam na superfície e formam uma camada densa; a luz deixa de chegar às camadas inferiores e as produtoras de baixo morrem; a decomposição aeróbia dessa biomassa consome o oxigênio dissolvido; a anoxia mata os peixes. Nenhuma substância tóxica é necessária — o que mata é a falta de oxigênio. Agora um segundo, urbano: explique por que a impermeabilização do solo de uma cidade aumenta tanto as enchentes quanto a falta de água nos períodos secos. A resposta usa os dois destinos da precipitação: sem infiltração, toda a chuva vira escoamento superficial, que chega aos córregos de uma vez e em volume muito maior que a calha suporta, causando a enchente; e, como nada infiltrou, o lençol freático não é recarregado, de modo que na estiagem falta a água que normalmente sairia dele para alimentar as nascentes."
       }
     ],
     "recall": {
@@ -661,7 +664,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Biologia",
@@ -669,23 +673,23 @@
     "sections": [
       {
         "title": "Um elemento em formas diferentes",
-        "content": "O nitrogênio atmosférico é abundante, mas N₂ não é usado diretamente pela maioria dos seres vivos. Bactérias convertem-no em formas assimiláveis, como amônia e nitrato. Plantas incorporam nitrogênio em aminoácidos e bases nitrogenadas; consumidores o obtêm pela alimentação. O ciclo depende de transformações químicas e de organismos específicos, conectando atmosfera, solo, água e cadeias alimentares."
+        "content": "O nitrogênio é indispensável porque entra na composição de aminoácidos, e portanto de todas as proteínas, e das bases nitrogenadas dos ácidos nucleicos. O paradoxo do ciclo é que ele é abundantíssimo — cerca de 78% da atmosfera é N2 — e ao mesmo tempo limitante para a produtividade dos ecossistemas. A razão está na tripla ligação covalente entre os dois átomos de nitrogênio do N2, uma das ligações mais estáveis da química, com energia de dissociação altíssima. Nem plantas nem animais conseguem rompê-la: as plantas absorvem nitrogênio já combinado, na forma de nitrato ou amônio, e os animais o obtêm comendo. Quem quebra a tripla ligação são procariontes especializados que possuem a enzima nitrogenase, e é essa dependência de um grupo restrito de microrganismos que faz do nitrogênio um elemento cujo ciclo é essencialmente microbiano. Uma parcela menor é fixada abioticamente por descargas elétricas nas tempestades, que fornecem energia suficiente para romper a ligação, e industrialmente pelo processo Haber-Bosch."
       },
       {
         "title": "Etapas microbianas",
-        "content": "Fixação transforma N₂ em amônia; nitrificação produz nitrito e nitrato; assimilação incorpora compostos nitrogenados à matéria orgânica. Decomposição devolve amônia ao solo. Desnitrificação reduz nitratos a N₂, retornando-o à atmosfera. Cada etapa não é feita por “qualquer bactéria”, e alterações no solo afetam a disponibilidade para produtores e a produtividade de ecossistemas inteiros."
+        "content": "As etapas microbianas seguem uma ordem que a banca pede em sequência. A fixação converte N2 em amônia, feita por bactérias de vida livre do gênero Azotobacter e, sobretudo, por bactérias do gênero Rhizobium, que vivem em simbiose mutualística nos nódulos das raízes de leguminosas — a planta oferece açúcares e um ambiente com baixa concentração de oxigênio, que a nitrogenase exige por ser inativada por O2, e recebe nitrogênio fixado. Cianobactérias fazem o mesmo em ambiente aquático. A amonificação é a liberação de amônia a partir da decomposição de matéria orgânica, excretas e cadáveres, feita por bactérias e fungos decompositores. A nitrificação tem dois passos e dois gêneros distintos, e trocá-los é erro clássico: Nitrosomonas oxida amônia a nitrito, e Nitrobacter oxida nitrito a nitrato — ambas são quimiossintetizantes, obtendo energia dessas oxidações. O nitrato é a forma preferencialmente absorvida pelas raízes. A desnitrificação fecha o ciclo: bactérias anaeróbias do gênero Pseudomonas reduzem nitrato a N2, devolvendo-o à atmosfera."
       },
       {
         "title": "Agricultura e ambiente",
-        "content": "Fertilizantes fornecem nitrogênio e podem elevar produtividade, mas excesso de nitrato pode alcançar corpos d’água. Leguminosas associadas a bactérias fixadoras reduzem necessidade de adubação nitrogenada em certas rotações. A compreensão do ciclo permite explicar por que fertilidade do solo, produção agrícola e poluição aquática se conectam em escalas locais e regionais."
+        "content": "A aplicação agrícola é a parte mais cobrada. A rotação de culturas com leguminosas — soja, feijão, ervilha, alfafa — repõe nitrogênio no solo sem adubo industrial, porque o Rhizobium nos nódulos fixa N2 e parte desse nitrogênio permanece no solo quando os restos da cultura são incorporados. Essa prática, aliada à adubação verde, reduz custo e dependência de fertilizante. O processo Haber-Bosch, que fixa N2 industrialmente combinando-o com hidrogênio sob alta pressão e temperatura, mais que dobrou a produtividade agrícola mundial no século XX e é apontado como condição da explosão demográfica — ao custo de consumo energético enorme e de um desequilíbrio: o excesso de fertilizante nitrogenado é lixiviado para rios e lagos, onde causa eutrofização, e contamina lençóis freáticos com nitrato, associado à metemoglobinemia em lactentes. Parte do nitrogênio aplicado também escapa como óxido nitroso, gás de efeito estufa cerca de trezentas vezes mais potente que o CO2 por molécula."
       },
       {
         "title": "Erros recorrentes",
-        "content": "Não diga que plantas absorvem N₂ diretamente do ar pelas folhas como regra geral. Nitrito e nitrato não são sinônimos. Desnitrificação não “cria adubo”: remove formas disponíveis do solo e devolve N₂ à atmosfera. A decomposição participa do ciclo porque matéria orgânica contém nitrogênio, que precisa ser mineralizado e novamente disponibilizado."
+        "content": "Dizer que as plantas absorvem nitrogênio do ar é o erro central: elas absorvem nitrato e amônio do solo, pelas raízes; o N2 atmosférico só entra no ciclo pela fixação microbiana. O segundo erro é atribuir a fixação à planta leguminosa — quem fixa é a bactéria no nódulo, e a planta é parceira, não executora. O terceiro é trocar Nitrosomonas com Nitrobacter; guarde pela ordem alfabética das formas: amônia vira nitrito (Nitrosomonas, o \"so\" de menos oxigênio) e nitrito vira nitrato (Nitrobacter). O quarto é chamar a desnitrificação de etapa ruim: ela fecha o ciclo e devolve N2 à atmosfera, embora em solo encharcado e mal aerado ela empobreça o solo agrícola. O quinto é dizer que a nitrificação é feita por decompositores heterótrofos, quando as nitrificantes são quimiossintetizantes autótrofas. E há um deslize de escala: afirmar que o nitrogênio é escasso no planeta, quando ele é abundante e apenas indisponível na forma inerte."
       },
       {
         "title": "Pratique e confira",
-        "content": "Explique como fertilizante em excesso pode contribuir para proliferação de algas. Relacione aumento de nutrientes, crescimento de produtores e alterações posteriores na água. Indique também qual etapa do ciclo devolve nitrogênio molecular à atmosfera e por que ela diminui a disponibilidade no solo."
+        "content": "Por que a rotação com leguminosas enriquece o solo em nitrogênio, se a planta também consome nitrogênio para crescer? Responda antes de conferir. Porque o nitrogênio que ela usa não vem do estoque do solo, e sim do N2 atmosférico fixado pelo Rhizobium nos nódulos. A leguminosa, portanto, não subtrai do solo: ela adiciona um aporte externo, e parte dele fica no terreno nas raízes, nos nódulos e nos restos culturais incorporados após a colheita. É o único grupo vegetal que traz nitrogênio novo para o sistema. Agora um segundo, mais integrador: uma lavoura recebe adubação nitrogenada pesada e, meses depois, o rio vizinho apresenta floração de algas e mortandade de peixes, enquanto medições apontam aumento na emissão de óxido nitroso na área. Explique os dois efeitos a partir do mesmo excesso. A resposta liga a lixiviação do nitrato pela chuva ao enriquecimento do rio, à floração e à anoxia por decomposição; e a saturação do solo à ação de bactérias desnitrificantes, que em condições de baixa aeração liberam N2O como intermediário do processo."
       }
     ],
     "recall": {
@@ -715,7 +719,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Biologia",
@@ -723,23 +728,23 @@
     "sections": [
       {
         "title": "Reservatórios e fluxos",
-        "content": "O carbono circula entre atmosfera, oceanos, seres vivos, solo e rochas. A fotossíntese retira CO₂ do ar e o incorpora à matéria orgânica; a respiração e a decomposição o devolvem. Os oceanos são o maior reservatório móvel, dissolvendo CO₂ e formando carbonatos, e as rochas calcárias e os combustíveis fósseis guardam carbono por milhões de anos."
+        "content": "O carbono é o esqueleto de toda molécula orgânica, e seu ciclo conecta reservatórios de tamanhos muito diferentes. A atmosfera guarda a menor parcela, na forma de CO2 e metano, mas é o compartimento mais dinâmico e o que responde mais rápido a perturbações. Os oceanos são o maior reservatório ativo, com carbono dissolvido como CO2, bicarbonato e carbonato, num equilíbrio químico que também regula o pH da água. A biosfera guarda carbono na biomassa viva, e os solos, sobretudo os turfosos e o permafrost, guardam mais carbono que a atmosfera e a vegetação somadas. O maior estoque de todos, porém, é geológico e lento: rochas carbonáticas, como o calcário, e combustíveis fósseis. Os fluxos rápidos são dois e opostos: a fotossíntese retira CO2 e o incorpora à matéria orgânica, e a respiração celular, de todos os seres vivos, o devolve. A decomposição e a combustão também devolvem. Em equilíbrio, entrada e saída se compensam; o que a ação humana fez foi transferir carbono do estoque geológico, que levava milhões de anos para circular, para o compartimento atmosférico em dois séculos."
       },
       {
         "title": "Interferência humana",
-        "content": "A queima de combustíveis fósseis transfere para a atmosfera, em décadas, carbono que levou eras para ser estocado. O desmatamento agrava o quadro duas vezes: libera carbono da biomassa queimada e elimina a vegetação que retiraria CO₂. O resultado é o aumento da concentração atmosférica e a intensificação do efeito estufa."
+        "content": "A interferência humana tem duas frentes principais. A queima de combustíveis fósseis — carvão, petróleo e gás — libera carbono que estava fora do ciclo rápido desde o Carbonífero, quando foi sequestrado por florestas soterradas. O desmatamento age duas vezes: libera de imediato o carbono estocado na biomassa, sobretudo quando há queimada, e elimina a capacidade futura de absorção daquela vegetação. A pecuária acrescenta metano da fermentação entérica de ruminantes, e a produção de cimento libera CO2 na calcinação do calcário. O resultado é medido desde 1958 na curva de Keeling, no observatório de Mauna Loa: a concentração atmosférica de CO2 subiu de cerca de 280 ppm no período pré-industrial para mais de 420 ppm, com uma serrilha anual que corresponde ao verão e ao inverno do hemisfério norte, onde está a maior parte da vegetação terrestre — a própria curva é prova de que a fotossíntese regula o compartimento atmosférico em escala planetária."
       },
       {
         "title": "Consequências e mitigação",
-        "content": "Além do aquecimento, o excesso de CO₂ dissolvido acidifica os oceanos, prejudicando organismos de esqueleto calcário como corais e moluscos. As estratégias de mitigação envolvem reduzir emissões, ampliar fontes renováveis, conservar e restaurar florestas, que funcionam como sumidouros ao acumular carbono na biomassa."
+        "content": "As consequências vão além do aquecimento. O efeito estufa é um fenômeno natural e necessário — sem ele a temperatura média da Terra seria de cerca de 18 graus negativos —, e o problema é a intensificação: gases como CO2, metano e óxido nitroso absorvem a radiação infravermelha reemitida pela superfície e reduzem a perda de calor para o espaço. A segunda consequência é a acidificação dos oceanos: parte do CO2 se dissolve e forma ácido carbônico, o que baixa o pH e desloca o equilíbrio do carbonato, dificultando a formação de conchas e esqueletos calcários por corais, moluscos e foraminíferos. A mitigação combina redução de emissões, transição para fontes renováveis, reflorestamento e conservação de florestas em pé, além de práticas agrícolas que aumentem o carbono no solo. Vale distinguir mitigação de adaptação: a primeira ataca a causa reduzindo emissões ou aumentando sumidouros; a segunda prepara sociedades e ecossistemas para impactos já inevitáveis, como elevação do nível do mar e eventos extremos."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Dizer que uma floresta madura retira grandes quantidades líquidas de CO₂ merece cuidado: no clímax, fotossíntese e respiração quase se equilibram, e o ganho líquido é maior em florestas em crescimento. Outro erro é ignorar o oceano como reservatório. E confundir efeito estufa, que é natural e necessário, com sua intensificação, que é o problema."
+        "content": "Confundir efeito estufa com destruição da camada de ozônio é o erro mais persistente: são fenômenos distintos, com gases distintos — CO2 e metano num caso, clorofluorcarbonos no outro — e consequências distintas, aquecimento contra aumento da radiação ultravioleta. O segundo erro é dizer que o efeito estufa é ruim em si, quando é natural e necessário; o que causa problema é a intensificação. O terceiro é afirmar que a floresta madura é o \"pulmão do mundo\" por produzir o oxigênio que respiramos: uma floresta em equilíbrio consome na respiração e na decomposição praticamente todo o oxigênio que produz, e a maior parte do oxigênio atmosférico vem do fitoplâncton marinho. O quarto é tratar o carbono do petróleo como se fosse novo: ele é antigo, e o problema é a velocidade da transferência entre reservatórios. O quinto é dizer que plantar árvores resolve sozinho: o sequestro é lento, limitado pela área disponível e reversível numa queimada, enquanto a emissão fóssil é contínua."
       },
       {
         "title": "Pratique e confira",
-        "content": "Explique por que o desmatamento com queimada afeta duplamente o ciclo antes de conferir: libera de imediato o carbono estocado na biomassa e suprime a absorção futura pela fotossíntese. Agora diga o que é acidificação dos oceanos: o CO₂ dissolvido forma ácido carbônico, reduzindo o pH e dificultando a formação de conchas e recifes."
+        "content": "Por que a curva de Keeling tem um serrilhado anual sobreposto à tendência de alta? Responda antes de conferir. Porque a maior parte da vegetação terrestre está no hemisfério norte: durante o verão boreal, a fotossíntese intensa retira CO2 e a concentração cai; no inverno, com a vegetação decídua sem folhas e a respiração e a decomposição continuando, a concentração sobe. A oscilação é, portanto, a respiração da biosfera terrestre medida em escala global, e a tendência de alta por cima dela é o acréscimo humano que nenhum verão consegue reabsorver. Agora um segundo: explique por que a acidificação dos oceanos é chamada de \"o outro problema do CO2\" e por que ela ameaça recifes de coral mesmo sem aumento de temperatura. A resposta liga a dissolução do CO2 à formação de ácido carbônico, à liberação de íons hidrogênio que consomem carbonato disponível, e à dificuldade dos organismos calcificadores de depositar carbonato de cálcio — um efeito químico direto, independente do aquecimento e da consequente perda de zooxantelas no branqueamento."
       }
     ],
     "recall": {
@@ -770,7 +775,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Biologia",
@@ -778,23 +784,23 @@
     "sections": [
       {
         "title": "Os três padrões",
-        "content": "Há três ciclos de vida: haplonte, em que o organismo adulto é haploide e o zigoto sofre meiose logo após a fecundação; diplonte, em que o adulto é diploide e a meiose produz gametas, como nos animais; e haplodiplonte, com alternância de gerações entre um gametófito haploide e um esporófito diploide, típico das plantas."
+        "content": "Todo ciclo de vida sexuado alterna entre uma fase haploide, com n cromossomos, e uma fase diploide, com 2n, e o que distingue os ciclos é onde a meiose ocorre. No ciclo haplobionte haplonte, típico de muitas algas e fungos, o organismo adulto é haploide; a fecundação forma um zigoto diploide que é a única célula 2n do ciclo, e ele imediatamente sofre meiose — chamada meiose zigótica — devolvendo indivíduos haploides. No ciclo haplobionte diplonte, o dos animais e de algumas algas, o adulto é diploide e as únicas células haploides são os gametas, produzidos por meiose gamética diretamente a partir de células germinativas. No ciclo diplobionte, ou haplodiplobionte, típico das plantas e de algumas algas, existem dois organismos multicelulares alternados: um haploide, o gametófito, e um diploide, o esporófito; a meiose é espórica, produz esporos, e não gametas. A pergunta de prova costuma ser exatamente essa: quando a meiose produz gametas, quando produz esporos e quando age sobre o zigoto."
       },
       {
         "title": "Alternância de gerações",
-        "content": "No ciclo haplodiplonte, o esporófito produz esporos por meiose, e esses esporos germinam formando o gametófito, que produz gametas por mitose. A fecundação restaura o esporófito. Ao longo da evolução das plantas terrestres, o gametófito foi se reduzindo e o esporófito se tornou dominante — tendência clara de briófitas a angiospermas."
+        "content": "Nas plantas, a alternância de gerações tem uma tendência evolutiva clara, e a banca cobra a direção. Nas briófitas, os musgos, o gametófito é a fase dominante, verde e duradoura, e o esporófito é pequeno, dependente dele e efêmero — é a haste com a cápsula que cresce sobre o musgo. Nas pteridófitas, as samambaias, a relação se inverte: o esporófito é a samambaia que se vê, e o gametófito é o protalo, uma lâmina verde minúscula, independente mas de vida curta. Nas gimnospermas e angiospermas, o esporófito é totalmente dominante e o gametófito fica reduzido a pouquíssimas células retidas dentro do esporófito: o grão de pólen é o gametófito masculino, e o saco embrionário é o feminino. A explicação adaptativa é a conquista do ambiente terrestre: o gametófito produz gametas que, nos grupos basais, precisam de água para a fecundação, já que o anterozoide é flagelado e nada até a oosfera; reduzir o gametófito e proteger o gameta dentro do pólen liberta a reprodução da dependência de água."
       },
       {
         "title": "Onde a meiose acontece",
-        "content": "A pergunta-chave de qualquer ciclo é onde ocorre a meiose. No haplonte é zigótica, logo após a fecundação; no diplonte é gamética, produzindo gametas; no haplodiplonte é espórica, produzindo esporos. Identificar isso permite classificar o ciclo mesmo sem conhecer o organismo apresentado no enunciado."
+        "content": "Localizar a meiose é a chave de qualquer questão de ciclo. Num animal, a meiose acontece nas gônadas e produz gametas diretamente; não há mitose entre a meiose e a fecundação, e é por isso que o número de células haploides é pequeno. Numa planta, a meiose acontece nos esporângios e produz esporos, que germinam e sofrem várias mitoses até formar o gametófito multicelular; só depois esse gametófito produz gametas — e produz por mitose, nunca por meiose, já que ele próprio é haploide. Essa é a inversão que mais confunde: em planta, gameta vem de mitose. Nos fungos zigomicetos, como o bolor do pão, o micélio é haploide, e o zigósporo diploide sofre meiose ao germinar. Em Plasmodium, o agente da malária, o ciclo passa por duas fases e dois hospedeiros, com reprodução assexuada no ser humano e sexuada no mosquito Anopheles, motivo pelo qual o mosquito é o hospedeiro definitivo, e não apenas o vetor — hospedeiro definitivo é sempre aquele onde ocorre a reprodução sexuada."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Dizer que gametas são sempre produzidos por meiose é erro grave: nas plantas, o gametófito é haploide e produz gametas por mitose. Outro deslize é confundir esporo com gameta — o esporo germina sozinho, o gameta precisa de fecundação. E supor que o esporófito é dominante em briófitas, quando ali o gametófito é a fase visível."
+        "content": "Dizer que a planta produz gametas por meiose é o erro mais frequente: ela produz esporos por meiose, e gametas por mitose no gametófito. O segundo é achar que o gametófito é sempre a fase pequena — nos musgos ele é o corpo verde dominante, e é o esporófito que é pequeno e dependente. O terceiro é confundir esporo com gameta: o esporo germina sozinho e origina um novo organismo, enquanto o gameta precisa se fundir com outro. O quarto é dizer que o hospedeiro definitivo é aquele onde a doença é mais grave, quando é aquele onde ocorre a reprodução sexuada do parasita — no caso da malária, o mosquito. O quinto é imaginar que a fase haploide é sempre transitória: em muitos fungos e algas, ela é o organismo adulto e duradouro. E um erro de raciocínio: supor que a meiose sempre reduz de 2n para n produzindo quatro células funcionais — na ovogênese humana, três dos quatro produtos são corpúsculos polares que degeneram."
       },
       {
         "title": "Pratique e confira",
-        "content": "Num organismo cuja meiose produz esporos, qual é o ciclo? Responda antes de conferir: é haplodiplonte, com meiose espórica e alternância de gerações. Agora diga como os gametas se formam no gametófito de um musgo: por mitose, porque o gametófito já é haploide."
+        "content": "Numa samambaia, qual é a ploidia do protalo, e de onde vieram os gametas que ele produz? Responda antes de conferir. O protalo é o gametófito e é haploide: ele nasceu de um esporo produzido por meiose nos esporângios do lado inferior das folhas do esporófito. Os gametas que ele produz vêm de mitose, porque uma célula haploide não pode sofrer meiose e continuar viável — a redução já aconteceu antes. A fecundação entre anterozoide e oosfera, que exige um filme de água, restaura a condição diploide e origina o novo esporófito, que cresce inicialmente sobre o protalo. Agora um segundo: explique por que gimnospermas e angiospermas conseguiram ocupar ambientes secos que briófitas e pteridófitas não ocupam, relacionando isso ao ciclo de vida. A resposta liga a redução extrema do gametófito, retido e protegido dentro do esporófito, ao grão de pólen, que transporta o gameta masculino pelo ar ou por animais e dispensa a água como meio de deslocamento — junto com a semente, que protege e nutre o embrião."
       }
     ],
     "recall": {
@@ -823,7 +829,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Biologia",
@@ -831,23 +838,23 @@
     "sections": [
       {
         "title": "Membrana plasmática e transporte",
-        "content": "A membrana é uma bicamada de fosfolipídios com proteínas embebidas, descrita pelo modelo do mosaico fluido. Ela é seletivamente permeável: difusão simples e osmose ocorrem sem gasto de energia e a favor do gradiente; difusão facilitada usa proteínas transportadoras; o transporte ativo, como a bomba de sódio e potássio, gasta ATP e vai contra o gradiente."
+        "content": "A membrana plasmática é descrita pelo modelo do mosaico fluido, proposto por Singer e Nicolson em 1972: uma bicamada de fosfolipídios com proteínas embutidas, umas atravessando toda a espessura, as integrais ou transmembrana, outras aderidas a uma das faces, as periféricas. O fosfolipídio é anfipático — cabeça polar hidrofílica voltada para os meios aquosos, caudas apolares hidrofóbicas voltadas para dentro —, e é essa dupla natureza que faz a bicamada se organizar espontaneamente em água e que define a permeabilidade seletiva. O colesterol, nas células animais, modula a fluidez, evitando que a membrana fique rígida demais no frio ou fluida demais no calor. O transporte se divide em passivo, sem gasto de ATP e a favor do gradiente — difusão simples para gases e moléculas apolares pequenas, difusão facilitada por proteínas transportadoras para glicose e íons, e osmose para a água — e ativo, contra o gradiente e com gasto de ATP, cujo exemplo obrigatório é a bomba de sódio e potássio, que expulsa três Na+ e importa dois K+ por ATP consumido."
       },
       {
         "title": "Osmose e meios",
-        "content": "Em meio hipotônico, a célula ganha água e incha, podendo sofrer lise se for animal; a vegetal fica túrgida por causa da parede celular. Em meio hipertônico, perde água: a animal murcha e a vegetal sofre plasmólise. Em meio isotônico, as trocas se equilibram. Esse conjunto de casos é dos mais cobrados em prova."
+        "content": "Osmose é a difusão da água através de membrana semipermeável, do meio menos concentrado em soluto para o mais concentrado — ou, dito de forma mais precisa e menos sujeita a confusão, do meio de maior potencial hídrico para o de menor. Os três meios precisam ser nomeados com cuidado: hipotônico é o de menor concentração de soluto, hipertônico o de maior, isotônico o de concentração igual. Uma hemácia em meio hipotônico absorve água, incha e sofre hemólise, porque a célula animal não tem parede para conter a expansão; em meio hipertônico perde água e murcha, num processo chamado crenação. A célula vegetal, protegida pela parede de celulose, comporta-se de modo diferente: em meio hipotônico ela absorve água até ficar túrgida, e a parede impede o rompimento, gerando pressão de turgor — que é o que sustenta a planta herbácea ereta; em meio hipertônico ela perde água, o vacúolo encolhe e a membrana descola da parede, no fenômeno chamado plasmólise, reversível se a célula voltar a um meio hipotônico."
       },
       {
         "title": "Citoplasma e organelas de síntese",
-        "content": "O citosol abriga o citoesqueleto, que sustenta e movimenta a célula. O retículo endoplasmático rugoso, com ribossomos, sintetiza proteínas para exportação; o liso produz lipídios e faz desintoxicação. O complexo golgiense modifica, empacota e endereça essas moléculas, e origina os lisossomos."
+        "content": "O citoplasma é o conteúdo entre a membrana e o núcleo, formado pelo citosol — solução aquosa com íons, enzimas e metabólitos, onde ocorre a glicólise — e pelas organelas. O retículo endoplasmático rugoso tem ribossomos aderidos à face externa e é o local de síntese das proteínas destinadas à exportação, à membrana ou aos lisossomos; o liso não tem ribossomos e faz síntese de lipídios e esteroides, além de desintoxicação, o que explica sua abundância em hepatócitos, e armazenamento de cálcio, o que explica sua abundância na fibra muscular. O complexo golgiense recebe vesículas do retículo, modifica as proteínas — glicosilação, principalmente —, as endereça e as empacota em vesículas de secreção; é ele também que origina os lisossomos e, nas células vegetais, participa da formação da parede celular. Os ribossomos, formados por RNA ribossômico e proteínas, não são delimitados por membrana e ocorrem tanto em procariontes quanto em eucariontes, o que os torna a única estrutura verdadeiramente universal da célula."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Dizer que a osmose é o movimento do soluto inverte o conceito: é o solvente que se move, através de membrana semipermeável. Outro erro é atribuir gasto de energia à difusão facilitada. E confundir o retículo rugoso com o liso quanto à função, ou esquecer que a parede celular impede a lise da célula vegetal."
+        "content": "Dizer que a osmose é o transporte de soluto é o erro de partida: quem se move na osmose é a água, e ela se move porque o soluto não pode atravessar. O segundo erro é aplicar o comportamento da hemácia à célula vegetal: a vegetal não estoura em meio hipotônico porque a parede celular resiste. O terceiro é dizer que a difusão facilitada gasta ATP por envolver proteína — não gasta; ela é passiva, e o que a proteína faz é abrir caminho, não empurrar. O quarto é confundir plasmólise com morte celular: a plasmólise é reversível. O quinto é situar a glicólise na mitocôndria, quando ela é citosólica. O sexto é dizer que os ribossomos são organelas membranosas, quando não têm membrana alguma. E há um erro fino de vocabulário: o meio hipotônico é o de menos soluto, não o de menos água — quem tem menos soluto tem mais água, e é justamente por isso que a água sai dele para o outro lado."
       },
       {
         "title": "Pratique e confira",
-        "content": "O que acontece com uma hemácia em água destilada? Responda antes de conferir: o meio é hipotônico, a célula absorve água e sofre lise, porque não tem parede celular. Agora, o que ocorre com uma célula vegetal na mesma água? Ela fica túrgida, e a parede impede o rompimento."
+        "content": "Por que uma célula vegetal colocada em água destilada não estoura, enquanto uma hemácia no mesmo meio sofre hemólise? Responda antes de conferir. Porque a célula vegetal tem parede celular de celulose, rígida e resistente à tração: à medida que a água entra e o volume aumenta, a parede exerce contrapressão sobre o protoplasto, a chamada pressão de parede, que cresce até equilibrar a entrada de água e interromper o fluxo líquido. A célula fica túrgida, e é essa turgescência que mantém ereto o caule de uma planta herbácea. A hemácia, sem parede, tem apenas a membrana plasmática, que se distende até romper. Agora um segundo, aplicado: explique por que se usa sal para conservar carne e por que uma salada temperada com sal solta água depois de alguns minutos. A resposta é a mesma osmose nos dois casos: o meio externo se torna hipertônico, a água sai das células — dos microrganismos, na carne, o que os desidrata e impede a proliferação; das células vegetais, na salada, o que provoca plasmólise e murchamento visível."
       }
     ],
     "recall": {
@@ -878,7 +885,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Biologia",
@@ -886,23 +894,23 @@
     "sections": [
       {
         "title": "Mitocôndrias e cloroplastos",
-        "content": "As mitocôndrias realizam a respiração celular, produzindo ATP, e os cloroplastos realizam a fotossíntese. Ambas têm DNA próprio, ribossomos e dupla membrana, o que sustenta a teoria endossimbiótica: elas seriam procariontes ancestrais incorporados por uma célula maior, hipótese que também explica sua divisão independente."
+        "content": "Mitocôndrias e cloroplastos compartilham características que sustentam a teoria endossimbiótica, formulada por Lynn Margulis: possuem dupla membrana, DNA circular próprio, ribossomos do tipo procariótico e capacidade de autoduplicação independente da divisão celular. A explicação é que ancestrais procariontes aeróbios e fotossintetizantes foram fagocitados por uma célula hospedeira e, em vez de digeridos, estabeleceram simbiose. A mitocôndria tem membrana externa lisa e interna pregueada em cristas, que aumentam a superfície disponível para a cadeia respiratória; o espaço interno é a matriz, onde ocorre o ciclo de Krebs, e o gradiente de prótons se forma no espaço intermembranar. O cloroplasto tem, além das duas membranas, um terceiro sistema membranoso interno: os tilacoides, empilhados em grana, onde ficam os fotossistemas e ocorre a etapa fotoquímica, imersos no estroma, onde ocorre o ciclo de Calvin. A quantidade de mitocôndrias varia com a demanda energética do tecido, o que se vê comparando uma célula muscular cardíaca com um adipócito."
       },
       {
         "title": "Lisossomos e peroxissomos",
-        "content": "Lisossomos contêm enzimas digestivas e realizam digestão intracelular, atuando na heterofagia, quando digerem material vindo de fora, e na autofagia, quando reciclam organelas próprias. Peroxissomos degradam peróxido de hidrogênio pela catalase e participam da oxidação de ácidos graxos, funções distintas que costumam ser confundidas."
+        "content": "Os lisossomos são vesículas originadas do complexo golgiense e contêm enzimas hidrolíticas ácidas, que funcionam em pH em torno de 5 mantido por bombas de prótons na membrana da vesícula — detalhe importante, porque se essas enzimas vazassem para o citosol, de pH próximo de 7, teriam atividade muito reduzida. Realizam a digestão intracelular: a heterofagia degrada o que entrou por fagocitose ou pinocitose, e a autofagia degrada organelas envelhecidas, reciclando seus componentes. A autólise é a digestão da própria célula, e explica a reabsorção da cauda do girino na metamorfose. Doenças de depósito lisossômico, como Tay-Sachs e Gaucher, decorrem da ausência de uma enzima específica, com acúmulo do substrato não digerido. Os peroxissomos são outra vesícula, com enzimas oxidativas que degradam ácidos graxos e substâncias tóxicas — incluindo o álcool, no fígado —, gerando peróxido de hidrogênio, que a catalase decompõe em água e oxigênio; a efervescência da água oxigenada num ferimento é essa reação acontecendo."
       },
       {
         "title": "Estruturas de movimento e sustentação",
-        "content": "Centríolos organizam o fuso durante a divisão e originam cílios e flagelos, cuja estrutura interna segue o padrão de nove pares mais dois microtúbulos. O citoesqueleto, feito de microfilamentos, filamentos intermediários e microtúbulos, dá forma à célula, ancora organelas e permite o transporte interno de vesículas."
+        "content": "O citoesqueleto sustenta a forma, ancora organelas e move estruturas, e é formado por três tipos de filamento: microfilamentos de actina, responsáveis pela contração muscular junto com a miosina e pela citocinese animal; filamentos intermediários, de papel mecânico; e microtúbulos de tubulina, que formam o fuso mitótico, os centríolos, os cílios e os flagelos. Cílios e flagelos eucarióticos têm a mesma estrutura interna, o axonema, com o padrão 9+2 — nove pares periféricos de microtúbulos em torno de um par central —, e diferem apenas em comprimento e número: cílios são curtos e numerosos, flagelos longos e poucos. O batimento move o líquido sobre o epitélio respiratório, expulsando muco com partículas, e move o espermatozoide. O flagelo bacteriano não tem nada a ver com isso: é uma fibra de flagelina que gira como hélice movida por um motor de prótons, e a semelhança de nome esconde estruturas e mecanismos totalmente distintos — comparação que a banca adora cobrar."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Dizer que a mitocôndria produz energia é impreciso: ela converte energia química do alimento em ATP. Outro erro é atribuir cloroplastos a células animais. E confundir a função dos lisossomos com a dos peroxissomos, ou supor que células vegetais não têm mitocôndrias, quando têm as duas organelas."
+        "content": "Dizer que mitocôndria e cloroplasto têm DNA porque vieram do núcleo é inverter a teoria endossimbiótica: o DNA é próprio, circular e herança do ancestral procarionte. O segundo erro é afirmar que o cloroplasto tem dupla membrana como a mitocôndria e parar por aí — ele tem um terceiro sistema, o dos tilacoides, e é nele que a luz é captada. O terceiro é dizer que a planta só tem cloroplasto e não tem mitocôndria: tem as duas, e respira o tempo todo. O quarto é tratar lisossomo e peroxissomo como sinônimos: as enzimas são diferentes, hidrolíticas contra oxidativas, e só o peroxissomo produz e neutraliza peróxido de hidrogênio. O quinto é equiparar flagelo bacteriano e eucariótico: o primeiro gira, o segundo ondula, e as proteínas são distintas. O sexto é atribuir aos centríolos a existência do fuso em todas as células — plantas superiores formam fuso sem centríolos. E cuidado: o padrão 9+2 vale para o axonema de cílios e flagelos; o centríolo é 9+0 e com trincas, não pares."
       },
       {
         "title": "Pratique e confira",
-        "content": "Que evidências sustentam a teoria endossimbiótica? Responda antes de conferir: DNA circular próprio, ribossomos semelhantes aos bacterianos, dupla membrana e divisão independente da célula. Agora explique o que acontece se os lisossomos se romperem: as enzimas digestivas extravasam e digerem a própria célula, processo chamado autólise."
+        "content": "Por que a célula muscular cardíaca tem muito mais mitocôndrias que um adipócito? Responda antes de conferir. Porque o número de mitocôndrias acompanha a demanda de ATP do tecido: o miocárdio contrai continuamente, sem descanso, e depende quase inteiramente de metabolismo aeróbio, então precisa de enorme capacidade de fosforilação oxidativa. O adipócito armazena lipídios e tem atividade metabólica baixa. É o mesmo raciocínio que explica por que a cauda do espermatozoide concentra mitocôndrias na peça intermediária. Agora um segundo: explique por que enzimas lisossômicas que eventualmente vazem para o citosol causam menos dano do que se poderia esperar, e por que ainda assim o rompimento em massa dos lisossomos mata a célula. A resposta usa o pH: as hidrolases ácidas têm atividade ótima em torno de 5, mantido dentro da vesícula por bombas de prótons, e no citosol, de pH cerca de 7, elas trabalham mal — um vazamento pequeno é tolerável; mas o rompimento generalizado libera enzima suficiente para que mesmo a atividade reduzida degrade a célula, no processo de autólise."
       }
     ],
     "recall": {
@@ -933,7 +941,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Biologia",
@@ -941,23 +950,23 @@
     "sections": [
       {
         "title": "Categorias e nomenclatura",
-        "content": "A classificação organiza os seres vivos em categorias hierárquicas: domínio, reino, filo, classe, ordem, família, gênero e espécie. A nomenclatura binomial de Lineu combina gênero, com inicial maiúscula, e epíteto específico, em minúscula, ambos em itálico ou sublinhados, como em Homo sapiens. Quanto mais próxima a categoria da espécie, mais semelhantes os organismos."
+        "content": "A classificação biológica organiza a diversidade em categorias hierárquicas encaixadas: domínio, reino, filo, classe, ordem, família, gênero e espécie, da mais abrangente à mais restrita. Quanto mais específica a categoria compartilhada por dois organismos, maior o parentesco e maior a semelhança: dois animais do mesmo gênero são mais próximos que dois da mesma família. A nomenclatura segue as regras de Lineu, e a banca cobra a forma exata: o nome científico é binomial, com gênero e epíteto específico, escrito em latim, com o gênero em maiúscula e o epíteto em minúscula, e o conjunto em itálico no impresso ou sublinhado à mão — Homo sapiens, Panthera onca, Zea mays. O gênero pode aparecer sozinho, mas o epíteto nunca; a partir da segunda menção, o gênero pode ser abreviado pela inicial, como H. sapiens. Em três domínios, Bacteria, Archaea e Eukarya, a árvore atual mostra que arqueias e eucariontes são mais aparentados entre si do que qualquer um deles é das bactérias — resultado contraintuitivo, já que arqueias e bactérias são ambas procariontes."
       },
       {
         "title": "Sistemática filogenética",
-        "content": "A sistemática moderna agrupa organismos por ancestralidade comum, e não por semelhança aparente. Os cladogramas representam essas relações, e cada nó é um ancestral comum. Um grupo é monofilético quando inclui o ancestral e todos os seus descendentes — o único tipo aceito na classificação atual, ao contrário dos grupos parafiléticos e polifiléticos."
+        "content": "A sistemática filogenética, ou cladística, classifica pelo parentesco evolutivo, e não pela semelhança aparente. O critério é a partilha de caracteres derivados compartilhados, as sinapomorfias — novidades evolutivas herdadas de um ancestral comum exclusivo. Caracteres ancestrais presentes em muitos grupos, as plesiomorfias, não servem para agrupar: dizer que peixes e humanos são próximos porque ambos têm coluna vertebral não informa nada, já que a coluna é ancestral de todos os vertebrados. Daí decorre a exigência de que os grupos sejam monofiléticos, isto é, reúnam um ancestral e todos os seus descendentes. Um grupo parafilético reúne o ancestral e apenas parte dos descendentes — \"répteis\" no sentido tradicional é o exemplo canônico, porque exclui as aves, que descendem de dinossauros terópodes e estão dentro do grupo. Um grupo polifilético reúne descendentes de ancestrais diferentes com base em semelhança convergente, como agrupar morcegos e aves por voarem. Nos cladogramas, o que importa é a ordem de ramificação e o nó de ancestralidade comum, não a proximidade horizontal dos ramos."
       },
       {
         "title": "Homologia e analogia",
-        "content": "Estruturas homólogas têm mesma origem embrionária e indicam parentesco, ainda que exerçam funções diferentes, como o braço humano e a asa do morcego. Estruturas análogas têm mesma função e origens distintas, resultado de convergência adaptativa, como a asa do inseto e a da ave. Só a homologia serve para reconstruir filogenias."
+        "content": "A distinção entre homologia e analogia é o núcleo conceitual. Estruturas homólogas têm a mesma origem embrionária e o mesmo plano estrutural básico, ainda que exerçam funções diferentes — o membro anterior do ser humano, a asa do morcego, a nadadeira da baleia e a pata do cavalo são todos formados por úmero, rádio, ulna, carpos, metacarpos e falanges, e indicam ancestralidade comum, num processo de divergência adaptativa ou irradiação adaptativa. Estruturas análogas têm a mesma função e origens embrionárias distintas — a asa do inseto e a asa da ave —, e indicam convergência adaptativa, isto é, pressões seletivas semelhantes atuando sobre linhagens diferentes. Só a homologia serve para inferir parentesco. Estruturas vestigiais, como o cóccix humano, os músculos auriculares e o apêndice cecal, são homólogas reduzidas, evidência de história evolutiva. Além da morfologia, a filogenia moderna usa dados moleculares: quanto mais semelhantes as sequências de DNA ou de proteínas, mais recente o ancestral comum, o que permite estimar tempos de divergência com relógios moleculares."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Usar analogia como evidência de parentesco é o erro conceitual central do tópico. Outro é escrever o nome científico sem itálico ou com o epíteto específico em maiúscula. E chamar de monofilético um grupo que exclui parte dos descendentes, como répteis sem as aves, que é parafilético."
+        "content": "Escrever nome científico com gênero em minúscula, sem itálico ou com o epíteto isolado é o erro formal mais penalizado. O segundo, conceitual, é usar analogia para inferir parentesco: asa de morcego e asa de inseto não aproximam os dois grupos. O terceiro é ler o cladograma pela proximidade horizontal dos ramos em vez de pelos nós — dois ramos vizinhos na figura podem ter separado muito antes do que parece. O quarto é dizer que o ser humano descende do chimpanzé, quando ambos descendem de um ancestral comum extinto. O quinto é tratar \"répteis\" como grupo natural: no sentido tradicional é parafilético, porque deixa as aves de fora. O sexto é achar que procarionte é uma categoria taxonômica, quando é uma característica celular partilhada por dois domínios distintos, Bacteria e Archaea, que não formam grupo monofilético. E cuidado com a inversão comum: o parentesco não se mede pela quantidade de semelhança visível, e sim pela partilha de caracteres derivados exclusivos."
       },
       {
         "title": "Pratique e confira",
-        "content": "A asa do morcego e a asa da ave são homólogas ou análogas? Responda antes de conferir: como membros anteriores de vertebrados, são homólogas quanto à origem; como asas, a estrutura de voo é análoga, porque o voo evoluiu de forma independente. Agora escreva corretamente o nome da onça-pintada: Panthera onca, em itálico, com gênero em maiúscula."
+        "content": "Por que a asa do morcego e o braço humano indicam parentesco, mas a asa do morcego e a asa da borboleta não? Responda antes de conferir. Porque asa de morcego e braço humano são estruturas homólogas: mesma origem embrionária e mesmo arranjo ósseo básico, modificados para funções diferentes — voar e manipular —, o que aponta um ancestral comum cujo membro anterior se diversificou. Asa de morcego e asa de borboleta são análogas: função igual, origem embrionária e estrutura totalmente distintas, membro de vertebrado num caso e expansão do tegumento de artrópode no outro, resultado de convergência adaptativa sob a mesma pressão seletiva de ocupar o ar. Agora um segundo: por que a classificação tradicional dos répteis é rejeitada pela sistemática filogenética, e qual seria a correção? A resposta é que o grupo é parafilético — reúne o ancestral e só parte dos descendentes, excluindo as aves, que derivam de dinossauros terópodes; a correção é reconhecer o clado Reptilia incluindo as aves, ou tratar as aves como um grupo de répteis, o que mantém a monofilia."
       }
     ],
     "recall": {
@@ -988,7 +997,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Biologia",
