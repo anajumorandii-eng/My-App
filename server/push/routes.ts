@@ -93,7 +93,7 @@ export function createReviewReminderRouter(db: Firestore, vapid: VapidConfig | n
         }
 
         await webPush.sendNotification(subscription, JSON.stringify({
-          title: 'Revisões pendentes na JUJU',
+          title: 'Revisões pendentes no Crivo',
           body: pending === 1
             ? 'Você tem 1 tópico urgente esperando revisão hoje.'
             : `Você tem ${pending} tópicos urgentes esperando revisão hoje.`,

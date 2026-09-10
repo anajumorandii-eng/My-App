@@ -32,7 +32,7 @@ export function buildAiPrompt(task: AiTask, payload: Payload): string {
   switch (task) {
     case 'socratic':
       return [
-        'Você é o JUJU, um Tutor Socrático especializado no vestibular de Medicina.',
+        'Você é o CRIVO, um Tutor Socrático especializado no vestibular de Medicina.',
         'Seu objetivo não é dar a resposta pronta, mas guiar o aluno através de perguntas reflexivas para que ele chegue à resposta sozinho.',
         `Tópico: ${text(payload, 'topic')}`,
         `Dúvida do aluno: ${text(payload, 'question')}`,
@@ -41,7 +41,7 @@ export function buildAiPrompt(task: AiTask, payload: Payload): string {
       ].join('\n');
     case 'content-explanation':
       return [
-        'Você é o JUJU, um tutor especialista em vestibular de Medicina explicando um conteúdo diretamente (aqui a aluna quer a explicação, não perguntas socráticas).',
+        'Você é o CRIVO, um tutor especialista em vestibular de Medicina explicando um conteúdo diretamente (aqui a aluna quer a explicação, não perguntas socráticas).',
         `Tópico: ${text(payload, 'topic')} (${text(payload, 'subject')}).`,
         payload.question ? `A aluna pediu especificamente: "${text(payload, 'question')}"` : undefined,
         payload.apostilaReference
@@ -72,7 +72,7 @@ export function buildAiPrompt(task: AiTask, payload: Payload): string {
         ? `Pontos-chave esperados na resposta:\n${(payload.modelAnswer as string[]).map((item) => `- ${item}`).join('\n')}`
         : 'Primeiro resolva mentalmente a questão para determinar a resposta ou abordagem correta antes de corrigir.';
       return [
-        'Você é o JUJU, um corretor especialista em vestibular de Medicina.',
+        'Você é o CRIVO, um corretor especialista em vestibular de Medicina.',
         `Tópico: ${text(payload, 'topic')} (${text(payload, 'subject')}).`,
         board ? discursiveStructureGuidance(board) : undefined,
         '',
@@ -107,7 +107,7 @@ export function buildAiPrompt(task: AiTask, payload: Payload): string {
         payload.correctAnswer ? `Resposta correta: ${text(payload, 'correctAnswer')}` : undefined,
       ].filter(Boolean);
       return [
-        'Você é o JUJU, um tutor especialista em diagnosticar o primeiro ponto de ruptura do raciocínio de um estudante de vestibular de Medicina — não apenas apontar "errou o tópico".',
+        'Você é o CRIVO, um tutor especialista em diagnosticar o primeiro ponto de ruptura do raciocínio de um estudante de vestibular de Medicina — não apenas apontar "errou o tópico".',
         'Exemplo do nível de precisão esperado: em vez de "errou trigonometria", algo como "não reconheceu que era necessário relacionar seno/cosseno à decomposição vetorial".',
         '',
         ...evidenceLines,
@@ -123,7 +123,7 @@ export function buildAiPrompt(task: AiTask, payload: Payload): string {
     case 'error-diagnosis': {
       const account = payload.studentAccount ? text(payload, 'studentAccount') : undefined;
       return [
-        'Você é o JUJU, um tutor especialista em diagnosticar o primeiro ponto de ruptura do raciocínio de uma estudante de vestibular de Medicina — o momento exato em que o pensamento saiu do trilho, não o assunto genérico da questão.',
+        'Você é o CRIVO, um tutor especialista em diagnosticar o primeiro ponto de ruptura do raciocínio de uma estudante de vestibular de Medicina — o momento exato em que o pensamento saiu do trilho, não o assunto genérico da questão.',
         'Exemplo do nível de precisão esperado: em vez de "errou estequiometria", algo como "converteu massa em mol usando a massa molar do reagente em excesso, não a do limitante".',
         '',
         `Questão de ${text(payload, 'subject')}:`,
@@ -146,7 +146,7 @@ export function buildAiPrompt(task: AiTask, payload: Payload): string {
     }
     case 'question-explanation':
       return [
-        'Você é o JUJU, um tutor especialista em vestibular de Medicina.',
+        'Você é o CRIVO, um tutor especialista em vestibular de Medicina.',
         `Um aluno respondeu a seguinte questão de ${text(payload, 'subject')}:`,
         `"${text(payload, 'prompt')}"`,
         '',
@@ -162,7 +162,7 @@ export function buildAiPrompt(task: AiTask, payload: Payload): string {
       const board = payload.board ? text(payload, 'board') : undefined;
       const buildInstruction = BACKLOG_EXERCISE_INSTRUCTIONS[mode] ?? BACKLOG_EXERCISE_INSTRUCTIONS.solve;
       return [
-        'Você é o JUJU, um tutor especialista em vestibular de Medicina.',
+        'Você é o CRIVO, um tutor especialista em vestibular de Medicina.',
         `Tópico: ${text(payload, 'topic')} (${text(payload, 'subject')}).`,
         payload.transfer
           ? 'Esta é uma QUESTÃO DE TRANSFERÊNCIA: a aluna já corrigiu uma questão anterior sobre este mesmo tópico. Crie uma questão nova que exija aplicar o mesmo conceito num contexto ou formato diferente do anterior — não repita a mesma pergunta com números trocados.'
@@ -178,7 +178,7 @@ export function buildAiPrompt(task: AiTask, payload: Payload): string {
         ? `Informação de referência sobre a resposta correta (use isso para embasar sua correção):\n${text(payload, 'groundingAnswer')}`
         : 'Primeiro, resolva mentalmente o exercício para determinar a resposta ou abordagem correta antes de corrigir.';
       return [
-        'Você é o JUJU, um corretor especialista em vestibular de Medicina.',
+        'Você é o CRIVO, um corretor especialista em vestibular de Medicina.',
         `Tópico: ${text(payload, 'topic')} (${text(payload, 'subject')}).`,
         '',
         `Exercício proposto ao aluno:\n"${text(payload, 'exercise')}"`,
@@ -192,7 +192,7 @@ export function buildAiPrompt(task: AiTask, payload: Payload): string {
     }
     case 'discursive-feedback':
       return [
-        `Você é o JUJU, um corretor especialista em questões discursivas de 2ª fase de vestibular de Medicina (banca: ${text(payload, 'board')}).`,
+        `Você é o CRIVO, um corretor especialista em questões discursivas de 2ª fase de vestibular de Medicina (banca: ${text(payload, 'board')}).`,
         discursiveStructureGuidance(text(payload, 'board')),
         `Questão de ${text(payload, 'subject')}:\n"${text(payload, 'prompt')}"`,
         '',
@@ -203,10 +203,10 @@ export function buildAiPrompt(task: AiTask, payload: Payload): string {
         'Avalie a resposta do aluno comparando com os pontos-chave esperados E com a estrutura discursiva esperada pela banca acima. Aponte o que foi bem coberto, o que está faltando ou incompleto, erros conceituais se houver, e se a estrutura da resposta seguiu o que a banca espera — como um corretor de banca faria. Termine com uma avaliação qualitativa clara (Fraco, Mediano ou Forte). Responda em português do Brasil, de forma direta e específica, sem saudação.',
       ].join('\n');
     case 'podcast-script':
-      return `Você é o roteirista do Podcast JUJU, um podcast de revisão para vestibular de Medicina.\nEscreva um roteiro de narração (150 a 250 palavras) sobre o episódio "${text(payload, 'title')}", do tema ${text(payload, 'topic')} (${text(payload, 'subject')}).\nO texto será lido em voz alta por um narrador, então escreva em prosa corrida, tom didático e envolvente, como se estivesse explicando o assunto para o aluno durante um trajeto de carro. Não use marcações, listas ou markdown — apenas o texto puro do roteiro, em português do Brasil.`;
+      return `Você é o roteirista do Podcast Crivo, um podcast de revisão para vestibular de Medicina.\nEscreva um roteiro de narração (150 a 250 palavras) sobre o episódio "${text(payload, 'title')}", do tema ${text(payload, 'topic')} (${text(payload, 'subject')}).\nO texto será lido em voz alta por um narrador, então escreva em prosa corrida, tom didático e envolvente, como se estivesse explicando o assunto para o aluno durante um trajeto de carro. Não use marcações, listas ou markdown — apenas o texto puro do roteiro, em português do Brasil.`;
     case 'progress-insight':
       return [
-        'Você é o JUJU, um tutor especialista em vestibular de Medicina que analisa o progresso do aluno.',
+        'Você é o CRIVO, um tutor especialista em vestibular de Medicina que analisa o progresso do aluno.',
         `Domínio médio geral: ${number(payload, 'overallAverage')}/100.`,
         `Tópico mais forte: ${text(payload, 'strongest')} (o aluno já domina bem).`,
         `Tópico que mais precisa de atenção: ${text(payload, 'weakest')}.`,
@@ -216,7 +216,7 @@ export function buildAiPrompt(task: AiTask, payload: Payload): string {
       ].join('\n');
     case 'review-tip':
       return [
-        'Você é o JUJU, um tutor especialista em vestibular de Medicina.',
+        'Você é o CRIVO, um tutor especialista em vestibular de Medicina.',
         `Um aluno vai revisar agora o tópico "${text(payload, 'topic')}" (${text(payload, 'subject')}).`,
         `Domínio atual estimado: ${number(payload, 'level')}%. Dias desde a última revisão: ${number(payload, 'daysSinceReview')}.`,
         '',
@@ -224,7 +224,7 @@ export function buildAiPrompt(task: AiTask, payload: Payload): string {
       ].join('\n');
     case 'method-example':
       return [
-        'Você é o JUJU, um tutor especialista em técnicas de estudo para vestibular de Medicina.',
+        'Você é o CRIVO, um tutor especialista em técnicas de estudo para vestibular de Medicina.',
         `Técnica de estudo: ${text(payload, 'methodName')} — ${text(payload, 'methodSummary')}`,
         `Tópico do aluno para aplicar a técnica: ${text(payload, 'topic')} (${text(payload, 'subject')})`,
         '',

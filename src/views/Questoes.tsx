@@ -286,7 +286,7 @@ export default function Questoes() {
     // leitura do caderno depois.
     const usouHipotese = diagnosis !== null && !diagnosisDismissed && errorType === diagnosis.type;
     const origem = usouHipotese
-      ? 'JUJU sugeriu o diagnóstico e você confirmou'
+      ? 'CRIVO sugeriu o diagnóstico e você confirmou'
       : errorType === 'unknown'
         ? 'motivo ainda não identificado'
         : 'classificado por você';
@@ -579,7 +579,7 @@ export default function Questoes() {
                             <Stethoscope className="w-3.5 h-3.5 text-amber-400 shrink-0" />
                             <b className="text-amber-300">{ERROR_TYPE_LABELS[diagnosis.type]}</b>
                             <span className="text-[10px] text-amber-200/60">
-                              hipótese da JUJU — confirme ou troque abaixo
+                              hipótese do CRIVO — confirme ou troque abaixo
                             </span>
                           </div>
                           <p className="text-[11px] text-amber-200/90">{diagnosis.breakPoint}</p>
@@ -670,7 +670,7 @@ export default function Questoes() {
                                 <Stethoscope className="w-3.5 h-3.5" />
                                 {diagnosisFailed || diagnosisDismissed
                                   ? 'Diagnosticar de novo'
-                                  : 'Descobrir o motivo com a JUJU'}
+                                  : 'Descobrir o motivo com o CRIVO'}
                               </button>
                             </div>
                           )}
