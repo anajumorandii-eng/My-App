@@ -2178,23 +2178,23 @@
     "sections": [
       {
         "title": "Tipos de esqueleto",
-        "content": "Existem três soluções: esqueleto hidrostático, como em minhocas e cnidários, baseado em fluido sob pressão; exoesqueleto, como em artrópodes, rígido e externo, que exige mudas; e endoesqueleto, interno, como em equinodermos e vertebrados, que cresce com o animal e permite grande porte sem trocas periódicas."
+        "content": "Três tipos de esqueleto sustentam os animais, e cada um impõe limites próprios. O esqueleto hidrostático é uma cavidade cheia de líquido contra a qual a musculatura trabalha: como líquido é praticamente incompressível, comprimir uma região faz outra se alongar, e é assim que se movem anêmonas, minhocas e lesmas. Ele é barato e flexível, mas não sustenta o corpo fora d'água nem permite grande porte em terra. O exoesqueleto é externo, de quitina nos artrópodes e de carbonato de cálcio nos moluscos; protege bem e reduz a perda de água, mas não cresce junto com o animal, o que obriga às mudas, e seu peso cresce mais rápido que a força muscular, o que impõe um teto de tamanho. O endoesqueleto é interno, de origem mesodérmica, cartilaginoso ou ósseo nos vertebrados e calcário nos equinodermos; cresce junto com o corpo, dispensa mudas e permite portes muito maiores, ao custo de não oferecer proteção externa — daí a musculatura e a pele terem de assumir esse papel."
       },
       {
         "title": "Músculos e articulações",
-        "content": "O movimento resulta da contração muscular puxando ossos que funcionam como alavancas, articulados entre si. Os músculos trabalham em pares antagônicos, como bíceps e tríceps, porque só produzem força ao contrair, nunca ao empurrar. Tendões ligam músculo a osso e ligamentos ligam osso a osso."
+        "content": "O esqueleto humano tem cerca de 206 ossos e se divide em axial, com crânio, coluna, costelas e esterno, e apendicular, com membros e cinturas escapular e pélvica. O osso é tecido conjuntivo vivo, vascularizado e em constante remodelação: os osteoblastos depositam matriz, os osteócitos a mantêm e os osteoclastos a reabsorvem — equilíbrio regulado por paratormônio e calcitonina, e é por isso que o osso funciona como reserva de cálcio do organismo. As articulações classificam-se pela mobilidade: sinartroses são imóveis, como as suturas do crânio; anfiartroses são semimóveis, como as que unem as vértebras por discos de cartilagem; diartroses são móveis, como joelho e ombro, com cápsula, líquido sinovial e cartilagem articular. Os músculos se prendem aos ossos por tendões, e os ossos entre si por ligamentos — trocar os dois é erro frequente. E os músculos trabalham em pares antagônicos: o bíceps flexiona o antebraço enquanto o tríceps relaxa, e vice-versa, porque músculo só puxa, nunca empurra."
       },
       {
         "title": "Contração muscular",
-        "content": "A contração ocorre pelo deslizamento dos filamentos de actina sobre os de miosina, num processo que depende de cálcio e consome ATP. O impulso nervoso libera cálcio do retículo sarcoplasmático, expondo os sítios de ligação. A rigidez cadavérica se explica pela falta de ATP para desfazer as pontes formadas."
+        "content": "A contração muscular é explicada pelo modelo dos filamentos deslizantes. A fibra muscular esquelética é multinucleada e estriada, formada por miofibrilas divididas em sarcômeros, a unidade contrátil, delimitada por duas linhas Z. Dentro dela há filamentos finos de actina e grossos de miosina. O impulso nervoso chega à junção neuromuscular, a acetilcolina despolariza a fibra e o retículo sarcoplasmático libera cálcio; o cálcio se liga à troponina, que desloca a tropomiosina e expõe os sítios de ligação na actina. As cabeças de miosina então se prendem à actina, giram e puxam o filamento fino em direção ao centro do sarcômero — o golpe de força —, e o ATP é necessário justamente para soltar a cabeça e reiniciar o ciclo. Note a consequência: os filamentos não encurtam, eles deslizam uns sobre os outros, e o que encurta é o sarcômero. Como o ATP é preciso para desfazer a ponte, sua ausência após a morte mantém as cabeças presas — é essa a explicação do rigor mortis."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Dizer que o músculo empurra o osso é erro: ele apenas traciona ao encurtar. Outro deslize é confundir tendão com ligamento. E imaginar que o exoesqueleto é vantajoso em todos os aspectos, quando ele limita o tamanho e exige mudas que deixam o animal vulnerável."
+        "content": "Trocar tendão com ligamento é o erro mais comum: tendão liga músculo a osso, ligamento liga osso a osso. O segundo é dizer que o músculo empurra o osso — músculo só traciona, e é por isso que ele precisa de um antagonista para o movimento inverso. O terceiro é afirmar que a actina e a miosina encurtam durante a contração: elas deslizam, e o que encurta é o sarcômero. O quarto é situar o gasto de ATP no golpe de força, quando ele é necessário para desfazer a ponte entre miosina e actina — inversão que o rigor mortis demonstra. O quinto é dizer que o osso é tecido morto ou inerte: é vivo, vascularizado, inervado e em remodelação permanente. O sexto é confundir os três tipos de músculo: o esquelético é estriado e voluntário, o cardíaco é estriado e involuntário, e o liso é não estriado e involuntário. E cuidado com o exoesqueleto: dizer que ele é vantajoso por ser mais resistente ignora o custo das mudas e o teto de tamanho que ele impõe."
       },
       {
         "title": "Pratique e confira",
-        "content": "Por que músculos trabalham em pares antagônicos? Responda antes de conferir: como só geram força ao contrair, é preciso um músculo para flexionar e outro para estender a mesma articulação. Agora explique a rigidez cadavérica: sem ATP, as pontes entre actina e miosina não se desfazem e o músculo permanece contraído."
+        "content": "Por que o rigor mortis acontece, e o que ele demonstra sobre o papel do ATP na contração? Responda antes de conferir. Após a morte, a respiração celular cessa e o ATP se esgota; ao mesmo tempo, o retículo sarcoplasmático perde a capacidade de bombear cálcio de volta, e o cálcio vazado mantém os sítios da actina expostos. As cabeças de miosina se ligam à actina, mas sem ATP não conseguem se soltar — e a musculatura trava rígida. Isso demonstra que o ATP não é necessário para fazer a ponte, e sim para desfazê-la: um músculo sem energia não fica relaxado, fica travado. O rigor cede depois de horas, quando enzimas da própria decomposição degradam as proteínas contráteis. Agora um segundo: explique por que um animal terrestre com exoesqueleto não pode atingir o porte de um mamífero de grande porte. A resposta combina três limites — o exoesqueleto precisa engrossar desproporcionalmente à medida que o volume cresce, ficando pesado demais; a muda deixaria o animal grande sem sustentação e vulnerável por tempo longo demais; e a respiração traqueal, por difusão, perde eficiência com a distância."
       }
     ],
     "recall": {
@@ -2225,7 +2225,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Biologia",
@@ -2233,23 +2234,23 @@
     "sections": [
       {
         "title": "Características gerais",
-        "content": "Fungos são eucariontes heterotróficos com parede celular de quitina e nutrição por absorção: liberam enzimas no substrato e absorvem os nutrientes digeridos externamente. O corpo é formado por hifas que constituem o micélio, e a reserva energética é glicogênio, como nos animais, e não amido, como nos vegetais."
+        "content": "Fungos são eucariontes heterótrofos que se alimentam por absorção: lançam enzimas digestivas no substrato, digerem a matéria orgânica fora do corpo e absorvem os nutrientes já quebrados — digestão extracorpórea, e é ela que explica a forma do corpo. O corpo é o micélio, uma trama de filamentos chamados hifas, cuja ramificação maximiza a superfície de contato com o substrato; as hifas podem ser septadas, com paredes transversais perfuradas, ou cenocíticas, sem septos e com muitos núcleos num citoplasma contínuo. A parede celular é de quitina, o mesmo polissacarídeo do exoesqueleto dos artrópodes — e não de celulose, o que é um dos critérios que separam fungos de plantas. A reserva energética é glicogênio, como nos animais, e não amido. São aclorofilados e, portanto, jamais fotossintetizantes. A filogenia molecular mostra que fungos estão mais próximos dos animais do que das plantas, o que a coincidência de quitina e glicogênio já sugeria."
       },
       {
         "title": "Reprodução e diversidade",
-        "content": "Reproduzem-se de forma assexuada por esporos, brotamento e fragmentação, e sexuadamente com fusão de hifas. O grupo inclui leveduras unicelulares, bolores e cogumelos. As leveduras realizam fermentação alcoólica, base da produção de pão, cerveja e vinho, e são modelo clássico de estudo em biologia celular."
+        "content": "A reprodução pode ser assexuada, por esporos produzidos por mitose, por brotamento — como nas leveduras — ou por fragmentação do micélio; e sexuada, por fusão de hifas de linhagens compatíveis, com formação de esporos por meiose. Os grupos clássicos se organizam justamente pela estrutura que produz esses esporos sexuados. Zigomicetos, como o Rhizopus, o bolor do pão, têm hifas cenocíticas e formam zigósporo. Ascomicetos formam esporos dentro de ascos e reúnem as leveduras (Saccharomyces cerevisiae), o Penicillium, de onde veio a penicilina descoberta por Fleming em 1928, e as trufas. Basidiomicetos formam esporos em basídios e são os cogumelos e orelhas-de-pau — o que se chama popularmente de cogumelo é apenas o corpo de frutificação, a estrutura reprodutiva; o organismo em si é o micélio, que pode se estender por hectares no solo. Deuteromicetos era o grupo dos fungos sem reprodução sexuada conhecida, hoje redistribuídos conforme a genética os esclarece."
       },
       {
         "title": "Relações ecológicas",
-        "content": "Fungos são decompositores essenciais, reciclando matéria orgânica junto com as bactérias. Formam micorrizas com raízes de plantas, ampliando muito a absorção de água e minerais em troca de açúcares, e liquens com algas ou cianobactérias, associação pioneira em ambientes hostis. Alguns são parasitas, causando micoses e doenças em lavouras."
+        "content": "Ecologicamente, os fungos são decompositores de primeira ordem: junto com as bactérias, devolvem ao ambiente o carbono, o nitrogênio e os minerais presos na matéria orgânica morta, e são praticamente os únicos capazes de degradar a lignina da madeira. Sem eles a ciclagem de nutrientes pararia e os restos vegetais se acumulariam. Formam também duas associações mutualísticas obrigatórias em prova. As micorrizas unem hifas às raízes de plantas: o fungo aumenta enormemente a superfície de absorção de água e de fósforo e recebe açúcares da planta — estima-se que a maioria das plantas terrestres dependa delas, e sua presença foi condição para a conquista do ambiente terrestre pelos vegetais. Os liquens unem um fungo a uma alga ou cianobactéria: o fungo oferece estrutura, umidade e proteção, e o fotossintetizante oferece matéria orgânica; colonizam rocha nua, são pioneiros na sucessão ecológica e, por absorverem diretamente do ar, servem de bioindicadores de poluição atmosférica."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Classificar fungo como vegetal por ser fixo e ter parede celular é o erro conceitual mais comum: ele não faz fotossíntese e sua parede é de quitina. Outro deslize é dizer que fungos digerem internamente. E confundir micorriza, que é mutualismo com raiz, com micose, que é parasitismo em animais."
+        "content": "Chamar fungo de planta sem clorofila é o erro de partida: além da ausência de clorofila, a parede é de quitina e não de celulose, a reserva é glicogênio e não amido, e a nutrição é por absorção. O segundo é dizer que o cogumelo é o fungo inteiro, quando é apenas o corpo de frutificação de um micélio muito maior. O terceiro é afirmar que fungo é procarionte — é eucarionte, com núcleo organizado. O quarto é chamar líquen de organismo único: é uma associação entre duas espécies. O quinto é dizer que a micorriza prejudica a planta por consumir seus açúcares, quando a relação é mutualística e a planta ganha muito mais em absorção mineral. O sexto é atribuir aos fungos a fixação de nitrogênio atmosférico, que é feita por bactérias. E cuidado com a digestão: dizer que o fungo engloba o alimento confunde-o com um protozoário — ele digere fora e absorve depois."
       },
       {
         "title": "Pratique e confira",
-        "content": "Por que os fungos não são classificados como plantas? Responda antes de conferir: são heterotróficos, têm parede de quitina e armazenam glicogênio, enquanto plantas são autotróficas, com parede de celulose e reserva de amido. Agora explique a vantagem da micorriza para a planta: aumenta a superfície de absorção de água e nutrientes minerais."
+        "content": "Por que a maioria das plantas terrestres cresce melhor com micorrizas, se ela perde açúcares para o fungo? Responda antes de conferir. Porque o que ela recebe vale mais do que o que paga. As hifas são finíssimas e se ramificam por um volume de solo muito maior do que as raízes alcançam, aumentando a superfície de absorção em ordens de grandeza; e são especialmente eficientes na captação de fósforo, que se move muito pouco no solo e se esgota rapidamente na zona imediatamente ao redor da raiz. O custo em açúcares é pequeno diante do ganho em água e nutrientes minerais, e é por isso que a associação é encontrada na maioria das espécies vegetais e é apontada como condição da própria conquista do ambiente terrestre pelas plantas. Agora um segundo: por que os liquens são usados como bioindicadores de poluição do ar? A resposta é a via de absorção: sem raízes e sem cutícula impermeável, eles captam água e sais diretamente da atmosfera, e junto vêm os poluentes dissolvidos, que se acumulam nos tecidos — de modo que a ausência de liquens numa região é sinal de ar comprometido, sobretudo por dióxido de enxofre."
       }
     ],
     "recall": {
@@ -2279,7 +2280,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Biologia",
@@ -2287,23 +2289,23 @@
     "sections": [
       {
         "title": "Determinação do sexo e herança ligada ao X",
-        "content": "Na espécie humana, o sistema é XY: mulheres XX e homens XY. Como o cromossomo Y é pequeno, muitos genes do X não têm par no homem, que é hemizigoto. Por isso características recessivas ligadas ao X, como daltonismo e hemofilia, se manifestam muito mais em homens, bastando um único alelo alterado."
+        "content": "No sistema XY dos mamíferos, a fêmea é XX e o macho é XY, e o sexo do descendente é determinado pelo gameta masculino, que pode carregar X ou Y — daí a proporção esperada de 1:1. O gene SRY, no braço curto do Y, desencadeia a diferenciação testicular. O cromossomo Y é pequeno e pobre em genes; o X é grande e carrega centenas de genes sem correspondência no Y, e é essa assimetria que produz toda a genética ligada ao sexo. Homens são hemizigotos para esses genes: têm um único alelo, que se manifesta sempre, sem possibilidade de dominância ou recessividade. Mulheres têm dois e podem ser portadoras. Daí a consequência que a banca cobra: características recessivas ligadas ao X — daltonismo e hemofilia são os exemplos obrigatórios — são muito mais frequentes em homens. Outros sistemas existem: nas aves e nas borboletas, o padrão é ZW, com a fêmea sendo ZW e o macho ZZ, de modo que ali é o gameta feminino que determina o sexo."
       },
       {
         "title": "Padrão nos heredogramas",
-        "content": "Numa herança recessiva ligada ao X, homens afetados costumam ter mãe portadora, e todas as filhas de um homem afetado são portadoras obrigatórias, pois recebem dele o único X. A doença raramente aparece em mulheres, exigindo pai afetado e mãe ao menos portadora. Reconhecer esse padrão é o que identifica o tipo de herança no heredograma."
+        "content": "O padrão de um heredograma de herança recessiva ligada ao X tem marcas reconhecíveis. Afetados são predominantemente homens. Um homem afetado nunca transmite a condição aos filhos homens, porque a eles ele passa o Y — o X dele vai para todas as filhas, que se tornam obrigatoriamente portadoras. A condição salta gerações pelo lado feminino: aparece no avô materno, atravessa a mãe portadora e reaparece no neto. Uma mulher afetada tem necessariamente pai afetado e mãe portadora ou afetada, e todos os seus filhos homens serão afetados, porque só há esse X a transmitir. Esse último ponto é o teste mais rápido de leitura: mãe afetada com filho homem normal exclui herança recessiva ligada ao X. Vale ainda lembrar a inativação do X, ou corpúsculo de Barr: em cada célula somática feminina um dos X é inativado ao acaso, o que torna a mulher um mosaico — e é isso que explica o padrão de manchas da gata de pelagem tricolor, que por isso é quase sempre fêmea."
       },
       {
         "title": "Herança restrita e influenciada pelo sexo",
-        "content": "A herança restrita ao sexo envolve genes do Y, transmitidos apenas de pai para filho, como a hipertricose auricular. A herança influenciada pelo sexo ocorre em autossomos, mas o mesmo genótipo se expressa de forma diferente em cada sexo, como na calvície hereditária, dominante em homens e recessiva em mulheres."
+        "content": "Duas categorias vizinhas costumam ser confundidas com a herança ligada ao sexo, e a distinção é conceitual. Herança restrita ao sexo, ou holândrica, é a de genes situados na porção exclusiva do Y: manifesta-se apenas em homens e passa integralmente de pai para todos os filhos homens, nunca para filhas — a hipertricose auricular é o exemplo citado. Herança influenciada pelo sexo envolve genes autossômicos, presentes em ambos os sexos, cuja dominância se inverte conforme o ambiente hormonal: a calvície hereditária é dominante no homem e recessiva na mulher, de modo que o heterozigoto é calvo se homem e não calvo se mulher. Herança limitada pelo sexo, por fim, é a de genes autossômicos que só se expressam num dos sexos por razões anatômicas ou fisiológicas, como a produção de leite. O ponto que separa tudo isso: ligada ao sexo é questão de localização do gene no cromossomo sexual; influenciada e limitada são questões de expressão de genes autossômicos."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Chamar toda herança que difere entre os sexos de ligada ao sexo confunde três categorias distintas. Outro erro é dizer que o pai transmite o daltonismo ao filho homem: ele transmite o Y ao filho, então o X vem sempre da mãe. E esquecer que a mulher precisa de dois alelos para manifestar a condição recessiva."
+        "content": "Dizer que a mãe determina o sexo do filho é o erro de partida em humanos: ela só tem X para dar, e quem define é o espermatozoide. O segundo é generalizar isso para todos os animais, esquecendo que em aves e borboletas, no sistema ZW, é o gameta feminino que determina. O terceiro é dizer que um homem afetado por daltonismo transmite a condição ao filho homem — ele transmite o Y ao filho, e o X afetado vai para todas as filhas, que ficam portadoras. O quarto é chamar de ligada ao sexo uma característica que é apenas influenciada pelo sexo, como a calvície, cujo gene é autossômico. O quinto é dizer que a mulher portadora tem metade da doença: ela é fenotipicamente normal para a maioria dessas condições. O sexto é supor que o corpúsculo de Barr é o X inativado sempre o de origem paterna, quando a inativação é aleatória, célula a célula. E cuidado com o gato tricolor: o macho tricolor existe, mas é raro e em geral tem constituição XXY."
       },
       {
         "title": "Pratique e confira",
-        "content": "Um homem daltônico e uma mulher normal não portadora terão filhos daltônicos? Responda antes de conferir: nenhum filho será daltônico, mas todas as filhas serão portadoras, porque recebem o X alterado do pai. Agora explique por que o daltonismo é mais comum em homens: eles têm um único X, e um só alelo alterado já manifesta a condição."
+        "content": "Um homem daltônico casa-se com uma mulher de visão normal cujo pai era daltônico. Qual a probabilidade de terem uma filha daltônica? Responda antes de conferir. O homem é X^d Y. A mulher tem visão normal mas seu pai era daltônico, então ela recebeu dele um X^d obrigatoriamente — é portadora, X^D X^d. O cruzamento X^d Y × X^D X^d dá, entre as filhas, metade X^D X^d (portadoras, normais) e metade X^d X^d (daltônicas); entre os filhos homens, metade X^D Y (normais) e metade X^d Y (daltônicos). A probabilidade de uma criança ser menina e daltônica é 1/4; de uma filha, considerada apenas entre as meninas, é 1/2. Note por que a filha pode ser afetada aqui: o pai é afetado e a mãe é portadora, as duas condições exigidas. Agora um segundo: numa família, o avô materno é hemofílico, a mãe e o pai são normais, e um dos netos homens é hemofílico. Explique o caminho do alelo. A resposta segue o X: o avô passou seu único X, afetado, à filha, que se tornou portadora sem manifestar; ela transmitiu esse X a um dos filhos homens, que, sendo hemizigoto, manifestou a condição."
       }
     ],
     "recall": {
@@ -2334,7 +2336,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Biologia",
@@ -2342,23 +2345,23 @@
     "sections": [
       {
         "title": "Tecidos meristemáticos",
-        "content": "Os meristemas são formados por células indiferenciadas capazes de se dividir. Os apicais promovem o crescimento em comprimento, na ponta de raízes e caules; os laterais, câmbio e felogênio, promovem o crescimento em espessura, presente sobretudo em eudicotiledôneas e gimnospermas, o que explica os anéis de crescimento das árvores."
+        "content": "Os meristemas são os tecidos de células indiferenciadas, de parede fina e alta capacidade de divisão, e é deles que todos os demais derivam. Dividem-se por posição e efeito. Os meristemas primários — apicais, nas pontas de raiz e caule — promovem o crescimento em comprimento; o meristema apical caulinar origina a protoderme, o meristema fundamental e o procâmbio, que darão epiderme, parênquimas e tecidos condutores primários. Os meristemas secundários promovem o crescimento em espessura e existem sobretudo em gimnospermas e dicotiledôneas: o câmbio vascular produz xilema secundário para dentro e floema secundário para fora, e é a atividade sazonal dele que desenha os anéis de crescimento do tronco, usados para estimar idade e reconstruir clima. O felogênio, ou câmbio da casca, produz o súber para fora, tecido morto e impermeabilizado por suberina que substitui a epiderme nos caules velhos — é dele que sai a cortiça. Monocotiledôneas, sem câmbio, não engrossam por esse mecanismo."
       },
       {
         "title": "Tecidos de revestimento e sustentação",
-        "content": "A epiderme reveste os órgãos jovens e apresenta estômatos, tricomas e cutícula; a periderme a substitui nos órgãos que engrossam. A sustentação vem do colênquima, formado por células vivas e flexíveis em partes jovens, e do esclerênquima, com células mortas e paredes lignificadas, que dá rigidez definitiva."
+        "content": "A epiderme é o tecido de revestimento primário: uma camada de células vivas, justapostas e sem cloroplastos, recoberta por cutícula de cutina, que reduz a perda de água. Nela ficam os anexos epidérmicos. Os estômatos, formados por duas células-guarda reniformes — estas sim com cloroplastos — delimitam o ostíolo, poro por onde entram CO2 e saem vapor d'água e O2; abrem quando as células-guarda ficam túrgidas pela entrada de potássio seguida de água, e fecham na desidratação, sob ação do ácido abscísico. Ficam em maior número na face inferior da folha, protegida da insolação direta, e em plantas aquáticas flutuantes ocorre o inverso. Os tricomas, ou pelos, reduzem a transpiração, refletem luz e defendem contra herbívoros. Como sustentação, o colênquima é vivo, com parede desigualmente espessada por celulose, e sustenta órgãos ainda em crescimento; o esclerênquima é morto na maturidade, com parede uniformemente espessada e lignificada, e sustenta partes que já pararam de crescer."
       },
       {
         "title": "Tecidos condutores",
-        "content": "O xilema conduz água e sais minerais da raiz às folhas, é formado por células mortas e resiste a grandes tensões. O floema conduz a seiva elaborada, rica em açúcares, em ambos os sentidos, e é formado por células vivas, os elementos de tubo crivado, auxiliadas pelas células companheiras."
+        "content": "Os tecidos condutores são dois, e a comparação entre eles é o alvo mais frequente. O xilema, ou lenho, conduz seiva bruta — água e sais minerais — da raiz às folhas, em sentido único e ascendente; suas células condutoras, elementos de vaso e traqueídes, são mortas na maturidade, ocas e com parede lignificada, o que lhes dá resistência à tensão. O transporte não gasta energia: a transpiração nas folhas gera tensão que se transmite por toda a coluna de água graças à coesão entre as moléculas e à adesão às paredes do vaso — a teoria da coesão-tensão. O floema, ou líber, conduz seiva elaborada, rica em sacarose, de fonte para dreno, em sentido bidirecional; suas células, os elementos de tubo crivado, são vivas e anucleadas na maturidade, dependentes das células companheiras. Na raiz, xilema e floema ficam alternados num cilindro central; no caule das dicotiledôneas, formam feixes colaterais com o xilema voltado para dentro e o floema para fora, separados pelo câmbio."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Dizer que o floema conduz apenas de cima para baixo é impreciso: o transporte vai das fontes para os drenos, e um dreno pode ser uma raiz ou um fruto em qualquer posição. Outro erro é atribuir células vivas ao xilema maduro. E confundir colênquima com esclerênquima quanto à flexibilidade."
+        "content": "Dizer que o xilema é vivo é o erro mais frequente: seus elementos condutores são mortos, ocos e lignificados, e é justamente isso que permite a coluna contínua de água sob tensão. O segundo é atribuir a subida da seiva bruta à pressão da raiz como mecanismo principal, quando a explicação central é a transpiração foliar. O terceiro é dizer que o estômato abre quando a planta precisa de água: ele abre para a entrada de CO2, e a perda de água é o custo — em déficit hídrico ele fecha, mesmo ao preço de reduzir a fotossíntese. O quarto é confundir colênquima com esclerênquima; guarde pela vitalidade e pela lignina. O quinto é dizer que monocotiledônea não cresce em espessura de jeito nenhum, quando o que falta é o câmbio vascular, embora algumas tenham espessamento por outros mecanismos. O sexto é atribuir cloroplastos a toda a epiderme, quando só as células-guarda os têm. E cuidado com os anéis de crescimento: eles refletem a sazonalidade do câmbio, e em clima sem estações marcadas podem não se formar."
       },
       {
         "title": "Pratique e confira",
-        "content": "Por que o xilema pode ser formado por células mortas e o floema não? Responda antes de conferir: o xilema é um sistema passivo de tubos sob tensão, enquanto o floema exige gasto de energia para carregar açúcares, o que requer células vivas. Agora diga qual tecido produz os anéis de crescimento: o câmbio, meristema lateral."
+        "content": "Por que os estômatos ficam em maior número na face inferior da folha, e por que nas plantas aquáticas de folhas flutuantes o padrão se inverte? Responda antes de conferir. A face inferior é sombreada e mais fria, o que reduz a evaporação através do ostíolo: concentrar os estômatos ali permite a entrada de CO2 com menor perda de água. Numa folha flutuante, a face inferior está em contato com a água, onde a troca gasosa com a atmosfera é impossível, então os estômatos se concentram na face superior, exposta ao ar — a posição é ditada pelo lado em que o CO2 atmosférico está disponível. Agora um segundo: explique por que uma árvore morre quando se remove um anel completo de casca em torno do tronco, mesmo continuando a receber água. A resposta usa a posição dos tecidos: o floema está na casca e o xilema é mais interno. A água continua subindo pelo xilema intacto e as folhas seguem verdes por semanas; o que se interrompe é a descida da seiva elaborada, de modo que as raízes, que não fotossintetizam, esgotam suas reservas, param de respirar e morrem — só então a absorção cessa e a copa murcha."
       }
     ],
     "recall": {
@@ -2389,7 +2392,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Biologia",
@@ -2397,23 +2401,23 @@
     "sections": [
       {
         "title": "Características dos cordados",
-        "content": "Todo cordado apresenta, em alguma fase da vida, quatro características: notocorda, tubo nervoso dorsal oco, fendas faringianas e cauda pós-anal. Nos vertebrados, a notocorda é substituída pela coluna vertebral, e as fendas faringianas dão origem a brânquias ou, nos tetrápodes, a estruturas da região da cabeça e do pescoço."
+        "content": "Quatro características definem o filo dos cordados, e todas aparecem em algum momento do desenvolvimento, ainda que não persistam no adulto. A notocorda é um bastão flexível de sustentação dorsal, substituída pela coluna vertebral nos vertebrados, onde persiste apenas como o núcleo pulposo dos discos intervertebrais. O tubo nervoso dorsal é oco e único, situado acima do tubo digestório — o oposto do cordão nervoso ventral e maciço dos anelídeos e artrópodes. As fendas faringianas surgem na parede da faringe e funcionam como brânquias nos aquáticos; nos tetrápodes elas aparecem no embrião e se remodelam em estruturas da orelha média, das tonsilas e das paratireoides, e é essa presença embrionária que serve de evidência de ancestralidade comum. A cauda pós-anal é uma extensão do corpo além do ânus. Os cordados incluem os protocordados — anfioxo e ascídias, sem coluna vertebral — e os vertebrados. Todos são deuterostômios, com celoma enterocélico, o que os aproxima dos equinodermos."
       },
       {
         "title": "Peixes cartilaginosos e ósseos",
-        "content": "Os condrictes, como tubarões e raias, têm esqueleto cartilaginoso, escamas placoides, ausência de bexiga natatória e fendas branquiais expostas. Os osteíctes têm esqueleto ósseo, opérculo cobrindo as brânquias e bexiga natatória, que ajusta a flutuabilidade. Ambos são pecilotérmicos e têm circulação simples e completa."
+        "content": "Os peixes dividem-se em dois grandes grupos com diferenças que a banca cobra ponto a ponto. Os condrictes, ou cartilaginosos, são tubarões, raias e quimeras: esqueleto de cartilagem, pele revestida de escamas placoides ásperas, ausência de bexiga natatória — o que os obriga a nadar continuamente ou a contar com um fígado enorme e rico em óleo para reduzir a densidade —, boca ventral, fendas branquiais sem opérculo e fecundação interna, com formas ovíparas, ovovivíparas e vivíparas. Os osteíctes, ou ósseos, formam a maioria: esqueleto ossificado, escamas ciclóides ou ctenoides recobertas de muco, brânquias protegidas por opérculo e bexiga natatória, órgão cheio de gás cuja regulação de volume permite estabilizar a flutuação sem gasto muscular — inovação que libera energia e é apontada como fator do enorme sucesso do grupo. A fecundação é em geral externa, com grande número de ovos. Ambos têm circulação simples e fechada, com coração de duas cavidades por onde passa apenas sangue venoso."
       },
       {
         "title": "Osmorregulação",
-        "content": "Peixes marinhos ósseos perdem água por osmose e bebem água do mar, excretando sal pelas brânquias e produzindo pouca urina concentrada. Os de água doce ganham água e produzem muita urina diluída, absorvendo sais ativamente. Os tubarões retêm ureia para elevar a concentração interna e reduzir a perda de água."
+        "content": "A osmorregulação separa os peixes por ambiente, e o raciocínio é o mesmo da osmose: a água vai para onde há mais soluto. O peixe ósseo de água doce vive em meio hipotônico em relação a seus líquidos corporais: ele ganha água por osmose através das brânquias e perde sais. A resposta é não beber água, produzir urina muito abundante e bem diluída, e captar sais ativamente pelas brânquias. O peixe ósseo marinho vive em meio hipertônico: perde água e ganha sais. A resposta é a oposta — bebe água do mar continuamente, produz pouca urina e concentrada, e excreta o excesso de sal ativamente pelas brânquias, com gasto de ATP. Os condrictes marinhos resolvem o problema por outra via: retêm ureia e óxido de trimetilamina no sangue, elevando sua osmolaridade até próximo ou ligeiramente acima da água do mar, de modo que quase não perdem água por osmose — e eliminam sal pela glândula retal. É por isso que a carne do tubarão tem cheiro de amônia ao se decompor."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Dizer que o tubarão tem opérculo é erro: as fendas branquiais são expostas. Outro deslize é chamar a circulação dos peixes de dupla, quando é simples: o sangue passa uma única vez pelo coração a cada volta completa. E confundir as estratégias osmorregulatórias de água doce e marinha."
+        "content": "Dizer que o peixe de água doce bebe muita água é o erro mais frequente: ele já recebe água em excesso por osmose e não bebe; quem bebe é o marinho. O segundo é afirmar que todo peixe tem bexiga natatória, quando os cartilaginosos não têm. O terceiro é dizer que a notocorda está presente em todos os cordados adultos: na maioria dos vertebrados ela é substituída pela coluna durante o desenvolvimento. O quarto é confundir o tubo nervoso dorsal e oco dos cordados com o cordão ventral e maciço dos invertebrados. O quinto é dizer que o coração do peixe bombeia sangue arterial, quando pelas duas cavidades passa apenas sangue venoso, que segue às brânquias para ser oxigenado. O sexto é chamar as fendas faringianas do embrião humano de brânquias — elas são homólogas, mas se remodelam em outras estruturas. E cuidado com o tubarão: ele não é um peixe primitivo por ter cartilagem; a cartilagem é uma condição derivada e vantajosa, por ser leve e flexível."
       },
       {
         "title": "Pratique e confira",
-        "content": "Por que um peixe de água doce produz muita urina diluída? Responda antes de conferir: o meio é hipotônico em relação ao corpo, então ele ganha água por osmose e precisa eliminá-la, retendo sais. Agora cite duas características que todo cordado apresenta em alguma fase: notocorda e tubo nervoso dorsal oco."
+        "content": "Por que um peixe de água doce colocado na água do mar morre desidratado, se está cercado de água? Responda antes de conferir. Porque a água do mar é hipertônica em relação aos líquidos corporais dele, que evoluíram para um meio hipotônico: a água sai das células e do sangue por osmose através das brânquias, superfície fina e permeável, e ele não tem os mecanismos do peixe marinho — não bebe água, e suas brânquias estão adaptadas a captar sais, não a excretá-los. O rim, ajustado para produzir urina abundante e diluída, agrava a perda. O resultado é desidratação em meio líquido. Agora um segundo: explique por que o tubarão praticamente não precisa gastar energia para osmorregular no mar, enquanto o peixe ósseo marinho gasta o tempo todo. A resposta é a estratégia: o tubarão retém ureia e óxido de trimetilamina no sangue até igualar ou superar levemente a osmolaridade da água, anulando o gradiente e, com ele, a perda de água — e o excesso de sal sai pela glândula retal; o peixe ósseo mantém o sangue bem menos concentrado que o mar, então luta contra um gradiente permanente, bebendo água e bombeando sal ativamente pelas brânquias."
       }
     ],
     "recall": {
@@ -2444,7 +2448,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Biologia",
@@ -2452,23 +2457,23 @@
     "sections": [
       {
         "title": "Níveis de organização",
-        "content": "A ecologia estuda as relações entre os seres vivos e o ambiente, organizadas em níveis: população reúne indivíduos da mesma espécie numa área; comunidade reúne populações diferentes; ecossistema soma a comunidade ao meio físico; e biosfera engloba todos os ecossistemas. Nomear corretamente o nível é o primeiro passo em qualquer questão."
+        "content": "A ecologia se organiza em níveis encaixados, e nomeá-los com precisão é o primeiro passo de quase toda questão. Espécie é o conjunto de organismos capazes de se cruzar e gerar descendentes férteis. População é o conjunto de indivíduos da mesma espécie numa área e num momento. Comunidade, ou biocenose, é o conjunto de todas as populações que convivem nessa área. Ecossistema é a comunidade somada ao ambiente físico e químico, o biótopo, com as interações entre eles. Bioma é o conjunto de ecossistemas de fisionomia semelhante numa grande região. Biosfera é o conjunto de todas as regiões do planeta habitadas por seres vivos. Dois conceitos completam o quadro e são o alvo predileto das pegadinhas: hábitat é o lugar onde a espécie vive, o endereço; nicho ecológico é o conjunto do papel que ela desempenha — o que come, de quem é comida, quando está ativa, como se reproduz, que condições tolera. Duas espécies podem partilhar o hábitat, mas nunca o nicho completo de forma indefinida."
       },
       {
         "title": "Cadeias e teias alimentares",
-        "content": "Produtores fixam energia por fotossíntese ou quimiossíntese; consumidores obtêm energia de outros organismos; decompositores reciclam a matéria orgânica. Cadeia é uma sequência linear, teia é o conjunto de cadeias interligadas. Nível trófico é a posição na cadeia, e o mesmo organismo pode ocupar níveis diferentes em cadeias distintas."
+        "content": "As cadeias alimentares descrevem a transferência de matéria e energia por níveis tróficos: produtores, autótrofos que fixam energia; consumidores primários, herbívoros; consumidores secundários e terciários, carnívoros; e decompositores, que atuam sobre todos os níveis. As setas apontam sempre no sentido do fluxo de energia, ou seja, de quem é comido para quem come — desenhar a seta ao contrário é erro clássico. Na natureza, porém, cadeias isoladas praticamente não existem: o que há são teias alimentares, redes em que a mesma espécie ocupa níveis diferentes conforme o que está comendo. O ser humano é o exemplo mais usado: comendo alface é consumidor primário; comendo boi, secundário; comendo um peixe que comeu outro peixe, terciário. A consequência ecológica das teias é a estabilidade: quanto mais conexões alternativas, menor o impacto de perder uma espécie; uma cadeia linear é frágil, porque a remoção de um elo interrompe tudo o que vem acima."
       },
       {
         "title": "Fluxo de energia e pirâmides",
-        "content": "A energia entra pelos produtores e se dissipa ao longo dos níveis, com cerca de 10% de transferência entre um nível e o seguinte, o que limita o comprimento das cadeias. O fluxo de energia é unidirecional, enquanto a matéria é reciclada. As pirâmides de energia nunca se invertem, mas as de número e de biomassa podem."
+        "content": "A energia flui em sentido único e se dissipa; a matéria cicla. Essa assimetria é o eixo do tema. A cada transferência entre níveis tróficos, cerca de 90% da energia se perde — como calor na respiração, em partes não ingeridas e não assimiladas —, e apenas cerca de 10% se incorpora ao nível seguinte. É a regra dos 10%, e dela decorrem duas conclusões: cadeias raramente passam de quatro ou cinco níveis, porque não sobra energia para sustentar mais um; e é energeticamente muito mais eficiente alimentar uma população humana com grãos do que com carne. As pirâmides ecológicas representam isso graficamente. A de energia é sempre ereta, sem exceção, porque a perda é uma imposição termodinâmica. A de número pode se inverter, como numa árvore que sustenta milhares de insetos. A de biomassa também pode se inverter, tipicamente em ambientes aquáticos, onde o fitoplâncton tem biomassa instantânea menor que a dos consumidores, mas se renova rapidamente — alta produtividade com pouca massa presente."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Chamar decompositores de consumidores primários é erro de nível trófico. Outro é dizer que a energia é reciclada no ecossistema, quando ela se dissipa como calor e precisa ser reposta pelo Sol. E confundir hábitat, que é o endereço, com nicho ecológico, que é o conjunto de papéis e exigências da espécie."
+        "content": "Confundir hábitat com nicho é o erro mais cobrado: um é endereço, o outro é profissão. O segundo é desenhar as setas da cadeia no sentido de quem come para quem é comido, invertendo o fluxo de energia. O terceiro é dizer que a pirâmide de energia pode se inverter — ela nunca inverte; quem pode são a de número e a de biomassa. O quarto é situar os decompositores no fim da cadeia como se fossem o último nível trófico, quando atuam sobre todos eles. O quinto é chamar de produtor qualquer organismo verde, esquecendo que produtores incluem também os quimiossintetizantes das fontes hidrotermais. O sexto é dizer que a energia cicla no ecossistema: ela entra como luz, atravessa os níveis e sai como calor; quem cicla é a matéria. E cuidado com a regra dos 10%: ela é uma aproximação didática, e a eficiência real varia bastante entre ecossistemas — o que não varia é a direção da perda."
       },
       {
         "title": "Pratique e confira",
-        "content": "Numa cadeia com 10.000 kcal nos produtores, estime a energia disponível ao consumidor terciário antes de conferir: cerca de 10 kcal, após três transferências de aproximadamente 10% cada. Agora explique por que a pirâmide de energia não se inverte: cada nível recebe menos energia do que o anterior, sem exceção."
+        "content": "Por que uma cadeia alimentar raramente tem mais de quatro ou cinco níveis tróficos? Responda antes de conferir. Porque a transferência entre níveis é ineficiente: cerca de 90% da energia se dissipa como calor na respiração ou não é assimilada, e só cerca de 10% chega ao nível seguinte. Partindo de 100.000 unidades fixadas pelos produtores, sobram 10.000 para os herbívoros, 1.000 para os carnívoros primários, 100 para os secundários e 10 para os terciários — a partir daí não há energia suficiente para sustentar uma população viável de predadores maiores, que ainda precisam gastar energia para caçar. Agora um segundo, mais analítico: explique por que a pirâmide de biomassa de um ecossistema oceânico pode aparecer invertida, e por que isso não contradiz a regra dos 10%. A resposta distingue estoque de fluxo: a pirâmide de biomassa mostra a massa presente num instante, e o fitoplâncton tem massa pequena porém taxa de renovação altíssima, sendo consumido quase tão rápido quanto se reproduz; ao longo do tempo, a produtividade acumulada dele é muito maior que a dos consumidores, e a pirâmide de energia continua ereta."
       }
     ],
     "recall": {
@@ -2498,7 +2503,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Biologia",
@@ -2506,25 +2512,26 @@
     "sections": [
       {
         "title": "Informação e característica",
-        "content": "Genética estuda como a informação hereditária participa da formação de características. Genes são segmentos de DNA que podem influenciar proteínas ou RNAs funcionais; alelos são versões de um mesmo gene. Fenótipo resulta da interação entre genótipo e ambiente, portanto não é seguro tratar toda característica observável como destino fixado apenas pelo DNA."
+        "content": "A genética parte de uma distinção que precisa estar firme antes de qualquer cruzamento. Gene é o segmento de DNA que carrega a informação para uma característica; alelo é cada uma das versões desse gene, ocupando o mesmo locus em cromossomos homólogos. Genótipo é a constituição genética do indivíduo; fenótipo é a característica manifestada, resultado do genótipo com a influência do ambiente — dois indivíduos de mesmo genótipo podem ter fenótipos diferentes conforme nutrição, luz ou temperatura, e é por isso que fenótipo nunca é sinônimo de genótipo. Homozigoto tem os dois alelos iguais, AA ou aa; heterozigoto tem alelos diferentes, Aa. Dominante é o alelo que se manifesta em dose única, mascarando o outro; recessivo é o que só se manifesta em dose dupla. Daí a regra prática que resolve boa parte dos problemas: um indivíduo com fenótipo recessivo tem genótipo conhecido com certeza, aa; um com fenótipo dominante pode ser AA ou Aa, e só o cruzamento revela qual."
       },
       {
         "title": "Segregação dos alelos",
-        "content": "Em organismos diploides, cromossomos homólogos carregam pares de alelos. Na meiose, eles se separam e cada gameta recebe apenas um alelo de cada par. Na fecundação, os pares são restabelecidos. Um indivíduo heterozigoto Aa forma gametas A e a em proporções esperadas iguais, desde que não haja distorção de segregação ou seleção."
+        "content": "Mendel trabalhou com ervilhas por boas razões metodológicas: ciclo curto, muitos descendentes, características contrastantes bem definidas e autofecundação natural, que permite obter linhagens puras e controlar o cruzamento. Sua primeira lei, da segregação dos fatores ou da pureza dos gametas, diz que cada característica é determinada por um par de alelos que se separam na formação dos gametas, de modo que cada gameta recebe apenas um deles. Hoje sabemos o mecanismo citológico: os alelos estão em cromossomos homólogos, que se separam na anáfase I da meiose — a lei de Mendel descreve exatamente esse evento, décadas antes de ele ser observado. A consequência é que um heterozigoto Aa produz metade dos gametas com A e metade com a. E a partir daí toda probabilidade em genética se resolve com duas operações: multiplicar probabilidades de eventos independentes que devem ocorrer juntos, e somar as de eventos mutuamente exclusivos."
       },
       {
         "title": "Cruzamento monohíbrido",
-        "content": "No cruzamento Aa × Aa, a combinação de gametas produz genótipos esperados 1 AA : 2 Aa : 1 aa. Se A determina fenótipo dominante completo, a proporção fenotípica esperada é 3 dominante : 1 recessivo. O quadro de Punnett organiza possibilidades; ele não garante que uma prole pequena reproduzirá exatamente a proporção probabilística."
+        "content": "O cruzamento monoíbrido clássico parte de duas linhagens puras contrastantes, AA × aa. Toda a geração F1 é Aa, uniformemente dominante — é a chamada uniformidade da F1. Autofecundando a F1, Aa × Aa, a F2 dá a proporção genotípica 1 AA : 2 Aa : 1 aa e a proporção fenotípica 3 dominantes : 1 recessivo, resultado que aparece em praticamente toda prova. O cruzamento-teste, ou retrocruzamento, resolve a incógnita do fenótipo dominante: cruza-se o indivíduo de genótipo desconhecido com um homozigoto recessivo aa. Se ele for AA, toda a descendência será Aa, uniformemente dominante; se for Aa, metade será Aa e metade aa, e o aparecimento de um único descendente recessivo já prova a heterozigose. Note a assimetria lógica: um descendente recessivo prova a heterozigose com certeza, mas a ausência dele não prova homozigose — apenas a torna mais provável conforme o número de descendentes cresce."
       },
       {
         "title": "Limites do modelo simples",
-        "content": "Dominância não significa que um alelo é mais frequente, melhor ou mais forte. Fenótipos podem envolver codominância, dominância incompleta, múltiplos genes e influência ambiental. Também é errado dizer que genes “pulam” gerações: um alelo recessivo pode não aparecer no fenótipo de heterozigotos, mas continua sendo transmitido em parte dos gametas."
+        "content": "O modelo simples tem limites que a banca cobra justamente onde ele falha. Nem toda herança é de dominância completa: na dominância incompleta, o heterozigoto tem fenótipo intermediário, e a F2 dá 1:2:1 tanto no genótipo quanto no fenótipo — a boca-de-leão de flores rosa é o exemplo. Na codominância, os dois alelos se expressam integralmente e ao mesmo tempo, como no tipo sanguíneo AB. Há ainda a polialelia, com mais de duas versões na população, a interação gênica, em que vários genes concorrem para uma característica, e a herança quantitativa, que produz variação contínua como altura e cor da pele. Some-se a influência ambiental: a expressividade e a penetrância de um alelo podem variar. Os erros recorrentes são dizer que o alelo dominante é o mais frequente na população — não há relação entre dominância e frequência —, que o recessivo é sempre prejudicial, e que a proporção 3:1 é esperada em qualquer ninhada pequena, quando ela só se manifesta estatisticamente em grande número de descendentes."
       },
       {
         "title": "Pratique e confira",
-        "content": "Dois indivíduos com fenótipo dominante têm uma criança de fenótipo recessivo. Qual deve ser o genótipo dos pais no modelo de dominância completa? Ambos precisam ser Aa, pois a criança aa recebeu um alelo recessivo de cada um. Mostre os quatro resultados possíveis do cruzamento para justificar a conclusão."
+        "content": "Um casal de fenótipo normal tem um filho com albinismo, condição autossômica recessiva. Quais os genótipos dos pais e qual a chance de o próximo filho ser albino? Responda antes de conferir. O filho albino é aa, e recebeu um a de cada genitor; como ambos têm fenótipo normal, são necessariamente heterozigotos, Aa × Aa. A chance de o próximo filho ser albino é 1/4, e vale insistir num ponto que as questões exploram: essa probabilidade não muda em função dos filhos anteriores, porque cada fecundação é um evento independente — ter tido um filho albino não \"gasta\" a chance. Se a pergunta for pela chance de o próximo ser normal e heterozigoto, a resposta é 1/2; se for pela chance de ser heterozigoto dado que é normal, a resposta é 2/3, porque o AA foi eliminado do espaço amostral. Agora um segundo: você tem uma planta de flor vermelha e quer saber se é homozigota. Descreva o cruzamento e como ler o resultado. A resposta é o cruzamento-teste com um homozigoto recessivo, e a leitura assimétrica — um descendente recessivo prova a heterozigose, enquanto a ausência dele apenas a torna improvável."
       }
-    ]
+    ],
+    "rev": 2
   },
   {
     "subject": "Biologia",
@@ -2532,23 +2539,23 @@
     "sections": [
       {
         "title": "Genes no mesmo cromossomo",
-        "content": "Quando dois genes estão no mesmo cromossomo, eles tendem a ser herdados juntos, violando a segregação independente. Esse conjunto é chamado de linkage. A consequência prática é que o di-híbrido não produz quatro tipos de gametas em igual proporção: os gametas parentais aparecem em maior número que os recombinantes."
+        "content": "A segunda lei de Mendel, da segregação independente, vale para genes situados em cromossomos diferentes — ou muito distantes no mesmo cromossomo. Quando dois genes estão próximos no mesmo cromossomo, eles não se separam livremente: tendem a ser herdados juntos, no que se chama ligação gênica ou linkage. O conjunto de alelos que viajam juntos num mesmo cromossomo forma um grupo de ligação, e o número de grupos de ligação de uma espécie é igual ao seu número haploide de cromossomos — no ser humano, 23. Morgan demonstrou o fenômeno em Drosophila melanogaster, a mosca-das-frutas, escolhida por ciclo curto, prole numerosa e apenas quatro pares de cromossomos. O efeito prático aparece no cruzamento-teste: se os genes fossem independentes, esperariam-se quatro classes de descendentes em proporção 1:1:1:1; com ligação, as classes parentais aparecem em grande maioria e as recombinantes em minoria — e é esse desvio que denuncia o linkage."
       },
       {
         "title": "Permutação e recombinantes",
-        "content": "O crossing-over na prófase I troca trechos entre cromossomos homólogos e gera os gametas recombinantes. Quanto maior a distância entre dois genes, maior a chance de ocorrer permutação entre eles, e portanto maior a taxa de recombinação. Essa relação é a base para construir mapas genéticos."
+        "content": "A permutação, ou crossing-over, é o que impede a ligação de ser absoluta. Na prófase I da meiose, os cromossomos homólogos se pareiam e trocam segmentos de cromátides nos quiasmas, recombinando os alelos que estavam juntos. Os descendentes que carregam as novas combinações são os recombinantes. A frequência com que isso ocorre depende da distância física entre os genes: quanto mais afastados no cromossomo, maior a chance de um quiasma cair entre eles, e maior a proporção de recombinantes. Genes muito próximos quase não recombinam; genes bastante afastados recombinam tanto que chegam a se comportar como independentes, com o teto de 50% de recombinantes — e é por isso que uma frequência de 50% é indistinguível de segregação independente. Vale ainda distinguir as duas configurações possíveis no heterozigoto duplo: em posição cis, os dois alelos dominantes estão no mesmo cromossomo; em posição trans, cada um está num homólogo diferente. Ler qual é o caso depende de identificar quais classes são as parentais, isto é, as mais numerosas."
       },
       {
         "title": "Mapeamento",
-        "content": "A taxa de recombinação, expressa em porcentagem, é usada como medida de distância: 1% de recombinantes equivale a uma unidade de mapa, ou centimorgan. Com três genes, comparam-se as taxas duas a duas para determinar a ordem no cromossomo, técnica que reconstrói a posição relativa dos genes sem observá-los diretamente."
+        "content": "Dessa relação entre distância e recombinação nasce o mapeamento genético. Define-se que 1% de recombinantes equivale a 1 unidade de recombinação, ou 1 centimorgan, em homenagem a Morgan. Assim, contando os recombinantes num cruzamento-teste, calcula-se a distância entre dois genes: frequência de recombinação igual ao número de recombinantes dividido pelo total de descendentes, vezes 100. Com três genes, as distâncias dois a dois permitem estabelecer a ordem linear no cromossomo — e o procedimento é sempre o mesmo: a maior das três distâncias identifica os genes das pontas, e o terceiro fica no meio. Uma advertência importante: a soma das distâncias menores costuma ser ligeiramente maior que a distância entre as pontas, porque permutações duplas entre os genes extremos restauram a combinação parental e escapam da contagem. Por isso o mapa subestima distâncias grandes, e distâncias acima de 50 unidades só podem ser estabelecidas somando intervalos menores."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Somar todos os descendentes em vez de apenas os recombinantes ao calcular a taxa é o erro numérico mais comum: divide-se recombinantes pelo total. Outro é supor que genes ligados nunca se separam, quando a permutação os separa com frequência proporcional à distância. E confundir arranjo cis com trans ao montar o cruzamento."
+        "content": "Dizer que genes ligados nunca se separam é o erro central: eles se separam por permutação, e a frequência disso é justamente o que permite mapeá-los. O segundo é confundir as classes: as parentais são as mais numerosas, as recombinantes as menos — inverter isso inverte todo o cálculo. O terceiro é supor que a frequência de recombinação pode passar de 50%: 50% é o teto, e corresponde ao comportamento de genes independentes. O quarto é calcular a distância sem somar as duas classes recombinantes, que são duas e não uma. O quinto é confundir ligação gênica com interação gênica: uma trata da localização dos genes no cromossomo, a outra de vários genes concorrendo para a mesma característica. O sexto é dizer que o número de grupos de ligação é igual ao número total de cromossomos, quando é igual ao número haploide. E cuidado com a leitura cis e trans: sem identificar as classes parentais primeiro, a configuração do heterozigoto não pode ser deduzida."
       },
       {
         "title": "Pratique e confira",
-        "content": "Num cruzamento-teste, de 1000 descendentes, 100 foram recombinantes. Calcule a distância entre os genes antes de conferir: 100/1000 = 10%, ou seja, 10 centimorgans. Agora diga o que significaria uma taxa de 50%: os genes se comportam como se estivessem em cromossomos diferentes, por estarem muito distantes."
+        "content": "Num cruzamento-teste de um heterozigoto duplo, obtêm-se 4.000 descendentes: 1.850 e 1.750 nas duas classes mais numerosas, e 210 e 190 nas outras duas. Os genes estão ligados? Qual a distância entre eles? Responda antes de conferir. Se fossem independentes, as quatro classes sairiam em proporções próximas de 25% cada; aqui as duas primeiras somam 3.600, ou 90%, e as duas últimas somam 400, ou 10% — desvio grande demais para acaso, o que caracteriza ligação. Os recombinantes são as duas classes minoritárias: 210 + 190 = 400, sobre 4.000, dá 10% de recombinação, ou seja, 10 unidades de recombinação entre os dois genes. Agora um segundo: três genes A, B e C têm distâncias A-B de 8 u.r., B-C de 12 u.r. e A-C de 19 u.r. Qual a ordem no cromossomo, e por que 8 + 12 não dá exatamente 19? A maior distância, 19, é entre A e C, que são portanto as pontas, com B no meio: A—8—B—12—C. A soma dá 20, e não 19, porque permutações duplas entre A e C recolocam os alelos na configuração parental e não são contadas como recombinantes, fazendo o mapa subestimar a distância entre os genes mais afastados."
       }
     ],
     "recall": {
@@ -2579,7 +2586,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Biologia",
@@ -2587,23 +2595,23 @@
     "sections": [
       {
         "title": "Evolução muda populações",
-        "content": "Evolução biológica é mudança nas frequências de alelos de uma população ao longo de gerações. Indivíduos não evoluem porque precisam; indivíduos com variações herdáveis podem deixar descendentes em proporções diferentes. A seleção natural não cria a variação orientada para uma meta: ela atua sobre variações já existentes."
+        "content": "Quem evolui é a população, não o indivíduo. Um organismo nasce com um conjunto de alelos e morre com ele; o que muda ao longo das gerações é a frequência com que cada alelo aparece no conjunto da população — e é essa mudança que define evolução em termos genéticos. O ponto de referência é o equilíbrio de Hardy-Weinberg, que descreve uma população idealizada onde as frequências alélicas não mudam: ela precisaria ser infinitamente grande, com cruzamentos aleatórios, sem mutação, sem migração e sem seleção natural. Nessas condições, as frequências genotípicas se mantêm em p² + 2pq + q² = 1. Nenhuma população real satisfaz essas condições, e é justamente por isso que o modelo é útil: ele funciona como hipótese nula, e o desvio observado em relação a ele mede quanto de evolução está acontecendo e aponta qual fator está agindo. Uma frequência de heterozigotos abaixo do esperado, por exemplo, sugere cruzamentos não aleatórios ou seleção contra eles."
       },
       {
         "title": "Fontes de variação",
-        "content": "Mutações introduzem novas variantes de DNA; recombinação e segregação independente reorganizam alelos na reprodução sexuada. Fluxo gênico desloca alelos entre populações por migração e reprodução. Deriva genética altera frequências por acaso, sendo particularmente forte em populações pequenas, inclusive após efeito fundador ou gargalo populacional."
+        "content": "A variabilidade tem duas fontes com papéis diferentes, e confundi-las custa ponto. A mutação é a única fonte de alelos genuinamente novos: alterações no DNA, espontâneas ou induzidas, que surgem ao acaso e sem relação com a necessidade do organismo. A esmagadora maioria é neutra ou deletéria; uma fração pequena é vantajosa naquele ambiente. A recombinação não cria alelos novos, mas rearranja os existentes em combinações inéditas, e opera por três mecanismos: a permutação na prófase I, a segregação independente dos homólogos na anáfase I — que sozinha gera 2^23, mais de oito milhões de combinações por gameta humano — e a fecundação aleatória entre dois gametas quaisquer. Some-se a reprodução sexuada como amplificador: é ela que distribui e recombina a variação a cada geração. Em organismos assexuados, a mutação é praticamente a única fonte, o que torna a adaptação mais lenta e explica a vantagem evolutiva do sexo apesar de seu custo."
       },
       {
         "title": "Seleção e adaptação",
-        "content": "Quando uma característica hereditária aumenta sucesso reprodutivo em certo ambiente, seus alelos tendem a tornar-se mais frequentes. Adaptação é dependente do contexto: uma característica vantajosa em um ambiente pode não ser em outro. Seleção pode estabilizar, deslocar ou favorecer extremos, conforme a relação entre fenótipo e sobrevivência."
+        "content": "Sobre essa variação atuam os fatores que alteram as frequências alélicas. A seleção natural é o único deles que produz adaptação: ela não é aleatória, favorece o que aumenta o sucesso reprodutivo naquele ambiente, e pode ser estabilizadora, quando favorece o fenótipo médio; direcional, quando favorece um dos extremos e desloca a média — o caso da mariposa Biston betularia durante a Revolução Industrial inglesa; ou disruptiva, quando favorece os dois extremos contra o meio, o que pode levar à especiação. A deriva genética é a variação aleatória das frequências por amostragem, importante em populações pequenas, com dois casos particulares: o efeito do fundador, quando poucos indivíduos colonizam um novo local, e o efeito gargalo, quando uma catástrofe reduz drasticamente a população. A migração, ou fluxo gênico, homogeneíza populações vizinhas. E o isolamento reprodutivo, pré ou pós-zigótico, é o que permite que populações separadas acumulem diferenças até se tornarem espécies distintas."
       },
       {
         "title": "Evidências e limites",
-        "content": "Homologias anatômicas, fósseis, biogeografia e semelhanças moleculares sustentam parentesco evolutivo. Não confunda homologias com analogias: asas de morcego e braços humanos têm mesma origem estrutural; asas de inseto e ave têm função semelhante, mas origem distinta. Evolução não implica progresso moral ou complexidade crescente obrigatória."
+        "content": "Dizer que o organismo se adapta ao ambiente durante a vida é a formulação lamarckista e continua sendo o erro mais penalizado: o indivíduo não se adapta, a população é adaptada por seleção do que já variava. O segundo é dizer que a mutação ocorre porque o organismo precisa dela — ela é aleatória, anterior e independente da pressão seletiva. O terceiro é tratar seleção natural e deriva genética como sinônimos: só a seleção é direcional e produz adaptação; a deriva é acaso. O quarto é falar em \"mais forte\" no lugar de \"mais apto\", quando aptidão é sucesso reprodutivo e pode significar ser menor, mais discreto ou mais cooperativo. O quinto é dizer que a evolução tem finalidade ou caminha para a perfeição. O sexto é supor que Hardy-Weinberg descreve populações reais, quando descreve a condição em que nada evolui, servindo de referência para medir o desvio. E cuidado com a especiação: ela exige isolamento reprodutivo, não apenas diferença de aparência."
       },
       {
         "title": "Pratique e confira",
-        "content": "Uma pequena população funda uma ilha e apresenta frequência rara de um alelo maior que a população original. Qual mecanismo explica isso? Identifique o efeito fundador como caso de deriva genética e explique por que não é preciso supor que o alelo seja vantajoso para aumentar inicialmente."
+        "content": "Numa população em equilíbrio de Hardy-Weinberg, 16% dos indivíduos manifestam uma condição autossômica recessiva. Qual a frequência do alelo recessivo, e que proporção da população é portadora? Responda antes de conferir. Os afetados são os homozigotos recessivos, então q² = 0,16 e q = 0,4. Logo p = 0,6. Os portadores são os heterozigotos: 2pq = 2 × 0,6 × 0,4 = 0,48, ou 48% da população — mais do que o dobro dos afetados, resultado que costuma surpreender e que explica por que alelos recessivos deletérios persistem: a maior parte deles está escondida em heterozigotos, invisível à seleção. Agora um segundo: por que a resistência a um inseticida se espalha rapidamente numa população de insetos, e por que isso não é o inseto \"criando\" resistência? A resposta é seleção direcional sobre variação preexistente — mutações de resistência já existiam em baixa frequência antes da aplicação; o inseticida eliminou os sensíveis, e os poucos resistentes passaram a se reproduzir sem competição, elevando rapidamente a frequência do alelo, ainda mais num organismo de ciclo curto e prole numerosa."
       }
     ],
     "recall": {
@@ -2632,7 +2640,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Biologia",
