@@ -132,8 +132,8 @@ revisão no id das seções (`-editorial-v${rev}-`). **É isso que impede o
 progresso de leitura dos 612 capítulos de zerar** a cada mudança de texto: só o
 capítulo que mudou volta a pedir leitura. Ao reescrever, sempre suba o `rev`.
 
-Estado: 39 de 612 aprofundados, todos de Biologia. Os demais seguem em rodadas,
-matéria por matéria.
+Estado: 72 de 612 aprofundados — Biologia inteira concluída. Os demais seguem
+em rodadas, matéria por matéria (próxima: Química).
 
 ## IA
 
