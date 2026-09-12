@@ -2649,25 +2649,26 @@
     "sections": [
       {
         "title": "A fronteira que seleciona",
-        "content": "A membrana plasmática delimita a célula e controla as trocas com o meio. Ela não é uma parede impermeável: seleciona substâncias conforme tamanho, carga, solubilidade e necessidade celular. Essa seletividade mantém concentrações diferentes dentro e fora da célula, condição essencial para impulsos nervosos, absorção intestinal e equilíbrio de água."
+        "content": "A membrana plasmática é a fronteira que define a célula, e sua função central não é isolar — é selecionar. Toda célula precisa manter, no interior, uma composição diferente da do meio: mais potássio e menos sódio, um pH próprio, concentrações de cálcio milhares de vezes menores que fora. Manter essa diferença contra a tendência espontânea à equalização é trabalho, e é por isso que a permeabilidade seletiva e o transporte ativo são inseparáveis da própria definição de estar vivo. A base estrutural é a bicamada de fosfolipídios, moléculas anfipáticas com cabeça polar hidrofílica e duas caudas apolares hidrofóbicas: em meio aquoso elas se organizam espontaneamente com as caudas voltadas para dentro, formando uma barreira que moléculas polares e íons não atravessam livremente. Gases como O2 e CO2 e moléculas apolares pequenas passam direto; água, íons e açúcares dependem de proteínas. É essa assimetria de permeabilidade que torna possível qualquer gradiente."
       },
       {
         "title": "Modelo e transporte",
-        "content": "O modelo do mosaico fluido reúne bicamada de fosfolipídios, proteínas, colesterol e carboidratos. Moléculas pequenas apolares atravessam por difusão simples; água pode usar osmose e aquaporinas. Difusão facilitada usa proteínas, mas segue o gradiente. Transporte ativo consome energia para mover solutos contra o gradiente, como na bomba de sódio e potássio."
+        "content": "O modelo do mosaico fluido, de Singer e Nicolson (1972), descreve a membrana como uma bicamada lipídica fluida em que proteínas estão embebidas e podem se deslocar lateralmente — daí mosaico, pela diversidade, e fluido, pela mobilidade. Proteínas integrais atravessam toda a espessura e funcionam como canais, transportadoras e receptoras; periféricas aderem a uma das faces. O colesterol, nas células animais, tampona a fluidez, evitando rigidez no frio e excesso de fluidez no calor. Glicoproteínas e glicolipídios da face externa formam o glicocálix, responsável pelo reconhecimento celular, pela adesão e pela identidade imunológica. O transporte divide-se em passivo, sem gasto de ATP e sempre a favor do gradiente — difusão simples, difusão facilitada por proteína e osmose —, e ativo, contra o gradiente e com gasto de ATP, cujo exemplo obrigatório é a bomba de sódio e potássio, que expulsa três Na+ e importa dois K+ por ATP, mantendo o potencial de membrana. Partículas grandes entram por endocitose e saem por exocitose, em vesículas."
       },
       {
         "title": "Ler tonicidade",
-        "content": "Em meio hipertônico, há maior concentração de solutos fora da célula e a água tende a sair. Uma hemácia murcha; uma célula vegetal sofre plasmólise. Em meio hipotônico, a água entra: a hemácia pode sofrer lise, enquanto a parede celular limita a expansão vegetal e produz turgor. Isotônico significa equilíbrio dinâmico, não ausência de movimento de água."
+        "content": "Ler tonicidade é o que decide a maioria das questões, e o vocabulário precisa ser exato. Hipotônico é o meio com menos soluto; hipertônico, o com mais; isotônico, o de concentração igual. A água se move por osmose do meio hipotônico para o hipertônico, ou seja, do de maior potencial hídrico para o de menor. Numa célula animal, meio hipotônico causa entrada de água, turgescência e, no limite, hemólise, porque nada contém a expansão; meio hipertônico causa saída de água e crenação. Numa célula vegetal, a parede de celulose muda o desfecho: em meio hipotônico a célula absorve água até ficar túrgida, e a pressão de parede equilibra a entrada — é essa turgescência que mantém ereta a planta herbácea; em meio hipertônico ocorre plasmólise, com o protoplasto encolhendo e descolando da parede, fenômeno reversível se a célula voltar a meio hipotônico. Um erro frequente de leitura: hipotônico é o meio com menos soluto, o que significa mais água — e é de lá que a água sai."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Não chame osmose de passagem de soluto: é o movimento líquido de água através de membrana semipermeável. Difusão facilitada não exige ATP apenas porque usa proteína. Também não confunda parede celular, presente em plantas, fungos e bactérias, com membrana plasmática, presente em todas as células. O gradiente eletroquímico combina concentração e carga."
+        "content": "Dizer que a membrana isola a célula do meio é o erro conceitual de base: ela seleciona, e a seleção é ativa e custosa. O segundo é afirmar que a difusão facilitada gasta ATP por envolver proteína — não gasta; a proteína abre caminho, não empurra. O terceiro é dizer que na osmose o soluto se move: quem se move é a água, justamente porque o soluto não atravessa. O quarto é aplicar o comportamento da hemácia à célula vegetal, esquecendo a parede. O quinto é tratar plasmólise como morte celular, quando é reversível. O sexto é dizer que a bomba de sódio e potássio é eletricamente neutra: ela expulsa três cargas positivas e importa duas, o que a torna eletrogênica e contribui para o potencial de repouso. E cuidado com o colesterol: dizer que ele apenas enrijece a membrana é metade da história — ele tampona nos dois sentidos, conforme a temperatura."
       },
       {
         "title": "Pratique e confira",
-        "content": "Uma hemácia é colocada em solução mais concentrada de sal que seu citoplasma. Preveja a direção da água e o efeito no volume celular antes de responder: a água sai, pois o meio externo é hipertônico, e a célula diminui de volume. Explique por que esse resultado não depende de o sal atravessar diretamente a membrana."
+        "content": "Por que uma célula vegetal em água destilada fica firme em vez de estourar, enquanto uma hemácia no mesmo meio sofre hemólise? Responda antes de conferir. Porque a célula vegetal tem parede de celulose, rígida e resistente à tração: conforme a água entra e o volume aumenta, a parede exerce uma contrapressão sobre o protoplasto, a pressão de parede, que cresce até equilibrar a entrada de água e interromper o fluxo líquido. A célula fica túrgida e íntegra — e é essa turgescência que sustenta o caule de uma planta herbácea, que murcha quando a perde. A hemácia tem apenas a membrana plasmática, que se distende até romper. Agora um segundo, aplicado: explique por que a carne salgada se conserva e por que uma salada temperada com sal solta água em poucos minutos. A resposta é a mesma osmose nos dois casos, com meios que se tornam hipertônicos: na carne, a água sai das células dos microrganismos, que se desidratam e não conseguem proliferar; na salada, a água sai das células vegetais, que plasmolisam e perdem a turgescência — daí o murchamento visível e o líquido no fundo do prato."
       }
-    ]
+    ],
+    "rev": 2
   },
   {
     "subject": "Biologia",
@@ -2675,23 +2676,23 @@
     "sections": [
       {
         "title": "Características gerais",
-        "content": "Moluscos têm corpo mole, geralmente dividido em cabeça, pé e massa visceral, envolvido pelo manto, que secreta a concha calcária quando presente. São celomados, com celoma reduzido, e a maioria tem sistema circulatório aberto, exceto os cefalópodes, cuja circulação fechada sustenta o metabolismo mais ativo do grupo."
+        "content": "Moluscos são o segundo maior filo animal em número de espécies, atrás apenas dos artrópodes, e se caracterizam por corpo mole, não segmentado, com simetria bilateral e três regiões: cabeça, pé muscular e massa visceral. Sobre a massa visceral está o manto, uma dobra de tecido que secreta a concha calcária quando ela existe — e é o manto, e não a concha, o caráter definidor, já que lulas têm concha interna reduzida e lesmas não têm concha alguma. Entre o manto e o corpo fica a cavidade do manto, que abriga as brânquias nos aquáticos e funciona como câmara respiratória vascularizada nos pulmonados terrestres. A maioria tem rádula, uma fita quitinosa com dentículos usada para raspar alimento — ausente nos bivalves, que são filtradores. São celomados, com celoma reduzido à região do coração, e a circulação é aberta na maior parte do filo, com hemolinfa banhando os tecidos; a exceção são os cefalópodes, de circulação fechada. A larva trocófora, comum a eles e aos anelídeos, sustenta o parentesco entre os dois filos."
       },
       {
         "title": "As três classes principais",
-        "content": "Gastrópodes incluem caramujos e lesmas, com pé ventral e rádula para raspar alimento. Bivalves, como ostras e mexilhões, são filtradores, sem cabeça diferenciada nem rádula. Cefalópodes, como polvos e lulas, têm pé transformado em tentáculos, sistema nervoso complexo e o comportamento mais elaborado entre os invertebrados."
+        "content": "As três classes principais se distinguem por características que a prova cobra diretamente. Gastrópodes são o grupo mais numeroso e o único que conquistou o ambiente terrestre: caracóis, lesmas e caramujos, com pé rastejante ventral, cabeça bem definida com tentáculos e olhos, rádula, e torção da massa visceral durante o desenvolvimento. Bivalves, como ostras, mexilhões e vieiras, têm concha de duas valvas articuladas, não têm cabeça diferenciada nem rádula, e são filtradores: as brânquias, além de trocar gases, retêm partículas em suspensão — modo de vida que explica tanto sua importância na qualidade da água quanto seu papel na intoxicação alimentar, já que concentram toxinas e microrganismos. Cefalópodes — polvos, lulas, chocos e náutilos — são exclusivamente marinhos, com o pé modificado em tentáculos ao redor da cabeça, circulação fechada, propulsão a jato pelo sifão e o sistema nervoso mais desenvolvido entre os invertebrados, com olhos de acuidade comparável à dos vertebrados."
       },
       {
         "title": "Importância ecológica e econômica",
-        "content": "Moluscos são recurso alimentar importante e indicadores de qualidade ambiental, já que os bivalves filtradores acumulam poluentes. Alguns são hospedeiros intermediários de parasitas, como o caramujo da esquistossomose. E o mexilhão-dourado é exemplo notório de espécie invasora que entope tubulações e desloca espécies nativas."
+        "content": "Ecologicamente, os bivalves filtradores prestam um serviço mensurável: uma única ostra filtra dezenas de litros de água por dia, retendo partículas em suspensão e clarificando o ambiente, o que beneficia a vegetação submersa por permitir a passagem de luz. Por isso são usados como bioindicadores e em programas de recuperação de estuários. Economicamente, o filo sustenta a maricultura de ostras, mexilhões e vieiras, a pesca de lulas e polvos, e a produção de pérolas, formadas quando o manto envolve um corpo estranho em camadas de nácar. Do lado dos problemas, gastrópodes são hospedeiros intermediários de parasitas: o caramujo Biomphalaria transmite a esquistossomose, e o caramujo-africano Achatina fulica, introduzido como substituto do escargot, virou praga e abriga vermes causadores de meningite eosinofílica. O mexilhão-dourado, invasor vindo em água de lastro, incrusta-se em tubulações e turbinas de hidrelétricas com prejuízo alto. E a maré vermelha se torna perigosa justamente porque os bivalves concentram as toxinas dos dinoflagelados."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Dizer que todo molusco tem concha ignora lesmas e polvos. Outro erro é atribuir rádula aos bivalves, que são filtradores e não a possuem. E generalizar a circulação aberta para todo o filo, esquecendo os cefalópodes, cuja circulação fechada é justamente o que sustenta seu nível de atividade."
+        "content": "Definir molusco pela concha é o erro de partida: lesmas e polvos são moluscos sem concha externa, e o caráter definidor é o manto. O segundo é dizer que todo molusco tem rádula, quando os bivalves não têm. O terceiro é afirmar que todos têm circulação aberta, esquecendo os cefalópodes, cuja circulação fechada sustenta o metabolismo alto de um predador ativo. O quarto é atribuir a esquistossomose ao caramujo-africano, quando o hospedeiro intermediário é a Biomphalaria. O quinto é chamar o molusco de animal simples por ter corpo mole, ignorando que o polvo tem o sistema nervoso mais complexo entre os invertebrados. O sexto é dizer que a pérola é produzida pela concha, quando quem a secreta é o manto. E cuidado com a intoxicação por frutos do mar: o bivalve não produz a toxina, ele a concentra ao filtrar água com dinoflagelados — o que explica por que o risco é sazonal e ligado às florações."
       },
       {
         "title": "Pratique e confira",
-        "content": "Por que o polvo é o molusco de circulação fechada? Responda antes de conferir: seu estilo de vida ativo, com natação rápida e caça, exige transporte eficiente de oxigênio, o que a circulação fechada proporciona. Agora explique por que ostras acumulam poluentes: como filtradoras, processam grandes volumes de água e retêm partículas e contaminantes."
+        "content": "Por que a intoxicação alimentar por mexilhões e ostras é mais comum em períodos de maré vermelha, se o molusco em si não é venenoso? Responda antes de conferir. Porque o bivalve é filtrador: ele bombeia grandes volumes de água pela cavidade do manto e retém nas brânquias as partículas em suspensão, entre elas os dinoflagelados responsáveis pela floração. As neurotoxinas produzidas por essas algas não o intoxicam, mas se acumulam em seus tecidos em concentração muito superior à da água — e quem come o molusco recebe a dose acumulada. É um caso de bioacumulação num filtrador, e por isso a vigilância sanitária interdita a coleta durante as florações, mesmo com o animal aparentemente saudável. Agora um segundo: explique por que os cefalópodes desenvolveram circulação fechada, enquanto o restante do filo mantém circulação aberta. A resposta liga estrutura a modo de vida: polvos e lulas são predadores ativos, de natação rápida por propulsão a jato e com o sistema nervoso mais complexo entre os invertebrados — tudo isso exige entrega rápida e dirigida de oxigênio aos tecidos, que só um sistema fechado, sob pressão e com fluxo controlado, consegue sustentar."
       }
     ],
     "recall": {
@@ -2722,7 +2723,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Biologia",
@@ -2730,23 +2732,23 @@
     "sections": [
       {
         "title": "Funções e tipos de caule",
-        "content": "O caule sustenta folhas, flores e frutos e conduz as seivas. Além do tipo aéreo comum, há caules subterrâneos como o rizoma da bananeira, o tubérculo da batata-inglesa e o bulbo da cebola, todos com função de reserva. Reconhecer que a batata-inglesa é caule e a batata-doce é raiz é distinção clássica de prova."
+        "content": "O caule sustenta a parte aérea, conduz seiva entre raiz e folhas e, em muitas espécies, armazena reservas. Sua identidade morfológica não está na posição nem na aparência, mas na presença de gemas e nós — e é isso que permite reconhecer caules que não parecem caules. O rizoma é um caule subterrâneo horizontal, como o da bananeira e o do gengibre; o tubérculo é um caule subterrâneo intumescido de reservas, como a batata-inglesa, cujos \"olhos\" são justamente as gemas, e é por isso que ela é caule e não raiz — a batata-doce e a mandioca, sem gemas, são raízes tuberosas. O bulbo é um caule reduzido com folhas carnosas, como a cebola. Entre os aéreos, o estipe é o caule não ramificado das palmeiras, o colmo é o caule com nós marcados de gramíneas e da cana, e o tronco é o caule lenhoso e ramificado das árvores. Caules também podem ser modificados em gavinhas de sustentação, espinhos de defesa ou cladódios fotossintetizantes, como no cacto."
       },
       {
         "title": "A folha e seus tecidos",
-        "content": "A folha é o principal órgão fotossintetizante. Sua estrutura inclui epiderme com cutícula, parênquima paliçádico rico em cloroplastos, parênquima lacunoso com espaços para circulação de gases, e nervuras com xilema e floema. Os estômatos, em geral mais numerosos na face inferior, regulam trocas gasosas e transpiração."
+        "content": "A folha é o órgão especializado em fotossíntese, e sua estrutura otimiza dois objetivos em tensão: captar luz e CO2 sem perder água demais. O limbo é laminar e delgado, o que maximiza superfície de captação e minimiza a distância que os gases percorrem por difusão. Em corte, encontram-se a epiderme superior, com cutícula espessa; o mesofilo, dividido em parênquima paliçádico — células alongadas e justapostas, ricas em cloroplastos, logo abaixo da face iluminada — e parênquima lacunoso, de células irregulares com grandes espaços intercelulares que permitem a circulação dos gases; os feixes vasculares, com xilema voltado para cima e floema para baixo, formando as nervuras; e a epiderme inferior, onde se concentram os estômatos. A disposição das nervuras é critério de classificação: paralelinérvea nas monocotiledôneas, peninérvea ou palminérvea nas eudicotiledôneas. Modificações incluem gavinhas, espinhos — como no cacto, onde as folhas viraram espinhos e o caule assumiu a fotossíntese — e brácteas coloridas, como as do bico-de-papagaio."
       },
       {
         "title": "Adaptações",
-        "content": "Folhas modificadas cumprem funções diversas: espinhos de cacto reduzem a perda de água, gavinhas permitem fixação, brácteas coloridas atraem polinizadores. Plantas de ambiente seco têm cutícula espessa e estômatos protegidos em criptas; plantas aquáticas flutuantes têm estômatos na face superior, exceção que costuma ser cobrada."
+        "content": "As adaptações foliares se explicam pelo fator limitante do ambiente. Xerófitas, de ambientes secos, reduzem a superfície de transpiração: folhas pequenas, transformadas em espinhos ou com cutícula muito espessa; estômatos em criptas protegidas do vento; e tecidos suculentos que armazenam água. Muitas usam o metabolismo CAM, abrindo os estômatos apenas à noite e fixando CO2 na forma de ácido orgânico para usá-lo de dia com os estômatos fechados — solução que separa no tempo a captação e a fixação do carbono. Hidrófitas, de ambientes aquáticos, têm o problema oposto: cutícula fina, estômatos na face superior nas folhas flutuantes, e aerênquima, um parênquima com grandes lacunas de ar que garante flutuação e leva oxigênio às raízes submersas. Halófitas, de solo salino, como as do mangue, têm glândulas de sal e pneumatóforos, raízes com geotropismo negativo que emergem do lodo anóxico para captar oxigênio. Já as plantas de sombra investem em limbo largo e fino, com menos paliçádico, para aproveitar pouca luz."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Dizer que o espinho do cacto é folha e o da roseira também é erro: o do cacto é folha modificada, o da roseira é acúleo, projeção da epiderme. Outro deslize é situar os estômatos na face superior em plantas terrestres comuns. E classificar a batata-inglesa como raiz."
+        "content": "Dizer que a batata-doce e a batata-inglesa são a mesma coisa é o erro clássico: a inglesa é caule tuberoso, e tem gemas, os \"olhos\"; a doce é raiz tuberosa, sem gemas. O segundo é classificar o rizoma como raiz por ser subterrâneo, quando a presença de nós e gemas o define como caule. O terceiro é dizer que o espinho do cacto é uma modificação do caule, quando é folha modificada, e quem fotossintetiza é o caule. O quarto é situar os estômatos sempre na face inferior, esquecendo as folhas flutuantes, onde ficam na superior. O quinto é dizer que o parênquima lacunoso tem lacunas por falha estrutural, quando os espaços servem à circulação dos gases. O sexto é confundir a planta CAM com a C4: ambas contornam a perda de água, mas a CAM separa as etapas no tempo, abrindo os estômatos à noite, e a C4 as separa no espaço, entre células do mesofilo e da bainha. E cuidado com o pneumatóforo: ele capta oxigênio do ar, não do solo."
       },
       {
         "title": "Pratique e confira",
-        "content": "Por que a maioria das plantas terrestres tem mais estômatos na face inferior? Responda antes de conferir: assim reduz a exposição direta ao sol e a perda de água por transpiração, mantendo as trocas gasosas. Agora diga qual é a exceção e por quê: plantas flutuantes, cuja face inferior está na água, têm estômatos na face superior."
+        "content": "Por que a batata-inglesa é caule e a batata-doce é raiz, se as duas são subterrâneas e cheias de reserva? Responda antes de conferir. Porque a classificação de um órgão vegetal segue a origem e a estrutura, não a posição nem a função. A batata-inglesa tem nós e gemas — os chamados olhos, de onde brotam novas plantas —, e gema é estrutura exclusiva de caule; ela é, portanto, um caule tuberoso. A batata-doce não tem gemas nem nós: ela brota por gemas adventícias, e sua estrutura interna é de raiz, com o arranjo vascular típico. A pergunta testa se o critério usado foi o morfológico ou a mera aparência. Agora um segundo: explique por que uma planta CAM abre os estômatos à noite, e que custo isso impõe. A resposta é a economia de água: à noite a temperatura é menor e a umidade relativa é maior, de modo que a transpiração pelo ostíolo aberto é muito menor; o CO2 captado é fixado em ácido málico e estocado no vacúolo, para ser liberado de dia e alimentar o ciclo de Calvin com os estômatos fechados. O custo é energético e de velocidade: o estoque noturno limita o carbono disponível, e plantas CAM crescem devagar."
       }
     ],
     "recall": {
@@ -2777,7 +2779,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Biologia",
@@ -2785,23 +2788,23 @@
     "sections": [
       {
         "title": "Tipos de mutação cromossômica",
-        "content": "As alterações podem ser estruturais — deleção, duplicação, inversão e translocação — ou numéricas. As numéricas se dividem em euploidias, que alteram conjuntos inteiros, como a triploidia, e aneuploidias, que alteram cromossomos isolados, como a trissomia do 21, resultante de não disjunção durante a meiose."
+        "content": "Mutações cromossômicas alteram a estrutura ou o número de cromossomos, e dividem-se em duas famílias. As estruturais mudam a arquitetura: a deleção perde um segmento — a síndrome do miado do gato, ou cri-du-chat, decorre da deleção no braço curto do cromossomo 5; a duplicação repete um trecho; a inversão gira um segmento em 180 graus, mantendo os genes mas alterando sua ordem; e a translocação transfere um segmento para um cromossomo não homólogo. As numéricas mudam a quantidade: euploidias envolvem conjuntos inteiros, como a triploidia e a poliploidia, esta comum e economicamente importante em plantas, onde gera frutos maiores e variedades sem semente; aneuploidias envolvem cromossomos isolados, com trissomias, quando há um a mais, e monossomias, quando falta um. A causa mais frequente das aneuploidias é a não disjunção, a falha na separação de homólogos na anáfase I ou de cromátides irmãs na anáfase II, que produz gametas com um cromossomo a mais e outros com um a menos."
       },
       {
         "title": "Gametogênese",
-        "content": "Na espermatogênese, cada célula precursora origina quatro espermatozoides funcionais, e o processo é contínuo a partir da puberdade. Na ovulogênese, cada precursora origina um único óvulo funcional e corpúsculos polares, e o processo começa na vida intrauterina, ficando interrompido até a ovulação. Essa diferença explica a relação entre idade materna e aneuploidias."
+        "content": "A gametogênese é o processo que transforma células germinativas em gametas, e as duas versões humanas diferem em pontos que a banca compara. Na espermatogênese, a espermatogônia diploide se multiplica por mitose, cresce como espermatócito I, sofre meiose I originando dois espermatócitos II e meiose II originando quatro espermátides, que se diferenciam em quatro espermatozoides funcionais — o rendimento é de quatro por célula inicial, e o processo é contínuo a partir da puberdade, com cerca de setenta dias por ciclo. Na ovogênese, a ovogônia se multiplica ainda na vida intrauterina; os ovócitos I entram em meiose e param na prófase I antes do nascimento, permanecendo bloqueados por anos. A cada ciclo menstrual, um deles completa a meiose I, produzindo um ovócito II e o primeiro corpúsculo polar, e para de novo na metáfase II — a meiose II só se completa se houver fecundação. O rendimento é de um óvulo funcional e três corpúsculos polares que degeneram, arranjo que concentra citoplasma e reservas numa única célula."
       },
       {
         "title": "Síndromes e cariótipo",
-        "content": "O cariótipo permite diagnosticar aneuploidias: 47,XX+21 na síndrome de Down, 45,X na de Turner e 47,XXY na de Klinefelter. Ler o cariótipo é contar o total de cromossomos e identificar os sexuais, informação suficiente para nomear a síndrome e explicar sua origem na não disjunção meiótica."
+        "content": "Do bloqueio prolongado da ovogênese decorre a correlação que aparece em toda questão sobre o tema: o risco de aneuploidias aumenta com a idade materna, porque os ovócitos permanecem parados em prófase I por décadas e as proteínas que mantêm a coesão entre as cromátides se deterioram, tornando a não disjunção mais provável. As síndromes mais cobradas são a de Down, trissomia do 21, a mais frequente e compatível com vida longa; a de Edwards, trissomia do 18; a de Patau, trissomia do 13; a de Turner, monossomia do X, com cariótipo 45,X e fenótipo feminino com baixa estatura e infertilidade; e a de Klinefelter, 47,XXY, com fenótipo masculino. O cariótipo é o exame que revela tudo isso: as células são cultivadas, bloqueadas em metáfase — fase de condensação máxima, e é por isso que é ela a escolhida —, coradas e fotografadas, e os cromossomos são organizados aos pares por tamanho e posição do centrômero. A notação 47,XX,+21 lê-se como 47 cromossomos, sexo feminino, com um 21 extra."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Chamar a síndrome de Down de doença hereditária é impreciso: na maior parte dos casos ela resulta de não disjunção, não de herança. Outro erro é confundir euploidia com aneuploidia. E supor que a espermatogênese e a ovulogênese produzem o mesmo número de gametas funcionais."
+        "content": "Dizer que a trissomia do 21 é causada por mutação gênica é o erro de categoria mais comum: não há alteração na sequência do DNA, e sim um cromossomo inteiro a mais. O segundo é afirmar que a síndrome de Down é sempre herdada dos pais, quando na maioria dos casos ela resulta de não disjunção na gametogênese, um evento novo; a forma por translocação, que pode ser herdada, é minoria. O terceiro é dizer que a ovogênese produz quatro óvulos, quando produz um funcional e três corpúsculos polares. O quarto é situar o bloqueio da ovogênese na metáfase I, quando o primeiro bloqueio é em prófase I e o segundo em metáfase II. O quinto é dizer que a idade paterna não tem efeito algum — o efeito existe, mas é muito menor e ligado a mutações gênicas, não a aneuploidias. O sexto é escolher a prófase para montar o cariótipo, quando a condensação máxima é a metáfase. E cuidado com Turner e Klinefelter: 45,X é fenótipo feminino, e 47,XXY é masculino, porque o que determina o sexo é a presença do Y."
       },
       {
         "title": "Pratique e confira",
-        "content": "Explique a origem cromossômica da síndrome de Down antes de conferir: uma não disjunção na meiose gera gameta com dois cromossomos 21, e a fecundação resulta em três cópias, totalizando 47 cromossomos. Agora diga quantos gametas funcionais saem de uma célula na espermatogênese e na ovulogênese: quatro e um, respectivamente."
+        "content": "Por que o risco de síndrome de Down aumenta com a idade materna, mas quase não muda com a idade paterna? Responda antes de conferir. Porque os dois processos têm cronologias opostas. Os ovócitos entram em meiose ainda na vida intrauterina e param em prófase I, permanecendo bloqueados por décadas até serem ovulados; ao longo desse tempo as proteínas do complexo de coesão que mantêm as cromátides unidas se degradam, e quanto mais velho o ovócito, maior a chance de não disjunção na retomada da meiose. A espermatogênese, ao contrário, é contínua: cada espermatozoide vem de uma meiose recente, sem bloqueio prolongado — o que não significa risco zero, mas desloca o efeito da idade paterna para mutações gênicas de ponto, e não para aneuploidias. Agora um segundo: um cariótipo apresenta 47,XY,+18. Traduza a notação e diga o que ela indica. São 47 cromossomos, com constituição sexual XY, portanto fenótipo masculino, e um cromossomo 18 excedente — trissomia do 18, ou síndrome de Edwards, quadro com malformações múltiplas e prognóstico grave, quase sempre decorrente de não disjunção na gametogênese."
       }
     ],
     "recall": {
@@ -2832,7 +2835,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Biologia",
@@ -2840,23 +2844,23 @@
     "sections": [
       {
         "title": "Alterações na sequência",
-        "content": "Mutações gênicas são alterações na sequência de bases do DNA. A substituição troca uma base por outra e pode ser silenciosa, quando o aminoácido não muda por causa da degeneração do código; de sentido trocado, quando altera o aminoácido; ou sem sentido, quando cria um códon de parada e interrompe a proteína."
+        "content": "Mutação gênica é a alteração na sequência de nucleotídeos de um gene, e o efeito depende do tipo. A substituição troca uma base por outra, e seus desfechos são três, com nomes que a banca cobra. A mutação silenciosa troca a base mas não muda o aminoácido, graças à degeneração do código genético — vários códons codificam o mesmo aminoácido, sobretudo na terceira posição. A mutação de sentido trocado, ou missense, muda um aminoácido: o efeito vai de nulo a devastador conforme a posição, e o exemplo obrigatório é a anemia falciforme, em que a troca de um ácido glutâmico por uma valina na posição 6 da cadeia beta da hemoglobina deforma a proteína e faz a hemácia assumir formato de foice. A mutação sem sentido, ou nonsense, transforma um códon de aminoácido em códon de parada, truncando a proteína — quase sempre com perda total de função, porque o produto sai incompleto."
       },
       {
         "title": "Inserções e deleções",
-        "content": "Inserir ou remover bases em número não múltiplo de três desloca a janela de leitura, alterando todos os códons seguintes. Essas mutações de mudança de matriz costumam ter efeito muito mais grave que substituições, porque a proteína resultante é completamente diferente a partir do ponto da alteração."
+        "content": "Inserções e deleções de nucleotídeos têm um efeito qualitativamente diferente, e a razão é o modo como o código é lido. Como a leitura é feita em trincas consecutivas, sem pontuação, acrescentar ou remover um número de bases que não seja múltiplo de três desloca todo o quadro de leitura a partir daquele ponto — a chamada mutação de fase, ou frameshift. Todos os códons seguintes passam a ser lidos errados, a sequência de aminoácidos muda por completo depois da mutação e, com frequência, surge um códon de parada prematuro. Por isso a frameshift é em geral muito mais grave que uma substituição isolada: ela não altera um aminoácido, altera todos os posteriores. Se a inserção ou deleção for de três bases, ou de um múltiplo de três, o quadro se mantém e apenas um ou poucos aminoácidos são acrescentados ou perdidos — é o caso da fibrose cística mais comum, uma deleção de três bases que remove uma fenilalanina da proteína CFTR."
       },
       {
         "title": "Causas e consequências",
-        "content": "Mutações ocorrem espontaneamente por erro de replicação e são aumentadas por agentes mutagênicos como radiação ultravioleta, raios X e certas substâncias químicas. Em células somáticas podem originar câncer, mas não são transmitidas; apenas as que ocorrem em células germinativas passam aos descendentes e alimentam a variabilidade da evolução."
+        "content": "As causas dividem-se em espontâneas e induzidas. Espontâneas decorrem de erros de pareamento durante a replicação, que a DNA polimerase corrige em grande parte por sua atividade de revisão, e de danos químicos ao próprio DNA. Induzidas vêm de agentes mutagênicos: radiação ionizante, como raios X e radiação gama, que quebra as fitas; radiação ultravioleta, que forma dímeros de timina — motivo pelo qual a exposição solar sem proteção aumenta o risco de câncer de pele, e pelo qual a integridade da camada de ozônio importa; e agentes químicos, como os presentes na fumaça do cigarro e o benzopireno. A consequência depende do tipo de célula atingida: mutação em célula somática afeta apenas o indivíduo e pode originar câncer, mas não é transmitida; mutação em célula germinativa é transmitida aos descendentes e é a matéria-prima da evolução. É essa distinção que separa o efeito individual do efeito evolutivo, e inverter as duas custa a questão inteira."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Dizer que toda mutação é prejudicial é erro: muitas são neutras e algumas são vantajosas, e é justamente isso que permite a seleção natural atuar. Outro deslize é achar que mutação somática é hereditária. E confundir mutação gênica com cromossômica, que altera estrutura ou número de cromossomos."
+        "content": "Dizer que toda mutação é prejudicial é o erro conceitual mais frequente: a maioria é neutra, algumas são deletérias e uma fração é vantajosa — e sem mutação não haveria alelos novos nem evolução. O segundo é dizer que a mutação ocorre porque o organismo precisa dela, quando ela é aleatória e independente da pressão seletiva. O terceiro é afirmar que uma substituição é sempre pior que uma deleção pequena, quando a deleção de uma ou duas bases desloca o quadro de leitura e costuma ser bem mais grave. O quarto é confundir mutação gênica com cromossômica: uma altera a sequência, a outra a estrutura ou o número de cromossomos. O quinto é dizer que mutação em célula somática é herdada. O sexto é tratar o câncer como doença hereditária por definição, quando o que se herda, em parte dos casos, é a predisposição, e não a doença. E cuidado com a silenciosa: ela é silenciosa no nível da proteína, mas a base trocada existe e pode ter efeito sobre a regulação ou a estabilidade do RNA."
       },
       {
         "title": "Pratique e confira",
-        "content": "Por que a inserção de uma base costuma ser mais grave que a substituição de uma base? Responda antes de conferir: ela desloca a janela de leitura e altera todos os códons seguintes, enquanto a substituição afeta no máximo um aminoácido. Agora explique por que uma substituição pode não ter efeito algum: o código é degenerado, e vários códons codificam o mesmo aminoácido."
+        "content": "Por que a deleção de um único nucleotídeo costuma ser mais grave que a substituição de um único nucleotídeo? Responda antes de conferir. Porque o código genético é lido em trincas consecutivas a partir de um ponto de início, sem separadores entre os códons. Uma substituição altera, no máximo, o aminoácido correspondente àquele códon — e pode até não alterar nada, se for silenciosa. Já a remoção de uma base desloca todo o quadro de leitura a partir dali: todos os códons seguintes passam a ser lidos com as bases erradas, a sequência inteira de aminoácidos posterior muda, e é comum surgir um códon de parada prematuro que trunca a proteína. O dano deixa de ser pontual e passa a ser de toda a região a jusante. Agora um segundo: explique por que a exposição prolongada ao sol sem proteção aumenta o risco de câncer de pele, e por que esse câncer não é transmitido aos filhos. A resposta liga a radiação ultravioleta à formação de dímeros de timina, que distorcem a dupla-hélice e levam a erros na replicação; as mutações acumuladas em genes de controle do ciclo celular podem originar um tumor — mas ocorrem em células somáticas da pele, não nas germinativas, e por isso não entram nos gametas."
       }
     ],
     "recall": {
@@ -2887,7 +2891,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Biologia",
@@ -2895,23 +2900,23 @@
     "sections": [
       {
         "title": "Envoltório e conteúdo",
-        "content": "O núcleo é delimitado pela carioteca, uma dupla membrana com poros que controlam o trânsito de moléculas entre núcleo e citoplasma. Dentro há o nucleoplasma, a cromatina — DNA associado a proteínas histonas — e o nucléolo, região onde se produzem os RNAs ribossômicos e se montam as subunidades dos ribossomos."
+        "content": "O núcleo é a característica que define a célula eucarionte, e sua função é abrigar e proteger o material genético, separando espacialmente a transcrição da tradução. O envoltório nuclear, ou carioteca, é formado por duas membranas lipoproteicas contínuas com o retículo endoplasmático rugoso, e é atravessado por poros nucleares: complexos proteicos que controlam seletivamente o trânsito entre núcleo e citoplasma, deixando entrar proteínas como as polimerases e os fatores de transcrição e deixando sair RNAs mensageiros e subunidades ribossômicas. Dentro há o nucleoplasma, ou cariolinfa, com nucleotídeos e enzimas; a cromatina, o DNA associado a proteínas histonas; e o nucléolo, região não delimitada por membrana onde os genes de RNA ribossômico são transcritos e as subunidades dos ribossomos são montadas — o que explica por que células com síntese proteica intensa têm nucléolos grandes e por vezes múltiplos."
       },
       {
         "title": "Cromatina e cromossomos",
-        "content": "A cromatina se apresenta como eucromatina, mais descondensada e ativa na transcrição, e heterocromatina, condensada e pouco ativa. Durante a divisão, a cromatina se condensa em cromossomos visíveis, cada um com centrômero e braços. O cariótipo é o conjunto de cromossomos da espécie, com 46 na espécie humana."
+        "content": "Cromatina e cromossomo não são estruturas diferentes: são o mesmo DNA em graus distintos de condensação. Durante a interfase, o DNA está descondensado como cromatina, e é nesse estado que ele pode ser transcrito e replicado — um DNA fortemente enrolado é inacessível às polimerases. Distinguem-se a eucromatina, mais frouxa e transcricionalmente ativa, e a heterocromatina, muito condensada e em geral inativa; o corpúsculo de Barr, o X inativado nas células femininas, é heterocromatina. Quando a célula entra em divisão, a cromatina se condensa progressivamente até formar cromossomos individualizados e visíveis ao microscópio óptico, com condensação máxima na metáfase — razão pela qual o cariótipo é montado a partir dessa fase. A unidade básica do empacotamento é o nucleossomo: cerca de 147 pares de bases enrolados num octâmero de histonas, repetido em série como um colar de contas, e sucessivamente dobrado até caber no volume do núcleo."
       },
       {
         "title": "O núcleo como centro de controle",
-        "content": "É no núcleo que ocorre a replicação do DNA e a transcrição em RNA, que depois migra para o citoplasma. Experimentos clássicos com a alga Acetabularia mostraram que o núcleo determina a forma do organismo, e a enucleação de células demonstra que elas perdem a capacidade de renovar suas proteínas e morrem."
+        "content": "O núcleo é o centro de controle porque guarda a informação e regula seu uso. A transcrição ocorre ali: o DNA serve de molde para o RNA mensageiro, que é processado — remoção de íntrons por splicing, adição de capacete e cauda poli-A — e só então sai pelos poros para ser traduzido nos ribossomos do citoplasma. Essa separação física entre transcrição e tradução é uma diferença central em relação aos procariontes, onde ambas ocorrem simultaneamente no citoplasma, já que não há envoltório nuclear. É também a separação que torna possível o processamento do RNA e, com ele, o splicing alternativo, pelo qual um mesmo gene origina proteínas diferentes conforme quais éxons sejam mantidos — um dos motivos pelos quais o número de proteínas humanas supera em muito o número de genes. Experimentos clássicos de transplante de núcleo em acetabulárias mostraram que é o núcleo, e não o citoplasma, que determina a forma característica da célula."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Dizer que o nucléolo produz proteínas confunde: ele produz RNA ribossômico e monta subunidades, e a síntese proteica ocorre no citoplasma. Outro erro é falar em cromossomos em células que não estão se dividindo, quando o correto é cromatina. E supor que procariontes têm núcleo, quando têm apenas nucleoide."
+        "content": "Dizer que cromatina e cromossomo são estruturas diferentes é o erro conceitual de base: são o mesmo material em estados distintos de condensação. O segundo é afirmar que o DNA é transcrito na forma de cromossomo condensado, quando a condensação máxima impede o acesso das polimerases — transcreve-se a cromatina descondensada da interfase. O terceiro é dizer que a carioteca é uma membrana única, quando são duas, contínuas com o retículo rugoso. O quarto é tratar os poros como buracos passivos, quando são complexos proteicos que selecionam o que passa. O quinto é dizer que o nucléolo é uma organela delimitada por membrana — não é delimitado por membrana alguma. O sexto é escolher a prófase para o cariótipo em vez da metáfase. E cuidado com a comparação procarionte e eucarionte: dizer que o procarionte não tem DNA no \"núcleo\" é impreciso; ele não tem núcleo, e seu DNA fica numa região chamada nucleoide, sem envoltório."
       },
       {
         "title": "Pratique e confira",
-        "content": "Por que uma hemácia madura humana não sintetiza novas proteínas? Responda antes de conferir: ela perde o núcleo durante a maturação, e sem núcleo não há transcrição de novos RNAs mensageiros. Agora diga onde se formam os ribossomos e onde eles atuam: são montados no nucléolo e atuam no citoplasma."
+        "content": "Por que o DNA precisa estar descondensado para ser transcrito, se ele contém a mesma informação nos dois estados? Responda antes de conferir. Porque a informação só é útil se puder ser lida, e a leitura é física: a RNA polimerase e os fatores de transcrição precisam se acoplar à dupla-hélice e separá-la localmente para usar uma das fitas como molde. Na cromatina condensada, o DNA está enrolado em nucleossomos e estes sucessivamente dobrados, de modo que as sequências regulatórias ficam inacessíveis — é exatamente isso que torna a heterocromatina transcricionalmente silenciosa, e é por isso que a regulação da condensação é, ela própria, um mecanismo de controle gênico. Durante a mitose, com o DNA em condensação máxima, a transcrição praticamente cessa. Agora um segundo: explique por que uma célula humana e uma bactéria diferem quanto à possibilidade de processar o RNA mensageiro antes de traduzi-lo. A resposta é a compartimentalização: no eucarionte a carioteca separa a transcrição, no núcleo, da tradução, no citoplasma, abrindo uma janela para splicing, capacete e cauda poli-A; na bactéria, sem envoltório nuclear, o ribossomo começa a traduzir o mensageiro enquanto ele ainda está sendo transcrito."
       }
     ],
     "recall": {
@@ -2942,7 +2947,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Biologia",
