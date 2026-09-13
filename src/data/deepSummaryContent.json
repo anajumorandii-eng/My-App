@@ -21121,23 +21121,23 @@
     "sections": [
       {
         "title": "De onde ela vem",
-        "content": "A relação sen²x + cos²x = 1 é o teorema de Pitágoras aplicado ao ciclo trigonométrico: o ponto do ciclo tem coordenadas (cos x, sen x) e está a distância 1 da origem. Por isso ela vale para qualquer número real x, e não apenas para ângulos agudos, e é a identidade da qual todas as outras derivam."
+        "content": "A relação fundamental sen²θ+cos²θ=1 não é um resultado arbitrário nem uma coincidência numérica — ela decorre diretamente do teorema de Pitágoras aplicado ao triângulo retângulo formado dentro do círculo trigonométrico: para qualquer ângulo θ, o ponto correspondente na circunferência de raio 1 tem coordenadas exatamente (cos θ, sen θ), e como esse ponto está sempre a uma distância 1 da origem (o raio do círculo trigonométrico), o teorema de Pitágoras aplicado às suas coordenadas x=cos θ e y=sen θ produz exatamente x²+y²=1², ou seja, cos²θ+sen²θ=1. Essa origem geométrica explica por que a relação vale universalmente para qualquer ângulo θ, positivo ou negativo, maior ou menor que 90°, sem exceção — ela não é uma propriedade especial de triângulos retângulos agudos, mas uma consequência da própria definição de seno e cosseno como coordenadas de um ponto numa circunferência de raio unitário."
       },
       {
         "title": "Como usar em exercícios",
-        "content": "Conhecido o seno, o cosseno sai da relação a menos do sinal, que o quadrante decide. É o procedimento padrão: substituir, isolar, extrair a raiz e escolher o sinal. Também é o caminho para transformar expressões, substituindo 1 por sen²x + cos²x quando isso permite fatorar ou simplificar."
+        "content": "A utilidade mais imediata da relação fundamental em exercícios é permitir calcular o valor de uma das funções trigonométricas (seno ou cosseno) a partir do valor conhecido da outra, isolando algebricamente a incógnita: se sen θ é conhecido, cos θ=±√(1−sen²θ), e vice-versa — o sinal ± precisa ser decidido com base no quadrante em que o ângulo θ se encontra, informação que a relação fundamental sozinha não fornece, já que ela envolve apenas os quadrados das funções, perdendo automaticamente a informação de sinal de cada uma isoladamente. É exatamente essa ambiguidade de sinal, e a necessidade de resolvê-la usando informação adicional sobre o quadrante, que torna a aplicação da relação fundamental um exercício de atenção cuidadosa, e não apenas de substituição algébrica mecânica numa fórmula."
       },
       {
         "title": "Simplificações típicas",
-        "content": "Expressões como (1 − cos²x)/sen x simplificam para sen x; sec²x − 1 vira tg²x; e sen⁴x − cos⁴x fatora como (sen²x + cos²x)(sen²x − cos²x), reduzindo-se a sen²x − cos²x. Reconhecer diferença de quadrados e trinômio quadrado perfeito é tão importante aqui quanto conhecer as identidades."
+        "content": "Diversas identidades trigonométricas mais complexas se simplificam através de manipulações algébricas que usam a relação fundamental como ferramenta central, geralmente reescrevendo uma potência de seno em termos de cosseno (ou vice-versa) para reduzir uma expressão a uma forma mais simples: expressões como sen²θ podem ser substituídas por 1−cos²θ, e vice-versa, uma troca que frequentemente permite fatorar, cancelar ou simplificar expressões trigonométricas que, à primeira vista, pareceriam não ter relação óbvia entre si. Essa substituição de sen²θ por 1−cos²θ (ou o inverso) é uma das manobras algébricas mais recorrentes em toda a trigonometria do ensino médio, aparecendo tanto na simplificação de expressões quanto na resolução de equações trigonométricas que, escritas originalmente com seno e cosseno misturados, se tornam equações polinomiais numa única função trigonométrica depois dessa substituição."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Escrever sen²x como sen x² é erro de notação com consequência real: o quadrado é do seno, não do ângulo. Outro é extrair a raiz esquecendo o duplo sinal e o quadrante. E aplicar a relação a ângulos diferentes, como sen²x + cos²y, que não simplifica para 1."
+        "content": "O erro mais comum é esquecer o sinal ± ao isolar seno ou cosseno a partir da relação fundamental, assumindo automaticamente o sinal positivo sem verificar o quadrante do ângulo em questão — essa omissão produz um resultado que pode estar com o sinal invertido, dependendo de em que quadrante o ângulo realmente se encontra. O segundo erro é achar que a relação fundamental vale apenas para ângulos agudos de um triângulo retângulo — ela vale para qualquer ângulo real, incluindo ângulos obtusos, negativos, ou maiores que 360°, precisamente porque decorre da definição geométrica de seno e cosseno no círculo trigonométrico completo, não de um triângulo retângulo específico limitado a ângulos entre 0° e 90°. O terceiro erro é confundir sen²θ (que significa (sen θ)², o quadrado do seno) com sen(θ²) (o seno do quadrado do ângulo) — são expressões matematicamente muito diferentes, e a notação sen²θ, apesar de parecer sugerir aplicar o quadrado ao argumento, na verdade aplica o quadrado ao resultado da função. O quarto erro é aplicar a relação fundamental diretamente a tangente ou outras funções trigonométricas derivadas sem antes convertê-las para seno e cosseno — a relação fundamental original é especificamente entre seno e cosseno; usá-la para tangente exige primeiro reescrever tan θ=sen θ/cos θ e manipular a partir daí. Um quinto erro é esquecer que a relação fundamental exige que o mesmo ângulo θ apareça em ambos os termos — sen²α+cos²β=1 não é uma identidade válida se α e β forem ângulos diferentes; a relação só vale exatamente quando ambas as funções trigonométricas estão avaliadas no mesmo ângulo."
       },
       {
         "title": "Pratique e confira",
-        "content": "Se sen x = 3/5 e x está no segundo quadrante, calcule cos x antes de conferir: cos²x = 1 − 9/25 = 16/25, logo cos x = ±4/5, e no segundo quadrante o cosseno é negativo, dando −4/5. Agora simplifique (1 − sen²x)/cos x: o numerador é cos²x, então a expressão vale cos x."
+        "content": "Sabendo que sen θ=3/5 e que θ está no segundo quadrante, calcule cos θ. Da relação fundamental, cos²θ=1−sen²θ=1−9/25=16/25, logo cos θ=±4/5. Como θ está no segundo quadrante, onde o cosseno é negativo (só o seno é positivo nesse quadrante), tem-se cos θ=−4/5. Agora um problema mais analítico: simplifique a expressão (sen²θ)/(1−cos θ) − (1+cos θ), usando a relação fundamental, e determine para quais valores de θ essa simplificação é válida. Usando sen²θ=1−cos²θ=(1−cos θ)(1+cos θ) (uma diferença de quadrados), o primeiro termo se torna [(1−cos θ)(1+cos θ)]/(1−cos θ) = 1+cos θ, desde que 1−cos θ≠0, ou seja, desde que cos θ≠1 (o que exclui θ=0°+360°k, os únicos valores em que o denominador original se anularia). A expressão completa fica então (1+cos θ)−(1+cos θ)=0 — a expressão simplifica para exatamente zero, para todo θ tal que cos θ≠1, um resultado que só emerge claramente depois de reconhecer a diferença de quadrados escondida no numerador do primeiro termo, uma aplicação direta e elegante da relação fundamental combinada com fatoração algébrica básica."
       }
     ],
     "recall": {
@@ -21167,7 +21167,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Matemática",
@@ -21175,23 +21176,23 @@
     "sections": [
       {
         "title": "Do triângulo ao círculo",
-        "content": "Para ângulos maiores que 90°, as razões do triângulo retângulo não bastam, e a trigonometria passa a ser definida no ciclo trigonométrico: uma circunferência de raio 1, com o ângulo medido a partir do eixo x. O cosseno é a abscissa do ponto e o seno é a ordenada, definição que estende as razões a qualquer número real."
+        "content": "A trigonometria do triângulo retângulo, limitada a ângulos entre 0° e 90°, é generalizada para qualquer número real através do círculo trigonométrico: uma circunferência de raio 1 centrada na origem do plano cartesiano, na qual cada ângulo θ (medido a partir do eixo x positivo, no sentido anti-horário para valores positivos) corresponde a um ponto específico na circunferência, com coordenadas (cos θ, sen θ). Essa construção permite estender as definições de seno e cosseno para além dos ângulos agudos de um triângulo, incluindo ângulos obtusos, negativos, ou até maiores que uma volta completa (360°) — e é essa extensão para \"qualquer número real\" que dá nome ao tópico: como o ângulo é medido percorrendo a circunferência (um comprimento de arco relacionado ao ângulo em radianos), qualquer número real, positivo ou negativo, corresponde a um ponto bem definido no círculo trigonométrico, generalizando completamente a noção original restrita de ângulo de um triângulo."
       },
       {
         "title": "Radianos e voltas",
-        "content": "Medir ângulos em radianos é medir o arco correspondente numa circunferência de raio 1, de modo que a volta completa é 2π. Assim 180° é π, 90° é π/2 e 60° é π/3. Como o ciclo se repete a cada volta, ângulos que diferem de múltiplos de 2π têm os mesmos seno e cosseno, o que define a periodicidade."
+        "content": "Radianos e o número de voltas completas se relacionam diretamente: uma volta completa na circunferência corresponde a exatamente 2π radianos (ou 360°), e um ângulo maior que 2π radianos simplesmente representa mais de uma volta completa, retornando ao mesmo ponto da circunferência após cada múltiplo inteiro de 2π — essa periodicidade é a razão física e geométrica por trás da propriedade fundamental de que seno e cosseno são funções periódicas de período 2π: sen(θ+2π)=sen θ e cos(θ+2π)=cos θ, para qualquer valor de θ, porque adicionar 2π radianos a um ângulo corresponde a dar exatamente uma volta completa adicional na circunferência, retornando ao mesmo ponto exato de partida. Ângulos negativos correspondem a percorrer a circunferência no sentido horário (o sentido oposto ao convencionalmente positivo), e essa convenção de sinal é o que permite calcular seno e cosseno de qualquer número real, positivo ou negativo, sem exceção, de forma consistente com a extensão periódica das funções."
       },
       {
         "title": "Sinais por quadrante",
-        "content": "No primeiro quadrante, seno e cosseno são positivos. No segundo, só o seno; no terceiro, nenhum dos dois; no quarto, só o cosseno. Os arcos côngruos e a redução ao primeiro quadrante permitem calcular o seno de 150° a partir do de 30°, mudando apenas o que os sinais determinam."
+        "content": "O sinal de seno e cosseno em cada um dos quatro quadrantes do círculo trigonométrico decorre diretamente dos sinais das coordenadas (x,y) de cada quadrante: no primeiro quadrante (0° a 90°), ambos x=cos θ e y=sen θ são positivos; no segundo quadrante (90° a 180°), x é negativo e y positivo, então cos θ é negativo e sen θ positivo; no terceiro quadrante (180° a 270°), ambos são negativos; e no quarto quadrante (270° a 360°), x é positivo e y negativo, então cos θ é positivo e sen θ negativo. Memorizar essa tabela de sinais por quadrante — muitas vezes resumida na regra mnemônica \"todos, seno, tangente, cosseno\" (indicando qual função é positiva em cada quadrante, começando pelo primeiro) — é essencial para resolver corretamente equações trigonométricas e para decidir o sinal correto ao isolar uma função trigonométrica a partir da relação fundamental, já discutida no capítulo anterior, quando apenas o quadrante do ângulo é fornecido, sem o valor numérico exato do próprio ângulo."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Trabalhar em graus com a calculadora em radianos, ou o contrário, é o erro prático mais frequente. Outro é esquecer o sinal ao reduzir ao primeiro quadrante: sen 150° é +1/2, mas cos 150° é −√3/2. E confundir 2π com 360° na hora de somar voltas leva a arcos côngruos errados."
+        "content": "O erro mais comum é achar que seno e cosseno só fazem sentido para ângulos entre 0° e 90°, como no contexto original do triângulo retângulo — a extensão pelo círculo trigonométrico define essas funções para qualquer número real, incluindo ângulos negativos e maiores que 360°, sem nenhuma restrição de domínio. O segundo erro é confundir o sentido de percorrer o círculo trigonométrico, achando que ângulos positivos correspondem ao sentido horário — a convenção padrão é o sentido anti-horário para ângulos positivos, e o sentido horário para ângulos negativos, uma convenção que precisa ser respeitada consistentemente em qualquer cálculo envolvendo o círculo trigonométrico. O terceiro erro é errar a tabela de sinais por quadrante, especialmente confundindo o segundo e o quarto quadrantes — no segundo, o seno é positivo e o cosseno negativo; no quarto, é exatamente o oposto, e essa troca é uma fonte muito comum de erro de sinal em problemas de trigonometria. O quarto erro é achar que a periodicidade de 2π significa que as funções trigonométricas \"recomeçam do zero\" a cada volta — elas retornam exatamente ao mesmo valor que tinham antes daquela volta completa, preservando toda a sequência de valores anteriores, não reiniciando de algum valor de referência fixo. Um quinto erro é converter incorretamente entre graus e radianos ao localizar um ângulo específico no círculo trigonométrico — como já visto no capítulo de geometria métrica, a conversão exige multiplicar por π/180 (de graus para radianos) ou por 180/π (o inverso), e omitir ou inverter esse fator produz uma localização completamente errada do ângulo na circunferência."
       },
       {
         "title": "Pratique e confira",
-        "content": "Converta 210° para radianos antes de conferir: 210·π/180 = 7π/6. Agora calcule sen 210° e cos 210°: o arco está no terceiro quadrante, onde ambos são negativos, e o ângulo de referência é 30°, logo sen = −1/2 e cos = −√3/2. Por fim, diga um arco côngruo a 30°: 390°, ou 30° + 2π em radianos."
+        "content": "Determine o sinal de sen(200°) e cos(200°), sem calcular seus valores numéricos exatos, apenas identificando o quadrante correspondente. Como 200° está entre 180° e 270°, esse ângulo está no terceiro quadrante, onde tanto seno quanto cosseno são negativos: sen(200°)<0 e cos(200°)<0. Agora um problema mais analítico: um ângulo θ satisfaz θ=1.000° após múltiplas voltas completas na circunferência. Determine o ângulo equivalente entre 0° e 360° (a chamada primeira determinação positiva) e identifique o quadrante correspondente. Para reduzir 1.000° a um valor entre 0° e 360°, subtrai-se múltiplos de 360° sucessivamente: 1.000−360=640; 640−360=280 — como 280° já está entre 0° e 360°, essa é a primeira determinação positiva equivalente a 1.000°. Isso significa que 1.000° corresponde a duas voltas completas (720°) mais 280° adicionais, e como 280° está entre 270° e 360°, o ângulo está no quarto quadrante, onde o seno é negativo e o cosseno é positivo — um resultado que só é possível de determinar corretamente reduzindo primeiro o ângulo original ao intervalo padrão de uma única volta, já que ângulos maiores que 360° não correspondem diretamente a nenhum quadrante específico sem essa redução prévia por subtração de múltiplos de 360°."
       }
     ],
     "recall": {
@@ -21222,7 +21223,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Matemática",
@@ -21230,23 +21232,23 @@
     "sections": [
       {
         "title": "Aplicar uma depois da outra",
-        "content": "A função composta (f∘g)(x) significa aplicar g primeiro e depois f ao resultado: f(g(x)). A ordem importa, e em geral f∘g é diferente de g∘f. Pensar em máquinas encadeadas ajuda: a saída de uma é a entrada da outra, e por isso a imagem de g precisa estar contida no domínio de f."
+        "content": "Compor duas funções significa aplicar uma delas ao resultado da outra, numa sequência específica e ordenada: a função composta (f∘g)(x)=f(g(x)) significa \"primeiro aplique g a x, depois aplique f ao resultado obtido\" — a ordem das operações, da direita para a esquerda na notação f(g(x)), é essencial e não pode ser invertida livremente: em geral, (f∘g)(x) é uma função diferente de (g∘f)(x), já que aplicar f depois de g produz um resultado tipicamente diferente de aplicar g depois de f, exceto em casos particulares específicos em que as duas funções \"comutam\" (uma coincidência que não deve ser assumida sem verificação explícita). Essa composição sequencial de funções modela matematicamente qualquer processo de \"cadeia de transformações\", em que a saída de um processo se torna a entrada do próximo — um cenário extremamente comum tanto em matemática pura quanto em aplicações práticas, como conversões sucessivas de unidades ou cálculos financeiros em várias etapas encadeadas."
       },
       {
         "title": "Domínio da composta",
-        "content": "O domínio de f∘g é formado pelos x do domínio de g cujas imagens g(x) pertencem ao domínio de f. Essa dupla condição costuma ser esquecida, e é ela que explica restrições que parecem surgir do nada, como no caso de compor uma raiz quadrada com uma função que assume valores negativos."
+        "content": "O domínio da função composta f∘g não é simplesmente a interseção (ou a soma) dos domínios de f e g isoladamente — é o conjunto de todos os valores x para os quais g(x) está definido E, adicionalmente, g(x) pertence ao domínio de f, permitindo que f seja aplicada ao resultado de g(x) sem restrições. Essa condição em duas etapas é frequentemente esquecida: mesmo que x esteja no domínio de g (permitindo calcular g(x) sem problemas), se o valor resultante g(x) não pertencer ao domínio de f, então x não pode fazer parte do domínio da composta f∘g, já que a segunda etapa da composição (aplicar f) simplesmente não seria válida para aquele resultado intermediário específico. Determinar corretamente o domínio de uma função composta exige, portanto, analisar cuidadosamente ambas as restrições em sequência, não apenas a restrição da função \"interna\" g isoladamente."
       },
       {
         "title": "Decompor e aplicar",
-        "content": "Muitas questões pedem o caminho inverso: escrever uma função complicada como composta de duas simples. Em h(x) = √(3x + 1), tomamos g(x) = 3x + 1 e f(u) = √u. Essa decomposição é a base do cálculo de derivadas mais adiante e, no ensino médio, aparece em problemas de custo, taxa e conversão de unidades encadeadas."
+        "content": "Decompor uma função complexa em uma composição de funções mais simples é uma estratégia frequentemente útil tanto para calcular derivadas (usando a regra da cadeia, que se apoia diretamente na estrutura de composição de funções) quanto para simplificar a análise de uma expressão complicada, identificando qual \"camada\" de operação foi aplicada por último (a função externa) e qual foi aplicada primeiro (a função interna). Por exemplo, uma função como h(x)=√(x²+1) pode ser vista como a composição de g(x)=x²+1 (aplicada primeiro, a função interna) seguida de f(x)=√x (aplicada por último, a função externa), de modo que h(x)=f(g(x)); reconhecer essa estrutura de composição é o primeiro passo indispensável para aplicar corretamente técnicas mais avançadas de cálculo, como a regra da cadeia, que trata cada camada da composição separadamente antes de combinar os resultados parciais numa fórmula final única."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Trocar a ordem da composição é o erro mais frequente: em f∘g, quem age primeiro é g. Outro é multiplicar as funções em vez de compô-las. E calcular o domínio da composta apenas pela fórmula final, sem considerar as restrições da função interna."
+        "content": "O erro mais comum é achar que f∘g e g∘f são sempre a mesma função — em geral são diferentes, e a ordem das operações precisa ser rigorosamente respeitada conforme a notação e o contexto do problema especificam; assumir comutatividade sem verificação é um erro conceitual grave nesse tópico. O segundo erro é calcular o domínio da função composta considerando apenas o domínio da função \"interna\" g, ignorando a restrição adicional de que g(x) precisa pertencer ao domínio da função \"externa\" f — essa segunda condição é frequentemente a mais restritiva das duas e não pode ser omitida da análise. O terceiro erro é confundir a notação f(g(x)) com o produto f(x)×g(x) — são operações completamente diferentes: composição aplica uma função ao resultado da outra; multiplicação simplesmente multiplica os valores numéricos calculados por cada função separadamente no mesmo ponto x. O quarto erro é decompor uma função complexa de forma incorreta, invertendo qual parte é a função interna e qual é a externa — a função externa é sempre aquela aplicada \"por último\", na camada mais externa da expressão (tipicamente a operação que \"envolve\" toda a expressão restante, como a raiz quadrada em √(x²+1)), enquanto a interna é aplicada primeiro, ao valor original de x. Um quinto erro é achar que a composição de duas funções injetoras (ou sobrejetoras) sempre preserva automaticamente essas mesmas propriedades para a função composta resultante sem justificativa — embora seja verdade que a composição de duas funções injetoras é injetora (e o análogo para sobrejetoras), essa preservação de propriedades exige demonstração e não deve ser assumida sem entender por que ela vale."
       },
       {
         "title": "Pratique e confira",
-        "content": "Com f(x) = 2x + 1 e g(x) = x², calcule f(g(3)) e g(f(3)) antes de conferir: f(g(3)) = f(9) = 19, e g(f(3)) = g(7) = 49, valores diferentes que mostram a não comutatividade. Agora escreva (f∘g)(x) em geral: 2x² + 1, enquanto (g∘f)(x) = (2x + 1)²."
+        "content": "Sejam f(x)=2x+3 e g(x)=x²−1. Calcule (f∘g)(x) e (g∘f)(x), e verifique que são funções diferentes. (f∘g)(x)=f(g(x))=f(x²−1)=2(x²−1)+3=2x²−2+3=2x²+1. (g∘f)(x)=g(f(x))=g(2x+3)=(2x+3)²−1=4x²+12x+9−1=4x²+12x+8. As duas expressões — 2x²+1 e 4x²+12x+8 — são claramente funções diferentes (bastaria avaliar em x=0: a primeira dá 1, a segunda dá 8), confirmando que a ordem da composição importa e não pode ser trocada livremente. Agora um problema mais analítico: sejam f(x)=1/(x−2) e g(x)=√x. Determine o domínio da função composta (f∘g)(x), considerando as restrições de ambas as funções envolvidas. Primeiro, g(x)=√x exige x≥0 (domínio de g). Em seguida, (f∘g)(x)=f(g(x))=f(√x)=1/(√x−2), e essa expressão exige que √x−2≠0, ou seja, √x≠2, o que implica x≠4 — essa é a restrição adicional imposta pelo domínio de f aplicado ao resultado de g. Combinando as duas condições (x≥0 do domínio de g, e x≠4 da restrição de f sobre o resultado de g), o domínio da função composta é o conjunto de todos os x≥0, exceto x=4 — um domínio que não poderia ser determinado corretamente considerando apenas uma das duas restrições isoladamente, exigindo a análise combinada e sequencial de ambas as etapas da composição."
       }
     ],
     "recall": {
@@ -21273,7 +21275,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Matemática",
