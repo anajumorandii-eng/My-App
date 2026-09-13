@@ -54,6 +54,7 @@ import {
   Moon,
   Sun,
   ChartNoAxesCombined,
+  Waypoints,
 } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
@@ -184,6 +185,17 @@ export const SCREENS: InstrumentalScreen[] = [
     subject: "Português",
     topic: "Interpretação de texto",
     action: "Explorar resumos",
+  },
+  {
+    key: "visual",
+    label: "Visual",
+    title: "Veja as relações antes de decorar as respostas.",
+    summary: "Mapa para compreender relações, reconstrução ativa para consolidar.",
+    kind: "library",
+    icon: Waypoints,
+    subject: "Física",
+    topic: "Termodinâmica",
+    action: "Abrir o mapa",
   },
   {
     key: "revisoes",

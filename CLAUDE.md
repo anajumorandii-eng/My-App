@@ -136,6 +136,41 @@ Estado: 435 de 612 aprofundados — Biologia, Química, Física, Matemática,
 Geografia, História e Filosofia inteiras concluídas. Os demais seguem em
 rodadas, matéria por matéria (próxima: Sociologia).
 
+## Visual
+
+A aba `/visual` (`src/views/Visual.tsx`) transforma um capítulo de resumo em
+prancha de relações, com três modos: Explorar, Testar e Reconstruir. As regras
+ficam em `src/lib/visualStudy.ts`, módulo puro, sem React, para rodar em
+`node:test`. A especificação completa está em `docs/visual/README.md`.
+
+O mapa não é um dado novo: os nós saem das cinco seções do capítulo, as arestas
+saem da sequência fixa de estágios, e as relações avaliáveis saem de
+`retrieval[0].expectedElements`. Nada disso é gravado — é derivado a cada
+render.
+
+**A evidência é a mesma do Caderno de Erros.** Testar e Reconstruir passam por
+`evaluateRetrievalAnswer` + `applySummaryAttempt`, exatamente como a recuperação
+ativa dos Resumos, e o estado de cada relação é lido de
+`matchedElements`/`firstMissingElement` das tentativas já registradas. Criar um
+histórico próprio do Visual faria o mapa e o Caderno discordarem sobre a mesma
+aluna.
+
+Decorrências que devem ser preservadas:
+
+- Os sete estados vêm da evidência, não de um campo salvo. `possivel-regressao`
+  fica fora da escada (`NODE_STATE_RANK`) de propósito: é alerta sobre um degrau
+  perdido, não um degrau.
+- A confiança reusa `confidenceFromUncertainty`. Sem tentativa nenhuma o
+  diagnóstico lê "dados insuficientes", e o inspetor diz que aquilo é hipótese.
+- Resposta que corresponde a **outra** relação do mesmo mapa é `parcial`, não
+  erro: o conteúdo estava certo e o vínculo saiu trocado.
+- A ocultação em Reconstruir vai da evidência mais frágil para a mais firme, e
+  "Por que estas?" mostra o motivo de cada uma.
+- Os rótulos de `expectedElements` estão em caixa baixa e sem acento. **Não
+  corrija o dado**: o mesmo texto é gravado em `matchedElements` a cada
+  tentativa, e renomeá-lo orfanaria a evidência já registrada. A tela corrige só
+  a inicial, na exibição.
+
 ## IA
 
 O cliente chama `/api/ai/<task>` por `src/lib/aiClient.ts`. Cada tarefa precisa
