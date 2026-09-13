@@ -1,43 +1,30 @@
 /*
- * Estados do mapa do Visual.
+ * A prancha do Visual.
  *
- * Ficam em CSS, e não em classes Tailwind soltas, porque o mesmo estado precisa
- * pintar três coisas diferentes — o nó no SVG, a legenda e a linha do inspetor —
- * e repetir sete paletas em três lugares já tinha divergido no protótipo.
+ * A primeira versão desta tela saiu com a casca genérica do Tailwind — caixas
+ * zinc, azul indigo, uma corrente vertical cinza — e não era o CRIVO. Aqui a
+ * folha inteira é redesenhada contra o design system real: superfícies quentes,
+ * Newsreader itálico nos títulos, mono em caixa-alta nos metadados, e as
+ * variáveis de matéria (--primary, --secondary, --line) que o shell já injeta
+ * por rota. Nada de paleta própria.
  *
- * A semântica vem da especificação: cinza quente para não avaliado, vinho para
- * lacuna e atenção prioritária, âmbar para o que está a caminho, verde vivo para
- * domínio sustentado. Não é uma escala de vermelho a verde: a regressão é vinho
- * justamente porque é alerta, não "ruim".
+ * A semântica de estado vem da especificação e é a única cor que NÃO acompanha
+ * a matéria: vinho é lacuna, âmbar é o que está a caminho, verde vivo é domínio
+ * sustentado, cinza quente é não avaliado. Ela precisa significar a mesma coisa
+ * em Biologia e em História, senão deixa de ser diagnóstico e vira decoração.
  */
+
 .crivo-visual {
-  --vs-nao-avaliado: #a8a29e;
-  --vs-reconhece: #b4566a;
-  --vs-compreende: #d09b5d;
-  --vs-aplicacao-instavel: #c07c3a;
+  --vs-nao-avaliado: #8d8578;
+  --vs-reconhece: #a8465c;
+  --vs-compreende: #c98f4e;
+  --vs-aplicacao-instavel: #c2762f;
   --vs-aplica: #4f9d70;
   --vs-transfere: #2f7d55;
   --vs-possivel-regressao: #852636;
-  --vs-plate: #fbf8f2;
-  --vs-plate-line: rgba(89, 56, 34, 0.18);
-  --vs-plate-ink: #281c16;
-  --vs-plate-dim: #6f6255;
-}
-
-/* O escuro preserva o ambiente do produto (verde profundo), em vez de inverter
-   a prancha para preto puro — a prancha continua sendo superfície de estudo. */
-.dark .crivo-visual {
-  --vs-nao-avaliado: #78716c;
-  --vs-reconhece: #c97287;
-  --vs-compreende: #e0b070;
-  --vs-aplicacao-instavel: #d99a54;
-  --vs-aplica: #5fb987;
-  --vs-transfere: #7fd3a5;
-  --vs-possivel-regressao: #d4667f;
-  --vs-plate: #10251f;
-  --vs-plate-line: rgba(233, 208, 157, 0.16);
-  --vs-plate-ink: #f5ecdc;
-  --vs-plate-dim: #b8ad9a;
+  --vs-radius: 16px;
+  display: grid;
+  gap: 22px;
 }
 
 .crivo-visual [data-state='nao-avaliado'] { --vs-state: var(--vs-nao-avaliado); }
@@ -48,60 +35,305 @@
 .crivo-visual [data-state='transfere'] { --vs-state: var(--vs-transfere); }
 .crivo-visual [data-state='possivel-regressao'] { --vs-state: var(--vs-possivel-regressao); }
 
-.crivo-visual .vs-swatch {
-  display: inline-block;
-  width: 0.6rem;
-  height: 0.6rem;
-  border-radius: 999px;
-  background: var(--vs-state, var(--vs-nao-avaliado));
+/* No claro os tons de estado precisam escurecer: o âmbar e o verde calibrados
+   para o fundo escuro dão 2,1:1 sobre o creme, abaixo do mínimo de 4,5:1. */
+.is-light .crivo-visual {
+  --vs-nao-avaliado: #6d6558;
+  --vs-reconhece: #8e2d44;
+  --vs-compreende: #91601f;
+  --vs-aplicacao-instavel: #8c4f12;
+  --vs-aplica: #2d7350;
+  --vs-transfere: #1f5c3c;
+  --vs-possivel-regressao: #6f1c2b;
 }
 
+/* ---------- superfícies ---------- */
+
+.crivo-visual .vs-panel {
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: var(--vs-radius);
+  background: linear-gradient(145deg, rgba(229, 242, 232, .075), rgba(229, 242, 232, .022));
+  box-shadow: inset 1px 1px rgba(255, 255, 255, .045), 0 18px 45px rgba(0, 0, 0, .15);
+}
+
+.is-light .crivo-visual .vs-panel {
+  background: linear-gradient(145deg, rgba(255, 255, 252, .88), rgba(243, 236, 223, .72));
+  box-shadow: inset 1px 1px rgba(255, 255, 255, .95), 0 18px 45px rgba(44, 52, 45, .08);
+}
+
+/* O ponto era um item de flex, então num tópico longo ele ficava sozinho na
+   primeira linha e o texto descia inteiro para a segunda. Inline resolve: o
+   ponto acompanha a primeira palavra e o resto quebra normalmente. */
+.crivo-visual .vs-kicker {
+  display: block;
+  margin: 0;
+  color: var(--primary-ink, var(--primary));
+  font: 9px/1.6 ui-monospace, SFMono-Regular, monospace;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.crivo-visual .vs-kicker i {
+  display: inline-block;
+  height: 4px;
+  width: 4px;
+  margin-right: 7px;
+  vertical-align: middle;
+  border-radius: 50%;
+  background: currentColor;
+  box-shadow: 0 0 9px currentColor;
+}
+
+.crivo-visual h1 {
+  max-width: 760px;
+  margin: 12px 0 0;
+  font: 600 italic clamp(31px, 3.6vw, 50px)/.96 Newsreader, Georgia, serif;
+  letter-spacing: -.035em;
+}
+
+.crivo-visual h2 { margin: 0; font: 600 italic 26px/1.04 Newsreader, Georgia, serif; letter-spacing: -.025em; }
+.crivo-visual h3 { margin: 0; font: 500 19px Newsreader, Georgia, serif; }
+.crivo-visual .vs-lede { max-width: 620px; margin: 14px 0 0; color: var(--dim); font-size: 13px; line-height: 1.62; }
+.crivo-visual p { font-size: 12.5px; line-height: 1.6; }
+.crivo-visual .vs-dim { color: var(--dim); }
+.crivo-visual .vs-meta { color: var(--faint); font: 9px ui-monospace, SFMono-Regular, monospace; letter-spacing: .12em; text-transform: uppercase; }
+
+/* ---------- controles ---------- */
+
+.crivo-visual .vs-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--dim);
+  font: 9px ui-monospace, SFMono-Regular, monospace;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.crivo-visual .vs-back:hover { color: var(--text); }
+
+.crivo-visual .vs-modes { display: inline-flex; gap: 4px; padding: 5px; border: 1px solid var(--line); border-radius: 999px; background: rgba(229, 242, 232, .04); }
+.is-light .crivo-visual .vs-modes { background: rgba(255, 252, 246, .6); }
+
+.crivo-visual .vs-modes button {
+  padding: 9px 18px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--dim);
+  font: 10px ui-monospace, SFMono-Regular, monospace;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background .2s ease, color .2s ease;
+}
+.crivo-visual .vs-modes button[aria-selected='true'] {
+  background: linear-gradient(145deg, var(--primary), var(--secondary));
+  color: var(--ink-on-primary);
+  font-weight: 700;
+  box-shadow: 0 10px 24px color-mix(in srgb, var(--primary) 30%, transparent);
+}
+
+.crivo-visual .vs-primary {
+  padding: 11px 17px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 0;
+  border-radius: 999px;
+  background: linear-gradient(145deg, var(--primary), var(--secondary));
+  color: var(--ink-on-primary);
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 12px 28px color-mix(in srgb, var(--primary) 34%, transparent);
+}
+.crivo-visual .vs-primary:disabled { opacity: .38; box-shadow: none; cursor: not-allowed; }
+
+.crivo-visual .vs-ghost {
+  padding: 10px 15px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(229, 242, 232, .035);
+  color: var(--dim);
+  font: 10px ui-monospace, SFMono-Regular, monospace;
+  letter-spacing: .08em;
+  cursor: pointer;
+}
+.is-light .crivo-visual .vs-ghost { background: rgba(255, 252, 246, .72); }
+.crivo-visual .vs-ghost:hover:not(:disabled) { color: var(--text); border-color: color-mix(in srgb, var(--primary) 55%, transparent); }
+.crivo-visual .vs-ghost:disabled { opacity: .35; cursor: not-allowed; }
+.crivo-visual .vs-ghost[aria-pressed='true'] { border-color: var(--primary); background: color-mix(in srgb, var(--primary) 16%, transparent); color: var(--text); }
+
+.crivo-visual .vs-field { display: grid; gap: 6px; }
+.crivo-visual .vs-field > span { color: var(--faint); font: 9px ui-monospace, SFMono-Regular, monospace; letter-spacing: .12em; text-transform: uppercase; }
+.crivo-visual select,
+.crivo-visual input[type='text'],
+.crivo-visual textarea {
+  width: 100%;
+  padding: 11px 13px;
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  background: rgba(5, 9, 8, .25);
+  color: var(--text);
+  font: 12.5px/1.5 Inter, ui-sans-serif, system-ui, sans-serif;
+}
+.is-light .crivo-visual select,
+.is-light .crivo-visual input[type='text'],
+.is-light .crivo-visual textarea { background: rgba(255, 252, 246, .72); }
+.crivo-visual textarea { resize: vertical; }
+.crivo-visual select option { color: #16211c; }
+
+/* ---------- a prancha ---------- */
+
 .crivo-visual .vs-plate {
-  background: var(--vs-plate);
-  border: 1px solid var(--vs-plate-line);
-  border-radius: 16px;
-  color: var(--vs-plate-ink);
+  padding: 18px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--vs-radius);
+  /* Anéis concêntricos discretos, como o mapa do design system: dão à prancha
+     textura de superfície de estudo em vez de fundo chapado. */
+  background:
+    radial-gradient(52% 42% at 50% 2%, color-mix(in srgb, var(--secondary) 16%, transparent), transparent 72%),
+    linear-gradient(160deg, rgba(229, 242, 232, .06), rgba(229, 242, 232, .015));
+}
+.is-light .crivo-visual .vs-plate {
+  background:
+    radial-gradient(52% 42% at 50% 2%, color-mix(in srgb, var(--secondary) 28%, transparent), transparent 72%),
+    linear-gradient(160deg, rgba(255, 255, 252, .9), rgba(243, 236, 223, .74));
 }
 
 .crivo-visual .vs-plate svg { display: block; width: 100%; height: auto; }
 
-/* A prancha tem largura fixa no viewBox: deixá-la ocupar 100% de uma coluna
-   larga inflava o texto dos nós para o dobro do corpo e empurrava o último nó
-   para fora da primeira dobra no desktop. Centralizar com teto resolve sem
-   mexer na geometria. */
-@media (min-width: 720px) {
-  .crivo-visual .vs-plate svg { max-width: 460px; margin: 0 auto; }
-}
-
-.crivo-visual .vs-node rect {
-  fill: color-mix(in srgb, var(--vs-state) 14%, var(--vs-plate));
-  stroke: var(--vs-state);
+/* medalhão do conceito central, no mesmo vocabulário do .ni-artifact do shell */
+.crivo-visual .vs-anchor-halo { fill: color-mix(in srgb, var(--primary) 12%, transparent); }
+.crivo-visual .vs-anchor-orbit { fill: none; stroke: color-mix(in srgb, var(--primary) 34%, transparent); stroke-width: 1; }
+.crivo-visual .vs-anchor-ring { fill: none; stroke: color-mix(in srgb, var(--primary) 85%, transparent); stroke-width: 1.2; }
+.crivo-visual .vs-anchor-ring--ticks { stroke-dasharray: 2 7; opacity: .8; }
+.crivo-visual .vs-anchor-core {
+  fill: var(--primary);
+  stroke: var(--secondary);
   stroke-width: 1.5;
-  transition: stroke-width 140ms ease, fill 140ms ease;
+  filter: drop-shadow(0 0 10px color-mix(in srgb, var(--primary) 65%, transparent));
 }
+.crivo-visual .vs-anchor-text { fill: var(--text); font: 500 italic 15px Newsreader, Georgia, serif; }
+.crivo-visual .vs-anchor-kicker { fill: var(--faint); font: 8px ui-monospace, SFMono-Regular, monospace; letter-spacing: .16em; }
+
+.crivo-visual .vs-spine { stroke: color-mix(in srgb, var(--text) 20%, transparent); stroke-width: 1; }
+
+.crivo-visual .vs-link { fill: none; stroke: color-mix(in srgb, var(--text) 26%, transparent); stroke-width: 1.1; }
+.crivo-visual .vs-link-label { fill: var(--dim); font: 8px ui-monospace, SFMono-Regular, monospace; letter-spacing: .14em; }
+.crivo-visual .vs-link-plate { fill: var(--surface); opacity: .85; }
+.is-light .crivo-visual .vs-link-plate { fill: #fffdf8; }
+/* A lacuna é tracejada e vinho: precisa ler como "falta algo aqui", não como
+   "aqui não existe nada". */
+.crivo-visual .vs-link.is-hidden { stroke: var(--vs-possivel-regressao); stroke-dasharray: 5 4; stroke-width: 1.6; }
+.crivo-visual .vs-link-label.is-hidden { fill: var(--vs-possivel-regressao); letter-spacing: .2em; }
 
 .crivo-visual .vs-node { cursor: pointer; }
+.crivo-visual .vs-node-box {
+  fill: color-mix(in srgb, var(--vs-state) 11%, var(--surface));
+  stroke: color-mix(in srgb, var(--vs-state) 70%, transparent);
+  stroke-width: 1.2;
+  transition: stroke-width .16s ease, fill .16s ease;
+}
+.is-light .crivo-visual .vs-node-box { fill: color-mix(in srgb, var(--vs-state) 8%, #fffdf8); }
+.crivo-visual .vs-node:hover .vs-node-box { fill: color-mix(in srgb, var(--vs-state) 18%, var(--surface)); }
 .crivo-visual .vs-node:focus { outline: none; }
-.crivo-visual .vs-node:focus-visible rect,
-.crivo-visual .vs-node[aria-pressed='true'] rect { stroke-width: 3.5; }
+.crivo-visual .vs-node:focus-visible .vs-node-box,
+.crivo-visual .vs-node[aria-pressed='true'] .vs-node-box { stroke-width: 2.6; stroke: var(--vs-state); }
+.crivo-visual .vs-node-dot { fill: var(--vs-state); }
+.crivo-visual .vs-node-stage { fill: var(--faint); font: 8px ui-monospace, SFMono-Regular, monospace; letter-spacing: .15em; }
+.crivo-visual .vs-node-title { fill: var(--text); font: 500 14px Newsreader, Georgia, serif; }
 
-.crivo-visual .vs-node text { fill: var(--vs-plate-ink); font-size: 12px; }
-.crivo-visual .vs-node .vs-node-stage { fill: var(--vs-plate-dim); font-size: 9px; letter-spacing: 0.08em; text-transform: uppercase; }
+/* a relação fundamental, destacada ao pé da prancha */
+.crivo-visual .vs-keystone {
+  margin-top: 14px;
+  padding: 15px 17px;
+  border: 1px solid color-mix(in srgb, var(--primary) 45%, transparent);
+  border-radius: 13px;
+  background: color-mix(in srgb, var(--primary) 9%, transparent);
+}
+.crivo-visual .vs-keystone q { display: block; margin-top: 7px; font: 500 italic 17px/1.35 Newsreader, Georgia, serif; quotes: none; }
 
-.crivo-visual .vs-edge line { stroke: var(--vs-plate-line); stroke-width: 1.5; }
-.crivo-visual .vs-edge text { fill: var(--vs-plate-dim); font-size: 9px; letter-spacing: 0.06em; text-transform: uppercase; }
-/* A lacuna escolhida pelo diagnóstico é tracejada: a estudante precisa ver que
-   ali falta algo, não que ali não existe nada. */
-.crivo-visual .vs-edge.is-hidden line { stroke: var(--vs-possivel-regressao); stroke-dasharray: 5 4; }
-.crivo-visual .vs-edge.is-hidden text { fill: var(--vs-possivel-regressao); }
+/* atalhos de intenção da proposta */
+.crivo-visual .vs-intents { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.crivo-visual .vs-intents button { font-family: Newsreader, Georgia, serif; font-size: 12px; letter-spacing: 0; text-transform: none; }
 
-@media (prefers-reduced-motion: reduce) {
-  .crivo-visual .vs-node rect { transition: none; }
+/* ---------- estados, legenda, inspetor ---------- */
+
+.crivo-visual .vs-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 10px;
+  border: 1px solid color-mix(in srgb, var(--vs-state) 50%, transparent);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--vs-state) 12%, transparent);
+  color: var(--text);
+  font: 9px ui-monospace, SFMono-Regular, monospace;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.crivo-visual .vs-swatch { height: 7px; width: 7px; flex: none; border-radius: 50%; background: var(--vs-state, var(--vs-nao-avaliado)); box-shadow: 0 0 7px var(--vs-state); }
+
+.crivo-visual .vs-legend { display: grid; grid-template-columns: 1fr 1fr; gap: 7px 12px; margin: 12px 0 0; padding: 0; list-style: none; }
+.crivo-visual .vs-legend li { display: flex; align-items: center; gap: 7px; color: var(--dim); font-size: 10.5px; }
+
+.crivo-visual .vs-relations { margin: 12px 0 0; padding: 0; list-style: none; display: grid; gap: 9px; }
+.crivo-visual .vs-relations > li { padding: 12px 13px; border: 1px solid var(--line); border-radius: 12px; }
+.crivo-visual .vs-relations b { font: 500 14px Newsreader, Georgia, serif; }
+.crivo-visual .vs-hypothesis { font-style: italic; color: color-mix(in srgb, var(--vs-compreende) 80%, var(--text)); }
+
+.crivo-visual .vs-note { padding: 12px 14px; border-radius: 12px; font-size: 12px; line-height: 1.55; }
+.crivo-visual .vs-note--hypothesis { border: 1px solid color-mix(in srgb, var(--vs-compreende) 45%, transparent); background: color-mix(in srgb, var(--vs-compreende) 10%, transparent); }
+.crivo-visual .vs-note--right { border: 1px solid color-mix(in srgb, var(--vs-transfere) 50%, transparent); background: color-mix(in srgb, var(--vs-transfere) 12%, transparent); }
+.crivo-visual .vs-note--near { border: 1px solid color-mix(in srgb, var(--vs-aplicacao-instavel) 50%, transparent); background: color-mix(in srgb, var(--vs-aplicacao-instavel) 12%, transparent); }
+.crivo-visual .vs-note--wrong { border: 1px solid color-mix(in srgb, var(--vs-possivel-regressao) 50%, transparent); background: color-mix(in srgb, var(--vs-possivel-regressao) 12%, transparent); }
+
+.crivo-visual .vs-gap { padding: 15px; border: 1px solid var(--line); border-radius: 13px; background: rgba(5, 9, 8, .18); }
+.is-light .crivo-visual .vs-gap { background: rgba(255, 252, 246, .6); }
+.crivo-visual .vs-bank { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 11px; }
+.crivo-visual .vs-bank button { font-family: Newsreader, Georgia, serif; font-size: 13px; letter-spacing: 0; text-transform: none; }
+
+.crivo-visual .vs-catalog { display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); margin: 0; padding: 0; list-style: none; }
+.crivo-visual .vs-catalog button { width: 100%; padding: 16px; display: grid; gap: 4px; text-align: left; border: 1px solid var(--line); border-radius: 13px; background: linear-gradient(145deg, rgba(229, 242, 232, .06), rgba(229, 242, 232, .018)); color: var(--text); cursor: pointer; transition: border-color .2s ease, transform .2s ease; }
+.is-light .crivo-visual .vs-catalog button { background: linear-gradient(145deg, rgba(255, 255, 252, .86), rgba(243, 236, 223, .7)); }
+.crivo-visual .vs-catalog button:hover { border-color: color-mix(in srgb, var(--primary) 60%, transparent); transform: translateY(-2px); }
+.crivo-visual .vs-catalog b { font: 500 18px Newsreader, Georgia, serif; }
+
+/* ---------- composição ---------- */
+
+.crivo-visual .vs-stage { display: grid; gap: 18px; grid-template-columns: minmax(0, 1.45fr) minmax(0, .8fr); align-items: start; }
+.crivo-visual .vs-aside { display: grid; gap: 14px; position: sticky; top: 18px; }
+.crivo-visual .vs-filters { display: grid; gap: 12px; grid-template-columns: 220px minmax(0, 1fr); }
+.crivo-visual .vs-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+
+@media (max-width: 900px) {
+  .crivo-visual .vs-stage { grid-template-columns: 1fr; }
+  .crivo-visual .vs-aside { position: static; }
+  .crivo-visual .vs-filters { grid-template-columns: 1fr; }
 }
 
-/* Abaixo de 560 px a fileira de modos vira rolagem horizontal em vez de quebrar
-   em duas linhas e empurrar a prancha para fora da primeira dobra. */
 @media (max-width: 560px) {
-  .crivo-visual .vs-modes { overflow-x: auto; flex-wrap: nowrap; }
-  .crivo-visual .vs-modes > * { flex: 0 0 auto; }
+  .crivo-visual .vs-panel, .crivo-visual .vs-plate { padding: 15px; }
+  .crivo-visual .vs-legend { grid-template-columns: 1fr; }
+  /* A fileira de modos rola em vez de quebrar em duas linhas e empurrar a
+     prancha para fora da primeira dobra. */
+  .crivo-visual .vs-modes { display: flex; max-width: 100%; overflow-x: auto; scrollbar-width: none; }
+  .crivo-visual .vs-modes button { flex: 0 0 auto; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .crivo-visual .vs-node-box, .crivo-visual .vs-catalog button { transition: none; }
+  .crivo-visual .vs-catalog button:hover { transform: none; }
 }

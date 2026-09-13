@@ -62,7 +62,8 @@ describe('modo Explorar', () => {
     const user = userEvent.setup();
     render(<MemoryRouter initialEntries={[rota]}><Visual /></MemoryRouter>);
     await user.click(screen.getByRole('button', { name: new RegExp(mapa.nodes[0].label.slice(0, 14)) }));
-    expect(screen.getAllByText(/é hipótese, não fato/).length).toBeGreaterThan(0);
+    expect(screen.getAllByText('Hipótese.').length).toBe(mapa.relations.length);
+    expect(screen.getByText(/ainda não têm evidência suficiente/)).toBeInTheDocument();
   });
 
   it('registra a discordância sem apagar o estado diagnosticado', async () => {

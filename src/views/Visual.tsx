@@ -1,11 +1,13 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
-import { ArrowLeft, Compass, HelpCircle, Layers, RotateCcw, Search, Undo2, Waypoints } from 'lucide-react';
+import { motion, useReducedMotion } from 'motion/react';
+import { ArrowLeft, ArrowUpRight, HelpCircle, RotateCcw, Undo2 } from 'lucide-react';
 import { interactiveSummaries } from '../data/interactiveSummaries';
 import { evaluateRetrievalAnswer } from '../lib/summaryEngine';
 import { applySummaryAttempt } from '../lib/summaryStudy';
 import { useSummaryProgress } from '../hooks/useSummaryProgress';
 import { CONFIDENCE_LABEL } from '../lib/confidence';
+import { MOTION_DURATION, MOTION_EASE } from '../design-system/motion/tokens';
 import {
   buildVisualMap, chooseHiddenRelations, explainRelation, gradeReconstruction, minimalIntervention,
   nodeState, relationEvidence, relationState, NODE_STATE_LABEL, RELATION_LABEL,
@@ -27,19 +29,14 @@ const STAGE_LABEL = {
   exercicio: 'Exercício', estrategia: 'Estratégia',
 } as const;
 
-const NODE_H = 62;
-const NODE_GAP = 46;
-const PLATE_W = 380;
+// Os rótulos das relações vêm de `expectedElements[].label`, em caixa baixa e
+// sem acento. Não dá para corrigir o dado: o mesmo texto é gravado em
+// `matchedElements` a cada tentativa, e renomeá-lo orfanaria a evidência já
+// registrada no Caderno de Erros. Então a correção é só de exibição, e só da
+// inicial — devolver acento por regra inventaria grafia.
+const displayLabel = (label: string) => label.charAt(0).toUpperCase() + label.slice(1);
 
-function plateGeometry(count: number) {
-  const nodes = Array.from({ length: count }, (_, index) => ({ y: 10 + index * (NODE_H + NODE_GAP) }));
-  return { nodes, height: 20 + count * NODE_H + Math.max(0, count - 1) * NODE_GAP };
-}
-
-// O texto do nó é o título da seção e não cabe numa linha só do SVG. Quebrar em
-// JS (em vez de confiar num <foreignObject>) mantém a prancha exportável e
-// legível no Safari do iPad, onde o foreignObject some na impressão.
-function wrapLabel(label: string, perLine = 34): string[] {
+function wrapLabel(label: string, perLine: number, maxLines = 2): string[] {
   const words = label.split(/\s+/);
   const lines: string[] = [];
   let current = '';
@@ -49,21 +46,71 @@ function wrapLabel(label: string, perLine = 34): string[] {
     else current = candidate;
   }
   if (current) lines.push(current);
-  return lines.slice(0, 2);
+  if (lines.length <= maxLines) return lines;
+  return [...lines.slice(0, maxLines - 1), `${lines[maxLines - 1].slice(0, perLine - 1)}…`];
 }
 
-// Os rótulos das relações vêm de `expectedElements[].label`, em caixa baixa e
-// sem acento. Não dá para corrigir o dado: o mesmo texto é gravado em
-// `matchedElements` a cada tentativa, e renomeá-lo orfanaria a evidência já
-// registrada no Caderno de Erros. Então a correção é só de exibição, e só da
-// inicial — devolver acento por regra inventaria grafia.
-const displayLabel = (label: string) => label.charAt(0).toUpperCase() + label.slice(1);
+/*
+ * A prancha não é uma corrente de caixas empilhadas: o conceito central fica no
+ * medalhão do topo e as etapas descem ramificando à esquerda e à direita de uma
+ * espinha, que é onde os elos são nomeados. No estreito a mesma estrutura vira
+ * uma linha do tempo com a espinha à esquerda — ramificar em 360 px deixaria
+ * cada nó com 150 px e o título ilegível.
+ */
+function plateLayout(count: number, compact: boolean) {
+  const width = compact ? 360 : 760;
+  const anchorCx = width / 2;
+  const anchorCy = compact ? 74 : 84;
+  const ringOuter = compact ? 40 : 46;
+  const nodeH = compact ? 66 : 70;
+  const step = compact ? 92 : 88;
+  const firstY = compact ? 168 : 176;
+  const spineX = compact ? 30 : anchorCx;
 
-function StateBadge({ state }: { state: NodeState }) {
+  const nodes = Array.from({ length: count }, (_, index) => {
+    const y = firstY + index * step;
+    const side: 'left' | 'right' = compact ? 'right' : index % 2 === 0 ? 'left' : 'right';
+    const nodeW = compact ? width - 72 : 300;
+    const x = compact ? 52 : side === 'left' ? 34 : width - 34 - nodeW;
+    return { x, y, w: nodeW, h: nodeH, side, cy: y + nodeH / 2 };
+  });
+
+  const links = nodes.map((node) => {
+    const innerX = node.side === 'left' ? node.x + node.w : node.x;
+    const pull = node.side === 'left' ? -34 : 34;
+    return `M ${spineX} ${node.cy - 40} C ${spineX} ${node.cy}, ${innerX + pull} ${node.cy}, ${innerX} ${node.cy}`;
+  });
+
+  return {
+    width,
+    height: (nodes.at(-1)?.y ?? firstY) + nodeH + 22,
+    anchor: { cx: anchorCx, cy: anchorCy, ringOuter, ringMid: ringOuter - 12, core: compact ? 13 : 15 },
+    spineX,
+    spineTop: anchorCy + ringOuter + (compact ? 44 : 48),
+    nodes,
+    links,
+    compact,
+    titleChars: compact ? 30 : 34,
+  };
+}
+
+function useCompactPlate() {
+  const [compact, setCompact] = useState(false);
+  useEffect(() => {
+    if (typeof window === 'undefined' || typeof window.matchMedia !== 'function') return;
+    const query = window.matchMedia('(max-width: 720px)');
+    const sync = () => setCompact(query.matches);
+    sync();
+    query.addEventListener?.('change', sync);
+    return () => query.removeEventListener?.('change', sync);
+  }, []);
+  return compact;
+}
+
+function StateChip({ state }: { state: NodeState }) {
   return (
-    <span data-state={state} className="inline-flex items-center gap-1.5 rounded-full border border-zinc-200 dark:border-zinc-700 px-2.5 py-1 text-xs font-semibold">
-      <span className="vs-swatch" aria-hidden="true" />
-      {NODE_STATE_LABEL[state]}
+    <span className="vs-chip" data-state={state}>
+      <span className="vs-swatch" aria-hidden="true" />{NODE_STATE_LABEL[state]}
     </span>
   );
 }
@@ -77,32 +124,90 @@ function Plate({
   onSelect: (id: string) => void;
   hiddenEdgeIds: string[];
 }) {
-  const geometry = plateGeometry(map.nodes.length);
+  const compact = useCompactPlate();
+  const reducedMotion = useReducedMotion();
+  const layout = useMemo(() => plateLayout(map.nodes.length, compact), [map.nodes.length, compact]);
+  const anchorLines = wrapLabel(map.centerLabel, compact ? 30 : 40, 2);
+
   return (
-    <div className="vs-plate p-3 sm:p-4">
-      <p className="px-1 pb-2 text-xs font-bold uppercase tracking-widest" style={{ color: 'var(--vs-plate-dim)' }}>
-        {map.subject} › {map.centerLabel}
-      </p>
-      <svg viewBox={`0 0 ${PLATE_W} ${geometry.height}`} role="img" aria-label={`Mapa de relações de ${map.title}`}>
+    <div className="vs-plate">
+      <svg viewBox={`0 0 ${layout.width} ${layout.height}`} role="img" aria-label={`Mapa de relações de ${map.title}`}>
+        {/* medalhão do conceito central */}
+        <g>
+          <text className="vs-anchor-kicker" x={layout.anchor.cx} y={layout.anchor.cy - layout.anchor.ringOuter - 14} textAnchor="middle">CONCEITO CENTRAL</text>
+          {[1, 2, 3].map((ring) => (
+            <circle
+              key={ring}
+              className="vs-anchor-orbit"
+              cx={layout.anchor.cx}
+              cy={layout.anchor.cy}
+              r={layout.anchor.ringOuter + 14 + ring * 17}
+              opacity={0.5 / ring}
+            />
+          ))}
+          <circle className="vs-anchor-halo" cx={layout.anchor.cx} cy={layout.anchor.cy} r={layout.anchor.ringOuter + 10} />
+          <circle className="vs-anchor-ring vs-anchor-ring--ticks" cx={layout.anchor.cx} cy={layout.anchor.cy} r={layout.anchor.ringOuter} />
+          <circle className="vs-anchor-ring" cx={layout.anchor.cx} cy={layout.anchor.cy} r={layout.anchor.ringMid} />
+          <circle className="vs-anchor-core" cx={layout.anchor.cx} cy={layout.anchor.cy} r={layout.anchor.core} />
+          {anchorLines.map((line, index) => (
+            <text
+              key={line}
+              className="vs-anchor-text"
+              x={layout.anchor.cx}
+              y={layout.anchor.cy + layout.anchor.ringOuter + 22 + index * 17}
+              textAnchor="middle"
+            >
+              {line}
+            </text>
+          ))}
+        </g>
+
+        <line className="vs-spine" x1={layout.spineX} y1={layout.spineTop} x2={layout.spineX} y2={(layout.nodes.at(-1)?.cy ?? 0)} />
+
+        {layout.links.map((path, index) => (
+          <path key={map.nodes[index].id} className="vs-link" d={path} />
+        ))}
+
         {map.edges.map((edge, index) => {
-          const top = geometry.nodes[index].y + NODE_H;
-          const bottom = geometry.nodes[index + 1].y;
+          const from = layout.nodes[index];
+          const to = layout.nodes[index + 1];
           const hidden = hiddenEdgeIds.includes(edge.id);
+          const label = hidden ? '? ? ?' : RELATION_LABEL[edge.kind].toUpperCase();
           return (
-            <g key={edge.id} className={`vs-edge${hidden ? ' is-hidden' : ''}`}>
-              <line x1={PLATE_W / 2} y1={top} x2={PLATE_W / 2} y2={bottom} />
-              <text x={PLATE_W / 2 + 8} y={(top + bottom) / 2 + 3}>
-                {hidden ? '???' : RELATION_LABEL[edge.kind]}
+            <g key={edge.id}>
+              {hidden && (
+                <path
+                  className="vs-link is-hidden"
+                  d={`M ${layout.spineX} ${from.cy} L ${layout.spineX} ${to.cy}`}
+                />
+              )}
+              <rect
+                className="vs-link-plate"
+                x={layout.spineX + 6}
+                y={(from.cy + to.cy) / 2 - 7}
+                width={label.length * 6.4 + 12}
+                height={15}
+                rx={7}
+              />
+              <text
+                className={`vs-link-label${hidden ? ' is-hidden' : ''}`}
+                x={layout.spineX + 12}
+                y={(from.cy + to.cy) / 2 + 3.5}
+                textAnchor="start"
+              >
+                {label}
               </text>
             </g>
           );
         })}
+
         {map.nodes.map((node, index) => {
+          const geometry = layout.nodes[index];
           const state = states[node.id] ?? 'nao-avaliado';
-          const lines = wrapLabel(node.label);
-          const y = geometry.nodes[index].y;
+          const lines = wrapLabel(node.label, layout.titleChars);
+          const textX = geometry.x + 18;
           return (
-            <g
+            <motion.g
               key={node.id}
               className="vs-node"
               data-state={state}
@@ -111,19 +216,30 @@ function Plate({
               aria-pressed={selectedId === node.id}
               aria-label={`${node.label} — ${NODE_STATE_LABEL[state]}`}
               onClick={() => onSelect(node.id)}
-              onKeyDown={(event) => {
+              onKeyDown={(event: React.KeyboardEvent) => {
                 if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); onSelect(node.id); }
               }}
+              initial={reducedMotion ? false : { opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: MOTION_DURATION.micro, ease: MOTION_EASE, delay: reducedMotion ? 0 : index * 0.05 }}
             >
-              <rect x={30} y={y} width={PLATE_W - 60} height={NODE_H} rx={12} />
-              <text className="vs-node-stage" x={44} y={y + 19}>{STAGE_LABEL[node.stage]}</text>
+              <rect className="vs-node-box" x={geometry.x} y={geometry.y} width={geometry.w} height={geometry.h} rx={13} />
+              <circle className="vs-node-dot" cx={geometry.x + 11} cy={geometry.y + 15} r={3.5} />
+              <text className="vs-node-stage" x={textX} y={geometry.y + 19}>{STAGE_LABEL[node.stage].toUpperCase()}</text>
               {lines.map((line, lineIndex) => (
-                <text key={line} x={44} y={y + 38 + lineIndex * 15}>{line}</text>
+                <text key={line} className="vs-node-title" x={textX} y={geometry.y + 42 + lineIndex * 17}>{line}</text>
               ))}
-            </g>
+            </motion.g>
           );
         })}
       </svg>
+
+      {map.recallPrompt && (
+        <div className="vs-keystone">
+          <p className="vs-meta">Relação fundamental</p>
+          <q>{map.recallPrompt}</q>
+        </div>
+      )}
     </div>
   );
 }
@@ -141,73 +257,52 @@ function VisualLibrary({ onOpen }: { onOpen: (id: string) => void }) {
   }, [query, subject]);
 
   return (
-    <div className="space-y-5">
-      <header className="rounded-3xl bg-zinc-950 text-white p-6 sm:p-8">
-        <span className="inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-xs font-bold uppercase tracking-widest">
-          <Waypoints className="mr-2 h-3.5 w-3.5" aria-hidden="true" />Visual
-        </span>
-        <h1 className="mt-4 text-2xl font-bold tracking-tight sm:text-4xl">Veja as relações antes de decorar as respostas.</h1>
-        <p className="mt-3 max-w-2xl text-zinc-300">
+    <>
+      <header>
+        <p className="vs-kicker"><i aria-hidden="true" />Visual · mapa de relações</p>
+        <h1>Veja as relações antes de decorar as respostas.</h1>
+        <p className="vs-lede">
           Mapa para compreender relações. Recuperação ativa para consolidar. A evidência que você produz
           aqui é a mesma que alimenta o Caderno de Erros e as suas revisões.
         </p>
       </header>
 
       {/* Mais de sessenta tópicos não cabem em fileira de chips: campo agrupado. */}
-      <div className="grid gap-3 sm:grid-cols-[220px_1fr]">
-        <label className="text-sm">
-          <span className="mb-1 block font-semibold text-zinc-600 dark:text-zinc-400">Disciplina</span>
-          <select
-            value={subject}
-            onChange={(event) => setSubject(event.target.value)}
-            className="w-full rounded-xl border border-zinc-300 bg-transparent px-3 py-2.5 dark:border-zinc-700"
-          >
+      <div className="vs-filters">
+        <label className="vs-field">
+          <span>Disciplina</span>
+          <select value={subject} onChange={(event) => setSubject(event.target.value)}>
             <option value="">Todas</option>
             {subjects.map((item) => <option key={item} value={item}>{item}</option>)}
           </select>
         </label>
-        <label className="text-sm">
-          <span className="mb-1 block font-semibold text-zinc-600 dark:text-zinc-400">Buscar capítulo</span>
-          <span className="relative block">
-            <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-zinc-400" aria-hidden="true" />
-            <input
-              value={query}
-              onChange={(event) => setQuery(event.target.value)}
-              placeholder="Termodinâmica, Revolução Francesa…"
-              className="w-full rounded-xl border border-zinc-300 bg-transparent py-2.5 pl-9 pr-3 dark:border-zinc-700"
-            />
-          </span>
+        <label className="vs-field">
+          <span>Buscar capítulo</span>
+          <input type="text" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Termodinâmica, Revolução Francesa…" />
         </label>
       </div>
 
       {list.length === 0 ? (
-        <p role="status" className="rounded-2xl border border-zinc-200 p-6 text-sm text-zinc-500 dark:border-zinc-800">
-          Nenhum capítulo encontrado com esses filtros.
-        </p>
+        <p role="status" className="vs-panel vs-dim">Nenhum capítulo encontrado com esses filtros.</p>
       ) : (
-        <ul className="grid gap-3 sm:grid-cols-2">
+        <ul className="vs-catalog">
           {list.map((item) => (
             <li key={item.id}>
-              <button
-                onClick={() => onOpen(item.id)}
-                className="w-full rounded-2xl border border-zinc-200 bg-white p-4 text-left transition hover:border-indigo-400 dark:border-zinc-800 dark:bg-zinc-900"
-              >
-                <span className="text-xs font-bold uppercase tracking-wide text-indigo-600 dark:text-indigo-400">
-                  {item.subject} · {item.topic}
-                </span>
-                <span className="mt-1 block font-bold">{item.title}</span>
-                <span className="mt-1 block text-sm text-zinc-500">{item.sections.length} nós · {item.retrieval[0]?.expectedElements.length ?? 0} relações</span>
+              <button onClick={() => onOpen(item.id)}>
+                <span className="vs-kicker">{item.subject} · {item.topic}</span>
+                <b>{item.title}</b>
+                <span className="vs-meta">{item.sections.length} nós · {item.retrieval[0]?.expectedElements.length ?? 0} relações</span>
               </button>
             </li>
           ))}
         </ul>
       )}
-    </div>
+    </>
   );
 }
 
 function Inspector({
-  map, summary, nodeId, answers, onOpenSummary, onDisagree, disagreed,
+  map, summary, nodeId, answers, onOpenSummary, onDisagree, disagreed, onTest, onRebuild,
 }: {
   map: VisualMap;
   summary: InteractiveSummary;
@@ -216,74 +311,66 @@ function Inspector({
   onOpenSummary: (sectionId: string) => void;
   onDisagree: () => void;
   disagreed: boolean;
+  onTest: () => void;
+  onRebuild: () => void;
 }) {
   const node = map.nodes.find((item) => item.id === nodeId);
   if (!node) {
     return (
-      <p className="rounded-2xl border border-dashed border-zinc-300 p-5 text-sm text-zinc-500 dark:border-zinc-700">
-        Selecione um nó da prancha para ver o diagnóstico que sustenta o estado dele.
-      </p>
+      <div className="vs-panel">
+        <p className="vs-meta">Inspetor</p>
+        <p className="vs-dim" style={{ marginBottom: 0 }}>Selecione um nó da prancha para ver o diagnóstico que sustenta o estado dele.</p>
+      </div>
     );
   }
   const section = summary.sections.find((item) => item.id === node.sectionId);
+  const explanations = map.relations.map((relation) => ({ relation, why: explainRelation(relation, answers) }));
   return (
-    <div className="space-y-4 rounded-2xl border border-zinc-200 bg-white p-5 dark:border-zinc-800 dark:bg-zinc-900">
-      <div>
-        <p className="text-xs font-bold uppercase tracking-wide text-indigo-600 dark:text-indigo-400">{STAGE_LABEL[node.stage]}</p>
-        <h3 className="mt-1 text-lg font-bold">{node.label}</h3>
-      </div>
-      <p className="text-sm leading-6 text-zinc-600 dark:text-zinc-300">{node.excerpt}</p>
+    <div className="vs-panel">
+      <p className="vs-kicker"><i aria-hidden="true" />{STAGE_LABEL[node.stage]}</p>
+      <h3 style={{ margin: '9px 0 8px' }}>{node.label}</h3>
+      <p className="vs-dim">{node.excerpt}</p>
 
-      <section>
-        <h4 className="text-xs font-bold uppercase tracking-wide text-zinc-500">Relações avaliadas neste capítulo</h4>
-        <ul className="mt-2 space-y-2">
-          {map.relations.map((relation) => {
-            const why = explainRelation(relation, answers);
-            return (
-              <li key={relation.id} className="rounded-xl border border-zinc-200 p-3 text-sm dark:border-zinc-800">
-                <div className="flex flex-wrap items-center justify-between gap-2">
-                  <span className="font-semibold">{displayLabel(relation.label)}</span>
-                  <StateBadge state={why.state} />
-                </div>
-                <p className="mt-1.5 text-xs text-zinc-500">{CONFIDENCE_LABEL[why.confidence]} · {why.evidence.join(' ')}</p>
-                {/* Hipótese aparece como hipótese: com evidência rasa o texto diz
-                    que o diagnóstico ainda pode mudar, em vez de afirmar domínio. */}
-                {why.caveat && <p className="mt-1.5 text-xs italic text-amber-700 dark:text-amber-300">{why.caveat}</p>}
-              </li>
-            );
-          })}
-          {map.relations.length === 0 && (
-            <li className="text-sm text-zinc-500">Este capítulo ainda não tem pergunta de recuperação, então não há relação avaliável.</li>
-          )}
-        </ul>
-      </section>
+      <p className="vs-meta" style={{ marginTop: 18 }}>Relações avaliadas neste capítulo</p>
+      <ul className="vs-relations">
+        {explanations.map(({ relation, why }) => (
+          <li key={relation.id} data-state={why.state}>
+            <b>{displayLabel(relation.label)}</b>
+            <div style={{ margin: '8px 0' }}><StateChip state={why.state} /></div>
+            <p className="vs-dim" style={{ margin: 0, fontSize: 11.5 }}>
+              {CONFIDENCE_LABEL[why.confidence]} · {why.evidence.join(' ')}
+              {/* Hipótese aparece como hipótese. Repetir o aviso inteiro em cada
+                  relação virava parede de texto e perdia o efeito: aqui fica a
+                  marca, e a explicação vem uma vez só ao pé da lista. */}
+              {why.caveat && <> <span className="vs-hypothesis">Hipótese.</span></>}
+            </p>
+          </li>
+        ))}
+        {map.relations.length === 0 && (
+          <li className="vs-dim">Este capítulo ainda não tem pergunta de recuperação, então não há relação avaliável.</li>
+        )}
+      </ul>
+      {explanations.some(({ why }) => why.caveat) && (
+        <p className="vs-note vs-note--hypothesis" style={{ marginTop: 10 }}>
+          As relações marcadas como hipótese ainda não têm evidência suficiente. Uma nova reconstrução muda o diagnóstico.
+        </p>
+      )}
 
-      <div className="flex flex-wrap gap-2">
-        <button
-          onClick={() => onOpenSummary(node.sectionId)}
-          className="rounded-xl border border-zinc-300 px-3 py-2 text-sm font-medium dark:border-zinc-700"
-        >
-          Ler a seção no resumo
-        </button>
-        <button
-          onClick={onDisagree}
-          aria-pressed={disagreed}
-          className="rounded-xl border border-zinc-300 px-3 py-2 text-sm font-medium dark:border-zinc-700"
-        >
-          Discordo deste diagnóstico
-        </button>
+      <div className="vs-actions">
+        <button className="vs-ghost" onClick={() => onOpenSummary(node.sectionId)}>Explicar <ArrowUpRight aria-hidden="true" size={13} /></button>
+        <button className="vs-ghost" onClick={onTest}>Testar <ArrowUpRight aria-hidden="true" size={13} /></button>
+        <button className="vs-ghost" onClick={onRebuild}>Reconstruir <ArrowUpRight aria-hidden="true" size={13} /></button>
+        <button className="vs-ghost" onClick={onDisagree} aria-pressed={disagreed}>Discordo deste diagnóstico</button>
       </div>
       {/* A IA recomenda; a estudante decide. Discordar não apaga a evidência —
           registra que ela pede nova medida antes de aceitar o estado. */}
       {disagreed && (
-        <p role="status" className="rounded-xl bg-amber-50 p-3 text-sm text-amber-900 dark:bg-amber-950/30 dark:text-amber-200">
+        <p role="status" className="vs-note vs-note--hypothesis" style={{ marginTop: 12 }}>
           Anotado. O estado continua visível como hipótese: faça uma reconstrução em Testar ou Reconstruir
           para produzir a evidência nova que muda o diagnóstico.
         </p>
       )}
-      {section?.callout && (
-        <p className="rounded-xl bg-zinc-100 p-3 text-sm dark:bg-zinc-800">{section.callout}</p>
-      )}
+      {section?.callout && <p className="vs-note vs-note--hypothesis" style={{ marginTop: 12 }}>{section.callout}</p>}
     </div>
   );
 }
@@ -328,19 +415,17 @@ export default function Visual() {
   }, [summaryId]);
 
   if (loading) {
-    return <div role="status" className="py-24 text-center text-zinc-500"><Waypoints className="mx-auto mb-3 h-8 w-8 animate-pulse" />Carregando o mapa e suas evidências…</div>;
+    return <p role="status" className="crivo-visual vs-dim">Carregando o mapa e suas evidências…</p>;
   }
 
   if (!summaryId || !map || !summary) {
     if (summaryId && !summary) {
       return (
-        <div className="crivo-visual space-y-5">
-          <button onClick={() => setSearchParams({})} className="inline-flex items-center text-sm font-medium text-indigo-700 dark:text-indigo-300">
-            <ArrowLeft className="mr-2 h-4 w-4" />Voltar ao Visual
-          </button>
-          <div role="alert" className="rounded-2xl border border-amber-300 bg-amber-50 p-6 dark:border-amber-900 dark:bg-amber-950/20">
-            <h1 className="font-bold">Capítulo indisponível</h1>
-            <p className="mt-2 text-sm">Este capítulo não existe mais. O histórico de evidências continua no Caderno de Erros.</p>
+        <div className="crivo-visual">
+          <button className="vs-back" onClick={() => setSearchParams({})}><ArrowLeft aria-hidden="true" size={13} />Voltar ao Visual</button>
+          <div role="alert" className="vs-panel">
+            <h2>Capítulo indisponível</h2>
+            <p className="vs-dim">Este capítulo não existe mais. O histórico de evidências continua no Caderno de Erros.</p>
           </div>
         </div>
       );
@@ -397,191 +482,159 @@ export default function Visual() {
     setFeedback({ matched: evaluation.matchedElements, missing: evaluation.firstMissingElement });
   };
 
+  const noteClass = (grade: ReconstructionGrade) =>
+    grade === 'correta' ? 'vs-note vs-note--right' : grade === 'parcial' ? 'vs-note vs-note--near' : 'vs-note vs-note--wrong';
+
   return (
-    <div className="crivo-visual space-y-6 pb-16">
-      <button onClick={() => setSearchParams({})} className="inline-flex items-center text-sm font-medium text-indigo-700 hover:underline dark:text-indigo-300">
-        <ArrowLeft className="mr-2 h-4 w-4" />Voltar ao Visual
-      </button>
+    <div className="crivo-visual">
+      <button className="vs-back" onClick={() => setSearchParams({})}><ArrowLeft aria-hidden="true" size={13} />Voltar ao Visual</button>
 
-      {syncError && <div role="alert" className="rounded-xl border border-amber-200 bg-amber-50 p-3 text-sm text-amber-900">{syncError}</div>}
+      {syncError && <p role="alert" className="vs-note vs-note--near">{syncError}</p>}
 
-      <header className="rounded-3xl bg-zinc-950 p-6 text-white sm:p-8">
-        <div className="mb-4 flex flex-wrap gap-2">
-          <span className="rounded-full bg-white/10 px-3 py-1 text-xs">{summary.subject} · {summary.topic}</span>
-        </div>
-        <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">{summary.title}</h1>
-        <p className="mt-3 max-w-3xl text-zinc-300">{summary.overview}</p>
+      <header>
+        <p className="vs-kicker"><i aria-hidden="true" />{summary.subject} · {summary.topic}</p>
+        <h1>{summary.title}</h1>
+        <p className="vs-lede">{summary.overview}</p>
         {summary.prerequisites.length > 0 && (
-          <p className="mt-4 text-sm text-zinc-400">
-            <Layers className="mr-1.5 inline h-4 w-4" aria-hidden="true" />
-            Pré-requisitos: {summary.prerequisites.join(' · ')}
-          </p>
+          <p className="vs-meta" style={{ marginTop: 14 }}>Pré-requisitos · {summary.prerequisites.join(' · ')}</p>
         )}
       </header>
 
-      <div role="tablist" aria-label="Modo de estudo" className="vs-modes flex flex-wrap gap-2">
-        {(Object.keys(MODE_LABEL) as Mode[]).map((key) => (
-          <button
-            key={key}
-            role="tab"
-            aria-selected={mode === key}
-            onClick={() => setMode(key)}
-            className={`rounded-xl px-4 py-2.5 text-sm font-semibold transition ${
-              mode === key ? 'bg-indigo-600 text-white' : 'border border-zinc-300 dark:border-zinc-700'
-            }`}
-          >
-            {MODE_LABEL[key]}
-          </button>
-        ))}
+      <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 14 }}>
+        <div role="tablist" aria-label="Modo de estudo" className="vs-modes">
+          {(Object.keys(MODE_LABEL) as Mode[]).map((key) => (
+            <button key={key} role="tab" aria-selected={mode === key} onClick={() => setMode(key)}>{MODE_LABEL[key]}</button>
+          ))}
+        </div>
+        <p className="vs-dim" style={{ margin: 0 }}>{MODE_HINT[mode]}</p>
       </div>
-      <p className="-mt-3 text-sm text-zinc-500">{MODE_HINT[mode]}</p>
 
       {intervention && (
-        <section className="rounded-2xl border border-amber-300 bg-amber-50 p-5 dark:border-amber-900 dark:bg-amber-950/20">
-          <div className="flex flex-wrap items-center gap-2">
-            <Compass className="h-4 w-4 text-amber-700 dark:text-amber-300" aria-hidden="true" />
-            <h2 className="font-bold">Menor lacuna que explica o problema</h2>
-            <StateBadge state={intervention.state} />
+        <section className="vs-panel" style={{ borderColor: 'color-mix(in srgb, var(--primary) 48%, transparent)' }}>
+          <p className="vs-kicker"><i aria-hidden="true" />Intervenção mínima eficaz</p>
+          <h2 style={{ marginTop: 10 }}>Menor lacuna que explica o problema</h2>
+          {/* Aponta o elo, não manda rever o capítulo inteiro. */}
+          <p style={{ marginTop: 10 }}>{displayLabel(intervention.label)} — {intervention.why}</p>
+          <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 10, marginTop: 10 }}>
+            <StateChip state={intervention.state} />
+            <span className="vs-meta">{CONFIDENCE_LABEL[intervention.confidence]}</span>
           </div>
-          {/* Intervenção mínima eficaz: aponta o elo, não manda rever o capítulo. */}
-          <p className="mt-2 text-sm">{displayLabel(intervention.label)} — {intervention.why}</p>
-          <p className="mt-1 text-xs uppercase tracking-wide text-zinc-500">{CONFIDENCE_LABEL[intervention.confidence]}</p>
-          <button onClick={() => setMode('reconstruir')} className="mt-3 rounded-xl bg-amber-600 px-4 py-2 text-sm font-semibold text-white">
-            {intervention.action}
-          </button>
+          <div className="vs-actions">
+            <button className="vs-primary" onClick={() => setMode('reconstruir')}>{intervention.action}</button>
+          </div>
         </section>
       )}
 
-      <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_360px]">
-        <main className="space-y-5">
+      <div className="vs-stage">
+        <main style={{ display: 'grid', gap: 18, minWidth: 0 }}>
           <Plate map={map} states={states} selectedId={selectedNode} onSelect={setSelectedNode} hiddenEdgeIds={hiddenEdgeIds} />
 
+          {/* Atalhos de intenção da proposta: a estudante diz o que quer, em vez
+              de traduzir sozinha "estou perdida" num modo de estudo. */}
+          {mode === 'explorar' && (
+            <div className="vs-intents">
+              <button className="vs-ghost" onClick={() => setMode('testar')}>Estudar melhor.</button>
+              <button className="vs-ghost" onClick={() => setMode('reconstruir')}>Ir além.</button>
+            </div>
+          )}
+
           {mode === 'testar' && (
-            <section className="rounded-2xl border-2 border-indigo-200 bg-white p-5 dark:border-indigo-900 dark:bg-zinc-900">
-              <h2 className="font-bold">Recuperação sem consulta</h2>
+            <section className="vs-panel">
+              <p className="vs-kicker"><i aria-hidden="true" />Recuperação sem consulta</p>
               {question ? (
                 <>
-                  <p className="mt-2 font-semibold">{question.prompt}</p>
-                  <textarea
-                    aria-label="Sua resposta"
-                    rows={5}
-                    value={draft}
-                    onChange={(event) => { setDraft(event.target.value); setFeedback(null); }}
-                    placeholder="Reconstrua a relação entre os conceitos, sem voltar ao texto…"
-                    className="mt-3 w-full rounded-xl border border-zinc-300 bg-transparent p-3 dark:border-zinc-700"
-                  />
-                  <details className="mt-2">
-                    <summary className="cursor-pointer text-sm text-zinc-500">Preciso de uma pista</summary>
-                    <p className="mt-2 text-sm">{question.hint}</p>
+                  <h2 style={{ margin: '10px 0 0' }}>{question.prompt}</h2>
+                  <div style={{ marginTop: 14 }}>
+                    <textarea
+                      aria-label="Sua resposta"
+                      rows={5}
+                      value={draft}
+                      onChange={(event) => { setDraft(event.target.value); setFeedback(null); }}
+                      placeholder="Reconstrua a relação entre os conceitos, sem voltar ao texto…"
+                    />
+                  </div>
+                  <details style={{ marginTop: 10 }}>
+                    <summary className="vs-meta" style={{ cursor: 'pointer' }}>Preciso de uma pista</summary>
+                    <p className="vs-dim">{question.hint}</p>
                   </details>
-                  <button
-                    disabled={!draft.trim()}
-                    onClick={submitRecall}
-                    className="mt-4 rounded-xl bg-indigo-600 px-4 py-2.5 font-semibold text-white disabled:opacity-40"
-                  >
-                    Enviar para correção
-                  </button>
+                  <div className="vs-actions">
+                    <button className="vs-primary" disabled={!draft.trim()} onClick={submitRecall}>Enviar para correção</button>
+                  </div>
                   {feedback && (
-                    <div role="status" className="mt-4 rounded-xl bg-zinc-100 p-4 text-sm dark:bg-zinc-800">
-                      <p><strong>Você preservou:</strong> {feedback.matched.length ? feedback.matched.join(', ') : 'ainda nenhuma relação identificável'}</p>
+                    <div role="status" className={noteClass(feedback.missing ? (feedback.matched.length ? 'parcial' : 'incorreta') : 'correta')} style={{ marginTop: 14 }}>
+                      <p style={{ margin: 0 }}><strong>Você preservou:</strong> {feedback.matched.length ? feedback.matched.map(displayLabel).join(', ') : 'ainda nenhuma relação identificável'}</p>
                       {feedback.missing
-                        ? <p className="mt-2 text-amber-700 dark:text-amber-300"><strong>Primeiro elo ausente:</strong> {feedback.missing}.</p>
-                        : <p className="mt-2 text-emerald-700 dark:text-emerald-300"><strong>Estrutura essencial completa.</strong> {question.transferPrompt}</p>}
+                        ? <p style={{ marginBottom: 0 }}><strong>Primeiro elo ausente:</strong> {displayLabel(feedback.missing)}.</p>
+                        : <p style={{ marginBottom: 0 }}><strong>Estrutura essencial completa.</strong> {question.transferPrompt}</p>}
                     </div>
                   )}
                 </>
               ) : (
-                <p className="mt-2 text-sm text-zinc-500">Este capítulo ainda não tem pergunta de recuperação.</p>
+                <p className="vs-dim">Este capítulo ainda não tem pergunta de recuperação.</p>
               )}
             </section>
           )}
 
           {mode === 'reconstruir' && (
-            <section className="rounded-2xl border-2 border-indigo-200 bg-white p-5 dark:border-indigo-900 dark:bg-zinc-900">
-              <h2 className="font-bold">Reconstrução ativa</h2>
+            <section className="vs-panel">
+              <p className="vs-kicker"><i aria-hidden="true" />Reconstrução ativa</p>
               {hidden.length === 0 ? (
-                <p className="mt-2 text-sm text-zinc-500">Não há relação para ocultar neste capítulo.</p>
+                <p className="vs-dim" style={{ marginTop: 10 }}>Não há relação para ocultar neste capítulo.</p>
               ) : (
                 <>
-                  <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">
-                    O CRIVO ocultou primeiro as relações em que suas evidências são mais frágeis.
-                  </p>
-                  <button
-                    onClick={() => setShowWhyHidden((value) => !value)}
-                    aria-expanded={showWhyHidden}
-                    className="mt-1 inline-flex items-center text-sm font-medium text-indigo-700 dark:text-indigo-300"
-                  >
-                    <HelpCircle className="mr-1.5 h-4 w-4" aria-hidden="true" />Por que estas?
-                  </button>
+                  <h2 style={{ margin: '10px 0 0' }}>O CRIVO ocultou primeiro as relações em que suas evidências são mais frágeis.</h2>
+                  <div className="vs-actions">
+                    <button className="vs-ghost" onClick={() => setShowWhyHidden((value) => !value)} aria-expanded={showWhyHidden}>
+                      <HelpCircle aria-hidden="true" size={13} />Por que estas?
+                    </button>
+                  </div>
                   {showWhyHidden && (
-                    <ul className="mt-2 space-y-1 rounded-xl bg-zinc-100 p-3 text-sm dark:bg-zinc-800">
-                      {hidden.map((item) => <li key={item.relationId}>{item.reason}</li>)}
+                    <ul className="vs-relations">
+                      {hidden.map((item) => <li key={item.relationId} className="vs-dim">{item.reason}</li>)}
                     </ul>
                   )}
 
-                  <ol className="mt-4 space-y-4">
+                  <ol style={{ display: 'grid', gap: 12, margin: '16px 0 0', padding: 0, listStyle: 'none' }}>
                     {hidden.map((item, index) => {
                       const graded = grades[item.relationId];
                       return (
-                        <li key={item.relationId} className="rounded-xl border border-zinc-200 p-4 dark:border-zinc-800">
-                          <p className="text-xs font-bold uppercase tracking-wide text-zinc-500">Lacuna {index + 1}</p>
-                          <p className="mt-1 text-sm">Qual relação preenche este elo?</p>
-                          <div className="mt-3 flex flex-wrap gap-2">
+                        <li key={item.relationId} className="vs-gap">
+                          <p className="vs-meta" style={{ margin: 0 }}>Lacuna {index + 1}</p>
+                          <h3 style={{ marginTop: 7 }}>Qual relação preenche este elo?</h3>
+                          <div className="vs-bank">
                             {bank.map((label) => {
                               const chosen = placements[item.relationId] === label;
                               const takenElsewhere = !chosen && usedLabels.includes(label);
                               return (
                                 <button
                                   key={label}
+                                  className="vs-ghost"
                                   disabled={takenElsewhere}
                                   aria-pressed={chosen}
                                   onClick={() => place(item.relationId, label)}
-                                  className={`rounded-lg border px-3 py-1.5 text-sm disabled:opacity-35 ${
-                                    chosen ? 'border-indigo-500 bg-indigo-50 font-semibold dark:bg-indigo-950/40' : 'border-zinc-300 dark:border-zinc-700'
-                                  }`}
                                 >
                                   {displayLabel(label)}
                                 </button>
                               );
                             })}
                           </div>
-                          {graded && (
-                            <p
-                              role="status"
-                              className={`mt-3 rounded-lg p-3 text-sm ${
-                                graded.grade === 'correta' ? 'bg-emerald-50 text-emerald-800 dark:bg-emerald-950/40 dark:text-emerald-200'
-                                  : graded.grade === 'parcial' ? 'bg-amber-50 text-amber-900 dark:bg-amber-950/30 dark:text-amber-200'
-                                    : 'bg-rose-50 text-rose-900 dark:bg-rose-950/30 dark:text-rose-200'
-                              }`}
-                            >
-                              {graded.feedback}
-                            </p>
-                          )}
+                          {graded && <p role="status" className={noteClass(graded.grade)} style={{ marginTop: 12, marginBottom: 0 }}>{graded.feedback}</p>}
                         </li>
                       );
                     })}
                   </ol>
 
-                  <div className="mt-4 flex flex-wrap gap-2">
+                  <div className="vs-actions">
+                    <button className="vs-primary" disabled={Object.keys(placements).length === 0} onClick={submitReconstruction}>Conferir reconstrução</button>
                     <button
-                      disabled={Object.keys(placements).length === 0}
-                      onClick={submitReconstruction}
-                      className="rounded-xl bg-indigo-600 px-4 py-2.5 font-semibold text-white disabled:opacity-40"
-                    >
-                      Conferir reconstrução
-                    </button>
-                    <button
+                      className="vs-ghost"
                       disabled={history.length === 0}
                       onClick={() => { setPlacements(history[history.length - 1]); setHistory((items) => items.slice(0, -1)); setGrades({}); }}
-                      className="inline-flex items-center rounded-xl border border-zinc-300 px-4 py-2.5 text-sm font-medium disabled:opacity-40 dark:border-zinc-700"
                     >
-                      <Undo2 className="mr-1.5 h-4 w-4" aria-hidden="true" />Desfazer
+                      <Undo2 aria-hidden="true" size={13} />Desfazer
                     </button>
-                    <button
-                      onClick={() => { setPlacements({}); setHistory([]); setGrades({}); }}
-                      className="inline-flex items-center rounded-xl border border-zinc-300 px-4 py-2.5 text-sm font-medium dark:border-zinc-700"
-                    >
-                      <RotateCcw className="mr-1.5 h-4 w-4" aria-hidden="true" />Reiniciar
+                    <button className="vs-ghost" onClick={() => { setPlacements({}); setHistory([]); setGrades({}); }}>
+                      <RotateCcw aria-hidden="true" size={13} />Reiniciar
                     </button>
                   </div>
                 </>
@@ -590,7 +643,7 @@ export default function Visual() {
           )}
         </main>
 
-        <aside className="space-y-4 lg:sticky lg:top-6 lg:self-start">
+        <aside className="vs-aside">
           <Inspector
             map={map}
             summary={summary}
@@ -598,13 +651,15 @@ export default function Visual() {
             answers={answers}
             disagreed={disagreed}
             onDisagree={() => setDisagreed((value) => !value)}
+            onTest={() => setMode('testar')}
+            onRebuild={() => setMode('reconstruir')}
             onOpenSummary={(sectionId) => navigate(`/resumos?summary=${encodeURIComponent(summary.id)}#${sectionId}`)}
           />
-          <div className="rounded-2xl border border-zinc-200 p-4 dark:border-zinc-800">
-            <h3 className="text-xs font-bold uppercase tracking-wide text-zinc-500">Legenda dos estados</h3>
-            <ul className="mt-2 grid grid-cols-2 gap-1.5">
+          <div className="vs-panel">
+            <p className="vs-meta">Legenda dos estados</p>
+            <ul className="vs-legend">
               {(Object.keys(NODE_STATE_LABEL) as NodeState[]).map((state) => (
-                <li key={state} data-state={state} className="flex items-center gap-1.5 text-xs">
+                <li key={state} data-state={state}>
                   <span className="vs-swatch" aria-hidden="true" />{NODE_STATE_LABEL[state]}
                 </li>
               ))}
