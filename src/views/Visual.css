@@ -47,6 +47,36 @@
   --vs-possivel-regressao: #6f1c2b;
 }
 
+/*
+ * Paleta de ESTÁGIO — não confundir com a de estado acima. Nas referências que
+ * a Ana Júlia mandou, cada bloco do mapa tem uma cor viva própria, sem relação
+ * com "domínio"; é o que dá o ar de pôster colorido. Mas o estado (vinho =
+ * lacuna, verde = domínio) é diagnóstico e não pode ser essa mesma cor, senão
+ * as duas leituras colidem no mesmo pixel. Solução: a cor grande do bloco vem
+ * do ESTÁGIO pedagógico (fixa, decorativa, igual em toda disciplina), e o
+ * estado vira só o pontinho + selo — sinal preciso, sem competir pelo bloco
+ * inteiro.
+ */
+.crivo-visual {
+  --vs-stage-intuicao: #c85c72;
+  --vs-stage-conceito: #3f9e78;
+  --vs-stage-aplicacao: #4a8fd6;
+  --vs-stage-estrategia: #d68a3d;
+  --vs-stage-exercicio: #9370c9;
+}
+.is-light .crivo-visual {
+  --vs-stage-intuicao: #a83e56;
+  --vs-stage-conceito: #227052;
+  --vs-stage-aplicacao: #2c66a8;
+  --vs-stage-estrategia: #a3630e;
+  --vs-stage-exercicio: #6e4ba8;
+}
+.crivo-visual [data-stage='intuicao'] { --vs-stage: var(--vs-stage-intuicao); }
+.crivo-visual [data-stage='conceito'] { --vs-stage: var(--vs-stage-conceito); }
+.crivo-visual [data-stage='aplicacao'] { --vs-stage: var(--vs-stage-aplicacao); }
+.crivo-visual [data-stage='estrategia'] { --vs-stage: var(--vs-stage-estrategia); }
+.crivo-visual [data-stage='exercicio'] { --vs-stage: var(--vs-stage-exercicio); }
+
 /* ---------- superfícies ---------- */
 
 .crivo-visual .vs-panel {
@@ -213,56 +243,63 @@
 
 .crivo-visual .vs-plate svg { display: block; width: 100%; height: auto; }
 
-/* medalhão do conceito central, no mesmo vocabulário do .ni-artifact do shell */
+/* medalhão do conceito central: o glifo da disciplina fica dentro, então a cor
+   que o preenche é a da própria disciplina (--primary), não a do estágio —
+   ele não pertence à sequência de cinco estágios, é o que os une. */
 .crivo-visual .vs-anchor-halo { fill: color-mix(in srgb, var(--primary) 12%, transparent); }
 .crivo-visual .vs-anchor-orbit { fill: none; stroke: color-mix(in srgb, var(--primary) 34%, transparent); stroke-width: 1; }
-.crivo-visual .vs-anchor-ring { fill: none; stroke: color-mix(in srgb, var(--primary) 85%, transparent); stroke-width: 1.2; }
-.crivo-visual .vs-anchor-ring--ticks { stroke-dasharray: 2 7; opacity: .8; }
-.crivo-visual .vs-anchor-core {
-  fill: var(--primary);
-  stroke: var(--secondary);
-  stroke-width: 1.5;
-  filter: drop-shadow(0 0 10px color-mix(in srgb, var(--primary) 65%, transparent));
-}
+.crivo-visual .vs-anchor-ring { fill: color-mix(in srgb, var(--secondary) 22%, var(--surface)); stroke: color-mix(in srgb, var(--primary) 85%, transparent); stroke-width: 1.4; }
+.is-light .crivo-visual .vs-anchor-ring { fill: color-mix(in srgb, var(--secondary) 30%, #fffdf8); }
+.crivo-visual .vs-anchor-glyph { color: var(--primary-ink, var(--primary)); }
 .crivo-visual .vs-anchor-text { fill: var(--text); font: 500 italic 15px Newsreader, Georgia, serif; }
 .crivo-visual .vs-anchor-kicker { fill: var(--faint); font: 8px ui-monospace, SFMono-Regular, monospace; letter-spacing: .16em; }
+/* os rabiscos que saem do medalhão, como as espirais coloridas do pôster de
+   referência — puramente decorativos, cada um numa cor de estágio diferente. */
+.crivo-visual .vs-anchor-doodle { fill: none; stroke-width: 1.6; stroke-linecap: round; opacity: .65; }
 
 .crivo-visual .vs-spine { stroke: color-mix(in srgb, var(--text) 20%, transparent); stroke-width: 1; }
 
-.crivo-visual .vs-link { fill: none; stroke: color-mix(in srgb, var(--text) 26%, transparent); stroke-width: 1.1; }
+.crivo-visual .vs-link { fill: none; stroke: color-mix(in srgb, var(--text) 30%, transparent); stroke-width: 1.4; }
 .crivo-visual .vs-link-label { fill: var(--dim); font: 8px ui-monospace, SFMono-Regular, monospace; letter-spacing: .14em; }
 .crivo-visual .vs-link-plate { fill: var(--surface); opacity: .85; }
 .is-light .crivo-visual .vs-link-plate { fill: #fffdf8; }
 /* A lacuna é tracejada e vinho: precisa ler como "falta algo aqui", não como
    "aqui não existe nada". */
-.crivo-visual .vs-link.is-hidden { stroke: var(--vs-possivel-regressao); stroke-dasharray: 5 4; stroke-width: 1.6; }
+.crivo-visual .vs-link.is-hidden { stroke: var(--vs-possivel-regressao); stroke-dasharray: 5 4; stroke-width: 1.8; }
 .crivo-visual .vs-link-label.is-hidden { fill: var(--vs-possivel-regressao); letter-spacing: .2em; }
 
 .crivo-visual .vs-node { cursor: pointer; }
+/* O bloco é colorido pelo ESTÁGIO (decorativo, igual em toda disciplina) — é
+   isso que dá a variedade de cor da referência. O estado diagnóstico vira só
+   o pontinho (.vs-node-dot) e o anel de foco/seleção, para não competir pela
+   mesma área. */
 .crivo-visual .vs-node-box {
-  fill: color-mix(in srgb, var(--vs-state) 11%, var(--surface));
-  stroke: color-mix(in srgb, var(--vs-state) 70%, transparent);
-  stroke-width: 1.2;
+  fill: color-mix(in srgb, var(--vs-stage) 16%, var(--surface));
+  stroke: color-mix(in srgb, var(--vs-stage) 75%, transparent);
+  stroke-width: 1.6;
   transition: stroke-width .16s ease, fill .16s ease;
 }
-.is-light .crivo-visual .vs-node-box { fill: color-mix(in srgb, var(--vs-state) 8%, #fffdf8); }
-.crivo-visual .vs-node:hover .vs-node-box { fill: color-mix(in srgb, var(--vs-state) 18%, var(--surface)); }
+.is-light .crivo-visual .vs-node-box { fill: color-mix(in srgb, var(--vs-stage) 12%, #fffdf8); }
+.crivo-visual .vs-node:hover .vs-node-box { fill: color-mix(in srgb, var(--vs-stage) 26%, var(--surface)); }
 .crivo-visual .vs-node:focus { outline: none; }
 .crivo-visual .vs-node:focus-visible .vs-node-box,
-.crivo-visual .vs-node[aria-pressed='true'] .vs-node-box { stroke-width: 2.6; stroke: var(--vs-state); }
-.crivo-visual .vs-node-dot { fill: var(--vs-state); }
-.crivo-visual .vs-node-stage { fill: var(--faint); font: 8px ui-monospace, SFMono-Regular, monospace; letter-spacing: .15em; }
+.crivo-visual .vs-node[aria-pressed='true'] .vs-node-box { stroke-width: 3; stroke: var(--vs-state); }
+.crivo-visual .vs-node-dot { fill: var(--vs-state); stroke: var(--surface); stroke-width: 1.5; }
+.crivo-visual .vs-node-icon { color: var(--vs-stage); }
+.crivo-visual .vs-node-stage { fill: color-mix(in srgb, var(--vs-stage) 88%, var(--text)); font: 700 8px ui-monospace, SFMono-Regular, monospace; letter-spacing: .15em; }
 .crivo-visual .vs-node-title { fill: var(--text); font: 500 14px Newsreader, Georgia, serif; }
 
-/* a relação fundamental, destacada ao pé da prancha */
+/* a relação fundamental, em balão de pensamento ao pé da prancha */
 .crivo-visual .vs-keystone {
   margin-top: 14px;
-  padding: 15px 17px;
-  border: 1px solid color-mix(in srgb, var(--primary) 45%, transparent);
-  border-radius: 13px;
+  padding: 16px 18px;
+  position: relative;
+  border: 1.5px dashed color-mix(in srgb, var(--primary) 55%, transparent);
+  border-radius: 18px;
   background: color-mix(in srgb, var(--primary) 9%, transparent);
 }
 .crivo-visual .vs-keystone q { display: block; margin-top: 7px; font: 500 italic 17px/1.35 Newsreader, Georgia, serif; quotes: none; }
+.crivo-visual .vs-keystone-spark { position: absolute; top: -11px; left: 20px; color: var(--secondary); }
 
 /* atalhos de intenção da proposta */
 .crivo-visual .vs-intents { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }

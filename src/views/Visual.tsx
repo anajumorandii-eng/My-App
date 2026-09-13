@@ -1,19 +1,20 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { motion, useReducedMotion } from 'motion/react';
-import { ArrowLeft, ArrowUpRight, HelpCircle, RotateCcw, Undo2 } from 'lucide-react';
+import { ArrowLeft, ArrowUpRight, HelpCircle, RotateCcw, Sparkles, Undo2 } from 'lucide-react';
 import { interactiveSummaries } from '../data/interactiveSummaries';
 import { evaluateRetrievalAnswer } from '../lib/summaryEngine';
 import { applySummaryAttempt } from '../lib/summaryStudy';
 import { useSummaryProgress } from '../hooks/useSummaryProgress';
 import { CONFIDENCE_LABEL } from '../lib/confidence';
 import { MOTION_DURATION, MOTION_EASE } from '../design-system/motion/tokens';
+import { SubjectGlyph, StageGlyph, SUBJECT_GLYPH_BOX, STAGE_GLYPH_BOX } from '../design-system/illustrations/visualIcons';
 import {
   buildVisualMap, chooseHiddenRelations, explainRelation, gradeReconstruction, minimalIntervention,
   nodeState, relationEvidence, relationState, NODE_STATE_LABEL, RELATION_LABEL,
   type NodeState, type ReconstructionGrade, type VisualMap,
 } from '../lib/visualStudy';
-import type { InteractiveSummary, RetrievalAttempt } from '../types/summary';
+import type { InteractiveSummary, PedagogicalStage, RetrievalAttempt } from '../types/summary';
 import './Visual.css';
 
 type Mode = 'explorar' | 'testar' | 'reconstruir';
@@ -51,6 +52,68 @@ function wrapLabel(label: string, perLine: number, maxLines = 2): string[] {
 }
 
 /*
+ * Traço à mão, determinístico.
+ *
+ * A referência é pôster ilustrado: nada ali é geometricamente perfeito, cada
+ * caixa tem sua própria imperfeição de contorno. Sem gerador de imagem, a
+ * saída é simular isso vetorialmente — mas o jitter não pode ser aleatório a
+ * cada render, ou a caixa "treme" toda vez que o React atualiza o estado (um
+ * clique no nó ao lado já dispara um re-render da prancha inteira). A semente
+ * vem do id do próprio elemento (nó ou aresta), então o desenho de cada peça é
+ * sempre o mesmo — imperfeito, mas estável.
+ */
+function hashSeed(input: string): number {
+  let h = 2166136261;
+  for (let i = 0; i < input.length; i += 1) {
+    h ^= input.charCodeAt(i);
+    h = Math.imul(h, 16777619);
+  }
+  return h >>> 0;
+}
+
+function mulberry32(seed: number) {
+  let a = seed;
+  return () => {
+    a = (a + 0x6d2b79f5) | 0;
+    let t = Math.imul(a ^ (a >>> 15), 1 | a);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
+/** Retângulo arredondado com cantos e lados levemente irregulares. */
+function wobblyRoundedRect(x: number, y: number, w: number, h: number, r: number, seed: string): string {
+  const rng = mulberry32(hashSeed(seed));
+  const j = (amp: number) => (rng() - 0.5) * 2 * amp;
+  const rr = Math.min(r, w / 2 - 3, h / 2 - 3);
+  const tl = { x: x + rr + j(2), y: y + j(1.5) };
+  const tr = { x: x + w - rr + j(2), y: y + j(1.5) };
+  const rt = { x: x + w + j(1.5), y: y + rr + j(2) };
+  const rb = { x: x + w + j(1.5), y: y + h - rr + j(2) };
+  const br = { x: x + w - rr + j(2), y: y + h + j(1.5) };
+  const bl = { x: x + rr + j(2), y: y + h + j(1.5) };
+  const lb = { x: x + j(1.5), y: y + h - rr + j(2) };
+  const lt = { x: x + j(1.5), y: y + rr + j(2) };
+  const side = (from: { x: number; y: number }, to: { x: number; y: number }, amp: number) => {
+    const mx = (from.x + to.x) / 2 + j(amp);
+    const my = (from.y + to.y) / 2 + j(amp);
+    return `Q ${mx} ${my}, ${to.x} ${to.y}`;
+  };
+  return [
+    `M ${tl.x} ${tl.y}`,
+    side(tl, tr, 1.4),
+    `Q ${x + w} ${y}, ${rt.x} ${rt.y}`,
+    side(rt, rb, 1.4),
+    `Q ${x + w} ${y + h}, ${br.x} ${br.y}`,
+    side(br, bl, 1.4),
+    `Q ${x} ${y + h}, ${lb.x} ${lb.y}`,
+    side(lb, lt, 1.4),
+    `Q ${x} ${y}, ${tl.x} ${tl.y}`,
+    'Z',
+  ].join(' ');
+}
+
+/*
  * A prancha não é uma corrente de caixas empilhadas: o conceito central fica no
  * medalhão do topo e as etapas descem ramificando à esquerda e à direita de uma
  * espinha, que é onde os elos são nomeados. No estreito a mesma estrutura vira
@@ -75,16 +138,21 @@ function plateLayout(count: number, compact: boolean) {
     return { x, y, w: nodeW, h: nodeH, side, cy: y + nodeH / 2 };
   });
 
-  const links = nodes.map((node) => {
+  const links = nodes.map((node, index) => {
     const innerX = node.side === 'left' ? node.x + node.w : node.x;
     const pull = node.side === 'left' ? -34 : 34;
-    return `M ${spineX} ${node.cy - 40} C ${spineX} ${node.cy}, ${innerX + pull} ${node.cy}, ${innerX} ${node.cy}`;
+    // Um empurrão extra e determinístico no meio da curva — sem ele as quatro
+    // linhas saem geometricamente idênticas, e a mão de quem desenha uma
+    // referência nunca repete a mesma curva duas vezes.
+    const rng = mulberry32(hashSeed(`link-${index}`));
+    const bow = (rng() - 0.5) * 16;
+    return `M ${spineX} ${node.cy - 40} C ${spineX + bow} ${node.cy - 8}, ${innerX + pull} ${node.cy}, ${innerX} ${node.cy}`;
   });
 
   return {
     width,
     height: (nodes.at(-1)?.y ?? firstY) + nodeH + 22,
-    anchor: { cx: anchorCx, cy: anchorCy, ringOuter, ringMid: ringOuter - 12, core: compact ? 13 : 15 },
+    anchor: { cx: anchorCx, cy: anchorCy, ringOuter, disc: compact ? 30 : 34 },
     spineX,
     spineTop: anchorCy + ringOuter + (compact ? 44 : 48),
     nodes,
@@ -93,6 +161,8 @@ function plateLayout(count: number, compact: boolean) {
     titleChars: compact ? 30 : 34,
   };
 }
+
+const DOODLE_STAGES: PedagogicalStage[] = ['intuicao', 'aplicacao', 'exercicio'];
 
 function useCompactPlate() {
   const [compact, setCompact] = useState(false);
@@ -129,10 +199,14 @@ function Plate({
   const layout = useMemo(() => plateLayout(map.nodes.length, compact), [map.nodes.length, compact]);
   const anchorLines = wrapLabel(map.centerLabel, compact ? 30 : 40, 2);
 
+  const glyphSize = layout.anchor.disc * 1.5;
+
   return (
     <div className="vs-plate">
       <svg viewBox={`0 0 ${layout.width} ${layout.height}`} role="img" aria-label={`Mapa de relações de ${map.title}`}>
-        {/* medalhão do conceito central */}
+        {/* medalhão do conceito central: o glifo da disciplina no meio, rabiscos
+            coloridos ao redor — a mesma ideia dos garranchos que cercam o título
+            nas referências, só que aqui em cor de estágio, não decoração solta. */}
         <g>
           <text className="vs-anchor-kicker" x={layout.anchor.cx} y={layout.anchor.cy - layout.anchor.ringOuter - 14} textAnchor="middle">CONCEITO CENTRAL</text>
           {[1, 2, 3].map((ring) => (
@@ -146,9 +220,26 @@ function Plate({
             />
           ))}
           <circle className="vs-anchor-halo" cx={layout.anchor.cx} cy={layout.anchor.cy} r={layout.anchor.ringOuter + 10} />
-          <circle className="vs-anchor-ring vs-anchor-ring--ticks" cx={layout.anchor.cx} cy={layout.anchor.cy} r={layout.anchor.ringOuter} />
-          <circle className="vs-anchor-ring" cx={layout.anchor.cx} cy={layout.anchor.cy} r={layout.anchor.ringMid} />
-          <circle className="vs-anchor-core" cx={layout.anchor.cx} cy={layout.anchor.cy} r={layout.anchor.core} />
+          {DOODLE_STAGES.map((stage, index) => {
+            const angle = (index / DOODLE_STAGES.length) * Math.PI * 2 - Math.PI / 2;
+            const reach = layout.anchor.ringOuter + 6;
+            const bx = layout.anchor.cx + Math.cos(angle) * reach;
+            const by = layout.anchor.cy + Math.sin(angle) * reach;
+            const rng = mulberry32(hashSeed(`doodle-${map.summaryId}-${index}`));
+            const curl = 10 + rng() * 8;
+            return (
+              <path
+                key={stage}
+                className="vs-anchor-doodle"
+                data-stage={stage}
+                d={`M ${bx} ${by} q ${curl} -${curl}, ${curl * 2} 0 t ${curl * 2} 0`}
+              />
+            );
+          })}
+          <circle className="vs-anchor-ring" cx={layout.anchor.cx} cy={layout.anchor.cy} r={layout.anchor.disc} />
+          <g className="vs-anchor-glyph" transform={`translate(${layout.anchor.cx - glyphSize / 2}, ${layout.anchor.cy - glyphSize / 2}) scale(${glyphSize / SUBJECT_GLYPH_BOX})`}>
+            <SubjectGlyph subject={map.subject} />
+          </g>
           {anchorLines.map((line, index) => (
             <text
               key={line}
@@ -205,7 +296,8 @@ function Plate({
           const geometry = layout.nodes[index];
           const state = states[node.id] ?? 'nao-avaliado';
           const lines = wrapLabel(node.label, layout.titleChars);
-          const textX = geometry.x + 18;
+          const iconSize = 15;
+          const textX = geometry.x + 18 + iconSize + 5;
           return (
             <motion.g
               key={node.id}
@@ -223,12 +315,17 @@ function Plate({
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: MOTION_DURATION.micro, ease: MOTION_EASE, delay: reducedMotion ? 0 : index * 0.05 }}
             >
-              <rect className="vs-node-box" x={geometry.x} y={geometry.y} width={geometry.w} height={geometry.h} rx={13} />
-              <circle className="vs-node-dot" cx={geometry.x + 11} cy={geometry.y + 15} r={3.5} />
-              <text className="vs-node-stage" x={textX} y={geometry.y + 19}>{STAGE_LABEL[node.stage].toUpperCase()}</text>
+              <path className="vs-node-box" data-stage={node.stage} d={wobblyRoundedRect(geometry.x, geometry.y, geometry.w, geometry.h, 13, node.id)} />
+              <g className="vs-node-icon" transform={`translate(${geometry.x + 16}, ${geometry.y + 10}) scale(${iconSize / STAGE_GLYPH_BOX})`}>
+                <StageGlyph stage={node.stage} />
+              </g>
+              <text className="vs-node-stage" x={textX} y={geometry.y + 20}>{STAGE_LABEL[node.stage].toUpperCase()}</text>
               {lines.map((line, lineIndex) => (
-                <text key={line} className="vs-node-title" x={textX} y={geometry.y + 42 + lineIndex * 17}>{line}</text>
+                <text key={line} className="vs-node-title" x={geometry.x + 18} y={geometry.y + 42 + lineIndex * 17}>{line}</text>
               ))}
+              {/* selo de estado: o sinal diagnóstico preciso, separado da cor
+                  grande do bloco (que é decorativa, do estágio). */}
+              <circle className="vs-node-dot" cx={geometry.x + geometry.w - 13} cy={geometry.y + 14} r={4.5} />
             </motion.g>
           );
         })}
@@ -236,6 +333,7 @@ function Plate({
 
       {map.recallPrompt && (
         <div className="vs-keystone">
+          <Sparkles className="vs-keystone-spark" size={20} aria-hidden="true" />
           <p className="vs-meta">Relação fundamental</p>
           <q>{map.recallPrompt}</q>
         </div>
