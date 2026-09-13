@@ -1,0 +1,107 @@
+/*
+ * Estados do mapa do Visual.
+ *
+ * Ficam em CSS, e não em classes Tailwind soltas, porque o mesmo estado precisa
+ * pintar três coisas diferentes — o nó no SVG, a legenda e a linha do inspetor —
+ * e repetir sete paletas em três lugares já tinha divergido no protótipo.
+ *
+ * A semântica vem da especificação: cinza quente para não avaliado, vinho para
+ * lacuna e atenção prioritária, âmbar para o que está a caminho, verde vivo para
+ * domínio sustentado. Não é uma escala de vermelho a verde: a regressão é vinho
+ * justamente porque é alerta, não "ruim".
+ */
+.crivo-visual {
+  --vs-nao-avaliado: #a8a29e;
+  --vs-reconhece: #b4566a;
+  --vs-compreende: #d09b5d;
+  --vs-aplicacao-instavel: #c07c3a;
+  --vs-aplica: #4f9d70;
+  --vs-transfere: #2f7d55;
+  --vs-possivel-regressao: #852636;
+  --vs-plate: #fbf8f2;
+  --vs-plate-line: rgba(89, 56, 34, 0.18);
+  --vs-plate-ink: #281c16;
+  --vs-plate-dim: #6f6255;
+}
+
+/* O escuro preserva o ambiente do produto (verde profundo), em vez de inverter
+   a prancha para preto puro — a prancha continua sendo superfície de estudo. */
+.dark .crivo-visual {
+  --vs-nao-avaliado: #78716c;
+  --vs-reconhece: #c97287;
+  --vs-compreende: #e0b070;
+  --vs-aplicacao-instavel: #d99a54;
+  --vs-aplica: #5fb987;
+  --vs-transfere: #7fd3a5;
+  --vs-possivel-regressao: #d4667f;
+  --vs-plate: #10251f;
+  --vs-plate-line: rgba(233, 208, 157, 0.16);
+  --vs-plate-ink: #f5ecdc;
+  --vs-plate-dim: #b8ad9a;
+}
+
+.crivo-visual [data-state='nao-avaliado'] { --vs-state: var(--vs-nao-avaliado); }
+.crivo-visual [data-state='reconhece'] { --vs-state: var(--vs-reconhece); }
+.crivo-visual [data-state='compreende'] { --vs-state: var(--vs-compreende); }
+.crivo-visual [data-state='aplicacao-instavel'] { --vs-state: var(--vs-aplicacao-instavel); }
+.crivo-visual [data-state='aplica'] { --vs-state: var(--vs-aplica); }
+.crivo-visual [data-state='transfere'] { --vs-state: var(--vs-transfere); }
+.crivo-visual [data-state='possivel-regressao'] { --vs-state: var(--vs-possivel-regressao); }
+
+.crivo-visual .vs-swatch {
+  display: inline-block;
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 999px;
+  background: var(--vs-state, var(--vs-nao-avaliado));
+}
+
+.crivo-visual .vs-plate {
+  background: var(--vs-plate);
+  border: 1px solid var(--vs-plate-line);
+  border-radius: 16px;
+  color: var(--vs-plate-ink);
+}
+
+.crivo-visual .vs-plate svg { display: block; width: 100%; height: auto; }
+
+/* A prancha tem largura fixa no viewBox: deixá-la ocupar 100% de uma coluna
+   larga inflava o texto dos nós para o dobro do corpo e empurrava o último nó
+   para fora da primeira dobra no desktop. Centralizar com teto resolve sem
+   mexer na geometria. */
+@media (min-width: 720px) {
+  .crivo-visual .vs-plate svg { max-width: 460px; margin: 0 auto; }
+}
+
+.crivo-visual .vs-node rect {
+  fill: color-mix(in srgb, var(--vs-state) 14%, var(--vs-plate));
+  stroke: var(--vs-state);
+  stroke-width: 1.5;
+  transition: stroke-width 140ms ease, fill 140ms ease;
+}
+
+.crivo-visual .vs-node { cursor: pointer; }
+.crivo-visual .vs-node:focus { outline: none; }
+.crivo-visual .vs-node:focus-visible rect,
+.crivo-visual .vs-node[aria-pressed='true'] rect { stroke-width: 3.5; }
+
+.crivo-visual .vs-node text { fill: var(--vs-plate-ink); font-size: 12px; }
+.crivo-visual .vs-node .vs-node-stage { fill: var(--vs-plate-dim); font-size: 9px; letter-spacing: 0.08em; text-transform: uppercase; }
+
+.crivo-visual .vs-edge line { stroke: var(--vs-plate-line); stroke-width: 1.5; }
+.crivo-visual .vs-edge text { fill: var(--vs-plate-dim); font-size: 9px; letter-spacing: 0.06em; text-transform: uppercase; }
+/* A lacuna escolhida pelo diagnóstico é tracejada: a estudante precisa ver que
+   ali falta algo, não que ali não existe nada. */
+.crivo-visual .vs-edge.is-hidden line { stroke: var(--vs-possivel-regressao); stroke-dasharray: 5 4; }
+.crivo-visual .vs-edge.is-hidden text { fill: var(--vs-possivel-regressao); }
+
+@media (prefers-reduced-motion: reduce) {
+  .crivo-visual .vs-node rect { transition: none; }
+}
+
+/* Abaixo de 560 px a fileira de modos vira rolagem horizontal em vez de quebrar
+   em duas linhas e empurrar a prancha para fora da primeira dobra. */
+@media (max-width: 560px) {
+  .crivo-visual .vs-modes { overflow-x: auto; flex-wrap: nowrap; }
+  .crivo-visual .vs-modes > * { flex: 0 0 auto; }
+}

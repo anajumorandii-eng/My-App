@@ -42,6 +42,7 @@ const Obras = lazy(() => import('./views/Obras'));
 const ObraDetalhe = lazy(() => import('./views/ObraDetalhe'));
 const AgendaView = lazy(() => import('./features/availability/AgendaView'));
 const Resumos = lazy(() => import('./views/Resumos'));
+const Visual = lazy(() => import('./views/Visual'));
 const CrivoDesignSystemGallery = lazy(() => import('./prototypes/CrivoDesignSystemGallery'));
 
 // Import Crivo Design System Global Styles
@@ -95,6 +96,7 @@ export default function App() {
                 <Route path="sessao" element={<Sessao />} />
                 <Route path="questoes" element={<Questoes />} />
                 <Route path="resumos" element={<Resumos />} />
+                <Route path="visual" element={<Visual />} />
                 <Route path="revisoes" element={<Revisoes />} />
                 <Route path="erros" element={<Erros />} />
                 <Route path="podcast" element={<Podcast />} />
