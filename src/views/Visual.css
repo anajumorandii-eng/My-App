@@ -1605,3 +1605,43 @@
   background: color-mix(in srgb, var(--vs-amber) 9%, var(--vs-paper-strong));
 }
 .vs-chain-link.is-oculto .vs-chain-state { color: var(--vs-amber); font-weight: 600; }
+
+/* Plano analítico: o ponto que a estudante arrasta e o que o desenho mede. */
+.vs-analytic-circle,
+.vs-analytic-line {
+  fill: none;
+  stroke: var(--vs-blue);
+  stroke-width: 2;
+}
+.vs-analytic-line--alt { stroke: var(--vs-green); stroke-dasharray: 7 4; }
+/* O segmento medido — perpendicular, raio ou módulo — é o que a leitura nomeia,
+   então ele não pode ler igual à reta que é só cenário. */
+.vs-analytic-drop {
+  fill: none;
+  stroke: var(--vs-burgundy);
+  stroke-width: 1.8;
+  stroke-dasharray: 5 4;
+}
+.vs-analytic-segment { fill: none; stroke: var(--vs-burgundy); stroke-width: 2; }
+.vs-analytic-fixed circle { fill: var(--vs-dim); }
+.vs-analytic-fixed text,
+.vs-analytic-point text {
+  fill: var(--vs-ink);
+  font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
+  font-size: 11px;
+  font-weight: 600;
+}
+.vs-analytic-point { cursor: grab; }
+.vs-analytic-point[data-ativo="true"] { cursor: grabbing; }
+.vs-analytic-point > circle:not(.vs-analytic-halo) { fill: var(--vs-burgundy); }
+/* O halo é alvo de toque, não decoração: 6,5px de raio é pequeno demais para o
+   dedo, e o ponto escaparia a cada tentativa no iPad. */
+.vs-analytic-halo { fill: color-mix(in srgb, var(--vs-burgundy) 16%, transparent); }
+.vs-analytic-point[data-ativo="true"] .vs-analytic-halo { fill: color-mix(in srgb, var(--vs-burgundy) 30%, transparent); }
+
+.vs-instrument-dica {
+  margin: 0;
+  font-size: 0.72rem;
+  color: var(--vs-dim);
+  text-align: center;
+}
