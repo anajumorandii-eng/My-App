@@ -207,6 +207,37 @@ describe('Visual aprovado', () => {
   });
 });
 
+describe('zoom da cena', () => {
+  it('amplia, informa a escala e volta ao natural', async () => {
+    const user = userEvent.setup();
+    render(<MemoryRouter initialEntries={[rota]}><Visual /></MemoryRouter>);
+
+    const escala = screen.getByLabelText('Ampliação da cena');
+    expect(escala).toHaveTextContent('100%');
+    expect(screen.getByLabelText('Voltar ao tamanho natural')).toBeDisabled();
+    // Em 100% não há excedente para arrastar, então a dica ensina a ampliar.
+    expect(screen.getByText(/pinça ou \+ para ampliar/)).toBeInTheDocument();
+
+    await user.click(screen.getByLabelText('Ampliar a cena'));
+    expect(escala).toHaveTextContent('125%');
+    expect(screen.getByText('arraste para navegar')).toBeInTheDocument();
+
+    await user.click(screen.getByLabelText('Voltar ao tamanho natural'));
+    expect(escala).toHaveTextContent('100%');
+    expect(screen.getByLabelText('Voltar ao tamanho natural')).toBeDisabled();
+  });
+
+  it('não passa do teto nem do piso de ampliação', async () => {
+    const user = userEvent.setup();
+    render(<MemoryRouter initialEntries={[rota]}><Visual /></MemoryRouter>);
+
+    const mais = screen.getByLabelText('Ampliar a cena');
+    for (let i = 0; i < 12; i += 1) if (!(mais as HTMLButtonElement).disabled) await user.click(mais);
+    expect(screen.getByLabelText('Ampliação da cena')).toHaveTextContent('300%');
+    expect(mais).toBeDisabled();
+  });
+});
+
 describe('prancha no celular', () => {
   // O breakpoint do projeto. O stub de teste devolve `matches: false`, então a
   // prancha completa é o padrão; aqui a consulta é forçada a casar.

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { SceneViewport } from './SceneViewport';
 import { NODE_STATE_LABEL, type NodeState } from '../../lib/visualStudy';
 
 /**
@@ -122,13 +123,7 @@ export default function BoardShell({
         <ConceptCard side="expansion" data={left} state={leftState} selected={leftSelected} onSelect={onSelectLeft} />
 
         <div className="vs-piston-wrap" data-emphasis={emphasis === 'esquerda' ? 'expansao' : emphasis === 'direita' ? 'compressao' : 'nenhum'}>
-          {scene}
-          {sceneNotes && (
-            <>
-              <div className="vs-force-note vs-force-note--up">{sceneNotes.up}</div>
-              <div className="vs-force-note vs-force-note--down">{sceneNotes.down}</div>
-            </>
-          )}
+          <SceneViewport notas={sceneNotes}>{scene}</SceneViewport>
         </div>
 
         <ConceptCard side="compression" data={right} state={rightState} selected={rightSelected} onSelect={onSelectRight} />

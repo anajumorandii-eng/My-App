@@ -1538,3 +1538,53 @@
      largura até apertar o rótulo. Aqui a medida volta a ser explícita. */
   .vs-q-callout { align-self: flex-start; flex: 0 0 auto; width: 118px; min-height: 84px; }
 }
+
+/* Janela de zoom e arraste da cena. */
+.vs-viewport { display: flex; flex-direction: column; gap: 8px; width: 100%; }
+.vs-viewport-janela {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  /* touch-action: none entrega o gesto ao componente em vez de deixar o
+     navegador rolar a página no meio do arraste. */
+  touch-action: none;
+}
+.vs-viewport-janela[data-ampliada="true"] { cursor: grab; }
+.vs-viewport-janela[data-ampliada="true"]:active { cursor: grabbing; }
+.vs-viewport-conteudo {
+  transform-origin: center center;
+  transition: transform 0.12s ease-out;
+  will-change: transform;
+}
+@media (prefers-reduced-motion: reduce) {
+  .vs-viewport-conteudo { transition: none; }
+}
+
+.vs-viewport-controles {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.72rem;
+  color: var(--vs-dim);
+}
+.vs-viewport-controles button {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--vs-line);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--vs-ink);
+  cursor: pointer;
+}
+.vs-viewport-controles button:disabled { opacity: 0.35; cursor: default; }
+.vs-viewport-controles button svg { width: 14px; height: 14px; }
+.vs-viewport-controles output {
+  min-width: 42px;
+  text-align: center;
+  font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
+  font-variant-numeric: tabular-nums;
+}
+.vs-viewport-dica { flex: 1; min-width: 0; text-align: right; overflow-wrap: anywhere; }
