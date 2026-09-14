@@ -1,7 +1,7 @@
 import React from 'react';
-import { Waypoints } from 'lucide-react';
-import { NODE_STATE_LABEL } from '../../lib/visualStudy';
 import type { BoardProps } from './types';
+import BoardShell from './BoardShell';
+import { boardPair } from './pair';
 import { SceneNote } from './SceneNote';
 
 /**
@@ -94,129 +94,74 @@ function AdiabaticPiston({ emphasis }: { emphasis: 'expansao' | 'compressao' | '
   );
 }
 
-export default function AdiabaticBoard({
-  map, states, selectedId, onSelect, hiddenEdgeIds, mode,
-}: BoardProps) {
-  const leftNode = map.nodes[1] ?? map.nodes[0];
-  const rightNode = map.nodes[2] ?? map.nodes[map.nodes.length - 1];
-  const leftState = leftNode ? states[leftNode.id] ?? 'nao-avaliado' : 'nao-avaliado';
-  const rightState = rightNode ? states[rightNode.id] ?? 'nao-avaliado' : 'nao-avaliado';
-  const pistonEmphasis: 'expansao' | 'compressao' | 'nenhum' =
-    selectedId && selectedId === leftNode?.id ? 'expansao'
-    : selectedId && selectedId === rightNode?.id ? 'compressao'
-    : 'nenhum';
+export default function AdiabaticBoard(props: BoardProps) {
+  const par = boardPair(props);
 
   return (
-    <section className="vs-study-board" data-testid="visual-study-board" aria-label="Prancha ilustrada de transformação adiabática">
-      <header className="vs-board-head">
-        <div>
-          <span className="vs-board-kicker">Prancha ilustrada</span>
-          <h2>Transformação adiabática</h2>
-          <p>Quando não há troca de calor entre o sistema e o meio.</p>
-        </div>
-        <div className="vs-q-callout" aria-label="Calor igual a zero">
-          <span>condição</span>
-          <strong>Q = 0</strong>
-        </div>
-      </header>
+    <BoardShell
+      title="Transformação adiabática"
+      subtitle="Quando não há troca de calor entre o sistema e o meio."
+      condition={{ label: 'condição', value: 'Q = 0' }}
+      ariaLabel="Prancha ilustrada de transformação adiabática"
+      scene={<AdiabaticPiston emphasis={par.emphasis === 'esquerda' ? 'expansao' : par.emphasis === 'direita' ? 'compressao' : 'nenhum'} />}
+      sceneNotes={{ up: 'expansão ↑', down: '↓ compressão' }}
+      emphasis={par.emphasis}
+      left={{
+        label: 'Expansão adiabática',
+        headline: 'O gás realiza trabalho.',
+        detail: 'Sem receber calor, a energia interna diminui e a temperatura tende a cair.',
+        formula: 'W > 0 · ΔU < 0 · ΔT < 0',
+      }}
+      right={{
+        label: 'Compressão adiabática',
+        headline: 'O meio realiza trabalho sobre o gás.',
+        detail: 'Sem perder calor, a energia interna aumenta e a temperatura tende a subir.',
+        formula: 'W < 0 · ΔU > 0 · ΔT > 0',
+      }}
+      leftState={par.leftState}
+      rightState={par.rightState}
+      leftSelected={par.leftSelected}
+      rightSelected={par.rightSelected}
+      onSelectLeft={par.selectLeft}
+      onSelectRight={par.selectRight}
+      equation={{ label: 'Primeira lei aplicada à transformação adiabática', general: 'ΔU = Q − W', condition: 'com Q = 0', reduced: 'ΔU = −W' }}
+      supports={
+        <>
+          <section className="vs-formula-note">
+            <span className="vs-note-title">Relações úteis</span>
+            <strong>PV<sup>γ</sup> = constante</strong>
+            <p>Também TV<sup>γ−1</sup> = constante, para gás ideal em processo adiabático reversível.</p>
+          </section>
 
-      <div className="vs-brush" aria-hidden="true" />
+          <figure className="vs-pv-card">
+            <figcaption>Diagrama P × V</figcaption>
+            <svg viewBox="0 0 250 150" role="img" aria-label="Curva adiabática em gráfico de pressão por volume">
+              <line x1="34" y1="12" x2="34" y2="126" />
+              <line x1="34" y1="126" x2="230" y2="126" />
+              <path d="M48 26 C75 44, 91 64, 111 79 C137 98, 166 109, 216 116" />
+              <circle cx="58" cy="34" r="4" />
+              <circle cx="206" cy="114" r="4" />
+              <text x="10" y="20">P</text>
+              <text x="226" y="145">V</text>
+              <text x="66" y="31">compressão</text>
+              <text x="145" y="104">expansão</text>
+            </svg>
+          </figure>
 
-      <div className="vs-board-body">
-        <button
-          type="button"
-          className={'vs-concept-card vs-concept-card--expansion' + (selectedId === leftNode?.id ? ' is-selected' : '')}
-          data-state={leftState}
-          onClick={() => leftNode && onSelect(leftNode.id)}
-        >
-          <span className="vs-concept-label">Expansão adiabática</span>
-          <strong>O gás realiza trabalho.</strong>
-          <span>Sem receber calor, a energia interna diminui e a temperatura tende a cair.</span>
-          <code>W &gt; 0 · ΔU &lt; 0 · ΔT &lt; 0</code>
-          <span className="vs-state-line"><span className="vs-swatch" />{NODE_STATE_LABEL[leftState]}</span>
-        </button>
+          <section className="vs-formula-note">
+            <span className="vs-note-title">O que permanece decisivo?</span>
+            <strong>Sem calor não é sem mudança</strong>
+            <p>Não confunda "sem troca de calor" com "temperatura constante". Na adiabática a temperatura muda justamente porque há trabalho.</p>
+          </section>
 
-        <div className="vs-piston-wrap" data-emphasis={pistonEmphasis}>
-          <AdiabaticPiston emphasis={pistonEmphasis} />
-          <div className="vs-force-note vs-force-note--up">expansão ↑</div>
-          <div className="vs-force-note vs-force-note--down">↓ compressão</div>
-        </div>
-
-        <button
-          type="button"
-          className={'vs-concept-card vs-concept-card--compression' + (selectedId === rightNode?.id ? ' is-selected' : '')}
-          data-state={rightState}
-          onClick={() => rightNode && onSelect(rightNode.id)}
-        >
-          <span className="vs-concept-label">Compressão adiabática</span>
-          <strong>O meio realiza trabalho sobre o gás.</strong>
-          <span>Sem perder calor, a energia interna aumenta e a temperatura tende a subir.</span>
-          <code>W &lt; 0 · ΔU &gt; 0 · ΔT &gt; 0</code>
-          <span className="vs-state-line"><span className="vs-swatch" />{NODE_STATE_LABEL[rightState]}</span>
-        </button>
-      </div>
-
-      <div className="vs-equation-strip" aria-label="Primeira lei aplicada à transformação adiabática">
-        <span>Primeira Lei</span>
-        <strong>ΔU = Q − W</strong>
-        <i>com Q = 0</i>
-        <strong>ΔU = −W</strong>
-      </div>
-
-      <div className="vs-support-grid">
-        <section className="vs-formula-note">
-          <span className="vs-note-title">Relações úteis</span>
-          <strong>PV<sup>γ</sup> = constante</strong>
-          <strong>TV<sup>γ−1</sup> = constante</strong>
-          <p>Para gás ideal em processo adiabático reversível.</p>
-        </section>
-
-        <figure className="vs-pv-card">
-          <figcaption>Diagrama P × V</figcaption>
-          <svg viewBox="0 0 250 150" role="img" aria-label="Curva adiabática em gráfico de pressão por volume">
-            <line x1="34" y1="12" x2="34" y2="126" />
-            <line x1="34" y1="126" x2="230" y2="126" />
-            <path d="M48 26 C75 44, 91 64, 111 79 C137 98, 166 109, 216 116" />
-            <circle cx="58" cy="34" r="4" />
-            <circle cx="206" cy="114" r="4" />
-            <text x="10" y="20">P</text>
-            <text x="226" y="145">V</text>
-            <text x="66" y="31">compressão</text>
-            <text x="145" y="104">expansão</text>
-          </svg>
-        </figure>
-      </div>
-
-      <div className="vs-context-row">
-        <section>
-          <span className="vs-note-title">O que permanece decisivo?</span>
-          <p>Não confunda “sem troca de calor” com “temperatura constante”. Na adiabática, a temperatura muda justamente porque há trabalho.</p>
-        </section>
-        <section>
-          <span className="vs-note-title">Pista de prova</span>
-          <p>Identifique primeiro quem realiza trabalho. Depois aplique a convenção de sinais e só então conclua sobre ΔU e ΔT.</p>
-        </section>
-      </div>
-
-      {mode !== 'explorar' && (
-        <div className="vs-active-mode-note" role="status">
-          <Waypoints className="h-4 w-4" aria-hidden="true" />
-          {mode === 'testar'
-            ? 'Teste ativo: responda sem consultar a prancha e use o resultado como evidência.'
-            : String(hiddenEdgeIds.length || 1) + ' conexão(ões) frágil(eis) priorizada(s) para reconstrução.'}
-        </div>
-      )}
-
-      <footer className="vs-landscape">
-        {/* Mesma história do pistão: o .webp daqui também era transparente por
-            inteiro, então o rodapé aparecia sem o horizonte que o degradê
-            pressupõe. Decorativo, por isso fica fora da árvore de acessibilidade. */}
-        <svg className="vs-landscape-art" viewBox="0 0 640 170" aria-hidden="true" preserveAspectRatio="none">
-          <path className="vs-hill vs-hill--far" d="M0 118 C 96 78, 168 96, 244 110 S 400 74, 486 92 S 592 116, 640 104 L640 170 L0 170 Z" />
-          <path className="vs-hill vs-hill--near" d="M0 140 C 108 116, 190 132, 268 138 S 428 112, 520 128 S 604 144, 640 138 L640 170 L0 170 Z" />
-        </svg>
-        <p><strong>Ideia central:</strong> sem calor atravessando a fronteira, trabalho e energia interna explicam a mudança do estado do gás.</p>
-      </footer>
-    </section>
+          <section className="vs-formula-note">
+            <span className="vs-note-title">Pista de prova</span>
+            <strong>Comece por quem trabalha</strong>
+            <p>Identifique primeiro quem realiza trabalho. Depois aplique a convenção de sinais e só então conclua sobre ΔU e ΔT.</p>
+          </section>
+        </>
+      }
+      closing="sem calor atravessando a fronteira, trabalho e energia interna explicam a mudança do estado do gás."
+    />
   );
 }

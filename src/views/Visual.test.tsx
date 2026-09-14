@@ -206,3 +206,54 @@ describe('Visual aprovado', () => {
     expect(within(dialog).getAllByText(/hipótese, não fato/i).length).toBeGreaterThan(0);
   });
 });
+
+describe('prancha no celular', () => {
+  // O breakpoint do projeto. O stub de teste devolve `matches: false`, então a
+  // prancha completa é o padrão; aqui a consulta é forçada a casar.
+  function comLarguraDeCelular() {
+    const original = window.matchMedia;
+    window.matchMedia = ((query: string) => ({
+      matches: query.includes('900px'),
+      media: query,
+      onchange: null,
+      addListener: () => {},
+      removeListener: () => {},
+      addEventListener: () => {},
+      removeEventListener: () => {},
+      dispatchEvent: () => false,
+    })) as unknown as typeof window.matchMedia;
+    return () => { window.matchMedia = original; };
+  }
+
+  it('divide a prancha em duas faces e não esconde nada no desktop', async () => {
+    // Desktop: o alternador não existe, e equação e apoios estão na tela junto
+    // com os conceitos.
+    render(<MemoryRouter initialEntries={[rota]}><Visual /></MemoryRouter>);
+    expect(screen.queryByRole('tablist', { name: 'Seções da prancha' })).not.toBeInTheDocument();
+    expect(screen.getByText('Expansão adiabática')).toBeInTheDocument();
+    // A tira de equação e os apoios ficam na outra face, e no desktop aparecem
+    // junto com os conceitos em vez de se esconderem atrás de uma aba.
+    expect(screen.getByLabelText(/Primeira lei aplicada/i)).toBeInTheDocument();
+    expect(screen.getByText('Relações úteis')).toBeInTheDocument();
+  });
+
+  it('esconde os apoios atrás da face Relações no celular', async () => {
+    const restaurar = comLarguraDeCelular();
+    try {
+      const user = userEvent.setup();
+      render(<MemoryRouter initialEntries={[rota]}><Visual /></MemoryRouter>);
+
+      const faces = screen.getByRole('tablist', { name: 'Seções da prancha' });
+      expect(within(faces).getByRole('tab', { name: 'Essencial' })).toHaveAttribute('aria-selected', 'true');
+      // Essencial mostra os conceitos; a tira de equação fica para a outra face.
+      expect(screen.getByText('Expansão adiabática')).toBeInTheDocument();
+      expect(screen.queryByText('Relações úteis')).not.toBeInTheDocument();
+
+      await user.click(within(faces).getByRole('tab', { name: 'Relações' }));
+      expect(screen.getByText('Relações úteis')).toBeInTheDocument();
+      expect(screen.queryByText('Expansão adiabática')).not.toBeInTheDocument();
+    } finally {
+      restaurar();
+    }
+  });
+});

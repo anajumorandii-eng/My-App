@@ -1503,3 +1503,38 @@
   .vs-domain { grid-template-columns: minmax(0, 1fr); }
   .vs-domain-legend ul { grid-template-columns: 1fr; }
 }
+
+/* Alternador de faces da prancha, só no celular. No desktop as duas faces
+   aparecem juntas e o alternador nem é renderizado. */
+.vs-faces {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  margin: 0 0 14px;
+}
+.vs-faces button {
+  padding: 9px 12px;
+  border: 1px solid var(--vs-line);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--vs-dim);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.vs-faces button[aria-selected="true"] {
+  border-color: var(--vs-burgundy);
+  background: var(--vs-burgundy);
+  color: var(--vs-paper-strong);
+}
+
+/* No celular o cabeçalho da prancha empilha. Em duas colunas, o título — que
+   escala até 6vw — passava por baixo do balão da condição, e o "Q = 0" ficava
+   por cima da palavra. A captura mostrou; a medição de moldura, não. */
+@media (max-width: 700px) {
+  .vs-board-head { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .vs-board-head h2 { font-size: clamp(2rem, 9vw, 2.8rem); }
+  /* Em coluna, `flex: 0 0 112px` passa a reger a altura e o balão encolhe na
+     largura até apertar o rótulo. Aqui a medida volta a ser explícita. */
+  .vs-q-callout { align-self: flex-start; flex: 0 0 auto; width: 118px; min-height: 84px; }
+}

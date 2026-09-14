@@ -469,6 +469,18 @@ export default function Visual() {
             </section>
           )}
 
+          {/* Quantas conexões o diagnóstico escondeu. Vivia dentro da prancha
+              adiabática — a única das 26 que não usava o BoardShell —, então
+              valia para um capítulo só. Aqui vale para todos, e a frase sobre
+              "responder sem consultar" saiu porque o MODE_HINT acima já a diz. */}
+          {mode === 'reconstruir' && hiddenEdgeIds.length > 0 && (
+            <p className="vs-active-mode-note" role="status">
+              {hiddenEdgeIds.length === 1
+                ? '1 conexão frágil priorizada para reconstrução.'
+                : `${hiddenEdgeIds.length} conexões frágeis priorizadas para reconstrução.`}
+            </p>
+          )}
+
           {mode === 'testar' && (
             <section className="rounded-2xl border-2 border-indigo-200 bg-white p-5 dark:border-indigo-900 dark:bg-zinc-900">
               <h2 className="font-bold">Recuperação sem consulta</h2>
