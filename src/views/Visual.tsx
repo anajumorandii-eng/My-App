@@ -69,6 +69,83 @@ function StateBadge({ state }: { state: NodeState }) {
 }
 
 
+/**
+ * Cilindro isolado com pistão móvel, desenhado aqui em vez de vir de um arquivo.
+ *
+ * Antes era <img src="/visual/adiabatic-piston.webp">. O arquivo existia e
+ * respondia 200, mas todos os seus pixels eram rgba(0,0,0,0): a prancha
+ * reservava 360x360 e não desenhava nada. Um raster também não serviria ao que
+ * a tela precisa — não acompanha o tema, não reage ao nó selecionado e não
+ * anima. Em SVG o pistão sobe na expansão e desce na compressão, e as cores
+ * saem das mesmas variáveis do resto da folha.
+ *
+ * As hachuras na parede são o isolamento térmico: é o que justifica Q = 0, e
+ * sem elas o desenho seria um cilindro qualquer.
+ */
+function AdiabaticPiston({ emphasis }: { emphasis: 'expansao' | 'compressao' | 'nenhum' }) {
+  // Curso do pistão dentro do cilindro (interno: y 70..290). Expansão sobe
+  // porque o gás ganha volume; compressão desce. O repouso fica no meio para
+  // que os dois sentidos tenham a mesma amplitude visível.
+  const topoGas = emphasis === 'expansao' ? 110 : emphasis === 'compressao' ? 200 : 150;
+  const alturaGas = 290 - topoGas;
+
+  return (
+    <svg
+      className="vs-piston"
+      viewBox="0 0 320 330"
+      role="img"
+      data-emphasis={emphasis}
+      aria-label="Cilindro termicamente isolado: o gás ocupa a parte de baixo e o pistão desliza no topo, sem troca de calor com o meio"
+    >
+      <g className="vs-piston-wall">
+        {/* Parede dupla: a faixa entre as duas linhas recebe as hachuras. */}
+        <path d="M70 70 L70 290 L250 290 L250 70" />
+        <path d="M52 70 L52 308 L268 308 L268 70" />
+      </g>
+
+      <g className="vs-piston-hatch" aria-hidden="true">
+        {Array.from({ length: 12 }, (_, i) => (
+          <path key={`e${i}`} d={`M52 ${78 + i * 18} L70 ${88 + i * 18}`} />
+        ))}
+        {Array.from({ length: 12 }, (_, i) => (
+          <path key={`d${i}`} d={`M268 ${78 + i * 18} L250 ${88 + i * 18}`} />
+        ))}
+        {Array.from({ length: 11 }, (_, i) => (
+          <path key={`b${i}`} d={`M${58 + i * 18} 290 L${72 + i * 18} 308`} />
+        ))}
+      </g>
+
+      {/* O gás começa logo abaixo do pistão e vai até o fundo do cilindro. */}
+      <rect className="vs-piston-gas" x="70" y={topoGas} width="180" height={alturaGas} />
+
+      <g className="vs-piston-molecules" aria-hidden="true">
+        {[
+          [104, 0.62], [148, 0.28], [196, 0.7], [226, 0.42],
+          [118, 0.86], [172, 0.52], [212, 0.9], [88, 0.34],
+        ].map(([x, f], i) => (
+          <circle key={i} cx={x} cy={topoGas + alturaGas * f} r="4.5" />
+        ))}
+      </g>
+
+      {/* Um só translate move placa, haste e punho: eles são peça única, e
+          animar cada um daria descolamento no meio da transição. */}
+      <g className="vs-piston-head" style={{ transform: `translateY(${topoGas - 150}px)` }}>
+        <rect className="vs-piston-plate" x="66" y="134" width="188" height="16" rx="3" />
+        <rect className="vs-piston-rod" x="150" y="76" width="20" height="60" rx="4" />
+        <rect className="vs-piston-cap" x="128" y="62" width="64" height="14" rx="5" />
+      </g>
+
+      {/* Q = 0 não é legenda solta: é a fronteira que as hachuras representam.
+          Fica acima da parede, onde nenhum cartão vizinho o alcança. */}
+      <g className="vs-piston-seal">
+        <circle cx="288" cy="40" r="18" />
+        <text x="288" y="45" textAnchor="middle">Q</text>
+        <path className="vs-piston-slash" d="M276 28 L300 52" />
+      </g>
+    </svg>
+  );
+}
+
 function supportsIllustratedBoard(summary: InteractiveSummary): boolean {
   const title = [summary.subject, summary.topic, summary.title].join(' ').toLowerCase();
   return summary.subject === 'Física' && title.includes('transformações particulares');
@@ -88,6 +165,10 @@ function VisualBoard({
   const rightNode = map.nodes[2] ?? map.nodes[map.nodes.length - 1];
   const leftState = leftNode ? states[leftNode.id] ?? 'nao-avaliado' : 'nao-avaliado';
   const rightState = rightNode ? states[rightNode.id] ?? 'nao-avaliado' : 'nao-avaliado';
+  const pistonEmphasis: 'expansao' | 'compressao' | 'nenhum' =
+    selectedId && selectedId === leftNode?.id ? 'expansao'
+    : selectedId && selectedId === rightNode?.id ? 'compressao'
+    : 'nenhum';
 
   return (
     <section className="vs-study-board" data-testid="visual-study-board" aria-label="Prancha ilustrada de transformação adiabática">
@@ -119,8 +200,8 @@ function VisualBoard({
           <span className="vs-state-line"><span className="vs-swatch" />{NODE_STATE_LABEL[leftState]}</span>
         </button>
 
-        <div className="vs-piston-wrap">
-          <img src="/visual/adiabatic-piston.webp" alt="Cilindro termicamente isolado com gás e pistão móvel" />
+        <div className="vs-piston-wrap" data-emphasis={pistonEmphasis}>
+          <AdiabaticPiston emphasis={pistonEmphasis} />
           <div className="vs-force-note vs-force-note--up">expansão ↑</div>
           <div className="vs-force-note vs-force-note--down">↓ compressão</div>
         </div>
@@ -191,7 +272,13 @@ function VisualBoard({
       )}
 
       <footer className="vs-landscape">
-        <img src="/visual/knowledge-landscape.webp" alt="" aria-hidden="true" />
+        {/* Mesma história do pistão: o .webp daqui também era transparente por
+            inteiro, então o rodapé aparecia sem o horizonte que o degradê
+            pressupõe. Decorativo, por isso fica fora da árvore de acessibilidade. */}
+        <svg className="vs-landscape-art" viewBox="0 0 640 170" aria-hidden="true" preserveAspectRatio="none">
+          <path className="vs-hill vs-hill--far" d="M0 118 C 96 78, 168 96, 244 110 S 400 74, 486 92 S 592 116, 640 104 L640 170 L0 170 Z" />
+          <path className="vs-hill vs-hill--near" d="M0 140 C 108 116, 190 132, 268 138 S 428 112, 520 128 S 604 144, 640 138 L640 170 L0 170 Z" />
+        </svg>
         <p><strong>Ideia central:</strong> sem calor atravessando a fronteira, trabalho e energia interna explicam a mudança do estado do gás.</p>
       </footer>
     </section>

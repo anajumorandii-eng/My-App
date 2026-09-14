@@ -258,16 +258,76 @@
   display: grid;
   place-items: center;
 }
-.vs-piston-wrap img {
+.vs-piston {
   display: block;
   width: min(100%, 360px);
   aspect-ratio: 1;
-  object-fit: contain;
-  filter: saturate(.94) contrast(.98);
+  overflow: visible;
 }
-.dark .vs-piston-wrap img {
-  filter: saturate(.82) brightness(.88) contrast(1.04);
-  mix-blend-mode: screen;
+
+.vs-piston-wall path,
+.vs-piston-hatch path {
+  fill: none;
+  stroke: var(--vs-ink);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.vs-piston-wall path { stroke-width: 3; }
+.vs-piston-hatch path { stroke-width: 1.6; opacity: .5; }
+
+.vs-piston-gas {
+  fill: color-mix(in srgb, var(--vs-blue) 26%, transparent);
+  /* A altura do gás é o complemento do curso do pistão: animar os dois com a
+     mesma duração evita o gás "descolar" da placa no meio da transição. */
+  transition: y .5s cubic-bezier(.4, 0, .2, 1), height .5s cubic-bezier(.4, 0, .2, 1);
+}
+
+.vs-piston-molecules circle {
+  fill: var(--vs-blue);
+  opacity: .8;
+  transition: cy .5s cubic-bezier(.4, 0, .2, 1);
+}
+
+.vs-piston-head {
+  transition: transform .5s cubic-bezier(.4, 0, .2, 1);
+}
+.vs-piston-plate { fill: var(--vs-burgundy); }
+.vs-piston-rod,
+.vs-piston-cap { fill: color-mix(in srgb, var(--vs-ink) 72%, transparent); }
+
+.vs-piston-seal circle {
+  fill: var(--vs-paper-strong);
+  stroke: var(--vs-dim);
+  stroke-width: 2;
+}
+.vs-piston-seal text {
+  fill: var(--vs-dim);
+  font: 700 .82rem/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+.vs-piston-slash {
+  stroke: var(--vs-burgundy);
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+
+/* O lado citado pelo nó selecionado ganha peso; o outro recua. Sem isso os dois
+   cartões apontariam para o mesmo desenho inerte. O seletor parte do wrapper
+   porque as legendas de força são irmãs do SVG, não filhas dele. */
+.vs-piston-wrap[data-emphasis='expansao'] .vs-force-note--up,
+.vs-piston-wrap[data-emphasis='compressao'] .vs-force-note--down {
+  opacity: 1;
+  font-weight: 800;
+}
+.vs-piston-wrap[data-emphasis='expansao'] .vs-force-note--down,
+.vs-piston-wrap[data-emphasis='compressao'] .vs-force-note--up { opacity: .34; }
+
+.vs-piston[data-emphasis='expansao'] .vs-piston-gas { fill: color-mix(in srgb, var(--vs-blue) 16%, transparent); }
+.vs-piston[data-emphasis='compressao'] .vs-piston-gas { fill: color-mix(in srgb, var(--vs-blue) 40%, transparent); }
+
+@media (prefers-reduced-motion: reduce) {
+  .vs-piston-gas,
+  .vs-piston-molecules circle,
+  .vs-piston-head { transition: none; }
 }
 .vs-force-note {
   position: absolute;
@@ -277,9 +337,17 @@
   letter-spacing: .07em;
   color: var(--vs-blue);
   text-transform: uppercase;
+  opacity: .72;
+  transition: opacity .3s ease;
 }
-.vs-force-note--up { top: 9px; }
-.vs-force-note--down { bottom: 7px; }
+@media (prefers-reduced-motion: reduce) {
+  .vs-force-note { transition: none; }
+}
+/* Alinhadas ao cartão que cada uma descreve — expansão à esquerda, compressão à
+   direita — em vez de centralizadas: no centro elas caíam sobre a haste do
+   pistão, que é justamente a peça que se move. */
+.vs-force-note--up { top: 6px; left: 26%; }
+.vs-force-note--down { bottom: 6px; left: 74%; }
 
 .vs-equation-strip {
   margin: 20px 0;
@@ -396,16 +464,19 @@
   justify-content: center;
   overflow: hidden;
 }
-.vs-landscape img {
+.vs-landscape-art {
   position: absolute;
   inset: auto 0 0 0;
   width: 100%;
   height: 128px;
-  object-fit: cover;
-  object-position: center bottom;
   opacity: .72;
 }
-.dark .vs-landscape img { opacity: .3; filter: brightness(.75) saturate(.7); }
+.dark .vs-landscape-art { opacity: .34; }
+.vs-hill { stroke: none; }
+.vs-hill--far { fill: color-mix(in srgb, var(--vs-forest) 22%, transparent); }
+.vs-hill--near { fill: color-mix(in srgb, var(--vs-forest) 38%, transparent); }
+.dark .vs-hill--far { fill: color-mix(in srgb, var(--vs-mint) 30%, transparent); }
+.dark .vs-hill--near { fill: color-mix(in srgb, var(--vs-mint) 46%, transparent); }
 .vs-landscape::after {
   content: "";
   position: absolute;
@@ -668,7 +739,7 @@
     order: -1;
     min-height: 235px;
   }
-  .vs-piston-wrap img { width: min(100%, 300px); }
+  .vs-piston { width: min(100%, 300px); }
   .vs-equation-strip {
     grid-template-columns: 1fr 1fr;
     gap: 7px 10px;
@@ -684,7 +755,7 @@
     min-height: 120px;
     margin: 10px -16px -18px;
   }
-  .vs-landscape img { height: 112px; }
+  .vs-landscape-art { height: 112px; }
   .vs-landscape p { width: calc(100% - 24px); margin-bottom: 10px; font-size: .7rem; }
   .vs-inspector-shell {
     bottom: calc(76px + env(safe-area-inset-bottom));
