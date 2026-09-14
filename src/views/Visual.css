@@ -889,3 +889,100 @@
 @media (prefers-reduced-motion: reduce) {
   .vs-wave, .vs-radius, .vs-point, .vs-proj, .vs-organelle, .vs-sun { transition: none; }
 }
+
+/* ---------- segunda leva de cenas ---------- */
+
+/* Ciclo do carbono: reservatórios como caixas, fluxos como curvas orientadas.
+   A seta fóssil usa a cor de alerta porque ela é a assimetria do ciclo, não
+   mais um fluxo entre iguais. */
+.vs-reservoir rect {
+  fill: color-mix(in srgb, var(--vs-blue) 16%, transparent);
+  stroke: var(--vs-blue);
+  stroke-width: 2.2;
+}
+.vs-reservoir--bio rect { fill: color-mix(in srgb, var(--vs-green) 20%, transparent); stroke: var(--vs-green); }
+.vs-reservoir--fossil rect { fill: color-mix(in srgb, var(--vs-dim) 16%, transparent); stroke: var(--vs-dim); }
+.vs-reservoir--fossil[data-active='true'] rect { stroke: var(--vs-burgundy); stroke-width: 3; }
+.vs-res-name { font: 700 .72rem/1 "Newsreader", Georgia, serif; }
+.vs-res-value { fill: var(--vs-dim); font: 600 .6rem/1 ui-monospace, monospace; }
+
+.vs-flow path { fill: none; stroke-width: 2.2; stroke-linecap: round; }
+.vs-flow .vs-arrow { stroke: none; }
+.vs-flow--natural path { stroke: var(--vs-green); }
+.vs-flow--natural .vs-arrow { fill: var(--vs-green); }
+.vs-flow--fossil path { stroke: var(--vs-dim); stroke-dasharray: 6 4; }
+.vs-flow--fossil .vs-arrow { fill: var(--vs-dim); }
+.vs-flow--fossil[data-active='true'] path { stroke: var(--vs-burgundy); stroke-dasharray: none; }
+.vs-flow--fossil[data-active='true'] .vs-arrow { fill: var(--vs-burgundy); }
+.vs-flow text { font: 600 .62rem/1 ui-monospace, monospace; fill: var(--vs-dim); }
+.vs-flow, .vs-reservoir { transition: opacity .3s ease; }
+
+/* Membrana: bicamada com cabeças e caudas, e as duas setas de transporte. */
+.vs-bilayer { fill: color-mix(in srgb, var(--vs-amber) 12%, transparent); }
+.vs-phospho circle { fill: var(--vs-amber); }
+.vs-phospho line { stroke: var(--vs-amber); stroke-width: 1.8; opacity: .8; }
+.vs-gradient-dots circle { fill: var(--vs-blue); opacity: .78; }
+.vs-conc-label { fill: var(--vs-dim); font: 700 1rem/1 ui-monospace, monospace; }
+.vs-transport path { fill: none; stroke-width: 2.6; stroke-linecap: round; }
+.vs-transport .vs-arrow { stroke: none; }
+.vs-transport text { font: 700 .64rem/1 ui-monospace, monospace; }
+.vs-transport--passive path { stroke: var(--vs-green); }
+.vs-transport--passive .vs-arrow { fill: var(--vs-green); }
+.vs-transport--passive text { fill: var(--vs-green); }
+.vs-transport--active path { stroke: var(--vs-burgundy); }
+.vs-transport--active .vs-arrow { fill: var(--vs-burgundy); }
+.vs-transport--active text { fill: var(--vs-burgundy); }
+.dark .vs-transport--active path { stroke: #d88598; }
+.dark .vs-transport--active .vs-arrow { fill: #d88598; }
+.dark .vs-transport--active text { fill: #d88598; }
+.vs-pump { fill: color-mix(in srgb, var(--vs-burgundy) 22%, transparent); stroke: var(--vs-burgundy); stroke-width: 2; }
+.vs-atp { fill: var(--vs-amber); font: 700 .66rem/1 ui-monospace, monospace; }
+.vs-transport[data-dim='true'] { opacity: .32; }
+.vs-transport { transition: opacity .3s ease; }
+
+/* Leis ponderais: balança e caixas de mol. */
+.vs-scale line, .vs-scale path { stroke: var(--vs-ink); stroke-width: 2.4; fill: none; stroke-linecap: round; }
+.vs-scale .vs-pan, .vs-scale .vs-base { fill: color-mix(in srgb, var(--vs-ink) 12%, transparent); }
+.vs-pan-label { fill: var(--vs-dim); font: 700 .62rem/1 ui-monospace, monospace; letter-spacing: .06em; }
+.vs-mol { stroke-width: 1.6; }
+.vs-mol--h { fill: color-mix(in srgb, var(--vs-blue) 46%, transparent); stroke: var(--vs-blue); }
+.vs-mol--o { fill: color-mix(in srgb, var(--vs-burgundy) 40%, transparent); stroke: var(--vs-burgundy); }
+.vs-mol--w { fill: color-mix(in srgb, var(--vs-green) 40%, transparent); stroke: var(--vs-green); }
+.vs-mol-label { fill: var(--vs-dim); font: 700 .6rem/1 ui-monospace, monospace; }
+.vs-excess rect { fill: color-mix(in srgb, var(--vs-amber) 24%, transparent); stroke: var(--vs-amber); stroke-width: 1.8; }
+.vs-excess text { fill: var(--vs-amber); font: 700 .6rem/1 ui-monospace, monospace; }
+.vs-equation-inline { fill: var(--vs-ink); font: 700 .78rem/1 ui-monospace, monospace; }
+
+/* Modelos atômicos: núcleo, camadas e os dois experimentos. */
+.vs-nucleus { fill: color-mix(in srgb, var(--vs-burgundy) 70%, transparent); stroke: var(--vs-burgundy); stroke-width: 2; }
+.vs-nucleus-label { fill: var(--vs-paper-strong); font: 700 .86rem/1 ui-monospace, monospace; }
+.vs-shell { fill: none; stroke: var(--vs-dim); stroke-width: 1.4; stroke-dasharray: 3 5; opacity: .7; }
+.vs-shell--quantized { stroke-dasharray: none; stroke-width: 1.8; opacity: .9; }
+.vs-electron { fill: var(--vs-blue); }
+.vs-electron--ghost { fill: none; stroke: var(--vs-blue); stroke-width: 1.8; stroke-dasharray: 3 3; }
+.vs-jump { fill: none; stroke: var(--vs-blue); stroke-width: 2.2; }
+.vs-bohr .vs-arrow { fill: var(--vs-blue); }
+.vs-level { fill: var(--vs-dim); font: 700 .6rem/1 ui-monospace, monospace; }
+.vs-photon { fill: none; stroke: var(--vs-amber); stroke-width: 2.2; }
+.vs-photon-label { fill: var(--vs-amber); font: 700 .66rem/1 ui-monospace, monospace; }
+.vs-alpha { fill: none; stroke: var(--vs-green); stroke-width: 2; }
+.vs-alpha--deflected { stroke: var(--vs-amber); }
+.vs-rutherford .vs-arrow { fill: var(--vs-green); }
+.vs-alpha-label { fill: var(--vs-green); font: 700 .7rem/1 ui-monospace, monospace; }
+
+/* Linear × exponencial. */
+.vs-curve { fill: none; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+.vs-curve--linear { stroke: var(--vs-blue); }
+.vs-curve--expo { stroke: var(--vs-burgundy); }
+.dark .vs-curve--expo { stroke: #d88598; }
+.vs-curve.is-recessed { opacity: .38; }
+.vs-curve.is-emphasized { stroke-width: 4; }
+.vs-step text { font: 700 .62rem/1 ui-monospace, monospace; }
+.vs-step--linear text { fill: var(--vs-blue); }
+.vs-step--expo text { fill: var(--vs-burgundy); }
+.dark .vs-step--expo text { fill: #d88598; }
+.vs-step[data-dim='true'] { opacity: .35; }
+.vs-step { transition: opacity .3s ease; }
+.vs-crossing { fill: var(--vs-amber); }
+.vs-crossing-label { fill: var(--vs-amber); font: 700 .6rem/1 ui-monospace, monospace; }
+.vs-axis-label { fill: var(--vs-dim); font: 700 .68rem/1 "Newsreader", Georgia, serif; }

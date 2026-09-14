@@ -6,6 +6,11 @@ import WaveBoard from './WaveBoard';
 import LensBoard from './LensBoard';
 import PhotosynthesisBoard from './PhotosynthesisBoard';
 import TrigCircleBoard from './TrigCircleBoard';
+import CarbonCycleBoard from './CarbonCycleBoard';
+import MembraneBoard from './MembraneBoard';
+import StoichiometryBoard from './StoichiometryBoard';
+import AtomModelsBoard from './AtomModelsBoard';
+import ExponentialBoard from './ExponentialBoard';
 
 /**
  * Quais capítulos têm prancha ilustrada, e qual.
@@ -65,6 +70,36 @@ export const BOARDS: BoardEntry[] = [
     subject: 'Matemática',
     keywords: ['trigonometria'],
     Component: TrigCircleBoard,
+  },
+  {
+    id: 'ciclo-carbono',
+    subject: 'Biologia',
+    keywords: ['ciclo do carbono'],
+    Component: CarbonCycleBoard,
+  },
+  {
+    id: 'membrana',
+    subject: 'Biologia',
+    keywords: ['membranas celulares'],
+    Component: MembraneBoard,
+  },
+  {
+    id: 'leis-ponderais',
+    subject: 'Química',
+    keywords: ['leis ponderais'],
+    Component: StoichiometryBoard,
+  },
+  {
+    id: 'modelos-atomicos',
+    subject: 'Química',
+    keywords: ['modelos atômicos'],
+    Component: AtomModelsBoard,
+  },
+  {
+    id: 'exponencial',
+    subject: 'Matemática',
+    keywords: ['modelo exponencial'],
+    Component: ExponentialBoard,
   },
 ];
 
