@@ -2,6 +2,7 @@ import React from 'react';
 import BoardShell from './BoardShell';
 import { boardPair } from './pair';
 import type { BoardProps } from './types';
+import { SceneNote } from './SceneNote';
 
 /**
  * Pirâmide de energia com os 10% que passam e os 90% que se perdem.
@@ -57,6 +58,9 @@ function TrophicScene({ emphasis }: { emphasis: 'esquerda' | 'direita' | 'nenhum
         })}
         <path className="vs-light-ray" d="M50 56 L82 214" />
       </g>
+
+      {/* A perda entre níveis é o que a corrente de setas esconde. */}
+      <SceneNote text="10% passa" at={[101, 151]} to={[8, 148]} align="start" />
 
       <text className="vs-scene-caption" x="160" y="286" textAnchor="middle">×10% a cada nível · o resto vira calor</text>
       <text className="vs-scene-caption" x="160" y="306" textAnchor="middle">a matéria cicla · a energia não</text>

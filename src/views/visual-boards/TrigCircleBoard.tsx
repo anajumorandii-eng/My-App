@@ -2,6 +2,7 @@ import React from 'react';
 import BoardShell from './BoardShell';
 import { boardPair } from './pair';
 import type { BoardProps } from './types';
+import { SceneNote } from './SceneNote';
 
 /**
  * Círculo trigonométrico com o ponto no arco e as duas projeções.
@@ -42,6 +43,10 @@ function TrigScene({ emphasis }: { emphasis: 'esquerda' | 'direita' | 'nenhum' }
       <text className="vs-proj-label vs-proj-label--sin" x={cx - 12} y={py + 4} textAnchor="end">sen</text>
       <text className="vs-proj-label vs-proj-label--cos" x={(cx + px) / 2} y={cy + 20} textAnchor="middle">cos</text>
       <text className="vs-radius-label" x={(cx + px) / 2 - 16} y={(cy + py) / 2 - 6}>1</text>
+
+      {/* Seno e cosseno não são fórmulas a decorar: são as duas projeções do
+          mesmo ponto, e o raio 1 é o que faz a relação fundamental cair de Pitágoras. */}
+      <SceneNote text="sen é a altura" at={[px, py]} to={[36, 58]} align="start" />
 
       <text className="vs-scene-caption" x="160" y="306" textAnchor="middle">sen²θ + cos²θ = 1</text>
     </svg>

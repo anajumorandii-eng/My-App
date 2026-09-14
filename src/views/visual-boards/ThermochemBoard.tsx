@@ -2,6 +2,7 @@ import React from 'react';
 import BoardShell from './BoardShell';
 import { boardPair } from './pair';
 import type { BoardProps } from './types';
+import { SceneNote } from './SceneNote';
 
 /**
  * Diagrama de entalpia como degrau entre reagentes e produtos.
@@ -51,6 +52,10 @@ function EnthalpyScene({ emphasis }: { emphasis: 'esquerda' | 'direita' | 'nenhu
         <line x1="120" y1={yReag} x2="120" y2={yPico} strokeDasharray="3 4" />
         <text x="104" y={(yReag + yPico) / 2} textAnchor="end">Ea</text>
       </g>
+
+      {/* A pegadinha do tema: a barreira existe nos dois casos e não tem
+          relação com o sinal de ΔH — reação exotérmica também precisa dela. */}
+      <SceneNote text="Ea existe nos dois" at={[173, yPico + 4]} to={[266, 80]} align="end" />
 
       <text className="vs-scene-caption" x="172" y="312" textAnchor="middle">
         {endo ? 'o sistema absorve · a vizinhança esfria' : 'o sistema libera · a vizinhança esquenta'}

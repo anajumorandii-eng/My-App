@@ -2,6 +2,7 @@ import React from 'react';
 import BoardShell from './BoardShell';
 import { boardPair } from './pair';
 import type { BoardProps } from './types';
+import { SceneNote } from './SceneNote';
 import { imagemDeLenteConvergente } from '../../lib/opticalImage';
 
 /**
@@ -70,6 +71,10 @@ function LensScene({ emphasis }: { emphasis: 'esquerda' | 'direita' | 'nenhum' }
           ? `M${imgX} ${imgY + 9} l-5 -10 h10 z`
           : `M${imgX} ${imgY - 9} l-5 10 h10 z`} />
       </g>
+
+      {/* Onde os raios se cruzam é onde a imagem existe — é o passo que some
+          quando o traçado é decorado em vez de entendido. */}
+      <SceneNote text="os raios se cruzam aqui" at={[imgX, imgY]} to={[160, 276]} align="middle" />
 
       <text className="vs-scene-caption" x="160" y="312" textAnchor="middle">
         {alem ? 'imagem real e invertida' : 'imagem virtual e direita'}

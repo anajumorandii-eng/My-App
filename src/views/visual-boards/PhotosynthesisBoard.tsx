@@ -2,6 +2,7 @@ import React from 'react';
 import BoardShell from './BoardShell';
 import { boardPair } from './pair';
 import type { BoardProps } from './types';
+import { SceneNote } from './SceneNote';
 
 /**
  * Cloroplasto e mitocôndria lado a lado, com as setas de entrada e saída.
@@ -57,6 +58,10 @@ function LeafScene({ emphasis }: { emphasis: 'esquerda' | 'direita' | 'nenhum' }
         <text className="vs-gas vs-gas--in" x="231" y="228" textAnchor="middle">O₂ entra</text>
         <text className="vs-gas vs-gas--out" x="231" y="250" textAnchor="middle">CO₂ + H₂O saem</text>
       </g>
+
+      {/* A assimetria da prancha: luz só entra de um lado. */}
+      <SceneNote text="luz só entra aqui" at={[74, 92]} to={[152, 44]} align="start" />
+      <SceneNote text="respira o tempo todo" at={[231, 122]} to={[300, 208]} align="end" />
 
       <text className="vs-scene-caption" x="160" y="292" textAnchor="middle">respira sempre · fotossintetiza com luz</text>
     </svg>

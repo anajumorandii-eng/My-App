@@ -204,7 +204,8 @@ Alvo: **Biologia, Física, Química e Matemática** — 288 dos 613 capítulos d
 não a mesma). As demais matérias ficam de fora por decisão da Ana Júlia, e a
 razão é boa: "Uso da Crase" não tem fenômeno a desenhar.
 
-Estado: 26 pranchas cobrindo 38 dos 288 capítulos. **Todas usam o `BoardShell`** —
+Estado: 26 pranchas cobrindo 38 dos 288 capítulos, 14 delas com anotação
+manuscrita. **Todas usam o `BoardShell`** —
 a `AdiabaticBoard` era a última que não usava, escrita antes da casca existir, e
 por isso não recebia nenhuma melhoria feita nela.
 
@@ -262,6 +263,17 @@ pela Ana Júlia não rotula eixo, rotula **achado**.
   curva cruza de fato.
 - **O clamp mora no `SceneNote`**, não em cada cena: o texto cresce para os dois
   lados da âncora e vaza do viewBox em legenda comprida.
+- **Nem toda cena precisa de anotação.** `QuadraticBoard`, `ExponentialBoard`,
+  `LogarithmBoard`, `CircuitBoard`, `KinematicsBoard` e `MendelBoard` já rotulam
+  vértice, raízes, Δ, o cruzamento, a área sob a curva e as classes do quadro de
+  Punnett. Anotar o que a cena já diz é ruído, pela mesma régua dos comentários
+  de código. A anotação rende onde há **processo** — pistão, curva de
+  aquecimento, pirâmide, onda, lente, membrana —, não onde há tabela já legendada.
+- **`npx tsx scripts/conferir-anotacoes.mts` confere todas de uma vez.** Ele
+  descobre sozinho qual capítulo abre cada prancha, e compara a caixa de cada
+  anotação com a dos vizinhos da cena — texto, retângulo, círculo, polilinha —
+  além da moldura. Foi ele que achou a colisão da pirâmide trófica com o nível
+  de baixo, que eu tinha posicionado por estimativa errada da largura.
 - **Lado vazio, não lado bonito.** Quando a parábola não cruza o eixo, ela está
   inteira de um lado dele, e o outro é o único pedaço do quadro garantidamente
   livre. Foi assim que o rótulo parou de cair em cima do braço da curva.

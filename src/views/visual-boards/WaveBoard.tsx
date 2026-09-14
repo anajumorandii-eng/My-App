@@ -2,6 +2,7 @@ import React from 'react';
 import BoardShell from './BoardShell';
 import { boardPair } from './pair';
 import type { BoardProps } from './types';
+import { SceneNote } from './SceneNote';
 
 /**
  * Onda senoidal com comprimento e amplitude medidos no próprio traço.
@@ -53,6 +54,9 @@ function WaveScene({ emphasis }: { emphasis: 'esquerda' | 'direita' | 'nenhum' }
         <line className="vs-tick" x1="278" y1={y0 - amp * 0.94} x2="294" y2={y0 - amp * 0.94} />
         <text x="302" y={y0 - amp * 0.4} textAnchor="middle">A</text>
       </g>
+
+      {/* O erro do tema: medir a amplitude de crista a vale, que dá o dobro. */}
+      <SceneNote text="não é crista a vale" at={[286, y0 - amp * 0.47]} to={[150, 268]} align="middle" />
 
       <text className="vs-scene-caption" x="160" y="300" textAnchor="middle">v = λ · f</text>
     </svg>

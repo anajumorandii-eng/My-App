@@ -2,6 +2,7 @@ import React from 'react';
 import BoardShell from './BoardShell';
 import { boardPair } from './pair';
 import type { BoardProps } from './types';
+import { SceneNote } from './SceneNote';
 
 /**
  * Bicamada lipídica com as duas formas de atravessá-la.
@@ -54,6 +55,10 @@ function MembraneScene({ emphasis }: { emphasis: 'esquerda' | 'direita' | 'nenhu
         <path className="vs-arrow" d="M86 210 l-6 -11 l12 0 z" />
         <text x="86" y="82" textAnchor="middle">passivo</text>
       </g>
+
+      {/* O que os rótulos "passivo" e "ativo" não dizem: o sentido em relação
+          ao gradiente é o que decide se custa energia. */}
+      <SceneNote text="a favor do gradiente" at={[86, 200]} to={[140, 232]} align="start" />
 
       {/* Ativo: sobe contra o gradiente, e a proteína carrega ATP. */}
       <g className="vs-transport vs-transport--active" data-active={ativo ? 'true' : undefined}>

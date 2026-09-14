@@ -2,6 +2,7 @@ import React from 'react';
 import BoardShell from './BoardShell';
 import { boardPair } from './pair';
 import type { BoardProps } from './types';
+import { SceneNote } from './SceneNote';
 
 /**
  * Termos de uma sequência com o passo entre eles marcado.
@@ -53,6 +54,12 @@ function SequenceScene({ emphasis }: { emphasis: 'esquerda' | 'direita' | 'nenhu
           </g>
         );
       })}
+
+      {/* Na PG a altura explode; na PA sobe em degraus iguais. É a diferença
+          que a fórmula sozinha não mostra. */}
+      {geometrica
+        ? <SceneNote text="dobra a cada termo" at={[269, 216 - alturaDe(termos[4])]} to={[254, 92]} align="end" />
+        : <SceneNote text="degraus iguais" at={[147, 216 - alturaDe(termos[2])]} to={[268, 78]} align="end" />}
 
       <text className="vs-seq-tag" x="28" y="60">{geometrica ? 'PG · razão q = 2' : 'PA · razão r = 5'}</text>
       <text className="vs-scene-caption" x="160" y="300" textAnchor="middle">
