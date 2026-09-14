@@ -29,6 +29,14 @@ export const NODE_STATE_RANK: Record<NodeState, number> = {
   'possivel-regressao': 2,
 };
 
+// Nome de exibição do estágio pedagógico. Fica aqui, e não na tela, porque a
+// prancha manipulável também precisa dele — e importá-lo de Visual.tsx fecharia
+// um ciclo (Visual → registro de instrumentos → instrumento → Visual).
+export const STAGE_LABEL: Record<PedagogicalStage, string> = {
+  intuicao: 'Intuição', conceito: 'Conceito', aplicacao: 'Aplicação',
+  exercicio: 'Exercício', estrategia: 'Estratégia',
+};
+
 export const RELATION_LABEL: Record<RelationKind, string> = {
   'pre-requisito': 'é pré-requisito de',
   causa: 'leva a',

@@ -199,7 +199,11 @@ export const BOARDS: BoardEntry[] = [
   {
     id: 'calorimetria',
     subject: 'Física',
-    keywords: ['calor sensível'],
+    // 'calor sensível' deixava de fora "Calor, temperatura e mudanças de estado",
+    // capítulo de prioridade muito-alta que é exatamente esta curva: as rampas de
+    // calor sensível e os patamares de latente. Só 'calor' casa com os dois
+    // capítulos do fenômeno em Física, e com nenhum outro.
+    keywords: ['calor'],
     Component: CalorimetryBoard,
   },
   {

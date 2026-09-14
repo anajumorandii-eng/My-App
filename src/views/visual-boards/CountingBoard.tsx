@@ -2,6 +2,7 @@ import React from 'react';
 import BoardShell from './BoardShell';
 import { boardPair } from './pair';
 import type { BoardProps } from './types';
+import { SceneNote } from './SceneNote';
 
 /**
  * Árvore de possibilidades com os mesmos elementos contados de dois jeitos.
@@ -54,6 +55,11 @@ function CountingScene({ emphasis }: { emphasis: 'esquerda' | 'direita' | 'nenhu
           </g>
         );
       })}
+
+      {/* Sem a anotação, os riscos parecem correção; com ela, ficam sendo o que
+          são: a contagem das cópias que a ordem criou. */}
+      {combinacao && <SceneNote text="riscados: mesmo conjunto" at={[66, 165]} to={[150, 206]} align="middle" />}
+      {!combinacao && <SceneNote text="3 escolhas, depois 2" at={[160, 40]} to={[236, 24]} align="start" />}
 
       <text className="vs-count-total" x="160" y="222" textAnchor="middle">
         {combinacao ? '6 ÷ 2! = 3 combinações' : '3 × 2 = 6 arranjos'}

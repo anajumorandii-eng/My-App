@@ -2,6 +2,7 @@ import React from 'react';
 import BoardShell from './BoardShell';
 import { boardPair } from './pair';
 import type { BoardProps } from './types';
+import { SceneNote } from './SceneNote';
 
 /**
  * Transferência de elétron contra compartilhamento, com o par visível.
@@ -57,6 +58,10 @@ function BondScene({ emphasis }: { emphasis: 'esquerda' | 'direita' | 'nenhum' }
           <text className="vs-bond-note" x="160" y="200" textAnchor="middle">o elétron muda de dono</text>
         </>
       )}
+
+      {covalente
+        ? <SceneNote text="o par fica no meio" at={[160, 140]} to={[160, 68]} align="middle" />
+        : <SceneNote text="o elétron troca de dono" at={[170, 104]} to={[160, 40]} align="middle" />}
 
       {/* A consequência macroscópica, que é o que a prova pergunta. */}
       <g className="vs-bond-outcome">

@@ -9,10 +9,13 @@ import { CONFIDENCE_LABEL } from '../lib/confidence';
 import {
   buildVisualMap, chooseHiddenRelations, explainRelation, gradeReconstruction, minimalIntervention,
   nodeState, relationEvidence, relationState, NODE_STATE_LABEL, RELATION_LABEL,
+  STAGE_LABEL,
   type NodeState, type ReconstructionGrade, type VisualMap,
 } from '../lib/visualStudy';
 import type { InteractiveSummary, RetrievalAttempt } from '../types/summary';
 import { findBoard, supportsIllustratedBoard } from './visual-boards/registry';
+import { findInstrument } from './visual-instruments/registry';
+import { ConceptChain } from './ConceptChain';
 import './Visual.css';
 
 type Mode = 'explorar' | 'testar' | 'reconstruir';
@@ -23,11 +26,6 @@ const MODE_HINT: Record<Mode, string> = {
   testar: 'Recupere sem consultar. O que você escrever vira evidência.',
   reconstruir: 'Recomponha os elos que o diagnóstico escondeu.',
 };
-const STAGE_LABEL = {
-  intuicao: 'Intuição', conceito: 'Conceito', aplicacao: 'Aplicação',
-  exercicio: 'Exercício', estrategia: 'Estratégia',
-} as const;
-
 const NODE_H = 62;
 const NODE_GAP = 46;
 const PLATE_W = 380;
@@ -236,6 +234,7 @@ export default function Visual() {
   const [mode, setMode] = useState<Mode>('explorar');
   const [selectedNode, setSelectedNode] = useState<string | null>(null);
   const [disagreed, setDisagreed] = useState(false);
+  const [mostrarDominio, setMostrarDominio] = useState(false);
   const [draft, setDraft] = useState('');
   const [feedback, setFeedback] = useState<{ matched: string[]; missing: string | null } | null>(null);
   const [placements, setPlacements] = useState<Record<string, string>>({});
@@ -296,25 +295,14 @@ export default function Visual() {
 
 
   // A prancha vem do registro, não de um componente fixo: é o que permite
-  // ilustrar um capítulo novo sem tocar nesta tela.
-  const boardEntry = findBoard(summary);
-  if (!boardEntry) {
-    return (
-      <div className="crivo-visual">
-        <button onClick={() => setSearchParams({})} className="vs-back-button">
-          <ArrowLeft aria-hidden="true" />Voltar ao Visual
-        </button>
-        <section className="vs-unsupported" role="status">
-          <span>Prancha autoral necessária</span>
-          <h1>{summary.title}</h1>
-          <p>
-            Este capítulo ainda não possui uma prancha visual própria. O CRIVO não reutiliza uma ilustração de outro conteúdo
-            só para preencher a tela: quando não há representação fiel, a intervenção correta é aguardar a prancha específica.
-          </p>
-        </section>
-      </div>
-    );
-  }
+  // ilustrar um capítulo novo sem tocar nesta tela. Cena autoral primeiro;
+  // instrumento manipulável quando não há cena desenhada para o capítulo.
+  //
+  // Antes daqui saía um `return` que descartava a tela inteira quando não havia
+  // prancha — e não era só a ilustração que sumia: iam junto o mapa, os três
+  // modos e o diagnóstico, em 576 dos 613 capítulos. O aviso agora é uma peça
+  // dentro da tela, não a tela.
+  const Plate = (findBoard(summary) ?? findInstrument(summary))?.Component ?? null;
 
   const question = summary.retrieval[0] ?? null;
   // A relação de índice i é desenhada sobre a aresta de índice i. O vínculo é
@@ -387,6 +375,7 @@ export default function Visual() {
         )}
       </header>
 
+      <div className="vs-mode-row">
       <div role="tablist" aria-label="Modo de estudo" className="vs-modes">
         {(Object.keys(MODE_LABEL) as Mode[]).map((key) => (
           <button
@@ -402,7 +391,53 @@ export default function Visual() {
           </button>
         ))}
       </div>
+
+      {/* "Mostrar domínio": a leitura do capítulo inteiro de uma vez, em vez de
+          nó por nó pelo inspetor. Não é dado novo — é o mesmo `states` que já
+          colore cada cartão, reunido numa lista com a legenda ao lado. Sem a
+          legenda, a cor sozinha não diz o que significa para quem abriu a tela
+          pela primeira vez. */}
+      <button
+        type="button"
+        className="vs-domain-toggle"
+        aria-pressed={mostrarDominio}
+        onClick={() => setMostrarDominio((v) => !v)}
+      >
+        <span className="vs-domain-switch" aria-hidden="true" />
+        Mostrar domínio
+      </button>
+      </div>
       <p className="-mt-3 text-sm text-zinc-500">{MODE_HINT[mode]}</p>
+
+      {mostrarDominio && (
+        <section className="vs-domain" aria-label="Domínio de cada conceito do capítulo">
+          <ol>
+            {map.nodes.map((no) => {
+              const estado = states[no.id] ?? 'nao-avaliado';
+              return (
+                <li key={no.id} data-state={estado}>
+                  <span className="vs-swatch" aria-hidden="true" />
+                  <b>{no.label}</b>
+                  <span>{NODE_STATE_LABEL[estado]}</span>
+                </li>
+              );
+            })}
+          </ol>
+          <div className="vs-domain-legend">
+            <span className="vs-domain-legend-title">Legenda dos estados</span>
+            <ul>
+              {(Object.keys(NODE_STATE_LABEL) as NodeState[]).map((estado) => (
+                <li key={estado} data-state={estado}>
+                  <span className="vs-swatch" aria-hidden="true" />{NODE_STATE_LABEL[estado]}
+                </li>
+              ))}
+            </ul>
+            {/* A regressão fica fora da escada de propósito (NODE_STATE_RANK):
+                é alerta sobre um degrau perdido, não um degrau a mais. */}
+            <p>Possível regressão não é um degrau da escada: é aviso de que um degrau já alcançado deixou de aparecer na evidência.</p>
+          </div>
+        </section>
+      )}
 
       {intervention && (
         <section className="rounded-2xl border border-amber-300 bg-amber-50 p-5 dark:border-amber-900 dark:bg-amber-950/20">
@@ -422,7 +457,39 @@ export default function Visual() {
 
       <div className="vs-workspace">
         <main className="vs-main">
-          <boardEntry.Component map={map} states={states} selectedId={selectedNode} onSelect={setSelectedNode} hiddenEdgeIds={hiddenEdgeIds} mode={mode} />
+          {Plate ? (
+            <Plate map={map} states={states} selectedId={selectedNode} onSelect={setSelectedNode} hiddenEdgeIds={hiddenEdgeIds} mode={mode} />
+          ) : (
+            <section className="vs-unsupported" role="status">
+              <span>Prancha necessária</span>
+              <h2>{summary.title}</h2>
+              <p>
+                Este capítulo ainda não tem cena própria nem instrumento que o represente. O CRIVO não reutiliza a ilustração
+                de outro conteúdo só para preencher a tela. O mapa, os três modos e o diagnóstico abaixo continuam valendo.
+              </p>
+            </section>
+          )}
+
+          <ConceptChain
+            map={map}
+            states={states}
+            selectedId={selectedNode}
+            onSelect={setSelectedNode}
+            hiddenEdgeIds={hiddenEdgeIds}
+            escondendo={mode === 'reconstruir'}
+          />
+
+          {/* Quantas conexões o diagnóstico escondeu. Vivia dentro da prancha
+              adiabática — a única das 26 que não usava o BoardShell —, então
+              valia para um capítulo só. Aqui vale para todos, e a frase sobre
+              "responder sem consultar" saiu porque o MODE_HINT acima já a diz. */}
+          {mode === 'reconstruir' && hiddenEdgeIds.length > 0 && (
+            <p className="vs-active-mode-note" role="status">
+              {hiddenEdgeIds.length === 1
+                ? '1 conexão frágil priorizada para reconstrução.'
+                : `${hiddenEdgeIds.length} conexões frágeis priorizadas para reconstrução.`}
+            </p>
+          )}
 
           {mode === 'testar' && (
             <section className="rounded-2xl border-2 border-indigo-200 bg-white p-5 dark:border-indigo-900 dark:bg-zinc-900">

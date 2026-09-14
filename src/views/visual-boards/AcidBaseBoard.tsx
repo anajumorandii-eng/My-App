@@ -2,6 +2,7 @@ import React from 'react';
 import BoardShell from './BoardShell';
 import { boardPair } from './pair';
 import type { BoardProps } from './types';
+import { SceneNote } from './SceneNote';
 
 /**
  * Escala de pH com a natureza logarítmica marcada no próprio eixo.
@@ -53,6 +54,12 @@ function PhScene({ emphasis }: { emphasis: 'esquerda' | 'direita' | 'nenhum' }) 
 
       <text className="vs-ph-side" x={nX(1.2)} y={y + 6} textAnchor="middle">ácido</text>
       <text className="vs-ph-side" x={nX(12.8)} y={y + 6} textAnchor="middle">básico</text>
+
+      {/* O salto de duas unidades já está medido no eixo; a anotação diz o que
+          o desenho sozinho não diz — que a distância igual esconde 100×. */}
+      <SceneNote text="mesma distância, 100×" at={[nX(4), y + 62]} to={[nX(7.4), y + 108]} align="start" />
+      {foco === 'acido' && <SceneNote text="mais H⁺ aqui" at={[nX(1.2), y - 10]} to={[nX(0.6), y - 74]} align="start" />}
+      {foco === 'base' && <SceneNote text="mais OH⁻ aqui" at={[nX(12.8), y - 10]} to={[nX(13), y - 74]} align="end" />}
 
       <text className="vs-scene-caption" x="160" y="286" textAnchor="middle">cada unidade é um fator de 10</text>
       <text className="vs-scene-caption" x="160" y="306" textAnchor="middle">pH = −log[H⁺]</text>

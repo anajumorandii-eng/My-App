@@ -2,6 +2,7 @@ import React from 'react';
 import BoardShell from './BoardShell';
 import { boardPair } from './pair';
 import type { BoardProps } from './types';
+import { SceneNote } from './SceneNote';
 
 /**
  * Coluna de líquido com a pressão crescendo na profundidade, e dois corpos.
@@ -57,6 +58,14 @@ function FluidScene({ emphasis }: { emphasis: 'esquerda' | 'direita' | 'nenhum' 
         <path className="vs-arrow" d={`M248 ${fundo - 64} l -5 10 l 10 0 z`} />
         <text className="vs-buoy-label" x="248" y={fundo - 72} textAnchor="middle">E &lt; P</text>
       </g>
+
+      {/* As setas de pressão crescem sozinhas; o que elas não contam é que o
+          crescimento é da profundidade, não do volume acima. */}
+      {/* Dentro do recipiente, no vão entre as setas de pressão e o corpo que
+          afunda. Embaixo do vaso não cabe: ali já correm as duas legendas da
+          cena, e o rótulo encostava nelas. */}
+      <SceneNote text="só a profundidade" at={[92, superficie + 134]} to={[152, superficie + 150]} align="middle" />
+      {focoEmpuxo && <SceneNote text="empuxo = líquido deslocado" at={[173, superficie + 34]} to={[186, superficie - 40]} align="start" />}
 
       <text className="vs-scene-caption" x="160" y="292" textAnchor="middle">
         {focoEmpuxo ? 'E = ρ𝑓 · V submerso · g' : 'a pressão depende só da profundidade'}

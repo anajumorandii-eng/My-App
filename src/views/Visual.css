@@ -1227,3 +1227,381 @@
   overflow-wrap: anywhere;
   padding-inline: 6px;
 }
+
+/* ── Prancha manipulável ─────────────────────────────────────────────────────
+   O instrumento ocupa o lugar da cena dentro do BoardShell, mas precisa de mais
+   altura que um SVG quadrado: além do plano vêm os controles e as leituras, que
+   são a parte que recalcula. Por isso o wrap solta o `place-items: center` aqui.
+   ------------------------------------------------------------------------- */
+.vs-piston-wrap:has(.vs-instrument) { align-items: stretch; }
+
+.vs-instrument {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: min(100%, 360px);
+}
+
+.vs-plane {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: var(--vs-paper-strong);
+  border: 1px solid var(--vs-line);
+  border-radius: 10px;
+}
+.vs-plane-grid line { stroke: var(--vs-line); stroke-width: 0.6; }
+.vs-plane-axis line { stroke: var(--vs-ink); stroke-width: 1.2; opacity: 0.55; }
+.vs-plane-axis text {
+  fill: var(--vs-dim);
+  font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
+  font-size: 8px;
+}
+.vs-plane-curve {
+  fill: none;
+  stroke: var(--vs-burgundy);
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.vs-plane[data-destaque="true"] .vs-plane-curve { stroke: var(--vs-blue); }
+.vs-plane-expression {
+  fill: var(--vs-ink);
+  font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
+  font-size: 10px;
+}
+
+.vs-plane-controls { display: flex; flex-direction: column; gap: 9px; }
+.vs-plane-control { display: flex; flex-direction: column; gap: 3px; }
+.vs-plane-control label {
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+  font-size: 0.78rem;
+  color: var(--vs-dim);
+}
+.vs-plane-control label strong {
+  font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
+  color: var(--vs-ink);
+  font-size: 0.86rem;
+}
+.vs-plane-control label span { flex: 1; min-width: 0; }
+.vs-plane-control label b {
+  font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
+  color: var(--vs-burgundy);
+  font-variant-numeric: tabular-nums;
+}
+.vs-plane-control input[type="range"] {
+  width: 100%;
+  accent-color: var(--vs-burgundy);
+  /* Alvo de toque confortável no iPad sem engordar a linha visual. */
+  min-height: 24px;
+}
+
+.vs-plane-readouts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+  margin: 0;
+}
+.vs-plane-readouts > div {
+  background: var(--vs-paper-strong);
+  border: 1px solid var(--vs-line);
+  border-radius: 8px;
+  padding: 6px 9px;
+  min-width: 0;
+}
+/* A leitura que muda de natureza — "duas raízes" virando "nenhuma" — é a que
+   a manipulação existe para revelar, então ela não pode ler igual às outras. */
+.vs-plane-readouts > div[data-pivot="true"] { border-color: var(--vs-burgundy); }
+.vs-plane-readouts dt {
+  font-size: 0.68rem;
+  letter-spacing: 0.02em;
+  color: var(--vs-dim);
+}
+.vs-plane-readouts dd {
+  margin: 1px 0 0;
+  font-size: 0.84rem;
+  color: var(--vs-ink);
+  font-variant-numeric: tabular-nums;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 900px) {
+  .vs-plane-readouts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+/* Anotação manuscrita sobre o plano: rótulo afastado, seta curva até o ponto.
+   A Kalam agora é carregada de verdade no index.html — antes estava declarada
+   aqui e caía calada no Newsreader, que é por que a prancha saía com cara de
+   jornal em vez de caderno. */
+.vs-plane-note text {
+  fill: var(--vs-burgundy);
+  font-family: "Kalam", "Newsreader", Georgia, serif;
+  font-size: 11px;
+  font-weight: 700;
+}
+.vs-plane-arrow {
+  fill: none;
+  stroke: var(--vs-burgundy);
+  stroke-width: 1.1;
+  stroke-linecap: round;
+  opacity: 0.6;
+}
+.vs-plane-anchor { fill: var(--vs-burgundy); }
+
+/* A cadeia de conceitos: a sequência de estágios do capítulo, com o estado de
+   cada elo lido da mesma evidência do Caderno de Erros. */
+.vs-chain {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.vs-chain li { display: flex; align-items: center; gap: 6px; min-width: 0; flex: 1 1 150px; }
+.vs-chain-arrow { color: var(--vs-dim); flex: none; }
+.vs-chain-link {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 9px 11px;
+  text-align: left;
+  border: 1px solid var(--vs-line);
+  border-left: 3px solid var(--vs-nao-avaliado);
+  border-radius: 9px;
+  background: var(--vs-paper-strong);
+  color: var(--vs-ink);
+}
+.vs-chain-link[data-state="reconhece"] { border-left-color: var(--vs-reconhece); }
+.vs-chain-link[data-state="compreende"] { border-left-color: var(--vs-compreende); }
+.vs-chain-link[data-state="aplicacao-instavel"] { border-left-color: var(--vs-aplicacao-instavel); }
+.vs-chain-link[data-state="aplica"] { border-left-color: var(--vs-aplica); }
+.vs-chain-link[data-state="transfere"] { border-left-color: var(--vs-transfere); }
+.vs-chain-link[data-state="possivel-regressao"] { border-left-color: var(--vs-possivel-regressao); }
+.vs-chain-link.is-selected { box-shadow: 0 0 0 2px var(--vs-burgundy); }
+.vs-chain-stage {
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--vs-dim);
+}
+.vs-chain-link strong {
+  font-size: 0.83rem;
+  line-height: 1.25;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+.vs-chain-state { display: flex; align-items: center; gap: 5px; font-size: 0.68rem; color: var(--vs-dim); }
+
+@media (max-width: 900px) {
+  /* Em coluna, a seta entre elos vira indicação de descida e atrapalha mais do
+     que informa: a ordem já está na leitura de cima para baixo. */
+  .vs-chain { flex-direction: column; }
+  .vs-chain-arrow { display: none; }
+}
+
+/* Anotação manuscrita dentro da cena autoral — a mesma ideia da prancha
+   manipulável, agora nas vinte e seis cenas desenhadas à mão. */
+.vs-scene-note text {
+  fill: var(--vs-burgundy);
+  font-family: "Kalam", "Newsreader", Georgia, serif;
+  font-size: 11.5px;
+  font-weight: 700;
+}
+.vs-scene-note-arrow {
+  fill: none;
+  stroke: var(--vs-burgundy);
+  stroke-width: 1.1;
+  stroke-linecap: round;
+  opacity: 0.55;
+}
+.vs-scene-note-anchor { fill: var(--vs-burgundy); opacity: 0.8; }
+
+/* Interruptor de domínio, na mesma linha dos modos. */
+.vs-mode-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+.vs-mode-row .vs-modes { flex: 1 1 320px; }
+.vs-domain-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border: 1px solid var(--vs-line);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--vs-ink);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.vs-domain-switch {
+  width: 30px;
+  height: 17px;
+  border-radius: 999px;
+  background: var(--vs-line);
+  position: relative;
+  transition: background 0.18s ease;
+}
+.vs-domain-switch::after {
+  content: "";
+  position: absolute;
+  inset: 2px auto 2px 2px;
+  width: 13px;
+  border-radius: 50%;
+  background: var(--vs-paper-strong);
+  transition: transform 0.18s ease;
+}
+.vs-domain-toggle[aria-pressed="true"] { border-color: var(--vs-burgundy); color: var(--vs-burgundy); }
+.vs-domain-toggle[aria-pressed="true"] .vs-domain-switch { background: var(--vs-burgundy); }
+.vs-domain-toggle[aria-pressed="true"] .vs-domain-switch::after { transform: translateX(13px); }
+
+.vs-domain {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+  gap: 14px;
+  padding: 16px 18px;
+  border: 1px solid var(--vs-line);
+  border-radius: 16px;
+  background: var(--vs-paper-strong);
+}
+.vs-domain ol, .vs-domain-legend ul { margin: 0; padding: 0; list-style: none; }
+.vs-domain > ol { display: flex; flex-direction: column; gap: 7px; }
+.vs-domain > ol li {
+  display: flex;
+  align-items: baseline;
+  gap: 9px;
+  padding-bottom: 7px;
+  border-bottom: 1px solid var(--vs-line);
+  font-size: 0.86rem;
+}
+.vs-domain > ol li:last-child { border-bottom: 0; padding-bottom: 0; }
+.vs-domain > ol b { flex: 1; min-width: 0; font-weight: 600; overflow-wrap: anywhere; }
+.vs-domain > ol li > span:last-child { color: var(--vs-dim); font-size: 0.76rem; white-space: nowrap; }
+.vs-domain-legend-title {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 0.64rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--vs-dim);
+}
+.vs-domain-legend ul { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 10px; }
+.vs-domain-legend li { display: flex; align-items: center; gap: 6px; font-size: 0.74rem; color: var(--vs-dim); }
+.vs-domain-legend p { margin: 9px 0 0; font-size: 0.72rem; line-height: 1.45; color: var(--vs-dim); }
+
+@media (max-width: 900px) {
+  .vs-domain { grid-template-columns: minmax(0, 1fr); }
+  .vs-domain-legend ul { grid-template-columns: 1fr; }
+}
+
+/* Alternador de faces da prancha, só no celular. No desktop as duas faces
+   aparecem juntas e o alternador nem é renderizado. */
+.vs-faces {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  margin: 0 0 14px;
+}
+.vs-faces button {
+  padding: 9px 12px;
+  border: 1px solid var(--vs-line);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--vs-dim);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.vs-faces button[aria-selected="true"] {
+  border-color: var(--vs-burgundy);
+  background: var(--vs-burgundy);
+  color: var(--vs-paper-strong);
+}
+
+/* No celular o cabeçalho da prancha empilha. Em duas colunas, o título — que
+   escala até 6vw — passava por baixo do balão da condição, e o "Q = 0" ficava
+   por cima da palavra. A captura mostrou; a medição de moldura, não. */
+@media (max-width: 700px) {
+  .vs-board-head { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .vs-board-head h2 { font-size: clamp(2rem, 9vw, 2.8rem); }
+  /* Em coluna, `flex: 0 0 112px` passa a reger a altura e o balão encolhe na
+     largura até apertar o rótulo. Aqui a medida volta a ser explícita. */
+  .vs-q-callout { align-self: flex-start; flex: 0 0 auto; width: 118px; min-height: 84px; }
+}
+
+/* Janela de zoom e arraste da cena. */
+.vs-viewport { display: flex; flex-direction: column; gap: 8px; width: 100%; }
+.vs-viewport-janela {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  /* touch-action: none entrega o gesto ao componente em vez de deixar o
+     navegador rolar a página no meio do arraste. */
+  touch-action: none;
+}
+.vs-viewport-janela[data-ampliada="true"] { cursor: grab; }
+.vs-viewport-janela[data-ampliada="true"]:active { cursor: grabbing; }
+.vs-viewport-conteudo {
+  transform-origin: center center;
+  transition: transform 0.12s ease-out;
+  will-change: transform;
+}
+@media (prefers-reduced-motion: reduce) {
+  .vs-viewport-conteudo { transition: none; }
+}
+
+.vs-viewport-controles {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.72rem;
+  color: var(--vs-dim);
+}
+.vs-viewport-controles button {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--vs-line);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--vs-ink);
+  cursor: pointer;
+}
+.vs-viewport-controles button:disabled { opacity: 0.35; cursor: default; }
+.vs-viewport-controles button svg { width: 14px; height: 14px; }
+.vs-viewport-controles output {
+  min-width: 42px;
+  text-align: center;
+  font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
+  font-variant-numeric: tabular-nums;
+}
+.vs-viewport-dica { flex: 1; min-width: 0; text-align: right; overflow-wrap: anywhere; }
+
+/* O elo que o diagnóstico escondeu, marcado na própria cadeia: ver onde está o
+   buraco vale mais que ler a lacuna numa lista embaixo da prancha. A resposta
+   continua sendo dada no formulário de reconstrução — dois caminhos de resposta
+   fariam o mapa e o Caderno discordarem sobre a mesma aluna. */
+.vs-chain-arrow.is-oculto {
+  font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
+  font-weight: 700;
+  color: var(--vs-amber);
+}
+.vs-chain-link.is-oculto {
+  border-style: dashed;
+  border-color: var(--vs-amber);
+  border-left-style: solid;
+  background: color-mix(in srgb, var(--vs-amber) 9%, var(--vs-paper-strong));
+}
+.vs-chain-link.is-oculto .vs-chain-state { color: var(--vs-amber); font-weight: 600; }
