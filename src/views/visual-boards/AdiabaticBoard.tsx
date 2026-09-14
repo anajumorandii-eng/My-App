@@ -2,6 +2,7 @@ import React from 'react';
 import { Waypoints } from 'lucide-react';
 import { NODE_STATE_LABEL } from '../../lib/visualStudy';
 import type { BoardProps } from './types';
+import { SceneNote } from './SceneNote';
 
 /**
  * Cilindro isolado com pistão móvel, desenhado aqui em vez de vir de um arquivo.
@@ -76,6 +77,19 @@ function AdiabaticPiston({ emphasis }: { emphasis: 'expansao' | 'compressao' | '
         <text x="288" y="45" textAnchor="middle">Q</text>
         <path className="vs-piston-slash" d="M276 28 L300 52" />
       </g>
+
+      {/* A anotação comenta o que acabou de acontecer com o pistão, e some no
+          repouso: sem ênfase não há transformação a narrar. */}
+      {/* Canto superior esquerdo nos dois sentidos: à direita fica o selo do Q
+          riscado e no meio passa a haste do pistão — a primeira versão punha o
+          texto da expansão em cima do selo. */}
+      {emphasis === 'expansao' && (
+        <SceneNote text="ΔV > 0 → T cai" at={[112, 122]} to={[108, 34]} align="end" />
+      )}
+      {emphasis === 'compressao' && (
+        <SceneNote text="ΔV < 0 → T sobe" at={[112, 212]} to={[108, 34]} align="end" />
+      )}
+      <SceneNote text="parede isolante" at={[61, 258]} to={[16, 326]} align="start" />
     </svg>
   );
 }

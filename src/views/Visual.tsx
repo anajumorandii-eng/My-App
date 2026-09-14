@@ -233,6 +233,7 @@ export default function Visual() {
   const [mode, setMode] = useState<Mode>('explorar');
   const [selectedNode, setSelectedNode] = useState<string | null>(null);
   const [disagreed, setDisagreed] = useState(false);
+  const [mostrarDominio, setMostrarDominio] = useState(false);
   const [draft, setDraft] = useState('');
   const [feedback, setFeedback] = useState<{ matched: string[]; missing: string | null } | null>(null);
   const [placements, setPlacements] = useState<Record<string, string>>({});
@@ -373,6 +374,7 @@ export default function Visual() {
         )}
       </header>
 
+      <div className="vs-mode-row">
       <div role="tablist" aria-label="Modo de estudo" className="vs-modes">
         {(Object.keys(MODE_LABEL) as Mode[]).map((key) => (
           <button
@@ -388,7 +390,53 @@ export default function Visual() {
           </button>
         ))}
       </div>
+
+      {/* "Mostrar domínio": a leitura do capítulo inteiro de uma vez, em vez de
+          nó por nó pelo inspetor. Não é dado novo — é o mesmo `states` que já
+          colore cada cartão, reunido numa lista com a legenda ao lado. Sem a
+          legenda, a cor sozinha não diz o que significa para quem abriu a tela
+          pela primeira vez. */}
+      <button
+        type="button"
+        className="vs-domain-toggle"
+        aria-pressed={mostrarDominio}
+        onClick={() => setMostrarDominio((v) => !v)}
+      >
+        <span className="vs-domain-switch" aria-hidden="true" />
+        Mostrar domínio
+      </button>
+      </div>
       <p className="-mt-3 text-sm text-zinc-500">{MODE_HINT[mode]}</p>
+
+      {mostrarDominio && (
+        <section className="vs-domain" aria-label="Domínio de cada conceito do capítulo">
+          <ol>
+            {map.nodes.map((no) => {
+              const estado = states[no.id] ?? 'nao-avaliado';
+              return (
+                <li key={no.id} data-state={estado}>
+                  <span className="vs-swatch" aria-hidden="true" />
+                  <b>{no.label}</b>
+                  <span>{NODE_STATE_LABEL[estado]}</span>
+                </li>
+              );
+            })}
+          </ol>
+          <div className="vs-domain-legend">
+            <span className="vs-domain-legend-title">Legenda dos estados</span>
+            <ul>
+              {(Object.keys(NODE_STATE_LABEL) as NodeState[]).map((estado) => (
+                <li key={estado} data-state={estado}>
+                  <span className="vs-swatch" aria-hidden="true" />{NODE_STATE_LABEL[estado]}
+                </li>
+              ))}
+            </ul>
+            {/* A regressão fica fora da escada de propósito (NODE_STATE_RANK):
+                é alerta sobre um degrau perdido, não um degrau a mais. */}
+            <p>Possível regressão não é um degrau da escada: é aviso de que um degrau já alcançado deixou de aparecer na evidência.</p>
+          </div>
+        </section>
+      )}
 
       {intervention && (
         <section className="rounded-2xl border border-amber-300 bg-amber-50 p-5 dark:border-amber-900 dark:bg-amber-950/20">

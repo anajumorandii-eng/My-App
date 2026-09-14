@@ -179,6 +179,24 @@ describe('Visual aprovado', () => {
     expect(screen.getByText('nenhuma real')).toBeInTheDocument();
   });
 
+  it('mostra o domínio do capítulo inteiro, com a legenda junto', async () => {
+    const user = userEvent.setup();
+    render(<MemoryRouter initialEntries={[rota]}><Visual /></MemoryRouter>);
+
+    const interruptor = screen.getByRole('button', { name: /Mostrar domínio/i });
+    expect(interruptor).toHaveAttribute('aria-pressed', 'false');
+    expect(screen.queryByLabelText(/Domínio de cada conceito/i)).not.toBeInTheDocument();
+
+    await user.click(interruptor);
+    const painel = screen.getByLabelText(/Domínio de cada conceito/i);
+    expect(interruptor).toHaveAttribute('aria-pressed', 'true');
+
+    // Um item por nó do mapa, e a legenda dos sete estados junto — cor sozinha
+    // não diz nada para quem abriu a tela pela primeira vez.
+    expect(within(painel).getAllByRole('listitem')).toHaveLength(mapa.nodes.length + 7);
+    expect(within(painel).getByText('Possível regressão')).toBeInTheDocument();
+  });
+
   it('continua distinguindo hipótese de fato no inspetor', async () => {
     const user = userEvent.setup();
     render(<MemoryRouter initialEntries={[rota]}><Visual /></MemoryRouter>);

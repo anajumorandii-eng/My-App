@@ -1405,3 +1405,101 @@
   .vs-chain { flex-direction: column; }
   .vs-chain-arrow { display: none; }
 }
+
+/* Anotação manuscrita dentro da cena autoral — a mesma ideia da prancha
+   manipulável, agora nas vinte e seis cenas desenhadas à mão. */
+.vs-scene-note text {
+  fill: var(--vs-burgundy);
+  font-family: "Kalam", "Newsreader", Georgia, serif;
+  font-size: 11.5px;
+  font-weight: 700;
+}
+.vs-scene-note-arrow {
+  fill: none;
+  stroke: var(--vs-burgundy);
+  stroke-width: 1.1;
+  stroke-linecap: round;
+  opacity: 0.55;
+}
+.vs-scene-note-anchor { fill: var(--vs-burgundy); opacity: 0.8; }
+
+/* Interruptor de domínio, na mesma linha dos modos. */
+.vs-mode-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+.vs-mode-row .vs-modes { flex: 1 1 320px; }
+.vs-domain-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border: 1px solid var(--vs-line);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--vs-ink);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.vs-domain-switch {
+  width: 30px;
+  height: 17px;
+  border-radius: 999px;
+  background: var(--vs-line);
+  position: relative;
+  transition: background 0.18s ease;
+}
+.vs-domain-switch::after {
+  content: "";
+  position: absolute;
+  inset: 2px auto 2px 2px;
+  width: 13px;
+  border-radius: 50%;
+  background: var(--vs-paper-strong);
+  transition: transform 0.18s ease;
+}
+.vs-domain-toggle[aria-pressed="true"] { border-color: var(--vs-burgundy); color: var(--vs-burgundy); }
+.vs-domain-toggle[aria-pressed="true"] .vs-domain-switch { background: var(--vs-burgundy); }
+.vs-domain-toggle[aria-pressed="true"] .vs-domain-switch::after { transform: translateX(13px); }
+
+.vs-domain {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+  gap: 14px;
+  padding: 16px 18px;
+  border: 1px solid var(--vs-line);
+  border-radius: 16px;
+  background: var(--vs-paper-strong);
+}
+.vs-domain ol, .vs-domain-legend ul { margin: 0; padding: 0; list-style: none; }
+.vs-domain > ol { display: flex; flex-direction: column; gap: 7px; }
+.vs-domain > ol li {
+  display: flex;
+  align-items: baseline;
+  gap: 9px;
+  padding-bottom: 7px;
+  border-bottom: 1px solid var(--vs-line);
+  font-size: 0.86rem;
+}
+.vs-domain > ol li:last-child { border-bottom: 0; padding-bottom: 0; }
+.vs-domain > ol b { flex: 1; min-width: 0; font-weight: 600; overflow-wrap: anywhere; }
+.vs-domain > ol li > span:last-child { color: var(--vs-dim); font-size: 0.76rem; white-space: nowrap; }
+.vs-domain-legend-title {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 0.64rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--vs-dim);
+}
+.vs-domain-legend ul { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 10px; }
+.vs-domain-legend li { display: flex; align-items: center; gap: 6px; font-size: 0.74rem; color: var(--vs-dim); }
+.vs-domain-legend p { margin: 9px 0 0; font-size: 0.72rem; line-height: 1.45; color: var(--vs-dim); }
+
+@media (max-width: 900px) {
+  .vs-domain { grid-template-columns: minmax(0, 1fr); }
+  .vs-domain-legend ul { grid-template-columns: 1fr; }
+}
