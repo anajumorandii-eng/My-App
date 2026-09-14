@@ -2,6 +2,7 @@ import React from 'react';
 import BoardShell from './BoardShell';
 import { boardPair } from './pair';
 import type { BoardProps } from './types';
+import { imagemDeLenteConvergente } from '../../lib/opticalImage';
 
 /**
  * Lente convergente com os dois raios notáveis e a imagem que eles formam.
@@ -22,12 +23,18 @@ function LensScene({ emphasis }: { emphasis: 'esquerda' | 'direita' | 'nenhum' }
   const objX = alem ? 44 : 128;
   const objH = alem ? 46 : 34;
 
-  // p e p' pela equação de Gauss, em unidades do desenho.
-  const p = lente - objX;
-  const linha = 1 / foco - 1 / p;
-  const pl = 1 / linha;                 // negativo quando a imagem é virtual
+  // A conta sai de um módulo puro coberto em node:test. Estava aqui dentro do
+  // JSX, e por isso o erro de sinal atravessou lint e testes: nada avaliava a
+  // física, só a renderização.
+  const { distancia: pl, altura: imgH } = imagemDeLenteConvergente(lente - objX, objH, foco);
   const imgX = lente + pl;
-  const imgH = -objH * (pl / p);        // sinal já traz a inversão
+  // O objeto é desenhado em `eixo - objH`, para cima. A imagem tem de usar a
+  // mesma referência, senão o sinal se inverte na tela: com `eixo + imgH` o
+  // objeto além do foco saía com imagem DIREITA e o objeto entre foco e lente
+  // saía INVERTIDA — os dois casos trocados, contra o que a própria legenda da
+  // cena diz. Aqui `imgY` acima do eixo significa direita, abaixo significa
+  // invertida, igual ao objeto.
+  const imgY = eixo - imgH;
 
   return (
     <svg className="vs-piston vs-scene" viewBox="0 0 320 330" role="img" data-emphasis={emphasis}
@@ -52,16 +59,16 @@ function LensScene({ emphasis }: { emphasis: 'esquerda' | 'direita' | 'nenhum' }
       </g>
 
       {/* Raio 1: paralelo ao eixo, refrata pelo foco. */}
-      <path className="vs-ray" d={`M${objX} ${eixo - objH} L${lente} ${eixo - objH} L${imgX} ${eixo + imgH}`} />
+      <path className="vs-ray" d={`M${objX} ${eixo - objH} L${lente} ${eixo - objH} L${imgX} ${imgY}`} />
       {/* Raio 2: pelo centro óptico, sem desvio. */}
-      <path className="vs-ray vs-ray--alt" d={`M${objX} ${eixo - objH} L${imgX} ${eixo + imgH}`} />
+      <path className="vs-ray vs-ray--alt" d={`M${objX} ${eixo - objH} L${imgX} ${imgY}`} />
 
       {/* Imagem no cruzamento dos raios. */}
       <g className="vs-image">
-        <line x1={imgX} y1={eixo} x2={imgX} y2={eixo + imgH} />
-        <path d={imgH > 0
-          ? `M${imgX} ${eixo + imgH + 9} l-5 -10 h10 z`
-          : `M${imgX} ${eixo + imgH - 9} l-5 10 h10 z`} />
+        <line x1={imgX} y1={eixo} x2={imgX} y2={imgY} />
+        <path d={imgY > eixo
+          ? `M${imgX} ${imgY + 9} l-5 -10 h10 z`
+          : `M${imgX} ${imgY - 9} l-5 10 h10 z`} />
       </g>
 
       <text className="vs-scene-caption" x="160" y="312" textAnchor="middle">
