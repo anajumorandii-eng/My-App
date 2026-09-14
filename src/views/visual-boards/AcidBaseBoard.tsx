@@ -66,7 +66,7 @@ export default function AcidBaseBoard(props: BoardProps) {
     <BoardShell
       title="A escala de pH"
       subtitle="A escala é linear no papel e logarítmica na concentração."
-      condition={{ label: 'a 25 °C', value: 'pH + pOH = 14' }}
+      condition={{ label: 'pH + pOH', value: '= 14' }}
       ariaLabel="Prancha ilustrada de ácidos e bases e a escala de pH"
       scene={<PhScene emphasis={par.emphasis} />}
       sceneNotes={{ up: 'ácido ↑', down: '↓ básico' }}

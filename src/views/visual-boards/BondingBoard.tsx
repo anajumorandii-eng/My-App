@@ -77,7 +77,7 @@ export default function BondingBoard(props: BoardProps) {
     <BoardShell
       title="Iônica e covalente"
       subtitle="Quem decide é a diferença de eletronegatividade, não a tabela."
-      condition={{ label: 'critério', value: 'Δ eletroneg.' }}
+      condition={{ label: 'critério', value: 'Δ E.N.' }}
       ariaLabel="Prancha ilustrada de ligações químicas"
       scene={<BondScene emphasis={par.emphasis} />}
       sceneNotes={{ up: 'transfere ↑', down: '↓ compartilha' }}

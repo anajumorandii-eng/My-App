@@ -1152,3 +1152,78 @@
 @media (prefers-reduced-motion: reduce) {
   .vs-cell circle { transition: none; }
 }
+
+/* ---------- sexta leva de cenas ---------- */
+
+/* Curva de aquecimento: os patamares são o assunto, a curva é o caminho. */
+.vs-heat-curve { fill: none; stroke: var(--vs-burgundy); stroke-width: 3.2; stroke-linejoin: round; stroke-linecap: round; }
+.dark .vs-heat-curve { stroke: #d88598; }
+.vs-temp-mark line { stroke: var(--vs-dim); stroke-width: 1.4; opacity: .7; }
+.vs-temp-mark text { fill: var(--vs-dim); font: 600 .6rem/1 ui-monospace, monospace; }
+.vs-plateau rect { fill: color-mix(in srgb, var(--vs-amber) 26%, transparent); transition: fill .3s ease; }
+.vs-plateau[data-active='true'] rect { fill: color-mix(in srgb, var(--vs-amber) 52%, transparent); }
+.vs-phase-label text { fill: var(--vs-blue); font: 700 .62rem/1 ui-monospace, monospace; }
+.vs-phase-label[data-dim='true'] { opacity: .4; }
+.vs-phase-label, .vs-latent-label { transition: opacity .3s ease; }
+.vs-latent-label text { fill: var(--vs-amber); font: 700 .62rem/1 ui-monospace, monospace; opacity: .6; }
+.vs-latent-label[data-active='true'] text { opacity: 1; }
+
+/* Contagem: árvore com as folhas riscadas quando a ordem não importa. */
+.vs-count-root { fill: var(--vs-dim); }
+.vs-count-edge { fill: none; stroke: var(--vs-dim); stroke-width: 1.4; opacity: .65; }
+.vs-count-node circle { fill: color-mix(in srgb, var(--vs-blue) 26%, transparent); stroke: var(--vs-blue); stroke-width: 2; }
+.vs-count-node text { fill: var(--vs-ink); font: 700 .74rem/1 "Newsreader", Georgia, serif; }
+.vs-count-leaf rect { fill: color-mix(in srgb, var(--vs-green) 24%, transparent); stroke: var(--vs-green); stroke-width: 1.8; transition: opacity .3s ease; }
+.vs-count-leaf text { fill: var(--vs-ink); font: 700 .68rem/1 ui-monospace, monospace; }
+.vs-count-leaf[data-riscado='true'] rect { opacity: .3; }
+.vs-count-leaf[data-riscado='true'] text { opacity: .45; }
+.vs-count-strike { stroke: var(--vs-burgundy); stroke-width: 2.4; stroke-linecap: round; }
+.dark .vs-count-strike { stroke: #d88598; }
+.vs-count-total { fill: var(--vs-ink); font: 700 .86rem/1 "Newsreader", Georgia, serif; }
+
+/* Sistema ABO: hemácia de um lado, plasma do outro. */
+.vs-blood-type { fill: var(--vs-burgundy); font: 700 1rem/1 "Newsreader", Georgia, serif; }
+.dark .vs-blood-type { fill: #d88598; }
+.vs-rbc ellipse { fill: color-mix(in srgb, var(--vs-burgundy) 40%, transparent); stroke: var(--vs-burgundy); stroke-width: 2.2; }
+.vs-rbc-dimple { fill: color-mix(in srgb, var(--vs-burgundy) 22%, transparent) !important; }
+.dark .vs-rbc ellipse { stroke: #d88598; }
+.vs-antigen line { stroke: var(--vs-ink); stroke-width: 2; }
+.vs-antigen circle { fill: color-mix(in srgb, var(--vs-amber) 60%, transparent); stroke: var(--vs-amber); stroke-width: 1.8; }
+.vs-antigen text { fill: var(--vs-ink); font: 700 .62rem/1 ui-monospace, monospace; }
+.vs-plasma rect { fill: color-mix(in srgb, var(--vs-amber) 16%, transparent); stroke: var(--vs-amber); stroke-width: 2; }
+.vs-antibody path { fill: color-mix(in srgb, var(--vs-blue) 60%, transparent); stroke: var(--vs-blue); stroke-width: 1.6; }
+.vs-antibody text { fill: var(--vs-blue); font: 700 .58rem/1 ui-monospace, monospace; }
+.vs-plasma-empty { fill: var(--vs-dim); font: 600 .62rem/1 ui-monospace, monospace; }
+.vs-part-label { fill: var(--vs-ink); font: 700 .66rem/1 ui-monospace, monospace; letter-spacing: .06em; }
+.vs-part-sub { fill: var(--vs-dim); font: 600 .58rem/1 ui-monospace, monospace; }
+
+/* Dispersões: dois béqueres com o mesmo soluto. */
+.vs-beaker-wall { fill: none; stroke: var(--vs-ink); stroke-width: 2.6; stroke-linejoin: round; }
+.vs-solution { fill: color-mix(in srgb, var(--vs-blue) 18%, transparent); }
+.vs-solute { fill: var(--vs-burgundy); transition: cx .45s ease, cy .45s ease; }
+.dark .vs-solute { fill: #d88598; }
+.vs-beaker-label { fill: var(--vs-ink); font: 700 .64rem/1 ui-monospace, monospace; }
+.vs-beaker-conc { fill: var(--vs-dim); font: 600 .6rem/1 ui-monospace, monospace; }
+.vs-dilute-arrow path { fill: none; stroke: var(--vs-dim); stroke-width: 2; }
+.vs-dilute-arrow .vs-arrow { fill: var(--vs-dim); stroke: none; }
+.vs-dilute-arrow text { fill: var(--vs-dim); font: 700 .62rem/1 ui-monospace, monospace; }
+.vs-dilute-arrow[data-active='true'] path { stroke: var(--vs-blue); }
+.vs-dilute-arrow[data-active='true'] .vs-arrow { fill: var(--vs-blue); }
+.vs-dilute-arrow[data-active='true'] text { fill: var(--vs-blue); }
+.vs-mass-eq { fill: var(--vs-ink); font: 700 .78rem/1 ui-monospace, monospace; }
+
+@media (prefers-reduced-motion: reduce) {
+  .vs-solute { transition: none; }
+}
+
+/* O balão da condição tinha tamanho de fonte fixo e largura fixa: um valor de
+   mais de dez caracteres ("3 tomados 2", "anti-(o que falta)") quebrava em três
+   linhas e vazava a elipse. Encurtar os textos resolveu os casos existentes;
+   isto impede que a próxima prancha repita o erro. */
+.vs-q-callout strong {
+  font-size: clamp(.95rem, 1.1rem + .6vw, 1.65rem);
+  line-height: 1.1;
+  text-align: center;
+  overflow-wrap: anywhere;
+  padding-inline: 6px;
+}

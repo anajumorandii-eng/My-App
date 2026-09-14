@@ -74,7 +74,7 @@ export default function HydrostaticsBoard(props: BoardProps) {
     <BoardShell
       title="Pressão e empuxo"
       subtitle="Uma depende da profundidade; o outro, do volume submerso."
-      condition={{ label: 'no fluido', value: 'ρ · g · h' }}
+      condition={{ label: 'no fluido', value: 'ρgh' }}
       ariaLabel="Prancha ilustrada de hidrostática: pressão e empuxo"
       scene={<FluidScene emphasis={par.emphasis} />}
       sceneNotes={{ up: 'pressão ↑', down: '↓ empuxo' }}
