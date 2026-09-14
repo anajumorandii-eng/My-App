@@ -12,6 +12,7 @@ import {
   type NodeState, type ReconstructionGrade, type VisualMap,
 } from '../lib/visualStudy';
 import type { InteractiveSummary, RetrievalAttempt } from '../types/summary';
+import { findBoard, supportsIllustratedBoard } from './visual-boards/registry';
 import './Visual.css';
 
 type Mode = 'explorar' | 'testar' | 'reconstruir';
@@ -69,221 +70,7 @@ function StateBadge({ state }: { state: NodeState }) {
 }
 
 
-/**
- * Cilindro isolado com pistão móvel, desenhado aqui em vez de vir de um arquivo.
- *
- * Antes era <img src="/visual/adiabatic-piston.webp">. O arquivo existia e
- * respondia 200, mas todos os seus pixels eram rgba(0,0,0,0): a prancha
- * reservava 360x360 e não desenhava nada. Um raster também não serviria ao que
- * a tela precisa — não acompanha o tema, não reage ao nó selecionado e não
- * anima. Em SVG o pistão sobe na expansão e desce na compressão, e as cores
- * saem das mesmas variáveis do resto da folha.
- *
- * As hachuras na parede são o isolamento térmico: é o que justifica Q = 0, e
- * sem elas o desenho seria um cilindro qualquer.
- */
-function AdiabaticPiston({ emphasis }: { emphasis: 'expansao' | 'compressao' | 'nenhum' }) {
-  // Curso do pistão dentro do cilindro (interno: y 70..290). Expansão sobe
-  // porque o gás ganha volume; compressão desce. O repouso fica no meio para
-  // que os dois sentidos tenham a mesma amplitude visível.
-  const topoGas = emphasis === 'expansao' ? 110 : emphasis === 'compressao' ? 200 : 150;
-  const alturaGas = 290 - topoGas;
 
-  return (
-    <svg
-      className="vs-piston"
-      viewBox="0 0 320 330"
-      role="img"
-      data-emphasis={emphasis}
-      aria-label="Cilindro termicamente isolado: o gás ocupa a parte de baixo e o pistão desliza no topo, sem troca de calor com o meio"
-    >
-      <g className="vs-piston-wall">
-        {/* Parede dupla: a faixa entre as duas linhas recebe as hachuras. */}
-        <path d="M70 70 L70 290 L250 290 L250 70" />
-        <path d="M52 70 L52 308 L268 308 L268 70" />
-      </g>
-
-      <g className="vs-piston-hatch" aria-hidden="true">
-        {Array.from({ length: 12 }, (_, i) => (
-          <path key={`e${i}`} d={`M52 ${78 + i * 18} L70 ${88 + i * 18}`} />
-        ))}
-        {Array.from({ length: 12 }, (_, i) => (
-          <path key={`d${i}`} d={`M268 ${78 + i * 18} L250 ${88 + i * 18}`} />
-        ))}
-        {Array.from({ length: 11 }, (_, i) => (
-          <path key={`b${i}`} d={`M${58 + i * 18} 290 L${72 + i * 18} 308`} />
-        ))}
-      </g>
-
-      {/* O gás começa logo abaixo do pistão e vai até o fundo do cilindro. */}
-      <rect className="vs-piston-gas" x="70" y={topoGas} width="180" height={alturaGas} />
-
-      <g className="vs-piston-molecules" aria-hidden="true">
-        {[
-          [104, 0.62], [148, 0.28], [196, 0.7], [226, 0.42],
-          [118, 0.86], [172, 0.52], [212, 0.9], [88, 0.34],
-        ].map(([x, f], i) => (
-          <circle key={i} cx={x} cy={topoGas + alturaGas * f} r="4.5" />
-        ))}
-      </g>
-
-      {/* Um só translate move placa, haste e punho: eles são peça única, e
-          animar cada um daria descolamento no meio da transição. */}
-      <g className="vs-piston-head" style={{ transform: `translateY(${topoGas - 150}px)` }}>
-        <rect className="vs-piston-plate" x="66" y="134" width="188" height="16" rx="3" />
-        <rect className="vs-piston-rod" x="150" y="76" width="20" height="60" rx="4" />
-        <rect className="vs-piston-cap" x="128" y="62" width="64" height="14" rx="5" />
-      </g>
-
-      {/* Q = 0 não é legenda solta: é a fronteira que as hachuras representam.
-          Fica acima da parede, onde nenhum cartão vizinho o alcança. */}
-      <g className="vs-piston-seal">
-        <circle cx="288" cy="40" r="18" />
-        <text x="288" y="45" textAnchor="middle">Q</text>
-        <path className="vs-piston-slash" d="M276 28 L300 52" />
-      </g>
-    </svg>
-  );
-}
-
-function supportsIllustratedBoard(summary: InteractiveSummary): boolean {
-  const title = [summary.subject, summary.topic, summary.title].join(' ').toLowerCase();
-  return summary.subject === 'Física' && title.includes('transformações particulares');
-}
-
-function VisualBoard({
-  map, states, selectedId, onSelect, hiddenEdgeIds, mode,
-}: {
-  map: VisualMap;
-  states: Record<string, NodeState>;
-  selectedId: string | null;
-  onSelect: (id: string) => void;
-  hiddenEdgeIds: string[];
-  mode: Mode;
-}) {
-  const leftNode = map.nodes[1] ?? map.nodes[0];
-  const rightNode = map.nodes[2] ?? map.nodes[map.nodes.length - 1];
-  const leftState = leftNode ? states[leftNode.id] ?? 'nao-avaliado' : 'nao-avaliado';
-  const rightState = rightNode ? states[rightNode.id] ?? 'nao-avaliado' : 'nao-avaliado';
-  const pistonEmphasis: 'expansao' | 'compressao' | 'nenhum' =
-    selectedId && selectedId === leftNode?.id ? 'expansao'
-    : selectedId && selectedId === rightNode?.id ? 'compressao'
-    : 'nenhum';
-
-  return (
-    <section className="vs-study-board" data-testid="visual-study-board" aria-label="Prancha ilustrada de transformação adiabática">
-      <header className="vs-board-head">
-        <div>
-          <span className="vs-board-kicker">Prancha ilustrada</span>
-          <h2>Transformação adiabática</h2>
-          <p>Quando não há troca de calor entre o sistema e o meio.</p>
-        </div>
-        <div className="vs-q-callout" aria-label="Calor igual a zero">
-          <span>condição</span>
-          <strong>Q = 0</strong>
-        </div>
-      </header>
-
-      <div className="vs-brush" aria-hidden="true" />
-
-      <div className="vs-board-body">
-        <button
-          type="button"
-          className={'vs-concept-card vs-concept-card--expansion' + (selectedId === leftNode?.id ? ' is-selected' : '')}
-          data-state={leftState}
-          onClick={() => leftNode && onSelect(leftNode.id)}
-        >
-          <span className="vs-concept-label">Expansão adiabática</span>
-          <strong>O gás realiza trabalho.</strong>
-          <span>Sem receber calor, a energia interna diminui e a temperatura tende a cair.</span>
-          <code>W &gt; 0 · ΔU &lt; 0 · ΔT &lt; 0</code>
-          <span className="vs-state-line"><span className="vs-swatch" />{NODE_STATE_LABEL[leftState]}</span>
-        </button>
-
-        <div className="vs-piston-wrap" data-emphasis={pistonEmphasis}>
-          <AdiabaticPiston emphasis={pistonEmphasis} />
-          <div className="vs-force-note vs-force-note--up">expansão ↑</div>
-          <div className="vs-force-note vs-force-note--down">↓ compressão</div>
-        </div>
-
-        <button
-          type="button"
-          className={'vs-concept-card vs-concept-card--compression' + (selectedId === rightNode?.id ? ' is-selected' : '')}
-          data-state={rightState}
-          onClick={() => rightNode && onSelect(rightNode.id)}
-        >
-          <span className="vs-concept-label">Compressão adiabática</span>
-          <strong>O meio realiza trabalho sobre o gás.</strong>
-          <span>Sem perder calor, a energia interna aumenta e a temperatura tende a subir.</span>
-          <code>W &lt; 0 · ΔU &gt; 0 · ΔT &gt; 0</code>
-          <span className="vs-state-line"><span className="vs-swatch" />{NODE_STATE_LABEL[rightState]}</span>
-        </button>
-      </div>
-
-      <div className="vs-equation-strip" aria-label="Primeira lei aplicada à transformação adiabática">
-        <span>Primeira Lei</span>
-        <strong>ΔU = Q − W</strong>
-        <i>com Q = 0</i>
-        <strong>ΔU = −W</strong>
-      </div>
-
-      <div className="vs-support-grid">
-        <section className="vs-formula-note">
-          <span className="vs-note-title">Relações úteis</span>
-          <strong>PV<sup>γ</sup> = constante</strong>
-          <strong>TV<sup>γ−1</sup> = constante</strong>
-          <p>Para gás ideal em processo adiabático reversível.</p>
-        </section>
-
-        <figure className="vs-pv-card">
-          <figcaption>Diagrama P × V</figcaption>
-          <svg viewBox="0 0 250 150" role="img" aria-label="Curva adiabática em gráfico de pressão por volume">
-            <line x1="34" y1="12" x2="34" y2="126" />
-            <line x1="34" y1="126" x2="230" y2="126" />
-            <path d="M48 26 C75 44, 91 64, 111 79 C137 98, 166 109, 216 116" />
-            <circle cx="58" cy="34" r="4" />
-            <circle cx="206" cy="114" r="4" />
-            <text x="10" y="20">P</text>
-            <text x="226" y="145">V</text>
-            <text x="66" y="31">compressão</text>
-            <text x="145" y="104">expansão</text>
-          </svg>
-        </figure>
-      </div>
-
-      <div className="vs-context-row">
-        <section>
-          <span className="vs-note-title">O que permanece decisivo?</span>
-          <p>Não confunda “sem troca de calor” com “temperatura constante”. Na adiabática, a temperatura muda justamente porque há trabalho.</p>
-        </section>
-        <section>
-          <span className="vs-note-title">Pista de prova</span>
-          <p>Identifique primeiro quem realiza trabalho. Depois aplique a convenção de sinais e só então conclua sobre ΔU e ΔT.</p>
-        </section>
-      </div>
-
-      {mode !== 'explorar' && (
-        <div className="vs-active-mode-note" role="status">
-          <Waypoints className="h-4 w-4" aria-hidden="true" />
-          {mode === 'testar'
-            ? 'Teste ativo: responda sem consultar a prancha e use o resultado como evidência.'
-            : String(hiddenEdgeIds.length || 1) + ' conexão(ões) frágil(eis) priorizada(s) para reconstrução.'}
-        </div>
-      )}
-
-      <footer className="vs-landscape">
-        {/* Mesma história do pistão: o .webp daqui também era transparente por
-            inteiro, então o rodapé aparecia sem o horizonte que o degradê
-            pressupõe. Decorativo, por isso fica fora da árvore de acessibilidade. */}
-        <svg className="vs-landscape-art" viewBox="0 0 640 170" aria-hidden="true" preserveAspectRatio="none">
-          <path className="vs-hill vs-hill--far" d="M0 118 C 96 78, 168 96, 244 110 S 400 74, 486 92 S 592 116, 640 104 L640 170 L0 170 Z" />
-          <path className="vs-hill vs-hill--near" d="M0 140 C 108 116, 190 132, 268 138 S 428 112, 520 128 S 604 144, 640 138 L640 170 L0 170 Z" />
-        </svg>
-        <p><strong>Ideia central:</strong> sem calor atravessando a fronteira, trabalho e energia interna explicam a mudança do estado do gás.</p>
-      </footer>
-    </section>
-  );
-}
 
 function VisualLibrary({ onOpen }: { onOpen: (id: string) => void }) {
   const [query, setQuery] = useState('');
@@ -508,7 +295,10 @@ export default function Visual() {
   }
 
 
-  if (!supportsIllustratedBoard(summary)) {
+  // A prancha vem do registro, não de um componente fixo: é o que permite
+  // ilustrar um capítulo novo sem tocar nesta tela.
+  const boardEntry = findBoard(summary);
+  if (!boardEntry) {
     return (
       <div className="crivo-visual">
         <button onClick={() => setSearchParams({})} className="vs-back-button">
@@ -632,7 +422,7 @@ export default function Visual() {
 
       <div className="vs-workspace">
         <main className="vs-main">
-          <VisualBoard map={map} states={states} selectedId={selectedNode} onSelect={setSelectedNode} hiddenEdgeIds={hiddenEdgeIds} mode={mode} />
+          <boardEntry.Component map={map} states={states} selectedId={selectedNode} onSelect={setSelectedNode} hiddenEdgeIds={hiddenEdgeIds} mode={mode} />
 
           {mode === 'testar' && (
             <section className="rounded-2xl border-2 border-indigo-200 bg-white p-5 dark:border-indigo-900 dark:bg-zinc-900">

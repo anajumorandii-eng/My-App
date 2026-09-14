@@ -339,6 +339,9 @@
   text-transform: uppercase;
   opacity: .72;
   transition: opacity .3s ease;
+  /* Sem isto, uma legenda de duas palavras quebra em duas linhas e transborda
+     a cena — foi o que aconteceu com "o tempo todo" na prancha de bioenergética. */
+  white-space: nowrap;
 }
 @media (prefers-reduced-motion: reduce) {
   .vs-force-note { transition: none; }
@@ -772,4 +775,117 @@
 
 @media (prefers-reduced-motion: reduce) {
   .vs-concept-card { transition: none; }
+}
+
+/* ---------- cenas das pranchas ----------
+   Cada prancha desenha o seu fenômeno, mas o traço, o eixo e as medidas seguem
+   o mesmo vocabulário: sem isso, duas pranchas abertas em sequência pareceriam
+   de aplicativos diferentes. As cores saem das mesmas variáveis do resto da
+   folha, então o tema é herdado em vez de redeclarado. */
+
+.vs-scene .vs-axis {
+  stroke: var(--vs-dim);
+  stroke-width: 1.6;
+  opacity: .75;
+}
+
+.vs-scene text { fill: var(--vs-ink); }
+.vs-scene-caption {
+  fill: var(--vs-dim);
+  font: 600 .66rem/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: .04em;
+}
+
+/* Medidas cotadas (λ, amplitude): traço fino com marcas nas pontas. */
+.vs-measure line { stroke: var(--vs-blue); stroke-width: 1.8; }
+.vs-measure .vs-tick { stroke-width: 2.2; }
+.vs-measure text {
+  fill: var(--vs-blue);
+  font: 700 .82rem/1 "Newsreader", Georgia, serif;
+}
+
+/* Ondulatória */
+.vs-wave {
+  fill: none;
+  stroke: var(--vs-burgundy);
+  stroke-width: 3.4;
+  stroke-linecap: round;
+  transition: d .5s cubic-bezier(.4, 0, .2, 1);
+}
+.dark .vs-wave { stroke: #d88598; }
+
+/* Lentes */
+.vs-lens {
+  fill: color-mix(in srgb, var(--vs-blue) 20%, transparent);
+  stroke: var(--vs-blue);
+  stroke-width: 2.4;
+}
+.vs-focus circle { fill: var(--vs-dim); }
+.vs-focus text { fill: var(--vs-dim); font: 700 .7rem/1 ui-monospace, monospace; }
+.vs-object line { stroke: var(--vs-forest); stroke-width: 3; }
+.vs-object path { fill: var(--vs-forest); }
+.dark .vs-object line { stroke: var(--vs-mint); }
+.dark .vs-object path { fill: var(--vs-mint); }
+.vs-ray {
+  fill: none;
+  stroke: var(--vs-amber);
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+.vs-ray--alt { stroke-dasharray: 6 5; }
+.vs-image line { stroke: var(--vs-burgundy); stroke-width: 3; }
+.vs-image path { fill: var(--vs-burgundy); }
+.dark .vs-image line { stroke: #d88598; }
+.dark .vs-image path { fill: #d88598; }
+
+/* Bioenergética */
+.vs-chloroplast {
+  fill: color-mix(in srgb, var(--vs-green) 24%, transparent);
+  stroke: var(--vs-green);
+  stroke-width: 2.4;
+}
+.vs-thylakoid { stroke: var(--vs-green); stroke-width: 3; stroke-linecap: round; }
+.vs-grana { fill: var(--vs-green); }
+.vs-mitochondria {
+  fill: color-mix(in srgb, var(--vs-coral) 40%, transparent);
+  stroke: var(--vs-burgundy);
+  stroke-width: 2.4;
+}
+.vs-crista { fill: none; stroke: var(--vs-burgundy); stroke-width: 2; }
+.dark .vs-crista, .dark .vs-mitochondria { stroke: #d88598; }
+.vs-organelle-name {
+  fill: var(--vs-dim);
+  font: 700 .64rem/1 ui-monospace, monospace;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.vs-sun circle { fill: var(--vs-amber); }
+.vs-sun line { stroke: var(--vs-amber); stroke-width: 2.4; stroke-linecap: round; }
+.vs-light-ray { fill: none; stroke: var(--vs-amber); stroke-width: 2.4; stroke-dasharray: 5 4; }
+/* O lado não selecionado recua, mas não some: os dois processos coexistem, e
+   apagar um deles contaria a história errada. */
+.vs-organelle[data-dim='true'], .vs-sun[data-dim='true'] { opacity: .3; }
+.vs-organelle, .vs-sun { transition: opacity .35s ease; }
+.vs-gas { font: 600 .66rem/1 ui-monospace, monospace; }
+.vs-gas--in { fill: var(--vs-blue); }
+.vs-gas--out { fill: var(--vs-green); }
+
+/* Trigonometria */
+.vs-unit-circle { fill: none; stroke: var(--vs-dim); stroke-width: 2; opacity: .8; }
+.vs-radius { stroke: var(--vs-ink); stroke-width: 2.6; transition: x2 .4s ease, y2 .4s ease; }
+.vs-point { fill: var(--vs-burgundy); transition: cx .4s ease, cy .4s ease; }
+.dark .vs-point { fill: #d88598; }
+.vs-angle-arc { fill: none; stroke: var(--vs-amber); stroke-width: 2; }
+.vs-angle-label { fill: var(--vs-amber); font: 700 .74rem/1 ui-monospace, monospace; }
+.vs-proj { stroke-width: 2.6; stroke-linecap: round; transition: x1 .4s ease, x2 .4s ease, y1 .4s ease, y2 .4s ease; }
+.vs-proj--sin { stroke: var(--vs-green); }
+.vs-proj--cos { stroke: var(--vs-blue); }
+.vs-proj--ghost { stroke-dasharray: 4 5; opacity: .55; }
+.vs-proj-label { font: 700 .7rem/1 ui-monospace, monospace; }
+.vs-proj-label--sin { fill: var(--vs-green); }
+.vs-proj-label--cos { fill: var(--vs-blue); }
+.vs-radius-label { fill: var(--vs-dim); font: 700 .7rem/1 "Newsreader", Georgia, serif; }
+
+@media (prefers-reduced-motion: reduce) {
+  .vs-wave, .vs-radius, .vs-point, .vs-proj, .vs-organelle, .vs-sun { transition: none; }
 }
