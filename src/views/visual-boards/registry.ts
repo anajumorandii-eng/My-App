@@ -23,6 +23,10 @@ import CellDivisionBoard from './CellDivisionBoard';
 import HydrostaticsBoard from './HydrostaticsBoard';
 import AcidBaseBoard from './AcidBaseBoard';
 import LogarithmBoard from './LogarithmBoard';
+import CalorimetryBoard from './CalorimetryBoard';
+import CountingBoard from './CountingBoard';
+import BloodTypeBoard from './BloodTypeBoard';
+import SolutionsBoard from './SolutionsBoard';
 
 /**
  * Quais capítulos têm prancha ilustrada, e qual.
@@ -191,6 +195,30 @@ export const BOARDS: BoardEntry[] = [
     subject: 'Matemática',
     keywords: ['logaritmos'],
     Component: LogarithmBoard,
+  },
+  {
+    id: 'calorimetria',
+    subject: 'Física',
+    keywords: ['calor sensível'],
+    Component: CalorimetryBoard,
+  },
+  {
+    id: 'contagem',
+    subject: 'Matemática',
+    keywords: ['contagem'],
+    Component: CountingBoard,
+  },
+  {
+    id: 'abo',
+    subject: 'Biologia',
+    keywords: ['imunologia'],
+    Component: BloodTypeBoard,
+  },
+  {
+    id: 'dispersoes',
+    subject: 'Química',
+    keywords: ['dispersões'],
+    Component: SolutionsBoard,
   },
 ];
 
