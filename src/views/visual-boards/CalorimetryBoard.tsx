@@ -2,6 +2,7 @@ import React from 'react';
 import BoardShell from './BoardShell';
 import { boardPair } from './pair';
 import type { BoardProps } from './types';
+import { SceneNote } from './SceneNote';
 
 /**
  * Curva de aquecimento da água, com os patamares onde a temperatura não sobe.
@@ -61,6 +62,10 @@ function HeatingScene({ emphasis }: { emphasis: 'esquerda' | 'direita' | 'nenhum
         <text x={nX(2.4)} y={nY(0) - 16} textAnchor="middle">fusão</text>
         <text x={nX(7.2)} y={nY(100) - 16} textAnchor="middle">ebulição</text>
       </g>
+
+      {/* O patamar é o ponto do capítulo: entra calor e a temperatura não sobe. */}
+      <SceneNote text="aqui T não sobe" at={[nX(7.2), nY(100)]} to={[nX(4.4), nY(126)]} align="end" />
+      <SceneNote text="aqui T sobe" at={[nX(4.6), nY(50)]} to={[nX(7.4), nY(28)]} align="start" />
 
       <text className="vs-scene-caption" x="160" y="292" textAnchor="middle">
         {focoLatente ? 'no patamar: Q = m·L · T não muda' : 'na rampa: Q = m·c·ΔT'}
