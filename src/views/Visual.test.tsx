@@ -103,7 +103,7 @@ describe('Visual aprovado', () => {
     await user.click(enviar);
 
     expect(update).toHaveBeenCalledWith(capitulo.id, expect.any(Function));
-    expect(screen.getByRole('status')).toHaveTextContent(/Você preservou/);
+    expect(screen.getByText(/Você preservou:/)).toBeInTheDocument();
   });
 
   it('prioriza relações frágeis no modo Reconstruir', async () => {
