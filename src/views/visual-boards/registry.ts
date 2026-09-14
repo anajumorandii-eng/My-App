@@ -19,6 +19,10 @@ import TrophicBoard from './TrophicBoard';
 import BondingBoard from './BondingBoard';
 import KinematicsBoard from './KinematicsBoard';
 import ProgressionBoard from './ProgressionBoard';
+import CellDivisionBoard from './CellDivisionBoard';
+import HydrostaticsBoard from './HydrostaticsBoard';
+import AcidBaseBoard from './AcidBaseBoard';
+import LogarithmBoard from './LogarithmBoard';
 
 /**
  * Quais capítulos têm prancha ilustrada, e qual.
@@ -163,6 +167,30 @@ export const BOARDS: BoardEntry[] = [
     subject: 'Matemática',
     keywords: ['sequências'],
     Component: ProgressionBoard,
+  },
+  {
+    id: 'divisao-celular',
+    subject: 'Biologia',
+    keywords: ['divisão celular'],
+    Component: CellDivisionBoard,
+  },
+  {
+    id: 'hidrostatica',
+    subject: 'Física',
+    keywords: ['hidrostática'],
+    Component: HydrostaticsBoard,
+  },
+  {
+    id: 'acido-base',
+    subject: 'Química',
+    keywords: ['ácidos e bases'],
+    Component: AcidBaseBoard,
+  },
+  {
+    id: 'logaritmos',
+    subject: 'Matemática',
+    keywords: ['logaritmos'],
+    Component: LogarithmBoard,
   },
 ];
 
