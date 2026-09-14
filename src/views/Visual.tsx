@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
-import { ArrowLeft, Compass, HelpCircle, Layers, RotateCcw, Search, Undo2, Waypoints } from 'lucide-react';
+import { ArrowLeft, Compass, HelpCircle, Layers, RotateCcw, Search, Undo2, Waypoints, X } from 'lucide-react';
 import { interactiveSummaries } from '../data/interactiveSummaries';
 import { evaluateRetrievalAnswer } from '../lib/summaryEngine';
 import { applySummaryAttempt } from '../lib/summaryStudy';
@@ -68,63 +68,133 @@ function StateBadge({ state }: { state: NodeState }) {
   );
 }
 
-function Plate({
-  map, states, selectedId, onSelect, hiddenEdgeIds,
+
+function supportsIllustratedBoard(summary: InteractiveSummary): boolean {
+  const title = [summary.subject, summary.topic, summary.title].join(' ').toLowerCase();
+  return summary.subject === 'Física' && title.includes('transformações particulares');
+}
+
+function VisualBoard({
+  map, states, selectedId, onSelect, hiddenEdgeIds, mode,
 }: {
   map: VisualMap;
   states: Record<string, NodeState>;
   selectedId: string | null;
   onSelect: (id: string) => void;
   hiddenEdgeIds: string[];
+  mode: Mode;
 }) {
-  const geometry = plateGeometry(map.nodes.length);
+  const leftNode = map.nodes[1] ?? map.nodes[0];
+  const rightNode = map.nodes[2] ?? map.nodes[map.nodes.length - 1];
+  const leftState = leftNode ? states[leftNode.id] ?? 'nao-avaliado' : 'nao-avaliado';
+  const rightState = rightNode ? states[rightNode.id] ?? 'nao-avaliado' : 'nao-avaliado';
+
   return (
-    <div className="vs-plate p-3 sm:p-4">
-      <p className="px-1 pb-2 text-xs font-bold uppercase tracking-widest" style={{ color: 'var(--vs-plate-dim)' }}>
-        {map.subject} › {map.centerLabel}
-      </p>
-      <svg viewBox={`0 0 ${PLATE_W} ${geometry.height}`} role="img" aria-label={`Mapa de relações de ${map.title}`}>
-        {map.edges.map((edge, index) => {
-          const top = geometry.nodes[index].y + NODE_H;
-          const bottom = geometry.nodes[index + 1].y;
-          const hidden = hiddenEdgeIds.includes(edge.id);
-          return (
-            <g key={edge.id} className={`vs-edge${hidden ? ' is-hidden' : ''}`}>
-              <line x1={PLATE_W / 2} y1={top} x2={PLATE_W / 2} y2={bottom} />
-              <text x={PLATE_W / 2 + 8} y={(top + bottom) / 2 + 3}>
-                {hidden ? '???' : RELATION_LABEL[edge.kind]}
-              </text>
-            </g>
-          );
-        })}
-        {map.nodes.map((node, index) => {
-          const state = states[node.id] ?? 'nao-avaliado';
-          const lines = wrapLabel(node.label);
-          const y = geometry.nodes[index].y;
-          return (
-            <g
-              key={node.id}
-              className="vs-node"
-              data-state={state}
-              role="button"
-              tabIndex={0}
-              aria-pressed={selectedId === node.id}
-              aria-label={`${node.label} — ${NODE_STATE_LABEL[state]}`}
-              onClick={() => onSelect(node.id)}
-              onKeyDown={(event) => {
-                if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); onSelect(node.id); }
-              }}
-            >
-              <rect x={30} y={y} width={PLATE_W - 60} height={NODE_H} rx={12} />
-              <text className="vs-node-stage" x={44} y={y + 19}>{STAGE_LABEL[node.stage]}</text>
-              {lines.map((line, lineIndex) => (
-                <text key={line} x={44} y={y + 38 + lineIndex * 15}>{line}</text>
-              ))}
-            </g>
-          );
-        })}
-      </svg>
-    </div>
+    <section className="vs-study-board" data-testid="visual-study-board" aria-label="Prancha ilustrada de transformação adiabática">
+      <header className="vs-board-head">
+        <div>
+          <span className="vs-board-kicker">Prancha ilustrada</span>
+          <h2>Transformação adiabática</h2>
+          <p>Quando não há troca de calor entre o sistema e o meio.</p>
+        </div>
+        <div className="vs-q-callout" aria-label="Calor igual a zero">
+          <span>condição</span>
+          <strong>Q = 0</strong>
+        </div>
+      </header>
+
+      <div className="vs-brush" aria-hidden="true" />
+
+      <div className="vs-board-body">
+        <button
+          type="button"
+          className={'vs-concept-card vs-concept-card--expansion' + (selectedId === leftNode?.id ? ' is-selected' : '')}
+          data-state={leftState}
+          onClick={() => leftNode && onSelect(leftNode.id)}
+        >
+          <span className="vs-concept-label">Expansão adiabática</span>
+          <strong>O gás realiza trabalho.</strong>
+          <span>Sem receber calor, a energia interna diminui e a temperatura tende a cair.</span>
+          <code>W &gt; 0 · ΔU &lt; 0 · ΔT &lt; 0</code>
+          <span className="vs-state-line"><span className="vs-swatch" />{NODE_STATE_LABEL[leftState]}</span>
+        </button>
+
+        <div className="vs-piston-wrap">
+          <img src="/visual/adiabatic-piston.webp" alt="Cilindro termicamente isolado com gás e pistão móvel" />
+          <div className="vs-force-note vs-force-note--up">expansão ↑</div>
+          <div className="vs-force-note vs-force-note--down">↓ compressão</div>
+        </div>
+
+        <button
+          type="button"
+          className={'vs-concept-card vs-concept-card--compression' + (selectedId === rightNode?.id ? ' is-selected' : '')}
+          data-state={rightState}
+          onClick={() => rightNode && onSelect(rightNode.id)}
+        >
+          <span className="vs-concept-label">Compressão adiabática</span>
+          <strong>O meio realiza trabalho sobre o gás.</strong>
+          <span>Sem perder calor, a energia interna aumenta e a temperatura tende a subir.</span>
+          <code>W &lt; 0 · ΔU &gt; 0 · ΔT &gt; 0</code>
+          <span className="vs-state-line"><span className="vs-swatch" />{NODE_STATE_LABEL[rightState]}</span>
+        </button>
+      </div>
+
+      <div className="vs-equation-strip" aria-label="Primeira lei aplicada à transformação adiabática">
+        <span>Primeira Lei</span>
+        <strong>ΔU = Q − W</strong>
+        <i>com Q = 0</i>
+        <strong>ΔU = −W</strong>
+      </div>
+
+      <div className="vs-support-grid">
+        <section className="vs-formula-note">
+          <span className="vs-note-title">Relações úteis</span>
+          <strong>PV<sup>γ</sup> = constante</strong>
+          <strong>TV<sup>γ−1</sup> = constante</strong>
+          <p>Para gás ideal em processo adiabático reversível.</p>
+        </section>
+
+        <figure className="vs-pv-card">
+          <figcaption>Diagrama P × V</figcaption>
+          <svg viewBox="0 0 250 150" role="img" aria-label="Curva adiabática em gráfico de pressão por volume">
+            <line x1="34" y1="12" x2="34" y2="126" />
+            <line x1="34" y1="126" x2="230" y2="126" />
+            <path d="M48 26 C75 44, 91 64, 111 79 C137 98, 166 109, 216 116" />
+            <circle cx="58" cy="34" r="4" />
+            <circle cx="206" cy="114" r="4" />
+            <text x="10" y="20">P</text>
+            <text x="226" y="145">V</text>
+            <text x="66" y="31">compressão</text>
+            <text x="145" y="104">expansão</text>
+          </svg>
+        </figure>
+      </div>
+
+      <div className="vs-context-row">
+        <section>
+          <span className="vs-note-title">O que permanece decisivo?</span>
+          <p>Não confunda “sem troca de calor” com “temperatura constante”. Na adiabática, a temperatura muda justamente porque há trabalho.</p>
+        </section>
+        <section>
+          <span className="vs-note-title">Pista de prova</span>
+          <p>Identifique primeiro quem realiza trabalho. Depois aplique a convenção de sinais e só então conclua sobre ΔU e ΔT.</p>
+        </section>
+      </div>
+
+      {mode !== 'explorar' && (
+        <div className="vs-active-mode-note" role="status">
+          <Waypoints className="h-4 w-4" aria-hidden="true" />
+          {mode === 'testar'
+            ? 'Teste ativo: responda sem consultar a prancha e use o resultado como evidência.'
+            : String(hiddenEdgeIds.length || 1) + ' conexão(ões) frágil(eis) priorizada(s) para reconstrução.'}
+        </div>
+      )}
+
+      <footer className="vs-landscape">
+        <img src="/visual/knowledge-landscape.webp" alt="" aria-hidden="true" />
+        <p><strong>Ideia central:</strong> sem calor atravessando a fronteira, trabalho e energia interna explicam a mudança do estado do gás.</p>
+      </footer>
+    </section>
   );
 }
 
@@ -206,8 +276,9 @@ function VisualLibrary({ onOpen }: { onOpen: (id: string) => void }) {
   );
 }
 
+
 function Inspector({
-  map, summary, nodeId, answers, onOpenSummary, onDisagree, disagreed,
+  map, summary, nodeId, answers, onOpenSummary, onDisagree, disagreed, onClose, onModeChange,
 }: {
   map: VisualMap;
   summary: InteractiveSummary;
@@ -216,74 +287,69 @@ function Inspector({
   onOpenSummary: (sectionId: string) => void;
   onDisagree: () => void;
   disagreed: boolean;
+  onClose: () => void;
+  onModeChange: (mode: Mode) => void;
 }) {
   const node = map.nodes.find((item) => item.id === nodeId);
-  if (!node) {
-    return (
-      <p className="rounded-2xl border border-dashed border-zinc-300 p-5 text-sm text-zinc-500 dark:border-zinc-700">
-        Selecione um nó da prancha para ver o diagnóstico que sustenta o estado dele.
-      </p>
-    );
-  }
+  if (!node) return null;
   const section = summary.sections.find((item) => item.id === node.sectionId);
+
   return (
-    <div className="space-y-4 rounded-2xl border border-zinc-200 bg-white p-5 dark:border-zinc-800 dark:bg-zinc-900">
-      <div>
-        <p className="text-xs font-bold uppercase tracking-wide text-indigo-600 dark:text-indigo-400">{STAGE_LABEL[node.stage]}</p>
-        <h3 className="mt-1 text-lg font-bold">{node.label}</h3>
+    <div className="vs-inspector" role="dialog" aria-label="Conceito selecionado">
+      <div className="vs-inspector-head">
+        <div>
+          <span>Conceito selecionado</span>
+          <h3>{node.label}</h3>
+        </div>
+        <button type="button" className="vs-icon-button" onClick={onClose} aria-label="Fechar inspetor">
+          <X aria-hidden="true" />
+        </button>
       </div>
-      <p className="text-sm leading-6 text-zinc-600 dark:text-zinc-300">{node.excerpt}</p>
+
+      <p className="vs-inspector-excerpt">{node.excerpt}</p>
+
+      <section className="vs-inspector-learning">
+        <h4>Expectativa de aprendizagem</h4>
+        <p>Reconhecer a relação entre trabalho, energia interna e a condição Q = 0 sem depender de memorização isolada.</p>
+      </section>
 
       <section>
-        <h4 className="text-xs font-bold uppercase tracking-wide text-zinc-500">Relações avaliadas neste capítulo</h4>
-        <ul className="mt-2 space-y-2">
+        <h4>Por que isso?</h4>
+        <ul className="vs-relation-list">
           {map.relations.map((relation) => {
             const why = explainRelation(relation, answers);
             return (
-              <li key={relation.id} className="rounded-xl border border-zinc-200 p-3 text-sm dark:border-zinc-800">
-                <div className="flex flex-wrap items-center justify-between gap-2">
-                  <span className="font-semibold">{displayLabel(relation.label)}</span>
+              <li key={relation.id}>
+                <div>
+                  <strong>{displayLabel(relation.label)}</strong>
                   <StateBadge state={why.state} />
                 </div>
-                <p className="mt-1.5 text-xs text-zinc-500">{CONFIDENCE_LABEL[why.confidence]} · {why.evidence.join(' ')}</p>
-                {/* Hipótese aparece como hipótese: com evidência rasa o texto diz
-                    que o diagnóstico ainda pode mudar, em vez de afirmar domínio. */}
-                {why.caveat && <p className="mt-1.5 text-xs italic text-amber-700 dark:text-amber-300">{why.caveat}</p>}
+                <p>{CONFIDENCE_LABEL[why.confidence]} · {why.evidence.join(' ')}</p>
+                {why.caveat && <p className="vs-caveat">{why.caveat}</p>}
               </li>
             );
           })}
-          {map.relations.length === 0 && (
-            <li className="text-sm text-zinc-500">Este capítulo ainda não tem pergunta de recuperação, então não há relação avaliável.</li>
-          )}
         </ul>
       </section>
 
-      <div className="flex flex-wrap gap-2">
-        <button
-          onClick={() => onOpenSummary(node.sectionId)}
-          className="rounded-xl border border-zinc-300 px-3 py-2 text-sm font-medium dark:border-zinc-700"
-        >
-          Ler a seção no resumo
-        </button>
-        <button
-          onClick={onDisagree}
-          aria-pressed={disagreed}
-          className="rounded-xl border border-zinc-300 px-3 py-2 text-sm font-medium dark:border-zinc-700"
-        >
-          Discordo deste diagnóstico
-        </button>
+      <div className="vs-inspector-actions" aria-label="Ações do conceito">
+        <button type="button" onClick={() => onOpenSummary(node.sectionId)}>Explicar</button>
+        <button type="button" onClick={() => onOpenSummary(node.sectionId)}>Comparar</button>
+        <button type="button" onClick={() => onModeChange('testar')}>Testar</button>
+        <button type="button" onClick={() => onModeChange('reconstruir')}>Reconstruir</button>
       </div>
-      {/* A IA recomenda; a estudante decide. Discordar não apaga a evidência —
-          registra que ela pede nova medida antes de aceitar o estado. */}
+
+      <button type="button" className="vs-diagnostic-button" onClick={onDisagree} aria-pressed={disagreed}>
+        {disagreed ? 'Discordância registrada' : 'Discordo deste diagnóstico'}
+      </button>
+
       {disagreed && (
-        <p role="status" className="rounded-xl bg-amber-50 p-3 text-sm text-amber-900 dark:bg-amber-950/30 dark:text-amber-200">
-          Anotado. O estado continua visível como hipótese: faça uma reconstrução em Testar ou Reconstruir
-          para produzir a evidência nova que muda o diagnóstico.
+        <p role="status" className="vs-disagree-note">
+          Anotado. O estado continua como hipótese até uma nova evidência em Testar ou Reconstruir.
         </p>
       )}
-      {section?.callout && (
-        <p className="rounded-xl bg-zinc-100 p-3 text-sm dark:bg-zinc-800">{section.callout}</p>
-      )}
+
+      {section?.callout && <p className="vs-callout">{section.callout}</p>}
     </div>
   );
 }
@@ -320,6 +386,12 @@ export default function Visual() {
     return Object.fromEntries(map.nodes.map((node) => [node.id, nodeState(node, itemProgress, relationStates)]));
   }, [map, answers, itemProgress]);
 
+  const changeMode = (next: Mode) => {
+    setMode(next);
+    setSelectedNode(null);
+    setDisagreed(false);
+  };
+
   // Trocar de capítulo tem de limpar a mesa: manter resposta e peças da anterior
   // faria a reconstrução corrigir o texto errado contra o mapa novo.
   useEffect(() => {
@@ -346,6 +418,25 @@ export default function Visual() {
       );
     }
     return <div className="crivo-visual"><VisualLibrary onOpen={(id) => setSearchParams({ summary: id })} /></div>;
+  }
+
+
+  if (!supportsIllustratedBoard(summary)) {
+    return (
+      <div className="crivo-visual">
+        <button onClick={() => setSearchParams({})} className="vs-back-button">
+          <ArrowLeft aria-hidden="true" />Voltar ao Visual
+        </button>
+        <section className="vs-unsupported" role="status">
+          <span>Prancha autoral necessária</span>
+          <h1>{summary.title}</h1>
+          <p>
+            Este capítulo ainda não possui uma prancha visual própria. O CRIVO não reutiliza uma ilustração de outro conteúdo
+            só para preencher a tela: quando não há representação fiel, a intervenção correta é aguardar a prancha específica.
+          </p>
+        </section>
+      </div>
+    );
   }
 
   const question = summary.retrieval[0] ?? null;
@@ -399,7 +490,7 @@ export default function Visual() {
 
   return (
     <div className="crivo-visual space-y-6 pb-16">
-      <button onClick={() => setSearchParams({})} className="inline-flex items-center text-sm font-medium text-indigo-700 hover:underline dark:text-indigo-300">
+      <button onClick={() => setSearchParams({})} className="vs-back-button">
         <ArrowLeft className="mr-2 h-4 w-4" />Voltar ao Visual
       </button>
 
@@ -419,13 +510,13 @@ export default function Visual() {
         )}
       </header>
 
-      <div role="tablist" aria-label="Modo de estudo" className="vs-modes flex flex-wrap gap-2">
+      <div role="tablist" aria-label="Modo de estudo" className="vs-modes">
         {(Object.keys(MODE_LABEL) as Mode[]).map((key) => (
           <button
             key={key}
             role="tab"
             aria-selected={mode === key}
-            onClick={() => setMode(key)}
+            onClick={() => changeMode(key)}
             className={`rounded-xl px-4 py-2.5 text-sm font-semibold transition ${
               mode === key ? 'bg-indigo-600 text-white' : 'border border-zinc-300 dark:border-zinc-700'
             }`}
@@ -446,15 +537,15 @@ export default function Visual() {
           {/* Intervenção mínima eficaz: aponta o elo, não manda rever o capítulo. */}
           <p className="mt-2 text-sm">{displayLabel(intervention.label)} — {intervention.why}</p>
           <p className="mt-1 text-xs uppercase tracking-wide text-zinc-500">{CONFIDENCE_LABEL[intervention.confidence]}</p>
-          <button onClick={() => setMode('reconstruir')} className="mt-3 rounded-xl bg-amber-600 px-4 py-2 text-sm font-semibold text-white">
+          <button onClick={() => changeMode('reconstruir')} className="mt-3 rounded-xl bg-amber-600 px-4 py-2 text-sm font-semibold text-white">
             {intervention.action}
           </button>
         </section>
       )}
 
-      <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_360px]">
-        <main className="space-y-5">
-          <Plate map={map} states={states} selectedId={selectedNode} onSelect={setSelectedNode} hiddenEdgeIds={hiddenEdgeIds} />
+      <div className="vs-workspace">
+        <main className="vs-main">
+          <VisualBoard map={map} states={states} selectedId={selectedNode} onSelect={setSelectedNode} hiddenEdgeIds={hiddenEdgeIds} mode={mode} />
 
           {mode === 'testar' && (
             <section className="rounded-2xl border-2 border-indigo-200 bg-white p-5 dark:border-indigo-900 dark:bg-zinc-900">
@@ -590,27 +681,22 @@ export default function Visual() {
           )}
         </main>
 
-        <aside className="space-y-4 lg:sticky lg:top-6 lg:self-start">
-          <Inspector
-            map={map}
-            summary={summary}
-            nodeId={selectedNode}
-            answers={answers}
-            disagreed={disagreed}
-            onDisagree={() => setDisagreed((value) => !value)}
-            onOpenSummary={(sectionId) => navigate(`/resumos?summary=${encodeURIComponent(summary.id)}#${sectionId}`)}
-          />
-          <div className="rounded-2xl border border-zinc-200 p-4 dark:border-zinc-800">
-            <h3 className="text-xs font-bold uppercase tracking-wide text-zinc-500">Legenda dos estados</h3>
-            <ul className="mt-2 grid grid-cols-2 gap-1.5">
-              {(Object.keys(NODE_STATE_LABEL) as NodeState[]).map((state) => (
-                <li key={state} data-state={state} className="flex items-center gap-1.5 text-xs">
-                  <span className="vs-swatch" aria-hidden="true" />{NODE_STATE_LABEL[state]}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </aside>
+
+        {selectedNode && (
+          <aside className="vs-inspector-shell">
+            <Inspector
+              map={map}
+              summary={summary}
+              nodeId={selectedNode}
+              answers={answers}
+              disagreed={disagreed}
+              onClose={() => setSelectedNode(null)}
+              onDisagree={() => setDisagreed((value) => !value)}
+              onModeChange={changeMode}
+              onOpenSummary={(sectionId) => navigate('/resumos?summary=' + encodeURIComponent(summary.id) + '#' + sectionId)}
+            />
+          </aside>
+        )}
       </div>
     </div>
   );
