@@ -11,6 +11,10 @@ import MembraneBoard from './MembraneBoard';
 import StoichiometryBoard from './StoichiometryBoard';
 import AtomModelsBoard from './AtomModelsBoard';
 import ExponentialBoard from './ExponentialBoard';
+import MendelBoard from './MendelBoard';
+import ThermochemBoard from './ThermochemBoard';
+import CircuitBoard from './CircuitBoard';
+import QuadraticBoard from './QuadraticBoard';
 
 /**
  * Quais capítulos têm prancha ilustrada, e qual.
@@ -25,6 +29,13 @@ import ExponentialBoard from './ExponentialBoard';
  * "qual delas" vêm da mesma tabela, que é também o inventário do que já foi
  * ilustrado — e o que ainda não foi continua caindo no aviso honesto, em vez
  * de receber a ilustração de outro assunto.
+ *
+ * O alvo são as quatro matérias de mecanismo — Biologia, Física, Química e
+ * Matemática, 288 dos 612 capítulos. As demais ficam de fora por decisão da
+ * Ana Júlia, e a razão é boa: "Uso da Crase" não tem fenômeno a desenhar, e
+ * uma prancha inventada para preencher a tela seria exatamente o que a regra
+ * de não reutilizar ilustração alheia existe para impedir. Elas continuam
+ * abrindo o Visual normalmente, com o aviso de prancha necessária.
  */
 export interface BoardEntry {
   /** Identificador estável; é o que os testes citam. */
@@ -100,6 +111,30 @@ export const BOARDS: BoardEntry[] = [
     subject: 'Matemática',
     keywords: ['modelo exponencial'],
     Component: ExponentialBoard,
+  },
+  {
+    id: 'mendel',
+    subject: 'Biologia',
+    keywords: ['mendel'],
+    Component: MendelBoard,
+  },
+  {
+    id: 'termoquimica',
+    subject: 'Química',
+    keywords: ['termoquímica'],
+    Component: ThermochemBoard,
+  },
+  {
+    id: 'circuitos',
+    subject: 'Física',
+    keywords: ['circuitos'],
+    Component: CircuitBoard,
+  },
+  {
+    id: 'segundo-grau',
+    subject: 'Matemática',
+    keywords: ['2º grau'],
+    Component: QuadraticBoard,
   },
 ];
 

@@ -986,3 +986,47 @@
 .vs-crossing { fill: var(--vs-amber); }
 .vs-crossing-label { fill: var(--vs-amber); font: 700 .6rem/1 ui-monospace, monospace; }
 .vs-axis-label { fill: var(--vs-dim); font: 700 .68rem/1 "Newsreader", Georgia, serif; }
+
+/* ---------- terceira leva de cenas ---------- */
+
+/* Punnett: a cor é a classe fenotípica, e é o que faz 9:3:3:1 ser contagem de
+   casas em vez de número decorado. */
+.vs-gamete { fill: var(--vs-dim); font: 700 .72rem/1 ui-monospace, monospace; }
+.vs-punnett-cell rect { stroke: var(--vs-line); stroke-width: 1.4; }
+.vs-punnett-cell text { font: 700 .72rem/1 ui-monospace, monospace; fill: var(--vs-ink); }
+.vs-punnett-cell[data-classe='dom'] rect { fill: color-mix(in srgb, var(--vs-green) 34%, transparent); }
+.vs-punnett-cell[data-classe='p1'] rect { fill: color-mix(in srgb, var(--vs-blue) 28%, transparent); }
+.vs-punnett-cell[data-classe='p2'] rect { fill: color-mix(in srgb, var(--vs-amber) 30%, transparent); }
+.vs-punnett-cell[data-classe='rec'] rect { fill: color-mix(in srgb, var(--vs-burgundy) 26%, transparent); }
+
+/* Entalpia: patamares retos e o caminho curvo que passa pela ativação. */
+.vs-level-line { stroke: var(--vs-ink); stroke-width: 3.4; stroke-linecap: round; }
+.vs-path-curve { fill: none; stroke: var(--vs-burgundy); stroke-width: 2.4; }
+.dark .vs-path-curve { stroke: #d88598; }
+.vs-level-name { fill: var(--vs-dim); font: 700 .62rem/1 ui-monospace, monospace; }
+.vs-delta line { stroke: var(--vs-blue); stroke-width: 1.8; }
+.vs-delta .vs-tick { stroke-width: 2.4; }
+.vs-delta text { fill: var(--vs-blue); font: 700 .68rem/1 ui-monospace, monospace; }
+.vs-activation line { stroke: var(--vs-amber); stroke-width: 1.8; }
+.vs-activation text { fill: var(--vs-amber); font: 700 .66rem/1 ui-monospace, monospace; }
+
+/* Circuito: fio fino e uniforme, resistor como caixa, bateria com traço longo
+   e curto — a convenção que a prova usa. */
+.vs-wire { fill: none; stroke: var(--vs-ink); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+.vs-resistor rect { fill: var(--vs-paper-strong); stroke: var(--vs-burgundy); stroke-width: 2.2; }
+.vs-resistor text { fill: var(--vs-ink); font: 700 .64rem/1 ui-monospace, monospace; }
+.dark .vs-resistor rect { stroke: #d88598; }
+.vs-battery line { stroke: var(--vs-ink); stroke-width: 3; stroke-linecap: round; }
+.vs-battery--short { stroke-width: 5 !important; }
+.vs-battery text { fill: var(--vs-dim); font: 700 .68rem/1 ui-monospace, monospace; }
+.vs-circuit-note { fill: var(--vs-dim); font: 600 .64rem/1 ui-monospace, monospace; }
+
+/* Parábola: a curva domina, raízes e vértice são marcas discretas sobre ela. */
+.vs-parabola { fill: none; stroke: var(--vs-burgundy); stroke-width: 3.2; stroke-linecap: round; }
+.dark .vs-parabola { stroke: #d88598; }
+.vs-roots circle { fill: var(--vs-green); }
+.vs-roots text { fill: var(--vs-green); font: 700 .68rem/1 ui-monospace, monospace; }
+.vs-vertex circle { fill: var(--vs-amber); }
+.vs-vertex line { stroke: var(--vs-amber); stroke-width: 1.6; }
+.vs-vertex text { fill: var(--vs-amber); font: 700 .64rem/1 ui-monospace, monospace; }
+.vs-delta-tag { fill: var(--vs-blue); font: 700 .8rem/1 ui-monospace, monospace; }
