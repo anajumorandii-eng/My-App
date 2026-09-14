@@ -4,11 +4,11 @@ self.addEventListener('push', (event) => {
   try {
     payload = event.data.json();
   } catch {
-    payload = { title: 'JUJU', body: event.data.text() };
+    payload = { title: 'Crivo', body: event.data.text() };
   }
 
   event.waitUntil(
-    self.registration.showNotification(payload.title || 'JUJU', {
+    self.registration.showNotification(payload.title || 'Crivo', {
       body: payload.body,
       data: { url: payload.url || '/' },
     })
