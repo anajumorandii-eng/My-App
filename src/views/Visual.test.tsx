@@ -4,6 +4,7 @@ import { beforeEach, describe, expect, it, vi } from 'vitest';
 import userEvent from '@testing-library/user-event';
 import { interactiveSummaries } from '../data/interactiveSummaries';
 import { buildVisualMap } from '../lib/visualStudy';
+import { getVisualArtifactKind } from '../design-system/illustrations/VisualTopicArtifact';
 import type { RetrievalAttempt, SummaryProgress, SummaryProgressMap } from '../types/summary';
 import Visual from './Visual';
 
@@ -26,6 +27,16 @@ function tentativa(matched: string[], missing: string | null): RetrievalAttempt 
 }
 
 beforeEach(() => { progress = {}; update.mockClear(); });
+
+describe('personalização do artefato por conteúdo', () => {
+  it.each([
+    ['Física', 'As Leis de Newton', 'newton-laws'],
+    ['Biologia', 'Introdução à Ecologia', 'ecology-web'],
+    ['História', 'Antiguidade Clássica: o Mundo Grego', 'timeline-strata'],
+  ])('usa uma composição própria para %s — %s', (subject, title, expected) => {
+    expect(getVisualArtifactKind(subject, title, title)).toBe(expected);
+  });
+});
 
 describe('biblioteca do Visual', () => {
   it('lista capítulos e abre o mapa do capítulo escolhido', async () => {

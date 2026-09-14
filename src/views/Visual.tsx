@@ -8,7 +8,10 @@ import { applySummaryAttempt } from '../lib/summaryStudy';
 import { useSummaryProgress } from '../hooks/useSummaryProgress';
 import { CONFIDENCE_LABEL } from '../lib/confidence';
 import { MOTION_DURATION, MOTION_EASE } from '../design-system/motion/tokens';
+import { getSubjectPalette, getSubjectProfile } from '../design-system/crivoSubjects';
 import { SubjectGlyph, StageGlyph, SUBJECT_GLYPH_BOX, STAGE_GLYPH_BOX } from '../design-system/illustrations/visualIcons';
+import { getVisualArtifactKind, VisualTopicArtifact } from '../design-system/illustrations/VisualTopicArtifact';
+import { useTheme } from '../hooks/useTheme';
 import {
   buildVisualMap, chooseHiddenRelations, explainRelation, gradeReconstruction, minimalIntervention,
   nodeState, relationEvidence, relationState, NODE_STATE_LABEL, RELATION_LABEL,
@@ -202,7 +205,13 @@ function Plate({
   const glyphSize = layout.anchor.disc * 1.5;
 
   return (
-    <div className="vs-plate">
+    <div className="vs-plate" data-has-selection={selectedId ? 'true' : undefined}>
+      <VisualTopicArtifact
+        subject={map.subject}
+        topic={map.centerLabel}
+        title={map.title}
+        active={!selectedId}
+      />
       <svg viewBox={`0 0 ${layout.width} ${layout.height}`} role="img" aria-label={`Mapa de relações de ${map.title}`}>
         {/* medalhão do conceito central: o glifo da disciplina no meio, rabiscos
             coloridos ao redor — a mesma ideia dos garranchos que cercam o título
@@ -303,6 +312,7 @@ function Plate({
               key={node.id}
               className="vs-node"
               data-state={state}
+              data-selected={selectedId === node.id ? 'true' : undefined}
               role="button"
               tabIndex={0}
               aria-pressed={selectedId === node.id}
@@ -339,6 +349,96 @@ function Plate({
         </div>
       )}
     </div>
+  );
+}
+
+/*
+ * A prancha viva organiza o conteúdo como material de estudo ilustrado. Cada
+ * seção conserva seu vínculo com o resumo e o diagnóstico, mas deixa de ser um
+ * nó abstrato numa corrente: passa a explicar uma parte do fenômeno ao redor
+ * do artefato específico do tópico.
+ */
+function LivingPlate({
+  map, states, selectedId, onSelect, hiddenEdgeIds,
+}: {
+  map: VisualMap;
+  states: Record<string, NodeState>;
+  selectedId: string | null;
+  onSelect: (id: string) => void;
+  hiddenEdgeIds: string[];
+}) {
+  const reducedMotion = useReducedMotion();
+  const artifact = getVisualArtifactKind(map.subject, map.centerLabel, map.title);
+
+  return (
+    <section className="vs-living-plate" data-artifact={artifact} data-has-selection={selectedId ? 'true' : undefined}>
+      <svg className="vs-map-semantic" role="img" aria-label={`Mapa de relações de ${map.title}`} viewBox="0 0 1 1">
+        <title>{`Mapa de relações de ${map.title}`}</title>
+      </svg>
+
+      <header className="vs-board-heading">
+        <p className="vs-kicker"><i aria-hidden="true" />{map.subject} · prancha viva</p>
+        <h2>{map.title}</h2>
+        <p>Explore o fenômeno, conecte as etapas e use o diagnóstico para decidir onde aprofundar.</p>
+      </header>
+
+      <div className="vs-board-canvas">
+        <div className="vs-board-artifact">
+          <VisualTopicArtifact subject={map.subject} topic={map.centerLabel} title={map.title} active={!selectedId} showCopy={false} />
+          <span className="vs-hand-note">{map.centerLabel}</span>
+        </div>
+
+        {map.nodes.map((node, index) => {
+          const state = states[node.id] ?? 'nao-avaliado';
+          const edgeBefore = index > 0 ? map.edges[index - 1] : null;
+          const hidden = edgeBefore ? hiddenEdgeIds.includes(edgeBefore.id) : false;
+          return (
+            <motion.button
+              type="button"
+              key={node.id}
+              className={`vs-concept-card vs-concept-card--${index + 1}`}
+              data-stage={node.stage}
+              data-state={state}
+              data-selected={selectedId === node.id ? 'true' : undefined}
+              aria-pressed={selectedId === node.id}
+              onClick={() => onSelect(node.id)}
+              initial={reducedMotion ? false : { opacity: 0, y: 14, rotate: index % 2 ? 1.2 : -1.2 }}
+              animate={{ opacity: 1, y: 0, rotate: index % 2 ? .35 : -.35 }}
+              transition={{ duration: MOTION_DURATION.component, ease: MOTION_EASE, delay: reducedMotion ? 0 : index * .055 }}
+            >
+              <span className="vs-concept-topline">
+                <span className="vs-concept-icon" aria-hidden="true">
+                  <svg viewBox={`0 0 ${STAGE_GLYPH_BOX} ${STAGE_GLYPH_BOX}`}><StageGlyph stage={node.stage} /></svg>
+                </span>
+                <span>{STAGE_LABEL[node.stage]}</span>
+                <span className="vs-concept-state"><span className="vs-swatch" aria-hidden="true" />{NODE_STATE_LABEL[state]}</span>
+              </span>
+              <strong>{node.label}</strong>
+              <small>{node.excerpt}</small>
+              {edgeBefore && <span className={`vs-relation-tag${hidden ? ' is-hidden' : ''}`}>
+                {hidden ? '? ? ?' : RELATION_LABEL[edgeBefore.kind]}
+              </span>}
+            </motion.button>
+          );
+        })}
+      </div>
+
+      <div className="vs-relationship-chain" aria-label="Sequência de relações">
+        {map.nodes.map((node, index) => <React.Fragment key={node.id}>
+          <span className="vs-chain-node">{node.label}</span>
+          {index < map.nodes.length - 1 && <span className="vs-chain-arrow" aria-hidden="true">→</span>}
+        </React.Fragment>)}
+      </div>
+
+      {map.recallPrompt && (
+        <div className="vs-keystone">
+          <Sparkles className="vs-keystone-spark" size={20} aria-hidden="true" />
+          <p className="vs-meta">Relação fundamental</p>
+          <q>{map.recallPrompt}</q>
+        </div>
+      )}
+      <p className="vs-board-instruction">Toque nos conceitos para explorar · arraste a prancha no mobile · reconstrua os elos frágeis</p>
+    </section>
   );
 }
 
@@ -475,6 +575,7 @@ function Inspector({
 
 export default function Visual() {
   const { progress, update, loading, syncError } = useSummaryProgress();
+  const { isDark } = useTheme();
   const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
   const summaryId = searchParams.get('summary');
@@ -490,6 +591,18 @@ export default function Visual() {
 
   const summary = summaryId ? interactiveSummaries.find((item) => item.id === summaryId) : undefined;
   const map = useMemo(() => (summary ? buildVisualMap(summary) : null), [summary]);
+  const subjectProfile = useMemo(() => getSubjectProfile(summary?.subject), [summary?.subject]);
+  const subjectPalette = useMemo(
+    () => getSubjectPalette(subjectProfile, isDark ? 'dark' : 'light'),
+    [isDark, subjectProfile],
+  );
+  const subjectStyle = {
+    '--primary': subjectPalette.primary,
+    '--secondary': subjectPalette.secondary,
+    '--primary-ink': subjectPalette.textAccent,
+    '--emissive': subjectPalette.emissive,
+    '--atmo-b': subjectPalette.atmoB,
+  } as React.CSSProperties;
   const itemProgress = summary ? progress[summary.id] : undefined;
   const answers = useMemo(
     () => (itemProgress?.answers ?? []).filter((attempt) => attempt.questionId === map?.questionId),
@@ -584,12 +697,12 @@ export default function Visual() {
     grade === 'correta' ? 'vs-note vs-note--right' : grade === 'parcial' ? 'vs-note vs-note--near' : 'vs-note vs-note--wrong';
 
   return (
-    <div className="crivo-visual">
+    <div className="crivo-visual" data-subject={subjectProfile.key} style={subjectStyle}>
       <button className="vs-back" onClick={() => setSearchParams({})}><ArrowLeft aria-hidden="true" size={13} />Voltar ao Visual</button>
 
       {syncError && <p role="alert" className="vs-note vs-note--near">{syncError}</p>}
 
-      <header>
+      <header className="vs-topic-context">
         <p className="vs-kicker"><i aria-hidden="true" />{summary.subject} · {summary.topic}</p>
         <h1>{summary.title}</h1>
         <p className="vs-lede">{summary.overview}</p>
@@ -607,25 +720,9 @@ export default function Visual() {
         <p className="vs-dim" style={{ margin: 0 }}>{MODE_HINT[mode]}</p>
       </div>
 
-      {intervention && (
-        <section className="vs-panel" style={{ borderColor: 'color-mix(in srgb, var(--primary) 48%, transparent)' }}>
-          <p className="vs-kicker"><i aria-hidden="true" />Intervenção mínima eficaz</p>
-          <h2 style={{ marginTop: 10 }}>Menor lacuna que explica o problema</h2>
-          {/* Aponta o elo, não manda rever o capítulo inteiro. */}
-          <p style={{ marginTop: 10 }}>{displayLabel(intervention.label)} — {intervention.why}</p>
-          <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 10, marginTop: 10 }}>
-            <StateChip state={intervention.state} />
-            <span className="vs-meta">{CONFIDENCE_LABEL[intervention.confidence]}</span>
-          </div>
-          <div className="vs-actions">
-            <button className="vs-primary" onClick={() => setMode('reconstruir')}>{intervention.action}</button>
-          </div>
-        </section>
-      )}
-
       <div className="vs-stage">
         <main style={{ display: 'grid', gap: 18, minWidth: 0 }}>
-          <Plate map={map} states={states} selectedId={selectedNode} onSelect={setSelectedNode} hiddenEdgeIds={hiddenEdgeIds} />
+          <LivingPlate map={map} states={states} selectedId={selectedNode} onSelect={setSelectedNode} hiddenEdgeIds={hiddenEdgeIds} />
 
           {/* Atalhos de intenção da proposta: a estudante diz o que quer, em vez
               de traduzir sozinha "estou perdida" num modo de estudo. */}
@@ -696,9 +793,27 @@ export default function Visual() {
                     {hidden.map((item, index) => {
                       const graded = grades[item.relationId];
                       return (
-                        <li key={item.relationId} className="vs-gap">
+                        <li
+                          key={item.relationId}
+                          className="vs-gap"
+                          data-filled={placements[item.relationId] ? 'true' : undefined}
+                          onDragOver={(event) => {
+                            if (event.dataTransfer.types.includes('text/plain')) event.preventDefault();
+                          }}
+                          onDrop={(event) => {
+                            event.preventDefault();
+                            const label = event.dataTransfer.getData('text/plain');
+                            if (bank.includes(label)) place(item.relationId, label);
+                          }}
+                        >
                           <p className="vs-meta" style={{ margin: 0 }}>Lacuna {index + 1}</p>
                           <h3 style={{ marginTop: 7 }}>Qual relação preenche este elo?</h3>
+                          <div className="vs-drop-target" aria-live="polite">
+                            <span aria-hidden="true">{placements[item.relationId] ? '✓' : '↳'}</span>
+                            {placements[item.relationId]
+                              ? displayLabel(placements[item.relationId])
+                              : 'Arraste uma relação para este espaço'}
+                          </div>
                           <div className="vs-bank">
                             {bank.map((label) => {
                               const chosen = placements[item.relationId] === label;
@@ -708,7 +823,12 @@ export default function Visual() {
                                   key={label}
                                   className="vs-ghost"
                                   disabled={takenElsewhere}
+                                  draggable={!takenElsewhere}
                                   aria-pressed={chosen}
+                                  onDragStart={(event) => {
+                                    event.dataTransfer.effectAllowed = 'move';
+                                    event.dataTransfer.setData('text/plain', label);
+                                  }}
                                   onClick={() => place(item.relationId, label)}
                                 >
                                   {displayLabel(label)}
@@ -742,6 +862,21 @@ export default function Visual() {
         </main>
 
         <aside className="vs-aside">
+          {intervention && (
+            <section className="vs-panel vs-intervention" style={{ borderColor: 'color-mix(in srgb, var(--primary) 48%, transparent)' }}>
+              <p className="vs-kicker"><i aria-hidden="true" />Intervenção mínima eficaz</p>
+              <h2 style={{ marginTop: 10 }}>Menor lacuna que explica o problema</h2>
+              {/* Aponta o elo, não manda rever o capítulo inteiro. */}
+              <p style={{ marginTop: 10 }}>{displayLabel(intervention.label)} — {intervention.why}</p>
+              <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 10, marginTop: 10 }}>
+                <StateChip state={intervention.state} />
+                <span className="vs-meta">{CONFIDENCE_LABEL[intervention.confidence]}</span>
+              </div>
+              <div className="vs-actions">
+                <button className="vs-primary" onClick={() => setMode('reconstruir')}>{intervention.action}</button>
+              </div>
+            </section>
+          )}
           <Inspector
             map={map}
             summary={summary}
