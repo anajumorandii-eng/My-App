@@ -243,6 +243,293 @@
 
 .crivo-visual .vs-plate svg { display: block; width: 100%; height: auto; }
 
+/*
+ * O assunto deixa de ser apenas um glifo minúsculo: cada prancha abre com um
+ * artefato reconhecível do tópico. O desenho continua usando a paleta da
+ * matéria, enquanto a geometria muda de verdade (pistão, hélice, arquivo,
+ * território, árvore sintática...).
+ */
+.crivo-visual .vs-topic-artifact {
+  min-height: 214px;
+  margin: 0 0 18px;
+  padding: 20px 22px;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(170px, .8fr) minmax(260px, 1.2fr);
+  align-items: center;
+  gap: 18px;
+  border: 1px solid color-mix(in srgb, var(--primary) 42%, var(--line));
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 76% 48%, color-mix(in srgb, var(--primary) 18%, transparent), transparent 38%),
+    radial-gradient(circle at 88% 30%, color-mix(in srgb, var(--secondary) 16%, transparent), transparent 24%),
+    linear-gradient(135deg, color-mix(in srgb, var(--surface) 88%, transparent), color-mix(in srgb, var(--atmo-b, #050908) 70%, transparent));
+  box-shadow: inset 0 1px rgba(255,255,255,.08), 0 24px 70px rgba(0,0,0,.2);
+}
+.crivo-visual .vs-topic-artifact::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: .24;
+  background-image:
+    linear-gradient(color-mix(in srgb, var(--primary) 30%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--primary) 30%, transparent) 1px, transparent 1px);
+  background-size: 28px 28px;
+  mask-image: linear-gradient(90deg, transparent, #000 62%);
+}
+.is-light .crivo-visual .vs-topic-artifact {
+  background:
+    radial-gradient(circle at 76% 48%, color-mix(in srgb, var(--primary) 22%, transparent), transparent 38%),
+    radial-gradient(circle at 88% 30%, color-mix(in srgb, var(--secondary) 20%, transparent), transparent 24%),
+    linear-gradient(135deg, rgba(255,253,248,.96), rgba(240,233,219,.88));
+  box-shadow: inset 0 1px #fff, 0 22px 55px rgba(44,52,45,.11);
+}
+.crivo-visual .vs-artifact-copy { display: grid; gap: 8px; align-content: center; }
+.crivo-visual .vs-artifact-copy > span {
+  color: var(--primary-ink, var(--primary));
+  font: 9px ui-monospace, SFMono-Regular, monospace;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+.crivo-visual .vs-artifact-copy > strong {
+  max-width: 320px;
+  color: var(--text);
+  font: 600 italic clamp(25px, 3vw, 39px)/.96 Newsreader, Georgia, serif;
+  letter-spacing: -.035em;
+}
+.crivo-visual .vs-artifact-copy > small {
+  max-width: 340px;
+  color: var(--dim);
+  font-size: 11px;
+  line-height: 1.45;
+}
+.crivo-visual .vs-topic-artifact svg { width: 100%; max-height: 190px; overflow: visible; }
+.crivo-visual .vs-topic-artifact figcaption {
+  position: absolute;
+  right: 14px;
+  bottom: 10px;
+  color: var(--faint);
+  font: 8px ui-monospace, SFMono-Regular, monospace;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+.crivo-visual .vs-artifact-main,
+.crivo-visual .vs-artifact-energy,
+.crivo-visual .vs-artifact-dash,
+.crivo-visual .vs-artifact-ray {
+  fill: none;
+  vector-effect: non-scaling-stroke;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.crivo-visual .vs-artifact-main { stroke: var(--primary-ink, var(--primary)); stroke-width: 2.2; }
+.crivo-visual .vs-artifact-energy { stroke: var(--secondary); stroke-width: 2.4; }
+.crivo-visual .vs-artifact-dash { stroke: color-mix(in srgb, var(--primary-ink, var(--primary)) 52%, transparent); stroke-width: 1.25; stroke-dasharray: 5 5; }
+.crivo-visual .vs-artifact-ray { stroke: var(--secondary); stroke-width: 1.45; }
+.crivo-visual .vs-artifact-soft { fill: color-mix(in srgb, var(--primary) 12%, transparent); stroke: color-mix(in srgb, var(--primary-ink, var(--primary)) 40%, transparent); stroke-width: 1; vector-effect: non-scaling-stroke; }
+.crivo-visual .vs-artifact-accent { fill: var(--secondary); color: var(--secondary); filter: drop-shadow(0 0 8px color-mix(in srgb, var(--secondary) 72%, transparent)); }
+.crivo-visual .vs-artifact-node { fill: var(--primary); stroke: var(--emissive, #fff); stroke-width: 1; vector-effect: non-scaling-stroke; }
+.crivo-visual .vs-artifact-formula { fill: var(--text); font: 10px ui-monospace, SFMono-Regular, monospace; letter-spacing: .06em; }
+
+/* Selecionar um conceito muda o foco óptico da prancha, sem esconder contexto. */
+.crivo-visual .vs-plate[data-has-selection='true'] .vs-node:not([data-selected='true']) { opacity: .42; }
+.crivo-visual .vs-node { transition: opacity .2s ease; }
+
+/* ---------- prancha viva ilustrada ---------- */
+.crivo-visual .vs-map-semantic { position: absolute; width: 1px; height: 1px; overflow: hidden; }
+.crivo-visual .vs-living-plate {
+  padding: clamp(18px, 3vw, 34px);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--primary) 38%, var(--line));
+  border-radius: 22px;
+  color: #18251f;
+  background:
+    linear-gradient(rgba(255,255,255,.42), rgba(255,255,255,.42)),
+    radial-gradient(circle at 52% 28%, color-mix(in srgb, var(--secondary) 16%, transparent), transparent 35%),
+    #fbf7ee;
+  box-shadow: 0 28px 80px rgba(34,31,23,.12), inset 0 1px #fff;
+}
+.crivo-visual .vs-living-plate::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: .23;
+  background-image: radial-gradient(rgba(55,40,25,.16) .55px, transparent .7px);
+  background-size: 6px 6px;
+  mix-blend-mode: multiply;
+}
+.dark .crivo-visual .vs-living-plate {
+  color: #f7f0e5;
+  background:
+    radial-gradient(circle at 52% 28%, color-mix(in srgb, var(--primary) 16%, transparent), transparent 36%),
+    linear-gradient(140deg, #111713, #08100d 70%);
+  box-shadow: 0 28px 80px rgba(0,0,0,.3), inset 0 1px rgba(255,255,255,.05);
+}
+.crivo-visual .vs-board-heading { position: relative; z-index: 1; max-width: 720px; margin-bottom: 25px; }
+.crivo-visual .vs-board-heading h2 {
+  width: fit-content;
+  position: relative;
+  margin-top: 10px;
+  font: 700 italic clamp(35px, 5vw, 62px)/.9 Newsreader, Georgia, serif;
+  letter-spacing: -.045em;
+}
+.crivo-visual .vs-board-heading h2::after {
+  content: '';
+  position: absolute;
+  left: 1%; right: -3%; bottom: -8px;
+  height: 8px;
+  opacity: .58;
+  border-radius: 50%;
+  background: linear-gradient(178deg, transparent 25%, var(--primary) 28% 54%, transparent 58%);
+  transform: rotate(-1deg);
+}
+.crivo-visual .vs-board-heading > p:last-child { max-width: 590px; margin: 18px 0 0; color: color-mix(in srgb, currentColor 68%, transparent); font-size: 13px; }
+.crivo-visual .vs-topic-context {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+.crivo-visual .vs-board-canvas {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(190px, 1fr) minmax(260px, 1.2fr) minmax(190px, 1fr);
+  grid-template-rows: repeat(3, minmax(126px, auto));
+  gap: 16px 18px;
+  align-items: stretch;
+}
+.crivo-visual .vs-board-artifact {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  min-height: 268px;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+.crivo-visual .vs-board-artifact .vs-topic-artifact.is-illustration-only {
+  min-height: 252px;
+  width: 100%;
+  margin: 0;
+  padding: 8px;
+  display: grid;
+  grid-template-columns: 1fr;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.crivo-visual .vs-board-artifact .vs-topic-artifact::before,
+.crivo-visual .vs-board-artifact .vs-topic-artifact figcaption { display: none; }
+.crivo-visual .vs-board-artifact .vs-topic-artifact svg { max-height: 250px; filter: drop-shadow(0 14px 20px rgba(56,43,24,.16)); }
+.crivo-visual .vs-hand-note {
+  position: absolute;
+  right: 3%;
+  bottom: 3%;
+  max-width: 160px;
+  color: var(--primary-ink, var(--primary));
+  font: 600 14px/1.25 "Segoe Print", "Comic Sans MS", cursive;
+  transform: rotate(-4deg);
+}
+.crivo-visual .vs-concept-card {
+  min-width: 0;
+  padding: 15px 16px 14px;
+  position: relative;
+  display: grid;
+  align-content: start;
+  gap: 7px;
+  border: 1.3px solid color-mix(in srgb, var(--vs-stage) 58%, transparent);
+  border-radius: 15px 18px 13px 17px;
+  background: color-mix(in srgb, var(--vs-stage) 10%, rgba(255,255,255,.68));
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(62,45,25,.06);
+}
+.dark .crivo-visual .vs-concept-card { background: color-mix(in srgb, var(--vs-stage) 12%, rgba(8,14,11,.78)); box-shadow: 0 10px 25px rgba(0,0,0,.14); }
+.crivo-visual .vs-concept-card:hover,
+.crivo-visual .vs-concept-card:focus-visible,
+.crivo-visual .vs-concept-card[data-selected='true'] {
+  outline: none;
+  border-width: 2px;
+  background: color-mix(in srgb, var(--vs-stage) 18%, rgba(255,255,255,.72));
+  box-shadow: 0 12px 30px color-mix(in srgb, var(--vs-stage) 15%, transparent);
+}
+.dark .crivo-visual .vs-concept-card:hover,
+.dark .crivo-visual .vs-concept-card:focus-visible,
+.dark .crivo-visual .vs-concept-card[data-selected='true'] { background: color-mix(in srgb, var(--vs-stage) 20%, rgba(8,14,11,.82)); }
+.crivo-visual .vs-concept-card--1 { grid-column: 1; grid-row: 1; }
+.crivo-visual .vs-concept-card--2 { grid-column: 3; grid-row: 1; }
+.crivo-visual .vs-concept-card--3 { grid-column: 1; grid-row: 2; }
+.crivo-visual .vs-concept-card--4 { grid-column: 3; grid-row: 2; }
+.crivo-visual .vs-concept-card--5 { grid-column: 1 / -1; grid-row: 3; max-width: 58%; justify-self: center; }
+.crivo-visual .vs-concept-topline { display: flex; align-items: center; gap: 6px; color: color-mix(in srgb, var(--vs-stage) 82%, currentColor); font: 700 8px ui-monospace, SFMono-Regular, monospace; letter-spacing: .13em; text-transform: uppercase; }
+.crivo-visual .vs-concept-icon { width: 15px; height: 15px; flex: none; }
+.crivo-visual .vs-concept-icon svg { width: 15px; height: 15px; }
+.crivo-visual .vs-concept-state { margin-left: auto; display: inline-flex; align-items: center; gap: 4px; color: color-mix(in srgb, currentColor 66%, transparent); font-size: 7px; white-space: nowrap; }
+.crivo-visual .vs-concept-card > strong { font: 650 19px/1.06 Newsreader, Georgia, serif; }
+.crivo-visual .vs-concept-card > small {
+  display: -webkit-box;
+  overflow: hidden;
+  color: color-mix(in srgb, currentColor 72%, transparent);
+  font-size: 11px;
+  line-height: 1.45;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
+}
+.crivo-visual .vs-relation-tag {
+  width: fit-content;
+  margin-top: auto;
+  padding: 4px 8px;
+  border-radius: 4px 9px 5px 8px;
+  background: color-mix(in srgb, var(--secondary) 18%, transparent);
+  color: color-mix(in srgb, currentColor 74%, transparent);
+  font: 600 8px "Segoe Print", "Comic Sans MS", cursive;
+  transform: rotate(-1deg);
+}
+.crivo-visual .vs-relation-tag.is-hidden { border: 1px dashed var(--vs-possivel-regressao); color: var(--vs-possivel-regressao); }
+.crivo-visual .vs-living-plate[data-has-selection='true'] .vs-concept-card:not([data-selected='true']) { opacity: .43 !important; }
+.crivo-visual .vs-relationship-chain {
+  margin-top: 22px;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 8px;
+}
+.crivo-visual .vs-relationship-chain .vs-chain-node {
+  min-width: 0;
+  padding: 10px 11px;
+  flex: 1 1 0;
+  border: 1px solid color-mix(in srgb, var(--primary) 35%, transparent);
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--primary) 7%, transparent);
+  color: inherit;
+  font: 600 10px/1.25 Newsreader, Georgia, serif;
+  text-align: center;
+}
+.crivo-visual .vs-relationship-chain .vs-chain-arrow { align-self: center; color: var(--primary-ink, var(--primary)); font: 18px "Segoe Print", cursive; }
+.crivo-visual .vs-living-plate .vs-keystone { position: relative; z-index: 1; color: inherit; }
+.crivo-visual .vs-board-instruction { margin: 18px 0 0; position: relative; z-index: 1; color: color-mix(in srgb, currentColor 58%, transparent); text-align: center; font: 9px ui-monospace, SFMono-Regular, monospace; letter-spacing: .08em; text-transform: uppercase; }
+
+/* Pequenas mudanças de composição reforçam a natureza do conteúdo. */
+.crivo-visual .vs-living-plate[data-artifact='timeline-strata'] .vs-board-artifact { grid-column: 1 / -1; grid-row: 1; min-height: 220px; }
+.crivo-visual .vs-living-plate[data-artifact='timeline-strata'] .vs-concept-card--1 { grid-column: 1; grid-row: 2; }
+.crivo-visual .vs-living-plate[data-artifact='timeline-strata'] .vs-concept-card--2 { grid-column: 2; grid-row: 2; }
+.crivo-visual .vs-living-plate[data-artifact='timeline-strata'] .vs-concept-card--3 { grid-column: 3; grid-row: 2; }
+.crivo-visual .vs-living-plate[data-artifact='timeline-strata'] .vs-concept-card--4 { grid-column: 1 / span 1; grid-row: 3; }
+.crivo-visual .vs-living-plate[data-artifact='timeline-strata'] .vs-concept-card--5 { grid-column: 2 / span 2; grid-row: 3; max-width: none; justify-self: stretch; }
+
 /* medalhão do conceito central: o glifo da disciplina fica dentro, então a cor
    que o preenche é a da própria disciplina (--primary), não a do estágio —
    ele não pertence à sequência de cinco estágios, é o que os une. */
@@ -339,8 +626,30 @@
 
 .crivo-visual .vs-gap { padding: 15px; border: 1px solid var(--line); border-radius: 13px; background: rgba(5, 9, 8, .18); }
 .is-light .crivo-visual .vs-gap { background: rgba(255, 252, 246, .6); }
+.crivo-visual .vs-gap[data-filled='true'] { border-color: color-mix(in srgb, var(--primary) 62%, transparent); }
+.crivo-visual .vs-drop-target {
+  min-height: 54px;
+  margin-top: 12px;
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1.5px dashed color-mix(in srgb, var(--primary) 55%, var(--line));
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--primary) 8%, transparent);
+  color: var(--dim);
+  font: 500 italic 14px Newsreader, Georgia, serif;
+}
+.crivo-visual .vs-gap[data-filled='true'] .vs-drop-target {
+  border-style: solid;
+  background: color-mix(in srgb, var(--primary) 16%, transparent);
+  color: var(--text);
+}
+.crivo-visual .vs-drop-target > span { color: var(--primary-ink, var(--primary)); font: 700 17px/1 Inter, sans-serif; }
 .crivo-visual .vs-bank { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 11px; }
 .crivo-visual .vs-bank button { font-family: Newsreader, Georgia, serif; font-size: 13px; letter-spacing: 0; text-transform: none; }
+.crivo-visual .vs-bank button[draggable='true'] { cursor: grab; }
+.crivo-visual .vs-bank button[draggable='true']:active { cursor: grabbing; }
 
 .crivo-visual .vs-catalog { display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); margin: 0; padding: 0; list-style: none; }
 .crivo-visual .vs-catalog button { width: 100%; padding: 16px; display: grid; gap: 4px; text-align: left; border: 1px solid var(--line); border-radius: 13px; background: linear-gradient(145deg, rgba(229, 242, 232, .06), rgba(229, 242, 232, .018)); color: var(--text); cursor: pointer; transition: border-color .2s ease, transform .2s ease; }
@@ -350,8 +659,9 @@
 
 /* ---------- composição ---------- */
 
-.crivo-visual .vs-stage { display: grid; gap: 18px; grid-template-columns: minmax(0, 1.45fr) minmax(0, .8fr); align-items: start; }
+.crivo-visual .vs-stage { display: grid; gap: 18px; grid-template-columns: minmax(0, 2.15fr) minmax(260px, .72fr); align-items: start; }
 .crivo-visual .vs-aside { display: grid; gap: 14px; position: sticky; top: 18px; }
+.crivo-visual .vs-intervention h2 { font-size: 25px; line-height: 1; }
 .crivo-visual .vs-filters { display: grid; gap: 12px; grid-template-columns: 220px minmax(0, 1fr); }
 .crivo-visual .vs-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
 
@@ -359,10 +669,37 @@
   .crivo-visual .vs-stage { grid-template-columns: 1fr; }
   .crivo-visual .vs-aside { position: static; }
   .crivo-visual .vs-filters { grid-template-columns: 1fr; }
+  .crivo-visual .vs-board-canvas { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+  .crivo-visual .vs-board-artifact,
+  .crivo-visual .vs-living-plate[data-artifact='timeline-strata'] .vs-board-artifact { grid-column: 1 / -1; grid-row: auto; min-height: 230px; }
+  .crivo-visual .vs-concept-card--1,
+  .crivo-visual .vs-concept-card--2,
+  .crivo-visual .vs-concept-card--3,
+  .crivo-visual .vs-concept-card--4,
+  .crivo-visual .vs-living-plate[data-artifact='timeline-strata'] .vs-concept-card--1,
+  .crivo-visual .vs-living-plate[data-artifact='timeline-strata'] .vs-concept-card--2,
+  .crivo-visual .vs-living-plate[data-artifact='timeline-strata'] .vs-concept-card--3,
+  .crivo-visual .vs-living-plate[data-artifact='timeline-strata'] .vs-concept-card--4 { grid-column: auto; grid-row: auto; }
+  .crivo-visual .vs-concept-card--5,
+  .crivo-visual .vs-living-plate[data-artifact='timeline-strata'] .vs-concept-card--5 { grid-column: 1 / -1; grid-row: auto; max-width: none; justify-self: stretch; }
 }
 
 @media (max-width: 560px) {
   .crivo-visual .vs-panel, .crivo-visual .vs-plate { padding: 15px; }
+  .crivo-visual .vs-topic-artifact { min-height: 330px; padding: 18px; grid-template-columns: 1fr; gap: 4px; }
+  .crivo-visual .vs-topic-artifact svg { max-height: 176px; }
+  .crivo-visual .vs-artifact-copy > strong { font-size: 28px; }
+  .crivo-visual .vs-living-plate { margin-inline: 0; padding: 18px 14px 22px; border-radius: 18px; }
+  .crivo-visual .vs-board-heading h2 { font-size: 38px; }
+  .crivo-visual .vs-board-canvas { grid-template-columns: 1fr; gap: 11px; }
+  .crivo-visual .vs-board-artifact,
+  .crivo-visual .vs-living-plate[data-artifact='timeline-strata'] .vs-board-artifact { grid-column: 1; min-height: 220px; }
+  .crivo-visual .vs-concept-card,
+  .crivo-visual .vs-concept-card--5,
+  .crivo-visual .vs-living-plate[data-artifact='timeline-strata'] .vs-concept-card--5 { grid-column: 1; min-height: 0; }
+  .crivo-visual .vs-concept-card > strong { font-size: 18px; }
+  .crivo-visual .vs-relationship-chain { padding-bottom: 7px; justify-content: flex-start; overflow-x: auto; }
+  .crivo-visual .vs-relationship-chain .vs-chain-node { min-width: 126px; flex-basis: 126px; }
   .crivo-visual .vs-legend { grid-template-columns: 1fr; }
   /* A fileira de modos rola em vez de quebrar em duas linhas e empurrar a
      prancha para fora da primeira dobra. */
@@ -371,6 +708,6 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .crivo-visual .vs-node-box, .crivo-visual .vs-catalog button { transition: none; }
+  .crivo-visual .vs-node, .crivo-visual .vs-node-box, .crivo-visual .vs-catalog button { transition: none; }
   .crivo-visual .vs-catalog button:hover { transform: none; }
 }
