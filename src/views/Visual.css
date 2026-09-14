@@ -258,16 +258,76 @@
   display: grid;
   place-items: center;
 }
-.vs-piston-wrap img {
+.vs-piston {
   display: block;
   width: min(100%, 360px);
   aspect-ratio: 1;
-  object-fit: contain;
-  filter: saturate(.94) contrast(.98);
+  overflow: visible;
 }
-.dark .vs-piston-wrap img {
-  filter: saturate(.82) brightness(.88) contrast(1.04);
-  mix-blend-mode: screen;
+
+.vs-piston-wall path,
+.vs-piston-hatch path {
+  fill: none;
+  stroke: var(--vs-ink);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.vs-piston-wall path { stroke-width: 3; }
+.vs-piston-hatch path { stroke-width: 1.6; opacity: .5; }
+
+.vs-piston-gas {
+  fill: color-mix(in srgb, var(--vs-blue) 26%, transparent);
+  /* A altura do gás é o complemento do curso do pistão: animar os dois com a
+     mesma duração evita o gás "descolar" da placa no meio da transição. */
+  transition: y .5s cubic-bezier(.4, 0, .2, 1), height .5s cubic-bezier(.4, 0, .2, 1);
+}
+
+.vs-piston-molecules circle {
+  fill: var(--vs-blue);
+  opacity: .8;
+  transition: cy .5s cubic-bezier(.4, 0, .2, 1);
+}
+
+.vs-piston-head {
+  transition: transform .5s cubic-bezier(.4, 0, .2, 1);
+}
+.vs-piston-plate { fill: var(--vs-burgundy); }
+.vs-piston-rod,
+.vs-piston-cap { fill: color-mix(in srgb, var(--vs-ink) 72%, transparent); }
+
+.vs-piston-seal circle {
+  fill: var(--vs-paper-strong);
+  stroke: var(--vs-dim);
+  stroke-width: 2;
+}
+.vs-piston-seal text {
+  fill: var(--vs-dim);
+  font: 700 .82rem/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+.vs-piston-slash {
+  stroke: var(--vs-burgundy);
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+
+/* O lado citado pelo nó selecionado ganha peso; o outro recua. Sem isso os dois
+   cartões apontariam para o mesmo desenho inerte. O seletor parte do wrapper
+   porque as legendas de força são irmãs do SVG, não filhas dele. */
+.vs-piston-wrap[data-emphasis='expansao'] .vs-force-note--up,
+.vs-piston-wrap[data-emphasis='compressao'] .vs-force-note--down {
+  opacity: 1;
+  font-weight: 800;
+}
+.vs-piston-wrap[data-emphasis='expansao'] .vs-force-note--down,
+.vs-piston-wrap[data-emphasis='compressao'] .vs-force-note--up { opacity: .34; }
+
+.vs-piston[data-emphasis='expansao'] .vs-piston-gas { fill: color-mix(in srgb, var(--vs-blue) 16%, transparent); }
+.vs-piston[data-emphasis='compressao'] .vs-piston-gas { fill: color-mix(in srgb, var(--vs-blue) 40%, transparent); }
+
+@media (prefers-reduced-motion: reduce) {
+  .vs-piston-gas,
+  .vs-piston-molecules circle,
+  .vs-piston-head { transition: none; }
 }
 .vs-force-note {
   position: absolute;
@@ -277,9 +337,20 @@
   letter-spacing: .07em;
   color: var(--vs-blue);
   text-transform: uppercase;
+  opacity: .72;
+  transition: opacity .3s ease;
+  /* Sem isto, uma legenda de duas palavras quebra em duas linhas e transborda
+     a cena — foi o que aconteceu com "o tempo todo" na prancha de bioenergética. */
+  white-space: nowrap;
 }
-.vs-force-note--up { top: 9px; }
-.vs-force-note--down { bottom: 7px; }
+@media (prefers-reduced-motion: reduce) {
+  .vs-force-note { transition: none; }
+}
+/* Alinhadas ao cartão que cada uma descreve — expansão à esquerda, compressão à
+   direita — em vez de centralizadas: no centro elas caíam sobre a haste do
+   pistão, que é justamente a peça que se move. */
+.vs-force-note--up { top: 6px; left: 26%; }
+.vs-force-note--down { bottom: 6px; left: 74%; }
 
 .vs-equation-strip {
   margin: 20px 0;
@@ -396,16 +467,19 @@
   justify-content: center;
   overflow: hidden;
 }
-.vs-landscape img {
+.vs-landscape-art {
   position: absolute;
   inset: auto 0 0 0;
   width: 100%;
   height: 128px;
-  object-fit: cover;
-  object-position: center bottom;
   opacity: .72;
 }
-.dark .vs-landscape img { opacity: .3; filter: brightness(.75) saturate(.7); }
+.dark .vs-landscape-art { opacity: .34; }
+.vs-hill { stroke: none; }
+.vs-hill--far { fill: color-mix(in srgb, var(--vs-forest) 22%, transparent); }
+.vs-hill--near { fill: color-mix(in srgb, var(--vs-forest) 38%, transparent); }
+.dark .vs-hill--far { fill: color-mix(in srgb, var(--vs-mint) 30%, transparent); }
+.dark .vs-hill--near { fill: color-mix(in srgb, var(--vs-mint) 46%, transparent); }
 .vs-landscape::after {
   content: "";
   position: absolute;
@@ -668,7 +742,7 @@
     order: -1;
     min-height: 235px;
   }
-  .vs-piston-wrap img { width: min(100%, 300px); }
+  .vs-piston { width: min(100%, 300px); }
   .vs-equation-strip {
     grid-template-columns: 1fr 1fr;
     gap: 7px 10px;
@@ -684,7 +758,7 @@
     min-height: 120px;
     margin: 10px -16px -18px;
   }
-  .vs-landscape img { height: 112px; }
+  .vs-landscape-art { height: 112px; }
   .vs-landscape p { width: calc(100% - 24px); margin-bottom: 10px; font-size: .7rem; }
   .vs-inspector-shell {
     bottom: calc(76px + env(safe-area-inset-bottom));
@@ -702,3 +776,257 @@
 @media (prefers-reduced-motion: reduce) {
   .vs-concept-card { transition: none; }
 }
+
+/* ---------- cenas das pranchas ----------
+   Cada prancha desenha o seu fenômeno, mas o traço, o eixo e as medidas seguem
+   o mesmo vocabulário: sem isso, duas pranchas abertas em sequência pareceriam
+   de aplicativos diferentes. As cores saem das mesmas variáveis do resto da
+   folha, então o tema é herdado em vez de redeclarado. */
+
+.vs-scene .vs-axis {
+  stroke: var(--vs-dim);
+  stroke-width: 1.6;
+  opacity: .75;
+}
+
+.vs-scene text { fill: var(--vs-ink); }
+.vs-scene-caption {
+  fill: var(--vs-dim);
+  font: 600 .66rem/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: .04em;
+}
+
+/* Medidas cotadas (λ, amplitude): traço fino com marcas nas pontas. */
+.vs-measure line { stroke: var(--vs-blue); stroke-width: 1.8; }
+.vs-measure .vs-tick { stroke-width: 2.2; }
+.vs-measure text {
+  fill: var(--vs-blue);
+  font: 700 .82rem/1 "Newsreader", Georgia, serif;
+}
+
+/* Ondulatória */
+.vs-wave {
+  fill: none;
+  stroke: var(--vs-burgundy);
+  stroke-width: 3.4;
+  stroke-linecap: round;
+  transition: d .5s cubic-bezier(.4, 0, .2, 1);
+}
+.dark .vs-wave { stroke: #d88598; }
+
+/* Lentes */
+.vs-lens {
+  fill: color-mix(in srgb, var(--vs-blue) 20%, transparent);
+  stroke: var(--vs-blue);
+  stroke-width: 2.4;
+}
+.vs-focus circle { fill: var(--vs-dim); }
+.vs-focus text { fill: var(--vs-dim); font: 700 .7rem/1 ui-monospace, monospace; }
+.vs-object line { stroke: var(--vs-forest); stroke-width: 3; }
+.vs-object path { fill: var(--vs-forest); }
+.dark .vs-object line { stroke: var(--vs-mint); }
+.dark .vs-object path { fill: var(--vs-mint); }
+.vs-ray {
+  fill: none;
+  stroke: var(--vs-amber);
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+.vs-ray--alt { stroke-dasharray: 6 5; }
+.vs-image line { stroke: var(--vs-burgundy); stroke-width: 3; }
+.vs-image path { fill: var(--vs-burgundy); }
+.dark .vs-image line { stroke: #d88598; }
+.dark .vs-image path { fill: #d88598; }
+
+/* Bioenergética */
+.vs-chloroplast {
+  fill: color-mix(in srgb, var(--vs-green) 24%, transparent);
+  stroke: var(--vs-green);
+  stroke-width: 2.4;
+}
+.vs-thylakoid { stroke: var(--vs-green); stroke-width: 3; stroke-linecap: round; }
+.vs-grana { fill: var(--vs-green); }
+.vs-mitochondria {
+  fill: color-mix(in srgb, var(--vs-coral) 40%, transparent);
+  stroke: var(--vs-burgundy);
+  stroke-width: 2.4;
+}
+.vs-crista { fill: none; stroke: var(--vs-burgundy); stroke-width: 2; }
+.dark .vs-crista, .dark .vs-mitochondria { stroke: #d88598; }
+.vs-organelle-name {
+  fill: var(--vs-dim);
+  font: 700 .64rem/1 ui-monospace, monospace;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.vs-sun circle { fill: var(--vs-amber); }
+.vs-sun line { stroke: var(--vs-amber); stroke-width: 2.4; stroke-linecap: round; }
+.vs-light-ray { fill: none; stroke: var(--vs-amber); stroke-width: 2.4; stroke-dasharray: 5 4; }
+/* O lado não selecionado recua, mas não some: os dois processos coexistem, e
+   apagar um deles contaria a história errada. */
+.vs-organelle[data-dim='true'], .vs-sun[data-dim='true'] { opacity: .3; }
+.vs-organelle, .vs-sun { transition: opacity .35s ease; }
+.vs-gas { font: 600 .66rem/1 ui-monospace, monospace; }
+.vs-gas--in { fill: var(--vs-blue); }
+.vs-gas--out { fill: var(--vs-green); }
+
+/* Trigonometria */
+.vs-unit-circle { fill: none; stroke: var(--vs-dim); stroke-width: 2; opacity: .8; }
+.vs-radius { stroke: var(--vs-ink); stroke-width: 2.6; transition: x2 .4s ease, y2 .4s ease; }
+.vs-point { fill: var(--vs-burgundy); transition: cx .4s ease, cy .4s ease; }
+.dark .vs-point { fill: #d88598; }
+.vs-angle-arc { fill: none; stroke: var(--vs-amber); stroke-width: 2; }
+.vs-angle-label { fill: var(--vs-amber); font: 700 .74rem/1 ui-monospace, monospace; }
+.vs-proj { stroke-width: 2.6; stroke-linecap: round; transition: x1 .4s ease, x2 .4s ease, y1 .4s ease, y2 .4s ease; }
+.vs-proj--sin { stroke: var(--vs-green); }
+.vs-proj--cos { stroke: var(--vs-blue); }
+.vs-proj--ghost { stroke-dasharray: 4 5; opacity: .55; }
+.vs-proj-label { font: 700 .7rem/1 ui-monospace, monospace; }
+.vs-proj-label--sin { fill: var(--vs-green); }
+.vs-proj-label--cos { fill: var(--vs-blue); }
+.vs-radius-label { fill: var(--vs-dim); font: 700 .7rem/1 "Newsreader", Georgia, serif; }
+
+@media (prefers-reduced-motion: reduce) {
+  .vs-wave, .vs-radius, .vs-point, .vs-proj, .vs-organelle, .vs-sun { transition: none; }
+}
+
+/* ---------- segunda leva de cenas ---------- */
+
+/* Ciclo do carbono: reservatórios como caixas, fluxos como curvas orientadas.
+   A seta fóssil usa a cor de alerta porque ela é a assimetria do ciclo, não
+   mais um fluxo entre iguais. */
+.vs-reservoir rect {
+  fill: color-mix(in srgb, var(--vs-blue) 16%, transparent);
+  stroke: var(--vs-blue);
+  stroke-width: 2.2;
+}
+.vs-reservoir--bio rect { fill: color-mix(in srgb, var(--vs-green) 20%, transparent); stroke: var(--vs-green); }
+.vs-reservoir--fossil rect { fill: color-mix(in srgb, var(--vs-dim) 16%, transparent); stroke: var(--vs-dim); }
+.vs-reservoir--fossil[data-active='true'] rect { stroke: var(--vs-burgundy); stroke-width: 3; }
+.vs-res-name { font: 700 .72rem/1 "Newsreader", Georgia, serif; }
+.vs-res-value { fill: var(--vs-dim); font: 600 .6rem/1 ui-monospace, monospace; }
+
+.vs-flow path { fill: none; stroke-width: 2.2; stroke-linecap: round; }
+.vs-flow .vs-arrow { stroke: none; }
+.vs-flow--natural path { stroke: var(--vs-green); }
+.vs-flow--natural .vs-arrow { fill: var(--vs-green); }
+.vs-flow--fossil path { stroke: var(--vs-dim); stroke-dasharray: 6 4; }
+.vs-flow--fossil .vs-arrow { fill: var(--vs-dim); }
+.vs-flow--fossil[data-active='true'] path { stroke: var(--vs-burgundy); stroke-dasharray: none; }
+.vs-flow--fossil[data-active='true'] .vs-arrow { fill: var(--vs-burgundy); }
+.vs-flow text { font: 600 .62rem/1 ui-monospace, monospace; fill: var(--vs-dim); }
+.vs-flow, .vs-reservoir { transition: opacity .3s ease; }
+
+/* Membrana: bicamada com cabeças e caudas, e as duas setas de transporte. */
+.vs-bilayer { fill: color-mix(in srgb, var(--vs-amber) 12%, transparent); }
+.vs-phospho circle { fill: var(--vs-amber); }
+.vs-phospho line { stroke: var(--vs-amber); stroke-width: 1.8; opacity: .8; }
+.vs-gradient-dots circle { fill: var(--vs-blue); opacity: .78; }
+.vs-conc-label { fill: var(--vs-dim); font: 700 1rem/1 ui-monospace, monospace; }
+.vs-transport path { fill: none; stroke-width: 2.6; stroke-linecap: round; }
+.vs-transport .vs-arrow { stroke: none; }
+.vs-transport text { font: 700 .64rem/1 ui-monospace, monospace; }
+.vs-transport--passive path { stroke: var(--vs-green); }
+.vs-transport--passive .vs-arrow { fill: var(--vs-green); }
+.vs-transport--passive text { fill: var(--vs-green); }
+.vs-transport--active path { stroke: var(--vs-burgundy); }
+.vs-transport--active .vs-arrow { fill: var(--vs-burgundy); }
+.vs-transport--active text { fill: var(--vs-burgundy); }
+.dark .vs-transport--active path { stroke: #d88598; }
+.dark .vs-transport--active .vs-arrow { fill: #d88598; }
+.dark .vs-transport--active text { fill: #d88598; }
+.vs-pump { fill: color-mix(in srgb, var(--vs-burgundy) 22%, transparent); stroke: var(--vs-burgundy); stroke-width: 2; }
+.vs-atp { fill: var(--vs-amber); font: 700 .66rem/1 ui-monospace, monospace; }
+.vs-transport[data-dim='true'] { opacity: .32; }
+.vs-transport { transition: opacity .3s ease; }
+
+/* Leis ponderais: balança e caixas de mol. */
+.vs-scale line, .vs-scale path { stroke: var(--vs-ink); stroke-width: 2.4; fill: none; stroke-linecap: round; }
+.vs-scale .vs-pan, .vs-scale .vs-base { fill: color-mix(in srgb, var(--vs-ink) 12%, transparent); }
+.vs-pan-label { fill: var(--vs-dim); font: 700 .62rem/1 ui-monospace, monospace; letter-spacing: .06em; }
+.vs-mol { stroke-width: 1.6; }
+.vs-mol--h { fill: color-mix(in srgb, var(--vs-blue) 46%, transparent); stroke: var(--vs-blue); }
+.vs-mol--o { fill: color-mix(in srgb, var(--vs-burgundy) 40%, transparent); stroke: var(--vs-burgundy); }
+.vs-mol--w { fill: color-mix(in srgb, var(--vs-green) 40%, transparent); stroke: var(--vs-green); }
+.vs-mol-label { fill: var(--vs-dim); font: 700 .6rem/1 ui-monospace, monospace; }
+.vs-excess rect { fill: color-mix(in srgb, var(--vs-amber) 24%, transparent); stroke: var(--vs-amber); stroke-width: 1.8; }
+.vs-excess text { fill: var(--vs-amber); font: 700 .6rem/1 ui-monospace, monospace; }
+.vs-equation-inline { fill: var(--vs-ink); font: 700 .78rem/1 ui-monospace, monospace; }
+
+/* Modelos atômicos: núcleo, camadas e os dois experimentos. */
+.vs-nucleus { fill: color-mix(in srgb, var(--vs-burgundy) 70%, transparent); stroke: var(--vs-burgundy); stroke-width: 2; }
+.vs-nucleus-label { fill: var(--vs-paper-strong); font: 700 .86rem/1 ui-monospace, monospace; }
+.vs-shell { fill: none; stroke: var(--vs-dim); stroke-width: 1.4; stroke-dasharray: 3 5; opacity: .7; }
+.vs-shell--quantized { stroke-dasharray: none; stroke-width: 1.8; opacity: .9; }
+.vs-electron { fill: var(--vs-blue); }
+.vs-electron--ghost { fill: none; stroke: var(--vs-blue); stroke-width: 1.8; stroke-dasharray: 3 3; }
+.vs-jump { fill: none; stroke: var(--vs-blue); stroke-width: 2.2; }
+.vs-bohr .vs-arrow { fill: var(--vs-blue); }
+.vs-level { fill: var(--vs-dim); font: 700 .6rem/1 ui-monospace, monospace; }
+.vs-photon { fill: none; stroke: var(--vs-amber); stroke-width: 2.2; }
+.vs-photon-label { fill: var(--vs-amber); font: 700 .66rem/1 ui-monospace, monospace; }
+.vs-alpha { fill: none; stroke: var(--vs-green); stroke-width: 2; }
+.vs-alpha--deflected { stroke: var(--vs-amber); }
+.vs-rutherford .vs-arrow { fill: var(--vs-green); }
+.vs-alpha-label { fill: var(--vs-green); font: 700 .7rem/1 ui-monospace, monospace; }
+
+/* Linear × exponencial. */
+.vs-curve { fill: none; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+.vs-curve--linear { stroke: var(--vs-blue); }
+.vs-curve--expo { stroke: var(--vs-burgundy); }
+.dark .vs-curve--expo { stroke: #d88598; }
+.vs-curve.is-recessed { opacity: .38; }
+.vs-curve.is-emphasized { stroke-width: 4; }
+.vs-step text { font: 700 .62rem/1 ui-monospace, monospace; }
+.vs-step--linear text { fill: var(--vs-blue); }
+.vs-step--expo text { fill: var(--vs-burgundy); }
+.dark .vs-step--expo text { fill: #d88598; }
+.vs-step[data-dim='true'] { opacity: .35; }
+.vs-step { transition: opacity .3s ease; }
+.vs-crossing { fill: var(--vs-amber); }
+.vs-crossing-label { fill: var(--vs-amber); font: 700 .6rem/1 ui-monospace, monospace; }
+.vs-axis-label { fill: var(--vs-dim); font: 700 .68rem/1 "Newsreader", Georgia, serif; }
+
+/* ---------- terceira leva de cenas ---------- */
+
+/* Punnett: a cor é a classe fenotípica, e é o que faz 9:3:3:1 ser contagem de
+   casas em vez de número decorado. */
+.vs-gamete { fill: var(--vs-dim); font: 700 .72rem/1 ui-monospace, monospace; }
+.vs-punnett-cell rect { stroke: var(--vs-line); stroke-width: 1.4; }
+.vs-punnett-cell text { font: 700 .72rem/1 ui-monospace, monospace; fill: var(--vs-ink); }
+.vs-punnett-cell[data-classe='dom'] rect { fill: color-mix(in srgb, var(--vs-green) 34%, transparent); }
+.vs-punnett-cell[data-classe='p1'] rect { fill: color-mix(in srgb, var(--vs-blue) 28%, transparent); }
+.vs-punnett-cell[data-classe='p2'] rect { fill: color-mix(in srgb, var(--vs-amber) 30%, transparent); }
+.vs-punnett-cell[data-classe='rec'] rect { fill: color-mix(in srgb, var(--vs-burgundy) 26%, transparent); }
+
+/* Entalpia: patamares retos e o caminho curvo que passa pela ativação. */
+.vs-level-line { stroke: var(--vs-ink); stroke-width: 3.4; stroke-linecap: round; }
+.vs-path-curve { fill: none; stroke: var(--vs-burgundy); stroke-width: 2.4; }
+.dark .vs-path-curve { stroke: #d88598; }
+.vs-level-name { fill: var(--vs-dim); font: 700 .62rem/1 ui-monospace, monospace; }
+.vs-delta line { stroke: var(--vs-blue); stroke-width: 1.8; }
+.vs-delta .vs-tick { stroke-width: 2.4; }
+.vs-delta text { fill: var(--vs-blue); font: 700 .68rem/1 ui-monospace, monospace; }
+.vs-activation line { stroke: var(--vs-amber); stroke-width: 1.8; }
+.vs-activation text { fill: var(--vs-amber); font: 700 .66rem/1 ui-monospace, monospace; }
+
+/* Circuito: fio fino e uniforme, resistor como caixa, bateria com traço longo
+   e curto — a convenção que a prova usa. */
+.vs-wire { fill: none; stroke: var(--vs-ink); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+.vs-resistor rect { fill: var(--vs-paper-strong); stroke: var(--vs-burgundy); stroke-width: 2.2; }
+.vs-resistor text { fill: var(--vs-ink); font: 700 .64rem/1 ui-monospace, monospace; }
+.dark .vs-resistor rect { stroke: #d88598; }
+.vs-battery line { stroke: var(--vs-ink); stroke-width: 3; stroke-linecap: round; }
+.vs-battery--short { stroke-width: 5 !important; }
+.vs-battery text { fill: var(--vs-dim); font: 700 .68rem/1 ui-monospace, monospace; }
+.vs-circuit-note { fill: var(--vs-dim); font: 600 .64rem/1 ui-monospace, monospace; }
+
+/* Parábola: a curva domina, raízes e vértice são marcas discretas sobre ela. */
+.vs-parabola { fill: none; stroke: var(--vs-burgundy); stroke-width: 3.2; stroke-linecap: round; }
+.dark .vs-parabola { stroke: #d88598; }
+.vs-roots circle { fill: var(--vs-green); }
+.vs-roots text { fill: var(--vs-green); font: 700 .68rem/1 ui-monospace, monospace; }
+.vs-vertex circle { fill: var(--vs-amber); }
+.vs-vertex line { stroke: var(--vs-amber); stroke-width: 1.6; }
+.vs-vertex text { fill: var(--vs-amber); font: 700 .64rem/1 ui-monospace, monospace; }
+.vs-delta-tag { fill: var(--vs-blue); font: 700 .8rem/1 ui-monospace, monospace; }

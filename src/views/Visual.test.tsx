@@ -103,7 +103,11 @@ describe('Visual aprovado', () => {
     await user.click(enviar);
 
     expect(update).toHaveBeenCalledWith(capitulo.id, expect.any(Function));
-    expect(screen.getByText(/Você preservou:/)).toBeInTheDocument();
+    // Pelo texto, e não por getByRole('status'): a prancha tem sete live
+    // regions e o papel sozinho não é mais único. Mas o closest() continua
+    // exigindo que o retorno esteja dentro de uma delas — sem isso, remover o
+    // role deixaria de anunciar o resultado e o teste seguiria verde.
+    expect(screen.getByText(/Você preservou:/).closest('[role="status"]')).toBeInTheDocument();
   });
 
   it('prioriza relações frágeis no modo Reconstruir', async () => {

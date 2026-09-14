@@ -23,3 +23,14 @@ provas-extraidas/
 # Cache local gerado pela auditoria das apostilas e provas.
 artifacts/content-audit/
 scripts/__pycache__/
+
+# Chaves de conta de servico do Google Cloud — o JSON que o console oferece
+# para download, com a chave RSA privada dentro. Uma delas chegou a ser anexada
+# numa conversa por engano, e uma chave dessas da acesso de escrita ao Firestore
+# com os dados da estudante. Este repositorio e publico: o custo de um
+# `git add .` distraido e alto demais para depender so de atencao.
+*service-account*.json
+*serviceaccount*.json
+gen-lang-client-*.json
+*-key.json
+credentials.json
