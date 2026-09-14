@@ -192,11 +192,21 @@ uma prancha pegasse o nó 3 e outra o último, o mesmo estado apareceria em
 posições diferentes e a leitura de cor deixaria de significar o mesmo entre
 capítulos.
 
-Alvo: **Biologia, Física, Química e Matemática** — 288 dos 612 capítulos. As
-demais matérias ficam de fora por decisão da Ana Júlia, e a razão é boa: "Uso da
-Crase" não tem fenômeno a desenhar. Elas continuam abrindo o Visual com o aviso.
+Alvo: **Biologia, Física, Química e Matemática** — 288 dos 613 capítulos de
+`interactiveSummaries` (os 612 de `deepSummaryContent.json` são outra contagem,
+não a mesma). As demais matérias ficam de fora por decisão da Ana Júlia, e a
+razão é boa: "Uso da Crase" não tem fenômeno a desenhar.
 
-Estado: 26 pranchas cobrindo 36 dos 288 capítulos.
+Estado: 26 pranchas cobrindo 38 dos 288 capítulos.
+
+**Desenhar prancha não é caminho para cobertura.** A auditoria do registro
+mostrou que 18 das 26 pranchas alcançam **exatamente um** capítulo: o currículo
+tem um capítulo por fenômeno, então a premissa de que uma prancha "continua
+valendo para o capítulo que trate do mesmo fenômeno" quase nunca se realiza.
+Alargar palavra-chave também não resolve — a varredura dos 251 capítulos do
+escopo sem prancha achou um único casamento perdido de verdade
+(`fis-termologia-calor`, já corrigido). Os outros 250, mais os 325 fora do
+escopo, precisam de outra resposta que não seja cena autoral.
 
 Ao desenhar uma prancha nova, três armadilhas já custaram retrabalho:
 

@@ -40,6 +40,17 @@ describe('registro de pranchas', () => {
     expect(new Set(ids).size).toBe(ids.length);
   });
 
+  it('leva a curva de aquecimento aos dois capítulos de calor', () => {
+    // A chave era 'calor sensível', e deixava "Calor, temperatura e mudanças de
+    // estado" — prioridade muito-alta — sem prancha nenhuma, mesmo sendo a mesma
+    // curva com os mesmos patamares. O capítulo abria o Visual só com o aviso.
+    for (const id of ['fis-termologia-calor', 'summary-fisica-calor-sensivel-e-calor-latente']) {
+      const item = interactiveSummaries.find((s) => s.id === id);
+      expect(item, `capítulo "${id}" sumiu do currículo`).toBeDefined();
+      expect(findBoard(item!)?.id).toBe('calorimetria');
+    }
+  });
+
   it('não registra prancha que nenhum capítulo alcança', () => {
     // Uma entrada cujas keywords não casam com nada é prancha escrita e nunca
     // exibida — o tipo de coisa que passa despercebida até alguém abrir a tela.
