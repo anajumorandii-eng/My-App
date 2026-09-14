@@ -6,9 +6,12 @@ Firestore para os dados da estudante.
 
 A estudante é a Ana Júlia. **O assistente de IA do app se chama CRIVO** — nunca
 JUJU, nome antigo que já foi removido de todos os prompts e telas. As únicas
-sobras de `juju_` são chaves de `localStorage` (`juju_summary_progress_v1`,
-`juju_onboarding`, `juju-essay-theme`); renomeá-las apagaria progresso real da
-estudante sem mudar nada visível, então **deixe como estão**.
+sobras de `juju_` são chaves de `localStorage` — `juju_summary_progress_v1`,
+`juju_summary_mode`, `juju_onboarding`, `juju-essay-theme`, `juju-essay-draft` e
+`juju-essay-rewrite`; renomeá-las apagaria progresso real da estudante sem mudar
+nada visível, então **deixe como estão**. A lista antes citava três das seis, o
+que era pior que não citar nenhuma: dava a entender que as outras podiam ser
+renomeadas.
 
 ## Regras que não se negociam
 
@@ -70,6 +73,20 @@ o caminho explicitamente, em vez de deixar o Playwright procurar sozinho.
 O modal de onboarding bloqueia a tela; contorne com
 `localStorage.setItem('juju_onboarding', 'true')` num `addInitScript`. iPad em
 retrato é 834×1112, em paisagem 1366×900.
+
+### O que há em `.claude/`
+
+- `hooks/session-start.sh` roda `npm install` antes de a sessão começar, só no
+  ambiente remoto. Sem ele, uma sessão na web abre sem `node_modules` e os dois
+  comandos obrigatórios **falham se passando por sucesso**: `npm run lint` morre
+  com `MODULE_NOT_FOUND` em vez de erro de tipo, e `npm test` para em
+  `tsx: not found` sem rodar um teste sequer.
+- `settings.json` registra esse hook e pré-aprova comandos de leitura (lint,
+  teste, build, `git status`, `diff`, `log`). Nada que escreva entra na lista.
+- `skills/` tem as 36 skills do projeto no formato que o Claude Code lê. Elas
+  vivem também em `.agents/skills/`, que é o formato do Codex, e
+  `skills-lock.json` continua sendo a fonte da verdade — o README de
+  `.claude/skills/` explica como manter as duas cópias iguais.
 
 ## Banco de questões
 
@@ -147,6 +164,51 @@ O mapa não é um dado novo: os nós saem das cinco seções do capítulo, as ar
 saem da sequência fixa de estágios, e as relações avaliáveis saem de
 `retrieval[0].expectedElements`. Nada disso é gravado — é derivado a cada
 render.
+
+### Pranchas ilustradas
+
+A tela só abre a prancha de um capítulo que tenha **cena autoral própria**. Quem
+não tem recebe o aviso de "prancha necessária" — e isso é escolha, não lacuna:
+reutilizar a ilustração de outro assunto para preencher a tela é o mesmo erro de
+inventar enunciado para tapar buraco (`ap_mat_fuvest_110`).
+
+Quais capítulos têm prancha, e qual, sai de `src/views/visual-boards/registry.ts`.
+Antes era uma condição solta dentro de `Visual.tsx`, que exigiria um `if` novo a
+cada conteúdo desenhado. O registro é também o inventário do que já foi
+ilustrado, e `registry.test.ts` cobre o que o tipo não pega: prancha que nenhum
+capítulo alcança (escrita e nunca exibida), prancha de uma matéria casando com
+capítulo de outra, e a recusa de emprestar ilustração alheia.
+
+**A cena é desenhada em SVG no componente, nunca um arquivo de imagem.** Não é
+preferência de estilo: `adiabatic-piston.webp` e `knowledge-landscape.webp`
+existiam, respondiam 200 e decodificavam sem erro — e tinham 100% dos pixels em
+`rgba(0,0,0,0)`. A prancha reservava 360×360 e não desenhava nada, e nenhum
+teste pegou, porque a imagem carregava. Um raster também não acompanha o tema,
+não reage ao nó selecionado e não anima, que é o que a tela precisa.
+
+`BoardShell` e `boardPair` existem para que a cena seja a única coisa que muda de
+uma prancha para outra. **O par de cartões sai sempre dos nós 1 e 2 do mapa**: se
+uma prancha pegasse o nó 3 e outra o último, o mesmo estado apareceria em
+posições diferentes e a leitura de cor deixaria de significar o mesmo entre
+capítulos.
+
+Alvo: **Biologia, Física, Química e Matemática** — 288 dos 612 capítulos. As
+demais matérias ficam de fora por decisão da Ana Júlia, e a razão é boa: "Uso da
+Crase" não tem fenômeno a desenhar. Elas continuam abrindo o Visual com o aviso.
+
+Estado: 26 pranchas cobrindo 36 dos 288 capítulos.
+
+Ao desenhar uma prancha nova, três armadilhas já custaram retrabalho:
+
+- **Confira no navegador, não só no teste.** Cinco defeitos desta série passaram
+  por lint e testes verdes e só apareceram na captura: legenda sobre a haste do
+  pistão, punho saindo do viewBox, texto de duas palavras transbordando a cena,
+  rótulos de gráfico disputando o mesmo pedaço do quadro, e o balão da condição
+  vazando com valor de mais de dez caracteres.
+- **Legenda curta.** `sceneNotes` e `condition.value` são espaços apertados; o
+  CSS hoje quebra e reduz em vez de estourar, mas texto curto continua melhor.
+- **Anime peça única com um só `translate`.** Placa, haste e punho do pistão
+  animados em separado descolavam no meio da transição.
 
 **A evidência é a mesma do Caderno de Erros.** Testar e Reconstruir passam por
 `evaluateRetrievalAnswer` + `applySummaryAttempt`, exatamente como a recuperação
