@@ -8,8 +8,8 @@
  */
 import { chromium } from '@playwright/test';
 import fs from 'node:fs/promises';
-import { interactiveSummaries } from './src/data/interactiveSummaries';
-import { BOARDS, findBoard } from './src/views/visual-boards/registry';
+import { interactiveSummaries } from '../src/data/interactiveSummaries';
+import { BOARDS, findBoard } from '../src/views/visual-boards/registry';
 
 const base = 'http://localhost:3000';
 const exe = '/opt/pw-browsers/chromium-1194/chrome-linux/chrome';
