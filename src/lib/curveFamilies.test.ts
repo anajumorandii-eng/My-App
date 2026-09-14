@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { FAMILIES, samplePoints, num, type FamilyId } from './curveFamilies';
+import { FAMILIES, primeiraRaiz, samplePoints, num, type FamilyId } from './curveFamilies';
 
 const IDS = Object.keys(FAMILIES) as FamilyId[];
 
@@ -104,4 +104,54 @@ test('a cúbica nunca fica sem raiz real', () => {
       assert.doesNotMatch(raizes, /nenhuma/, `grau ímpar sem raiz real em a=${a}, b=${b}`);
     }
   }
+});
+
+test('a anotação da parábola segue o vértice e some com a raiz', () => {
+  const q = FAMILIES.quadratica;
+  const textos = (a: number, c: number) => q.annotations(a, c).map((n) => n.text);
+
+  // Vértice abaixo do eixo: existe raiz, e a seta aponta para ela.
+  assert.deepEqual(textos(1, -3), ['vértice', 'raiz']);
+  const raiz = q.annotations(1, -3).find((n) => n.text === 'raiz')!;
+  assert.ok(Math.abs(q.f(raiz.x, 1, -3)!) < 1e-9, 'a seta da raiz não aterrissa no eixo');
+
+  // Vértice acima: a anotação troca de texto em vez de apontar para o vazio.
+  assert.deepEqual(textos(1, 3), ['vértice', 'não cruza o eixo']);
+
+  // O rótulo do vértice acompanha o parâmetro.
+  assert.equal(q.annotations(1, -3).find((n) => n.text === 'vértice')!.y, -3);
+  assert.equal(q.annotations(1, 2.5).find((n) => n.text === 'vértice')!.y, 2.5);
+});
+
+test('a anotação da reta some quando a inclinação zera', () => {
+  const a = FAMILIES.afim;
+  assert.ok(a.annotations(1, -2).some((n) => n.text === 'raiz'));
+  // Sem inclinação não há raiz: apontar para uma seria mentir sobre a curva.
+  assert.ok(!a.annotations(0, 2).some((n) => n.text === 'raiz'));
+});
+
+test('toda anotação aponta para um ponto que existe na curva', () => {
+  for (const id of IDS) {
+    const f = FAMILIES[id];
+    const [pa, pb] = f.params;
+    for (const nota of f.annotations(pa.initial, pb.initial)) {
+      assert.ok(Number.isFinite(nota.x) && Number.isFinite(nota.y), `${id}: âncora não numérica em "${nota.text}"`);
+      assert.ok(
+        nota.x >= f.domain.min - 0.01 && nota.x <= f.domain.max + 0.01,
+        `${id}: âncora de "${nota.text}" fora do domínio desenhado (x = ${nota.x})`,
+      );
+      // Legenda curta: o espaço entre a curva e a borda não perdoa.
+      assert.ok(nota.text.length <= 22, `${id}: legenda longa demais — "${nota.text}"`);
+    }
+  }
+});
+
+test('a raiz da cúbica é encontrada de verdade', () => {
+  // x³ − 3x tem raízes em −√3, 0 e √3; a varredura deve achar a primeira.
+  const raiz = primeiraRaiz((x) => x * x * x - 3 * x, -3.2, 3.2);
+  assert.ok(raiz !== null, 'não achou raiz onde existem três');
+  assert.ok(Math.abs(raiz! + Math.sqrt(3)) < 1e-6, `esperava −√3, veio ${raiz}`);
+
+  // Sem troca de sinal no intervalo, devolve null em vez de chutar.
+  assert.equal(primeiraRaiz((x) => x * x + 1, -3, 3), null);
 });

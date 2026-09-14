@@ -36,6 +36,27 @@ export interface Readout {
   pivot?: boolean;
 }
 
+/**
+ * Rótulo manuscrito com seta apontando para um ponto da curva.
+ *
+ * É o que separa um gráfico de uma prancha: a referência que a Ana Júlia
+ * aprovou não rotula os eixos, rotula os *achados* — "vértice", "raiz", "nunca
+ * toca o eixo" — com a letra à mão e uma seta curva até o ponto. Aqui o ponto é
+ * calculado a partir dos parâmetros, então a anotação anda junto: subir o
+ * vértice move o rótulo do vértice, e quando a raiz deixa de existir o texto
+ * passa a dizer isso em vez de apontar para um lugar vazio.
+ */
+export interface Annotation {
+  /** Curto. O espaço entre a curva e a borda não perdoa. */
+  text: string;
+  /** Ponto da curva que a seta toca, em coordenadas do plano. */
+  x: number;
+  y: number;
+  /** Deslocamento do rótulo em relação ao ponto, nas mesmas unidades. */
+  dx: number;
+  dy: number;
+}
+
 export interface Family {
   id: FamilyId;
   name: string;
@@ -50,6 +71,8 @@ export interface Family {
   /** `null` onde a função não existe — a curva quebra em vez de inventar ponto. */
   f(x: number, a: number, b: number): number | null;
   readouts(a: number, b: number): Readout[];
+  /** Rótulos manuscritos, recalculados a cada mexida nos controles. */
+  annotations(a: number, b: number): Annotation[];
   /** O que a manipulação ensina. Vira o fecho da prancha. */
   insight: string;
 }
@@ -84,6 +107,40 @@ function parcela(value: number, sufixo = ''): string {
   return `${sinal}${corpo}`;
 }
 
+/**
+ * Primeira raiz real dentro do intervalo, por varredura e bisseção.
+ *
+ * A cúbica não tem forma fechada que compense; e a anotação precisa apontar para
+ * onde a curva cruza de fato, senão a seta aterrissa no vazio quando os
+ * coeficientes mudam.
+ */
+export function primeiraRaiz(
+  f: (x: number) => number | null,
+  min: number,
+  max: number,
+  passos = 200,
+): number | null {
+  let anterior = f(min);
+  for (let i = 1; i <= passos; i += 1) {
+    const x = min + ((max - min) * i) / passos;
+    const atual = f(x);
+    if (anterior !== null && atual !== null && anterior !== 0 && anterior * atual < 0) {
+      let lo = min + ((max - min) * (i - 1)) / passos;
+      let hi = x;
+      for (let k = 0; k < 40; k += 1) {
+        const meio = (lo + hi) / 2;
+        const v = f(meio);
+        if (v === null) break;
+        if ((f(lo) ?? 0) * v <= 0) hi = meio; else lo = meio;
+      }
+      return (lo + hi) / 2;
+    }
+    if (atual === 0) return x;
+    anterior = atual;
+  }
+  return null;
+}
+
 export const FAMILIES: Record<FamilyId, Family> = {
   afim: {
     id: 'afim',
@@ -109,6 +166,15 @@ export const FAMILIES: Record<FamilyId, Family> = {
         value: a === 0 ? (b === 0 ? 'toda reta' : 'nenhuma') : `x = ${num(-b / a)}`,
       },
     ],
+    annotations: (a, b) => {
+      const marcas: Annotation[] = [{ text: 'corta y aqui', x: 0, y: b, dx: 1.6, dy: 1.6 }];
+      if (a === 0) marcas.push({ text: 'sem raiz: reta deitada', x: 3, y: b, dx: -0.6, dy: -2.2 });
+      else {
+        const raiz = -b / a;
+        if (raiz > -5.4 && raiz < 5.4) marcas.push({ text: 'raiz', x: raiz, y: 0, dx: 0.5, dy: -2.1 });
+      }
+      return marcas;
+    },
     insight:
       'o sinal de a decide se cresce ou decresce, e b decide onde a reta corta o eixo y — a raiz não é um terceiro dado, é a consequência dos dois. Zere a inclinação e veja a raiz desaparecer.',
   },
@@ -135,6 +201,22 @@ export const FAMILIES: Record<FamilyId, Family> = {
         { label: 'discriminante Δ = −4ac', value: num(delta) },
         { label: 'raízes reais', value: raizes, pivot: true },
       ];
+    },
+    annotations: (a, c) => {
+      const marcas: Annotation[] = [{ text: 'vértice', x: 0, y: c, dx: -2.4, dy: -1.9 }];
+      if (a !== 0 && -c / a > 0) {
+        const raiz = Math.sqrt(-c / a);
+        // Para a direita e para baixo do ponto: acima da raiz sobe o braço da
+        // parábola, e o rótulo encostava nele.
+        if (raiz < 4.6) marcas.push({ text: 'raiz', x: raiz, y: 0, dx: 1.4, dy: 1.7 });
+      } else if (a !== 0) {
+        // Ancorar no vértice e jogar o rótulo para o lado vazio: quando a
+        // parábola não cruza o eixo, ela está inteira de um lado dele, e o outro
+        // lado é o único pedaço do quadro garantidamente livre. A primeira
+        // versão punha o rótulo em x = 2,2 e ele caía em cima do braço da curva.
+        marcas.push({ text: 'não cruza o eixo', x: 0, y: c, dx: 2.7, dy: a > 0 ? -4.6 : 4.6 });
+      }
+      return marcas;
     },
     insight:
       'raiz é onde a parábola cruza o eixo x, então ela só existe quando o vértice e a concavidade apontam para lados opostos. Mova o vértice através do zero e veja Δ trocar de sinal junto com o número de raízes.',
@@ -165,6 +247,12 @@ export const FAMILIES: Record<FamilyId, Family> = {
         { label: 'dobra em', value: dobra === null ? 'nunca dobra' : `${num(dobra)} passos` },
       ];
     },
+    annotations: (a, b) => {
+      const marcas: Annotation[] = [{ text: 'f(0) = a', x: 0, y: a, dx: -1.5, dy: 1.9 }];
+      if (b > 1) marcas.push({ text: 'nunca toca o eixo', x: -3, y: a * Math.pow(b, -3), dx: 0.35, dy: 1.7 });
+      else if (b < 1) marcas.push({ text: 'decresce, mas não zera', x: 3, y: a * Math.pow(b, 3), dx: -1.1, dy: 1.7 });
+      return marcas;
+    },
     insight:
       'a cada passo de x a função multiplica por b, não soma — por isso o tempo de duplicação é sempre o mesmo, não importa de onde se comece. É a diferença entre juros compostos e juros simples.',
   },
@@ -187,6 +275,10 @@ export const FAMILIES: Record<FamilyId, Family> = {
       { label: `f(${num(b)})`, value: num(a) },
       { label: 'assíntota', value: 'vertical em x = 0' },
     ],
+    annotations: (a, b) => [
+      { text: 'f(1) = 0', x: 1, y: 0, dx: 1.1, dy: -1.7 },
+      { text: 'assíntota', x: 0.14, y: (a * Math.log(0.14)) / Math.log(b), dx: 1.8, dy: 0.9 },
+    ],
     insight:
       'o logaritmo responde "a que expoente elevo a base para chegar aqui" — por isso f(1) = 0 em toda base, e por isso a curva nunca alcança x = 0: não existe expoente que leve a base a zero.',
   },
@@ -208,6 +300,16 @@ export const FAMILIES: Record<FamilyId, Family> = {
       { label: 'período', value: b === 0 ? '—' : `${num((2 * Math.PI) / b)} ≈ 2π/${num(b)}`, pivot: true },
       { label: 'imagem', value: `[−${num(Math.abs(a))}, ${num(Math.abs(a))}]` },
     ],
+    annotations: (a, b) => {
+      const pico = Math.PI / (2 * b);
+      const marcas: Annotation[] = [];
+      if (pico < 5.8) marcas.push({ text: 'amplitude', x: pico, y: a, dx: 0.8, dy: 0.7 });
+      // 2π ≈ 6,28 e o domínio vai a 6,5: o limite antigo, 5,8, cortava justo o
+      // período do valor padrão, que é a anotação mais útil da família.
+      const periodo = (2 * Math.PI) / b;
+      if (periodo <= 6.4) marcas.push({ text: 'um período', x: periodo, y: 0, dx: -0.9, dy: -1.4 });
+      return marcas;
+    },
     insight:
       'a estica na vertical e b comprime na horizontal — mexer em um não altera o outro. Amplitude e período são grandezas independentes, e é aí que a maioria dos erros de gráfico trigonométrico começa.',
   },
@@ -229,6 +331,14 @@ export const FAMILIES: Record<FamilyId, Family> = {
       { label: 'imagem', value: 'f(x) ≥ 0', pivot: true },
       { label: 'abre em', value: 'dois ramos' },
     ],
+    annotations: (a, b) => {
+      if (a === 0) return [{ text: 'sem V: valor fixo', x: 2, y: Math.abs(b), dx: 0.4, dy: 1.6 }];
+      const vertice = -b / a;
+      const marcas: Annotation[] = [];
+      if (vertice > -5.2 && vertice < 5.2) marcas.push({ text: 'vértice do V', x: vertice, y: 0, dx: 0.6, dy: 2.1 });
+      marcas.push({ text: 'nunca desce de zero', x: -4.4, y: Math.abs(a * -4.4 + b), dx: 0.5, dy: 1.5 });
+      return marcas;
+    },
     insight:
       'o módulo espelha para cima tudo que estava abaixo do eixo — e é exatamente por isso que resolver |ax + b| = k vira dois casos, um para cada ramo do V.',
   },
@@ -255,6 +365,13 @@ export const FAMILIES: Record<FamilyId, Family> = {
         { label: 'raízes', value: raizes, pivot: true },
         { label: 'extremos', value: 'vai de −∞ a +∞' },
       ];
+    },
+    annotations: (a, b) => {
+      const raiz = primeiraRaiz((x) => x * x * x + a * x + b, -3.2, 3.2);
+      const marcas: Annotation[] = [];
+      if (raiz !== null) marcas.push({ text: 'raiz real', x: raiz, y: 0, dx: 0.35, dy: 3.4 });
+      marcas.push({ text: 'sobe sem parar', x: 2.7, y: 2.7 ** 3 + a * 2.7 + b, dx: -1.5, dy: -2.6 });
+      return marcas;
     },
     insight:
       'grau ímpar leva a função de −∞ a +∞, então ela obrigatoriamente cruza o eixo x pelo menos uma vez. Mexa nos coeficientes: o número de raízes muda entre uma e três, mas nunca chega a zero.',

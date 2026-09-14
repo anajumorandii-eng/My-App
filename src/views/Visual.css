@@ -1330,3 +1330,78 @@
 @media (max-width: 900px) {
   .vs-plane-readouts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
+
+/* Anotação manuscrita sobre o plano: rótulo afastado, seta curva até o ponto.
+   A Kalam agora é carregada de verdade no index.html — antes estava declarada
+   aqui e caía calada no Newsreader, que é por que a prancha saía com cara de
+   jornal em vez de caderno. */
+.vs-plane-note text {
+  fill: var(--vs-burgundy);
+  font-family: "Kalam", "Newsreader", Georgia, serif;
+  font-size: 11px;
+  font-weight: 700;
+}
+.vs-plane-arrow {
+  fill: none;
+  stroke: var(--vs-burgundy);
+  stroke-width: 1.1;
+  stroke-linecap: round;
+  opacity: 0.6;
+}
+.vs-plane-anchor { fill: var(--vs-burgundy); }
+
+/* A cadeia de conceitos: a sequência de estágios do capítulo, com o estado de
+   cada elo lido da mesma evidência do Caderno de Erros. */
+.vs-chain {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.vs-chain li { display: flex; align-items: center; gap: 6px; min-width: 0; flex: 1 1 150px; }
+.vs-chain-arrow { color: var(--vs-dim); flex: none; }
+.vs-chain-link {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 9px 11px;
+  text-align: left;
+  border: 1px solid var(--vs-line);
+  border-left: 3px solid var(--vs-nao-avaliado);
+  border-radius: 9px;
+  background: var(--vs-paper-strong);
+  color: var(--vs-ink);
+}
+.vs-chain-link[data-state="reconhece"] { border-left-color: var(--vs-reconhece); }
+.vs-chain-link[data-state="compreende"] { border-left-color: var(--vs-compreende); }
+.vs-chain-link[data-state="aplicacao-instavel"] { border-left-color: var(--vs-aplicacao-instavel); }
+.vs-chain-link[data-state="aplica"] { border-left-color: var(--vs-aplica); }
+.vs-chain-link[data-state="transfere"] { border-left-color: var(--vs-transfere); }
+.vs-chain-link[data-state="possivel-regressao"] { border-left-color: var(--vs-possivel-regressao); }
+.vs-chain-link.is-selected { box-shadow: 0 0 0 2px var(--vs-burgundy); }
+.vs-chain-stage {
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--vs-dim);
+}
+.vs-chain-link strong {
+  font-size: 0.83rem;
+  line-height: 1.25;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+.vs-chain-state { display: flex; align-items: center; gap: 5px; font-size: 0.68rem; color: var(--vs-dim); }
+
+@media (max-width: 900px) {
+  /* Em coluna, a seta entre elos vira indicação de descida e atrapalha mais do
+     que informa: a ordem já está na leitura de cima para baixo. */
+  .vs-chain { flex-direction: column; }
+  .vs-chain-arrow { display: none; }
+}

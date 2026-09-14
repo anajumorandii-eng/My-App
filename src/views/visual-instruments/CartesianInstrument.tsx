@@ -4,6 +4,7 @@ import { boardPair } from '../visual-boards/pair';
 import { STAGE_LABEL } from '../../lib/visualStudy';
 import type { BoardProps } from '../visual-boards/types';
 import { FAMILIES, num, samplePoints, type Family, type FamilyId } from '../../lib/curveFamilies';
+import { NODE_STATE_LABEL, type NodeState } from '../../lib/visualStudy';
 
 /**
  * Plano cartesiano com dois parâmetros que a estudante move.
@@ -116,6 +117,34 @@ function PlanoCartesiano({
         <path key={i} className="vs-plane-curve" d={d} />
       ))}
 
+      {/* Anotações manuscritas: o rótulo fica afastado do ponto e uma seta curva
+          faz a ligação, como na prancha de referência. O rótulo é preso dentro
+          da moldura porque o texto cresce para os dois lados do âncora e, sem
+          limite, "nunca desce de zero" saía pela borda em parâmetro extremo. */}
+      {family.annotations(a, b).map((nota) => {
+        const ax = paraTelaX(nota.x);
+        const ay = paraTelaY(nota.y);
+        if (!Number.isFinite(ax) || !Number.isFinite(ay)) return null;
+        const larguraTexto = nota.text.length * 4.6;
+        const bruto = paraTelaX(nota.x + nota.dx);
+        const lx = Math.min(
+          LARGURA - MARGEM.direita - larguraTexto / 2,
+          Math.max(MARGEM.esquerda + larguraTexto / 2, bruto),
+        );
+        const ly = Math.min(ALTURA - MARGEM.base - 6, Math.max(MARGEM.topo + 10, paraTelaY(nota.y + nota.dy)));
+        // Controle da curva deslocado na perpendicular, senão a "seta" sai reta.
+        const cx = (ax + lx) / 2 + (ay - ly) * 0.22;
+        const cy = (ay + ly) / 2 + (lx - ax) * 0.22;
+        const alvoY = ly < ay ? ly + 4 : ly - 9;
+        return (
+          <g className="vs-plane-note" key={nota.text}>
+            <path className="vs-plane-arrow" d={`M${lx.toFixed(1)} ${alvoY.toFixed(1)} Q${cx.toFixed(1)} ${cy.toFixed(1)} ${ax.toFixed(1)} ${ay.toFixed(1)}`} />
+            <circle className="vs-plane-anchor" cx={ax} cy={ay} r="3" />
+            <text x={lx.toFixed(1)} y={ly.toFixed(1)} textAnchor="middle">{nota.text}</text>
+          </g>
+        );
+      })}
+
       <text className="vs-plane-expression" x={LARGURA - MARGEM.direita} y={ALTURA - 8} textAnchor="end">
         {family.expression(a, b)}
       </text>
@@ -141,6 +170,42 @@ function resumir(texto: string | undefined, limite = 190): string {
   const cortado = primeira.slice(0, limite);
   const espaco = cortado.lastIndexOf(' ');
   return `${(espaco > 60 ? cortado.slice(0, espaco) : cortado).trimEnd()}…`;
+}
+
+/**
+ * A cadeia de conceitos do capítulo, em fileira, com o estado de cada elo.
+ *
+ * A referência traz isso como "Q = 0 → Trabalho → Energia interna → Temperatura":
+ * a sequência que liga a condição ao que se observa. No Crivo essa sequência já
+ * existe e não precisa ser inventada — são os cinco nós do mapa, na ordem fixa
+ * de estágios. Desenhá-la aqui é mostrar o que o dado já diz, e cada elo carrega
+ * a cor do estado que a evidência do Caderno de Erros produziu.
+ */
+function CadeiaDeConceitos({
+  map, states, selectedId, onSelect,
+}: Pick<BoardProps, 'map' | 'states' | 'selectedId' | 'onSelect'>) {
+  return (
+    <ol className="vs-chain" aria-label="Cadeia de conceitos do capítulo">
+      {map.nodes.map((no, i) => {
+        const estado: NodeState = states[no.id] ?? 'nao-avaliado';
+        return (
+          <li key={no.id}>
+            {i > 0 && <span className="vs-chain-arrow" aria-hidden="true">→</span>}
+            <button
+              type="button"
+              className={`vs-chain-link${selectedId === no.id ? ' is-selected' : ''}`}
+              data-state={estado}
+              onClick={() => onSelect(no.id)}
+            >
+              <span className="vs-chain-stage">{STAGE_LABEL[no.stage]}</span>
+              <strong>{no.label}</strong>
+              <span className="vs-chain-state"><span className="vs-swatch" aria-hidden="true" />{NODE_STATE_LABEL[estado]}</span>
+            </button>
+          </li>
+        );
+      })}
+    </ol>
+  );
 }
 
 export function cartesianInstrument(familyId: FamilyId) {
@@ -221,6 +286,7 @@ export function cartesianInstrument(familyId: FamilyId) {
           detail: resumir(noSegundo?.excerpt),
           formula: `${family.params[1].symbol} = ${num(b)}`,
         }}
+        supports={<CadeiaDeConceitos map={props.map} states={props.states} selectedId={props.selectedId} onSelect={props.onSelect} />}
         leftState={par.leftState}
         rightState={par.rightState}
         leftSelected={par.leftSelected}
