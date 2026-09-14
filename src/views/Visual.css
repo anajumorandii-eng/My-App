@@ -1588,3 +1588,20 @@
   font-variant-numeric: tabular-nums;
 }
 .vs-viewport-dica { flex: 1; min-width: 0; text-align: right; overflow-wrap: anywhere; }
+
+/* O elo que o diagnóstico escondeu, marcado na própria cadeia: ver onde está o
+   buraco vale mais que ler a lacuna numa lista embaixo da prancha. A resposta
+   continua sendo dada no formulário de reconstrução — dois caminhos de resposta
+   fariam o mapa e o Caderno discordarem sobre a mesma aluna. */
+.vs-chain-arrow.is-oculto {
+  font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
+  font-weight: 700;
+  color: var(--vs-amber);
+}
+.vs-chain-link.is-oculto {
+  border-style: dashed;
+  border-color: var(--vs-amber);
+  border-left-style: solid;
+  background: color-mix(in srgb, var(--vs-amber) 9%, var(--vs-paper-strong));
+}
+.vs-chain-link.is-oculto .vs-chain-state { color: var(--vs-amber); font-weight: 600; }

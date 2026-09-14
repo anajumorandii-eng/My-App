@@ -15,6 +15,7 @@ import {
 import type { InteractiveSummary, RetrievalAttempt } from '../types/summary';
 import { findBoard, supportsIllustratedBoard } from './visual-boards/registry';
 import { findInstrument } from './visual-instruments/registry';
+import { ConceptChain } from './ConceptChain';
 import './Visual.css';
 
 type Mode = 'explorar' | 'testar' | 'reconstruir';
@@ -468,6 +469,15 @@ export default function Visual() {
               </p>
             </section>
           )}
+
+          <ConceptChain
+            map={map}
+            states={states}
+            selectedId={selectedNode}
+            onSelect={setSelectedNode}
+            hiddenEdgeIds={hiddenEdgeIds}
+            escondendo={mode === 'reconstruir'}
+          />
 
           {/* Quantas conexões o diagnóstico escondeu. Vivia dentro da prancha
               adiabática — a única das 26 que não usava o BoardShell —, então

@@ -131,7 +131,9 @@ estágio pedagógico e profundidade a cada seção, na ordem
 
 **Os arrays `stages` e `depths` têm 5 posições.** Um capítulo com mais de 5
 seções sairia com estágio `undefined`; mexer no número de seções exige mexer
-nesse mapeamento também.
+nesse mapeamento também. Hoje **um** capítulo tem 6 seções e 612 têm 5 — e
+nenhum nó ficou sem estágio, então o risco não se materializou. Mas teste que
+fixa "5 nós" em vez de contar os nós do capítulo quebra nesse um.
 
 ### Aprofundamento em curso
 
@@ -202,7 +204,9 @@ Alvo: **Biologia, Física, Química e Matemática** — 288 dos 613 capítulos d
 não a mesma). As demais matérias ficam de fora por decisão da Ana Júlia, e a
 razão é boa: "Uso da Crase" não tem fenômeno a desenhar.
 
-Estado: 26 pranchas cobrindo 38 dos 288 capítulos.
+Estado: 26 pranchas cobrindo 38 dos 288 capítulos. **Todas usam o `BoardShell`** —
+a `AdiabaticBoard` era a última que não usava, escrita antes da casca existir, e
+por isso não recebia nenhuma melhoria feita nela.
 
 **Desenhar prancha não é caminho para cobertura.** A auditoria do registro
 mostrou que 18 das 26 pranchas alcançam **exatamente um** capítulo: o currículo
@@ -274,6 +278,46 @@ a tipografia real. Pior: `document.fonts` fica vazio e `document.fonts.check()`
 devolve `true` para qualquer família — é uma checagem que passa sempre. Para
 validar uma fonte nova, faça `curl` na URL do `<link>` e confira o
 `font-family` na resposta.
+
+### Cadeia de conceitos
+
+`src/views/ConceptChain.tsx` desenha os nós do capítulo em fileira, com o estado
+de cada elo. A referência traz isso como "Q = 0 → Trabalho → Energia interna →
+Temperatura"; aqui a sequência não foi inventada, são os nós do mapa na ordem
+fixa de estágios.
+
+Vive **fora** do `BoardShell`, na tela: assim vale para as 26 pranchas, para o
+instrumento e também para o capítulo que só tem o aviso — que é justamente quem
+mais precisa de alguma estrutura visível.
+
+Em Reconstruir, o elo cujo vínculo o diagnóstico escondeu vira `?`. **É leitura,
+não uma segunda porta de resposta**: a reconstrução continua acontecendo no
+formulário abaixo, com a mesma avaliação de sempre. Duas portas fariam o mapa e o
+Caderno discordarem sobre a mesma aluna.
+
+### Zoom da cena
+
+`SceneViewport`, dentro do `BoardShell`, dá ampliação e arraste a toda cena. Duas
+regras que não são preferência:
+
+- **Os botões existem mesmo havendo pinça.** Pinça não é alcançável por teclado
+  nem por mouse, e o gesto sozinho deixaria a ampliação fora do alcance de parte
+  das pessoas.
+- **O arraste ignora evento vindo de `input`, `button`, `select`, `textarea` ou
+  link.** A cena do instrumento tem cursores de parâmetro dentro: sem a guarda,
+  mexer no parâmetro arrastava a prancha junto.
+
+As legendas de `sceneNotes` moram dentro da janela do zoom, não no wrap — o wrap
+termina numa barra de controles e a legenda de baixo caía em cima da dica de
+gesto.
+
+### Faces no celular
+
+Abaixo de 900px o `BoardShell` divide o conteúdo em **duas** faces alternáveis,
+Essencial e Relações, porque a prancha inteira passava de dois mil pixels de
+rolagem. São duas, e não as três da referência, porque só há dois blocos com
+sentido próprio: uma terceira aba precisaria de conteúdo inventado, e estrutura
+que não codifica nada verdadeiro é enfeite.
 
 ### Mostrar domínio
 

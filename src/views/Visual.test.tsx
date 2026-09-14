@@ -207,6 +207,37 @@ describe('Visual aprovado', () => {
   });
 });
 
+describe('cadeia de conceitos', () => {
+  it('mostra os cinco elos em qualquer capítulo, inclusive no que só tem aviso', () => {
+    render(
+      <MemoryRouter initialEntries={['/visual?summary=' + semPrancha.id]}>
+        <Visual />
+      </MemoryRouter>,
+    );
+    // Um elo por nó, e não um número fixo: 612 capítulos têm cinco seções, mas
+    // um tem seis — e foi ele que este teste sorteou ao procurar um capítulo sem
+    // cena e sem instrumento.
+    const cadeia = screen.getByLabelText('Cadeia de conceitos do capítulo');
+    const nos = buildVisualMap(semPrancha).nodes.length;
+    expect(within(cadeia).getAllByRole('listitem')).toHaveLength(nos);
+  });
+
+  it('marca na cadeia o elo que o diagnóstico escondeu', async () => {
+    const user = userEvent.setup();
+    progress = {
+      [capitulo.id]: comProgresso([tentativa([mapa.relations[0].label], mapa.relations[1].label)]),
+    };
+    render(<MemoryRouter initialEntries={[rota]}><Visual /></MemoryRouter>);
+
+    const cadeia = screen.getByLabelText('Cadeia de conceitos do capítulo');
+    // Em Explorar nada está escondido: o `?` só faz sentido em Reconstruir.
+    expect(within(cadeia).queryByText('elo a reconstruir')).not.toBeInTheDocument();
+
+    await user.click(screen.getByRole('tab', { name: 'Reconstruir' }));
+    expect(within(cadeia).getAllByText('elo a reconstruir').length).toBeGreaterThan(0);
+  });
+});
+
 describe('zoom da cena', () => {
   it('amplia, informa a escala e volta ao natural', async () => {
     const user = userEvent.setup();

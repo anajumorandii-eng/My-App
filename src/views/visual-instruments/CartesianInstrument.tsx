@@ -4,7 +4,6 @@ import { boardPair } from '../visual-boards/pair';
 import { STAGE_LABEL } from '../../lib/visualStudy';
 import type { BoardProps } from '../visual-boards/types';
 import { FAMILIES, num, samplePoints, type Family, type FamilyId } from '../../lib/curveFamilies';
-import { NODE_STATE_LABEL, type NodeState } from '../../lib/visualStudy';
 
 /**
  * Plano cartesiano com dois parâmetros que a estudante move.
@@ -172,42 +171,6 @@ function resumir(texto: string | undefined, limite = 190): string {
   return `${(espaco > 60 ? cortado.slice(0, espaco) : cortado).trimEnd()}…`;
 }
 
-/**
- * A cadeia de conceitos do capítulo, em fileira, com o estado de cada elo.
- *
- * A referência traz isso como "Q = 0 → Trabalho → Energia interna → Temperatura":
- * a sequência que liga a condição ao que se observa. No Crivo essa sequência já
- * existe e não precisa ser inventada — são os cinco nós do mapa, na ordem fixa
- * de estágios. Desenhá-la aqui é mostrar o que o dado já diz, e cada elo carrega
- * a cor do estado que a evidência do Caderno de Erros produziu.
- */
-function CadeiaDeConceitos({
-  map, states, selectedId, onSelect,
-}: Pick<BoardProps, 'map' | 'states' | 'selectedId' | 'onSelect'>) {
-  return (
-    <ol className="vs-chain" aria-label="Cadeia de conceitos do capítulo">
-      {map.nodes.map((no, i) => {
-        const estado: NodeState = states[no.id] ?? 'nao-avaliado';
-        return (
-          <li key={no.id}>
-            {i > 0 && <span className="vs-chain-arrow" aria-hidden="true">→</span>}
-            <button
-              type="button"
-              className={`vs-chain-link${selectedId === no.id ? ' is-selected' : ''}`}
-              data-state={estado}
-              onClick={() => onSelect(no.id)}
-            >
-              <span className="vs-chain-stage">{STAGE_LABEL[no.stage]}</span>
-              <strong>{no.label}</strong>
-              <span className="vs-chain-state"><span className="vs-swatch" aria-hidden="true" />{NODE_STATE_LABEL[estado]}</span>
-            </button>
-          </li>
-        );
-      })}
-    </ol>
-  );
-}
-
 export function cartesianInstrument(familyId: FamilyId) {
   const family = FAMILIES[familyId];
 
@@ -286,13 +249,18 @@ export function cartesianInstrument(familyId: FamilyId) {
           detail: resumir(noSegundo?.excerpt),
           formula: `${family.params[1].symbol} = ${num(b)}`,
         }}
-        supports={<CadeiaDeConceitos map={props.map} states={props.states} selectedId={props.selectedId} onSelect={props.onSelect} />}
         leftState={par.leftState}
         rightState={par.rightState}
         leftSelected={par.leftSelected}
         rightSelected={par.rightSelected}
         onSelectLeft={par.selectLeft}
         onSelectRight={par.selectRight}
+        equation={{
+          label: `Expressão de ${family.name.toLowerCase()}`,
+          general: family.expression(a, b),
+          condition: 'com',
+          reduced: `${family.params[0].symbol} = ${num(a)} · ${family.params[1].symbol} = ${num(b)}`,
+        }}
         closing={family.insight}
       />
     );
