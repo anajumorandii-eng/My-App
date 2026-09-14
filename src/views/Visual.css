@@ -1227,3 +1227,106 @@
   overflow-wrap: anywhere;
   padding-inline: 6px;
 }
+
+/* ── Prancha manipulável ─────────────────────────────────────────────────────
+   O instrumento ocupa o lugar da cena dentro do BoardShell, mas precisa de mais
+   altura que um SVG quadrado: além do plano vêm os controles e as leituras, que
+   são a parte que recalcula. Por isso o wrap solta o `place-items: center` aqui.
+   ------------------------------------------------------------------------- */
+.vs-piston-wrap:has(.vs-instrument) { align-items: stretch; }
+
+.vs-instrument {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: min(100%, 360px);
+}
+
+.vs-plane {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: var(--vs-paper-strong);
+  border: 1px solid var(--vs-line);
+  border-radius: 10px;
+}
+.vs-plane-grid line { stroke: var(--vs-line); stroke-width: 0.6; }
+.vs-plane-axis line { stroke: var(--vs-ink); stroke-width: 1.2; opacity: 0.55; }
+.vs-plane-axis text {
+  fill: var(--vs-dim);
+  font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
+  font-size: 8px;
+}
+.vs-plane-curve {
+  fill: none;
+  stroke: var(--vs-burgundy);
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.vs-plane[data-destaque="true"] .vs-plane-curve { stroke: var(--vs-blue); }
+.vs-plane-expression {
+  fill: var(--vs-ink);
+  font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
+  font-size: 10px;
+}
+
+.vs-plane-controls { display: flex; flex-direction: column; gap: 9px; }
+.vs-plane-control { display: flex; flex-direction: column; gap: 3px; }
+.vs-plane-control label {
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+  font-size: 0.78rem;
+  color: var(--vs-dim);
+}
+.vs-plane-control label strong {
+  font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
+  color: var(--vs-ink);
+  font-size: 0.86rem;
+}
+.vs-plane-control label span { flex: 1; min-width: 0; }
+.vs-plane-control label b {
+  font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
+  color: var(--vs-burgundy);
+  font-variant-numeric: tabular-nums;
+}
+.vs-plane-control input[type="range"] {
+  width: 100%;
+  accent-color: var(--vs-burgundy);
+  /* Alvo de toque confortável no iPad sem engordar a linha visual. */
+  min-height: 24px;
+}
+
+.vs-plane-readouts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+  margin: 0;
+}
+.vs-plane-readouts > div {
+  background: var(--vs-paper-strong);
+  border: 1px solid var(--vs-line);
+  border-radius: 8px;
+  padding: 6px 9px;
+  min-width: 0;
+}
+/* A leitura que muda de natureza — "duas raízes" virando "nenhuma" — é a que
+   a manipulação existe para revelar, então ela não pode ler igual às outras. */
+.vs-plane-readouts > div[data-pivot="true"] { border-color: var(--vs-burgundy); }
+.vs-plane-readouts dt {
+  font-size: 0.68rem;
+  letter-spacing: 0.02em;
+  color: var(--vs-dim);
+}
+.vs-plane-readouts dd {
+  margin: 1px 0 0;
+  font-size: 0.84rem;
+  color: var(--vs-ink);
+  font-variant-numeric: tabular-nums;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 900px) {
+  .vs-plane-readouts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}

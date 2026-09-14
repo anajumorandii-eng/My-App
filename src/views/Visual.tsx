@@ -9,10 +9,12 @@ import { CONFIDENCE_LABEL } from '../lib/confidence';
 import {
   buildVisualMap, chooseHiddenRelations, explainRelation, gradeReconstruction, minimalIntervention,
   nodeState, relationEvidence, relationState, NODE_STATE_LABEL, RELATION_LABEL,
+  STAGE_LABEL,
   type NodeState, type ReconstructionGrade, type VisualMap,
 } from '../lib/visualStudy';
 import type { InteractiveSummary, RetrievalAttempt } from '../types/summary';
 import { findBoard, supportsIllustratedBoard } from './visual-boards/registry';
+import { findInstrument } from './visual-instruments/registry';
 import './Visual.css';
 
 type Mode = 'explorar' | 'testar' | 'reconstruir';
@@ -23,11 +25,6 @@ const MODE_HINT: Record<Mode, string> = {
   testar: 'Recupere sem consultar. O que você escrever vira evidência.',
   reconstruir: 'Recomponha os elos que o diagnóstico escondeu.',
 };
-const STAGE_LABEL = {
-  intuicao: 'Intuição', conceito: 'Conceito', aplicacao: 'Aplicação',
-  exercicio: 'Exercício', estrategia: 'Estratégia',
-} as const;
-
 const NODE_H = 62;
 const NODE_GAP = 46;
 const PLATE_W = 380;
@@ -296,25 +293,14 @@ export default function Visual() {
 
 
   // A prancha vem do registro, não de um componente fixo: é o que permite
-  // ilustrar um capítulo novo sem tocar nesta tela.
-  const boardEntry = findBoard(summary);
-  if (!boardEntry) {
-    return (
-      <div className="crivo-visual">
-        <button onClick={() => setSearchParams({})} className="vs-back-button">
-          <ArrowLeft aria-hidden="true" />Voltar ao Visual
-        </button>
-        <section className="vs-unsupported" role="status">
-          <span>Prancha autoral necessária</span>
-          <h1>{summary.title}</h1>
-          <p>
-            Este capítulo ainda não possui uma prancha visual própria. O CRIVO não reutiliza uma ilustração de outro conteúdo
-            só para preencher a tela: quando não há representação fiel, a intervenção correta é aguardar a prancha específica.
-          </p>
-        </section>
-      </div>
-    );
-  }
+  // ilustrar um capítulo novo sem tocar nesta tela. Cena autoral primeiro;
+  // instrumento manipulável quando não há cena desenhada para o capítulo.
+  //
+  // Antes daqui saía um `return` que descartava a tela inteira quando não havia
+  // prancha — e não era só a ilustração que sumia: iam junto o mapa, os três
+  // modos e o diagnóstico, em 576 dos 613 capítulos. O aviso agora é uma peça
+  // dentro da tela, não a tela.
+  const Plate = (findBoard(summary) ?? findInstrument(summary))?.Component ?? null;
 
   const question = summary.retrieval[0] ?? null;
   // A relação de índice i é desenhada sobre a aresta de índice i. O vínculo é
@@ -422,7 +408,18 @@ export default function Visual() {
 
       <div className="vs-workspace">
         <main className="vs-main">
-          <boardEntry.Component map={map} states={states} selectedId={selectedNode} onSelect={setSelectedNode} hiddenEdgeIds={hiddenEdgeIds} mode={mode} />
+          {Plate ? (
+            <Plate map={map} states={states} selectedId={selectedNode} onSelect={setSelectedNode} hiddenEdgeIds={hiddenEdgeIds} mode={mode} />
+          ) : (
+            <section className="vs-unsupported" role="status">
+              <span>Prancha necessária</span>
+              <h2>{summary.title}</h2>
+              <p>
+                Este capítulo ainda não tem cena própria nem instrumento que o represente. O CRIVO não reutiliza a ilustração
+                de outro conteúdo só para preencher a tela. O mapa, os três modos e o diagnóstico abaixo continuam valendo.
+              </p>
+            </section>
+          )}
 
           {mode === 'testar' && (
             <section className="rounded-2xl border-2 border-indigo-200 bg-white p-5 dark:border-indigo-900 dark:bg-zinc-900">

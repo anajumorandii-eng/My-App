@@ -1,5 +1,5 @@
 
-import { render, screen, within } from '@testing-library/react';
+import { fireEvent, render, screen, within } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import userEvent from '@testing-library/user-event';
@@ -7,13 +7,21 @@ import { interactiveSummaries } from '../data/interactiveSummaries';
 import { buildVisualMap } from '../lib/visualStudy';
 import type { RetrievalAttempt, SummaryProgress, SummaryProgressMap } from '../types/summary';
 import Visual from './Visual';
+import { findBoard } from './visual-boards/registry';
+import { findInstrument } from './visual-instruments/registry';
 
 const capitulo = interactiveSummaries.find(
   (item) => item.id === 'summary-fisica-primeira-lei-da-termodinamica-aplicada-a-algumas-transformacoes-particulares',
 )!;
 const mapa = buildVisualMap(capitulo);
 const rota = '/visual?summary=' + capitulo.id;
-const semPrancha = interactiveSummaries.find((item) => item.subject !== 'Física')!;
+// Capítulo sem cena autoral E sem instrumento — o estado em que a tela tem de
+// mostrar o aviso sem perder o resto de si.
+const semPrancha = interactiveSummaries.find(
+  (item) => !findBoard(item) && !findInstrument(item),
+)!;
+// Capítulo que o instrumento representa de fato: a parábola é o assunto dele.
+const comInstrumento = interactiveSummaries.find((item) => item.topic === 'Função Quadrática')!;
 
 let progress: SummaryProgressMap = {};
 const update = vi.fn();
@@ -131,9 +139,44 @@ describe('Visual aprovado', () => {
       </MemoryRouter>,
     );
 
-    expect(screen.getByRole('status')).toHaveTextContent(/ainda não possui uma prancha visual própria/i);
+    expect(screen.getByText(/não tem cena própria nem instrumento/i)).toBeInTheDocument();
     expect(screen.queryByTestId('visual-study-board')).not.toBeInTheDocument();
     expect(screen.queryByText('Transformação adiabática')).not.toBeInTheDocument();
+  });
+
+  it('mantém mapa, modos e diagnóstico no capítulo que só tem o aviso', () => {
+    // O aviso já foi um `return` antecipado que descartava a tela inteira: o
+    // capítulo perdia o mapa, os três modos e o diagnóstico junto com a
+    // ilustração, em 576 dos 613 capítulos. O aviso é uma peça da tela, não a
+    // tela.
+    render(
+      <MemoryRouter initialEntries={['/visual?summary=' + semPrancha.id]}>
+        <Visual />
+      </MemoryRouter>,
+    );
+
+    const modos = screen.getByRole('tablist', { name: 'Modo de estudo' });
+    for (const modo of ['Explorar', 'Testar', 'Reconstruir']) {
+      expect(within(modos).getByRole('tab', { name: modo })).toBeInTheDocument();
+    }
+  });
+
+  it('dá prancha manipulável ao capítulo cujo objeto é a curva', () => {
+    render(
+      <MemoryRouter initialEntries={['/visual?summary=' + comInstrumento.id]}>
+        <Visual />
+      </MemoryRouter>,
+    );
+
+    expect(screen.getByTestId('visual-study-board')).toBeInTheDocument();
+    // Com o vértice em −3 e concavidade para cima, a parábola corta duas vezes.
+    expect(screen.getByText('duas')).toBeInTheDocument();
+
+    // Subir o vértice acima do eixo apaga as raízes — é o que a manipulação
+    // existe para mostrar, e o que trava a leitura ligada ao controle.
+    const vertice = screen.getByLabelText(/altura do vértice/i);
+    fireEvent.change(vertice, { target: { value: '3' } });
+    expect(screen.getByText('nenhuma real')).toBeInTheDocument();
   });
 
   it('continua distinguindo hipótese de fato no inspetor', async () => {
