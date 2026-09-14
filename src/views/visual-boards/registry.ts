@@ -15,6 +15,10 @@ import MendelBoard from './MendelBoard';
 import ThermochemBoard from './ThermochemBoard';
 import CircuitBoard from './CircuitBoard';
 import QuadraticBoard from './QuadraticBoard';
+import TrophicBoard from './TrophicBoard';
+import BondingBoard from './BondingBoard';
+import KinematicsBoard from './KinematicsBoard';
+import ProgressionBoard from './ProgressionBoard';
 
 /**
  * Quais capítulos têm prancha ilustrada, e qual.
@@ -135,6 +139,30 @@ export const BOARDS: BoardEntry[] = [
     subject: 'Matemática',
     keywords: ['2º grau'],
     Component: QuadraticBoard,
+  },
+  {
+    id: 'trofico',
+    subject: 'Biologia',
+    keywords: ['ecologia'],
+    Component: TrophicBoard,
+  },
+  {
+    id: 'ligacoes',
+    subject: 'Química',
+    keywords: ['ligações químicas'],
+    Component: BondingBoard,
+  },
+  {
+    id: 'cinematica',
+    subject: 'Física',
+    keywords: ['cinemática'],
+    Component: KinematicsBoard,
+  },
+  {
+    id: 'progressoes',
+    subject: 'Matemática',
+    keywords: ['sequências'],
+    Component: ProgressionBoard,
   },
 ];
 
