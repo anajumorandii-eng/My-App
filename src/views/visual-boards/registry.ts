@@ -15,6 +15,14 @@ import MendelBoard from './MendelBoard';
 import ThermochemBoard from './ThermochemBoard';
 import CircuitBoard from './CircuitBoard';
 import QuadraticBoard from './QuadraticBoard';
+import TrophicBoard from './TrophicBoard';
+import BondingBoard from './BondingBoard';
+import KinematicsBoard from './KinematicsBoard';
+import ProgressionBoard from './ProgressionBoard';
+import CellDivisionBoard from './CellDivisionBoard';
+import HydrostaticsBoard from './HydrostaticsBoard';
+import AcidBaseBoard from './AcidBaseBoard';
+import LogarithmBoard from './LogarithmBoard';
 
 /**
  * Quais capítulos têm prancha ilustrada, e qual.
@@ -135,6 +143,54 @@ export const BOARDS: BoardEntry[] = [
     subject: 'Matemática',
     keywords: ['2º grau'],
     Component: QuadraticBoard,
+  },
+  {
+    id: 'trofico',
+    subject: 'Biologia',
+    keywords: ['ecologia'],
+    Component: TrophicBoard,
+  },
+  {
+    id: 'ligacoes',
+    subject: 'Química',
+    keywords: ['ligações químicas'],
+    Component: BondingBoard,
+  },
+  {
+    id: 'cinematica',
+    subject: 'Física',
+    keywords: ['cinemática'],
+    Component: KinematicsBoard,
+  },
+  {
+    id: 'progressoes',
+    subject: 'Matemática',
+    keywords: ['sequências'],
+    Component: ProgressionBoard,
+  },
+  {
+    id: 'divisao-celular',
+    subject: 'Biologia',
+    keywords: ['divisão celular'],
+    Component: CellDivisionBoard,
+  },
+  {
+    id: 'hidrostatica',
+    subject: 'Física',
+    keywords: ['hidrostática'],
+    Component: HydrostaticsBoard,
+  },
+  {
+    id: 'acido-base',
+    subject: 'Química',
+    keywords: ['ácidos e bases'],
+    Component: AcidBaseBoard,
+  },
+  {
+    id: 'logaritmos',
+    subject: 'Matemática',
+    keywords: ['logaritmos'],
+    Component: LogarithmBoard,
   },
 ];
 

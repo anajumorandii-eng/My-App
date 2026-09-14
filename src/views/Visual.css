@@ -1030,3 +1030,125 @@
 .vs-vertex line { stroke: var(--vs-amber); stroke-width: 1.6; }
 .vs-vertex text { fill: var(--vs-amber); font: 700 .64rem/1 ui-monospace, monospace; }
 .vs-delta-tag { fill: var(--vs-blue); font: 700 .8rem/1 ui-monospace, monospace; }
+
+/* ---------- quarta leva de cenas ---------- */
+
+/* Pirâmide trófica: a largura de cada degrau é a energia que sobrou. */
+.vs-trophic-level rect { stroke-width: 2; }
+.vs-trophic-level[data-nivel='0'] rect { fill: color-mix(in srgb, var(--vs-green) 40%, transparent); stroke: var(--vs-green); }
+.vs-trophic-level[data-nivel='1'] rect { fill: color-mix(in srgb, var(--vs-green) 28%, transparent); stroke: var(--vs-green); }
+.vs-trophic-level[data-nivel='2'] rect { fill: color-mix(in srgb, var(--vs-amber) 26%, transparent); stroke: var(--vs-amber); }
+.vs-trophic-level[data-nivel='3'] rect { fill: color-mix(in srgb, var(--vs-burgundy) 26%, transparent); stroke: var(--vs-burgundy); }
+.vs-trophic-energy { fill: var(--vs-ink); font: 700 .68rem/1 ui-monospace, monospace; }
+.vs-trophic-name { fill: var(--vs-dim); font: 600 .56rem/1 ui-monospace, monospace; }
+.vs-heat-loss path { fill: none; stroke: var(--vs-burgundy); stroke-width: 2; }
+.vs-heat-loss .vs-arrow { fill: var(--vs-burgundy); stroke: none; }
+.dark .vs-heat-loss path { stroke: #d88598; }
+.dark .vs-heat-loss .vs-arrow { fill: #d88598; }
+.vs-heat-label { fill: var(--vs-burgundy); font: 700 .64rem/1 ui-monospace, monospace; }
+.dark .vs-heat-label { fill: #d88598; }
+
+/* Ligações: os átomos mudam de tamanho quando viram íons. */
+.vs-atom circle {
+  fill: color-mix(in srgb, var(--vs-blue) 20%, transparent);
+  stroke: var(--vs-blue);
+  stroke-width: 2.4;
+  transition: r .4s cubic-bezier(.4, 0, .2, 1);
+}
+.vs-atom[data-carga='positiva'] circle { fill: color-mix(in srgb, var(--vs-burgundy) 22%, transparent); stroke: var(--vs-burgundy); }
+.vs-atom[data-carga='negativa'] circle { fill: color-mix(in srgb, var(--vs-green) 22%, transparent); stroke: var(--vs-green); }
+.vs-atom-symbol { fill: var(--vs-ink); font: 700 1.05rem/1 "Newsreader", Georgia, serif; }
+.vs-atom-charge { fill: var(--vs-dim); font: 700 .9rem/1 ui-monospace, monospace; }
+.vs-shared-pair circle { fill: var(--vs-amber); }
+.vs-overlap { fill: color-mix(in srgb, var(--vs-amber) 16%, transparent); stroke: var(--vs-amber); stroke-width: 1.6; stroke-dasharray: 4 4; }
+.vs-transfer path { fill: none; stroke: var(--vs-amber); stroke-width: 2.2; }
+.vs-transfer .vs-arrow { fill: var(--vs-amber); stroke: none; }
+.vs-transfer text { fill: var(--vs-amber); font: 700 .64rem/1 ui-monospace, monospace; }
+.vs-transfer .vs-electron { fill: var(--vs-amber); }
+.vs-bond-note { fill: var(--vs-dim); font: 600 .66rem/1 ui-monospace, monospace; }
+.vs-bond-outcome text { fill: var(--vs-ink); font: 600 .64rem/1 ui-monospace, monospace; }
+
+/* Cinemática: a área é o protagonista, a linha é a borda dela. */
+.vs-area { fill: color-mix(in srgb, var(--vs-blue) 22%, transparent); }
+.vs-area-label { fill: var(--vs-blue); font: 700 .7rem/1 ui-monospace, monospace; }
+.vs-kin-line { fill: none; stroke: var(--vs-burgundy); stroke-width: 3.2; stroke-linecap: round; }
+.dark .vs-kin-line { stroke: #d88598; }
+.vs-slope line { stroke: var(--vs-amber); stroke-width: 1.8; }
+.vs-slope text { fill: var(--vs-amber); font: 700 .7rem/1 ui-monospace, monospace; }
+.vs-kin-tag { fill: var(--vs-dim); font: 700 .66rem/1 ui-monospace, monospace; letter-spacing: .06em; }
+
+/* Sequências: barras proporcionais ao valor, passo entre elas. */
+.vs-seq-term rect { fill: color-mix(in srgb, var(--vs-blue) 32%, transparent); stroke: var(--vs-blue); stroke-width: 1.8; }
+.vs-seq-value { fill: var(--vs-ink); font: 700 .72rem/1 ui-monospace, monospace; }
+.vs-seq-index { fill: var(--vs-dim); font: 600 .6rem/1 ui-monospace, monospace; }
+.vs-seq-step path { fill: none; stroke: var(--vs-amber); stroke-width: 2; }
+.vs-seq-step .vs-arrow { fill: var(--vs-amber); stroke: none; }
+.vs-seq-step text { fill: var(--vs-amber); font: 700 .62rem/1 ui-monospace, monospace; }
+.vs-seq-tag { fill: var(--vs-dim); font: 700 .68rem/1 ui-monospace, monospace; letter-spacing: .06em; }
+
+@media (prefers-reduced-motion: reduce) {
+  .vs-atom circle { transition: none; }
+}
+
+/* ---------- quinta leva de cenas ---------- */
+
+/* Divisão celular: a cor diz a ploidia, que é o que a prancha quer ensinar. */
+.vs-cell circle { stroke-width: 2.2; transition: r .35s ease; }
+.vs-cell[data-ploidia='diploide'] circle { fill: color-mix(in srgb, var(--vs-blue) 18%, transparent); stroke: var(--vs-blue); }
+.vs-cell[data-ploidia='haploide'] circle { fill: color-mix(in srgb, var(--vs-green) 20%, transparent); stroke: var(--vs-green); }
+.vs-chromo { stroke-width: 4; stroke-linecap: round; }
+.vs-chromo--a { stroke: var(--vs-burgundy); }
+.vs-chromo--b { stroke: var(--vs-amber); }
+.dark .vs-chromo--a { stroke: #d88598; }
+.vs-cell-label { fill: var(--vs-dim); font: 700 .66rem/1 ui-monospace, monospace; }
+.vs-div-arrow { fill: none; stroke: var(--vs-dim); stroke-width: 2; }
+.vs-div-stage { fill: var(--vs-dim); font: 700 .62rem/1 ui-monospace, monospace; letter-spacing: .06em; }
+.vs-reduction { fill: var(--vs-green); font: 700 .8rem/1 "Newsreader", Georgia, serif; }
+
+/* Hidrostática: a coluna e as setas que crescem com a profundidade. */
+.vs-liquid { fill: color-mix(in srgb, var(--vs-blue) 22%, transparent); }
+.vs-vessel { fill: none; stroke: var(--vs-ink); stroke-width: 2.6; stroke-linejoin: round; }
+.vs-surface { stroke: var(--vs-blue); stroke-width: 2.4; }
+.vs-pressure path { fill: none; stroke: var(--vs-blue); stroke-width: 2.2; }
+.vs-pressure .vs-arrow { fill: var(--vs-blue); stroke: none; }
+.vs-pressure text { fill: var(--vs-blue); font: 700 .64rem/1 ui-monospace, monospace; }
+.vs-pressure[data-dim='true'] { opacity: .35; }
+.vs-pressure, .vs-body { transition: opacity .3s ease; }
+.vs-body rect { fill: color-mix(in srgb, var(--vs-amber) 40%, transparent); stroke: var(--vs-amber); stroke-width: 2; }
+.vs-body--sink rect { fill: color-mix(in srgb, var(--vs-burgundy) 36%, transparent); stroke: var(--vs-burgundy); }
+.vs-body text { fill: var(--vs-ink); font: 700 .6rem/1 ui-monospace, monospace; }
+.vs-buoy { stroke: var(--vs-green); stroke-width: 2.4; }
+.vs-body .vs-arrow { fill: var(--vs-green); stroke: none; }
+.vs-buoy-label { fill: var(--vs-green) !important; font: 700 .6rem/1 ui-monospace, monospace; }
+
+/* Escala de pH: faixa contínua, com o salto medido embaixo. */
+.vs-ph-band { transition: opacity .3s ease; opacity: .55; }
+.vs-ph-band--acid { fill: color-mix(in srgb, var(--vs-burgundy) 44%, transparent); }
+.vs-ph-band--base { fill: color-mix(in srgb, var(--vs-blue) 44%, transparent); }
+.vs-ph-band[data-active='true'] { opacity: 1; }
+.vs-ph-neutral { stroke: var(--vs-ink); stroke-width: 2.4; }
+.vs-ph-neutral-label { fill: var(--vs-ink); font: 700 .64rem/1 ui-monospace, monospace; }
+.vs-ph-tick line { stroke: var(--vs-dim); stroke-width: 1.6; }
+.vs-ph-tick text { fill: var(--vs-dim); font: 600 .6rem/1 ui-monospace, monospace; }
+.vs-ph-conc text { fill: var(--vs-dim); font: 600 .56rem/1 ui-monospace, monospace; }
+.vs-ph-jump line { stroke: var(--vs-amber); stroke-width: 1.8; }
+.vs-ph-jump text { fill: var(--vs-amber); font: 700 .64rem/1 ui-monospace, monospace; }
+.vs-ph-side { fill: var(--vs-paper-strong); font: 700 .64rem/1 ui-monospace, monospace; }
+
+/* Logaritmo: os três papéis mantêm a cor de uma forma para a outra. */
+.vs-log-eq { fill: var(--vs-ink); font: 700 1.5rem/1 "Newsreader", Georgia, serif; }
+.vs-role--base { fill: var(--vs-blue); }
+.vs-role--exp { fill: var(--vs-burgundy); }
+.vs-role--res { fill: var(--vs-green); }
+.dark .vs-role--exp { fill: #d88598; }
+.vs-log-tag { fill: var(--vs-dim); font: 700 .62rem/1 ui-monospace, monospace; letter-spacing: .08em; text-transform: uppercase; }
+.vs-log-form { transition: opacity .3s ease; opacity: .55; }
+.vs-log-form[data-active='true'] { opacity: 1; }
+.vs-log-bridge path { fill: none; stroke: var(--vs-dim); stroke-width: 1.8; }
+.vs-log-bridge .vs-arrow { fill: var(--vs-dim); stroke: none; }
+.vs-log-bridge text { fill: var(--vs-dim); font: 600 .62rem/1 ui-monospace, monospace; }
+.vs-log-legend text { fill: var(--vs-dim); font: 600 .6rem/1 ui-monospace, monospace; }
+
+@media (prefers-reduced-motion: reduce) {
+  .vs-cell circle { transition: none; }
+}
