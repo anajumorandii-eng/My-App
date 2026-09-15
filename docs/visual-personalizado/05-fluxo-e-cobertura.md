@@ -18,8 +18,9 @@ Pedido: tornar os movimentos coerentes com o fluxo e estender o percurso a todas
 
 ## Cobertura e limites
 
-`04-cobertura-percurso.json` inventaria 613 capítulos, 14 matérias, todas as seções e a disponibilidade de cenas.
-O percurso cobre todos os 613 capítulos. Cenas ou instrumentos específicos existem em 61 capítulos; 552 continuam necessitando criação visual específica. O percurso de leitura não é apresentado como 552 novas ilustrações ou simulações.
+`04-cobertura-percurso.json` inventaria 613 capítulos, 14 matérias, todas as seções, a representação visual de tópico e a disponibilidade de cenas-âncora.
+O percurso e a representação visual orientada pela matéria, pelo tópico e pela etapa cobrem os 613 capítulos. As 14 matérias têm paleta e rotulagem próprias; áreas próximas compartilham uma gramática quando isso preserva sentido, como Gramática, Inglês e Entendimento de Texto. Física, Química, Biologia e Matemática ganham variações conceituais: ondas, óptica, circuitos, termodinâmica, ácidos e bases, orgânica, soluções, genética, ecologia, célula, radicais, trigonometria, probabilidade, geometria e exponenciais.
+Cenas-âncora ou instrumentos completos existem em 61 capítulos. Nos outros 552, a representação é uma composição vetorial orientada pelo conteúdo; ela não é descrita como ilustração científica completa ou simulação.
 O conteúdo vem do repositório e não foi revalidado cientificamente em sua totalidade nesta alteração.
 
 ## Verificação

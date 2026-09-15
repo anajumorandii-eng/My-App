@@ -1989,4 +1989,32 @@
 .vs-lab-inputs label { flex: 1; min-width: 140px; }
 .vs-lab-inputs input { display: block; width: 100%; min-height: 44px; accent-color: var(--vs-burgundy); }
 .dark .vs-journey-count { color: #e3a3b2; }
+.topic-visual { --tv-accent: var(--vs-burgundy); --tv-second: var(--vs-blue); display: grid; grid-template-columns: minmax(0,1fr) minmax(150px,.42fr); align-items: center; gap: 18px; min-height: 260px; margin: 0 0 26px; padding: 14px 18px; border-block: 1px solid var(--vs-line); background: radial-gradient(circle at 35% 50%, color-mix(in srgb,var(--tv-accent) 8%,transparent),transparent 55%); overflow: hidden; }
+.topic-visual[data-subject='Biologia'] { --tv-accent:#257553; --tv-second:#8aaf60; }
+.topic-visual[data-subject='Química'] { --tv-accent:#376b8c; --tv-second:#c28c31; }
+.topic-visual[data-subject='Matemática'] { --tv-accent:#855085; --tv-second:#346b8e; }
+.topic-visual[data-subject='Geografia'],.topic-visual[data-subject='Atualidades'] { --tv-accent:#a56a2a; --tv-second:#41745c; }
+.topic-visual[data-subject='História'] { --tv-accent:#8b4f32; --tv-second:#b88942; }
+.topic-visual[data-subject='Gramática'],.topic-visual[data-subject='Língua Inglesa'],.topic-visual[data-subject='Entendimento de Texto'] { --tv-accent:#345b78; --tv-second:#9b4e5a; }
+.topic-visual[data-subject='Literatura'] { --tv-accent:#7d3149; --tv-second:#ba8a4c; }
+.topic-visual[data-subject='Filosofia'] { --tv-accent:#674d86; --tv-second:#af7a3b; }
+.topic-visual[data-subject='Sociologia'] { --tv-accent:#396a65; --tv-second:#a6535b; }
+.topic-visual svg { display:block; width:100%; height:250px; overflow:visible; color:var(--vs-ink); }
+.topic-visual svg text { fill:currentColor; font:700 12px/1 'Kalam',cursive; }
+.topic-visual figcaption { display:grid; gap:8px; align-content:center; }
+.topic-visual figcaption span { color:var(--tv-accent); font:700 2.6rem/1 'Kalam',cursive; }
+.topic-visual figcaption strong { font:600 1.25rem/1.25 'Newsreader',Georgia,serif; }
+.topic-visual figcaption small { color:var(--vs-dim); line-height:1.4; }
+.tv-axis,.tv-guide,.tv-contour,.tv-link,.tv-break,.tv-route,.tv-vein,.tv-page,.tv-molecule path,.tv-orbit circle,.tv-mark+path { fill:none; stroke:currentColor; stroke-width:1.5; opacity:.45; }
+.tv-guide { stroke-dasharray:5 5; }.tv-contour{stroke:var(--tv-second)}.tv-route{stroke:var(--tv-accent);stroke-width:3;stroke-dasharray:7 5}.tv-break{stroke:var(--tv-accent);stroke-width:4}.tv-vein{stroke:var(--tv-second);stroke-width:2}.tv-page{fill:color-mix(in srgb,var(--tv-accent) 7%,transparent);stroke:var(--tv-accent)}
+.tv-primary,.tv-vector,.tv-organic { fill:none; stroke:var(--tv-accent); stroke-width:3.5; stroke-linecap:round; stroke-linejoin:round; }
+.tv-organic { fill:color-mix(in srgb,var(--tv-accent) 12%,transparent);}.tv-vector{stroke:var(--tv-second)}
+.tv-object { fill:var(--tv-accent); stroke:var(--vs-paper-strong); stroke-width:2; }.tv-mark{fill:var(--tv-second)}
+.tv-cell circle,.tv-node { fill:color-mix(in srgb,var(--tv-second) 16%,var(--vs-paper-strong)); stroke:var(--tv-second); stroke-width:2; }
+.tv-molecule circle { fill:var(--tv-second); stroke:var(--vs-paper-strong); stroke-width:2; }.tv-molecule circle:first-of-type{fill:var(--tv-accent)}
+.tv-orbit circle { stroke:var(--tv-second); }.tv-orbit circle:last-of-type { fill:var(--tv-accent); stroke:none; }
+.tv-territory { fill:color-mix(in srgb,var(--tv-second) 10%,transparent); stroke:var(--tv-accent); stroke-width:2; }
+.tv-lens,.tv-vessel { fill:color-mix(in srgb,var(--tv-second) 9%,transparent); stroke:var(--tv-second); stroke-width:2; }
+.tv-sentence rect,.tv-argument rect { fill:color-mix(in srgb,var(--tv-accent) 10%,var(--vs-paper-strong)); stroke:var(--tv-accent); }
+@media (max-width:700px){.topic-visual{grid-template-columns:1fr;}.topic-visual svg{height:210px}.topic-visual figcaption{grid-template-columns:auto 1fr}.topic-visual figcaption small{grid-column:2}.topic-visual figcaption span{grid-row:1/3}}
 @media (max-width: 700px) { .vs-journey-steps li { min-width: 145px; } .vs-mechanism { padding: 16px; } }

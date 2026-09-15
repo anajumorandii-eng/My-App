@@ -1,5 +1,5 @@
 import React from 'react';
-import { fireEvent, render, screen, within } from '@testing-library/react';
+import { cleanup, fireEvent, render, screen, within } from '@testing-library/react';
 import { describe, it, expect, vi } from 'vitest';
 import { VisualJourney } from './VisualJourney';
 import { interactiveSummaries } from '../data/interactiveSummaries';
@@ -38,5 +38,16 @@ describe('Percurso ligado ao conteúdo', () => {
     expect(screen.getByRole('status')).toHaveTextContent('Absorção de 10,2 eV');
     fireEvent.click(screen.getByRole('button', { name: 'Nível n = 1' }));
     expect(screen.getByRole('status')).toHaveTextContent('Emissão de 10,2 eV');
+  });
+  it('gera representação visual rotulada para todas as matérias do catálogo', () => {
+    const subjects = [...new Set(interactiveSummaries.map(summary => summary.subject))];
+    expect(subjects).toHaveLength(14);
+    for (const subject of subjects) {
+      const summary = interactiveSummaries.find(item => item.subject === subject)!;
+      const view = render(<VisualJourney summary={summary} onPractice={() => {}} />);
+      expect(screen.getByRole('figure', { name: `Representação visual de ${summary.sections[0].title}` })).toHaveAttribute('data-subject', subject);
+      view.unmount();
+      cleanup();
+    }
   });
 });

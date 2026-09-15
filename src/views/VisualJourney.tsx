@@ -4,6 +4,7 @@ import { AiText } from '../components/AiText';
 import { MOTION_DURATION, MOTION_EASE } from '../design-system/motion/tokens';
 import { STAGE_LABEL } from '../lib/visualStudy';
 import type { InteractiveSummary } from '../types/summary';
+import { TopicVisual } from './TopicVisual';
 
 /** The section order and all teaching text come from the chapter, not a subject template. */
 export function VisualJourney({ summary, onPractice, initialIndex = 0, onStepChange }: {
@@ -44,6 +45,7 @@ export function VisualJourney({ summary, onPractice, initialIndex = 0, onStepCha
           {section.callout && <aside className="vs-journey-callout"><AiText text={section.callout} /></aside>}
         </motion.article>
       </AnimatePresence>
+      <TopicVisual summary={summary} section={section} index={index} />
       <footer className="vs-journey-controls">
         <button type="button" disabled={index === 0} onClick={() => go(index - 1)}>← Etapa anterior</button>
         <button type="button" onClick={() => index < summary.sections.length - 1 ? go(index + 1) : onPractice()}>

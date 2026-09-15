@@ -24,6 +24,7 @@ try {
     if (await steps.count() !== chapter.stages.length) throw new Error(`Etapas incompletas: ${chapter.id}`);
     await steps.nth(1).click();
     await journey.locator('article h3').filter({ hasText: chapter.stages[1].title }).waitFor();
+    await page.waitForTimeout(600);
     const exploreSize = await page.evaluate(() => ({ width: document.documentElement.clientWidth, content: document.documentElement.scrollWidth }));
     if (exploreSize.content > exploreSize.width + 1) errors.push(`${subject.subject}: overflow em Explorar`);
     await journey.screenshot({ path: path.join(output, `${index + 1}-percurso.png`) });
