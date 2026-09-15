@@ -8,10 +8,16 @@ const dir = join(__dirname, 'families');
 const familias = readdirSync(dir).filter((f) => f.endsWith('.tsx'));
 
 describe('Portão do movimento', () => {
-  it.each(familias)('%s anima por motion/react', (arquivo) => {
-    const src = readFileSync(join(dir, arquivo), 'utf8');
-    expect(src, `${arquivo} precisa importar motion/react`).toMatch(/from ['"]motion\/react['"]/);
-    expect(src, `${arquivo} precisa consumir useSceneMotion()`).toMatch(/useSceneMotion\(\)/);
-    expect(src, `${arquivo} não pode ter animação infinita`).not.toMatch(/repeat:\s*Infinity/);
-  });
+  if (familias.length === 0) {
+    it('nenhuma família para validar ainda', () => {
+      expect(familias).toEqual([]);
+    });
+  } else {
+    it.each(familias)('%s anima por motion/react', (arquivo) => {
+      const src = readFileSync(join(dir, arquivo), 'utf8');
+      expect(src, `${arquivo} precisa importar motion/react`).toMatch(/from ['"]motion\/react['"]/);
+      expect(src, `${arquivo} precisa consumir useSceneMotion()`).toMatch(/useSceneMotion\(\)/);
+      expect(src, `${arquivo} não pode ter animação infinita`).not.toMatch(/repeat:\s*Infinity/);
+    });
+  }
 });
