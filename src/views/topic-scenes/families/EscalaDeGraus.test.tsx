@@ -34,4 +34,15 @@ describe('Escala de graus', () => {
     fireEvent.change(screen.getByRole('slider'), { target: { value: '2' } });
     expect(screen.getByRole('img')).toHaveAccessibleName('Grau 3 de 4: dianoia');
   });
+
+  it('usa a legenda de eixo do próprio capítulo quando presente', () => {
+    const comEixo: SceneEntry = { ...entry, eixo: 'do grau mais distante ao mais próximo do inteligível' };
+    render(<EscalaDeGraus entry={comEixo} />);
+    expect(screen.getByText('do grau mais distante ao mais próximo do inteligível')).toBeInTheDocument();
+  });
+
+  it('usa uma legenda genérica quando o capítulo não declara eixo', () => {
+    render(<EscalaDeGraus entry={entry} />);
+    expect(screen.getByText('do primeiro ao último grau')).toBeInTheDocument();
+  });
 });

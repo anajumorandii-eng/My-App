@@ -27,6 +27,8 @@ export interface SceneEntry {
   /** A pergunta que a cena responde, exibida no cabeçalho. */
   question: string;
   items: SceneItem[];
+  /** Legenda do eixo da escala. Só as famílias de escala usam. */
+  eixo?: string;
 }
 
 export type LastroReason = 'capitulo-ausente' | 'secao-ausente' | 'trecho-ausente';

@@ -33,7 +33,7 @@ export function EscalaDeGraus({ entry }: { entry: SceneEntry }) {
           transition={transition}
           className="tc-marcador"
         />
-        <text x="70" y="188" className="tc-caption" id={`${id}-eixo`}>do grau mais distante ao mais próximo do inteligível</text>
+        <text x="70" y="188" className="tc-caption" id={`${id}-eixo`}>{entry.eixo ?? 'do primeiro ao último grau'}</text>
       </svg>
       <label className="tc-slider">
         Grau: {item.label}
