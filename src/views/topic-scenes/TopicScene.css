@@ -74,3 +74,20 @@
   min-height: 44px;
   accent-color: var(--vs-burgundy);
 }
+
+.tc-elo { fill: color-mix(in srgb, var(--vs-blue) 10%, transparent); stroke: var(--vs-blue); stroke-width: 1.2; opacity: 0.55; }
+.tc-elo-foco { fill: color-mix(in srgb, var(--vs-blue) 24%, transparent); stroke-width: 2.2; opacity: 1; }
+.tc-seta {
+  fill: none;
+  stroke: var(--vs-amber);
+  stroke-width: 2;
+  stroke-linecap: round;
+  marker-end: url(#tc-seta-ponta);
+}
+.tc-seta-ponta { fill: var(--vs-amber); }
+.tc-progress {
+  margin: 0;
+  font-family: var(--font-editorial, Newsreader), serif;
+  font-style: italic;
+  color: var(--vs-burgundy);
+}

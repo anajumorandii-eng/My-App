@@ -200,4 +200,93 @@ export const filosofia: SceneEntry[] = [
       { label: 'Sol', claim: 'por último, quando os olhos já se acostumaram, contempla o próprio sol, fonte de toda luz e visibilidade', section: 'A alegoria', quote: 'por último, quando seus olhos já se acostumaram, o próprio sol, fonte de toda luz e visibilidade' },
     ],
   },
+  // Task 6 — família cadeia-de-derivacao (8 capítulos)
+  {
+    chapterId: 'summary-filosofia-a-critica-de-hume-a-causalidade',
+    family: 'cadeia-de-derivacao',
+    question: 'Por que a causalidade não pode ser demonstrada racionalmente?',
+    items: [
+      { label: 'Conjunção constante', claim: 'observamos contiguidade, sucessão e conjunção constante entre os eventos, mas nunca a força que ligaria um ao outro', section: 'O problema', quote: 'Percebemos contiguidade espacial (estavam em contato), sucessão temporal (uma veio antes da outra) e conjunção constante (sempre que uma atinge a outra nas mesmas condições, o mesmo se repete).' },
+      { label: 'Sem conexão necessária', claim: 'não há impressão sensorial de necessidade alguma; a ideia de conexão causal necessária fica sem base empírica que a legitime', section: 'O problema', quote: 'Não há impressão sensorial de necessidade alguma.' },
+      { label: 'Hábito', claim: 'a necessidade que atribuímos à causalidade não está nos objetos, mas é produzida pelo hábito, que gera expectativa projetada sobre o mundo', section: 'Hábito e expectativa', quote: 'a necessidade que atribuímos à conexão causal não está nos objetos, mas é produzida pelo hábito' },
+      { label: 'Indução sem fundamento', claim: 'esse hábito não pode ser justificado racionalmente sem circularidade, deixando a indução — e a ciência empírica — sem fundamento demonstrativo', section: 'O problema da indução', quote: 'esse princípio não pode ser justificado sem circularidade' },
+    ],
+  },
+  {
+    chapterId: 'summary-filosofia-a-etica-kantiana-e-o-imperativo-categorico',
+    family: 'cadeia-de-derivacao',
+    question: 'Como se chega do dever pelo dever à autonomia como fundamento da moral?',
+    items: [
+      { label: 'Boa vontade', claim: 'só a boa vontade é boa sem restrição, pois vale por querer o dever pelo próprio dever, não pelos resultados que produz', section: 'Dever e boa vontade', quote: 'nada no mundo pode ser considerado bom sem restrição exceto uma boa vontade' },
+      { label: 'Agir por dever', claim: 'o valor moral de uma ação não está no resultado nem no sentimento que a acompanha, mas na máxima que a determina', section: 'Dever e boa vontade', quote: 'o critério kantiano, portanto, não está no resultado da ação nem no sentimento que a acompanha, mas na máxima que a determina' },
+      { label: 'Imperativo categórico', claim: 'essa máxima deve poder ser universalizada sem se contradizer; se a universalização a destrói, a ação é imoral', section: 'O imperativo categórico', quote: 'agir apenas segundo a máxima que se possa querer que se torne lei universal' },
+      { label: 'Autonomia', claim: 'a lei moral obriga porque o próprio sujeito racional a dá a si mesmo, e não porque venha de fora', section: 'Autonomia', quote: 'Autonomia significa literalmente dar a si mesmo a própria lei' },
+    ],
+  },
+  {
+    chapterId: 'summary-filosofia-escolastica-e-santo-tomas-de-aquino',
+    family: 'cadeia-de-derivacao',
+    question: 'Como Tomás de Aquino chega da redescoberta de Aristóteles à ideia de filosofia serva da teologia?',
+    items: [
+      { label: 'Aristóteles redescoberto', claim: 'o resgate das obras de Aristóteles no século XIII gera um problema teológico urgente: como incorporar um sistema racional pagão sem comprometer a verdade revelada', section: 'O contexto escolástico', quote: 'como incorporar um sistema filosófico pagão, racional e sistemático, sem comprometer a verdade revelada do cristianismo?' },
+      { label: 'Fé e razão não se contradizem', claim: 'Tomás resolve a tensão sustentando que fé e razão, corretamente compreendidas, não podem se contradizer, pois ambas têm origem última em Deus', section: 'Tomás e a síntese', quote: 'fé e razão, corretamente compreendidas, não podem se contradizer, pois ambas têm origem última em Deus' },
+      { label: 'Duas classes de verdade', claim: 'dessa tese decorre a distinção entre verdades demonstráveis pela razão natural, como a existência de Deus, e verdades reveladas que excedem a razão sem a contradizer', section: 'Tomás e a síntese', quote: 'Ele distingue verdades demonstráveis pela razão natural sem auxílio da revelação (a existência de Deus, certos princípios morais básicos) de verdades reveladas que excedem a capacidade da razão humana, mas não a contrariam' },
+      { label: 'Filosofia serva da teologia', claim: 'por isso a filosofia é serva da teologia: a razão filosófica prepara e elucida verdades que a fé fornece em plenitude maior', section: 'Tomás e a síntese', quote: '"serva da teologia" (ancilla theologiae)' },
+    ],
+  },
+  {
+    chapterId: 'summary-filosofia-hobbes-e-o-estado-de-natureza',
+    family: 'cadeia-de-derivacao',
+    question: 'Como se chega da guerra de todos ao soberano?',
+    items: [
+      { label: 'Igualdade natural', claim: 'os indivíduos têm capacidades naturais aproximadamente iguais — mesmo o mais fraco pode matar o mais forte por astúcia ou aliança', section: 'O estado de natureza', quote: 'mesmo o mais fraco pode matar o mais forte por astúcia ou aliança' },
+      { label: 'Guerra de todos', claim: 'dessa igualdade decorre a guerra de todos contra todos, condição em que a vida seria solitária, pobre, sórdida, brutal e curta', section: 'O estado de natureza', quote: 'a vida do homem seria solitária, pobre, sórdida, brutal e curta' },
+      { label: 'Pacto entre súditos', claim: 'a razão indica transferir os direitos naturais irrestritos a um soberano único; o contrato ocorre entre os próprios súditos, não entre súditos e soberano', section: 'O contrato', quote: 'o contrato ocorre entre os próprios súditos entre si, e não entre súditos e soberano' },
+      { label: 'Soberano absoluto', claim: 'por não ser parte do contrato, o soberano não pode violá-lo nem ser legitimamente destituído pelos súditos', section: 'O contrato', quote: 'este último não é parte do contrato e por isso não pode violá-lo nem ser legitimamente destituído por seus súditos' },
+    ],
+  },
+  {
+    chapterId: 'summary-filosofia-locke-e-os-direitos-naturais',
+    family: 'cadeia-de-derivacao',
+    question: 'Como se chega da lei natural ao direito de resistência?',
+    items: [
+      { label: 'Lei natural', claim: 'o estado de natureza é regido por uma lei natural acessível à razão, que probe prejudicar vida, liberdade, saúde ou bens de outrem; os direitos são anteriores a qualquer governo', section: 'Estado de natureza segundo Locke', quote: 'uma lei natural acessível à razão, que ensina que ninguém deve prejudicar a vida, a liberdade, a saúde ou os bens de outrem' },
+      { label: 'Governo fiduciário', claim: 'o contrato não cria direitos, apenas protege de modo mais eficaz os que já existiam; o governo recebe poder condicionalmente, como um depositário de confiança', section: 'O contrato e o governo limitado', quote: 'o governo instituído é fiduciário, um depositário de confiança que recebe poder condicionalmente, para a finalidade específica de proteger vida, liberdade e propriedade' },
+      { label: 'Poder limitado', claim: 'por isso o poder deve ser institucionalmente limitado, para que o próprio governo não se torne ameaça maior aos direitos que deveria proteger', section: 'O contrato e o governo limitado', quote: 'a limitação institucional do poder é justamente o que impede que o remédio contra a insegurança do estado de natureza (o governo) se torne ele mesmo uma ameaça maior aos direitos que deveria proteger' },
+      { label: 'Direito de resistência', claim: 'um governo que viola sistematicamente esses direitos rompe o fundamento de sua legitimidade, e o povo recupera o direito de resistir e instituir novo governo', section: 'Direito de resistência', quote: 'o povo recupera o direito de resistir e de instituir novo governo' },
+    ],
+  },
+  {
+    chapterId: 'summary-filosofia-logica-e-metafisica-aristotelicas',
+    family: 'cadeia-de-derivacao',
+    question: 'Como as premissas de um silogismo obrigam a uma conclusão — e o que essa necessidade tem, e não tem, a ver com verdade?',
+    items: [
+      { label: 'Premissa maior', claim: 'liga o termo maior (mortal) a um termo médio (homem), estabelecendo a premissa geral do silogismo', section: 'Lógica e silogismo', quote: 'todo homem é mortal' },
+      { label: 'Premissa menor', claim: 'liga o termo menor (Sócrates) ao mesmo termo médio, conectando o caso particular à premissa geral', section: 'Lógica e silogismo', quote: 'Sócrates é homem' },
+      { label: 'Conclusão necessária', claim: 'a conclusão decorre necessariamente das duas premissas, desde que a forma do silogismo seja respeitada', section: 'Lógica e silogismo', quote: 'a conclusão segue necessariamente da verdade das premissas, desde que a forma lógica seja corretamente respeitada' },
+      { label: 'Validade ≠ verdade', claim: 'essa necessidade é puramente formal: um silogismo pode ser válido mesmo com premissas falsas, pois a validade diz respeito à estrutura, não ao conteúdo', section: 'Lógica e silogismo', quote: 'Um silogismo pode ser formalmente válido mesmo com premissas falsas' },
+    ],
+  },
+  {
+    chapterId: 'summary-filosofia-o-existencialismo-de-sartre',
+    family: 'cadeia-de-derivacao',
+    question: 'Como se chega da existência precedendo a essência até a má-fé como fuga da liberdade?',
+    items: [
+      { label: 'Existência precede essência', claim: 'sem Deus como artesão cósmico, o ser humano primeiro existe e só depois se define por suas escolhas; não há natureza humana fixa e prévia', section: 'A existência precede a essência', quote: 'o ser humano primeiro existe, surge no mundo, e só depois, ao longo da vida, se define por meio de suas escolhas' },
+      { label: 'Liberdade radical', claim: 'porque nada determina previamente o que o ser humano é, cada indivíduo é inteiramente responsável por aquilo em que se torna', section: 'A existência precede a essência', quote: 'cada indivíduo é inteiramente responsável por aquilo em que se torna por meio de suas próprias escolhas' },
+      { label: 'Responsabilidade universal', claim: 'como escolher para si é implicitamente propor um valor universal, cada escolha individual pesa como se fosse escolha por toda a humanidade', section: 'Liberdade e responsabilidade', quote: 'cada indivíduo carrega o peso de estar, em certo sentido, escolhendo por toda a humanidade ao escolher por si mesmo' },
+      { label: 'Má-fé', claim: 'a má-fé nega essa liberdade, fingindo que as próprias escolhas decorrem de uma natureza fixa e não de uma escolha constantemente renovada', section: 'Engajamento', quote: 'consiste em fingir para si mesmo que não se é livre, atribuindo as próprias escolhas a determinações externas' },
+    ],
+  },
+  {
+    chapterId: 'summary-filosofia-rousseau-e-a-vontade-geral',
+    family: 'cadeia-de-derivacao',
+    question: 'Como se chega da bondade natural à liberdade civil de obedecer à vontade geral?',
+    items: [
+      { label: 'Bondade natural', claim: 'o homem natural é solitário, autossuficiente e bom, guiado pelo amor de si e pela piedade, sentimentos pré-sociais que moderam o egoísmo antes de qualquer lei', section: 'O homem natural', quote: 'amor de si (instinto natural de autopreservação, sem malícia) e piedade (repulsa natural ao sofrimento alheio, que modera espontaneamente os impulsos egoístas antes mesmo de qualquer lei ou razão elaborada)' },
+      { label: 'Propriedade corrompe', claim: 'a desigualdade e os vícios não são naturais, mas nascem quando alguém cerca um pedaço de terra e o declara seu, inaugurando a propriedade e a dependência mútua', section: 'O homem natural', quote: 'inaugurando a propriedade privada e, com ela, a desigualdade, a competição, a vaidade comparativa e a dependência mútua' },
+      { label: 'Alienação à vontade geral', claim: 'para resolver esse problema, cada indivíduo aliena totalmente seus direitos ao corpo coletivo, submetendo-se à vontade geral, distinta da mera soma de vontades particulares', section: 'O contrato e a vontade geral', quote: 'ao corpo coletivo formado pela totalidade dos cidadãos associados, submetendo-se à vontade geral' },
+      { label: 'Liberdade civil', claim: 'obedecer à vontade geral, mesmo contrariando a vontade particular, constitui a verdadeira liberdade civil — superior à mera liberdade natural sem lei alguma', section: 'Liberdade e educação', quote: 'obedecer à vontade geral, mesmo quando ela contraria a vontade particular imediata de um indivíduo específico, constitui verdadeira liberdade civil' },
+    ],
+  },
 ];
