@@ -339,7 +339,7 @@
   .crivo-mobile-toolbar__item { position: relative; color: var(--dim); text-decoration: none; }
   .crivo-mobile-toolbar__item.is-active { color: var(--text); }
   .crivo-mobile-toolbar__glyph { position: relative; display: flex; min-height: 49px; width: 100%; flex-direction: column; align-items: center; justify-content: center; gap: 4px; overflow: hidden; }
-  .crivo-mobile-toolbar__glyph svg { position: relative; z-index: 1; width: 18px; height: 18px; stroke-width: 1.45; }
+  .crivo-mobile-toolbar__glyph svg { position: relative; z-index: 1; width: 20px; height: 20px; stroke-width: 1.8; }
   .crivo-mobile-toolbar__glyph > span { position: relative; z-index: 1; max-width: 100%; font: 9px ui-monospace, SFMono-Regular, monospace; letter-spacing: .035em; }
   .crivo-mobile-toolbar__glyph i { position: absolute; inset: 5px 8px; border: 1px solid color-mix(in srgb, var(--secondary) 72%, var(--line)); border-radius: 9px; background: color-mix(in srgb, var(--primary) 10%, transparent); }
   .ni-production-app .crivo-observatorio-home { padding-top: 27px; }

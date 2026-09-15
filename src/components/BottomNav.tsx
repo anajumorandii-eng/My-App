@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion, useReducedMotion } from 'motion/react';
 import { NavLink } from 'react-router-dom';
-import { Calendar, Map, PlayCircle, TrendingUp, type LucideIcon } from 'lucide-react';
+import { BookOpenCheck, CalendarDays, ChartNoAxesCombined, House, Route, type LucideIcon } from 'lucide-react';
 import { cn } from '../lib/cn';
 import { MOTION_DURATION, MOTION_EASE } from '../design-system/motion/tokens';
 
@@ -15,11 +15,11 @@ interface BottomNavItem {
 // Estudar, Análises, Agenda) onto the routes that actually exist in this app
 // (see App.tsx).
 const ITEMS: BottomNavItem[] = [
-  { name: 'Hoje', path: '/', icon: Calendar },
-  { name: 'Plano', path: '/plano', icon: Map },
-  { name: 'Estudar', path: '/sessao', icon: PlayCircle },
-  { name: 'Análises', path: '/evolucao', icon: TrendingUp },
-  { name: 'Agenda', path: '/agenda', icon: Calendar },
+  { name: 'Hoje', path: '/', icon: House },
+  { name: 'Plano', path: '/plano', icon: Route },
+  { name: 'Estudar', path: '/sessao', icon: BookOpenCheck },
+  { name: 'Análises', path: '/evolucao', icon: ChartNoAxesCombined },
+  { name: 'Agenda', path: '/agenda', icon: CalendarDays },
 ];
 
 export function BottomNav() {
@@ -54,7 +54,7 @@ export function BottomNav() {
                   transition={{ duration: MOTION_DURATION.micro, ease: MOTION_EASE }}
                 >
                   {isActive && !reducedMotion && <motion.i layoutId="crivo-mobile-active" transition={{ duration: MOTION_DURATION.component, ease: MOTION_EASE }} />}
-                  <Icon className="h-[18px] w-[18px]" aria-hidden="true" />
+                  <Icon className="h-5 w-5" strokeWidth={1.8} aria-hidden="true" />
                   <span className="truncate">{item.name}</span>
                 </motion.span>
               )}

@@ -182,6 +182,9 @@ function Inspector({
   const node = map.nodes.find((item) => item.id === nodeId);
   if (!node) return null;
   const section = summary.sections.find((item) => item.id === node.sectionId);
+  const learningText = section?.callout ?? summary.retrieval.find(item => item.sectionId === section?.id)?.prompt ?? summary.overview;
+  const normalize = (value: string) => value.toLocaleLowerCase('pt-BR').replace(/\s+/g, ' ').trim();
+  const showLearning = normalize(learningText) !== normalize(node.excerpt);
 
   return (
     <div className="vs-inspector" role="dialog" aria-label="Conceito selecionado">
@@ -195,12 +198,15 @@ function Inspector({
         </button>
       </div>
 
-      <p className="vs-inspector-excerpt">{node.excerpt}</p>
-
-      <section className="vs-inspector-learning">
-        <h4>Expectativa de aprendizagem</h4>
-        <p>{section?.callout ?? summary.retrieval.find(item => item.sectionId === section?.id)?.prompt ?? summary.overview}</p>
+      <section className="vs-inspector-reading" aria-labelledby="vs-inspector-reading-title">
+        <h4 id="vs-inspector-reading-title">Trecho essencial</h4>
+        <p className="vs-inspector-excerpt">{node.excerpt}</p>
       </section>
+
+      {showLearning && <section className="vs-inspector-learning">
+        <h4>Expectativa de aprendizagem</h4>
+        <p>{learningText}</p>
+      </section>}
 
       <section>
         <h4>Por que isso?</h4>

@@ -818,6 +818,80 @@
   .vs-concept-card { transition: none; }
 }
 
+/* Leitor editorial móvel: a cadeia vira uma faixa escaneável e o inspetor
+   permanece acima da navegação, com rolagem própria. */
+.vs-inspector-reading {
+  display: grid;
+  gap: 7px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--vs-line);
+}
+.vs-inspector-reading .vs-inspector-excerpt {
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 1rem;
+  line-height: 1.62;
+}
+
+@media (max-width: 900px) {
+  .vs-inspector-shell {
+    position: fixed;
+    z-index: 70;
+    left: 50%;
+    right: auto;
+    bottom: calc(76px + env(safe-area-inset-bottom));
+    top: auto;
+    width: min(680px, calc(100vw - 24px));
+    margin: 0;
+    transform: translateX(-50%);
+  }
+  .vs-inspector {
+    max-height: min(64dvh, 620px);
+    overscroll-behavior: contain;
+    border-radius: 22px 22px 12px 12px;
+    box-shadow: 0 -18px 56px rgba(0, 0, 0, .42);
+  }
+}
+
+@media (max-width: 430px) {
+  .vs-chain {
+    flex-flow: row nowrap;
+    gap: 9px;
+    margin-inline: -14px;
+    padding: 2px 14px 10px;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    scrollbar-width: thin;
+  }
+  .vs-chain li {
+    width: auto;
+    min-width: min(78vw, 292px);
+    scroll-snap-align: start;
+  }
+  .vs-chain-link { min-height: 82px; padding: 12px 13px; }
+  .vs-inspector-shell {
+    bottom: calc(72px + env(safe-area-inset-bottom));
+    width: calc(100vw - 12px);
+  }
+  .vs-inspector {
+    gap: 13px;
+    max-height: min(66dvh, 580px);
+    padding: 16px;
+    border-radius: 20px 20px 10px 10px;
+  }
+  .vs-inspector-head {
+    position: sticky;
+    z-index: 2;
+    top: -16px;
+    margin: -16px -16px 0;
+    padding: 16px;
+    border-bottom: 1px solid var(--vs-line);
+    background: inherit;
+  }
+  .vs-inspector-head h3 { font-size: 1.5rem; line-height: 1.08; }
+  .vs-inspector-reading .vs-inspector-excerpt { font-size: 1.02rem; line-height: 1.58; }
+  .vs-inspector-learning { display: grid; }
+}
+
 /* ---------- cenas das pranchas ----------
    Cada prancha desenha o seu fenômeno, mas o traço, o eixo e as medidas seguem
    o mesmo vocabulário: sem isso, duas pranchas abertas em sequência pareceriam
@@ -1989,3 +2063,27 @@
 .vs-lab-inputs label { flex: 1; min-width: 140px; }
 .vs-lab-inputs input { display: block; width: 100%; min-height: 44px; accent-color: var(--vs-burgundy); }
 .dark .vs-journey-count { color: #e3a3b2; }
+
+/* Final responsive overrides: keep these after the legacy visual blocks. */
+@media (max-width: 900px) {
+  .vs-inspector-shell {
+    position: fixed;
+    z-index: 70;
+    left: 50%;
+    right: auto;
+    bottom: calc(76px + env(safe-area-inset-bottom));
+    top: auto;
+    width: min(680px, calc(100vw - 24px));
+    margin: 0;
+    transform: translateX(-50%);
+    border-radius: 22px 22px 12px 12px;
+  }
+}
+@media (max-width: 430px) {
+  .vs-chain { flex-flow: row nowrap; }
+  .vs-chain li { width: auto; flex: 0 0 min(78vw, 292px); }
+  .vs-inspector-shell {
+    bottom: calc(72px + env(safe-area-inset-bottom));
+    width: calc(100vw - 12px);
+  }
+}
