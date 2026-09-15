@@ -250,7 +250,7 @@ export const filosofia: SceneEntry[] = [
     family: 'cadeia-de-derivacao',
     question: 'Como se chega da lei natural ao direito de resistência?',
     items: [
-      { label: 'Lei natural', claim: 'o estado de natureza é regido por uma lei natural acessível à razão, que probe prejudicar vida, liberdade, saúde ou bens de outrem; os direitos são anteriores a qualquer governo', section: 'Estado de natureza segundo Locke', quote: 'uma lei natural acessível à razão, que ensina que ninguém deve prejudicar a vida, a liberdade, a saúde ou os bens de outrem' },
+      { label: 'Lei natural', claim: 'o estado de natureza é regido por uma lei natural acessível à razão, que proíbe prejudicar vida, liberdade, saúde ou bens de outrem; os direitos são anteriores a qualquer governo', section: 'Estado de natureza segundo Locke', quote: 'uma lei natural acessível à razão, que ensina que ninguém deve prejudicar a vida, a liberdade, a saúde ou os bens de outrem' },
       { label: 'Governo fiduciário', claim: 'o contrato não cria direitos, apenas protege de modo mais eficaz os que já existiam; o governo recebe poder condicionalmente, como um depositário de confiança', section: 'O contrato e o governo limitado', quote: 'o governo instituído é fiduciário, um depositário de confiança que recebe poder condicionalmente, para a finalidade específica de proteger vida, liberdade e propriedade' },
       { label: 'Poder limitado', claim: 'por isso o poder deve ser institucionalmente limitado, para que o próprio governo não se torne ameaça maior aos direitos que deveria proteger', section: 'O contrato e o governo limitado', quote: 'a limitação institucional do poder é justamente o que impede que o remédio contra a insegurança do estado de natureza (o governo) se torne ele mesmo uma ameaça maior aos direitos que deveria proteger' },
       { label: 'Direito de resistência', claim: 'um governo que viola sistematicamente esses direitos rompe o fundamento de sua legitimidade, e o povo recupera o direito de resistir e instituir novo governo', section: 'Direito de resistência', quote: 'o povo recupera o direito de resistir e de instituir novo governo' },
@@ -315,13 +315,12 @@ export const filosofia: SceneEntry[] = [
   },
   {
     chapterId: 'summary-filosofia-alienacao-e-mais-valia',
-    family: 'camadas-de-determinacao',
-    question: 'Como a propriedade do produto condiciona as formas de alienação do trabalho?',
+    family: 'contraste-de-posicoes',
+    question: 'O lucro capitalista cresce alongando a jornada de trabalho ou elevando a produtividade?',
     items: [
-      { label: 'Produto apropriado', claim: 'o que o trabalhador produz pertence ao capitalista', section: 'As formas de alienação', quote: 'o que produz não lhe pertence, mas ao capitalista' },
-      { label: 'Ato forçado', claim: 'trabalhar deixa de expressar capacidades e vira mero meio de sobrevivência', section: 'As formas de alienação', quote: 'o trabalho deixa de ser expressão livre e criativa das capacidades humanas para se tornar atividade forçada' },
-      { label: 'Essência negada', claim: 'a repetição imposta nega o trabalho livre e criativo que distingue o humano', section: 'As formas de alienação', quote: 'quando esse trabalho é reduzido a repetição mecânica imposta, o próprio ser genérico humano é negado' },
-      { label: 'Relações alienadas', claim: 'as relações sociais assumem forma de competição e exploração mediada pelo mercado', section: 'As formas de alienação', quote: 'a relação social se converte em relação de competição e de exploração mútua mediada pelo mercado' },
+      { label: 'Mais-valia absoluta', claim: 'amplia a extração de excedente prolongando a jornada de trabalho além do tempo necessário para repor o salário, sem alterar a produtividade', section: 'Absoluta e relativa', quote: 'A mais-valia absoluta se obtém prolongando a jornada de trabalho além do tempo necessário para repor o salário, sem alterar a produtividade' },
+      { label: 'Mais-valia relativa', claim: 'amplia a extração de excedente aumentando a produtividade, sem alterar a jornada, reduzindo o tempo necessário para repor o salário', section: 'Absoluta e relativa', quote: 'se obtém não prolongando a jornada, mas reduzindo o tempo necessário para repor o salário por meio do aumento da produtividade' },
+      { label: 'Fonte estrutural do lucro', claim: 'em ambos os métodos, o excedente entre o valor produzido e o salário pago é apropriado integralmente pelo capitalista, sendo a fonte estrutural do lucro', section: 'A mais-valia', quote: 'é a mais-valia, fonte estrutural do lucro capitalista' },
     ],
   },
   {
@@ -329,7 +328,7 @@ export const filosofia: SceneEntry[] = [
     family: 'camadas-de-determinacao',
     question: 'Como a base material condiciona instituições e ideias sem determinismo mecânico?',
     items: [
-      { label: 'Infraestrutura', claim: 'forças produtivas e relações de produção formam a base material', section: 'Infraestrutura e superestrutura', quote: 'compreende as forças produtivas' },
+      { label: 'Infraestrutura', claim: 'forças produtivas e relações de produção formam a base material', section: 'Infraestrutura e superestrutura', quote: 'A infraestrutura (ou base econômica) compreende as forças produtivas (tecnologia, ferramentas, conhecimento técnico disponível, força de trabalho) e as relações de produção' },
       { label: 'Direito e política', claim: 'erguem-se sobre a base e ajudam a legitimar suas relações', section: 'Infraestrutura e superestrutura', quote: 'A superestrutura compreende tudo o que se ergue sobre essa base: o direito, a política' },
       { label: 'Formas de consciência', claim: 'religião, filosofia, arte e moral também são historicamente condicionadas', section: 'Infraestrutura e superestrutura', quote: 'a religião, a filosofia, a arte, a moral vigente em cada sociedade' },
       { label: 'Efeito de retorno', claim: 'a superestrutura formada reage sobre a base, afastando causalidade mecânica', section: 'Infraestrutura e superestrutura', quote: 'pode exercer efeitos de retorno sobre a própria base econômica' },
@@ -349,11 +348,11 @@ export const filosofia: SceneEntry[] = [
   {
     chapterId: 'summary-filosofia-nietzsche-e-a-critica-aos-valores-morais',
     family: 'movimento-dialetico',
-    question: 'Como a genealogia desmonta valores herdados e abre a criação de novos valores?',
+    question: 'Como o colapso dos fundamentos morais abre espaço para a criação de novos valores?',
     items: [
-      { label: 'Valor universal', claim: 'os bons costumes parecem nascer de reflexão neutra sobre o bem', section: 'Genealogia da moral', quote: 'não surgiu de reflexão racional neutra sobre o bem' },
-      { label: 'Origem interessada', claim: 'a genealogia revela relações de força e ressentimento na origem desses valores', section: 'Genealogia da moral', quote: 'inversão histórica de valores promovida pelos fracos como forma de vingança simbólica contra os fortes' },
-      { label: 'Criação ativa', claim: 'superar o niilismo exige criar novos valores e afirmar a vida', section: 'Vontade de potência e além-do-homem', quote: 'capaz de criar seus próprios valores após o colapso dos fundamentos morais tradicionais' },
+      { label: 'Valor universal', claim: 'a moral que chamamos de "bons costumes" parece nascer de reflexão neutra sobre o bem — aparência que a genealogia desmonta ao rastrear sua origem histórica', section: 'Genealogia da moral', quote: 'não surgiu de reflexão racional neutra sobre o bem' },
+      { label: 'Colapso niilista', claim: 'a crença que sustentava valores morais absolutos entra em colapso, abrindo o niilismo, o vazio de sentido diante da ausência de novos valores', section: 'Crítica à metafísica e à religião', quote: 'vazio de sentido que se instala quando os antigos fundamentos desmoronam sem que novos valores os substituam' },
+      { label: 'Criação ativa', claim: 'superar esse colapso exige criar novos valores e afirmar a vida', section: 'Vontade de potência e além-do-homem', quote: 'capaz de criar seus próprios valores após o colapso dos fundamentos morais tradicionais' },
     ],
   },
   {
