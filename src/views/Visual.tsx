@@ -558,10 +558,27 @@ export default function Visual() {
                     {hidden.map((item, index) => {
                       const graded = grades[item.relationId];
                       return (
-                        <li key={item.relationId} className="rounded-xl border border-zinc-200 p-4 dark:border-zinc-800">
+                        <li
+                          key={item.relationId}
+                          className="vs-gap rounded-xl border border-zinc-200 p-4 dark:border-zinc-800"
+                          onDragOver={(event) => {
+                            if (event.dataTransfer.types.includes('text/plain')) event.preventDefault();
+                          }}
+                          onDrop={(event) => {
+                            event.preventDefault();
+                            const label = event.dataTransfer.getData('text/plain');
+                            if (bank.includes(label)) place(item.relationId, label);
+                          }}
+                        >
                           <p className="text-xs font-bold uppercase tracking-wide text-zinc-500">Lacuna {index + 1}</p>
                           <p className="mt-1 text-sm">Qual relação preenche este elo?</p>
-                          <div className="mt-3 flex flex-wrap gap-2">
+                          <div className="vs-drop-target" aria-live="polite">
+                            <span aria-hidden="true">{placements[item.relationId] ? '✓' : '↳'}</span>
+                            {placements[item.relationId]
+                              ? displayLabel(placements[item.relationId])
+                              : 'Arraste uma relação para este espaço'}
+                          </div>
+                          <div className="vs-bank mt-3 flex flex-wrap gap-2">
                             {bank.map((label) => {
                               const chosen = placements[item.relationId] === label;
                               const takenElsewhere = !chosen && usedLabels.includes(label);
@@ -569,7 +586,12 @@ export default function Visual() {
                                 <button
                                   key={label}
                                   disabled={takenElsewhere}
+                                  draggable={!takenElsewhere}
                                   aria-pressed={chosen}
+                                  onDragStart={(event) => {
+                                    event.dataTransfer.effectAllowed = 'move';
+                                    event.dataTransfer.setData('text/plain', label);
+                                  }}
                                   onClick={() => place(item.relationId, label)}
                                   className={`rounded-lg border px-3 py-1.5 text-sm disabled:opacity-35 ${
                                     chosen ? 'border-indigo-500 bg-indigo-50 font-semibold dark:bg-indigo-950/40' : 'border-zinc-300 dark:border-zinc-700'

@@ -27,6 +27,7 @@ import CalorimetryBoard from './CalorimetryBoard';
 import CountingBoard from './CountingBoard';
 import BloodTypeBoard from './BloodTypeBoard';
 import SolutionsBoard from './SolutionsBoard';
+import NewtonBoard from './NewtonBoard';
 
 /**
  * Quais capítulos têm prancha ilustrada, e qual.
@@ -64,6 +65,12 @@ export interface BoardEntry {
 }
 
 export const BOARDS: BoardEntry[] = [
+  {
+    id: 'leis-newton',
+    subject: 'Física',
+    keywords: ['leis de newton'],
+    Component: NewtonBoard,
+  },
   {
     id: 'adiabatica',
     subject: 'Física',

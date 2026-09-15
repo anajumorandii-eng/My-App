@@ -243,6 +243,33 @@
 }
 .dark .vs-concept-card code { background: rgba(0,0,0,.18); }
 
+.vs-newton-core { fill: color-mix(in srgb, var(--vs-blue) 14%, transparent); stroke: var(--vs-blue); stroke-width: 2; }
+.vs-newton-core-copy { fill: currentColor; font: 700 13px/1 ui-monospace, SFMono-Regular, monospace; letter-spacing: .08em; }
+.vs-newton-link { fill: none; stroke: var(--vs-blue); stroke-width: 2.2; stroke-linecap: round; transition: stroke-width .2s ease, filter .2s ease; }
+.vs-newton-link.is-active { stroke-width: 4; filter: drop-shadow(0 0 6px var(--vs-blue)); }
+.vs-newton-law rect { fill: color-mix(in srgb, var(--vs-paper-strong) 86%, var(--vs-blue)); stroke: var(--vs-blue); stroke-width: 1.4; }
+.vs-newton-law text { fill: currentColor; font: 700 11px/1.2 "Kalam", "Newsreader", Georgia, serif; }
+.vs-newton-law--three rect { stroke: var(--vs-amber); }
+.dark .vs-newton-law rect { fill: #111a22; }
+.dark .vs-newton-core-copy, .dark .vs-newton-law text { fill: #f5ecdc; }
+
+.vs-drop-target {
+  min-height: 48px;
+  margin-top: 12px;
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1.5px dashed var(--vs-blue);
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--vs-blue) 7%, transparent);
+  color: var(--vs-dim);
+  font: 500 italic .86rem/1.35 "Newsreader", Georgia, serif;
+}
+.vs-gap:has(button[aria-pressed='true']) .vs-drop-target { border-style: solid; color: var(--vs-ink); }
+.vs-bank button[draggable='true'] { cursor: grab; }
+.vs-bank button[draggable='true']:active { cursor: grabbing; }
+
 .vs-state-line {
   display: inline-flex;
   align-items: center;

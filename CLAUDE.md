@@ -33,23 +33,17 @@ pode chegar a um commit, nem como texto nem como pixel.
 em mensagem de commit, título ou corpo de PR, comentário de código ou qualquer
 outro artefato que vá para o repositório. Isso vale só para a conversa.
 
-**Desenvolva na branch que a sessão designar, e só nela.** Nunca faça push em
-outra sem permissão explícita. A `claude/app-updates-mgyedd` carrega quatro
-commits que nunca chegaram à `main` (`5e13500`, `2954ce9`, `6bec94f`, `f7cc7d0`)
-e reescrevem `Visual.tsx`, `Visual.css` e `Visual.test.tsx` — os mesmos arquivos
-das pranchas. Mesclar aquilo hoje dá conflito grande e o merge automático
-escolheria errado. `docs/visual-personalizado/` lá dentro tem as capturas dessa
-versão concorrente.
-
-**PR mergeada é PR encerrada.** Quando houver trabalho novo e a última PR já
-tiver sido mergeada, recomece a branch a partir da `main` atualizada, rebaseie
-os commits que ficaram de fora e **abra uma PR nova** — nunca empilhe commits
-sobre histórico já mergeado.
+**Desenvolva e faça commits somente na branch `main`.** Esta é uma decisão
+explícita da Ana Júlia em 14/09/2026 e substitui o fluxo anterior pela branch
+`claude/app-updates-mgyedd`. Antes de editar, atualize e audite `origin/main`;
+ela é a fonte do estado absoluto do aplicativo. Não crie branch de
+funcionalidade nem envie commits para outra branch sem uma nova instrução
+explícita da Ana Júlia.
 
 ```bash
 git fetch origin main
-git rebase origin/main          # preserva os commits ainda não mergeados
-git push --force-with-lease origin <a branch desta sessão>
+git switch main
+git pull --ff-only origin main
 ```
 
 **Antes de todo push:** `npm run lint` limpo e `npm test` verde.
@@ -165,7 +159,9 @@ rodadas, matéria por matéria (próxima: Sociologia).
 A aba `/visual` (`src/views/Visual.tsx`) transforma um capítulo de resumo em
 prancha de relações, com três modos: Explorar, Testar e Reconstruir. As regras
 ficam em `src/lib/visualStudy.ts`, módulo puro, sem React, para rodar em
-`node:test`. A especificação completa está em `docs/visual/README.md`.
+`node:test`. A especificação completa está em `docs/visual/README.md`. O padrão
+vinculante está em `docs/visual/PADRAO-VISUAL-OBRIGATORIO.md`; toda prancha nova
+e toda alteração na interface precisam cumpri-lo.
 
 O mapa não é um dado novo: os nós saem das cinco seções do capítulo, as arestas
 saem da sequência fixa de estágios, e as relações avaliáveis saem de
@@ -204,13 +200,14 @@ Alvo: **Biologia, Física, Química e Matemática** — 288 dos 613 capítulos d
 não a mesma). As demais matérias ficam de fora por decisão da Ana Júlia, e a
 razão é boa: "Uso da Crase" não tem fenômeno a desenhar.
 
-Estado: 26 pranchas cobrindo 38 dos 288 capítulos, 14 delas com anotação
+Estado: 27 pranchas cobrindo 39 dos 288 capítulos, 14 delas com anotação
 manuscrita. **Todas usam o `BoardShell`** —
 a `AdiabaticBoard` era a última que não usava, escrita antes da casca existir, e
 por isso não recebia nenhuma melhoria feita nela.
 
 **Desenhar prancha não é caminho para cobertura.** A auditoria do registro
-mostrou que 18 das 26 pranchas alcançam **exatamente um** capítulo: o currículo
+mostrou que 18 das 26 pranchas então existentes alcançavam **exatamente um**
+capítulo: o currículo
 tem um capítulo por fenômeno, então a premissa de que uma prancha "continua
 valendo para o capítulo que trate do mesmo fenômeno" quase nunca se realiza.
 Alargar palavra-chave também não resolve — a varredura dos 251 capítulos do
@@ -298,7 +295,7 @@ de cada elo. A referência traz isso como "Q = 0 → Trabalho → Energia intern
 Temperatura"; aqui a sequência não foi inventada, são os nós do mapa na ordem
 fixa de estágios.
 
-Vive **fora** do `BoardShell`, na tela: assim vale para as 26 pranchas, para o
+Vive **fora** do `BoardShell`, na tela: assim vale para as 27 pranchas, para o
 instrumento e também para o capítulo que só tem o aviso — que é justamente quem
 mais precisa de alguma estrutura visível.
 
@@ -337,6 +334,10 @@ O interruptor ao lado dos modos abre a leitura do capítulo inteiro de uma vez �
 os cinco nós com o estado de cada um, mais a legenda dos sete estados. Não é
 dado novo: é o mesmo `states` que já colore os cartões. A legenda não é opcional;
 sem ela a cor sozinha não significa nada para quem abre a tela pela primeira vez.
+
+A 27ª prancha é a cena radial autoral das Leis de Newton, integrada em
+14/09/2026 com movimento explicativo e alternativa estática para movimento
+reduzido.
 
 Ao desenhar uma prancha nova, três armadilhas já custaram retrabalho:
 

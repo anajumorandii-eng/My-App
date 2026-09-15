@@ -16,6 +16,11 @@ describe('registro de pranchas', () => {
     expect(findBoard(summary)?.id).toBe('adiabatica');
   });
 
+  it('entrega a prancha radial ao capítulo das Leis de Newton', () => {
+    const summary = capitulo('As Leis de Newton');
+    expect(findBoard(summary)?.id).toBe('leis-newton');
+  });
+
   it('recusa capítulo sem prancha em vez de emprestar a de outro assunto', () => {
     // A recusa é a regra do projeto, não um efeito colateral: sem representação
     // fiel, a tela diz que falta a prancha em vez de ilustrar com algo alheio.
