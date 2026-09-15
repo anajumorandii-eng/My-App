@@ -90,7 +90,7 @@
       "chapters": 35,
       "contentAtlases": 35,
       "interactiveExperiments": 1,
-      "anchorScenes": 0
+      "anchorScenes": 34
     },
     {
       "subject": "Sociologia",
@@ -29415,7 +29415,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "contraste-de-posicoes"
     },
     {
       "id": "summary-filosofia-heraclito-e-parmenides-o-ser-e-o-devir",
@@ -29468,7 +29468,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "contraste-de-posicoes"
     },
     {
       "id": "summary-filosofia-os-sofistas-e-a-crise-da-verdade",
@@ -29521,7 +29521,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "contraste-de-posicoes"
     },
     {
       "id": "summary-filosofia-o-metodo-socratico-e-a-maieutica",
@@ -29574,7 +29574,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "movimento-dialetico"
     },
     {
       "id": "summary-filosofia-a-teoria-das-ideias-de-platao",
@@ -29627,7 +29627,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "contraste-de-posicoes"
     },
     {
       "id": "summary-filosofia-o-mito-da-caverna",
@@ -29680,7 +29680,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "escala-de-graus"
     },
     {
       "id": "summary-filosofia-a-alegoria-da-linha-dividida-e-o-conhecimento",
@@ -29733,7 +29733,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "escala-de-graus"
     },
     {
       "id": "summary-filosofia-logica-e-metafisica-aristotelicas",
@@ -29786,7 +29786,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "cadeia-de-derivacao"
     },
     {
       "id": "summary-filosofia-a-etica-a-nicomaco-e-a-doutrina-do-meio-termo",
@@ -29839,7 +29839,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "escala-de-graus"
     },
     {
       "id": "summary-filosofia-politica-aristotelica-o-homem-como-animal-politico",
@@ -29892,7 +29892,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "contraste-de-posicoes"
     },
     {
       "id": "summary-filosofia-patristica-e-santo-agostinho",
@@ -29945,7 +29945,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "contraste-de-posicoes"
     },
     {
       "id": "summary-filosofia-escolastica-e-santo-tomas-de-aquino",
@@ -29998,7 +29998,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "cadeia-de-derivacao"
     },
     {
       "id": "summary-filosofia-a-relacao-entre-fe-e-razao",
@@ -30051,7 +30051,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "contraste-de-posicoes"
     },
     {
       "id": "summary-filosofia-descartes-e-o-metodo-a-duvida-hiperbolica",
@@ -30104,7 +30104,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "escala-de-graus"
     },
     {
       "id": "summary-filosofia-racionalismo-continental-espinosa-e-leibniz",
@@ -30157,7 +30157,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "contraste-de-posicoes"
     },
     {
       "id": "summary-filosofia-empirismo-britanico-locke-berkeley-e-hume",
@@ -30210,7 +30210,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "contraste-de-posicoes"
     },
     {
       "id": "summary-filosofia-a-critica-de-hume-a-causalidade",
@@ -30263,7 +30263,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "cadeia-de-derivacao"
     },
     {
       "id": "summary-filosofia-hobbes-e-o-estado-de-natureza",
@@ -30316,7 +30316,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "cadeia-de-derivacao"
     },
     {
       "id": "summary-filosofia-locke-e-os-direitos-naturais",
@@ -30369,7 +30369,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "cadeia-de-derivacao"
     },
     {
       "id": "summary-filosofia-rousseau-e-a-vontade-geral",
@@ -30422,7 +30422,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "cadeia-de-derivacao"
     },
     {
       "id": "summary-filosofia-o-ideal-iluminista-de-razao-e-progresso",
@@ -30475,7 +30475,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "contraste-de-posicoes"
     },
     {
       "id": "summary-filosofia-a-critica-da-razao-pura",
@@ -30528,7 +30528,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "contraste-de-posicoes"
     },
     {
       "id": "summary-filosofia-a-etica-kantiana-e-o-imperativo-categorico",
@@ -30581,7 +30581,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "cadeia-de-derivacao"
     },
     {
       "id": "summary-filosofia-hegel-e-a-dialetica",
@@ -30634,7 +30634,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "movimento-dialetico"
     },
     {
       "id": "summary-filosofia-o-materialismo-historico",
@@ -30687,7 +30687,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "camadas-de-determinacao"
     },
     {
       "id": "summary-filosofia-alienacao-e-mais-valia",
@@ -30740,7 +30740,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "camadas-de-determinacao"
     },
     {
       "id": "summary-filosofia-a-luta-de-classes-na-filosofia-marxista",
@@ -30793,7 +30793,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "camadas-de-determinacao"
     },
     {
       "id": "summary-filosofia-nietzsche-e-a-critica-aos-valores-morais",
@@ -30846,7 +30846,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "movimento-dialetico"
     },
     {
       "id": "summary-filosofia-o-existencialismo-de-sartre",
@@ -30899,7 +30899,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "cadeia-de-derivacao"
     },
     {
       "id": "summary-filosofia-a-escola-de-frankfurt-e-a-industria-cultural",
@@ -30952,7 +30952,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "camadas-de-determinacao"
     },
     {
       "id": "summary-filosofia-foucault-e-as-relacoes-de-poder",
@@ -31005,7 +31005,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "contraste-de-posicoes"
     },
     {
       "id": "summary-filosofia-justica-e-direitos-humanos",
@@ -31058,7 +31058,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "contraste-de-posicoes"
     },
     {
       "id": "summary-filosofia-etica-aplicada-e-bioetica",
@@ -31111,7 +31111,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "contraste-de-posicoes"
     },
     {
       "id": "summary-filosofia-filosofia-politica-contemporanea",
@@ -31164,7 +31164,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "contraste-de-posicoes"
     },
     {
       "id": "summary-sociologia-o-contexto-historico-do-surgimento-da-sociologia",

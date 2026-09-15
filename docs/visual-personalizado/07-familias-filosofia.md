@@ -8,23 +8,22 @@ cada capítulo; cada família responde a uma estrutura que aparece
 repetidamente no material — não é uma categorização temática, é uma
 categorização de forma.
 
-Este é um inventário, não uma implementação: `filosofia[]` em
-`src/views/topic-scenes/data/filosofia.ts` continua vazio ao fim desta
-tarefa. As Tasks 4-8 escrevem, família por família, as entradas
-(`SceneEntry`) que tornam esta tabela executável.
+O inventário tornou-se executável em `src/views/topic-scenes/data/filosofia.ts`:
+cada entrada é validada contra seção e trecho literais do capítulo antes de
+ser disponibilizada pelo seletor.
 
 ## Tabela de atribuição
 
 | Família | Estrutura | Capítulos |
 |---|---|---|
-| `contraste-de-posicoes` | Respostas rivais à mesma pergunta, comparadas por critério explícito | Crítica da Razão Pura; Fé e Razão; Teoria das Ideias; Empirismo Britânico; Filosofia Política Contemporânea; Heráclito e Parmênides; Justiça e Direitos Humanos; Ideal Iluminista; Filósofos da Physis; Sofistas; Patrística e Agostinho; Política Aristotélica; Racionalismo Continental; Ética Aplicada e Bioética (14) |
+| `contraste-de-posicoes` | Respostas rivais à mesma pergunta, comparadas por critério explícito | Crítica da Razão Pura; Fé e Razão; Teoria das Ideias; Empirismo Britânico; Filosofia Política Contemporânea; Heráclito e Parmênides; Justiça e Direitos Humanos; Ideal Iluminista; Filósofos da Physis; Sofistas; Patrística e Agostinho; Política Aristotélica; Racionalismo Continental; Ética Aplicada e Bioética; Foucault (15) |
 | `escala-de-graus` | Degraus ordenados entre dois extremos, com o que muda a cada degrau | Linha Dividida; Ética a Nicômaco; Descartes e a Dúvida; Mito da Caverna (4) |
 | `cadeia-de-derivacao` | Passos encadeados; remover um quebra a conclusão | Crítica de Hume; Ética Kantiana; Escolástica; Hobbes; Locke; Lógica e Metafísica Aristotélicas; Existencialismo de Sartre; Rousseau (8) |
-| `camadas-de-determinacao` | Uma camada condiciona a outra | Escola de Frankfurt; Luta de Classes; Alienação e Mais-Valia; Foucault; Materialismo Histórico (5) |
+| `camadas-de-determinacao` | Uma camada condiciona a outra | Escola de Frankfurt; Luta de Classes; Alienação e Mais-Valia; Materialismo Histórico (4) |
 | `movimento-dialetico` | Ciclo que transforma os dois termos ao se completar | Hegel; Nietzsche; Método Socrático (3) |
 | *sem cena* | — | Do Mito ao Logos (1) |
 
-Total: 14 + 4 + 8 + 5 + 3 + 1 = 35 capítulos.
+Total: 15 + 4 + 8 + 4 + 3 + 1 = 35 capítulos.
 
 ## As cinco famílias
 
@@ -71,8 +70,18 @@ superior seja um "próximo passo" da inferior.
 **Capítulo que a originou:** o Materialismo Histórico, onde a base
 material/econômica determina as formas de consciência e organização
 social — o padrão se repete em Alienação e Mais-Valia, Luta de Classes,
-Escola de Frankfurt (economia cultural) e Foucault (relações de poder
-disciplinar).
+Escola de Frankfurt (economia cultural). Foucault foi deliberadamente
+retirado desta família: seu capítulo recusa um centro único do poder e o
+descreve como rede capilar; representá-lo como base determinante inverteria
+a tese da fonte. Sua cena contrapõe o modelo jurídico centralizado ao poder
+relacional e produtivo.
+
+## Verificação
+
+- Lastro e completude: 34 entradas válidas e 1 lacuna declarada para os 35 capítulos.
+- Automação: 454 testes Node e 287 testes Vitest aprovados; TypeScript e build de produção aprovados.
+- Navegador desktop escuro: Hegel exibiu a cena no modo Explorar, completou o movimento por botão, preservou o estado ao avançar de etapa e removeu a cena ao entrar em Testar.
+- A verificação no navegador é uma amostra funcional, não validação visual individual dos 35 capítulos; capturas móveis e de movimento reduzido continuam como evidência pendente.
 
 ### `movimento-dialetico`
 **Estrutura:** um ciclo que transforma os dois termos ao se completar — não

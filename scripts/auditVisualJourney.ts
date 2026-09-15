@@ -5,6 +5,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { atlasCoverage } from '../src/lib/topicAtlas';
 import { topicExperiments } from '../src/views/topic-experiments/catalog';
+import { sceneFor } from '../src/views/topic-scenes/sceneFor';
 
 const chapters = interactiveSummaries.map(summary => ({
   id: summary.id, subject: summary.subject, topic: summary.topic, title: summary.title,
@@ -12,7 +13,7 @@ const chapters = interactiveSummaries.map(summary => ({
   sources: summary.sources.length, questions: summary.retrieval.length,
   contentAtlas: atlasCoverage(summary),
   interactiveExperiment: topicExperiments[summary.id] ?? null,
-  anchorScene: findBoard(summary)?.id ?? findInstrument(summary)?.id ?? null,
+  anchorScene: sceneFor(summary.id)?.family ?? findBoard(summary)?.id ?? findInstrument(summary)?.id ?? null,
 }));
 const invalid = chapters.filter(chapter => !chapter.stages.length || chapter.stages.some(stage => !stage.characters));
 if (invalid.length) throw new Error(`Capítulos sem conteúdo: ${invalid.map(item => item.id).join(', ')}`);
