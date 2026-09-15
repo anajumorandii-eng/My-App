@@ -9,5 +9,6 @@ export default defineConfig({
     clearMocks: true,
     css: false,
     testTimeout: 15000,
+    passWithNoTests: true,
   },
 });
