@@ -244,7 +244,13 @@
 .dark .vs-concept-card code { background: rgba(0,0,0,.18); }
 
 .vs-newton-core { fill: color-mix(in srgb, var(--vs-blue) 14%, transparent); stroke: var(--vs-blue); stroke-width: 2; }
+.vs-newton-core { filter: url(#chalk-glow); stroke-dasharray: 5 2 9 1; }
 .vs-newton-core-copy { fill: currentColor; font: 700 13px/1 ui-monospace, SFMono-Regular, monospace; letter-spacing: .08em; }
+.vs-newton-sparks path { fill: none; stroke: var(--vs-amber); stroke-width: 2; stroke-linecap: round; opacity: .8; }
+.vs-force-mini rect { fill: color-mix(in srgb, var(--vs-burgundy) 22%, var(--vs-paper-strong)); stroke: currentColor; stroke-width: 1.4; }
+.vs-force-mini path { fill: none; stroke: var(--vs-burgundy); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.vs-newton-hand { fill: var(--vs-amber); font: 700 12px/1 "Kalam", cursive; }
+.vs-newton-hand-arrow { fill: none; stroke: var(--vs-amber); stroke-width: 1.5; stroke-linecap: round; stroke-dasharray: 4 2; }
 .vs-newton-link { fill: none; stroke: var(--vs-blue); stroke-width: 2.2; stroke-linecap: round; transition: stroke-width .2s ease, filter .2s ease; }
 .vs-newton-link.is-active { stroke-width: 4; filter: drop-shadow(0 0 6px var(--vs-blue)); }
 .vs-newton-law rect { fill: color-mix(in srgb, var(--vs-paper-strong) 86%, var(--vs-blue)); stroke: var(--vs-blue); stroke-width: 1.4; }
@@ -303,24 +309,30 @@
 .vs-piston-hatch path { stroke-width: 1.6; opacity: .5; }
 
 .vs-piston-gas {
-  fill: color-mix(in srgb, var(--vs-blue) 26%, transparent);
+  fill: url(#gas-volume);
   /* A altura do gás é o complemento do curso do pistão: animar os dois com a
      mesma duração evita o gás "descolar" da placa no meio da transição. */
   transition: y .5s cubic-bezier(.4, 0, .2, 1), height .5s cubic-bezier(.4, 0, .2, 1);
 }
+.vs-cylinder-shadow { fill: rgba(39, 31, 23, .16); filter: blur(4px); }
+.vs-glass-highlight { fill: none; stroke: rgba(255,255,255,.82); stroke-width: 7; stroke-linecap: round; opacity: .68; }
+.vs-gas-surface { fill: rgba(201,239,255,.72); stroke: color-mix(in srgb, var(--vs-blue) 60%, white); stroke-width: 1.4; }
 
 .vs-piston-molecules circle {
   fill: var(--vs-blue);
   opacity: .8;
   transition: cy .5s cubic-bezier(.4, 0, .2, 1);
 }
+.vs-piston-molecules .vs-molecule-shine { fill: rgba(255,255,255,.92); opacity: 1; }
 
 .vs-piston-head {
   transition: transform .5s cubic-bezier(.4, 0, .2, 1);
 }
-.vs-piston-plate { fill: var(--vs-burgundy); }
+.vs-piston-plate { fill: url(#metal-piston); filter: url(#piston-shadow); }
+.vs-piston-rim { fill: rgba(31,37,35,.35); }
+.vs-piston-face { fill: url(#metal-piston); stroke: rgba(255,255,255,.46); stroke-width: 1; }
 .vs-piston-rod,
-.vs-piston-cap { fill: color-mix(in srgb, var(--vs-ink) 72%, transparent); }
+.vs-piston-cap { fill: url(#metal-piston); filter: url(#piston-shadow); }
 
 .vs-piston-seal circle {
   fill: var(--vs-paper-strong);
@@ -348,8 +360,8 @@
 .vs-piston-wrap[data-emphasis='expansao'] .vs-force-note--down,
 .vs-piston-wrap[data-emphasis='compressao'] .vs-force-note--up { opacity: .34; }
 
-.vs-piston[data-emphasis='expansao'] .vs-piston-gas { fill: color-mix(in srgb, var(--vs-blue) 16%, transparent); }
-.vs-piston[data-emphasis='compressao'] .vs-piston-gas { fill: color-mix(in srgb, var(--vs-blue) 40%, transparent); }
+.vs-piston[data-emphasis='expansao'] .vs-piston-gas { opacity: .72; }
+.vs-piston[data-emphasis='compressao'] .vs-piston-gas { opacity: 1; filter: saturate(1.2); }
 
 @media (prefers-reduced-motion: reduce) {
   .vs-piston-gas,
@@ -867,18 +879,24 @@
 
 /* Bioenergética */
 .vs-chloroplast {
-  fill: color-mix(in srgb, var(--vs-green) 24%, transparent);
+  fill: url(#chloroplast-body);
   stroke: var(--vs-green);
   stroke-width: 2.4;
+  filter: url(#organelle-shadow);
 }
-.vs-thylakoid { stroke: var(--vs-green); stroke-width: 3; stroke-linecap: round; }
-.vs-grana { fill: var(--vs-green); }
+.vs-organelle-highlight { fill: rgba(255,255,255,.18); }
+.vs-leaf-silhouette { fill: rgba(75,133,69,.10); stroke: rgba(47,125,89,.32); stroke-width: 1.4; }
+.vs-leaf-vein { fill: none; stroke: rgba(47,125,89,.28); stroke-width: 1.2; stroke-linecap: round; }
+.vs-thylakoid { stroke: #245c3d; stroke-width: 5; stroke-linecap: round; }
+.vs-grana { fill: #d1e86a; stroke: #245c3d; stroke-width: 1.5; }
 .vs-mitochondria {
-  fill: color-mix(in srgb, var(--vs-coral) 40%, transparent);
+  fill: url(#mito-body);
   stroke: var(--vs-burgundy);
   stroke-width: 2.4;
+  filter: url(#organelle-shadow);
 }
-.vs-crista { fill: none; stroke: var(--vs-burgundy); stroke-width: 2; }
+.vs-mito-glow { fill: none; stroke: rgba(255,255,255,.5); stroke-width: 3; stroke-linecap: round; }
+.vs-crista { fill: none; stroke: #75283c; stroke-width: 2.4; }
 .dark .vs-crista, .dark .vs-mitochondria { stroke: #d88598; }
 .vs-organelle-name {
   fill: var(--vs-dim);
@@ -1740,12 +1758,18 @@
 .vs-study-toolbar .vs-mode-row { grid-column: 1 / -1; }
 .vs-mode-row .vs-modes { width: auto; margin: 0; gap: 0 !important; }
 .vs-modes > button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   border: 0 !important;
   border-bottom: 2px solid transparent !important;
   border-radius: 0 !important;
   background: transparent !important;
   color: var(--vs-dim) !important;
 }
+.vs-modes > button > svg { width: 19px; height: 19px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.vs-modes > button[aria-selected='true'] > svg { transform: rotate(-4deg) scale(1.08); }
 .vs-modes > button[aria-selected='true'] {
   border-bottom-color: var(--vs-burgundy) !important;
   color: var(--vs-burgundy) !important;

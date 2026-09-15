@@ -19,9 +19,17 @@ function LeafScene({ emphasis }: { emphasis: 'esquerda' | 'direita' | 'nenhum' }
   return (
     <svg className="vs-piston vs-scene" viewBox="0 0 320 330" role="img" data-emphasis={emphasis}
       aria-label="Cloroplasto e mitocôndria com as entradas e saídas de gás e a energia de cada processo">
+      <defs>
+        <radialGradient id="chloroplast-body" cx="35%" cy="28%"><stop stopColor="#e6f5c9" /><stop offset=".68" stopColor="#72aa62" /><stop offset="1" stopColor="#315f42" /></radialGradient>
+        <linearGradient id="mito-body" x1="0" y1="0" x2="1" y2="1"><stop stopColor="#ffd8c9" /><stop offset=".55" stopColor="#d78478" /><stop offset="1" stopColor="#843546" /></linearGradient>
+        <filter id="organelle-shadow" x="-30%" y="-30%" width="170%" height="180%"><feDropShadow dx="0" dy="6" stdDeviation="5" floodOpacity=".2" /></filter>
+      </defs>
+      <path className="vs-leaf-silhouette" d="M30 165C5 90 43 42 132 48c-3 81-42 124-102 117Z" />
+      <path className="vs-leaf-vein" d="M26 160C62 120 91 88 125 56M66 119l-8-38M84 101l34-8" />
       {/* Cloroplasto: elipse com tilacoides empilhados. */}
       <g className="vs-organelle" data-dim={foco === 'resp' ? 'true' : undefined}>
         <ellipse className="vs-chloroplast" cx="92" cy="122" rx="62" ry="44" />
+        <ellipse className="vs-organelle-highlight" cx="76" cy="106" rx="39" ry="22" />
         {[0, 1, 2].map((i) => (
           <g key={i}>
             <line className="vs-thylakoid" x1={64 + i * 28} y1="104" x2={64 + i * 28} y2="140" />
@@ -45,6 +53,7 @@ function LeafScene({ emphasis }: { emphasis: 'esquerda' | 'direita' | 'nenhum' }
       {/* Mitocôndria: cápsula com cristas. */}
       <g className="vs-organelle" data-dim={foco === 'foto' ? 'true' : undefined}>
         <rect className="vs-mitochondria" x="172" y="86" width="118" height="72" rx="36" />
+        <path className="vs-mito-glow" d="M184 108c19-18 74-23 94 7" />
         {[0, 1, 2, 3].map((i) => (
           <path key={i} className="vs-crista" d={`M${196 + i * 24} 92 q 14 30, 0 60`} />
         ))}

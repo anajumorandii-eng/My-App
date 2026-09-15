@@ -32,11 +32,18 @@ function AdiabaticPiston({ emphasis }: { emphasis: 'expansao' | 'compressao' | '
       data-emphasis={emphasis}
       aria-label="Cilindro termicamente isolado: o gás ocupa a parte de baixo e o pistão desliza no topo, sem troca de calor com o meio"
     >
+      <defs>
+        <linearGradient id="metal-piston" x1="0" x2="1"><stop stopColor="#353b39" /><stop offset=".35" stopColor="#d9d7cc" /><stop offset=".58" stopColor="#6f7470" /><stop offset="1" stopColor="#222725" /></linearGradient>
+        <linearGradient id="gas-volume" x1="0" y1="0" x2="0" y2="1"><stop stopColor="#dff5ff" stopOpacity=".52" /><stop offset="1" stopColor="#75bce5" stopOpacity=".72" /></linearGradient>
+        <filter id="piston-shadow" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="5" stdDeviation="5" floodOpacity=".25" /></filter>
+      </defs>
+      <ellipse className="vs-cylinder-shadow" cx="160" cy="309" rx="112" ry="12" />
       <g className="vs-piston-wall">
         {/* Parede dupla: a faixa entre as duas linhas recebe as hachuras. */}
         <path d="M70 70 L70 290 L250 290 L250 70" />
         <path d="M52 70 L52 308 L268 308 L268 70" />
       </g>
+      <path className="vs-glass-highlight" d="M78 84V278" />
 
       <g className="vs-piston-hatch" aria-hidden="true">
         {Array.from({ length: 12 }, (_, i) => (
@@ -52,20 +59,25 @@ function AdiabaticPiston({ emphasis }: { emphasis: 'expansao' | 'compressao' | '
 
       {/* O gás começa logo abaixo do pistão e vai até o fundo do cilindro. */}
       <rect className="vs-piston-gas" x="70" y={topoGas} width="180" height={alturaGas} />
+      <ellipse className="vs-gas-surface" cx="160" cy={topoGas} rx="90" ry="10" />
 
       <g className="vs-piston-molecules" aria-hidden="true">
         {[
           [104, 0.62], [148, 0.28], [196, 0.7], [226, 0.42],
           [118, 0.86], [172, 0.52], [212, 0.9], [88, 0.34],
         ].map(([x, f], i) => (
-          <circle key={i} cx={x} cy={topoGas + alturaGas * f} r="4.5" />
+          <g key={i} transform={`translate(${x} ${topoGas + alturaGas * f})`}>
+            <circle r="5.5" /><circle className="vs-molecule-shine" cx="-1.6" cy="-1.8" r="1.4" />
+          </g>
         ))}
       </g>
 
       {/* Um só translate move placa, haste e punho: eles são peça única, e
           animar cada um daria descolamento no meio da transição. */}
       <g className="vs-piston-head" style={{ transform: `translateY(${topoGas - 150}px)` }}>
+        <ellipse className="vs-piston-rim" cx="160" cy="142" rx="98" ry="14" />
         <rect className="vs-piston-plate" x="66" y="134" width="188" height="16" rx="3" />
+        <ellipse className="vs-piston-face" cx="160" cy="134" rx="94" ry="12" />
         <rect className="vs-piston-rod" x="150" y="76" width="20" height="60" rx="4" />
         <rect className="vs-piston-cap" x="128" y="62" width="64" height="14" rx="5" />
       </g>

@@ -10,12 +10,17 @@ function NewtonScene({ emphasis }: { emphasis: 'esquerda' | 'direita' | 'nenhum'
   return (
     <svg className="vs-piston vs-scene vs-newton-scene" viewBox="0 0 320 330" role="img"
       aria-label="Mapa radial das três leis de Newton, ligando inércia, força resultante e ação e reação">
+      <defs>
+        <filter id="chalk-glow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="1.2" result="b" /><feMerge><feMergeNode in="b" /><feMergeNode in="SourceGraphic" /></feMerge></filter>
+      </defs>
+      <g className="vs-newton-sparks" aria-hidden="true">
+        <path d="M145 101l-8-15M160 97V78M176 101l9-15M105 155H87M215 155h18M111 201l-13 12M210 201l13 12" />
+      </g>
       <motion.circle className="vs-newton-core" cx="160" cy="165" r="53"
         initial={reducedMotion ? false : { opacity: 0, scale: .82 }}
         animate={{ opacity: 1, scale: 1 }} transition={{ type: 'spring', stiffness: 150, damping: 18 }} />
       <text className="vs-newton-core-copy" x="160" y="157" textAnchor="middle">LEIS DE</text>
       <text className="vs-newton-core-copy" x="160" y="178" textAnchor="middle">NEWTON</text>
-
       <motion.path className={`vs-newton-link${emphasis === 'esquerda' ? ' is-active' : ''}`} d="M126 124 78 76"
         initial={reducedMotion ? false : { pathLength: 0 }} animate={{ pathLength: 1 }} transition={lineTransition} />
       <motion.path className={`vs-newton-link${emphasis === 'direita' ? ' is-active' : ''}`} d="M194 124 244 76"
@@ -38,6 +43,8 @@ function NewtonScene({ emphasis }: { emphasis: 'esquerda' | 'direita' | 'nenhum'
         <text x="160" y="288" textAnchor="middle">3ª Lei · Par</text>
         <text x="160" y="308" textAnchor="middle">F₁ = −F₂</text>
       </g>
+      <text className="vs-newton-hand" x="12" y="245" transform="rotate(-5 12 245)">desenhe as forças</text>
+      <path className="vs-newton-hand-arrow" d="M94 239q28-12 47-29" />
     </svg>
   );
 }

@@ -31,6 +31,18 @@ const NODE_H = 62;
 const NODE_GAP = 46;
 const PLATE_W = 380;
 
+function ModeGlyph({ mode }: { mode: Mode }) {
+  if (mode === 'explorar') return (
+    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8" /><path d="m14.8 8.8-1.7 4.3-4.3 1.7 1.7-4.3 4.3-1.7Z" /><circle cx="12" cy="12" r="1" /></svg>
+  );
+  if (mode === 'testar') return (
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 18.5V6.8L12 3l7 3.8v11.7L12 22l-7-3.5Z" /><path d="m8.5 12 2.2 2.2 4.8-5" /></svg>
+  );
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="2.3" /><circle cx="19" cy="6" r="2.3" /><circle cx="19" cy="18" r="2.3" /><path d="m7.2 11.1 9.6-4.2M7.2 12.9l9.6 4.2" /></svg>
+  );
+}
+
 function plateGeometry(count: number) {
   const nodes = Array.from({ length: count }, (_, index) => ({ y: 10 + index * (NODE_H + NODE_GAP) }));
   return { nodes, height: 20 + count * NODE_H + Math.max(0, count - 1) * NODE_GAP };
@@ -383,6 +395,7 @@ export default function Visual() {
               mode === key ? 'bg-indigo-600 text-white' : 'border border-zinc-300 dark:border-zinc-700'
             }`}
           >
+            <ModeGlyph mode={key} />
             {MODE_LABEL[key]}
           </button>
         ))}

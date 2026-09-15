@@ -24,6 +24,15 @@ por parecer genérica. A tela passou a usar uma composição editorial contínua
 A validação também encontrou e corrigiu um controle de domínio sobreposto à
 aba Reconstruir no celular.
 
+## 2026-09-14 — redesenho das ilustrações e símbolos
+
+Após a composição ser aprovada como direção, os desenhos ainda foram recusados
+por parecerem ícones genéricos ampliados. A correção alterou os SVGs: o pistão
+recebeu vidro, metal, reflexos, gás em profundidade e partículas; cloroplasto e
+mitocôndria receberam volume, textura e anatomia reconhecível; Newton recebeu
+traço de lousa e marcas de força. Explorar, Testar e Reconstruir agora têm
+glifos próprios, desenhados para a função pedagógica de cada modo.
+
 ### Primeira etapa técnica
 
 ### Arquivos criados
