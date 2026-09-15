@@ -5,7 +5,7 @@ import { describe, it, expect } from 'vitest';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const dir = join(__dirname, 'families');
-const familias = readdirSync(dir).filter((f) => f.endsWith('.tsx'));
+const familias = readdirSync(dir).filter((f) => f.endsWith('.tsx') && !f.endsWith('.test.tsx'));
 
 describe('Portão do movimento', () => {
   if (familias.length === 0) {

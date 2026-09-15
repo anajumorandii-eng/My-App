@@ -1,0 +1,58 @@
+.tc-scene {
+  display: grid;
+  gap: 0.9rem;
+  padding: 1.25rem;
+  border: 1px solid color-mix(in srgb, var(--vs-burgundy) 28%, transparent);
+  border-radius: 2px;
+  background: var(--vs-paper-strong);
+}
+.tc-scene > header { display: grid; gap: 0.2rem; }
+.tc-scene > header small {
+  font-family: var(--font-editorial, Newsreader), serif;
+  font-style: italic;
+  color: color-mix(in srgb, var(--vs-burgundy) 78%, transparent);
+}
+.tc-scene > header h4 {
+  margin: 0;
+  font-family: var(--font-editorial, Newsreader), serif;
+  font-weight: 500;
+  font-size: 1.22rem;
+  line-height: 1.25;
+}
+.tc-scene svg { width: 100%; max-width: 100%; height: auto; }
+
+.tc-base { stroke: currentColor; stroke-width: 1; opacity: 0.4; }
+.tc-pillar { fill: color-mix(in srgb, var(--vs-blue) 12%, transparent); stroke: var(--vs-blue); stroke-width: 1.5; }
+.tc-pillar-foco { fill: color-mix(in srgb, var(--vs-blue) 26%, transparent); stroke-width: 2.5; }
+.tc-label { font-size: 13px; fill: currentColor; }
+
+.tc-choices { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.tc-choices button,
+.tc-quote-toggle {
+  padding: 0.45rem 0.85rem;
+  font: inherit;
+  font-size: 0.9rem;
+  color: inherit;
+  background: transparent;
+  border: 1px solid color-mix(in srgb, var(--vs-blue) 45%, transparent);
+  border-radius: 2px;
+  cursor: pointer;
+}
+.tc-choices button[aria-pressed='true'] {
+  background: color-mix(in srgb, var(--vs-blue) 18%, transparent);
+  border-color: var(--vs-blue);
+  font-weight: 600;
+}
+.tc-choices button:focus-visible,
+.tc-quote-toggle:focus-visible { outline: 2px solid var(--vs-blue); outline-offset: 2px; }
+.tc-quote-toggle { justify-self: start; }
+
+.tc-observation { margin: 0; }
+.tc-quote {
+  margin: 0;
+  padding-left: 0.9rem;
+  border-left: 2px solid color-mix(in srgb, var(--vs-amber) 70%, transparent);
+  font-family: var(--font-editorial, Newsreader), serif;
+  font-style: italic;
+}
+.tc-quote cite { display: block; font-size: 0.82rem; font-style: normal; opacity: 0.72; }
