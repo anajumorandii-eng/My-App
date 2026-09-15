@@ -6,6 +6,7 @@
   border-radius: 2px;
   background: var(--vs-paper-strong);
 }
+.dark .tc-scene { --vs-burgundy: #db8c9f; }
 .tc-scene > header { display: grid; gap: 0.2rem; }
 .tc-scene > header small {
   font-family: var(--font-editorial, Newsreader), serif;
