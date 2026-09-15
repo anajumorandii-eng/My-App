@@ -113,3 +113,43 @@ a família nova precisa ser registrada neste documento (ou em um documento
 irmão específico da matéria que a originou) antes de virar código —
 mantendo aqui uma explicação de qual capítulo a motivou e qual estrutura
 conceitual ela representa, no mesmo formato usado acima.
+
+## Verificação em navegador — 15/09/2026
+
+Servidor de desenvolvimento em `http://localhost:3000`, modal de onboarding
+contornado por `localStorage.setItem('juju_onboarding','true')`.
+
+**Medido em `movimento-dialetico` (Hegel e a Dialética), desktop 1440×960:**
+
+- A cena monta no fluxo de Explorar com o kicker "CRIVO · movimento dialético".
+- Estado inicial não revela o terceiro momento: nenhum `role="status"` presente
+  antes da ação do usuário.
+- Acionamento por teclado funciona: o botão recebe foco e responde a Enter.
+- Após completar o movimento, a superação aparece ("cancela, preserva e eleva o
+  verdadeiro de cada lado") com a citação e a seção de origem.
+- **Persistência entre etapas confirmada por identidade de nó**: a referência ao
+  elemento `.tc-scene` antes e depois de "Continuar" é o mesmo objeto, e o
+  estado revelado sobrevive à troca. É o comportamento que a `key` amarrada ao
+  capítulo, fora do `AnimatePresence`, deveria garantir.
+- A cena desaparece ao entrar em Testar.
+- Sem overflow horizontal.
+
+**Medido em `cadeia-de-derivacao` (Hobbes e o Estado de Natureza), celular 390×844:**
+
+- Sem overflow horizontal.
+- Rótulos sem corte: começam em x=76 num trilho que termina em x=420; o mais
+  largo mede 119px. Esta família desenha rótulos dentro de faixas horizontais,
+  então não sofre a restrição de ~62px que atingiu `escala-de-graus`.
+- Avanço da cadeia por teclado funciona; o contador mostra "elo 2 de 4" e a
+  afirmação acompanha o elo.
+- `document.getAnimations()` retorna 0 animações ativas em repouso e nenhuma
+  com `iterations: Infinity`.
+- Console sem erros.
+
+Captura: `screenshots/cenas-filosofia/hobbes-cadeia-mobile-escuro.jpg`.
+
+**Limite desta verificação.** São duas famílias de cinco, em dois capítulos de
+34, em duas larguras. É evidência de amostra, não validação dos 35 capítulos.
+Movimento reduzido está implementado pelo token de duração zero em
+`useSceneMotion` e coberto por teste unitário, mas não foi exercitado aqui com
+`prefers-reduced-motion` emulado no navegador.
