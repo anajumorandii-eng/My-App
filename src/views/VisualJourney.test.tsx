@@ -4,10 +4,18 @@ import { describe, it, expect, vi } from 'vitest';
 import { VisualJourney } from './VisualJourney';
 import { interactiveSummaries } from '../data/interactiveSummaries';
 import { NewtonLab, AtomLab } from './visual-boards/MechanismLab';
+import { filosofia } from './topic-scenes/data/filosofia';
 
 vi.mock('../components/AiText', () => ({ AiText: ({ text }: { text: string }) => <div>{text}</div> }));
 
 describe('Percurso ligado ao conteúdo', () => {
+  it('mantém a cena-âncora montada ao trocar de etapa do capítulo', () => {
+    const summary = interactiveSummaries.find((item) => item.id === filosofia[0].chapterId)!;
+    render(<VisualJourney summary={summary} onPractice={() => {}} />);
+    const cena = screen.getByLabelText(filosofia[0].question);
+    fireEvent.click(screen.getAllByRole('button', { name: /Continuar:/ })[0]);
+    expect(screen.getByLabelText(filosofia[0].question)).toBe(cena);
+  });
   it('leva ao teste apenas por ação explícita e conserva todas as etapas do capítulo', async () => {
     const summary = interactiveSummaries.find(s => s.subject === 'História')!;
     const practice = vi.fn();

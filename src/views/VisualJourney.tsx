@@ -6,6 +6,7 @@ import { STAGE_LABEL } from '../lib/visualStudy';
 import type { InteractiveSummary } from '../types/summary';
 import { TopicVisual } from './TopicVisual';
 import { TopicExperiment } from './topic-experiments/TopicExperiment';
+import { TopicScene } from './topic-scenes/TopicScene';
 
 /** The section order and all teaching text come from the chapter, not a subject template. */
 export function VisualJourney({ summary, onPractice, initialIndex = 0, onStepChange }: {
@@ -36,6 +37,7 @@ export function VisualJourney({ summary, onPractice, initialIndex = 0, onStepCha
         animate={{ scaleX: (index + 1) / summary.sections.length }}
         transition={{ duration: reduced ? 0 : MOTION_DURATION.panel, ease: MOTION_EASE }} /></div>
       <TopicExperiment key={summary.id} summaryId={summary.id} />
+      <TopicScene key={`cena-${summary.id}`} summaryId={summary.id} />
       <AnimatePresence initial={false} mode="wait">
         <motion.article key={section.id} className="vs-journey-page"
           initial={{ opacity: reduced ? 1 : 0, x: reduced ? 0 : direction * 12 }}
