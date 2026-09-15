@@ -97,3 +97,8 @@ grandes. Não foi adicionada nesta etapa: os cinco nós atuais têm geometria
 controlada, e o SVG autoral oferece maior fidelidade à referência com menor
 custo. A decisão deve ser reavaliada quando houver edição livre de nós,
 conexões criadas pela estudante ou mapas com muitas dezenas de conceitos.
+# Ampliação do atlas autoral — 15/09/2026
+
+- `atom-models-atlas.webp`: experiência da folha de ouro e átomo de Bohr na mesma composição, permitindo que a seleção altere o foco entre evidência e modelo.
+- `newton-laws-atlas.webp`: carrinho, trilho, roldana, vetores e par de interação para representar as três leis por mecanismos físicos concretos.
+- As duas ilustrações têm transparência real, texto pedagógico em HTML, descrição acessível, entrada por mola e alternativa estática para movimento reduzido.

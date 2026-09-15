@@ -77,20 +77,6 @@
   width: min(620px, 100%);
   margin-top: .25rem;
 }
-.vs-modes > button {
-  min-height: 44px;
-  border-radius: 12px !important;
-  border: 1px solid var(--vs-line) !important;
-  background: transparent;
-  color: inherit;
-  padding: .7rem .9rem !important;
-}
-.vs-modes > button[aria-selected='true'] {
-  border-color: var(--vs-burgundy) !important;
-  background: var(--vs-burgundy) !important;
-  color: white !important;
-  box-shadow: none !important;
-}
 
 .vs-workspace {
   display: grid;
@@ -136,8 +122,8 @@
 .vs-note-title,
 .vs-concept-label {
   display: block;
-  font: 700 .68rem/1.2 ui-monospace, SFMono-Regular, Menlo, monospace;
-  letter-spacing: .11em;
+  font: 700 italic .78rem/1.2 "Newsreader", Georgia, serif;
+  letter-spacing: .05em;
   text-transform: uppercase;
 }
 .vs-board-kicker { color: var(--vs-burgundy); }
@@ -167,14 +153,25 @@
   display: grid;
   place-items: center;
   align-content: center;
+  padding: 4px 10px;
   border: 2px solid var(--vs-burgundy);
   border-radius: 54% 46% 56% 44% / 45% 55% 46% 54%;
   transform: rotate(2deg);
   background: rgba(255,255,255,.34);
 }
+.vs-q-callout[data-long] {
+  flex-basis: 128px;
+  border-radius: 40% 60% 44% 56% / 50% 46% 54% 50%;
+}
 .dark .vs-q-callout { background: rgba(255,255,255,.04); border-color: #ce7c8e; }
 .vs-q-callout span { font-size: .66rem; text-transform: uppercase; letter-spacing: .1em; }
-.vs-q-callout strong { font-family: "Newsreader", Georgia, serif; font-size: 1.65rem; }
+.vs-q-callout strong {
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 1.65rem;
+  text-align: center;
+  line-height: 1.05;
+}
+.vs-q-callout[data-long] strong { font-size: 1.05rem; word-break: keep-all; overflow-wrap: normal; hyphens: none; }
 
 .vs-brush {
   width: min(520px, 64%);
@@ -427,9 +424,9 @@
 .vs-formula-note,
 .vs-pv-card,
 .vs-context-row section {
-  border: 1px solid rgba(77,65,48,.12);
+  border: 1px solid rgba(133,38,54,.14);
   border-radius: 16px;
-  background: rgba(255,255,255,.42);
+  background: color-mix(in srgb, var(--vs-burgundy) 5%, rgba(255,255,255,.5));
 }
 .dark .vs-formula-note,
 .dark .vs-pv-card,
@@ -442,6 +439,7 @@
   align-content: center;
   gap: 7px;
   padding: 18px;
+  border-left: 3px solid color-mix(in srgb, var(--vs-burgundy) 55%, transparent);
 }
 .vs-formula-note strong {
   font-family: "Newsreader", Georgia, serif;
@@ -462,10 +460,12 @@
 .vs-pv-card { margin: 0; padding: 14px 16px 10px; }
 .vs-pv-card figcaption {
   margin-bottom: 4px;
-  font: 700 .7rem/1.2 ui-monospace, SFMono-Regular, Menlo, monospace;
+  font: 700 italic .78rem/1.2 "Newsreader", Georgia, serif;
   text-transform: uppercase;
-  letter-spacing: .09em;
+  letter-spacing: .05em;
+  color: var(--vs-burgundy);
 }
+.dark .vs-pv-card figcaption { color: #d58a9a; }
 .vs-pv-card svg { display: block; width: 100%; height: 160px; }
 .vs-pv-card line { stroke: #4e534f; stroke-width: 1.6; }
 .dark .vs-pv-card line { stroke: #d4c7b2; }
@@ -511,19 +511,21 @@
   inset: auto 0 0 0;
   width: 100%;
   height: 128px;
-  opacity: .72;
+  opacity: .86;
 }
-.dark .vs-landscape-art { opacity: .34; }
+.dark .vs-landscape-art { opacity: .5; }
 .vs-hill { stroke: none; }
-.vs-hill--far { fill: color-mix(in srgb, var(--vs-forest) 22%, transparent); }
-.vs-hill--near { fill: color-mix(in srgb, var(--vs-forest) 38%, transparent); }
-.dark .vs-hill--far { fill: color-mix(in srgb, var(--vs-mint) 30%, transparent); }
-.dark .vs-hill--near { fill: color-mix(in srgb, var(--vs-mint) 46%, transparent); }
+.vs-hill--far { fill: color-mix(in srgb, var(--vs-blue) 48%, var(--vs-paper)); }
+.vs-hill--mid { fill: color-mix(in srgb, var(--vs-amber) 62%, var(--vs-forest) 18%); opacity: .8; }
+.vs-hill--near { fill: color-mix(in srgb, var(--vs-forest) 78%, transparent); }
+.dark .vs-hill--far { fill: color-mix(in srgb, var(--vs-blue) 65%, transparent); }
+.dark .vs-hill--mid { fill: color-mix(in srgb, var(--vs-amber) 50%, transparent); opacity: .55; }
+.dark .vs-hill--near { fill: color-mix(in srgb, var(--vs-mint) 58%, transparent); }
 .vs-landscape::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, var(--vs-paper) 0%, transparent 66%);
+  background: linear-gradient(180deg, var(--vs-paper) 0%, transparent 34%);
   pointer-events: none;
 }
 .vs-landscape p {
@@ -1420,7 +1422,7 @@
   border: 1px solid var(--vs-line);
   border-left: 3px solid var(--vs-nao-avaliado);
   border-radius: 9px;
-  background: var(--vs-paper-strong);
+  background: color-mix(in srgb, var(--vs-state, var(--vs-nao-avaliado)) 9%, var(--vs-paper-strong));
   color: var(--vs-ink);
 }
 .vs-chain-link[data-state="reconhece"] { border-left-color: var(--vs-reconhece); }
@@ -1431,8 +1433,8 @@
 .vs-chain-link[data-state="possivel-regressao"] { border-left-color: var(--vs-possivel-regressao); }
 .vs-chain-link.is-selected { box-shadow: 0 0 0 2px var(--vs-burgundy); }
 .vs-chain-stage {
-  font-size: 0.6rem;
-  letter-spacing: 0.1em;
+  font: 700 italic .68rem/1.2 "Newsreader", Georgia, serif;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--vs-dim);
 }
@@ -1716,7 +1718,21 @@
   object-fit: contain;
   filter: drop-shadow(0 15px 12px rgba(33, 27, 20, .16));
 }
+.vs-atlas-motion { position: absolute; inset: 0; z-index: 1; width: 100%; height: 100%; overflow: visible; pointer-events: none; }
+.vs-alpha-ray { fill: none; stroke: #d19a26; stroke-width: 2.2; stroke-linecap: round; filter: drop-shadow(0 0 4px rgba(209,154,38,.55)); }
+.vs-alpha-ray--deflected { stroke: var(--vs-burgundy); stroke-width: 2.8; }
+.vs-electron-orbit { fill: none; stroke: rgba(80,157,224,.46); stroke-width: 1.5; stroke-dasharray: 5 5; }
+.vs-electron-dot { fill: #8bd6ff; filter: drop-shadow(0 0 7px #4aa8f0); }
+.vs-photon-wave { fill: none; stroke: #efbc3d; stroke-width: 2.4; stroke-linecap: round; }
+.vs-force-vector { fill: none; stroke-width: 3; stroke-linecap: round; filter: drop-shadow(0 0 4px rgba(255,255,255,.45)); }
+.vs-force-vector--drive { stroke: #c83b50; }
+.vs-force-vector--weight { stroke: #d19730; }
+.vs-force-vector--normal { stroke: #378a67; }
+.vs-newton-motion marker path { fill: #c83b50; }
+.vs-interaction-pulse { fill: none; stroke: #6d79dc; stroke-width: 2.5; }
 .vs-atlas-scene--photo img { width: 118%; max-width: none; height: 300px; }
+.vs-atlas-scene--atom img,
+.vs-atlas-scene--newton img { width: 128%; max-width: none; height: 315px; }
 .vs-atlas-label {
   position: absolute;
   z-index: 2;
@@ -1733,10 +1749,20 @@
 .vs-atlas-label--right::after { right: 92%; top: 18px; transform: rotate(20deg); }
 .vs-atlas-label--sun { left: 2px; top: 16px; color: #9a5c10; }
 .vs-atlas-label--sun::after { left: 84%; top: 18px; transform: rotate(14deg); }
+.vs-atlas-label--atom-left,
+.vs-atlas-label--newton-left { left: -4px; bottom: 28px; }
+.vs-atlas-label--atom-left::after,
+.vs-atlas-label--newton-left::after { left: 88%; top: -8px; transform: rotate(-22deg); }
+.vs-atlas-label--atom-right,
+.vs-atlas-label--newton-right { right: -8px; top: 22px; transform: rotate(3deg); }
+.vs-atlas-label--atom-right::after,
+.vs-atlas-label--newton-right::after { right: 90%; top: 18px; transform: rotate(20deg); }
 @media (max-width: 700px) {
   .vs-atlas-scene { min-height: 270px; }
   .vs-atlas-scene img { height: 265px; }
   .vs-atlas-scene--photo img { width: 112%; height: 245px; }
+  .vs-atlas-scene--atom img,
+  .vs-atlas-scene--newton img { width: 120%; height: 255px; }
 }
 
 /* Composição editorial aprovada: a prancha começa no primeiro enquadramento e
@@ -1809,11 +1835,14 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
+  min-height: 44px;
+  padding: 6px 8px 10px !important;
   border: 0 !important;
   border-bottom: 2px solid transparent !important;
   border-radius: 0 !important;
   background: transparent !important;
   color: var(--vs-dim) !important;
+  font: 700 .86rem/1 "Newsreader", Georgia, serif;
 }
 .vs-modes > button > svg { width: 19px; height: 19px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
 .vs-modes > button[aria-selected='true'] > svg { transform: rotate(-4deg) scale(1.08); }

@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion, useReducedMotion } from 'motion/react';
 import BoardShell from './BoardShell';
 import { boardPair } from './pair';
 import type { BoardProps } from './types';
@@ -12,57 +13,42 @@ import type { BoardProps } from './types';
  * anterior não explicava. Por isso a cena mostra o modelo junto do achado que o
  * substituiu, em vez de quatro desenhos soltos em ordem cronológica.
  */
-function AtomScene({ emphasis }: { emphasis: 'esquerda' | 'direita' | 'nenhum' }) {
-  // Rutherford (núcleo denso) ou Bohr (níveis quantizados): o salto entre os
-  // dois é onde a ideia de órbita ganha energia definida.
-  const bohr = emphasis === 'direita';
-
+function AtomAtlas({ emphasis }: { emphasis: 'esquerda' | 'direita' | 'nenhum' }) {
+  const reduced = useReducedMotion();
+  const x = emphasis === 'esquerda' ? -8 : emphasis === 'direita' ? 8 : 0;
+  const showRutherford = emphasis !== 'direita';
+  const showBohr = emphasis !== 'esquerda';
   return (
-    <svg className="vs-piston vs-scene" viewBox="0 0 320 330" role="img" data-emphasis={emphasis}
-      aria-label={bohr
-        ? 'Modelo de Bohr com níveis de energia definidos e o salto do elétron emitindo luz'
-        : 'Modelo de Rutherford com núcleo denso e partículas alfa desviadas'}>
-      {/* Núcleo: pequeno e denso, o achado de Rutherford. */}
-      <circle className="vs-nucleus" cx="160" cy="150" r="15" />
-      <text className="vs-nucleus-label" x="160" y="155" textAnchor="middle">+</text>
-
-      {/* Camadas eletrônicas. Em Bohr elas ganham rótulo de energia. */}
-      {[52, 84, 114].map((r, i) => (
-        <circle key={i} className={`vs-shell${bohr ? ' vs-shell--quantized' : ''}`} cx="160" cy="150" r={r} />
-      ))}
-
-      {bohr ? (
-        <g className="vs-bohr">
-          {/* Salto entre níveis: a diferença de energia vira fóton. */}
-          <circle className="vs-electron" cx="160" cy="98" r="6.5" />
-          <circle className="vs-electron vs-electron--ghost" cx="160" cy="36" r="6.5" />
-          <path className="vs-jump" d="M160 92 L160 44" />
-          <path className="vs-arrow" d="M160 44 l-5 10 l10 0 z" />
-          <text className="vs-level" x="176" y="102">n=1</text>
-          <text className="vs-level" x="176" y="42">n=3</text>
-          <path className="vs-photon" d="M196 60 q 8 -8, 16 0 q 8 8, 16 0 q 8 -8, 16 0" />
-          <text className="vs-photon-label" x="252" y="46">hν</text>
-        </g>
-      ) : (
-        <g className="vs-rutherford">
-          {/* Alfa que passa direto: o átomo é quase todo vazio. */}
-          <path className="vs-alpha" d="M18 214 L302 214" />
-          <path className="vs-arrow" d="M302 214 l-11 -5 l0 10 z" />
-          {/* Alfa que desvia: existe algo pequeno, denso e positivo. */}
-          <path className="vs-alpha vs-alpha--deflected" d="M18 168 L138 156 C 152 152, 158 140, 150 120 L128 74" />
-          <path className="vs-arrow" d="M128 74 l0 12 l10 -5 z" />
-          <text className="vs-alpha-label" x="52" y="200">α</text>
-          <text className="vs-scene-caption" x="160" y="238" textAnchor="middle">quase tudo passa · pouquíssimas desviam</text>
-        </g>
-      )}
-
-      <text className="vs-scene-caption" x="160" y={bohr ? 268 : 262} textAnchor="middle">
-        {bohr ? 'a órbita tem energia definida · o salto emite luz' : 'a carga positiva está concentrada no núcleo'}
-      </text>
-      <text className="vs-scene-caption" x="160" y={bohr ? 288 : 282} textAnchor="middle">
-        {bohr ? 'espectro de linhas, não contínuo' : 'o resto do átomo é vazio'}
-      </text>
-    </svg>
+    <div className="vs-atlas-scene vs-atlas-scene--atom" data-emphasis={emphasis}>
+      <motion.img
+        src="/visual-assets/atom-models-atlas.webp"
+        alt="Ilustração científica da experiência da folha de ouro de Rutherford ao lado de um átomo de Bohr com níveis luminosos"
+        initial={reduced ? false : { opacity: 0, scale: .92 }}
+        animate={{ opacity: 1, scale: emphasis === 'nenhum' ? 1 : 1.035, x }}
+        transition={reduced ? { duration: 0 } : { type: 'spring', stiffness: 120, damping: 18 }}
+      />
+      <svg className="vs-atlas-motion vs-atom-motion" viewBox="0 0 420 300" aria-hidden="true">
+        {showRutherford && <g>
+          {[126, 146, 166].map((y, index) => <motion.path key={y} className="vs-alpha-ray" d={`M20 ${y} C82 ${y - 2}, 118 ${y + 2}, 178 ${y}`}
+            initial={reduced ? false : { pathLength: 0, opacity: 0 }} animate={{ pathLength: 1, opacity: .9 }}
+            transition={reduced ? { duration: 0 } : { duration: .8, delay: index * .12 }} />)}
+          <motion.path className="vs-alpha-ray vs-alpha-ray--deflected" d="M20 186 C92 184, 132 180, 164 160 C178 150, 183 128, 176 98"
+            initial={reduced ? false : { pathLength: 0 }} animate={{ pathLength: 1 }}
+            transition={reduced ? { duration: 0 } : { duration: 1.15, delay: .22 }} />
+        </g>}
+        {showBohr && <g>
+          <circle className="vs-electron-orbit" cx="311" cy="151" r="64" />
+          <motion.circle className="vs-electron-dot" cx="311" cy="87" r="5"
+            animate={reduced ? { rotate: 0 } : { rotate: 360 }} transition={{ duration: 4.8, repeat: Infinity, ease: 'linear' }}
+            style={{ transformOrigin: '311px 151px' }} />
+          <motion.path className="vs-photon-wave" d="M335 92 q8-10 16 0t16 0t16 0"
+            initial={reduced ? false : { pathLength: 0, opacity: 0 }} animate={{ pathLength: 1, opacity: [0, 1, .45] }}
+            transition={reduced ? { duration: 0 } : { duration: 1.2, repeat: Infinity, repeatDelay: .5 }} />
+        </g>}
+      </svg>
+      <span className="vs-atlas-label vs-atlas-label--atom-left">α atravessa a lâmina</span>
+      <span className="vs-atlas-label vs-atlas-label--atom-right">ΔE libera um fóton</span>
+    </div>
   );
 }
 
@@ -74,7 +60,7 @@ export default function AtomModelsBoard(props: BoardProps) {
       subtitle="Cada modelo caiu por um experimento — e o seguinte nasceu dele."
       condition={{ label: 'critério', value: 'evidência' }}
       ariaLabel="Prancha ilustrada da evolução dos modelos atômicos"
-      scene={<AtomScene emphasis={par.emphasis} />}
+      scene={<AtomAtlas emphasis={par.emphasis} />}
       sceneNotes={{ up: 'Rutherford ↑', down: '↓ Bohr' }}
       emphasis={par.emphasis}
       left={{

@@ -94,7 +94,7 @@ export default function BoardShell({
           <h2>{title}</h2>
           <p>{subtitle}</p>
         </div>
-        <div className="vs-q-callout" aria-label={`${condition.label} ${condition.value}`}>
+        <div className="vs-q-callout" data-long={condition.value.length > 6 || undefined} aria-label={`${condition.label} ${condition.value}`}>
           <span>{condition.label}</span>
           <strong>{condition.value}</strong>
         </div>
@@ -143,8 +143,16 @@ export default function BoardShell({
 
       <footer className="vs-landscape">
         <svg className="vs-landscape-art" viewBox="0 0 640 170" aria-hidden="true" preserveAspectRatio="none">
-          <path className="vs-hill vs-hill--far" d="M0 118 C 96 78, 168 96, 244 110 S 400 74, 486 92 S 592 116, 640 104 L640 170 L0 170 Z" />
-          <path className="vs-hill vs-hill--near" d="M0 140 C 108 116, 190 132, 268 138 S 428 112, 520 128 S 604 144, 640 138 L640 170 L0 170 Z" />
+          <defs>
+            <filter id="vs-landscape-grain" x="-5%" y="-5%" width="110%" height="110%">
+              <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7" result="grain" />
+              <feColorMatrix in="grain" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .05 0" />
+              <feComposite operator="over" in2="SourceGraphic" />
+            </filter>
+          </defs>
+          <path className="vs-hill vs-hill--far" d="M0 108 C 90 66, 176 88, 250 100 S 402 64, 488 84 S 590 106, 640 96 L640 170 L0 170 Z" />
+          <path className="vs-hill vs-hill--mid" d="M0 128 C 100 100, 182 118, 260 122 S 414 94, 502 112 S 596 130, 640 120 L640 170 L0 170 Z" />
+          <path className="vs-hill vs-hill--near" d="M0 146 C 108 122, 190 136, 268 142 S 428 118, 520 132 S 604 148, 640 142 L640 170 L0 170 Z" filter="url(#vs-landscape-grain)" />
         </svg>
         <p><strong>Ideia central:</strong> {closing}</p>
       </footer>

@@ -6,46 +6,30 @@ import type { BoardProps } from './types';
 
 function NewtonScene({ emphasis }: { emphasis: 'esquerda' | 'direita' | 'nenhum' }) {
   const reducedMotion = useReducedMotion();
-  const lineTransition = { duration: 1.05, ease: 'easeOut' as const };
   return (
-    <svg className="vs-piston vs-scene vs-newton-scene" viewBox="0 0 320 330" role="img"
-      aria-label="Mapa radial das três leis de Newton, ligando inércia, força resultante e ação e reação">
-      <defs>
-        <filter id="chalk-glow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="1.2" result="b" /><feMerge><feMergeNode in="b" /><feMergeNode in="SourceGraphic" /></feMerge></filter>
-      </defs>
-      <g className="vs-newton-sparks" aria-hidden="true">
-        <path d="M145 101l-8-15M160 97V78M176 101l9-15M105 155H87M215 155h18M111 201l-13 12M210 201l13 12" />
-      </g>
-      <motion.circle className="vs-newton-core" cx="160" cy="165" r="53"
-        initial={reducedMotion ? false : { opacity: 0, scale: .82 }}
-        animate={{ opacity: 1, scale: 1 }} transition={{ type: 'spring', stiffness: 150, damping: 18 }} />
-      <text className="vs-newton-core-copy" x="160" y="157" textAnchor="middle">LEIS DE</text>
-      <text className="vs-newton-core-copy" x="160" y="178" textAnchor="middle">NEWTON</text>
-      <motion.path className={`vs-newton-link${emphasis === 'esquerda' ? ' is-active' : ''}`} d="M126 124 78 76"
-        initial={reducedMotion ? false : { pathLength: 0 }} animate={{ pathLength: 1 }} transition={lineTransition} />
-      <motion.path className={`vs-newton-link${emphasis === 'direita' ? ' is-active' : ''}`} d="M194 124 244 76"
-        initial={reducedMotion ? false : { pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ ...lineTransition, delay: .12 }} />
-      <motion.path className="vs-newton-link" d="M160 218v60"
-        initial={reducedMotion ? false : { pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ ...lineTransition, delay: .24 }} />
-
-      <g className="vs-newton-law vs-newton-law--one">
-        <rect x="16" y="26" width="120" height="62" rx="17" />
-        <text x="76" y="51" textAnchor="middle">1ª Lei · Inércia</text>
-        <text x="76" y="72" textAnchor="middle">ΣF = 0</text>
-      </g>
-      <g className="vs-newton-law vs-newton-law--two">
-        <rect x="184" y="26" width="120" height="62" rx="17" />
-        <text x="244" y="51" textAnchor="middle">2ª Lei · Força</text>
-        <text x="244" y="72" textAnchor="middle">ΣF = m · a</text>
-      </g>
-      <g className="vs-newton-law vs-newton-law--three">
-        <rect x="91" y="264" width="138" height="58" rx="17" />
-        <text x="160" y="288" textAnchor="middle">3ª Lei · Par</text>
-        <text x="160" y="308" textAnchor="middle">F₁ = −F₂</text>
-      </g>
-      <text className="vs-newton-hand" x="12" y="245" transform="rotate(-5 12 245)">desenhe as forças</text>
-      <path className="vs-newton-hand-arrow" d="M94 239q28-12 47-29" />
-    </svg>
+    <div className="vs-atlas-scene vs-atlas-scene--newton" data-emphasis={emphasis}>
+      <motion.img
+        src="/visual-assets/newton-laws-atlas.webp"
+        alt="Ilustração científica de um carrinho ligado a uma roldana, com vetores de força, inércia e um par de ação e reação"
+        initial={reducedMotion ? false : { opacity: 0, scale: .92 }}
+        animate={{ opacity: 1, scale: emphasis === 'nenhum' ? 1 : 1.035, x: emphasis === 'esquerda' ? -8 : emphasis === 'direita' ? 8 : 0 }}
+        transition={reducedMotion ? { duration: 0 } : { type: 'spring', stiffness: 120, damping: 18 }}
+      />
+      <svg className="vs-atlas-motion vs-newton-motion" viewBox="0 0 420 300" aria-hidden="true">
+        <defs><marker id="vs-force-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 8 4 0 8Z" /></marker></defs>
+        <motion.g animate={reducedMotion ? { x: 0 } : { x: emphasis === 'direita' ? [0, 8, 0] : 0 }} transition={{ duration: 1.15, repeat: emphasis === 'direita' ? Infinity : 0, repeatDelay: .8 }}>
+          <motion.path className="vs-force-vector vs-force-vector--drive" d="M174 140 H250" markerEnd="url(#vs-force-arrow)" initial={reducedMotion ? false : { pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: .8 }} />
+          <motion.path className="vs-force-vector vs-force-vector--weight" d="M151 153 V220" markerEnd="url(#vs-force-arrow)" initial={reducedMotion ? false : { pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: .8, delay: .12 }} />
+          <motion.path className="vs-force-vector vs-force-vector--normal" d="M151 137 V82" markerEnd="url(#vs-force-arrow)" initial={reducedMotion ? false : { pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: .8, delay: .24 }} />
+        </motion.g>
+        <motion.circle className="vs-interaction-pulse" cx="332" cy="178" r="18"
+          style={{ transformOrigin: '332px 178px' }}
+          animate={reducedMotion ? { scale: 1, opacity: .75 } : { scale: [1, 1.5, 1], opacity: [.75, .12, .75] }}
+          transition={{ duration: 1.8, repeat: Infinity }} />
+      </svg>
+      <span className="vs-atlas-label vs-atlas-label--newton-left">sem resultante: conserva</span>
+      <span className="vs-atlas-label vs-atlas-label--newton-right">ΣF muda o movimento</span>
+    </div>
   );
 }
 

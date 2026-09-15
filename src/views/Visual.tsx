@@ -391,9 +391,7 @@ export default function Visual() {
             role="tab"
             aria-selected={mode === key}
             onClick={() => changeMode(key)}
-            className={`rounded-xl px-4 py-2.5 text-sm font-semibold transition ${
-              mode === key ? 'bg-indigo-600 text-white' : 'border border-zinc-300 dark:border-zinc-700'
-            }`}
+            className="transition"
           >
             <ModeGlyph mode={key} />
             {MODE_LABEL[key]}
