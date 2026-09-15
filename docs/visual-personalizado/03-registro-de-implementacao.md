@@ -33,6 +33,27 @@ mitocôndria receberam volume, textura e anatomia reconhecível; Newton recebeu
 traço de lousa e marcas de força. Explorar, Testar e Reconstruir agora têm
 glifos próprios, desenhados para a função pedagógica de cada modo.
 
+## 2026-09-15 — direção de arte assistida por geração de imagem
+
+Foram aplicadas em conjunto as skills `frontend-design-direction`,
+`design-system`, `motion-advanced`, `browser-qa`, `imagegen` e UI/UX Pro Max.
+A busca especializada apontou o encontro entre atlas científico editorial e
+estética manual imperfeita; resultados incompatíveis, como brutalismo genérico,
+foram descartados.
+
+As cinco telas aprovadas foram fornecidas como referências diretas ao gerador.
+Os assets resultantes não contêm texto nem interface: são ilustrações em camada
+transparente, enquanto rótulos, estado pedagógico e controles permanecem HTML
+ou SVG acessíveis. Foram convertidos para WebP com transparência e qualidade 88:
+
+- `public/visual-assets/adiabatic-piston-atlas.webp` — pistão, gás, isolamento e
+  forças em linguagem de atlas científico;
+- `public/visual-assets/photosynthesis-atlas.webp` — cloroplasto, folha, luz,
+  moléculas e fluxos.
+
+As imagens entram por componentes `motion`, reagem ao conceito selecionado e
+ficam estáticas quando a estudante prefere movimento reduzido.
+
 ### Primeira etapa técnica
 
 ### Arquivos criados

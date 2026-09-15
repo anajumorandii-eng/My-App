@@ -1692,6 +1692,53 @@
   text-align: center;
 }
 
+.vs-atlas-scene {
+  position: relative;
+  width: 100%;
+  min-height: 320px;
+  display: grid;
+  place-items: center;
+  isolation: isolate;
+}
+.vs-atlas-scene::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 78%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, color-mix(in srgb, var(--vs-blue) 12%, transparent), transparent 68%);
+}
+.vs-atlas-scene img {
+  display: block;
+  width: 100%;
+  height: 310px;
+  object-fit: contain;
+  filter: drop-shadow(0 15px 12px rgba(33, 27, 20, .16));
+}
+.vs-atlas-scene--photo img { width: 118%; max-width: none; height: 300px; }
+.vs-atlas-label {
+  position: absolute;
+  z-index: 2;
+  padding: 3px 7px;
+  color: var(--vs-burgundy);
+  background: color-mix(in srgb, var(--vs-paper) 82%, transparent);
+  font: 700 .72rem/1.1 "Kalam", cursive;
+  transform: rotate(-4deg);
+}
+.vs-atlas-label::after { content: ""; position: absolute; width: 42px; height: 20px; border-top: 1.5px solid currentColor; border-radius: 50%; }
+.vs-atlas-label--left { left: 0; bottom: 48px; }
+.vs-atlas-label--left::after { left: 85%; top: -8px; transform: rotate(-18deg); }
+.vs-atlas-label--right { right: -6px; top: 38px; transform: rotate(3deg); }
+.vs-atlas-label--right::after { right: 92%; top: 18px; transform: rotate(20deg); }
+.vs-atlas-label--sun { left: 2px; top: 16px; color: #9a5c10; }
+.vs-atlas-label--sun::after { left: 84%; top: 18px; transform: rotate(14deg); }
+@media (max-width: 700px) {
+  .vs-atlas-scene { min-height: 270px; }
+  .vs-atlas-scene img { height: 265px; }
+  .vs-atlas-scene--photo img { width: 112%; height: 245px; }
+}
+
 /* Composição editorial aprovada: a prancha começa no primeiro enquadramento e
    todo o chrome se comporta como margem de caderno, não como dashboard. */
 .crivo-visual { display: grid; gap: 12px; }

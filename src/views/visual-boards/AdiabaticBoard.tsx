@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion, useReducedMotion } from 'motion/react';
 import type { BoardProps } from './types';
 import BoardShell from './BoardShell';
 import { boardPair } from './pair';
@@ -106,6 +107,24 @@ function AdiabaticPiston({ emphasis }: { emphasis: 'expansao' | 'compressao' | '
   );
 }
 
+function AdiabaticAtlas({ emphasis }: { emphasis: 'expansao' | 'compressao' | 'nenhum' }) {
+  const reduced = useReducedMotion();
+  const y = emphasis === 'expansao' ? -10 : emphasis === 'compressao' ? 10 : 0;
+  return (
+    <div className="vs-atlas-scene vs-atlas-scene--piston" data-emphasis={emphasis}>
+      <motion.img
+        src="/visual-assets/adiabatic-piston-atlas.webp"
+        alt="Corte ilustrado de um cilindro adiabático com paredes isolantes, pistão metálico e moléculas de gás"
+        initial={reduced ? false : { opacity: 0, scale: .92 }}
+        animate={{ opacity: 1, scale: emphasis === 'nenhum' ? 1 : 1.035, y }}
+        transition={reduced ? { duration: 0 } : { type: 'spring', stiffness: 120, damping: 18 }}
+      />
+      <span className="vs-atlas-label vs-atlas-label--left">parede isolante</span>
+      <span className="vs-atlas-label vs-atlas-label--right">trabalho muda U e T</span>
+    </div>
+  );
+}
+
 export default function AdiabaticBoard(props: BoardProps) {
   const par = boardPair(props);
 
@@ -115,7 +134,7 @@ export default function AdiabaticBoard(props: BoardProps) {
       subtitle="Quando não há troca de calor entre o sistema e o meio."
       condition={{ label: 'condição', value: 'Q = 0' }}
       ariaLabel="Prancha ilustrada de transformação adiabática"
-      scene={<AdiabaticPiston emphasis={par.emphasis === 'esquerda' ? 'expansao' : par.emphasis === 'direita' ? 'compressao' : 'nenhum'} />}
+      scene={<AdiabaticAtlas emphasis={par.emphasis === 'esquerda' ? 'expansao' : par.emphasis === 'direita' ? 'compressao' : 'nenhum'} />}
       sceneNotes={{ up: 'expansão ↑', down: '↓ compressão' }}
       emphasis={par.emphasis}
       left={{

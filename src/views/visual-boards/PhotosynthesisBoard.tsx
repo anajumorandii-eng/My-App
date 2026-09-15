@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion, useReducedMotion } from 'motion/react';
 import BoardShell from './BoardShell';
 import { boardPair } from './pair';
 import type { BoardProps } from './types';
@@ -77,6 +78,22 @@ function LeafScene({ emphasis }: { emphasis: 'esquerda' | 'direita' | 'nenhum' }
   );
 }
 
+function PhotosynthesisAtlas({ emphasis }: { emphasis: 'esquerda' | 'direita' | 'nenhum' }) {
+  const reduced = useReducedMotion();
+  return (
+    <div className="vs-atlas-scene vs-atlas-scene--photo" data-emphasis={emphasis}>
+      <motion.img
+        src="/visual-assets/photosynthesis-atlas.webp"
+        alt="Ilustração científica de uma folha e um cloroplasto em corte, com grana, luz e moléculas entrando e saindo"
+        initial={reduced ? false : { opacity: 0, scale: .94 }}
+        animate={{ opacity: 1, scale: emphasis === 'esquerda' ? 1.045 : 1, x: emphasis === 'direita' ? -8 : 0 }}
+        transition={reduced ? { duration: 0 } : { type: 'spring', stiffness: 105, damping: 20 }}
+      />
+      <span className="vs-atlas-label vs-atlas-label--sun">luz vira energia química</span>
+    </div>
+  );
+}
+
 export default function PhotosynthesisBoard(props: BoardProps) {
   const par = boardPair(props);
   return (
@@ -85,7 +102,7 @@ export default function PhotosynthesisBoard(props: BoardProps) {
       subtitle="Os reagentes se invertem; as organelas e o horário, não."
       condition={{ label: 'saldo', value: 'ATP' }}
       ariaLabel="Prancha ilustrada de bioenergética: fotossíntese e respiração celular"
-      scene={<LeafScene emphasis={par.emphasis} />}
+      scene={<PhotosynthesisAtlas emphasis={par.emphasis} />}
       sceneNotes={{ up: 'com luz ↑', down: '↓ sempre' }}
       emphasis={par.emphasis}
       left={{
