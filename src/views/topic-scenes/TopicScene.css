@@ -91,3 +91,12 @@
   font-style: italic;
   color: var(--vs-burgundy);
 }
+
+.tc-base-camada { fill: color-mix(in srgb, var(--vs-burgundy) 28%, transparent); stroke: var(--vs-burgundy); stroke-width: 2; }
+.tc-camada { fill: color-mix(in srgb, var(--vs-blue) 9%, transparent); stroke: var(--vs-blue); stroke-width: 1.2; }
+.tc-camada-foco { fill: color-mix(in srgb, var(--vs-blue) 24%, transparent); stroke-width: 2.2; }
+.tc-determinacao { fill: none; stroke: var(--vs-amber); stroke-width: 3; stroke-linecap: round; }
+.tc-momento { stroke-width: 2; }
+.tc-momento-um { fill: color-mix(in srgb, var(--vs-blue) 18%, transparent); stroke: var(--vs-blue); }
+.tc-momento-dois { fill: color-mix(in srgb, var(--vs-amber) 20%, transparent); stroke: var(--vs-amber); }
+.tc-ciclo { fill: none; stroke: var(--vs-burgundy); stroke-width: 2.5; stroke-linecap: round; }

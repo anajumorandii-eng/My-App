@@ -289,4 +289,91 @@ export const filosofia: SceneEntry[] = [
       { label: 'Liberdade civil', claim: 'obedecer à vontade geral, mesmo contrariando a vontade particular, constitui a verdadeira liberdade civil — superior à mera liberdade natural sem lei alguma', section: 'Liberdade e educação', quote: 'obedecer à vontade geral, mesmo quando ela contraria a vontade particular imediata de um indivíduo específico, constitui verdadeira liberdade civil' },
     ],
   },
+  // Task 7 — camadas de determinação. Foucault permanece fora desta família:
+  // o próprio capítulo recusa um centro/base única e por isso usa contraste.
+  {
+    chapterId: 'summary-filosofia-a-escola-de-frankfurt-e-a-industria-cultural',
+    family: 'camadas-de-determinacao',
+    question: 'Como a racionalidade industrial chega à cultura e condiciona a autonomia do público?',
+    items: [
+      { label: 'Lógica do lucro', claim: 'organiza a produção cultural como indústria planejada para consumo', section: 'Indústria cultural', quote: 'produção industrial padronizada, planejada de cima, destinada ao consumo e organizada pela lógica do lucro' },
+      { label: 'Padronização', claim: 'obras aparentemente diferentes repetem a mesma fórmula', section: 'Indústria cultural', quote: 'obras diferentes obedecem à mesma fórmula, variando apenas detalhes superficiais' },
+      { label: 'Pseudoindividualização', claim: 'variações mínimas produzem aparência de escolha singular', section: 'Indústria cultural', quote: 'a variação mínima cria ilusão de escolha e singularidade onde há repetição do mesmo esquema' },
+      { label: 'Passividade', claim: 'respostas prontas enfraquecem interpretação e negação crítica do existente', section: 'Indústria cultural', quote: 'o consumidor recebe respostas prontas, não é convocado a interpretar' },
+    ],
+  },
+  {
+    chapterId: 'summary-filosofia-a-luta-de-classes-na-filosofia-marxista',
+    family: 'camadas-de-determinacao',
+    question: 'Como a posição na produção condiciona consciência, Estado e transformação histórica?',
+    items: [
+      { label: 'Relações de produção', claim: 'definem grupos antagônicos conforme controlam ou não os meios de produção', section: 'A tese central', quote: 'grupos definidos por sua posição nas relações de produção' },
+      { label: 'Classe em si', claim: 'existe objetivamente antes mesmo de reconhecer seus interesses comuns', section: 'Classe em si e para si', quote: 'o grupo definido objetivamente por sua posição na estrutura econômica' },
+      { label: 'Ideologia e Estado', claim: 'naturalizam e reproduzem a ordem da classe economicamente dominante', section: 'Ideologia e Estado', quote: 'representação invertida da realidade que apresenta como natural, eterno e universal aquilo que é histórico' },
+      { label: 'Classe para si', claim: 'a consciência e a organização convertem posição objetiva em ação coletiva', section: 'Classe em si e para si', quote: 'reconhece seus interesses comuns, organiza-se politicamente e age coletivamente' },
+    ],
+  },
+  {
+    chapterId: 'summary-filosofia-alienacao-e-mais-valia',
+    family: 'camadas-de-determinacao',
+    question: 'Como a propriedade do produto condiciona as formas de alienação do trabalho?',
+    items: [
+      { label: 'Produto apropriado', claim: 'o que o trabalhador produz pertence ao capitalista', section: 'As formas de alienação', quote: 'o que produz não lhe pertence, mas ao capitalista' },
+      { label: 'Ato forçado', claim: 'trabalhar deixa de expressar capacidades e vira mero meio de sobrevivência', section: 'As formas de alienação', quote: 'o trabalho deixa de ser expressão livre e criativa das capacidades humanas para se tornar atividade forçada' },
+      { label: 'Essência negada', claim: 'a repetição imposta nega o trabalho livre e criativo que distingue o humano', section: 'As formas de alienação', quote: 'quando esse trabalho é reduzido a repetição mecânica imposta, o próprio ser genérico humano é negado' },
+      { label: 'Relações alienadas', claim: 'as relações sociais assumem forma de competição e exploração mediada pelo mercado', section: 'As formas de alienação', quote: 'a relação social se converte em relação de competição e de exploração mútua mediada pelo mercado' },
+    ],
+  },
+  {
+    chapterId: 'summary-filosofia-o-materialismo-historico',
+    family: 'camadas-de-determinacao',
+    question: 'Como a base material condiciona instituições e ideias sem determinismo mecânico?',
+    items: [
+      { label: 'Infraestrutura', claim: 'forças produtivas e relações de produção formam a base material', section: 'Infraestrutura e superestrutura', quote: 'compreende as forças produtivas' },
+      { label: 'Direito e política', claim: 'erguem-se sobre a base e ajudam a legitimar suas relações', section: 'Infraestrutura e superestrutura', quote: 'A superestrutura compreende tudo o que se ergue sobre essa base: o direito, a política' },
+      { label: 'Formas de consciência', claim: 'religião, filosofia, arte e moral também são historicamente condicionadas', section: 'Infraestrutura e superestrutura', quote: 'a religião, a filosofia, a arte, a moral vigente em cada sociedade' },
+      { label: 'Efeito de retorno', claim: 'a superestrutura formada reage sobre a base, afastando causalidade mecânica', section: 'Infraestrutura e superestrutura', quote: 'pode exercer efeitos de retorno sobre a própria base econômica' },
+    ],
+  },
+  // Task 8 — movimentos dialéticos
+  {
+    chapterId: 'summary-filosofia-hegel-e-a-dialetica',
+    family: 'movimento-dialetico',
+    question: 'Como uma contradição interna transforma uma posição em estágio mais rico?',
+    items: [
+      { label: 'Posição', claim: 'uma posição inicial é examinada em profundidade', section: 'O movimento dialético', quote: 'uma posição inicial (tese) revela, ao ser examinada a fundo' },
+      { label: 'Contradição', claim: 'suas contradições internas geram a negação, não uma oposição arbitrária', section: 'O movimento dialético', quote: 'contradições internas que geram seu oposto' },
+      { label: 'Superação', claim: 'cancela, preserva e eleva o verdadeiro de cada lado', section: 'O movimento dialético', quote: 'cancelar, preservar e elevar' },
+    ],
+  },
+  {
+    chapterId: 'summary-filosofia-nietzsche-e-a-critica-aos-valores-morais',
+    family: 'movimento-dialetico',
+    question: 'Como a genealogia desmonta valores herdados e abre a criação de novos valores?',
+    items: [
+      { label: 'Valor universal', claim: 'os bons costumes parecem nascer de reflexão neutra sobre o bem', section: 'Genealogia da moral', quote: 'não surgiu de reflexão racional neutra sobre o bem' },
+      { label: 'Origem interessada', claim: 'a genealogia revela relações de força e ressentimento na origem desses valores', section: 'Genealogia da moral', quote: 'inversão histórica de valores promovida pelos fracos como forma de vingança simbólica contra os fortes' },
+      { label: 'Criação ativa', claim: 'superar o niilismo exige criar novos valores e afirmar a vida', section: 'Vontade de potência e além-do-homem', quote: 'capaz de criar seus próprios valores após o colapso dos fundamentos morais tradicionais' },
+    ],
+  },
+  {
+    chapterId: 'summary-filosofia-o-metodo-socratico-e-a-maieutica',
+    family: 'movimento-dialetico',
+    question: 'Como o diálogo transforma certeza aparente em investigação e ideia própria?',
+    items: [
+      { label: 'Certeza', claim: 'o interlocutor começa seguro de que domina o conceito', section: 'Ironia e maiêutica', quote: 'interlocutor que se apresenta como especialista confiante num tema' },
+      { label: 'Aporia', claim: 'perguntas revelam contradições e desfazem a falsa segurança', section: 'Ironia e maiêutica', quote: 'revelam progressivamente contradições internas na posição inicialmente defendida com segurança' },
+      { label: 'Maiêutica', claim: 'perguntas direcionadas ajudam o interlocutor a dar à luz uma ideia própria', section: 'Ironia e maiêutica', quote: 'ajuda o interlocutor a "dar à luz" ideias' },
+    ],
+  },
+  {
+    chapterId: 'summary-filosofia-foucault-e-as-relacoes-de-poder',
+    family: 'contraste-de-posicoes',
+    question: 'O poder desce de um centro ou circula nas relações cotidianas?',
+    items: [
+      { label: 'Modelo jurídico', claim: 'trata o poder como posse centralizada no Estado e exercida sobretudo por proibição', section: 'Poder como relação', quote: 'poder como algo que se possui e se exerce de cima para baixo, concentrado no Estado ou na lei' },
+      { label: 'Poder relacional', claim: 'o poder circula numa rede capilar de interações e instituições cotidianas', section: 'Poder como relação', quote: 'relação difusa que atravessa toda a rede social, presente em toda interação' },
+      { label: 'Poder produtivo', claim: 'além de reprimir, produz saberes, normas, sujeitos e comportamentos', section: 'Poder como relação', quote: 'produz saberes, discursos, subjetividades e formas de comportamento consideradas normais' },
+    ],
+  },
 ];
