@@ -57,3 +57,20 @@
   font-style: italic;
 }
 .tc-quote cite { display: block; font-size: 0.82rem; font-style: normal; opacity: 0.72; }
+
+.tc-degrau { stroke: currentColor; stroke-width: 1.5; opacity: 0.35; }
+.tc-degrau-ativo { stroke: var(--vs-blue); opacity: 1; }
+.tc-marcador { fill: var(--vs-amber); stroke: var(--vs-paper-strong); stroke-width: 2; }
+.tc-caption { font-size: 11px; fill: currentColor; opacity: 0.6; font-style: italic; }
+
+.tc-slider {
+  display: grid;
+  gap: 0.35rem;
+  font-family: var(--font-editorial, Newsreader), serif;
+  font-size: 0.95rem;
+}
+.tc-slider input[type='range'] {
+  width: 100%;
+  min-height: 44px;
+  accent-color: var(--vs-burgundy);
+}

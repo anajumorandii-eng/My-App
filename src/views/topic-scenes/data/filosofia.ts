@@ -153,4 +153,47 @@ export const filosofia: SceneEntry[] = [
       { label: 'O conflito real', claim: 'respeitar a autonomia de quem recusa tratamento pode conflitar diretamente com a beneficência', section: 'Princípios da bioética', quote: 'respeitar plenamente a autonomia de um paciente que recusa tratamento pode conflitar com o princípio de beneficência' },
     ],
   },
+  // Task 5 — família escala-de-graus (4 capítulos)
+  {
+    chapterId: 'summary-filosofia-a-alegoria-da-linha-dividida-e-o-conhecimento',
+    family: 'escala-de-graus',
+    question: 'Que grau de realidade corresponde a cada grau de conhecimento, da sombra à Ideia de Bem?',
+    items: [
+      { label: 'Eikasia', claim: 'lida com sombras, reflexos e imagens — cópias de cópias, o grau mais baixo da linha', section: 'A linha e seus segmentos', quote: 'a eikasia (imaginação ou conjectura), lida com sombras, reflexos na água e imagens — cópias de cópias' },
+      { label: 'Pistis', claim: 'lida com os próprios objetos sensíveis — animais, plantas e artefatos — e não mais com suas imagens', section: 'A linha e seus segmentos', quote: 'a pistis (crença), lida com os próprios objetos sensíveis, os animais, as plantas e os artefatos que produzimos' },
+      { label: 'Dianoia', claim: 'já opera com objetos inteligíveis, os matemáticos, mas ainda raciocina a partir de hipóteses não examinadas e apoiadas em figuras sensíveis', section: 'A linha e seus segmentos', quote: 'a dianoia (pensamento discursivo), que opera com objetos matemáticos e raciocina a partir de hipóteses ainda apoiadas em figuras sensíveis' },
+      { label: 'Noesis', claim: 'alcança as Ideias diretamente, sem apoio de imagem alguma, até o princípio não hipotético que é a Ideia de Bem', section: 'A linha e seus segmentos', quote: 'a noesis (intelecção pura), que alcança as Ideias diretamente, sem apoio de imagem alguma, até o princípio não hipotético que é a Ideia de Bem' },
+    ],
+  },
+  {
+    chapterId: 'summary-filosofia-a-etica-a-nicomaco-e-a-doutrina-do-meio-termo',
+    family: 'escala-de-graus',
+    question: 'Onde fica a virtude entre dois vícios opostos, e o que determina esse ponto certo?',
+    items: [
+      { label: 'Deficiência (covardia)', claim: 'a covardia é falta de audácia diante do perigo — um vício por falta, não uma virtude "mais segura"', section: 'O meio-termo', quote: 'a covardia (deficiência de audácia)' },
+      { label: 'Meio-termo (coragem)', claim: 'a coragem é o meio entre dois vícios — não meio-caminho automático, mas o ponto certo que a prudência (phronesis) discerne em cada situação', section: 'O meio-termo', quote: 'A coragem é o meio entre a temeridade (excesso de audácia diante do perigo) e a covardia (deficiência de audácia)' },
+      { label: 'Excesso (temeridade)', claim: 'a temeridade é audácia em excesso diante do perigo — vício simétrico ao da covardia, não uma forma "mais corajosa" de coragem', section: 'O meio-termo', quote: 'a temeridade (excesso de audácia diante do perigo)' },
+    ],
+  },
+  {
+    chapterId: 'summary-filosofia-descartes-e-o-metodo-a-duvida-hiperbolica',
+    family: 'escala-de-graus',
+    question: 'Até onde a dúvida cartesiana consegue avançar antes de encontrar algo que resista a ela?',
+    items: [
+      { label: 'Dúvida dos sentidos', claim: 'os sentidos enganam ocasionalmente, e quem já foi enganado uma vez tem razão para desconfiar de toda informação sensorial', section: 'Os graus da dúvida', quote: 'os sentidos enganam ocasionalmente (um bastão parece torto na água, objetos distantes parecem menores), e quem já foi enganado uma vez tem razão para desconfiar de toda informação sensorial' },
+      { label: 'Hipótese do sonho', claim: 'não há critério seguro para distinguir vigília de sonho, de modo que toda experiência sensorial presente poderia ser ilusão onírica', section: 'Os graus da dúvida', quote: 'não há critério seguro para distinguir estar acordado de estar sonhando enquanto se sonha, de modo que toda experiência sensorial presente poderia ser ilusão onírica' },
+      { label: 'Gênio maligno', claim: 'o grau mais radical: um poder hipotético supremamente enganador que poderia fazer parecer verdadeiro até mesmo o que parece mais evidente à razão, incluindo a própria matemática', section: 'Os graus da dúvida', quote: 'a hipótese do gênio maligno, um poder hipotético supremamente enganador que poderia fazer parecer verdadeiro até mesmo aquilo que parece mais evidente à razão, incluindo a própria matemática' },
+    ],
+  },
+  {
+    chapterId: 'summary-filosofia-o-mito-da-caverna',
+    family: 'escala-de-graus',
+    question: 'Quais etapas o prisioneiro liberto atravessa até contemplar o sol fora da caverna?',
+    items: [
+      { label: 'Sombras na parede', claim: 'acorrentado, o prisioneiro toma as sombras projetadas como a totalidade da realidade', section: 'A alegoria', quote: 'os prisioneiros, nunca tendo visto outra coisa, tomam essas sombras projetadas como a totalidade da realidade' },
+      { label: 'Os objetos e o fogo', claim: 'já liberto, primeiro vê os próprios objetos que geravam as sombras, depois o fogo que as projetava', section: 'A alegoria', quote: 'primeiro vê os próprios objetos que geravam as sombras, depois o fogo que as projetava' },
+      { label: 'As coisas reais à luz do dia', claim: 'já fora da caverna, contempla as coisas reais sob a luz do dia', section: 'A alegoria', quote: 'já fora da caverna, as coisas reais sob a luz do dia' },
+      { label: 'O sol', claim: 'por último, quando os olhos já se acostumaram, contempla o próprio sol, fonte de toda luz e visibilidade', section: 'A alegoria', quote: 'por último, quando seus olhos já se acostumaram, o próprio sol, fonte de toda luz e visibilidade' },
+    ],
+  },
 ];
