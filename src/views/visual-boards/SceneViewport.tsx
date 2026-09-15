@@ -62,8 +62,11 @@ export function SceneViewport({
     setPan((atual) => (z === MIN ? { x: 0, y: 0 } : limitar(atual, z)));
   }, [limitar]);
 
+  // `[data-arrastavel]` é o ponto do instrumento analítico: sem esta saída, o
+  // gesto de mover o ponto seria interpretado como arraste da prancha inteira e
+  // o ponto nunca chegaria onde a estudante quer.
   const daParaArrastar = (alvo: EventTarget | null) =>
-    !(alvo instanceof Element) || !alvo.closest('input, button, select, textarea, a');
+    !(alvo instanceof Element) || !alvo.closest('input, button, select, textarea, a, [data-arrastavel]');
 
   const aoPressionar = (e: React.PointerEvent) => {
     if (!daParaArrastar(e.target)) return;
