@@ -55,6 +55,18 @@ beforeEach(() => {
 });
 
 describe('Visual aprovado', () => {
+  it('retoma a etapa ao voltar de Testar sem mostrar a consulta durante o teste', async () => {
+    const user = userEvent.setup();
+    render(<MemoryRouter initialEntries={[rota]}><Visual /></MemoryRouter>);
+    const steps = within(screen.getByRole('navigation', { name: 'Etapas do capítulo' })).getAllByRole('button');
+    await user.click(steps[2]);
+    await user.click(screen.getByRole('tab', { name: 'Testar' }));
+    expect(screen.queryByRole('region', { name: 'Percurso do capítulo' })).not.toBeInTheDocument();
+    expect(screen.queryByTestId('visual-study-board')).not.toBeInTheDocument();
+    await user.click(screen.getByRole('tab', { name: 'Explorar' }));
+    const resumed = within(screen.getByRole('navigation', { name: 'Etapas do capítulo' })).getAllByRole('button');
+    expect(resumed[2]).toHaveAttribute('aria-current', 'step');
+  });
   it('mantém a prancha ilustrada como centro da experiência', () => {
     render(<MemoryRouter initialEntries={[rota]}><Visual /></MemoryRouter>);
 
@@ -139,7 +151,7 @@ describe('Visual aprovado', () => {
       </MemoryRouter>,
     );
 
-    expect(screen.getByText(/não tem cena própria nem instrumento/i)).toBeInTheDocument();
+    expect(screen.getByRole('region', { name: 'Percurso do capítulo' })).toBeInTheDocument();
     expect(screen.queryByTestId('visual-study-board')).not.toBeInTheDocument();
     expect(screen.queryByText('Transformação adiabática')).not.toBeInTheDocument();
   });
@@ -234,7 +246,7 @@ describe('cadeia de conceitos', () => {
     expect(within(cadeia).queryByText('elo a reconstruir')).not.toBeInTheDocument();
 
     await user.click(screen.getByRole('tab', { name: 'Reconstruir' }));
-    expect(within(cadeia).getAllByText('elo a reconstruir').length).toBeGreaterThan(0);
+    expect(within(screen.getByLabelText('Cadeia de conceitos do capítulo')).getAllByText('elo a reconstruir').length).toBeGreaterThan(0);
   });
 });
 

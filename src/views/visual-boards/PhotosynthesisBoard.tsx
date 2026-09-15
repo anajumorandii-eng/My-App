@@ -86,7 +86,7 @@ function PhotosynthesisAtlas({ emphasis }: { emphasis: 'esquerda' | 'direita' | 
         src="/visual-assets/photosynthesis-atlas.webp"
         alt="Ilustração científica de uma folha e um cloroplasto em corte, com grana, luz e moléculas entrando e saindo"
         initial={reduced ? false : { opacity: 0, scale: .94 }}
-        animate={{ opacity: 1, scale: emphasis === 'esquerda' ? 1.045 : 1, x: emphasis === 'direita' ? -8 : 0 }}
+        animate={{ opacity: 1, scale: 1 }}
         transition={reduced ? { duration: 0 } : { type: 'spring', stiffness: 105, damping: 20 }}
       />
       <span className="vs-atlas-label vs-atlas-label--sun">luz vira energia química</span>

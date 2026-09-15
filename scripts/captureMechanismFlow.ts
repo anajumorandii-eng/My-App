@@ -1,0 +1,32 @@
+import { chromium } from '@playwright/test';
+const browser = await chromium.launch({ headless: true });
+try {
+  const page = await browser.newPage({ viewport: { width: 1440, height: 1000 } });
+  const errors: string[] = [];
+  page.on('pageerror', error => errors.push(error.message));
+  await page.goto('http://localhost:3011/visual?summary=summary-fisica-as-leis-de-newton');
+  const close = page.getByRole('button', { name: 'Fechar', exact: true });
+  if (await close.isVisible().catch(() => false)) await close.click();
+  const lab = page.getByRole('region', { name: 'Experimento de força e massa' });
+  await lab.waitFor();
+  await lab.scrollIntoViewIfNeeded();
+  await lab.getByLabel(/Força:/).focus();
+  await lab.getByLabel(/Força:/).press('End');
+  await lab.getByRole('button', { name: 'Aplicar força por 1 segundo' }).click();
+  const first = await lab.locator('svg > g').last().getAttribute('style');
+  await page.waitForTimeout(1200);
+  const last = await lab.locator('svg > g').last().getAttribute('style');
+  if (first === last) throw new Error('O carrinho não mudou de posição entre os frames');
+  await lab.screenshot({ path: 'docs/visual-personalizado/screenshots/percurso/newton-experimento.png' });
+  await page.goto('http://localhost:3011/visual?summary=summary-quimica-evolucao-dos-modelos-atomicos');
+  const atom = page.getByRole('region', { name: 'Experimento de níveis de energia' });
+  await atom.getByRole('button', { name: 'Nível n = 2' }).click();
+  if (!(await atom.getByRole('status').innerText()).includes('Absorção')) throw new Error('Falta resultado de absorção');
+  await page.waitForTimeout(800);
+  await atom.screenshot({ path: 'docs/visual-personalizado/screenshots/percurso/bohr-experimento.png' });
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await atom.getByRole('button', { name: 'Nível n = 1' }).click();
+  if (!(await atom.getByRole('status').innerText()).includes('Emissão')) throw new Error('Falta resultado com movimento reduzido');
+  if (errors.length) throw new Error(errors.join('\n'));
+  console.log('Newton: frames diferentes; Bohr: absorção e emissão; movimento reduzido preserva resultado.');
+} finally { await browser.close(); }

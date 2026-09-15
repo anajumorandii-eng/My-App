@@ -17,13 +17,15 @@ import type { InteractiveSummary, RetrievalAttempt } from '../types/summary';
 import { findBoard, supportsIllustratedBoard } from './visual-boards/registry';
 import { findInstrument } from './visual-instruments/registry';
 import { ConceptChain } from './ConceptChain';
+import { VisualJourney } from './VisualJourney';
+import { MOTION_DURATION } from '../design-system/motion/tokens';
 import './Visual.css';
 
 type Mode = 'explorar' | 'testar' | 'reconstruir';
 
 const MODE_LABEL: Record<Mode, string> = { explorar: 'Explorar', testar: 'Testar', reconstruir: 'Reconstruir' };
 const MODE_HINT: Record<Mode, string> = {
-  explorar: 'Leia a prancha inteira e abra o inspetor de cada nó.',
+  explorar: 'Observe a cena e percorra as etapas. Depois, teste o que aprendeu.',
   testar: 'Recupere sem consultar. O que você escrever vira evidência.',
   reconstruir: 'Recomponha os elos que o diagnóstico escondeu.',
 };
@@ -86,13 +88,13 @@ function StateBadge({ state }: { state: NodeState }) {
 function VisualLibrary({ onOpen }: { onOpen: (id: string) => void }) {
   const [query, setQuery] = useState('');
   const [subject, setSubject] = useState('');
+  const [limit, setLimit] = useState(60);
   const subjects = useMemo(() => [...new Set(interactiveSummaries.map((item) => item.subject))].sort(), []);
   const list = useMemo(() => {
     const folded = query.trim().toLowerCase();
     return interactiveSummaries
       .filter((item) => (subject ? item.subject === subject : true))
-      .filter((item) => !folded || `${item.title} ${item.topic}`.toLowerCase().includes(folded))
-      .slice(0, 60);
+      .filter((item) => !folded || `${item.title} ${item.topic}`.toLowerCase().includes(folded));
   }, [query, subject]);
 
   return (
@@ -114,7 +116,7 @@ function VisualLibrary({ onOpen }: { onOpen: (id: string) => void }) {
           <span className="mb-1 block font-semibold text-zinc-600 dark:text-zinc-400">Disciplina</span>
           <select
             value={subject}
-            onChange={(event) => setSubject(event.target.value)}
+            onChange={(event) => { setSubject(event.target.value); setLimit(60); }}
             className="w-full rounded-xl border border-zinc-300 bg-transparent px-3 py-2.5 dark:border-zinc-700"
           >
             <option value="">Todas</option>
@@ -127,7 +129,7 @@ function VisualLibrary({ onOpen }: { onOpen: (id: string) => void }) {
             <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-zinc-400" aria-hidden="true" />
             <input
               value={query}
-              onChange={(event) => setQuery(event.target.value)}
+              onChange={(event) => { setQuery(event.target.value); setLimit(60); }}
               placeholder="Termodinâmica, Revolução Francesa…"
               className="w-full rounded-xl border border-zinc-300 bg-transparent py-2.5 pl-9 pr-3 dark:border-zinc-700"
             />
@@ -141,7 +143,7 @@ function VisualLibrary({ onOpen }: { onOpen: (id: string) => void }) {
         </p>
       ) : (
         <ul className="grid gap-3 sm:grid-cols-2">
-          {list.map((item) => (
+          {list.slice(0, limit).map((item) => (
             <li key={item.id}>
               <button
                 onClick={() => onOpen(item.id)}
@@ -157,6 +159,8 @@ function VisualLibrary({ onOpen }: { onOpen: (id: string) => void }) {
           ))}
         </ul>
       )}
+      <p role="status">{Math.min(limit, list.length)} de {list.length} capítulos</p>
+      {limit < list.length && <button className="vs-diagnostic-button" onClick={() => setLimit(value => value + 60)}>Mostrar mais capítulos</button>}
     </div>
   );
 }
@@ -195,7 +199,7 @@ function Inspector({
 
       <section className="vs-inspector-learning">
         <h4>Expectativa de aprendizagem</h4>
-        <p>Reconhecer a relação entre trabalho, energia interna e a condição Q = 0 sem depender de memorização isolada.</p>
+        <p>{section?.callout ?? summary.retrieval.find(item => item.sectionId === section?.id)?.prompt ?? summary.overview}</p>
       </section>
 
       <section>
@@ -246,6 +250,7 @@ export default function Visual() {
   const [searchParams, setSearchParams] = useSearchParams();
   const summaryId = searchParams.get('summary');
   const [mode, setMode] = useState<Mode>('explorar');
+  const [journeyStep, setJourneyStep] = useState(0);
   const [selectedNode, setSelectedNode] = useState<string | null>(null);
   const [disagreed, setDisagreed] = useState(false);
   const [mostrarDominio, setMostrarDominio] = useState(false);
@@ -282,7 +287,7 @@ export default function Visual() {
   // Trocar de capítulo tem de limpar a mesa: manter resposta e peças da anterior
   // faria a reconstrução corrigir o texto errado contra o mapa novo.
   useEffect(() => {
-    setSelectedNode(null); setDisagreed(false); setDraft(''); setFeedback(null);
+    setJourneyStep(0); setMode('explorar'); setSelectedNode(null); setDisagreed(false); setDraft(''); setFeedback(null);
     setPlacements({}); setHistory([]); setGrades({}); setShowWhyHidden(false);
   }, [summaryId]);
 
@@ -447,9 +452,9 @@ export default function Visual() {
         </section>
       )}
 
-      <div className={`vs-workspace${!selectedNode && !intervention ? ' vs-workspace--solo' : ''}`}>
-        <main className="vs-main">
-          {Plate ? (
+      <div data-study-mode={mode} className={`vs-workspace${!selectedNode && !intervention ? ' vs-workspace--solo' : ''}`}>
+        <motion.main key={mode} className="vs-main" initial={reducedMotion ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: reducedMotion ? 0 : MOTION_DURATION.component }}>
+          {mode === 'explorar' && Plate ? (
             <AnimatePresence mode="wait">
               <motion.div
                 key={summary.id}
@@ -461,25 +466,19 @@ export default function Visual() {
                 <Plate map={map} states={states} selectedId={selectedNode} onSelect={setSelectedNode} hiddenEdgeIds={hiddenEdgeIds} mode={mode} />
               </motion.div>
             </AnimatePresence>
-          ) : (
-            <section className="vs-unsupported" role="status">
-              <span>Prancha necessária</span>
-              <h2>{summary.title}</h2>
-              <p>
-                Este capítulo ainda não tem cena própria nem instrumento que o represente. O CRIVO não reutiliza a ilustração
-                de outro conteúdo só para preencher a tela. O mapa, os três modos e o diagnóstico abaixo continuam valendo.
-              </p>
-            </section>
-          )}
+          ) : null}
 
-          <ConceptChain
+          {mode === 'explorar' && <VisualJourney key={summary.id} summary={summary} initialIndex={journeyStep} onStepChange={setJourneyStep} onPractice={() => changeMode('testar')} />}
+
+
+          {mode !== 'testar' && <ConceptChain
             map={map}
             states={states}
             selectedId={selectedNode}
             onSelect={setSelectedNode}
             hiddenEdgeIds={hiddenEdgeIds}
             escondendo={mode === 'reconstruir'}
-          />
+          />}
 
           {/* Quantas conexões o diagnóstico escondeu. Vivia dentro da prancha
               adiabática — a única das 26 que não usava o BoardShell —, então
@@ -647,10 +646,10 @@ export default function Visual() {
               )}
             </section>
           )}
-        </main>
+        </motion.main>
 
 
-        {selectedNode ? (
+        {mode === 'explorar' && selectedNode ? (
           <aside className="vs-inspector-shell">
             <Inspector
               map={map}
@@ -664,7 +663,7 @@ export default function Visual() {
               onOpenSummary={(sectionId) => navigate('/resumos?summary=' + encodeURIComponent(summary.id) + '#' + sectionId)}
             />
           </aside>
-        ) : intervention ? (
+        ) : mode === 'explorar' && intervention ? (
           <aside className="vs-priority-panel">
             <span className="vs-priority-kicker"><Compass aria-hidden="true" /> Diagnóstico vivo</span>
             <h2>Seu próximo elo</h2>

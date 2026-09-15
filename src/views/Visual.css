@@ -1957,3 +1957,36 @@
   .vs-board-head > div:first-child { padding-right: 68px; }
   .vs-brush { width: 78%; margin-bottom: 16px; }
 }
+.vs-journey { min-width: 0; width: 100%; padding: clamp(18px, 3vw, 32px); border: 1px solid var(--vs-line); border-radius: 16px; background: var(--vs-paper-strong); }
+.vs-journey-heading { display: flex; align-items: start; justify-content: space-between; gap: 16px; }
+.vs-journey-heading h2 { margin: 10px 0; font: 600 clamp(1.6rem, 3vw, 2.5rem)/1.15 'Newsreader', Georgia, serif; }
+.vs-journey-count { white-space: nowrap; font-family: 'Kalam', cursive; color: var(--vs-burgundy); }
+.vs-journey > p { color: var(--vs-dim); line-height: 1.65; }
+.vs-journey-steps { display: flex; overflow-x: auto; gap: 0; padding: 16px 0; list-style: none; }
+.vs-journey-steps li { min-width: 165px; flex: 1; }
+.vs-journey-steps button { display: flex; gap: 10px; width: 100%; min-height: 80px; padding: 12px; text-align: left; background: transparent; border: 0; border-bottom: 2px solid var(--vs-line); cursor: pointer; color: var(--vs-dim); }
+.vs-journey-steps button[aria-current] { color: var(--vs-ink); border-color: var(--vs-burgundy); background: color-mix(in srgb, var(--vs-burgundy) 6%, transparent); }
+.vs-journey-steps strong { display: block; font: 600 .93rem/1.3 'Newsreader', Georgia, serif; }
+.vs-journey-steps small { display: block; margin-bottom: 5px; }
+.vs-journey-number { font: 600 1.2rem 'Kalam', cursive; }
+.vs-journey-progress { height: 3px; background: var(--vs-line); }
+.vs-journey-progress > div { height: 100%; background: var(--vs-burgundy); transform-origin: left; }
+.vs-journey-page { padding: 28px 0; min-height: 220px; line-height: 1.75; overflow-wrap: anywhere; }
+.vs-journey-page h3, .vs-mechanism h3 { margin: 8px 0 18px; font: 600 1.5rem/1.25 'Newsreader', Georgia, serif; }
+.vs-journey-callout { margin-top: 20px; padding: 16px; border-left: 3px solid var(--vs-amber); background: color-mix(in srgb, var(--vs-amber) 8%, transparent); }
+.vs-journey-controls { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.vs-journey-controls button, .vs-mechanism button { border: 1px solid var(--vs-line); border-radius: 8px; min-height: 44px; padding: 10px 16px; cursor: pointer; background: transparent; color: inherit; }
+.vs-journey-controls button:last-child, .vs-mechanism button[aria-pressed='true'] { background: var(--vs-burgundy); color: white; }
+.vs-journey-controls button:disabled { opacity: .4; cursor: default; }
+.vs-journey button:focus-visible, .vs-mechanism :focus-visible { outline: 3px solid var(--vs-blue); outline-offset: 3px; }
+.vs-journey-sources { margin-top: 24px; color: var(--vs-dim); font-size: .85rem; }
+.vs-journey-sources summary { cursor: pointer; min-height: 44px; }
+.vs-mechanism { grid-column: 1 / -1; padding: 24px; border: 1px solid var(--vs-line); border-radius: 12px; background: var(--vs-paper-strong); color: var(--vs-ink); }
+.vs-mechanism > p { line-height: 1.6; margin: 12px 0; }
+.vs-mechanism svg { width: 100%; max-height: 210px; margin: 16px 0; }
+.vs-mechanism svg text { font: 11px system-ui; fill: currentColor; }
+.vs-lab-inputs { display: flex; gap: 16px; flex-wrap: wrap; }
+.vs-lab-inputs label { flex: 1; min-width: 140px; }
+.vs-lab-inputs input { display: block; width: 100%; min-height: 44px; accent-color: var(--vs-burgundy); }
+.dark .vs-journey-count { color: #e3a3b2; }
+@media (max-width: 700px) { .vs-journey-steps li { min-width: 145px; } .vs-mechanism { padding: 16px; } }

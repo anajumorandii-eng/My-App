@@ -116,7 +116,7 @@ function AdiabaticAtlas({ emphasis }: { emphasis: 'expansao' | 'compressao' | 'n
         src="/visual-assets/adiabatic-piston-atlas.webp"
         alt="Corte ilustrado de um cilindro adiabático com paredes isolantes, pistão metálico e moléculas de gás"
         initial={reduced ? false : { opacity: 0, scale: .92 }}
-        animate={{ opacity: 1, scale: emphasis === 'nenhum' ? 1 : 1.035, y }}
+        animate={{ opacity: 1, scale: 1 }}
         transition={reduced ? { duration: 0 } : { type: 'spring', stiffness: 120, damping: 18 }}
       />
       <span className="vs-atlas-label vs-atlas-label--left">parede isolante</span>
