@@ -7,6 +7,23 @@ As cinco referências entregues pela usuária foram copiadas para
 reaplicado sobre a `main` para preservar as 26 pranchas autorais que já estavam
 integradas e acrescentar a prancha radial das Leis de Newton.
 
+## 2026-09-14 — correção de direção após revisão visual
+
+A primeira integração ainda deixava um cabeçalho preto de dashboard ocupar o
+primeiro enquadramento e empurrava a prancha para baixo. A revisão foi recusada
+por parecer genérica. A tela passou a usar uma composição editorial contínua:
+
+- identificação compacta de matéria e tópico, com anotação manuscrita;
+- prancha como elemento dominante desde o primeiro enquadramento;
+- modos em abas editoriais, sem botões genéricos preenchidos;
+- diagnóstico vivo na lateral no desktop e como folha inferior no celular;
+- textura de papel ou lousa, recortes irregulares e hierarquia tipográfica;
+- transição de entrada com `motion/react` e respeito a movimento reduzido;
+- cadeia mobile compacta, sem vazios artificiais entre os conceitos.
+
+A validação também encontrou e corrigiu um controle de domínio sobreposto à
+aba Reconstruir no celular.
+
 ### Primeira etapa técnica
 
 ### Arquivos criados

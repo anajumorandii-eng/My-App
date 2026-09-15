@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
+import { AnimatePresence, motion, useReducedMotion } from 'motion/react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
-import { ArrowLeft, Compass, HelpCircle, Layers, RotateCcw, Search, Undo2, Waypoints, X } from 'lucide-react';
+import { ArrowLeft, Compass, HelpCircle, RotateCcw, Search, Undo2, Waypoints, X } from 'lucide-react';
 import { interactiveSummaries } from '../data/interactiveSummaries';
 import { evaluateRetrievalAnswer } from '../lib/summaryEngine';
 import { applySummaryAttempt } from '../lib/summaryStudy';
@@ -227,6 +228,7 @@ function Inspector({
 }
 
 export default function Visual() {
+  const reducedMotion = useReducedMotion();
   const { progress, update, loading, syncError } = useSummaryProgress();
   const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
@@ -354,27 +356,21 @@ export default function Visual() {
   };
 
   return (
-    <div className="crivo-visual space-y-6 pb-16">
-      <button onClick={() => setSearchParams({})} className="vs-back-button">
-        <ArrowLeft className="mr-2 h-4 w-4" />Voltar ao Visual
-      </button>
+    <div className="crivo-visual pb-16">
+      <header className="vs-topic-bar">
+        <button onClick={() => setSearchParams({})} className="vs-back-button" aria-label="Voltar à biblioteca visual">
+          <ArrowLeft aria-hidden="true" />
+        </button>
+        <div className="vs-topic-identity">
+          <span>{summary.subject} / {summary.topic}</span>
+          <strong>{summary.title}</strong>
+        </div>
+        <span className="vs-hand-note" aria-hidden="true">Explore. Conecte.<br />Compreenda de verdade.</span>
+      </header>
 
       {syncError && <div role="alert" className="rounded-xl border border-amber-200 bg-amber-50 p-3 text-sm text-amber-900">{syncError}</div>}
 
-      <header className="rounded-3xl bg-zinc-950 p-6 text-white sm:p-8">
-        <div className="mb-4 flex flex-wrap gap-2">
-          <span className="rounded-full bg-white/10 px-3 py-1 text-xs">{summary.subject} · {summary.topic}</span>
-        </div>
-        <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">{summary.title}</h1>
-        <p className="mt-3 max-w-3xl text-zinc-300">{summary.overview}</p>
-        {summary.prerequisites.length > 0 && (
-          <p className="mt-4 text-sm text-zinc-400">
-            <Layers className="mr-1.5 inline h-4 w-4" aria-hidden="true" />
-            Pré-requisitos: {summary.prerequisites.join(' · ')}
-          </p>
-        )}
-      </header>
-
+      <div className="vs-study-toolbar">
       <div className="vs-mode-row">
       <div role="tablist" aria-label="Modo de estudo" className="vs-modes">
         {(Object.keys(MODE_LABEL) as Mode[]).map((key) => (
@@ -407,7 +403,8 @@ export default function Visual() {
         Mostrar domínio
       </button>
       </div>
-      <p className="-mt-3 text-sm text-zinc-500">{MODE_HINT[mode]}</p>
+      <p className="vs-mode-hint">{MODE_HINT[mode]}</p>
+      </div>
 
       {mostrarDominio && (
         <section className="vs-domain" aria-label="Domínio de cada conceito do capítulo">
@@ -439,26 +436,20 @@ export default function Visual() {
         </section>
       )}
 
-      {intervention && (
-        <section className="rounded-2xl border border-amber-300 bg-amber-50 p-5 dark:border-amber-900 dark:bg-amber-950/20">
-          <div className="flex flex-wrap items-center gap-2">
-            <Compass className="h-4 w-4 text-amber-700 dark:text-amber-300" aria-hidden="true" />
-            <h2 className="font-bold">Menor lacuna que explica o problema</h2>
-            <StateBadge state={intervention.state} />
-          </div>
-          {/* Intervenção mínima eficaz: aponta o elo, não manda rever o capítulo. */}
-          <p className="mt-2 text-sm">{displayLabel(intervention.label)} — {intervention.why}</p>
-          <p className="mt-1 text-xs uppercase tracking-wide text-zinc-500">{CONFIDENCE_LABEL[intervention.confidence]}</p>
-          <button onClick={() => changeMode('reconstruir')} className="mt-3 rounded-xl bg-amber-600 px-4 py-2 text-sm font-semibold text-white">
-            {intervention.action}
-          </button>
-        </section>
-      )}
-
-      <div className="vs-workspace">
+      <div className={`vs-workspace${!selectedNode && !intervention ? ' vs-workspace--solo' : ''}`}>
         <main className="vs-main">
           {Plate ? (
-            <Plate map={map} states={states} selectedId={selectedNode} onSelect={setSelectedNode} hiddenEdgeIds={hiddenEdgeIds} mode={mode} />
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={summary.id}
+                initial={reducedMotion ? false : { opacity: 0, y: 16, scale: 0.99 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={reducedMotion ? undefined : { opacity: 0, y: -8 }}
+                transition={{ duration: reducedMotion ? 0 : 0.38, ease: [0.22, 1, 0.36, 1] }}
+              >
+                <Plate map={map} states={states} selectedId={selectedNode} onSelect={setSelectedNode} hiddenEdgeIds={hiddenEdgeIds} mode={mode} />
+              </motion.div>
+            </AnimatePresence>
           ) : (
             <section className="vs-unsupported" role="status">
               <span>Prancha necessária</span>
@@ -648,7 +639,7 @@ export default function Visual() {
         </main>
 
 
-        {selectedNode && (
+        {selectedNode ? (
           <aside className="vs-inspector-shell">
             <Inspector
               map={map}
@@ -662,7 +653,17 @@ export default function Visual() {
               onOpenSummary={(sectionId) => navigate('/resumos?summary=' + encodeURIComponent(summary.id) + '#' + sectionId)}
             />
           </aside>
-        )}
+        ) : intervention ? (
+          <aside className="vs-priority-panel">
+            <span className="vs-priority-kicker"><Compass aria-hidden="true" /> Diagnóstico vivo</span>
+            <h2>Seu próximo elo</h2>
+            <StateBadge state={intervention.state} />
+            <p><strong>{displayLabel(intervention.label)}</strong></p>
+            <p>{intervention.why}</p>
+            <small>{CONFIDENCE_LABEL[intervention.confidence]}</small>
+            <button type="button" onClick={() => changeMode('reconstruir')}>{intervention.action}</button>
+          </aside>
+        ) : null}
       </div>
     </div>
   );

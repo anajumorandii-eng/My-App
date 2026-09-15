@@ -13,6 +13,8 @@
 | 2026-09-14 | Redução de movimento em 768 × 1024 | página e artefato renderizados |
 | 2026-09-14 | Overflow horizontal em 375 px e 390 px | ausente após correção da margem da prancha |
 | 2026-09-14 | Build de produção (`vite build` + servidor esbuild) | aprovado |
+| 2026-09-14 | Revisão editorial após recusa da primeira composição | cinco capturas refeitas |
+| 2026-09-14 | Toque em Reconstruir após reposicionar domínio | aprovado sem sobreposição |
 
 ## Evidências finais
 

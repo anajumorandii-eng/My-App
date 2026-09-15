@@ -1430,6 +1430,7 @@
   /* Em coluna, a seta entre elos vira indicação de descida e atrapalha mais do
      que informa: a ordem já está na leitura de cima para baixo. */
   .vs-chain { flex-direction: column; }
+  .vs-chain li { width: 100%; flex: 0 0 auto; }
   .vs-chain-arrow { display: none; }
 }
 
@@ -1671,4 +1672,188 @@
   font-size: 0.72rem;
   color: var(--vs-dim);
   text-align: center;
+}
+
+/* Composição editorial aprovada: a prancha começa no primeiro enquadramento e
+   todo o chrome se comporta como margem de caderno, não como dashboard. */
+.crivo-visual { display: grid; gap: 12px; }
+.vs-topic-bar {
+  min-height: 58px;
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 12px;
+  padding: 7px 4px 9px;
+  border-bottom: 1px solid var(--vs-line);
+}
+.vs-topic-bar .vs-back-button {
+  width: 38px;
+  height: 38px;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--vs-line);
+  border-radius: 50%;
+  background: var(--vs-paper-strong);
+}
+.vs-topic-identity { min-width: 0; display: grid; gap: 1px; }
+.vs-topic-identity span {
+  color: var(--vs-dim);
+  font-size: .68rem;
+  font-weight: 650;
+  letter-spacing: .055em;
+  text-transform: uppercase;
+}
+.vs-topic-identity strong {
+  overflow: hidden;
+  color: var(--vs-ink);
+  font: 700 clamp(.92rem, 1.5vw, 1.08rem)/1.15 "Newsreader", Georgia, serif;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.vs-hand-note {
+  position: relative;
+  padding: 2px 14px 5px;
+  color: var(--vs-burgundy);
+  font: 700 .82rem/1.05 "Kalam", "Newsreader", cursive;
+  text-align: right;
+  transform: rotate(-2deg);
+}
+.vs-hand-note::after {
+  content: "";
+  position: absolute;
+  right: 9px;
+  bottom: 0;
+  width: 90px;
+  height: 2px;
+  border-radius: 70%;
+  background: var(--vs-burgundy);
+  transform: rotate(-3deg);
+  opacity: .7;
+}
+.vs-study-toolbar {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 8px 18px;
+}
+.vs-study-toolbar .vs-mode-row { grid-column: 1 / -1; }
+.vs-mode-row .vs-modes { width: auto; margin: 0; gap: 0 !important; }
+.vs-modes > button {
+  border: 0 !important;
+  border-bottom: 2px solid transparent !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: var(--vs-dim) !important;
+}
+.vs-modes > button[aria-selected='true'] {
+  border-bottom-color: var(--vs-burgundy) !important;
+  color: var(--vs-burgundy) !important;
+  box-shadow: none !important;
+}
+.dark .vs-modes > button[aria-selected='true'] { color: #f08aa0 !important; }
+.vs-mode-hint {
+  grid-column: 1;
+  margin: -4px 0 0 4px;
+  color: var(--vs-dim);
+  font: 600 .78rem/1.3 "Kalam", "Newsreader", cursive;
+}
+.vs-domain-toggle { grid-column: 2; grid-row: 2; }
+.vs-workspace { grid-template-columns: minmax(0, 1fr) minmax(280px, 318px); gap: 16px; }
+.vs-workspace--solo { grid-template-columns: minmax(0, 1fr); }
+.vs-main { gap: 12px; }
+.vs-study-board {
+  isolation: isolate;
+  border-radius: 6px 28px 8px 24px;
+  padding: clamp(22px, 3vw, 38px);
+  box-shadow: 0 20px 55px rgba(50, 36, 20, .11), inset 0 0 80px rgba(177, 137, 79, .04);
+}
+.vs-study-board::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  pointer-events: none;
+  background-image: repeating-linear-gradient(0deg, transparent 0 31px, rgba(98, 73, 45, .025) 32px);
+  mix-blend-mode: multiply;
+}
+.dark .vs-study-board::before {
+  background-image: radial-gradient(circle at 30% 10%, rgba(255,255,255,.035) 0 1px, transparent 1.5px);
+  background-size: 7px 7px;
+  mix-blend-mode: screen;
+}
+.vs-board-head h2 { text-shadow: 1px 2px 0 rgba(133,38,54,.08); }
+.vs-priority-panel,
+.vs-inspector-shell {
+  position: sticky;
+  top: 16px;
+  align-self: start;
+}
+.vs-priority-panel {
+  overflow: hidden;
+  display: grid;
+  gap: 13px;
+  padding: 22px;
+  border: 1px solid color-mix(in srgb, var(--vs-burgundy) 25%, var(--vs-line));
+  border-radius: 22px 8px 22px 8px;
+  background:
+    linear-gradient(145deg, color-mix(in srgb, var(--vs-coral) 18%, var(--vs-paper-strong)), var(--vs-paper-strong));
+  box-shadow: 0 18px 48px rgba(48, 31, 20, .09);
+}
+.vs-priority-panel::after {
+  content: "";
+  position: absolute;
+  top: 14px;
+  right: -14px;
+  width: 72px;
+  height: 18px;
+  background: color-mix(in srgb, var(--vs-coral) 44%, transparent);
+  transform: rotate(34deg);
+}
+.vs-priority-kicker { display: flex; align-items: center; gap: 7px; color: var(--vs-burgundy); font-size: .7rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.vs-priority-kicker svg { width: 15px; }
+.vs-priority-panel h2 { margin: 0; font: 700 2rem/1 "Newsreader", Georgia, serif; }
+.vs-priority-panel p { margin: 0; color: var(--vs-dim); font-size: .88rem; line-height: 1.5; }
+.vs-priority-panel p strong { color: var(--vs-ink); font-family: "Newsreader", Georgia, serif; font-size: 1.08rem; }
+.vs-priority-panel small { color: var(--vs-burgundy); font-size: .68rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.vs-priority-panel > button {
+  min-height: 46px;
+  border: 0;
+  border-radius: 9px 18px 9px 18px;
+  background: var(--vs-burgundy);
+  color: #fffaf0;
+  font-weight: 750;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .crivo-visual { gap: 9px; }
+  .vs-topic-bar { grid-template-columns: 38px minmax(0, 1fr); }
+  .vs-hand-note { display: none; }
+  .vs-study-toolbar { position: relative; }
+  .vs-mode-row { gap: 5px; }
+  .vs-mode-row .vs-modes { flex-basis: 100%; }
+  .vs-domain-toggle { position: static; grid-column: 2; grid-row: 2; justify-self: end; padding: 6px 9px; font-size: 0; }
+  .vs-domain-toggle .vs-domain-switch { width: 34px; }
+  .vs-mode-hint { grid-column: 1 / -1; font-size: .72rem; }
+  .vs-workspace { grid-template-columns: minmax(0, 1fr); }
+  .vs-study-board { padding: 18px 14px 20px; border-radius: 4px 20px 5px 18px; }
+  .vs-priority-panel,
+  .vs-inspector-shell {
+    position: relative;
+    top: auto;
+    z-index: 5;
+    margin-top: -18px;
+    border-radius: 24px 24px 10px 10px;
+  }
+}
+
+@media (max-width: 430px) {
+  .vs-topic-identity span { font-size: .58rem; }
+  .vs-topic-identity strong { font-size: .86rem; }
+  .vs-board-head h2 { font-size: clamp(2.15rem, 12vw, 3.1rem); }
+  .vs-board-head p { font-family: "Kalam", "Newsreader", cursive; line-height: 1.28; }
+  .vs-q-callout { position: absolute; right: 12px; top: 12px; width: 94px; min-height: 72px; opacity: .96; }
+  .vs-board-head > div:first-child { padding-right: 68px; }
+  .vs-brush { width: 78%; margin-bottom: 16px; }
 }
