@@ -18,9 +18,9 @@ Pedido: tornar os movimentos coerentes com o fluxo e estender o percurso a todas
 
 ## Cobertura e limites
 
-`04-cobertura-percurso.json` inventaria 613 capítulos, 14 matérias, todas as seções, a representação visual de tópico e a disponibilidade de cenas-âncora.
-O percurso e a representação visual orientada pela matéria, pelo tópico e pela etapa cobrem os 613 capítulos. As 14 matérias têm paleta e rotulagem próprias; áreas próximas compartilham uma gramática quando isso preserva sentido, como Gramática, Inglês e Entendimento de Texto. Física, Química, Biologia e Matemática ganham variações conceituais: ondas, óptica, circuitos, termodinâmica, ácidos e bases, orgânica, soluções, genética, ecologia, célula, radicais, trigonometria, probabilidade, geometria e exponenciais.
-Cenas-âncora ou instrumentos completos existem em 61 capítulos. Nos outros 552, a representação é uma composição vetorial orientada pelo conteúdo; ela não é descrita como ilustração científica completa ou simulação.
+`04-cobertura-percurso.json` inventaria 613 capítulos e 14 matérias. A afirmação anterior de personalização visual dos 613 capítulos era indevida: `topicVisual: true` era uma constante e os desenhos eram escolhidos por palavras amplas, sem validar correspondência conceitual.
+Essa camada foi removida. Os 613 capítulos conservam o percurso e agora oferecem leitura em foco com comparação de trechos integrais. Isso é uma ferramenta de leitura, **não** uma prancha ilustrada personalizada.
+As 61 associações de cenas/instrumentos anteriores permanecem. Onze novos capítulos têm laboratórios específicos registrados por ID exato. Esses números não se somam diretamente porque há interseção. O novo relatório separa `contentAtlas`, `interactiveExperiment` e `anchorScene`. A cobertura de ilustrações e animações autorais para todos os tópicos continua pendente; não chamar a implementação atual de cobertura visual completa.
 O conteúdo vem do repositório e não foi revalidado cientificamente em sua totalidade nesta alteração.
 
 ## Verificação

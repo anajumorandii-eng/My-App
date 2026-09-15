@@ -3,19 +3,23 @@ import { findBoard } from '../src/views/visual-boards/registry';
 import { findInstrument } from '../src/views/visual-instruments/registry';
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import { atlasCoverage } from '../src/lib/topicAtlas';
+import { topicExperiments } from '../src/views/topic-experiments/catalog';
 
 const chapters = interactiveSummaries.map(summary => ({
   id: summary.id, subject: summary.subject, topic: summary.topic, title: summary.title,
   stages: summary.sections.map(section => ({ id: section.id, title: section.title, stage: section.stage, characters: section.content.length })),
   sources: summary.sources.length, questions: summary.retrieval.length,
-  topicVisual: true,
+  contentAtlas: atlasCoverage(summary),
+  interactiveExperiment: topicExperiments[summary.id] ?? null,
   anchorScene: findBoard(summary)?.id ?? findInstrument(summary)?.id ?? null,
 }));
 const invalid = chapters.filter(chapter => !chapter.stages.length || chapter.stages.some(stage => !stage.characters));
 if (invalid.length) throw new Error(`Capítulos sem conteúdo: ${invalid.map(item => item.id).join(', ')}`);
 const subjects = [...new Set(chapters.map(chapter => chapter.subject))].map(subject => ({
   subject, chapters: chapters.filter(chapter => chapter.subject === subject).length,
-  topicVisuals: chapters.filter(chapter => chapter.subject === subject && chapter.topicVisual).length,
+  contentAtlases: chapters.filter(chapter => chapter.subject === subject && chapter.contentAtlas.sourceMap).length,
+  interactiveExperiments: chapters.filter(chapter => chapter.subject === subject && chapter.interactiveExperiment).length,
   anchorScenes: chapters.filter(chapter => chapter.subject === subject && chapter.anchorScene).length,
 }));
 const report = { total: chapters.length, subjects, chapters };

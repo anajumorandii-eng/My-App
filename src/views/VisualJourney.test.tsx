@@ -39,13 +39,14 @@ describe('Percurso ligado ao conteúdo', () => {
     fireEvent.click(screen.getByRole('button', { name: 'Nível n = 1' }));
     expect(screen.getByRole('status')).toHaveTextContent('Emissão de 10,2 eV');
   });
-  it('gera representação visual rotulada para todas as matérias do catálogo', () => {
+  it('oferece leitura em foco do conteúdo de todas as matérias, sem afirmar ilustração autoral', () => {
     const subjects = [...new Set(interactiveSummaries.map(summary => summary.subject))];
     expect(subjects).toHaveLength(14);
     for (const subject of subjects) {
       const summary = interactiveSummaries.find(item => item.subject === subject)!;
       const view = render(<VisualJourney summary={summary} onPractice={() => {}} />);
-      expect(screen.getByRole('figure', { name: `Representação visual de ${summary.sections[0].title}` })).toHaveAttribute('data-subject', subject);
+      fireEvent.click(screen.getByText('Explorar e comparar trechos desta etapa'));
+      expect(screen.getByRole('figure', { name: `Leitura em foco de ${summary.sections[0].title}` })).toHaveAttribute('data-subject', subject);
       view.unmount();
       cleanup();
     }

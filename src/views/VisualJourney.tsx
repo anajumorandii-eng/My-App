@@ -5,6 +5,7 @@ import { MOTION_DURATION, MOTION_EASE } from '../design-system/motion/tokens';
 import { STAGE_LABEL } from '../lib/visualStudy';
 import type { InteractiveSummary } from '../types/summary';
 import { TopicVisual } from './TopicVisual';
+import { TopicExperiment } from './topic-experiments/TopicExperiment';
 
 /** The section order and all teaching text come from the chapter, not a subject template. */
 export function VisualJourney({ summary, onPractice, initialIndex = 0, onStepChange }: {
@@ -34,6 +35,7 @@ export function VisualJourney({ summary, onPractice, initialIndex = 0, onStepCha
       <div className="vs-journey-progress" aria-hidden="true"><motion.div
         animate={{ scaleX: (index + 1) / summary.sections.length }}
         transition={{ duration: reduced ? 0 : MOTION_DURATION.panel, ease: MOTION_EASE }} /></div>
+      <TopicExperiment key={summary.id} summaryId={summary.id} />
       <AnimatePresence initial={false} mode="wait">
         <motion.article key={section.id} className="vs-journey-page"
           initial={{ opacity: reduced ? 1 : 0, x: reduced ? 0 : direction * 12 }}
@@ -45,7 +47,9 @@ export function VisualJourney({ summary, onPractice, initialIndex = 0, onStepCha
           {section.callout && <aside className="vs-journey-callout"><AiText text={section.callout} /></aside>}
         </motion.article>
       </AnimatePresence>
-      <TopicVisual summary={summary} section={section} index={index} />
+      <details className="vs-reading-lens"><summary>Explorar e comparar trechos desta etapa</summary>
+        <TopicVisual summary={summary} section={section} index={index} />
+      </details>
       <footer className="vs-journey-controls">
         <button type="button" disabled={index === 0} onClick={() => go(index - 1)}>← Etapa anterior</button>
         <button type="button" onClick={() => index < summary.sections.length - 1 ? go(index + 1) : onPractice()}>

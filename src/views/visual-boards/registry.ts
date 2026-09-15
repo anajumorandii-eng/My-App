@@ -43,12 +43,10 @@ import NewtonBoard from './NewtonBoard';
  * ilustrado — e o que ainda não foi continua caindo no aviso honesto, em vez
  * de receber a ilustração de outro assunto.
  *
- * O alvo são as quatro matérias de mecanismo — Biologia, Física, Química e
- * Matemática, 288 dos 612 capítulos. As demais ficam de fora por decisão da
- * Ana Júlia, e a razão é boa: "Uso da Crase" não tem fenômeno a desenhar, e
- * uma prancha inventada para preencher a tela seria exatamente o que a regra
- * de não reutilizar ilustração alheia existe para impedir. Elas continuam
- * abrindo o Visual normalmente, com o aviso de prancha necessária.
+ * Este registro legado contém cenas de quatro matérias. Isso é uma lacuna de
+ * cobertura, não uma autorização para excluir Humanidades ou Linguagens.
+ * O requisito atual abrange todas as matérias e tópicos. Experiências novas
+ * com vínculo explícito ao capítulo ficam em topic-experiments/catalog.ts.
  */
 export interface BoardEntry {
   /** Identificador estável; é o que os testes citam. */
