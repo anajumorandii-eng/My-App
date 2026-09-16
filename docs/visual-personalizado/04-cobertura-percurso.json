@@ -27,7 +27,7 @@
       "chapters": 63,
       "contentAtlases": 63,
       "interactiveExperiments": 1,
-      "anchorScenes": 0
+      "anchorScenes": 26
     },
     {
       "subject": "História",
@@ -8586,7 +8586,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "cadeia-de-derivacao"
     },
     {
       "id": "summary-geografia-sistema-de-fusos-horarios",
@@ -8745,7 +8745,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "tipologia"
     },
     {
       "id": "summary-geografia-cartografia-digital",
@@ -8904,7 +8904,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "tipologia"
     },
     {
       "id": "summary-geografia-clima-mundial",
@@ -8957,7 +8957,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "criterios-conjuntivos"
     },
     {
       "id": "summary-geografia-geomorfologia-mundial",
@@ -9010,7 +9010,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "tipologia"
     },
     {
       "id": "summary-geografia-biogeografia-mundial",
@@ -9063,7 +9063,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "tipologia"
     },
     {
       "id": "summary-geografia-agua-na-superficie-terrestre",
@@ -9275,7 +9275,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "cadeia-de-derivacao"
     },
     {
       "id": "summary-geografia-hidrogeografia-mundial",
@@ -9381,7 +9381,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "cadeia-de-derivacao"
     },
     {
       "id": "summary-geografia-globalizacao-e-processos-economicos-atuais",
@@ -9593,7 +9593,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "escala-de-graus"
     },
     {
       "id": "summary-geografia-uniao-europeia",
@@ -9699,7 +9699,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "cadeia-de-derivacao"
     },
     {
       "id": "summary-geografia-mobilidade-populacional",
@@ -9752,7 +9752,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "criterios-conjuntivos"
     },
     {
       "id": "summary-geografia-geografia-do-turismo",
@@ -9805,7 +9805,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "tipologia"
     },
     {
       "id": "summary-geografia-producao-agricola-mundial",
@@ -9858,7 +9858,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "tipologia"
     },
     {
       "id": "summary-geografia-industria-i",
@@ -9911,7 +9911,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "tipologia"
     },
     {
       "id": "summary-geografia-industria-ii",
@@ -10547,7 +10547,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "contraste-de-posicoes"
     },
     {
       "id": "summary-geografia-geologia-e-geomorfologia",
@@ -10600,7 +10600,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "tipologia"
     },
     {
       "id": "summary-geografia-relevo-brasileiro",
@@ -10653,7 +10653,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "tipologia"
     },
     {
       "id": "summary-geografia-pedologia",
@@ -10706,7 +10706,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "tipologia"
     },
     {
       "id": "summary-geografia-climatologia-do-brasil",
@@ -10759,7 +10759,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "tipologia"
     },
     {
       "id": "summary-geografia-biogeografia-do-brasil-i",
@@ -11024,7 +11024,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "tipologia"
     },
     {
       "id": "summary-geografia-matriz-energetica",
@@ -11395,7 +11395,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "camadas-de-determinacao"
     },
     {
       "id": "summary-geografia-o-espaco-industrial-brasileiro-ii",
@@ -11501,7 +11501,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "escala-de-graus"
     },
     {
       "id": "summary-geografia-estrutura-etnica-e-fluxos-migratorios",
@@ -11607,7 +11607,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "escala-de-graus"
     },
     {
       "id": "summary-geografia-o-espaco-urbano-ii",
@@ -11660,7 +11660,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "camadas-de-determinacao"
     },
     {
       "id": "summary-geografia-as-redes-de-transportes",
@@ -11713,7 +11713,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "tipologia"
     },
     {
       "id": "summary-geografia-os-fluxos-do-comercio-externo",
@@ -13250,7 +13250,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": "cadeia-de-derivacao"
+      "anchorScene": "criterios-conjuntivos"
     },
     {
       "id": "summary-historia-dinamica-interna-da-colonizacao",
@@ -29309,7 +29309,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "escala-de-graus"
     },
     {
       "id": "summary-filosofia-o-nascimento-da-filosofia-do-mito-ao-logos",
@@ -32118,7 +32118,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": "contraste-de-posicoes"
+      "anchorScene": "cadeia-de-derivacao"
     },
     {
       "id": "summary-sociologia-divisao-social-do-trabalho",
