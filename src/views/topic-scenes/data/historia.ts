@@ -64,6 +64,14 @@ export const historiaSemCena: { chapterId: string; motivo: string }[] = [
     chapterId: 'summary-historia-segunda-guerra-mundial-1939-1945',
     motivo: 'As frentes europeia e do Pacífico avançam em paralelo e não dependem estritamente uma da outra (a entrada dos EUA na guerra do Pacífico não decorre da Frente Oriental europeia); o capítulo é melhor descrito como narrativa cronológica multifacetada do que como cadeia única de derivação, rivalidade ou camada.',
   },
+  {
+    chapterId: 'summary-historia-regime-militar-1964-1985-i',
+    motivo: 'O elo golpe de 1964 → AI-5 (1968) é periodização ("marcados pela edição do AI-5"), não causação, e o AI-5 não é apresentado como causa do "milagre econômico" — são fases paralelas do mesmo regime, sem dependência textual entre si. A única frase genuinamente causal do capítulo (o endividamento do "milagre" tornando-se insustentável) aponta para fora dele, para a crise que Regime Militar (1964-1985) II retoma; não há elo interno completo o bastante para sustentar uma cadeia própria dentro deste capítulo. Mesmo padrão de historia-a-republica-da-espada.',
+  },
+  {
+    chapterId: 'summary-historia-regime-militar-1964-1985-ii',
+    motivo: 'A abertura controlada (1974-1979) e a crise econômica do início dos anos 1980 estão em sequência temporal, mas o texto atribui a crise ao esgotamento do "milagre econômico" do capítulo anterior, não à abertura política deste capítulo. A suposta ligação entre a crise econômica e o movimento Diretas Já também não está no texto: a única frase sobre o efeito da crise fala em desgaste do apoio popular ao regime em geral, não em impulso às Diretas Já especificamente. Sem essas duas ligações, o capítulo é melhor descrito como periodização. Mesmo padrão de historia-a-republica-da-espada.',
+  },
 ];
 
 /** Task 1 não escreve cenas — apenas o inventário e o esqueleto. As Tasks
@@ -327,6 +335,339 @@ export const historia: SceneEntry[] = [
         claim: 'reafirmou os dogmas católicos centrais contestados pelos protestantes, mas também promoveu reformas internas para corrigir os abusos que haviam alimentado essas críticas — uma posição final que não é nem a pré-Reforma nem a simples rejeição da crítica protestante',
         section: 'Contrarreforma',
         quote: 'reafirmou dogmas católicos centrais contestados pelos protestantes (como a autoridade papal, a validade dos sacramentos e a importância das obras combinadas com a fé para a salvação), ao mesmo tempo em que promoveu reformas internas destinadas a corrigir abusos genuínos que haviam alimentado as críticas protestantes originais',
+      },
+    ],
+  },
+  // Task 4 — família cadeia-de-derivacao. O documento de famílias lista 14
+  // capítulos para esta família, incluindo historia-baixa-idade-media (não
+  // historia-alta-idade-media-e-feudalismo, que nunca esteve nesta família —
+  // essa é tipologia e fica para o outro dispatch). Desses 14, 12 foram
+  // escritos aqui; historia-regime-militar-1964-1985-i e -ii voltaram para
+  // historiaSemCena após revisão: cada um só tem uma frase causal real, e
+  // ela aponta para o capítulo vizinho (dívida do "milagre econômico" que
+  // seguirá insustentável), não para dentro do próprio capítulo — o resto é
+  // periodização (mesmo padrão de historia-a-republica-da-espada).
+  {
+    chapterId: 'summary-historia-revolucao-francesa',
+    family: 'cadeia-de-derivacao',
+    question: 'Como a crise fiscal do Antigo Regime desencadeou, elo a elo, a radicalização que culminou no Terror?',
+    items: [
+      {
+        label: 'Crise fiscal',
+        claim: 'a crise financeira do Estado francês forçou o rei Luís XVI a convocar os Estados Gerais em 1789, buscando aprovação para novas medidas fiscais que os privilegiados historicamente resistiam a aceitar',
+        section: 'Crise do Antigo Regime',
+        quote: 'forçou o rei Luís XVI a convocar os Estados Gerais em 1789, assembleia que reunia representantes dos três estamentos e que não se reunia havia mais de um século e meio, buscando aprovação para novas medidas fiscais que os privilegiados historicamente resistiam a aceitar',
+      },
+      {
+        label: 'Assembleia Nacional',
+        claim: 'insatisfeitos com o sistema de votação por estamento nos Estados Gerais, os representantes do Terceiro Estado se autoproclamaram Assembleia Nacional Constituinte em junho de 1789',
+        section: 'De 1789 à monarquia constitucional',
+        quote: 'representantes do Terceiro Estado, insatisfeitos com o sistema de votação por estamento (que garantia maioria estrutural aos dois estamentos privilegiados mesmo representando parcela muito menor da população), proclamaram-se Assembleia Nacional Constituinte em junho de 1789',
+      },
+      {
+        label: 'Tomada da Bastilha',
+        claim: 'a Tomada da Bastilha, em julho de 1789, precipitou adesão crescente de diferentes setores sociais ao movimento revolucionário em curso',
+        section: 'De 1789 à monarquia constitucional',
+        quote: 'A Tomada da Bastilha, em 14 de julho de 1789, evento simbólico que se tornaria data nacional francesa, representou explosão popular urbana contra símbolo do poder arbitrário do Antigo Regime, precipitando adesão crescente de diferentes setores sociais ao movimento revolucionário em curso',
+      },
+      {
+        label: 'O Terror',
+        claim: 'a radicalização revolucionária resultou de fatores internos e externos retroalimentados (coalizões externas contra a revolução e desconfiança sobre a lealdade do rei), levando ao Terror, justificado pela necessidade percebida de defender a revolução contra essas mesmas ameaças',
+        section: 'República, radicalização e conflitos',
+        quote: 'A proclamação da República em 1792, e a radicalização subsequente do processo revolucionário, resultaram de fatores internos e externos que se retroalimentaram mutuamente ao longo dos anos seguintes. Externamente, a França revolucionária enfrentou coalizões militares de monarquias europeias vizinhas, temerosas do contágio revolucionário sobre seus próprios territórios e populações; internamente, a desconfiança crescente sobre a lealdade real de Luís XVI (agravada por sua tentativa fracassada de fuga do país em 1791) levou à abolição da monarquia e à execução do próprio rei em 1793. O período do Terror (1793-1794), sob liderança de Maximilien Robespierre e do Comitê de Salvação Pública, empregou repressão violenta sistemática contra opositores reais e supostos da revolução, justificada pela necessidade percebida de defender a própria revolução contra ameaças externas e internas simultâneas num contexto de guerra generalizada',
+      },
+    ],
+  },
+  {
+    chapterId: 'summary-historia-revolucao-industrial',
+    family: 'cadeia-de-derivacao',
+    question: 'Como os cercamentos viabilizaram o investimento fabril, e como a evidência documentada sobre suas condições de trabalho resultou nas leis fabris?',
+    items: [
+      {
+        label: 'Cercamentos',
+        claim: 'os cercamentos das terras comunais inglesas criaram simultaneamente a mão de obra disponível e parte do capital financeiro necessário para viabilizar o investimento industrial crescente da Revolução Industrial',
+        section: 'Cercamentos e trabalho assalariado',
+        quote: 'criou simultaneamente a mão de obra disponível (trabalhadores sem meios próprios de subsistência, obrigados a vender sua força de trabalho) e parte do capital financeiro necessário para viabilizar o próprio investimento industrial crescente que caracterizaria a Revolução Industrial em curso',
+      },
+      {
+        label: 'Condições documentadas',
+        claim: 'um relato de fábrica de 1833 documentava jornada de treze horas para crianças a partir de nove anos, e um relatório parlamentar do mesmo período registrava deformidades físicas permanentes desenvolvidas ainda na infância pelo trabalho fabril',
+        section: 'Fonte comparada',
+        quote: 'um relato de fábrica têxtil inglesa de 1833 descreve jornada de trabalho de treze horas para crianças a partir de nove anos de idade, com intervalos curtos para refeição e punições físicas para lentidão ou erros no trabalho fabril. Um relatório parlamentar britânico do mesmo período, produzido justamente para investigar essas condições, documenta testemunhos de trabalhadores adultos relatando deformidades físicas permanentes desenvolvidas ainda na infância pelo próprio trabalho fabril extenuante',
+      },
+      {
+        label: 'Leis fabris',
+        claim: 'a pressão de reformistas sociais e essa evidência documental contribuíram, ao longo de décadas, para a aprovação de leis fabris que restringiram o trabalho infantil e limitaram a jornada de trabalho',
+        section: 'Fonte comparada',
+        quote: 'a pressão de reformistas sociais e a evidência documental sistematicamente coletada e organizada por investigações oficiais como essa contribuíram, ao longo de décadas, para a aprovação de leis fabris (como as Factory Acts britânicas) que progressivamente restringiram o trabalho infantil e estabeleceram limites legais à jornada de trabalho',
+      },
+    ],
+  },
+  {
+    chapterId: 'summary-historia-grandes-navegacoes-e-conquista-colonial',
+    family: 'cadeia-de-derivacao',
+    question: 'Como o pioneirismo tecnológico português condicionou, elo a elo, o modelo econômico inicial de baixo investimento no Brasil?',
+    items: [
+      {
+        label: 'Escola de Sagres',
+        claim: 'o investimento sistemático em tecnologia náutica permitiu a Portugal explorar progressivamente a costa africana e alcançar a Índia por via marítima em 1498',
+        section: 'Pioneirismo português',
+        quote: 'Esse investimento sistemático permitiu a Portugal explorar progressivamente a costa africana ao longo do século XV, contornando o Cabo da Boa Esperança em 1488 (expedição de Bartolomeu Dias) e finalmente alcançando a Índia por via marítima direta em 1498, com Vasco da Gama',
+      },
+      {
+        label: 'Prioridade asiática',
+        claim: 'nas primeiras décadas após 1500, a Coroa portuguesa manteve-se concentrada nos lucros do comércio direto de especiarias asiáticas via rota do Cabo, o que limitou seu interesse econômico imediato pelo Brasil',
+        section: 'Primeiras décadas no Brasil',
+        quote: 'caracterizaram-se por interesse econômico relativamente limitado da Coroa portuguesa, então majoritariamente concentrada nos lucros muito mais expressivos e imediatos do comércio direto de especiarias asiáticas via rota do Cabo da Boa Esperança',
+      },
+      {
+        label: 'Baixo investimento',
+        claim: 'essa prioridade asiática se traduziu em modelo econômico inicial de baixo investimento no Brasil, baseado na extração de pau-brasil por escambo com populações indígenas',
+        section: 'Primeiras décadas no Brasil',
+        quote: 'Nesse período inicial, a exploração portuguesa do território recém-alcançado limitou-se principalmente à extração do pau-brasil, madeira nativa valorizada na Europa pela produção de corante vermelho para tecidos, obtida por meio de escambo (troca direta de mercadorias, sem uso de moeda) com populações indígenas locais',
+      },
+      {
+        label: 'Ameaça de invasão',
+        claim: 'esse modelo de baixo investimento só se transformou significativamente após ameaças de invasão por outras potências europeias, levando a Coroa a intensificar a colonização a partir da década de 1530',
+        section: 'Primeiras décadas no Brasil',
+        quote: 'Esse modelo econômico inicial de baixo investimento e presença colonial relativamente esparsa só se transformaria significativamente após ameaças de invasão por outras potências europeias interessadas no território, levando a Coroa portuguesa a intensificar seus esforços de efetiva colonização e ocupação territorial a partir da década de 1530',
+      },
+    ],
+  },
+  {
+    chapterId: 'summary-historia-a-era-vargas-o-governo-constitucional-1934-1937',
+    family: 'cadeia-de-derivacao',
+    question: 'Como a radicalização política entre AIB e ANL desencadeou a cadeia de eventos que levou ao golpe do Estado Novo?',
+    items: [
+      {
+        label: 'Radicalização (AIB/ANL)',
+        claim: 'a disputa entre AIB e ANL, ambas mobilizando apoio popular significativo, criou clima de instabilidade política que Vargas utilizaria posteriormente como justificativa para medidas de exceção',
+        section: 'Radicalização política',
+        quote: 'Ambos os movimentos mobilizaram apoio popular significativo e protagonizaram confrontos de rua frequentes, criando clima de instabilidade política que Vargas utilizaria posteriormente como justificativa para medidas de exceção',
+      },
+      {
+        label: 'Intentona de 1935',
+        claim: 'o governo Vargas utilizou a Intentona Comunista de 1935 para justificar a decretação de um estado de sítio que se estenderia por praticamente todo o restante de seu mandato constitucional',
+        section: 'Intentona e repressão',
+        quote: 'O governo Vargas utilizou o episódio para justificar decretação de estado de sítio (suspensão de garantias constitucionais) que se estenderia por praticamente todo o restante de seu mandato constitucional',
+      },
+      {
+        label: 'Plano Cohen fabricado',
+        claim: 'a justificativa oficial para o golpe apoiou-se na divulgação do "Plano Cohen", posteriormente revelado como falsificação de militares integralistas, numa manobra deliberada para criar pretexto de emergência nacional',
+        section: 'Golpe do Estado Novo',
+        quote: 'A justificativa oficial para o golpe apoiou-se na divulgação de um documento conhecido como "Plano Cohen", supostamente um plano comunista de insurreição armada em larga escala, que posteriormente se revelaria falsificado por militares integralistas ligados ao próprio governo, numa manobra deliberada para criar pretexto de emergência nacional que justificasse a suspensão da ordem constitucional vigente',
+      },
+      {
+        label: 'Golpe de 1937',
+        claim: 'o golpe de 10 de novembro de 1937 encerrou formalmente o período constitucional ao antecipar-se à eleição presidencial prevista para 1938, com Vargas outorgando nova Constituição e fechando o Congresso Nacional',
+        section: 'Golpe do Estado Novo',
+        quote: 'O golpe do Estado Novo, em 10 de novembro de 1937, encerrou formalmente o período constitucional ao antecipar-se à eleição presidencial prevista para 1938, com Vargas outorgando nova Constituição (elaborada com inspiração explícita em modelos autoritários europeus, especialmente o fascismo polonês) sem qualquer processo constituinte democrático, e fechando o Congresso Nacional',
+      },
+    ],
+  },
+  {
+    chapterId: 'summary-historia-o-fim-da-guerra-fria',
+    family: 'cadeia-de-derivacao',
+    question: 'Como as reformas de Gorbachev, destinadas a salvar o sistema soviético, desencadearam a cadeia que levou à dissolução da URSS?',
+    items: [
+      {
+        label: 'Reformas de Gorbachev',
+        claim: 'as reformas de Gorbachev, destinadas a salvar o sistema soviético, acabaram acelerando sua desagregação ao permitir que tensões represadas por décadas viessem à tona',
+        section: 'Crise soviética',
+        quote: 'reformas que, ao invés de salvar o sistema soviético como pretendido originalmente, acabaram acelerando sua desagregação ao permitir que tensões nacionalistas, econômicas e políticas represadas por décadas viessem à tona de forma mais aberta e organizada dentro das próprias repúblicas soviéticas',
+      },
+      {
+        label: 'Não intervenção soviética',
+        claim: 'a queda do Muro de Berlim resultou da combinação entre pressão popular na Alemanha Oriental e a decisão soviética, sob Gorbachev, de não intervir militarmente para sustentar os regimes comunistas',
+        section: '1989 e a dissolução',
+        quote: 'A queda do Muro de Berlim, em novembro de 1989, símbolo mais visível da própria divisão bipolar da Guerra Fria, resultou de combinação entre pressão popular crescente na Alemanha Oriental e decisão soviética, sob Gorbachev, de não intervir militarmente para sustentar os regimes comunistas da Europa Oriental',
+      },
+      {
+        label: 'Colapso em cascata',
+        claim: 'o colapso em sucessão rápida de praticamente todos os regimes comunistas da Europa Oriental em 1989 foi um efeito cascata facilitado justamente pela sinalização soviética de não intervenção militar',
+        section: '1989 e a dissolução',
+        quote: 'praticamente todos os regimes comunistas da Europa Oriental (Polônia, Hungria, Tchecoslováquia, Romênia, entre outros) colapsaram em sucessão rápida, um efeito cascata regional facilitado justamente pela sinalização soviética de não intervenção militar',
+      },
+      {
+        label: 'Dissolução da URSS',
+        claim: 'a própria União Soviética se dissolveria formalmente em dezembro de 1991, fragmentando-se em quinze repúblicas independentes',
+        section: '1989 e a dissolução',
+        quote: 'A própria União Soviética se dissolveria formalmente em dezembro de 1991, fragmentando-se em quinze repúblicas independentes',
+      },
+    ],
+  },
+  {
+    chapterId: 'summary-historia-o-periodo-entreguerras-1918-1939',
+    family: 'cadeia-de-derivacao',
+    question: 'Como a instabilidade do pós-guerra e a Crise de 1929 desencadearam a ascensão dos totalitarismos, e como o fracasso do apaziguamento levou à Segunda Guerra Mundial?',
+    items: [
+      {
+        label: 'Crise de 1929',
+        claim: 'a Crise de 1929 expôs fragilidades estruturais profundas da economia capitalista mundial, acumuladas ao longo da década anterior',
+        section: 'Crise de 1929',
+        quote: 'A Crise de 1929, desencadeada pela quebra da bolsa de valores de Nova York em outubro daquele ano, expôs fragilidades estruturais profundas da economia capitalista mundial que haviam se acumulado ao longo da década anterior',
+      },
+      {
+        label: 'Ascensão dos totalitarismos',
+        claim: 'a ascensão de regimes totalitários resultou, em parte significativa, das próprias condições de instabilidade econômica e política geradas pela Primeira Guerra Mundial e agravadas pela Crise de 1929',
+        section: 'Ascensão dos totalitarismos',
+        quote: 'A ascensão de regimes totalitários em diferentes países europeus durante o período entreguerras resultou, em parte significativa, das próprias condições de instabilidade econômica e política geradas pela Primeira Guerra Mundial e agravadas pela Crise de 1929 subsequente',
+      },
+      {
+        label: 'Fracasso do apaziguamento',
+        claim: 'a política de apaziguamento das potências ocidentais diante das agressões territoriais alemãs se revelou completamente fracassada com a eclosão da Segunda Guerra Mundial em 1939',
+        section: 'Ordem internacional fragilizada',
+        quote: 'A política de apaziguamento adotada por potências ocidentais como Reino Unido e França diante das crescentes agressões territoriais da Alemanha nazista ao longo da década de 1930 (incluindo a remilitarização da Renânia em 1936 e a anexação da Áustria e de parte da Tchecoslováquia em 1938) refletiu tanto exaustão e trauma coletivo pela experiência recente da Primeira Guerra Mundial quanto avaliação estratégica equivocada de que concessões territoriais limitadas satisfariam as ambições expansionistas de Hitler, uma estratégia diplomática que se revelaria completamente fracassada com a eclosão da Segunda Guerra Mundial em 1939',
+      },
+    ],
+  },
+  {
+    chapterId: 'summary-historia-brasil-imperio-formacao-do-estado-nacional-brasileiro',
+    family: 'cadeia-de-derivacao',
+    question: 'Como a repressão à Confederação do Equador em 1824 não resolveu o problema estrutural que ressurgiria e culminaria na abdicação de 1831?',
+    items: [
+      {
+        label: 'Constituição de 1824',
+        claim: 'a Constituição de 1824, outorgada por dom Pedro I, criou o Poder Moderador, concentrando na prática poder político desproporcional nas mãos do imperador',
+        section: 'A Constituição de 1824',
+        quote: 'criou o Poder Moderador, exercido pessoalmente pelo imperador, com atribuições que incluíam dissolver a Câmara dos Deputados, nomear e demitir ministros e senadores vitalícios, concedendo ao monarca capacidade de intervenção direta e decisiva sobre os demais poderes sempre que julgasse necessário',
+      },
+      {
+        label: 'Confederação do Equador',
+        claim: 'a Confederação do Equador rebelou-se contra o autoritarismo crescente de dom Pedro I, evidenciado pela dissolução forçada da Assembleia Constituinte e pela outorga unilateral da Constituição',
+        section: 'Confederação do Equador',
+        quote: 'rebelou-se contra o autoritarismo crescente de dom Pedro I, evidenciado justamente pela dissolução forçada da Assembleia Constituinte e pela outorga unilateral da Constituição sem processo verdadeiramente representativo e deliberativo',
+      },
+      {
+        label: 'Abdicação de 1831',
+        claim: 'a insatisfação das elites com o autoritarismo do Poder Moderador, somada à percepção de que dom Pedro I priorizava interesses portugueses, foi um dos fatores que, combinados, culminaram em pressão política crescente e na abdicação do imperador em 1831',
+        section: 'Crise do Primeiro Reinado',
+        quote: 'A insatisfação crescente de elites políticas brasileiras com o autoritarismo e a centralização de poder no Poder Moderador, somada à percepção de que dom Pedro I priorizava interesses portugueses (dada sua condição simultânea de possível herdeiro do trono português, questão sucessória que se tornaria efetivamente relevante após a morte de seu pai, dom João VI, em 1826) em detrimento dos interesses especificamente brasileiros, culminou em pressão política crescente que levaria à abdicação do imperador em favor de seu filho ainda criança, dom Pedro II, em abril de 1831, encerrando o período do Primeiro Reinado e dando início à fase regencial subsequente',
+      },
+    ],
+  },
+  {
+    chapterId: 'summary-historia-a-montagem-da-colonizacao',
+    family: 'cadeia-de-derivacao',
+    question: 'Como o fracasso das capitanias hereditárias e os obstáculos à escravidão indígena desencadearam, cada um, sua própria consequência estrutural?',
+    items: [
+      {
+        label: 'Fracasso das capitanias',
+        claim: 'o sistema de capitanias hereditárias fracassou na maior parte do território, levando a Coroa a instituir, em 1548, o Governo-Geral, centralizando a administração colonial',
+        section: 'Capitanias e governo-geral',
+        quote: 'O sistema fracassou na maior parte das capitanias por diversos fatores: falta de recursos financeiros da maioria dos donatários para investir na colonização efetiva, ataques indígenas a colonos mal preparados militarmente, e a extensão excessiva de território para administração individual de um só donatário sem apoio estrutural da Coroa. Apenas as capitanias de Pernambuco (beneficiada pela experiência prévia de seu donatário Duarte Coelho com a produção açucareira) e São Vicente prosperaram de forma consistente, levando a Coroa a instituir, em 1548, o Governo-Geral',
+      },
+      {
+        label: 'Escravidão indígena',
+        claim: 'a resistência indígena, a mortalidade por epidemias e a oposição jesuíta à escravização indígena foram fatores combinados que levaram ao tráfico transatlântico de africanos escravizados',
+        section: 'Escravidão indígena e africana',
+        quote: 'Esses fatores combinados levaram ao tráfico transatlântico de africanos escravizados, intensificado a partir de fins do século XVI, tornando-se a base majoritária da mão de obra da economia açucareira colonial ao longo dos séculos seguintes',
+      },
+    ],
+  },
+  {
+    chapterId: 'summary-historia-a-era-vargas',
+    family: 'cadeia-de-derivacao',
+    question: 'Como a Revolução de 1930 desencadeou, elo a elo, o caminho até a Constituição de 1934?',
+    items: [
+      {
+        label: 'Revolução de 1930',
+        claim: 'o Governo Provisório de Vargas resultou da Revolução de 1930, movimento armado que depôs Washington Luís e encerrou a política do café com leite',
+        section: 'Governo Provisório',
+        quote: 'O Governo Provisório de Getúlio Vargas (1930-1934) resultou da Revolução de 1930, movimento armado que depôs o presidente eleito Washington Luís e impediu a posse de Júlio Prestes, vencedor de eleição contestada por fraude, encerrando a chamada "política do café com leite"',
+      },
+      {
+        label: 'Governo sem mandato',
+        claim: 'Vargas assumiu o poder de forma provisória, sem mandato eletivo, governando por decretos enquanto negociava com as forças políticas regionais que o haviam apoiado',
+        section: 'Governo Provisório',
+        quote: 'Vargas assumiu o poder de forma provisória, sem mandato eletivo direto, governando por decretos e concentrando poder executivo enquanto negociava com as forças políticas regionais que o haviam apoiado na revolução',
+      },
+      {
+        label: 'Constituição de 1934',
+        claim: 'esse período de governo provisório se encerrou formalmente com a promulgação de uma nova Constituição em 1934, que Vargas assinou após pressão de diferentes setores, incluindo o movimento constitucionalista paulista de 1932',
+        section: 'Governo Provisório',
+        quote: 'esse período de governo provisório se encerrou formalmente com a promulgação de uma nova Constituição em 1934, que Vargas assinou após pressão de diferentes setores políticos, incluindo o movimento constitucionalista paulista de 1932, que pegou em armas exigindo eleições para uma Assembleia Constituinte',
+      },
+    ],
+  },
+  {
+    chapterId: 'summary-historia-a-era-vargas-o-estado-novo',
+    family: 'cadeia-de-derivacao',
+    question: 'Como a participação brasileira na guerra contra o fascismo tornou insustentável o próprio regime autoritário do Estado Novo, levando à queda de Vargas?',
+    items: [
+      {
+        label: 'Contradição da guerra',
+        claim: 'a guerra revelou contradição crescente entre o Estado Novo, regime de inspiração parcialmente fascista, e a participação brasileira na Segunda Guerra Mundial ao lado dos Aliados contra o Eixo',
+        section: 'Guerra e crise do regime',
+        quote: 'A guerra e a crise do regime revelaram contradição crescente entre o Estado Novo, um regime autoritário de inspiração parcialmente fascista, e a participação brasileira na Segunda Guerra Mundial ao lado dos Aliados contra as potências do Eixo (Alemanha, Itália e Japão)',
+      },
+      {
+        label: 'Contradição insustentável',
+        claim: 'essa contradição ideológica tornou-se politicamente insustentável à medida que o Brasil enviava soldados para combater o fascismo europeu enquanto mantinha regime autoritário semelhante internamente, gerando pressão por redemocratização',
+        section: 'Guerra e crise do regime',
+        quote: 'Essa contradição ideológica tornou-se politicamente insustentável à medida que o Brasil enviava soldados para combater o fascismo europeu enquanto mantinha regime autoritário semelhante internamente, gerando pressão crescente de setores políticos e da opinião pública por redemocratização',
+      },
+      {
+        label: 'Queda de Vargas',
+        claim: 'as próprias Forças Armadas, que haviam sustentado o golpe de 1937, retiraram seu apoio ao ditador em outubro de 1945, depondo-o e encerrando o Estado Novo',
+        section: 'Guerra e crise do regime',
+        quote: 'as próprias Forças Armadas, que haviam sustentado o golpe de 1937, retiraram seu apoio ao ditador em outubro de 1945, depondo-o num movimento militar relativamente pacífico que encerrou o Estado Novo e abriu caminho para o período democrático subsequente',
+      },
+    ],
+  },
+  {
+    chapterId: 'summary-historia-antiguidade-classica-o-mundo-romano',
+    family: 'cadeia-de-derivacao',
+    question: 'Como a distribuição de poder da República Romana entrou em crise e culminou na concentração de poder pessoal de Augusto?',
+    items: [
+      {
+        label: 'Estrutura republicana',
+        claim: 'a República Romana organizava-se por meio de instituições que distribuíam poder entre Senado, assembleias populares e magistrados eleitos em pares, evitando concentração excessiva de autoridade num único indivíduo',
+        section: 'Da República ao Império',
+        quote: 'A República Romana (509-27 a.C.) organizava-se por meio de instituições que distribuíam poder entre diferentes órgãos — o Senado (composto por membros da aristocracia patrícia, com forte influência sobre política externa e finanças), as assembleias populares (com participação mais ampla, incluindo plebeus, especialmente após conquistas políticas como a criação do cargo de tribuno da plebe) e magistrados eleitos anualmente, como os cônsules, que exerciam poder executivo em pares para evitar concentração excessiva de autoridade num único indivíduo',
+      },
+      {
+        label: 'Guerras civis',
+        claim: 'essa estrutura republicana entrou em crise progressiva, marcada por guerras civis recorrentes entre generais poderosos disputando o poder, como César e Pompeu',
+        section: 'Da República ao Império',
+        quote: 'Essa estrutura republicana entrou em crise progressiva ao longo do século I a.C., marcada por guerras civis recorrentes entre generais poderosos disputando controle político (como Júlio César e Pompeu)',
+      },
+      {
+        label: 'Augusto',
+        claim: 'essa crise culminou na transição para o Império, quando Otávio Augusto consolidou poder pessoal absoluto, mantendo formalmente as instituições republicanas como fachada',
+        section: 'Da República ao Império',
+        quote: 'culminando na transição para o Império, quando Otávio Augusto, sobrinho-neto e herdeiro político de César, consolidou poder pessoal absoluto em 27 a.C., mantendo formalmente instituições republicanas como fachada institucional enquanto concentrava, na prática, autoridade militar, política e religiosa efetiva em sua própria pessoa',
+      },
+    ],
+  },
+  {
+    chapterId: 'summary-historia-baixa-idade-media',
+    family: 'cadeia-de-derivacao',
+    question: 'Como o excedente agrícola, intensificado pelas Cruzadas, deu lugar a uma crise que rompeu o feudalismo e preparou a centralização monárquica?',
+    items: [
+      {
+        label: 'Excedente agrícola',
+        claim: 'o crescimento populacional gerou excedente alimentar capaz de sustentar população urbana, impulsionando o ressurgimento de cidades como centros de comércio e artesanato',
+        section: 'Renascimento comercial e urbano',
+        quote: 'O crescimento populacional (favorecido por melhorias técnicas agrícolas, como o arado pesado de aiveca, mais eficiente para solos argilosos europeus, e a rotação trienal de culturas, que aumentava a produtividade agrícola ao reduzir períodos de terra em pousio) gerou excedente alimentar capaz de sustentar população urbana não diretamente ligada à produção agrícola, impulsionando o ressurgimento de cidades como centros de comércio e artesanato especializado',
+      },
+      {
+        label: 'Cruzadas',
+        claim: 'as Cruzadas intensificaram significativamente o contato comercial entre a Europa e o mundo mediterrâneo oriental, estimulando ainda mais o comércio europeu em expansão',
+        section: 'Cruzadas e circulação',
+        quote: 'as Cruzadas intensificaram significativamente o contato comercial e cultural entre a Europa e o mundo mediterrâneo oriental, incluindo o mundo islâmico e bizantino, facilitando a circulação de produtos orientais (especiarias, tecidos finos, produtos de luxo diversos) que estimulariam ainda mais o comércio europeu em expansão',
+      },
+      {
+        label: 'Peste Negra',
+        claim: 'a escassez de mão de obra causada pela Peste Negra elevou o poder de barganha dos camponeses e trabalhadores remanescentes, abalando as estruturas senhoriais de exploração do trabalho servil',
+        section: 'Crise do século XIV',
+        quote: 'a escassez súbita de mão de obra sobrevivente elevou o poder de barganha dos camponeses e trabalhadores remanescentes, que passaram a exigir (e por vezes obter) melhores condições de trabalho e remuneração, abalando estruturas senhoriais tradicionais de exploração do trabalho servil característico do feudalismo anterior',
+      },
+      {
+        label: 'Centralização monárquica',
+        claim: 'a Guerra dos Cem Anos agravou ainda mais a instabilidade do período, contribuindo para o enfraquecimento das estruturas feudais e preparando o terreno para a centralização monárquica posterior',
+        section: 'Crise do século XIV',
+        quote: 'agravou ainda mais a instabilidade econômica e social do período, contribuindo para o enfraquecimento progressivo das estruturas feudais tradicionais e preparando, ainda que indiretamente e ao longo de décadas, o terreno para a centralização monárquica posterior que caracterizaria o início da Idade Moderna europeia',
       },
     ],
   },
