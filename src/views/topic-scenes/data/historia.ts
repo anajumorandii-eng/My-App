@@ -21,6 +21,14 @@ export const historiaSemCena: { chapterId: string; motivo: string }[] = [
     motivo: 'Bandeiras, mineração e pecuária/drogas do sertão são atividades econômicas paralelas com lógicas e cronologias próprias; nenhuma seção isolada declara uma dependência real entre elas, uma rivalidade sobre pergunta compartilhada, uma assimetria de base/camada ou uma frase-guarda-chuva de tipos nomeados.',
   },
   {
+    chapterId: 'summary-historia-a-republica-da-espada',
+    motivo: 'O texto é periodização, não causação: a eleição de Prudente de Morais em 1894 "marca" o fim do governo militar direto, mas nunca afirma que a contenção da Revolta da Armada e da Revolução Federalista tenha produzido a transição — o "pratique" entrega essa pergunta causal em aberto ao aluno, e a pegadinha frisa que os dois movimentos tiveram "dinâmica e atores regionais distintos" (paralelos, não encadeados). Há um elo real de dois nós (a dissolução do Congresso por Deodoro em 1891 gerou a crise que contribuiu para sua renúncia), mas é fino demais para sustentar uma cena sozinho e não é a cadeia mais ampla que se poderia supor.',
+  },
+  {
+    chapterId: 'summary-historia-disputas-europeias-no-brasil-colonial',
+    motivo: 'Não há frase-guarda-chuva nomeando França Antártica e invasões holandesas como tipos de uma mesma categoria — é prosa cronológica pura. Pior: a própria pegadinha nega a coexistência exigida por tipologia ao frisar que ocorreram em séculos diferentes ("a França Antártica ocorreu no século XVI [...], enquanto as invasões holandesas ocorreram no século XVII, décadas depois"), sequenciais, não tipos paralelos coexistentes.',
+  },
+  {
     chapterId: 'summary-historia-a-mineracao-no-brasil-colonial',
     motivo: 'A fiscalidade (quinto, derrama) tensiona a vida social mineradora e antecede a Revolta de Vila Rica e a Inconfidência Mineira, mas o texto não chega a afirmar que a fiscalidade é a base condicionando-as como camada assimétrica — apenas contextualiza cada revolta separadamente, em momentos econômicos distintos. Fica como lacuna nesta rodada; se uma leitura futura decidir que a assimetria é suficiente, cabe reclassificar para camadas-de-determinacao.',
   },

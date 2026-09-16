@@ -35,11 +35,13 @@ inteiro" como motivo de lacuna — corrigido nesta revisão.
 
 Com o padrão correto (uma seção ou par de seções que sustente genuinamente
 rivalidade, derivação, assimetria de camada ou tipos nomeados já basta),
-**38 capítulos** têm família definida e **11** ficam em lacuna declarada (1
-já conhecida de Fase 1 + 10 identificados nesta leitura). Isso ainda é mais
+**36 capítulos** têm família definida e **13** ficam em lacuna declarada (1
+já conhecida de Fase 1 + 12 identificados nesta leitura). Isso ainda é mais
 lacunas que em Filosofia (1/35), mas bem menor que a contagem incorreta da
 primeira versão (26/49) — a diferença mostra o tamanho do erro de aplicar o
-padrão errado.
+padrão errado. (Uma segunda rodada de revisão devolveu dois capítulos à
+lacuna — ver "Correções da segunda revisão" ao final — por não sustentarem,
+sob leitura mais rigorosa, a família que a primeira correção lhes atribuiu.)
 
 ## Atribuições definitivas
 
@@ -88,7 +90,7 @@ padrão errado.
   operário e modernismo são convocados no "pratique" como camadas/sintomas
   dessa mesma base entrando em crise, não aspectos soltos.
 
-### `cadeia-de-derivacao` (15 capítulos)
+### `cadeia-de-derivacao` (14 capítulos)
 
 - **`historia-revolucao-francesa`** — crise do Antigo Regime → Estados Gerais
   → autoproclamação da Assembleia Nacional → Bastilha → Declaração →
@@ -115,11 +117,6 @@ padrão errado.
   *"Essa contradição ideológica tornou-se politicamente insustentável [...] as
   próprias Forças Armadas [...] retiraram seu apoio ao ditador em outubro de
   1945."*
-- **`historia-a-republica-da-espada`** — governos militares autoritários
-  (dissolução do Congresso por Deodoro) → crises armadas (Revolta da Armada,
-  Revolução Federalista) contidas → transição para civis com Prudente de
-  Morais (1894). Frase-fonte: *"A transição para governos civis [...] encerrou
-  formalmente o período de governo militar direto."*
 - **`historia-antiguidade-classica-o-mundo-romano`** — estrutura republicana
   distribuindo poder entre Senado/assembleias/magistrados → crise progressiva
   por guerras civis entre generais (César, Pompeu) → Augusto consolida poder
@@ -218,7 +215,7 @@ padrão errado.
   intacto" — apenas que a posição católica final não é a pré-Reforma nem a
   simples rejeição da crítica protestante.
 
-### `tipologia` (Fase 2 — 10 capítulos)
+### `tipologia` (Fase 2 — 9 capítulos)
 
 Tipos paralelos que não competem pela mesma resposta — cada um é uma forma
 coexistente do mesmo fenômeno mais amplo, sempre com uma frase-guarda-chuva
@@ -254,17 +251,11 @@ explícita nomeando a categoria antes de enumerar as instâncias.
   política, não posições rivais sobre a mesma pergunta.
 - **`historia-alta-idade-media-e-feudalismo`** — frase-guarda-chuva: a
   suserania/vassalagem é explicitamente descrita como um tipo de vínculo
-  "distinta da relação entre senhor e servo camponês descrita anteriormente"
-  — dois tipos de vínculo de dependência pessoal que coexistem no mesmo
-  sistema feudal, servindo a propósitos diferentes (um entre nobres, outro
-  entre senhor e camponês).
-- **`historia-disputas-europeias-no-brasil-colonial`** — dois tipos de
-  contestação europeia ao domínio português no Brasil colonial: a França
-  Antártica (refúgio religioso + comércio do pau-brasil, aliança com
-  tupinambás) e as invasões holandesas (interesse comercial açucareiro direto,
-  administração de Nassau). São tipos distintos de empreendimento colonial
-  rival, em séculos diferentes, não uma cadeia entre si nem uma rivalidade
-  sobre a mesma pergunta.
+  "distintas da relação entre senhor e servo camponês descrita anteriormente"
+  (concordando com "A suserania e a vassalagem", no plural — citação corrigida
+  nesta revisão) — dois tipos de vínculo de dependência pessoal que coexistem
+  no mesmo sistema feudal, servindo a propósitos diferentes (um entre nobres,
+  outro entre senhor e camponês).
 - **`historia-a-crise-do-antigo-sistema-colonial`** — frase-guarda-chuva:
   *"As revoltas coloniais que eclodiram no Brasil [...] refletiram, com
   intensidade e motivação variadas, esse descontentamento crescente com o
@@ -289,7 +280,7 @@ paralelos que não disputam a mesma resposta" já cobre exatamente essa forma,
 bastando reconhecer a frase-guarda-chuva que os introduz. Não há necessidade
 de outra família para o mesmo fenômeno.
 
-## Lacunas declaradas (11 capítulos)
+## Lacunas declaradas (13 capítulos)
 
 A lacuna já conhecida de Fase 1:
 
@@ -297,7 +288,7 @@ A lacuna já conhecida de Fase 1:
   experiência interativa própria (`sources`) no catálogo de
   `src/views/topic-experiments/catalog.ts`.
 
-As 10 lacunas identificadas nesta leitura, cada uma com o motivo específico
+As 12 lacunas identificadas nesta leitura, cada uma com o motivo específico
 completo em `src/views/topic-scenes/data/historia.ts` (nenhuma usa mais
 "não cobre o capítulo inteiro" como razão):
 
@@ -308,6 +299,13 @@ completo em `src/views/topic-scenes/data/historia.ts` (nenhuma usa mais
   ambiente que leva às revoltas, mas o texto não chega a afirmar a fiscalidade
   como base condicionando-as como camada; fica como lacuna, mas é a candidata
   mais próxima de reclassificação futura desta lista.
+- `historia-a-republica-da-espada` — o texto é periodização, não causação: a
+  eleição de Prudente de Morais "marca" o fim do governo militar, mas nunca
+  afirma que conter a Revolta da Armada e a Revolução Federalista produziu a
+  transição; o "pratique" entrega essa pergunta causal em aberto ao aluno e a
+  pegadinha frisa que os dois movimentos tiveram "dinâmica e atores regionais
+  distintos" (paralelos, não encadeados). Reclassificada de
+  `cadeia-de-derivacao` para lacuna na segunda revisão.
 - `historia-america-latina-no-seculo-xx` — populismo, ditaduras e
   redemocratização trazem exemplos de um fenômeno já definido, não tipos
   paralelos com frase-guarda-chuva explícita.
@@ -318,6 +316,13 @@ completo em `src/views/topic-scenes/data/historia.ts` (nenhuma usa mais
   cafeeira; Guerra do Paraguai é disputa geopolítica à parte).
 - `historia-dinamica-interna-da-colonizacao` — a resistência escrava enumera
   formas diversas mas sem frase-guarda-chuva de tipologia nomeada.
+- `historia-disputas-europeias-no-brasil-colonial` — não há frase-guarda-chuva
+  nomeando França Antártica e invasões holandesas como tipos de uma mesma
+  categoria (é prosa cronológica pura), e a própria pegadinha nega a
+  coexistência exigida por tipologia ao frisar que ocorreram em séculos
+  diferentes. Reclassificada de `tipologia` para lacuna na segunda revisão,
+  pelo mesmo raciocínio já usado (corretamente) em
+  `historia-dinamica-interna-da-colonizacao`.
 - `historia-guerra-fria` — Coreia e Vietnã são duas instâncias do mesmo tipo
   ("guerra por procuração"), não tipos paralelos distintos.
 - `historia-republica-liberal-1945-1964-democracia-em-tempos-de-guerra-fria` —
@@ -333,20 +338,20 @@ completo em `src/views/topic-scenes/data/historia.ts` (nenhuma usa mais
 
 - `contraste-de-posicoes`: 3
 - `camadas-de-determinacao`: 4
-- `cadeia-de-derivacao`: 15
+- `cadeia-de-derivacao`: 14
 - `criterios-conjuntivos` (Fase 2): 4
 - `escala-de-graus`: 1
 - `movimento-dialetico`: 1
-- `tipologia` (Fase 2): 10
+- `tipologia` (Fase 2): 9
 - `grade-de-eixos` (Fase 2): 0
-- Lacunas: 11 (1 já conhecida + 10 novas) — 22,4% dos 49 capítulos
+- Lacunas: 13 (1 já conhecida + 12 novas) — 26,5% dos 49 capítulos
 - **Total: 49**
 
 ## Estado do teste (esperado vermelho)
 
 `npx vitest run src/views/topic-scenes/familias-historia.test.ts` falha no
 teste "cobre os 49 capítulos, cada um exatamente uma vez", listando como
-ausentes os 38 capítulos que já têm família definida acima mas ainda não têm
+ausentes os 36 capítulos que já têm família definida acima mas ainda não têm
 `SceneEntry` escrita em `historia.ts` (trabalho das próximas tasks). As outras
 duas asserções (capítulos citados existem no catálogo; toda lacuna tem
 motivo) passam. Isso é o estado correto ao fim desta task.
@@ -388,6 +393,33 @@ Todas foram corrigidas nesta rodada:
    `historia-disputas-europeias-no-brasil-colonial` reclassificada para
    `tipologia`, motivo antigo removido; palavra em inglês corrigida.
 
+## Correções da segunda revisão
+
+Uma segunda rodada de revisão aprovou integralmente a primeira correção (cópia
+byte-a-byte, os 3 Critical, os 5 Important, os 3 Minor) e encontrou mais dois
+problemas na extensão que eu mesmo fiz ao aplicar o padrão corrigido de forma
+ampla, mais um erro de citação:
+
+1. **`historia-a-republica-da-espada`**: devolvida para lacuna. Minha cadeia
+   original (governos militares → crises contidas → transição) tinha um elo
+   do meio sem fonte — o texto descreve periodização ("a eleição [...] marca
+   [...] o fim"), nunca causação, e o próprio "pratique" deixa essa pergunta
+   causal em aberto para o aluno, enquanto a pegadinha frisa que os dois
+   movimentos militares tiveram "dinâmica e atores regionais distintos". Existe
+   um elo real, mas menor (dissolução do Congresso por Deodoro em 1891 →
+   crise institucional → sua renúncia), curto demais para sustentar uma cena
+   sozinho.
+2. **`historia-disputas-europeias-no-brasil-colonial`**: devolvida para
+   lacuna. Era a única das dez entradas de `tipologia` sem frase-guarda-chuva
+   citada — porque a fonte não tem uma. Pior: a pegadinha nega ativamente a
+   coexistência exigida pela família, ao frisar que França Antártica e
+   invasões holandesas ocorreram em séculos diferentes. Mesmo raciocínio que
+   eu já havia aplicado corretamente a `historia-dinamica-interna-da-colonizacao`;
+   faltou aplicá-lo aqui também na primeira correção.
+3. **`historia-alta-idade-media-e-feudalismo`**: citação corrigida de
+   "distinta" para "distintas" (concordando com o sujeito plural "A suserania
+   e a vassalagem" no texto-fonte).
+
 ## Concerns / notas para as próximas tasks
 
 - `tipologia` e `criterios-conjuntivos` foram copiadas verbatim, mas o
@@ -399,11 +431,11 @@ Todas foram corrigidas nesta rodada:
 - O elo fraco identificado em `historia-o-periodo-entreguerras-1918-1939`
   (ver acima) precisa ser respeitado por quem escrever a `SceneEntry`: usar só
   os dois elos que seguram, não o terceiro.
-- `cadeia-de-derivacao` (15) e `tipologia` (10) ficaram com contagens altas
-  depois desta correção. Isso é resultado de aplicar o padrão correto
-  (ancorar em uma seção, não no capítulo inteiro) de forma consistente a
-  todos os capítulos, não de forçar novamente — mas vale um segundo par de
-  olhos nas entradas mais marginais (`historia-antiguidade-classica-o-mundo-romano`,
-  `historia-a-era-vargas-o-estado-novo`, `historia-a-republica-da-espada`)
-  quando as Tasks 3-4 escreverem as `SceneEntry` de fato, já que a leitura
-  desta task não tem o mesmo par de olhos independente que a revisão trouxe.
+- `cadeia-de-derivacao` (14) e `tipologia` (9) ainda ficaram com contagens
+  relativamente altas depois das duas correções. Isso é resultado de ancorar
+  em uma seção (não no capítulo inteiro) de forma consistente, mas duas
+  entradas já se mostraram fracas demais numa segunda leitura — vale um
+  terceiro par de olhos nas entradas mais próximas do limite
+  (`historia-antiguidade-classica-o-mundo-romano`,
+  `historia-a-era-vargas-o-estado-novo`) quando as Tasks 3-4 escreverem as
+  `SceneEntry` de fato.
