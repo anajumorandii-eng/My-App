@@ -298,9 +298,9 @@ export const geografia: SceneEntry[] = [
       },
       {
         label: 'Ameaça existencial',
-        claim: 'a gravidade do conflito é proporcional à dependência do país a jusante, e o Egito depende do Nilo para mais de 90% de sua água doce — o que torna qualquer redução de vazão uma ameaça existencial',
+        claim: 'a gravidade do conflito tende a ser proporcional à dependência do país a jusante: o Egito depende do Nilo para mais de 90% de sua água doce, o que torna qualquer redução de vazão uma ameaça existencial',
         section: 'Como surge um conflito',
-        quote: 'o Egito depende do Nilo para mais de 90% de sua água doce, o que torna qualquer redução de vazão uma ameaça existencial à sua segurança hídrica e alimentar',
+        quote: 'A gravidade do conflito tende a ser proporcional à dependência do país a jusante: o Egito depende do Nilo para mais de 90% de sua água doce, o que torna qualquer redução de vazão uma ameaça existencial à sua segurança hídrica e alimentar',
       },
       {
         label: 'Risco de escalada',

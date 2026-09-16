@@ -276,14 +276,20 @@ entrada).
   *"a periferia precisava exportar quantidades cada vez maiores da mesma matéria-prima
   para importar a mesma quantidade de produtos industrializados"* → resposta latino-
   americana (industrialização por substituição de importações) → *"O modelo elevou o
-  PIB industrial mas criou parques fabris pouco competitivos internacionalmente"* → *"a
-  crise da dívida dos anos 1980 forçou a abertura comercial."* Cada elo decorre do
-  anterior com verbo instrumental próprio ("precisava", "criou", "forçou"); removendo
-  um elo (por exemplo, a crise da dívida), a conclusão sobre a abertura comercial não se
-  sustenta. (Corrigido: a primeira versão testou só `escala-de-graus` — Gini não é
+  PIB industrial mas criou parques fabris pouco competitivos internacionalmente"*.
+  (Corrigido: a primeira versão testou só `escala-de-graus` — Gini não é
   estágio nomeado, rejeição correta — e `contraste-de-posicoes` — centro/periferia
   coexistem, rejeição correta — mas nunca varreu `cadeia-de-derivacao`, que a seção
   "Centro e periferia" sustenta claramente.)
+
+  **A cena para deliberadamente em 3 elos, não 4.** A fonte continua: *"…mas criou
+  parques fabris pouco competitivos internacionalmente, **e** a crise da dívida dos
+  anos 1980 forçou a abertura comercial…"* — a crise da dívida chega coordenada por
+  "e", não por um verbo causal que a derive da baixa competitividade; "forçou" liga a
+  crise da dívida à abertura comercial, não a competitividade à crise da dívida. Incluir
+  esse quarto elo afirmaria exatamente a causação que este projeto já reverteu três
+  vezes em fases anteriores (cronologia lida como derivação). Não "restaurar" esse elo
+  numa revisão futura sem reler a seção completa primeiro.
 
 ### `movimento-dialetico` (0 capítulos)
 
