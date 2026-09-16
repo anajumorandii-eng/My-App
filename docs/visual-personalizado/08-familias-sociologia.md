@@ -32,17 +32,17 @@ para citar seção e trecho literais.
 
 | Família | Estrutura | Capítulos |
 |---|---|---|
-| `contraste-de-posicoes` | Respostas rivais à mesma pergunta — adotar uma exclui a outra | O Contexto Histórico do Surgimento da Sociologia; Sociologia e Senso Comum; A Luta de Classes na Análise Sociológica; Cultura e Etnocentrismo; Multiculturalismo e Relativismo Cultural; Desigualdade Racial no Brasil; Desigualdade de Gênero; Divisão Social do Trabalho; Transformações no Mundo do Trabalho (9) |
+| `contraste-de-posicoes` | Respostas rivais à mesma pergunta — adotar uma exclui a outra | O Contexto Histórico do Surgimento da Sociologia; Sociologia e Senso Comum; A Luta de Classes na Análise Sociológica; Cultura e Etnocentrismo; Multiculturalismo e Relativismo Cultural; Desigualdade Racial no Brasil; Divisão Social do Trabalho; Transformações no Mundo do Trabalho (8) |
 | `tipologia` | Tipos ideais paralelos que coexistem e se combinam num mesmo caso concreto | Tipos de Ação Social; Dominação e Poder em Weber; Democracia e Participação Política; Movimentos Sociais Clássicos e Contemporâneos; Globalização Econômica e Cultural; O Estado-Nação na Era Global (6) |
 | `criterios-conjuntivos` **(nova)** | Condições que só definem o fenômeno quando valem todas ao mesmo tempo | O que é o Fato Social; A Sociedade da Informação; Identidade e Diferença (3) |
-| `cadeia-de-derivacao` | Passos encadeados; remover um elo quebra a conclusão | Ética Protestante e o Espírito do Capitalismo; Educação e Socialização em Durkheim; Precarização e Uberização do Trabalho (3) |
+| `cadeia-de-derivacao` | Passos encadeados; remover um elo quebra a conclusão | Ética Protestante e o Espírito do Capitalismo; Educação e Socialização em Durkheim; Precarização e Uberização do Trabalho; Desigualdade de Gênero (4) |
 | `grade-de-eixos` **(nova)** | Tipos gerados pelo cruzamento de dois eixos independentes; os próprios eixos são o conteúdo ensinado | Anomia e Coesão Social; Classes Sociais e Mobilidade Social (2) |
 | `camadas-de-determinacao` | Uma camada condiciona a outra | Modo de Produção e Estrutura Social; Ideologia e Alienação (2) |
 | `escala-de-graus` | Degraus ordenados entre dois extremos | Cidadania e Direitos (1) |
 | `movimento-dialetico` | — | nenhum capítulo de Sociologia apresenta o ciclo de três momentos (0) |
 | *sem cena* | — | Solidariedade Mecânica e Solidariedade Orgânica (1) |
 
-Total: 9 + 6 + 3 + 3 + 2 + 2 + 1 + 0 + 1 = 27 capítulos.
+Total: 8 + 6 + 3 + 4 + 2 + 2 + 1 + 0 + 1 = 27 capítulos.
 
 ## O erro corrigido: confusão não é rivalidade
 
@@ -58,7 +58,7 @@ citado abaixo, na família correta.
 
 ## Atribuição capítulo a capítulo (com justificativa para todo desvio da hipótese)
 
-### `contraste-de-posicoes` (9)
+### `contraste-de-posicoes` (8)
 
 - **O Contexto Histórico do Surgimento da Sociologia** — os três clássicos
   respondem de forma divergente à pergunta "qual é o objeto próprio da
@@ -95,10 +95,8 @@ citado abaixo, na família correta.
   Clóvis Moura e Lélia Gonzalez — o capítulo afirma que o mito "encobre"
   desigualdades reais, ou seja, uma tese é falsa e a outra correta; não é
   uma coexistência de verdades parciais.
-- **Desigualdade de Gênero** — contraste entre papéis "considerados
-  naturais" e a tese central do capítulo de que são "socialmente
-  produzidos" — o capítulo não diz que ambas as leituras coexistem, diz que
-  a primeira é falsa. *(Thin, deferido — Minor.)*
+- **Desigualdade de Gênero** — *movido para `cadeia-de-derivacao` na
+  auditoria final; ver a seção "Verificação" ao fim deste documento.*
 - **Divisão Social do Trabalho** — ver seção de resolução de sobreposição
   abaixo.
 - **Transformações no Mundo do Trabalho** — "o debate opõe quem prevê
@@ -395,3 +393,159 @@ Enquanto o tipo `SceneFamily` não for atualizado (fora do escopo desta
 tarefa), estas três famílias existem apenas neste documento e no motivo
 registrado nos comentários de código; sua entrada em `SceneFamily` e nas
 entradas de `sociologia[]` é trabalho das Tasks 2-4.
+
+## Verificação final (auditoria cruzada das 26 entradas)
+
+Segunda passagem, independente das revisões por tarefa, sobre as 26
+entradas juntas — o tipo de padrão que uma revisão de tarefa isolada não
+enxerga. Na Fase 1 (Filosofia) uma auditoria equivalente pegou 3 defeitos
+que haviam passado pelas revisões individuais.
+
+### Parte A — citação e estrutura
+
+- **Citações: 72/72 verificadas, 0 fabricadas.** Cada `section` conferida
+  como título exato de seção do capítulo em `deepSummaryContent.json`, e
+  cada `quote` como substring literal do conteúdo daquela seção
+  (normalizando maiúsculas e espaços; acentos nunca). Zero falhas.
+- **Notas: 4/4 literais.** As quatro `nota` existentes também são
+  substring literal do capítulo (três de "Pegadinhas frequentes", uma de
+  "Os quatro tipos"). A palavra fabricada corrigida na Task 3 não
+  reapareceu.
+- **Grade de eixos: 8/8 células corretas.** As quatro células de Anomia
+  (integração/regulação × deficiência/excesso → egoísta, altruísta,
+  anômico, fatalista) e as quatro de Classes Sociais (vertical/horizontal
+  × intra/intergeracional) conferidas contra a fonte e depois exercitadas
+  no navegador, uma a uma.
+- **Texto fixo nos oito componentes:** nenhuma string chumbada afirma algo
+  específico de capítulo. As únicas fixas são os *kickers* por família
+  ("CRIVO · cruzamento de eixos" etc.), que descrevem a família, não o
+  conteúdo. Os nomes e polos dos eixos vêm de `entry.eixos`; a legenda da
+  escala vem de `entry.eixo` com um fallback genérico. O defeito de
+  legenda chumbada da Fase 1 não tem análogo aqui.
+
+#### Defeito encontrado e corrigido: Desigualdade de Gênero
+
+Único defeito real da passagem, e das três espécies ao mesmo tempo
+(contraste forçado, `claim` contradizendo o próprio rótulo, dois itens
+citando a mesma frase):
+
+A entrada estava em `contraste-de-posicoes` com os lados «Papéis
+"naturais"» e «Construção social», **ambos citando a mesma frase** — e a
+`claim` do primeiro lado dizia *"papéis considerados naturais na verdade
+variam entre sociedades e épocas"*, isto é, afirmava exatamente o
+contrário da posição que seu rótulo anunciava. O capítulo nunca enuncia a
+posição naturalista: ela aparece só como aquilo que a distinção
+sexo/gênero refuta. Não havia rivalidade a exibir, e o cartão ensinava um
+debate que a fonte não tem. (O documento já marcava a atribuição como
+*"Thin, deferido — Minor"*; a auditoria final a resolve.)
+
+Distingue-se de **Desigualdade Racial no Brasil**, que permanece em
+`contraste-de-posicoes`: lá a fonte *enuncia* o mito da democracia racial
+como posição difundida e nomeia quem a contesta — existem duas posições
+no texto.
+
+**Correção:** reclassificada para `cadeia-de-derivacao`, que é a estrutura
+que o capítulo de fato tem, com três elos e três citações literais novas:
+distinguir sexo de gênero → os papéis variam entre sociedades e épocas →
+logo são construções sociais e podem ser transformados. A tabela de
+atribuição acima foi atualizada (contraste 9 → 8, cadeia 3 → 4).
+
+#### As duas chamadas contestadas — mantidas
+
+- **A Sociedade da Informação** (`criterios-conjuntivos` vs
+  `escala-de-graus`): mantida em `criterios-conjuntivos`. A palavra
+  "camadas" da fonte sugere ordenação, mas a lição do capítulo é
+  conjuntiva, e ele a enuncia como pegadinha: *"Supor que acesso à
+  internet resolve a exclusão digital ignora as camadas de qualidade e de
+  uso crítico."* Tirar qualquer uma das três e a inclusão digital falha —
+  que é o teste da família. Sem evidência nova para mudar.
+- **O Contexto Histórico** (`contraste-de-posicoes` vs `tipologia`):
+  mantida em `contraste-de-posicoes`. Decisivo é a pegadinha do próprio
+  capítulo — *"supor que os clássicos concordavam entre si, quando
+  divergem quanto ao objeto e ao método"*. Pela distinção operativa desta
+  fase, `tipologia` exige tipos que *se combinam num mesmo caso*, e as
+  três matrizes não se combinam: escolhe-se uma. Sem evidência nova para
+  mudar.
+
+#### Verificado e mantido (sem alteração)
+
+- `contraste-de-posicoes` (8): nenhuma outra entrada é "confusão a evitar"
+  com os dois lados permanecendo verdadeiros. **Sociologia e Senso Comum**
+  e **Cultura e Etnocentrismo** — os dois minors parkeados — passam: no
+  primeiro o capítulo nega que o senso comum seja *explicação suficiente*,
+  no segundo a fonte chama o estranhamento de *"antídoto"* ao
+  etnocentrismo. Em ambos, adotar um lado rejeita o outro.
+- `tipologia` (6): as duas entradas sem `nota` (Democracia e Participação
+  Política; Globalização Econômica e Cultural) continuam omissões
+  honestas — os tipos coexistem de fato, e em Globalização a própria fonte
+  diz *"As respostas variam"*, enumerando as três como simultâneas.
+- `escala-de-graus` (1): o campo `eixo` de Cidadania e Direitos —
+  *"da ordem histórica de conquista dos direitos, não de um valor
+  crescente"* — nega explicitamente o juízo de valor, como a família exige.
+- `camadas-de-determinacao` (2): Ideologia e Alienação continua o elo mais
+  fraco das 26 (minor já registrado na Task 4), mas a assimetria é real —
+  o trabalho social produz o valor, a aparência o oculta; a relação não se
+  inverte. Não é defeito; fica registrado.
+
+### Parte B — verificação no navegador
+
+Servidor de desenvolvimento local, Chromium via Playwright, onboarding
+contornado por `localStorage.setItem('juju_onboarding','true')` em init
+script. **8 capítulos, cobrindo as 7 famílias em uso**, cada um nas duas
+larguras (1440×1000 e 390×844) — 16 execuções:
+
+| Família | Capítulo |
+|---|---|
+| `grade-de-eixos` | Anomia e Coesão Social · Classes Sociais e Mobilidade Social |
+| `tipologia` | Tipos de Ação Social |
+| `criterios-conjuntivos` | O que é o Fato Social |
+| `contraste-de-posicoes` | Sociologia e Senso Comum |
+| `cadeia-de-derivacao` | Desigualdade de Gênero (a entrada corrigida) |
+| `camadas-de-determinacao` | Modo de Produção e Estrutura Social |
+| `escala-de-graus` | Cidadania e Direitos |
+
+Resultados, todos limpos:
+
+- **Monta** no fluxo Explorar nos 16 casos.
+- **Persiste entre seções:** marcou-se o nó DOM da cena com um atributo
+  `data-*` e alterou-se o estado interativo antes de clicar "Continuar".
+  Marca e estado sobreviveram nos 16 casos — é o mesmo nó, não uma
+  remontagem. Confere com o código: `TopicScene` fica fora do
+  `AnimatePresence` e é chaveado por capítulo, não por seção.
+- **Some em "Testar":** avançando até o fim do percurso e entrando na
+  prática, `.tc-scene` deixa de existir nos 16 casos.
+- **Teclado:** alcançável por Tab nas 8 cenas, todas com anel de foco
+  visível (`outline: solid 3px`) e ativáveis por Enter (ou setas, no
+  `input[type=range]` da escala), com mudança de estado observável.
+- **ARIA:** `aria-pressed` correto (só `true`/`false`) e acompanhando os
+  dois eixos independentemente na grade. Os botões de `cadeia-de-derivacao`
+  ("Próximo elo" / "Elo anterior") não têm `aria-pressed` por serem
+  avanço de passo, não alternância — a posição é anunciada por
+  `role="status"` e pelo texto "elo N de N". Correto, não é lacuna.
+- **Sem overflow horizontal** em nenhuma das 16 execuções.
+- **Sem animações infinitas:** `document.getAnimations()` não retornou
+  nenhuma com `iterations: Infinity`.
+- **Console limpo:** nenhum erro de console nem `pageerror`.
+- **Grade de eixos, célula a célula:** as 8 combinações foram acionadas no
+  navegador e cada uma acendeu a célula certa, com a citação e o `claim`
+  correspondentes — a evidência mais forte, por ser a família mais nova e
+  a de interação menos usual.
+
+Capturas em `docs/visual-personalizado/screenshots/cenas-sociologia/`
+(16 arquivos, uma por capítulo por largura).
+
+### Limites honestos desta verificação
+
+- A Parte A é **exaustiva** para citação literal, título de seção e
+  mapeamento de células: as 72 citações e as 8 células foram conferidas
+  por script contra a fonte. O julgamento **estrutural** (a família é a
+  certa?) é leitura humana capítulo a capítulo, não mecanizável.
+- A Parte B é **amostra, não validação exaustiva das 26 entradas**: 8
+  capítulos de 26, escolhidos para cobrir as 7 famílias e priorizar as 3
+  novas. As outras 18 entradas não foram abertas no navegador.
+- **Movimento reduzido (`prefers-reduced-motion`) não foi exercitado**
+  nesta passagem. Os componentes usam `useSceneMotion`, coberto por testes
+  unitários, mas a emulação no navegador ficou de fora.
+- Apenas Chromium, apenas tema claro, e só as duas larguras citadas.
+- Sem auditoria formal de contraste de cor nem leitura com leitor de tela
+  real; a verificação de ARIA foi por atributo, não por narração.
