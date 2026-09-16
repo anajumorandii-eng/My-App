@@ -349,19 +349,23 @@ duas reclassificações de `cadeia-de-derivacao` para lacuna
 este documento — `historia.ts` é a fonte de verdade corrente para as
 famílias e lacunas efetivamente escritas.
 
+Contagem corrente, reconciliada com `historia.ts` na verificacao final
+(Task 6 - ver "Verificacao" ao final). `historia.ts` e a fonte de verdade:
+
 - `contraste-de-posicoes`: 3
 - `camadas-de-determinacao`: 4
-- `cadeia-de-derivacao`: 14 (12 efetivamente escritos em `historia.ts`; ver
-  nota acima)
-- `criterios-conjuntivos` (Fase 2): 4
+- `cadeia-de-derivacao`: 11
+- `criterios-conjuntivos` (Fase 2): 5
 - `escala-de-graus`: 1
 - `movimento-dialetico`: 1
 - `tipologia` (Fase 2): 8
 - `grade-de-eixos` (Fase 2): 0
-- Lacunas: 14 (1 já conhecida + 12 novas + 1 da Task 4b) — mais 2 lacunas
-  adicionais já presentes em `historia.ts` (regime militar I e II, ver nota
-  acima) totalizando 15 lacunas efetivas
-- **Total: 49** (34 entradas escritas + 15 lacunas em `historia.ts`)
+- Lacunas: 16
+- **Total: 49** (33 entradas escritas + 16 lacunas em `historia.ts`)
+
+As contagens anteriores deste bloco (14 `cadeia-de-derivacao`, 4
+`criterios-conjuntivos`, 34 entradas, 15 lacunas) estavam defasadas: nao
+tinham propagado as reclassificacoes das Tasks 4a/4b nem as da Task 6.
 
 ## Estado do teste (esperado vermelho)
 
@@ -455,3 +459,164 @@ ampla, mais um erro de citação:
   (`historia-antiguidade-classica-o-mundo-romano`,
   `historia-a-era-vargas-o-estado-novo`) quando as Tasks 3-4 escreverem as
   `SceneEntry` de fato.
+
+## Verificação (Task 6)
+
+Segunda passagem, independente e transversal, sobre as 33 entradas juntas —
+não uma reconferência das revisões por task, que já haviam encontrado defeitos
+reais em todas as rodadas anteriores.
+
+### Parte A — citações e estrutura
+
+**Citações.** As 114 citações das 33 entradas foram re-derivadas
+programaticamente contra `deepSummaryContent.json`: toda `section` é título
+exato de uma seção do capítulo citado e toda `quote` é substring literal
+daquela seção (normalizando maiúsculas e espaços, nunca acentos). **114/114
+passaram, 0 fabricadas, 0 misatribuídas.** Os 49 capítulos reconciliam: 33
+entradas + 16 lacunas, cada capítulo exatamente uma vez.
+
+**Defeitos encontrados e corrigidos** (6 em dados, 1 em componente):
+
+1. **`historia-a-montagem-da-colonizacao` — encaixe forçado em
+   `cadeia-de-derivacao`.** Tinha 2 itens que eram dois pares causais
+   independentes (capitanias → Governo-Geral; obstáculos → tráfico), o que a
+   própria `question` admitia ("cada um, sua própria consequência"). Remover o
+   primeiro item não quebrava a conclusão do segundo — não era uma cadeia.
+   **Reclassificado para `criterios-conjuntivos`**, família que o capítulo
+   sustenta de verdade: resistência indígena + mortalidade por epidemias +
+   oposição jesuíta, com a frase de necessidade conjunta literal na seção
+   "Pratique e confira" ("nenhum desses fatores isoladamente seria suficiente
+   ... exigindo uma explicação que combine causas biológicas, políticas e
+   religiosas atuando simultaneamente").
+
+2. **`historia-baixa-idade-media` — cronologia vestida de derivação.** A fonte
+   nega a derivação com as próprias palavras em duas costuras: a crise do
+   século XIV é "ruptura abrupta ... na trajetória de crescimento" anterior
+   (não deriva dela), e a Guerra dos Cem Anos entra com "Paralelamente" (não
+   deriva da Peste). **Reduzido ao arco que de fato deriva** — Peste Negra →
+   escassez de mão de obra → poder de barganha → abalo das estruturas
+   senhoriais —, todo ele numa única frase da fonte, com linguagem causal
+   explícita em cada costura. Mesmo precedente de escopo estreito já usado em
+   `A Primeira Globalização`.
+
+3. **`historia-a-era-vargas` — costura fraca em `cadeia-de-derivacao`.** O elo
+   "governo provisório sem mandato → Constituição de 1934" apoiava-se só em
+   "após pressão de diferentes setores", que é temporal. A dependência real
+   existe e está na fonte, em "Pegadinhas frequentes": o movimento de 1932
+   reivindicava "o fim do governo provisório sem mandato eletivo" — isto é,
+   exatamente o estado descrito pelo elo anterior. **Inserido esse elo
+   intermediário**, tornando a derivação visível em vez de pressuposta.
+
+4. **`historia-vida-urbana-e-renascimento-cultural` — determinação afirmada,
+   não lastreada.** Em `camadas-de-determinacao` a relação base→camada *é* o
+   conteúdo da cena, e as camadas 3 e 4 traziam o conector ("esse contexto
+   sustentou") apenas no `claim`: as citações de Leonardo e da perspectiva
+   linear não diziam nada sobre serem determinadas pelo mecenato.
+   **Reancoradas as quatro camadas em trechos que carregam a determinação**:
+   a base passa a citar a frase que a nomeia como "condição econômica
+   estrutural necessária (ainda que não suficiente isoladamente)" — que ainda
+   desclama a suficiência —, e a camada da arte passa a citar "A arte
+   renascentista desenvolveu técnicas e temáticas que refletiam diretamente os
+   valores humanistas".
+
+5. **`historia-o-nazismo-na-alemanha` — item duplicando outro.** O `claim` do
+   item "Hiperinflação de 1923" afirmava também a Grande Depressão, que é o
+   item seguinte, e os dois compartilhavam a mesma citação — numa família em
+   que cada item deve ser *um* fator distinto, isso embaralha a conjunção.
+   `claim` reescopado à hiperinflação; e "só a combinação dos três" virou "só a
+   combinação deles", porque o item 3 nomeia também o ressentimento
+   nacionalista, de modo que "três" não fechava.
+
+6. **`historia-a-primeira-republica-o-declinio-oligarquico-1889-1930` — a
+   `question` prometia o que nenhum item entrega** ("até a crise de 1930
+   rompê-lo"; nenhum item cobre a ruptura). Pergunta reescrita para o que a
+   cena de fato mostra.
+
+7. **`CriteriosConjuntivos.tsx` — texto fixo afirmando algo específico de
+   matéria.** O veredito era `Conceito válido: reúne ...` / `Conceito
+   incompleto: falta ...`. Serve a Filosofia, onde critérios *definem um
+   conceito*; é erro de categoria nas 5 entradas de História, que são
+   explicações causais — a ascensão do nazismo não é um "conceito" que fica
+   "válido". Trocado por `Reúne todos os critérios: ...` / `Ainda falta: ...`,
+   verdadeiro nas duas leituras. É exatamente a classe do defeito de legenda de
+   eixo da Fase 1.
+
+**Verificações estruturais que passaram.** `escala-de-graus`: a ordem de
+`América Espanhola` continua BAIXO→ALTO e casa com o render de baixo para cima
+de `EscalaDeGraus.tsx` (`alturaDe(0)` = 156, `alturaDe(n-1)` = 40); o `eixo`
+continua desclamando juízo moral. `movimento-dialetico`: `Reforma Religiosa`
+segue mostrando só o polo católico se transformando. `tipologia` (8): todas as
+8 têm frase-guarda-chuva literal nomeando a categoria antes de enumerar as
+variantes. `A Primeira Globalização`: escopo estreito
+(mercantilismo→trabalho compulsório) intacto, os 4 itens ainda saem todos da
+mesma seção. A ressalva do elo fraco de `Entreguerras` (Liga das Nações)
+continua respeitada: a entrada usa só os dois elos que seguram. Os outros 6
+componentes não têm texto fixo específico de capítulo.
+
+### Chamadas de julgamento sinalizadas, não alteradas
+
+Deixadas como estão por serem defensáveis; registradas para quem revisar
+depois:
+
+- **`historia-a-independencia-do-brasil` (`contraste-de-posicoes`) — o
+  contraste mais fraco dos três.** O polo "ruptura completa" só aparece na
+  fonte sendo negado ("contrariando qualquer leitura da independência como
+  ruptura completa"), e 2 dos 3 itens defendem o outro polo. É rivalidade
+  genuína no sentido lógico (adotar a continuidade rejeita a ruptura) e o
+  `claim` é honesto ao dizer "uma leitura possível", mas não há defensor do
+  primeiro polo no capítulo. Substitui `Europa no Século XIX` como o contraste
+  marginal — este, revisto agora, se sustenta bem: a fonte nomeia "uma divisão
+  estratégica entre reformismo gradual e revolução imediata".
+- **`Revolução Industrial` e `Entreguerras`** têm `question` com dois arcos
+  ("e como ..."), admitindo que não são uma cadeia única. Os elos internos de
+  cada arco seguram.
+- **`Iluminismo` (`tipologia`)** — o item de Voltaire (liberdade de expressão,
+  crítica ao fanatismo) não é bem uma "proposta de reorganização do poder
+  político" como a pergunta promete, ainda que a frase-guarda-chuva o cubra.
+- **`Antiguidade Clássica: o Mundo Romano` e `A Era Vargas: o Estado Novo`**,
+  que este documento pedia para um terceiro par de olhos: ambas se sustentam.
+  Em Roma cada elo retroreferencia o anterior na própria fonte ("Essa
+  estrutura republicana entrou em crise", "culminando na transição"); no
+  Estado Novo os itens 1 e 2 são próximos de redundantes, mas o item 2
+  retroreferencia explicitamente ("Essa contradição ideológica") e gera a
+  pressão que o item 3 consuma.
+
+### Parte B — verificação no navegador: NÃO EXECUTADA
+
+**Não foi feita.** O servidor de desenvolvimento subiu normalmente
+(`localhost:3000`) e foi encerrado em seguida pelo PID da porta, mas nenhuma
+automação de navegador estava disponível nesta sessão: a extensão do Chrome
+não estava conectada e o MCP `chrome-devtools` falhou por timeout de conexão.
+Nada da Parte B foi simulado e nenhum screenshot foi gerado —
+`docs/visual-personalizado/screenshots/cenas-historia/` continua vazio.
+
+O espaço em disco (3,0 GB livres, acima do piso de 1,5 GB) não foi o
+impedimento.
+
+Portanto, **não** foram medidos no navegador: overflow horizontal a ~1440px e
+~390px, foco visível, ausência de animação infinita, console limpo, e a
+persistência da cena entre trocas de seção observada no DOM real.
+
+Duas dessas propriedades, porém, são verificáveis estaticamente e foram
+conferidas no código:
+
+- **Montagem / persistência / desmontagem.** Em `VisualJourney.tsx` a
+  `TopicScene` fica *fora* do `AnimatePresence` que troca as seções e tem
+  chave derivada só do id do resumo, que não depende do índice da seção —
+  trocar de seção não remonta a cena nem zera seu estado. Em `Visual.tsx` a
+  jornada inteira só é renderizada com `mode === 'explorar'`, então a cena
+  desaparece em "Testar".
+- **Teclado e `aria-pressed`.** As 7 famílias têm suíte de componente própria;
+  `Tipologia` e `CriteriosConjuntivos` (as duas novas) têm testes nomeados
+  para ativação por teclado com `aria-pressed`. Isso é evidência de unidade em
+  jsdom, não de foco visível renderizado.
+
+### Limites honestos
+
+- A checagem de citação é exaustiva e mecânica (114/114). As de **claim vs.
+  quote** e de **honestidade estrutural** são julgamento, lidas entrada por
+  entrada — evidência por amostra de raciocínio, não prova.
+- Nenhuma validação em navegador real; `prefers-reduced-motion` não foi
+  exercitado.
+- As correções 1-3 mudam o que a cena ensina, não só o texto dela. Merecem um
+  segundo olhar de quem conhece o material.
