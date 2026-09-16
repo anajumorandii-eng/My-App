@@ -60,8 +60,8 @@ export function CriteriosConjuntivos({ entry }: { entry: SceneEntry }) {
         <>
           <p className="tc-observation" role="status">
             {todosMarcados
-              ? `Conceito válido: reúne ${entry.items.map((it) => it.label).join(', ')}.`
-              : `Conceito incompleto: falta ${faltantes.join(', ')}.`}
+              ? `Reúne todos os critérios: ${entry.items.map((it) => it.label).join(', ')}.`
+              : `Ainda falta: ${faltantes.join(', ')}.`}
           </p>
           {entry.items.map((it, i) => marcados[i] && (
             <blockquote key={it.label} className="tc-quote">“{it.quote}” <cite>{it.section}</cite></blockquote>
