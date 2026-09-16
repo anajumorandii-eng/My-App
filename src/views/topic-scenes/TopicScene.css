@@ -116,7 +116,6 @@
 .tc-criterio { fill: color-mix(in srgb, var(--vs-blue) 8%, transparent); stroke: var(--vs-blue); stroke-width: 1.2; opacity: 0.6; }
 .tc-criterio-ativo { fill: color-mix(in srgb, var(--vs-blue) 24%, transparent); stroke-width: 2.2; opacity: 1; }
 .tc-veredito-barra { fill: var(--vs-amber); }
-
 .tc-eixos { display: flex; flex-wrap: wrap; gap: 1rem; }
 .tc-eixo {
   display: grid;
