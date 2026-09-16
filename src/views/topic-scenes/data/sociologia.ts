@@ -136,7 +136,7 @@ export const sociologia: SceneEntry[] = [
       { label: 'Horizontal inter', claim: 'muda de ocupação sem alterar o estrato entre gerações', section: 'Tipos de mobilidade', quote: 'A mobilidade pode ser vertical, quando há mudança de posição na hierarquia, ou horizontal, quando se muda de ocupação sem alterar o estrato. Pode ser intrageracional, ao longo da vida de uma pessoa, ou intergeracional, comparando a posição de filhos e pais, medida mais usada para avaliar abertura de uma sociedade.', celula: { eixoA: 1, eixoB: 1 } },
     ],
   },
-  // Task 4 — família contraste-de-posicoes (9 capítulos)
+  // Task 4 — família contraste-de-posicoes (8 capítulos)
   {
     chapterId: 'summary-sociologia-o-contexto-historico-do-surgimento-da-sociologia',
     family: 'contraste-de-posicoes',
@@ -194,15 +194,6 @@ export const sociologia: SceneEntry[] = [
     ],
   },
   {
-    chapterId: 'summary-sociologia-desigualdade-de-genero',
-    family: 'contraste-de-posicoes',
-    question: 'Os papéis de gênero são naturais, ou socialmente produzidos?',
-    items: [
-      { label: 'Papéis "naturais"', claim: 'papéis considerados naturais na verdade variam entre sociedades e épocas', section: 'Sexo e gênero', quote: 'Ela permite mostrar que papéis considerados naturais variam entre sociedades e ao longo da história, o que os revela como socialmente produzidos.' },
-      { label: 'Construção social', claim: 'a variação entre sociedades e épocas revela que os papéis são socialmente produzidos', section: 'Sexo e gênero', quote: 'Ela permite mostrar que papéis considerados naturais variam entre sociedades e ao longo da história, o que os revela como socialmente produzidos.' },
-    ],
-  },
-  {
     chapterId: 'summary-sociologia-divisao-social-do-trabalho',
     family: 'contraste-de-posicoes',
     question: 'A divisão do trabalho gera coesão, ou alienação e exploração?',
@@ -220,7 +211,7 @@ export const sociologia: SceneEntry[] = [
       { label: 'Novas ocupações', claim: 'a automação cria novas ocupações e muda o perfil do emprego, sem gerar desemprego generalizado', section: 'Reestruturação e desemprego', quote: 'O debate opõe quem prevê desemprego tecnológico massivo e quem aponta a criação de novas ocupações e a mudança de perfil.' },
     ],
   },
-  // Task 4 — família cadeia-de-derivacao (3 capítulos)
+  // Task 4 — família cadeia-de-derivacao (4 capítulos)
   {
     chapterId: 'summary-sociologia-etica-protestante-e-o-espirito-do-capitalismo',
     family: 'cadeia-de-derivacao',
@@ -249,6 +240,16 @@ export const sociologia: SceneEntry[] = [
       { label: 'Ritmo e preço definidos', claim: 'o trabalhador é classificado como parceiro autônomo, mas tem ritmo, preço e avaliação definidos pela plataforma', section: 'Uberização', quote: 'O trabalhador é classificado como parceiro autônomo, mas tem seu ritmo, preço e avaliação definidos pela plataforma, o que caracteriza controle sem os direitos correspondentes ao emprego.' },
       { label: 'Controle algorítmico', claim: 'o algoritmo define preço, distribuição de tarefas, avaliação e possibilidade de bloqueio', section: 'Pratique e confira', quote: 'o algoritmo define preço, distribuição de tarefas, avaliação e possibilidade de bloqueio, o que configura subordinação, ainda que o horário seja escolhido pelo trabalhador.' },
       { label: 'Subordinação', claim: 'isso configura subordinação, ainda que o horário seja escolhido pelo trabalhador', section: 'Pratique e confira', quote: 'o algoritmo define preço, distribuição de tarefas, avaliação e possibilidade de bloqueio, o que configura subordinação, ainda que o horário seja escolhido pelo trabalhador.' },
+    ],
+  },
+  {
+    chapterId: 'summary-sociologia-desigualdade-de-genero',
+    family: 'cadeia-de-derivacao',
+    question: 'Como a distinção entre sexo e gênero mostra que os papéis são socialmente produzidos?',
+    items: [
+      { label: 'Distinguir sexo de gênero', claim: 'sexo remete a características biológicas e gênero a construções sociais de masculinidade e feminilidade', section: 'Sexo e gênero', quote: 'A distinção entre sexo, referido a características biológicas, e gênero, referido a construções sociais de masculinidade e feminilidade, é o ponto de partida do campo.' },
+      { label: 'Os papéis variam', claim: 'papéis considerados naturais variam entre sociedades e ao longo da história', section: 'Sexo e gênero', quote: 'Ela permite mostrar que papéis considerados naturais variam entre sociedades e ao longo da história, o que os revela como socialmente produzidos.' },
+      { label: 'Logo, são transformáveis', claim: 'variando entre culturas e épocas, são construções sociais e podem ser transformados', section: 'Pratique e confira', quote: 'ela permite mostrar que papéis atribuídos a homens e mulheres variam entre culturas e épocas, portanto são construções sociais e podem ser transformados' },
     ],
   },
   // Task 4 — família camadas-de-determinacao (2 capítulos)
