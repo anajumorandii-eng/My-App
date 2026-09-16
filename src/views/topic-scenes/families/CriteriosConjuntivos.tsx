@@ -5,9 +5,11 @@ import type { SceneEntry } from '../types';
 import '../TopicScene.css';
 
 /** Condições que só definem o fenômeno reunidas todas ao mesmo tempo.
- *  O movimento preenche cada critério marcado; o veredito muda de "válido"
- *  para "incompleto" assim que um único critério é derrubado — é isso que
- *  torna a conjunção, e não a soma, o conteúdo da cena. */
+ *  O movimento preenche cada critério marcado; o veredito muda assim que um
+ *  único critério é derrubado — é isso que torna a conjunção, e não a soma,
+ *  o conteúdo da cena. Texto do veredito é neutro entre matérias (não
+ *  "conceito válido"), porque a mesma família serve tanto definições
+ *  filosóficas quanto explicações causais de História. */
 export function CriteriosConjuntivos({ entry }: { entry: SceneEntry }) {
   const [marcados, setMarcados] = useState<boolean[]>(() => entry.items.map(() => false));
   const transition = useSceneMotion();
