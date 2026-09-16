@@ -1,10 +1,11 @@
 import { interactiveSummaries } from '../../data/interactiveSummaries';
 import { filosofia } from './data/filosofia';
 import { sociologia } from './data/sociologia';
+import { historia } from './data/historia';
 import { validarLastro } from './lastro';
 import type { SceneEntry } from './types';
 
-const todas: SceneEntry[] = [...filosofia, ...sociologia];
+const todas: SceneEntry[] = [...filosofia, ...sociologia, ...historia];
 const capitulos = new Map(interactiveSummaries.map((summary) => [summary.id, summary]));
 const validas = todas.filter((entry) => validarLastro(entry, capitulos.get(entry.chapterId)).length === 0);
 const porCapitulo = new Map(validas.map((entry) => [entry.chapterId, entry]));

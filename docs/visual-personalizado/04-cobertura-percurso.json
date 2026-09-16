@@ -34,7 +34,7 @@
       "chapters": 49,
       "contentAtlases": 49,
       "interactiveExperiments": 1,
-      "anchorScenes": 0
+      "anchorScenes": 33
     },
     {
       "subject": "Língua Inglesa",
@@ -11872,7 +11872,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "tipologia"
     },
     {
       "id": "summary-historia-antiguidade-classica-o-mundo-romano",
@@ -11925,7 +11925,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "cadeia-de-derivacao"
     },
     {
       "id": "summary-historia-alta-idade-media-e-feudalismo",
@@ -11978,7 +11978,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "tipologia"
     },
     {
       "id": "summary-historia-baixa-idade-media",
@@ -12031,7 +12031,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "cadeia-de-derivacao"
     },
     {
       "id": "summary-historia-a-primeira-globalizacao",
@@ -12084,7 +12084,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "camadas-de-determinacao"
     },
     {
       "id": "summary-historia-america-espanhola",
@@ -12137,7 +12137,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "escala-de-graus"
     },
     {
       "id": "summary-historia-vida-urbana-e-renascimento-cultural",
@@ -12190,7 +12190,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "camadas-de-determinacao"
     },
     {
       "id": "summary-historia-reforma-religiosa",
@@ -12243,7 +12243,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "movimento-dialetico"
     },
     {
       "id": "summary-historia-absolutismo",
@@ -12296,7 +12296,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "tipologia"
     },
     {
       "id": "summary-historia-revolucao-industrial",
@@ -12349,7 +12349,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "cadeia-de-derivacao"
     },
     {
       "id": "summary-historia-iluminismo",
@@ -12402,7 +12402,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "tipologia"
     },
     {
       "id": "summary-historia-revolucao-francesa",
@@ -12455,7 +12455,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "cadeia-de-derivacao"
     },
     {
       "id": "summary-historia-america-no-seculo-xix",
@@ -12561,7 +12561,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "contraste-de-posicoes"
     },
     {
       "id": "summary-historia-imperialismo-e-belle-epoque",
@@ -12614,7 +12614,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "tipologia"
     },
     {
       "id": "summary-historia-primeira-guerra-mundial-1914-1918",
@@ -12667,7 +12667,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "criterios-conjuntivos"
     },
     {
       "id": "summary-historia-grandes-revolucoes-do-seculo-xx",
@@ -12773,7 +12773,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "cadeia-de-derivacao"
     },
     {
       "id": "summary-historia-o-nazismo-na-alemanha",
@@ -12826,7 +12826,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "criterios-conjuntivos"
     },
     {
       "id": "summary-historia-segunda-guerra-mundial-1939-1945",
@@ -12985,7 +12985,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "tipologia"
     },
     {
       "id": "summary-historia-america-latina-no-seculo-xx",
@@ -13091,7 +13091,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "cadeia-de-derivacao"
     },
     {
       "id": "summary-historia-a-historia-e-o-brasil",
@@ -13144,7 +13144,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "contraste-de-posicoes"
     },
     {
       "id": "summary-historia-grandes-navegacoes-e-conquista-colonial",
@@ -13197,7 +13197,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "cadeia-de-derivacao"
     },
     {
       "id": "summary-historia-a-montagem-da-colonizacao",
@@ -13250,7 +13250,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "cadeia-de-derivacao"
     },
     {
       "id": "summary-historia-dinamica-interna-da-colonizacao",
@@ -13515,7 +13515,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "tipologia"
     },
     {
       "id": "summary-historia-a-independencia-do-brasil",
@@ -13568,7 +13568,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "contraste-de-posicoes"
     },
     {
       "id": "summary-historia-brasil-imperio-formacao-do-estado-nacional-brasileiro",
@@ -13621,7 +13621,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "cadeia-de-derivacao"
     },
     {
       "id": "summary-historia-brasil-imperio-o-periodo-regencial-1831-1840",
@@ -13674,7 +13674,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "tipologia"
     },
     {
       "id": "summary-historia-brasil-imperio-segundo-reinado-1840-1889",
@@ -13780,7 +13780,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "criterios-conjuntivos"
     },
     {
       "id": "summary-historia-a-republica-da-espada",
@@ -13886,7 +13886,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "camadas-de-determinacao"
     },
     {
       "id": "summary-historia-a-primeira-republica-o-declinio-oligarquico-1889-1930",
@@ -13939,7 +13939,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "camadas-de-determinacao"
     },
     {
       "id": "summary-historia-a-era-vargas",
@@ -13992,7 +13992,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "cadeia-de-derivacao"
     },
     {
       "id": "summary-historia-a-era-vargas-o-governo-constitucional-1934-1937",
@@ -14045,7 +14045,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "cadeia-de-derivacao"
     },
     {
       "id": "summary-historia-a-era-vargas-o-estado-novo",
@@ -14098,7 +14098,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "cadeia-de-derivacao"
     },
     {
       "id": "summary-historia-republica-liberal-1945-1964-democracia-em-tempos-de-guerra-fria",
@@ -14363,7 +14363,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "criterios-conjuntivos"
     },
     {
       "id": "summary-lingua-inglesa-text-comprehension-taxonomy-and-terminology",
