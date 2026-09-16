@@ -48,7 +48,7 @@ export const sociologia: SceneEntry[] = [
     chapterId: 'summary-sociologia-movimentos-sociais-classicos-e-contemporaneos',
     family: 'tipologia',
     question: 'Em torno de que pauta os movimentos sociais se organizam?',
-    nota: 'supor que os novos movimentos sociais substituíram os clássicos, quando coexistem e frequentemente se articulam',
+    nota: 'supor que os novos movimentos substituíram os clássicos, quando coexistem e frequentemente se articulam',
     items: [
       { label: 'Clássicos', claim: 'organizavam-se em torno de trabalho, salário e condições de produção', section: 'Movimentos clássicos e novos', quote: 'Os clássicos, sobretudo operários, organizavam-se em torno de trabalho, salário e condições de produção, com sindicatos e partidos como forma.' },
       { label: 'Novos movimentos', claim: 'articulam-se em torno de identidade, reconhecimento e qualidade de vida', section: 'Movimentos clássicos e novos', quote: 'Os chamados novos movimentos sociais, a partir dos anos 1960, articulam-se em torno de identidade, reconhecimento e qualidade de vida: feminismo, movimento negro, LGBTQIA+, ambientalismo e movimentos urbanos.' },
