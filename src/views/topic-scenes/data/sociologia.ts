@@ -136,4 +136,151 @@ export const sociologia: SceneEntry[] = [
       { label: 'Horizontal inter', claim: 'muda de ocupação sem alterar o estrato entre gerações', section: 'Tipos de mobilidade', quote: 'A mobilidade pode ser vertical, quando há mudança de posição na hierarquia, ou horizontal, quando se muda de ocupação sem alterar o estrato. Pode ser intrageracional, ao longo da vida de uma pessoa, ou intergeracional, comparando a posição de filhos e pais, medida mais usada para avaliar abertura de uma sociedade.', celula: { eixoA: 1, eixoB: 1 } },
     ],
   },
+  // Task 4 — família contraste-de-posicoes (9 capítulos)
+  {
+    chapterId: 'summary-sociologia-o-contexto-historico-do-surgimento-da-sociologia',
+    family: 'contraste-de-posicoes',
+    question: 'Qual é o objeto próprio da sociologia, segundo os clássicos?',
+    items: [
+      { label: 'Durkheim', claim: 'o objeto próprio é o fato social e a coesão', section: 'Os clássicos', quote: 'o fato social e a coesão, em Durkheim' },
+      { label: 'Marx', claim: 'o objeto próprio são as relações de produção e a luta de classes', section: 'Os clássicos', quote: 'as relações de produção e a luta de classes, em Marx' },
+      { label: 'Weber', claim: 'o objeto próprio é a ação social dotada de sentido e a racionalização', section: 'Os clássicos', quote: 'a ação social dotada de sentido e os processos de racionalização, em Weber' },
+    ],
+  },
+  {
+    chapterId: 'summary-sociologia-sociologia-e-senso-comum',
+    family: 'contraste-de-posicoes',
+    question: 'A vida social pode ser explicada pelo senso comum, ou exige a ruptura metódica da sociologia?',
+    items: [
+      { label: 'Senso comum', claim: 'orienta a vida cotidiana e frequentemente funciona, sem exigir verificação', section: 'O que é senso comum', quote: 'Não é ignorância nem falsidade automática: orienta a vida cotidiana e frequentemente funciona.' },
+      { label: 'Sociologia', claim: 'exige romper com as pré-noções, definir conceitos com rigor e submeter conclusões à crítica', section: 'A ruptura epistemológica', quote: 'A sociologia se constitui pela ruptura com as pré-noções: exige definir conceitos com rigor, formular hipóteses, coletar dados e submeter conclusões à crítica.' },
+    ],
+  },
+  {
+    chapterId: 'summary-sociologia-a-luta-de-classes-na-analise-sociologica',
+    family: 'contraste-de-posicoes',
+    question: 'O que define a posição de alguém na estrutura social?',
+    items: [
+      { label: 'Marx', claim: 'a posição nas relações de produção — possuir ou não meios de produção', section: 'Classe e posição estrutural', quote: 'Classe social, na análise marxista, define-se pela posição nas relações de produção: possuir ou não meios de produção e comprar ou vender força de trabalho.' },
+      { label: 'Weber', claim: 'classe econômica somada a status e poder, dimensões que podem não coincidir', section: 'Pratique e confira', quote: 'mantém a dimensão econômica de classe, mas acrescenta o status, ligado a prestígio e estilo de vida, e o partido, ligado ao poder, tratando-as como dimensões que podem não coincidir.' },
+      { label: 'Bourdieu', claim: 'capitais econômico, cultural e social, múltiplos recursos que definem a posição', section: 'Leituras contemporâneas', quote: 'Bourdieu propôs capitais econômico, cultural e social, mostrando que a posição depende de múltiplos recursos' },
+    ],
+  },
+  {
+    chapterId: 'summary-sociologia-cultura-e-etnocentrismo',
+    family: 'contraste-de-posicoes',
+    question: 'Como julgar outras culturas: pelo próprio padrão, ou compreendendo sua lógica interna?',
+    items: [
+      { label: 'Etnocentrismo', claim: 'julga outras culturas a partir dos valores da própria, tomando os próprios costumes como padrão do correto', section: 'Etnocentrismo', quote: 'Etnocentrismo é julgar outras culturas a partir dos valores da própria, tomando os próprios costumes como padrão do que é natural e correto.' },
+      { label: 'Estranhamento', claim: 'estranha o familiar e familiariza o estranho, reconhecendo lógica interna em cada cultura', section: 'Estranhamento e desnaturalização', quote: 'O antídoto metodológico é o exercício de estranhar o familiar e familiarizar o estranho: perceber que os próprios costumes também são arbitrários e que os alheios têm lógica interna.' },
+    ],
+  },
+  {
+    chapterId: 'summary-sociologia-multiculturalismo-e-relativismo-cultural',
+    family: 'contraste-de-posicoes',
+    question: 'O relativismo cultural é ferramenta de pesquisa, ou a tese de que nenhum juízo entre culturas é possível?',
+    items: [
+      { label: 'Relativismo metodológico', claim: 'compreende práticas pela lógica interna de cada sociedade; é ferramenta de pesquisa contra o etnocentrismo', section: 'Relativismo cultural', quote: 'O relativismo metodológico propõe compreender práticas culturais a partir da lógica interna de cada sociedade, e não pelos padrões do observador. É ferramenta de pesquisa que combate o etnocentrismo.' },
+      { label: 'Relativismo moral radical', claim: 'sustenta que nenhum juízo entre culturas é possível, o que inviabiliza a defesa de direitos', section: 'Relativismo cultural', quote: 'Distingue-se do relativismo moral radical, que sustenta que nenhum juízo entre culturas é possível, posição criticada por inviabilizar a defesa de direitos.' },
+    ],
+  },
+  {
+    chapterId: 'summary-sociologia-desigualdade-racial-no-brasil',
+    family: 'contraste-de-posicoes',
+    question: 'O Brasil vive uma democracia racial pela miscigenação, ou um racismo estrutural encoberto por esse mito?',
+    items: [
+      { label: 'Mito da democracia racial', claim: 'o Brasil teria harmonia racial por causa da miscigenação', section: 'O mito da democracia racial', quote: 'A ideia de que o Brasil teria harmonia racial por causa da miscigenação foi difundida como identidade nacional, mas encobre desigualdades sistemáticas.' },
+      { label: 'Racismo estrutural', claim: 'opera de forma difusa, sem leis segregacionistas explícitas, mas com efeitos concretos', section: 'O mito da democracia racial', quote: 'Pesquisas de Florestan Fernandes, Clóvis Moura, Lélia Gonzalez e outros mostraram que o racismo brasileiro opera de forma difusa, sem leis segregacionistas explícitas, mas com efeitos concretos.' },
+    ],
+  },
+  {
+    chapterId: 'summary-sociologia-desigualdade-de-genero',
+    family: 'contraste-de-posicoes',
+    question: 'Os papéis de gênero são naturais, ou socialmente produzidos?',
+    items: [
+      { label: 'Papéis "naturais"', claim: 'papéis considerados naturais na verdade variam entre sociedades e épocas', section: 'Sexo e gênero', quote: 'Ela permite mostrar que papéis considerados naturais variam entre sociedades e ao longo da história, o que os revela como socialmente produzidos.' },
+      { label: 'Construção social', claim: 'a variação entre sociedades e épocas revela que os papéis são socialmente produzidos', section: 'Sexo e gênero', quote: 'Ela permite mostrar que papéis considerados naturais variam entre sociedades e ao longo da história, o que os revela como socialmente produzidos.' },
+    ],
+  },
+  {
+    chapterId: 'summary-sociologia-divisao-social-do-trabalho',
+    family: 'contraste-de-posicoes',
+    question: 'A divisão do trabalho gera coesão, ou alienação e exploração?',
+    items: [
+      { label: 'Durkheim', claim: 'é fonte de solidariedade orgânica e coesão nas sociedades modernas', section: 'Duas leituras', quote: 'Durkheim vê na divisão do trabalho a fonte da solidariedade orgânica e da coesão nas sociedades modernas, com a anomia como patologia possível.' },
+      { label: 'Marx', claim: 'sob o capitalismo, é mecanismo de alienação e de aumento da exploração', section: 'Duas leituras', quote: 'Marx vê nela, sob o capitalismo, um mecanismo de alienação e de aumento da exploração.' },
+    ],
+  },
+  {
+    chapterId: 'summary-sociologia-transformacoes-no-mundo-do-trabalho',
+    family: 'contraste-de-posicoes',
+    question: 'A automação leva a desemprego tecnológico massivo, ou à criação de novas ocupações?',
+    items: [
+      { label: 'Desemprego massivo', claim: 'a automação e a IA provocariam desemprego tecnológico massivo', section: 'Reestruturação e desemprego', quote: 'O debate opõe quem prevê desemprego tecnológico massivo e quem aponta a criação de novas ocupações e a mudança de perfil.' },
+      { label: 'Novas ocupações', claim: 'a automação cria novas ocupações e muda o perfil do emprego, sem gerar desemprego generalizado', section: 'Reestruturação e desemprego', quote: 'O debate opõe quem prevê desemprego tecnológico massivo e quem aponta a criação de novas ocupações e a mudança de perfil.' },
+    ],
+  },
+  // Task 4 — família cadeia-de-derivacao (3 capítulos)
+  {
+    chapterId: 'summary-sociologia-etica-protestante-e-o-espirito-do-capitalismo',
+    family: 'cadeia-de-derivacao',
+    question: 'Como a doutrina calvinista da predestinação leva ao espírito do capitalismo?',
+    items: [
+      { label: 'Angústia da salvação', claim: 'a doutrina da predestinação gerava angústia sobre a salvação', section: 'O mecanismo', quote: 'A doutrina da predestinação gerava angústia sobre a salvação.' },
+      { label: 'Êxito como sinal de graça', claim: 'o êxito no trabalho, lido como vocação, passou a ser sinal possível de graça, e a ascese desestimulava o consumo', section: 'O mecanismo', quote: 'O êxito no trabalho, entendido como vocação, passou a ser lido como possível sinal de graça, e a ascese intramundana desestimulava o consumo ostentatório.' },
+      { label: 'Acumulação sistemática', claim: 'o resultado foi acumulação sistemática, reinvestimento e disciplina, favoráveis ao capitalismo', section: 'O mecanismo', quote: 'O resultado prático foi acumulação sistemática, reinvestimento e disciplina, favoráveis ao desenvolvimento capitalista.' },
+    ],
+  },
+  {
+    chapterId: 'summary-sociologia-educacao-e-socializacao-em-durkheim',
+    family: 'cadeia-de-derivacao',
+    question: 'Como a educação sustenta a coesão social, segundo Durkheim?',
+    items: [
+      { label: 'Transmissão de normas', claim: 'transmite normas, valores e conhecimentos necessários à vida coletiva', section: 'A função da educação', quote: 'Sua função é formar o ser social no indivíduo, transmitindo normas, valores e conhecimentos necessários à vida coletiva e produzindo a homogeneidade mínima sem a qual a sociedade não se sustenta.' },
+      { label: 'Homogeneidade mínima', claim: 'produz a homogeneidade mínima sem a qual a sociedade não se sustenta', section: 'A função da educação', quote: 'Sua função é formar o ser social no indivíduo, transmitindo normas, valores e conhecimentos necessários à vida coletiva e produzindo a homogeneidade mínima sem a qual a sociedade não se sustenta.' },
+      { label: 'Coesão garantida', claim: 'garante a coesão e permite a vida coletiva', section: 'Pratique e confira', quote: 'formar o ser social no indivíduo, transmitindo normas e valores que garantem a coesão e permitem a vida coletiva, além de preparar para funções específicas.' },
+    ],
+  },
+  {
+    chapterId: 'summary-sociologia-precarizacao-e-uberizacao-do-trabalho',
+    family: 'cadeia-de-derivacao',
+    question: 'Por que a classificação do entregador de plataforma como autônomo é questionável?',
+    items: [
+      { label: 'Ritmo e preço definidos', claim: 'o trabalhador é classificado como parceiro autônomo, mas tem ritmo, preço e avaliação definidos pela plataforma', section: 'Uberização', quote: 'O trabalhador é classificado como parceiro autônomo, mas tem seu ritmo, preço e avaliação definidos pela plataforma, o que caracteriza controle sem os direitos correspondentes ao emprego.' },
+      { label: 'Controle algorítmico', claim: 'o algoritmo define preço, distribuição de tarefas, avaliação e possibilidade de bloqueio', section: 'Pratique e confira', quote: 'o algoritmo define preço, distribuição de tarefas, avaliação e possibilidade de bloqueio, o que configura subordinação, ainda que o horário seja escolhido pelo trabalhador.' },
+      { label: 'Subordinação', claim: 'isso configura subordinação, ainda que o horário seja escolhido pelo trabalhador', section: 'Pratique e confira', quote: 'o algoritmo define preço, distribuição de tarefas, avaliação e possibilidade de bloqueio, o que configura subordinação, ainda que o horário seja escolhido pelo trabalhador.' },
+    ],
+  },
+  // Task 4 — família camadas-de-determinacao (2 capítulos)
+  {
+    chapterId: 'summary-sociologia-modo-de-producao-e-estrutura-social',
+    family: 'camadas-de-determinacao',
+    question: 'O que condiciona o quê: a base econômica ou a superestrutura?',
+    items: [
+      { label: 'Base econômica', claim: 'condiciona a superestrutura jurídica, política e ideológica', section: 'Base e superestrutura', quote: 'A base econômica condiciona a superestrutura jurídica, política e ideológica, que por sua vez atua sobre a base.' },
+      { label: 'Superestrutura', claim: 'atua de volta sobre a base, com autonomia relativa e efeitos próprios', section: 'Base e superestrutura', quote: 'a determinação é em última instância, e as demais esferas têm autonomia relativa, com efeitos próprios sobre o processo histórico.' },
+    ],
+  },
+  {
+    chapterId: 'summary-sociologia-ideologia-e-alienacao',
+    family: 'camadas-de-determinacao',
+    question: 'O que produz o quê: o trabalho social, ou a aparência que o oculta?',
+    items: [
+      { label: 'Trabalho social', claim: 'produz o valor da mercadoria, ainda que essa origem fique oculta', section: 'Fetichismo da mercadoria', quote: 'Marx descreve como as relações entre pessoas aparecem como relações entre coisas: a mercadoria parece ter valor por si mesma, ocultando o trabalho social que a produziu.' },
+      { label: 'Ideologia', claim: 'apresenta interesses particulares de uma classe como se fossem universais e naturais', section: 'Ideologia', quote: 'Na tradição marxista, ideologia designa o conjunto de representações que apresentam interesses particulares de uma classe como se fossem universais e naturais.' },
+    ],
+  },
+  // Task 4 — família escala-de-graus (1 capítulo)
+  {
+    chapterId: 'summary-sociologia-cidadania-e-direitos',
+    family: 'escala-de-graus',
+    question: 'Em que ordem histórica Marshall situa os direitos de cidadania?',
+    eixo: 'da ordem histórica de conquista dos direitos, não de um valor crescente',
+    items: [
+      { label: 'Civis', claim: 'ligados à liberdade individual e à propriedade', section: 'As três gerações', quote: 'Marshall distingue direitos civis, ligados à liberdade individual e à propriedade; políticos, ligados à participação e ao voto; e sociais, ligados a educação, saúde, trabalho e previdência.' },
+      { label: 'Políticos', claim: 'ligados à participação e ao voto', section: 'As três gerações', quote: 'Marshall distingue direitos civis, ligados à liberdade individual e à propriedade; políticos, ligados à participação e ao voto; e sociais, ligados a educação, saúde, trabalho e previdência.' },
+      { label: 'Sociais', claim: 'ligados a educação, saúde, trabalho e previdência', section: 'As três gerações', quote: 'Marshall distingue direitos civis, ligados à liberdade individual e à propriedade; políticos, ligados à participação e ao voto; e sociais, ligados a educação, saúde, trabalho e previdência.' },
+      { label: 'Difusos e digitais', claim: 'acrescentam-se depois direitos como ambiente, patrimônio, tecnologia e informação', section: 'As três gerações', quote: 'Acrescentam-se depois direitos difusos, como ambiente e patrimônio, e direitos ligados a tecnologia e informação.' },
+    ],
+  },
 ];
