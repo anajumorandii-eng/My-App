@@ -62,7 +62,7 @@
       "chapters": 37,
       "contentAtlases": 37,
       "interactiveExperiments": 1,
-      "anchorScenes": 0
+      "anchorScenes": 8
     },
     {
       "subject": "Entendimento de Texto",
@@ -19875,7 +19875,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "tipologia"
     },
     {
       "id": "summary-literatura-renascimento-e-camoes",
@@ -20246,7 +20246,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "tipologia"
     },
     {
       "id": "summary-literatura-a-estetica-realista",
@@ -20670,7 +20670,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "tipologia"
     },
     {
       "id": "summary-literatura-fernando-pessoa",
@@ -20723,7 +20723,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "tipologia"
     },
     {
       "id": "summary-literatura-semana-de-arte-moderna",
@@ -20882,7 +20882,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "contraste-de-posicoes"
     },
     {
       "id": "summary-literatura-graciliano-ramos",
@@ -21306,7 +21306,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "tipologia"
     },
     {
       "id": "summary-literatura-prosa-brasileira-1960-1980",
@@ -21465,7 +21465,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "tipologia"
     },
     {
       "id": "summary-literatura-prosa-brasileira-contemporanea",
@@ -21518,7 +21518,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "tipologia"
     },
     {
       "id": "summary-literatura-artes-plasticas-brasileiras",
