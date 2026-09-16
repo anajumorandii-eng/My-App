@@ -1,73 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Kalam:wght@400;700&display=swap');
+
 .tc-scene {
   display: grid;
   gap: 0.9rem;
-  padding: 1.25rem;
-  border: 1px solid color-mix(in srgb, var(--vs-burgundy) 28%, transparent);
-  border-radius: 2px;
+  padding: 1.5rem;
+  border: 2px solid color-mix(in srgb, var(--vs-burgundy) 40%, transparent);
+  border-radius: 4px 8px 3px 6px; /* Organic slightly imperfect box */
   background: var(--vs-paper-strong);
+  box-shadow: 2px 3px 6px rgba(0,0,0,0.05), -1px -1px 4px rgba(255,255,255,0.4);
 }
-.dark .tc-scene { --vs-burgundy: #db8c9f; }
+.dark .tc-scene { 
+  --vs-burgundy: #db8c9f; 
+  box-shadow: 2px 3px 8px rgba(0,0,0,0.4), -1px -1px 4px rgba(255,255,255,0.02);
+}
 .tc-scene > header { display: grid; gap: 0.2rem; }
 .tc-scene > header small {
   font-family: var(--font-editorial, Newsreader), serif;
   font-style: italic;
+  font-size: 0.9rem;
   color: color-mix(in srgb, var(--vs-burgundy) 78%, transparent);
 }
 .tc-scene > header h4 {
   margin: 0;
-  font-family: var(--font-editorial, Newsreader), serif;
-  font-weight: 500;
-  font-size: 1.22rem;
-  line-height: 1.25;
+  font-family: 'Kalam', 'Caveat', 'Comic Sans MS', cursive;
+  font-weight: 700;
+  font-size: 1.85rem;
+  line-height: 1.1;
+  color: var(--vs-ink);
+  letter-spacing: -0.02em;
 }
-.tc-scene svg { width: 100%; max-width: 100%; height: auto; }
+.tc-scene svg { width: 100%; max-width: 100%; height: auto; overflow: visible; }
 
-.tc-base { stroke: currentColor; stroke-width: 1; opacity: 0.4; }
-.tc-pillar { fill: color-mix(in srgb, var(--vs-blue) 12%, transparent); stroke: var(--vs-blue); stroke-width: 1.5; }
-.tc-pillar-foco { fill: color-mix(in srgb, var(--vs-blue) 26%, transparent); stroke-width: 2.5; }
-.tc-label { font-size: 13px; fill: currentColor; }
+/* SVG shapes look hand-drawn */
+.tc-base { stroke: currentColor; stroke-width: 1.5; opacity: 0.4; stroke-linecap: round; stroke-linejoin: round; }
+.tc-pillar { fill: color-mix(in srgb, var(--vs-blue) 12%, transparent); stroke: var(--vs-blue); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.tc-pillar-foco { fill: color-mix(in srgb, var(--vs-blue) 26%, transparent); stroke-width: 3; }
+.tc-label { font-family: 'Caveat', 'Kalam', 'Comic Sans MS', cursive; font-size: 18px; fill: currentColor; font-weight: 600; letter-spacing: 0.02em; }
 
-.tc-choices { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.tc-choices { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem; }
 .tc-choices button,
 .tc-quote-toggle {
   padding: 0.45rem 0.85rem;
-  font: inherit;
-  font-size: 0.9rem;
+  font-family: 'Kalam', 'Caveat', 'Comic Sans MS', cursive;
+  font-size: 1.1rem;
   color: inherit;
   background: transparent;
-  border: 1px solid color-mix(in srgb, var(--vs-blue) 45%, transparent);
-  border-radius: 2px;
+  border: 2px solid color-mix(in srgb, var(--vs-blue) 45%, transparent);
+  border-radius: 4px 6px 3px 5px; /* Organic hand-drawn button */
   cursor: pointer;
+  transition: all 0.2s ease;
 }
 .tc-choices button[aria-pressed='true'] {
   background: color-mix(in srgb, var(--vs-blue) 18%, transparent);
   border-color: var(--vs-blue);
-  font-weight: 600;
+  font-weight: 700;
+  transform: scale(1.02);
 }
 .tc-choices button:focus-visible,
 .tc-quote-toggle:focus-visible { outline: 2px solid var(--vs-blue); outline-offset: 2px; }
 .tc-quote-toggle { justify-self: start; }
 
-.tc-observation { margin: 0; }
+.tc-observation { margin: 0; font-family: 'Kalam', 'Caveat', cursive; font-size: 1.15rem; line-height: 1.4; color: var(--vs-dim); }
 .tc-quote {
   margin: 0;
-  padding-left: 0.9rem;
-  border-left: 2px solid color-mix(in srgb, var(--vs-amber) 70%, transparent);
-  font-family: var(--font-editorial, Newsreader), serif;
-  font-style: italic;
+  padding-left: 1rem;
+  border-left: 3px solid color-mix(in srgb, var(--vs-amber) 70%, transparent);
+  border-radius: 2px;
+  font-family: 'Kalam', 'Caveat', cursive;
+  font-size: 1.1rem;
+  color: var(--vs-ink);
 }
-.tc-quote cite { display: block; font-size: 0.82rem; font-style: normal; opacity: 0.72; }
+.tc-quote cite { display: block; font-size: 0.9rem; opacity: 0.72; font-family: sans-serif; }
 
-.tc-degrau { stroke: currentColor; stroke-width: 1.5; opacity: 0.35; }
-.tc-degrau-ativo { stroke: var(--vs-blue); opacity: 1; }
-.tc-marcador { fill: var(--vs-amber); stroke: var(--vs-paper-strong); stroke-width: 2; }
-.tc-caption { font-size: 11px; fill: currentColor; opacity: 0.6; font-style: italic; }
+.tc-degrau { stroke: currentColor; stroke-width: 2.5; opacity: 0.35; stroke-linecap: round; stroke-linejoin: round; }
+.tc-degrau-ativo { stroke: var(--vs-blue); opacity: 1; filter: url(#sketch-filter); }
+.tc-marcador { fill: var(--vs-amber); stroke: var(--vs-paper-strong); stroke-width: 2.5; filter: url(#sketch-filter); }
+.tc-caption { font-family: 'Caveat', cursive; font-size: 14px; fill: currentColor; opacity: 0.8; }
 
 .tc-slider {
   display: grid;
   gap: 0.35rem;
-  font-family: var(--font-editorial, Newsreader), serif;
-  font-size: 0.95rem;
+  font-family: 'Kalam', cursive;
+  font-size: 1.1rem;
 }
 .tc-slider input[type='range'] {
   width: 100%;
@@ -75,47 +89,50 @@
   accent-color: var(--vs-burgundy);
 }
 
-.tc-elo { fill: color-mix(in srgb, var(--vs-blue) 10%, transparent); stroke: var(--vs-blue); stroke-width: 1.2; opacity: 0.55; }
-.tc-elo-foco { fill: color-mix(in srgb, var(--vs-blue) 24%, transparent); stroke-width: 2.2; opacity: 1; }
+.tc-elo { fill: color-mix(in srgb, var(--vs-paper-strong) 90%, var(--vs-blue)); stroke: var(--vs-blue); stroke-width: 2; opacity: 0.7; filter: url(#sketch-filter); }
+.tc-elo-foco { fill: color-mix(in srgb, var(--vs-paper-strong) 70%, var(--vs-blue)); stroke-width: 3; opacity: 1; filter: url(#sketch-filter-heavy); }
 .tc-seta {
   fill: none;
   stroke: var(--vs-amber);
-  stroke-width: 2;
+  stroke-width: 3;
   stroke-linecap: round;
+  stroke-linejoin: round;
   marker-end: url(#tc-seta-ponta);
+  filter: url(#sketch-filter);
 }
 .tc-seta-ponta { fill: var(--vs-amber); }
 .tc-progress {
   margin: 0;
-  font-family: var(--font-editorial, Newsreader), serif;
-  font-style: italic;
+  font-family: 'Caveat', cursive;
+  font-size: 1.2rem;
   color: var(--vs-burgundy);
 }
 
-.tc-base-camada { fill: color-mix(in srgb, var(--vs-burgundy) 28%, transparent); stroke: var(--vs-burgundy); stroke-width: 2; }
-.tc-camada { fill: color-mix(in srgb, var(--vs-blue) 9%, transparent); stroke: var(--vs-blue); stroke-width: 1.2; }
-.tc-camada-foco { fill: color-mix(in srgb, var(--vs-blue) 24%, transparent); stroke-width: 2.2; }
-.tc-determinacao { fill: none; stroke: var(--vs-amber); stroke-width: 3; stroke-linecap: round; }
-.tc-momento { stroke-width: 2; }
+.tc-base-camada { fill: color-mix(in srgb, var(--vs-burgundy) 18%, transparent); stroke: var(--vs-burgundy); stroke-width: 3; filter: url(#sketch-filter); stroke-linejoin: round; }
+.tc-camada { fill: color-mix(in srgb, var(--vs-blue) 9%, transparent); stroke: var(--vs-blue); stroke-width: 2; filter: url(#sketch-filter); stroke-linejoin: round; }
+.tc-camada-foco { fill: color-mix(in srgb, var(--vs-blue) 24%, transparent); stroke-width: 3; filter: url(#sketch-filter-heavy); }
+.tc-determinacao { fill: none; stroke: var(--vs-amber); stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; filter: url(#sketch-filter); }
+.tc-momento { stroke-width: 2.5; stroke-linejoin: round; filter: url(#sketch-filter); }
 .tc-momento-um { fill: color-mix(in srgb, var(--vs-blue) 18%, transparent); stroke: var(--vs-blue); }
 .tc-momento-dois { fill: color-mix(in srgb, var(--vs-amber) 20%, transparent); stroke: var(--vs-amber); }
-.tc-ciclo { fill: none; stroke: var(--vs-burgundy); stroke-width: 2.5; stroke-linecap: round; }
+.tc-ciclo { fill: none; stroke: var(--vs-burgundy); stroke-width: 3.5; stroke-linecap: round; filter: url(#sketch-filter); }
 
-.tc-tipo { fill: color-mix(in srgb, var(--vs-blue) 14%, transparent); stroke: var(--vs-blue); stroke-width: 1.5; }
-.tc-tipo-foco { fill: color-mix(in srgb, var(--vs-blue) 30%, transparent); stroke-width: 2.5; }
+.tc-tipo { fill: color-mix(in srgb, var(--vs-blue) 14%, transparent); stroke: var(--vs-blue); stroke-width: 2.5; filter: url(#sketch-filter); stroke-linejoin: round; }
+.tc-tipo-foco { fill: color-mix(in srgb, var(--vs-blue) 30%, transparent); stroke-width: 3.5; filter: url(#sketch-filter-heavy); }
 .tc-nota {
   margin: 0;
-  padding: 0.5rem 0.75rem;
-  font-size: 0.85rem;
-  font-style: italic;
-  color: color-mix(in srgb, var(--vs-burgundy) 82%, transparent);
+  padding: 0.75rem 1rem;
+  font-family: 'Caveat', cursive;
+  font-size: 1.2rem;
+  color: var(--vs-ink);
   background: color-mix(in srgb, var(--vs-burgundy) 8%, transparent);
-  border-left: 2px solid color-mix(in srgb, var(--vs-burgundy) 60%, transparent);
+  border-left: 3px solid color-mix(in srgb, var(--vs-burgundy) 60%, transparent);
+  border-radius: 2px 6px 6px 2px;
 }
 
-.tc-criterio { fill: color-mix(in srgb, var(--vs-blue) 8%, transparent); stroke: var(--vs-blue); stroke-width: 1.2; opacity: 0.6; }
-.tc-criterio-ativo { fill: color-mix(in srgb, var(--vs-blue) 24%, transparent); stroke-width: 2.2; opacity: 1; }
-.tc-veredito-barra { fill: var(--vs-amber); }
+.tc-criterio { fill: color-mix(in srgb, var(--vs-blue) 8%, transparent); stroke: var(--vs-blue); stroke-width: 2; opacity: 0.6; filter: url(#sketch-filter); stroke-linejoin: round; }
+.tc-criterio-ativo { fill: color-mix(in srgb, var(--vs-blue) 24%, transparent); stroke-width: 3; opacity: 1; filter: url(#sketch-filter-heavy); }
+.tc-veredito-barra { fill: var(--vs-amber); filter: url(#sketch-filter); }
 .tc-eixos { display: flex; flex-wrap: wrap; gap: 1rem; }
 .tc-eixo {
   display: grid;
@@ -126,10 +143,9 @@
 }
 .tc-eixo legend {
   padding: 0;
-  font-family: var(--font-editorial, Newsreader), serif;
-  font-style: italic;
-  font-size: 0.85rem;
+  font-family: 'Kalam', cursive;
+  font-size: 1rem;
   color: color-mix(in srgb, var(--vs-burgundy) 78%, transparent);
 }
-.tc-celula { fill: color-mix(in srgb, var(--vs-blue) 10%, transparent); stroke: var(--vs-blue); stroke-width: 1.2; }
-.tc-celula-ativa { fill: color-mix(in srgb, var(--vs-blue) 26%, transparent); stroke-width: 2.4; }
+.tc-celula { fill: color-mix(in srgb, var(--vs-blue) 10%, transparent); stroke: var(--vs-blue); stroke-width: 2; filter: url(#sketch-filter); stroke-linejoin: round; }
+.tc-celula-ativa { fill: color-mix(in srgb, var(--vs-blue) 26%, transparent); stroke-width: 3.5; filter: url(#sketch-filter-heavy); }
