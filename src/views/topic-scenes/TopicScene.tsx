@@ -5,6 +5,9 @@ import { EscalaDeGraus } from './families/EscalaDeGraus';
 import { CadeiaDeDerivacao } from './families/CadeiaDeDerivacao';
 import { CamadasDeDeterminacao } from './families/CamadasDeDeterminacao';
 import { MovimentoDialetico } from './families/MovimentoDialetico';
+import { Tipologia } from './families/Tipologia';
+import { CriteriosConjuntivos } from './families/CriteriosConjuntivos';
+import { GradeDeEixos } from './families/GradeDeEixos';
 import type { SceneEntry, SceneFamily } from './types';
 
 const FAMILIAS: Record<SceneFamily, React.ComponentType<{ entry: SceneEntry }>> = {
@@ -13,6 +16,9 @@ const FAMILIAS: Record<SceneFamily, React.ComponentType<{ entry: SceneEntry }>> 
   'cadeia-de-derivacao': CadeiaDeDerivacao,
   'camadas-de-determinacao': CamadasDeDeterminacao,
   'movimento-dialetico': MovimentoDialetico,
+  tipologia: Tipologia,
+  'criterios-conjuntivos': CriteriosConjuntivos,
+  'grade-de-eixos': GradeDeEixos,
 };
 export function TopicScene({ summaryId }: { summaryId: string }) {
   const entry = sceneFor(summaryId);

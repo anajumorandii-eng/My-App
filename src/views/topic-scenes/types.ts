@@ -6,7 +6,10 @@ export type SceneFamily =
   | 'escala-de-graus'
   | 'cadeia-de-derivacao'
   | 'camadas-de-determinacao'
-  | 'movimento-dialetico';
+  | 'movimento-dialetico'
+  | 'tipologia'
+  | 'criterios-conjuntivos'
+  | 'grade-de-eixos';
 
 /** Uma afirmação da cena e o trecho do capítulo que a sustenta. */
 export interface SceneItem {
@@ -18,6 +21,21 @@ export interface SceneItem {
   section: string;
   /** Trecho literal daquela seção que sustenta o claim. */
   quote: string;
+  /**
+   * Só usado por `grade-de-eixos`: em qual polo de cada eixo este item
+   * vive. `eixoA`/`eixoB` indexam `SceneEntry.eixos.a.polos` /
+   * `.b.polos` (0 = primeiro polo, 1 = segundo). Um item sem `celula`
+   * não participa da grade.
+   */
+  celula?: { eixoA: 0 | 1; eixoB: 0 | 1 };
+}
+
+/** Um eixo da grade: seu nome e os dois polos que o percorrem. Só
+ *  `grade-de-eixos` usa isto — os eixos, não os quatro rótulos
+ *  resultantes, são o conteúdo que a cena precisa ensinar. */
+export interface SceneEixo {
+  nome: string;
+  polos: [string, string];
 }
 
 export interface SceneEntry {
@@ -29,6 +47,16 @@ export interface SceneEntry {
   items: SceneItem[];
   /** Legenda do eixo da escala. Só as famílias de escala usam. */
   eixo?: string;
+  /**
+   * Nota de honestidade sobre o estatuto dos tipos (ex.: "são tipos
+   * ideais; casos reais combinam mais de um"). Só `tipologia` usa isto.
+   * Vem do capítulo, nunca é inventada pelo componente; sem `nota`,
+   * nada é renderizado no lugar dela.
+   */
+  nota?: string;
+  /** Os dois eixos independentes cujo cruzamento gera as células.
+   *  Só `grade-de-eixos` usa isto. */
+  eixos?: { a: SceneEixo; b: SceneEixo };
 }
 
 export type LastroReason = 'capitulo-ausente' | 'secao-ausente' | 'trecho-ausente';

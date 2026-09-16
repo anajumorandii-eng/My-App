@@ -100,3 +100,37 @@
 .tc-momento-um { fill: color-mix(in srgb, var(--vs-blue) 18%, transparent); stroke: var(--vs-blue); }
 .tc-momento-dois { fill: color-mix(in srgb, var(--vs-amber) 20%, transparent); stroke: var(--vs-amber); }
 .tc-ciclo { fill: none; stroke: var(--vs-burgundy); stroke-width: 2.5; stroke-linecap: round; }
+
+.tc-tipo { fill: color-mix(in srgb, var(--vs-blue) 14%, transparent); stroke: var(--vs-blue); stroke-width: 1.5; }
+.tc-tipo-foco { fill: color-mix(in srgb, var(--vs-blue) 30%, transparent); stroke-width: 2.5; }
+.tc-nota {
+  margin: 0;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.85rem;
+  font-style: italic;
+  color: color-mix(in srgb, var(--vs-burgundy) 82%, transparent);
+  background: color-mix(in srgb, var(--vs-burgundy) 8%, transparent);
+  border-left: 2px solid color-mix(in srgb, var(--vs-burgundy) 60%, transparent);
+}
+
+.tc-criterio { fill: color-mix(in srgb, var(--vs-blue) 8%, transparent); stroke: var(--vs-blue); stroke-width: 1.2; opacity: 0.6; }
+.tc-criterio-ativo { fill: color-mix(in srgb, var(--vs-blue) 24%, transparent); stroke-width: 2.2; opacity: 1; }
+.tc-veredito-barra { fill: var(--vs-amber); }
+
+.tc-eixos { display: flex; flex-wrap: wrap; gap: 1rem; }
+.tc-eixo {
+  display: grid;
+  gap: 0.4rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.tc-eixo legend {
+  padding: 0;
+  font-family: var(--font-editorial, Newsreader), serif;
+  font-style: italic;
+  font-size: 0.85rem;
+  color: color-mix(in srgb, var(--vs-burgundy) 78%, transparent);
+}
+.tc-celula { fill: color-mix(in srgb, var(--vs-blue) 10%, transparent); stroke: var(--vs-blue); stroke-width: 1.2; }
+.tc-celula-ativa { fill: color-mix(in srgb, var(--vs-blue) 26%, transparent); stroke-width: 2.4; }
