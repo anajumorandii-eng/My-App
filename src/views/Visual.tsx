@@ -3,6 +3,24 @@ import { AnimatePresence, motion, useReducedMotion } from 'motion/react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { ArrowLeft, Compass, HelpCircle, RotateCcw, Search, Undo2, Waypoints, X } from 'lucide-react';
 import { interactiveSummaries } from '../data/interactiveSummaries';
+import {
+  FisicaIcon, AtualidadesIcon, BiologiaIcon, GeografiaIcon, HistoriaIcon,
+  InglesIcon, RedacaoIcon, GramaticaIcon, LiteraturaIcon, EntendimentoIcon,
+  MatematicaIcon, QuimicaIcon, FilosofiaIcon, SociologiaIcon
+} from '../components/subject-icons/SubjectIcons';
+import { GenerativeTopicIcon } from '../components/subject-icons/GenerativeTopicIcon';
+
+function SubjectIcon({ subject, ...props }: { subject: string } & React.SVGProps<SVGSVGElement>) {
+  const Icon = {
+    'Física': FisicaIcon, 'Matemática': MatematicaIcon, 'Biologia': BiologiaIcon,
+    'Química': QuimicaIcon, 'História': HistoriaIcon, 'Geografia': GeografiaIcon,
+    'Língua Inglesa': InglesIcon, 'Gramática': GramaticaIcon,
+    'Entendimento de Texto': EntendimentoIcon, 'Literatura': LiteraturaIcon,
+    'Redação': RedacaoIcon, 'Atualidades': AtualidadesIcon,
+    'Filosofia': FilosofiaIcon, 'Sociologia': SociologiaIcon
+  }[subject] ?? MatematicaIcon;
+  return <Icon {...props} />;
+}
 import { evaluateRetrievalAnswer } from '../lib/summaryEngine';
 import { applySummaryAttempt } from '../lib/summaryStudy';
 import { useSummaryProgress } from '../hooks/useSummaryProgress';
@@ -149,11 +167,19 @@ function VisualLibrary({ onOpen }: { onOpen: (id: string) => void }) {
                 onClick={() => onOpen(item.id)}
                 className="w-full rounded-2xl border border-zinc-200 bg-white p-4 text-left transition hover:border-indigo-400 dark:border-zinc-800 dark:bg-zinc-900"
               >
-                <span className="text-xs font-bold uppercase tracking-wide text-indigo-600 dark:text-indigo-400">
-                  {item.subject} · {item.topic}
-                </span>
-                <span className="mt-1 block font-bold">{item.title}</span>
-                <span className="mt-1 block text-sm text-zinc-500">{item.sections.length} nós · {item.retrieval[0]?.expectedElements.length ?? 0} relações</span>
+                  <div className="flex items-start gap-4">
+                    <div className="relative shrink-0 w-12 h-12 rounded-xl bg-zinc-100/50 p-2 dark:bg-zinc-800/50">
+                      <SubjectIcon subject={item.subject} strokeWidth={1.5} className="absolute inset-2 text-zinc-400/50" />
+                      <GenerativeTopicIcon topic={item.topic} strokeWidth={1.5} className="absolute right-0 bottom-0 w-8 h-8 text-indigo-500" />
+                    </div>
+                    <div>
+                      <span className="text-xs font-bold uppercase tracking-wide text-indigo-600 dark:text-indigo-400">
+                        {item.subject} • {item.topic}
+                      </span>
+                      <span className="mt-1 block font-bold">{item.title}</span>
+                      <span className="mt-1 block text-sm text-zinc-500">{item.sections.length} nós • {item.retrieval[0]?.expectedElements.length ?? 0} relações</span>
+                    </div>
+                  </div>
               </button>
             </li>
           ))}
