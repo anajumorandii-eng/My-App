@@ -9,7 +9,229 @@ import type { SceneEntry } from '../types';
  *  docs/visual-personalizado/11-familias-literatura.md; esta lista de lacunas
  *  já reflete essa leitura por completo, para que a próxima Task só precise
  *  escrever as 8 entradas com família, sem redecidir nada. */
-export const literatura: SceneEntry[] = [];
+export const literatura: SceneEntry[] = [
+  {
+    chapterId: 'summary-literatura-segunda-geracao-modernista-prosa',
+    family: 'contraste-de-posicoes',
+    question: 'O interior brasileiro é cenário pitoresco a ser idealizado, ou condição material que determina a vida de quem nele vive?',
+    items: [
+      {
+        label: 'Regionalismo romântico',
+        claim: 'idealizava o interior, tratando-o como cenário pitoresco em vez de condição real de vida',
+        section: 'Regionalismo crítico',
+        quote: 'Diferente do regionalismo romântico, que idealizava o interior, o romance de 30 expõe a exploração, a fome e a violência estrutural.',
+      },
+      {
+        label: 'Romance de 30',
+        claim: 'rejeita o cenário pitoresco: a paisagem é condição que determina a vida das personagens, marcada por exploração, fome e violência estrutural',
+        section: 'Regionalismo crítico',
+        quote: 'A paisagem não é cenário pitoresco, mas condição que determina a vida das personagens, e a linguagem incorpora falares regionais sem tratá-los como curiosidade.',
+      },
+    ],
+  },
+  {
+    chapterId: 'summary-literatura-a-estetica-romantica-prosa',
+    family: 'tipologia',
+    question: 'Em que vertentes se divide a prosa romântica brasileira, e o que todas elas têm em comum?',
+    nota: 'Em todas as vertentes, o projeto é o mesmo: construir uma literatura nacional com temas e cenários brasileiros.',
+    items: [
+      {
+        label: 'Urbano',
+        claim: 'retrata a vida da corte e os costumes da elite carioca',
+        section: 'Romance urbano e indianista',
+        quote: 'O romance urbano retrata a vida da corte e os costumes da elite carioca, como em Senhora e Lucíola, de José de Alencar.',
+      },
+      {
+        label: 'Indianista',
+        claim: 'constrói o mito de origem nacional, com casais interétnicos como alegoria de fundação',
+        section: 'Romance urbano e indianista',
+        quote: 'O indianista constrói o mito de origem nacional, como em Iracema e O Guarani, com casais interétnicos como alegoria de fundação.',
+      },
+      {
+        label: 'Regionalista',
+        claim: 'descreve tipos e paisagens do interior',
+        section: 'Regionalista e histórico',
+        quote: 'O romance regionalista descreve tipos e paisagens do interior, como em O Sertanejo e O Gaúcho',
+      },
+      {
+        label: 'Histórico',
+        claim: 'recria episódios do passado colonial',
+        section: 'Regionalista e histórico',
+        quote: 'o histórico recria episódios do passado colonial, como em As Minas de Prata',
+      },
+    ],
+  },
+  {
+    chapterId: 'summary-literatura-fernando-pessoa',
+    family: 'tipologia',
+    question: 'Que visões de mundo distintas e completas Pessoa criou através de seus heterônimos?',
+    nota: 'O heterônimo tem biografia, estilo, temas e concepção de mundo próprios, funcionando como outro poeta — não é apenas outro nome para o mesmo autor.',
+    items: [
+      {
+        label: 'Alberto Caeiro',
+        claim: 'é o mestre bucólico do olhar sem metafísica: ver as coisas como são, sem interpretar',
+        section: 'Os três principais',
+        quote: 'Alberto Caeiro é o mestre bucólico do olhar sem metafísica: ver as coisas como são, sem interpretar.',
+      },
+      {
+        label: 'Ricardo Reis',
+        claim: 'é o clássico epicurista e estoico, com odes sobre a aceitação do destino',
+        section: 'Os três principais',
+        quote: 'Ricardo Reis é o clássico epicurista e estoico, com odes de métrica contida sobre a aceitação do destino.',
+      },
+      {
+        label: 'Álvaro de Campos',
+        claim: 'passa da exaltação futurista da máquina ao tédio e à desilusão',
+        section: 'Os três principais',
+        quote: 'Álvaro de Campos passa da exaltação futurista da máquina ao tédio e à desilusão.',
+      },
+    ],
+  },
+  {
+    chapterId: 'summary-literatura-trovadorismo-e-humanismo',
+    family: 'tipologia',
+    question: 'Em que tipos se dividem as cantigas líricas e as cantigas satíricas do Trovadorismo?',
+    items: [
+      {
+        label: 'Cantiga de amor',
+        claim: 'eu lírico masculino em vassalagem amorosa à dama inacessível',
+        section: 'Trovadorismo',
+        quote: 'cantiga de amor, com eu lírico masculino em vassalagem amorosa à dama inacessível',
+      },
+      {
+        label: 'Cantiga de amigo',
+        claim: 'eu lírico feminino, ambiente rural e tom popular',
+        section: 'Trovadorismo',
+        quote: 'cantiga de amigo, com eu lírico feminino, ambiente rural e tom popular',
+      },
+      {
+        label: 'Cantiga de escárnio',
+        claim: 'crítica indireta e ironia, sem identificar o alvo',
+        section: 'Cantigas satíricas',
+        quote: 'cantiga de escárnio, com crítica indireta e ironia, sem identificar o alvo',
+      },
+      {
+        label: 'Cantiga de maldizer',
+        claim: 'crítica direta, com nome explícito e linguagem agressiva',
+        section: 'Cantigas satíricas',
+        quote: 'cantiga de maldizer, com crítica direta, nome explícito e linguagem agressiva',
+      },
+    ],
+  },
+  {
+    chapterId: 'summary-literatura-vanguardas-artisticas',
+    family: 'tipologia',
+    question: 'Que procedimentos distintos cada vanguarda europeia do início do século XX escolheu para romper com a representação tradicional?',
+    items: [
+      {
+        label: 'Futurismo',
+        claim: 'exalta a máquina, a velocidade e a guerra',
+        section: 'As principais correntes',
+        quote: 'O Futurismo exalta a máquina, a velocidade e a guerra, com Marinetti.',
+      },
+      {
+        label: 'Cubismo',
+        claim: 'decompõe o objeto em planos simultâneos',
+        section: 'As principais correntes',
+        quote: 'O Cubismo decompõe o objeto em planos simultâneos, com Picasso.',
+      },
+      {
+        label: 'Expressionismo',
+        claim: 'deforma para expressar angústia',
+        section: 'As principais correntes',
+        quote: 'O Expressionismo deforma para expressar angústia.',
+      },
+      {
+        label: 'Dadaísmo',
+        claim: 'nega a própria arte com o acaso e o absurdo',
+        section: 'As principais correntes',
+        quote: 'O Dadaísmo nega a própria arte com o acaso e o absurdo.',
+      },
+      {
+        label: 'Surrealismo',
+        claim: 'explora o inconsciente, o sonho e a escrita automática',
+        section: 'As principais correntes',
+        quote: 'O Surrealismo explora o inconsciente, o sonho e a escrita automática.',
+      },
+    ],
+  },
+  {
+    chapterId: 'summary-literatura-poesia-brasileira-contemporanea',
+    family: 'tipologia',
+    question: 'Já que a poesia brasileira recente não tem escola dominante, que vertentes convivem sem hierarquia entre si?',
+    nota: 'Buscar uma escola dominante para o período é o erro conceitual central: a pluralidade é a característica.',
+    items: [
+      {
+        label: 'Sem movimento dominante',
+        claim: 'a poesia das últimas décadas não se organiza em torno de um movimento dominante',
+        section: 'Pluralidade',
+        quote: 'A poesia brasileira das últimas décadas não se organiza em torno de um movimento dominante.',
+      },
+      {
+        label: 'Slam e oralidade',
+        claim: 'recoloca a performance no centro: o poema é escrito para ser dito, com atenção ao ritmo e à interação com o público',
+        section: 'Slam e oralidade',
+        quote: 'o poema é escrito para ser dito, com atenção ao ritmo, à respiração e à interação com o público',
+      },
+      {
+        label: 'Circulação digital',
+        claim: 'a internet permite publicação sem intermediários, ampliando o alcance de autores fora do circuito editorial',
+        section: 'Circulação',
+        quote: 'A internet alterou a circulação: redes sociais, blogs e plataformas permitem publicação sem intermediários, ampliando o alcance de autores fora do circuito editorial.',
+      },
+    ],
+  },
+  {
+    chapterId: 'summary-literatura-poesia-brasileira-1960-1980',
+    family: 'tipologia',
+    question: 'Além da poesia marginal, que outras vertentes convivem na poesia brasileira de 1960 a 1980?',
+    items: [
+      {
+        label: 'Concretismo, poema-processo e práxis',
+        claim: 'convivem no período o desdobramento do concretismo, o poema-processo e a poesia práxis',
+        section: 'Outras vertentes',
+        quote: 'Convivem no período o desdobramento do concretismo, o poema-processo, a poesia práxis',
+      },
+      {
+        label: 'Ferreira Gullar',
+        claim: 'passa do concretismo ao Poema Sujo, escrito no exílio',
+        section: 'Outras vertentes',
+        quote: 'a produção de Ferreira Gullar, que passa do concretismo ao Poema Sujo, escrito no exílio',
+      },
+      {
+        label: 'Adélia Prado',
+        claim: 'traz lirismo do cotidiano e do corpo, ampliando as vozes reconhecidas na poesia brasileira',
+        section: 'Outras vertentes',
+        quote: 'a obra de Adélia Prado, com lirismo do cotidiano e do corpo, ampliando as vozes reconhecidas na poesia brasileira',
+      },
+    ],
+  },
+  {
+    chapterId: 'summary-literatura-prosa-brasileira-contemporanea',
+    family: 'tipologia',
+    question: 'Que formas narrativas convivem na prosa brasileira contemporânea?',
+    items: [
+      {
+        label: 'Realismo e fragmentação',
+        claim: 'convivem o realismo, a autoficção e a fragmentação',
+        section: 'Formas',
+        quote: 'Convivem o realismo, a autoficção, a fragmentação',
+      },
+      {
+        label: 'Hibridação com jornalismo e ensaio',
+        claim: 'a prosa se hibridiza com jornalismo e ensaio',
+        section: 'Formas',
+        quote: 'a hibridação com jornalismo e ensaio',
+      },
+      {
+        label: 'Linguagens digitais',
+        claim: 'incorpora linguagens digitais',
+        section: 'Formas',
+        quote: 'a incorporação de linguagens digitais',
+      },
+    ],
+  },
+];
 
 export const literaturaSemCena: { chapterId: string; motivo: string }[] = [
   {
