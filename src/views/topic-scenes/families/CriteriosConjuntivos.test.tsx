@@ -47,7 +47,7 @@ describe('Critérios conjuntivos', () => {
     expect(screen.getByText(/preexiste ao indivíduo/)).toBeInTheDocument();
   });
 
-  it('deixa explícito que os critérios valem em conjunto: derrubar um muda o veredito de válido para incompleto', () => {
+  it('deixa explícito que os critérios valem em conjunto: derrubar um muda o veredito', () => {
     render(<CriteriosConjuntivos entry={entry} />);
     fireEvent.click(screen.getByRole('button', { name: 'Exterioridade' }));
     fireEvent.click(screen.getByRole('button', { name: 'Coercitividade' }));

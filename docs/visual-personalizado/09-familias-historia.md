@@ -511,13 +511,24 @@ entradas + 16 lacunas, cada capítulo exatamente uma vez.
    não lastreada.** Em `camadas-de-determinacao` a relação base→camada *é* o
    conteúdo da cena, e as camadas 3 e 4 traziam o conector ("esse contexto
    sustentou") apenas no `claim`: as citações de Leonardo e da perspectiva
-   linear não diziam nada sobre serem determinadas pelo mecenato.
-   **Reancoradas as quatro camadas em trechos que carregam a determinação**:
-   a base passa a citar a frase que a nomeia como "condição econômica
-   estrutural necessária (ainda que não suficiente isoladamente)" — que ainda
-   desclama a suficiência —, e a camada da arte passa a citar "A arte
-   renascentista desenvolveu técnicas e temáticas que refletiam diretamente os
-   valores humanistas".
+   linear não diziam nada sobre serem determinadas pelo mecenato. **Correção
+   aplicada de forma desigual entre as camadas** — a base passa a citar a
+   frase que a nomeia como "condição econômica estrutural necessária (ainda
+   que não suficiente isoladamente)" — a melhor frase de determinação do
+   capítulo, e que ainda desclama a suficiência —, e a camada da arte passa a
+   citar "A arte renascentista... refletiam diretamente os valores
+   humanistas", que liga arte a humanismo, não a riqueza. A camada do
+   Humanismo continua sem nenhuma frase de determinação: em vez de mantê-la
+   chumbada a um conector inventado, o conector foi removido, mas a lacuna
+   não foi preenchida — `CamadasDeDeterminacao.tsx` ainda renderiza a seta e o
+   `aria-label` "Riqueza comercial determina Humanismo" sem citação que
+   sustente essa frase específica. Melhoria real (a afirmação fabricada
+   sumiu), correção incompleta (uma camada ainda não tem lastro de
+   determinação). Nota lateral: a base voltou a citar "Pratique e confira",
+   revertendo a decisão registrada linhas acima que a tinha movido para o
+   corpo do capítulo — reversão defensável (a frase do Pratique é estritamente
+   melhor evidência), mas devia ter sido declarada como reversão, não como
+   continuidade.
 
 5. **`historia-o-nazismo-na-alemanha` — item duplicando outro.** O `claim` do
    item "Hiperinflação de 1923" afirmava também a Grande Depressão, que é o
@@ -529,8 +540,15 @@ entradas + 16 lacunas, cada capítulo exatamente uma vez.
 
 6. **`historia-a-primeira-republica-o-declinio-oligarquico-1889-1930` — a
    `question` prometia o que nenhum item entrega** ("até a crise de 1930
-   rompê-lo"; nenhum item cobre a ruptura). Pergunta reescrita para o que a
-   cena de fato mostra.
+   rompê-lo"; nenhum item cobre a ruptura). Pergunta reescrita para "Como o
+   domínio da elite cafeeira condicionava o que tenentismo, movimento operário
+   e modernismo contestavam?" — mas essa versão nova ainda cobre só o item
+   Tenentismo com lastro direto ("a subordinação política e militar aos
+   interesses das elites cafeeiras"); os itens Movimento operário e
+   Modernismo não têm citação que os ligue à base cafeeira. Melhoria real (o
+   exagero da ruptura de 1930 sumiu), mas a entrada fica, como A Independência
+   do Brasil, entre as mais marginais da fase — registrada aqui como tal, não
+   como caso fechado.
 
 7. **`CriteriosConjuntivos.tsx` — texto fixo afirmando algo específico de
    matéria.** O veredito era `Conceito válido: reúne ...` / `Conceito
