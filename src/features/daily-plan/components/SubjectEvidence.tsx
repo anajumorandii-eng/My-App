@@ -2,53 +2,45 @@
 
 import { AnimatePresence, motion, useReducedMotion } from 'motion/react';
 import {
-  FisicaIcon,
-  AtualidadesIcon,
-  BiologiaIcon,
-  GeografiaIcon,
-  HistoriaIcon,
-  InglesIcon,
-  RedacaoIcon,
-  GramaticaIcon,
-  LiteraturaIcon,
-  EntendimentoIcon,
-  MatematicaIcon,
-  QuimicaIcon,
-  FilosofiaIcon,
-  SociologiaIcon,
-} from '../../../components/subject-icons/SubjectIcons';
-
+  Aperture, BookText, ChartSpline, Dna, FilePenLine, FlaskConical, Landmark,
+  Map, Newspaper, TextQuote, type LucideIcon,
+} from 'lucide-react';
+import physicsDossier from '../../../assets/subject-dossiers/fisica-dossie-v5.png';
+import mathematicsDossier from '../../../assets/subject-dossiers/matematica-dossie-v4.webp';
+import biologyDossier from '../../../assets/subject-dossiers/biologia-dossie-v4.webp';
+import chemistryDossier from '../../../assets/subject-dossiers/quimica-dossie-v4.webp';
+import historyDossier from '../../../assets/subject-dossiers/historia-dossie-v4.webp';
+import geographyDossier from '../../../assets/subject-dossiers/geografia-dossie-v4.webp';
+import portugueseDossier from '../../../assets/subject-dossiers/portugues-dossie-v4.webp';
+import literatureDossier from '../../../assets/subject-dossiers/literatura-dossie-v4.webp';
+import writingDossier from '../../../assets/subject-dossiers/redacao-dossie-v4.webp';
+import currentAffairsDossier from '../../../assets/subject-dossiers/atualidades-dossie-v4.webp';
 import { MOTION_DURATION, MOTION_EASE_EMPHASIZED } from '../../../design-system/motion/tokens';
 
 type EvidenceDefinition = {
-  icon: React.ComponentType<any>;
+  icon: LucideIcon;
   label: string;
+  dossier?: string;
   artifact: string;
 };
 
 /** The selector and evidence stage share a single subject registry. */
 export const SUBJECT_EVIDENCE: Record<string, EvidenceDefinition> = {
-  Física: { icon: FisicaIcon, label: 'Bancada óptica', artifact: 'caderno de experimento óptico' },
-  Matemática: { icon: MatematicaIcon, label: 'Construção matemática', artifact: 'prancha de demonstração matemática' },
-  Biologia: { icon: BiologiaIcon, label: 'Mapa biológico', artifact: 'arquivo de espécimes e relações biológicas' },
-  Química: { icon: QuimicaIcon, label: 'Caderno de reação', artifact: 'caderno de evidências de reação' },
-  História: { icon: HistoriaIcon, label: 'Caderno de evidências', artifact: 'dossiê histórico de linha do tempo' },
-  Geografia: { icon: GeografiaIcon, label: 'Leitura de território', artifact: 'dossiê cartográfico de território' },
-  'Língua Inglesa': { icon: InglesIcon, label: 'Arquitetura idiomática', artifact: 'arquivo de estruturas idiomáticas' },
-  Gramática: { icon: GramaticaIcon, label: 'Estrutura gramatical', artifact: 'arquivo de normas gramaticais' },
-  'Entendimento de Texto': { icon: EntendimentoIcon, label: 'Análise discursiva', artifact: 'dossiê de análise de texto' },
-  Literatura: { icon: LiteraturaIcon, label: 'Arquivo literário', artifact: 'arquivo de leitura literária' },
-  Redação: { icon: RedacaoIcon, label: 'Mapa argumentativo', artifact: 'dossiê de construção argumentativa' },
-  Atualidades: { icon: AtualidadesIcon, label: 'Linha de contexto', artifact: 'arquivo de evidências contemporâneas' },
-  Filosofia: { icon: FilosofiaIcon, label: 'Cadeia de raciocínio', artifact: 'registro de investigação filosófica' },
-  Sociologia: { icon: SociologiaIcon, label: 'Dinâmica social', artifact: 'dossiê de fenômenos sociais' },
+  Física: { icon: Aperture, label: 'Bancada óptica', dossier: physicsDossier, artifact: 'caderno de experimento óptico' },
+  Matemática: { icon: ChartSpline, label: 'Construção matemática', dossier: mathematicsDossier, artifact: 'prancha de demonstração matemática' },
+  Biologia: { icon: Dna, label: 'Mapa biológico', dossier: biologyDossier, artifact: 'arquivo de espécimes e relações biológicas' },
+  Química: { icon: FlaskConical, label: 'Caderno de reação', dossier: chemistryDossier, artifact: 'caderno de evidências de reação' },
+  História: { icon: Landmark, label: 'Caderno de evidências', dossier: historyDossier, artifact: 'dossiê histórico de linha do tempo' },
+  Geografia: { icon: Map, label: 'Leitura de território', dossier: geographyDossier, artifact: 'dossiê cartográfico de território' },
+  Português: { icon: TextQuote, label: 'Arquitetura da frase', dossier: portugueseDossier, artifact: 'arquivo de construção da frase' },
+  Literatura: { icon: BookText, label: 'Arquivo literário', dossier: literatureDossier, artifact: 'arquivo de leitura literária' },
+  Redação: { icon: FilePenLine, label: 'Mapa argumentativo', dossier: writingDossier, artifact: 'dossiê de construção argumentativa' },
+  Atualidades: { icon: Newspaper, label: 'Linha de contexto', dossier: currentAffairsDossier, artifact: 'arquivo de evidências contemporâneas' },
 };
 
 export function subjectEvidenceFor(subject: string): EvidenceDefinition {
   return SUBJECT_EVIDENCE[subject] ?? SUBJECT_EVIDENCE.Matemática;
 }
-
-import { GenerativeTopicIcon } from '../../../components/subject-icons/GenerativeTopicIcon';
 
 export function SubjectEvidence({ subject, topic, subdued = false }: { subject: string; topic: string; subdued?: boolean }) {
   const reducedMotion = useReducedMotion();
@@ -89,14 +81,14 @@ export function SubjectEvidence({ subject, topic, subdued = false }: { subject: 
             exit={reducedMotion ? { opacity: 0 } : { opacity: 0, x: -34, y: -14, rotate: -2 }}
             transition={{ duration: reducedMotion ? MOTION_DURATION.subjectTween : 0.5, delay: reducedMotion ? 0 : 0.16, ease: MOTION_EASE_EMPHASIZED }}
           >
-            <div className="subject-dossier__animated" data-subject={subject} aria-hidden="true">
-              <evidence.icon strokeWidth={1.2} style={{ position: 'absolute', right: '28px', top: '26px', width: '62px', height: '62px', opacity: 0.75 }} />
-              <GenerativeTopicIcon topic={topic} strokeWidth={1} style={{ position: 'absolute', right: '30px', bottom: '26px', width: '42px', height: '42px', opacity: 0.45 }} />
-              <span style={{ position: 'relative', zIndex: 1 }}>{evidence.label}</span>
-              <i style={{ position: 'relative', zIndex: 1 }} />
-              <b style={{ position: 'relative', zIndex: 1 }}>{evidence.artifact}</b>
-              <em /><em /><em />
-            </div>
+            {evidence.dossier ? (
+              <img src={evidence.dossier} alt="" aria-hidden="true" />
+            ) : (
+              <div className="subject-dossier__pending" data-subject={subject} aria-hidden="true">
+                <evidence.icon strokeWidth={1.2} />
+                <span>{evidence.label}</span><i /><b>{evidence.artifact}</b><em /><em /><em />
+              </div>
+            )}
           </motion.div>
           <figcaption className="sr-only">{evidence.artifact} para {topic}</figcaption>
         </motion.figure>
