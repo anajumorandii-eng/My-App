@@ -72,6 +72,10 @@ export const historiaSemCena: { chapterId: string; motivo: string }[] = [
     chapterId: 'summary-historia-regime-militar-1964-1985-ii',
     motivo: 'A abertura controlada (1974-1979) e a crise econômica do início dos anos 1980 estão em sequência temporal, mas o texto atribui a crise ao esgotamento do "milagre econômico" do capítulo anterior, não à abertura política deste capítulo. A suposta ligação entre a crise econômica e o movimento Diretas Já também não está no texto: a única frase sobre o efeito da crise fala em desgaste do apoio popular ao regime em geral, não em impulso às Diretas Já especificamente. Sem essas duas ligações, o capítulo é melhor descrito como periodização. Mesmo padrão de historia-a-republica-da-espada.',
   },
+  {
+    chapterId: 'summary-historia-grandes-revolucoes-do-seculo-xx',
+    motivo: 'As três revoluções (Russa, Mexicana, Chinesa) são narradas em seções independentes, sem frase-guarda-chuva nomeando "modelos revolucionários" como categoria comum às três. A única frase categorial do capítulo é um contraste bilateral, dentro da própria seção "Revolução Chinesa", entre o modelo soviético e o chinês ("Diferente do modelo revolucionário soviético, centrado primordialmente no proletariado urbano industrial [...] a estratégia comunista chinesa mobilizou principalmente o campesinato rural") — e essa frase nunca menciona o México. A seção "Revolução Russa" não contém nenhuma citação sobre "modelo soviético"; esse rótulo só existe citado de segunda mão dentro da seção chinesa. Forçar um terceiro tipo (mexicano) exigiria inventar uma frase-guarda-chuva que o capítulo não tem, e a única categoria genuína presente (soviético vs. chinês, por base social) não é o que o capítulo apresenta como fenômeno central. Mesmo raciocínio já usado (corretamente) em historia-disputas-europeias-no-brasil-colonial.',
+  },
 ];
 
 /** Task 1 não escreve cenas — apenas o inventário e o esqueleto. As Tasks
@@ -757,31 +761,6 @@ export const historia: SceneEntry[] = [
     ],
   },
   {
-    chapterId: 'summary-historia-grandes-revolucoes-do-seculo-xx',
-    family: 'tipologia',
-    question: 'Que modelos paralelos de revolução mobilizaram bases sociais diferentes no século XX?',
-    items: [
-      {
-        label: 'Modelo soviético',
-        claim: 'a Revolução Russa foi tomada como modelo centrado primordialmente no proletariado urbano industrial das cidades como classe revolucionária central',
-        section: 'Revolução Chinesa',
-        quote: 'Diferente do modelo revolucionário soviético, centrado primordialmente no proletariado urbano industrial das cidades como classe revolucionária central, a estratégia comunista chinesa mobilizou principalmente o campesinato rural, então esmagadora maioria da população chinesa total, numa adaptação teórica e estratégica significativa do marxismo tradicional às condições específicas de um país majoritariamente agrário e ainda pouco industrializado.',
-      },
-      {
-        label: 'Modelo mexicano',
-        claim: 'a Revolução Mexicana envolveu coalizão heterogênea de lideranças regionais com projetos distintos — Madero liberal moderado, Zapata camponês radical e Villa militar carismático',
-        section: 'Revolução Mexicana',
-        quote: 'envolveu coalizão heterogênea e frequentemente conflitante de diferentes lideranças regionais com projetos políticos e sociais distintos entre si, incluindo Francisco Madero (liberal moderado que inicialmente liderou a derrubada de Díaz), Emiliano Zapata (líder camponês do sul mexicano, defensor de reforma agrária radical sob o lema "Terra e Liberdade") e Pancho Villa (líder militar do norte mexicano, com base de apoio popular própria e estilo de liderança mais pessoal e carismático)',
-      },
-      {
-        label: 'Modelo chinês',
-        claim: 'a estratégia comunista chinesa mobilizou principalmente o campesinato rural, adaptando o marxismo tradicional às condições de um país majoritariamente agrário',
-        section: 'Revolução Chinesa',
-        quote: 'Diferente do modelo revolucionário soviético, centrado primordialmente no proletariado urbano industrial das cidades como classe revolucionária central, a estratégia comunista chinesa mobilizou principalmente o campesinato rural, então esmagadora maioria da população chinesa total, numa adaptação teórica e estratégica significativa do marxismo tradicional às condições específicas de um país majoritariamente agrário e ainda pouco industrializado.',
-      },
-    ],
-  },
-  {
     chapterId: 'summary-historia-antiguidade-classica-o-mundo-grego',
     family: 'tipologia',
     question: 'Que tipos de pólis coexistiam sob a mesma identidade helênica, cada uma organizada de forma diferente?',
@@ -923,7 +902,7 @@ export const historia: SceneEntry[] = [
     items: [
       {
         label: 'Hiperinflação de 1923',
-        claim: 'a hiperinflação catastrófica de 1923 gerou desemprego massivo e desespero econômico, criando terreno fértil para discursos políticos radicais',
+        claim: 'a hiperinflação de 1923, somada à Grande Depressão de 1929, gerou desemprego massivo e desespero econômico, criando terreno fértil para discursos políticos radicais',
         section: 'Bases da ascensão',
         quote: 'A hiperinflação catastrófica de 1923 e, posteriormente, a Grande Depressão de 1929 (que atingiu a Alemanha com particular severidade, dado seu já fragilizado sistema financeiro fortemente dependente de empréstimos e investimentos americanos que se retraíram abruptamente com a crise) geraram desemprego massivo e desespero econômico generalizado entre a população alemã, criando terreno fértil para discursos políticos radicais que prometiam soluções simples, embora falsas e perigosas, e culpados específicos (identificados especialmente na comunidade judaica alemã) para problemas econômicos e sociais estruturalmente complexos.',
       },

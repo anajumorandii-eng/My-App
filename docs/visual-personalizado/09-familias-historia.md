@@ -215,7 +215,7 @@ sob leitura mais rigorosa, a família que a primeira correção lhes atribuiu.)
   intacto" — apenas que a posição católica final não é a pré-Reforma nem a
   simples rejeição da crítica protestante.
 
-### `tipologia` (Fase 2 — 9 capítulos)
+### `tipologia` (Fase 2 — 8 capítulos)
 
 Tipos paralelos que não competem pela mesma resposta — cada um é uma forma
 coexistente do mesmo fenômeno mais amplo, sempre com uma frase-guarda-chuva
@@ -227,11 +227,6 @@ explícita nomeando a categoria antes de enumerar as instâncias.
   revolta regencial: Cabanagem, Farroupilha, Sabinada, Balaiada.
 - **`historia-descolonizacao-afro-asiatica`** — tipos de trajetória de
   descolonização: negociada (Índia) versus guerra de libertação (Argélia).
-- **`historia-grandes-revolucoes-do-seculo-xx`** — modelos de revolução:
-  soviético (proletariado urbano), mexicano (coalizão heterogênea), chinês
-  (campesinato rural). Frase-fonte: *"Diferente do modelo revolucionário
-  soviético [...] a estratégia comunista chinesa mobilizou principalmente o
-  campesinato rural [...] uma adaptação teórica e estratégica significativa."*
 - **`historia-antiguidade-classica-o-mundo-grego`** — frase-guarda-chuva:
   *"um mosaico de cidades-Estado (poleis) independentes entre si [...] unidas
   por elementos culturais compartilhados."* Atenas e Esparta são duas pólis
@@ -333,19 +328,40 @@ completo em `src/views/topic-scenes/data/historia.ts` (nenhuma usa mais
   decisória.
 - `historia-segunda-guerra-mundial-1939-1945` — frentes europeia e do
   Pacífico avançam em paralelo, sem dependência estrita entre si.
+- `historia-grandes-revolucoes-do-seculo-xx` — as três revoluções (Russa,
+  Mexicana, Chinesa) são narradas em seções independentes, sem
+  frase-guarda-chuva nomeando "modelos revolucionários" como categoria
+  comum às três. A única frase categorial do capítulo é um contraste
+  bilateral, dentro da própria seção "Revolução Chinesa", entre o modelo
+  soviético e o chinês, que nunca menciona o México; a seção "Revolução
+  Russa" não contém nenhuma citação sobre "modelo soviético", rótulo que só
+  aparecia citado de segunda mão dentro da seção chinesa. Reclassificada de
+  `tipologia` para lacuna na terceira revisão (Task 4b), mesmo raciocínio já
+  usado em `historia-disputas-europeias-no-brasil-colonial`.
 
 ## Contagem final
 
+Nota (Task 4b): as linhas abaixo refletem apenas a reclassificação de
+`historia-grandes-revolucoes-do-seculo-xx`, de `tipologia` para lacuna. As
+duas reclassificações de `cadeia-de-derivacao` para lacuna
+(`historia-regime-militar-1964-1985-i` e `-ii`, registradas no comentário de
+`historia.ts` de outro dispatch da Task 4a) ainda não foram propagadas a
+este documento — `historia.ts` é a fonte de verdade corrente para as
+famílias e lacunas efetivamente escritas.
+
 - `contraste-de-posicoes`: 3
 - `camadas-de-determinacao`: 4
-- `cadeia-de-derivacao`: 14
+- `cadeia-de-derivacao`: 14 (12 efetivamente escritos em `historia.ts`; ver
+  nota acima)
 - `criterios-conjuntivos` (Fase 2): 4
 - `escala-de-graus`: 1
 - `movimento-dialetico`: 1
-- `tipologia` (Fase 2): 9
+- `tipologia` (Fase 2): 8
 - `grade-de-eixos` (Fase 2): 0
-- Lacunas: 13 (1 já conhecida + 12 novas) — 26,5% dos 49 capítulos
-- **Total: 49**
+- Lacunas: 14 (1 já conhecida + 12 novas + 1 da Task 4b) — mais 2 lacunas
+  adicionais já presentes em `historia.ts` (regime militar I e II, ver nota
+  acima) totalizando 15 lacunas efetivas
+- **Total: 49** (34 entradas escritas + 15 lacunas em `historia.ts`)
 
 ## Estado do teste (esperado vermelho)
 
