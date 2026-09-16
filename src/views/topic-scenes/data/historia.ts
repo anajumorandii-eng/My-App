@@ -671,4 +671,367 @@ export const historia: SceneEntry[] = [
       },
     ],
   },
+  // Task 4 (segundo dispatch) — família tipologia (9 capítulos). Cada entrada
+  // inclui um item "umbrella" citando a frase-guarda-chuva que nomeia a
+  // categoria comum antes de enumerar os tipos, confirmando que são variantes
+  // coexistentes de um mesmo fenômeno, não posições rivais.
+  {
+    chapterId: 'summary-historia-imperialismo-e-belle-epoque',
+    family: 'tipologia',
+    question: 'Que formas paralelas de dominação colonial o imperialismo europeu adotou, direta e indireta?',
+    items: [
+      {
+        label: 'Dominação direta',
+        claim: 'a França administrava diretamente partes de sua África colonial por meio de funcionários europeus, impondo instituições e cultura metropolitana sobre a população colonizada',
+        section: 'Formas de dominação',
+        quote: 'A dominação direta, praticada especialmente pela França em partes de sua África colonial, envolvia administração colonial direta por funcionários europeus, impondo instituições e cultura metropolitana diretamente sobre a população colonizada local.',
+      },
+      {
+        label: 'Dominação indireta',
+        claim: 'o Reino Unido mantinha estruturas de poder local preexistentes subordinadas ao seu controle geral, reduzindo o custo administrativo direto da metrópole',
+        section: 'Formas de dominação',
+        quote: 'A dominação indireta, mais característica do estilo britânico de administração colonial, mantinha estruturas de poder local preexistentes (chefias tradicionais, sultanatos) subordinadas ao controle britânico geral, mas preservando aparência de autonomia administrativa local que, na prática, reduzia custos administrativos diretos para a metrópole ao delegar administração cotidiana a intermediários locais.',
+      },
+      {
+        label: 'Mesmo fenômeno',
+        claim: 'as formas de dominação colonial variaram conforme os interesses e a capacidade administrativa de cada potência europeia — dois tipos do mesmo imperialismo, não posições rivais',
+        section: 'Formas de dominação',
+        quote: 'As formas de dominação colonial imperialista variaram conforme os interesses e a capacidade administrativa específica de cada potência europeia envolvida.',
+      },
+    ],
+  },
+  {
+    chapterId: 'summary-historia-brasil-imperio-o-periodo-regencial-1831-1840',
+    family: 'tipologia',
+    question: 'Que tipos de revolta regencial eclodiram, cada um com composição e motivação regional próprias?',
+    items: [
+      {
+        label: 'Cabanagem',
+        claim: 'no Grão-Pará, envolveu participação popular ampla incluindo população pobre, mestiça e indígena, sendo uma das revoltas mais sangrentas do período',
+        section: 'Revoltas regenciais',
+        quote: 'A Cabanagem (1835-1840), no Grão-Pará, envolveu participação popular ampla incluindo população pobre, mestiça e indígena, com pauta que combinava contestação política regional a demandas sociais mais profundas, sendo uma das revoltas mais sangrentas do período, com elevada mortalidade proporcional à população total da província.',
+      },
+      {
+        label: 'Farroupilha',
+        claim: 'no Rio Grande do Sul, teve maior participação de elites pecuaristas descontentes com a política tarifária imperial, chegando a proclamar república separatista temporária',
+        section: 'Revoltas regenciais',
+        quote: 'A Farroupilha (1835-1845), no Rio Grande do Sul, teve maior participação de elites locais pecuaristas descontentes com política tarifária imperial considerada prejudicial aos interesses econômicos gaúchos, e chegou a proclamar república separatista de curta duração antes de ser negociada uma pacificação que manteve a província dentro do Império.',
+      },
+      {
+        label: 'Sabinada e Balaiada',
+        claim: 'na Bahia e no Maranhão, completam o conjunto de revoltas regionais que evidenciam a extensão territorial da instabilidade política enfrentada pelo governo central regencial',
+        section: 'Revoltas regenciais',
+        quote: 'A Sabinada (1837-1838), na Bahia, e a Balaiada (1838-1841), no Maranhão, complementam o conjunto de revoltas regionais que evidenciam a extensão territorial da instabilidade política enfrentada pelo governo central durante praticamente toda a década de existência do Período Regencial brasileiro.',
+      },
+      {
+        label: 'Revoltas regenciais',
+        claim: 'as revoltas regenciais eclodiram em diferentes províncias do Império, refletindo tensões regionais específicas que a fragilidade do poder central regencial não conseguia conter',
+        section: 'Revoltas regenciais',
+        quote: 'As revoltas regenciais eclodiram em diferentes províncias do Império, refletindo tensões sociais, econômicas e políticas regionais específicas que a fragilidade do poder central regencial não conseguia conter efetivamente.',
+      },
+    ],
+  },
+  {
+    chapterId: 'summary-historia-descolonizacao-afro-asiatica',
+    family: 'tipologia',
+    question: 'Que tipos de trajetória levaram à descolonização afro-asiática, negociada ou por guerra de libertação?',
+    items: [
+      {
+        label: 'Trajetória negociada (Índia)',
+        claim: 'a Índia britânica conquistou independência em 1947 após décadas de resistência não violenta liderada por Gandhi, ainda que marcada por violência intercomunitária na partição',
+        section: 'Trajetórias diversas',
+        quote: 'A Índia britânica conquistou independência em 1947 após décadas de movimento de resistência não violenta liderado por Mahatma Gandhi, embora o processo tenha sido marcado por violência intercomunitária massiva na partição entre Índia (majoritariamente hindu) e Paquistão (majoritariamente muçulmano), com deslocamento forçado de milhões de pessoas e mortalidade elevada nos conflitos comunais que se seguiram à própria independência.',
+      },
+      {
+        label: 'Guerra de libertação (Argélia)',
+        claim: 'a Argélia francesa só obteve independência em 1962, após guerra de libertação extremamente violenta e prolongada, já que a França considerava o território parte integrante de seu próprio território nacional',
+        section: 'Trajetórias diversas',
+        quote: 'A Argélia francesa, diferente da Índia, obteve independência apenas em 1962 após guerra de libertação extremamente violenta e prolongada (1954-1962) contra a França, que considerava o território argelino parte integrante e inseparável de seu próprio território nacional (diferente de outras colônias francesas administradas com status jurídico distinto), tornando a resistência francesa à independência argelina particularmente intensa e sangrenta em comparação com processos de descolonização mais negociados em outras regiões africanas do mesmo período histórico.',
+      },
+      {
+        label: 'Trajetórias diversas',
+        claim: 'as trajetórias de descolonização variaram significativamente entre diferentes territórios e potências coloniais, refletindo tanto a postura da metrópole quanto as condições internas de cada colônia',
+        section: 'Trajetórias diversas',
+        quote: 'As trajetórias de descolonização variaram significativamente entre diferentes territórios e potências coloniais, refletindo tanto a postura específica de cada metrópole quanto as condições internas de cada colônia.',
+      },
+    ],
+  },
+  {
+    chapterId: 'summary-historia-grandes-revolucoes-do-seculo-xx',
+    family: 'tipologia',
+    question: 'Que modelos paralelos de revolução mobilizaram bases sociais diferentes no século XX?',
+    items: [
+      {
+        label: 'Modelo soviético',
+        claim: 'a Revolução Russa foi tomada como modelo centrado primordialmente no proletariado urbano industrial das cidades como classe revolucionária central',
+        section: 'Revolução Chinesa',
+        quote: 'Diferente do modelo revolucionário soviético, centrado primordialmente no proletariado urbano industrial das cidades como classe revolucionária central, a estratégia comunista chinesa mobilizou principalmente o campesinato rural, então esmagadora maioria da população chinesa total, numa adaptação teórica e estratégica significativa do marxismo tradicional às condições específicas de um país majoritariamente agrário e ainda pouco industrializado.',
+      },
+      {
+        label: 'Modelo mexicano',
+        claim: 'a Revolução Mexicana envolveu coalizão heterogênea de lideranças regionais com projetos distintos — Madero liberal moderado, Zapata camponês radical e Villa militar carismático',
+        section: 'Revolução Mexicana',
+        quote: 'envolveu coalizão heterogênea e frequentemente conflitante de diferentes lideranças regionais com projetos políticos e sociais distintos entre si, incluindo Francisco Madero (liberal moderado que inicialmente liderou a derrubada de Díaz), Emiliano Zapata (líder camponês do sul mexicano, defensor de reforma agrária radical sob o lema "Terra e Liberdade") e Pancho Villa (líder militar do norte mexicano, com base de apoio popular própria e estilo de liderança mais pessoal e carismático)',
+      },
+      {
+        label: 'Modelo chinês',
+        claim: 'a estratégia comunista chinesa mobilizou principalmente o campesinato rural, adaptando o marxismo tradicional às condições de um país majoritariamente agrário',
+        section: 'Revolução Chinesa',
+        quote: 'Diferente do modelo revolucionário soviético, centrado primordialmente no proletariado urbano industrial das cidades como classe revolucionária central, a estratégia comunista chinesa mobilizou principalmente o campesinato rural, então esmagadora maioria da população chinesa total, numa adaptação teórica e estratégica significativa do marxismo tradicional às condições específicas de um país majoritariamente agrário e ainda pouco industrializado.',
+      },
+    ],
+  },
+  {
+    chapterId: 'summary-historia-antiguidade-classica-o-mundo-grego',
+    family: 'tipologia',
+    question: 'Que tipos de pólis coexistiam sob a mesma identidade helênica, cada uma organizada de forma diferente?',
+    items: [
+      {
+        label: 'Atenas',
+        claim: 'desenvolveu democracia direta restrita a homens livres nascidos de pai (e depois também de mãe) atenienses, excluindo mulheres, escravizados e metecos',
+        section: 'Atenas e a cidadania restrita',
+        quote: 'apenas homens adultos, livres, nascidos em Atenas de pai ateniense (e, a partir de reforma de Péricles em 451 a.C., também de mãe ateniense) qualificavam-se como cidadãos com direito de participação política plena, excluindo completamente mulheres, escravizados (que compunham parcela expressiva, possivelmente majoritária, da população total ateniense) e metecos (estrangeiros residentes, mesmo que estabelecidos há gerações na cidade e economicamente ativos)',
+      },
+      {
+        label: 'Esparta',
+        claim: 'organizou-se quase inteiramente para a excelência e a prontidão militar, dividindo a sociedade entre espartanos, periecos e hilotas',
+        section: 'Esparta e a organização social',
+        quote: 'A sociedade espartana dividia-se rigidamente entre espartanos propriamente ditos (cidadãos plenos, dedicados exclusivamente ao treinamento militar desde a infância, num sistema educacional chamado agogé), periecos (habitantes livres mas sem direitos políticos, dedicados a atividades comerciais e artesanais que os espartanos, dedicados exclusivamente à guerra, não podiam exercer) e hilotas (população escravizada de origem local conquistada, submetida a exploração extrema e sujeita a violência sistemática institucionalizada, incluindo a críptia, prática de perseguição e eliminação periódica de hilotas considerados potencialmente rebeldes, usada deliberadamente para manter essa população subjugada em constante estado de intimidação).',
+      },
+      {
+        label: 'Mosaico helênico',
+        claim: 'a Grécia Antiga nunca foi um Estado único, mas um mosaico de cidades-Estado independentes entre si, unidas por elementos culturais compartilhados',
+        section: 'Uma região de cidades, não um Estado único',
+        quote: 'a Grécia Antiga nunca constituiu um Estado unificado no sentido moderno do termo, mas sim um mosaico de cidades-Estado (poleis) independentes entre si, cada uma com governo, leis, moeda e exército próprios, unidas por elementos culturais compartilhados — língua grega comum (ainda que com dialetos regionais distintos), religião politeísta com panteão de deuses comuns, e eventos pan-helênicos como os Jogos Olímpicos, que reuniam periodicamente representantes de diferentes cidades gregas em competição esportiva e celebração religiosa conjunta.',
+      },
+    ],
+  },
+  {
+    chapterId: 'summary-historia-absolutismo',
+    family: 'tipologia',
+    question: 'Que justificativas teóricas paralelas legitimaram o mesmo poder absoluto do monarca?',
+    items: [
+      {
+        label: 'Direito divino (Bossuet)',
+        claim: 'a teoria do direito divino sustentava que o poder do monarca derivava diretamente de Deus, tornando qualquer contestação uma afronta à ordem divina',
+        section: 'Justificativas teóricas',
+        quote: 'A teoria do direito divino dos reis, defendida por pensadores como Jacques Bossuet na França, sustentava que o poder do monarca derivava diretamente de Deus, tornando qualquer contestação ao rei equivalente a uma afronta à própria ordem divina estabelecida.',
+      },
+      {
+        label: 'Contratualismo (Hobbes)',
+        claim: 'Hobbes oferecia justificativa racional e contratualista: sem soberano absoluto os homens viveriam em guerra constante, e o contrato social que cedia direitos a um soberano seria racionalmente justificado',
+        section: 'Justificativas teóricas',
+        quote: 'Thomas Hobbes, em sua obra "Leviatã" (1651), oferecia justificativa de natureza mais racional e contratualista: sem um poder soberano absoluto capaz de impor ordem, os seres humanos viveriam em "estado de natureza" de guerra constante de todos contra todos, e o contrato social pelo qual os indivíduos cediam seus direitos naturais a um soberano absoluto seria racionalmente justificado como forma de garantir segurança e paz coletiva, mesmo ao custo da submissão política irrestrita a esse poder centralizado.',
+      },
+      {
+        label: 'Convergência',
+        claim: 'são fundamentações teóricas distintas — uma de base religiosa, outra racional e contratual — ainda que ambas concluam pela necessidade do mesmo poder centralizado absoluto',
+        section: 'Pegadinhas frequentes',
+        quote: 'são fundamentações teóricas distintas: uma de base religiosa direta, outra de base racional e contratual, ainda que ambas concluam pela necessidade de poder centralizado absoluto',
+      },
+    ],
+  },
+  {
+    chapterId: 'summary-historia-iluminismo',
+    family: 'tipologia',
+    question: 'Que propostas paralelas de reorganização do poder político os pensadores iluministas desenvolveram a partir da mesma base racionalista?',
+    items: [
+      {
+        label: 'Montesquieu',
+        claim: 'defendeu a separação dos poderes entre Executivo, Legislativo e Judiciário como mecanismo para evitar a concentração tirânica de poder',
+        section: 'Pensadores e propostas',
+        quote: 'Montesquieu, em "O Espírito das Leis" (1748), defendeu a separação dos poderes políticos entre Executivo, Legislativo e Judiciário como mecanismo institucional capaz de evitar a concentração excessiva e potencialmente tirânica de poder nas mãos de um único indivíduo ou grupo, um princípio que influenciaria diretamente constituições posteriores, incluindo a dos Estados Unidos e, de forma adaptada, a própria Constituição brasileira de 1824.',
+      },
+      {
+        label: 'Rousseau',
+        claim: 'propôs a soberania popular, segundo a qual a legitimidade política deveria residir na vontade geral do povo, não em direito divino ou hereditário',
+        section: 'Pensadores e propostas',
+        quote: 'Rousseau, em "O Contrato Social" (1762), propôs conceito de soberania popular, segundo o qual a legitimidade política deveria residir na "vontade geral" do próprio povo, e não em direito divino ou hereditário do monarca, uma ideia radical para sua época que forneceria fundamento ideológico direto para movimentos revolucionários posteriores.',
+      },
+      {
+        label: 'Voltaire',
+        claim: 'destacou-se pela defesa combativa da liberdade de expressão e pela crítica ao fanatismo religioso e à intolerância institucional da Igreja',
+        section: 'Pensadores e propostas',
+        quote: 'Voltaire destacou-se especialmente pela defesa combativa da liberdade de expressão e pela crítica sistemática ao fanatismo religioso e à intolerância institucional da Igreja Católica',
+      },
+      {
+        label: 'Base racionalista comum',
+        claim: 'diferentes pensadores iluministas desenvolveram propostas específicas de reorganização do poder político, ainda que compartilhando a mesma base racionalista',
+        section: 'Pensadores e propostas',
+        quote: 'Diferentes pensadores iluministas desenvolveram propostas específicas para reorganizar o poder político, ainda que compartilhando a base racionalista comum descrita anteriormente.',
+      },
+    ],
+  },
+  {
+    chapterId: 'summary-historia-alta-idade-media-e-feudalismo',
+    family: 'tipologia',
+    question: 'Que tipos de vínculo de dependência pessoal coexistiam no mesmo sistema feudal, servindo a propósitos diferentes?',
+    items: [
+      {
+        label: 'Servidão (senhor-servo)',
+        claim: 'o servo devia ao senhor prestações em trabalho, produtos e taxas, permanecendo preso à terra ainda que juridicamente livre',
+        section: 'Senhorio, trabalho e poder',
+        quote: 'Os camponeses, majoritariamente servos (juridicamente livres mas presos à terra, não podendo abandoná-la sem autorização do senhor, diferente de escravizados que eram propriedade direta de um dono), deviam ao senhor prestações em trabalho (a corveia, dias de trabalho gratuito nas terras do domínio senhorial), em produtos (parcela da própria colheita) e em taxas diversas pelo uso de instalações do senhor',
+      },
+      {
+        label: 'Suserania e vassalagem',
+        claim: 'um vassalo prestava juramento de fidelidade a um suserano em troca da concessão de um feudo, administrado com autonomia prática',
+        section: 'Suserania e vassalagem',
+        quote: 'Um vassalo prestava juramento de fidelidade (homenagem) a um suserano mais poderoso, comprometendo-se a fornecer serviço militar (geralmente um número específico de dias de combate por ano) e conselho político em troca da concessão de um feudo (geralmente terra, mas podendo incluir outros privilégios), que o vassalo administrava com significativa autonomia prática, mesmo mantendo obrigações formais ao suserano.',
+      },
+      {
+        label: 'Vínculos distintos',
+        claim: 'a suserania e a vassalagem organizavam as relações de poder entre a própria nobreza, distintas da relação entre senhor e servo camponês',
+        section: 'Suserania e vassalagem',
+        quote: 'A suserania e a vassalagem organizavam as relações de poder entre a própria nobreza feudal, distintas da relação entre senhor e servo camponês descrita anteriormente.',
+      },
+    ],
+  },
+  {
+    chapterId: 'summary-historia-a-crise-do-antigo-sistema-colonial',
+    family: 'tipologia',
+    question: 'Que tipos de revolta colonial refletiram, com composição e motivação diferentes, o mesmo descontentamento com o pacto colonial?',
+    items: [
+      {
+        label: 'Inconfidência Mineira',
+        claim: 'articulada por elites locais de Minas Gerais insatisfeitas com a cobrança fiscal sobre o ouro, buscava inspiração na independência norte-americana',
+        section: 'Revoltas coloniais',
+        quote: 'A Inconfidência Mineira (1789), articulada por elites locais de Minas Gerais insatisfeitas com a cobrança rigorosa de impostos sobre a extração de ouro (especialmente a ameaça da "derrama", cobrança compulsória de dívidas fiscais atrasadas da Coroa), buscava inspiração explícita no exemplo da independência norte-americana recente, embora tenha sido descoberta e reprimida antes de qualquer ação efetiva, resultando na execução de Tiradentes como exemplo punitivo.',
+      },
+      {
+        label: 'Conjuração Baiana',
+        claim: 'envolveu participação mais popular, incluindo artesãos, soldados e pessoas escravizadas e libertas, com pautas mais radicais, incluindo a abolição da escravidão',
+        section: 'Revoltas coloniais',
+        quote: 'A Conjuração Baiana (1798), diferente da mineira por envolver participação mais popular incluindo artesãos, soldados e pessoas escravizadas e libertas, teve pautas mais radicais, incluindo defesa da abolição da escravidão e da igualdade racial, refletindo tensões sociais mais amplas da sociedade colonial baiana além da simples disputa fiscal entre elite local e Coroa portuguesa.',
+      },
+      {
+        label: 'Mesmo descontentamento',
+        claim: 'as revoltas coloniais eclodiram com intensidade e motivação variadas, refletindo o mesmo descontentamento crescente com o pacto colonial português',
+        section: 'Revoltas coloniais',
+        quote: 'As revoltas coloniais que eclodiram no Brasil ao longo do século XVIII e início do XIX refletiram, com intensidade e motivação variadas, esse descontentamento crescente com o pacto colonial português.',
+      },
+    ],
+  },
+  // Task 4 (segundo dispatch) — família criterios-conjuntivos (4 capítulos).
+  // Cada entrada isola as condições que o capítulo apresenta como
+  // conjuntamente necessárias, com pelo menos um item citando a linguagem
+  // explícita de que nenhum fator isolado bastaria.
+  {
+    chapterId: 'summary-historia-o-nazismo-na-alemanha',
+    family: 'criterios-conjuntivos',
+    question: 'Que condições, combinadas, e nenhuma sozinha suficiente, explicam a ascensão do nazismo na Alemanha?',
+    items: [
+      {
+        label: 'Hiperinflação de 1923',
+        claim: 'a hiperinflação catastrófica de 1923 gerou desemprego massivo e desespero econômico, criando terreno fértil para discursos políticos radicais',
+        section: 'Bases da ascensão',
+        quote: 'A hiperinflação catastrófica de 1923 e, posteriormente, a Grande Depressão de 1929 (que atingiu a Alemanha com particular severidade, dado seu já fragilizado sistema financeiro fortemente dependente de empréstimos e investimentos americanos que se retraíram abruptamente com a crise) geraram desemprego massivo e desespero econômico generalizado entre a população alemã, criando terreno fértil para discursos políticos radicais que prometiam soluções simples, embora falsas e perigosas, e culpados específicos (identificados especialmente na comunidade judaica alemã) para problemas econômicos e sociais estruturalmente complexos.',
+      },
+      {
+        label: 'Grande Depressão de 1929',
+        claim: 'a Grande Depressão de 1929 atingiu a Alemanha com particular severidade, agravando ainda mais o desespero econômico da população',
+        section: 'Bases da ascensão',
+        quote: 'A hiperinflação catastrófica de 1923 e, posteriormente, a Grande Depressão de 1929 (que atingiu a Alemanha com particular severidade, dado seu já fragilizado sistema financeiro fortemente dependente de empréstimos e investimentos americanos que se retraíram abruptamente com a crise) geraram desemprego massivo e desespero econômico generalizado entre a população alemã, criando terreno fértil para discursos políticos radicais que prometiam soluções simples, embora falsas e perigosas, e culpados específicos (identificados especialmente na comunidade judaica alemã) para problemas econômicos e sociais estruturalmente complexos.',
+      },
+      {
+        label: 'Fragilidade institucional',
+        claim: 'a fraqueza institucional da própria democracia alemã do período entreguerras compunha, junto à crise econômica e ao ressentimento nacionalista, a base combinada da ascensão nazista',
+        section: 'Bases da ascensão',
+        quote: 'As bases da ascensão do nazismo na Alemanha combinaram crise econômica profunda, ressentimento nacionalista acumulado e fraqueza institucional da própria democracia alemã do período entreguerras.',
+      },
+      {
+        label: 'Nenhum fator isolado',
+        claim: 'nenhum desses fatores isolados seria suficiente para explicar sozinho a ascensão do nazismo — só a combinação dos três explica o fenômeno',
+        section: 'Pegadinhas frequentes',
+        quote: 'combinou-se com a hiperinflação de 1923, a Grande Depressão de 1929 e a fragilidade institucional da democracia alemã do período, sem um único fator isolado sendo suficiente para explicar sozinho o fenômeno.',
+      },
+    ],
+  },
+  {
+    chapterId: 'summary-historia-brasil-imperio-o-declinio-do-segundo-reinado',
+    family: 'criterios-conjuntivos',
+    question: 'Por que a perda simultânea de apoio de múltiplos setores, e não o desgaste de um só, derrubou a monarquia em 1889?',
+    items: [
+      {
+        label: 'Questão Religiosa',
+        claim: 'o conflito com bispos sobre o padroado afastou parte do clero católico do apoio incondicional à monarquia',
+        section: 'Questões que corroem o Império',
+        quote: 'A Questão Religiosa (1872-1875) opôs o governo imperial, que exercia o chamado padroado (direito histórico do Estado de interferir em nomeações e decisões eclesiásticas dentro do território nacional), a bispos que se recusavam a aceitar essa subordinação em conformidade com orientações papais mais recentes contrárias ao padroado, gerando conflito que afastou parte do clero católico do apoio incondicional à monarquia.',
+      },
+      {
+        label: 'Questão Militar',
+        claim: 'as disputas entre oficiais do Exército e o governo sobre liberdade de expressão política afastaram setores das Forças Armadas do apoio tradicional à monarquia',
+        section: 'Questões que corroem o Império',
+        quote: 'A Questão Militar (1883-1887) envolveu disputas entre oficiais do Exército e o governo imperial sobre limites à liberdade de expressão política de militares na imprensa, com oficiais insatisfeitos com punições impostas por criticarem publicamente autoridades civis, contribuindo para afastar setores das Forças Armadas, já fortalecidas política e institucionalmente desde a Guerra do Paraguai, do apoio tradicional à monarquia que caracterizara décadas anteriores do próprio Segundo Reinado.',
+      },
+      {
+        label: 'Cafeicultores e a Lei Áurea',
+        claim: 'grandes proprietários rurais, especialmente cafeicultores, sentiram-se traídos pela abolição completa da escravidão sem qualquer indenização em 1888',
+        section: 'Proclamação da República',
+        quote: 'a insatisfação de grandes proprietários rurais (especialmente cafeicultores) que se sentiram traídos pela abolição completa da escravidão sem qualquer indenização em 1888 (a chamada Lei Áurea)',
+      },
+      {
+        label: 'Perda simultânea',
+        claim: 'a perda simultânea de apoio de múltiplos setores tradicionalmente aliados é mais desestabilizadora do que o desgaste isolado de apenas um deles',
+        section: 'Pratique e confira',
+        quote: 'a perda simultânea de apoio de múltiplos setores tradicionalmente aliados é mais desestabilizadora do que o desgaste isolado de apenas um desses grupos de apoio.',
+      },
+    ],
+  },
+  {
+    chapterId: 'summary-historia-primeira-guerra-mundial-1914-1918',
+    family: 'criterios-conjuntivos',
+    question: 'Por que o assassinato em Sarajevo não bastou sozinho para causar a Primeira Guerra Mundial?',
+    items: [
+      {
+        label: 'Sistema de alianças',
+        claim: 'o sistema de alianças militares rígidas transformava qualquer conflito bilateral localizado em potencial detonador de guerra generalizada',
+        section: 'Causas',
+        quote: 'o sistema de alianças militares rígidas (a Tríplice Aliança entre Alemanha, Áustria-Hungria e Itália, contraposta à Tríplice Entente entre França, Reino Unido e Rússia) transformava qualquer conflito bilateral localizado em potencial detonador de guerra generalizada envolvendo todas as grandes potências europeias simultaneamente.',
+      },
+      {
+        label: 'Nacionalismo e corrida armamentista',
+        claim: 'o nacionalismo exacerbado e a corrida armamentista naval e terrestre elevaram as tensões geopolíticas a nível crítico antes de qualquer evento desencadeador',
+        section: 'Causas',
+        quote: 'O nacionalismo exacerbado, a rivalidade colonial e comercial entre potências industriais e a corrida armamentista naval e terrestre (especialmente entre Alemanha e Reino Unido) elevaram tensões geopolíticas a nível crítico já antes de qualquer evento desencadeador específico.',
+      },
+      {
+        label: 'Sarajevo como estopim',
+        claim: 'o assassinato em Sarajevo funcionou apenas como estopim imediato; sozinho não bastava — dependeu das tensões estruturais acumuladas para se transformar em guerra continental',
+        section: 'Pegadinhas frequentes',
+        quote: 'funcionou como estopim imediato, mas dependeu de tensões estruturais acumuladas há décadas (sistema de alianças, nacionalismo, corrida armamentista) para se transformar em conflito continental generalizado.',
+      },
+    ],
+  },
+  {
+    chapterId: 'summary-historia-o-brasil-atual',
+    family: 'criterios-conjuntivos',
+    question: 'Que condições combinadas, e nenhuma sozinha suficiente, explicam a redução da desigualdade brasileira nos anos 2000?',
+    items: [
+      {
+        label: 'Bolsa Família',
+        claim: 'os programas de transferência direta de renda condicionada, unificados no Bolsa Família em 2003, contribuíram para a redução da pobreza extrema e da desigualdade',
+        section: 'Estabilização e políticas sociais',
+        quote: 'programas de transferência direta de renda condicionada, como o Bolsa Família (unificado em 2003 a partir de programas sociais anteriores mais fragmentados), combinados com política de valorização real do salário mínimo acima da inflação e período de crescimento econômico favorecido por preços internacionais elevados de commodities exportadas pelo Brasil, contribuíram para redução expressiva da pobreza extrema e da desigualdade de renda medida pelo índice de Gini ao longo daquela década específica',
+      },
+      {
+        label: 'Valorização do salário mínimo',
+        claim: 'a política de valorização real do salário mínimo acima da inflação também contribuiu para essa redução da desigualdade',
+        section: 'Estabilização e políticas sociais',
+        quote: 'programas de transferência direta de renda condicionada, como o Bolsa Família (unificado em 2003 a partir de programas sociais anteriores mais fragmentados), combinados com política de valorização real do salário mínimo acima da inflação e período de crescimento econômico favorecido por preços internacionais elevados de commodities exportadas pelo Brasil, contribuíram para redução expressiva da pobreza extrema e da desigualdade de renda medida pelo índice de Gini ao longo daquela década específica',
+      },
+      {
+        label: 'Crescimento por commodities',
+        claim: 'o período de crescimento econômico favorecido por preços internacionais elevados de commodities exportadas também contribuiu para essa redução',
+        section: 'Estabilização e políticas sociais',
+        quote: 'programas de transferência direta de renda condicionada, como o Bolsa Família (unificado em 2003 a partir de programas sociais anteriores mais fragmentados), combinados com política de valorização real do salário mínimo acima da inflação e período de crescimento econômico favorecido por preços internacionais elevados de commodities exportadas pelo Brasil, contribuíram para redução expressiva da pobreza extrema e da desigualdade de renda medida pelo índice de Gini ao longo daquela década específica',
+      },
+      {
+        label: 'Nenhum fator isolado',
+        claim: 'nenhum fator isolado bastaria para explicar sozinho a redução da desigualdade nos anos 2000 — os três precisaram se combinar',
+        section: 'Pegadinhas frequentes',
+        quote: 'combinou-se também com valorização real do salário mínimo e período favorável de crescimento econômico puxado por preços elevados de commodities exportadas, sem um único fator isolado sendo suficiente para explicar sozinho essa redução.',
+      },
+    ],
+  },
 ];
