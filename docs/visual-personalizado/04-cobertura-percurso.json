@@ -97,7 +97,7 @@
       "chapters": 27,
       "contentAtlases": 27,
       "interactiveExperiments": 1,
-      "anchorScenes": 0
+      "anchorScenes": 26
     }
   ],
   "chapters": [
@@ -30740,7 +30740,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": "camadas-de-determinacao"
+      "anchorScene": "contraste-de-posicoes"
     },
     {
       "id": "summary-filosofia-a-luta-de-classes-na-filosofia-marxista",
@@ -31217,7 +31217,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "contraste-de-posicoes"
     },
     {
       "id": "summary-sociologia-o-que-e-o-fato-social",
@@ -31270,7 +31270,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "criterios-conjuntivos"
     },
     {
       "id": "summary-sociologia-sociologia-e-senso-comum",
@@ -31323,7 +31323,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "contraste-de-posicoes"
     },
     {
       "id": "summary-sociologia-solidariedade-mecanica-e-solidariedade-organica",
@@ -31429,7 +31429,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "grade-de-eixos"
     },
     {
       "id": "summary-sociologia-educacao-e-socializacao-em-durkheim",
@@ -31482,7 +31482,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "cadeia-de-derivacao"
     },
     {
       "id": "summary-sociologia-modo-de-producao-e-estrutura-social",
@@ -31535,7 +31535,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "camadas-de-determinacao"
     },
     {
       "id": "summary-sociologia-ideologia-e-alienacao",
@@ -31588,7 +31588,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "camadas-de-determinacao"
     },
     {
       "id": "summary-sociologia-a-luta-de-classes-na-analise-sociologica",
@@ -31641,7 +31641,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "contraste-de-posicoes"
     },
     {
       "id": "summary-sociologia-tipos-de-acao-social",
@@ -31694,7 +31694,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "tipologia"
     },
     {
       "id": "summary-sociologia-dominacao-e-poder-em-weber",
@@ -31747,7 +31747,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "tipologia"
     },
     {
       "id": "summary-sociologia-etica-protestante-e-o-espirito-do-capitalismo",
@@ -31800,7 +31800,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "cadeia-de-derivacao"
     },
     {
       "id": "summary-sociologia-cultura-e-etnocentrismo",
@@ -31853,7 +31853,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "contraste-de-posicoes"
     },
     {
       "id": "summary-sociologia-identidade-e-diferenca",
@@ -31906,7 +31906,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "criterios-conjuntivos"
     },
     {
       "id": "summary-sociologia-multiculturalismo-e-relativismo-cultural",
@@ -31959,7 +31959,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "contraste-de-posicoes"
     },
     {
       "id": "summary-sociologia-classes-sociais-e-mobilidade-social",
@@ -32012,7 +32012,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "grade-de-eixos"
     },
     {
       "id": "summary-sociologia-desigualdade-racial-no-brasil",
@@ -32065,7 +32065,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "contraste-de-posicoes"
     },
     {
       "id": "summary-sociologia-desigualdade-de-genero",
@@ -32118,7 +32118,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "contraste-de-posicoes"
     },
     {
       "id": "summary-sociologia-divisao-social-do-trabalho",
@@ -32171,7 +32171,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "contraste-de-posicoes"
     },
     {
       "id": "summary-sociologia-transformacoes-no-mundo-do-trabalho",
@@ -32224,7 +32224,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "contraste-de-posicoes"
     },
     {
       "id": "summary-sociologia-precarizacao-e-uberizacao-do-trabalho",
@@ -32277,7 +32277,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "cadeia-de-derivacao"
     },
     {
       "id": "summary-sociologia-movimentos-sociais-classicos-e-contemporaneos",
@@ -32330,7 +32330,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "tipologia"
     },
     {
       "id": "summary-sociologia-cidadania-e-direitos",
@@ -32383,7 +32383,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "escala-de-graus"
     },
     {
       "id": "summary-sociologia-democracia-e-participacao-politica",
@@ -32436,7 +32436,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "tipologia"
     },
     {
       "id": "summary-sociologia-globalizacao-economica-e-cultural",
@@ -32489,7 +32489,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "tipologia"
     },
     {
       "id": "summary-sociologia-o-estado-nacao-na-era-global",
@@ -32542,7 +32542,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "tipologia"
     },
     {
       "id": "summary-sociologia-a-sociedade-da-informacao",
@@ -32595,7 +32595,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "criterios-conjuntivos"
     }
   ]
 }
