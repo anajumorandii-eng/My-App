@@ -16,7 +16,7 @@ const FAMILIAS: Record<SceneFamily, React.ComponentType<{ entry: SceneEntry }>> 
   'cadeia-de-derivacao': CadeiaDeDerivacao,
   'camadas-de-determinacao': CamadasDeDeterminacao,
   'movimento-dialetico': MovimentoDialetico,
-  tipologia: Tipologia,
+  'tipologia': Tipologia,
   'criterios-conjuntivos': CriteriosConjuntivos,
   'grade-de-eixos': GradeDeEixos,
 };
