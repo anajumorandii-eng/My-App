@@ -216,4 +216,123 @@ export const geografia: SceneEntry[] = [
       },
     ],
   },
+  // Task 3 — família cadeia-de-derivacao (4 capítulos)
+  {
+    chapterId: 'summary-geografia-movimentos-da-terra',
+    family: 'cadeia-de-derivacao',
+    question: 'Por que a inclinação do eixo terrestre, e não a distância ao Sol, é a causa das estações do ano?',
+    items: [
+      {
+        label: 'Eixo inclinado',
+        claim: 'o eixo de rotação da Terra é inclinado em cerca de 23,5 graus em relação ao plano orbital, e é essa inclinação — não a variação de distância ao Sol — a verdadeira causa das estações',
+        section: 'A inclinação e as estações',
+        quote: 'O eixo de rotação da Terra é inclinado em aproximadamente 23,5 graus em relação ao plano de sua órbita ao redor do Sol, e essa inclinação, mantida praticamente constante ao longo do ano (o eixo aponta sempre para a mesma direção no espaço, na direção aproximada da estrela Polar), é a verdadeira causa das estações.',
+      },
+      {
+        label: 'Hemisférios alternam',
+        claim: 'ao longo da translação, a inclinação constante do eixo faz com que diferentes hemisférios fiquem mais ou menos voltados para o Sol em diferentes épocas do ano',
+        section: 'A inclinação e as estações',
+        quote: 'Ao longo da translação, diferentes hemisférios ficam mais ou menos inclinados em direção ao Sol em diferentes épocas do ano',
+      },
+      {
+        label: 'Incidência solar direta',
+        claim: 'quando um hemisfério está inclinado em direção ao Sol, seus raios incidem de forma mais direta e por mais horas do dia, gerando verão nesse hemisfério',
+        section: 'A inclinação e as estações',
+        quote: 'quando o Hemisfério Norte está inclinado em direção ao Sol, seus raios solares incidem de forma mais direta e por mais horas do dia, gerando verão nesse hemisfério',
+      },
+      {
+        label: 'Estações opostas',
+        claim: 'enquanto um hemisfério recebe luz mais direta e vive o verão, o outro, inclinado para longe do Sol, recebe luz mais oblíqua e vive o inverno simultaneamente — por isso as estações se invertem entre os hemisférios',
+        section: 'A inclinação e as estações',
+        quote: 'enquanto simultaneamente o Hemisfério Sul, inclinado para longe do Sol, recebe luz solar mais oblíqua e por menos horas, experimentando inverno — por isso as estações se invertem entre os dois hemisférios ao longo do ano',
+      },
+    ],
+  },
+  {
+    chapterId: 'summary-geografia-do-mundo-bipolar-ao-multipolar',
+    family: 'cadeia-de-derivacao',
+    question: 'Como o esgotamento econômico soviético levou ao fim da bipolaridade e ao momento unipolar americano?',
+    items: [
+      {
+        label: 'Economia sufocada',
+        claim: 'a economia soviética, sufocada pelo gasto militar desproporcional ao seu PIB e pela rigidez do planejamento central, não conseguiu acompanhar a modernização tecnológica ocidental',
+        section: 'A transição',
+        quote: 'a economia soviética, sufocada pelo gasto militar desproporcional ao seu PIB e pela rigidez do planejamento central, não conseguiu acompanhar a modernização tecnológica ocidental',
+      },
+      {
+        label: 'Reformas aceleram colapso',
+        claim: 'as reformas de Gorbachev tentaram salvar o sistema soviético afrouxando o controle estatal, mas acabaram acelerando sua desagregação ao liberar tensões represadas',
+        section: 'A transição',
+        quote: 'As reformas de Mikhail Gorbachev — a glasnost (abertura política) e a perestroika (reestruturação econômica) — tentaram salvar o sistema soviético afrouxando o controle estatal, mas acabaram acelerando sua desagregação ao permitir que tensões nacionalistas e econômicas represadas viessem à tona.',
+      },
+      {
+        label: 'Dissolução da URSS',
+        claim: 'a queda do Muro de Berlim simbolizou o colapso do bloco socialista europeu, e a dissolução formal da União Soviética encerrou oficialmente a bipolaridade',
+        section: 'A transição',
+        quote: 'A queda do Muro de Berlim em 1989 simbolizou o colapso do bloco socialista europeu, e a dissolução formal da União Soviética em dezembro de 1991 encerrou oficialmente a bipolaridade',
+      },
+      {
+        label: 'Momento unipolar',
+        claim: 'com o desaparecimento do rival soviético, os Estados Unidos permaneceram como única superpotência militar e econômica global por cerca de duas décadas',
+        section: 'A transição',
+        quote: 'deixando os Estados Unidos como única superpotência militar e econômica global por cerca de duas décadas — o chamado momento unipolar, marcado pela hegemonia americana na política internacional dos anos 1990 e início dos 2000',
+      },
+    ],
+  },
+  {
+    chapterId: 'summary-geografia-geopolitica-dos-recursos-hidricos',
+    family: 'cadeia-de-derivacao',
+    question: 'Como uma barragem construída sem acordo entre países vizinhos se transforma em risco de conflito diplomático?',
+    items: [
+      {
+        label: 'Barragem sem acordo',
+        claim: 'quando um país constrói uma grande barragem nas cabeceiras de um rio internacional sem acordo prévio com os países a jusante, reduz a vazão que chega a eles',
+        section: 'Como surge um conflito',
+        quote: 'Quando um país constrói uma grande barragem nas cabeceiras de um rio internacional sem acordo prévio com os países a jusante — como ocorreu com a Grande Barragem do Renascimento Etíope no Nilo Azul, que reduziu temporariamente a vazão que chega ao Egito durante o período de enchimento do reservatório',
+      },
+      {
+        label: 'Vira tensão diplomática',
+        claim: 'a ausência de um tratado vinculante de repartição de águas transforma essa decisão de infraestrutura doméstica em fonte de tensão diplomática regional',
+        section: 'Como surge um conflito',
+        quote: 'a ausência de um tratado vinculante de repartição de águas transforma uma decisão de infraestrutura doméstica em fonte de tensão diplomática regional',
+      },
+      {
+        label: 'Ameaça existencial',
+        claim: 'a gravidade do conflito é proporcional à dependência do país a jusante, e o Egito depende do Nilo para mais de 90% de sua água doce — o que torna qualquer redução de vazão uma ameaça existencial',
+        section: 'Como surge um conflito',
+        quote: 'o Egito depende do Nilo para mais de 90% de sua água doce, o que torna qualquer redução de vazão uma ameaça existencial à sua segurança hídrica e alimentar',
+      },
+      {
+        label: 'Risco de escalada',
+        claim: 'essa ameaça existencial eleva o risco de escalada diplomática muito além do que ocorreria em bacias onde os países têm fontes hídricas alternativas',
+        section: 'Como surge um conflito',
+        quote: 'elevando o risco de escalada diplomática muito além do que ocorreria em bacias onde os países têm fontes hídricas alternativas',
+      },
+    ],
+  },
+  {
+    chapterId: 'summary-geografia-desigualdades-globais',
+    family: 'cadeia-de-derivacao',
+    question: 'Por que a industrialização protegida da América Latina resultou em indústrias pouco competitivas internacionalmente?',
+    items: [
+      {
+        label: 'Termos de troca',
+        claim: 'ao longo do século XX, o preço relativo das commodities exportadas pela periferia caiu frente ao dos manufaturados, forçando-a a exportar cada vez mais para importar a mesma quantidade de produtos industrializados',
+        section: 'Centro e periferia',
+        quote: 'ao longo do século XX, o preço relativo das commodities caiu frente ao dos manufaturados, então a periferia precisava exportar quantidades cada vez maiores da mesma matéria-prima para importar a mesma quantidade de produtos industrializados',
+      },
+      {
+        label: 'Substituição de importações',
+        claim: 'em resposta, os países latino-americanos protegeram a indústria nacional com tarifas altas, entre as décadas de 1930 e 1970',
+        section: 'Centro e periferia',
+        quote: 'A resposta latino-americana foi a industrialização por substituição de importações, das décadas de 1930 a 1970, protegendo a indústria nacional com tarifas altas.',
+      },
+      {
+        label: 'Baixa competitividade',
+        claim: 'esse modelo protegido elevou o PIB industrial, mas criou parques fabris pouco competitivos internacionalmente',
+        section: 'Centro e periferia',
+        quote: 'O modelo elevou o PIB industrial mas criou parques fabris pouco competitivos internacionalmente',
+      },
+    ],
+  },
 ];
