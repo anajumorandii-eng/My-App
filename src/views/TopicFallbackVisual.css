@@ -6,13 +6,15 @@
   --vf-ink: #f1efe9;
   position: relative;
   overflow: hidden;
-  border-radius: 24px;
-  padding: clamp(18px, 3vw, 30px);
+  isolation: isolate;
+  border-radius: 26px;
+  padding: clamp(18px, 3vw, 32px);
   background:
-    radial-gradient(circle at 15% 15%, color-mix(in srgb, var(--vf-primary) 24%, transparent), transparent 42%),
+    radial-gradient(circle at 12% 12%, color-mix(in srgb, var(--vf-primary) 24%, transparent), transparent 40%),
+    radial-gradient(circle at 82% 72%, color-mix(in srgb, var(--vf-secondary) 14%, transparent), transparent 46%),
     linear-gradient(145deg, var(--vf-bg), var(--vf-surface));
   color: var(--vf-ink);
-  border: 1px solid color-mix(in srgb, var(--vf-primary) 32%, transparent);
+  border: 1px solid color-mix(in srgb, var(--vf-primary) 34%, transparent);
   box-shadow: 0 24px 70px rgb(0 0 0 / 16%);
 }
 
@@ -26,20 +28,44 @@
 .vs-topic-fallback[data-subject="Atualidades"] { --vf-bg:#101112; --vf-surface:#191b1c; --vf-primary:#d99a3e; --vf-secondary:#c1443d; --vf-ink:#eff3f5; }
 .vs-topic-fallback[data-subject="Gramática"],
 .vs-topic-fallback[data-subject="Entendimento de Texto"] { --vf-bg:#160b0e; --vf-surface:#231216; --vf-primary:#8a2e3f; --vf-secondary:#c1443d; --vf-ink:#f4ede6; }
-.vs-topic-fallback[data-subject="Língua Inglesa"],
-.vs-topic-fallback[data-subject="Filosofia"],
-.vs-topic-fallback[data-subject="Sociologia"] { --vf-bg:#111315; --vf-surface:#1b1f22; --vf-primary:#8b98a5; --vf-secondary:#c1a66b; --vf-ink:#f2efe8; }
+.vs-topic-fallback[data-subject="Língua Inglesa"] { --vf-bg:#0e1319; --vf-surface:#17212b; --vf-primary:#7197c7; --vf-secondary:#d7a463; --vf-ink:#f1f5f9; }
+.vs-topic-fallback[data-subject="Filosofia"] { --vf-bg:#121017; --vf-surface:#1d1924; --vf-primary:#9a84c7; --vf-secondary:#d1aa63; --vf-ink:#f4f0f8; }
+.vs-topic-fallback[data-subject="Sociologia"] { --vf-bg:#101416; --vf-surface:#192126; --vf-primary:#6f9ca5; --vf-secondary:#d0a06a; --vf-ink:#edf4f4; }
+.vs-topic-fallback[data-subject="Matemática"] { --vf-bg:#12161a; --vf-surface:#1a2126; --vf-primary:#6e93b3; --vf-secondary:#c9a468; --vf-ink:#f1efe9; }
 
-.vs-topic-fallback::after {
-  content: '';
+.vs-topic-fallback__atmosphere {
   position: absolute;
-  inset: auto -12% -48% 34%;
-  height: 72%;
-  border: 1px solid color-mix(in srgb, var(--vf-secondary) 28%, transparent);
-  border-radius: 50%;
-  transform: rotate(-8deg);
+  inset: 0;
+  z-index: -1;
   pointer-events: none;
+  opacity: .55;
 }
+
+.vs-topic-fallback__atmosphere span {
+  position: absolute;
+  border: 1px solid color-mix(in srgb, var(--vf-primary) 26%, transparent);
+  background: color-mix(in srgb, var(--vf-primary) 4%, transparent);
+}
+
+.vs-topic-fallback__atmosphere span:nth-child(1) { width: 220px; height: 220px; right: -70px; top: -84px; border-radius: 50%; }
+.vs-topic-fallback__atmosphere span:nth-child(2) { width: 150px; height: 150px; left: 48%; bottom: -88px; border-radius: 38% 62% 45% 55%; transform: rotate(28deg); border-color: color-mix(in srgb, var(--vf-secondary) 24%, transparent); }
+.vs-topic-fallback__atmosphere span:nth-child(3) { width: 46%; height: 1px; left: 10%; top: 44%; border: 0; border-top: 1px dashed color-mix(in srgb, var(--vf-ink) 12%, transparent); }
+
+.vs-topic-fallback[data-subject="História"] .vs-topic-fallback__atmosphere span:nth-child(1),
+.vs-topic-fallback[data-subject="Atualidades"] .vs-topic-fallback__atmosphere span:nth-child(1) { border-radius: 0; width: 38%; height: 1px; top: 32%; right: 4%; border: 0; border-top: 1px solid color-mix(in srgb, var(--vf-primary) 30%, transparent); }
+.vs-topic-fallback[data-subject="História"] .vs-topic-fallback__atmosphere span:nth-child(2),
+.vs-topic-fallback[data-subject="Atualidades"] .vs-topic-fallback__atmosphere span:nth-child(2) { border-radius: 50%; width: 10px; height: 10px; left: auto; right: 38%; bottom: auto; top: calc(32% - 5px); background: var(--vf-secondary); }
+
+.vs-topic-fallback[data-subject="Matemática"] .vs-topic-fallback__atmosphere,
+.vs-topic-fallback[data-subject="Física"] .vs-topic-fallback__atmosphere {
+  background-image:
+    linear-gradient(color-mix(in srgb, var(--vf-primary) 8%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--vf-primary) 8%, transparent) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.vs-topic-fallback[data-subject="Química"] .vs-topic-fallback__atmosphere span:nth-child(1),
+.vs-topic-fallback[data-subject="Biologia"] .vs-topic-fallback__atmosphere span:nth-child(1) { border-radius: 48% 52% 61% 39%; }
 
 .vs-topic-fallback__hero {
   position: relative;
@@ -53,23 +79,21 @@
 .vs-topic-fallback__mark {
   display: grid;
   place-items: center;
-  width: 76px;
+  width: 78px;
   aspect-ratio: 1;
-  border-radius: 22px;
-  background: color-mix(in srgb, var(--vf-primary) 18%, transparent);
-  border: 1px solid color-mix(in srgb, var(--vf-primary) 42%, transparent);
+  border-radius: 24px;
+  background: color-mix(in srgb, var(--vf-primary) 15%, transparent);
+  border: 1px solid color-mix(in srgb, var(--vf-primary) 44%, transparent);
+  box-shadow: inset 0 0 26px color-mix(in srgb, var(--vf-primary) 8%, transparent);
 }
 
-.vs-topic-fallback__mark svg {
-  width: 48px;
-  height: 48px;
-  color: var(--vf-primary);
-}
+.vs-topic-fallback__mark svg { width: 48px; height: 48px; color: var(--vf-primary); }
 
 .vs-topic-fallback__identity span,
-.vs-topic-fallback__rail-label {
-  font: 700 0.7rem/1.2 ui-monospace, SFMono-Regular, Menlo, monospace;
-  letter-spacing: 0.14em;
+.vs-topic-fallback__rail-label,
+.vs-topic-fallback__focus-stage {
+  font: 700 0.68rem/1.2 ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: 0.13em;
   text-transform: uppercase;
   color: var(--vf-secondary);
 }
@@ -77,84 +101,57 @@
 .vs-topic-fallback__identity h3 {
   margin: 5px 0 2px;
   font-family: Newsreader, Georgia, serif;
-  font-size: clamp(1.35rem, 3vw, 2.15rem);
+  font-size: clamp(1.45rem, 3vw, 2.3rem);
   line-height: 1.04;
 }
 
-.vs-topic-fallback__identity p {
-  margin: 0;
-  color: color-mix(in srgb, var(--vf-ink) 70%, transparent);
-}
+.vs-topic-fallback__identity p { margin: 0; color: color-mix(in srgb, var(--vf-ink) 70%, transparent); }
 
-.vs-topic-fallback__rail {
+.vs-topic-fallback__focus {
   position: relative;
   z-index: 1;
-  margin-top: 24px;
+  margin-top: 22px;
+  max-width: 760px;
+  padding: 16px 18px 15px;
+  border-left: 3px solid var(--vf-primary);
+  background: linear-gradient(90deg, color-mix(in srgb, var(--vf-primary) 10%, transparent), transparent 72%);
 }
 
-.vs-topic-fallback__rail ol {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 10px;
-  padding: 0;
-  margin: 10px 0 0;
-  list-style: none;
-}
+.vs-topic-fallback__focus strong { display: block; margin-top: 6px; font: 600 clamp(1rem, 2vw, 1.3rem)/1.25 Newsreader, Georgia, serif; }
 
-.vs-topic-fallback__rail button {
-  display: flex;
-  width: 100%;
-  min-height: 72px;
-  gap: 10px;
-  align-items: flex-start;
-  border-radius: 16px;
-  border: 1px solid color-mix(in srgb, var(--vf-ink) 12%, transparent);
-  background: color-mix(in srgb, var(--vf-surface) 72%, transparent);
-  color: inherit;
-  padding: 12px;
-  text-align: left;
-  cursor: pointer;
-  transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
-}
+.vs-topic-fallback__focus-line { display: flex; gap: 5px; margin-top: 13px; }
+.vs-topic-fallback__focus-line i { display: block; height: 3px; flex: 1; max-width: 72px; border-radius: 999px; background: color-mix(in srgb, var(--vf-ink) 14%, transparent); }
+.vs-topic-fallback__focus-line i[data-active="true"] { background: var(--vf-secondary); box-shadow: 0 0 14px color-mix(in srgb, var(--vf-secondary) 45%, transparent); }
 
+.vs-topic-fallback__rail { position: relative; z-index: 1; margin-top: 24px; }
+.vs-topic-fallback__rail ol { display: grid; grid-template-columns: repeat(auto-fit, minmax(155px, 1fr)); gap: 10px; padding: 0; margin: 10px 0 0; list-style: none; }
+.vs-topic-fallback__rail button { display: flex; width: 100%; min-height: 84px; gap: 10px; align-items: flex-start; border-radius: 16px; border: 1px solid color-mix(in srgb, var(--vf-ink) 12%, transparent); background: color-mix(in srgb, var(--vf-surface) 74%, transparent); color: inherit; padding: 12px; text-align: left; cursor: pointer; transition: transform 160ms ease, border-color 160ms ease, background 160ms ease; }
+.vs-topic-fallback__rail button small { display: block; margin-bottom: 4px; color: color-mix(in srgb, var(--vf-ink) 52%, transparent); font-size: .66rem; text-transform: uppercase; letter-spacing: .08em; }
+.vs-topic-fallback__rail button b { display: block; font-size: .86rem; line-height: 1.25; }
 .vs-topic-fallback__rail button:hover,
-.vs-topic-fallback__rail button:focus-visible {
-  border-color: var(--vf-primary);
-  background: color-mix(in srgb, var(--vf-primary) 12%, var(--vf-surface));
-}
+.vs-topic-fallback__rail button:focus-visible { transform: translateY(-2px); border-color: var(--vf-primary); background: color-mix(in srgb, var(--vf-primary) 12%, var(--vf-surface)); }
+.vs-topic-fallback__rail button:focus-visible { outline: 3px solid color-mix(in srgb, var(--vf-primary) 48%, transparent); outline-offset: 2px; }
+.vs-topic-fallback__rail button[aria-current="step"] { border-color: var(--vf-secondary); background: color-mix(in srgb, var(--vf-secondary) 13%, var(--vf-surface)); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--vf-secondary) 15%, transparent); }
+.vs-topic-fallback__number { color: var(--vf-primary); font: 800 0.72rem/1.4 ui-monospace, SFMono-Regular, Menlo, monospace; }
 
-.vs-topic-fallback__rail button:focus-visible {
-  outline: 3px solid color-mix(in srgb, var(--vf-primary) 48%, transparent);
-  outline-offset: 2px;
-}
-
-.vs-topic-fallback__rail button[aria-current="step"] {
-  border-color: var(--vf-secondary);
-  background: color-mix(in srgb, var(--vf-secondary) 12%, var(--vf-surface));
-}
-
-.vs-topic-fallback__number {
-  color: var(--vf-primary);
-  font: 800 0.72rem/1.4 ui-monospace, SFMono-Regular, Menlo, monospace;
-}
-
-.vs-topic-fallback__note {
-  position: relative;
-  z-index: 1;
-  margin: 18px 0 0;
-  max-width: 72ch;
-  color: color-mix(in srgb, var(--vf-ink) 64%, transparent);
-  font-size: 0.82rem;
-  line-height: 1.5;
-}
+.vs-topic-fallback__actions { position: relative; z-index: 1; display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 18px; padding-top: 14px; border-top: 1px solid color-mix(in srgb, var(--vf-ink) 10%, transparent); }
+.vs-topic-fallback__actions p { margin: 0; max-width: 72ch; color: color-mix(in srgb, var(--vf-ink) 62%, transparent); font-size: .78rem; line-height: 1.45; }
+.vs-topic-fallback__actions button { flex: 0 0 auto; border: 1px solid color-mix(in srgb, var(--vf-primary) 45%, transparent); border-radius: 999px; padding: 9px 13px; background: color-mix(in srgb, var(--vf-primary) 13%, transparent); color: var(--vf-ink); font-weight: 700; cursor: pointer; }
+.vs-topic-fallback__actions button:hover,
+.vs-topic-fallback__actions button:focus-visible { background: color-mix(in srgb, var(--vf-primary) 24%, transparent); }
+.vs-topic-fallback__actions button:focus-visible { outline: 3px solid color-mix(in srgb, var(--vf-primary) 44%, transparent); outline-offset: 2px; }
 
 @media (max-width: 560px) {
+  .vs-topic-fallback { border-radius: 22px; padding: 16px; }
   .vs-topic-fallback__hero { grid-template-columns: 58px 1fr; gap: 12px; }
   .vs-topic-fallback__mark { width: 58px; border-radius: 18px; }
   .vs-topic-fallback__mark svg { width: 36px; height: 36px; }
   .vs-topic-fallback__rail ol { grid-template-columns: 1fr; }
+  .vs-topic-fallback__actions { align-items: stretch; flex-direction: column; }
+  .vs-topic-fallback__actions button { width: 100%; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .vs-topic-fallback__rail button { transition: none; }
+  .vs-topic-fallback__rail button:hover { transform: none; }
 }
