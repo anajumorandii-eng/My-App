@@ -7,10 +7,11 @@ import { literatura } from './data/literatura';
 import { matematica } from './data/matematica';
 import { quimica } from './data/quimica';
 import { fisica } from './data/fisica';
+import { biologia } from './data/biologia';
 import { validarLastro } from './lastro';
 import type { SceneEntry } from './types';
 
-const todas: SceneEntry[] = [...filosofia, ...sociologia, ...historia, ...geografia, ...literatura, ...matematica, ...quimica, ...fisica];
+const todas: SceneEntry[] = [...filosofia, ...sociologia, ...historia, ...geografia, ...literatura, ...matematica, ...quimica, ...fisica, ...biologia];
 const capitulos = new Map(interactiveSummaries.map((summary) => [summary.id, summary]));
 const validas = todas.filter((entry) => validarLastro(entry, capitulos.get(entry.chapterId)).length === 0);
 const porCapitulo = new Map(validas.map((entry) => [entry.chapterId, entry]));

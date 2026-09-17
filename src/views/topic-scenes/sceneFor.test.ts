@@ -7,6 +7,7 @@ import { geografia } from './data/geografia';
 import { literatura } from './data/literatura';
 import { quimica } from './data/quimica';
 import { fisica } from './data/fisica';
+import { biologia } from './data/biologia';
 describe('Seleção de cena por capítulo', () => {
   it('devolve a cena pedida (Filosofia)', () => { const alvo = filosofia[0]; expect(sceneFor(alvo.chapterId)?.family).toBe(alvo.family); });
   it('devolve a cena pedida (Sociologia)', () => { const alvo = sociologia[0]; expect(sceneFor(alvo.chapterId)?.family).toBe(alvo.family); });
@@ -15,6 +16,7 @@ describe('Seleção de cena por capítulo', () => {
   it('devolve a cena pedida (Literatura)', () => { const alvo = literatura[0]; expect(sceneFor(alvo.chapterId)?.family).toBe(alvo.family); });
   it('devolve a cena pedida (Química)', () => { const alvo = quimica[0]; expect(sceneFor(alvo.chapterId)?.family).toBe(alvo.family); });
   it('devolve a cena pedida (Física)', () => { const alvo = fisica[0]; expect(sceneFor(alvo.chapterId)?.family).toBe(alvo.family); });
+  it('devolve a cena pedida (Biologia)', () => { const alvo = biologia[0]; expect(sceneFor(alvo.chapterId)?.family).toBe(alvo.family); });
   it('falha fechada para capítulo sem entrada', () => {
     expect(sceneFor('summary-filosofia-o-nascimento-da-filosofia-do-mito-ao-logos')).toBeNull();
     expect(sceneFor('summary-sociologia-solidariedade-mecanica-e-solidariedade-organica')).toBeNull();
@@ -22,5 +24,5 @@ describe('Seleção de cena por capítulo', () => {
     expect(sceneFor('summary-geografia-regionalizacoes-da-guerra-fria')).toBeNull();
     expect(sceneFor('capitulo-inexistente')).toBeNull();
   });
-  it('só expõe entradas com lastro, somando todas as matérias', () => { expect(entradasValidas().length).toBe(filosofia.length + sociologia.length + historia.length + geografia.length + literatura.length + quimica.length + fisica.length); });
+  it('só expõe entradas com lastro, somando todas as matérias', () => { expect(entradasValidas().length).toBe(filosofia.length + sociologia.length + historia.length + geografia.length + literatura.length + quimica.length + fisica.length + biologia.length); });
 });
