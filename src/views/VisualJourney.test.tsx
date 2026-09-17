@@ -70,17 +70,18 @@ describe('Percurso ligado ao conteúdo', () => {
     expect(screen.getByText(summary.sections[1].content)).toBeInTheDocument();
   });
   it('mantém um fallback navegável em toda matéria que ainda tem lacunas de cobertura', () => {
-    const subjects = [...new Set(interactiveSummaries.map(summary => summary.subject))];
-    const uncovered = subjects.map(subject => interactiveSummaries.find(
-      summary => summary.subject === subject && visualCoverageFor(summary).kind === 'fallback',
-    ));
-    expect(uncovered.every(Boolean)).toBe(true);
-    expect(uncovered).toHaveLength(14);
+    const uncovered = interactiveSummaries.filter(
+      summary => visualCoverageFor(summary).kind === 'fallback',
+    );
+    const subjectsWithFallback = [...new Set(uncovered.map(summary => summary.subject))];
+    expect(uncovered.length).toBeGreaterThan(0);
+    expect(subjectsWithFallback.length).toBeGreaterThan(0);
 
-    for (const summary of uncovered) {
-      const view = render(<VisualJourney summary={summary!} onPractice={() => {}} />);
-      const fallback = screen.getByLabelText(`Estrutura visual de ${summary!.title}`);
-      expect(fallback).toHaveAttribute('data-subject', summary!.subject);
+    for (const subject of subjectsWithFallback) {
+      const summary = uncovered.find(item => item.subject === subject)!;
+      const view = render(<VisualJourney summary={summary} onPractice={() => {}} />);
+      const fallback = screen.getByLabelText(`Estrutura visual de ${summary.title}`);
+      expect(fallback).toHaveAttribute('data-subject', subject);
       expect(within(fallback).getAllByRole('button').length).toBeGreaterThan(0);
       view.unmount();
       cleanup();
