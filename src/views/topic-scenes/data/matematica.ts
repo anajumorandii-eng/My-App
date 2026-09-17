@@ -3,21 +3,22 @@ import type { SceneEntry } from '../types';
 /** Capítulos de Matemática sem cena-âncora, com o motivo. A lista é lida pelo
  *  teste de completude: nenhum capítulo pode ficar fora das duas listas.
  *
- *  Parte A (capítulos 1-41, por ordem de aparição em deepSummaryContent.json
- *  filtrado por subject === "Matemática"). A Parte B (42-83) é adicionada por
- *  uma dispatch separada, que não deve repetir nenhum dos chapterIds abaixo.
+ *  Parte A (41 capítulos) e Parte B (42 capítulos, 83 no total), por ordem
+ *  de aparição em deepSummaryContent.json filtrado por
+ *  subject === "Matemática" menos os chapterIds já cobertos pela outra
+ *  parte. As duas partes juntas cobrem os 83 capítulos de Matemática.
  *
- *  Todos os 41 capítulos desta metade foram lidos por inteiro e testados
- *  contra as oito famílias de `types.ts`. Nenhum sustentou honestamente
- *  nenhuma família: são conteúdo procedimental (fórmula, algoritmo de
- *  cálculo, exercício resolvido), sem a estrutura de rivalidade genuína,
- *  camadas assimétricas, movimento dialético, tipos coexistentes com
- *  guarda-chuva explícito, critérios conjuntivos com necessidade declarada,
- *  escala de graus nomeados, cadeia causal instrumental entre eventos
- *  distintos, ou grade de dois eixos ortogonais que as famílias exigem. Ver
- *  `docs/visual-personalizado/17-familias-matematica.md` (Parte A) para o
- *  raciocínio capítulo a capítulo, incluindo os candidatos considerados e
- *  descartados.
+ *  Todos os 83 capítulos foram lidos por inteiro e testados contra as oito
+ *  famílias de `types.ts`. Nenhum sustentou honestamente nenhuma família:
+ *  são conteúdo procedimental (fórmula, algoritmo de cálculo, exercício
+ *  resolvido), sem a estrutura de rivalidade genuína, camadas assimétricas,
+ *  movimento dialético, tipos coexistentes com guarda-chuva explícito,
+ *  critérios conjuntivos com necessidade declarada, escala de graus
+ *  nomeados, cadeia causal instrumental entre eventos distintos, ou grade de
+ *  dois eixos ortogonais que as famílias exigem. Ver
+ *  `docs/visual-personalizado/17-familias-matematica.md` (seções "Parte A" e
+ *  "Parte B") para o raciocínio capítulo a capítulo, incluindo os candidatos
+ *  considerados e descartados.
  */
 export const matematicaSemCena: { chapterId: string; motivo: string }[] = [
   {
@@ -149,7 +150,7 @@ export const matematicaSemCena: { chapterId: string; motivo: string }[] = [
     motivo: 'Definição de função, domínio/contradomínio/imagem e teste da reta vertical são conteúdo de definição, sem tipos coexistentes, critérios conjuntivos ou cadeia causal.',
   },
   {
-    chapterId: 'summary-matematica-introducao-as-probabilidades',
+    chapterId: 'mat-probabilidade-contagem',
     motivo: 'Modelo de Laplace, operações de conjuntos aplicadas a eventos e probabilidade condicional (inclusive Bayes) são procedimento e fórmula, sem rivalidade, tipos com guarda-chuva ou cadeia causal narrativa entre eventos distintos — o exemplo de Bayes é um cálculo único, não uma cadeia de elos causais encadeados.',
   },
   {
@@ -184,12 +185,184 @@ export const matematicaSemCena: { chapterId: string; motivo: string }[] = [
     chapterId: 'summary-matematica-multiplicacao-de-matrizes',
     motivo: 'Regra "linha por coluna", condição de compatibilidade dimensional e propriedades que diferem da aritmética real (não comutatividade, produto nulo possível) são procedimento e propriedades algébricas, sem estrutura de família.',
   },
+
+  // Parte B (capítulos 42-83). Ver seção "Parte B" de
+  // docs/visual-personalizado/17-familias-matematica.md para o raciocínio
+  // completo, capítulo a capítulo, com citação literal.
+  {
+    chapterId: 'summary-matematica-potencias-e-radicais',
+    motivo: 'Propriedades operatórias de potências, conversão de radical para expoente fracionário e racionalização de denominador são procedimento algébrico de manipulação, sem tipos coexistentes, critérios conjuntivos ou cadeia causal entre eventos distintos.',
+  },
+  {
+    chapterId: 'summary-matematica-razao-e-proporcao',
+    motivo: 'Grandezas diretas/inversas são uma dicotomia binária de classificação, não tipos com guarda-chuva explícito nem rivalidade; regra de três composta e divisão proporcional são procedimento de cálculo.',
+  },
+  {
+    chapterId: 'summary-matematica-porcentagem',
+    motivo: 'Cálculo de porcentagem, fator multiplicativo de aumento/desconto e distinção entre variação percentual e ponto percentual são definições e procedimento de cálculo, sem estrutura de família.',
+  },
+  {
+    chapterId: 'summary-matematica-o-sistema-de-numeracao-decimal',
+    motivo: 'Valor posicional, conversão entre bases e notação científica são convenção de representação numérica e procedimento de conversão, sem rivalidade, tipos coexistentes ou cadeia causal.',
+  },
+  {
+    chapterId: 'summary-matematica-progressao-aritmetica',
+    motivo: 'Termo geral e soma de uma PA são fórmulas derivadas de uma única definição de variação constante; não há tipos, critérios conjuntivos ou cadeia causal narrativa.',
+  },
+  {
+    chapterId: 'summary-matematica-progressao-geometrica',
+    motivo: 'Termo geral, soma finita e soma infinita de uma PG são fórmulas derivadas da mesma definição de razão constante multiplicativa — procedimento de cálculo, sem estrutura de família.',
+  },
+  {
+    chapterId: 'summary-matematica-sequencias',
+    motivo: 'Recorrência versus lei explícita são duas formas equivalentes de descrever a mesma sequência (não posições rivais nem tipos coexistentes); convergência de séries é critério técnico único, sem cadeia causal entre eventos distintos.',
+  },
+  {
+    chapterId: 'summary-matematica-sistemas-de-equacoes',
+    motivo: 'Métodos de substituição e adição/eliminação são técnicas alternativas de resolução (escolha de ferramenta, não rivalidade de posições); impossível/indeterminado são estados mutuamente exclusivos de classificação, não tipos coexistentes.',
+  },
+  {
+    chapterId: 'summary-matematica-tabelas-e-matrizes',
+    motivo: 'Definição de matriz, matrizes especiais (identidade, nula, diagonal) e operações de soma/multiplicação por escalar são procedimento e nomenclatura, sem critérios conjuntivos declarados nem cadeia causal.',
+  },
+  {
+    chapterId: 'summary-matematica-medias',
+    motivo: 'Média ponderada, média harmônica (caso de velocidades) e mediana/moda são fórmulas alternativas para "resumir um conjunto de dados", escolhidas por contexto — não rivalidade de posições teóricas nem tipos com guarda-chuva explícito.',
+  },
+  {
+    chapterId: 'summary-matematica-o-problema-da-fila',
+    motivo: 'Arranjo, permutação com repetição e a técnica do bloco combinado são fórmulas e técnicas de contagem aplicadas conforme a situação — procedimento, sem estrutura de família.',
+  },
+  {
+    chapterId: 'summary-matematica-o-problema-do-grupo',
+    motivo: 'Combinação e a distinção arranjo/combinação por "ordem importa ou não" é um critério binário de escolha de fórmula, não uma tipologia com guarda-chuva nem critérios conjuntivos exigindo reunião simultânea.',
+  },
+  {
+    chapterId: 'summary-matematica-tecnicas-de-contagem',
+    motivo: 'Separação em casos e técnica do complemento são estratégias de resolução de problemas de contagem — procedimento e heurística, sem tipos coexistentes ou cadeia causal entre eventos distintos.',
+  },
+  {
+    chapterId: 'summary-matematica-operacoes-com-probabilidades',
+    motivo: 'União, complemento, condicional e regra do produto generalizada são fórmulas operatórias sobre probabilidades — procedimento algébrico, sem rivalidade, tipos ou critérios conjuntivos.',
+  },
+  {
+    chapterId: 'summary-matematica-angulos-em-triangulos',
+    motivo: 'Classificação por lados (equilátero/isósceles/escaleno) e por ângulos (acutângulo/retângulo/obtusângulo) são dois esquemas de classificação apresentados separadamente, nunca cruzados numa grade de células — não sustenta `grade-de-eixos` (que exige dois eixos que se cruzam formando células com itens); soma dos ângulos e ângulo externo são fórmulas derivadas de uma única demonstração.',
+  },
+  {
+    chapterId: 'summary-matematica-angulos-em-poligonos',
+    motivo: 'Soma dos ângulos internos, ângulo de polígono regular e número de diagonais são fórmulas derivadas por decomposição geométrica — procedimento de cálculo, sem estrutura de família.',
+  },
+  {
+    chapterId: 'summary-matematica-angulos-e-circunferencias',
+    motivo: 'Relações entre ângulo central/inscrito/de cordas/de secantes e o arco correspondente são um conjunto de fórmulas específicas por configuração geométrica, escolhidas por identificação do caso — procedimento, não tipologia com guarda-chuva nem critérios conjuntivos.',
+  },
+  {
+    chapterId: 'summary-matematica-simetrias-e-congruencias',
+    motivo: 'Congruência como caso particular de semelhança (k=1) e os três movimentos rígidos (translação, rotação, reflexão) são definição e propriedades, sem rivalidade de posições nem tipos com guarda-chuva explícito de coexistência.',
+  },
+  {
+    chapterId: 'summary-matematica-semelhanca-de-triangulos',
+    motivo: 'Os critérios AA, LAL e LLL são alternativas suficientes e independentes para provar semelhança (qualquer um basta isoladamente) — o oposto estrutural de `criterios-conjuntivos`, que exige condições que precisam ser reunidas simultaneamente; não há necessidade conjunta declarada na fonte.',
+  },
+  {
+    chapterId: 'summary-matematica-o-ponto-medio-e-o-baricentro-de-um-triangulo',
+    motivo: 'Fórmula de ponto médio e de baricentro por coordenadas, e a razão fixa 2:1 do baricentro na mediana, são fórmulas derivadas de um único teorema de concorrência — procedimento e propriedade única, sem estrutura de família.',
+  },
+  {
+    chapterId: 'summary-matematica-triangulo-retangulo',
+    motivo: 'Relações métricas (h²=mn, b²=an, c²=am) e razões trigonométricas são duas abordagens equivalentes para o mesmo triângulo, escolhidas conforme o dado disponível — não são posições rivais nem tipos coexistentes.',
+  },
+  {
+    chapterId: 'summary-matematica-areas-de-poligonos',
+    motivo: 'Fórmulas de área de triângulo, retângulo, trapézio, losango e polígono regular são derivadas por decomposição geométrica umas das outras — procedimento de cálculo, sem tipos, critérios conjuntivos ou cadeia causal.',
+  },
+  {
+    chapterId: 'summary-matematica-area-do-circulo-e-de-suas-partes',
+    motivo: 'Área do círculo, setor, segmento circular e coroa circular são fórmulas relacionadas por subtração/proporção de áreas — procedimento de cálculo, sem estrutura de família.',
+  },
+  {
+    chapterId: 'summary-matematica-razoes-entre-areas-de-figuras-planas',
+    motivo: 'Razão de áreas igual ao quadrado da razão linear, e as técnicas de "ângulo comum" e "base/altura comum" são fórmulas e atalhos de cálculo — procedimento, sem rivalidade, tipos ou cadeia causal.',
+  },
+  {
+    chapterId: 'summary-matematica-areas-de-figuras-planas',
+    motivo: 'Decomposição de figuras compostas e cálculo de áreas sombreadas por "figura completa menos parte excluída" são estratégia e procedimento de cálculo, sem estrutura de família.',
+  },
+  {
+    chapterId: 'summary-matematica-trigonometria-no-triangulo-retangulo',
+    motivo: 'Definições de seno/cosseno/tangente, verificação por Pitágoras e problemas de ângulo de elevação são procedimento trigonométrico aplicado, sem tipos coexistentes ou critérios conjuntivos.',
+  },
+  {
+    chapterId: 'summary-matematica-relacoes-trigonometricas-em-poligonos',
+    motivo: 'Lei dos senos, lei dos cossenos (generalização de Pitágoras) e fórmula de área por dois lados e ângulo são fórmulas derivadas aplicadas conforme os dados disponíveis — procedimento, sem estrutura de família.',
+  },
+  {
+    chapterId: 'summary-matematica-outras-razoes-trigonometricas',
+    motivo: 'Tangente, cotangente, secante e cossecante são definições derivadas de seno/cosseno, com identidades algébricas correspondentes — procedimento e nomenclatura, sem rivalidade, tipos ou cadeia causal.',
+  },
+  {
+    chapterId: 'summary-matematica-transformacoes-trigonometricas',
+    motivo: 'Fórmulas de soma/diferença de arcos e arco duplo/metade são identidades algébricas derivadas umas das outras — procedimento de manipulação trigonométrica, sem estrutura de família.',
+  },
+  {
+    chapterId: 'summary-matematica-o-universo-tridimensional',
+    motivo: 'Paralelas/concorrentes/reversas são estados mutuamente exclusivos de classificação de posição relativa de retas, não tipos coexistentes com guarda-chuva; perpendicularismo reta-plano é uma condição única, sem cadeia causal entre eventos distintos.',
+  },
+  {
+    chapterId: 'summary-matematica-prismas',
+    motivo: 'Definição de prisma, fórmula de volume (A_base×h) e de área total são procedimento e nomenclatura geométrica, sem tipos coexistentes com guarda-chuva, critérios conjuntivos ou cadeia causal.',
+  },
+  {
+    chapterId: 'summary-matematica-piramides',
+    motivo: 'Fórmula de volume com fator 1/3, apótema da pirâmide e fórmula do tronco são derivações e fórmulas de cálculo — procedimento geométrico, sem estrutura de família.',
+  },
+  {
+    chapterId: 'summary-matematica-solidos-de-revolucao',
+    motivo: 'Cilindro, cone e esfera como sólidos gerados por rotação de uma figura plana são instâncias de um único princípio gerador comum (não tipos rivais nem coexistentes com guarda-chuva distinto); fórmulas de volume/área são procedimento de cálculo.',
+  },
+  {
+    chapterId: 'summary-matematica-razoes-entre-volumes-de-solidos',
+    motivo: 'Razão de volumes igual ao cubo da razão linear é uma única fórmula aplicada a sólidos semelhantes — procedimento de cálculo, sem tipos, critérios conjuntivos ou cadeia causal entre eventos distintos.',
+  },
+  {
+    chapterId: 'summary-matematica-posicoes-relativas-entre-duas-retas',
+    motivo: 'Paralelas/coincidentes/concorrentes são estados mutuamente exclusivos verificados por comparação de coeficientes — classificação por critério algébrico único, não tipos coexistentes nem critérios conjuntivos que exigem reunião simultânea.',
+  },
+  {
+    chapterId: 'summary-matematica-posicoes-relativas-entre-uma-reta-e-uma-circunferencia',
+    motivo: 'Secante/tangente/externa são estados mutuamente exclusivos definidos por comparação distância-raio (ou sinal do discriminante) — classificação por critério único, não tipologia com guarda-chuva de coexistência.',
+  },
+  {
+    chapterId: 'summary-matematica-representacao-geometrica-de-inequacoes',
+    motivo: 'Semiplano de uma inequação linear e interseção de semiplanos num sistema são procedimento de representação geométrica, sem tipos coexistentes, critérios conjuntivos declarados como necessidade ou cadeia causal.',
+  },
+  {
+    chapterId: 'summary-matematica-tecnicas-algebricas',
+    motivo: 'Produtos notáveis e simplificação de frações algébricas são identidades e procedimento de manipulação algébrica — sem rivalidade, tipos ou cadeia causal entre eventos distintos.',
+  },
+  {
+    chapterId: 'summary-matematica-transformacoes-em-graficos-de-funcoes',
+    motivo: 'Translações, reflexões e dilatações de gráficos são regras de transformação algébrica aplicadas conforme a expressão — procedimento, sem estrutura de família.',
+  },
+  {
+    chapterId: 'summary-matematica-modulo-de-um-numero-real',
+    motivo: 'Definição de módulo como distância à origem, e resolução de equações/inequações modulares por desdobramento em casos, são procedimento algébrico, sem tipos coexistentes ou critérios conjuntivos.',
+  },
+  {
+    chapterId: 'summary-matematica-numeros-complexos',
+    motivo: 'Definição de i, operações (soma, multiplicação, divisão por conjugado) e igualdade de complexos são procedimento algébrico derivado de uma única definição (i²=−1), sem estrutura de família.',
+  },
+  {
+    chapterId: 'summary-matematica-polinomios',
+    motivo: 'Grau, divisão de polinômios (Briot-Ruffini) e fatoração progressiva por raízes são procedimento algébrico sequencial, sem tipos coexistentes, critérios conjuntivos ou cadeia causal entre eventos distintos.',
+  },
 ];
 
-/** Uma entrada por capítulo, escrita à mão lendo o capítulo. Vazio nesta
- *  Parte A: a leitura dos 41 capítulos não encontrou nenhum capítulo que
- *  sustentasse honestamente uma das oito famílias com citação literal — ver
- *  `matematicaSemCena` acima e o raciocínio completo em
+/** Uma entrada por capítulo, escrita à mão lendo o capítulo. Vazio: a
+ *  leitura dos 83 capítulos (Parte A + Parte B) não encontrou nenhum
+ *  capítulo que sustentasse honestamente uma das oito famílias com citação
+ *  literal — ver `matematicaSemCena` acima e o raciocínio completo em
  *  `docs/visual-personalizado/17-familias-matematica.md`. Uma dispatch
  *  futura pode reconsiderar candidatos específicos anotados no documento
  *  (Cônicas) se novas evidências de leitura mudarem essa avaliação.
