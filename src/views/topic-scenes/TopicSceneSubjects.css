@@ -1,0 +1,73 @@
+.vs-handdrawn-container {
+  --tc-world: color-mix(in srgb, var(--vs-paper-strong) 95%, #0f172a);
+  margin: 1rem 0;
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 85% 12%, color-mix(in srgb, var(--vs-blue) 9%, transparent), transparent 30%),
+    var(--tc-world);
+}
+
+.vs-handdrawn-container[data-subject="Física"] { --vs-blue:#4c7fe0; --vs-amber:#e0b23a; --vs-burgundy:#5f79a8; }
+.vs-handdrawn-container[data-subject="Química"] { --vs-blue:#7c9c74; --vs-amber:#b87545; --vs-burgundy:#955f46; }
+.vs-handdrawn-container[data-subject="Biologia"] { --vs-blue:#54b987; --vs-amber:#e0876a; --vs-burgundy:#3d8665; }
+.vs-handdrawn-container[data-subject="História"] { --vs-blue:#9c7a45; --vs-amber:#a1483a; --vs-burgundy:#775632; }
+.vs-handdrawn-container[data-subject="Geografia"] { --vs-blue:#77804e; --vs-amber:#b5723f; --vs-burgundy:#5b6b45; }
+.vs-handdrawn-container[data-subject="Matemática"] { --vs-blue:#6e93b3; --vs-amber:#c9a468; --vs-burgundy:#637d91; }
+.vs-handdrawn-container[data-subject="Literatura"] { --vs-blue:#8c5362; --vs-amber:#b5924f; --vs-burgundy:#6e1f30; }
+.vs-handdrawn-container[data-subject="Filosofia"] { --vs-blue:#8c7bb4; --vs-amber:#c7a45f; --vs-burgundy:#65527f; }
+.vs-handdrawn-container[data-subject="Sociologia"] { --vs-blue:#6f9ca5; --vs-amber:#d0a06a; --vs-burgundy:#52777e; }
+.vs-handdrawn-container[data-subject="Redação"] { --vs-blue:#b06643; --vs-amber:#c9703b; --vs-burgundy:#8a3b33; }
+.vs-handdrawn-container[data-subject="Gramática"],
+.vs-handdrawn-container[data-subject="Entendimento de Texto"] { --vs-blue:#9b5360; --vs-amber:#c26a56; --vs-burgundy:#782c3b; }
+.vs-handdrawn-container[data-subject="Língua Inglesa"] { --vs-blue:#7197c7; --vs-amber:#d7a463; --vs-burgundy:#526f98; }
+.vs-handdrawn-container[data-subject="Atualidades"] { --vs-blue:#d99a3e; --vs-amber:#c1443d; --vs-burgundy:#8f6a35; }
+
+.tc-subject-signature {
+  position: absolute;
+  z-index: 2;
+  right: 14px;
+  top: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 9px;
+  border: 1px solid color-mix(in srgb, var(--vs-blue) 28%, transparent);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--vs-paper-strong) 86%, transparent);
+  color: color-mix(in srgb, var(--vs-blue) 86%, var(--vs-ink));
+  pointer-events: none;
+}
+
+.tc-subject-signature svg { width: 18px; height: 18px; }
+.tc-subject-signature span {
+  font: 700 .62rem/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+  text-transform: uppercase;
+  letter-spacing: .11em;
+}
+
+.vs-handdrawn-container[data-subject="História"] .tc-scene {
+  background-image: linear-gradient(90deg, transparent 0 9%, color-mix(in srgb, var(--vs-burgundy) 9%, transparent) 9% 9.5%, transparent 9.5%);
+}
+
+.vs-handdrawn-container[data-subject="Química"] .tc-scene {
+  background-image:
+    radial-gradient(circle at 88% 18%, color-mix(in srgb, var(--vs-blue) 8%, transparent) 0 2px, transparent 2.5px),
+    radial-gradient(circle at 82% 25%, color-mix(in srgb, var(--vs-amber) 8%, transparent) 0 3px, transparent 3.5px);
+}
+
+.vs-handdrawn-container[data-subject="Matemática"] .tc-scene,
+.vs-handdrawn-container[data-subject="Física"] .tc-scene {
+  background-image:
+    linear-gradient(color-mix(in srgb, var(--vs-blue) 5%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--vs-blue) 5%, transparent) 1px, transparent 1px);
+  background-size: 26px 26px;
+}
+
+@media (max-width: 560px) {
+  .tc-subject-signature span { display: none; }
+  .tc-subject-signature { top: 9px; right: 9px; padding: 5px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tc-subject-signature svg * { animation: none !important; transition: none !important; }
+}

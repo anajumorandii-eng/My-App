@@ -5,6 +5,7 @@ import { VisualJourney } from './VisualJourney';
 import { interactiveSummaries } from '../data/interactiveSummaries';
 import { NewtonLab, AtomLab } from './visual-boards/MechanismLab';
 import { filosofia } from './topic-scenes/data/filosofia';
+import { visualCoverageFor } from './visualCoverage';
 
 vi.mock('../components/AiText', () => ({ AiText: ({ text }: { text: string }) => <div>{text}</div> }));
 
@@ -67,6 +68,24 @@ describe('Percurso ligado ao conteúdo', () => {
     const secondStep = within(fallback).getByRole('button', { name: new RegExp(summary.sections[1].title) });
     fireEvent.click(secondStep);
     expect(screen.getByText(summary.sections[1].content)).toBeInTheDocument();
+  });
+  it('mantém um fallback navegável em toda matéria que ainda tem lacunas de cobertura', () => {
+    const uncovered = interactiveSummaries.filter(
+      summary => visualCoverageFor(summary).kind === 'fallback',
+    );
+    const subjectsWithFallback = [...new Set(uncovered.map(summary => summary.subject))];
+    expect(uncovered.length).toBeGreaterThan(0);
+    expect(subjectsWithFallback.length).toBeGreaterThan(0);
+
+    for (const subject of subjectsWithFallback) {
+      const summary = uncovered.find(item => item.subject === subject)!;
+      const view = render(<VisualJourney summary={summary} onPractice={() => {}} />);
+      const fallback = screen.getByLabelText(`Estrutura visual de ${summary.title}`);
+      expect(fallback).toHaveAttribute('data-subject', subject);
+      expect(within(fallback).getAllByRole('button').length).toBeGreaterThan(0);
+      view.unmount();
+      cleanup();
+    }
   });
   it('não duplica fallback quando o capítulo já possui cena dedicada', () => {
     const summary = interactiveSummaries.find((item) => item.id === filosofia[0].chapterId)!;

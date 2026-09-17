@@ -1,4 +1,21 @@
 import React from 'react';
+import { interactiveSummaries } from '../../data/interactiveSummaries';
+import {
+  AtualidadesIcon,
+  BiologiaIcon,
+  EntendimentoIcon,
+  FilosofiaIcon,
+  FisicaIcon,
+  GeografiaIcon,
+  GramaticaIcon,
+  HistoriaIcon,
+  InglesIcon,
+  LiteraturaIcon,
+  MatematicaIcon,
+  QuimicaIcon,
+  RedacaoIcon,
+  SociologiaIcon,
+} from '../../components/subject-icons/SubjectIcons';
 import { sceneFor } from './sceneFor';
 import { ContrasteDePosicoes } from './families/ContrasteDePosicoes';
 import { EscalaDeGraus } from './families/EscalaDeGraus';
@@ -9,6 +26,7 @@ import { Tipologia } from './families/Tipologia';
 import { CriteriosConjuntivos } from './families/CriteriosConjuntivos';
 import { GradeDeEixos } from './families/GradeDeEixos';
 import type { SceneEntry, SceneFamily } from './types';
+import './TopicSceneSubjects.css';
 
 const FAMILIAS: Record<SceneFamily, React.ComponentType<{ entry: SceneEntry }>> = {
   'contraste-de-posicoes': ContrasteDePosicoes,
@@ -20,15 +38,35 @@ const FAMILIAS: Record<SceneFamily, React.ComponentType<{ entry: SceneEntry }>> 
   'criterios-conjuntivos': CriteriosConjuntivos,
   'grade-de-eixos': GradeDeEixos,
 };
-import { GenerativeTopicIcon } from '../../components/subject-icons/GenerativeTopicIcon';
+
+const SUBJECT_ICON: Record<string, React.ComponentType<React.SVGProps<SVGSVGElement>>> = {
+  'Física': FisicaIcon,
+  'Atualidades': AtualidadesIcon,
+  'Biologia': BiologiaIcon,
+  'Geografia': GeografiaIcon,
+  'História': HistoriaIcon,
+  'Língua Inglesa': InglesIcon,
+  'Redação': RedacaoIcon,
+  'Gramática': GramaticaIcon,
+  'Literatura': LiteraturaIcon,
+  'Entendimento de Texto': EntendimentoIcon,
+  'Matemática': MatematicaIcon,
+  'Química': QuimicaIcon,
+  'Filosofia': FilosofiaIcon,
+  'Sociologia': SociologiaIcon,
+};
 
 export function TopicScene({ summaryId }: { summaryId: string }) {
   const entry = sceneFor(summaryId);
   if (!entry) return null;
+  const summary = interactiveSummaries.find(item => item.id === summaryId);
+  const subject = summary?.subject ?? 'Matemática';
+  const Icon = SUBJECT_ICON[subject] ?? MatematicaIcon;
   const Familia = FAMILIAS[entry.family];
+
   return (
-    <div className="vs-handdrawn-container" style={{ position: 'relative', overflow: 'hidden' }}>
-      <svg style={{ position: 'absolute', width: 0, height: 0 }}>
+    <div className="vs-handdrawn-container" data-subject={subject} style={{ position: 'relative', overflow: 'hidden' }}>
+      <svg style={{ position: 'absolute', width: 0, height: 0 }} aria-hidden="true">
         <defs>
           <filter id="sketch-filter" x="-10%" y="-10%" width="120%" height="120%">
             <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" result="noise" />
@@ -40,13 +78,13 @@ export function TopicScene({ summaryId }: { summaryId: string }) {
           </filter>
         </defs>
       </svg>
-      
-      {/* Generative Hand-drawn Watermark Map */}
-      <div className="vs-generative-watermark" aria-hidden="true" style={{ position: 'absolute', inset: 0, opacity: 0.08, pointerEvents: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <GenerativeTopicIcon topic={entry.question} strokeWidth={0.8} style={{ width: '150%', height: '150%', color: 'var(--vs-blue)', filter: 'url(#sketch-filter-heavy)' }} />
+
+      <div className="tc-subject-signature" aria-hidden="true">
+        <Icon strokeWidth={1.15} />
+        <span>{subject}</span>
       </div>
 
-      <div style={{ position: 'relative', zIndex: 1, filter: 'url(#sketch-filter)' }}>
+      <div style={{ position: 'relative', zIndex: 1 }}>
         <Familia entry={entry} />
       </div>
     </div>
