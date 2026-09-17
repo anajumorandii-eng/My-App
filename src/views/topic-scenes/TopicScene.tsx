@@ -26,6 +26,7 @@ import { Tipologia } from './families/Tipologia';
 import { CriteriosConjuntivos } from './families/CriteriosConjuntivos';
 import { GradeDeEixos } from './families/GradeDeEixos';
 import type { SceneEntry, SceneFamily } from './types';
+import './TopicSceneSubjects.css';
 
 const FAMILIAS: Record<SceneFamily, React.ComponentType<{ entry: SceneEntry }>> = {
   'contraste-de-posicoes': ContrasteDePosicoes,
