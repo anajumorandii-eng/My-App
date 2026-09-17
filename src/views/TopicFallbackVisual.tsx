@@ -1,4 +1,5 @@
 import React from 'react';
+import { useReducedMotion } from 'motion/react';
 import {
   AtualidadesIcon,
   BiologiaIcon,
@@ -61,6 +62,15 @@ const WORLD_LABEL: Record<string, string> = {
   'Atualidades': 'acontecimento, contexto e impacto',
 };
 
+function subjectInitials(subject: string): string {
+  return subject
+    .split(/\s+/)
+    .filter(Boolean)
+    .slice(0, 2)
+    .map(part => part[0]?.toLocaleUpperCase('pt-BR') ?? '')
+    .join('');
+}
+
 /**
  * Piso visual obrigatório para capítulos que ainda não têm uma prancha,
  * instrumento, cena-âncora ou experimento específico.
@@ -71,6 +81,7 @@ const WORLD_LABEL: Record<string, string> = {
  */
 export function TopicFallbackVisual({ summary, activeIndex, onSelectStep }: TopicFallbackVisualProps) {
   const Icon = SUBJECT_ICON[summary.subject] ?? MatematicaIcon;
+  const reducedMotion = useReducedMotion();
   const active = summary.sections[activeIndex] ?? summary.sections[0];
   const nextIndex = Math.min(activeIndex + 1, summary.sections.length - 1);
 
@@ -86,7 +97,11 @@ export function TopicFallbackVisual({ summary, activeIndex, onSelectStep }: Topi
 
       <div className="vs-topic-fallback__hero">
         <div className="vs-topic-fallback__mark" aria-hidden="true">
-          <Icon strokeWidth={1.35} />
+          {reducedMotion ? (
+            <span className="vs-topic-fallback__static-mark">{subjectInitials(summary.subject)}</span>
+          ) : (
+            <Icon strokeWidth={1.35} />
+          )}
         </div>
         <div className="vs-topic-fallback__identity">
           <span>{summary.subject} · {WORLD_LABEL[summary.subject] ?? 'mapa do capítulo'}</span>
