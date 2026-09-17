@@ -6,7 +6,7 @@
       "chapters": 85,
       "contentAtlases": 85,
       "interactiveExperiments": 0,
-      "anchorScenes": 13
+      "anchorScenes": 22
     },
     {
       "subject": "Atualidades",
@@ -20,7 +20,7 @@
       "chapters": 72,
       "contentAtlases": 72,
       "interactiveExperiments": 1,
-      "anchorScenes": 43
+      "anchorScenes": 8
     },
     {
       "subject": "Geografia",
@@ -152,7 +152,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": "calorimetria"
+      "anchorScene": "tipologia"
     },
     {
       "id": "atu-cop30-belem",
@@ -318,7 +318,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": "tipologia"
+      "anchorScene": null
     },
     {
       "id": "bio-ecologia-invasoras-controle-biologico",
@@ -371,7 +371,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": "tipologia"
+      "anchorScene": null
     },
     {
       "id": "bio-ecologia-sucessao",
@@ -424,7 +424,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": "escala-de-graus"
+      "anchorScene": null
     },
     {
       "id": "bio-ecologia-ciclo-carbono",
@@ -530,7 +530,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": "cadeia-de-derivacao"
+      "anchorScene": null
     },
     {
       "id": "bio-ecologia-ciclo-hidrologico-poluicao-agua",
@@ -583,7 +583,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": "tipologia"
+      "anchorScene": null
     },
     {
       "id": "bio-ecologia-eutrofizacao",
@@ -636,7 +636,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": "cadeia-de-derivacao"
+      "anchorScene": null
     },
     {
       "id": "bio-ecologia-poluicao-ar",
@@ -742,7 +742,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": "cadeia-de-derivacao"
+      "anchorScene": null
     },
     {
       "id": "bio-ecologia-aquecimento-global-pops-biorremediacao",
@@ -848,7 +848,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": "cadeia-de-derivacao"
+      "anchorScene": null
     },
     {
       "id": "summary-biologia-composicao-quimica-celular-compostos-inorganicos",
@@ -954,7 +954,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": "tipologia"
+      "anchorScene": null
     },
     {
       "id": "summary-biologia-composicao-quimica-celular-proteinas-e-sua-funcao-estrutural",
@@ -1007,7 +1007,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": "cadeia-de-derivacao"
+      "anchorScene": null
     },
     {
       "id": "summary-biologia-membranas-celulares",
@@ -1325,7 +1325,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": "cadeia-de-derivacao"
+      "anchorScene": null
     },
     {
       "id": "summary-biologia-bioenergetica-fotossintese-e-quimiossintese",
@@ -1378,7 +1378,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": "cadeia-de-derivacao"
+      "anchorScene": "bioenergetica"
     },
     {
       "id": "summary-biologia-acidos-nucleicos",
@@ -1484,7 +1484,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": "cadeia-de-derivacao"
+      "anchorScene": "divisao-celular"
     },
     {
       "id": "summary-biologia-mutacoes-cromossomicas-e-gametogenese",
@@ -1749,7 +1749,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": "tipologia"
+      "anchorScene": null
     },
     {
       "id": "summary-biologia-segunda-lei-de-mendel",
@@ -1855,7 +1855,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": "tipologia"
+      "anchorScene": "mendel"
     },
     {
       "id": "summary-biologia-ligacao-genica",
@@ -1961,7 +1961,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": "tipologia"
+      "anchorScene": null
     },
     {
       "id": "summary-biologia-evolucao-biologica-construcao-historica",
@@ -2014,7 +2014,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": "contraste-de-posicoes"
+      "anchorScene": null
     },
     {
       "id": "summary-biologia-mecanismos-da-evolucao-biologica",
@@ -2067,7 +2067,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": "tipologia"
+      "anchorScene": null
     },
     {
       "id": "summary-biologia-biomas-brasileiros",
@@ -2120,7 +2120,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": "tipologia"
+      "anchorScene": null
     },
     {
       "id": "summary-biologia-classificacao-biologica-nomenclatura-cientifica-e-nocoes-de-sistematica-filogenetica",
@@ -2173,7 +2173,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": "escala-de-graus"
+      "anchorScene": null
     },
     {
       "id": "summary-biologia-protozoarios-e-protozooses",
@@ -2226,7 +2226,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": "tipologia"
+      "anchorScene": null
     },
     {
       "id": "summary-biologia-poriferos-e-cnidarios",
@@ -2385,7 +2385,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": "tipologia"
+      "anchorScene": null
     },
     {
       "id": "summary-biologia-anelideos",
@@ -2438,7 +2438,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": "tipologia"
+      "anchorScene": null
     },
     {
       "id": "summary-biologia-artropodes-insetos-crustaceos-e-miriapodes",
@@ -2597,7 +2597,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": "tipologia"
+      "anchorScene": null
     },
     {
       "id": "summary-biologia-introducao-aos-cordados-e-os-peixes",
@@ -2703,7 +2703,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": "escala-de-graus"
+      "anchorScene": null
     },
     {
       "id": "summary-biologia-fungos",
@@ -2756,7 +2756,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": "tipologia"
+      "anchorScene": null
     },
     {
       "id": "summary-biologia-algas",
@@ -2809,7 +2809,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": "tipologia"
+      "anchorScene": null
     },
     {
       "id": "summary-biologia-ciclos-de-vida",
@@ -2862,7 +2862,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": "tipologia"
+      "anchorScene": null
     },
     {
       "id": "summary-biologia-plantas-terrestres-i-briofitas-e-pteridofitas",
@@ -2915,7 +2915,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": "escala-de-graus"
+      "anchorScene": null
     },
     {
       "id": "summary-biologia-plantas-terrestres-ii-gimnospermas-e-angiospermas",
@@ -3074,7 +3074,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": "cadeia-de-derivacao"
+      "anchorScene": null
     },
     {
       "id": "summary-biologia-embriologia-animal",
@@ -3127,7 +3127,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": "cadeia-de-derivacao"
+      "anchorScene": null
     },
     {
       "id": "summary-biologia-fisiologia-da-sustentacao-e-da-locomocao",
@@ -3233,7 +3233,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": "cadeia-de-derivacao"
+      "anchorScene": null
     },
     {
       "id": "summary-biologia-sangue-e-imunologia",
@@ -3286,7 +3286,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": "tipologia"
+      "anchorScene": "abo"
     },
     {
       "id": "summary-biologia-coracao-e-vasos-sanguineos",
@@ -3445,7 +3445,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": "cadeia-de-derivacao"
+      "anchorScene": null
     },
     {
       "id": "summary-biologia-fisiologia-da-coordenacao-nervosa-i",
@@ -3498,7 +3498,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": "cadeia-de-derivacao"
+      "anchorScene": null
     },
     {
       "id": "summary-biologia-coordenacao-nervosa-ii",
@@ -3551,7 +3551,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": "cadeia-de-derivacao"
+      "anchorScene": null
     },
     {
       "id": "summary-biologia-sistemas-sensoriais-visao-e-audicao",
@@ -3710,7 +3710,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": "cadeia-de-derivacao"
+      "anchorScene": null
     },
     {
       "id": "summary-biologia-reproducao-humana-e-metodos-contraceptivos",
@@ -3922,7 +3922,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": "cadeia-de-derivacao"
+      "anchorScene": null
     },
     {
       "id": "summary-biologia-fisiologia-vegetal-transporte-no-floema",
@@ -3975,7 +3975,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": "cadeia-de-derivacao"
+      "anchorScene": null
     },
     {
       "id": "summary-biologia-fisiologia-vegetal-hormonios-vegetais",
@@ -4452,7 +4452,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "grade-de-eixos"
     },
     {
       "id": "summary-fisica-forca-e-seus-tipos",
@@ -4505,7 +4505,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "tipologia"
     },
     {
       "id": "summary-fisica-resultante-de-um-sistema-de-forcas",
@@ -5247,7 +5247,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "tipologia"
     },
     {
       "id": "summary-fisica-trabalho-e-energia-trabalho-de-uma-forca",
@@ -5565,7 +5565,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "tipologia"
     },
     {
       "id": "summary-fisica-equivalencia-massa-energia",
@@ -5671,7 +5671,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "criterios-conjuntivos"
     },
     {
       "id": "summary-fisica-hidrostatica-densidade-e-pressao",
@@ -5777,7 +5777,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "cadeia-de-derivacao"
     },
     {
       "id": "summary-fisica-calor-sensivel-e-calor-latente",
@@ -5830,7 +5830,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": "calorimetria"
+      "anchorScene": "cadeia-de-derivacao"
     },
     {
       "id": "summary-fisica-gases-ideais-variaveis-de-estado-e-as-transformacoes-gasosas",
@@ -5883,7 +5883,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "tipologia"
     },
     {
       "id": "summary-fisica-trabalho-da-forca-de-pressao-do-gas",
@@ -6042,7 +6042,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": "adiabatica"
+      "anchorScene": "tipologia"
     },
     {
       "id": "summary-fisica-maquinas-termicas-e-ciclo-de-carnot",
@@ -6148,7 +6148,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "tipologia"
     },
     {
       "id": "summary-fisica-forca-eletrica-lei-de-coulomb",
@@ -7685,7 +7685,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "tipologia"
     },
     {
       "id": "summary-fisica-microscopio-e-luneta-astronomica-ou-telescopio-refrator-nocoes-basicas",
@@ -7897,7 +7897,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": "ondulatoria"
+      "anchorScene": "escala-de-graus"
     },
     {
       "id": "summary-fisica-ondulatoria-som-e-suas-propriedades",
@@ -7950,7 +7950,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": "ondulatoria"
+      "anchorScene": "tipologia"
     },
     {
       "id": "summary-fisica-intensidade-sonora",
