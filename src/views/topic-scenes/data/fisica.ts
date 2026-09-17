@@ -170,4 +170,211 @@ export const fisicaSemCena: { chapterId: string; motivo: string }[] = [
     motivo:
       'Lei de Coulomb e comparação de ordem de grandeza com a força gravitacional, mais a regra de superposição vetorial; é analogia estrutural entre duas leis e regra de cálculo, não rivalidade nem tipos coexistentes — conteúdo definicional e comparativo, sem estrutura das oito famílias.',
   },
+  // --- Parte B (capítulos 43-85), ver docs/visual-personalizado/16-familias-fisica.md ---
+  {
+    chapterId: 'summary-fisica-campo-eletrico',
+    motivo:
+      'Definição operacional do campo (E=F/q) e da lei do campo de carga puntiforme (E=kQ/r²), com superposição vetorial; conteúdo definicional e de cálculo, sem tipologia, critérios conjuntivos, escala ordenada, cadeia de derivação em elos ou eixos cruzados.',
+  },
+  {
+    chapterId: 'summary-fisica-energia-potencial-e-potencial-eletrico',
+    motivo:
+      'Contraste entre grandeza vetorial (campo) e escalar (potencial) e regra de sinal para movimento espontâneo de cargas; é distinção conceitual e de fórmula (V=kQ/r, τ=qΔV), não uma das oito estruturas — não há guarda-chuva de tipos nem conjunção de critérios.',
+  },
+  {
+    chapterId:
+      'summary-fisica-mapeamento-do-campo-eletrico-linhas-de-forca-e-superficies-equipotenciais',
+    motivo:
+      'Os três padrões visuais (carga isolada radial, placas paralelas uniforme, par de cargas opostas em arco) são um guia de leitura de figuras de prova, não uma tipologia do fenômeno físico em si com nota de honestidade sobre combinação de tipos; é heurística de reconhecimento visual, mais próxima de uma técnica de interpretação do que de uma classificação estrutural.',
+  },
+  {
+    chapterId: 'summary-fisica-campo-eletrico-uniforme-abordagem-escalar-e-abordagem-vetorial',
+    motivo:
+      'Fórmulas do campo uniforme (E=U/d) e decomposição do lançamento de cargas em componente paralela acelerada e perpendicular constante; é aplicação procedural do MRUV a cargas, sem tipologia, critérios conjuntivos ou escala.',
+  },
+  {
+    chapterId: 'summary-fisica-dinamica-das-cargas-eletricas',
+    motivo:
+      'As leis de Newton reaplicadas a cargas elétricas, com equilíbrio de uma esfera suspensa e conservação de energia no movimento acelerado; é extensão procedural da dinâmica newtoniana, sem estrutura de família.',
+  },
+  {
+    chapterId: 'summary-fisica-corrente-eletrica',
+    motivo:
+      'Distinção entre sentido convencional e sentido real dos elétrons, e definição de velocidade de deriva; são definições e uma correção conceitual de convenção histórica, não tipologia nem outra estrutura das oito famílias.',
+  },
+  {
+    chapterId: 'summary-fisica-potencia-eletrica',
+    motivo:
+      'Três formas equivalentes da mesma fórmula de potência (P=Ui, P=i²R, P=U²/R) e conversão para consumo em kWh; conteúdo definicional e de conversão de unidades, sem estrutura de família aplicável.',
+  },
+  {
+    chapterId: 'summary-fisica-resistores',
+    motivo:
+      'Segunda lei de Ohm (R=ρL/A) e regras de associação em série e paralelo; são fórmulas de cálculo com dependências geométricas opostas, não uma tipologia com guarda-chuva nem outra das oito estruturas.',
+  },
+  {
+    chapterId: 'summary-fisica-medidores-eletricos',
+    motivo:
+      'Regras opostas de ligação de amperímetro (série, resistência nula ideal) e voltímetro (paralelo, resistência infinita ideal); é par de convenções de instrumentação com propriedades opostas, não tipologia nem critérios conjuntivos — não há guarda-chuva de tipos coexistentes, é uma dicotomia funcional fixa.',
+  },
+  {
+    chapterId: 'summary-fisica-geradores',
+    motivo:
+      'Equação característica do gerador (U=ε−ri), curva característica e rendimento; conteúdo definicional e de fórmula sobre um único dispositivo, sem tipos coexistentes nem outra estrutura de família.',
+  },
+  {
+    chapterId: 'summary-fisica-receptores',
+    motivo:
+      "Equação característica do receptor (U=ε'+r'i), estruturalmente análoga (mas de sinal oposto) à do gerador; é comparação de fórmulas entre dois dispositivos complementares, não uma tipologia nem outra das oito estruturas.",
+  },
+  {
+    chapterId: 'summary-fisica-circuitos-de-malha-unica',
+    motivo:
+      'Equação da malha única (ε=i(R+r)) e queda de tensão em cada trecho; é aplicação da conservação de energia a um circuito simples, procedimento de cálculo sem estrutura de família.',
+  },
+  {
+    chapterId: 'summary-fisica-eletrodinamica-as-leis-de-kirchhoff',
+    motivo:
+      'Lei dos nós e lei das malhas são duas ferramentas complementares aplicadas em conjunto para resolver um circuito, não duas condições que precisam ser reunidas para um único veredito (o que exigiria critérios-conjuntivos) nem tipos coexistentes de um fenômeno.',
+  },
+  {
+    chapterId: 'summary-fisica-capacitores',
+    motivo:
+      'Definição de capacitância, energia armazenada e regras de associação em série e paralelo (opostas às de resistores); conteúdo definicional e procedimental, sem tipologia, critérios conjuntivos ou outra estrutura de família.',
+  },
+  {
+    chapterId:
+      'summary-fisica-imas-campo-de-inducao-magnetico-devido-a-imas-e-campo-magnetico-terrestre',
+    motivo:
+      'Inseparabilidade dos polos magnéticos, geometria das linhas de indução fechadas e a inversão de nomenclatura do polo magnético terrestre; são fatos definicionais sobre magnetismo, sem tipologia, critérios conjuntivos ou outra estrutura das oito famílias.',
+  },
+  {
+    chapterId:
+      'summary-fisica-campo-magnetico-devido-a-corrente-em-fio-reto-e-espira-descricao-vetorial-e-aplicacoes',
+    motivo:
+      'Fórmulas do campo de um fio reto, de uma espira e de um solenoide, com a regra da mão direita; é uma progressão de fórmulas por configuração geométrica, não uma tipologia com guarda-chuva nem outra estrutura de família.',
+  },
+  {
+    chapterId:
+      'summary-fisica-forca-magnetica-e-analise-de-lancamentos-de-cargas-em-um-campo-magnetico-uniforme',
+    motivo:
+      'A trajetória circular (velocidade perpendicular ao campo) e a helicoidal (velocidade oblíqua) são dois regimes ao longo de uma única variável contínua (o ângulo de entrada), não dois eixos binários independentes cruzando em quatro células como grade-de-eixos exige, nem uma tipologia com guarda-chuva explícito de tipos coexistentes.',
+  },
+  {
+    chapterId: 'summary-fisica-analise-de-forca-magnetica-em-fios-percorridos-por-correntes-continuas',
+    motivo:
+      'Fórmula da força sobre um fio (F=BiLsenθ), regra de atração/repulsão entre fios paralelos e princípio do motor elétrico; conteúdo definicional e procedimental, sem estrutura de família aplicável.',
+  },
+  {
+    chapterId: 'summary-fisica-inducao-eletromagnetica-lei-de-lenz',
+    motivo:
+      'A lei de Faraday e sua interpretação física pela lei de Lenz (conservação de energia) descrevem um único mecanismo causal, não tipos coexistentes nem critérios conjuntivos — é a mesma lei explicada em duas camadas de detalhe, não uma estrutura das oito famílias.',
+  },
+  {
+    chapterId: 'summary-fisica-inducao-eletromagnetica-analise-da-corrente-induzida-em-geradores',
+    motivo:
+      'Funcionamento do gerador de corrente alternada e do transformador; conteúdo definicional e explicativo de dois dispositivos que compartilham a lei de Faraday, sem tipologia com guarda-chuva nem outra estrutura de família.',
+  },
+  {
+    chapterId: 'summary-fisica-fundamentos-da-optica-geometrica',
+    motivo:
+      'Sombra/penumbra, eclipses e cor percebida de corpos; são fenômenos definicionais e geométricos distintos, sem guarda-chuva de tipologia (a menção a eclipse total/anular/parcial é uma observação lateral, não uma classificação central do capítulo) nem outra estrutura das oito famílias.',
+  },
+  {
+    chapterId: 'summary-fisica-reflexao-em-superficies-planas',
+    motivo:
+      'Lei da reflexão, propriedades da imagem no espelho plano (virtual, direita, mesma distância) e regra do tamanho mínimo; conteúdo definicional e geométrico, sem tipologia nem outra estrutura de família.',
+  },
+  {
+    chapterId: 'summary-fisica-reflexao-em-superficies-esfericas',
+    motivo:
+      "A regra das posições do objeto no espelho côncavo é uma tabela de consulta que mapeia uma única variável contínua (distância do objeto) em quatro faixas de resultado, não uma tipologia com tipos nomeados e coexistentes com nota de honestidade — mesmo padrão heurístico já descartado na Parte A para 'quem faz o papel de força centrípeta'.",
+  },
+  {
+    chapterId: 'summary-fisica-refracao-fundamentos-leis-e-aplicacoes',
+    motivo:
+      'Lei de Snell, ângulo crítico e reflexão total interna; conteúdo definicional e de fórmula sobre um único fenômeno (a refração), sem tipologia, critérios conjuntivos ou outra estrutura de família.',
+  },
+  {
+    chapterId: 'summary-fisica-lentes-esfericas-estudo-grafico',
+    motivo:
+      'Mesma estrutura de "regra das posições" do objeto que o capítulo de espelhos esféricos — tabela de consulta sobre uma variável contínua, não uma tipologia com guarda-chuva de tipos coexistentes.',
+  },
+  {
+    chapterId: 'summary-fisica-estudo-analitico-das-lentes-esfericas',
+    motivo:
+      'Equação de Gauss, convenção de sinais e vergência; conteúdo definicional e de convenção matemática, sem estrutura de família aplicável.',
+  },
+  {
+    chapterId: 'summary-fisica-equacao-do-fabricante-de-lentes-e-associacao-de-lentes',
+    motivo:
+      'Equação de Halley e soma de vergências em associação de lentes justapostas; conteúdo de fórmula e procedimento de associação, sem tipologia nem outra estrutura das oito famílias.',
+  },
+  {
+    chapterId:
+      'summary-fisica-microscopio-e-luneta-astronomica-ou-telescopio-refrator-nocoes-basicas',
+    motivo:
+      'Papéis complementares de objetiva e ocular no microscópio e na luneta; conteúdo definicional sobre dois instrumentos específicos, sem guarda-chuva de tipologia nem outra estrutura de família.',
+  },
+  {
+    chapterId: 'summary-fisica-conceitos-basicos',
+    motivo:
+      "As três classificações de onda (natureza, direção de vibração, dimensão) são independentes entre si e não populam de fato as quatro células de um cruzamento binário-binário — o próprio texto não apresenta o par 'eletromagnética e longitudinal', que fisicamente não ocorre para ondas eletromagnéticas livres —, então não sustentam grade-de-eixos; também não formam uma única tipologia com guarda-chuva, mas três critérios de classificação simultâneos e sobrepostos.",
+  },
+  {
+    chapterId: 'summary-fisica-equacao-fundamental-da-ondulatoria',
+    motivo:
+      'Dedução de v=λf a partir das definições de período e comprimento de onda, em um único passo algébrico; não é uma cadeia de vários elos dependentes como a família cadeia-de-derivacao exige (contraste com a dilatação térmica da Parte A).',
+  },
+  {
+    chapterId: 'summary-fisica-intensidade-sonora',
+    motivo:
+      'Definição de intensidade (I=P/A) e da escala logarítmica em decibéis; é conteúdo de fórmula e de conversão matemática, sem uma lista estruturada de itens graduados como a família escala-de-graus exige (ao contrário do espectro eletromagnético, que nomeia sete faixas em ordem) — aqui há só dois ou três valores de referência soltos nos exemplos, não uma escala com itens.',
+  },
+  {
+    chapterId: 'summary-fisica-reflexao-eco-reverberacao-e-refracao-de-ondas',
+    motivo:
+      'Distinção binária entre eco e reverberação por limiar de tempo de percepção, mais a regra geométrica de refração de ondas; é dicotomia definicional e regra de desvio, sem guarda-chuva de tipologia nem outra estrutura de família.',
+  },
+  {
+    chapterId: 'summary-fisica-fenomenos-ondulatorios-analise-de-refracao-e-reflexao-em-cordas',
+    motivo:
+      'Reflexão com ou sem inversão de fase em extremidade fixa vs. livre é uma dicotomia definicional (mesmo padrão já descartado na Parte A para sistemas conservativos/não conservativos), não uma tipologia com guarda-chuva de tipos coexistentes e nota de honestidade sobre combinação.',
+  },
+  {
+    chapterId: 'summary-fisica-fenomenos-ondulatorios-difracao-polarizacao-e-ressonancia',
+    motivo:
+      'Três fenômenos ondulatórios distintos (difração, polarização, ressonância) tratados em seções separadas, sem guarda-chuva comum que os agrupe como tipos de uma mesma categoria — são tópicos independentes, não uma tipologia.',
+  },
+  {
+    chapterId:
+      'summary-fisica-interferencia-de-ondas-analise-quantitativa-aplicacoes-e-batimento',
+    motivo:
+      'Condições de interferência construtiva e destrutiva formam uma dicotomia baseada na diferença de percurso, e o batimento é um fenômeno temporal à parte; conteúdo de fórmula e distinção binária, sem guarda-chuva de tipologia nem outra estrutura de família.',
+  },
+  {
+    chapterId: 'summary-fisica-um-caso-particular-de-interferencia-onda-estacionaria',
+    motivo:
+      'Nós e ventres são os dois polos de um mesmo padrão espacial fixo (não tipos coexistentes independentes), e a restrição a certas frequências (harmônicos) é regra de encaixe geométrico; sem guarda-chuva de tipologia, critérios conjuntivos ou cadeia de derivação em elos dependentes.',
+  },
+  {
+    chapterId: 'summary-fisica-ondas-estacionarias-em-cordas',
+    motivo:
+      'Série harmônica (λ_n=2L/n) e as três variáveis que o instrumentista controla (comprimento, tensão, densidade linear); conteúdo de fórmula e de aplicação prática, sem tipologia com guarda-chuva nem outra estrutura de família.',
+  },
+  {
+    chapterId: 'summary-fisica-ondas-estacionarias-em-tubos',
+    motivo:
+      'Tubo aberto (todos os harmônicos) vs. tubo fechado numa ponta (só harmônicos ímpares) é uma dicotomia de condição de contorno, sem o guarda-chuva explícito de três ou mais tipos coexistentes com nota de honestidade que caracteriza a tipologia nas demais aceitas (contraste com os cinco tipos de força, ou os três processos de eletrização, da Parte A) — é a mesma classe de dicotomia binária já descartada para sistemas conservativos/não conservativos.',
+  },
+  {
+    chapterId: 'summary-fisica-efeito-doppler-descricao-e-estudo-quantitativo',
+    motivo:
+      'Fórmula geral do efeito Doppler com regra de sinais conforme aproximação ou afastamento; conteúdo de fórmula e convenção de sinal, sem tipologia, critérios conjuntivos ou outra estrutura de família.',
+  },
+  {
+    chapterId: 'summary-fisica-nocoes-basicas-de-fisica-quantica',
+    motivo:
+      'Quantização de energia, efeito fotoelétrico e dualidade onda-partícula; a dualidade é uma propriedade dupla de uma mesma entidade (luz, matéria), não dois tipos mutuamente exclusivos nem um guarda-chuva de tipos coexistentes — é a mesma entidade revelando duas facetas conforme o experimento, sem estrutura de família aplicável.',
+  },
 ];
