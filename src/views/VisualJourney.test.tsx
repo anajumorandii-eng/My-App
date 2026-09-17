@@ -59,4 +59,18 @@ describe('Percurso ligado ao conteúdo', () => {
       cleanup();
     }
   });
+  it('dá identidade visual e navegação a capítulo sem cena, prancha, instrumento ou experimento', () => {
+    const summary = interactiveSummaries.find(item => item.id === 'atu-cop30-belem')!;
+    render(<VisualJourney summary={summary} onPractice={() => {}} />);
+    const fallback = screen.getByLabelText(`Estrutura visual de ${summary.title}`);
+    expect(fallback).toHaveAttribute('data-subject', 'Atualidades');
+    const secondStep = within(fallback).getByRole('button', { name: new RegExp(summary.sections[1].title) });
+    fireEvent.click(secondStep);
+    expect(screen.getByText(summary.sections[1].content)).toBeInTheDocument();
+  });
+  it('não duplica fallback quando o capítulo já possui cena dedicada', () => {
+    const summary = interactiveSummaries.find((item) => item.id === filosofia[0].chapterId)!;
+    render(<VisualJourney summary={summary} onPractice={() => {}} />);
+    expect(screen.queryByLabelText(`Estrutura visual de ${summary.title}`)).not.toBeInTheDocument();
+  });
 });
