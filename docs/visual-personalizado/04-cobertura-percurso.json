@@ -6,7 +6,7 @@
       "chapters": 85,
       "contentAtlases": 85,
       "interactiveExperiments": 0,
-      "anchorScenes": 13
+      "anchorScenes": 22
     },
     {
       "subject": "Atualidades",
@@ -152,7 +152,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": "calorimetria"
+      "anchorScene": "tipologia"
     },
     {
       "id": "atu-cop30-belem",
@@ -4452,7 +4452,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "grade-de-eixos"
     },
     {
       "id": "summary-fisica-forca-e-seus-tipos",
@@ -4505,7 +4505,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "tipologia"
     },
     {
       "id": "summary-fisica-resultante-de-um-sistema-de-forcas",
@@ -5247,7 +5247,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "tipologia"
     },
     {
       "id": "summary-fisica-trabalho-e-energia-trabalho-de-uma-forca",
@@ -5565,7 +5565,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "tipologia"
     },
     {
       "id": "summary-fisica-equivalencia-massa-energia",
@@ -5671,7 +5671,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "criterios-conjuntivos"
     },
     {
       "id": "summary-fisica-hidrostatica-densidade-e-pressao",
@@ -5777,7 +5777,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "cadeia-de-derivacao"
     },
     {
       "id": "summary-fisica-calor-sensivel-e-calor-latente",
@@ -5830,7 +5830,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": "calorimetria"
+      "anchorScene": "cadeia-de-derivacao"
     },
     {
       "id": "summary-fisica-gases-ideais-variaveis-de-estado-e-as-transformacoes-gasosas",
@@ -5883,7 +5883,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "tipologia"
     },
     {
       "id": "summary-fisica-trabalho-da-forca-de-pressao-do-gas",
@@ -6042,7 +6042,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": "adiabatica"
+      "anchorScene": "tipologia"
     },
     {
       "id": "summary-fisica-maquinas-termicas-e-ciclo-de-carnot",
@@ -6148,7 +6148,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "tipologia"
     },
     {
       "id": "summary-fisica-forca-eletrica-lei-de-coulomb",
@@ -7685,7 +7685,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "tipologia"
     },
     {
       "id": "summary-fisica-microscopio-e-luneta-astronomica-ou-telescopio-refrator-nocoes-basicas",
@@ -7897,7 +7897,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": "ondulatoria"
+      "anchorScene": "escala-de-graus"
     },
     {
       "id": "summary-fisica-ondulatoria-som-e-suas-propriedades",
@@ -7950,7 +7950,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": "ondulatoria"
+      "anchorScene": "tipologia"
     },
     {
       "id": "summary-fisica-intensidade-sonora",
