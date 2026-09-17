@@ -83,7 +83,7 @@
       "chapters": 48,
       "contentAtlases": 48,
       "interactiveExperiments": 0,
-      "anchorScenes": 7
+      "anchorScenes": 25
     },
     {
       "subject": "Filosofia",
@@ -26712,7 +26712,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": "modelos-atomicos"
+      "anchorScene": "cadeia-de-derivacao"
     },
     {
       "id": "summary-quimica-organizacao-da-tabela-periodica-dos-elementos",
@@ -26765,7 +26765,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "tipologia"
     },
     {
       "id": "summary-quimica-radioatividade-o-estudo-das-radiacoes",
@@ -26818,7 +26818,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "tipologia"
     },
     {
       "id": "summary-quimica-ligacoes-quimicas-e-alotropia",
@@ -26871,7 +26871,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": "ligacoes"
+      "anchorScene": "tipologia"
     },
     {
       "id": "summary-quimica-geometria-molecular",
@@ -26924,7 +26924,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "tipologia"
     },
     {
       "id": "summary-quimica-polaridade-das-ligacoes-e-das-moleculas",
@@ -26977,7 +26977,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "criterios-conjuntivos"
     },
     {
       "id": "summary-quimica-interacoes-intermoleculares",
@@ -27030,7 +27030,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "escala-de-graus"
     },
     {
       "id": "summary-quimica-composicao-da-materia-estados-fisicos",
@@ -27083,7 +27083,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "tipologia"
     },
     {
       "id": "summary-quimica-o-estado-gasoso",
@@ -27560,7 +27560,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "tipologia"
     },
     {
       "id": "summary-quimica-equacoes-ionicas-e-outras-teorias-para-acidos-e-bases",
@@ -27613,7 +27613,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": "acido-base"
+      "anchorScene": "cadeia-de-derivacao"
     },
     {
       "id": "summary-quimica-processos-de-oxirreducao",
@@ -27719,7 +27719,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "cadeia-de-derivacao"
     },
     {
       "id": "summary-quimica-introducao-a-quimica-organica",
@@ -27878,7 +27878,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "tipologia"
     },
     {
       "id": "summary-quimica-reconhecimento-de-funcoes-organicas-e-algumas-de-suas-propriedades",
@@ -27931,7 +27931,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "tipologia"
     },
     {
       "id": "summary-quimica-isomeria",
@@ -27984,7 +27984,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "tipologia"
     },
     {
       "id": "summary-quimica-combustiveis-fosseis",
@@ -28037,7 +28037,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "tipologia"
     },
     {
       "id": "summary-quimica-interpretando-reacoes-organicas",
@@ -28090,7 +28090,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "tipologia"
     },
     {
       "id": "summary-quimica-reacoes-de-substituicao",
@@ -28143,7 +28143,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "tipologia"
     },
     {
       "id": "summary-quimica-reacoes-de-adicao",
@@ -28302,7 +28302,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "escala-de-graus"
     },
     {
       "id": "summary-quimica-acidos-graxos-e-esterificacao",
@@ -28567,7 +28567,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": "dispersoes"
+      "anchorScene": "tipologia"
     },
     {
       "id": "summary-quimica-efeitos-coligativos",
@@ -28620,7 +28620,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "tipologia"
     },
     {
       "id": "summary-quimica-termoquimica-i",
@@ -28726,7 +28726,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": "termoquimica"
+      "anchorScene": "grade-de-eixos"
     },
     {
       "id": "summary-quimica-cinetica-quimica",
@@ -28779,7 +28779,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "escala-de-graus"
     },
     {
       "id": "summary-quimica-introducao-ao-estudo-das-pilhas-e-baterias",
@@ -29150,7 +29150,7 @@
         ]
       },
       "interactiveExperiment": null,
-      "anchorScene": null
+      "anchorScene": "grade-de-eixos"
     },
     {
       "id": "qui-equilibrio-acidificacao",
