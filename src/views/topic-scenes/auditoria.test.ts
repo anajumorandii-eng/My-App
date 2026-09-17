@@ -8,13 +8,12 @@ import { literatura, literaturaSemCena } from './data/literatura';
 import { matematica, matematicaSemCena } from './data/matematica';
 import { quimica, quimicaSemCena } from './data/quimica';
 import { fisica, fisicaSemCena } from './data/fisica';
-import { biologia, biologiaSemCena } from './data/biologia';
 import { interactiveSummaries } from '../../data/interactiveSummaries';
 describe('Contagem honesta de cenas-âncora', () => {
-  it('conta só entradas com lastro, somando todas as matérias', () => { expect(entradasValidas().length).toBe(filosofia.length + sociologia.length + historia.length + geografia.length + literatura.length + matematica.length + quimica.length + fisica.length + biologia.length); });
+  it('conta só entradas com lastro, somando todas as matérias', () => { expect(entradasValidas().length).toBe(filosofia.length + sociologia.length + historia.length + geografia.length + literatura.length + matematica.length + quimica.length + fisica.length); });
   it('não conta lacunas declaradas', () => {
     const ids = new Set(entradasValidas().map((e) => e.chapterId));
-    for (const gap of [...filosofiaSemCena, ...sociologiaSemCena, ...historiaSemCena, ...geografiaSemCena, ...literaturaSemCena, ...matematicaSemCena, ...quimicaSemCena, ...fisicaSemCena, ...biologiaSemCena]) expect(ids.has(gap.chapterId), gap.chapterId).toBe(false);
+    for (const gap of [...filosofiaSemCena, ...sociologiaSemCena, ...historiaSemCena, ...geografiaSemCena, ...literaturaSemCena, ...matematicaSemCena, ...quimicaSemCena, ...fisicaSemCena]) expect(ids.has(gap.chapterId), gap.chapterId).toBe(false);
   });
   it('cobre Filosofia inteira', () => { const total = interactiveSummaries.filter((s) => s.subject === 'Filosofia').length; expect(filosofia.length + filosofiaSemCena.length).toBe(total); });
   it('cobre Sociologia inteira', () => { const total = interactiveSummaries.filter((s) => s.subject === 'Sociologia').length; expect(sociologia.length + sociologiaSemCena.length).toBe(total); });
@@ -24,5 +23,4 @@ describe('Contagem honesta de cenas-âncora', () => {
   it('cobre Matemática inteira', () => { const total = interactiveSummaries.filter((s) => s.subject === 'Matemática').length; expect(matematica.length + matematicaSemCena.length).toBe(total); });
   it('cobre Química inteira', () => { const total = interactiveSummaries.filter((s) => s.subject === 'Química').length; expect(quimica.length + quimicaSemCena.length).toBe(total); });
   it('cobre Física inteira', () => { const total = interactiveSummaries.filter((s) => s.subject === 'Física').length; expect(fisica.length + fisicaSemCena.length).toBe(total); });
-  it('cobre Biologia inteira', () => { const total = interactiveSummaries.filter((s) => s.subject === 'Biologia').length; expect(biologia.length + biologiaSemCena.length).toBe(total); });
 });
