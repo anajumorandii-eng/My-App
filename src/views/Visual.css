@@ -831,8 +831,29 @@
   font-size: 1rem;
   line-height: 1.62;
 }
+.vs-inspector-evidence {
+  border-top: 1px solid var(--vs-line);
+  padding-top: 12px;
+}
+.vs-inspector-evidence summary {
+  cursor: pointer;
+  color: var(--vs-dim);
+  font-size: .78rem;
+  font-weight: 750;
+}
+.vs-inspector-evidence[open] summary { margin-bottom: 12px; color: var(--vs-ink); }
+.vs-inspector-backdrop { display: none; }
 
 @media (max-width: 900px) {
+  .vs-inspector-backdrop {
+    display: block;
+    position: fixed;
+    z-index: 60;
+    inset: 0;
+    border: 0;
+    background: rgba(7, 13, 10, .38);
+    cursor: default;
+  }
   .vs-inspector-shell {
     position: fixed;
     z-index: 70;
@@ -2086,4 +2107,30 @@
     bottom: calc(72px + env(safe-area-inset-bottom));
     width: calc(100vw - 12px);
   }
+}
+
+/* The reader must stay a short, independent sheet on phones. These rules live
+   last so older board styles cannot turn it back into an in-flow card. */
+@media (max-width: 900px) {
+  .vs-inspector-shell {
+    z-index: 70;
+    bottom: calc(76px + env(safe-area-inset-bottom));
+    width: min(620px, calc(100vw - 20px));
+  }
+  .vs-inspector {
+    gap: 14px;
+    max-height: min(54dvh, 480px);
+    padding: 16px;
+    border-radius: 20px 20px 12px 12px;
+  }
+  .vs-inspector-head { position: static; margin: 0; padding: 0 0 12px; }
+  .vs-inspector-head h3 { font-size: 1.35rem; }
+  .vs-inspector-reading { padding-bottom: 12px; }
+  .vs-inspector-reading .vs-inspector-excerpt { font-size: .98rem; line-height: 1.52; }
+  .vs-inspector-actions { grid-template-columns: repeat(3, 1fr); }
+  .vs-inspector-actions button { min-height: 40px; padding-inline: 7px; font-size: .72rem; }
+}
+@media (max-width: 430px) {
+  .vs-inspector-shell { bottom: calc(100px + env(safe-area-inset-bottom)); width: calc(100vw - 16px); }
+  .vs-inspector { max-height: min(52dvh, 440px); }
 }

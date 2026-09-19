@@ -207,13 +207,12 @@ function Inspector({
 }) {
   const node = map.nodes.find((item) => item.id === nodeId);
   if (!node) return null;
-  const section = summary.sections.find((item) => item.id === node.sectionId);
-  const learningText = section?.callout ?? summary.retrieval.find(item => item.sectionId === section?.id)?.prompt ?? summary.overview;
-  const normalize = (value: string) => value.toLocaleLowerCase('pt-BR').replace(/\s+/g, ' ').trim();
-  const showLearning = normalize(learningText) !== normalize(node.excerpt);
+  const focusText = node.excerpt.length > 230
+    ? `${node.excerpt.slice(0, node.excerpt.lastIndexOf(' ', 230)).trim()}…`
+    : node.excerpt;
 
   return (
-    <div className="vs-inspector" role="dialog" aria-label="Conceito selecionado">
+    <div className="vs-inspector" role="dialog" aria-modal="true" aria-label="Conceito selecionado">
       <div className="vs-inspector-head">
         <div>
           <span>Conceito selecionado</span>
@@ -225,17 +224,12 @@ function Inspector({
       </div>
 
       <section className="vs-inspector-reading" aria-labelledby="vs-inspector-reading-title">
-        <h4 id="vs-inspector-reading-title">Trecho essencial</h4>
-        <p className="vs-inspector-excerpt">{node.excerpt}</p>
+        <h4 id="vs-inspector-reading-title">Em foco</h4>
+        <p className="vs-inspector-excerpt">{focusText}</p>
       </section>
 
-      {showLearning && <section className="vs-inspector-learning">
-        <h4>Expectativa de aprendizagem</h4>
-        <p>{learningText}</p>
-      </section>}
-
-      <section>
-        <h4>Por que isso?</h4>
+      <details className="vs-inspector-evidence">
+        <summary>Ver relações e evidências</summary>
         <ul className="vs-relation-list">
           {map.relations.map((relation) => {
             const why = explainRelation(relation, answers);
@@ -251,11 +245,10 @@ function Inspector({
             );
           })}
         </ul>
-      </section>
+      </details>
 
       <div className="vs-inspector-actions" aria-label="Ações do conceito">
-        <button type="button" onClick={() => onOpenSummary(node.sectionId)}>Explicar</button>
-        <button type="button" onClick={() => onOpenSummary(node.sectionId)}>Comparar</button>
+        <button type="button" onClick={() => onOpenSummary(node.sectionId)}>Ler capítulo</button>
         <button type="button" onClick={() => onModeChange('testar')}>Testar</button>
         <button type="button" onClick={() => onModeChange('reconstruir')}>Reconstruir</button>
       </div>
@@ -269,8 +262,6 @@ function Inspector({
           Anotado. O estado continua como hipótese até uma nova evidência em Testar ou Reconstruir.
         </p>
       )}
-
-      {section?.callout && <p className="vs-callout">{section.callout}</p>}
     </div>
   );
 }
@@ -682,19 +673,22 @@ export default function Visual() {
 
 
         {mode === 'explorar' && selectedNode ? (
-          <aside className="vs-inspector-shell">
-            <Inspector
-              map={map}
-              summary={summary}
-              nodeId={selectedNode}
-              answers={answers}
-              disagreed={disagreed}
-              onClose={() => setSelectedNode(null)}
-              onDisagree={() => setDisagreed((value) => !value)}
-              onModeChange={changeMode}
-              onOpenSummary={(sectionId) => navigate('/resumos?summary=' + encodeURIComponent(summary.id) + '#' + sectionId)}
-            />
-          </aside>
+          <>
+            <button type="button" className="vs-inspector-backdrop" onClick={() => setSelectedNode(null)} aria-label="Fechar conceito selecionado" />
+            <aside className="vs-inspector-shell">
+              <Inspector
+                map={map}
+                summary={summary}
+                nodeId={selectedNode}
+                answers={answers}
+                disagreed={disagreed}
+                onClose={() => setSelectedNode(null)}
+                onDisagree={() => setDisagreed((value) => !value)}
+                onModeChange={changeMode}
+                onOpenSummary={(sectionId) => navigate('/resumos?summary=' + encodeURIComponent(summary.id) + '#' + sectionId)}
+              />
+            </aside>
+          </>
         ) : mode === 'explorar' && intervention ? (
           <aside className="vs-priority-panel">
             <span className="vs-priority-kicker"><Compass aria-hidden="true" /> Diagnóstico vivo</span>

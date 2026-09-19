@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion, useReducedMotion } from 'motion/react';
 import { NavLink } from 'react-router-dom';
-import { BookOpenCheck, CalendarDays, ChartNoAxesCombined, House, Route, type LucideIcon } from 'lucide-react';
+import { BookOpen, CalendarDays, ChartLine, House, ListChecks, type LucideIcon } from 'lucide-react';
 import { cn } from '../lib/cn';
 import { MOTION_DURATION, MOTION_EASE } from '../design-system/motion/tokens';
 
@@ -16,9 +16,9 @@ interface BottomNavItem {
 // (see App.tsx).
 const ITEMS: BottomNavItem[] = [
   { name: 'Hoje', path: '/', icon: House },
-  { name: 'Plano', path: '/plano', icon: Route },
-  { name: 'Estudar', path: '/sessao', icon: BookOpenCheck },
-  { name: 'Análises', path: '/evolucao', icon: ChartNoAxesCombined },
+  { name: 'Plano', path: '/plano', icon: ListChecks },
+  { name: 'Estudar', path: '/sessao', icon: BookOpen },
+  { name: 'Análises', path: '/evolucao', icon: ChartLine },
   { name: 'Agenda', path: '/agenda', icon: CalendarDays },
 ];
 
