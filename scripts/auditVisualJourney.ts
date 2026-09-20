@@ -1,28 +1,11 @@
-import { interactiveSummaries } from '../src/data/interactiveSummaries';
-import { findBoard } from '../src/views/visual-boards/registry';
-import { findInstrument } from '../src/views/visual-instruments/registry';
-import fs from 'node:fs/promises';
-import path from 'node:path';
-import { atlasCoverage } from '../src/lib/topicAtlas';
-import { topicExperiments } from '../src/views/topic-experiments/catalog';
-import { sceneFor } from '../src/views/topic-scenes/sceneFor';
-
-const chapters = interactiveSummaries.map(summary => ({
-  id: summary.id, subject: summary.subject, topic: summary.topic, title: summary.title,
-  stages: summary.sections.map(section => ({ id: section.id, title: section.title, stage: section.stage, characters: section.content.length })),
-  sources: summary.sources.length, questions: summary.retrieval.length,
-  contentAtlas: atlasCoverage(summary),
-  interactiveExperiment: topicExperiments[summary.id] ?? null,
-  anchorScene: sceneFor(summary.id)?.family ?? findBoard(summary)?.id ?? findInstrument(summary)?.id ?? null,
-}));
-const invalid = chapters.filter(chapter => !chapter.stages.length || chapter.stages.some(stage => !stage.characters));
-if (invalid.length) throw new Error(`Capítulos sem conteúdo: ${invalid.map(item => item.id).join(', ')}`);
-const subjects = [...new Set(chapters.map(chapter => chapter.subject))].map(subject => ({
-  subject, chapters: chapters.filter(chapter => chapter.subject === subject).length,
-  contentAtlases: chapters.filter(chapter => chapter.subject === subject && chapter.contentAtlas.sourceMap).length,
-  interactiveExperiments: chapters.filter(chapter => chapter.subject === subject && chapter.interactiveExperiment).length,
-  anchorScenes: chapters.filter(chapter => chapter.subject === subject && chapter.anchorScene).length,
-}));
-const report = { total: chapters.length, subjects, chapters };
-await fs.writeFile(path.resolve('docs/visual-personalizado/04-cobertura-percurso.json'), JSON.stringify(report, null, 2));
-console.log(JSON.stringify({ total: report.total, subjects, invalid: invalid.length }, null, 2));
+// Substituído por `npm run visual:matrix` (src/views/visualCoverage.ts).
+//
+// Este script deixou de rodar quando a prancha de Fungos passou a importar um
+// .css: os registros de pranchas puxam esses arquivos e o Node puro recusa
+// (ERR_UNKNOWN_FILE_EXTENSION). O CI não executa scripts/, então a quebra
+// passou despercebida. O campo `anchorScene` que ele gravava também misturava
+// cena, prancha e instrumento; a matriz nova separa os tipos e sai do mesmo
+// resolvedor que a tela usa. O arquivo 04-cobertura-percurso.json fica como
+// registro histórico e não é mais regenerado.
+console.error('scripts/auditVisualJourney.ts foi substituído. Rode: npm run visual:matrix');
+process.exit(1);

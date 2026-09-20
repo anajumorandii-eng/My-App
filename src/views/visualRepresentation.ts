@@ -11,13 +11,30 @@ import { findInstrument } from './visual-instruments/registry';
  */
 export type VisualRepresentation = 'board' | 'experiment' | 'instrument' | 'scene' | 'fallback';
 
+export type VisualArtifactKind = Exclude<VisualRepresentation, 'fallback'>;
+export interface VisualCandidate { kind: VisualArtifactKind; id: string }
+
+/**
+ * Every artifact registered for the chapter, winner first. The order is the
+ * priority: experiments are mapped by exact chapter id and are therefore the
+ * most specific interactive artifact; boards and instruments are checked next
+ * because their registries match subject/topic text; a scene is the last
+ * resort. This is the only place that order lives, so the screen and the
+ * coverage matrix cannot disagree about which artifact wins.
+ */
+export function visualCandidates(summary: InteractiveSummary): VisualCandidate[] {
+  const candidates: VisualCandidate[] = [];
+  const experiment = topicExperiments[summary.id];
+  if (experiment) candidates.push({ kind: 'experiment', id: experiment });
+  const board = findBoard(summary);
+  if (board) candidates.push({ kind: 'board', id: board.id });
+  const instrument = findInstrument(summary);
+  if (instrument) candidates.push({ kind: 'instrument', id: instrument.id });
+  const scene = sceneFor(summary.id);
+  if (scene) candidates.push({ kind: 'scene', id: scene.family });
+  return candidates;
+}
+
 export function resolveVisualRepresentation(summary: InteractiveSummary): VisualRepresentation {
-  // Experiments are mapped by exact chapter id and are therefore the most
-  // specific interactive artifact. Boards and instruments are intentionally
-  // checked next because their registries match subject/topic text.
-  if (topicExperiments[summary.id]) return 'experiment';
-  if (findBoard(summary)) return 'board';
-  if (findInstrument(summary)) return 'instrument';
-  if (sceneFor(summary.id)) return 'scene';
-  return 'fallback';
+  return visualCandidates(summary)[0]?.kind ?? 'fallback';
 }

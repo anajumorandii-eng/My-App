@@ -10,6 +10,7 @@
     "preview": "vite preview",
     "clean": "rm -rf dist server.js",
     "flashcards:classify": "tsx scripts/classifyFlashcards.ts",
+    "visual:matrix": "node scripts/updateVisualMatrix.mjs",
     "lint": "node --max-old-space-size=4096 node_modules/typescript/bin/tsc --noEmit",
     "test": "npm run test:node && npm run test:vitest",
     "test:node": "tsx --test server/admin/*.test.ts server/ai/*.test.ts server/auth/*.test.ts server/content/*.test.ts server/http/*.test.ts server/podcast/*.test.ts server/push/*.test.ts server/literary/*.test.ts src/lib/*.test.ts src/design-system/*.test.ts",

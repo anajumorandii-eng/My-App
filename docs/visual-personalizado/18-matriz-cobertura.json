@@ -1,0 +1,5158 @@
+{
+  "total": 613,
+  "counts": {
+    "experiment": 11,
+    "board": 40,
+    "instrument": 22,
+    "scene": 187,
+    "fallback": 353
+  },
+  "contested": 17,
+  "subjects": [
+    {
+      "subject": "Física",
+      "chapters": 85,
+      "counts": {
+        "experiment": 0,
+        "board": 13,
+        "instrument": 0,
+        "scene": 9,
+        "fallback": 63
+      }
+    },
+    {
+      "subject": "Atualidades",
+      "chapters": 1,
+      "counts": {
+        "experiment": 0,
+        "board": 0,
+        "instrument": 0,
+        "scene": 0,
+        "fallback": 1
+      }
+    },
+    {
+      "subject": "Biologia",
+      "chapters": 72,
+      "counts": {
+        "experiment": 1,
+        "board": 8,
+        "instrument": 0,
+        "scene": 34,
+        "fallback": 29
+      }
+    },
+    {
+      "subject": "Geografia",
+      "chapters": 63,
+      "counts": {
+        "experiment": 1,
+        "board": 0,
+        "instrument": 0,
+        "scene": 26,
+        "fallback": 36
+      }
+    },
+    {
+      "subject": "História",
+      "chapters": 49,
+      "counts": {
+        "experiment": 1,
+        "board": 1,
+        "instrument": 0,
+        "scene": 32,
+        "fallback": 15
+      }
+    },
+    {
+      "subject": "Língua Inglesa",
+      "chapters": 17,
+      "counts": {
+        "experiment": 1,
+        "board": 0,
+        "instrument": 0,
+        "scene": 0,
+        "fallback": 16
+      }
+    },
+    {
+      "subject": "Redação",
+      "chapters": 58,
+      "counts": {
+        "experiment": 1,
+        "board": 0,
+        "instrument": 0,
+        "scene": 0,
+        "fallback": 57
+      }
+    },
+    {
+      "subject": "Gramática",
+      "chapters": 26,
+      "counts": {
+        "experiment": 1,
+        "board": 0,
+        "instrument": 0,
+        "scene": 0,
+        "fallback": 25
+      }
+    },
+    {
+      "subject": "Literatura",
+      "chapters": 37,
+      "counts": {
+        "experiment": 1,
+        "board": 0,
+        "instrument": 0,
+        "scene": 8,
+        "fallback": 28
+      }
+    },
+    {
+      "subject": "Entendimento de Texto",
+      "chapters": 12,
+      "counts": {
+        "experiment": 1,
+        "board": 0,
+        "instrument": 0,
+        "scene": 0,
+        "fallback": 11
+      }
+    },
+    {
+      "subject": "Matemática",
+      "chapters": 83,
+      "counts": {
+        "experiment": 1,
+        "board": 11,
+        "instrument": 22,
+        "scene": 0,
+        "fallback": 49
+      }
+    },
+    {
+      "subject": "Química",
+      "chapters": 48,
+      "counts": {
+        "experiment": 0,
+        "board": 7,
+        "instrument": 0,
+        "scene": 18,
+        "fallback": 23
+      }
+    },
+    {
+      "subject": "Filosofia",
+      "chapters": 35,
+      "counts": {
+        "experiment": 1,
+        "board": 0,
+        "instrument": 0,
+        "scene": 34,
+        "fallback": 0
+      }
+    },
+    {
+      "subject": "Sociologia",
+      "chapters": 27,
+      "counts": {
+        "experiment": 1,
+        "board": 0,
+        "instrument": 0,
+        "scene": 26,
+        "fallback": 0
+      }
+    }
+  ],
+  "rows": [
+    {
+      "id": "fis-termologia-calor",
+      "subject": "Física",
+      "title": "Calor, temperatura e mudanças de estado",
+      "primary": "board",
+      "artifact": "calorimetria",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "tipologia"
+        }
+      ]
+    },
+    {
+      "id": "atu-cop30-belem",
+      "subject": "Atualidades",
+      "title": "COP30 em Belém: avanços, limites e leitura de prova",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "bio-ecologia-introducao",
+      "subject": "Biologia",
+      "title": "Introdução à Ecologia",
+      "primary": "experiment",
+      "artifact": "ecology",
+      "ignored": [
+        {
+          "kind": "board",
+          "id": "trofico"
+        }
+      ]
+    },
+    {
+      "id": "bio-ecologia-dinamica-populacoes",
+      "subject": "Biologia",
+      "title": "Dinâmica de populações",
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": []
+    },
+    {
+      "id": "bio-ecologia-invasoras-controle-biologico",
+      "subject": "Biologia",
+      "title": "Espécies invasoras e controle biológico",
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": []
+    },
+    {
+      "id": "bio-ecologia-sucessao",
+      "subject": "Biologia",
+      "title": "Sucessão ecológica",
+      "primary": "scene",
+      "artifact": "escala-de-graus",
+      "ignored": []
+    },
+    {
+      "id": "bio-ecologia-ciclo-carbono",
+      "subject": "Biologia",
+      "title": "Ciclos biogeoquímicos: ciclo do carbono",
+      "primary": "board",
+      "artifact": "ciclo-carbono",
+      "ignored": []
+    },
+    {
+      "id": "bio-ecologia-ciclo-nitrogenio",
+      "subject": "Biologia",
+      "title": "Ciclo do nitrogênio",
+      "primary": "scene",
+      "artifact": "cadeia-de-derivacao",
+      "ignored": []
+    },
+    {
+      "id": "bio-ecologia-ciclo-hidrologico-poluicao-agua",
+      "subject": "Biologia",
+      "title": "Ciclo hidrológico e poluição da água",
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": []
+    },
+    {
+      "id": "bio-ecologia-eutrofizacao",
+      "subject": "Biologia",
+      "title": "Eutrofização e fluxo de energia",
+      "primary": "scene",
+      "artifact": "cadeia-de-derivacao",
+      "ignored": []
+    },
+    {
+      "id": "bio-ecologia-poluicao-ar",
+      "subject": "Biologia",
+      "title": "Poluição do ar",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "bio-ecologia-biomagnificacao",
+      "subject": "Biologia",
+      "title": "Biomagnificação",
+      "primary": "scene",
+      "artifact": "cadeia-de-derivacao",
+      "ignored": []
+    },
+    {
+      "id": "bio-ecologia-aquecimento-global-pops-biorremediacao",
+      "subject": "Biologia",
+      "title": "Aquecimento global, POPs e biorremediação",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-biologia-origem-da-vida-e-as-primeiras-celulas",
+      "subject": "Biologia",
+      "title": "Origem da Vida e as Primeiras Células",
+      "primary": "scene",
+      "artifact": "cadeia-de-derivacao",
+      "ignored": []
+    },
+    {
+      "id": "summary-biologia-composicao-quimica-celular-compostos-inorganicos",
+      "subject": "Biologia",
+      "title": "Composição Química Celular: Compostos Inorgânicos",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-biologia-composicao-quimica-celular-carboidratos-e-lipidios",
+      "subject": "Biologia",
+      "title": "Composição Química Celular: Carboidratos e Lipídios",
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": []
+    },
+    {
+      "id": "summary-biologia-composicao-quimica-celular-proteinas-e-sua-funcao-estrutural",
+      "subject": "Biologia",
+      "title": "Composição Química Celular: Proteínas e sua Função Estrutural",
+      "primary": "scene",
+      "artifact": "cadeia-de-derivacao",
+      "ignored": []
+    },
+    {
+      "id": "summary-biologia-membranas-celulares",
+      "subject": "Biologia",
+      "title": "Membranas Celulares",
+      "primary": "board",
+      "artifact": "membrana",
+      "ignored": []
+    },
+    {
+      "id": "summary-biologia-citoplasma-estrutura-e-componentes-i",
+      "subject": "Biologia",
+      "title": "Citoplasma: Estrutura e Componentes I",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-biologia-citoplasma-estrutura-e-componentes-ii",
+      "subject": "Biologia",
+      "title": "Citoplasma: Estrutura e Componentes II",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-biologia-nucleo-celular",
+      "subject": "Biologia",
+      "title": "Núcleo Celular",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-biologia-proteinas-enzimas",
+      "subject": "Biologia",
+      "title": "Proteínas: Enzimas",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-biologia-bioenergetica-fermentacao-e-respiracao",
+      "subject": "Biologia",
+      "title": "Bioenergética: Fermentação e Respiração",
+      "primary": "scene",
+      "artifact": "cadeia-de-derivacao",
+      "ignored": []
+    },
+    {
+      "id": "summary-biologia-bioenergetica-fotossintese-e-quimiossintese",
+      "subject": "Biologia",
+      "title": "Bioenergética: Fotossíntese e Quimiossíntese",
+      "primary": "board",
+      "artifact": "bioenergetica",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "cadeia-de-derivacao"
+        }
+      ]
+    },
+    {
+      "id": "summary-biologia-acidos-nucleicos",
+      "subject": "Biologia",
+      "title": "Ácidos Nucleicos",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-biologia-divisao-celular",
+      "subject": "Biologia",
+      "title": "Divisão Celular",
+      "primary": "board",
+      "artifact": "divisao-celular",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "cadeia-de-derivacao"
+        }
+      ]
+    },
+    {
+      "id": "summary-biologia-mutacoes-cromossomicas-e-gametogenese",
+      "subject": "Biologia",
+      "title": "Mutações Cromossômicas e Gametogênese",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-biologia-biotecnologia",
+      "subject": "Biologia",
+      "title": "Biotecnologia",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-biologia-introducao-a-genetica",
+      "subject": "Biologia",
+      "title": "Introdução à Genética",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-biologia-alelos-multiplos-e-heranca-dos-grupos-sanguineos",
+      "subject": "Biologia",
+      "title": "Alelos Múltiplos e Herança dos Grupos Sanguíneos",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-biologia-heranca-sexual",
+      "subject": "Biologia",
+      "title": "Herança Sexual",
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": []
+    },
+    {
+      "id": "summary-biologia-segunda-lei-de-mendel",
+      "subject": "Biologia",
+      "title": "Segunda Lei de Mendel",
+      "primary": "board",
+      "artifact": "mendel",
+      "ignored": []
+    },
+    {
+      "id": "summary-biologia-segunda-lei-de-mendel-e-interacao-genica",
+      "subject": "Biologia",
+      "title": "Segunda Lei de Mendel e Interação Gênica",
+      "primary": "board",
+      "artifact": "mendel",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "tipologia"
+        }
+      ]
+    },
+    {
+      "id": "summary-biologia-ligacao-genica",
+      "subject": "Biologia",
+      "title": "Ligação Gênica",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-biologia-mutacoes-genicas",
+      "subject": "Biologia",
+      "title": "Mutações Gênicas",
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": []
+    },
+    {
+      "id": "summary-biologia-evolucao-biologica-construcao-historica",
+      "subject": "Biologia",
+      "title": "Evolução Biológica: Construção Histórica",
+      "primary": "scene",
+      "artifact": "contraste-de-posicoes",
+      "ignored": []
+    },
+    {
+      "id": "summary-biologia-mecanismos-da-evolucao-biologica",
+      "subject": "Biologia",
+      "title": "Mecanismos da Evolução Biológica",
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": []
+    },
+    {
+      "id": "summary-biologia-biomas-brasileiros",
+      "subject": "Biologia",
+      "title": "Biomas Brasileiros",
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": []
+    },
+    {
+      "id": "summary-biologia-classificacao-biologica-nomenclatura-cientifica-e-nocoes-de-sistematica-filogenetica",
+      "subject": "Biologia",
+      "title": "Classificação Biológica, Nomenclatura Científica e Noções de Sistemática Filogenética",
+      "primary": "scene",
+      "artifact": "escala-de-graus",
+      "ignored": []
+    },
+    {
+      "id": "summary-biologia-protozoarios-e-protozooses",
+      "subject": "Biologia",
+      "title": "Protozoários e Protozooses",
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": []
+    },
+    {
+      "id": "summary-biologia-poriferos-e-cnidarios",
+      "subject": "Biologia",
+      "title": "Poríferos e Cnidários",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-biologia-arquitetura-corporal-dos-animais-e-o-filo-dos-platelmintos-e-dos-nematodeos",
+      "subject": "Biologia",
+      "title": "Arquitetura Corporal dos Animais e o Filo dos Platelmintos e dos Nematódeos",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-biologia-moluscos",
+      "subject": "Biologia",
+      "title": "Moluscos",
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": []
+    },
+    {
+      "id": "summary-biologia-anelideos",
+      "subject": "Biologia",
+      "title": "Anelídeos",
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": []
+    },
+    {
+      "id": "summary-biologia-artropodes-insetos-crustaceos-e-miriapodes",
+      "subject": "Biologia",
+      "title": "Artrópodes: Insetos, Crustáceos e Miriápodes",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-biologia-artropodes-aracnideos",
+      "subject": "Biologia",
+      "title": "Artrópodes: Aracnídeos",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-biologia-equinodermos",
+      "subject": "Biologia",
+      "title": "Equinodermos",
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": []
+    },
+    {
+      "id": "summary-biologia-introducao-aos-cordados-e-os-peixes",
+      "subject": "Biologia",
+      "title": "Introdução aos Cordados e os Peixes",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-biologia-cordados-tetrapodes",
+      "subject": "Biologia",
+      "title": "Cordados Tetrápodes",
+      "primary": "scene",
+      "artifact": "escala-de-graus",
+      "ignored": []
+    },
+    {
+      "id": "summary-biologia-fungos",
+      "subject": "Biologia",
+      "title": "Fungos",
+      "primary": "board",
+      "artifact": "fungos",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "tipologia"
+        }
+      ]
+    },
+    {
+      "id": "summary-biologia-algas",
+      "subject": "Biologia",
+      "title": "Algas",
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": []
+    },
+    {
+      "id": "summary-biologia-ciclos-de-vida",
+      "subject": "Biologia",
+      "title": "Ciclos de Vida",
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": []
+    },
+    {
+      "id": "summary-biologia-plantas-terrestres-i-briofitas-e-pteridofitas",
+      "subject": "Biologia",
+      "title": "Plantas Terrestres I: Briófitas e Pteridófitas",
+      "primary": "scene",
+      "artifact": "escala-de-graus",
+      "ignored": []
+    },
+    {
+      "id": "summary-biologia-plantas-terrestres-ii-gimnospermas-e-angiospermas",
+      "subject": "Biologia",
+      "title": "Plantas Terrestres II: Gimnospermas e Angiospermas",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-biologia-procariotos",
+      "subject": "Biologia",
+      "title": "Procariotos",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-biologia-virus",
+      "subject": "Biologia",
+      "title": "Vírus",
+      "primary": "scene",
+      "artifact": "cadeia-de-derivacao",
+      "ignored": []
+    },
+    {
+      "id": "summary-biologia-embriologia-animal",
+      "subject": "Biologia",
+      "title": "Embriologia Animal",
+      "primary": "scene",
+      "artifact": "cadeia-de-derivacao",
+      "ignored": []
+    },
+    {
+      "id": "summary-biologia-fisiologia-da-sustentacao-e-da-locomocao",
+      "subject": "Biologia",
+      "title": "Fisiologia da Sustentação e da Locomoção",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-biologia-fisiologia-da-digestao",
+      "subject": "Biologia",
+      "title": "Fisiologia da Digestão",
+      "primary": "scene",
+      "artifact": "cadeia-de-derivacao",
+      "ignored": []
+    },
+    {
+      "id": "summary-biologia-sangue-e-imunologia",
+      "subject": "Biologia",
+      "title": "Sangue e Imunologia",
+      "primary": "board",
+      "artifact": "abo",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "tipologia"
+        }
+      ]
+    },
+    {
+      "id": "summary-biologia-coracao-e-vasos-sanguineos",
+      "subject": "Biologia",
+      "title": "Coração e Vasos Sanguíneos",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-biologia-fisiologia-da-respiracao",
+      "subject": "Biologia",
+      "title": "Fisiologia da Respiração",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-biologia-fisiologia-da-excrecao",
+      "subject": "Biologia",
+      "title": "Fisiologia da Excreção",
+      "primary": "scene",
+      "artifact": "cadeia-de-derivacao",
+      "ignored": []
+    },
+    {
+      "id": "summary-biologia-fisiologia-da-coordenacao-nervosa-i",
+      "subject": "Biologia",
+      "title": "Fisiologia da Coordenação Nervosa I",
+      "primary": "scene",
+      "artifact": "cadeia-de-derivacao",
+      "ignored": []
+    },
+    {
+      "id": "summary-biologia-coordenacao-nervosa-ii",
+      "subject": "Biologia",
+      "title": "Coordenação Nervosa II",
+      "primary": "scene",
+      "artifact": "cadeia-de-derivacao",
+      "ignored": []
+    },
+    {
+      "id": "summary-biologia-sistemas-sensoriais-visao-e-audicao",
+      "subject": "Biologia",
+      "title": "Sistemas Sensoriais: Visão e Audição",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-biologia-coordenacao-endocrina-i",
+      "subject": "Biologia",
+      "title": "Coordenação Endócrina I",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-biologia-coordenacao-endocrina-ii",
+      "subject": "Biologia",
+      "title": "Coordenação Endócrina II",
+      "primary": "scene",
+      "artifact": "cadeia-de-derivacao",
+      "ignored": []
+    },
+    {
+      "id": "summary-biologia-reproducao-humana-e-metodos-contraceptivos",
+      "subject": "Biologia",
+      "title": "Reprodução Humana e Métodos Contraceptivos",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-biologia-histologia-e-morfologia-vegetal",
+      "subject": "Biologia",
+      "title": "Histologia e Morfologia Vegetal",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-biologia-morfofisiologia-vegetal-caules-e-folhas",
+      "subject": "Biologia",
+      "title": "Morfofisiologia Vegetal: Caules e Folhas",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-biologia-traqueofitas-transpiracao-e-reposicao-rapida-de-agua",
+      "subject": "Biologia",
+      "title": "Traqueófitas: Transpiração e Reposição Rápida de Água",
+      "primary": "scene",
+      "artifact": "cadeia-de-derivacao",
+      "ignored": []
+    },
+    {
+      "id": "summary-biologia-fisiologia-vegetal-transporte-no-floema",
+      "subject": "Biologia",
+      "title": "Fisiologia Vegetal: Transporte no Floema",
+      "primary": "scene",
+      "artifact": "cadeia-de-derivacao",
+      "ignored": []
+    },
+    {
+      "id": "summary-biologia-fisiologia-vegetal-hormonios-vegetais",
+      "subject": "Biologia",
+      "title": "Fisiologia Vegetal: Hormônios Vegetais",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-cinematica-escalar-conceitos-fundamentais",
+      "subject": "Física",
+      "title": "Cinemática Escalar. Conceitos Fundamentais",
+      "primary": "board",
+      "artifact": "cinematica",
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-movimento-uniforme",
+      "subject": "Física",
+      "title": "Movimento Uniforme",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-movimento-uniformemente-variado",
+      "subject": "Física",
+      "title": "Movimento Uniformemente Variado",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-o-movimento-circular",
+      "subject": "Física",
+      "title": "O Movimento Circular",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-grandezas-fisicas-e-operacoes-com-vetores",
+      "subject": "Física",
+      "title": "Grandezas Físicas e Operações com Vetores",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-velocidade-vetorial",
+      "subject": "Física",
+      "title": "Velocidade Vetorial",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-composicao-de-movimentos",
+      "subject": "Física",
+      "title": "Composição de Movimentos",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-aceleracao-vetorial",
+      "subject": "Física",
+      "title": "Aceleração Vetorial",
+      "primary": "scene",
+      "artifact": "grade-de-eixos",
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-forca-e-seus-tipos",
+      "subject": "Física",
+      "title": "Força e seus Tipos",
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-resultante-de-um-sistema-de-forcas",
+      "subject": "Física",
+      "title": "Resultante de um Sistema de Forças",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-as-leis-de-newton",
+      "subject": "Física",
+      "title": "As Leis de Newton",
+      "primary": "board",
+      "artifact": "leis-newton",
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-a-forca-de-contato",
+      "subject": "Física",
+      "title": "A Força de Contato",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-sistema-de-corpos-interagindo-e-os-elementos-transmissores-de-forca",
+      "subject": "Física",
+      "title": "Sistema de Corpos Interagindo e os Elementos Transmissores de Força",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-plano-inclinado",
+      "subject": "Física",
+      "title": "Plano Inclinado",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-leis-da-gravitacao",
+      "subject": "Física",
+      "title": "Leis da Gravitação",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-dinamica-do-movimento-circular",
+      "subject": "Física",
+      "title": "Dinâmica do Movimento Circular",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-analisando-movimentos-contidos-em-um-plano-vertical",
+      "subject": "Física",
+      "title": "Analisando Movimentos Contidos em um Plano Vertical",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-orbitas",
+      "subject": "Física",
+      "title": "Órbitas",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-balistica",
+      "subject": "Física",
+      "title": "Balística",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-movimento-harmonico-simples-mhs",
+      "subject": "Física",
+      "title": "Movimento Harmônico Simples (MHS)",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-impulso-e-quantidade-de-movimento",
+      "subject": "Física",
+      "title": "Impulso e Quantidade de Movimento",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-sistemas-isolados-e-a-conservacao-da-quantidade-de-movimento",
+      "subject": "Física",
+      "title": "Sistemas Isolados e a Conservação da Quantidade de Movimento",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-colisoes",
+      "subject": "Física",
+      "title": "Colisões",
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-trabalho-e-energia-trabalho-de-uma-forca",
+      "subject": "Física",
+      "title": "Trabalho e Energia: Trabalho de uma Força",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-trabalho-e-energia-teorema-da-energia-cinetica",
+      "subject": "Física",
+      "title": "Trabalho e Energia: Teorema da Energia Cinética",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-trabalho-e-energia-o-teorema-da-energia-potencial",
+      "subject": "Física",
+      "title": "Trabalho e Energia: o Teorema da Energia Potencial",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-sistemas-conservativos-e-sistemas-nao-conservativos",
+      "subject": "Física",
+      "title": "Sistemas Conservativos e Sistemas Não Conservativos",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-potencia-maquina-e-rendimento",
+      "subject": "Física",
+      "title": "Potência, Máquina e Rendimento",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-a-fisica-por-tras-da-obtencao-de-energia-eletrica-das-quedas-d-agua-aos-reatores-nucleares",
+      "subject": "Física",
+      "title": "A Física por trás da Obtenção de Energia Elétrica, das Quedas-d'Água aos Reatores Nucleares",
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-equivalencia-massa-energia",
+      "subject": "Física",
+      "title": "Equivalência Massa-Energia",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-estatica",
+      "subject": "Física",
+      "title": "Estática",
+      "primary": "scene",
+      "artifact": "criterios-conjuntivos",
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-hidrostatica-densidade-e-pressao",
+      "subject": "Física",
+      "title": "Hidrostática: Densidade e Pressão",
+      "primary": "board",
+      "artifact": "hidrostatica",
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-dilatacao-ou-contracao-termica-dos-solidos-e-liquidos",
+      "subject": "Física",
+      "title": "Dilatação ou Contração Térmica dos Sólidos e Líquidos",
+      "primary": "scene",
+      "artifact": "cadeia-de-derivacao",
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-calor-sensivel-e-calor-latente",
+      "subject": "Física",
+      "title": "Calor Sensível e Calor Latente",
+      "primary": "board",
+      "artifact": "calorimetria",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "cadeia-de-derivacao"
+        }
+      ]
+    },
+    {
+      "id": "summary-fisica-gases-ideais-variaveis-de-estado-e-as-transformacoes-gasosas",
+      "subject": "Física",
+      "title": "Gases Ideais: Variáveis de Estado e as Transformações Gasosas",
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-trabalho-da-forca-de-pressao-do-gas",
+      "subject": "Física",
+      "title": "Trabalho da Força de Pressão do Gás",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-primeira-lei-da-termodinamica",
+      "subject": "Física",
+      "title": "Primeira Lei da Termodinâmica",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-primeira-lei-da-termodinamica-aplicada-a-algumas-transformacoes-particulares",
+      "subject": "Física",
+      "title": "Primeira Lei da Termodinâmica Aplicada a Algumas Transformações Particulares",
+      "primary": "board",
+      "artifact": "adiabatica",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "tipologia"
+        }
+      ]
+    },
+    {
+      "id": "summary-fisica-maquinas-termicas-e-ciclo-de-carnot",
+      "subject": "Física",
+      "title": "Máquinas Térmicas e Ciclo de Carnot",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-eletrostatica-processos-de-eletrizacao-e-aplicacoes",
+      "subject": "Física",
+      "title": "Eletrostática: Processos de Eletrização e Aplicações",
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-forca-eletrica-lei-de-coulomb",
+      "subject": "Física",
+      "title": "Força Elétrica: Lei de Coulomb",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-campo-eletrico",
+      "subject": "Física",
+      "title": "Campo Elétrico",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-energia-potencial-e-potencial-eletrico",
+      "subject": "Física",
+      "title": "Energia Potencial e Potencial Elétrico",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-mapeamento-do-campo-eletrico-linhas-de-forca-e-superficies-equipotenciais",
+      "subject": "Física",
+      "title": "Mapeamento do Campo Elétrico: Linhas de Força e Superfícies Equipotenciais",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-campo-eletrico-uniforme-abordagem-escalar-e-abordagem-vetorial",
+      "subject": "Física",
+      "title": "Campo Elétrico Uniforme: Abordagem Escalar e Abordagem Vetorial",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-dinamica-das-cargas-eletricas",
+      "subject": "Física",
+      "title": "Dinâmica das Cargas Elétricas",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-corrente-eletrica",
+      "subject": "Física",
+      "title": "Corrente Elétrica",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-potencia-eletrica",
+      "subject": "Física",
+      "title": "Potência Elétrica",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-resistores",
+      "subject": "Física",
+      "title": "Resistores",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-medidores-eletricos",
+      "subject": "Física",
+      "title": "Medidores Elétricos",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-geradores",
+      "subject": "Física",
+      "title": "Geradores",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-receptores",
+      "subject": "Física",
+      "title": "Receptores",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-circuitos-de-malha-unica",
+      "subject": "Física",
+      "title": "Circuitos de Malha Única",
+      "primary": "board",
+      "artifact": "circuitos",
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-eletrodinamica-as-leis-de-kirchhoff",
+      "subject": "Física",
+      "title": "Eletrodinâmica: as Leis de Kirchhoff",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-capacitores",
+      "subject": "Física",
+      "title": "Capacitores",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-imas-campo-de-inducao-magnetico-devido-a-imas-e-campo-magnetico-terrestre",
+      "subject": "Física",
+      "title": "Ímãs, Campo de Indução Magnético devido a Ímãs e Campo Magnético Terrestre",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-campo-magnetico-devido-a-corrente-em-fio-reto-e-espira-descricao-vetorial-e-aplicacoes",
+      "subject": "Física",
+      "title": "Campo Magnético devido à Corrente em Fio Reto e Espira: Descrição Vetorial e Aplicações",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-forca-magnetica-e-analise-de-lancamentos-de-cargas-em-um-campo-magnetico-uniforme",
+      "subject": "Física",
+      "title": "Força Magnética e Análise de Lançamentos de Cargas em um Campo Magnético Uniforme",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-analise-de-forca-magnetica-em-fios-percorridos-por-correntes-continuas",
+      "subject": "Física",
+      "title": "Análise de Força Magnética em Fios Percorridos por Correntes Contínuas",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-inducao-eletromagnetica-lei-de-lenz",
+      "subject": "Física",
+      "title": "Indução Eletromagnética: Lei de Lenz",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-inducao-eletromagnetica-analise-da-corrente-induzida-em-geradores",
+      "subject": "Física",
+      "title": "Indução Eletromagnética: Análise da Corrente Induzida em Geradores",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-fundamentos-da-optica-geometrica",
+      "subject": "Física",
+      "title": "Fundamentos da Óptica Geométrica",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-reflexao-em-superficies-planas",
+      "subject": "Física",
+      "title": "Reflexão em Superfícies Planas",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-reflexao-em-superficies-esfericas",
+      "subject": "Física",
+      "title": "Reflexão em Superfícies Esféricas",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-refracao-fundamentos-leis-e-aplicacoes",
+      "subject": "Física",
+      "title": "Refração: Fundamentos, Leis e Aplicações",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-lentes-esfericas-estudo-grafico",
+      "subject": "Física",
+      "title": "Lentes Esféricas: Estudo Gráfico",
+      "primary": "board",
+      "artifact": "lentes",
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-estudo-analitico-das-lentes-esfericas",
+      "subject": "Física",
+      "title": "Estudo Analítico das Lentes Esféricas",
+      "primary": "board",
+      "artifact": "lentes",
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-equacao-do-fabricante-de-lentes-e-associacao-de-lentes",
+      "subject": "Física",
+      "title": "Equação do Fabricante de Lentes e Associação de Lentes",
+      "primary": "board",
+      "artifact": "lentes",
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-optica-da-visao",
+      "subject": "Física",
+      "title": "Óptica da Visão",
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-microscopio-e-luneta-astronomica-ou-telescopio-refrator-nocoes-basicas",
+      "subject": "Física",
+      "title": "Microscópio e Luneta Astronômica (ou Telescópio Refrator): Noções Básicas",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-conceitos-basicos",
+      "subject": "Física",
+      "title": "Conceitos Básicos",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-equacao-fundamental-da-ondulatoria",
+      "subject": "Física",
+      "title": "Equação Fundamental da Ondulatória",
+      "primary": "board",
+      "artifact": "ondulatoria",
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-ondulatoria-ondas-eletromagneticas",
+      "subject": "Física",
+      "title": "Ondulatória: Ondas Eletromagnéticas",
+      "primary": "board",
+      "artifact": "ondulatoria",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "escala-de-graus"
+        }
+      ]
+    },
+    {
+      "id": "summary-fisica-ondulatoria-som-e-suas-propriedades",
+      "subject": "Física",
+      "title": "Ondulatória: Som e suas Propriedades",
+      "primary": "board",
+      "artifact": "ondulatoria",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "tipologia"
+        }
+      ]
+    },
+    {
+      "id": "summary-fisica-intensidade-sonora",
+      "subject": "Física",
+      "title": "Intensidade Sonora",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-reflexao-eco-reverberacao-e-refracao-de-ondas",
+      "subject": "Física",
+      "title": "Reflexão, Eco, Reverberação e Refração de Ondas",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-fenomenos-ondulatorios-analise-de-refracao-e-reflexao-em-cordas",
+      "subject": "Física",
+      "title": "Fenômenos Ondulatórios: Análise de Refração e Reflexão em Cordas",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-fenomenos-ondulatorios-difracao-polarizacao-e-ressonancia",
+      "subject": "Física",
+      "title": "Fenômenos Ondulatórios: Difração, Polarização e Ressonância",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-interferencia-de-ondas-analise-quantitativa-aplicacoes-e-batimento",
+      "subject": "Física",
+      "title": "Interferência de Ondas: Análise Quantitativa, Aplicações e Batimento",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-um-caso-particular-de-interferencia-onda-estacionaria",
+      "subject": "Física",
+      "title": "Um Caso Particular de Interferência: Onda Estacionária",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-ondas-estacionarias-em-cordas",
+      "subject": "Física",
+      "title": "Ondas Estacionárias em Cordas",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-ondas-estacionarias-em-tubos",
+      "subject": "Física",
+      "title": "Ondas Estacionárias em Tubos",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-efeito-doppler-descricao-e-estudo-quantitativo",
+      "subject": "Física",
+      "title": "Efeito Doppler: Descrição e Estudo Quantitativo",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-fisica-nocoes-basicas-de-fisica-quantica",
+      "subject": "Física",
+      "title": "Noções Básicas de Física Quântica",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-geografia-coordenadas-geograficas",
+      "subject": "Geografia",
+      "title": "Coordenadas Geográficas",
+      "primary": "experiment",
+      "artifact": "coordinates",
+      "ignored": []
+    },
+    {
+      "id": "summary-geografia-movimentos-da-terra",
+      "subject": "Geografia",
+      "title": "Movimentos da Terra",
+      "primary": "scene",
+      "artifact": "cadeia-de-derivacao",
+      "ignored": []
+    },
+    {
+      "id": "summary-geografia-sistema-de-fusos-horarios",
+      "subject": "Geografia",
+      "title": "Sistema de Fusos Horários",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-geografia-linguagem-cartografica",
+      "subject": "Geografia",
+      "title": "Linguagem Cartográfica",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-geografia-projecoes-cartograficas",
+      "subject": "Geografia",
+      "title": "Projeções Cartográficas",
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": []
+    },
+    {
+      "id": "summary-geografia-cartografia-digital",
+      "subject": "Geografia",
+      "title": "Cartografia Digital",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-geografia-representacoes-graficas-e-cartograficas",
+      "subject": "Geografia",
+      "title": "Representações Gráficas e Cartográficas",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-geografia-dinamica-climatica",
+      "subject": "Geografia",
+      "title": "Dinâmica Climática",
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": []
+    },
+    {
+      "id": "summary-geografia-clima-mundial",
+      "subject": "Geografia",
+      "title": "Clima Mundial",
+      "primary": "scene",
+      "artifact": "criterios-conjuntivos",
+      "ignored": []
+    },
+    {
+      "id": "summary-geografia-geomorfologia-mundial",
+      "subject": "Geografia",
+      "title": "Geomorfologia Mundial",
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": []
+    },
+    {
+      "id": "summary-geografia-biogeografia-mundial",
+      "subject": "Geografia",
+      "title": "Biogeografia Mundial",
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": []
+    },
+    {
+      "id": "summary-geografia-agua-na-superficie-terrestre",
+      "subject": "Geografia",
+      "title": "Água na Superfície Terrestre",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-geografia-desafios-ambientais-do-seculo-xxi",
+      "subject": "Geografia",
+      "title": "Desafios Ambientais do Século XXI",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-geografia-geopolitica-ambiental",
+      "subject": "Geografia",
+      "title": "Geopolítica Ambiental",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-geografia-geopolitica-dos-recursos-hidricos",
+      "subject": "Geografia",
+      "title": "Geopolítica dos Recursos Hídricos",
+      "primary": "scene",
+      "artifact": "cadeia-de-derivacao",
+      "ignored": []
+    },
+    {
+      "id": "summary-geografia-hidrogeografia-mundial",
+      "subject": "Geografia",
+      "title": "Hidrogeografia Mundial",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-geografia-do-mundo-bipolar-ao-multipolar",
+      "subject": "Geografia",
+      "title": "Do Mundo Bipolar ao Multipolar",
+      "primary": "scene",
+      "artifact": "cadeia-de-derivacao",
+      "ignored": []
+    },
+    {
+      "id": "summary-geografia-globalizacao-e-processos-economicos-atuais",
+      "subject": "Geografia",
+      "title": "Globalização e Processos Econômicos Atuais",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-geografia-geografia-das-redes-mundiais",
+      "subject": "Geografia",
+      "title": "Geografia das Redes Mundiais",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-geografia-unilateralismo-e-multilateralismo",
+      "subject": "Geografia",
+      "title": "Unilateralismo e Multilateralismo",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-geografia-blocos-economicos",
+      "subject": "Geografia",
+      "title": "Blocos Econômicos",
+      "primary": "scene",
+      "artifact": "escala-de-graus",
+      "ignored": []
+    },
+    {
+      "id": "summary-geografia-uniao-europeia",
+      "subject": "Geografia",
+      "title": "União Europeia",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-geografia-desigualdades-globais",
+      "subject": "Geografia",
+      "title": "Desigualdades Globais",
+      "primary": "scene",
+      "artifact": "cadeia-de-derivacao",
+      "ignored": []
+    },
+    {
+      "id": "summary-geografia-mobilidade-populacional",
+      "subject": "Geografia",
+      "title": "Mobilidade Populacional",
+      "primary": "scene",
+      "artifact": "criterios-conjuntivos",
+      "ignored": []
+    },
+    {
+      "id": "summary-geografia-geografia-do-turismo",
+      "subject": "Geografia",
+      "title": "Geografia do Turismo",
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": []
+    },
+    {
+      "id": "summary-geografia-producao-agricola-mundial",
+      "subject": "Geografia",
+      "title": "Produção Agrícola Mundial",
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": []
+    },
+    {
+      "id": "summary-geografia-industria-i",
+      "subject": "Geografia",
+      "title": "Indústria I",
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": []
+    },
+    {
+      "id": "summary-geografia-industria-ii",
+      "subject": "Geografia",
+      "title": "Indústria II",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-geografia-gedeconomia-mundial",
+      "subject": "Geografia",
+      "title": "Gedeconomia Mundial",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-geografia-terrorismo-internacional",
+      "subject": "Geografia",
+      "title": "Terrorismo Internacional",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-geografia-geografia-das-religioes",
+      "subject": "Geografia",
+      "title": "Geografia das Religiões",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-geografia-tensoes-geopoliticas-na-europa",
+      "subject": "Geografia",
+      "title": "Tensões Geopolíticas na Europa",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-geografia-geopolitica-e-geoeconomia-da-america-latina",
+      "subject": "Geografia",
+      "title": "Geopolítica e Geoeconomia da América Latina",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-geografia-africa-no-mundo-atual",
+      "subject": "Geografia",
+      "title": "África no Mundo Atual",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-geografia-geopolitica-e-geoeconomia-da-asia",
+      "subject": "Geografia",
+      "title": "Geopolítica e Geoeconomia da Ásia",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-geografia-geografia-do-oriente-medio",
+      "subject": "Geografia",
+      "title": "Geografia do Oriente Médio",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-geografia-questao-palestina",
+      "subject": "Geografia",
+      "title": "Questão Palestina",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-geografia-conflitos-no-mundo-arabe",
+      "subject": "Geografia",
+      "title": "Conflitos no Mundo Árabe",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-geografia-paisagem-espaco-geografico-e-ciencia-geografica",
+      "subject": "Geografia",
+      "title": "Paisagem, Espaço Geográfico e Ciência Geográfica",
+      "primary": "scene",
+      "artifact": "contraste-de-posicoes",
+      "ignored": []
+    },
+    {
+      "id": "summary-geografia-geologia-e-geomorfologia",
+      "subject": "Geografia",
+      "title": "Geologia e Geomorfologia",
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": []
+    },
+    {
+      "id": "summary-geografia-relevo-brasileiro",
+      "subject": "Geografia",
+      "title": "Relevo Brasileiro",
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": []
+    },
+    {
+      "id": "summary-geografia-pedologia",
+      "subject": "Geografia",
+      "title": "Pedologia",
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": []
+    },
+    {
+      "id": "summary-geografia-climatologia-do-brasil",
+      "subject": "Geografia",
+      "title": "Climatologia do Brasil",
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": []
+    },
+    {
+      "id": "summary-geografia-biogeografia-do-brasil-i",
+      "subject": "Geografia",
+      "title": "Biogeografia do Brasil I",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-geografia-biogeografia-do-brasil-ii",
+      "subject": "Geografia",
+      "title": "Biogeografia do Brasil II",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-geografia-politicas-ambientais-brasileiras",
+      "subject": "Geografia",
+      "title": "Políticas Ambientais Brasileiras",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-geografia-hidrogeografia-do-brasil",
+      "subject": "Geografia",
+      "title": "Hidrogeografia do Brasil",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-geografia-dominios-morfoclimaticos",
+      "subject": "Geografia",
+      "title": "Domínios Morfoclimáticos",
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": []
+    },
+    {
+      "id": "summary-geografia-matriz-energetica",
+      "subject": "Geografia",
+      "title": "Matriz Energética",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-geografia-combustiveis-fosseis-e-biocombustiveis-no-brasil",
+      "subject": "Geografia",
+      "title": "Combustíveis Fósseis e Biocombustíveis no Brasil",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-geografia-energia-eletrica-no-mundo",
+      "subject": "Geografia",
+      "title": "Energia Elétrica no Mundo",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-geografia-energia-eletrica-no-brasil",
+      "subject": "Geografia",
+      "title": "Energia Elétrica no Brasil",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-geografia-producao-mineral",
+      "subject": "Geografia",
+      "title": "Produção Mineral",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-geografia-o-espaco-agrario-brasileiro",
+      "subject": "Geografia",
+      "title": "O Espaço Agrário Brasileiro",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-geografia-o-espaco-industrial-brasileiro-i",
+      "subject": "Geografia",
+      "title": "O Espaço Industrial Brasileiro I",
+      "primary": "scene",
+      "artifact": "camadas-de-determinacao",
+      "ignored": []
+    },
+    {
+      "id": "summary-geografia-o-espaco-industrial-brasileiro-ii",
+      "subject": "Geografia",
+      "title": "O Espaço Industrial Brasileiro II",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-geografia-dinamica-demografica",
+      "subject": "Geografia",
+      "title": "Dinâmica Demográfica",
+      "primary": "scene",
+      "artifact": "escala-de-graus",
+      "ignored": []
+    },
+    {
+      "id": "summary-geografia-estrutura-etnica-e-fluxos-migratorios",
+      "subject": "Geografia",
+      "title": "Estrutura Étnica e Fluxos Migratórios",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-geografia-o-espaco-urbano-i",
+      "subject": "Geografia",
+      "title": "O Espaço Urbano I",
+      "primary": "scene",
+      "artifact": "escala-de-graus",
+      "ignored": []
+    },
+    {
+      "id": "summary-geografia-o-espaco-urbano-ii",
+      "subject": "Geografia",
+      "title": "O Espaço Urbano II",
+      "primary": "scene",
+      "artifact": "camadas-de-determinacao",
+      "ignored": []
+    },
+    {
+      "id": "summary-geografia-as-redes-de-transportes",
+      "subject": "Geografia",
+      "title": "As Redes de Transportes",
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": []
+    },
+    {
+      "id": "summary-geografia-os-fluxos-do-comercio-externo",
+      "subject": "Geografia",
+      "title": "Os Fluxos do Comércio Externo",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-historia-introducao-a-historia-e-primeiras-civilizacoes",
+      "subject": "História",
+      "title": "Introdução à História e Primeiras Civilizações",
+      "primary": "experiment",
+      "artifact": "sources",
+      "ignored": []
+    },
+    {
+      "id": "summary-historia-antiguidade-classica-o-mundo-grego",
+      "subject": "História",
+      "title": "Antiguidade Clássica: o Mundo Grego",
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": []
+    },
+    {
+      "id": "summary-historia-antiguidade-classica-o-mundo-romano",
+      "subject": "História",
+      "title": "Antiguidade Clássica: o Mundo Romano",
+      "primary": "scene",
+      "artifact": "cadeia-de-derivacao",
+      "ignored": []
+    },
+    {
+      "id": "summary-historia-alta-idade-media-e-feudalismo",
+      "subject": "História",
+      "title": "Alta Idade Média e Feudalismo",
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": []
+    },
+    {
+      "id": "summary-historia-baixa-idade-media",
+      "subject": "História",
+      "title": "Baixa Idade Média",
+      "primary": "scene",
+      "artifact": "cadeia-de-derivacao",
+      "ignored": []
+    },
+    {
+      "id": "summary-historia-a-primeira-globalizacao",
+      "subject": "História",
+      "title": "A Primeira Globalização",
+      "primary": "scene",
+      "artifact": "camadas-de-determinacao",
+      "ignored": []
+    },
+    {
+      "id": "summary-historia-america-espanhola",
+      "subject": "História",
+      "title": "América Espanhola",
+      "primary": "scene",
+      "artifact": "escala-de-graus",
+      "ignored": []
+    },
+    {
+      "id": "summary-historia-vida-urbana-e-renascimento-cultural",
+      "subject": "História",
+      "title": "Vida Urbana e Renascimento Cultural",
+      "primary": "scene",
+      "artifact": "camadas-de-determinacao",
+      "ignored": []
+    },
+    {
+      "id": "summary-historia-reforma-religiosa",
+      "subject": "História",
+      "title": "Reforma Religiosa",
+      "primary": "scene",
+      "artifact": "movimento-dialetico",
+      "ignored": []
+    },
+    {
+      "id": "summary-historia-absolutismo",
+      "subject": "História",
+      "title": "Absolutismo",
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": []
+    },
+    {
+      "id": "summary-historia-revolucao-industrial",
+      "subject": "História",
+      "title": "Revolução Industrial",
+      "primary": "scene",
+      "artifact": "cadeia-de-derivacao",
+      "ignored": []
+    },
+    {
+      "id": "summary-historia-iluminismo",
+      "subject": "História",
+      "title": "Iluminismo",
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": []
+    },
+    {
+      "id": "summary-historia-revolucao-francesa",
+      "subject": "História",
+      "title": "Revolução Francesa",
+      "primary": "scene",
+      "artifact": "cadeia-de-derivacao",
+      "ignored": []
+    },
+    {
+      "id": "summary-historia-america-no-seculo-xix",
+      "subject": "História",
+      "title": "América no Século XIX",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-historia-europa-no-seculo-xix",
+      "subject": "História",
+      "title": "Europa no Século XIX",
+      "primary": "scene",
+      "artifact": "contraste-de-posicoes",
+      "ignored": []
+    },
+    {
+      "id": "summary-historia-imperialismo-e-belle-epoque",
+      "subject": "História",
+      "title": "Imperialismo e Belle Époque",
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": []
+    },
+    {
+      "id": "summary-historia-primeira-guerra-mundial-1914-1918",
+      "subject": "História",
+      "title": "Primeira Guerra Mundial (1914-1918)",
+      "primary": "scene",
+      "artifact": "criterios-conjuntivos",
+      "ignored": []
+    },
+    {
+      "id": "summary-historia-grandes-revolucoes-do-seculo-xx",
+      "subject": "História",
+      "title": "Grandes Revoluções do Século XX",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-historia-o-periodo-entreguerras-1918-1939",
+      "subject": "História",
+      "title": "O Período Entreguerras (1918-1939)",
+      "primary": "scene",
+      "artifact": "cadeia-de-derivacao",
+      "ignored": []
+    },
+    {
+      "id": "summary-historia-o-nazismo-na-alemanha",
+      "subject": "História",
+      "title": "O Nazismo na Alemanha",
+      "primary": "scene",
+      "artifact": "criterios-conjuntivos",
+      "ignored": []
+    },
+    {
+      "id": "summary-historia-segunda-guerra-mundial-1939-1945",
+      "subject": "História",
+      "title": "Segunda Guerra Mundial (1939-1945)",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-historia-guerra-fria",
+      "subject": "História",
+      "title": "Guerra Fria",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-historia-descolonizacao-afro-asiatica",
+      "subject": "História",
+      "title": "Descolonização Afro-Asiática",
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": []
+    },
+    {
+      "id": "summary-historia-america-latina-no-seculo-xx",
+      "subject": "História",
+      "title": "América Latina no Século XX",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-historia-o-fim-da-guerra-fria",
+      "subject": "História",
+      "title": "O Fim da Guerra Fria",
+      "primary": "scene",
+      "artifact": "cadeia-de-derivacao",
+      "ignored": []
+    },
+    {
+      "id": "summary-historia-a-historia-e-o-brasil",
+      "subject": "História",
+      "title": "A História e o Brasil",
+      "primary": "scene",
+      "artifact": "contraste-de-posicoes",
+      "ignored": []
+    },
+    {
+      "id": "summary-historia-grandes-navegacoes-e-conquista-colonial",
+      "subject": "História",
+      "title": "Grandes Navegações e Conquista Colonial",
+      "primary": "scene",
+      "artifact": "cadeia-de-derivacao",
+      "ignored": []
+    },
+    {
+      "id": "summary-historia-a-montagem-da-colonizacao",
+      "subject": "História",
+      "title": "A Montagem da Colonização",
+      "primary": "scene",
+      "artifact": "criterios-conjuntivos",
+      "ignored": []
+    },
+    {
+      "id": "summary-historia-dinamica-interna-da-colonizacao",
+      "subject": "História",
+      "title": "Dinâmica Interna da Colonização",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-historia-disputas-europeias-no-brasil-colonial",
+      "subject": "História",
+      "title": "Disputas Europeias no Brasil Colonial",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-historia-a-interiorizacao-da-colonizacao",
+      "subject": "História",
+      "title": "A Interiorização da Colonização",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-historia-a-mineracao-no-brasil-colonial",
+      "subject": "História",
+      "title": "A Mineração no Brasil Colonial",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-historia-a-crise-do-antigo-sistema-colonial",
+      "subject": "História",
+      "title": "A Crise do Antigo Sistema Colonial",
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": []
+    },
+    {
+      "id": "summary-historia-a-independencia-do-brasil",
+      "subject": "História",
+      "title": "A Independência do Brasil",
+      "primary": "board",
+      "artifact": "independencia-brasil",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "contraste-de-posicoes"
+        }
+      ]
+    },
+    {
+      "id": "summary-historia-brasil-imperio-formacao-do-estado-nacional-brasileiro",
+      "subject": "História",
+      "title": "Brasil Império: Formação do Estado Nacional Brasileiro",
+      "primary": "scene",
+      "artifact": "cadeia-de-derivacao",
+      "ignored": []
+    },
+    {
+      "id": "summary-historia-brasil-imperio-o-periodo-regencial-1831-1840",
+      "subject": "História",
+      "title": "Brasil Império: o Período Regencial (1831-1840)",
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": []
+    },
+    {
+      "id": "summary-historia-brasil-imperio-segundo-reinado-1840-1889",
+      "subject": "História",
+      "title": "Brasil Império: Segundo Reinado (1840-1889)",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-historia-brasil-imperio-o-declinio-do-segundo-reinado",
+      "subject": "História",
+      "title": "Brasil Império: o Declínio do Segundo Reinado",
+      "primary": "scene",
+      "artifact": "criterios-conjuntivos",
+      "ignored": []
+    },
+    {
+      "id": "summary-historia-a-republica-da-espada",
+      "subject": "História",
+      "title": "A República da Espada",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-historia-ascensao-e-dominio-das-oligarquias",
+      "subject": "História",
+      "title": "Ascensão e Domínio das Oligarquias",
+      "primary": "scene",
+      "artifact": "camadas-de-determinacao",
+      "ignored": []
+    },
+    {
+      "id": "summary-historia-a-primeira-republica-o-declinio-oligarquico-1889-1930",
+      "subject": "História",
+      "title": "A Primeira República: o Declínio Oligárquico (1889-1930)",
+      "primary": "scene",
+      "artifact": "camadas-de-determinacao",
+      "ignored": []
+    },
+    {
+      "id": "summary-historia-a-era-vargas",
+      "subject": "História",
+      "title": "A Era Vargas",
+      "primary": "scene",
+      "artifact": "cadeia-de-derivacao",
+      "ignored": []
+    },
+    {
+      "id": "summary-historia-a-era-vargas-o-governo-constitucional-1934-1937",
+      "subject": "História",
+      "title": "A Era Vargas: o Governo Constitucional (1934-1937)",
+      "primary": "scene",
+      "artifact": "cadeia-de-derivacao",
+      "ignored": []
+    },
+    {
+      "id": "summary-historia-a-era-vargas-o-estado-novo",
+      "subject": "História",
+      "title": "A Era Vargas: o Estado Novo",
+      "primary": "scene",
+      "artifact": "cadeia-de-derivacao",
+      "ignored": []
+    },
+    {
+      "id": "summary-historia-republica-liberal-1945-1964-democracia-em-tempos-de-guerra-fria",
+      "subject": "História",
+      "title": "República Liberal (1945-1964): Democracia em Tempos de Guerra Fria",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-historia-republica-liberal-1945-1964-desenvolvimentismo-e-populismo",
+      "subject": "História",
+      "title": "República Liberal (1945-1964): Desenvolvimentismo e Populismo",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-historia-regime-militar-1964-1985-i",
+      "subject": "História",
+      "title": "Regime Militar (1964-1985) I",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-historia-regime-militar-1964-1985-ii",
+      "subject": "História",
+      "title": "Regime Militar (1964-1985) II",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-historia-o-brasil-atual",
+      "subject": "História",
+      "title": "O Brasil Atual",
+      "primary": "scene",
+      "artifact": "criterios-conjuntivos",
+      "ignored": []
+    },
+    {
+      "id": "summary-lingua-inglesa-text-comprehension-taxonomy-and-terminology",
+      "subject": "Língua Inglesa",
+      "title": "Text Comprehension: Taxonomy and Terminology",
+      "primary": "experiment",
+      "artifact": "inference",
+      "ignored": []
+    },
+    {
+      "id": "summary-lingua-inglesa-text-comprehension-songs-and-poems",
+      "subject": "Língua Inglesa",
+      "title": "Text Comprehension: Songs and Poems",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-lingua-inglesa-text-comprehension-calories-and-energy",
+      "subject": "Língua Inglesa",
+      "title": "Text Comprehension: Calories and Energy",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-lingua-inglesa-text-comprehension-earthquakes",
+      "subject": "Língua Inglesa",
+      "title": "Text Comprehension: Earthquakes",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-lingua-inglesa-text-comprehension-hurricanes",
+      "subject": "Língua Inglesa",
+      "title": "Text Comprehension: Hurricanes",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-lingua-inglesa-text-comprehension-ecology-greenhouse-gases",
+      "subject": "Língua Inglesa",
+      "title": "Text Comprehension: Ecology (Greenhouse Gases)",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-lingua-inglesa-text-comprehension-pollution",
+      "subject": "Língua Inglesa",
+      "title": "Text Comprehension: Pollution",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-lingua-inglesa-text-comprehension-the-human-brain",
+      "subject": "Língua Inglesa",
+      "title": "Text Comprehension: The Human Brain",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-lingua-inglesa-text-comprehension-global-warming",
+      "subject": "Língua Inglesa",
+      "title": "Text Comprehension: Global Warming",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-lingua-inglesa-text-comprehension-novels-short-stories",
+      "subject": "Língua Inglesa",
+      "title": "Text Comprehension: Novels/Short Stories",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-lingua-inglesa-text-comprehension-bacteria",
+      "subject": "Língua Inglesa",
+      "title": "Text Comprehension: Bacteria",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-lingua-inglesa-text-comprehension-viruses",
+      "subject": "Língua Inglesa",
+      "title": "Text Comprehension: Viruses",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-lingua-inglesa-text-comprehension-discrimination-against-women",
+      "subject": "Língua Inglesa",
+      "title": "Text Comprehension: Discrimination Against Women",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-lingua-inglesa-text-comprehension-women-empowerment",
+      "subject": "Língua Inglesa",
+      "title": "Text Comprehension: Women Empowerment",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-lingua-inglesa-text-comprehension-digital-technology",
+      "subject": "Língua Inglesa",
+      "title": "Text Comprehension: Digital Technology",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-lingua-inglesa-text-comprehension-health-probiotics",
+      "subject": "Língua Inglesa",
+      "title": "Text Comprehension: Health – Probiotics",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-lingua-inglesa-text-comprehension-stem-cells",
+      "subject": "Língua Inglesa",
+      "title": "Text Comprehension: Stem Cells",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-redacao-a-dissertacao-no-vestibular-mitos-e-verdades",
+      "subject": "Redação",
+      "title": "A Dissertação no Vestibular: Mitos e Verdades",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-redacao-o-que-se-avalia-na-dissertacao-competencias-e-habilidades",
+      "subject": "Redação",
+      "title": "O que se Avalia na Dissertação: Competências e Habilidades",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-redacao-organizando-as-ideias-brainstorm-e-mind-maps",
+      "subject": "Redação",
+      "title": "Organizando as Ideias: Brainstorm e Mind Maps",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-redacao-projeto-de-texto-em-favor-da-progressao-textual",
+      "subject": "Redação",
+      "title": "Projeto de Texto em Favor da Progressão Textual",
+      "primary": "experiment",
+      "artifact": "argument",
+      "ignored": []
+    },
+    {
+      "id": "summary-redacao-repertorio-o-diferencial-de-redacoes-de-sucesso",
+      "subject": "Redação",
+      "title": "Repertório: o Diferencial de Redações de Sucesso",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-redacao-qual-sera-o-tema-deste-ano-grandes-eixos-tematicos",
+      "subject": "Redação",
+      "title": "Qual Será o Tema deste Ano: Grandes Eixos Temáticos",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-redacao-diferentes-graus-de-adequacao-a-proposta",
+      "subject": "Redação",
+      "title": "Diferentes Graus de Adequação à Proposta",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-redacao-tangenciamento-e-fuga-a-fronteira-do-tema",
+      "subject": "Redação",
+      "title": "Tangenciamento e Fuga: a Fronteira do Tema",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-redacao-generos-e-sua-relacao-com-a-estrutura-do-texto",
+      "subject": "Redação",
+      "title": "Gêneros e sua Relação com a Estrutura do Texto",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-redacao-estrutura-classica-do-texto-dissertativo",
+      "subject": "Redação",
+      "title": "Estrutura Clássica do Texto Dissertativo",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-redacao-lendo-a-coletanea-a-apreensao-de-sentidos-i",
+      "subject": "Redação",
+      "title": "Lendo a Coletânea: a Apreensão de Sentidos I",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-redacao-lendo-a-coletanea-a-apreensao-de-sentidos-ii",
+      "subject": "Redação",
+      "title": "Lendo a Coletânea: a Apreensão de Sentidos II",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-redacao-lendo-a-coletanea-a-compreensao-e-o-texto-autoral-i",
+      "subject": "Redação",
+      "title": "Lendo a Coletânea: a Compreensão e o Texto Autoral I",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-redacao-lendo-a-coletanea-a-compreensao-e-o-texto-autoral-ii",
+      "subject": "Redação",
+      "title": "Lendo a Coletânea: a Compreensão e o Texto Autoral II",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-redacao-incrementando-o-repertorio-meio-ambiente",
+      "subject": "Redação",
+      "title": "Incrementando o Repertório: Meio Ambiente",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-redacao-analisando-tema-de-redacao-meio-ambiente",
+      "subject": "Redação",
+      "title": "Analisando Tema de Redação: Meio Ambiente",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-redacao-incrementando-o-repertorio-educacao-e-trabalho",
+      "subject": "Redação",
+      "title": "Incrementando o Repertório: Educação e Trabalho",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-redacao-analisando-tema-de-redacao-educacao-e-trabalho",
+      "subject": "Redação",
+      "title": "Analisando Tema de Redação: Educação e Trabalho",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-redacao-incrementando-o-repertorio-temas-abstratos",
+      "subject": "Redação",
+      "title": "Incrementando o Repertório: Temas Abstratos",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-redacao-analisando-tema-abstrato-de-redacao",
+      "subject": "Redação",
+      "title": "Analisando Tema Abstrato de Redação",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-redacao-incrementando-o-repertorio-corpo-saude-e-sexualidade",
+      "subject": "Redação",
+      "title": "Incrementando o Repertório: Corpo, Saúde e Sexualidade",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-redacao-analisando-tema-de-redacao-corpo-saude-e-sexualidade",
+      "subject": "Redação",
+      "title": "Analisando Tema de Redação: Corpo, Saúde e Sexualidade",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-redacao-incrementando-o-repertorio-violencia-leis-e-punicao",
+      "subject": "Redação",
+      "title": "Incrementando o Repertório: Violência, Leis e Punição",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-redacao-analisando-tema-de-redacao-violencia-leis-e-punicao",
+      "subject": "Redação",
+      "title": "Analisando Tema de Redação: Violência, Leis e Punição",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-redacao-incrementando-o-repertorio-cidadania-e-poder",
+      "subject": "Redação",
+      "title": "Incrementando o Repertório: Cidadania e Poder",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-redacao-analisando-tema-de-redacao-cidadania-e-poder",
+      "subject": "Redação",
+      "title": "Analisando Tema de Redação: Cidadania e Poder",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-redacao-incrementando-o-repertorio-arte-cultura-e-relacoes-sociais",
+      "subject": "Redação",
+      "title": "Incrementando o Repertório: Arte, Cultura e Relações Sociais",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-redacao-analisando-o-tema-de-redacao-arte-cultura-e-relacoes-sociais",
+      "subject": "Redação",
+      "title": "Analisando o Tema de Redação: Arte, Cultura e Relações Sociais",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-redacao-incrementando-o-repertorio-midia-e-sociedade",
+      "subject": "Redação",
+      "title": "Incrementando o Repertório: Mídia e Sociedade",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-redacao-analisando-tema-de-redacao-midia-e-sociedade",
+      "subject": "Redação",
+      "title": "Analisando Tema de Redação: Mídia e Sociedade",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-redacao-paragrafo-de-introducao-delimitando-a-opiniao",
+      "subject": "Redação",
+      "title": "Parágrafo de Introdução: Delimitando a Opinião",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-redacao-paragrafo-de-introducao-como-contextualizar",
+      "subject": "Redação",
+      "title": "Parágrafo de Introdução: como Contextualizar",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-redacao-argumentacao-auditorio-particular-e-universal",
+      "subject": "Redação",
+      "title": "Argumentação: Auditório Particular e Universal",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-redacao-argumentacao-quase-logica-e-efeito-de-verdade",
+      "subject": "Redação",
+      "title": "Argumentação Quase-Lógica e Efeito de Verdade",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-redacao-argumentacao-e-coerencia-interna",
+      "subject": "Redação",
+      "title": "Argumentação e Coerência Interna",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-redacao-argumentacao-e-coerencia-externa",
+      "subject": "Redação",
+      "title": "Argumentação e Coerência Externa",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-redacao-recursos-argumentativos-dados-numericos-e-exemplos",
+      "subject": "Redação",
+      "title": "Recursos Argumentativos: Dados Numéricos e Exemplos",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-redacao-recursos-argumentativos-vozes-prestigiadas",
+      "subject": "Redação",
+      "title": "Recursos Argumentativos: Vozes Prestigiadas",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-redacao-ressalvando-o-ponto-de-vista-contrario",
+      "subject": "Redação",
+      "title": "Ressalvando o Ponto de Vista Contrário",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-redacao-refutando-o-ponto-contrario",
+      "subject": "Redação",
+      "title": "Refutando o Ponto Contrário",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-redacao-recursos-argumentativos-interdiscursividade-e-intertextualidade",
+      "subject": "Redação",
+      "title": "Recursos Argumentativos: Interdiscursividade e Intertextualidade",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-redacao-recursos-argumentativos-temas-de-redacao-ja-analisados",
+      "subject": "Redação",
+      "title": "Recursos Argumentativos: Temas de Redação já Analisados",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-redacao-recursos-argumentativos-fatos-da-atualidade",
+      "subject": "Redação",
+      "title": "Recursos Argumentativos: Fatos da Atualidade",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-redacao-recursos-argumentativos-multiplos-dominios-do-saber",
+      "subject": "Redação",
+      "title": "Recursos Argumentativos: Múltiplos Domínios do Saber",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-redacao-conclusao-por-sintese-ou-retomada-da-tese",
+      "subject": "Redação",
+      "title": "Conclusão por Síntese ou Retomada da Tese",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-redacao-conclusao-sumarizacao-focalizacao-e-expressividade",
+      "subject": "Redação",
+      "title": "Conclusão: Sumarização, Focalização e Expressividade",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-redacao-proposta-de-intervencao-atores-sociais-e-cidadania",
+      "subject": "Redação",
+      "title": "Proposta de Intervenção: Atores Sociais e Cidadania",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-redacao-proposta-de-intervencao-viabilizacao-e-inovacao",
+      "subject": "Redação",
+      "title": "Proposta de Intervenção: Viabilização e Inovação",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-redacao-proposta-de-intervencao-coerencia-argumentativa",
+      "subject": "Redação",
+      "title": "Proposta de Intervenção: Coerência Argumentativa",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-redacao-proposta-de-intervencao-respeito-aos-direitos-humanos",
+      "subject": "Redação",
+      "title": "Proposta de Intervenção: Respeito aos Direitos Humanos",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-redacao-recursos-de-coesao-referencial-no-texto-dissertativo",
+      "subject": "Redação",
+      "title": "Recursos de Coesão Referencial no Texto Dissertativo",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-redacao-recursos-de-coesao-sequencial-no-texto-dissertativo",
+      "subject": "Redação",
+      "title": "Recursos de Coesão Sequencial no Texto Dissertativo",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-redacao-coesao-no-texto-dissertativo-analise-de-problemas",
+      "subject": "Redação",
+      "title": "Coesão no Texto Dissertativo: Análise de Problemas",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-redacao-recursos-linguisticos-norma-clareza-e-expressividade",
+      "subject": "Redação",
+      "title": "Recursos Linguísticos: Norma, Clareza e Expressividade",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-redacao-os-direitos-humanos-de-1-geracao-direitos-individuais",
+      "subject": "Redação",
+      "title": "Os Direitos Humanos de 1ª Geração: Direitos Individuais",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-redacao-os-direitos-humanos-de-2-e-3-geracao-direitos-sociais-coletivos-e-difusos",
+      "subject": "Redação",
+      "title": "Os Direitos Humanos de 2ª e 3ª Geração: Direitos Sociais, Coletivos e Difusos",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-redacao-redacoes-nota-1000-trunfos-a-inspirar",
+      "subject": "Redação",
+      "title": "Redações Nota 1000: Trunfos a Inspirar",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-redacao-redacoes-na-midia-como-aprimorar",
+      "subject": "Redação",
+      "title": "Redações na Mídia: como Aprimorar",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-gramatica-lingua-um-sistema-complexo",
+      "subject": "Gramática",
+      "title": "Língua: um Sistema Complexo",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-gramatica-variacao-linguistica",
+      "subject": "Gramática",
+      "title": "Variação Linguística",
+      "primary": "experiment",
+      "artifact": "variation",
+      "ignored": []
+    },
+    {
+      "id": "summary-gramatica-substantivo-os-nomes-e-a-visao-do-enunciador",
+      "subject": "Gramática",
+      "title": "Substantivo: os Nomes e a Visão do Enunciador",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-gramatica-tipos-de-texto-explorando-elementos-concretos-e-conceitos-abstratos",
+      "subject": "Gramática",
+      "title": "Tipos de Texto: Explorando Elementos Concretos e Conceitos Abstratos",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-gramatica-artigo-numeral-e-adjetivo-no-sintagma-nominal",
+      "subject": "Gramática",
+      "title": "Artigo, Numeral e Adjetivo no Sintagma Nominal",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-gramatica-pronomes",
+      "subject": "Gramática",
+      "title": "Pronomes",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-gramatica-verbo",
+      "subject": "Gramática",
+      "title": "Verbo",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-gramatica-adverbio-e-locucoes-adverbiais-circunstanciadores",
+      "subject": "Gramática",
+      "title": "Advérbio e Locuções Adverbiais: Circunstanciadores",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-gramatica-verbo-e-sintaxe-da-oracao",
+      "subject": "Gramática",
+      "title": "Verbo e Sintaxe da Oração",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-gramatica-concordancia",
+      "subject": "Gramática",
+      "title": "Concordância",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-gramatica-significados-implicitos",
+      "subject": "Gramática",
+      "title": "Significados Implícitos",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-gramatica-tipos-de-discurso",
+      "subject": "Gramática",
+      "title": "Tipos de Discurso",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-gramatica-pontuacao-i-principios-para-o-uso-da-virgula",
+      "subject": "Gramática",
+      "title": "Pontuação I: Princípios para o Uso da Vírgula",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-gramatica-pontuacao-ii-virgula-entre-oracoes-e-outros-sinais-de-pontuacao",
+      "subject": "Gramática",
+      "title": "Pontuação II: Vírgula entre Orações e Outros Sinais de Pontuação",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-gramatica-o-lexico-em-contexto-variadas-possibilidades-semanticas",
+      "subject": "Gramática",
+      "title": "O Léxico em Contexto: Variadas Possibilidades Semânticas",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-gramatica-ambiguidade-duplicidade-no-lexico-e-na-sintaxe",
+      "subject": "Gramática",
+      "title": "Ambiguidade: Duplicidade no Léxico e na Sintaxe",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-gramatica-mecanismo-de-regencia",
+      "subject": "Gramática",
+      "title": "Mecanismo de Regência",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-gramatica-crase",
+      "subject": "Gramática",
+      "title": "Crase",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-gramatica-processos-de-formacao-de-palavras",
+      "subject": "Gramática",
+      "title": "Processos de Formação de Palavras",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-gramatica-funcoes-sintaticas-nominais-e-vocativo",
+      "subject": "Gramática",
+      "title": "Funções Sintáticas Nominais e Vocativo",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-gramatica-tipos-de-sujeito",
+      "subject": "Gramática",
+      "title": "Tipos de Sujeito",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-gramatica-vozes-verbais",
+      "subject": "Gramática",
+      "title": "Vozes Verbais",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-gramatica-oracoes-substantivas",
+      "subject": "Gramática",
+      "title": "Orações Substantivas",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-gramatica-oracoes-adjetivas",
+      "subject": "Gramática",
+      "title": "Orações Adjetivas",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-gramatica-oracoes-adverbiais",
+      "subject": "Gramática",
+      "title": "Orações Adverbiais",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-gramatica-oracoes-coordenadas",
+      "subject": "Gramática",
+      "title": "Orações Coordenadas",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-literatura-a-arte-e-suas-linguagens",
+      "subject": "Literatura",
+      "title": "A Arte e suas Linguagens",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-literatura-texto-literario-x-texto-nao-literario",
+      "subject": "Literatura",
+      "title": "Texto Literário x Texto não Literário",
+      "primary": "experiment",
+      "artifact": "literary",
+      "ignored": []
+    },
+    {
+      "id": "summary-literatura-trovadorismo-e-humanismo",
+      "subject": "Literatura",
+      "title": "Trovadorismo e Humanismo",
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": []
+    },
+    {
+      "id": "summary-literatura-renascimento-e-camoes",
+      "subject": "Literatura",
+      "title": "Renascimento e Camões",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-literatura-brasil-primeiros-registros",
+      "subject": "Literatura",
+      "title": "Brasil: Primeiros Registros",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-literatura-a-estetica-barroca",
+      "subject": "Literatura",
+      "title": "A Estética Barroca",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-literatura-a-estetica-neoclassica",
+      "subject": "Literatura",
+      "title": "A Estética Neoclássica",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-literatura-a-estetica-romantica-poesia",
+      "subject": "Literatura",
+      "title": "A Estética Romântica: Poesia",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-literatura-elementos-da-narrativa",
+      "subject": "Literatura",
+      "title": "Elementos da Narrativa",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-literatura-a-estetica-romantica-prosa",
+      "subject": "Literatura",
+      "title": "A Estética Romântica: Prosa",
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": []
+    },
+    {
+      "id": "summary-literatura-a-estetica-realista",
+      "subject": "Literatura",
+      "title": "A Estética Realista",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-literatura-machado-de-assis",
+      "subject": "Literatura",
+      "title": "Machado de Assis",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-literatura-naturalismo",
+      "subject": "Literatura",
+      "title": "Naturalismo",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-literatura-realismo-portugues-eca-de-queiros",
+      "subject": "Literatura",
+      "title": "Realismo Português: Eça de Queirós",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-literatura-parnasianismo",
+      "subject": "Literatura",
+      "title": "Parnasianismo",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-literatura-simbolismo",
+      "subject": "Literatura",
+      "title": "Simbolismo",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-literatura-pre-modernismo",
+      "subject": "Literatura",
+      "title": "Pré-Modernismo",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-literatura-vanguardas-artisticas",
+      "subject": "Literatura",
+      "title": "Vanguardas Artísticas",
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": []
+    },
+    {
+      "id": "summary-literatura-fernando-pessoa",
+      "subject": "Literatura",
+      "title": "Fernando Pessoa",
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": []
+    },
+    {
+      "id": "summary-literatura-semana-de-arte-moderna",
+      "subject": "Literatura",
+      "title": "Semana de Arte Moderna",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-literatura-modernismo-no-brasil-primeira-geracao",
+      "subject": "Literatura",
+      "title": "Modernismo no Brasil: Primeira Geração",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-literatura-segunda-geracao-modernista-prosa",
+      "subject": "Literatura",
+      "title": "Segunda Geração Modernista: Prosa",
+      "primary": "scene",
+      "artifact": "contraste-de-posicoes",
+      "ignored": []
+    },
+    {
+      "id": "summary-literatura-graciliano-ramos",
+      "subject": "Literatura",
+      "title": "Graciliano Ramos",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-literatura-segunda-geracao-modernista-poesia",
+      "subject": "Literatura",
+      "title": "Segunda Geração Modernista: Poesia",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-literatura-carlos-drummond-de-andrade",
+      "subject": "Literatura",
+      "title": "Carlos Drummond de Andrade",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-literatura-joao-cabral-de-melo-neto",
+      "subject": "Literatura",
+      "title": "João Cabral de Melo Neto",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-literatura-poesia-concreta",
+      "subject": "Literatura",
+      "title": "Poesia Concreta",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-literatura-clarice-lispector",
+      "subject": "Literatura",
+      "title": "Clarice Lispector",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-literatura-guimaraes-rosa",
+      "subject": "Literatura",
+      "title": "Guimarães Rosa",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-literatura-poesia-brasileira-1960-1980",
+      "subject": "Literatura",
+      "title": "Poesia Brasileira: 1960-1980",
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": []
+    },
+    {
+      "id": "summary-literatura-prosa-brasileira-1960-1980",
+      "subject": "Literatura",
+      "title": "Prosa Brasileira: 1960-1980",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-literatura-literatura-lusofona-contemporanea",
+      "subject": "Literatura",
+      "title": "Literatura Lusófona Contemporânea",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-literatura-poesia-brasileira-contemporanea",
+      "subject": "Literatura",
+      "title": "Poesia Brasileira Contemporânea",
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": []
+    },
+    {
+      "id": "summary-literatura-prosa-brasileira-contemporanea",
+      "subject": "Literatura",
+      "title": "Prosa Brasileira Contemporânea",
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": []
+    },
+    {
+      "id": "summary-literatura-artes-plasticas-brasileiras",
+      "subject": "Literatura",
+      "title": "Artes Plásticas Brasileiras",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-literatura-teatro-brasileiro",
+      "subject": "Literatura",
+      "title": "Teatro Brasileiro",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-literatura-cancioneiro-popular-brasileiro",
+      "subject": "Literatura",
+      "title": "Cancioneiro Popular Brasileiro",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-entendimento-de-texto-fatores-de-textualidade",
+      "subject": "Entendimento de Texto",
+      "title": "Fatores de Textualidade",
+      "primary": "experiment",
+      "artifact": "cohesion",
+      "ignored": []
+    },
+    {
+      "id": "summary-entendimento-de-texto-os-dois-niveis-da-leitura",
+      "subject": "Entendimento de Texto",
+      "title": "Os Dois Níveis da Leitura",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-entendimento-de-texto-intertextualidade-e-interdiscursividade",
+      "subject": "Entendimento de Texto",
+      "title": "Intertextualidade e Interdiscursividade",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-entendimento-de-texto-generos-textuais",
+      "subject": "Entendimento de Texto",
+      "title": "Gêneros Textuais",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-entendimento-de-texto-generos-narrativos-e-niveis-de-compreensao",
+      "subject": "Entendimento de Texto",
+      "title": "Gêneros Narrativos e Níveis de Compreensão",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-entendimento-de-texto-generos-nao-verbais-fundamentos-de-leitura",
+      "subject": "Entendimento de Texto",
+      "title": "Gêneros não Verbais: Fundamentos de Leitura",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-entendimento-de-texto-funcoes-da-linguagem",
+      "subject": "Entendimento de Texto",
+      "title": "Funções da Linguagem",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-entendimento-de-texto-funcao-poetica-e-linguagem-literaria",
+      "subject": "Entendimento de Texto",
+      "title": "Função Poética e Linguagem Literária",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-entendimento-de-texto-figuras-de-linguagem",
+      "subject": "Entendimento de Texto",
+      "title": "Figuras de Linguagem",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-entendimento-de-texto-modelos-de-leitura-e-distorcoes-interpretativas",
+      "subject": "Entendimento de Texto",
+      "title": "Modelos de Leitura e Distorções Interpretativas",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-entendimento-de-texto-leitura-de-textos-comicos",
+      "subject": "Entendimento de Texto",
+      "title": "Leitura de Textos Cômicos",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-entendimento-de-texto-tecnologias-digitais-da-informacao-e-comunicacao-tdic-impactos-sociais",
+      "subject": "Entendimento de Texto",
+      "title": "Tecnologias Digitais da Informação e Comunicação (TDIC): Impactos Sociais",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-potencias-e-radicais",
+      "subject": "Matemática",
+      "title": "Potências e Radicais",
+      "primary": "experiment",
+      "artifact": "powers",
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-razao-e-proporcao",
+      "subject": "Matemática",
+      "title": "Razão e Proporção",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-porcentagem",
+      "subject": "Matemática",
+      "title": "Porcentagem",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-o-sistema-de-numeracao-decimal",
+      "subject": "Matemática",
+      "title": "O Sistema de Numeração Decimal",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-introducao-a-teoria-dos-numeros-inteiros",
+      "subject": "Matemática",
+      "title": "Introdução à Teoria dos Números Inteiros",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-introducao-as-sequencias",
+      "subject": "Matemática",
+      "title": "Introdução às Sequências",
+      "primary": "board",
+      "artifact": "progressoes",
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-progressao-aritmetica",
+      "subject": "Matemática",
+      "title": "Progressão Aritmética",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-progressao-geometrica",
+      "subject": "Matemática",
+      "title": "Progressão Geométrica",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-sequencias",
+      "subject": "Matemática",
+      "title": "Sequências",
+      "primary": "board",
+      "artifact": "progressoes",
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-sistemas-de-equacoes",
+      "subject": "Matemática",
+      "title": "Sistemas de Equações",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-tabelas-e-matrizes",
+      "subject": "Matemática",
+      "title": "Tabelas e Matrizes",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-multiplicacao-de-matrizes",
+      "subject": "Matemática",
+      "title": "Multiplicação de Matrizes",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-determinantes",
+      "subject": "Matemática",
+      "title": "Determinantes",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-discussao-de-sistemas-lineares",
+      "subject": "Matemática",
+      "title": "Discussão de Sistemas Lineares",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-medias",
+      "subject": "Matemática",
+      "title": "Médias",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-introducao-as-tecnicas-de-contagem",
+      "subject": "Matemática",
+      "title": "Introdução às Técnicas de Contagem",
+      "primary": "board",
+      "artifact": "contagem",
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-o-problema-da-fila",
+      "subject": "Matemática",
+      "title": "O Problema da Fila",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-o-problema-do-grupo",
+      "subject": "Matemática",
+      "title": "O Problema do Grupo",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-tecnicas-de-contagem",
+      "subject": "Matemática",
+      "title": "Técnicas de Contagem",
+      "primary": "board",
+      "artifact": "contagem",
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-operacoes-com-probabilidades",
+      "subject": "Matemática",
+      "title": "Operações com Probabilidades",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-eventos-disjuntos-e-eventos-independentes",
+      "subject": "Matemática",
+      "title": "Eventos Disjuntos e Eventos Independentes",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-estatistica-descritiva",
+      "subject": "Matemática",
+      "title": "Estatística Descritiva",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-introducao-a-geometria-plana",
+      "subject": "Matemática",
+      "title": "Introdução à Geometria Plana",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-angulos-em-triangulos",
+      "subject": "Matemática",
+      "title": "Ângulos em Triângulos",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-angulos-em-poligonos",
+      "subject": "Matemática",
+      "title": "Ângulos em Polígonos",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-angulos-e-circunferencias",
+      "subject": "Matemática",
+      "title": "Ângulos e Circunferências",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-simetrias-e-congruencias",
+      "subject": "Matemática",
+      "title": "Simetrias e Congruências",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-identificacao-de-simetrias-i",
+      "subject": "Matemática",
+      "title": "Identificação de Simetrias I",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-identificacao-de-simetrias-ii",
+      "subject": "Matemática",
+      "title": "Identificação de Simetrias II",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-a-geometria-da-proporcionalidade",
+      "subject": "Matemática",
+      "title": "A Geometria da Proporcionalidade",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-semelhanca-de-triangulos",
+      "subject": "Matemática",
+      "title": "Semelhança de Triângulos",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-o-ponto-medio-e-o-baricentro-de-um-triangulo",
+      "subject": "Matemática",
+      "title": "O Ponto Médio e o Baricentro de um Triângulo",
+      "primary": "instrument",
+      "artifact": "ponto-medio",
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-triangulo-retangulo",
+      "subject": "Matemática",
+      "title": "Triângulo Retângulo",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-a-geometria-metrica-plana",
+      "subject": "Matemática",
+      "title": "A Geometria Métrica Plana",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-areas-de-poligonos",
+      "subject": "Matemática",
+      "title": "Áreas de Polígonos",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-area-do-circulo-e-de-suas-partes",
+      "subject": "Matemática",
+      "title": "Área do Círculo e de suas Partes",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-razoes-entre-areas-de-figuras-planas",
+      "subject": "Matemática",
+      "title": "Razões entre Áreas de Figuras Planas",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-areas-de-figuras-planas",
+      "subject": "Matemática",
+      "title": "Áreas de Figuras Planas",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-trigonometria-no-triangulo-retangulo",
+      "subject": "Matemática",
+      "title": "Trigonometria no Triângulo Retângulo",
+      "primary": "board",
+      "artifact": "trigonometria",
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-relacoes-trigonometricas-em-poligonos",
+      "subject": "Matemática",
+      "title": "Relações Trigonométricas em Polígonos",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-a-trigonometria-dos-numeros-reais",
+      "subject": "Matemática",
+      "title": "A Trigonometria dos Números Reais",
+      "primary": "board",
+      "artifact": "trigonometria",
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-outras-razoes-trigonometricas",
+      "subject": "Matemática",
+      "title": "Outras Razões Trigonométricas",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-a-relacao-fundamental-da-trigonometria",
+      "subject": "Matemática",
+      "title": "A Relação Fundamental da Trigonometria",
+      "primary": "board",
+      "artifact": "trigonometria",
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-transformacoes-trigonometricas",
+      "subject": "Matemática",
+      "title": "Transformações Trigonométricas",
+      "primary": "instrument",
+      "artifact": "transformacoes-trigonometricas",
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-funcoes-trigonometricas",
+      "subject": "Matemática",
+      "title": "Funções Trigonométricas",
+      "primary": "instrument",
+      "artifact": "funcoes-trigonometricas",
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-o-universo-tridimensional",
+      "subject": "Matemática",
+      "title": "O Universo Tridimensional",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-cubos-e-paralelepipedos",
+      "subject": "Matemática",
+      "title": "Cubos e Paralelepípedos",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-prismas",
+      "subject": "Matemática",
+      "title": "Prismas",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-piramides",
+      "subject": "Matemática",
+      "title": "Pirâmides",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-solidos-de-revolucao",
+      "subject": "Matemática",
+      "title": "Sólidos de Revolução",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-razoes-entre-volumes-de-solidos",
+      "subject": "Matemática",
+      "title": "Razões entre Volumes de Sólidos",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-introducao-a-geometria-analitica",
+      "subject": "Matemática",
+      "title": "Introdução à Geometria Analítica",
+      "primary": "instrument",
+      "artifact": "geometria-analitica",
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-lugar-geometrico-e-equacao-da-circunferencia",
+      "subject": "Matemática",
+      "title": "Lugar Geométrico e Equação da Circunferência",
+      "primary": "instrument",
+      "artifact": "circunferencia",
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-estudo-analitico-da-reta",
+      "subject": "Matemática",
+      "title": "Estudo Analítico da Reta",
+      "primary": "instrument",
+      "artifact": "reta-analitica",
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-posicoes-relativas-entre-duas-retas",
+      "subject": "Matemática",
+      "title": "Posições Relativas entre Duas Retas",
+      "primary": "instrument",
+      "artifact": "duas-retas",
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-distancia-entre-um-ponto-e-uma-reta",
+      "subject": "Matemática",
+      "title": "Distância entre um Ponto e uma Reta",
+      "primary": "instrument",
+      "artifact": "distancia-ponto-reta",
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-posicoes-relativas-entre-uma-reta-e-uma-circunferencia",
+      "subject": "Matemática",
+      "title": "Posições Relativas entre uma Reta e uma Circunferência",
+      "primary": "instrument",
+      "artifact": "reta-e-circunferencia",
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-introducao-ao-estudo-analitico-das-conicas",
+      "subject": "Matemática",
+      "title": "Introdução ao Estudo Analítico das Cônicas",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-representacao-geometrica-de-inequacoes",
+      "subject": "Matemática",
+      "title": "Representação Geométrica de Inequações",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-a-geometria-dos-numeros-complexos",
+      "subject": "Matemática",
+      "title": "A Geometria dos Números Complexos",
+      "primary": "instrument",
+      "artifact": "complexos",
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-tecnicas-algebricas",
+      "subject": "Matemática",
+      "title": "Técnicas Algébricas",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-igualdades",
+      "subject": "Matemática",
+      "title": "Igualdades",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-desigualdades",
+      "subject": "Matemática",
+      "title": "Desigualdades",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-modelagem-algebrica-de-problemas-i",
+      "subject": "Matemática",
+      "title": "Modelagem Algébrica de Problemas I",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-equacoes-do-2-grau",
+      "subject": "Matemática",
+      "title": "Equações do 2º Grau",
+      "primary": "board",
+      "artifact": "segundo-grau",
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-modelagem-algebrica-de-problemas-ii",
+      "subject": "Matemática",
+      "title": "Modelagem Algébrica de Problemas II",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-introducao-as-funcoes",
+      "subject": "Matemática",
+      "title": "Introdução às Funções",
+      "primary": "instrument",
+      "artifact": "funcoes-introducao",
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-transformacoes-em-graficos-de-funcoes",
+      "subject": "Matemática",
+      "title": "Transformações em Gráficos de Funções",
+      "primary": "instrument",
+      "artifact": "transformacoes-graficos",
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-composicao-de-funcoes",
+      "subject": "Matemática",
+      "title": "Composição de Funções",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-inversao-de-funcoes",
+      "subject": "Matemática",
+      "title": "Inversão de Funções",
+      "primary": "instrument",
+      "artifact": "inversao-funcoes",
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-funcoes-bijetoras",
+      "subject": "Matemática",
+      "title": "Funções Bijetoras",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-funcao-constante-e-funcao-afim",
+      "subject": "Matemática",
+      "title": "Função Constante e Função Afim",
+      "primary": "instrument",
+      "artifact": "funcao-afim",
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-funcao-quadratica",
+      "subject": "Matemática",
+      "title": "Função Quadrática",
+      "primary": "instrument",
+      "artifact": "funcao-quadratica",
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-estudo-do-sinal-de-funcoes",
+      "subject": "Matemática",
+      "title": "Estudo do Sinal de Funções",
+      "primary": "instrument",
+      "artifact": "estudo-do-sinal",
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-introducao-ao-modelo-exponencial",
+      "subject": "Matemática",
+      "title": "Introdução ao Modelo Exponencial",
+      "primary": "board",
+      "artifact": "exponencial",
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-introducao-aos-logaritmos",
+      "subject": "Matemática",
+      "title": "Introdução aos Logaritmos",
+      "primary": "board",
+      "artifact": "logaritmos",
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-equacoes-e-funcoes-logaritmicas",
+      "subject": "Matemática",
+      "title": "Equações e Funções Logarítmicas",
+      "primary": "instrument",
+      "artifact": "funcoes-logaritmicas",
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-modelagem-exponencial-de-problemas",
+      "subject": "Matemática",
+      "title": "Modelagem Exponencial de Problemas",
+      "primary": "instrument",
+      "artifact": "modelagem-exponencial",
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-modulo-de-um-numero-real",
+      "subject": "Matemática",
+      "title": "Módulo de um Número Real",
+      "primary": "instrument",
+      "artifact": "modulo-real",
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-numeros-complexos",
+      "subject": "Matemática",
+      "title": "Números Complexos",
+      "primary": "instrument",
+      "artifact": "complexos",
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-polinomios",
+      "subject": "Matemática",
+      "title": "Polinômios",
+      "primary": "instrument",
+      "artifact": "polinomios",
+      "ignored": []
+    },
+    {
+      "id": "summary-matematica-equacoes-polinomiais",
+      "subject": "Matemática",
+      "title": "Equações Polinomiais",
+      "primary": "instrument",
+      "artifact": "equacoes-polinomiais",
+      "ignored": []
+    },
+    {
+      "id": "summary-quimica-evolucao-dos-modelos-atomicos",
+      "subject": "Química",
+      "title": "Evolução dos Modelos Atômicos",
+      "primary": "board",
+      "artifact": "modelos-atomicos",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "cadeia-de-derivacao"
+        }
+      ]
+    },
+    {
+      "id": "summary-quimica-organizacao-da-tabela-periodica-dos-elementos",
+      "subject": "Química",
+      "title": "Organização da Tabela Periódica dos Elementos",
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": []
+    },
+    {
+      "id": "summary-quimica-radioatividade-o-estudo-das-radiacoes",
+      "subject": "Química",
+      "title": "Radioatividade: o Estudo das Radiações",
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": []
+    },
+    {
+      "id": "summary-quimica-ligacoes-quimicas-e-alotropia",
+      "subject": "Química",
+      "title": "Ligações Químicas e Alotropia",
+      "primary": "board",
+      "artifact": "ligacoes",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "tipologia"
+        }
+      ]
+    },
+    {
+      "id": "summary-quimica-geometria-molecular",
+      "subject": "Química",
+      "title": "Geometria Molecular",
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": []
+    },
+    {
+      "id": "summary-quimica-polaridade-das-ligacoes-e-das-moleculas",
+      "subject": "Química",
+      "title": "Polaridade das Ligações e das Moléculas",
+      "primary": "scene",
+      "artifact": "criterios-conjuntivos",
+      "ignored": []
+    },
+    {
+      "id": "summary-quimica-interacoes-intermoleculares",
+      "subject": "Química",
+      "title": "Interações Intermoleculares",
+      "primary": "scene",
+      "artifact": "escala-de-graus",
+      "ignored": []
+    },
+    {
+      "id": "summary-quimica-composicao-da-materia-estados-fisicos",
+      "subject": "Química",
+      "title": "Composição da Matéria: Estados Físicos",
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": []
+    },
+    {
+      "id": "summary-quimica-o-estado-gasoso",
+      "subject": "Química",
+      "title": "O Estado Gasoso",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-quimica-estudo-dos-gases-ii",
+      "subject": "Química",
+      "title": "Estudo dos Gases II",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-quimica-separacao-de-misturas",
+      "subject": "Química",
+      "title": "Separação de Misturas",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-quimica-transformacoes-fisicas-e-quimicas-e-balanceamento-de-equacoes",
+      "subject": "Química",
+      "title": "Transformações Físicas e Químicas e Balanceamento de Equações",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-quimica-massa-atomica-mol-e-massa-molar",
+      "subject": "Química",
+      "title": "Massa Atômica, Mol e Massa Molar",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-quimica-determinacao-de-formulas-quimicas",
+      "subject": "Química",
+      "title": "Determinação de Fórmulas Químicas",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-quimica-estequiometria-leis-ponderais",
+      "subject": "Química",
+      "title": "Estequiometria: Leis Ponderais",
+      "primary": "board",
+      "artifact": "leis-ponderais",
+      "ignored": []
+    },
+    {
+      "id": "summary-quimica-calculos-estequiometricos",
+      "subject": "Química",
+      "title": "Cálculos Estequiométricos",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-quimica-quimica-inorganica",
+      "subject": "Química",
+      "title": "Química Inorgânica",
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": []
+    },
+    {
+      "id": "summary-quimica-equacoes-ionicas-e-outras-teorias-para-acidos-e-bases",
+      "subject": "Química",
+      "title": "Equações Iônicas e outras Teorias para Ácidos e Bases",
+      "primary": "board",
+      "artifact": "acido-base",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "cadeia-de-derivacao"
+        }
+      ]
+    },
+    {
+      "id": "summary-quimica-processos-de-oxirreducao",
+      "subject": "Química",
+      "title": "Processos de Oxirredução",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-quimica-quimica-ambiental",
+      "subject": "Química",
+      "title": "Química Ambiental",
+      "primary": "scene",
+      "artifact": "cadeia-de-derivacao",
+      "ignored": []
+    },
+    {
+      "id": "summary-quimica-introducao-a-quimica-organica",
+      "subject": "Química",
+      "title": "Introdução à Química Orgânica",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-quimica-nomenclatura-de-compostos-organicos",
+      "subject": "Química",
+      "title": "Nomenclatura de Compostos Orgânicos",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-quimica-nomenclatura-de-compostos-organicos-oxigenados-e-nitrogenados",
+      "subject": "Química",
+      "title": "Nomenclatura de Compostos Orgânicos Oxigenados e Nitrogenados",
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": []
+    },
+    {
+      "id": "summary-quimica-reconhecimento-de-funcoes-organicas-e-algumas-de-suas-propriedades",
+      "subject": "Química",
+      "title": "Reconhecimento de Funções Orgânicas e Algumas de suas Propriedades",
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": []
+    },
+    {
+      "id": "summary-quimica-isomeria",
+      "subject": "Química",
+      "title": "Isomeria",
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": []
+    },
+    {
+      "id": "summary-quimica-combustiveis-fosseis",
+      "subject": "Química",
+      "title": "Combustíveis Fósseis",
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": []
+    },
+    {
+      "id": "summary-quimica-interpretando-reacoes-organicas",
+      "subject": "Química",
+      "title": "Interpretando Reações Orgânicas",
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": []
+    },
+    {
+      "id": "summary-quimica-reacoes-de-substituicao",
+      "subject": "Química",
+      "title": "Reações de Substituição",
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": []
+    },
+    {
+      "id": "summary-quimica-reacoes-de-adicao",
+      "subject": "Química",
+      "title": "Reações de Adição",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-quimica-reacoes-de-oxidacao-em-hidrocarbonetos",
+      "subject": "Química",
+      "title": "Reações de Oxidação em Hidrocarbonetos",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-quimica-alcoois",
+      "subject": "Química",
+      "title": "Álcoois",
+      "primary": "scene",
+      "artifact": "escala-de-graus",
+      "ignored": []
+    },
+    {
+      "id": "summary-quimica-acidos-graxos-e-esterificacao",
+      "subject": "Química",
+      "title": "Ácidos Graxos e Esterificação",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-quimica-transesterificacao-alcoolise",
+      "subject": "Química",
+      "title": "Transesterificação (Alcoólise)",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-quimica-acidez-e-basicidade-pka",
+      "subject": "Química",
+      "title": "Acidez e Basicidade (pKa)",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-quimica-polimeros",
+      "subject": "Química",
+      "title": "Polímeros",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-quimica-dispersoes",
+      "subject": "Química",
+      "title": "Dispersões",
+      "primary": "board",
+      "artifact": "dispersoes",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "tipologia"
+        }
+      ]
+    },
+    {
+      "id": "summary-quimica-efeitos-coligativos",
+      "subject": "Química",
+      "title": "Efeitos Coligativos",
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": []
+    },
+    {
+      "id": "summary-quimica-termoquimica-i",
+      "subject": "Química",
+      "title": "Termoquímica I",
+      "primary": "board",
+      "artifact": "termoquimica",
+      "ignored": []
+    },
+    {
+      "id": "summary-quimica-termoquimica-ii",
+      "subject": "Química",
+      "title": "Termoquímica II",
+      "primary": "board",
+      "artifact": "termoquimica",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "grade-de-eixos"
+        }
+      ]
+    },
+    {
+      "id": "summary-quimica-cinetica-quimica",
+      "subject": "Química",
+      "title": "Cinética Química",
+      "primary": "scene",
+      "artifact": "escala-de-graus",
+      "ignored": []
+    },
+    {
+      "id": "summary-quimica-introducao-ao-estudo-das-pilhas-e-baterias",
+      "subject": "Química",
+      "title": "Introdução ao Estudo das Pilhas e Baterias",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-quimica-eletroquimica-de-processos-espontaneos",
+      "subject": "Química",
+      "title": "Eletroquímica de Processos Espontâneos",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-quimica-eletroquimica-de-processos-nao-espontaneos",
+      "subject": "Química",
+      "title": "Eletroquímica de Processos não Espontâneos",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-quimica-aspectos-quantitativos-da-eletroquimica-e-metalurgia",
+      "subject": "Química",
+      "title": "Aspectos Quantitativos da Eletroquímica e Metalurgia",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-quimica-deslocamento-de-equilibrio",
+      "subject": "Química",
+      "title": "Deslocamento de Equilíbrio",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-quimica-equilibrios-ionicos",
+      "subject": "Química",
+      "title": "Equilíbrios Iônicos",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "summary-quimica-equilibrios-ionicos-ii",
+      "subject": "Química",
+      "title": "Equilíbrios Iônicos II",
+      "primary": "scene",
+      "artifact": "grade-de-eixos",
+      "ignored": []
+    },
+    {
+      "id": "qui-equilibrio-acidificacao",
+      "subject": "Química",
+      "title": "Equilíbrio químico, acidez e intemperismo",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "mat-probabilidade-contagem",
+      "subject": "Matemática",
+      "title": "Contagem sistemática e probabilidade",
+      "primary": "board",
+      "artifact": "contagem",
+      "ignored": []
+    },
+    {
+      "id": "geo-bonus-demografico",
+      "subject": "Geografia",
+      "title": "Transição e bônus demográfico",
+      "primary": "scene",
+      "artifact": "escala-de-graus",
+      "ignored": []
+    },
+    {
+      "id": "summary-filosofia-o-nascimento-da-filosofia-do-mito-ao-logos",
+      "subject": "Filosofia",
+      "title": "O Nascimento da Filosofia: do Mito ao Logos",
+      "primary": "experiment",
+      "artifact": "myth",
+      "ignored": []
+    },
+    {
+      "id": "summary-filosofia-os-filosofos-da-physis-tales-anaximandro-e-anaximenes",
+      "subject": "Filosofia",
+      "title": "Os Filósofos da Physis: Tales, Anaximandro e Anaxímenes",
+      "primary": "scene",
+      "artifact": "contraste-de-posicoes",
+      "ignored": []
+    },
+    {
+      "id": "summary-filosofia-heraclito-e-parmenides-o-ser-e-o-devir",
+      "subject": "Filosofia",
+      "title": "Heráclito e Parmênides: o Ser e o Devir",
+      "primary": "scene",
+      "artifact": "contraste-de-posicoes",
+      "ignored": []
+    },
+    {
+      "id": "summary-filosofia-os-sofistas-e-a-crise-da-verdade",
+      "subject": "Filosofia",
+      "title": "Os Sofistas e a Crise da Verdade",
+      "primary": "scene",
+      "artifact": "contraste-de-posicoes",
+      "ignored": []
+    },
+    {
+      "id": "summary-filosofia-o-metodo-socratico-e-a-maieutica",
+      "subject": "Filosofia",
+      "title": "O Método Socrático e a Maiêutica",
+      "primary": "scene",
+      "artifact": "movimento-dialetico",
+      "ignored": []
+    },
+    {
+      "id": "summary-filosofia-a-teoria-das-ideias-de-platao",
+      "subject": "Filosofia",
+      "title": "A Teoria das Ideias de Platão",
+      "primary": "scene",
+      "artifact": "contraste-de-posicoes",
+      "ignored": []
+    },
+    {
+      "id": "summary-filosofia-o-mito-da-caverna",
+      "subject": "Filosofia",
+      "title": "O Mito da Caverna",
+      "primary": "scene",
+      "artifact": "escala-de-graus",
+      "ignored": []
+    },
+    {
+      "id": "summary-filosofia-a-alegoria-da-linha-dividida-e-o-conhecimento",
+      "subject": "Filosofia",
+      "title": "A Alegoria da Linha Dividida e o Conhecimento",
+      "primary": "scene",
+      "artifact": "escala-de-graus",
+      "ignored": []
+    },
+    {
+      "id": "summary-filosofia-logica-e-metafisica-aristotelicas",
+      "subject": "Filosofia",
+      "title": "Lógica e Metafísica Aristotélicas",
+      "primary": "scene",
+      "artifact": "cadeia-de-derivacao",
+      "ignored": []
+    },
+    {
+      "id": "summary-filosofia-a-etica-a-nicomaco-e-a-doutrina-do-meio-termo",
+      "subject": "Filosofia",
+      "title": "A Ética a Nicômaco e a Doutrina do Meio-Termo",
+      "primary": "scene",
+      "artifact": "escala-de-graus",
+      "ignored": []
+    },
+    {
+      "id": "summary-filosofia-politica-aristotelica-o-homem-como-animal-politico",
+      "subject": "Filosofia",
+      "title": "Política Aristotélica: o Homem como Animal Político",
+      "primary": "scene",
+      "artifact": "contraste-de-posicoes",
+      "ignored": []
+    },
+    {
+      "id": "summary-filosofia-patristica-e-santo-agostinho",
+      "subject": "Filosofia",
+      "title": "Patrística e Santo Agostinho",
+      "primary": "scene",
+      "artifact": "contraste-de-posicoes",
+      "ignored": []
+    },
+    {
+      "id": "summary-filosofia-escolastica-e-santo-tomas-de-aquino",
+      "subject": "Filosofia",
+      "title": "Escolástica e Santo Tomás de Aquino",
+      "primary": "scene",
+      "artifact": "cadeia-de-derivacao",
+      "ignored": []
+    },
+    {
+      "id": "summary-filosofia-a-relacao-entre-fe-e-razao",
+      "subject": "Filosofia",
+      "title": "A Relação entre Fé e Razão",
+      "primary": "scene",
+      "artifact": "contraste-de-posicoes",
+      "ignored": []
+    },
+    {
+      "id": "summary-filosofia-descartes-e-o-metodo-a-duvida-hiperbolica",
+      "subject": "Filosofia",
+      "title": "Descartes e o Método: a Dúvida Hiperbólica",
+      "primary": "scene",
+      "artifact": "escala-de-graus",
+      "ignored": []
+    },
+    {
+      "id": "summary-filosofia-racionalismo-continental-espinosa-e-leibniz",
+      "subject": "Filosofia",
+      "title": "Racionalismo Continental: Espinosa e Leibniz",
+      "primary": "scene",
+      "artifact": "contraste-de-posicoes",
+      "ignored": []
+    },
+    {
+      "id": "summary-filosofia-empirismo-britanico-locke-berkeley-e-hume",
+      "subject": "Filosofia",
+      "title": "Empirismo Britânico: Locke, Berkeley e Hume",
+      "primary": "scene",
+      "artifact": "contraste-de-posicoes",
+      "ignored": []
+    },
+    {
+      "id": "summary-filosofia-a-critica-de-hume-a-causalidade",
+      "subject": "Filosofia",
+      "title": "A Crítica de Hume à Causalidade",
+      "primary": "scene",
+      "artifact": "cadeia-de-derivacao",
+      "ignored": []
+    },
+    {
+      "id": "summary-filosofia-hobbes-e-o-estado-de-natureza",
+      "subject": "Filosofia",
+      "title": "Hobbes e o Estado de Natureza",
+      "primary": "scene",
+      "artifact": "cadeia-de-derivacao",
+      "ignored": []
+    },
+    {
+      "id": "summary-filosofia-locke-e-os-direitos-naturais",
+      "subject": "Filosofia",
+      "title": "Locke e os Direitos Naturais",
+      "primary": "scene",
+      "artifact": "cadeia-de-derivacao",
+      "ignored": []
+    },
+    {
+      "id": "summary-filosofia-rousseau-e-a-vontade-geral",
+      "subject": "Filosofia",
+      "title": "Rousseau e a Vontade Geral",
+      "primary": "scene",
+      "artifact": "cadeia-de-derivacao",
+      "ignored": []
+    },
+    {
+      "id": "summary-filosofia-o-ideal-iluminista-de-razao-e-progresso",
+      "subject": "Filosofia",
+      "title": "O Ideal Iluminista de Razão e Progresso",
+      "primary": "scene",
+      "artifact": "contraste-de-posicoes",
+      "ignored": []
+    },
+    {
+      "id": "summary-filosofia-a-critica-da-razao-pura",
+      "subject": "Filosofia",
+      "title": "A Crítica da Razão Pura",
+      "primary": "scene",
+      "artifact": "contraste-de-posicoes",
+      "ignored": []
+    },
+    {
+      "id": "summary-filosofia-a-etica-kantiana-e-o-imperativo-categorico",
+      "subject": "Filosofia",
+      "title": "A Ética Kantiana e o Imperativo Categórico",
+      "primary": "scene",
+      "artifact": "cadeia-de-derivacao",
+      "ignored": []
+    },
+    {
+      "id": "summary-filosofia-hegel-e-a-dialetica",
+      "subject": "Filosofia",
+      "title": "Hegel e a Dialética",
+      "primary": "scene",
+      "artifact": "movimento-dialetico",
+      "ignored": []
+    },
+    {
+      "id": "summary-filosofia-o-materialismo-historico",
+      "subject": "Filosofia",
+      "title": "O Materialismo Histórico",
+      "primary": "scene",
+      "artifact": "camadas-de-determinacao",
+      "ignored": []
+    },
+    {
+      "id": "summary-filosofia-alienacao-e-mais-valia",
+      "subject": "Filosofia",
+      "title": "Alienação e Mais-Valia",
+      "primary": "scene",
+      "artifact": "contraste-de-posicoes",
+      "ignored": []
+    },
+    {
+      "id": "summary-filosofia-a-luta-de-classes-na-filosofia-marxista",
+      "subject": "Filosofia",
+      "title": "A Luta de Classes na Filosofia Marxista",
+      "primary": "scene",
+      "artifact": "camadas-de-determinacao",
+      "ignored": []
+    },
+    {
+      "id": "summary-filosofia-nietzsche-e-a-critica-aos-valores-morais",
+      "subject": "Filosofia",
+      "title": "Nietzsche e a Crítica aos Valores Morais",
+      "primary": "scene",
+      "artifact": "movimento-dialetico",
+      "ignored": []
+    },
+    {
+      "id": "summary-filosofia-o-existencialismo-de-sartre",
+      "subject": "Filosofia",
+      "title": "O Existencialismo de Sartre",
+      "primary": "scene",
+      "artifact": "cadeia-de-derivacao",
+      "ignored": []
+    },
+    {
+      "id": "summary-filosofia-a-escola-de-frankfurt-e-a-industria-cultural",
+      "subject": "Filosofia",
+      "title": "A Escola de Frankfurt e a Indústria Cultural",
+      "primary": "scene",
+      "artifact": "camadas-de-determinacao",
+      "ignored": []
+    },
+    {
+      "id": "summary-filosofia-foucault-e-as-relacoes-de-poder",
+      "subject": "Filosofia",
+      "title": "Foucault e as Relações de Poder",
+      "primary": "scene",
+      "artifact": "contraste-de-posicoes",
+      "ignored": []
+    },
+    {
+      "id": "summary-filosofia-justica-e-direitos-humanos",
+      "subject": "Filosofia",
+      "title": "Justiça e Direitos Humanos",
+      "primary": "scene",
+      "artifact": "contraste-de-posicoes",
+      "ignored": []
+    },
+    {
+      "id": "summary-filosofia-etica-aplicada-e-bioetica",
+      "subject": "Filosofia",
+      "title": "Ética Aplicada e Bioética",
+      "primary": "scene",
+      "artifact": "contraste-de-posicoes",
+      "ignored": []
+    },
+    {
+      "id": "summary-filosofia-filosofia-politica-contemporanea",
+      "subject": "Filosofia",
+      "title": "Filosofia Política Contemporânea",
+      "primary": "scene",
+      "artifact": "contraste-de-posicoes",
+      "ignored": []
+    },
+    {
+      "id": "summary-sociologia-o-contexto-historico-do-surgimento-da-sociologia",
+      "subject": "Sociologia",
+      "title": "O Contexto Histórico do Surgimento da Sociologia",
+      "primary": "scene",
+      "artifact": "contraste-de-posicoes",
+      "ignored": []
+    },
+    {
+      "id": "summary-sociologia-o-que-e-o-fato-social",
+      "subject": "Sociologia",
+      "title": "O que é o Fato Social",
+      "primary": "scene",
+      "artifact": "criterios-conjuntivos",
+      "ignored": []
+    },
+    {
+      "id": "summary-sociologia-sociologia-e-senso-comum",
+      "subject": "Sociologia",
+      "title": "Sociologia e Senso Comum",
+      "primary": "scene",
+      "artifact": "contraste-de-posicoes",
+      "ignored": []
+    },
+    {
+      "id": "summary-sociologia-solidariedade-mecanica-e-solidariedade-organica",
+      "subject": "Sociologia",
+      "title": "Solidariedade Mecânica e Solidariedade Orgânica",
+      "primary": "experiment",
+      "artifact": "solidarity",
+      "ignored": []
+    },
+    {
+      "id": "summary-sociologia-anomia-e-coesao-social",
+      "subject": "Sociologia",
+      "title": "Anomia e Coesão Social",
+      "primary": "scene",
+      "artifact": "grade-de-eixos",
+      "ignored": []
+    },
+    {
+      "id": "summary-sociologia-educacao-e-socializacao-em-durkheim",
+      "subject": "Sociologia",
+      "title": "Educação e Socialização em Durkheim",
+      "primary": "scene",
+      "artifact": "cadeia-de-derivacao",
+      "ignored": []
+    },
+    {
+      "id": "summary-sociologia-modo-de-producao-e-estrutura-social",
+      "subject": "Sociologia",
+      "title": "Modo de Produção e Estrutura Social",
+      "primary": "scene",
+      "artifact": "camadas-de-determinacao",
+      "ignored": []
+    },
+    {
+      "id": "summary-sociologia-ideologia-e-alienacao",
+      "subject": "Sociologia",
+      "title": "Ideologia e Alienação",
+      "primary": "scene",
+      "artifact": "camadas-de-determinacao",
+      "ignored": []
+    },
+    {
+      "id": "summary-sociologia-a-luta-de-classes-na-analise-sociologica",
+      "subject": "Sociologia",
+      "title": "A Luta de Classes na Análise Sociológica",
+      "primary": "scene",
+      "artifact": "contraste-de-posicoes",
+      "ignored": []
+    },
+    {
+      "id": "summary-sociologia-tipos-de-acao-social",
+      "subject": "Sociologia",
+      "title": "Tipos de Ação Social",
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": []
+    },
+    {
+      "id": "summary-sociologia-dominacao-e-poder-em-weber",
+      "subject": "Sociologia",
+      "title": "Dominação e Poder em Weber",
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": []
+    },
+    {
+      "id": "summary-sociologia-etica-protestante-e-o-espirito-do-capitalismo",
+      "subject": "Sociologia",
+      "title": "Ética Protestante e o Espírito do Capitalismo",
+      "primary": "scene",
+      "artifact": "cadeia-de-derivacao",
+      "ignored": []
+    },
+    {
+      "id": "summary-sociologia-cultura-e-etnocentrismo",
+      "subject": "Sociologia",
+      "title": "Cultura e Etnocentrismo",
+      "primary": "scene",
+      "artifact": "contraste-de-posicoes",
+      "ignored": []
+    },
+    {
+      "id": "summary-sociologia-identidade-e-diferenca",
+      "subject": "Sociologia",
+      "title": "Identidade e Diferença",
+      "primary": "scene",
+      "artifact": "criterios-conjuntivos",
+      "ignored": []
+    },
+    {
+      "id": "summary-sociologia-multiculturalismo-e-relativismo-cultural",
+      "subject": "Sociologia",
+      "title": "Multiculturalismo e Relativismo Cultural",
+      "primary": "scene",
+      "artifact": "contraste-de-posicoes",
+      "ignored": []
+    },
+    {
+      "id": "summary-sociologia-classes-sociais-e-mobilidade-social",
+      "subject": "Sociologia",
+      "title": "Classes Sociais e Mobilidade Social",
+      "primary": "scene",
+      "artifact": "grade-de-eixos",
+      "ignored": []
+    },
+    {
+      "id": "summary-sociologia-desigualdade-racial-no-brasil",
+      "subject": "Sociologia",
+      "title": "Desigualdade Racial no Brasil",
+      "primary": "scene",
+      "artifact": "contraste-de-posicoes",
+      "ignored": []
+    },
+    {
+      "id": "summary-sociologia-desigualdade-de-genero",
+      "subject": "Sociologia",
+      "title": "Desigualdade de Gênero",
+      "primary": "scene",
+      "artifact": "cadeia-de-derivacao",
+      "ignored": []
+    },
+    {
+      "id": "summary-sociologia-divisao-social-do-trabalho",
+      "subject": "Sociologia",
+      "title": "Divisão Social do Trabalho",
+      "primary": "scene",
+      "artifact": "contraste-de-posicoes",
+      "ignored": []
+    },
+    {
+      "id": "summary-sociologia-transformacoes-no-mundo-do-trabalho",
+      "subject": "Sociologia",
+      "title": "Transformações no Mundo do Trabalho",
+      "primary": "scene",
+      "artifact": "contraste-de-posicoes",
+      "ignored": []
+    },
+    {
+      "id": "summary-sociologia-precarizacao-e-uberizacao-do-trabalho",
+      "subject": "Sociologia",
+      "title": "Precarização e Uberização do Trabalho",
+      "primary": "scene",
+      "artifact": "cadeia-de-derivacao",
+      "ignored": []
+    },
+    {
+      "id": "summary-sociologia-movimentos-sociais-classicos-e-contemporaneos",
+      "subject": "Sociologia",
+      "title": "Movimentos Sociais Clássicos e Contemporâneos",
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": []
+    },
+    {
+      "id": "summary-sociologia-cidadania-e-direitos",
+      "subject": "Sociologia",
+      "title": "Cidadania e Direitos",
+      "primary": "scene",
+      "artifact": "escala-de-graus",
+      "ignored": []
+    },
+    {
+      "id": "summary-sociologia-democracia-e-participacao-politica",
+      "subject": "Sociologia",
+      "title": "Democracia e Participação Política",
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": []
+    },
+    {
+      "id": "summary-sociologia-globalizacao-economica-e-cultural",
+      "subject": "Sociologia",
+      "title": "Globalização Econômica e Cultural",
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": []
+    },
+    {
+      "id": "summary-sociologia-o-estado-nacao-na-era-global",
+      "subject": "Sociologia",
+      "title": "O Estado-Nação na Era Global",
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": []
+    },
+    {
+      "id": "summary-sociologia-a-sociedade-da-informacao",
+      "subject": "Sociologia",
+      "title": "A Sociedade da Informação",
+      "primary": "scene",
+      "artifact": "criterios-conjuntivos",
+      "ignored": []
+    }
+  ]
+}
