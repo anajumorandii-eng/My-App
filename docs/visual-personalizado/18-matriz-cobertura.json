@@ -3,9 +3,9 @@
   "counts": {
     "experiment": 11,
     "board": 41,
-    "instrument": 84,
+    "instrument": 89,
     "scene": 187,
-    "fallback": 290
+    "fallback": 285
   },
   "contested": 17,
   "subjects": [
@@ -15,9 +15,9 @@
       "counts": {
         "experiment": 0,
         "board": 13,
-        "instrument": 13,
+        "instrument": 18,
         "scene": 9,
-        "fallback": 50
+        "fallback": 45
       }
     },
     {
@@ -956,16 +956,16 @@
       "id": "summary-fisica-impulso-e-quantidade-de-movimento",
       "subject": "Física",
       "title": "Impulso e Quantidade de Movimento",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "impulso",
       "ignored": []
     },
     {
       "id": "summary-fisica-sistemas-isolados-e-a-conservacao-da-quantidade-de-movimento",
       "subject": "Física",
       "title": "Sistemas Isolados e a Conservação da Quantidade de Movimento",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "conservacao-momento",
       "ignored": []
     },
     {
@@ -980,16 +980,16 @@
       "id": "summary-fisica-trabalho-e-energia-trabalho-de-uma-forca",
       "subject": "Física",
       "title": "Trabalho e Energia: Trabalho de uma Força",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "trabalho-forca",
       "ignored": []
     },
     {
       "id": "summary-fisica-trabalho-e-energia-teorema-da-energia-cinetica",
       "subject": "Física",
       "title": "Trabalho e Energia: Teorema da Energia Cinética",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "energia-cinetica",
       "ignored": []
     },
     {
@@ -1012,8 +1012,8 @@
       "id": "summary-fisica-potencia-maquina-e-rendimento",
       "subject": "Física",
       "title": "Potência, Máquina e Rendimento",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "potencia",
       "ignored": []
     },
     {
