@@ -11,6 +11,8 @@ import type { ConfigId } from '../../lib/analyticPlane';
 import type { SolidConfigId } from '../../lib/solidInstruments';
 import type { PlanarConfigId } from '../../lib/planarGeometry';
 import type { AreaConfigId } from '../../lib/areaGeometry';
+import { algebraInstrument } from './AlgebraInstrument';
+import type { AlgebraConfigId } from '../../lib/algebraLab';
 
 /**
  * Quais capítulos ganham prancha manipulável, e com que instrumento.
@@ -62,6 +64,11 @@ function geometriaPlana(id: string, keywords: string[], config: PlanarConfigId):
 
 function medidaPlana(id: string, keywords: string[], config: AreaConfigId): InstrumentEntry {
   return { id, subject: 'Matemática', keywords, exactTopic: keywords[0], Component: areaGeometryInstrument(config) };
+}
+
+/** Álgebra exige leitura de cada forma simbólica; títulos parecidos não bastam. */
+function algebra(id: string, topic: string, config: AlgebraConfigId): InstrumentEntry {
+  return { id, subject: 'Matemática', keywords: [topic], exactTopic: topic, Component: algebraInstrument(config) };
 }
 
 export const INSTRUMENTS: InstrumentEntry[] = [
@@ -121,6 +128,16 @@ export const INSTRUMENTS: InstrumentEntry[] = [
   medidaPlana('area-circulo-partes', ['área do círculo e de suas partes'], 'area-circulo'),
   medidaPlana('razoes-areas-planas', ['razões entre áreas de figuras planas'], 'razoes-areas'),
   medidaPlana('areas-figuras-planas', ['áreas de figuras planas'], 'areas-compostas'),
+
+  // Álgebra: cada configuração põe a operação do capítulo sob controle. Não
+  // inclui Composição/Bijeção: nelas o objeto visual é uma função, não a forma
+  // algébrica isolada, portanto terão uma família própria.
+  algebra('tecnicas-algebricas', 'técnicas algébricas', 'fatoracao'),
+  algebra('igualdades', 'igualdades', 'igualdades'),
+  algebra('desigualdades', 'desigualdades', 'desigualdades'),
+  algebra('modelagem-algebrica-i', 'modelagem algébrica de problemas i', 'modelagem-linear'),
+  algebra('modelagem-algebrica-ii', 'modelagem algébrica de problemas ii', 'modelagem-quadratica'),
+  algebra('representacao-geometrica-inequacoes', 'representação geométrica de inequações', 'inequacoes-plano'),
 ];
 
 function chapterText(summary: Pick<InteractiveSummary, 'subject' | 'topic' | 'title'>): string {

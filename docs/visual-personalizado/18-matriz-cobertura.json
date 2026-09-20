@@ -3,9 +3,9 @@
   "counts": {
     "experiment": 11,
     "board": 41,
-    "instrument": 42,
+    "instrument": 48,
     "scene": 187,
-    "fallback": 332
+    "fallback": 326
   },
   "contested": 17,
   "subjects": [
@@ -125,9 +125,9 @@
       "counts": {
         "experiment": 1,
         "board": 11,
-        "instrument": 42,
+        "instrument": 48,
         "scene": 0,
-        "fallback": 29
+        "fallback": 23
       }
     },
     {
@@ -4045,8 +4045,8 @@
       "id": "summary-matematica-representacao-geometrica-de-inequacoes",
       "subject": "Matemática",
       "title": "Representação Geométrica de Inequações",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "representacao-geometrica-inequacoes",
       "ignored": []
     },
     {
@@ -4061,32 +4061,32 @@
       "id": "summary-matematica-tecnicas-algebricas",
       "subject": "Matemática",
       "title": "Técnicas Algébricas",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "tecnicas-algebricas",
       "ignored": []
     },
     {
       "id": "summary-matematica-igualdades",
       "subject": "Matemática",
       "title": "Igualdades",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "igualdades",
       "ignored": []
     },
     {
       "id": "summary-matematica-desigualdades",
       "subject": "Matemática",
       "title": "Desigualdades",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "desigualdades",
       "ignored": []
     },
     {
       "id": "summary-matematica-modelagem-algebrica-de-problemas-i",
       "subject": "Matemática",
       "title": "Modelagem Algébrica de Problemas I",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "modelagem-algebrica-i",
       "ignored": []
     },
     {
@@ -4101,8 +4101,8 @@
       "id": "summary-matematica-modelagem-algebrica-de-problemas-ii",
       "subject": "Matemática",
       "title": "Modelagem Algébrica de Problemas II",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "modelagem-algebrica-ii",
       "ignored": []
     },
     {

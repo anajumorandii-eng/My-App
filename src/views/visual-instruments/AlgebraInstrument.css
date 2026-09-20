@@ -1,0 +1,10 @@
+.dark .crivo-visual .vs-algebra-instrument { --vs-burgundy: #e0788d; }
+.vs-algebra { min-height: 300px; }
+.vs-algebra text { fill: var(--vs-ink); font: italic 12px ui-monospace, 'SFMono-Regular', Menlo, monospace; paint-order: stroke; stroke: var(--vs-paper-strong); stroke-width: 3px; }
+.vs-alg-arrow,.vs-alg-axis,.vs-alg-balance { fill:none;stroke:var(--vs-ink);stroke-width:2;stroke-linecap:round;stroke-linejoin:round; }
+.vs-alg-arrow { stroke:var(--vs-burgundy);stroke-width:3; } .vs-alg-arrow::after{content:''}
+.vs-alg-accent { fill:none;stroke:var(--vs-burgundy);stroke-width:3;stroke-linecap:round; }
+.vs-alg-card { fill:var(--vs-mint);fill-opacity:.48;stroke:var(--vs-ink);stroke-width:2; } .vs-alg-copy { fill:var(--vs-amber);stroke:var(--vs-burgundy); }
+.vs-alg-open { fill:var(--vs-paper-strong);stroke:var(--vs-burgundy);stroke-width:2.5; } .vs-alg-point { fill:var(--vs-burgundy);stroke:var(--vs-paper-strong);stroke-width:2; } .vs-alg-dot { fill:var(--vs-mint);stroke:var(--vs-ink);stroke-width:1; }
+.vs-alg-region { fill:var(--vs-mint);fill-opacity:.48;stroke:none; }
+@media(max-width:520px){.vs-algebra{min-height:260px}}

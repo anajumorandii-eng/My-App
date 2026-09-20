@@ -87,4 +87,18 @@ describe('registro de instrumentos', () => {
       expect(interactiveSummaries.filter((s) => findInstrument(s)?.id === id).map((s) => s.topic), id).toEqual([topic]);
     }
   });
+
+  it('cada configuração de álgebra alcança exatamente seu capítulo', () => {
+    const esperado: Record<string, string> = {
+      'tecnicas-algebricas': 'Técnicas Algébricas',
+      igualdades: 'Igualdades',
+      desigualdades: 'Desigualdades',
+      'modelagem-algebrica-i': 'Modelagem Algébrica de Problemas I',
+      'modelagem-algebrica-ii': 'Modelagem Algébrica de Problemas II',
+      'representacao-geometrica-inequacoes': 'Representação Geométrica de Inequações',
+    };
+    for (const [id, topic] of Object.entries(esperado)) {
+      expect(interactiveSummaries.filter((s) => findInstrument(s)?.id === id).map((s) => s.topic), id).toEqual([topic]);
+    }
+  });
 });
