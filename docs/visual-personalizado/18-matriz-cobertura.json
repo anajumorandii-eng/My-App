@@ -3,9 +3,9 @@
   "counts": {
     "experiment": 11,
     "board": 40,
-    "instrument": 22,
+    "instrument": 27,
     "scene": 187,
-    "fallback": 353
+    "fallback": 348
   },
   "contested": 17,
   "subjects": [
@@ -125,9 +125,9 @@
       "counts": {
         "experiment": 1,
         "board": 11,
-        "instrument": 22,
+        "instrument": 27,
         "scene": 0,
-        "fallback": 49
+        "fallback": 44
       }
     },
     {
@@ -3949,40 +3949,40 @@
       "id": "summary-matematica-cubos-e-paralelepipedos",
       "subject": "Matemática",
       "title": "Cubos e Paralelepípedos",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "cubos-paralelepipedos",
       "ignored": []
     },
     {
       "id": "summary-matematica-prismas",
       "subject": "Matemática",
       "title": "Prismas",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "prismas",
       "ignored": []
     },
     {
       "id": "summary-matematica-piramides",
       "subject": "Matemática",
       "title": "Pirâmides",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "piramides",
       "ignored": []
     },
     {
       "id": "summary-matematica-solidos-de-revolucao",
       "subject": "Matemática",
       "title": "Sólidos de Revolução",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "solidos-de-revolucao",
       "ignored": []
     },
     {
       "id": "summary-matematica-razoes-entre-volumes-de-solidos",
       "subject": "Matemática",
       "title": "Razões entre Volumes de Sólidos",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "razoes-entre-volumes",
       "ignored": []
     },
     {

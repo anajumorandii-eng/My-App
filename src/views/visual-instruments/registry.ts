@@ -3,8 +3,10 @@ import type { InteractiveSummary } from '../../types/summary';
 import type { BoardProps } from '../visual-boards/types';
 import { cartesianInstrument } from './CartesianInstrument';
 import { analyticInstrument } from './AnalyticInstrument';
+import { solidInstrument } from './SolidInstrument';
 import type { FamilyId } from '../../lib/curveFamilies';
 import type { ConfigId } from '../../lib/analyticPlane';
+import type { SolidConfigId } from '../../lib/solidInstruments';
 
 /**
  * Quais capítulos ganham prancha manipulável, e com que instrumento.
@@ -43,6 +45,11 @@ function analitico(id: string, keywords: string[], config: ConfigId): Instrument
   return { id, subject: 'Matemática', keywords, Component: analyticInstrument(config) };
 }
 
+/** Atalho: uma entrada de sólido, com a configuração já embutida. */
+function solido(id: string, keywords: string[], config: SolidConfigId): InstrumentEntry {
+  return { id, subject: 'Matemática', keywords, Component: solidInstrument(config) };
+}
+
 export const INSTRUMENTS: InstrumentEntry[] = [
   plano('funcoes-introducao', ['introdução às funções'], 'afim'),
   plano('funcao-afim', ['função afim'], 'afim'),
@@ -68,6 +75,15 @@ export const INSTRUMENTS: InstrumentEntry[] = [
   analitico('duas-retas', ['posições relativas entre duas retas'], 'duas-retas'),
   analitico('reta-e-circunferencia', ['posições relativas entre uma reta e uma circunferência'], 'reta-circunferencia'),
   analitico('complexos', ['números complexos'], 'complexo'),
+
+  // Sólidos: o objeto do capítulo é o próprio sólido, com as medidas nas mãos.
+  // "O Universo Tridimensional" fica de fora de propósito: trata de retas e
+  // planos no espaço, e o instrumento de sólidos não é o objeto dele.
+  solido('cubos-paralelepipedos', ['cubos e paralelepípedos'], 'bloco'),
+  solido('prismas', ['prismas'], 'prisma'),
+  solido('piramides', ['pirâmides'], 'piramide'),
+  solido('solidos-de-revolucao', ['sólidos de revolução'], 'revolucao'),
+  solido('razoes-entre-volumes', ['razões entre volumes de sólidos'], 'semelhanca'),
 ];
 
 function chapterText(summary: Pick<InteractiveSummary, 'subject' | 'topic' | 'title'>): string {

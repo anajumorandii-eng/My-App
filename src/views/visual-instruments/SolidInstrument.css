@@ -1,0 +1,78 @@
+/* Instrumento de sólidos. Reaproveita os controles e as leituras dos outros
+   instrumentos (.vs-plane-control, .vs-plane-readouts) e só acrescenta o traço
+   do desenho, com as mesmas variáveis de tema, para valer nos dois temas. */
+
+/* O bordô do tema (#852636) tem cerca de 2:1 de contraste sobre o cartão
+   escuro: os valores dos controles, o preenchimento dos sliders e o traço do
+   destaque quase somem. Clareado só dentro deste instrumento (≈ 6:1), sem
+   mexer nas pranchas dos outros. */
+.dark .crivo-visual .vs-solid-instrument { --vs-burgundy: #e0788d; }
+
+.vs-solid-line {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.vs-solid-line[data-estilo='aresta'] { stroke: var(--vs-ink); stroke-width: 1.7; }
+/* Aresta escondida: tracejada e mais fraca, para não competir com a visível. */
+.vs-solid-line[data-estilo='oculta'] { stroke: var(--vs-dim); stroke-width: 1.2; stroke-dasharray: 4 3; }
+/* O que a leitura principal nomeia: a diagonal, a aresta inclinada, o raio. */
+.vs-solid-line[data-estilo='destaque'] { stroke: var(--vs-burgundy); stroke-width: 2.8; }
+/* Medidas de apoio: altura, diagonal da face, apótema, eixo. */
+.vs-solid-line[data-estilo='apoio'] { stroke: var(--vs-blue); stroke-width: 1.6; stroke-dasharray: 5 3; }
+
+.vs-solid-poly { stroke: none; }
+.vs-solid-poly[data-estilo='menor'] { fill: var(--vs-amber); fill-opacity: 0.34; }
+.vs-solid-poly[data-estilo='base'] { fill: var(--vs-mint); fill-opacity: 0.6; }
+/* A elipse inteira é linha e preenchimento ao mesmo tempo. */
+.vs-solid-line.vs-solid-poly[data-estilo='base'] { stroke: var(--vs-ink); stroke-width: 1.7; }
+.vs-solid-line.vs-solid-poly[data-estilo='aresta'] { fill: none; stroke: var(--vs-ink); }
+
+.vs-solid-label {
+  fill: var(--vs-ink);
+  font-family: ui-monospace, 'SFMono-Regular', Menlo, monospace;
+  font-size: 12px;
+  font-style: italic;
+  paint-order: stroke;
+  stroke: var(--vs-paper-strong);
+  stroke-width: 3px;
+}
+
+.vs-solid-formas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+}
+.vs-solid-formas legend {
+  padding: 0;
+  margin-bottom: 4px;
+  font-size: 0.7rem;
+  letter-spacing: 0.02em;
+  color: var(--vs-dim);
+}
+.vs-solid-formas label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 32px;
+  padding: 0 11px;
+  border: 1px solid var(--vs-line);
+  border-radius: 999px;
+  background: var(--vs-paper-strong);
+  color: var(--vs-ink);
+  font-size: 0.82rem;
+  cursor: pointer;
+}
+.vs-solid-formas label:has(input:checked) { border-color: var(--vs-burgundy); }
+.vs-solid-formas input { accent-color: var(--vs-burgundy); margin: 0; }
+.vs-solid-formas label:has(input:focus-visible) { outline: 2px solid var(--vs-blue); outline-offset: 2px; }
+
+.vs-solid-unidade {
+  margin: 0;
+  font-size: 0.68rem;
+  color: var(--vs-dim);
+}

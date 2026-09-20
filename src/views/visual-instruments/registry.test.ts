@@ -32,12 +32,28 @@ describe('registro de instrumentos', () => {
   });
 
   it('só entra onde o instrumento é o objeto do capítulo', () => {
-    // "Determinantes" e "Prismas" são Matemática e não têm instrumento ainda:
-    // preencher a tela com um plano cartesiano seria emprestar ilustração.
-    for (const topico of ['Determinantes', 'Prismas', 'Estatística Descritiva']) {
+    // "Determinantes", "Estatística Descritiva" e "O Universo Tridimensional"
+    // são Matemática e não têm instrumento: o último trata de retas e planos no
+    // espaço, não de sólidos, então o instrumento de sólidos não lhe serve.
+    // Preencher a tela com o que estiver à mão seria emprestar ilustração.
+    for (const topico of ['Determinantes', 'Estatística Descritiva', 'O Universo Tridimensional']) {
       const item = interactiveSummaries.find((s) => s.topic === topico);
       expect(item, `capítulo "${topico}" sumiu do currículo`).toBeDefined();
       expect(findInstrument(item!)).toBeNull();
+    }
+  });
+
+  it('cada instrumento de sólidos alcança exatamente o capítulo de que é objeto', () => {
+    const esperado: Record<string, string> = {
+      'cubos-paralelepipedos': 'Cubos e Paralelepípedos',
+      prismas: 'Prismas',
+      piramides: 'Pirâmides',
+      'solidos-de-revolucao': 'Sólidos de Revolução',
+      'razoes-entre-volumes': 'Razões entre Volumes de Sólidos',
+    };
+    for (const [id, topico] of Object.entries(esperado)) {
+      const alcancados = interactiveSummaries.filter((s) => findInstrument(s)?.id === id).map((s) => s.topic);
+      expect(alcancados, id).toEqual([topico]);
     }
   });
 });
