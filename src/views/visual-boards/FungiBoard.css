@@ -1,0 +1,26 @@
+.fungi-board { --fungi-wine: #7c3044; --fungi-ink: #292426; --fungi-paper: #fffaf1; --fungi-soil: #4e3935; overflow: hidden; }
+.fungi-board__head { display: flex; justify-content: space-between; gap: 24px; align-items: flex-start; }
+.fungi-board__head h2 { max-width: 620px; margin: 6px 0; color: var(--fungi-ink); font-family: Georgia, serif; font-size: clamp(1.6rem, 3vw, 2.35rem); line-height: 1.04; }
+.fungi-board__head p { max-width: 620px; margin: 0; color: #665c58; font-size: .94rem; line-height: 1.5; }
+.fungi-board__badge { min-width: 124px; border: 1px solid #d8b8ac; border-radius: 999px; padding: 9px 13px; background: #fff4ea; color: var(--fungi-wine); text-align: center; }
+.fungi-board__badge span, .fungi-board__step-state { display: block; font-size: .64rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.fungi-board__badge strong { font-size: .86rem; }
+.fungi-board__scene { position: relative; margin-top: 20px; border: 1px solid #d5b7aa; border-radius: 18px; overflow: hidden; background: var(--fungi-paper); }
+.fungi-board__scene svg { display: block; width: 100%; min-height: 280px; max-height: 410px; }
+.fungi-board__log { fill: #9a7055; stroke: #573d33; stroke-width: 3; }
+.fungi-board__mushroom path:not(.fungi-board__cap):not(.fungi-board__gills) { fill: #ead2b1; stroke: #6b4742; stroke-width: 3; }
+.fungi-board__gills { fill: none; stroke: #f6deca; stroke-width: 3; }
+.fungi-board__spores circle { fill: #bd5665; } .fungi-board__spores path { fill: none; stroke: #bd5665; stroke-width: 2; stroke-dasharray: 4 5; }
+.fungi-board__hyphae path { fill: none; stroke: #ded4c1; stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; }
+.fungi-board__enzymes circle { fill: #dfa14b; stroke: #fff0be; stroke-width: 2; } .fungi-board__enzymes path { fill: none; stroke: #e7b760; stroke-width: 3; stroke-dasharray: 5 5; }
+.fungi-board__nutrients circle { fill: #8dd3b4; } .fungi-board__nutrients path { fill: none; stroke: #8dd3b4; stroke-width: 3; marker-end: url(#arrow); }
+.fungi-board__labels { fill: #fff9ec; font-family: Georgia, serif; font-size: 15px; font-style: italic; } .fungi-board__labels text:nth-child(-n+2) { fill: #4f3834; }
+.fungi-board__scene-caption { position: absolute; right: 16px; bottom: 12px; display: grid; gap: 2px; margin: 0; border-radius: 10px; padding: 8px 11px; background: rgb(38 29 29 / .78); color: #fff8ec; font-size: .75rem; text-align: right; }
+.fungi-board__scene-caption span { color: #eadbc8; }
+.fungi-board__steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 14px; }
+.fungi-board__steps button { min-height: 126px; border: 1px solid #d8c6bb; border-radius: 14px; padding: 13px; background: #fffdf8; color: var(--fungi-ink); text-align: left; transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease; }
+.fungi-board__steps button:hover, .fungi-board__steps button:focus-visible, .fungi-board__steps button[data-active] { border-color: var(--fungi-wine); box-shadow: 0 7px 18px rgb(83 42 43 / .13); outline: none; transform: translateY(-2px); }
+.fungi-board__steps strong { display: block; margin: 5px 0 7px; font-family: Georgia, serif; font-size: 1rem; }.fungi-board__steps button > span:last-child { color: #665c58; font-size: .81rem; line-height: 1.35; }
+.fungi-board__step-state { color: var(--fungi-wine); }.fungi-board__closing { margin-top: 15px; border-left: 4px solid var(--fungi-wine); padding: 10px 13px; background: #f7ebe2; color: #5f4141; font-size: .88rem; line-height: 1.45; }
+.dark .fungi-board { --fungi-paper: #151a17; --fungi-ink: #f5ebd7; }.dark .fungi-board__head p, .dark .fungi-board__steps button > span:last-child { color: #c7c0b3; }.dark .fungi-board__badge, .dark .fungi-board__steps button { border-color: #66444b; background: #20231f; color: #f5ebd7; }.dark .fungi-board__closing { background: #2d2023; color: #f0dcd2; }
+@media (max-width: 700px) { .fungi-board__head { display: block; }.fungi-board__badge { display: inline-block; margin-top: 12px; }.fungi-board__scene { border-radius: 12px; }.fungi-board__scene svg { min-height: 220px; }.fungi-board__labels { font-size: 13px; }.fungi-board__scene-caption { position: static; border-radius: 0; text-align: left; }.fungi-board__steps { grid-template-columns: 1fr; }.fungi-board__steps button { min-height: auto; }.fungi-board__steps button > span:last-child { display: block; } }
