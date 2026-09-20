@@ -5,15 +5,10 @@ import { MOTION_DURATION, MOTION_EASE } from '../design-system/motion/tokens';
 import { STAGE_LABEL } from '../lib/visualStudy';
 import type { InteractiveSummary } from '../types/summary';
 import { TopicVisual } from './TopicVisual';
-import { TopicFallbackVisual } from './TopicFallbackVisual';
-import { TopicExperiment } from './topic-experiments/TopicExperiment';
-import { TopicScene } from './topic-scenes/TopicScene';
-import type { VisualRepresentation } from './visualRepresentation';
 
 /** The section order and all teaching text come from the chapter, not a subject template. */
-export function VisualJourney({ summary, representation, onPractice, initialIndex = 0, onStepChange }: {
+export function VisualJourney({ summary, onPractice, initialIndex = 0, onStepChange }: {
   summary: InteractiveSummary;
-  representation: VisualRepresentation;
   onPractice: () => void;
   initialIndex?: number;
   onStepChange?: (index: number) => void;
@@ -42,11 +37,6 @@ export function VisualJourney({ summary, representation, onPractice, initialInde
       <div className="vs-journey-progress" aria-hidden="true"><motion.div
         animate={{ scaleX: (index + 1) / summary.sections.length }}
         transition={{ duration: reduced ? 0 : MOTION_DURATION.panel, ease: MOTION_EASE }} /></div>
-      {representation === 'fallback' && (
-        <TopicFallbackVisual summary={summary} activeIndex={index} onSelectStep={go} />
-      )}
-      {representation === 'experiment' && <TopicExperiment key={summary.id} summaryId={summary.id} />}
-      {representation === 'scene' && <TopicScene key={`cena-${summary.id}`} summaryId={summary.id} />}
       <AnimatePresence initial={false} mode="wait">
         <motion.article key={section.id} className="vs-journey-page"
           initial={{ opacity: reduced ? 1 : 0, x: reduced ? 0 : direction * 12 }}
