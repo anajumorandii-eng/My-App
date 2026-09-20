@@ -31,6 +31,8 @@ import { orbitalInstrument } from './OrbitalInstrument';
 import type { OrbitalId } from '../../lib/orbitalLab';
 import { energyInstrument } from './EnergyInstrument';
 import type { EnergyId } from '../../lib/energyLab';
+import { thermoInstrument } from './ThermoInstrument';
+import type { ThermoId } from '../../lib/thermoLab';
 
 /**
  * Quais capítulos ganham prancha manipulável, e com que instrumento.
@@ -103,6 +105,7 @@ function vetor(id:string,topic:string,config:VectorId):InstrumentEntry{return{id
 function dinamica(id:string,topic:string,config:DynamicsId):InstrumentEntry{return{id,subject:'Física',keywords:[topic],exactTopic:topic,Component:dynamicsInstrument(config)}}
 function orbital(id:string,topic:string,config:OrbitalId):InstrumentEntry{return{id,subject:'Física',keywords:[topic],exactTopic:topic,Component:orbitalInstrument(config)}}
 function energia(id:string,topic:string,config:EnergyId):InstrumentEntry{return{id,subject:'Física',keywords:[topic],exactTopic:topic,Component:energyInstrument(config)}}
+function termo(id:string,topic:string,config:ThermoId):InstrumentEntry{return{id,subject:'Física',keywords:[topic],exactTopic:topic,Component:thermoInstrument(config)}}
 
 export const INSTRUMENTS: InstrumentEntry[] = [
   plano('funcoes-introducao', ['introdução às funções'], 'afim'),
@@ -190,6 +193,7 @@ export const INSTRUMENTS: InstrumentEntry[] = [
   dinamica('resultante-forcas','resultante de um sistema de forças','resultante'),dinamica('forca-contato','a força de contato','contato'),dinamica('corpos-interagindo','sistema de corpos interagindo e os elementos transmissores de força','corpos'),dinamica('plano-inclinado','plano inclinado','plano'),
   orbital('gravidade','leis da gravitação','gravidade'),orbital('dinamica-circular','dinâmica do movimento circular','circular'),orbital('orbitas','órbitas','orbitas'),orbital('balistica','balística','balistica'),
   energia('impulso','impulso e quantidade de movimento','impulso'),energia('conservacao-momento','sistemas isolados e a conservação da quantidade de movimento','momento'),energia('trabalho-forca','trabalho e energia: trabalho de uma força','trabalho'),energia('energia-cinetica','trabalho e energia: teorema da energia cinética','cinetica'),energia('potencia','potência, máquina e rendimento','potencia'),
+  termo('trabalho-gas','trabalho da força de pressão do gás','gas-work'),termo('primeira-lei','primeira lei da termodinâmica','first-law'),termo('ciclo-carnot','máquinas térmicas e ciclo de carnot','carnot'),
 ];
 
 function chapterText(summary: Pick<InteractiveSummary, 'subject' | 'topic' | 'title'>): string {
