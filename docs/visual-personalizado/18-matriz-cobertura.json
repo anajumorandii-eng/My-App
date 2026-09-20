@@ -3,9 +3,9 @@
   "counts": {
     "experiment": 11,
     "board": 41,
-    "instrument": 76,
+    "instrument": 80,
     "scene": 187,
-    "fallback": 298
+    "fallback": 294
   },
   "contested": 17,
   "subjects": [
@@ -15,9 +15,9 @@
       "counts": {
         "experiment": 0,
         "board": 13,
-        "instrument": 5,
+        "instrument": 9,
         "scene": 9,
-        "fallback": 58
+        "fallback": 54
       }
     },
     {
@@ -868,8 +868,8 @@
       "id": "summary-fisica-resultante-de-um-sistema-de-forcas",
       "subject": "Física",
       "title": "Resultante de um Sistema de Forças",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "resultante-forcas",
       "ignored": []
     },
     {
@@ -884,24 +884,24 @@
       "id": "summary-fisica-a-forca-de-contato",
       "subject": "Física",
       "title": "A Força de Contato",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "forca-contato",
       "ignored": []
     },
     {
       "id": "summary-fisica-sistema-de-corpos-interagindo-e-os-elementos-transmissores-de-forca",
       "subject": "Física",
       "title": "Sistema de Corpos Interagindo e os Elementos Transmissores de Força",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "corpos-interagindo",
       "ignored": []
     },
     {
       "id": "summary-fisica-plano-inclinado",
       "subject": "Física",
       "title": "Plano Inclinado",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "plano-inclinado",
       "ignored": []
     },
     {

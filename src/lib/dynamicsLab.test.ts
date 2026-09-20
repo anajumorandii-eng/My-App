@@ -1,0 +1,1 @@
+import assert from'node:assert/strict';import test from'node:test';import{DYNAMICS}from'./dynamicsLab';test('resultante zera com forças opostas iguais',()=>assert.equal(DYNAMICS.resultante.readouts(6)[2].value,'0 N'));test('plano de trinta graus dá componente 5 N',()=>assert.equal(DYNAMICS.plano.readouts(30)[1].value,'5 N'));
