@@ -4,22 +4,31 @@ import { describe, it, expect, vi } from 'vitest';
 import { VisualJourney } from './VisualJourney';
 import { interactiveSummaries } from '../data/interactiveSummaries';
 import { NewtonLab, AtomLab } from './visual-boards/MechanismLab';
-import { filosofia } from './topic-scenes/data/filosofia';
+import { resolveVisualRepresentation } from './visualRepresentation';
+import { topicExperiments } from './topic-experiments/catalog';
+import { sceneFor } from './topic-scenes/sceneFor';
+import { findBoard } from './visual-boards/registry';
+import { findInstrument } from './visual-instruments/registry';
+
+const sceneOnlySummary = interactiveSummaries.find(
+  (item) => sceneFor(item.id) && !topicExperiments[item.id] && !findBoard(item) && !findInstrument(item),
+)!;
 
 vi.mock('../components/AiText', () => ({ AiText: ({ text }: { text: string }) => <div>{text}</div> }));
 
 describe('Percurso ligado ao conteúdo', () => {
   it('mantém a cena-âncora montada ao trocar de etapa do capítulo', () => {
-    const summary = interactiveSummaries.find((item) => item.id === filosofia[0].chapterId)!;
-    render(<VisualJourney summary={summary} onPractice={() => {}} />);
-    const cena = screen.getByLabelText(filosofia[0].question);
+    const summary = sceneOnlySummary;
+    const scene = sceneFor(summary.id)!;
+    render(<VisualJourney summary={summary} representation={resolveVisualRepresentation(summary)} onPractice={() => {}} />);
+    const cena = screen.getByLabelText(scene.question);
     fireEvent.click(screen.getAllByRole('button', { name: /Continuar:/ })[0]);
-    expect(screen.getByLabelText(filosofia[0].question)).toBe(cena);
+    expect(screen.getByLabelText(scene.question)).toBe(cena);
   });
   it('leva ao teste apenas por ação explícita e conserva todas as etapas do capítulo', async () => {
     const summary = interactiveSummaries.find(s => s.subject === 'História')!;
     const practice = vi.fn();
-    render(<VisualJourney summary={summary} onPractice={practice} />);
+    render(<VisualJourney summary={summary} representation={resolveVisualRepresentation(summary)} onPractice={practice} />);
     expect(screen.getByText(summary.sections[0].content)).toBeInTheDocument();
     const nav = screen.getByRole('navigation', { name: 'Etapas do capítulo' });
     const steps = within(nav).getAllByRole('button');
@@ -52,7 +61,7 @@ describe('Percurso ligado ao conteúdo', () => {
     expect(subjects).toHaveLength(14);
     for (const subject of subjects) {
       const summary = interactiveSummaries.find(item => item.subject === subject)!;
-      const view = render(<VisualJourney summary={summary} onPractice={() => {}} />);
+      const view = render(<VisualJourney summary={summary} representation={resolveVisualRepresentation(summary)} onPractice={() => {}} />);
       fireEvent.click(screen.getByText('Explorar e comparar trechos desta etapa'));
       expect(screen.getByRole('figure', { name: `Leitura em foco de ${summary.sections[0].title}` })).toHaveAttribute('data-subject', subject);
       view.unmount();
@@ -61,7 +70,7 @@ describe('Percurso ligado ao conteúdo', () => {
   });
   it('dá identidade visual e navegação a capítulo sem cena, prancha, instrumento ou experimento', () => {
     const summary = interactiveSummaries.find(item => item.id === 'atu-cop30-belem')!;
-    render(<VisualJourney summary={summary} onPractice={() => {}} />);
+    render(<VisualJourney summary={summary} representation={resolveVisualRepresentation(summary)} onPractice={() => {}} />);
     const fallback = screen.getByLabelText(`Estrutura visual de ${summary.title}`);
     expect(fallback).toHaveAttribute('data-subject', 'Atualidades');
     const secondStep = within(fallback).getByRole('button', { name: new RegExp(summary.sections[1].title) });
@@ -69,8 +78,8 @@ describe('Percurso ligado ao conteúdo', () => {
     expect(screen.getByText(summary.sections[1].content)).toBeInTheDocument();
   });
   it('não duplica fallback quando o capítulo já possui cena dedicada', () => {
-    const summary = interactiveSummaries.find((item) => item.id === filosofia[0].chapterId)!;
-    render(<VisualJourney summary={summary} onPractice={() => {}} />);
+    const summary = sceneOnlySummary;
+    render(<VisualJourney summary={summary} representation={resolveVisualRepresentation(summary)} onPractice={() => {}} />);
     expect(screen.queryByLabelText(`Estrutura visual de ${summary.title}`)).not.toBeInTheDocument();
   });
 });
