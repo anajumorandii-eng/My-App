@@ -3,9 +3,9 @@
   "counts": {
     "experiment": 11,
     "board": 41,
-    "instrument": 53,
+    "instrument": 55,
     "scene": 187,
-    "fallback": 321
+    "fallback": 319
   },
   "contested": 17,
   "subjects": [
@@ -125,9 +125,9 @@
       "counts": {
         "experiment": 1,
         "board": 11,
-        "instrument": 53,
+        "instrument": 55,
         "scene": 0,
-        "fallback": 18
+        "fallback": 16
       }
     },
     {
@@ -3629,16 +3629,16 @@
       "id": "summary-matematica-progressao-aritmetica",
       "subject": "Matemática",
       "title": "Progressão Aritmética",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "progressao-aritmetica",
       "ignored": []
     },
     {
       "id": "summary-matematica-progressao-geometrica",
       "subject": "Matemática",
       "title": "Progressão Geométrica",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "progressao-geometrica",
       "ignored": []
     },
     {

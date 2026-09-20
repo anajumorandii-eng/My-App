@@ -15,6 +15,8 @@ import { algebraInstrument } from './AlgebraInstrument';
 import type { AlgebraConfigId } from '../../lib/algebraLab';
 import { matrixInstrument } from './MatrixInstrument';
 import type { MatrixConfigId } from '../../lib/matrixLab';
+import { sequenceInstrument } from './SequenceInstrument';
+import type { SequenceConfigId } from '../../lib/sequenceLab';
 
 /**
  * Quais capítulos ganham prancha manipulável, e com que instrumento.
@@ -75,6 +77,10 @@ function algebra(id: string, topic: string, config: AlgebraConfigId): Instrument
 
 function matriz(id: string, topic: string, config: MatrixConfigId): InstrumentEntry {
   return { id, subject: 'Matemática', keywords: [topic], exactTopic: topic, Component: matrixInstrument(config) };
+}
+
+function sequencia(id: string, topic: string, config: SequenceConfigId): InstrumentEntry {
+  return { id, subject: 'Matemática', keywords: [topic], exactTopic: topic, Component: sequenceInstrument(config) };
 }
 
 export const INSTRUMENTS: InstrumentEntry[] = [
@@ -150,6 +156,8 @@ export const INSTRUMENTS: InstrumentEntry[] = [
   matriz('multiplicacao-matrizes', 'multiplicação de matrizes', 'produto'),
   matriz('determinantes', 'determinantes', 'determinante'),
   matriz('discussao-sistemas', 'discussão de sistemas lineares', 'discussao'),
+  sequencia('progressao-aritmetica', 'progressão aritmética', 'pa'),
+  sequencia('progressao-geometrica', 'progressão geométrica', 'pg'),
 ];
 
 function chapterText(summary: Pick<InteractiveSummary, 'subject' | 'topic' | 'title'>): string {

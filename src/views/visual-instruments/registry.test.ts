@@ -114,4 +114,9 @@ describe('registro de instrumentos', () => {
       expect(interactiveSummaries.filter((s) => findInstrument(s)?.id === id).map((s) => s.topic), id).toEqual([topic]);
     }
   });
+
+  it('separa PA de PG pelo tópico e pela regra', () => {
+    expect(interactiveSummaries.filter((s) => findInstrument(s)?.id === 'progressao-aritmetica').map((s) => s.topic)).toEqual(['Progressão Aritmética']);
+    expect(interactiveSummaries.filter((s) => findInstrument(s)?.id === 'progressao-geometrica').map((s) => s.topic)).toEqual(['Progressão Geométrica']);
+  });
 });
