@@ -171,6 +171,11 @@ export function createLiteraryAdminRouter(db: Firestore): Router {
       return res.status(400).json({ error: 'extractionStatus inválido.', code: 'INVALID_STATUS' });
     }
     const ref = db.collection('literaryWorks').doc(req.params.workId).collection('editions').doc(req.params.editionId);
+    // set com merge cria o documento se ele faltar, então a existência precisa
+    // ser conferida antes: senão um id errado gravava uma edição pela metade.
+    if (!(await ref.get()).exists) {
+      return res.status(404).json({ error: 'Edição não encontrada.', code: 'EDITION_NOT_FOUND' });
+    }
     const patch: Partial<WorkEdition> = {};
     if (integrityStatus) patch.integrityStatus = integrityStatus;
     if (extractionStatus) patch.extractionStatus = extractionStatus;

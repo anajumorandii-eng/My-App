@@ -53,6 +53,19 @@ async function batchSet(db: Firestore, collection: string, docs: { id: string }[
 export function createContentAdminRouter(db: Firestore): Router {
   const router = Router();
 
+  // Atualiza só um documento que já existe. set(..., { merge: true }) cria o
+  // documento quando ele falta, então checar a existência depois de gravar
+  // nunca dava 404: um PATCH num id errado gravava um documento pela metade e
+  // respondia 200. O id vindo do corpo é ignorado para o documento não
+  // acabar com um id diferente do caminho onde mora.
+  const patchExisting = (collection: string, notFound: { error: string; code: string }) => asyncRoute(async (req, res) => {
+    const ref = db.collection(collection).doc(req.params.id);
+    if (!(await ref.get()).exists) return res.status(404).json(notFound);
+    const { id: _ignoredId, ...patch } = stripUndefined(req.body ?? {}) as Record<string, unknown>;
+    await ref.set(patch, { merge: true });
+    res.json((await ref.get()).data());
+  });
+
   // Idempotente: usa os ids já existentes no mock (.set() sobrescreve com o
   // mesmo valor, então rodar de novo não duplica nada) — mesma lógica do
   // /seed de literaryAdminRoutes.ts.
@@ -87,14 +100,7 @@ export function createContentAdminRouter(db: Firestore): Router {
     res.json(question);
   }));
 
-  router.patch('/questions/:id', asyncRoute(async (req, res) => {
-    const patch = stripUndefined(req.body ?? {});
-    const ref = db.collection('questions').doc(req.params.id);
-    await ref.set(patch, { merge: true });
-    const updated = await ref.get();
-    if (!updated.exists) return res.status(404).json({ error: 'Questão não encontrada.', code: 'QUESTION_NOT_FOUND' });
-    res.json(updated.data());
-  }));
+  router.patch('/questions/:id', patchExisting('questions', { error: 'Questão não encontrada.', code: 'QUESTION_NOT_FOUND' }));
 
   router.delete('/questions/:id', asyncRoute(async (req, res) => {
     await db.collection('questions').doc(req.params.id).delete();
@@ -116,14 +122,7 @@ export function createContentAdminRouter(db: Firestore): Router {
     res.json(method);
   }));
 
-  router.patch('/study-methods/:id', asyncRoute(async (req, res) => {
-    const patch = stripUndefined(req.body ?? {});
-    const ref = db.collection('studyMethods').doc(req.params.id);
-    await ref.set(patch, { merge: true });
-    const updated = await ref.get();
-    if (!updated.exists) return res.status(404).json({ error: 'Método não encontrado.', code: 'METHOD_NOT_FOUND' });
-    res.json(updated.data());
-  }));
+  router.patch('/study-methods/:id', patchExisting('studyMethods', { error: 'Método não encontrado.', code: 'METHOD_NOT_FOUND' }));
 
   router.delete('/study-methods/:id', asyncRoute(async (req, res) => {
     await db.collection('studyMethods').doc(req.params.id).delete();
@@ -145,14 +144,7 @@ export function createContentAdminRouter(db: Firestore): Router {
     res.json(episode);
   }));
 
-  router.patch('/podcast-episodes/:id', asyncRoute(async (req, res) => {
-    const patch = stripUndefined(req.body ?? {});
-    const ref = db.collection('podcastEpisodes').doc(req.params.id);
-    await ref.set(patch, { merge: true });
-    const updated = await ref.get();
-    if (!updated.exists) return res.status(404).json({ error: 'Episódio não encontrado.', code: 'EPISODE_NOT_FOUND' });
-    res.json(updated.data());
-  }));
+  router.patch('/podcast-episodes/:id', patchExisting('podcastEpisodes', { error: 'Episódio não encontrado.', code: 'EPISODE_NOT_FOUND' }));
 
   router.delete('/podcast-episodes/:id', asyncRoute(async (req, res) => {
     await db.collection('podcastEpisodes').doc(req.params.id).delete();
