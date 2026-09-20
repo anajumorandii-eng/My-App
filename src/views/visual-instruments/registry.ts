@@ -13,6 +13,8 @@ import type { PlanarConfigId } from '../../lib/planarGeometry';
 import type { AreaConfigId } from '../../lib/areaGeometry';
 import { algebraInstrument } from './AlgebraInstrument';
 import type { AlgebraConfigId } from '../../lib/algebraLab';
+import { matrixInstrument } from './MatrixInstrument';
+import type { MatrixConfigId } from '../../lib/matrixLab';
 
 /**
  * Quais capítulos ganham prancha manipulável, e com que instrumento.
@@ -69,6 +71,10 @@ function medidaPlana(id: string, keywords: string[], config: AreaConfigId): Inst
 /** Álgebra exige leitura de cada forma simbólica; títulos parecidos não bastam. */
 function algebra(id: string, topic: string, config: AlgebraConfigId): InstrumentEntry {
   return { id, subject: 'Matemática', keywords: [topic], exactTopic: topic, Component: algebraInstrument(config) };
+}
+
+function matriz(id: string, topic: string, config: MatrixConfigId): InstrumentEntry {
+  return { id, subject: 'Matemática', keywords: [topic], exactTopic: topic, Component: matrixInstrument(config) };
 }
 
 export const INSTRUMENTS: InstrumentEntry[] = [
@@ -138,6 +144,12 @@ export const INSTRUMENTS: InstrumentEntry[] = [
   algebra('modelagem-algebrica-i', 'modelagem algébrica de problemas i', 'modelagem-linear'),
   algebra('modelagem-algebrica-ii', 'modelagem algébrica de problemas ii', 'modelagem-quadratica'),
   algebra('representacao-geometrica-inequacoes', 'representação geométrica de inequações', 'inequacoes-plano'),
+
+  matriz('sistemas-equacoes', 'sistemas de equações', 'sistemas'),
+  matriz('tabelas-matrizes', 'tabelas e matrizes', 'matrizes'),
+  matriz('multiplicacao-matrizes', 'multiplicação de matrizes', 'produto'),
+  matriz('determinantes', 'determinantes', 'determinante'),
+  matriz('discussao-sistemas', 'discussão de sistemas lineares', 'discussao'),
 ];
 
 function chapterText(summary: Pick<InteractiveSummary, 'subject' | 'topic' | 'title'>): string {

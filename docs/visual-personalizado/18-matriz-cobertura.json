@@ -3,9 +3,9 @@
   "counts": {
     "experiment": 11,
     "board": 41,
-    "instrument": 48,
+    "instrument": 53,
     "scene": 187,
-    "fallback": 326
+    "fallback": 321
   },
   "contested": 17,
   "subjects": [
@@ -125,9 +125,9 @@
       "counts": {
         "experiment": 1,
         "board": 11,
-        "instrument": 48,
+        "instrument": 53,
         "scene": 0,
-        "fallback": 23
+        "fallback": 18
       }
     },
     {
@@ -3653,40 +3653,40 @@
       "id": "summary-matematica-sistemas-de-equacoes",
       "subject": "Matemática",
       "title": "Sistemas de Equações",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "sistemas-equacoes",
       "ignored": []
     },
     {
       "id": "summary-matematica-tabelas-e-matrizes",
       "subject": "Matemática",
       "title": "Tabelas e Matrizes",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "tabelas-matrizes",
       "ignored": []
     },
     {
       "id": "summary-matematica-multiplicacao-de-matrizes",
       "subject": "Matemática",
       "title": "Multiplicação de Matrizes",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "multiplicacao-matrizes",
       "ignored": []
     },
     {
       "id": "summary-matematica-determinantes",
       "subject": "Matemática",
       "title": "Determinantes",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "determinantes",
       "ignored": []
     },
     {
       "id": "summary-matematica-discussao-de-sistemas-lineares",
       "subject": "Matemática",
       "title": "Discussão de Sistemas Lineares",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "discussao-sistemas",
       "ignored": []
     },
     {

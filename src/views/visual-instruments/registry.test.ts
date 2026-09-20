@@ -36,7 +36,7 @@ describe('registro de instrumentos', () => {
     // são Matemática e não têm instrumento: o último trata de retas e planos no
     // espaço, não de sólidos, então o instrumento de sólidos não lhe serve.
     // Preencher a tela com o que estiver à mão seria emprestar ilustração.
-    for (const topico of ['Determinantes', 'Estatística Descritiva', 'O Universo Tridimensional']) {
+    for (const topico of ['Estatística Descritiva', 'O Universo Tridimensional']) {
       const item = interactiveSummaries.find((s) => s.topic === topico);
       expect(item, `capítulo "${topico}" sumiu do currículo`).toBeDefined();
       expect(findInstrument(item!)).toBeNull();
@@ -96,6 +96,19 @@ describe('registro de instrumentos', () => {
       'modelagem-algebrica-i': 'Modelagem Algébrica de Problemas I',
       'modelagem-algebrica-ii': 'Modelagem Algébrica de Problemas II',
       'representacao-geometrica-inequacoes': 'Representação Geométrica de Inequações',
+    };
+    for (const [id, topic] of Object.entries(esperado)) {
+      expect(interactiveSummaries.filter((s) => findInstrument(s)?.id === id).map((s) => s.topic), id).toEqual([topic]);
+    }
+  });
+
+  it('cada configuração de matrizes e sistemas alcança exatamente seu capítulo', () => {
+    const esperado: Record<string, string> = {
+      'sistemas-equacoes': 'Sistemas de Equações',
+      'tabelas-matrizes': 'Tabelas e Matrizes',
+      'multiplicacao-matrizes': 'Multiplicação de Matrizes',
+      determinantes: 'Determinantes',
+      'discussao-sistemas': 'Discussão de Sistemas Lineares',
     };
     for (const [id, topic] of Object.entries(esperado)) {
       expect(interactiveSummaries.filter((s) => findInstrument(s)?.id === id).map((s) => s.topic), id).toEqual([topic]);

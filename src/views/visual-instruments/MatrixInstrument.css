@@ -1,0 +1,2 @@
+.vs-matrix text{font:600 13px var(--font-mono,monospace);fill:var(--vs-ink)}
+.vs-matrix-accent{fill:var(--vs-burgundy)!important;font-weight:800!important}.vs-matrix-axis,.vs-matrix-line,.vs-matrix-bracket{fill:none;stroke:var(--vs-ink);stroke-width:2.2}.vs-matrix-line-b{stroke:var(--vs-burgundy)}.vs-matrix-dot{fill:var(--vs-burgundy);stroke:var(--vs-paper);stroke-width:3}.vs-matrix-dotline{stroke:var(--vs-burgundy);stroke-width:3;stroke-dasharray:5 4}.vs-matrix-area{fill:color-mix(in srgb,var(--vs-burgundy) 24%,transparent);stroke:var(--vs-burgundy);stroke-width:2}
