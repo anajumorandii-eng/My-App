@@ -3,9 +3,9 @@
   "counts": {
     "experiment": 11,
     "board": 41,
-    "instrument": 97,
+    "instrument": 102,
     "scene": 187,
-    "fallback": 277
+    "fallback": 272
   },
   "contested": 17,
   "subjects": [
@@ -15,9 +15,9 @@
       "counts": {
         "experiment": 0,
         "board": 13,
-        "instrument": 26,
+        "instrument": 31,
         "scene": 9,
-        "fallback": 37
+        "fallback": 32
       }
     },
     {
@@ -1126,24 +1126,24 @@
       "id": "summary-fisica-forca-eletrica-lei-de-coulomb",
       "subject": "Física",
       "title": "Força Elétrica: Lei de Coulomb",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "lei-coulomb",
       "ignored": []
     },
     {
       "id": "summary-fisica-campo-eletrico",
       "subject": "Física",
       "title": "Campo Elétrico",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "campo-eletrico",
       "ignored": []
     },
     {
       "id": "summary-fisica-energia-potencial-e-potencial-eletrico",
       "subject": "Física",
       "title": "Energia Potencial e Potencial Elétrico",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "potencial-eletrico",
       "ignored": []
     },
     {
@@ -1158,16 +1158,16 @@
       "id": "summary-fisica-campo-eletrico-uniforme-abordagem-escalar-e-abordagem-vetorial",
       "subject": "Física",
       "title": "Campo Elétrico Uniforme: Abordagem Escalar e Abordagem Vetorial",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "campo-uniforme",
       "ignored": []
     },
     {
       "id": "summary-fisica-dinamica-das-cargas-eletricas",
       "subject": "Física",
       "title": "Dinâmica das Cargas Elétricas",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "dinamica-cargas",
       "ignored": []
     },
     {

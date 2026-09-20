@@ -133,4 +133,17 @@ describe('registro de instrumentos', () => {
       expect(interactiveSummaries.filter((s) => findInstrument(s)?.id === id).map((s) => s.topic), id).toEqual([topic]);
     }
   });
+
+  it('mantém cada instrumento eletrostático no fenômeno que ele representa', () => {
+    const esperado: Record<string, string> = {
+      'lei-coulomb': 'Força Elétrica: Lei de Coulomb',
+      'campo-eletrico': 'Campo Elétrico',
+      'potencial-eletrico': 'Energia Potencial e Potencial Elétrico',
+      'campo-uniforme': 'Campo Elétrico Uniforme: Abordagem Escalar e Abordagem Vetorial',
+      'dinamica-cargas': 'Dinâmica das Cargas Elétricas',
+    };
+    for (const [id, topic] of Object.entries(esperado)) {
+      expect(interactiveSummaries.filter((s) => findInstrument(s)?.id === id).map((s) => s.topic), id).toEqual([topic]);
+    }
+  });
 });
