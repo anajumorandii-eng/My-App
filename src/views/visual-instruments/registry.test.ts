@@ -120,4 +120,17 @@ describe('registro de instrumentos', () => {
     const aplicada = interactiveSummaries.find((s) => s.topic === 'Primeira Lei da Termodinâmica Aplicada a Algumas Transformações Particulares');
     expect(findInstrument(aplicada!)).toBeNull();
   });
+
+  it('mantém cada instrumento elétrico no capítulo da relação que ele mede', () => {
+    const esperado: Record<string, string> = {
+      'corrente-eletrica': 'Corrente Elétrica',
+      'potencia-eletrica': 'Potência Elétrica',
+      resistores: 'Resistores',
+      'leis-kirchhoff': 'Eletrodinâmica: as Leis de Kirchhoff',
+      capacitores: 'Capacitores',
+    };
+    for (const [id, topic] of Object.entries(esperado)) {
+      expect(interactiveSummaries.filter((s) => findInstrument(s)?.id === id).map((s) => s.topic), id).toEqual([topic]);
+    }
+  });
 });

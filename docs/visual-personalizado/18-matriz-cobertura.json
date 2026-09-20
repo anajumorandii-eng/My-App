@@ -3,9 +3,9 @@
   "counts": {
     "experiment": 11,
     "board": 41,
-    "instrument": 92,
+    "instrument": 97,
     "scene": 187,
-    "fallback": 282
+    "fallback": 277
   },
   "contested": 17,
   "subjects": [
@@ -15,9 +15,9 @@
       "counts": {
         "experiment": 0,
         "board": 13,
-        "instrument": 21,
+        "instrument": 26,
         "scene": 9,
-        "fallback": 42
+        "fallback": 37
       }
     },
     {
@@ -1174,24 +1174,24 @@
       "id": "summary-fisica-corrente-eletrica",
       "subject": "Física",
       "title": "Corrente Elétrica",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "corrente-eletrica",
       "ignored": []
     },
     {
       "id": "summary-fisica-potencia-eletrica",
       "subject": "Física",
       "title": "Potência Elétrica",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "potencia-eletrica",
       "ignored": []
     },
     {
       "id": "summary-fisica-resistores",
       "subject": "Física",
       "title": "Resistores",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "resistores",
       "ignored": []
     },
     {
@@ -1230,16 +1230,16 @@
       "id": "summary-fisica-eletrodinamica-as-leis-de-kirchhoff",
       "subject": "Física",
       "title": "Eletrodinâmica: as Leis de Kirchhoff",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "leis-kirchhoff",
       "ignored": []
     },
     {
       "id": "summary-fisica-capacitores",
       "subject": "Física",
       "title": "Capacitores",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "capacitores",
       "ignored": []
     },
     {
