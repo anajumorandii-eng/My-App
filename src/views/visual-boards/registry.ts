@@ -29,6 +29,7 @@ import BloodTypeBoard from './BloodTypeBoard';
 import SolutionsBoard from './SolutionsBoard';
 import NewtonBoard from './NewtonBoard';
 import FungiBoard from './FungiBoard';
+import IndependenceBoard from './IndependenceBoard';
 
 /**
  * Quais capítulos têm prancha ilustrada, e qual.
@@ -64,6 +65,12 @@ export interface BoardEntry {
 }
 
 export const BOARDS: BoardEntry[] = [
+  {
+    id: 'independencia-brasil',
+    subject: 'História',
+    keywords: ['independência do brasil'],
+    Component: IndependenceBoard,
+  },
   {
     id: 'fungos',
     subject: 'Biologia',
