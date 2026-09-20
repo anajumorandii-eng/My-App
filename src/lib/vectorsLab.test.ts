@@ -1,0 +1,1 @@
+import assert from'node:assert/strict';import test from'node:test';import{VECTORS}from'./vectorsLab';test('componentes 4 e 3 dão módulo 5',()=>assert.equal(VECTORS.vetores.readouts(4)[2].value,'5'));test('rio 3 e barco 4 dão resultante 5',()=>assert.equal(VECTORS.composicao.readouts(3)[2].value,'5 m/s'));

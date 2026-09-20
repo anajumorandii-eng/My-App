@@ -3,9 +3,9 @@
   "counts": {
     "experiment": 11,
     "board": 41,
-    "instrument": 73,
+    "instrument": 76,
     "scene": 187,
-    "fallback": 301
+    "fallback": 298
   },
   "contested": 17,
   "subjects": [
@@ -15,9 +15,9 @@
       "counts": {
         "experiment": 0,
         "board": 13,
-        "instrument": 2,
+        "instrument": 5,
         "scene": 9,
-        "fallback": 61
+        "fallback": 58
       }
     },
     {
@@ -828,24 +828,24 @@
       "id": "summary-fisica-grandezas-fisicas-e-operacoes-com-vetores",
       "subject": "Física",
       "title": "Grandezas Físicas e Operações com Vetores",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "grandezas-vetores",
       "ignored": []
     },
     {
       "id": "summary-fisica-velocidade-vetorial",
       "subject": "Física",
       "title": "Velocidade Vetorial",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "velocidade-vetorial",
       "ignored": []
     },
     {
       "id": "summary-fisica-composicao-de-movimentos",
       "subject": "Física",
       "title": "Composição de Movimentos",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "composicao-movimentos",
       "ignored": []
     },
     {
