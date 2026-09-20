@@ -3,9 +3,9 @@
   "counts": {
     "experiment": 11,
     "board": 41,
-    "instrument": 60,
+    "instrument": 71,
     "scene": 187,
-    "fallback": 314
+    "fallback": 303
   },
   "contested": 17,
   "subjects": [
@@ -125,9 +125,9 @@
       "counts": {
         "experiment": 1,
         "board": 11,
-        "instrument": 60,
+        "instrument": 71,
         "scene": 0,
-        "fallback": 11
+        "fallback": 0
       }
     },
     {
@@ -3709,16 +3709,16 @@
       "id": "summary-matematica-o-problema-da-fila",
       "subject": "Matemática",
       "title": "O Problema da Fila",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "problema-fila",
       "ignored": []
     },
     {
       "id": "summary-matematica-o-problema-do-grupo",
       "subject": "Matemática",
       "title": "O Problema do Grupo",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "problema-grupo",
       "ignored": []
     },
     {
@@ -3733,24 +3733,24 @@
       "id": "summary-matematica-operacoes-com-probabilidades",
       "subject": "Matemática",
       "title": "Operações com Probabilidades",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "operacoes-probabilidades",
       "ignored": []
     },
     {
       "id": "summary-matematica-eventos-disjuntos-e-eventos-independentes",
       "subject": "Matemática",
       "title": "Eventos Disjuntos e Eventos Independentes",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "eventos",
       "ignored": []
     },
     {
       "id": "summary-matematica-estatistica-descritiva",
       "subject": "Matemática",
       "title": "Estatística Descritiva",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "estatistica-descritiva",
       "ignored": []
     },
     {
@@ -3893,8 +3893,8 @@
       "id": "summary-matematica-relacoes-trigonometricas-em-poligonos",
       "subject": "Matemática",
       "title": "Relações Trigonométricas em Polígonos",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "trig-poligonos",
       "ignored": []
     },
     {
@@ -3909,8 +3909,8 @@
       "id": "summary-matematica-outras-razoes-trigonometricas",
       "subject": "Matemática",
       "title": "Outras Razões Trigonométricas",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "outras-razoes-trig",
       "ignored": []
     },
     {
@@ -3941,8 +3941,8 @@
       "id": "summary-matematica-o-universo-tridimensional",
       "subject": "Matemática",
       "title": "O Universo Tridimensional",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "universo-tridimensional",
       "ignored": []
     },
     {
@@ -4037,8 +4037,8 @@
       "id": "summary-matematica-introducao-ao-estudo-analitico-das-conicas",
       "subject": "Matemática",
       "title": "Introdução ao Estudo Analítico das Cônicas",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "conicas",
       "ignored": []
     },
     {
@@ -4125,8 +4125,8 @@
       "id": "summary-matematica-composicao-de-funcoes",
       "subject": "Matemática",
       "title": "Composição de Funções",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "composicao-funcoes",
       "ignored": []
     },
     {
@@ -4141,8 +4141,8 @@
       "id": "summary-matematica-funcoes-bijetoras",
       "subject": "Matemática",
       "title": "Funções Bijetoras",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "funcoes-bijetoras",
       "ignored": []
     },
     {
