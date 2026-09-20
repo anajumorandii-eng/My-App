@@ -3,11 +3,11 @@
   "counts": {
     "experiment": 11,
     "board": 41,
-    "instrument": 102,
-    "scene": 187,
-    "fallback": 272
+    "instrument": 115,
+    "scene": 186,
+    "fallback": 260
   },
-  "contested": 17,
+  "contested": 18,
   "subjects": [
     {
       "subject": "Física",
@@ -15,9 +15,9 @@
       "counts": {
         "experiment": 0,
         "board": 13,
-        "instrument": 31,
-        "scene": 9,
-        "fallback": 32
+        "instrument": 44,
+        "scene": 8,
+        "fallback": 20
       }
     },
     {
@@ -1254,40 +1254,40 @@
       "id": "summary-fisica-campo-magnetico-devido-a-corrente-em-fio-reto-e-espira-descricao-vetorial-e-aplicacoes",
       "subject": "Física",
       "title": "Campo Magnético devido à Corrente em Fio Reto e Espira: Descrição Vetorial e Aplicações",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "fio-espira",
       "ignored": []
     },
     {
       "id": "summary-fisica-forca-magnetica-e-analise-de-lancamentos-de-cargas-em-um-campo-magnetico-uniforme",
       "subject": "Física",
       "title": "Força Magnética e Análise de Lançamentos de Cargas em um Campo Magnético Uniforme",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "carga-em-b",
       "ignored": []
     },
     {
       "id": "summary-fisica-analise-de-forca-magnetica-em-fios-percorridos-por-correntes-continuas",
       "subject": "Física",
       "title": "Análise de Força Magnética em Fios Percorridos por Correntes Contínuas",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "fios-paralelos",
       "ignored": []
     },
     {
       "id": "summary-fisica-inducao-eletromagnetica-lei-de-lenz",
       "subject": "Física",
       "title": "Indução Eletromagnética: Lei de Lenz",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "lenz",
       "ignored": []
     },
     {
       "id": "summary-fisica-inducao-eletromagnetica-analise-da-corrente-induzida-em-geradores",
       "subject": "Física",
       "title": "Indução Eletromagnética: Análise da Corrente Induzida em Geradores",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "gerador-inducao",
       "ignored": []
     },
     {
@@ -1302,24 +1302,24 @@
       "id": "summary-fisica-reflexao-em-superficies-planas",
       "subject": "Física",
       "title": "Reflexão em Superfícies Planas",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "espelho-plano",
       "ignored": []
     },
     {
       "id": "summary-fisica-reflexao-em-superficies-esfericas",
       "subject": "Física",
       "title": "Reflexão em Superfícies Esféricas",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "espelho-esferico",
       "ignored": []
     },
     {
       "id": "summary-fisica-refracao-fundamentos-leis-e-aplicacoes",
       "subject": "Física",
       "title": "Refração: Fundamentos, Leis e Aplicações",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "refracao",
       "ignored": []
     },
     {
@@ -1350,9 +1350,14 @@
       "id": "summary-fisica-optica-da-visao",
       "subject": "Física",
       "title": "Óptica da Visão",
-      "primary": "scene",
-      "artifact": "tipologia",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "optica-visao",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "tipologia"
+        }
+      ]
     },
     {
       "id": "summary-fisica-microscopio-e-luneta-astronomica-ou-telescopio-refrator-nocoes-basicas",
@@ -1408,8 +1413,8 @@
       "id": "summary-fisica-intensidade-sonora",
       "subject": "Física",
       "title": "Intensidade Sonora",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "intensidade-sonora",
       "ignored": []
     },
     {
@@ -1440,8 +1445,8 @@
       "id": "summary-fisica-interferencia-de-ondas-analise-quantitativa-aplicacoes-e-batimento",
       "subject": "Física",
       "title": "Interferência de Ondas: Análise Quantitativa, Aplicações e Batimento",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "interferencia-ondas",
       "ignored": []
     },
     {
@@ -1456,8 +1461,8 @@
       "id": "summary-fisica-ondas-estacionarias-em-cordas",
       "subject": "Física",
       "title": "Ondas Estacionárias em Cordas",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "ondas-cordas",
       "ignored": []
     },
     {
@@ -1472,8 +1477,8 @@
       "id": "summary-fisica-efeito-doppler-descricao-e-estudo-quantitativo",
       "subject": "Física",
       "title": "Efeito Doppler: Descrição e Estudo Quantitativo",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "efeito-doppler",
       "ignored": []
     },
     {

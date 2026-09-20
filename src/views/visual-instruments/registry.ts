@@ -37,6 +37,12 @@ import { electricInstrument } from './ElectricInstrument';
 import type { ElectricId } from '../../lib/electricLab';
 import { electrostaticsInstrument } from './ElectrostaticsInstrument';
 import type { ElectrostaticsId } from '../../lib/electrostaticsLab';
+import { wavesInstrument } from './WavesInstrument';
+import type { WavesId } from '../../lib/wavesLab';
+import { magnetismInstrument } from './MagnetismInstrument';
+import type { MagnetismId } from '../../lib/magnetismLab';
+import { opticsInstrument } from './OpticsInstrument';
+import type { OpticsId } from '../../lib/opticsLab';
 
 /**
  * Quais capítulos ganham prancha manipulável, e com que instrumento.
@@ -112,6 +118,9 @@ function energia(id:string,topic:string,config:EnergyId):InstrumentEntry{return{
 function termo(id:string,topic:string,config:ThermoId):InstrumentEntry{return{id,subject:'Física',keywords:[topic],exactTopic:topic,Component:thermoInstrument(config)}}
 function eletrico(id:string,topic:string,config:ElectricId):InstrumentEntry{return{id,subject:'Física',keywords:[topic],exactTopic:topic,Component:electricInstrument(config)}}
 function eletrostatico(id:string,topic:string,config:ElectrostaticsId):InstrumentEntry{return{id,subject:'Física',keywords:[topic],exactTopic:topic,Component:electrostaticsInstrument(config)}}
+function ondulatorio(id:string,topic:string,config:WavesId):InstrumentEntry{return{id,subject:'Física',keywords:[topic],exactTopic:topic,Component:wavesInstrument(config)}}
+function magnetico(id:string,topic:string,config:MagnetismId):InstrumentEntry{return{id,subject:'Física',keywords:[topic],exactTopic:topic,Component:magnetismInstrument(config)}}
+function optico(id:string,topic:string,config:OpticsId):InstrumentEntry{return{id,subject:'Física',keywords:[topic],exactTopic:topic,Component:opticsInstrument(config)}}
 
 export const INSTRUMENTS: InstrumentEntry[] = [
   plano('funcoes-introducao', ['introdução às funções'], 'afim'),
@@ -202,6 +211,9 @@ export const INSTRUMENTS: InstrumentEntry[] = [
   termo('trabalho-gas','trabalho da força de pressão do gás','gas-work'),termo('primeira-lei','primeira lei da termodinâmica','first-law'),termo('ciclo-carnot','máquinas térmicas e ciclo de carnot','carnot'),
   eletrico('corrente-eletrica','corrente elétrica','current'),eletrico('potencia-eletrica','potência elétrica','power'),eletrico('resistores','resistores','resistor'),eletrico('leis-kirchhoff','eletrodinâmica: as leis de kirchhoff','kirchhoff'),eletrico('capacitores','capacitores','capacitor'),
   eletrostatico('lei-coulomb','força elétrica: lei de coulomb','coulomb'),eletrostatico('campo-eletrico','campo elétrico','field'),eletrostatico('potencial-eletrico','energia potencial e potencial elétrico','potential'),eletrostatico('campo-uniforme','campo elétrico uniforme: abordagem escalar e abordagem vetorial','uniform-field'),eletrostatico('dinamica-cargas','dinâmica das cargas elétricas','charge-dynamics'),
+  ondulatorio('intensidade-sonora','intensidade sonora','sound-intensity'),ondulatorio('interferencia-ondas','interferência de ondas: análise quantitativa, aplicações e batimento','interference'),ondulatorio('ondas-cordas','ondas estacionárias em cordas','string-harmonics'),ondulatorio('efeito-doppler','efeito doppler: descrição e estudo quantitativo','doppler'),
+  magnetico('fio-espira','campo magnético devido à corrente em fio reto e espira: descrição vetorial e aplicações','fio-espira'),magnetico('carga-em-b','força magnética e análise de lançamentos de cargas em um campo magnético uniforme','carga-em-b'),magnetico('fios-paralelos','análise de força magnética em fios percorridos por correntes contínuas','fios-paralelos'),magnetico('lenz','indução eletromagnética: lei de lenz','lenz'),magnetico('gerador-inducao','indução eletromagnética: análise da corrente induzida em geradores','gerador'),
+  optico('espelho-plano','reflexão em superfícies planas','plane-mirror'),optico('espelho-esferico','reflexão em superfícies esféricas','spherical-mirror'),optico('refracao','refração: fundamentos, leis e aplicações','refraction'),optico('optica-visao','óptica da visão','vision'),
 ];
 
 function chapterText(summary: Pick<InteractiveSummary, 'subject' | 'topic' | 'title'>): string {

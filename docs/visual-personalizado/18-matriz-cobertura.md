@@ -16,16 +16,16 @@ outro assunto. O detalhe capítulo a capítulo está em
 | --- | ---: | ---: |
 | Experimento exato | 11 | 1,8% |
 | Prancha autoral | 41 | 6,7% |
-| Instrumento | 102 | 16,6% |
-| Cena validada | 187 | 30,5% |
-| Lacuna honesta | 272 | 44,4% |
+| Instrumento | 115 | 18,8% |
+| Cena validada | 186 | 30,3% |
+| Lacuna honesta | 260 | 42,4% |
 | **Total** | **613** | |
 
 ## Por matéria
 
 | Matéria | Capítulos | Experimento exato | Prancha autoral | Instrumento | Cena validada | Lacuna honesta |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| Física | 85 | 0 | 13 | 31 | 9 | 32 |
+| Física | 85 | 0 | 13 | 44 | 8 | 20 |
 | Atualidades | 1 | 0 | 0 | 0 | 0 | 1 |
 | Biologia | 72 | 1 | 9 | 0 | 34 | 28 |
 | Geografia | 63 | 1 | 0 | 0 | 26 | 36 |
@@ -42,7 +42,7 @@ outro assunto. O detalhe capítulo a capítulo está em
 
 ## Capítulos com mais de um candidato
 
-17 capítulos têm mais de um artefato registrado. A seleção continua exclusiva: vence o primeiro da ordem acima.
+18 capítulos têm mais de um artefato registrado. A seleção continua exclusiva: vence o primeiro da ordem acima.
 
 | Capítulo | Matéria | Vence | Perde |
 | --- | --- | --- | --- |
@@ -55,6 +55,7 @@ outro assunto. O detalhe capítulo a capítulo está em
 | Sangue e Imunologia | Biologia | Prancha autoral (abo) | Cena validada (tipologia) |
 | Calor Sensível e Calor Latente | Física | Prancha autoral (calorimetria) | Cena validada (cadeia-de-derivacao) |
 | Primeira Lei da Termodinâmica Aplicada a Algumas Transformações Particulares | Física | Prancha autoral (adiabatica) | Cena validada (tipologia) |
+| Óptica da Visão | Física | Instrumento (optica-visao) | Cena validada (tipologia) |
 | Ondulatória: Ondas Eletromagnéticas | Física | Prancha autoral (ondulatoria) | Cena validada (escala-de-graus) |
 | Ondulatória: Som e suas Propriedades | Física | Prancha autoral (ondulatoria) | Cena validada (tipologia) |
 | A Independência do Brasil | História | Prancha autoral (independencia-brasil) | Cena validada (contraste-de-posicoes) |

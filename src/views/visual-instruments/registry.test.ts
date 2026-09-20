@@ -146,4 +146,41 @@ describe('registro de instrumentos', () => {
       expect(interactiveSummaries.filter((s) => findInstrument(s)?.id === id).map((s) => s.topic), id).toEqual([topic]);
     }
   });
+
+  it('mantém cada instrumento ondulatório no capítulo de seu fenômeno', () => {
+    const esperado: Record<string, string> = {
+      'intensidade-sonora': 'Intensidade Sonora',
+      'interferencia-ondas': 'Interferência de Ondas: Análise Quantitativa, Aplicações e Batimento',
+      'ondas-cordas': 'Ondas Estacionárias em Cordas',
+      'efeito-doppler': 'Efeito Doppler: Descrição e Estudo Quantitativo',
+    };
+    for (const [id, topic] of Object.entries(esperado)) {
+      expect(interactiveSummaries.filter((s) => findInstrument(s)?.id === id).map((s) => s.topic), id).toEqual([topic]);
+    }
+  });
+
+  it('mantém cada instrumento magnético no capítulo que descreve sua interação', () => {
+    const esperado: Record<string, string> = {
+      'fio-espira': 'Campo Magnético devido à Corrente em Fio Reto e Espira: Descrição Vetorial e Aplicações',
+      'carga-em-b': 'Força Magnética e Análise de Lançamentos de Cargas em um Campo Magnético Uniforme',
+      'fios-paralelos': 'Análise de Força Magnética em Fios Percorridos por Correntes Contínuas',
+      lenz: 'Indução Eletromagnética: Lei de Lenz',
+      'gerador-inducao': 'Indução Eletromagnética: Análise da Corrente Induzida em Geradores',
+    };
+    for (const [id, topic] of Object.entries(esperado)) {
+      expect(interactiveSummaries.filter((s) => findInstrument(s)?.id === id).map((s) => s.topic), id).toEqual([topic]);
+    }
+  });
+
+  it('mantém cada instrumento óptico no capítulo da construção de raios correspondente', () => {
+    const esperado: Record<string, string> = {
+      'espelho-plano': 'Reflexão em Superfícies Planas',
+      'espelho-esferico': 'Reflexão em Superfícies Esféricas',
+      refracao: 'Refração: Fundamentos, Leis e Aplicações',
+      'optica-visao': 'Óptica da Visão',
+    };
+    for (const [id, topic] of Object.entries(esperado)) {
+      expect(interactiveSummaries.filter((s) => findInstrument(s)?.id === id).map((s) => s.topic), id).toEqual([topic]);
+    }
+  });
 });
