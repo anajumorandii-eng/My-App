@@ -32,9 +32,8 @@ import {
   type NodeState, type ReconstructionGrade, type VisualMap,
 } from '../lib/visualStudy';
 import type { InteractiveSummary, RetrievalAttempt } from '../types/summary';
-import { findBoard } from './visual-boards/registry';
-import { findInstrument } from './visual-instruments/registry';
 import { resolveVisualRepresentation } from './visualRepresentation';
+import { VisualArtifact } from './VisualArtifact';
 import { ConceptChain } from './ConceptChain';
 import { VisualJourney } from './VisualJourney';
 import { MOTION_DURATION } from '../design-system/motion/tokens';
@@ -48,6 +47,13 @@ const MODE_HINT: Record<Mode, string> = {
   testar: 'Recupere sem consultar. O que você escrever vira evidência.',
   reconstruir: 'Recomponha os elos que o diagnóstico escondeu.',
 };
+const REPRESENTATION_LABEL = {
+  board: 'prancha',
+  experiment: 'experimento',
+  instrument: 'instrumento',
+  scene: 'cena',
+  fallback: 'estrutura visual',
+} as const;
 const MODES: Mode[] = ['explorar', 'testar', 'reconstruir'];
 const NODE_H = 62;
 const NODE_GAP = 46;
@@ -358,12 +364,6 @@ export default function Visual() {
   // modos e o diagnóstico, em 576 dos 613 capítulos. O aviso agora é uma peça
   // dentro da tela, não a tela.
   const representation = resolveVisualRepresentation(summary);
-  const Plate = representation === 'board'
-    ? findBoard(summary)?.Component ?? null
-    : representation === 'instrument'
-      ? findInstrument(summary)?.Component ?? null
-      : null;
-
   const question = summary.retrieval[0] ?? null;
   // A relação de índice i é desenhada sobre a aresta de índice i. O vínculo é
   // convencional — relação vem da pergunta de recuperação, aresta vem da
@@ -509,7 +509,7 @@ export default function Visual() {
 
       <div data-study-mode={mode} className={`vs-workspace${!selectedNode && !intervention ? ' vs-workspace--solo' : ''}`}>
         <motion.main key={mode} id={`visual-mode-panel-${mode}`} role="tabpanel" aria-labelledby={`visual-mode-${mode}`} className="vs-main" initial={reducedMotion ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: reducedMotion ? 0 : MOTION_DURATION.component }}>
-          {mode === 'explorar' && Plate ? (
+          {mode !== 'testar' && (
             <AnimatePresence mode="wait">
               <motion.div
                 key={summary.id}
@@ -518,12 +518,23 @@ export default function Visual() {
                 exit={reducedMotion ? undefined : { opacity: 0, y: -8 }}
                 transition={{ duration: reducedMotion ? 0 : 0.38, ease: [0.22, 1, 0.36, 1] }}
               >
-                <Plate map={map} states={states} selectedId={selectedNode} onSelect={selectNode} hiddenEdgeIds={hiddenEdgeIds} mode={mode} />
+                <VisualArtifact
+                  summary={summary}
+                  representation={representation}
+                  map={map}
+                  states={states}
+                  selectedId={selectedNode}
+                  onSelect={selectNode}
+                  hiddenEdgeIds={hiddenEdgeIds}
+                  mode={mode}
+                  activeIndex={journeyStep}
+                  onSelectStep={setJourneyStep}
+                />
               </motion.div>
             </AnimatePresence>
-          ) : null}
+          )}
 
-          {mode === 'explorar' && <VisualJourney key={summary.id} summary={summary} representation={representation} initialIndex={journeyStep} onStepChange={setJourneyStep} onPractice={() => changeMode('testar')} />}
+          {mode === 'explorar' && <VisualJourney key={summary.id} summary={summary} initialIndex={journeyStep} onStepChange={setJourneyStep} onPractice={() => changeMode('testar')} />}
 
 
           {mode !== 'testar' && <ConceptChain
@@ -550,6 +561,9 @@ export default function Visual() {
           {mode === 'testar' && (
             <section className="rounded-2xl border-2 border-indigo-200 bg-white p-5 dark:border-indigo-900 dark:bg-zinc-900">
               <h2 className="font-bold">Recuperação sem consulta</h2>
+              <p className="mt-2 text-sm text-zinc-500" data-visual-representation={representation}>
+                Você vai recuperar o capítulo a partir da mesma {REPRESENTATION_LABEL[representation]}, sem consultá-la agora.
+              </p>
               {question ? (
                 <>
                   <p className="mt-2 font-semibold">{question.prompt}</p>

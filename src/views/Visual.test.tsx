@@ -55,7 +55,7 @@ beforeEach(() => {
 });
 
 describe('Visual aprovado', () => {
-  it('retoma a etapa ao voltar de Testar sem mostrar a consulta durante o teste', async () => {
+  it('retoma a etapa ao voltar de Testar sem revelar a prancha durante o teste', async () => {
     const user = userEvent.setup();
     render(<MemoryRouter initialEntries={[rota]}><Visual /></MemoryRouter>);
     const steps = within(screen.getByRole('navigation', { name: 'Etapas do capítulo' })).getAllByRole('button');
@@ -63,6 +63,7 @@ describe('Visual aprovado', () => {
     await user.click(screen.getByRole('tab', { name: 'Testar' }));
     expect(screen.queryByRole('region', { name: 'Percurso do capítulo' })).not.toBeInTheDocument();
     expect(screen.queryByTestId('visual-study-board')).not.toBeInTheDocument();
+    expect(screen.getByText(/mesma prancha/)).toBeInTheDocument();
     await user.click(screen.getByRole('tab', { name: 'Explorar' }));
     const resumed = within(screen.getByRole('navigation', { name: 'Etapas do capítulo' })).getAllByRole('button');
     expect(resumed[2]).toHaveAttribute('aria-current', 'step');
@@ -141,6 +142,8 @@ describe('Visual aprovado', () => {
 
     await user.click(screen.getByRole('tab', { name: 'Reconstruir' }));
     expect(screen.getByRole('heading', { name: 'Reconstrução ativa' })).toBeInTheDocument();
+    expect(screen.getByTestId('visual-study-board')).toBeInTheDocument();
+    expect(screen.getByTestId('visual-study-board').closest('[data-visual-representation="board"]')).toHaveAttribute('data-study-artifact-mode', 'reconstruir');
     expect(screen.getByText(/relações em que suas evidências são mais frágeis/)).toBeInTheDocument();
   });
 
