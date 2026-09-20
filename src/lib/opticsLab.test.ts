@@ -1,18 +1,19 @@
-import { describe, expect, it } from 'vitest';
+import assert from 'node:assert/strict';
+import { describe, it } from 'node:test';
 import { angleOfRefraction, OPTICS, sphericalImageDistance } from './opticsLab';
 
 describe('laboratório de óptica', () => {
   it('conserva o ângulo no espelho plano', () => {
-    expect(OPTICS['plane-mirror'].readouts(45)[1].value).toBe('45°');
+    assert.equal(OPTICS['plane-mirror'].readouts(45)[1].value, '45°');
   });
 
   it('aproxima o raio da normal ao entrar no vidro', () => {
-    expect(angleOfRefraction(45)).toBeCloseTo(28.1, 1);
+    assert.ok(Math.abs(angleOfRefraction(45) - 28.1) < 0.05);
   });
 
   it('troca o sinal da imagem ao cruzar o foco do espelho', () => {
-    expect(sphericalImageDistance(60)).toBeCloseTo(60);
-    expect(sphericalImageDistance(20)).toBeCloseTo(-60);
-    expect(sphericalImageDistance(30)).toBeNull();
+    assert.ok(Math.abs((sphericalImageDistance(60) ?? 0) - 60) < 0.005);
+    assert.ok(Math.abs((sphericalImageDistance(20) ?? 0) + 60) < 0.005);
+    assert.equal(sphericalImageDistance(30), null);
   });
 });
