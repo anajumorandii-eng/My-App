@@ -3,9 +3,9 @@
   "counts": {
     "experiment": 11,
     "board": 41,
-    "instrument": 80,
+    "instrument": 84,
     "scene": 187,
-    "fallback": 294
+    "fallback": 290
   },
   "contested": 17,
   "subjects": [
@@ -15,9 +15,9 @@
       "counts": {
         "experiment": 0,
         "board": 13,
-        "instrument": 9,
+        "instrument": 13,
         "scene": 9,
-        "fallback": 54
+        "fallback": 50
       }
     },
     {
@@ -908,16 +908,16 @@
       "id": "summary-fisica-leis-da-gravitacao",
       "subject": "Física",
       "title": "Leis da Gravitação",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "gravidade",
       "ignored": []
     },
     {
       "id": "summary-fisica-dinamica-do-movimento-circular",
       "subject": "Física",
       "title": "Dinâmica do Movimento Circular",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "dinamica-circular",
       "ignored": []
     },
     {
@@ -932,16 +932,16 @@
       "id": "summary-fisica-orbitas",
       "subject": "Física",
       "title": "Órbitas",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "orbitas",
       "ignored": []
     },
     {
       "id": "summary-fisica-balistica",
       "subject": "Física",
       "title": "Balística",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "balistica",
       "ignored": []
     },
     {

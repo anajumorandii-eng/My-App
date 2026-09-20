@@ -27,6 +27,8 @@ import { vectorsInstrument } from './VectorsInstrument';
 import type { VectorId } from '../../lib/vectorsLab';
 import { dynamicsInstrument } from './DynamicsInstrument';
 import type { DynamicsId } from '../../lib/dynamicsLab';
+import { orbitalInstrument } from './OrbitalInstrument';
+import type { OrbitalId } from '../../lib/orbitalLab';
 
 /**
  * Quais capítulos ganham prancha manipulável, e com que instrumento.
@@ -97,6 +99,7 @@ function restante(id:string,topic:string,config:RemainingId):InstrumentEntry{ret
 function cinetica(id:string,topic:string,config:KinematicsId):InstrumentEntry{return{id,subject:'Física',keywords:[topic],exactTopic:topic,Component:kinematicsInstrument(config)}}
 function vetor(id:string,topic:string,config:VectorId):InstrumentEntry{return{id,subject:'Física',keywords:[topic],exactTopic:topic,Component:vectorsInstrument(config)}}
 function dinamica(id:string,topic:string,config:DynamicsId):InstrumentEntry{return{id,subject:'Física',keywords:[topic],exactTopic:topic,Component:dynamicsInstrument(config)}}
+function orbital(id:string,topic:string,config:OrbitalId):InstrumentEntry{return{id,subject:'Física',keywords:[topic],exactTopic:topic,Component:orbitalInstrument(config)}}
 
 export const INSTRUMENTS: InstrumentEntry[] = [
   plano('funcoes-introducao', ['introdução às funções'], 'afim'),
@@ -182,6 +185,7 @@ export const INSTRUMENTS: InstrumentEntry[] = [
   cinetica('movimento-uniforme','movimento uniforme','mu'),cinetica('movimento-uniformemente-variado','movimento uniformemente variado','muv'),
   vetor('grandezas-vetores','grandezas físicas e operações com vetores','vetores'),vetor('velocidade-vetorial','velocidade vetorial','velocidade'),vetor('composicao-movimentos','composição de movimentos','composicao'),
   dinamica('resultante-forcas','resultante de um sistema de forças','resultante'),dinamica('forca-contato','a força de contato','contato'),dinamica('corpos-interagindo','sistema de corpos interagindo e os elementos transmissores de força','corpos'),dinamica('plano-inclinado','plano inclinado','plano'),
+  orbital('gravidade','leis da gravitação','gravidade'),orbital('dinamica-circular','dinâmica do movimento circular','circular'),orbital('orbitas','órbitas','orbitas'),orbital('balistica','balística','balistica'),
 ];
 
 function chapterText(summary: Pick<InteractiveSummary, 'subject' | 'topic' | 'title'>): string {
