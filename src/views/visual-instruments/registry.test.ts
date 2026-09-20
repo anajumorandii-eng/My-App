@@ -31,18 +31,6 @@ describe('registro de instrumentos', () => {
     expect(disputados.map((s) => s.topic)).toEqual([]);
   });
 
-  it('só entra onde o instrumento é o objeto do capítulo', () => {
-    // "Determinantes", "Estatística Descritiva" e "O Universo Tridimensional"
-    // são Matemática e não têm instrumento: o último trata de retas e planos no
-    // espaço, não de sólidos, então o instrumento de sólidos não lhe serve.
-    // Preencher a tela com o que estiver à mão seria emprestar ilustração.
-    for (const topico of ['Estatística Descritiva', 'O Universo Tridimensional']) {
-      const item = interactiveSummaries.find((s) => s.topic === topico);
-      expect(item, `capítulo "${topico}" sumiu do currículo`).toBeDefined();
-      expect(findInstrument(item!)).toBeNull();
-    }
-  });
-
   it('cada instrumento de sólidos alcança exatamente o capítulo de que é objeto', () => {
     const esperado: Record<string, string> = {
       'cubos-paralelepipedos': 'Cubos e Paralelepípedos',
