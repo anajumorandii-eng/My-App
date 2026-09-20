@@ -4,9 +4,11 @@ import type { BoardProps } from '../visual-boards/types';
 import { cartesianInstrument } from './CartesianInstrument';
 import { analyticInstrument } from './AnalyticInstrument';
 import { solidInstrument } from './SolidInstrument';
+import { planarGeometryInstrument } from './PlanarGeometryInstrument';
 import type { FamilyId } from '../../lib/curveFamilies';
 import type { ConfigId } from '../../lib/analyticPlane';
 import type { SolidConfigId } from '../../lib/solidInstruments';
+import type { PlanarConfigId } from '../../lib/planarGeometry';
 
 /**
  * Quais capítulos ganham prancha manipulável, e com que instrumento.
@@ -50,6 +52,10 @@ function solido(id: string, keywords: string[], config: SolidConfigId): Instrume
   return { id, subject: 'Matemática', keywords, Component: solidInstrument(config) };
 }
 
+function geometriaPlana(id: string, keywords: string[], config: PlanarConfigId): InstrumentEntry {
+  return { id, subject: 'Matemática', keywords, Component: planarGeometryInstrument(config) };
+}
+
 export const INSTRUMENTS: InstrumentEntry[] = [
   plano('funcoes-introducao', ['introdução às funções'], 'afim'),
   plano('funcao-afim', ['função afim'], 'afim'),
@@ -84,6 +90,20 @@ export const INSTRUMENTS: InstrumentEntry[] = [
   solido('piramides', ['pirâmides'], 'piramide'),
   solido('solidos-de-revolucao', ['sólidos de revolução'], 'revolucao'),
   solido('razoes-entre-volumes', ['razões entre volumes de sólidos'], 'semelhanca'),
+
+  // Geometria plana: nove capítulos compartilham o laboratório, mas cada um
+  // recebe configuração, desenho, controle e invariável próprios.
+  geometriaPlana('geometria-plana-fundamentos', ['introdução à geometria plana'], 'fundamentos'),
+  geometriaPlana('angulos-triangulo', ['ângulos em triângulos'], 'angulos-triangulo'),
+  geometriaPlana('angulos-poligono', ['ângulos em polígonos'], 'angulos-poligono'),
+  geometriaPlana('angulos-circunferencia', ['ângulos e circunferências'], 'angulos-circunferencia'),
+  geometriaPlana('simetrias-congruencias', ['simetrias e congruências'], 'congruencia'),
+  // II precisa vir antes de I: o resolvedor trabalha por inclusão textual e o
+  // título "Identificação de Simetrias II" também contém o prefixo de I.
+  geometriaPlana('simetrias-ii', ['identificação de simetrias ii'], 'simetria-ii'),
+  geometriaPlana('simetrias-i', ['identificação de simetrias i'], 'simetria-i'),
+  geometriaPlana('geometria-proporcionalidade', ['geometria da proporcionalidade'], 'tales'),
+  geometriaPlana('semelhanca-triangulos', ['semelhança de triângulos'], 'semelhanca'),
 ];
 
 function chapterText(summary: Pick<InteractiveSummary, 'subject' | 'topic' | 'title'>): string {

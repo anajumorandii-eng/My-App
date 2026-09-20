@@ -3,9 +3,9 @@
   "counts": {
     "experiment": 11,
     "board": 41,
-    "instrument": 27,
+    "instrument": 36,
     "scene": 187,
-    "fallback": 347
+    "fallback": 338
   },
   "contested": 17,
   "subjects": [
@@ -125,9 +125,9 @@
       "counts": {
         "experiment": 1,
         "board": 11,
-        "instrument": 27,
+        "instrument": 36,
         "scene": 0,
-        "fallback": 44
+        "fallback": 35
       }
     },
     {
@@ -3757,72 +3757,72 @@
       "id": "summary-matematica-introducao-a-geometria-plana",
       "subject": "Matemática",
       "title": "Introdução à Geometria Plana",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "geometria-plana-fundamentos",
       "ignored": []
     },
     {
       "id": "summary-matematica-angulos-em-triangulos",
       "subject": "Matemática",
       "title": "Ângulos em Triângulos",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "angulos-triangulo",
       "ignored": []
     },
     {
       "id": "summary-matematica-angulos-em-poligonos",
       "subject": "Matemática",
       "title": "Ângulos em Polígonos",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "angulos-poligono",
       "ignored": []
     },
     {
       "id": "summary-matematica-angulos-e-circunferencias",
       "subject": "Matemática",
       "title": "Ângulos e Circunferências",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "angulos-circunferencia",
       "ignored": []
     },
     {
       "id": "summary-matematica-simetrias-e-congruencias",
       "subject": "Matemática",
       "title": "Simetrias e Congruências",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "simetrias-congruencias",
       "ignored": []
     },
     {
       "id": "summary-matematica-identificacao-de-simetrias-i",
       "subject": "Matemática",
       "title": "Identificação de Simetrias I",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "simetrias-i",
       "ignored": []
     },
     {
       "id": "summary-matematica-identificacao-de-simetrias-ii",
       "subject": "Matemática",
       "title": "Identificação de Simetrias II",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "simetrias-ii",
       "ignored": []
     },
     {
       "id": "summary-matematica-a-geometria-da-proporcionalidade",
       "subject": "Matemática",
       "title": "A Geometria da Proporcionalidade",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "geometria-proporcionalidade",
       "ignored": []
     },
     {
       "id": "summary-matematica-semelhanca-de-triangulos",
       "subject": "Matemática",
       "title": "Semelhança de Triângulos",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "semelhanca-triangulos",
       "ignored": []
     },
     {

@@ -56,4 +56,21 @@ describe('registro de instrumentos', () => {
       expect(alcancados, id).toEqual([topico]);
     }
   });
+
+  it('cada configuração de geometria plana alcança exatamente seu capítulo', () => {
+    const esperado: Record<string, string> = {
+      'geometria-plana-fundamentos': 'Introdução à Geometria Plana',
+      'angulos-triangulo': 'Ângulos em Triângulos',
+      'angulos-poligono': 'Ângulos em Polígonos',
+      'angulos-circunferencia': 'Ângulos e Circunferências',
+      'simetrias-congruencias': 'Simetrias e Congruências',
+      'simetrias-i': 'Identificação de Simetrias I',
+      'simetrias-ii': 'Identificação de Simetrias II',
+      'geometria-proporcionalidade': 'A Geometria da Proporcionalidade',
+      'semelhanca-triangulos': 'Semelhança de Triângulos',
+    };
+    for (const [id, topic] of Object.entries(esperado)) {
+      expect(interactiveSummaries.filter((s) => findInstrument(s)?.id === id).map((s) => s.topic), id).toEqual([topic]);
+    }
+  });
 });

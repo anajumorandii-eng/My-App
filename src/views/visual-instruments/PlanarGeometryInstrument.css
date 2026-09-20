@@ -1,0 +1,11 @@
+.dark .crivo-visual .vs-planar-instrument { --vs-burgundy: #e0788d; }
+.vs-planar { min-height: 300px; }
+.vs-planar text { fill: var(--vs-ink); font: italic 11px ui-monospace, 'SFMono-Regular', Menlo, monospace; paint-order: stroke; stroke: var(--vs-paper-strong); stroke-width: 3px; }
+.vs-planar-main, .vs-planar-accent, .vs-planar-guide { fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.vs-planar-main { stroke: var(--vs-ink); stroke-width: 2; }
+.vs-planar-accent { stroke: var(--vs-burgundy); stroke-width: 3; }
+.vs-planar-guide { stroke: var(--vs-blue); stroke-width: 1.5; stroke-dasharray: 5 4; }
+.vs-planar-fill { fill: var(--vs-mint); fill-opacity: .42; stroke: var(--vs-ink); stroke-width: 2; stroke-linejoin: round; }
+.vs-planar-copy { fill: var(--vs-amber); fill-opacity: .4; stroke: var(--vs-burgundy); }
+.vs-planar-point { fill: var(--vs-burgundy); stroke: var(--vs-paper-strong); stroke-width: 2; }
+@media (max-width: 520px) { .vs-planar { min-height: 260px; } }
