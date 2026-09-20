@@ -4,17 +4,27 @@ import { Firestore } from 'firebase-admin/firestore';
 import { FirestorePushSubscriptionStore, PushSubscriptionJson } from './subscriptionStore';
 import { pendingReviewCount } from '../../src/lib/reviewUrgency';
 import { TopicMastery } from '../../src/types';
+import { safePushEndpoint } from './pushEndpointPolicy';
 import { VapidConfig, webPush } from './webPush';
 
-function isValidSubscription(body: unknown): body is PushSubscriptionJson {
+// Devolve a inscrição já com o endpoint na forma canônica, ou null se o corpo
+// não tem o formato certo ou o endpoint não é de um serviço de push conhecido.
+function parseSubscription(body: unknown): PushSubscriptionJson | null {
   const value = body as Partial<PushSubscriptionJson> | null;
-  return Boolean(
-    value &&
-    typeof value.endpoint === 'string' &&
-    value.keys &&
-    typeof value.keys.p256dh === 'string' &&
-    typeof value.keys.auth === 'string',
-  );
+  const endpoint = safePushEndpoint(value?.endpoint);
+  if (!endpoint || !value?.keys || typeof value.keys.p256dh !== 'string' || typeof value.keys.auth !== 'string') {
+    return null;
+  }
+  return { endpoint, keys: { p256dh: value.keys.p256dh, auth: value.keys.auth } };
+}
+
+// Só o host vai para o log: o resto do endpoint carrega o token da inscrição.
+function hostForLog(endpoint: unknown): string {
+  try {
+    return new URL(String(endpoint)).hostname || 'inválido';
+  } catch {
+    return 'inválido';
+  }
 }
 
 export function createPushRouter(db: Firestore, vapidPublicKey: string | undefined, requireAuth: RequestHandler): Router {
@@ -28,11 +38,12 @@ export function createPushRouter(db: Firestore, vapidPublicKey: string | undefin
 
   router.post('/subscribe', requireAuth, async (req, res) => {
     const userId = res.locals.userId as string;
-    if (!isValidSubscription(req.body)) {
+    const subscription = parseSubscription(req.body);
+    if (!subscription) {
       return res.status(400).json({ error: 'Inscrição de notificação inválida.', code: 'INVALID_SUBSCRIPTION' });
     }
     try {
-      await store.save(userId, { endpoint: req.body.endpoint, keys: req.body.keys });
+      await store.save(userId, subscription);
       res.status(204).end();
     } catch (error) {
       console.error('Failed to save push subscription:', error);
@@ -76,8 +87,20 @@ export function createReviewReminderRouter(db: Firestore, vapid: VapidConfig | n
     let sent = 0;
     let skipped = 0;
     let failed = 0;
+    let rejected = 0;
 
     for (const { uid, subscription } of subscriptions) {
+      // O documento pode ter sido escrito direto pelo navegador da aluna
+      // (firestore.rules), então /subscribe não garante nada sobre o que está
+      // guardado. Não apagamos a inscrição: se a lista de hosts ficar
+      // defasada, apagar tiraria o lembrete de uma aluna legítima sem volta.
+      const endpoint = safePushEndpoint(subscription.endpoint);
+      if (!endpoint) {
+        rejected += 1;
+        console.warn(`Push subscription of ${uid} ignored: host ${hostForLog(subscription.endpoint)} is not a known push service.`);
+        continue;
+      }
+
       if (subscription.lastReminderSentDate === today) {
         skipped += 1;
         continue;
@@ -92,7 +115,7 @@ export function createReviewReminderRouter(db: Firestore, vapid: VapidConfig | n
           continue;
         }
 
-        await webPush.sendNotification(subscription, JSON.stringify({
+        await webPush.sendNotification({ endpoint, keys: subscription.keys }, JSON.stringify({
           title: 'Revisões pendentes no Crivo',
           body: pending === 1
             ? 'Você tem 1 tópico urgente esperando revisão hoje.'
@@ -113,7 +136,7 @@ export function createReviewReminderRouter(db: Firestore, vapid: VapidConfig | n
       }
     }
 
-    res.json({ sent, skipped, failed, total: subscriptions.length });
+    res.json({ sent, skipped, failed, rejected, total: subscriptions.length });
   });
 
   return router;
