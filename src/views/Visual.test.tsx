@@ -94,9 +94,9 @@ describe('Visual aprovado', () => {
     expect(card).not.toBeNull();
     await user.click(card!);
 
-    expect(screen.getByRole('dialog', { name: 'Conceito selecionado' })).toBeInTheDocument();
+    expect(screen.getByRole('complementary', { name: 'Conceito selecionado' })).toBeInTheDocument();
     await user.click(screen.getByRole('button', { name: 'Fechar inspetor' }));
-    expect(screen.queryByRole('dialog', { name: 'Conceito selecionado' })).not.toBeInTheDocument();
+    expect(screen.queryByRole('complementary', { name: 'Conceito selecionado' })).not.toBeInTheDocument();
   });
 
   it('fecha o inspetor ao mudar de modo', async () => {
@@ -104,10 +104,10 @@ describe('Visual aprovado', () => {
     render(<MemoryRouter initialEntries={[rota]}><Visual /></MemoryRouter>);
 
     await user.click(screen.getByText('Compressão adiabática').closest('button')!);
-    expect(screen.getByRole('dialog', { name: 'Conceito selecionado' })).toBeInTheDocument();
+    expect(screen.getByRole('complementary', { name: 'Conceito selecionado' })).toBeInTheDocument();
 
     await user.click(screen.getByRole('tab', { name: 'Testar' }));
-    expect(screen.queryByRole('dialog', { name: 'Conceito selecionado' })).not.toBeInTheDocument();
+    expect(screen.queryByRole('complementary', { name: 'Conceito selecionado' })).not.toBeInTheDocument();
     expect(screen.getByRole('heading', { name: 'Recuperação sem consulta' })).toBeInTheDocument();
   });
 
@@ -214,8 +214,8 @@ describe('Visual aprovado', () => {
     render(<MemoryRouter initialEntries={[rota]}><Visual /></MemoryRouter>);
 
     await user.click(screen.getByText('Expansão adiabática').closest('button')!);
-    const dialog = screen.getByRole('dialog', { name: 'Conceito selecionado' });
-    expect(within(dialog).getAllByText(/hipótese, não fato/i).length).toBeGreaterThan(0);
+    const inspector = screen.getByRole('complementary', { name: 'Conceito selecionado' });
+    expect(within(inspector).getAllByText(/hipótese, não fato/i).length).toBeGreaterThan(0);
   });
 });
 

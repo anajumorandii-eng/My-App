@@ -6,16 +6,17 @@ import { STAGE_LABEL } from '../lib/visualStudy';
 import type { InteractiveSummary } from '../types/summary';
 import { TopicVisual } from './TopicVisual';
 import { TopicFallbackVisual } from './TopicFallbackVisual';
-import { findBoard } from './visual-boards/registry';
-import { findInstrument } from './visual-instruments/registry';
 import { TopicExperiment } from './topic-experiments/TopicExperiment';
-import { topicExperiments } from './topic-experiments/catalog';
 import { TopicScene } from './topic-scenes/TopicScene';
-import { sceneFor } from './topic-scenes/sceneFor';
+import type { VisualRepresentation } from './visualRepresentation';
 
 /** The section order and all teaching text come from the chapter, not a subject template. */
-export function VisualJourney({ summary, onPractice, initialIndex = 0, onStepChange }: {
-  summary: InteractiveSummary; onPractice: () => void; initialIndex?: number; onStepChange?: (index: number) => void;
+export function VisualJourney({ summary, representation, onPractice, initialIndex = 0, onStepChange }: {
+  summary: InteractiveSummary;
+  representation: VisualRepresentation;
+  onPractice: () => void;
+  initialIndex?: number;
+  onStepChange?: (index: number) => void;
 }) {
   const [index, setIndex] = useState(initialIndex);
   const [direction, setDirection] = useState(1);
@@ -23,13 +24,6 @@ export function VisualJourney({ summary, onPractice, initialIndex = 0, onStepCha
   const section = summary.sections[index];
   if (!section) return null;
   const go = (next: number) => { setDirection(next > index ? 1 : -1); setIndex(next); onStepChange?.(next); };
-  const hasDedicatedVisual = Boolean(
-    topicExperiments[summary.id]
-    || sceneFor(summary.id)
-    || findBoard(summary)
-    || findInstrument(summary),
-  );
-
   return (
     <section className="vs-journey" aria-label="Percurso do capítulo" data-subject={summary.subject}>
       <header className="vs-journey-heading">
@@ -48,11 +42,11 @@ export function VisualJourney({ summary, onPractice, initialIndex = 0, onStepCha
       <div className="vs-journey-progress" aria-hidden="true"><motion.div
         animate={{ scaleX: (index + 1) / summary.sections.length }}
         transition={{ duration: reduced ? 0 : MOTION_DURATION.panel, ease: MOTION_EASE }} /></div>
-      {!hasDedicatedVisual && (
+      {representation === 'fallback' && (
         <TopicFallbackVisual summary={summary} activeIndex={index} onSelectStep={go} />
       )}
-      <TopicExperiment key={summary.id} summaryId={summary.id} />
-      <TopicScene key={`cena-${summary.id}`} summaryId={summary.id} />
+      {representation === 'experiment' && <TopicExperiment key={summary.id} summaryId={summary.id} />}
+      {representation === 'scene' && <TopicScene key={`cena-${summary.id}`} summaryId={summary.id} />}
       <AnimatePresence initial={false} mode="wait">
         <motion.article key={section.id} className="vs-journey-page"
           initial={{ opacity: reduced ? 1 : 0, x: reduced ? 0 : direction * 12 }}

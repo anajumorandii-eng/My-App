@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { AnimatePresence, motion, useReducedMotion } from 'motion/react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { ArrowLeft, Compass, HelpCircle, RotateCcw, Search, Undo2, Waypoints, X } from 'lucide-react';
@@ -32,8 +32,9 @@ import {
   type NodeState, type ReconstructionGrade, type VisualMap,
 } from '../lib/visualStudy';
 import type { InteractiveSummary, RetrievalAttempt } from '../types/summary';
-import { findBoard, supportsIllustratedBoard } from './visual-boards/registry';
+import { findBoard } from './visual-boards/registry';
 import { findInstrument } from './visual-instruments/registry';
+import { resolveVisualRepresentation } from './visualRepresentation';
 import { ConceptChain } from './ConceptChain';
 import { VisualJourney } from './VisualJourney';
 import { MOTION_DURATION } from '../design-system/motion/tokens';
@@ -47,6 +48,7 @@ const MODE_HINT: Record<Mode, string> = {
   testar: 'Recupere sem consultar. O que você escrever vira evidência.',
   reconstruir: 'Recomponha os elos que o diagnóstico escondeu.',
 };
+const MODES: Mode[] = ['explorar', 'testar', 'reconstruir'];
 const NODE_H = 62;
 const NODE_GAP = 46;
 const PLATE_W = 380;
@@ -212,7 +214,7 @@ function Inspector({
     : node.excerpt;
 
   return (
-    <div className="vs-inspector" role="dialog" aria-modal="true" aria-label="Conceito selecionado">
+    <div className="vs-inspector">
       <div className="vs-inspector-head">
         <div>
           <span>Conceito selecionado</span>
@@ -283,6 +285,7 @@ export default function Visual() {
   const [history, setHistory] = useState<Record<string, string>[]>([]);
   const [grades, setGrades] = useState<Record<string, { grade: ReconstructionGrade; feedback: string }>>({});
   const [showWhyHidden, setShowWhyHidden] = useState(false);
+  const selectionTriggerRef = useRef<HTMLElement | null>(null);
 
   const summary = summaryId ? interactiveSummaries.find((item) => item.id === summaryId) : undefined;
   const map = useMemo(() => (summary ? buildVisualMap(summary) : null), [summary]);
@@ -305,6 +308,16 @@ export default function Visual() {
     setMode(next);
     setSelectedNode(null);
     setDisagreed(false);
+  };
+
+  const selectNode = (nodeId: string) => {
+    selectionTriggerRef.current = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    setSelectedNode(nodeId);
+  };
+
+  const closeInspector = () => {
+    setSelectedNode(null);
+    selectionTriggerRef.current?.focus();
   };
 
   // Trocar de capítulo tem de limpar a mesa: manter resposta e peças da anterior
@@ -344,7 +357,12 @@ export default function Visual() {
   // prancha — e não era só a ilustração que sumia: iam junto o mapa, os três
   // modos e o diagnóstico, em 576 dos 613 capítulos. O aviso agora é uma peça
   // dentro da tela, não a tela.
-  const Plate = (findBoard(summary) ?? findInstrument(summary))?.Component ?? null;
+  const representation = resolveVisualRepresentation(summary);
+  const Plate = representation === 'board'
+    ? findBoard(summary)?.Component ?? null
+    : representation === 'instrument'
+      ? findInstrument(summary)?.Component ?? null
+      : null;
 
   const question = summary.retrieval[0] ?? null;
   // A relação de índice i é desenhada sobre a aresta de índice i. O vínculo é
@@ -413,12 +431,26 @@ export default function Visual() {
       <div className="vs-study-toolbar">
       <div className="vs-mode-row">
       <div role="tablist" aria-label="Modo de estudo" className="vs-modes">
-        {(Object.keys(MODE_LABEL) as Mode[]).map((key) => (
+        {MODES.map((key) => (
           <button
             key={key}
+            id={`visual-mode-${key}`}
             role="tab"
             aria-selected={mode === key}
+            aria-controls={`visual-mode-panel-${key}`}
+            tabIndex={mode === key ? 0 : -1}
             onClick={() => changeMode(key)}
+            onKeyDown={(event) => {
+              const current = MODES.indexOf(key);
+              const next = event.key === 'ArrowRight' ? (current + 1) % MODES.length
+                : event.key === 'ArrowLeft' ? (current - 1 + MODES.length) % MODES.length
+                  : event.key === 'Home' ? 0 : event.key === 'End' ? MODES.length - 1 : null;
+              if (next === null) return;
+              event.preventDefault();
+              const nextMode = MODES[next];
+              changeMode(nextMode);
+              document.getElementById(`visual-mode-${nextMode}`)?.focus();
+            }}
             className="transition"
           >
             <ModeGlyph mode={key} />
@@ -476,7 +508,7 @@ export default function Visual() {
       )}
 
       <div data-study-mode={mode} className={`vs-workspace${!selectedNode && !intervention ? ' vs-workspace--solo' : ''}`}>
-        <motion.main key={mode} className="vs-main" initial={reducedMotion ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: reducedMotion ? 0 : MOTION_DURATION.component }}>
+        <motion.main key={mode} id={`visual-mode-panel-${mode}`} role="tabpanel" aria-labelledby={`visual-mode-${mode}`} className="vs-main" initial={reducedMotion ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: reducedMotion ? 0 : MOTION_DURATION.component }}>
           {mode === 'explorar' && Plate ? (
             <AnimatePresence mode="wait">
               <motion.div
@@ -486,19 +518,19 @@ export default function Visual() {
                 exit={reducedMotion ? undefined : { opacity: 0, y: -8 }}
                 transition={{ duration: reducedMotion ? 0 : 0.38, ease: [0.22, 1, 0.36, 1] }}
               >
-                <Plate map={map} states={states} selectedId={selectedNode} onSelect={setSelectedNode} hiddenEdgeIds={hiddenEdgeIds} mode={mode} />
+                <Plate map={map} states={states} selectedId={selectedNode} onSelect={selectNode} hiddenEdgeIds={hiddenEdgeIds} mode={mode} />
               </motion.div>
             </AnimatePresence>
           ) : null}
 
-          {mode === 'explorar' && <VisualJourney key={summary.id} summary={summary} initialIndex={journeyStep} onStepChange={setJourneyStep} onPractice={() => changeMode('testar')} />}
+          {mode === 'explorar' && <VisualJourney key={summary.id} summary={summary} representation={representation} initialIndex={journeyStep} onStepChange={setJourneyStep} onPractice={() => changeMode('testar')} />}
 
 
           {mode !== 'testar' && <ConceptChain
             map={map}
             states={states}
             selectedId={selectedNode}
-            onSelect={setSelectedNode}
+            onSelect={selectNode}
             hiddenEdgeIds={hiddenEdgeIds}
             escondendo={mode === 'reconstruir'}
           />}
@@ -674,15 +706,15 @@ export default function Visual() {
 
         {mode === 'explorar' && selectedNode ? (
           <>
-            <button type="button" className="vs-inspector-backdrop" onClick={() => setSelectedNode(null)} aria-label="Fechar conceito selecionado" />
-            <aside className="vs-inspector-shell">
+            <button type="button" className="vs-inspector-backdrop" onClick={closeInspector} aria-label="Fechar conceito selecionado" />
+            <aside className="vs-inspector-shell" aria-label="Conceito selecionado">
               <Inspector
                 map={map}
                 summary={summary}
                 nodeId={selectedNode}
                 answers={answers}
                 disagreed={disagreed}
-                onClose={() => setSelectedNode(null)}
+                onClose={closeInspector}
                 onDisagree={() => setDisagreed((value) => !value)}
                 onModeChange={changeMode}
                 onOpenSummary={(sectionId) => navigate('/resumos?summary=' + encodeURIComponent(summary.id) + '#' + sectionId)}
