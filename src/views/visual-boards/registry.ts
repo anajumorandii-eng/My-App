@@ -29,6 +29,7 @@ import BloodTypeBoard from './BloodTypeBoard';
 import SolutionsBoard from './SolutionsBoard';
 import NewtonBoard from './NewtonBoard';
 import FungiBoard from './FungiBoard';
+import EnzymeBoard from './EnzymeBoard';
 import IndependenceBoard from './IndependenceBoard';
 
 /**
@@ -76,6 +77,12 @@ export const BOARDS: BoardEntry[] = [
     subject: 'Biologia',
     keywords: ['fungos'],
     Component: FungiBoard,
+  },
+  {
+    id: 'enzimas',
+    subject: 'Biologia',
+    keywords: ['proteínas', 'enzimas'],
+    Component: EnzymeBoard,
   },
   {
     id: 'leis-newton',

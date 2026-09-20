@@ -2,10 +2,10 @@
   "total": 613,
   "counts": {
     "experiment": 11,
-    "board": 40,
+    "board": 41,
     "instrument": 27,
     "scene": 187,
-    "fallback": 348
+    "fallback": 347
   },
   "contested": 17,
   "subjects": [
@@ -36,10 +36,10 @@
       "chapters": 72,
       "counts": {
         "experiment": 1,
-        "board": 8,
+        "board": 9,
         "instrument": 0,
         "scene": 34,
-        "fallback": 29
+        "fallback": 28
       }
     },
     {
@@ -347,8 +347,8 @@
       "id": "summary-biologia-proteinas-enzimas",
       "subject": "Biologia",
       "title": "Proteínas: Enzimas",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "board",
+      "artifact": "enzimas",
       "ignored": []
     },
     {

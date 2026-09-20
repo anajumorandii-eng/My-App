@@ -27,6 +27,12 @@ describe('registro de pranchas', () => {
     expect(findBoard(summary!)?.id).toBe('fungos');
   });
 
+  it('entrega a prancha de catálise somente ao capítulo de enzimas', () => {
+    const summary = interactiveSummaries.find((item) => item.id === 'summary-biologia-proteinas-enzimas');
+    expect(summary).toBeDefined();
+    expect(findBoard(summary!)?.id).toBe('enzimas');
+  });
+
   it('entrega a prancha causal somente à Independência do Brasil', () => {
     const summary = interactiveSummaries.find((item) => item.id === 'summary-historia-a-independencia-do-brasil');
     expect(summary).toBeDefined();
