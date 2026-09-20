@@ -1,13 +1,19 @@
 import { timingSafeEqual } from 'node:crypto';
-import { Router } from 'express';
+import { RequestHandler, Router } from 'express';
 import { Firestore } from 'firebase-admin/firestore';
 import { referenceDocId } from '../ai/apostilaReferenceStore';
+import { jsonBodyAfter } from '../http/jsonBodyAfter';
 
 // Payload já vem pronto do pipeline local (scripts/split-chapters.py +
 // scripts/upload-apostila-references.ts) — essa rota só existe pra dar um
 // jeito de escrever isso na produção sem exigir credenciais de service
 // account fora do próprio Cloud Run, que já tem acesso ao Firestore.
 const MAX_STORED_CHARS = 200_000;
+
+// Uma apostila inteira em texto passa longe dos 64kb do parser global, por
+// isso este roteador lê o próprio corpo. E só o lê depois do segredo: esta
+// rota é pública na internet, protegida apenas por ele.
+const INGEST_BODY_LIMIT = '20mb';
 
 interface IngestChunk {
   chapter: string;
@@ -28,14 +34,19 @@ function isValidSecret(provided: unknown, expected: string): boolean {
   return timingSafeEqual(Buffer.from(provided), Buffer.from(expected));
 }
 
-export function createApostilaIngestRouter(db: Firestore, ingestSecret: string | undefined): Router {
-  const router = Router();
-
-  router.post('/apostila-references', async (req, res) => {
+function requireIngestSecret(ingestSecret: string | undefined): RequestHandler {
+  return (req, res, next) => {
     if (!ingestSecret || !isValidSecret(req.headers['x-ingest-secret'], ingestSecret)) {
       return res.status(401).json({ error: 'Não autorizado.', code: 'INGEST_UNAUTHORIZED' });
     }
+    next();
+  };
+}
 
+export function createApostilaIngestRouter(db: Firestore, ingestSecret: string | undefined): Router {
+  const router = Router();
+
+  router.post('/apostila-references', ...jsonBodyAfter(INGEST_BODY_LIMIT, requireIngestSecret(ingestSecret)), async (req, res) => {
     const body = req.body as Partial<IngestBody>;
     if (!body?.subject || !body.topics || !Array.isArray(body.knownTopics)) {
       return res.status(400).json({ error: 'Payload inválido.', code: 'INVALID_INGEST_PAYLOAD' });

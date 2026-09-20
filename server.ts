@@ -19,6 +19,7 @@ import { FirestoreAiMetricsRecorder } from './server/ai/metrics';
 import { FirestoreApostilaReferenceStore } from './server/ai/apostilaReferenceStore';
 import { createAdminRouter } from './server/admin/routes';
 import { createApostilaIngestRouter } from './server/admin/apostilaIngestRoutes';
+import { jsonBodyAfter } from './server/http/jsonBodyAfter';
 import { createLiteraryAdminRouter } from './server/literary/literaryAdminRoutes';
 import { createContentAdminRouter } from './server/content/contentAdminRoutes';
 import { createPushRouter, createReviewReminderRouter } from './server/push/routes';
@@ -40,9 +41,11 @@ app.use(compression());
 //
 // Precisa vir ANTES do parser global de 64kb abaixo: como esse último não
 // tem path (roda pra toda rota), ele rejeitaria o corpo grande antes mesmo
-// de chegar no parser de 20mb desta rota se estivesse depois. Montada aqui,
-// ela responde e encerra a requisição antes do parser global ser atingido.
-app.use('/api/internal', express.json({ limit: '20mb' }), createApostilaIngestRouter(getFirestore(getFirebaseAdminApp()), process.env.APOSTILA_INGEST_SECRET));
+// de chegar no parser desta rota se estivesse depois. Montada aqui, ela
+// responde e encerra a requisição antes do parser global ser atingido. O
+// parser de 20mb mora dentro do próprio roteador, depois da conferência do
+// segredo (ver jsonBodyAfter).
+app.use('/api/internal', createApostilaIngestRouter(getFirestore(getFirebaseAdminApp()), process.env.APOSTILA_INGEST_SECRET));
 
 // Feature flag literary_works (seção 13 do roteiro de Obras Obrigatórias):
 // enquanto não estiver pronta pra uso real, as rotas nem existem — nada de
@@ -51,8 +54,10 @@ app.use('/api/internal', express.json({ limit: '20mb' }), createApostilaIngestRo
 if (process.env.LITERARY_WORKS_ENABLED === 'true') {
   // Mesmo motivo do /api/internal acima: PDFs de obra em base64 passam
   // longe dos 64kb do parser global — precisa do parser de 50mb próprio,
-  // montado antes.
-  app.use('/api/admin/literary', express.json({ limit: '50mb' }), adminAuthMiddleware(), requireAdmin, createLiteraryAdminRouter(getFirestore(getFirebaseAdminApp())));
+  // montado antes. E só depois do login e da checagem de admin: com o parser
+  // na frente, qualquer visitante anônimo fazia o servidor ler 50mb antes de
+  // receber 401.
+  app.use('/api/admin/literary', ...jsonBodyAfter('50mb', adminAuthMiddleware(), requireAdmin), createLiteraryAdminRouter(getFirestore(getFirebaseAdminApp())));
 }
 
 app.use(express.json({ limit: '64kb' }));
