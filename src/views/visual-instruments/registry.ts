@@ -17,6 +17,8 @@ import { matrixInstrument } from './MatrixInstrument';
 import type { MatrixConfigId } from '../../lib/matrixLab';
 import { sequenceInstrument } from './SequenceInstrument';
 import type { SequenceConfigId } from '../../lib/sequenceLab';
+import { quantitiesInstrument } from './QuantitiesInstrument';
+import type { QuantitiesConfigId } from '../../lib/quantitiesLab';
 
 /**
  * Quais capítulos ganham prancha manipulável, e com que instrumento.
@@ -82,6 +84,7 @@ function matriz(id: string, topic: string, config: MatrixConfigId): InstrumentEn
 function sequencia(id: string, topic: string, config: SequenceConfigId): InstrumentEntry {
   return { id, subject: 'Matemática', keywords: [topic], exactTopic: topic, Component: sequenceInstrument(config) };
 }
+function quantidade(id:string,topic:string,config:QuantitiesConfigId):InstrumentEntry{return{id,subject:'Matemática',keywords:[topic],exactTopic:topic,Component:quantitiesInstrument(config)}}
 
 export const INSTRUMENTS: InstrumentEntry[] = [
   plano('funcoes-introducao', ['introdução às funções'], 'afim'),
@@ -158,6 +161,11 @@ export const INSTRUMENTS: InstrumentEntry[] = [
   matriz('discussao-sistemas', 'discussão de sistemas lineares', 'discussao'),
   sequencia('progressao-aritmetica', 'progressão aritmética', 'pa'),
   sequencia('progressao-geometrica', 'progressão geométrica', 'pg'),
+  quantidade('razao-proporcao','razão e proporção','razao'),
+  quantidade('porcentagem','porcentagem','porcentagem'),
+  quantidade('sistema-decimal','o sistema de numeração decimal','decimal'),
+  quantidade('numeros-inteiros','introdução à teoria dos números inteiros','inteiros'),
+  quantidade('medias','médias','medias'),
 ];
 
 function chapterText(summary: Pick<InteractiveSummary, 'subject' | 'topic' | 'title'>): string {

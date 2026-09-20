@@ -1,0 +1,2 @@
+import assert from'node:assert/strict';import test from'node:test';import{QUANTITIES}from'./quantitiesLab';
+test('porcentagem converte trinta por cento',()=>assert.equal(QUANTITIES.porcentagem.readouts(30)[1].value,'0,3'));test('divisão euclidiana recompõe o inteiro',()=>assert.equal(QUANTITIES.inteiros.readouts(23)[2].value,'7·3 + 2 = 23'));test('média ponderada respeita peso',()=>assert.equal(QUANTITIES.medias.readouts(3)[2].value,'7,5'));

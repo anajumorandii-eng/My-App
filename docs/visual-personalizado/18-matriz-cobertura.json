@@ -3,9 +3,9 @@
   "counts": {
     "experiment": 11,
     "board": 41,
-    "instrument": 55,
+    "instrument": 60,
     "scene": 187,
-    "fallback": 319
+    "fallback": 314
   },
   "contested": 17,
   "subjects": [
@@ -125,9 +125,9 @@
       "counts": {
         "experiment": 1,
         "board": 11,
-        "instrument": 55,
+        "instrument": 60,
         "scene": 0,
-        "fallback": 16
+        "fallback": 11
       }
     },
     {
@@ -3589,32 +3589,32 @@
       "id": "summary-matematica-razao-e-proporcao",
       "subject": "Matemática",
       "title": "Razão e Proporção",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "razao-proporcao",
       "ignored": []
     },
     {
       "id": "summary-matematica-porcentagem",
       "subject": "Matemática",
       "title": "Porcentagem",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "porcentagem",
       "ignored": []
     },
     {
       "id": "summary-matematica-o-sistema-de-numeracao-decimal",
       "subject": "Matemática",
       "title": "O Sistema de Numeração Decimal",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "sistema-decimal",
       "ignored": []
     },
     {
       "id": "summary-matematica-introducao-a-teoria-dos-numeros-inteiros",
       "subject": "Matemática",
       "title": "Introdução à Teoria dos Números Inteiros",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "numeros-inteiros",
       "ignored": []
     },
     {
@@ -3693,8 +3693,8 @@
       "id": "summary-matematica-medias",
       "subject": "Matemática",
       "title": "Médias",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "medias",
       "ignored": []
     },
     {
