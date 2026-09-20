@@ -27,6 +27,12 @@ describe('registro de pranchas', () => {
     expect(findBoard(summary!)?.id).toBe('fungos');
   });
 
+  it('entrega a prancha causal somente à Independência do Brasil', () => {
+    const summary = interactiveSummaries.find((item) => item.id === 'summary-historia-a-independencia-do-brasil');
+    expect(summary).toBeDefined();
+    expect(findBoard(summary!)?.id).toBe('independencia-brasil');
+  });
+
   it('recusa capítulo sem prancha em vez de emprestar a de outro assunto', () => {
     // A recusa é a regra do projeto, não um efeito colateral: sem representação
     // fiel, a tela diz que falta a prancha em vez de ilustrar com algo alheio.
