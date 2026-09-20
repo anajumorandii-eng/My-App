@@ -3,9 +3,9 @@
   "counts": {
     "experiment": 11,
     "board": 41,
-    "instrument": 36,
+    "instrument": 42,
     "scene": 187,
-    "fallback": 338
+    "fallback": 332
   },
   "contested": 17,
   "subjects": [
@@ -125,9 +125,9 @@
       "counts": {
         "experiment": 1,
         "board": 11,
-        "instrument": 36,
+        "instrument": 42,
         "scene": 0,
-        "fallback": 35
+        "fallback": 29
       }
     },
     {
@@ -3837,48 +3837,48 @@
       "id": "summary-matematica-triangulo-retangulo",
       "subject": "Matemática",
       "title": "Triângulo Retângulo",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "triangulo-retangulo-metrico",
       "ignored": []
     },
     {
       "id": "summary-matematica-a-geometria-metrica-plana",
       "subject": "Matemática",
       "title": "A Geometria Métrica Plana",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "geometria-metrica-plana",
       "ignored": []
     },
     {
       "id": "summary-matematica-areas-de-poligonos",
       "subject": "Matemática",
       "title": "Áreas de Polígonos",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "areas-poligonos",
       "ignored": []
     },
     {
       "id": "summary-matematica-area-do-circulo-e-de-suas-partes",
       "subject": "Matemática",
       "title": "Área do Círculo e de suas Partes",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "area-circulo-partes",
       "ignored": []
     },
     {
       "id": "summary-matematica-razoes-entre-areas-de-figuras-planas",
       "subject": "Matemática",
       "title": "Razões entre Áreas de Figuras Planas",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "razoes-areas-planas",
       "ignored": []
     },
     {
       "id": "summary-matematica-areas-de-figuras-planas",
       "subject": "Matemática",
       "title": "Áreas de Figuras Planas",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "areas-figuras-planas",
       "ignored": []
     },
     {

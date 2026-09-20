@@ -73,4 +73,18 @@ describe('registro de instrumentos', () => {
       expect(interactiveSummaries.filter((s) => findInstrument(s)?.id === id).map((s) => s.topic), id).toEqual([topic]);
     }
   });
+
+  it('cada instrumento de medidas e áreas alcança exatamente seu capítulo', () => {
+    const esperado: Record<string, string> = {
+      'triangulo-retangulo-metrico': 'Triângulo Retângulo',
+      'geometria-metrica-plana': 'A Geometria Métrica Plana',
+      'areas-poligonos': 'Áreas de Polígonos',
+      'area-circulo-partes': 'Área do Círculo e de suas Partes',
+      'razoes-areas-planas': 'Razões entre Áreas de Figuras Planas',
+      'areas-figuras-planas': 'Áreas de Figuras Planas',
+    };
+    for (const [id, topic] of Object.entries(esperado)) {
+      expect(interactiveSummaries.filter((s) => findInstrument(s)?.id === id).map((s) => s.topic), id).toEqual([topic]);
+    }
+  });
 });

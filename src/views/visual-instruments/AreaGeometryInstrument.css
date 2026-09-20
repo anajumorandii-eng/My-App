@@ -1,0 +1,15 @@
+.dark .crivo-visual .vs-area-instrument { --vs-burgundy: #e0788d; }
+.vs-area-plane { min-height: 300px; }
+.vs-area-plane text { fill: var(--vs-ink); font: italic 11px ui-monospace, 'SFMono-Regular', Menlo, monospace; paint-order: stroke; stroke: var(--vs-paper-strong); stroke-width: 3px; }
+.vs-area-fill, .vs-area-copy, .vs-area-hole, .vs-area-sector, .vs-area-segment { stroke-linejoin: round; }
+.vs-area-fill { fill: var(--vs-mint); fill-opacity: .5; stroke: var(--vs-ink); stroke-width: 2; }
+.vs-area-copy, .vs-area-sector { fill: var(--vs-amber); fill-opacity: .5; stroke: var(--vs-burgundy); stroke-width: 2.4; }
+.vs-area-segment { fill: var(--vs-burgundy); fill-opacity: .38; stroke: var(--vs-burgundy); stroke-width: 2; }
+.vs-area-hole { fill: var(--vs-paper-strong); stroke: var(--vs-burgundy); stroke-width: 2.4; }
+.vs-area-outline { fill: none; stroke: var(--vs-ink); stroke-width: 2; }
+.vs-area-guide, .vs-area-accent, .vs-area-right { fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.vs-area-guide { stroke: var(--vs-blue); stroke-width: 1.5; stroke-dasharray: 5 4; }
+.vs-area-accent { stroke: var(--vs-burgundy); stroke-width: 2.5; }
+.vs-area-right { stroke: var(--vs-burgundy); stroke-width: 1.8; }
+.vs-area-point { fill: var(--vs-burgundy); }
+@media (max-width: 520px) { .vs-area-plane { min-height: 260px; } }

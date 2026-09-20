@@ -5,10 +5,12 @@ import { cartesianInstrument } from './CartesianInstrument';
 import { analyticInstrument } from './AnalyticInstrument';
 import { solidInstrument } from './SolidInstrument';
 import { planarGeometryInstrument } from './PlanarGeometryInstrument';
+import { areaGeometryInstrument } from './AreaGeometryInstrument';
 import type { FamilyId } from '../../lib/curveFamilies';
 import type { ConfigId } from '../../lib/analyticPlane';
 import type { SolidConfigId } from '../../lib/solidInstruments';
 import type { PlanarConfigId } from '../../lib/planarGeometry';
+import type { AreaConfigId } from '../../lib/areaGeometry';
 
 /**
  * Quais capítulos ganham prancha manipulável, e com que instrumento.
@@ -34,6 +36,8 @@ export interface InstrumentEntry {
   subject: string;
   /** Todos os termos precisam aparecer no texto do capítulo. */
   keywords: string[];
+  /** Quando um título é prefixo de outro, exige o tópico inteiro. */
+  exactTopic?: string;
   Component: ComponentType<BoardProps>;
 }
 
@@ -54,6 +58,10 @@ function solido(id: string, keywords: string[], config: SolidConfigId): Instrume
 
 function geometriaPlana(id: string, keywords: string[], config: PlanarConfigId): InstrumentEntry {
   return { id, subject: 'Matemática', keywords, Component: planarGeometryInstrument(config) };
+}
+
+function medidaPlana(id: string, keywords: string[], config: AreaConfigId): InstrumentEntry {
+  return { id, subject: 'Matemática', keywords, exactTopic: keywords[0], Component: areaGeometryInstrument(config) };
 }
 
 export const INSTRUMENTS: InstrumentEntry[] = [
@@ -104,6 +112,15 @@ export const INSTRUMENTS: InstrumentEntry[] = [
   geometriaPlana('simetrias-i', ['identificação de simetrias i'], 'simetria-i'),
   geometriaPlana('geometria-proporcionalidade', ['geometria da proporcionalidade'], 'tales'),
   geometriaPlana('semelhanca-triangulos', ['semelhança de triângulos'], 'semelhanca'),
+
+  // Segunda leva: relações métricas e áreas usam medição/decomposição, não o
+  // laboratório de ângulos da primeira leva.
+  medidaPlana('triangulo-retangulo-metrico', ['triângulo retângulo'], 'triangulo-retangulo'),
+  medidaPlana('geometria-metrica-plana', ['a geometria métrica plana'], 'geometria-metrica'),
+  medidaPlana('areas-poligonos', ['áreas de polígonos'], 'areas-poligonos'),
+  medidaPlana('area-circulo-partes', ['área do círculo e de suas partes'], 'area-circulo'),
+  medidaPlana('razoes-areas-planas', ['razões entre áreas de figuras planas'], 'razoes-areas'),
+  medidaPlana('areas-figuras-planas', ['áreas de figuras planas'], 'areas-compostas'),
 ];
 
 function chapterText(summary: Pick<InteractiveSummary, 'subject' | 'topic' | 'title'>): string {
@@ -115,6 +132,8 @@ export function findInstrument(
 ): InstrumentEntry | null {
   const text = chapterText(summary);
   return INSTRUMENTS.find(
-    (item) => item.subject === summary.subject && item.keywords.every((k) => text.includes(k)),
+    (item) => item.subject === summary.subject
+      && (!item.exactTopic || summary.topic.toLowerCase() === item.exactTopic)
+      && item.keywords.every((k) => text.includes(k)),
   ) ?? null;
 }
