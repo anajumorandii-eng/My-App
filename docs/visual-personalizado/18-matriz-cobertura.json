@@ -3,9 +3,9 @@
   "counts": {
     "experiment": 11,
     "board": 41,
-    "instrument": 71,
+    "instrument": 73,
     "scene": 187,
-    "fallback": 303
+    "fallback": 301
   },
   "contested": 17,
   "subjects": [
@@ -15,9 +15,9 @@
       "counts": {
         "experiment": 0,
         "board": 13,
-        "instrument": 0,
+        "instrument": 2,
         "scene": 9,
-        "fallback": 63
+        "fallback": 61
       }
     },
     {
@@ -804,16 +804,16 @@
       "id": "summary-fisica-movimento-uniforme",
       "subject": "Física",
       "title": "Movimento Uniforme",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "movimento-uniforme",
       "ignored": []
     },
     {
       "id": "summary-fisica-movimento-uniformemente-variado",
       "subject": "Física",
       "title": "Movimento Uniformemente Variado",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "movimento-uniformemente-variado",
       "ignored": []
     },
     {

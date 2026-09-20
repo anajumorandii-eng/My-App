@@ -1,0 +1,1 @@
+import assert from'node:assert/strict';import test from'node:test';import{KINEMATICS}from'./kinematicsLab';test('MU mantém aceleração nula',()=>assert.equal(KINEMATICS.mu.readouts(3)[1].value,'0 m/s²'));test('MUV relaciona aceleração e variação de velocidade',()=>assert.equal(KINEMATICS.muv.readouts(2)[1].value,'6 m/s'));
