@@ -3,9 +3,9 @@
   "counts": {
     "experiment": 11,
     "board": 41,
-    "instrument": 89,
+    "instrument": 92,
     "scene": 187,
-    "fallback": 285
+    "fallback": 282
   },
   "contested": 17,
   "subjects": [
@@ -15,9 +15,9 @@
       "counts": {
         "experiment": 0,
         "board": 13,
-        "instrument": 18,
+        "instrument": 21,
         "scene": 9,
-        "fallback": 45
+        "fallback": 42
       }
     },
     {
@@ -1081,16 +1081,16 @@
       "id": "summary-fisica-trabalho-da-forca-de-pressao-do-gas",
       "subject": "Física",
       "title": "Trabalho da Força de Pressão do Gás",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "trabalho-gas",
       "ignored": []
     },
     {
       "id": "summary-fisica-primeira-lei-da-termodinamica",
       "subject": "Física",
       "title": "Primeira Lei da Termodinâmica",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "primeira-lei",
       "ignored": []
     },
     {
@@ -1110,8 +1110,8 @@
       "id": "summary-fisica-maquinas-termicas-e-ciclo-de-carnot",
       "subject": "Física",
       "title": "Máquinas Térmicas e Ciclo de Carnot",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "ciclo-carnot",
       "ignored": []
     },
     {

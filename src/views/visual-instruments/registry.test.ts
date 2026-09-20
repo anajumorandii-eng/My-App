@@ -107,4 +107,17 @@ describe('registro de instrumentos', () => {
     expect(interactiveSummaries.filter((s) => findInstrument(s)?.id === 'progressao-aritmetica').map((s) => s.topic)).toEqual(['Progressão Aritmética']);
     expect(interactiveSummaries.filter((s) => findInstrument(s)?.id === 'progressao-geometrica').map((s) => s.topic)).toEqual(['Progressão Geométrica']);
   });
+
+  it('mantém os instrumentos de termodinâmica nos três capítulos que eles modelam', () => {
+    const esperado: Record<string, string> = {
+      'trabalho-gas': 'Trabalho da Força de Pressão do Gás',
+      'primeira-lei': 'Primeira Lei da Termodinâmica',
+      'ciclo-carnot': 'Máquinas Térmicas e Ciclo de Carnot',
+    };
+    for (const [id, topico] of Object.entries(esperado)) {
+      expect(interactiveSummaries.filter((s) => findInstrument(s)?.id === id).map((s) => s.topic), id).toEqual([topico]);
+    }
+    const aplicada = interactiveSummaries.find((s) => s.topic === 'Primeira Lei da Termodinâmica Aplicada a Algumas Transformações Particulares');
+    expect(findInstrument(aplicada!)).toBeNull();
+  });
 });
