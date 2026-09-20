@@ -21,6 +21,12 @@ describe('registro de pranchas', () => {
     expect(findBoard(summary)?.id).toBe('leis-newton');
   });
 
+  it('entrega a prancha de micélio somente ao capítulo de Fungos', () => {
+    const summary = interactiveSummaries.find((item) => item.id === 'summary-biologia-fungos');
+    expect(summary).toBeDefined();
+    expect(findBoard(summary!)?.id).toBe('fungos');
+  });
+
   it('recusa capítulo sem prancha em vez de emprestar a de outro assunto', () => {
     // A recusa é a regra do projeto, não um efeito colateral: sem representação
     // fiel, a tela diz que falta a prancha em vez de ilustrar com algo alheio.

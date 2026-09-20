@@ -28,6 +28,7 @@ import CountingBoard from './CountingBoard';
 import BloodTypeBoard from './BloodTypeBoard';
 import SolutionsBoard from './SolutionsBoard';
 import NewtonBoard from './NewtonBoard';
+import FungiBoard from './FungiBoard';
 
 /**
  * Quais capítulos têm prancha ilustrada, e qual.
@@ -63,6 +64,12 @@ export interface BoardEntry {
 }
 
 export const BOARDS: BoardEntry[] = [
+  {
+    id: 'fungos',
+    subject: 'Biologia',
+    keywords: ['fungos'],
+    Component: FungiBoard,
+  },
   {
     id: 'leis-newton',
     subject: 'Física',
