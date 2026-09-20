@@ -20,6 +20,7 @@ import { FirestoreApostilaReferenceStore } from './server/ai/apostilaReferenceSt
 import { createAdminRouter } from './server/admin/routes';
 import { createApostilaIngestRouter } from './server/admin/apostilaIngestRoutes';
 import { jsonBodyAfter } from './server/http/jsonBodyAfter';
+import { securityHeaders } from './server/http/securityHeaders';
 import { createLiteraryAdminRouter } from './server/literary/literaryAdminRoutes';
 import { createContentAdminRouter } from './server/content/contentAdminRoutes';
 import { createPushRouter, createReviewReminderRouter } from './server/push/routes';
@@ -30,6 +31,10 @@ import { buildCalendarEventsQuery } from './serverCalendar';
 
 const app = express();
 const PORT = Number(process.env.PORT) || 3000;
+
+// Primeiro de tudo, para valer também em 404 e nas respostas de erro. HSTS só
+// em produção: em desenvolvimento o servidor responde em http.
+app.use(securityHeaders({ hsts: process.env.NODE_ENV === 'production' }));
 
 // Antes de qualquer rota: sem isso o bundle e os JSON de flashcards viajam
 // sem compressão nenhuma (o de Português sozinho tem 3,8MB).
