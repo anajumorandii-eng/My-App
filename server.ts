@@ -54,9 +54,8 @@ app.use('/api/internal', createApostilaIngestRouter(getFirestore(getFirebaseAdmi
 if (process.env.LITERARY_WORKS_ENABLED === 'true') {
   // Mesmo motivo do /api/internal acima: PDFs de obra em base64 passam
   // longe dos 64kb do parser global — precisa do parser de 50mb próprio,
-  // montado antes. E só depois do login e da checagem de admin: com o parser
-  // na frente, qualquer visitante anônimo fazia o servidor ler 50mb antes de
-  // receber 401.
+  // montado antes, mas só depois do login e da checagem de admin (ver
+  // jsonBodyAfter).
   app.use('/api/admin/literary', ...jsonBodyAfter('50mb', adminAuthMiddleware(), requireAdmin), createLiteraryAdminRouter(getFirestore(getFirebaseAdminApp())));
 }
 

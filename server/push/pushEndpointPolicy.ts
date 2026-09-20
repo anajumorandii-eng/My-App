@@ -1,9 +1,7 @@
-// O endpoint de uma inscrição de push é uma URL que o servidor vai chamar. O
-// web-push só confere que ele é uma string e faz um https.request para o host
-// que vier, e as regras do Firestore deixam o navegador escrever direto em
-// users/{uid}/data/pushSubscription — então nem a rota /subscribe é a única
-// porta de entrada. Sem esta lista, qualquer aluna logada fazia o servidor
-// enviar o corpo cifrado e o JWT VAPID para um host à escolha dela.
+// O endpoint de uma inscrição de push é uma URL que o servidor vai chamar, e o
+// web-push não restringe o host. Como o navegador também pode gravar a
+// inscrição direto no Firestore (users/{uid}/data/pushSubscription), a
+// checagem vale tanto na assinatura quanto no envio.
 //
 // Só entram os serviços de push dos navegadores que a aluna realmente usa.
 // Se um navegador novo aparecer, o aviso do envio traz o host recusado e a

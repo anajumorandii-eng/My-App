@@ -11,8 +11,7 @@ import { jsonBodyAfter } from '../http/jsonBodyAfter';
 const MAX_STORED_CHARS = 200_000;
 
 // Uma apostila inteira em texto passa longe dos 64kb do parser global, por
-// isso este roteador lê o próprio corpo. E só o lê depois do segredo: esta
-// rota é pública na internet, protegida apenas por ele.
+// isso este roteador lê o próprio corpo, sempre depois do segredo.
 const INGEST_BODY_LIMIT = '20mb';
 
 interface IngestChunk {
