@@ -178,12 +178,65 @@
 .tc-chem-atom--central { fill: color-mix(in srgb, var(--vs-burgundy) 30%, var(--vs-paper-strong)); stroke: var(--vs-burgundy); }
 .tc-chem-pair { fill: var(--vs-amber); }
 
+/* Química orgânica: a estrutura é o próprio conteúdo, não decoração. */
+.tc-organic-scene { gap: 1rem; }
+.tc-organic-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem 1rem;
+  color: var(--vs-dim);
+  font: 0.72rem/1.25 system-ui, sans-serif;
+}
+.tc-organic-legend span { display: inline-flex; align-items: center; gap: 0.35rem; }
+.tc-organic-swatch { width: 1.35rem; height: 0.32rem; display: inline-block; border-radius: 999px; }
+.tc-organic-swatch--hetero { background: var(--vs-burgundy); }
+.tc-organic-swatch--bond { background: var(--vs-blue); }
+.tc-organic-grid { align-items: stretch; }
+.tc-organic-card { grid-template-columns: minmax(132px, 0.9fr) minmax(0, 1fr); align-items: center; gap: 0.7rem; }
+.tc-organic-card .tc-chem-visual { min-height: 96px; }
+.tc-organic-card .tc-chem-visual svg { width: 100%; height: 100px; overflow: visible; }
+.tc-organic-card-copy { min-width: 0; display: grid; gap: 0.35rem; }
+.tc-organic-card-copy > span { color: var(--vs-dim); font: 0.76rem/1.35 system-ui, sans-serif; }
+.tc-organic-bond { stroke: var(--vs-ink); stroke-width: 2.6; stroke-linecap: round; }
+.tc-organic-bond--accent { stroke: var(--vs-blue); stroke-width: 3.4; }
+.tc-organic-atom { fill: var(--vs-ink); font: 700 13px/1 ui-monospace, SFMono-Regular, Menlo, monospace; }
+.tc-organic-atom--hetero { fill: var(--vs-burgundy); }
+.tc-organic-highlight { fill: color-mix(in srgb, var(--vs-burgundy) 12%, transparent); stroke: color-mix(in srgb, var(--vs-burgundy) 48%, transparent); stroke-width: 1.5; stroke-dasharray: 3 2; }
+.tc-organic-mini-label { fill: var(--vs-dim); font: 700 10px/1 system-ui, sans-serif; }
+.tc-organic-formula, .tc-organic-formula-note { fill: var(--vs-ink); font: 700 12px/1 ui-monospace, SFMono-Regular, Menlo, monospace; }
+.tc-organic-formula-note { fill: var(--vs-blue); }
+.tc-organic-condition { fill: var(--vs-burgundy); font: 700 10px/1 ui-monospace, SFMono-Regular, Menlo, monospace; }
+.tc-organic-arrow { fill: var(--vs-blue); font: 700 14px/1 system-ui, sans-serif; }
+.tc-organic-skeleton, .tc-organic-ring { fill: none; stroke: var(--vs-ink); stroke-width: 2.7; stroke-linejoin: round; }
+.tc-organic-center { fill: color-mix(in srgb, var(--vs-burgundy) 18%, var(--vs-paper-strong)); stroke: var(--vs-burgundy); stroke-width: 2; }
+.tc-organic-wedge { fill: color-mix(in srgb, var(--vs-blue) 58%, transparent); }
+.tc-organic-mirror { stroke: var(--vs-blue); stroke-width: 1.5; stroke-dasharray: 4 4; }
+.tc-organic-no-reaction { stroke: var(--vs-burgundy); stroke-width: 5; stroke-linecap: round; }
+.tc-organic-detail {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: 1rem;
+  padding: 0.9rem 1rem;
+  background: color-mix(in srgb, var(--vs-burgundy) 7%, var(--vs-paper-strong));
+  border-left: 4px solid var(--vs-burgundy);
+  border-radius: 4px 12px 12px 4px;
+}
+.tc-organic-detail small { display: block; color: var(--vs-burgundy); font: 700 0.68rem/1.2 system-ui, sans-serif; letter-spacing: 0.08em; text-transform: uppercase; }
+.tc-organic-detail strong { display: block; margin-top: 0.2rem; font: 700 1.1rem/1.2 'Kalam', 'Caveat', cursive; }
+.tc-organic-detail p, .tc-organic-detail blockquote { margin: 0.3rem 0 0; color: var(--vs-dim); font: 0.78rem/1.45 system-ui, sans-serif; }
+.tc-organic-detail blockquote { padding-left: 0.8rem; border-left: 1px solid color-mix(in srgb, var(--vs-blue) 38%, transparent); }
+.tc-organic-detail cite { display: block; margin-top: 0.25rem; color: var(--vs-blue); font-style: normal; font-size: 0.7rem; }
+
 @media (max-width: 520px) {
   .tc-scene { padding: 1rem; }
   .tc-scene > header h4 { font-size: clamp(1.45rem, 7.1vw, 1.85rem); }
   .tc-chem-grid { gap: 0.55rem; }
   .tc-chem-card { padding: 0.65rem; }
   .tc-chem-card > span:last-child { font-size: 0.72rem; }
+  .tc-organic-grid { grid-template-columns: 1fr; }
+  .tc-organic-card { grid-template-columns: minmax(125px, 0.82fr) minmax(0, 1fr); }
+  .tc-organic-card .tc-chem-visual svg { height: 92px; }
+  .tc-organic-detail { grid-template-columns: 1fr; gap: 0.55rem; }
 }
 
 .tc-criterio { fill: color-mix(in srgb, var(--vs-blue) 8%, transparent); stroke: var(--vs-blue); stroke-width: 2; opacity: 0.6; filter: url(#sketch-filter); stroke-linejoin: round; }

@@ -7,6 +7,7 @@ import { CamadasDeDeterminacao } from './families/CamadasDeDeterminacao';
 import { MovimentoDialetico } from './families/MovimentoDialetico';
 import { Tipologia } from './families/Tipologia';
 import { QuimicaTipologia } from './families/QuimicaTipologia';
+import { ORGANIC_SCENE_IDS, QuimicaOrganica } from './families/QuimicaOrganica';
 import { CriteriosConjuntivos } from './families/CriteriosConjuntivos';
 import { GradeDeEixos } from './families/GradeDeEixos';
 import type { SceneEntry, SceneFamily } from './types';
@@ -26,11 +27,12 @@ import { GenerativeTopicIcon } from '../../components/subject-icons/GenerativeTo
 export function TopicScene({ summaryId }: { summaryId: string }) {
   const entry = sceneFor(summaryId);
   if (!entry) return null;
-  const quimicaEstrutural = entry.family === 'tipologia' && [
-    'summary-quimica-geometria-molecular',
-    'summary-quimica-reconhecimento-de-funcoes-organicas-e-algumas-de-suas-propriedades',
-  ].includes(entry.chapterId);
-  const Familia = quimicaEstrutural ? QuimicaTipologia : FAMILIAS[entry.family];
+  const quimicaGeometrica = entry.chapterId === 'summary-quimica-geometria-molecular';
+  const Familia = ORGANIC_SCENE_IDS.has(entry.chapterId)
+    ? QuimicaOrganica
+    : quimicaGeometrica
+      ? QuimicaTipologia
+      : FAMILIAS[entry.family];
   return (
     <div className="vs-handdrawn-container" style={{ position: 'relative', overflow: 'hidden' }}>
       <svg style={{ position: 'absolute', width: 0, height: 0 }}>
