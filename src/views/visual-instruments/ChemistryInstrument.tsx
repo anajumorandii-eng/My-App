@@ -14,6 +14,17 @@ function ChemistryDiagram({ config, value }: { config: ChemistryConfig; value: n
   const ink = 'var(--vs-ink)';
   const transition = reduced ? { duration: 0 } : { duration: 0.38, ease: 'easeOut' as const };
   return <svg className="vs-plane" viewBox="0 0 320 270" role="img" aria-label={`${config.title}: ${config.control} ${value} ${config.unit}`}>
+    {config.title === 'Filtração por tamanho' && <g data-detail="filtration-apparatus">
+      <path d="M68 36H252M94 36l43 75v93h46v-93l43-75" fill="none" stroke={ink} strokeWidth="4" strokeLinejoin="round" />
+      <path d="M110 73h100l-18 38h-64Z" fill="var(--vs-paper)" stroke={ink} strokeWidth="3" />
+      <path d="M127 111h66" stroke={emphasis} strokeWidth="5" strokeDasharray="3 4" />
+      <path d="M138 204h44l-6 37h-32Z" fill="var(--vs-paper)" stroke={ink} strokeWidth="3" />
+      {[{ x: 132, r: 10, name: 'areia' }, { x: 160, r: 5, name: 'argila' }, { x: 190, r: 3, name: 'soluto' }].map(({ x, r, name }, i) => {
+        const crosses = (name === 'areia' ? value > 8 : name === 'argila' ? value > 2 : true);
+        return <g key={name}><motion.circle cx={x} cy={76 + i * 8} r={r} fill={name === 'areia' ? emphasis : muted} animate={{ cy: crosses ? 181 + i * 12 : 98 + i * 4, opacity: crosses ? .8 : 1 }} transition={transition} /><text x={x} y="56" textAnchor="middle" fill={ink} fontSize="10">{name}</text></g>;
+      })}
+      <text x="70" y="248" fill={ink} fontSize="12" fontWeight="700">resíduo</text><text x="207" y="248" fill={ink} fontSize="12" fontWeight="700">filtrado</text>
+    </g>}
     {config.diagram === 'particles' && <>
       <motion.rect x="35" y="45" height="170" rx="12" fill="none" stroke={ink} strokeWidth="4" animate={{ width: config.title.includes('Seringa') ? 150 + 110 * fraction : 250 }} transition={transition} />
       {Array.from({ length: 12 }, (_, i) => <motion.circle key={i} cx={74 + (i % 4) * 54} cy={78 + Math.floor(i / 4) * 52} r="7" fill={emphasis} animate={{ x: (i % 2 ? 1 : -1) * fraction * 12, y: (i % 3 - 1) * fraction * 9, opacity: config.title.includes('Da massa') ? (i < Math.ceil((value / 18) / 10 * 12) ? 1 : .16) : 1 }} transition={transition} />)}
@@ -26,7 +37,7 @@ function ChemistryDiagram({ config, value }: { config: ChemistryConfig; value: n
       {[0, 1, 2, 3, 4].map(i => <motion.circle key={i} cx={63 + i * 47} cy={59 + (i % 2) * 20} r="8" fill={emphasis} animate={{ opacity: i < (1 - fraction) * 5 ? 1 : .14, y: i < (1 - fraction) * 5 ? 13 : 0 }} transition={transition} />)}
       <text x="160" y="244" textAnchor="middle" fill={ink} fontSize="15">H⁺ consome carbonato · dissolução</text>
     </>}
-    {config.diagram === 'apparatus' && config.title !== 'Carbonato e acidez' && <>
+    {config.diagram === 'apparatus' && !['Carbonato e acidez', 'Filtração por tamanho'].includes(config.title) && <>
       <path d="M55 42h210l-66 112v66H120v-66Z" fill="none" stroke={ink} strokeWidth="4" />
       <path d="M111 133h98" stroke={emphasis} strokeWidth="7" strokeDasharray="5 3" />
       {[80, 115, 155, 195, 235].map((x, i) => <motion.circle key={x} cx={x} cy={78 + (i % 2) * 20} r={i % 2 ? 5 : 11} fill={i % 2 ? muted : emphasis} animate={{ y: i % 2 ? 45 * fraction : 10 * fraction }} transition={transition} />)}

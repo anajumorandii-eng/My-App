@@ -48,4 +48,11 @@ describe('instrumentos de Química', () => {
     if (card) fireEvent.click(card);
     expect(selected.length).toBeGreaterThan(0);
   });
+
+  it('mostra funil, filtro, resíduo e filtrado no capítulo de separação', () => {
+    const chapter = interactiveSummaries.find(s => s.id === 'summary-quimica-separacao-de-misturas')!;
+    const Component = findInstrument(chapter)!.Component;
+    render(<Component map={buildVisualMap(chapter)} states={{}} selectedId={null} onSelect={() => {}} hiddenEdgeIds={[]} mode="explorar" />);
+    expect(document.querySelector('[data-detail="filtration-apparatus"]')).toBeInTheDocument();
+  });
 });
