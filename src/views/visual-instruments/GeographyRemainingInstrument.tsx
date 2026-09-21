@@ -53,16 +53,14 @@ function BasinScene({ id, index }: { id: 'world-basin' | 'brazilian-basins'; ind
 
 function FlowScene({ id, index }: { id: Exclude<GeographyRemainingId, 'digital-map' | 'map-elements' | 'world-basin' | 'brazilian-basins'>; index: number }) {
   const config = GEOGRAPHY_REMAINING[id];
-  return <svg className="vs-plane" viewBox="0 0 320 250" role="img" aria-label={`${config.title}: ${config.cases[index].label} em foco`}>
-    <text x="160" y="26" textAnchor="middle" fill="var(--vs-ink)" fontSize="13" fontWeight="700">{config.relation}</text>
-    {config.cases.map((item, n) => { const x = 25 + n * 101; const active = n === index; return <g key={item.label}>
-      {n > 0 && <path d={`M${x-13} 126H${x-2}`} stroke="var(--vs-ink-muted)" strokeWidth="3" markerEnd="url(#flow-arrow)"/>}
-      <rect x={x} y="76" width="88" height="98" rx="10" fill={active ? 'var(--vs-burgundy)' : 'var(--vs-paper)'} stroke="var(--vs-ink)" strokeWidth="2"/>
-      <text x={x+44} y="114" textAnchor="middle" fill={active ? 'white' : 'var(--vs-ink)'} fontSize="13" fontWeight="700">{item.label}</text>
-      <text x={x+44} y="140" textAnchor="middle" fill={active ? 'white' : 'var(--vs-ink-muted)'} fontSize="10">{active ? 'recorte ativo' : 'etapa'}</text>
-    </g>; })}
-    <defs><marker id="flow-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0L7 3.5 0 7Z" fill="var(--vs-ink-muted)"/></marker></defs>
-  </svg>;
+  return <div className="vs-geography-flow" aria-label={`${config.title}: ${config.cases[index].label} em foco`}>
+    <ol>{config.cases.map((item, n) => <li key={item.label} data-active={n === index}>
+      <small>{String(n + 1).padStart(2, '0')} · {item.place}</small>
+      <strong>{item.label}</strong>
+      <span>{item.action}</span>
+    </li>)}</ol>
+    <p>{config.relation}</p>
+  </div>;
 }
 
 export function geographyRemainingInstrument(id: GeographyRemainingId) {
