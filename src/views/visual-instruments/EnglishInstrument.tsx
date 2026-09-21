@@ -56,16 +56,71 @@ function EnglishScene({ id, selected }: { id: EnglishInstrumentId; selected: num
     <text x="160" y="221" textAnchor="middle" style={ink}>causa → consequência</text>
   </>;
 
-  const bridge = [215, 150, 86][selected];
+  if (id === 'research-claims') {
+    const bridge = [215, 150, 86][selected];
+    return <>
+      <text x="160" y="47" textAnchor="middle" style={{...accent,fontSize:13}}>claim strength must match evidence</text>
+      <rect x="34" y="82" width="105" height="90" rx="12" fill="var(--vs-paper)" stroke="var(--vs-ink)" strokeWidth="3" />
+      <rect x="181" y="82" width="105" height="90" rx="12" fill="var(--vs-paper)" stroke="var(--vs-burgundy)" strokeWidth="3" />
+      <text x="86" y="119" textAnchor="middle" style={ink}>poor sleep</text><text x="86" y="145" textAnchor="middle" style={ink}>observed</text>
+      <text x="233" y="119" textAnchor="middle" style={ink}>memory</text><text x="233" y="145" textAnchor="middle" style={ink}>problems</text>
+      <path d="M143 127H177" stroke="var(--vs-burgundy)" strokeWidth={selected === 2 ? 9 : selected === 1 ? 6 : 3} strokeDasharray={selected === 0 ? '5 5' : undefined} />
+      <path d={`M55 222H${bridge}`} stroke="var(--vs-burgundy)" strokeWidth="8" strokeLinecap="round" />
+      <text x="160" y="257" textAnchor="middle" style={accent}>{state.label}</text>
+    </>;
+  }
+
+  // Escala dito → mostrado por ação → mostrado por fala cortada, no mesmo
+  // formato de trilho/marcador de modal-certainty: a estrutura de três degraus
+  // já provou legibilidade lá, e aqui mede outra coisa (como o sentimento
+  // chega ao leitor, não o grau de certeza da afirmação).
+  if (id === 'narrative-inference') {
+    const positions = [75, 160, 245];
+    return <>
+      <text x="160" y="42" textAnchor="middle" style={{...ink,fontSize:12}}>{state.example}</text>
+      <path d="M55 150H265" stroke="var(--vs-ink)" strokeWidth="8" strokeLinecap="round" />
+      <circle cx={positions[selected]} cy="150" r="18" fill="var(--vs-burgundy)" />
+      <text x="75" y="200" textAnchor="middle" style={ink}>dito</text>
+      <text x="160" y="200" textAnchor="middle" style={ink}>ação</text>
+      <text x="245" y="200" textAnchor="middle" style={ink}>fala cortada</text>
+      <text x="160" y="245" textAnchor="middle" style={accent}>{state.label}</text>
+      <text x="160" y="270" textAnchor="middle" style={ink}>{state.reading}</text>
+    </>;
+  }
+
+  if (id === 'lexical-inference') return <>
+    <text x="160" y="38" textAnchor="middle" style={{...ink,fontSize:11.5}}>{state.example}</text>
+    <rect x="40" y="55" width="240" height="115" rx="12" fill="var(--vs-paper)" stroke="var(--vs-ink)" strokeWidth="3" />
+    {selected === 0 && <path d="M70 112H140M160 112H230" stroke="var(--vs-burgundy)" strokeWidth="5" strokeDasharray="2 8" />}
+    {selected === 1 && <path d="M75 96 L245 128M75 128 L245 96" stroke="var(--vs-burgundy)" strokeWidth="4" />}
+    {selected === 2 && <><circle cx="110" cy="112" r="14" fill="none" stroke="var(--vs-burgundy)" strokeWidth="4" /><circle cx="160" cy="112" r="14" fill="none" stroke="var(--vs-burgundy)" strokeWidth="4" /><circle cx="210" cy="112" r="14" fill="none" stroke="var(--vs-burgundy)" strokeWidth="4" /></>}
+    <text x="160" y="200" textAnchor="middle" style={accent}>{state.label}</text>
+    <text x="160" y="228" textAnchor="middle" style={ink}>{state.reading}</text>
+  </>;
+
+  if (id === 'comparison-signals') return <>
+    <text x="160" y="38" textAnchor="middle" style={{...ink,fontSize:11.5}}>{state.example}</text>
+    <rect x="35" y="90" width="98" height="75" rx="12" fill="var(--vs-paper)" stroke="var(--vs-ink)" strokeWidth="3" />
+    <rect x="187" y="90" width="98" height="75" rx="12" fill="var(--vs-paper)" stroke="var(--vs-ink)" strokeWidth="3" />
+    <text x="84" y="133" textAnchor="middle" style={ink}>bacteria</text>
+    <text x="236" y="133" textAnchor="middle" style={ink}>virus</text>
+    {selected === 0 && <path d="M148 110L174 145M174 110L148 145" stroke="var(--vs-burgundy)" strokeWidth="5" />}
+    {selected === 1 && <path d="M137 127H181" stroke="var(--vs-burgundy)" strokeWidth="6" />}
+    {selected === 2 && <path d="M160 82V173" stroke="var(--vs-burgundy)" strokeWidth="6" strokeDasharray="4 7" />}
+    <text x="160" y="205" textAnchor="middle" style={accent}>{state.label}</text>
+    <text x="160" y="235" textAnchor="middle" style={ink}>{state.reading}</text>
+  </>;
+
+  // stance-language
+  const widths = [40, 110, 180];
   return <>
-    <text x="160" y="47" textAnchor="middle" style={{...accent,fontSize:13}}>claim strength must match evidence</text>
-    <rect x="34" y="82" width="105" height="90" rx="12" fill="var(--vs-paper)" stroke="var(--vs-ink)" strokeWidth="3" />
-    <rect x="181" y="82" width="105" height="90" rx="12" fill="var(--vs-paper)" stroke="var(--vs-burgundy)" strokeWidth="3" />
-    <text x="86" y="119" textAnchor="middle" style={ink}>poor sleep</text><text x="86" y="145" textAnchor="middle" style={ink}>observed</text>
-    <text x="233" y="119" textAnchor="middle" style={ink}>memory</text><text x="233" y="145" textAnchor="middle" style={ink}>problems</text>
-    <path d="M143 127H177" stroke="var(--vs-burgundy)" strokeWidth={selected === 2 ? 9 : selected === 1 ? 6 : 3} strokeDasharray={selected === 0 ? '5 5' : undefined} />
-    <path d={`M55 222H${bridge}`} stroke="var(--vs-burgundy)" strokeWidth="8" strokeLinecap="round" />
-    <text x="160" y="257" textAnchor="middle" style={accent}>{state.label}</text>
+    <text x="160" y="38" textAnchor="middle" style={{...ink,fontSize:11.5}}>{state.example}</text>
+    <rect x="45" y="100" width="230" height="26" rx="8" fill="var(--vs-paper)" stroke="var(--vs-ink)" strokeWidth="3" />
+    <rect x="47" y="102" width={widths[selected]} height="22" rx="6" fill="var(--vs-burgundy)" opacity=".65" />
+    <text x="45" y="150" style={ink}>neutro</text>
+    <text x="240" y="150" style={ink} textAnchor="end">exigência</text>
+    <text x="160" y="195" textAnchor="middle" style={accent}>{state.label}</text>
+    <text x="160" y="225" textAnchor="middle" style={ink}>{state.reading}</text>
   </>;
 }
 
