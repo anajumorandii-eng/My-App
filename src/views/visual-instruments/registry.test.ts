@@ -246,4 +246,15 @@ describe('registro de instrumentos', () => {
     const esperado: Record<string, string> = { 'songs-poems': 'Text Comprehension: Songs and Poems', 'calories-energy': 'Text Comprehension: Calories and Energy', earthquakes: 'Text Comprehension: Earthquakes', 'greenhouse-gases': 'Text Comprehension: Ecology (Greenhouse Gases)', 'human-brain': 'Text Comprehension: The Human Brain' };
     for (const [id, topic] of Object.entries(esperado)) expect(interactiveSummaries.filter((s) => findInstrument(s)?.id === id).map((s) => s.topic), id).toEqual([topic]);
   });
+
+  it('mantém os instrumentos fundamentais de redação nas cinco operações que modelam', () => {
+    const esperado: Record<string, string> = {
+      'dissertacao-mitos': 'A Dissertação no Vestibular: Mitos e Verdades',
+      'avaliacao-dissertacao': 'O que se Avalia na Dissertação: Competências e Habilidades',
+      'organizacao-ideias': 'Organizando as Ideias: Brainstorm e Mind Maps',
+      repertorio: 'Repertório: o Diferencial de Redações de Sucesso',
+      'eixos-tematicos': 'Qual Será o Tema deste Ano: Grandes Eixos Temáticos',
+    };
+    for (const [id, topic] of Object.entries(esperado)) expect(interactiveSummaries.filter((s) => findInstrument(s)?.id === id).map((s) => s.topic), id).toEqual([topic]);
+  });
 });
