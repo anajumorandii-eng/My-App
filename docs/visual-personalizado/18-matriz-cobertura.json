@@ -3,9 +3,9 @@
   "counts": {
     "experiment": 11,
     "board": 41,
-    "instrument": 154,
+    "instrument": 159,
     "scene": 186,
-    "fallback": 221
+    "fallback": 216
   },
   "contested": 18,
   "subjects": [
@@ -81,9 +81,9 @@
       "counts": {
         "experiment": 1,
         "board": 0,
-        "instrument": 0,
+        "instrument": 5,
         "scene": 0,
-        "fallback": 57
+        "fallback": 52
       }
     },
     {
@@ -2522,24 +2522,24 @@
       "id": "summary-redacao-a-dissertacao-no-vestibular-mitos-e-verdades",
       "subject": "Redação",
       "title": "A Dissertação no Vestibular: Mitos e Verdades",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "dissertacao-mitos",
       "ignored": []
     },
     {
       "id": "summary-redacao-o-que-se-avalia-na-dissertacao-competencias-e-habilidades",
       "subject": "Redação",
       "title": "O que se Avalia na Dissertação: Competências e Habilidades",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "avaliacao-dissertacao",
       "ignored": []
     },
     {
       "id": "summary-redacao-organizando-as-ideias-brainstorm-e-mind-maps",
       "subject": "Redação",
       "title": "Organizando as Ideias: Brainstorm e Mind Maps",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "organizacao-ideias",
       "ignored": []
     },
     {
@@ -2554,16 +2554,16 @@
       "id": "summary-redacao-repertorio-o-diferencial-de-redacoes-de-sucesso",
       "subject": "Redação",
       "title": "Repertório: o Diferencial de Redações de Sucesso",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "repertorio",
       "ignored": []
     },
     {
       "id": "summary-redacao-qual-sera-o-tema-deste-ano-grandes-eixos-tematicos",
       "subject": "Redação",
       "title": "Qual Será o Tema deste Ano: Grandes Eixos Temáticos",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "eixos-tematicos",
       "ignored": []
     },
     {
