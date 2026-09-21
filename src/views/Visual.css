@@ -2046,10 +2046,10 @@
 @media (max-width: 430px) {
   .vs-topic-identity span { font-size: .58rem; }
   .vs-topic-identity strong { font-size: .86rem; }
-  .vs-board-head h2 { font-size: clamp(2.15rem, 12vw, 3.1rem); }
+  .vs-board-head h2 { font-size: clamp(1.8rem, 7vw, 2.4rem); line-height: 1.12; overflow-wrap: anywhere; }
   .vs-board-head p { font-family: "Kalam", "Newsreader", cursive; line-height: 1.28; }
-  .vs-q-callout { position: absolute; right: 12px; top: 12px; width: 94px; min-height: 72px; opacity: .96; }
-  .vs-board-head > div:first-child { padding-right: 68px; }
+  .vs-q-callout { position: static; width: fit-content; max-width: 100%; min-height: 0; opacity: 1; }
+  .vs-board-head > div:first-child { padding-right: 0; min-width: 0; }
   .vs-brush { width: 78%; margin-bottom: 16px; }
 }
 .vs-journey { min-width: 0; width: 100%; padding: clamp(18px, 3vw, 32px); border: 1px solid var(--vs-line); border-radius: 16px; background: var(--vs-paper-strong); }

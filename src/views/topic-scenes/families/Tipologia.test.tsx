@@ -62,4 +62,15 @@ describe('Tipologia', () => {
     expect(screen.queryByText(/combinam/)).not.toBeInTheDocument();
     expect(screen.queryByText(/costumam combinar/)).not.toBeInTheDocument();
   });
+
+  it('mostra a mudança de códon e o efeito antes do toque no capítulo de mutações', () => {
+    const mutation = { ...entrySemNota, chapterId: 'summary-biologia-mutacoes-genicas', items: [
+      { label: 'Silenciosa', claim: 'mesmo aminoácido', section: 'Alterações', quote: 'degeneração' },
+      { label: 'Frameshift', claim: 'quadro deslocado', section: 'Alterações', quote: 'inserção' },
+    ] };
+    render(<Tipologia entry={mutation} />);
+    expect(screen.getByText('GAA → Glu')).toBeInTheDocument();
+    expect(screen.getByText('GAG → Glu')).toBeInTheDocument();
+    expect(screen.getByText('AUG | CAA | ACC…')).toBeInTheDocument();
+  });
 });

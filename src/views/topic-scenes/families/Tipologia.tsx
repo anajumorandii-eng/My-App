@@ -4,44 +4,39 @@ import { useSceneMotion } from '../useSceneMotion';
 import type { SceneEntry } from '../types';
 import '../TopicScene.css';
 
-/** Tipos ideais paralelos. O movimento destaca o tipo em foco, mas a nota
- *  de honestidade — que casos reais combinam mais de um tipo — fica
- *  sempre visível, nunca escondida atrás de um clique. */
+const MUTATIONS: Record<string, { before: string; after: string; effect: string }> = {
+  'Silenciosa': { before: 'GAA → Glu', after: 'GAG → Glu', effect: 'códon mudou · aminoácido preservado' },
+  'Missense (sentido trocado)': { before: 'GAA → Glu', after: 'GUA → Val', effect: 'substituição de aminoácido' },
+  'Nonsense (sem sentido)': { before: 'UAU → Tyr', after: 'UAA → STOP', effect: 'parada prematura da tradução' },
+  'Frameshift': { before: 'AUG | AAA | CCU', after: 'AUG | CAA | ACC…', effect: 'inserção de C · quadro deslocado' },
+  'Múltiplo de três': { before: 'AUG | AAA | CCU', after: 'AUG | GCU | AAA | CCU', effect: '+ GCU · quadro preservado' },
+};
+
+/** A comparação mantém mecanismo e consequência visíveis mesmo sem selecionar. */
 export function Tipologia({ entry }: { entry: SceneEntry }) {
   const [foco, setFoco] = useState<number | null>(null);
   const transition = useSceneMotion();
   const item = foco === null ? null : entry.items[foco];
-  const n = entry.items.length;
+  const mutations = entry.chapterId === 'summary-biologia-mutacoes-genicas';
 
   return (
     <section className="tc-scene" aria-label={entry.question}>
       <header>
-        <small>CRIVO · tipos ideais</small>
+        <small>CRIVO · comparar mecanismos</small>
         <h4>{entry.question}</h4>
       </header>
-      <svg viewBox="0 0 480 160" role="img" aria-label={item ? `Tipo em foco: ${item.label}` : 'Nenhum tipo em foco'}>
+      <div className="tc-type-grid">
         {entry.items.map((it, i) => {
-          const x = 40 + ((i + 0.5) * 400) / n;
-          const emFoco = foco === i;
-          return (
-            <motion.g key={it.label} animate={{ opacity: foco === null || emFoco ? 1 : 0.32 }} transition={transition}>
-              <motion.circle cx={x} cy="82" animate={{ r: emFoco ? 44 : 34 }} transition={transition} className={emFoco ? 'tc-tipo tc-tipo-foco' : 'tc-tipo'} />
-              <text x={x} y="140" textAnchor="middle" className="tc-label">{it.label}</text>
-            </motion.g>
-          );
+          const mutation = mutations ? MUTATIONS[it.label] : undefined;
+          return <motion.button key={it.label} type="button" className="tc-type-card" aria-pressed={foco === i} aria-label={it.label} onClick={() => setFoco(foco === i ? null : i)} animate={{ scale: foco === i ? 1.01 : 1 }} transition={transition}>
+            <span className="tc-type-number">{String(i + 1).padStart(2, '0')}</span>
+            <strong>{it.label}</strong>
+            {mutation && <span className="tc-mutation" aria-label={`${mutation.before}; ${mutation.after}; ${mutation.effect}`}>
+              <code>{mutation.before}</code><span aria-hidden="true">↓</span><code>{mutation.after}</code><small>{mutation.effect}</small>
+            </span>}
+            <span className="tc-type-claim">{it.claim}</span>
+          </motion.button>;
         })}
-      </svg>
-      <div className="tc-choices">
-        {entry.items.map((it, i) => (
-          <button
-            key={it.label}
-            type="button"
-            aria-pressed={foco === i}
-            onClick={() => setFoco(foco === i ? null : i)}
-          >
-            {it.label}
-          </button>
-        ))}
       </div>
       {entry.nota && <p className="tc-nota">{entry.nota}</p>}
       {item && (

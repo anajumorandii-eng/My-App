@@ -1,1 +1,9 @@
 .vs-geography-options{display:flex;flex-wrap:wrap;gap:.55rem;margin:.8rem 0}.vs-geography-options button{border:1px solid var(--vs-ink-muted);background:var(--vs-paper);color:var(--vs-ink);border-radius:99px;padding:.5rem .8rem;cursor:pointer}.vs-geography-options button[aria-pressed=true]{background:var(--vs-burgundy);border-color:var(--vs-burgundy);color:white}.vs-geography-options button:focus-visible{outline:3px solid var(--vs-blue);outline-offset:3px}@media(max-width:390px){.vs-geography-options button{min-height:44px}}
+.vs-geography-flow { min-width: 0; width: 100%; padding: 14px; border: 1px solid var(--vs-line); border-radius: 12px; background: var(--vs-paper-strong); }
+.vs-geography-flow ol { display: grid; gap: 8px; padding: 0; margin: 0; list-style: none; }
+.vs-geography-flow li { display: grid; gap: 4px; padding: 10px 12px; border-left: 3px solid var(--vs-blue); background: var(--vs-paper); border-radius: 5px; min-width: 0; }
+.vs-geography-flow li[data-active='true'] { border-color: var(--vs-burgundy); background: color-mix(in srgb, var(--vs-burgundy) 10%, var(--vs-paper)); }
+.vs-geography-flow li small { color: var(--vs-burgundy); font: 700 .68rem/1.2 ui-monospace, monospace; }
+.vs-geography-flow li strong { color: var(--vs-ink); font: 700 1rem/1.25 'Newsreader', Georgia, serif; }
+.vs-geography-flow li span, .vs-geography-flow p { color: var(--vs-dim); font: .75rem/1.4 system-ui, sans-serif; overflow-wrap: anywhere; }
+.vs-geography-flow p { margin: 12px 0 0; padding-top: 9px; border-top: 1px solid var(--vs-line); }

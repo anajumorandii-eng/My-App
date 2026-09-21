@@ -30,6 +30,26 @@
   letter-spacing: -0.02em;
 }
 .tc-scene svg { width: 100%; max-width: 100%; height: auto; overflow: visible; }
+.vs-handdrawn-container { min-width: 0; width: 100%; }
+.tc-type-grid, .tc-criteria-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: .75rem; min-width: 0; }
+.tc-type-card, .tc-criterion-card {
+  display: grid; align-content: start; gap: .55rem; min-width: 0; width: 100%;
+  padding: 1rem; text-align: left; color: var(--vs-ink);
+  background: color-mix(in srgb, var(--vs-blue) 6%, var(--vs-paper-strong));
+  border: 1px solid color-mix(in srgb, var(--vs-blue) 42%, transparent);
+  border-radius: 12px; cursor: pointer;
+}
+.tc-type-card[aria-pressed='true'], .tc-criterion-card[aria-pressed='true'] { border-color: var(--vs-burgundy); background: color-mix(in srgb, var(--vs-burgundy) 12%, var(--vs-paper-strong)); }
+.tc-type-card:focus-visible, .tc-criterion-card:focus-visible { outline: 3px solid var(--vs-blue); outline-offset: 2px; }
+.tc-type-number { color: var(--vs-burgundy); font: 700 .75rem/1 ui-monospace, monospace; }
+.tc-type-card strong, .tc-criterion-card strong { font: 700 clamp(1rem, 3vw, 1.18rem)/1.25 system-ui, sans-serif; overflow-wrap: anywhere; }
+.tc-type-claim, .tc-criterion-card > span:last-child { color: var(--vs-dim); font: .86rem/1.48 system-ui, sans-serif; overflow-wrap: anywhere; }
+.tc-mutation { display: grid; gap: .22rem; border-left: 3px solid var(--vs-burgundy); padding: .45rem .65rem; background: color-mix(in srgb, var(--vs-burgundy) 7%, transparent); }
+.tc-mutation code { color: var(--vs-ink); font: 700 .85rem/1.35 ui-monospace, monospace; white-space: normal; overflow-wrap: anywhere; }
+.tc-mutation > span { color: var(--vs-burgundy); line-height: 1; }
+.tc-mutation small { color: var(--vs-dim); font: .72rem/1.35 system-ui, sans-serif; }
+.tc-criterion-head { display: flex; align-items: start; justify-content: space-between; gap: .5rem; }
+.tc-criterion-head > span { flex: 0 0 auto; color: var(--vs-burgundy); font: 700 1.25rem/1 system-ui, sans-serif; }
 
 /* SVG shapes look hand-drawn */
 .tc-base { stroke: currentColor; stroke-width: 1.5; opacity: 0.4; stroke-linecap: round; stroke-linejoin: round; }
@@ -229,7 +249,8 @@
 
 @media (max-width: 520px) {
   .tc-scene { padding: 1rem; }
-  .tc-scene > header h4 { font-size: clamp(1.45rem, 7.1vw, 1.85rem); }
+  .tc-scene > header h4 { font: 700 clamp(1.25rem, 5.5vw, 1.65rem)/1.24 'Newsreader', Georgia, serif; letter-spacing: normal; overflow-wrap: anywhere; }
+  .tc-type-grid, .tc-criteria-grid { grid-template-columns: 1fr; }
   .tc-chem-grid { gap: 0.55rem; }
   .tc-chem-card { padding: 0.65rem; }
   .tc-chem-card > span:last-child { font-size: 0.72rem; }

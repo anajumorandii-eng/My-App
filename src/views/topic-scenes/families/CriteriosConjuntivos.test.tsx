@@ -58,4 +58,16 @@ describe('Critérios conjuntivos', () => {
     expect(screen.getByRole('status')).not.toHaveTextContent(/válido|reúne/i);
     expect(screen.getByRole('status')).toHaveTextContent('Coercitividade');
   });
+
+  it('trata a combinação dos fatores climáticos como nota, não como quarto fator', () => {
+    render(<CriteriosConjuntivos entry={{ ...entry, chapterId: 'summary-geografia-clima-mundial', items: [
+      { label: 'Latitude', claim: 'insolação', section: 'Clima', quote: 'latitude' },
+      { label: 'Altitude', claim: 'temperatura', section: 'Clima', quote: 'altitude' },
+      { label: 'Nenhum isolado', claim: 'interação', section: 'Clima', quote: 'combinados' },
+    ] }} />);
+    expect(screen.queryByRole('button', { name: 'Nenhum isolado' })).not.toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', { name: 'Latitude' }));
+    fireEvent.click(screen.getByRole('button', { name: 'Altitude' }));
+    expect(screen.getByRole('status')).toHaveTextContent('Reúne todos os critérios');
+  });
 });
