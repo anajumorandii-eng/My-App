@@ -63,6 +63,8 @@ import { geographyContextInstrument } from './GeographyContextInstrument';
 import type { GeographyContextId } from '../../lib/geographyContextLab';
 import { historyInstrument } from './HistoryInstrument';
 import type { HistoryInstrumentId } from '../../lib/historyInstrumentLab';
+import { historyPhaseInstrument } from './HistoryPhaseInstrument';
+import type { HistoryPhaseId } from '../../lib/historyPhaseLab';
 import { grammarInstrument } from './GrammarInstrument';
 import type { GrammarInstrumentId } from '../../lib/grammarInstrumentLab';
 import { englishInstrument } from './EnglishInstrument';
@@ -157,6 +159,14 @@ function geografico(id:string,topic:string,config:GeographyInstrumentId):Instrum
 function geograficoRestante(id:string,topic:string,config:GeographyRemainingId):InstrumentEntry{return{id,subject:'Geografia',keywords:[topic],exactTopic:topic,Component:geographyRemainingInstrument(config)}}
 function geograficoContexto(id:string,topic:string,config:GeographyContextId):InstrumentEntry{return{id,subject:'Geografia',keywords:[topic],exactTopic:topic,Component:geographyContextInstrument(config)}}
 function historico(id:string,topic:string,config:HistoryInstrumentId):InstrumentEntry{return{id,subject:'História',keywords:[topic],exactTopic:topic,Component:historyInstrument(config)}}
+/**
+ * Variante de linha do tempo comparada (ver `historyPhaseLab.ts`): mesma
+ * economia de `geograficoRestante`, só que cada capítulo aqui não tem um
+ * objeto manipulável único — tem uma sequência de fases ou processos
+ * paralelos que se comparam. Molde de `geograficoRestante` de propósito, para
+ * ficar fácil de auditar as duas listas lado a lado.
+ */
+function historicoFase(id:string,topic:string,config:HistoryPhaseId):InstrumentEntry{return{id,subject:'História',keywords:[topic],exactTopic:topic,Component:historyPhaseInstrument(config)}}
 function gramatical(id:string,topic:string,config:GrammarInstrumentId):InstrumentEntry{return{id,subject:'Gramática',keywords:[topic],exactTopic:topic,Component:grammarInstrument(config)}}
 function ingles(id:string,topic:string,config:EnglishInstrumentId):InstrumentEntry{return{id,subject:'Língua Inglesa',keywords:[topic],exactTopic:topic,Component:englishInstrument(config)}}
 function redacao(id:string,topic:string,config:WritingInstrumentId):InstrumentEntry{return{id,subject:'Redação',keywords:[topic],exactTopic:topic,Component:writingInstrument(config)}}
@@ -316,6 +326,16 @@ export const INSTRUMENTS: InstrumentEntry[] = [
   geograficoContexto('rede-comercio-externo','os fluxos do comércio externo','trade-network'),
   geograficoContexto('conflito-europa','tensões geopolíticas na europa','urban-conflict'),
   historico('america-xix','américa no século xix','america-xix'),historico('segunda-guerra','segunda guerra mundial (1939-1945)','wwii-fronts'),historico('guerra-fria','guerra fria','cold-war'),historico('interiorizacao-colonial','a interiorização da colonização','interiorization'),historico('mineracao-colonial','a mineração no brasil colonial','mining-colony'),
+  historicoFase('grandes-revolucoes-seculo-xx','grandes revoluções do século xx','grandes-revolucoes-seculo-xx'),
+  historicoFase('america-latina-seculo-xx','américa latina no século xx','america-latina-seculo-xx'),
+  historicoFase('dinamica-interna-colonizacao','dinâmica interna da colonização','dinamica-interna-colonizacao'),
+  historicoFase('disputas-europeias-brasil-colonial','disputas europeias no brasil colonial','disputas-europeias-brasil-colonial'),
+  historicoFase('segundo-reinado','brasil império: segundo reinado (1840-1889)','segundo-reinado'),
+  historicoFase('republica-da-espada','a república da espada','republica-da-espada'),
+  historicoFase('republica-liberal-democracia','república liberal (1945-1964): democracia em tempos de guerra fria','republica-liberal-democracia'),
+  historicoFase('republica-liberal-desenvolvimentismo','república liberal (1945-1964): desenvolvimentismo e populismo','republica-liberal-desenvolvimentismo'),
+  historicoFase('regime-militar-i','regime militar (1964-1985) i','regime-militar-i'),
+  historicoFase('regime-militar-ii','regime militar (1964-1985) ii','regime-militar-ii'),
   gramatical('sintagma-nominal','artigo, numeral e adjetivo no sintagma nominal','noun-phrase'),gramatical('concordancia','concordância','agreement'),gramatical('pontuacao-i','pontuação i: princípios para o uso da vírgula','comma-scope'),gramatical('crase','crase','crasis'),gramatical('vozes-verbais','vozes verbais','verbal-voice'),
   gramatical('pronomes','pronomes','pronoun-reference'),gramatical('verbo','verbo','verbal-aspect'),gramatical('ambiguidade','ambiguidade: duplicidade no léxico e na sintaxe','ambiguity'),gramatical('oracoes-coordenadas','orações coordenadas','clause-relations'),
   ingles('songs-poems','text comprehension: songs and poems','poetry-reading'),ingles('calories-energy','text comprehension: calories and energy','quantity-language'),ingles('earthquakes','text comprehension: earthquakes','modal-certainty'),ingles('greenhouse-gases','text comprehension: ecology (greenhouse gases)','cause-connectors'),ingles('human-brain','text comprehension: the human brain','research-claims'),
