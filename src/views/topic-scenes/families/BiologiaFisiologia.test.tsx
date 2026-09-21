@@ -31,7 +31,7 @@ describe('BiologiaFisiologia', () => {
   it('mantém a prancha e troca o detalhe lastreado ao selecionar uma etapa', () => {
     const { container } = render(<BiologiaFisiologia entry={entry('summary-biologia-fisiologia-da-excrecao')} />);
     const board = container.querySelector('[data-bio-system="nephron"]');
-    fireEvent.click(screen.getByRole('button', { name: /03 resposta/i }));
+    fireEvent.click(screen.getByRole('button', { name: /03\s*resposta/i }));
     expect(screen.getByRole('status')).toHaveTextContent('Terceira etapa anatômica');
     expect(screen.getByRole('status')).toHaveTextContent('A terceira etapa produz a resposta');
     expect(container.querySelector('[data-bio-system="nephron"]')).toBe(board);
