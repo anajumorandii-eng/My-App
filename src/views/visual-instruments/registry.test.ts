@@ -230,6 +230,32 @@ describe('registro de instrumentos', () => {
     for (const [id, topic] of Object.entries(esperado)) expect(interactiveSummaries.filter((s) => findInstrument(s)?.id === id).map((s) => s.topic), id).toEqual([topic]);
   });
 
+  it('mantém os instrumentos de contexto geográfico e de atualidades nos capítulos pretendidos (rodada set/2026)', () => {
+    const esperado: Record<string, string> = {
+      'unilateralismo-multilateralismo': 'Unilateralismo e Multilateralismo',
+      'terrorismo-internacional': 'Terrorismo Internacional',
+      'geografia-religioes': 'Geografia das Religiões',
+      'geopolitica-america-latina': 'Geopolítica e Geoeconomia da América Latina',
+      'africa-mundo-atual': 'África no Mundo Atual',
+      'geopolitica-asia': 'Geopolítica e Geoeconomia da Ásia',
+      'geografia-oriente-medio': 'Geografia do Oriente Médio',
+      'questao-palestina': 'Questão Palestina',
+      'conflitos-mundo-arabe': 'Conflitos no Mundo Árabe',
+      'energia-eletrica-mundo': 'Energia Elétrica no Mundo',
+      'combustiveis-biocombustiveis-brasil': 'Combustíveis Fósseis e Biocombustíveis no Brasil',
+      'espaco-industrial-brasileiro-ii': 'O Espaço Industrial Brasileiro II',
+      'biogeografia-brasil-i': 'Biogeografia do Brasil I',
+      'biogeografia-brasil-ii': 'Biogeografia do Brasil II',
+      'politicas-ambientais-brasileiras': 'Políticas Ambientais Brasileiras',
+    };
+    for (const [id, topic] of Object.entries(esperado)) {
+      expect(interactiveSummaries.filter((s) => findInstrument(s)?.id === id).map((s) => s.topic), id).toEqual([topic]);
+    }
+    expect(
+      interactiveSummaries.filter((s) => findInstrument(s)?.id === 'cop30-belem').map((s) => s.id),
+    ).toEqual(['atu-cop30-belem']);
+  });
+
   it('mantém os instrumentos de história nos cinco processos comparados', () => {
     const esperado: Record<string, string> = { 'america-xix': 'América no Século XIX', 'segunda-guerra': 'Segunda Guerra Mundial (1939-1945)', 'guerra-fria': 'Guerra Fria', 'interiorizacao-colonial': 'A Interiorização da Colonização', 'mineracao-colonial': 'A Mineração no Brasil Colonial' };
     for (const [id, topic] of Object.entries(esperado)) expect(interactiveSummaries.filter((s) => findInstrument(s)?.id === id).map((s) => s.topic), id).toEqual([topic]);
@@ -254,6 +280,35 @@ describe('registro de instrumentos', () => {
   it('mantém os instrumentos de gramática nas cinco operações linguísticas', () => {
     const esperado: Record<string, string> = { 'sintagma-nominal': 'Artigo, Numeral e Adjetivo no Sintagma Nominal', concordancia: 'Concordância', 'pontuacao-i': 'Pontuação I: Princípios para o Uso da Vírgula', crase: 'Crase', 'vozes-verbais': 'Vozes Verbais' };
     for (const [id, topic] of Object.entries(esperado)) expect(interactiveSummaries.filter((s) => findInstrument(s)?.id === id).map((s) => s.topic), id).toEqual([topic]);
+  });
+
+  it('mantém os 16 instrumentos de gramática da rodada de maximização de cobertura em exatamente seus capítulos', () => {
+    // Decisão de 21/09/2026 da Ana Júlia: instrumento genérico de leitura de
+    // frase, aceito onde não há objeto manipulável clássico. "verbo-sintaxe-
+    // -oracao" precisa ficar fora de "verbo" (transitividade ≠ tempo/aspecto).
+    const esperado: Record<string, string> = {
+      'lingua-sistema': 'Língua: um Sistema Complexo',
+      'substantivo-visao-enunciador': 'Substantivo: os Nomes e a Visão do Enunciador',
+      'tipos-de-texto': 'Tipos de Texto: Explorando Elementos Concretos e Conceitos Abstratos',
+      'adverbio-circunstanciadores': 'Advérbio e Locuções Adverbiais: Circunstanciadores',
+      'verbo-sintaxe-oracao': 'Verbo e Sintaxe da Oração',
+      'significados-implicitos': 'Significados Implícitos',
+      'tipos-de-discurso': 'Tipos de Discurso',
+      'pontuacao-ii': 'Pontuação II: Vírgula entre Orações e Outros Sinais de Pontuação',
+      'lexico-em-contexto': 'O Léxico em Contexto: Variadas Possibilidades Semânticas',
+      'mecanismo-regencia': 'Mecanismo de Regência',
+      'formacao-palavras': 'Processos de Formação de Palavras',
+      'funcoes-sintaticas-nominais': 'Funções Sintáticas Nominais e Vocativo',
+      'tipos-de-sujeito': 'Tipos de Sujeito',
+      'oracoes-substantivas': 'Orações Substantivas',
+      'oracoes-adjetivas': 'Orações Adjetivas',
+      'oracoes-adverbiais': 'Orações Adverbiais',
+    };
+    for (const [id, topic] of Object.entries(esperado)) expect(interactiveSummaries.filter((s) => findInstrument(s)?.id === id).map((s) => s.topic), id).toEqual([topic]);
+    // "Verbo" continua exclusivo de verbal-aspect: os dois capítulos não podem
+    // colidir no mesmo instrumento.
+    const verbo = interactiveSummaries.find((s) => s.subject === 'Gramática' && s.topic === 'Verbo');
+    expect(findInstrument(verbo!)?.id).toBe('verbo');
   });
 
   it('mantém os instrumentos de inglês nos cinco textos que orientam a leitura', () => {

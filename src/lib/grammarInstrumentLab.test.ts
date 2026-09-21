@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { agreementCase, commaReading, crasisCase, nounPhrase, voiceCase } from './grammarInstrumentLab.ts';
+import { GRAMMAR_INSTRUMENTS, agreementCase, commaReading, crasisCase, nounPhrase, voiceCase } from './grammarInstrumentLab.ts';
 
 test('sintagma preserva o substantivo como núcleo ao ganhar satélites', () => {
   assert.deepEqual(nounPhrase(0), ['propostas']);
@@ -22,4 +22,26 @@ test('crase depende da fusão, não apenas de palavra feminina', () => {
 test('voz passiva pode preservar ou ocultar o agente', () => {
   assert.equal(voiceCase(1).agent, 'professor');
   assert.equal(voiceCase(2).agent, 'não informado');
+});
+
+test('rodada de maximização de cobertura: cada instrumento novo distingue suas três leituras', () => {
+  const ids = [
+    'language-system', 'noun-class', 'text-type', 'adverb-circumstance', 'verb-syntax', 'implicit-meaning',
+    'discourse-type', 'clause-punctuation', 'lexical-context', 'government', 'word-formation', 'nominal-function',
+    'subject-type', 'noun-clause', 'adjective-clause', 'adverbial-clause',
+  ] as const;
+  for (const id of ids) {
+    const config = GRAMMAR_INSTRUMENTS[id];
+    const readings = [0, 1, 2].map((v) => config.readouts(v).find((r) => r.pivot)?.value ?? config.readouts(v)[0].value);
+    assert.equal(new Set(readings).size, 3, `${id} precisa de três frases distintas`);
+  }
+});
+
+test('verbo e sintaxe da oração distingue transitividade, não tempo/aspecto (capítulo diferente de "verbo")', () => {
+  const readouts = GRAMMAR_INSTRUMENTS['verb-syntax'].readouts(1);
+  assert.match(readouts[0].value, /encontrou o livro/);
+});
+
+test('regência mostra a preposição exigida pelo verbo, não pela palavra feminina (diferença de crase)', () => {
+  assert.equal(GRAMMAR_INSTRUMENTS.government.readouts(2)[1].value, 'de');
 });
