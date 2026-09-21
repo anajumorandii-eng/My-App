@@ -26,9 +26,9 @@ outro assunto. O detalhe capítulo a capítulo está em
 | Matéria | Capítulos | Experimento exato | Prancha autoral | Instrumento | Cena validada | Lacuna honesta |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
 | Física | 85 | 0 | 14 | 52 | 8 | 11 |
-| Atualidades | 1 | 0 | 0 | 0 | 0 | 1 |
+| Atualidades | 1 | 0 | 0 | 1 | 0 | 0 |
 | Biologia | 72 | 1 | 10 | 27 | 34 | 0 |
-| Geografia | 63 | 1 | 0 | 21 | 26 | 15 |
+| Geografia | 63 | 1 | 0 | 36 | 26 | 0 |
 | História | 49 | 1 | 1 | 15 | 32 | 0 |
 | Língua Inglesa | 17 | 1 | 0 | 16 | 0 | 0 |
 | Redação | 58 | 1 | 0 | 5 | 0 | 52 |

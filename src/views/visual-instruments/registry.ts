@@ -61,6 +61,8 @@ import { geographyRemainingInstrument } from './GeographyRemainingInstrument';
 import type { GeographyRemainingId } from '../../lib/geographyRemainingLab';
 import { geographyContextInstrument } from './GeographyContextInstrument';
 import type { GeographyContextId } from '../../lib/geographyContextLab';
+import { currentAffairsContextInstrument } from './CurrentAffairsContextInstrument';
+import type { CurrentAffairsContextId } from '../../lib/currentAffairsContextLab';
 import { historyInstrument } from './HistoryInstrument';
 import type { HistoryInstrumentId } from '../../lib/historyInstrumentLab';
 import { historyPhaseInstrument } from './HistoryPhaseInstrument';
@@ -158,6 +160,7 @@ function biologicoRestante(id:string,topic:string,config:BiologyRemainingId):Ins
 function geografico(id:string,topic:string,config:GeographyInstrumentId):InstrumentEntry{return{id,subject:'Geografia',keywords:[topic],exactTopic:topic,Component:geographyInstrument(config)}}
 function geograficoRestante(id:string,topic:string,config:GeographyRemainingId):InstrumentEntry{return{id,subject:'Geografia',keywords:[topic],exactTopic:topic,Component:geographyRemainingInstrument(config)}}
 function geograficoContexto(id:string,topic:string,config:GeographyContextId):InstrumentEntry{return{id,subject:'Geografia',keywords:[topic],exactTopic:topic,Component:geographyContextInstrument(config)}}
+function atualidadesContexto(id:string,topic:string,config:CurrentAffairsContextId):InstrumentEntry{return{id,subject:'Atualidades',keywords:[topic],exactTopic:topic,Component:currentAffairsContextInstrument(config)}}
 function historico(id:string,topic:string,config:HistoryInstrumentId):InstrumentEntry{return{id,subject:'História',keywords:[topic],exactTopic:topic,Component:historyInstrument(config)}}
 /**
  * Variante de linha do tempo comparada (ver `historyPhaseLab.ts`): mesma
@@ -325,6 +328,28 @@ export const INSTRUMENTS: InstrumentEntry[] = [
   geograficoContexto('fluxos-populacionais','estrutura étnica e fluxos migratórios','population-flows'),
   geograficoContexto('rede-comercio-externo','os fluxos do comércio externo','trade-network'),
   geograficoContexto('conflito-europa','tensões geopolíticas na europa','urban-conflict'),
+
+  // Rodada de fechamento de lacuna (set/2026): mesmo laboratório de três
+  // recortes, agora cobrindo geopolítica regional e geografia econômica e
+  // ambiental do Brasil — sem cena nova, só configuração nova, exatamente a
+  // economia que o instrumento existe para dar.
+  geograficoContexto('unilateralismo-multilateralismo','unilateralismo e multilateralismo','unilateral-multilateral'),
+  geograficoContexto('terrorismo-internacional','terrorismo internacional','international-terrorism'),
+  geograficoContexto('geografia-religioes','geografia das religiões','religious-geography'),
+  geograficoContexto('geopolitica-america-latina','geopolítica e geoeconomia da américa latina','latin-america-geopolitics'),
+  geograficoContexto('africa-mundo-atual','áfrica no mundo atual','africa-geopolitics'),
+  geograficoContexto('geopolitica-asia','geopolítica e geoeconomia da ásia','asia-geopolitics'),
+  geograficoContexto('geografia-oriente-medio','geografia do oriente médio','middle-east-geography'),
+  geograficoContexto('questao-palestina','questão palestina','palestinian-question'),
+  geograficoContexto('conflitos-mundo-arabe','conflitos no mundo árabe','arab-world-conflicts'),
+  geograficoContexto('energia-eletrica-mundo','energia elétrica no mundo','world-electricity-sources'),
+  geograficoContexto('combustiveis-biocombustiveis-brasil','combustíveis fósseis e biocombustíveis no brasil','fossil-biofuels-brazil'),
+  geograficoContexto('espaco-industrial-brasileiro-ii','o espaço industrial brasileiro ii','brazil-industrial-command'),
+  geograficoContexto('biogeografia-brasil-i','biogeografia do brasil i','brazil-biogeography-i'),
+  geograficoContexto('biogeografia-brasil-ii','biogeografia do brasil ii','brazil-biogeography-ii'),
+  geograficoContexto('politicas-ambientais-brasileiras','políticas ambientais brasileiras','brazilian-environmental-policy'),
+  atualidadesContexto('cop30-belem','clima, energia e meio ambiente','cop30-belem'),
+
   historico('america-xix','américa no século xix','america-xix'),historico('segunda-guerra','segunda guerra mundial (1939-1945)','wwii-fronts'),historico('guerra-fria','guerra fria','cold-war'),historico('interiorizacao-colonial','a interiorização da colonização','interiorization'),historico('mineracao-colonial','a mineração no brasil colonial','mining-colony'),
   historicoFase('grandes-revolucoes-seculo-xx','grandes revoluções do século xx','grandes-revolucoes-seculo-xx'),
   historicoFase('america-latina-seculo-xx','américa latina no século xx','america-latina-seculo-xx'),

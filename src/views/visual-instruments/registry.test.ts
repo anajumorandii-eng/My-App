@@ -230,6 +230,32 @@ describe('registro de instrumentos', () => {
     for (const [id, topic] of Object.entries(esperado)) expect(interactiveSummaries.filter((s) => findInstrument(s)?.id === id).map((s) => s.topic), id).toEqual([topic]);
   });
 
+  it('mantém os instrumentos de contexto geográfico e de atualidades nos capítulos pretendidos (rodada set/2026)', () => {
+    const esperado: Record<string, string> = {
+      'unilateralismo-multilateralismo': 'Unilateralismo e Multilateralismo',
+      'terrorismo-internacional': 'Terrorismo Internacional',
+      'geografia-religioes': 'Geografia das Religiões',
+      'geopolitica-america-latina': 'Geopolítica e Geoeconomia da América Latina',
+      'africa-mundo-atual': 'África no Mundo Atual',
+      'geopolitica-asia': 'Geopolítica e Geoeconomia da Ásia',
+      'geografia-oriente-medio': 'Geografia do Oriente Médio',
+      'questao-palestina': 'Questão Palestina',
+      'conflitos-mundo-arabe': 'Conflitos no Mundo Árabe',
+      'energia-eletrica-mundo': 'Energia Elétrica no Mundo',
+      'combustiveis-biocombustiveis-brasil': 'Combustíveis Fósseis e Biocombustíveis no Brasil',
+      'espaco-industrial-brasileiro-ii': 'O Espaço Industrial Brasileiro II',
+      'biogeografia-brasil-i': 'Biogeografia do Brasil I',
+      'biogeografia-brasil-ii': 'Biogeografia do Brasil II',
+      'politicas-ambientais-brasileiras': 'Políticas Ambientais Brasileiras',
+    };
+    for (const [id, topic] of Object.entries(esperado)) {
+      expect(interactiveSummaries.filter((s) => findInstrument(s)?.id === id).map((s) => s.topic), id).toEqual([topic]);
+    }
+    expect(
+      interactiveSummaries.filter((s) => findInstrument(s)?.id === 'cop30-belem').map((s) => s.id),
+    ).toEqual(['atu-cop30-belem']);
+  });
+
   it('mantém os instrumentos de história nos cinco processos comparados', () => {
     const esperado: Record<string, string> = { 'america-xix': 'América no Século XIX', 'segunda-guerra': 'Segunda Guerra Mundial (1939-1945)', 'guerra-fria': 'Guerra Fria', 'interiorizacao-colonial': 'A Interiorização da Colonização', 'mineracao-colonial': 'A Mineração no Brasil Colonial' };
     for (const [id, topic] of Object.entries(esperado)) expect(interactiveSummaries.filter((s) => findInstrument(s)?.id === id).map((s) => s.topic), id).toEqual([topic]);

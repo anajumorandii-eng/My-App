@@ -24,7 +24,10 @@ describe('visualCandidates', () => {
   });
 
   it('um capítulo sem nenhum artefato não tem candidatos', () => {
-    expect(visualCandidates(chapter('atu-cop30-belem'))).toEqual([]);
+    // Antes usava 'atu-cop30-belem', mas a rodada de set/2026 deu a ele um
+    // instrumento de contexto geográfico (COP30 em Belém). Trocado por um
+    // capítulo de Física ainda sem prancha, cena, experimento ou instrumento.
+    expect(visualCandidates(chapter('summary-fisica-o-movimento-circular'))).toEqual([]);
   });
 
   it('o primeiro candidato é sempre o que a tela resolve, em todos os capítulos', () => {
@@ -37,12 +40,12 @@ describe('visualCandidates', () => {
 
 describe('buildVisualCoverage', () => {
   it('classifica cada capítulo pela representação que a tela resolve', () => {
-    const coverage = buildVisualCoverage([chapter('bio-ecologia-introducao'), chapter('atu-cop30-belem')]);
+    const coverage = buildVisualCoverage([chapter('bio-ecologia-introducao'), chapter('summary-fisica-o-movimento-circular')]);
     expect(coverage.total).toBe(2);
     expect(coverage.counts).toEqual({ experiment: 1, board: 0, instrument: 0, scene: 0, fallback: 1 });
     expect(coverage.rows.map((row) => [row.id, row.primary, row.artifact])).toEqual([
       ['bio-ecologia-introducao', 'experiment', 'ecology'],
-      ['atu-cop30-belem', 'fallback', null],
+      ['summary-fisica-o-movimento-circular', 'fallback', null],
     ]);
   });
 

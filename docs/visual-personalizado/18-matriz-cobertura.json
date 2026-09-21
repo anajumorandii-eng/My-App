@@ -26,9 +26,9 @@
       "counts": {
         "experiment": 0,
         "board": 0,
-        "instrument": 0,
+        "instrument": 1,
         "scene": 0,
-        "fallback": 1
+        "fallback": 0
       }
     },
     {
@@ -48,9 +48,9 @@
       "counts": {
         "experiment": 1,
         "board": 0,
-        "instrument": 21,
+        "instrument": 36,
         "scene": 26,
-        "fallback": 15
+        "fallback": 0
       }
     },
     {
@@ -182,8 +182,8 @@
       "id": "atu-cop30-belem",
       "subject": "Atualidades",
       "title": "COP30 em Belém: avanços, limites e leitura de prova",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "cop30-belem",
       "ignored": []
     },
     {
@@ -1645,8 +1645,8 @@
       "id": "summary-geografia-unilateralismo-e-multilateralismo",
       "subject": "Geografia",
       "title": "Unilateralismo e Multilateralismo",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "unilateralismo-multilateralismo",
       "ignored": []
     },
     {
@@ -1725,16 +1725,16 @@
       "id": "summary-geografia-terrorismo-internacional",
       "subject": "Geografia",
       "title": "Terrorismo Internacional",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "terrorismo-internacional",
       "ignored": []
     },
     {
       "id": "summary-geografia-geografia-das-religioes",
       "subject": "Geografia",
       "title": "Geografia das Religiões",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "geografia-religioes",
       "ignored": []
     },
     {
@@ -1749,48 +1749,48 @@
       "id": "summary-geografia-geopolitica-e-geoeconomia-da-america-latina",
       "subject": "Geografia",
       "title": "Geopolítica e Geoeconomia da América Latina",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "geopolitica-america-latina",
       "ignored": []
     },
     {
       "id": "summary-geografia-africa-no-mundo-atual",
       "subject": "Geografia",
       "title": "África no Mundo Atual",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "africa-mundo-atual",
       "ignored": []
     },
     {
       "id": "summary-geografia-geopolitica-e-geoeconomia-da-asia",
       "subject": "Geografia",
       "title": "Geopolítica e Geoeconomia da Ásia",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "geopolitica-asia",
       "ignored": []
     },
     {
       "id": "summary-geografia-geografia-do-oriente-medio",
       "subject": "Geografia",
       "title": "Geografia do Oriente Médio",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "geografia-oriente-medio",
       "ignored": []
     },
     {
       "id": "summary-geografia-questao-palestina",
       "subject": "Geografia",
       "title": "Questão Palestina",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "questao-palestina",
       "ignored": []
     },
     {
       "id": "summary-geografia-conflitos-no-mundo-arabe",
       "subject": "Geografia",
       "title": "Conflitos no Mundo Árabe",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "conflitos-mundo-arabe",
       "ignored": []
     },
     {
@@ -1837,24 +1837,24 @@
       "id": "summary-geografia-biogeografia-do-brasil-i",
       "subject": "Geografia",
       "title": "Biogeografia do Brasil I",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "biogeografia-brasil-i",
       "ignored": []
     },
     {
       "id": "summary-geografia-biogeografia-do-brasil-ii",
       "subject": "Geografia",
       "title": "Biogeografia do Brasil II",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "biogeografia-brasil-ii",
       "ignored": []
     },
     {
       "id": "summary-geografia-politicas-ambientais-brasileiras",
       "subject": "Geografia",
       "title": "Políticas Ambientais Brasileiras",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "politicas-ambientais-brasileiras",
       "ignored": []
     },
     {
@@ -1885,16 +1885,16 @@
       "id": "summary-geografia-combustiveis-fosseis-e-biocombustiveis-no-brasil",
       "subject": "Geografia",
       "title": "Combustíveis Fósseis e Biocombustíveis no Brasil",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "combustiveis-biocombustiveis-brasil",
       "ignored": []
     },
     {
       "id": "summary-geografia-energia-eletrica-no-mundo",
       "subject": "Geografia",
       "title": "Energia Elétrica no Mundo",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "energia-eletrica-mundo",
       "ignored": []
     },
     {
@@ -1933,8 +1933,8 @@
       "id": "summary-geografia-o-espaco-industrial-brasileiro-ii",
       "subject": "Geografia",
       "title": "O Espaço Industrial Brasileiro II",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "espaco-industrial-brasileiro-ii",
       "ignored": []
     },
     {
