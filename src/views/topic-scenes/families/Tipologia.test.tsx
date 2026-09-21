@@ -71,6 +71,7 @@ describe('Tipologia', () => {
     render(<Tipologia entry={mutation} />);
     expect(screen.getByText('GAA → Glu')).toBeInTheDocument();
     expect(screen.getByText('GAG → Glu')).toBeInTheDocument();
+    fireEvent.click(screen.getByRole('tab', { name: 'Frameshift' }));
     expect(screen.getByText('AUG | CAA | ACC…')).toBeInTheDocument();
   });
 });

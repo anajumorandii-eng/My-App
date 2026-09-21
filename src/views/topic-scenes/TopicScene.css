@@ -48,6 +48,26 @@
 .tc-mutation code { color: var(--vs-ink); font: 700 .85rem/1.35 ui-monospace, monospace; white-space: normal; overflow-wrap: anywhere; }
 .tc-mutation > span { color: var(--vs-burgundy); line-height: 1; }
 .tc-mutation small { color: var(--vs-dim); font: .72rem/1.35 system-ui, sans-serif; }
+.tc-mutation-workbench { display: grid; gap: .9rem; }
+.tc-mutation-tabs { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: .45rem; }
+.tc-mutation-tabs button { min-height: 3.3rem; padding: .45rem; border: 1px solid color-mix(in srgb, var(--vs-blue) 52%, transparent); border-radius: .7rem; background: color-mix(in srgb, var(--vs-paper-strong) 88%, transparent); color: var(--vs-ink); font: 700 clamp(.67rem, 1.7vw, .82rem)/1.2 system-ui, sans-serif; overflow-wrap: anywhere; cursor: pointer; }
+.tc-mutation-tabs button[aria-selected='true'] { background: color-mix(in srgb, var(--vs-burgundy) 16%, var(--vs-paper-strong)); border-color: var(--vs-burgundy); color: var(--vs-burgundy); }
+.tc-mutation-tabs button:focus-visible { outline: 3px solid var(--vs-blue); outline-offset: 2px; }
+.tc-mutation-figure { display: grid; gap: .8rem; padding: clamp(.75rem, 2vw, 1.1rem); border: 1px solid color-mix(in srgb, var(--vs-blue) 40%, transparent); border-radius: 1rem; background: linear-gradient(135deg, color-mix(in srgb, var(--vs-blue) 8%, transparent), color-mix(in srgb, var(--vs-paper-strong) 92%, transparent)); }
+.tc-gene-strand { display: flex; align-items: center; gap: .38rem; color: var(--vs-dim); font: 700 .7rem/1 ui-monospace, monospace; letter-spacing: .04em; }
+.tc-gene-strand span { margin-right: .35rem; white-space: nowrap; }
+.tc-gene-strand i { width: 100%; min-width: .35rem; height: .7rem; border-top: 2px solid var(--vs-blue); border-bottom: 2px solid var(--vs-burgundy); transform: skewX(-30deg); opacity: .8; }
+.tc-codon-comparison { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: stretch; gap: .65rem; }
+.tc-codon-comparison section { display: grid; align-content: start; gap: .38rem; min-width: 0; padding: .75rem; border-left: 4px solid var(--vs-blue); border-radius: .65rem; background: color-mix(in srgb, var(--vs-paper-strong) 85%, transparent); }
+.tc-codon-comparison .tc-codon-after { border-color: var(--vs-burgundy); }
+.tc-codon-comparison small { color: var(--vs-dim); font: 700 .68rem/1 system-ui, sans-serif; text-transform: uppercase; letter-spacing: .08em; }
+.tc-codon-comparison code { color: var(--vs-ink); font: 700 clamp(.74rem, 2.2vw, 1rem)/1.35 ui-monospace, monospace; overflow-wrap: anywhere; }
+.tc-codon-comparison p { margin: 0; color: var(--vs-dim); font: .72rem/1.35 system-ui, sans-serif; }
+.tc-mutation-arrow { align-self: center; color: var(--vs-burgundy); font: 700 1.45rem/1 system-ui, sans-serif; }
+.tc-protein-strip { display: flex; flex-wrap: wrap; align-items: baseline; gap: .55rem; padding: .65rem .75rem; border-radius: .6rem; background: color-mix(in srgb, var(--vs-burgundy) 8%, transparent); }
+.tc-protein-strip span { color: var(--vs-dim); font: 700 .72rem/1 system-ui, sans-serif; text-transform: uppercase; letter-spacing: .06em; }
+.tc-protein-strip b { color: var(--vs-ink); font: 700 .92rem/1.35 system-ui, sans-serif; }
+.tc-protein-strip .tc-protein-same { color: var(--vs-blue); }
 .tc-criterion-head { display: flex; align-items: start; justify-content: space-between; gap: .5rem; }
 .tc-criterion-head > span { flex: 0 0 auto; color: var(--vs-burgundy); font: 700 1.25rem/1 system-ui, sans-serif; }
 
@@ -251,6 +271,10 @@
   .tc-scene { padding: 1rem; }
   .tc-scene > header h4 { font: 700 clamp(1.25rem, 5.5vw, 1.65rem)/1.24 'Newsreader', Georgia, serif; letter-spacing: normal; overflow-wrap: anywhere; }
   .tc-type-grid, .tc-criteria-grid { grid-template-columns: 1fr; }
+  .tc-mutation-tabs { display: flex; overflow-x: auto; padding-bottom: .25rem; scroll-snap-type: x proximity; }
+  .tc-mutation-tabs button { flex: 0 0 min(10rem, 72vw); scroll-snap-align: start; }
+  .tc-codon-comparison { grid-template-columns: 1fr; gap: .4rem; }
+  .tc-mutation-arrow { justify-self: center; transform: rotate(90deg); }
   .tc-chem-grid { gap: 0.55rem; }
   .tc-chem-card { padding: 0.65rem; }
   .tc-chem-card > span:last-child { font-size: 0.72rem; }

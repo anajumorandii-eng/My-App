@@ -11,8 +11,43 @@ const accent = 'var(--vs-burgundy)';
 /** O desenho central muda com o mecanismo, sem emprestar a imagem de outro capítulo. */
 function BiologyMechanism({ id, value, ratio }: { id: BiologyRemainingId; value: number; ratio: number }) {
   switch (id) {
-    case 'genetics-intro': return <><rect x="113" y="54" width="94" height="69" rx="19" {...line}/><text x="160" y="97" textAnchor="middle" fill={accent} fontSize="32">{["AA","Aa","aa"][value]}</text><path d="M160 124v50m0 0-67 28m67-28 67 28" {...line}/><text x="90" y="239" fill="var(--vs-ink)" fontSize="24">{value === 2 ? "a" : "A"}</text><text x="224" y="239" fill="var(--vs-ink)" fontSize="24">{value === 0 ? "A" : "a"}</text></>;
-    case 'blood-groups': return <><circle cx="95" cy="142" r="42" fill={accent} opacity=".8"/><text x="95" y="151" textAnchor="middle" fill="white" fontSize="23">A</text>{[0,1,2,3].map(i => <g key={i} transform={`rotate(${i*90} 95 142)`}><path d="M95 100v-15m-8-7 8 7 8-7" stroke={accent} strokeWidth="3" fill="none"/></g>)}<path d="M143 142h24m-8-7 8 7-8 7" stroke={accent} strokeWidth="3" fill="none"/><circle cx="222" cy="142" r="43" {...line}/><text x="222" y="150" textAnchor="middle" fill="var(--vs-ink)" fontSize="23">{['O','A','B','AB'][value]}</text><text x="95" y="224" textAnchor="middle" fill="var(--vs-ink)" fontSize="12">hemácia · antígeno A</text><text x="222" y="214" textAnchor="middle" fill={accent} fontSize="12">{value === 0 || value === 2 ? 'anti-A presente' : 'sem anti-A'}</text><text x="222" y="232" textAnchor="middle" fill="var(--vs-ink)" fontSize="12">receptor</text></>;
+    case 'genetics-intro': {
+      const genotype = ['AA', 'Aa', 'aa'][value];
+      const gametes = value === 0 ? ['A', 'A'] : value === 1 ? ['A', 'a'] : ['a', 'a'];
+      return <g data-bio-system="meiosis-segregation">
+        <text x="160" y="28" textAnchor="middle" fill="var(--vs-dim)" fontSize="11">célula germinativa · par de homólogos</text>
+        <rect x="74" y="46" width="172" height="104" rx="18" fill="var(--vs-paper-strong)" stroke="var(--vs-ink)" strokeWidth="2"/>
+        {[0, 1].map((n) => <g key={n} transform={`translate(${116 + n * 58} 62)`}>
+          <path d="M0 4c-15 17-15 44 0 61M16 4c15 17 15 44 0 61" stroke={n === 0 ? accent : 'var(--vs-blue)'} strokeWidth="7" fill="none" strokeLinecap="round"/>
+          <text x="8" y="39" textAnchor="middle" fill="var(--vs-paper-strong)" fontSize="17" fontWeight="700">{genotype[n]}</text>
+        </g>)}
+        <path d="M160 151v34m0 0-73 30m73-30 73 30" stroke="var(--vs-ink)" strokeWidth="2.5" fill="none"/>
+        <path d="M147 177l13 10 13-10" stroke={accent} strokeWidth="3" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+        <text x="160" y="174" textAnchor="middle" fill={accent} fontSize="11" fontWeight="700">meiose: os homólogos se separam</text>
+        {gametes.map((allele, n) => <g key={`${allele}-${n}`}>
+          <circle cx={87 + n * 146} cy="244" r="32" fill="var(--vs-paper-strong)" stroke="var(--vs-blue)" strokeWidth="2.5"/>
+          <text x={87 + n * 146} y="251" textAnchor="middle" fill={allele === 'A' ? accent : 'var(--vs-blue)'} fontSize="31" fontWeight="700">{allele}</text>
+          <text x={87 + n * 146} y="290" textAnchor="middle" fill="var(--vs-dim)" fontSize="11">gameta</text>
+        </g>)}
+      </g>;
+    }
+    case 'blood-groups': {
+      const receptor = ['O', 'A', 'B', 'AB'][value];
+      const antiA = value === 0 || value === 2;
+      return <g data-bio-system="abo-compatibility">
+        <text x="76" y="30" textAnchor="middle" fill="var(--vs-dim)" fontSize="11">HEMÁCIA DOADA</text><text x="244" y="30" textAnchor="middle" fill="var(--vs-dim)" fontSize="11">PLASMA RECEPTOR</text>
+        <ellipse cx="78" cy="128" rx="55" ry="42" fill="color-mix(in srgb, var(--vs-burgundy) 35%, var(--vs-paper-strong))" stroke={accent} strokeWidth="3"/>
+        <ellipse cx="78" cy="128" rx="24" ry="16" fill="none" stroke={accent} strokeWidth="2" opacity=".7"/>
+        {[[-39,-20], [39,-20], [-39,20], [39,20]].map(([x,y], i) => <g key={i}><path d={`M${78+x} ${128+y}l${x > 0 ? 9 : -9} ${y > 0 ? 8 : -8}`} stroke={accent} strokeWidth="3"/><text x={78+x+(x > 0 ? 15 : -15)} y={128+y+(y > 0 ? 15 : -10)} textAnchor="middle" fill={accent} fontSize="11" fontWeight="700">A</text></g>)}
+        <text x="78" y="194" textAnchor="middle" fill="var(--vs-ink)" fontSize="12">antígenos A</text>
+        <rect x="179" y="64" width="122" height="128" rx="18" fill="color-mix(in srgb, var(--vs-blue) 9%, var(--vs-paper-strong))" stroke="var(--vs-blue)" strokeWidth="2.5"/>
+        <text x="240" y="93" textAnchor="middle" fill="var(--vs-ink)" fontSize="19" fontWeight="700">tipo {receptor}</text>
+        {antiA ? <><path d="M215 129l10-14 10 14 10-14 10 14" stroke={accent} strokeWidth="3" fill="none"/><path d="M210 158l10-14 10 14 10-14 10 14" stroke={accent} strokeWidth="3" fill="none"/><text x="240" y="181" textAnchor="middle" fill={accent} fontSize="11" fontWeight="700">anti-A presente</text></> : <text x="240" y="147" textAnchor="middle" fill="var(--vs-blue)" fontSize="12" fontWeight="700">sem anti-A</text>}
+        <path d="M139 128h32" stroke={antiA ? accent : 'var(--vs-blue)'} strokeWidth="4" strokeDasharray={antiA ? '0' : '6 5'} />
+        <text x="160" y="238" textAnchor="middle" fill={antiA ? accent : 'var(--vs-blue)'} fontSize="13" fontWeight="700">{antiA ? 'anti-A reconhece A → aglutinação' : 'sem anti-A → transfusão compatível'}</text>
+        <text x="160" y="266" textAnchor="middle" fill="var(--vs-dim)" fontSize="11">pergunta: há anticorpo contra o antígeno recebido?</text>
+      </g>;
+    }
     case 'locomotion': return <><circle cx="154" cy="157" r="13" fill={accent}/><path d="M154 157L61 210m93-53 111-65m-112 65-20-89m20 89 17 91" {...line}/><path d={`M75 196q55 ${-125 * ratio} 110-76`} stroke={accent} fill="none" strokeWidth="6"/></>;
     case 'endocrine': return <><circle cx="97" cy="90" r="32" {...line}/><circle cx="225" cy="90" r="32" {...line}/><circle cx="161" cy="208" r="32" {...line}/><path d="M130 90h62m17 30-37 57m-24 0-37-57" {...line}/><path d="M145 208q-107 5-49-85" stroke={accent} strokeWidth="4" fill="none"/></>;
     case 'inorganic': return <><rect x="55" y="52" width="88" height="139" rx="12" {...line}/><rect x="177" y="52" width="88" height="139" rx="12" {...line}/><path d="M160 45v153" stroke={accent} strokeWidth="7" strokeDasharray="4 5"/><motion.path d="M121 121h77" stroke="var(--vs-blue)" strokeWidth="6" initial={false} animate={{pathLength:ratio}}/></>;
@@ -27,7 +62,22 @@ function BiologyMechanism({ id, value, ratio }: { id: BiologyRemainingId; value:
     case 'fish': return <><path d="M62 145q59-74 136 0-77 74-136 0Zm136 0 58-50v100Z" {...line}/><path d="M100 145h77" stroke={accent} strokeWidth="6"/></>;
     case 'angiosperms': return <><path d="M160 228V126M160 157q-57-45-63-90 55 0 63 60m0 30q57-45 63-90-55 0-63 60" {...line}/><circle cx="160" cy="108" r="29" fill="var(--vs-burgundy)" opacity=".55"/><motion.circle cx="160" cy="189" r="24" fill="var(--vs-blue)" initial={false} animate={{scale:.5+ratio*.5}}/></>;
     case 'procaryotes': return <><rect x="65" y="83" width="94" height="79" rx="39" {...line}/><rect x="164" y="127" width="94" height="79" rx="39" {...line}/><motion.path d="M150 121q26-33 48 17" stroke={accent} strokeWidth="5" fill="none" initial={false} animate={{pathLength:ratio}}/></>;
-    case 'senses': return <><path d="M28 140h35m-10-8 10 8-10 8" stroke="var(--vs-blue)" strokeWidth="3" fill="none"/><path d="M67 140q47-69 100 0-53 69-100 0Z" {...line}/><circle cx="116" cy="140" r="18" fill="none" stroke={accent} strokeWidth="3"/><path d="M156 106q-20 35 0 68M157 140h42m-9-7 9 7-9 7" stroke={accent} strokeWidth="3" fill="none"/><path d="M202 140h54m-8-7 8 7-8 7" stroke="var(--vs-blue)" strokeWidth="3" fill="none"/><text x="48" y="212" fill="var(--vs-ink)" fontSize="12" textAnchor="middle">luz</text><text x="151" y="212" fill="var(--vs-ink)" fontSize="12" textAnchor="middle">retina</text><text x="254" y="212" fill="var(--vs-ink)" fontSize="12" textAnchor="end">nervo óptico</text><text x="160" y="245" fill={accent} fontSize="12" textAnchor="middle">fotorreceptor: luz → sinal elétrico</text></>;
+    case 'senses': return <g data-bio-system="vision-hearing">
+      <text x="82" y="28" textAnchor="middle" fill="var(--vs-dim)" fontSize="11">VISÃO</text><text x="238" y="28" textAnchor="middle" fill="var(--vs-dim)" fontSize="11">AUDIÇÃO</text>
+      <path d="M20 103h29" stroke="var(--vs-amber)" strokeWidth="3"/><path d="M25 92h24M25 114h24" stroke="var(--vs-amber)" strokeWidth="2" opacity={.25 + ratio * .75}/>
+      <path d="M50 103q44-57 92 0-48 57-92 0Z" fill="var(--vs-paper-strong)" stroke="var(--vs-ink)" strokeWidth="2.5"/>
+      <path d="M79 69q-15 34 0 68" fill="none" stroke="var(--vs-blue)" strokeWidth="3"/><ellipse cx="101" cy="103" rx="19" ry="24" fill="color-mix(in srgb, var(--vs-blue) 18%, transparent)" stroke="var(--vs-blue)" strokeWidth="2"/>
+      <path d="M121 60q24 43 0 86" fill="none" stroke={accent} strokeWidth="4"/><path d="M143 103h25" stroke={accent} strokeWidth="4"/>
+      <text x="56" y="152" textAnchor="middle" fill="var(--vs-ink)" fontSize="10">córnea</text><text x="101" y="165" textAnchor="middle" fill="var(--vs-ink)" fontSize="10">cristalino</text><text x="143" y="152" textAnchor="middle" fill={accent} fontSize="10">retina</text><text x="155" y="179" textAnchor="middle" fill="var(--vs-dim)" fontSize="10">nervo óptico</text>
+      <path d="M181 65q-20 15-7 48c7 18 27 21 33 2 6-19-7-31-14-18-5 10 13 17 25 4" fill="none" stroke="var(--vs-ink)" strokeWidth="2.5"/>
+      <path d="M219 101h20l7-8 7 8 7-8 7 8" fill="none" stroke="var(--vs-blue)" strokeWidth="3"/>
+      <path d="M270 90c30 0 30 46 0 46-30 0-30-46 0-46Zm0 9c18 0 18 28 0 28-18 0-18-28 0-28Z" fill="none" stroke={accent} strokeWidth="3"/>
+      <path d="M286 113h22" stroke={accent} strokeWidth="4"/>
+      <text x="194" y="155" textAnchor="middle" fill="var(--vs-ink)" fontSize="10">orelha</text><text x="238" y="174" textAnchor="middle" fill="var(--vs-ink)" fontSize="10">ossículos</text><text x="270" y="155" textAnchor="middle" fill={accent} fontSize="10">cóclea</text><text x="297" y="179" textAnchor="middle" fill="var(--vs-dim)" fontSize="10">nervo</text>
+      <path d="M30 218h260" stroke="var(--vs-ink)" strokeWidth="1.5" opacity=".35"/>
+      <text x="160" y="245" textAnchor="middle" fill={accent} fontSize="13" fontWeight="700">receptor especializado converte estímulo em impulso nervoso</text>
+      <text x="160" y="270" textAnchor="middle" fill="var(--vs-dim)" fontSize="11">fotorreceptores na retina · células ciliadas na cóclea</text>
+    </g>;
     case 'reproduction': return <><circle cx="82" cy="145" r="26" {...line}/><circle cx="160" cy="145" r="26" {...line}/><circle cx="238" cy="145" r="26" {...line}/><motion.path d="M108 145h104" stroke={accent} strokeWidth="5" initial={false} animate={{pathLength:ratio}}/></>;
     case 'plant-tissues': return <><path d="M145 227V79m30 148V79" {...line}/><path d="M160 78q-54 10-57-50 44 3 57 48m0 2q54 10 57-50-44 3-57 48" {...line}/><path d="M151 223V85" stroke="var(--vs-blue)" strokeWidth="5"/><path d="M169 223V85" stroke={accent} strokeWidth="5"/></>;
     case 'stems-leaves': return <><path d="M160 227V80m0 54q-56 0-73-47 53-14 73 43m0 25q56 0 73-47-53-14-73 43" {...line}/><motion.circle cx="160" cy="204" r="13" fill="var(--vs-blue)" initial={false} animate={{cy:204-90*ratio}}/></>;
