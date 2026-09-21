@@ -51,6 +51,10 @@ import { electrochemistryInstrument } from './ElectrochemistryInstrument';
 import type { ElectrochemistryId } from '../../lib/electrochemistryLab';
 import { biologyInstrument } from './BiologyInstrument';
 import type { BiologyInstrumentId } from '../../lib/biologyInstrumentLab';
+import { geographyInstrument } from './GeographyInstrument';
+import type { GeographyInstrumentId } from '../../lib/geographyInstrumentLab';
+import { historyInstrument } from './HistoryInstrument';
+import type { HistoryInstrumentId } from '../../lib/historyInstrumentLab';
 
 /**
  * Quais capítulos ganham prancha manipulável, e com que instrumento.
@@ -133,6 +137,8 @@ function mecanicaFinal(id:string,topic:string,config:MechanicsFinalId):Instrumen
 function fisicaRestante(id:string,topic:string,config:PhysicsRemainingId):InstrumentEntry{return{id,subject:'Física',keywords:[topic],exactTopic:topic,Component:physicsRemainingInstrument(config)}}
 function eletroquimico(id:string,topic:string,config:ElectrochemistryId):InstrumentEntry{return{id,subject:'Química',keywords:[topic],exactTopic:topic,Component:electrochemistryInstrument(config)}}
 function biologico(id:string,topic:string,config:BiologyInstrumentId):InstrumentEntry{return{id,subject:'Biologia',keywords:[topic],exactTopic:topic,Component:biologyInstrument(config)}}
+function geografico(id:string,topic:string,config:GeographyInstrumentId):InstrumentEntry{return{id,subject:'Geografia',keywords:[topic],exactTopic:topic,Component:geographyInstrument(config)}}
+function historico(id:string,topic:string,config:HistoryInstrumentId):InstrumentEntry{return{id,subject:'História',keywords:[topic],exactTopic:topic,Component:historyInstrument(config)}}
 
 export const INSTRUMENTS: InstrumentEntry[] = [
   plano('funcoes-introducao', ['introdução às funções'], 'afim'),
@@ -230,6 +236,8 @@ export const INSTRUMENTS: InstrumentEntry[] = [
   fisicaRestante('eco-refracao','reflexão, eco, reverberação e refração de ondas','echo'),fisicaRestante('difracao-polarizacao','fenômenos ondulatórios: difração, polarização e ressonância','diffraction'),fisicaRestante('ondas-tubos','ondas estacionárias em tubos','tube-harmonics'),fisicaRestante('fisica-quantica','noções básicas de física quântica','quantum-photon'),
   eletroquimico('redox','processos de oxirredução','redox'),eletroquimico('pilhas-baterias','introdução ao estudo das pilhas e baterias','cells'),eletroquimico('eletroquimica-espontanea','eletroquímica de processos espontâneos','spontaneous'),eletroquimico('eletrolise','eletroquímica de processos não espontâneos','electrolysis'),eletroquimico('faraday-metalurgia','aspectos quantitativos da eletroquímica e metalurgia','quantitative'),
   biologico('acidos-nucleicos','ácidos nucleicos','nucleic-acids'),biologico('ligacao-genica','ligação gênica','linkage'),biologico('coracao-vasos','coração e vasos sanguíneos','circulation'),biologico('fisiologia-respiracao','fisiologia da respiração','respiration'),biologico('hormonios-vegetais','fisiologia vegetal: hormônios vegetais','plant-hormones'),
+  geografico('fusos-horarios','sistema de fusos horários','time-zones'),geografico('linguagem-cartografica','linguagem cartográfica','map-scale'),geografico('agua-superficie','água na superfície terrestre','aquifer'),geografico('matriz-energetica','matriz energética','energy-matrix'),geografico('redes-mundiais','geografia das redes mundiais','network-redundancy'),
+  historico('america-xix','américa no século xix','america-xix'),historico('segunda-guerra','segunda guerra mundial (1939-1945)','wwii-fronts'),historico('guerra-fria','guerra fria','cold-war'),historico('interiorizacao-colonial','a interiorização da colonização','interiorization'),historico('mineracao-colonial','a mineração no brasil colonial','mining-colony'),
 ];
 
 function chapterText(summary: Pick<InteractiveSummary, 'subject' | 'topic' | 'title'>): string {

@@ -226,4 +226,14 @@ describe('registro de instrumentos', () => {
     };
     for (const [id, topic] of Object.entries(esperado)) expect(interactiveSummaries.filter((s) => findInstrument(s)?.id === id).map((s) => s.topic), id).toEqual([topic]);
   });
+
+  it('mantém os instrumentos de geografia nos cinco sistemas espaciais', () => {
+    const esperado: Record<string, string> = { 'fusos-horarios': 'Sistema de Fusos Horários', 'linguagem-cartografica': 'Linguagem Cartográfica', 'agua-superficie': 'Água na Superfície Terrestre', 'matriz-energetica': 'Matriz Energética', 'redes-mundiais': 'Geografia das Redes Mundiais' };
+    for (const [id, topic] of Object.entries(esperado)) expect(interactiveSummaries.filter((s) => findInstrument(s)?.id === id).map((s) => s.topic), id).toEqual([topic]);
+  });
+
+  it('mantém os instrumentos de história nos cinco processos comparados', () => {
+    const esperado: Record<string, string> = { 'america-xix': 'América no Século XIX', 'segunda-guerra': 'Segunda Guerra Mundial (1939-1945)', 'guerra-fria': 'Guerra Fria', 'interiorizacao-colonial': 'A Interiorização da Colonização', 'mineracao-colonial': 'A Mineração no Brasil Colonial' };
+    for (const [id, topic] of Object.entries(esperado)) expect(interactiveSummaries.filter((s) => findInstrument(s)?.id === id).map((s) => s.topic), id).toEqual([topic]);
+  });
 });

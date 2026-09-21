@@ -3,9 +3,9 @@
   "counts": {
     "experiment": 11,
     "board": 41,
-    "instrument": 134,
+    "instrument": 144,
     "scene": 186,
-    "fallback": 241
+    "fallback": 231
   },
   "contested": 18,
   "subjects": [
@@ -48,9 +48,9 @@
       "counts": {
         "experiment": 1,
         "board": 0,
-        "instrument": 0,
+        "instrument": 5,
         "scene": 26,
-        "fallback": 36
+        "fallback": 31
       }
     },
     {
@@ -59,9 +59,9 @@
       "counts": {
         "experiment": 1,
         "board": 1,
-        "instrument": 0,
+        "instrument": 5,
         "scene": 32,
-        "fallback": 15
+        "fallback": 10
       }
     },
     {
@@ -1509,16 +1509,16 @@
       "id": "summary-geografia-sistema-de-fusos-horarios",
       "subject": "Geografia",
       "title": "Sistema de Fusos Horários",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "fusos-horarios",
       "ignored": []
     },
     {
       "id": "summary-geografia-linguagem-cartografica",
       "subject": "Geografia",
       "title": "Linguagem Cartográfica",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "linguagem-cartografica",
       "ignored": []
     },
     {
@@ -1581,8 +1581,8 @@
       "id": "summary-geografia-agua-na-superficie-terrestre",
       "subject": "Geografia",
       "title": "Água na Superfície Terrestre",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "agua-superficie",
       "ignored": []
     },
     {
@@ -1637,8 +1637,8 @@
       "id": "summary-geografia-geografia-das-redes-mundiais",
       "subject": "Geografia",
       "title": "Geografia das Redes Mundiais",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "redes-mundiais",
       "ignored": []
     },
     {
@@ -1877,8 +1877,8 @@
       "id": "summary-geografia-matriz-energetica",
       "subject": "Geografia",
       "title": "Matriz Energética",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "matriz-energetica",
       "ignored": []
     },
     {
@@ -2093,8 +2093,8 @@
       "id": "summary-historia-america-no-seculo-xix",
       "subject": "História",
       "title": "América no Século XIX",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "america-xix",
       "ignored": []
     },
     {
@@ -2149,16 +2149,16 @@
       "id": "summary-historia-segunda-guerra-mundial-1939-1945",
       "subject": "História",
       "title": "Segunda Guerra Mundial (1939-1945)",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "segunda-guerra",
       "ignored": []
     },
     {
       "id": "summary-historia-guerra-fria",
       "subject": "História",
       "title": "Guerra Fria",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "guerra-fria",
       "ignored": []
     },
     {
@@ -2229,16 +2229,16 @@
       "id": "summary-historia-a-interiorizacao-da-colonizacao",
       "subject": "História",
       "title": "A Interiorização da Colonização",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "interiorizacao-colonial",
       "ignored": []
     },
     {
       "id": "summary-historia-a-mineracao-no-brasil-colonial",
       "subject": "História",
       "title": "A Mineração no Brasil Colonial",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "mineracao-colonial",
       "ignored": []
     },
     {
