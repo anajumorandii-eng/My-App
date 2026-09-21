@@ -3,9 +3,9 @@
   "counts": {
     "experiment": 11,
     "board": 41,
-    "instrument": 176,
+    "instrument": 185,
     "scene": 186,
-    "fallback": 199
+    "fallback": 190
   },
   "contested": 18,
   "subjects": [
@@ -136,9 +136,9 @@
       "counts": {
         "experiment": 0,
         "board": 7,
-        "instrument": 14,
+        "instrument": 23,
         "scene": 18,
-        "fallback": 9
+        "fallback": 0
       }
     },
     {
@@ -4324,24 +4324,24 @@
       "id": "summary-quimica-estudo-dos-gases-ii",
       "subject": "Química",
       "title": "Estudo dos Gases II",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "gas-law",
       "ignored": []
     },
     {
       "id": "summary-quimica-separacao-de-misturas",
       "subject": "Química",
       "title": "Separação de Misturas",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "separation",
       "ignored": []
     },
     {
       "id": "summary-quimica-transformacoes-fisicas-e-quimicas-e-balanceamento-de-equacoes",
       "subject": "Química",
       "title": "Transformações Físicas e Químicas e Balanceamento de Equações",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "balancing",
       "ignored": []
     },
     {
@@ -4417,16 +4417,16 @@
       "id": "summary-quimica-introducao-a-quimica-organica",
       "subject": "Química",
       "title": "Introdução à Química Orgânica",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "carbon-chain",
       "ignored": []
     },
     {
       "id": "summary-quimica-nomenclatura-de-compostos-organicos",
       "subject": "Química",
       "title": "Nomenclatura de Compostos Orgânicos",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "organic-name",
       "ignored": []
     },
     {
@@ -4481,16 +4481,16 @@
       "id": "summary-quimica-reacoes-de-adicao",
       "subject": "Química",
       "title": "Reações de Adição",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "addition",
       "ignored": []
     },
     {
       "id": "summary-quimica-reacoes-de-oxidacao-em-hidrocarbonetos",
       "subject": "Química",
       "title": "Reações de Oxidação em Hidrocarbonetos",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "oxidation",
       "ignored": []
     },
     {
@@ -4505,8 +4505,8 @@
       "id": "summary-quimica-acidos-graxos-e-esterificacao",
       "subject": "Química",
       "title": "Ácidos Graxos e Esterificação",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "esterification",
       "ignored": []
     },
     {
@@ -4529,8 +4529,8 @@
       "id": "summary-quimica-polimeros",
       "subject": "Química",
       "title": "Polímeros",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "polymer",
       "ignored": []
     },
     {

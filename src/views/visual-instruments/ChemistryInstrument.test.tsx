@@ -10,14 +10,12 @@ const ids = [
   'summary-quimica-o-estado-gasoso', 'summary-quimica-massa-atomica-mol-e-massa-molar',
   'summary-quimica-determinacao-de-formulas-quimicas', 'summary-quimica-calculos-estequiometricos',
   'summary-quimica-transesterificacao-alcoolise', 'summary-quimica-acidez-e-basicidade-pka',
-  'summary-quimica-deslocamento-de-equilibrio', 'summary-quimica-equilibrios-ionicos', 'qui-equilibrio-acidificacao',
-];
-const unresolved = [
   'summary-quimica-estudo-dos-gases-ii', 'summary-quimica-separacao-de-misturas',
   'summary-quimica-transformacoes-fisicas-e-quimicas-e-balanceamento-de-equacoes',
   'summary-quimica-introducao-a-quimica-organica', 'summary-quimica-nomenclatura-de-compostos-organicos',
   'summary-quimica-reacoes-de-adicao', 'summary-quimica-reacoes-de-oxidacao-em-hidrocarbonetos',
   'summary-quimica-acidos-graxos-e-esterificacao', 'summary-quimica-polimeros',
+  'summary-quimica-deslocamento-de-equilibrio', 'summary-quimica-equilibrios-ionicos', 'qui-equilibrio-acidificacao',
 ];
 
 describe('instrumentos de Química', () => {
@@ -27,10 +25,6 @@ describe('instrumentos de Química', () => {
       expect(chapter, id).toBeDefined();
       expect(findInstrument(chapter!)?.id, id).toBeTruthy();
       expect(findInstrument({ ...chapter!, subject: 'Biologia' }), id).toBeNull();
-    }
-    for (const id of unresolved) {
-      const chapter = interactiveSummaries.find(s => s.id === id)!;
-      expect(findInstrument(chapter), id).toBeNull();
     }
   });
 
