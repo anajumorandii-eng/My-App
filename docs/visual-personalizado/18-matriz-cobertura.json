@@ -3,9 +3,9 @@
   "counts": {
     "experiment": 11,
     "board": 43,
-    "instrument": 218,
+    "instrument": 228,
     "scene": 186,
-    "fallback": 155
+    "fallback": 145
   },
   "contested": 18,
   "subjects": [
@@ -59,9 +59,9 @@
       "counts": {
         "experiment": 1,
         "board": 1,
-        "instrument": 5,
+        "instrument": 15,
         "scene": 32,
-        "fallback": 10
+        "fallback": 0
       }
     },
     {
@@ -2125,8 +2125,8 @@
       "id": "summary-historia-grandes-revolucoes-do-seculo-xx",
       "subject": "História",
       "title": "Grandes Revoluções do Século XX",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "grandes-revolucoes-seculo-xx",
       "ignored": []
     },
     {
@@ -2173,8 +2173,8 @@
       "id": "summary-historia-america-latina-no-seculo-xx",
       "subject": "História",
       "title": "América Latina no Século XX",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "america-latina-seculo-xx",
       "ignored": []
     },
     {
@@ -2213,16 +2213,16 @@
       "id": "summary-historia-dinamica-interna-da-colonizacao",
       "subject": "História",
       "title": "Dinâmica Interna da Colonização",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "dinamica-interna-colonizacao",
       "ignored": []
     },
     {
       "id": "summary-historia-disputas-europeias-no-brasil-colonial",
       "subject": "História",
       "title": "Disputas Europeias no Brasil Colonial",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "disputas-europeias-brasil-colonial",
       "ignored": []
     },
     {
@@ -2282,8 +2282,8 @@
       "id": "summary-historia-brasil-imperio-segundo-reinado-1840-1889",
       "subject": "História",
       "title": "Brasil Império: Segundo Reinado (1840-1889)",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "segundo-reinado",
       "ignored": []
     },
     {
@@ -2298,8 +2298,8 @@
       "id": "summary-historia-a-republica-da-espada",
       "subject": "História",
       "title": "A República da Espada",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "republica-da-espada",
       "ignored": []
     },
     {
@@ -2346,32 +2346,32 @@
       "id": "summary-historia-republica-liberal-1945-1964-democracia-em-tempos-de-guerra-fria",
       "subject": "História",
       "title": "República Liberal (1945-1964): Democracia em Tempos de Guerra Fria",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "republica-liberal-democracia",
       "ignored": []
     },
     {
       "id": "summary-historia-republica-liberal-1945-1964-desenvolvimentismo-e-populismo",
       "subject": "História",
       "title": "República Liberal (1945-1964): Desenvolvimentismo e Populismo",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "republica-liberal-desenvolvimentismo",
       "ignored": []
     },
     {
       "id": "summary-historia-regime-militar-1964-1985-i",
       "subject": "História",
       "title": "Regime Militar (1964-1985) I",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "regime-militar-i",
       "ignored": []
     },
     {
       "id": "summary-historia-regime-militar-1964-1985-ii",
       "subject": "História",
       "title": "Regime Militar (1964-1985) II",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "regime-militar-ii",
       "ignored": []
     },
     {
