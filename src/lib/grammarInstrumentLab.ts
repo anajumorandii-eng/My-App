@@ -1,4 +1,4 @@
-export type GrammarInstrumentId = 'noun-phrase' | 'agreement' | 'comma-scope' | 'crasis' | 'verbal-voice';
+export type GrammarInstrumentId = 'noun-phrase' | 'agreement' | 'comma-scope' | 'crasis' | 'verbal-voice' | 'pronoun-reference' | 'verbal-aspect' | 'ambiguity' | 'clause-relations';
 export interface GrammarReadout { label: string; value: string; pivot?: boolean }
 export interface GrammarInstrumentConfig {
   id: GrammarInstrumentId;
@@ -86,5 +86,25 @@ export const GRAMMAR_INSTRUMENTS: Record<GrammarInstrumentId, GrammarInstrumentC
     readouts: (v) => { const item = voiceCase(v); return [
       { label: 'Frase', value: item.sentence, pivot: true }, { label: 'Foco', value: item.focus }, { label: 'Agente', value: item.agent },
     ]; },
+  },
+  'pronoun-reference': {
+    id: 'pronoun-reference', name: 'Pronome e referente no texto', question: 'A que termo o pronome retoma — e como o contexto impede uma leitura solta?',
+    control: { label: 'Retomada', description: 'altere o referente disponível na frase', min: 0, max: 2, step: 1, initial: 0, display: (v) => ['retomada nominal', 'retomada de ideia', 'referência ambígua'][Math.round(v)] }, relation: 'pronome + contexto anterior → referente recuperado', insight: 'Pronome não aponta sozinho: a coesão depende do termo ou ideia recuperável e da ausência de concorrentes plausíveis.',
+    readouts: (v) => [{ label: 'Construção', value: ['Marina entregou o relatório. Ela revisou os dados.', 'A cidade cresceu sem planejamento. Isso ampliou o risco.', 'Ana contou a Bia que ela chegaria cedo.'][Math.round(v)], pivot: true }, { label: 'Referente', value: ['Marina', 'o crescimento sem planejamento', 'Ana ou Bia: falta desambiguar'][Math.round(v)] }, { label: 'Teste', value: ['retomada nominal clara', 'retomada de uma proposição', 'reescrever com o nome'][Math.round(v)] }],
+  },
+  'verbal-aspect': {
+    id: 'verbal-aspect', name: 'Tempo, aspecto e efeito verbal', question: 'A forma verbal apresenta hábito, ação em curso ou fato concluído?',
+    control: { label: 'Forma verbal', description: 'compare o recorte temporal que cada forma produz', min: 0, max: 2, step: 1, initial: 0, display: (v) => ['estudava', 'está estudando', 'estudou'][Math.round(v)] }, relation: 'tempo + aspecto → perspectiva sobre a ação', insight: 'Tempo localiza; aspecto mostra a ação por dentro, como hábito, processo ou conclusão. Trocar a forma verbal muda a cena construída.',
+    readouts: (v) => [{ label: 'Frase', value: ['Ela estudava à noite.', 'Ela está estudando agora.', 'Ela estudou ontem.'][Math.round(v)], pivot: true }, { label: 'Recorte', value: ['hábito ou ação em desenvolvimento no passado', 'processo em curso no presente', 'evento terminado'][Math.round(v)] }, { label: 'Efeito', value: ['duração sem limite fechado', 'flagrante da ação', 'resultado concluído'][Math.round(v)] }],
+  },
+  ambiguity: {
+    id: 'ambiguity', name: 'Ambiguidade que a sintaxe cria', question: 'Onde uma mesma sequência permite duas leituras — e como a reescrita decide uma delas?',
+    control: { label: 'Leitura', description: 'selecione o vínculo que a frase deixa em disputa', min: 0, max: 2, step: 1, initial: 0, display: (v) => ['ambígua', 'instrumento', 'companhia'][Math.round(v)] }, relation: 'posição + vínculo sintático → interpretação', insight: 'Ambiguidade não é apenas palavra “com dois sentidos”: posição e encaixe dos termos podem produzir mais de uma análise sintática.',
+    readouts: (v) => [{ label: 'Frase', value: ['Vi a aluna com o telescópio.', 'Vi a aluna usando o telescópio.', 'Vi a aluna que estava com o telescópio.'][Math.round(v)], pivot: true }, { label: 'Leitura', value: ['quem usava o telescópio não fica definido', 'o observador usa o instrumento', 'a aluna porta o instrumento'][Math.round(v)] }, { label: 'Reparo', value: ['explicitar o vínculo', 'adjunto do verbo', 'oração relativa da aluna'][Math.round(v)] }],
+  },
+  'clause-relations': {
+    id: 'clause-relations', name: 'Conectivo e relação entre orações', question: 'O conectivo soma, contrasta ou apresenta consequência?',
+    control: { label: 'Relação', description: 'mude o conectivo e confira a seta lógica', min: 0, max: 2, step: 1, initial: 0, display: (v) => ['adição', 'contraste', 'consequência'][Math.round(v)] }, relation: 'oração A + conectivo + oração B → relação de sentido', insight: 'Conectivo é uma instrução de leitura: trocar “mas” por “portanto” não é trocar estilo, é mudar a relação que organiza o argumento.',
+    readouts: (v) => [{ label: 'Período', value: ['Leu os dados e comparou as fontes.', 'Leu os dados, mas não comparou as fontes.', 'Não comparou as fontes; portanto, errou a conclusão.'][Math.round(v)], pivot: true }, { label: 'Relação', value: ['acréscimo de ação', 'quebra de expectativa', 'resultado inferido'][Math.round(v)] }, { label: 'Pergunta', value: ['o que se soma?', 'o que se opõe?', 'o que decorre?'][Math.round(v)] }],
   },
 };

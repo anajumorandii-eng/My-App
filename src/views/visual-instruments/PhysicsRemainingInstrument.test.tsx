@@ -25,4 +25,19 @@ describe('instrumento de ondas e física moderna', () => {
     fireEvent.change(screen.getByRole('slider'), { target: { value: '0.4' } });
     expect(screen.getAllByText('68 m').length).toBeGreaterThan(0);
   });
+
+  it('desenha os dois semiperfis opostos da onda estacionária no tubo', () => {
+    const Component = physicsRemainingInstrument('tube-harmonics');
+    const { container } = render(<Component {...props('summary-fisica-ondas-estacionarias-em-tubos')} />);
+    const upper = container.querySelector('[data-harmonic-profile="upper"]')?.getAttribute('d');
+    const lower = container.querySelector('[data-harmonic-profile="lower"]')?.getAttribute('d');
+    expect(upper).toBeTruthy();
+    expect(lower).toBeTruthy();
+    expect(upper).not.toBe(lower);
+    // No primeiro quarto do modo fundamental, um perfil sobe e o outro desce.
+    const upperY = Number(upper!.match(/^M\s+43\s+150\s+L\s+[\d.]+\s+([\d.]+)/)?.[1]);
+    const lowerY = Number(lower!.match(/^M\s+43\s+150\s+L\s+[\d.]+\s+([\d.]+)/)?.[1]);
+    expect(upperY).toBeLessThan(150);
+    expect(lowerY).toBeGreaterThan(150);
+  });
 });

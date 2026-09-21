@@ -177,7 +177,6 @@ describe('registro de instrumentos', () => {
       'espelho-plano': 'Reflexão em Superfícies Planas',
       'espelho-esferico': 'Reflexão em Superfícies Esféricas',
       refracao: 'Refração: Fundamentos, Leis e Aplicações',
-      'optica-visao': 'Óptica da Visão',
     };
     for (const [id, topic] of Object.entries(esperado)) {
       expect(interactiveSummaries.filter((s) => findInstrument(s)?.id === id).map((s) => s.topic), id).toEqual([topic]);

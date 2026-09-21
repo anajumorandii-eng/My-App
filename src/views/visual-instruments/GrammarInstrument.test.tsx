@@ -42,4 +42,20 @@ describe('instrumentos de Gramática', () => {
     fireEvent.change(screen.getByRole('slider'), { target: { value: '1' } });
     expect(screen.getAllByText('o verbo não exige preposição').length).toBeGreaterThan(0);
   });
+
+  it('oferece laboratórios próprios para referência, aspecto, ambiguidade e conectivos', () => {
+    const chapters: Array<[GrammarInstrumentId, string, string]> = [
+      ['pronoun-reference', 'summary-gramatica-pronomes', 'referência ambígua'],
+      ['verbal-aspect', 'summary-gramatica-verbo', 'evento concluído'],
+      ['ambiguity', 'summary-gramatica-ambiguidade-duplicidade-no-lexico-e-na-sintaxe', 'telescópio: aluna'],
+      ['clause-relations', 'summary-gramatica-oracoes-coordenadas', 'consequência'],
+    ];
+    for (const [id, summaryId, expected] of chapters) {
+      const Component = grammarInstrument(id);
+      const view = render(<Component {...props(summaryId)} />);
+      fireEvent.change(screen.getByRole('slider'), { target: { value: '2' } });
+      expect(screen.getAllByText(expected).length).toBeGreaterThan(0);
+      view.unmount();
+    }
+  });
 });

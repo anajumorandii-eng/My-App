@@ -32,6 +32,7 @@ import FungiBoard from './FungiBoard';
 import EnzymeBoard from './EnzymeBoard';
 import IndependenceBoard from './IndependenceBoard';
 import HeartCirculationBoard from './HeartCirculationBoard';
+import VisionDefectsBoard from './VisionDefectsBoard';
 
 /**
  * Quais capítulos têm prancha ilustrada, e qual.
@@ -67,6 +68,12 @@ export interface BoardEntry {
 }
 
 export const BOARDS: BoardEntry[] = [
+  {
+    id: 'defeitos-visao',
+    subject: 'Física',
+    keywords: ['óptica da visão'],
+    Component: VisionDefectsBoard,
+  },
   {
     id: 'coracao-circulacao',
     subject: 'Biologia',

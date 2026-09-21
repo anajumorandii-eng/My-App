@@ -24,6 +24,10 @@ describe('registro de pranchas', () => {
     expect(findBoard(summary)?.id).toBe('leis-newton');
   });
 
+  it('entrega a prancha de foco à Óptica da Visão', () => {
+    expect(findBoard(capitulo('Óptica da Visão'))?.id).toBe('defeitos-visao');
+  });
+
   it('entrega a prancha de micélio somente ao capítulo de Fungos', () => {
     const summary = interactiveSummaries.find((item) => item.id === 'summary-biologia-fungos');
     expect(summary).toBeDefined();

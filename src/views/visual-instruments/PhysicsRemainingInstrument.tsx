@@ -36,11 +36,21 @@ function Scene({ id, value }: { id: PhysicsRemainingId; value: number }) {
     </g>;
   }
   if (id === 'tube-harmonics') {
-    const points = Array.from({ length: 81 }, (_, index) => { const x = 43 + index * 2.9; return `${index ? 'L' : 'M'} ${x} ${150 - 52 * Math.sin((index / 80) * Math.PI * value / 2)}`; }).join(' ');
+    // Cada semiperfil é calculado a partir da mesma função. Não espelhe a
+    // string pronta: ela já contém coordenadas numéricas, portanto um
+    // replace textual não altera o sinal de y e desenha a mesma curva duas
+    // vezes (a falha que escondia o ventre da onda estacionária).
+    const profile = (sign: 1 | -1) => Array.from({ length: 81 }, (_, index) => {
+      const x = 43 + index * 2.9;
+      const y = 150 + sign * 52 * Math.sin((index / 80) * Math.PI * value / 2);
+      return `${index ? 'L' : 'M'} ${x} ${y}`;
+    }).join(' ');
+    const upperProfile = profile(-1);
+    const lowerProfile = profile(1);
     const nodeXs = Array.from({length:(value+1)/2},(_,n)=>43+n*(235*2/value));
     return <g data-physics-system="tube-harmonics">
       <path d="M34 78V223H286V78" fill="color-mix(in srgb,var(--vs-blue) 14%,transparent)" stroke="var(--vs-ink)" strokeWidth="4"/><path d="M34 223H286" stroke="var(--vs-ink)" strokeWidth="9"/>
-      <path d={points} {...wine}/><path d={points.replaceAll('150 -','150 +')} stroke="var(--vs-blue)" strokeWidth="3" fill="none" opacity=".8"/>
+      <path data-harmonic-profile="upper" d={upperProfile} {...wine}/><path data-harmonic-profile="lower" d={lowerProfile} stroke="var(--vs-blue)" strokeWidth="3" fill="none" opacity=".8"/>
       {nodeXs.map((x,n)=><g key={x}><path d={`M${x} 103v94`} stroke="var(--vs-ink-muted)" strokeWidth="1" strokeDasharray="3 4"/><circle cx={x} cy="150" r="5" fill="var(--vs-ink)"/><text x={x} y="245" textAnchor="middle" style={{...ink,fontSize:10}}>nó</text></g>)}
       <path d="M286 98v104" stroke="var(--vs-burgundy)" strokeWidth="4"/><text x="34" y="56" style={ink}>fechado</text><text x="286" y="56" textAnchor="end" style={ink}>aberto</text>
       <text x="160" y="283" textAnchor="middle" style={{...ink,fontSize:13}}>L = {value}λ/4 · apenas n ímpar</text>

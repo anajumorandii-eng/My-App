@@ -59,6 +59,8 @@ import { geographyInstrument } from './GeographyInstrument';
 import type { GeographyInstrumentId } from '../../lib/geographyInstrumentLab';
 import { geographyRemainingInstrument } from './GeographyRemainingInstrument';
 import type { GeographyRemainingId } from '../../lib/geographyRemainingLab';
+import { geographyContextInstrument } from './GeographyContextInstrument';
+import type { GeographyContextId } from '../../lib/geographyContextLab';
 import { historyInstrument } from './HistoryInstrument';
 import type { HistoryInstrumentId } from '../../lib/historyInstrumentLab';
 import { grammarInstrument } from './GrammarInstrument';
@@ -153,6 +155,7 @@ function biologico(id:string,topic:string,config:BiologyInstrumentId):Instrument
 function biologicoRestante(id:string,topic:string,config:BiologyRemainingId):InstrumentEntry{return{id,subject:'Biologia',keywords:[topic.toLowerCase()],exactTopic:topic.toLowerCase(),Component:biologyRemainingInstrument(config)}}
 function geografico(id:string,topic:string,config:GeographyInstrumentId):InstrumentEntry{return{id,subject:'Geografia',keywords:[topic],exactTopic:topic,Component:geographyInstrument(config)}}
 function geograficoRestante(id:string,topic:string,config:GeographyRemainingId):InstrumentEntry{return{id,subject:'Geografia',keywords:[topic],exactTopic:topic,Component:geographyRemainingInstrument(config)}}
+function geograficoContexto(id:string,topic:string,config:GeographyContextId):InstrumentEntry{return{id,subject:'Geografia',keywords:[topic],exactTopic:topic,Component:geographyContextInstrument(config)}}
 function historico(id:string,topic:string,config:HistoryInstrumentId):InstrumentEntry{return{id,subject:'História',keywords:[topic],exactTopic:topic,Component:historyInstrument(config)}}
 function gramatical(id:string,topic:string,config:GrammarInstrumentId):InstrumentEntry{return{id,subject:'Gramática',keywords:[topic],exactTopic:topic,Component:grammarInstrument(config)}}
 function ingles(id:string,topic:string,config:EnglishInstrumentId):InstrumentEntry{return{id,subject:'Língua Inglesa',keywords:[topic],exactTopic:topic,Component:englishInstrument(config)}}
@@ -249,7 +252,7 @@ export const INSTRUMENTS: InstrumentEntry[] = [
   eletrostatico('lei-coulomb','força elétrica: lei de coulomb','coulomb'),eletrostatico('campo-eletrico','campo elétrico','field'),eletrostatico('potencial-eletrico','energia potencial e potencial elétrico','potential'),eletrostatico('campo-uniforme','campo elétrico uniforme: abordagem escalar e abordagem vetorial','uniform-field'),eletrostatico('dinamica-cargas','dinâmica das cargas elétricas','charge-dynamics'),
   ondulatorio('intensidade-sonora','intensidade sonora','sound-intensity'),ondulatorio('interferencia-ondas','interferência de ondas: análise quantitativa, aplicações e batimento','interference'),ondulatorio('ondas-cordas','ondas estacionárias em cordas','string-harmonics'),ondulatorio('efeito-doppler','efeito doppler: descrição e estudo quantitativo','doppler'),
   magnetico('fio-espira','campo magnético devido à corrente em fio reto e espira: descrição vetorial e aplicações','fio-espira'),magnetico('carga-em-b','força magnética e análise de lançamentos de cargas em um campo magnético uniforme','carga-em-b'),magnetico('fios-paralelos','análise de força magnética em fios percorridos por correntes contínuas','fios-paralelos'),magnetico('lenz','indução eletromagnética: lei de lenz','lenz'),magnetico('gerador-inducao','indução eletromagnética: análise da corrente induzida em geradores','gerador'),
-  optico('espelho-plano','reflexão em superfícies planas','plane-mirror'),optico('espelho-esferico','reflexão em superfícies esféricas','spherical-mirror'),optico('refracao','refração: fundamentos, leis e aplicações','refraction'),optico('optica-visao','óptica da visão','vision'),
+  optico('espelho-plano','reflexão em superfícies planas','plane-mirror'),optico('espelho-esferico','reflexão em superfícies esféricas','spherical-mirror'),optico('refracao','refração: fundamentos, leis e aplicações','refraction'),
   mecanicaFinal('plano-vertical','analisando movimentos contidos em um plano vertical','vertical-plane'),mecanicaFinal('mhs','movimento harmônico simples (mhs)','mhs'),mecanicaFinal('energia-potencial','trabalho e energia: o teorema da energia potencial','potential-energy'),mecanicaFinal('nao-conservativo','sistemas conservativos e sistemas não conservativos','nonconservative'),mecanicaFinal('massa-energia','equivalência massa-energia','mass-energy'),
   fisicaRestante('eco-refracao','reflexão, eco, reverberação e refração de ondas','echo'),fisicaRestante('difracao-polarizacao','fenômenos ondulatórios: difração, polarização e ressonância','diffraction'),fisicaRestante('ondas-tubos','ondas estacionárias em tubos','tube-harmonics'),fisicaRestante('fisica-quantica','noções básicas de física quântica','quantum-photon'),
   eletroquimico('redox','processos de oxirredução','redox'),eletroquimico('pilhas-baterias','introdução ao estudo das pilhas e baterias','cells'),eletroquimico('eletroquimica-espontanea','eletroquímica de processos espontâneos','spontaneous'),eletroquimico('eletrolise','eletroquímica de processos não espontâneos','electrolysis'),eletroquimico('faraday-metalurgia','aspectos quantitativos da eletroquímica e metalurgia','quantitative'),
@@ -306,8 +309,15 @@ export const INSTRUMENTS: InstrumentEntry[] = [
   geograficoRestante('geoeconomics','gedeconomia mundial','geoeconomics'),
   geograficoRestante('mining','produção mineral','mining'),
   geograficoRestante('agrarian','o espaço agrário brasileiro','agrarian'),
+  geograficoContexto('governanca-ambiental','geopolítica ambiental','environmental-governance'),
+  geograficoContexto('uniao-europeia','união europeia','eu-integration'),
+  geograficoContexto('energia-eletrica-brasil','energia elétrica no brasil','electricity-system'),
+  geograficoContexto('fluxos-populacionais','estrutura étnica e fluxos migratórios','population-flows'),
+  geograficoContexto('rede-comercio-externo','os fluxos do comércio externo','trade-network'),
+  geograficoContexto('conflito-europa','tensões geopolíticas na europa','urban-conflict'),
   historico('america-xix','américa no século xix','america-xix'),historico('segunda-guerra','segunda guerra mundial (1939-1945)','wwii-fronts'),historico('guerra-fria','guerra fria','cold-war'),historico('interiorizacao-colonial','a interiorização da colonização','interiorization'),historico('mineracao-colonial','a mineração no brasil colonial','mining-colony'),
   gramatical('sintagma-nominal','artigo, numeral e adjetivo no sintagma nominal','noun-phrase'),gramatical('concordancia','concordância','agreement'),gramatical('pontuacao-i','pontuação i: princípios para o uso da vírgula','comma-scope'),gramatical('crase','crase','crasis'),gramatical('vozes-verbais','vozes verbais','verbal-voice'),
+  gramatical('pronomes','pronomes','pronoun-reference'),gramatical('verbo','verbo','verbal-aspect'),gramatical('ambiguidade','ambiguidade: duplicidade no léxico e na sintaxe','ambiguity'),gramatical('oracoes-coordenadas','orações coordenadas','clause-relations'),
   ingles('songs-poems','text comprehension: songs and poems','poetry-reading'),ingles('calories-energy','text comprehension: calories and energy','quantity-language'),ingles('earthquakes','text comprehension: earthquakes','modal-certainty'),ingles('greenhouse-gases','text comprehension: ecology (greenhouse gases)','cause-connectors'),ingles('human-brain','text comprehension: the human brain','research-claims'),
   redacao('dissertacao-mitos','a dissertação no vestibular: mitos e verdades','essay-myths'),redacao('avaliacao-dissertacao','o que se avalia na dissertação: competências e habilidades','evaluation'),redacao('organizacao-ideias','organizando as ideias: brainstorm e mind maps','idea-map'),redacao('repertorio','repertório: o diferencial de redações de sucesso','repertoire'),redacao('eixos-tematicos','qual será o tema deste ano: grandes eixos temáticos','theme-axes'),
 ];
