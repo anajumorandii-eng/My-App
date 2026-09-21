@@ -339,6 +339,28 @@ export const INSTRUMENTS: InstrumentEntry[] = [
   gramatical('sintagma-nominal','artigo, numeral e adjetivo no sintagma nominal','noun-phrase'),gramatical('concordancia','concordância','agreement'),gramatical('pontuacao-i','pontuação i: princípios para o uso da vírgula','comma-scope'),gramatical('crase','crase','crasis'),gramatical('vozes-verbais','vozes verbais','verbal-voice'),
   gramatical('pronomes','pronomes','pronoun-reference'),gramatical('verbo','verbo','verbal-aspect'),gramatical('ambiguidade','ambiguidade: duplicidade no léxico e na sintaxe','ambiguity'),gramatical('oracoes-coordenadas','orações coordenadas','clause-relations'),
   ingles('songs-poems','text comprehension: songs and poems','poetry-reading'),ingles('calories-energy','text comprehension: calories and energy','quantity-language'),ingles('earthquakes','text comprehension: earthquakes','modal-certainty'),ingles('greenhouse-gases','text comprehension: ecology (greenhouse gases)','cause-connectors'),ingles('human-brain','text comprehension: the human brain','research-claims'),
+  // Rodada de Língua Inglesa de 21/09/2026: os 11 capítulos restantes de
+  // "Text Comprehension" também são leitura em inglês, e o texto-fonte de cada
+  // um não está disponível aqui — só o título. Por isso cada instrumento trata
+  // da ESTRATÉGIA de leitura (que tipo de pista, de conector, de registro),
+  // nunca de um fato específico do texto-fonte que não dá para verificar.
+  // Furacão e célula-tronco reaproveitam a escala modal de earthquakes
+  // (previsão meteorológica e projeção médica usam a mesma gramática de
+  // cautela científica); poluição reaproveita o conector causal de
+  // greenhouse-gases; aquecimento global e probióticos reaproveitam a força
+  // de afirmação de human-brain — mesma economia do plano cartesiano de
+  // Matemática, que serve treze capítulos com sete famílias.
+  ingles('hurricanes','text comprehension: hurricanes','modal-certainty'),
+  ingles('pollution','text comprehension: pollution','cause-connectors'),
+  ingles('global-warming','text comprehension: global warming','research-claims'),
+  ingles('novels-short-stories','text comprehension: novels/short stories','narrative-inference'),
+  ingles('bacteria','text comprehension: bacteria','lexical-inference'),
+  ingles('viruses','text comprehension: viruses','comparison-signals'),
+  ingles('discrimination-against-women','text comprehension: discrimination against women','stance-language'),
+  ingles('women-empowerment','text comprehension: women empowerment','stance-language'),
+  ingles('digital-technology','text comprehension: digital technology','lexical-inference'),
+  ingles('health-probiotics','text comprehension: health – probiotics','research-claims'),
+  ingles('stem-cells','text comprehension: stem cells','modal-certainty'),
   redacao('dissertacao-mitos','a dissertação no vestibular: mitos e verdades','essay-myths'),redacao('avaliacao-dissertacao','o que se avalia na dissertação: competências e habilidades','evaluation'),redacao('organizacao-ideias','organizando as ideias: brainstorm e mind maps','idea-map'),redacao('repertorio','repertório: o diferencial de redações de sucesso','repertoire'),redacao('eixos-tematicos','qual será o tema deste ano: grandes eixos temáticos','theme-axes'),
 ];
 
