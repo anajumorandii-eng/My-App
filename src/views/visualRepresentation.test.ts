@@ -21,7 +21,9 @@ describe('resolveVisualRepresentation', () => {
 
   it('recorre à cena exata e depois ao fallback, sem reutilizar uma prancha alheia', () => {
     const scene = interactiveSummaries.find((item) => sceneFor(item.id) && !findBoard(item) && !findInstrument(item) && !topicExperiments[item.id])!;
-    const fallback = interactiveSummaries.find((item) => item.id === 'atu-cop30-belem')!;
+    // Antes usava 'atu-cop30-belem', que ganhou instrumento de contexto
+    // geográfico na rodada de set/2026 (COP30 em Belém).
+    const fallback = interactiveSummaries.find((item) => item.id === 'summary-fisica-o-movimento-circular')!;
     expect(resolveVisualRepresentation(scene)).toBe('scene');
     expect(resolveVisualRepresentation(fallback)).toBe('fallback');
   });
