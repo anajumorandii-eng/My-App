@@ -3,9 +3,9 @@
   "counts": {
     "experiment": 11,
     "board": 41,
-    "instrument": 185,
+    "instrument": 210,
     "scene": 186,
-    "fallback": 190
+    "fallback": 165
   },
   "contested": 18,
   "subjects": [
@@ -37,9 +37,9 @@
       "counts": {
         "experiment": 1,
         "board": 9,
-        "instrument": 9,
+        "instrument": 28,
         "scene": 34,
-        "fallback": 19
+        "fallback": 0
       }
     },
     {
@@ -48,9 +48,9 @@
       "counts": {
         "experiment": 1,
         "board": 0,
-        "instrument": 9,
+        "instrument": 15,
         "scene": 26,
-        "fallback": 27
+        "fallback": 21
       }
     },
     {
@@ -259,8 +259,8 @@
       "id": "bio-ecologia-poluicao-ar",
       "subject": "Biologia",
       "title": "Poluição do ar",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "poluicao-ar",
       "ignored": []
     },
     {
@@ -275,8 +275,8 @@
       "id": "bio-ecologia-aquecimento-global-pops-biorremediacao",
       "subject": "Biologia",
       "title": "Aquecimento global, POPs e biorremediação",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "clima-pops-biorremediacao",
       "ignored": []
     },
     {
@@ -291,8 +291,8 @@
       "id": "summary-biologia-composicao-quimica-celular-compostos-inorganicos",
       "subject": "Biologia",
       "title": "Composição Química Celular: Compostos Inorgânicos",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "compostos-inorganicos",
       "ignored": []
     },
     {
@@ -323,24 +323,24 @@
       "id": "summary-biologia-citoplasma-estrutura-e-componentes-i",
       "subject": "Biologia",
       "title": "Citoplasma: Estrutura e Componentes I",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "citoplasma-i",
       "ignored": []
     },
     {
       "id": "summary-biologia-citoplasma-estrutura-e-componentes-ii",
       "subject": "Biologia",
       "title": "Citoplasma: Estrutura e Componentes II",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "citoplasma-ii",
       "ignored": []
     },
     {
       "id": "summary-biologia-nucleo-celular",
       "subject": "Biologia",
       "title": "Núcleo Celular",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "nucleo-celular",
       "ignored": []
     },
     {
@@ -397,16 +397,16 @@
       "id": "summary-biologia-mutacoes-cromossomicas-e-gametogenese",
       "subject": "Biologia",
       "title": "Mutações Cromossômicas e Gametogênese",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "mutacoes-cromossomicas",
       "ignored": []
     },
     {
       "id": "summary-biologia-biotecnologia",
       "subject": "Biologia",
       "title": "Biotecnologia",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "biotecnologia",
       "ignored": []
     },
     {
@@ -514,16 +514,16 @@
       "id": "summary-biologia-poriferos-e-cnidarios",
       "subject": "Biologia",
       "title": "Poríferos e Cnidários",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "poriferos-cnidarios",
       "ignored": []
     },
     {
       "id": "summary-biologia-arquitetura-corporal-dos-animais-e-o-filo-dos-platelmintos-e-dos-nematodeos",
       "subject": "Biologia",
       "title": "Arquitetura Corporal dos Animais e o Filo dos Platelmintos e dos Nematódeos",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "arquitetura-corporal",
       "ignored": []
     },
     {
@@ -546,16 +546,16 @@
       "id": "summary-biologia-artropodes-insetos-crustaceos-e-miriapodes",
       "subject": "Biologia",
       "title": "Artrópodes: Insetos, Crustáceos e Miriápodes",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "artropodes-insetos",
       "ignored": []
     },
     {
       "id": "summary-biologia-artropodes-aracnideos",
       "subject": "Biologia",
       "title": "Artrópodes: Aracnídeos",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "artropodes-aracnideos",
       "ignored": []
     },
     {
@@ -570,8 +570,8 @@
       "id": "summary-biologia-introducao-aos-cordados-e-os-peixes",
       "subject": "Biologia",
       "title": "Introdução aos Cordados e os Peixes",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "cordados-peixes",
       "ignored": []
     },
     {
@@ -623,16 +623,16 @@
       "id": "summary-biologia-plantas-terrestres-ii-gimnospermas-e-angiospermas",
       "subject": "Biologia",
       "title": "Plantas Terrestres II: Gimnospermas e Angiospermas",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "gimnospermas-angiospermas",
       "ignored": []
     },
     {
       "id": "summary-biologia-procariotos",
       "subject": "Biologia",
       "title": "Procariotos",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "procariotos",
       "ignored": []
     },
     {
@@ -724,8 +724,8 @@
       "id": "summary-biologia-sistemas-sensoriais-visao-e-audicao",
       "subject": "Biologia",
       "title": "Sistemas Sensoriais: Visão e Audição",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "sistemas-sensoriais",
       "ignored": []
     },
     {
@@ -748,24 +748,24 @@
       "id": "summary-biologia-reproducao-humana-e-metodos-contraceptivos",
       "subject": "Biologia",
       "title": "Reprodução Humana e Métodos Contraceptivos",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "reproducao-humana",
       "ignored": []
     },
     {
       "id": "summary-biologia-histologia-e-morfologia-vegetal",
       "subject": "Biologia",
       "title": "Histologia e Morfologia Vegetal",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "histologia-vegetal",
       "ignored": []
     },
     {
       "id": "summary-biologia-morfofisiologia-vegetal-caules-e-folhas",
       "subject": "Biologia",
       "title": "Morfofisiologia Vegetal: Caules e Folhas",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "caules-folhas",
       "ignored": []
     },
     {
@@ -1589,8 +1589,8 @@
       "id": "summary-geografia-desafios-ambientais-do-seculo-xxi",
       "subject": "Geografia",
       "title": "Desafios Ambientais do Século XXI",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "commons",
       "ignored": []
     },
     {
@@ -1629,8 +1629,8 @@
       "id": "summary-geografia-globalizacao-e-processos-economicos-atuais",
       "subject": "Geografia",
       "title": "Globalização e Processos Econômicos Atuais",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "supply-chain",
       "ignored": []
     },
     {
@@ -1709,16 +1709,16 @@
       "id": "summary-geografia-industria-ii",
       "subject": "Geografia",
       "title": "Indústria II",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "technopole",
       "ignored": []
     },
     {
       "id": "summary-geografia-gedeconomia-mundial",
       "subject": "Geografia",
       "title": "Gedeconomia Mundial",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "geoeconomics",
       "ignored": []
     },
     {
@@ -1909,16 +1909,16 @@
       "id": "summary-geografia-producao-mineral",
       "subject": "Geografia",
       "title": "Produção Mineral",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "mining",
       "ignored": []
     },
     {
       "id": "summary-geografia-o-espaco-agrario-brasileiro",
       "subject": "Geografia",
       "title": "O Espaço Agrário Brasileiro",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "agrarian",
       "ignored": []
     },
     {

@@ -7,11 +7,11 @@ import { findInstrument } from './registry';
 import { geographyRemainingInstrument } from './GeographyRemainingInstrument';
 import { buildVisualMap } from '../../lib/visualStudy';
 
-const addedIds = ['summary-geografia-cartografia-digital', 'summary-geografia-representacoes-graficas-e-cartograficas', 'summary-geografia-hidrogeografia-mundial', 'summary-geografia-hidrogeografia-do-brasil'];
+const addedIds = ['summary-geografia-cartografia-digital', 'summary-geografia-representacoes-graficas-e-cartograficas', 'summary-geografia-hidrogeografia-mundial', 'summary-geografia-hidrogeografia-do-brasil', 'summary-geografia-desafios-ambientais-do-seculo-xxi', 'summary-geografia-globalizacao-e-processos-economicos-atuais', 'summary-geografia-industria-ii', 'summary-geografia-gedeconomia-mundial', 'summary-geografia-producao-mineral', 'summary-geografia-o-espaco-agrario-brasileiro'];
 
 describe('Geografia: os capítulos antes sem artefato', () => {
-  it('alcança apenas os quatro capítulos das relações espaciais implementadas', () => {
-    expect(addedIds).toHaveLength(4);
+  it('alcança apenas os dez capítulos geográficos implementados', () => {
+    expect(addedIds).toHaveLength(10);
     const remaining = new Set(Object.keys(GEOGRAPHY_REMAINING));
     const registered = interactiveSummaries.filter(s => s.subject === 'Geografia' && remaining.has(findInstrument(s)?.id ?? ''));
     expect(registered.map(s => s.id).sort()).toEqual([...addedIds].sort());

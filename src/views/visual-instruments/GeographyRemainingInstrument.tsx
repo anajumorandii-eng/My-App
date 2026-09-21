@@ -51,6 +51,20 @@ function BasinScene({ id, index }: { id: 'world-basin' | 'brazilian-basins'; ind
   </svg>;
 }
 
+function FlowScene({ id, index }: { id: Exclude<GeographyRemainingId, 'digital-map' | 'map-elements' | 'world-basin' | 'brazilian-basins'>; index: number }) {
+  const config = GEOGRAPHY_REMAINING[id];
+  return <svg className="vs-plane" viewBox="0 0 320 250" role="img" aria-label={`${config.title}: ${config.cases[index].label} em foco`}>
+    <text x="160" y="26" textAnchor="middle" fill="var(--vs-ink)" fontSize="13" fontWeight="700">{config.relation}</text>
+    {config.cases.map((item, n) => { const x = 25 + n * 101; const active = n === index; return <g key={item.label}>
+      {n > 0 && <path d={`M${x-13} 126H${x-2}`} stroke="var(--vs-ink-muted)" strokeWidth="3" markerEnd="url(#flow-arrow)"/>}
+      <rect x={x} y="76" width="88" height="98" rx="10" fill={active ? 'var(--vs-burgundy)' : 'var(--vs-paper)'} stroke="var(--vs-ink)" strokeWidth="2"/>
+      <text x={x+44} y="114" textAnchor="middle" fill={active ? 'white' : 'var(--vs-ink)'} fontSize="13" fontWeight="700">{item.label}</text>
+      <text x={x+44} y="140" textAnchor="middle" fill={active ? 'white' : 'var(--vs-ink-muted)'} fontSize="10">{active ? 'recorte ativo' : 'etapa'}</text>
+    </g>; })}
+    <defs><marker id="flow-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0L7 3.5 0 7Z" fill="var(--vs-ink-muted)"/></marker></defs>
+  </svg>;
+}
+
 export function geographyRemainingInstrument(id: GeographyRemainingId) {
   const config = GEOGRAPHY_REMAINING[id];
   return function GeographyRemainingBoard(props: BoardProps) {
@@ -64,7 +78,7 @@ export function geographyRemainingInstrument(id: GeographyRemainingId) {
       condition={{label:'Recorte',value:selected.label}}
       ariaLabel={`Instrumento geográfico: ${props.map.title}`} emphasis={pair.emphasis}
       scene={<div className="vs-instrument">
-        {id === 'digital-map' || id === 'map-elements' ? <CartographicScene id={id} index={index}/> : <BasinScene id={id} index={index}/>}
+        {id === 'digital-map' || id === 'map-elements' ? <CartographicScene id={id} index={index}/> : id === 'world-basin' || id === 'brazilian-basins' ? <BasinScene id={id} index={index}/> : <FlowScene id={id} index={index}/>}
         <div className="vs-plane-controls"><div className="vs-plane-control">
           <p>Explore os recortes do fenômeno:</p>
           <div className="vs-geography-options" role="group" aria-label={`Recortes de ${config.title}`}>
