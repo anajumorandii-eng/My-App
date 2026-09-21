@@ -3,9 +3,9 @@
   "counts": {
     "experiment": 11,
     "board": 41,
-    "instrument": 129,
+    "instrument": 134,
     "scene": 186,
-    "fallback": 246
+    "fallback": 241
   },
   "contested": 18,
   "subjects": [
@@ -37,9 +37,9 @@
       "counts": {
         "experiment": 1,
         "board": 9,
-        "instrument": 0,
+        "instrument": 5,
         "scene": 34,
-        "fallback": 28
+        "fallback": 23
       }
     },
     {
@@ -376,8 +376,8 @@
       "id": "summary-biologia-acidos-nucleicos",
       "subject": "Biologia",
       "title": "Ácidos Nucleicos",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "acidos-nucleicos",
       "ignored": []
     },
     {
@@ -458,8 +458,8 @@
       "id": "summary-biologia-ligacao-genica",
       "subject": "Biologia",
       "title": "Ligação Gênica",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "ligacao-genica",
       "ignored": []
     },
     {
@@ -684,16 +684,16 @@
       "id": "summary-biologia-coracao-e-vasos-sanguineos",
       "subject": "Biologia",
       "title": "Coração e Vasos Sanguíneos",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "coracao-vasos",
       "ignored": []
     },
     {
       "id": "summary-biologia-fisiologia-da-respiracao",
       "subject": "Biologia",
       "title": "Fisiologia da Respiração",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "fisiologia-respiracao",
       "ignored": []
     },
     {
@@ -788,8 +788,8 @@
       "id": "summary-biologia-fisiologia-vegetal-hormonios-vegetais",
       "subject": "Biologia",
       "title": "Fisiologia Vegetal: Hormônios Vegetais",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "hormonios-vegetais",
       "ignored": []
     },
     {
