@@ -3,9 +3,9 @@
   "counts": {
     "experiment": 11,
     "board": 41,
-    "instrument": 159,
+    "instrument": 176,
     "scene": 186,
-    "fallback": 216
+    "fallback": 199
   },
   "contested": 18,
   "subjects": [
@@ -37,9 +37,9 @@
       "counts": {
         "experiment": 1,
         "board": 9,
-        "instrument": 5,
+        "instrument": 9,
         "scene": 34,
-        "fallback": 23
+        "fallback": 19
       }
     },
     {
@@ -48,9 +48,9 @@
       "counts": {
         "experiment": 1,
         "board": 0,
-        "instrument": 5,
+        "instrument": 9,
         "scene": 26,
-        "fallback": 31
+        "fallback": 27
       }
     },
     {
@@ -136,9 +136,9 @@
       "counts": {
         "experiment": 0,
         "board": 7,
-        "instrument": 5,
+        "instrument": 14,
         "scene": 18,
-        "fallback": 18
+        "fallback": 9
       }
     },
     {
@@ -413,16 +413,16 @@
       "id": "summary-biologia-introducao-a-genetica",
       "subject": "Biologia",
       "title": "Introdução à Genética",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "introducao-genetica",
       "ignored": []
     },
     {
       "id": "summary-biologia-alelos-multiplos-e-heranca-dos-grupos-sanguineos",
       "subject": "Biologia",
       "title": "Alelos Múltiplos e Herança dos Grupos Sanguíneos",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "alelos-multiplos",
       "ignored": []
     },
     {
@@ -655,8 +655,8 @@
       "id": "summary-biologia-fisiologia-da-sustentacao-e-da-locomocao",
       "subject": "Biologia",
       "title": "Fisiologia da Sustentação e da Locomoção",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "sustentacao-locomocao",
       "ignored": []
     },
     {
@@ -732,8 +732,8 @@
       "id": "summary-biologia-coordenacao-endocrina-i",
       "subject": "Biologia",
       "title": "Coordenação Endócrina I",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "coordenacao-endocrina-i",
       "ignored": []
     },
     {
@@ -1533,16 +1533,16 @@
       "id": "summary-geografia-cartografia-digital",
       "subject": "Geografia",
       "title": "Cartografia Digital",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "digital-map",
       "ignored": []
     },
     {
       "id": "summary-geografia-representacoes-graficas-e-cartograficas",
       "subject": "Geografia",
       "title": "Representações Gráficas e Cartográficas",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "map-elements",
       "ignored": []
     },
     {
@@ -1613,8 +1613,8 @@
       "id": "summary-geografia-hidrogeografia-mundial",
       "subject": "Geografia",
       "title": "Hidrogeografia Mundial",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "world-basin",
       "ignored": []
     },
     {
@@ -1861,8 +1861,8 @@
       "id": "summary-geografia-hidrogeografia-do-brasil",
       "subject": "Geografia",
       "title": "Hidrogeografia do Brasil",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "brazilian-basins",
       "ignored": []
     },
     {
@@ -4316,8 +4316,8 @@
       "id": "summary-quimica-o-estado-gasoso",
       "subject": "Química",
       "title": "O Estado Gasoso",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "gas-state",
       "ignored": []
     },
     {
@@ -4348,16 +4348,16 @@
       "id": "summary-quimica-massa-atomica-mol-e-massa-molar",
       "subject": "Química",
       "title": "Massa Atômica, Mol e Massa Molar",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "mole",
       "ignored": []
     },
     {
       "id": "summary-quimica-determinacao-de-formulas-quimicas",
       "subject": "Química",
       "title": "Determinação de Fórmulas Químicas",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "formula",
       "ignored": []
     },
     {
@@ -4372,8 +4372,8 @@
       "id": "summary-quimica-calculos-estequiometricos",
       "subject": "Química",
       "title": "Cálculos Estequiométricos",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "stoichiometry",
       "ignored": []
     },
     {
@@ -4513,16 +4513,16 @@
       "id": "summary-quimica-transesterificacao-alcoolise",
       "subject": "Química",
       "title": "Transesterificação (Alcoólise)",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "biodiesel",
       "ignored": []
     },
     {
       "id": "summary-quimica-acidez-e-basicidade-pka",
       "subject": "Química",
       "title": "Acidez e Basicidade (pKa)",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "acidity",
       "ignored": []
     },
     {
@@ -4619,16 +4619,16 @@
       "id": "summary-quimica-deslocamento-de-equilibrio",
       "subject": "Química",
       "title": "Deslocamento de Equilíbrio",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "equilibrium-shift",
       "ignored": []
     },
     {
       "id": "summary-quimica-equilibrios-ionicos",
       "subject": "Química",
       "title": "Equilíbrios Iônicos",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "ionic-equilibrium",
       "ignored": []
     },
     {
@@ -4643,8 +4643,8 @@
       "id": "qui-equilibrio-acidificacao",
       "subject": "Química",
       "title": "Equilíbrio químico, acidez e intemperismo",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "acid-weathering",
       "ignored": []
     },
     {
