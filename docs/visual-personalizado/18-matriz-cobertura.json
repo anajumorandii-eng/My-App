@@ -2,8 +2,8 @@
   "total": 613,
   "counts": {
     "experiment": 11,
-    "board": 41,
-    "instrument": 210,
+    "board": 42,
+    "instrument": 209,
     "scene": 186,
     "fallback": 165
   },
@@ -36,8 +36,8 @@
       "chapters": 72,
       "counts": {
         "experiment": 1,
-        "board": 9,
-        "instrument": 28,
+        "board": 10,
+        "instrument": 27,
         "scene": 34,
         "fallback": 0
       }
@@ -684,8 +684,8 @@
       "id": "summary-biologia-coracao-e-vasos-sanguineos",
       "subject": "Biologia",
       "title": "Coração e Vasos Sanguíneos",
-      "primary": "instrument",
-      "artifact": "coracao-vasos",
+      "primary": "board",
+      "artifact": "coracao-circulacao",
       "ignored": []
     },
     {

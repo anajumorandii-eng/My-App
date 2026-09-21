@@ -294,7 +294,7 @@ export const INSTRUMENTS: InstrumentEntry[] = [
   biologicoRestante('reproducao-humana','Reprodução Humana e Métodos Contraceptivos','reproduction'),
   biologicoRestante('histologia-vegetal','Histologia e Morfologia Vegetal','plant-tissues'),
   biologicoRestante('caules-folhas','Morfofisiologia Vegetal: Caules e Folhas','stems-leaves'),
-  biologico('acidos-nucleicos','ácidos nucleicos','nucleic-acids'),biologico('ligacao-genica','ligação gênica','linkage'),biologico('coracao-vasos','coração e vasos sanguíneos','circulation'),biologico('fisiologia-respiracao','fisiologia da respiração','respiration'),biologico('hormonios-vegetais','fisiologia vegetal: hormônios vegetais','plant-hormones'),
+  biologico('acidos-nucleicos','ácidos nucleicos','nucleic-acids'),biologico('ligacao-genica','ligação gênica','linkage'),biologico('fisiologia-respiracao','fisiologia da respiração','respiration'),biologico('hormonios-vegetais','fisiologia vegetal: hormônios vegetais','plant-hormones'),
   geografico('fusos-horarios','sistema de fusos horários','time-zones'),geografico('linguagem-cartografica','linguagem cartográfica','map-scale'),geografico('agua-superficie','água na superfície terrestre','aquifer'),geografico('matriz-energetica','matriz energética','energy-matrix'),geografico('redes-mundiais','geografia das redes mundiais','network-redundancy'),
   geograficoRestante('digital-map','cartografia digital','digital-map'),
   geograficoRestante('map-elements','representações gráficas e cartográficas','map-elements'),

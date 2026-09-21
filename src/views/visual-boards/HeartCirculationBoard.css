@@ -1,0 +1,30 @@
+.vs-heart-board .vs-board-body { grid-template-columns: minmax(175px,.85fr) minmax(320px,1.5fr) minmax(175px,.85fr); }
+.vs-heart-board .vs-piston-wrap { min-width: 0; }
+.vs-heart-scene { margin: 0; width: 100%; text-align: center; }
+.vs-heart-art { position: relative; background: radial-gradient(ellipse at 50% 50%,rgba(174,65,69,.13),transparent 68%); }
+.vs-heart-art img { display: block; width: 100%; height: clamp(280px,33vw,440px); object-fit: contain; filter: drop-shadow(0 15px 24px rgba(0,0,0,.26)); }
+.vs-heart-scene figcaption { display: flex; justify-content: center; flex-wrap: wrap; gap: 6px 18px; font-size: .78rem; color: var(--vs-ink); }
+.vs-heart-scene figcaption span { display: inline-flex; align-items: center; gap: 6px; }
+.vs-heart-dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; }
+.vs-heart-dot--blue { background: #4e91ba; } .vs-heart-dot--red { background: #d36461; }
+.vs-heart-orientation { margin: 7px 0 0; color: var(--vs-dim); font-size: .72rem; }
+.vs-heart-board .vs-support-grid { grid-template-columns: minmax(0,1.25fr) minmax(0,1fr); align-items: stretch; }
+.vs-heart-route, .vs-heart-area { border: 1px solid color-mix(in srgb,var(--vs-ink) 18%,transparent); background: color-mix(in srgb,var(--vs-mint) 15%,transparent); border-radius: 22px; padding: 18px; min-width: 0; }
+.vs-heart-route h3 { font: 700 1.25rem Georgia,serif; margin: 0 0 13px; color: var(--vs-ink); }
+.vs-heart-route > div { display: flex; flex-wrap: wrap; gap: 7px; }
+.vs-heart-stop { display: inline-flex; align-items: center; gap: 6px; border: 1px solid currentColor; border-radius: 30px; padding: 6px 9px; font-size: .76rem; font-weight: 650; }
+.vs-heart-stop b { display: grid; place-items: center; width: 18px; height: 18px; border-radius: 50%; background: currentColor; font-size: .7rem; }
+.vs-heart-stop--blue { color: #4c8eae; }.vs-heart-stop--red { color: #c65c64; }.vs-heart-stop--exchange { color: #ae8c4b; }
+.vs-heart-stop b { -webkit-text-fill-color: var(--vs-paper); }
+.vs-heart-route p, .vs-heart-area p { color: var(--vs-ink); line-height: 1.5; font-size: .83rem; margin: 13px 0 0; }
+.vs-heart-area-head { display: flex; flex-wrap: wrap; gap: 5px 15px; justify-content: space-between; color: var(--vs-ink); }
+.vs-heart-area-head span { font-size: .78rem; letter-spacing: .04em; text-transform: uppercase; }
+.vs-heart-area-head strong { color: #b45462; font-size: .86rem; }
+.vs-heart-capillaries { display: flex; flex-direction: column; justify-content: center; gap: 5px; height: 88px; margin: 12px 0; }
+.vs-heart-capillaries span { height: 3px; border-radius: 8px; background: linear-gradient(90deg,#539ac0,#af839d,#d66a67); }
+.vs-heart-area label { display: block; font-size: .79rem; color: var(--vs-ink); }
+.vs-heart-area input { width: 100%; accent-color: #aa4d60; margin: 8px 0; }
+.vs-heart-area small { display: block; margin-top: 7px; color: var(--vs-dim); }
+@media (max-width: 1100px) { .vs-heart-board .vs-board-body { grid-template-columns: minmax(0,1fr) minmax(0,1.3fr); } .vs-heart-board .vs-concept-card--compression { grid-column: 1/-1; } }
+@media (max-width: 900px) { .vs-heart-board .vs-board-body, .vs-heart-board .vs-support-grid { grid-template-columns: minmax(0,1fr); } .vs-heart-board .vs-piston-wrap { order: -1; } .vs-heart-art img { height: min(75vw,390px); } }
+@media (max-width: 620px) { .vs-heart-board .vs-board-body { gap: 12px; } .vs-heart-art img { height: min(81vw,350px); } .vs-heart-scene figcaption { font-size: .7rem; } .vs-heart-route,.vs-heart-area { padding: 14px; } }

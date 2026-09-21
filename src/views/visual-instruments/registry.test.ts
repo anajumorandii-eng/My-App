@@ -216,11 +216,10 @@ describe('registro de instrumentos', () => {
     for (const [id, topic] of Object.entries(esperado)) expect(interactiveSummaries.filter((s) => findInstrument(s)?.id === id).map((s) => s.topic), id).toEqual([topic]);
   });
 
-  it('mantém os instrumentos de biologia nos cinco mecanismos que modelam', () => {
+  it('mantém os instrumentos de biologia nos mecanismos restantes', () => {
     const esperado: Record<string, string> = {
       'acidos-nucleicos': 'Ácidos Nucleicos',
       'ligacao-genica': 'Ligação Gênica',
-      'coracao-vasos': 'Coração e Vasos Sanguíneos',
       'fisiologia-respiracao': 'Fisiologia da Respiração',
       'hormonios-vegetais': 'Fisiologia Vegetal: Hormônios Vegetais',
     };

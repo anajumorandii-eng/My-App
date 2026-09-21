@@ -31,6 +31,7 @@ import NewtonBoard from './NewtonBoard';
 import FungiBoard from './FungiBoard';
 import EnzymeBoard from './EnzymeBoard';
 import IndependenceBoard from './IndependenceBoard';
+import HeartCirculationBoard from './HeartCirculationBoard';
 
 /**
  * Quais capítulos têm prancha ilustrada, e qual.
@@ -66,6 +67,12 @@ export interface BoardEntry {
 }
 
 export const BOARDS: BoardEntry[] = [
+  {
+    id: 'coracao-circulacao',
+    subject: 'Biologia',
+    keywords: ['coração e vasos sanguíneos'],
+    Component: HeartCirculationBoard,
+  },
   {
     id: 'independencia-brasil',
     subject: 'História',

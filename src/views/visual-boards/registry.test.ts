@@ -10,6 +10,9 @@ const capitulo = (fragmento: string) => {
 };
 
 describe('registro de pranchas', () => {
+  it('mostra o coração ilustrado no capítulo de vasos sanguíneos', () => {
+    expect(findBoard(capitulo('Coração e Vasos Sanguíneos'))?.id).toBe('coracao-circulacao');
+  });
   it('entrega a prancha adiabática ao capítulo das transformações particulares', () => {
     const summary = capitulo('transformações particulares');
     expect(supportsIllustratedBoard(summary)).toBe(true);
