@@ -290,6 +290,23 @@ describe('registro de instrumentos', () => {
     for (const [id, topic] of Object.entries(esperado)) expect(interactiveSummaries.filter((s) => findInstrument(s)?.id === id).map((s) => s.topic), id).toEqual([topic]);
   });
 
+  it('mantém os instrumentos de inglês da rodada de 21/09/2026 nos onze textos restantes', () => {
+    const esperado: Record<string, string> = {
+      hurricanes: 'Text Comprehension: Hurricanes',
+      pollution: 'Text Comprehension: Pollution',
+      'global-warming': 'Text Comprehension: Global Warming',
+      'novels-short-stories': 'Text Comprehension: Novels/Short Stories',
+      bacteria: 'Text Comprehension: Bacteria',
+      viruses: 'Text Comprehension: Viruses',
+      'discrimination-against-women': 'Text Comprehension: Discrimination Against Women',
+      'women-empowerment': 'Text Comprehension: Women Empowerment',
+      'digital-technology': 'Text Comprehension: Digital Technology',
+      'health-probiotics': 'Text Comprehension: Health – Probiotics',
+      'stem-cells': 'Text Comprehension: Stem Cells',
+    };
+    for (const [id, topic] of Object.entries(esperado)) expect(interactiveSummaries.filter((s) => findInstrument(s)?.id === id).map((s) => s.topic), id).toEqual([topic]);
+  });
+
   it('mantém os instrumentos fundamentais de redação nas cinco operações que modelam', () => {
     const esperado: Record<string, string> = {
       'dissertacao-mitos': 'A Dissertação no Vestibular: Mitos e Verdades',

@@ -1,4 +1,13 @@
-export type EnglishInstrumentId = 'poetry-reading' | 'quantity-language' | 'modal-certainty' | 'cause-connectors' | 'research-claims';
+export type EnglishInstrumentId =
+  | 'poetry-reading'
+  | 'quantity-language'
+  | 'modal-certainty'
+  | 'cause-connectors'
+  | 'research-claims'
+  | 'narrative-inference'
+  | 'lexical-inference'
+  | 'comparison-signals'
+  | 'stance-language';
 
 export interface EnglishInstrumentState {
   label: string;
@@ -87,6 +96,68 @@ export const ENGLISH_INSTRUMENTS: Record<EnglishInstrumentId, EnglishInstrumentC
       { label: 'is associated with', example: 'Poor sleep is associated with memory problems.', reading: 'há associação observada', trap: 'inferir direção causal' },
       { label: 'may contribute to', example: 'Poor sleep may contribute to memory problems.', reading: 'causalidade possível e parcial', trap: 'apagar o modal e outros fatores' },
       { label: 'causes', example: 'Poor sleep causes memory problems.', reading: 'causalidade direta', trap: 'aceitar sem desenho causal' },
+    ],
+  },
+  // Reusado por Hurricanes e Stem Cells: previsão de furacão e projeção sobre
+  // terapia com células-tronco usam exatamente a mesma escala modal
+  // (might/is expected to/will) que earthquakes já cobria — não é o mesmo
+  // texto-fonte, é a mesma estrutura gramatical de cautela científica, o que
+  // é a razão de o instrumento existir (ver `curveFamilies` para o precedente
+  // em Matemática: uma família serve vários capítulos por ser o mesmo objeto).
+  'narrative-inference': {
+    id: 'narrative-inference',
+    name: 'Sentimento mostrado, não dito',
+    question: 'Troque como o sentimento chega ao leitor: dito, mostrado por ação ou por fala cortada.',
+    controlLabel: 'Modo de indicação',
+    controlDescription: 'mude como o texto revela o sentimento',
+    formula: 'ação/fala + contexto → sentimento implícito',
+    insight: 'narrativa raramente nomeia o sentimento; ele aparece por gesto, por fala que contradiz o gesto, ou pelo que a personagem deixa de dizer.',
+    states: [
+      { label: 'Told directly', example: 'She was angry.', reading: 'o sentimento está escrito na frase', trap: 'procurar inferência onde o texto já afirma' },
+      { label: 'Shown by action', example: 'She slammed the door and said nothing.', reading: 'o gesto (bater a porta) substitui o rótulo do sentimento', trap: 'ler a ação apenas como evento, sem o que ela indica' },
+      { label: 'Undercut by dialogue', example: '"Fine," she said, not looking up.', reading: 'a fala contradiz o comportamento; o sentimento mora na contradição', trap: 'tomar a palavra "fine" pelo valor literal' },
+    ],
+  },
+  'lexical-inference': {
+    id: 'lexical-inference',
+    name: 'Vocabulário técnico pela pista do texto',
+    question: 'Troque o tipo de pista e veja como o texto entrega o sentido de um termo desconhecido sem dicionário.',
+    controlLabel: 'Pista',
+    controlDescription: 'selecione o tipo de pista ao redor do termo',
+    formula: 'pista textual + termo desconhecido → sentido aproximado',
+    insight: 'texto técnico costuma definir, contrastar ou exemplificar o termo novo na própria frase — a pista está ao lado, não em outro parágrafo.',
+    states: [
+      { label: 'Definition clue', example: 'A pathogen is an organism that causes disease.', reading: 'a oração após "is" define o termo', trap: 'procurar a definição fora da frase' },
+      { label: 'Contrast clue', example: 'Unlike a microbe, a pathogen triggers illness.', reading: 'a oposição delimita o sentido por exclusão', trap: 'ignorar "unlike" e ler os dois termos como sinônimos' },
+      { label: 'Example clue', example: 'Pathogens include some bacteria and viruses.', reading: 'os exemplos restringem a categoria do termo', trap: 'tratar os exemplos citados como a lista completa' },
+    ],
+  },
+  'comparison-signals': {
+    id: 'comparison-signals',
+    name: 'Conectores de comparação entre duas categorias',
+    question: 'Troque o conector e veja se ele marca diferença ou semelhança entre os dois termos comparados.',
+    controlLabel: 'Conector comparativo',
+    controlDescription: 'mude a relação entre os dois termos',
+    formula: 'termo A + conector + termo B → relação de semelhança ou diferença',
+    insight: 'unlike e whereas marcam diferença; similarly marca semelhança pontual, não identidade geral — confundir a direção troca qual característica pertence a qual termo.',
+    states: [
+      { label: 'unlike', example: 'Unlike bacteria, a virus needs a host cell.', reading: 'diferença marcada logo no início da frase', trap: 'ler os dois termos como equivalentes' },
+      { label: 'similarly', example: 'Both are studied under a microscope.', reading: 'semelhança pontual, não em todas as características', trap: 'estender a semelhança a tudo o mais no texto' },
+      { label: 'whereas', example: 'Bacteria respond to antibiotics, whereas viruses do not.', reading: 'cada oração descreve um lado do contraste', trap: 'aplicar a mesma propriedade aos dois termos' },
+    ],
+  },
+  'stance-language': {
+    id: 'stance-language',
+    name: 'Do dado neutro à convocação',
+    question: 'Suba o registro e veja onde a frase deixa de descrever e passa a defender uma posição.',
+    controlLabel: 'Registro',
+    controlDescription: 'mude o grau de neutralidade da frase',
+    formula: 'escolha lexical → grau de neutralidade ou defesa de posição',
+    insight: 'texto argumentativo mistura dado neutro, avaliação e convocação à ação; confundir as três é tomar fato relatado por posição defendida, ou o oposto.',
+    states: [
+      { label: 'Neutral data', example: 'Women make up 40% of this workforce.', reading: 'número relatado sem avaliação', trap: 'ler neutralidade como concordância do autor' },
+      { label: 'Evaluative', example: 'It is unacceptable that women earn less.', reading: 'o adjetivo avaliativo marca a posição do autor', trap: 'tratar a avaliação como fato comprovado' },
+      { label: 'Call to action', example: 'Companies must close the pay gap now.', reading: 'must + imperativo pede mudança, não descreve o presente', trap: 'ler "must" como constatação do que já ocorre' },
     ],
   },
 };

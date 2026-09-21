@@ -3,9 +3,9 @@
   "counts": {
     "experiment": 11,
     "board": 43,
-    "instrument": 244,
+    "instrument": 255,
     "scene": 186,
-    "fallback": 129
+    "fallback": 118
   },
   "contested": 18,
   "subjects": [
@@ -70,9 +70,9 @@
       "counts": {
         "experiment": 1,
         "board": 0,
-        "instrument": 5,
+        "instrument": 16,
         "scene": 0,
-        "fallback": 11
+        "fallback": 0
       }
     },
     {
@@ -2418,8 +2418,8 @@
       "id": "summary-lingua-inglesa-text-comprehension-hurricanes",
       "subject": "Língua Inglesa",
       "title": "Text Comprehension: Hurricanes",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "hurricanes",
       "ignored": []
     },
     {
@@ -2434,8 +2434,8 @@
       "id": "summary-lingua-inglesa-text-comprehension-pollution",
       "subject": "Língua Inglesa",
       "title": "Text Comprehension: Pollution",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "pollution",
       "ignored": []
     },
     {
@@ -2450,72 +2450,72 @@
       "id": "summary-lingua-inglesa-text-comprehension-global-warming",
       "subject": "Língua Inglesa",
       "title": "Text Comprehension: Global Warming",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "global-warming",
       "ignored": []
     },
     {
       "id": "summary-lingua-inglesa-text-comprehension-novels-short-stories",
       "subject": "Língua Inglesa",
       "title": "Text Comprehension: Novels/Short Stories",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "novels-short-stories",
       "ignored": []
     },
     {
       "id": "summary-lingua-inglesa-text-comprehension-bacteria",
       "subject": "Língua Inglesa",
       "title": "Text Comprehension: Bacteria",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "bacteria",
       "ignored": []
     },
     {
       "id": "summary-lingua-inglesa-text-comprehension-viruses",
       "subject": "Língua Inglesa",
       "title": "Text Comprehension: Viruses",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "viruses",
       "ignored": []
     },
     {
       "id": "summary-lingua-inglesa-text-comprehension-discrimination-against-women",
       "subject": "Língua Inglesa",
       "title": "Text Comprehension: Discrimination Against Women",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "discrimination-against-women",
       "ignored": []
     },
     {
       "id": "summary-lingua-inglesa-text-comprehension-women-empowerment",
       "subject": "Língua Inglesa",
       "title": "Text Comprehension: Women Empowerment",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "women-empowerment",
       "ignored": []
     },
     {
       "id": "summary-lingua-inglesa-text-comprehension-digital-technology",
       "subject": "Língua Inglesa",
       "title": "Text Comprehension: Digital Technology",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "digital-technology",
       "ignored": []
     },
     {
       "id": "summary-lingua-inglesa-text-comprehension-health-probiotics",
       "subject": "Língua Inglesa",
       "title": "Text Comprehension: Health – Probiotics",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "health-probiotics",
       "ignored": []
     },
     {
       "id": "summary-lingua-inglesa-text-comprehension-stem-cells",
       "subject": "Língua Inglesa",
       "title": "Text Comprehension: Stem Cells",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "stem-cells",
       "ignored": []
     },
     {
