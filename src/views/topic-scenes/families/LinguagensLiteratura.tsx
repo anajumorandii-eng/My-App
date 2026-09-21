@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { motion } from 'motion/react';
+import { useSceneMotion } from '../useSceneMotion';
 import type { SceneEntry } from '../types';
 import '../TopicScene.css';
 
@@ -68,12 +70,13 @@ function Art({ entry, active }: { entry: SceneEntry; active: number }) {
 
 export function LinguagensLiteratura({ entry }: { entry: SceneEntry }) {
   const [active, setActive] = useState(0);
+  const transition = useSceneMotion();
   const item = entry.items[active];
-  return <section className="tc-scene" aria-label={entry.question} data-literature-board="detailed">
+  return <motion.section className="tc-scene" aria-label={entry.question} data-literature-board="detailed" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={transition}>
     <header><small>CRIVO · oficina de leitura literária</small><h4>{entry.question}</h4></header>
     <div style={{ border: '1px solid var(--vs-ink-muted)', borderRadius: 18, padding: '8px 6px', background: 'color-mix(in srgb,var(--vs-paper) 86%, transparent)' }}><Art entry={entry} active={active}/></div>
     <div className="tc-type-grid" style={{ marginTop: 14 }}>{entry.items.map((candidate, index) => <button key={candidate.label} type="button" className="tc-type-card" aria-pressed={active === index} onClick={() => setActive(index)} style={{ borderColor: active === index ? 'var(--vs-burgundy)' : undefined }}><span className="tc-type-number">{String(index + 1).padStart(2, '0')}</span><strong>{candidate.label}</strong><span className="tc-type-claim">{candidate.claim}</span></button>)}</div>
     {entry.nota && <p className="tc-nota">{entry.nota}</p>}
     <aside className="tc-organic-detail" role="status"><div><small>lente de leitura</small><strong>{item.label}</strong><p>{item.claim}</p></div><blockquote>“{item.quote}” <cite>{item.section}</cite></blockquote></aside>
-  </section>;
+  </motion.section>;
 }
