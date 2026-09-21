@@ -43,6 +43,10 @@ import { magnetismInstrument } from './MagnetismInstrument';
 import type { MagnetismId } from '../../lib/magnetismLab';
 import { opticsInstrument } from './OpticsInstrument';
 import type { OpticsId } from '../../lib/opticsLab';
+import { mechanicsFinalInstrument } from './MechanicsFinalInstrument';
+import type { MechanicsFinalId } from '../../lib/mechanicsFinalLab';
+import { physicsRemainingInstrument } from './PhysicsRemainingInstrument';
+import type { PhysicsRemainingId } from '../../lib/physicsRemainingLab';
 
 /**
  * Quais capítulos ganham prancha manipulável, e com que instrumento.
@@ -121,6 +125,8 @@ function eletrostatico(id:string,topic:string,config:ElectrostaticsId):Instrumen
 function ondulatorio(id:string,topic:string,config:WavesId):InstrumentEntry{return{id,subject:'Física',keywords:[topic],exactTopic:topic,Component:wavesInstrument(config)}}
 function magnetico(id:string,topic:string,config:MagnetismId):InstrumentEntry{return{id,subject:'Física',keywords:[topic],exactTopic:topic,Component:magnetismInstrument(config)}}
 function optico(id:string,topic:string,config:OpticsId):InstrumentEntry{return{id,subject:'Física',keywords:[topic],exactTopic:topic,Component:opticsInstrument(config)}}
+function mecanicaFinal(id:string,topic:string,config:MechanicsFinalId):InstrumentEntry{return{id,subject:'Física',keywords:[topic],exactTopic:topic,Component:mechanicsFinalInstrument(config)}}
+function fisicaRestante(id:string,topic:string,config:PhysicsRemainingId):InstrumentEntry{return{id,subject:'Física',keywords:[topic],exactTopic:topic,Component:physicsRemainingInstrument(config)}}
 
 export const INSTRUMENTS: InstrumentEntry[] = [
   plano('funcoes-introducao', ['introdução às funções'], 'afim'),
@@ -214,6 +220,8 @@ export const INSTRUMENTS: InstrumentEntry[] = [
   ondulatorio('intensidade-sonora','intensidade sonora','sound-intensity'),ondulatorio('interferencia-ondas','interferência de ondas: análise quantitativa, aplicações e batimento','interference'),ondulatorio('ondas-cordas','ondas estacionárias em cordas','string-harmonics'),ondulatorio('efeito-doppler','efeito doppler: descrição e estudo quantitativo','doppler'),
   magnetico('fio-espira','campo magnético devido à corrente em fio reto e espira: descrição vetorial e aplicações','fio-espira'),magnetico('carga-em-b','força magnética e análise de lançamentos de cargas em um campo magnético uniforme','carga-em-b'),magnetico('fios-paralelos','análise de força magnética em fios percorridos por correntes contínuas','fios-paralelos'),magnetico('lenz','indução eletromagnética: lei de lenz','lenz'),magnetico('gerador-inducao','indução eletromagnética: análise da corrente induzida em geradores','gerador'),
   optico('espelho-plano','reflexão em superfícies planas','plane-mirror'),optico('espelho-esferico','reflexão em superfícies esféricas','spherical-mirror'),optico('refracao','refração: fundamentos, leis e aplicações','refraction'),optico('optica-visao','óptica da visão','vision'),
+  mecanicaFinal('plano-vertical','analisando movimentos contidos em um plano vertical','vertical-plane'),mecanicaFinal('mhs','movimento harmônico simples (mhs)','mhs'),mecanicaFinal('energia-potencial','trabalho e energia: o teorema da energia potencial','potential-energy'),mecanicaFinal('nao-conservativo','sistemas conservativos e sistemas não conservativos','nonconservative'),mecanicaFinal('massa-energia','equivalência massa-energia','mass-energy'),
+  fisicaRestante('eco-refracao','reflexão, eco, reverberação e refração de ondas','echo'),fisicaRestante('difracao-polarizacao','fenômenos ondulatórios: difração, polarização e ressonância','diffraction'),fisicaRestante('ondas-tubos','ondas estacionárias em tubos','tube-harmonics'),fisicaRestante('fisica-quantica','noções básicas de física quântica','quantum-photon'),
 ];
 
 function chapterText(summary: Pick<InteractiveSummary, 'subject' | 'topic' | 'title'>): string {

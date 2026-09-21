@@ -3,9 +3,9 @@
   "counts": {
     "experiment": 11,
     "board": 41,
-    "instrument": 115,
+    "instrument": 124,
     "scene": 186,
-    "fallback": 260
+    "fallback": 251
   },
   "contested": 18,
   "subjects": [
@@ -15,9 +15,9 @@
       "counts": {
         "experiment": 0,
         "board": 13,
-        "instrument": 44,
+        "instrument": 53,
         "scene": 8,
-        "fallback": 20
+        "fallback": 11
       }
     },
     {
@@ -924,8 +924,8 @@
       "id": "summary-fisica-analisando-movimentos-contidos-em-um-plano-vertical",
       "subject": "Física",
       "title": "Analisando Movimentos Contidos em um Plano Vertical",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "plano-vertical",
       "ignored": []
     },
     {
@@ -948,8 +948,8 @@
       "id": "summary-fisica-movimento-harmonico-simples-mhs",
       "subject": "Física",
       "title": "Movimento Harmônico Simples (MHS)",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "mhs",
       "ignored": []
     },
     {
@@ -996,16 +996,16 @@
       "id": "summary-fisica-trabalho-e-energia-o-teorema-da-energia-potencial",
       "subject": "Física",
       "title": "Trabalho e Energia: o Teorema da Energia Potencial",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "energia-potencial",
       "ignored": []
     },
     {
       "id": "summary-fisica-sistemas-conservativos-e-sistemas-nao-conservativos",
       "subject": "Física",
       "title": "Sistemas Conservativos e Sistemas Não Conservativos",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "nao-conservativo",
       "ignored": []
     },
     {
@@ -1028,8 +1028,8 @@
       "id": "summary-fisica-equivalencia-massa-energia",
       "subject": "Física",
       "title": "Equivalência Massa-Energia",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "massa-energia",
       "ignored": []
     },
     {
@@ -1421,8 +1421,8 @@
       "id": "summary-fisica-reflexao-eco-reverberacao-e-refracao-de-ondas",
       "subject": "Física",
       "title": "Reflexão, Eco, Reverberação e Refração de Ondas",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "eco-refracao",
       "ignored": []
     },
     {
@@ -1437,8 +1437,8 @@
       "id": "summary-fisica-fenomenos-ondulatorios-difracao-polarizacao-e-ressonancia",
       "subject": "Física",
       "title": "Fenômenos Ondulatórios: Difração, Polarização e Ressonância",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "difracao-polarizacao",
       "ignored": []
     },
     {
@@ -1469,8 +1469,8 @@
       "id": "summary-fisica-ondas-estacionarias-em-tubos",
       "subject": "Física",
       "title": "Ondas Estacionárias em Tubos",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "ondas-tubos",
       "ignored": []
     },
     {
@@ -1485,8 +1485,8 @@
       "id": "summary-fisica-nocoes-basicas-de-fisica-quantica",
       "subject": "Física",
       "title": "Noções Básicas de Física Quântica",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "fisica-quantica",
       "ignored": []
     },
     {

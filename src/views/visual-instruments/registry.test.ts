@@ -183,4 +183,25 @@ describe('registro de instrumentos', () => {
       expect(interactiveSummaries.filter((s) => findInstrument(s)?.id === id).map((s) => s.topic), id).toEqual([topic]);
     }
   });
+
+  it('mantém os instrumentos finais de mecânica em suas condições físicas', () => {
+    const esperado: Record<string, string> = {
+      'plano-vertical': 'Analisando Movimentos Contidos em um Plano Vertical',
+      mhs: 'Movimento Harmônico Simples (MHS)',
+      'energia-potencial': 'Trabalho e Energia: o Teorema da Energia Potencial',
+      'nao-conservativo': 'Sistemas Conservativos e Sistemas Não Conservativos',
+      'massa-energia': 'Equivalência Massa-Energia',
+    };
+    for (const [id, topic] of Object.entries(esperado)) expect(interactiveSummaries.filter((s) => findInstrument(s)?.id === id).map((s) => s.topic), id).toEqual([topic]);
+  });
+
+  it('mantém os instrumentos finais de ondas nos fenômenos específicos', () => {
+    const esperado: Record<string, string> = {
+      'eco-refracao': 'Reflexão, Eco, Reverberação e Refração de Ondas',
+      'difracao-polarizacao': 'Fenômenos Ondulatórios: Difração, Polarização e Ressonância',
+      'ondas-tubos': 'Ondas Estacionárias em Tubos',
+      'fisica-quantica': 'Noções Básicas de Física Quântica',
+    };
+    for (const [id, topic] of Object.entries(esperado)) expect(interactiveSummaries.filter((s) => findInstrument(s)?.id === id).map((s) => s.topic), id).toEqual([topic]);
+  });
 });
