@@ -3,9 +3,9 @@
   "counts": {
     "experiment": 11,
     "board": 43,
-    "instrument": 255,
+    "instrument": 299,
     "scene": 186,
-    "fallback": 118
+    "fallback": 74
   },
   "contested": 18,
   "subjects": [
@@ -103,9 +103,9 @@
       "counts": {
         "experiment": 1,
         "board": 0,
-        "instrument": 0,
+        "instrument": 28,
         "scene": 8,
-        "fallback": 28
+        "fallback": 0
       }
     },
     {
@@ -3194,8 +3194,8 @@
       "id": "summary-literatura-a-arte-e-suas-linguagens",
       "subject": "Literatura",
       "title": "A Arte e suas Linguagens",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "art-languages",
       "ignored": []
     },
     {
@@ -3218,48 +3218,48 @@
       "id": "summary-literatura-renascimento-e-camoes",
       "subject": "Literatura",
       "title": "Renascimento e Camões",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "renaissance-camoes",
       "ignored": []
     },
     {
       "id": "summary-literatura-brasil-primeiros-registros",
       "subject": "Literatura",
       "title": "Brasil: Primeiros Registros",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "first-records",
       "ignored": []
     },
     {
       "id": "summary-literatura-a-estetica-barroca",
       "subject": "Literatura",
       "title": "A Estética Barroca",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "baroque",
       "ignored": []
     },
     {
       "id": "summary-literatura-a-estetica-neoclassica",
       "subject": "Literatura",
       "title": "A Estética Neoclássica",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "neoclassic",
       "ignored": []
     },
     {
       "id": "summary-literatura-a-estetica-romantica-poesia",
       "subject": "Literatura",
       "title": "A Estética Romântica: Poesia",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "romantic-poetry",
       "ignored": []
     },
     {
       "id": "summary-literatura-elementos-da-narrativa",
       "subject": "Literatura",
       "title": "Elementos da Narrativa",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "narrative-elements",
       "ignored": []
     },
     {
@@ -3274,56 +3274,56 @@
       "id": "summary-literatura-a-estetica-realista",
       "subject": "Literatura",
       "title": "A Estética Realista",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "realism",
       "ignored": []
     },
     {
       "id": "summary-literatura-machado-de-assis",
       "subject": "Literatura",
       "title": "Machado de Assis",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "machado-de-assis",
       "ignored": []
     },
     {
       "id": "summary-literatura-naturalismo",
       "subject": "Literatura",
       "title": "Naturalismo",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "naturalism",
       "ignored": []
     },
     {
       "id": "summary-literatura-realismo-portugues-eca-de-queiros",
       "subject": "Literatura",
       "title": "Realismo Português: Eça de Queirós",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "eca-de-queiros",
       "ignored": []
     },
     {
       "id": "summary-literatura-parnasianismo",
       "subject": "Literatura",
       "title": "Parnasianismo",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "parnassianism",
       "ignored": []
     },
     {
       "id": "summary-literatura-simbolismo",
       "subject": "Literatura",
       "title": "Simbolismo",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "symbolism",
       "ignored": []
     },
     {
       "id": "summary-literatura-pre-modernismo",
       "subject": "Literatura",
       "title": "Pré-Modernismo",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "pre-modernism",
       "ignored": []
     },
     {
@@ -3346,16 +3346,16 @@
       "id": "summary-literatura-semana-de-arte-moderna",
       "subject": "Literatura",
       "title": "Semana de Arte Moderna",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "modern-art-week",
       "ignored": []
     },
     {
       "id": "summary-literatura-modernismo-no-brasil-primeira-geracao",
       "subject": "Literatura",
       "title": "Modernismo no Brasil: Primeira Geração",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "modernism-first-generation",
       "ignored": []
     },
     {
@@ -3370,56 +3370,56 @@
       "id": "summary-literatura-graciliano-ramos",
       "subject": "Literatura",
       "title": "Graciliano Ramos",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "graciliano-ramos",
       "ignored": []
     },
     {
       "id": "summary-literatura-segunda-geracao-modernista-poesia",
       "subject": "Literatura",
       "title": "Segunda Geração Modernista: Poesia",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "modernism-second-generation",
       "ignored": []
     },
     {
       "id": "summary-literatura-carlos-drummond-de-andrade",
       "subject": "Literatura",
       "title": "Carlos Drummond de Andrade",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "carlos-drummond",
       "ignored": []
     },
     {
       "id": "summary-literatura-joao-cabral-de-melo-neto",
       "subject": "Literatura",
       "title": "João Cabral de Melo Neto",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "joao-cabral",
       "ignored": []
     },
     {
       "id": "summary-literatura-poesia-concreta",
       "subject": "Literatura",
       "title": "Poesia Concreta",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "concrete-poetry",
       "ignored": []
     },
     {
       "id": "summary-literatura-clarice-lispector",
       "subject": "Literatura",
       "title": "Clarice Lispector",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "clarice-lispector",
       "ignored": []
     },
     {
       "id": "summary-literatura-guimaraes-rosa",
       "subject": "Literatura",
       "title": "Guimarães Rosa",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "guimaraes-rosa",
       "ignored": []
     },
     {
@@ -3434,16 +3434,16 @@
       "id": "summary-literatura-prosa-brasileira-1960-1980",
       "subject": "Literatura",
       "title": "Prosa Brasileira: 1960-1980",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "prose-1960-1980",
       "ignored": []
     },
     {
       "id": "summary-literatura-literatura-lusofona-contemporanea",
       "subject": "Literatura",
       "title": "Literatura Lusófona Contemporânea",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "lusophone-contemporary",
       "ignored": []
     },
     {
@@ -3466,24 +3466,24 @@
       "id": "summary-literatura-artes-plasticas-brasileiras",
       "subject": "Literatura",
       "title": "Artes Plásticas Brasileiras",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "brazilian-visual-arts",
       "ignored": []
     },
     {
       "id": "summary-literatura-teatro-brasileiro",
       "subject": "Literatura",
       "title": "Teatro Brasileiro",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "brazilian-theater",
       "ignored": []
     },
     {
       "id": "summary-literatura-cancioneiro-popular-brasileiro",
       "subject": "Literatura",
       "title": "Cancioneiro Popular Brasileiro",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "popular-songbook",
       "ignored": []
     },
     {
