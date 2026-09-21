@@ -16,9 +16,9 @@ outro assunto. O detalhe capítulo a capítulo está em
 | --- | ---: | ---: |
 | Experimento exato | 11 | 1,8% |
 | Prancha autoral | 43 | 7,0% |
-| Instrumento | 228 | 37,2% |
+| Instrumento | 256 | 41,8% |
 | Cena validada | 186 | 30,3% |
-| Lacuna honesta | 145 | 23,7% |
+| Lacuna honesta | 117 | 19,1% |
 | **Total** | **613** | |
 
 ## Por matéria
@@ -33,7 +33,7 @@ outro assunto. O detalhe capítulo a capítulo está em
 | Língua Inglesa | 17 | 1 | 0 | 5 | 0 | 11 |
 | Redação | 58 | 1 | 0 | 5 | 0 | 52 |
 | Gramática | 26 | 1 | 0 | 9 | 0 | 16 |
-| Literatura | 37 | 1 | 0 | 0 | 8 | 28 |
+| Literatura | 37 | 1 | 0 | 28 | 8 | 0 |
 | Entendimento de Texto | 12 | 1 | 0 | 0 | 0 | 11 |
 | Matemática | 83 | 1 | 11 | 71 | 0 | 0 |
 | Química | 48 | 0 | 7 | 23 | 18 | 0 |

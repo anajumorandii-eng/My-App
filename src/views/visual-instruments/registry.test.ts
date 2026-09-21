@@ -271,4 +271,44 @@ describe('registro de instrumentos', () => {
     };
     for (const [id, topic] of Object.entries(esperado)) expect(interactiveSummaries.filter((s) => findInstrument(s)?.id === id).map((s) => s.topic), id).toEqual([topic]);
   });
+
+  it('mantém os instrumentos de traço literário nos 22 capítulos de estética, movimento ou campo', () => {
+    const esperado: Record<string, string> = {
+      'art-languages': 'A Arte e suas Linguagens',
+      'renaissance-camoes': 'Renascimento e Camões',
+      'first-records': 'Brasil: Primeiros Registros',
+      baroque: 'A Estética Barroca',
+      neoclassic: 'A Estética Neoclássica',
+      'romantic-poetry': 'A Estética Romântica: Poesia',
+      'narrative-elements': 'Elementos da Narrativa',
+      realism: 'A Estética Realista',
+      naturalism: 'Naturalismo',
+      'eca-de-queiros': 'Realismo Português: Eça de Queirós',
+      parnassianism: 'Parnasianismo',
+      symbolism: 'Simbolismo',
+      'pre-modernism': 'Pré-Modernismo',
+      'modern-art-week': 'Semana de Arte Moderna',
+      'modernism-first-generation': 'Modernismo no Brasil: Primeira Geração',
+      'modernism-second-generation': 'Segunda Geração Modernista: Poesia',
+      'concrete-poetry': 'Poesia Concreta',
+      'prose-1960-1980': 'Prosa Brasileira: 1960-1980',
+      'lusophone-contemporary': 'Literatura Lusófona Contemporânea',
+      'brazilian-visual-arts': 'Artes Plásticas Brasileiras',
+      'brazilian-theater': 'Teatro Brasileiro',
+      'popular-songbook': 'Cancioneiro Popular Brasileiro',
+    };
+    for (const [id, topic] of Object.entries(esperado)) expect(interactiveSummaries.filter((s) => findInstrument(s)?.id === id).map((s) => s.topic), id).toEqual([topic]);
+  });
+
+  it('mantém os instrumentos de perfil de autor nos seis monográficos de Literatura', () => {
+    const esperado: Record<string, string> = {
+      'machado-de-assis': 'Machado de Assis',
+      'graciliano-ramos': 'Graciliano Ramos',
+      'carlos-drummond': 'Carlos Drummond de Andrade',
+      'joao-cabral': 'João Cabral de Melo Neto',
+      'clarice-lispector': 'Clarice Lispector',
+      'guimaraes-rosa': 'Guimarães Rosa',
+    };
+    for (const [id, topic] of Object.entries(esperado)) expect(interactiveSummaries.filter((s) => findInstrument(s)?.id === id).map((s) => s.topic), id).toEqual([topic]);
+  });
 });

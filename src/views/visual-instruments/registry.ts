@@ -71,6 +71,10 @@ import { englishInstrument } from './EnglishInstrument';
 import type { EnglishInstrumentId } from '../../lib/englishInstrumentLab';
 import { writingInstrument } from './WritingInstrument';
 import type { WritingInstrumentId } from '../../lib/writingInstrumentLab';
+import { literaryTraitInstrument } from './LiteraryTraitInstrument';
+import type { LiteraryTraitId } from '../../lib/literaryTraitLab';
+import { literaryAuthorInstrument } from './LiteraryAuthorInstrument';
+import type { LiteraryAuthorId } from '../../lib/literaryAuthorLab';
 
 /**
  * Quais capítulos ganham prancha manipulável, e com que instrumento.
@@ -170,6 +174,15 @@ function historicoFase(id:string,topic:string,config:HistoryPhaseId):InstrumentE
 function gramatical(id:string,topic:string,config:GrammarInstrumentId):InstrumentEntry{return{id,subject:'Gramática',keywords:[topic],exactTopic:topic,Component:grammarInstrument(config)}}
 function ingles(id:string,topic:string,config:EnglishInstrumentId):InstrumentEntry{return{id,subject:'Língua Inglesa',keywords:[topic],exactTopic:topic,Component:englishInstrument(config)}}
 function redacao(id:string,topic:string,config:WritingInstrumentId):InstrumentEntry{return{id,subject:'Redação',keywords:[topic],exactTopic:topic,Component:writingInstrument(config)}}
+/**
+ * Literatura, rodada de cobertura pedida pela Ana Júlia: capítulos sem objeto
+ * manipulável único ganham instrumento genérico de três facetas comparáveis,
+ * não cena autoral (fora do escopo de Literatura por decisão anterior). Duas
+ * famílias, porque a pergunta muda entre elas — ver comentário de
+ * `literaryTraitLab.ts`/`literaryAuthorLab.ts` para a distinção.
+ */
+function literario(id:string,topic:string,config:LiteraryTraitId):InstrumentEntry{return{id,subject:'Literatura',keywords:[topic],exactTopic:topic,Component:literaryTraitInstrument(config)}}
+function literarioAutor(id:string,topic:string,config:LiteraryAuthorId):InstrumentEntry{return{id,subject:'Literatura',keywords:[topic],exactTopic:topic,Component:literaryAuthorInstrument(config)}}
 
 export const INSTRUMENTS: InstrumentEntry[] = [
   plano('funcoes-introducao', ['introdução às funções'], 'afim'),
@@ -340,6 +353,38 @@ export const INSTRUMENTS: InstrumentEntry[] = [
   gramatical('pronomes','pronomes','pronoun-reference'),gramatical('verbo','verbo','verbal-aspect'),gramatical('ambiguidade','ambiguidade: duplicidade no léxico e na sintaxe','ambiguity'),gramatical('oracoes-coordenadas','orações coordenadas','clause-relations'),
   ingles('songs-poems','text comprehension: songs and poems','poetry-reading'),ingles('calories-energy','text comprehension: calories and energy','quantity-language'),ingles('earthquakes','text comprehension: earthquakes','modal-certainty'),ingles('greenhouse-gases','text comprehension: ecology (greenhouse gases)','cause-connectors'),ingles('human-brain','text comprehension: the human brain','research-claims'),
   redacao('dissertacao-mitos','a dissertação no vestibular: mitos e verdades','essay-myths'),redacao('avaliacao-dissertacao','o que se avalia na dissertação: competências e habilidades','evaluation'),redacao('organizacao-ideias','organizando as ideias: brainstorm e mind maps','idea-map'),redacao('repertorio','repertório: o diferencial de redações de sucesso','repertoire'),redacao('eixos-tematicos','qual será o tema deste ano: grandes eixos temáticos','theme-axes'),
+
+  // Literatura: 22 capítulos de estética/movimento/campo (três facetas
+  // comparáveis por capítulo) e 6 de autor monográfico (trajetória, técnica,
+  // obras). Nenhum é cena autoral — fora do escopo de Literatura desta rodada.
+  literario('art-languages','a arte e suas linguagens','art-languages'),
+  literario('renaissance-camoes','renascimento e camões','renaissance-camoes'),
+  literario('first-records','brasil: primeiros registros','first-records'),
+  literario('baroque','a estética barroca','baroque'),
+  literario('neoclassic','a estética neoclássica','neoclassic'),
+  literario('romantic-poetry','a estética romântica: poesia','romantic-poetry'),
+  literario('narrative-elements','elementos da narrativa','narrative-elements'),
+  literario('realism','a estética realista','realism'),
+  literario('naturalism','naturalismo','naturalism'),
+  literario('eca-de-queiros','realismo português: eça de queirós','eca-de-queiros'),
+  literario('parnassianism','parnasianismo','parnassianism'),
+  literario('symbolism','simbolismo','symbolism'),
+  literario('pre-modernism','pré-modernismo','pre-modernism'),
+  literario('modern-art-week','semana de arte moderna','modern-art-week'),
+  literario('modernism-first-generation','modernismo no brasil: primeira geração','modernism-first-generation'),
+  literario('modernism-second-generation','segunda geração modernista: poesia','modernism-second-generation'),
+  literario('concrete-poetry','poesia concreta','concrete-poetry'),
+  literario('prose-1960-1980','prosa brasileira: 1960-1980','prose-1960-1980'),
+  literario('lusophone-contemporary','literatura lusófona contemporânea','lusophone-contemporary'),
+  literario('brazilian-visual-arts','artes plásticas brasileiras','brazilian-visual-arts'),
+  literario('brazilian-theater','teatro brasileiro','brazilian-theater'),
+  literario('popular-songbook','cancioneiro popular brasileiro','popular-songbook'),
+  literarioAutor('machado-de-assis','machado de assis','machado-de-assis'),
+  literarioAutor('graciliano-ramos','graciliano ramos','graciliano-ramos'),
+  literarioAutor('carlos-drummond','carlos drummond de andrade','carlos-drummond'),
+  literarioAutor('joao-cabral','joão cabral de melo neto','joao-cabral'),
+  literarioAutor('clarice-lispector','clarice lispector','clarice-lispector'),
+  literarioAutor('guimaraes-rosa','guimarães rosa','guimaraes-rosa'),
 ];
 
 function chapterText(summary: Pick<InteractiveSummary, 'subject' | 'topic' | 'title'>): string {
