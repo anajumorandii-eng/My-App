@@ -11,7 +11,7 @@ const accent = { fontWeight: 800, fill: 'var(--vs-burgundy)' } as const;
 function EnglishScene({ id, selected }: { id: EnglishInstrumentId; selected: number }) {
   const state = englishInstrumentState(id, selected);
   if (id === 'poetry-reading') return <>
-    <rect x="35" y="45" width="250" height="190" rx="12" fill="var(--vs-paper)" stroke="var(--vs-ink)" strokeWidth="3" />
+    <text x="35" y="28" style={{...accent,fontSize:13}}>close reading · evidence first</text><rect x="35" y="45" width="250" height="190" rx="12" fill="var(--vs-paper)" stroke="var(--vs-ink)" strokeWidth="3" />
     <text x="55" y="94" style={ink}>{selected === 0 ? 'Still I wait.' : selected === 1 ? 'The room is loud,' : 'Hope is a door'}</text>
     <text x="55" y="132" style={ink}>{selected === 0 ? 'Still I listen.' : selected === 1 ? 'my thoughts are quiet.' : 'left open.'}</text>
     {selected === 0 && <path d="M53 104H136M53 142H145" stroke="var(--vs-burgundy)" strokeWidth="5" />}
@@ -23,7 +23,7 @@ function EnglishScene({ id, selected }: { id: EnglishInstrumentId; selected: num
   if (id === 'quantity-language') {
     const widths = [66, 155, 128];
     return <>
-      <path d="M45 155H275M45 140V170M160 140V170M275 140V170" stroke="var(--vs-ink)" strokeWidth="3" />
+      <text x="45" y="55" style={{...accent,fontSize:13}}>quantifier changes the claim</text><path d="M45 155H275M45 140V170M160 140V170M275 140V170" stroke="var(--vs-ink)" strokeWidth="3" />
       <rect x={selected === 1 ? 110 : 45} y="112" width={widths[selected]} height="28" rx="8" fill="var(--vs-burgundy)" opacity=".65" />
       {selected === 0 && <path d="M111 96V177" stroke="var(--vs-burgundy)" strokeWidth="5" />}
       {selected === 1 && <path d="M110 96V177" stroke="var(--vs-burgundy)" strokeWidth="5" />}
@@ -36,7 +36,7 @@ function EnglishScene({ id, selected }: { id: EnglishInstrumentId; selected: num
   if (id === 'modal-certainty') {
     const positions = [75, 160, 245];
     return <>
-      <path d="M55 155H265" stroke="var(--vs-ink)" strokeWidth="8" strokeLinecap="round" />
+      <text x="160" y="47" textAnchor="middle" style={{...ink,fontSize:13}}>“The quake {selected === 0 ? 'may' : selected === 1 ? 'will likely' : 'will'} disrupt services.”</text><path d="M55 155H265" stroke="var(--vs-ink)" strokeWidth="8" strokeLinecap="round" />
       <circle cx={positions[selected]} cy="155" r="18" fill="var(--vs-burgundy)" />
       <text x="75" y="205" textAnchor="middle" style={ink}>possível</text><text x="160" y="205" textAnchor="middle" style={ink}>esperado</text><text x="245" y="205" textAnchor="middle" style={ink}>categórico</text>
       <text x="160" y="93" textAnchor="middle" style={accent}>{state.example}</text>
@@ -45,6 +45,7 @@ function EnglishScene({ id, selected }: { id: EnglishInstrumentId; selected: num
   }
 
   if (id === 'cause-connectors') return <>
+    <text x="160" y="50" textAnchor="middle" style={{...accent,fontSize:13}}>connector = logical direction</text>
     <rect x="35" y="90" width="98" height="75" rx="12" fill="var(--vs-paper)" stroke="var(--vs-ink)" strokeWidth="3" />
     <rect x="187" y="90" width="98" height="75" rx="12" fill="var(--vs-paper)" stroke="var(--vs-ink)" strokeWidth="3" />
     <path d="M137 127H181" stroke="var(--vs-burgundy)" strokeWidth="7" />
@@ -57,6 +58,7 @@ function EnglishScene({ id, selected }: { id: EnglishInstrumentId; selected: num
 
   const bridge = [215, 150, 86][selected];
   return <>
+    <text x="160" y="47" textAnchor="middle" style={{...accent,fontSize:13}}>claim strength must match evidence</text>
     <rect x="34" y="82" width="105" height="90" rx="12" fill="var(--vs-paper)" stroke="var(--vs-ink)" strokeWidth="3" />
     <rect x="181" y="82" width="105" height="90" rx="12" fill="var(--vs-paper)" stroke="var(--vs-burgundy)" strokeWidth="3" />
     <text x="86" y="119" textAnchor="middle" style={ink}>poor sleep</text><text x="86" y="145" textAnchor="middle" style={ink}>observed</text>
