@@ -8,6 +8,7 @@ import { MovimentoDialetico } from './families/MovimentoDialetico';
 import { Tipologia } from './families/Tipologia';
 import { QuimicaTipologia } from './families/QuimicaTipologia';
 import { ORGANIC_SCENE_IDS, QuimicaOrganica } from './families/QuimicaOrganica';
+import { BIOLOGY_PHYSIOLOGY_SCENE_IDS, BiologiaFisiologia } from './families/BiologiaFisiologia';
 import { CriteriosConjuntivos } from './families/CriteriosConjuntivos';
 import { GradeDeEixos } from './families/GradeDeEixos';
 import type { SceneEntry, SceneFamily } from './types';
@@ -27,11 +28,13 @@ export function TopicScene({ summaryId }: { summaryId: string }) {
   const entry = sceneFor(summaryId);
   if (!entry) return null;
   const quimicaGeometrica = entry.chapterId === 'summary-quimica-geometria-molecular';
-  const Familia = ORGANIC_SCENE_IDS.has(entry.chapterId)
-    ? QuimicaOrganica
-    : quimicaGeometrica
-      ? QuimicaTipologia
-      : FAMILIAS[entry.family];
+  const Familia = BIOLOGY_PHYSIOLOGY_SCENE_IDS.has(entry.chapterId)
+    ? BiologiaFisiologia
+    : ORGANIC_SCENE_IDS.has(entry.chapterId)
+      ? QuimicaOrganica
+      : quimicaGeometrica
+        ? QuimicaTipologia
+        : FAMILIAS[entry.family];
   return (
     <div className="vs-handdrawn-container">
       <Familia entry={entry} />

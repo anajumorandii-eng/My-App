@@ -1,0 +1,36 @@
+.bp-scene { gap: 1rem; }
+.bp-board { min-width: 0; padding: .55rem; border: 1px solid color-mix(in srgb, var(--vs-blue) 28%, transparent); border-radius: 16px; background: radial-gradient(circle at 20% 20%, color-mix(in srgb, var(--vs-blue) 8%, transparent), transparent 42%), color-mix(in srgb, var(--vs-paper-strong) 94%, var(--vs-blue)); overflow: hidden; }
+.bp-board svg { display: block; color: var(--vs-ink); }
+.bp-board text { fill: var(--vs-dim); font: 700 15px/1.2 'Kalam', 'Caveat', cursive; }
+.bp-board .bp-small { font: 700 12px/1.2 system-ui, sans-serif; }
+.bp-body { fill: none; stroke: color-mix(in srgb, var(--vs-ink) 24%, transparent); stroke-width: 2; stroke-dasharray: 7 5; }
+.bp-organ, .bp-nephron, .bp-reflex-node, .bp-reflex-path, .bp-cord, .bp-muscle, .bp-gland-node, .bp-channel, .bp-vesicles, .bp-receptors, .bp-cleanup { fill: color-mix(in srgb, var(--vs-blue) 8%, var(--vs-paper-strong)); stroke: color-mix(in srgb, var(--vs-blue) 54%, var(--vs-ink)); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; transition: opacity .2s ease, filter .2s ease; }
+.bp-organ:not(.bp-focus):not(.bp-done), .bp-nephron:not(.bp-focus):not(.bp-done), .bp-reflex-node:not(.bp-focus):not(.bp-done), .bp-reflex-path:not(.bp-focus):not(.bp-done), .bp-cord:not(.bp-focus):not(.bp-done), .bp-muscle:not(.bp-focus):not(.bp-done), .bp-gland-node:not(.bp-focus):not(.bp-done), .bp-channel:not(.bp-focus):not(.bp-done), .bp-vesicles:not(.bp-focus):not(.bp-done), .bp-receptors:not(.bp-focus):not(.bp-done), .bp-cleanup:not(.bp-focus):not(.bp-done) { opacity: .36; }
+.bp-focus { fill: color-mix(in srgb, var(--vs-burgundy) 22%, var(--vs-paper-strong)); stroke: var(--vs-burgundy); filter: drop-shadow(0 3px 5px color-mix(in srgb, var(--vs-burgundy) 26%, transparent)); }
+.bp-done { opacity: .78; }
+.bp-gland, .bp-kidney { fill: color-mix(in srgb, var(--vs-burgundy) 17%, var(--vs-paper-strong)); stroke: var(--vs-burgundy); stroke-width: 2.5; stroke-linejoin: round; }
+.bp-flow, .bp-transfer, .bp-reflex-path path, .bp-hormone, .bp-feedback path { fill: none; stroke: var(--vs-amber); stroke-width: 3.5; stroke-linecap: round; stroke-linejoin: round; }
+.bp-vessel { fill: none; stroke: var(--vs-burgundy); stroke-width: 7; stroke-linecap: round; }
+.bp-terminal, .bp-post { fill: color-mix(in srgb, var(--vs-blue) 8%, var(--vs-paper-strong)); stroke: var(--vs-blue); stroke-width: 3; }
+.bp-transmitters circle, .bp-channel circle { fill: var(--vs-amber); stroke: var(--vs-paper-strong); stroke-width: 2; }
+.bp-receptors path { fill: none; }
+.bp-cord path { fill: color-mix(in srgb, var(--vs-burgundy) 18%, transparent); stroke: var(--vs-burgundy); }
+.bp-gland-dot { fill: var(--vs-burgundy); }
+.bp-tissue rect { fill: color-mix(in srgb, var(--vs-blue) 10%, transparent); stroke: var(--vs-blue); stroke-width: 2; }
+.bp-tissue circle { fill: var(--vs-blue); }
+.bp-feedback { fill: none; stroke: var(--vs-burgundy); stroke-dasharray: 7 5; }
+.bp-feedback path { stroke: var(--vs-burgundy); }
+.bp-stepper { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 135px), 1fr)); gap: .55rem; }
+.bp-stepper button { min-width: 0; min-height: 58px; display: grid; grid-template-columns: auto 1fr; align-items: center; gap: .55rem; padding: .65rem .7rem; color: var(--vs-ink); text-align: left; background: color-mix(in srgb, var(--vs-blue) 5%, transparent); border: 1px solid color-mix(in srgb, var(--vs-blue) 32%, transparent); border-radius: 11px; cursor: pointer; }
+.bp-stepper button[aria-pressed='true'] { background: color-mix(in srgb, var(--vs-burgundy) 13%, var(--vs-paper-strong)); border-color: var(--vs-burgundy); }
+.bp-stepper button:focus-visible { outline: 3px solid var(--vs-blue); outline-offset: 2px; }
+.bp-stepper span { color: var(--vs-burgundy); font: 700 .7rem/1 ui-monospace, monospace; }
+.bp-stepper strong { min-width: 0; font: 700 .8rem/1.25 system-ui, sans-serif; overflow-wrap: anywhere; }
+.bp-detail { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1rem; padding: .9rem 1rem; background: color-mix(in srgb, var(--vs-burgundy) 7%, var(--vs-paper-strong)); border-left: 4px solid var(--vs-burgundy); border-radius: 4px 12px 12px 4px; }
+.bp-detail small { color: var(--vs-burgundy); font: 700 .67rem/1.2 system-ui, sans-serif; letter-spacing: .09em; }
+.bp-detail strong { display: block; margin-top: .2rem; font: 700 1.08rem/1.25 'Kalam', 'Caveat', cursive; }
+.bp-detail p, .bp-detail blockquote { margin: .32rem 0 0; color: var(--vs-dim); font: .78rem/1.48 system-ui, sans-serif; }
+.bp-detail blockquote { padding-left: .8rem; border-left: 1px solid color-mix(in srgb, var(--vs-blue) 38%, transparent); }
+.bp-detail cite { display: block; margin-top: .28rem; color: var(--vs-blue); font-style: normal; font-size: .7rem; }
+@media (max-width: 620px) { .bp-board { padding: .2rem; } .bp-board text { font-size: 13px; } .bp-stepper { grid-template-columns: repeat(2, minmax(0, 1fr)); } .bp-stepper button { min-height: 54px; padding: .55rem; } .bp-detail { grid-template-columns: 1fr; gap: .6rem; } }
+@media (prefers-reduced-motion: reduce) { .bp-board * { transition: none !important; } }
