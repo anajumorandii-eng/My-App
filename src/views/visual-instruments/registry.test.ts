@@ -261,6 +261,22 @@ describe('registro de instrumentos', () => {
     for (const [id, topic] of Object.entries(esperado)) expect(interactiveSummaries.filter((s) => findInstrument(s)?.id === id).map((s) => s.topic), id).toEqual([topic]);
   });
 
+  it('mantém os instrumentos de linha do tempo nos dez capítulos de história que cobrem', () => {
+    const esperado: Record<string, string> = {
+      'grandes-revolucoes-seculo-xx': 'Grandes Revoluções do Século XX',
+      'america-latina-seculo-xx': 'América Latina no Século XX',
+      'dinamica-interna-colonizacao': 'Dinâmica Interna da Colonização',
+      'disputas-europeias-brasil-colonial': 'Disputas Europeias no Brasil Colonial',
+      'segundo-reinado': 'Brasil Império: Segundo Reinado (1840-1889)',
+      'republica-da-espada': 'A República da Espada',
+      'republica-liberal-democracia': 'República Liberal (1945-1964): Democracia em Tempos de Guerra Fria',
+      'republica-liberal-desenvolvimentismo': 'República Liberal (1945-1964): Desenvolvimentismo e Populismo',
+      'regime-militar-i': 'Regime Militar (1964-1985) I',
+      'regime-militar-ii': 'Regime Militar (1964-1985) II',
+    };
+    for (const [id, topic] of Object.entries(esperado)) expect(interactiveSummaries.filter((s) => findInstrument(s)?.id === id).map((s) => s.topic), id).toEqual([topic]);
+  });
+
   it('mantém os instrumentos de gramática nas cinco operações linguísticas', () => {
     const esperado: Record<string, string> = { 'sintagma-nominal': 'Artigo, Numeral e Adjetivo no Sintagma Nominal', concordancia: 'Concordância', 'pontuacao-i': 'Pontuação I: Princípios para o Uso da Vírgula', crase: 'Crase', 'vozes-verbais': 'Vozes Verbais' };
     for (const [id, topic] of Object.entries(esperado)) expect(interactiveSummaries.filter((s) => findInstrument(s)?.id === id).map((s) => s.topic), id).toEqual([topic]);
