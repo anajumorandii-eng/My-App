@@ -204,4 +204,15 @@ describe('registro de instrumentos', () => {
     };
     for (const [id, topic] of Object.entries(esperado)) expect(interactiveSummaries.filter((s) => findInstrument(s)?.id === id).map((s) => s.topic), id).toEqual([topic]);
   });
+
+  it('mantém os instrumentos de eletroquímica nos cinco processos que modelam', () => {
+    const esperado: Record<string, string> = {
+      redox: 'Processos de Oxirredução',
+      'pilhas-baterias': 'Introdução ao Estudo das Pilhas e Baterias',
+      'eletroquimica-espontanea': 'Eletroquímica de Processos Espontâneos',
+      eletrolise: 'Eletroquímica de Processos não Espontâneos',
+      'faraday-metalurgia': 'Aspectos Quantitativos da Eletroquímica e Metalurgia',
+    };
+    for (const [id, topic] of Object.entries(esperado)) expect(interactiveSummaries.filter((s) => findInstrument(s)?.id === id).map((s) => s.topic), id).toEqual([topic]);
+  });
 });

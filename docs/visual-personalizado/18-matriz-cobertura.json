@@ -3,9 +3,9 @@
   "counts": {
     "experiment": 11,
     "board": 41,
-    "instrument": 124,
+    "instrument": 129,
     "scene": 186,
-    "fallback": 251
+    "fallback": 246
   },
   "contested": 18,
   "subjects": [
@@ -136,9 +136,9 @@
       "counts": {
         "experiment": 0,
         "board": 7,
-        "instrument": 0,
+        "instrument": 5,
         "scene": 18,
-        "fallback": 23
+        "fallback": 18
       }
     },
     {
@@ -4401,8 +4401,8 @@
       "id": "summary-quimica-processos-de-oxirreducao",
       "subject": "Química",
       "title": "Processos de Oxirredução",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "redox",
       "ignored": []
     },
     {
@@ -4587,32 +4587,32 @@
       "id": "summary-quimica-introducao-ao-estudo-das-pilhas-e-baterias",
       "subject": "Química",
       "title": "Introdução ao Estudo das Pilhas e Baterias",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "pilhas-baterias",
       "ignored": []
     },
     {
       "id": "summary-quimica-eletroquimica-de-processos-espontaneos",
       "subject": "Química",
       "title": "Eletroquímica de Processos Espontâneos",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "eletroquimica-espontanea",
       "ignored": []
     },
     {
       "id": "summary-quimica-eletroquimica-de-processos-nao-espontaneos",
       "subject": "Química",
       "title": "Eletroquímica de Processos não Espontâneos",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "eletrolise",
       "ignored": []
     },
     {
       "id": "summary-quimica-aspectos-quantitativos-da-eletroquimica-e-metalurgia",
       "subject": "Química",
       "title": "Aspectos Quantitativos da Eletroquímica e Metalurgia",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "faraday-metalurgia",
       "ignored": []
     },
     {
