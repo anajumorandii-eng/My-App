@@ -58,4 +58,33 @@ describe('instrumentos de Gramática', () => {
       view.unmount();
     }
   });
+
+  it('oferece laboratórios próprios para os 16 capítulos da rodada de maximização de cobertura', () => {
+    const chapters: Array<[GrammarInstrumentId, string, string]> = [
+      ['language-system', 'summary-gramatica-lingua-um-sistema-complexo', 'ordem sintática'],
+      ['noun-class', 'summary-gramatica-substantivo-os-nomes-e-a-visao-do-enunciador', 'coletivo'],
+      ['text-type', 'summary-gramatica-tipos-de-texto-explorando-elementos-concretos-e-conceitos-abstratos', 'dissertativo'],
+      ['adverb-circumstance', 'summary-gramatica-adverbio-e-locucoes-adverbiais-circunstanciadores', 'modo'],
+      ['verb-syntax', 'summary-gramatica-verbo-e-sintaxe-da-oracao', 'de ligação'],
+      ['implicit-meaning', 'summary-gramatica-significados-implicitos', 'subentendido'],
+      ['discourse-type', 'summary-gramatica-tipos-de-discurso', 'indireto livre'],
+      ['clause-punctuation', 'summary-gramatica-pontuacao-ii-virgula-entre-oracoes-e-outros-sinais-de-pontuacao', 'dois-pontos'],
+      ['lexical-context', 'summary-gramatica-o-lexico-em-contexto-variadas-possibilidades-semanticas', 'conjunto de dados'],
+      ['government', 'summary-gramatica-mecanismo-de-regencia', 'precisar'],
+      ['word-formation', 'summary-gramatica-processos-de-formacao-de-palavras', 'composição'],
+      ['nominal-function', 'summary-gramatica-funcoes-sintaticas-nominais-e-vocativo', 'vocativo'],
+      ['subject-type', 'summary-gramatica-tipos-de-sujeito', 'inexistente'],
+      ['noun-clause', 'summary-gramatica-oracoes-substantivas', 'completiva nominal'],
+      ['adjective-clause', 'summary-gramatica-oracoes-adjetivas', 'locativa'],
+      ['adverbial-clause', 'summary-gramatica-oracoes-adverbiais', 'concessiva'],
+    ];
+    for (const [id, summaryId, expected] of chapters) {
+      const Component = grammarInstrument(id);
+      const view = render(<Component {...props(summaryId)} />);
+      fireEvent.change(screen.getByRole('slider'), { target: { value: '2' } });
+      expect(screen.getByRole('img')).toBeInTheDocument();
+      expect(screen.getAllByText(expected).length).toBeGreaterThan(0);
+      view.unmount();
+    }
+  });
 });
