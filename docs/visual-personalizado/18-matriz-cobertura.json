@@ -3,9 +3,9 @@
   "counts": {
     "experiment": 11,
     "board": 41,
-    "instrument": 144,
+    "instrument": 154,
     "scene": 186,
-    "fallback": 231
+    "fallback": 221
   },
   "contested": 18,
   "subjects": [
@@ -70,9 +70,9 @@
       "counts": {
         "experiment": 1,
         "board": 0,
-        "instrument": 0,
+        "instrument": 5,
         "scene": 0,
-        "fallback": 16
+        "fallback": 11
       }
     },
     {
@@ -92,9 +92,9 @@
       "counts": {
         "experiment": 1,
         "board": 0,
-        "instrument": 0,
+        "instrument": 5,
         "scene": 0,
-        "fallback": 25
+        "fallback": 20
       }
     },
     {
@@ -2394,24 +2394,24 @@
       "id": "summary-lingua-inglesa-text-comprehension-songs-and-poems",
       "subject": "Língua Inglesa",
       "title": "Text Comprehension: Songs and Poems",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "songs-poems",
       "ignored": []
     },
     {
       "id": "summary-lingua-inglesa-text-comprehension-calories-and-energy",
       "subject": "Língua Inglesa",
       "title": "Text Comprehension: Calories and Energy",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "calories-energy",
       "ignored": []
     },
     {
       "id": "summary-lingua-inglesa-text-comprehension-earthquakes",
       "subject": "Língua Inglesa",
       "title": "Text Comprehension: Earthquakes",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "earthquakes",
       "ignored": []
     },
     {
@@ -2426,8 +2426,8 @@
       "id": "summary-lingua-inglesa-text-comprehension-ecology-greenhouse-gases",
       "subject": "Língua Inglesa",
       "title": "Text Comprehension: Ecology (Greenhouse Gases)",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "greenhouse-gases",
       "ignored": []
     },
     {
@@ -2442,8 +2442,8 @@
       "id": "summary-lingua-inglesa-text-comprehension-the-human-brain",
       "subject": "Língua Inglesa",
       "title": "Text Comprehension: The Human Brain",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "human-brain",
       "ignored": []
     },
     {
@@ -3018,8 +3018,8 @@
       "id": "summary-gramatica-artigo-numeral-e-adjetivo-no-sintagma-nominal",
       "subject": "Gramática",
       "title": "Artigo, Numeral e Adjetivo no Sintagma Nominal",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "sintagma-nominal",
       "ignored": []
     },
     {
@@ -3058,8 +3058,8 @@
       "id": "summary-gramatica-concordancia",
       "subject": "Gramática",
       "title": "Concordância",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "concordancia",
       "ignored": []
     },
     {
@@ -3082,8 +3082,8 @@
       "id": "summary-gramatica-pontuacao-i-principios-para-o-uso-da-virgula",
       "subject": "Gramática",
       "title": "Pontuação I: Princípios para o Uso da Vírgula",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "pontuacao-i",
       "ignored": []
     },
     {
@@ -3122,8 +3122,8 @@
       "id": "summary-gramatica-crase",
       "subject": "Gramática",
       "title": "Crase",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "crase",
       "ignored": []
     },
     {
@@ -3154,8 +3154,8 @@
       "id": "summary-gramatica-vozes-verbais",
       "subject": "Gramática",
       "title": "Vozes Verbais",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "vozes-verbais",
       "ignored": []
     },
     {

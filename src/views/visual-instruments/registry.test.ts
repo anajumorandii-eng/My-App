@@ -236,4 +236,14 @@ describe('registro de instrumentos', () => {
     const esperado: Record<string, string> = { 'america-xix': 'América no Século XIX', 'segunda-guerra': 'Segunda Guerra Mundial (1939-1945)', 'guerra-fria': 'Guerra Fria', 'interiorizacao-colonial': 'A Interiorização da Colonização', 'mineracao-colonial': 'A Mineração no Brasil Colonial' };
     for (const [id, topic] of Object.entries(esperado)) expect(interactiveSummaries.filter((s) => findInstrument(s)?.id === id).map((s) => s.topic), id).toEqual([topic]);
   });
+
+  it('mantém os instrumentos de gramática nas cinco operações linguísticas', () => {
+    const esperado: Record<string, string> = { 'sintagma-nominal': 'Artigo, Numeral e Adjetivo no Sintagma Nominal', concordancia: 'Concordância', 'pontuacao-i': 'Pontuação I: Princípios para o Uso da Vírgula', crase: 'Crase', 'vozes-verbais': 'Vozes Verbais' };
+    for (const [id, topic] of Object.entries(esperado)) expect(interactiveSummaries.filter((s) => findInstrument(s)?.id === id).map((s) => s.topic), id).toEqual([topic]);
+  });
+
+  it('mantém os instrumentos de inglês nos cinco textos que orientam a leitura', () => {
+    const esperado: Record<string, string> = { 'songs-poems': 'Text Comprehension: Songs and Poems', 'calories-energy': 'Text Comprehension: Calories and Energy', earthquakes: 'Text Comprehension: Earthquakes', 'greenhouse-gases': 'Text Comprehension: Ecology (Greenhouse Gases)', 'human-brain': 'Text Comprehension: The Human Brain' };
+    for (const [id, topic] of Object.entries(esperado)) expect(interactiveSummaries.filter((s) => findInstrument(s)?.id === id).map((s) => s.topic), id).toEqual([topic]);
+  });
 });
