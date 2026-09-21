@@ -26,7 +26,7 @@ function mastery(overrides: Partial<TopicMastery> = {}): TopicMastery {
     level: 50,
     uncertainty: 0.3,
     errorSignals: 0,
-    lastReviewed: new Date('2026-08-01T00:00:00').toISOString(),
+    lastReviewed: new Date('2026-08-01T00:00:00Z').toISOString(),
     ...overrides,
   };
 }
@@ -39,13 +39,13 @@ test('easeFactorOf/intervalDaysOf/reviewCountOf usam defaults sensatos quando au
 });
 
 test('nextReviewDate soma o intervalo atual à última revisão', () => {
-  const m = mastery({ lastReviewed: new Date('2026-08-01T00:00:00').toISOString(), intervalDays: 6 });
+  const m = mastery({ lastReviewed: new Date('2026-08-01T00:00:00Z').toISOString(), intervalDays: 6 });
   const due = nextReviewDate(m);
   assert.equal(due.toISOString().slice(0, 10), '2026-08-07');
 });
 
 test('daysOverdue é negativo antes do vencimento e positivo depois', () => {
-  const m = mastery({ lastReviewed: new Date('2026-08-01T00:00:00').toISOString(), intervalDays: 6 });
+  const m = mastery({ lastReviewed: new Date('2026-08-01T00:00:00Z').toISOString(), intervalDays: 6 });
   const before = daysOverdue(m, new Date('2026-08-05T00:00:00'));
   const after = daysOverdue(m, new Date('2026-08-10T00:00:00'));
   assert.ok(before < 0);

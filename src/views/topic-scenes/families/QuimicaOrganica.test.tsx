@@ -46,6 +46,14 @@ describe('QuimicaOrganica', () => {
     expect(container.querySelector('[data-structure="constitutional-isomers"]')).toBeInTheDocument();
     expect(container.querySelector('[data-structure="cis-trans"]')).toBeInTheDocument();
     expect(container.querySelector('[data-structure="enantiomers"]')).toBeInTheDocument();
+    const plana = container.querySelector('[data-structure="constitutional-isomers"]')!;
+    expect(plana.querySelectorAll('polyline')).toHaveLength(2);
+    // No esqueleto, cada vértice e extremidade é um carbono: 3 + 1 no isobutano.
+    expect(plana.querySelectorAll('polyline')[1].getAttribute('points')?.trim().split(' ')).toHaveLength(3);
+    expect(plana.querySelectorAll('line')).toHaveLength(1);
+    const geometrica = container.querySelector('[data-structure="cis-trans"]')!;
+    expect(geometrica.querySelector('path')).toBeInTheDocument();
+    expect(geometrica).toHaveTextContent('CH₃');
   });
 
   it('é usada pela cena real tanto em nomenclatura quanto na oxidação de álcoois', () => {

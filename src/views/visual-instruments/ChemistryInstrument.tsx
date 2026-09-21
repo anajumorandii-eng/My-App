@@ -40,15 +40,17 @@ function ChemistryDiagram({ config, value }: { config: ChemistryConfig; value: n
       {[0, 1, 2, 3].map((i) => <motion.circle key={i} cx={218 + (i % 2) * 53} cy={94 + Math.floor(i / 2) * 62} r="8" fill={emphasis} animate={{ opacity: fraction >= i / 4 ? 1 : .22 }} transition={transition} />)}
     </>}
     {config.title === 'Grau de polimerização' && <>
-      {Array.from({ length: Math.min(value, 8) }, (_, i) => <g key={i}><rect x={16 + i * 36} y="101" width="32" height="65" rx="7" fill="none" stroke={emphasis} strokeWidth="3" /><text x={32 + i * 36} y="139" textAnchor="middle" fill={ink} fontSize="11" fontWeight="800">C₂</text></g>)}
-      <text x="160" y="210" textAnchor="middle" fill={ink} fontSize="14">{value} unidades repetidas · [–CH₂–CH₂–]ₙ</text>
+      {Array.from({ length: value }, (_, i) => <g key={i}><rect x={12 + i * 296 / value} y="105" width={290 / value} height="58" rx="4" fill="none" stroke={emphasis} strokeWidth="2" /><text x={12 + (i + .5) * 296 / value} y="139" textAnchor="middle" fill={ink} fontSize={value > 8 ? 8 : 11} fontWeight="800">C₂</text></g>)}
+      <text x="160" y="87" textAnchor="middle" fill={ink} fontSize="14">n CH₂=CH₂ → [–CH₂–CH₂–]ₙ</text>
+      <text x="160" y="210" textAnchor="middle" fill={ink} fontSize="14">{value} unidades · {2 * value} átomos de carbono</text>
     </>}
     {config.title === 'Adição ao alceno' && <>
-      <path d="M43 113h69m-69 10h69" stroke={ink} strokeWidth="4" /><text x="78" y="98" textAnchor="middle" fill={ink} fontSize="15">C = C</text>
-      <path d="M121 118h39m-12-10 12 10-12 10" stroke={emphasis} fill="none" strokeWidth="4" />
-      <motion.path d="M177 119h70" stroke={emphasis} strokeWidth="5" animate={{ opacity: Math.min(1, fraction * 4) }} transition={transition} />
-      <text x="211" y="98" textAnchor="middle" fill={ink} fontSize="15">C – C</text>
-      <text x="160" y="184" textAnchor="middle" fill={ink} fontSize="14">H₂ adiciona aos carbonos da dupla</text>
+      <text x="61" y="95" textAnchor="middle" fill={ink} fontSize="17" fontWeight="700">CH₂=CH₂</text><text x="61" y="130" textAnchor="middle" fill={emphasis} fontSize="15">+ H₂</text>
+      <path d="M116 110h58m-12-9 12 9-12 9" stroke={emphasis} fill="none" strokeWidth="3" />
+      <text x="145" y="94" textAnchor="middle" fill={ink} fontSize="11">catalisador</text>
+      <text x="241" y="110" textAnchor="middle" fill={ink} fontSize="17" fontWeight="700">CH₃–CH₃</text>
+      <text x="160" y="186" textAnchor="middle" fill={emphasis} fontSize="13">π da dupla → duas ligações C–H</text>
+      <text x="160" y="218" textAnchor="middle" fill={ink} fontSize="12">1 mol de eteno consome 1 mol de H₂</text>
     </>}
     {config.title === 'Fórmula mínima e molecular' && <>
       {Array.from({ length: Math.min(value / 30, 6) }, (_, i) => <g key={i}><rect x={20 + i * 48} y="110" width="44" height="58" rx="8" fill="none" stroke={emphasis} strokeWidth="3" /><text x={42 + i * 48} y="145" textAnchor="middle" fill={ink} fontSize="12">CH₂O</text></g>)}
