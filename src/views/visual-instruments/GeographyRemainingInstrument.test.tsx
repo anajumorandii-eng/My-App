@@ -26,11 +26,11 @@ describe('Geografia: os capítulos antes sem artefato', () => {
     expect(screen.getAllByText(/dispersão pode afetar a qualidade da água a jusante/i).length).toBeGreaterThan(0);
     expect(screen.getByRole('img', {name:/Efluente no percurso fluvial/})).toBeTruthy();
   });
-  it('a cadeia global mantém a relação inteira como texto adaptável', () => {
+  it('a cadeia global desenha as etapas e mantém a relação inteira legível', () => {
     const summary = interactiveSummaries.find(s => s.id === 'summary-geografia-globalizacao-e-processos-economicos-atuais')!;
     const Board = geographyRemainingInstrument('supply-chain');
     const { container } = render(<Board map={buildVisualMap(summary)} states={{}} selectedId={null} onSelect={() => {}} hiddenEdgeIds={[]} mode="explorar" />);
-    expect(container.querySelector('.vs-geography-flow')).toHaveTextContent('projeto + produção distribuída + transporte + mercado');
-    expect(container.querySelector('.vs-geography-flow svg')).not.toBeInTheDocument();
+    expect(container.querySelector('[data-geography-system="supply-chain"]')).toHaveTextContent('projeto');
+    expect(container).toHaveTextContent('projeto + produção distribuída + transporte + mercado');
   });
 });

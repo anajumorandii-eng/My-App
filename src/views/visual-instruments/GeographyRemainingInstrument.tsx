@@ -53,14 +53,35 @@ function BasinScene({ id, index }: { id: 'world-basin' | 'brazilian-basins'; ind
 
 function FlowScene({ id, index }: { id: Exclude<GeographyRemainingId, 'digital-map' | 'map-elements' | 'world-basin' | 'brazilian-basins'>; index: number }) {
   const config = GEOGRAPHY_REMAINING[id];
-  return <div className="vs-geography-flow" aria-label={`${config.title}: ${config.cases[index].label} em foco`}>
-    <ol>{config.cases.map((item, n) => <li key={item.label} data-active={n === index}>
-      <small>{String(n + 1).padStart(2, '0')} · {item.place}</small>
-      <strong>{item.label}</strong>
-      <span>{item.action}</span>
-    </li>)}</ol>
-    <p>{config.relation}</p>
-  </div>;
+  const active = (n:number) => n === index ? 'var(--vs-burgundy)' : 'var(--vs-ink-muted)';
+  const label = config.cases[index].label;
+  const common = <><text x="24" y="25" fill="var(--vs-ink)" fontSize="13" fontWeight="800">{label}</text><text x="160" y="278" textAnchor="middle" fill="var(--vs-ink)" fontSize="12" fontWeight="800">{config.relation}</text></>;
+  let drawing: React.ReactNode;
+  if (id === 'commons') drawing = <>
+    <ellipse cx="160" cy="155" rx="92" ry="52" fill="color-mix(in srgb,var(--vs-blue) 18%,transparent)" stroke="var(--vs-blue)" strokeWidth="4"/>
+    {[0,1,2,3,4].map(n=><g key={n}><circle cx={55+n*52} cy={70+(n%2)*15} r="14" fill={active(index===0?0:n<4?1:2)} /><path d={`M${55+n*52} ${86+(n%2)*15}v28`} stroke={active(index===0?0:n<4?1:2)} strokeWidth="3"/><path d={`M${55+n*52-7} 115l7 10 7-10`} fill={active(index===0?0:n<4?1:2)} /></g>)}
+    <text x="160" y="160" textAnchor="middle" fill="var(--vs-ink)" fontSize="16" fontWeight="800">estoque comum</text><text x="160" y="183" textAnchor="middle" fill="var(--vs-ink)" fontSize="12">capacidade de reposição</text>
+    {index===2&&<><path d="M73 226H247" stroke="var(--vs-green)" strokeWidth="7"/><text x="160" y="247" textAnchor="middle" fill="var(--vs-green)" fontSize="12" fontWeight="800">regra + fiscalização + cooperação</text></>}
+  </>;
+  else if (id === 'supply-chain') drawing = <>
+    {[[45,'projeto'],[137,'peças'],[229,'mercado']].map(([x,t],n) => <g key={String(t)}><rect x={Number(x)-31} y="111" width="62" height="50" rx="7" fill="color-mix(in srgb,var(--vs-paper) 88%,transparent)" stroke={active(n)} strokeWidth="4"/><text x={Number(x)} y="141" textAnchor="middle" fill="var(--vs-ink)" fontSize="12" fontWeight="800">{String(t)}</text>{n < 2 && <path d={`M${Number(x)+34} 136H${Number(x)+57}`} stroke={active(n+1)} strokeWidth="4" markerEnd="url(#geo-arrow)"/>}</g>)}
+    <defs><marker id="geo-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0L7 3.5 0 7Z" fill="var(--vs-burgundy)"/></marker></defs><path d="M40 194Q160 236 280 194" fill="none" stroke="var(--vs-blue)" strokeWidth="4" strokeDasharray="8 5"/><text x="160" y="221" textAnchor="middle" fill="var(--vs-blue)" fontSize="12">logística e informação</text>
+  </>;
+  else if (id === 'technopole') drawing = <>
+    <circle cx="160" cy="145" r="43" fill="color-mix(in srgb,var(--vs-burgundy) 22%,transparent)" stroke="var(--vs-burgundy)" strokeWidth="4"/><text x="160" y="142" textAnchor="middle" fill="var(--vs-ink)" fontSize="14" fontWeight="800">empresas</text><text x="160" y="160" textAnchor="middle" fill="var(--vs-ink)" fontSize="12">inovadoras</text>
+    {[[67,82,'pesquisa'],[252,82,'capital'],[72,218,'pessoas'],[246,218,'rede']].map(([x,y,t],n)=><g key={String(t)}><circle cx={Number(x)} cy={Number(y)} r="28" fill="var(--vs-paper)" stroke={active(n)} strokeWidth="4"/><text x={Number(x)} y={Number(y)+4} textAnchor="middle" fill="var(--vs-ink)" fontSize="11" fontWeight="800">{String(t)}</text><path d={`M${Number(x)+(Number(x)<160?23:-23)} ${Number(y)+(Number(y)<145?18:-18)}L${Number(x)<160?135:185} ${Number(y)<145?123:167}`} stroke={active(n)} strokeWidth="3"/></g>)}
+  </>;
+  else if (id === 'geoeconomics') drawing = <>
+    <path d="M31 157H287" stroke="var(--vs-ink-muted)" strokeWidth="5"/><path d="M77 105h58v104H77zM190 105h58v104h-58z" fill="var(--vs-paper)" stroke="var(--vs-ink)" strokeWidth="3"/><text x="106" y="97" textAnchor="middle" fill="var(--vs-ink)" fontSize="12">país A</text><text x="219" y="97" textAnchor="middle" fill="var(--vs-ink)" fontSize="12">país B</text>
+    <path d="M139 145H184" stroke={active(index)} strokeWidth="7" markerEnd="url(#geo-arrow)"/>{index===0&&<><path d="M160 125v39" stroke="var(--vs-burgundy)" strokeWidth="6"/><text x="160" y="118" textAnchor="middle" fill="var(--vs-burgundy)" fontSize="12">tarifa</text></>}{index===1&&<><path d="M160 126l24 39m0-39-24 39" stroke="var(--vs-burgundy)" strokeWidth="5"/><text x="160" y="118" textAnchor="middle" fill="var(--vs-burgundy)" fontSize="12">sanção</text></>}{index===2&&<><rect x="145" y="132" width="34" height="25" rx="4" fill="var(--vs-burgundy)"/><text x="162" y="149" textAnchor="middle" fill="var(--vs-paper)" fontSize="10">chip</text></>}
+  </>;
+  else if (id === 'mining') drawing = <>
+    <path d="M25 208Q75 178 120 204T220 195T295 207V248H25Z" fill="color-mix(in srgb,var(--vs-green) 34%,transparent)"/><path d="M78 204l32-83 39 83Z" fill="color-mix(in srgb,var(--vs-ink) 20%,transparent)" stroke={active(0)} strokeWidth="4"/><path d="M82 204l18-47 23 47" fill="var(--vs-burgundy)" opacity={index === 0 ? .8 : .25}/><path d="M125 189H221" stroke={active(1)} strokeWidth="6" markerEnd="url(#geo-arrow)"/><rect x="221" y="161" width="48" height="45" rx="4" fill="var(--vs-paper)" stroke={active(1)} strokeWidth="4"/><text x="245" y="189" textAnchor="middle" fill="var(--vs-ink)" fontSize="10">usina</text><path d="M143 222q35 20 72 0" stroke={active(2)} strokeWidth="7" fill="none"/><text x="179" y="252" textAnchor="middle" fill="var(--vs-ink)" fontSize="12">rejeitos e monitoramento</text>
+  </>;
+  else drawing = <>
+    <path d="M20 210Q68 152 118 191T216 160T301 199V248H20Z" fill="color-mix(in srgb,var(--vs-green) 26%,transparent)"/><path d="M52 204h40v-57H52z" fill="var(--vs-paper)" stroke={active(0)} strokeWidth="4"/><path d="M57 147l15-23 15 23" fill="var(--vs-burgundy)" opacity={index === 0 ? .8 : .3}/><path d="M142 185h57" stroke={active(1)} strokeWidth="7"/><circle cx="171" cy="159" r="20" fill="var(--vs-paper)" stroke={active(1)} strokeWidth="4"/><path d="M171 139v40M151 159h40" stroke={active(1)} strokeWidth="3"/><path d="M200 192H282" stroke={active(2)} strokeWidth="6" markerEnd="url(#geo-arrow)"/><rect x="250" y="158" width="40" height="35" fill="var(--vs-paper)" stroke={active(2)} strokeWidth="3"/><text x="270" y="180" textAnchor="middle" fill="var(--vs-ink)" fontSize="10">cidade</text>
+  </>;
+  return <svg className="vs-plane" viewBox="0 0 320 300" role="img" aria-label={`${config.title}: ${label} em foco`} data-geography-system={id}>{drawing}{common}</svg>;
 }
 
 export function geographyRemainingInstrument(id: GeographyRemainingId) {

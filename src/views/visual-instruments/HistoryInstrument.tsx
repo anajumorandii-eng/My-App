@@ -58,15 +58,17 @@ function HistoryScene({ id, selected }: { id: HistoryInstrumentId; selected: num
   }
 
   const activeX = [58, 160, 262][selected];
-  return <>
-    <path d="M58 145H262" stroke="var(--vs-ink)" strokeWidth="5" />
-    <circle cx="58" cy="145" r="31" fill="var(--vs-paper)" stroke="var(--vs-ink)" strokeWidth="3" />
-    <rect x="128" y="112" width="64" height="66" rx="8" fill="var(--vs-paper)" stroke="var(--vs-ink)" strokeWidth="3" />
-    <path d="M240 119h44v55h-44Z" fill="var(--vs-paper)" stroke="var(--vs-ink)" strokeWidth="3" />
-    <circle cx={activeX} cy="145" r="39" fill="none" stroke="var(--vs-burgundy)" strokeWidth="7" />
-    <text x="58" y="151" textAnchor="middle" style={ink}>1/5</text><text x="160" y="151" textAnchor="middle" style={ink}>selo</text><text x="262" y="151" textAnchor="middle" style={ink}>meta</text>
-    <text x="160" y="237" textAnchor="middle" style={ink}>{historyInstrumentState(id, selected).relation}</text>
-  </>;
+  return <g data-history-system="mining-colony">
+    <path d="M25 224Q80 178 130 206T230 178T296 215V255H25Z" fill="color-mix(in srgb,var(--vs-burgundy) 14%,transparent)" />
+    <path d="M40 205l25-91 29 91Z" fill="var(--vs-paper)" stroke="var(--vs-ink)" strokeWidth="3"/><path d="M52 204l14-48 18 48" fill="var(--vs-burgundy)" opacity=".55"/>
+    <path d="M93 171H128" stroke="var(--vs-ink-muted)" strokeWidth="4" markerEnd="url(#history-arrow)"/><path d="M192 171H225" stroke="var(--vs-ink-muted)" strokeWidth="4" markerEnd="url(#history-arrow)"/>
+    <circle cx="58" cy="170" r="35" fill="var(--vs-paper)" stroke={selected===0?'var(--vs-burgundy)':'var(--vs-ink)'} strokeWidth="4"/><text x="58" y="166" textAnchor="middle" style={ink}>ouro</text><text x="58" y="183" textAnchor="middle" style={{...ink,fontSize:11}}>extraído</text>
+    <rect x="125" y="132" width="70" height="78" rx="7" fill="var(--vs-paper)" stroke={selected===1?'var(--vs-burgundy)':'var(--vs-ink)'} strokeWidth="4"/><path d="M137 151h46M137 166h46M137 181h46" stroke="var(--vs-ink-muted)" strokeWidth="2"/><text x="160" y="199" textAnchor="middle" style={{...ink,fontSize:11}}>fundição</text>
+    <path d="M225 139h58v69h-58Z" fill="var(--vs-paper)" stroke={selected===2?'var(--vs-burgundy)':'var(--vs-ink)'} strokeWidth="4"/><path d="M237 151h34v28h-34z" fill="color-mix(in srgb,var(--vs-burgundy) 30%,transparent)"/><text x="254" y="194" textAnchor="middle" style={{...ink,fontSize:11}}>Coroa</text>
+    <defs><marker id="history-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0L7 3.5 0 7Z" fill="var(--vs-burgundy)"/></marker></defs>
+    <circle cx={activeX} cy="170" r="44" fill="none" stroke="var(--vs-burgundy)" strokeWidth="4" strokeDasharray="7 5"/>
+    <text x="160" y="282" textAnchor="middle" style={{...ink,fontSize:13}}>{historyInstrumentState(id, selected).relation}</text>
+  </g>;
 }
 
 export function historyInstrument(id: HistoryInstrumentId) {
