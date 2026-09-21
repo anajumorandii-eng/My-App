@@ -256,6 +256,35 @@ describe('registro de instrumentos', () => {
     for (const [id, topic] of Object.entries(esperado)) expect(interactiveSummaries.filter((s) => findInstrument(s)?.id === id).map((s) => s.topic), id).toEqual([topic]);
   });
 
+  it('mantém os 16 instrumentos de gramática da rodada de maximização de cobertura em exatamente seus capítulos', () => {
+    // Decisão de 21/09/2026 da Ana Júlia: instrumento genérico de leitura de
+    // frase, aceito onde não há objeto manipulável clássico. "verbo-sintaxe-
+    // -oracao" precisa ficar fora de "verbo" (transitividade ≠ tempo/aspecto).
+    const esperado: Record<string, string> = {
+      'lingua-sistema': 'Língua: um Sistema Complexo',
+      'substantivo-visao-enunciador': 'Substantivo: os Nomes e a Visão do Enunciador',
+      'tipos-de-texto': 'Tipos de Texto: Explorando Elementos Concretos e Conceitos Abstratos',
+      'adverbio-circunstanciadores': 'Advérbio e Locuções Adverbiais: Circunstanciadores',
+      'verbo-sintaxe-oracao': 'Verbo e Sintaxe da Oração',
+      'significados-implicitos': 'Significados Implícitos',
+      'tipos-de-discurso': 'Tipos de Discurso',
+      'pontuacao-ii': 'Pontuação II: Vírgula entre Orações e Outros Sinais de Pontuação',
+      'lexico-em-contexto': 'O Léxico em Contexto: Variadas Possibilidades Semânticas',
+      'mecanismo-regencia': 'Mecanismo de Regência',
+      'formacao-palavras': 'Processos de Formação de Palavras',
+      'funcoes-sintaticas-nominais': 'Funções Sintáticas Nominais e Vocativo',
+      'tipos-de-sujeito': 'Tipos de Sujeito',
+      'oracoes-substantivas': 'Orações Substantivas',
+      'oracoes-adjetivas': 'Orações Adjetivas',
+      'oracoes-adverbiais': 'Orações Adverbiais',
+    };
+    for (const [id, topic] of Object.entries(esperado)) expect(interactiveSummaries.filter((s) => findInstrument(s)?.id === id).map((s) => s.topic), id).toEqual([topic]);
+    // "Verbo" continua exclusivo de verbal-aspect: os dois capítulos não podem
+    // colidir no mesmo instrumento.
+    const verbo = interactiveSummaries.find((s) => s.subject === 'Gramática' && s.topic === 'Verbo');
+    expect(findInstrument(verbo!)?.id).toBe('verbo');
+  });
+
   it('mantém os instrumentos de inglês nos cinco textos que orientam a leitura', () => {
     const esperado: Record<string, string> = { 'songs-poems': 'Text Comprehension: Songs and Poems', 'calories-energy': 'Text Comprehension: Calories and Energy', earthquakes: 'Text Comprehension: Earthquakes', 'greenhouse-gases': 'Text Comprehension: Ecology (Greenhouse Gases)', 'human-brain': 'Text Comprehension: The Human Brain' };
     for (const [id, topic] of Object.entries(esperado)) expect(interactiveSummaries.filter((s) => findInstrument(s)?.id === id).map((s) => s.topic), id).toEqual([topic]);

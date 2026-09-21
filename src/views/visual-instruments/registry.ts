@@ -338,6 +338,27 @@ export const INSTRUMENTS: InstrumentEntry[] = [
   historicoFase('regime-militar-ii','regime militar (1964-1985) ii','regime-militar-ii'),
   gramatical('sintagma-nominal','artigo, numeral e adjetivo no sintagma nominal','noun-phrase'),gramatical('concordancia','concordância','agreement'),gramatical('pontuacao-i','pontuação i: princípios para o uso da vírgula','comma-scope'),gramatical('crase','crase','crasis'),gramatical('vozes-verbais','vozes verbais','verbal-voice'),
   gramatical('pronomes','pronomes','pronoun-reference'),gramatical('verbo','verbo','verbal-aspect'),gramatical('ambiguidade','ambiguidade: duplicidade no léxico e na sintaxe','ambiguity'),gramatical('oracoes-coordenadas','orações coordenadas','clause-relations'),
+  // Rodada de 21/09/2026: cobertura máxima decidida pela Ana Júlia, mesmo sem
+  // um "objeto" manipulável clássico — o instrumento manipula a leitura da
+  // frase (ver `WideRelationScene` em GrammarInstrument.tsx). "Verbo e Sintaxe
+  // da Oração" é capítulo distinto de "Verbo" (que já usa verbal-aspect):
+  // aqui o eixo é transitividade, lá é tempo/aspecto.
+  gramatical('lingua-sistema','língua: um sistema complexo','language-system'),
+  gramatical('substantivo-visao-enunciador','substantivo: os nomes e a visão do enunciador','noun-class'),
+  gramatical('tipos-de-texto','tipos de texto: explorando elementos concretos e conceitos abstratos','text-type'),
+  gramatical('adverbio-circunstanciadores','advérbio e locuções adverbiais: circunstanciadores','adverb-circumstance'),
+  gramatical('verbo-sintaxe-oracao','verbo e sintaxe da oração','verb-syntax'),
+  gramatical('significados-implicitos','significados implícitos','implicit-meaning'),
+  gramatical('tipos-de-discurso','tipos de discurso','discourse-type'),
+  gramatical('pontuacao-ii','pontuação ii: vírgula entre orações e outros sinais de pontuação','clause-punctuation'),
+  gramatical('lexico-em-contexto','o léxico em contexto: variadas possibilidades semânticas','lexical-context'),
+  gramatical('mecanismo-regencia','mecanismo de regência','government'),
+  gramatical('formacao-palavras','processos de formação de palavras','word-formation'),
+  gramatical('funcoes-sintaticas-nominais','funções sintáticas nominais e vocativo','nominal-function'),
+  gramatical('tipos-de-sujeito','tipos de sujeito','subject-type'),
+  gramatical('oracoes-substantivas','orações substantivas','noun-clause'),
+  gramatical('oracoes-adjetivas','orações adjetivas','adjective-clause'),
+  gramatical('oracoes-adverbiais','orações adverbiais','adverbial-clause'),
   ingles('songs-poems','text comprehension: songs and poems','poetry-reading'),ingles('calories-energy','text comprehension: calories and energy','quantity-language'),ingles('earthquakes','text comprehension: earthquakes','modal-certainty'),ingles('greenhouse-gases','text comprehension: ecology (greenhouse gases)','cause-connectors'),ingles('human-brain','text comprehension: the human brain','research-claims'),
   // Rodada de Língua Inglesa de 21/09/2026: os 11 capítulos restantes de
   // "Text Comprehension" também são leitura em inglês, e o texto-fonte de cada

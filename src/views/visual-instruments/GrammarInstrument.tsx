@@ -46,6 +46,60 @@ function VoiceScene({ value }: { value: number }) {
   return <><rect x="25" y="105" width="95" height="62" rx="12" fill="var(--vs-paper)" stroke="var(--vs-ink)" strokeWidth="3" /><rect x="200" y="105" width="95" height="62" rx="12" fill="var(--vs-paper)" stroke="var(--vs-ink)" strokeWidth="3" /><path d={passive ? 'M198 136H124' : 'M122 136H196'} stroke="var(--vs-burgundy)" strokeWidth="6" markerEnd="url(#grammar-arrow)" /><text x="72" y="133" textAnchor="middle" style={textStyle}>{item.agent}</text><text x="72" y="153" textAnchor="middle" style={{ fill: 'var(--vs-ink-muted)', fontSize: 12 }}>agente</text><text x="247" y="133" textAnchor="middle" style={textStyle}>{item.patient}</text><text x="247" y="153" textAnchor="middle" style={{ fill: 'var(--vs-ink-muted)', fontSize: 12 }}>paciente</text><text x="160" y="220" textAnchor="middle" style={textStyle}>foco: {item.focus}</text></>;
 }
 
+type WideRelationId = 'language-system' | 'noun-class' | 'text-type' | 'adverb-circumstance' | 'verb-syntax' | 'implicit-meaning' | 'discourse-type' | 'clause-punctuation'
+  | 'lexical-context' | 'government' | 'word-formation' | 'nominal-function' | 'subject-type' | 'noun-clause' | 'adjective-clause' | 'adverbial-clause';
+
+const WIDE_RELATION_IDS: readonly WideRelationId[] = ['language-system', 'noun-class', 'text-type', 'adverb-circumstance', 'verb-syntax', 'implicit-meaning', 'discourse-type', 'clause-punctuation',
+  'lexical-context', 'government', 'word-formation', 'nominal-function', 'subject-type', 'noun-clause', 'adjective-clause', 'adverbial-clause'];
+function isWideRelationId(id: GrammarInstrumentId): id is WideRelationId {
+  return (WIDE_RELATION_IDS as readonly string[]).includes(id);
+}
+
+/**
+ * Cada id desta leva compartilha o mesmo esqueleto visual (frase em cima, dois
+ * rótulos comparados embaixo) porque o "objeto manipulável" destes 16
+ * capítulos é a leitura da frase, não uma figura geométrica — decisão de
+ * 21/09/2026 da Ana Júlia para maximizar cobertura de Gramática (ver
+ * CLAUDE.md). Nenhum layout é copiado de outro: cada `id` fixa suas três
+ * frases e seus dois rótulos próprios, então nenhum capítulo herda a leitura
+ * de outro.
+ */
+function WideRelationScene({ id, value }: { id: WideRelationId; value: number }) {
+  const selected = Math.round(value);
+  const data: Record<WideRelationId, { sentences: string[]; top: string[]; bottom: string[]; caption: string }> = {
+    'language-system': { sentences: ['“pato” → “bato”', '“gato” → “gatinho”', '“O cão mordeu o gato.” → “O gato mordeu o cão.”'], top: ['fonema', 'morfema', 'ordem sintática'], bottom: ['referente muda', 'grau/afeto muda', 'agente e paciente se invertem'], caption: 'cada nível se apoia no de baixo' },
+    'noun-class': { sentences: ['cadeira', 'coragem', 'cardume'], top: ['concreto', 'abstrato', 'coletivo'], bottom: ['objeto do mundo', 'só existe na ideia', 'muitos seres, um nome'], caption: 'a visão do enunciador escolhe a classe' },
+    'text-type': { sentences: ['Ela abriu a porta e entrou correndo.', 'A sala era pequena, com paredes brancas.', 'A liberdade pressupõe responsabilidade.'], top: ['narrativo', 'descritivo', 'dissertativo'], bottom: ['sucessão de ações', 'propriedades do espaço', 'relação entre ideias'], caption: 'cada tipo organiza por um eixo diferente' },
+    'adverb-circumstance': { sentences: ['Ela chegou ontem.', 'Ela mora aqui.', 'Ela respondeu calmamente.'], top: ['tempo', 'lugar', 'modo'], bottom: ['quando?', 'onde?', 'como?'], caption: 'o advérbio responde a uma pergunta fixa' },
+    'verb-syntax': { sentences: ['O bebê chorou.', 'Ela encontrou o livro.', 'Ela parece cansada.'], top: ['intransitivo', 'transitivo direto', 'de ligação'], bottom: ['sentido já fechado', 'pede objeto direto', 'liga sujeito e predicativo'], caption: 'a sintaxe nasce da exigência do verbo' },
+    'implicit-meaning': { sentences: ['Pedro parou de fumar.', 'Até o João passou na prova.', '— Você pode passar o sal?'], top: ['pressuposto lexical', 'pressuposto marcado', 'subentendido'], bottom: ['Pedro fumava antes', 'outros também passaram', 'é um pedido, não dúvida'], caption: 'pressuposto resiste à negação; subentendido não' },
+    'discourse-type': { sentences: ['Ela disse: “Vou viajar amanhã.”', 'Ela disse que viajaria no dia seguinte.', 'Olhou pela janela. Viajaria amanhã, enfim.'], top: ['discurso direto', 'discurso indireto', 'indireto livre'], bottom: ['aspas/travessão marcam a voz', '“que” funde à voz do narrador', 'nenhuma marca gráfica'], caption: 'a marca gráfica mede a fusão das vozes' },
+    'clause-punctuation': { sentences: ['Chegou, sentou, começou a escrever.', 'As metas foram cumpridas; os prazos, respeitados.', 'Faltava uma coisa: coragem.'], top: ['vírgula', 'ponto e vírgula', 'dois-pontos'], bottom: ['separa orações simples', 'separa orações já pontuadas', 'introduz explicação'], caption: 'o sinal certo evita ambiguidade' },
+    'lexical-context': { sentences: ['Sacou dinheiro no banco.', 'Sentou no banco da praça.', 'Consultou o banco de dados.'], top: ['instituição', 'assento', 'conjunto de dados'], bottom: ['“sacou dinheiro”', '“da praça”', '“de dados”'], caption: 'o contexto escolhe o sentido' },
+    government: { sentences: ['Assisti ao filme.', 'Obedeço às regras.', 'Preciso de ajuda.'], top: ['assistir', 'obedecer', 'precisar'], bottom: ['exige “a”', 'exige “a”', 'exige “de”'], caption: 'cada verbo regente tem sua preposição' },
+    'word-formation': { sentences: ['felicidade', 'infeliz', 'girassol'], top: ['sufixação', 'prefixação', 'composição'], bottom: ['feliz + -idade', 'in- + feliz', 'gira + sol'], caption: 'derivação usa afixo; composição junta bases' },
+    'nominal-function': { sentences: ['O aluno estudou.', 'Vi o aluno.', 'Aluno, preste atenção!'], top: ['sujeito', 'objeto direto', 'vocativo'], bottom: ['pratica a ação', 'recebe a ação', 'chamamento isolado'], caption: 'vocativo fica fora da estrutura da oração' },
+    'subject-type': { sentences: ['Os alunos chegaram.', 'Falaram mal do filme.', 'Choveu à noite.'], top: ['simples', 'indeterminado', 'inexistente'], bottom: ['sujeito nomeado', 'quem, não se sabe', 'verbo sem sujeito possível'], caption: 'indeterminado existe; inexistente não tem quem' },
+    'noun-clause': { sentences: ['É importante que ela estude.', 'Ela espera que ele chegue.', 'Ela tem certeza de que vencerá.'], top: ['subjetiva', 'objetiva direta', 'completiva nominal'], bottom: ['sujeito de “é importante”', 'objeto de “espera”', 'completa “certeza”'], caption: 'troque por “isso” e a função aparece' },
+    'adjective-clause': { sentences: ['Os alunos que estudaram passaram.', 'Os alunos, que estudaram, passaram.', 'A cidade onde nasci mudou muito.'], top: ['restritiva', 'explicativa', 'locativa'], bottom: ['restringe o grupo', 'acrescenta informação', 'retoma um lugar'], caption: 'o relativo retoma o antecedente de formas diferentes' },
+    'adverbial-clause': { sentences: ['Como estava chovendo, adiamos o passeio.', 'Se estudar, ela passará.', 'Embora estivesse cansada, terminou o trabalho.'], top: ['causal', 'condicional', 'concessiva'], bottom: ['explica a causa', 'impõe condição', 'contraria a expectativa'], caption: 'a conjunção fixa a relação lógica' },
+  };
+  const item = data[id];
+  const sentence = item.sentences[selected];
+  const long = sentence.length > 34;
+  return <>
+    <text x="160" y={long ? 46 : 53} textAnchor="middle" style={{ ...textStyle, fontSize: long ? 12 : 13 }}>{sentence}</text>
+    <rect x="28" y="86" width="112" height="70" rx="12" fill="var(--vs-paper)" stroke={selected === 0 ? 'var(--vs-burgundy)' : 'var(--vs-ink)'} strokeWidth="3" />
+    <rect x="180" y="86" width="112" height="70" rx="12" fill="var(--vs-paper)" stroke={selected === 2 ? 'var(--vs-burgundy)' : 'var(--vs-ink)'} strokeWidth="3" />
+    <text x="84" y="115" textAnchor="middle" style={{ ...textStyle, fontSize: 13 }}>{item.top[selected]}</text>
+    <text x="84" y="140" textAnchor="middle" style={{ fill: 'var(--vs-ink-muted)', fontSize: 11 }}>{item.top[0] === item.top[selected] ? 'caso atual' : 'categoria'}</text>
+    <text x="236" y="115" textAnchor="middle" style={{ ...textStyle, fontSize: 12 }}>{item.bottom[selected]}</text>
+    <path d="M141 121H179" stroke="var(--vs-burgundy)" strokeWidth="5" markerEnd="url(#grammar-arrow)" />
+    <text x="160" y="218" textAnchor="middle" style={textStyle}>{item.caption}</text>
+    <text x="160" y="248" textAnchor="middle" style={{ fill: 'var(--vs-ink-muted)', fontSize: 12 }}>{item.top[selected]} · {item.bottom[selected]}</text>
+  </>;
+}
+
 function RelationScene({ id, value }: { id: Extract<GrammarInstrumentId, 'pronoun-reference' | 'verbal-aspect' | 'ambiguity' | 'clause-relations'>; value: number }) {
   const selected = Math.round(value);
   if (id === 'pronoun-reference') return <><text x="160" y="53" textAnchor="middle" style={{...textStyle,fontSize:13}}>o referente precisa caber no contexto</text><rect x="28" y="88" width="112" height="72" rx="12" fill="var(--vs-paper)" stroke="var(--vs-ink)" strokeWidth="3"/><rect x="180" y="88" width="112" height="72" rx="12" fill="var(--vs-paper)" stroke="var(--vs-burgundy)" strokeWidth="3"/><text x="84" y="124" textAnchor="middle" style={textStyle}>{selected === 1 ? 'ideia anterior' : selected === 2 ? 'Ana · Bia' : 'Marina'}</text><text x="236" y="124" textAnchor="middle" style={{...textStyle,fontSize:22}}>{selected === 1 ? 'isso' : 'ela'}</text><path d="M145 124H175" stroke="var(--vs-burgundy)" strokeWidth="5" markerEnd="url(#grammar-arrow)"/><text x="160" y="218" textAnchor="middle" style={textStyle}>{selected === 2 ? 'dois referentes possíveis' : 'retomada recuperável'}</text><text x="160" y="252" textAnchor="middle" style={{fill:'var(--vs-ink-muted)',fontSize:12}}>{selected === 2 ? 'reescreva com o nome' : 'teste: quem / o quê?'}</text></>;
@@ -63,6 +117,7 @@ function GrammarScene({ id, value }: { id: GrammarInstrumentId; value: number })
     {id === 'crasis' && <CrasisScene value={value} />}
     {id === 'verbal-voice' && <VoiceScene value={value} />}
     {(id === 'pronoun-reference' || id === 'verbal-aspect' || id === 'ambiguity' || id === 'clause-relations') && <RelationScene id={id} value={value} />}
+    {isWideRelationId(id) && <WideRelationScene id={id} value={value} />}
   </svg>;
 }
 

@@ -3,9 +3,9 @@
   "counts": {
     "experiment": 11,
     "board": 43,
-    "instrument": 239,
+    "instrument": 255,
     "scene": 186,
-    "fallback": 134
+    "fallback": 118
   },
   "contested": 18,
   "subjects": [
@@ -92,9 +92,9 @@
       "counts": {
         "experiment": 1,
         "board": 0,
-        "instrument": 9,
+        "instrument": 25,
         "scene": 0,
-        "fallback": 16
+        "fallback": 0
       }
     },
     {
@@ -2986,8 +2986,8 @@
       "id": "summary-gramatica-lingua-um-sistema-complexo",
       "subject": "Gramática",
       "title": "Língua: um Sistema Complexo",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "lingua-sistema",
       "ignored": []
     },
     {
@@ -3002,16 +3002,16 @@
       "id": "summary-gramatica-substantivo-os-nomes-e-a-visao-do-enunciador",
       "subject": "Gramática",
       "title": "Substantivo: os Nomes e a Visão do Enunciador",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "substantivo-visao-enunciador",
       "ignored": []
     },
     {
       "id": "summary-gramatica-tipos-de-texto-explorando-elementos-concretos-e-conceitos-abstratos",
       "subject": "Gramática",
       "title": "Tipos de Texto: Explorando Elementos Concretos e Conceitos Abstratos",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "tipos-de-texto",
       "ignored": []
     },
     {
@@ -3042,16 +3042,16 @@
       "id": "summary-gramatica-adverbio-e-locucoes-adverbiais-circunstanciadores",
       "subject": "Gramática",
       "title": "Advérbio e Locuções Adverbiais: Circunstanciadores",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "adverbio-circunstanciadores",
       "ignored": []
     },
     {
       "id": "summary-gramatica-verbo-e-sintaxe-da-oracao",
       "subject": "Gramática",
       "title": "Verbo e Sintaxe da Oração",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "verbo-sintaxe-oracao",
       "ignored": []
     },
     {
@@ -3066,16 +3066,16 @@
       "id": "summary-gramatica-significados-implicitos",
       "subject": "Gramática",
       "title": "Significados Implícitos",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "significados-implicitos",
       "ignored": []
     },
     {
       "id": "summary-gramatica-tipos-de-discurso",
       "subject": "Gramática",
       "title": "Tipos de Discurso",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "tipos-de-discurso",
       "ignored": []
     },
     {
@@ -3090,16 +3090,16 @@
       "id": "summary-gramatica-pontuacao-ii-virgula-entre-oracoes-e-outros-sinais-de-pontuacao",
       "subject": "Gramática",
       "title": "Pontuação II: Vírgula entre Orações e Outros Sinais de Pontuação",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "pontuacao-ii",
       "ignored": []
     },
     {
       "id": "summary-gramatica-o-lexico-em-contexto-variadas-possibilidades-semanticas",
       "subject": "Gramática",
       "title": "O Léxico em Contexto: Variadas Possibilidades Semânticas",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "lexico-em-contexto",
       "ignored": []
     },
     {
@@ -3114,8 +3114,8 @@
       "id": "summary-gramatica-mecanismo-de-regencia",
       "subject": "Gramática",
       "title": "Mecanismo de Regência",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "mecanismo-regencia",
       "ignored": []
     },
     {
@@ -3130,24 +3130,24 @@
       "id": "summary-gramatica-processos-de-formacao-de-palavras",
       "subject": "Gramática",
       "title": "Processos de Formação de Palavras",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "formacao-palavras",
       "ignored": []
     },
     {
       "id": "summary-gramatica-funcoes-sintaticas-nominais-e-vocativo",
       "subject": "Gramática",
       "title": "Funções Sintáticas Nominais e Vocativo",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "funcoes-sintaticas-nominais",
       "ignored": []
     },
     {
       "id": "summary-gramatica-tipos-de-sujeito",
       "subject": "Gramática",
       "title": "Tipos de Sujeito",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "tipos-de-sujeito",
       "ignored": []
     },
     {
@@ -3162,24 +3162,24 @@
       "id": "summary-gramatica-oracoes-substantivas",
       "subject": "Gramática",
       "title": "Orações Substantivas",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "oracoes-substantivas",
       "ignored": []
     },
     {
       "id": "summary-gramatica-oracoes-adjetivas",
       "subject": "Gramática",
       "title": "Orações Adjetivas",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "oracoes-adjetivas",
       "ignored": []
     },
     {
       "id": "summary-gramatica-oracoes-adverbiais",
       "subject": "Gramática",
       "title": "Orações Adverbiais",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "oracoes-adverbiais",
       "ignored": []
     },
     {
