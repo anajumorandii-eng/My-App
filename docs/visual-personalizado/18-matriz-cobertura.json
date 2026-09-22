@@ -3,9 +3,9 @@
   "counts": {
     "experiment": 11,
     "board": 43,
-    "instrument": 323,
+    "instrument": 334,
     "scene": 186,
-    "fallback": 50
+    "fallback": 39
   },
   "contested": 18,
   "subjects": [
@@ -15,9 +15,9 @@
       "counts": {
         "experiment": 0,
         "board": 14,
-        "instrument": 52,
+        "instrument": 63,
         "scene": 8,
-        "fallback": 11
+        "fallback": 0
       }
     },
     {
@@ -820,8 +820,8 @@
       "id": "summary-fisica-o-movimento-circular",
       "subject": "Física",
       "title": "O Movimento Circular",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "movimento-circular",
       "ignored": []
     },
     {
@@ -1150,8 +1150,8 @@
       "id": "summary-fisica-mapeamento-do-campo-eletrico-linhas-de-forca-e-superficies-equipotenciais",
       "subject": "Física",
       "title": "Mapeamento do Campo Elétrico: Linhas de Força e Superfícies Equipotenciais",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "mapeamento-campo-eletrico",
       "ignored": []
     },
     {
@@ -1198,24 +1198,24 @@
       "id": "summary-fisica-medidores-eletricos",
       "subject": "Física",
       "title": "Medidores Elétricos",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "medidores-eletricos",
       "ignored": []
     },
     {
       "id": "summary-fisica-geradores",
       "subject": "Física",
       "title": "Geradores",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "geradores-eletricos",
       "ignored": []
     },
     {
       "id": "summary-fisica-receptores",
       "subject": "Física",
       "title": "Receptores",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "receptores-eletricos",
       "ignored": []
     },
     {
@@ -1246,8 +1246,8 @@
       "id": "summary-fisica-imas-campo-de-inducao-magnetico-devido-a-imas-e-campo-magnetico-terrestre",
       "subject": "Física",
       "title": "Ímãs, Campo de Indução Magnético devido a Ímãs e Campo Magnético Terrestre",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "imas-campo-terrestre",
       "ignored": []
     },
     {
@@ -1294,8 +1294,8 @@
       "id": "summary-fisica-fundamentos-da-optica-geometrica",
       "subject": "Física",
       "title": "Fundamentos da Óptica Geométrica",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "fundamentos-optica",
       "ignored": []
     },
     {
@@ -1363,16 +1363,16 @@
       "id": "summary-fisica-microscopio-e-luneta-astronomica-ou-telescopio-refrator-nocoes-basicas",
       "subject": "Física",
       "title": "Microscópio e Luneta Astronômica (ou Telescópio Refrator): Noções Básicas",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "microscopio-luneta",
       "ignored": []
     },
     {
       "id": "summary-fisica-conceitos-basicos",
       "subject": "Física",
       "title": "Conceitos Básicos",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "conceitos-ondas",
       "ignored": []
     },
     {
@@ -1429,8 +1429,8 @@
       "id": "summary-fisica-fenomenos-ondulatorios-analise-de-refracao-e-reflexao-em-cordas",
       "subject": "Física",
       "title": "Fenômenos Ondulatórios: Análise de Refração e Reflexão em Cordas",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "reflexao-cordas",
       "ignored": []
     },
     {
@@ -1453,8 +1453,8 @@
       "id": "summary-fisica-um-caso-particular-de-interferencia-onda-estacionaria",
       "subject": "Física",
       "title": "Um Caso Particular de Interferência: Onda Estacionária",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "onda-estacionaria",
       "ignored": []
     },
     {
