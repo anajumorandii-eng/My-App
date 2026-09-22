@@ -80,11 +80,16 @@ export default defineConfig(() => ({
   },
 
   test: {
+    environment: 'jsdom',
+    setupFiles: ['./src/testSetup.ts'],
     include: [
       'serverCalendar.test.ts',
       'src/features/availability/**/*.test.{ts,tsx}',
       'src/hooks/useDailyPlan.test.tsx',
       'src/views/DailyPlanConsistency.test.tsx',
+      // Também é chamado diretamente por `npm run visual:matrix`; mantê-lo
+      // no conjunto evita que o Vitest o descarte antes de a matriz ser gerada.
+      'src/views/visualCoverage.test.ts',
     ],
     exclude: ['**/.worktrees/**', '**/node_modules/**', '**/.git/**'],
   },
