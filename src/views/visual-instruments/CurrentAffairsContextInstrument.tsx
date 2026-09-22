@@ -1,13 +1,10 @@
 import { CURRENT_AFFAIRS_CONTEXTS, type CurrentAffairsContextId } from '../../lib/currentAffairsContextLab';
-import { buildContextInstrument } from './GeographyContextInstrument';
+import { currentAffairsDossier } from './CurrentAffairsDossier';
 
 /**
- * Reaproveita a cena e o `BoardShell` de `GeographyContextInstrument` — a
- * comparação em três recortes vale tanto para Geografia quanto para um
- * dossiê de Atualidades, que também é uma leitura territorial e política,
- * só que datada. Fica em componente próprio porque a matéria (`Atualidades`)
- * é outra, e `findInstrument` casa por `subject` exato.
+ * Atualidades exige dossiê próprio: o objeto é um documento datado, com
+ * registro, contexto e avaliação crítica, não uma ilustração territorial.
  */
 export function currentAffairsContextInstrument(id: CurrentAffairsContextId) {
-  return buildContextInstrument(CURRENT_AFFAIRS_CONTEXTS[id]);
+  return currentAffairsDossier(CURRENT_AFFAIRS_CONTEXTS[id]);
 }

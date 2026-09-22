@@ -88,7 +88,7 @@ export default function NucleoInstrumentalProductionLayout() {
       </header>
       {menuOpen && <button className="ni-production-backdrop lg:hidden" aria-label="Fechar menu" onClick={() => setMenuOpen(false)} />}
 
-      <aside className={cn('ni-rail', railExpanded && 'is-expanded', menuOpen && 'is-open is-expanded')} aria-hidden={isMobile && !menuOpen ? true : undefined} inert={isMobile && !menuOpen ? '' : undefined}>
+      <aside className={cn('ni-rail', railExpanded && 'is-expanded', menuOpen && 'is-open is-expanded')} aria-hidden={isMobile && !menuOpen ? true : undefined} inert={isMobile && !menuOpen}>
         <button className="ni-mark" aria-label="Ir para Hoje" onClick={() => navigate('/')}><img src="/icon-192.png?v=3" alt="" /></button>
         {menuOpen && <button className="ni-production-close" aria-label="Fechar menu" onClick={() => setMenuOpen(false)}><X aria-hidden="true" /></button>}
         <nav className="ni-rail-scroll" aria-label="Todas as telas do app">

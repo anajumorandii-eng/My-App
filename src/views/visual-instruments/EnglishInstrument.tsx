@@ -130,7 +130,7 @@ export function englishInstrument(id: EnglishInstrumentId) {
     const [selected, setSelected] = useState(0);
     const state = englishInstrumentState(id, selected);
     const pair = boardPair(props);
-    const first = props.map.nodes[0];
+    const first = props.map.nodes[1] ?? props.map.nodes[0];
     const second = props.map.nodes[2] ?? props.map.nodes.at(-1);
     return <BoardShell
       kicker="Laboratório de leitura em inglês"
@@ -146,7 +146,7 @@ export function englishInstrument(id: EnglishInstrumentId) {
         <p className="vs-instrument-dica">mude a estrutura e confira o limite da interpretação</p>
         <div className="vs-plane-controls"><div className="vs-plane-control">
           <label htmlFor={`english-${id}`}><strong>{config.controlLabel}</strong><span>{config.controlDescription}</span><b>{state.label}</b></label>
-          <input id={`english-${id}`} type="range" min="0" max={config.states.length - 1} step="1" value={selected} onChange={event => setSelected(Number(event.target.value))} />
+          <input id={`english-${id}`} type="range" min="0" max={config.states.length - 1} step="1" value={selected} aria-valuetext={state.label} onChange={event => setSelected(Number(event.target.value))} />
         </div></div>
         <dl className="vs-plane-readouts">
           <div data-pivot="true"><dt>Leitura autorizada</dt><dd>{state.reading}</dd></div>
