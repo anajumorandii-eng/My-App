@@ -69,6 +69,6 @@ describe('instrumentos fundamentais de redação', () => {
     render(<Component {...props('summary-redacao-tangenciamento-e-fuga-a-fronteira-do-tema')} />);
     fireEvent.change(screen.getByRole('slider'), { target: { value: '2' } });
     expect(screen.getAllByText('fora do alvo').length).toBeGreaterThan(0);
-    expect(screen.getByText('fuga temática: não há resposta à proposta')).toBeInTheDocument();
+    expect(screen.getAllByText('fuga temática: não há resposta à proposta').length).toBeGreaterThan(0);
   });
 });
