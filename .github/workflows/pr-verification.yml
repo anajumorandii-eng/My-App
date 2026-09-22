@@ -1,0 +1,35 @@
+name: Verificar pull request
+
+on:
+  pull_request:
+    branches: [main]
+    paths-ignore:
+      - docs/CONTINUIDADE-ESTADO.json
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pr-verification-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  validar:
+    name: lint, testes visuais e build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: false
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run test:vitest
+      - run: npm run visual:matrix
+      - run: git diff --exit-code -- docs/visual-personalizado/18-matriz-cobertura.json docs/visual-personalizado/18-matriz-cobertura.md
+      - run: npm run build
