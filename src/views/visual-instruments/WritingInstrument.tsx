@@ -76,7 +76,7 @@ export function writingInstrument(id: WritingInstrumentId) {
     const [selected, setSelected] = useState(0);
     const state = writingInstrumentState(id, selected);
     const pair = boardPair(props);
-    const first = props.map.nodes[0];
+    const first = props.map.nodes[1] ?? props.map.nodes[0];
     const second = props.map.nodes[2] ?? props.map.nodes.at(-1);
     return <BoardShell kicker="Ateliê de argumentação" title={config.name} subtitle={config.question} condition={{ label: config.controlLabel, value: state.label }} ariaLabel={`Instrumento de redação: ${props.map.title}`} emphasis={pair.emphasis}
       scene={<div className="vs-instrument"><svg className="vs-plane" viewBox="0 0 320 300" role="img" aria-label={`${config.name}; ${state.label}: ${state.diagnosis}`}><WritingScene id={id} selected={selected} /></svg><p className="vs-instrument-dica">mude a decisão e observe o efeito no projeto do texto</p><div className="vs-plane-controls"><div className="vs-plane-control"><label htmlFor={`writing-${id}`}><strong>{config.controlLabel}</strong><span>{config.controlDescription}</span><b>{state.label}</b></label><input id={`writing-${id}`} type="range" min="0" max={config.states.length - 1} step="1" value={selected} aria-valuetext={state.label} onChange={(event) => setSelected(Number(event.target.value))} /></div></div><dl className="vs-plane-readouts"><div data-pivot="true"><dt>Diagnóstico</dt><dd>{state.diagnosis}</dd></div><div><dt>Próxima ação</dt><dd>{state.action}</dd></div></dl></div>}

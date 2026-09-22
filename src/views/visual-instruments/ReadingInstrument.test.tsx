@@ -1,5 +1,5 @@
 import React from 'react';
-import { fireEvent, render, screen, vi } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import { describe, expect, it, vi } from 'vitest';
 import { interactiveSummaries } from '../../data/interactiveSummaries';
 import { buildVisualMap } from '../../lib/visualStudy';
