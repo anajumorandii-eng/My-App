@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "repository": "anajumorandii-eng/My-App",
+  "branch": "main",
+  "source_commit": "084e514a03e05732d38d99855b1752b4c59198ad",
+  "generated_at_utc": "2026-09-22T03:38:13Z",
+  "changed_files": [
+    "docs/CRIVO-CONTINUIDADE.md"
+  ],
+  "next_session": {
+    "mode": "delta-only",
+    "instructions": "Leia docs/CRIVO-CONTINUIDADE.md e este arquivo; então consulte no GitHub apenas os commits posteriores a source_commit. Não clone o repositório completo sem necessidade técnica."
+  }
+}
