@@ -16,16 +16,16 @@ outro assunto. O detalhe capítulo a capítulo está em
 | --- | ---: | ---: |
 | Experimento exato | 11 | 1,8% |
 | Prancha autoral | 43 | 7,0% |
-| Instrumento | 323 | 52,7% |
+| Instrumento | 334 | 54,5% |
 | Cena validada | 186 | 30,3% |
-| Lacuna honesta | 50 | 8,2% |
+| Lacuna honesta | 39 | 6,4% |
 | **Total** | **613** | |
 
 ## Por matéria
 
 | Matéria | Capítulos | Experimento exato | Prancha autoral | Instrumento | Cena validada | Lacuna honesta |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| Física | 85 | 0 | 14 | 52 | 8 | 11 |
+| Física | 85 | 0 | 14 | 63 | 8 | 0 |
 | Atualidades | 1 | 0 | 0 | 1 | 0 | 0 |
 | Biologia | 72 | 1 | 10 | 27 | 34 | 0 |
 | Geografia | 63 | 1 | 0 | 36 | 26 | 0 |
