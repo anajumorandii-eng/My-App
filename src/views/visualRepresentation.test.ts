@@ -21,9 +21,9 @@ describe('resolveVisualRepresentation', () => {
 
   it('recorre à cena exata e depois ao fallback, sem reutilizar uma prancha alheia', () => {
     const scene = interactiveSummaries.find((item) => sceneFor(item.id) && !findBoard(item) && !findInstrument(item) && !topicExperiments[item.id])!;
-    // Antes usava 'atu-cop30-belem', que ganhou instrumento de contexto
-    // geográfico na rodada de set/2026 (COP30 em Belém).
-    const fallback = interactiveSummaries.find((item) => item.id === 'summary-fisica-o-movimento-circular')!;
+    // A referência deve permanecer uma lacuna real; Física recebeu
+    // instrumentos dedicados nesta rodada.
+    const fallback = interactiveSummaries.find((item) => item.id === 'summary-redacao-paragrafo-de-introducao-delimitando-a-opiniao')!;
     expect(resolveVisualRepresentation(scene)).toBe('scene');
     expect(resolveVisualRepresentation(fallback)).toBe('fallback');
   });
