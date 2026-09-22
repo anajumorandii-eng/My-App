@@ -15,8 +15,27 @@ describe('instrumento de ondas e física moderna', () => {
       ['diffraction', 'summary-fisica-fenomenos-ondulatorios-difracao-polarizacao-e-ressonancia'],
       ['tube-harmonics', 'summary-fisica-ondas-estacionarias-em-tubos'],
       ['quantum-photon', 'summary-fisica-nocoes-basicas-de-fisica-quantica'],
+      ['circular-motion', 'summary-fisica-o-movimento-circular'],
+      ['electric-field-map', 'summary-fisica-mapeamento-do-campo-eletrico-linhas-de-forca-e-superficies-equipotenciais'],
+      ['electric-meters', 'summary-fisica-medidores-eletricos'],
+      ['generator', 'summary-fisica-geradores'],
+      ['receiver', 'summary-fisica-receptores'],
+      ['magnet-field', 'summary-fisica-imas-campo-de-inducao-magnetico-devido-a-imas-e-campo-magnetico-terrestre'],
+      ['geometric-optics', 'summary-fisica-fundamentos-da-optica-geometrica'],
+      ['optical-instruments', 'summary-fisica-microscopio-e-luneta-astronomica-ou-telescopio-refrator-nocoes-basicas'],
+      ['wave-basics', 'summary-fisica-conceitos-basicos'],
+      ['rope-boundary', 'summary-fisica-fenomenos-ondulatorios-analise-de-refracao-e-reflexao-em-cordas'],
+      ['string-standing-wave', 'summary-fisica-um-caso-particular-de-interferencia-onda-estacionaria'],
     ];
     for (const [id, chapter] of chapters) { const Component = physicsRemainingInstrument(id); const view = render(<Component {...props(chapter)} />); expect(screen.getByRole('img')).toBeInTheDocument(); expect(screen.getByRole('slider')).toHaveAttribute('type', 'range'); view.unmount(); }
+  });
+
+  it('troca a regra visual entre ligação fixa e livre de uma corda', () => {
+    const Component = physicsRemainingInstrument('rope-boundary');
+    render(<Component {...props('summary-fisica-fenomenos-ondulatorios-analise-de-refracao-e-reflexao-em-cordas')} />);
+    expect(screen.getAllByText('invertido').length).toBeGreaterThan(0);
+    fireEvent.change(screen.getByRole('slider'), { target: { value: '1' } });
+    expect(screen.getAllByText('sem inversão').length).toBeGreaterThan(0);
   });
 
   it('recalcula a distância quando o eco demora mais para voltar', () => {
