@@ -19,12 +19,10 @@ describe('resolveVisualRepresentation', () => {
     expect(resolveVisualRepresentation(instrument)).toBe('instrument');
   });
 
-  it('recorre à cena exata e depois ao fallback, sem reutilizar uma prancha alheia', () => {
+  it('recorre à cena exata e usa o instrumento editorial dedicado quando ele existe', () => {
     const scene = interactiveSummaries.find((item) => sceneFor(item.id) && !findBoard(item) && !findInstrument(item) && !topicExperiments[item.id])!;
-    // A referência deve permanecer uma lacuna real; Física recebeu
-    // instrumentos dedicados nesta rodada.
-    const fallback = interactiveSummaries.find((item) => item.id === 'summary-redacao-paragrafo-de-introducao-delimitando-a-opiniao')!;
+    const instrument = interactiveSummaries.find((item) => item.id === 'summary-redacao-paragrafo-de-introducao-delimitando-a-opiniao')!;
     expect(resolveVisualRepresentation(scene)).toBe('scene');
-    expect(resolveVisualRepresentation(fallback)).toBe('fallback');
+    expect(resolveVisualRepresentation(instrument)).toBe('instrument');
   });
 });
