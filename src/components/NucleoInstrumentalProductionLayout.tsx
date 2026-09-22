@@ -61,6 +61,7 @@ export default function NucleoInstrumentalProductionLayout() {
   const [railExpanded, setRailExpanded] = useState(() =>
     typeof window !== 'undefined' && window.localStorage.getItem('crivo_rail_expanded') === 'true',
   );
+  const [isMobile, setIsMobile] = useState(() => typeof window !== 'undefined' && window.matchMedia('(max-width: 900px)').matches);
   const location = useLocation();
   const navigate = useNavigate();
   const reducedMotion = useReducedMotion();
@@ -70,6 +71,12 @@ export default function NucleoInstrumentalProductionLayout() {
   useEffect(() => setMenuOpen(false), [location.pathname]);
   useEffect(() => { if (!localStorage.getItem('juju_onboarding')) setShowOnboarding(true); }, []);
   useEffect(() => { localStorage.setItem('crivo_rail_expanded', String(railExpanded)); }, [railExpanded]);
+  useEffect(() => {
+    const media = window.matchMedia('(max-width: 900px)');
+    const sync = () => setIsMobile(media.matches);
+    sync(); media.addEventListener('change', sync);
+    return () => media.removeEventListener('change', sync);
+  }, []);
   const closeOnboarding = () => { setShowOnboarding(false); localStorage.setItem('juju_onboarding', 'true'); };
 
   return (
@@ -81,7 +88,7 @@ export default function NucleoInstrumentalProductionLayout() {
       </header>
       {menuOpen && <button className="ni-production-backdrop lg:hidden" aria-label="Fechar menu" onClick={() => setMenuOpen(false)} />}
 
-      <aside className={cn('ni-rail', railExpanded && 'is-expanded', menuOpen && 'is-open is-expanded')}>
+      <aside className={cn('ni-rail', railExpanded && 'is-expanded', menuOpen && 'is-open is-expanded')} aria-hidden={isMobile && !menuOpen ? true : undefined} inert={isMobile && !menuOpen}>
         <button className="ni-mark" aria-label="Ir para Hoje" onClick={() => navigate('/')}><img src="/icon-192.png?v=3" alt="" /></button>
         {menuOpen && <button className="ni-production-close" aria-label="Fechar menu" onClick={() => setMenuOpen(false)}><X aria-hidden="true" /></button>}
         <nav className="ni-rail-scroll" aria-label="Todas as telas do app">

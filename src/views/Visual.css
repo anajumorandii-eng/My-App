@@ -1732,6 +1732,23 @@
 }
 .vs-viewport-dica { flex: 1; min-width: 0; text-align: right; overflow-wrap: anywhere; }
 
+/* A navegação móvel é fixa. Sem uma posição de segurança, os botões de zoom
+   podiam terminar parcialmente sob ela em cenas longas; ao receber foco ou
+   toque, os controles agora se mantêm acima da barra. */
+@media (max-width: 900px) {
+  .vs-viewport-controles {
+    position: sticky;
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 72px);
+    z-index: 12;
+    scroll-margin-bottom: calc(env(safe-area-inset-bottom, 0px) + 92px);
+    padding: 5px;
+    border: 1px solid var(--vs-line);
+    border-radius: 10px;
+    background: color-mix(in srgb, var(--vs-paper-strong) 94%, transparent);
+    box-shadow: 0 8px 20px color-mix(in srgb, var(--vs-ink) 12%, transparent);
+  }
+}
+
 /* O elo que o diagnóstico escondeu, marcado na própria cadeia: ver onde está o
    buraco vale mais que ler a lacuna numa lista embaixo da prancha. A resposta
    continua sendo dada no formulário de reconstrução — dois caminhos de resposta

@@ -10,7 +10,7 @@ import type { BoardProps } from './types';
  * respiração e decomposição devolvem, e o saldo se equilibra. O que a prancha
  * isola é a seta que não fazia parte desse equilíbrio — a queima de combustível
  * fóssil, que transfere carbono de um reservatório geológico, fora do ciclo
- * rápido, para a atmosfera. É essa assimetria que explica os 420 ppm da curva
+ * rápido, para a atmosfera. É essa assimetria que explica a alta registrada na curva
  * de Keeling, e não um aumento da respiração.
  */
 function CarbonScene({ emphasis }: { emphasis: 'esquerda' | 'direita' | 'nenhum' }) {
@@ -23,7 +23,7 @@ function CarbonScene({ emphasis }: { emphasis: 'esquerda' | 'direita' | 'nenhum'
       <g className="vs-reservoir vs-reservoir--air">
         <rect x="70" y="24" width="180" height="52" rx="16" />
         <text className="vs-res-name" x="160" y="47" textAnchor="middle">atmosfera</text>
-        <text className="vs-res-value" x="160" y="65" textAnchor="middle">CO₂ · 420 ppm</text>
+        <text className="vs-res-value" x="160" y="65" textAnchor="middle">CO₂ · ~420 ppm em 2023</text>
       </g>
 
       {/* Biosfera: retira pela fotossíntese, devolve pela respiração. */}
@@ -60,7 +60,7 @@ function CarbonScene({ emphasis }: { emphasis: 'esquerda' | 'direita' | 'nenhum'
       </g>
 
       <text className="vs-scene-caption" x="160" y="250" textAnchor="middle">o ciclo fechava · a seta fóssil não fecha</text>
-      <text className="vs-scene-caption" x="160" y="270" textAnchor="middle">curva de Keeling · 280 → 420 ppm</text>
+      <text className="vs-scene-caption" x="160" y="270" textAnchor="middle">pré-industrial ~280 → 2023 ~420 ppm</text>
     </svg>
   );
 }
@@ -71,7 +71,7 @@ export default function CarbonCycleBoard(props: BoardProps) {
     <BoardShell
       title="Ciclo do carbono"
       subtitle="O ciclo fechava sozinho. Uma seta nova é que o desequilibrou."
-      condition={{ label: 'hoje', value: '420 ppm' }}
+      condition={{ label: 'Mauna Loa · 2023', value: '~420 ppm' }}
       ariaLabel="Prancha ilustrada do ciclo biogeoquímico do carbono"
       scene={<CarbonScene emphasis={par.emphasis} />}
       sceneNotes={{ up: 'entra ↑', down: '↓ sai' }}
@@ -104,8 +104,8 @@ export default function CarbonCycleBoard(props: BoardProps) {
           </section>
           <section className="vs-formula-note">
             <span className="vs-note-title">A curva de Keeling</span>
-            <strong>280 → 420 ppm</strong>
-            <p>Medição contínua desde 1958 no Mauna Loa. Serrilhada pelas estações do hemisfério norte, com tendência de alta sob o serrilhado.</p>
+            <strong>~280 → ~420 ppm</strong>
+            <p>Marco pré-industrial e média anual de 2023 em Mauna Loa (NOAA Global Monitoring Laboratory). A medição contínua desde 1958 é serrilhada pelas estações do hemisfério norte, com tendência de alta sob o serrilhado.</p>
           </section>
         </>
       }
