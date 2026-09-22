@@ -12,6 +12,30 @@ const CHAPTERS: Array<[WritingInstrumentId, string]> = [
   ['idea-map', 'summary-redacao-organizando-as-ideias-brainstorm-e-mind-maps'],
   ['repertoire', 'summary-redacao-repertorio-o-diferencial-de-redacoes-de-sucesso'],
   ['theme-axes', 'summary-redacao-qual-sera-o-tema-deste-ano-grandes-eixos-tematicos'],
+  ['prompt-fit', 'summary-redacao-diferentes-graus-de-adequacao-a-proposta'],
+  ['prompt-boundary', 'summary-redacao-tangenciamento-e-fuga-a-fronteira-do-tema'],
+  ['genre-letter', 'summary-redacao-generos-e-sua-relacao-com-a-estrutura-do-texto'],
+  ['genre-dissertation', 'summary-redacao-estrutura-classica-do-texto-dissertativo'],
+  ['source-sense', 'summary-redacao-lendo-a-coletanea-a-apreensao-de-sentidos-i'],
+  ['source-visual', 'summary-redacao-lendo-a-coletanea-a-apreensao-de-sentidos-ii'],
+  ['source-authorship', 'summary-redacao-lendo-a-coletanea-a-compreensao-e-o-texto-autoral-i'],
+  ['source-dialogue', 'summary-redacao-lendo-a-coletanea-a-compreensao-e-o-texto-autoral-ii'],
+  ['repertoire-environment', 'summary-redacao-incrementando-o-repertorio-meio-ambiente'],
+  ['repertoire-work', 'summary-redacao-incrementando-o-repertorio-educacao-e-trabalho'],
+  ['repertoire-abstract', 'summary-redacao-incrementando-o-repertorio-temas-abstratos'],
+  ['repertoire-body', 'summary-redacao-incrementando-o-repertorio-corpo-saude-e-sexualidade'],
+  ['repertoire-violence', 'summary-redacao-incrementando-o-repertorio-violencia-leis-e-punicao'],
+  ['repertoire-citizenship', 'summary-redacao-incrementando-o-repertorio-cidadania-e-poder'],
+  ['repertoire-culture', 'summary-redacao-incrementando-o-repertorio-arte-cultura-e-relacoes-sociais'],
+  ['repertoire-media', 'summary-redacao-incrementando-o-repertorio-midia-e-sociedade'],
+  ['theme-environment', 'summary-redacao-analisando-tema-de-redacao-meio-ambiente'],
+  ['theme-work', 'summary-redacao-analisando-tema-de-redacao-educacao-e-trabalho'],
+  ['theme-abstract', 'summary-redacao-analisando-tema-abstrato-de-redacao'],
+  ['theme-body', 'summary-redacao-analisando-tema-de-redacao-corpo-saude-e-sexualidade'],
+  ['theme-violence', 'summary-redacao-analisando-tema-de-redacao-violencia-leis-e-punicao'],
+  ['theme-citizenship', 'summary-redacao-analisando-tema-de-redacao-cidadania-e-poder'],
+  ['theme-culture', 'summary-redacao-analisando-o-tema-de-redacao-arte-cultura-e-relacoes-sociais'],
+  ['theme-media', 'summary-redacao-analisando-tema-de-redacao-midia-e-sociedade'],
 ];
 
 function props(summaryId: string) {
@@ -21,7 +45,7 @@ function props(summaryId: string) {
 }
 
 describe('instrumentos fundamentais de redação', () => {
-  it('renderiza cinco oficinas autorais com controle acessível', () => {
+  it('renderiza oficinas autorais com controle acessível', () => {
     for (const [id, summaryId] of CHAPTERS) {
       const Component = writingInstrument(id);
       const view = render(<Component {...props(summaryId)} />);
@@ -38,5 +62,13 @@ describe('instrumentos fundamentais de redação', () => {
     fireEvent.change(screen.getByRole('slider'), { target: { value: '2' } });
     expect(screen.getAllByText('repertório produtivo').length).toBeGreaterThan(0);
     expect(screen.getByText('explicar como a referência sustenta a tese')).toBeInTheDocument();
+  });
+
+  it('faz o diagnóstico mudar quando a tese se afasta do recorte', () => {
+    const Component = writingInstrument('prompt-boundary');
+    render(<Component {...props('summary-redacao-tangenciamento-e-fuga-a-fronteira-do-tema')} />);
+    fireEvent.change(screen.getByRole('slider'), { target: { value: '2' } });
+    expect(screen.getAllByText('fora do alvo').length).toBeGreaterThan(0);
+    expect(screen.getAllByText('fuga temática: não há resposta à proposta').length).toBeGreaterThan(0);
   });
 });

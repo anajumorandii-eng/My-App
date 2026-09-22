@@ -421,6 +421,33 @@ export const INSTRUMENTS: InstrumentEntry[] = [
   ingles('health-probiotics','text comprehension: health – probiotics','research-claims'),
   ingles('stem-cells','text comprehension: stem cells','modal-certainty'),
   redacao('dissertacao-mitos','a dissertação no vestibular: mitos e verdades','essay-myths'),redacao('avaliacao-dissertacao','o que se avalia na dissertação: competências e habilidades','evaluation'),redacao('organizacao-ideias','organizando as ideias: brainstorm e mind maps','idea-map'),redacao('repertorio','repertório: o diferencial de redações de sucesso','repertoire'),redacao('eixos-tematicos','qual será o tema deste ano: grandes eixos temáticos','theme-axes'),
+  // Oficina de redação, rodada 1: cada entrada aponta para a decisão concreta
+  // do capítulo. As famílias se repetem apenas quando a operação de escrita é
+  // a mesma; a configuração muda exemplos, diagnóstico, consequência e ação.
+  redacao('adequacao-proposta','diferentes graus de adequação à proposta','prompt-fit'),
+  redacao('fronteira-tema','tangenciamento e fuga: a fronteira do tema','prompt-boundary'),
+  redacao('genero-estrutura','gêneros e sua relação com a estrutura do texto','genre-letter'),
+  redacao('estrutura-dissertativa','estrutura clássica do texto dissertativo','genre-dissertation'),
+  redacao('coletanea-sentidos-i','lendo a coletânea: a apreensão de sentidos i','source-sense'),
+  redacao('coletanea-sentidos-ii','lendo a coletânea: a apreensão de sentidos ii','source-visual'),
+  redacao('coletanea-autoria-i','lendo a coletânea: a compreensão e o texto autoral i','source-authorship'),
+  redacao('coletanea-autoria-ii','lendo a coletânea: a compreensão e o texto autoral ii','source-dialogue'),
+  redacao('rep-meio-ambiente','incrementando o repertório: meio ambiente','repertoire-environment'),
+  redacao('tema-meio-ambiente','analisando tema de redação: meio ambiente','theme-environment'),
+  redacao('rep-educacao-trabalho','incrementando o repertório: educação e trabalho','repertoire-work'),
+  redacao('tema-educacao-trabalho','analisando tema de redação: educação e trabalho','theme-work'),
+  redacao('rep-abstratos','incrementando o repertório: temas abstratos','repertoire-abstract'),
+  redacao('tema-abstrato','analisando tema abstrato de redação','theme-abstract'),
+  redacao('rep-corpo-saude','incrementando o repertório: corpo, saúde e sexualidade','repertoire-body'),
+  redacao('tema-corpo-saude','analisando tema de redação: corpo, saúde e sexualidade','theme-body'),
+  redacao('rep-violencia','incrementando o repertório: violência, leis e punição','repertoire-violence'),
+  redacao('tema-violencia','analisando tema de redação: violência, leis e punição','theme-violence'),
+  redacao('rep-cidadania','incrementando o repertório: cidadania e poder','repertoire-citizenship'),
+  redacao('tema-cidadania','analisando tema de redação: cidadania e poder','theme-citizenship'),
+  redacao('rep-arte-cultura','incrementando o repertório: arte, cultura e relações sociais','repertoire-culture'),
+  redacao('tema-arte-cultura','analisando o tema de redação: arte, cultura e relações sociais','theme-culture'),
+  redacao('rep-midia','incrementando o repertório: mídia e sociedade','repertoire-media'),
+  redacao('tema-midia','analisando tema de redação: mídia e sociedade','theme-media'),
 
   // Literatura: 22 capítulos de estética/movimento/campo (três facetas
   // comparáveis por capítulo) e 6 de autor monográfico (trajetória, técnica,
