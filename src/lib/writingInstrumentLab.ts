@@ -5,7 +5,11 @@ export type WritingInstrumentId =
   | 'repertoire-environment' | 'repertoire-work' | 'repertoire-abstract' | 'repertoire-body'
   | 'repertoire-violence' | 'repertoire-citizenship' | 'repertoire-culture' | 'repertoire-media'
   | 'theme-environment' | 'theme-work' | 'theme-abstract' | 'theme-body'
-  | 'theme-violence' | 'theme-citizenship' | 'theme-culture' | 'theme-media';
+  | 'theme-violence' | 'theme-citizenship' | 'theme-culture' | 'theme-media'
+  | 'intro-thesis' | 'intro-context' | 'audience' | 'quasi-logic' | 'internal-coherence' | 'external-coherence'
+  | 'data-examples' | 'prestigious-voices' | 'concession' | 'refutation' | 'intertextuality' | 'repertoire-bank' | 'current-affairs' | 'domains'
+  | 'conclusion-synthesis' | 'conclusion-focus' | 'intervention-agents' | 'intervention-feasibility' | 'intervention-coherence' | 'intervention-rights'
+  | 'reference-cohesion' | 'sequential-cohesion' | 'cohesion-diagnosis' | 'language-clarity' | 'rights-generations' | 'rights-social' | 'model-essay' | 'media-revision';
 
 export type WritingSceneId = 'prompt' | 'genre' | 'source' | 'repertoire' | 'theme';
 
@@ -27,6 +31,22 @@ export interface WritingInstrumentConfig {
   states: WritingInstrumentState[];
   /** O desenho acompanha a operação de escrita, não apenas a matéria geral. */
   scene?: WritingSceneId;
+}
+
+function workshop(id: WritingInstrumentId, name: string, question: string, states: WritingInstrumentState[], scene: WritingSceneId = 'theme'): WritingInstrumentConfig {
+  const completeStates = states.length >= 3 ? states : [...states, {
+    label: 'revisão do vínculo',
+    example: 'a escolha é relida à luz da tese e do recorte.',
+    diagnosis: 'a decisão só permanece quando sua função no argumento é verificável',
+    action: 'conferir se a evidência, a relação lógica e a tese continuam alinhadas',
+  }];
+  return {
+    id, name, question, scene,
+    controlLabel: 'Decisão editorial', controlDescription: 'compare as escolhas antes de redigir',
+    relation: 'decisão → evidência → efeito no argumento',
+    insight: 'Um projeto de texto melhora quando cada escolha tem função explícita e vínculo com a tese.',
+    states: completeStates,
+  };
 }
 
 export const WRITING_INSTRUMENTS: Record<WritingInstrumentId, WritingInstrumentConfig> = {
@@ -290,6 +310,118 @@ export const WRITING_INSTRUMENTS: Record<WritingInstrumentId, WritingInstrumentC
       { label: 'modelo de negócio', example: 'engajamento pode incentivar conteúdo sensacionalista', diagnosis: 'o foco está nos incentivos que moldam circulação', action: 'ligar incentivo econômico e comportamento da plataforma' },
     ],
   },
+  'intro-thesis': workshop('intro-thesis', 'Tese logo na entrada', 'A opinião aparece como resposta ao recorte, e não como tema solto?', [
+    { label: 'tema amplo', example: 'A educação é importante para a sociedade.', diagnosis: 'assunto apresentado sem posição discutível', action: 'converter o tema em uma resposta delimitada' },
+    { label: 'tese delimitada', example: 'A desigualdade de acesso à formação técnica limita a inserção profissional juvenil.', diagnosis: 'posição responde a uma relação precisa', action: 'fazer os argumentos comprovarem essa relação' },
+  ], 'genre'),
+  'intro-context': workshop('intro-context', 'Contexto que conduz à tese', 'A contextualização prepara a pergunta ou a substitui?', [
+    { label: 'abertura ornamental', example: 'Desde os primórdios, a humanidade enfrenta desafios.', diagnosis: 'frase poderia abrir quase qualquer redação', action: 'trazer um dado, processo ou referência ligada ao recorte' },
+    { label: 'contexto funcional', example: 'A expansão do trabalho por plataformas alterou a proteção de quem presta o serviço.', diagnosis: 'o contexto conduz diretamente ao problema', action: 'formular a tese logo depois da contextualização' },
+  ], 'genre'),
+  audience: workshop('audience', 'Auditório e escolha de razão', 'Que razão pode convencer este leitor, sem apelar apenas à concordância prévia?', [
+    { label: 'auditório particular', example: 'uma associação de bairro avalia efeitos concretos no território', diagnosis: 'argumento considera valores e situação de interlocutores definidos', action: 'usar exemplos verificáveis para esse público' },
+    { label: 'auditório universal', example: 'a dignidade e a igualdade sustentam a defesa para leitores diversos', diagnosis: 'argumento busca princípios compartilháveis', action: 'explicitar a premissa, não apenas declará-la' },
+  ], 'repertoire'),
+  'quasi-logic': workshop('quasi-logic', 'Semelhança de lógica, prova de verdade?', 'O efeito de certeza nasce de uma relação válida ou de uma aparência de rigor?', [
+    { label: 'analogia frágil', example: 'Dois problemas parecem iguais, logo exigem a mesma solução.', diagnosis: 'semelhança superficial pode esconder condições decisivas', action: 'verificar o critério que permite comparar os casos' },
+    { label: 'relação explicitada', example: 'A comparação vale porque ambos os casos compartilham a mesma barreira de acesso.', diagnosis: 'a premissa da aproximação fica examinável', action: 'ligar o critério à conclusão defendida' },
+  ]),
+  'internal-coherence': workshop('internal-coherence', 'Coerência dentro do argumento', 'As partes do parágrafo se sustentam mutuamente?', [
+    { label: 'salto', example: 'Há desigualdade; portanto basta criar uma campanha.', diagnosis: 'a solução não deriva da causa apresentada', action: 'inserir o mecanismo que conecta causa, consequência e resposta' },
+    { label: 'cadeia coerente', example: 'A falta de informação reduz acesso; por isso a mediação escolar amplia o uso dos serviços.', diagnosis: 'cada passo responde ao anterior', action: 'reler procurando conclusão sem premissa' },
+  ]),
+  'external-coherence': workshop('external-coherence', 'Coerência com o mundo', 'A afirmação é compatível com o conhecimento mobilizado?', [
+    { label: 'dado deslocado', example: 'um número sem fonte ou período é usado como prova total.', diagnosis: 'a evidência não permite a generalização feita', action: 'delimitar fonte, recorte e alcance do dado' },
+    { label: 'evidência situada', example: 'o dado é explicado no período e no grupo a que se refere.', diagnosis: 'a tese respeita o que a informação realmente mostra', action: 'distinguir fato, interpretação e hipótese' },
+  ], 'source'),
+  'data-examples': workshop('data-examples', 'Número que vira argumento', 'O dado ilustra a tese ou apenas ocupa espaço?', [
+    { label: 'estatística solta', example: '“30%” aparece sem fonte, grupo ou consequência.', diagnosis: 'o leitor não sabe o que o número prova', action: 'identificar medida, contexto e implicação' },
+    { label: 'evidência analisada', example: 'o indicador revela uma barreira específica e explica seu efeito.', diagnosis: 'o exemplo passa a funcionar como razão', action: 'conectar explicitamente evidência e tese' },
+  ], 'source'),
+  'prestigious-voices': workshop('prestigious-voices', 'Voz prestigiada com função', 'A autoridade citada substitui o raciocínio ou o aprofunda?', [
+    { label: 'nome de empréstimo', example: 'um autor é mencionado sem ideia nem vínculo.', diagnosis: 'prestígio não demonstra a conclusão', action: 'apresentar o conceito que será usado' },
+    { label: 'conceito mobilizado', example: 'a ideia do autor esclarece o mecanismo do problema.', diagnosis: 'a voz entra como evidência interpretada', action: 'retomar a tese após explicar a referência' },
+  ], 'repertoire'),
+  concession: workshop('concession', 'Conceder sem abandonar a tese', 'O contraponto é reconhecido e depois limitado?', [
+    { label: 'concessão sem retorno', example: '“Embora haja avanços...” e o parágrafo termina aí.', diagnosis: 'a objeção passa a ocupar o centro', action: 'marcar contraste e reafirmar a posição' },
+    { label: 'ressalva produtiva', example: 'o avanço é reconhecido, mas não elimina a barreira analisada.', diagnosis: 'a concessão torna a tese mais precisa', action: 'mostrar qual condição limita o contraponto' },
+  ]),
+  refutation: workshop('refutation', 'Refutar pelo mecanismo', 'A resposta ao contraponto mostra onde ele falha?', [
+    { label: 'negação', example: '“Esse argumento está errado.”', diagnosis: 'a discordância não oferece razão', action: 'identificar a premissa ou consequência problemática' },
+    { label: 'refutação', example: 'a medida é insuficiente porque não alcança o grupo que enfrenta a barreira.', diagnosis: 'o limite é demonstrado com critério', action: 'retomar a tese em formulação fortalecida' },
+  ]),
+  intertextuality: workshop('intertextuality', 'Diálogo entre textos', 'A referência transforma o sentido da tese ou apenas repete uma fórmula conhecida?', [
+    { label: 'alusão decorativa', example: 'uma obra é citada sem relação com o problema.', diagnosis: 'o diálogo não produz leitura nova', action: 'nomear qual aspecto da obra será comparado' },
+    { label: 'intertexto analisado', example: 'a referência ilumina uma contradição presente no tema.', diagnosis: 'dois discursos se esclarecem mutuamente', action: 'explicar o efeito da aproximação' },
+  ], 'source'),
+  'repertoire-bank': workshop('repertoire-bank', 'Banco de repertório utilizável', 'A experiência de um tema anterior é transferida com cuidado?', [
+    { label: 'analogia automática', example: 'uma solução de outro tema é copiada para o novo problema.', diagnosis: 'o contexto pode ter mudado', action: 'comparar mecanismo, agente e limite dos dois casos' },
+    { label: 'transferência justificada', example: 'o caso anterior ajuda porque enfrenta a mesma barreira causal.', diagnosis: 'a referência ganha pertinência', action: 'adaptar a lição ao recorte atual' },
+  ], 'repertoire'),
+  'current-affairs': workshop('current-affairs', 'Fato atual com prazo de validade', 'O acontecimento recente é usado como dado verificável, não como manchete?', [
+    { label: 'manchete genérica', example: '“as notícias mostram que o problema cresceu”.', diagnosis: 'falta evento, fonte e relação causal', action: 'registrar o fato e o que ele permite concluir' },
+    { label: 'fato contextualizado', example: 'o acontecimento tem data, contexto e limite de interpretação.', diagnosis: 'atualidade apoia sem substituir a análise', action: 'vincular o fato à tese, não à impressão pessoal' },
+  ], 'source'),
+  domains: workshop('domains', 'Cruzar domínios sem colagem', 'As áreas do saber se complementam para explicar uma mesma questão?', [
+    { label: 'lista de áreas', example: 'história, ciência e arte aparecem sem conexão.', diagnosis: 'amplitude não vira argumento', action: 'definir a pergunta comum que orienta as referências' },
+    { label: 'lentes complementares', example: 'um dado social mostra o efeito e um conceito histórico explica sua origem.', diagnosis: 'as áreas cumprem funções diferentes', action: 'sintetizar a relação entre as lentes' },
+  ], 'repertoire'),
+  'conclusion-synthesis': workshop('conclusion-synthesis', 'Fecho que retoma e avança', 'A conclusão volta à tese sem copiar a introdução?', [
+    { label: 'repetição', example: 'a mesma tese reaparece sem incorporar o percurso do texto.', diagnosis: 'o fecho não mostra elaboração', action: 'sintetizar as razões já desenvolvidas' },
+    { label: 'retomada enriquecida', example: 'a tese retorna à luz das relações demonstradas.', diagnosis: 'a conclusão dá unidade ao percurso', action: 'não abrir uma evidência nova no último momento' },
+  ], 'genre'),
+  'conclusion-focus': workshop('conclusion-focus', 'Síntese com foco', 'O último parágrafo seleciona o essencial?', [
+    { label: 'resumo em lista', example: 'cada argumento é repetido na mesma ordem.', diagnosis: 'muita informação, pouca direção', action: 'eleger a consequência ou a tese que organiza o fecho' },
+    { label: 'focalização', example: 'a síntese destaca a relação decisiva do argumento.', diagnosis: 'o leitor reconhece a ideia que permanece', action: 'ajustar o tom final ao efeito desejado' },
+  ], 'genre'),
+  'intervention-agents': workshop('intervention-agents', 'Agente com responsabilidade', 'Quem pode executar a ação proposta?', [
+    { label: 'agente abstrato', example: '“a sociedade deve resolver”.', diagnosis: 'não há competência nem ação verificável', action: 'nomear instituição ou coletivo com atribuição real' },
+    { label: 'agente situado', example: 'a escola forma leitores críticos em parceria com a rede local.', diagnosis: 'agente e capacidade ficam coerentes', action: 'detalhar meio e finalidade da ação' },
+  ], 'theme'),
+  'intervention-feasibility': workshop('intervention-feasibility', 'Intervenção viável e inventiva', 'A proposta indica como sai do papel?', [
+    { label: 'verbo sem meio', example: '“criar uma política” sem recurso, canal ou etapa.', diagnosis: 'a solução não permite avaliar execução', action: 'explicar instrumento, articulação e alcance' },
+    { label: 'caminho executável', example: 'a ação prevê formação, canal de acesso e acompanhamento.', diagnosis: 'a proposta mostra condições de funcionamento', action: 'verificar se a inovação responde ao obstáculo real' },
+  ], 'theme'),
+  'intervention-coherence': workshop('intervention-coherence', 'Resposta proporcional ao diagnóstico', 'A intervenção enfrenta a causa apresentada?', [
+    { label: 'solução deslocada', example: 'o texto diagnostica acesso e propõe apenas campanha.', diagnosis: 'meio e problema não se encontram', action: 'ligar cada ação a uma causa analisada' },
+    { label: 'resposta encadeada', example: 'a medida remove a barreira descrita no desenvolvimento.', diagnosis: 'a conclusão completa o projeto argumentativo', action: 'revisar os elos entre tese, causas e proposta' },
+  ], 'theme'),
+  'intervention-rights': workshop('intervention-rights', 'Intervir preservando direitos', 'A proposta combate o problema sem violar dignidade ou liberdade?', [
+    { label: 'controle punitivo', example: 'a solução restringe um grupo sem garantia nem participação.', diagnosis: 'eficiência alegada não justifica violação de direitos', action: 'examinar meios, destinatários e efeitos da medida' },
+    { label: 'proteção de direitos', example: 'a ação amplia acesso, escuta e proteção sem discriminar.', diagnosis: 'a proposta mantém a dignidade como limite', action: 'explicitar como o meio respeita quem será afetado' },
+  ], 'theme'),
+  'reference-cohesion': workshop('reference-cohesion', 'Referente sem ambiguidade', 'O leitor sabe a que cada retomada se refere?', [
+    { label: 'pronome ambíguo', example: 'dois termos possíveis antecedem “ele” ou “isso”.', diagnosis: 'a cadeia referencial se rompe', action: 'substituir por expressão nominal específica' },
+    { label: 'retomada precisa', example: 'a expressão recupera exatamente a ideia necessária.', diagnosis: 'frases se conectam sem adivinhação', action: 'alternar formas sem esconder o referente' },
+  ], 'source'),
+  'sequential-cohesion': workshop('sequential-cohesion', 'Conectivo com relação lógica', 'A palavra de ligação corresponde ao movimento do raciocínio?', [
+    { label: 'conectivo automático', example: '“portanto” aparece onde há apenas contraste.', diagnosis: 'a relação anunciada contradiz o argumento', action: 'nomear se há causa, oposição, condição ou conclusão' },
+    { label: 'encadeamento explícito', example: 'o conectivo torna visível a passagem entre as ideias.', diagnosis: 'o leitor acompanha a progressão', action: 'variar conectivos preservando a relação lógica' },
+  ], 'source'),
+  'cohesion-diagnosis': workshop('cohesion-diagnosis', 'Diagnóstico de ruptura', 'Em que ponto a sequência deixa de conduzir o leitor?', [
+    { label: 'lacuna de relação', example: 'a frase seguinte muda de assunto sem ponte.', diagnosis: 'há informação, mas falta ligação', action: 'inserir a relação ou reorganizar a ordem' },
+    { label: 'progressão', example: 'cada frase retoma e acrescenta uma informação necessária.', diagnosis: 'o parágrafo avança sem saltos', action: 'eliminar repetições que não cumprem função' },
+  ], 'source'),
+  'language-clarity': workshop('language-clarity', 'Norma a favor da clareza', 'A escolha linguística ajuda o leitor a recuperar o sentido?', [
+    { label: 'opacidade', example: 'período longo acumula encaixes e termos vagos.', diagnosis: 'a forma dificulta a tese', action: 'dividir unidades e escolher termos específicos' },
+    { label: 'precisão expressiva', example: 'a frase tem sujeito, relação e vocabulário adequados.', diagnosis: 'a norma serve à inteligibilidade', action: 'revisar concordância e pontuação no texto real' },
+  ]),
+  'rights-generations': workshop('rights-generations', 'Direitos individuais em conflito', 'Que liberdade precisa ser protegida e qual limite público entra em jogo?', [
+    { label: 'direito abstrato', example: 'liberdade é citada sem sujeito nem situação.', diagnosis: 'não há como avaliar o conflito', action: 'indicar titular, proteção e eventual limite' },
+    { label: 'garantia situada', example: 'a liberdade é ligada à proteção contra interferência arbitrária.', diagnosis: 'o direito individual ganha sentido concreto', action: 'articular liberdade e igualdade perante a lei' },
+  ], 'theme'),
+  'rights-social': workshop('rights-social', 'Direitos sociais, coletivos e difusos', 'O problema exige prestação, participação coletiva ou proteção de interesse comum?', [
+    { label: 'direito sem obrigação', example: 'saúde ou ambiente são citados sem dever correspondente.', diagnosis: 'o texto não mostra quem deve assegurar o direito', action: 'identificar política, responsabilidade e grupo alcançado' },
+    { label: 'proteção compartilhada', example: 'o direito orienta ação pública e participação social.', diagnosis: 'a dimensão coletiva fica visível', action: 'distinguir titularidade individual e efeito coletivo' },
+  ], 'theme'),
+  'model-essay': workshop('model-essay', 'Ler modelo sem imitar molde', 'O que merece ser estudado numa redação de alto desempenho?', [
+    { label: 'caça a frases', example: 'trechos são copiados como fórmula.', diagnosis: 'a técnica desaparece atrás da superfície', action: 'perguntar qual função cada escolha cumpre' },
+    { label: 'leitura de estratégia', example: 'tese, evidência, progressão e proposta são identificadas.', diagnosis: 'o modelo vira objeto de análise', action: 'adaptar o procedimento ao novo tema' },
+  ], 'genre'),
+  'media-revision': workshop('media-revision', 'Revisar texto publicado', 'O aprimoramento nasce de impressão vaga ou de critério?', [
+    { label: 'comentário genérico', example: '“o texto está fraco”.', diagnosis: 'não informa o que mudar', action: 'localizar problema de tese, evidência, coesão ou proposta' },
+    { label: 'revisão localizada', example: 'a evidência é pertinente, mas falta explicar seu vínculo com a tese.', diagnosis: 'o diagnóstico orienta a reescrita', action: 'reescrever o trecho e conferir o efeito produzido' },
+  ], 'source'),
 };
 
 export function writingInstrumentState(id: WritingInstrumentId, index: number) {

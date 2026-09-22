@@ -92,6 +92,8 @@ test('crivo subjects: normaliza acentos e avisa uma vez para matéria desconheci
   console.warn = (...args: unknown[]) => warnings.push(args);
   try {
     assert.equal(getSubjectProfile('  Matemática ').key, 'matematica');
+    assert.equal(getSubjectProfile(undefined).key, DEFAULT_SUBJECT_PROFILE.key);
+    assert.equal(getSubjectProfile('   ').key, DEFAULT_SUBJECT_PROFILE.key);
     assert.equal(getSubjectProfile('Astronomia').key, DEFAULT_SUBJECT_PROFILE.key);
     assert.equal(getSubjectProfile('Astronomia').key, DEFAULT_SUBJECT_PROFILE.key);
     assert.equal(warnings.length, 1);

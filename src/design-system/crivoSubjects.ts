@@ -149,6 +149,7 @@ const normalizeSubject = (subject: string) => subject.trim().normalize('NFD').re
 
 export function getSubjectProfile(subject: string | null | undefined): SubjectProfile {
   const key = normalizeSubject(subject ?? '');
+  if (!key) return DEFAULT_SUBJECT_PROFILE;
   const known = SUBJECT_REGISTRY[key];
   if (known) return known;
   if (!warnedUnknownSubjects.has(key)) {
