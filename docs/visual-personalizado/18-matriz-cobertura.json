@@ -3,9 +3,9 @@
   "counts": {
     "experiment": 11,
     "board": 43,
-    "instrument": 299,
+    "instrument": 323,
     "scene": 186,
-    "fallback": 74
+    "fallback": 50
   },
   "contested": 18,
   "subjects": [
@@ -81,9 +81,9 @@
       "counts": {
         "experiment": 1,
         "board": 0,
-        "instrument": 5,
+        "instrument": 29,
         "scene": 0,
-        "fallback": 52
+        "fallback": 28
       }
     },
     {
@@ -2570,192 +2570,192 @@
       "id": "summary-redacao-diferentes-graus-de-adequacao-a-proposta",
       "subject": "Redação",
       "title": "Diferentes Graus de Adequação à Proposta",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "adequacao-proposta",
       "ignored": []
     },
     {
       "id": "summary-redacao-tangenciamento-e-fuga-a-fronteira-do-tema",
       "subject": "Redação",
       "title": "Tangenciamento e Fuga: a Fronteira do Tema",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "fronteira-tema",
       "ignored": []
     },
     {
       "id": "summary-redacao-generos-e-sua-relacao-com-a-estrutura-do-texto",
       "subject": "Redação",
       "title": "Gêneros e sua Relação com a Estrutura do Texto",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "genero-estrutura",
       "ignored": []
     },
     {
       "id": "summary-redacao-estrutura-classica-do-texto-dissertativo",
       "subject": "Redação",
       "title": "Estrutura Clássica do Texto Dissertativo",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "estrutura-dissertativa",
       "ignored": []
     },
     {
       "id": "summary-redacao-lendo-a-coletanea-a-apreensao-de-sentidos-i",
       "subject": "Redação",
       "title": "Lendo a Coletânea: a Apreensão de Sentidos I",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "coletanea-sentidos-i",
       "ignored": []
     },
     {
       "id": "summary-redacao-lendo-a-coletanea-a-apreensao-de-sentidos-ii",
       "subject": "Redação",
       "title": "Lendo a Coletânea: a Apreensão de Sentidos II",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "coletanea-sentidos-ii",
       "ignored": []
     },
     {
       "id": "summary-redacao-lendo-a-coletanea-a-compreensao-e-o-texto-autoral-i",
       "subject": "Redação",
       "title": "Lendo a Coletânea: a Compreensão e o Texto Autoral I",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "coletanea-autoria-i",
       "ignored": []
     },
     {
       "id": "summary-redacao-lendo-a-coletanea-a-compreensao-e-o-texto-autoral-ii",
       "subject": "Redação",
       "title": "Lendo a Coletânea: a Compreensão e o Texto Autoral II",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "coletanea-autoria-ii",
       "ignored": []
     },
     {
       "id": "summary-redacao-incrementando-o-repertorio-meio-ambiente",
       "subject": "Redação",
       "title": "Incrementando o Repertório: Meio Ambiente",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "rep-meio-ambiente",
       "ignored": []
     },
     {
       "id": "summary-redacao-analisando-tema-de-redacao-meio-ambiente",
       "subject": "Redação",
       "title": "Analisando Tema de Redação: Meio Ambiente",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "tema-meio-ambiente",
       "ignored": []
     },
     {
       "id": "summary-redacao-incrementando-o-repertorio-educacao-e-trabalho",
       "subject": "Redação",
       "title": "Incrementando o Repertório: Educação e Trabalho",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "rep-educacao-trabalho",
       "ignored": []
     },
     {
       "id": "summary-redacao-analisando-tema-de-redacao-educacao-e-trabalho",
       "subject": "Redação",
       "title": "Analisando Tema de Redação: Educação e Trabalho",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "tema-educacao-trabalho",
       "ignored": []
     },
     {
       "id": "summary-redacao-incrementando-o-repertorio-temas-abstratos",
       "subject": "Redação",
       "title": "Incrementando o Repertório: Temas Abstratos",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "rep-abstratos",
       "ignored": []
     },
     {
       "id": "summary-redacao-analisando-tema-abstrato-de-redacao",
       "subject": "Redação",
       "title": "Analisando Tema Abstrato de Redação",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "tema-abstrato",
       "ignored": []
     },
     {
       "id": "summary-redacao-incrementando-o-repertorio-corpo-saude-e-sexualidade",
       "subject": "Redação",
       "title": "Incrementando o Repertório: Corpo, Saúde e Sexualidade",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "rep-corpo-saude",
       "ignored": []
     },
     {
       "id": "summary-redacao-analisando-tema-de-redacao-corpo-saude-e-sexualidade",
       "subject": "Redação",
       "title": "Analisando Tema de Redação: Corpo, Saúde e Sexualidade",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "tema-corpo-saude",
       "ignored": []
     },
     {
       "id": "summary-redacao-incrementando-o-repertorio-violencia-leis-e-punicao",
       "subject": "Redação",
       "title": "Incrementando o Repertório: Violência, Leis e Punição",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "rep-violencia",
       "ignored": []
     },
     {
       "id": "summary-redacao-analisando-tema-de-redacao-violencia-leis-e-punicao",
       "subject": "Redação",
       "title": "Analisando Tema de Redação: Violência, Leis e Punição",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "tema-violencia",
       "ignored": []
     },
     {
       "id": "summary-redacao-incrementando-o-repertorio-cidadania-e-poder",
       "subject": "Redação",
       "title": "Incrementando o Repertório: Cidadania e Poder",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "rep-cidadania",
       "ignored": []
     },
     {
       "id": "summary-redacao-analisando-tema-de-redacao-cidadania-e-poder",
       "subject": "Redação",
       "title": "Analisando Tema de Redação: Cidadania e Poder",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "tema-cidadania",
       "ignored": []
     },
     {
       "id": "summary-redacao-incrementando-o-repertorio-arte-cultura-e-relacoes-sociais",
       "subject": "Redação",
       "title": "Incrementando o Repertório: Arte, Cultura e Relações Sociais",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "rep-arte-cultura",
       "ignored": []
     },
     {
       "id": "summary-redacao-analisando-o-tema-de-redacao-arte-cultura-e-relacoes-sociais",
       "subject": "Redação",
       "title": "Analisando o Tema de Redação: Arte, Cultura e Relações Sociais",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "tema-arte-cultura",
       "ignored": []
     },
     {
       "id": "summary-redacao-incrementando-o-repertorio-midia-e-sociedade",
       "subject": "Redação",
       "title": "Incrementando o Repertório: Mídia e Sociedade",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "rep-midia",
       "ignored": []
     },
     {
       "id": "summary-redacao-analisando-tema-de-redacao-midia-e-sociedade",
       "subject": "Redação",
       "title": "Analisando Tema de Redação: Mídia e Sociedade",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "tema-midia",
       "ignored": []
     },
     {
