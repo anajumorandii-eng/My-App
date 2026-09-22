@@ -116,6 +116,17 @@
 .tc-degrau-ativo { stroke: var(--vs-blue); opacity: 1; filter: url(#sketch-filter); }
 .tc-marcador { fill: var(--vs-amber); stroke: var(--vs-paper-strong); stroke-width: 2.5; filter: url(#sketch-filter); }
 .tc-caption { font-family: 'Caveat', cursive; font-size: 14px; fill: currentColor; opacity: 0.8; }
+.tc-scale-figure { display: grid; gap: .6rem; min-width: 0; margin: 0; }
+.tc-scale-figure svg { display: block; overflow: hidden; }
+.tc-scale-label { font-size: 18px; }
+.tc-scale-axis {
+  margin: 0;
+  padding-inline: .25rem;
+  color: var(--vs-dim);
+  font: 600 clamp(.82rem, 2.8vw, 1rem)/1.4 'Kalam', 'Caveat', cursive;
+  overflow-wrap: anywhere;
+  text-align: center;
+}
 
 .tc-slider {
   display: grid;

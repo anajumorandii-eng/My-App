@@ -3,9 +3,9 @@
   "counts": {
     "experiment": 11,
     "board": 43,
-    "instrument": 334,
+    "instrument": 373,
     "scene": 186,
-    "fallback": 39
+    "fallback": 0
   },
   "contested": 18,
   "subjects": [
@@ -81,9 +81,9 @@
       "counts": {
         "experiment": 1,
         "board": 0,
-        "instrument": 29,
+        "instrument": 57,
         "scene": 0,
-        "fallback": 28
+        "fallback": 0
       }
     },
     {
@@ -114,9 +114,9 @@
       "counts": {
         "experiment": 1,
         "board": 0,
-        "instrument": 0,
+        "instrument": 11,
         "scene": 0,
-        "fallback": 11
+        "fallback": 0
       }
     },
     {
@@ -2762,224 +2762,224 @@
       "id": "summary-redacao-paragrafo-de-introducao-delimitando-a-opiniao",
       "subject": "Redação",
       "title": "Parágrafo de Introdução: Delimitando a Opinião",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "intro-tese",
       "ignored": []
     },
     {
       "id": "summary-redacao-paragrafo-de-introducao-como-contextualizar",
       "subject": "Redação",
       "title": "Parágrafo de Introdução: como Contextualizar",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "intro-contexto",
       "ignored": []
     },
     {
       "id": "summary-redacao-argumentacao-auditorio-particular-e-universal",
       "subject": "Redação",
       "title": "Argumentação: Auditório Particular e Universal",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "auditorio",
       "ignored": []
     },
     {
       "id": "summary-redacao-argumentacao-quase-logica-e-efeito-de-verdade",
       "subject": "Redação",
       "title": "Argumentação Quase-Lógica e Efeito de Verdade",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "quase-logica",
       "ignored": []
     },
     {
       "id": "summary-redacao-argumentacao-e-coerencia-interna",
       "subject": "Redação",
       "title": "Argumentação e Coerência Interna",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "coerencia-interna",
       "ignored": []
     },
     {
       "id": "summary-redacao-argumentacao-e-coerencia-externa",
       "subject": "Redação",
       "title": "Argumentação e Coerência Externa",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "coerencia-externa",
       "ignored": []
     },
     {
       "id": "summary-redacao-recursos-argumentativos-dados-numericos-e-exemplos",
       "subject": "Redação",
       "title": "Recursos Argumentativos: Dados Numéricos e Exemplos",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "dados-exemplos",
       "ignored": []
     },
     {
       "id": "summary-redacao-recursos-argumentativos-vozes-prestigiadas",
       "subject": "Redação",
       "title": "Recursos Argumentativos: Vozes Prestigiadas",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "vozes-prestigiadas",
       "ignored": []
     },
     {
       "id": "summary-redacao-ressalvando-o-ponto-de-vista-contrario",
       "subject": "Redação",
       "title": "Ressalvando o Ponto de Vista Contrário",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "ressalva",
       "ignored": []
     },
     {
       "id": "summary-redacao-refutando-o-ponto-contrario",
       "subject": "Redação",
       "title": "Refutando o Ponto Contrário",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "refutacao",
       "ignored": []
     },
     {
       "id": "summary-redacao-recursos-argumentativos-interdiscursividade-e-intertextualidade",
       "subject": "Redação",
       "title": "Recursos Argumentativos: Interdiscursividade e Intertextualidade",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "interdiscursividade",
       "ignored": []
     },
     {
       "id": "summary-redacao-recursos-argumentativos-temas-de-redacao-ja-analisados",
       "subject": "Redação",
       "title": "Recursos Argumentativos: Temas de Redação já Analisados",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "temas-analisados",
       "ignored": []
     },
     {
       "id": "summary-redacao-recursos-argumentativos-fatos-da-atualidade",
       "subject": "Redação",
       "title": "Recursos Argumentativos: Fatos da Atualidade",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "fatos-atualidade",
       "ignored": []
     },
     {
       "id": "summary-redacao-recursos-argumentativos-multiplos-dominios-do-saber",
       "subject": "Redação",
       "title": "Recursos Argumentativos: Múltiplos Domínios do Saber",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "multiplos-dominios",
       "ignored": []
     },
     {
       "id": "summary-redacao-conclusao-por-sintese-ou-retomada-da-tese",
       "subject": "Redação",
       "title": "Conclusão por Síntese ou Retomada da Tese",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "conclusao-sintese",
       "ignored": []
     },
     {
       "id": "summary-redacao-conclusao-sumarizacao-focalizacao-e-expressividade",
       "subject": "Redação",
       "title": "Conclusão: Sumarização, Focalização e Expressividade",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "conclusao-foco",
       "ignored": []
     },
     {
       "id": "summary-redacao-proposta-de-intervencao-atores-sociais-e-cidadania",
       "subject": "Redação",
       "title": "Proposta de Intervenção: Atores Sociais e Cidadania",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "intervencao-atores",
       "ignored": []
     },
     {
       "id": "summary-redacao-proposta-de-intervencao-viabilizacao-e-inovacao",
       "subject": "Redação",
       "title": "Proposta de Intervenção: Viabilização e Inovação",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "intervencao-viabilidade",
       "ignored": []
     },
     {
       "id": "summary-redacao-proposta-de-intervencao-coerencia-argumentativa",
       "subject": "Redação",
       "title": "Proposta de Intervenção: Coerência Argumentativa",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "intervencao-coerencia",
       "ignored": []
     },
     {
       "id": "summary-redacao-proposta-de-intervencao-respeito-aos-direitos-humanos",
       "subject": "Redação",
       "title": "Proposta de Intervenção: Respeito aos Direitos Humanos",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "intervencao-direitos",
       "ignored": []
     },
     {
       "id": "summary-redacao-recursos-de-coesao-referencial-no-texto-dissertativo",
       "subject": "Redação",
       "title": "Recursos de Coesão Referencial no Texto Dissertativo",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "coesao-referencial",
       "ignored": []
     },
     {
       "id": "summary-redacao-recursos-de-coesao-sequencial-no-texto-dissertativo",
       "subject": "Redação",
       "title": "Recursos de Coesão Sequencial no Texto Dissertativo",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "coesao-sequencial",
       "ignored": []
     },
     {
       "id": "summary-redacao-coesao-no-texto-dissertativo-analise-de-problemas",
       "subject": "Redação",
       "title": "Coesão no Texto Dissertativo: Análise de Problemas",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "coesao-problemas",
       "ignored": []
     },
     {
       "id": "summary-redacao-recursos-linguisticos-norma-clareza-e-expressividade",
       "subject": "Redação",
       "title": "Recursos Linguísticos: Norma, Clareza e Expressividade",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "linguagem-clareza",
       "ignored": []
     },
     {
       "id": "summary-redacao-os-direitos-humanos-de-1-geracao-direitos-individuais",
       "subject": "Redação",
       "title": "Os Direitos Humanos de 1ª Geração: Direitos Individuais",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "direitos-1",
       "ignored": []
     },
     {
       "id": "summary-redacao-os-direitos-humanos-de-2-e-3-geracao-direitos-sociais-coletivos-e-difusos",
       "subject": "Redação",
       "title": "Os Direitos Humanos de 2ª e 3ª Geração: Direitos Sociais, Coletivos e Difusos",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "direitos-23",
       "ignored": []
     },
     {
       "id": "summary-redacao-redacoes-nota-1000-trunfos-a-inspirar",
       "subject": "Redação",
       "title": "Redações Nota 1000: Trunfos a Inspirar",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "nota-mil",
       "ignored": []
     },
     {
       "id": "summary-redacao-redacoes-na-midia-como-aprimorar",
       "subject": "Redação",
       "title": "Redações na Mídia: como Aprimorar",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "redacao-midia",
       "ignored": []
     },
     {
@@ -3498,88 +3498,88 @@
       "id": "summary-entendimento-de-texto-os-dois-niveis-da-leitura",
       "subject": "Entendimento de Texto",
       "title": "Os Dois Níveis da Leitura",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "niveis-leitura",
       "ignored": []
     },
     {
       "id": "summary-entendimento-de-texto-intertextualidade-e-interdiscursividade",
       "subject": "Entendimento de Texto",
       "title": "Intertextualidade e Interdiscursividade",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "intertextualidade",
       "ignored": []
     },
     {
       "id": "summary-entendimento-de-texto-generos-textuais",
       "subject": "Entendimento de Texto",
       "title": "Gêneros Textuais",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "generos",
       "ignored": []
     },
     {
       "id": "summary-entendimento-de-texto-generos-narrativos-e-niveis-de-compreensao",
       "subject": "Entendimento de Texto",
       "title": "Gêneros Narrativos e Níveis de Compreensão",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "narrativos",
       "ignored": []
     },
     {
       "id": "summary-entendimento-de-texto-generos-nao-verbais-fundamentos-de-leitura",
       "subject": "Entendimento de Texto",
       "title": "Gêneros não Verbais: Fundamentos de Leitura",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "nao-verbais",
       "ignored": []
     },
     {
       "id": "summary-entendimento-de-texto-funcoes-da-linguagem",
       "subject": "Entendimento de Texto",
       "title": "Funções da Linguagem",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "funcoes",
       "ignored": []
     },
     {
       "id": "summary-entendimento-de-texto-funcao-poetica-e-linguagem-literaria",
       "subject": "Entendimento de Texto",
       "title": "Função Poética e Linguagem Literária",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "poetica",
       "ignored": []
     },
     {
       "id": "summary-entendimento-de-texto-figuras-de-linguagem",
       "subject": "Entendimento de Texto",
       "title": "Figuras de Linguagem",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "figuras",
       "ignored": []
     },
     {
       "id": "summary-entendimento-de-texto-modelos-de-leitura-e-distorcoes-interpretativas",
       "subject": "Entendimento de Texto",
       "title": "Modelos de Leitura e Distorções Interpretativas",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "distorcoes",
       "ignored": []
     },
     {
       "id": "summary-entendimento-de-texto-leitura-de-textos-comicos",
       "subject": "Entendimento de Texto",
       "title": "Leitura de Textos Cômicos",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "comicos",
       "ignored": []
     },
     {
       "id": "summary-entendimento-de-texto-tecnologias-digitais-da-informacao-e-comunicacao-tdic-impactos-sociais",
       "subject": "Entendimento de Texto",
       "title": "Tecnologias Digitais da Informação e Comunicação (TDIC): Impactos Sociais",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "instrument",
+      "artifact": "tdic",
       "ignored": []
     },
     {

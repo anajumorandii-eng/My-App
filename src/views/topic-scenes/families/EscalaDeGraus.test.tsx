@@ -45,4 +45,18 @@ describe('Escala de graus', () => {
     render(<EscalaDeGraus entry={entry} />);
     expect(screen.getByText('do primeiro ao último grau')).toBeInTheDocument();
   });
+
+  it('reserva uma faixa interna e quebra os rótulos longos antes do gráfico', () => {
+    const comRotulosLongos: SceneEntry = {
+      ...entry,
+      items: [
+        { ...entry.items[0], label: 'Comunidade pioneira' },
+        { ...entry.items[1], label: 'Estágios intermediários' },
+      ],
+    };
+    const { container } = render(<EscalaDeGraus entry={comRotulosLongos} />);
+    expect(screen.getByRole('img')).toHaveAttribute('viewBox', '0 0 480 180');
+    expect(screen.getAllByTestId('scale-label')[0]).toHaveAttribute('x', '152');
+    expect(container.querySelectorAll('[data-testid="scale-label"] tspan')).toHaveLength(4);
+  });
 });

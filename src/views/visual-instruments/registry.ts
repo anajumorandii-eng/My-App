@@ -73,6 +73,8 @@ import { englishInstrument } from './EnglishInstrument';
 import type { EnglishInstrumentId } from '../../lib/englishInstrumentLab';
 import { writingInstrument } from './WritingInstrument';
 import type { WritingInstrumentId } from '../../lib/writingInstrumentLab';
+import { readingInstrument } from './ReadingInstrument';
+import type { ReadingInstrumentId } from '../../lib/readingInstrumentLab';
 import { literaryTraitInstrument } from './LiteraryTraitInstrument';
 import type { LiteraryTraitId } from '../../lib/literaryTraitLab';
 import { literaryAuthorInstrument } from './LiteraryAuthorInstrument';
@@ -177,6 +179,7 @@ function historicoFase(id:string,topic:string,config:HistoryPhaseId):InstrumentE
 function gramatical(id:string,topic:string,config:GrammarInstrumentId):InstrumentEntry{return{id,subject:'Gramática',keywords:[topic],exactTopic:topic,Component:grammarInstrument(config)}}
 function ingles(id:string,topic:string,config:EnglishInstrumentId):InstrumentEntry{return{id,subject:'Língua Inglesa',keywords:[topic],exactTopic:topic,Component:englishInstrument(config)}}
 function redacao(id:string,topic:string,config:WritingInstrumentId):InstrumentEntry{return{id,subject:'Redação',keywords:[topic],exactTopic:topic,Component:writingInstrument(config)}}
+function leitura(id:string,topic:string,config:ReadingInstrumentId):InstrumentEntry{return{id,subject:'Entendimento de Texto',keywords:[topic],exactTopic:topic,Component:readingInstrument(config)}}
 /**
  * Literatura, rodada de cobertura pedida pela Ana Júlia: capítulos sem objeto
  * manipulável único ganham instrumento genérico de três facetas comparáveis,
@@ -459,6 +462,11 @@ export const INSTRUMENTS: InstrumentEntry[] = [
   redacao('tema-arte-cultura','analisando o tema de redação: arte, cultura e relações sociais','theme-culture'),
   redacao('rep-midia','incrementando o repertório: mídia e sociedade','repertoire-media'),
   redacao('tema-midia','analisando tema de redação: mídia e sociedade','theme-media'),
+  redacao('intro-tese','parágrafo de introdução: delimitando a opinião','intro-thesis'),redacao('intro-contexto','parágrafo de introdução: como contextualizar','intro-context'),redacao('auditorio','argumentação: auditório particular e universal','audience'),redacao('quase-logica','argumentação quase-lógica e efeito de verdade','quasi-logic'),redacao('coerencia-interna','argumentação e coerência interna','internal-coherence'),redacao('coerencia-externa','argumentação e coerência externa','external-coherence'),
+  redacao('dados-exemplos','recursos argumentativos: dados numéricos e exemplos','data-examples'),redacao('vozes-prestigiadas','recursos argumentativos: vozes prestigiadas','prestigious-voices'),redacao('ressalva','ressalvando o ponto de vista contrário','concession'),redacao('refutacao','refutando o ponto contrário','refutation'),redacao('interdiscursividade','recursos argumentativos: interdiscursividade e intertextualidade','intertextuality'),redacao('temas-analisados','recursos argumentativos: temas de redação já analisados','repertoire-bank'),redacao('fatos-atualidade','recursos argumentativos: fatos da atualidade','current-affairs'),redacao('multiplos-dominios','recursos argumentativos: múltiplos domínios do saber','domains'),
+  redacao('conclusao-sintese','conclusão por síntese ou retomada da tese','conclusion-synthesis'),redacao('conclusao-foco','conclusão: sumarização, focalização e expressividade','conclusion-focus'),redacao('intervencao-atores','proposta de intervenção: atores sociais e cidadania','intervention-agents'),redacao('intervencao-viabilidade','proposta de intervenção: viabilização e inovação','intervention-feasibility'),redacao('intervencao-coerencia','proposta de intervenção: coerência argumentativa','intervention-coherence'),redacao('intervencao-direitos','proposta de intervenção: respeito aos direitos humanos','intervention-rights'),
+  redacao('coesao-referencial','recursos de coesão referencial no texto dissertativo','reference-cohesion'),redacao('coesao-sequencial','recursos de coesão sequencial no texto dissertativo','sequential-cohesion'),redacao('coesao-problemas','coesão no texto dissertativo: análise de problemas','cohesion-diagnosis'),redacao('linguagem-clareza','recursos linguísticos: norma, clareza e expressividade','language-clarity'),redacao('direitos-1','os direitos humanos de 1ª geração: direitos individuais','rights-generations'),redacao('direitos-23','os direitos humanos de 2ª e 3ª geração: direitos sociais, coletivos e difusos','rights-social'),redacao('nota-mil','redações nota 1000: trunfos a inspirar','model-essay'),redacao('redacao-midia','redações na mídia: como aprimorar','media-revision'),
+  leitura('niveis-leitura','os dois níveis da leitura','levels'),leitura('intertextualidade','intertextualidade e interdiscursividade','intertext'),leitura('generos','gêneros textuais','genres'),leitura('narrativos','gêneros narrativos e níveis de compreensão','narrative'),leitura('nao-verbais','gêneros não verbais: fundamentos de leitura','nonverbal'),leitura('funcoes','funções da linguagem','functions'),leitura('poetica','função poética e linguagem literária','poetic'),leitura('figuras','figuras de linguagem','figures'),leitura('distorcoes','modelos de leitura e distorções interpretativas','distortions'),leitura('comicos','leitura de textos cômicos','comic'),leitura('tdic','tecnologias digitais da informação e comunicação (tdic): impactos sociais','tdic'),
 
   // Literatura: 22 capítulos de estética/movimento/campo (três facetas
   // comparáveis por capítulo) e 6 de autor monográfico (trajetória, técnica,

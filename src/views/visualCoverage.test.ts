@@ -23,10 +23,10 @@ describe('visualCandidates', () => {
     expect(experimento).toEqual({ kind: 'experiment', id: 'ecology' });
   });
 
-  it('um capítulo sem nenhum artefato não tem candidatos', () => {
-    // A amostra precisa continuar sendo uma lacuna real. A cobertura de
-    // Física é integralmente instrumental nesta rodada.
-    expect(visualCandidates(chapter('summary-redacao-paragrafo-de-introducao-delimitando-a-opiniao'))).toEqual([]);
+  it('um capítulo recém-coberto aponta para o instrumento editorial específico', () => {
+    expect(visualCandidates(chapter('summary-redacao-paragrafo-de-introducao-delimitando-a-opiniao'))).toEqual([
+      { kind: 'instrument', id: 'intro-tese' },
+    ]);
   });
 
   it('o primeiro candidato é sempre o que a tela resolve, em todos os capítulos', () => {
@@ -41,10 +41,10 @@ describe('buildVisualCoverage', () => {
   it('classifica cada capítulo pela representação que a tela resolve', () => {
     const coverage = buildVisualCoverage([chapter('bio-ecologia-introducao'), chapter('summary-redacao-paragrafo-de-introducao-delimitando-a-opiniao')]);
     expect(coverage.total).toBe(2);
-    expect(coverage.counts).toEqual({ experiment: 1, board: 0, instrument: 0, scene: 0, fallback: 1 });
+    expect(coverage.counts).toEqual({ experiment: 1, board: 0, instrument: 1, scene: 0, fallback: 0 });
     expect(coverage.rows.map((row) => [row.id, row.primary, row.artifact])).toEqual([
       ['bio-ecologia-introducao', 'experiment', 'ecology'],
-      ['summary-redacao-paragrafo-de-introducao-delimitando-a-opiniao', 'fallback', null],
+      ['summary-redacao-paragrafo-de-introducao-delimitando-a-opiniao', 'instrument', 'intro-tese'],
     ]);
   });
 
