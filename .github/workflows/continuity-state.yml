@@ -1,0 +1,51 @@
+name: Atualizar estado de continuidade
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  registrar-estado:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Gerar instantâneo enxuto
+        env:
+          SOURCE_SHA: ${{ github.sha }}
+          SOURCE_REF: ${{ github.ref_name }}
+        run: |
+          mkdir -p docs
+          files_json="$(git diff-tree --no-commit-id --name-only -r "$SOURCE_SHA" | jq -Rsc 'split("\n") | map(select(length > 0))')"
+          jq -n \
+            --arg repository "$GITHUB_REPOSITORY" \
+            --arg branch "$SOURCE_REF" \
+            --arg source_commit "$SOURCE_SHA" \
+            --arg generated_at "$(date -u +%Y-%m-%dT%H:%M:%SZ)" \
+            --argjson changed_files "$files_json" \
+            '{
+              schema_version: 1,
+              repository: $repository,
+              branch: $branch,
+              source_commit: $source_commit,
+              generated_at_utc: $generated_at,
+              changed_files: $changed_files,
+              next_session: {
+                mode: "delta-only",
+                instructions: "Leia docs/CRIVO-CONTINUIDADE.md e este arquivo; então consulte no GitHub apenas os commits posteriores a source_commit. Não clone o repositório completo sem necessidade técnica."
+              }
+            }' > docs/CONTINUIDADE-ESTADO.json
+
+      - name: Gravar instantâneo no repositório
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/CONTINUIDADE-ESTADO.json
+          git diff --cached --quiet || git commit -m "chore: atualiza estado de continuidade"
+          git push
