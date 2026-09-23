@@ -600,7 +600,7 @@
       "subject": "Biologia",
       "title": "Algas",
       "primary": "scene",
-      "artifact": "tipologia",
+      "artifact": "atlas-luz-e-algas",
       "ignored": []
     },
     {
@@ -608,7 +608,7 @@
       "subject": "Biologia",
       "title": "Ciclos de Vida",
       "primary": "scene",
-      "artifact": "tipologia",
+      "artifact": "ciclos-meiose",
       "ignored": []
     },
     {
@@ -861,7 +861,7 @@
       "subject": "Física",
       "title": "Força e seus Tipos",
       "primary": "scene",
-      "artifact": "tipologia",
+      "artifact": "forcas-vetores",
       "ignored": []
     },
     {
@@ -973,7 +973,7 @@
       "subject": "Física",
       "title": "Colisões",
       "primary": "scene",
-      "artifact": "tipologia",
+      "artifact": "colisoes-momento-energia",
       "ignored": []
     },
     {
@@ -1021,7 +1021,7 @@
       "subject": "Física",
       "title": "A Física por trás da Obtenção de Energia Elétrica, das Quedas-d'Água aos Reatores Nucleares",
       "primary": "scene",
-      "artifact": "tipologia",
+      "artifact": "geracao-eletrica",
       "ignored": []
     },
     {
@@ -1074,7 +1074,7 @@
       "subject": "Física",
       "title": "Gases Ideais: Variáveis de Estado e as Transformações Gasosas",
       "primary": "scene",
-      "artifact": "tipologia",
+      "artifact": "transformacoes-pv",
       "ignored": []
     },
     {
@@ -1119,7 +1119,7 @@
       "subject": "Física",
       "title": "Eletrostática: Processos de Eletrização e Aplicações",
       "primary": "scene",
-      "artifact": "tipologia",
+      "artifact": "eletrizacao-cargas",
       "ignored": []
     },
     {

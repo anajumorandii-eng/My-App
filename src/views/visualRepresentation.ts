@@ -1,6 +1,7 @@
 import type { InteractiveSummary } from '../types/summary';
 import { topicExperiments } from './topic-experiments/catalog';
 import { sceneFor } from './topic-scenes/sceneFor';
+import { sceneArtifactId } from './topic-scenes/artifactId';
 import { findBoard } from './visual-boards/registry';
 import { findInstrument } from './visual-instruments/registry';
 
@@ -31,7 +32,7 @@ export function visualCandidates(summary: InteractiveSummary): VisualCandidate[]
   const instrument = findInstrument(summary);
   if (instrument) candidates.push({ kind: 'instrument', id: instrument.id });
   const scene = sceneFor(summary.id);
-  if (scene) candidates.push({ kind: 'scene', id: scene.family });
+  if (scene) candidates.push({ kind: 'scene', id: sceneArtifactId(scene.chapterId, scene.family) });
   return candidates;
 }
 

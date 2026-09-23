@@ -9,6 +9,8 @@ import { Tipologia } from './families/Tipologia';
 import { QuimicaTipologia } from './families/QuimicaTipologia';
 import { ORGANIC_SCENE_IDS, QuimicaOrganica } from './families/QuimicaOrganica';
 import { BIOLOGY_PHYSIOLOGY_SCENE_IDS, BiologiaFisiologia } from './families/BiologiaFisiologia';
+import { BIOLOGY_PROCESS_IDS, BiologiaProcessos } from './families/BiologiaProcessos';
+import { PHYSICS_MECHANISM_IDS, FisicaMecanismos } from './families/FisicaMecanismos';
 import { LINGUAGENS_LITERATURA_SCENE_IDS, LinguagensLiteratura } from './families/LinguagensLiteratura';
 import { CriteriosConjuntivos } from './families/CriteriosConjuntivos';
 import { GradeDeEixos } from './families/GradeDeEixos';
@@ -31,6 +33,10 @@ export function TopicScene({ summaryId }: { summaryId: string }) {
   const quimicaGeometrica = entry.chapterId === 'summary-quimica-geometria-molecular';
   const Familia = BIOLOGY_PHYSIOLOGY_SCENE_IDS.has(entry.chapterId)
     ? BiologiaFisiologia
+    : BIOLOGY_PROCESS_IDS.has(entry.chapterId)
+      ? BiologiaProcessos
+    : PHYSICS_MECHANISM_IDS.has(entry.chapterId)
+      ? FisicaMecanismos
     : LINGUAGENS_LITERATURA_SCENE_IDS.has(entry.chapterId)
       ? LinguagensLiteratura
     : ORGANIC_SCENE_IDS.has(entry.chapterId)
