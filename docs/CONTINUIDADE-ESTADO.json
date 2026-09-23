@@ -2,9 +2,20 @@
   "schema_version": 1,
   "repository": "anajumorandii-eng/My-App",
   "branch": "main",
-  "source_commit": "2fe63416dedd0b72efc953b5d1f839afffc47b97",
-  "generated_at_utc": "2026-09-22T21:08:27Z",
-  "changed_files": [],
+  "source_commit": "4dd587e516b44995c498678e6652dd4c28151047",
+  "generated_at_utc": "2026-09-23T03:30:36Z",
+  "changed_files": [
+    "docs/visual-personalizado/18-matriz-cobertura.json",
+    "src/views/topic-scenes/TopicScene.tsx",
+    "src/views/topic-scenes/artifactId.ts",
+    "src/views/topic-scenes/families/BiologiaProcessos.css",
+    "src/views/topic-scenes/families/BiologiaProcessos.test.tsx",
+    "src/views/topic-scenes/families/BiologiaProcessos.tsx",
+    "src/views/topic-scenes/families/FisicaMecanismos.css",
+    "src/views/topic-scenes/families/FisicaMecanismos.test.tsx",
+    "src/views/topic-scenes/families/FisicaMecanismos.tsx",
+    "src/views/visualRepresentation.ts"
+  ],
   "next_session": {
     "mode": "delta-only",
     "instructions": "Leia docs/CRIVO-CONTINUIDADE.md e este arquivo; então consulte no GitHub apenas os commits posteriores a source_commit. Não clone o repositório completo sem necessidade técnica."
