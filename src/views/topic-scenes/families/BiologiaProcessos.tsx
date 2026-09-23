@@ -7,6 +7,7 @@ import './BiologiaProcessos.css';
 export const BIOLOGY_PROCESS_IDS = new Set([
   'summary-biologia-algas',
   'summary-biologia-ciclos-de-vida',
+  'summary-biologia-bioenergetica-fermentacao-e-respiracao',
 ]);
 
 function AlgaeDiagram({ focus }: { focus: number }) {
@@ -62,15 +63,43 @@ function LifeCycleDiagram({ focus }: { focus: number }) {
   </svg>;
 }
 
+const respirationStages = [
+  { title: 'Glicólise', place: 'citosol', product: '2 piruvatos', x: 88, y: 176 },
+  { title: 'Oxidação', place: 'matriz', product: 'acetil-CoA', x: 236, y: 176 },
+  { title: 'Krebs', place: 'matriz', product: 'NADH + FADH₂', x: 382, y: 176 },
+  { title: 'Cadeia', place: 'membrana interna', product: 'gradiente H⁺ → ATP', x: 530, y: 176 },
+];
+
+function RespirationDiagram({ focus }: { focus: number }) {
+  return <svg viewBox="0 0 620 330" role="img" aria-label={`Respiração aeróbia: ${respirationStages.map(stage => `${stage.title} (local: ${stage.place})`).join(' → ')}. Etapa selecionada: ${respirationStages[focus].title}`}>
+    <defs><marker id="bp-resp-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 10 5 0 10Z" fill="#426f63"/></marker></defs>
+    <rect x="8" y="8" width="604" height="314" rx="18" className="bp-cycle-paper"/>
+    <text x="30" y="43" className="bp-cycle-heading">Da glicose ao ATP</text>
+    <rect x="169" y="76" width="422" height="194" rx="96" className="bp-mitochondrion"/>
+    <path d="M193 132q28-40 54 0t54 0t54 0t54 0t54 0t54 0t54 0" className="bp-membrane"/>
+    <text x="30" y="90" className="bp-cycle-note">citosol</text>
+    <text x="296" y="108" className="bp-cycle-note">mitocôndria</text>
+    {respirationStages.map((stage, index) => <g key={stage.title}>
+      {index > 0 && <path d={`M${respirationStages[index-1].x+51} 176H${stage.x-52}`} className="bp-resp-flow" markerEnd="url(#bp-resp-arrow)"/>}
+      <circle cx={stage.x} cy={stage.y} r="46" className={focus === index ? 'bp-resp-stage bp-resp-stage--active' : 'bp-resp-stage'}/>
+      <text x={stage.x} y="172" textAnchor="middle" className="bp-resp-title">{stage.title}</text>
+      <text x={stage.x} y="192" textAnchor="middle" className="bp-resp-place">{stage.place}</text>
+      <text x={stage.x} y="286" textAnchor="middle" className="bp-resp-product">{stage.product}</text>
+    </g>)}
+    <text x="30" y="312" className="bp-resp-footnote">O₂ recebe elétrons ao final da cadeia; a ATP-sintase usa o gradiente de H⁺.</text>
+  </svg>;
+}
+
 export function BiologiaProcessos({ entry }: { entry: SceneEntry }) {
   const [focus, setFocus] = useState(0);
   const transition = useSceneMotion();
   const item = entry.items[focus];
   const algae = entry.chapterId === 'summary-biologia-algas';
+  const respiration = entry.chapterId === 'summary-biologia-bioenergetica-fermentacao-e-respiracao';
   return <section className="tc-scene bp-process" aria-label={entry.question}>
     <header><small>CRIVO · atlas biológico</small><h4>{entry.question}</h4></header>
-    <div className="bp-process-figure">{algae ? <AlgaeDiagram focus={focus}/> : <LifeCycleDiagram focus={focus}/>}</div>
-    <div className="bp-process-tabs" aria-label={algae ? 'Profundidade e pigmento' : 'Posição da meiose'}>
+    <div className="bp-process-figure">{algae ? <AlgaeDiagram focus={focus}/> : respiration ? <RespirationDiagram focus={focus}/> : <LifeCycleDiagram focus={focus}/>}</div>
+    <div className="bp-process-tabs" aria-label={algae ? 'Profundidade e pigmento' : respiration ? 'Etapas da respiração aeróbia' : 'Posição da meiose'}>
       {entry.items.map((candidate, index) => <motion.button key={candidate.label} type="button" aria-pressed={focus === index} onClick={() => setFocus(index)} animate={{ y: focus === index ? -3 : 0 }} transition={transition}>{candidate.label}</motion.button>)}
     </div>
     <aside className="bp-process-detail" role="status"><strong>{item.label}</strong><p>{item.claim}</p><blockquote>“{item.quote}” <cite>{item.section}</cite></blockquote></aside>
