@@ -1,6 +1,8 @@
 .ec-cycle, .ec-system { min-width: 0; }
-.ec-figure { min-width: 0; overflow: hidden; border-radius: 18px; background: #e7f0eb; }
+.ec-figure { min-width: 0; overflow-x: auto; overflow-y: hidden; border-radius: 18px; background: #e7f0eb; }
 .ec-figure svg { display: block; width: 100%; height: auto; }
+.ec-figure:focus-visible { outline: 3px solid var(--vs-blue); outline-offset: 2px; }
+.ec-pan-hint { display: none; }
 .ec-paper { fill: #f4f3e7; stroke: #a3bbae; stroke-width: 2; }
 .ec-ground { stroke: #887354; stroke-width: 6; }
 .ec-flow { fill: none; stroke: #397b72; stroke-width: 4; stroke-linecap: round; }
@@ -26,4 +28,4 @@
 .ec-detail cite { display: block; margin-top: .3rem; font: 700 .7rem system-ui, sans-serif; }
 .dark .ec-figure { background: #173d47; }.dark .ec-paper { fill: #203c43; stroke: #8db5a2; }.dark .ec-water { fill: #315965; }
 .dark .ec-caption, .dark .ec-node text { fill: #f4ead7; }.dark .ec-highlight { fill: #ffd095; }.dark .ec-node circle { fill: #365e57; }.dark .ec-node--active circle { fill: #775c39; stroke: #ffd095; }
-@media (max-width: 560px) { .ec-cycle, .ec-system { padding: .75rem; }.ec-controls button { flex: 1 1 42%; }.ec-caption { font-size: 15px; } }
+@media (max-width: 660px) { .ec-cycle, .ec-system { padding: .75rem; }.ec-figure svg { width: 620px; max-width: none; }.ec-pan-hint { display: block; margin: .3rem 0 .75rem; color: var(--vs-dim); font: 600 .75rem/1.4 system-ui, sans-serif; }.ec-controls button { flex: 1 1 42%; } }

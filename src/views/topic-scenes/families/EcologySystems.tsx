@@ -107,7 +107,8 @@ export function EcologySystems({ entry }: { entry: SceneEntry }) {
   const item = entry.items[active];
   return <section className="tc-scene ec-system" aria-label={entry.question}>
     <header><small>CRIVO · sistemas ecológicos</small><h4>{entry.question}</h4></header>
-    <div className="ec-figure"><Diagram active={active} selected={item.label}/></div>
+    <div className="ec-figure" role="region" aria-label="Diagrama: deslize ou use as setas para ver toda a figura" tabIndex={0}><Diagram active={active} selected={item.label}/></div>
+    <p className="ec-pan-hint">Deslize o diagrama para ver a figura inteira. Com teclado, use as setas.</p>
     <div className="ec-controls" aria-label="Relações do mecanismo">
       {entry.items.map((candidate, index) => <motion.button key={candidate.label} type="button" aria-pressed={active === index} onClick={() => setActive(index)} animate={{ y: active === index ? -2 : 0 }} transition={transition}>{candidate.label}</motion.button>)}
     </div>

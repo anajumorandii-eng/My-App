@@ -20,8 +20,9 @@ function NitrogenDiagram({ active, selected }: { active: number; selected: strin
     <path d="M30 168H590" className="ec-ground"/>
     <text x="30" y="40" className="ec-caption">atmosfera</text><text x="30" y="191" className="ec-caption">solo · conversões microbianas</text>
     <path d="M100 101V225M163 252H244M346 252H434M490 222V92H162" className="ec-flow"/>
-    <path d="M195 330l-30-43M195 330l31-44M195 330v-52" className="ec-roots"/>
-    <text x="108" y="333" className="ec-caption">matéria orgânica → amônia</text>
+    <path d="M195 330l-30-43M195 330l31-44M195 330v-52M165 287Q130 300 112 286" className="ec-roots"/>
+    <text x="18" y="316" className={active === 1 ? 'ec-highlight' : 'ec-caption'}>amonificação ↗</text>
+    <text x="18" y="336" className="ec-caption">matéria orgânica → amônia</text>
     <text x="415" y="318" className="ec-caption">nitrato → raízes</text>
     {points.map((point, index) => <g key={point.label} className={active === index || (active === 4 && (index === 3 || index === 0)) ? 'ec-node ec-node--active' : 'ec-node'}>
       <circle cx={point.x} cy={point.y} r="34"/>
@@ -29,9 +30,8 @@ function NitrogenDiagram({ active, selected }: { active: number; selected: strin
     </g>)}
     <text x="338" y="74" className="ec-caption">desnitrificação ↖</text>
     <text x="39" y="150" className={active === 0 ? 'ec-highlight' : 'ec-caption'}>fixação ↓</text>
-    <text x="139" y="230" className={active === 1 ? 'ec-highlight' : 'ec-caption'}>amonificação</text>
-    <text x="218" y="230" className={active === 2 ? 'ec-highlight' : 'ec-caption'}>oxidação →</text>
-    <text x="391" y="230" className={active === 3 ? 'ec-highlight' : 'ec-caption'}>oxidação →</text>
+    <text x="170" y="215" className={active === 2 ? 'ec-highlight' : 'ec-caption'}>Nitrosomonas →</text>
+    <text x="375" y="215" className={active === 3 ? 'ec-highlight' : 'ec-caption'}>Nitrobacter →</text>
   </svg>;
 }
 
@@ -63,7 +63,8 @@ export function EcologyCycles({ entry }: { entry: SceneEntry }) {
   const nitrogen = entry.chapterId === 'bio-ecologia-ciclo-nitrogenio';
   return <section className="tc-scene ec-cycle" aria-label={entry.question}>
     <header><small>CRIVO · mecanismos ecológicos</small><h4>{entry.question}</h4></header>
-    <div className="ec-figure">{nitrogen ? <NitrogenDiagram active={active} selected={item.label}/> : <LakeDiagram active={active} selected={item.label}/>}</div>
+    <div className="ec-figure" role="region" aria-label="Diagrama: deslize ou use as setas para ver toda a figura" tabIndex={0}>{nitrogen ? <NitrogenDiagram active={active} selected={item.label}/> : <LakeDiagram active={active} selected={item.label}/>}</div>
+    <p className="ec-pan-hint">Deslize o diagrama para ver a figura inteira. Com teclado, use as setas.</p>
     <div className="ec-controls" aria-label="Etapas do mecanismo">
       {entry.items.map((candidate, index) => <motion.button key={candidate.label} type="button" aria-pressed={active === index} onClick={() => setActive(index)} animate={{ y: active === index ? -2 : 0 }} transition={transition}>{candidate.label}</motion.button>)}
     </div>
