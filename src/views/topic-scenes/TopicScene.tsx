@@ -10,6 +10,8 @@ import { QuimicaTipologia } from './families/QuimicaTipologia';
 import { ORGANIC_SCENE_IDS, QuimicaOrganica } from './families/QuimicaOrganica';
 import { BIOLOGY_PHYSIOLOGY_SCENE_IDS, BiologiaFisiologia } from './families/BiologiaFisiologia';
 import { BIOLOGY_PROCESS_IDS, BiologiaProcessos } from './families/BiologiaProcessos';
+import { ECOLOGY_CYCLE_IDS, EcologyCycles } from './families/EcologyCycles';
+import { ECOLOGY_SYSTEM_IDS, EcologySystems } from './families/EcologySystems';
 import { PHYSICS_MECHANISM_IDS, FisicaMecanismos } from './families/FisicaMecanismos';
 import { LINGUAGENS_LITERATURA_SCENE_IDS, LinguagensLiteratura } from './families/LinguagensLiteratura';
 import { CriteriosConjuntivos } from './families/CriteriosConjuntivos';
@@ -31,7 +33,11 @@ export function TopicScene({ summaryId }: { summaryId: string }) {
   const entry = sceneFor(summaryId);
   if (!entry) return null;
   const quimicaGeometrica = entry.chapterId === 'summary-quimica-geometria-molecular';
-  const Familia = BIOLOGY_PHYSIOLOGY_SCENE_IDS.has(entry.chapterId)
+  const Familia = ECOLOGY_CYCLE_IDS.has(entry.chapterId)
+    ? EcologyCycles
+    : ECOLOGY_SYSTEM_IDS.has(entry.chapterId)
+      ? EcologySystems
+    : BIOLOGY_PHYSIOLOGY_SCENE_IDS.has(entry.chapterId)
     ? BiologiaFisiologia
     : BIOLOGY_PROCESS_IDS.has(entry.chapterId)
       ? BiologiaProcessos
