@@ -3,6 +3,7 @@
 const DEDICATED_SCENES: Record<string, string> = {
   'summary-biologia-algas': 'atlas-luz-e-algas',
   'summary-biologia-ciclos-de-vida': 'ciclos-meiose',
+  'summary-biologia-bioenergetica-fermentacao-e-respiracao': 'respiracao-compartimentos',
   'summary-fisica-forca-e-seus-tipos': 'forcas-vetores',
   'summary-fisica-colisoes': 'colisoes-momento-energia',
   'summary-fisica-a-fisica-por-tras-da-obtencao-de-energia-eletrica-das-quedas-d-agua-aos-reatores-nucleares': 'geracao-eletrica',

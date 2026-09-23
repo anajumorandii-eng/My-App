@@ -33,4 +33,16 @@ describe('atlas biológico por capítulo', () => {
     fireEvent.click(screen.getByRole('button', { name: 'Diplobionte' }));
     expect(screen.getByRole('img', { name: /Meiose espórica: esporófito 2n → meiose → esporos n → gametófito n/i })).toBeInTheDocument();
   });
+
+  it('localiza as etapas da respiração e destaca a etapa escolhida por teclado', async () => {
+    const user = userEvent.setup();
+    render(<BiologiaProcessos entry={chapter('summary-biologia-bioenergetica-fermentacao-e-respiracao')}/>);
+    expect(screen.getByRole('img', { name: /Glicólise \(local: citosol\) → Oxidação \(local: matriz\) → Krebs \(local: matriz\) → Cadeia \(local: membrana interna\)/i })).toHaveTextContent('mitocôndria');
+    const chain = screen.getByRole('button', { name: /4\. Cadeia respiratória/ });
+    chain.focus();
+    await user.keyboard('{Enter}');
+    expect(chain).toHaveAttribute('aria-pressed', 'true');
+    expect(screen.getByRole('img', { name: /Etapa selecionada: Cadeia/ })).toHaveTextContent('gradiente H⁺ → ATP');
+    expect(screen.getByRole('status')).toHaveTextContent('ATP-sintase');
+  });
 });
