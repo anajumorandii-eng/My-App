@@ -12,6 +12,7 @@ import { BIOLOGY_PHYSIOLOGY_SCENE_IDS, BiologiaFisiologia } from './families/Bio
 import { BIOLOGY_PROCESS_IDS, BiologiaProcessos } from './families/BiologiaProcessos';
 import { ECOLOGY_CYCLE_IDS, EcologyCycles } from './families/EcologyCycles';
 import { ECOLOGY_SYSTEM_IDS, EcologySystems } from './families/EcologySystems';
+import { HISTORIA_GEOGRAFIA_IDS, HistoriaGeografia } from './families/HistoriaGeografia';
 import { PHYSICS_MECHANISM_IDS, FisicaMecanismos } from './families/FisicaMecanismos';
 import { LINGUAGENS_LITERATURA_SCENE_IDS, LinguagensLiteratura } from './families/LinguagensLiteratura';
 import { CriteriosConjuntivos } from './families/CriteriosConjuntivos';
@@ -37,6 +38,8 @@ export function TopicScene({ summaryId }: { summaryId: string }) {
     ? EcologyCycles
     : ECOLOGY_SYSTEM_IDS.has(entry.chapterId)
       ? EcologySystems
+    : HISTORIA_GEOGRAFIA_IDS.has(entry.chapterId)
+      ? HistoriaGeografia
     : BIOLOGY_PHYSIOLOGY_SCENE_IDS.has(entry.chapterId)
     ? BiologiaFisiologia
     : BIOLOGY_PROCESS_IDS.has(entry.chapterId)

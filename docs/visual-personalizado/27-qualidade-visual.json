@@ -41,7 +41,7 @@
     "title": "Dinâmica de populações",
     "primary": "scene",
     "artifact": "estrategias-reprodutivas",
-    "status": "em-validacao",
+    "status": "aprovado",
     "mechanism": "perfis reprodutivos",
     "relation": "muitos descendentes e pouco cuidado versus poucos descendentes e longo cuidado",
     "evidencePaths": [
@@ -56,7 +56,7 @@
       "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-dinamica-populacoes-desktop-light.png",
       "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-dinamica-populacoes-desktop-dark.png"
     ],
-    "notes": "QA técnico: 360, 375, 390, 768 e 1440 px; temas claro/escuro; primeira e última seleção; teclado; movimento reduzido; axe sem violações. Revisão editorial frente às referências aprovadas ainda pendente."
+    "notes": "QA técnico: 360, 375, 390, 768 e 1440 px; temas claro/escuro; primeira e última seleção; teclado; movimento reduzido; axe sem violações. Aprovado pela responsável em 2026-09-23."
   },
   {
     "id": "bio-ecologia-invasoras-controle-biologico",
@@ -64,7 +64,7 @@
     "title": "Espécies invasoras e controle biológico",
     "primary": "scene",
     "artifact": "invasao-impactos",
-    "status": "em-validacao",
+    "status": "aprovado",
     "mechanism": "rede de impactos",
     "relation": "invasora alcança nativas, recursos, genes e ambiente por cinco caminhos",
     "evidencePaths": [
@@ -79,7 +79,7 @@
       "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-invasoras-controle-biologico-desktop-light.png",
       "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-invasoras-controle-biologico-desktop-dark.png"
     ],
-    "notes": "QA técnico: 360, 375, 390, 768 e 1440 px; temas claro/escuro; primeira e última seleção; teclado; movimento reduzido; axe sem violações. Revisão editorial frente às referências aprovadas ainda pendente."
+    "notes": "QA técnico: 360, 375, 390, 768 e 1440 px; temas claro/escuro; primeira e última seleção; teclado; movimento reduzido; axe sem violações. Aprovado pela responsável em 2026-09-23."
   },
   {
     "id": "bio-ecologia-sucessao",
@@ -87,7 +87,7 @@
     "title": "Sucessão ecológica",
     "primary": "scene",
     "artifact": "sucessao-comunidades",
-    "status": "em-validacao",
+    "status": "aprovado",
     "mechanism": "paisagem de comunidades",
     "relation": "solo e vegetação mudam da pioneira ao clímax",
     "evidencePaths": [
@@ -102,7 +102,7 @@
       "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-sucessao-desktop-light.png",
       "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-sucessao-desktop-dark.png"
     ],
-    "notes": "QA técnico: 360, 375, 390, 768 e 1440 px; temas claro/escuro; primeira e última seleção; teclado; movimento reduzido; axe sem violações. Revisão editorial frente às referências aprovadas ainda pendente."
+    "notes": "QA técnico: 360, 375, 390, 768 e 1440 px; temas claro/escuro; primeira e última seleção; teclado; movimento reduzido; axe sem violações. Aprovado pela responsável em 2026-09-23."
   },
   {
     "id": "bio-ecologia-ciclo-carbono",
@@ -122,7 +122,7 @@
     "title": "Ciclo do nitrogênio",
     "primary": "scene",
     "artifact": "nitrogenio-solo-atmosfera",
-    "status": "em-validacao",
+    "status": "aprovado",
     "mechanism": "ciclo microbiano no solo e atmosfera",
     "relation": "fixação e amonificação alimentam nitrificação; desnitrificação devolve N₂",
     "evidencePaths": [
@@ -137,7 +137,7 @@
       "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-ciclo-nitrogenio-desktop-light.png",
       "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-ciclo-nitrogenio-desktop-dark.png"
     ],
-    "notes": "QA técnico: 360, 375, 390, 768 e 1440 px; temas claro/escuro; primeira e última seleção; teclado; movimento reduzido; axe sem violações. Revisão editorial frente às referências aprovadas ainda pendente."
+    "notes": "QA técnico: 360, 375, 390, 768 e 1440 px; temas claro/escuro; primeira e última seleção; teclado; movimento reduzido; axe sem violações. Aprovado pela responsável em 2026-09-23."
   },
   {
     "id": "bio-ecologia-ciclo-hidrologico-poluicao-agua",
@@ -145,7 +145,7 @@
     "title": "Ciclo hidrológico e poluição da água",
     "primary": "scene",
     "artifact": "poluicao-agua-agentes",
-    "status": "em-validacao",
+    "status": "aprovado",
     "mechanism": "fonte, água e efeito",
     "relation": "cada agente altera o meio aquático por consequência própria",
     "evidencePaths": [
@@ -160,7 +160,7 @@
       "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-ciclo-hidrologico-poluicao-agua-desktop-light.png",
       "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-ciclo-hidrologico-poluicao-agua-desktop-dark.png"
     ],
-    "notes": "QA técnico: 360, 375, 390, 768 e 1440 px; temas claro/escuro; primeira e última seleção; teclado; movimento reduzido; axe sem violações. Revisão editorial frente às referências aprovadas ainda pendente."
+    "notes": "QA técnico: 360, 375, 390, 768 e 1440 px; temas claro/escuro; primeira e última seleção; teclado; movimento reduzido; axe sem violações. Aprovado pela responsável em 2026-09-23."
   },
   {
     "id": "bio-ecologia-eutrofizacao",
@@ -168,7 +168,7 @@
     "title": "Eutrofização e fluxo de energia",
     "primary": "scene",
     "artifact": "eutrofizacao-lago",
-    "status": "em-validacao",
+    "status": "aprovado",
     "mechanism": "seção vertical de lago",
     "relation": "nutrientes induzem floração, bloqueiam luz e levam ao consumo de oxigênio",
     "evidencePaths": [
@@ -183,7 +183,7 @@
       "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-eutrofizacao-desktop-light.png",
       "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-eutrofizacao-desktop-dark.png"
     ],
-    "notes": "QA técnico: 360, 375, 390, 768 e 1440 px; temas claro/escuro; primeira e última seleção; teclado; movimento reduzido; axe sem violações. Revisão editorial frente às referências aprovadas ainda pendente."
+    "notes": "QA técnico: 360, 375, 390, 768 e 1440 px; temas claro/escuro; primeira e última seleção; teclado; movimento reduzido; axe sem violações. Aprovado pela responsável em 2026-09-23."
   },
   {
     "id": "bio-ecologia-poluicao-ar",
@@ -2015,11 +2015,22 @@
     "title": "Projeções Cartográficas",
     "primary": "scene",
     "artifact": "tipologia",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "comparação esquemática de três propriedades cartográficas",
+    "relation": "conforme preserva forma local; equivalente, área; equidistante, distâncias desde um centro",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-geografia-projecoes-cartograficas-mobile-360-light.png",
+      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-geografia-projecoes-cartograficas-mobile-360-dark.png",
+      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-geografia-projecoes-cartograficas-mobile-375-light.png",
+      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-geografia-projecoes-cartograficas-mobile-375-dark.png",
+      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-geografia-projecoes-cartograficas-mobile-390-light.png",
+      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-geografia-projecoes-cartograficas-mobile-390-dark.png",
+      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-geografia-projecoes-cartograficas-tablet-light.png",
+      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-geografia-projecoes-cartograficas-tablet-dark.png",
+      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-geografia-projecoes-cartograficas-desktop-light.png",
+      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-geografia-projecoes-cartograficas-desktop-dark.png"
+    ],
+    "notes": "Esquemas de propriedades, não mapas mensuráveis. QA técnico em cinco larguras, dois temas, teclado e movimento reduzido. Aprovação editorial pendente."
   },
   {
     "id": "summary-geografia-cartografia-digital",
@@ -2051,11 +2062,22 @@
     "title": "Dinâmica Climática",
     "primary": "scene",
     "artifact": "tipologia",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "seções de ascensão do ar",
+    "relation": "aquecimento, barreira montanhosa e encontro de massas criam chuvas por mecanismos distintos",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-geografia-dinamica-climatica-mobile-360-light.png",
+      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-geografia-dinamica-climatica-mobile-360-dark.png",
+      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-geografia-dinamica-climatica-mobile-375-light.png",
+      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-geografia-dinamica-climatica-mobile-375-dark.png",
+      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-geografia-dinamica-climatica-mobile-390-light.png",
+      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-geografia-dinamica-climatica-mobile-390-dark.png",
+      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-geografia-dinamica-climatica-tablet-light.png",
+      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-geografia-dinamica-climatica-tablet-dark.png",
+      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-geografia-dinamica-climatica-desktop-light.png",
+      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-geografia-dinamica-climatica-desktop-dark.png"
+    ],
+    "notes": "Prancha específica do capítulo; QA técnico em cinco larguras, dois temas, teclado e movimento reduzido. Aprovação editorial pendente."
   },
   {
     "id": "summary-geografia-clima-mundial",
@@ -2831,11 +2853,22 @@
     "title": "Revolução Industrial",
     "primary": "scene",
     "artifact": "cadeia-de-derivacao",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "campo cercado, fábrica e documento legal",
+    "relation": "cercamentos liberam mão de obra e capital; documentação e pressão social contribuem para reformas",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-historia-revolucao-industrial-mobile-360-light.png",
+      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-historia-revolucao-industrial-mobile-360-dark.png",
+      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-historia-revolucao-industrial-mobile-375-light.png",
+      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-historia-revolucao-industrial-mobile-375-dark.png",
+      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-historia-revolucao-industrial-mobile-390-light.png",
+      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-historia-revolucao-industrial-mobile-390-dark.png",
+      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-historia-revolucao-industrial-tablet-light.png",
+      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-historia-revolucao-industrial-tablet-dark.png",
+      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-historia-revolucao-industrial-desktop-light.png",
+      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-historia-revolucao-industrial-desktop-dark.png"
+    ],
+    "notes": "Prancha específica do capítulo; QA técnico em cinco larguras, dois temas, teclado e movimento reduzido. Aprovação editorial pendente."
   },
   {
     "id": "summary-historia-iluminismo",
@@ -2855,11 +2888,22 @@
     "title": "Revolução Francesa",
     "primary": "scene",
     "artifact": "cadeia-de-derivacao",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "cronologia com forças políticas e militares",
+    "relation": "crise fiscal abre conflito institucional; guerra externa e desconfiança interna compõem a radicalização",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-historia-revolucao-francesa-mobile-360-light.png",
+      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-historia-revolucao-francesa-mobile-360-dark.png",
+      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-historia-revolucao-francesa-mobile-375-light.png",
+      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-historia-revolucao-francesa-mobile-375-dark.png",
+      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-historia-revolucao-francesa-mobile-390-light.png",
+      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-historia-revolucao-francesa-mobile-390-dark.png",
+      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-historia-revolucao-francesa-tablet-light.png",
+      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-historia-revolucao-francesa-tablet-dark.png",
+      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-historia-revolucao-francesa-desktop-light.png",
+      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-historia-revolucao-francesa-desktop-dark.png"
+    ],
+    "notes": "Prancha específica do capítulo; QA técnico em cinco larguras, dois temas, teclado e movimento reduzido. Aprovação editorial pendente."
   },
   {
     "id": "summary-historia-america-no-seculo-xix",
