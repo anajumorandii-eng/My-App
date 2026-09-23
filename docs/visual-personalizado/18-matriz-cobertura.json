@@ -204,7 +204,7 @@
       "subject": "Biologia",
       "title": "Dinâmica de populações",
       "primary": "scene",
-      "artifact": "tipologia",
+      "artifact": "estrategias-reprodutivas",
       "ignored": []
     },
     {
@@ -212,7 +212,7 @@
       "subject": "Biologia",
       "title": "Espécies invasoras e controle biológico",
       "primary": "scene",
-      "artifact": "tipologia",
+      "artifact": "invasao-impactos",
       "ignored": []
     },
     {
@@ -220,7 +220,7 @@
       "subject": "Biologia",
       "title": "Sucessão ecológica",
       "primary": "scene",
-      "artifact": "escala-de-graus",
+      "artifact": "sucessao-comunidades",
       "ignored": []
     },
     {
@@ -236,7 +236,7 @@
       "subject": "Biologia",
       "title": "Ciclo do nitrogênio",
       "primary": "scene",
-      "artifact": "cadeia-de-derivacao",
+      "artifact": "nitrogenio-solo-atmosfera",
       "ignored": []
     },
     {
@@ -244,7 +244,7 @@
       "subject": "Biologia",
       "title": "Ciclo hidrológico e poluição da água",
       "primary": "scene",
-      "artifact": "tipologia",
+      "artifact": "poluicao-agua-agentes",
       "ignored": []
     },
     {
@@ -252,7 +252,7 @@
       "subject": "Biologia",
       "title": "Eutrofização e fluxo de energia",
       "primary": "scene",
-      "artifact": "cadeia-de-derivacao",
+      "artifact": "eutrofizacao-lago",
       "ignored": []
     },
     {

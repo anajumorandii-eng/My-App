@@ -1,0 +1,12 @@
+.es-card { fill: #e6ede2; stroke: #91ad9e; stroke-width: 2; }
+.es-selected .es-card { fill: #fae6bf; stroke: #8b354e; stroke-width: 4; }
+.es-muted { opacity: .67; }
+.es-title { fill: #243f39; font: 700 14px system-ui, sans-serif; }
+.es-offspring { fill: #55947e; }.es-parent { fill: #a97955; }
+.es-origin { fill: #d7e5d7; stroke: #5c8578; stroke-width: 3; }
+.es-soil { fill: none; stroke: #946b49; stroke-width: 7; }
+.es-canopy { fill: #6b9b5f; }
+.es-lake { fill: #97c9cf; stroke: #458b9a; stroke-width: 3; }
+.dark .es-card { fill: #31544d; stroke: #91b5a2; }
+.dark .es-selected .es-card { fill: #705d40; stroke: #f6d49b; }
+.dark .es-title { fill: #fff1d8; }.dark .es-origin { fill: #365e57; }.dark .es-lake { fill: #366d77; }
