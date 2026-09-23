@@ -8,6 +8,7 @@ export const BIOLOGY_PROCESS_IDS = new Set([
   'summary-biologia-algas',
   'summary-biologia-ciclos-de-vida',
   'summary-biologia-bioenergetica-fermentacao-e-respiracao',
+  'bio-ecologia-biomagnificacao',
 ]);
 
 function AlgaeDiagram({ focus }: { focus: number }) {
@@ -90,16 +91,39 @@ function RespirationDiagram({ focus }: { focus: number }) {
   </svg>;
 }
 
+const trophicStages = [
+  { name: 'Fitoplâncton', concentration: '0,01 ppm' },
+  { name: 'Zooplâncton', concentration: '0,1 ppm' },
+  { name: 'Peixe pequeno', concentration: '1 ppm' },
+  { name: 'Peixe grande', concentration: '10 ppm' },
+  { name: 'Ave/humano', concentration: '100 ppm' },
+];
+
+function BiomagnificationDiagram({ focus }: { focus: number }) {
+  return <div className="bp-trophic" role="img" aria-label={`Biomagnificação: ${trophicStages.map(stage => stage.concentration).join(' → ')}. Etapa selecionada: ${trophicStages[focus].name}`}>
+    <p>Poluente persistente acumulado nos tecidos · concentração em escala logarítmica</p>
+    <div className="bp-trophic-chain">
+      {trophicStages.map((stage, index) => <div className="bp-trophic-level" data-active={focus === index} key={stage.name}>
+        <strong>{stage.name}</strong>
+        <span className="bp-trophic-meter" aria-hidden="true"><span style={{ width: `${(index + 1) * 20}%` }}/></span>
+        <span className="bp-trophic-value">{stage.concentration}</span>
+      </div>)}
+    </div>
+    <p>Cada transferência trófica concentra o poluente 10 vezes neste exemplo.</p>
+  </div>;
+}
+
 export function BiologiaProcessos({ entry }: { entry: SceneEntry }) {
   const [focus, setFocus] = useState(0);
   const transition = useSceneMotion();
   const item = entry.items[focus];
   const algae = entry.chapterId === 'summary-biologia-algas';
   const respiration = entry.chapterId === 'summary-biologia-bioenergetica-fermentacao-e-respiracao';
+  const biomagnification = entry.chapterId === 'bio-ecologia-biomagnificacao';
   return <section className="tc-scene bp-process" aria-label={entry.question}>
     <header><small>CRIVO · atlas biológico</small><h4>{entry.question}</h4></header>
-    <div className="bp-process-figure">{algae ? <AlgaeDiagram focus={focus}/> : respiration ? <RespirationDiagram focus={focus}/> : <LifeCycleDiagram focus={focus}/>}</div>
-    <div className="bp-process-tabs" aria-label={algae ? 'Profundidade e pigmento' : respiration ? 'Etapas da respiração aeróbia' : 'Posição da meiose'}>
+    <div className="bp-process-figure">{algae ? <AlgaeDiagram focus={focus}/> : respiration ? <RespirationDiagram focus={focus}/> : biomagnification ? <BiomagnificationDiagram focus={focus}/> : <LifeCycleDiagram focus={focus}/>}</div>
+    <div className="bp-process-tabs" aria-label={algae ? 'Profundidade e pigmento' : respiration ? 'Etapas da respiração aeróbia' : biomagnification ? 'Níveis tróficos' : 'Posição da meiose'}>
       {entry.items.map((candidate, index) => <motion.button key={candidate.label} type="button" aria-pressed={focus === index} onClick={() => setFocus(index)} animate={{ y: focus === index ? -3 : 0 }} transition={transition}>{candidate.label}</motion.button>)}
     </div>
     <aside className="bp-process-detail" role="status"><strong>{item.label}</strong><p>{item.claim}</p><blockquote>“{item.quote}” <cite>{item.section}</cite></blockquote></aside>

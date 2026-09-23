@@ -45,4 +45,17 @@ describe('atlas biológico por capítulo', () => {
     expect(screen.getByRole('img', { name: /Etapa selecionada: Cadeia/ })).toHaveTextContent('gradiente H⁺ → ATP');
     expect(screen.getByRole('status')).toHaveTextContent('ATP-sintase');
   });
+
+  it('mostra o aumento da concentração ao longo da cadeia trófica', async () => {
+    const user = userEvent.setup();
+    render(<BiologiaProcessos entry={chapter('bio-ecologia-biomagnificacao')}/>);
+    const diagram = screen.getByRole('img', { name: /biomagnificação.*0,01 ppm.*100 ppm/i });
+    expect(diagram).toHaveTextContent('0,01 ppm');
+    expect(diagram).toHaveTextContent('100 ppm');
+    const predator = screen.getByRole('button', { name: /5\. Ave\/humano/ });
+    predator.focus();
+    await user.keyboard('{Enter}');
+    expect(predator).toHaveAttribute('aria-pressed', 'true');
+    expect(screen.getByRole('img', { name: /etapa selecionada: Ave\/humano/i })).toHaveTextContent('100 ppm');
+  });
 });
