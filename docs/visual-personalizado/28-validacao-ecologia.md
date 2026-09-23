@@ -1,15 +1,15 @@
 # Validação do lote de Ecologia
 
-Data: 2026-09-23. Este lote adiciona seis diagramas específicos por ID de capítulo. A matriz continua com 613 linhas e a prioridade de experimento, prancha, instrumento e cena permanece inalterada. O relatório `27-qualidade-visual.json` registra estes seis capítulos como `em-validacao`; os outros 607 seguem `nao-revisado`. Nenhum capítulo foi marcado `aprovado` sem inspeção visual.
+Data: 2026-09-23. Este lote adiciona seis diagramas específicos por ID de capítulo. A matriz continua com 613 linhas e a prioridade de experimento, prancha, instrumento e cena permanece inalterada. Após as verificações abaixo, a responsável aprovou explicitamente as seis cenas em 2026-09-23; o relatório `27-qualidade-visual.json` registra essas seis como `aprovado`. A rodada seguinte abriu a revisão de quatro capítulos de História e Geografia; o estado atual dos outros capítulos está no inventário.
 
 | Capítulo | Artefato | Mecanismo | Estado |
 | --- | --- | --- | --- |
-| `bio-ecologia-ciclo-nitrogenio` | `nitrogenio-solo-atmosfera` | Conversões microbianas entre atmosfera, solo e raízes | em validação |
-| `bio-ecologia-eutrofizacao` | `eutrofizacao-lago` | Floração, bloqueio da luz, decomposição e anoxia no lago | em validação |
-| `bio-ecologia-dinamica-populacoes` | `estrategias-reprodutivas` | Descendência e cuidado parental em dois perfis | em validação |
-| `bio-ecologia-invasoras-controle-biologico` | `invasao-impactos` | Cinco vias de impacto da invasora | em validação |
-| `bio-ecologia-sucessao` | `sucessao-comunidades` | Mudança de solo e vegetação em três comunidades | em validação |
-| `bio-ecologia-ciclo-hidrologico-poluicao-agua` | `poluicao-agua-agentes` | Fonte, meio aquático e efeito por agente | em validação |
+| `bio-ecologia-ciclo-nitrogenio` | `nitrogenio-solo-atmosfera` | Conversões microbianas entre atmosfera, solo e raízes | aprovado |
+| `bio-ecologia-eutrofizacao` | `eutrofizacao-lago` | Floração, bloqueio da luz, decomposição e anoxia no lago | aprovado |
+| `bio-ecologia-dinamica-populacoes` | `estrategias-reprodutivas` | Descendência e cuidado parental em dois perfis | aprovado |
+| `bio-ecologia-invasoras-controle-biologico` | `invasao-impactos` | Cinco vias de impacto da invasora | aprovado |
+| `bio-ecologia-sucessao` | `sucessao-comunidades` | Mudança de solo e vegetação em três comunidades | aprovado |
+| `bio-ecologia-ciclo-hidrologico-poluicao-agua` | `poluicao-agua-agentes` | Fonte, meio aquático e efeito por agente | aprovado |
 
 ## Verificações executadas
 
@@ -27,6 +27,6 @@ O navegador local detectou três sobreposições que os testes de componente nã
 
 O checkout local materializou `public/questions.json` e `public/flashcards/biologia.json`, mas `npm test` ainda falhou no teste do catálogo por 14 PDFs de apostilas ausentes em `materiais brutos/`. Após as correções desta rodada, `npm run lint`, `npm run build`, `git diff --check` e os **17 testes direcionados** passaram localmente. A execução ampla do Vitest com um worker avançou por vários minutos e foi interrompida sem resultado final. Na revisão publicada `02373ae`, os dois workflows remotos terminaram verdes: [CI com `npm test` e build](https://github.com/anajumorandii-eng/My-App/actions/runs/35901724376) e [verificação com Vitest, matriz e build](https://github.com/anajumorandii-eng/My-App/actions/runs/35901724406). Os PDFs ausentes são uma limitação do checkout local, não um bloqueio da CI.
 
-Os seis capítulos permanecem `em-validacao`. A inspeção técnica e as capturas estão documentadas; falta a revisão editorial da composição contra as cinco referências aprovadas e a decisão sobre o nível de detalhe pedagógico de cada prancha. O inventário não equipara ausência de erro técnico a qualidade visual aprovada.
+Os seis capítulos receberam aprovação explícita da responsável após a inspeção técnica e a entrega das capturas. Essa decisão encerra a validação editorial deste lote; os demais capítulos não herdam a aprovação.
 
-A revisão completa dos outros 607 capítulos permanece fora deste lote. O inventário fornece a base para priorizar os próximos lotes por matéria e mecanismo, sem equiparar cobertura a qualidade.
+A revisão completa dos demais capítulos permanece fora deste lote. O inventário fornece a base para os próximos lotes por matéria e mecanismo, sem equiparar cobertura a qualidade.

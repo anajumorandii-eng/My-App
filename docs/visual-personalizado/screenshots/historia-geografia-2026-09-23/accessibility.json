@@ -1,0 +1,42 @@
+[
+  {
+    "chapter": "summary-historia-revolucao-francesa",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "chapter": "summary-historia-revolucao-francesa",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "chapter": "summary-historia-revolucao-industrial",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "chapter": "summary-historia-revolucao-industrial",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "chapter": "summary-geografia-projecoes-cartograficas",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "chapter": "summary-geografia-projecoes-cartograficas",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "chapter": "summary-geografia-dinamica-climatica",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "chapter": "summary-geografia-dinamica-climatica",
+    "theme": "dark",
+    "violations": []
+  }
+]
