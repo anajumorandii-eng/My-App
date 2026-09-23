@@ -84,7 +84,9 @@ function RespirationDiagram({ focus }: { focus: number }) {
       {index > 0 && <path d={`M${respirationStages[index-1].x+51} 176H${stage.x-52}`} className="bp-resp-flow" markerEnd="url(#bp-resp-arrow)"/>}
       <circle cx={stage.x} cy={stage.y} r="46" className={focus === index ? 'bp-resp-stage bp-resp-stage--active' : 'bp-resp-stage'}/>
       <text x={stage.x} y="172" textAnchor="middle" className="bp-resp-title">{stage.title}</text>
-      <text x={stage.x} y="192" textAnchor="middle" className="bp-resp-place">{stage.place}</text>
+      {stage.place === 'membrana interna'
+        ? <text x={stage.x} y="188" textAnchor="middle" className="bp-resp-place"><tspan x={stage.x}>membrana</tspan><tspan x={stage.x} dy="13">interna</tspan></text>
+        : <text x={stage.x} y="192" textAnchor="middle" className="bp-resp-place">{stage.place}</text>}
       <text x={stage.x} y="286" textAnchor="middle" className="bp-resp-product">{stage.product}</text>
     </g>)}
     <text x="30" y="312" className="bp-resp-footnote">O₂ recebe elétrons ao final da cadeia; a ATP-sintase usa o gradiente de H⁺.</text>
