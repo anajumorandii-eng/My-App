@@ -22,6 +22,17 @@
 .bp-resp-place { fill: #39564b; font: 11px system-ui, sans-serif; }
 .bp-resp-product { fill: #273f37; font: 600 12px system-ui, sans-serif; }
 .bp-resp-footnote { fill: #394e45; font: 11px system-ui, sans-serif; }
+.bp-trophic { padding: 1.2rem; color: #273f37; background: linear-gradient(160deg, #e5f1eb, #f9f2df); }
+.bp-trophic p { margin: 0 0 1rem; font: 600 .85rem/1.4 system-ui, sans-serif; }
+.bp-trophic p:last-child { margin: 1rem 0 0; }
+.bp-trophic-chain { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: .55rem; }
+.bp-trophic-level { display: flex; flex-direction: column; justify-content: flex-end; gap: .7rem; min-width: 0; min-height: 9rem; padding: .7rem; border: 2px solid #a0b9a8; border-radius: 14px; background: #fffdf5; }
+.bp-trophic-level:not(:last-child)::after { content: '→'; position: relative; align-self: flex-end; height: 0; top: -4.7rem; right: -.95rem; z-index: 1; color: #316c5b; font-weight: 900; }
+.bp-trophic-level[data-active='true'] { border-color: #874759; box-shadow: 0 0 0 3px #eacfac; }
+.bp-trophic-level strong { font: 700 .84rem/1.2 system-ui, sans-serif; }
+.bp-trophic-meter { display: block; height: .75rem; border-radius: 1rem; background: #dfe8dd; }
+.bp-trophic-meter > span { display: block; height: 100%; border-radius: inherit; background: #a44f58; }
+.bp-trophic-value { font: 700 1.05rem/1.2 system-ui, sans-serif; white-space: nowrap; }
 .bp-process-tabs { display: flex; flex-wrap: wrap; gap: .55rem; }
 .bp-process-tabs button { min-height: 44px; padding: .55rem .8rem; border: 1px solid var(--vs-blue); border-radius: 12px; background: var(--vs-paper-strong); color: var(--vs-ink); cursor: pointer; font: 700 .85rem/1.3 system-ui, sans-serif; }
 .bp-process-tabs button[aria-pressed='true'] { border-color: var(--vs-burgundy); background: color-mix(in srgb, var(--vs-burgundy) 16%, var(--vs-paper-strong)); }
@@ -38,4 +49,9 @@
 .dark .bp-resp-stage { fill: #264e4b; stroke: #91bea9; }
 .dark .bp-resp-stage--active { fill: #735c36; stroke: #f3d9a4; }
 .dark .bp-resp-title, .dark .bp-resp-place, .dark .bp-resp-product, .dark .bp-resp-footnote { fill: #f4ead7; }
+.dark .bp-trophic { color: #f4ead7; background: linear-gradient(160deg, #193d40, #27333c); }
+.dark .bp-trophic-level { background: #203d42; border-color: #64948c; }
+.dark .bp-trophic-level[data-active='true'] { border-color: #f3d9a4; box-shadow: 0 0 0 3px #775657; }
+.dark .bp-trophic-meter { background: #3d5557; }
 @media (max-width: 560px) { .bp-process { padding: .8rem; }.bp-process-tabs button { flex: 1 1 40%; } }
+@media (max-width: 560px) { .bp-trophic-chain { grid-template-columns: 1fr; }.bp-trophic-level { min-height: 0; gap: .35rem; }.bp-trophic-level:not(:last-child)::after { content: '↓'; align-self: center; top: .55rem; right: auto; }.bp-trophic p { font-size: .8rem; } }
