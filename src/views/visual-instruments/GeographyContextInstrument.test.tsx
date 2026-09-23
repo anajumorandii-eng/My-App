@@ -23,4 +23,20 @@ describe('contextos territoriais de Geografia', () => {
     expect(screen.getByRole('img', { name: /Transmissão em foco/ })).toBeInTheDocument();
     expect(screen.getAllByText(/Linhas e subestações conectam distâncias/i).length).toBeGreaterThan(0);
   });
+
+  it.each([
+    ['electricity-system', 'oferta ↔ demanda', 'Transmissão'],
+    ['population-flows', 'vínculos com a origem', 'Trajeto'],
+    ['trade-network', 'custo do corredor', 'Logística'],
+    ['fossil-biofuels-brazil', 'carbono recente não zera impactos', 'Ciclo de vida'],
+  ] as const)('mostra o mecanismo próprio de %s', (id, label, recorte) => {
+    const summary = interactiveSummaries.find(item => item.id === GEOGRAPHY_CONTEXTS[id].chapterId)!;
+    const Board = geographyContextInstrument(id);
+    render(<Board map={buildVisualMap(summary)} states={{}} selectedId={null} onSelect={() => {}} hiddenEdgeIds={[]} mode="explorar" />);
+    const diagram = screen.getByRole('img', { name: new RegExp(GEOGRAPHY_CONTEXTS[id].title) });
+    expect(diagram).toHaveTextContent(label);
+    fireEvent.click(screen.getByRole('button', { name: recorte }));
+    expect(screen.getByRole('button', { name: recorte })).toHaveAttribute('aria-pressed', 'true');
+    expect(diagram).toHaveAttribute('aria-label', expect.stringContaining(`${recorte} em foco`));
+  });
 });

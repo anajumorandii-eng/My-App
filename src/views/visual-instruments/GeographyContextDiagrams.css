@@ -1,0 +1,31 @@
+.gcd-paper { fill: #f6f0e2; stroke: #c7bca6; stroke-width: 2; }
+.gcd-spotlight { fill: #f4e0bb; stroke: #c68471; stroke-width: 2; opacity: .68; }
+.gcd-tab { fill: #e2e6d9; stroke: #9cae9f; stroke-width: 1.5; }
+.gcd-tab-active { fill: #efd2a4; stroke: #934b57; stroke-width: 2.5; }
+.gcd-tab-label { fill: #263d3a; font: 800 9px system-ui, sans-serif; }
+.gcd-note { fill: #714553; font: 700 11px system-ui, sans-serif; }
+.gcd-small { fill: #5a5952; font: 600 9px system-ui, sans-serif; }
+.gcd-object { fill: #d7e3d8; stroke: #446c6a; stroke-width: 3; }
+.gcd-line { fill: none; stroke: #456c6d; stroke-width: 3; stroke-linejoin: round; }
+.gcd-window { fill: #f6d49d; stroke: #456c6d; stroke-width: 2; }
+.gcd-wire { fill: none; stroke: #b77d52; stroke-width: 2; }
+.gcd-flow { fill: none; stroke: #934b57; stroke-width: 4; marker-end: url(#gcd-arrow); }
+.gcd-arrowhead { fill: #934b57; }
+.gcd-route { fill: none; stroke: #934b57; stroke-width: 4; stroke-dasharray: 7 5; marker-end: url(#gcd-arrow); }
+.gcd-return { fill: none; stroke: #558c83; stroke-width: 2; stroke-dasharray: 5 5; }
+.gcd-waypoint { fill: #efd2a4; stroke: #934b57; stroke-width: 3; }
+.gcd-ship { fill: #9fc2c3; stroke: #456c6d; stroke-width: 3; }
+.gcd-wave { fill: none; stroke: #6c9eb2; stroke-width: 3; }
+.gcd-ground { stroke: #759068; stroke-width: 4; }
+.gcd-fossil { fill: #4a5359; stroke: #293840; stroke-width: 2; }
+.gcd-plant { fill: #a6bc86; stroke: #58754d; stroke-width: 3; }
+.dark .gcd-paper { fill: #213d43; stroke: #83a99c; }
+.dark .gcd-spotlight { fill: #68533b; stroke: #f1c8ab; }
+.dark .gcd-tab { fill: #365b57; stroke: #8bad9c; }
+.dark .gcd-tab-active { fill: #745f43; stroke: #ffd095; }
+.dark .gcd-tab-label, .dark .gcd-small { fill: #f5eddc; }
+.dark .gcd-note { fill: #f1c8ab; }
+.dark .gcd-object { fill: #345a5d; stroke: #a2c2b4; }
+.dark .gcd-line { stroke: #a2c2b4; }
+.dark .gcd-window { fill: #aa8759; stroke: #a2c2b4; }
+.dark .gcd-ship { fill: #4c8088; stroke: #a2c2b4; }

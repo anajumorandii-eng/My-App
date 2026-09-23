@@ -2577,11 +2577,22 @@
     "title": "Combustíveis Fósseis e Biocombustíveis no Brasil",
     "primary": "instrument",
     "artifact": "combustiveis-biocombustiveis-brasil",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "estoque fóssil, planta e etapa de uso",
+    "relation": "carbono recente não torna biocombustível automaticamente neutro; solo e transporte integram o balanço",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-combustiveis-fosseis-e-biocombustiveis-no-brasil-mobile-360-light.png",
+      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-combustiveis-fosseis-e-biocombustiveis-no-brasil-mobile-360-dark.png",
+      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-combustiveis-fosseis-e-biocombustiveis-no-brasil-mobile-375-light.png",
+      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-combustiveis-fosseis-e-biocombustiveis-no-brasil-mobile-375-dark.png",
+      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-combustiveis-fosseis-e-biocombustiveis-no-brasil-mobile-390-light.png",
+      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-combustiveis-fosseis-e-biocombustiveis-no-brasil-mobile-390-dark.png",
+      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-combustiveis-fosseis-e-biocombustiveis-no-brasil-tablet-light.png",
+      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-combustiveis-fosseis-e-biocombustiveis-no-brasil-tablet-dark.png",
+      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-combustiveis-fosseis-e-biocombustiveis-no-brasil-desktop-light.png",
+      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-combustiveis-fosseis-e-biocombustiveis-no-brasil-desktop-dark.png"
+    ],
+    "notes": "Esquema de ciclo de vida sem emissões numéricas; QA técnico em cinco larguras e dois temas. Aprovação editorial pendente."
   },
   {
     "id": "summary-geografia-energia-eletrica-no-mundo",
@@ -2601,11 +2612,22 @@
     "title": "Energia Elétrica no Brasil",
     "primary": "instrument",
     "artifact": "energia-eletrica-brasil",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "usina, rede e centro consumidor",
+    "relation": "geração e transmissão conectam fontes a uma demanda variável",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-energia-eletrica-no-brasil-mobile-360-light.png",
+      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-energia-eletrica-no-brasil-mobile-360-dark.png",
+      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-energia-eletrica-no-brasil-mobile-375-light.png",
+      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-energia-eletrica-no-brasil-mobile-375-dark.png",
+      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-energia-eletrica-no-brasil-mobile-390-light.png",
+      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-energia-eletrica-no-brasil-mobile-390-dark.png",
+      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-energia-eletrica-no-brasil-tablet-light.png",
+      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-energia-eletrica-no-brasil-tablet-dark.png",
+      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-energia-eletrica-no-brasil-desktop-light.png",
+      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-energia-eletrica-no-brasil-desktop-dark.png"
+    ],
+    "notes": "Figura esquemática, sem dados de usina real; QA técnico em cinco larguras e dois temas. Aprovação editorial pendente."
   },
   {
     "id": "summary-geografia-producao-mineral",
@@ -2673,11 +2695,22 @@
     "title": "Estrutura Étnica e Fluxos Migratórios",
     "primary": "instrument",
     "artifact": "fluxos-populacionais",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "origem, trajeto e destino ligados por redes",
+    "relation": "o deslocamento reorganiza destinos e pode preservar vínculos com a origem",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-estrutura-etnica-e-fluxos-migratorios-mobile-360-light.png",
+      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-estrutura-etnica-e-fluxos-migratorios-mobile-360-dark.png",
+      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-estrutura-etnica-e-fluxos-migratorios-mobile-375-light.png",
+      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-estrutura-etnica-e-fluxos-migratorios-mobile-375-dark.png",
+      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-estrutura-etnica-e-fluxos-migratorios-mobile-390-light.png",
+      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-estrutura-etnica-e-fluxos-migratorios-mobile-390-dark.png",
+      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-estrutura-etnica-e-fluxos-migratorios-tablet-light.png",
+      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-estrutura-etnica-e-fluxos-migratorios-tablet-dark.png",
+      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-estrutura-etnica-e-fluxos-migratorios-desktop-light.png",
+      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-estrutura-etnica-e-fluxos-migratorios-desktop-dark.png"
+    ],
+    "notes": "Fluxo hipotético, sem rota real; QA técnico em cinco larguras e dois temas. Aprovação editorial pendente."
   },
   {
     "id": "summary-geografia-o-espaco-urbano-i",
@@ -2721,11 +2754,22 @@
     "title": "Os Fluxos do Comércio Externo",
     "primary": "instrument",
     "artifact": "rede-comercio-externo",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "produção, porto e mercado externo",
+    "relation": "a logística e seus custos ligam especialização produtiva a parceiros externos",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-os-fluxos-do-comercio-externo-mobile-360-light.png",
+      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-os-fluxos-do-comercio-externo-mobile-360-dark.png",
+      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-os-fluxos-do-comercio-externo-mobile-375-light.png",
+      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-os-fluxos-do-comercio-externo-mobile-375-dark.png",
+      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-os-fluxos-do-comercio-externo-mobile-390-light.png",
+      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-os-fluxos-do-comercio-externo-mobile-390-dark.png",
+      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-os-fluxos-do-comercio-externo-tablet-light.png",
+      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-os-fluxos-do-comercio-externo-tablet-dark.png",
+      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-os-fluxos-do-comercio-externo-desktop-light.png",
+      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-os-fluxos-do-comercio-externo-desktop-dark.png"
+    ],
+    "notes": "Corredor ilustrativo, sem porto ou parceiro real; QA técnico em cinco larguras e dois temas. Aprovação editorial pendente."
   },
   {
     "id": "summary-historia-introducao-a-historia-e-primeiras-civilizacoes",
