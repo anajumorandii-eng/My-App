@@ -10,19 +10,20 @@ export const ECOLOGY_CYCLE_IDS: ReadonlySet<string> = new Set([
 
 function NitrogenDiagram({ active, selected }: { active: number; selected: string }) {
   const points = [
-    { x: 100, y: 76, label: 'N₂ · atmosfera' },
-    { x: 112, y: 252, label: 'amônia · solo' },
+    { x: 100, y: 76, label: 'N₂' },
+    { x: 112, y: 252, label: 'amônia' },
     { x: 295, y: 252, label: 'nitrito' },
     { x: 490, y: 252, label: 'nitrato' },
   ];
   return <svg viewBox="0 0 620 360" role="img" aria-label={`Ciclo do nitrogênio: N₂ → amônia → nitrito → nitrato → N₂; etapa selecionada: ${selected}`}>
+    <defs><marker id="ec-n-arrow" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0 10 5 0 10Z" fill="#397b72"/></marker></defs>
     <rect x="12" y="12" width="596" height="336" rx="20" className="ec-paper"/>
     <path d="M30 168H590" className="ec-ground"/>
     <text x="30" y="40" className="ec-caption">atmosfera</text><text x="30" y="191" className="ec-caption">solo · conversões microbianas</text>
-    <path d="M100 101V225M163 252H244M346 252H434M490 222V92H162" className="ec-flow"/>
-    <path d="M195 330l-30-43M195 330l31-44M195 330v-52M165 287Q130 300 112 286" className="ec-roots"/>
-    <text x="18" y="316" className={active === 1 ? 'ec-highlight' : 'ec-caption'}>amonificação ↗</text>
-    <text x="18" y="336" className="ec-caption">matéria orgânica → amônia</text>
+    <path d="M100 111V213M163 252H250M346 252H442M490 213V76H150" className="ec-flow" markerEnd="url(#ec-n-arrow)"/>
+    <path d="M112 321V292" className="ec-roots" markerEnd="url(#ec-n-arrow)"/>
+    <text x="18" y="316" className="ec-caption">matéria orgânica</text>
+    <text x="18" y="336" className={active === 1 ? 'ec-highlight' : 'ec-caption'}>amonificação ↑</text>
     <text x="415" y="318" className="ec-caption">nitrato → raízes</text>
     {points.map((point, index) => <g key={point.label} className={active === index || (active === 4 && (index === 3 || index === 0)) ? 'ec-node ec-node--active' : 'ec-node'}>
       <circle cx={point.x} cy={point.y} r="34"/>

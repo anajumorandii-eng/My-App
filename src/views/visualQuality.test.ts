@@ -1,4 +1,4 @@
-import { readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import { interactiveSummaries } from '../data/interactiveSummaries';
 import { buildQualityInventory, type QualityReview } from './visualQuality';
@@ -43,5 +43,12 @@ describe('inventário de qualidade visual', () => {
     expect(new Set(rows.map(row => row.id)).size).toBe(613);
     expect(rows.filter(row => row.status === 'aprovado')).toHaveLength(0);
     expect(saved).toEqual(rows);
+  });
+
+  it('aponta para capturas existentes em todas as revisões de Ecologia', () => {
+    for (const review of visualQualityReviews) {
+      expect(review.evidencePaths, review.chapterId).toHaveLength(10);
+      for (const path of review.evidencePaths) expect(existsSync(path), path).toBe(true);
+    }
   });
 });

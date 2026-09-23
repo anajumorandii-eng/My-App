@@ -44,8 +44,19 @@
     "status": "em-validacao",
     "mechanism": "perfis reprodutivos",
     "relation": "muitos descendentes e pouco cuidado versus poucos descendentes e longo cuidado",
-    "evidencePaths": [],
-    "notes": "Aguardando inspeção visual em navegador"
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-dinamica-populacoes-mobile-360-light.png",
+      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-dinamica-populacoes-mobile-360-dark.png",
+      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-dinamica-populacoes-mobile-375-light.png",
+      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-dinamica-populacoes-mobile-375-dark.png",
+      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-dinamica-populacoes-mobile-390-light.png",
+      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-dinamica-populacoes-mobile-390-dark.png",
+      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-dinamica-populacoes-tablet-light.png",
+      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-dinamica-populacoes-tablet-dark.png",
+      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-dinamica-populacoes-desktop-light.png",
+      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-dinamica-populacoes-desktop-dark.png"
+    ],
+    "notes": "QA técnico: 360, 375, 390, 768 e 1440 px; temas claro/escuro; primeira e última seleção; teclado; movimento reduzido; axe sem violações. Revisão editorial frente às referências aprovadas ainda pendente."
   },
   {
     "id": "bio-ecologia-invasoras-controle-biologico",
@@ -56,8 +67,19 @@
     "status": "em-validacao",
     "mechanism": "rede de impactos",
     "relation": "invasora alcança nativas, recursos, genes e ambiente por cinco caminhos",
-    "evidencePaths": [],
-    "notes": "Aguardando inspeção visual em navegador"
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-invasoras-controle-biologico-mobile-360-light.png",
+      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-invasoras-controle-biologico-mobile-360-dark.png",
+      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-invasoras-controle-biologico-mobile-375-light.png",
+      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-invasoras-controle-biologico-mobile-375-dark.png",
+      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-invasoras-controle-biologico-mobile-390-light.png",
+      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-invasoras-controle-biologico-mobile-390-dark.png",
+      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-invasoras-controle-biologico-tablet-light.png",
+      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-invasoras-controle-biologico-tablet-dark.png",
+      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-invasoras-controle-biologico-desktop-light.png",
+      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-invasoras-controle-biologico-desktop-dark.png"
+    ],
+    "notes": "QA técnico: 360, 375, 390, 768 e 1440 px; temas claro/escuro; primeira e última seleção; teclado; movimento reduzido; axe sem violações. Revisão editorial frente às referências aprovadas ainda pendente."
   },
   {
     "id": "bio-ecologia-sucessao",
@@ -68,8 +90,19 @@
     "status": "em-validacao",
     "mechanism": "paisagem de comunidades",
     "relation": "solo e vegetação mudam da pioneira ao clímax",
-    "evidencePaths": [],
-    "notes": "Aguardando inspeção visual em navegador"
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-sucessao-mobile-360-light.png",
+      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-sucessao-mobile-360-dark.png",
+      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-sucessao-mobile-375-light.png",
+      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-sucessao-mobile-375-dark.png",
+      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-sucessao-mobile-390-light.png",
+      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-sucessao-mobile-390-dark.png",
+      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-sucessao-tablet-light.png",
+      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-sucessao-tablet-dark.png",
+      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-sucessao-desktop-light.png",
+      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-sucessao-desktop-dark.png"
+    ],
+    "notes": "QA técnico: 360, 375, 390, 768 e 1440 px; temas claro/escuro; primeira e última seleção; teclado; movimento reduzido; axe sem violações. Revisão editorial frente às referências aprovadas ainda pendente."
   },
   {
     "id": "bio-ecologia-ciclo-carbono",
@@ -92,8 +125,19 @@
     "status": "em-validacao",
     "mechanism": "ciclo microbiano no solo e atmosfera",
     "relation": "fixação e amonificação alimentam nitrificação; desnitrificação devolve N₂",
-    "evidencePaths": [],
-    "notes": "Aguardando inspeção visual em navegador"
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-ciclo-nitrogenio-mobile-360-light.png",
+      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-ciclo-nitrogenio-mobile-360-dark.png",
+      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-ciclo-nitrogenio-mobile-375-light.png",
+      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-ciclo-nitrogenio-mobile-375-dark.png",
+      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-ciclo-nitrogenio-mobile-390-light.png",
+      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-ciclo-nitrogenio-mobile-390-dark.png",
+      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-ciclo-nitrogenio-tablet-light.png",
+      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-ciclo-nitrogenio-tablet-dark.png",
+      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-ciclo-nitrogenio-desktop-light.png",
+      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-ciclo-nitrogenio-desktop-dark.png"
+    ],
+    "notes": "QA técnico: 360, 375, 390, 768 e 1440 px; temas claro/escuro; primeira e última seleção; teclado; movimento reduzido; axe sem violações. Revisão editorial frente às referências aprovadas ainda pendente."
   },
   {
     "id": "bio-ecologia-ciclo-hidrologico-poluicao-agua",
@@ -104,8 +148,19 @@
     "status": "em-validacao",
     "mechanism": "fonte, água e efeito",
     "relation": "cada agente altera o meio aquático por consequência própria",
-    "evidencePaths": [],
-    "notes": "Aguardando inspeção visual em navegador"
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-ciclo-hidrologico-poluicao-agua-mobile-360-light.png",
+      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-ciclo-hidrologico-poluicao-agua-mobile-360-dark.png",
+      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-ciclo-hidrologico-poluicao-agua-mobile-375-light.png",
+      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-ciclo-hidrologico-poluicao-agua-mobile-375-dark.png",
+      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-ciclo-hidrologico-poluicao-agua-mobile-390-light.png",
+      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-ciclo-hidrologico-poluicao-agua-mobile-390-dark.png",
+      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-ciclo-hidrologico-poluicao-agua-tablet-light.png",
+      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-ciclo-hidrologico-poluicao-agua-tablet-dark.png",
+      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-ciclo-hidrologico-poluicao-agua-desktop-light.png",
+      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-ciclo-hidrologico-poluicao-agua-desktop-dark.png"
+    ],
+    "notes": "QA técnico: 360, 375, 390, 768 e 1440 px; temas claro/escuro; primeira e última seleção; teclado; movimento reduzido; axe sem violações. Revisão editorial frente às referências aprovadas ainda pendente."
   },
   {
     "id": "bio-ecologia-eutrofizacao",
@@ -116,8 +171,19 @@
     "status": "em-validacao",
     "mechanism": "seção vertical de lago",
     "relation": "nutrientes induzem floração, bloqueiam luz e levam ao consumo de oxigênio",
-    "evidencePaths": [],
-    "notes": "Aguardando inspeção visual em navegador"
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-eutrofizacao-mobile-360-light.png",
+      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-eutrofizacao-mobile-360-dark.png",
+      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-eutrofizacao-mobile-375-light.png",
+      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-eutrofizacao-mobile-375-dark.png",
+      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-eutrofizacao-mobile-390-light.png",
+      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-eutrofizacao-mobile-390-dark.png",
+      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-eutrofizacao-tablet-light.png",
+      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-eutrofizacao-tablet-dark.png",
+      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-eutrofizacao-desktop-light.png",
+      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-eutrofizacao-desktop-dark.png"
+    ],
+    "notes": "QA técnico: 360, 375, 390, 768 e 1440 px; temas claro/escuro; primeira e última seleção; teclado; movimento reduzido; axe sem violações. Revisão editorial frente às referências aprovadas ainda pendente."
   },
   {
     "id": "bio-ecologia-poluicao-ar",

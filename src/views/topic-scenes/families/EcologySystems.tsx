@@ -21,12 +21,14 @@ function PopulationProfiles({ active, selected }: DiagramProps) {
     <g className={active === 0 ? 'es-selected' : 'es-muted'}><rect x="32" y="70" width="260" height="210" rx="18" className="es-card"/>
       <text x="54" y="103" className="es-title">r · muitos descendentes</text>
       {Array.from({ length: 12 }, (_, i) => <circle key={i} cx={78 + (i % 4) * 55} cy={146 + Math.floor(i / 4) * 33} r="8" className="es-offspring"/>)}
-      <text x="54" y="261" className="ec-caption">pouco cuidado · alta mortalidade juvenil</text></g>
+      <text x="54" y="250" className="ec-caption">pouco cuidado</text>
+      <text x="54" y="268" className="ec-caption">alta mortalidade juvenil</text></g>
     <g className={active === 1 ? 'es-selected' : 'es-muted'}><rect x="328" y="70" width="260" height="210" rx="18" className="es-card"/>
       <text x="350" y="103" className="es-title">K · poucos descendentes</text>
       <circle cx="455" cy="168" r="25" className="es-parent"/><circle cx="420" cy="216" r="11" className="es-offspring"/><circle cx="490" cy="216" r="11" className="es-offspring"/>
       <path d="M449 190l-26 18m39-18 25 18" className="ec-flow"/>
-      <text x="350" y="261" className="ec-caption">longo cuidado · maturação lenta</text></g>
+      <text x="350" y="250" className="ec-caption">longo cuidado</text>
+      <text x="350" y="268" className="ec-caption">maturação lenta</text></g>
     <text x="31" y="307" className="ec-caption">Perfis qualitativos; os círculos ilustram a estratégia, sem valores medidos.</text>
   </svg>;
 }
@@ -46,7 +48,6 @@ function InvasionWeb({ active, selected }: DiagramProps) {
       <rect x="340" y={y - 22} width="242" height="45" rx="14" className="es-card"/>
       <text x="353" y={y - 4} className="es-title">{label}</text><text x="353" y={y + 13} className="ec-caption">→ {target}</text>
     </g>; })}
-    <text x="38" y="330" className="ec-caption">Cada ramo é um mecanismo; selecionar destaca seu efeito.</text>
   </svg>;
 }
 
@@ -54,7 +55,7 @@ function SuccessionLandscape({ active, selected }: DiagramProps) {
   const stages = [
     { x: 30, name: 'pioneira', vegetation: 'solo inicial', height: 22 },
     { x: 227, name: 'gramíneas → arbustos', vegetation: 'solo estabilizado', height: 58 },
-    { x: 424, name: 'árvores · clímax', vegetation: 'comunidade estável', height: 104 },
+    { x: 424, name: 'árvores · clímax', vegetation: 'comunidade estável', height: 69 },
   ];
   return <svg viewBox="0 0 620 340" role="img" aria-label={`Sucessão: pioneira → gramíneas → arbustos → árvores; etapa selecionada: ${selected}`}>
     <rect x="12" y="12" width="596" height="316" rx="20" className="ec-paper"/>
