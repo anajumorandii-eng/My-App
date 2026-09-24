@@ -60,3 +60,13 @@ Este mecanismo preserva o contexto e o estado técnico no repositório e no arqu
 - Testes UI/unitários recebem referência inerte em `src/testSetup.ts` no lugar do banco Firestore real. Testes de repositório continuam fornecendo seus próprios mocks.
 - Validação: 537 testes Vitest e 706 testes Node aprovados; build aprovado. Três testes de regressão cobrem conteúdo legível, ação do menu e bloqueio de envio duplicado.
 - QA em navegador pendente: Chromium ausente e download retornou arquivo inválido. Esta rodada não certifica a revisão visual dos 613 capítulos nem altera sua cobertura.
+
+## Continuidade de Motion — ícones e inspeção publicada
+
+- PR #208 integrada em `3e995da2c1f7ca53945ef2bd540da73bb69655d6`; CI #412, verificação da PR e Vercel aprovados.
+- Base desta rodada: `2f7a6d5006d068c767d0ff1b609f482dd4bcdcdd`; branch `codex/motion-followup`.
+- Ícones de disciplinas e tópicos da tela Visual passam a consultar movimento reduzido. Alvos estáticos preservam letras, traços completos, areia da ampulheta e os três planos orbitais de Física. Transições reduzidas não repetem nem aguardam atrasos.
+- Quatro testes novos: órbitas distintas, legibilidade de traços/letras, geometria de tópicos e preservação do modo normal.
+- Validação: 541 testes Vitest e 706 testes Node aprovados; TypeScript aprovado.
+- Inspeção de produção: catálogo, filtro de Física e abertura do capítulo de calorimetria; desktop 1363×936, temas claro/escuro, sem overflow horizontal. Capturas em `docs/visual-personalizado/screenshots/motion-followup/`.
+- As capturas registram a versão publicada anterior à correção de ícones. Não são aprovação visual da nova implementação. A API do navegador disponível não expõe redimensionamento/emulação; mobile/tablet e reduced motion em navegador permanecem pendentes.
