@@ -2,6 +2,9 @@ import '@testing-library/jest-dom/vitest';
 import { cleanup } from '@testing-library/react';
 import { afterEach, vi } from 'vitest';
 
+// Unit/UI tests must explicitly mock their repository instead of reaching a real database.
+vi.mock('./lib/firestore', () => ({ db: Object.freeze({ testOnly: true }) }));
+
 if (typeof window !== 'undefined' && !window.matchMedia) {
   window.matchMedia = ((query: string) => ({
     matches: false,

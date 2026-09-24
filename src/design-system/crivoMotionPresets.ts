@@ -1,23 +1,33 @@
-import type { Transition, Variants } from 'motion/react';
+import type { TargetAndTransition, Transition, Variants } from 'motion/react';
 import { FieldType, getSubjectProfile } from './crivoSubjects';
 
 export interface SubjectMotionConfig {
   containerVariants: Variants;
   itemVariants: Variants;
   hoverProps: {
-    whileHover: Record<string, any>;
-    whileTap: Record<string, any>;
+    whileHover: TargetAndTransition;
+    whileTap: TargetAndTransition;
     transition: Transition;
   };
   tabTransition: Transition;
 }
 
-export function getMotionConfigForSubject(subject?: string): SubjectMotionConfig {
+export function getMotionConfigForSubject(subject?: string, reducedMotion = false): SubjectMotionConfig {
   const profile = getSubjectProfile(subject);
-  return getMotionConfigForFieldType(profile.fieldType);
+  return getMotionConfigForFieldType(profile.fieldType, reducedMotion);
 }
 
-export function getMotionConfigForFieldType(fieldType: FieldType): SubjectMotionConfig {
+export function getMotionConfigForFieldType(fieldType: FieldType, reducedMotion = false): SubjectMotionConfig {
+  if (reducedMotion) {
+    const still = { opacity: 1, x: 0, y: 0, scale: 1, filter: 'none', transition: { duration: 0 } };
+    return {
+      containerVariants: { hidden: still, visible: still },
+      itemVariants: { hidden: still, visible: still },
+      hoverProps: { whileHover: {}, whileTap: {}, transition: { duration: 0 } },
+      tabTransition: { duration: 0 },
+    };
+  }
+
   switch (fieldType) {
     case 'grid':
     case 'lenses':

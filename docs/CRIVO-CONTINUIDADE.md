@@ -51,3 +51,12 @@ O commit automático do bot não se reprocessa, evitando loops de CI.
 ## Limites claros
 
 Este mecanismo preserva o contexto e o estado técnico no repositório e no arquivo de continuidade da conversa. Ele não substitui a conferência do GitHub quando houver mudanças novas, nem permite que uma memória de chat seja automaticamente reescrita a cada push. A fonte canônica é este documento + o instantâneo automático; ambos podem ser consultados diretamente pelo GitHub sem clone.
+
+## Retomada Motion — 24 de setembro de 2026
+
+- Base: `aa9bf2c`; branch `codex/motion-recovery`.
+- Recuperada a correção da rodada anterior, cujo worktree/commit temporário não persistiu entre mensagens.
+- Button, Panel e MenuBase consultam movimento reduzido. Presets estáticos removem blur, deslocamentos e stagger; indicador de carregamento respeita a preferência. Identidades normais por matéria preservadas.
+- Testes UI/unitários recebem referência inerte em `src/testSetup.ts` no lugar do banco Firestore real. Testes de repositório continuam fornecendo seus próprios mocks.
+- Validação: 537 testes Vitest e 706 testes Node aprovados; build aprovado. Três testes de regressão cobrem conteúdo legível, ação do menu e bloqueio de envio duplicado.
+- QA em navegador pendente: Chromium ausente e download retornou arquivo inválido. Esta rodada não certifica a revisão visual dos 613 capítulos nem altera sua cobertura.

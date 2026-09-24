@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion, useReducedMotion, AnimatePresence } from 'motion/react';
 import { cn } from '../../lib/cn';
 import { getMotionConfigForSubject } from '../../design-system/crivoMotionPresets';
 
@@ -22,7 +22,8 @@ export interface MenuBaseProps {
 export function MenuBase({ items, trigger, subject, className, align = 'left' }: MenuBaseProps) {
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
-  const motionConfig = getMotionConfigForSubject(subject);
+  const reducedMotion = useReducedMotion();
+  const motionConfig = getMotionConfigForSubject(subject, !!reducedMotion);
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -43,10 +44,10 @@ export function MenuBase({ items, trigger, subject, className, align = 'left' }:
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, scale: 0.95, y: -10 }}
+            initial={reducedMotion ? false : { opacity: 0, scale: 0.95, y: -10 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.95, y: -10 }}
-            transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
+            exit={reducedMotion ? { opacity: 1 } : { opacity: 0, scale: 0.95, y: -10 }}
+            transition={reducedMotion ? { duration: 0 } : { duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
             className={cn(
               'absolute z-50 mt-2 w-56 rounded-card border border-border-subtle bg-surface-elevated shadow-soft-lg overflow-hidden',
               align === 'right' ? 'right-0' : 'left-0',
