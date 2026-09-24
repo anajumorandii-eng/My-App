@@ -51,3 +51,9 @@ O commit automático do bot não se reprocessa, evitando loops de CI.
 ## Limites claros
 
 Este mecanismo preserva o contexto e o estado técnico no repositório e no arquivo de continuidade da conversa. Ele não substitui a conferência do GitHub quando houver mudanças novas, nem permite que uma memória de chat seja automaticamente reescrita a cada push. A fonte canônica é este documento + o instantâneo automático; ambos podem ser consultados diretamente pelo GitHub sem clone.
+
+## Reconstrução visual em andamento — 23/09/2026
+
+A responsável rejeitou a qualidade das imagens e a ausência de movimento na aba Visual dos capítulos. Lote local em `C:\wt-crivo-motion-rebuild`, branch `codex/visual-motion-rebuild`, base `aa9bf2c`: 15 capítulos de Biologia, História e Geografia reconstruídos com cenas e fluxos em `motion/react`. Sem publicação e sem aprovação estética presumida. Os seis registros antigos de Ecologia foram reabertos como `em-validacao`.
+
+Detalhes, evidências e próximos pontos: [reconstrucao-motion-2026-09-23.md](visual-personalizado/reconstrucao-motion-2026-09-23.md). Há 150 verificações de largura em cinco tamanhos e dois temas; isso não representa revisão estética completa do catálogo. O bloqueio de `npm test` por 14 PDFs licenciados ausentes permanece separado dos testes de interface.

@@ -50,8 +50,8 @@ describe('pranchas de História e Geografia', () => {
     const entry = geografia.find(item => item.chapterId === 'summary-geografia-dinamica-climatica')!;
     render(<HistoriaGeografia entry={entry} />);
     const diagram = screen.getByRole('img', { name: /Chuva convectiva.*orográfica.*frontal/i });
-    expect(diagram).toHaveTextContent('barreira do relevo');
     await user.click(screen.getByRole('button', { name: 'Orográfica' }));
+    expect(diagram).toHaveTextContent('barreira do relevo');
     expect(screen.getByRole('status')).toHaveTextContent('barlavento');
     expect(diagram).toHaveAttribute('aria-label', expect.stringContaining('orográfica selecionada'));
   });

@@ -41,6 +41,8 @@ export interface BoardShellProps {
   rightSelected: boolean;
   /** A cena do fenômeno. É o que muda de uma prancha para outra. */
   scene: React.ReactNode;
+  /** A figura ocupa a primeira linha; os conceitos continuam selecionáveis abaixo. */
+  sceneFirst?: boolean;
   /** Legendas sobrepostas à cena, quando ela tem sentido de movimento. */
   sceneNotes?: { up: string; down: string };
   emphasis?: 'esquerda' | 'direita' | 'nenhum';
@@ -79,15 +81,18 @@ export default function BoardShell({
   kicker = 'Prancha ilustrada', title, subtitle, condition,
   left, right, leftState, rightState,
   onSelectLeft, onSelectRight, leftSelected, rightSelected,
-  scene, sceneNotes, emphasis = 'nenhum', equation, supports, closing, ariaLabel,
+  scene, sceneFirst = false, sceneNotes, emphasis = 'nenhum', equation, supports, closing, ariaLabel,
 }: BoardShellProps) {
   const compacto = useCompacto();
   const [face, setFace] = useState<Face>('essencial');
   // No desktop nada se esconde: as duas faces aparecem juntas, como sempre.
   const mostra = (alvo: Face) => !compacto || face === alvo;
+  const scenePanel = <div className="vs-piston-wrap" data-emphasis={emphasis === 'esquerda' ? 'expansao' : emphasis === 'direita' ? 'compressao' : 'nenhum'}>
+    <SceneViewport notas={sceneNotes}>{scene}</SceneViewport>
+  </div>;
 
   return (
-    <section className="vs-study-board" data-testid="visual-study-board" aria-label={ariaLabel}>
+    <section className={`vs-study-board${sceneFirst ? ' vs-study-board--scene-first' : ''}`} data-testid="visual-study-board" aria-label={ariaLabel}>
       <header className="vs-board-head">
         <div>
           <span className="vs-board-kicker">{kicker}</span>
@@ -120,12 +125,9 @@ export default function BoardShell({
 
       {mostra('essencial') && (
       <div className="vs-board-body">
+        {sceneFirst && scenePanel}
         <ConceptCard side="expansion" data={left} state={leftState} selected={leftSelected} onSelect={onSelectLeft} />
-
-        <div className="vs-piston-wrap" data-emphasis={emphasis === 'esquerda' ? 'expansao' : emphasis === 'direita' ? 'compressao' : 'nenhum'}>
-          <SceneViewport notas={sceneNotes}>{scene}</SceneViewport>
-        </div>
-
+        {!sceneFirst && scenePanel}
         <ConceptCard side="compression" data={right} state={rightState} selected={rightSelected} onSelect={onSelectRight} />
       </div>
       )}

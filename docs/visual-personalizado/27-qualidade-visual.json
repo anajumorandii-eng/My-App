@@ -41,22 +41,16 @@
     "title": "Dinâmica de populações",
     "primary": "scene",
     "artifact": "estrategias-reprodutivas",
-    "status": "aprovado",
+    "status": "em-validacao",
     "mechanism": "perfis reprodutivos",
     "relation": "muitos descendentes e pouco cuidado versus poucos descendentes e longo cuidado",
     "evidencePaths": [
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-dinamica-populacoes-mobile-360-light.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-dinamica-populacoes-mobile-360-dark.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-dinamica-populacoes-mobile-375-light.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-dinamica-populacoes-mobile-375-dark.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-dinamica-populacoes-mobile-390-light.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-dinamica-populacoes-mobile-390-dark.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-dinamica-populacoes-tablet-light.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-dinamica-populacoes-tablet-dark.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-dinamica-populacoes-desktop-light.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-dinamica-populacoes-desktop-dark.png"
+      "docs/visual-personalizado/screenshots/ecologia-motion-2026-09-23/bio-ecologia-dinamica-populacoes-390-light.png",
+      "docs/visual-personalizado/screenshots/ecologia-motion-2026-09-23/bio-ecologia-dinamica-populacoes-390-dark.png",
+      "docs/visual-personalizado/screenshots/ecologia-motion-2026-09-23/bio-ecologia-dinamica-populacoes-1440-light.png",
+      "docs/visual-personalizado/screenshots/ecologia-motion-2026-09-23/bio-ecologia-dinamica-populacoes-1440-dark.png"
     ],
-    "notes": "QA técnico: 360, 375, 390, 768 e 1440 px; temas claro/escuro; primeira e última seleção; teclado; movimento reduzido; axe sem violações. Aprovado pela responsável em 2026-09-23."
+    "notes": "Reaberto após rejeição visual da responsável em 2026-09-23. Cenas refeitas com movimento no mecanismo; aprovação editorial pendente. Evidências novas: 60 verificações de largura/seleção e capturas em 390 e 1440 px nos dois temas."
   },
   {
     "id": "bio-ecologia-invasoras-controle-biologico",
@@ -64,22 +58,16 @@
     "title": "Espécies invasoras e controle biológico",
     "primary": "scene",
     "artifact": "invasao-impactos",
-    "status": "aprovado",
+    "status": "em-validacao",
     "mechanism": "rede de impactos",
     "relation": "invasora alcança nativas, recursos, genes e ambiente por cinco caminhos",
     "evidencePaths": [
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-invasoras-controle-biologico-mobile-360-light.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-invasoras-controle-biologico-mobile-360-dark.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-invasoras-controle-biologico-mobile-375-light.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-invasoras-controle-biologico-mobile-375-dark.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-invasoras-controle-biologico-mobile-390-light.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-invasoras-controle-biologico-mobile-390-dark.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-invasoras-controle-biologico-tablet-light.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-invasoras-controle-biologico-tablet-dark.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-invasoras-controle-biologico-desktop-light.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-invasoras-controle-biologico-desktop-dark.png"
+      "docs/visual-personalizado/screenshots/ecologia-motion-2026-09-23/bio-ecologia-invasoras-controle-biologico-390-light.png",
+      "docs/visual-personalizado/screenshots/ecologia-motion-2026-09-23/bio-ecologia-invasoras-controle-biologico-390-dark.png",
+      "docs/visual-personalizado/screenshots/ecologia-motion-2026-09-23/bio-ecologia-invasoras-controle-biologico-1440-light.png",
+      "docs/visual-personalizado/screenshots/ecologia-motion-2026-09-23/bio-ecologia-invasoras-controle-biologico-1440-dark.png"
     ],
-    "notes": "QA técnico: 360, 375, 390, 768 e 1440 px; temas claro/escuro; primeira e última seleção; teclado; movimento reduzido; axe sem violações. Aprovado pela responsável em 2026-09-23."
+    "notes": "Reaberto após rejeição visual da responsável em 2026-09-23. Cenas refeitas com movimento no mecanismo; aprovação editorial pendente. Evidências novas: 60 verificações de largura/seleção e capturas em 390 e 1440 px nos dois temas."
   },
   {
     "id": "bio-ecologia-sucessao",
@@ -87,22 +75,16 @@
     "title": "Sucessão ecológica",
     "primary": "scene",
     "artifact": "sucessao-comunidades",
-    "status": "aprovado",
+    "status": "em-validacao",
     "mechanism": "paisagem de comunidades",
     "relation": "solo e vegetação mudam da pioneira ao clímax",
     "evidencePaths": [
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-sucessao-mobile-360-light.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-sucessao-mobile-360-dark.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-sucessao-mobile-375-light.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-sucessao-mobile-375-dark.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-sucessao-mobile-390-light.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-sucessao-mobile-390-dark.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-sucessao-tablet-light.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-sucessao-tablet-dark.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-sucessao-desktop-light.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-sucessao-desktop-dark.png"
+      "docs/visual-personalizado/screenshots/ecologia-motion-2026-09-23/bio-ecologia-sucessao-390-light.png",
+      "docs/visual-personalizado/screenshots/ecologia-motion-2026-09-23/bio-ecologia-sucessao-390-dark.png",
+      "docs/visual-personalizado/screenshots/ecologia-motion-2026-09-23/bio-ecologia-sucessao-1440-light.png",
+      "docs/visual-personalizado/screenshots/ecologia-motion-2026-09-23/bio-ecologia-sucessao-1440-dark.png"
     ],
-    "notes": "QA técnico: 360, 375, 390, 768 e 1440 px; temas claro/escuro; primeira e última seleção; teclado; movimento reduzido; axe sem violações. Aprovado pela responsável em 2026-09-23."
+    "notes": "Reaberto após rejeição visual da responsável em 2026-09-23. Cenas refeitas com movimento no mecanismo; aprovação editorial pendente. Evidências novas: 60 verificações de largura/seleção e capturas em 390 e 1440 px nos dois temas."
   },
   {
     "id": "bio-ecologia-ciclo-carbono",
@@ -122,22 +104,16 @@
     "title": "Ciclo do nitrogênio",
     "primary": "scene",
     "artifact": "nitrogenio-solo-atmosfera",
-    "status": "aprovado",
+    "status": "em-validacao",
     "mechanism": "ciclo microbiano no solo e atmosfera",
     "relation": "fixação e amonificação alimentam nitrificação; desnitrificação devolve N₂",
     "evidencePaths": [
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-ciclo-nitrogenio-mobile-360-light.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-ciclo-nitrogenio-mobile-360-dark.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-ciclo-nitrogenio-mobile-375-light.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-ciclo-nitrogenio-mobile-375-dark.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-ciclo-nitrogenio-mobile-390-light.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-ciclo-nitrogenio-mobile-390-dark.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-ciclo-nitrogenio-tablet-light.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-ciclo-nitrogenio-tablet-dark.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-ciclo-nitrogenio-desktop-light.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-ciclo-nitrogenio-desktop-dark.png"
+      "docs/visual-personalizado/screenshots/ecologia-motion-2026-09-23/bio-ecologia-ciclo-nitrogenio-390-light.png",
+      "docs/visual-personalizado/screenshots/ecologia-motion-2026-09-23/bio-ecologia-ciclo-nitrogenio-390-dark.png",
+      "docs/visual-personalizado/screenshots/ecologia-motion-2026-09-23/bio-ecologia-ciclo-nitrogenio-1440-light.png",
+      "docs/visual-personalizado/screenshots/ecologia-motion-2026-09-23/bio-ecologia-ciclo-nitrogenio-1440-dark.png"
     ],
-    "notes": "QA técnico: 360, 375, 390, 768 e 1440 px; temas claro/escuro; primeira e última seleção; teclado; movimento reduzido; axe sem violações. Aprovado pela responsável em 2026-09-23."
+    "notes": "Reaberto após rejeição visual da responsável em 2026-09-23. Cenas refeitas com movimento no mecanismo; aprovação editorial pendente. Evidências novas: 60 verificações de largura/seleção e capturas em 390 e 1440 px nos dois temas."
   },
   {
     "id": "bio-ecologia-ciclo-hidrologico-poluicao-agua",
@@ -145,22 +121,16 @@
     "title": "Ciclo hidrológico e poluição da água",
     "primary": "scene",
     "artifact": "poluicao-agua-agentes",
-    "status": "aprovado",
+    "status": "em-validacao",
     "mechanism": "fonte, água e efeito",
     "relation": "cada agente altera o meio aquático por consequência própria",
     "evidencePaths": [
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-ciclo-hidrologico-poluicao-agua-mobile-360-light.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-ciclo-hidrologico-poluicao-agua-mobile-360-dark.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-ciclo-hidrologico-poluicao-agua-mobile-375-light.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-ciclo-hidrologico-poluicao-agua-mobile-375-dark.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-ciclo-hidrologico-poluicao-agua-mobile-390-light.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-ciclo-hidrologico-poluicao-agua-mobile-390-dark.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-ciclo-hidrologico-poluicao-agua-tablet-light.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-ciclo-hidrologico-poluicao-agua-tablet-dark.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-ciclo-hidrologico-poluicao-agua-desktop-light.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-ciclo-hidrologico-poluicao-agua-desktop-dark.png"
+      "docs/visual-personalizado/screenshots/ecologia-motion-2026-09-23/bio-ecologia-ciclo-hidrologico-poluicao-agua-390-light.png",
+      "docs/visual-personalizado/screenshots/ecologia-motion-2026-09-23/bio-ecologia-ciclo-hidrologico-poluicao-agua-390-dark.png",
+      "docs/visual-personalizado/screenshots/ecologia-motion-2026-09-23/bio-ecologia-ciclo-hidrologico-poluicao-agua-1440-light.png",
+      "docs/visual-personalizado/screenshots/ecologia-motion-2026-09-23/bio-ecologia-ciclo-hidrologico-poluicao-agua-1440-dark.png"
     ],
-    "notes": "QA técnico: 360, 375, 390, 768 e 1440 px; temas claro/escuro; primeira e última seleção; teclado; movimento reduzido; axe sem violações. Aprovado pela responsável em 2026-09-23."
+    "notes": "Reaberto após rejeição visual da responsável em 2026-09-23. Cenas refeitas com movimento no mecanismo; aprovação editorial pendente. Evidências novas: 60 verificações de largura/seleção e capturas em 390 e 1440 px nos dois temas."
   },
   {
     "id": "bio-ecologia-eutrofizacao",
@@ -168,22 +138,16 @@
     "title": "Eutrofização e fluxo de energia",
     "primary": "scene",
     "artifact": "eutrofizacao-lago",
-    "status": "aprovado",
+    "status": "em-validacao",
     "mechanism": "seção vertical de lago",
     "relation": "nutrientes induzem floração, bloqueiam luz e levam ao consumo de oxigênio",
     "evidencePaths": [
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-eutrofizacao-mobile-360-light.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-eutrofizacao-mobile-360-dark.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-eutrofizacao-mobile-375-light.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-eutrofizacao-mobile-375-dark.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-eutrofizacao-mobile-390-light.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-eutrofizacao-mobile-390-dark.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-eutrofizacao-tablet-light.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-eutrofizacao-tablet-dark.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-eutrofizacao-desktop-light.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-eutrofizacao-desktop-dark.png"
+      "docs/visual-personalizado/screenshots/ecologia-motion-2026-09-23/bio-ecologia-eutrofizacao-390-light.png",
+      "docs/visual-personalizado/screenshots/ecologia-motion-2026-09-23/bio-ecologia-eutrofizacao-390-dark.png",
+      "docs/visual-personalizado/screenshots/ecologia-motion-2026-09-23/bio-ecologia-eutrofizacao-1440-light.png",
+      "docs/visual-personalizado/screenshots/ecologia-motion-2026-09-23/bio-ecologia-eutrofizacao-1440-dark.png"
     ],
-    "notes": "QA técnico: 360, 375, 390, 768 e 1440 px; temas claro/escuro; primeira e última seleção; teclado; movimento reduzido; axe sem violações. Aprovado pela responsável em 2026-09-23."
+    "notes": "Reaberto após rejeição visual da responsável em 2026-09-23. Cenas refeitas com movimento no mecanismo; aprovação editorial pendente. Evidências novas: 60 verificações de largura/seleção e capturas em 390 e 1440 px nos dois temas."
   },
   {
     "id": "bio-ecologia-poluicao-ar",
@@ -347,11 +311,16 @@
     "title": "Bioenergética: Fotossíntese e Quimiossíntese",
     "primary": "board",
     "artifact": "bioenergetica",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "cloroplasto em corte e procarionte quimioautotrófico",
+    "relation": "luz ou oxidação inorgânica fornecem energia; CO₂ fornece carbono",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/bioenergetica-motion-2026-09-23/fotossintese-390-light.png",
+      "docs/visual-personalizado/screenshots/bioenergetica-motion-2026-09-23/fotossintese-1440-light.png",
+      "docs/visual-personalizado/screenshots/bioenergetica-motion-2026-09-23/quimiossintese-390-dark.png",
+      "docs/visual-personalizado/screenshots/bioenergetica-motion-2026-09-23/quimiossintese-1440-dark.png"
+    ],
+    "notes": "Reconstrução com fluxos finitos, seleção por teclado e dez verificações de largura nos dois temas. Movimento reduzido coberto por teste de componente, sem emulação no navegador. Aprovação editorial pendente."
   },
   {
     "id": "summary-biologia-acidos-nucleicos",
@@ -2019,18 +1988,12 @@
     "mechanism": "comparação esquemática de três propriedades cartográficas",
     "relation": "conforme preserva forma local; equivalente, área; equidistante, distâncias desde um centro",
     "evidencePaths": [
-      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-geografia-projecoes-cartograficas-mobile-360-light.png",
-      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-geografia-projecoes-cartograficas-mobile-360-dark.png",
-      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-geografia-projecoes-cartograficas-mobile-375-light.png",
-      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-geografia-projecoes-cartograficas-mobile-375-dark.png",
-      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-geografia-projecoes-cartograficas-mobile-390-light.png",
-      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-geografia-projecoes-cartograficas-mobile-390-dark.png",
-      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-geografia-projecoes-cartograficas-tablet-light.png",
-      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-geografia-projecoes-cartograficas-tablet-dark.png",
-      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-geografia-projecoes-cartograficas-desktop-light.png",
-      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-geografia-projecoes-cartograficas-desktop-dark.png"
+      "docs/visual-personalizado/screenshots/humanas-motion-2026-09-23/summary-geografia-projecoes-cartograficas-390-light.png",
+      "docs/visual-personalizado/screenshots/humanas-motion-2026-09-23/summary-geografia-projecoes-cartograficas-390-dark.png",
+      "docs/visual-personalizado/screenshots/humanas-motion-2026-09-23/summary-geografia-projecoes-cartograficas-1440-light.png",
+      "docs/visual-personalizado/screenshots/humanas-motion-2026-09-23/summary-geografia-projecoes-cartograficas-1440-dark.png"
     ],
-    "notes": "Esquemas de propriedades, não mapas mensuráveis. QA técnico em cinco larguras, dois temas, teclado e movimento reduzido. Aprovação editorial pendente."
+    "notes": "Esquemas de propriedades, não mapas mensuráveis. QA de largura e seleção em cinco larguras e dois temas; teclado verificado. Movimento reduzido tratado no código, sem emulação no navegador. Aprovação editorial pendente."
   },
   {
     "id": "summary-geografia-cartografia-digital",
@@ -2066,18 +2029,12 @@
     "mechanism": "seções de ascensão do ar",
     "relation": "aquecimento, barreira montanhosa e encontro de massas criam chuvas por mecanismos distintos",
     "evidencePaths": [
-      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-geografia-dinamica-climatica-mobile-360-light.png",
-      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-geografia-dinamica-climatica-mobile-360-dark.png",
-      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-geografia-dinamica-climatica-mobile-375-light.png",
-      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-geografia-dinamica-climatica-mobile-375-dark.png",
-      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-geografia-dinamica-climatica-mobile-390-light.png",
-      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-geografia-dinamica-climatica-mobile-390-dark.png",
-      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-geografia-dinamica-climatica-tablet-light.png",
-      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-geografia-dinamica-climatica-tablet-dark.png",
-      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-geografia-dinamica-climatica-desktop-light.png",
-      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-geografia-dinamica-climatica-desktop-dark.png"
+      "docs/visual-personalizado/screenshots/humanas-motion-2026-09-23/summary-geografia-dinamica-climatica-390-light.png",
+      "docs/visual-personalizado/screenshots/humanas-motion-2026-09-23/summary-geografia-dinamica-climatica-390-dark.png",
+      "docs/visual-personalizado/screenshots/humanas-motion-2026-09-23/summary-geografia-dinamica-climatica-1440-light.png",
+      "docs/visual-personalizado/screenshots/humanas-motion-2026-09-23/summary-geografia-dinamica-climatica-1440-dark.png"
     ],
-    "notes": "Prancha específica do capítulo; QA técnico em cinco larguras, dois temas, teclado e movimento reduzido. Aprovação editorial pendente."
+    "notes": "Prancha específica do capítulo; QA de largura e seleção em cinco larguras e dois temas; teclado verificado. Movimento reduzido tratado no código, sem emulação no navegador. Aprovação editorial pendente."
   },
   {
     "id": "summary-geografia-clima-mundial",
@@ -2581,16 +2538,10 @@
     "mechanism": "estoque fóssil, planta e etapa de uso",
     "relation": "carbono recente não torna biocombustível automaticamente neutro; solo e transporte integram o balanço",
     "evidencePaths": [
-      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-combustiveis-fosseis-e-biocombustiveis-no-brasil-mobile-360-light.png",
-      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-combustiveis-fosseis-e-biocombustiveis-no-brasil-mobile-360-dark.png",
-      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-combustiveis-fosseis-e-biocombustiveis-no-brasil-mobile-375-light.png",
-      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-combustiveis-fosseis-e-biocombustiveis-no-brasil-mobile-375-dark.png",
-      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-combustiveis-fosseis-e-biocombustiveis-no-brasil-mobile-390-light.png",
-      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-combustiveis-fosseis-e-biocombustiveis-no-brasil-mobile-390-dark.png",
-      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-combustiveis-fosseis-e-biocombustiveis-no-brasil-tablet-light.png",
-      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-combustiveis-fosseis-e-biocombustiveis-no-brasil-tablet-dark.png",
-      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-combustiveis-fosseis-e-biocombustiveis-no-brasil-desktop-light.png",
-      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-combustiveis-fosseis-e-biocombustiveis-no-brasil-desktop-dark.png"
+      "docs/visual-personalizado/screenshots/humanas-motion-2026-09-23/summary-geografia-combustiveis-fosseis-e-biocombustiveis-no-brasil-390-light.png",
+      "docs/visual-personalizado/screenshots/humanas-motion-2026-09-23/summary-geografia-combustiveis-fosseis-e-biocombustiveis-no-brasil-390-dark.png",
+      "docs/visual-personalizado/screenshots/humanas-motion-2026-09-23/summary-geografia-combustiveis-fosseis-e-biocombustiveis-no-brasil-1440-light.png",
+      "docs/visual-personalizado/screenshots/humanas-motion-2026-09-23/summary-geografia-combustiveis-fosseis-e-biocombustiveis-no-brasil-1440-dark.png"
     ],
     "notes": "Esquema de ciclo de vida sem emissões numéricas; QA técnico em cinco larguras e dois temas. Aprovação editorial pendente."
   },
@@ -2616,16 +2567,10 @@
     "mechanism": "usina, rede e centro consumidor",
     "relation": "geração e transmissão conectam fontes a uma demanda variável",
     "evidencePaths": [
-      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-energia-eletrica-no-brasil-mobile-360-light.png",
-      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-energia-eletrica-no-brasil-mobile-360-dark.png",
-      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-energia-eletrica-no-brasil-mobile-375-light.png",
-      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-energia-eletrica-no-brasil-mobile-375-dark.png",
-      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-energia-eletrica-no-brasil-mobile-390-light.png",
-      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-energia-eletrica-no-brasil-mobile-390-dark.png",
-      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-energia-eletrica-no-brasil-tablet-light.png",
-      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-energia-eletrica-no-brasil-tablet-dark.png",
-      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-energia-eletrica-no-brasil-desktop-light.png",
-      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-energia-eletrica-no-brasil-desktop-dark.png"
+      "docs/visual-personalizado/screenshots/humanas-motion-2026-09-23/summary-geografia-energia-eletrica-no-brasil-390-light.png",
+      "docs/visual-personalizado/screenshots/humanas-motion-2026-09-23/summary-geografia-energia-eletrica-no-brasil-390-dark.png",
+      "docs/visual-personalizado/screenshots/humanas-motion-2026-09-23/summary-geografia-energia-eletrica-no-brasil-1440-light.png",
+      "docs/visual-personalizado/screenshots/humanas-motion-2026-09-23/summary-geografia-energia-eletrica-no-brasil-1440-dark.png"
     ],
     "notes": "Figura esquemática, sem dados de usina real; QA técnico em cinco larguras e dois temas. Aprovação editorial pendente."
   },
@@ -2699,16 +2644,10 @@
     "mechanism": "origem, trajeto e destino ligados por redes",
     "relation": "o deslocamento reorganiza destinos e pode preservar vínculos com a origem",
     "evidencePaths": [
-      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-estrutura-etnica-e-fluxos-migratorios-mobile-360-light.png",
-      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-estrutura-etnica-e-fluxos-migratorios-mobile-360-dark.png",
-      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-estrutura-etnica-e-fluxos-migratorios-mobile-375-light.png",
-      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-estrutura-etnica-e-fluxos-migratorios-mobile-375-dark.png",
-      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-estrutura-etnica-e-fluxos-migratorios-mobile-390-light.png",
-      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-estrutura-etnica-e-fluxos-migratorios-mobile-390-dark.png",
-      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-estrutura-etnica-e-fluxos-migratorios-tablet-light.png",
-      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-estrutura-etnica-e-fluxos-migratorios-tablet-dark.png",
-      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-estrutura-etnica-e-fluxos-migratorios-desktop-light.png",
-      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-estrutura-etnica-e-fluxos-migratorios-desktop-dark.png"
+      "docs/visual-personalizado/screenshots/humanas-motion-2026-09-23/summary-geografia-estrutura-etnica-e-fluxos-migratorios-390-light.png",
+      "docs/visual-personalizado/screenshots/humanas-motion-2026-09-23/summary-geografia-estrutura-etnica-e-fluxos-migratorios-390-dark.png",
+      "docs/visual-personalizado/screenshots/humanas-motion-2026-09-23/summary-geografia-estrutura-etnica-e-fluxos-migratorios-1440-light.png",
+      "docs/visual-personalizado/screenshots/humanas-motion-2026-09-23/summary-geografia-estrutura-etnica-e-fluxos-migratorios-1440-dark.png"
     ],
     "notes": "Fluxo hipotético, sem rota real; QA técnico em cinco larguras e dois temas. Aprovação editorial pendente."
   },
@@ -2758,16 +2697,10 @@
     "mechanism": "produção, porto e mercado externo",
     "relation": "a logística e seus custos ligam especialização produtiva a parceiros externos",
     "evidencePaths": [
-      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-os-fluxos-do-comercio-externo-mobile-360-light.png",
-      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-os-fluxos-do-comercio-externo-mobile-360-dark.png",
-      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-os-fluxos-do-comercio-externo-mobile-375-light.png",
-      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-os-fluxos-do-comercio-externo-mobile-375-dark.png",
-      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-os-fluxos-do-comercio-externo-mobile-390-light.png",
-      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-os-fluxos-do-comercio-externo-mobile-390-dark.png",
-      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-os-fluxos-do-comercio-externo-tablet-light.png",
-      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-os-fluxos-do-comercio-externo-tablet-dark.png",
-      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-os-fluxos-do-comercio-externo-desktop-light.png",
-      "docs/visual-personalizado/screenshots/geografia-contextos-2026-09-23/summary-geografia-os-fluxos-do-comercio-externo-desktop-dark.png"
+      "docs/visual-personalizado/screenshots/humanas-motion-2026-09-23/summary-geografia-os-fluxos-do-comercio-externo-390-light.png",
+      "docs/visual-personalizado/screenshots/humanas-motion-2026-09-23/summary-geografia-os-fluxos-do-comercio-externo-390-dark.png",
+      "docs/visual-personalizado/screenshots/humanas-motion-2026-09-23/summary-geografia-os-fluxos-do-comercio-externo-1440-light.png",
+      "docs/visual-personalizado/screenshots/humanas-motion-2026-09-23/summary-geografia-os-fluxos-do-comercio-externo-1440-dark.png"
     ],
     "notes": "Corredor ilustrativo, sem porto ou parceiro real; QA técnico em cinco larguras e dois temas. Aprovação editorial pendente."
   },
@@ -2901,18 +2834,12 @@
     "mechanism": "campo cercado, fábrica e documento legal",
     "relation": "cercamentos liberam mão de obra e capital; documentação e pressão social contribuem para reformas",
     "evidencePaths": [
-      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-historia-revolucao-industrial-mobile-360-light.png",
-      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-historia-revolucao-industrial-mobile-360-dark.png",
-      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-historia-revolucao-industrial-mobile-375-light.png",
-      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-historia-revolucao-industrial-mobile-375-dark.png",
-      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-historia-revolucao-industrial-mobile-390-light.png",
-      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-historia-revolucao-industrial-mobile-390-dark.png",
-      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-historia-revolucao-industrial-tablet-light.png",
-      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-historia-revolucao-industrial-tablet-dark.png",
-      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-historia-revolucao-industrial-desktop-light.png",
-      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-historia-revolucao-industrial-desktop-dark.png"
+      "docs/visual-personalizado/screenshots/humanas-motion-2026-09-23/summary-historia-revolucao-industrial-390-light.png",
+      "docs/visual-personalizado/screenshots/humanas-motion-2026-09-23/summary-historia-revolucao-industrial-390-dark.png",
+      "docs/visual-personalizado/screenshots/humanas-motion-2026-09-23/summary-historia-revolucao-industrial-1440-light.png",
+      "docs/visual-personalizado/screenshots/humanas-motion-2026-09-23/summary-historia-revolucao-industrial-1440-dark.png"
     ],
-    "notes": "Prancha específica do capítulo; QA técnico em cinco larguras, dois temas, teclado e movimento reduzido. Aprovação editorial pendente."
+    "notes": "Prancha específica do capítulo; QA de largura e seleção em cinco larguras e dois temas; teclado verificado. Movimento reduzido tratado no código, sem emulação no navegador. Aprovação editorial pendente."
   },
   {
     "id": "summary-historia-iluminismo",
@@ -2936,18 +2863,12 @@
     "mechanism": "cronologia com forças políticas e militares",
     "relation": "crise fiscal abre conflito institucional; guerra externa e desconfiança interna compõem a radicalização",
     "evidencePaths": [
-      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-historia-revolucao-francesa-mobile-360-light.png",
-      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-historia-revolucao-francesa-mobile-360-dark.png",
-      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-historia-revolucao-francesa-mobile-375-light.png",
-      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-historia-revolucao-francesa-mobile-375-dark.png",
-      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-historia-revolucao-francesa-mobile-390-light.png",
-      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-historia-revolucao-francesa-mobile-390-dark.png",
-      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-historia-revolucao-francesa-tablet-light.png",
-      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-historia-revolucao-francesa-tablet-dark.png",
-      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-historia-revolucao-francesa-desktop-light.png",
-      "docs/visual-personalizado/screenshots/historia-geografia-2026-09-23/summary-historia-revolucao-francesa-desktop-dark.png"
+      "docs/visual-personalizado/screenshots/humanas-motion-2026-09-23/summary-historia-revolucao-francesa-390-light.png",
+      "docs/visual-personalizado/screenshots/humanas-motion-2026-09-23/summary-historia-revolucao-francesa-390-dark.png",
+      "docs/visual-personalizado/screenshots/humanas-motion-2026-09-23/summary-historia-revolucao-francesa-1440-light.png",
+      "docs/visual-personalizado/screenshots/humanas-motion-2026-09-23/summary-historia-revolucao-francesa-1440-dark.png"
     ],
-    "notes": "Prancha específica do capítulo; QA técnico em cinco larguras, dois temas, teclado e movimento reduzido. Aprovação editorial pendente."
+    "notes": "Prancha específica do capítulo; QA de largura e seleção em cinco larguras e dois temas; teclado verificado. Movimento reduzido tratado no código, sem emulação no navegador. Aprovação editorial pendente."
   },
   {
     "id": "summary-historia-america-no-seculo-xix",

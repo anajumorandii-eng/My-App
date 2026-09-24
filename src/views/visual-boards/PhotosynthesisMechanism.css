@@ -1,0 +1,25 @@
+.photo-mechanism { --photo-green:#426643; --photo-body:#bdd09d; --photo-light:#e7eccd; --photo-gold:#9b711e; --photo-blue:#426b80; width:100%; display:grid; grid-template-columns:minmax(0,1.5fr) minmax(210px,1fr); gap:24px; color:var(--vs-ink); }
+.dark .photo-mechanism { --photo-green:#bad5a7; --photo-body:#3b5848; --photo-light:#657b5d; --photo-gold:#e0bc6b; --photo-blue:#97c6d6; }
+.photo-art { min-width:0; }
+.photo-art svg { display:block; width:100%; height:auto; overflow:visible; }
+.photo-envelope { stroke:var(--photo-green); stroke-width:2.5; }
+.photo-inner { fill:none; stroke:var(--photo-green); stroke-width:1; }
+.photo-thylakoid { fill:var(--photo-green); stroke:var(--photo-light); stroke-width:1; }
+.photo-lamella,.photo-dna { fill:none; stroke:var(--photo-green); stroke-width:3; }
+.photo-dot { fill:var(--photo-green); }
+.photo-label { font:600 19px Georgia,serif; fill:var(--vs-ink); }
+.photo-small { font:16px system-ui,sans-serif; fill:var(--vs-ink); }
+.photo-tiny { font:14px system-ui,sans-serif; fill:var(--vs-ink); }
+.photo-eyebrow { font:600 12px system-ui,sans-serif; letter-spacing:1.6px; fill:var(--vs-ink); }
+.photo-steps { display:grid; border-top:1px solid var(--photo-green); }
+.photo-steps button { min-height:52px; display:flex; gap:14px; align-items:center; padding:12px 8px; background:transparent; border:0; border-bottom:1px solid color-mix(in srgb,var(--photo-green) 30%,transparent); text-align:left; color:inherit; font:600 13px system-ui,sans-serif; cursor:pointer; }
+.photo-steps button span { font:italic 21px Georgia,serif; color:var(--photo-green); }
+.photo-steps button[aria-pressed=true] { background:color-mix(in srgb,var(--photo-green) 12%,transparent); box-shadow:inset 3px 0 var(--photo-green); }
+.photo-reading h3 { margin:24px 0 12px; font:600 25px/1.2 Georgia,serif; }
+.photo-reading p { font-size:14px; line-height:1.7; }
+.photo-distinction { border-top:1px solid color-mix(in srgb,var(--photo-green) 30%,transparent); padding-top:18px; }
+.photo-replay { display:block; margin:12px auto; padding:10px 16px; min-height:44px; background:transparent; color:inherit; border:1px solid var(--photo-green); border-radius:4px; cursor:pointer; }
+.photo-mechanism button:focus-visible { outline:3px solid var(--photo-blue); outline-offset:3px; }
+.vs-study-board:has(.photo-mechanism) .vs-board-body { grid-template-columns:repeat(2,minmax(0,1fr)); }
+.vs-study-board:has(.photo-mechanism) .vs-piston-wrap { grid-column:1/-1; min-width:0; }
+@media(max-width:900px) { .photo-mechanism,.vs-study-board:has(.photo-mechanism) .vs-board-body { grid-template-columns:minmax(0,1fr); } .photo-mechanism { gap:12px; } }

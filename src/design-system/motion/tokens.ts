@@ -6,6 +6,8 @@ export const MOTION_DURATION = {
   entrance: 0.5, // whole-screen/hero entrance, played once per context
   core: 0.7, // Núcleo do Crivo state-to-state transition
   subjectTween: 0.9, // subject-level metamorphosis and atmosphere transition
+  mechanism: 1.6, // a finite explanatory change inside a chapter illustration
+  studyStep: 4.2, // reading interval between explicitly played chapter steps
 } as const;
 
 // A single standard ease for interface feedback — deliberately no
@@ -18,6 +20,7 @@ export const MOTION_EASE_EMPHASIZED = [0.16, 1, 0.3, 1] as const;
 export const MOTION_STAGGER = {
   list: 0.045, // secondary-action rows entering in sequence
   letters: 0.018, // kinetic-type convergence, per character
+  diagram: 0.08, // finite particle/flow sequence inside a scientific diagram
 } as const;
 
 // Perspective/depth for the CSS-3D Núcleo do Crivo — one shared scale so a
@@ -34,6 +37,15 @@ export const MOTION_DEPTH = {
  * (and think about why), not to invent a one-off value in a component.
  */
 export const MOTION_MATRIX = [
+  {
+    component: 'Pranchas de capítulos (Biologia, História e Geografia)',
+    trigger: 'Seleção de um mecanismo ou reprodução explícita de etapas',
+    purpose: 'Mostrar transformação física, percurso ou mudança de recorte sem inventar causalidade histórica',
+    duration: MOTION_DURATION.mechanism,
+    easing: 'MOTION_EASE',
+    property: 'SVG pathLength, transform, opacity, coordinates',
+    reducedMotion: 'Quadro selecionado completo imediatamente; controles de seleção preservados',
+  },
   {
     component: 'TodayFocus (hero card)',
     trigger: 'Mount / navigating to Hoje',

@@ -1,0 +1,452 @@
+[
+  {
+    "id": "bio-ecologia-ciclo-nitrogenio",
+    "width": 360,
+    "theme": "light",
+    "label": "Ciclo do nitrogênio: N₂ → amônia → nitrito → nitrato → N₂; etapa selecionada: 5. Desnitrificação",
+    "overflow": false,
+    "selected": "true"
+  },
+  {
+    "id": "bio-ecologia-ciclo-nitrogenio",
+    "width": 375,
+    "theme": "light",
+    "label": "Ciclo do nitrogênio: N₂ → amônia → nitrito → nitrato → N₂; etapa selecionada: 5. Desnitrificação",
+    "overflow": false,
+    "selected": "true"
+  },
+  {
+    "id": "bio-ecologia-ciclo-nitrogenio",
+    "width": 390,
+    "theme": "light",
+    "label": "Ciclo do nitrogênio: N₂ → amônia → nitrito → nitrato → N₂; etapa selecionada: 5. Desnitrificação",
+    "overflow": false,
+    "selected": "true"
+  },
+  {
+    "id": "bio-ecologia-ciclo-nitrogenio",
+    "width": 768,
+    "theme": "light",
+    "label": "Ciclo do nitrogênio: N₂ → amônia → nitrito → nitrato → N₂; etapa selecionada: 5. Desnitrificação",
+    "overflow": false,
+    "selected": "true"
+  },
+  {
+    "id": "bio-ecologia-ciclo-nitrogenio",
+    "width": 1440,
+    "theme": "light",
+    "label": "Ciclo do nitrogênio: N₂ → amônia → nitrito → nitrato → N₂; etapa selecionada: 5. Desnitrificação",
+    "overflow": false,
+    "selected": "true"
+  },
+  {
+    "id": "bio-ecologia-eutrofizacao",
+    "width": 360,
+    "theme": "light",
+    "label": "Eutrofização: nutrientes → floração → luz bloqueada → oxigênio consumido → anoxia → peixes; etapa selecionada: 6. Mortandade",
+    "overflow": false,
+    "selected": "true"
+  },
+  {
+    "id": "bio-ecologia-eutrofizacao",
+    "width": 375,
+    "theme": "light",
+    "label": "Eutrofização: nutrientes → floração → luz bloqueada → oxigênio consumido → anoxia → peixes; etapa selecionada: 6. Mortandade",
+    "overflow": false,
+    "selected": "true"
+  },
+  {
+    "id": "bio-ecologia-eutrofizacao",
+    "width": 390,
+    "theme": "light",
+    "label": "Eutrofização: nutrientes → floração → luz bloqueada → oxigênio consumido → anoxia → peixes; etapa selecionada: 6. Mortandade",
+    "overflow": false,
+    "selected": "true"
+  },
+  {
+    "id": "bio-ecologia-eutrofizacao",
+    "width": 768,
+    "theme": "light",
+    "label": "Eutrofização: nutrientes → floração → luz bloqueada → oxigênio consumido → anoxia → peixes; etapa selecionada: 6. Mortandade",
+    "overflow": false,
+    "selected": "true"
+  },
+  {
+    "id": "bio-ecologia-eutrofizacao",
+    "width": 1440,
+    "theme": "light",
+    "label": "Eutrofização: nutrientes → floração → luz bloqueada → oxigênio consumido → anoxia → peixes; etapa selecionada: 6. Mortandade",
+    "overflow": false,
+    "selected": "true"
+  },
+  {
+    "id": "bio-ecologia-dinamica-populacoes",
+    "width": 360,
+    "theme": "light",
+    "label": "Estratégias: muitos descendentes e pouco cuidado; poucos descendentes e longo cuidado. Selecionado: K-estrategistas",
+    "overflow": false,
+    "selected": "true"
+  },
+  {
+    "id": "bio-ecologia-dinamica-populacoes",
+    "width": 375,
+    "theme": "light",
+    "label": "Estratégias: muitos descendentes e pouco cuidado; poucos descendentes e longo cuidado. Selecionado: K-estrategistas",
+    "overflow": false,
+    "selected": "true"
+  },
+  {
+    "id": "bio-ecologia-dinamica-populacoes",
+    "width": 390,
+    "theme": "light",
+    "label": "Estratégias: muitos descendentes e pouco cuidado; poucos descendentes e longo cuidado. Selecionado: K-estrategistas",
+    "overflow": false,
+    "selected": "true"
+  },
+  {
+    "id": "bio-ecologia-dinamica-populacoes",
+    "width": 768,
+    "theme": "light",
+    "label": "Estratégias: muitos descendentes e pouco cuidado; poucos descendentes e longo cuidado. Selecionado: K-estrategistas",
+    "overflow": false,
+    "selected": "true"
+  },
+  {
+    "id": "bio-ecologia-dinamica-populacoes",
+    "width": 1440,
+    "theme": "light",
+    "label": "Estratégias: muitos descendentes e pouco cuidado; poucos descendentes e longo cuidado. Selecionado: K-estrategistas",
+    "overflow": false,
+    "selected": "true"
+  },
+  {
+    "id": "bio-ecologia-invasoras-controle-biologico",
+    "width": 360,
+    "theme": "light",
+    "label": "Invasora → nativa e recurso: cinco caminhos de impacto; selecionado: Alteração do ambiente físico",
+    "overflow": false,
+    "selected": "true"
+  },
+  {
+    "id": "bio-ecologia-invasoras-controle-biologico",
+    "width": 375,
+    "theme": "light",
+    "label": "Invasora → nativa e recurso: cinco caminhos de impacto; selecionado: Alteração do ambiente físico",
+    "overflow": false,
+    "selected": "true"
+  },
+  {
+    "id": "bio-ecologia-invasoras-controle-biologico",
+    "width": 390,
+    "theme": "light",
+    "label": "Invasora → nativa e recurso: cinco caminhos de impacto; selecionado: Alteração do ambiente físico",
+    "overflow": false,
+    "selected": "true"
+  },
+  {
+    "id": "bio-ecologia-invasoras-controle-biologico",
+    "width": 768,
+    "theme": "light",
+    "label": "Invasora → nativa e recurso: cinco caminhos de impacto; selecionado: Alteração do ambiente físico",
+    "overflow": false,
+    "selected": "true"
+  },
+  {
+    "id": "bio-ecologia-invasoras-controle-biologico",
+    "width": 1440,
+    "theme": "light",
+    "label": "Invasora → nativa e recurso: cinco caminhos de impacto; selecionado: Alteração do ambiente físico",
+    "overflow": false,
+    "selected": "true"
+  },
+  {
+    "id": "bio-ecologia-sucessao",
+    "width": 360,
+    "theme": "light",
+    "label": "Sucessão: pioneira → gramíneas → arbustos → árvores; etapa selecionada: Comunidade clímax",
+    "overflow": false,
+    "selected": "true"
+  },
+  {
+    "id": "bio-ecologia-sucessao",
+    "width": 375,
+    "theme": "light",
+    "label": "Sucessão: pioneira → gramíneas → arbustos → árvores; etapa selecionada: Comunidade clímax",
+    "overflow": false,
+    "selected": "true"
+  },
+  {
+    "id": "bio-ecologia-sucessao",
+    "width": 390,
+    "theme": "light",
+    "label": "Sucessão: pioneira → gramíneas → arbustos → árvores; etapa selecionada: Comunidade clímax",
+    "overflow": false,
+    "selected": "true"
+  },
+  {
+    "id": "bio-ecologia-sucessao",
+    "width": 768,
+    "theme": "light",
+    "label": "Sucessão: pioneira → gramíneas → arbustos → árvores; etapa selecionada: Comunidade clímax",
+    "overflow": false,
+    "selected": "true"
+  },
+  {
+    "id": "bio-ecologia-sucessao",
+    "width": 1440,
+    "theme": "light",
+    "label": "Sucessão: pioneira → gramíneas → arbustos → árvores; etapa selecionada: Comunidade clímax",
+    "overflow": false,
+    "selected": "true"
+  },
+  {
+    "id": "bio-ecologia-ciclo-hidrologico-poluicao-agua",
+    "width": 360,
+    "theme": "light",
+    "label": "Poluição: fonte → água → efeito; agente selecionado: Por plásticos. microplásticos → ingestão por filtradores",
+    "overflow": false,
+    "selected": "true"
+  },
+  {
+    "id": "bio-ecologia-ciclo-hidrologico-poluicao-agua",
+    "width": 375,
+    "theme": "light",
+    "label": "Poluição: fonte → água → efeito; agente selecionado: Por plásticos. microplásticos → ingestão por filtradores",
+    "overflow": false,
+    "selected": "true"
+  },
+  {
+    "id": "bio-ecologia-ciclo-hidrologico-poluicao-agua",
+    "width": 390,
+    "theme": "light",
+    "label": "Poluição: fonte → água → efeito; agente selecionado: Por plásticos. microplásticos → ingestão por filtradores",
+    "overflow": false,
+    "selected": "true"
+  },
+  {
+    "id": "bio-ecologia-ciclo-hidrologico-poluicao-agua",
+    "width": 768,
+    "theme": "light",
+    "label": "Poluição: fonte → água → efeito; agente selecionado: Por plásticos. microplásticos → ingestão por filtradores",
+    "overflow": false,
+    "selected": "true"
+  },
+  {
+    "id": "bio-ecologia-ciclo-hidrologico-poluicao-agua",
+    "width": 1440,
+    "theme": "light",
+    "label": "Poluição: fonte → água → efeito; agente selecionado: Por plásticos. microplásticos → ingestão por filtradores",
+    "overflow": false,
+    "selected": "true"
+  },
+  {
+    "id": "bio-ecologia-ciclo-nitrogenio",
+    "width": 360,
+    "theme": "dark",
+    "overflow": false,
+    "selected": "true"
+  },
+  {
+    "id": "bio-ecologia-ciclo-nitrogenio",
+    "width": 375,
+    "theme": "dark",
+    "overflow": false,
+    "selected": "true"
+  },
+  {
+    "id": "bio-ecologia-ciclo-nitrogenio",
+    "width": 390,
+    "theme": "dark",
+    "overflow": false,
+    "selected": "true"
+  },
+  {
+    "id": "bio-ecologia-ciclo-nitrogenio",
+    "width": 768,
+    "theme": "dark",
+    "overflow": false,
+    "selected": "true"
+  },
+  {
+    "id": "bio-ecologia-ciclo-nitrogenio",
+    "width": 1440,
+    "theme": "dark",
+    "overflow": false,
+    "selected": "true"
+  },
+  {
+    "id": "bio-ecologia-eutrofizacao",
+    "width": 360,
+    "theme": "dark",
+    "overflow": false,
+    "selected": "true"
+  },
+  {
+    "id": "bio-ecologia-eutrofizacao",
+    "width": 375,
+    "theme": "dark",
+    "overflow": false,
+    "selected": "true"
+  },
+  {
+    "id": "bio-ecologia-eutrofizacao",
+    "width": 390,
+    "theme": "dark",
+    "overflow": false,
+    "selected": "true"
+  },
+  {
+    "id": "bio-ecologia-eutrofizacao",
+    "width": 768,
+    "theme": "dark",
+    "overflow": false,
+    "selected": "true"
+  },
+  {
+    "id": "bio-ecologia-eutrofizacao",
+    "width": 1440,
+    "theme": "dark",
+    "overflow": false,
+    "selected": "true"
+  },
+  {
+    "id": "bio-ecologia-dinamica-populacoes",
+    "width": 360,
+    "theme": "dark",
+    "overflow": false,
+    "selected": "true"
+  },
+  {
+    "id": "bio-ecologia-dinamica-populacoes",
+    "width": 375,
+    "theme": "dark",
+    "overflow": false,
+    "selected": "true"
+  },
+  {
+    "id": "bio-ecologia-dinamica-populacoes",
+    "width": 390,
+    "theme": "dark",
+    "overflow": false,
+    "selected": "true"
+  },
+  {
+    "id": "bio-ecologia-dinamica-populacoes",
+    "width": 768,
+    "theme": "dark",
+    "overflow": false,
+    "selected": "true"
+  },
+  {
+    "id": "bio-ecologia-dinamica-populacoes",
+    "width": 1440,
+    "theme": "dark",
+    "overflow": false,
+    "selected": "true"
+  },
+  {
+    "id": "bio-ecologia-invasoras-controle-biologico",
+    "width": 360,
+    "theme": "dark",
+    "overflow": false,
+    "selected": "true"
+  },
+  {
+    "id": "bio-ecologia-invasoras-controle-biologico",
+    "width": 375,
+    "theme": "dark",
+    "overflow": false,
+    "selected": "true"
+  },
+  {
+    "id": "bio-ecologia-invasoras-controle-biologico",
+    "width": 390,
+    "theme": "dark",
+    "overflow": false,
+    "selected": "true"
+  },
+  {
+    "id": "bio-ecologia-invasoras-controle-biologico",
+    "width": 768,
+    "theme": "dark",
+    "overflow": false,
+    "selected": "true"
+  },
+  {
+    "id": "bio-ecologia-invasoras-controle-biologico",
+    "width": 1440,
+    "theme": "dark",
+    "overflow": false,
+    "selected": "true"
+  },
+  {
+    "id": "bio-ecologia-sucessao",
+    "width": 360,
+    "theme": "dark",
+    "overflow": false,
+    "selected": "true"
+  },
+  {
+    "id": "bio-ecologia-sucessao",
+    "width": 375,
+    "theme": "dark",
+    "overflow": false,
+    "selected": "true"
+  },
+  {
+    "id": "bio-ecologia-sucessao",
+    "width": 390,
+    "theme": "dark",
+    "overflow": false,
+    "selected": "true"
+  },
+  {
+    "id": "bio-ecologia-sucessao",
+    "width": 768,
+    "theme": "dark",
+    "overflow": false,
+    "selected": "true"
+  },
+  {
+    "id": "bio-ecologia-sucessao",
+    "width": 1440,
+    "theme": "dark",
+    "overflow": false,
+    "selected": "true"
+  },
+  {
+    "id": "bio-ecologia-ciclo-hidrologico-poluicao-agua",
+    "width": 360,
+    "theme": "dark",
+    "overflow": false,
+    "selected": "true"
+  },
+  {
+    "id": "bio-ecologia-ciclo-hidrologico-poluicao-agua",
+    "width": 375,
+    "theme": "dark",
+    "overflow": false,
+    "selected": "true"
+  },
+  {
+    "id": "bio-ecologia-ciclo-hidrologico-poluicao-agua",
+    "width": 390,
+    "theme": "dark",
+    "overflow": false,
+    "selected": "true"
+  },
+  {
+    "id": "bio-ecologia-ciclo-hidrologico-poluicao-agua",
+    "width": 768,
+    "theme": "dark",
+    "overflow": false,
+    "selected": "true"
+  },
+  {
+    "id": "bio-ecologia-ciclo-hidrologico-poluicao-agua",
+    "width": 1440,
+    "theme": "dark",
+    "overflow": false,
+    "selected": "true"
+  }
+]
