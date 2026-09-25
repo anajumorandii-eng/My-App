@@ -45,6 +45,22 @@ describe('instrumento de ondas e física moderna', () => {
     expect(screen.getAllByText('68 m').length).toBeGreaterThan(0);
   });
 
+  it('liga o amperímetro no ramo principal e o voltímetro aos dois lados do resistor', () => {
+    const Component = physicsRemainingInstrument('electric-meters');
+    const { container } = render(<Component {...props('summary-fisica-medidores-eletricos')} />);
+    const diagram = container.querySelector('[data-physics-system="electric-meters"]')!;
+    expect(diagram.querySelector('[data-meter-connection="series"]')).toHaveTextContent('A');
+    expect(diagram.querySelector('[data-meter-connection="parallel"]')).toBeNull();
+    expect(diagram.querySelector('path')?.getAttribute('d')).toContain('M190 76H152M112 76H52');
+
+    fireEvent.change(screen.getByRole('slider'), { target: { value: '1' } });
+    expect(diagram.querySelector('[data-meter-connection="series"]')).toBeNull();
+    expect(diagram.querySelector('[data-meter-connection="parallel"]')).toHaveTextContent('em paralelo a R');
+    expect(diagram.querySelector('[data-meter-connection="parallel"] path')?.getAttribute('d'))
+      .toBe('M174 76V158H193M233 158H252V76');
+    expect(diagram.querySelector('path')?.getAttribute('d')).toContain('M190 76H52');
+  });
+
   it('desenha os dois semiperfis opostos da onda estacionária no tubo', () => {
     const Component = physicsRemainingInstrument('tube-harmonics');
     const { container } = render(<Component {...props('summary-fisica-ondas-estacionarias-em-tubos')} />);
