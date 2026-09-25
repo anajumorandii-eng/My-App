@@ -24,7 +24,23 @@ const geographyContextEvidence = (chapterId: string) =>
 
 const qaNotes = 'Reaberto após rejeição visual da responsável em 2026-09-23. Cenas refeitas com movimento no mecanismo; aprovação editorial pendente. Evidências novas: 60 verificações de largura/seleção e capturas em 390 e 1440 px nos dois temas.';
 
+const mechanismExpansion: Array<[string, string, string]> = [
+  ['summary-fisica-equacao-fundamental-da-ondulatoria', 'corda com ponto material destacado', 'perfil se propaga enquanto um ponto oscila; v = λf'],
+  ['summary-fisica-ondulatoria-ondas-eletromagneticas', 'campos E e B em perspectiva', 'campos transversais em fase, com amplitudes normalizadas'],
+  ['summary-fisica-ondulatoria-som-e-suas-propriedades', 'partículas em compressões e rarefações', 'oscilação longitudinal do meio sem transporte líquido de matéria'],
+  ['summary-quimica-termoquimica-i', 'perfil de entalpia e fluxo sistema-vizinhança', 'saldo ΔH e barreira Ea distintos; troca de calor muda de sentido'],
+  ['summary-quimica-termoquimica-ii', 'caminhos direto e por intermediário', 'mesmos estados extremos dão o mesmo ΔH; intermediários se cancelam'],
+  ['summary-quimica-evolucao-dos-modelos-atomicos', 'espalhamento alfa e níveis discretos do hidrogênio', 'grandes desvios sustentam núcleo concentrado; fóton corresponde à diferença de energia'],
+  ['summary-biologia-coracao-e-vasos-sanguineos', 'percurso selecionável entre cavidades, pulmões e corpo', 'artéria e veia definidas pela direção, não pela oxigenação'],
+];
+
 export const visualQualityReviews: QualityReview[] = [
+  ...mechanismExpansion.map(([chapterId, mechanism, relation]): QualityReview => ({
+    chapterId, mechanism, relation, status: 'em-validacao',
+    evidencePaths: ['390', '1440'].flatMap(width => ['light', 'dark'].map(theme =>
+      `docs/visual-personalizado/screenshots/mecanismos-expansao-2026-09-25/${chapterId}-${width}-${theme}.png`)),
+    notes: 'QA em 360, 390, 768 e 1440 px nos dois temas: sem overflow horizontal. Capturas de página e controles conferidos. Movimento reduzido coberto por teste de componente, sem emulação no navegador. Aprovação editorial pendente; não equivale a finalização do capítulo.',
+  })),
   { chapterId: 'summary-biologia-bioenergetica-fotossintese-e-quimiossintese', mechanism: 'cloroplasto em corte e procarionte quimioautotrófico', relation: 'luz ou oxidação inorgânica fornecem energia; CO₂ fornece carbono', status: 'em-validacao', evidencePaths: ['fotossintese-390-light', 'fotossintese-1440-light', 'quimiossintese-390-dark', 'quimiossintese-1440-dark'].map(name => `docs/visual-personalizado/screenshots/bioenergetica-motion-2026-09-23/${name}.png`), notes: 'Reconstrução com fluxos finitos, seleção por teclado e dez verificações de largura nos dois temas. Movimento reduzido coberto por teste de componente, sem emulação no navegador. Aprovação editorial pendente.' },
   { chapterId: 'bio-ecologia-ciclo-nitrogenio', mechanism: 'ciclo microbiano no solo e atmosfera', relation: 'fixação e amonificação alimentam nitrificação; desnitrificação devolve N₂', status: 'em-validacao', evidencePaths: ecologyEvidence('bio-ecologia-ciclo-nitrogenio'), notes: qaNotes },
   { chapterId: 'bio-ecologia-eutrofizacao', mechanism: 'seção vertical de lago', relation: 'nutrientes induzem floração, bloqueiam luz e levam ao consumo de oxigênio', status: 'em-validacao', evidencePaths: ecologyEvidence('bio-ecologia-eutrofizacao'), notes: qaNotes },

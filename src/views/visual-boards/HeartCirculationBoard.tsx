@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import BoardShell from './BoardShell';
+import HeartMechanism from './HeartMechanism';
 import { boardPair } from './pair';
 import type { BoardProps } from './types';
 import './HeartCirculationBoard.css';
@@ -59,7 +60,8 @@ export default function HeartCirculationBoard(props: BoardProps) {
         subtitle="Duas passagens pelo coração, com trajetos separados para pulmões e corpo."
         condition={{ label: 'circuitos', value: '2' }}
         ariaLabel="Prancha ilustrada do coração e da circulação humana"
-        scene={<HeartScene />}
+        scene={<HeartMechanism />}
+        sceneFirst
         left={{ label: 'Pequena circulação · pulmonar', headline: 'Do coração aos pulmões e de volta.', detail: 'Ventrículo direito → artérias pulmonares → capilares dos pulmões → veias pulmonares → átrio esquerdo.', formula: 'VD → pulmões → AE' }}
         right={{ label: 'Grande circulação · sistêmica', headline: 'Do coração ao corpo e de volta.', detail: 'Ventrículo esquerdo → aorta → capilares dos tecidos → veias cavas → átrio direito.', formula: 'VE → corpo → AD' }}
         leftState={pair.leftState}
@@ -70,6 +72,7 @@ export default function HeartCirculationBoard(props: BoardProps) {
         onSelectRight={pair.selectRight}
         equation={{ label: 'Regra dos vasos', general: 'artéria sai do coração', condition: 'direção, não cor', reduced: 'veia chega ao coração' }}
         supports={<>
+          <HeartScene />
           <section className="vs-heart-route" aria-label="Percurso completo de uma hemácia">
             <h3>Siga uma hemácia</h3>
             <div>{route.map((stop, index) => <span key={stop.label} className={`vs-heart-stop vs-heart-stop--${stop.color}`}><b>{index + 1}</b>{stop.label}</span>)}</div>

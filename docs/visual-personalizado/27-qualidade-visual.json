@@ -760,11 +760,16 @@
     "title": "Coração e Vasos Sanguíneos",
     "primary": "board",
     "artifact": "coracao-circulacao",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "percurso selecionável entre cavidades, pulmões e corpo",
+    "relation": "artéria e veia definidas pela direção, não pela oxigenação",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/mecanismos-expansao-2026-09-25/summary-biologia-coracao-e-vasos-sanguineos-390-light.png",
+      "docs/visual-personalizado/screenshots/mecanismos-expansao-2026-09-25/summary-biologia-coracao-e-vasos-sanguineos-390-dark.png",
+      "docs/visual-personalizado/screenshots/mecanismos-expansao-2026-09-25/summary-biologia-coracao-e-vasos-sanguineos-1440-light.png",
+      "docs/visual-personalizado/screenshots/mecanismos-expansao-2026-09-25/summary-biologia-coracao-e-vasos-sanguineos-1440-dark.png"
+    ],
+    "notes": "QA em 360, 390, 768 e 1440 px nos dois temas: sem overflow horizontal. Capturas de página e controles conferidos. Movimento reduzido coberto por teste de componente, sem emulação no navegador. Aprovação editorial pendente; não equivale a finalização do capítulo."
   },
   {
     "id": "summary-biologia-fisiologia-da-respiracao",
@@ -1780,11 +1785,16 @@
     "title": "Equação Fundamental da Ondulatória",
     "primary": "board",
     "artifact": "ondulatoria",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "corda com ponto material destacado",
+    "relation": "perfil se propaga enquanto um ponto oscila; v = λf",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/mecanismos-expansao-2026-09-25/summary-fisica-equacao-fundamental-da-ondulatoria-390-light.png",
+      "docs/visual-personalizado/screenshots/mecanismos-expansao-2026-09-25/summary-fisica-equacao-fundamental-da-ondulatoria-390-dark.png",
+      "docs/visual-personalizado/screenshots/mecanismos-expansao-2026-09-25/summary-fisica-equacao-fundamental-da-ondulatoria-1440-light.png",
+      "docs/visual-personalizado/screenshots/mecanismos-expansao-2026-09-25/summary-fisica-equacao-fundamental-da-ondulatoria-1440-dark.png"
+    ],
+    "notes": "QA em 360, 390, 768 e 1440 px nos dois temas: sem overflow horizontal. Capturas de página e controles conferidos. Movimento reduzido coberto por teste de componente, sem emulação no navegador. Aprovação editorial pendente; não equivale a finalização do capítulo."
   },
   {
     "id": "summary-fisica-ondulatoria-ondas-eletromagneticas",
@@ -1792,11 +1802,16 @@
     "title": "Ondulatória: Ondas Eletromagnéticas",
     "primary": "board",
     "artifact": "ondulatoria",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "campos E e B em perspectiva",
+    "relation": "campos transversais em fase, com amplitudes normalizadas",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/mecanismos-expansao-2026-09-25/summary-fisica-ondulatoria-ondas-eletromagneticas-390-light.png",
+      "docs/visual-personalizado/screenshots/mecanismos-expansao-2026-09-25/summary-fisica-ondulatoria-ondas-eletromagneticas-390-dark.png",
+      "docs/visual-personalizado/screenshots/mecanismos-expansao-2026-09-25/summary-fisica-ondulatoria-ondas-eletromagneticas-1440-light.png",
+      "docs/visual-personalizado/screenshots/mecanismos-expansao-2026-09-25/summary-fisica-ondulatoria-ondas-eletromagneticas-1440-dark.png"
+    ],
+    "notes": "QA em 360, 390, 768 e 1440 px nos dois temas: sem overflow horizontal. Capturas de página e controles conferidos. Movimento reduzido coberto por teste de componente, sem emulação no navegador. Aprovação editorial pendente; não equivale a finalização do capítulo."
   },
   {
     "id": "summary-fisica-ondulatoria-som-e-suas-propriedades",
@@ -1804,11 +1819,16 @@
     "title": "Ondulatória: Som e suas Propriedades",
     "primary": "board",
     "artifact": "ondulatoria",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "partículas em compressões e rarefações",
+    "relation": "oscilação longitudinal do meio sem transporte líquido de matéria",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/mecanismos-expansao-2026-09-25/summary-fisica-ondulatoria-som-e-suas-propriedades-390-light.png",
+      "docs/visual-personalizado/screenshots/mecanismos-expansao-2026-09-25/summary-fisica-ondulatoria-som-e-suas-propriedades-390-dark.png",
+      "docs/visual-personalizado/screenshots/mecanismos-expansao-2026-09-25/summary-fisica-ondulatoria-som-e-suas-propriedades-1440-light.png",
+      "docs/visual-personalizado/screenshots/mecanismos-expansao-2026-09-25/summary-fisica-ondulatoria-som-e-suas-propriedades-1440-dark.png"
+    ],
+    "notes": "QA em 360, 390, 768 e 1440 px nos dois temas: sem overflow horizontal. Capturas de página e controles conferidos. Movimento reduzido coberto por teste de componente, sem emulação no navegador. Aprovação editorial pendente; não equivale a finalização do capítulo."
   },
   {
     "id": "summary-fisica-intensidade-sonora",
@@ -6092,11 +6112,16 @@
     "title": "Evolução dos Modelos Atômicos",
     "primary": "board",
     "artifact": "modelos-atomicos",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "espalhamento alfa e níveis discretos do hidrogênio",
+    "relation": "grandes desvios sustentam núcleo concentrado; fóton corresponde à diferença de energia",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/mecanismos-expansao-2026-09-25/summary-quimica-evolucao-dos-modelos-atomicos-390-light.png",
+      "docs/visual-personalizado/screenshots/mecanismos-expansao-2026-09-25/summary-quimica-evolucao-dos-modelos-atomicos-390-dark.png",
+      "docs/visual-personalizado/screenshots/mecanismos-expansao-2026-09-25/summary-quimica-evolucao-dos-modelos-atomicos-1440-light.png",
+      "docs/visual-personalizado/screenshots/mecanismos-expansao-2026-09-25/summary-quimica-evolucao-dos-modelos-atomicos-1440-dark.png"
+    ],
+    "notes": "QA em 360, 390, 768 e 1440 px nos dois temas: sem overflow horizontal. Capturas de página e controles conferidos. Movimento reduzido coberto por teste de componente, sem emulação no navegador. Aprovação editorial pendente; não equivale a finalização do capítulo."
   },
   {
     "id": "summary-quimica-organizacao-da-tabela-periodica-dos-elementos",
@@ -6536,11 +6561,16 @@
     "title": "Termoquímica I",
     "primary": "board",
     "artifact": "termoquimica",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "perfil de entalpia e fluxo sistema-vizinhança",
+    "relation": "saldo ΔH e barreira Ea distintos; troca de calor muda de sentido",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/mecanismos-expansao-2026-09-25/summary-quimica-termoquimica-i-390-light.png",
+      "docs/visual-personalizado/screenshots/mecanismos-expansao-2026-09-25/summary-quimica-termoquimica-i-390-dark.png",
+      "docs/visual-personalizado/screenshots/mecanismos-expansao-2026-09-25/summary-quimica-termoquimica-i-1440-light.png",
+      "docs/visual-personalizado/screenshots/mecanismos-expansao-2026-09-25/summary-quimica-termoquimica-i-1440-dark.png"
+    ],
+    "notes": "QA em 360, 390, 768 e 1440 px nos dois temas: sem overflow horizontal. Capturas de página e controles conferidos. Movimento reduzido coberto por teste de componente, sem emulação no navegador. Aprovação editorial pendente; não equivale a finalização do capítulo."
   },
   {
     "id": "summary-quimica-termoquimica-ii",
@@ -6548,11 +6578,16 @@
     "title": "Termoquímica II",
     "primary": "board",
     "artifact": "termoquimica",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "caminhos direto e por intermediário",
+    "relation": "mesmos estados extremos dão o mesmo ΔH; intermediários se cancelam",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/mecanismos-expansao-2026-09-25/summary-quimica-termoquimica-ii-390-light.png",
+      "docs/visual-personalizado/screenshots/mecanismos-expansao-2026-09-25/summary-quimica-termoquimica-ii-390-dark.png",
+      "docs/visual-personalizado/screenshots/mecanismos-expansao-2026-09-25/summary-quimica-termoquimica-ii-1440-light.png",
+      "docs/visual-personalizado/screenshots/mecanismos-expansao-2026-09-25/summary-quimica-termoquimica-ii-1440-dark.png"
+    ],
+    "notes": "QA em 360, 390, 768 e 1440 px nos dois temas: sem overflow horizontal. Capturas de página e controles conferidos. Movimento reduzido coberto por teste de componente, sem emulação no navegador. Aprovação editorial pendente; não equivale a finalização do capítulo."
   },
   {
     "id": "summary-quimica-cinetica-quimica",
