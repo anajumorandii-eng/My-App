@@ -1,0 +1,35 @@
+.en-sky { fill: #f7efdc; stroke: #c7bca6; stroke-width: 1.6; }
+.en-hill { fill: #d2c29a; }
+.en-field-bg { fill: #e8dfc0; }
+.en-cane { fill: none; stroke: #7f9a5c; stroke-width: 1.6; stroke-linecap: round; }
+.en-roof { fill: #a8432a; }
+.en-roof-low { fill: #9b6a3f; }
+.en-wall { fill: #fbf6ea; stroke: #7c6a4f; stroke-width: 1.4; }
+.en-wall-low { fill: #e2d6bf; stroke: #7c6a4f; stroke-width: 1.4; }
+.en-window { fill: #6d8f95; }
+.en-door { fill: #6d6153; }
+.en-label { fill: #2c2a24; font: 800 10px system-ui, sans-serif; }
+.en-small { fill: #5a5952; font: 600 9.5px system-ui, sans-serif; }
+.en-hand { fill: #a8432a; font: 700 12px Kalam, 'Segoe Print', cursive; }
+.en-hier { fill: none; stroke: #a8432a; stroke-width: 2; stroke-dasharray: 4 4; }
+.en-mill { fill: #c9c2b2; stroke: #6d6559; stroke-width: 1.4; }
+.en-wheel { fill: none; stroke: #6d6559; stroke-width: 2.4; }
+.en-wheel-spoke { stroke: #6d6559; stroke-width: 1.2; }
+.en-palisade { stroke: #7c5534; stroke-width: 3; stroke-linecap: round; }
+.en-hut { fill: #d9c39a; stroke: #7c5534; stroke-width: 1.4; stroke-linejoin: round; }
+.en-person-head { fill: #8a5a3a; }
+.en-person { fill: #c49a6c; }
+.en-plot { fill: #a6bc86; stroke: #58754d; stroke-width: 1; }
+.en-basket { fill: #9b6a3f; }
+.en-crop { fill: #e0733d; }
+.dark .en-sky { fill: #1f2824; stroke: #5d6b64; }
+.dark .en-hill { fill: #34443d; }
+.dark .en-field-bg { fill: #2b3732; }
+.dark .en-wall { fill: #3d3d35; stroke: #b9b2a2; }
+.dark .en-wall-low { fill: #34342d; stroke: #b9b2a2; }
+.dark .en-label { fill: #efe8d8; }
+.dark .en-small { fill: #cfc8b8; }
+.dark .en-hand { fill: #f1a27f; }
+.dark .en-hier { stroke: #f1a27f; }
+.dark .en-mill { fill: #5a5a52; stroke: #b9b2a2; }
+.dark .en-wheel, .dark .en-wheel-spoke { stroke: #b9b2a2; }
