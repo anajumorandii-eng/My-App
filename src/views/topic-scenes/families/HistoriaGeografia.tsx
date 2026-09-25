@@ -3,6 +3,8 @@ import { motion } from 'motion/react';
 import { useSceneMotion } from '../useSceneMotion';
 import type { SceneEntry } from '../types';
 import './HistoriaGeografia.css';
+import './GeografiaFisica.css';
+import { ClimateMap, DomainsMap, EarthSeasons, ReliefProfile, RockCycle, SoilProfiles } from './GeografiaFisica';
 
 export const HISTORIA_GEOGRAFIA_IDS: ReadonlySet<string> = new Set([
   'summary-historia-revolucao-francesa',
@@ -12,7 +14,22 @@ export const HISTORIA_GEOGRAFIA_IDS: ReadonlySet<string> = new Set([
   'summary-historia-grandes-navegacoes-e-conquista-colonial',
   'summary-historia-a-montagem-da-colonizacao',
   'summary-historia-a-crise-do-antigo-sistema-colonial',
+  'summary-geografia-movimentos-da-terra',
+  'summary-geografia-relevo-brasileiro',
+  'summary-geografia-pedologia',
+  'summary-geografia-climatologia-do-brasil',
+  'summary-geografia-dominios-morfoclimaticos',
+  'summary-geografia-geologia-e-geomorfologia',
 ]);
+
+const FISICA: Record<string, React.ComponentType<{ active: number }>> = {
+  'summary-geografia-movimentos-da-terra': EarthSeasons,
+  'summary-geografia-relevo-brasileiro': ReliefProfile,
+  'summary-geografia-pedologia': SoilProfiles,
+  'summary-geografia-climatologia-do-brasil': ClimateMap,
+  'summary-geografia-dominios-morfoclimaticos': DomainsMap,
+  'summary-geografia-geologia-e-geomorfologia': RockCycle,
+};
 
 type SceneTransition = ReturnType<typeof useSceneMotion>;
 
@@ -378,13 +395,14 @@ export function HistoriaGeografia({ entry }: { entry: SceneEntry }) {
   const item = entry.items[active];
   const history = entry.chapterId.startsWith('summary-historia-');
   return <section className="tc-scene hg-scene" aria-label={entry.question}>
-    <header><small>CRIVO · {history ? 'cronologia e causalidade' : entry.chapterId === 'summary-geografia-dinamica-climatica' ? 'mecanismo do clima' : 'cartografia comparada'}</small><h4>{entry.question}</h4></header>
+    <header><small>CRIVO · {history ? 'cronologia e causalidade' : FISICA[entry.chapterId] || entry.chapterId === 'summary-geografia-dinamica-climatica' ? 'geografia física' : 'cartografia comparada'}</small><h4>{entry.question}</h4></header>
     <div className="hg-figure" role="region" tabIndex={0} aria-label="Prancha visual: deslize para ver a figura inteira; com teclado, use as setas" onKeyDown={event => {
       if (event.key !== 'ArrowRight' && event.key !== 'ArrowLeft') return;
       event.preventDefault();
       event.currentTarget.scrollLeft += event.key === 'ArrowRight' ? 120 : -120;
     }}>
-      {entry.chapterId === 'summary-historia-grandes-navegacoes-e-conquista-colonial' ? <Navigations active={active} t={transition} />
+      {FISICA[entry.chapterId] ? React.createElement(FISICA[entry.chapterId], { active })
+        : entry.chapterId === 'summary-historia-grandes-navegacoes-e-conquista-colonial' ? <Navigations active={active} t={transition} />
         : entry.chapterId === 'summary-historia-a-montagem-da-colonizacao' ? <Colonization active={active} t={transition} />
         : entry.chapterId === 'summary-historia-a-crise-do-antigo-sistema-colonial' ? <ColonialRevolts active={active} t={transition} />
         : entry.chapterId === 'summary-historia-revolucao-francesa' ? <FrenchRevolution active={active} t={transition} />
