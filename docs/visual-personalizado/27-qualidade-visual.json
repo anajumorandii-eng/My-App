@@ -1979,11 +1979,22 @@
     "title": "Movimentos da Terra",
     "primary": "scene",
     "artifact": "cadeia-de-derivacao",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "órbita com eixo de inclinação constante",
+    "relation": "o eixo de 23,5° mantém a direção; a incidência dos raios, não a distância, alterna as estações",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/lote3-hg-2026-09-25/geografia-movimentos-da-terra-recorte1.png",
+      "docs/visual-personalizado/screenshots/lote3-hg-2026-09-25/geografia-movimentos-da-terra-recorte1-dark.png",
+      "docs/visual-personalizado/screenshots/lote3-hg-2026-09-25/geografia-movimentos-da-terra-recorte2.png",
+      "docs/visual-personalizado/screenshots/lote3-hg-2026-09-25/geografia-movimentos-da-terra-recorte2-dark.png",
+      "docs/visual-personalizado/screenshots/lote3-hg-2026-09-25/geografia-movimentos-da-terra-recorte3.png",
+      "docs/visual-personalizado/screenshots/lote3-hg-2026-09-25/geografia-movimentos-da-terra-recorte3-dark.png",
+      "docs/visual-personalizado/screenshots/lote3-hg-2026-09-25/geografia-movimentos-da-terra-390-light.png",
+      "docs/visual-personalizado/screenshots/lote3-hg-2026-09-25/geografia-movimentos-da-terra-390-dark.png",
+      "docs/visual-personalizado/screenshots/lote3-hg-2026-09-25/geografia-movimentos-da-terra-768-light.png",
+      "docs/visual-personalizado/screenshots/lote3-hg-2026-09-25/geografia-movimentos-da-terra-768-dark.png"
+    ],
+    "notes": "Redesenhada em 25/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
   },
   {
     "id": "summary-geografia-sistema-de-fusos-horarios",
@@ -2457,11 +2468,22 @@
     "title": "Geologia e Geomorfologia",
     "primary": "scene",
     "artifact": "tipologia",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "corte com vulcão, bacia e rochas profundas",
+    "relation": "magma esfria em ígneas, sedimentos compactam em sedimentares, calor e pressão fazem metamórficas",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/lote3-hg-2026-09-25/geografia-geologia-e-geomorfologia-recorte1.png",
+      "docs/visual-personalizado/screenshots/lote3-hg-2026-09-25/geografia-geologia-e-geomorfologia-recorte1-dark.png",
+      "docs/visual-personalizado/screenshots/lote3-hg-2026-09-25/geografia-geologia-e-geomorfologia-recorte2.png",
+      "docs/visual-personalizado/screenshots/lote3-hg-2026-09-25/geografia-geologia-e-geomorfologia-recorte2-dark.png",
+      "docs/visual-personalizado/screenshots/lote3-hg-2026-09-25/geografia-geologia-e-geomorfologia-recorte3.png",
+      "docs/visual-personalizado/screenshots/lote3-hg-2026-09-25/geografia-geologia-e-geomorfologia-recorte3-dark.png",
+      "docs/visual-personalizado/screenshots/lote3-hg-2026-09-25/geografia-geologia-e-geomorfologia-390-light.png",
+      "docs/visual-personalizado/screenshots/lote3-hg-2026-09-25/geografia-geologia-e-geomorfologia-390-dark.png",
+      "docs/visual-personalizado/screenshots/lote3-hg-2026-09-25/geografia-geologia-e-geomorfologia-768-light.png",
+      "docs/visual-personalizado/screenshots/lote3-hg-2026-09-25/geografia-geologia-e-geomorfologia-768-dark.png"
+    ],
+    "notes": "Redesenhada em 25/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
   },
   {
     "id": "summary-geografia-relevo-brasileiro",
@@ -2469,11 +2491,22 @@
     "title": "Relevo Brasileiro",
     "primary": "scene",
     "artifact": "tipologia",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "perfil com planaltos, depressão e planície",
+    "relation": "planaltos antigos erodidos, planícies de sedimentos recentes, depressões rebaixadas entre planaltos",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/lote3-hg-2026-09-25/geografia-relevo-brasileiro-recorte1.png",
+      "docs/visual-personalizado/screenshots/lote3-hg-2026-09-25/geografia-relevo-brasileiro-recorte1-dark.png",
+      "docs/visual-personalizado/screenshots/lote3-hg-2026-09-25/geografia-relevo-brasileiro-recorte2.png",
+      "docs/visual-personalizado/screenshots/lote3-hg-2026-09-25/geografia-relevo-brasileiro-recorte2-dark.png",
+      "docs/visual-personalizado/screenshots/lote3-hg-2026-09-25/geografia-relevo-brasileiro-recorte3.png",
+      "docs/visual-personalizado/screenshots/lote3-hg-2026-09-25/geografia-relevo-brasileiro-recorte3-dark.png",
+      "docs/visual-personalizado/screenshots/lote3-hg-2026-09-25/geografia-relevo-brasileiro-390-light.png",
+      "docs/visual-personalizado/screenshots/lote3-hg-2026-09-25/geografia-relevo-brasileiro-390-dark.png",
+      "docs/visual-personalizado/screenshots/lote3-hg-2026-09-25/geografia-relevo-brasileiro-768-light.png",
+      "docs/visual-personalizado/screenshots/lote3-hg-2026-09-25/geografia-relevo-brasileiro-768-dark.png"
+    ],
+    "notes": "Redesenhada em 25/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
   },
   {
     "id": "summary-geografia-pedologia",
@@ -2481,11 +2514,22 @@
     "title": "Pedologia",
     "primary": "scene",
     "artifact": "tipologia",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "três perfis de solo",
+    "relation": "latossolo profundo e lixiviado, terra roxa sobre basalto, solo raso do semiárido sujeito a sal",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/lote3-hg-2026-09-25/geografia-pedologia-recorte1.png",
+      "docs/visual-personalizado/screenshots/lote3-hg-2026-09-25/geografia-pedologia-recorte1-dark.png",
+      "docs/visual-personalizado/screenshots/lote3-hg-2026-09-25/geografia-pedologia-recorte2.png",
+      "docs/visual-personalizado/screenshots/lote3-hg-2026-09-25/geografia-pedologia-recorte2-dark.png",
+      "docs/visual-personalizado/screenshots/lote3-hg-2026-09-25/geografia-pedologia-recorte3.png",
+      "docs/visual-personalizado/screenshots/lote3-hg-2026-09-25/geografia-pedologia-recorte3-dark.png",
+      "docs/visual-personalizado/screenshots/lote3-hg-2026-09-25/geografia-pedologia-390-light.png",
+      "docs/visual-personalizado/screenshots/lote3-hg-2026-09-25/geografia-pedologia-390-dark.png",
+      "docs/visual-personalizado/screenshots/lote3-hg-2026-09-25/geografia-pedologia-768-light.png",
+      "docs/visual-personalizado/screenshots/lote3-hg-2026-09-25/geografia-pedologia-768-dark.png"
+    ],
+    "notes": "Redesenhada em 25/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
   },
   {
     "id": "summary-geografia-climatologia-do-brasil",
@@ -2493,11 +2537,22 @@
     "title": "Climatologia do Brasil",
     "primary": "scene",
     "artifact": "tipologia",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "mapa de climas com painel por recorte",
+    "relation": "latitude e massas de ar dão equatorial, tropical, semiárido e subtropical",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/lote3-hg-2026-09-25/geografia-climatologia-do-brasil-recorte1.png",
+      "docs/visual-personalizado/screenshots/lote3-hg-2026-09-25/geografia-climatologia-do-brasil-recorte1-dark.png",
+      "docs/visual-personalizado/screenshots/lote3-hg-2026-09-25/geografia-climatologia-do-brasil-recorte2.png",
+      "docs/visual-personalizado/screenshots/lote3-hg-2026-09-25/geografia-climatologia-do-brasil-recorte2-dark.png",
+      "docs/visual-personalizado/screenshots/lote3-hg-2026-09-25/geografia-climatologia-do-brasil-recorte3.png",
+      "docs/visual-personalizado/screenshots/lote3-hg-2026-09-25/geografia-climatologia-do-brasil-recorte3-dark.png",
+      "docs/visual-personalizado/screenshots/lote3-hg-2026-09-25/geografia-climatologia-do-brasil-390-light.png",
+      "docs/visual-personalizado/screenshots/lote3-hg-2026-09-25/geografia-climatologia-do-brasil-390-dark.png",
+      "docs/visual-personalizado/screenshots/lote3-hg-2026-09-25/geografia-climatologia-do-brasil-768-light.png",
+      "docs/visual-personalizado/screenshots/lote3-hg-2026-09-25/geografia-climatologia-do-brasil-768-dark.png"
+    ],
+    "notes": "Redesenhada em 25/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
   },
   {
     "id": "summary-geografia-biogeografia-do-brasil-i",
@@ -2553,11 +2608,22 @@
     "title": "Domínios Morfoclimáticos",
     "primary": "scene",
     "artifact": "tipologia",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "mapa dos seis domínios com paisagem",
+    "relation": "clima, relevo, solo e vegetação combinados em domínios com faixas de transição",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/lote3-hg-2026-09-25/geografia-dominios-morfoclimaticos-recorte1.png",
+      "docs/visual-personalizado/screenshots/lote3-hg-2026-09-25/geografia-dominios-morfoclimaticos-recorte1-dark.png",
+      "docs/visual-personalizado/screenshots/lote3-hg-2026-09-25/geografia-dominios-morfoclimaticos-recorte2.png",
+      "docs/visual-personalizado/screenshots/lote3-hg-2026-09-25/geografia-dominios-morfoclimaticos-recorte2-dark.png",
+      "docs/visual-personalizado/screenshots/lote3-hg-2026-09-25/geografia-dominios-morfoclimaticos-recorte3.png",
+      "docs/visual-personalizado/screenshots/lote3-hg-2026-09-25/geografia-dominios-morfoclimaticos-recorte3-dark.png",
+      "docs/visual-personalizado/screenshots/lote3-hg-2026-09-25/geografia-dominios-morfoclimaticos-390-light.png",
+      "docs/visual-personalizado/screenshots/lote3-hg-2026-09-25/geografia-dominios-morfoclimaticos-390-dark.png",
+      "docs/visual-personalizado/screenshots/lote3-hg-2026-09-25/geografia-dominios-morfoclimaticos-768-light.png",
+      "docs/visual-personalizado/screenshots/lote3-hg-2026-09-25/geografia-dominios-morfoclimaticos-768-dark.png"
+    ],
+    "notes": "Redesenhada em 25/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
   },
   {
     "id": "summary-geografia-matriz-energetica",

@@ -87,5 +87,21 @@ describe('pranchas de História e Geografia', () => {
     await user.click(screen.getByRole('button', { name: 'Mesmo descontentamento' }));
     expect(diagram).toHaveAttribute('aria-label', expect.stringContaining('recorte 3'));
   });
+  it.each([
+    ['summary-geografia-movimentos-da-terra', /Movimentos da Terra/, 'periélio e afélio', 'Estações opostas', 'elo 4'],
+    ['summary-geografia-relevo-brasileiro', /Relevo brasileiro em perfil/, 'escudo cristalino antigo', 'Depressões', 'depressões em foco'],
+    ['summary-geografia-pedologia', /Perfis de solo/, 'sobre basalto', 'Semiárido', 'semiárido em foco'],
+    ['summary-geografia-climatologia-do-brasil', /Climas do Brasil/, 'Trópico de Capricórnio', 'Subtropical', 'subtropical em foco'],
+    ['summary-geografia-dominios-morfoclimaticos', /Domínios morfoclimáticos/, 'faixas de transição', 'Caatinga', 'Caatinga em foco'],
+    ['summary-geografia-geologia-e-geomorfologia', /Rochas por origem/, 'rochas em profundidade', 'Metamórficas', 'metamórficas em foco'],
+  ] as const)('desenha o processo físico de %s', async (chapterId, name, text, button, focus) => {
+    const user = userEvent.setup();
+    const entry = geografia.find(item => item.chapterId === chapterId)!;
+    render(<HistoriaGeografia entry={entry} />);
+    const diagram = screen.getByRole('img', { name });
+    expect(diagram).toHaveTextContent(text);
+    await user.click(screen.getByRole('button', { name: button }));
+    expect(diagram).toHaveAttribute('aria-label', expect.stringContaining(focus));
+  });
 });
 

@@ -1,0 +1,113 @@
+.gf-sky { fill: #f4ecdb; stroke: #c2b49c; stroke-width: 2; }
+.gf-night-sky { fill: #1f2a3a; stroke: #4c5a70; stroke-width: 2; }
+.gf-kicker { fill: #73414d; font: 800 13px system-ui, sans-serif; letter-spacing: .09em; }
+.gf-kicker-light { fill: #f1c8ab; }
+.gf-label { fill: #2c3937; font: 800 14px system-ui, sans-serif; }
+.gf-on { fill: #873f4f; }
+.gf-small { fill: #4f4a42; font: 600 11px system-ui, sans-serif; }
+.gf-small-light { fill: #f4ead7; font: 600 11px system-ui, sans-serif; }
+.gf-tiny { fill: #f4ead7; font: 800 9px system-ui, sans-serif; }
+.gf-tiny-dark { fill: #5a5250; font: 700 9.5px system-ui, sans-serif; }
+.gf-hand { fill: #a8432a; font: 700 15px Kalam, 'Segoe Print', cursive; }
+.gf-hand-sm { fill: #a8432a; font: 700 12.5px Kalam, 'Segoe Print', cursive; }
+.gf-foot { fill: #5a5250; font: 600 11px system-ui, sans-serif; }
+.gf-foot-light { fill: #cfd6de; font: 600 11px system-ui, sans-serif; }
+.gf-season { fill: #f2c14e; font: 800 13px system-ui, sans-serif; }
+.gf-orbit { fill: none; stroke: #7d8ba3; stroke-width: 1.4; stroke-dasharray: 4 5; }
+.gf-sun { fill: #f2c14e; stroke: #e08a2c; stroke-width: 2; }
+.gf-sunray { stroke: #f2c14e; stroke-width: 2.4; stroke-linecap: round; }
+.gf-sun-label { fill: #5b420c; font: 800 11px system-ui, sans-serif; }
+.gf-ocean { fill: #4f93a3; stroke: #cfe6ea; stroke-width: 1.2; }
+.gf-night { fill: rgb(10 16 26 / .62); }
+.gf-equator { fill: none; stroke: #f4ead7; stroke-width: 1; stroke-dasharray: 2 2; }
+.gf-axis { stroke: #f4ead7; stroke-width: 2; }
+.gf-ref { stroke: #cfd6de; stroke-width: 1; stroke-dasharray: 3 3; }
+.gf-arc { fill: none; stroke: #f1a27f; stroke-width: 1.6; }
+.gf-inset { fill: #fbf7ee; stroke: #c2b49c; stroke-width: 1.4; }
+.gf-beam { stroke: #e0a21f; stroke-width: 2; stroke-linecap: round; }
+.gf-hot { stroke: #c2562f; stroke-width: 5; stroke-linecap: round; }
+.gf-cool { stroke: #e8b27c; stroke-width: 5; stroke-linecap: round; }
+.gf-rock { fill: #b8a88a; stroke: #7c6a4f; stroke-width: 1.6; stroke-linejoin: round; }
+.gf-rock-top { fill: #b8a88a; }
+.gf-shield { fill: #7c7466; }
+.gf-sediment { fill: #d9c39a; }
+.gf-sediment-2 { fill: #c9ae7d; }
+.gf-sediment-new { fill: #e8d7ad; stroke: #b3945d; stroke-width: 1; }
+.gf-river { fill: none; stroke: #4f93a3; stroke-width: 3; stroke-linecap: round; }
+.gf-grain { fill: #9b6a3f; }
+.gf-down, .gf-up { fill: none; stroke: #a8432a; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+.gf-soil-frame { fill: none; stroke: #7c6a4f; stroke-width: 1.4; }
+.gf-horizon-o { fill: #3f3326; }
+.gf-latossolo { fill: #b5532e; }
+.gf-terra-roxa { fill: #6e2a2e; }
+.gf-basalt { fill: #454a4f; }
+.gf-joint { stroke: #2b2f33; stroke-width: 1.4; }
+.gf-semiarid { fill: #d8c49a; }
+.gf-crystal { fill: #9a948a; }
+.gf-crystal-block { fill: #b7b1a6; stroke: #6e695f; stroke-width: 1; }
+.gf-nutrient { fill: #f2c14e; stroke: #8a6414; stroke-width: .8; }
+.gf-rain { stroke: #4f93a3; stroke-width: 2; stroke-linecap: round; }
+.gf-water { fill: #4f93a3; }
+.gf-salt { fill: #fbfbf6; stroke: #c8c2b0; stroke-width: 1; }
+.gf-plant { fill: none; stroke: #58754d; stroke-width: 2.4; stroke-linecap: round; }
+.gf-coffee { fill: #a8432a; }
+.gf-cactus { fill: none; stroke: #58754d; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+.gf-land { fill: #efe5cc; }
+.gf-outline { fill: none; stroke: #7c6a4f; stroke-width: 1.6; stroke-linejoin: round; }
+.gf-latline { stroke: #7c6a4f; stroke-width: 1; stroke-dasharray: 4 4; }
+.gf-map-label { fill: #2c2a24; font: 800 11px system-ui, sans-serif; }
+.gf-map-label-dim { fill: #5a5250; font: 700 9.5px system-ui, sans-serif; }
+.gf-z-tropical { fill: #e3c77c; }
+.gf-z-equatorial { fill: #6fa36b; }
+.gf-z-semiarido { fill: #d98d4f; }
+.gf-z-subtropical { fill: #8fb3cf; }
+.gf-panel-title { fill: #873f4f; font: 800 13px system-ui, sans-serif; }
+.gf-airmass { fill: none; stroke: #2f6b3a; stroke-width: 3; stroke-linecap: round; }
+.gf-rainbar { fill: #4f93a3; }
+.gf-rainbar-dry { fill: #d98d4f; }
+.gf-baseline { stroke: #7c6a4f; stroke-width: 1; }
+.gf-snow { stroke: #4f7fa3; stroke-width: 2.6; stroke-linecap: round; fill: none; }
+.gf-d-amazonico { fill: #4f8f5a; }
+.gf-d-cerrado { fill: #c9b060; }
+.gf-d-caatinga { fill: #d98d4f; }
+.gf-d-mares { fill: #8fbf8a; }
+.gf-d-araucarias { fill: #5f8a7a; }
+.gf-d-pradarias { fill: #b8c98a; }
+.gf-ground { stroke: #7c6a4f; stroke-width: 2; }
+.gf-plateau { fill: #c9b88f; }
+.gf-trunk { stroke: #6e4526; stroke-width: 3; }
+.gf-canopy { fill: #3f7f4a; }
+.gf-canopy-dry { fill: #8f9a4f; }
+.gf-chapada { fill: #d0b27a; stroke: #8a6f45; stroke-width: 1.4; }
+.gf-twisted { fill: none; stroke: #6e4526; stroke-width: 2.6; stroke-linecap: round; }
+.gf-fire { fill: #e0733d; }
+.gf-shrub { fill: none; stroke: #7c5534; stroke-width: 2; stroke-linecap: round; }
+.gf-crack { fill: none; stroke: #7c5534; stroke-width: 1.4; }
+.gf-crust { fill: #b8a88a; stroke: #7c6a4f; stroke-width: 1.6; stroke-linejoin: round; }
+.gf-lava-line { fill: none; stroke: #e0733d; stroke-width: 3; stroke-linecap: round; }
+.gf-conduit { fill: none; stroke: #e0733d; stroke-width: 4; }
+.gf-magma { fill: #d9542e; }
+.gf-granite { fill: #8d8478; }
+.gf-crystal-big { fill: #e9e2d6; stroke: #5a5250; stroke-width: 1; }
+.gf-crystal-small { fill: #2c2a24; }
+.gf-river-long { fill: none; stroke: #4f93a3; stroke-width: 3; stroke-linecap: round; }
+.gf-basin { fill: #a9d3d6; }
+.gf-layer { stroke: #8a6f45; stroke-width: .8; }
+.gf-layer-0 { fill: #d9c39a; } .gf-layer-1 { fill: #c9ae7d; } .gf-layer-2 { fill: #e8d7ad; }
+.gf-fossil { fill: #f7f0e2; stroke: #6e4526; stroke-width: 1.2; }
+.gf-fossil-rib { stroke: #6e4526; stroke-width: 1; }
+.gf-band { fill: none; stroke: #5f5850; stroke-width: 6; }
+.gf-band-folded { stroke: #7a6b8f; }
+.gf-press { fill: none; stroke: #a8432a; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+.dark .gf-sky { fill: #1f3238; stroke: #6e8f88; }
+.dark .gf-kicker { fill: #f1c8ab; }
+.dark .gf-label, .dark .gf-map-label { fill: #f4ead7; }
+.dark .gf-on { fill: #ffd095; }
+.dark .gf-small, .dark .gf-foot, .dark .gf-map-label-dim, .dark .gf-tiny-dark { fill: #d3ddcf; }
+.dark .gf-hand, .dark .gf-hand-sm { fill: #f1a27f; }
+.dark .gf-inset { fill: #2a3d42; stroke: #6e8f88; }
+.dark .gf-panel-title { fill: #ffd095; }
+.dark .gf-land { fill: #34443d; }
+.dark .gf-outline, .dark .gf-latline { stroke: #d3ddcf; }
+.gf-leader { stroke: #a8432a; stroke-width: 1.2; stroke-dasharray: 3 3; }
+.dark .gf-leader { stroke: #f1a27f; }

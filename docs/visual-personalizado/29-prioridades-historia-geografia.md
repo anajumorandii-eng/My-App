@@ -55,3 +55,18 @@ Seis capítulos, cada um com cena própria. Os fatos e datas das cenas saem do r
 | Dinâmica Interna da Colonização | Linha do tempo de três cartões para três peças simultâneas. | Um só engenho: casa-grande sobre senzala (com o aviso sobre a leitura de Freyre), fuga para o quilombo (Palmares, c. 1600–1695), roças e ofícios abastecendo o engenho. |
 
 No celular, as pranchas de 620 unidades de História continuam com rolagem lateral dentro da própria prancha (decisão anterior, para o texto não encolher); a página não rola para os lados. As evidências das duas rodadas estão registradas em `visualQualityReviews.ts` e apontam para `screenshots/lote1-hg-2026-09-25/` e `screenshots/lote2-hg-2026-09-25/`. Todos seguem **em validação** até a revisão da Ana Júlia.
+
+## Lote 3 — geografia física do Brasil (25/09/2026)
+
+Os seis capítulos usavam as famílias genéricas "tipologia" ou "cadeia de derivação". As cenas novas ficam em `src/views/topic-scenes/families/GeografiaFisica.tsx`; o conteúdo sai das entradas do capítulo e do resumo.
+
+| Capítulo | Agora |
+| --- | --- |
+| Movimentos da Terra | Céu noturno com o Sol e a órbita; o eixo de 23,5° mantém a direção enquanto a Terra percorre a órbita; painel de raios diretos e oblíquos ("mesma luz, área maior"); junho e dezembro com as estações opostas. Rodapé corrige o equívoco da distância (periélio e afélio). |
+| Relevo Brasileiro | Perfil com escudo cristalino: grãos saem dos planaltos (cerca de 60% do território), sedimentos recentes se depositam na planície, a erosão rebaixa a depressão entre planaltos. |
+| Pedologia | Três perfis lado a lado: a chuva leva os nutrientes do latossolo (lixiviação), o basalto alterado enriquece a terra roxa, a irrigação sem manejo deixa sal no solo raso do semiárido. |
+| Climatologia do Brasil | Mapa com Equador e Trópico de Capricórnio; painel por recorte: massa Equatorial sobre a Amazônia, chuva ao longo do ano no tropical e no semiárido (barras ilustrativas, sem medida), invernos frios e geadas no Sul. |
+| Domínios Morfoclimáticos | Os seis domínios de Ab'Sáber no mapa, com paisagem própria para Amazônico, Cerrado e Caatinga; rodapé lembra as faixas de transição. |
+| Geologia e Geomorfologia | Corte com vulcão, câmara magmática, rio e bacia: o magma esfria em granito (cristais grandes) e basalto (pequenos), camadas se compactam e guardam um fóssil, faixas em profundidade se dobram sob calor e pressão. |
+
+Contornos e limites são aproximados e dizem isso na prancha. QA: todos os recortes a 1440 px nos dois temas sem colisão de texto; 390 e 768 px sem rolagem lateral da página. Em validação até a revisão da Ana Júlia.
