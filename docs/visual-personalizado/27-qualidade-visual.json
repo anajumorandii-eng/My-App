@@ -41,22 +41,16 @@
     "title": "Dinâmica de populações",
     "primary": "scene",
     "artifact": "estrategias-reprodutivas",
-    "status": "aprovado",
+    "status": "em-validacao",
     "mechanism": "perfis reprodutivos",
     "relation": "muitos descendentes e pouco cuidado versus poucos descendentes e longo cuidado",
     "evidencePaths": [
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-dinamica-populacoes-mobile-360-light.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-dinamica-populacoes-mobile-360-dark.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-dinamica-populacoes-mobile-375-light.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-dinamica-populacoes-mobile-375-dark.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-dinamica-populacoes-mobile-390-light.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-dinamica-populacoes-mobile-390-dark.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-dinamica-populacoes-tablet-light.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-dinamica-populacoes-tablet-dark.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-dinamica-populacoes-desktop-light.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-dinamica-populacoes-desktop-dark.png"
+      "docs/visual-personalizado/screenshots/ecologia-motion-2026-09-23/bio-ecologia-dinamica-populacoes-390-light.png",
+      "docs/visual-personalizado/screenshots/ecologia-motion-2026-09-23/bio-ecologia-dinamica-populacoes-390-dark.png",
+      "docs/visual-personalizado/screenshots/ecologia-motion-2026-09-23/bio-ecologia-dinamica-populacoes-1440-light.png",
+      "docs/visual-personalizado/screenshots/ecologia-motion-2026-09-23/bio-ecologia-dinamica-populacoes-1440-dark.png"
     ],
-    "notes": "QA técnico: 360, 375, 390, 768 e 1440 px; temas claro/escuro; primeira e última seleção; teclado; movimento reduzido; axe sem violações. Aprovado pela responsável em 2026-09-23."
+    "notes": "Reaberto após rejeição visual da responsável em 2026-09-23. Cenas refeitas com movimento no mecanismo; aprovação editorial pendente. Evidências novas: 60 verificações de largura/seleção e capturas em 390 e 1440 px nos dois temas."
   },
   {
     "id": "bio-ecologia-invasoras-controle-biologico",
@@ -64,22 +58,16 @@
     "title": "Espécies invasoras e controle biológico",
     "primary": "scene",
     "artifact": "invasao-impactos",
-    "status": "aprovado",
+    "status": "em-validacao",
     "mechanism": "rede de impactos",
     "relation": "invasora alcança nativas, recursos, genes e ambiente por cinco caminhos",
     "evidencePaths": [
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-invasoras-controle-biologico-mobile-360-light.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-invasoras-controle-biologico-mobile-360-dark.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-invasoras-controle-biologico-mobile-375-light.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-invasoras-controle-biologico-mobile-375-dark.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-invasoras-controle-biologico-mobile-390-light.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-invasoras-controle-biologico-mobile-390-dark.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-invasoras-controle-biologico-tablet-light.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-invasoras-controle-biologico-tablet-dark.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-invasoras-controle-biologico-desktop-light.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-invasoras-controle-biologico-desktop-dark.png"
+      "docs/visual-personalizado/screenshots/ecologia-motion-2026-09-23/bio-ecologia-invasoras-controle-biologico-390-light.png",
+      "docs/visual-personalizado/screenshots/ecologia-motion-2026-09-23/bio-ecologia-invasoras-controle-biologico-390-dark.png",
+      "docs/visual-personalizado/screenshots/ecologia-motion-2026-09-23/bio-ecologia-invasoras-controle-biologico-1440-light.png",
+      "docs/visual-personalizado/screenshots/ecologia-motion-2026-09-23/bio-ecologia-invasoras-controle-biologico-1440-dark.png"
     ],
-    "notes": "QA técnico: 360, 375, 390, 768 e 1440 px; temas claro/escuro; primeira e última seleção; teclado; movimento reduzido; axe sem violações. Aprovado pela responsável em 2026-09-23."
+    "notes": "Reaberto após rejeição visual da responsável em 2026-09-23. Cenas refeitas com movimento no mecanismo; aprovação editorial pendente. Evidências novas: 60 verificações de largura/seleção e capturas em 390 e 1440 px nos dois temas."
   },
   {
     "id": "bio-ecologia-sucessao",
@@ -87,22 +75,16 @@
     "title": "Sucessão ecológica",
     "primary": "scene",
     "artifact": "sucessao-comunidades",
-    "status": "aprovado",
+    "status": "em-validacao",
     "mechanism": "paisagem de comunidades",
     "relation": "solo e vegetação mudam da pioneira ao clímax",
     "evidencePaths": [
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-sucessao-mobile-360-light.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-sucessao-mobile-360-dark.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-sucessao-mobile-375-light.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-sucessao-mobile-375-dark.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-sucessao-mobile-390-light.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-sucessao-mobile-390-dark.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-sucessao-tablet-light.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-sucessao-tablet-dark.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-sucessao-desktop-light.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-sucessao-desktop-dark.png"
+      "docs/visual-personalizado/screenshots/ecologia-motion-2026-09-23/bio-ecologia-sucessao-390-light.png",
+      "docs/visual-personalizado/screenshots/ecologia-motion-2026-09-23/bio-ecologia-sucessao-390-dark.png",
+      "docs/visual-personalizado/screenshots/ecologia-motion-2026-09-23/bio-ecologia-sucessao-1440-light.png",
+      "docs/visual-personalizado/screenshots/ecologia-motion-2026-09-23/bio-ecologia-sucessao-1440-dark.png"
     ],
-    "notes": "QA técnico: 360, 375, 390, 768 e 1440 px; temas claro/escuro; primeira e última seleção; teclado; movimento reduzido; axe sem violações. Aprovado pela responsável em 2026-09-23."
+    "notes": "Reaberto após rejeição visual da responsável em 2026-09-23. Cenas refeitas com movimento no mecanismo; aprovação editorial pendente. Evidências novas: 60 verificações de largura/seleção e capturas em 390 e 1440 px nos dois temas."
   },
   {
     "id": "bio-ecologia-ciclo-carbono",
@@ -122,22 +104,16 @@
     "title": "Ciclo do nitrogênio",
     "primary": "scene",
     "artifact": "nitrogenio-solo-atmosfera",
-    "status": "aprovado",
+    "status": "em-validacao",
     "mechanism": "ciclo microbiano no solo e atmosfera",
     "relation": "fixação e amonificação alimentam nitrificação; desnitrificação devolve N₂",
     "evidencePaths": [
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-ciclo-nitrogenio-mobile-360-light.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-ciclo-nitrogenio-mobile-360-dark.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-ciclo-nitrogenio-mobile-375-light.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-ciclo-nitrogenio-mobile-375-dark.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-ciclo-nitrogenio-mobile-390-light.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-ciclo-nitrogenio-mobile-390-dark.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-ciclo-nitrogenio-tablet-light.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-ciclo-nitrogenio-tablet-dark.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-ciclo-nitrogenio-desktop-light.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-ciclo-nitrogenio-desktop-dark.png"
+      "docs/visual-personalizado/screenshots/ecologia-motion-2026-09-23/bio-ecologia-ciclo-nitrogenio-390-light.png",
+      "docs/visual-personalizado/screenshots/ecologia-motion-2026-09-23/bio-ecologia-ciclo-nitrogenio-390-dark.png",
+      "docs/visual-personalizado/screenshots/ecologia-motion-2026-09-23/bio-ecologia-ciclo-nitrogenio-1440-light.png",
+      "docs/visual-personalizado/screenshots/ecologia-motion-2026-09-23/bio-ecologia-ciclo-nitrogenio-1440-dark.png"
     ],
-    "notes": "QA técnico: 360, 375, 390, 768 e 1440 px; temas claro/escuro; primeira e última seleção; teclado; movimento reduzido; axe sem violações. Aprovado pela responsável em 2026-09-23."
+    "notes": "Reaberto após rejeição visual da responsável em 2026-09-23. Cenas refeitas com movimento no mecanismo; aprovação editorial pendente. Evidências novas: 60 verificações de largura/seleção e capturas em 390 e 1440 px nos dois temas."
   },
   {
     "id": "bio-ecologia-ciclo-hidrologico-poluicao-agua",
@@ -145,22 +121,16 @@
     "title": "Ciclo hidrológico e poluição da água",
     "primary": "scene",
     "artifact": "poluicao-agua-agentes",
-    "status": "aprovado",
+    "status": "em-validacao",
     "mechanism": "fonte, água e efeito",
     "relation": "cada agente altera o meio aquático por consequência própria",
     "evidencePaths": [
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-ciclo-hidrologico-poluicao-agua-mobile-360-light.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-ciclo-hidrologico-poluicao-agua-mobile-360-dark.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-ciclo-hidrologico-poluicao-agua-mobile-375-light.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-ciclo-hidrologico-poluicao-agua-mobile-375-dark.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-ciclo-hidrologico-poluicao-agua-mobile-390-light.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-ciclo-hidrologico-poluicao-agua-mobile-390-dark.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-ciclo-hidrologico-poluicao-agua-tablet-light.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-ciclo-hidrologico-poluicao-agua-tablet-dark.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-ciclo-hidrologico-poluicao-agua-desktop-light.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-ciclo-hidrologico-poluicao-agua-desktop-dark.png"
+      "docs/visual-personalizado/screenshots/ecologia-motion-2026-09-23/bio-ecologia-ciclo-hidrologico-poluicao-agua-390-light.png",
+      "docs/visual-personalizado/screenshots/ecologia-motion-2026-09-23/bio-ecologia-ciclo-hidrologico-poluicao-agua-390-dark.png",
+      "docs/visual-personalizado/screenshots/ecologia-motion-2026-09-23/bio-ecologia-ciclo-hidrologico-poluicao-agua-1440-light.png",
+      "docs/visual-personalizado/screenshots/ecologia-motion-2026-09-23/bio-ecologia-ciclo-hidrologico-poluicao-agua-1440-dark.png"
     ],
-    "notes": "QA técnico: 360, 375, 390, 768 e 1440 px; temas claro/escuro; primeira e última seleção; teclado; movimento reduzido; axe sem violações. Aprovado pela responsável em 2026-09-23."
+    "notes": "Reaberto após rejeição visual da responsável em 2026-09-23. Cenas refeitas com movimento no mecanismo; aprovação editorial pendente. Evidências novas: 60 verificações de largura/seleção e capturas em 390 e 1440 px nos dois temas."
   },
   {
     "id": "bio-ecologia-eutrofizacao",
@@ -168,22 +138,16 @@
     "title": "Eutrofização e fluxo de energia",
     "primary": "scene",
     "artifact": "eutrofizacao-lago",
-    "status": "aprovado",
+    "status": "em-validacao",
     "mechanism": "seção vertical de lago",
     "relation": "nutrientes induzem floração, bloqueiam luz e levam ao consumo de oxigênio",
     "evidencePaths": [
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-eutrofizacao-mobile-360-light.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-eutrofizacao-mobile-360-dark.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-eutrofizacao-mobile-375-light.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-eutrofizacao-mobile-375-dark.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-eutrofizacao-mobile-390-light.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-eutrofizacao-mobile-390-dark.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-eutrofizacao-tablet-light.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-eutrofizacao-tablet-dark.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-eutrofizacao-desktop-light.png",
-      "docs/visual-personalizado/screenshots/ecologia-2026-09-23/bio-ecologia-eutrofizacao-desktop-dark.png"
+      "docs/visual-personalizado/screenshots/ecologia-motion-2026-09-23/bio-ecologia-eutrofizacao-390-light.png",
+      "docs/visual-personalizado/screenshots/ecologia-motion-2026-09-23/bio-ecologia-eutrofizacao-390-dark.png",
+      "docs/visual-personalizado/screenshots/ecologia-motion-2026-09-23/bio-ecologia-eutrofizacao-1440-light.png",
+      "docs/visual-personalizado/screenshots/ecologia-motion-2026-09-23/bio-ecologia-eutrofizacao-1440-dark.png"
     ],
-    "notes": "QA técnico: 360, 375, 390, 768 e 1440 px; temas claro/escuro; primeira e última seleção; teclado; movimento reduzido; axe sem violações. Aprovado pela responsável em 2026-09-23."
+    "notes": "Reaberto após rejeição visual da responsável em 2026-09-23. Cenas refeitas com movimento no mecanismo; aprovação editorial pendente. Evidências novas: 60 verificações de largura/seleção e capturas em 390 e 1440 px nos dois temas."
   },
   {
     "id": "bio-ecologia-poluicao-ar",
@@ -347,11 +311,16 @@
     "title": "Bioenergética: Fotossíntese e Quimiossíntese",
     "primary": "board",
     "artifact": "bioenergetica",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "cloroplasto em corte e procarionte quimioautotrófico",
+    "relation": "luz ou oxidação inorgânica fornecem energia; CO₂ fornece carbono",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/bioenergetica-motion-2026-09-23/fotossintese-390-light.png",
+      "docs/visual-personalizado/screenshots/bioenergetica-motion-2026-09-23/fotossintese-1440-light.png",
+      "docs/visual-personalizado/screenshots/bioenergetica-motion-2026-09-23/quimiossintese-390-dark.png",
+      "docs/visual-personalizado/screenshots/bioenergetica-motion-2026-09-23/quimiossintese-1440-dark.png"
+    ],
+    "notes": "Reconstrução com fluxos finitos, seleção por teclado e dez verificações de largura nos dois temas. Movimento reduzido coberto por teste de componente, sem emulação no navegador. Aprovação editorial pendente."
   },
   {
     "id": "summary-biologia-acidos-nucleicos",
@@ -791,11 +760,16 @@
     "title": "Coração e Vasos Sanguíneos",
     "primary": "board",
     "artifact": "coracao-circulacao",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "percurso selecionável entre cavidades, pulmões e corpo",
+    "relation": "artéria e veia definidas pela direção, não pela oxigenação",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/mecanismos-expansao-2026-09-25/summary-biologia-coracao-e-vasos-sanguineos-390-light.png",
+      "docs/visual-personalizado/screenshots/mecanismos-expansao-2026-09-25/summary-biologia-coracao-e-vasos-sanguineos-390-dark.png",
+      "docs/visual-personalizado/screenshots/mecanismos-expansao-2026-09-25/summary-biologia-coracao-e-vasos-sanguineos-1440-light.png",
+      "docs/visual-personalizado/screenshots/mecanismos-expansao-2026-09-25/summary-biologia-coracao-e-vasos-sanguineos-1440-dark.png"
+    ],
+    "notes": "QA em 360, 390, 768 e 1440 px nos dois temas: sem overflow horizontal. Capturas de página e controles conferidos. Movimento reduzido coberto por teste de componente, sem emulação no navegador. Aprovação editorial pendente; não equivale a finalização do capítulo."
   },
   {
     "id": "summary-biologia-fisiologia-da-respiracao",
@@ -1811,11 +1785,16 @@
     "title": "Equação Fundamental da Ondulatória",
     "primary": "board",
     "artifact": "ondulatoria",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "corda com ponto material destacado",
+    "relation": "perfil se propaga enquanto um ponto oscila; v = λf",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/mecanismos-expansao-2026-09-25/summary-fisica-equacao-fundamental-da-ondulatoria-390-light.png",
+      "docs/visual-personalizado/screenshots/mecanismos-expansao-2026-09-25/summary-fisica-equacao-fundamental-da-ondulatoria-390-dark.png",
+      "docs/visual-personalizado/screenshots/mecanismos-expansao-2026-09-25/summary-fisica-equacao-fundamental-da-ondulatoria-1440-light.png",
+      "docs/visual-personalizado/screenshots/mecanismos-expansao-2026-09-25/summary-fisica-equacao-fundamental-da-ondulatoria-1440-dark.png"
+    ],
+    "notes": "QA em 360, 390, 768 e 1440 px nos dois temas: sem overflow horizontal. Capturas de página e controles conferidos. Movimento reduzido coberto por teste de componente, sem emulação no navegador. Aprovação editorial pendente; não equivale a finalização do capítulo."
   },
   {
     "id": "summary-fisica-ondulatoria-ondas-eletromagneticas",
@@ -1823,11 +1802,16 @@
     "title": "Ondulatória: Ondas Eletromagnéticas",
     "primary": "board",
     "artifact": "ondulatoria",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "campos E e B em perspectiva",
+    "relation": "campos transversais em fase, com amplitudes normalizadas",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/mecanismos-expansao-2026-09-25/summary-fisica-ondulatoria-ondas-eletromagneticas-390-light.png",
+      "docs/visual-personalizado/screenshots/mecanismos-expansao-2026-09-25/summary-fisica-ondulatoria-ondas-eletromagneticas-390-dark.png",
+      "docs/visual-personalizado/screenshots/mecanismos-expansao-2026-09-25/summary-fisica-ondulatoria-ondas-eletromagneticas-1440-light.png",
+      "docs/visual-personalizado/screenshots/mecanismos-expansao-2026-09-25/summary-fisica-ondulatoria-ondas-eletromagneticas-1440-dark.png"
+    ],
+    "notes": "QA em 360, 390, 768 e 1440 px nos dois temas: sem overflow horizontal. Capturas de página e controles conferidos. Movimento reduzido coberto por teste de componente, sem emulação no navegador. Aprovação editorial pendente; não equivale a finalização do capítulo."
   },
   {
     "id": "summary-fisica-ondulatoria-som-e-suas-propriedades",
@@ -1835,11 +1819,16 @@
     "title": "Ondulatória: Som e suas Propriedades",
     "primary": "board",
     "artifact": "ondulatoria",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "partículas em compressões e rarefações",
+    "relation": "oscilação longitudinal do meio sem transporte líquido de matéria",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/mecanismos-expansao-2026-09-25/summary-fisica-ondulatoria-som-e-suas-propriedades-390-light.png",
+      "docs/visual-personalizado/screenshots/mecanismos-expansao-2026-09-25/summary-fisica-ondulatoria-som-e-suas-propriedades-390-dark.png",
+      "docs/visual-personalizado/screenshots/mecanismos-expansao-2026-09-25/summary-fisica-ondulatoria-som-e-suas-propriedades-1440-light.png",
+      "docs/visual-personalizado/screenshots/mecanismos-expansao-2026-09-25/summary-fisica-ondulatoria-som-e-suas-propriedades-1440-dark.png"
+    ],
+    "notes": "QA em 360, 390, 768 e 1440 px nos dois temas: sem overflow horizontal. Capturas de página e controles conferidos. Movimento reduzido coberto por teste de componente, sem emulação no navegador. Aprovação editorial pendente; não equivale a finalização do capítulo."
   },
   {
     "id": "summary-fisica-intensidade-sonora",
@@ -6303,11 +6292,16 @@
     "title": "Evolução dos Modelos Atômicos",
     "primary": "board",
     "artifact": "modelos-atomicos",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "espalhamento alfa e níveis discretos do hidrogênio",
+    "relation": "grandes desvios sustentam núcleo concentrado; fóton corresponde à diferença de energia",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/mecanismos-expansao-2026-09-25/summary-quimica-evolucao-dos-modelos-atomicos-390-light.png",
+      "docs/visual-personalizado/screenshots/mecanismos-expansao-2026-09-25/summary-quimica-evolucao-dos-modelos-atomicos-390-dark.png",
+      "docs/visual-personalizado/screenshots/mecanismos-expansao-2026-09-25/summary-quimica-evolucao-dos-modelos-atomicos-1440-light.png",
+      "docs/visual-personalizado/screenshots/mecanismos-expansao-2026-09-25/summary-quimica-evolucao-dos-modelos-atomicos-1440-dark.png"
+    ],
+    "notes": "QA em 360, 390, 768 e 1440 px nos dois temas: sem overflow horizontal. Capturas de página e controles conferidos. Movimento reduzido coberto por teste de componente, sem emulação no navegador. Aprovação editorial pendente; não equivale a finalização do capítulo."
   },
   {
     "id": "summary-quimica-organizacao-da-tabela-periodica-dos-elementos",
@@ -6747,11 +6741,16 @@
     "title": "Termoquímica I",
     "primary": "board",
     "artifact": "termoquimica",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "perfil de entalpia e fluxo sistema-vizinhança",
+    "relation": "saldo ΔH e barreira Ea distintos; troca de calor muda de sentido",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/mecanismos-expansao-2026-09-25/summary-quimica-termoquimica-i-390-light.png",
+      "docs/visual-personalizado/screenshots/mecanismos-expansao-2026-09-25/summary-quimica-termoquimica-i-390-dark.png",
+      "docs/visual-personalizado/screenshots/mecanismos-expansao-2026-09-25/summary-quimica-termoquimica-i-1440-light.png",
+      "docs/visual-personalizado/screenshots/mecanismos-expansao-2026-09-25/summary-quimica-termoquimica-i-1440-dark.png"
+    ],
+    "notes": "QA em 360, 390, 768 e 1440 px nos dois temas: sem overflow horizontal. Capturas de página e controles conferidos. Movimento reduzido coberto por teste de componente, sem emulação no navegador. Aprovação editorial pendente; não equivale a finalização do capítulo."
   },
   {
     "id": "summary-quimica-termoquimica-ii",
@@ -6759,11 +6758,16 @@
     "title": "Termoquímica II",
     "primary": "board",
     "artifact": "termoquimica",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "caminhos direto e por intermediário",
+    "relation": "mesmos estados extremos dão o mesmo ΔH; intermediários se cancelam",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/mecanismos-expansao-2026-09-25/summary-quimica-termoquimica-ii-390-light.png",
+      "docs/visual-personalizado/screenshots/mecanismos-expansao-2026-09-25/summary-quimica-termoquimica-ii-390-dark.png",
+      "docs/visual-personalizado/screenshots/mecanismos-expansao-2026-09-25/summary-quimica-termoquimica-ii-1440-light.png",
+      "docs/visual-personalizado/screenshots/mecanismos-expansao-2026-09-25/summary-quimica-termoquimica-ii-1440-dark.png"
+    ],
+    "notes": "QA em 360, 390, 768 e 1440 px nos dois temas: sem overflow horizontal. Capturas de página e controles conferidos. Movimento reduzido coberto por teste de componente, sem emulação no navegador. Aprovação editorial pendente; não equivale a finalização do capítulo."
   },
   {
     "id": "summary-quimica-cinetica-quimica",

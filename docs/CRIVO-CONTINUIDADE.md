@@ -52,6 +52,11 @@ O commit automático do bot não se reprocessa, evitando loops de CI.
 
 Este mecanismo preserva o contexto e o estado técnico no repositório e no arquivo de continuidade da conversa. Ele não substitui a conferência do GitHub quando houver mudanças novas, nem permite que uma memória de chat seja automaticamente reescrita a cada push. A fonte canônica é este documento + o instantâneo automático; ambos podem ser consultados diretamente pelo GitHub sem clone.
 
+## Reconstrução visual em andamento — 23/09/2026
+
+A responsável rejeitou a qualidade das imagens e a ausência de movimento na aba Visual dos capítulos. Lote local em `C:\wt-crivo-motion-rebuild`, branch `codex/visual-motion-rebuild`, base `aa9bf2c`: 15 capítulos de Biologia, História e Geografia reconstruídos com cenas e fluxos em `motion/react`. Sem publicação e sem aprovação estética presumida. Os seis registros antigos de Ecologia foram reabertos como `em-validacao`.
+
+Detalhes, evidências e próximos pontos: [reconstrucao-motion-2026-09-23.md](visual-personalizado/reconstrucao-motion-2026-09-23.md). Há 150 verificações de largura em cinco tamanhos e dois temas; isso não representa revisão estética completa do catálogo. O bloqueio de `npm test` por 14 PDFs licenciados ausentes permanece separado dos testes de interface.
 ## Retomada Motion — 24 de setembro de 2026
 
 - Base: `aa9bf2c`; branch `codex/motion-recovery`.
@@ -85,3 +90,9 @@ Este mecanismo preserva o contexto e o estado técnico no repositório e no arqu
 - No capítulo de medidores elétricos, o desenho anterior não ligava claramente o voltímetro aos dois lados do resistor. O circuito agora tem um único caminho principal com fonte e resistor: o amperímetro entra em série nesse caminho, e o voltímetro mede o resistor por um ramo paralelo com contatos visíveis. O título comum dos instrumentos passa a dizer apenas “Laboratório de Física”.
 - A primeira inspeção na prévia Vercel revelou símbolos vazios e legendas sobrepostas no SVG. O preenchimento dos medidores e a tipografia das legendas foram corrigidos. A prévia corrigida foi conferida em 1363 × 936 px: amperímetro e voltímetro no tema claro, voltímetro no tema escuro, sem transbordamento horizontal. Capturas em `docs/visual-personalizado/screenshots/physics-meter-2026-09-25/`.
 - O teste de topologia e alternância passou; 544 testes Vitest, TypeScript e build passaram no primeiro commit. Larguras móveis/tablet, tema escuro para o amperímetro e movimento reduzido ainda requerem conferência; o capítulo não foi marcado como aprovado no inventário de qualidade.
+
+## Continuação das 613 cenas no perfil Ana Júlia — 25/09/2026
+
+Trabalho retomado em `C:\Users\Ana Julia\Documents\CRIVO\My-App`, com Git independente e origem preservada. A main `d641b5b`, incluindo as correções da outra frente Motion, foi incorporada. Sete cenas pendentes recuperadas e revisadas: três de ondas/som, duas de termoquímica, modelos atômicos e circulação. O inventário registra 22 em validação, 591 sem revisão e zero aprovados.
+
+Plano, critérios e fila completa de IDs: [plano-finalizacao-613.md](visual-personalizado/plano-finalizacao-613.md). Evidências e limites: [expansao-motion-2026-09-25.md](visual-personalizado/expansao-motion-2026-09-25.md). Esta retomada permanece local, sem publicação.

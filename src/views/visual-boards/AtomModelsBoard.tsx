@@ -1,47 +1,20 @@
 import React from 'react';
-import { motion, useReducedMotion } from 'motion/react';
 import BoardShell from './BoardShell';
+import AtomMechanism from './AtomMechanism';
 import { AtomLab } from './MechanismLab';
 import { boardPair } from './pair';
 import type { BoardProps } from './types';
-
-/**
- * Os modelos atômicos lado a lado, cada um com o experimento que o derrubou.
- *
- * A sequência Dalton → Thomson → Rutherford → Bohr costuma ser decorada como
- * lista de nomes. O que a torna inteligível é que cada modelo caiu por um
- * experimento específico, e o seguinte nasceu para explicar exatamente o que o
- * anterior não explicava. Por isso a cena mostra o modelo junto do achado que o
- * substituiu, em vez de quatro desenhos soltos em ordem cronológica.
- */
-function AtomAtlas({ emphasis }: { emphasis: 'esquerda' | 'direita' | 'nenhum' }) {
-  const reduced = useReducedMotion();
-  return (
-    <div className="vs-atlas-scene vs-atlas-scene--atom" data-emphasis={emphasis}>
-      <motion.img
-        src="/visual-assets/atom-models-atlas.webp"
-        alt="Ilustração científica da experiência da folha de ouro de Rutherford ao lado de um átomo de Bohr com níveis luminosos"
-        initial={reduced ? false : { opacity: 0, scale: .92 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={reduced ? { duration: 0 } : { type: 'spring', stiffness: 120, damping: 18 }}
-      />
-
-      <span className="vs-atlas-label vs-atlas-label--atom-left">α atravessa a lâmina</span>
-      <span className="vs-atlas-label vs-atlas-label--atom-right">ΔE libera um fóton</span>
-    </div>
-  );
-}
 
 export default function AtomModelsBoard(props: BoardProps) {
   const par = boardPair(props);
   return (
     <BoardShell
       title="Modelos atômicos"
-      subtitle="Cada modelo caiu por um experimento — e o seguinte nasceu dele."
+      subtitle="Novas evidências revelam limites e motivam novos modelos."
       condition={{ label: 'critério', value: 'evidência' }}
       ariaLabel="Prancha ilustrada da evolução dos modelos atômicos"
-      scene={<AtomAtlas emphasis={par.emphasis} />}
-      sceneNotes={{ up: 'Rutherford ↑', down: '↓ Bohr' }}
+      scene={<AtomMechanism />}
+      sceneFirst
       emphasis={par.emphasis}
       left={{
         label: 'Rutherford',
@@ -78,7 +51,7 @@ export default function AtomModelsBoard(props: BoardProps) {
           </section>
         </>
       }
-      closing="a sequência dos modelos não é cronologia a decorar: cada um responde ao experimento que derrubou o anterior."
+      closing="a sequência dos modelos não é cronologia a decorar: novas evidências e limites teóricos motivam sua reformulação."
     />
   );
 }

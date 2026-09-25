@@ -321,8 +321,8 @@
   .ni-production-mobile strong { font: 600 21px Newsreader, Georgia, serif; }
   .ni-production-mobile button { min-height: 40px; min-width: 40px; border: 0; background: transparent; color: var(--text); }
   .ni-production-app.is-light .ni-production-mobile { background: rgba(255, 249, 238, .9); }
-  .ni-production-app .ni-rail { display: flex; position: fixed; inset: 0 auto 0 0; transform: translateX(-110%); z-index: 50; }
-  .ni-production-app .ni-rail.is-open { transform: translateX(0); }
+  .ni-production-app .ni-rail { display: flex; position: fixed; inset: 0 auto 0 0; transform: translateX(-110%); visibility: hidden; z-index: 50; }
+  .ni-production-app .ni-rail.is-open { transform: translateX(0); visibility: visible; }
   .ni-production-app .ni-rail-toggle { display: none; }
   .ni-production-app .ni-rail.is-open .ni-rail-scroll { gap: 6px; padding: 4px 0 18px; }
   .ni-production-app .ni-rail.is-open .ni-rail-scroll a { width: 210px; min-height: 44px; padding: 7px 10px; }

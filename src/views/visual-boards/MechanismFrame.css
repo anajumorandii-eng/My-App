@@ -1,0 +1,27 @@
+.mechanism-frame { --mf-blue:#386c86; --mf-red:#a1434d; --mf-green:#4a684d; --mf-gold:#9a721e; width:100%; color:var(--vs-ink); display:grid; grid-template-columns:minmax(0,1.6fr) minmax(215px,1fr); gap:24px; }
+.dark .mechanism-frame { --mf-blue:#91c6df; --mf-red:#f39e9d; --mf-green:#b3d2a2; --mf-gold:#e8c678; }
+.mechanism-drawing { min-width:0; }
+.mechanism-drawing svg { display:block; width:100%; height:auto; overflow:visible; }
+.mechanism-drawing text { fill:var(--vs-ink); font:17px Georgia,serif; }
+.mechanism-drawing .mf-small { font:14px system-ui,sans-serif; }
+.mechanism-drawing .mf-heading { font:600 13px system-ui,sans-serif; letter-spacing:1px; }
+.mechanism-drawing .mf-axis { fill:none; stroke:var(--vs-ink); stroke-width:1.5; opacity:.55; }
+.mechanism-controls { align-self:center; min-width:0; }
+.mechanism-controls h3 { font:600 25px/1.2 Georgia,serif; margin:18px 0 12px; }
+.mechanism-controls p { font:14px/1.65 system-ui,sans-serif; }
+.mechanism-controls label { display:block; margin:16px 0; font:600 13px/1.5 system-ui,sans-serif; }
+.mechanism-controls input[type=range] { display:block; width:100%; margin:12px 0; accent-color:var(--mf-red); }
+.mechanism-controls button { min-height:44px; padding:10px 13px; color:inherit; background:transparent; border:1px solid color-mix(in srgb,var(--vs-ink) 35%,transparent); border-radius:4px; cursor:pointer; }
+.mechanism-controls button[aria-pressed=true] { border-color:var(--mf-red); background:color-mix(in srgb,var(--mf-red) 12%,transparent); box-shadow:inset 3px 0 var(--mf-red); }
+.mechanism-controls button:focus-visible,.mechanism-controls input:focus-visible { outline:3px solid var(--mf-blue); outline-offset:3px; }
+.mechanism-options { display:flex; flex-wrap:wrap; gap:7px; }
+.mechanism-caption { font:12px/1.5 system-ui,sans-serif; color:var(--vs-dim); margin:10px 0; }
+.mechanism-time { border-top:1px solid color-mix(in srgb,var(--vs-ink) 22%,transparent); padding-top:18px; margin-top:20px; }
+.vs-study-board:has(.mechanism-frame) .vs-board-body { grid-template-columns:repeat(2,minmax(0,1fr)); }
+.vs-study-board:has(.mechanism-frame) .vs-piston-wrap { grid-column:1/-1; min-width:0; }
+@media(max-width:900px) { .mechanism-frame,.vs-study-board:has(.mechanism-frame) .vs-board-body { grid-template-columns:minmax(0,1fr); } .mechanism-frame { gap:12px; } }
+@media(max-width:600px) {
+  .mechanism-drawing text { font-size:21px; }
+  .mechanism-drawing .mf-small { font-size:18px; }
+  .mechanism-drawing .mf-heading { font-size:16px; letter-spacing:.3px; }
+}

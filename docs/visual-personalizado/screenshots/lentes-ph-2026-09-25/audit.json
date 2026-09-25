@@ -1,0 +1,86 @@
+[
+  {
+    "name": "lentes-virtual",
+    "theme": "light",
+    "width": 390,
+    "figure": "Lente convergente: imagem virtual e direita, objeto a 42 unidades",
+    "overflow": false
+  },
+  {
+    "name": "lentes-virtual",
+    "theme": "light",
+    "width": 768,
+    "figure": "Lente convergente: imagem virtual e direita, objeto a 42 unidades",
+    "overflow": false
+  },
+  {
+    "name": "lentes-virtual",
+    "theme": "light",
+    "width": 1440,
+    "figure": "Lente convergente: imagem virtual e direita, objeto a 42 unidades",
+    "overflow": false
+  },
+  {
+    "name": "lentes-virtual",
+    "theme": "dark",
+    "width": 390,
+    "figure": "Lente convergente: imagem virtual e direita, objeto a 42 unidades",
+    "overflow": false
+  },
+  {
+    "name": "lentes-virtual",
+    "theme": "dark",
+    "width": 768,
+    "figure": "Lente convergente: imagem virtual e direita, objeto a 42 unidades",
+    "overflow": false
+  },
+  {
+    "name": "lentes-virtual",
+    "theme": "dark",
+    "width": 1440,
+    "figure": "Lente convergente: imagem virtual e direita, objeto a 42 unidades",
+    "overflow": false
+  },
+  {
+    "name": "ph",
+    "theme": "light",
+    "width": 390,
+    "figure": "Comparação de pH: solução A 3, solução B 5; razão de concentrações 10 elevado a 2",
+    "overflow": false
+  },
+  {
+    "name": "ph",
+    "theme": "light",
+    "width": 768,
+    "figure": "Comparação de pH: solução A 3, solução B 5; razão de concentrações 10 elevado a 2",
+    "overflow": false
+  },
+  {
+    "name": "ph",
+    "theme": "light",
+    "width": 1440,
+    "figure": "Comparação de pH: solução A 3, solução B 5; razão de concentrações 10 elevado a 2",
+    "overflow": false
+  },
+  {
+    "name": "ph",
+    "theme": "dark",
+    "width": 390,
+    "figure": "Comparação de pH: solução A 3, solução B 5; razão de concentrações 10 elevado a 2",
+    "overflow": false
+  },
+  {
+    "name": "ph",
+    "theme": "dark",
+    "width": 768,
+    "figure": "Comparação de pH: solução A 3, solução B 5; razão de concentrações 10 elevado a 2",
+    "overflow": false
+  },
+  {
+    "name": "ph",
+    "theme": "dark",
+    "width": 1440,
+    "figure": "Comparação de pH: solução A 3, solução B 5; razão de concentrações 10 elevado a 2",
+    "overflow": false
+  }
+]
