@@ -2,16 +2,15 @@
   "schema_version": 1,
   "repository": "anajumorandii-eng/My-App",
   "branch": "main",
-  "source_commit": "429ac0bbb729708cb8ef47ea4bfcd35f4cff3e2f",
-  "generated_at_utc": "2026-09-25T16:07:28Z",
+  "source_commit": "07152639794919ab31b318d3a840322518b6a46d",
+  "generated_at_utc": "2026-09-25T16:21:37Z",
   "changed_files": [
     "docs/CRIVO-CONTINUIDADE.md",
-    "docs/visual-personalizado/screenshots/motion-followup/fisica-desktop-dark.jpg",
-    "docs/visual-personalizado/screenshots/motion-followup/fisica-desktop.jpg",
     "src/components/subject-icons/GenerativeTopicIcon.tsx",
     "src/components/subject-icons/ReducedIconMotion.ui.test.tsx",
     "src/components/subject-icons/SubjectIcons.tsx",
-    "src/components/subject-icons/iconMotion.ts"
+    "src/components/subject-icons/useIconMotion.ts",
+    "src/testSetup.ts"
   ],
   "next_session": {
     "mode": "delta-only",
