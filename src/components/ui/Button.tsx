@@ -1,6 +1,6 @@
 import React from 'react';
 import { Loader2 } from 'lucide-react';
-import { motion, MotionProps } from 'motion/react';
+import { motion, useReducedMotion, MotionProps } from 'motion/react';
 import { cn } from '../../lib/cn';
 import { useSpotlight } from '../../hooks/useSpotlight';
 import { getMotionConfigForSubject } from '../../design-system/crivoMotionPresets';
@@ -37,7 +37,8 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(function 
   ref
 ) {
   const { onPointerMove: spotlightMove } = useSpotlight();
-  const motionConfig = getMotionConfigForSubject(subject);
+  const reducedMotion = useReducedMotion();
+  const motionConfig = getMotionConfigForSubject(subject, !!reducedMotion);
 
   return (
     <motion.button
@@ -61,7 +62,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(function 
       transition={motionConfig.hoverProps.transition}
       {...props}
     >
-      {loading && <Loader2 className="w-4 h-4 animate-spin" aria-hidden="true" />}
+      {loading && <Loader2 className="w-4 h-4 animate-spin motion-reduce:animate-none" aria-hidden="true" />}
       {children}
     </motion.button>
   );

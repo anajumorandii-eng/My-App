@@ -83,11 +83,29 @@ function Scene({ id, value }: { id: PhysicsRemainingId; value: number }) {
   }
   if (id === 'electric-meters') {
     const ammeter = value === 0;
+    const label = { fill: 'var(--vs-ink)', stroke: 'none', fontFamily: 'system-ui, sans-serif', fontSize: 12 };
     return <g data-physics-system="electric-meters">
-      <path d="M36 78H280V226H36Z" {...ink}/><path d="M36 151H89M230 151H280" {...ink}/><path d="M119 151H201" {...ink}/>
-      <rect x="201" y="126" width="29" height="50" rx="4" fill="color-mix(in srgb,var(--vs-burgundy) 16%,transparent)" {...ink}/><path d="M205 137h21M205 151h21M205 165h21" {...wine}/><text x="216" y="195" textAnchor="middle" style={{...ink,fontSize:11}}>R</text>
-      {ammeter ? <><circle cx="104" cy="151" r="19" fill="var(--vs-blue)" {...ink}/><text x="104" y="157" textAnchor="middle" fill="white" fontWeight="800">A</text><path d="M104 101v30M104 171v30" stroke="var(--vs-ink-muted)" strokeWidth="2" strokeDasharray="4 4"/><text x="104" y="222" textAnchor="middle" style={ink}>em série</text></> : <><path d="M132 92V210M238 92V210" stroke="var(--vs-ink)" strokeWidth="3"/><circle cx="185" cy="92" r="19" fill="var(--vs-blue)" {...ink}/><text x="185" y="98" textAnchor="middle" fill="white" fontWeight="800">V</text><path d="M132 92h34M204 92h34" {...ink}/><text x="185" y="242" textAnchor="middle" style={ink}>em paralelo</text></>}
-      <circle cx="59" cy="151" r="18" fill="var(--vs-burgundy)"/><path d="M59 139v24M48 151h22" stroke="white" strokeWidth="3"/><text x="160" y="282" textAnchor="middle" style={{...ink,fontSize:13}}>{ammeter ? 'Rₐ ≈ 0 Ω: toda a corrente passa por A' : 'Rᵥ muito alta: V não desvia corrente'}</text>
+      {/* A única interrupção no ramo superior é o resistor (e o amperímetro, quando selecionado). */}
+      <path d={ammeter
+        ? 'M52 76V130M52 170V224H268V76H236M190 76H152M112 76H52'
+        : 'M52 76V130M52 170V224H268V76H236M190 76H52'} {...ink}/>
+      <circle cx="52" cy="150" r="20" {...ink} fill="var(--vs-burgundy)"/>
+      <path d="M52 139v12M46 145h12M46 160h12" stroke="white" strokeWidth="2"/>
+      <rect x="190" y="56" width="46" height="40" rx="5" fill="color-mix(in srgb,var(--vs-burgundy) 16%,transparent)" {...ink}/>
+      <path d="M197 64h32M197 76h32M197 88h32" {...wine}/>
+      <text x="213" y="115" textAnchor="middle" style={label}>R</text>
+      {ammeter ? <g data-meter-connection="series">
+        <circle cx="132" cy="76" r="20" {...ink} fill="var(--vs-blue)"/>
+        <text x="132" y="82" textAnchor="middle" fill="white" stroke="none" fontSize="17" fontWeight="800">A</text>
+        <text x="132" y="156" textAnchor="middle" style={label}>em série</text>
+      </g> : <g data-meter-connection="parallel">
+        <path d="M174 76V158H193M233 158H252V76" {...ink}/>
+        <circle cx="174" cy="76" r="4" fill="var(--vs-ink)"/><circle cx="252" cy="76" r="4" fill="var(--vs-ink)"/>
+        <circle cx="213" cy="158" r="20" {...ink} fill="var(--vs-blue)"/>
+        <text x="213" y="164" textAnchor="middle" fill="white" stroke="none" fontSize="17" fontWeight="800">V</text>
+        <text x="213" y="199" textAnchor="middle" style={label}>em paralelo a R</text>
+      </g>}
+      <text x="160" y="282" textAnchor="middle" style={label}>{ammeter ? 'Rₐ ≈ 0 Ω: toda a corrente passa por A' : 'Rᵥ muito alta: V não desvia corrente'}</text>
     </g>;
   }
   if (id === 'generator' || id === 'receiver') {
@@ -164,6 +182,6 @@ export function physicsRemainingInstrument(id: PhysicsRemainingId) {
     const pair = boardPair(props);
     const first = props.map.nodes[0];
     const second = props.map.nodes[2] ?? props.map.nodes.at(-1);
-    return <BoardShell kicker="Laboratório de ondas e física moderna" title={config.name} subtitle={config.question} condition={{ label: 'Leitura', value: pivot.value }} ariaLabel={`Instrumento de física: ${props.map.title}`} emphasis={pair.emphasis} scene={<div className="vs-instrument"><svg className="vs-plane" viewBox="0 0 320 300" role="img" aria-label={`${config.name}; ${pivot.label}: ${pivot.value}`}><Scene id={id} value={value}/></svg><p className="vs-instrument-dica">mexa na grandeza e acompanhe a condição física desenhada</p><div className="vs-plane-controls"><div className="vs-plane-control"><label htmlFor={`physics-remaining-${id}`}><strong>{config.control.label}</strong><span>{config.control.description}</span><b>{value}</b></label><input id={`physics-remaining-${id}`} type="range" min={config.control.min} max={config.control.max} step={config.control.step} value={value} onChange={event => setValue(Number(event.target.value))}/></div></div><dl className="vs-plane-readouts">{readouts.map(item => <div key={item.label} data-pivot={item.pivot ? 'true' : undefined}><dt>{item.label}</dt><dd>{item.value}</dd></div>)}</dl></div>} left={{ label: STAGE_LABEL[first?.stage ?? 'conceito'], headline: first?.label ?? props.map.title, detail: short(first?.excerpt), formula: config.formula }} right={{ label: STAGE_LABEL[second?.stage ?? 'aplicacao'], headline: second?.label ?? props.map.title, detail: short(second?.excerpt), formula: pivot.value }} leftState={pair.leftState} rightState={pair.rightState} leftSelected={pair.leftSelected} rightSelected={pair.rightSelected} onSelectLeft={pair.selectLeft} onSelectRight={pair.selectRight} equation={{ label: 'Relação física', general: config.formula, condition: 'mostra', reduced: pivot.value }} closing={config.insight}/>;
+    return <BoardShell kicker="Laboratório de Física" title={config.name} subtitle={config.question} condition={{ label: 'Leitura', value: pivot.value }} ariaLabel={`Instrumento de física: ${props.map.title}`} emphasis={pair.emphasis} scene={<div className="vs-instrument"><svg className="vs-plane" viewBox="0 0 320 300" role="img" aria-label={`${config.name}; ${pivot.label}: ${pivot.value}`}><Scene id={id} value={value}/></svg><p className="vs-instrument-dica">mexa na grandeza e acompanhe a condição física desenhada</p><div className="vs-plane-controls"><div className="vs-plane-control"><label htmlFor={`physics-remaining-${id}`}><strong>{config.control.label}</strong><span>{config.control.description}</span><b>{value}</b></label><input id={`physics-remaining-${id}`} type="range" min={config.control.min} max={config.control.max} step={config.control.step} value={value} onChange={event => setValue(Number(event.target.value))}/></div></div><dl className="vs-plane-readouts">{readouts.map(item => <div key={item.label} data-pivot={item.pivot ? 'true' : undefined}><dt>{item.label}</dt><dd>{item.value}</dd></div>)}</dl></div>} left={{ label: STAGE_LABEL[first?.stage ?? 'conceito'], headline: first?.label ?? props.map.title, detail: short(first?.excerpt), formula: config.formula }} right={{ label: STAGE_LABEL[second?.stage ?? 'aplicacao'], headline: second?.label ?? props.map.title, detail: short(second?.excerpt), formula: pivot.value }} leftState={pair.leftState} rightState={pair.rightState} leftSelected={pair.leftSelected} rightSelected={pair.rightSelected} onSelectLeft={pair.selectLeft} onSelectRight={pair.selectRight} equation={{ label: 'Relação física', general: config.formula, condition: 'mostra', reduced: pivot.value }} closing={config.insight}/>;
   };
 }

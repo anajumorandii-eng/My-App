@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion, MotionProps } from 'motion/react';
+import { motion, useReducedMotion, MotionProps } from 'motion/react';
 import { cn } from '../../lib/cn';
 import { getMotionConfigForSubject } from '../../design-system/crivoMotionPresets';
 
@@ -22,7 +22,8 @@ export const Panel = React.forwardRef<HTMLDivElement, PanelProps>(function Panel
   { elevation = 'default', interactive = false, subject, className, children, ...props },
   ref
 ) {
-  const motionConfig = getMotionConfigForSubject(subject);
+  const reducedMotion = useReducedMotion();
+  const motionConfig = getMotionConfigForSubject(subject, !!reducedMotion);
 
   return (
     <motion.div

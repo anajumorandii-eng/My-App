@@ -2,6 +2,9 @@ import '@testing-library/jest-dom/vitest';
 import { cleanup } from '@testing-library/react';
 import { afterEach, vi } from 'vitest';
 
+// Unit/UI tests must explicitly mock their repository instead of reaching a real database.
+vi.mock('./lib/firestore', () => ({ db: Object.freeze({ testOnly: true }) }));
+
 if (typeof window !== 'undefined' && !window.matchMedia) {
   window.matchMedia = ((query: string) => ({
     matches: false,
@@ -61,6 +64,26 @@ if (typeof ResizeObserver === 'undefined') {
   }
 
   globalThis.ResizeObserver = ImmediateResizeObserver;
+}
+
+if (typeof IntersectionObserver === 'undefined') {
+  class ImmediateIntersectionObserver implements IntersectionObserver {
+    readonly root = null;
+    readonly rootMargin = '0px';
+    readonly thresholds = [0];
+
+    constructor(private readonly callback: IntersectionObserverCallback) {}
+
+    observe(target: Element) {
+      this.callback([{ target, isIntersecting: true, intersectionRatio: 1 } as IntersectionObserverEntry], this);
+    }
+
+    unobserve() {}
+    disconnect() {}
+    takeRecords() { return []; }
+  }
+
+  globalThis.IntersectionObserver = ImmediateIntersectionObserver;
 }
 
 afterEach(cleanup);
