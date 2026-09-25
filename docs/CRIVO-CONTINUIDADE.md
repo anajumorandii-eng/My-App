@@ -70,3 +70,11 @@ Este mecanismo preserva o contexto e o estado técnico no repositório e no arqu
 - Validação: 541 testes Vitest e 706 testes Node aprovados; TypeScript aprovado.
 - Inspeção de produção: catálogo, filtro de Física e abertura do capítulo de calorimetria; desktop 1363×936, temas claro/escuro, sem overflow horizontal. Capturas em `docs/visual-personalizado/screenshots/motion-followup/`.
 - As capturas registram a versão publicada anterior à correção de ícones. Não são aprovação visual da nova implementação. A API do navegador disponível não expõe redimensionamento/emulação; mobile/tablet e reduced motion em navegador permanecem pendentes.
+
+## Continuidade de Motion — visibilidade dos ícones, 25 de setembro de 2026
+
+- Base: `0fdae42` após a integração da PR #209; branch `codex/motion-qa-20260925`.
+- Os ícones de disciplinas e os ícones generativos de tópicos animam somente quando seu SVG está visível na viewport e a aba está ativa. Fora dessas condições, usam o mesmo quadro estático legível já definido para movimento reduzido; ao retornar, retomam o movimento. A preferência de movimento reduzido continua prioritária.
+- O setup de testes fornece `IntersectionObserver` para o jsdom. Dois casos novos exercitam a ida e volta da viewport e da aba.
+- Validação local: 543 testes Vitest, 706 testes Node, TypeScript e build aprovados.
+- Revisão visual desta nova versão em produção, mobile/tablet e preferência de movimento reduzido em navegador continuam pendentes até a publicação e uma sessão de navegador com emulação.

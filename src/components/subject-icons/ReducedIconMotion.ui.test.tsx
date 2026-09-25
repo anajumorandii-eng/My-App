@@ -1,10 +1,18 @@
 import React from 'react';
 import { render, waitFor } from '@testing-library/react';
-import { describe, expect, it, vi } from 'vitest';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { FisicaIcon, RedacaoIcon, HistoriaIcon, InglesIcon } from './SubjectIcons';
 import { GenerativeTopicIcon } from './GenerativeTopicIcon';
 import { iconTarget, iconTransition } from './iconMotion';
-vi.mock('motion/react', async original => ({ ...await original<typeof import('motion/react')>(), useReducedMotion: () => true }));
+import { useIconMotion } from './useIconMotion';
+const visibility = vi.hoisted(() => ({ reduced: true, inView: true, pageInView: true }));
+vi.mock('motion/react', async original => ({
+  ...await original<typeof import('motion/react')>(),
+  useReducedMotion: () => visibility.reduced,
+  useInView: () => visibility.inView,
+  usePageInView: () => visibility.pageInView,
+}));
+beforeEach(() => Object.assign(visibility, { reduced: true, inView: true, pageInView: true }));
 describe('readable static icon frames', () => {
   it('keeps the physics orbital planes distinct', async () => {
     const { container } = render(<FisicaIcon />);
@@ -34,5 +42,22 @@ describe('readable static icon frames', () => {
     const target = { opacity: [0, 1, 0], pathLength: [0, 1], y: [0, -5], scale: [1, 1.3, 1] };
     expect(iconTarget(target, false)).toBe(target);
     expect(iconTarget(target, true)).toEqual({ opacity: 1, pathLength: 1, y: 0, scale: 1 });
+  });
+  it.each(['outside the viewport', 'in a background tab'])('holds icon motion %s and resumes on return', (state) => {
+    function MotionState() {
+      const { iconRef, still } = useIconMotion();
+      return <svg ref={iconRef} data-still={still} />;
+    }
+    visibility.reduced = false;
+    const { container, rerender } = render(<MotionState />);
+    expect(container.querySelector('svg')).toHaveAttribute('data-still', 'false');
+    if (state === 'outside the viewport') visibility.inView = false;
+    else visibility.pageInView = false;
+    rerender(<MotionState />);
+    expect(container.querySelector('svg')).toHaveAttribute('data-still', 'true');
+    visibility.inView = true;
+    visibility.pageInView = true;
+    rerender(<MotionState />);
+    expect(container.querySelector('svg')).toHaveAttribute('data-still', 'false');
   });
 });
