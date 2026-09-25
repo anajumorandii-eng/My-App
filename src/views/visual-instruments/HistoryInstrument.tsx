@@ -5,6 +5,8 @@ import BoardShell from '../visual-boards/BoardShell';
 import { boardPair } from '../visual-boards/pair';
 import type { BoardProps } from '../visual-boards/types';
 
+import { GoldTaxMechanism } from './ResourceMechanisms';
+
 const ink = { fontWeight: 800, fill: 'var(--vs-ink)' } as const;
 
 function HistoryScene({ id, selected }: { id: HistoryInstrumentId; selected: number }) {
@@ -87,9 +89,9 @@ export function historyInstrument(id: HistoryInstrumentId) {
       ariaLabel={`Instrumento histórico: ${props.map.title}`}
       emphasis={pair.emphasis}
       scene={<div className="vs-instrument">
-        <svg className="vs-plane" viewBox="0 0 320 300" role="img" aria-label={`${config.name}; ${state.label}: ${state.focus}`}>
+        {id === 'mining-colony' && selected === 0 ? <GoldTaxMechanism /> : <svg className="vs-plane" viewBox="0 0 320 300" role="img" aria-label={`${config.name}; ${state.label}: ${state.focus}`}>
           <HistoryScene id={id} selected={selected} />
-        </svg>
+        </svg>}
         <p className="vs-instrument-dica">mude o recorte para comparar relações sem inventar uma cadeia única</p>
         <div className="vs-plane-controls"><div className="vs-plane-control">
           <label htmlFor={`history-${id}`}><strong>{config.controlLabel}</strong><span>{config.controlDescription}</span><b>{state.label}</b></label>

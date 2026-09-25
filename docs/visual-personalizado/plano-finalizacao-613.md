@@ -11,7 +11,7 @@ Data: 25/09/2026. Continuação da reconstrução Motion, incorporando a main em
 
 ## Ordem de execução
 
-Atualização solicitada: acelerar o avanço entre matérias. Após fechar o lote em curso, a fila alterna até três capítulos por matéria em cada rodada: História, Gramática, Biologia, Matemática, Geografia, Literatura, Química, Filosofia, Redação, Física, Sociologia, Entendimento de Texto, Língua Inglesa e Atualidades. Os tópicos abaixo são critérios por área, não uma obrigação de terminar uma disciplina antes de iniciar a próxima. Validar componentes compartilhados uma vez e conferir individualmente a adequação e o roteamento de cada capítulo.
+Prioridade atual solicitada: concluir História (49 capítulos) e Geografia (63 capítulos), antes de retomar a alternância entre matérias. Os 112 capítulos exigem revisão individual de conteúdo, interação e evidências. Presença de artefato e teste verde não encerram a revisão.
 
 1. Fechar os 22 capítulos já reconstruídos: comparar com as referências aprovadas, revisar legibilidade e completar QA pendente. Corrigir antes de aprovar.
 2. Física e Química: ler a representação ativa e as fontes de cada capítulo; corrigir primeiro modelos que ensinem relações incorretas. Aproveitar os instrumentos existentes somente quando atendam ao capítulo.

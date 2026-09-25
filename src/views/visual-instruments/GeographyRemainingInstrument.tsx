@@ -6,6 +6,7 @@ import BoardShell from '../visual-boards/BoardShell';
 import { boardPair } from '../visual-boards/pair';
 import type { BoardProps } from '../visual-boards/types';
 import './GeographyRemainingInstrument.css';
+import { CommonsMechanism } from './ResourceMechanisms';
 
 function CartographicScene({ id, index }: { id: 'digital-map' | 'map-elements'; index: number }) {
   const reduced = useReducedMotion();
@@ -97,7 +98,7 @@ export function geographyRemainingInstrument(id: GeographyRemainingId) {
       condition={{label:'Recorte',value:selected.label}}
       ariaLabel={`Instrumento geográfico: ${props.map.title}`} emphasis={pair.emphasis}
       scene={<div className="vs-instrument">
-        {id === 'digital-map' || id === 'map-elements' ? <CartographicScene id={id} index={index}/> : id === 'world-basin' || id === 'brazilian-basins' ? <BasinScene id={id} index={index}/> : <FlowScene id={id} index={index}/>}
+        {id === 'commons' ? <CommonsMechanism key={index} scenario={index} /> : id === 'digital-map' || id === 'map-elements' ? <CartographicScene id={id} index={index}/> : id === 'world-basin' || id === 'brazilian-basins' ? <BasinScene id={id} index={index}/> : <FlowScene id={id} index={index}/>}
         <div className="vs-plane-controls"><div className="vs-plane-control">
           <p>Explore os recortes do fenômeno:</p>
           <div className="vs-geography-options" role="group" aria-label={`Recortes de ${config.title}`}>
