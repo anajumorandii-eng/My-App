@@ -83,28 +83,29 @@ function Scene({ id, value }: { id: PhysicsRemainingId; value: number }) {
   }
   if (id === 'electric-meters') {
     const ammeter = value === 0;
+    const label = { fill: 'var(--vs-ink)', stroke: 'none', fontFamily: 'system-ui, sans-serif', fontSize: 12 };
     return <g data-physics-system="electric-meters">
       {/* A única interrupção no ramo superior é o resistor (e o amperímetro, quando selecionado). */}
       <path d={ammeter
         ? 'M52 76V130M52 170V224H268V76H236M190 76H152M112 76H52'
         : 'M52 76V130M52 170V224H268V76H236M190 76H52'} {...ink}/>
-      <circle cx="52" cy="150" r="20" fill="var(--vs-burgundy)" {...ink}/>
+      <circle cx="52" cy="150" r="20" {...ink} fill="var(--vs-burgundy)"/>
       <path d="M52 139v12M46 145h12M46 160h12" stroke="white" strokeWidth="2"/>
       <rect x="190" y="56" width="46" height="40" rx="5" fill="color-mix(in srgb,var(--vs-burgundy) 16%,transparent)" {...ink}/>
       <path d="M197 64h32M197 76h32M197 88h32" {...wine}/>
-      <text x="213" y="115" textAnchor="middle" style={{...ink,fontSize:12}}>R</text>
+      <text x="213" y="115" textAnchor="middle" style={label}>R</text>
       {ammeter ? <g data-meter-connection="series">
-        <circle cx="132" cy="76" r="20" fill="var(--vs-blue)" {...ink}/>
-        <text x="132" y="82" textAnchor="middle" fill="white" fontWeight="800">A</text>
-        <text x="132" y="156" textAnchor="middle" style={ink}>em série</text>
+        <circle cx="132" cy="76" r="20" {...ink} fill="var(--vs-blue)"/>
+        <text x="132" y="82" textAnchor="middle" fill="white" stroke="none" fontSize="17" fontWeight="800">A</text>
+        <text x="132" y="156" textAnchor="middle" style={label}>em série</text>
       </g> : <g data-meter-connection="parallel">
         <path d="M174 76V158H193M233 158H252V76" {...ink}/>
         <circle cx="174" cy="76" r="4" fill="var(--vs-ink)"/><circle cx="252" cy="76" r="4" fill="var(--vs-ink)"/>
-        <circle cx="213" cy="158" r="20" fill="var(--vs-blue)" {...ink}/>
-        <text x="213" y="164" textAnchor="middle" fill="white" fontWeight="800">V</text>
-        <text x="213" y="199" textAnchor="middle" style={ink}>em paralelo a R</text>
+        <circle cx="213" cy="158" r="20" {...ink} fill="var(--vs-blue)"/>
+        <text x="213" y="164" textAnchor="middle" fill="white" stroke="none" fontSize="17" fontWeight="800">V</text>
+        <text x="213" y="199" textAnchor="middle" style={label}>em paralelo a R</text>
       </g>}
-      <text x="160" y="282" textAnchor="middle" style={{...ink,fontSize:13}}>{ammeter ? 'Rₐ ≈ 0 Ω: toda a corrente passa por A' : 'Rᵥ muito alta: V não desvia corrente'}</text>
+      <text x="160" y="282" textAnchor="middle" style={label}>{ammeter ? 'Rₐ ≈ 0 Ω: toda a corrente passa por A' : 'Rᵥ muito alta: V não desvia corrente'}</text>
     </g>;
   }
   if (id === 'generator' || id === 'receiver') {

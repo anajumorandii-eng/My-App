@@ -52,10 +52,13 @@ describe('instrumento de ondas e física moderna', () => {
     expect(diagram.querySelector('[data-meter-connection="series"]')).toHaveTextContent('A');
     expect(diagram.querySelector('[data-meter-connection="parallel"]')).toBeNull();
     expect(diagram.querySelector('path')?.getAttribute('d')).toContain('M190 76H152M112 76H52');
+    expect(diagram.querySelector('[data-meter-connection="series"] circle')).toHaveAttribute('fill', 'var(--vs-blue)');
+    expect(diagram.querySelector('[data-meter-connection="series"] text')).toHaveAttribute('fill', 'white');
 
     fireEvent.change(screen.getByRole('slider'), { target: { value: '1' } });
     expect(diagram.querySelector('[data-meter-connection="series"]')).toBeNull();
     expect(diagram.querySelector('[data-meter-connection="parallel"]')).toHaveTextContent('em paralelo a R');
+    expect(diagram.querySelector('[data-meter-connection="parallel"] circle:last-of-type')).toHaveAttribute('fill', 'var(--vs-blue)');
     expect(diagram.querySelector('[data-meter-connection="parallel"] path')?.getAttribute('d'))
       .toBe('M174 76V158H193M233 158H252V76');
     expect(diagram.querySelector('path')?.getAttribute('d')).toContain('M190 76H52');
