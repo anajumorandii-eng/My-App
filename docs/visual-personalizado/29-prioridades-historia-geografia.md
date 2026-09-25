@@ -23,3 +23,17 @@ Os recortes, afirmações e citações dos quatro capítulos continuam ligados �
 4. Guardar capturas e testar 360, 375, 390, 768 e 1440 px, temas, teclado, movimento reduzido, console, rede e acessibilidade. Revisão editorial continua uma decisão separada.
 
 O restante do inventário não é rotulado `insuficiente` sem inspeção. Esta fila documenta o método para avançar pelos 613 capítulos sem transformar cobertura formal em aprovação visual.
+
+## Lote 1 — auditoria dos oito em validação (25/09/2026)
+
+A régua aprovada pela Ana Júlia em 25/09 (cena própria, relação central nomeada, fidelidade ao resumo, movimento que explica, nada emprestado, três modos intactos, conferência no navegador, aprovação só dela) foi aplicada aos oito capítulos que estavam em validação. Nenhum passava.
+
+| Capítulo | O que a auditoria achou | O que mudou |
+| --- | --- | --- |
+| Revolução Francesa | Cronologia estática; nada mostrava que a cadeia é cumulativa. | Linha preenche elo a elo até o recorte escolhido; ícones próprios (déficit, Assembleia, Bastilha, guilhotina); as chaves "conflito fiscal" e "radicalização" acendem quando a cadeia chega a elas. |
+| Revolução Industrial | Legendas "mão de obra + capital" e "investigação" em cima da cerca, da chaminé e do documento; cena estática. | Layout refeito sem colisão; trabalhadores saem do campo cercado e entram na fábrica; a lupa leva a investigação ao documento, que recebe o selo das Factory Acts. |
+| Dinâmica Climática | Etiqueta "cartografia comparada" num capítulo de clima; setas com ponta desproporcional sobre a nuvem. | Etiqueta "mecanismo do clima"; a parcela de ar percorre o caminho que a obriga a subir e só então a nuvem se fecha e a chuva cai; cunha de ar frio na frontal; barlavento e sotavento seco na orográfica. |
+| Projeções Cartográficas | Três esquemas sem nada que mostrasse a distorção. | Indicatriz de Tissot: o mesmo círculo cresce com a latitude na conforme e achata sem mudar de área na equivalente; na equidistante, um marcador anda passos iguais a partir do centro. |
+| Energia Elétrica no Brasil, Os Fluxos do Comércio Externo, Combustíveis, Estrutura Étnica e Fluxos Migratórios | Os quatro usam a mesma fôrma de instrumento (três abas, caixa à esquerda, seta, edifício) trocando só o ícone — falha o critério da cena própria. | Pendente: próxima rodada. |
+
+Conferência: 13 recortes × tema claro e escuro a 1440 px, sem texto sobreposto a outro texto nem saindo do SVG (`screenshots/lote1-hg-2026-09-25/`, arquivos `*-recorteN*.png`; as capturas sem sufixo são o estado anterior). Sob movimento reduzido `useSceneMotion` zera a duração e a cena abre no estado final. `npm run lint` limpo; `npm test` com 706 + 544 testes aprovados. Os quatro capítulos continuam **em validação** até a revisão da Ana Júlia.

@@ -1,0 +1,294 @@
+[
+  {
+    "id": "summary-historia-revolucao-francesa",
+    "w": 390,
+    "errs": [],
+    "overflow": false,
+    "board": "Prancha visual: deslize para ver a figura inteira; com teclado, use as setas",
+    "svgText": [],
+    "motion": false,
+    "controls": []
+  },
+  {
+    "id": "summary-historia-revolucao-francesa",
+    "w": 1440,
+    "errs": [],
+    "overflow": false,
+    "board": "Prancha visual: deslize para ver a figura inteira; com teclado, use as setas",
+    "svgText": [],
+    "motion": false,
+    "controls": []
+  },
+  {
+    "id": "summary-historia-revolucao-industrial",
+    "w": 390,
+    "errs": [],
+    "overflow": false,
+    "board": "Prancha visual: deslize para ver a figura inteira; com teclado, use as setas",
+    "svgText": [],
+    "motion": false,
+    "controls": []
+  },
+  {
+    "id": "summary-historia-revolucao-industrial",
+    "w": 1440,
+    "errs": [],
+    "overflow": false,
+    "board": "Prancha visual: deslize para ver a figura inteira; com teclado, use as setas",
+    "svgText": [],
+    "motion": false,
+    "controls": []
+  },
+  {
+    "id": "summary-geografia-projecoes-cartograficas",
+    "w": 390,
+    "errs": [],
+    "overflow": false,
+    "board": "Prancha visual: deslize para ver a figura inteira; com teclado, use as setas",
+    "svgText": [],
+    "motion": false,
+    "controls": []
+  },
+  {
+    "id": "summary-geografia-projecoes-cartograficas",
+    "w": 1440,
+    "errs": [],
+    "overflow": false,
+    "board": "Prancha visual: deslize para ver a figura inteira; com teclado, use as setas",
+    "svgText": [],
+    "motion": false,
+    "controls": []
+  },
+  {
+    "id": "summary-geografia-dinamica-climatica",
+    "w": 390,
+    "errs": [],
+    "overflow": false,
+    "board": "Prancha visual: deslize para ver a figura inteira; com teclado, use as setas",
+    "svgText": [],
+    "motion": false,
+    "controls": []
+  },
+  {
+    "id": "summary-geografia-dinamica-climatica",
+    "w": 1440,
+    "errs": [],
+    "overflow": false,
+    "board": "Prancha visual: deslize para ver a figura inteira; com teclado, use as setas",
+    "svgText": [],
+    "motion": false,
+    "controls": []
+  },
+  {
+    "id": "summary-geografia-combustiveis-fosseis-e-biocombustiveis-no-brasil",
+    "w": 390,
+    "errs": [],
+    "overflow": false,
+    "board": "Instrumento geográfico: Combustíveis Fósseis e Biocombustíveis no Brasil",
+    "title": "Combustíveis fósseis e biocombustíveis no Brasil",
+    "svgText": [
+      "carbono recente não zera impactos",
+      "solo, cultivo e transporte mudam o balanço",
+      "carbono fóssil",
+      "carbono recente",
+      "ciclo de vida"
+    ],
+    "motion": true,
+    "controls": [
+      "Essencial",
+      "Relações",
+      "ConceitoGás natural e carvãoO gás natural, frequentemente associado geologicamente à extração de petróleo (o chamado gás associado, que emerge junto com o próprio óleo durante a extração), e o carvão mineral (cuja produção brasileira é proporcionalmente pequena e concentrada especificamente no Sul do país, numa qualidade geralmente inferior à de jazidas internacionais mais competitivas) completam a matriz de combustíveis fósseis nacionais — mas o Brasil historicamente importa uma fração significativa do gás natural que efetivamente consome, especialmente da Bolívia (através do gasoduto Bolívia-Brasil, um projeto de infraestrutura energética de grande escala construído especificamente para essa finalidade), uma dependência energética externa que expõe o país a riscos geopolíticos e de negociação comercial específicos sempre que as relações bilaterais com esse país fornecedor específico sofrem alguma tensão diplomática ou renegociação contratual relevante.carbono fóssil + carbono reciclado + uso do solo e manejo → combustíveis fósseis e biocombustíveisNão avaliado",
+      "Fóssil",
+      "Biocombustível",
+      "Ciclo de vida",
+      "Reduzir a cena",
+      "Ampliar a cena",
+      "Voltar ao tamanho natural",
+      "AplicaçãoBiocombustíveisO Brasil é um caso internacionalmente reconhecido e frequentemente citado de sucesso relativo na produção e uso de biocombustíveis em larga escala: o etanol de cana-de-açúcar, produzido comercialmente desde o Proálcool (programa governamental de incentivo lançado na década de 1970, originalmente motivado pela crise internacional do petróleo daquele período histórico específico), e o biodiesel (produzido a partir de óleos vegetais, especialmente de soja, misturado obrigatoriamente ao diesel fóssil numa proporção regulamentada por lei federal específica) reduzem a dependência do país em relação aos combustíveis fósseis convencionais e, em teoria, apresentam um balanço de emissões de carbono mais favorável ao longo de todo o ciclo de vida do produto, já que o carbono liberado na combustão do biocombustível foi originalmente capturado da própria atmosfera pela planta durante seu crescimento, num ciclo consideravelmente mais curto (anual) do que o ciclo geológico de milhões de anos envolvido na formação original dos combustíveis fósseis convencionais extraídos do subsolo.Sua concentração energética alta explica o uso amplo, apesar do impacto climático já conhecido.Não avaliado"
+    ]
+  },
+  {
+    "id": "summary-geografia-combustiveis-fosseis-e-biocombustiveis-no-brasil",
+    "w": 1440,
+    "errs": [],
+    "overflow": false,
+    "board": "Instrumento geográfico: Combustíveis Fósseis e Biocombustíveis no Brasil",
+    "title": "Combustíveis fósseis e biocombustíveis no Brasil",
+    "svgText": [
+      "carbono recente não zera impactos",
+      "solo, cultivo e transporte mudam o balanço",
+      "carbono fóssil",
+      "carbono recente",
+      "ciclo de vida"
+    ],
+    "motion": true,
+    "controls": [
+      "ConceitoGás natural e carvãoO gás natural, frequentemente associado geologicamente à extração de petróleo (o chamado gás associado, que emerge junto com o próprio óleo durante a extração), e o carvão mineral (cuja produção brasileira é proporcionalmente pequena e concentrada especificamente no Sul do país, numa qualidade geralmente inferior à de jazidas internacionais mais competitivas) completam a matriz de combustíveis fósseis nacionais — mas o Brasil historicamente importa uma fração significativa do gás natural que efetivamente consome, especialmente da Bolívia (através do gasoduto Bolívia-Brasil, um projeto de infraestrutura energética de grande escala construído especificamente para essa finalidade), uma dependência energética externa que expõe o país a riscos geopolíticos e de negociação comercial específicos sempre que as relações bilaterais com esse país fornecedor específico sofrem alguma tensão diplomática ou renegociação contratual relevante.carbono fóssil + carbono reciclado + uso do solo e manejo → combustíveis fósseis e biocombustíveisNão avaliado",
+      "Fóssil",
+      "Biocombustível",
+      "Ciclo de vida",
+      "Reduzir a cena",
+      "Ampliar a cena",
+      "Voltar ao tamanho natural",
+      "AplicaçãoBiocombustíveisO Brasil é um caso internacionalmente reconhecido e frequentemente citado de sucesso relativo na produção e uso de biocombustíveis em larga escala: o etanol de cana-de-açúcar, produzido comercialmente desde o Proálcool (programa governamental de incentivo lançado na década de 1970, originalmente motivado pela crise internacional do petróleo daquele período histórico específico), e o biodiesel (produzido a partir de óleos vegetais, especialmente de soja, misturado obrigatoriamente ao diesel fóssil numa proporção regulamentada por lei federal específica) reduzem a dependência do país em relação aos combustíveis fósseis convencionais e, em teoria, apresentam um balanço de emissões de carbono mais favorável ao longo de todo o ciclo de vida do produto, já que o carbono liberado na combustão do biocombustível foi originalmente capturado da própria atmosfera pela planta durante seu crescimento, num ciclo consideravelmente mais curto (anual) do que o ciclo geológico de milhões de anos envolvido na formação original dos combustíveis fósseis convencionais extraídos do subsolo.Sua concentração energética alta explica o uso amplo, apesar do impacto climático já conhecido.Não avaliado"
+    ]
+  },
+  {
+    "id": "summary-geografia-energia-eletrica-no-brasil",
+    "w": 390,
+    "errs": [],
+    "overflow": false,
+    "board": "Instrumento geográfico: Energia Elétrica no Brasil",
+    "title": "Equilíbrio do sistema elétrico",
+    "svgText": [
+      "oferta ↔ demanda",
+      "geração",
+      "rede",
+      "consumo"
+    ],
+    "motion": true,
+    "controls": [
+      "Essencial",
+      "Relações",
+      "ConceitoExpansão de eólica e solarA expansão da energia eólica e solar fotovoltaica na última década alterou significativamente a matriz brasileira, respondendo hoje por mais de 20% da geração combinada.geração + transmissão + demanda → operação do sistema elétricoNão avaliado",
+      "Geração",
+      "Transmissão",
+      "Demanda",
+      "Reduzir a cena",
+      "Ampliar a cena",
+      "Voltar ao tamanho natural",
+      "AplicaçãoDesafios do sistemaApesar da matriz predominantemente renovável, o sistema elétrico brasileiro enfrenta desafios estruturais.A oferta depende tanto da fonte disponível quanto de sua localização no território.Não avaliado"
+    ]
+  },
+  {
+    "id": "summary-geografia-energia-eletrica-no-brasil",
+    "w": 1440,
+    "errs": [],
+    "overflow": false,
+    "board": "Instrumento geográfico: Energia Elétrica no Brasil",
+    "title": "Equilíbrio do sistema elétrico",
+    "svgText": [
+      "oferta ↔ demanda",
+      "geração",
+      "rede",
+      "consumo"
+    ],
+    "motion": true,
+    "controls": [
+      "ConceitoExpansão de eólica e solarA expansão da energia eólica e solar fotovoltaica na última década alterou significativamente a matriz brasileira, respondendo hoje por mais de 20% da geração combinada.geração + transmissão + demanda → operação do sistema elétricoNão avaliado",
+      "Geração",
+      "Transmissão",
+      "Demanda",
+      "Reduzir a cena",
+      "Ampliar a cena",
+      "Voltar ao tamanho natural",
+      "AplicaçãoDesafios do sistemaApesar da matriz predominantemente renovável, o sistema elétrico brasileiro enfrenta desafios estruturais.A oferta depende tanto da fonte disponível quanto de sua localização no território.Não avaliado"
+    ]
+  },
+  {
+    "id": "summary-geografia-estrutura-etnica-e-fluxos-migratorios",
+    "w": 390,
+    "errs": [],
+    "overflow": false,
+    "board": "Instrumento geográfico: Estrutura Étnica e Fluxos Migratórios",
+    "title": "Fluxos e redes migratórias",
+    "svgText": [
+      "transporte + redes de apoio",
+      "vínculos com a origem podem continuar",
+      "origem",
+      "trajeto",
+      "destino"
+    ],
+    "motion": true,
+    "controls": [
+      "Essencial",
+      "Relações",
+      "ConceitoImigração históricaA imigração histórica ao Brasil intensificou-se após a abolição da escravatura em 1888 e a proclamação da República, quando o Estado brasileiro subsidiou a vinda de trabalhadores europeus para substituir a mão de obra escravizada nas lavouras de café paulistas, numa política que também buscava \"embranquecer\" a população segundo teorias raciais então vigentes entre as elites.origem + deslocamento + destino → redes migratóriasNão avaliado",
+      "Origem",
+      "Trajeto",
+      "Destino",
+      "Reduzir a cena",
+      "Ampliar a cena",
+      "Voltar ao tamanho natural",
+      "AplicaçãoMigrações internas e recentesAs migrações internas mudaram de padrão ao longo do século XX.A saída se relaciona a condições concretas, mas pessoas em situação semelhante podem fazer escolhas diferentes.Não avaliado"
+    ]
+  },
+  {
+    "id": "summary-geografia-estrutura-etnica-e-fluxos-migratorios",
+    "w": 1440,
+    "errs": [],
+    "overflow": false,
+    "board": "Instrumento geográfico: Estrutura Étnica e Fluxos Migratórios",
+    "title": "Fluxos e redes migratórias",
+    "svgText": [
+      "transporte + redes de apoio",
+      "vínculos com a origem podem continuar",
+      "origem",
+      "trajeto",
+      "destino"
+    ],
+    "motion": true,
+    "controls": [
+      "ConceitoImigração históricaA imigração histórica ao Brasil intensificou-se após a abolição da escravatura em 1888 e a proclamação da República, quando o Estado brasileiro subsidiou a vinda de trabalhadores europeus para substituir a mão de obra escravizada nas lavouras de café paulistas, numa política que também buscava \"embranquecer\" a população segundo teorias raciais então vigentes entre as elites.origem + deslocamento + destino → redes migratóriasNão avaliado",
+      "Origem",
+      "Trajeto",
+      "Destino",
+      "Reduzir a cena",
+      "Ampliar a cena",
+      "Voltar ao tamanho natural",
+      "AplicaçãoMigrações internas e recentesAs migrações internas mudaram de padrão ao longo do século XX.A saída se relaciona a condições concretas, mas pessoas em situação semelhante podem fazer escolhas diferentes.Não avaliado"
+    ]
+  },
+  {
+    "id": "summary-geografia-os-fluxos-do-comercio-externo",
+    "w": 390,
+    "errs": [],
+    "overflow": false,
+    "board": "Instrumento geográfico: Os Fluxos do Comércio Externo",
+    "title": "Uma rede de comércio exterior",
+    "svgText": [
+      "o custo do corredor altera o preço final",
+      "produção",
+      "porto",
+      "mercado"
+    ],
+    "motion": true,
+    "controls": [
+      "Essencial",
+      "Relações",
+      "ConceitoParceiros comerciaisOs parceiros comerciais do Brasil mudaram significativamente de composição nas últimas décadas.produção + corredor logístico + mercado externo → comércio exteriorNão avaliado",
+      "Produção",
+      "Logística",
+      "Mercado",
+      "Reduzir a cena",
+      "Ampliar a cena",
+      "Voltar ao tamanho natural",
+      "AplicaçãoBalança e vulnerabilidadesA balança comercial brasileira, historicamente superavitária em períodos de alta de preços de commodities, expõe vulnerabilidades estruturais que vão além do simples saldo positivo ou negativo entre exportações e importações.O que se exporta depende de especializações produtivas, tecnologia e condições do território.Não avaliado"
+    ]
+  },
+  {
+    "id": "summary-geografia-os-fluxos-do-comercio-externo",
+    "w": 1440,
+    "errs": [],
+    "overflow": false,
+    "board": "Instrumento geográfico: Os Fluxos do Comércio Externo",
+    "title": "Uma rede de comércio exterior",
+    "svgText": [
+      "o custo do corredor altera o preço final",
+      "produção",
+      "porto",
+      "mercado"
+    ],
+    "motion": true,
+    "controls": [
+      "ConceitoParceiros comerciaisOs parceiros comerciais do Brasil mudaram significativamente de composição nas últimas décadas.produção + corredor logístico + mercado externo → comércio exteriorNão avaliado",
+      "Produção",
+      "Logística",
+      "Mercado",
+      "Reduzir a cena",
+      "Ampliar a cena",
+      "Voltar ao tamanho natural",
+      "AplicaçãoBalança e vulnerabilidadesA balança comercial brasileira, historicamente superavitária em períodos de alta de preços de commodities, expõe vulnerabilidades estruturais que vão além do simples saldo positivo ou negativo entre exportações e importações.O que se exporta depende de especializações produtivas, tecnologia e condições do território.Não avaliado"
+    ]
+  }
+]
