@@ -2,15 +2,15 @@
   "schema_version": 1,
   "repository": "anajumorandii-eng/My-App",
   "branch": "main",
-  "source_commit": "07152639794919ab31b318d3a840322518b6a46d",
-  "generated_at_utc": "2026-09-25T16:21:37Z",
+  "source_commit": "1874253333db81d3c9d9411c83343188ecf5307c",
+  "generated_at_utc": "2026-09-25T20:17:10Z",
   "changed_files": [
     "docs/CRIVO-CONTINUIDADE.md",
-    "src/components/subject-icons/GenerativeTopicIcon.tsx",
-    "src/components/subject-icons/ReducedIconMotion.ui.test.tsx",
-    "src/components/subject-icons/SubjectIcons.tsx",
-    "src/components/subject-icons/useIconMotion.ts",
-    "src/testSetup.ts"
+    "docs/visual-personalizado/screenshots/physics-meter-2026-09-25/parallel-desktop-dark.jpg",
+    "docs/visual-personalizado/screenshots/physics-meter-2026-09-25/parallel-desktop-light.jpg",
+    "docs/visual-personalizado/screenshots/physics-meter-2026-09-25/series-desktop-light.jpg",
+    "src/views/visual-instruments/PhysicsRemainingInstrument.test.tsx",
+    "src/views/visual-instruments/PhysicsRemainingInstrument.tsx"
   ],
   "next_session": {
     "mode": "delta-only",
