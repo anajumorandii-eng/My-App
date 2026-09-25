@@ -40,3 +40,18 @@ A régua aprovada pela Ana Júlia em 25/09 (cena própria, relação central nom
 | Combustíveis Fósseis e Biocombustíveis | Idem. | Carbono fóssil sobe do subsolo e fica na atmosfera; o da cana circula planta ↔ atmosfera; trator e caminhão acrescentam emissões do ciclo. Pontos sem escala, só sentido do saldo. |
 
 Conferência dos oito: 25 recortes × tema claro e escuro a 1440 px, sem texto sobreposto a outro texto nem saindo do SVG (`screenshots/lote1-hg-2026-09-25/`, arquivos `*-recorteN*.png`; as capturas sem sufixo são o estado anterior). Sob movimento reduzido `useSceneMotion` zera a duração e a cena abre no estado final. `npm run lint` limpo; `npm test` com 706 + 544 testes aprovados. Os quatro capítulos continuam **em validação** até a revisão da Ana Júlia.
+
+## Lote 2 — Brasil Colônia (25/09/2026)
+
+Seis capítulos, cada um com cena própria. Os fatos e datas das cenas saem do resumo do capítulo (`deepSummaryContent.json`) ou das entradas já registradas; nenhum número novo.
+
+| Capítulo | Antes | Agora |
+| --- | --- | --- |
+| A Mineração no Brasil Colonial | Três círculos com rótulo (ouro, fundição, Coroa). | Bateia, Casa de Fundição e baú da Coroa. Quinto: uma de cinco barras vai para a Coroa. Fundição: o pó entra, barras seladas saem, o desvio aparece como ilegal. Derrama: cota anual incompleta, moedas saem das vilas para cobrir a diferença. |
+| A Interiorização da Colonização | Retângulo e três curvas. | Contorno do Brasil a partir de coordenadas reais, Tordesilhas, faixa açucareira. Bandeiras saem de São Paulo (apresamento, metais); o ouro puxa migrantes para Minas e a capital para o Rio (1763); o gado sobe o São Francisco. |
+| Grandes Navegações e Conquista Colonial | Família genérica "cadeia de derivação". | Atlântico com Ibéria, África, Índia e Brasil: a caravela faz a rota do Cabo (1488) a Calicute (1498); especiarias como prioridade; pau-brasil por escambo; navios estrangeiros e fortificações a partir de 1530. |
+| A Montagem da Colonização | Família genérica "critérios conjuntivos". | Balança com metáfora declarada no rodapé: cada fator sozinho não inclina o prato; resistência, epidemias e oposição jesuíta juntas inclinam para o tráfico transatlântico. |
+| A Crise do Antigo Sistema Colonial | Família genérica "tipologia". | Inconfidência Mineira (1789) e Conjuração Baiana (1798) lado a lado com a composição social desenhada (elites de Minas; artesão, soldado, escravizado, liberto) e a corrente do pacto colonial que as duas contestam. |
+| Dinâmica Interna da Colonização | Linha do tempo de três cartões para três peças simultâneas. | Um só engenho: casa-grande sobre senzala (com o aviso sobre a leitura de Freyre), fuga para o quilombo (Palmares, c. 1600–1695), roças e ofícios abastecendo o engenho. |
+
+No celular, as pranchas de 620 unidades de História continuam com rolagem lateral dentro da própria prancha (decisão anterior, para o texto não encolher); a página não rola para os lados. As evidências das duas rodadas estão registradas em `visualQualityReviews.ts` e apontam para `screenshots/lote1-hg-2026-09-25/` e `screenshots/lote2-hg-2026-09-25/`. Todos seguem **em validação** até a revisão da Ana Júlia.

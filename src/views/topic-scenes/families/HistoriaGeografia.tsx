@@ -9,6 +9,9 @@ export const HISTORIA_GEOGRAFIA_IDS: ReadonlySet<string> = new Set([
   'summary-historia-revolucao-industrial',
   'summary-geografia-projecoes-cartograficas',
   'summary-geografia-dinamica-climatica',
+  'summary-historia-grandes-navegacoes-e-conquista-colonial',
+  'summary-historia-a-montagem-da-colonizacao',
+  'summary-historia-a-crise-do-antigo-sistema-colonial',
 ]);
 
 type SceneTransition = ReturnType<typeof useSceneMotion>;
@@ -218,6 +221,157 @@ function RainMechanisms({ active, t }: { active: number; t: SceneTransition }) {
   </svg>;
 }
 
+
+// Contornos simplificados a partir de coordenadas reais (projeção
+// retangular). Situam a rota e o Brasil; não servem para medir distância.
+const NAV_BRAZIL = 'M72.2 173.3L104.6 176.5L106.4 192L115.4 197L130.5 201L151.4 205.3L163.3 212.9L164.4 221.2L151.4 238.8L148.9 256.1L144.9 265.1L138.8 274.8L134.5 274.4L123.3 278.4L115.4 291.4L109.6 299.6L97.8 313.3L82.6 300.7L97 289.2L93.4 283.8L92 278.4L81.9 271.2L81.2 249.6L74 240.6L56 228L24 218.6L27.2 208.2L38.4 207.1L48.8 186.6L61.4 184.8Z';
+const NAV_AFRICA = 'M269.1 63.1L254.7 84L243.2 94.8L228.8 116.4L227.4 139.1L242.5 161.4L261.2 175.8L293.6 171.1L322.4 177.6L324.2 195.6L337.5 223.7L333.2 253.2L344 289.2L356.2 315.8L380 314.4L401.6 296.4L417.8 278L436.2 246L431.5 216.5L441.2 195.6L473.6 149.5L446.6 146.6L430.4 135.8L416 112.8L407 84L380 78.6L362 76.8L326 58.8L290 62.4Z';
+const NAV_IBERIA = 'M257.6 36.5L255.8 52.7L258 58.8L268.4 60.6L282.8 59.5L290 52.3L300.8 40.8L283.5 35.8Z';
+const NAV_INDIA = 'M527.6 102L534.8 107.4L552.1 123.6L554.6 136.2L564.7 156.4L569 162.8L578.7 145.2L579.1 134.8L596 121.8L608.6 112.8L606.8 94.8L556.4 80.4Z';
+const NAV_ROUTE = 'M255.8 52.7L225.2 105.6L210.8 163.2L225.2 228L272 292.8L326 325.2L362 328.8L405.2 307.2L441.2 264L459.2 206.4L498.8 170.4L562.9 151.5';
+
+function Navigations({ active, t }: { active: number; t: SceneTransition }) {
+  const on = (i: number) => active >= i;
+  const route = [255.8, 225.2, 210.8, 225.2, 272, 326, 362, 405.2, 441.2, 459.2, 498.8, 562.9];
+  const routeY = [52.7, 105.6, 163.2, 228, 292.8, 325.2, 328.8, 307.2, 264, 206.4, 170.4, 151.5];
+  return <svg viewBox="0 0 620 360" role="img" aria-label={`Grandes Navegações: tecnologia náutica, rota do Cabo até a Índia, pau-brasil por escambo e colonização após ameaças de invasão; elo ${active + 1} destacado`}>
+    <rect x="8" y="8" width="604" height="344" rx="18" className="hg-sea" />
+    <text x="30" y="36" className="hg-kicker">PORTUGAL · XV–XVI</text>
+    <text x="590" y="36" textAnchor="end" className="hg-hand">elo a elo</text>
+    <path d={NAV_IBERIA} className="hg-land" /><path d={NAV_AFRICA} className="hg-land" /><path d={NAV_INDIA} className="hg-land" />
+    <motion.path d={NAV_BRAZIL} className="hg-land" initial={false} animate={{ opacity: active === 1 ? 0.45 : 1 }} transition={paced(t, 0.5)} />
+    <text x="290" y="120" className="hg-geo-label">ÁFRICA</text><text x="560" y="72" className="hg-geo-label" textAnchor="middle">ÍNDIA</text><text x="70" y="250" className="hg-geo-label">BRASIL</text>
+
+    <motion.path d={NAV_ROUTE} className="hg-sea-route" initial={false} animate={{ pathLength: 1 }} transition={paced(t, 1.6)} />
+    <circle cx="255.8" cy="52.7" r="4" className="hg-port" /><text x="248" y="50" textAnchor="end" className="hg-small">Lisboa</text>
+    <circle cx="356.2" cy="318" r="3.5" className="hg-port" /><text x="366" y="338" className="hg-small">Cabo, 1488</text>
+    <circle cx="562.9" cy="151.5" r="4" className="hg-port" /><text x="604" y="178" textAnchor="end" className="hg-small">Calicute, 1498</text>
+    <motion.g initial={false} animate={active === 0 && t.duration !== 0 ? { x: route.map(v => v - 255.8), y: routeY.map(v => v - 52.7) } : { x: 562.9 - 255.8, y: 151.5 - 52.7 }}
+      transition={paced(t, 2.4)}>
+      <path d="M244 60h24l-4 6h-16Z" className="hg-hull" /><path d="M256 60V42M256 43l10 8h-10M256 44l-8 7h8" className="hg-sail" />
+    </motion.g>
+    <text x="300" y="70" className="hg-hand-small">tecnologia náutica</text>
+
+    <motion.g initial={false} animate={{ opacity: on(1) ? 1 : 0.15 }} transition={paced(t, 0.4, 0.3)}>
+      <path d="M548 128h14v10h-14zM566 124h14v14h-14z" className="hg-spice" />
+      <circle cx="555" cy="127" r="3" className="hg-spice-dot" /><circle cx="573" cy="122" r="3" className="hg-spice-dot" />
+      <path d={NAV_ROUTE} className="hg-profit" transform="translate(6 -6)" />
+      <text x="482" y="110" className="hg-hand-small">especiarias: prioridade</text>
+    </motion.g>
+
+    <motion.g initial={false} animate={{ opacity: on(2) ? 1 : 0.15 }} transition={paced(t, 0.4, 0.3)}>
+      {[0, 1, 2].map(k => <path key={k} d={`M${128 + k * 3} ${232 + k * 8}h22`} className="hg-log" />)}
+      <path d="M172 250l-8-8M166 244l4-10 6 6Z" className="hg-axe" />
+      <text x="176" y="236" className="hg-hand-small">pau-brasil por escambo</text>
+    </motion.g>
+
+    <motion.g initial={false} animate={{ opacity: on(3) ? 1 : 0.15 }} transition={paced(t, 0.4, 0.2)}>
+      {[0, 1].map(k => <motion.g key={k} initial={false} animate={{ x: active === 3 ? -40 : 0 }} transition={paced(t, 1.2, 0.3 + k * 0.3)}>
+        <path d={`M${222 + k * 18} ${188 + k * 26}h18l-3 5h-12Z`} className="hg-hull hg-hull-foreign" />
+        <path d={`M${231 + k * 18} ${188 + k * 26}v-14l8 9h-8`} className="hg-sail-foreign" />
+      </motion.g>)}
+      {[[150, 236], [132, 274], [158, 214]].map(([x, y], k) => <motion.path key={k} d={`M${x - 6} ${y + 4}v-8h3v-3h6v3h3v8Z`} className="hg-fort"
+        initial={false} animate={{ scale: active === 3 ? 1 : 0.6 }} transition={paced(t, 0.4, 1 + k * 0.2)} style={{ transformBox: 'fill-box', transformOrigin: 'center' }} />)}
+      <text x="190" y="296" className="hg-hand-small">ameaças → colonização, 1530</text>
+    </motion.g>
+    <text x="30" y="344" className="hg-footnote">Contornos simplificados; rota esquemática.</text>
+  </svg>;
+}
+
+function Colonization({ active, t }: { active: number; t: SceneTransition }) {
+  // Metáfora de balança, avisada no rodapé: cada fator sozinho não inclina
+  // o prato; só os três juntos. É a afirmação do capítulo ("nenhum
+  // isoladamente seria suficiente"), não uma medida de peso.
+  const all = active === 3;
+  const factors = [
+    { label: 'resistência', x: 390 },
+    { label: 'epidemias', x: 450 },
+    { label: 'oposição jesuíta', x: 510 },
+  ];
+  return <svg viewBox="0 0 620 360" role="img" aria-label={`Montagem da colonização: resistência indígena, epidemias e oposição jesuíta só juntas explicam a passagem ao tráfico transatlântico; fator ${active + 1} destacado`}>
+    <rect x="8" y="8" width="604" height="344" rx="18" className="hg-paper" />
+    <text x="30" y="40" className="hg-kicker">MÃO DE OBRA NA COLÔNIA · SÉCULO XVI</text>
+    <path d="M296 300h48l-24-86Z" className="hg-pivot" />
+    <motion.g initial={false} animate={{ rotate: all ? 5 : 0 }} transition={paced(t, 0.9, all ? 0.9 : 0)} style={{ transformOrigin: '320px 214px' }}>
+      <path d="M130 214H510" className="hg-beam" />
+      <path d="M150 214l-30 50h100l-30-50M490 214l-30 50h100l-30-50" className="hg-rope" />
+      <path d="M110 264h120a60 14 0 0 1-120 0ZM410 264h120a60 14 0 0 1-120 0Z" className="hg-pan" />
+      <text x="170" y="300" textAnchor="middle" className="hg-label">escravização</text>
+      <text x="170" y="316" textAnchor="middle" className="hg-label">indígena</text>
+      <text x="470" y="300" textAnchor="middle" className="hg-label">tráfico transatlântico</text>
+      <text x="470" y="316" textAnchor="middle" className="hg-label">de africanos</text>
+      {factors.map((f, k) => {
+        const present = all || active === k;
+        return <motion.g key={f.label} initial={false} animate={{ y: present ? 0 : -118, opacity: present ? 1 : 0.35 }} transition={paced(t, 0.6, all ? k * 0.2 : 0)}>
+          <rect x={f.x - 20} y="232" width="40" height="30" rx="6" className="hg-weight" />
+          {k === 0 && <path d={`M${f.x - 8} 254l10-14 6 8M${f.x + 2} 240l6-4`} className="hg-weight-icon" />}
+          {k === 1 && <g><circle cx={f.x} cy="247" r="6" className="hg-weight-icon" />{[0, 60, 120, 180, 240, 300].map(a => <path key={a} d={`M${f.x + 6 * Math.cos(a * Math.PI / 180)} ${247 + 6 * Math.sin(a * Math.PI / 180)}l${3 * Math.cos(a * Math.PI / 180)} ${3 * Math.sin(a * Math.PI / 180)}`} className="hg-weight-icon" />)}</g>}
+          {k === 2 && <path d={`M${f.x} 238v18M${f.x - 6} 244h12`} className="hg-weight-icon" />}
+        </motion.g>;
+      })}
+    </motion.g>
+    {factors.map((f, k) => <text key={f.label} x={f.x} y={160 + (k % 2) * 16} textAnchor="middle" className={all || active === k ? 'hg-factor hg-factor-on' : 'hg-factor'}>{f.label}</text>)}
+    <motion.text x="320" y="90" textAnchor="middle" className="hg-hand" initial={false} animate={{ opacity: 1 }} key={all ? 'all' : 'one'} transition={paced(t, 0.4, 0.8)}>
+      {all ? 'juntos, inclinam a balança' : 'sozinho, não basta'}
+    </motion.text>
+    <text x="30" y="344" className="hg-footnote">Metáfora: sem peso medido.</text>
+  </svg>;
+}
+
+function ColonialRevolts({ active, t }: { active: number; t: SceneTransition }) {
+  const both = active === 2;
+  const minas = active === 0 || both;
+  const bahia = active === 1 || both;
+  // A composição social é o contraste do capítulo: três figuras de elite
+  // em Minas; artesão, soldado, escravizado e liberto na Bahia.
+  const elite = [120, 150, 180];
+  const popular = [[404, 'artesão'], [448, 'soldado'], [492, 'escravizado'], [536, 'liberto']] as const;
+  return <svg viewBox="0 0 620 360" role="img" aria-label={`Crise do antigo sistema colonial: Inconfidência Mineira (1789) e Conjuração Baiana (1798) com composição e pautas diferentes contra o mesmo pacto colonial; recorte ${active + 1} destacado`}>
+    <rect x="8" y="8" width="604" height="344" rx="18" className="hg-paper" />
+    <text x="30" y="40" className="hg-kicker">O PACTO COLONIAL CONTESTADO</text>
+    <g>
+      <path d="M296 70l4-16 8 8 12-14 12 14 8-8 4 16Z" className="hg-crown" />
+      <text x="320" y="88" textAnchor="middle" className="hg-small">metrópole</text>
+      {[0, 1, 2, 3].map(k => <motion.ellipse key={k} cx="320" cy={104 + k * 14} rx="6" ry="8" className="hg-chain" initial={false}
+        animate={k === 2 && both ? { x: 10, rotate: 30 } : { x: 0, rotate: 0 }} transition={paced(t, 0.5, 1)} style={{ transformBox: 'fill-box', transformOrigin: 'center' }} />)}
+      <text x="320" y="176" textAnchor="middle" className="hg-small">colônia</text>
+    </g>
+
+    <motion.g initial={false} animate={{ opacity: minas ? 1 : 0.35 }} transition={paced(t, 0.4)}>
+      <rect x="40" y="70" width="210" height="236" rx="14" className={minas ? 'hg-panel hg-panel-on' : 'hg-panel'} />
+      <text x="145" y="96" textAnchor="middle" className="hg-panel-title hg-panel-title-sm">INCONFIDÊNCIA MINEIRA · 1789</text>
+      <path d="M60 170l30-34 22 22 26-30 34 42Z" className="hg-mountain" />
+      {elite.map((x, k) => <motion.g key={x} initial={false} animate={{ opacity: minas ? 1 : 0.4 }} transition={paced(t, 0.4, minas ? 0.2 + k * 0.12 : 0)}>
+        <rect x={x - 8} y="186" width="16" height="4" className="hg-hat" /><rect x={x - 5} y="176" width="10" height="11" className="hg-hat" />
+        <circle cx={x} cy="196" r="6" className="hg-face" /><path d={`M${x - 10} 226c0-14 4-22 10-22s10 8 10 22Z`} className="hg-coat" />
+      </motion.g>)}
+      <text x="145" y="250" textAnchor="middle" className="hg-small">elites locais de Minas</text>
+      <text x="145" y="272" textAnchor="middle" className="hg-label">impostos sobre o ouro</text>
+      <text x="145" y="290" textAnchor="middle" className="hg-small">inspiração: independência dos EUA</text>
+      {both && <motion.path d="M250 150C276 140 294 132 312 132" className="hg-crack" initial={{ pathLength: t.duration === 0 ? 1 : 0 }} animate={{ pathLength: 1 }} transition={paced(t, 0.6, 0.4)} />}
+    </motion.g>
+
+    <motion.g initial={false} animate={{ opacity: bahia ? 1 : 0.35 }} transition={paced(t, 0.4)}>
+      <rect x="370" y="70" width="210" height="236" rx="14" className={bahia ? 'hg-panel hg-panel-on' : 'hg-panel'} />
+      <text x="475" y="96" textAnchor="middle" className="hg-panel-title hg-panel-title-sm">CONJURAÇÃO BAIANA · 1798</text>
+      <path d="M384 162q30-10 60 0t60 0t60 0" className="hg-wave-line" /><path d="M500 150v-24h10v24M496 126h18" className="hg-rope" />
+      {popular.map(([x, role], k) => <motion.g key={role} initial={false} animate={{ opacity: bahia ? 1 : 0.4 }} transition={paced(t, 0.4, bahia ? 0.2 + k * 0.12 : 0)}>
+        <circle cx={x} cy="196" r="6" className={k >= 2 ? 'hg-face hg-face-dark' : 'hg-face'} />
+        <path d={`M${x - 10} 226c0-14 4-22 10-22s10 8 10 22Z`} className={k === 1 ? 'hg-coat hg-coat-soldier' : 'hg-coat hg-coat-plain'} />
+        {k === 0 && <path d={`M${x + 8} 206l6-6m-2-2l4 4`} className="hg-tool" />}
+        {k === 1 && <rect x={x - 6} y="186" width="12" height="4" className="hg-cap" />}
+        <text x={x} y={240 + (k % 2) * 11} textAnchor="middle" className="hg-tiny">{role}</text>
+      </motion.g>)}
+      <text x="475" y="268" textAnchor="middle" className="hg-small">participação mais popular</text>
+      <text x="475" y="288" textAnchor="middle" className="hg-label">pautas radicais: abolição</text>
+      {both && <motion.path d="M370 150C344 140 326 132 328 132" className="hg-crack" initial={{ pathLength: t.duration === 0 ? 1 : 0 }} animate={{ pathLength: 1 }} transition={paced(t, 0.6, 0.6)} />}
+    </motion.g>
+    <motion.text x="310" y="232" textAnchor="middle" className="hg-hand-small" initial={false} animate={{ opacity: both ? 1 : 0 }} transition={paced(t, 0.4, 1.1)}>mesmo</motion.text>
+    <motion.text x="310" y="250" textAnchor="middle" className="hg-hand-small" initial={false} animate={{ opacity: both ? 1 : 0 }} transition={paced(t, 0.4, 1.1)}>descontentamento</motion.text>
+    <text x="30" y="336" className="hg-footnote">Composição e motivação diferentes; o mesmo alvo: o pacto colonial.</text>
+  </svg>;
+}
+
 export function HistoriaGeografia({ entry }: { entry: SceneEntry }) {
   const [active, setActive] = useState(0);
   const transition = useSceneMotion();
@@ -230,7 +384,10 @@ export function HistoriaGeografia({ entry }: { entry: SceneEntry }) {
       event.preventDefault();
       event.currentTarget.scrollLeft += event.key === 'ArrowRight' ? 120 : -120;
     }}>
-      {entry.chapterId === 'summary-historia-revolucao-francesa' ? <FrenchRevolution active={active} t={transition} />
+      {entry.chapterId === 'summary-historia-grandes-navegacoes-e-conquista-colonial' ? <Navigations active={active} t={transition} />
+        : entry.chapterId === 'summary-historia-a-montagem-da-colonizacao' ? <Colonization active={active} t={transition} />
+        : entry.chapterId === 'summary-historia-a-crise-do-antigo-sistema-colonial' ? <ColonialRevolts active={active} t={transition} />
+        : entry.chapterId === 'summary-historia-revolucao-francesa' ? <FrenchRevolution active={active} t={transition} />
         : entry.chapterId === 'summary-historia-revolucao-industrial' ? <IndustrialRevolution active={active} t={transition} />
           : entry.chapterId === 'summary-geografia-dinamica-climatica' ? <RainMechanisms active={active} t={transition} />
             : <ProjectionComparison active={active} t={transition} />}
