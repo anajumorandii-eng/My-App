@@ -78,3 +78,10 @@ Este mecanismo preserva o contexto e o estado técnico no repositório e no arqu
 - O setup de testes fornece `IntersectionObserver` para o jsdom. Dois casos novos exercitam a ida e volta da viewport e da aba.
 - Validação local: 543 testes Vitest, 706 testes Node, TypeScript e build aprovados.
 - Revisão visual desta nova versão em produção, mobile/tablet e preferência de movimento reduzido em navegador continuam pendentes até a publicação e uma sessão de navegador com emulação.
+
+## Física — medidores elétricos, 25 de setembro de 2026
+
+- Após a integração da PR #210, a matriz de cobertura marca 0 lacunas honestas entre 613 capítulos (Física: 85 capítulos, 14 pranchas, 63 instrumentos e 8 cenas). Isso mede presença de artefato, não aprovação visual; o inventário de qualidade ainda registra a maioria como não revisada.
+- No capítulo de medidores elétricos, o desenho anterior não ligava claramente o voltímetro aos dois lados do resistor. O circuito agora tem um único caminho principal com fonte e resistor: o amperímetro entra em série nesse caminho, e o voltímetro mede o resistor por um ramo paralelo com contatos visíveis. O título comum dos instrumentos passa a dizer apenas “Laboratório de Física”.
+- A primeira inspeção na prévia Vercel revelou símbolos vazios e legendas sobrepostas no SVG. O preenchimento dos medidores e a tipografia das legendas foram corrigidos. A prévia corrigida foi conferida em 1363 × 936 px: amperímetro e voltímetro no tema claro, voltímetro no tema escuro, sem transbordamento horizontal. Capturas em `docs/visual-personalizado/screenshots/physics-meter-2026-09-25/`.
+- O teste de topologia e alternância passou; 544 testes Vitest, TypeScript e build passaram no primeiro commit. Larguras móveis/tablet, tema escuro para o amperímetro e movimento reduzido ainda requerem conferência; o capítulo não foi marcado como aprovado no inventário de qualidade.
