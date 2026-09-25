@@ -6,6 +6,7 @@ import BoardShell from '../visual-boards/BoardShell';
 import { boardPair } from '../visual-boards/pair';
 import type { BoardProps } from '../visual-boards/types';
 import './HistoryPhaseInstrument.css';
+import { EngenhoScene } from './EngenhoScene';
 
 /**
  * Quebra um rótulo em no máximo duas linhas por contagem de caractere, não
@@ -81,7 +82,7 @@ export function historyPhaseInstrument(id: HistoryPhaseId) {
       ariaLabel={`Instrumento histórico: ${props.map.title}`}
       emphasis={pair.emphasis}
       scene={<div className="vs-instrument">
-        <TimelineScene id={id} index={index} />
+        {id === 'dinamica-interna-colonizacao' ? <EngenhoScene index={index} label={selected.label} /> : <TimelineScene id={id} index={index} />}
         <div className="vs-plane-controls"><div className="vs-plane-control">
           <p>Percorra a linha do tempo:</p>
           <div className="vs-history-phase-options" role="group" aria-label={`Momentos de ${config.title}`}>

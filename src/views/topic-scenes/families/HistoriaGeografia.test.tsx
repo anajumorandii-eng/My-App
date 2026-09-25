@@ -50,9 +50,42 @@ describe('pranchas de História e Geografia', () => {
     const entry = geografia.find(item => item.chapterId === 'summary-geografia-dinamica-climatica')!;
     render(<HistoriaGeografia entry={entry} />);
     const diagram = screen.getByRole('img', { name: /Chuva convectiva.*orográfica.*frontal/i });
-    await user.click(screen.getByRole('button', { name: 'Orográfica' }));
     expect(diagram).toHaveTextContent('barreira do relevo');
+    await user.click(screen.getByRole('button', { name: 'Orográfica' }));
     expect(screen.getByRole('status')).toHaveTextContent('barlavento');
     expect(diagram).toHaveAttribute('aria-label', expect.stringContaining('orográfica selecionada'));
   });
+  it('segue a cadeia das navegações até a colonização de 1530', async () => {
+    const user = userEvent.setup();
+    const entry = historia.find(item => item.chapterId === 'summary-historia-grandes-navegacoes-e-conquista-colonial')!;
+    render(<HistoriaGeografia entry={entry} />);
+    const diagram = screen.getByRole('img', { name: /Grandes Navegações/i });
+    expect(diagram).toHaveTextContent('Calicute, 1498');
+    expect(diagram).toHaveTextContent('pau-brasil por escambo');
+    await user.click(screen.getByRole('button', { name: 'Ameaça de invasão' }));
+    expect(diagram).toHaveAttribute('aria-label', expect.stringContaining('elo 4'));
+  });
+
+  it('só inclina a balança da mão de obra quando os três fatores atuam juntos', async () => {
+    const user = userEvent.setup();
+    const entry = historia.find(item => item.chapterId === 'summary-historia-a-montagem-da-colonizacao')!;
+    render(<HistoriaGeografia entry={entry} />);
+    const diagram = screen.getByRole('img', { name: /Montagem da colonização/i });
+    expect(diagram).toHaveTextContent('sozinho, não basta');
+    await user.click(screen.getByRole('button', { name: 'Nenhum fator isolado' }));
+    expect(diagram).toHaveTextContent('juntos, inclinam a balança');
+    expect(diagram).toHaveTextContent('Metáfora: sem peso medido.');
+  });
+
+  it('contrasta a composição social das duas revoltas contra o mesmo pacto colonial', async () => {
+    const user = userEvent.setup();
+    const entry = historia.find(item => item.chapterId === 'summary-historia-a-crise-do-antigo-sistema-colonial')!;
+    render(<HistoriaGeografia entry={entry} />);
+    const diagram = screen.getByRole('img', { name: /Inconfidência Mineira \(1789\).*Conjuração Baiana \(1798\)/i });
+    expect(diagram).toHaveTextContent('elites locais de Minas');
+    expect(diagram).toHaveTextContent('pautas radicais: abolição');
+    await user.click(screen.getByRole('button', { name: 'Mesmo descontentamento' }));
+    expect(diagram).toHaveAttribute('aria-label', expect.stringContaining('recorte 3'));
+  });
 });
+

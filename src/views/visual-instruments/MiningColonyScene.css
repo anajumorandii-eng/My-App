@@ -1,0 +1,50 @@
+.mc-sun { fill: #f2c14e; opacity: .35; }
+.mc-hill-back { fill: #d8cba7; }
+.mc-hill { fill: #e6dcc0; }
+.mc-river { fill: #8fc0cc; }
+.mc-small { fill: #5a5952; font: 600 9px system-ui, sans-serif; }
+.mc-tiny { fill: #5a4a2c; font: 700 8px system-ui, sans-serif; }
+.mc-label { fill: #2c2a24; font: 700 10px system-ui, sans-serif; }
+.mc-warn { fill: #a8432a; }
+.mc-hand { fill: #a8432a; font: 700 13px Kalam, 'Segoe Print', cursive; }
+.mc-hand-arrow { fill: none; stroke: #a8432a; stroke-width: 1.6; }
+.mc-pan { fill: #8a5a34; }
+.mc-pan-inner { fill: #6e4526; }
+.mc-gold { fill: #f2c14e; }
+.mc-sack { fill: #d9c39a; stroke: #6e4526; stroke-width: 1.2; }
+.mc-sack-tie { stroke: #6e4526; stroke-width: 2; }
+.mc-wall { fill: #f1e4c6; stroke: #7c6a4f; stroke-width: 1.4; }
+.mc-wall-dark { fill: #7c6a4f; }
+.mc-roof { fill: #a8432a; }
+.mc-furnace { fill: #7c6a4f; transition: fill .4s; }
+.mc-house-on .mc-furnace { fill: #f08a2c; }
+.mc-plate-bg { fill: #fbf7ee; }
+.mc-plate { fill: #2c2a24; font: 800 6.5px system-ui, sans-serif; letter-spacing: .08em; }
+.mc-smoke { fill: #bdb2a1; }
+.mc-chest { fill: #9b6a3f; }
+.mc-chest-band { fill: #6e4526; }
+.mc-lock { fill: #b3791a; }
+.mc-crown { fill: #f2c14e; stroke: #b3791a; stroke-width: 1.2; stroke-linejoin: round; }
+.mc-crown-band { fill: #b3791a; }
+.mc-jewel { fill: #a8432a; }
+.mc-bar { fill: #f2c14e; stroke: #b3791a; stroke-width: 1; }
+.mc-seal { fill: #a8432a; }
+.mc-illegal { fill: none; stroke: #a8432a; stroke-width: 1.8; stroke-dasharray: 5 4; }
+.mc-cross { stroke: #a8432a; stroke-width: 2.4; stroke-linecap: round; }
+.mc-quota { fill: none; stroke: #5a5952; stroke-width: 1.4; }
+.mc-quota-fill { fill: #f2c14e; }
+.mc-quota-gap { fill: rgb(168 67 42 / .45); }
+.mc-village { fill: #e2d6bf; stroke: #6d6153; stroke-width: 1.4; stroke-linejoin: round; }
+.mc-coin { fill: #f2c14e; stroke: #b3791a; stroke-width: 1; }
+.dark .mc-hill-back { fill: #34443d; }
+.dark .mc-hill { fill: #2b3732; }
+.dark .mc-river { fill: #2f6671; }
+.dark .mc-small, .dark .mc-label { fill: #efe8d8; }
+.dark .mc-warn, .dark .mc-hand { fill: #f1a27f; }
+.dark .mc-hand-arrow, .dark .mc-illegal, .dark .mc-cross { stroke: #f1a27f; }
+.dark .mc-wall { fill: #3d3d35; stroke: #b9b2a2; }
+.dark .mc-plate-bg { fill: #2a302c; }
+.dark .mc-plate { fill: #efe8d8; }
+.dark .mc-quota { stroke: #efe8d8; }
+.dark .mc-village { fill: #4a5d58; stroke: #d3ddcf; }
+.dark .mc-sun { opacity: .18; }

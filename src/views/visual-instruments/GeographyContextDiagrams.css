@@ -1,45 +1,57 @@
-.gcd-plate { --gcd-line:#455d59; --gcd-fill:#d0c4a5; --eco-accent:var(--vs-burgundy,#913c45); width:100%; min-width:0; }
-.gcd-diagram { width:100%; height:auto; background:radial-gradient(ellipse at center,color-mix(in srgb,var(--vs-green) 7%,transparent),transparent 75%); }
-.gcd-eyebrow { fill:var(--vs-dim); font:600 11px system-ui,sans-serif; letter-spacing:1.5px; }
-.gcd-title { fill:var(--vs-ink); font:italic 28px Georgia,serif; }
-.gcd-label { fill:var(--vs-ink); font:600 14px system-ui,sans-serif; }
-.gcd-note { fill:var(--vs-ink); font:italic 18px Georgia,serif; }
-.gcd-small { fill:var(--vs-dim); font:500 11px system-ui,sans-serif; }
-.gcd-terrain { fill:color-mix(in srgb,var(--vs-green) 19%,var(--vs-paper)); stroke:color-mix(in srgb,var(--vs-green) 55%,transparent); }
-.gcd-reservoir { fill:color-mix(in srgb,var(--vs-blue) 26%,var(--vs-paper)); stroke:var(--vs-blue); stroke-width:1; }
-.gcd-concrete { fill:var(--gcd-fill); stroke:var(--gcd-line); stroke-width:2; }
-.gcd-line { fill:none; stroke:var(--gcd-line); stroke-width:1.7; stroke-linejoin:round; }
-.gcd-building { fill:var(--gcd-fill); stroke:var(--gcd-line); stroke-width:2; }
-.gcd-window { fill:var(--vs-gold,#ba8c38); stroke:var(--gcd-line); stroke-width:.8; }
-.gcd-turbine { fill:var(--vs-paper); stroke:var(--gcd-line); stroke-width:3; }
-.gcd-pylon { fill:none; stroke:var(--gcd-line); stroke-width:2.5; stroke-linejoin:round; }
-.gcd-wire { fill:none; stroke:var(--gcd-line); stroke-width:1.2; }
-.gcd-person { fill:var(--vs-burgundy); }
-.gcd-person-line { fill:none; stroke:var(--vs-burgundy); stroke-width:4; stroke-linecap:round; }
-.gcd-river { fill:none; stroke:color-mix(in srgb,var(--vs-blue) 38%,var(--vs-paper)); stroke-width:20; }
-.gcd-route-guide { fill:none; stroke:var(--gcd-line); stroke-width:12; opacity:.18; }
-.gcd-crane { fill:none; stroke:var(--gcd-line); stroke-width:4; stroke-linejoin:round; }
-.gcd-container { fill:color-mix(in srgb,var(--vs-burgundy) 22%,var(--vs-paper)); stroke:var(--vs-burgundy); stroke-width:1.5; }
-.gcd-ship { fill:color-mix(in srgb,var(--vs-blue) 48%,var(--vs-paper)); stroke:var(--gcd-line); stroke-width:2; }
-.gcd-carbon { fill:var(--vs-ink); font:600 30px Georgia,serif; }
-.gcd-fossil { fill:var(--gcd-line); }
-.gcd-cane { fill:none; stroke:var(--vs-green); stroke-width:5; }
-.gcd-leaf { fill:none; stroke:var(--vs-green); stroke-width:4; stroke-linecap:round; }
-.gcd-plate .eco-flow-guide { fill:none; stroke:var(--eco-accent); opacity:.2; stroke-width:2; stroke-dasharray:4 5; }
-.gcd-plate .eco-flow-live { fill:none; stroke:var(--eco-accent); stroke-width:3; stroke-linecap:round; }
-.gcd-replay { display:block; margin:4px auto 14px; padding:10px 18px; min-height:44px; background:transparent; border:1px solid var(--vs-burgundy); border-radius:4px; color:var(--vs-ink); font:600 12px system-ui,sans-serif; cursor:pointer; }
-.gcd-replay:focus-visible { outline:3px solid var(--vs-blue); outline-offset:3px; }
-.dark .gcd-plate { --gcd-line:#afc2b1; --gcd-fill:#496258; }
-.vs-study-board--scene-first .vs-board-body { grid-template-columns:repeat(2,minmax(0,1fr)); align-items:start; }
-.vs-study-board--scene-first .vs-piston-wrap { grid-column:1/-1; min-width:0; }
-.vs-study-board--scene-first .vs-instrument { width:100%; display:grid; grid-template-columns:minmax(0,1.5fr) minmax(210px,.85fr); align-items:start; gap:18px 26px; }
-.vs-study-board--scene-first .gcd-plate { grid-row:1/4; }
-.vs-study-board--scene-first .gcd-diagram { border:0; border-radius:0; }
-.vs-study-board--scene-first .vs-plane-readouts { grid-template-columns:1fr; }
-.vs-study-board--scene-first .vs-instrument-dica { grid-column:2; }
-.vs-study-board--scene-first .vs-concept-card { transform:none; background:transparent; border-radius:4px; box-shadow:none; }
-@media(max-width:900px) {
-  .vs-study-board--scene-first .vs-board-body,.vs-study-board--scene-first .vs-instrument { grid-template-columns:minmax(0,1fr); }
-  .vs-study-board--scene-first .gcd-plate { grid-row:auto; }
-  .vs-study-board--scene-first .vs-instrument-dica { grid-column:auto; }
-}
+.gcd-paper { fill: #f6f0e2; stroke: #c7bca6; stroke-width: 2; }
+.gcd-note { fill: #714553; font: 700 11px system-ui, sans-serif; }
+.gcd-small { fill: #5a5952; font: 600 9px system-ui, sans-serif; }
+.gcd-caption { fill: #263d3a; font: 700 10px system-ui, sans-serif; }
+.gcd-tag { fill: #9a3b1f; font: 700 11px Kalam, 'Segoe Print', cursive; }
+.gcd-object { fill: #d7e3d8; stroke: #446c6a; stroke-width: 2.4; stroke-linejoin: round; }
+.gcd-line { fill: none; stroke: #456c6d; stroke-width: 2.6; stroke-linejoin: round; stroke-linecap: round; }
+.gcd-window { fill: #f2c14e; stroke: #8a6414; stroke-width: 1; }
+.gcd-ground { stroke: #759068; stroke-width: 3; }
+.gcd-water { fill: #8fc0cc; }
+.gcd-dam { fill: #c9c2b2; stroke: #6d6559; stroke-width: 2; }
+.gcd-blade { fill: none; stroke: #456c6d; stroke-width: 3; stroke-linecap: round; }
+.gcd-pivot { fill: #456c6d; }
+.gcd-tower { fill: none; stroke: #6d6559; stroke-width: 2.2; stroke-linejoin: round; }
+.gcd-cable { fill: none; stroke: #b77d52; stroke-width: 2.4; }
+.gcd-spark { fill: #f2c14e; stroke: #b3791a; stroke-width: 1.2; }
+.gcd-axis { fill: none; stroke: #9a9282; stroke-width: 1.4; }
+.gcd-curve { fill: none; stroke: #934b57; stroke-width: 2.6; stroke-linecap: round; }
+.gcd-route { fill: none; stroke: #934b57; stroke-width: 3; stroke-dasharray: 7 5; }
+.gcd-return { fill: none; stroke: #558c83; stroke-width: 2; stroke-dasharray: 5 5; }
+.gcd-waypoint { fill: #efd2a4; stroke: #934b57; stroke-width: 2.4; }
+.gcd-person-head { fill: #c98a5e; }
+.gcd-person { fill: #477981; }
+.gcd-bag { fill: #9b6a3f; }
+.gcd-envelope { fill: #fdf9ed; stroke: #934b57; stroke-width: 1.4; }
+.gcd-envelope-flap { fill: none; stroke: #934b57; stroke-width: 1.2; }
+.gcd-sea { fill: #a9d3d6; }
+.gcd-wave { fill: none; stroke: #4f93a3; stroke-width: 1.6; }
+.gcd-crop { stroke: #7f9a5c; stroke-width: 3; stroke-linecap: round; }
+.gcd-road { stroke: #8a8374; stroke-width: 3; stroke-dasharray: 8 4; }
+.gcd-cargo { fill: #c26a3f; stroke: #7a3d20; stroke-width: 1.2; }
+.gcd-wheel { fill: #3d3a33; }
+.gcd-crane { fill: none; stroke: #a8432a; stroke-width: 3; stroke-linecap: round; }
+.gcd-ship { fill: #9fc2c3; stroke: #456c6d; stroke-width: 2.4; }
+.gcd-price-base { fill: #d7e3d8; stroke: #446c6a; stroke-width: 1.4; }
+.gcd-price-leg { fill: #efc3a5; stroke: #934b57; stroke-width: 1.4; }
+.gcd-air { fill: rgb(169 211 214 / .35); stroke: #8fb9bf; stroke-width: 1.4; }
+.gcd-fossil { fill: #3f474c; stroke: #293840; stroke-width: 2; }
+.gcd-fossil-label { fill: #f2ede0; font: 700 9px system-ui, sans-serif; }
+.gcd-cane { fill: none; stroke: #6f9a4f; stroke-width: 3; stroke-linecap: round; }
+.gcd-carbon-old { fill: #3f474c; }
+.gcd-carbon-new { fill: #6f9a4f; }
+.gcd-carbon-extra { fill: #c26a3f; }
+.dark .gcd-paper { fill: #213d43; stroke: #83a99c; }
+.dark .gcd-note, .dark .gcd-tag { fill: #f1c8ab; }
+.dark .gcd-small, .dark .gcd-caption { fill: #f5eddc; }
+.dark .gcd-object, .dark .gcd-price-base { fill: #345a5d; stroke: #a2c2b4; }
+.dark .gcd-line, .dark .gcd-blade { stroke: #a2c2b4; }
+.dark .gcd-pivot { fill: #a2c2b4; }
+.dark .gcd-tower, .dark .gcd-axis { stroke: #b9b2a2; }
+.dark .gcd-dam { fill: #5a5a52; stroke: #b9b2a2; }
+.dark .gcd-water, .dark .gcd-sea { fill: #2f6671; }
+.dark .gcd-ship { fill: #4c8088; stroke: #a2c2b4; }
+.dark .gcd-air { fill: rgb(121 168 194 / .2); stroke: #5d8a95; }
+.dark .gcd-curve, .dark .gcd-route { stroke: #f1a27f; }
+.dark .gcd-carbon-old { fill: #c9c4b8; }
+.dark .gcd-wheel { fill: #d8d2c4; }

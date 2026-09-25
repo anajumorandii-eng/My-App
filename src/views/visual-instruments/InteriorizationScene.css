@@ -1,0 +1,26 @@
+.it-land { fill: #e8dfc6; stroke: #7c6a4f; stroke-width: 1.6; stroke-linejoin: round; }
+.it-sugar { fill: none; stroke: rgb(111 154 79 / .55); stroke-width: 9; stroke-linecap: round; }
+.it-tordesilhas { stroke: #7c6a4f; stroke-width: 1.4; stroke-dasharray: 3 4; }
+.it-river { fill: none; stroke: #6aa4b3; stroke-width: 2.2; stroke-linecap: round; transition: stroke-width .4s; }
+.it-river-on { stroke-width: 4; }
+.it-city { fill: #2c2a24; }
+.it-label { fill: #2c2a24; font: 700 9px system-ui, sans-serif; }
+.it-small { fill: #6d6353; font: 600 8.5px system-ui, sans-serif; }
+.it-note { fill: #a8432a; font: 700 11px Kalam, 'Segoe Print', cursive; }
+.it-route { fill: none; stroke: #a8432a; stroke-width: 2.6; stroke-dasharray: 6 4; stroke-linecap: round; }
+.it-capital { fill: none; stroke: #477981; stroke-width: 2; stroke-dasharray: 2 4; stroke-linecap: round; }
+.it-pole { stroke: #6e4526; stroke-width: 1.6; }
+.it-flag { fill: #a8432a; }
+.it-town { fill: #f2c14e; stroke: #8a6414; stroke-width: 1; }
+.it-people { fill: #477981; }
+.it-cattle { fill: #9b6a3f; }
+.it-cattle-leg { fill: none; stroke: #6e4526; stroke-width: 1.4; stroke-linecap: round; }
+.dark .it-land { fill: #34443d; stroke: #b9b2a2; }
+.dark .it-tordesilhas { stroke: #b9b2a2; }
+.dark .it-city { fill: #efe8d8; }
+.dark .it-label { fill: #efe8d8; }
+.dark .it-small { fill: #cfc8b8; }
+.dark .it-note { fill: #f1a27f; }
+.dark .it-route { stroke: #f1a27f; }
+.dark .it-people { fill: #8fc0cc; }
+.dark .it-cattle { fill: #c49a6c; }

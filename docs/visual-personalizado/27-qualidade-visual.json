@@ -2008,12 +2008,18 @@
     "mechanism": "comparação esquemática de três propriedades cartográficas",
     "relation": "conforme preserva forma local; equivalente, área; equidistante, distâncias desde um centro",
     "evidencePaths": [
-      "docs/visual-personalizado/screenshots/humanas-motion-2026-09-23/summary-geografia-projecoes-cartograficas-390-light.png",
-      "docs/visual-personalizado/screenshots/humanas-motion-2026-09-23/summary-geografia-projecoes-cartograficas-390-dark.png",
-      "docs/visual-personalizado/screenshots/humanas-motion-2026-09-23/summary-geografia-projecoes-cartograficas-1440-light.png",
-      "docs/visual-personalizado/screenshots/humanas-motion-2026-09-23/summary-geografia-projecoes-cartograficas-1440-dark.png"
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/geografia-projecoes-cartograficas-recorte1.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/geografia-projecoes-cartograficas-recorte1-dark.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/geografia-projecoes-cartograficas-recorte2.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/geografia-projecoes-cartograficas-recorte2-dark.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/geografia-projecoes-cartograficas-recorte3.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/geografia-projecoes-cartograficas-recorte3-dark.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/geografia-projecoes-cartograficas-390-light.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/geografia-projecoes-cartograficas-390-dark.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/geografia-projecoes-cartograficas-768-light.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/geografia-projecoes-cartograficas-768-dark.png"
     ],
-    "notes": "Esquemas de propriedades, não mapas mensuráveis. QA de largura e seleção em cinco larguras e dois temas; teclado verificado. Movimento reduzido tratado no código, sem emulação no navegador. Aprovação editorial pendente."
+    "notes": "Redesenhada em 25/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
   },
   {
     "id": "summary-geografia-cartografia-digital",
@@ -2049,12 +2055,18 @@
     "mechanism": "seções de ascensão do ar",
     "relation": "aquecimento, barreira montanhosa e encontro de massas criam chuvas por mecanismos distintos",
     "evidencePaths": [
-      "docs/visual-personalizado/screenshots/humanas-motion-2026-09-23/summary-geografia-dinamica-climatica-390-light.png",
-      "docs/visual-personalizado/screenshots/humanas-motion-2026-09-23/summary-geografia-dinamica-climatica-390-dark.png",
-      "docs/visual-personalizado/screenshots/humanas-motion-2026-09-23/summary-geografia-dinamica-climatica-1440-light.png",
-      "docs/visual-personalizado/screenshots/humanas-motion-2026-09-23/summary-geografia-dinamica-climatica-1440-dark.png"
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/geografia-dinamica-climatica-recorte1.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/geografia-dinamica-climatica-recorte1-dark.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/geografia-dinamica-climatica-recorte2.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/geografia-dinamica-climatica-recorte2-dark.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/geografia-dinamica-climatica-recorte3.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/geografia-dinamica-climatica-recorte3-dark.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/geografia-dinamica-climatica-390-light.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/geografia-dinamica-climatica-390-dark.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/geografia-dinamica-climatica-768-light.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/geografia-dinamica-climatica-768-dark.png"
     ],
-    "notes": "Prancha específica do capítulo; QA de largura e seleção em cinco larguras e dois temas; teclado verificado. Movimento reduzido tratado no código, sem emulação no navegador. Aprovação editorial pendente."
+    "notes": "Redesenhada em 25/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
   },
   {
     "id": "summary-geografia-clima-mundial",
@@ -2558,12 +2570,18 @@
     "mechanism": "estoque fóssil, planta e etapa de uso",
     "relation": "carbono recente não torna biocombustível automaticamente neutro; solo e transporte integram o balanço",
     "evidencePaths": [
-      "docs/visual-personalizado/screenshots/humanas-motion-2026-09-23/summary-geografia-combustiveis-fosseis-e-biocombustiveis-no-brasil-390-light.png",
-      "docs/visual-personalizado/screenshots/humanas-motion-2026-09-23/summary-geografia-combustiveis-fosseis-e-biocombustiveis-no-brasil-390-dark.png",
-      "docs/visual-personalizado/screenshots/humanas-motion-2026-09-23/summary-geografia-combustiveis-fosseis-e-biocombustiveis-no-brasil-1440-light.png",
-      "docs/visual-personalizado/screenshots/humanas-motion-2026-09-23/summary-geografia-combustiveis-fosseis-e-biocombustiveis-no-brasil-1440-dark.png"
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/geografia-combustiveis-fosseis-e-biocombustiveis-no-brasil-recorte1.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/geografia-combustiveis-fosseis-e-biocombustiveis-no-brasil-recorte1-dark.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/geografia-combustiveis-fosseis-e-biocombustiveis-no-brasil-recorte2.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/geografia-combustiveis-fosseis-e-biocombustiveis-no-brasil-recorte2-dark.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/geografia-combustiveis-fosseis-e-biocombustiveis-no-brasil-recorte3.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/geografia-combustiveis-fosseis-e-biocombustiveis-no-brasil-recorte3-dark.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/geografia-combustiveis-fosseis-e-biocombustiveis-no-brasil-390-light.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/geografia-combustiveis-fosseis-e-biocombustiveis-no-brasil-390-dark.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/geografia-combustiveis-fosseis-e-biocombustiveis-no-brasil-768-light.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/geografia-combustiveis-fosseis-e-biocombustiveis-no-brasil-768-dark.png"
     ],
-    "notes": "Esquema de ciclo de vida sem emissões numéricas; QA técnico em cinco larguras e dois temas. Aprovação editorial pendente."
+    "notes": "Redesenhada em 25/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
   },
   {
     "id": "summary-geografia-energia-eletrica-no-mundo",
@@ -2587,12 +2605,18 @@
     "mechanism": "usina, rede e centro consumidor",
     "relation": "geração e transmissão conectam fontes a uma demanda variável",
     "evidencePaths": [
-      "docs/visual-personalizado/screenshots/humanas-motion-2026-09-23/summary-geografia-energia-eletrica-no-brasil-390-light.png",
-      "docs/visual-personalizado/screenshots/humanas-motion-2026-09-23/summary-geografia-energia-eletrica-no-brasil-390-dark.png",
-      "docs/visual-personalizado/screenshots/humanas-motion-2026-09-23/summary-geografia-energia-eletrica-no-brasil-1440-light.png",
-      "docs/visual-personalizado/screenshots/humanas-motion-2026-09-23/summary-geografia-energia-eletrica-no-brasil-1440-dark.png"
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/geografia-energia-eletrica-no-brasil-recorte1.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/geografia-energia-eletrica-no-brasil-recorte1-dark.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/geografia-energia-eletrica-no-brasil-recorte2.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/geografia-energia-eletrica-no-brasil-recorte2-dark.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/geografia-energia-eletrica-no-brasil-recorte3.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/geografia-energia-eletrica-no-brasil-recorte3-dark.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/geografia-energia-eletrica-no-brasil-390-light.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/geografia-energia-eletrica-no-brasil-390-dark.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/geografia-energia-eletrica-no-brasil-768-light.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/geografia-energia-eletrica-no-brasil-768-dark.png"
     ],
-    "notes": "Figura esquemática, sem dados de usina real; QA técnico em cinco larguras e dois temas. Aprovação editorial pendente."
+    "notes": "Redesenhada em 25/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
   },
   {
     "id": "summary-geografia-producao-mineral",
@@ -2664,12 +2688,18 @@
     "mechanism": "origem, trajeto e destino ligados por redes",
     "relation": "o deslocamento reorganiza destinos e pode preservar vínculos com a origem",
     "evidencePaths": [
-      "docs/visual-personalizado/screenshots/humanas-motion-2026-09-23/summary-geografia-estrutura-etnica-e-fluxos-migratorios-390-light.png",
-      "docs/visual-personalizado/screenshots/humanas-motion-2026-09-23/summary-geografia-estrutura-etnica-e-fluxos-migratorios-390-dark.png",
-      "docs/visual-personalizado/screenshots/humanas-motion-2026-09-23/summary-geografia-estrutura-etnica-e-fluxos-migratorios-1440-light.png",
-      "docs/visual-personalizado/screenshots/humanas-motion-2026-09-23/summary-geografia-estrutura-etnica-e-fluxos-migratorios-1440-dark.png"
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/geografia-estrutura-etnica-e-fluxos-migratorios-recorte1.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/geografia-estrutura-etnica-e-fluxos-migratorios-recorte1-dark.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/geografia-estrutura-etnica-e-fluxos-migratorios-recorte2.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/geografia-estrutura-etnica-e-fluxos-migratorios-recorte2-dark.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/geografia-estrutura-etnica-e-fluxos-migratorios-recorte3.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/geografia-estrutura-etnica-e-fluxos-migratorios-recorte3-dark.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/geografia-estrutura-etnica-e-fluxos-migratorios-390-light.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/geografia-estrutura-etnica-e-fluxos-migratorios-390-dark.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/geografia-estrutura-etnica-e-fluxos-migratorios-768-light.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/geografia-estrutura-etnica-e-fluxos-migratorios-768-dark.png"
     ],
-    "notes": "Fluxo hipotético, sem rota real; QA técnico em cinco larguras e dois temas. Aprovação editorial pendente."
+    "notes": "Redesenhada em 25/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
   },
   {
     "id": "summary-geografia-o-espaco-urbano-i",
@@ -2717,12 +2747,18 @@
     "mechanism": "produção, porto e mercado externo",
     "relation": "a logística e seus custos ligam especialização produtiva a parceiros externos",
     "evidencePaths": [
-      "docs/visual-personalizado/screenshots/humanas-motion-2026-09-23/summary-geografia-os-fluxos-do-comercio-externo-390-light.png",
-      "docs/visual-personalizado/screenshots/humanas-motion-2026-09-23/summary-geografia-os-fluxos-do-comercio-externo-390-dark.png",
-      "docs/visual-personalizado/screenshots/humanas-motion-2026-09-23/summary-geografia-os-fluxos-do-comercio-externo-1440-light.png",
-      "docs/visual-personalizado/screenshots/humanas-motion-2026-09-23/summary-geografia-os-fluxos-do-comercio-externo-1440-dark.png"
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/geografia-os-fluxos-do-comercio-externo-recorte1.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/geografia-os-fluxos-do-comercio-externo-recorte1-dark.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/geografia-os-fluxos-do-comercio-externo-recorte2.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/geografia-os-fluxos-do-comercio-externo-recorte2-dark.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/geografia-os-fluxos-do-comercio-externo-recorte3.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/geografia-os-fluxos-do-comercio-externo-recorte3-dark.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/geografia-os-fluxos-do-comercio-externo-390-light.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/geografia-os-fluxos-do-comercio-externo-390-dark.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/geografia-os-fluxos-do-comercio-externo-768-light.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/geografia-os-fluxos-do-comercio-externo-768-dark.png"
     ],
-    "notes": "Corredor ilustrativo, sem porto ou parceiro real; QA técnico em cinco larguras e dois temas. Aprovação editorial pendente."
+    "notes": "Redesenhada em 25/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
   },
   {
     "id": "summary-historia-introducao-a-historia-e-primeiras-civilizacoes",
@@ -2854,12 +2890,18 @@
     "mechanism": "campo cercado, fábrica e documento legal",
     "relation": "cercamentos liberam mão de obra e capital; documentação e pressão social contribuem para reformas",
     "evidencePaths": [
-      "docs/visual-personalizado/screenshots/humanas-motion-2026-09-23/summary-historia-revolucao-industrial-390-light.png",
-      "docs/visual-personalizado/screenshots/humanas-motion-2026-09-23/summary-historia-revolucao-industrial-390-dark.png",
-      "docs/visual-personalizado/screenshots/humanas-motion-2026-09-23/summary-historia-revolucao-industrial-1440-light.png",
-      "docs/visual-personalizado/screenshots/humanas-motion-2026-09-23/summary-historia-revolucao-industrial-1440-dark.png"
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/historia-revolucao-industrial-recorte1.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/historia-revolucao-industrial-recorte1-dark.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/historia-revolucao-industrial-recorte2.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/historia-revolucao-industrial-recorte2-dark.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/historia-revolucao-industrial-recorte3.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/historia-revolucao-industrial-recorte3-dark.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/historia-revolucao-industrial-390-light.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/historia-revolucao-industrial-390-dark.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/historia-revolucao-industrial-768-light.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/historia-revolucao-industrial-768-dark.png"
     ],
-    "notes": "Prancha específica do capítulo; QA de largura e seleção em cinco larguras e dois temas; teclado verificado. Movimento reduzido tratado no código, sem emulação no navegador. Aprovação editorial pendente."
+    "notes": "Redesenhada em 25/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
   },
   {
     "id": "summary-historia-iluminismo",
@@ -2883,12 +2925,18 @@
     "mechanism": "cronologia com forças políticas e militares",
     "relation": "crise fiscal abre conflito institucional; guerra externa e desconfiança interna compõem a radicalização",
     "evidencePaths": [
-      "docs/visual-personalizado/screenshots/humanas-motion-2026-09-23/summary-historia-revolucao-francesa-390-light.png",
-      "docs/visual-personalizado/screenshots/humanas-motion-2026-09-23/summary-historia-revolucao-francesa-390-dark.png",
-      "docs/visual-personalizado/screenshots/humanas-motion-2026-09-23/summary-historia-revolucao-francesa-1440-light.png",
-      "docs/visual-personalizado/screenshots/humanas-motion-2026-09-23/summary-historia-revolucao-francesa-1440-dark.png"
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/historia-revolucao-francesa-recorte1.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/historia-revolucao-francesa-recorte1-dark.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/historia-revolucao-francesa-recorte2.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/historia-revolucao-francesa-recorte2-dark.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/historia-revolucao-francesa-recorte3.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/historia-revolucao-francesa-recorte3-dark.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/historia-revolucao-francesa-390-light.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/historia-revolucao-francesa-390-dark.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/historia-revolucao-francesa-768-light.png",
+      "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/historia-revolucao-francesa-768-dark.png"
     ],
-    "notes": "Prancha específica do capítulo; QA de largura e seleção em cinco larguras e dois temas; teclado verificado. Movimento reduzido tratado no código, sem emulação no navegador. Aprovação editorial pendente."
+    "notes": "Redesenhada em 25/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
   },
   {
     "id": "summary-historia-america-no-seculo-xix",
@@ -3052,11 +3100,22 @@
     "title": "Grandes Navegações e Conquista Colonial",
     "primary": "scene",
     "artifact": "cadeia-de-derivacao",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "rota do Cabo e litoral do pau-brasil",
+    "relation": "tecnologia náutica leva à Índia; a prioridade asiática deixa o Brasil no escambo até as ameaças de 1530",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-grandes-navegacoes-e-conquista-colonial-recorte1.png",
+      "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-grandes-navegacoes-e-conquista-colonial-recorte1-dark.png",
+      "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-grandes-navegacoes-e-conquista-colonial-recorte2.png",
+      "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-grandes-navegacoes-e-conquista-colonial-recorte2-dark.png",
+      "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-grandes-navegacoes-e-conquista-colonial-recorte3.png",
+      "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-grandes-navegacoes-e-conquista-colonial-recorte3-dark.png",
+      "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-grandes-navegacoes-e-conquista-colonial-390-light.png",
+      "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-grandes-navegacoes-e-conquista-colonial-390-dark.png",
+      "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-grandes-navegacoes-e-conquista-colonial-768-light.png",
+      "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-grandes-navegacoes-e-conquista-colonial-768-dark.png"
+    ],
+    "notes": "Redesenhada em 25/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
   },
   {
     "id": "summary-historia-a-montagem-da-colonizacao",
@@ -3064,11 +3123,22 @@
     "title": "A Montagem da Colonização",
     "primary": "scene",
     "artifact": "criterios-conjuntivos",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "balança de fatores (metáfora declarada)",
+    "relation": "resistência, epidemias e oposição jesuíta só juntas explicam a passagem ao tráfico transatlântico",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-a-montagem-da-colonizacao-recorte1.png",
+      "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-a-montagem-da-colonizacao-recorte1-dark.png",
+      "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-a-montagem-da-colonizacao-recorte2.png",
+      "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-a-montagem-da-colonizacao-recorte2-dark.png",
+      "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-a-montagem-da-colonizacao-recorte3.png",
+      "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-a-montagem-da-colonizacao-recorte3-dark.png",
+      "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-a-montagem-da-colonizacao-390-light.png",
+      "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-a-montagem-da-colonizacao-390-dark.png",
+      "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-a-montagem-da-colonizacao-768-light.png",
+      "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-a-montagem-da-colonizacao-768-dark.png"
+    ],
+    "notes": "Redesenhada em 25/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
   },
   {
     "id": "summary-historia-dinamica-interna-da-colonizacao",
@@ -3076,11 +3146,22 @@
     "title": "Dinâmica Interna da Colonização",
     "primary": "instrument",
     "artifact": "dinamica-interna-colonizacao",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "engenho com casa-grande, senzala, quilombo e roças",
+    "relation": "hierarquia, resistência e atividades subsidiárias convivem na mesma sociedade açucareira",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-dinamica-interna-da-colonizacao-recorte1.png",
+      "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-dinamica-interna-da-colonizacao-recorte1-dark.png",
+      "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-dinamica-interna-da-colonizacao-recorte2.png",
+      "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-dinamica-interna-da-colonizacao-recorte2-dark.png",
+      "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-dinamica-interna-da-colonizacao-recorte3.png",
+      "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-dinamica-interna-da-colonizacao-recorte3-dark.png",
+      "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-dinamica-interna-da-colonizacao-390-light.png",
+      "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-dinamica-interna-da-colonizacao-390-dark.png",
+      "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-dinamica-interna-da-colonizacao-768-light.png",
+      "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-dinamica-interna-da-colonizacao-768-dark.png"
+    ],
+    "notes": "Redesenhada em 25/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
   },
   {
     "id": "summary-historia-disputas-europeias-no-brasil-colonial",
@@ -3100,11 +3181,22 @@
     "title": "A Interiorização da Colonização",
     "primary": "instrument",
     "artifact": "interiorizacao-colonial",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "contorno do Brasil com três vetores",
+    "relation": "bandeiras saem de São Paulo, o ouro puxa gente e a capital para o Rio, o gado sobe o São Francisco",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-a-interiorizacao-da-colonizacao-recorte1.png",
+      "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-a-interiorizacao-da-colonizacao-recorte1-dark.png",
+      "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-a-interiorizacao-da-colonizacao-recorte2.png",
+      "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-a-interiorizacao-da-colonizacao-recorte2-dark.png",
+      "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-a-interiorizacao-da-colonizacao-recorte3.png",
+      "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-a-interiorizacao-da-colonizacao-recorte3-dark.png",
+      "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-a-interiorizacao-da-colonizacao-390-light.png",
+      "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-a-interiorizacao-da-colonizacao-390-dark.png",
+      "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-a-interiorizacao-da-colonizacao-768-light.png",
+      "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-a-interiorizacao-da-colonizacao-768-dark.png"
+    ],
+    "notes": "Redesenhada em 25/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
   },
   {
     "id": "summary-historia-a-mineracao-no-brasil-colonial",
@@ -3112,11 +3204,22 @@
     "title": "A Mineração no Brasil Colonial",
     "primary": "instrument",
     "artifact": "mineracao-colonial",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "casa de fundição, barras e cota anual",
+    "relation": "o quinto separa 20%; a fundição sela o restante e torna ilegal o pó; a derrama cobra de todos a diferença até a cota",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-a-mineracao-no-brasil-colonial-recorte1.png",
+      "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-a-mineracao-no-brasil-colonial-recorte1-dark.png",
+      "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-a-mineracao-no-brasil-colonial-recorte2.png",
+      "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-a-mineracao-no-brasil-colonial-recorte2-dark.png",
+      "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-a-mineracao-no-brasil-colonial-recorte3.png",
+      "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-a-mineracao-no-brasil-colonial-recorte3-dark.png",
+      "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-a-mineracao-no-brasil-colonial-390-light.png",
+      "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-a-mineracao-no-brasil-colonial-390-dark.png",
+      "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-a-mineracao-no-brasil-colonial-768-light.png",
+      "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-a-mineracao-no-brasil-colonial-768-dark.png"
+    ],
+    "notes": "Redesenhada em 25/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
   },
   {
     "id": "summary-historia-a-crise-do-antigo-sistema-colonial",
@@ -3124,11 +3227,22 @@
     "title": "A Crise do Antigo Sistema Colonial",
     "primary": "scene",
     "artifact": "tipologia",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "duas revoltas e a corrente do pacto colonial",
+    "relation": "Inconfidência e Conjuração Baiana diferem em composição e pauta, contra o mesmo pacto",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-a-crise-do-antigo-sistema-colonial-recorte1.png",
+      "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-a-crise-do-antigo-sistema-colonial-recorte1-dark.png",
+      "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-a-crise-do-antigo-sistema-colonial-recorte2.png",
+      "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-a-crise-do-antigo-sistema-colonial-recorte2-dark.png",
+      "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-a-crise-do-antigo-sistema-colonial-recorte3.png",
+      "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-a-crise-do-antigo-sistema-colonial-recorte3-dark.png",
+      "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-a-crise-do-antigo-sistema-colonial-390-light.png",
+      "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-a-crise-do-antigo-sistema-colonial-390-dark.png",
+      "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-a-crise-do-antigo-sistema-colonial-768-light.png",
+      "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-a-crise-do-antigo-sistema-colonial-768-dark.png"
+    ],
+    "notes": "Redesenhada em 25/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
   },
   {
     "id": "summary-historia-a-independencia-do-brasil",

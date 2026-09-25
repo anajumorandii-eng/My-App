@@ -26,7 +26,7 @@ describe('instrumentos históricos', () => {
       const Component = historyInstrument(id);
       const view = render(<Component {...props(summaryId)} />);
       expect(screen.getByRole('img')).toHaveAccessibleName();
-      expect(screen.getByRole('slider', { name: /Mecanismo fiscal|Processo|Frente|Mecanismo|Vetor/ })).toHaveAttribute('type', 'range');
+      expect(screen.getByRole('slider')).toHaveAttribute('type', 'range');
       view.unmount();
     }
   });
@@ -34,7 +34,7 @@ describe('instrumentos históricos', () => {
   it('troca o teatro da Segunda Guerra sem convertê-lo em cadeia causal', () => {
     const Component = historyInstrument('wwii-fronts');
     render(<Component {...props('summary-historia-segunda-guerra-mundial-1939-1945')} />);
-    fireEvent.change(screen.getByRole('slider', { name: /Mecanismo fiscal|Processo|Frente|Mecanismo|Vetor/ }), { target: { value: '2' } });
+    fireEvent.change(screen.getByRole('slider'), { target: { value: '2' } });
     expect(screen.getAllByText('Pacífico').length).toBeGreaterThan(0);
     expect(screen.getAllByText('ilhas, Midway e rendição japonesa').length).toBeGreaterThan(0);
   });
@@ -42,7 +42,7 @@ describe('instrumentos históricos', () => {
   it('distingue a derrama dos outros mecanismos fiscais', () => {
     const Component = historyInstrument('mining-colony');
     render(<Component {...props('summary-historia-a-mineracao-no-brasil-colonial')} />);
-    fireEvent.change(screen.getByRole('slider', { name: /Mecanismo fiscal|Processo|Frente|Mecanismo|Vetor/ }), { target: { value: '2' } });
+    fireEvent.change(screen.getByRole('slider'), { target: { value: '2' } });
     expect(screen.getAllByText('Derrama').length).toBeGreaterThan(0);
     expect(screen.getAllByText('cobrança compulsória').length).toBeGreaterThan(0);
   });

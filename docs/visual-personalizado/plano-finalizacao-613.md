@@ -4,7 +4,7 @@ Data: 25/09/2026. Continuação da reconstrução Motion, incorporando a main em
 
 ## Estado verificado
 
-- 613 capítulos no inventário, 22 em validação, 591 sem revisão registrada e 0 aprovados.
+- 613 capítulos no inventário, 28 em validação, 585 sem revisão registrada e 0 aprovados.
 - Presença de representação não equivale a movimento explicativo nem a aprovação visual.
 - Código e evidências novos: `C:\Users\Ana Julia\Documents\CRIVO\My-App`.
 - Repositório Git independente; cópia de origem preservada. Dependências reutilizadas por junction em `C:\wt-crivo-ecology-review\node_modules`; cache da prévia em `.scratch/vite-cache`.
@@ -40,7 +40,7 @@ A fila completa e única de IDs está em [fila-finalizacao-613.csv](fila-finaliz
 | Biologia | 72 | 8 | 64 |
 | Matemática | 83 | 0 | 83 |
 | Geografia | 63 | 6 | 57 |
-| História | 49 | 2 | 47 |
+| História | 49 | 8 | 41 |
 | Filosofia | 35 | 0 | 35 |
 | Sociologia | 27 | 0 | 27 |
 | Literatura | 37 | 0 | 37 |
@@ -53,3 +53,8 @@ A fila completa e única de IDs está em [fila-finalizacao-613.csv](fila-finaliz
 ## Lote desta retomada
 
 Ondulatória, ondas eletromagnéticas, som, Termoquímica I e II, evolução dos modelos atômicos e coração/vasos. Detalhes e limites em [expansao-motion-2026-09-25.md](expansao-motion-2026-09-25.md). As demais 591 cenas exigem inspeção individual; esta fila não declara que todas precisam ser reescritas do zero.
+
+
+## Integração com o cloud
+
+As PRs #212 e #213 já publicaram revisões de História e Geografia. A integração preserva seus componentes e evidências. Os totais acima incorporam seis revisões adicionais de História. O esboço local de recursos comuns e quinto está preservado na branch `backup/local-motion-before-cloud`, commit `151ed6c`, e foi retirado da entrega por não ter completado a validação e sobrepor o trabalho publicado.
