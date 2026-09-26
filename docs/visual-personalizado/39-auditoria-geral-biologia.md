@@ -19,17 +19,15 @@ ou rolagem lateral em 390px.
 
 ## 1. Resumo por veredito
 
-| Veredito | Capítulos | Engines |
-| --- | --- | --- |
-| **Manter** | 10 | board/CarbonCycleBoard, MembraneBoard, EnzymeBoard, PhotosynthesisBoard, CellDivisionBoard, MendelBoard(2), FungiBoard, BloodTypeBoard, HeartCirculationBoard |
-| **Ajustar** (mecanismo próprio existe, mas com defeito pontual ou densidade a rever) | 34 | 27 instrument/Biology(Remaining)Board + 15 scene/autoral − sobreposições, ver §2 |
-| **Redesenhar** (motor genérico, sem mecanismo do capítulo) | 28 | scene/tipologia (8, exceto mutações), cadeia-de-derivação genérica (6), escala-de-graus (3), contraste-de-posições (1), + 2 casos de `default` no BiologyRemainingBoard que são puro motor genérico disfarçado de instrumento |
-| **experiment** (motor próprio, fora do escopo scene/board/instrument) | 1 | ecology (aviso: não avaliado pela régua dos boards, mas é mecanismo genuíno) |
+| Veredito | Capítulos |
+| --- | ---: |
+| **Manter** | 23 |
+| **Ajustar** | 29 |
+| **Redesenhar** | 20 |
 
-Total: 10 manter + ~30 ajustar + ~30 redesenhar + 1 experiment = 72 (a linha
-divisória entre "ajustar" e "redesenhar" nos 27 instrumentos genéricos por
-switch-case está detalhada no §2, pois a qualidade varia muito caso a caso
-dentro do mesmo arquivo).
+Total: 72. Contagem recalculada a partir dos vereditos por capítulo no fim do
+relatório; os agrupamentos por engine no §2 descrevem os mecanismos, mas não
+constituem uma contagem sem sobreposição.
 
 ## 2. Por engine
 

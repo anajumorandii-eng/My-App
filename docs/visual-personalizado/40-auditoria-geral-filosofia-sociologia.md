@@ -19,7 +19,7 @@ capítulos × 2 recortes), total 46.
 | tipologia | 6 | 0 | 0 | 6 |
 | camadas-de-determinacao | 5 | 0 | 0 | 5 |
 | escala-de-graus | 5 | 0 | 0 | 5 |
-| movimento-dialetico | 3 | 0 | 1 (Sócrates) | 2 |
+| movimento-dialetico | 3 | 0 | 1 (Hegel) | 2 |
 | criterios-conjuntivos | 3 | 0 | 0 | 3 |
 | grade-de-eixos | 2 | 0 | 0 | 2 |
 | myth (experimento) | 1 | 1 | 0 | 0 |

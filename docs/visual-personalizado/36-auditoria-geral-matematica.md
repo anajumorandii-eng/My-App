@@ -20,9 +20,9 @@ Veredito por capítulo (contagem):
 
 | Veredito | Capítulos |
 | --- | --- |
-| Manter | ~71 |
-| Ajustar | 9 |
-| Redesenhar | 3 |
+| Manter | 71 |
+| Ajustar | 5 |
+| Redesenhar | 7 |
 
 Por engine (16 engines, 83 capítulos):
 

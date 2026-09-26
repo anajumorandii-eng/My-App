@@ -64,6 +64,8 @@ export interface BoardEntry {
    * adiabática continua valendo para o capítulo que trate do mesmo fenômeno.
    */
   keywords: string[];
+  /** Termos que indicam outro objeto matemático, apesar do casamento positivo. */
+  excludedKeywords?: string[];
   Component: ComponentType<BoardProps>;
 }
 
@@ -132,6 +134,7 @@ export const BOARDS: BoardEntry[] = [
     id: 'trigonometria',
     subject: 'Matemática',
     keywords: ['trigonometria'],
+    excludedKeywords: ['triângulo retângulo'],
     Component: TrigCircleBoard,
   },
   {
@@ -250,6 +253,7 @@ export const BOARDS: BoardEntry[] = [
     id: 'contagem',
     subject: 'Matemática',
     keywords: ['contagem'],
+    excludedKeywords: ['probabilidade'],
     Component: CountingBoard,
   },
   {
@@ -276,7 +280,9 @@ export function findBoard(
 ): BoardEntry | null {
   const text = chapterText(summary);
   return BOARDS.find(
-    (board) => board.subject === summary.subject && board.keywords.every((k) => text.includes(k)),
+    (board) => board.subject === summary.subject
+      && board.keywords.every((k) => text.includes(k))
+      && !(board.excludedKeywords?.some((k) => text.includes(k)) ?? false),
   ) ?? null;
 }
 

@@ -6,9 +6,9 @@ Data: 26/09/2026. Só leitura de código e navegador (1440 claro / 390 escuro); 
 
 | Veredito | Capítulos |
 | --- | --- |
-| Manter | 60 |
-| Ajustar | 4 |
-| Redesenhar | 21 |
+| Manter | 64 |
+| Ajustar | 3 |
+| Redesenhar | 18 |
 
 Por engine (85 = soma):
 
@@ -27,7 +27,7 @@ Por engine (85 = soma):
 | VB (VectorsInstrument) | 3 | 0 | 0 | 3 |
 | ThermoBoard | 3 | 3 | 0 | 0 |
 | OpticsBoard | 3 | 3 | 0 | 0 |
-| LensBoard | 3 | 1 | 2 | 0 |
+| LensBoard | 3 | 2 | 1 | 0 |
 | CalorimetryBoard | 2 | 2 | 0 | 0 |
 | KBoard (KinematicsInstrument) | 2 | 2 | 0 | 0 |
 | autoral (cena própria) | 5 | 5 | 0 | 0 |
@@ -40,7 +40,7 @@ Por engine (85 = soma):
 | AdiabaticBoard | 1 | 0 | 0 | 1 |
 | CircuitBoard | 1 | 1 | 0 | 0 |
 | VisionDefectsBoard | 1 | 0 | 1 | 0 |
-| **Total** | **85** | **60** | **4** | **21** |
+| **Total** | **85** | **64** | **3** | **18** |
 
 **Cinco achados principais:**
 

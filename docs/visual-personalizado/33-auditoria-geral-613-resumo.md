@@ -8,14 +8,14 @@ Data: 26/09/2026. Depois de fechar História e Geografia (112 capítulos: 110 j�
 | --- | ---: | ---: | ---: | ---: | --- |
 | Redação, Entendimento de Texto, Atualidades | 71 | 25 | 35 | 11 | 34 |
 | Gramática, Língua Inglesa, Literatura | 80 | 29 | 19 | 32 | 35 |
-| Matemática | 83 | 71 | 9 | 3 | 36 |
-| Física | 85 | 60 | 4 | 21 | 37 |
+| Matemática | 83 | 71 | 5 | 7 | 36 |
+| Física | 85 | 64 | 3 | 18 | 37 |
 | Química | 48 | 22 | 19 | 7 | 38 |
-| Biologia | 72 | 22 | 22 | 28 | 39 |
+| Biologia | 72 | 23 | 29 | 20 | 39 |
 | Filosofia, Sociologia | 62 | 2 | 1 | 59 | 40 |
-| **Total (sem História/Geografia)** | **501** | **231 (46%)** | **109 (22%)** | **161 (32%)** | |
+| **Total (sem História/Geografia)** | **501** | **236 (47%)** | **111 (22%)** | **154 (31%)** | |
 
-Somando os 112 de História e Geografia (110 redesenhados, 2 ajustados, 0 pendentes), a aba Visual tem hoje 613 capítulos, dos quais 231 (38%) já estão bem servidos, 111 (18%) precisam de ajuste pontual e 271 (44%) precisam de redesenho — 110 já entregues, 161 ainda pendentes.
+Somando os 112 de História e Geografia (110 redesenhados, 2 ajustados, 0 pendentes), a aba Visual tem hoje 613 capítulos: 236 (38%) mantidos como estão, 113 (18%) classificados como ajustes e 264 (43%) classificados como redesenho. Os 110 redesenhos de História e Geografia já foram entregues; 154 dos demais seguem pendentes. Os totais são classificações da auditoria, não o estado atual de entrega.
 
 Matemática é a matéria mais bem resolvida (71 de 83 mantêm). Filosofia e Sociologia é a mais crítica: só 2 dos 62 capítulos passam na régua como estão.
 
@@ -34,7 +34,7 @@ Vários grupos acharam capítulos que abrem a **cena de outro capítulo**, ou mo
 - **Física**: `OrbitalInstrument` renderiza a mesma cena, byte a byte, para 3 dos 4 capítulos que atende (gravitação, dinâmica circular, órbitas — nenhum mostra órbita real). `LensBoard` faz o mesmo entre "Lentes: Estudo Gráfico" e "Estudo Analítico das Lentes".
 - **Biologia**: os ids `air-pollution` e `climate-pops` não têm `case` em `BiologyRemainingInstrument.tsx` e caem no `default` — telas idênticas para poluição do ar e aquecimento global.
 - **Redação**: a cena "tema" do `WritingInstrument` mostra sempre o texto fixo "EIXO amplo/TESE focada", coerente só com 8 dos 19 capítulos que a usam; nos outros 11 (Coerência Interna, Refutação etc.) o mecanismo mostrado não é o do capítulo.
-- **Literatura**: 4 dos 8 capítulos hoje contados como "cena autoral" (dentro dos 39/288 do CLAUDE.md) caem numa função genérica (`Landscape`) que desenha a mesma ilustração para pares de capítulos totalmente diferentes — a contagem do CLAUDE.md está inflada em até 4.
+- **Literatura**: 4 dos 8 capítulos marcados como cena autoral no inventário de Literatura caem numa função genérica (`Landscape`) que desenha a mesma ilustração para pares de capítulos diferentes. Eles não integram a contagem de 39/288 pranchas de Biologia, Física, Química e Matemática no CLAUDE.md.
 - **Filosofia**: Nietzsche e o Método Socrático usam a família `movimento-dialetico` (dois círculos que se fundem numa síntese, modelo hegeliano) para processos que **contradizem essa própria lógica** — a forma emprestada distorce o conteúdo, não só deixa de ilustrá-lo.
 
 ## Regressão ao anti-padrão do `.webp`
@@ -56,7 +56,7 @@ O CLAUDE.md documenta como corrigido o caso de cenas raster transparentes (`adia
 ## Documentação do próprio projeto desatualizada
 
 - CLAUDE.md, seção "Pranchas manipuláveis", lista como faltantes os instrumentos de plano analítico, figura plana, sólido, contagem/probabilidade, matriz e estatística — todos já existem (achado de Matemática, com linha exata em `visual-instruments/registry.ts`).
-- A contagem "39/288 capítulos com cena autoral" do CLAUDE.md está inflada em até 4, pelo achado de Literatura acima.
+- O inventário de Literatura deve distinguir suas quatro cenas próprias dos quatro usos compartilhados de `Landscape`; a contagem 39/288 do CLAUDE.md é de outras matérias.
 
 ## O que está bem
 
@@ -73,3 +73,10 @@ O CLAUDE.md documenta como corrigido o caso de cenas raster transparentes (`adia
 5. **Corrigir a documentação** (CLAUDE.md) nos dois pontos listados acima.
 
 A aprovação editorial de cada capítulo continua sendo só da Ana Júlia — este documento é auditoria técnica, não aprovação.
+
+## Correções posteriores à auditoria
+
+- As regressões raster de Newton e do pistão adiabático foram corrigidas no PR #221.
+- O registro deixou de atribuir a prancha de arranjos à introdução à probabilidade e o círculo unitário à trigonometria no triângulo retângulo. Ambos aparecem como lacunas explícitas até receberem cenas fiéis; isso não equivale a redesenho aprovado.
+- Poluição do ar e o capítulo sobre aquecimento global, POPs e biorremediação agora têm mecanismos visuais distintos no instrumento de Biologia. Ainda requerem avaliação editorial do capítulo completo.
+- As classificações da tabela acima são a fotografia da auditoria por capítulo; não foram reduzidas automaticamente por essas correções pontuais.

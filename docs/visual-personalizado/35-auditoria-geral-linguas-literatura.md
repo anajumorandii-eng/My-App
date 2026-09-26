@@ -161,7 +161,7 @@ Capturas novas: `literatura-machado-de-assis-*.png`, `literatura-clarice-lispect
 ### Cena autoral (`src/views/topic-scenes/families/LinguagensLiteratura.tsx`, 8 capítulos)
 
 **Achado principal desta auditoria.** Dos 8 capítulos de Literatura marcados como
-"autoral" no inventário (e contados nos "39 dos 288" do CLAUDE.md), só 4 têm arte
+"autoral" no inventário de Literatura, só 4 têm arte
 própria de fato: `Trovadorismo` (voz masculina/feminina e alvo direto/indireto nas
 quatro cantigas), `Pessoa` (três rostos com o gesto de cada heterônimo — mãos abertas de
 Caeiro, régua de Reis, engrenagens de Campos), `Vanguardas` (cinco ícones distintos por
@@ -184,8 +184,8 @@ verifica `chapterId.includes('contemporanea')` — dois valores possíveis, dois
 Isso é o empréstimo de ilustração entre capítulos que a régua proíbe no item 5 e que
 `docs/visual/PADRAO-VISUAL-OBRIGATORIO.md` chama de "proibido reutilizar uma ilustração
 de outro assunto para preencher espaço" — só que aqui os dois lados do empréstimo estão
-registrados como "autoral" no inventário, então a contagem de 39/288 cenas autorais do
-CLAUDE.md está inflada em até 4 capítulos que não têm cena própria nenhuma.
+registrados como "autoral" no inventário de Literatura. A contagem de 39/288
+do CLAUDE.md se refere exclusivamente a pranchas de Biologia, Física, Química e Matemática.
 
 Defeito visual adicional nas duas capturas: a legenda "voz · circulação · forma" e
 "paisagem · conflito · linguagem" (texto acentuado, `y="181"`) **cruza a própria linha
@@ -299,8 +299,8 @@ como "Texto Literário x Texto não Literário"). Manter.
 2. **4 dos 8 capítulos "autorais" de Literatura têm arte emprestada de outro capítulo**
    (função `Landscape`, `LinguagensLiteratura.tsx:55-61`) — o mesmo empréstimo que o
    `docs/visual/PADRAO-VISUAL-OBRIGATORIO.md` proíbe explicitamente, só que classificado
-   como cena autoral no inventário e na contagem de 39/288 do CLAUDE.md. Recomendo
-   corrigir essa contagem (ou marcar os 4 como "instrumento genérico", não "autoral")
+   como cena autoral no inventário de Literatura. Recomendo
+   marcar os 4 como cena compartilhada, não autoral específica,
    assim que o redesenho entrar em pauta.
 3. **Fonte efetiva pequena demais a 390 px em toda a Literatura instrumentada**: 7,0–7,6 px
    em `LiteraryTraitBoard` e nas cenas `Landscape`/`Pessoa`, 10,6 px em
