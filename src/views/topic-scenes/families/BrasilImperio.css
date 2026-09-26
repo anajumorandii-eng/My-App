@@ -1,0 +1,124 @@
+.bi-paper { fill: #f7f0e2; stroke: #c2b49c; stroke-width: 2; }
+.bi-kicker { fill: #73414d; font: 800 13px system-ui, sans-serif; letter-spacing: .09em; }
+.bi-label { fill: #2c3937; font: 800 13.5px system-ui, sans-serif; }
+.bi-on { fill: #873f4f; }
+.bi-small { fill: #4f4a42; font: 600 11px system-ui, sans-serif; }
+.bi-tiny { fill: #5a5250; font: 700 9.5px system-ui, sans-serif; }
+.bi-strong { fill: #2c3937; font-weight: 800; }
+.bi-warn { fill: #a8432a; font-weight: 800; }
+.bi-foot { fill: #5a5250; font: 600 11px system-ui, sans-serif; }
+.bi-hand { fill: #9a3b1f; font: 700 17px Kalam, 'Segoe Print', cursive; }
+.bi-hand-sm { fill: #9a3b1f; font: 700 13px Kalam, 'Segoe Print', cursive; }
+.bi-date { fill: #873f4f; font: 800 17px Georgia, serif; }
+.bi-panel { fill: #efe6d2; stroke: #c2b49c; stroke-width: 1.6; }
+.bi-panel-title { fill: #873f4f; font: 800 11.5px system-ui, sans-serif; letter-spacing: .05em; }
+
+.bi-crown { fill: #f2c14e; stroke: #b3791a; stroke-width: 1.4; stroke-linejoin: round; }
+.bi-crown-band { fill: #d99a2b; stroke: #b3791a; stroke-width: 1; }
+.bi-jewel { fill: #a8432a; }
+.bi-reach { fill: none; stroke: #b3791a; stroke-width: 2.4; stroke-linecap: round; }
+.bi-block { fill: #fbf7ee; stroke: #8b7a5c; stroke-width: 1.6; }
+.bi-icon { fill: none; stroke: #5c4a3a; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.bi-plinth { fill: #873f4f; }
+.bi-plinth-text { fill: #fbf1e3; font: 800 10px system-ui, sans-serif; letter-spacing: .06em; }
+.bi-cross { fill: none; stroke: #a8432a; stroke-width: 3.4; stroke-linecap: round; }
+.bi-arrow-static { fill: none; stroke: #7c6a4f; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.bi-arrow { fill: none; stroke: #a8432a; stroke-width: 2.6; stroke-linecap: round; stroke-dasharray: 1 0; }
+.bi-scroll { fill: #fbf1dc; stroke: #9b6a3f; stroke-width: 1.6; }
+.bi-scroll-line { stroke: #b8a88a; stroke-width: 2; stroke-linecap: round; }
+.bi-seal { fill: #a8432a; transform-box: fill-box; transform-origin: center; }
+.bi-dot { fill: #477981; transform-box: fill-box; transform-origin: center; }
+.bi-dot-warn { fill: #a8432a; }
+.bi-tick { stroke: #7c6a4f; stroke-width: 1.4; }
+.bi-pole { stroke: #5c3b20; stroke-width: 3; stroke-linecap: round; }
+.bi-flag { fill: #3f6f8f; stroke: #2c4f66; stroke-width: 1; transform-box: fill-box; transform-origin: left center; }
+.bi-star { fill: #f2c14e; }
+.bi-gauge { fill: #e5ddc9; }
+.bi-gauge-fill { fill: #b3564a; }
+
+.bi-face { fill: #e2b48f; }
+.bi-coat { fill: #56656a; }
+.bi-coat-royal { fill: #3f6f5a; }
+.bi-coat-plain { fill: #c49a6c; }
+.bi-coat-green { fill: #6f8f5a; }
+.bi-coat-dark { fill: #3d3a36; }
+.bi-coat-army { fill: #477981; }
+.bi-kepi { fill: #2f4f5a; stroke: #2f4f5a; stroke-width: 1.4; }
+.bi-hat { fill: #2c2a24; stroke: #2c2a24; stroke-width: 1.4; }
+.bi-cap { fill: #a8432a; stroke: #a8432a; stroke-width: 1.4; }
+
+.bi-land { fill: #efe5cc; stroke: #8b7a5c; stroke-width: 1.8; stroke-linejoin: round; }
+.bi-throne { fill: none; stroke: #873f4f; stroke-width: 2; stroke-linecap: round; }
+.bi-flame { fill: #e0762f; stroke: #a8432a; stroke-width: 1.2; transform-box: fill-box; transform-origin: bottom; }
+.bi-band { fill: rgb(135 63 79 / .1); stroke: rgb(135 63 79 / .35); stroke-width: 1; }
+.bi-bar { fill: #e5ddc9; }
+.bi-bar-on { fill: #c2562f; }
+.bi-bar-text { fill: #fff7ea; font: 800 9.5px system-ui, sans-serif; }
+.bi-marker { stroke: #873f4f; stroke-width: 1.6; stroke-dasharray: 4 3; }
+.bi-cattle { fill: #9b6a3f; stroke: #5c3b20; stroke-width: 1.6; stroke-linecap: round; }
+
+.bi-ground { stroke: #7c6a4f; stroke-width: 2.4; stroke-linecap: round; }
+.bi-capital { fill: #d9ccb0; stroke: #8b7a5c; stroke-width: 1.4; }
+.bi-column { fill: #ece2cb; stroke: #8b7a5c; stroke-width: 1.4; }
+.bi-flute { stroke: #cdbf9f; stroke-width: 1.4; }
+.bi-badge { fill: #873f4f; }
+.bi-badge-icon { fill: none; stroke: #fbf1e3; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+.bi-bean { fill: #e08a5c; }
+.bi-crack { fill: none; stroke: #a8432a; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+.bi-beam { fill: #9b6a3f; stroke: #5c3b20; stroke-width: 1.6; }
+.bi-throne-big { fill: #873f4f; stroke: #5a2a36; stroke-width: 1.6; stroke-linejoin: round; }
+.bi-cushion { fill: #d99a2b; }
+
+.bi-tier { fill: #eadfc6; stroke: #a3927a; stroke-width: 1.6; stroke-linejoin: round; }
+.bi-house { fill: #fbf7ee; stroke: #7c5534; stroke-width: 1.6; stroke-linejoin: round; }
+.bi-tie { fill: none; stroke: #9b6a3f; stroke-width: 1.4; stroke-dasharray: 3 3; }
+.bi-ballot { fill: #fbf7ee; stroke: #873f4f; stroke-width: 1.4; }
+.bi-cup { fill: #6e4526; stroke: #3d2614; stroke-width: 1.2; }
+.bi-jug { fill: #fbfbf6; stroke: #7c6a4f; stroke-width: 1.4; stroke-linejoin: round; }
+.bi-rope { fill: none; stroke: #9b6a3f; stroke-width: 3; stroke-linecap: round; }
+.bi-stamp { fill: none; stroke: #a8432a; stroke-width: 2.4; }
+.bi-stamp-text { fill: #a8432a; font: 800 11px system-ui, sans-serif; letter-spacing: .12em; }
+.bi-ship { fill: #9b6a3f; stroke: #5c3b20; stroke-width: 1.4; stroke-linejoin: round; }
+.bi-sack { fill: #c9ae7d; stroke: #7c5534; stroke-width: 1; }
+.bi-sack-big { fill: #d9c39a; stroke: #7c5534; stroke-width: 1.6; stroke-linejoin: round; }
+.bi-sack-tie { stroke: #7c5534; stroke-width: 2.4; stroke-linecap: round; }
+.bi-sack-text { fill: #6e4526; font: italic 700 10px Georgia, serif; }
+.bi-axis { fill: none; stroke: #7c6a4f; stroke-width: 1.6; }
+.bi-price { fill: none; stroke: #6e4526; stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; }
+.bi-rifle { stroke: #5c3b20; stroke-width: 3; stroke-linecap: round; }
+.bi-factory { fill: #b8a88a; stroke: #5c4a3a; stroke-width: 1.6; stroke-linejoin: round; }
+.bi-easel { fill: none; stroke: #7c5534; stroke-width: 2.4; stroke-linecap: round; }
+.bi-canvas { fill: #fbf7ee; stroke: #7c5534; stroke-width: 1.4; }
+.bi-paint { fill: none; stroke: #3f6f8f; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+.bi-palette { fill: #e5b76a; stroke: #7c5534; stroke-width: 1.2; }
+
+.dark .bi-paper { fill: #22302f; stroke: #5b6b67; }
+.dark .bi-kicker, .dark .bi-panel-title, .dark .bi-date { fill: #f1c8ab; }
+.dark .bi-label, .dark .bi-strong { fill: #f4ead7; }
+.dark .bi-on { fill: #ffd095; }
+.dark .bi-small, .dark .bi-tiny, .dark .bi-foot { fill: #d3ddcf; }
+.dark .bi-warn { fill: #f1a27f; }
+.dark .bi-hand, .dark .bi-hand-sm { fill: #f1a27f; }
+.dark .bi-panel { fill: #2d3d3b; stroke: #6e8f88; }
+.dark .bi-block, .dark .bi-scroll, .dark .bi-canvas, .dark .bi-house { fill: #34443d; stroke: #b9b2a2; }
+.dark .bi-icon, .dark .bi-arrow-static, .dark .bi-axis { stroke: #d3ddcf; }
+.dark .bi-tick, .dark .bi-ground { stroke: #b9b2a2; }
+.dark .bi-gauge, .dark .bi-bar { fill: #3f4e4b; }
+.dark .bi-land, .dark .bi-tier { fill: #34443d; stroke: #b9b2a2; }
+.dark .bi-column { fill: #4a5a55; stroke: #b9b2a2; }
+.dark .bi-capital { fill: #5d6b66; stroke: #b9b2a2; }
+.dark .bi-flute { stroke: #6e7f79; }
+.dark .bi-throne, .dark .bi-marker { stroke: #f1c8ab; }
+.dark .bi-band { fill: rgb(241 200 171 / .08); stroke: rgb(241 200 171 / .35); }
+.dark .bi-arrow, .dark .bi-crack, .dark .bi-cross { stroke: #f1a27f; }
+.dark .bi-hat, .dark .bi-coat-dark { fill: #b9b2a2; stroke: #b9b2a2; }
+.dark .bi-tie, .dark .bi-rope { stroke: #d9a877; }
+.dark .bi-stamp { stroke: #f1a27f; } .dark .bi-stamp-text { fill: #f1a27f; }
+.dark .bi-price { stroke: #d9a877; }
+.dark .bi-sack-big { fill: #8a7552; stroke: #d9c39a; }
+.dark .bi-sack-text { fill: #f4ead7; }
+.dark .bi-easel { stroke: #d9a877; }
+.dark .bi-pole { stroke: #d9a877; }
+.bi-head { fill: #a8432a; }
+.dark .bi-head { fill: #f1a27f; }
+.dark .bi-rifle, .dark .bi-cattle { stroke: #d9a877; }

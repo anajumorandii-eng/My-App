@@ -5,6 +5,8 @@ import type { SceneEntry } from '../types';
 import './HistoriaGeografia.css';
 import './GeografiaFisica.css';
 import { ClimateMap, DomainsMap, EarthSeasons, ReliefProfile, RockCycle, SoilProfiles } from './GeografiaFisica';
+import './BrasilImperio.css';
+import { EmpireDecline, OligarchicDecline, OligarchyPyramid, RegencyRevolts, StateFormation } from './BrasilImperio';
 
 export const HISTORIA_GEOGRAFIA_IDS: ReadonlySet<string> = new Set([
   'summary-historia-revolucao-francesa',
@@ -20,7 +22,21 @@ export const HISTORIA_GEOGRAFIA_IDS: ReadonlySet<string> = new Set([
   'summary-geografia-climatologia-do-brasil',
   'summary-geografia-dominios-morfoclimaticos',
   'summary-geografia-geologia-e-geomorfologia',
+  'summary-historia-brasil-imperio-formacao-do-estado-nacional-brasileiro',
+  'summary-historia-brasil-imperio-o-periodo-regencial-1831-1840',
+  'summary-historia-brasil-imperio-o-declinio-do-segundo-reinado',
+  'summary-historia-ascensao-e-dominio-das-oligarquias',
+  'summary-historia-a-primeira-republica-o-declinio-oligarquico-1889-1930',
 ]);
+
+// Cenas que cuidam do próprio ritmo (usePaced) e só precisam do recorte.
+const SELF_PACED: Record<string, React.ComponentType<{ active: number }>> = {
+  'summary-historia-brasil-imperio-formacao-do-estado-nacional-brasileiro': StateFormation,
+  'summary-historia-brasil-imperio-o-periodo-regencial-1831-1840': RegencyRevolts,
+  'summary-historia-brasil-imperio-o-declinio-do-segundo-reinado': EmpireDecline,
+  'summary-historia-ascensao-e-dominio-das-oligarquias': OligarchyPyramid,
+  'summary-historia-a-primeira-republica-o-declinio-oligarquico-1889-1930': OligarchicDecline,
+};
 
 const FISICA: Record<string, React.ComponentType<{ active: number }>> = {
   'summary-geografia-movimentos-da-terra': EarthSeasons,
@@ -401,7 +417,8 @@ export function HistoriaGeografia({ entry }: { entry: SceneEntry }) {
       event.preventDefault();
       event.currentTarget.scrollLeft += event.key === 'ArrowRight' ? 120 : -120;
     }}>
-      {FISICA[entry.chapterId] ? React.createElement(FISICA[entry.chapterId], { active })
+      {SELF_PACED[entry.chapterId] ? React.createElement(SELF_PACED[entry.chapterId], { active })
+        : FISICA[entry.chapterId] ? React.createElement(FISICA[entry.chapterId], { active })
         : entry.chapterId === 'summary-historia-grandes-navegacoes-e-conquista-colonial' ? <Navigations active={active} t={transition} />
         : entry.chapterId === 'summary-historia-a-montagem-da-colonizacao' ? <Colonization active={active} t={transition} />
         : entry.chapterId === 'summary-historia-a-crise-do-antigo-sistema-colonial' ? <ColonialRevolts active={active} t={transition} />

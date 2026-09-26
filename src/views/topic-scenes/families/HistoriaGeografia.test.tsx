@@ -103,5 +103,23 @@ describe('pranchas de História e Geografia', () => {
     await user.click(screen.getByRole('button', { name: button }));
     expect(diagram).toHaveAttribute('aria-label', expect.stringContaining(focus));
   });
-});
 
+  it.each([
+    ['summary-historia-brasil-imperio-formacao-do-estado-nacional-brasileiro', /Poder Moderador acima dos três poderes/, 'nomeia senadores vitalícios', 'Abdicação de 1831', 'cala a revolta, não o problema'],
+    ['summary-historia-brasil-imperio-o-periodo-regencial-1831-1840', /Período Regencial.*1831 a 1845/, '1840: maioridade', 'Revoltas regenciais', 'não contém as províncias'],
+    ['summary-historia-brasil-imperio-o-declinio-do-segundo-reinado', /um apoio a menos faz balançar/, 'sem indenização', 'Perda simultânea', '15 nov. 1889'],
+    ['summary-historia-ascensao-e-dominio-das-oligarquias', /do eleitor dependente ao coronel/, 'eleitores dependentes', 'Café com leite', 'valorização do café'],
+    ['summary-historia-a-primeira-republica-o-declinio-oligarquico-1889-1930', /tenentismo, pelo movimento operário e pelo modernismo/, 'greve geral, SP 1917', 'Modernismo', 'na arte'],
+  ] as const)('desenha a estrutura de poder de %s', async (chapterId, name, text, button, after) => {
+    const user = userEvent.setup();
+    const entry = historia.find(item => item.chapterId === chapterId)!;
+    render(<HistoriaGeografia entry={entry} />);
+    const diagram = screen.getByRole('img', { name });
+    expect(diagram).toHaveTextContent(text);
+    const target = screen.getByRole('button', { name: button });
+    await user.click(target);
+    expect(target).toHaveAttribute('aria-pressed', 'true');
+    expect(diagram).toHaveTextContent(after);
+    expect(diagram).toHaveAttribute('aria-label', expect.stringContaining(`recorte ${entry.items.length}`));
+  });
+});

@@ -3328,11 +3328,22 @@
     "title": "Brasil Império: Formação do Estado Nacional Brasileiro",
     "primary": "scene",
     "artifact": "cadeia-de-derivacao",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "Poder Moderador acima dos três poderes e barra de insatisfação",
+    "relation": "a repressão de 1824 cala a revolta, mas a concentração de poder segue e acumula pressão até a abdicação de 1831",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/lote4-hg-2026-09-26/historia-brasil-imperio-formacao-do-estado-nacional-brasileiro-recorte1.png",
+      "docs/visual-personalizado/screenshots/lote4-hg-2026-09-26/historia-brasil-imperio-formacao-do-estado-nacional-brasileiro-recorte1-dark.png",
+      "docs/visual-personalizado/screenshots/lote4-hg-2026-09-26/historia-brasil-imperio-formacao-do-estado-nacional-brasileiro-recorte2.png",
+      "docs/visual-personalizado/screenshots/lote4-hg-2026-09-26/historia-brasil-imperio-formacao-do-estado-nacional-brasileiro-recorte2-dark.png",
+      "docs/visual-personalizado/screenshots/lote4-hg-2026-09-26/historia-brasil-imperio-formacao-do-estado-nacional-brasileiro-recorte3.png",
+      "docs/visual-personalizado/screenshots/lote4-hg-2026-09-26/historia-brasil-imperio-formacao-do-estado-nacional-brasileiro-recorte3-dark.png",
+      "docs/visual-personalizado/screenshots/lote4-hg-2026-09-26/historia-brasil-imperio-formacao-do-estado-nacional-brasileiro-390-light.png",
+      "docs/visual-personalizado/screenshots/lote4-hg-2026-09-26/historia-brasil-imperio-formacao-do-estado-nacional-brasileiro-390-dark.png",
+      "docs/visual-personalizado/screenshots/lote4-hg-2026-09-26/historia-brasil-imperio-formacao-do-estado-nacional-brasileiro-768-light.png",
+      "docs/visual-personalizado/screenshots/lote4-hg-2026-09-26/historia-brasil-imperio-formacao-do-estado-nacional-brasileiro-768-dark.png"
+    ],
+    "notes": "Redesenhada em 26/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
   },
   {
     "id": "summary-historia-brasil-imperio-o-periodo-regencial-1831-1840",
@@ -3340,11 +3351,22 @@
     "title": "Brasil Império: o Período Regencial (1831-1840)",
     "primary": "scene",
     "artifact": "tipologia",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "mapa das revoltas e linha do tempo 1831–1845",
+    "relation": "sem monarca adulto, revoltas regionais se sobrepõem; a Farroupilha dura além da Regência",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/lote4-hg-2026-09-26/historia-brasil-imperio-o-periodo-regencial-1831-1840-recorte1.png",
+      "docs/visual-personalizado/screenshots/lote4-hg-2026-09-26/historia-brasil-imperio-o-periodo-regencial-1831-1840-recorte1-dark.png",
+      "docs/visual-personalizado/screenshots/lote4-hg-2026-09-26/historia-brasil-imperio-o-periodo-regencial-1831-1840-recorte2.png",
+      "docs/visual-personalizado/screenshots/lote4-hg-2026-09-26/historia-brasil-imperio-o-periodo-regencial-1831-1840-recorte2-dark.png",
+      "docs/visual-personalizado/screenshots/lote4-hg-2026-09-26/historia-brasil-imperio-o-periodo-regencial-1831-1840-recorte3.png",
+      "docs/visual-personalizado/screenshots/lote4-hg-2026-09-26/historia-brasil-imperio-o-periodo-regencial-1831-1840-recorte3-dark.png",
+      "docs/visual-personalizado/screenshots/lote4-hg-2026-09-26/historia-brasil-imperio-o-periodo-regencial-1831-1840-390-light.png",
+      "docs/visual-personalizado/screenshots/lote4-hg-2026-09-26/historia-brasil-imperio-o-periodo-regencial-1831-1840-390-dark.png",
+      "docs/visual-personalizado/screenshots/lote4-hg-2026-09-26/historia-brasil-imperio-o-periodo-regencial-1831-1840-768-light.png",
+      "docs/visual-personalizado/screenshots/lote4-hg-2026-09-26/historia-brasil-imperio-o-periodo-regencial-1831-1840-768-dark.png"
+    ],
+    "notes": "Redesenhada em 26/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
   },
   {
     "id": "summary-historia-brasil-imperio-segundo-reinado-1840-1889",
@@ -3364,11 +3386,22 @@
     "title": "Brasil Império: o Declínio do Segundo Reinado",
     "primary": "scene",
     "artifact": "criterios-conjuntivos",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "plataforma da monarquia sobre três apoios",
+    "relation": "um apoio a menos faz balançar; clero, Exército e cafeicultores juntos derrubam o regime em 1889",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/lote4-hg-2026-09-26/historia-brasil-imperio-o-declinio-do-segundo-reinado-recorte1.png",
+      "docs/visual-personalizado/screenshots/lote4-hg-2026-09-26/historia-brasil-imperio-o-declinio-do-segundo-reinado-recorte1-dark.png",
+      "docs/visual-personalizado/screenshots/lote4-hg-2026-09-26/historia-brasil-imperio-o-declinio-do-segundo-reinado-recorte2.png",
+      "docs/visual-personalizado/screenshots/lote4-hg-2026-09-26/historia-brasil-imperio-o-declinio-do-segundo-reinado-recorte2-dark.png",
+      "docs/visual-personalizado/screenshots/lote4-hg-2026-09-26/historia-brasil-imperio-o-declinio-do-segundo-reinado-recorte3.png",
+      "docs/visual-personalizado/screenshots/lote4-hg-2026-09-26/historia-brasil-imperio-o-declinio-do-segundo-reinado-recorte3-dark.png",
+      "docs/visual-personalizado/screenshots/lote4-hg-2026-09-26/historia-brasil-imperio-o-declinio-do-segundo-reinado-390-light.png",
+      "docs/visual-personalizado/screenshots/lote4-hg-2026-09-26/historia-brasil-imperio-o-declinio-do-segundo-reinado-390-dark.png",
+      "docs/visual-personalizado/screenshots/lote4-hg-2026-09-26/historia-brasil-imperio-o-declinio-do-segundo-reinado-768-light.png",
+      "docs/visual-personalizado/screenshots/lote4-hg-2026-09-26/historia-brasil-imperio-o-declinio-do-segundo-reinado-768-dark.png"
+    ],
+    "notes": "Redesenhada em 26/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
   },
   {
     "id": "summary-historia-a-republica-da-espada",
@@ -3388,11 +3421,22 @@
     "title": "Ascensão e Domínio das Oligarquias",
     "primary": "scene",
     "artifact": "camadas-de-determinacao",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "pirâmide do eleitor dependente ao presidente",
+    "relation": "dependência vira voto de cabresto; apoio federal e votos no Congresso ligam governadores e presidente; SP e MG se revezam",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/lote4-hg-2026-09-26/historia-ascensao-e-dominio-das-oligarquias-recorte1.png",
+      "docs/visual-personalizado/screenshots/lote4-hg-2026-09-26/historia-ascensao-e-dominio-das-oligarquias-recorte1-dark.png",
+      "docs/visual-personalizado/screenshots/lote4-hg-2026-09-26/historia-ascensao-e-dominio-das-oligarquias-recorte2.png",
+      "docs/visual-personalizado/screenshots/lote4-hg-2026-09-26/historia-ascensao-e-dominio-das-oligarquias-recorte2-dark.png",
+      "docs/visual-personalizado/screenshots/lote4-hg-2026-09-26/historia-ascensao-e-dominio-das-oligarquias-recorte3.png",
+      "docs/visual-personalizado/screenshots/lote4-hg-2026-09-26/historia-ascensao-e-dominio-das-oligarquias-recorte3-dark.png",
+      "docs/visual-personalizado/screenshots/lote4-hg-2026-09-26/historia-ascensao-e-dominio-das-oligarquias-390-light.png",
+      "docs/visual-personalizado/screenshots/lote4-hg-2026-09-26/historia-ascensao-e-dominio-das-oligarquias-390-dark.png",
+      "docs/visual-personalizado/screenshots/lote4-hg-2026-09-26/historia-ascensao-e-dominio-das-oligarquias-768-light.png",
+      "docs/visual-personalizado/screenshots/lote4-hg-2026-09-26/historia-ascensao-e-dominio-das-oligarquias-768-dark.png"
+    ],
+    "notes": "Redesenhada em 26/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
   },
   {
     "id": "summary-historia-a-primeira-republica-o-declinio-oligarquico-1889-1930",
@@ -3400,11 +3444,22 @@
     "title": "A Primeira República: o Declínio Oligárquico (1889-1930)",
     "primary": "scene",
     "artifact": "camadas-de-determinacao",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "elite cafeeira no pedestal e três contestações",
+    "relation": "tenentismo, movimento operário e modernismo contestam a mesma ordem oligárquica em esferas diferentes",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/lote4-hg-2026-09-26/historia-a-primeira-republica-o-declinio-oligarquico-1889-1930-recorte1.png",
+      "docs/visual-personalizado/screenshots/lote4-hg-2026-09-26/historia-a-primeira-republica-o-declinio-oligarquico-1889-1930-recorte1-dark.png",
+      "docs/visual-personalizado/screenshots/lote4-hg-2026-09-26/historia-a-primeira-republica-o-declinio-oligarquico-1889-1930-recorte2.png",
+      "docs/visual-personalizado/screenshots/lote4-hg-2026-09-26/historia-a-primeira-republica-o-declinio-oligarquico-1889-1930-recorte2-dark.png",
+      "docs/visual-personalizado/screenshots/lote4-hg-2026-09-26/historia-a-primeira-republica-o-declinio-oligarquico-1889-1930-recorte3.png",
+      "docs/visual-personalizado/screenshots/lote4-hg-2026-09-26/historia-a-primeira-republica-o-declinio-oligarquico-1889-1930-recorte3-dark.png",
+      "docs/visual-personalizado/screenshots/lote4-hg-2026-09-26/historia-a-primeira-republica-o-declinio-oligarquico-1889-1930-390-light.png",
+      "docs/visual-personalizado/screenshots/lote4-hg-2026-09-26/historia-a-primeira-republica-o-declinio-oligarquico-1889-1930-390-dark.png",
+      "docs/visual-personalizado/screenshots/lote4-hg-2026-09-26/historia-a-primeira-republica-o-declinio-oligarquico-1889-1930-768-light.png",
+      "docs/visual-personalizado/screenshots/lote4-hg-2026-09-26/historia-a-primeira-republica-o-declinio-oligarquico-1889-1930-768-dark.png"
+    ],
+    "notes": "Redesenhada em 26/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
   },
   {
     "id": "summary-historia-a-era-vargas",
