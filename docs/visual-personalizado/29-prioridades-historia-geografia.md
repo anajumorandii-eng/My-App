@@ -70,3 +70,17 @@ Os seis capítulos usavam as famílias genéricas "tipologia" ou "cadeia de deri
 | Geologia e Geomorfologia | Corte com vulcão, câmara magmática, rio e bacia: o magma esfria em granito (cristais grandes) e basalto (pequenos), camadas se compactam e guardam um fóssil, faixas em profundidade se dobram sob calor e pressão. |
 
 Contornos e limites são aproximados e dizem isso na prancha. QA: todos os recortes a 1440 px nos dois temas sem colisão de texto; 390 e 768 px sem rolagem lateral da página. Em validação até a revisão da Ana Júlia.
+
+## Lote 4 — Brasil Império e Primeira República (26/09/2026)
+
+Os cinco capítulos usavam as famílias genéricas "cadeia de derivação", "tipologia", "critérios conjuntivos" e "camadas de determinação". As cenas novas ficam em `src/views/topic-scenes/families/BrasilImperio.tsx`; datas e nomes saem do resumo do capítulo. Segundo Reinado e República da Espada continuam com o instrumento `historicoFase` e ficam para a auditoria seguinte.
+
+| Capítulo | Agora |
+| --- | --- |
+| Formação do Estado Nacional | Coroa do Poder Moderador acima de Executivo, Legislativo e Judiciário, sobre a base da Constituição de 1824. Outorga: a Constituinte é riscada e o selo cai no documento; os três poderes do Moderador listados. Confederação do Equador: bandeira, pauta republicana e federalista, repressão e Frei Caneca — "cala a revolta, não o problema". Abdicação: a coroa passa de D. Pedro I ao filho criança. Uma barra embaixo acumula a insatisfação até 1831 (ilustrativa, e diz isso). |
+| Período Regencial | Contorno do Brasil com as quatro revoltas no lugar (Grão-Pará, Rio Grande do Sul, Bahia, Maranhão) e a corte no Rio; linha do tempo 1831–1845 mostra a sobreposição e a Farroupilha durando além da maioridade de 1840. |
+| Declínio do Segundo Reinado | Trono sobre uma plataforma e três colunas: clero, Exército e cafeicultores. Cada questão derruba uma coluna e a plataforma só balança; no recorte "Perda simultânea" as três cedem, a plataforma desaba e a coroa rola — 15 nov. 1889, sem resistência armada. Painel da abolição gradual (1871, 1885, 1888). |
+| Ascensão e Domínio das Oligarquias | Pirâmide do eleitor dependente ao presidente. Coronelismo: laços de emprego, moradia e terra; cabresto: as cédulas sobem nível a nível; política dos governadores: apoio federal desce e votos no Congresso sobem, com o carimbo da Comissão de Verificação; café com leite: SP e MG trocam de lado sobre o topo. |
+| Declínio Oligárquico | Elite cafeeira de SP e MG sobre sacas de café; tenentismo, movimento operário e modernismo apontam para o mesmo alvo a partir das armas, da fábrica e da arte; linha do tempo 1917–1930 destaca as datas de cada recorte; queda do preço do café em 1929 como gráfico ilustrativo. |
+
+QA: todos os recortes a 1440 px nos dois temas sem colisão nem texto fora da cena; 390 e 768 px sem rolagem lateral da página (`screenshots/lote4-hg-2026-09-26/`). Em validação até a revisão da Ana Júlia.
