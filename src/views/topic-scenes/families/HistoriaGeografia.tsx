@@ -14,6 +14,15 @@ import { HEADERS_LOTE7B, SCENES_LOTE7B } from './IdadeModerna';
 import { HEADERS_LOTE8, SCENES_LOTE8 } from './SeculoXX';
 import { HEADERS_LOTE9, SCENES_LOTE9 } from './GeografiaMundial';
 import { HEADERS_LOTE10, SCENES_LOTE10 } from './EconomiaGlobal';
+import { HEADERS_LOTE11, SCENES_LOTE11 } from './Geopolitica';
+import { HEADERS_LOTE12, SCENES_LOTE12 } from './OrienteMedio';
+import { HEADERS_LOTE13, SCENES_LOTE13 } from './HistoriaMundial';
+import { HEADERS_LOTE14, SCENES_LOTE14 } from './BrasilRepublica';
+import { HEADERS_LOTE15, SCENES_LOTE15 } from './Cartografia';
+import { HEADERS_LOTE16, SCENES_LOTE16 } from './AguasBiomas';
+import { HEADERS_LOTE17, SCENES_LOTE17 } from './AmbienteEnergia';
+import { HEADERS_LOTE18, SCENES_LOTE18 } from './Globalizacao';
+import { HEADERS_LOTE19, SCENES_LOTE19 } from './EconomiaBrasil';
 
 const BASE_IDS = [
   'summary-historia-revolucao-francesa',
@@ -50,6 +59,15 @@ const SELF_PACED: Record<string, React.ComponentType<{ active: number }>> = {
   ...SCENES_LOTE8,
   ...SCENES_LOTE9,
   ...SCENES_LOTE10,
+  ...SCENES_LOTE11,
+  ...SCENES_LOTE12,
+  ...SCENES_LOTE13,
+  ...SCENES_LOTE14,
+  ...SCENES_LOTE15,
+  ...SCENES_LOTE16,
+  ...SCENES_LOTE17,
+  ...SCENES_LOTE18,
+  ...SCENES_LOTE19,
 };
 
 // Rótulo do cabeçalho quando a cena não é de cronologia nem de geografia física.
@@ -61,6 +79,15 @@ const HEADERS: Record<string, string> = {
   ...HEADERS_LOTE8,
   ...HEADERS_LOTE9,
   ...HEADERS_LOTE10,
+  ...HEADERS_LOTE11,
+  ...HEADERS_LOTE12,
+  ...HEADERS_LOTE13,
+  ...HEADERS_LOTE14,
+  ...HEADERS_LOTE15,
+  ...HEADERS_LOTE16,
+  ...HEADERS_LOTE17,
+  ...HEADERS_LOTE18,
+  ...HEADERS_LOTE19,
 };
 
 export const HISTORIA_GEOGRAFIA_IDS: ReadonlySet<string> = new Set([...BASE_IDS, ...Object.keys(SELF_PACED)]);

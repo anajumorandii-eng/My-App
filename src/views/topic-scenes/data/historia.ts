@@ -1,4 +1,5 @@
 import type { SceneEntry } from '../types';
+import { HG_LOTE_ENTRIES } from './hgLotes';
 
 /** Capítulos de História sem cena-âncora, com o motivo. A lista é lida pelo
  *  teste de completude: nenhum capítulo pode ficar fora das duas listas.
@@ -11,7 +12,7 @@ import type { SceneEntry } from '../types';
  *  capítulo em que nenhuma seção, nem isoladamente, sustenta rivalidade
  *  genuína, derivação com dependência real, assimetria de base/camada ou
  *  tipos paralelos nomeados com frase-guarda-chuva explícita. */
-export const historiaSemCena: { chapterId: string; motivo: string }[] = [
+const historiaSemCenaBase: { chapterId: string; motivo: string }[] = [
   {
     chapterId: 'summary-historia-introducao-a-historia-e-primeiras-civilizacoes',
     motivo: 'Já tem experiência interativa própria (sources) no catálogo de topic-experiments, ocupando o mesmo slot do fluxo de Explorar.',
@@ -87,7 +88,7 @@ export const historiaSemCena: { chapterId: string; motivo: string }[] = [
  *  (4), escala-de-graus (1) e movimento-dialetico (1) — 9 capítulos.
  *  Task 4 completa os 27 restantes (cadeia-de-derivacao, tipologia,
  *  criterios-conjuntivos). */
-export const historia: SceneEntry[] = [
+const historiaBase: SceneEntry[] = [
   // Task 3 — família contraste-de-posicoes (3 capítulos)
   {
     chapterId: 'summary-historia-a-historia-e-o-brasil',
@@ -1026,3 +1027,9 @@ export const historia: SceneEntry[] = [
     ],
   },
 ];
+
+// Capítulos redesenhados depois da auditoria de 26/09: os recortes vêm dos
+// arquivos de lote e o capítulo deixa de contar como lacuna.
+const historiaLotes = HG_LOTE_ENTRIES.filter(entry => entry.chapterId.startsWith('summary-historia-'));
+export const historia: SceneEntry[] = [...historiaBase, ...historiaLotes];
+export const historiaSemCena = historiaSemCenaBase.filter(gap => !historiaLotes.some(entry => entry.chapterId === gap.chapterId));
