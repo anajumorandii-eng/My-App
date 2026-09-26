@@ -1,0 +1,127 @@
+/* Lote 6 (Era Vargas e Brasil atual). As classes bi-* vêm de BrasilImperio.css;
+   aqui ficam só as peças novas, cada uma com a variante do tema escuro. */
+.ev-on { fill: #873f4f; font-weight: 800; }
+.ev-icon { fill: none; stroke: #5c4a3a; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.ev-note { fill: #dfe8cf; stroke: #5c7a4a; stroke-width: 1.6; }
+.ev-sun { fill: #f2c14e; stroke: #b3791a; stroke-width: 1.4; }
+.ev-ray { fill: none; stroke: #b3791a; stroke-width: 2; stroke-linecap: round; }
+.ev-slip { fill: #fbf7ee; stroke: #873f4f; stroke-width: 1.6; }
+.ev-sheet { fill: #fbf7ee; stroke: #8b7a5c; stroke-width: 1.6; stroke-linejoin: round; }
+
+.ev-road { fill: none; stroke: #e2d4b4; stroke-width: 22; stroke-linecap: round; }
+.ev-road-line { fill: none; stroke: #fbf7ee; stroke-width: 2; stroke-dasharray: 8 7; }
+.ev-road-on { fill: none; stroke: #c98a4a; stroke-width: 6; stroke-linecap: round; opacity: .85; }
+.ev-medal { fill: #fbf7ee; stroke: #b8a88a; stroke-width: 1.8; }
+.ev-medal-past { fill: #f4ead3; stroke: #c98a4a; }
+.ev-medal-on { fill: #fff3dc; stroke: #873f4f; stroke-width: 2.6; }
+.ev-stop { fill: #fbf7ee; stroke: #8b7a5c; stroke-width: 2; }
+.ev-stop-on { fill: #873f4f; stroke: #5a2a36; }
+.ev-sash { fill: none; stroke: #3f8f5a; stroke-width: 4; stroke-linecap: round; }
+
+.ev-dome { fill: #e8dcc0; stroke: #8b7a5c; stroke-width: 1.6; }
+.ev-flagpole { fill: #3f8f5a; stroke: #5c3b20; stroke-width: 1.6; stroke-linejoin: round; }
+.ev-stone { fill: #ddd0b2; stroke: #8b7a5c; stroke-width: 1.4; }
+.ev-column { fill: #f1e8d4; stroke: #8b7a5c; stroke-width: 1.4; }
+.ev-door { fill: #6e5a45; }
+.ev-lock { fill: #a8432a; stroke: #6e2a18; stroke-width: 1.2; }
+.ev-lock-shackle { fill: none; stroke: #6e2a18; stroke-width: 2.4; }
+.ev-plank { fill: none; stroke: #7c5534; stroke-width: 6; stroke-linecap: round; }
+.ev-rope { fill: none; stroke: #9b6a3f; stroke-width: 3; stroke-linecap: round; }
+.ev-coat-anl { fill: #b3564a; }
+.ev-flag-aib { fill: #6f8f5a; stroke: #5c3b20; stroke-width: 2; stroke-linejoin: round; }
+.ev-flag-anl { fill: #c2562f; stroke: #5c3b20; stroke-width: 2; stroke-linejoin: round; }
+.ev-bars { fill: none; stroke: #4f4a42; stroke-width: 2.6; stroke-linecap: round; }
+.ev-clash { fill: none; stroke: #873f4f; stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; }
+.ev-spark { fill: none; stroke: #e0762f; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+.ev-burst { fill: #e0762f; stroke: #a8432a; stroke-width: 1; transform-box: fill-box; transform-origin: center; }
+.ev-calendar { fill: #fbf7ee; stroke: #8b7a5c; stroke-width: 1.6; }
+.ev-link { fill: #f4ecdb; stroke: #b8a88a; stroke-width: 5; }
+.ev-link-past { fill: #efe0cf; stroke: #c98a4a; }
+.ev-link-on { fill: #873f4f; stroke: #5a2a36; }
+.ev-link-text-on { fill: #fff3dc; font-weight: 800; }
+
+.ev-mini-house { fill: #fbf7ee; stroke: #7c5534; stroke-width: 1.4; stroke-linejoin: round; }
+.ev-radio { fill: #c9ae7d; stroke: #7c5534; stroke-width: 1.4; }
+.ev-steel { fill: #56656a; stroke: #2f3a3d; stroke-width: 1; }
+.ev-route { fill: none; stroke: #477981; stroke-width: 2.2; stroke-dasharray: 6 5; stroke-linecap: round; }
+.ev-frame { fill: #fbf7ee; stroke: #8b7a5c; stroke-width: 1.6; }
+
+.ev-factor { fill: #fbf7ee; stroke: #c2b49c; stroke-width: 1.6; }
+.ev-factor-on { fill: #fff3dc; stroke: #873f4f; stroke-width: 2.2; }
+.ev-card { fill: #3f6f8f; stroke: #2c4f66; stroke-width: 1.2; }
+.ev-card-ink { fill: #f2c14e; }
+.ev-card-line { fill: none; stroke: #f2c14e; stroke-width: 1.6; }
+.ev-up { fill: none; stroke: #3f8f5a; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+.ev-stream { fill: none; stroke: #c98a4a; stroke-width: 4; stroke-linecap: round; }
+.ev-gate { fill: #efe6d2; stroke: #8b7a5c; stroke-width: 2.4; }
+.ev-gate-open { fill: #873f4f; stroke: #5a2a36; }
+.ev-gate-text { fill: #2c3937; font: 800 17px Georgia, serif; }
+.ev-gate-open + .ev-gate-text { fill: #fff3dc; }
+.ev-ghost { fill: none; stroke: #b8a88a; stroke-width: 2; stroke-dasharray: 5 5; }
+.ev-gini { fill: none; stroke: #a8432a; stroke-width: 3.2; stroke-linecap: round; }
+.ev-decade { fill: rgb(135 63 79 / .18); }
+.ev-crisis { fill: #b3564a; }
+
+.ev-sea { fill: #d5e4e2; }
+.ev-wave { fill: none; stroke: #7fa3a6; stroke-width: 1.8; stroke-linecap: round; }
+.ev-shore { fill: #efe5cc; }
+.ev-beam { fill: rgb(242 193 78 / .22); stroke: rgb(179 121 26 / .35); stroke-width: 1; }
+.ev-hull { fill: #9b6a3f; stroke: #5c3b20; stroke-width: 1.6; stroke-linejoin: round; }
+.ev-sail { fill: #fbf7ee; stroke: #8b7a5c; stroke-width: 1.4; }
+.ev-trunk { stroke: #7c5534; stroke-width: 4; stroke-linecap: round; }
+.ev-canopy { fill: #6f8f5a; stroke: #4a6a3a; stroke-width: 1.4; }
+.ev-terra { fill: #5a3f2a; }
+.ev-pebble { fill: #a88a6a; }
+.ev-hut { fill: #d9b77a; stroke: #7c5534; stroke-width: 1.6; stroke-linejoin: round; }
+.ev-coat-urucum { fill: #c2562f; }
+.ev-coat-grey { fill: #b8b0a2; }
+.ev-bow { fill: none; stroke: #7c5534; stroke-width: 2.2; stroke-linecap: round; }
+.ev-shake { fill: none; stroke: #873f4f; stroke-width: 2.2; stroke-linejoin: round; stroke-linecap: round; }
+.ev-pot { fill: #c2562f; stroke: #7c3520; stroke-width: 1.4; stroke-linejoin: round; }
+.ev-quill { fill: #fbf7ee; stroke: #5c4a3a; stroke-width: 1.6; stroke-linejoin: round; }
+
+.dark .ev-on { fill: #ffd095; }
+.dark .ev-icon { stroke: #d3ddcf; }
+.dark .ev-note { fill: #3b4a33; stroke: #a8c28f; }
+.dark .ev-slip, .dark .ev-sheet, .dark .ev-calendar, .dark .ev-frame, .dark .ev-mini-house, .dark .ev-quill { fill: #34443d; stroke: #b9b2a2; }
+.dark .ev-road { stroke: #3f4e4b; }
+.dark .ev-road-line { stroke: #6e7f79; }
+.dark .ev-road-on { stroke: #d9a877; }
+.dark .ev-medal { fill: #2d3d3b; stroke: #6e8f88; }
+.dark .ev-medal-past { fill: #34443d; stroke: #d9a877; }
+.dark .ev-medal-on { fill: #3c4a3f; stroke: #ffd095; }
+.dark .ev-stop { fill: #2d3d3b; stroke: #b9b2a2; }
+.dark .ev-stop-on { fill: #ffd095; stroke: #f1c8ab; }
+.dark .ev-dome, .dark .ev-stone { fill: #4a5a55; stroke: #b9b2a2; }
+.dark .ev-column { fill: #5d6b66; stroke: #b9b2a2; }
+.dark .ev-door { fill: #1b2524; }
+.dark .ev-plank, .dark .ev-rope, .dark .ev-bow { stroke: #d9a877; }
+.dark .ev-bars { stroke: #d3ddcf; }
+.dark .ev-flag-aib, .dark .ev-flag-anl { stroke: #d9a877; }
+.dark .ev-clash { stroke: #f1c8ab; }
+.dark .ev-link { fill: #2d3d3b; stroke: #6e8f88; }
+.dark .ev-link-past { fill: #34443d; stroke: #d9a877; }
+.dark .ev-link-on { fill: #873f4f; stroke: #ffd095; }
+.dark .ev-radio { fill: #8a7552; stroke: #d9c39a; }
+.dark .ev-steel { fill: #b9b2a2; stroke: #d3ddcf; }
+.dark .ev-route { stroke: #8fc1c7; }
+.dark .ev-factor { fill: #2d3d3b; stroke: #6e8f88; }
+.dark .ev-factor-on { fill: #3c4a3f; stroke: #ffd095; }
+.dark .ev-up { stroke: #a8d08f; }
+.dark .ev-stream { stroke: #d9a877; }
+.dark .ev-gate { fill: #34443d; stroke: #b9b2a2; }
+.dark .ev-gate-open { fill: #873f4f; stroke: #ffd095; }
+.dark .ev-gate-text { fill: #f4ead7; }
+.dark .ev-ghost { stroke: #6e7f79; }
+.dark .ev-gini { stroke: #f1a27f; }
+.dark .ev-decade { fill: rgb(241 200 171 / .2); }
+.dark .ev-sea { fill: #263f45; }
+.dark .ev-wave { stroke: #6f9ba0; }
+.dark .ev-shore { fill: #34443d; }
+.dark .ev-beam { fill: rgb(255 208 149 / .14); stroke: rgb(255 208 149 / .35); }
+.dark .ev-sail { fill: #d3ddcf; stroke: #b9b2a2; }
+.dark .ev-trunk { stroke: #d9a877; }
+.dark .ev-terra { fill: #16110c; }
+.dark .ev-shake { stroke: #ffd095; }
+.dark .ev-pebble { fill: #6e5a45; }
+.dark .ev-coat-grey { fill: #6e7f79; }
