@@ -40,9 +40,9 @@ export default function LensBoard(props: BoardProps) {
         <>
           <section className="vs-formula-note">
             <span className="vs-note-title">Os raios notáveis</span>
-            <strong>Paralelo → sai por F′</strong>
+            <strong>Paralelo → raio ou prolongamento passa por F′</strong>
             <strong>Pelo centro → não desvia</strong>
-            <p>Qualquer par serve para achar a imagem; estes dois são os de traçado mais simples.</p>
+            <p>Na convergente, o raio passa pelo foco imagem; na divergente, seu prolongamento passa pelo foco virtual. O raio pelo centro óptico não desvia na aproximação de lente delgada.</p>
           </section>
           <section className="vs-formula-note">
             <span className="vs-note-title">Convenção de sinal</span>
@@ -52,7 +52,7 @@ export default function LensBoard(props: BoardProps) {
           </section>
         </>
       }
-      closing={maker ? 'a soma é de vergências, e o foco depende também do meio que envolve as lentes.' : 'a posição do objeto em relação ao foco decide se a imagem é real ou virtual, e a equação de Gauss só confirma o que o traçado já mostrou.'}
+      closing={maker ? 'a soma é de vergências, e o foco depende também do meio que envolve as lentes.' : 'para um objeto real, a convergente depende da posição; a divergente forma imagem virtual, direita e menor. A equação de Gauss confirma o traçado.'}
     />
   );
 }

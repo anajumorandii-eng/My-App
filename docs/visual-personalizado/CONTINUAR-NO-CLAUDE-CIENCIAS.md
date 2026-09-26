@@ -48,3 +48,18 @@ A responsável pediu concluir Química (48 capítulos), Física (85) e Biologia 
 ## Resultado final desta sessão
 
 Checagem final de tipos e build passaram. Build em 39,63 s, com aviso de tamanho de bundle. Os 11 testes direcionados mais recentes passaram. QA adicional e suíte completa permanecem para a continuação; manter PR em rascunho até essa revisão.
+
+
+## Revisão posterior da PR #216
+
+Revisados osmose e lentes divergentes/foco em 390, 768 e 1440 px, claro/escuro: 18 verificações sem overflow de página, com capturas em `screenshots/revisao-216/`. Osmose acessível pela aba Relações no mobile. Seleção e ajuste final por teclado; modo isotônico conferido. Abertura de Testar e Reconstruir conferida em lentes, sem enviar respostas nem modificar evidência de aprendizagem.
+
+Correções: percurso da água agora chega dentro da célula retraída; meio isotônico mostra trocas opostas; célula vegetal túrgida aproxima-se da parede. Texto dos raios distingue prolongamento virtual da divergente; controles divergentes usam distância numérica para não chamar o foco virtual de foco objeto.
+
+Movimento reduzido continua coberto por componente; emulação visual e aprovação editorial permanecem pendentes. A revisão não certifica todas as cenas das três matérias.
+
+### Ordem do Claude atualizada pelo estado real
+
+Lote 1: oito capítulos em validação; lote 2: seis, publicados nas PRs #212/#213. Lote 3: seis, **já publicado na PR #214**, também em validação. Não refazer esses lotes. Conferir pendências editoriais das evidências existentes e prosseguir ao lote 4 (Brasil Império e Primeira República), depois lote 5 (População e cidade), preservando Ciências na PR #216. Estado verificado contra origin/main ad30134. Esta rodada auditou registros de humanas, não repetiu o QA visual dos 20 capítulos.
+
+Validação das correções de revisão: TypeScript passou; 24 testes direcionados passaram. PR permanece em rascunho para aprovação editorial.

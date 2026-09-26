@@ -50,3 +50,16 @@ it('distingue plasmólise de equilíbrio isotônico e restaura o início ao muda
   expect(screen.getByRole('slider')).toHaveValue('0');
   expect(screen.getByRole('status')).toHaveTextContent('trocas continuam');
 });
+
+it('a água sai do interior da célula hipertônica e mantém trocas opostas na isotonia',()=>{
+  const {container}=render(<OsmosisMechanism />);
+  fireEvent.click(screen.getByRole('button',{name:'Hipertônico'}));
+  const markers=()=>Array.from(container.querySelectorAll('svg circle[r="7"]'));
+  expect(markers().map(e=>e.getAttribute('cy'))).toEqual(['220','220']);
+  fireEvent.click(screen.getByRole('button',{name:'Reproduzir movimento'}));
+  expect(markers().map(e=>e.getAttribute('cy'))).toEqual(['110','110']);
+  fireEvent.click(screen.getByRole('button',{name:'Isotônico'}));
+  expect(markers().map(e=>e.getAttribute('cy'))).toEqual(['110','220','110','220']);
+  fireEvent.click(screen.getByRole('button',{name:'Reproduzir movimento'}));
+  expect(markers().map(e=>e.getAttribute('cy'))).toEqual(['220','110','220','110']);
+});
