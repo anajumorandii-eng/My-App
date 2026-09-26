@@ -7,8 +7,15 @@ import './GeografiaFisica.css';
 import { ClimateMap, DomainsMap, EarthSeasons, ReliefProfile, RockCycle, SoilProfiles } from './GeografiaFisica';
 import './BrasilImperio.css';
 import { EmpireDecline, OligarchicDecline, OligarchyPyramid, RegencyRevolts, StateFormation } from './BrasilImperio';
+import { HEADERS_LOTE5, SCENES_LOTE5 } from './Populacao';
+import { HEADERS_LOTE6, SCENES_LOTE6 } from './EraVargas';
+import { HEADERS_LOTE7A, SCENES_LOTE7A } from './Antiguidade';
+import { HEADERS_LOTE7B, SCENES_LOTE7B } from './IdadeModerna';
+import { HEADERS_LOTE8, SCENES_LOTE8 } from './SeculoXX';
+import { HEADERS_LOTE9, SCENES_LOTE9 } from './GeografiaMundial';
+import { HEADERS_LOTE10, SCENES_LOTE10 } from './EconomiaGlobal';
 
-export const HISTORIA_GEOGRAFIA_IDS: ReadonlySet<string> = new Set([
+const BASE_IDS = [
   'summary-historia-revolucao-francesa',
   'summary-historia-revolucao-industrial',
   'summary-geografia-projecoes-cartograficas',
@@ -27,7 +34,7 @@ export const HISTORIA_GEOGRAFIA_IDS: ReadonlySet<string> = new Set([
   'summary-historia-brasil-imperio-o-declinio-do-segundo-reinado',
   'summary-historia-ascensao-e-dominio-das-oligarquias',
   'summary-historia-a-primeira-republica-o-declinio-oligarquico-1889-1930',
-]);
+];
 
 // Cenas que cuidam do próprio ritmo (usePaced) e só precisam do recorte.
 const SELF_PACED: Record<string, React.ComponentType<{ active: number }>> = {
@@ -36,7 +43,27 @@ const SELF_PACED: Record<string, React.ComponentType<{ active: number }>> = {
   'summary-historia-brasil-imperio-o-declinio-do-segundo-reinado': EmpireDecline,
   'summary-historia-ascensao-e-dominio-das-oligarquias': OligarchyPyramid,
   'summary-historia-a-primeira-republica-o-declinio-oligarquico-1889-1930': OligarchicDecline,
+  ...SCENES_LOTE5,
+  ...SCENES_LOTE6,
+  ...SCENES_LOTE7A,
+  ...SCENES_LOTE7B,
+  ...SCENES_LOTE8,
+  ...SCENES_LOTE9,
+  ...SCENES_LOTE10,
 };
+
+// Rótulo do cabeçalho quando a cena não é de cronologia nem de geografia física.
+const HEADERS: Record<string, string> = {
+  ...HEADERS_LOTE5,
+  ...HEADERS_LOTE6,
+  ...HEADERS_LOTE7A,
+  ...HEADERS_LOTE7B,
+  ...HEADERS_LOTE8,
+  ...HEADERS_LOTE9,
+  ...HEADERS_LOTE10,
+};
+
+export const HISTORIA_GEOGRAFIA_IDS: ReadonlySet<string> = new Set([...BASE_IDS, ...Object.keys(SELF_PACED)]);
 
 const FISICA: Record<string, React.ComponentType<{ active: number }>> = {
   'summary-geografia-movimentos-da-terra': EarthSeasons,
@@ -411,7 +438,7 @@ export function HistoriaGeografia({ entry }: { entry: SceneEntry }) {
   const item = entry.items[active];
   const history = entry.chapterId.startsWith('summary-historia-');
   return <section className="tc-scene hg-scene" aria-label={entry.question}>
-    <header><small>CRIVO · {history ? 'cronologia e causalidade' : FISICA[entry.chapterId] || entry.chapterId === 'summary-geografia-dinamica-climatica' ? 'geografia física' : 'cartografia comparada'}</small><h4>{entry.question}</h4></header>
+    <header><small>CRIVO · {HEADERS[entry.chapterId] ?? (history ? 'cronologia e causalidade' : FISICA[entry.chapterId] || entry.chapterId === 'summary-geografia-dinamica-climatica' ? 'geografia física' : 'cartografia comparada')}</small><h4>{entry.question}</h4></header>
     <div className="hg-figure" role="region" tabIndex={0} aria-label="Prancha visual: deslize para ver a figura inteira; com teclado, use as setas" onKeyDown={event => {
       if (event.key !== 'ArrowRight' && event.key !== 'ArrowLeft') return;
       event.preventDefault();
