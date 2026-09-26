@@ -1,0 +1,160 @@
+/* Lote 5 — população e cidade. Reusa as classes bi-* (papel, rótulos,
+   figura humana) e acrescenta só o que as cenas deste lote desenham. */
+.po-on { fill: #873f4f; }
+.po-warm { fill: #a8432a; }
+.po-cool { fill: #2f6f78; }
+
+.po-nat { fill: none; stroke: #c2562f; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+.po-mort { fill: none; stroke: #2f6f78; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+.po-gap { fill: rgb(242 193 78 / .45); stroke: none; }
+.po-band { fill: rgb(135 63 79 / .08); stroke: rgb(135 63 79 / .28); stroke-width: 1; }
+.po-male { fill: #5f8f96; }
+.po-female { fill: #d98a6a; }
+.po-midline { stroke: #f7f0e2; stroke-width: 2; }
+.po-replace { stroke: #873f4f; stroke-width: 1.6; stroke-dasharray: 4 3; }
+.po-cross { fill: #c2562f; stroke: #8a3a1f; stroke-width: 1; stroke-linejoin: round; }
+.po-hood { fill: #d98a6a; stroke: #5c4a3a; stroke-width: 1.4; }
+.po-drop { fill: #6f9fb0; stroke: #3f6f8f; stroke-width: 1; }
+.po-syringe { fill: #d3e7e6; stroke: #5c4a3a; stroke-width: 1.6; }
+.po-pill-card { fill: #f2c14e; stroke: #5c4a3a; stroke-width: 1.6; }
+.po-pill-dot { fill: #fbf7ee; stroke: #b3791a; stroke-width: 1; }
+
+.po-halo { fill: rgb(242 193 78 / .32); stroke: rgb(179 121 26 / .45); stroke-width: 1.4; }
+.po-sun { fill: #f2c14e; stroke: #d99a2b; stroke-width: 1.4; }
+.po-stalk { fill: none; stroke: #9a7a2a; stroke-width: 2; stroke-linecap: round; }
+.po-fish { fill: #6f9fb0; stroke: #3f6f8f; stroke-width: 1; }
+.po-bld { fill: #fbf7ee; stroke: #6e5a44; stroke-width: 1.6; stroke-linejoin: round; }
+.po-bld-mid { fill: #efe2c8; }
+.po-bld-top { fill: #e8cfa6; }
+.po-window { fill: #9fc3c8; stroke: #6e5a44; stroke-width: 1; }
+.po-window-line { stroke: #9fb8bb; stroke-width: 2; stroke-linecap: round; }
+.po-smoke { fill: #d8d0c0; stroke: #b8ae9c; stroke-width: 1; }
+.po-awning { fill: #c2562f; stroke: #8a3a1f; stroke-width: 1.2; stroke-linejoin: round; }
+.po-awning-stripe { stroke: #fbf1e3; stroke-width: 2.4; }
+.po-coat-rose { fill: #b36a7a; }
+
+.po-edge { fill: none; stroke: #bfb096; stroke-width: 1.6; }
+.po-edge-on { stroke: #c2562f; stroke-width: 2.4; }
+.po-flow { fill: #c2562f; }
+.po-flow-global { fill: #2f6f78; }
+.po-lit .po-bld { stroke: #873f4f; stroke-width: 2; }
+.po-globe { fill: #cfe3e3; stroke: #2f6f78; stroke-width: 1.6; }
+.po-globe-line { fill: none; stroke: #2f6f78; stroke-width: 1; }
+.po-link { fill: none; stroke: #2f6f78; stroke-width: 1.8; stroke-dasharray: 5 4; stroke-linecap: round; }
+.po-guide { fill: none; stroke: #bfb096; stroke-width: 1.2; stroke-dasharray: 2 4; }
+
+.po-soil { fill: #e3d3b4; }
+.po-hill { fill: #d9c7a0; stroke: #8b7a5c; stroke-width: 1.6; stroke-linejoin: round; }
+.po-water { fill: #8fb9c4; stroke: #3f6f8f; stroke-width: 1.2; }
+.po-road { fill: #6d6560; }
+.po-road-dash { stroke: #f2e3b8; stroke-width: 1.6; stroke-dasharray: 8 6; }
+.po-shack-a { fill: #d98a6a; stroke: #7c5534; stroke-width: 1.2; }
+.po-shack-b { fill: #e5b76a; stroke: #7c5534; stroke-width: 1.2; }
+.po-shack-c { fill: #9fb8a0; stroke: #5c6b52; stroke-width: 1.2; }
+.po-roof { fill: none; stroke: #5c4a3a; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.po-door { fill: #6e4526; }
+.po-school { fill: #fbf7ee; stroke: #6e5a44; stroke-width: 1.6; stroke-linejoin: round; }
+.po-school-on { fill: #f7dca8; stroke: #873f4f; stroke-width: 2.2; }
+.po-flag { fill: #c2562f; stroke: #6e5a44; stroke-width: 1.2; stroke-linejoin: round; }
+.po-tower { fill: #cfdcd6; stroke: #5c6b66; stroke-width: 1.4; }
+.po-tower-b { fill: #e3e8e0; }
+.po-tower-win { stroke: #8fb0b0; stroke-width: 2; stroke-dasharray: 4 3; }
+.po-badge { fill: #fbf7ee; stroke: #a8432a; stroke-width: 1.4; }
+.po-badge-cross { fill: #c2562f; }
+.po-lamp-post { fill: none; stroke: #5c4a3a; stroke-width: 2; stroke-linecap: round; }
+.po-lamp { fill: #f2c14e; stroke: #b3791a; stroke-width: 1; }
+.po-lamp-broken { stroke: #8b7a5c; stroke-width: 2; stroke-linecap: round; }
+.po-pipe { fill: none; stroke: #3f6f8f; stroke-width: 5; stroke-linecap: round; }
+.po-pipe-ghost { stroke: #a3927a; stroke-width: 2; stroke-dasharray: 4 5; }
+.po-clock { fill: #fbf7ee; stroke: #5c4a3a; stroke-width: 2; }
+.po-clock-hand { stroke: #a8432a; stroke-width: 2.2; stroke-linecap: round; }
+.po-warn { fill: #f2c14e; stroke: #a8432a; stroke-width: 1.6; stroke-linejoin: round; }
+.po-warn-mark { stroke: #5a2a1a; stroke-width: 2; stroke-linecap: round; }
+
+.po-badge-push { fill: #f6d9c9; stroke: #a8432a; stroke-width: 1.6; }
+.po-badge-pull { fill: #d3e7e6; stroke: #2f6f78; stroke-width: 1.6; }
+.po-badge-icon { fill: none; stroke: #3d3a36; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.po-route { stroke: #a3927a; stroke-width: 2; stroke-dasharray: 3 6; stroke-linecap: round; }
+.po-push { fill: none; stroke: #a8432a; stroke-width: 2.8; stroke-linecap: round; }
+.po-pull { fill: none; stroke: #2f6f78; stroke-width: 2.8; stroke-linecap: round; }
+.po-head-push { fill: #a8432a; }
+.po-head-pull { fill: #2f6f78; }
+.po-stick { stroke: #7c5534; stroke-width: 2; stroke-linecap: round; }
+.po-bundle { fill: #d9a877; stroke: #7c5534; stroke-width: 1.2; }
+
+.po-barn { fill: #c2562f; stroke: #7c3a24; stroke-width: 1.4; stroke-linejoin: round; }
+.po-truck { fill: #e5b76a; stroke: #6e4526; stroke-width: 1.4; stroke-linejoin: round; }
+.po-wheel { fill: #3d3a36; }
+.po-rail { stroke: #6e5a44; stroke-width: 2; }
+.po-sleeper { stroke: #a3927a; stroke-width: 3; }
+.po-wagon { fill: #8f6f52; stroke: #4f3a26; stroke-width: 1.2; }
+.po-loco { fill: #2f6f78; stroke: #1f4a50; stroke-width: 1.4; stroke-linejoin: round; }
+.po-ore { fill: #7a6e68; }
+.po-grain { fill: #e5b76a; }
+.po-river { fill: #9fc3cc; stroke: #3f6f8f; stroke-width: 1.2; }
+.po-barge { fill: #8f6f52; stroke: #4f3a26; stroke-width: 1.4; stroke-linejoin: round; }
+.po-box-a { fill: #c2562f; stroke: #7c3a24; stroke-width: 1; }
+.po-box-b { fill: #2f6f78; stroke: #1f4a50; stroke-width: 1; }
+.po-plane { fill: #fbf7ee; stroke: #3d3a36; stroke-width: 1.6; stroke-linejoin: round; }
+.po-coin { fill: #e5ddc9; stroke: #a3927a; stroke-width: 1.2; }
+.po-coin-on { fill: #f2c14e; stroke: #b3791a; }
+
+.dark .po-on { fill: #ffd095; }
+.dark .po-warm { fill: #f1a27f; }
+.dark .po-cool { fill: #8fd0d4; }
+.dark .po-nat { stroke: #f1a27f; }
+.dark .po-mort { stroke: #8fd0d4; }
+.dark .po-gap { fill: rgb(242 193 78 / .28); }
+.dark .po-band { fill: rgb(241 200 171 / .07); stroke: rgb(241 200 171 / .3); }
+.dark .po-male { fill: #6fa3aa; }
+.dark .po-female { fill: #e09a7c; }
+.dark .po-midline { stroke: #22302f; }
+.dark .po-replace { stroke: #f1c8ab; }
+.dark .po-halo { fill: rgb(242 193 78 / .16); stroke: rgb(242 193 78 / .45); }
+.dark .po-bld, .dark .po-school, .dark .po-clock, .dark .po-badge, .dark .po-plane { fill: #34443d; stroke: #d3ddcf; }
+.dark .po-bld-mid { fill: #3d4f47; }
+.dark .po-bld-top { fill: #4f5a48; }
+.dark .po-school-on { fill: #5a4a30; stroke: #ffd095; }
+.dark .po-window { fill: #5f8f96; stroke: #d3ddcf; }
+.dark .po-window-line, .dark .po-tower-win { stroke: #7fa8ad; }
+.dark .po-smoke { fill: #5d6b66; stroke: #8a9690; }
+.dark .po-edge { stroke: #6e7f79; }
+.dark .po-edge-on { stroke: #f1a27f; }
+.dark .po-flow { fill: #f1a27f; }
+.dark .po-lit .po-bld { stroke: #ffd095; }
+.dark .po-globe { fill: #2d4a4c; stroke: #8fd0d4; }
+.dark .po-globe-line, .dark .po-link { stroke: #8fd0d4; }
+.dark .po-guide { stroke: #6e7f79; }
+.dark .po-soil { fill: #2d3a36; }
+.dark .po-hill { fill: #4a4a3a; stroke: #b9b2a2; }
+.dark .po-water, .dark .po-river { fill: #3f6f7a; stroke: #8fd0d4; }
+.dark .po-road { fill: #151c1b; }
+.dark .po-roof, .dark .po-lamp-post, .dark .po-badge-icon { stroke: #e7dfcf; }
+.dark .po-tower { fill: #4a5a55; stroke: #b9b2a2; }
+.dark .po-tower-b { fill: #56665f; }
+.dark .po-pipe { stroke: #8fd0d4; }
+.dark .po-pipe-ghost, .dark .po-route { stroke: #8a9690; }
+.dark .po-clock-hand { stroke: #f1a27f; }
+.dark .po-badge-push { fill: #5a3a30; stroke: #f1a27f; }
+.dark .po-badge-pull { fill: #2d4a4c; stroke: #8fd0d4; }
+.dark .po-push { stroke: #f1a27f; }
+.dark .po-pull { stroke: #8fd0d4; }
+.dark .po-head-push { fill: #f1a27f; }
+.dark .po-head-pull { fill: #8fd0d4; }
+.dark .po-stick { stroke: #d9a877; }
+.dark .po-wheel { fill: #d3ddcf; }
+.dark .po-rail { stroke: #d3ddcf; }
+.dark .po-sleeper { stroke: #6e7f79; }
+.dark .po-coin { fill: #3f4e4b; stroke: #8a9690; }
+.dark .po-coin-on { fill: #d9a33e; stroke: #f2c14e; }
+.dark .po-stalk { stroke: #e0c070; }
+.dark .po-lamp-broken { stroke: #8a9690; }
+
+.dark .po-hood { fill: #e09a7c; stroke: #e7dfcf; }
+.dark .po-syringe { fill: #2d4a4c; stroke: #e7dfcf; }
+.dark .po-pill-dot { fill: #34443d; }
+.dark .po-flow-global { fill: #8fd0d4; }
+.po-lamp-off { fill: #c9c0b0; stroke: #8b7a5c; stroke-width: 1; }
+.po-shield { fill: #d3e7e6; stroke: #2f6f78; stroke-width: 1.6; stroke-linejoin: round; stroke-linecap: round; }
+.dark .po-lamp-off { fill: #5d6b66; stroke: #8a9690; }
+.dark .po-shield { fill: #2d4a4c; stroke: #8fd0d4; }
