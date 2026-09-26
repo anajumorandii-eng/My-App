@@ -1,0 +1,115 @@
+/* Lote 8 — séculos XIX e XX no mundo. Prefixo sx-; toda classe tem variante .dark. */
+.sx-dim { opacity: .35; }
+.sx-factory path { fill: #b8a88a; stroke: #5c4a3a; stroke-width: 1.6; stroke-linejoin: round; }
+.sx-window { stroke: #f2c14e; stroke-width: 5; stroke-linecap: round; }
+.sx-smoke { fill: #cfc4ae; }
+.sx-leap { fill: none; stroke: #a8432a; stroke-width: 3; stroke-linecap: round; stroke-dasharray: 7 6; }
+.sx-stairs { fill: none; stroke: #3f6f8f; stroke-width: 3.4; stroke-linecap: round; stroke-linejoin: round; }
+.sx-slot { stroke: #873f4f; stroke-width: 1.4; stroke-linecap: round; }
+.sx-link { fill: none; stroke: #a8432a; stroke-width: 3; }
+.sx-sparkline { fill: none; stroke: #d99a2b; stroke-width: 2.2; stroke-linecap: round; }
+.sx-temple { fill: #e5d7b8; stroke: #7c5534; stroke-width: 1.6; stroke-linejoin: round; }
+.sx-temple-col { fill: none; stroke: #7c5534; stroke-width: 2.4; stroke-linecap: round; }
+.sx-column { fill: #efe4cc; stroke: #8b7a5c; stroke-width: 1.4; }
+.sx-coat-red { fill: #a8432a; }
+.sx-coat-chief { fill: #b3791a; }
+.sx-coat-light { fill: #ece2cb; stroke: #8b7a5c; stroke-width: 1; }
+.sx-wrap { fill: #fbf1dc; stroke: #9b6a3f; stroke-width: 1.2; }
+.sx-metro { fill: #fbf7ee; stroke: #7c5534; stroke-width: 1.6; stroke-linejoin: round; }
+.sx-flag-a { fill: #3f6f8f; }
+.sx-flag-b { fill: #873f4f; }
+.sx-coin { fill: #f2c14e; stroke: #b3791a; stroke-width: 1.2; }
+.sx-ruler { fill: none; stroke: #873f4f; stroke-width: 2; stroke-dasharray: 5 3; }
+.sx-rule { fill: #e5b76a; stroke: #7c5534; stroke-width: 1.2; }
+.sx-rule-tick { stroke: #7c5534; stroke-width: 1.2; }
+.sx-tie-a { fill: none; stroke: #873f4f; stroke-linecap: round; }
+.sx-tie-e { fill: none; stroke: #3f6f8f; stroke-linecap: round; stroke-dasharray: 1 0; }
+.sx-node-a { fill: #873f4f; stroke: #fbf1e3; stroke-width: 2; }
+.sx-node-e { fill: #3f6f8f; stroke: #fbf1e3; stroke-width: 2; }
+.sx-shield { fill: none; stroke: #fbf1e3; stroke-width: 1.8; stroke-linejoin: round; }
+.sx-flash { fill: none; stroke: #e0762f; stroke-width: 4; }
+.sx-fuse { fill: none; stroke: #6e4526; stroke-width: 2.4; stroke-dasharray: 3 3; }
+.sx-spark { fill: #f2a23a; stroke: #a8432a; stroke-width: 1.6; transform-box: fill-box; transform-origin: center; }
+.sx-hill { fill: #d9ccb0; stroke: #8b7a5c; stroke-width: 1.4; stroke-linejoin: round; }
+.sx-ship { fill: #56656a; stroke: #2f3d40; stroke-width: 1.2; stroke-linejoin: round; }
+.sx-ship-line { fill: none; stroke: #2f3d40; stroke-width: 2; stroke-linecap: round; }
+.sx-chip { fill: #efe6d2; stroke: #c2b49c; stroke-width: 1.4; }
+.sx-chip-on { fill: #873f4f; stroke: #873f4f; }
+.sx-chip-text-on { fill: #fbf1e3; font: 800 11px system-ui, sans-serif; }
+.sx-chart { fill: none; stroke: #6e4526; stroke-width: 2.8; stroke-linecap: round; stroke-linejoin: round; }
+.sx-ring { fill: none; stroke: #a8432a; stroke-width: 2; stroke-dasharray: 3 3; }
+.sx-ripple { fill: none; stroke: #a8432a; stroke-width: 2; }
+.sx-globe { fill: #d8e6e2; stroke: #477981; stroke-width: 1.6; }
+.sx-globe-line { fill: none; stroke: #477981; stroke-width: 1.1; }
+.sx-laurel { fill: none; stroke: #6f8f5a; stroke-width: 2.4; stroke-linecap: round; stroke-dasharray: 3 2; }
+.sx-flute { stroke: #cdbf9f; stroke-width: 1.4; }
+.sx-wheat { fill: none; stroke: #b3791a; stroke-width: 2; stroke-linecap: round; }
+.sx-horn { fill: #56656a; stroke: #2f3d40; stroke-width: 1.2; stroke-linejoin: round; }
+.sx-wave { fill: none; stroke: #7c6a4f; stroke-width: 1.6; stroke-linecap: round; }
+.sx-rule-line { stroke: #c2b49c; stroke-width: 1.2; }
+.sx-stone { fill: #d9ccb0; stroke: #7c6a4f; stroke-width: 1.6; }
+.sx-block-on { stroke: #873f4f; stroke-width: 2.2; }
+.sx-note { fill: #cfdcc2; stroke: #5d7a4f; stroke-width: 1.1; }
+.sx-note-mark { fill: #5d7a4f; }
+.sx-empty { fill: none; stroke: #b8a88a; stroke-width: 1.6; stroke-dasharray: 6 5; }
+.sx-step { fill: #7c6a4f; }
+.sx-staff { stroke: #7c5534; stroke-width: 2; stroke-linecap: round; }
+.sx-partition { fill: none; stroke: #a8432a; stroke-width: 2; stroke-dasharray: 4 4; }
+.sx-zig { fill: none; stroke: #a8432a; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+.sx-pot { fill: #56656a; stroke: #2f3d40; stroke-width: 1.4; stroke-linejoin: round; }
+.sx-pot-rim { stroke: #2f3d40; stroke-width: 3; stroke-linecap: round; }
+.sx-steam { fill: none; stroke: #a8432a; stroke-width: 2.2; stroke-linecap: round; }
+.sx-brick { fill: #c9795b; stroke: #7c3b24; stroke-width: 1; }
+.sx-domino { fill: #fbf7ee; stroke: #5c4a3a; stroke-width: 1.6; }
+.sx-domino-text { fill: #873f4f; font: 800 9.5px system-ui, sans-serif; }
+.sx-tile { fill: #b3564a; stroke: #fbf1e3; stroke-width: 1.2; }
+.sx-tile-ru { fill: #873f4f; }
+
+.dark .sx-factory path { fill: #5d6b66; stroke: #b9b2a2; }
+.dark .sx-smoke { fill: #6e7f79; }
+.dark .sx-leap, .dark .sx-link, .dark .sx-ruler, .dark .sx-partition, .dark .sx-zig, .dark .sx-steam, .dark .sx-ring, .dark .sx-ripple { stroke: #f1a27f; }
+.dark .sx-stairs { stroke: #8fc1d9; }
+.dark .sx-slot { stroke: #f1c8ab; }
+.dark .sx-temple, .dark .sx-metro { fill: #34443d; stroke: #d9c39a; }
+.dark .sx-temple-col { stroke: #d9c39a; }
+.dark .sx-column { fill: #4a5a55; stroke: #b9b2a2; }
+.dark .sx-coat-light { fill: #b9b2a2; stroke: #d3ddcf; }
+.dark .sx-wrap { fill: #d9c39a; stroke: #f4ead7; }
+.dark .sx-flag-a { fill: #8fc1d9; }
+.dark .sx-flag-b { fill: #f1a27f; }
+.dark .sx-rule { fill: #8a7552; stroke: #d9c39a; } .dark .sx-rule-tick { stroke: #d9c39a; }
+.dark .sx-tie-a { stroke: #e38d9f; }
+.dark .sx-tie-e { stroke: #8fc1d9; }
+.dark .sx-node-a { fill: #a5566a; stroke: #22302f; }
+.dark .sx-node-e { fill: #4f86a8; stroke: #22302f; }
+.dark .sx-fuse { stroke: #d9a877; }
+.dark .sx-hill { fill: #4a5a55; stroke: #b9b2a2; }
+.dark .sx-ship, .dark .sx-horn, .dark .sx-pot { fill: #8a9a9d; stroke: #d3ddcf; }
+.dark .sx-ship-line, .dark .sx-pot-rim { stroke: #d3ddcf; }
+.dark .sx-chip { fill: #2d3d3b; stroke: #6e8f88; }
+.dark .sx-chip-on { fill: #f1c8ab; stroke: #f1c8ab; }
+.dark .sx-chip-text-on { fill: #22302f; }
+.dark .sx-chart { stroke: #d9a877; }
+.dark .sx-globe { fill: #2d4a4c; stroke: #8fc1d9; }
+.dark .sx-globe-line { stroke: #8fc1d9; }
+.dark .sx-laurel { stroke: #a8c98f; }
+.dark .sx-flute, .dark .sx-rule-line { stroke: #6e7f79; }
+.dark .sx-wave { stroke: #d3ddcf; }
+.dark .sx-stone { fill: #4a5a55; stroke: #b9b2a2; }
+.dark .sx-block-on { stroke: #ffd095; }
+.dark .sx-note { fill: #4f6a48; stroke: #a8c98f; }
+.dark .sx-note-mark { fill: #a8c98f; }
+.dark .sx-empty { stroke: #6e8f88; }
+.dark .sx-step { fill: #d9c39a; }
+.dark .sx-staff { stroke: #d9a877; }
+.dark .sx-brick { fill: #9c5a44; stroke: #e0a08a; }
+.dark .sx-domino { fill: #34443d; stroke: #d3ddcf; }
+.dark .sx-domino-text { fill: #ffd095; }
+.dark .sx-tile { fill: #b3564a; stroke: #22302f; }
+.dark .sx-tile-ru { fill: #e38d9f; }
+.sx-slot-box { fill: #fbf7ee; stroke: #c2b49c; stroke-width: 1.4; }
+.sx-slot-on { stroke: #873f4f; stroke-width: 2.2; }
+.sx-slot-dot { fill: #873f4f; transform-box: fill-box; transform-origin: center; }
+.dark .sx-slot-box { fill: #34443d; stroke: #6e8f88; }
+.dark .sx-slot-on { stroke: #ffd095; }
+.dark .sx-slot-dot { fill: #ffd095; }

@@ -1,0 +1,106 @@
+.an-sea { fill: #dde9e3; stroke: #a9c2bb; stroke-width: 1.2; }
+.an-wave { fill: none; stroke: #6f9a94; stroke-width: 1.8; stroke-linecap: round; }
+.an-mount { fill: #cdb68c; stroke: #7c6242; stroke-width: 1.3; stroke-linejoin: round; }
+.an-temple { fill: #fbf7ee; stroke: #7c5534; stroke-width: 1.4; stroke-linejoin: round; }
+.an-ring { fill: none; stroke: #c2562f; stroke-width: 2.4; }
+.an-link { fill: none; stroke: #b3791a; stroke-width: 2; stroke-dasharray: 4 4; stroke-linecap: round; }
+.an-torch { fill: #9b6a3f; stroke: #5c3b20; stroke-width: 1.2; }
+.an-check { fill: none; stroke: #3f6f5a; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+.an-tier-top { fill: #873f4f; }
+.an-tier-mid { fill: #c9905c; }
+.an-tier-low { fill: #e8d3ad; stroke: #9b6a3f; stroke-width: 1.2; }
+.an-tier-text { fill: #2c2520; font: 800 11px system-ui, sans-serif; }
+.an-tier-top + .an-tier-text { fill: #fbf1e3; }
+
+.an-facade { fill: #e6d9ba; stroke: #8b7a5c; stroke-width: 1.4; stroke-linejoin: round; }
+.an-token { fill: #f2c14e; stroke: #9a6a14; stroke-width: 1.6; }
+.an-laurel { fill: none; stroke: #5f8a3a; stroke-width: 2; stroke-linecap: round; }
+
+.an-castle { fill: #d9ccb0; stroke: #5c4a3a; stroke-width: 1.5; stroke-linejoin: round; }
+.an-pennant { fill: #a8432a; stroke: #5c4a3a; stroke-width: 1.2; stroke-linejoin: round; }
+.an-field { fill: #ead79f; stroke: #a58a4a; stroke-width: 1.4; }
+.an-furrow { fill: none; stroke: #b89c5c; stroke-width: 1.4; stroke-linecap: round; }
+.an-strip-a { fill: #cfdca6; stroke: #7f8f4a; stroke-width: 1.2; }
+.an-strip-b { fill: #b8cd8a; stroke: #7f8f4a; stroke-width: 1.2; }
+.an-blade { fill: none; stroke: #6e4526; stroke-width: 3; stroke-linecap: round; }
+.an-tie-rope { fill: none; stroke: #9b6a3f; stroke-width: 2; stroke-dasharray: 3 2; stroke-linecap: round; }
+.an-num { fill: #873f4f; transform-box: fill-box; transform-origin: center; }
+.an-num-text { fill: #fbf1e3; font: 800 9.5px system-ui, sans-serif; }
+.an-fief { fill: #8fae5a; stroke: #4f6a2a; stroke-width: 1.2; }
+.an-shield { fill: #477981; stroke: #2c4f66; stroke-width: 1.2; }
+.an-divider { fill: none; stroke: #873f4f; stroke-width: 2.4; stroke-dasharray: 6 5; stroke-linecap: round; }
+.an-badge { fill: #873f4f; }
+.an-badge-icon { fill: none; stroke: #fbf1e3; stroke-width: 2.2; stroke-linecap: round; }
+
+.an-route { fill: none; stroke: #7c6a4f; stroke-width: 2; stroke-dasharray: 5 5; stroke-linecap: round; }
+.an-germ { fill: #5a2a36; }
+.an-grave { fill: #b8a88a; stroke: #6e5a40; stroke-width: 1.2; }
+.an-grave-cross { fill: none; stroke: #5c4a3a; stroke-width: 2.2; stroke-linecap: round; }
+.an-grave-maybe { stroke-dasharray: 3 2; fill-opacity: .45; }
+.an-post { fill: none; stroke: #5c3b20; stroke-width: 3; stroke-linecap: round; }
+.an-beam { stroke: #6e4526; stroke-width: 4; stroke-linecap: round; }
+.an-pivot { fill: #f2c14e; stroke: #6e4526; stroke-width: 1.4; }
+.an-string { fill: none; stroke: #7c6a4f; stroke-width: 1.2; }
+.an-pan { fill: #d99a2b; stroke: #8a5a14; stroke-width: 1.4; }
+.an-war { fill: #c2562f; }
+.an-plague { fill: #3d2a2e; }
+.an-bar-text-off { fill: #5a5250; font: 800 9.5px system-ui, sans-serif; }
+
+.an-medal { fill: #fbf1dc; stroke: #b3791a; stroke-width: 2; }
+.an-medal-past { fill: #f4e2b8; }
+.an-medal-on { fill: #f7d88a; stroke: #873f4f; stroke-width: 2.6; }
+.an-trail-bg { fill: none; stroke: #e5ddc9; stroke-width: 6; stroke-linecap: round; }
+.an-trail { fill: none; stroke: #d99a2b; stroke-width: 6; stroke-linecap: round; }
+.an-coin { fill: #f2c14e; stroke: #9a6a14; stroke-width: 1.4; }
+.an-coin-mark { stroke: #9a6a14; stroke-width: 1.2; }
+.an-ship { fill: #e8d3ad; stroke: #5c3b20; stroke-width: 1.6; stroke-linejoin: round; }
+.an-table { fill: #c9a57a; stroke: #6e4526; stroke-width: 1.6; stroke-linejoin: round; }
+.an-purse { fill: #d99a2b; stroke: #8a5a14; stroke-width: 1.4; }
+.an-orbit { fill: rgb(179 121 26 / .08); stroke: #b3791a; stroke-width: 1.6; stroke-dasharray: 4 3; }
+.an-rays { fill: none; stroke: #d99a2b; stroke-width: 2; stroke-linecap: round; }
+.an-sun { fill: #f2c14e; stroke: #b3791a; stroke-width: 1.2; }
+.an-grid { fill: none; stroke: #9b6a3f; stroke-width: 1.3; }
+.an-horizon { fill: none; stroke: #873f4f; stroke-width: 1.4; stroke-dasharray: 4 3; }
+
+.dark .an-sea { fill: #1f3a3d; stroke: #3f6364; }
+.dark .an-wave { stroke: #7fb3ad; }
+.dark .an-mount { fill: #6e5d45; stroke: #d9c39a; }
+.dark .an-temple { fill: #34443d; stroke: #e5d3b3; }
+.dark .an-ring { stroke: #ffb08a; }
+.dark .an-link { stroke: #f2c14e; }
+.dark .an-torch { fill: #b9895a; stroke: #e5d3b3; }
+.dark .an-check { stroke: #9fd3b0; }
+.dark .an-tier-top { fill: #a65566; }
+.dark .an-tier-mid { fill: #a8764a; }
+.dark .an-tier-low { fill: #4a5a55; stroke: #d9c39a; }
+.dark .an-tier-text { fill: #f4ead7; }
+.dark .an-facade { fill: #4a5a55; stroke: #b9b2a2; }
+.dark .an-laurel { stroke: #a9d37a; }
+.dark .an-castle { fill: #5d6b66; stroke: #d3ddcf; }
+.dark .an-pennant { fill: #f1a27f; stroke: #d3ddcf; }
+.dark .an-field { fill: #6a5d36; stroke: #c9ad6a; }
+.dark .an-furrow { stroke: #a8904f; }
+.dark .an-strip-a { fill: #4f6038; stroke: #a9bf7a; }
+.dark .an-strip-b { fill: #5d7340; stroke: #a9bf7a; }
+.dark .an-blade { stroke: #d9a877; }
+.dark .an-tie-rope { stroke: #d9a877; }
+.dark .an-num, .dark .an-badge { fill: #a65566; }
+.dark .an-divider { stroke: #f1c8ab; }
+.dark .an-route { stroke: #d3ddcf; }
+.dark .an-germ { fill: #f1a27f; }
+.dark .an-grave { fill: #5d6b66; stroke: #b9b2a2; }
+.dark .an-grave-cross { stroke: #d3ddcf; }
+.dark .an-post, .dark .an-beam { stroke: #d9a877; }
+.dark .an-string { stroke: #b9b2a2; }
+.dark .an-war { fill: #c2562f; }
+.dark .an-plague { fill: #f1a27f; }
+.dark .an-bar-text-off { fill: #d3ddcf; }
+.dark .an-medal { fill: #2d3d3b; stroke: #d9a877; }
+.dark .an-medal-past { fill: #3f4e4b; }
+.dark .an-medal-on { fill: #6a5a2e; stroke: #ffd095; }
+.dark .an-trail-bg { stroke: #3f4e4b; }
+.dark .an-ship { fill: #6e5d45; stroke: #e5d3b3; }
+.dark .an-table { fill: #6e5d45; stroke: #d9a877; }
+.dark .an-orbit { fill: rgb(242 193 78 / .06); stroke: #d9a877; }
+.dark .an-grid { stroke: #d9a877; }
+.dark .an-horizon { stroke: #f1c8ab; }

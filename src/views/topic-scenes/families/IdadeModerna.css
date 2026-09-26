@@ -1,0 +1,118 @@
+/* Lote 7B — Idade Moderna. Classes próprias com prefixo im-; as bi-* vêm de
+   BrasilImperio.css, carregado para todas as cenas de História e Geografia. */
+.im-sea-text { fill: #6b8a93; font: italic 700 13px Georgia, serif; letter-spacing: .08em; }
+.im-chest { fill: #9b6a3f; stroke: #5c3b20; stroke-width: 1.6; stroke-linejoin: round; }
+.im-gold { fill: #f2c14e; stroke: #b3791a; stroke-width: 1.2; transform-box: fill-box; transform-origin: center; }
+.im-mine { fill: #b8a88a; stroke: #5c4a3a; stroke-width: 1.6; stroke-linejoin: round; }
+.im-mine-door { fill: #3d3a36; }
+.im-route { fill: none; stroke: #8b7a5c; stroke-width: 1.6; stroke-dasharray: 5 5; stroke-linecap: round; }
+.im-lock { fill: #873f4f; stroke: #5a2a36; stroke-width: 1.2; }
+.im-lock-arc { fill: none; stroke: #5a2a36; stroke-width: 2.6; stroke-linecap: round; }
+.im-lock-hole { fill: #f7f0e2; }
+.im-cane { fill: none; stroke: #5f8a3e; stroke-width: 2.4; stroke-linecap: round; }
+.im-chain { fill: none; stroke: #5c4a3a; stroke-width: 2.4; transform-box: fill-box; transform-origin: center; }
+.im-hull { fill: #6e4526; stroke: #3d2614; stroke-width: 1.2; stroke-linejoin: round; }
+.im-mast { stroke: #3d2614; stroke-width: 2; stroke-linecap: round; }
+.im-sail { fill: #fbf7ee; stroke: #8b7a5c; stroke-width: 1.2; stroke-linejoin: round; }
+.im-pan { fill: #e5ddc9; stroke: #5c4a3a; stroke-width: 1.6; stroke-linejoin: round; }
+.im-chip { fill: #ece2cb; stroke: #a3927a; stroke-width: 1.4; }
+.im-chip-on { fill: #873f4f; stroke: #5a2a36; }
+.im-chip-text { fill: #4f4a42; font: 800 11px system-ui, sans-serif; }
+.im-chip-text-on { fill: #fbf1e3; }
+
+.im-tier { fill: #eadfc6; stroke: #a3927a; stroke-width: 1.6; }
+.im-tier-on { fill: #f3dcc4; stroke: #873f4f; stroke-width: 2.2; }
+.im-cell { fill: #fbf7ee; stroke: #c2b49c; stroke-width: 1.2; }
+.im-sack { fill: #d9c39a; stroke: #7c5534; stroke-width: 1.4; stroke-linejoin: round; }
+.im-doc { fill: #fbf7ee; stroke: #9b6a3f; stroke-width: 1.6; stroke-linejoin: round; }
+.im-gate { stroke: #873f4f; stroke-width: 3; stroke-dasharray: 8 5; stroke-linecap: round; }
+.im-yes { fill: #3f6f5a; font: 800 12px system-ui, sans-serif; }
+.im-no { fill: #a8432a; font: 800 12px system-ui, sans-serif; }
+
+.im-card-on { stroke: #873f4f; stroke-width: 2.2; }
+.im-slot { stroke: #3d2614; stroke-width: 2.4; stroke-linecap: round; }
+.im-sand { fill: #d99a2b; }
+.im-door { fill: #c9ae7d; stroke: #6e4526; stroke-width: 2; stroke-linejoin: round; }
+.im-theses { fill: #873f4f; font: 800 16px Georgia, serif; }
+.im-handle { stroke: #6e4526; stroke-width: 4; stroke-linecap: round; }
+.im-hammer { fill: #56656a; stroke: #2c3937; stroke-width: 1.2; stroke-linejoin: round; }
+.im-col-keep { fill: #e6ecef; stroke: #3f6f8f; stroke-width: 1.6; }
+.im-col-fix { fill: #f6e2d6; stroke: #a8432a; stroke-width: 1.6; }
+.im-col-title { fill: #2c3937; font: 800 11px system-ui, sans-serif; }
+.im-thread-keep { fill: none; stroke: #3f6f8f; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+.im-thread-fix { fill: none; stroke: #a8432a; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+
+.im-cloud { fill: #fbf7ee; stroke: #a3927a; stroke-width: 1.6; }
+.im-ray { fill: none; stroke: #d99a2b; stroke-width: 2.6; stroke-linecap: round; }
+.im-collar { stroke: #fbf7ee; stroke-width: 2.4; stroke-linecap: round; }
+.im-sword { fill: none; stroke: #56656a; stroke-width: 3; stroke-linecap: round; }
+.im-base-tag { fill: #4f4a42; font: 800 11px system-ui, sans-serif; letter-spacing: .03em; }
+
+.im-pillar { fill: #ece2cb; stroke: #8b7a5c; stroke-width: 1.4; }
+.im-up { fill: none; stroke: #a8432a; stroke-width: 2.2; stroke-linecap: round; }
+.im-up-head { fill: #a8432a; }
+.im-ink { fill: none; stroke: #3f6f8f; stroke-width: 2; stroke-linecap: round; }
+.im-quill { fill: #fbf7ee; stroke: #6e4526; stroke-width: 1.4; stroke-linejoin: round; }
+.im-branch { fill: none; stroke: #d9ccb0; stroke-width: 3; stroke-linecap: round; }
+.im-branch-on { fill: none; stroke: #d99a2b; stroke-width: 3.4; stroke-linecap: round; }
+.im-glow { fill: #f2c14e; }
+.im-lamp { fill: #9b6a3f; stroke: #5c3b20; stroke-width: 1.4; stroke-linejoin: round; }
+
+.dark .im-sea-text { fill: #9fc2c9; }
+.dark .im-chest, .dark .im-hull { fill: #8a6443; stroke: #d9a877; }
+.dark .im-mine { fill: #5d6b66; stroke: #d3ddcf; }
+.dark .im-mine-door { fill: #1b2524; }
+.dark .im-route { stroke: #b9b2a2; }
+.dark .im-lock { fill: #b3564a; stroke: #f1a27f; }
+.dark .im-lock-arc { stroke: #f1a27f; }
+.dark .im-lock-hole { fill: #22302f; }
+.dark .im-cane { stroke: #9cc47a; }
+.dark .im-chain { stroke: #d3ddcf; }
+.dark .im-mast { stroke: #d9a877; }
+.dark .im-sail, .dark .im-doc, .dark .im-cloud, .dark .im-quill { fill: #34443d; stroke: #d9c39a; }
+.dark .im-pan { fill: #3f4e4b; stroke: #d3ddcf; }
+.dark .im-chip { fill: #34443d; stroke: #6e8f88; }
+.dark .im-chip-on { fill: #b3564a; stroke: #f1a27f; }
+.dark .im-chip-text { fill: #d3ddcf; }
+.dark .im-chip-text-on { fill: #fff7ea; }
+.dark .im-tier { fill: #34443d; stroke: #b9b2a2; }
+.dark .im-tier-on { fill: #4a3d3a; stroke: #ffd095; }
+.dark .im-cell { fill: #2d3d3b; stroke: #6e8f88; }
+.dark .im-sack { fill: #8a7552; stroke: #d9c39a; }
+.dark .im-gate { stroke: #f1a27f; }
+.dark .im-yes { fill: #9cc47a; }
+.dark .im-no { fill: #f1a27f; }
+.dark .im-card-on { stroke: #ffd095; }
+.dark .im-slot { stroke: #1b2524; }
+.dark .im-door { fill: #6e5a3f; stroke: #d9a877; }
+.dark .im-theses { fill: #ffd095; }
+.dark .im-handle { stroke: #d9a877; }
+.dark .im-hammer { fill: #b9b2a2; stroke: #f4ead7; }
+.dark .im-col-keep { fill: #2b4150; stroke: #8fb8d6; }
+.dark .im-col-fix { fill: #4a3530; stroke: #f1a27f; }
+.dark .im-col-title { fill: #f4ead7; }
+.dark .im-thread-keep { stroke: #8fb8d6; }
+.dark .im-thread-fix { stroke: #f1a27f; }
+.dark .im-collar { stroke: #d3ddcf; }
+.dark .im-sword { stroke: #d3ddcf; }
+.dark .im-base-tag { fill: #d3ddcf; }
+.dark .im-pillar { fill: #4a5a55; stroke: #d3ddcf; }
+.dark .im-up { stroke: #f1a27f; }
+.dark .im-up-head { fill: #f1a27f; }
+.dark .im-ink { stroke: #8fb8d6; }
+.dark .im-branch { stroke: #3f4e4b; }
+.dark .im-branch-on { stroke: #f2c14e; }
+.dark .im-lamp { fill: #8a6443; stroke: #d9a877; }
+.im-wave { fill: none; stroke: #8fb0b8; stroke-width: 1.6; stroke-linecap: round; }
+.im-compass { fill: #fbf7ee; stroke: #8b7a5c; stroke-width: 1.4; }
+.im-compass-needle { fill: #873f4f; }
+.im-book { fill: #5a2a36; stroke: #3d1f27; stroke-width: 1.2; }
+.im-book-cross { stroke: #f2c14e; stroke-width: 1.8; stroke-linecap: round; }
+.im-capital { fill: #d9ccb0; stroke: #8b7a5c; stroke-width: 1.2; }
+.im-lamp-handle { fill: none; stroke: #5c3b20; stroke-width: 2.4; stroke-linecap: round; }
+.dark .im-wave { stroke: #6f98a3; }
+.dark .im-compass { fill: #34443d; stroke: #b9b2a2; }
+.dark .im-compass-needle { fill: #f1a27f; }
+.dark .im-book { fill: #b3564a; stroke: #f1a27f; }
+.dark .im-capital { fill: #5d6b66; stroke: #d3ddcf; }
+.dark .im-lamp-handle { stroke: #d9a877; }
