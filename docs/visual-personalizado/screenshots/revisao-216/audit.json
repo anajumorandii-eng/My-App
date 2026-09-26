@@ -1,0 +1,148 @@
+[
+  {
+    "images": [
+      "Osmose em células animal e vegetal: meio hipertônico"
+    ],
+    "name": "osmose-hiper-claro",
+    "overflow": false,
+    "width": 390
+  },
+  {
+    "images": [
+      "Osmose em células animal e vegetal: meio hipertônico"
+    ],
+    "name": "osmose-hiper-claro",
+    "overflow": false,
+    "width": 768
+  },
+  {
+    "images": [
+      "Difusão facilitada de soluto neutro a favor do gradiente",
+      "Osmose em células animal e vegetal: meio hipertônico"
+    ],
+    "name": "osmose-hiper-claro",
+    "overflow": false,
+    "width": 1440
+  },
+  {
+    "images": [
+      "Osmose em células animal e vegetal: meio hipertônico"
+    ],
+    "name": "osmose-hiper-escuro",
+    "overflow": false,
+    "width": 390
+  },
+  {
+    "images": [
+      "Osmose em células animal e vegetal: meio hipertônico"
+    ],
+    "name": "osmose-hiper-escuro",
+    "overflow": false,
+    "width": 768
+  },
+  {
+    "images": [
+      "Difusão facilitada de soluto neutro a favor do gradiente",
+      "Osmose em células animal e vegetal: meio hipertônico"
+    ],
+    "name": "osmose-hiper-escuro",
+    "overflow": false,
+    "width": 1440
+  },
+  {
+    "images": [
+      "Lente convergente: objeto no foco, raios emergentes paralelos"
+    ],
+    "name": "foco-escuro",
+    "overflow": false,
+    "width": 390
+  },
+  {
+    "images": [
+      "Lente convergente: objeto no foco, raios emergentes paralelos"
+    ],
+    "name": "foco-escuro",
+    "overflow": false,
+    "width": 768
+  },
+  {
+    "images": [
+      "Lente convergente: objeto no foco, raios emergentes paralelos"
+    ],
+    "name": "foco-escuro",
+    "overflow": false,
+    "width": 1440
+  },
+  {
+    "images": [
+      "Lente convergente: objeto no foco, raios emergentes paralelos"
+    ],
+    "name": "foco-claro",
+    "overflow": false,
+    "width": 390
+  },
+  {
+    "images": [
+      "Lente convergente: objeto no foco, raios emergentes paralelos"
+    ],
+    "name": "foco-claro",
+    "overflow": false,
+    "width": 768
+  },
+  {
+    "images": [
+      "Lente convergente: objeto no foco, raios emergentes paralelos"
+    ],
+    "name": "foco-claro",
+    "overflow": false,
+    "width": 1440
+  },
+  {
+    "images": [
+      "Lente divergente: imagem virtual e direita, objeto a 70 unidades"
+    ],
+    "name": "divergente-claro",
+    "overflow": false,
+    "width": 390
+  },
+  {
+    "images": [
+      "Lente divergente: imagem virtual e direita, objeto a 70 unidades"
+    ],
+    "name": "divergente-claro",
+    "overflow": false,
+    "width": 768
+  },
+  {
+    "images": [
+      "Lente divergente: imagem virtual e direita, objeto a 70 unidades"
+    ],
+    "name": "divergente-claro",
+    "overflow": false,
+    "width": 1440
+  },
+  {
+    "images": [
+      "Lente divergente: imagem virtual e direita, objeto a 70 unidades"
+    ],
+    "name": "divergente-escuro",
+    "overflow": false,
+    "width": 390
+  },
+  {
+    "images": [
+      "Lente divergente: imagem virtual e direita, objeto a 70 unidades"
+    ],
+    "name": "divergente-escuro",
+    "overflow": false,
+    "width": 768
+  },
+  {
+    "images": [
+      "Lente divergente: imagem virtual e direita, objeto a 70 unidades"
+    ],
+    "name": "divergente-escuro",
+    "overflow": false,
+    "width": 1440
+  }
+]

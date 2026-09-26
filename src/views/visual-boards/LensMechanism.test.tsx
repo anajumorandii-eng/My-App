@@ -28,3 +28,15 @@ describe('construção óptica', () => {
     expect(screen.getByRole('status')).toHaveTextContent('1×');
   });
 });
+
+it('representa divergência e foco sem coordenadas infinitas no SVG',()=>{
+  const {container}=render(<LensMechanism />);
+  fireEvent.click(screen.getByRole('button',{name:'Em F'}));
+  expect(screen.getByRole('status')).toHaveTextContent('Sem imagem a distância finita');
+  expect(container.querySelector('svg')?.outerHTML).not.toMatch(/Infinity|NaN/);
+  fireEvent.click(screen.getByRole('button',{name:'Divergente'}));
+  expect(screen.getByRole('status')).toHaveTextContent('virtual e direita');
+  const r=lensRays(70,-70);
+  expect(r.image.distancia).toBe(-35);
+  expect(r.image.ampliacao).toBe(.5);
+});
