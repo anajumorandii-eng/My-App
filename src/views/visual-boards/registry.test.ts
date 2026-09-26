@@ -81,15 +81,13 @@ describe('registro de pranchas', () => {
     }
   });
 
-  it('não empresta contagem de arranjos à probabilidade nem círculo unitário ao triângulo retângulo', () => {
-    for (const id of [
-      'mat-probabilidade-contagem',
-      'summary-matematica-trigonometria-no-triangulo-retangulo',
-    ]) {
-      const item = interactiveSummaries.find((s) => s.id === id);
-      expect(item, `capítulo "${id}" sumiu do currículo`).toBeDefined();
-      expect(findBoard(item!)).toBeNull();
-    }
+  it('usa cenas próprias para probabilidade e trigonometria no triângulo retângulo', () => {
+    const probabilidade = interactiveSummaries.find((s) => s.id === 'mat-probabilidade-contagem');
+    const triangulo = interactiveSummaries.find((s) => s.id === 'summary-matematica-trigonometria-no-triangulo-retangulo');
+    expect(probabilidade).toBeDefined();
+    expect(triangulo).toBeDefined();
+    expect(findBoard(probabilidade!)?.id).toBe('probabilidade-pares');
+    expect(findBoard(triangulo!)?.id).toBe('trigonometria-triangulo');
   });
 
   it('não registra prancha que nenhum capítulo alcança', () => {

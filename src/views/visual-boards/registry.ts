@@ -25,6 +25,8 @@ import AcidBaseBoard from './AcidBaseBoard';
 import LogarithmBoard from './LogarithmBoard';
 import CalorimetryBoard from './CalorimetryBoard';
 import CountingBoard from './CountingBoard';
+import ProbabilityPairsBoard from './ProbabilityPairsBoard';
+import RightTriangleBoard from './RightTriangleBoard';
 import BloodTypeBoard from './BloodTypeBoard';
 import SolutionsBoard from './SolutionsBoard';
 import NewtonBoard from './NewtonBoard';
@@ -70,6 +72,18 @@ export interface BoardEntry {
 }
 
 export const BOARDS: BoardEntry[] = [
+  {
+    id: 'probabilidade-pares',
+    subject: 'Matemática',
+    keywords: ['contagem sistemática e probabilidade'],
+    Component: ProbabilityPairsBoard,
+  },
+  {
+    id: 'trigonometria-triangulo',
+    subject: 'Matemática',
+    keywords: ['trigonometria no triângulo retângulo'],
+    Component: RightTriangleBoard,
+  },
   {
     id: 'defeitos-visao',
     subject: 'Física',

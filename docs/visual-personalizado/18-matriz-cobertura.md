@@ -15,10 +15,10 @@ outro assunto. O detalhe capítulo a capítulo está em
 | Representação | Capítulos | Parcela |
 | --- | ---: | ---: |
 | Experimento exato | 10 | 1,6% |
-| Prancha autoral | 41 | 6,7% |
+| Prancha autoral | 43 | 7,0% |
 | Instrumento | 329 | 53,7% |
 | Cena validada | 231 | 37,7% |
-| Lacuna honesta | 2 | 0,3% |
+| Lacuna honesta | 0 | 0,0% |
 | **Total** | **613** | |
 
 ## Por matéria
@@ -35,7 +35,7 @@ outro assunto. O detalhe capítulo a capítulo está em
 | Gramática | 26 | 1 | 0 | 25 | 0 | 0 |
 | Literatura | 37 | 1 | 0 | 28 | 8 | 0 |
 | Entendimento de Texto | 12 | 1 | 0 | 11 | 0 | 0 |
-| Matemática | 83 | 1 | 9 | 71 | 0 | 2 |
+| Matemática | 83 | 1 | 11 | 71 | 0 | 0 |
 | Química | 48 | 0 | 7 | 23 | 18 | 0 |
 | Filosofia | 35 | 1 | 0 | 0 | 34 | 0 |
 | Sociologia | 27 | 1 | 0 | 0 | 26 | 0 |

@@ -2,10 +2,10 @@
   "total": 613,
   "counts": {
     "experiment": 10,
-    "board": 41,
+    "board": 43,
     "instrument": 329,
     "scene": 231,
-    "fallback": 2
+    "fallback": 0
   },
   "contested": 63,
   "subjects": [
@@ -124,10 +124,10 @@
       "chapters": 83,
       "counts": {
         "experiment": 1,
-        "board": 9,
+        "board": 11,
         "instrument": 71,
         "scene": 0,
-        "fallback": 2
+        "fallback": 0
       }
     },
     {
@@ -4115,8 +4115,8 @@
       "id": "summary-matematica-trigonometria-no-triangulo-retangulo",
       "subject": "Matemática",
       "title": "Trigonometria no Triângulo Retângulo",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "board",
+      "artifact": "trigonometria-triangulo",
       "ignored": []
     },
     {
@@ -4876,8 +4876,8 @@
       "id": "mat-probabilidade-contagem",
       "subject": "Matemática",
       "title": "Contagem sistemática e probabilidade",
-      "primary": "fallback",
-      "artifact": null,
+      "primary": "board",
+      "artifact": "probabilidade-pares",
       "ignored": []
     },
     {

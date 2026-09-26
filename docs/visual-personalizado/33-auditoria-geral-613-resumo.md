@@ -69,7 +69,7 @@ O CLAUDE.md documenta como corrigido o caso de cenas raster transparentes (`adia
 1. **Corrigir os bugs de conteúdo errado** (Matemática ×2, Física (Orbital, Lens), Biologia (2 casos), listados acima) — são baratos e prioritários porque a estudante vê o capítulo errado, não só uma cena feia.
 2. **Reconectar o SVG do pistão adiabático** e decidir o destino da ilustração raster de Newton.
 3. **Corrigir os bugs transversais de renderização** (fonte da `GradeDeEixos`, colisão da `ContrasteDePosicoes`, truncamento sem reticências) num PR pequeno — melhora vários capítulos de matérias diferentes de uma vez.
-4. **Redesenhar em lotes por matéria**, começando por Filosofia/Sociologia (59 pendentes, maior concentração de fôrma genérica pura) e Biologia (28), depois Redação (11) e Literatura (32), depois Física (21) e Química (7), com Matemática (3) por último.
+4. **Redesenhar em lotes por matéria.** A ordem de implementação foi ajustada a pedido da Ana Júlia: começar por Matemática (7 classificados para redesenho), que tem menos pendências; seguir com os demais grupos após verificação de cada lote. Filosofia/Sociologia (59) concentra a maior quantidade de cenas genéricas.
 5. **Corrigir a documentação** (CLAUDE.md) nos dois pontos listados acima.
 
 A aprovação editorial de cada capítulo continua sendo só da Ana Júlia — este documento é auditoria técnica, não aprovação.
@@ -77,6 +77,6 @@ A aprovação editorial de cada capítulo continua sendo só da Ana Júlia — e
 ## Correções posteriores à auditoria
 
 - As regressões raster de Newton e do pistão adiabático foram corrigidas no PR #221.
-- O registro deixou de atribuir a prancha de arranjos à introdução à probabilidade e o círculo unitário à trigonometria no triângulo retângulo. Ambos aparecem como lacunas explícitas até receberem cenas fiéis; isso não equivale a redesenho aprovado.
+- O registro deixou de atribuir a prancha de arranjos à introdução à probabilidade e o círculo unitário à trigonometria no triângulo retângulo. Na primeira etapa, ambos apareceram como lacunas explícitas. Agora receberam pranchas próprias: uma grade de pares ordenados com critério de divisor comum e um triângulo retângulo com razões entre lados. Ainda aguardam avaliação editorial; não são redesenhos aprovados.
 - Poluição do ar e o capítulo sobre aquecimento global, POPs e biorremediação agora têm mecanismos visuais distintos no instrumento de Biologia. Ainda requerem avaliação editorial do capítulo completo.
 - As classificações da tabela acima são a fotografia da auditoria por capítulo; não foram reduzidas automaticamente por essas correções pontuais.
