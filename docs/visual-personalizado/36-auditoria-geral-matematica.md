@@ -10,6 +10,19 @@ todos os 16 engines. Capturas em
 
 ## 1. Resumo
 
+### Implementação posterior à auditoria
+
+Os sete capítulos classificados para redesenho receberam mecanismos específicos:
+probabilidade com grade de pares ordenados, trigonometria com triângulo retângulo,
+razão com grupos em duas escalas, porcentagem com grade centesimal, sistema decimal
+com colunas posicionais, inteiros com decomposição na reta numérica e médias com
+unidades de peso e deslocamento da média.
+
+Verificação da segunda entrega: tipos e build passaram; 709 testes de interface
+passaram. A conferência visual no navegador e a aprovação editorial continuam
+pendentes. Os cinco ajustes indicados na auditoria abaixo ainda não foram concluídos.
+Os vereditos originais foram preservados como registro da auditoria.
+
 Varredura automática (83/83): **nenhum erro de página, nenhuma rolagem
 lateral a 390px** em nenhum capítulo. `scan-mat-out.txt` (scratchpad) tem o
 detalhe; os quatro "hasSvg:false" reportados no primeiro passe eram falso
