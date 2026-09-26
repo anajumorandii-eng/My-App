@@ -58,3 +58,8 @@ Ondulatória, ondas eletromagnéticas, som, Termoquímica I e II, evolução dos
 ## Integração com o cloud
 
 As PRs #212 e #213 já publicaram revisões de História e Geografia. A integração preserva seus componentes e evidências. Os totais acima incorporam seis revisões adicionais de História. O esboço local de recursos comuns e quinto está preservado na branch `backup/local-motion-before-cloud`, commit `151ed6c`, e foi retirado da entrega por não ter completado a validação e sobrepor o trabalho publicado.
+
+
+## Prioridade mais recente
+
+Química, Física e Biologia (205 capítulos). Sessão encerrada a pedido por limite; continuar por `CONTINUAR-NO-CLAUDE-CIENCIAS.md`. As três matérias ainda não estão concluídas.

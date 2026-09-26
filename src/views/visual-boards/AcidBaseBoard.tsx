@@ -3,27 +3,28 @@ import BoardShell from './BoardShell';
 import { boardPair } from './pair';
 import type { BoardProps } from './types';
 import PhMechanism from './PhMechanism';
+import AcidTheoryMechanism from './AcidTheoryMechanism';
 
 export default function AcidBaseBoard(props: BoardProps) {
   const par = boardPair(props);
   return (
     <BoardShell
-      title="A escala de pH"
-      subtitle="A escala é linear no papel e logarítmica na concentração."
-      condition={{ label: 'a 25 °C', value: 'pH + pOH = 14' }}
+      title="Ácidos, bases e equações iônicas"
+      subtitle="Compare transferência de próton, doação de par eletrônico e cancelamento de espectadores."
+      condition={{ label: 'Compare', value: 'H⁺ / e⁻' }}
       ariaLabel="Prancha ilustrada de ácidos e bases e a escala de pH"
-      scene={<PhMechanism />}
+      scene={<AcidTheoryMechanism />}
       sceneFirst
       emphasis={par.emphasis}
       left={{
         label: 'Ácido',
-        headline: 'Libera H⁺ em solução.',
-        detail: 'Quanto mais H⁺, menor o pH. Um ácido forte ioniza quase por completo; um fraco, só em parte — e é a fração ionizada, não a concentração, que define a força.',
+        headline: 'Doa H⁺ ou recebe um par.',
+        detail: 'Quanto mais H⁺, menor o pH. Um ácido forte ioniza quase por completo; um fraco, só em parte — a força é caracterizada pela constante de equilíbrio no solvente, e a fração ionizada também depende da concentração.',
         formula: 'pH < 7 · [H⁺] > 10⁻⁷',
       }}
       right={{
         label: 'Base',
-        headline: 'Libera OH⁻ ou captura H⁺.',
+        headline: 'Recebe H⁺ ou doa um par.',
         detail: 'Arrhenius exige liberar OH⁻; Brønsted-Lowry basta receber H⁺, o que explica a amônia ser básica sem ter hidroxila na fórmula.',
         formula: 'pH > 7 · [OH⁻] > 10⁻⁷',
       }}
@@ -36,19 +37,20 @@ export default function AcidBaseBoard(props: BoardProps) {
       equation={{ label: 'Definição', general: 'pH = −log[H⁺]', condition: 'a 25 °C', reduced: 'pH + pOH = 14' }}
       supports={
         <>
+          <PhMechanism />
           <section className="vs-formula-note">
             <span className="vs-note-title">O salto que engana</span>
-            <strong>pH 3: [H₃O⁺] 100× maior</strong>
+            <strong>pH 3 versus pH 5: fator 100</strong>
             <p>A diferença de duas unidades corresponde a um fator 100 na concentração de H₃O⁺, na aproximação ideal. Diluição de ácido fraco exige considerar o equilíbrio; próximo da neutralidade, a autoionização da água também importa.</p>
           </section>
           <section className="vs-formula-note">
             <span className="vs-note-title">Forte não é concentrado</span>
             <strong>São coisas diferentes</strong>
-            <p>Força é o quanto ioniza; concentração é quanto há na solução. Um ácido forte bem diluído pode ter pH maior que um fraco concentrado.</p>
+            <p>A constante de equilíbrio caracteriza a força; concentração é quanto há na solução. Um ácido forte bem diluído pode ter pH maior que um fraco concentrado.</p>
           </section>
         </>
       }
-      closing="ler o pH como escala logarítmica transforma «mais ácido» numa conta de potência de dez, que é como a prova cobra."
+      closing="identifique primeiro a teoria: próton em Brønsted–Lowry, par eletrônico em Lewis; na equação iônica, preserve apenas as espécies transformadas."
     />
   );
 }
