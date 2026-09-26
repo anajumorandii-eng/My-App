@@ -1,13 +1,13 @@
 {
   "total": 613,
   "counts": {
-    "experiment": 11,
+    "experiment": 10,
     "board": 43,
-    "instrument": 373,
-    "scene": 186,
+    "instrument": 329,
+    "scene": 231,
     "fallback": 0
   },
-  "contested": 18,
+  "contested": 63,
   "subjects": [
     {
       "subject": "Física",
@@ -48,8 +48,8 @@
       "counts": {
         "experiment": 1,
         "board": 0,
-        "instrument": 36,
-        "scene": 26,
+        "instrument": 4,
+        "scene": 58,
         "fallback": 0
       }
     },
@@ -57,10 +57,10 @@
       "subject": "História",
       "chapters": 49,
       "counts": {
-        "experiment": 1,
+        "experiment": 0,
         "board": 1,
-        "instrument": 15,
-        "scene": 32,
+        "instrument": 3,
+        "scene": 45,
         "fallback": 0
       }
     },
@@ -1509,17 +1509,27 @@
       "id": "summary-geografia-sistema-de-fusos-horarios",
       "subject": "Geografia",
       "title": "Sistema de Fusos Horários",
-      "primary": "instrument",
-      "artifact": "fusos-horarios",
-      "ignored": []
+      "primary": "scene",
+      "artifact": "cadeia-de-derivacao",
+      "ignored": [
+        {
+          "kind": "instrument",
+          "id": "fusos-horarios"
+        }
+      ]
     },
     {
       "id": "summary-geografia-linguagem-cartografica",
       "subject": "Geografia",
       "title": "Linguagem Cartográfica",
-      "primary": "instrument",
-      "artifact": "linguagem-cartografica",
-      "ignored": []
+      "primary": "scene",
+      "artifact": "cadeia-de-derivacao",
+      "ignored": [
+        {
+          "kind": "instrument",
+          "id": "linguagem-cartografica"
+        }
+      ]
     },
     {
       "id": "summary-geografia-projecoes-cartograficas",
@@ -1533,17 +1543,27 @@
       "id": "summary-geografia-cartografia-digital",
       "subject": "Geografia",
       "title": "Cartografia Digital",
-      "primary": "instrument",
-      "artifact": "digital-map",
-      "ignored": []
+      "primary": "scene",
+      "artifact": "camadas-de-determinacao",
+      "ignored": [
+        {
+          "kind": "instrument",
+          "id": "digital-map"
+        }
+      ]
     },
     {
       "id": "summary-geografia-representacoes-graficas-e-cartograficas",
       "subject": "Geografia",
       "title": "Representações Gráficas e Cartográficas",
-      "primary": "instrument",
-      "artifact": "map-elements",
-      "ignored": []
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": [
+        {
+          "kind": "instrument",
+          "id": "map-elements"
+        }
+      ]
     },
     {
       "id": "summary-geografia-dinamica-climatica",
@@ -1581,25 +1601,40 @@
       "id": "summary-geografia-agua-na-superficie-terrestre",
       "subject": "Geografia",
       "title": "Água na Superfície Terrestre",
-      "primary": "instrument",
-      "artifact": "agua-superficie",
-      "ignored": []
+      "primary": "scene",
+      "artifact": "camadas-de-determinacao",
+      "ignored": [
+        {
+          "kind": "instrument",
+          "id": "agua-superficie"
+        }
+      ]
     },
     {
       "id": "summary-geografia-desafios-ambientais-do-seculo-xxi",
       "subject": "Geografia",
       "title": "Desafios Ambientais do Século XXI",
-      "primary": "instrument",
-      "artifact": "commons",
-      "ignored": []
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": [
+        {
+          "kind": "instrument",
+          "id": "commons"
+        }
+      ]
     },
     {
       "id": "summary-geografia-geopolitica-ambiental",
       "subject": "Geografia",
       "title": "Geopolítica Ambiental",
-      "primary": "instrument",
-      "artifact": "governanca-ambiental",
-      "ignored": []
+      "primary": "scene",
+      "artifact": "contraste-de-posicoes",
+      "ignored": [
+        {
+          "kind": "instrument",
+          "id": "governanca-ambiental"
+        }
+      ]
     },
     {
       "id": "summary-geografia-geopolitica-dos-recursos-hidricos",
@@ -1613,9 +1648,14 @@
       "id": "summary-geografia-hidrogeografia-mundial",
       "subject": "Geografia",
       "title": "Hidrogeografia Mundial",
-      "primary": "instrument",
-      "artifact": "world-basin",
-      "ignored": []
+      "primary": "scene",
+      "artifact": "cadeia-de-derivacao",
+      "ignored": [
+        {
+          "kind": "instrument",
+          "id": "world-basin"
+        }
+      ]
     },
     {
       "id": "summary-geografia-do-mundo-bipolar-ao-multipolar",
@@ -1629,25 +1669,40 @@
       "id": "summary-geografia-globalizacao-e-processos-economicos-atuais",
       "subject": "Geografia",
       "title": "Globalização e Processos Econômicos Atuais",
-      "primary": "instrument",
-      "artifact": "supply-chain",
-      "ignored": []
+      "primary": "scene",
+      "artifact": "cadeia-de-derivacao",
+      "ignored": [
+        {
+          "kind": "instrument",
+          "id": "supply-chain"
+        }
+      ]
     },
     {
       "id": "summary-geografia-geografia-das-redes-mundiais",
       "subject": "Geografia",
       "title": "Geografia das Redes Mundiais",
-      "primary": "instrument",
-      "artifact": "redes-mundiais",
-      "ignored": []
+      "primary": "scene",
+      "artifact": "camadas-de-determinacao",
+      "ignored": [
+        {
+          "kind": "instrument",
+          "id": "redes-mundiais"
+        }
+      ]
     },
     {
       "id": "summary-geografia-unilateralismo-e-multilateralismo",
       "subject": "Geografia",
       "title": "Unilateralismo e Multilateralismo",
-      "primary": "instrument",
-      "artifact": "unilateralismo-multilateralismo",
-      "ignored": []
+      "primary": "scene",
+      "artifact": "contraste-de-posicoes",
+      "ignored": [
+        {
+          "kind": "instrument",
+          "id": "unilateralismo-multilateralismo"
+        }
+      ]
     },
     {
       "id": "summary-geografia-blocos-economicos",
@@ -1661,9 +1716,14 @@
       "id": "summary-geografia-uniao-europeia",
       "subject": "Geografia",
       "title": "União Europeia",
-      "primary": "instrument",
-      "artifact": "uniao-europeia",
-      "ignored": []
+      "primary": "scene",
+      "artifact": "cadeia-de-derivacao",
+      "ignored": [
+        {
+          "kind": "instrument",
+          "id": "uniao-europeia"
+        }
+      ]
     },
     {
       "id": "summary-geografia-desigualdades-globais",
@@ -1709,89 +1769,144 @@
       "id": "summary-geografia-industria-ii",
       "subject": "Geografia",
       "title": "Indústria II",
-      "primary": "instrument",
-      "artifact": "technopole",
-      "ignored": []
+      "primary": "scene",
+      "artifact": "cadeia-de-derivacao",
+      "ignored": [
+        {
+          "kind": "instrument",
+          "id": "technopole"
+        }
+      ]
     },
     {
       "id": "summary-geografia-gedeconomia-mundial",
       "subject": "Geografia",
       "title": "Gedeconomia Mundial",
-      "primary": "instrument",
-      "artifact": "geoeconomics",
-      "ignored": []
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": [
+        {
+          "kind": "instrument",
+          "id": "geoeconomics"
+        }
+      ]
     },
     {
       "id": "summary-geografia-terrorismo-internacional",
       "subject": "Geografia",
       "title": "Terrorismo Internacional",
-      "primary": "instrument",
-      "artifact": "terrorismo-internacional",
-      "ignored": []
+      "primary": "scene",
+      "artifact": "cadeia-de-derivacao",
+      "ignored": [
+        {
+          "kind": "instrument",
+          "id": "terrorismo-internacional"
+        }
+      ]
     },
     {
       "id": "summary-geografia-geografia-das-religioes",
       "subject": "Geografia",
       "title": "Geografia das Religiões",
-      "primary": "instrument",
-      "artifact": "geografia-religioes",
-      "ignored": []
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": [
+        {
+          "kind": "instrument",
+          "id": "geografia-religioes"
+        }
+      ]
     },
     {
       "id": "summary-geografia-tensoes-geopoliticas-na-europa",
       "subject": "Geografia",
       "title": "Tensões Geopolíticas na Europa",
-      "primary": "instrument",
-      "artifact": "conflito-europa",
-      "ignored": []
+      "primary": "scene",
+      "artifact": "cadeia-de-derivacao",
+      "ignored": [
+        {
+          "kind": "instrument",
+          "id": "conflito-europa"
+        }
+      ]
     },
     {
       "id": "summary-geografia-geopolitica-e-geoeconomia-da-america-latina",
       "subject": "Geografia",
       "title": "Geopolítica e Geoeconomia da América Latina",
-      "primary": "instrument",
-      "artifact": "geopolitica-america-latina",
-      "ignored": []
+      "primary": "scene",
+      "artifact": "cadeia-de-derivacao",
+      "ignored": [
+        {
+          "kind": "instrument",
+          "id": "geopolitica-america-latina"
+        }
+      ]
     },
     {
       "id": "summary-geografia-africa-no-mundo-atual",
       "subject": "Geografia",
       "title": "África no Mundo Atual",
-      "primary": "instrument",
-      "artifact": "africa-mundo-atual",
-      "ignored": []
+      "primary": "scene",
+      "artifact": "cadeia-de-derivacao",
+      "ignored": [
+        {
+          "kind": "instrument",
+          "id": "africa-mundo-atual"
+        }
+      ]
     },
     {
       "id": "summary-geografia-geopolitica-e-geoeconomia-da-asia",
       "subject": "Geografia",
       "title": "Geopolítica e Geoeconomia da Ásia",
-      "primary": "instrument",
-      "artifact": "geopolitica-asia",
-      "ignored": []
+      "primary": "scene",
+      "artifact": "camadas-de-determinacao",
+      "ignored": [
+        {
+          "kind": "instrument",
+          "id": "geopolitica-asia"
+        }
+      ]
     },
     {
       "id": "summary-geografia-geografia-do-oriente-medio",
       "subject": "Geografia",
       "title": "Geografia do Oriente Médio",
-      "primary": "instrument",
-      "artifact": "geografia-oriente-medio",
-      "ignored": []
+      "primary": "scene",
+      "artifact": "camadas-de-determinacao",
+      "ignored": [
+        {
+          "kind": "instrument",
+          "id": "geografia-oriente-medio"
+        }
+      ]
     },
     {
       "id": "summary-geografia-questao-palestina",
       "subject": "Geografia",
       "title": "Questão Palestina",
-      "primary": "instrument",
-      "artifact": "questao-palestina",
-      "ignored": []
+      "primary": "scene",
+      "artifact": "cadeia-de-derivacao",
+      "ignored": [
+        {
+          "kind": "instrument",
+          "id": "questao-palestina"
+        }
+      ]
     },
     {
       "id": "summary-geografia-conflitos-no-mundo-arabe",
       "subject": "Geografia",
       "title": "Conflitos no Mundo Árabe",
-      "primary": "instrument",
-      "artifact": "conflitos-mundo-arabe",
-      "ignored": []
+      "primary": "scene",
+      "artifact": "cadeia-de-derivacao",
+      "ignored": [
+        {
+          "kind": "instrument",
+          "id": "conflitos-mundo-arabe"
+        }
+      ]
     },
     {
       "id": "summary-geografia-paisagem-espaco-geografico-e-ciencia-geografica",
@@ -1837,33 +1952,53 @@
       "id": "summary-geografia-biogeografia-do-brasil-i",
       "subject": "Geografia",
       "title": "Biogeografia do Brasil I",
-      "primary": "instrument",
-      "artifact": "biogeografia-brasil-i",
-      "ignored": []
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": [
+        {
+          "kind": "instrument",
+          "id": "biogeografia-brasil-i"
+        }
+      ]
     },
     {
       "id": "summary-geografia-biogeografia-do-brasil-ii",
       "subject": "Geografia",
       "title": "Biogeografia do Brasil II",
-      "primary": "instrument",
-      "artifact": "biogeografia-brasil-ii",
-      "ignored": []
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": [
+        {
+          "kind": "instrument",
+          "id": "biogeografia-brasil-ii"
+        }
+      ]
     },
     {
       "id": "summary-geografia-politicas-ambientais-brasileiras",
       "subject": "Geografia",
       "title": "Políticas Ambientais Brasileiras",
-      "primary": "instrument",
-      "artifact": "politicas-ambientais-brasileiras",
-      "ignored": []
+      "primary": "scene",
+      "artifact": "camadas-de-determinacao",
+      "ignored": [
+        {
+          "kind": "instrument",
+          "id": "politicas-ambientais-brasileiras"
+        }
+      ]
     },
     {
       "id": "summary-geografia-hidrogeografia-do-brasil",
       "subject": "Geografia",
       "title": "Hidrogeografia do Brasil",
-      "primary": "instrument",
-      "artifact": "brazilian-basins",
-      "ignored": []
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": [
+        {
+          "kind": "instrument",
+          "id": "brazilian-basins"
+        }
+      ]
     },
     {
       "id": "summary-geografia-dominios-morfoclimaticos",
@@ -1877,9 +2012,14 @@
       "id": "summary-geografia-matriz-energetica",
       "subject": "Geografia",
       "title": "Matriz Energética",
-      "primary": "instrument",
-      "artifact": "matriz-energetica",
-      "ignored": []
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": [
+        {
+          "kind": "instrument",
+          "id": "matriz-energetica"
+        }
+      ]
     },
     {
       "id": "summary-geografia-combustiveis-fosseis-e-biocombustiveis-no-brasil",
@@ -1893,9 +2033,14 @@
       "id": "summary-geografia-energia-eletrica-no-mundo",
       "subject": "Geografia",
       "title": "Energia Elétrica no Mundo",
-      "primary": "instrument",
-      "artifact": "energia-eletrica-mundo",
-      "ignored": []
+      "primary": "scene",
+      "artifact": "contraste-de-posicoes",
+      "ignored": [
+        {
+          "kind": "instrument",
+          "id": "energia-eletrica-mundo"
+        }
+      ]
     },
     {
       "id": "summary-geografia-energia-eletrica-no-brasil",
@@ -1909,17 +2054,27 @@
       "id": "summary-geografia-producao-mineral",
       "subject": "Geografia",
       "title": "Produção Mineral",
-      "primary": "instrument",
-      "artifact": "mining",
-      "ignored": []
+      "primary": "scene",
+      "artifact": "cadeia-de-derivacao",
+      "ignored": [
+        {
+          "kind": "instrument",
+          "id": "mining"
+        }
+      ]
     },
     {
       "id": "summary-geografia-o-espaco-agrario-brasileiro",
       "subject": "Geografia",
       "title": "O Espaço Agrário Brasileiro",
-      "primary": "instrument",
-      "artifact": "agrarian",
-      "ignored": []
+      "primary": "scene",
+      "artifact": "camadas-de-determinacao",
+      "ignored": [
+        {
+          "kind": "instrument",
+          "id": "agrarian"
+        }
+      ]
     },
     {
       "id": "summary-geografia-o-espaco-industrial-brasileiro-i",
@@ -1933,9 +2088,14 @@
       "id": "summary-geografia-o-espaco-industrial-brasileiro-ii",
       "subject": "Geografia",
       "title": "O Espaço Industrial Brasileiro II",
-      "primary": "instrument",
-      "artifact": "espaco-industrial-brasileiro-ii",
-      "ignored": []
+      "primary": "scene",
+      "artifact": "cadeia-de-derivacao",
+      "ignored": [
+        {
+          "kind": "instrument",
+          "id": "espaco-industrial-brasileiro-ii"
+        }
+      ]
     },
     {
       "id": "summary-geografia-dinamica-demografica",
@@ -1989,9 +2149,14 @@
       "id": "summary-historia-introducao-a-historia-e-primeiras-civilizacoes",
       "subject": "História",
       "title": "Introdução à História e Primeiras Civilizações",
-      "primary": "experiment",
-      "artifact": "sources",
-      "ignored": []
+      "primary": "scene",
+      "artifact": "cadeia-de-derivacao",
+      "ignored": [
+        {
+          "kind": "experiment",
+          "id": "sources"
+        }
+      ]
     },
     {
       "id": "summary-historia-antiguidade-classica-o-mundo-grego",
@@ -2093,9 +2258,14 @@
       "id": "summary-historia-america-no-seculo-xix",
       "subject": "História",
       "title": "América no Século XIX",
-      "primary": "instrument",
-      "artifact": "america-xix",
-      "ignored": []
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": [
+        {
+          "kind": "instrument",
+          "id": "america-xix"
+        }
+      ]
     },
     {
       "id": "summary-historia-europa-no-seculo-xix",
@@ -2125,9 +2295,14 @@
       "id": "summary-historia-grandes-revolucoes-do-seculo-xx",
       "subject": "História",
       "title": "Grandes Revoluções do Século XX",
-      "primary": "instrument",
-      "artifact": "grandes-revolucoes-seculo-xx",
-      "ignored": []
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": [
+        {
+          "kind": "instrument",
+          "id": "grandes-revolucoes-seculo-xx"
+        }
+      ]
     },
     {
       "id": "summary-historia-o-periodo-entreguerras-1918-1939",
@@ -2149,17 +2324,27 @@
       "id": "summary-historia-segunda-guerra-mundial-1939-1945",
       "subject": "História",
       "title": "Segunda Guerra Mundial (1939-1945)",
-      "primary": "instrument",
-      "artifact": "segunda-guerra",
-      "ignored": []
+      "primary": "scene",
+      "artifact": "cadeia-de-derivacao",
+      "ignored": [
+        {
+          "kind": "instrument",
+          "id": "segunda-guerra"
+        }
+      ]
     },
     {
       "id": "summary-historia-guerra-fria",
       "subject": "História",
       "title": "Guerra Fria",
-      "primary": "instrument",
-      "artifact": "guerra-fria",
-      "ignored": []
+      "primary": "scene",
+      "artifact": "contraste-de-posicoes",
+      "ignored": [
+        {
+          "kind": "instrument",
+          "id": "guerra-fria"
+        }
+      ]
     },
     {
       "id": "summary-historia-descolonizacao-afro-asiatica",
@@ -2173,9 +2358,14 @@
       "id": "summary-historia-america-latina-no-seculo-xx",
       "subject": "História",
       "title": "América Latina no Século XX",
-      "primary": "instrument",
-      "artifact": "america-latina-seculo-xx",
-      "ignored": []
+      "primary": "scene",
+      "artifact": "cadeia-de-derivacao",
+      "ignored": [
+        {
+          "kind": "instrument",
+          "id": "america-latina-seculo-xx"
+        }
+      ]
     },
     {
       "id": "summary-historia-o-fim-da-guerra-fria",
@@ -2221,9 +2411,14 @@
       "id": "summary-historia-disputas-europeias-no-brasil-colonial",
       "subject": "História",
       "title": "Disputas Europeias no Brasil Colonial",
-      "primary": "instrument",
-      "artifact": "disputas-europeias-brasil-colonial",
-      "ignored": []
+      "primary": "scene",
+      "artifact": "cadeia-de-derivacao",
+      "ignored": [
+        {
+          "kind": "instrument",
+          "id": "disputas-europeias-brasil-colonial"
+        }
+      ]
     },
     {
       "id": "summary-historia-a-interiorizacao-da-colonizacao",
@@ -2282,9 +2477,14 @@
       "id": "summary-historia-brasil-imperio-segundo-reinado-1840-1889",
       "subject": "História",
       "title": "Brasil Império: Segundo Reinado (1840-1889)",
-      "primary": "instrument",
-      "artifact": "segundo-reinado",
-      "ignored": []
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": [
+        {
+          "kind": "instrument",
+          "id": "segundo-reinado"
+        }
+      ]
     },
     {
       "id": "summary-historia-brasil-imperio-o-declinio-do-segundo-reinado",
@@ -2298,9 +2498,14 @@
       "id": "summary-historia-a-republica-da-espada",
       "subject": "História",
       "title": "A República da Espada",
-      "primary": "instrument",
-      "artifact": "republica-da-espada",
-      "ignored": []
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": [
+        {
+          "kind": "instrument",
+          "id": "republica-da-espada"
+        }
+      ]
     },
     {
       "id": "summary-historia-ascensao-e-dominio-das-oligarquias",
@@ -2346,33 +2551,53 @@
       "id": "summary-historia-republica-liberal-1945-1964-democracia-em-tempos-de-guerra-fria",
       "subject": "História",
       "title": "República Liberal (1945-1964): Democracia em Tempos de Guerra Fria",
-      "primary": "instrument",
-      "artifact": "republica-liberal-democracia",
-      "ignored": []
+      "primary": "scene",
+      "artifact": "contraste-de-posicoes",
+      "ignored": [
+        {
+          "kind": "instrument",
+          "id": "republica-liberal-democracia"
+        }
+      ]
     },
     {
       "id": "summary-historia-republica-liberal-1945-1964-desenvolvimentismo-e-populismo",
       "subject": "História",
       "title": "República Liberal (1945-1964): Desenvolvimentismo e Populismo",
-      "primary": "instrument",
-      "artifact": "republica-liberal-desenvolvimentismo",
-      "ignored": []
+      "primary": "scene",
+      "artifact": "contraste-de-posicoes",
+      "ignored": [
+        {
+          "kind": "instrument",
+          "id": "republica-liberal-desenvolvimentismo"
+        }
+      ]
     },
     {
       "id": "summary-historia-regime-militar-1964-1985-i",
       "subject": "História",
       "title": "Regime Militar (1964-1985) I",
-      "primary": "instrument",
-      "artifact": "regime-militar-i",
-      "ignored": []
+      "primary": "scene",
+      "artifact": "tipologia",
+      "ignored": [
+        {
+          "kind": "instrument",
+          "id": "regime-militar-i"
+        }
+      ]
     },
     {
       "id": "summary-historia-regime-militar-1964-1985-ii",
       "subject": "História",
       "title": "Regime Militar (1964-1985) II",
-      "primary": "instrument",
-      "artifact": "regime-militar-ii",
-      "ignored": []
+      "primary": "scene",
+      "artifact": "escala-de-graus",
+      "ignored": [
+        {
+          "kind": "instrument",
+          "id": "regime-militar-ii"
+        }
+      ]
     },
     {
       "id": "summary-historia-o-brasil-atual",

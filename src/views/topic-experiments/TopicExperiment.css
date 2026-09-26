@@ -56,3 +56,15 @@
  .ta-spine button { flex-shrink:0; }
  .ta-active-passage,.ta-pinned { padding:10px 12px; }
 }
+/* Coordenadas: rótulos em tamanho próprio, porque a regra geral de 15px no
+   viewBox de 480 chegava a ~8 px no celular. */
+.topic-studio svg.ts-coord { max-width:520px; }
+.topic-studio svg .ts-coord-label { font:700 16px system-ui,sans-serif; }
+.topic-studio svg .ts-coord-note { font:600 14px system-ui,sans-serif; opacity:.8; }
+.topic-studio svg .ts-coord-value { font:800 16px system-ui,sans-serif; }
+.topic-studio svg .ts-coord-cardinal { font:800 15px system-ui,sans-serif; }
+.ts-coord-rose-axis { stroke:currentColor; stroke-width:1.4; opacity:.55; }
+.ts-coord-rose-north { fill:var(--vs-burgundy); }
+.ts-coord-track { fill:currentColor; opacity:.1; }
+.ts-coord-bar-lat { fill:var(--vs-blue); }
+.ts-coord-bar-long { fill:var(--vs-green); }

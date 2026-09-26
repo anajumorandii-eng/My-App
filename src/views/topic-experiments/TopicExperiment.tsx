@@ -4,10 +4,12 @@ import { MOTION_DURATION, MOTION_EASE } from '../../design-system/motion/tokens'
 import { topicExperiments } from './catalog';
 import './TopicExperiment.css';
 
+
 function useInkMotion() {
   const reduced = useReducedMotion();
   return { duration: reduced ? 0 : MOTION_DURATION.entrance, ease: MOTION_EASE };
 }
+
 
 function Studio({ title, note, children }: { title: string; note: string; children: React.ReactNode }) {
   return <section className="topic-studio" aria-label={title}>
@@ -15,36 +17,77 @@ function Studio({ title, note, children }: { title: string; note: string; childr
   </section>;
 }
 
+
+// A auditoria de 26/09 achou o rótulo do Equador encostado no globo, texto
+// de ~8 px a 390 de largura e erro de console: motion.path e motion.ellipse
+// sem valor inicial faziam o navegador ler d="undefined" e rx="undefined" no
+// primeiro quadro. O globo agora parte do valor já calculado, os rótulos saem
+// do contorno com folga, e as duas barras de baixo põem lado a lado o que o
+// resumo chama de assimetria: 1° de latitude vale sempre cerca de 111 km, e
+// 1° de longitude encolhe com a latitude.
 function Coordinates() {
   const [latitude, setLatitude] = useState(20);
   const [longitude, setLongitude] = useState(30);
   const transition = useInkMotion();
   const id = useId();
   const r = Math.PI / 180;
-  const x = 240 + 148 * Math.cos(latitude * r) * Math.sin(longitude * r);
-  const y = 174 - 148 * Math.sin(latitude * r);
-  const radius = 148 * Math.cos(latitude * r);
+  const cx = 240, cy = 172, R = 122;
+  const x = cx + R * Math.cos(latitude * r) * Math.sin(longitude * r);
+  const y = cy - R * Math.sin(latitude * r);
+  const radius = R * Math.cos(latitude * r);
+  const meridianRx = Math.abs(R * Math.sin(longitude * r));
+  const kmLongitude = Math.round(111.2 * Math.cos(latitude * r));
+  const bar = 206;
+  const parallel = `M${cx - radius} ${y}H${cx + radius}`;
+  const hemisphere = `${latitude < 0 ? 'Sul' : latitude > 0 ? 'Norte' : 'no Equador'}`;
   return <Studio title="Um endereço sobre a esfera" note="Mova as coordenadas. A latitude parte do Equador; a longitude, de Greenwich.">
-    <svg viewBox="0 0 480 365" role="img" aria-label={`Ponto a ${latitude} graus de latitude e ${longitude} graus de longitude`}>
+    <svg className="ts-coord" viewBox="0 0 480 456" role="img" aria-label={`Ponto a ${Math.abs(latitude)} graus ${latitude < 0 ? 'sul' : 'norte'} e ${Math.abs(longitude)} graus ${longitude < 0 ? 'oeste' : 'leste'}; 1 grau de latitude vale cerca de 111 km e 1 grau de longitude, nesta latitude, cerca de ${kmLongitude} km`}>
       <defs><radialGradient id={id} cx="32%" cy="24%"><stop stopColor="var(--vs-paper-strong)"/><stop offset="1" stopColor="var(--vs-blue)" stopOpacity=".2"/></radialGradient></defs>
-      <circle cx="240" cy="174" r="148" fill={`url(#${id})`} stroke="currentColor" strokeWidth="1.5"/>
-      {[40,85,125].map(rx => <ellipse key={rx} cx="240" cy="174" rx={rx} ry="148" className="ts-guide"/>)}
-      {[80,125,174,223,268].map(cy => <path key={cy} d={`M${240-Math.sqrt(148**2-(cy-174)**2)} ${cy}H${240+Math.sqrt(148**2-(cy-174)**2)}`} className="ts-guide"/>)}
-      <path d="M92 174H388M240 26V322" className="ts-reference"/>
-      <motion.path animate={{ d: `M${240-radius} ${y}H${240+radius}` }} transition={transition} className="ts-latitude"/>
-      <motion.ellipse cx="240" cy="174" animate={{ rx: Math.abs(148 * Math.sin(longitude*r)) }} ry="148" transition={transition} className="ts-longitude"/>
-      <motion.circle animate={{ cx:x,cy:y }} r="8" transition={transition} className="ts-position"/>
-      <text x="14" y="167">Equador · 0°</text><text x="254" y="345">Greenwich · 0°</text>
-      <text x="231" y="18">N</text><text x="231" y="362">S</text>
+      <circle cx={cx} cy={cy} r={R} fill={`url(#${id})`} stroke="currentColor" strokeWidth="1.5"/>
+      {[0.28, 0.58, 0.85].map(k => <ellipse key={k} cx={cx} cy={cy} rx={R * k} ry={R} className="ts-guide"/>)}
+      {[-60, -30, 30, 60].map(lat => { const py = cy - R * Math.sin(lat * r); const half = R * Math.cos(lat * r); return <path key={lat} d={`M${cx - half} ${py}H${cx + half}`} className="ts-guide"/>; })}
+      <path d={`M${cx - R - 14} ${cy}H${cx + R}M${cx} ${cy - R}V${cy + R + 12}`} className="ts-reference"/>
+      <motion.path d={parallel} initial={false} animate={{ d: parallel }} transition={transition} className="ts-latitude"/>
+      <motion.ellipse cx={cx} cy={cy} rx={meridianRx} ry={R} initial={false} animate={{ rx: meridianRx }} transition={transition} className="ts-longitude"/>
+      <motion.circle cx={x} cy={y} r="8" initial={false} animate={{ cx: x, cy: y }} transition={transition} className="ts-position"/>
+      <text x={cx - R - 20} y={cy - 7} textAnchor="end" className="ts-coord-label">Equador</text>
+      <text x={cx - R - 20} y={cy + 17} textAnchor="end" className="ts-coord-note">lat. 0°</text>
+      <text x={cx + 12} y={cy + R + 26} className="ts-coord-label">Greenwich · long. 0°</text>
+      <text x={cx} y={cy - R - 10} textAnchor="middle" className="ts-coord-cardinal">N</text>
+      <text x={cx - 12} y={cy + R + 26} textAnchor="end" className="ts-coord-cardinal">S</text>
+      <g transform="translate(414 70)" className="ts-coord-rose">
+        <path d="M0 -30V30M-30 0H30" className="ts-coord-rose-axis"/>
+        <path d="M0 -24L5 -5L0 0L-5 -5Z" className="ts-coord-rose-north"/>
+        <text x="0" y="-36" textAnchor="middle" className="ts-coord-cardinal">N</text>
+        <text x="0" y="50" textAnchor="middle" className="ts-coord-cardinal">S</text>
+        <text x="38" y="6" className="ts-coord-cardinal">L</text>
+        <text x="-38" y="6" textAnchor="end" className="ts-coord-cardinal">O</text>
+      </g>
+      <text x="24" y="58" className="ts-coord-note">hemisfério</text>
+      <text x="24" y="80" className="ts-coord-label">{latitude === 0 ? 'no Equador' : hemisphere}</text>
+      <text x="24" y="102" className="ts-coord-label">{longitude === 0 ? 'em Greenwich' : longitude < 0 ? 'Oeste' : 'Leste'}</text>
+
+
+      <text x="24" y="352" className="ts-coord-label">1° de latitude</text>
+      <rect x="168" y="339" width={bar} height="14" rx="7" className="ts-coord-track"/>
+      <rect x="168" y="339" width={bar} height="14" rx="7" className="ts-coord-bar-lat"/>
+      <text x={168 + bar + 10} y="352" className="ts-coord-value">111 km</text>
+      <text x="24" y="392" className="ts-coord-label">1° de longitude</text>
+      <rect x="168" y="379" width={bar} height="14" rx="7" className="ts-coord-track"/>
+      <motion.rect x="168" y="379" width={bar * Math.cos(latitude * r)} height="14" rx="7" initial={false} animate={{ width: bar * Math.cos(latitude * r) }} transition={transition} className="ts-coord-bar-long"/>
+      <text x={168 + bar + 10} y="392" className="ts-coord-value">{kmLongitude} km</text>
+      <text x="24" y="426" className="ts-coord-note">o grau de latitude não encolhe;</text>
+      <text x="24" y="446" className="ts-coord-note">o de longitude encolhe até zero nos polos</text>
     </svg>
     <div className="ts-sliders">
       <label>Latitude: {Math.abs(latitude)}° {latitude < 0 ? 'S' : latitude > 0 ? 'N' : ''}<input type="range" min="-80" max="80" value={latitude} onChange={e=>setLatitude(Number(e.target.value))}/></label>
       <label>Longitude: {Math.abs(longitude)}° {longitude < 0 ? 'O' : longitude > 0 ? 'L' : ''}<input type="range" min="-90" max="90" value={longitude} onChange={e=>setLongitude(Number(e.target.value))}/></label>
     </div>
-    <p className="ts-observation" role="status">Nesta latitude, 1° de longitude corresponde a aproximadamente {Math.round(111.2*Math.cos(latitude*r))} km. Os meridianos convergem nos polos.</p>
-    <small>Modelo esférico, hemisfério visível de −90° a +90° de longitude. A elipse mostra o meridiano e seu prolongamento; o ponto marca a posição escolhida.</small>
+    <p className="ts-observation" role="status">Nesta latitude, 1° de longitude corresponde a aproximadamente {kmLongitude} km, porque os meridianos convergem nos polos. Já 1° de latitude vale cerca de 111 km em qualquer lugar.</p>
+    <small>Modelo esférico, hemisfério visível de −90° a +90° de longitude. A elipse azul é o meridiano do ponto; a linha verde, o seu paralelo. Barras proporcionais aos quilômetros.</small>
   </Studio>;
 }
+
 
 function Powers() {
   const [a, setA] = useState(3);
@@ -64,6 +107,7 @@ function Powers() {
     <p className="ts-observation" role="status">2<sup>{a}</sup> × 2<sup>{b}</sup> = {2**a} × {2**b} = {2**(a+b)}. A soma dos expoentes vale aqui porque a base é a mesma.</p>
   </Studio>;
 }
+
 
 const ecologyLevels = [
   ['População','Indivíduos da mesma espécie, na mesma área e no mesmo momento.'],
@@ -89,6 +133,7 @@ function Ecology() {
   </Studio>;
 }
 
+
 function Myth() {
   const [mode,setMode]=useState(0); const transition=useInkMotion();
   const [inspect,setInspect]=useState(false);
@@ -108,6 +153,7 @@ function Myth() {
   </Studio>;
 }
 
+
 function Solidarity() {
   const [organic,setOrganic]=useState(false);const transition=useInkMotion();
   return <Studio title="O que mantém o grupo unido?" note="Em Durkheim, semelhança e interdependência sustentam formas diferentes de solidariedade.">
@@ -123,6 +169,7 @@ function Solidarity() {
   </Studio>;
 }
 
+
 function Cohesion() {
   const [relation,setRelation]=useState<'cause'|'contrast'>('cause'); const transition=useInkMotion();
   return <Studio title="Um conector muda a relação" note="Observe a diferença entre ligar palavras e construir um sentido coerente.">
@@ -132,6 +179,7 @@ function Cohesion() {
     <p className="ts-observation" role="status">{relation==='cause'?'“Por isso” apresenta o cancelamento como consequência da chuva.':'“Mesmo assim” indica que a partida continuou contra uma expectativa gerada pela chuva.'} O conector estabelece coesão; a interpretação da relação depende do contexto.</p>
   </Studio>;
 }
+
 
 function Variation() {
   const [formal,setFormal]=useState(false); const transition=useInkMotion();
@@ -143,6 +191,7 @@ function Variation() {
     <p className="ts-observation" role="status">{formal?'O pedido usa tratamento mais formal, adequado à situação institucional.':'O pedido usa um registro informal, adequado a uma relação de proximidade.'} Variação de registro não mede a inteligência nem o valor de quem fala.</p>
   </Studio>;
 }
+
 
 function Sources() {
   const [source,setSource]=useState(0);const transition=useInkMotion();
@@ -158,6 +207,7 @@ function Sources() {
   </Studio>;
 }
 
+
 function Inference() {
   const [selection,setSelection]=useState<number|null>(null);
   const options=['The bus was late.','Maya missed the beginning of the meeting.','Maya is always careless.'];
@@ -168,6 +218,7 @@ function Inference() {
     {selection!==null&&<p className="ts-observation" role="status">{readings[selection]}</p>}<small>Microtexto original para este exercício. Diferencie explicit information, inference e unsupported assumption.</small>
   </Studio>;
 }
+
 
 function Literary() {
   const [figurative,setFigurative]=useState(false);const transition=useInkMotion();
@@ -180,6 +231,7 @@ function Literary() {
     <small>Exemplos originais. Linguagem figurada também ocorre fora da literatura; sua presença isolada não define um texto literário.</small>
   </Studio>;
 }
+
 
 const argumentSteps=[
   ['Tese','A mobilidade urbana deve priorizar o transporte coletivo.','Define uma posição discutível e orienta o restante do texto.'],
@@ -198,6 +250,7 @@ function Argument() {
     <small>Exemplo didático original. Uma estrutura possível, não uma fórmula obrigatória para toda redação.</small>
   </Studio>;
 }
+
 
 export function TopicExperiment({summaryId}:{summaryId:string}) {
   const kind=topicExperiments[summaryId];

@@ -4,3 +4,14 @@
 .independence-board__cards { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:14px; }.independence-board__cards button { min-height:124px; border:1px solid #dbcabc; border-radius:14px; padding:13px; background:#fffdf8; color:var(--ind-ink); text-align:left; transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease; }.independence-board__cards button:hover,.independence-board__cards button:focus-visible,.independence-board__cards button[data-active] { border-color:var(--ind-red); box-shadow:0 7px 18px rgb(91 44 42/.13); outline:none; transform:translateY(-2px); }.independence-board__cards small { color:var(--ind-red); }.independence-board__cards strong { display:block; margin:5px 0 7px; font:1rem Georgia,serif; }.independence-board__cards span { color:#665a52; font-size:.82rem; line-height:1.35; }.independence-board footer { margin-top:15px; border-left:4px solid var(--ind-red); padding:10px 13px; background:#f7e9de; color:#5f4141; font-size:.88rem; line-height:1.45; }
 .dark .independence-board { --ind-ink:#f6ead7; }.dark .independence-board__head p,.dark .independence-board__cards span { color:#c9bdb0; }.dark .independence-board__seal,.dark .independence-board__cards button { border-color:#71484a; background:#211e1b; color:#f6ead7; }.dark .independence-board footer { background:#2d2023; color:#f0dcd2; }
 @media (max-width:700px) { .independence-board__head { display:block; }.independence-board__seal { display:inline-block; margin-top:12px; }.independence-board__map { border-radius:12px; }.independence-board__map svg { min-height:280px; }.independence-board__event text { font-size:12px; }.independence-board__event text:first-of-type { font-size:11px; }.independence-board__war text,.independence-board__track text { font-size:12px; }.independence-board__track text+text { font-size:11px; }.independence-board__map > p { position:static; border-radius:0; text-align:left; }.independence-board__cards { grid-template-columns:1fr; }.independence-board__cards button { min-height:auto; } }
+
+/* Keep the chronology readable at phone widths without overflowing the page. */
+.independence-board__viewport { max-width:100%; overflow-x:auto; overscroll-behavior-x:contain; }
+.independence-board__viewport:focus-visible { outline:3px solid var(--ind-red); outline-offset:3px; }
+.independence-board__map { min-width:820px; }
+.independence-board__map > p { position:static; border-radius:0; text-align:left; }
+.independence-board__hint { margin:14px 0 0; color:var(--ind-ink); font-size:.85rem; line-height:1.5; }
+@media (max-width:700px) {
+  .independence-board__event text,.independence-board__track text,.independence-board__war text { font-size:16px; }
+  .independence-board__event text:first-of-type,.independence-board__track text+text { font-size:14px; }
+}

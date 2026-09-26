@@ -1,0 +1,188 @@
+/* Lote 13 — História mundial e colonial. Prefixo hm-; toda classe tem variante .dark. */
+
+.hm-title-on { fill: #a8432a; }
+.hm-tent { fill: #d9c39a; stroke: #7c5534; stroke-width: 1.6; stroke-linejoin: round; }
+.hm-tent-line { fill: none; stroke: #7c5534; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.hm-spear { fill: none; stroke: #5c3b20; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.hm-trail { fill: none; stroke: #b8a88a; stroke-width: 2; stroke-dasharray: 2 6; stroke-linecap: round; }
+.hm-hut { fill: #e5c796; stroke: #7c5534; stroke-width: 1.6; stroke-linejoin: round; }
+.hm-stalk { fill: none; stroke: #8a7a2a; stroke-width: 2; stroke-linecap: round; }
+.hm-grain { fill: none; stroke: #c9a13a; stroke-width: 2; stroke-linecap: round; }
+.hm-wall { fill: #e8d6b0; stroke: #7c5534; stroke-width: 1.6; stroke-linejoin: round; }
+.hm-gate { fill: #b8946a; stroke: #7c5534; stroke-width: 1.4; }
+.hm-house { fill: #f3e7cc; stroke: #7c5534; stroke-width: 1.4; stroke-linejoin: round; }
+.hm-trade { fill: #fbf7ee; stroke: #873f4f; stroke-width: 1.6; }
+.hm-trade-icon { fill: none; stroke: #873f4f; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.hm-river { fill: none; stroke: #4f86a6; stroke-width: 3.4; stroke-linecap: round; }
+.hm-delta { stroke-width: 2.2; }
+.hm-flood { fill: none; stroke: #a9cde0; stroke-linecap: round; }
+.hm-city { fill: #e8d6b0; stroke: #7c5534; stroke-width: 1.4; stroke-linejoin: round; }
+.hm-rival { fill: none; stroke: #a8432a; stroke-width: 1.8; stroke-linecap: round; stroke-dasharray: 3 3; }
+.hm-tablet { fill: #d9b98a; stroke: #7c5534; stroke-width: 1.4; }
+.hm-papyrus { fill: #f0e1b8; }
+.hm-wedge { fill: #6e4526; }
+.hm-glyph { fill: none; stroke: #3f6f8f; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.hm-tie { fill: none; stroke: #b3791a; stroke-width: 1.6; stroke-dasharray: 3 3; }
+.hm-village { fill: #fbf7ee; stroke: #7c5534; stroke-width: 1.2; }
+.hm-hedjet { fill: #fbf7ee; stroke: #7c5534; stroke-width: 1.4; stroke-linejoin: round; }
+.hm-deshret { fill: #b3564a; stroke: #7a2f25; stroke-width: 1.4; stroke-linejoin: round; }
+.hm-curl { fill: none; stroke: #f2c14e; stroke-width: 1.8; stroke-linecap: round; }
+
+.hm-us { fill: #cfe0d6; stroke: #5d7f6c; stroke-width: 1; }
+.hm-us-edge { fill: none; stroke: #5d7f6c; stroke-width: 1.8; stroke-linejoin: round; }
+.hm-south { fill: rgb(155 106 63 / .22); }
+.hm-bay { fill: none; stroke: #8b7a5c; stroke-width: 1.4; stroke-linecap: round; }
+.hm-ocean { fill: #4f86a6; font: italic 600 10px Georgia, serif; letter-spacing: .08em; }
+.hm-wave { fill: none; stroke: #9cc0cf; stroke-width: 1.6; stroke-linecap: round; }
+.hm-us-label { fill: #2f5a45; font: 800 12px system-ui, sans-serif; letter-spacing: .08em; }
+.hm-zone-text { fill: #2f5a45; font: 800 10px system-ui, sans-serif; }
+.hm-frontier { fill: none; stroke: #a8432a; stroke-width: 2.6; stroke-dasharray: 5 3; }
+.hm-split { fill: none; stroke: #a8432a; stroke-width: 2.4; stroke-dasharray: 6 3; }
+.hm-rows { fill: none; stroke: #7c5534; stroke-width: 1.4; stroke-linecap: round; }
+.hm-hisp { fill: #f0d6a8; stroke: #9b6a3f; stroke-width: 1.4; stroke-linejoin: round; }
+.hm-br { fill: #d8e4c4; stroke: #6f8f5a; stroke-width: 1.4; stroke-linejoin: round; }
+.hm-dream { fill: none; stroke: #873f4f; stroke-width: 1.8; stroke-dasharray: 6 5; }
+.hm-uk { fill: #d8d0e4; stroke: #5d5480; stroke-width: 1.4; stroke-linejoin: round; }
+.hm-return { fill: none; stroke: #3f6f8f; stroke-width: 2.4; stroke-dasharray: 6 4; stroke-linecap: round; }
+.hm-cargo { fill: #b3791a; }
+
+.hm-tl { fill: #e5ddc9; stroke: #8b7a5c; stroke-width: 1.4; }
+.hm-tl-on { fill: #a8432a; stroke: #fbf1e3; stroke-width: 1.6; }
+.hm-rope { fill: none; stroke: #9b6a3f; stroke-width: 2.4; stroke-linecap: round; }
+.hm-island { fill: #d8e4c4; stroke: #6f8f5a; stroke-width: 1.4; stroke-linejoin: round; }
+.hm-bracket { fill: none; stroke: #873f4f; stroke-width: 1.8; }
+.hm-chip { fill: #873f4f; }
+.hm-chip-text { fill: #fbf1e3; font: 800 11px system-ui, sans-serif; letter-spacing: .03em; }
+
+.hm-country { fill: #efe5cc; stroke: #8b7a5c; stroke-width: 1.4; stroke-linejoin: round; }
+.hm-axis { fill: #e2cfa8; }
+.hm-ussr { fill: #e7dcc3; }
+.hm-pin { fill: #a8432a; stroke: #fbf1e3; stroke-width: 1.6; }
+.hm-pin-off { fill: #8b7a5c; }
+.hm-tank { fill: #6b6a52; stroke: #3d3a36; stroke-width: 1; stroke-linejoin: round; }
+.hm-sea { fill: #e3ecee; }
+.hm-isle { fill: #6f8f5a; }
+.hm-attack { fill: none; stroke: #a8432a; stroke-width: 2; stroke-dasharray: 4 4; }
+.hm-hop { fill: none; stroke: #3f6f8f; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+.hm-blast { fill: #f2c14e; stroke: #e0762f; stroke-width: 2; }
+.hm-pole-a { fill: #3f6f8f; }
+.hm-pole-b { fill: #b3791a; }
+.hm-tension { fill: none; stroke: #7c6a4f; stroke-width: 2; stroke-dasharray: 3 3; }
+
+.hm-bloc-ring { fill: none; stroke: #7c6a4f; stroke-width: 1.8; stroke-dasharray: 5 4; }
+.hm-pole-text { fill: #fbf7ee; font: 800 14px system-ui, sans-serif; letter-spacing: .06em; }
+.hm-brick { fill: #c9a98a; stroke: #7c5534; stroke-width: 1; }
+.hm-supply-a { fill: none; stroke: #3f6f8f; stroke-width: 2; stroke-dasharray: 5 4; }
+.hm-supply-b { fill: none; stroke: #b3791a; stroke-width: 2; stroke-dasharray: 5 4; }
+.hm-spark { fill: none; stroke: #e0762f; stroke-width: 2.4; }
+.hm-earth { fill: #a9cde0; stroke: #3f6f8f; stroke-width: 1.6; }
+.hm-earth-line { fill: none; stroke: #6f8f5a; stroke-width: 3; stroke-linecap: round; }
+.hm-orbit { fill: none; stroke: #7c6a4f; stroke-width: 1.2; stroke-dasharray: 3 4; }
+.hm-antenna { fill: none; stroke: #b3791a; stroke-width: 1.4; stroke-linecap: round; }
+.hm-moon { fill: #e5ddc9; stroke: #8b7a5c; stroke-width: 1.4; }
+.hm-crater { fill: #cdbf9f; }
+.hm-apollo { fill: none; stroke: #3f6f8f; stroke-width: 2.4; stroke-dasharray: 6 4; stroke-linecap: round; }
+.hm-third { fill: #d8e4c4; stroke: #6f8f5a; stroke-width: 2; }
+.hm-pull { fill: none; stroke: #7c6a4f; stroke-width: 1.8; stroke-dasharray: 4 4; }
+
+.hm-map-country { fill: #efe5cc; stroke: #8b7a5c; stroke-width: 2.4; stroke-linejoin: round; }
+.hm-map-regime { fill: #e3bfae; }
+.hm-condor { fill: none; stroke: #a8432a; stroke-width: 2; stroke-dasharray: 4 3; stroke-linecap: round; }
+.hm-populism { fill: #e5b76a; }
+.hm-bar-sub { fill: #4a3218; font: 600 9.5px system-ui, sans-serif; }
+.hm-regime-bar { fill: #b3564a; }
+.hm-regime-hot { fill: #8f2f24; }
+.hm-overlap { fill: rgb(168 67 42 / .1); stroke: #a8432a; stroke-width: 1.4; stroke-dasharray: 4 3; }
+.hm-ramp { fill: none; stroke: #3f6f8f; stroke-width: 3; stroke-linecap: round; stroke-dasharray: 2 4; }
+
+.hm-sail { fill: #fbf7ee; stroke: #5c3b20; stroke-width: 1.4; stroke-linejoin: round; }
+.hm-log { stroke: #a8432a; stroke-width: 4; stroke-linecap: round; }
+.hm-log-end { fill: #e8b48a; stroke: #7a2f25; stroke-width: 1; }
+.hm-dutch { fill: #e0762f; }
+.hm-sugar-route { fill: none; stroke: #b3791a; stroke-width: 2.4; stroke-dasharray: 6 4; stroke-linecap: round; }
+.hm-sugar { fill: #fbf7ee; stroke: #b3791a; stroke-width: 1.2; }
+.hm-union { fill: #e5d7b8; stroke: #8b7a5c; stroke-width: 1.2; }
+.hm-union-text { fill: #4a3218; font: 800 9.5px system-ui, sans-serif; }
+.hm-span { fill: #b8a88a; }
+.hm-span-on { fill: #a8432a; }
+
+.dark .hm-title-on { fill: #ffd095; }
+.dark .hm-tent, .dark .hm-hut, .dark .hm-wall, .dark .hm-city, .dark .hm-house { fill: #4a5a55; stroke: #d9c39a; }
+.dark .hm-tent-line, .dark .hm-rows { stroke: #d9c39a; }
+.dark .hm-spear { stroke: #d9a877; }
+.dark .hm-trail { stroke: #6e7f79; }
+.dark .hm-stalk { stroke: #c9c07a; }
+.dark .hm-grain { stroke: #f2c14e; }
+.dark .hm-gate { fill: #6e5a42; stroke: #d9c39a; }
+.dark .hm-trade { fill: #2d3d3b; stroke: #f1c8ab; }
+.dark .hm-trade-icon { stroke: #f1c8ab; }
+.dark .hm-river { stroke: #8fc1dc; }
+.dark .hm-flood { stroke: #3c6478; }
+.dark .hm-rival, .dark .hm-frontier, .dark .hm-split, .dark .hm-attack, .dark .hm-condor, .dark .hm-spark { stroke: #f1a27f; }
+.dark .hm-tablet { fill: #8a7552; stroke: #d9c39a; }
+.dark .hm-papyrus { fill: #6e6446; }
+.dark .hm-wedge { fill: #f4ead7; }
+.dark .hm-glyph { stroke: #b5d6ea; }
+.dark .hm-rope { stroke: #d9a877; }
+.dark .hm-tie { stroke: #e5b76a; }
+.dark .hm-hedjet { fill: #d3ddcf; stroke: #22302f; }
+.dark .hm-deshret { fill: #c2705f; stroke: #f1c8ab; }
+.dark .hm-village { fill: #34443d; stroke: #d9c39a; }
+.dark .hm-us { fill: #34524a; stroke: #9cc3ae; }
+.dark .hm-us-edge { stroke: #9cc3ae; }
+.dark .hm-south { fill: rgb(217 168 119 / .22); }
+.dark .hm-bay { stroke: #b9b2a2; }
+.dark .hm-ocean { fill: #8fc1dc; }
+.dark .hm-wave { stroke: #4f7784; }
+.dark .hm-us-label, .dark .hm-zone-text { fill: #cfe8d9; }
+.dark .hm-hisp { fill: #6e5a3c; stroke: #d9c39a; }
+.dark .hm-br { fill: #455a3d; stroke: #b9d0a2; }
+.dark .hm-dream { stroke: #f1c8ab; }
+.dark .hm-uk { fill: #4f4a66; stroke: #c8c0e0; }
+.dark .hm-return, .dark .hm-hop, .dark .hm-apollo, .dark .hm-ramp { stroke: #8fc1dc; }
+.dark .hm-cargo { fill: #e5b76a; }
+.dark .hm-tl { fill: #3f4e4b; stroke: #b9b2a2; }
+.dark .hm-tl-on { fill: #f1a27f; stroke: #22302f; }
+.dark .hm-island, .dark .hm-third { fill: #455a3d; stroke: #b9d0a2; }
+.dark .hm-bracket { stroke: #f1c8ab; }
+.dark .hm-chip { fill: #f1c8ab; }
+.dark .hm-chip-text { fill: #22302f; }
+.dark .hm-country { fill: #34443d; stroke: #b9b2a2; }
+.dark .hm-axis { fill: #4d5a48; }
+.dark .hm-ussr { fill: #3d4a44; }
+.dark .hm-pin { fill: #f1a27f; stroke: #22302f; }
+.dark .hm-pin-off { fill: #b9b2a2; }
+.dark .hm-tank { fill: #b9b2a2; stroke: #22302f; }
+.dark .hm-sea { fill: #26393d; }
+.dark .hm-isle { fill: #b9d0a2; }
+.dark .hm-pole-a { fill: #5d8fae; }
+.dark .hm-pole-b { fill: #c9923a; }
+.dark .hm-tension, .dark .hm-bloc-ring, .dark .hm-orbit, .dark .hm-pull { stroke: #b9b2a2; }
+.dark .hm-brick { fill: #6e5a42; stroke: #d9c39a; }
+.dark .hm-supply-a { stroke: #8fc1dc; }
+.dark .hm-supply-b { stroke: #e5b76a; }
+.dark .hm-earth { fill: #3c6478; stroke: #8fc1dc; }
+.dark .hm-earth-line { stroke: #b9d0a2; }
+.dark .hm-antenna { stroke: #e5b76a; }
+.dark .hm-moon { fill: #5d6b66; stroke: #b9b2a2; }
+.dark .hm-crater { fill: #4a5a55; }
+.dark .hm-map-country { fill: #34443d; stroke: #b9b2a2; }
+.dark .hm-map-regime { fill: #6b4a44; }
+.dark .hm-populism { fill: #8a6a32; }
+.dark .hm-bar-sub, .dark .hm-union-text { fill: #f4ead7; }
+.dark .hm-regime-bar { fill: #c2705f; }
+.dark .hm-regime-hot { fill: #e09078; }
+.dark .hm-overlap { fill: rgb(241 162 127 / .1); stroke: #f1a27f; }
+.dark .hm-sail { fill: #d3ddcf; stroke: #22302f; }
+.dark .hm-log { stroke: #f1a27f; }
+.dark .hm-dutch { fill: #c9703a; }
+.dark .hm-sugar-route { stroke: #e5b76a; }
+.dark .hm-sugar { fill: #f4ead7; stroke: #e5b76a; }
+.dark .hm-union { fill: #4a5a55; stroke: #b9b2a2; }
+.dark .hm-span { fill: #6e7f79; }
+.dark .hm-span-on { fill: #f1a27f; }
+.dark .hm-blast { fill: #f2c14e; stroke: #f1a27f; }
+.dark .hm-curl { stroke: #f2c14e; }
+.dark .hm-delta { stroke-width: 2.2; }
+.dark .hm-pole-text { fill: #fbf7ee; }
+.dark .hm-log-end { fill: #f1c8ab; stroke: #22302f; }

@@ -1,0 +1,188 @@
+/* Lote 19 — Indústria II, Geoeconomia, Espaço Agrário, Espaço Industrial II.
+   Paleta de papel das cenas bi-*; toda classe tem a variante .dark logo abaixo
+   do bloco, porque o tema escuro põe .dark num ancestral. */
+
+.eb-factory { fill: #c9a27a; stroke: #6e4a2f; stroke-width: 1.6; stroke-linejoin: round; }
+.eb-factory-sp { fill: #b3564a; stroke: #6e2a1f; }
+.eb-window { fill: #fbf1dc; stroke: none; }
+.eb-ghost { fill: none; stroke: #8b7a5c; stroke-width: 1.6; stroke-dasharray: 4 4; stroke-linejoin: round; }
+.eb-glow { fill: rgb(242 193 78 / .28); }
+.eb-bulb { fill: #f2c14e; stroke: #b3791a; stroke-width: 1.6; stroke-linejoin: round; }
+.eb-bulb-base { fill: none; stroke: #5c4a3a; stroke-width: 2; stroke-linecap: round; }
+.eb-badge { fill: #fbf7ee; stroke: #b3791a; stroke-width: 2; }
+.eb-land-rich { fill: #e4e9df; stroke: #7f9181; stroke-width: 1.8; stroke-linejoin: round; }
+.eb-land-cheap { fill: #f1e2c8; stroke: #a88d56; stroke-width: 1.8; stroke-linejoin: round; }
+.eb-route { fill: none; stroke: #7c6a4f; stroke-width: 2; stroke-dasharray: 6 5; stroke-linecap: round; }
+.eb-crate { fill: #e5b76a; stroke: #7c5534; stroke-width: 1.4; stroke-linejoin: round; }
+.eb-crate-line { fill: none; stroke: #7c5534; stroke-width: 1.1; }
+
+.eb-cluster { fill: rgb(71 121 129 / .08); stroke: #477981; stroke-width: 1.8; stroke-dasharray: 7 5; }
+.eb-uni-roof { fill: #873f4f; stroke: #5e2a36; stroke-width: 1.4; stroke-linejoin: round; }
+.eb-uni { fill: none; stroke: #5c4a3a; stroke-width: 2.4; stroke-linecap: round; }
+.eb-tower { fill: #cfd6d3; stroke: #56656a; stroke-width: 1.6; stroke-linejoin: round; }
+.eb-window-line { stroke: #56656a; stroke-width: 2; stroke-linecap: round; }
+.eb-bag { fill: #d9c27a; stroke: #7c5534; stroke-width: 1.6; stroke-linejoin: round; }
+.eb-bag-mark { fill: none; stroke: #7c5534; stroke-width: 1.6; stroke-linecap: round; }
+.eb-far { stroke: #8b7a5c; stroke-width: 1.8; stroke-dasharray: 2 6; stroke-linecap: round; }
+.eb-divider { stroke: #c2b49c; stroke-width: 1.4; stroke-dasharray: 5 4; }
+
+.eb-loop { fill: none; stroke: #6f8f5a; stroke-width: 7; opacity: .45; }
+.eb-loop-node { fill: #fbf7ee; stroke: #3f6a3a; stroke-width: 2.4; }
+.eb-orbit { fill: #c2562f; stroke: #fbf7ee; stroke-width: 2; }
+
+.eb-node { fill: #fbf7ee; stroke: #b8a88a; stroke-width: 1.6; }
+.eb-node-on { fill: #fbe9d6; stroke: #873f4f; stroke-width: 2.2; }
+.eb-lane { fill: none; stroke: #b8a88a; stroke-width: 2; stroke-dasharray: 3 5; stroke-linecap: round; }
+.eb-chip { fill: #3f6f5a; stroke: #264536; stroke-width: 1.4; }
+.eb-chip-pin { stroke: #8a9aa0; stroke-width: 2; stroke-linecap: round; }
+.eb-chip-core { fill: #9fd08a; }
+.eb-ore { fill: #9b8ab8; stroke: #4f4270; stroke-width: 1.4; stroke-linejoin: round; }
+.eb-ore-facet { fill: none; stroke: #d8cdea; stroke-width: 1.2; stroke-linecap: round; }
+.eb-barrier { fill: none; stroke: #a8432a; stroke-width: 5; stroke-linecap: round; }
+.eb-booth { fill: #fbf1dc; stroke: #7c5534; stroke-width: 1.8; stroke-linejoin: round; }
+.eb-booth-text { fill: #7c5534; font: 800 10px system-ui, sans-serif; }
+.eb-tag { fill: #c2562f; stroke: #fbf7ee; stroke-width: 1.4; }
+.eb-net { stroke: #477981; stroke-width: 2; }
+.eb-bank { fill: #477981; stroke: #fbf7ee; stroke-width: 1.6; }
+.eb-bank-out { fill: #a8432a; }
+.eb-vault { fill: #cfd6d3; stroke: #56656a; stroke-width: 1.8; }
+.eb-vault-dial { fill: #fbf7ee; stroke: #56656a; stroke-width: 1.6; }
+.eb-vault-line { stroke: #56656a; stroke-width: 1.4; }
+.eb-lock { fill: none; stroke: #5c4a3a; stroke-width: 3; stroke-linecap: round; }
+.eb-lock-body { fill: #d99a2b; stroke: #8a5a12; stroke-width: 1.4; }
+.eb-coin { fill: #f2c14e; stroke: #b3791a; stroke-width: 2; }
+.eb-coin-rim { fill: none; stroke: #b3791a; stroke-width: 1.2; stroke-dasharray: 3 3; }
+.eb-coin-text { fill: #7a4d0e; font: 800 17px Georgia, serif; }
+.eb-coin-small { fill: #e5b76a; stroke: #8a5a12; stroke-width: 1.3; }
+.eb-gold { fill: #f2c14e; stroke: #8a5a12; stroke-width: 1.5; stroke-linejoin: round; }
+.eb-bar-dollar { fill: #3f6f5a; }
+.eb-bar-rest { fill: #5a5250; font: 800 9.5px system-ui, sans-serif; }
+
+.eb-map-label { fill: #4f4a42; font: 700 11px system-ui, sans-serif; paint-order: stroke; stroke: #f7f0e2; stroke-width: 3.2px; stroke-linejoin: round; }
+.eb-map-on { fill: #873f4f; font-weight: 800; }
+.eb-leader { stroke: #873f4f; stroke-width: 1.2; }
+.eb-amazon { fill: rgb(63 106 58 / .28); stroke: #3f6a3a; stroke-width: 1.4; stroke-dasharray: 4 3; }
+.eb-cerrado { fill: rgb(217 154 43 / .38); stroke: #b3791a; stroke-width: 1.6; }
+.eb-matopiba { fill: rgb(194 86 47 / .55); stroke: #8a3f17; stroke-width: 2; }
+.eb-front { fill: none; stroke: #a8432a; stroke-width: 3.4; stroke-linecap: round; }
+.eb-plot-big { fill: #d9c27a; stroke: #7c5534; stroke-width: 1.2; }
+.eb-plot-small { fill: #6f8f5a; stroke: #3f6a3a; stroke-width: 1; }
+.eb-bar-lat { fill: #b3791a; }
+.eb-bar-fam { fill: #bcd3a8; }
+.eb-field-big { fill: #e3d29a; stroke: #8b7a5c; stroke-width: 1.6; }
+.eb-field-small { fill: #bcd3a8; stroke: #3f6a3a; stroke-width: 1.4; }
+.eb-furrow { fill: none; stroke: #a88d56; stroke-width: 1.3; stroke-linecap: round; }
+.eb-silo { fill: #cfd6d3; stroke: #56656a; stroke-width: 1.6; }
+.eb-house { fill: #fbf1dc; stroke: #9b6a3f; stroke-width: 1.6; stroke-linejoin: round; }
+.eb-hull { fill: #3f6f8f; stroke: #2c4f66; stroke-width: 1.4; stroke-linejoin: round; }
+.eb-container { fill: #e0762f; stroke: #8a3f17; stroke-width: 1.2; }
+.eb-basket { fill: #d9a877; stroke: #7c5534; stroke-width: 1.6; stroke-linejoin: round; }
+.eb-basket-handle { fill: none; stroke: #7c5534; stroke-width: 2; stroke-linecap: round; }
+.eb-veg { fill: #6f9a58; stroke: #3f6a3a; stroke-width: 1; }
+.eb-veg-b { fill: #c2562f; stroke: #8a3f17; stroke-width: 1; }
+.eb-soil-top { fill: #c98a5a; }
+.eb-soil-mid { fill: #b0714a; }
+.eb-soil-deep { fill: #8d5a3b; }
+.eb-soil-fixed { fill: #8b6a44; }
+.eb-soil-text { fill: #fff7ea; font: 800 11px system-ui, sans-serif; }
+.eb-sack { fill: #efe6d2; stroke: #7c6a4f; stroke-width: 1.6; stroke-linejoin: round; }
+.eb-sack-tie { fill: none; stroke: #7c6a4f; stroke-width: 1.6; }
+.eb-lime { fill: #fbf7ee; stroke: #8b7a5c; stroke-width: 1; }
+.eb-sprout { fill: none; stroke: #4f7a45; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+.eb-uf { fill: #fbe3cf; stroke: #a8432a; stroke-width: 1.8; }
+.eb-uf-text { fill: #873f4f; font: 800 16px Georgia, serif; }
+.eb-tension { fill: none; stroke: #7c6a4f; stroke-width: 2; stroke-linecap: round; stroke-dasharray: 3 3; }
+.eb-doc { fill: #fbf1dc; stroke: #9b6a3f; stroke-width: 1.6; stroke-linejoin: round; }
+.eb-stamp { fill: none; stroke: #a8432a; stroke-width: 1.8; stroke-dasharray: 3 2; }
+.eb-tree { fill: #6f8f5a; stroke: #3f6a3a; stroke-width: 1.4; stroke-linejoin: round; }
+
+.eb-spread { fill: none; stroke: #a8432a; stroke-width: 2; stroke-linecap: round; }
+.eb-pin { fill: #fbe3cf; stroke: #a8432a; stroke-width: 2; }
+.eb-pin-car { fill: #3f6f8f; }
+.eb-car { fill: #3f6f8f; stroke: #2c4f66; stroke-width: 1.2; stroke-linejoin: round; }
+.eb-podium { fill: #efe6d2; stroke: #8b7a5c; stroke-width: 1.4; }
+.eb-podium-text { fill: #4f4a42; font: 800 9.5px system-ui, sans-serif; }
+.eb-tax-tag { fill: #fbe3cf; stroke: #a8432a; stroke-width: 1.6; stroke-linejoin: round; }
+.eb-tax-text { fill: #873f4f; font: 800 10px system-ui, sans-serif; }
+.eb-axis { fill: none; }
+.eb-curve-rich { fill: none; stroke: #477981; stroke-width: 3; stroke-linecap: round; }
+.eb-curve-br { fill: none; stroke: #c2562f; stroke-width: 3.4; stroke-linecap: round; }
+
+.dark .eb-factory { fill: #8a7552; stroke: #d9c39a; }
+.dark .eb-factory-sp { fill: #b3564a; stroke: #f1a27f; }
+.dark .eb-window { fill: #22302f; }
+.dark .eb-ghost { stroke: #b9b2a2; }
+.dark .eb-bulb-base { stroke: #d3ddcf; }
+.dark .eb-badge { fill: #34443d; stroke: #f2c14e; }
+.dark .eb-land-rich { fill: #2f423e; stroke: #8fa89a; }
+.dark .eb-land-cheap { fill: #3d3a2e; stroke: #b9a67a; }
+.dark .eb-route, .dark .eb-far { stroke: #b9b2a2; }
+.dark .eb-crate { fill: #b98a45; stroke: #f1d7a0; }
+.dark .eb-crate-line { stroke: #f1d7a0; }
+.dark .eb-cluster { fill: rgb(143 196 204 / .08); stroke: #8fc4cc; }
+.dark .eb-uni { stroke: #d3ddcf; }
+.dark .eb-uni-roof { fill: #b3667a; stroke: #f1c8ab; }
+.dark .eb-tower { fill: #4a5a55; stroke: #b9b2a2; }
+.dark .eb-window-line { stroke: #d3ddcf; }
+.dark .eb-bag { fill: #8a7552; stroke: #d9c39a; }
+.dark .eb-bag-mark { stroke: #f4ead7; }
+.dark .eb-divider { stroke: #6e8f88; }
+.dark .eb-loop { stroke: #9fd08a; }
+.dark .eb-loop-node { fill: #2d3d3b; stroke: #9fd08a; }
+.dark .eb-orbit { fill: #f1a27f; stroke: #22302f; }
+.dark .eb-node { fill: #2d3d3b; stroke: #6e8f88; }
+.dark .eb-node-on { fill: #3d3a36; stroke: #ffd095; }
+.dark .eb-lane { stroke: #8c9a93; }
+.dark .eb-chip { fill: #5f9a7f; stroke: #bfe0a8; }
+.dark .eb-ore { fill: #8e7fb0; stroke: #d8cdea; }
+.dark .eb-barrier { stroke: #f1a27f; }
+.dark .eb-booth { fill: #34443d; stroke: #d9a877; }
+.dark .eb-booth-text { fill: #f1d7a0; }
+.dark .eb-tag { fill: #f1a27f; stroke: #22302f; }
+.dark .eb-net { stroke: #8fc4cc; }
+.dark .eb-bank { fill: #8fc4cc; stroke: #22302f; }
+.dark .eb-bank-out { fill: #f1a27f; }
+.dark .eb-vault { fill: #4a5a55; stroke: #b9b2a2; }
+.dark .eb-vault-dial { fill: #2d3d3b; stroke: #b9b2a2; }
+.dark .eb-vault-line { stroke: #b9b2a2; }
+.dark .eb-lock { stroke: #d3ddcf; }
+.dark .eb-coin-text { fill: #5a3a08; }
+.dark .eb-bar-dollar { fill: #5f9a7f; }
+.dark .eb-bar-rest { fill: #d3ddcf; }
+.dark .eb-map-label { fill: #d3ddcf; stroke: #22302f; }
+.dark .eb-map-on { fill: #ffd095; }
+.dark .eb-leader { stroke: #ffd095; }
+.dark .eb-amazon { fill: rgb(159 208 138 / .22); stroke: #9fd08a; }
+.dark .eb-cerrado { fill: rgb(242 193 78 / .3); stroke: #f2c14e; }
+.dark .eb-matopiba { fill: rgb(241 162 127 / .5); stroke: #f1a27f; }
+.dark .eb-front, .dark .eb-spread { stroke: #f1a27f; }
+.dark .eb-plot-big { fill: #b39a55; stroke: #f1d7a0; }
+.dark .eb-plot-small { fill: #9fd08a; stroke: #3f6a3a; }
+.dark .eb-bar-lat { fill: #c79a3f; }
+.dark .eb-bar-fam { fill: #4f6b45; }
+.dark .eb-field-big { fill: #6b6139; stroke: #b9b2a2; }
+.dark .eb-field-small { fill: #4f6b45; stroke: #9fd08a; }
+.dark .eb-furrow { stroke: #9c8d5f; }
+.dark .eb-silo { fill: #4a5a55; stroke: #b9b2a2; }
+.dark .eb-house, .dark .eb-doc { fill: #34443d; stroke: #d9a877; }
+.dark .eb-hull { fill: #5b88a6; stroke: #a9cbe0; }
+.dark .eb-basket { fill: #8a6a45; stroke: #d9a877; }
+.dark .eb-basket-handle { stroke: #d9a877; }
+.dark .eb-soil-fixed { fill: #6f5638; }
+.dark .eb-sack { fill: #4a5a55; stroke: #d3ddcf; }
+.dark .eb-sack-tie { stroke: #d3ddcf; }
+.dark .eb-sprout { stroke: #9fd08a; }
+.dark .eb-uf { fill: #3d3a36; stroke: #f1a27f; }
+.dark .eb-uf-text { fill: #ffd095; }
+.dark .eb-tension { stroke: #b9b2a2; }
+.dark .eb-stamp { stroke: #f1a27f; }
+.dark .eb-tree { fill: #4f6b45; stroke: #9fd08a; }
+.dark .eb-pin { fill: #3d3a36; stroke: #f1a27f; }
+.dark .eb-pin-car { fill: #a9cbe0; }
+.dark .eb-car { fill: #5b88a6; stroke: #a9cbe0; }
+.dark .eb-podium { fill: #34443d; stroke: #b9b2a2; }
+.dark .eb-podium-text { fill: #f4ead7; }
+.dark .eb-tax-tag { fill: #3d3a36; stroke: #f1a27f; }
+.dark .eb-tax-text { fill: #ffd095; }
+.dark .eb-curve-rich { stroke: #8fc4cc; }
+.dark .eb-curve-br { stroke: #f1a27f; }

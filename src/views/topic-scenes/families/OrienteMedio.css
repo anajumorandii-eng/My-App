@@ -1,0 +1,199 @@
+/* Lote 12 — Ásia, Oriente Médio, Questão Palestina, mundo árabe.
+   As duas partes de qualquer disputa usam .om-*-a (azul-petróleo) e
+   .om-*-b (ocre): cores irmãs, nenhuma lida como alarme. */
+
+.om-sea { fill: #b9d3d6; stroke: #7fa3a8; stroke-width: 1; stroke-linejoin: round; }
+.om-land { fill: #efe5cc; stroke: #8b7a5c; stroke-width: 1; stroke-linejoin: round; }
+.om-frame { fill: none; stroke: #a3927a; stroke-width: 1.6; }
+.om-china { fill: #ecd29a; stroke: #9b6a3f; stroke-width: 1.2; stroke-linejoin: round; }
+.om-border { fill: none; stroke: #9b8a6c; stroke-width: 1; stroke-dasharray: 3 3; }
+.om-strait { fill: none; stroke: #7fa3a8; stroke-width: 1.6; }
+.om-river { fill: none; stroke: #3f7f9f; stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; }
+.om-river-thin { stroke-width: 1.8; }
+.om-river-label { fill: #2f5f6c; font: italic 700 10px Georgia, serif; }
+.om-mandate { fill: rgb(135 63 79 / .08); }
+.om-territory { fill: #f5ecd6; stroke: #7c6a4f; stroke-width: 1.2; stroke-linejoin: round; }
+
+.om-place { fill: #4f4a42; font: 700 9.5px system-ui, sans-serif; }
+.om-strong { fill: #2c3937; font-weight: 800; }
+.om-country { fill: #5c4a3a; font: 800 10px system-ui, sans-serif; letter-spacing: .12em; }
+.om-continent { fill: #873f4f; font: 800 9.5px system-ui, sans-serif; letter-spacing: .16em; }
+.om-sea-label { fill: #2f5f6c; font: italic 700 10px Georgia, serif; }
+.om-halo { paint-order: stroke; stroke: rgb(247 240 226 / .85); stroke-width: 3px; stroke-linejoin: round; }
+.om-hand { fill: #9a3b1f; font: 700 14px Kalam, 'Segoe Print', cursive; }
+
+.om-hatch-line { stroke: #477981; stroke-width: 1.5; }
+.om-zone { stroke: #477981; stroke-width: 1.4; stroke-dasharray: 4 3; }
+.om-dash { fill: none; stroke: #873f4f; stroke-width: 2.8; stroke-linecap: round; }
+.om-route { fill: none; stroke: #a8432a; stroke-width: 2.2; stroke-linecap: round; stroke-dasharray: 6 4; }
+.om-route-head { fill: #a8432a; }
+.om-origin { fill: #873f4f; stroke: #fbf7ee; stroke-width: 1.4; }
+.om-ring { fill: rgb(242 193 78 / .25); stroke: #b3791a; stroke-width: 2; }
+
+.om-factory { fill: #b8a88a; stroke: #5c4a3a; stroke-width: 1.4; stroke-linejoin: round; }
+.om-factory-new { fill: #e7c07a; }
+.om-factory-win { stroke: #fbf7ee; stroke-width: 2; stroke-linecap: round; }
+.om-chip-body { fill: #477981; stroke: #2c4f55; stroke-width: 1.2; }
+.om-chip-core { fill: #f2c14e; }
+.om-chip-pin { stroke: #5c4a3a; stroke-width: 1.6; stroke-linecap: round; }
+.om-icon-fill { fill: #fbf7ee; stroke: #5c4a3a; stroke-width: 1.6; stroke-linejoin: round; stroke-linecap: round; }
+.om-icon-line { fill: none; stroke: #5c4a3a; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.om-icon-wheel { fill: #5c4a3a; }
+.om-bolt { fill: #f2c14e; stroke: #b3791a; stroke-width: 1.2; stroke-linejoin: round; }
+.om-star { fill: #f2c14e; stroke: #9b6a3f; stroke-width: 1; }
+.om-pyramid { fill: #c9ae7d; stroke: #7c5534; stroke-width: 1; }
+.om-badge { fill: #fbf7ee; stroke: #b8a88a; stroke-width: 1.4; }
+.om-coin { fill: #f2c14e; stroke: #b3791a; stroke-width: 1.2; }
+.om-plus { fill: #873f4f; font: 800 26px system-ui, sans-serif; }
+.om-rule { stroke: #c2b49c; stroke-width: 1.2; }
+.om-bracket { fill: none; stroke: #7c6a4f; stroke-width: 1.4; stroke-linecap: round; }
+.om-flow-line { fill: none; stroke: #7c6a4f; stroke-width: 2; }
+.om-flow-back { stroke: #873f4f; stroke-dasharray: 4 3; }
+
+.om-step { fill: #eadfc6; stroke: #a3927a; stroke-width: 1.4; }
+.om-step-high { fill: #e7c07a; stroke: #9b6a3f; }
+.om-step-text { fill: #4f3a22; font: 800 10px system-ui, sans-serif; }
+
+.om-card { fill: #fbf7ee; stroke: #c2b49c; stroke-width: 1.3; }
+.om-card-ring { stroke: #b3791a; stroke-width: 2; stroke-dasharray: 5 3; }
+.om-chip { fill: #fbf7ee; stroke: #8b7a5c; stroke-width: 1; }
+.om-chip-a { fill: #dcebea; stroke: #477981; }
+.om-chip-hot { fill: #f6e2cf; stroke: #a8432a; }
+.om-chip-text { fill: #2c3937; font: 800 9.5px system-ui, sans-serif; }
+
+.om-oil { fill: #3d3a36; stroke: #1f1d1a; stroke-width: .6; }
+.om-water { fill: #5f9fbf; stroke: #2f6f98; stroke-width: .8; }
+.om-barrel { fill: #fbf7ee; stroke: #7c5534; stroke-width: 1.4; }
+.om-barrel-on { fill: #3d3a36; stroke: #1f1d1a; }
+.om-barrel-band { stroke: #b8a88a; stroke-width: 1.4; }
+.om-barrel-band-on { stroke: #7c6a4f; }
+.om-ship { fill: #56656a; stroke: #2c3937; stroke-width: 1; stroke-linejoin: round; }
+.om-dam { fill: #8b7a5c; stroke: #4f3a22; stroke-width: 1.2; stroke-linejoin: round; }
+.om-dam-line { stroke: #d9ccb0; stroke-width: 1; }
+.om-bed { fill: none; stroke: #e5ddc9; stroke-width: 16; stroke-linecap: round; }
+.om-flow { fill: none; stroke: #5f9fbf; stroke-linecap: round; }
+
+.om-side { stroke: #fbf7ee; stroke-width: 2; }
+.om-side-a { fill: #477981; }
+.om-side-b { fill: #c08a3e; }
+.om-proxy { fill: none; stroke-width: 2; stroke-linecap: round; }
+.om-proxy-a { stroke: #477981; }
+.om-proxy-b { stroke: #b07a2e; stroke-dasharray: 6 4; }
+.om-head-a { fill: #477981; }
+.om-head-b { fill: #b07a2e; }
+.om-swatch-a { fill: #477981; }
+.om-proxy-dot { fill: #fbf7ee; stroke: #5c4a3a; stroke-width: 1.6; }
+.om-rival { fill: none; stroke: #7c6a4f; stroke-width: 2; stroke-dasharray: 2 4; stroke-linecap: round; }
+.om-crack { fill: none; stroke: #a8432a; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+
+.om-timeline { stroke: #d9ccb0; stroke-width: 4; stroke-linecap: round; }
+.om-timeline-on { fill: none; stroke: #873f4f; stroke-width: 4; stroke-linecap: round; }
+.om-stop { fill: #fbf7ee; stroke: #a3927a; stroke-width: 2; }
+.om-stop-past { fill: #d9a877; stroke: #873f4f; }
+.om-stop-on { fill: #873f4f; stroke: #873f4f; }
+.om-house { fill: #fbf7ee; stroke: #7c5534; stroke-width: 1.4; stroke-linejoin: round; }
+.om-walk { fill: none; stroke: #7c6a4f; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.om-bundle { fill: #c9ae7d; stroke: #7c5534; stroke-width: 1; }
+.om-settle { fill: #7c5534; }
+.om-blockade { fill: none; stroke: #5c4a3a; stroke-width: 1.6; stroke-dasharray: 3 2; }
+.om-question { fill: #f2c14e; stroke: #b3791a; stroke-width: 1.2; }
+.om-question-text { fill: #4f3a22; font: 800 10px system-ui, sans-serif; }
+
+.om-wave { fill: none; stroke: #a8432a; stroke-width: 1.6; stroke-dasharray: 2 4; stroke-linecap: round; }
+.om-pulse { fill: none; stroke: #a8432a; stroke-width: 2; }
+.om-fate { fill: none; stroke-width: 1.8; stroke-linecap: round; }
+.om-fate-0 { stroke: #477981; }
+.om-fate-1 { stroke: #b07a2e; }
+.om-fate-2 { stroke: #873f4f; }
+.om-fate-dot { stroke: #fbf7ee; stroke-width: 1.4; }
+.om-fate-dot-0 { fill: #477981; }
+.om-fate-dot-1 { fill: #b07a2e; }
+.om-fate-dot-2 { fill: #873f4f; }
+.om-fate-card-0 { stroke: #477981; }
+.om-fate-card-1 { stroke: #b07a2e; }
+.om-fate-card-2 { stroke: #873f4f; }
+.om-fate-icon { fill: none; stroke: #5c4a3a; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.om-fork { fill: none; stroke: #7c6a4f; stroke-width: 2.4; stroke-linecap: round; }
+.om-fulcrum { fill: #c9ae7d; stroke: #7c5534; stroke-width: 1.4; stroke-linejoin: round; }
+.om-weight-a { fill: #477981; }
+.om-weight-b { fill: #c08a3e; }
+.om-ruler { fill: #f2dca8; stroke: #9b6a3f; stroke-width: 1.2; }
+.om-ruler-tick { stroke: #9b6a3f; stroke-width: 1; }
+.om-ruler-line { fill: none; stroke: #873f4f; stroke-width: 2; stroke-linecap: round; }
+.om-derrick { fill: none; stroke: #3d3a36; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+
+.dark .om-sea { fill: #2f5560; stroke: #6f9aa5; }
+.dark .om-land, .dark .om-territory { fill: #34443d; stroke: #9aa597; }
+.dark .om-frame { stroke: #6e8f88; }
+.dark .om-china { fill: #6b5a33; stroke: #d9a877; }
+.dark .om-border { stroke: #8e9a8c; }
+.dark .om-river { stroke: #8cc4e6; }
+.dark .om-river-label, .dark .om-sea-label { fill: #bcd8e6; }
+.dark .om-mandate { fill: rgb(241 200 171 / .08); }
+.dark .om-place { fill: #d3ddcf; }
+.dark .om-strong { fill: #f4ead7; }
+.dark .om-country { fill: #e6d6b8; }
+.dark .om-continent { fill: #f1c8ab; }
+.dark .om-halo { stroke: rgb(34 48 47 / .85); }
+.dark .om-hand { fill: #f1a27f; }
+.dark .om-hatch-line { stroke: #8cc4c4; }
+.dark .om-zone { stroke: #8cc4c4; }
+.dark .om-dash { stroke: #f1a27f; }
+.dark .om-route { stroke: #f1a27f; }
+.dark .om-route-head { fill: #f1a27f; }
+.dark .om-origin { fill: #f1c8ab; stroke: #22302f; }
+.dark .om-factory { fill: #7d7360; stroke: #d3ddcf; }
+.dark .om-factory-new { fill: #b38a45; }
+.dark .om-factory-win { stroke: #22302f; }
+.dark .om-chip-pin, .dark .om-icon-line, .dark .om-fate-icon { stroke: #d3ddcf; }
+.dark .om-icon-fill, .dark .om-badge, .dark .om-card, .dark .om-chip, .dark .om-house, .dark .om-barrel, .dark .om-proxy-dot { fill: #34443d; stroke: #b9b2a2; }
+.dark .om-icon-wheel { fill: #d3ddcf; }
+.dark .om-plus { fill: #ffd095; }
+.dark .om-rule { stroke: #5b6b67; }
+.dark .om-bracket, .dark .om-flow-line, .dark .om-walk, .dark .om-rival, .dark .om-fork { stroke: #b9b2a2; }
+.dark .om-flow-back { stroke: #f1c8ab; }
+.dark .om-step { fill: #3f4e4b; stroke: #8e9a8c; }
+.dark .om-step-high { fill: #6b5a33; stroke: #d9a877; }
+.dark .om-step-text { fill: #f4ead7; }
+.dark .om-card-ring { stroke: #d9a877; }
+.dark .om-chip-a { fill: #2c4f55; stroke: #8cc4c4; }
+.dark .om-chip-hot { fill: #4a3a30; stroke: #f1a27f; }
+.dark .om-chip-text { fill: #f4ead7; }
+.dark .om-oil, .dark .om-barrel-on { fill: #e6d6b8; stroke: #e6d6b8; }
+.dark .om-barrel-band { stroke: #6e7f79; }
+.dark .om-barrel-band-on { stroke: #7d7360; }
+.dark .om-ship { fill: #b9b2a2; stroke: #e6d6b8; }
+.dark .om-bed { stroke: #3f4e4b; }
+.dark .om-flow, .dark .om-water { stroke: #8cc4e6; }
+.dark .om-water { fill: #8cc4e6; }
+.dark .om-side { stroke: #22302f; }
+.dark .om-side-a, .dark .om-swatch-a, .dark .om-weight-a { fill: #6fa8b0; }
+.dark .om-side-b, .dark .om-weight-b { fill: #d9a55a; }
+.dark .om-proxy-a { stroke: #8cc4c4; }
+.dark .om-proxy-b { stroke: #e0b36a; }
+.dark .om-head-a { fill: #8cc4c4; }
+.dark .om-head-b { fill: #e0b36a; }
+.dark .om-crack { stroke: #f1a27f; }
+.dark .om-timeline { stroke: #3f4e4b; }
+.dark .om-timeline-on { stroke: #f1c8ab; }
+.dark .om-stop { fill: #34443d; stroke: #8e9a8c; }
+.dark .om-stop-past { fill: #b38a45; stroke: #f1c8ab; }
+.dark .om-stop-on { fill: #f1c8ab; stroke: #f1c8ab; }
+.dark .om-settle { fill: #e0b36a; }
+.dark .om-blockade { stroke: #e6d6b8; }
+.dark .om-question-text { fill: #22302f; }
+.dark .om-wave, .dark .om-pulse { stroke: #f1a27f; }
+.dark .om-fate-0, .dark .om-fate-card-0 { stroke: #8cc4c4; }
+.dark .om-fate-1, .dark .om-fate-card-1 { stroke: #e0b36a; }
+.dark .om-fate-2, .dark .om-fate-card-2 { stroke: #f1a27f; }
+.dark .om-fate-dot-0 { fill: #8cc4c4; }
+.dark .om-fate-dot-1 { fill: #e0b36a; }
+.dark .om-fate-dot-2 { fill: #f1a27f; }
+.dark .om-fate-dot { stroke: #22302f; }
+.dark .om-fulcrum { fill: #7d7360; stroke: #d9a877; }
+.dark .om-ruler { fill: #6b5a33; stroke: #d9a877; }
+.dark .om-ruler-tick { stroke: #d9a877; }
+.dark .om-ruler-line { stroke: #f1a27f; }
+.dark .om-derrick { stroke: #e6d6b8; }
+.dark .om-dam { fill: #b9b2a2; stroke: #e6d6b8; }
+.dark .om-pyramid { fill: #8a7552; stroke: #d9c39a; }

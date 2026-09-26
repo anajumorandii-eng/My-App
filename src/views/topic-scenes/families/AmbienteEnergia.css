@@ -1,0 +1,226 @@
+/* Lote 17 — ambiente e energia. Paleta de papel das cenas bi-*: verdes de
+   mata, azuis de água, fósseis em marrom e grafite, alerta em terracota. */
+.ae-none { fill: none; stroke: none; }
+.ae-steps-line { stroke: #c2b49c; stroke-width: 1.6; }
+.ae-step { fill: #efe6d2; stroke: #a3927a; stroke-width: 1.4; }
+.ae-step-past { fill: #d9c39a; }
+.ae-step-on { fill: #873f4f; stroke: #5a2a36; }
+
+.ae-trunk { stroke: #7c5534; stroke-width: 3; stroke-linecap: round; }
+.ae-leaf { fill: #6f9a57; stroke: #4a7040; stroke-width: 1.2; }
+.ae-stump { fill: #9b6a3f; stroke: #5c3b20; stroke-width: 1.2; }
+.ae-coin { fill: #f2c14e; stroke: #b3791a; stroke-width: 1.4; }
+.ae-coin-text { fill: #7a4f10; font: 800 10px system-ui, sans-serif; }
+.ae-fish { fill: #6f98ad; stroke: #3f6f8f; stroke-width: 1.2; stroke-linejoin: round; }
+.ae-fish-eye { fill: #22343c; }
+.ae-house { fill: #fbf7ee; stroke: #7c5534; stroke-width: 1.6; stroke-linejoin: round; }
+.ae-house-door { fill: none; stroke: #7c5534; stroke-width: 1.4; }
+.ae-factory { fill: #b8a88a; stroke: #5c4a3a; stroke-width: 1.6; stroke-linejoin: round; }
+.ae-smoke { fill: #9a938a; transform-box: fill-box; transform-origin: center; }
+.ae-tower { fill: #e5ddc9; stroke: #7c6a4f; stroke-width: 1.6; stroke-linejoin: round; }
+.ae-tower-line { stroke: #b8a88a; stroke-width: 1.4; }
+.ae-steam { fill: none; stroke: #a3b5bf; stroke-width: 3; stroke-linecap: round; }
+.ae-mast { stroke: #7c6a4f; stroke-width: 2.4; stroke-linecap: round; }
+.ae-mast-thin { stroke: #7c6a4f; stroke-width: 1.6; }
+.ae-blade { fill: #fbf7ee; stroke: #5c6f73; stroke-width: 1.2; stroke-linejoin: round; }
+.ae-hub { fill: #5c6f73; }
+.ae-panel-solar { fill: #3f6f8f; stroke: #2c4f66; stroke-width: 1.2; stroke-linejoin: round; }
+.ae-panel-grid { fill: none; stroke: #9cc0d6; stroke-width: 0.9; }
+.ae-barrel { fill: #6b4a2e; stroke: #3d2614; stroke-width: 1.4; }
+.ae-barrel-band { stroke: #c9ae7d; stroke-width: 1.6; }
+.ae-coal { fill: #3d3a36; stroke: #1f1d1b; stroke-width: 1.2; stroke-linejoin: round; }
+.ae-coal-edge { fill: none; stroke: #6e6a64; stroke-width: 1.2; }
+.ae-gas { fill: #6f9fc8; stroke: #3f6f8f; stroke-width: 1.2; stroke-linejoin: round; }
+.ae-dam { fill: #b8a88a; stroke: #5c4a3a; stroke-width: 1.6; stroke-linejoin: round; }
+.ae-water-fill { fill: #8fb8cc; }
+.ae-water-line { stroke: #5f8fa8; stroke-width: 2.4; stroke-linecap: round; }
+
+.ae-sun { fill: #f2c14e; stroke: #d99a2b; stroke-width: 1.6; }
+.ae-sun-text { fill: #7a4f10; font: 800 10px system-ui, sans-serif; }
+.ae-ray { stroke: #d99a2b; stroke-width: 2.4; stroke-linecap: round; }
+.ae-spread { fill: none; stroke: #c2562f; stroke-width: 2; stroke-linecap: round; stroke-dasharray: 5 4; }
+.ae-ground { stroke: #7c6a4f; stroke-width: 2.4; stroke-linecap: round; }
+.ae-mountain { fill: #c9b99a; stroke: #7c6a4f; stroke-width: 1.6; stroke-linejoin: round; }
+.ae-ice { fill: #eef6f8; stroke: #8fb1c0; stroke-width: 1.6; stroke-linejoin: round; }
+.ae-drop { fill: #5f8fa8; }
+.ae-sea { fill: #8fb8cc; }
+.ae-island { fill: #d9c39a; stroke: #9b7a4a; stroke-width: 1.4; }
+.ae-dry { stroke: #c49a6c; stroke-width: 6; stroke-linecap: round; }
+.ae-crack { fill: none; stroke: #7c4a2a; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.ae-cloud { fill: #dfe6ea; stroke: #7f96a3; stroke-width: 1.4; stroke-linejoin: round; }
+.ae-rain { stroke: #5f8fa8; stroke-width: 2; stroke-linecap: round; }
+.ae-flood { fill: rgb(95 143 168 / .7); }
+.ae-wave { fill: none; stroke: #5f8fa8; stroke-width: 2; stroke-linecap: round; }
+.ae-net { fill: none; stroke: #7c5534; stroke-width: 1.8; stroke-dasharray: 3 3; }
+.ae-flow-thick { fill: none; stroke: #a8432a; stroke-width: 4.5; stroke-linecap: round; }
+.ae-flow-thin { fill: none; stroke: #477981; stroke-width: 1.6; stroke-linecap: round; }
+.ae-stem { stroke: #4a7040; stroke-width: 2; }
+.ae-flower-core { fill: #d99a2b; }
+.ae-petal { fill: #e8a0a8; stroke: #b86470; stroke-width: 0.8; }
+.ae-bee { fill: #f2c14e; stroke: #5c3b20; stroke-width: 1; }
+.ae-bee-band { stroke: #3d2614; stroke-width: 1.4; }
+.ae-drop-big { fill: #8fb8cc; stroke: #3f6f8f; stroke-width: 1.6; }
+.ae-thermo { stroke: #a8432a; stroke-width: 4; stroke-linecap: round; }
+.ae-thermo-bulb { fill: #a8432a; }
+.ae-thermo-fill { stroke: #e0762f; stroke-width: 2.4; stroke-linecap: round; }
+.ae-sky { fill: #e3ecef; stroke: #8fa8b4; stroke-width: 1.4; stroke-linejoin: round; }
+.ae-benefit { fill: none; stroke: #477981; stroke-width: 2.2; stroke-linecap: round; }
+.ae-accum-rich { fill: rgb(135 63 79 / .32); stroke: #873f4f; stroke-width: 1.6; }
+.ae-accum-poor { fill: rgb(111 154 87 / .45); stroke: #4a7040; stroke-width: 1.6; }
+
+.ae-land { fill: #efe5cc; }
+.ae-outline { fill: none; stroke: #8b7a5c; stroke-width: 2.2; stroke-linejoin: round; }
+.ae-forest { fill: #9cbf83; opacity: .85; }
+.ae-co2 { fill: #5a5250; font: 800 10.5px system-ui, sans-serif; }
+.ae-sink { fill: none; stroke: #4a7040; stroke-width: 2.2; stroke-linecap: round; }
+.ae-badge-green { fill: #6f9a57; }
+.ae-badge-warn { fill: #c2562f; }
+.ae-badge-icon { fill: none; stroke: #fbf7ee; stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; }
+.ae-gate-post { fill: none; stroke: #5c4a3a; stroke-width: 3; stroke-linecap: round; }
+.ae-gate-bar { stroke: #c2562f; stroke-width: 5; stroke-linecap: round; transform-box: fill-box; }
+.ae-lock { fill: #873f4f; }
+.ae-lock-arc { fill: none; stroke: #873f4f; stroke-width: 2.4; }
+.ae-seal-open { fill: #477981; }
+.ae-river { fill: none; stroke: #7fb0c8; stroke-linecap: round; stroke-linejoin: round; }
+.ae-field { fill: #9cbf83; stroke: #4a7040; stroke-width: 1; }
+.ae-ocean { fill: #cfe0e8; stroke: #7f9fb0; stroke-width: 1.6; }
+.ae-coast { fill: none; stroke: #9b7a4a; stroke-width: 7; stroke-linecap: round; }
+.ae-route { fill: none; stroke: #873f4f; stroke-width: 2.4; stroke-dasharray: 7 5; stroke-linecap: round; }
+.ae-mineral { fill: #a9b6bd; stroke: #56656a; stroke-width: 1.4; stroke-linejoin: round; }
+
+.ae-plot { fill: #e4ecd2; stroke: #8b7a5c; stroke-width: 1.8; }
+.ae-contour { fill: none; stroke: #9b7a4a; stroke-width: 1.4; }
+.ae-app { fill: none; stroke: rgb(74 112 64 / .45); stroke-width: 26; stroke-linecap: round; }
+.ae-app-fill { fill: rgb(74 112 64 / .4); stroke: #4a7040; stroke-width: 1.4; stroke-dasharray: 4 3; }
+.ae-fence { fill: none; stroke: #7c5534; stroke-width: 1.8; }
+.ae-rl { fill: rgb(74 112 64 / .5); stroke: #4a7040; stroke-width: 1.4; }
+.ae-rl-box { fill: #fbf7ee; stroke: #8b7a5c; stroke-width: 1.4; }
+.ae-rl-text { fill: #1f3a1a; font: 800 12px system-ui, sans-serif; }
+.ae-clearing { fill: #c49a6c; stroke: #7c4a2a; stroke-width: 1.4; transform-box: fill-box; transform-origin: center; }
+.ae-sat { fill: #b8a88a; stroke: #5c4a3a; stroke-width: 1.4; }
+.ae-beam { fill: rgb(242 193 78 / .35); stroke: none; }
+.ae-ping { fill: none; stroke: #c2562f; stroke-width: 2.4; }
+.ae-truck { fill: #477981; stroke: #2c4f55; stroke-width: 1.4; stroke-linejoin: round; }
+.ae-wheel { fill: #3d3a36; }
+.ae-law-line { stroke: #873f4f; stroke-width: 2.4; stroke-dasharray: 2 0; }
+.ae-oscill { fill: none; stroke: #c2562f; stroke-width: 2.8; stroke-linecap: round; }
+
+.ae-set-big { fill: rgb(107 74 46 / .08); stroke: #7c5534; stroke-width: 2; stroke-dasharray: 6 4; }
+.ae-set-small { fill: rgb(95 143 168 / .18); stroke: #3f6f8f; stroke-width: 2; }
+.ae-car { fill: #c2562f; stroke: #7c3a20; stroke-width: 1.4; stroke-linejoin: round; }
+.ae-dot-green { fill: #6f9a57; }
+.ae-dot-fossil { fill: #6b4a2e; }
+.ae-pump { fill: #c2562f; stroke: #7c3a20; stroke-width: 1.4; }
+.ae-hose { fill: none; stroke: #3d3a36; stroke-width: 2; stroke-linecap: round; }
+.ae-plug { fill: #477981; stroke: #2c4f55; stroke-width: 1.4; }
+.ae-plug-pin { stroke: #2c4f55; stroke-width: 2.4; stroke-linecap: round; }
+.ae-bar-bg { fill: #e5ddc9; }
+.ae-bar-fossil { fill: #6b4a2e; }
+.ae-bar-text { fill: #fbf1e3; font: 800 12px system-ui, sans-serif; }
+.ae-threshold { stroke: #a8432a; stroke-width: 2; stroke-dasharray: 4 3; }
+.ae-link { fill: none; stroke: #7c6a4f; stroke-width: 1.8; stroke-linecap: round; }
+.ae-use { fill: #fbf7ee; stroke: #a3927a; stroke-width: 1.2; }
+.ae-demand { stroke: #873f4f; stroke-width: 2; stroke-dasharray: 6 4; }
+.ae-intermit { fill: none; stroke: #d99a2b; stroke-width: 3; stroke-linecap: round; }
+.ae-fill-gap { fill: rgb(71 121 129 / .35); stroke: #477981; stroke-width: 1.4; }
+.ae-scale-post { fill: none; stroke: #5c4a3a; stroke-width: 4; stroke-linecap: round; }
+.ae-scale-beam { stroke: #5c4a3a; stroke-width: 4; stroke-linecap: round; }
+.ae-scale-string { fill: none; stroke: #9b7a4a; stroke-width: 1.2; }
+.ae-scale-pan { fill: #d9c39a; stroke: #7c5534; stroke-width: 1.4; }
+.ae-sym { fill: #22343c; font: 800 9.5px system-ui, sans-serif; }
+
+.ae-seg-coal { fill: #3d3a36; }
+.ae-seg-gas { fill: #7c6a4f; }
+.ae-seg-hydro { fill: #5f8fa8; }
+.ae-seg-nuclear { fill: #c98f3a; }
+.ae-seg-renew { fill: #6f9a57; }
+.ae-seg-text { fill: #fbf7ee; font: 800 9.5px system-ui, sans-serif; }
+.ae-bracket { fill: none; stroke: #3d3a36; stroke-width: 1.6; }
+.ae-base-line { stroke: #c98f3a; stroke-width: 3; stroke-linecap: round; }
+.ae-pipe { stroke: #7c6a4f; stroke-width: 4; stroke-linecap: round; }
+
+.ae-pin { fill: #a8432a; stroke: #6e2a1a; stroke-width: 1.2; }
+.ae-pin-dot { fill: #fbf7ee; }
+.ae-layer-iron { fill: #a8563a; }
+.ae-layer-rock { fill: #d9c9a8; }
+.ae-element { fill: #efe6d2; stroke: #56656a; stroke-width: 2; }
+.ae-element-text { fill: #22343c; font: 800 16px Georgia, serif; }
+.ae-battery { fill: #fbf7ee; stroke: #3d3a36; stroke-width: 2; }
+.ae-battery-fill { fill: #6f9a57; }
+.ae-bolt { fill: #f2c14e; stroke: #7a4f10; stroke-width: 1.2; stroke-linejoin: round; }
+.ae-tailings { fill: #b09a78; stroke: #7c6a4f; stroke-width: 1.2; }
+.ae-inner-text { fill: #3d2614; font: 800 11px system-ui, sans-serif; }
+.ae-dike { fill: #d9c9a8; stroke: #5c4a3a; stroke-width: 1.6; stroke-linejoin: round; }
+.ae-mud { fill: #9b6a3f; opacity: .85; }
+.ae-boat { fill: #9b6a3f; stroke: #5c3b20; stroke-width: 1.4; stroke-linejoin: round; }
+.ae-cabin { fill: #e5ddc9; stroke: #5c3b20; stroke-width: 1.4; }
+.ae-roof { stroke: #5c3b20; stroke-width: 2.4; stroke-linecap: round; }
+.ae-mercury { fill: #a9b1b6; stroke: #56656a; stroke-width: 1; }
+.ae-gold { fill: #f2c14e; stroke: #b3791a; stroke-width: 1.4; stroke-linejoin: round; }
+
+.dark .ae-steps-line { stroke: #5b6b67; }
+.dark .ae-step { fill: #2d3d3b; stroke: #8fa39c; }
+.dark .ae-step-past { fill: #6e7f79; }
+.dark .ae-step-on { fill: #ffd095; stroke: #f1c8ab; }
+.dark .ae-leaf { fill: #7fae66; stroke: #a9cf92; }
+.dark .ae-trunk { stroke: #d9a877; }
+.dark .ae-house, .dark .ae-cabin, .dark .ae-rl-box, .dark .ae-use, .dark .ae-battery { fill: #34443d; stroke: #d3ddcf; }
+.dark .ae-house-door { stroke: #d3ddcf; }
+.dark .ae-factory, .dark .ae-dam, .dark .ae-sat { fill: #6e7f79; stroke: #d3ddcf; }
+.dark .ae-tower { fill: #4a5a55; stroke: #d3ddcf; }
+.dark .ae-tower-line { stroke: #8fa39c; }
+.dark .ae-mast, .dark .ae-mast-thin, .dark .ae-link, .dark .ae-ground, .dark .ae-scale-post, .dark .ae-scale-beam, .dark .ae-gate-post, .dark .ae-pipe { stroke: #d3ddcf; }
+.dark .ae-hub { fill: #d3ddcf; }
+.dark .ae-blade { fill: #f4ead7; stroke: #8fa39c; }
+.dark .ae-coal { fill: #1f1d1b; stroke: #b9b2a2; }
+.dark .ae-barrel { fill: #8a6444; stroke: #d9c39a; }
+.dark .ae-mountain { fill: #5d6b66; stroke: #b9b2a2; }
+.dark .ae-land { fill: #34443d; }
+.dark .ae-outline { stroke: #b9b2a2; }
+.dark .ae-forest { fill: #4f7a45; }
+.dark .ae-co2, .dark .ae-sym, .dark .ae-element-text { fill: #f4ead7; }
+.dark .ae-sink { stroke: #a9cf92; }
+.dark .ae-cloud, .dark .ae-sky { fill: #3f4e4b; stroke: #8fa39c; }
+.dark .ae-ocean { fill: #2a4550; stroke: #6e8f88; }
+.dark .ae-sea, .dark .ae-water-fill { fill: #3f6f8f; }
+.dark .ae-river { stroke: #4f86a3; }
+.dark .ae-plot { fill: #2f3f33; stroke: #b9b2a2; }
+.dark .ae-rl-text { fill: #f4ead7; }
+.dark .ae-app { stroke: rgb(127 174 102 / .45); }
+.dark .ae-app-fill, .dark .ae-rl { fill: rgb(127 174 102 / .45); stroke: #a9cf92; }
+.dark .ae-set-big { fill: rgb(217 168 119 / .08); stroke: #d9a877; }
+.dark .ae-set-small { fill: rgb(143 184 204 / .15); stroke: #8fb8cc; }
+.dark .ae-bar-bg { fill: #3f4e4b; }
+.dark .ae-bar-fossil { fill: #8a6444; }
+.dark .ae-threshold, .dark .ae-demand { stroke: #f1a27f; }
+.dark .ae-contour, .dark .ae-fence, .dark .ae-coast { stroke: #d9a877; }
+.dark .ae-route, .dark .ae-law-line { stroke: #ffd095; }
+.dark .ae-oscill, .dark .ae-spread, .dark .ae-flow-thick { stroke: #f1a27f; }
+.dark .ae-benefit, .dark .ae-flow-thin { stroke: #8fc6cc; }
+.dark .ae-accum-rich { fill: rgb(241 162 127 / .3); stroke: #f1a27f; }
+.dark .ae-accum-poor { fill: rgb(127 174 102 / .4); stroke: #a9cf92; }
+.dark .ae-seg-coal { fill: #1f1d1b; stroke: #6e7f79; }
+.dark .ae-seg-gas { fill: #6e5a44; }
+.dark .ae-bracket { stroke: #d3ddcf; }
+.dark .ae-scale-pan, .dark .ae-layer-rock { fill: #8a7552; stroke: #d9c39a; }
+.dark .ae-scale-string { stroke: #d9c39a; }
+.dark .ae-tailings { fill: #7a6a52; stroke: #b9b2a2; }
+.dark .ae-inner-text { fill: #f4ead7; }
+.dark .ae-dike { fill: #a3927a; stroke: #f4ead7; }
+.dark .ae-crack { stroke: #f1a27f; }
+.dark .ae-dry { stroke: #8a6444; }
+.dark .ae-element { fill: #34443d; stroke: #d3ddcf; }
+.dark .ae-wheel, .dark .ae-fish-eye { fill: #d3ddcf; }
+.dark .ae-hose { stroke: #d3ddcf; }
+.dark .ae-net { stroke: #d9a877; }
+.dark .ae-island { fill: #8a7552; }
+.dark .ae-wave { stroke: #8fb8cc; }
+.ae-net-bag { fill: rgb(124 85 52 / .12); stroke: #7c5534; stroke-width: 1.6; stroke-linejoin: round; }
+.ae-rope { stroke: #7c5534; stroke-width: 2; stroke-linecap: round; }
+.ae-thermo-thin { stroke: #a8432a; stroke-width: 3; stroke-linecap: round; }
+.ae-pasture { stroke: #b8a86a; stroke-width: 2; stroke-linecap: round; }
+.dark .ae-net-bag { fill: rgb(217 168 119 / .12); stroke: #d9a877; }
+.dark .ae-rope { stroke: #d9a877; }
+.dark .ae-pasture { stroke: #8a7a4a; }
+.dark .ae-thermo-thin, .dark .ae-thermo { stroke: #f1a27f; }
+.dark .ae-thermo-bulb { fill: #f1a27f; }

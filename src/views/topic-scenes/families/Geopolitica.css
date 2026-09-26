@@ -1,0 +1,142 @@
+/* Lote 11 — geopolítica regional. Reusa as classes bi-* (BrasilImperio.css);
+   aqui ficam só as peças novas, cada uma com a variante do tema escuro. */
+
+.gp-inland { fill: #f7f0e2; stroke: #8b7a5c; stroke-width: 1.2; }
+.gp-region { stroke: #6e5a3e; stroke-width: 1.2; stroke-linejoin: round; }
+.gp-hl-a { fill: #9cc3bb; }
+.gp-hl-warm { fill: #e39a74; }
+.gp-hl-gold { fill: #f2cf7a; }
+.gp-hl-blue { fill: #8fb3cf; }
+.gp-on-fill { fill: #243a4f; }
+.gp-oldline { fill: none; stroke: #873f4f; stroke-width: 2; stroke-dasharray: 5 4; stroke-linecap: round; }
+.gp-split { fill: none; stroke: #2c3937; stroke-width: 2.4; stroke-dasharray: 3 3; }
+.gp-otan { fill: none; stroke: #2c4f66; stroke-width: 3.2; stroke-linecap: round; stroke-linejoin: round; }
+.gp-progress { fill: none; stroke: #873f4f; stroke-width: 3; stroke-linecap: round; }
+.gp-ok { fill: none; stroke: #3f7a5a; stroke-width: 2.2; stroke-linecap: round; }
+.gp-no { fill: none; stroke: #a8432a; stroke-width: 2.2; stroke-linecap: round; stroke-dasharray: 4 3; }
+.gp-ok-text { fill: #2f6a4a; }
+.gp-no-text { fill: #a8432a; }
+.gp-box { fill: #fbf7ee; stroke: #5c4a3a; stroke-width: 1.6; }
+.gp-slot { stroke: #5c4a3a; stroke-width: 2.4; stroke-linecap: round; }
+
+.gp-file { fill: #fbf7ee; stroke: #8b7a5c; stroke-width: 1.6; }
+.gp-stamp-a { fill: rgb(168 67 42 / .1); stroke: #a8432a; stroke-width: 2.2; }
+.gp-stamp-text-a { fill: #a8432a; font: 800 12px system-ui, sans-serif; letter-spacing: .08em; }
+.gp-stamp-b { fill: rgb(63 111 143 / .1); stroke: #3f6f8f; stroke-width: 2.2; }
+.gp-stamp-text-b { fill: #2c4f66; font: 800 12px system-ui, sans-serif; letter-spacing: .04em; }
+.gp-edge { fill: none; stroke: #7c6a4f; stroke-width: 2.2; stroke-linecap: round; }
+.gp-node { fill: #3f6f8f; stroke: #f7f0e2; stroke-width: 2; }
+.gp-node-root { fill: #873f4f; }
+.gp-cell { fill: rgb(63 111 143 / .08); stroke: #3f6f8f; stroke-width: 1.4; stroke-dasharray: 4 3; }
+.gp-screen { fill: #e5ddc9; stroke: #5c4a3a; stroke-width: 1.6; }
+.gp-screen-line { stroke: #8b7a5c; stroke-width: 2; stroke-linecap: round; }
+.gp-laptop { stroke: #5c4a3a; stroke-width: 3; stroke-linecap: round; }
+.gp-wire { fill: none; stroke: #8b7a5c; stroke-width: 1.2; stroke-dasharray: 2 4; }
+.gp-lens { fill: rgb(255 255 255 / .35); stroke: #5c4a3a; stroke-width: 2.4; }
+.gp-lens-handle { stroke: #5c4a3a; stroke-width: 4; stroke-linecap: round; }
+.gp-medal { fill: #fbf7ee; stroke: #c2b49c; stroke-width: 1.6; }
+.gp-cam { fill: #d9ccb0; stroke: #5c4a3a; stroke-width: 1.6; stroke-linejoin: round; }
+.gp-cam-line { fill: #5c4a3a; stroke: #5c4a3a; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.gp-beam { fill: rgb(242 193 78 / .35); }
+.gp-scale { fill: none; stroke: #5c4a3a; stroke-width: 2.4; stroke-linecap: round; }
+.gp-pan { fill: #e5ddc9; stroke: #5c4a3a; stroke-width: 1.4; stroke-linejoin: round; }
+.gp-rift { fill: none; stroke: #a8432a; stroke-width: 2.4; stroke-dasharray: 3 3; }
+.gp-band { fill: rgb(135 63 79 / .22); }
+.gp-tick { fill: #e5ddc9; stroke: #7c6a4f; stroke-width: 1.4; }
+.gp-tick-on { fill: #873f4f; stroke: #873f4f; }
+
+.gp-halo { fill: rgb(217 154 43 / .32); stroke: #b3791a; stroke-width: 1.2; stroke-dasharray: 3 3; }
+.gp-ring { fill: none; stroke: #873f4f; stroke-width: 1.8; stroke-dasharray: 4 3; }
+.gp-origin { fill: #873f4f; stroke: #f7f0e2; stroke-width: 1.6; }
+.gp-card { fill: #fbf6ea; stroke: #c2b49c; stroke-width: 1.6; }
+.gp-tie { fill: none; stroke: #b3791a; stroke-width: 1.6; }
+.gp-chip { fill: #fbf7ee; stroke: #8b7a5c; stroke-width: 1.4; }
+.gp-chip-warm { fill: #f6dcc6; stroke: #a8432a; }
+.gp-chip-blue { fill: #d5e3ee; stroke: #3f6f8f; }
+.gp-bracket { fill: none; stroke: #9a3b1f; stroke-width: 1.8; stroke-linecap: round; }
+
+.gp-coast { fill: none; stroke: rgb(179 121 26 / .45); stroke-width: 7; stroke-linecap: round; stroke-linejoin: round; }
+.gp-pin { fill: #873f4f; stroke: #fbf7ee; stroke-width: 1.6; }
+.gp-pin-gold { fill: #d99a2b; }
+.gp-pin-teal { fill: #477981; }
+.gp-pin-hollow { fill: #fbf7ee; stroke: #477981; stroke-width: 2; stroke-dasharray: 3 2; }
+.gp-wall { fill: #b3564a; stroke: #7c2f25; stroke-width: 1.2; }
+.gp-crate { fill: #c9ae7d; stroke: #7c5534; stroke-width: 1.2; }
+.gp-bar-a { fill: #b8a88a; }
+.gp-bar-b { fill: #c2562f; }
+
+.gp-blob { stroke-width: 1.2; stroke-dasharray: 3 2; }
+.gp-blob-a { fill: rgb(135 63 79 / .28); stroke: #873f4f; }
+.gp-blob-b { fill: rgb(71 121 129 / .3); stroke: #477981; }
+.gp-blob-c { fill: rgb(217 154 43 / .35); stroke: #b3791a; }
+.gp-ruler { fill: none; stroke: #2c3937; stroke-width: 2.2; stroke-linecap: square; }
+.gp-city { fill: #873f4f; stroke: #5a2a36; stroke-width: 1; stroke-linejoin: round; }
+.gp-grow { fill: none; stroke: #3f7a5a; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+.gp-age { fill: #d99a2b; }
+.gp-rail { fill: none; stroke: #5c3b20; stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; }
+.gp-ties { fill: none; stroke: #5c3b20; stroke-width: 7; stroke-dasharray: 1.5 5; }
+.gp-port { fill: #3f6f8f; stroke: #fbf7ee; stroke-width: 1.4; }
+.gp-ore { fill: #7c6a4f; stroke: #fbf7ee; stroke-width: 1; }
+.gp-battery { fill: #477981; stroke: #2c4f55; stroke-width: 1.2; }
+.gp-oil { fill: #3d3a36; stroke: #1f1d1a; stroke-width: 1; }
+.gp-gem { fill: #f2c14e; stroke: #b3791a; stroke-width: 1.2; stroke-linejoin: round; }
+
+.dark .gp-inland { fill: #22302f; stroke: #b9b2a2; }
+.dark .gp-region { stroke: #d3ddcf; }
+.dark .gp-hl-a { fill: #4f8a80; }
+.dark .gp-hl-warm { fill: #b0613f; }
+.dark .gp-hl-gold { fill: #a78638; }
+.dark .gp-hl-blue { fill: #4d7898; }
+.dark .gp-on-fill { fill: #f4ead7; }
+.dark .gp-oldline, .dark .gp-progress { stroke: #f1c8ab; }
+.dark .gp-split { stroke: #f4ead7; }
+.dark .gp-otan { stroke: #a9cbe6; }
+.dark .gp-ok { stroke: #8fd0a8; } .dark .gp-ok-text { fill: #8fd0a8; }
+.dark .gp-no { stroke: #f1a27f; } .dark .gp-no-text { fill: #f1a27f; }
+.dark .gp-box, .dark .gp-file, .dark .gp-medal, .dark .gp-chip { fill: #34443d; stroke: #b9b2a2; }
+.dark .gp-slot, .dark .gp-scale, .dark .gp-lens-handle, .dark .gp-laptop { stroke: #d3ddcf; }
+.dark .gp-stamp-a { fill: rgb(241 162 127 / .12); stroke: #f1a27f; } .dark .gp-stamp-text-a { fill: #f1a27f; }
+.dark .gp-stamp-b { fill: rgb(169 203 230 / .12); stroke: #a9cbe6; } .dark .gp-stamp-text-b { fill: #a9cbe6; }
+.dark .gp-edge, .dark .gp-wire { stroke: #b9b2a2; }
+.dark .gp-node { fill: #6fa3c7; stroke: #22302f; }
+.dark .gp-node-root { fill: #e0a0ae; }
+.dark .gp-cell { fill: rgb(111 163 199 / .12); stroke: #a9cbe6; }
+.dark .gp-screen { fill: #3f4e4b; stroke: #d3ddcf; }
+.dark .gp-lens { fill: rgb(255 255 255 / .08); stroke: #d3ddcf; }
+.dark .gp-cam, .dark .gp-pan { fill: #5d6b66; stroke: #d3ddcf; }
+.dark .gp-cam-line { fill: #d3ddcf; stroke: #d3ddcf; }
+.dark .gp-rift { stroke: #f1a27f; }
+.dark .gp-band { fill: rgb(241 200 171 / .25); }
+.dark .gp-tick { fill: #3f4e4b; stroke: #b9b2a2; }
+.dark .gp-tick-on { fill: #f1c8ab; stroke: #f1c8ab; }
+.dark .gp-halo { fill: rgb(242 193 78 / .22); stroke: #f2c14e; }
+.dark .gp-ring { stroke: #f1c8ab; }
+.dark .gp-origin, .dark .gp-pin { stroke: #22302f; }
+.dark .gp-origin { fill: #f1c8ab; }
+.dark .gp-card { fill: #2d3d3b; stroke: #6e8f88; }
+.dark .gp-tie { stroke: #f2c14e; }
+.dark .gp-chip-warm { fill: #5a3b2f; stroke: #f1a27f; }
+.dark .gp-chip-blue { fill: #2f4a5e; stroke: #a9cbe6; }
+.dark .gp-bracket { stroke: #f1a27f; }
+.dark .gp-pin { fill: #e0a0ae; }
+.dark .gp-pin-gold { fill: #f2c14e; }
+.dark .gp-pin-teal { fill: #7fc0c6; }
+.dark .gp-pin-hollow { fill: #22302f; stroke: #7fc0c6; }
+.dark .gp-wall { fill: #b0613f; stroke: #f1a27f; }
+.dark .gp-crate { fill: #8a7552; stroke: #d9c39a; }
+.dark .gp-bar-a { fill: #6e7f79; }
+.dark .gp-bar-b { fill: #e0764a; }
+.dark .gp-blob-a { fill: rgb(224 160 174 / .28); stroke: #e0a0ae; }
+.dark .gp-blob-b { fill: rgb(127 192 198 / .28); stroke: #7fc0c6; }
+.dark .gp-blob-c { fill: rgb(242 193 78 / .28); stroke: #f2c14e; }
+.dark .gp-ruler { stroke: #f4ead7; }
+.dark .gp-city { fill: #e0a0ae; stroke: #f4ead7; }
+.dark .gp-grow { stroke: #8fd0a8; }
+.dark .gp-age { fill: #f2c14e; }
+.dark .gp-rail, .dark .gp-ties { stroke: #d9a877; }
+.dark .gp-port { fill: #6fa3c7; stroke: #22302f; }
+.dark .gp-ore { fill: #d9c39a; stroke: #22302f; }
+.dark .gp-battery { fill: #7fc0c6; stroke: #d3ddcf; }
+.dark .gp-oil { fill: #b9b2a2; stroke: #f4ead7; }
+.gp-weight-line { stroke: #873f4f; stroke-width: 4; stroke-linecap: round; }
+.dark .gp-weight-line { stroke: #f1c8ab; }
