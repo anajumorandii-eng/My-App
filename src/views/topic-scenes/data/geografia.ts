@@ -1,4 +1,5 @@
 import type { SceneEntry } from '../types';
+import { HG_LOTE_ENTRIES } from './hgLotes';
 
 /** Capítulos de Geografia sem cena-âncora, com o motivo. A lista é lida pelo
  *  teste de completude: nenhum capítulo pode ficar fora das duas listas.
@@ -7,7 +8,7 @@ import type { SceneEntry } from '../types';
  *  atribuição definitiva dos 63 capítulos (famílias e lacunas adicionais)
  *  está em docs/visual-personalizado/10-familias-geografia.md — as Tasks
  *  2-4 preenchem `geografia` e completam `geografiaSemCena` a partir dali. */
-export const geografiaSemCena: { chapterId: string; motivo: string }[] = [
+const geografiaSemCenaBase: { chapterId: string; motivo: string }[] = [
   {
     chapterId: 'summary-geografia-coordenadas-geograficas',
     motivo: 'Já tem experiência interativa própria (coordinates) no catálogo de topic-experiments.',
@@ -161,7 +162,7 @@ export const geografiaSemCena: { chapterId: string; motivo: string }[] = [
 /** Uma entrada por capítulo, escrita à mão lendo o capítulo. As Tasks 2-4
  *  preenchem esta lista, família por família, seguindo a atribuição
  *  definitiva do documento de famílias. */
-export const geografia: SceneEntry[] = [
+const geografiaBase: SceneEntry[] = [
   // Task 2 — família contraste-de-posicoes (1 capítulo)
   {
     chapterId: 'summary-geografia-paisagem-espaco-geografico-e-ciencia-geografica',
@@ -882,3 +883,9 @@ export const geografia: SceneEntry[] = [
     ],
   },
 ];
+
+// Capítulos redesenhados depois da auditoria de 26/09: os recortes vêm dos
+// arquivos de lote e o capítulo deixa de contar como lacuna.
+const geografiaLotes = HG_LOTE_ENTRIES.filter(entry => entry.chapterId.startsWith('summary-geografia-'));
+export const geografia: SceneEntry[] = [...geografiaBase, ...geografiaLotes];
+export const geografiaSemCena = geografiaSemCenaBase.filter(gap => !geografiaLotes.some(entry => entry.chapterId === gap.chapterId));

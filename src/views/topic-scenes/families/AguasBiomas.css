@@ -1,0 +1,260 @@
+/* Lote 16 — águas e biomas. Paleta de papel das cenas bi-*, com azuis de
+   água e verdes de vegetação; toda classe tem variante .dark. */
+
+.ab-stage { fill: #f3ead6; }
+.ab-stage-edge { fill: none; stroke: #c2b49c; stroke-width: 1.6; }
+.ab-rule { stroke: #c2b49c; stroke-width: 1.4; }
+.ab-axis { fill: none; stroke: #7c6a4f; stroke-width: 1.6; }
+.ab-measure { fill: none; stroke: #7c6a4f; stroke-width: 1.4; }
+.ab-leader { fill: none; stroke: #9a3b1f; stroke-width: 1.6; stroke-dasharray: 3 3; stroke-linecap: round; }
+.ab-divider { stroke: #a3927a; stroke-width: 1.4; stroke-dasharray: 5 4; }
+
+/* água */
+.ab-sea { fill: #9cc5cf; }
+.ab-water { fill: #6fa8b8; }
+.ab-reservoir { fill: #7fb3c1; }
+.ab-flood { fill: #8fbfcb; }
+.ab-estuary { fill: #b5d0c8; }
+.ab-wave { fill: none; stroke: #f5fbfb; stroke-width: 1.8; stroke-linecap: round; opacity: .85; }
+.ab-crest { fill: none; stroke: #2f6f80; stroke-width: 3; stroke-linecap: round; }
+.ab-river { fill: none; stroke: #3f86a0; stroke-width: 3.4; stroke-linecap: round; }
+.ab-river-thin { fill: none; stroke: #3f86a0; stroke-width: 1.8; stroke-linecap: round; }
+.ab-river-wide { fill: none; stroke: #3f86a0; stroke-width: 16; stroke-linecap: round; }
+.ab-flow { fill: none; stroke: #e6f4f6; stroke-width: 3; stroke-dasharray: 6 14; stroke-linecap: round; }
+.ab-flow-thin { fill: none; stroke: #e6f4f6; stroke-width: 1.4; stroke-dasharray: 2 16; stroke-linecap: round; }
+.ab-plume { fill: #3f86a0; opacity: .45; }
+.ab-drop { fill: #3f86a0; stroke: #2f6f80; stroke-width: 1; }
+.ab-rain { stroke: #3f86a0; stroke-width: 2; stroke-linecap: round; }
+.ab-cloud { fill: #fbf8f0; stroke: #8fa7ad; stroke-width: 1.4; stroke-linejoin: round; }
+.ab-on-sea { fill: #173f4b; font: 700 10px system-ui, sans-serif; }
+.ab-on-sea-big { fill: #173f4b; font: 800 17px Georgia, serif; }
+.ab-on-water { fill: #173f4b; font: 700 11px system-ui, sans-serif; }
+
+/* terra e mapa */
+.ab-sand { fill: #ecd6a8; }
+.ab-dune { fill: none; stroke: #c9a66a; stroke-width: 1.6; stroke-linecap: round; }
+.ab-ground { fill: #e2d3b1; }
+.ab-soil { fill: #d9c49a; }
+.ab-soil-poor { fill: #e0c7a0; }
+.ab-plain { fill: #c8c08a; stroke: #8b7a5c; stroke-width: 1.4; }
+.ab-plain-dry { fill: #d8c08c; stroke: #8b6a3c; stroke-width: 1.4; }
+.ab-grassland { fill: #c9cf8a; stroke: #7f8a4c; stroke-width: 1.4; }
+.ab-plowed { fill: #caa77a; }
+.ab-furrow { stroke: #a4804f; stroke-width: 1.4; }
+.ab-front { stroke: #a8432a; stroke-width: 2; stroke-dasharray: 5 4; }
+.ab-mountain { fill: #bfae8e; stroke: #7c6a4f; stroke-width: 1.6; stroke-linejoin: round; }
+.ab-snow { fill: #fbfbf6; }
+.ab-border { stroke: #8b7a5c; stroke-width: 1.4; stroke-dasharray: 4 3; }
+.ab-land { fill: #efe5cc; }
+.ab-outline { fill: none; stroke: #7c6a4f; stroke-width: 1.8; stroke-linejoin: round; }
+.ab-coast { fill: none; stroke: #2f8f86; stroke-width: 7; stroke-linecap: round; stroke-linejoin: round; }
+.ab-map-river { fill: none; stroke: #3f86a0; stroke-linecap: round; }
+.ab-map-flow { fill: none; stroke: #e6f4f6; stroke-width: 1.6; stroke-dasharray: 3 8; stroke-linecap: round; }
+.ab-map-dry { fill: none; stroke: #3f86a0; stroke-width: 2.4; stroke-dasharray: 3 4; stroke-linecap: round; }
+.ab-canal { fill: none; stroke: #c2562f; stroke-width: 3.4; stroke-linecap: round; }
+.ab-map-label { fill: #5a5250; font: 700 10px system-ui, sans-serif; }
+.ab-map-on { fill: #873f4f; font-weight: 800; font-size: 11.5px; }
+.ab-pin { fill: #c2562f; stroke: #fbf7ee; stroke-width: 2; }
+.ab-on-soil { fill: #3d3024; font: 700 11px system-ui, sans-serif; }
+.ab-on-soil-sm { fill: #3d3024; font: 700 9.5px system-ui, sans-serif; }
+
+/* vegetação */
+.ab-forest { fill: #7fa266; }
+.ab-canopy { fill: #5f8a4e; stroke: #3f6436; stroke-width: 1.2; }
+.ab-canopy-mid { fill: #88ab6a; stroke: #557a45; stroke-width: 1.2; }
+.ab-canopy-dry { fill: #b7b36a; stroke: #807c3e; stroke-width: 1.2; }
+.ab-trunk { stroke: #6e4a2c; stroke-width: 4; stroke-linecap: round; }
+.ab-bark { fill: none; stroke: #6e4a2c; stroke-width: 7; stroke-linecap: round; }
+.ab-branch { fill: none; stroke: #6e4a2c; stroke-width: 3; stroke-linecap: round; }
+.ab-root { fill: none; stroke: #8a5f3a; stroke-width: 2.2; stroke-linecap: round; }
+.ab-mangrove-root { fill: none; stroke: #6e4a2c; stroke-width: 2.6; stroke-linecap: round; }
+.ab-grass { fill: none; stroke: #7f8a3c; stroke-width: 1.6; stroke-linecap: round; }
+.ab-fern { fill: none; stroke: #4f7a3e; stroke-width: 2; stroke-linecap: round; }
+.ab-restinga { fill: none; stroke: #6f8f5a; stroke-width: 2; stroke-linecap: round; }
+.ab-green-fill { fill: #9dbb72; }
+.ab-strip { fill: none; stroke: #9dbb72; stroke-width: 24; stroke-linecap: round; }
+.ab-sprout { fill: none; stroke: #5f8a4e; stroke-width: 1.8; stroke-linecap: round; }
+.ab-soy { fill: none; stroke: #6f8f3a; stroke-width: 1.8; stroke-linecap: round; }
+.ab-leaf { fill: #7fae5a; }
+.ab-leaf-dry { fill: #c49a5c; }
+.ab-flower { fill: #e5899a; }
+.ab-flower-core { fill: #f2c14e; }
+.ab-cactus { fill: none; stroke: #4f7a5a; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; }
+.ab-ghost { fill: rgb(95 138 78 / .12); stroke: #5f8a4e; stroke-width: 1.6; stroke-dasharray: 5 4; }
+.ab-endemic { fill: #f2c14e; stroke: #b3791a; stroke-width: 1; }
+.ab-ray { stroke: #e9b949; stroke-width: 6; stroke-linecap: round; opacity: .85; }
+.ab-ray-dim { opacity: .45; }
+.ab-ray-faint { opacity: .2; }
+.ab-bracket { fill: none; stroke: #8b7a5c; stroke-width: 1.4; }
+
+/* bichos */
+.ab-fish { fill: #e0894f; stroke: #9a4f24; stroke-width: 1; stroke-linejoin: round; }
+.ab-shrimp { fill: #e5899a; stroke: #a4515f; stroke-width: 1; }
+.ab-eye { fill: #2c2a24; }
+.ab-bird { fill: none; stroke: #3d3a36; stroke-width: 2; stroke-linecap: round; }
+.ab-butterfly { fill: #e0894f; stroke: #9a4f24; stroke-width: 1; }
+.ab-beetle { fill: #3f6f5a; }
+.ab-beetle-leg { stroke: #3f6f5a; stroke-width: 1.4; }
+.ab-heron { fill: #fbfbf6; stroke: #5a5250; stroke-width: 1.2; stroke-linejoin: round; }
+.ab-heron-neck { fill: none; stroke: #5a5250; stroke-width: 3.2; stroke-linecap: round; }
+.ab-leg { stroke: #5a5250; stroke-width: 1.6; stroke-linecap: round; }
+.ab-beak { fill: #e0a33a; }
+.ab-caiman { fill: #56704a; stroke: #33452c; stroke-width: 1.2; }
+.ab-cow { fill: none; stroke: #5c3b20; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+.ab-cow-body { fill: #9b6a3f; stroke: #5c3b20; stroke-width: 1.2; stroke-linejoin: round; }
+.ab-cow-patch { fill: #f3e6cf; }
+.ab-stump { fill: none; stroke: #5c3b20; stroke-width: 3.4; stroke-linecap: round; }
+.ab-burnt { fill: #6b5a4a; opacity: .55; }
+.ab-grain { fill: none; stroke: #9b6a3f; stroke-width: 1.4; stroke-linecap: round; }
+.ab-shade { fill: rgb(60 70 40 / .07); }
+.ab-shade-deep { fill: rgb(60 70 40 / .14); }
+.ab-step { fill: none; stroke: #873f4f; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+
+/* coisas humanas */
+.ab-house { fill: #fbf7ee; stroke: #7c5534; stroke-width: 1.2; stroke-linejoin: round; }
+.ab-building { fill: #b8a88a; stroke: #5c4a3a; stroke-width: 1.2; }
+.ab-field { stroke: #b3791a; stroke-width: 3; stroke-linecap: round; }
+.ab-dam { fill: #9a8f7c; stroke: #5c4a3a; stroke-width: 1.2; }
+.ab-dam-wall { fill: none; stroke: #5c4a3a; stroke-width: 2.4; stroke-linejoin: round; }
+.ab-bolt { fill: none; stroke: #d99a2b; stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; }
+.ab-boat { fill: #9b6a3f; stroke: #5c3b20; stroke-width: 1.2; stroke-linejoin: round; }
+.ab-boat-cabin { fill: #fbf7ee; stroke: #5c3b20; stroke-width: 1.2; }
+.ab-boat-window { stroke: #3f86a0; stroke-width: 2; }
+.ab-tank { fill: #efe6d2; stroke: #7c6a4f; stroke-width: 1.6; }
+.ab-tank-top { fill: none; stroke: #7c6a4f; stroke-width: 2; stroke-linecap: round; }
+.ab-bed { fill: #e5d6b4; stroke: #b8a07a; stroke-width: 1; }
+.ab-crack { fill: none; stroke: #a4804f; stroke-width: 1.6; stroke-linecap: round; }
+.ab-rainbar { fill: #6fa8b8; }
+.ab-rainbar-dry { fill: #d9c49a; }
+.ab-route { fill: none; stroke: #9b6a3f; stroke-width: 1.6; stroke-dasharray: 4 4; }
+.ab-scale-post { stroke: #5c4a3a; stroke-width: 3; stroke-linecap: round; }
+.ab-scale-beam { stroke: #873f4f; stroke-width: 3.4; stroke-linecap: round; }
+.ab-scale-string { fill: none; stroke: #8b7a5c; stroke-width: 1.2; }
+.ab-scale-pan { fill: #d99a2b; stroke: #b3791a; stroke-width: 1.2; }
+.ab-scale-pivot { fill: #873f4f; }
+.ab-flame { fill: #e0762f; stroke: #a8432a; stroke-width: 1.2; stroke-linejoin: round; }
+.ab-flame-core { fill: #f2c14e; }
+.ab-smoke { fill: none; stroke: #9a8f7c; stroke-width: 3; stroke-linecap: round; opacity: .7; }
+.ab-sun { fill: #f2c14e; stroke: #d99a2b; stroke-width: 1.2; }
+.ab-sun-ray { stroke: #d99a2b; stroke-width: 2; stroke-linecap: round; }
+.ab-cause { fill: #fbf1e3; stroke: #a8432a; stroke-width: 1.4; }
+.ab-pulse-dot { fill: #3f86a0; stroke: #fbf7ee; stroke-width: 2; }
+
+/* barras, medidores, faixas */
+.ab-bar-dry { fill: #c2562f; }
+.ab-bar-wet { fill: #3f86a0; }
+.ab-bar-irr { fill: #6f8f3a; }
+.ab-bar-other { fill: #d9ccb0; }
+.ab-bar-text { fill: #fbf7ee; font: 800 10.5px system-ui, sans-serif; }
+.ab-threshold { fill: none; stroke: #a8432a; stroke-width: 2; stroke-dasharray: 6 4; }
+.ab-gauge { fill: #efe6d2; stroke: #8b7a5c; stroke-width: 1; }
+.ab-gauge-fill { fill: #5f8a4e; }
+.ab-tick { stroke: #3d3024; stroke-width: 1.6; }
+.ab-chip { fill: #efe6d2; stroke: #c2b49c; stroke-width: 1.2; }
+.ab-chip-on { fill: #f6dfc4; stroke: #873f4f; stroke-width: 2; }
+.ab-chip-text { fill: #5a5250; font: 700 11px system-ui, sans-serif; }
+.ab-chip-text-on { fill: #873f4f; font-weight: 800; }
+
+/* ——— tema escuro ——— */
+.dark .ab-stage { fill: #26383a; }
+.dark .ab-stage-edge, .dark .ab-rule { stroke: #6e8f88; }
+.dark .ab-axis, .dark .ab-measure, .dark .ab-bracket { stroke: #d3ddcf; }
+.dark .ab-leader { stroke: #f1a27f; }
+.dark .ab-divider { stroke: #8fa39c; }
+.dark .ab-sea { fill: #2f5a66; }
+.dark .ab-water, .dark .ab-reservoir { fill: #4a8799; }
+.dark .ab-flood { fill: #3b6f7c; }
+.dark .ab-estuary { fill: #3c5c56; }
+.dark .ab-wave { stroke: #bfe0e6; }
+.dark .ab-crest { stroke: #bfe0e6; }
+.dark .ab-river, .dark .ab-river-thin, .dark .ab-river-wide, .dark .ab-map-river, .dark .ab-map-dry { stroke: #7cc0d4; }
+.dark .ab-flow, .dark .ab-flow-thin, .dark .ab-map-flow { stroke: #e6f4f6; }
+.dark .ab-plume { fill: #7cc0d4; }
+.dark .ab-drop { fill: #7cc0d4; stroke: #bfe0e6; }
+.dark .ab-rain { stroke: #7cc0d4; }
+.dark .ab-cloud { fill: #3e5354; stroke: #bfd0cc; }
+.dark .ab-on-sea, .dark .ab-on-sea-big, .dark .ab-on-water { fill: #f1f8f8; }
+.dark .ab-sand { fill: #5b523c; }
+.dark .ab-dune { stroke: #a58a55; }
+.dark .ab-ground { fill: #3d4a3f; }
+.dark .ab-soil { fill: #4f4636; }
+.dark .ab-soil-poor { fill: #56493a; }
+.dark .ab-plain { fill: #4f5a3e; stroke: #b9b2a2; }
+.dark .ab-plain-dry { fill: #5f5238; stroke: #b9a07a; }
+.dark .ab-grassland { fill: #4d5c38; stroke: #a7b77a; }
+.dark .ab-plowed { fill: #6a5238; }
+.dark .ab-furrow { stroke: #9c7c52; }
+.dark .ab-front { stroke: #f1a27f; }
+.dark .ab-mountain { fill: #5d6b66; stroke: #b9b2a2; }
+.dark .ab-snow { fill: #e6ece8; }
+.dark .ab-border { stroke: #b9b2a2; }
+.dark .ab-land { fill: #34443d; }
+.dark .ab-outline { stroke: #d3ddcf; }
+.dark .ab-coast { stroke: #5fc2b6; }
+.dark .ab-canal { stroke: #f1a27f; }
+.dark .ab-map-label { fill: #c9d3c6; }
+.dark .ab-map-on { fill: #ffd095; }
+.dark .ab-pin { fill: #f1a27f; stroke: #22302f; }
+.dark .ab-on-soil, .dark .ab-on-soil-sm { fill: #f4ead7; }
+.dark .ab-forest { fill: #3f5c38; }
+.dark .ab-canopy { fill: #4f7a44; stroke: #9cc28a; }
+.dark .ab-canopy-mid { fill: #6a8f55; stroke: #a7c690; }
+.dark .ab-canopy-dry { fill: #7d7a45; stroke: #c4bf82; }
+.dark .ab-trunk, .dark .ab-bark, .dark .ab-branch, .dark .ab-mangrove-root { stroke: #c49a6c; }
+.dark .ab-root { stroke: #d9a877; }
+.dark .ab-grass, .dark .ab-soy { stroke: #b7c47a; }
+.dark .ab-fern, .dark .ab-restinga, .dark .ab-sprout { stroke: #9cc28a; }
+.dark .ab-green-fill { fill: #5f7f45; }
+.dark .ab-strip { stroke: #5f7f45; }
+.dark .ab-leaf { fill: #8fc06a; }
+.dark .ab-leaf-dry { fill: #c49a5c; }
+.dark .ab-cactus { stroke: #8fbf9a; }
+.dark .ab-ghost { fill: rgb(156 194 138 / .1); stroke: #9cc28a; }
+.dark .ab-ray { stroke: #f2c14e; }
+.dark .ab-fish { fill: #f0a070; stroke: #ffd6b8; }
+.dark .ab-eye { fill: #1c2524; }
+.dark .ab-bird { stroke: #f4ead7; }
+.dark .ab-beetle { fill: #9cc28a; } .dark .ab-beetle-leg { stroke: #9cc28a; }
+.dark .ab-caiman { fill: #7f9a6a; stroke: #c4d6b0; }
+.dark .ab-cow, .dark .ab-stump { stroke: #e6c49a; }
+.dark .ab-cow-body { fill: #b88a5c; stroke: #f0d7b4; }
+.dark .ab-cow-patch { fill: #f4ead7; }
+.dark .ab-heron { fill: #f4f4ee; stroke: #c9d3c6; }
+.dark .ab-heron-neck { stroke: #f4f4ee; }
+.dark .ab-leg { stroke: #c9d3c6; }
+.dark .ab-burnt { fill: #1c1a18; opacity: .6; }
+.dark .ab-grain { stroke: #f0d7b4; }
+.dark .ab-shade { fill: rgb(0 0 0 / .12); }
+.dark .ab-shade-deep { fill: rgb(0 0 0 / .24); }
+.dark .ab-step { stroke: #f1c8ab; }
+.dark .ab-house { fill: #4a5a55; stroke: #d9c39a; }
+.dark .ab-building { fill: #6e7f79; stroke: #d3ddcf; }
+.dark .ab-field { stroke: #d99a2b; }
+.dark .ab-dam { fill: #8a8577; stroke: #e6e0d0; }
+.dark .ab-dam-wall, .dark .ab-tank-top { stroke: #d3ddcf; }
+.dark .ab-boat { fill: #b88a5c; stroke: #f0d7b4; }
+.dark .ab-boat-cabin { fill: #4a5a55; stroke: #f0d7b4; }
+.dark .ab-tank { fill: #34443d; stroke: #d3ddcf; }
+.dark .ab-bed { fill: #4f4636; stroke: #9c8a6a; }
+.dark .ab-crack { stroke: #c4a070; }
+.dark .ab-rainbar { fill: #7cc0d4; }
+.dark .ab-rainbar-dry { fill: #6e6250; }
+.dark .ab-route { stroke: #d9a877; }
+.dark .ab-scale-post { stroke: #d3ddcf; }
+.dark .ab-scale-beam, .dark .ab-scale-pivot { stroke: #f1c8ab; fill: #f1c8ab; }
+.dark .ab-scale-string { stroke: #b9b2a2; }
+.dark .ab-smoke { stroke: #b9b2a2; }
+.dark .ab-cause { fill: #3a2f2c; stroke: #f1a27f; }
+.dark .ab-pulse-dot { fill: #7cc0d4; stroke: #22302f; }
+.dark .ab-bar-dry { fill: #e07a52; }
+.dark .ab-bar-wet { fill: #5aa6bd; }
+.dark .ab-bar-irr { fill: #7f9f45; }
+.dark .ab-bar-other { fill: #4a5a55; }
+.dark .ab-threshold { stroke: #f1a27f; }
+.dark .ab-gauge { fill: #3f4e4b; stroke: #8fa39c; }
+.dark .ab-gauge-fill { fill: #8fc06a; }
+.dark .ab-tick { stroke: #f4ead7; }
+.dark .ab-chip { fill: #2d3d3b; stroke: #6e8f88; }
+.dark .ab-chip-on { fill: #4a3a36; stroke: #ffd095; }
+.dark .ab-chip-text { fill: #c9d3c6; }
+.dark .ab-chip-text-on { fill: #ffd095; }

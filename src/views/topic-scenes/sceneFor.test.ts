@@ -20,7 +20,7 @@ describe('Seleção de cena por capítulo', () => {
   it('falha fechada para capítulo sem entrada', () => {
     expect(sceneFor('summary-filosofia-o-nascimento-da-filosofia-do-mito-ao-logos')).toBeNull();
     expect(sceneFor('summary-sociologia-solidariedade-mecanica-e-solidariedade-organica')).toBeNull();
-    expect(sceneFor('summary-historia-grandes-revolucoes-do-seculo-xx')).toBeNull();
+    expect(sceneFor('summary-historia-grandes-revolucoes-do-seculo-xx')).not.toBeNull();
     expect(sceneFor('summary-geografia-regionalizacoes-da-guerra-fria')).toBeNull();
     expect(sceneFor('capitulo-inexistente')).toBeNull();
   });

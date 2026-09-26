@@ -3,6 +3,7 @@ import { motion, useReducedMotion } from 'motion/react';
 import { GEOGRAPHY_REMAINING, type GeographyRemainingId } from '../../lib/geographyRemainingLab';
 import { STAGE_LABEL } from '../../lib/visualStudy';
 import BoardShell from '../visual-boards/BoardShell';
+import { short, wrapLines } from './cardText';
 import { boardPair } from '../visual-boards/pair';
 import type { BoardProps } from '../visual-boards/types';
 import './GeographyRemainingInstrument.css';
@@ -55,7 +56,7 @@ function FlowScene({ id, index }: { id: Exclude<GeographyRemainingId, 'digital-m
   const config = GEOGRAPHY_REMAINING[id];
   const active = (n:number) => n === index ? 'var(--vs-burgundy)' : 'var(--vs-ink-muted)';
   const label = config.cases[index].label;
-  const common = <><text x="24" y="25" fill="var(--vs-ink)" fontSize="13" fontWeight="800">{label}</text><text x="160" y="278" textAnchor="middle" fill="var(--vs-ink)" fontSize="12" fontWeight="800">{config.relation}</text></>;
+  const common = <><text x="24" y="25" fill="var(--vs-ink)" fontSize="13" fontWeight="800">{label}</text>{wrapLines(config.relation, 40).map((line, k, all) => <text key={k} x="160" y={278 - (all.length - 1) * 14 + k * 14} textAnchor="middle" fill="var(--vs-ink)" fontSize="12" fontWeight="800">{line}</text>)}</>;
   let drawing: React.ReactNode;
   if (id === 'commons') drawing = <>
     <ellipse cx="160" cy="155" rx="92" ry="52" fill="color-mix(in srgb,var(--vs-blue) 18%,transparent)" stroke="var(--vs-blue)" strokeWidth="4"/>
@@ -90,7 +91,7 @@ export function geographyRemainingInstrument(id: GeographyRemainingId) {
     const [index, setIndex] = useState(0);
     const selected = config.cases[index];
     const pair = boardPair(props);
-    const first = props.map.nodes[0];
+    const first = props.map.nodes[1] ?? props.map.nodes[0];
     const second = props.map.nodes[2] ?? props.map.nodes.at(-1);
     return <BoardShell
       kicker="Laboratório geográfico" title={config.title} subtitle={config.question}
@@ -111,8 +112,8 @@ export function geographyRemainingInstrument(id: GeographyRemainingId) {
         </dl>
         <p className="vs-instrument-dica">{config.caution}</p>
       </div>}
-      left={{label:STAGE_LABEL[first?.stage??'conceito'],headline:first?.label??props.map.title,detail:first?.excerpt??config.question,formula:config.relation}}
-      right={{label:STAGE_LABEL[second?.stage??'aplicacao'],headline:second?.label??props.map.title,detail:second?.excerpt??selected.action,formula:selected.inference}}
+      left={{label:STAGE_LABEL[first?.stage??'conceito'],headline:first?.label??props.map.title,detail:short(first?.excerpt)||config.question,formula:config.relation}}
+      right={{label:STAGE_LABEL[second?.stage??'aplicacao'],headline:second?.label??props.map.title,detail:short(second?.excerpt)||selected.action,formula:`no recorte ${selected.label}: ${selected.inference}`}}
       leftState={pair.leftState} rightState={pair.rightState} leftSelected={pair.leftSelected} rightSelected={pair.rightSelected}
       onSelectLeft={pair.selectLeft} onSelectRight={pair.selectRight}
       equation={{label:'Relação espacial',general:config.relation,condition:selected.label,reduced:selected.inference}}

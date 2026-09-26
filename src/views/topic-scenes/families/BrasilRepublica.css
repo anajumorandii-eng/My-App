@@ -1,0 +1,108 @@
+/* Lote 14 — Segundo Reinado, República da Espada, República Liberal e Regime
+   Militar. Reusa as classes bi-* e acrescenta só o que estas cenas desenham. */
+.br-stem { fill: none; stroke: #5c7a3a; stroke-width: 1.8; stroke-linecap: round; }
+.br-leaf { fill: #6f8f5a; stroke: #4c6a3a; stroke-width: 1; }
+.br-cherry { fill: #b3402e; stroke: #7a2a1e; stroke-width: .8; }
+.br-cane { fill: none; stroke: #9a8a3a; stroke-width: 2.4; stroke-linecap: round; }
+.br-cane-leaf { fill: none; stroke: #6f8f5a; stroke-width: 1.8; stroke-linecap: round; }
+.br-sail { fill: #fbf7ee; stroke: #7c5534; stroke-width: 1.2; stroke-linejoin: round; }
+.br-blade { fill: none; stroke: #6b7478; stroke-width: 2.6; stroke-linecap: round; }
+.br-hilt { fill: none; stroke: #9b6a3f; stroke-width: 3; stroke-linecap: round; }
+.br-foreign { fill: #e6dcc4; stroke: #8b7a5c; stroke-width: 1.8; stroke-dasharray: 5 4; stroke-linejoin: round; }
+.br-river { fill: none; stroke: #4f86a6; stroke-width: 4; stroke-linecap: round; }
+.br-route { fill: none; stroke: #7c6a4f; stroke-width: 1.8; stroke-dasharray: 4 4; }
+.br-people { fill: #6e4526; transform-box: fill-box; transform-origin: center; }
+.br-pivot { fill: #873f4f; stroke: #5a2a36; stroke-width: 1.2; stroke-linejoin: round; }
+
+.dark .br-stem { stroke: #9cc07a; }
+.dark .br-leaf { fill: #7fa266; stroke: #b4d196; }
+.dark .br-cherry { fill: #e0765e; stroke: #f1a27f; }
+.dark .br-cane { stroke: #d9c16a; }
+.dark .br-cane-leaf { stroke: #9cc07a; }
+.dark .br-sail { fill: #34443d; stroke: #d9a877; }
+.dark .br-blade { stroke: #c9d2d4; }
+.dark .br-hilt { stroke: #d9a877; }
+.dark .br-foreign { fill: #2d3a36; stroke: #b9b2a2; }
+.dark .br-river { stroke: #7fb5d3; }
+.dark .br-route { stroke: #b9b2a2; }
+.dark .br-people { fill: #d9a877; }
+.dark .br-pivot { fill: #f1c8ab; stroke: #f1c8ab; }
+
+.br-sword { fill: none; stroke: #6b7478; stroke-width: 2.4; stroke-linecap: round; }
+.br-sash { fill: none; stroke: #3f8a4f; stroke-width: 6; stroke-linecap: round; }
+.br-sea { fill: #dfe9e6; }
+.br-frame { fill: none; stroke: #c2b49c; stroke-width: 1.6; }
+.br-dome { fill: #ece2cb; stroke: #8b7a5c; stroke-width: 1.4; }
+.br-colonnade { stroke: #8b7a5c; stroke-width: 4; }
+.br-flag-a { fill: #c2562f; stroke: #8a3a20; stroke-width: 1; }
+.br-flag-b { fill: #3f6f8f; stroke: #2c4f66; stroke-width: 1; }
+.br-ring { fill: none; stroke: #a8432a; stroke-width: 2; stroke-dasharray: 7 6; opacity: .7; }
+.br-pediment { fill: #eadfc6; stroke: #8b7a5c; stroke-width: 1.8; stroke-linejoin: round; }
+.br-frieze { fill: #73414d; font: 800 10px system-ui, sans-serif; letter-spacing: .08em; }
+.br-pennant { stroke: #5c4a3a; stroke-width: 1; }
+.br-pennant-0 { fill: #3f6f8f; }
+.br-pennant-1 { fill: #d99a2b; }
+.br-pennant-2 { fill: #6f8f5a; }
+.br-pennant-3 { fill: #8a6aa0; }
+.br-pennant-4 { fill: #c2562f; }
+.br-slot { stroke: #5c4a3a; stroke-width: 2.4; stroke-linecap: round; }
+.br-censor { stroke: #2c2a24; stroke-width: 4.5; }
+
+.dark .br-sword { stroke: #c9d2d4; }
+.dark .br-sash { stroke: #7fc08f; }
+.dark .br-sea { fill: #1d2a2c; }
+.dark .br-frame { stroke: #5b6b67; }
+.dark .br-dome { fill: #4a5a55; stroke: #b9b2a2; }
+.dark .br-colonnade { stroke: #b9b2a2; }
+.dark .br-flag-a { fill: #e07a52; stroke: #f1a27f; }
+.dark .br-flag-b { fill: #6aa0c4; stroke: #a9cde3; }
+.dark .br-ring { stroke: #f1a27f; }
+.dark .br-pediment { fill: #34443d; stroke: #b9b2a2; }
+.dark .br-frieze { fill: #f1c8ab; }
+.dark .br-pennant { stroke: #d3ddcf; }
+.dark .br-slot { stroke: #d3ddcf; }
+.dark .br-censor { stroke: #0f1514; }
+
+.br-coast { fill: none; stroke: #4f86a6; stroke-width: 3; stroke-linecap: round; stroke-dasharray: 2 5; }
+.br-road { fill: none; stroke: #9b6a3f; stroke-width: 2.4; stroke-linecap: round; stroke-dasharray: 6 4; }
+.br-capital-star { fill: #f2c14e; stroke: #a8432a; stroke-width: 1.2; transform-box: fill-box; transform-origin: center; }
+.br-goal { fill: #d99a2b; transform-box: fill-box; transform-origin: center; }
+.br-knot { stroke: #a8432a; stroke-width: 4; stroke-linecap: round; }
+.br-lead { fill: rgb(90 90 96 / .16); stroke: rgb(90 90 96 / .4); stroke-width: 1; }
+.br-ai { fill: #73414d; font: 800 10px system-ui, sans-serif; }
+.br-lock { fill: none; stroke: #a8432a; stroke-width: 1.8; stroke-linejoin: round; }
+.br-divider { stroke: #c2b49c; stroke-width: 1.4; stroke-dasharray: 3 5; }
+.br-gdp { fill: none; stroke: #3f8a4f; stroke-width: 3; stroke-linecap: round; }
+.br-wage { stroke: #6e4526; stroke-width: 2.4; stroke-dasharray: 5 4; }
+.br-gap { fill: rgb(63 138 79 / .14); }
+.br-barrel { fill: #3d3a36; stroke: #2c2a24; stroke-width: 1; }
+.br-stairs { fill: none; stroke: #7c5534; stroke-width: 3; stroke-linejoin: round; }
+.br-year { fill: #7c6a4f; font: 700 13px Georgia, serif; }
+.br-banner { fill: #f2c14e; stroke: #b3791a; stroke-width: 1.2; }
+.br-banner-text { fill: #5a2a36; font: 800 10px system-ui, sans-serif; letter-spacing: .06em; }
+
+.dark .br-coast { stroke: #7fb5d3; }
+.dark .br-road { stroke: #d9a877; }
+.dark .br-goal { fill: #e5b76a; }
+.dark .br-knot { stroke: #f1a27f; }
+.dark .br-lead { fill: rgb(200 200 210 / .1); stroke: rgb(200 200 210 / .35); }
+.dark .br-ai { fill: #f1c8ab; }
+.dark .br-lock { stroke: #f1a27f; }
+.dark .br-divider { stroke: #5b6b67; }
+.dark .br-gdp { stroke: #8fd19e; }
+.dark .br-wage { stroke: #d9a877; }
+.dark .br-gap { fill: rgb(143 209 158 / .14); }
+.dark .br-barrel { fill: #b9b2a2; stroke: #d3ddcf; }
+.dark .br-stairs { stroke: #d9a877; }
+.dark .br-year { fill: #b9b2a2; }
+
+.br-wave { fill: none; stroke: #7fa6b8; stroke-width: 1.6; stroke-linecap: round; }
+.br-sea-label { fill: #4f7f96; font: italic 700 11px Georgia, serif; letter-spacing: .04em; }
+.dark .br-wave { stroke: #6f9db3; }
+.dark .br-sea-label { fill: #9cc6dc; }
+.br-goal-ring { fill: none; stroke: #d99a2b; stroke-width: 2.4; stroke-dasharray: 4 3; }
+.dark .br-goal-ring { stroke: #e5b76a; }
+.br-emblem { fill: #f2c14e; stroke: #b3791a; stroke-width: 1.4; }
+.dark .br-emblem { fill: #e5b76a; stroke: #f1c8ab; }
+.br-sash-sm { fill: none; stroke: #3f8a4f; stroke-width: 4; stroke-linecap: round; }
+.dark .br-sash-sm { stroke: #7fc08f; }
