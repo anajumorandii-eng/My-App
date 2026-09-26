@@ -4,6 +4,11 @@
   --vs-paper-strong: #fffaf0;
   --vs-ink: #1d2421;
   --vs-dim: #6f6a61;
+  /* Os instrumentos pedem --vs-ink-muted desde que foram escritos, mas a
+     variável nunca existiu: contorno com ela saía sem traço e texto caía no
+     preto, ilegível no tema escuro. Aponta para --vs-dim, que o tema escuro
+     redefine, para acompanhar os dois temas. */
+  --vs-ink-muted: var(--vs-dim);
   --vs-line: rgba(37, 43, 40, 0.15);
   --vs-burgundy: #852636;
   --vs-forest: #10251f;

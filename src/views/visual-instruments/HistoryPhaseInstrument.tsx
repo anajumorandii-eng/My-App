@@ -3,6 +3,7 @@ import { motion, useReducedMotion } from 'motion/react';
 import { HISTORY_PHASES, type HistoryPhaseId } from '../../lib/historyPhaseLab';
 import { STAGE_LABEL } from '../../lib/visualStudy';
 import BoardShell from '../visual-boards/BoardShell';
+import { short } from './cardText';
 import { boardPair } from '../visual-boards/pair';
 import type { BoardProps } from '../visual-boards/types';
 import './HistoryPhaseInstrument.css';
@@ -96,8 +97,8 @@ export function historyPhaseInstrument(id: HistoryPhaseId) {
         </dl>
         <p className="vs-instrument-dica">{config.caution}</p>
       </div>}
-      left={{ label: STAGE_LABEL[first?.stage ?? 'conceito'], headline: first?.label ?? props.map.title, detail: first?.excerpt ?? config.question, formula: config.relation }}
-      right={{ label: STAGE_LABEL[second?.stage ?? 'aplicacao'], headline: second?.label ?? props.map.title, detail: second?.excerpt ?? selected.observation, formula: selected.conclusion }}
+      left={{ label: STAGE_LABEL[first?.stage ?? 'conceito'], headline: first?.label ?? props.map.title, detail: short(first?.excerpt) || config.question, formula: config.relation }}
+      right={{ label: STAGE_LABEL[second?.stage ?? 'aplicacao'], headline: second?.label ?? props.map.title, detail: short(second?.excerpt) || selected.observation, formula: `no recorte ${selected.label}: ${selected.conclusion}` }}
       leftState={pair.leftState}
       rightState={pair.rightState}
       leftSelected={pair.leftSelected}

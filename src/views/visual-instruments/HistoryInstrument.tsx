@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { HISTORY_INSTRUMENTS, historyInstrumentState, type HistoryInstrumentId } from '../../lib/historyInstrumentLab';
 import { STAGE_LABEL } from '../../lib/visualStudy';
 import BoardShell from '../visual-boards/BoardShell';
+import { short } from './cardText';
 import { boardPair } from '../visual-boards/pair';
 import type { BoardProps } from '../visual-boards/types';
 import { InteriorizationScene } from './InteriorizationScene';
@@ -61,7 +62,7 @@ export function historyInstrument(id: HistoryInstrumentId) {
     const [selected, setSelected] = useState(0);
     const state = historyInstrumentState(id, selected);
     const pair = boardPair(props);
-    const first = props.map.nodes[0];
+    const first = props.map.nodes[1] ?? props.map.nodes[0];
     const second = props.map.nodes[2] ?? props.map.nodes.at(-1);
     return <BoardShell
       kicker="Ateliê de relações históricas"
@@ -74,7 +75,7 @@ export function historyInstrument(id: HistoryInstrumentId) {
         <svg className="vs-plane" viewBox="0 0 320 300" role="img" aria-label={`${config.name}; ${state.label}: ${state.focus}`}>
           <HistoryScene id={id} selected={selected} />
         </svg>
-        <p className="vs-instrument-dica">mude o recorte para comparar relações sem inventar uma cadeia única</p>
+        <p className="vs-instrument-dica">mude o recorte para comparar as relações</p>
         <div className="vs-plane-controls"><div className="vs-plane-control">
           <label htmlFor={`history-${id}`}><strong>{config.controlLabel}</strong><span>{config.controlDescription}</span><b>{state.label}</b></label>
           <input id={`history-${id}`} type="range" min="0" max={config.states.length - 1} step="1" value={selected} onChange={event => setSelected(Number(event.target.value))} />
@@ -84,8 +85,8 @@ export function historyInstrument(id: HistoryInstrumentId) {
           <div><dt>Lastro</dt><dd>{state.evidence}</dd></div>
         </dl>
       </div>}
-      left={{ label: STAGE_LABEL[first?.stage ?? 'conceito'], headline: first?.label ?? props.map.title, detail: first?.excerpt ?? '', formula: config.formula }}
-      right={{ label: STAGE_LABEL[second?.stage ?? 'aplicacao'], headline: second?.label ?? props.map.title, detail: second?.excerpt ?? '', formula: state.focus }}
+      left={{ label: STAGE_LABEL[first?.stage ?? 'conceito'], headline: first?.label ?? props.map.title, detail: short(first?.excerpt), formula: config.formula }}
+      right={{ label: STAGE_LABEL[second?.stage ?? 'aplicacao'], headline: second?.label ?? props.map.title, detail: short(second?.excerpt), formula: `no recorte ${state.label}: ${state.focus}` }}
       leftState={pair.leftState}
       rightState={pair.rightState}
       leftSelected={pair.leftSelected}

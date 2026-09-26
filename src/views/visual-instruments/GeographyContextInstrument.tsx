@@ -3,6 +3,7 @@ import { motion, useReducedMotion } from 'motion/react';
 import { GEOGRAPHY_CONTEXTS, type GeographyContext, type GeographyContextId } from '../../lib/geographyContextLab';
 import { STAGE_LABEL } from '../../lib/visualStudy';
 import BoardShell from '../visual-boards/BoardShell';
+import { short, wrapLines } from './cardText';
 import { boardPair } from '../visual-boards/pair';
 import type { BoardProps } from '../visual-boards/types';
 import './GeographyRemainingInstrument.css';
@@ -25,7 +26,7 @@ function ContextScene({ config, index }: { config: GeographyContext; index: numb
         <text x={x} y={y + 15} textAnchor="middle" fill="var(--vs-ink-muted)" fontSize="9">{item.location}</text>
       </motion.g>;
     })}
-    <text x="160" y="239" textAnchor="middle" fill="var(--vs-ink)" fontSize="11" fontWeight="800">{config.relation}</text>
+    {wrapLines(config.relation).map((line, k, all) => <text key={k} x="160" y={239 - (all.length - 1) * 13 + k * 13} textAnchor="middle" fill="var(--vs-ink)" fontSize="11" fontWeight="800">{line}</text>)}
   </svg>;
 }
 
@@ -46,7 +47,7 @@ export function buildContextInstrument(config: GeographyContext) {
     return <BoardShell sceneFirst={GEOGRAPHY_CONTEXT_DIAGRAM_IDS.has(config.chapterId)} kicker="Leitura territorial" title={config.title} subtitle={config.question}
       condition={{ label: 'Recorte', value: selected.label }} ariaLabel={`Instrumento geográfico: ${props.map.title}`} emphasis={pair.emphasis}
       scene={<div className="vs-instrument">{GEOGRAPHY_CONTEXT_DIAGRAM_IDS.has(config.chapterId) ? <GeographyContextDiagram config={config} index={index} /> : <ContextScene config={config} index={index} />}<div className="vs-plane-controls"><div className="vs-plane-control"><p>Alterne a escala de leitura:</p><div className="vs-geography-options" role="group" aria-label={`Recortes de ${config.title}`}>{config.cases.map((item, itemIndex) => <button key={item.label} type="button" aria-pressed={index === itemIndex} onClick={() => setIndex(itemIndex)}>{item.label}</button>)}</div></div></div><dl className="vs-plane-readouts" aria-live="polite"><div><dt>Onde</dt><dd>{selected.location}</dd></div><div><dt>Observe</dt><dd>{selected.observation}</dd></div><div data-pivot="true"><dt>Conclua</dt><dd>{selected.conclusion}</dd></div></dl><p className="vs-instrument-dica">{config.caution}</p></div>}
-      left={{ label: STAGE_LABEL[first?.stage ?? 'conceito'], headline: first?.label ?? props.map.title, detail: first?.excerpt ?? config.question, formula: config.relation }} right={{ label: STAGE_LABEL[second?.stage ?? 'aplicacao'], headline: second?.label ?? props.map.title, detail: second?.excerpt ?? selected.observation, formula: selected.conclusion }} leftState={pair.leftState} rightState={pair.rightState} leftSelected={pair.leftSelected} rightSelected={pair.rightSelected} onSelectLeft={pair.selectLeft} onSelectRight={pair.selectRight} equation={{ label: 'Relação territorial', general: config.relation, condition: selected.label, reduced: selected.conclusion }} closing={config.caution} />;
+      left={{ label: STAGE_LABEL[first?.stage ?? 'conceito'], headline: first?.label ?? props.map.title, detail: short(first?.excerpt) || config.question, formula: config.relation }} right={{ label: STAGE_LABEL[second?.stage ?? 'aplicacao'], headline: second?.label ?? props.map.title, detail: short(second?.excerpt) || selected.observation, formula: `no recorte ${selected.label}: ${selected.conclusion}` }} leftState={pair.leftState} rightState={pair.rightState} leftSelected={pair.leftSelected} rightSelected={pair.rightSelected} onSelectLeft={pair.selectLeft} onSelectRight={pair.selectRight} equation={{ label: 'Relação territorial', general: config.relation, condition: selected.label, reduced: selected.conclusion }} closing={config.caution} />;
   };
 }
 

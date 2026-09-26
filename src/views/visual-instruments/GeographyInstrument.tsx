@@ -17,7 +17,7 @@ function TimeZoneScene({ value }: { value: number }) {
     <ellipse cx="160" cy="145" rx="52" ry="105" fill="none" stroke="var(--vs-ink-muted)" />
     <path d="M55 145H265M68 92H252M68 198H252" stroke="var(--vs-ink-muted)" strokeDasharray="4 5" />
     <path d={`M${x} 48V242`} stroke="var(--vs-burgundy)" strokeWidth="7" />
-    <text x="160" y="278" textAnchor="middle" style={{ fill: 'var(--vs-ink)', fontWeight: 800 }}>Greenwich 0° · leste adianta</text>
+    <text x="160" y="278" textAnchor="middle" style={{ fill: 'var(--vs-ink)', fontSize: 12, fontWeight: 800 }}>Greenwich 0° · leste adianta</text>
   </>;
 }
 
@@ -53,7 +53,7 @@ function EnergyScene({ value }: { value: number }) {
     <circle cx="160" cy="142" r="82" fill="none" stroke="var(--vs-burgundy)" strokeWidth="42" pathLength="100" strokeDasharray={`${value} ${100 - value}`} transform="rotate(-90 160 142)" />
     <text x="160" y="137" textAnchor="middle" style={{ fill: 'var(--vs-ink)', fontWeight: 900, fontSize: 28 }}>{value}%</text>
     <text x="160" y="160" textAnchor="middle" style={{ fill: 'var(--vs-ink)' }}>fóssil</text>
-    <text x="160" y="278" textAnchor="middle" style={{ fill: 'var(--vs-ink)', fontWeight: 800 }}>energia total ≠ só eletricidade</text>
+    <text x="160" y="278" textAnchor="middle" style={{ fill: 'var(--vs-ink)', fontSize: 12, fontWeight: 800 }}>energia total ≠ só eletricidade</text>
   </>;
 }
 
@@ -66,7 +66,7 @@ function NetworkScene({ value }: { value: number }) {
     <path d="M130 70L150 90M150 70L130 90" stroke="var(--vs-burgundy)" strokeWidth="5" />
     <text x="62" y="151" textAnchor="middle" style={{ fill: 'var(--vs-ink)', fontWeight: 800 }}>origem</text>
     <text x="258" y="151" textAnchor="middle" style={{ fill: 'var(--vs-ink)', fontWeight: 800 }}>destino</text>
-    <text x="160" y="278" textAnchor="middle" style={{ fill: 'var(--vs-ink)', fontWeight: 800 }}>uma rota rompe; as demais preservam o fluxo</text>
+    <text x="160" y="278" textAnchor="middle" style={{ fill: 'var(--vs-ink)', fontSize: 12, fontWeight: 800 }}>uma rota rompe; as demais preservam o fluxo</text>
   </>;
 }
 
@@ -88,7 +88,7 @@ export function geographyInstrument(id: GeographyInstrumentId) {
     const [value, setValue] = useState(config.control.initial);
     const readouts = config.readouts(value);
     const pivot = readouts.find((item) => item.pivot) ?? readouts[0];
-    const first = props.map.nodes[0];
+    const first = props.map.nodes[1] ?? props.map.nodes[0];
     const second = props.map.nodes[2] ?? props.map.nodes.at(-1);
     return <BoardShell
       kicker="Laboratório geográfico"
