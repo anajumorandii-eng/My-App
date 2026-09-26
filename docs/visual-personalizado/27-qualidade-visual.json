@@ -2085,11 +2085,24 @@
     "title": "Clima Mundial",
     "primary": "scene",
     "artifact": "criterios-conjuntivos",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "Cinco fatores agem juntos sobre o mesmo ponto",
+    "relation": "Latitude, altitude, continentalidade, correntes e relevo se combinam; nenhum explica sozinho o clima real de um lugar",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/lote9-hg-2026-09-26/geografia-clima-mundial-recorte1.png",
+      "docs/visual-personalizado/screenshots/lote9-hg-2026-09-26/geografia-clima-mundial-recorte1-dark.png",
+      "docs/visual-personalizado/screenshots/lote9-hg-2026-09-26/geografia-clima-mundial-recorte2.png",
+      "docs/visual-personalizado/screenshots/lote9-hg-2026-09-26/geografia-clima-mundial-recorte2-dark.png",
+      "docs/visual-personalizado/screenshots/lote9-hg-2026-09-26/geografia-clima-mundial-recorte3.png",
+      "docs/visual-personalizado/screenshots/lote9-hg-2026-09-26/geografia-clima-mundial-recorte3-dark.png",
+      "docs/visual-personalizado/screenshots/lote9-hg-2026-09-26/geografia-clima-mundial-recorte4.png",
+      "docs/visual-personalizado/screenshots/lote9-hg-2026-09-26/geografia-clima-mundial-recorte4-dark.png",
+      "docs/visual-personalizado/screenshots/lote9-hg-2026-09-26/geografia-clima-mundial-390-light.png",
+      "docs/visual-personalizado/screenshots/lote9-hg-2026-09-26/geografia-clima-mundial-390-dark.png",
+      "docs/visual-personalizado/screenshots/lote9-hg-2026-09-26/geografia-clima-mundial-768-light.png",
+      "docs/visual-personalizado/screenshots/lote9-hg-2026-09-26/geografia-clima-mundial-768-dark.png"
+    ],
+    "notes": "Redesenhada em 26/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
   },
   {
     "id": "summary-geografia-geomorfologia-mundial",
@@ -2097,11 +2110,22 @@
     "title": "Geomorfologia Mundial",
     "primary": "scene",
     "artifact": "tipologia",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "Idade e estabilidade tectônica classificam as estruturas",
+    "relation": "Cráton antigo e erodido, bacia com camadas acumuladas e dobra jovem levantada por subducção na mesma crosta sul-americana",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/lote9-hg-2026-09-26/geografia-geomorfologia-mundial-recorte1.png",
+      "docs/visual-personalizado/screenshots/lote9-hg-2026-09-26/geografia-geomorfologia-mundial-recorte1-dark.png",
+      "docs/visual-personalizado/screenshots/lote9-hg-2026-09-26/geografia-geomorfologia-mundial-recorte2.png",
+      "docs/visual-personalizado/screenshots/lote9-hg-2026-09-26/geografia-geomorfologia-mundial-recorte2-dark.png",
+      "docs/visual-personalizado/screenshots/lote9-hg-2026-09-26/geografia-geomorfologia-mundial-recorte3.png",
+      "docs/visual-personalizado/screenshots/lote9-hg-2026-09-26/geografia-geomorfologia-mundial-recorte3-dark.png",
+      "docs/visual-personalizado/screenshots/lote9-hg-2026-09-26/geografia-geomorfologia-mundial-390-light.png",
+      "docs/visual-personalizado/screenshots/lote9-hg-2026-09-26/geografia-geomorfologia-mundial-390-dark.png",
+      "docs/visual-personalizado/screenshots/lote9-hg-2026-09-26/geografia-geomorfologia-mundial-768-light.png",
+      "docs/visual-personalizado/screenshots/lote9-hg-2026-09-26/geografia-geomorfologia-mundial-768-dark.png"
+    ],
+    "notes": "Redesenhada em 26/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
   },
   {
     "id": "summary-geografia-biogeografia-mundial",
@@ -2109,11 +2133,22 @@
     "title": "Biogeografia Mundial",
     "primary": "scene",
     "artifact": "tipologia",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "Latitude e circulação atmosférica ordenam os biomas",
+    "relation": "O ar sobe e chove na ZCIT e desce seco perto de 30°; a temperatura cai do equador ao polo e os biomas seguem essa ordem",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/lote9-hg-2026-09-26/geografia-biogeografia-mundial-recorte1.png",
+      "docs/visual-personalizado/screenshots/lote9-hg-2026-09-26/geografia-biogeografia-mundial-recorte1-dark.png",
+      "docs/visual-personalizado/screenshots/lote9-hg-2026-09-26/geografia-biogeografia-mundial-recorte2.png",
+      "docs/visual-personalizado/screenshots/lote9-hg-2026-09-26/geografia-biogeografia-mundial-recorte2-dark.png",
+      "docs/visual-personalizado/screenshots/lote9-hg-2026-09-26/geografia-biogeografia-mundial-recorte3.png",
+      "docs/visual-personalizado/screenshots/lote9-hg-2026-09-26/geografia-biogeografia-mundial-recorte3-dark.png",
+      "docs/visual-personalizado/screenshots/lote9-hg-2026-09-26/geografia-biogeografia-mundial-390-light.png",
+      "docs/visual-personalizado/screenshots/lote9-hg-2026-09-26/geografia-biogeografia-mundial-390-dark.png",
+      "docs/visual-personalizado/screenshots/lote9-hg-2026-09-26/geografia-biogeografia-mundial-768-light.png",
+      "docs/visual-personalizado/screenshots/lote9-hg-2026-09-26/geografia-biogeografia-mundial-768-dark.png"
+    ],
+    "notes": "Redesenhada em 26/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
   },
   {
     "id": "summary-geografia-agua-na-superficie-terrestre",
@@ -2157,11 +2192,24 @@
     "title": "Geopolítica dos Recursos Hídricos",
     "primary": "scene",
     "artifact": "cadeia-de-derivacao",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "Quem controla a cabeceira decide a água de quem vem depois",
+    "relation": "Barragem sem acordo reduz a vazão; sem tratado há tensão; a dependência do Egito (>90%) torna a ameaça existencial",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/lote9-hg-2026-09-26/geografia-geopolitica-dos-recursos-hidricos-recorte1.png",
+      "docs/visual-personalizado/screenshots/lote9-hg-2026-09-26/geografia-geopolitica-dos-recursos-hidricos-recorte1-dark.png",
+      "docs/visual-personalizado/screenshots/lote9-hg-2026-09-26/geografia-geopolitica-dos-recursos-hidricos-recorte2.png",
+      "docs/visual-personalizado/screenshots/lote9-hg-2026-09-26/geografia-geopolitica-dos-recursos-hidricos-recorte2-dark.png",
+      "docs/visual-personalizado/screenshots/lote9-hg-2026-09-26/geografia-geopolitica-dos-recursos-hidricos-recorte3.png",
+      "docs/visual-personalizado/screenshots/lote9-hg-2026-09-26/geografia-geopolitica-dos-recursos-hidricos-recorte3-dark.png",
+      "docs/visual-personalizado/screenshots/lote9-hg-2026-09-26/geografia-geopolitica-dos-recursos-hidricos-recorte4.png",
+      "docs/visual-personalizado/screenshots/lote9-hg-2026-09-26/geografia-geopolitica-dos-recursos-hidricos-recorte4-dark.png",
+      "docs/visual-personalizado/screenshots/lote9-hg-2026-09-26/geografia-geopolitica-dos-recursos-hidricos-390-light.png",
+      "docs/visual-personalizado/screenshots/lote9-hg-2026-09-26/geografia-geopolitica-dos-recursos-hidricos-390-dark.png",
+      "docs/visual-personalizado/screenshots/lote9-hg-2026-09-26/geografia-geopolitica-dos-recursos-hidricos-768-light.png",
+      "docs/visual-personalizado/screenshots/lote9-hg-2026-09-26/geografia-geopolitica-dos-recursos-hidricos-768-dark.png"
+    ],
+    "notes": "Redesenhada em 26/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
   },
   {
     "id": "summary-geografia-hidrogeografia-mundial",
@@ -2181,11 +2229,24 @@
     "title": "Do Mundo Bipolar ao Multipolar",
     "primary": "scene",
     "artifact": "cadeia-de-derivacao",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "O polo soviético se desfaz e resta um",
+    "relation": "O gasto militar sufoca a economia, as reformas soltam tensões, Muro e URSS caem (1989/1991), e os EUA ficam como única superpotência",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-do-mundo-bipolar-ao-multipolar-recorte1.png",
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-do-mundo-bipolar-ao-multipolar-recorte1-dark.png",
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-do-mundo-bipolar-ao-multipolar-recorte2.png",
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-do-mundo-bipolar-ao-multipolar-recorte2-dark.png",
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-do-mundo-bipolar-ao-multipolar-recorte3.png",
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-do-mundo-bipolar-ao-multipolar-recorte3-dark.png",
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-do-mundo-bipolar-ao-multipolar-recorte4.png",
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-do-mundo-bipolar-ao-multipolar-recorte4-dark.png",
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-do-mundo-bipolar-ao-multipolar-390-light.png",
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-do-mundo-bipolar-ao-multipolar-390-dark.png",
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-do-mundo-bipolar-ao-multipolar-768-light.png",
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-do-mundo-bipolar-ao-multipolar-768-dark.png"
+    ],
+    "notes": "Redesenhada em 26/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
   },
   {
     "id": "summary-geografia-globalizacao-e-processos-economicos-atuais",
@@ -2229,11 +2290,24 @@
     "title": "Blocos Econômicos",
     "primary": "scene",
     "artifact": "escala-de-graus",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "Cada grau soma um compromisso ao anterior",
+    "relation": "Tarifas próprias viram tarifa externa comum; bens passam a circular com pessoas, capitais e serviços; moedas viram uma só",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-blocos-economicos-recorte1.png",
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-blocos-economicos-recorte1-dark.png",
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-blocos-economicos-recorte2.png",
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-blocos-economicos-recorte2-dark.png",
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-blocos-economicos-recorte3.png",
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-blocos-economicos-recorte3-dark.png",
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-blocos-economicos-recorte4.png",
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-blocos-economicos-recorte4-dark.png",
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-blocos-economicos-390-light.png",
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-blocos-economicos-390-dark.png",
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-blocos-economicos-768-light.png",
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-blocos-economicos-768-dark.png"
+    ],
+    "notes": "Redesenhada em 26/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
   },
   {
     "id": "summary-geografia-uniao-europeia",
@@ -2253,11 +2327,22 @@
     "title": "Desigualdades Globais",
     "primary": "scene",
     "artifact": "cadeia-de-derivacao",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "Periferia exporta mais para comprar o mesmo",
+    "relation": "A deterioração dos termos de troca leva à substituição de importações atrás de tarifas altas, e daí a PIB industrial maior com baixa competitividade",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-desigualdades-globais-recorte1.png",
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-desigualdades-globais-recorte1-dark.png",
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-desigualdades-globais-recorte2.png",
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-desigualdades-globais-recorte2-dark.png",
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-desigualdades-globais-recorte3.png",
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-desigualdades-globais-recorte3-dark.png",
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-desigualdades-globais-390-light.png",
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-desigualdades-globais-390-dark.png",
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-desigualdades-globais-768-light.png",
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-desigualdades-globais-768-dark.png"
+    ],
+    "notes": "Redesenhada em 26/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
   },
   {
     "id": "summary-geografia-mobilidade-populacional",
@@ -2265,11 +2350,22 @@
     "title": "Mobilidade Populacional",
     "primary": "scene",
     "artifact": "criterios-conjuntivos",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "A origem empurra, o destino puxa",
+    "relation": "A decisão de migrar costuma combinar várias pressões de expulsão com várias atrações ao mesmo tempo",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/lote5-hg-2026-09-26/geografia-mobilidade-populacional-recorte1.png",
+      "docs/visual-personalizado/screenshots/lote5-hg-2026-09-26/geografia-mobilidade-populacional-recorte1-dark.png",
+      "docs/visual-personalizado/screenshots/lote5-hg-2026-09-26/geografia-mobilidade-populacional-recorte2.png",
+      "docs/visual-personalizado/screenshots/lote5-hg-2026-09-26/geografia-mobilidade-populacional-recorte2-dark.png",
+      "docs/visual-personalizado/screenshots/lote5-hg-2026-09-26/geografia-mobilidade-populacional-recorte3.png",
+      "docs/visual-personalizado/screenshots/lote5-hg-2026-09-26/geografia-mobilidade-populacional-recorte3-dark.png",
+      "docs/visual-personalizado/screenshots/lote5-hg-2026-09-26/geografia-mobilidade-populacional-390-light.png",
+      "docs/visual-personalizado/screenshots/lote5-hg-2026-09-26/geografia-mobilidade-populacional-390-dark.png",
+      "docs/visual-personalizado/screenshots/lote5-hg-2026-09-26/geografia-mobilidade-populacional-768-light.png",
+      "docs/visual-personalizado/screenshots/lote5-hg-2026-09-26/geografia-mobilidade-populacional-768-dark.png"
+    ],
+    "notes": "Redesenhada em 26/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
   },
   {
     "id": "summary-geografia-geografia-do-turismo",
@@ -2277,11 +2373,22 @@
     "title": "Geografia do Turismo",
     "primary": "scene",
     "artifact": "tipologia",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "Cada tipo de turismo ocupa o território de um jeito",
+    "relation": "Sol e praia adensa a costa; cultural se apoia no patrimônio tombado; ecoturismo limita a entrada; negócios lota a metrópole nos dias úteis",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-geografia-do-turismo-recorte1.png",
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-geografia-do-turismo-recorte1-dark.png",
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-geografia-do-turismo-recorte2.png",
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-geografia-do-turismo-recorte2-dark.png",
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-geografia-do-turismo-recorte3.png",
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-geografia-do-turismo-recorte3-dark.png",
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-geografia-do-turismo-390-light.png",
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-geografia-do-turismo-390-dark.png",
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-geografia-do-turismo-768-light.png",
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-geografia-do-turismo-768-dark.png"
+    ],
+    "notes": "Redesenhada em 26/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
   },
   {
     "id": "summary-geografia-producao-agricola-mundial",
@@ -2289,11 +2396,22 @@
     "title": "Produção Agrícola Mundial",
     "primary": "scene",
     "artifact": "tipologia",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "Mecanização, escala e destino separam os sistemas",
+    "relation": "O mesmo campo muda de máquina, tamanho e destino da colheita (casa, cooperativa, mercado mundial); os sistemas coexistem, não formam escada",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-producao-agricola-mundial-recorte1.png",
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-producao-agricola-mundial-recorte1-dark.png",
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-producao-agricola-mundial-recorte2.png",
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-producao-agricola-mundial-recorte2-dark.png",
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-producao-agricola-mundial-recorte3.png",
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-producao-agricola-mundial-recorte3-dark.png",
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-producao-agricola-mundial-390-light.png",
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-producao-agricola-mundial-390-dark.png",
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-producao-agricola-mundial-768-light.png",
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-producao-agricola-mundial-768-dark.png"
+    ],
+    "notes": "Redesenhada em 26/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
   },
   {
     "id": "summary-geografia-industria-i",
@@ -2301,11 +2419,24 @@
     "title": "Indústria I",
     "primary": "scene",
     "artifact": "tipologia",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "Quatro lógicas na mesma esteira de fábrica",
+    "relation": "Taylor cronometra a tarefa; Ford a põe em linha contínua e paga para o operário comprar; Toyota corta estoque e dá várias máquinas a um operário",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-industria-i-recorte1.png",
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-industria-i-recorte1-dark.png",
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-industria-i-recorte2.png",
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-industria-i-recorte2-dark.png",
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-industria-i-recorte3.png",
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-industria-i-recorte3-dark.png",
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-industria-i-recorte4.png",
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-industria-i-recorte4-dark.png",
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-industria-i-390-light.png",
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-industria-i-390-dark.png",
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-industria-i-768-light.png",
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-industria-i-768-dark.png"
+    ],
+    "notes": "Redesenhada em 26/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
   },
   {
     "id": "summary-geografia-industria-ii",
@@ -2445,11 +2576,22 @@
     "title": "Paisagem, Espaço Geográfico e Ciência Geográfica",
     "primary": "scene",
     "artifact": "contraste-de-posicoes",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "A mesma paisagem, três explicações do espaço",
+    "relation": "Determinismo: o meio decide; possibilismo: a sociedade escolhe; geografia crítica: poder e desigualdade organizam o espaço",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/lote9-hg-2026-09-26/geografia-paisagem-espaco-geografico-e-ciencia-geografica-recorte1.png",
+      "docs/visual-personalizado/screenshots/lote9-hg-2026-09-26/geografia-paisagem-espaco-geografico-e-ciencia-geografica-recorte1-dark.png",
+      "docs/visual-personalizado/screenshots/lote9-hg-2026-09-26/geografia-paisagem-espaco-geografico-e-ciencia-geografica-recorte2.png",
+      "docs/visual-personalizado/screenshots/lote9-hg-2026-09-26/geografia-paisagem-espaco-geografico-e-ciencia-geografica-recorte2-dark.png",
+      "docs/visual-personalizado/screenshots/lote9-hg-2026-09-26/geografia-paisagem-espaco-geografico-e-ciencia-geografica-recorte3.png",
+      "docs/visual-personalizado/screenshots/lote9-hg-2026-09-26/geografia-paisagem-espaco-geografico-e-ciencia-geografica-recorte3-dark.png",
+      "docs/visual-personalizado/screenshots/lote9-hg-2026-09-26/geografia-paisagem-espaco-geografico-e-ciencia-geografica-390-light.png",
+      "docs/visual-personalizado/screenshots/lote9-hg-2026-09-26/geografia-paisagem-espaco-geografico-e-ciencia-geografica-390-dark.png",
+      "docs/visual-personalizado/screenshots/lote9-hg-2026-09-26/geografia-paisagem-espaco-geografico-e-ciencia-geografica-768-light.png",
+      "docs/visual-personalizado/screenshots/lote9-hg-2026-09-26/geografia-paisagem-espaco-geografico-e-ciencia-geografica-768-dark.png"
+    ],
+    "notes": "Redesenhada em 26/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
   },
   {
     "id": "summary-geografia-geologia-e-geomorfologia",
@@ -2714,11 +2856,20 @@
     "title": "O Espaço Industrial Brasileiro I",
     "primary": "scene",
     "artifact": "camadas-de-determinacao",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "Café financia a fábrica; indústria atrai indústria",
+    "relation": "O capital do café, a ferrovia e o porto fundam a indústria paulista; depois a aglomeração se retroalimenta via fornecedores e serviços",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-o-espaco-industrial-brasileiro-i-recorte1.png",
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-o-espaco-industrial-brasileiro-i-recorte1-dark.png",
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-o-espaco-industrial-brasileiro-i-recorte2.png",
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-o-espaco-industrial-brasileiro-i-recorte2-dark.png",
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-o-espaco-industrial-brasileiro-i-390-light.png",
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-o-espaco-industrial-brasileiro-i-390-dark.png",
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-o-espaco-industrial-brasileiro-i-768-light.png",
+      "docs/visual-personalizado/screenshots/lote10-hg-2026-09-26/geografia-o-espaco-industrial-brasileiro-i-768-dark.png"
+    ],
+    "notes": "Redesenhada em 26/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
   },
   {
     "id": "summary-geografia-o-espaco-industrial-brasileiro-ii",
@@ -2738,11 +2889,24 @@
     "title": "Dinâmica Demográfica",
     "primary": "scene",
     "artifact": "escala-de-graus",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "Duas taxas que se descolam e a pirâmide que muda",
+    "relation": "A mortalidade cai antes da natalidade; a faixa entre as curvas é o crescimento vegetativo e redesenha a pirâmide etária",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/lote5-hg-2026-09-26/geografia-dinamica-demografica-recorte1.png",
+      "docs/visual-personalizado/screenshots/lote5-hg-2026-09-26/geografia-dinamica-demografica-recorte1-dark.png",
+      "docs/visual-personalizado/screenshots/lote5-hg-2026-09-26/geografia-dinamica-demografica-recorte2.png",
+      "docs/visual-personalizado/screenshots/lote5-hg-2026-09-26/geografia-dinamica-demografica-recorte2-dark.png",
+      "docs/visual-personalizado/screenshots/lote5-hg-2026-09-26/geografia-dinamica-demografica-recorte3.png",
+      "docs/visual-personalizado/screenshots/lote5-hg-2026-09-26/geografia-dinamica-demografica-recorte3-dark.png",
+      "docs/visual-personalizado/screenshots/lote5-hg-2026-09-26/geografia-dinamica-demografica-recorte4.png",
+      "docs/visual-personalizado/screenshots/lote5-hg-2026-09-26/geografia-dinamica-demografica-recorte4-dark.png",
+      "docs/visual-personalizado/screenshots/lote5-hg-2026-09-26/geografia-dinamica-demografica-390-light.png",
+      "docs/visual-personalizado/screenshots/lote5-hg-2026-09-26/geografia-dinamica-demografica-390-dark.png",
+      "docs/visual-personalizado/screenshots/lote5-hg-2026-09-26/geografia-dinamica-demografica-768-light.png",
+      "docs/visual-personalizado/screenshots/lote5-hg-2026-09-26/geografia-dinamica-demografica-768-dark.png"
+    ],
+    "notes": "Redesenhada em 26/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
   },
   {
     "id": "summary-geografia-estrutura-etnica-e-fluxos-migratorios",
@@ -2773,11 +2937,24 @@
     "title": "O Espaço Urbano I",
     "primary": "scene",
     "artifact": "escala-de-graus",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "Cada cidade serve às de baixo na rede urbana",
+    "relation": "O nível na hierarquia vem do alcance da influência: do centro local à metrópole nacional ligada à economia global",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/lote5-hg-2026-09-26/geografia-o-espaco-urbano-i-recorte1.png",
+      "docs/visual-personalizado/screenshots/lote5-hg-2026-09-26/geografia-o-espaco-urbano-i-recorte1-dark.png",
+      "docs/visual-personalizado/screenshots/lote5-hg-2026-09-26/geografia-o-espaco-urbano-i-recorte2.png",
+      "docs/visual-personalizado/screenshots/lote5-hg-2026-09-26/geografia-o-espaco-urbano-i-recorte2-dark.png",
+      "docs/visual-personalizado/screenshots/lote5-hg-2026-09-26/geografia-o-espaco-urbano-i-recorte3.png",
+      "docs/visual-personalizado/screenshots/lote5-hg-2026-09-26/geografia-o-espaco-urbano-i-recorte3-dark.png",
+      "docs/visual-personalizado/screenshots/lote5-hg-2026-09-26/geografia-o-espaco-urbano-i-recorte4.png",
+      "docs/visual-personalizado/screenshots/lote5-hg-2026-09-26/geografia-o-espaco-urbano-i-recorte4-dark.png",
+      "docs/visual-personalizado/screenshots/lote5-hg-2026-09-26/geografia-o-espaco-urbano-i-390-light.png",
+      "docs/visual-personalizado/screenshots/lote5-hg-2026-09-26/geografia-o-espaco-urbano-i-390-dark.png",
+      "docs/visual-personalizado/screenshots/lote5-hg-2026-09-26/geografia-o-espaco-urbano-i-768-light.png",
+      "docs/visual-personalizado/screenshots/lote5-hg-2026-09-26/geografia-o-espaco-urbano-i-768-dark.png"
+    ],
+    "notes": "Redesenhada em 26/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
   },
   {
     "id": "summary-geografia-o-espaco-urbano-ii",
@@ -2785,11 +2962,22 @@
     "title": "O Espaço Urbano II",
     "primary": "scene",
     "artifact": "camadas-de-determinacao",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "A desigualdade distribuída no espaço da cidade",
+    "relation": "A renda define o lugar; o lugar define o acesso a infraestrutura, emprego, escola e segurança",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/lote5-hg-2026-09-26/geografia-o-espaco-urbano-ii-recorte1.png",
+      "docs/visual-personalizado/screenshots/lote5-hg-2026-09-26/geografia-o-espaco-urbano-ii-recorte1-dark.png",
+      "docs/visual-personalizado/screenshots/lote5-hg-2026-09-26/geografia-o-espaco-urbano-ii-recorte2.png",
+      "docs/visual-personalizado/screenshots/lote5-hg-2026-09-26/geografia-o-espaco-urbano-ii-recorte2-dark.png",
+      "docs/visual-personalizado/screenshots/lote5-hg-2026-09-26/geografia-o-espaco-urbano-ii-recorte3.png",
+      "docs/visual-personalizado/screenshots/lote5-hg-2026-09-26/geografia-o-espaco-urbano-ii-recorte3-dark.png",
+      "docs/visual-personalizado/screenshots/lote5-hg-2026-09-26/geografia-o-espaco-urbano-ii-390-light.png",
+      "docs/visual-personalizado/screenshots/lote5-hg-2026-09-26/geografia-o-espaco-urbano-ii-390-dark.png",
+      "docs/visual-personalizado/screenshots/lote5-hg-2026-09-26/geografia-o-espaco-urbano-ii-768-light.png",
+      "docs/visual-personalizado/screenshots/lote5-hg-2026-09-26/geografia-o-espaco-urbano-ii-768-dark.png"
+    ],
+    "notes": "Redesenhada em 26/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
   },
   {
     "id": "summary-geografia-as-redes-de-transportes",
@@ -2797,11 +2985,22 @@
     "title": "As Redes de Transportes",
     "primary": "scene",
     "artifact": "tipologia",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "Cada modal rende numa distância e numa carga",
+    "relation": "Rodovia é porta a porta em curta distância; trem e barcaça levam volume longe; o avião leva carga de alto valor",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/lote5-hg-2026-09-26/geografia-as-redes-de-transportes-recorte1.png",
+      "docs/visual-personalizado/screenshots/lote5-hg-2026-09-26/geografia-as-redes-de-transportes-recorte1-dark.png",
+      "docs/visual-personalizado/screenshots/lote5-hg-2026-09-26/geografia-as-redes-de-transportes-recorte2.png",
+      "docs/visual-personalizado/screenshots/lote5-hg-2026-09-26/geografia-as-redes-de-transportes-recorte2-dark.png",
+      "docs/visual-personalizado/screenshots/lote5-hg-2026-09-26/geografia-as-redes-de-transportes-recorte3.png",
+      "docs/visual-personalizado/screenshots/lote5-hg-2026-09-26/geografia-as-redes-de-transportes-recorte3-dark.png",
+      "docs/visual-personalizado/screenshots/lote5-hg-2026-09-26/geografia-as-redes-de-transportes-390-light.png",
+      "docs/visual-personalizado/screenshots/lote5-hg-2026-09-26/geografia-as-redes-de-transportes-390-dark.png",
+      "docs/visual-personalizado/screenshots/lote5-hg-2026-09-26/geografia-as-redes-de-transportes-768-light.png",
+      "docs/visual-personalizado/screenshots/lote5-hg-2026-09-26/geografia-as-redes-de-transportes-768-dark.png"
+    ],
+    "notes": "Redesenhada em 26/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
   },
   {
     "id": "summary-geografia-os-fluxos-do-comercio-externo",
@@ -2844,11 +3043,22 @@
     "title": "Antiguidade Clássica: o Mundo Grego",
     "primary": "scene",
     "artifact": "tipologia",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "Relevo divide póleis; cultura comum as une",
+    "relation": "Póleis autônomas (governo, leis, moeda, exército) separadas pelo relevo, unidas por língua, deuses e Jogos Olímpicos",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/lote7a-hg-2026-09-26/historia-antiguidade-classica-o-mundo-grego-recorte1.png",
+      "docs/visual-personalizado/screenshots/lote7a-hg-2026-09-26/historia-antiguidade-classica-o-mundo-grego-recorte1-dark.png",
+      "docs/visual-personalizado/screenshots/lote7a-hg-2026-09-26/historia-antiguidade-classica-o-mundo-grego-recorte2.png",
+      "docs/visual-personalizado/screenshots/lote7a-hg-2026-09-26/historia-antiguidade-classica-o-mundo-grego-recorte2-dark.png",
+      "docs/visual-personalizado/screenshots/lote7a-hg-2026-09-26/historia-antiguidade-classica-o-mundo-grego-recorte3.png",
+      "docs/visual-personalizado/screenshots/lote7a-hg-2026-09-26/historia-antiguidade-classica-o-mundo-grego-recorte3-dark.png",
+      "docs/visual-personalizado/screenshots/lote7a-hg-2026-09-26/historia-antiguidade-classica-o-mundo-grego-390-light.png",
+      "docs/visual-personalizado/screenshots/lote7a-hg-2026-09-26/historia-antiguidade-classica-o-mundo-grego-390-dark.png",
+      "docs/visual-personalizado/screenshots/lote7a-hg-2026-09-26/historia-antiguidade-classica-o-mundo-grego-768-light.png",
+      "docs/visual-personalizado/screenshots/lote7a-hg-2026-09-26/historia-antiguidade-classica-o-mundo-grego-768-dark.png"
+    ],
+    "notes": "Redesenhada em 26/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
   },
   {
     "id": "summary-historia-antiguidade-classica-o-mundo-romano",
@@ -2856,11 +3066,22 @@
     "title": "Antiguidade Clássica: o Mundo Romano",
     "primary": "scene",
     "artifact": "cadeia-de-derivacao",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "Poder repartido se concentra em Augusto",
+    "relation": "Senado, assembleias e cônsules repartem o poder; guerras civis o arrancam; Augusto o concentra e mantém as instituições como fachada",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/lote7a-hg-2026-09-26/historia-antiguidade-classica-o-mundo-romano-recorte1.png",
+      "docs/visual-personalizado/screenshots/lote7a-hg-2026-09-26/historia-antiguidade-classica-o-mundo-romano-recorte1-dark.png",
+      "docs/visual-personalizado/screenshots/lote7a-hg-2026-09-26/historia-antiguidade-classica-o-mundo-romano-recorte2.png",
+      "docs/visual-personalizado/screenshots/lote7a-hg-2026-09-26/historia-antiguidade-classica-o-mundo-romano-recorte2-dark.png",
+      "docs/visual-personalizado/screenshots/lote7a-hg-2026-09-26/historia-antiguidade-classica-o-mundo-romano-recorte3.png",
+      "docs/visual-personalizado/screenshots/lote7a-hg-2026-09-26/historia-antiguidade-classica-o-mundo-romano-recorte3-dark.png",
+      "docs/visual-personalizado/screenshots/lote7a-hg-2026-09-26/historia-antiguidade-classica-o-mundo-romano-390-light.png",
+      "docs/visual-personalizado/screenshots/lote7a-hg-2026-09-26/historia-antiguidade-classica-o-mundo-romano-390-dark.png",
+      "docs/visual-personalizado/screenshots/lote7a-hg-2026-09-26/historia-antiguidade-classica-o-mundo-romano-768-light.png",
+      "docs/visual-personalizado/screenshots/lote7a-hg-2026-09-26/historia-antiguidade-classica-o-mundo-romano-768-dark.png"
+    ],
+    "notes": "Redesenhada em 26/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
   },
   {
     "id": "summary-historia-alta-idade-media-e-feudalismo",
@@ -2868,11 +3089,22 @@
     "title": "Alta Idade Média e Feudalismo",
     "primary": "scene",
     "artifact": "tipologia",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "Senhor-servo e nobre-nobre: vínculos distintos",
+    "relation": "O servo deve trabalho, colheita e taxas ao senhor; o vassalo recebe feudo e deve serviço militar e conselho ao suserano",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/lote7a-hg-2026-09-26/historia-alta-idade-media-e-feudalismo-recorte1.png",
+      "docs/visual-personalizado/screenshots/lote7a-hg-2026-09-26/historia-alta-idade-media-e-feudalismo-recorte1-dark.png",
+      "docs/visual-personalizado/screenshots/lote7a-hg-2026-09-26/historia-alta-idade-media-e-feudalismo-recorte2.png",
+      "docs/visual-personalizado/screenshots/lote7a-hg-2026-09-26/historia-alta-idade-media-e-feudalismo-recorte2-dark.png",
+      "docs/visual-personalizado/screenshots/lote7a-hg-2026-09-26/historia-alta-idade-media-e-feudalismo-recorte3.png",
+      "docs/visual-personalizado/screenshots/lote7a-hg-2026-09-26/historia-alta-idade-media-e-feudalismo-recorte3-dark.png",
+      "docs/visual-personalizado/screenshots/lote7a-hg-2026-09-26/historia-alta-idade-media-e-feudalismo-390-light.png",
+      "docs/visual-personalizado/screenshots/lote7a-hg-2026-09-26/historia-alta-idade-media-e-feudalismo-390-dark.png",
+      "docs/visual-personalizado/screenshots/lote7a-hg-2026-09-26/historia-alta-idade-media-e-feudalismo-768-light.png",
+      "docs/visual-personalizado/screenshots/lote7a-hg-2026-09-26/historia-alta-idade-media-e-feudalismo-768-dark.png"
+    ],
+    "notes": "Redesenhada em 26/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
   },
   {
     "id": "summary-historia-baixa-idade-media",
@@ -2880,11 +3112,22 @@
     "title": "Baixa Idade Média",
     "primary": "scene",
     "artifact": "cadeia-de-derivacao",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "Peste reduz braços e inverte a barganha",
+    "relation": "A Peste Negra mata de 1/3 a 1/2 da população; a escassez de mão de obra eleva a barganha camponesa e abala o trabalho servil",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/lote7a-hg-2026-09-26/historia-baixa-idade-media-recorte1.png",
+      "docs/visual-personalizado/screenshots/lote7a-hg-2026-09-26/historia-baixa-idade-media-recorte1-dark.png",
+      "docs/visual-personalizado/screenshots/lote7a-hg-2026-09-26/historia-baixa-idade-media-recorte2.png",
+      "docs/visual-personalizado/screenshots/lote7a-hg-2026-09-26/historia-baixa-idade-media-recorte2-dark.png",
+      "docs/visual-personalizado/screenshots/lote7a-hg-2026-09-26/historia-baixa-idade-media-recorte3.png",
+      "docs/visual-personalizado/screenshots/lote7a-hg-2026-09-26/historia-baixa-idade-media-recorte3-dark.png",
+      "docs/visual-personalizado/screenshots/lote7a-hg-2026-09-26/historia-baixa-idade-media-390-light.png",
+      "docs/visual-personalizado/screenshots/lote7a-hg-2026-09-26/historia-baixa-idade-media-390-dark.png",
+      "docs/visual-personalizado/screenshots/lote7a-hg-2026-09-26/historia-baixa-idade-media-768-light.png",
+      "docs/visual-personalizado/screenshots/lote7a-hg-2026-09-26/historia-baixa-idade-media-768-dark.png"
+    ],
+    "notes": "Redesenhada em 26/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
   },
   {
     "id": "summary-historia-a-primeira-globalizacao",
@@ -2892,11 +3135,24 @@
     "title": "A Primeira Globalização",
     "primary": "scene",
     "artifact": "camadas-de-determinacao",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "Metal como riqueza puxa pacto, trabalho forçado e tráfico",
+    "relation": "A doutrina do metal acumulado cria o pacto colonial exclusivo, que exige trabalho compulsório em larga escala e, por fim, o tráfico atlântico",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/lote7b-hg-2026-09-26/historia-a-primeira-globalizacao-recorte1.png",
+      "docs/visual-personalizado/screenshots/lote7b-hg-2026-09-26/historia-a-primeira-globalizacao-recorte1-dark.png",
+      "docs/visual-personalizado/screenshots/lote7b-hg-2026-09-26/historia-a-primeira-globalizacao-recorte2.png",
+      "docs/visual-personalizado/screenshots/lote7b-hg-2026-09-26/historia-a-primeira-globalizacao-recorte2-dark.png",
+      "docs/visual-personalizado/screenshots/lote7b-hg-2026-09-26/historia-a-primeira-globalizacao-recorte3.png",
+      "docs/visual-personalizado/screenshots/lote7b-hg-2026-09-26/historia-a-primeira-globalizacao-recorte3-dark.png",
+      "docs/visual-personalizado/screenshots/lote7b-hg-2026-09-26/historia-a-primeira-globalizacao-recorte4.png",
+      "docs/visual-personalizado/screenshots/lote7b-hg-2026-09-26/historia-a-primeira-globalizacao-recorte4-dark.png",
+      "docs/visual-personalizado/screenshots/lote7b-hg-2026-09-26/historia-a-primeira-globalizacao-390-light.png",
+      "docs/visual-personalizado/screenshots/lote7b-hg-2026-09-26/historia-a-primeira-globalizacao-390-dark.png",
+      "docs/visual-personalizado/screenshots/lote7b-hg-2026-09-26/historia-a-primeira-globalizacao-768-light.png",
+      "docs/visual-personalizado/screenshots/lote7b-hg-2026-09-26/historia-a-primeira-globalizacao-768-dark.png"
+    ],
+    "notes": "Redesenhada em 26/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
   },
   {
     "id": "summary-historia-america-espanhola",
@@ -2904,11 +3160,22 @@
     "title": "América Espanhola",
     "primary": "scene",
     "artifact": "escala-de-graus",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "Casta por origem e nascimento; cargo alto travado ao criollo",
+    "relation": "Origem e local de nascimento fixam o degrau; o criollo tem riqueza mas não chega ao cargo alto, e o ressentimento alimenta a independência",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/lote7b-hg-2026-09-26/historia-america-espanhola-recorte1.png",
+      "docs/visual-personalizado/screenshots/lote7b-hg-2026-09-26/historia-america-espanhola-recorte1-dark.png",
+      "docs/visual-personalizado/screenshots/lote7b-hg-2026-09-26/historia-america-espanhola-recorte2.png",
+      "docs/visual-personalizado/screenshots/lote7b-hg-2026-09-26/historia-america-espanhola-recorte2-dark.png",
+      "docs/visual-personalizado/screenshots/lote7b-hg-2026-09-26/historia-america-espanhola-recorte3.png",
+      "docs/visual-personalizado/screenshots/lote7b-hg-2026-09-26/historia-america-espanhola-recorte3-dark.png",
+      "docs/visual-personalizado/screenshots/lote7b-hg-2026-09-26/historia-america-espanhola-390-light.png",
+      "docs/visual-personalizado/screenshots/lote7b-hg-2026-09-26/historia-america-espanhola-390-dark.png",
+      "docs/visual-personalizado/screenshots/lote7b-hg-2026-09-26/historia-america-espanhola-768-light.png",
+      "docs/visual-personalizado/screenshots/lote7b-hg-2026-09-26/historia-america-espanhola-768-dark.png"
+    ],
+    "notes": "Redesenhada em 26/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
   },
   {
     "id": "summary-historia-vida-urbana-e-renascimento-cultural",
@@ -2916,11 +3183,24 @@
     "title": "Vida Urbana e Renascimento Cultural",
     "primary": "scene",
     "artifact": "camadas-de-determinacao",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "Riqueza vira mecenato, humanismo e arte",
+    "relation": "Comércio e bancos italianos financiam mecenas (Médici), que sustentam o humanismo antropocêntrico e a arte da perspectiva e da anatomia",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/lote7a-hg-2026-09-26/historia-vida-urbana-e-renascimento-cultural-recorte1.png",
+      "docs/visual-personalizado/screenshots/lote7a-hg-2026-09-26/historia-vida-urbana-e-renascimento-cultural-recorte1-dark.png",
+      "docs/visual-personalizado/screenshots/lote7a-hg-2026-09-26/historia-vida-urbana-e-renascimento-cultural-recorte2.png",
+      "docs/visual-personalizado/screenshots/lote7a-hg-2026-09-26/historia-vida-urbana-e-renascimento-cultural-recorte2-dark.png",
+      "docs/visual-personalizado/screenshots/lote7a-hg-2026-09-26/historia-vida-urbana-e-renascimento-cultural-recorte3.png",
+      "docs/visual-personalizado/screenshots/lote7a-hg-2026-09-26/historia-vida-urbana-e-renascimento-cultural-recorte3-dark.png",
+      "docs/visual-personalizado/screenshots/lote7a-hg-2026-09-26/historia-vida-urbana-e-renascimento-cultural-recorte4.png",
+      "docs/visual-personalizado/screenshots/lote7a-hg-2026-09-26/historia-vida-urbana-e-renascimento-cultural-recorte4-dark.png",
+      "docs/visual-personalizado/screenshots/lote7a-hg-2026-09-26/historia-vida-urbana-e-renascimento-cultural-390-light.png",
+      "docs/visual-personalizado/screenshots/lote7a-hg-2026-09-26/historia-vida-urbana-e-renascimento-cultural-390-dark.png",
+      "docs/visual-personalizado/screenshots/lote7a-hg-2026-09-26/historia-vida-urbana-e-renascimento-cultural-768-light.png",
+      "docs/visual-personalizado/screenshots/lote7a-hg-2026-09-26/historia-vida-urbana-e-renascimento-cultural-768-dark.png"
+    ],
+    "notes": "Redesenhada em 26/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
   },
   {
     "id": "summary-historia-reforma-religiosa",
@@ -2928,11 +3208,22 @@
     "title": "Reforma Religiosa",
     "primary": "scene",
     "artifact": "movimento-dialetico",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "Trento: dogma mantido e abusos corrigidos",
+    "relation": "A venda de indulgências provoca a crítica de Lutero; Trento reafirma dogmas e corrige abusos, posição que não é nenhuma das duas anteriores",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/lote7b-hg-2026-09-26/historia-reforma-religiosa-recorte1.png",
+      "docs/visual-personalizado/screenshots/lote7b-hg-2026-09-26/historia-reforma-religiosa-recorte1-dark.png",
+      "docs/visual-personalizado/screenshots/lote7b-hg-2026-09-26/historia-reforma-religiosa-recorte2.png",
+      "docs/visual-personalizado/screenshots/lote7b-hg-2026-09-26/historia-reforma-religiosa-recorte2-dark.png",
+      "docs/visual-personalizado/screenshots/lote7b-hg-2026-09-26/historia-reforma-religiosa-recorte3.png",
+      "docs/visual-personalizado/screenshots/lote7b-hg-2026-09-26/historia-reforma-religiosa-recorte3-dark.png",
+      "docs/visual-personalizado/screenshots/lote7b-hg-2026-09-26/historia-reforma-religiosa-390-light.png",
+      "docs/visual-personalizado/screenshots/lote7b-hg-2026-09-26/historia-reforma-religiosa-390-dark.png",
+      "docs/visual-personalizado/screenshots/lote7b-hg-2026-09-26/historia-reforma-religiosa-768-light.png",
+      "docs/visual-personalizado/screenshots/lote7b-hg-2026-09-26/historia-reforma-religiosa-768-dark.png"
+    ],
+    "notes": "Redesenhada em 26/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
   },
   {
     "id": "summary-historia-absolutismo",
@@ -2940,11 +3231,22 @@
     "title": "Absolutismo",
     "primary": "scene",
     "artifact": "tipologia",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "Direito divino e contrato: dois caminhos, o mesmo trono",
+    "relation": "Bossuet (base religiosa) e Hobbes (base racional e contratual, Leviatã, 1651) partem de fundamentos distintos e chegam ao mesmo poder absoluto",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/lote7b-hg-2026-09-26/historia-absolutismo-recorte1.png",
+      "docs/visual-personalizado/screenshots/lote7b-hg-2026-09-26/historia-absolutismo-recorte1-dark.png",
+      "docs/visual-personalizado/screenshots/lote7b-hg-2026-09-26/historia-absolutismo-recorte2.png",
+      "docs/visual-personalizado/screenshots/lote7b-hg-2026-09-26/historia-absolutismo-recorte2-dark.png",
+      "docs/visual-personalizado/screenshots/lote7b-hg-2026-09-26/historia-absolutismo-recorte3.png",
+      "docs/visual-personalizado/screenshots/lote7b-hg-2026-09-26/historia-absolutismo-recorte3-dark.png",
+      "docs/visual-personalizado/screenshots/lote7b-hg-2026-09-26/historia-absolutismo-390-light.png",
+      "docs/visual-personalizado/screenshots/lote7b-hg-2026-09-26/historia-absolutismo-390-dark.png",
+      "docs/visual-personalizado/screenshots/lote7b-hg-2026-09-26/historia-absolutismo-768-light.png",
+      "docs/visual-personalizado/screenshots/lote7b-hg-2026-09-26/historia-absolutismo-768-dark.png"
+    ],
+    "notes": "Redesenhada em 26/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
   },
   {
     "id": "summary-historia-revolucao-industrial",
@@ -2975,11 +3277,24 @@
     "title": "Iluminismo",
     "primary": "scene",
     "artifact": "tipologia",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "Uma lamparina da razão acende três propostas",
+    "relation": "Da mesma base racionalista saem a separação dos poderes (Montesquieu), a soberania popular (Rousseau) e a liberdade de expressão (Voltaire)",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/lote7b-hg-2026-09-26/historia-iluminismo-recorte1.png",
+      "docs/visual-personalizado/screenshots/lote7b-hg-2026-09-26/historia-iluminismo-recorte1-dark.png",
+      "docs/visual-personalizado/screenshots/lote7b-hg-2026-09-26/historia-iluminismo-recorte2.png",
+      "docs/visual-personalizado/screenshots/lote7b-hg-2026-09-26/historia-iluminismo-recorte2-dark.png",
+      "docs/visual-personalizado/screenshots/lote7b-hg-2026-09-26/historia-iluminismo-recorte3.png",
+      "docs/visual-personalizado/screenshots/lote7b-hg-2026-09-26/historia-iluminismo-recorte3-dark.png",
+      "docs/visual-personalizado/screenshots/lote7b-hg-2026-09-26/historia-iluminismo-recorte4.png",
+      "docs/visual-personalizado/screenshots/lote7b-hg-2026-09-26/historia-iluminismo-recorte4-dark.png",
+      "docs/visual-personalizado/screenshots/lote7b-hg-2026-09-26/historia-iluminismo-390-light.png",
+      "docs/visual-personalizado/screenshots/lote7b-hg-2026-09-26/historia-iluminismo-390-dark.png",
+      "docs/visual-personalizado/screenshots/lote7b-hg-2026-09-26/historia-iluminismo-768-light.png",
+      "docs/visual-personalizado/screenshots/lote7b-hg-2026-09-26/historia-iluminismo-768-dark.png"
+    ],
+    "notes": "Redesenhada em 26/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
   },
   {
     "id": "summary-historia-revolucao-francesa",
@@ -3022,11 +3337,22 @@
     "title": "Europa no Século XIX",
     "primary": "scene",
     "artifact": "contraste-de-posicoes",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "Mesma classe operária, duas estratégias",
+    "relation": "Do operariado saem o salto revolucionário de Marx e Engels (Manifesto, 1848) e a escada eleitoral da social-democracia (SPD)",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-europa-no-seculo-xix-recorte1.png",
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-europa-no-seculo-xix-recorte1-dark.png",
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-europa-no-seculo-xix-recorte2.png",
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-europa-no-seculo-xix-recorte2-dark.png",
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-europa-no-seculo-xix-recorte3.png",
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-europa-no-seculo-xix-recorte3-dark.png",
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-europa-no-seculo-xix-390-light.png",
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-europa-no-seculo-xix-390-dark.png",
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-europa-no-seculo-xix-768-light.png",
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-europa-no-seculo-xix-768-dark.png"
+    ],
+    "notes": "Redesenhada em 26/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
   },
   {
     "id": "summary-historia-imperialismo-e-belle-epoque",
@@ -3034,11 +3360,22 @@
     "title": "Imperialismo e Belle Époque",
     "primary": "scene",
     "artifact": "tipologia",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "Cadeia de mando direta × indireta",
+    "relation": "A França governa pelo funcionário europeu; o Reino Unido mantém a chefia local e reduz custo; ao lado, a partilha de Berlim (1884–1885)",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-imperialismo-e-belle-epoque-recorte1.png",
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-imperialismo-e-belle-epoque-recorte1-dark.png",
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-imperialismo-e-belle-epoque-recorte2.png",
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-imperialismo-e-belle-epoque-recorte2-dark.png",
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-imperialismo-e-belle-epoque-recorte3.png",
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-imperialismo-e-belle-epoque-recorte3-dark.png",
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-imperialismo-e-belle-epoque-390-light.png",
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-imperialismo-e-belle-epoque-390-dark.png",
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-imperialismo-e-belle-epoque-768-light.png",
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-imperialismo-e-belle-epoque-768-dark.png"
+    ],
+    "notes": "Redesenhada em 26/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
   },
   {
     "id": "summary-historia-primeira-guerra-mundial-1914-1918",
@@ -3046,11 +3383,22 @@
     "title": "Primeira Guerra Mundial (1914-1918)",
     "primary": "scene",
     "artifact": "criterios-conjuntivos",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "Alianças + pressão + faísca de Sarajevo",
+    "relation": "A rede Tríplice Aliança × Tríplice Entente converte a crise balcânica em guerra continental; Sarajevo é estopim, não causa suficiente",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-primeira-guerra-mundial-1914-1918-recorte1.png",
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-primeira-guerra-mundial-1914-1918-recorte1-dark.png",
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-primeira-guerra-mundial-1914-1918-recorte2.png",
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-primeira-guerra-mundial-1914-1918-recorte2-dark.png",
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-primeira-guerra-mundial-1914-1918-recorte3.png",
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-primeira-guerra-mundial-1914-1918-recorte3-dark.png",
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-primeira-guerra-mundial-1914-1918-390-light.png",
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-primeira-guerra-mundial-1914-1918-390-dark.png",
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-primeira-guerra-mundial-1914-1918-768-light.png",
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-primeira-guerra-mundial-1914-1918-768-dark.png"
+    ],
+    "notes": "Redesenhada em 26/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
   },
   {
     "id": "summary-historia-grandes-revolucoes-do-seculo-xx",
@@ -3070,11 +3418,22 @@
     "title": "O Período Entreguerras (1918-1939)",
     "primary": "scene",
     "artifact": "cadeia-de-derivacao",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "Crise → totalitarismos → concessões → 1939",
+    "relation": "A quebra de 1929 espalha a crise; surgem regimes totalitários; cada concessão (Renânia, Áustria, Tchecoslováquia) leva a 1939",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-o-periodo-entreguerras-1918-1939-recorte1.png",
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-o-periodo-entreguerras-1918-1939-recorte1-dark.png",
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-o-periodo-entreguerras-1918-1939-recorte2.png",
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-o-periodo-entreguerras-1918-1939-recorte2-dark.png",
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-o-periodo-entreguerras-1918-1939-recorte3.png",
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-o-periodo-entreguerras-1918-1939-recorte3-dark.png",
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-o-periodo-entreguerras-1918-1939-390-light.png",
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-o-periodo-entreguerras-1918-1939-390-dark.png",
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-o-periodo-entreguerras-1918-1939-768-light.png",
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-o-periodo-entreguerras-1918-1939-768-dark.png"
+    ],
+    "notes": "Redesenhada em 26/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
   },
   {
     "id": "summary-historia-o-nazismo-na-alemanha",
@@ -3082,11 +3441,24 @@
     "title": "O Nazismo na Alemanha",
     "primary": "scene",
     "artifact": "criterios-conjuntivos",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "Três rachaduras que só juntas derrubam",
+    "relation": "Hiperinflação (1923), Depressão (1929) e democracia frágil: cada uma sozinha não basta; juntas abrem o caminho legal de 1933",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-o-nazismo-na-alemanha-recorte1.png",
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-o-nazismo-na-alemanha-recorte1-dark.png",
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-o-nazismo-na-alemanha-recorte2.png",
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-o-nazismo-na-alemanha-recorte2-dark.png",
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-o-nazismo-na-alemanha-recorte3.png",
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-o-nazismo-na-alemanha-recorte3-dark.png",
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-o-nazismo-na-alemanha-recorte4.png",
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-o-nazismo-na-alemanha-recorte4-dark.png",
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-o-nazismo-na-alemanha-390-light.png",
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-o-nazismo-na-alemanha-390-dark.png",
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-o-nazismo-na-alemanha-768-light.png",
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-o-nazismo-na-alemanha-768-dark.png"
+    ],
+    "notes": "Redesenhada em 26/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
   },
   {
     "id": "summary-historia-segunda-guerra-mundial-1939-1945",
@@ -3118,11 +3490,22 @@
     "title": "Descolonização Afro-Asiática",
     "primary": "scene",
     "artifact": "tipologia",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "Duas trilhas até a independência",
+    "relation": "Índia: passos não violentos até 1947, com partição; Argélia: guerra de 1954 a 1962, porque a França a via como território nacional",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-descolonizacao-afro-asiatica-recorte1.png",
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-descolonizacao-afro-asiatica-recorte1-dark.png",
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-descolonizacao-afro-asiatica-recorte2.png",
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-descolonizacao-afro-asiatica-recorte2-dark.png",
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-descolonizacao-afro-asiatica-recorte3.png",
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-descolonizacao-afro-asiatica-recorte3-dark.png",
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-descolonizacao-afro-asiatica-390-light.png",
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-descolonizacao-afro-asiatica-390-dark.png",
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-descolonizacao-afro-asiatica-768-light.png",
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-descolonizacao-afro-asiatica-768-dark.png"
+    ],
+    "notes": "Redesenhada em 26/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
   },
   {
     "id": "summary-historia-america-latina-no-seculo-xx",
@@ -3142,11 +3525,24 @@
     "title": "O Fim da Guerra Fria",
     "primary": "scene",
     "artifact": "cadeia-de-derivacao",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "Reformas soltam a pressão; dominós caem",
+    "relation": "Perestroika e glasnost liberam tensões; sem intervenção soviética o Muro cai (1989), o Leste cai em cascata e a URSS vira 15 repúblicas (1991)",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-o-fim-da-guerra-fria-recorte1.png",
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-o-fim-da-guerra-fria-recorte1-dark.png",
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-o-fim-da-guerra-fria-recorte2.png",
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-o-fim-da-guerra-fria-recorte2-dark.png",
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-o-fim-da-guerra-fria-recorte3.png",
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-o-fim-da-guerra-fria-recorte3-dark.png",
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-o-fim-da-guerra-fria-recorte4.png",
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-o-fim-da-guerra-fria-recorte4-dark.png",
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-o-fim-da-guerra-fria-390-light.png",
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-o-fim-da-guerra-fria-390-dark.png",
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-o-fim-da-guerra-fria-768-light.png",
+      "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-o-fim-da-guerra-fria-768-dark.png"
+    ],
+    "notes": "Redesenhada em 26/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
   },
   {
     "id": "summary-historia-a-historia-e-o-brasil",
@@ -3154,11 +3550,22 @@
     "title": "A História e o Brasil",
     "primary": "scene",
     "artifact": "contraste-de-posicoes",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "Quem narra muda o que se vê no encontro de 1500",
+    "relation": "A historiografia antiga narra do navio; a recente, da aldeia (agência indígena); o debate é sobre autoridade para narrar",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/lote6-hg-2026-09-26/historia-a-historia-e-o-brasil-recorte1.png",
+      "docs/visual-personalizado/screenshots/lote6-hg-2026-09-26/historia-a-historia-e-o-brasil-recorte1-dark.png",
+      "docs/visual-personalizado/screenshots/lote6-hg-2026-09-26/historia-a-historia-e-o-brasil-recorte2.png",
+      "docs/visual-personalizado/screenshots/lote6-hg-2026-09-26/historia-a-historia-e-o-brasil-recorte2-dark.png",
+      "docs/visual-personalizado/screenshots/lote6-hg-2026-09-26/historia-a-historia-e-o-brasil-recorte3.png",
+      "docs/visual-personalizado/screenshots/lote6-hg-2026-09-26/historia-a-historia-e-o-brasil-recorte3-dark.png",
+      "docs/visual-personalizado/screenshots/lote6-hg-2026-09-26/historia-a-historia-e-o-brasil-390-light.png",
+      "docs/visual-personalizado/screenshots/lote6-hg-2026-09-26/historia-a-historia-e-o-brasil-390-dark.png",
+      "docs/visual-personalizado/screenshots/lote6-hg-2026-09-26/historia-a-historia-e-o-brasil-768-light.png",
+      "docs/visual-personalizado/screenshots/lote6-hg-2026-09-26/historia-a-historia-e-o-brasil-768-dark.png"
+    ],
+    "notes": "Redesenhada em 26/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
   },
   {
     "id": "summary-historia-grandes-navegacoes-e-conquista-colonial",
@@ -3467,11 +3874,24 @@
     "title": "A Era Vargas",
     "primary": "scene",
     "artifact": "cadeia-de-derivacao",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "Pressão armada leva governo sem mandato à Constituição",
+    "relation": "A Revolução de 1930 põe Vargas no poder sem voto; a revolta paulista de 1932 exige Constituinte e força a Constituição de 1934",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/lote6-hg-2026-09-26/historia-a-era-vargas-recorte1.png",
+      "docs/visual-personalizado/screenshots/lote6-hg-2026-09-26/historia-a-era-vargas-recorte1-dark.png",
+      "docs/visual-personalizado/screenshots/lote6-hg-2026-09-26/historia-a-era-vargas-recorte2.png",
+      "docs/visual-personalizado/screenshots/lote6-hg-2026-09-26/historia-a-era-vargas-recorte2-dark.png",
+      "docs/visual-personalizado/screenshots/lote6-hg-2026-09-26/historia-a-era-vargas-recorte3.png",
+      "docs/visual-personalizado/screenshots/lote6-hg-2026-09-26/historia-a-era-vargas-recorte3-dark.png",
+      "docs/visual-personalizado/screenshots/lote6-hg-2026-09-26/historia-a-era-vargas-recorte4.png",
+      "docs/visual-personalizado/screenshots/lote6-hg-2026-09-26/historia-a-era-vargas-recorte4-dark.png",
+      "docs/visual-personalizado/screenshots/lote6-hg-2026-09-26/historia-a-era-vargas-390-light.png",
+      "docs/visual-personalizado/screenshots/lote6-hg-2026-09-26/historia-a-era-vargas-390-dark.png",
+      "docs/visual-personalizado/screenshots/lote6-hg-2026-09-26/historia-a-era-vargas-768-light.png",
+      "docs/visual-personalizado/screenshots/lote6-hg-2026-09-26/historia-a-era-vargas-768-dark.png"
+    ],
+    "notes": "Redesenhada em 26/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
   },
   {
     "id": "summary-historia-a-era-vargas-o-governo-constitucional-1934-1937",
@@ -3479,11 +3899,24 @@
     "title": "A Era Vargas: o Governo Constitucional (1934-1937)",
     "primary": "scene",
     "artifact": "cadeia-de-derivacao",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "Cada crise vira pretexto para a seguinte, até o golpe",
+    "relation": "AIB × ANL gera instabilidade; a Intentona de 1935 justifica o estado de sítio; o Plano Cohen forjado justifica o golpe de 10/11/1937",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/lote6-hg-2026-09-26/historia-a-era-vargas-o-governo-constitucional-1934-1937-recorte1.png",
+      "docs/visual-personalizado/screenshots/lote6-hg-2026-09-26/historia-a-era-vargas-o-governo-constitucional-1934-1937-recorte1-dark.png",
+      "docs/visual-personalizado/screenshots/lote6-hg-2026-09-26/historia-a-era-vargas-o-governo-constitucional-1934-1937-recorte2.png",
+      "docs/visual-personalizado/screenshots/lote6-hg-2026-09-26/historia-a-era-vargas-o-governo-constitucional-1934-1937-recorte2-dark.png",
+      "docs/visual-personalizado/screenshots/lote6-hg-2026-09-26/historia-a-era-vargas-o-governo-constitucional-1934-1937-recorte3.png",
+      "docs/visual-personalizado/screenshots/lote6-hg-2026-09-26/historia-a-era-vargas-o-governo-constitucional-1934-1937-recorte3-dark.png",
+      "docs/visual-personalizado/screenshots/lote6-hg-2026-09-26/historia-a-era-vargas-o-governo-constitucional-1934-1937-recorte4.png",
+      "docs/visual-personalizado/screenshots/lote6-hg-2026-09-26/historia-a-era-vargas-o-governo-constitucional-1934-1937-recorte4-dark.png",
+      "docs/visual-personalizado/screenshots/lote6-hg-2026-09-26/historia-a-era-vargas-o-governo-constitucional-1934-1937-390-light.png",
+      "docs/visual-personalizado/screenshots/lote6-hg-2026-09-26/historia-a-era-vargas-o-governo-constitucional-1934-1937-390-dark.png",
+      "docs/visual-personalizado/screenshots/lote6-hg-2026-09-26/historia-a-era-vargas-o-governo-constitucional-1934-1937-768-light.png",
+      "docs/visual-personalizado/screenshots/lote6-hg-2026-09-26/historia-a-era-vargas-o-governo-constitucional-1934-1937-768-dark.png"
+    ],
+    "notes": "Redesenhada em 26/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
   },
   {
     "id": "summary-historia-a-era-vargas-o-estado-novo",
@@ -3491,11 +3924,22 @@
     "title": "A Era Vargas: o Estado Novo",
     "primary": "scene",
     "artifact": "cadeia-de-derivacao",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "Ditadura dentro, guerra ao fascismo fora: contradição",
+    "relation": "Combater o fascismo na Itália com regime semelhante em casa gera pressão por redemocratização; as Forças Armadas depõem Vargas em 1945",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/lote6-hg-2026-09-26/historia-a-era-vargas-o-estado-novo-recorte1.png",
+      "docs/visual-personalizado/screenshots/lote6-hg-2026-09-26/historia-a-era-vargas-o-estado-novo-recorte1-dark.png",
+      "docs/visual-personalizado/screenshots/lote6-hg-2026-09-26/historia-a-era-vargas-o-estado-novo-recorte2.png",
+      "docs/visual-personalizado/screenshots/lote6-hg-2026-09-26/historia-a-era-vargas-o-estado-novo-recorte2-dark.png",
+      "docs/visual-personalizado/screenshots/lote6-hg-2026-09-26/historia-a-era-vargas-o-estado-novo-recorte3.png",
+      "docs/visual-personalizado/screenshots/lote6-hg-2026-09-26/historia-a-era-vargas-o-estado-novo-recorte3-dark.png",
+      "docs/visual-personalizado/screenshots/lote6-hg-2026-09-26/historia-a-era-vargas-o-estado-novo-390-light.png",
+      "docs/visual-personalizado/screenshots/lote6-hg-2026-09-26/historia-a-era-vargas-o-estado-novo-390-dark.png",
+      "docs/visual-personalizado/screenshots/lote6-hg-2026-09-26/historia-a-era-vargas-o-estado-novo-768-light.png",
+      "docs/visual-personalizado/screenshots/lote6-hg-2026-09-26/historia-a-era-vargas-o-estado-novo-768-dark.png"
+    ],
+    "notes": "Redesenhada em 26/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
   },
   {
     "id": "summary-historia-republica-liberal-1945-1964-democracia-em-tempos-de-guerra-fria",
@@ -3551,11 +3995,24 @@
     "title": "O Brasil Atual",
     "primary": "scene",
     "artifact": "criterios-conjuntivos",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "Três condições juntas reduzem a desigualdade",
+    "relation": "Bolsa Família, salário mínimo acima da inflação e commodities em alta: só combinados explicam a queda da desigualdade nos anos 2000",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/lote6-hg-2026-09-26/historia-o-brasil-atual-recorte1.png",
+      "docs/visual-personalizado/screenshots/lote6-hg-2026-09-26/historia-o-brasil-atual-recorte1-dark.png",
+      "docs/visual-personalizado/screenshots/lote6-hg-2026-09-26/historia-o-brasil-atual-recorte2.png",
+      "docs/visual-personalizado/screenshots/lote6-hg-2026-09-26/historia-o-brasil-atual-recorte2-dark.png",
+      "docs/visual-personalizado/screenshots/lote6-hg-2026-09-26/historia-o-brasil-atual-recorte3.png",
+      "docs/visual-personalizado/screenshots/lote6-hg-2026-09-26/historia-o-brasil-atual-recorte3-dark.png",
+      "docs/visual-personalizado/screenshots/lote6-hg-2026-09-26/historia-o-brasil-atual-recorte4.png",
+      "docs/visual-personalizado/screenshots/lote6-hg-2026-09-26/historia-o-brasil-atual-recorte4-dark.png",
+      "docs/visual-personalizado/screenshots/lote6-hg-2026-09-26/historia-o-brasil-atual-390-light.png",
+      "docs/visual-personalizado/screenshots/lote6-hg-2026-09-26/historia-o-brasil-atual-390-dark.png",
+      "docs/visual-personalizado/screenshots/lote6-hg-2026-09-26/historia-o-brasil-atual-768-light.png",
+      "docs/visual-personalizado/screenshots/lote6-hg-2026-09-26/historia-o-brasil-atual-768-dark.png"
+    ],
+    "notes": "Redesenhada em 26/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
   },
   {
     "id": "summary-lingua-inglesa-text-comprehension-taxonomy-and-terminology",
@@ -6950,11 +7407,22 @@
     "title": "Transição e bônus demográfico",
     "primary": "scene",
     "artifact": "escala-de-graus",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "A mão de obra migra do primário ao terciário",
+    "relation": "Países pobres concentram trabalho no primário, os industrializados no secundário, e as economias maduras terciarizam",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/lote5-hg-2026-09-26/geo-bonus-demografico-recorte1.png",
+      "docs/visual-personalizado/screenshots/lote5-hg-2026-09-26/geo-bonus-demografico-recorte1-dark.png",
+      "docs/visual-personalizado/screenshots/lote5-hg-2026-09-26/geo-bonus-demografico-recorte2.png",
+      "docs/visual-personalizado/screenshots/lote5-hg-2026-09-26/geo-bonus-demografico-recorte2-dark.png",
+      "docs/visual-personalizado/screenshots/lote5-hg-2026-09-26/geo-bonus-demografico-recorte3.png",
+      "docs/visual-personalizado/screenshots/lote5-hg-2026-09-26/geo-bonus-demografico-recorte3-dark.png",
+      "docs/visual-personalizado/screenshots/lote5-hg-2026-09-26/geo-bonus-demografico-390-light.png",
+      "docs/visual-personalizado/screenshots/lote5-hg-2026-09-26/geo-bonus-demografico-390-dark.png",
+      "docs/visual-personalizado/screenshots/lote5-hg-2026-09-26/geo-bonus-demografico-768-light.png",
+      "docs/visual-personalizado/screenshots/lote5-hg-2026-09-26/geo-bonus-demografico-768-dark.png"
+    ],
+    "notes": "Redesenhada em 26/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
   },
   {
     "id": "summary-filosofia-o-nascimento-da-filosofia-do-mito-ao-logos",

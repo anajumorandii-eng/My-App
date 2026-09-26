@@ -341,8 +341,8 @@ export function BlackDeath({ active }: Scene) {
   const p = usePaced();
   const tilt = active === 0 ? 14 : -14;
   const captions = [
-    ['peste bubônica, vinda provavelmente', 'da Ásia Central pelas rotas comerciais'],
-    ['escassez súbita de mão de obra', 'eleva o poder de barganha de quem ficou'],
+    ['peste bubônica, provavelmente da', 'Ásia Central, pelas rotas comerciais'],
+    ['escassez súbita de mão de obra', 'eleva a barganha de quem ficou'],
     ['camponeses exigem e às vezes obtêm', 'melhores condições e remuneração'],
   ][active];
   return <svg viewBox="0 0 620 360" role="img" aria-label={`Baixa Idade Média: Peste Negra, escassez de mão de obra e abalo do trabalho servil; recorte ${active + 1} em foco`}>

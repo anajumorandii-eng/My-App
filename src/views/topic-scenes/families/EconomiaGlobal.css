@@ -1,0 +1,180 @@
+.eg-field { fill: #e3d29a; stroke: #8b7a5c; stroke-width: 1.6; stroke-linejoin: round; }
+.eg-field-big { fill: #d9c27a; stroke: #8b7a5c; stroke-width: 1.6; stroke-linejoin: round; }
+.eg-furrow { fill: none; stroke: #a88d56; stroke-width: 1.4; stroke-linecap: round; }
+.eg-sprout { fill: none; stroke: #4f7a45; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.eg-leaf { fill: #7fa865; stroke: #3f6a3a; stroke-width: 1.4; stroke-linejoin: round; }
+.eg-tool { fill: none; stroke: #5c3b20; stroke-width: 2.6; stroke-linecap: round; }
+.eg-blade { fill: #8a9aa0; stroke: #3d4a4f; stroke-width: 1.2; }
+.eg-tractor { fill: #c2562f; stroke: #6e2a1f; stroke-width: 1.4; stroke-linejoin: round; }
+.eg-glass { fill: #cfe3e6; stroke: #6e2a1f; stroke-width: 1.2; }
+.eg-wheel { fill: #3d3a36; stroke: #1f1d1a; stroke-width: 1; }
+.eg-hub { fill: #e5b76a; }
+.eg-silo { fill: #cfd6d3; stroke: #56656a; stroke-width: 1.6; stroke-linejoin: round; }
+.eg-silo-band { fill: none; stroke: #8a9aa0; stroke-width: 1.2; }
+.eg-globe { fill: #cfe3e6; stroke: #3f6f8f; stroke-width: 1.8; }
+.eg-globe-line { fill: none; stroke: #3f6f8f; stroke-width: 1.2; }
+.eg-crate { fill: #e5b76a; stroke: #7c5534; stroke-width: 1.4; stroke-linejoin: round; }
+.eg-coop { fill: #fbf7ee; stroke: #3f6f5a; stroke-width: 1.8; stroke-linejoin: round; }
+.eg-coop-roof { fill: #6f8f5a; stroke: #3f6a3a; stroke-width: 1.4; stroke-linejoin: round; }
+.eg-sign { fill: #3f6f5a; }
+.eg-sign-text { fill: #fbf7ee; font: 800 9.5px system-ui, sans-serif; letter-spacing: .08em; }
+.eg-track { fill: #e5ddc9; stroke: #c2b49c; stroke-width: 1; }
+.eg-range { fill: #c2562f; }
+.eg-knob { fill: #873f4f; stroke: #fbf7ee; stroke-width: 2; }
+.eg-dest { fill: #fbf7ee; stroke: #b8a88a; stroke-width: 1.4; }
+.eg-dest-on { fill: #fbe3cf; stroke: #a8432a; stroke-width: 2.2; }
+.eg-spectrum { stroke: #b8a88a; stroke-width: 6; stroke-linecap: round; }
+.eg-spectrum-grad { stroke: url(#eg-spectrum); stroke-width: 6; stroke-linecap: round; }
+
+.eg-belt { fill: #56656a; stroke: #2f3b3f; stroke-width: 1.4; }
+.eg-roller { fill: #8a9aa0; stroke: #2f3b3f; stroke-width: 1; }
+.eg-leg { stroke: #56656a; stroke-width: 3; stroke-linecap: round; }
+.eg-watch { fill: #fbf7ee; stroke: #5c4a3a; stroke-width: 2; }
+.eg-watch-hand { stroke: #a8432a; stroke-width: 2.2; stroke-linecap: round; }
+.eg-car { fill: #3f6f8f; stroke: #2c4f66; stroke-width: 1.4; stroke-linejoin: round; }
+.eg-frame { fill: none; stroke: #3f6f8f; stroke-width: 2; stroke-linejoin: round; }
+.eg-coin { fill: #f2c14e; stroke: #b3791a; stroke-width: 1.6; }
+.eg-coin-text { fill: #8a5a12; font: 800 10px system-ui, sans-serif; }
+.eg-machine { fill: #cfd6d3; stroke: #56656a; stroke-width: 1.6; stroke-linejoin: round; }
+.eg-robot { fill: #e0762f; stroke: #8a3f17; stroke-width: 1.6; stroke-linejoin: round; }
+.eg-divider { stroke: #b8a88a; stroke-width: 1.6; stroke-dasharray: 5 4; }
+.eg-check { fill: none; stroke: #3f6f5a; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+.eg-node { fill: #fbf7ee; stroke: #b8a88a; stroke-width: 2; }
+.eg-node-on { fill: #873f4f; stroke: #873f4f; stroke-width: 2; }
+.eg-node-past { fill: #e9c9b8; stroke: #873f4f; stroke-width: 2; }
+.eg-line { stroke: #c2b49c; stroke-width: 3; stroke-linecap: round; }
+.eg-line-on { stroke: #873f4f; stroke-width: 3; stroke-linecap: round; }
+
+.eg-bush { fill: #4f7a45; stroke: #2f4f2a; stroke-width: 1.2; }
+.eg-berry { fill: #b3413a; }
+.eg-rail { stroke: #5c4a3a; stroke-width: 2; }
+.eg-sleeper { stroke: #9b6a3f; stroke-width: 3; }
+.eg-train { fill: #3d3a36; stroke: #1f1d1a; stroke-width: 1.2; stroke-linejoin: round; }
+.eg-wagon { fill: #9b6a3f; stroke: #5c3b20; stroke-width: 1.2; }
+.eg-smoke { fill: #d8d0c0; }
+.eg-sea { fill: #bcd8dc; stroke: #6f9ea6; stroke-width: 1.2; }
+.eg-wave { fill: none; stroke: #6f9ea6; stroke-width: 1.6; stroke-linecap: round; }
+.eg-crane { fill: none; stroke: #a8432a; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+.eg-factory { fill: #c9b8a0; stroke: #5c4a3a; stroke-width: 1.6; stroke-linejoin: round; }
+.eg-factory-new { fill: #e0a07a; stroke: #8a3f17; stroke-width: 1.4; stroke-linejoin: round; }
+.eg-city { fill: #a8432a; }
+.eg-city-ring { fill: none; stroke: #a8432a; stroke-width: 1.6; }
+
+.eg-sun { fill: #f2c14e; stroke: #b3791a; stroke-width: 1.4; }
+.eg-ray { stroke: #d99a2b; stroke-width: 2; stroke-linecap: round; }
+.eg-sand { fill: #efdcaa; stroke: #c9ae7d; stroke-width: 1.2; }
+.eg-tower { fill: #fbf7ee; stroke: #7c6a4f; stroke-width: 1.4; }
+.eg-window { fill: #9fc3c9; }
+.eg-church { fill: #fbf7ee; stroke: #7c5534; stroke-width: 1.6; stroke-linejoin: round; }
+.eg-roof { fill: #c2562f; stroke: #7c3a20; stroke-width: 1.2; stroke-linejoin: round; }
+.eg-tree { fill: #5f8a50; stroke: #2f4f2a; stroke-width: 1.2; }
+.eg-trunk { stroke: #6e4526; stroke-width: 3; stroke-linecap: round; }
+.eg-trail { fill: none; stroke: #b8906a; stroke-width: 3; stroke-dasharray: 5 5; stroke-linecap: round; }
+.eg-gate { fill: none; stroke: #3f6f5a; stroke-width: 3; stroke-linecap: round; }
+.eg-dome { fill: #cfd6d3; stroke: #3f6f8f; stroke-width: 1.8; stroke-linejoin: round; }
+.eg-calendar { fill: #fbf7ee; stroke: #7c6a4f; stroke-width: 1.4; }
+.eg-day { fill: #e5ddc9; }
+.eg-day-on { fill: #3f6f8f; }
+.eg-day-text { fill: #fbf7ee; font: 800 9.5px system-ui, sans-serif; }
+.eg-pin { fill: #fbf7ee; stroke: #873f4f; stroke-width: 1.8; }
+.eg-pin-on { fill: #873f4f; stroke: #5a2a36; stroke-width: 1.8; }
+.eg-pin-icon { fill: none; stroke: #873f4f; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.eg-pin-icon-on { fill: none; stroke: #fbf1e3; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+
+.eg-member { fill: #f3ead6; stroke: #8b7a5c; stroke-width: 1.4; }
+.eg-member-a { fill: #e7efe0; }
+.eg-member-b { fill: #f5e6d6; }
+.eg-member-c { fill: #e3ecf0; }
+.eg-bloc { fill: none; stroke: #873f4f; stroke-width: 2.4; stroke-linejoin: round; }
+.eg-border { stroke: #8b7a5c; stroke-width: 1.4; stroke-dasharray: 5 4; }
+.eg-wall { fill: #b3564a; stroke: #6e2a1f; stroke-width: 1.2; }
+.eg-wall-brick { stroke: #e9b7a8; stroke-width: 1; }
+.eg-step { fill: #efe6d2; stroke: #c2b49c; stroke-width: 1.4; }
+.eg-step-on { fill: #f7dcc9; stroke: #a8432a; stroke-width: 2.2; }
+.eg-step-past { fill: #f3e7d6; stroke: #c9937e; stroke-width: 1.4; }
+.eg-flow { fill: none; stroke: #477981; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+
+.eg-beam { stroke: #5c3b20; stroke-width: 4; stroke-linecap: round; }
+.eg-pan { fill: none; stroke: #5c3b20; stroke-width: 2; stroke-linecap: round; }
+.eg-post { fill: #9b6a3f; stroke: #5c3b20; stroke-width: 1.4; }
+.eg-gear { fill: #8a9aa0; stroke: #3d4a4f; stroke-width: 1.4; }
+.eg-mine { fill: #9b8b78; stroke: #5c4a3a; stroke-width: 1.4; stroke-linejoin: round; }
+.eg-meter { fill: #e5ddc9; }
+.eg-meter-up { fill: #3f6f5a; }
+.eg-meter-down { fill: #b3564a; }
+.eg-card { fill: #fbf7ee; stroke: #c2b49c; stroke-width: 1.4; }
+.eg-card-on { fill: #fbe8dc; stroke: #a8432a; stroke-width: 2.2; }
+
+.eg-us { fill: #3f6f8f; stroke: #2c4f66; stroke-width: 1.6; }
+.eg-su { fill: #b3413a; stroke: #6e2a1f; stroke-width: 1.6; }
+.eg-sat-us { fill: #9fc0d6; stroke: #3f6f8f; stroke-width: 1.2; }
+.eg-sat-su { fill: #e9a79a; stroke: #b3413a; stroke-width: 1.2; }
+.eg-pole-text { fill: #fbf7ee; font: 800 13px system-ui, sans-serif; letter-spacing: .04em; }
+.eg-missile { fill: #cfd6d3; stroke: #3d4a4f; stroke-width: 1.4; stroke-linejoin: round; }
+.eg-weight { fill: #3d3a36; stroke: #1f1d1a; stroke-width: 1.2; }
+.eg-weight-text { fill: #fbf7ee; font: 800 9.5px system-ui, sans-serif; }
+.eg-steam { fill: none; stroke: #b3564a; stroke-width: 2.2; stroke-linecap: round; }
+.eg-brick { fill: #c9b8a0; stroke: #7c6a4f; stroke-width: 1.2; }
+.eg-band-bi { fill: rgb(179 65 58 / .14); }
+.eg-band-uni { fill: rgb(63 111 143 / .18); }
+.eg-future { fill: none; stroke: #7c6a4f; stroke-width: 1.4; stroke-dasharray: 3 3; }
+
+.dark .eg-field { fill: #5d563c; stroke: #b9b2a2; }
+.dark .eg-field-big { fill: #6b6139; stroke: #b9b2a2; }
+.dark .eg-furrow { stroke: #9c8d5f; }
+.dark .eg-sprout { stroke: #9fd08a; }
+.dark .eg-leaf { fill: #6f9a58; stroke: #bfe0a8; }
+.dark .eg-tool { stroke: #d9a877; }
+.dark .eg-silo, .dark .eg-machine, .dark .eg-dome { fill: #4f5d5c; stroke: #c9d3cf; }
+.dark .eg-silo-band { stroke: #8fa19c; }
+.dark .eg-globe { fill: #2d4a55; stroke: #9fc3c9; }
+.dark .eg-globe-line { stroke: #9fc3c9; }
+.dark .eg-coop, .dark .eg-church, .dark .eg-tower, .dark .eg-calendar, .dark .eg-card, .dark .eg-dest, .dark .eg-watch { fill: #34443d; stroke: #b9b2a2; }
+.dark .eg-dest-on, .dark .eg-card-on { fill: #5a3a36; stroke: #f1a27f; }
+.dark .eg-track, .dark .eg-meter, .dark .eg-day { fill: #3f4e4b; stroke: #5b6b67; }
+.dark .eg-knob { fill: #ffd095; stroke: #22302f; }
+.dark .eg-range { fill: #e08a5c; }
+.dark .eg-spectrum, .dark .eg-line { stroke: #5b6b67; }
+.dark .eg-line-on { stroke: #ffd095; }
+.dark .eg-node { fill: #2d3d3b; stroke: #6e8f88; }
+.dark .eg-node-on { fill: #ffd095; stroke: #ffd095; }
+.dark .eg-node-past { fill: #6b4d45; stroke: #f1c8ab; }
+.dark .eg-belt { fill: #6e7f79; stroke: #b9b2a2; }
+.dark .eg-leg { stroke: #8fa19c; }
+.dark .eg-divider { stroke: #6e8f88; }
+.dark .eg-check { stroke: #9fd08a; }
+.dark .eg-car { fill: #6f9fbf; stroke: #cfe3e6; }
+.dark .eg-frame { stroke: #9fc3d6; }
+.dark .eg-rail { stroke: #b9b2a2; }
+.dark .eg-train { fill: #1a2322; stroke: #b9b2a2; }
+.dark .eg-smoke { fill: #5b6b67; }
+.dark .eg-sea { fill: #2d4a55; stroke: #6f9ea6; }
+.dark .eg-wave { stroke: #9fc3c9; }
+.dark .eg-sand { fill: #6b6139; stroke: #9c8d5f; }
+.dark .eg-factory { fill: #6e6556; stroke: #d3ddcf; }
+.dark .eg-city { fill: #f1a27f; }
+.dark .eg-city-ring, .dark .eg-crane, .dark .eg-steam { stroke: #f1a27f; }
+.dark .eg-trail { stroke: #d9a877; }
+.dark .eg-gate { stroke: #9fd08a; }
+.dark .eg-pin { fill: #2d3d3b; stroke: #f1c8ab; }
+.dark .eg-pin-on { fill: #ffd095; stroke: #ffd095; }
+.dark .eg-pin-icon { stroke: #f1c8ab; }
+.dark .eg-pin-icon-on { stroke: #22302f; }
+.dark .eg-member { stroke: #b9b2a2; }
+.dark .eg-member-a { fill: #33473b; }
+.dark .eg-member-b { fill: #4a3d33; }
+.dark .eg-member-c { fill: #33444d; }
+.dark .eg-bloc { stroke: #ffd095; }
+.dark .eg-border { stroke: #b9b2a2; }
+.dark .eg-step { fill: #2d3d3b; stroke: #5b6b67; }
+.dark .eg-step-past { fill: #3d3a36; stroke: #9c7f70; }
+.dark .eg-step-on { fill: #5a3a36; stroke: #f1a27f; }
+.dark .eg-flow { stroke: #9fc3c9; }
+.dark .eg-beam, .dark .eg-pan { stroke: #d9a877; }
+.dark .eg-mine { fill: #6e6556; stroke: #d3ddcf; }
+.dark .eg-brick { fill: #6e6556; stroke: #b9b2a2; }
+.dark .eg-future { stroke: #b9b2a2; }
+.dark .eg-band-bi { fill: rgb(241 162 127 / .16); }
+.dark .eg-band-uni { fill: rgb(159 195 214 / .18); }
+.dark .eg-missile { fill: #8fa19c; stroke: #d3ddcf; }
+.dark .eg-weight { fill: #0f1615; stroke: #b9b2a2; }
