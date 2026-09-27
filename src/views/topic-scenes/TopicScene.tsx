@@ -8,6 +8,7 @@ import { MovimentoDialetico } from './families/MovimentoDialetico';
 import { Tipologia } from './families/Tipologia';
 import { QuimicaTipologia } from './families/QuimicaTipologia';
 import { ORGANIC_SCENE_IDS, QuimicaOrganica } from './families/QuimicaOrganica';
+import { QUIMICA_FENOMENO_IDS, QuimicaFenomenos } from './families/QuimicaFenomenos';
 import { BIOLOGY_PHYSIOLOGY_SCENE_IDS, BiologiaFisiologia } from './families/BiologiaFisiologia';
 import { BIOLOGY_PROCESS_IDS, BiologiaProcessos } from './families/BiologiaProcessos';
 import { ECOLOGY_CYCLE_IDS, EcologyCycles } from './families/EcologyCycles';
@@ -50,6 +51,8 @@ export function TopicScene({ summaryId }: { summaryId: string }) {
       ? LinguagensLiteratura
     : ORGANIC_SCENE_IDS.has(entry.chapterId)
       ? QuimicaOrganica
+    : QUIMICA_FENOMENO_IDS.has(entry.chapterId)
+      ? QuimicaFenomenos
       : quimicaGeometrica
         ? QuimicaTipologia
         : FAMILIAS[entry.family];
