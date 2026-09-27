@@ -79,15 +79,43 @@ prancha declara, no rodapé, que o desenho é esquemático.
   com dica de deslizar e setas do teclado, como nas cenas de História e
   Geografia. A página não rola.
 
+### Lotes 2, 3 e 4 — dez capítulos que dividiam três desenhos
+
+Os dados de cada configuração do `ChemistryInstrument` já eram do capítulo; o
+desenho não. Três grupos compartilhavam o mesmo quadro:
+
+- a mesma caixa de 12 bolinhas paradas;
+- duas caixas de bolinhas que só ganhavam opacidade;
+- dois círculos "reagentes/produtos".
+
+Agora cada capítulo desenha o próprio objeto (`ChemistryMechanisms.tsx`). Todo
+número desenhado sai da mesma conta que produz a leitura:
+
+| Capítulo | O que a cena mostra |
+| --- | --- |
+| O estado gasoso | Volume fixo; a seta de cada partícula cresce com √T e o manômetro sobe. |
+| Estudo dos gases II | Seringa com escala de litros; o êmbolo recua com a temperatura. |
+| Mol e massa molar | Massa ÷ 18 g/mol vira caixas de 1 mol, com a contagem de moléculas. |
+| Balanceamento | Moléculas de H₂, O₂ e H₂O, lote a lote, com a contagem de átomos dos dois lados. |
+| Cálculos estequiométricos | O₂ fixo em 2 mol; a sobra aparece apagada e o reagente limitante é nomeado. |
+| Oxidação de hidrocarbonetos | As duas vagas de O₂ que 1 CH₄ pede, cada vaga vazia marcada como "falta". |
+| Esterificação | Cada álcool encontra um ácido; o teto 1 : 1 e o aviso de que o equilíbrio pode parar antes. |
+| Transesterificação | Cada álcool solta uma cadeia do triglicerídeo; três soltas liberam o glicerol. |
+| Deslocamento de equilíbrio | Barras de concentração e Q na reta; a posição em relação a K = 1 dá o sentido. |
+| Equilíbrios iônicos | Ao diluir, [H⁺] cai, a fração ionizada sobe e o pH anda na escala. |
+
+A conferência achou dois defeitos, corrigidos:
+
+- **Gases:** as setas de velocidade atravessavam a parede e pareciam partículas
+  escapando. Agora ficam presas dentro do recipiente.
+- **Seringa:** com 4 L, a haste do êmbolo saía do quadro. A escala foi
+  reajustada.
+
+Na varredura final de Química (47 capítulos, 1440 claro e 390 escuro), nenhum
+achado.
+
 ## Pendente em Química
 
-- Lote 2 — quatro capítulos do `ChemistryInstrument` com os mesmos dois
-  círculos genéricos: esterificação, transesterificação, deslocamento de
-  equilíbrio e equilíbrios iônicos.
-- Lote 3 — três capítulos com a mesma caixa de partículas: gás ideal, lei geral
-  dos gases e mol.
-- Lote 4 — três capítulos com caixas genéricas de equação: balanceamento,
-  estequiometria e oxidação de hidrocarbonetos.
 - Lote 5 — três capítulos com escala abstrata sem molécula: interações
   intermoleculares, cinética e polaridade.
 - A mini-escala de pH da prancha de ácidos e bases, que a auditoria chamou de

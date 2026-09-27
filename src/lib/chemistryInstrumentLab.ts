@@ -26,7 +26,9 @@ const n = (v: number, digits = 2) => Number(v.toFixed(digits)).toLocaleString('p
 export const gasPressure = (moles: number, temperatureKelvin: number, volumeLiters: number) => moles * 0.082057 * temperatureKelvin / volumeLiters;
 export const molarAmount = (massGrams: number, molarMass: number) => massGrams / molarMass;
 export const limitingProduct = (hydrogenMoles: number, oxygenMoles: number) => Math.min(hydrogenMoles / 2, oxygenMoles) * 2;
-export const weakAcidPH = (concentration: number, ka: number) => -Math.log10((-ka + Math.sqrt(ka * ka + 4 * ka * concentration)) / 2);
+/** [H⁺] de equilíbrio de um ácido fraco HA ⇌ H⁺ + A⁻, sem aproximar α ≪ 1. */
+export const weakAcidIonized = (concentration: number, ka: number) => (-ka + Math.sqrt(ka * ka + 4 * ka * concentration)) / 2;
+export const weakAcidPH = (concentration: number, ka: number) => -Math.log10(weakAcidIonized(concentration, ka));
 export const equilibriumQuotient = (products: number, reactants: number) => products / reactants;
 
 export const CHEMISTRY: Record<ChemistryId, ChemistryConfig> = {
