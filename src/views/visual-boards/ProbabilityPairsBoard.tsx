@@ -8,9 +8,14 @@ function gcd(a: number, b: number): number {
   return a;
 }
 
-function simplify(a: number, b: number): string {
+// Com 19 favoráveis em 49 a leitura saía "19/49 = 19/49": a simplificação
+// devolvia a própria fração. Irredutível, o que informa é o valor aproximado.
+function razao(a: number, b: number): string {
   const divisor = gcd(a, b);
-  return `${a / divisor}/${b / divisor}`;
+  const fracao = `${a}/${b}`;
+  if (b / divisor === 1) return `${fracao} = ${a / b}`;
+  if (divisor > 1) return `${fracao} = ${a / divisor}/${b / divisor}`;
+  return `${fracao} ≈ ${(a / b).toLocaleString('pt-BR', { maximumFractionDigits: 2 })}`;
 }
 
 export default function ProbabilityPairsBoard(props: BoardProps) {
@@ -44,20 +49,20 @@ export default function ProbabilityPairsBoard(props: BoardProps) {
             <text x={x0 + (col + .5) * cell} y={y0 + (row + .5) * cell + 4} textAnchor="middle" fill="var(--vs-ink)" fontSize={values.length > 5 ? 10 : 12}>{m},{n}</text>
           </g>;
         }))}
-        <text x="160" y="307" textAnchor="middle" fill="var(--vs-ink)" fontSize="14">{favorable} de {total} pares · {favorable}/{total} = {simplify(favorable, total)}</text>
+        <text x="160" y="307" textAnchor="middle" fill="var(--vs-ink)" fontSize="14">{favorable} de {total} pares · {razao(favorable, total)}</text>
         <text x="160" y="330" textAnchor="middle" fill="var(--vs-dim)" fontSize="11">(3,6) e (6,3) ocupam células distintas</text>
       </svg>
       <div className="vs-plane-controls"><div className="vs-plane-control">
         <label htmlFor="probability-upper"><strong>Limite superior: {upper}</strong><span>Ambas as coordenadas vão de 3 até esse número.</span></label>
         <input id="probability-upper" type="range" min="3" max="9" step="1" value={upper} onChange={(event) => setUpper(Number(event.target.value))} />
       </div></div>
-      <dl className="vs-plane-readouts"><div data-pivot="true"><dt>Contagem</dt><dd>{favorable} de {total} pares favoráveis</dd></div><div><dt>Probabilidade</dt><dd>{favorable}/{total} = {simplify(favorable, total)}</dd></div></dl>
+      <dl className="vs-plane-readouts"><div data-pivot="true"><dt>Contagem</dt><dd>{favorable} de {total} pares favoráveis</dd></div><div><dt>Probabilidade</dt><dd>{razao(favorable, total)}</dd></div></dl>
     </div>}
     left={{ label: 'Universo', headline: 'Cada célula é um par ordenado.', detail: 'A posição de m e n importa: (3,6) e (6,3) são resultados diferentes.', formula: `|Ω| = ${total}` }}
     right={{ label: 'Evento', headline: 'O divisor comum decide.', detail: 'Uma fração m/n é redutível quando mdc(m,n) > 1. A grade evita contar o mesmo par duas vezes.', formula: `|E| = ${favorable}` }}
     leftState={pair.leftState} rightState={pair.rightState} leftSelected={pair.leftSelected} rightSelected={pair.rightSelected}
     onSelectLeft={pair.selectLeft} onSelectRight={pair.selectRight}
-    equation={{ label: 'Razão', general: 'P(E) = |E| / |Ω|', condition: 'mesma chance para cada par', reduced: `${favorable}/${total} = ${simplify(favorable, total)}` }}
+    equation={{ label: 'Razão', general: 'P(E) = |E| / |Ω|', condition: 'mesma chance para cada par', reduced: razao(favorable, total) }}
     closing="A razão favoráveis/possíveis só vale quando cada par do universo tem a mesma chance de ocorrer."
   />;
 }

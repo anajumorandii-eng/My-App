@@ -20,6 +20,10 @@ describe('pranchas de Matemática sem ilustração emprestada', () => {
     expect(screen.getByText('8 de 16 pares favoráveis')).toBeInTheDocument();
     expect(screen.getAllByText(/8\/16 = 1\/2/).length).toBeGreaterThan(0);
     expect(screen.getAllByText(/mesma chance/i).length).toBeGreaterThan(0);
+    // Irredutível: mostra o valor, não a fração igualada a si mesma.
+    fireEvent.change(slider, { target: { value: '9' } });
+    expect(screen.getAllByText(/19\/49 ≈ 0,39/).length).toBeGreaterThan(0);
+    expect(screen.queryByText(/19\/49 = 19\/49/)).toBeNull();
   });
 
   it('relaciona catetos e hipotenusa sem depender de círculo de raio 1', () => {

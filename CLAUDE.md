@@ -243,9 +243,19 @@ O instrumento usa o `BoardShell` de propósito: enquadramento, par de cartões d
 nós 1 e 2 e leitura de cor por estado ficam idênticos aos da cena desenhada. Só
 a cena muda — que é o contrato que o `BoardShell` existe para garantir.
 
-Estado: 13 capítulos de Matemática com instrumento (24 dos 83, somando as cenas
-autorais). Faltam os instrumentos de plano analítico (9 capítulos), figura plana
-(~20), sólido (6), contagem e probabilidade (7), matriz (5) e estatística (3).
+Estado: os 83 capítulos de Matemática têm artefato próprio — 71 instrumentos,
+11 pranchas autorais e 1 experimento (a contagem sai de
+`docs/visual-personalizado/18-matriz-cobertura.md`, regenerada por
+`npm run visual:matrix`). Plano analítico, figura plana, sólido, contagem e
+probabilidade, matriz e estatística, que esta seção listava como faltantes, já
+existem. Várias famílias ainda servem mais de um capítulo; quando isso acontece,
+título e leitura central precisam ser do capítulo, não da família — foi o
+defeito de "Inversão de Funções" abrindo "Função logarítmica".
+
+**O par de cartões é do `boardPair`, texto e cor.** 23 instrumentos escreviam no
+cartão o texto do nó 0 enquanto o `boardPair` coloria ali o nó 1.
+`pairContract.test.tsx` renderiza todo instrumento registrado e falha se isso
+voltar.
 
 ### Anotação manuscrita
 

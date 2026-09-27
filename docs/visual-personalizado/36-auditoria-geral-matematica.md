@@ -20,7 +20,16 @@ unidades de peso e deslocamento da média.
 
 Verificação da segunda entrega: tipos e build passaram; 709 testes de interface
 passaram. A conferência visual no navegador e a aprovação editorial continuam
-pendentes. Os cinco ajustes indicados na auditoria abaixo ainda não foram concluídos.
+pendentes. Os cinco ajustes indicados na auditoria abaixo foram feitos depois:
+Inversão de Funções, Estudo do Sinal e Transformações em Gráficos ganharam
+famílias próprias no plano cartesiano (f e f⁻¹ espelhadas em y = x; faixas de
+sinal; x² deslocado e refletido), e Introdução à Geometria Analítica e Ponto
+Médio e Baricentro ganharam configurações próprias no plano analítico
+(alinhamento pela área do determinante; medianas e razão 2 : 1). A conferência
+técnica no navegador das sete pranchas novas (1440 e 390 px, claro e escuro,
+varrendo os controles) não achou texto sobreposto, vazamento nem erro de
+console; achou só a leitura "19/49 = 19/49" na probabilidade, já corrigida.
+A aprovação editorial continua sendo da Ana Júlia.
 Os vereditos originais foram preservados como registro da auditoria.
 
 Varredura automática (83/83): **nenhum erro de página, nenhuma rolagem
