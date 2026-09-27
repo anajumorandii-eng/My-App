@@ -95,9 +95,10 @@ import type { LiteraryAuthorId } from '../../lib/literaryAuthorLab';
  *
  * O que NÃO muda é a regra de não emprestar ilustração: o instrumento só entra
  * onde ele é o objeto do capítulo. "Função quadrática" recebe a parábola porque
- * a parábola é o assunto; "Determinantes" não recebe nada, e continua no aviso,
- * até existir um instrumento de matriz. Preencher tela com o que estiver à mão
- * continua sendo o erro que o `ap_mat_fuvest_110` nomeia.
+ * a parábola é o assunto; "Determinantes" só passou a ter prancha quando existiu
+ * o instrumento de matriz — antes disso ficava no aviso, e não com a parábola.
+ * Preencher tela com o que estiver à mão continua sendo o erro que o
+ * `ap_mat_fuvest_110` nomeia.
  */
 export interface InstrumentEntry {
   id: string;
