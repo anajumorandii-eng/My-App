@@ -29,7 +29,7 @@ function MassEnergyScene({ value }: { value: number }) {
     return <g>
       <path d={`M${c.x} ${c.y}L${c.x - 38} ${y}M${c.x} ${c.y}L${c.x + 38} ${y}`} stroke="var(--vs-dim)" strokeWidth="1.5" />
       <path d={`M${c.x - 44} ${y}Q${c.x} ${y + 26} ${c.x + 44} ${y}Z`} fill={kit.ouro} stroke="var(--vs-kit-contorno)" strokeWidth="1.8" />
-      <path d={`M${c.x - 44} ${y}Q${c.x} ${y + 26} ${c.x + 44} ${y}Z`} fill={kit.lapis} />
+      <path d={`M${c.x - 44} ${y}Q${c.x} ${y + 26} ${c.x + 44} ${y}Z`} fill={kit.reflexo} />
       <circle cx={c.x} cy={c.y} r="4" fill={kit.ouro} stroke="var(--vs-kit-contorno)" strokeWidth="1.2" />
     </g>;
   };
@@ -53,10 +53,10 @@ function MassEnergyScene({ value }: { value: number }) {
     <kit.Defs />
     <Papel kit={kit} />
     <Painel x={6} y={14} w={308} h={236} titulo="DEFEITO DE MASSA" tom="roxo" />
-    <Bola kit={kit} cx={24} cy={36} r={5} tom="vermelho" /><Rotulo x={33} y={40} ancora="start" tam={10.5}>próton</Rotulo>
-    <Bola kit={kit} cx={78} cy={36} r={5} tom="azul" /><Rotulo x={87} y={40} ancora="start" tam={10.5}>nêutron</Rotulo>
+    <Bola kit={kit} cx={24} cy={46} r={5} tom="vermelho" /><Rotulo x={33} y={50} ancora="start" tam={10.5}>próton</Rotulo>
+    <Bola kit={kit} cx={84} cy={46} r={5} tom="azul" /><Rotulo x={93} y={50} ancora="start" tam={10.5}>nêutron</Rotulo>
     <Sombra cx={pivo.x} cy={232} rx={56} />
-    <g filter={kit.tremido}>
+    <g filter={kit.neon}>
       <path d={`M${pivo.x - 44} 228L${pivo.x - 28} 210H${pivo.x + 28}L${pivo.x + 44} 228Z`} fill={kit.ouro} stroke="var(--vs-kit-contorno)" strokeWidth="1.8" />
       <rect x={pivo.x - 5} y={pivo.y} width="10" height={150} fill={kit.ouro} stroke="var(--vs-kit-contorno)" strokeWidth="1.5" />
       <path d={`M${pivo.x - 9} ${pivo.y - 2}L${pivo.x} ${pivo.y - 20}L${pivo.x + 9} ${pivo.y - 2}Z`} fill={cor('vermelho')} stroke="var(--vs-kit-contorno)" strokeWidth="1.3" />
@@ -72,9 +72,9 @@ function MassEnergyScene({ value }: { value: number }) {
     <Rotulo x={esq.x} y={esq.y + 94} tam={12}>núcleons</Rotulo><Rotulo x={esq.x} y={esq.y + 108} tam={12}>separados</Rotulo>
     <Rotulo x={dir.x} y={dir.y + 94} tam={12}>núcleo</Rotulo><Rotulo x={dir.x} y={dir.y + 108} tam={12}>formado</Rotulo>
     {value > 0
-      ? <Nota de={[esq.x - 40, esq.y + 56]} em={[16, 214]} ancora="start" texto={[`pesa ${value} mg a mais`, 'que o núcleo']} curva={-1} tom="roxo" />
-      : <Nota de={[pivo.x, pivo.y - 20]} em={[304, 44]} ancora="end" texto="sem defeito: equilíbrio" tom="roxo" />}
-    {value > 0 && <Nota de={pontas[pontas.length - 1]} em={[306, 214]} ancora="end" tom="laranja" texto={['a massa que falta', 'saiu como energia']} curva={1} />}
+      ? <Nota de={[esq.x - 40, esq.y + 56]} em={[16, 214]} ancora="start" texto={[`pesa ${value} mg a mais`, 'que o núcleo']} curva={-1} tom="roxo" tam={10} />
+      : <Nota de={[pivo.x, pivo.y - 20]} em={[304, 32]} ancora="end" texto="sem defeito: equilíbrio" tom="roxo" tam={10} />}
+    {value > 0 && <Nota de={pontas[pontas.length - 1]} em={[306, 214]} ancora="end" tom="laranja" texto={['a massa que falta', 'saiu como energia']} curva={1} tam={10} />}
     <Pilula x={50} y={260} w={220} tom="laranja">E = {energia}</Pilula>
   </g>;
 }
@@ -96,7 +96,7 @@ export function mechanicsFinalInstrument(id: MechanicsFinalId) {
     const pivot = readouts.find(readout => readout.pivot) ?? readouts[0];
     const first = props.map.nodes[1] ?? props.map.nodes[0];
     const second = props.map.nodes[2] ?? props.map.nodes.at(-1);
-    return <BoardShell caderno={id === 'mass-energy'} kicker="Laboratório de mecânica" title={config.name} subtitle={config.question} condition={{ label: '↔', value: pivot.value }} ariaLabel={`Instrumento de mecânica: ${props.map.title}`} emphasis={pair.emphasis}
+    return <BoardShell tecnologico={id === 'mass-energy'} kicker="Laboratório de mecânica" title={config.name} subtitle={config.question} condition={{ label: '↔', value: pivot.value }} ariaLabel={`Instrumento de mecânica: ${props.map.title}`} emphasis={pair.emphasis}
       scene={<div className="vs-instrument"><svg className="vs-plane" viewBox="0 0 320 300" role="img" aria-label={`${config.name}; ${pivot.label}: ${pivot.value}`}><Scene id={id} value={value}/></svg><p className="vs-instrument-dica">mexa na grandeza e acompanhe a consequência física</p><div className="vs-plane-controls"><div className="vs-plane-control"><label htmlFor={`mechanics-final-${id}`}><strong>{config.control.label}</strong><span>{config.control.description}</span><b>{value}</b></label><input id={`mechanics-final-${id}`} type="range" min={config.control.min} max={config.control.max} step={config.control.step} value={value} onChange={event => setValue(Number(event.target.value))}/></div></div><dl className="vs-plane-readouts">{readouts.map(readout => <div key={readout.label} data-pivot={readout.pivot ? 'true' : undefined}><dt>{readout.label}</dt><dd>{readout.value}</dd></div>)}</dl></div>}
       left={{ label: STAGE_LABEL[first?.stage ?? 'conceito'], headline: first?.label ?? props.map.title, detail: short(first?.excerpt), formula: config.formula }} right={{ label: STAGE_LABEL[second?.stage ?? 'aplicacao'], headline: second?.label ?? props.map.title, detail: short(second?.excerpt), formula: pivot.value }} leftState={pair.leftState} rightState={pair.rightState} leftSelected={pair.leftSelected} rightSelected={pair.rightSelected} onSelectLeft={pair.selectLeft} onSelectRight={pair.selectRight} equation={{ label: 'Relação mecânica', general: config.formula, condition: 'mostra', reduced: pivot.value }} closing={config.insight} />;
   };

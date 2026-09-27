@@ -39,7 +39,7 @@ function InterferenceScene({ value }: { value: number }) {
   const falante = (y: number, tom: 'roxo' | 'ciano') => <g>
     <rect x="16" y={y - 8} width="10" height="16" rx="2" fill={cor(tom)} stroke="var(--vs-kit-contorno)" strokeWidth="1.3" />
     <path d={`M26 ${y - 8}L40 ${y - 16}V${y + 16}L26 ${y + 8}Z`} fill={cor(tom)} stroke="var(--vs-kit-contorno)" strokeWidth="1.3" strokeLinejoin="round" />
-    <path d={`M26 ${y - 8}L40 ${y - 16}V${y + 16}L26 ${y + 8}Z`} fill={kit.lapis} />
+    <path d={`M26 ${y - 8}L40 ${y - 16}V${y + 16}L26 ${y + 8}Z`} fill={kit.reflexo} />
     <path d={`M45 ${y - 7}q5 7 0 14M50 ${y - 11}q8 11 0 22`} fill="none" stroke={cor(tom)} strokeWidth="1.6" strokeLinecap="round" />
   </g>;
   const sinal = (y: number, texto: string) => <g>
@@ -53,15 +53,15 @@ function InterferenceScene({ value }: { value: number }) {
       <Painel x={8} y={f.y - 34} w={304} h={64} titulo={f.titulo} tom={f.tom} />
       {falante(f.y, f.tom)}
       <path d={`M${x0} ${f.y}H${x1}`} stroke="var(--vs-dim)" strokeWidth="1" strokeDasharray="3 4" opacity=".6" />
-      <g filter={kit.tremido}><path d={senoide({ x0, x1, y: f.y, amp: A, ciclos, fase: f.fase })} fill="none" stroke={cor(f.tom)} strokeWidth="4" strokeLinecap="round" /></g>
+      <g filter={kit.neon}><path d={senoide({ x0, x1, y: f.y, amp: A, ciclos, fase: f.fase })} fill="none" stroke={cor(f.tom)} strokeWidth="4" strokeLinecap="round" /></g>
     </g>)}
     {sinal(88, "+")}
     {sinal(166, "=")}
     <Painel x={8} y={yR - 34} w={304} h={70} titulo="SOMA" tom="laranja" />
     <path d={`M${x0} ${yR}H${x1}`} stroke="var(--vs-dim)" strokeWidth="1" opacity=".7" />
     <path d={`${soma}L${x1} ${yR}L${x0} ${yR}Z`} fill={`color-mix(in srgb, ${cor('laranja')} 35%, transparent)`} />
-    <path d={`${soma}L${x1} ${yR}L${x0} ${yR}Z`} fill={kit.lapis} />
-    <g filter={kit.tremido}><path d={soma} fill="none" stroke={cor('laranja')} strokeWidth="5" strokeLinecap="round" /></g>
+    <path d={`${soma}L${x1} ${yR}L${x0} ${yR}Z`} fill={kit.reflexo} />
+    <g filter={kit.neon}><path d={soma} fill="none" stroke={cor('laranja')} strokeWidth="5" strokeLinecap="round" /></g>
     <path d={`M${crista1.toFixed(1)} 22V${yR + 30}`} stroke={cor('sol')} strokeWidth="1.8" strokeDasharray="4 4" />
     <Brilho x={crista1} y={52 - A - 7} r={6} />
     <circle cx={crista2} cy={128 - A} r="4.5" fill={cor('ciano')} stroke="var(--vs-kit-contorno)" strokeWidth="1" />
@@ -82,6 +82,6 @@ export function wavesInstrument(id: WavesId) {
   const config = WAVES[id];
   return function WavesBoard(props: BoardProps) {
     const [value, setValue] = useState(config.control.initial); const readouts = config.readouts(value); const pivot = readouts.find(item => item.pivot) ?? readouts[0]; const pair = boardPair(props); const first = props.map.nodes[1] ?? props.map.nodes[0]; const second = props.map.nodes[2] ?? props.map.nodes.at(-1);
-    return <BoardShell caderno={id === 'interference'} kicker="Laboratório de ondulatória" title={config.name} subtitle={config.question} condition={{ label: 'Leitura', value: pivot.value }} ariaLabel={`Instrumento de ondulatória: ${props.map.title}`} emphasis={pair.emphasis} scene={<div className="vs-instrument"><svg className="vs-plane" viewBox="0 0 320 300" role="img" aria-label={`${config.name}; ${pivot.label}: ${pivot.value}`}><Scene id={id} value={value}/></svg><p className="vs-instrument-dica">mexa na grandeza e relacione a forma da onda à leitura</p><div className="vs-plane-controls"><div className="vs-plane-control"><label htmlFor={`waves-${id}`}><strong>{config.control.label}</strong><span>{config.control.description}</span><b>{value}</b></label><input id={`waves-${id}`} type="range" min={config.control.min} max={config.control.max} step={config.control.step} value={value} onChange={event => setValue(Number(event.target.value))}/></div></div><dl className="vs-plane-readouts">{readouts.map(item => <div key={item.label} data-pivot={item.pivot ? 'true' : undefined}><dt>{item.label}</dt><dd>{item.value}</dd></div>)}</dl></div>} left={{ label: STAGE_LABEL[first?.stage ?? 'conceito'], headline: first?.label ?? props.map.title, detail: short(first?.excerpt), formula: config.formula }} right={{ label: STAGE_LABEL[second?.stage ?? 'aplicacao'], headline: second?.label ?? props.map.title, detail: short(second?.excerpt), formula: pivot.value }} leftState={pair.leftState} rightState={pair.rightState} leftSelected={pair.leftSelected} rightSelected={pair.rightSelected} onSelectLeft={pair.selectLeft} onSelectRight={pair.selectRight} equation={{ label: 'Relação ondulatória', general: config.formula, condition: 'mostra', reduced: pivot.value }} closing={config.insight}/>;
+    return <BoardShell tecnologico={id === 'interference'} kicker="Laboratório de ondulatória" title={config.name} subtitle={config.question} condition={{ label: 'Leitura', value: pivot.value }} ariaLabel={`Instrumento de ondulatória: ${props.map.title}`} emphasis={pair.emphasis} scene={<div className="vs-instrument"><svg className="vs-plane" viewBox="0 0 320 300" role="img" aria-label={`${config.name}; ${pivot.label}: ${pivot.value}`}><Scene id={id} value={value}/></svg><p className="vs-instrument-dica">mexa na grandeza e relacione a forma da onda à leitura</p><div className="vs-plane-controls"><div className="vs-plane-control"><label htmlFor={`waves-${id}`}><strong>{config.control.label}</strong><span>{config.control.description}</span><b>{value}</b></label><input id={`waves-${id}`} type="range" min={config.control.min} max={config.control.max} step={config.control.step} value={value} onChange={event => setValue(Number(event.target.value))}/></div></div><dl className="vs-plane-readouts">{readouts.map(item => <div key={item.label} data-pivot={item.pivot ? 'true' : undefined}><dt>{item.label}</dt><dd>{item.value}</dd></div>)}</dl></div>} left={{ label: STAGE_LABEL[first?.stage ?? 'conceito'], headline: first?.label ?? props.map.title, detail: short(first?.excerpt), formula: config.formula }} right={{ label: STAGE_LABEL[second?.stage ?? 'aplicacao'], headline: second?.label ?? props.map.title, detail: short(second?.excerpt), formula: pivot.value }} leftState={pair.leftState} rightState={pair.rightState} leftSelected={pair.leftSelected} rightSelected={pair.rightSelected} onSelectLeft={pair.selectLeft} onSelectRight={pair.selectRight} equation={{ label: 'Relação ondulatória', general: config.formula, condition: 'mostra', reduced: pivot.value }} closing={config.insight}/>;
   };
 }

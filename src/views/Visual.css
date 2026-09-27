@@ -2223,204 +2223,377 @@
   .vs-instrument > .vs-plane { grid-column: 1; grid-row: 1 / span 6; }
   .vs-instrument > :not(.vs-plane) { grid-column: 2; }
 }
+/* ==========================================================================
+   Kit de ilustração (illustrationKit.tsx) e moldura tecnológica (BoardShell
+   `tecnologico`).
 
-/* Kit de ilustração dos instrumentos (illustrationKit.tsx). A anotação usa a
-   Kalam da referência aprovada; o marca-texto é amarelo no papel e âmbar
-   apagado na lousa, onde o amarelo claro estourava atrás do texto claro. */
-.crivo-visual { --vs-marker: #f3d774; --vs-shadow: rgba(40, 30, 20, .16); --vs-kit-acc: var(--vs-burgundy); }
-/* O vinho do papel (#852636) some na lousa: nota e resultado ficavam no
-   limite da leitura no iPad escuro. Na lousa o destaque clareia. */
-.dark .crivo-visual { --vs-marker: #6e5520; --vs-shadow: rgba(0, 0, 0, .3); --vs-kit-acc: #ec8fa2; }
-.vs-kit-marca { fill: var(--vs-marker); opacity: .75; }
-.dark .vs-kit-marca { opacity: .6; }
-.vs-kit-sombra { fill: var(--vs-shadow); }
-.vs-kit-nota path { fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
-.vs-kit-nota text { font-family: "Kalam", "Newsreader", Georgia, serif; font-weight: 700; stroke: none; }
+   A direção veio de vídeos de sites imersivos que a Ana Júlia mandou pedindo
+   "moderno e tecnológico": fundo escuro com aurora, vidro flutuando em
+   profundidade, neon, partículas, letreiro grande e apertado, dados em
+   monoespaçada. Substitui a moldura de caderno ilustrado da rodada anterior.
 
-/* Segunda rodada do kit: os lápis dos pôsteres de caderno ilustrado. Na lousa
-   cada lápis clareia, senão roxo e vermelho somem no fundo escuro. */
+   Os tons do kit clareiam na lousa e escurecem no vidro branco: o mesmo ciano
+   que acende no escuro some no claro.
+   ========================================================================== */
 .crivo-visual {
-  --vs-kit-sol: #f2b705; --vs-kit-roxo: #7b5ea7; --vs-kit-laranja: #e8743b;
-  --vs-kit-ciano: #2a9db0; --vs-kit-vermelho: #d64545; --vs-kit-verde: #3f9a5c;
-  --vs-kit-ceu: #17213d; --vs-kit-contorno: #1d2421;
+  --vs-shadow: rgba(15, 23, 42, .14);
+  --vs-kit-acc: #db2777; --vs-kit-azul: #2563eb; --vs-kit-sol: #d97706;
+  --vs-kit-roxo: #7c3aed; --vs-kit-laranja: #ea580c; --vs-kit-ciano: #0891b2;
+  --vs-kit-vermelho: #e11d48; --vs-kit-verde: #059669;
+  --vs-kit-ceu: #070b1a;
+  --vs-kit-vidro: rgba(255, 255, 255, .62);
+  --vs-kit-vidro-forte: rgba(255, 255, 255, .9);
+  --vs-kit-contorno: #0b1020;
 }
 .dark .crivo-visual {
-  --vs-kit-sol: #ffd23f; --vs-kit-roxo: #b69ce0; --vs-kit-laranja: #ff9a62;
-  --vs-kit-ciano: #6fd0e0; --vs-kit-vermelho: #ff7b7b; --vs-kit-verde: #7fd197;
-  --vs-kit-ceu: #0b1226; --vs-kit-contorno: #0d1210;
+  --vs-shadow: rgba(0, 0, 0, .45);
+  --vs-kit-acc: #f472b6; --vs-kit-azul: #60a5fa; --vs-kit-sol: #fbbf24;
+  --vs-kit-roxo: #a78bfa; --vs-kit-laranja: #fb923c; --vs-kit-ciano: #22d3ee;
+  --vs-kit-vermelho: #fb7185; --vs-kit-verde: #34d399;
+  --vs-kit-ceu: #040712;
+  --vs-kit-vidro: rgba(148, 163, 184, .07);
+  --vs-kit-vidro-forte: rgba(10, 15, 30, .82);
+  --vs-kit-contorno: #02040a;
 }
-.vs-kit-mao { font-family: "Kalam", "Newsreader", Georgia, serif; font-weight: 700; }
-.vs-kit-ponto { fill: var(--vs-dim); opacity: .35; }
+.vs-kit-grade { stroke: color-mix(in srgb, var(--vs-kit-ciano) 16%, transparent); stroke-width: .6; }
+.vs-kit-mono { font-family: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace; font-weight: 700; }
+.vs-kit-rotulo { font-family: "Space Grotesk", Inter, system-ui, sans-serif; }
+.vs-kit-sombra { fill: var(--vs-shadow); }
+.vs-kit-marca { fill: color-mix(in srgb, var(--vs-kit-ciano) 22%, transparent); }
+.vs-kit-pulso { transform-box: fill-box; transform-origin: center; animation: vs-pulso 2.4s ease-in-out infinite; }
+@keyframes vs-pulso { 50% { opacity: .35; transform: scale(1.35); } }
 
-/* Moldura de caderno ilustrado (BoardShell `caderno`). A cena já tinha o traço
-   dos pôsteres que a Ana Júlia mandou, mas a página em volta — título serif
-   gigante, cartões inclinados, morros no rodapé — continuava com cara de
-   jornal. Aqui a página inteira vira a folha do pôster. Por enquanto só os
-   cinco capítulos do piloto passam `caderno`. */
-.vs-study-board--caderno {
-  background-color: #fbf6ea;
-  background-image: radial-gradient(circle, rgba(60, 50, 40, .16) 1px, transparent 1.3px);
-  background-size: 16px 16px;
-}
-.dark .vs-study-board--caderno {
-  background-color: #0f1512;
-  background-image: radial-gradient(circle, rgba(245, 232, 208, .09) 1px, transparent 1.3px);
-}
-.vs-study-board--caderno .vs-board-kicker {
-  display: inline-flex;
-  align-items: center;
-  gap: .4rem;
-  padding: .28rem .8rem .28rem .5rem;
-  border: 2px solid var(--vs-kit-roxo);
-  border-radius: 999px;
-  background: var(--vs-paper);
-  color: var(--vs-kit-roxo);
-  font: 700 .82rem/1.1 "Kalam", "Newsreader", Georgia, serif;
-  font-style: normal;
-  letter-spacing: .08em;
-}
-.vs-star-icon { display: inline-block; width: 1.05em; height: 1.05em; flex: none; }
-.vs-star-icon path { fill: var(--vs-kit-sol); stroke: var(--vs-kit-contorno); stroke-width: 1.2; stroke-linejoin: round; }
-.vs-study-board--caderno .vs-board-head h2 {
-  margin: 14px 0 12px;
-  font-size: clamp(2.2rem, 5vw, 3.9rem);
-  line-height: 1.02;
-  letter-spacing: -.01em;
-  color: var(--vs-ink);
-  /* Sombra deslocada em amarelo: é o letreiro de marcador dos pôsteres, com a
-     cor "vazando" para o lado do traço preto. */
-  text-shadow: 3px 3px 0 color-mix(in srgb, var(--vs-kit-sol) 75%, transparent);
-}
-.dark .vs-study-board--caderno .vs-board-head h2 {
-  color: #f7efe0;
-  text-shadow: 3px 3px 0 color-mix(in srgb, var(--vs-kit-roxo) 55%, transparent);
-}
-/* O subtítulo vira o quadro de definição do pôster ("Astronomy = the study
-   of…"), com os tracinhos de ênfase dos dois lados. */
-.vs-study-board--caderno .vs-board-head p {
+/* --- Moldura --------------------------------------------------------------- */
+.vs-study-board--tech {
+  --vs-ink: #0b1020;
+  --vs-dim: #5b6478;
+  --vs-ink-muted: #5b6478;
+  --vs-paper: #ffffff;
+  --vs-paper-strong: #ffffff;
+  --vs-line: rgba(15, 23, 42, .1);
+  --vs-tech-particula: 99, 102, 241;
+  --vs-tech-borda: rgba(15, 23, 42, .09);
+  --vs-tech-realce: var(--vs-kit-roxo);
   position: relative;
-  width: fit-content;
-  max-width: min(640px, calc(100% - 44px));
-  margin-left: 22px;
-  padding: .55rem 1rem;
-  border: 2px solid var(--vs-kit-ciano);
-  border-radius: 14px;
-  background: color-mix(in srgb, var(--vs-kit-ciano) 9%, var(--vs-paper));
+  isolation: isolate;
+  overflow: hidden;
+  border: 1px solid var(--vs-tech-borda);
+  border-radius: 24px;
   color: var(--vs-ink);
-  font: 700 1.02rem/1.35 "Kalam", "Newsreader", Georgia, serif;
+  background:
+    radial-gradient(60% 45% at 12% 0%, rgba(124, 58, 237, .14), transparent 70%),
+    radial-gradient(50% 40% at 95% 12%, rgba(8, 145, 178, .14), transparent 70%),
+    radial-gradient(60% 50% at 60% 100%, rgba(219, 39, 119, .08), transparent 70%),
+    #f6f8fc;
+  background-size: 140% 140%;
+  animation: vs-aurora 22s ease-in-out infinite alternate;
+  box-shadow: 0 30px 80px -40px rgba(15, 23, 42, .25);
 }
-.vs-study-board--caderno .vs-board-head p::before,
-.vs-study-board--caderno .vs-board-head p::after {
+.dark .vs-study-board--tech {
+  --vs-ink: #e9eef8;
+  --vs-dim: #93a0b8;
+  --vs-ink-muted: #93a0b8;
+  --vs-paper: #0a0f1c;
+  --vs-paper-strong: #0d1324;
+  --vs-line: rgba(148, 163, 184, .14);
+  --vs-tech-particula: 125, 211, 252;
+  --vs-tech-borda: rgba(148, 163, 184, .14);
+  background:
+    radial-gradient(60% 45% at 12% 0%, rgba(124, 58, 237, .32), transparent 70%),
+    radial-gradient(50% 40% at 95% 12%, rgba(34, 211, 238, .2), transparent 70%),
+    radial-gradient(60% 50% at 60% 100%, rgba(244, 114, 182, .14), transparent 70%),
+    #05070d;
+  background-size: 140% 140%;
+  box-shadow: 0 40px 120px -40px rgba(0, 0, 0, .8);
+}
+@keyframes vs-aurora { to { background-position: 100% 60%; } }
+/* Luz que segue o ponteiro (variáveis gravadas por BoardShell). */
+.vs-study-board--tech::before {
   content: "";
   position: absolute;
-  top: 50%;
-  width: 14px;
-  height: 14px;
-  transform: translateY(-50%);
-  background:
-    linear-gradient(var(--vs-kit-ciano), var(--vs-kit-ciano)) 0 1px / 100% 2px no-repeat,
-    linear-gradient(var(--vs-kit-ciano), var(--vs-kit-ciano)) 0 6px / 100% 2px no-repeat,
-    linear-gradient(var(--vs-kit-ciano), var(--vs-kit-ciano)) 0 11px / 100% 2px no-repeat;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(420px circle at var(--luz-x, -500px) var(--luz-y, -500px), color-mix(in srgb, var(--vs-kit-ciano) 16%, transparent), transparent 70%);
 }
-.vs-study-board--caderno .vs-board-head p::before { left: -22px; }
-.vs-study-board--caderno .vs-board-head p::after { right: -22px; }
-/* A condição vira adesivo: círculo amarelo com contorno de tinta. */
-.vs-study-board--caderno .vs-q-callout {
-  border: 2.5px solid var(--vs-kit-contorno);
-  border-radius: 50%;
-  aspect-ratio: 1;
-  background: var(--vs-kit-sol);
-  color: #1d2421;
-  transform: rotate(-6deg);
-  box-shadow: 3px 3px 0 color-mix(in srgb, var(--vs-kit-laranja) 70%, transparent);
-}
-.vs-study-board--caderno .vs-q-callout strong { font-family: "Kalam", "Newsreader", Georgia, serif; }
-/* O pincel vira rabisco ondulado em duas cores. */
-.vs-study-board--caderno .vs-brush {
-  height: 12px;
-  border-radius: 0;
-  transform: none;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='12'%3E%3Cpath d='M0 6q5-5 10 0t10 0 10 0 10 0' fill='none' stroke='%23e8743b' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E") repeat-x left center / 40px 12px;
-}
-.dark .vs-study-board--caderno .vs-brush {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='12'%3E%3Cpath d='M0 6q5-5 10 0t10 0 10 0 10 0' fill='none' stroke='%23ff9a62' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E");
-}
-/* Cartões como quadros do pôster: borda colorida reta, etiqueta presa na borda
-   de cima e ícone do estágio. A cor de cada lado continua sendo a mesma do
-   par (verde à esquerda, coral à direita), e o estado segue na linha de baixo
-   — a leitura de cor precisa significar o mesmo em todas as pranchas. */
-.vs-study-board--caderno .vs-concept-card {
-  padding-top: 28px;
-  border: 2px solid var(--vs-card-cor);
-  border-radius: 16px;
-  transform: none;
-  background: color-mix(in srgb, var(--vs-card-cor) 9%, var(--vs-paper));
-  box-shadow: 3px 3px 0 color-mix(in srgb, var(--vs-card-cor) 35%, transparent);
-}
-.vs-study-board--caderno .vs-concept-card:hover { transform: translateY(-2px); }
-.vs-study-board--caderno .vs-concept-card--expansion { --vs-card-cor: var(--vs-kit-verde); }
-.vs-study-board--caderno .vs-concept-card--compression { --vs-card-cor: var(--vs-kit-laranja); }
-.dark .vs-study-board--caderno .vs-concept-card { background: color-mix(in srgb, var(--vs-card-cor) 10%, #121916); }
-.vs-study-board--caderno .vs-concept-card.is-selected { box-shadow: 0 0 0 3px color-mix(in srgb, var(--vs-card-cor) 40%, transparent), 3px 3px 0 color-mix(in srgb, var(--vs-card-cor) 35%, transparent); }
-.vs-study-board--caderno .vs-concept-label {
+.vs-tech-particulas {
   position: absolute;
-  top: -14px;
-  left: 16px;
+  inset: 0 0 auto 0;
+  z-index: -1;
+  width: 100%;
+  height: 460px;
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(180deg, #000 55%, transparent);
+  mask-image: linear-gradient(180deg, #000 55%, transparent);
+}
+.vs-tech-dot {
+  display: inline-block;
+  flex: none;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--vs-kit-ciano);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--vs-kit-ciano) 22%, transparent), 0 0 14px var(--vs-kit-ciano);
+  animation: vs-pulso 2.4s ease-in-out infinite;
+}
+.vs-study-board--tech .vs-board-kicker {
   display: inline-flex;
   align-items: center;
-  gap: .35rem;
-  padding: .2rem .7rem .2rem .35rem;
-  border: 2px solid var(--vs-card-cor);
-  border-radius: 999px;
-  background: var(--vs-paper);
-  color: var(--vs-card-cor);
-  font: 700 .8rem/1.1 "Kalam", "Newsreader", Georgia, serif;
+  gap: .6rem;
+  color: var(--vs-kit-ciano);
+  font: 700 .72rem/1 "JetBrains Mono", ui-monospace, monospace;
   font-style: normal;
-  letter-spacing: .08em;
+  letter-spacing: .22em;
+}
+.vs-study-board--tech .vs-board-head h2 {
+  margin: 16px 0 14px;
+  font-family: "Space Grotesk", Inter, system-ui, sans-serif;
+  font-size: clamp(2.3rem, 5.2vw, 4.3rem);
+  font-weight: 700;
+  line-height: .98;
+  letter-spacing: -.045em;
+  color: var(--vs-ink);
+  background: linear-gradient(100deg, var(--vs-ink) 0%, var(--vs-ink) 38%, var(--vs-kit-ciano) 52%, var(--vs-kit-roxo) 64%, var(--vs-ink) 80%);
+  background-size: 260% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: vs-titulo-entra .9s cubic-bezier(.2, .8, .2, 1) both, vs-titulo-brilho 9s ease-in-out 1s infinite;
+}
+@keyframes vs-titulo-entra { from { opacity: 0; filter: blur(14px); transform: translateY(18px); } }
+@keyframes vs-titulo-brilho { 0%, 100% { background-position: 100% 0; } 50% { background-position: 0 0; } }
+.vs-study-board--tech .vs-board-head p {
+  max-width: 620px;
+  color: var(--vs-dim);
+  font: 500 1.05rem/1.55 Inter, system-ui, sans-serif;
+}
+/* A condição vira mostrador de HUD em vidro. */
+.vs-study-board--tech .vs-q-callout {
+  flex-basis: 150px;
+  min-height: 96px;
+  padding: 12px 14px;
+  border: 1px solid color-mix(in srgb, var(--vs-kit-ciano) 45%, transparent);
+  border-radius: 16px;
+  transform: none;
+  background: var(--vs-kit-vidro);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 0 0 1px rgba(255,255,255,.04) inset, 0 0 40px -10px color-mix(in srgb, var(--vs-kit-ciano) 55%, transparent);
+}
+.vs-study-board--tech .vs-q-callout > span {
+  color: var(--vs-dim);
+  font: 700 .62rem/1 "JetBrains Mono", ui-monospace, monospace;
+  letter-spacing: .2em;
+}
+.vs-study-board--tech .vs-q-callout strong,
+.vs-study-board--tech .vs-q-callout[data-long] strong {
+  margin-top: 6px;
+  color: var(--vs-kit-ciano);
+  font: 700 1.25rem/1.1 "JetBrains Mono", ui-monospace, monospace;
+  font-variant-numeric: tabular-nums;
+  text-shadow: 0 0 18px color-mix(in srgb, var(--vs-kit-ciano) 60%, transparent);
+}
+/* O pincel vira feixe de luz que percorre a linha. */
+.vs-study-board--tech .vs-brush {
+  position: relative;
+  height: 1px;
+  border-radius: 0;
+  transform: none;
+  overflow: hidden;
+  background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--vs-kit-roxo) 70%, transparent), color-mix(in srgb, var(--vs-kit-ciano) 70%, transparent), transparent);
+}
+.vs-study-board--tech .vs-brush::after {
+  content: "";
+  position: absolute;
+  inset: -2px auto -2px -30%;
+  width: 30%;
+  background: linear-gradient(90deg, transparent, #fff, transparent);
+  filter: blur(1px);
+  animation: vs-feixe 3.6s ease-in-out infinite;
+}
+@keyframes vs-feixe { to { left: 110%; } }
+/* O valor que decodifica vem num span dentro do strong: sem isto ele herdava
+   a regra do rótulo (.vs-q-callout span) e saía em caixa alta miúda. */
+.vs-q-callout strong span { font: inherit; letter-spacing: inherit; text-transform: none; color: inherit; }
+/* Vidro: cena, cartões, fórmula e ideia central. */
+.vs-study-board--tech .vs-piston-wrap,
+.vs-study-board--tech .vs-concept-card,
+.vs-study-board--tech .vs-equation-strip,
+.vs-study-board--tech .vs-landscape p {
+  border: 1px solid var(--vs-tech-borda);
+  background: var(--vs-kit-vidro);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  backdrop-filter: blur(16px) saturate(140%);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, .06) inset, 0 24px 60px -34px rgba(2, 6, 23, .55);
+}
+.vs-study-board--tech .vs-piston-wrap { padding: 18px; border-radius: 22px; }
+.vs-study-board--tech .vs-plane {
+  border: 1px solid var(--vs-tech-borda);
+  border-radius: 14px;
+  background: color-mix(in srgb, var(--vs-paper) 70%, transparent);
+}
+.vs-study-board--tech .vs-instrument-dica,
+.vs-study-board--tech .vs-viewport-dica {
+  color: var(--vs-dim);
+  font: 600 .66rem/1.4 "JetBrains Mono", ui-monospace, monospace;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+.vs-study-board--tech .vs-plane-control label strong,
+.vs-study-board--tech .vs-plane-control label b { font-family: "JetBrains Mono", ui-monospace, monospace; }
+.vs-study-board--tech .vs-plane-control label b { color: var(--vs-kit-ciano); }
+.vs-study-board--tech .vs-plane-control input[type="range"] { accent-color: var(--vs-kit-ciano); }
+.vs-study-board--tech .vs-plane-readouts > div {
+  border: 1px solid var(--vs-tech-borda);
+  border-radius: 12px;
+  padding: 9px 11px;
+  background: color-mix(in srgb, var(--vs-paper) 55%, transparent);
+}
+.vs-study-board--tech .vs-plane-readouts > div[data-pivot="true"] {
+  border-color: color-mix(in srgb, var(--vs-kit-ciano) 55%, transparent);
+  box-shadow: 0 0 24px -8px color-mix(in srgb, var(--vs-kit-ciano) 70%, transparent);
+}
+.vs-study-board--tech .vs-plane-readouts dt {
+  font: 700 .6rem/1.3 "JetBrains Mono", ui-monospace, monospace;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.vs-study-board--tech .vs-plane-readouts dd {
+  margin-top: 4px;
+  font: 700 1.02rem/1.2 "JetBrains Mono", ui-monospace, monospace;
+}
+.vs-study-board--tech .vs-viewport-controles button {
+  border-color: var(--vs-tech-borda);
+  border-radius: 10px;
+  background: var(--vs-kit-vidro);
+}
+/* Cartões de vidro que inclinam sob o ponteiro. A cor de cada lado do par é
+   a mesma de sempre (verde à esquerda, laranja à direita) e o estado segue na
+   linha de baixo: a leitura de cor precisa significar o mesmo em todas as
+   pranchas. */
+.vs-study-board--tech .vs-concept-card {
+  border-color: color-mix(in srgb, var(--vs-card-cor) 38%, transparent);
+  border-radius: 20px;
+  padding: 22px;
+  background: linear-gradient(160deg, color-mix(in srgb, var(--vs-card-cor) 16%, transparent), var(--vs-kit-vidro) 60%);
+  transform: perspective(900px) rotateX(var(--incl-x, 0deg)) rotateY(var(--incl-y, 0deg));
+  transition: transform .18s ease-out, box-shadow .25s ease, border-color .25s ease;
+}
+.vs-study-board--tech .vs-concept-card:hover {
+  border-color: color-mix(in srgb, var(--vs-card-cor) 70%, transparent);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--vs-card-cor) 30%, transparent), 0 30px 60px -30px color-mix(in srgb, var(--vs-card-cor) 70%, transparent);
+}
+.vs-study-board--tech .vs-concept-card--expansion { --vs-card-cor: var(--vs-kit-verde); }
+.vs-study-board--tech .vs-concept-card--compression { --vs-card-cor: var(--vs-kit-laranja); }
+.vs-study-board--tech .vs-concept-card.is-selected {
+  border-color: var(--vs-card-cor);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--vs-card-cor) 45%, transparent), 0 30px 60px -30px color-mix(in srgb, var(--vs-card-cor) 70%, transparent);
+}
+.vs-study-board--tech .vs-concept-label {
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+  color: var(--vs-card-cor);
+  font: 700 .68rem/1 "JetBrains Mono", ui-monospace, monospace;
+  font-style: normal;
+  letter-spacing: .18em;
 }
 .vs-concept-icon {
   display: inline-grid;
   place-items: center;
-  width: 1.45rem;
-  height: 1.45rem;
-  border-radius: 50%;
-  background: var(--vs-card-cor);
-  color: #fff;
+  width: 1.7rem;
+  height: 1.7rem;
+  border-radius: 9px;
+  background: color-mix(in srgb, var(--vs-card-cor) 18%, transparent);
+  border: 1px solid color-mix(in srgb, var(--vs-card-cor) 45%, transparent);
+  box-shadow: 0 0 16px -4px var(--vs-card-cor);
 }
 .vs-concept-icon svg { width: .95rem; height: .95rem; }
-.vs-study-board--caderno .vs-concept-card strong { font-family: "Kalam", "Newsreader", Georgia, serif; font-size: 1.35rem; }
-/* A tira da fórmula vira quadro tracejado com etiqueta. */
-.vs-study-board--caderno .vs-equation-strip {
-  border: 2px dashed var(--vs-kit-roxo);
-  background: color-mix(in srgb, var(--vs-kit-roxo) 7%, var(--vs-paper));
+.vs-study-board--tech .vs-concept-card strong {
+  font: 700 1.4rem/1.15 "Space Grotesk", Inter, system-ui, sans-serif;
+  letter-spacing: -.02em;
 }
-.vs-study-board--caderno .vs-equation-strip > span:first-child {
-  padding: .15rem .6rem;
-  border: 1.5px solid var(--vs-kit-roxo);
-  border-radius: 999px;
-  color: var(--vs-kit-roxo);
-  font: 700 .74rem/1.1 "Kalam", "Newsreader", Georgia, serif;
+.vs-study-board--tech .vs-concept-card > span:not(.vs-concept-label):not(.vs-state-line) { color: var(--vs-dim); }
+.vs-study-board--tech .vs-concept-card code,
+.dark .vs-study-board--tech .vs-concept-card code {
+  border: 1px solid var(--vs-tech-borda);
+  background: color-mix(in srgb, var(--vs-paper) 60%, transparent);
+  font-family: "JetBrains Mono", ui-monospace, monospace;
 }
-/* Sem morros: a ideia central vira a pílula com estrela, a frase que no pôster
-   se lê primeiro. */
-.vs-study-board--caderno .vs-landscape { min-height: 0; margin: 20px 0 0; }
-.vs-study-board--caderno .vs-landscape::after { display: none; }
-.vs-study-board--caderno .vs-landscape p {
-  display: block;
+.vs-study-board--tech .vs-equation-strip { border-radius: 18px; }
+.vs-study-board--tech .vs-equation-strip span,
+.vs-study-board--tech .vs-equation-strip i {
+  color: var(--vs-dim);
+  font: 700 .64rem/1.2 "JetBrains Mono", ui-monospace, monospace;
+  letter-spacing: .16em;
+}
+.vs-study-board--tech .vs-equation-strip strong {
+  font-family: "Space Grotesk", Inter, system-ui, sans-serif;
+  letter-spacing: -.02em;
+}
+.vs-study-board--tech .vs-equation-strip strong:last-child {
+  color: var(--vs-kit-ciano);
+  text-shadow: 0 0 18px color-mix(in srgb, var(--vs-kit-ciano) 50%, transparent);
+}
+/* Sem morros: a ideia central é uma barra de vidro com o ponto aceso. */
+.vs-study-board--tech .vs-landscape { min-height: 0; margin: 20px 0 0; }
+.vs-study-board--tech .vs-landscape::after { display: none; }
+.vs-study-board--tech .vs-landscape p {
   width: 100%;
   margin: 0;
-  padding: .8rem 1.1rem;
-  border: 2px solid var(--vs-kit-laranja);
-  border-radius: 999px;
-  background: color-mix(in srgb, var(--vs-kit-sol) 18%, var(--vs-paper));
+  padding: 14px 18px;
+  border-radius: 18px;
   color: var(--vs-ink);
-  font: 700 1rem/1.4 "Kalam", "Newsreader", Georgia, serif;
-  backdrop-filter: none;
+  font: 500 .98rem/1.55 Inter, system-ui, sans-serif;
 }
-.vs-study-board--caderno .vs-landscape p .vs-star-icon { width: 1.3rem; height: 1.3rem; margin-right: .4rem; vertical-align: -.25rem; }
-.vs-study-board--caderno .vs-landscape p strong { margin-right: .3rem; }
-.dark .vs-study-board--caderno .vs-landscape p { background: color-mix(in srgb, var(--vs-kit-sol) 10%, #121916); }
+.vs-study-board--tech .vs-landscape p .vs-tech-dot { margin-right: .7rem; vertical-align: .08rem; }
+.vs-study-board--tech .vs-landscape p strong {
+  margin-right: .45rem;
+  color: var(--vs-kit-ciano);
+  font: 700 .68rem/1 "JetBrains Mono", ui-monospace, monospace;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+.vs-study-board--tech .vs-faces button[aria-selected="true"] {
+  background: linear-gradient(120deg, var(--vs-kit-roxo), var(--vs-kit-ciano));
+  color: #fff;
+}
+/* Entrada em cascata: cada bloco sobe e desfoca para o nítido, como os
+   cartões que chegam em profundidade nos vídeos. */
+.vs-study-board--tech > .vs-board-head,
+.vs-study-board--tech > .vs-brush,
+.vs-study-board--tech .vs-board-body > *,
+.vs-study-board--tech > .vs-equation-strip,
+.vs-study-board--tech > .vs-landscape { animation: vs-sobe .8s cubic-bezier(.2, .8, .2, 1) both; }
+.vs-study-board--tech .vs-board-body > :nth-child(1) { animation-delay: .12s; }
+.vs-study-board--tech .vs-board-body > :nth-child(2) { animation-delay: .2s; }
+.vs-study-board--tech .vs-board-body > :nth-child(3) { animation-delay: .28s; }
+.vs-study-board--tech > .vs-equation-strip { animation-delay: .34s; }
+.vs-study-board--tech > .vs-landscape { animation-delay: .4s; }
+@keyframes vs-sobe { from { opacity: 0; filter: blur(8px); transform: translateY(22px) scale(.985); } }
+.vs-study-board--tech .vs-concept-card { animation-fill-mode: backwards; }
+@media (prefers-reduced-motion: reduce) {
+  .vs-study-board--tech,
+  .vs-study-board--tech *,
+  .vs-study-board--tech *::before,
+  .vs-study-board--tech *::after { animation: none !important; }
+  .vs-study-board--tech .vs-concept-card { transform: none; }
+}
 @media (max-width: 560px) {
-  .vs-study-board--caderno .vs-landscape p { border-radius: 18px; font-size: .92rem; }
-  .vs-study-board--caderno .vs-board-head p { font-size: .92rem; }
+  .vs-study-board--tech { border-radius: 18px; }
+  .vs-study-board--tech .vs-piston-wrap { padding: 10px; }
+  /* No celular o mostrador vira uma faixa abaixo do título. Como selo à
+     direita, preso nos 74 px da regra base, ele partia "orbita" em "orbi/ta"
+     e "27 × 10¹⁰ J" em três linhas, espremendo o título. */
+  .vs-study-board--tech .vs-board-head { display: flex; flex-direction: column; gap: 10px; }
+  .vs-study-board--tech .vs-q-callout {
+    width: auto;
+    min-height: 0;
+    flex: none;
+    display: inline-flex;
+    align-items: baseline;
+    gap: 10px;
+    padding: 8px 14px;
+  }
+  .vs-study-board--tech .vs-q-callout strong { margin-top: 0; font-size: 1.05rem; white-space: nowrap; }
 }

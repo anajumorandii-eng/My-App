@@ -12,22 +12,22 @@ const props: BoardShellProps = {
   scene: <svg />, closing: 'Ideia', ariaLabel: 'Prancha de teste',
 };
 
-describe('moldura de caderno', () => {
-  it('só muda a prancha que pede: sem `caderno`, os morros e os cartões antigos ficam', () => {
+describe('moldura tecnológica', () => {
+  it('só muda a prancha que pede: sem `tecnologico`, os morros e os cartões antigos ficam', () => {
     const { container } = render(<BoardShell {...props} />);
-    expect(container.querySelector('.vs-study-board--caderno')).toBeNull();
+    expect(container.querySelector('.vs-study-board--tech')).toBeNull();
     expect(container.querySelector('.vs-landscape-art')).not.toBeNull();
     expect(container.querySelector('.vs-concept-icon')).toBeNull();
   });
 
-  it('com `caderno`, cada cartão ganha o ícone do seu estágio e a ideia central, a estrela', () => {
-    const { container } = render(<BoardShell {...props} caderno />);
-    expect(container.querySelector('.vs-study-board--caderno')).not.toBeNull();
+  it('com `tecnologico`, cada cartão ganha o ícone do seu estágio e a ideia central, o ponto aceso', () => {
+    const { container } = render(<BoardShell {...props} tecnologico />);
+    expect(container.querySelector('.vs-study-board--tech')).not.toBeNull();
     expect(container.querySelector('.vs-landscape-art')).toBeNull();
     const icones = [...container.querySelectorAll('.vs-concept-icon svg')].map(svg => svg.innerHTML);
     expect(icones).toHaveLength(2);
-    // Conceito e Aplicação têm desenhos próprios, não a estrela genérica.
+    // Conceito e Aplicação têm ícones próprios, não o brilho genérico.
     expect(new Set(icones).size).toBe(2);
-    expect(container.querySelector('.vs-landscape p .vs-star-icon')).not.toBeNull();
+    expect(container.querySelector('.vs-landscape p .vs-tech-dot')).not.toBeNull();
   });
 });

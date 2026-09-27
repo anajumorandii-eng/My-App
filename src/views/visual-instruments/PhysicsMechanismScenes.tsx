@@ -316,7 +316,7 @@ function OrbitaCena({ v, reduzir }: { v: number; reduzir: boolean }) {
       <circle cx={x} cy={y} r={r} fill="#2f7fc1" />
       <path d={`M${x - 30} ${y - 16}q8 -16 24 -10t12 12q-6 12 -20 8t-16 -10z M${x + 4} ${y + 8}q16 -8 28 2t-4 22q-14 4 -22 -8z M${x - 22} ${y + 18}q8 -2 12 6t-6 8q-8 -2 -6 -14z`} fill="#4caf6a" stroke="#1f5f36" strokeWidth="1" />
       <path d={`M${x - 36} ${y + 2}q10 -5 20 0M${x + 8} ${y - 26}q10 -4 18 2`} fill="none" stroke="#fff" strokeWidth="3" strokeLinecap="round" opacity=".8" />
-      <circle cx={x} cy={y} r={r} fill={kit.lapis} />
+      <circle cx={x} cy={y} r={r} fill={kit.reflexo} />
       <circle cx={x} cy={y} r={r} fill={kit.esfera('claro')} opacity=".25" />
       <circle cx={x} cy={y} r={r} fill="none" stroke="#0d1210" strokeWidth="1.5" />
       <motion.path key={v} d={traj.d} fill="none" stroke={traj.caiu ? '#ff9a62' : '#ffd23f'} strokeWidth="3" strokeDasharray="7 5" strokeLinecap="round" initial={reduzir ? false : { pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 1.2, ease: 'easeOut' }} />

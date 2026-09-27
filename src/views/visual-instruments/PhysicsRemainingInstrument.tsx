@@ -43,19 +43,19 @@ function RopeBoundaryScene({ fixed }: { fixed: boolean }) {
   </g>;
   const extremidade = (y: number) => fixed
     ? <circle cx={parede} cy={y} r="4.5" fill={cor('sol')} stroke="var(--vs-kit-contorno)" strokeWidth="1.3" />
-    : <g><rect x={parede - 8} y={y - 10} width="16" height="20" rx="6" fill={kit.ouro} stroke="var(--vs-kit-contorno)" strokeWidth="1.5" /><rect x={parede - 8} y={y - 10} width="16" height="20" rx="6" fill={kit.lapis} /></g>;
+    : <g><rect x={parede - 8} y={y - 10} width="16" height="20" rx="6" fill={kit.ouro} stroke="var(--vs-kit-contorno)" strokeWidth="1.5" /><rect x={parede - 8} y={y - 10} width="16" height="20" rx="6" fill={kit.reflexo} /></g>;
   return <g data-physics-system="rope-boundary">
     <kit.Defs />
     <Papel kit={kit} />
     <Painel x={8} y={22} w={252} h={92} titulo="IDA" tom="laranja" />
     <Painel x={8} y={134} w={252} h={102} titulo="VOLTA" tom="ciano" />
     {fixed
-      ? <g filter={kit.tremido}>
+      ? <g filter={kit.neon}>
           {Array.from({ length: 11 }, (_, linha) => Array.from({ length: 2 }, (_, col) => {
             const x = parede + (linha % 2 ? -6 : 0) + col * 17, y = 18 + linha * 20;
             return <rect key={`${linha}-${col}`} x={Math.max(parede, x)} y={y} width={Math.min(17, x + 17 - Math.max(parede, x), 306 - Math.max(parede, x))} height="20" fill={cor('vermelho')} stroke="var(--vs-kit-contorno)" strokeWidth="1.2" />;
           }))}
-          <rect x={parede} y="18" width="34" height="220" fill={kit.lapis} />
+          <rect x={parede} y="18" width="34" height="220" fill={kit.reflexo} />
         </g>
       : <g><Sombra cx={parede} cy={242} rx={16} /><rect x={parede - 3} y="18" width="6" height="222" rx="3" fill={kit.metal} stroke="var(--vs-kit-contorno)" strokeWidth="1.5" /></g>}
     {corda(pulso(112, yIda, true), 'laranja')}
@@ -96,7 +96,7 @@ function PulleysScene({ raio }: { raio: number }) {
     const raios = Array.from({ length: 4 }, (_, k) => { const g = (k * Math.PI) / 4; return `M${c.x - (R - 5) * Math.cos(g)} ${c.y - (R - 5) * Math.sin(g)}L${c.x + (R - 5) * Math.cos(g)} ${c.y + (R - 5) * Math.sin(g)}`; }).join('');
     return <g>
       <circle cx={c.x} cy={c.y} r={R} fill={kit.esfera(tom)} />
-      <circle cx={c.x} cy={c.y} r={R} fill={kit.lapis} />
+      <circle cx={c.x} cy={c.y} r={R} fill={kit.reflexo} />
       <circle cx={c.x} cy={c.y} r={Math.max(R - 5, 4)} fill="none" stroke="#fff" strokeWidth="1.2" opacity=".45" />
       <motion.g style={{ originX: `${c.x}px`, originY: `${c.y}px` }} animate={reduzir ? undefined : { rotate: 360 }} transition={{ duration: 36 / w, repeat: Infinity, ease: 'linear' }}>
         <path d={raios} stroke="#fff" strokeWidth="2.2" opacity=".75" strokeLinecap="round" />
@@ -124,7 +124,7 @@ function PulleysScene({ raio }: { raio: number }) {
     <Painel x={6} y={14} w={308} h={222} titulo="CORREIA" tom="laranja" />
     <Sombra cx={(c1.x + c2.x) / 2} cy={c2.y + R2 + 14} rx={116} ry={7} />
     {polia(c1, R1, w1, 'vermelho')}{polia(c2, R2, w2, 'ciano')}
-    <g filter={kit.tremido}>
+    <g filter={kit.neon}>
       <path d={correia} fill="none" stroke="var(--vs-kit-contorno)" strokeWidth="7" strokeLinejoin="round" />
       <path d={correia} fill="none" stroke="#8a5a2b" strokeWidth="4" strokeLinejoin="round" />
     </g>
@@ -301,6 +301,6 @@ export function physicsRemainingInstrument(id: PhysicsRemainingId) {
     const pair = boardPair(props);
     const first = props.map.nodes[1] ?? props.map.nodes[0];
     const second = props.map.nodes[2] ?? props.map.nodes.at(-1);
-    return <BoardShell caderno={id === 'rope-boundary' || id === 'circular-motion'} kicker="Laboratório de Física" title={config.name} subtitle={config.question} condition={{ label: 'Leitura', value: pivot.value }} ariaLabel={`Instrumento de física: ${props.map.title}`} emphasis={pair.emphasis} scene={<div className="vs-instrument"><svg className="vs-plane" viewBox="0 0 320 300" role="img" aria-label={`${config.name}; ${pivot.label}: ${pivot.value}`}><Scene id={id} value={value}/></svg><p className="vs-instrument-dica">mexa na grandeza e acompanhe a condição física desenhada</p><div className="vs-plane-controls"><div className="vs-plane-control"><label htmlFor={`physics-remaining-${id}`}><strong>{config.control.label}</strong><span>{config.control.description}</span><b>{value}</b></label><input id={`physics-remaining-${id}`} type="range" min={config.control.min} max={config.control.max} step={config.control.step} value={value} onChange={event => setValue(Number(event.target.value))}/></div></div><dl className="vs-plane-readouts">{readouts.map(item => <div key={item.label} data-pivot={item.pivot ? 'true' : undefined}><dt>{item.label}</dt><dd>{item.value}</dd></div>)}</dl></div>} left={{ label: STAGE_LABEL[first?.stage ?? 'conceito'], headline: first?.label ?? props.map.title, detail: short(first?.excerpt), formula: config.formula }} right={{ label: STAGE_LABEL[second?.stage ?? 'aplicacao'], headline: second?.label ?? props.map.title, detail: short(second?.excerpt), formula: pivot.value }} leftState={pair.leftState} rightState={pair.rightState} leftSelected={pair.leftSelected} rightSelected={pair.rightSelected} onSelectLeft={pair.selectLeft} onSelectRight={pair.selectRight} equation={{ label: 'Relação física', general: config.formula, condition: 'mostra', reduced: pivot.value }} closing={config.insight}/>;
+    return <BoardShell tecnologico={id === 'rope-boundary' || id === 'circular-motion'} kicker="Laboratório de Física" title={config.name} subtitle={config.question} condition={{ label: 'Leitura', value: pivot.value }} ariaLabel={`Instrumento de física: ${props.map.title}`} emphasis={pair.emphasis} scene={<div className="vs-instrument"><svg className="vs-plane" viewBox="0 0 320 300" role="img" aria-label={`${config.name}; ${pivot.label}: ${pivot.value}`}><Scene id={id} value={value}/></svg><p className="vs-instrument-dica">mexa na grandeza e acompanhe a condição física desenhada</p><div className="vs-plane-controls"><div className="vs-plane-control"><label htmlFor={`physics-remaining-${id}`}><strong>{config.control.label}</strong><span>{config.control.description}</span><b>{value}</b></label><input id={`physics-remaining-${id}`} type="range" min={config.control.min} max={config.control.max} step={config.control.step} value={value} onChange={event => setValue(Number(event.target.value))}/></div></div><dl className="vs-plane-readouts">{readouts.map(item => <div key={item.label} data-pivot={item.pivot ? 'true' : undefined}><dt>{item.label}</dt><dd>{item.value}</dd></div>)}</dl></div>} left={{ label: STAGE_LABEL[first?.stage ?? 'conceito'], headline: first?.label ?? props.map.title, detail: short(first?.excerpt), formula: config.formula }} right={{ label: STAGE_LABEL[second?.stage ?? 'aplicacao'], headline: second?.label ?? props.map.title, detail: short(second?.excerpt), formula: pivot.value }} leftState={pair.leftState} rightState={pair.rightState} leftSelected={pair.leftSelected} rightSelected={pair.rightSelected} onSelectLeft={pair.selectLeft} onSelectRight={pair.selectRight} equation={{ label: 'Relação física', general: config.formula, condition: 'mostra', reduced: pivot.value }} closing={config.insight}/>;
   };
 }
