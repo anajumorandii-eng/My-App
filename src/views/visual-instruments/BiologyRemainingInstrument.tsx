@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { BIOLOGY_REMAINING, biologyRemainingReadout, type BiologyRemainingId } from '../../lib/biologyRemainingLab';
 import { STAGE_LABEL } from '../../lib/visualStudy';
+import { Endocrino, Locomocao, Nucleo, Pcr, Reproducao, TeorDeAgua } from './BiologyMechanismScenes';
 import BoardShell from '../visual-boards/BoardShell';
 import { boardPair } from '../visual-boards/pair';
 import type { BoardProps } from '../visual-boards/types';
@@ -48,14 +49,14 @@ function BiologyMechanism({ id, value, ratio }: { id: BiologyRemainingId; value:
         <text x="160" y="266" textAnchor="middle" fill="var(--vs-dim)" fontSize="11">pergunta: há anticorpo contra o antígeno recebido?</text>
       </g>;
     }
-    case 'locomotion': return <><circle cx="154" cy="157" r="13" fill={accent}/><path d="M154 157L61 210m93-53 111-65m-112 65-20-89m20 89 17 91" {...line}/><path d={`M75 196q55 ${-125 * ratio} 110-76`} stroke={accent} fill="none" strokeWidth="6"/></>;
-    case 'endocrine': return <><circle cx="97" cy="90" r="32" {...line}/><circle cx="225" cy="90" r="32" {...line}/><circle cx="161" cy="208" r="32" {...line}/><path d="M130 90h62m17 30-37 57m-24 0-37-57" {...line}/><path d="M145 208q-107 5-49-85" stroke={accent} strokeWidth="4" fill="none"/></>;
-    case 'inorganic': return <><rect x="55" y="52" width="88" height="139" rx="12" {...line}/><rect x="177" y="52" width="88" height="139" rx="12" {...line}/><path d="M160 45v153" stroke={accent} strokeWidth="7" strokeDasharray="4 5"/><motion.path d="M121 121h77" stroke="var(--vs-blue)" strokeWidth="6" initial={false} animate={{pathLength:ratio}}/></>;
+    case 'locomotion': return <Locomocao value={value} ratio={ratio}/>;
+    case 'endocrine': return <Endocrino value={value} ratio={ratio}/>;
+    case 'inorganic': return <TeorDeAgua value={value} ratio={ratio}/>;
     case 'cytoplasm-one': return <><circle cx="160" cy="145" r="91" {...line}/><path d="M88 185Q139 92 230 129M93 114Q168 204 236 90M78 145h164" stroke={accent} strokeWidth="5" fill="none"/><motion.circle cx="104" cy="145" r="10" fill="var(--vs-blue)" initial={false} animate={{cx:104+100*ratio}}/></>;
     case 'cytoplasm-two': return <><path d="M52 98q30-36 64 0t64 0" {...line}/><path d="M172 86q35-28 66 0t-20 56" {...line}/><circle cx="258" cy="143" r="25" {...line}/><motion.path d="M92 106H218" stroke={accent} strokeWidth="5" strokeDasharray="6 5" initial={false} animate={{pathLength:ratio}}/></>;
-    case 'nucleus': return <><circle cx="160" cy="145" r="97" {...line}/><motion.path d="M94 152q25-79 55 0t55 0t35 0" stroke={accent} strokeWidth="7" fill="none" initial={false} animate={{opacity:1-ratio*.55}}/></>;
+    case 'nucleus': return <Nucleo value={value} ratio={ratio}/>;
     case 'chromosome-mutations': return <><path d="M112 75l53 72-53 72m106-144-53 72 53 72" {...line}/><motion.path d="M165 147v72" stroke={accent} strokeWidth="6" initial={false} animate={{opacity:ratio}}/><circle cx="105" cy="241" r="18" {...line}/><circle cx="215" cy="241" r="18" {...line}/></>;
-    case 'biotechnology': return <><rect x="112" y="57" width="96" height="147" rx="22" {...line}/><path d="M130 112q30-28 60 0t-60 0M130 150q30-28 60 0t-60 0" stroke={accent} strokeWidth="4" fill="none"/><motion.circle cx="160" cy="92" r="9" fill="var(--vs-blue)" initial={false} animate={{scale:1+ratio*2}}/></>;
+    case 'biotechnology': return <Pcr value={value} ratio={ratio}/>;
     case 'cnidarians': return <><path d="M74 89q31-43 62 0v122q-31 28-62 0Z" {...line}/><path d="M211 79q35 34 0 73m0-73q-35 34 0 73m0-45v118m0-2-31 38m31-38 31 38" {...line}/></>;
     case 'body-plan': return <><ellipse cx="160" cy="145" rx="95" ry="56" {...line}/><motion.ellipse cx="160" cy="145" rx="55" ry="27" fill="var(--vs-burgundy)" initial={false} animate={{opacity:ratio}}/></>;
     case 'insects': case 'arachnids': return <><ellipse cx="160" cy="130" rx="38" ry="58" {...line}/>{Array.from({length:Math.round(value)*2},(_,n)=><path key={n} d={`M${145+(n%2)*30} ${100+Math.floor(n/2)*18}l${n%2?-45:45} ${-26+Math.floor(n/2)*10}`} {...line}/>)}</>;
@@ -78,7 +79,7 @@ function BiologyMechanism({ id, value, ratio }: { id: BiologyRemainingId; value:
       <text x="160" y="245" textAnchor="middle" fill={accent} fontSize="13" fontWeight="700">receptor converte estímulo</text><text x="160" y="263" textAnchor="middle" fill={accent} fontSize="13" fontWeight="700">em impulso nervoso</text>
       <text x="160" y="288" textAnchor="middle" fill="var(--vs-dim)" fontSize="11">fotorreceptores na retina · células ciliadas na cóclea</text>
     </g>;
-    case 'reproduction': return <><circle cx="82" cy="145" r="26" {...line}/><circle cx="160" cy="145" r="26" {...line}/><circle cx="238" cy="145" r="26" {...line}/><motion.path d="M108 145h104" stroke={accent} strokeWidth="5" initial={false} animate={{pathLength:ratio}}/></>;
+    case 'reproduction': return <Reproducao value={value} ratio={ratio}/>;
     case 'plant-tissues': return <><path d="M145 227V79m30 148V79" {...line}/><path d="M160 78q-54 10-57-50 44 3 57 48m0 2q54 10 57-50-44 3-57 48" {...line}/><path d="M151 223V85" stroke="var(--vs-blue)" strokeWidth="5"/><path d="M169 223V85" stroke={accent} strokeWidth="5"/></>;
     case 'stems-leaves': return <><path d="M160 227V80m0 54q-56 0-73-47 53-14 73 43m0 25q56 0 73-47-53-14-73 43" {...line}/><motion.circle cx="160" cy="204" r="13" fill="var(--vs-blue)" initial={false} animate={{cy:204-90*ratio}}/></>;
     case 'air-pollution': return <g data-bio-system="air-dispersion">

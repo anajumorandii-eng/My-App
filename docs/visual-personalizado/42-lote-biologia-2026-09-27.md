@@ -112,6 +112,40 @@ apareceram o flagelo sobre a célula vizinha, a "ligação β" sobre os anéis e
 uma curva tracejada sem sentido no caso holândrico. Tudo foi corrigido antes
 da varredura final.
 
+## Lote E — seis instrumentos abstratos demais
+
+Os seis instrumentos desenhavam formas soltas: três círculos ligados, um
+retângulo com duas ondas, uma elipse que ganhava opacidade. Nenhuma delas
+dizia de que objeto se tratava. Agora cada cena desenha o objeto do capítulo,
+e o cursor move a peça que o mecanismo move. As cenas estão em
+`BiologyMechanismScenes.tsx`. Todo rótulo sai do resumo do capítulo.
+
+| Capítulo | O que a cena mostra |
+| --- | --- |
+| Sustentação e locomoção | Braço com úmero, antebraço e cotovelo. Com a contração, o bíceps engrossa, o tendão puxa, o antebraço gira em torno do cotovelo e o tríceps afina: músculo só puxa. |
+| Coordenação endócrina I | Hipófise, TSH e tireoide, com T3 e T4 no sangue. Mais hormônio engrossa a linha que inibe a hipófise e afina a seta do TSH. |
+| Compostos inorgânicos | Coluna de teor de água com os marcos do resumo (semente seca abaixo de 15%, humano adulto entre 60 e 70%, água-viva perto de 98%) e uma célula que enche até o teor. As enzimas trabalham ou param; abaixo de 15%, aparecem inativas e não desnaturadas. |
+| Núcleo celular | Colar de nucleossomos. Condensar aperta as contas; a polimerase some e o RNA encurta. O rótulo troca de eucromatina para heterocromatina. |
+| Biotecnologia | As três etapas da PCR com as temperaturas do resumo e a fita em cada uma, mais uma coluna de cópias em escala log₂: cada ciclo dobra, e 30 ciclos passam de um bilhão. |
+| Reprodução humana | Útero, tubas e ovários, com o lugar de cada etapa aceso. Na ovulação aparece a pílula; na fecundação, barreira, laqueadura e DIU de cobre. Na implantação o resumo não cita método, só o HCG que o teste detecta, e é isso que a cena mostra. |
+
+**Compostos inorgânicos emprestava o assunto de outro capítulo.** O
+instrumento se chamava "Água, soluto e osmose" e movia soluto através de uma
+membrana. O resumo do capítulo não fala de osmose: fala de água, sais minerais
+e teor de água. A configuração passou a "Teor de água e metabolismo", com
+cursor, relação, leitura e fechamento tirados do texto. É a mesma regra que
+proíbe desenhar para tapar buraco.
+
+A conferência percorreu o cursor de ponta a ponta em 1440 claro e 390 escuro.
+Ela achou três defeitos:
+
+- "reações em meio aquoso" saía da célula;
+- "desnaturação" passava da caixa;
+- "~milhão" encostava na caixa do anelamento.
+
+Os três foram corrigidos. As capturas do mínimo, do meio e do máximo de cada
+cursor estão em `screenshots/lote-biologia-2026-09-27/instrumentos/`.
+
 ## Como foi conferido
 
 - **Cenas novas:** cada caso selecionado em claro e escuro, 1440 e 390 px, e
@@ -123,7 +157,4 @@ da varredura final.
 
 ## Pendente
 
-- **Lote E:** reforçar o visual de seis instrumentos abstratos demais
-  (`locomotion`, `endocrine`, `inorganic`, `nucleus`, `biotechnology` e
-  `reproduction`).
 - **Aprovação editorial** de todas as cenas acima.
