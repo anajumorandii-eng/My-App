@@ -30,8 +30,11 @@ function Eye({ kind, active, reduced }: { kind: 'miopia' | 'hipermetropia'; acti
     <motion.path d={`M${focus} 128V172 M${focus - 10} 150H${focus + 10}`} stroke="var(--vs-burgundy)" strokeWidth="3" initial={false}
       animate={reduced ? { scale: 1 } : { scale: active ? [1, 1.18, 1] : 1 }} transition={{ duration: .55 }} style={{ transformOrigin: `${focus}px 150px` }} />
     {myopia && <path d={`M${focus} 150L250 178 M${focus} 150L250 122`} fill="none" stroke="var(--vs-blue)" strokeWidth="2" strokeDasharray="5 4" />}
-    <text x="168" y="266" textAnchor="middle" style={{ fontWeight: 800, fill: 'var(--vs-ink)', fontSize: 14 }}>{myopia ? 'foco antes da retina' : 'foco depois da retina'}</text>
-    <text x="87" y="91" textAnchor="middle" style={{ fontWeight: 800, fill: 'var(--vs-burgundy)', fontSize: 12 }}>{myopia ? 'lente divergente' : 'lente convergente'}</text>
+    <text x="168" y="266" textAnchor="middle" style={{ fontWeight: 800, fill: 'var(--vs-ink)', fontSize: 20 }}>{myopia ? 'foco antes da retina' : 'foco depois da retina'}</text>
+    {/* Em 390 px a cena de 650 encolhe a ~46% e o rótulo de 12 caía para
+        ~6 px efetivos (auditoria 37). Com 20, fica acima de 9 px, e sobe
+        para fora do contorno do olho. */}
+    <text x="24" y="58" textAnchor="start" style={{ fontWeight: 800, fill: 'var(--vs-burgundy)', fontSize: 20 }}>{myopia ? 'lente divergente' : 'lente convergente'}</text>
   </g>;
 }
 
@@ -40,8 +43,8 @@ function VisionScene({ emphasis }: { emphasis: 'esquerda' | 'direita' | 'nenhum'
   const showMyopia = emphasis !== 'direita';
   return <svg className="vs-piston vs-scene" viewBox="0 0 650 330" role="img" data-emphasis={emphasis}
     aria-label="Comparação entre miopia e hipermetropia: o foco cai antes ou depois da retina e a lente corretiva o desloca para a retina">
-    <text x="163" y="38" textAnchor="middle" style={{ fontWeight: 900, fill: 'var(--vs-ink)', fontSize: 18 }}>miopia</text>
-    <text x="490" y="38" textAnchor="middle" style={{ fontWeight: 900, fill: 'var(--vs-ink)', fontSize: 18 }}>hipermetropia</text>
+    <text x="163" y="28" textAnchor="middle" style={{ fontWeight: 900, fill: 'var(--vs-ink)', fontSize: 18 }}>miopia</text>
+    <text x="490" y="28" textAnchor="middle" style={{ fontWeight: 900, fill: 'var(--vs-ink)', fontSize: 18 }}>hipermetropia</text>
     <Eye kind="miopia" active={showMyopia} reduced={reduced} />
     <g transform="translate(326 0)"><Eye kind="hipermetropia" active={!showMyopia} reduced={reduced} /></g>
     <SceneNote text="a retina é o alvo nos dois casos" at={[325, 104]} to={[325, 292]} align="middle" />

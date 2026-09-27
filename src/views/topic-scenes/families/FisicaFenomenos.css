@@ -1,0 +1,9 @@
+/* Estática: só variáveis do tema, para acompanhar claro e escuro. */
+.ff-barra { fill: color-mix(in srgb, var(--vs-amber) 22%, var(--vs-paper-strong)); stroke: var(--vs-ink); stroke-width: 2; }
+.ff-forca { stroke: var(--vs-burgundy); stroke-width: 3; stroke-linecap: round; }
+.ff-peso { stroke: var(--vs-blue); stroke-width: 3; stroke-linecap: round; }
+.ff-apoio { fill: var(--vs-paper-strong); stroke: var(--vs-ink); stroke-width: 2; }
+.ff-massa { fill: color-mix(in srgb, var(--vs-blue) 25%, var(--vs-paper-strong)); stroke: var(--vs-ink); stroke-width: 1.5; }
+.ff-braco { stroke: var(--vs-dim); stroke-width: 1.5; stroke-dasharray: 4 3; }
+.ff-giro { fill: none; stroke: var(--vs-burgundy); stroke-width: 2.5; stroke-dasharray: 5 4; }
+.ff-ponta-azul { fill: var(--vs-blue); }
