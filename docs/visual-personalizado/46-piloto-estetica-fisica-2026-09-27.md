@@ -166,13 +166,64 @@ Dois defeitos foram achados na captura e corrigidos no kit:
 A varredura de contorno herdado nos 613 capítulos, no tema escuro e no tamanho
 do iPad, terminou com **zero achados** (eram 14 antes da correção).
 
+## Terceira rodada — a moldura
+
+A cena tinha o traço dos pôsteres, mas a página em volta continuava com cara de
+jornal: título serif gigante, cartões inclinados, morros no rodapé. A Ana Júlia
+concordou em mexer primeiro na moldura, e só nestes cinco capítulos.
+
+`BoardShell` ganhou a opção `caderno`, passada só pelos cinco instrumentos do
+piloto. As outras 608 pranchas não mudam até a aprovação.
+
+| Peça da prancha | Antes | Com `caderno` |
+| --- | --- | --- |
+| Fundo | Papel liso | Papel pontilhado (giz na lousa) |
+| Rótulo do laboratório | Itálico solto | Etiqueta com estrela |
+| Título | Serif vinho | Letra de marcador com sombra amarela deslocada (roxa na lousa) |
+| Subtítulo | Parágrafo cinza | Quadro de definição com tracinhos dos dois lados |
+| Condição | Oval de contorno | Adesivo redondo amarelo |
+| Pincel | Faixa em degradê | Rabisco ondulado |
+| Cartões | Inclinados, de fundo chapado | Quadros de borda colorida, etiqueta presa na borda e ícone do estágio |
+| Fórmula | Tira tracejada | Quadro tracejado com etiqueta |
+| Ideia central | Sobre morros | Pílula com estrela |
+
+**A cor de cada lado do par não mudou de significado.** O verde fica à
+esquerda e o laranja à direita, e o estado segue na linha de baixo do cartão.
+A leitura de cor precisa significar o mesmo em todas as pranchas.
+
+**Os ícones seguem o estágio pedagógico** (`STAGE_LABEL`):
+
+- lâmpada para intuição;
+- livro para conceito;
+- engrenagem para aplicação;
+- alvo para estratégia;
+- lápis para exercício.
+
+Estágio sem ícone recebe a estrela.
+
+**Achados da captura, corrigidos:**
+
+- a pílula da ideia central quebrava em coluna no escuro, porque era flex;
+- no celular a estrela caía sozinha numa linha: o preflight do Tailwind faz
+  todo `svg` ser bloco;
+- a etiqueta dos quadros da cena ficava justa na fonte de fallback.
+
+**Teste novo** (`BoardShell.test.tsx`): sem `caderno` a prancha fica como
+sempre; com `caderno`, os dois cartões têm ícones diferentes e a ideia central
+tem a estrela.
+
+**Conferência:**
+
+- os cinco no iPad, claro e escuro;
+- massa-energia também em 390 px, claro e escuro;
+- nenhuma rolagem lateral.
+
 ## Pendente
 
 - **Aprovação da Ana Júlia** do estilo deste piloto, antes de estendê-lo às
   outras pranchas.
-- O título da prancha continua em serif. Os pôsteres usam letra de marcador;
-  trocar a fonte do título mexe em todas as pranchas de uma vez e fica para
-  depois da aprovação.
+- Levar a moldura `caderno` para todas as pranchas, se aprovada. Hoje ela é
+  opção de cinco capítulos.
 - No ambiente remoto a Kalam não carrega, porque `fonts.googleapis.com` é
   bloqueado. As capturas mostram as notas no serif de fallback. No aparelho
   dela, elas saem manuscritas.

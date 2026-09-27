@@ -2251,3 +2251,176 @@
 }
 .vs-kit-mao { font-family: "Kalam", "Newsreader", Georgia, serif; font-weight: 700; }
 .vs-kit-ponto { fill: var(--vs-dim); opacity: .35; }
+
+/* Moldura de caderno ilustrado (BoardShell `caderno`). A cena já tinha o traço
+   dos pôsteres que a Ana Júlia mandou, mas a página em volta — título serif
+   gigante, cartões inclinados, morros no rodapé — continuava com cara de
+   jornal. Aqui a página inteira vira a folha do pôster. Por enquanto só os
+   cinco capítulos do piloto passam `caderno`. */
+.vs-study-board--caderno {
+  background-color: #fbf6ea;
+  background-image: radial-gradient(circle, rgba(60, 50, 40, .16) 1px, transparent 1.3px);
+  background-size: 16px 16px;
+}
+.dark .vs-study-board--caderno {
+  background-color: #0f1512;
+  background-image: radial-gradient(circle, rgba(245, 232, 208, .09) 1px, transparent 1.3px);
+}
+.vs-study-board--caderno .vs-board-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  padding: .28rem .8rem .28rem .5rem;
+  border: 2px solid var(--vs-kit-roxo);
+  border-radius: 999px;
+  background: var(--vs-paper);
+  color: var(--vs-kit-roxo);
+  font: 700 .82rem/1.1 "Kalam", "Newsreader", Georgia, serif;
+  font-style: normal;
+  letter-spacing: .08em;
+}
+.vs-star-icon { display: inline-block; width: 1.05em; height: 1.05em; flex: none; }
+.vs-star-icon path { fill: var(--vs-kit-sol); stroke: var(--vs-kit-contorno); stroke-width: 1.2; stroke-linejoin: round; }
+.vs-study-board--caderno .vs-board-head h2 {
+  margin: 14px 0 12px;
+  font-size: clamp(2.2rem, 5vw, 3.9rem);
+  line-height: 1.02;
+  letter-spacing: -.01em;
+  color: var(--vs-ink);
+  /* Sombra deslocada em amarelo: é o letreiro de marcador dos pôsteres, com a
+     cor "vazando" para o lado do traço preto. */
+  text-shadow: 3px 3px 0 color-mix(in srgb, var(--vs-kit-sol) 75%, transparent);
+}
+.dark .vs-study-board--caderno .vs-board-head h2 {
+  color: #f7efe0;
+  text-shadow: 3px 3px 0 color-mix(in srgb, var(--vs-kit-roxo) 55%, transparent);
+}
+/* O subtítulo vira o quadro de definição do pôster ("Astronomy = the study
+   of…"), com os tracinhos de ênfase dos dois lados. */
+.vs-study-board--caderno .vs-board-head p {
+  position: relative;
+  width: fit-content;
+  max-width: min(640px, calc(100% - 44px));
+  margin-left: 22px;
+  padding: .55rem 1rem;
+  border: 2px solid var(--vs-kit-ciano);
+  border-radius: 14px;
+  background: color-mix(in srgb, var(--vs-kit-ciano) 9%, var(--vs-paper));
+  color: var(--vs-ink);
+  font: 700 1.02rem/1.35 "Kalam", "Newsreader", Georgia, serif;
+}
+.vs-study-board--caderno .vs-board-head p::before,
+.vs-study-board--caderno .vs-board-head p::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 14px;
+  height: 14px;
+  transform: translateY(-50%);
+  background:
+    linear-gradient(var(--vs-kit-ciano), var(--vs-kit-ciano)) 0 1px / 100% 2px no-repeat,
+    linear-gradient(var(--vs-kit-ciano), var(--vs-kit-ciano)) 0 6px / 100% 2px no-repeat,
+    linear-gradient(var(--vs-kit-ciano), var(--vs-kit-ciano)) 0 11px / 100% 2px no-repeat;
+}
+.vs-study-board--caderno .vs-board-head p::before { left: -22px; }
+.vs-study-board--caderno .vs-board-head p::after { right: -22px; }
+/* A condição vira adesivo: círculo amarelo com contorno de tinta. */
+.vs-study-board--caderno .vs-q-callout {
+  border: 2.5px solid var(--vs-kit-contorno);
+  border-radius: 50%;
+  aspect-ratio: 1;
+  background: var(--vs-kit-sol);
+  color: #1d2421;
+  transform: rotate(-6deg);
+  box-shadow: 3px 3px 0 color-mix(in srgb, var(--vs-kit-laranja) 70%, transparent);
+}
+.vs-study-board--caderno .vs-q-callout strong { font-family: "Kalam", "Newsreader", Georgia, serif; }
+/* O pincel vira rabisco ondulado em duas cores. */
+.vs-study-board--caderno .vs-brush {
+  height: 12px;
+  border-radius: 0;
+  transform: none;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='12'%3E%3Cpath d='M0 6q5-5 10 0t10 0 10 0 10 0' fill='none' stroke='%23e8743b' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E") repeat-x left center / 40px 12px;
+}
+.dark .vs-study-board--caderno .vs-brush {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='12'%3E%3Cpath d='M0 6q5-5 10 0t10 0 10 0 10 0' fill='none' stroke='%23ff9a62' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+/* Cartões como quadros do pôster: borda colorida reta, etiqueta presa na borda
+   de cima e ícone do estágio. A cor de cada lado continua sendo a mesma do
+   par (verde à esquerda, coral à direita), e o estado segue na linha de baixo
+   — a leitura de cor precisa significar o mesmo em todas as pranchas. */
+.vs-study-board--caderno .vs-concept-card {
+  padding-top: 28px;
+  border: 2px solid var(--vs-card-cor);
+  border-radius: 16px;
+  transform: none;
+  background: color-mix(in srgb, var(--vs-card-cor) 9%, var(--vs-paper));
+  box-shadow: 3px 3px 0 color-mix(in srgb, var(--vs-card-cor) 35%, transparent);
+}
+.vs-study-board--caderno .vs-concept-card:hover { transform: translateY(-2px); }
+.vs-study-board--caderno .vs-concept-card--expansion { --vs-card-cor: var(--vs-kit-verde); }
+.vs-study-board--caderno .vs-concept-card--compression { --vs-card-cor: var(--vs-kit-laranja); }
+.dark .vs-study-board--caderno .vs-concept-card { background: color-mix(in srgb, var(--vs-card-cor) 10%, #121916); }
+.vs-study-board--caderno .vs-concept-card.is-selected { box-shadow: 0 0 0 3px color-mix(in srgb, var(--vs-card-cor) 40%, transparent), 3px 3px 0 color-mix(in srgb, var(--vs-card-cor) 35%, transparent); }
+.vs-study-board--caderno .vs-concept-label {
+  position: absolute;
+  top: -14px;
+  left: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  padding: .2rem .7rem .2rem .35rem;
+  border: 2px solid var(--vs-card-cor);
+  border-radius: 999px;
+  background: var(--vs-paper);
+  color: var(--vs-card-cor);
+  font: 700 .8rem/1.1 "Kalam", "Newsreader", Georgia, serif;
+  font-style: normal;
+  letter-spacing: .08em;
+}
+.vs-concept-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 1.45rem;
+  height: 1.45rem;
+  border-radius: 50%;
+  background: var(--vs-card-cor);
+  color: #fff;
+}
+.vs-concept-icon svg { width: .95rem; height: .95rem; }
+.vs-study-board--caderno .vs-concept-card strong { font-family: "Kalam", "Newsreader", Georgia, serif; font-size: 1.35rem; }
+/* A tira da fórmula vira quadro tracejado com etiqueta. */
+.vs-study-board--caderno .vs-equation-strip {
+  border: 2px dashed var(--vs-kit-roxo);
+  background: color-mix(in srgb, var(--vs-kit-roxo) 7%, var(--vs-paper));
+}
+.vs-study-board--caderno .vs-equation-strip > span:first-child {
+  padding: .15rem .6rem;
+  border: 1.5px solid var(--vs-kit-roxo);
+  border-radius: 999px;
+  color: var(--vs-kit-roxo);
+  font: 700 .74rem/1.1 "Kalam", "Newsreader", Georgia, serif;
+}
+/* Sem morros: a ideia central vira a pílula com estrela, a frase que no pôster
+   se lê primeiro. */
+.vs-study-board--caderno .vs-landscape { min-height: 0; margin: 20px 0 0; }
+.vs-study-board--caderno .vs-landscape::after { display: none; }
+.vs-study-board--caderno .vs-landscape p {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: .8rem 1.1rem;
+  border: 2px solid var(--vs-kit-laranja);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--vs-kit-sol) 18%, var(--vs-paper));
+  color: var(--vs-ink);
+  font: 700 1rem/1.4 "Kalam", "Newsreader", Georgia, serif;
+  backdrop-filter: none;
+}
+.vs-study-board--caderno .vs-landscape p .vs-star-icon { width: 1.3rem; height: 1.3rem; margin-right: .4rem; vertical-align: -.25rem; }
+.vs-study-board--caderno .vs-landscape p strong { margin-right: .3rem; }
+.dark .vs-study-board--caderno .vs-landscape p { background: color-mix(in srgb, var(--vs-kit-sol) 10%, #121916); }
+@media (max-width: 560px) {
+  .vs-study-board--caderno .vs-landscape p { border-radius: 18px; font-size: .92rem; }
+  .vs-study-board--caderno .vs-board-head p { font-size: .92rem; }
+}

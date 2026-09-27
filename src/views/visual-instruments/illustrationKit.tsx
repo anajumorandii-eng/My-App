@@ -103,7 +103,7 @@ export const Papel = ({ kit }: { kit: Kit }) =>
  * escuro também no tema claro.
  */
 export function Painel({ x, y, w, h, titulo, tom = 'roxo', escuro }: { x: number; y: number; w: number; h: number; titulo?: string; tom?: Tom; escuro?: boolean }) {
-  const larguraEtiqueta = titulo ? titulo.length * 6.6 + 16 : 0;
+  const larguraEtiqueta = titulo ? titulo.length * 7.4 + 16 : 0;
   return <g>
     <rect x={x} y={y} width={w} height={h} rx="10" fill={escuro ? 'var(--vs-kit-ceu, #17213d)' : `color-mix(in srgb, ${COR[tom]} 7%, transparent)`} stroke={COR[tom]} strokeWidth="1.8" />
     {titulo && <g>
