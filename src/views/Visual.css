@@ -41,6 +41,14 @@
 }
 
 .crivo-visual * { box-sizing: border-box; }
+/* Texto SVG herda `stroke` do grupo em que mora. Várias cenas põem o rótulo
+   dentro do grupo do órgão, do circuito ou da onda, que tem traço de 2 a 3 px:
+   cada letra ganhava contorno e, no iPad em tema escuro, virava borrão (a
+   Ana Júlia achou na digestão; a varredura dos 613 capítulos achou o mesmo em
+   Física). `:where` deixa a regra sem especificidade, para que os halos de
+   propósito (classes com `paint-order: stroke`) continuem valendo, e
+   `:not([stroke])` preserva o texto que declara o próprio traço. */
+:where(.crivo-visual) svg text:not([stroke]) { stroke: none; }
 .crivo-visual button { font: inherit; }
 
 .crivo-visual [data-state='nao-avaliado'] { --vs-state: var(--vs-nao-avaliado); }

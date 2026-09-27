@@ -56,12 +56,16 @@ function InvasionWeb({active,selected,replay}:EcologyDiagramProps) {
   return <svg viewBox="0 0 500 570" role="img" aria-label={`Invasora → nativa e recurso: cinco caminhos de impacto; selecionado: ${selected}`}>
     <text x="26" y="30" className="eco-kicker">UMA CHEGADA MUDA AS RELAÇÕES</text>
     <path d="M20 183Q145 119 264 172T480 160V435Q224 482 20 423Z" className={active===4?undefined:'eco-water'} fill={active===4?'var(--eco-soil)':undefined}/>
-    <motion.g animate={{x:active===0?70:0}} transition={{duration: reduced ? 0 : MOTION_DURATION.mechanism}}>{active===4?<g>{Array.from({length:11},(_,i)=><path key={i} d={`M112 305Q${67+i*9} ${244-i%3*19} ${54+i*12} ${186+i%4*15}`} fill="none" stroke="var(--eco-leaf)" strokeWidth="4"/>)}</g>:<Fish x={112} y={231} size={1.25}/>}</motion.g>
-    <text x="37" y="123" className="eco-note">invasora</text><path d="M85 134 110 193" className="eco-annotation"/>
+    {/* Na predação o grupo avança 70 px, e o rótulo ficava para trás apontando
+        para a água. O peixe também nadava de costas para a presa, com a seta
+        saindo da cabeça por cima do próprio corpo. Agora a invasora está
+        virada para a nativa, o rótulo anda junto e a seta sai da boca. */}
+    <motion.g animate={{x:active===0?70:0}} transition={{duration: reduced ? 0 : MOTION_DURATION.mechanism}}>{active===4?<g>{Array.from({length:11},(_,i)=><path key={i} d={`M112 305Q${67+i*9} ${244-i%3*19} ${54+i*12} ${186+i%4*15}`} fill="none" stroke="var(--eco-leaf)" strokeWidth="4"/>)}</g>:<Fish x={112} y={231} size={1.25} flip/>}
+      <text x="37" y="123" className="eco-note">invasora</text><path d={active===4?'M85 134 100 210':'M85 134 106 200'} className="eco-annotation"/></motion.g>
     <motion.g animate={{opacity:active===0||active===2?.35:1,x:active===1?32:0}} transition={{duration: reduced ? 0 : MOTION_DURATION.mechanism}}>{active===4?<Plant x={373} y={311} size={.7} canopy/>:<><Fish x={355} y={236} size={.65}/><Fish x={403} y={310} size={.4}/></>}</motion.g>
-    <text x="336" y="123" className="eco-note">nativa</text><path d="M365 134 355 210" className="eco-annotation"/>
+    <text x="336" y="123" className="eco-note">nativa</text><path d="M365 134 357 218" className="eco-annotation"/>
     <Plant x={254} y={413} size={.74}/>
-    <Flow d={active===1?'M137 267Q190 345 237 366M354 263Q312 345 272 366':'M163 227Q230 174 324 227'} active replay={replay}/>
+    <Flow d={active===0?'M232 228Q282 196 330 230':active===1?'M137 267Q190 345 237 366M354 263Q312 345 272 366':'M163 227Q230 174 324 227'} active replay={replay}/>
     {active===2&&[0,1,2,3,4].map(i=><motion.circle key={i} cx={211+i*26} cy={205-i%2*8} r="4" fill="var(--eco-accent)" initial={reduced?false:{opacity:0,x:-25}} animate={{opacity:1,x:0}} transition={{duration: reduced ? 0 : MOTION_DURATION.mechanism,delay:reduced?0:i * MOTION_STAGGER.diagram}}/>)}
     {active===3&&<g><path d="M165 322Q220 292 275 322T385 322M165 350Q220 380 275 350T385 350" fill="none" stroke="var(--eco-accent)" strokeWidth="3"/>{[0,1,2,3,4,5,6].map(i=><path key={i} d={`M${176+i*32} 323v27`} stroke="var(--eco-deep)"/>)}</g>}
     {active===4&&<g><path d="M325 416Q285 394 322 354Q314 381 340 367Q370 403 341 420Z" fill="var(--eco-accent)"/><text x="42" y="464" className="eco-label">Ex.: capim-braquiária altera o regime de fogo.</text></g>}

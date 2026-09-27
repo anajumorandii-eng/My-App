@@ -485,23 +485,45 @@ function Classificacao({ ativo, t }: Cena) {
   ]} />;
 }
 
+// Tetrápodes: a primeira versão era uma elipse com duas bolinhas (anfíbio), um
+// ovo liso e um semicírculo com pernas — a Ana Júlia viu no iPad e estava
+// péssimo. Cada grupo agora tem figura reconhecível e mostra o traço que a
+// citação dá: os ovos sem casca na água, o ovo com casca e anexos, o coração de
+// quatro cavidades dentro do mamífero.
+const tinta = { stroke: 'var(--vs-ink)', strokeWidth: 2.2, strokeLinejoin: 'round' as const, strokeLinecap: 'round' as const };
 function Tetrapodes({ ativo, t }: Cena) {
   const grupos = [
     { nome: 'Anfíbios', x: 90, desenho: <>
-      <ellipse cx={90} cy={132} rx="26" ry="14" className="bf-anfibio" /><circle cx={80} cy={120} r="4" className="bf-nucleo" /><circle cx={100} cy={120} r="4" className="bf-nucleo" />
-      {[0, 1, 2].map((k) => <circle key={k} cx={70 + k * 12} cy={170} r="4" className="bf-ovo-agua" />)}
+      {/* Sapo de perfil, mais achatado, com a perna traseira dobrada, e os ovos
+          sem casca na água (a legenda "ovo na água" já diz isso embaixo). */}
+      <path d="M56 152c-2-18 14-30 36-30 18 0 30 8 32 20 1 7-4 10-10 10H62Z" style={{ fill: 'color-mix(in srgb, var(--vs-green) 35%, var(--vs-paper-strong))', ...tinta }} />
+      <path d="M64 150c-8-14 10-24 20-12 5 6 2 12-6 14M66 152H48M106 150l6 10h10" style={{ fill: 'none', ...tinta }} />
+      <circle cx="108" cy="120" r="6" style={{ fill: 'var(--vs-paper-strong)', ...tinta }} /><circle cx="110" cy="120" r="2.4" style={{ fill: 'var(--vs-ink)' }} />
+      <path d="M114 138c5 1 8 0 10-2" style={{ fill: 'none', ...tinta, strokeWidth: 1.6 }} />
+      {[[40, 176], [52, 180], [46, 170], [60, 174], [34, 182]].map(([x, y]) => <g key={x}><circle cx={x} cy={y} r="5" style={{ fill: 'color-mix(in srgb, var(--vs-blue) 18%, transparent)', stroke: 'var(--vs-blue)', strokeWidth: 1.2 }} /><circle cx={x} cy={y} r="1.6" style={{ fill: 'var(--vs-ink)' }} /></g>)}
     </>, traco: ['pele úmida, ovo na água', 'ainda preso à água'] },
     { nome: 'Répteis e aves', x: 240, desenho: <>
-      <ellipse cx={240} cy={132} rx="22" ry="28" className="bf-ovo" /><ellipse cx={240} cy={136} rx="14" ry="18" className="bf-ovo-amnio" />
+      {/* Ovo amniótico em corte, nas palavras da citação: casca e anexos
+          embrionários em volta do embrião. */}
+      <ellipse cx="240" cy="128" rx="34" ry="44" style={{ fill: 'var(--vs-paper-strong)', ...tinta, strokeWidth: 3 }} />
+      <circle cx="240" cy="150" r="14" style={{ fill: 'color-mix(in srgb, var(--vs-amber) 55%, var(--vs-paper-strong))', stroke: 'var(--vs-amber)', strokeWidth: 1.5 }} />
+      <ellipse cx="238" cy="112" rx="15" ry="13" style={{ fill: 'color-mix(in srgb, var(--vs-blue) 10%, transparent)', stroke: 'var(--vs-blue)', strokeWidth: 1.6, strokeDasharray: '3 2' }} />
+      <path d="M244 106c-8-6-16 0-12 8 3 6 10 4 9-1" style={{ fill: 'none', stroke: 'var(--vs-burgundy)', strokeWidth: 2.4, strokeLinecap: 'round' }} />
+      <text x="286" y="100" className="qf-mini">anexos</text><path d="M284 97l-30 10" style={{ stroke: 'var(--vs-ink-muted)', strokeWidth: 1 }} />
+      <text x="286" y="160" className="qf-mini">casca</text><path d="M284 156l-12-4" style={{ stroke: 'var(--vs-ink-muted)', strokeWidth: 1 }} />
     </>, traco: ['pele seca, ovo amniótico', 'fecundação interna'] },
     { nome: 'Mamíferos', x: 390, desenho: <>
-      <path d="M356 150q4-30 34-30q34 0 36 30Z" className="bf-mamifero" /><circle cx={420} cy={120} r="10" className="bf-mamifero" />
-      <path d="M362 150v12m14-12v12m28-12v12m14-12v12" className="bf-tronco" />
+      {/* Silhueta de quadrúpede e, dentro, o coração em quatro cavidades. */}
+      <path d="M350 140c-2-20 14-30 36-30h26c10 0 16-8 24-8 8 0 12 6 12 12 0 6-4 10-10 12-2 16-12 22-26 22h-46c-10 0-16-2-16-8Z" style={{ fill: 'color-mix(in srgb, var(--vs-amber) 22%, var(--vs-paper-strong))', ...tinta }} />
+      <path d="M432 104l4-10 6 10" style={{ fill: 'color-mix(in srgb, var(--vs-amber) 22%, var(--vs-paper-strong))', ...tinta }} /><circle cx="440" cy="112" r="1.8" style={{ fill: 'var(--vs-ink)' }} />
+      <path d="M362 146v26M376 148v24M408 148v24M420 146v26M350 132c-10-2-16 4-18 12" style={{ fill: 'none', ...tinta }} />
+      <path d="M390 138c-10-7-12-15-6-18 3-2 6 0 6 2 0-2 3-4 6-2 6 3 4 11-6 18Z" style={{ fill: 'color-mix(in srgb, var(--vs-burgundy) 45%, var(--vs-paper-strong))', stroke: 'var(--vs-burgundy)', strokeWidth: 1.4 }} />
+      <path d="M390 122v15M383 128h14" style={{ stroke: 'var(--vs-burgundy)', strokeWidth: 1.2 }} />
     </>, traco: ['endotermia, diafragma', 'coração de 4 cavidades'] },
   ];
   return <g>
-    <path d="M20 190q40-10 80 0" className="bf-agua" /><path d="M20 200q40-10 80 0" className="bf-agua" />
-    <line x1={110} y1={195} x2={460} y2={195} className="bf-solo" />
+    <path d="M14 188q24-6 48 0t48 0" className="bf-agua" /><path d="M14 196q24-6 48 0t48 0" className="bf-agua" />
+    <line x1={130} y1={186} x2={466} y2={186} className="bf-solo" />
     {grupos.map((g) => {
       const ligado = g.nome === ativo;
       return <motion.g key={g.nome} initial={false} animate={FOCO(ligado)} transition={t}>
